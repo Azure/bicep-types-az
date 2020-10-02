@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+using System.Linq;
 using System.Text.Json;
 using Bicep.SerializedTypes.Concrete;
 using Bicep.SerializedTypes.Serialization;
