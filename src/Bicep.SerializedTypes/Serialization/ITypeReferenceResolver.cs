@@ -1,4 +1,6 @@
-﻿using Bicep.SerializedTypes.Concrete;
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+using Bicep.SerializedTypes.Concrete;
 
 namespace Bicep.SerializedTypes.Serialization
 {
