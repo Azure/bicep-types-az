@@ -1,5 +1,6 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,8 +10,10 @@ namespace Bicep.SerializedTypes.Az
 {
     public static class TypeLoader
     {
+        private const string typeContainerName = "types.json";
+
         private static string GetTypeContainerResourceName(string providerNamespace, string apiVersion)
-            => $"{providerNamespace}/{apiVersion}/types.json".ToLowerInvariant();
+            => $"{providerNamespace}/{apiVersion}/{typeContainerName}".ToLowerInvariant();
 
         public static IEnumerable<TypeBase> LoadTypes(string providerNamespace, string apiVersion)
         {
@@ -28,6 +31,20 @@ namespace Bicep.SerializedTypes.Az
                 var content = streamReader.ReadToEnd();
 
                 return TypeSerializer.Deserialize(content);
+            }
+        }
+
+        public static IEnumerable<(string providerNamespace, string apiVersion)> ListAvailableProviders()
+        {
+            foreach (var fileName in typeof(TypeLoader).Assembly.GetManifestResourceNames())
+            {
+                var splitPath = fileName.Split('/');
+                if (splitPath.Length != 3 || splitPath[2] != typeContainerName)
+                {
+                    throw new InvalidOperationException($"Found unexpected manifest file {fileName}");
+                }
+
+                yield return (splitPath[0], splitPath[1]);                
             }
         }
     }
