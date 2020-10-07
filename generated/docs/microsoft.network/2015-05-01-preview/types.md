@@ -180,7 +180,7 @@
 ## VirtualNetworkGatewayConnectionPropertiesFormat
 ### Properties
 * **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown'
-* **connectionType**: 'ExpressRoute' | 'IPsec' | 'VPNClient' | 'Vnet2Vnet'
+* **connectionType**: 'ExpressRoute' | 'IPsec' | 'Vnet2Vnet' | 'VPNClient'
 * **egressBytesTransferred**: int
 * **ingressBytesTransferred**: int
 * **localNetworkGateway2**: LocalNetworkGateway
@@ -260,36 +260,15 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Network/expressRouteCircuits
+## Microsoft.Network/expressRouteCircuits/authorizations
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ExpressRouteCircuitPropertiesFormat
-* **sku**: ExpressRouteCircuitSku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/expressRouteCircuits' (ReadOnly, DeployTimeConstant)
-
-## ExpressRouteCircuitPropertiesFormat
-### Properties
-* **authorizations**: ExpressRouteCircuitAuthorization[]
-* **circuitProvisioningState**: string
-* **peerings**: ExpressRouteCircuitPeering[]
-* **provisioningState**: string
-* **serviceKey**: string
-* **serviceProviderNotes**: string
-* **serviceProviderProperties**: ExpressRouteCircuitServiceProviderProperties
-* **serviceProviderProvisioningState**: 'Deprovisioning' | 'NotProvisioned' | 'Provisioned' | 'Provisioning'
-
-## ExpressRouteCircuitAuthorization
-### Properties
-* **etag**: string
-* **id**: string
-* **name**: string
 * **properties**: AuthorizationPropertiesFormat
+* **type**: 'Microsoft.Network/expressRouteCircuits/authorizations' (ReadOnly, DeployTimeConstant)
 
 ## AuthorizationPropertiesFormat
 ### Properties
@@ -297,12 +276,15 @@
 * **authorizationUseStatus**: 'Available' | 'InUse'
 * **provisioningState**: string
 
-## ExpressRouteCircuitPeering
+## Microsoft.Network/expressRouteCircuits/peerings
 ### Properties
+* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
-* **id**: string
-* **name**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
 * **properties**: ExpressRouteCircuitPeeringPropertiesFormat
+* **type**: 'Microsoft.Network/expressRouteCircuits/peerings' (ReadOnly, DeployTimeConstant)
 
 ## ExpressRouteCircuitPeeringPropertiesFormat
 ### Properties
@@ -332,6 +314,44 @@
 * **bytesIn**: int
 * **bytesOut**: int
 
+## Microsoft.Network/expressRouteCircuits
+### Properties
+* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: '' (Required, DeployTimeConstant)
+* **properties**: ExpressRouteCircuitPropertiesFormat
+* **sku**: ExpressRouteCircuitSku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/expressRouteCircuits' (ReadOnly, DeployTimeConstant)
+
+## ExpressRouteCircuitPropertiesFormat
+### Properties
+* **authorizations**: ExpressRouteCircuitAuthorization[]
+* **circuitProvisioningState**: string
+* **peerings**: ExpressRouteCircuitPeering[]
+* **provisioningState**: string
+* **serviceKey**: string
+* **serviceProviderNotes**: string
+* **serviceProviderProperties**: ExpressRouteCircuitServiceProviderProperties
+* **serviceProviderProvisioningState**: 'Deprovisioning' | 'NotProvisioned' | 'Provisioned' | 'Provisioning'
+
+## ExpressRouteCircuitAuthorization
+### Properties
+* **etag**: string
+* **id**: string
+* **name**: string
+* **properties**: AuthorizationPropertiesFormat
+
+## ExpressRouteCircuitPeering
+### Properties
+* **etag**: string
+* **id**: string
+* **name**: string
+* **properties**: ExpressRouteCircuitPeeringPropertiesFormat
+
 ## ExpressRouteCircuitServiceProviderProperties
 ### Properties
 * **bandwidthInMbps**: int
@@ -347,26 +367,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Network/expressRouteCircuits/authorizations
-### Properties
-* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AuthorizationPropertiesFormat
-* **type**: 'Microsoft.Network/expressRouteCircuits/authorizations' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Network/expressRouteCircuits/peerings
-### Properties
-* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ExpressRouteCircuitPeeringPropertiesFormat
-* **type**: 'Microsoft.Network/expressRouteCircuits/peerings' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.Network/loadBalancers
 ### Properties
@@ -637,17 +637,17 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Network/publicIPAddresses/
+## Microsoft.Network/publicIPAddresses
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: '' (Required, DeployTimeConstant)
 * **properties**: PublicIpAddressPropertiesFormat
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/publicIPAddresses/' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.Network/publicIPAddresses' (ReadOnly, DeployTimeConstant)
 
 ## PublicIpAddressPropertiesFormat
 ### Properties
