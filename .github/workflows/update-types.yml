@@ -61,11 +61,23 @@ jobs:
       - name: Copy generated files
         run: rsync -a ./bicep-types-az.generator/bicep-types/* ./bicep-types-az/generated
 
+      - name: Set rest_api_sha env variable
+        run: |
+          rest_api_sha=`git rev-parse --short HEAD`
+          echo "::set-env name=rest_api_sha::$rest_api_sha"
+        working-directory: azure-rest-api-specs
+
+      - name: Set generator_sha env variable
+        run: |
+          generator_sha=`git rev-parse --short HEAD`
+          echo "::set-env name=generator_sha::$generator_sha"
+        working-directory: bicep-types-az.generator
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
           path: bicep-types-az
-          commit-message: Update Generated Types
+          commit-message: Generate types for https://github.com/Azure/azure-rest-api-specs/tree/${{ env.rest_api_sha }}
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
@@ -73,6 +85,7 @@ jobs:
           delete-branch: true
           title: Update Generated Types
           body: |
-            Update Generated Types
+            Generate types for https://github.com/Azure/azure-rest-api-specs/tree/${{ env.rest_api_sha }}
+            Used generator from https://github.com/Azure/bicep-types-az.generator/tree/${{ env.generator_sha }}
           labels: autogenerate
           draft: false
