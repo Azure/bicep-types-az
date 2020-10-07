@@ -25,6 +25,8 @@ namespace Bicep.SerializedTypes.Serialization
 
         private enum TypeBaseKind
         {
+            // These enum values should never be changed because they are serialized as integers.
+            // You can add to this list, but do not modify it!
             BuiltInType = 1,
             ObjectType = 2,
             ArrayType = 3,
