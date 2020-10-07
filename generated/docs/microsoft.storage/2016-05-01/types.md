@@ -1,0 +1,65 @@
+# Microsoft.Storage @ 2016-05-01
+
+## Microsoft.Storage/storageAccounts
+### Properties
+* **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'BlobStorage' | 'Storage' (Required)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: StorageAccountPropertiesCreateParameters
+* **sku**: Sku (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant)
+
+## StorageAccountPropertiesCreateParameters
+### Properties
+* **accessTier**: 'Cool' | 'Hot'
+* **creationTime**: string (ReadOnly)
+* **customDomain**: CustomDomain
+* **encryption**: Encryption
+* **lastGeoFailoverTime**: string (ReadOnly)
+* **primaryEndpoints**: Endpoints (ReadOnly)
+* **primaryLocation**: string (ReadOnly)
+* **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly)
+* **secondaryEndpoints**: Endpoints (ReadOnly)
+* **secondaryLocation**: string (ReadOnly)
+* **statusOfPrimary**: 'available' | 'unavailable' (ReadOnly)
+* **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly)
+
+## CustomDomain
+### Properties
+* **name**: string (Required)
+* **useSubDomainName**: bool
+
+## Encryption
+### Properties
+* **keySource**: string (Required)
+* **services**: EncryptionServices
+
+## EncryptionServices
+### Properties
+* **blob**: EncryptionService
+
+## EncryptionService
+### Properties
+* **enabled**: bool
+* **lastEnabledTime**: string (ReadOnly)
+
+## Endpoints
+### Properties
+* **blob**: string (ReadOnly)
+* **file**: string (ReadOnly)
+* **queue**: string (ReadOnly)
+* **table**: string (ReadOnly)
+
+## Sku
+### Properties
+* **name**: 'Premium_LRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_ZRS' (Required)
+* **tier**: 'Premium' | 'Standard' (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+

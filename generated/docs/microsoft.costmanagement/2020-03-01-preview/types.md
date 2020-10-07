@@ -1,0 +1,42 @@
+# Microsoft.CostManagement @ 2020-03-01-preview
+
+## Microsoft.CostManagement/costAllocationRules
+### Properties
+* **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CostAllocationRuleProperties
+* **type**: 'Microsoft.CostManagement/costAllocationRules' (ReadOnly, DeployTimeConstant)
+
+## CostAllocationRuleProperties
+### Properties
+* **createdDate**: string (ReadOnly)
+* **description**: string
+* **details**: CostAllocationRuleDetails (Required)
+* **status**: 'Active' | 'NotActive' | 'Processing' (Required)
+* **updatedDate**: string (ReadOnly)
+
+## CostAllocationRuleDetails
+### Properties
+* **sourceResources**: SourceCostAllocationResource[]
+* **targetResources**: TargetCostAllocationResource[]
+
+## SourceCostAllocationResource
+### Properties
+* **name**: string (Required)
+* **resourceType**: 'Dimension' | 'Tag' (Required)
+* **values**: string[] (Required)
+
+## TargetCostAllocationResource
+### Properties
+* **name**: string (Required)
+* **policyType**: string (Required)
+* **resourceType**: 'Dimension' | 'Tag' (Required)
+* **values**: CostAllocationProportion[] (Required)
+
+## CostAllocationProportion
+### Properties
+* **name**: string (Required)
+* **percentage**: int (Required)
+
