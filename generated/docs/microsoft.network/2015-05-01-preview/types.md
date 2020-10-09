@@ -180,7 +180,7 @@
 ## VirtualNetworkGatewayConnectionPropertiesFormat
 ### Properties
 * **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown'
-* **connectionType**: 'ExpressRoute' | 'IPsec' | 'Vnet2Vnet' | 'VPNClient'
+* **connectionType**: 'ExpressRoute' | 'IPsec' | 'VPNClient' | 'Vnet2Vnet'
 * **egressBytesTransferred**: int
 * **ingressBytesTransferred**: int
 * **localNetworkGateway2**: LocalNetworkGateway
