@@ -8,14 +8,15 @@ using Bicep.SerializedTypes.Concrete;
 
 namespace Bicep.SerializedTypes.Az
 {
-    public static class TypeLoader
+    public class TypeLoader : ITypeLoader
     {
-        private const string typeContainerName = "types.json";
+        private const string TypeContainerName = "types.json";
+        private const string TypeIndexResourceName = "index.json";
 
         private static string GetTypeContainerResourceName(string providerNamespace, string apiVersion)
-            => $"{providerNamespace}/{apiVersion}/{typeContainerName}".ToLowerInvariant();
+            => $"{providerNamespace}/{apiVersion}/{TypeContainerName}".ToLowerInvariant();
 
-        public static IEnumerable<TypeBase> LoadTypes(string providerNamespace, string apiVersion)
+        public IEnumerable<TypeBase> LoadTypes(string providerNamespace, string apiVersion)
         {
             var streamName = GetTypeContainerResourceName(providerNamespace, apiVersion);
             var fileStream = typeof(TypeLoader).Assembly.GetManifestResourceStream(streamName);
@@ -34,17 +35,43 @@ namespace Bicep.SerializedTypes.Az
             }
         }
 
-        public static IEnumerable<(string providerNamespace, string apiVersion)> ListAvailableProviders()
+        public ResourceType LoadResourceType(TypeLocation typeLocation)
         {
-            foreach (var fileName in typeof(TypeLoader).Assembly.GetManifestResourceNames())
+            var fileStream = typeof(TypeLoader).Assembly.GetManifestResourceStream(typeLocation.RelativePath);
+            if (fileStream == null)
             {
-                var splitPath = fileName.Split('/');
-                if (splitPath.Length != 3 || splitPath[2] != typeContainerName)
+                throw new ArgumentException($"Unable to locate type \"{typeLocation.RelativePath}\" resource");
+            }
+
+            using (fileStream)
+            using (var streamReader = new StreamReader(fileStream))
+            {
+                var content = streamReader.ReadToEnd();
+
+                var types = TypeSerializer.Deserialize(content);
+                if (!(typeLocation.Index is int intIndex && types[intIndex] is ResourceType resourceType))
                 {
-                    throw new InvalidOperationException($"Found unexpected manifest file {fileName}");
+                    throw new ArgumentException($"Unable to locate resource type at index {typeLocation.Index} in \"{typeLocation.RelativePath}\" resource");
                 }
 
-                yield return (splitPath[0], splitPath[1]);                
+                return resourceType;
+            }
+        }
+
+        public IReadOnlyDictionary<string, TypeLocation> ListAllAvailableTypes()
+        {
+            var fileStream = typeof(TypeLoader).Assembly.GetManifestResourceStream(TypeIndexResourceName);
+            if (fileStream == null)
+            {
+                throw new ArgumentException("Unable to locate type index resource");
+            }
+
+            using (fileStream)
+            using (var streamReader = new StreamReader(fileStream))
+            {
+                var content = streamReader.ReadToEnd();
+
+                return TypeIndexer.DeserializeIndex(content);
             }
         }
     }

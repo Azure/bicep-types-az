@@ -11,9 +11,10 @@ namespace Bicep.SerializedTypes.Az.UnitTests
         [TestMethod]
         public void TypeLoader_can_load_all_types_without_throwing()
         {
-            foreach (var (providerNamespace, apiVersion) in TypeLoader.ListAvailableProviders())
+            var typeLoader = new TypeLoader();
+            foreach (var kvp in typeLoader.ListAllAvailableTypes())
             {
-                var types = TypeLoader.LoadTypes(providerNamespace, apiVersion);
+                var resourceType = typeLoader.LoadResourceType(kvp.Value);
             }
         }
     }
