@@ -26,6 +26,8 @@
 ## ScopeElement
 ### Properties
 * **field**: string
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## Microsoft.Security/assessmentMetadata
 ### Properties

@@ -1714,18 +1714,24 @@
 * **nodeSize**: string
 * **numberOfNodes**: int
 * **vNetProperties**: IntegrationRuntimeVNetProperties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## IntegrationRuntimeDataFlowProperties
 ### Properties
 * **computeType**: 'ComputeOptimized' | 'General' | 'MemoryOptimized'
 * **coreCount**: int
 * **timeToLive**: int
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## IntegrationRuntimeVNetProperties
 ### Properties
 * **publicIPs**: string[]
 * **subnet**: string
 * **vNetId**: string
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## IntegrationRuntimeSsisProperties
 ### Properties
@@ -1736,6 +1742,8 @@
 * **expressCustomSetupProperties**: CustomSetupBase[]
 * **licenseType**: 'BasePrice' | 'LicenseIncluded'
 * **packageStores**: PackageStore[]
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## IntegrationRuntimeSsisCatalogInfo
 ### Properties
@@ -1743,6 +1751,8 @@
 * **catalogAdminUserName**: string
 * **catalogPricingTier**: 'Basic' | 'Premium' | 'PremiumRS' | 'Standard'
 * **catalogServerEndpoint**: string
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## SecureString
 ### Properties
@@ -3951,6 +3961,8 @@
 * **isReserved**: bool (ReadOnly)
 * **privateLinkResourceId**: string
 * **provisioningState**: string (ReadOnly)
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## ConnectionStateProperties
 ### Properties
@@ -3972,6 +3984,8 @@
 ### Properties
 * **alias**: string (ReadOnly)
 * **vNetId**: string (ReadOnly)
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## Microsoft.DataFactory/factories/pipelines
 ### Properties
@@ -4016,6 +4030,8 @@
 ### Properties
 * **activity**: string (Required)
 * **dependencyConditions**: 'Completed' | 'Failed' | 'Skipped' | 'Succeeded'[] (Required)
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## UserProperty
 ### Properties
@@ -4039,6 +4055,8 @@
 * **secureInput**: bool
 * **secureOutput**: bool
 * **timeout**: any
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## schemas:557_folder
 ### Properties

@@ -701,11 +701,15 @@
 * **nodeSize**: string
 * **numberOfNodes**: int
 * **vNetProperties**: IntegrationRuntimeVNetProperties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## IntegrationRuntimeVNetProperties
 ### Properties
 * **subnet**: string
 * **vNetId**: string
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## IntegrationRuntimeSsisProperties
 ### Properties
@@ -714,6 +718,8 @@
 * **dataProxyProperties**: IntegrationRuntimeDataProxyProperties
 * **edition**: 'Enterprise' | 'Standard'
 * **licenseType**: 'BasePrice' | 'LicenseIncluded'
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## IntegrationRuntimeSsisCatalogInfo
 ### Properties
@@ -721,6 +727,8 @@
 * **catalogAdminUserName**: string
 * **catalogPricingTier**: string
 * **catalogServerEndpoint**: string
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## SecureString
 ### Properties
@@ -2265,6 +2273,8 @@
 ### Properties
 * **activity**: string (Required)
 * **dependencyConditions**: 'Completed' | 'Failed' | 'Skipped' | 'Succeeded'[] (Required)
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## Container
 ### Properties
@@ -2282,6 +2292,8 @@
 * **retryIntervalInSeconds**: int
 * **secureOutput**: bool
 * **timeout**: any
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## Dictionary<string,ParameterSpecification>
 ### Additional Properties

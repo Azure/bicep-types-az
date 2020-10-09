@@ -57,6 +57,8 @@
 * **etag**: string
 * **serviceAuth**: ServiceAuthConfiguration
 * **ssl**: SslConfiguration
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## AutoScaleConfiguration
 ### Properties

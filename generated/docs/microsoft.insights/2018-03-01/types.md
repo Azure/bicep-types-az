@@ -89,6 +89,8 @@
 * **skipMetricValidation**: bool
 * **threshold**: int (Required)
 * **timeAggregation**: any (Required)
+#### Additional Properties
+* **Additional Properties Type**: any
 
 
 ## MetricDimension
@@ -121,6 +123,8 @@
 * **skipMetricValidation**: bool
 * **threshold**: int (Required)
 * **timeAggregation**: any (Required)
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria
 ### Properties

@@ -142,18 +142,24 @@
 * **nodeSize**: string
 * **numberOfNodes**: int
 * **vNetProperties**: IntegrationRuntimeVNetProperties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## IntegrationRuntimeDataFlowProperties
 ### Properties
 * **computeType**: 'ComputeOptimized' | 'General' | 'MemoryOptimized'
 * **coreCount**: int
 * **timeToLive**: int
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## IntegrationRuntimeVNetProperties
 ### Properties
 * **publicIPs**: string[]
 * **subnet**: string
 * **vNetId**: string
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## IntegrationRuntimeSsisProperties
 ### Properties
@@ -163,6 +169,8 @@
 * **edition**: 'Enterprise' | 'Standard'
 * **expressCustomSetupProperties**: CustomSetupBase[]
 * **licenseType**: 'BasePrice' | 'LicenseIncluded'
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## IntegrationRuntimeSsisCatalogInfo
 ### Properties
@@ -170,6 +178,8 @@
 * **catalogAdminUserName**: string
 * **catalogPricingTier**: 'Basic' | 'Premium' | 'PremiumRS' | 'Standard'
 * **catalogServerEndpoint**: string
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## SecureString
 ### Properties

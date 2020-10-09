@@ -15,6 +15,8 @@
 ### Properties
 * **exclude**: bool (WriteOnly)
 * **low_cpu_threshold**: string (WriteOnly)
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## ConfigData
 ### Properties

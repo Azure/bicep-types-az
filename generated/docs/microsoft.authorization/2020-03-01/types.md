@@ -76,6 +76,8 @@
 ### Properties
 * **description**: string
 * **displayName**: string
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## Microsoft.Authorization/policyDefinitions
 ### Properties

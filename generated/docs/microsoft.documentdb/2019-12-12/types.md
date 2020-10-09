@@ -66,6 +66,8 @@
 ## CreateUpdateOptions
 ### Properties
 * **throughput**: string (WriteOnly)
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## CassandraTableResource
 ### Properties
