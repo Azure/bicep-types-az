@@ -57,6 +57,7 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 ObjectType type => type.Name,
                 ArrayType type => $"{GetTypeName(type.ItemType)}[]",
                 ResourceType type => type.Name,
+                ResourceFunctionType type => $"{type.Name} ({type.ResourceType}@{type.ApiVersion})",
                 UnionType type => string.Join(" | ", type.Elements.Select(GetTypeName).OrderBy(x => x)),
                 StringLiteralType type => $"'{type.Value}'",
                 DiscriminatedObjectType type => type.Name,
@@ -78,7 +79,7 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
         private void WriteNewLine()
             => output.AppendLine();
 
-        private static void FindTypesToWrite(OrderedTypes typesToWrite, ITypeReference typeReference)
+        private static void FindTypesToWrite(OrderedTypes typesToWrite, TypeBase type)
         {
             void addToOrderedTypes(ITypeReference typeReference)
             {
@@ -86,11 +87,11 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 if (!typesToWrite.Contains(typeReference.Type))
                 {
                     typesToWrite.Add(typeReference.Type);
-                    FindTypesToWrite(typesToWrite, typeReference);
+                    FindTypesToWrite(typesToWrite, typeReference.Type);
                 }
             }
 
-            switch (typeReference.Type)
+            switch (type)
             {
                 case ArrayType arrayType:
                     addToOrderedTypes(arrayType.ItemType);
@@ -107,6 +108,13 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                     {
                         addToOrderedTypes(objectType.AdditionalProperties);
                     }
+                    return;
+                case ResourceFunctionType resourceFunctionType:
+                    if (resourceFunctionType.Input is not null)
+                    {
+                        addToOrderedTypes(resourceFunctionType.Input);
+                    }
+                    addToOrderedTypes(resourceFunctionType.Output);
                     return;
                 case DiscriminatedObjectType discriminatedObjectType:
                     foreach (var property in discriminatedObjectType.BaseProperties.OrderBy(x => x.Key))
@@ -127,10 +135,16 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
             WriteNewLine();
 
             var resourceTypes = types.OfType<ResourceType>().OrderBy(x => x.Name.Split("@")[0], StringComparer.OrdinalIgnoreCase).ToList();
-            var typesToWrite = new OrderedTypes(resourceTypes);
+            var resourceFunctionTypes = types.OfType<ResourceFunctionType>().OrderBy(x => x.Name).ToList();
+
+            var typesToWrite = new OrderedTypes(resourceTypes.Concat<TypeBase>(resourceFunctionTypes));
             foreach (var resourceType in resourceTypes)
             {
-                FindTypesToWrite(typesToWrite, resourceType.Body);
+                FindTypesToWrite(typesToWrite, resourceType.Body.Type);
+            }
+            foreach (var resourceFunctionType in resourceFunctionTypes)
+            {
+                FindTypesToWrite(typesToWrite, resourceFunctionType);
             }
 
             foreach (var type in typesToWrite)
@@ -149,6 +163,19 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                     WriteHeading(nesting, $"Resource {resourceType.Name}");
                     WriteBullet("Valid Scope(s)", $"{resourceType.ScopeType}");
                     WriteComplexType(resourceType.Body.Type, nesting, false);
+                    return;
+                case ResourceFunctionType resourceFunctionType:
+                    WriteHeading(nesting, $"Function {resourceFunctionType.Name} ({resourceFunctionType.ResourceType}@{resourceFunctionType.ApiVersion})");
+
+                    WriteBullet("Resource", resourceFunctionType.ResourceType);
+                    WriteBullet("ApiVersion", resourceFunctionType.ApiVersion);
+                    if (resourceFunctionType.Input is not null)
+                    {
+                        WriteBullet("Input", GetTypeName(resourceFunctionType.Input));
+                    }
+                    WriteBullet("Output", GetTypeName(resourceFunctionType.Output));
+
+                    WriteNewLine();
                     return;
                 case ObjectType objectType:
                     if (includeHeader)

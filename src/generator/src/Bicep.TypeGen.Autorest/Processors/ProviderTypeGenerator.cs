@@ -76,60 +76,84 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
             return scopeA | scopeB;
         }
 
-        private static IReadOnlyList<ResourceDefinition> CollapseDefinitionScopes(IEnumerable<ResourceDefinition> definitions)
+        private static IReadOnlyDictionary<ResourceDescriptor, ResourceDescriptor> CollapseDescriptors(IEnumerable<ResourceDescriptor> descriptors)
         {
-            var definitionsByName = new Dictionary<string, ResourceDefinition>(StringComparer.OrdinalIgnoreCase);
-            foreach (var definition in definitions)
-            {
-                var name = definition.Descriptor.ConstantName ?? "";
+            var output = new Dictionary<ResourceDescriptor, ResourceDescriptor>();
 
-                if (definitionsByName.TryGetValue(name, out var existingDefinition))
+            var descriptorsByType = descriptors.GroupBy(x => x.FullyQualifiedType, StringComparer.OrdinalIgnoreCase);
+            foreach (var sameTypeGrouping in descriptorsByType)
+            {
+                var mergedDescriptors = new Dictionary<string, ResourceDescriptor>(StringComparer.OrdinalIgnoreCase);
+                foreach (var descriptor in sameTypeGrouping)
                 {
-                    var mergedDescriptor = existingDefinition.Descriptor with { ScopeType = MergeScopes(existingDefinition.Descriptor.ScopeType, definition.Descriptor.ScopeType) };
-                    
-                    definitionsByName[name] = existingDefinition with { Descriptor = mergedDescriptor };
+                    var name = descriptor.ConstantName ?? "";
+                    if (mergedDescriptors.TryGetValue(name, out var existingDescriptor))
+                    {
+                        mergedDescriptors[name] = descriptor with { ScopeType = MergeScopes(existingDescriptor.ScopeType, descriptor.ScopeType) };
+                    }
+                    else
+                    {
+                        mergedDescriptors[name] = descriptor;
+                    }
                 }
-                else
+
+                foreach (var descriptor in sameTypeGrouping)
                 {
-                    definitionsByName[name] = definition;
+                    var name = descriptor.ConstantName ?? "";
+
+                    output[descriptor] = mergedDescriptors[name];
                 }
             }
 
-            return definitionsByName.Values.ToList();
+            return output;
+        }
+
+        private static string NormalizeListActionName(string actionName)
+        {
+            if (actionName.StartsWith("list", StringComparison.OrdinalIgnoreCase))
+            {
+                // force lower-case on the 'list' prefix for consistency
+                return "list" + actionName.Substring(4);
+            }
+
+            return actionName;
         }
 
         private GenerateResult Process()
         {
-            var definitionsByDescriptor = definition.ResourceDefinitions
-                .ToLookup(x => x.Descriptor.FullyQualifiedType)
-                .ToDictionary(x => x.Key, x => CollapseDefinitionScopes(x));
+            var descriptors = definition.ResourceDefinitions.Select(x => x.Descriptor)
+                .Concat(definition.ResourceListActions.Select(x => x.Descriptor));
+            var mergedDescriptors = CollapseDescriptors(descriptors);
 
-            foreach (var (fullyQualifiedType, definitions) in definitionsByDescriptor)
+            var definitionsByDescriptor = definition.ResourceDefinitions
+                .ToLookup(x => mergedDescriptors[x.Descriptor])
+                .ToDictionary(x => x.Key, x => x.ToList());
+
+            foreach (var (descriptor, definitions) in definitionsByDescriptor)
             {
                 if (definitions.Count > 1)
                 {
-                    CodeModelProcessor.LogWarning($"Skipping resource type {fullyQualifiedType} under path '{definitions[0].DeclaringMethod.Url}': Found multiple definitions for the same type");
+                    CodeModelProcessor.LogWarning($"Skipping resource type {descriptor.FullyQualifiedType} under path '{definitions[0].DeclaringMethod.Url}': Found multiple definitions for the same type");
                     continue;
                 }
 
                 var resource = definitions.Single();
-                var descriptor = resource.Descriptor;
 
                 var putBody = resource.DeclaringMethod.Body?.ModelType as CompositeType;
                 var getBody = (resource.GetMethod?.Responses.GetValueOrDefault(HttpStatusCode.OK)?.Body as CompositeType) ?? 
                     (resource.GetMethod?.DefaultResponse?.Body as CompositeType) ??
                     putBody;
 
-                var (success, failureReason, resourceName) = ParseNameSchema(resource, definition);
+                var (success, failureReason, resourceName) = ParseNameSchema(resource);
                 if (!success)
                 {
-                    CodeModelProcessor.LogWarning($"Skipping resource type {fullyQualifiedType} under path '{resource.DeclaringMethod.Url}': {failureReason}");
+                    CodeModelProcessor.LogWarning($"Skipping resource type {descriptor.FullyQualifiedType} under path '{resource.DeclaringMethod.Url}': {failureReason}");
                     continue;
                 }
 
                 if (putBody == null)
                 {
-                    CodeModelProcessor.LogWarning($"Skipping resource type {fullyQualifiedType} under path '{resource.DeclaringMethod.Url}': No resource body defined");
+                    CodeModelProcessor.LogWarning($"Skipping resource type {descriptor.FullyQualifiedType} under path '{resource.DeclaringMethod.Url}': No resource body defined");
                     continue;
                 }
 
@@ -163,6 +187,64 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 }
             }
 
+            var listActionsByDescriptor = definition.ResourceListActions
+                .ToLookup(x => mergedDescriptors[x.Descriptor])
+                .ToDictionary(x => x.Key, x => x.ToList());
+
+            foreach (var (descriptor, actions) in listActionsByDescriptor)
+            {
+                var actionsByName = actions
+                    .ToLookup(x => x.ActionName, StringComparer.OrdinalIgnoreCase)
+                    .ToDictionary(x => NormalizeListActionName(x.Key), x => x.ToArray(), StringComparer.OrdinalIgnoreCase);
+
+                foreach (var (actionName, definitions) in actionsByName)
+                {
+                    if (definitions.Length > 1)
+                    {
+                        CodeModelProcessor.LogWarning($"Skipping action {actionName} for resource type {descriptor.FullyQualifiedType} under path '{definitions[0].DeclaringMethod.Url}': Found multiple definitions for the same action");
+                        continue;
+                    }
+                    var action = definitions.Single();
+
+                    var resourceDescriptor = definitionsByDescriptor.Keys.FirstOrDefault(x => 
+                        StringComparer.OrdinalIgnoreCase.Equals(x.FullyQualifiedType, descriptor.FullyQualifiedType) &&
+                        StringComparer.OrdinalIgnoreCase.Equals(x.ConstantName, descriptor.ConstantName) &&
+                        StringComparer.OrdinalIgnoreCase.Equals(x.ApiVersion, descriptor.ApiVersion));
+
+                    if (resourceDescriptor is null)
+                    {
+                        CodeModelProcessor.LogWarning($"Skipping action {actionName} for resource type {descriptor.FullyQualifiedType} under path '{definitions[0].DeclaringMethod.Url}': Unable to find associated resource definition");
+                        continue;
+                    }
+
+                    var postRequestBody = action.DeclaringMethod.Body?.ModelType as CompositeType;
+                    var postResponseBody = (action.DeclaringMethod.Responses.GetValueOrDefault(HttpStatusCode.OK)?.Body as CompositeType) ??
+                        (action.DeclaringMethod.DefaultResponse?.Body as CompositeType);
+
+                    TypeBase? postRequestType = null;
+                    if (postRequestBody is not null)
+                    {
+                        postRequestType = ParseType(postRequestBody, null);
+                    }
+
+                    if (postResponseBody == null)
+                    {
+                        CodeModelProcessor.LogWarning($"Skipping action {actionName} for resource type {descriptor.FullyQualifiedType} under path '{action.DeclaringMethod.Url}': No response body defined");
+                        continue;
+                    }
+
+                    var resource = definitionsByDescriptor[descriptor].SingleOrDefault();
+                    var postResponseType = ParseType(null, postResponseBody);
+                    
+                    factory.Create(() => new ResourceFunctionType(
+                        actionName,
+                        descriptor.FullyQualifiedType,
+                        descriptor.ApiVersion,
+                        factory.GetReference(postResponseType),
+                        postRequestType is not null ? factory.GetReference(postRequestType) : null));
+                }
+            }
+
             return new GenerateResult(
                 definition.Namespace,
                 definition.ApiVersion,
@@ -170,7 +252,7 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 definition.ResourceDefinitions.Select(x => x.Descriptor).ToList());
         }
 
-        private (bool success, string failureReason, TypeBase? name) ParseNameSchema(ResourceDefinition resource, ProviderDefinition providerDefinition)
+        private (bool success, string failureReason, TypeBase? name) ParseNameSchema(ResourceDefinition resource)
         {
             var finalProvidersMatch = CodeModelProcessor.parentScopePrefix.Match(resource.DeclaringMethod.Url);
             var routingScope = resource.DeclaringMethod.Url.Substring(finalProvidersMatch.Length);

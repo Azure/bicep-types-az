@@ -47,6 +47,7 @@ namespace Azure.Bicep.TypeGen.Index
             var subscription = new Dictionary<string, TypeLocation>(StringComparer.OrdinalIgnoreCase);
             var resourceGroup = new Dictionary<string, TypeLocation>(StringComparer.OrdinalIgnoreCase);
             var extension = new Dictionary<string, TypeLocation>(StringComparer.OrdinalIgnoreCase);
+            var functions = new Dictionary<string, List<TypeLocation>>(StringComparer.OrdinalIgnoreCase);
 
             foreach (var (originalPath, relativePath) in typeFiles)
             {
@@ -55,45 +56,51 @@ namespace Azure.Bicep.TypeGen.Index
 
                 foreach (var (type, index) in indexedTypes.OrderBy(x => x.index))
                 {
-                    if (!(type is ResourceType resourceType))
-                    {
-                        continue;
-                    }
+                    var typeLocation = new TypeLocation(relativePath, index);
 
-                    if (resourceType.Name == null)
+                    switch (type)
                     {
-                        throw new ArgumentException($"Found resource with null resource name");
-                    }
+                        case ResourceType resourceType:
+                        {
+                            if (resourceType.ScopeType == ScopeType.Unknown || resourceType.ScopeType.HasFlag(ScopeType.Tenant))
+                            {
+                                tenant[resourceType.Name] = typeLocation;
+                            }
 
-                    var typeLocation = new TypeLocation
-                    {
-                        RelativePath = relativePath,
-                        Index = index,
-                    };
+                            if (resourceType.ScopeType == ScopeType.Unknown || resourceType.ScopeType.HasFlag(ScopeType.ManagementGroup))
+                            {
+                                managementGroup[resourceType.Name] = typeLocation;
+                            }
 
-                    if (resourceType.ScopeType == ScopeType.Unknown || resourceType.ScopeType.HasFlag(ScopeType.Tenant))
-                    {
-                        tenant[resourceType.Name] = typeLocation;
-                    }
+                            if (resourceType.ScopeType == ScopeType.Unknown || resourceType.ScopeType.HasFlag(ScopeType.Subscription))
+                            {
+                                subscription[resourceType.Name] = typeLocation;
+                            }
 
-                    if (resourceType.ScopeType == ScopeType.Unknown || resourceType.ScopeType.HasFlag(ScopeType.ManagementGroup))
-                    {
-                        managementGroup[resourceType.Name] = typeLocation;
-                    }
+                            if (resourceType.ScopeType == ScopeType.Unknown || resourceType.ScopeType.HasFlag(ScopeType.ResourceGroup))
+                            {
+                                resourceGroup[resourceType.Name] = typeLocation;
+                            }
 
-                    if (resourceType.ScopeType == ScopeType.Unknown || resourceType.ScopeType.HasFlag(ScopeType.Subscription))
-                    {
-                        subscription[resourceType.Name] = typeLocation;
-                    }
+                            if (resourceType.ScopeType == ScopeType.Unknown || resourceType.ScopeType.HasFlag(ScopeType.Extension))
+                            {
+                                extension[resourceType.Name] = typeLocation;
+                            }
 
-                    if (resourceType.ScopeType == ScopeType.Unknown || resourceType.ScopeType.HasFlag(ScopeType.ResourceGroup))
-                    {
-                        resourceGroup[resourceType.Name] = typeLocation;
-                    }
+                            break;
+                        }
+                        case ResourceFunctionType resourceFunctionType:
+                        {
+                            if (!functions.TryGetValue(resourceFunctionType.ResourceType, out var functionList))
+                            {
+                                functionList = new();
+                                functions[resourceFunctionType.ResourceType] = functionList;
+                            }
+                            
+                            functionList.Add(typeLocation);
 
-                    if (resourceType.ScopeType == ScopeType.Unknown || resourceType.ScopeType.HasFlag(ScopeType.Extension))
-                    {
-                        extension[resourceType.Name] = typeLocation;
+                            break;
+                        }
                     }
                 }
             }
@@ -103,7 +110,8 @@ namespace Azure.Bicep.TypeGen.Index
                 managementGroup,
                 subscription,
                 resourceGroup,
-                extension);
+                extension,
+                functions.ToDictionary(x => x.Key, x => x.Value as IReadOnlyList<TypeLocation>, functions.Comparer));
         }
 
         public static string BuildSerializedIndex(string baseDir)

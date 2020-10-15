@@ -12,5 +12,7 @@ namespace Azure.Bicep.TypeGen.Autorest.Models
         CodeModel Model)
     {
         public IList<ResourceDefinition> ResourceDefinitions { get; } = new List<ResourceDefinition>();
+
+        public IList<ResourceListActionDefinition> ResourceListActions { get; } = new List<ResourceListActionDefinition>();
     }
 }

@@ -11,13 +11,15 @@ namespace Azure.Bicep.Types.Az.Index
             IReadOnlyDictionary<string, TypeLocation> managementGroup,
             IReadOnlyDictionary<string, TypeLocation> subscription,
             IReadOnlyDictionary<string, TypeLocation> resourceGroup,
-            IReadOnlyDictionary<string, TypeLocation> extension)
+            IReadOnlyDictionary<string, TypeLocation> extension,
+            IReadOnlyDictionary<string, IReadOnlyList<TypeLocation>> functions)
         {
             Tenant = tenant;
             ManagementGroup = managementGroup;
             Subscription = subscription;
             ResourceGroup = resourceGroup;
             Extension = extension;
+            Functions = functions;
         }
 
         public IReadOnlyDictionary<string, TypeLocation> Tenant { get; }
@@ -29,5 +31,7 @@ namespace Azure.Bicep.Types.Az.Index
         public IReadOnlyDictionary<string, TypeLocation> ResourceGroup { get; }
 
         public IReadOnlyDictionary<string, TypeLocation> Extension { get; }
+
+        public IReadOnlyDictionary<string, IReadOnlyList<TypeLocation>> Functions { get; }
     }
 }
