@@ -55,7 +55,7 @@ jobs:
         working-directory: bicep-types-az.generator
       
       - name: Run generator
-        run: npm run generate -- ../azure-rest-api-specs
+        run: npm run generate -- ../azure-rest-api-specs | tee ./bicep-types-az/generation.log
         working-directory: bicep-types-az.generator
 
       - name: Copy generated files

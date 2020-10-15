@@ -73,6 +73,7 @@ namespace Bicep.SerializedTypes.UnitTests
             var unionType = factory.Create(() => new UnionType { Elements = new [] { factory.GetReference(intType), factory.GetReference(objectType) } });
             var stringLiteralType = factory.Create(() => new StringLiteralType { Value = "abcdef" });
             var discriminatedObjectType = factory.Create(() => new DiscriminatedObjectType { Name = "disctest" });
+            var resourceFunctionType = factory.Create(() => new ResourceFunctionType { Name = "listTest", Resource = factory.GetReference(resourceType), Output = factory.GetReference(objectType), });
 
             var serialized = TypeSerializer.Serialize(factory.GetTypes());
             var deserialized = TypeSerializer.Deserialize(serialized);
@@ -84,6 +85,7 @@ namespace Bicep.SerializedTypes.UnitTests
             deserialized[4].Should().BeOfType<UnionType>();
             deserialized[5].Should().BeOfType<StringLiteralType>();
             deserialized[6].Should().BeOfType<DiscriminatedObjectType>();
+            deserialized[7].Should().BeOfType<ResourceFunctionType>();
 
             ((BuiltInType)deserialized[0]).Kind.Should().Be(intType.Kind);
             ((ObjectType)deserialized[1]).Name.Should().Be(objectType.Name);
@@ -93,6 +95,7 @@ namespace Bicep.SerializedTypes.UnitTests
             ((UnionType)deserialized[4]).Elements![1].Type.Should().Be(deserialized[1]);
             ((StringLiteralType)deserialized[5]).Value.Should().Be(stringLiteralType.Value);
             ((DiscriminatedObjectType)deserialized[6]).Name.Should().Be(discriminatedObjectType.Name);
+            ((ResourceFunctionType)deserialized[7]).Name.Should().Be(resourceFunctionType.Name);
         }
     }
 }
