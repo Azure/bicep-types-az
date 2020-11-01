@@ -18,6 +18,7 @@
 * **dependencies**: Dependency[] (ReadOnly)
 * **duration**: string (ReadOnly)
 * **error**: ErrorResponse (ReadOnly)
+* **expressionEvaluationOptions**: ExpressionEvaluationOptions (WriteOnly)
 * **mode**: 'Complete' | 'Incremental' (Required)
 * **onErrorDeployment**: OnErrorDeployment
 * **outputResources**: ResourceReference[] (ReadOnly)
@@ -61,6 +62,10 @@
 ### Properties
 * **info**: any (ReadOnly)
 * **type**: string (ReadOnly)
+
+## ExpressionEvaluationOptions
+### Properties
+* **scope**: 'Inner' | 'NotSpecified' | 'Outer' (WriteOnly)
 
 ## OnErrorDeployment
 ### Properties

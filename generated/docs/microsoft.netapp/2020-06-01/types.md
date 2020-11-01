@@ -45,6 +45,7 @@
 
 ## backupProperties
 ### Properties
+* **backupId**: string (ReadOnly)
 * **backupType**: string (ReadOnly)
 * **creationDate**: string (ReadOnly)
 * **label**: string

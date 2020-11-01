@@ -2462,9 +2462,11 @@
 ## AmazonS3LinkedServiceTypeProperties
 ### Properties
 * **accessKeyId**: any
+* **authenticationType**: any
 * **encryptedCredential**: any
 * **secretAccessKey**: SecretBase
 * **serviceUrl**: any
+* **sessionToken**: SecretBase
 
 ## AzureBatch
 ### Properties
@@ -2823,6 +2825,7 @@
 ## ConcurLinkedServiceTypeProperties
 ### Properties
 * **clientId**: any (Required)
+* **connectionProperties**: any
 * **encryptedCredential**: any
 * **password**: SecretBase
 * **useEncryptedEndpoints**: any
@@ -4099,7 +4102,7 @@
 #### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'ChainingTrigger' (Required)
-* **typeProperties**: schemas:870_typeProperties (Required)
+* **typeProperties**: schemas:873_typeProperties (Required)
 
 ### MultiplePipelineTrigger
 #### Properties
@@ -4109,20 +4112,20 @@
 ### RerunTumblingWindowTrigger
 #### Properties
 * **type**: 'RerunTumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:869_typeProperties (Required)
+* **typeProperties**: schemas:872_typeProperties (Required)
 
 ### TumblingWindowTrigger
 #### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'TumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:861_typeProperties (Required)
+* **typeProperties**: schemas:864_typeProperties (Required)
 
 
 ## ChainingTrigger
 ### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'ChainingTrigger' (Required)
-* **typeProperties**: schemas:870_typeProperties (Required)
+* **typeProperties**: schemas:873_typeProperties (Required)
 
 ## TriggerPipelineReference
 ### Properties
@@ -4139,7 +4142,7 @@
 * **referenceName**: string (Required)
 * **type**: string (Required)
 
-## schemas:870_typeProperties
+## schemas:873_typeProperties
 ### Properties
 * **dependsOn**: PipelineReference[] (Required)
 * **runDimension**: string (Required)
@@ -4152,9 +4155,9 @@
 ## RerunTumblingWindowTrigger
 ### Properties
 * **type**: 'RerunTumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:869_typeProperties (Required)
+* **typeProperties**: schemas:872_typeProperties (Required)
 
-## schemas:869_typeProperties
+## schemas:872_typeProperties
 ### Properties
 * **parentTrigger**: any (Required)
 * **requestedEndTime**: string (Required)
@@ -4165,14 +4168,14 @@
 ### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'TumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:861_typeProperties (Required)
+* **typeProperties**: schemas:864_typeProperties (Required)
 
-## schemas:861_typeProperties
+## schemas:864_typeProperties
 ### Properties
 * **delay**: any
 * **dependsOn**: DependencyReference[]
 * **endTime**: string
-* **frequency**: 'Hour' | 'Minute' (Required)
+* **frequency**: 'Hour' | 'Minute' | 'Month' (Required)
 * **interval**: int (Required)
 * **maxConcurrency**: int (Required)
 * **retryPolicy**: RetryPolicy

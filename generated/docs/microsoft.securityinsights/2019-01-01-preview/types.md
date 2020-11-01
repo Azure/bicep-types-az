@@ -70,7 +70,7 @@
 * **displayNamesFilter**: string[]
 * **enabled**: bool (Required)
 * **lastModifiedUtc**: string (ReadOnly)
-* **productFilter**: 'Azure Active Directory Identity Protection' | 'Azure Advanced Threat Protection' | 'Azure Security Center for IoT' | 'Azure Security Center' | 'Microsoft Cloud App Security' (Required)
+* **productFilter**: 'Azure Active Directory Identity Protection' | 'Azure Advanced Threat Protection' | 'Azure Security Center for IoT' | 'Azure Security Center' | 'Microsoft Cloud App Security' | 'Microsoft Defender Advanced Threat Protection' | 'Office 365 Advanced Threat Protection' (Required)
 * **severitiesFilter**: 'High' | 'Informational' | 'Low' | 'Medium'[]
 
 ## Scheduled
@@ -472,6 +472,7 @@
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: IncidentCommentProperties
@@ -481,6 +482,7 @@
 ### Properties
 * **author**: ClientInfo (ReadOnly)
 * **createdTimeUtc**: string (ReadOnly)
+* **lastModifiedTimeUtc**: string (ReadOnly)
 * **message**: string (Required)
 
 ## ClientInfo

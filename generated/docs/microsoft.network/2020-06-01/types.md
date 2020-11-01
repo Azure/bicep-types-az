@@ -3312,9 +3312,9 @@
 
 ## HubRouteTableProperties
 ### Properties
-* **associatedConnections**: SubResource[] (ReadOnly)
+* **associatedConnections**: string[] (ReadOnly)
 * **labels**: string[]
-* **propagatingConnections**: SubResource[] (ReadOnly)
+* **propagatingConnections**: string[] (ReadOnly)
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **routes**: HubRoute[]
 
