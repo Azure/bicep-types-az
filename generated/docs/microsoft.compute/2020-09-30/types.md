@@ -19,19 +19,25 @@
 
 ## GalleryApplicationVersionPublishingProfile
 ### Properties
-* **contentType**: string
 * **enableHealthCheck**: bool
 * **endOfLifeDate**: string
 * **excludeFromLatest**: bool
+* **manageActions**: UserArtifactManage
 * **publishedDate**: string (ReadOnly)
 * **replicaCount**: int
 * **source**: UserArtifactSource (Required)
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS'
 * **targetRegions**: TargetRegion[]
 
+## UserArtifactManage
+### Properties
+* **install**: string (Required)
+* **remove**: string (Required)
+* **update**: string
+
 ## UserArtifactSource
 ### Properties
-* **fileName**: string (Required)
+* **defaultConfigurationLink**: string
 * **mediaLink**: string (Required)
 
 ## TargetRegion

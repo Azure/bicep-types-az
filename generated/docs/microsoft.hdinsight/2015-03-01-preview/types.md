@@ -177,13 +177,13 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: Dictionary<string,Schemas35UserAssignedIdentitiesValue>
+* **userAssignedIdentities**: Dictionary<string,Schemas36UserAssignedIdentitiesValue>
 
-## Dictionary<string,Schemas35UserAssignedIdentitiesValue>
+## Dictionary<string,Schemas36UserAssignedIdentitiesValue>
 ### Additional Properties
-* **Additional Properties Type**: schemas:35_userAssignedIdentitiesValue
+* **Additional Properties Type**: schemas:36_userAssignedIdentitiesValue
 
-## schemas:35_userAssignedIdentitiesValue
+## schemas:36_userAssignedIdentitiesValue
 ### Properties
 * **clientId**: string (ReadOnly)
 * **principalId**: string (ReadOnly)
@@ -191,6 +191,7 @@
 ## ClusterCreateProperties
 ### Properties
 * **clusterDefinition**: ClusterDefinition
+* **clusterId**: string (ReadOnly)
 * **clusterState**: string (ReadOnly)
 * **clusterVersion**: string
 * **computeProfile**: ComputeProfile
@@ -201,6 +202,7 @@
 * **errors**: Errors[] (ReadOnly)
 * **kafkaRestProperties**: KafkaRestProperties
 * **minSupportedTlsVersion**: string
+* **networkProperties**: NetworkProperties
 * **osType**: 'Linux' | 'Windows'
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly)
 * **quotaInfo**: QuotaInfo (ReadOnly)
@@ -247,6 +249,11 @@
 ### Properties
 * **groupId**: string
 * **groupName**: string
+
+## NetworkProperties
+### Properties
+* **privateLink**: 'Disabled' | 'Enabled'
+* **resourceProviderConnection**: 'Inbound' | 'Outbound'
 
 ## QuotaInfo
 ### Properties

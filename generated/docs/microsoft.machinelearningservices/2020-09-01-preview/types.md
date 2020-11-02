@@ -288,6 +288,22 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.MachineLearningServices/workspaces/connections
+### Properties
+* **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkspaceConnectionProps
+* **type**: 'Microsoft.MachineLearningServices/workspaces/connections' (ReadOnly, DeployTimeConstant)
+
+## WorkspaceConnectionProps
+### Properties
+* **authType**: string
+* **category**: string
+* **target**: string
+* **value**: string
+
 ## Microsoft.MachineLearningServices/workspaces/linkedServices
 ### Properties
 * **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)

@@ -83,11 +83,11 @@
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:88_properties
+* **properties**: schemas:95_properties
 * **sku**: Sku (ReadOnly)
 * **type**: 'Microsoft.Storage/storageAccounts/blobServices' (ReadOnly, DeployTimeConstant)
 
-## schemas:88_properties
+## schemas:95_properties
 ### Properties
 * **automaticSnapshotPolicyEnabled**: bool
 * **changeFeed**: ChangeFeed
@@ -96,6 +96,7 @@
 * **defaultServiceVersion**: string
 * **deleteRetentionPolicy**: DeleteRetentionPolicy
 * **isVersioningEnabled**: bool
+* **lastAccessTimeTrackingPolicy**: LastAccessTimeTrackingPolicy
 * **restorePolicy**: RestorePolicyProperties
 
 ## ChangeFeed
@@ -118,6 +119,13 @@
 * **allowedOrigins**: string[] (Required)
 * **exposedHeaders**: string[] (Required)
 * **maxAgeInSeconds**: int (Required)
+
+## LastAccessTimeTrackingPolicy
+### Properties
+* **blobType**: string[]
+* **enable**: bool (Required)
+* **name**: 'AccessTimeTracking'
+* **trackingGranularityInDays**: int
 
 ## RestorePolicyProperties
 ### Properties
@@ -188,14 +196,75 @@
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:95_properties
+* **properties**: schemas:103_properties
 * **sku**: Sku (ReadOnly)
 * **type**: 'Microsoft.Storage/storageAccounts/fileServices' (ReadOnly, DeployTimeConstant)
 
-## schemas:95_properties
+## schemas:103_properties
 ### Properties
 * **cors**: CorsRules
+* **protocolSettings**: ProtocolSettings
 * **shareDeleteRetentionPolicy**: DeleteRetentionPolicy
+
+## ProtocolSettings
+### Properties
+* **smb**: SmbSetting
+
+## SmbSetting
+### Properties
+* **multichannel**: Multichannel
+
+## Multichannel
+### Properties
+* **enabled**: bool
+
+## Microsoft.Storage/storageAccounts/inventoryPolicies
+### Properties
+* **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BlobInventoryPolicyProperties
+* **systemData**: systemData
+* **type**: 'Microsoft.Storage/storageAccounts/inventoryPolicies' (ReadOnly, DeployTimeConstant)
+
+## BlobInventoryPolicyProperties
+### Properties
+* **lastModifiedTime**: string (ReadOnly)
+* **policy**: BlobInventoryPolicySchema (Required)
+
+## BlobInventoryPolicySchema
+### Properties
+* **destination**: string (Required)
+* **enabled**: bool (Required)
+* **rules**: BlobInventoryPolicyRule[] (Required)
+* **type**: string (Required)
+
+## BlobInventoryPolicyRule
+### Properties
+* **definition**: BlobInventoryPolicyDefinition (Required)
+* **enabled**: bool (Required)
+* **name**: string (Required)
+
+## BlobInventoryPolicyDefinition
+### Properties
+* **filters**: BlobInventoryPolicyFilter (Required)
+
+## BlobInventoryPolicyFilter
+### Properties
+* **blobTypes**: string[] (Required)
+* **includeBlobVersions**: bool
+* **includeSnapshots**: bool
+* **prefixMatch**: string[]
+
+## systemData
+### Properties
+* **createdAt**: string
+* **createdBy**: string
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+* **lastModifiedAt**: string
+* **lastModifiedBy**: string
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
 ## Microsoft.Storage/storageAccounts/managementPolicies
 ### Properties
@@ -235,12 +304,14 @@
 ## ManagementPolicyBaseBlob
 ### Properties
 * **delete**: DateAfterModification
+* **enableAutoTierToHotFromCool**: bool
 * **tierToArchive**: DateAfterModification
 * **tierToCool**: DateAfterModification
 
 ## DateAfterModification
 ### Properties
-* **daysAfterModificationGreaterThan**: int (Required)
+* **daysAfterLastAccessTimeGreaterThan**: int
+* **daysAfterModificationGreaterThan**: int
 
 ## ManagementPolicySnapShot
 ### Properties
@@ -340,10 +411,10 @@
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:104_properties
+* **properties**: schemas:115_properties
 * **type**: 'Microsoft.Storage/storageAccounts/queueServices' (ReadOnly, DeployTimeConstant)
 
-## schemas:104_properties
+## schemas:115_properties
 ### Properties
 * **cors**: CorsRules
 
@@ -353,10 +424,10 @@
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:111_properties
+* **properties**: schemas:122_properties
 * **type**: 'Microsoft.Storage/storageAccounts/tableServices' (ReadOnly, DeployTimeConstant)
 
-## schemas:111_properties
+## schemas:122_properties
 ### Properties
 * **cors**: CorsRules
 
