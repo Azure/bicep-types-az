@@ -947,6 +947,8 @@
 * **use32BitWorkerProcess**: bool
 * **virtualApplications**: VirtualApplication[]
 * **vnetName**: string
+* **vnetPrivatePortsCount**: int
+* **vnetRouteAllEnabled**: bool
 * **webSocketsEnabled**: bool
 * **windowsFxVersion**: string
 * **xManagedServiceIdentityId**: int

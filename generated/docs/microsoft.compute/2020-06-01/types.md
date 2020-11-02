@@ -251,10 +251,8 @@
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: VirtualMachineExtensionProperties
-* **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets/virtualMachines/extensions' (ReadOnly, DeployTimeConstant)
 
 ## VirtualMachineExtensionProperties
@@ -277,6 +275,53 @@
 * **substatuses**: InstanceViewStatus[]
 * **type**: string
 * **typeHandlerVersion**: string
+
+## Microsoft.Compute/virtualMachineScaleSets/virtualMachines/runCommands
+### Properties
+* **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualMachineRunCommandProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/virtualMachineScaleSets/virtualMachines/runCommands' (ReadOnly, DeployTimeConstant)
+
+## VirtualMachineRunCommandProperties
+### Properties
+* **asyncExecution**: bool
+* **errorBlobUri**: string
+* **instanceView**: VirtualMachineRunCommandInstanceView (ReadOnly)
+* **outputBlobUri**: string
+* **parameters**: RunCommandInputParameter[]
+* **protectedParameters**: RunCommandInputParameter[]
+* **provisioningState**: string (ReadOnly)
+* **runAsPassword**: string
+* **runAsUser**: string
+* **source**: VirtualMachineRunCommandScriptSource
+* **timeoutInSeconds**: int
+
+## VirtualMachineRunCommandInstanceView
+### Properties
+* **endTime**: string
+* **error**: string
+* **executionMessage**: string
+* **executionState**: 'Canceled' | 'Failed' | 'Pending' | 'Running' | 'Succeeded' | 'TimedOut' | 'Unknown'
+* **exitCode**: int
+* **output**: string
+* **startTime**: string
+* **statuses**: InstanceViewStatus[]
+
+## RunCommandInputParameter
+### Properties
+* **name**: string (Required)
+* **value**: string (Required)
+
+## VirtualMachineRunCommandScriptSource
+### Properties
+* **commandId**: string
+* **script**: string
+* **scriptUri**: string
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -660,13 +705,13 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: Dictionary<string,Schemas104UserAssignedIdentitiesValue>
+* **userAssignedIdentities**: Dictionary<string,Schemas107UserAssignedIdentitiesValue>
 
-## Dictionary<string,Schemas104UserAssignedIdentitiesValue>
+## Dictionary<string,Schemas107UserAssignedIdentitiesValue>
 ### Additional Properties
-* **Additional Properties Type**: schemas:104_userAssignedIdentitiesValue
+* **Additional Properties Type**: schemas:107_userAssignedIdentitiesValue
 
-## schemas:104_userAssignedIdentitiesValue
+## schemas:107_userAssignedIdentitiesValue
 ### Properties
 * **clientId**: string (ReadOnly)
 * **principalId**: string (ReadOnly)
@@ -824,6 +869,21 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.Compute/virtualMachines/runCommands
+### Properties
+* **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualMachineRunCommandProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/virtualMachines/runCommands' (ReadOnly, DeployTimeConstant)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Compute/virtualMachines
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
@@ -844,11 +904,11 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: Dictionary<string,Schemas104UserAssignedIdentitiesValue>
+* **userAssignedIdentities**: Dictionary<string,Schemas107UserAssignedIdentitiesValue>
 
-## Dictionary<string,Schemas104UserAssignedIdentitiesValue>
+## Dictionary<string,Schemas107UserAssignedIdentitiesValue>
 ### Additional Properties
-* **Additional Properties Type**: schemas:104_userAssignedIdentitiesValue
+* **Additional Properties Type**: schemas:107_userAssignedIdentitiesValue
 
 ## VirtualMachineProperties
 ### Properties

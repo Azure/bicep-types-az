@@ -15,7 +15,7 @@
 * **clusterId**: int (ReadOnly)
 * **clusterSize**: int
 * **hosts**: string[] (ReadOnly)
-* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
 
 ## Sku
 ### Properties
@@ -81,6 +81,7 @@
 * **clusterId**: int (ReadOnly)
 * **clusterSize**: int
 * **hosts**: string[] (ReadOnly)
+* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
 
 ## Dictionary<string,String>
 ### Additional Properties

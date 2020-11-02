@@ -70,7 +70,7 @@
 * **displayNamesFilter**: string[]
 * **enabled**: bool (Required)
 * **lastModifiedUtc**: string (ReadOnly)
-* **productFilter**: 'Azure Active Directory Identity Protection' | 'Azure Advanced Threat Protection' | 'Azure Security Center for IoT' | 'Azure Security Center' | 'Microsoft Cloud App Security' (Required)
+* **productFilter**: 'Azure Active Directory Identity Protection' | 'Azure Advanced Threat Protection' | 'Azure Security Center for IoT' | 'Azure Security Center' | 'Microsoft Cloud App Security' | 'Microsoft Defender Advanced Threat Protection' | 'Office 365 Advanced Threat Protection' (Required)
 * **severitiesFilter**: 'High' | 'Informational' | 'Low' | 'Medium'[]
 
 ## Scheduled
@@ -372,9 +372,9 @@
 ## MCASDataConnectorDataTypes
 ### Properties
 * **alerts**: schemas:31_alerts
-* **discoveryLogs**: schemas:120_discoveryLogs
+* **discoveryLogs**: schemas:130_discoveryLogs
 
-## schemas:120_discoveryLogs
+## schemas:130_discoveryLogs
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -400,19 +400,19 @@
 
 ## OfficeDataConnectorDataTypes
 ### Properties
-* **exchange**: schemas:142_exchange
-* **sharePoint**: schemas:142_sharePoint
-* **teams**: schemas:142_teams
+* **exchange**: schemas:152_exchange
+* **sharePoint**: schemas:152_sharePoint
+* **teams**: schemas:152_teams
 
-## schemas:142_exchange
+## schemas:152_exchange
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
-## schemas:142_sharePoint
+## schemas:152_sharePoint
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
-## schemas:142_teams
+## schemas:152_teams
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -438,9 +438,9 @@
 
 ## TIDataConnectorDataTypes
 ### Properties
-* **indicators**: schemas:173_indicators
+* **indicators**: schemas:183_indicators
 
-## schemas:173_indicators
+## schemas:183_indicators
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -462,9 +462,9 @@
 
 ## TiTaxiiDataConnectorDataTypes
 ### Properties
-* **taxiiClient**: schemas:178_taxiiClient
+* **taxiiClient**: schemas:188_taxiiClient
 
-## schemas:178_taxiiClient
+## schemas:188_taxiiClient
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -472,6 +472,7 @@
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: IncidentCommentProperties
@@ -481,6 +482,7 @@
 ### Properties
 * **author**: ClientInfo (ReadOnly)
 * **createdTimeUtc**: string (ReadOnly)
+* **lastModifiedTimeUtc**: string (ReadOnly)
 * **message**: string (Required)
 
 ## ClientInfo
