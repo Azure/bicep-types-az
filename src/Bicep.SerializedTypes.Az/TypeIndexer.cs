@@ -13,7 +13,7 @@ namespace Bicep.SerializedTypes.Az
     {
         public static IReadOnlyDictionary<string, TypeLocation> DeserializeIndex(string content)
         {
-            return JsonSerializer.Deserialize<Dictionary<string, TypeLocation>>(content);
+            return JsonSerializer.Deserialize<Dictionary<string, TypeLocation>>(content) ?? throw new JsonException("Failed to deserialize index");
         }
     }
 }
