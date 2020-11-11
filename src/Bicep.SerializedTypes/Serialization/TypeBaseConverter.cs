@@ -55,7 +55,7 @@ namespace Bicep.SerializedTypes.Serialization
                 throw new JsonException();
             }
 
-            TypeBase type = (TypeBaseKind)propertyInt switch {
+            TypeBase? type = (TypeBaseKind)propertyInt switch {
                 TypeBaseKind.BuiltInType => JsonSerializer.Deserialize<BuiltInType>(ref reader, serializerOptions),
                 TypeBaseKind.ObjectType => JsonSerializer.Deserialize<ObjectType>(ref reader, serializerOptions),
                 TypeBaseKind.ArrayType => JsonSerializer.Deserialize<ArrayType>(ref reader, serializerOptions),
@@ -63,7 +63,7 @@ namespace Bicep.SerializedTypes.Serialization
                 TypeBaseKind.UnionType => JsonSerializer.Deserialize<UnionType>(ref reader, serializerOptions),
                 TypeBaseKind.StringLiteralType => JsonSerializer.Deserialize<StringLiteralType>(ref reader, serializerOptions),
                 TypeBaseKind.DiscriminatedObjectType => JsonSerializer.Deserialize<DiscriminatedObjectType>(ref reader, serializerOptions),
-                _ => throw new JsonException(),
+                _ => throw new JsonException("Found unknown TypeBaseKind"),
             };
 
             if (reader.TokenType != JsonTokenType.EndObject)
@@ -73,7 +73,7 @@ namespace Bicep.SerializedTypes.Serialization
 
             reader.Read();
 
-            return type;
+            return type ?? throw new JsonException("Failed to deserialize type");
         }
 
         public override void Write(Utf8JsonWriter writer, TypeBase value, JsonSerializerOptions options)

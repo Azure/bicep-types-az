@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
+using System;
 using System.Linq;
 using System.Text.Json;
 using Bicep.SerializedTypes.Concrete;
@@ -37,7 +38,8 @@ namespace Bicep.SerializedTypes
             };
             serializeOptions.Converters.Add(new TypeBaseConverter(factory));
 
-            var types = JsonSerializer.Deserialize<TypeBase[]>(content, serializeOptions);
+            var types = JsonSerializer.Deserialize<TypeBase[]>(content, serializeOptions) ?? throw new JsonException("Failed to deserialize content");
+
             factory.Hydrate(types);
 
             return types;
