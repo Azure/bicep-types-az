@@ -1,3 +1,5 @@
+![Build](https://github.com/Azure/bicep-types-az/workflows/Build/badge.svg) [![codecov](https://codecov.io/gh/Azure/bicep-types-az/branch/main/graph/badge.svg)](https://codecov.io/gh/Azure/bicep-types-az)
+
 # bicep-types-az
 Bicep type definitions for ARM resources
 
