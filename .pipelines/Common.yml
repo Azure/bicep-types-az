@@ -1,0 +1,97 @@
+parameters:
+  - name: official
+    type: boolean
+
+stages:
+- stage: build
+  jobs:
+  - job: main
+    pool:
+      type: windows  # read more about custom job pool types at https://aka.ms/obpipelines/yaml/jobs
+    
+    variables:
+      ob_outputDirectory: '$(Build.SourcesDirectory)\out' # this directory is uploaded to pipeline artifacts, reddog and cloudvault. More info at https://aka.ms/obpipelines/artifacts
+      # https://aka.ms/obpipelines/sdl
+      ob_sdl_binskim_enabled: true # you can disable sdl tools in non-official build 
+      ob_sdl_binskim_break: true # always break the build on binskim issues. You can disable it by setting to 'false'
+      ob_sdl_binskim_scanOutputDirectoryOnly: true
+      ob_sdl_roslyn_break: true
+      # ob_sdl_suppression_suppressionFile: $(Build.SourcesDirectory)\.gdn\job.gdnsuppress
+    steps:
+      - task: UseDotNet@2
+        displayName: Setup .NET Core
+        continueOnError: true
+        inputs:
+          packageType: 'sdk'
+          useGlobalJson: true
+          performMultiLevelLookup: true
+
+      - task: DotNetCoreCLI@2
+        displayName: Build
+        inputs:
+          command: build
+          projects: $(BuildSolution)
+          arguments: '--configuration $(BuildConfiguration)'
+      
+      - task: onebranch.pipeline.signing@1
+        displayName: Sign Bicep.SerializedTypes obj
+        inputs:
+          command: 'sign'
+          signing_profile: 'external_distribution'
+          files_to_sign: '**/*.dll'
+          search_root: '$(Build.SourcesDirectory)\src\Bicep.SerializedTypes\obj\$(BuildConfiguration)\$(TargetFramework)\'
+      
+      - task: onebranch.pipeline.signing@1
+        displayName: Sign Bicep.SerializedTypes bin
+        inputs:
+          command: 'sign'
+          signing_profile: 'external_distribution'
+          files_to_sign: '**/*.dll'
+          search_root: '$(Build.SourcesDirectory)\src\Bicep.SerializedTypes\bin\$(BuildConfiguration)\$(TargetFramework)\'
+      
+      - task: onebranch.pipeline.signing@1
+        displayName: Sign Bicep.SerializedTypes.Az obj
+        inputs:
+          command: 'sign'
+          signing_profile: 'external_distribution'
+          files_to_sign: '**/*.dll'
+          search_root: '$(Build.SourcesDirectory)\src\Bicep.SerializedTypes.Az\obj\$(BuildConfiguration)\$(TargetFramework)\'
+      - task: onebranch.pipeline.signing@1
+        displayName: Sign Bicep.SerializedTypes.Az bin
+        inputs:
+          command: 'sign'
+          signing_profile: 'external_distribution'
+          files_to_sign: '**/*.dll'
+          search_root: '$(Build.SourcesDirectory)\src\Bicep.SerializedTypes.Az\bin\$(BuildConfiguration)\$(TargetFramework)\'
+      
+      - task: DotNetCoreCLI@2
+        displayName: Pack
+        inputs:
+          command: custom
+          custom: pack
+          projects: $(BuildSolution)
+          arguments: '--configuration $(BuildConfiguration) /p:BuildProjectReferences=false /p:NoBuild=true'
+      
+      # test signing fails on .nupkg files and .snupkg files are completely unsupported for signing
+      - ${{ if eq(parameters.official, 'true') }}:
+        - task: onebranch.pipeline.signing@1
+          displayName: Sign Nuget Packages
+          inputs:
+            command: 'sign'
+            signing_profile: 'external_distribution'
+            files_to_sign: '**/*.nupkg'
+            search_root: '$(Build.SourcesDirectory)\out\'
+
+      - task: DotNetCoreCLI@2
+        displayName: Test
+        inputs:
+          command: 'test'
+          projects: $(BuildSolution)
+          arguments: '--configuration $(BuildConfiguration) --logger trx --blame --collect:"XPlat Code Coverage" --settings ./.github/workflows/codecov.runsettings --results-directory $(Build.SourcesDirectory)\TestResults\'
+          publishTestResults: false
+      - task: PublishTestResults@2
+        displayName: Publish Test Results
+        inputs:
+          testResultsFormat: VSTest
+          testResultsFiles: '$(Build.SourcesDirectory)\TestResults\**\*.trx'
+          failTaskOnFailedTests: true

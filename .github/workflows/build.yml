@@ -33,7 +33,17 @@ jobs:
       
       - name: Build
         run: dotnet build --configuration release
-      
+
+      - name: Pack
+        run: dotnet pack --configuration release
+
+      - name: Upload Nuget packages
+        uses: actions/upload-artifact@v2
+        with:
+          name: bicep-types-az-packages
+          path: ./out/*
+          if-no-files-found: error
+
       - name: Test
         run: dotnet test --configuration release --collect:"XPlat Code Coverage" --settings ./.github/workflows/codecov.runsettings
 
