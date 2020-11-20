@@ -31,7 +31,7 @@ stages:
         inputs:
           command: build
           projects: $(BuildSolution)
-          arguments: '--configuration $(BuildConfiguration)'
+          arguments: '--configuration $(BuildConfiguration) /p:PublicRelease=${{ parameters.official }}'
       
       - task: onebranch.pipeline.signing@1
         displayName: Sign Bicep.SerializedTypes obj
@@ -70,7 +70,7 @@ stages:
           command: custom
           custom: pack
           projects: $(BuildSolution)
-          arguments: '--configuration $(BuildConfiguration) /p:BuildProjectReferences=false /p:NoBuild=true'
+          arguments: '--configuration $(BuildConfiguration) /p:BuildProjectReferences=false /p:NoBuild=true /p:PublicRelease=${{ parameters.official }}'
       
       # test signing fails on .nupkg files and .snupkg files are completely unsupported for signing
       - ${{ if eq(parameters.official, 'true') }}:
