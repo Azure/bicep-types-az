@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Bicep.SerializedTypes\Bicep.SerializedTypes.csproj" />
+    <ProjectReference Include="..\Bicep.Types\Bicep.Types.csproj" />
   </ItemGroup>
 
 </Project>

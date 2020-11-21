@@ -3,8 +3,6 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <IsPackable>false</IsPackable>
-    <AssemblyName>Bicep.Types.UnitTests</AssemblyName>
-    <RootNamespace>Bicep.Types.UnitTests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../Bicep.SerializedTypes\Bicep.SerializedTypes.csproj" />
+    <ProjectReference Include="../Bicep.Types\Bicep.Types.csproj" />
   </ItemGroup>
 
 </Project>
