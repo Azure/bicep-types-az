@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Bicep.SerializedTypes.Concrete;
+using Azure.Bicep.Types.Concrete;
 
-namespace Bicep.SerializedTypes.Az
+namespace Azure.Bicep.Types.Az
 {
     public class TypeLoader : ITypeLoader
     {

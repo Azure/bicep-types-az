@@ -2,11 +2,11 @@
 // Licensed under the MIT License.
 using System.Collections.Generic;
 using System.Linq;
-using Bicep.SerializedTypes.Concrete;
+using Azure.Bicep.Types.Concrete;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Bicep.SerializedTypes.UnitTests
+namespace Azure.Bicep.Types.UnitTests
 {
     [TestClass]
     public class TypeSerializerTests

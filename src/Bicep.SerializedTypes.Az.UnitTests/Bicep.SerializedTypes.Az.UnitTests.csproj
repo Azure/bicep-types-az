@@ -2,8 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-
     <IsPackable>false</IsPackable>
+    <AssemblyName>Bicep.Types.Az.UnitTests</AssemblyName>
+    <RootNamespace>Bicep.Types.Az.UnitTests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

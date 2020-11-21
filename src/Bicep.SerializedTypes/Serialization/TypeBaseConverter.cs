@@ -3,9 +3,9 @@
 using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Bicep.SerializedTypes.Concrete;
+using Azure.Bicep.Types.Concrete;
 
-namespace Bicep.SerializedTypes.Serialization
+namespace Azure.Bicep.Types.Serialization
 {
     public class TypeBaseConverter : JsonConverter<TypeBase>
     {

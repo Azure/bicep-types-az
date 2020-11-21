@@ -3,10 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <EnableNuget>true</EnableNuget>
+    <AssemblyName>Azure.Bicep.Types.Az</AssemblyName>
+    <RootNamespace>Azure.Bicep.Types.Az</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="../../generated/types/**/*.json"  LogicalName="$([System.String]::new('%(RecursiveDir)%(Filename)%(Extension)').Replace('\', '/').ToLowerInvariant())" />
+    <EmbeddedResource Include="../../generated/types/**/*.json" LogicalName="$([System.String]::new('%(RecursiveDir)%(Filename)%(Extension)').Replace('\', '/').ToLowerInvariant())" />
   </ItemGroup>
 
   <ItemGroup>

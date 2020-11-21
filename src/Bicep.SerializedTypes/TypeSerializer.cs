@@ -3,10 +3,10 @@
 using System;
 using System.Linq;
 using System.Text.Json;
-using Bicep.SerializedTypes.Concrete;
-using Bicep.SerializedTypes.Serialization;
+using Azure.Bicep.Types.Concrete;
+using Azure.Bicep.Types.Serialization;
 
-namespace Bicep.SerializedTypes
+namespace Azure.Bicep.Types
 {
     public static class TypeSerializer
     {

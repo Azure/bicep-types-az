@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-namespace Bicep.SerializedTypes.Az
+namespace Azure.Bicep.Types.Az
 {
     public class TypeLocation
     {
