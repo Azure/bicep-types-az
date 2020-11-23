@@ -1,9 +1,9 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Bicep.SerializedTypes.Az;
+using Azure.Bicep.Types.Az;
 
-namespace Bicep.SerializedTypes.Az.UnitTests
+namespace Azure.Bicep.Types.Az.UnitTests
 {
     [TestClass]
     public class TypeLoaderTests

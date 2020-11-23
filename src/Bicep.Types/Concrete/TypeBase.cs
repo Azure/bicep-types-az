@@ -1,6 +1,6 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
-namespace Bicep.SerializedTypes.Concrete
+namespace Azure.Bicep.Types.Concrete
 {
     public abstract class TypeBase
     {

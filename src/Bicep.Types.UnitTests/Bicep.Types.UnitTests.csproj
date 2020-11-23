@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -15,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../Bicep.SerializedTypes.Az\Bicep.SerializedTypes.Az.csproj" />
+    <ProjectReference Include="../Bicep.Types\Bicep.Types.csproj" />
   </ItemGroup>
 
 </Project>

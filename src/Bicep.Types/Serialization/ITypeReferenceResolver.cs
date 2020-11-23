@@ -1,8 +1,9 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
-using Bicep.SerializedTypes.Concrete;
 
-namespace Bicep.SerializedTypes.Serialization
+using Azure.Bicep.Types.Concrete;
+
+namespace Azure.Bicep.Types.Serialization
 {
     public interface ITypeReferenceResolver
     {

@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Bicep.SerializedTypes.Concrete
+namespace Azure.Bicep.Types.Concrete
 {
     public class ObjectType : TypeBase
     {

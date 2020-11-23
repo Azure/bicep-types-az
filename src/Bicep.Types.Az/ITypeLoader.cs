@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 using System.Collections.Generic;
-using Bicep.SerializedTypes.Concrete;
+using Azure.Bicep.Types.Concrete;
 
-namespace Bicep.SerializedTypes.Az
+namespace Azure.Bicep.Types.Az
 {
     public interface ITypeLoader
     {

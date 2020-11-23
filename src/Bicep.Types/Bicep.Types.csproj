@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <EnableNuget>true</EnableNuget>
+    <AssemblyName>Azure.Bicep.Types</AssemblyName>
+    <RootNamespace>Azure.Bicep.Types</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
