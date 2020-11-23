@@ -11,14 +11,21 @@
 
 ## OfferProperties
 ### Properties
-* **createdBy**: string (ReadOnly)
-* **createdDate**: string (ReadOnly)
+* **createdAt**: string (ReadOnly)
 * **eTag**: string
+* **iconFileUris**: icon[]
+* **modifiedAt**: string (ReadOnly)
 * **offerDisplayName**: string (ReadOnly)
 * **privateStoreId**: string (ReadOnly)
 * **publisherDisplayName**: string (ReadOnly)
 * **specificPlanIdsLimitation**: string[]
 * **uniqueOfferId**: string (ReadOnly)
+* **updateSuppressedDueIdempotence**: string
+
+## icon
+### Properties
+* **iconKind**: 'Hero' | 'Large' | 'Medium' | 'Small' | 'Wide'
+* **uri**: string
 
 ## Microsoft.Marketplace/privateStores/offers
 ### Properties
@@ -41,6 +48,13 @@
 ## PrivateStoreProperties
 ### Properties
 * **availability**: 'disabled' | 'enabled'
+* **customerTag**: string
 * **eTag**: string
+* **hasCommercialAssociation**: bool
+* **hasMultiTenantAssociation**: bool
+* **isGov**: bool
 * **privateStoreId**: string
+* **privateStoreName**: string
+* **tenantIds**: string[]
+* **tenantTag**: string
 

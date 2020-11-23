@@ -6,7 +6,7 @@
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DigitalTwinsEndpointResourceProperties
+* **properties**: DigitalTwinsEndpointResourceProperties (Required)
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/endpoints' (ReadOnly, DeployTimeConstant)
 
 ## DigitalTwinsEndpointResourceProperties

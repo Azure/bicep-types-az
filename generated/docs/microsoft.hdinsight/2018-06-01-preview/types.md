@@ -191,6 +191,7 @@
 ## ClusterCreateProperties
 ### Properties
 * **clusterDefinition**: ClusterDefinition
+* **clusterId**: string (ReadOnly)
 * **clusterState**: string (ReadOnly)
 * **clusterVersion**: string
 * **computeProfile**: ComputeProfile
@@ -201,7 +202,7 @@
 * **errors**: Errors[] (ReadOnly)
 * **kafkaRestProperties**: KafkaRestProperties
 * **minSupportedTlsVersion**: string
-* **networkSettings**: NetworkSettings
+* **networkProperties**: NetworkProperties
 * **osType**: 'Linux' | 'Windows'
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly)
 * **quotaInfo**: QuotaInfo (ReadOnly)
@@ -249,10 +250,10 @@
 * **groupId**: string
 * **groupName**: string
 
-## NetworkSettings
+## NetworkProperties
 ### Properties
-* **outboundOnlyPublicNetworkAccessType**: 'PublicLoadBalancer' | 'UDR'
-* **publicNetworkAccess**: 'InboundAndOutbound' | 'OutboundOnly'
+* **privateLink**: 'Disabled' | 'Enabled'
+* **resourceProviderConnection**: 'Inbound' | 'Outbound'
 
 ## QuotaInfo
 ### Properties

@@ -62,6 +62,17 @@
 ### Properties
 * **description**: string
 * **displayName**: string
+* **versions**: Dictionary<string,TemplateSpecVersionInfo> (ReadOnly)
+
+## Dictionary<string,TemplateSpecVersionInfo>
+### Additional Properties
+* **Additional Properties Type**: TemplateSpecVersionInfo
+
+## TemplateSpecVersionInfo
+### Properties
+* **description**: string (ReadOnly)
+* **timeCreated**: string (ReadOnly)
+* **timeModified**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Additional Properties

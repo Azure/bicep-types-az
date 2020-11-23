@@ -80,3 +80,23 @@
 * **contentVersion**: string
 * **uri**: string (Required)
 
+## Microsoft.Resources/resourceGroups
+### Properties
+* **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **managedBy**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ResourceGroupProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Resources/resourceGroups' (ReadOnly, DeployTimeConstant)
+
+## ResourceGroupProperties
+### Properties
+* **provisioningState**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+

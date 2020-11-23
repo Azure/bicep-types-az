@@ -30,7 +30,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1.7.2
         with:
-          dotnet-version: 3.1.301
+          dotnet-version: 5.0.100
 
       - name: Clone azure-rest-api-specs
         uses: actions/checkout@v2
@@ -47,7 +47,7 @@ jobs:
           submodules: true
       
       - name: Build generator
-        run: dotnet build
+        run: dotnet build --configuration release
         working-directory: bicep-types-az.generator
       
       - name: Install generator npm packages
@@ -60,6 +60,9 @@ jobs:
 
       - name: Copy generated files
         run: rsync -a ./bicep-types-az.generator/bicep-types/* ./bicep-types-az/generated
+
+      - name: Rebuild index
+        run: dotnet ./bicep-types-az.generator/src/Bicep.TypeIndexBuilder/bin/Release/net5.0/Bicep.TypeIndexBuilder.dll ./bicep-types-az/generated
 
       - id: get_restapi_sha
         name: Get SHA for azure-rest-api-specs

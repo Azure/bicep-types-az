@@ -17,6 +17,7 @@
 * **collation**: string
 * **databaseGuid**: string (ReadOnly)
 * **maxSizeBytes**: int
+* **status**: string (ReadOnly)
 
 ## SystemData
 ### Properties

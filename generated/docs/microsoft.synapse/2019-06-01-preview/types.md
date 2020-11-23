@@ -13,7 +13,29 @@
 
 ## PrivateLinkHubProperties
 ### Properties
-* **provisioningState**: 'Failed' | 'Succeeded' (ReadOnly)
+* **privateEndpointConnections**: PrivateEndpointConnectionForPrivateLinkHubBasic[] (ReadOnly)
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
+
+## PrivateEndpointConnectionForPrivateLinkHubBasic
+### Properties
+* **id**: string (ReadOnly)
+* **properties**: PrivateEndpointConnectionProperties
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: PrivateEndpoint
+* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState
+* **provisioningState**: string (ReadOnly)
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly)
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **status**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -51,13 +73,16 @@
 * **autoPause**: AutoPauseProperties
 * **autoScale**: AutoScaleProperties
 * **creationDate**: string
+* **customLibraries**: LibraryInfo[]
 * **defaultSparkLogFolder**: string
 * **isComputeIsolationEnabled**: bool
 * **libraryRequirements**: LibraryRequirements
 * **nodeCount**: int
-* **nodeSize**: 'Large' | 'Medium' | 'None' | 'Small' | 'XLarge' | 'XXLarge'
+* **nodeSize**: 'Large' | 'Medium' | 'None' | 'Small' | 'XLarge' | 'XXLarge' | 'XXXLarge'
 * **nodeSizeFamily**: 'MemoryOptimized' | 'None'
 * **provisioningState**: string
+* **sessionLevelPackagesEnabled**: bool
+* **sparkConfigProperties**: LibraryRequirements
 * **sparkEventsFolder**: string
 * **sparkVersion**: string
 
@@ -71,6 +96,14 @@
 * **enabled**: bool
 * **maxNodeCount**: int
 * **minNodeCount**: int
+
+## LibraryInfo
+### Properties
+* **containerName**: string
+* **name**: string
+* **path**: string
+* **type**: string
+* **uploadedTimestamp**: string
 
 ## LibraryRequirements
 ### Properties
@@ -300,14 +333,14 @@
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:93_properties
+* **properties**: schemas:110_properties
 * **type**: 'Microsoft.Synapse/workspaces/managedIdentitySqlControlSettings' (ReadOnly, DeployTimeConstant)
 
-## schemas:93_properties
+## schemas:110_properties
 ### Properties
-* **grantSqlControlToManagedIdentity**: schemas:93_properties_grantSqlControlToManagedIdentity
+* **grantSqlControlToManagedIdentity**: schemas:110_properties_grantSqlControlToManagedIdentity
 
-## schemas:93_properties_grantSqlControlToManagedIdentity
+## schemas:110_properties_grantSqlControlToManagedIdentity
 ### Properties
 * **actualState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Unknown' (ReadOnly)
 * **desiredState**: 'Disabled' | 'Enabled'
@@ -333,18 +366,85 @@
 * **storageAccountSubscriptionId**: string
 * **storageEndpoint**: string
 
+## Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies/rules
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DataMaskingRuleProperties
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies/rules' (ReadOnly, DeployTimeConstant)
+
+## DataMaskingRuleProperties
+### Properties
+* **aliasName**: string
+* **columnName**: string (Required)
+* **id**: string (ReadOnly)
+* **maskingFunction**: 'CCN' | 'Default' | 'Email' | 'Number' | 'SSN' | 'Text' (Required)
+* **numberFrom**: string
+* **numberTo**: string
+* **prefixSize**: string
+* **replacementString**: string
+* **ruleState**: 'Disabled' | 'Enabled'
+* **schemaName**: string (Required)
+* **suffixSize**: string
+* **tableName**: string (Required)
+
+## Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DataMaskingPolicyProperties
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies' (ReadOnly, DeployTimeConstant)
+
+## DataMaskingPolicyProperties
+### Properties
+* **applicationPrincipals**: string (ReadOnly)
+* **dataMaskingState**: 'Disabled' | 'Enabled' (Required)
+* **exemptPrincipals**: string
+* **maskingLevel**: string (ReadOnly)
+
+## Microsoft.Synapse/workspaces/sqlPools/extendedAuditingSettings
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ExtendedSqlPoolBlobAuditingPolicyProperties
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/extendedAuditingSettings' (ReadOnly, DeployTimeConstant)
+
+## ExtendedSqlPoolBlobAuditingPolicyProperties
+### Properties
+* **auditActionsAndGroups**: string[]
+* **isAzureMonitorTargetEnabled**: bool
+* **isStorageSecondaryKeyInUse**: bool
+* **predicateExpression**: string
+* **queueDelayMs**: int
+* **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' (Required)
+* **storageAccountAccessKey**: string
+* **storageAccountSubscriptionId**: string
+* **storageEndpoint**: string
+
 ## Microsoft.Synapse/workspaces/sqlPools/metadataSync
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:27_properties
+* **properties**: schemas:28_properties
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/metadataSync' (ReadOnly, DeployTimeConstant)
 
-## schemas:27_properties
+## schemas:28_properties
 ### Properties
 * **enabled**: bool
+* **syncIntervalInMinutes**: int (ReadOnly)
 
 ## Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels
 ### Properties
@@ -490,16 +590,24 @@
 
 ## WorkspaceProperties
 ### Properties
+* **babylonConfiguration**: BabylonConfiguration
 * **connectivityEndpoints**: Dictionary<string,String>
 * **defaultDataLakeStorage**: DataLakeStorageAccountDetails
+* **encryption**: EncryptionDetails
 * **extraProperties**: Dictionary<string,Object> (ReadOnly)
 * **managedResourceGroupName**: string
 * **managedVirtualNetwork**: string
+* **managedVirtualNetworkSettings**: ManagedVirtualNetworkSettings
 * **privateEndpointConnections**: PrivateEndpointConnection[]
 * **provisioningState**: string (ReadOnly)
 * **sqlAdministratorLogin**: string
 * **sqlAdministratorLoginPassword**: string
 * **virtualNetworkProfile**: VirtualNetworkProfile
+* **workspaceUID**: string (ReadOnly)
+
+## BabylonConfiguration
+### Properties
+* **babylonResourceId**: string
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -510,9 +618,30 @@
 * **accountUrl**: string
 * **filesystem**: string
 
+## EncryptionDetails
+### Properties
+* **cmk**: CustomerManagedKeyDetails
+* **doubleEncryptionEnabled**: bool (ReadOnly)
+
+## CustomerManagedKeyDetails
+### Properties
+* **key**: WorkspaceKeyDetails
+* **status**: string (ReadOnly)
+
+## WorkspaceKeyDetails
+### Properties
+* **keyVaultUrl**: string
+* **name**: string
+
 ## Dictionary<string,Object>
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## ManagedVirtualNetworkSettings
+### Properties
+* **allowedAadTenantIdsForLinking**: string[]
+* **linkedAccessCheckOnTargetResource**: bool
+* **preventDataExfiltration**: bool
 
 ## PrivateEndpointConnection
 ### Properties
@@ -520,22 +649,6 @@
 * **name**: string (ReadOnly)
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: string (ReadOnly)
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState
-* **provisioningState**: string (ReadOnly)
-
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly)
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionsRequired**: string (ReadOnly)
-* **description**: string
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
 
 ## VirtualNetworkProfile
 ### Properties

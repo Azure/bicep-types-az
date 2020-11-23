@@ -1,5 +1,13 @@
+![Build](https://github.com/Azure/bicep-types-az/workflows/Build/badge.svg) [![codecov](https://codecov.io/gh/Azure/bicep-types-az/branch/main/graph/badge.svg)](https://codecov.io/gh/Azure/bicep-types-az)
+
 # bicep-types-az
 Bicep type definitions for ARM resources
+
+## Re-generating types from swagger
+1. Under [GitHub Actions](https://github.com/anthony-c-martin/bicep-types-az/actions), run the "Update Types" workflow on the main branch. Usually you'll want to leave the git ref input as "master" for this workflow.
+1. After ~2hrs, this action will generate a PR in this repo from a branch named `autogenerate`.
+1. To workaround [this issue](https://github.com/peter-evans/create-pull-request/issues/48), close the PR and open it to trigger Merge Validation to run.
+1. Merge the PR. Type differences can be reviewed by looking at the Markdown files in [/generated/docs](./generated/docs).
 
 ## Contributing
 
