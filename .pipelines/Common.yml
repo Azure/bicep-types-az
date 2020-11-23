@@ -34,35 +34,35 @@ stages:
           arguments: '--configuration $(BuildConfiguration) /p:PublicRelease=${{ parameters.official }}'
       
       - task: onebranch.pipeline.signing@1
-        displayName: Sign Bicep.SerializedTypes obj
+        displayName: Sign Bicep.Types obj
         inputs:
           command: 'sign'
           signing_profile: 'external_distribution'
           files_to_sign: '**/*.dll'
-          search_root: '$(Build.SourcesDirectory)\src\Bicep.SerializedTypes\obj\$(BuildConfiguration)\$(TargetFramework)\'
+          search_root: '$(Build.SourcesDirectory)\src\Bicep.Types\obj\$(BuildConfiguration)\$(TargetFramework)\'
       
       - task: onebranch.pipeline.signing@1
-        displayName: Sign Bicep.SerializedTypes bin
+        displayName: Sign Bicep.Types bin
         inputs:
           command: 'sign'
           signing_profile: 'external_distribution'
           files_to_sign: '**/*.dll'
-          search_root: '$(Build.SourcesDirectory)\src\Bicep.SerializedTypes\bin\$(BuildConfiguration)\$(TargetFramework)\'
+          search_root: '$(Build.SourcesDirectory)\src\Bicep.Types\bin\$(BuildConfiguration)\$(TargetFramework)\'
       
       - task: onebranch.pipeline.signing@1
-        displayName: Sign Bicep.SerializedTypes.Az obj
+        displayName: Sign Bicep.Types.Az obj
         inputs:
           command: 'sign'
           signing_profile: 'external_distribution'
           files_to_sign: '**/*.dll'
-          search_root: '$(Build.SourcesDirectory)\src\Bicep.SerializedTypes.Az\obj\$(BuildConfiguration)\$(TargetFramework)\'
+          search_root: '$(Build.SourcesDirectory)\src\Bicep.Types.Az\obj\$(BuildConfiguration)\$(TargetFramework)\'
       - task: onebranch.pipeline.signing@1
-        displayName: Sign Bicep.SerializedTypes.Az bin
+        displayName: Sign Bicep.Types.Az bin
         inputs:
           command: 'sign'
           signing_profile: 'external_distribution'
           files_to_sign: '**/*.dll'
-          search_root: '$(Build.SourcesDirectory)\src\Bicep.SerializedTypes.Az\bin\$(BuildConfiguration)\$(TargetFramework)\'
+          search_root: '$(Build.SourcesDirectory)\src\Bicep.Types.Az\bin\$(BuildConfiguration)\$(TargetFramework)\'
       
       - task: DotNetCoreCLI@2
         displayName: Pack
