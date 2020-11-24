@@ -1,4 +1,4 @@
-![Build](https://github.com/Azure/bicep-types-az/workflows/Build/badge.svg) [![codecov](https://codecov.io/gh/Azure/bicep-types-az/branch/main/graph/badge.svg)](https://codecov.io/gh/Azure/bicep-types-az)
+![Build](https://github.com/Azure/bicep-types-az/workflows/Build/badge.svg) [![codecov](https://codecov.io/gh/Azure/bicep-types-az/branch/main/graph/badge.svg)](https://codecov.io/gh/Azure/bicep-types-az) [![Build Status](https://dev.azure.com/msazure/One/_apis/build/status/OneBranch/BicepMirror-Types-Az/BicepMirror-Types-Az-Official?repoName=BicepMirror-Types-Az&branchName=main)](https://dev.azure.com/msazure/One/_build/latest?definitionId=179851&repoName=BicepMirror-Types-Az&branchName=main)
 
 # bicep-types-az
 Bicep type definitions for ARM resources
