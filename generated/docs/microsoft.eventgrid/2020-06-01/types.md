@@ -1,31 +1,5 @@
 # Microsoft.EventGrid @ 2020-06-01
 
-## Microsoft.EventGrid/domains/privateEndpointConnections
-### Properties
-* **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: 'Microsoft.EventGrid/domains/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **groupIds**: string[]
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: ConnectionState
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
-
-## PrivateEndpoint
-### Properties
-* **id**: string
-
-## ConnectionState
-### Properties
-* **actionsRequired**: string
-* **description**: string
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
-
 ## Microsoft.EventGrid/domains
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
@@ -92,9 +66,35 @@
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: string (ReadOnly)
 
+## PrivateEndpointConnectionProperties
+### Properties
+* **groupIds**: string[]
+* **privateEndpoint**: PrivateEndpoint
+* **privateLinkServiceConnectionState**: ConnectionState
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
+
+## PrivateEndpoint
+### Properties
+* **id**: string
+
+## ConnectionState
+### Properties
+* **actionsRequired**: string
+* **description**: string
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
+
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.EventGrid/domains/privateEndpointConnections
+### Properties
+* **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: 'Microsoft.EventGrid/domains/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.EventGrid/eventSubscriptions
 ### Properties
@@ -384,15 +384,6 @@
 * **eventTimeToLiveInMinutes**: int
 * **maxDeliveryAttempts**: int
 
-## Microsoft.EventGrid/topics/privateEndpointConnections
-### Properties
-* **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: 'Microsoft.EventGrid/topics/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
-
 ## Microsoft.EventGrid/topics
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
@@ -418,4 +409,13 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.EventGrid/topics/privateEndpointConnections
+### Properties
+* **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: 'Microsoft.EventGrid/topics/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 

@@ -14,10 +14,10 @@
 ## VaultProperties
 ### Properties
 * **accessPolicies**: AccessPolicyEntry[] (Required)
-* **enableSoftDelete**: bool
 * **enabledForDeployment**: bool
 * **enabledForDiskEncryption**: bool
 * **enabledForTemplateDeployment**: bool
+* **enableSoftDelete**: bool
 * **sku**: Sku (Required)
 * **tenantId**: string (Required)
 * **vaultUri**: string

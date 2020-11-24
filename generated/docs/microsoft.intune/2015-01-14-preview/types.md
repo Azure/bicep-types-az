@@ -1,27 +1,5 @@
 # Microsoft.Intune @ 2015-01-14-preview
 
-## Microsoft.Intune/locations/androidPolicies/apps
-### Properties
-* **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MAMPolicyAppOrGroupIdProperties
-* **type**: 'Microsoft.Intune/locations/androidPolicies/apps' (ReadOnly, DeployTimeConstant)
-
-## MAMPolicyAppOrGroupIdProperties
-### Properties
-* **url**: string (Required)
-
-## Microsoft.Intune/locations/androidPolicies/groups
-### Properties
-* **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MAMPolicyAppOrGroupIdProperties
-* **type**: 'Microsoft.Intune/locations/androidPolicies/groups' (ReadOnly, DeployTimeConstant)
-
 ## Microsoft.Intune/locations/androidPolicies
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant)
@@ -60,23 +38,27 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Intune/locations/iosPolicies/apps
+## Microsoft.Intune/locations/androidPolicies/apps
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: MAMPolicyAppOrGroupIdProperties
-* **type**: 'Microsoft.Intune/locations/iosPolicies/apps' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.Intune/locations/androidPolicies/apps' (ReadOnly, DeployTimeConstant)
 
-## Microsoft.Intune/locations/iosPolicies/groups
+## MAMPolicyAppOrGroupIdProperties
+### Properties
+* **url**: string (Required)
+
+## Microsoft.Intune/locations/androidPolicies/groups
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: MAMPolicyAppOrGroupIdProperties
-* **type**: 'Microsoft.Intune/locations/iosPolicies/groups' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.Intune/locations/androidPolicies/groups' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.Intune/locations/iosPolicies
 ### Properties
@@ -115,4 +97,22 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Intune/locations/iosPolicies/apps
+### Properties
+* **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MAMPolicyAppOrGroupIdProperties
+* **type**: 'Microsoft.Intune/locations/iosPolicies/apps' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Intune/locations/iosPolicies/groups
+### Properties
+* **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MAMPolicyAppOrGroupIdProperties
+* **type**: 'Microsoft.Intune/locations/iosPolicies/groups' (ReadOnly, DeployTimeConstant)
 

@@ -14,6 +14,8 @@
 
 ## DomainServiceProperties
 ### Properties
+* **deploymentId**: string (ReadOnly)
+* **domainConfigurationType**: string
 * **domainControllerIpAddress**: string[] (ReadOnly)
 * **domainName**: string
 * **domainSecuritySettings**: DomainSecuritySettings
@@ -24,15 +26,20 @@
 * **ldapsSettings**: LdapsSettings
 * **notificationSettings**: NotificationSettings
 * **provisioningState**: string (ReadOnly)
+* **resourceForestSettings**: ResourceForestSettings
 * **serviceStatus**: string (ReadOnly)
+* **sku**: string
 * **subnetId**: string
 * **tenantId**: string (ReadOnly)
+* **version**: int (ReadOnly)
 * **vnetSiteId**: string (ReadOnly)
 
 ## DomainSecuritySettings
 ### Properties
 * **ntlmV1**: 'Disabled' | 'Enabled'
+* **syncKerberosPasswords**: 'Disabled' | 'Enabled'
 * **syncNtlmPasswords**: 'Disabled' | 'Enabled'
+* **syncOnPremPasswords**: 'Disabled' | 'Enabled'
 * **tlsV1**: 'Disabled' | 'Enabled'
 
 ## HealthAlert
@@ -68,6 +75,19 @@
 * **notifyDcAdmins**: 'Disabled' | 'Enabled'
 * **notifyGlobalAdmins**: 'Disabled' | 'Enabled'
 
+## ResourceForestSettings
+### Properties
+* **resourceForest**: string
+* **settings**: ForestTrust[]
+
+## ForestTrust
+### Properties
+* **friendlyName**: string
+* **remoteDnsIps**: string
+* **trustDirection**: string
+* **trustedDomainFqdn**: string
+* **trustPassword**: string
+
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -92,6 +112,7 @@
 * **accounts**: ContainerAccount[] (ReadOnly)
 * **containerId**: string (ReadOnly)
 * **deploymentId**: string (ReadOnly)
+* **distinguishedName**: string (ReadOnly)
 * **domainName**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **serviceStatus**: string (ReadOnly)

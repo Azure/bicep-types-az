@@ -20,8 +20,8 @@
 ## ReportConfigDefinition
 ### Properties
 * **dataset**: ReportConfigDataset
-* **timePeriod**: ReportConfigTimePeriod
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required)
+* **timePeriod**: ReportConfigTimePeriod
 * **type**: string (Required)
 
 ## ReportConfigDataset

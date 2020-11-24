@@ -1,23 +1,5 @@
 # Microsoft.Support @ 2019-05-01-preview
 
-## Microsoft.Support/supportTickets/communications
-### Properties
-* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CommunicationDetailsProperties
-* **type**: 'Microsoft.Support/supportTickets/communications' (ReadOnly, DeployTimeConstant)
-
-## CommunicationDetailsProperties
-### Properties
-* **body**: string (Required)
-* **communicationDirection**: 'inbound' | 'outbound' (ReadOnly)
-* **communicationType**: 'phone' | 'web' (ReadOnly)
-* **createdDate**: string (ReadOnly)
-* **sender**: string
-* **subject**: string (Required)
-
 ## Microsoft.Support/supportTickets
 ### Properties
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
@@ -65,9 +47,9 @@
 
 ## QuotaTicketDetails
 ### Properties
+* **quotaChangeRequests**: QuotaChangeRequest[]
 * **quotaChangeRequestSubType**: string
 * **quotaChangeRequestVersion**: string
-* **quotaChangeRequests**: QuotaChangeRequest[]
 
 ## QuotaChangeRequest
 ### Properties
@@ -87,4 +69,22 @@
 ## TechnicalTicketDetails
 ### Properties
 * **resourceId**: string
+
+## Microsoft.Support/supportTickets/communications
+### Properties
+* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CommunicationDetailsProperties
+* **type**: 'Microsoft.Support/supportTickets/communications' (ReadOnly, DeployTimeConstant)
+
+## CommunicationDetailsProperties
+### Properties
+* **body**: string (Required)
+* **communicationDirection**: 'inbound' | 'outbound' (ReadOnly)
+* **communicationType**: 'phone' | 'web' (ReadOnly)
+* **createdDate**: string (ReadOnly)
+* **sender**: string
+* **subject**: string (Required)
 

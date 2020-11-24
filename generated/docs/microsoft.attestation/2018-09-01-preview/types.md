@@ -13,8 +13,8 @@
 
 ## AttestationServiceCreationSpecificParams
 ### Properties
-* **attestUri**: string (ReadOnly)
 * **attestationPolicy**: string (WriteOnly)
+* **attestUri**: string (ReadOnly)
 * **policySigningCertificates**: JSONWebKeySet (WriteOnly)
 * **status**: 'Error' | 'NotReady' | 'Ready' (ReadOnly)
 * **trustModel**: string (ReadOnly)

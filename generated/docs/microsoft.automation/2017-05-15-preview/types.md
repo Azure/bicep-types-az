@@ -19,10 +19,10 @@
 * **lastStatusModifiedTime**: string (ReadOnly)
 * **parameters**: Dictionary<string,String>
 * **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly)
-* **runOn**: string
 * **runbook**: RunbookAssociationProperty
-* **startTime**: string (ReadOnly)
+* **runOn**: string
 * **startedBy**: string (ReadOnly)
+* **startTime**: string (ReadOnly)
 * **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly)
 * **statusDetails**: string (ReadOnly)
 
@@ -151,26 +151,6 @@
 * **includedUpdateClassifications**: 'Critical' | 'Definition' | 'FeaturePack' | 'Security' | 'ServicePack' | 'Tools' | 'Unclassified' | 'UpdateRollup' | 'Updates'
 * **rebootSetting**: string
 
-## Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs
-### Properties
-* **apiVersion**: '2017-05-15-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SourceControlSyncJobCreateProperties (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs' (ReadOnly, DeployTimeConstant)
-
-## SourceControlSyncJobCreateProperties
-### Properties
-* **commitId**: string (Required, WriteOnly)
-* **creationTime**: string (ReadOnly)
-* **endTime**: string (ReadOnly)
-* **exception**: string (ReadOnly)
-* **provisioningState**: 'Completed' | 'Failed' | 'Running' (ReadOnly)
-* **sourceControlSyncJobId**: string (ReadOnly)
-* **startTime**: string (ReadOnly)
-* **syncType**: 'FullSync' | 'PartialSync' (ReadOnly)
-
 ## Microsoft.Automation/automationAccounts/sourceControls
 ### Properties
 * **apiVersion**: '2017-05-15-preview' (ReadOnly, DeployTimeConstant)
@@ -198,4 +178,24 @@
 * **accessToken**: string (WriteOnly)
 * **refreshToken**: string (WriteOnly)
 * **tokenType**: 'Oauth' | 'PersonalAccessToken' (WriteOnly)
+
+## Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs
+### Properties
+* **apiVersion**: '2017-05-15-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SourceControlSyncJobCreateProperties (Required)
+* **type**: 'Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs' (ReadOnly, DeployTimeConstant)
+
+## SourceControlSyncJobCreateProperties
+### Properties
+* **commitId**: string (Required, WriteOnly)
+* **creationTime**: string (ReadOnly)
+* **endTime**: string (ReadOnly)
+* **exception**: string (ReadOnly)
+* **provisioningState**: 'Completed' | 'Failed' | 'Running' (ReadOnly)
+* **sourceControlSyncJobId**: string (ReadOnly)
+* **startTime**: string (ReadOnly)
+* **syncType**: 'FullSync' | 'PartialSync' (ReadOnly)
 

@@ -1,21 +1,5 @@
 # Microsoft.SecurityInsights @ 2019-01-01-preview
 
-## Microsoft.SecurityInsights/alertRules/actions
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ActionRequestProperties
-* **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant)
-
-## ActionRequestProperties
-### Properties
-* **logicAppResourceId**: string
-* **triggerUri**: string (WriteOnly)
-* **workflowId**: string (ReadOnly)
-
 ## Microsoft.SecurityInsights/alertRules
 * **Discriminator**: kind
 ### Base Properties
@@ -114,22 +98,21 @@
 * **lookbackDuration**: string (Required)
 * **reopenClosedIncident**: bool (Required)
 
-## Microsoft.SecurityInsights/bookmarks/relations
+## Microsoft.SecurityInsights/alertRules/actions
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RelationProperties
-* **type**: 'Microsoft.SecurityInsights/bookmarks/relations' (ReadOnly, DeployTimeConstant)
+* **properties**: ActionRequestProperties
+* **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant)
 
-## RelationProperties
+## ActionRequestProperties
 ### Properties
-* **relatedResourceId**: string (Required)
-* **relatedResourceKind**: string (ReadOnly)
-* **relatedResourceName**: string (ReadOnly)
-* **relatedResourceType**: string (ReadOnly)
+* **logicAppResourceId**: string
+* **triggerUri**: string (WriteOnly)
+* **workflowId**: string (ReadOnly)
 
 ## Microsoft.SecurityInsights/bookmarks
 ### Properties
@@ -166,6 +149,53 @@
 * **relationName**: string (Required)
 * **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium' (Required)
 * **title**: string (Required)
+
+## Microsoft.SecurityInsights/bookmarks/relations
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RelationProperties
+* **type**: 'Microsoft.SecurityInsights/bookmarks/relations' (ReadOnly, DeployTimeConstant)
+
+## RelationProperties
+### Properties
+* **relatedResourceId**: string (Required)
+* **relatedResourceKind**: string (ReadOnly)
+* **relatedResourceName**: string (ReadOnly)
+* **relatedResourceType**: string (ReadOnly)
+
+## Microsoft.SecurityInsights/cases
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CaseProperties
+* **type**: 'Microsoft.SecurityInsights/cases' (ReadOnly, DeployTimeConstant)
+
+## CaseProperties
+### Properties
+* **caseNumber**: int (ReadOnly)
+* **closedReasonText**: string
+* **closeReason**: 'Dismissed' | 'FalsePositive' | 'Other' | 'Resolved' | 'TruePositive'
+* **createdTimeUtc**: string (ReadOnly)
+* **description**: string
+* **endTimeUtc**: string
+* **labels**: string[]
+* **lastComment**: string (ReadOnly)
+* **lastUpdatedTimeUtc**: string (ReadOnly)
+* **owner**: UserInfo
+* **relatedAlertIds**: string[] (ReadOnly)
+* **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium' (Required)
+* **startTimeUtc**: string (Required)
+* **status**: 'Closed' | 'Draft' | 'InProgress' | 'New' (Required)
+* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation'[] (ReadOnly)
+* **title**: string (Required)
+* **totalComments**: int (ReadOnly)
 
 ## Microsoft.SecurityInsights/cases/comments
 ### Properties
@@ -212,36 +242,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.SecurityInsights/cases
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CaseProperties
-* **type**: 'Microsoft.SecurityInsights/cases' (ReadOnly, DeployTimeConstant)
-
-## CaseProperties
-### Properties
-* **caseNumber**: int (ReadOnly)
-* **closeReason**: 'Dismissed' | 'FalsePositive' | 'Other' | 'Resolved' | 'TruePositive'
-* **closedReasonText**: string
-* **createdTimeUtc**: string (ReadOnly)
-* **description**: string
-* **endTimeUtc**: string
-* **labels**: string[]
-* **lastComment**: string (ReadOnly)
-* **lastUpdatedTimeUtc**: string (ReadOnly)
-* **owner**: UserInfo
-* **relatedAlertIds**: string[] (ReadOnly)
-* **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium' (Required)
-* **startTimeUtc**: string (Required)
-* **status**: 'Closed' | 'Draft' | 'InProgress' | 'New' (Required)
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation'[] (ReadOnly)
-* **title**: string (Required)
-* **totalComments**: int (ReadOnly)
 
 ## Microsoft.SecurityInsights/dataConnectors
 * **Discriminator**: kind
@@ -468,40 +468,6 @@
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
-## Microsoft.SecurityInsights/incidents/comments
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IncidentCommentProperties
-* **type**: 'Microsoft.SecurityInsights/incidents/comments' (ReadOnly, DeployTimeConstant)
-
-## IncidentCommentProperties
-### Properties
-* **author**: ClientInfo (ReadOnly)
-* **createdTimeUtc**: string (ReadOnly)
-* **lastModifiedTimeUtc**: string (ReadOnly)
-* **message**: string (Required)
-
-## ClientInfo
-### Properties
-* **email**: string
-* **name**: string
-* **objectId**: string
-* **userPrincipalName**: string
-
-## Microsoft.SecurityInsights/incidents/relations
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RelationProperties
-* **type**: 'Microsoft.SecurityInsights/incidents/relations' (ReadOnly, DeployTimeConstant)
-
 ## Microsoft.SecurityInsights/incidents
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
@@ -551,6 +517,40 @@
 * **email**: string
 * **objectId**: string
 * **userPrincipalName**: string
+
+## Microsoft.SecurityInsights/incidents/comments
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IncidentCommentProperties
+* **type**: 'Microsoft.SecurityInsights/incidents/comments' (ReadOnly, DeployTimeConstant)
+
+## IncidentCommentProperties
+### Properties
+* **author**: ClientInfo (ReadOnly)
+* **createdTimeUtc**: string (ReadOnly)
+* **lastModifiedTimeUtc**: string (ReadOnly)
+* **message**: string (Required)
+
+## ClientInfo
+### Properties
+* **email**: string
+* **name**: string
+* **objectId**: string
+* **userPrincipalName**: string
+
+## Microsoft.SecurityInsights/incidents/relations
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RelationProperties
+* **type**: 'Microsoft.SecurityInsights/incidents/relations' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.SecurityInsights/settings
 * **Discriminator**: kind
@@ -668,40 +668,22 @@
 
 ## WatchlistProperties
 ### Properties
+* **contentType**: string
+* **created**: string
 * **createdBy**: UserInfo
-* **createdTimeUtc**: string
 * **defaultDuration**: string
 * **description**: string
 * **displayName**: string (Required)
+* **isDeleted**: bool
 * **labels**: string[]
-* **lastUpdatedTimeUtc**: string
-* **notes**: string
+* **numberOfLinesToSkip**: int
 * **provider**: string (Required)
+* **rawContent**: string
 * **source**: 'Local file' | 'Remote storage' (Required)
 * **tenantId**: string
+* **updated**: string
 * **updatedBy**: UserInfo
-* **watchlistItems**: WatchlistItem[]
+* **watchlistAlias**: string
+* **watchlistId**: string
 * **watchlistType**: string
-* **workspaceId**: string
-
-## WatchlistItem
-### Properties
-* **id**: string (ReadOnly)
-* **name**: string (ReadOnly)
-* **properties**: WatchlistItemProperties
-* **type**: string (ReadOnly)
-
-## WatchlistItemProperties
-### Properties
-* **createdBy**: UserInfo
-* **createdTimeUtc**: string
-* **entityMapping**: any
-* **lastUpdatedTimeUtc**: string
-* **tenantId**: string
-* **timeToLiveUtc**: string
-* **updatedBy**: UserInfo
-* **watchlistId**: string (Required)
-* **watchlistItemName**: string
-* **watchlistItemPair**: any (Required)
-* **watchlistItemType**: string
 

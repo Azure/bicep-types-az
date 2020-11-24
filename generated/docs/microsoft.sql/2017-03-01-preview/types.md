@@ -16,39 +16,6 @@
 * **sid**: string (Required)
 * **tenantId**: string
 
-## Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies
-### Properties
-* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedBackupShortTermRetentionPolicyProperties
-* **type**: 'Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
-
-## ManagedBackupShortTermRetentionPolicyProperties
-### Properties
-* **retentionDays**: int
-
-## Microsoft.Sql/managedInstances/databases/securityAlertPolicies
-### Properties
-* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityAlertPolicyProperties
-* **type**: 'Microsoft.Sql/managedInstances/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
-
-## SecurityAlertPolicyProperties
-### Properties
-* **creationTime**: string (ReadOnly)
-* **disabledAlerts**: string[]
-* **emailAccountAdmins**: bool
-* **emailAddresses**: string[]
-* **retentionDays**: int
-* **state**: 'Disabled' | 'Enabled' | 'New' (Required)
-* **storageAccountAccessKey**: string
-* **storageEndpoint**: string
-
 ## Microsoft.Sql/managedInstances/databases
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
@@ -81,6 +48,39 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ManagedBackupShortTermRetentionPolicyProperties
+* **type**: 'Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
+
+## ManagedBackupShortTermRetentionPolicyProperties
+### Properties
+* **retentionDays**: int
+
+## Microsoft.Sql/managedInstances/databases/securityAlertPolicies
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SecurityAlertPolicyProperties
+* **type**: 'Microsoft.Sql/managedInstances/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
+
+## SecurityAlertPolicyProperties
+### Properties
+* **creationTime**: string (ReadOnly)
+* **disabledAlerts**: string[]
+* **emailAccountAdmins**: bool
+* **emailAddresses**: string[]
+* **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' | 'New' (Required)
+* **storageAccountAccessKey**: string
+* **storageEndpoint**: string
 
 ## Microsoft.Sql/managedInstances/restorableDroppedDatabases/backupShortTermRetentionPolicies
 ### Properties
@@ -120,123 +120,6 @@
 * **storageAccountAccessKey**: string
 * **storageAccountSubscriptionId**: string
 * **storageEndpoint**: string
-
-## Microsoft.Sql/servers/databases/auditingSettings
-### Properties
-* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseBlobAuditingPolicyProperties
-* **type**: 'Microsoft.Sql/servers/databases/auditingSettings' (ReadOnly, DeployTimeConstant)
-
-## DatabaseBlobAuditingPolicyProperties
-### Properties
-* **auditActionsAndGroups**: string[]
-* **isAzureMonitorTargetEnabled**: bool
-* **isStorageSecondaryKeyInUse**: bool
-* **queueDelayMs**: int
-* **retentionDays**: int
-* **state**: 'Disabled' | 'Enabled' (Required)
-* **storageAccountAccessKey**: string
-* **storageAccountSubscriptionId**: string
-* **storageEndpoint**: string
-
-## Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies
-### Properties
-* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LongTermRetentionPolicyProperties
-* **type**: 'Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
-
-## LongTermRetentionPolicyProperties
-### Properties
-* **monthlyRetention**: string
-* **weekOfYear**: int
-* **weeklyRetention**: string
-* **yearlyRetention**: string
-
-## Microsoft.Sql/servers/databases/extendedAuditingSettings
-### Properties
-* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ExtendedDatabaseBlobAuditingPolicyProperties
-* **type**: 'Microsoft.Sql/servers/databases/extendedAuditingSettings' (ReadOnly, DeployTimeConstant)
-
-## ExtendedDatabaseBlobAuditingPolicyProperties
-### Properties
-* **auditActionsAndGroups**: string[]
-* **isAzureMonitorTargetEnabled**: bool
-* **isStorageSecondaryKeyInUse**: bool
-* **predicateExpression**: string
-* **queueDelayMs**: int
-* **retentionDays**: int
-* **state**: 'Disabled' | 'Enabled' (Required)
-* **storageAccountAccessKey**: string
-* **storageAccountSubscriptionId**: string
-* **storageEndpoint**: string
-
-## Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels
-### Properties
-* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SensitivityLabelProperties
-* **type**: 'Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant)
-
-## SensitivityLabelProperties
-### Properties
-* **informationType**: string
-* **informationTypeId**: string
-* **isDisabled**: bool (ReadOnly)
-* **labelId**: string
-* **labelName**: string
-* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None'
-
-## Microsoft.Sql/servers/databases/vulnerabilityAssessments/rules/baselines
-### Properties
-* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'default' | 'master' (Required, DeployTimeConstant)
-* **properties**: DatabaseVulnerabilityAssessmentRuleBaselineProperties
-* **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant)
-
-## DatabaseVulnerabilityAssessmentRuleBaselineProperties
-### Properties
-* **baselineResults**: DatabaseVulnerabilityAssessmentRuleBaselineItem[] (Required)
-
-## DatabaseVulnerabilityAssessmentRuleBaselineItem
-### Properties
-* **result**: string[] (Required)
-
-## Microsoft.Sql/servers/databases/vulnerabilityAssessments
-### Properties
-* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseVulnerabilityAssessmentProperties
-* **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
-
-## DatabaseVulnerabilityAssessmentProperties
-### Properties
-* **recurringScans**: VulnerabilityAssessmentRecurringScansProperties
-* **storageAccountAccessKey**: string
-* **storageContainerPath**: string
-* **storageContainerSasKey**: string
-
-## VulnerabilityAssessmentRecurringScansProperties
-### Properties
-* **emailSubscriptionAdmins**: bool
-* **emails**: string[]
-* **isEnabled**: bool
 
 ## Microsoft.Sql/servers/databases
 ### Properties
@@ -286,6 +169,123 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.Sql/servers/databases/auditingSettings
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseBlobAuditingPolicyProperties
+* **type**: 'Microsoft.Sql/servers/databases/auditingSettings' (ReadOnly, DeployTimeConstant)
+
+## DatabaseBlobAuditingPolicyProperties
+### Properties
+* **auditActionsAndGroups**: string[]
+* **isAzureMonitorTargetEnabled**: bool
+* **isStorageSecondaryKeyInUse**: bool
+* **queueDelayMs**: int
+* **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' (Required)
+* **storageAccountAccessKey**: string
+* **storageAccountSubscriptionId**: string
+* **storageEndpoint**: string
+
+## Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LongTermRetentionPolicyProperties
+* **type**: 'Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
+
+## LongTermRetentionPolicyProperties
+### Properties
+* **monthlyRetention**: string
+* **weeklyRetention**: string
+* **weekOfYear**: int
+* **yearlyRetention**: string
+
+## Microsoft.Sql/servers/databases/extendedAuditingSettings
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ExtendedDatabaseBlobAuditingPolicyProperties
+* **type**: 'Microsoft.Sql/servers/databases/extendedAuditingSettings' (ReadOnly, DeployTimeConstant)
+
+## ExtendedDatabaseBlobAuditingPolicyProperties
+### Properties
+* **auditActionsAndGroups**: string[]
+* **isAzureMonitorTargetEnabled**: bool
+* **isStorageSecondaryKeyInUse**: bool
+* **predicateExpression**: string
+* **queueDelayMs**: int
+* **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' (Required)
+* **storageAccountAccessKey**: string
+* **storageAccountSubscriptionId**: string
+* **storageEndpoint**: string
+
+## Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SensitivityLabelProperties
+* **type**: 'Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant)
+
+## SensitivityLabelProperties
+### Properties
+* **informationType**: string
+* **informationTypeId**: string
+* **isDisabled**: bool (ReadOnly)
+* **labelId**: string
+* **labelName**: string
+* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None'
+
+## Microsoft.Sql/servers/databases/vulnerabilityAssessments
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseVulnerabilityAssessmentProperties
+* **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
+
+## DatabaseVulnerabilityAssessmentProperties
+### Properties
+* **recurringScans**: VulnerabilityAssessmentRecurringScansProperties
+* **storageAccountAccessKey**: string
+* **storageContainerPath**: string
+* **storageContainerSasKey**: string
+
+## VulnerabilityAssessmentRecurringScansProperties
+### Properties
+* **emails**: string[]
+* **emailSubscriptionAdmins**: bool
+* **isEnabled**: bool
+
+## Microsoft.Sql/servers/databases/vulnerabilityAssessments/rules/baselines
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'default' | 'master' (Required, DeployTimeConstant)
+* **properties**: DatabaseVulnerabilityAssessmentRuleBaselineProperties
+* **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant)
+
+## DatabaseVulnerabilityAssessmentRuleBaselineProperties
+### Properties
+* **baselineResults**: DatabaseVulnerabilityAssessmentRuleBaselineItem[] (Required)
+
+## DatabaseVulnerabilityAssessmentRuleBaselineItem
+### Properties
+* **result**: string[] (Required)
+
 ## Microsoft.Sql/servers/extendedAuditingSettings
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
@@ -308,6 +308,27 @@
 * **storageAccountSubscriptionId**: string
 * **storageEndpoint**: string
 
+## Microsoft.Sql/servers/jobAgents
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: JobAgentProperties
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Sql/servers/jobAgents' (ReadOnly, DeployTimeConstant)
+
+## JobAgentProperties
+### Properties
+* **databaseId**: string (Required)
+* **state**: 'Creating' | 'Deleting' | 'Disabled' | 'Ready' | 'Updating' (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Sql/servers/jobAgents/credentials
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
@@ -321,6 +342,29 @@
 ### Properties
 * **password**: string (Required)
 * **username**: string (Required)
+
+## Microsoft.Sql/servers/jobAgents/jobs
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: JobProperties
+* **type**: 'Microsoft.Sql/servers/jobAgents/jobs' (ReadOnly, DeployTimeConstant)
+
+## JobProperties
+### Properties
+* **description**: string
+* **schedule**: JobSchedule
+* **version**: int (ReadOnly)
+
+## JobSchedule
+### Properties
+* **enabled**: bool
+* **endTime**: string
+* **interval**: string
+* **startTime**: string
+* **type**: 'Once' | 'Recurring'
 
 ## Microsoft.Sql/servers/jobAgents/jobs/steps
 ### Properties
@@ -365,29 +409,6 @@
 * **tableName**: string (Required)
 * **type**: 'SqlDatabase'
 
-## Microsoft.Sql/servers/jobAgents/jobs
-### Properties
-* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: JobProperties
-* **type**: 'Microsoft.Sql/servers/jobAgents/jobs' (ReadOnly, DeployTimeConstant)
-
-## JobProperties
-### Properties
-* **description**: string
-* **schedule**: JobSchedule
-* **version**: int (ReadOnly)
-
-## JobSchedule
-### Properties
-* **enabled**: bool
-* **endTime**: string
-* **interval**: string
-* **startTime**: string
-* **type**: 'Once' | 'Recurring'
-
 ## Microsoft.Sql/servers/jobAgents/targetGroups
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
@@ -410,27 +431,6 @@
 * **serverName**: string
 * **shardMapName**: string
 * **type**: 'SqlDatabase' | 'SqlElasticPool' | 'SqlServer' | 'SqlShardMap' | 'TargetGroup' (Required)
-
-## Microsoft.Sql/servers/jobAgents
-### Properties
-* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: JobAgentProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Sql/servers/jobAgents' (ReadOnly, DeployTimeConstant)
-
-## JobAgentProperties
-### Properties
-* **databaseId**: string (Required)
-* **state**: 'Creating' | 'Deleting' | 'Disabled' | 'Ready' | 'Updating' (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## Microsoft.Sql/servers/securityAlertPolicies
 ### Properties

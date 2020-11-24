@@ -1,5 +1,94 @@
 # Microsoft.DataMigration @ 2018-03-15-preview
 
+## Microsoft.DataMigration/services
+### Properties
+* **apiVersion**: '2018-03-15-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DataMigrationServiceProperties
+* **sku**: ServiceSku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DataMigration/services' (ReadOnly, DeployTimeConstant)
+
+## DataMigrationServiceProperties
+### Properties
+* **provisioningState**: 'Accepted' | 'Deleting' | 'Deploying' | 'Failed' | 'FailedToStart' | 'FailedToStop' | 'Starting' | 'Stopped' | 'Stopping' | 'Succeeded' (ReadOnly)
+* **publicKey**: string
+* **virtualSubnetId**: string (Required)
+
+## ServiceSku
+### Properties
+* **capacity**: int
+* **family**: string
+* **name**: string
+* **size**: string
+* **tier**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.DataMigration/services/projects
+### Properties
+* **apiVersion**: '2018-03-15-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ProjectProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DataMigration/services/projects' (ReadOnly, DeployTimeConstant)
+
+## ProjectProperties
+### Properties
+* **creationTime**: string (ReadOnly)
+* **databasesInfo**: DatabaseInfo[]
+* **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly)
+* **sourceConnectionInfo**: ConnectionInfo
+* **sourcePlatform**: 'SQL' | 'Unknown' (Required)
+* **targetConnectionInfo**: ConnectionInfo
+* **targetPlatform**: 'SQLDB' | 'Unknown' (Required)
+
+## DatabaseInfo
+### Properties
+* **sourceDatabaseName**: string (Required)
+
+## ConnectionInfo
+* **Discriminator**: type
+### Base Properties
+* **password**: string
+* **userName**: string
+### SqlConnectionInfo
+#### Properties
+* **additionalSettings**: string
+* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication'
+* **dataSource**: string (Required)
+* **encryptConnection**: bool
+* **password**: string
+* **trustServerCertificate**: bool
+* **type**: 'SqlConnectionInfo' (Required)
+* **userName**: string
+
+
+## SqlConnectionInfo
+### Properties
+* **additionalSettings**: string
+* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication'
+* **dataSource**: string (Required)
+* **encryptConnection**: bool
+* **password**: string
+* **trustServerCertificate**: bool
+* **type**: 'SqlConnectionInfo' (Required)
+* **userName**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.DataMigration/services/projects/tasks
 ### Properties
 * **apiVersion**: '2018-03-15-preview' (ReadOnly, DeployTimeConstant)
@@ -74,17 +163,6 @@
 ### Properties
 * **checkPermissionsGroup**: 'Default' | 'MigrationFromSqlServerToAzureDB'
 * **sourceConnectionInfo**: SqlConnectionInfo (Required)
-
-## SqlConnectionInfo
-### Properties
-* **additionalSettings**: string
-* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication'
-* **dataSource**: string (Required)
-* **encryptConnection**: bool
-* **password**: string
-* **trustServerCertificate**: bool
-* **type**: 'SqlConnectionInfo' (Required)
-* **userName**: string
 
 ## ConnectToSourceSqlServerTaskOutput
 * **Discriminator**: resultType
@@ -410,82 +488,4 @@
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
 * **restoreDatabaseNameErrors**: ReportableException[] (ReadOnly)
-
-## Microsoft.DataMigration/services/projects
-### Properties
-* **apiVersion**: '2018-03-15-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ProjectProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DataMigration/services/projects' (ReadOnly, DeployTimeConstant)
-
-## ProjectProperties
-### Properties
-* **creationTime**: string (ReadOnly)
-* **databasesInfo**: DatabaseInfo[]
-* **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly)
-* **sourceConnectionInfo**: ConnectionInfo
-* **sourcePlatform**: 'SQL' | 'Unknown' (Required)
-* **targetConnectionInfo**: ConnectionInfo
-* **targetPlatform**: 'SQLDB' | 'Unknown' (Required)
-
-## DatabaseInfo
-### Properties
-* **sourceDatabaseName**: string (Required)
-
-## ConnectionInfo
-* **Discriminator**: type
-### Base Properties
-* **password**: string
-* **userName**: string
-### SqlConnectionInfo
-#### Properties
-* **additionalSettings**: string
-* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication'
-* **dataSource**: string (Required)
-* **encryptConnection**: bool
-* **password**: string
-* **trustServerCertificate**: bool
-* **type**: 'SqlConnectionInfo' (Required)
-* **userName**: string
-
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.DataMigration/services
-### Properties
-* **apiVersion**: '2018-03-15-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DataMigrationServiceProperties
-* **sku**: ServiceSku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DataMigration/services' (ReadOnly, DeployTimeConstant)
-
-## DataMigrationServiceProperties
-### Properties
-* **provisioningState**: 'Accepted' | 'Deleting' | 'Deploying' | 'Failed' | 'FailedToStart' | 'FailedToStop' | 'Starting' | 'Stopped' | 'Stopping' | 'Succeeded' (ReadOnly)
-* **publicKey**: string
-* **virtualSubnetId**: string (Required)
-
-## ServiceSku
-### Properties
-* **capacity**: int
-* **family**: string
-* **name**: string
-* **size**: string
-* **tier**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

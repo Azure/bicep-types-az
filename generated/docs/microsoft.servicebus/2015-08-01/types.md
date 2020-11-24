@@ -1,5 +1,37 @@
 # Microsoft.ServiceBus @ 2015-08-01
 
+## Microsoft.ServiceBus/namespaces
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: NamespaceProperties
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ServiceBus/namespaces' (ReadOnly, DeployTimeConstant)
+
+## NamespaceProperties
+### Properties
+* **createACSNamespace**: bool
+* **createdAt**: string (ReadOnly)
+* **enabled**: bool
+* **provisioningState**: string (ReadOnly)
+* **serviceBusEndpoint**: string (ReadOnly)
+* **status**: 'Activating' | 'Active' | 'Created' | 'Creating' | 'Disabled' | 'Disabling' | 'Enabling' | 'Failed' | 'Removed' | 'Removing' | 'SoftDeleted' | 'SoftDeleting' | 'Unknown'
+* **updatedAt**: string (ReadOnly)
+
+## Sku
+### Properties
+* **capacity**: int
+* **name**: 'Basic' | 'Premium' | 'Standard'
+* **tier**: 'Basic' | 'Premium' | 'Standard' (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.ServiceBus/namespaces/AuthorizationRules
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
@@ -13,16 +45,6 @@
 ## SharedAccessAuthorizationRuleProperties
 ### Properties
 * **rights**: 'Listen' | 'Manage' | 'Send'[] (Required)
-
-## Microsoft.ServiceBus/namespaces/queues/authorizationRules
-### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties
-* **type**: 'Microsoft.ServiceBus/namespaces/queues/authorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.ServiceBus/namespaces/queues
 ### Properties
@@ -67,6 +89,49 @@
 * **transferDeadLetterMessageCount**: int (ReadOnly)
 * **transferMessageCount**: int (ReadOnly)
 
+## Microsoft.ServiceBus/namespaces/queues/authorizationRules
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SharedAccessAuthorizationRuleProperties
+* **type**: 'Microsoft.ServiceBus/namespaces/queues/authorizationRules' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.ServiceBus/namespaces/topics
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TopicProperties
+* **type**: 'Microsoft.ServiceBus/namespaces/topics' (ReadOnly, DeployTimeConstant)
+
+## TopicProperties
+### Properties
+* **accessedAt**: string (ReadOnly)
+* **autoDeleteOnIdle**: string
+* **countDetails**: MessageCountDetails (ReadOnly)
+* **createdAt**: string (ReadOnly)
+* **defaultMessageTimeToLive**: string
+* **duplicateDetectionHistoryTimeWindow**: string
+* **enableBatchedOperations**: bool
+* **enableExpress**: bool
+* **enablePartitioning**: bool
+* **entityAvailabilityStatus**: 'Available' | 'Limited' | 'Renaming' | 'Restoring' | 'Unknown'
+* **filteringMessagesBeforePublishing**: bool
+* **isAnonymousAccessible**: bool
+* **isExpress**: bool
+* **maxSizeInMegabytes**: int
+* **requiresDuplicateDetection**: bool
+* **sizeInBytes**: int (ReadOnly)
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown'
+* **subscriptionCount**: int (ReadOnly)
+* **supportOrdering**: bool
+* **updatedAt**: string (ReadOnly)
+
 ## Microsoft.ServiceBus/namespaces/topics/authorizationRules
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
@@ -105,69 +170,4 @@
 * **requiresSession**: bool
 * **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown'
 * **updatedAt**: string (ReadOnly)
-
-## Microsoft.ServiceBus/namespaces/topics
-### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TopicProperties
-* **type**: 'Microsoft.ServiceBus/namespaces/topics' (ReadOnly, DeployTimeConstant)
-
-## TopicProperties
-### Properties
-* **accessedAt**: string (ReadOnly)
-* **autoDeleteOnIdle**: string
-* **countDetails**: MessageCountDetails (ReadOnly)
-* **createdAt**: string (ReadOnly)
-* **defaultMessageTimeToLive**: string
-* **duplicateDetectionHistoryTimeWindow**: string
-* **enableBatchedOperations**: bool
-* **enableExpress**: bool
-* **enablePartitioning**: bool
-* **entityAvailabilityStatus**: 'Available' | 'Limited' | 'Renaming' | 'Restoring' | 'Unknown'
-* **filteringMessagesBeforePublishing**: bool
-* **isAnonymousAccessible**: bool
-* **isExpress**: bool
-* **maxSizeInMegabytes**: int
-* **requiresDuplicateDetection**: bool
-* **sizeInBytes**: int (ReadOnly)
-* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown'
-* **subscriptionCount**: int (ReadOnly)
-* **supportOrdering**: bool
-* **updatedAt**: string (ReadOnly)
-
-## Microsoft.ServiceBus/namespaces
-### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: NamespaceProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ServiceBus/namespaces' (ReadOnly, DeployTimeConstant)
-
-## NamespaceProperties
-### Properties
-* **createACSNamespace**: bool
-* **createdAt**: string (ReadOnly)
-* **enabled**: bool
-* **provisioningState**: string (ReadOnly)
-* **serviceBusEndpoint**: string (ReadOnly)
-* **status**: 'Activating' | 'Active' | 'Created' | 'Creating' | 'Disabled' | 'Disabling' | 'Enabling' | 'Failed' | 'Removed' | 'Removing' | 'SoftDeleted' | 'SoftDeleting' | 'Unknown'
-* **updatedAt**: string (ReadOnly)
-
-## Sku
-### Properties
-* **capacity**: int
-* **name**: 'Basic' | 'Premium' | 'Standard'
-* **tier**: 'Basic' | 'Premium' | 'Standard' (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

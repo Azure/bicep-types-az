@@ -54,6 +54,31 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.Sql/servers
+### Properties
+* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: ResourceIdentity
+* **kind**: string (ReadOnly)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServerProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant)
+
+## ServerProperties
+### Properties
+* **administratorLogin**: string
+* **administratorLoginPassword**: string
+* **fullyQualifiedDomainName**: string (ReadOnly)
+* **state**: string (ReadOnly)
+* **version**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Sql/servers/databases/auditingSettings
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant)
@@ -75,27 +100,6 @@
 * **storageAccountAccessKey**: string
 * **storageAccountSubscriptionId**: string
 * **storageEndpoint**: string
-
-## Microsoft.Sql/servers/databases/syncGroups/syncMembers
-### Properties
-* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SyncMemberProperties
-* **type**: 'Microsoft.Sql/servers/databases/syncGroups/syncMembers' (ReadOnly, DeployTimeConstant)
-
-## SyncMemberProperties
-### Properties
-* **databaseName**: string
-* **databaseType**: 'AzureSqlDatabase' | 'SqlServerDatabase'
-* **password**: string
-* **serverName**: string
-* **sqlServerDatabaseId**: string
-* **syncAgentId**: string
-* **syncDirection**: 'Bidirectional' | 'OneWayHubToMember' | 'OneWayMemberToHub'
-* **syncState**: 'DeProvisionFailed' | 'DeProvisioned' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'ProvisionFailed' | 'Provisioned' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' (ReadOnly)
-* **userName**: string
 
 ## Microsoft.Sql/servers/databases/syncGroups
 ### Properties
@@ -132,6 +136,27 @@
 * **dataSize**: string
 * **dataType**: string
 * **quotedName**: string
+
+## Microsoft.Sql/servers/databases/syncGroups/syncMembers
+### Properties
+* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SyncMemberProperties
+* **type**: 'Microsoft.Sql/servers/databases/syncGroups/syncMembers' (ReadOnly, DeployTimeConstant)
+
+## SyncMemberProperties
+### Properties
+* **databaseName**: string
+* **databaseType**: 'AzureSqlDatabase' | 'SqlServerDatabase'
+* **password**: string
+* **serverName**: string
+* **sqlServerDatabaseId**: string
+* **syncAgentId**: string
+* **syncDirection**: 'Bidirectional' | 'OneWayHubToMember' | 'OneWayMemberToHub'
+* **syncState**: 'DeProvisioned' | 'DeProvisionFailed' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'Provisioned' | 'ProvisionFailed' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' (ReadOnly)
+* **userName**: string
 
 ## Microsoft.Sql/servers/encryptionProtector
 ### Properties
@@ -273,31 +298,6 @@
 ## VirtualNetworkRuleProperties
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool
-* **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly)
+* **state**: 'Deleting' | 'Initializing' | 'InProgress' | 'Ready' | 'Unknown' (ReadOnly)
 * **virtualNetworkSubnetId**: string (Required)
-
-## Microsoft.Sql/servers
-### Properties
-* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ResourceIdentity
-* **kind**: string (ReadOnly)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant)
-
-## ServerProperties
-### Properties
-* **administratorLogin**: string
-* **administratorLoginPassword**: string
-* **fullyQualifiedDomainName**: string (ReadOnly)
-* **state**: string (ReadOnly)
-* **version**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

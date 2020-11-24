@@ -1,5 +1,119 @@
 # Microsoft.MachineLearningServices @ 2020-05-01-preview
 
+## Microsoft.MachineLearningServices/workspaces
+### Properties
+* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkspaceProperties
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant)
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned'
+* **userAssignedIdentities**: Dictionary<string,UserAssignedIdentity>
+
+## Dictionary<string,UserAssignedIdentity>
+### Additional Properties
+* **Additional Properties Type**: UserAssignedIdentity
+
+## UserAssignedIdentity
+### Properties
+* **clientId**: string (ReadOnly)
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+
+## WorkspaceProperties
+### Properties
+* **allowPublicAccessWhenBehindVnet**: bool
+* **applicationInsights**: string
+* **containerRegistry**: string
+* **creationTime**: string (ReadOnly)
+* **description**: string
+* **discoveryUrl**: string
+* **encryption**: EncryptionProperty
+* **friendlyName**: string
+* **hbiWorkspace**: bool
+* **imageBuildCompute**: string
+* **keyVault**: string
+* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **privateLinkCount**: int (ReadOnly)
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
+* **serviceProvisionedResourceGroup**: string (ReadOnly)
+* **sharedPrivateLinkResources**: SharedPrivateLinkResource[]
+* **storageAccount**: string
+* **workspaceId**: string (ReadOnly)
+
+## EncryptionProperty
+### Properties
+* **keyVaultProperties**: KeyVaultProperties (Required)
+* **status**: 'Disabled' | 'Enabled' (Required)
+
+## KeyVaultProperties
+### Properties
+* **identityClientId**: string
+* **keyIdentifier**: string (Required)
+* **keyVaultArmId**: string (Required)
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly)
+* **identity**: Identity
+* **location**: string
+* **name**: string (ReadOnly)
+* **properties**: PrivateEndpointConnectionProperties
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: string (ReadOnly)
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: PrivateEndpoint
+* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded'
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly)
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: string
+* **description**: string
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout'
+
+## Sku
+### Properties
+* **name**: string
+* **tier**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SharedPrivateLinkResource
+### Properties
+* **name**: string
+* **properties**: SharedPrivateLinkResourceProperty
+
+## SharedPrivateLinkResourceProperty
+### Properties
+* **groupId**: string
+* **privateLinkResourceId**: string
+* **requestMessage**: string
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout'
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.MachineLearningServices/workspaces/computes
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
@@ -12,23 +126,6 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant)
-
-## Identity
-### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: Dictionary<string,UserAssignedIdentity>
-
-## Dictionary<string,UserAssignedIdentity>
-### Additional Properties
-* **Additional Properties Type**: UserAssignedIdentity
-
-## UserAssignedIdentity
-### Properties
-* **clientId**: string (ReadOnly)
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
 
 ## Compute
 * **Discriminator**: computeType
@@ -51,6 +148,11 @@
 * **computeType**: 'AmlCompute' (Required)
 * **properties**: schemas:55_properties
 
+### Databricks
+#### Properties
+* **computeType**: 'Databricks' (Required)
+* **properties**: schemas:56_properties
+
 ### DataFactory
 #### Properties
 * **computeType**: 'DataFactory' (Required)
@@ -58,11 +160,6 @@
 ### DataLakeAnalytics
 #### Properties
 * **computeType**: 'DataLakeAnalytics' (Required)
-* **properties**: schemas:56_properties
-
-### Databricks
-#### Properties
-* **computeType**: 'Databricks' (Required)
 * **properties**: schemas:56_properties
 
 ### HDInsight
@@ -170,13 +267,9 @@
 * **adminUserPassword**: string
 * **adminUserSshPublicKey**: string
 
-## DataFactory
+## Databricks
 ### Properties
-* **computeType**: 'DataFactory' (Required)
-
-## DataLakeAnalytics
-### Properties
-* **computeType**: 'DataLakeAnalytics' (Required)
+* **computeType**: 'Databricks' (Required)
 * **properties**: schemas:56_properties
 
 ## schemas:56_properties
@@ -193,9 +286,13 @@
 * **publicKeyData**: string
 * **username**: string
 
-## Databricks
+## DataFactory
 ### Properties
-* **computeType**: 'Databricks' (Required)
+* **computeType**: 'DataFactory' (Required)
+
+## DataLakeAnalytics
+### Properties
+* **computeType**: 'DataLakeAnalytics' (Required)
 * **properties**: schemas:56_properties
 
 ## HDInsight
@@ -207,11 +304,6 @@
 ### Properties
 * **computeType**: 'VirtualMachine' (Required)
 * **properties**: schemas:56_properties
-
-## Sku
-### Properties
-* **name**: string
-* **tier**: string
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -265,8 +357,8 @@
 ### Properties
 * **createdBy**: UserInfo (ReadOnly)
 * **createdTime**: string (ReadOnly)
-* **dataPath**: schemas:31_latest_dataPath (ReadOnly)
 * **dataflow**: string (ReadOnly)
+* **dataPath**: schemas:31_latest_dataPath (ReadOnly)
 * **datasetDefinitionState**: DatasetState (ReadOnly)
 * **datasetId**: string (ReadOnly)
 * **description**: string (ReadOnly)
@@ -346,8 +438,8 @@
 * **clientId**: string (WriteOnly)
 * **clientSecret**: string (WriteOnly)
 * **containerName**: string (WriteOnly)
-* **dataStoreType**: 'adls' | 'adls-gen2' | 'blob' | 'dbfs' | 'file' | 'mysqldb' | 'psqldb' | 'sqldb' (Required, WriteOnly)
 * **databaseName**: string (WriteOnly)
+* **dataStoreType**: 'adls-gen2' | 'adls' | 'blob' | 'dbfs' | 'file' | 'mysqldb' | 'psqldb' | 'sqldb' (Required, WriteOnly)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **description**: string (WriteOnly)
 * **endpoint**: string (WriteOnly)
@@ -555,22 +647,6 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded'
-
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly)
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionsRequired**: string
-* **description**: string
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout'
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -671,8 +747,8 @@
 * **cranPackages**: RCranPackage[] (WriteOnly)
 * **customUrlPackages**: string[] (WriteOnly)
 * **gitHubPackages**: RGitHubPackage[] (WriteOnly)
-* **rVersion**: string (WriteOnly)
 * **rscriptPath**: string (WriteOnly)
+* **rVersion**: string (WriteOnly)
 * **snapshotDate**: string (WriteOnly)
 * **userManaged**: bool (WriteOnly)
 
@@ -801,80 +877,4 @@
 * **isDefault**: bool (WriteOnly)
 * **trafficPercentile**: int (WriteOnly)
 * **type**: 'Control' | 'Treatment' (WriteOnly)
-
-## Microsoft.MachineLearningServices/workspaces
-### Properties
-* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant)
-
-## WorkspaceProperties
-### Properties
-* **allowPublicAccessWhenBehindVnet**: bool
-* **applicationInsights**: string
-* **containerRegistry**: string
-* **creationTime**: string (ReadOnly)
-* **description**: string
-* **discoveryUrl**: string
-* **encryption**: EncryptionProperty
-* **friendlyName**: string
-* **hbiWorkspace**: bool
-* **imageBuildCompute**: string
-* **keyVault**: string
-* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
-* **privateLinkCount**: int (ReadOnly)
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
-* **serviceProvisionedResourceGroup**: string (ReadOnly)
-* **sharedPrivateLinkResources**: SharedPrivateLinkResource[]
-* **storageAccount**: string
-* **workspaceId**: string (ReadOnly)
-
-## EncryptionProperty
-### Properties
-* **keyVaultProperties**: KeyVaultProperties (Required)
-* **status**: 'Disabled' | 'Enabled' (Required)
-
-## KeyVaultProperties
-### Properties
-* **identityClientId**: string
-* **keyIdentifier**: string (Required)
-* **keyVaultArmId**: string (Required)
-
-## PrivateEndpointConnection
-### Properties
-* **id**: string (ReadOnly)
-* **identity**: Identity
-* **location**: string
-* **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: string (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## SharedPrivateLinkResource
-### Properties
-* **name**: string
-* **properties**: SharedPrivateLinkResourceProperty
-
-## SharedPrivateLinkResourceProperty
-### Properties
-* **groupId**: string
-* **privateLinkResourceId**: string
-* **requestMessage**: string
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout'
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

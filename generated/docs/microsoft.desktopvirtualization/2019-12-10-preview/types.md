@@ -1,27 +1,5 @@
 # Microsoft.DesktopVirtualization @ 2019-12-10-preview
 
-## Microsoft.DesktopVirtualization/applicationGroups/applications
-### Properties
-* **apiVersion**: '2019-12-10-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationProperties (Required)
-* **type**: 'Microsoft.DesktopVirtualization/applicationGroups/applications' (ReadOnly, DeployTimeConstant)
-
-## ApplicationProperties
-### Properties
-* **commandLineArguments**: string
-* **commandLineSetting**: 'Allow' | 'DoNotAllow' | 'Require' (Required)
-* **description**: string
-* **filePath**: string
-* **friendlyName**: string
-* **iconContent**: array (ReadOnly)
-* **iconHash**: string (ReadOnly)
-* **iconIndex**: int
-* **iconPath**: string
-* **showInPortal**: bool
-
 ## Microsoft.DesktopVirtualization/applicationGroups
 ### Properties
 * **apiVersion**: '2019-12-10-preview' (ReadOnly, DeployTimeConstant)
@@ -44,6 +22,28 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.DesktopVirtualization/applicationGroups/applications
+### Properties
+* **apiVersion**: '2019-12-10-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationProperties (Required)
+* **type**: 'Microsoft.DesktopVirtualization/applicationGroups/applications' (ReadOnly, DeployTimeConstant)
+
+## ApplicationProperties
+### Properties
+* **commandLineArguments**: string
+* **commandLineSetting**: 'Allow' | 'DoNotAllow' | 'Require' (Required)
+* **description**: string
+* **filePath**: string
+* **friendlyName**: string
+* **iconContent**: array (ReadOnly)
+* **iconHash**: string (ReadOnly)
+* **iconIndex**: int
+* **iconPath**: string
+* **showInPortal**: bool
 
 ## Microsoft.DesktopVirtualization/hostPools
 ### Properties

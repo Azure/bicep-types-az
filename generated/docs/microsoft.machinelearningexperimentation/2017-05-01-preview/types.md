@@ -1,26 +1,33 @@
 # Microsoft.MachineLearningExperimentation @ 2017-05-01-preview
 
-## Microsoft.MachineLearningExperimentation/accounts/workspaces/projects
+## Microsoft.MachineLearningExperimentation/accounts
 ### Properties
 * **apiVersion**: '2017-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProjectProperties
+* **properties**: AccountProperties
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.MachineLearningExperimentation/accounts/workspaces/projects' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.MachineLearningExperimentation/accounts' (ReadOnly, DeployTimeConstant)
 
-## ProjectProperties
+## AccountProperties
 ### Properties
 * **accountId**: string (ReadOnly)
 * **creationDate**: string (ReadOnly)
 * **description**: string
-* **friendlyName**: string (Required)
-* **gitrepo**: string
-* **projectId**: string (ReadOnly)
+* **discoveryUri**: string (ReadOnly)
+* **friendlyName**: string
+* **keyVaultId**: string (Required)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **workspaceId**: string (ReadOnly)
+* **seats**: string
+* **storageAccount**: StorageAccountProperties (Required)
+* **vsoAccountId**: string (Required)
+
+## StorageAccountProperties
+### Properties
+* **accessKey**: string (Required)
+* **storageAccountId**: string (Required)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -50,34 +57,27 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.MachineLearningExperimentation/accounts
+## Microsoft.MachineLearningExperimentation/accounts/workspaces/projects
 ### Properties
 * **apiVersion**: '2017-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AccountProperties
+* **properties**: ProjectProperties
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.MachineLearningExperimentation/accounts' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.MachineLearningExperimentation/accounts/workspaces/projects' (ReadOnly, DeployTimeConstant)
 
-## AccountProperties
+## ProjectProperties
 ### Properties
 * **accountId**: string (ReadOnly)
 * **creationDate**: string (ReadOnly)
 * **description**: string
-* **discoveryUri**: string (ReadOnly)
-* **friendlyName**: string
-* **keyVaultId**: string (Required)
+* **friendlyName**: string (Required)
+* **gitrepo**: string
+* **projectId**: string (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **seats**: string
-* **storageAccount**: StorageAccountProperties (Required)
-* **vsoAccountId**: string (Required)
-
-## StorageAccountProperties
-### Properties
-* **accessKey**: string (Required)
-* **storageAccountId**: string (Required)
+* **workspaceId**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Additional Properties

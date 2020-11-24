@@ -1,5 +1,127 @@
 # Microsoft.DBForPostgreSQL @ 2017-12-01-preview
 
+## Microsoft.DBForPostgreSQL/servers
+### Properties
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: ResourceIdentity (ReadOnly)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServerPropertiesForCreate (Required)
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DBForPostgreSQL/servers' (ReadOnly, DeployTimeConstant)
+
+## ResourceIdentity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'SystemAssigned' (ReadOnly)
+
+## ServerPropertiesForCreate
+* **Discriminator**: createMode
+### Base Properties
+* **administratorLogin**: string (ReadOnly)
+* **byokEnforcement**: string (ReadOnly)
+* **earliestRestoreDate**: string (ReadOnly)
+* **fullyQualifiedDomainName**: string (ReadOnly)
+* **infrastructureEncryption**: 'Disabled' | 'Enabled' (ReadOnly)
+* **masterServerId**: string (ReadOnly)
+* **minimalTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2' | 'TLSEnforcementDisabled'
+* **privateEndpointConnections**: ServerPrivateEndpointConnection[] (ReadOnly)
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly)
+* **replicaCapacity**: int (ReadOnly)
+* **replicationRole**: string (ReadOnly)
+* **sslEnforcement**: 'Disabled' | 'Enabled'
+* **storageProfile**: StorageProfile
+* **userVisibleState**: 'Disabled' | 'Dropping' | 'Inaccessible' | 'Ready' (ReadOnly)
+* **version**: '10.0' | '10.2' | '10' | '11' | '9.5' | '9.6'
+### Default
+#### Properties
+* **administratorLogin**: string (Required, WriteOnly)
+* **administratorLoginPassword**: string (Required, WriteOnly)
+* **createMode**: 'Default' (Required)
+
+### GeoRestore
+#### Properties
+* **createMode**: 'GeoRestore' (Required)
+* **sourceServerId**: string (Required, WriteOnly)
+
+### PointInTimeRestore
+#### Properties
+* **createMode**: 'PointInTimeRestore' (Required)
+* **restorePointInTime**: string (Required, WriteOnly)
+* **sourceServerId**: string (Required, WriteOnly)
+
+### Replica
+#### Properties
+* **createMode**: 'Replica' (Required)
+* **sourceServerId**: string (Required, WriteOnly)
+
+
+## ServerPrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly)
+* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: PrivateEndpointProperty (ReadOnly)
+* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionStateProperty (ReadOnly)
+* **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' (ReadOnly)
+
+## PrivateEndpointProperty
+### Properties
+* **id**: string (ReadOnly)
+
+## PrivateLinkServiceConnectionStateProperty
+### Properties
+* **actionsRequired**: 'None' (ReadOnly)
+* **description**: string (ReadOnly)
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly)
+
+## StorageProfile
+### Properties
+* **backupRetentionDays**: int
+* **geoRedundantBackup**: 'Disabled' | 'Enabled'
+* **storageAutogrow**: 'Disabled' | 'Enabled'
+* **storageMB**: int
+
+## Default
+### Properties
+* **administratorLogin**: string (Required, WriteOnly)
+* **administratorLoginPassword**: string (Required, WriteOnly)
+* **createMode**: 'Default' (Required)
+
+## GeoRestore
+### Properties
+* **createMode**: 'GeoRestore' (Required)
+* **sourceServerId**: string (Required, WriteOnly)
+
+## PointInTimeRestore
+### Properties
+* **createMode**: 'PointInTimeRestore' (Required)
+* **restorePointInTime**: string (Required, WriteOnly)
+* **sourceServerId**: string (Required, WriteOnly)
+
+## Replica
+### Properties
+* **createMode**: 'Replica' (Required)
+* **sourceServerId**: string (Required, WriteOnly)
+
+## Sku
+### Properties
+* **capacity**: int
+* **family**: string
+* **name**: string (Required)
+* **size**: string
+* **tier**: 'Basic' | 'GeneralPurpose' | 'MemoryOptimized'
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.DBForPostgreSQL/servers/Administrators
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
@@ -93,128 +215,6 @@
 ## VirtualNetworkRuleProperties
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool
-* **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly)
+* **state**: 'Deleting' | 'Initializing' | 'InProgress' | 'Ready' | 'Unknown' (ReadOnly)
 * **virtualNetworkSubnetId**: string (Required)
-
-## Microsoft.DBForPostgreSQL/servers
-### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ResourceIdentity (ReadOnly)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerPropertiesForCreate (Required)
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DBForPostgreSQL/servers' (ReadOnly, DeployTimeConstant)
-
-## ResourceIdentity
-### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'SystemAssigned' (ReadOnly)
-
-## ServerPropertiesForCreate
-* **Discriminator**: createMode
-### Base Properties
-* **administratorLogin**: string (ReadOnly)
-* **byokEnforcement**: string (ReadOnly)
-* **earliestRestoreDate**: string (ReadOnly)
-* **fullyQualifiedDomainName**: string (ReadOnly)
-* **infrastructureEncryption**: 'Disabled' | 'Enabled' (ReadOnly)
-* **masterServerId**: string (ReadOnly)
-* **minimalTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2' | 'TLSEnforcementDisabled'
-* **privateEndpointConnections**: ServerPrivateEndpointConnection[] (ReadOnly)
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly)
-* **replicaCapacity**: int (ReadOnly)
-* **replicationRole**: string (ReadOnly)
-* **sslEnforcement**: 'Disabled' | 'Enabled'
-* **storageProfile**: StorageProfile
-* **userVisibleState**: 'Disabled' | 'Dropping' | 'Inaccessible' | 'Ready' (ReadOnly)
-* **version**: '10' | '10.0' | '10.2' | '11' | '9.5' | '9.6'
-### Default
-#### Properties
-* **administratorLogin**: string (Required, WriteOnly)
-* **administratorLoginPassword**: string (Required, WriteOnly)
-* **createMode**: 'Default' (Required)
-
-### GeoRestore
-#### Properties
-* **createMode**: 'GeoRestore' (Required)
-* **sourceServerId**: string (Required, WriteOnly)
-
-### PointInTimeRestore
-#### Properties
-* **createMode**: 'PointInTimeRestore' (Required)
-* **restorePointInTime**: string (Required, WriteOnly)
-* **sourceServerId**: string (Required, WriteOnly)
-
-### Replica
-#### Properties
-* **createMode**: 'Replica' (Required)
-* **sourceServerId**: string (Required, WriteOnly)
-
-
-## ServerPrivateEndpointConnection
-### Properties
-* **id**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: PrivateEndpointProperty (ReadOnly)
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionStateProperty (ReadOnly)
-* **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' (ReadOnly)
-
-## PrivateEndpointProperty
-### Properties
-* **id**: string (ReadOnly)
-
-## PrivateLinkServiceConnectionStateProperty
-### Properties
-* **actionsRequired**: 'None' (ReadOnly)
-* **description**: string (ReadOnly)
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly)
-
-## StorageProfile
-### Properties
-* **backupRetentionDays**: int
-* **geoRedundantBackup**: 'Disabled' | 'Enabled'
-* **storageAutogrow**: 'Disabled' | 'Enabled'
-* **storageMB**: int
-
-## Default
-### Properties
-* **administratorLogin**: string (Required, WriteOnly)
-* **administratorLoginPassword**: string (Required, WriteOnly)
-* **createMode**: 'Default' (Required)
-
-## GeoRestore
-### Properties
-* **createMode**: 'GeoRestore' (Required)
-* **sourceServerId**: string (Required, WriteOnly)
-
-## PointInTimeRestore
-### Properties
-* **createMode**: 'PointInTimeRestore' (Required)
-* **restorePointInTime**: string (Required, WriteOnly)
-* **sourceServerId**: string (Required, WriteOnly)
-
-## Replica
-### Properties
-* **createMode**: 'Replica' (Required)
-* **sourceServerId**: string (Required, WriteOnly)
-
-## Sku
-### Properties
-* **capacity**: int
-* **family**: string
-* **name**: string (Required)
-* **size**: string
-* **tier**: 'Basic' | 'GeneralPurpose' | 'MemoryOptimized'
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

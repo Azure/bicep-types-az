@@ -100,9 +100,9 @@
 * **status**: 'deallocating' | 'deleting' | 'poweredoff' | 'running' | 'suspended' | 'updating' (ReadOnly)
 * **templateId**: string
 * **username**: string
-* **vSphereNetworks**: string[]
 * **vmId**: string (ReadOnly)
 * **vmwaretools**: string (ReadOnly)
+* **vSphereNetworks**: string[]
 
 ## VirtualDiskController
 ### Properties

@@ -1,5 +1,35 @@
 # Microsoft.ServiceBus @ 2017-04-01
 
+## Microsoft.ServiceBus/namespaces
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SBNamespaceProperties
+* **sku**: SBSku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ServiceBus/namespaces' (ReadOnly, DeployTimeConstant)
+
+## SBNamespaceProperties
+### Properties
+* **createdAt**: string (ReadOnly)
+* **metricId**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **serviceBusEndpoint**: string (ReadOnly)
+* **updatedAt**: string (ReadOnly)
+
+## SBSku
+### Properties
+* **capacity**: int
+* **name**: 'Basic' | 'Premium' | 'Standard' (Required)
+* **tier**: 'Basic' | 'Premium' | 'Standard'
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.ServiceBus/namespaces/AuthorizationRules
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
@@ -76,15 +106,6 @@
 ### Properties
 * **id**: string (Required)
 
-## Microsoft.ServiceBus/namespaces/queues/authorizationRules
-### Properties
-* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:1_properties
-* **type**: 'Microsoft.ServiceBus/namespaces/queues/authorizationRules' (ReadOnly, DeployTimeConstant)
-
 ## Microsoft.ServiceBus/namespaces/queues
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
@@ -126,6 +147,43 @@
 * **transferDeadLetterMessageCount**: int (ReadOnly)
 * **transferMessageCount**: int (ReadOnly)
 
+## Microsoft.ServiceBus/namespaces/queues/authorizationRules
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:1_properties
+* **type**: 'Microsoft.ServiceBus/namespaces/queues/authorizationRules' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.ServiceBus/namespaces/topics
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SBTopicProperties
+* **type**: 'Microsoft.ServiceBus/namespaces/topics' (ReadOnly, DeployTimeConstant)
+
+## SBTopicProperties
+### Properties
+* **accessedAt**: string (ReadOnly)
+* **autoDeleteOnIdle**: string
+* **countDetails**: MessageCountDetails (ReadOnly)
+* **createdAt**: string (ReadOnly)
+* **defaultMessageTimeToLive**: string
+* **duplicateDetectionHistoryTimeWindow**: string
+* **enableBatchedOperations**: bool
+* **enableExpress**: bool
+* **enablePartitioning**: bool
+* **maxSizeInMegabytes**: int
+* **requiresDuplicateDetection**: bool
+* **sizeInBytes**: int (ReadOnly)
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown'
+* **subscriptionCount**: int (ReadOnly)
+* **supportOrdering**: bool
+* **updatedAt**: string (ReadOnly)
+
 ## Microsoft.ServiceBus/namespaces/topics/authorizationRules
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
@@ -134,6 +192,35 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: schemas:1_properties
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/authorizationRules' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.ServiceBus/namespaces/topics/subscriptions
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SBSubscriptionProperties
+* **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions' (ReadOnly, DeployTimeConstant)
+
+## SBSubscriptionProperties
+### Properties
+* **accessedAt**: string (ReadOnly)
+* **autoDeleteOnIdle**: string
+* **countDetails**: MessageCountDetails (ReadOnly)
+* **createdAt**: string (ReadOnly)
+* **deadLetteringOnFilterEvaluationExceptions**: bool
+* **deadLetteringOnMessageExpiration**: bool
+* **defaultMessageTimeToLive**: string
+* **duplicateDetectionHistoryTimeWindow**: string
+* **enableBatchedOperations**: bool
+* **forwardDeadLetteredMessagesTo**: string
+* **forwardTo**: string
+* **lockDuration**: string
+* **maxDeliveryCount**: int
+* **messageCount**: int (ReadOnly)
+* **requiresSession**: bool
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown'
+* **updatedAt**: string (ReadOnly)
 
 ## Microsoft.ServiceBus/namespaces/topics/subscriptions/rules
 ### Properties
@@ -179,91 +266,4 @@
 * **compatibilityLevel**: int
 * **requiresPreprocessing**: bool
 * **sqlExpression**: string
-
-## Microsoft.ServiceBus/namespaces/topics/subscriptions
-### Properties
-* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SBSubscriptionProperties
-* **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions' (ReadOnly, DeployTimeConstant)
-
-## SBSubscriptionProperties
-### Properties
-* **accessedAt**: string (ReadOnly)
-* **autoDeleteOnIdle**: string
-* **countDetails**: MessageCountDetails (ReadOnly)
-* **createdAt**: string (ReadOnly)
-* **deadLetteringOnFilterEvaluationExceptions**: bool
-* **deadLetteringOnMessageExpiration**: bool
-* **defaultMessageTimeToLive**: string
-* **duplicateDetectionHistoryTimeWindow**: string
-* **enableBatchedOperations**: bool
-* **forwardDeadLetteredMessagesTo**: string
-* **forwardTo**: string
-* **lockDuration**: string
-* **maxDeliveryCount**: int
-* **messageCount**: int (ReadOnly)
-* **requiresSession**: bool
-* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown'
-* **updatedAt**: string (ReadOnly)
-
-## Microsoft.ServiceBus/namespaces/topics
-### Properties
-* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SBTopicProperties
-* **type**: 'Microsoft.ServiceBus/namespaces/topics' (ReadOnly, DeployTimeConstant)
-
-## SBTopicProperties
-### Properties
-* **accessedAt**: string (ReadOnly)
-* **autoDeleteOnIdle**: string
-* **countDetails**: MessageCountDetails (ReadOnly)
-* **createdAt**: string (ReadOnly)
-* **defaultMessageTimeToLive**: string
-* **duplicateDetectionHistoryTimeWindow**: string
-* **enableBatchedOperations**: bool
-* **enableExpress**: bool
-* **enablePartitioning**: bool
-* **maxSizeInMegabytes**: int
-* **requiresDuplicateDetection**: bool
-* **sizeInBytes**: int (ReadOnly)
-* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown'
-* **subscriptionCount**: int (ReadOnly)
-* **supportOrdering**: bool
-* **updatedAt**: string (ReadOnly)
-
-## Microsoft.ServiceBus/namespaces
-### Properties
-* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SBNamespaceProperties
-* **sku**: SBSku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ServiceBus/namespaces' (ReadOnly, DeployTimeConstant)
-
-## SBNamespaceProperties
-### Properties
-* **createdAt**: string (ReadOnly)
-* **metricId**: string (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **serviceBusEndpoint**: string (ReadOnly)
-* **updatedAt**: string (ReadOnly)
-
-## SBSku
-### Properties
-* **capacity**: int
-* **name**: 'Basic' | 'Premium' | 'Standard' (Required)
-* **tier**: 'Basic' | 'Premium' | 'Standard'
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

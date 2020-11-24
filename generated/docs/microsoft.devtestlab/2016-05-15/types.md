@@ -1,5 +1,33 @@
 # Microsoft.DevTestLab @ 2016-05-15
 
+## Microsoft.DevTestLab/labs
+### Properties
+* **apiVersion**: '2016-05-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LabProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DevTestLab/labs' (ReadOnly, DeployTimeConstant)
+
+## LabProperties
+### Properties
+* **artifactsStorageAccount**: string (ReadOnly)
+* **createdDate**: string (ReadOnly)
+* **defaultPremiumStorageAccount**: string (ReadOnly)
+* **defaultStorageAccount**: string (ReadOnly)
+* **labStorageType**: 'Premium' | 'Standard'
+* **premiumDataDisks**: 'Disabled' | 'Enabled'
+* **premiumDataDiskStorageAccount**: string (ReadOnly)
+* **provisioningState**: string
+* **uniqueIdentifier**: string
+* **vaultName**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.DevTestLab/labs/artifactsources
 ### Properties
 * **apiVersion**: '2016-05-15' (ReadOnly, DeployTimeConstant)
@@ -68,12 +96,12 @@
 * **externalResourceId**: string
 * **resourceCost**: int
 * **resourceId**: string
+* **resourcename**: string
 * **resourceOwner**: string
 * **resourcePricingTier**: string
 * **resourceStatus**: string
 * **resourceType**: string
 * **resourceUId**: string
-* **resourcename**: string
 
 ## TargetCostProperties
 ### Properties
@@ -454,6 +482,42 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.DevTestLab/labs/users
+### Properties
+* **apiVersion**: '2016-05-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: UserProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DevTestLab/labs/users' (ReadOnly, DeployTimeConstant)
+
+## UserProperties
+### Properties
+* **createdDate**: string (ReadOnly)
+* **identity**: UserIdentity
+* **provisioningState**: string
+* **secretStore**: UserSecretStore
+* **uniqueIdentifier**: string
+
+## UserIdentity
+### Properties
+* **appId**: string
+* **objectId**: string
+* **principalId**: string
+* **principalName**: string
+* **tenantId**: string
+
+## UserSecretStore
+### Properties
+* **keyVaultId**: string
+* **keyVaultUri**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.DevTestLab/labs/users/disks
 ### Properties
 * **apiVersion**: '2016-05-15' (ReadOnly, DeployTimeConstant)
@@ -537,57 +601,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DevTestLab/labs/users
-### Properties
-* **apiVersion**: '2016-05-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: UserProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DevTestLab/labs/users' (ReadOnly, DeployTimeConstant)
-
-## UserProperties
-### Properties
-* **createdDate**: string (ReadOnly)
-* **identity**: UserIdentity
-* **provisioningState**: string
-* **secretStore**: UserSecretStore
-* **uniqueIdentifier**: string
-
-## UserIdentity
-### Properties
-* **appId**: string
-* **objectId**: string
-* **principalId**: string
-* **principalName**: string
-* **tenantId**: string
-
-## UserSecretStore
-### Properties
-* **keyVaultId**: string
-* **keyVaultUri**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.DevTestLab/labs/virtualmachines/schedules
-### Properties
-* **apiVersion**: '2016-05-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ScheduleProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DevTestLab/labs/virtualmachines/schedules' (ReadOnly, DeployTimeConstant)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Microsoft.DevTestLab/labs/virtualmachines
 ### Properties
 * **apiVersion**: '2016-05-15' (ReadOnly, DeployTimeConstant)
@@ -632,6 +645,21 @@
 * **uniqueIdentifier**: string
 * **userName**: string
 * **virtualMachineCreationSource**: 'FromCustomImage' | 'FromGalleryImage'
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.DevTestLab/labs/virtualmachines/schedules
+### Properties
+* **apiVersion**: '2016-05-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ScheduleProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DevTestLab/labs/virtualmachines/schedules' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -687,34 +715,6 @@
 ### Properties
 * **backendPort**: int
 * **transportProtocol**: 'Tcp' | 'Udp'
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.DevTestLab/labs
-### Properties
-* **apiVersion**: '2016-05-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LabProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DevTestLab/labs' (ReadOnly, DeployTimeConstant)
-
-## LabProperties
-### Properties
-* **artifactsStorageAccount**: string (ReadOnly)
-* **createdDate**: string (ReadOnly)
-* **defaultPremiumStorageAccount**: string (ReadOnly)
-* **defaultStorageAccount**: string (ReadOnly)
-* **labStorageType**: 'Premium' | 'Standard'
-* **premiumDataDiskStorageAccount**: string (ReadOnly)
-* **premiumDataDisks**: 'Disabled' | 'Enabled'
-* **provisioningState**: string
-* **uniqueIdentifier**: string
-* **vaultName**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Additional Properties

@@ -1,30 +1,5 @@
 # Microsoft.Blockchain @ 2018-06-01-preview
 
-## Microsoft.Blockchain/blockchainMembers/transactionNodes
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TransactionNodeProperties
-* **type**: 'Microsoft.Blockchain/blockchainMembers/transactionNodes' (ReadOnly, DeployTimeConstant)
-
-## TransactionNodeProperties
-### Properties
-* **dns**: string (ReadOnly)
-* **firewallRules**: FirewallRule[]
-* **password**: string
-* **provisioningState**: 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly)
-* **publicKey**: string (ReadOnly)
-* **userName**: string (ReadOnly)
-
-## FirewallRule
-### Properties
-* **endIpAddress**: string
-* **ruleName**: string
-* **startIpAddress**: string
-
 ## Microsoft.Blockchain/blockchainMembers
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
@@ -54,6 +29,12 @@
 * **userName**: string (ReadOnly)
 * **validatorNodesSku**: BlockchainMemberNodesSku
 
+## FirewallRule
+### Properties
+* **endIpAddress**: string
+* **ruleName**: string
+* **startIpAddress**: string
+
 ## BlockchainMemberNodesSku
 ### Properties
 * **capacity**: int
@@ -66,4 +47,23 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Blockchain/blockchainMembers/transactionNodes
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TransactionNodeProperties
+* **type**: 'Microsoft.Blockchain/blockchainMembers/transactionNodes' (ReadOnly, DeployTimeConstant)
+
+## TransactionNodeProperties
+### Properties
+* **dns**: string (ReadOnly)
+* **firewallRules**: FirewallRule[]
+* **password**: string
+* **provisioningState**: 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly)
+* **publicKey**: string (ReadOnly)
+* **userName**: string (ReadOnly)
 

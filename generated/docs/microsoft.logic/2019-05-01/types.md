@@ -1,5 +1,87 @@
 # Microsoft.Logic @ 2019-05-01
 
+## Microsoft.Logic/integrationAccounts
+### Properties
+* **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IntegrationAccountProperties
+* **sku**: IntegrationAccountSku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Logic/integrationAccounts' (ReadOnly, DeployTimeConstant)
+
+## IntegrationAccountProperties
+### Properties
+* **integrationServiceEnvironment**: IntegrationServiceEnvironment
+* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended'
+
+## IntegrationServiceEnvironment
+### Properties
+* **id**: string (ReadOnly)
+* **location**: string
+* **name**: string (ReadOnly)
+* **properties**: IntegrationServiceEnvironmentProperties
+* **sku**: IntegrationServiceEnvironmentSku
+* **tags**: Dictionary<string,String>
+* **type**: string (ReadOnly)
+
+## IntegrationServiceEnvironmentProperties
+### Properties
+* **endpointsConfiguration**: FlowEndpointsConfiguration
+* **integrationServiceEnvironmentId**: string
+* **networkConfiguration**: NetworkConfiguration
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting'
+* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended'
+
+## FlowEndpointsConfiguration
+### Properties
+* **connector**: FlowEndpoints
+* **workflow**: FlowEndpoints
+
+## FlowEndpoints
+### Properties
+* **accessEndpointIpAddresses**: IpAddress[]
+* **outgoingIpAddresses**: IpAddress[]
+
+## IpAddress
+### Properties
+* **address**: string
+
+## NetworkConfiguration
+### Properties
+* **accessEndpoint**: IntegrationServiceEnvironmentAccessEndpoint
+* **subnets**: ResourceReference[]
+* **virtualNetworkAddressSpace**: string
+
+## IntegrationServiceEnvironmentAccessEndpoint
+### Properties
+* **type**: 'External' | 'Internal' | 'NotSpecified'
+
+## ResourceReference
+### Properties
+* **id**: string
+* **name**: string (ReadOnly)
+* **type**: string (ReadOnly)
+
+## IntegrationServiceEnvironmentSku
+### Properties
+* **capacity**: int
+* **name**: 'Developer' | 'NotSpecified' | 'Premium'
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## IntegrationAccountSku
+### Properties
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Standard' (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Logic/integrationAccounts/agreements
 ### Properties
 * **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant)
@@ -108,12 +190,12 @@
 * **checkCertificateRevocationListOnSend**: bool (Required)
 * **checkDuplicateMessage**: bool (Required)
 * **compressMessage**: bool (Required)
-* **encryptMessage**: bool (Required)
 * **encryptionAlgorithm**: 'AES128' | 'AES192' | 'AES256' | 'DES3' | 'None' | 'NotSpecified' | 'RC2' (Required)
+* **encryptMessage**: bool (Required)
 * **interchangeDuplicatesValidityDays**: int (Required)
 * **overrideMessageProperties**: bool (Required)
-* **signMessage**: bool (Required)
 * **signingAlgorithm**: 'Default' | 'NotSpecified' | 'SHA1' | 'SHA2256' | 'SHA2384' | 'SHA2512'
+* **signMessage**: bool (Required)
 
 ## BusinessIdentity
 ### Properties
@@ -206,11 +288,11 @@
 * **groupApplicationSenderId**: string
 * **groupApplicationSenderQualifier**: string
 * **groupAssociationAssignedCode**: string
+* **groupControllingAgencyCode**: string
 * **groupControlNumberLowerBound**: int (Required)
 * **groupControlNumberPrefix**: string
 * **groupControlNumberSuffix**: string
 * **groupControlNumberUpperBound**: int (Required)
-* **groupControllingAgencyCode**: string
 * **groupMessageRelease**: string
 * **groupMessageVersion**: string
 * **interchangeControlNumberLowerBound**: int (Required)
@@ -695,88 +777,6 @@
 * **changedTime**: string (ReadOnly)
 * **content**: any
 * **createdTime**: string (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Logic/integrationAccounts
-### Properties
-* **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IntegrationAccountProperties
-* **sku**: IntegrationAccountSku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Logic/integrationAccounts' (ReadOnly, DeployTimeConstant)
-
-## IntegrationAccountProperties
-### Properties
-* **integrationServiceEnvironment**: IntegrationServiceEnvironment
-* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended'
-
-## IntegrationServiceEnvironment
-### Properties
-* **id**: string (ReadOnly)
-* **location**: string
-* **name**: string (ReadOnly)
-* **properties**: IntegrationServiceEnvironmentProperties
-* **sku**: IntegrationServiceEnvironmentSku
-* **tags**: Dictionary<string,String>
-* **type**: string (ReadOnly)
-
-## IntegrationServiceEnvironmentProperties
-### Properties
-* **endpointsConfiguration**: FlowEndpointsConfiguration
-* **integrationServiceEnvironmentId**: string
-* **networkConfiguration**: NetworkConfiguration
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting'
-* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended'
-
-## FlowEndpointsConfiguration
-### Properties
-* **connector**: FlowEndpoints
-* **workflow**: FlowEndpoints
-
-## FlowEndpoints
-### Properties
-* **accessEndpointIpAddresses**: IpAddress[]
-* **outgoingIpAddresses**: IpAddress[]
-
-## IpAddress
-### Properties
-* **address**: string
-
-## NetworkConfiguration
-### Properties
-* **accessEndpoint**: IntegrationServiceEnvironmentAccessEndpoint
-* **subnets**: ResourceReference[]
-* **virtualNetworkAddressSpace**: string
-
-## IntegrationServiceEnvironmentAccessEndpoint
-### Properties
-* **type**: 'External' | 'Internal' | 'NotSpecified'
-
-## ResourceReference
-### Properties
-* **id**: string
-* **name**: string (ReadOnly)
-* **type**: string (ReadOnly)
-
-## IntegrationServiceEnvironmentSku
-### Properties
-* **capacity**: int
-* **name**: 'Developer' | 'NotSpecified' | 'Premium'
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IntegrationAccountSku
-### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Standard' (Required)
 
 ## Dictionary<string,String>
 ### Additional Properties

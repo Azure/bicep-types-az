@@ -1,5 +1,35 @@
 # Microsoft.StorSimple @ 2017-06-01
 
+## Microsoft.StorSimple/managers
+### Properties
+* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ManagerProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.StorSimple/managers' (ReadOnly, DeployTimeConstant)
+
+## ManagerProperties
+### Properties
+* **cisIntrinsicSettings**: ManagerIntrinsicSettings
+* **provisioningState**: string
+* **sku**: ManagerSku
+
+## ManagerIntrinsicSettings
+### Properties
+* **type**: 'GardaV1' | 'HelsinkiV1' (Required)
+
+## ManagerSku
+### Properties
+* **name**: string (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.StorSimple/managers/accessControlRecords
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
@@ -60,6 +90,26 @@
 * **emailNotification**: 'Disabled' | 'Enabled' (Required)
 * **notificationToServiceOwners**: 'Disabled' | 'Enabled'
 
+## Microsoft.StorSimple/managers/devices/backupPolicies
+### Properties
+* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'Series8000'
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BackupPolicyProperties (Required)
+* **type**: 'Microsoft.StorSimple/managers/devices/backupPolicies' (ReadOnly, DeployTimeConstant)
+
+## BackupPolicyProperties
+### Properties
+* **backupPolicyCreationType**: 'BySaaS' | 'BySSM' (ReadOnly)
+* **lastBackupTime**: string (ReadOnly)
+* **nextBackupTime**: string (ReadOnly)
+* **scheduledBackupStatus**: 'Disabled' | 'Enabled' (ReadOnly)
+* **schedulesCount**: int (ReadOnly)
+* **ssmHostName**: string (ReadOnly)
+* **volumeIds**: string[] (Required)
+
 ## Microsoft.StorSimple/managers/devices/backupPolicies/schedules
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
@@ -85,26 +135,6 @@
 * **recurrenceValue**: int (Required)
 * **weeklyDaysList**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]
 
-## Microsoft.StorSimple/managers/devices/backupPolicies
-### Properties
-* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'Series8000'
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BackupPolicyProperties (Required)
-* **type**: 'Microsoft.StorSimple/managers/devices/backupPolicies' (ReadOnly, DeployTimeConstant)
-
-## BackupPolicyProperties
-### Properties
-* **backupPolicyCreationType**: 'BySSM' | 'BySaaS' (ReadOnly)
-* **lastBackupTime**: string (ReadOnly)
-* **nextBackupTime**: string (ReadOnly)
-* **scheduledBackupStatus**: 'Disabled' | 'Enabled' (ReadOnly)
-* **schedulesCount**: int (ReadOnly)
-* **ssmHostName**: string (ReadOnly)
-* **volumeIds**: string[] (Required)
-
 ## Microsoft.StorSimple/managers/devices/timeSettings
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
@@ -120,28 +150,6 @@
 * **primaryTimeServer**: string
 * **secondaryTimeServer**: string[]
 * **timeZone**: string (Required)
-
-## Microsoft.StorSimple/managers/devices/volumeContainers/volumes
-### Properties
-* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'Series8000'
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VolumeProperties (Required)
-* **type**: 'Microsoft.StorSimple/managers/devices/volumeContainers/volumes' (ReadOnly, DeployTimeConstant)
-
-## VolumeProperties
-### Properties
-* **accessControlRecordIds**: string[] (Required)
-* **backupPolicyIds**: string[] (ReadOnly)
-* **backupStatus**: 'Disabled' | 'Enabled' (ReadOnly)
-* **monitoringStatus**: 'Disabled' | 'Enabled' (Required)
-* **operationStatus**: 'Deleting' | 'None' | 'Restoring' | 'Updating' (ReadOnly)
-* **sizeInBytes**: int (Required)
-* **volumeContainerId**: string (ReadOnly)
-* **volumeStatus**: 'Offline' | 'Online' (Required)
-* **volumeType**: 'Archival' | 'LocallyPinned' | 'Tiered' (Required)
 
 ## Microsoft.StorSimple/managers/devices/volumeContainers
 ### Properties
@@ -169,6 +177,28 @@
 * **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' (Required)
 * **encryptionCertThumbprint**: string
 * **value**: string (Required)
+
+## Microsoft.StorSimple/managers/devices/volumeContainers/volumes
+### Properties
+* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'Series8000'
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VolumeProperties (Required)
+* **type**: 'Microsoft.StorSimple/managers/devices/volumeContainers/volumes' (ReadOnly, DeployTimeConstant)
+
+## VolumeProperties
+### Properties
+* **accessControlRecordIds**: string[] (Required)
+* **backupPolicyIds**: string[] (ReadOnly)
+* **backupStatus**: 'Disabled' | 'Enabled' (ReadOnly)
+* **monitoringStatus**: 'Disabled' | 'Enabled' (Required)
+* **operationStatus**: 'Deleting' | 'None' | 'Restoring' | 'Updating' (ReadOnly)
+* **sizeInBytes**: int (Required)
+* **volumeContainerId**: string (ReadOnly)
+* **volumeStatus**: 'Offline' | 'Online' (Required)
+* **volumeType**: 'Archival' | 'LocallyPinned' | 'Tiered' (Required)
 
 ## Microsoft.StorSimple/managers/extendedInformation
 ### Properties
@@ -206,34 +236,4 @@
 * **endPoint**: string (Required)
 * **sslStatus**: 'Disabled' | 'Enabled' (Required)
 * **volumesCount**: int (ReadOnly)
-
-## Microsoft.StorSimple/managers
-### Properties
-* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagerProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.StorSimple/managers' (ReadOnly, DeployTimeConstant)
-
-## ManagerProperties
-### Properties
-* **cisIntrinsicSettings**: ManagerIntrinsicSettings
-* **provisioningState**: string
-* **sku**: ManagerSku
-
-## ManagerIntrinsicSettings
-### Properties
-* **type**: 'GardaV1' | 'HelsinkiV1' (Required)
-
-## ManagerSku
-### Properties
-* **name**: string (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

@@ -1,83 +1,29 @@
 # Microsoft.Cdn @ 2019-12-31
 
-## Microsoft.Cdn/profiles/endpoints/customDomains
+## Microsoft.Cdn/profiles
 ### Properties
 * **apiVersion**: '2019-12-31' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CustomDomainPropertiesParameters
-* **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant)
+* **properties**: ProfileProperties
+* **sku**: Sku (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant)
 
-## CustomDomainPropertiesParameters
+## ProfileProperties
 ### Properties
-* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly)
-* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly)
-* **hostName**: string (Required)
 * **provisioningState**: string (ReadOnly)
-* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
-* **validationData**: string (ReadOnly)
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' (ReadOnly)
 
-## Microsoft.Cdn/profiles/endpoints/originGroups
+## Sku
 ### Properties
-* **apiVersion**: '2019-12-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: OriginGroupProperties
-* **type**: 'Microsoft.Cdn/profiles/endpoints/originGroups' (ReadOnly, DeployTimeConstant)
+* **name**: 'Custom_Verizon' | 'Premium_ChinaCdn' | 'Premium_Verizon' | 'Standard_Akamai' | 'Standard_ChinaCdn' | 'Standard_Microsoft' | 'Standard_Verizon'
 
-## OriginGroupProperties
-### Properties
-* **healthProbeSettings**: HealthProbeParameters
-* **origins**: ResourceReference[]
-* **provisioningState**: string (ReadOnly)
-* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
-* **responseBasedOriginErrorDetectionSettings**: ResponseBasedOriginErrorDetectionParameters
-* **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int
-
-## HealthProbeParameters
-### Properties
-* **probeIntervalInSeconds**: int
-* **probePath**: string
-* **probeProtocol**: 'Http' | 'Https' | 'NotSet'
-* **probeRequestType**: 'GET' | 'HEAD' | 'NotSet'
-
-## ResourceReference
-### Properties
-* **id**: string
-
-## ResponseBasedOriginErrorDetectionParameters
-### Properties
-* **httpErrorRanges**: HttpErrorRangeParameters[]
-* **responseBasedDetectedErrorTypes**: 'None' | 'TcpAndHttpErrors' | 'TcpErrorsOnly'
-* **responseBasedFailoverThresholdPercentage**: int
-
-## HttpErrorRangeParameters
-### Properties
-* **begin**: int
-* **end**: int
-
-## Microsoft.Cdn/profiles/endpoints/origins
-### Properties
-* **apiVersion**: '2019-12-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: OriginProperties
-* **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant)
-
-## OriginProperties
-### Properties
-* **enabled**: bool
-* **hostName**: string
-* **httpPort**: int
-* **httpsPort**: int
-* **originHostHeader**: string
-* **priority**: int
-* **provisioningState**: string (ReadOnly)
-* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
-* **weight**: int
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Microsoft.Cdn/profiles/endpoints
 ### Properties
@@ -109,6 +55,10 @@
 * **provisioningState**: string (ReadOnly)
 * **queryStringCachingBehavior**: 'BypassCaching' | 'IgnoreQueryString' | 'NotSet' | 'UseQueryString'
 * **resourceState**: 'Creating' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
+
+## ResourceReference
+### Properties
+* **id**: string
 
 ## schemas:10_deliveryPolicy
 ### Properties
@@ -512,6 +462,24 @@
 * **responseBasedOriginErrorDetectionSettings**: ResponseBasedOriginErrorDetectionParameters
 * **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int
 
+## HealthProbeParameters
+### Properties
+* **probeIntervalInSeconds**: int
+* **probePath**: string
+* **probeProtocol**: 'Http' | 'Https' | 'NotSet'
+* **probeRequestType**: 'GET' | 'HEAD' | 'NotSet'
+
+## ResponseBasedOriginErrorDetectionParameters
+### Properties
+* **httpErrorRanges**: HttpErrorRangeParameters[]
+* **responseBasedDetectedErrorTypes**: 'None' | 'TcpAndHttpErrors' | 'TcpErrorsOnly'
+* **responseBasedFailoverThresholdPercentage**: int
+
+## HttpErrorRangeParameters
+### Properties
+* **begin**: int
+* **end**: int
+
 ## DeepCreatedOrigin
 ### Properties
 * **name**: string (Required)
@@ -531,28 +499,60 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Cdn/profiles
+## Microsoft.Cdn/profiles/endpoints/customDomains
 ### Properties
 * **apiVersion**: '2019-12-31' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProfileProperties
-* **sku**: Sku (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant)
+* **properties**: CustomDomainPropertiesParameters
+* **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant)
 
-## ProfileProperties
+## CustomDomainPropertiesParameters
 ### Properties
+* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly)
+* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly)
+* **hostName**: string (Required)
 * **provisioningState**: string (ReadOnly)
-* **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' (ReadOnly)
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
+* **validationData**: string (ReadOnly)
 
-## Sku
+## Microsoft.Cdn/profiles/endpoints/originGroups
 ### Properties
-* **name**: 'Custom_Verizon' | 'Premium_ChinaCdn' | 'Premium_Verizon' | 'Standard_Akamai' | 'Standard_ChinaCdn' | 'Standard_Microsoft' | 'Standard_Verizon'
+* **apiVersion**: '2019-12-31' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: OriginGroupProperties
+* **type**: 'Microsoft.Cdn/profiles/endpoints/originGroups' (ReadOnly, DeployTimeConstant)
 
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
+## OriginGroupProperties
+### Properties
+* **healthProbeSettings**: HealthProbeParameters
+* **origins**: ResourceReference[]
+* **provisioningState**: string (ReadOnly)
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
+* **responseBasedOriginErrorDetectionSettings**: ResponseBasedOriginErrorDetectionParameters
+* **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int
+
+## Microsoft.Cdn/profiles/endpoints/origins
+### Properties
+* **apiVersion**: '2019-12-31' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: OriginProperties
+* **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant)
+
+## OriginProperties
+### Properties
+* **enabled**: bool
+* **hostName**: string
+* **httpPort**: int
+* **httpsPort**: int
+* **originHostHeader**: string
+* **priority**: int
+* **provisioningState**: string (ReadOnly)
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
+* **weight**: int
 

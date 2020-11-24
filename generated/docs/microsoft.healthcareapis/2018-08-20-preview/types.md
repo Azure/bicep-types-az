@@ -6,7 +6,7 @@
 * **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'fhir' | 'fhir-R4' | 'fhir-Stu3' (Required)
+* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ServicesProperties

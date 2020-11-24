@@ -52,7 +52,6 @@
 
 ## DataExportProperties
 ### Properties
-* **allTables**: bool
 * **createdDate**: string
 * **dataExportId**: string
 * **destination**: Destination

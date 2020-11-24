@@ -61,8 +61,8 @@
 ## ReportDefinition
 ### Properties
 * **dataset**: ReportDataset
-* **timePeriod**: ReportTimePeriod
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' (Required)
+* **timePeriod**: ReportTimePeriod
 * **type**: string (Required)
 
 ## ReportDataset

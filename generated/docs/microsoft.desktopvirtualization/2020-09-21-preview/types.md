@@ -1,5 +1,28 @@
 # Microsoft.DesktopVirtualization @ 2020-09-21-preview
 
+## Microsoft.DesktopVirtualization/applicationGroups
+### Properties
+* **apiVersion**: '2020-09-21-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationGroupProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DesktopVirtualization/applicationGroups' (ReadOnly, DeployTimeConstant)
+
+## ApplicationGroupProperties
+### Properties
+* **applicationGroupType**: 'Desktop' | 'RemoteApp' (Required)
+* **description**: string
+* **friendlyName**: string
+* **hostPoolArmPath**: string (Required)
+* **workspaceArmPath**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.DesktopVirtualization/applicationGroups/applications
 ### Properties
 * **apiVersion**: '2020-09-21-preview' (ReadOnly, DeployTimeConstant)
@@ -25,24 +48,39 @@
 * **msixPackageFamilyName**: string
 * **showInPortal**: bool
 
-## Microsoft.DesktopVirtualization/applicationGroups
+## Microsoft.DesktopVirtualization/hostPools
 ### Properties
 * **apiVersion**: '2020-09-21-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationGroupProperties (Required)
+* **properties**: HostPoolProperties (Required)
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DesktopVirtualization/applicationGroups' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant)
 
-## ApplicationGroupProperties
+## HostPoolProperties
 ### Properties
-* **applicationGroupType**: 'Desktop' | 'RemoteApp' (Required)
+* **applicationGroupReferences**: string[] (ReadOnly)
+* **customRdpProperty**: string
 * **description**: string
 * **friendlyName**: string
-* **hostPoolArmPath**: string (Required)
-* **workspaceArmPath**: string (ReadOnly)
+* **hostPoolType**: 'Personal' | 'Pooled' (Required)
+* **loadBalancerType**: 'BreadthFirst' | 'DepthFirst' | 'Persistent' (Required)
+* **maxSessionLimit**: int
+* **personalDesktopAssignmentType**: 'Automatic' | 'Direct'
+* **preferredAppGroupType**: 'Desktop' | 'None' | 'RailApplications' (Required)
+* **registrationInfo**: RegistrationInfo
+* **ring**: int
+* **ssoContext**: string
+* **validationEnvironment**: bool
+* **vmTemplate**: string
+
+## RegistrationInfo
+### Properties
+* **expirationTime**: string
+* **registrationTokenOperation**: 'Delete' | 'None' | 'Update'
+* **token**: string
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -86,44 +124,6 @@
 * **dependencyName**: string
 * **minVersion**: string
 * **publisher**: string
-
-## Microsoft.DesktopVirtualization/hostPools
-### Properties
-* **apiVersion**: '2020-09-21-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: HostPoolProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant)
-
-## HostPoolProperties
-### Properties
-* **applicationGroupReferences**: string[] (ReadOnly)
-* **customRdpProperty**: string
-* **description**: string
-* **friendlyName**: string
-* **hostPoolType**: 'Personal' | 'Pooled' (Required)
-* **loadBalancerType**: 'BreadthFirst' | 'DepthFirst' | 'Persistent' (Required)
-* **maxSessionLimit**: int
-* **personalDesktopAssignmentType**: 'Automatic' | 'Direct'
-* **preferredAppGroupType**: 'Desktop' | 'None' | 'RailApplications' (Required)
-* **registrationInfo**: RegistrationInfo
-* **ring**: int
-* **ssoContext**: string
-* **validationEnvironment**: bool
-* **vmTemplate**: string
-
-## RegistrationInfo
-### Properties
-* **expirationTime**: string
-* **registrationTokenOperation**: 'Delete' | 'None' | 'Update'
-* **token**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## Microsoft.DesktopVirtualization/workspaces
 ### Properties

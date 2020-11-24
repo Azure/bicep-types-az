@@ -1,5 +1,54 @@
 # Microsoft.ServiceBus @ 2018-01-01-preview
 
+## Microsoft.ServiceBus/namespaces
+### Properties
+* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SBNamespaceProperties
+* **sku**: SBSku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ServiceBus/namespaces' (ReadOnly, DeployTimeConstant)
+
+## Identity
+### Properties
+* **principalId**: string
+* **tenantId**: string
+* **type**: 'SystemAssigned'
+
+## SBNamespaceProperties
+### Properties
+* **createdAt**: string (ReadOnly)
+* **encryption**: Encryption
+* **metricId**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **serviceBusEndpoint**: string (ReadOnly)
+* **updatedAt**: string (ReadOnly)
+* **zoneRedundant**: bool
+
+## Encryption
+### Properties
+* **keySource**: 'Microsoft.KeyVault'
+* **keyVaultProperties**: KeyVaultProperties
+
+## KeyVaultProperties
+### Properties
+* **keyName**: string
+* **keyVaultUri**: string
+
+## SBSku
+### Properties
+* **capacity**: int
+* **name**: 'Basic' | 'Premium' | 'Standard' (Required)
+* **tier**: 'Basic' | 'Premium' | 'Standard'
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.ServiceBus/namespaces/ipfilterrules
 ### Properties
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
@@ -80,53 +129,4 @@
 ## schemas:23_properties
 ### Properties
 * **virtualNetworkSubnetId**: string
-
-## Microsoft.ServiceBus/namespaces
-### Properties
-* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SBNamespaceProperties
-* **sku**: SBSku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ServiceBus/namespaces' (ReadOnly, DeployTimeConstant)
-
-## Identity
-### Properties
-* **principalId**: string
-* **tenantId**: string
-* **type**: 'SystemAssigned'
-
-## SBNamespaceProperties
-### Properties
-* **createdAt**: string (ReadOnly)
-* **encryption**: Encryption
-* **metricId**: string (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **serviceBusEndpoint**: string (ReadOnly)
-* **updatedAt**: string (ReadOnly)
-* **zoneRedundant**: bool
-
-## Encryption
-### Properties
-* **keySource**: 'Microsoft.KeyVault'
-* **keyVaultProperties**: KeyVaultProperties
-
-## KeyVaultProperties
-### Properties
-* **keyName**: string
-* **keyVaultUri**: string
-
-## SBSku
-### Properties
-* **capacity**: int
-* **name**: 'Basic' | 'Premium' | 'Standard' (Required)
-* **tier**: 'Basic' | 'Premium' | 'Standard'
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

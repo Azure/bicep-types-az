@@ -1,39 +1,5 @@
 # Microsoft.Devices @ 2020-06-15
 
-## Microsoft.Devices/IotHubs/certificates
-### Properties
-* **apiVersion**: '2020-06-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CertificateProperties
-* **type**: 'Microsoft.Devices/IotHubs/certificates' (ReadOnly, DeployTimeConstant)
-
-## CertificateProperties
-### Properties
-* **certificate**: string
-* **created**: string (ReadOnly)
-* **expiry**: string (ReadOnly)
-* **isVerified**: bool (ReadOnly)
-* **subject**: string (ReadOnly)
-* **thumbprint**: string (ReadOnly)
-* **updated**: string (ReadOnly)
-
-## Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups
-### Properties
-* **apiVersion**: '2020-06-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EventHubConsumerGroupName
-* **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant)
-
-## EventHubConsumerGroupName
-### Properties
-* **name**: string (WriteOnly)
-
 ## Microsoft.Devices/IotHubs
 ### Properties
 * **apiVersion**: '2020-06-15' (ReadOnly, DeployTimeConstant)
@@ -71,7 +37,7 @@
 ### Properties
 * **keyName**: string (Required)
 * **primaryKey**: string
-* **rights**: 'DeviceConnect' | 'RegistryRead' | 'RegistryRead, DeviceConnect' | 'RegistryRead, RegistryWrite' | 'RegistryRead, RegistryWrite, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryRead, ServiceConnect' | 'RegistryRead, ServiceConnect, DeviceConnect' | 'RegistryWrite' | 'RegistryWrite, DeviceConnect' | 'RegistryWrite, ServiceConnect' | 'RegistryWrite, ServiceConnect, DeviceConnect' | 'ServiceConnect' | 'ServiceConnect, DeviceConnect' (Required)
+* **rights**: 'DeviceConnect' | 'RegistryRead, DeviceConnect' | 'RegistryRead, RegistryWrite, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect' | 'RegistryRead, RegistryWrite' | 'RegistryRead, ServiceConnect, DeviceConnect' | 'RegistryRead, ServiceConnect' | 'RegistryRead' | 'RegistryWrite, DeviceConnect' | 'RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryWrite, ServiceConnect' | 'RegistryWrite' | 'ServiceConnect, DeviceConnect' | 'ServiceConnect' (Required)
 * **secondaryKey**: string
 
 ## CloudToDeviceProperties
@@ -245,6 +211,40 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Devices/IotHubs/certificates
+### Properties
+* **apiVersion**: '2020-06-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CertificateProperties
+* **type**: 'Microsoft.Devices/IotHubs/certificates' (ReadOnly, DeployTimeConstant)
+
+## CertificateProperties
+### Properties
+* **certificate**: string
+* **created**: string (ReadOnly)
+* **expiry**: string (ReadOnly)
+* **isVerified**: bool (ReadOnly)
+* **subject**: string (ReadOnly)
+* **thumbprint**: string (ReadOnly)
+* **updated**: string (ReadOnly)
+
+## Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups
+### Properties
+* **apiVersion**: '2020-06-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EventHubConsumerGroupName
+* **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant)
+
+## EventHubConsumerGroupName
+### Properties
+* **name**: string (WriteOnly)
 
 ## Microsoft.Devices/iotHubs/privateEndpointConnections
 ### Properties

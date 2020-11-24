@@ -1,5 +1,21 @@
 # Microsoft.StorageSync @ 2017-06-05-preview
 
+## Microsoft.StorageSync/storageSyncServices
+### Properties
+* **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: StorageSyncServiceProperties
+* **tags**: any
+* **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant)
+
+## StorageSyncServiceProperties
+### Properties
+* **storageSyncServiceStatus**: int (ReadOnly)
+* **storageSyncServiceUid**: string (ReadOnly)
+
 ## Microsoft.StorageSync/storageSyncServices/registeredServers
 ### Properties
 * **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant)
@@ -23,6 +39,20 @@
 * **serverOSVersion**: string
 * **serverRole**: string
 * **storageSyncServiceUid**: string
+
+## Microsoft.StorageSync/storageSyncServices/syncGroups
+### Properties
+* **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SyncGroupProperties
+* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant)
+
+## SyncGroupProperties
+### Properties
+* **syncGroupStatus**: string (ReadOnly)
+* **uniqueId**: string
 
 ## Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints
 ### Properties
@@ -77,34 +107,4 @@
 * **syncErrorStateTimestamp**: string
 * **totalProgress**: int
 * **volumeFreeSpacePercent**: int
-
-## Microsoft.StorageSync/storageSyncServices/syncGroups
-### Properties
-* **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SyncGroupProperties
-* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant)
-
-## SyncGroupProperties
-### Properties
-* **syncGroupStatus**: string (ReadOnly)
-* **uniqueId**: string
-
-## Microsoft.StorageSync/storageSyncServices
-### Properties
-* **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageSyncServiceProperties
-* **tags**: any
-* **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant)
-
-## StorageSyncServiceProperties
-### Properties
-* **storageSyncServiceStatus**: int (ReadOnly)
-* **storageSyncServiceUid**: string (ReadOnly)
 

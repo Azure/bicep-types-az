@@ -43,7 +43,9 @@
 
 ## Authorization
 ### Properties
+* **delegatedRoleDefinitionIds**: string[]
 * **principalId**: string (Required)
+* **principalIdDisplayName**: string
 * **roleDefinitionId**: string (Required)
 
 ## Microsoft.ManagedServices/registrationDefinitions

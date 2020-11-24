@@ -1,5 +1,36 @@
 # Microsoft.Automation @ 2015-10-31
 
+## Microsoft.Automation/automationAccounts
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AutomationAccountCreateOrUpdateProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Automation/automationAccounts' (ReadOnly, DeployTimeConstant)
+
+## AutomationAccountCreateOrUpdateProperties
+### Properties
+* **creationTime**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **lastModifiedBy**: string (ReadOnly)
+* **lastModifiedTime**: string (ReadOnly)
+* **sku**: Sku
+* **state**: 'Ok' | 'Suspended' | 'Unavailable' (ReadOnly)
+
+## Sku
+### Properties
+* **capacity**: int
+* **family**: string
+* **name**: 'Basic' | 'Free' (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Automation/automationAccounts/certificates
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
@@ -43,8 +74,8 @@
 * **parameters**: Dictionary<string,String>
 * **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly)
 * **runOn**: string (ReadOnly)
-* **startTime**: string (ReadOnly)
 * **startedBy**: string (ReadOnly)
+* **startTime**: string (ReadOnly)
 * **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly)
 * **statusDetails**: string (ReadOnly)
 
@@ -113,6 +144,31 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.Automation/automationAccounts/connections
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConnectionCreateOrUpdateProperties (Required)
+* **type**: 'Microsoft.Automation/automationAccounts/connections' (ReadOnly, DeployTimeConstant)
+
+## ConnectionCreateOrUpdateProperties
+### Properties
+* **connectionType**: ConnectionTypeAssociationProperty (Required)
+* **creationTime**: string (ReadOnly)
+* **description**: string
+* **fieldDefinitionValues**: Dictionary<string,String>
+* **lastModifiedTime**: string (ReadOnly)
+
+## ConnectionTypeAssociationProperty
+### Properties
+* **name**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Automation/automationAccounts/connectionTypes
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
@@ -140,31 +196,6 @@
 * **isOptional**: bool
 * **type**: string (Required)
 
-## Microsoft.Automation/automationAccounts/connections
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectionCreateOrUpdateProperties (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/connections' (ReadOnly, DeployTimeConstant)
-
-## ConnectionCreateOrUpdateProperties
-### Properties
-* **connectionType**: ConnectionTypeAssociationProperty (Required)
-* **creationTime**: string (ReadOnly)
-* **description**: string
-* **fieldDefinitionValues**: Dictionary<string,String>
-* **lastModifiedTime**: string (ReadOnly)
-
-## ConnectionTypeAssociationProperty
-### Properties
-* **name**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Microsoft.Automation/automationAccounts/credentials
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
@@ -181,35 +212,6 @@
 * **lastModifiedTime**: string (ReadOnly)
 * **password**: string (Required, WriteOnly)
 * **userName**: string (Required)
-
-## Microsoft.Automation/automationAccounts/jobSchedules
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: JobScheduleCreateProperties (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/jobSchedules' (ReadOnly, DeployTimeConstant)
-
-## JobScheduleCreateProperties
-### Properties
-* **jobScheduleId**: string (ReadOnly)
-* **parameters**: Dictionary<string,String>
-* **runOn**: string
-* **runbook**: RunbookAssociationProperty (Required)
-* **schedule**: ScheduleAssociationProperty (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## RunbookAssociationProperty
-### Properties
-* **name**: string
-
-## ScheduleAssociationProperty
-### Properties
-* **name**: string (ReadOnly)
 
 ## Microsoft.Automation/automationAccounts/jobs
 ### Properties
@@ -231,13 +233,42 @@
 * **lastStatusModifiedTime**: string (ReadOnly)
 * **parameters**: Dictionary<string,String>
 * **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly)
-* **runOn**: string
 * **runbook**: RunbookAssociationProperty (Required)
+* **runOn**: string
 * **schedule**: ScheduleAssociationProperty (ReadOnly)
-* **startTime**: string (ReadOnly)
 * **startedBy**: string (ReadOnly)
+* **startTime**: string (ReadOnly)
 * **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly)
 * **statusDetails**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RunbookAssociationProperty
+### Properties
+* **name**: string
+
+## ScheduleAssociationProperty
+### Properties
+* **name**: string (ReadOnly)
+
+## Microsoft.Automation/automationAccounts/jobSchedules
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: JobScheduleCreateProperties (Required)
+* **type**: 'Microsoft.Automation/automationAccounts/jobSchedules' (ReadOnly, DeployTimeConstant)
+
+## JobScheduleCreateProperties
+### Properties
+* **jobScheduleId**: string (ReadOnly)
+* **parameters**: Dictionary<string,String>
+* **runbook**: RunbookAssociationProperty (Required)
+* **runOn**: string
+* **schedule**: ScheduleAssociationProperty (Required)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -460,40 +491,9 @@
 * **lastModifiedBy**: string (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **parameters**: Dictionary<string,String>
-* **runOn**: string
 * **runbook**: RunbookAssociationProperty
+* **runOn**: string
 * **uri**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Automation/automationAccounts
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AutomationAccountCreateOrUpdateProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Automation/automationAccounts' (ReadOnly, DeployTimeConstant)
-
-## AutomationAccountCreateOrUpdateProperties
-### Properties
-* **creationTime**: string (ReadOnly)
-* **description**: string (ReadOnly)
-* **lastModifiedBy**: string (ReadOnly)
-* **lastModifiedTime**: string (ReadOnly)
-* **sku**: Sku
-* **state**: 'Ok' | 'Suspended' | 'Unavailable' (ReadOnly)
-
-## Sku
-### Properties
-* **capacity**: int
-* **family**: string
-* **name**: 'Basic' | 'Free' (Required)
 
 ## Dictionary<string,String>
 ### Additional Properties

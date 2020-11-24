@@ -8,6 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AgentPoolProperties
+* **systemData**: SystemData (ReadOnly)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ContainerRegistry/registries/agentPools' (ReadOnly, DeployTimeConstant)
 
@@ -18,6 +19,15 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **tier**: string
 * **virtualNetworkSubnetResourceId**: string
+
+## SystemData
+### Properties
+* **createdAt**: string
+* **createdBy**: string
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+* **lastModifiedAt**: string
+* **lastModifiedBy**: string
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -32,13 +42,14 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: TaskRunProperties
+* **systemData**: SystemData (ReadOnly)
 * **type**: 'Microsoft.ContainerRegistry/registries/taskRuns' (ReadOnly, DeployTimeConstant)
 
 ## IdentityProperties
 ### Properties
 * **principalId**: string
 * **tenantId**: string
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
 * **userAssignedIdentities**: Dictionary<string,UserIdentityProperties>
 
 ## Dictionary<string,UserIdentityProperties>
@@ -214,6 +225,7 @@
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
 * **properties**: RunProperties
+* **systemData**: SystemData (ReadOnly)
 * **type**: string (ReadOnly)
 
 ## RunProperties
@@ -278,6 +290,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: TaskProperties
+* **systemData**: SystemData (ReadOnly)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant)
 

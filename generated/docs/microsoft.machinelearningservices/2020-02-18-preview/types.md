@@ -1,5 +1,60 @@
 # Microsoft.MachineLearningServices @ 2020-02-18-preview
 
+## Microsoft.MachineLearningServices/workspaces
+### Properties
+* **apiVersion**: '2020-02-18-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkspaceProperties
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant)
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'SystemAssigned'
+
+## WorkspaceProperties
+### Properties
+* **applicationInsights**: string
+* **containerRegistry**: string
+* **creationTime**: string (ReadOnly)
+* **description**: string
+* **discoveryUrl**: string
+* **encryption**: EncryptionProperty
+* **friendlyName**: string
+* **hbiWorkspace**: bool
+* **keyVault**: string
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
+* **serviceProvisionedResourceGroup**: string (ReadOnly)
+* **storageAccount**: string
+* **workspaceId**: string (ReadOnly)
+
+## EncryptionProperty
+### Properties
+* **keyVaultProperties**: KeyVaultProperties (Required)
+* **status**: 'Disabled' | 'Enabled' (Required)
+
+## KeyVaultProperties
+### Properties
+* **identityClientId**: string
+* **keyIdentifier**: string (Required)
+* **keyVaultArmId**: string (Required)
+
+## Sku
+### Properties
+* **name**: string
+* **tier**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.MachineLearningServices/workspaces/computes
 ### Properties
 * **apiVersion**: '2020-02-18-preview' (ReadOnly, DeployTimeConstant)
@@ -12,12 +67,6 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant)
-
-## Identity
-### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'SystemAssigned'
 
 ## Compute
 * **Discriminator**: computeType
@@ -45,6 +94,11 @@
 * **computeType**: 'ComputeInstance' (Required)
 * **properties**: schemas:32_properties
 
+### Databricks
+#### Properties
+* **computeType**: 'Databricks' (Required)
+* **properties**: schemas:33_properties
+
 ### DataFactory
 #### Properties
 * **computeType**: 'DataFactory' (Required)
@@ -52,11 +106,6 @@
 ### DataLakeAnalytics
 #### Properties
 * **computeType**: 'DataLakeAnalytics' (Required)
-* **properties**: schemas:33_properties
-
-### Databricks
-#### Properties
-* **computeType**: 'Databricks' (Required)
 * **properties**: schemas:33_properties
 
 ### HDInsight
@@ -173,8 +222,8 @@
 
 ## schemas:32_properties
 ### Properties
-* **applicationSharingPolicy**: 'Personal' | 'Shared'
 * **applications**: ComputeInstanceApplication[] (ReadOnly)
+* **applicationSharingPolicy**: 'Personal' | 'Shared'
 * **computeInstanceAuthorizationType**: 'personal'
 * **connectivityEndpoints**: ComputeInstanceConnectivityEndpoints (ReadOnly)
 * **createdBy**: ComputeInstanceCreatedBy (ReadOnly)
@@ -217,13 +266,9 @@
 * **sshPort**: int (ReadOnly)
 * **sshPublicAccess**: 'Disabled' | 'Enabled'
 
-## DataFactory
+## Databricks
 ### Properties
-* **computeType**: 'DataFactory' (Required)
-
-## DataLakeAnalytics
-### Properties
-* **computeType**: 'DataLakeAnalytics' (Required)
+* **computeType**: 'Databricks' (Required)
 * **properties**: schemas:33_properties
 
 ## schemas:33_properties
@@ -240,9 +285,13 @@
 * **publicKeyData**: string
 * **username**: string
 
-## Databricks
+## DataFactory
 ### Properties
-* **computeType**: 'Databricks' (Required)
+* **computeType**: 'DataFactory' (Required)
+
+## DataLakeAnalytics
+### Properties
+* **computeType**: 'DataLakeAnalytics' (Required)
 * **properties**: schemas:33_properties
 
 ## HDInsight
@@ -254,11 +303,6 @@
 ### Properties
 * **computeType**: 'VirtualMachine' (Required)
 * **properties**: schemas:33_properties
-
-## Sku
-### Properties
-* **name**: string
-* **tier**: string
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -292,50 +336,6 @@
 * **actionRequired**: string
 * **description**: string
 * **status**: 'Approved' | 'Pending' | 'Rejected'
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.MachineLearningServices/workspaces
-### Properties
-* **apiVersion**: '2020-02-18-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant)
-
-## WorkspaceProperties
-### Properties
-* **applicationInsights**: string
-* **containerRegistry**: string
-* **creationTime**: string (ReadOnly)
-* **description**: string
-* **discoveryUrl**: string
-* **encryption**: EncryptionProperty
-* **friendlyName**: string
-* **hbiWorkspace**: bool
-* **keyVault**: string
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
-* **serviceProvisionedResourceGroup**: string (ReadOnly)
-* **storageAccount**: string
-* **workspaceId**: string (ReadOnly)
-
-## EncryptionProperty
-### Properties
-* **keyVaultProperties**: KeyVaultProperties (Required)
-* **status**: 'Disabled' | 'Enabled' (Required)
-
-## KeyVaultProperties
-### Properties
-* **identityClientId**: string
-* **keyIdentifier**: string (Required)
-* **keyVaultArmId**: string (Required)
 
 ## Dictionary<string,String>
 ### Additional Properties

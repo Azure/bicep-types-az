@@ -1,30 +1,5 @@
 # Microsoft.CognitiveServices @ 2017-04-18
 
-## Microsoft.CognitiveServices/accounts/privateEndpointConnections
-### Properties
-* **apiVersion**: '2017-04-18' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: 'Microsoft.CognitiveServices/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **groupIds**: string[]
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
-
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly)
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionRequired**: string
-* **description**: string
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
-
 ## Microsoft.CognitiveServices/accounts
 ### Properties
 * **apiVersion**: '2017-04-18' (ReadOnly, DeployTimeConstant)
@@ -61,6 +36,7 @@
 * **apiProperties**: CognitiveServicesAccountApiProperties
 * **capabilities**: SkuCapability[] (ReadOnly)
 * **customSubDomainName**: string
+* **dateCreated**: string (ReadOnly)
 * **encryption**: Encryption
 * **endpoint**: string (ReadOnly)
 * **internalId**: string (ReadOnly)
@@ -120,6 +96,22 @@
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: string (ReadOnly)
 
+## PrivateEndpointConnectionProperties
+### Properties
+* **groupIds**: string[]
+* **privateEndpoint**: PrivateEndpoint
+* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly)
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionRequired**: string
+* **description**: string
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
+
 ## UserOwnedStorage
 ### Properties
 * **resourceId**: string
@@ -127,9 +119,18 @@
 ## Sku
 ### Properties
 * **name**: string (Required)
-* **tier**: 'Free' | 'Premium' | 'Standard' (ReadOnly)
+* **tier**: 'Enterprise' | 'Free' | 'Premium' | 'Standard' (ReadOnly)
 
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.CognitiveServices/accounts/privateEndpointConnections
+### Properties
+* **apiVersion**: '2017-04-18' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: 'Microsoft.CognitiveServices/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 

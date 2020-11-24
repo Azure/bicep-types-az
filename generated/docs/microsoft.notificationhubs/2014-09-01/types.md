@@ -1,5 +1,34 @@
 # Microsoft.NotificationHubs @ 2014-09-01
 
+## Microsoft.NotificationHubs/namespaces
+### Properties
+* **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: NamespaceProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.NotificationHubs/namespaces' (ReadOnly, DeployTimeConstant)
+
+## NamespaceProperties
+### Properties
+* **createdAt**: string
+* **critical**: bool
+* **enabled**: bool
+* **name**: string
+* **namespaceType**: 'Messaging' | 'NotificationHub'
+* **provisioningState**: string
+* **region**: string
+* **scaleUnit**: string
+* **serviceBusEndpoint**: string
+* **status**: string
+* **subscriptionId**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.NotificationHubs/namespaces/AuthorizationRules
 ### Properties
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
@@ -21,16 +50,6 @@
 * **revision**: int
 * **rights**: 'Listen' | 'Manage' | 'Send'[]
 * **secondaryKey**: string
-
-## Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules
-### Properties
-* **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties (Required)
-* **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.NotificationHubs/namespaces/notificationHubs
 ### Properties
@@ -119,32 +138,13 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.NotificationHubs/namespaces
+## Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules
 ### Properties
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
+* **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: NamespaceProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.NotificationHubs/namespaces' (ReadOnly, DeployTimeConstant)
-
-## NamespaceProperties
-### Properties
-* **createdAt**: string
-* **critical**: bool
-* **enabled**: bool
-* **name**: string
-* **namespaceType**: 'Messaging' | 'NotificationHub'
-* **provisioningState**: string
-* **region**: string
-* **scaleUnit**: string
-* **serviceBusEndpoint**: string
-* **status**: string
-* **subscriptionId**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
+* **properties**: SharedAccessAuthorizationRuleProperties (Required)
+* **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 

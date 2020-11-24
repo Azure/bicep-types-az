@@ -1,27 +1,5 @@
 # Microsoft.CertificateRegistration @ 2015-08-01
 
-## Microsoft.CertificateRegistration/certificateOrders/certificates
-### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AppServiceCertificate
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.CertificateRegistration/certificateOrders/certificates' (ReadOnly, DeployTimeConstant)
-
-## AppServiceCertificate
-### Properties
-* **keyVaultId**: string
-* **keyVaultSecretName**: string
-* **provisioningState**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'ExternalPrivateKey' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder' (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Microsoft.CertificateRegistration/certificateOrders
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
@@ -53,12 +31,18 @@
 * **root**: CertificateDetails (ReadOnly)
 * **serialNumber**: string (ReadOnly)
 * **signedCertificate**: CertificateDetails (ReadOnly)
-* **status**: 'Canceled' | 'Denied' | 'Expired' | 'Issued' | 'NotSubmitted' | 'PendingRekey' | 'Pendingissuance' | 'Pendingrevocation' | 'Revoked' | 'Unused' (ReadOnly)
+* **status**: 'Canceled' | 'Denied' | 'Expired' | 'Issued' | 'NotSubmitted' | 'Pendingissuance' | 'PendingRekey' | 'Pendingrevocation' | 'Revoked' | 'Unused' (ReadOnly)
 * **validityInYears**: int
 
 ## Dictionary<string,AppServiceCertificate>
 ### Additional Properties
 * **Additional Properties Type**: AppServiceCertificate
+
+## AppServiceCertificate
+### Properties
+* **keyVaultId**: string
+* **keyVaultSecretName**: string
+* **provisioningState**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'ExternalPrivateKey' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder' (ReadOnly)
 
 ## CertificateDetails
 ### Properties
@@ -71,6 +55,22 @@
 * **subject**: string (ReadOnly)
 * **thumbprint**: string (ReadOnly)
 * **version**: int (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.CertificateRegistration/certificateOrders/certificates
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AppServiceCertificate
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.CertificateRegistration/certificateOrders/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties

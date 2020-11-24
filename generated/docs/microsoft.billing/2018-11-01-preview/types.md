@@ -1,20 +1,5 @@
 # Microsoft.Billing @ 2018-11-01-preview
 
-## Microsoft.Billing/billingAccounts/billingProfiles/policies
-### Properties
-* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyProperties
-* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/policies' (ReadOnly, DeployTimeConstant)
-
-## PolicyProperties
-### Properties
-* **marketplacePurchasesAllowed**: bool
-* **reservationPurchasesAllowed**: bool
-* **subscriptionOwnerCanViewCharges**: bool
-
 ## Microsoft.Billing/billingAccounts/billingProfiles
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
@@ -72,6 +57,21 @@
 * **name**: string (ReadOnly)
 * **properties**: BillingProfileProperties
 * **type**: string (ReadOnly)
+
+## Microsoft.Billing/billingAccounts/billingProfiles/policies
+### Properties
+* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PolicyProperties
+* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/policies' (ReadOnly, DeployTimeConstant)
+
+## PolicyProperties
+### Properties
+* **marketplacePurchasesAllowed**: bool
+* **reservationPurchasesAllowed**: bool
+* **subscriptionOwnerCanViewCharges**: bool
 
 ## Microsoft.Billing/billingAccounts/invoiceSections
 ### Properties

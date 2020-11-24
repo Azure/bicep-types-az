@@ -1,212 +1,5 @@
 # Microsoft.ServiceFabric @ 2017-07-01-preview
 
-## Microsoft.ServiceFabric/clusters/applicationTypes/versions
-### Properties
-* **apiVersion**: '2017-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationTypeVersionResourceProperties
-* **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant)
-
-## ApplicationTypeVersionResourceProperties
-### Properties
-* **appPackageUrl**: string (Required)
-* **defaultParameterList**: Dictionary<string,String> (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.ServiceFabric/clusters/applicationTypes
-### Properties
-* **apiVersion**: '2017-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationTypeResourceProperties
-* **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes' (ReadOnly, DeployTimeConstant)
-
-## ApplicationTypeResourceProperties
-### Properties
-* **provisioningState**: string (ReadOnly)
-
-## Microsoft.ServiceFabric/clusters/applications/services
-### Properties
-* **apiVersion**: '2017-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ServiceResourceProperties
-* **type**: 'Microsoft.ServiceFabric/clusters/applications/services' (ReadOnly, DeployTimeConstant)
-
-## ServiceResourceProperties
-* **Discriminator**: serviceKind
-### Base Properties
-* **correlationScheme**: ServiceCorrelationDescription[]
-* **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero'
-* **partitionDescription**: PartitionSchemeDescription
-* **placementConstraints**: string
-* **provisioningState**: string (ReadOnly)
-* **serviceLoadMetrics**: ServiceLoadMetricDescription[]
-* **servicePlacementPolicies**: ServicePlacementPolicyDescription[]
-* **serviceTypeName**: string
-### Stateful
-#### Properties
-* **hasPersistedState**: bool
-* **minReplicaSetSize**: int
-* **quorumLossWaitDuration**: string
-* **replicaRestartWaitDuration**: string
-* **serviceKind**: 'Stateful' (Required)
-* **standByReplicaKeepDuration**: string
-* **targetReplicaSetSize**: int
-
-### Stateless
-#### Properties
-* **instanceCount**: int
-* **serviceKind**: 'Stateless' (Required)
-
-
-## ServiceCorrelationDescription
-### Properties
-* **Scheme**: 'Affinity' | 'AlignedAffinity' | 'Invalid' | 'NonAlignedAffinity' (Required)
-* **ServiceName**: string (Required)
-
-## PartitionSchemeDescription
-* **Discriminator**: PartitionScheme
-### Base Properties
-### Named
-#### Properties
-* **Count**: int (Required)
-* **Names**: string[] (Required)
-* **PartitionScheme**: 'Named' (Required)
-
-### Singleton
-#### Properties
-* **PartitionScheme**: 'Singleton' (Required)
-
-### UniformInt64Range
-#### Properties
-* **Count**: int (Required)
-* **HighKey**: string (Required)
-* **LowKey**: string (Required)
-* **PartitionScheme**: 'UniformInt64Range' (Required)
-
-
-## Named
-### Properties
-* **Count**: int (Required)
-* **Names**: string[] (Required)
-* **PartitionScheme**: 'Named' (Required)
-
-## Singleton
-### Properties
-* **PartitionScheme**: 'Singleton' (Required)
-
-## UniformInt64Range
-### Properties
-* **Count**: int (Required)
-* **HighKey**: string (Required)
-* **LowKey**: string (Required)
-* **PartitionScheme**: 'UniformInt64Range' (Required)
-
-## ServiceLoadMetricDescription
-### Properties
-* **DefaultLoad**: int
-* **Name**: string (Required)
-* **PrimaryDefaultLoad**: int
-* **SecondaryDefaultLoad**: int
-* **Weight**: 'High' | 'Low' | 'Medium' | 'Zero'
-
-## ServicePlacementPolicyDescription
-* **Discriminator**: Type
-### Base Properties
-
-## Stateful
-### Properties
-* **hasPersistedState**: bool
-* **minReplicaSetSize**: int
-* **quorumLossWaitDuration**: string
-* **replicaRestartWaitDuration**: string
-* **serviceKind**: 'Stateful' (Required)
-* **standByReplicaKeepDuration**: string
-* **targetReplicaSetSize**: int
-
-## Stateless
-### Properties
-* **instanceCount**: int
-* **serviceKind**: 'Stateless' (Required)
-
-## Microsoft.ServiceFabric/clusters/applications
-### Properties
-* **apiVersion**: '2017-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationResourceProperties
-* **type**: 'Microsoft.ServiceFabric/clusters/applications' (ReadOnly, DeployTimeConstant)
-
-## ApplicationResourceProperties
-### Properties
-* **maximumNodes**: int
-* **metrics**: ApplicationMetricDescription[]
-* **minimumNodes**: int
-* **parameters**: Dictionary<string,String>
-* **provisioningState**: string (ReadOnly)
-* **removeApplicationCapacity**: bool
-* **typeName**: string
-* **typeVersion**: string
-* **upgradePolicy**: ApplicationUpgradePolicy
-
-## ApplicationMetricDescription
-### Properties
-* **MaximumCapacity**: int
-* **Name**: string
-* **ReservationCapacity**: int
-* **TotalApplicationCapacity**: int
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ApplicationUpgradePolicy
-### Properties
-* **applicationHealthPolicy**: ArmApplicationHealthPolicy
-* **forceRestart**: bool
-* **rollingUpgradeMonitoringPolicy**: ArmRollingUpgradeMonitoringPolicy
-* **upgradeReplicaSetCheckTimeout**: string
-
-## ArmApplicationHealthPolicy
-### Properties
-* **ConsiderWarningAsError**: bool
-* **DefaultServiceTypeHealthPolicy**: ArmServiceTypeHealthPolicy
-* **MaxPercentUnhealthyDeployedApplications**: int
-* **ServiceTypeHealthPolicyMap**: Dictionary<string,ArmServiceTypeHealthPolicy>
-
-## ArmServiceTypeHealthPolicy
-### Properties
-* **maxPercentUnhealthyPartitionsPerService**: int
-* **maxPercentUnhealthyReplicasPerPartition**: int
-* **maxPercentUnhealthyServices**: int
-
-## Dictionary<string,ArmServiceTypeHealthPolicy>
-### Additional Properties
-* **Additional Properties Type**: ArmServiceTypeHealthPolicy
-
-## ArmRollingUpgradeMonitoringPolicy
-### Properties
-* **failureAction**: 'Manual' | 'Rollback'
-* **healthCheckRetryTimeout**: string
-* **healthCheckStableDuration**: string
-* **healthCheckWaitDuration**: string
-* **upgradeDomainTimeout**: string
-* **upgradeTimeout**: string
-
 ## Microsoft.ServiceFabric/clusters
 ### Properties
 * **apiVersion**: '2017-07-01-preview' (ReadOnly, DeployTimeConstant)
@@ -337,6 +130,213 @@
 ### Properties
 * **maxPercentUnhealthyApplications**: int
 * **maxPercentUnhealthyNodes**: int
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.ServiceFabric/clusters/applications
+### Properties
+* **apiVersion**: '2017-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationResourceProperties
+* **type**: 'Microsoft.ServiceFabric/clusters/applications' (ReadOnly, DeployTimeConstant)
+
+## ApplicationResourceProperties
+### Properties
+* **maximumNodes**: int
+* **metrics**: ApplicationMetricDescription[]
+* **minimumNodes**: int
+* **parameters**: Dictionary<string,String>
+* **provisioningState**: string (ReadOnly)
+* **removeApplicationCapacity**: bool
+* **typeName**: string
+* **typeVersion**: string
+* **upgradePolicy**: ApplicationUpgradePolicy
+
+## ApplicationMetricDescription
+### Properties
+* **MaximumCapacity**: int
+* **Name**: string
+* **ReservationCapacity**: int
+* **TotalApplicationCapacity**: int
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ApplicationUpgradePolicy
+### Properties
+* **applicationHealthPolicy**: ArmApplicationHealthPolicy
+* **forceRestart**: bool
+* **rollingUpgradeMonitoringPolicy**: ArmRollingUpgradeMonitoringPolicy
+* **upgradeReplicaSetCheckTimeout**: string
+
+## ArmApplicationHealthPolicy
+### Properties
+* **ConsiderWarningAsError**: bool
+* **DefaultServiceTypeHealthPolicy**: ArmServiceTypeHealthPolicy
+* **MaxPercentUnhealthyDeployedApplications**: int
+* **ServiceTypeHealthPolicyMap**: Dictionary<string,ArmServiceTypeHealthPolicy>
+
+## ArmServiceTypeHealthPolicy
+### Properties
+* **maxPercentUnhealthyPartitionsPerService**: int
+* **maxPercentUnhealthyReplicasPerPartition**: int
+* **maxPercentUnhealthyServices**: int
+
+## Dictionary<string,ArmServiceTypeHealthPolicy>
+### Additional Properties
+* **Additional Properties Type**: ArmServiceTypeHealthPolicy
+
+## ArmRollingUpgradeMonitoringPolicy
+### Properties
+* **failureAction**: 'Manual' | 'Rollback'
+* **healthCheckRetryTimeout**: string
+* **healthCheckStableDuration**: string
+* **healthCheckWaitDuration**: string
+* **upgradeDomainTimeout**: string
+* **upgradeTimeout**: string
+
+## Microsoft.ServiceFabric/clusters/applications/services
+### Properties
+* **apiVersion**: '2017-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServiceResourceProperties
+* **type**: 'Microsoft.ServiceFabric/clusters/applications/services' (ReadOnly, DeployTimeConstant)
+
+## ServiceResourceProperties
+* **Discriminator**: serviceKind
+### Base Properties
+* **correlationScheme**: ServiceCorrelationDescription[]
+* **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero'
+* **partitionDescription**: PartitionSchemeDescription
+* **placementConstraints**: string
+* **provisioningState**: string (ReadOnly)
+* **serviceLoadMetrics**: ServiceLoadMetricDescription[]
+* **servicePlacementPolicies**: ServicePlacementPolicyDescription[]
+* **serviceTypeName**: string
+### Stateful
+#### Properties
+* **hasPersistedState**: bool
+* **minReplicaSetSize**: int
+* **quorumLossWaitDuration**: string
+* **replicaRestartWaitDuration**: string
+* **serviceKind**: 'Stateful' (Required)
+* **standByReplicaKeepDuration**: string
+* **targetReplicaSetSize**: int
+
+### Stateless
+#### Properties
+* **instanceCount**: int
+* **serviceKind**: 'Stateless' (Required)
+
+
+## ServiceCorrelationDescription
+### Properties
+* **Scheme**: 'Affinity' | 'AlignedAffinity' | 'Invalid' | 'NonAlignedAffinity' (Required)
+* **ServiceName**: string (Required)
+
+## PartitionSchemeDescription
+* **Discriminator**: PartitionScheme
+### Base Properties
+### Named
+#### Properties
+* **Count**: int (Required)
+* **Names**: string[] (Required)
+* **PartitionScheme**: 'Named' (Required)
+
+### Singleton
+#### Properties
+* **PartitionScheme**: 'Singleton' (Required)
+
+### UniformInt64Range
+#### Properties
+* **Count**: int (Required)
+* **HighKey**: string (Required)
+* **LowKey**: string (Required)
+* **PartitionScheme**: 'UniformInt64Range' (Required)
+
+
+## Named
+### Properties
+* **Count**: int (Required)
+* **Names**: string[] (Required)
+* **PartitionScheme**: 'Named' (Required)
+
+## Singleton
+### Properties
+* **PartitionScheme**: 'Singleton' (Required)
+
+## UniformInt64Range
+### Properties
+* **Count**: int (Required)
+* **HighKey**: string (Required)
+* **LowKey**: string (Required)
+* **PartitionScheme**: 'UniformInt64Range' (Required)
+
+## ServiceLoadMetricDescription
+### Properties
+* **DefaultLoad**: int
+* **Name**: string (Required)
+* **PrimaryDefaultLoad**: int
+* **SecondaryDefaultLoad**: int
+* **Weight**: 'High' | 'Low' | 'Medium' | 'Zero'
+
+## ServicePlacementPolicyDescription
+* **Discriminator**: Type
+### Base Properties
+
+## Stateful
+### Properties
+* **hasPersistedState**: bool
+* **minReplicaSetSize**: int
+* **quorumLossWaitDuration**: string
+* **replicaRestartWaitDuration**: string
+* **serviceKind**: 'Stateful' (Required)
+* **standByReplicaKeepDuration**: string
+* **targetReplicaSetSize**: int
+
+## Stateless
+### Properties
+* **instanceCount**: int
+* **serviceKind**: 'Stateless' (Required)
+
+## Microsoft.ServiceFabric/clusters/applicationTypes
+### Properties
+* **apiVersion**: '2017-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationTypeResourceProperties
+* **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes' (ReadOnly, DeployTimeConstant)
+
+## ApplicationTypeResourceProperties
+### Properties
+* **provisioningState**: string (ReadOnly)
+
+## Microsoft.ServiceFabric/clusters/applicationTypes/versions
+### Properties
+* **apiVersion**: '2017-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationTypeVersionResourceProperties
+* **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant)
+
+## ApplicationTypeVersionResourceProperties
+### Properties
+* **appPackageUrl**: string (Required)
+* **defaultParameterList**: Dictionary<string,String> (ReadOnly)
+* **provisioningState**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Additional Properties

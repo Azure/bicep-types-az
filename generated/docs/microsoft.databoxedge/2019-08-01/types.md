@@ -1,5 +1,44 @@
 # Microsoft.DataBoxEdge @ 2019-08-01
 
+## Microsoft.DataBoxEdge/dataBoxEdgeDevices
+### Properties
+* **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DataBoxEdgeDeviceProperties
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices' (ReadOnly, DeployTimeConstant)
+
+## DataBoxEdgeDeviceProperties
+### Properties
+* **configuredRoleTypes**: 'ASA' | 'Cognitive' | 'Functions' | 'IOT'[] (ReadOnly)
+* **culture**: string (ReadOnly)
+* **dataBoxEdgeDeviceStatus**: 'Disconnected' | 'Maintenance' | 'NeedsAttention' | 'Offline' | 'Online' | 'PartiallyDisconnected' | 'ReadyToSetup'
+* **description**: string
+* **deviceHcsVersion**: string (ReadOnly)
+* **deviceLocalCapacity**: int (ReadOnly)
+* **deviceModel**: string (ReadOnly)
+* **deviceSoftwareVersion**: string (ReadOnly)
+* **deviceType**: 'DataBoxEdgeDevice' (ReadOnly)
+* **friendlyName**: string
+* **modelDescription**: string
+* **nodeCount**: int (ReadOnly)
+* **serialNumber**: string (ReadOnly)
+* **timeZone**: string (ReadOnly)
+
+## Sku
+### Properties
+* **name**: 'Edge' | 'Gateway' | 'TEA_1Node_Heater' | 'TEA_1Node_UPS_Heater' | 'TEA_1Node_UPS' | 'TEA_1Node' | 'TEA_4Node_Heater' | 'TEA_4Node_UPS_Heater' | 'TMA'
+* **tier**: 'Standard'
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
@@ -144,7 +183,7 @@
 * **monitoringStatus**: 'Disabled' | 'Enabled' (Required)
 * **refreshDetails**: RefreshDetails
 * **shareMappings**: MountPointMap[] (ReadOnly)
-* **shareStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating' (Required)
+* **shareStatus**: 'NeedsAttention' | 'Offline' | 'OK' | 'Unknown' | 'Updating' (Required)
 * **userAccessRights**: UserAccessRight[]
 
 ## AzureContainerInfo
@@ -190,22 +229,6 @@
 * **storageAccountId**: string
 * **userName**: string
 
-## Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers
-### Properties
-* **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ContainerProperties (Required)
-* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers' (ReadOnly, DeployTimeConstant)
-
-## ContainerProperties
-### Properties
-* **containerStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating' (ReadOnly)
-* **createdDateTime**: string (ReadOnly)
-* **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' (Required)
-* **refreshDetails**: RefreshDetails (ReadOnly)
-
 ## Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
@@ -222,7 +245,23 @@
 * **dataPolicy**: 'Cloud' | 'Local'
 * **description**: string
 * **storageAccountCredentialId**: string
-* **storageAccountStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating'
+* **storageAccountStatus**: 'NeedsAttention' | 'Offline' | 'OK' | 'Unknown' | 'Updating'
+
+## Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers
+### Properties
+* **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ContainerProperties (Required)
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers' (ReadOnly, DeployTimeConstant)
+
+## ContainerProperties
+### Properties
+* **containerStatus**: 'NeedsAttention' | 'Offline' | 'OK' | 'Unknown' | 'Updating' (ReadOnly)
+* **createdDateTime**: string (ReadOnly)
+* **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' (Required)
+* **refreshDetails**: RefreshDetails (ReadOnly)
 
 ## Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers
 * **Discriminator**: kind
@@ -298,43 +337,4 @@
 ### Properties
 * **accessType**: 'Change' | 'Custom' | 'Read' (Required)
 * **shareId**: string (Required)
-
-## Microsoft.DataBoxEdge/dataBoxEdgeDevices
-### Properties
-* **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DataBoxEdgeDeviceProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices' (ReadOnly, DeployTimeConstant)
-
-## DataBoxEdgeDeviceProperties
-### Properties
-* **configuredRoleTypes**: 'ASA' | 'Cognitive' | 'Functions' | 'IOT'[] (ReadOnly)
-* **culture**: string (ReadOnly)
-* **dataBoxEdgeDeviceStatus**: 'Disconnected' | 'Maintenance' | 'NeedsAttention' | 'Offline' | 'Online' | 'PartiallyDisconnected' | 'ReadyToSetup'
-* **description**: string
-* **deviceHcsVersion**: string (ReadOnly)
-* **deviceLocalCapacity**: int (ReadOnly)
-* **deviceModel**: string (ReadOnly)
-* **deviceSoftwareVersion**: string (ReadOnly)
-* **deviceType**: 'DataBoxEdgeDevice' (ReadOnly)
-* **friendlyName**: string
-* **modelDescription**: string
-* **nodeCount**: int (ReadOnly)
-* **serialNumber**: string (ReadOnly)
-* **timeZone**: string (ReadOnly)
-
-## Sku
-### Properties
-* **name**: 'Edge' | 'Gateway' | 'TEA_1Node' | 'TEA_1Node_Heater' | 'TEA_1Node_UPS' | 'TEA_1Node_UPS_Heater' | 'TEA_4Node_Heater' | 'TEA_4Node_UPS_Heater' | 'TMA'
-* **tier**: 'Standard'
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

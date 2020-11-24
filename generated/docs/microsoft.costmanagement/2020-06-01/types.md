@@ -17,7 +17,7 @@
 * **createdOn**: string (ReadOnly)
 * **displayName**: string
 * **kpis**: KpiProperties[]
-* **metric**: 'AHUB' | 'ActualCost' | 'AmortizedCost'
+* **metric**: 'ActualCost' | 'AHUB' | 'AmortizedCost'
 * **modifiedOn**: string (ReadOnly)
 * **pivots**: PivotProperties[]
 * **query**: ReportConfigDefinition
@@ -37,8 +37,8 @@
 ## ReportConfigDefinition
 ### Properties
 * **dataset**: ReportConfigDataset
-* **timePeriod**: ReportConfigTimePeriod
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required)
+* **timePeriod**: ReportConfigTimePeriod
 * **type**: string (Required)
 
 ## ReportConfigDataset

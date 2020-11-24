@@ -1,5 +1,43 @@
 # Microsoft.StorageCache @ 2019-08-01-preview
 
+## Microsoft.StorageCache/caches
+### Properties
+* **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:4_properties
+* **sku**: schemas:4_sku
+* **tags**: any
+* **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant)
+
+## schemas:4_properties
+### Properties
+* **cacheSizeGB**: int
+* **health**: CacheHealth (ReadOnly)
+* **mountAddresses**: string[] (ReadOnly)
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
+* **subnet**: string
+* **upgradeStatus**: CacheUpgradeStatus
+
+## CacheHealth
+### Properties
+* **state**: 'Degraded' | 'Down' | 'Flushing' | 'Healthy' | 'Stopped' | 'Stopping' | 'Transitioning' | 'Unknown' | 'Upgrading'
+* **statusDescription**: string
+
+## CacheUpgradeStatus
+### Properties
+* **currentFirmwareVersion**: string (ReadOnly)
+* **firmwareUpdateDeadline**: string (ReadOnly)
+* **firmwareUpdateStatus**: 'available' | 'unavailable' (ReadOnly)
+* **lastFirmwareUpdate**: string (ReadOnly)
+* **pendingFirmwareVersion**: string (ReadOnly)
+
+## schemas:4_sku
+### Properties
+* **name**: string
+
 ## Microsoft.StorageCache/caches/storageTargets
 ### Properties
 * **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant)
@@ -40,42 +78,4 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.StorageCache/caches
-### Properties
-* **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:4_properties
-* **sku**: schemas:4_sku
-* **tags**: any
-* **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant)
-
-## schemas:4_properties
-### Properties
-* **cacheSizeGB**: int
-* **health**: CacheHealth (ReadOnly)
-* **mountAddresses**: string[] (ReadOnly)
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
-* **subnet**: string
-* **upgradeStatus**: CacheUpgradeStatus
-
-## CacheHealth
-### Properties
-* **state**: 'Degraded' | 'Down' | 'Flushing' | 'Healthy' | 'Stopped' | 'Stopping' | 'Transitioning' | 'Unknown' | 'Upgrading'
-* **statusDescription**: string
-
-## CacheUpgradeStatus
-### Properties
-* **currentFirmwareVersion**: string (ReadOnly)
-* **firmwareUpdateDeadline**: string (ReadOnly)
-* **firmwareUpdateStatus**: 'available' | 'unavailable' (ReadOnly)
-* **lastFirmwareUpdate**: string (ReadOnly)
-* **pendingFirmwareVersion**: string (ReadOnly)
-
-## schemas:4_sku
-### Properties
-* **name**: string
 

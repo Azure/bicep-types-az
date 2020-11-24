@@ -1,5 +1,187 @@
 # Microsoft.DocumentDB @ 2020-03-01
 
+## Microsoft.DocumentDB/databaseAccounts
+### Properties
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'GlobalDocumentDB' | 'MongoDB' | 'Parse'
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseAccountCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts' (ReadOnly, DeployTimeConstant)
+
+## DatabaseAccountCreateUpdateProperties
+### Properties
+* **capabilities**: Capability[]
+* **connectorOffer**: 'Small'
+* **consistencyPolicy**: ConsistencyPolicy
+* **databaseAccountOfferType**: string (Required)
+* **disableKeyBasedMetadataWriteAccess**: bool
+* **documentEndpoint**: string (ReadOnly)
+* **enableAutomaticFailover**: bool
+* **enableCassandraConnector**: bool
+* **enableMultipleWriteLocations**: bool
+* **failoverPolicies**: FailoverPolicy[] (ReadOnly)
+* **ipRangeFilter**: string
+* **isVirtualNetworkFilterEnabled**: bool
+* **keyVaultKeyUri**: string
+* **locations**: Location[] (Required)
+* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **publicNetworkAccess**: 'Disabled' | 'Enabled'
+* **readLocations**: Location[] (ReadOnly)
+* **virtualNetworkRules**: VirtualNetworkRule[]
+* **writeLocations**: Location[] (ReadOnly)
+
+## Capability
+### Properties
+* **name**: string
+
+## ConsistencyPolicy
+### Properties
+* **defaultConsistencyLevel**: 'BoundedStaleness' | 'ConsistentPrefix' | 'Eventual' | 'Session' | 'Strong' (Required)
+* **maxIntervalInSeconds**: int
+* **maxStalenessPrefix**: int
+
+## FailoverPolicy
+### Properties
+* **failoverPriority**: int (ReadOnly)
+* **id**: string (ReadOnly)
+* **locationName**: string (ReadOnly)
+
+## Location
+### Properties
+* **documentEndpoint**: string (ReadOnly)
+* **failoverPriority**: int
+* **id**: string (ReadOnly)
+* **isZoneRedundant**: bool
+* **locationName**: string
+* **provisioningState**: string
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
+* **type**: string (ReadOnly)
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: PrivateEndpointProperty (ReadOnly)
+* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionStateProperty (ReadOnly)
+
+## PrivateEndpointProperty
+### Properties
+* **id**: string (ReadOnly)
+
+## PrivateLinkServiceConnectionStateProperty
+### Properties
+* **actionsRequired**: string (ReadOnly)
+* **status**: string (ReadOnly)
+
+## VirtualNetworkRule
+### Properties
+* **id**: string
+* **ignoreMissingVNetServiceEndpoint**: bool
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces
+### Properties
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CassandraKeyspaceCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces' (ReadOnly, DeployTimeConstant)
+
+## CassandraKeyspaceCreateUpdateProperties
+### Properties
+* **options**: CreateUpdateOptions (Required)
+* **resource**: CassandraKeyspaceResource (Required)
+
+## CreateUpdateOptions
+### Properties
+* **_colls**: string (ReadOnly)
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
+* **_users**: string (ReadOnly)
+* **id**: string (ReadOnly)
+* **throughput**: string (WriteOnly)
+### Additional Properties
+* **Additional Properties Type**: string
+
+## CassandraKeyspaceResource
+### Properties
+* **_colls**: string (ReadOnly)
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
+* **_users**: string (ReadOnly)
+* **id**: string (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables
+### Properties
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CassandraTableCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables' (ReadOnly, DeployTimeConstant)
+
+## CassandraTableCreateUpdateProperties
+### Properties
+* **options**: CreateUpdateOptions (Required)
+* **resource**: CassandraTableResource (Required)
+
+## CassandraTableResource
+### Properties
+* **_colls**: string (ReadOnly)
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
+* **_users**: string (ReadOnly)
+* **defaultTtl**: int (WriteOnly)
+* **id**: string (Required)
+* **schema**: CassandraSchema (WriteOnly)
+
+## CassandraSchema
+### Properties
+* **clusterKeys**: ClusterKey[] (WriteOnly)
+* **columns**: Column[] (WriteOnly)
+* **partitionKeys**: CassandraPartitionKey[] (WriteOnly)
+
+## ClusterKey
+### Properties
+* **name**: string (WriteOnly)
+* **orderBy**: string (WriteOnly)
+
+## Column
+### Properties
+* **name**: string (WriteOnly)
+* **type**: string (WriteOnly)
+
+## CassandraPartitionKey
+### Properties
+* **name**: string (WriteOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
@@ -47,69 +229,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables
-### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CassandraTableCreateUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables' (ReadOnly, DeployTimeConstant)
-
-## CassandraTableCreateUpdateProperties
-### Properties
-* **options**: CreateUpdateOptions (Required)
-* **resource**: CassandraTableResource (Required)
-
-## CreateUpdateOptions
-### Properties
-* **_colls**: string (ReadOnly)
-* **_etag**: string (ReadOnly)
-* **_rid**: string (ReadOnly)
-* **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
-* **id**: string (ReadOnly)
-* **throughput**: string (WriteOnly)
-### Additional Properties
-* **Additional Properties Type**: string
-
-## CassandraTableResource
-### Properties
-* **_colls**: string (ReadOnly)
-* **_etag**: string (ReadOnly)
-* **_rid**: string (ReadOnly)
-* **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
-* **defaultTtl**: int (WriteOnly)
-* **id**: string (Required)
-* **schema**: CassandraSchema (WriteOnly)
-
-## CassandraSchema
-### Properties
-* **clusterKeys**: ClusterKey[] (WriteOnly)
-* **columns**: Column[] (WriteOnly)
-* **partitionKeys**: CassandraPartitionKey[] (WriteOnly)
-
-## ClusterKey
-### Properties
-* **name**: string (WriteOnly)
-* **orderBy**: string (WriteOnly)
-
-## Column
-### Properties
-* **name**: string (WriteOnly)
-* **type**: string (WriteOnly)
-
-## CassandraPartitionKey
-### Properties
-* **name**: string (WriteOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
@@ -125,23 +244,23 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces
+## Microsoft.DocumentDB/databaseAccounts/gremlinDatabases
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CassandraKeyspaceCreateUpdateProperties (Required)
+* **properties**: GremlinDatabaseCreateUpdateProperties (Required)
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases' (ReadOnly, DeployTimeConstant)
 
-## CassandraKeyspaceCreateUpdateProperties
+## GremlinDatabaseCreateUpdateProperties
 ### Properties
 * **options**: CreateUpdateOptions (Required)
-* **resource**: CassandraKeyspaceResource (Required)
+* **resource**: GremlinDatabaseResource (Required)
 
-## CassandraKeyspaceResource
+## GremlinDatabaseResource
 ### Properties
 * **_colls**: string (ReadOnly)
 * **_etag**: string (ReadOnly)
@@ -149,21 +268,6 @@
 * **_ts**: any (ReadOnly)
 * **_users**: string (ReadOnly)
 * **id**: string (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings
-### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -257,6 +361,21 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings
+### Properties
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ThroughputSettingsUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings' (ReadOnly, DeployTimeConstant)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
@@ -272,23 +391,23 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DocumentDB/databaseAccounts/gremlinDatabases
+## Microsoft.DocumentDB/databaseAccounts/mongodbDatabases
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GremlinDatabaseCreateUpdateProperties (Required)
+* **properties**: MongoDBDatabaseCreateUpdateProperties (Required)
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases' (ReadOnly, DeployTimeConstant)
 
-## GremlinDatabaseCreateUpdateProperties
+## MongoDBDatabaseCreateUpdateProperties
 ### Properties
 * **options**: CreateUpdateOptions (Required)
-* **resource**: GremlinDatabaseResource (Required)
+* **resource**: MongoDBDatabaseResource (Required)
 
-## GremlinDatabaseResource
+## MongoDBDatabaseResource
 ### Properties
 * **_colls**: string (ReadOnly)
 * **_etag**: string (ReadOnly)
@@ -296,21 +415,6 @@
 * **_ts**: any (ReadOnly)
 * **_users**: string (ReadOnly)
 * **id**: string (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
-### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -365,6 +469,21 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
+### Properties
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ThroughputSettingsUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings' (ReadOnly, DeployTimeConstant)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
@@ -375,35 +494,6 @@
 * **properties**: ThroughputSettingsUpdateProperties (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.DocumentDB/databaseAccounts/mongodbDatabases
-### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MongoDBDatabaseCreateUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases' (ReadOnly, DeployTimeConstant)
-
-## MongoDBDatabaseCreateUpdateProperties
-### Properties
-* **options**: CreateUpdateOptions (Required)
-* **resource**: MongoDBDatabaseResource (Required)
-
-## MongoDBDatabaseResource
-### Properties
-* **_colls**: string (ReadOnly)
-* **_etag**: string (ReadOnly)
-* **_rid**: string (ReadOnly)
-* **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
-* **id**: string (Required)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -422,6 +512,69 @@
 ### Properties
 * **notebookServerEndpoint**: string (ReadOnly)
 * **status**: string (ReadOnly)
+
+## Microsoft.DocumentDB/databaseAccounts/sqlDatabases
+### Properties
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SqlDatabaseCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases' (ReadOnly, DeployTimeConstant)
+
+## SqlDatabaseCreateUpdateProperties
+### Properties
+* **options**: CreateUpdateOptions (Required)
+* **resource**: SqlDatabaseResource (Required)
+
+## SqlDatabaseResource
+### Properties
+* **_colls**: string (ReadOnly)
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
+* **_users**: string (ReadOnly)
+* **id**: string (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers
+### Properties
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SqlContainerCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers' (ReadOnly, DeployTimeConstant)
+
+## SqlContainerCreateUpdateProperties
+### Properties
+* **options**: CreateUpdateOptions (Required)
+* **resource**: SqlContainerResource (Required)
+
+## SqlContainerResource
+### Properties
+* **_colls**: string (ReadOnly)
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
+* **_users**: string (ReadOnly)
+* **conflictResolutionPolicy**: ConflictResolutionPolicy (WriteOnly)
+* **defaultTtl**: int (WriteOnly)
+* **id**: string (Required)
+* **indexingPolicy**: IndexingPolicy (WriteOnly)
+* **partitionKey**: ContainerPartitionKey (WriteOnly)
+* **uniqueKeyPolicy**: UniqueKeyPolicy (WriteOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures
 ### Properties
@@ -530,40 +683,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers
-### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlContainerCreateUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers' (ReadOnly, DeployTimeConstant)
-
-## SqlContainerCreateUpdateProperties
-### Properties
-* **options**: CreateUpdateOptions (Required)
-* **resource**: SqlContainerResource (Required)
-
-## SqlContainerResource
-### Properties
-* **_colls**: string (ReadOnly)
-* **_etag**: string (ReadOnly)
-* **_rid**: string (ReadOnly)
-* **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
-* **conflictResolutionPolicy**: ConflictResolutionPolicy (WriteOnly)
-* **defaultTtl**: int (WriteOnly)
-* **id**: string (Required)
-* **indexingPolicy**: IndexingPolicy (WriteOnly)
-* **partitionKey**: ContainerPartitionKey (WriteOnly)
-* **uniqueKeyPolicy**: UniqueKeyPolicy (WriteOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
@@ -574,50 +693,6 @@
 * **properties**: ThroughputSettingsUpdateProperties (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.DocumentDB/databaseAccounts/sqlDatabases
-### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlDatabaseCreateUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases' (ReadOnly, DeployTimeConstant)
-
-## SqlDatabaseCreateUpdateProperties
-### Properties
-* **options**: CreateUpdateOptions (Required)
-* **resource**: SqlDatabaseResource (Required)
-
-## SqlDatabaseResource
-### Properties
-* **_colls**: string (ReadOnly)
-* **_etag**: string (ReadOnly)
-* **_rid**: string (ReadOnly)
-* **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
-* **id**: string (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings
-### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -652,91 +727,16 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DocumentDB/databaseAccounts
+## Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'GlobalDocumentDB' | 'MongoDB' | 'Parse'
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseAccountCreateUpdateProperties (Required)
+* **properties**: ThroughputSettingsUpdateProperties (Required)
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts' (ReadOnly, DeployTimeConstant)
-
-## DatabaseAccountCreateUpdateProperties
-### Properties
-* **capabilities**: Capability[]
-* **connectorOffer**: 'Small'
-* **consistencyPolicy**: ConsistencyPolicy
-* **databaseAccountOfferType**: string (Required)
-* **disableKeyBasedMetadataWriteAccess**: bool
-* **documentEndpoint**: string (ReadOnly)
-* **enableAutomaticFailover**: bool
-* **enableCassandraConnector**: bool
-* **enableMultipleWriteLocations**: bool
-* **failoverPolicies**: FailoverPolicy[] (ReadOnly)
-* **ipRangeFilter**: string
-* **isVirtualNetworkFilterEnabled**: bool
-* **keyVaultKeyUri**: string
-* **locations**: Location[] (Required)
-* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **publicNetworkAccess**: 'Disabled' | 'Enabled'
-* **readLocations**: Location[] (ReadOnly)
-* **virtualNetworkRules**: VirtualNetworkRule[]
-* **writeLocations**: Location[] (ReadOnly)
-
-## Capability
-### Properties
-* **name**: string
-
-## ConsistencyPolicy
-### Properties
-* **defaultConsistencyLevel**: 'BoundedStaleness' | 'ConsistentPrefix' | 'Eventual' | 'Session' | 'Strong' (Required)
-* **maxIntervalInSeconds**: int
-* **maxStalenessPrefix**: int
-
-## FailoverPolicy
-### Properties
-* **failoverPriority**: int (ReadOnly)
-* **id**: string (ReadOnly)
-* **locationName**: string (ReadOnly)
-
-## Location
-### Properties
-* **documentEndpoint**: string (ReadOnly)
-* **failoverPriority**: int
-* **id**: string (ReadOnly)
-* **isZoneRedundant**: bool
-* **locationName**: string
-* **provisioningState**: string
-
-## PrivateEndpointConnection
-### Properties
-* **id**: string (ReadOnly)
-* **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
-* **type**: string (ReadOnly)
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: PrivateEndpointProperty (ReadOnly)
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionStateProperty (ReadOnly)
-
-## PrivateEndpointProperty
-### Properties
-* **id**: string (ReadOnly)
-
-## PrivateLinkServiceConnectionStateProperty
-### Properties
-* **actionsRequired**: string (ReadOnly)
-* **status**: string (ReadOnly)
-
-## VirtualNetworkRule
-### Properties
-* **id**: string
-* **ignoreMissingVNetServiceEndpoint**: bool
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties

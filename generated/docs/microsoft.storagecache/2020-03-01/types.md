@@ -1,70 +1,5 @@
 # Microsoft.StorageCache @ 2020-03-01
 
-## Microsoft.StorageCache/caches/storageTargets
-### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageTargetProperties
-* **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant)
-
-## StorageTargetProperties
-* **Discriminator**: targetType
-### Base Properties
-* **clfs**: ClfsTarget
-* **junctions**: NamespaceJunction[]
-* **nfs3**: Nfs3Target
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
-* **unknown**: UnknownTarget
-### clfs
-#### Properties
-* **targetType**: 'clfs' (Required)
-
-### nfs3
-#### Properties
-* **targetType**: 'nfs3' (Required)
-
-### unknown
-#### Properties
-* **targetType**: 'unknown' (Required)
-
-
-## ClfsTarget
-### Properties
-* **target**: string
-
-## NamespaceJunction
-### Properties
-* **namespacePath**: string
-* **nfsExport**: string
-* **targetPath**: string
-
-## Nfs3Target
-### Properties
-* **target**: string
-* **usageModel**: string
-
-## UnknownTarget
-### Properties
-* **unknownMap**: Dictionary<string,String>
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## clfs
-### Properties
-* **targetType**: 'clfs' (Required)
-
-## nfs3
-### Properties
-* **targetType**: 'nfs3' (Required)
-
-## unknown
-### Properties
-* **targetType**: 'unknown' (Required)
-
 ## Microsoft.StorageCache/caches
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
@@ -134,4 +69,69 @@
 ## schemas:6_sku
 ### Properties
 * **name**: string
+
+## Microsoft.StorageCache/caches/storageTargets
+### Properties
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: StorageTargetProperties
+* **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant)
+
+## StorageTargetProperties
+* **Discriminator**: targetType
+### Base Properties
+* **clfs**: ClfsTarget
+* **junctions**: NamespaceJunction[]
+* **nfs3**: Nfs3Target
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
+* **unknown**: UnknownTarget
+### clfs
+#### Properties
+* **targetType**: 'clfs' (Required)
+
+### nfs3
+#### Properties
+* **targetType**: 'nfs3' (Required)
+
+### unknown
+#### Properties
+* **targetType**: 'unknown' (Required)
+
+
+## ClfsTarget
+### Properties
+* **target**: string
+
+## NamespaceJunction
+### Properties
+* **namespacePath**: string
+* **nfsExport**: string
+* **targetPath**: string
+
+## Nfs3Target
+### Properties
+* **target**: string
+* **usageModel**: string
+
+## UnknownTarget
+### Properties
+* **unknownMap**: Dictionary<string,String>
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## clfs
+### Properties
+* **targetType**: 'clfs' (Required)
+
+## nfs3
+### Properties
+* **targetType**: 'nfs3' (Required)
+
+## unknown
+### Properties
+* **targetType**: 'unknown' (Required)
 

@@ -1,36 +1,29 @@
 # Microsoft.Cdn @ 2015-06-01
 
-## Microsoft.Cdn/profiles/endpoints/customDomains
+## Microsoft.Cdn/profiles
 ### Properties
 * **apiVersion**: '2015-06-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CustomDomainPropertiesParameters
-* **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant)
+* **properties**: ProfilePropertiesCreateParameters
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant)
 
-## CustomDomainPropertiesParameters
+## ProfilePropertiesCreateParameters
 ### Properties
-* **hostName**: string (Required)
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly)
-* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' (ReadOnly)
+* **sku**: Sku (Required)
 
-## Microsoft.Cdn/profiles/endpoints/origins
+## Sku
 ### Properties
-* **apiVersion**: '2015-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: OriginPropertiesParameters
-* **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant)
+* **name**: 'Premium' | 'Standard'
 
-## OriginPropertiesParameters
-### Properties
-* **hostName**: string (Required)
-* **httpPort**: int
-* **httpsPort**: int
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly)
-* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Microsoft.Cdn/profiles/endpoints
 ### Properties
@@ -72,28 +65,35 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Cdn/profiles
+## Microsoft.Cdn/profiles/endpoints/customDomains
 ### Properties
 * **apiVersion**: '2015-06-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProfilePropertiesCreateParameters
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant)
+* **properties**: CustomDomainPropertiesParameters
+* **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant)
 
-## ProfilePropertiesCreateParameters
+## CustomDomainPropertiesParameters
 ### Properties
+* **hostName**: string (Required)
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly)
-* **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' (ReadOnly)
-* **sku**: Sku (Required)
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
 
-## Sku
+## Microsoft.Cdn/profiles/endpoints/origins
 ### Properties
-* **name**: 'Premium' | 'Standard'
+* **apiVersion**: '2015-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: OriginPropertiesParameters
+* **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant)
 
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
+## OriginPropertiesParameters
+### Properties
+* **hostName**: string (Required)
+* **httpPort**: int
+* **httpsPort**: int
+* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly)
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
 

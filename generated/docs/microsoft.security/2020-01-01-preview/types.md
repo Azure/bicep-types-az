@@ -18,7 +18,7 @@
 * **Discriminator**: authenticationType
 ### Base Properties
 * **authenticationProvisioningState**: 'Expired' | 'IncorrectPolicy' | 'Invalid' | 'Valid' (ReadOnly)
-* **grantedPermissions**: 'AWS::AWSSecurityHubReadOnlyAccess' | 'AWS::AmazonSSMAutomationRole' | 'AWS::SecurityAudit' | 'GCP::Security Center Admin Viewer'[] (ReadOnly)
+* **grantedPermissions**: 'AWS::AmazonSSMAutomationRole' | 'AWS::AWSSecurityHubReadOnlyAccess' | 'AWS::SecurityAudit' | 'GCP::Security Center Admin Viewer'[] (ReadOnly)
 ### awsAssumeRole
 #### Properties
 * **accountId**: string (ReadOnly)
@@ -35,9 +35,9 @@
 
 ### gcpCredentials
 #### Properties
+* **authenticationType**: 'gcpCredentials' (Required)
 * **authProviderX509CertUrl**: string (Required)
 * **authUri**: string (Required)
-* **authenticationType**: 'gcpCredentials' (Required)
 * **clientEmail**: string (Required)
 * **clientId**: string (Required)
 * **clientX509CertUrl**: string (Required)
@@ -65,9 +65,9 @@
 
 ## gcpCredentials
 ### Properties
+* **authenticationType**: 'gcpCredentials' (Required)
 * **authProviderX509CertUrl**: string (Required)
 * **authUri**: string (Required)
-* **authenticationType**: 'gcpCredentials' (Required)
 * **clientEmail**: string (Required)
 * **clientId**: string (Required)
 * **clientX509CertUrl**: string (Required)

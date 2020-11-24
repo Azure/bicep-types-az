@@ -41,6 +41,51 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.OperationalInsights/workspaces
+### Properties
+* **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **eTag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkspaceProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant)
+
+## WorkspaceProperties
+### Properties
+* **customerId**: string (ReadOnly)
+* **privateLinkScopedResources**: PrivateLinkScopedResource[] (ReadOnly)
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating'
+* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled'
+* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled'
+* **retentionInDays**: int
+* **sku**: WorkspaceSku
+* **workspaceCapping**: WorkspaceCapping
+
+## PrivateLinkScopedResource
+### Properties
+* **resourceId**: string
+* **scopeId**: string
+
+## WorkspaceSku
+### Properties
+* **capacityReservationLevel**: int
+* **lastSkuUpdate**: string (ReadOnly)
+* **maxCapacityReservationLevel**: int (ReadOnly)
+* **name**: 'CapacityReservation' | 'Free' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' (Required)
+
+## WorkspaceCapping
+### Properties
+* **dailyQuotaGb**: int
+* **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' (ReadOnly)
+* **quotaNextResetTime**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.OperationalInsights/workspaces/dataExports
 ### Properties
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant)
@@ -52,7 +97,6 @@
 
 ## DataExportProperties
 ### Properties
-* **allTables**: bool
 * **createdDate**: string
 * **dataExportId**: string
 * **destination**: Destination
@@ -172,51 +216,6 @@
 ### Properties
 * **id**: string (Required)
 * **key**: string (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.OperationalInsights/workspaces
-### Properties
-* **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant)
-
-## WorkspaceProperties
-### Properties
-* **customerId**: string (ReadOnly)
-* **privateLinkScopedResources**: PrivateLinkScopedResource[] (ReadOnly)
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating'
-* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled'
-* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled'
-* **retentionInDays**: int
-* **sku**: WorkspaceSku
-* **workspaceCapping**: WorkspaceCapping
-
-## PrivateLinkScopedResource
-### Properties
-* **resourceId**: string
-* **scopeId**: string
-
-## WorkspaceSku
-### Properties
-* **capacityReservationLevel**: int
-* **lastSkuUpdate**: string (ReadOnly)
-* **maxCapacityReservationLevel**: int (ReadOnly)
-* **name**: 'CapacityReservation' | 'Free' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' (Required)
-
-## WorkspaceCapping
-### Properties
-* **dailyQuotaGb**: int
-* **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' (ReadOnly)
-* **quotaNextResetTime**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Additional Properties

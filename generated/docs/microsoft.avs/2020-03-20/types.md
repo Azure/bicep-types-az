@@ -1,26 +1,5 @@
 # Microsoft.AVS @ 2020-03-20
 
-## Microsoft.AVS/privateClouds/clusters
-### Properties
-* **apiVersion**: '2020-03-20' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterProperties (Required)
-* **sku**: Sku (Required)
-* **type**: 'Microsoft.AVS/privateClouds/clusters' (ReadOnly, DeployTimeConstant)
-
-## ClusterProperties
-### Properties
-* **clusterId**: int (ReadOnly)
-* **clusterSize**: int
-* **hosts**: string[] (ReadOnly)
-* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
-
-## Sku
-### Properties
-* **name**: string (Required)
-
 ## Microsoft.AVS/privateClouds
 ### Properties
 * **apiVersion**: '2020-03-20' (ReadOnly, DeployTimeConstant)
@@ -83,7 +62,57 @@
 * **hosts**: string[] (ReadOnly)
 * **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
 
+## Sku
+### Properties
+* **name**: string (Required)
+
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.AVS/privateClouds/authorizations
+### Properties
+* **apiVersion**: '2020-03-20' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ExpressRouteAuthorizationProperties (ReadOnly)
+* **type**: 'Microsoft.AVS/privateClouds/authorizations' (ReadOnly, DeployTimeConstant)
+
+## ExpressRouteAuthorizationProperties
+### Properties
+* **expressRouteAuthorizationId**: string (ReadOnly)
+* **expressRouteAuthorizationKey**: string (ReadOnly)
+* **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+
+## Microsoft.AVS/privateClouds/clusters
+### Properties
+* **apiVersion**: '2020-03-20' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ClusterProperties (Required)
+* **sku**: Sku (Required)
+* **type**: 'Microsoft.AVS/privateClouds/clusters' (ReadOnly, DeployTimeConstant)
+
+## ClusterProperties
+### Properties
+* **clusterId**: int (ReadOnly)
+* **clusterSize**: int
+* **hosts**: string[] (ReadOnly)
+* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
+
+## Microsoft.AVS/privateClouds/hcxEnterpriseSites
+### Properties
+* **apiVersion**: '2020-03-20' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: HcxEnterpriseSiteProperties (ReadOnly)
+* **type**: 'Microsoft.AVS/privateClouds/hcxEnterpriseSites' (ReadOnly, DeployTimeConstant)
+
+## HcxEnterpriseSiteProperties
+### Properties
+* **activationKey**: string (ReadOnly)
+* **status**: 'Available' | 'Consumed' | 'Deactivated' | 'Deleted' (ReadOnly)
 

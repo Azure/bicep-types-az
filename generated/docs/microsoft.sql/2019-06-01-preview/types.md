@@ -33,6 +33,61 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.Sql/servers
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: ResourceIdentity
+* **kind**: string (ReadOnly)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServerProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant)
+
+## ResourceIdentity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'SystemAssigned'
+
+## ServerProperties
+### Properties
+* **administratorLogin**: string
+* **administratorLoginPassword**: string
+* **fullyQualifiedDomainName**: string (ReadOnly)
+* **minimalTlsVersion**: string
+* **privateEndpointConnections**: ServerPrivateEndpointConnection[] (ReadOnly)
+* **publicNetworkAccess**: 'Disabled' | 'Enabled'
+* **state**: string (ReadOnly)
+* **version**: string
+
+## ServerPrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly)
+* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: PrivateEndpointProperty
+* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionStateProperty
+* **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' (ReadOnly)
+
+## PrivateEndpointProperty
+### Properties
+* **id**: string
+
+## PrivateLinkServiceConnectionStateProperty
+### Properties
+* **actionsRequired**: 'None' (ReadOnly)
+* **description**: string (Required)
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Sql/servers/administrators
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
@@ -49,104 +104,6 @@
 * **login**: string (Required)
 * **sid**: string (Required)
 * **tenantId**: string
-
-## Microsoft.Sql/servers/databases/syncGroups/syncMembers
-### Properties
-* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SyncMemberProperties
-* **type**: 'Microsoft.Sql/servers/databases/syncGroups/syncMembers' (ReadOnly, DeployTimeConstant)
-
-## SyncMemberProperties
-### Properties
-* **databaseName**: string
-* **databaseType**: 'AzureSqlDatabase' | 'SqlServerDatabase'
-* **password**: string
-* **privateEndpointName**: string (ReadOnly)
-* **serverName**: string
-* **sqlServerDatabaseId**: string
-* **syncAgentId**: string
-* **syncDirection**: 'Bidirectional' | 'OneWayHubToMember' | 'OneWayMemberToHub'
-* **syncMemberAzureDatabaseResourceId**: string
-* **syncState**: 'DeProvisionFailed' | 'DeProvisioned' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'ProvisionFailed' | 'Provisioned' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' (ReadOnly)
-* **usePrivateLinkConnection**: bool
-* **userName**: string
-
-## Microsoft.Sql/servers/databases/syncGroups
-### Properties
-* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SyncGroupProperties
-* **type**: 'Microsoft.Sql/servers/databases/syncGroups' (ReadOnly, DeployTimeConstant)
-
-## SyncGroupProperties
-### Properties
-* **conflictResolutionPolicy**: 'HubWin' | 'MemberWin'
-* **hubDatabasePassword**: string
-* **hubDatabaseUserName**: string
-* **interval**: int
-* **lastSyncTime**: string (ReadOnly)
-* **privateEndpointName**: string (ReadOnly)
-* **schema**: SyncGroupSchema
-* **syncDatabaseId**: string
-* **syncState**: 'Error' | 'Good' | 'NotReady' | 'Progressing' | 'Warning' (ReadOnly)
-* **usePrivateLinkConnection**: bool
-
-## SyncGroupSchema
-### Properties
-* **masterSyncMemberName**: string
-* **tables**: SyncGroupSchemaTable[]
-
-## SyncGroupSchemaTable
-### Properties
-* **columns**: SyncGroupSchemaTableColumn[]
-* **quotedName**: string
-
-## SyncGroupSchemaTableColumn
-### Properties
-* **dataSize**: string
-* **dataType**: string
-* **quotedName**: string
-
-## Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers
-### Properties
-* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkloadClassifierProperties
-* **type**: 'Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers' (ReadOnly, DeployTimeConstant)
-
-## WorkloadClassifierProperties
-### Properties
-* **context**: string
-* **endTime**: string
-* **importance**: string
-* **label**: string
-* **memberName**: string (Required)
-* **startTime**: string
-
-## Microsoft.Sql/servers/databases/workloadGroups
-### Properties
-* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkloadGroupProperties
-* **type**: 'Microsoft.Sql/servers/databases/workloadGroups' (ReadOnly, DeployTimeConstant)
-
-## WorkloadGroupProperties
-### Properties
-* **importance**: string
-* **maxResourcePercent**: int (Required)
-* **maxResourcePercentPerRequest**: int
-* **minResourcePercent**: int (Required)
-* **minResourcePercentPerRequest**: int (Required)
-* **queryExecutionTimeout**: int
 
 ## Microsoft.Sql/servers/databases
 ### Properties
@@ -209,58 +166,101 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Sql/servers
+## Microsoft.Sql/servers/databases/syncGroups
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ResourceIdentity
-* **kind**: string (ReadOnly)
-* **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant)
+* **properties**: SyncGroupProperties
+* **type**: 'Microsoft.Sql/servers/databases/syncGroups' (ReadOnly, DeployTimeConstant)
 
-## ResourceIdentity
+## SyncGroupProperties
 ### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'SystemAssigned'
+* **conflictResolutionPolicy**: 'HubWin' | 'MemberWin'
+* **hubDatabasePassword**: string
+* **hubDatabaseUserName**: string
+* **interval**: int
+* **lastSyncTime**: string (ReadOnly)
+* **privateEndpointName**: string (ReadOnly)
+* **schema**: SyncGroupSchema
+* **syncDatabaseId**: string
+* **syncState**: 'Error' | 'Good' | 'NotReady' | 'Progressing' | 'Warning' (ReadOnly)
+* **usePrivateLinkConnection**: bool
 
-## ServerProperties
+## SyncGroupSchema
 ### Properties
-* **administratorLogin**: string
-* **administratorLoginPassword**: string
-* **fullyQualifiedDomainName**: string (ReadOnly)
-* **minimalTlsVersion**: string
-* **privateEndpointConnections**: ServerPrivateEndpointConnection[] (ReadOnly)
-* **publicNetworkAccess**: 'Disabled' | 'Enabled'
-* **state**: string (ReadOnly)
-* **version**: string
+* **masterSyncMemberName**: string
+* **tables**: SyncGroupSchemaTable[]
 
-## ServerPrivateEndpointConnection
+## SyncGroupSchemaTable
 ### Properties
-* **id**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
+* **columns**: SyncGroupSchemaTableColumn[]
+* **quotedName**: string
 
-## PrivateEndpointConnectionProperties
+## SyncGroupSchemaTableColumn
 ### Properties
-* **privateEndpoint**: PrivateEndpointProperty
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionStateProperty
-* **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' (ReadOnly)
+* **dataSize**: string
+* **dataType**: string
+* **quotedName**: string
 
-## PrivateEndpointProperty
+## Microsoft.Sql/servers/databases/syncGroups/syncMembers
 ### Properties
-* **id**: string
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SyncMemberProperties
+* **type**: 'Microsoft.Sql/servers/databases/syncGroups/syncMembers' (ReadOnly, DeployTimeConstant)
 
-## PrivateLinkServiceConnectionStateProperty
+## SyncMemberProperties
 ### Properties
-* **actionsRequired**: 'None' (ReadOnly)
-* **description**: string (Required)
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (Required)
+* **databaseName**: string
+* **databaseType**: 'AzureSqlDatabase' | 'SqlServerDatabase'
+* **password**: string
+* **privateEndpointName**: string (ReadOnly)
+* **serverName**: string
+* **sqlServerDatabaseId**: string
+* **syncAgentId**: string
+* **syncDirection**: 'Bidirectional' | 'OneWayHubToMember' | 'OneWayMemberToHub'
+* **syncMemberAzureDatabaseResourceId**: string
+* **syncState**: 'DeProvisioned' | 'DeProvisionFailed' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'Provisioned' | 'ProvisionFailed' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' (ReadOnly)
+* **usePrivateLinkConnection**: bool
+* **userName**: string
 
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
+## Microsoft.Sql/servers/databases/workloadGroups
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkloadGroupProperties
+* **type**: 'Microsoft.Sql/servers/databases/workloadGroups' (ReadOnly, DeployTimeConstant)
+
+## WorkloadGroupProperties
+### Properties
+* **importance**: string
+* **maxResourcePercent**: int (Required)
+* **maxResourcePercentPerRequest**: int
+* **minResourcePercent**: int (Required)
+* **minResourcePercentPerRequest**: int (Required)
+* **queryExecutionTimeout**: int
+
+## Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkloadClassifierProperties
+* **type**: 'Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers' (ReadOnly, DeployTimeConstant)
+
+## WorkloadClassifierProperties
+### Properties
+* **context**: string
+* **endTime**: string
+* **importance**: string
+* **label**: string
+* **memberName**: string (Required)
+* **startTime**: string
 

@@ -1,31 +1,5 @@
 # Microsoft.EventGrid @ 2020-04-01-preview
 
-## Microsoft.EventGrid/domains/privateEndpointConnections
-### Properties
-* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: 'Microsoft.EventGrid/domains/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **groupIds**: string[]
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: ConnectionState
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
-
-## PrivateEndpoint
-### Properties
-* **id**: string
-
-## ConnectionState
-### Properties
-* **actionsRequired**: string
-* **description**: string
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
-
 ## Microsoft.EventGrid/domains
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
@@ -43,7 +17,7 @@
 ### Properties
 * **principalId**: string
 * **tenantId**: string
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
 * **userAssignedIdentities**: Dictionary<string,UserIdentityProperties>
 
 ## Dictionary<string,UserIdentityProperties>
@@ -110,6 +84,23 @@
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: string (ReadOnly)
 
+## PrivateEndpointConnectionProperties
+### Properties
+* **groupIds**: string[]
+* **privateEndpoint**: PrivateEndpoint
+* **privateLinkServiceConnectionState**: ConnectionState
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
+
+## PrivateEndpoint
+### Properties
+* **id**: string
+
+## ConnectionState
+### Properties
+* **actionsRequired**: string
+* **description**: string
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
+
 ## ResourceSku
 ### Properties
 * **name**: 'Basic' | 'Premium'
@@ -117,6 +108,15 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.EventGrid/domains/privateEndpointConnections
+### Properties
+* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: 'Microsoft.EventGrid/domains/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.EventGrid/eventSubscriptions
 ### Properties
@@ -423,6 +423,27 @@
 * **eventTimeToLiveInMinutes**: int
 * **maxDeliveryAttempts**: int
 
+## Microsoft.EventGrid/partnerNamespaces
+### Properties
+* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PartnerNamespaceProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.EventGrid/partnerNamespaces' (ReadOnly, DeployTimeConstant)
+
+## PartnerNamespaceProperties
+### Properties
+* **endpoint**: string (ReadOnly)
+* **partnerRegistrationFullyQualifiedId**: string
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.EventGrid/partnerNamespaces/eventChannels
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
@@ -455,27 +476,6 @@
 ## EventChannelSource
 ### Properties
 * **source**: string
-
-## Microsoft.EventGrid/partnerNamespaces
-### Properties
-* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PartnerNamespaceProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.EventGrid/partnerNamespaces' (ReadOnly, DeployTimeConstant)
-
-## PartnerNamespaceProperties
-### Properties
-* **endpoint**: string (ReadOnly)
-* **partnerRegistrationFullyQualifiedId**: string
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## Microsoft.EventGrid/partnerRegistrations
 ### Properties
@@ -517,15 +517,6 @@
 * **properties**: EventSubscriptionProperties
 * **type**: 'Microsoft.EventGrid/partnerTopics/eventSubscriptions' (ReadOnly, DeployTimeConstant)
 
-## Microsoft.EventGrid/systemTopics/eventSubscriptions
-### Properties
-* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EventSubscriptionProperties
-* **type**: 'Microsoft.EventGrid/systemTopics/eventSubscriptions' (ReadOnly, DeployTimeConstant)
-
 ## Microsoft.EventGrid/systemTopics
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
@@ -548,14 +539,14 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.EventGrid/topics/privateEndpointConnections
+## Microsoft.EventGrid/systemTopics/eventSubscriptions
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: 'Microsoft.EventGrid/topics/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+* **properties**: EventSubscriptionProperties
+* **type**: 'Microsoft.EventGrid/systemTopics/eventSubscriptions' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.EventGrid/topics
 ### Properties
@@ -584,4 +575,13 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.EventGrid/topics/privateEndpointConnections
+### Properties
+* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: 'Microsoft.EventGrid/topics/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 

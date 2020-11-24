@@ -1,5 +1,58 @@
 # Microsoft.Batch @ 2018-12-01
 
+## Microsoft.Batch/batchAccounts
+### Properties
+* **apiVersion**: '2018-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BatchAccountCreateProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant)
+
+## BatchAccountCreateProperties
+### Properties
+* **accountEndpoint**: string (ReadOnly)
+* **activeJobAndJobScheduleQuota**: int (ReadOnly)
+* **autoStorage**: AutoStorageBaseProperties
+* **dedicatedCoreQuota**: int (ReadOnly)
+* **keyVaultReference**: KeyVaultReference
+* **lowPriorityCoreQuota**: int (ReadOnly)
+* **poolAllocationMode**: 'BatchService' | 'UserSubscription'
+* **poolQuota**: int (ReadOnly)
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly)
+
+## AutoStorageBaseProperties
+### Properties
+* **lastKeySync**: string (ReadOnly)
+* **storageAccountId**: string (Required)
+
+## KeyVaultReference
+### Properties
+* **id**: string (Required)
+* **url**: string (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Batch/batchAccounts/applications
+### Properties
+* **apiVersion**: '2018-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationProperties
+* **type**: 'Microsoft.Batch/batchAccounts/applications' (ReadOnly, DeployTimeConstant)
+
+## ApplicationProperties
+### Properties
+* **allowUpdates**: bool
+* **defaultVersion**: string
+* **displayName**: string
+
 ## Microsoft.Batch/batchAccounts/applications/versions
 ### Properties
 * **apiVersion**: '2018-12-01' (ReadOnly, DeployTimeConstant)
@@ -17,22 +70,6 @@
 * **state**: 'Active' | 'Pending' (ReadOnly)
 * **storageUrl**: string (ReadOnly)
 * **storageUrlExpiry**: string (ReadOnly)
-
-## Microsoft.Batch/batchAccounts/applications
-### Properties
-* **apiVersion**: '2018-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationProperties
-* **type**: 'Microsoft.Batch/batchAccounts/applications' (ReadOnly, DeployTimeConstant)
-
-## ApplicationProperties
-### Properties
-* **allowUpdates**: bool
-* **defaultVersion**: string
-* **displayName**: string
 
 ## Microsoft.Batch/batchAccounts/certificates
 ### Properties
@@ -298,41 +335,4 @@
 ## WindowsUserConfiguration
 ### Properties
 * **loginMode**: 'Batch' | 'Interactive'
-
-## Microsoft.Batch/batchAccounts
-### Properties
-* **apiVersion**: '2018-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BatchAccountCreateProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant)
-
-## BatchAccountCreateProperties
-### Properties
-* **accountEndpoint**: string (ReadOnly)
-* **activeJobAndJobScheduleQuota**: int (ReadOnly)
-* **autoStorage**: AutoStorageBaseProperties
-* **dedicatedCoreQuota**: int (ReadOnly)
-* **keyVaultReference**: KeyVaultReference
-* **lowPriorityCoreQuota**: int (ReadOnly)
-* **poolAllocationMode**: 'BatchService' | 'UserSubscription'
-* **poolQuota**: int (ReadOnly)
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly)
-
-## AutoStorageBaseProperties
-### Properties
-* **lastKeySync**: string (ReadOnly)
-* **storageAccountId**: string (Required)
-
-## KeyVaultReference
-### Properties
-* **id**: string (Required)
-* **url**: string (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

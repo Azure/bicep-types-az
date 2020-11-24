@@ -1,5 +1,25 @@
 # Microsoft.StorageSync @ 2018-04-02
 
+## Microsoft.StorageSync/storageSyncServices
+### Properties
+* **apiVersion**: '2018-04-02' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: StorageSyncServiceProperties (ReadOnly)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant)
+
+## StorageSyncServiceProperties
+### Properties
+* **storageSyncServiceStatus**: int (ReadOnly)
+* **storageSyncServiceUid**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.StorageSync/storageSyncServices/registeredServers
 ### Properties
 * **apiVersion**: '2018-04-02' (ReadOnly, DeployTimeConstant)
@@ -31,6 +51,21 @@
 * **serverRole**: string
 * **serviceLocation**: string (ReadOnly)
 * **storageSyncServiceUid**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.StorageSync/storageSyncServices/syncGroups
+### Properties
+* **apiVersion**: '2018-04-02' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (WriteOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: any
+* **tags**: Dictionary<string,String> (WriteOnly)
+* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -85,41 +120,6 @@
 * **serverResourceId**: string
 * **syncStatus**: any (ReadOnly)
 * **volumeFreeSpacePercent**: int
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.StorageSync/storageSyncServices/syncGroups
-### Properties
-* **apiVersion**: '2018-04-02' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (WriteOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: any
-* **tags**: Dictionary<string,String> (WriteOnly)
-* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.StorageSync/storageSyncServices
-### Properties
-* **apiVersion**: '2018-04-02' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageSyncServiceProperties (ReadOnly)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant)
-
-## StorageSyncServiceProperties
-### Properties
-* **storageSyncServiceStatus**: int (ReadOnly)
-* **storageSyncServiceUid**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Additional Properties

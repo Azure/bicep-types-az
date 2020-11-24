@@ -11,7 +11,7 @@
 
 ## SecurityAssessmentMetadataProperties
 ### Properties
-* **assessmentType**: 'BuiltIn' | 'CustomPolicy' | 'CustomerManaged' | 'VerifiedPartner' (Required)
+* **assessmentType**: 'BuiltIn' | 'CustomerManaged' | 'CustomPolicy' | 'VerifiedPartner' (Required)
 * **category**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking'[]
 * **description**: string
 * **displayName**: string (Required)
@@ -133,8 +133,8 @@
 * **path**: string
 * **publisherInfo**: PublisherInfo
 * **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature'
-* **userSids**: string[]
 * **usernames**: UserRecommendation[]
+* **userSids**: string[]
 
 ## PublisherInfo
 ### Properties

@@ -15,8 +15,8 @@
 ## ApplicationInsightsComponentProperties
 ### Properties
 * **AppId**: string (ReadOnly)
-* **ApplicationId**: string (ReadOnly)
 * **Application_Type**: 'other' | 'web' (Required)
+* **ApplicationId**: string (ReadOnly)
 * **ConnectionString**: string (ReadOnly)
 * **CreationDate**: string (ReadOnly)
 * **DisableIpMasking**: bool
@@ -28,14 +28,14 @@
 * **InstrumentationKey**: string (ReadOnly)
 * **LaMigrationDate**: string (ReadOnly)
 * **PrivateLinkScopedResources**: PrivateLinkScopedResource[] (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled'
+* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled'
 * **Request_Source**: 'rest'
 * **RetentionInDays**: int (ReadOnly)
 * **SamplingPercentage**: int
 * **TenantId**: string (ReadOnly)
 * **WorkspaceResourceId**: string (Required)
-* **provisioningState**: string (ReadOnly)
-* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled'
-* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled'
 
 ## PrivateLinkScopedResource
 ### Properties

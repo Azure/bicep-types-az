@@ -1,20 +1,5 @@
 # Microsoft.Management @ 2020-02-01
 
-## Microsoft.Management/managementGroups/settings
-### Properties
-* **apiVersion**: '2020-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateOrUpdateSettingsProperties
-* **type**: 'Microsoft.Management/managementGroups/settings' (ReadOnly, DeployTimeConstant)
-
-## CreateOrUpdateSettingsProperties
-### Properties
-* **defaultManagementGroup**: string
-* **requireAuthorizationForGroupCreation**: bool
-* **tenantId**: string (ReadOnly)
-
 ## Microsoft.Management/managementGroups
 ### Properties
 * **apiVersion**: '2020-02-01' (ReadOnly, DeployTimeConstant)
@@ -59,4 +44,19 @@
 ### Properties
 * **displayName**: string (ReadOnly)
 * **name**: string (ReadOnly)
+
+## Microsoft.Management/managementGroups/settings
+### Properties
+* **apiVersion**: '2020-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CreateOrUpdateSettingsProperties
+* **type**: 'Microsoft.Management/managementGroups/settings' (ReadOnly, DeployTimeConstant)
+
+## CreateOrUpdateSettingsProperties
+### Properties
+* **defaultManagementGroup**: string
+* **requireAuthorizationForGroupCreation**: bool
+* **tenantId**: string (ReadOnly)
 

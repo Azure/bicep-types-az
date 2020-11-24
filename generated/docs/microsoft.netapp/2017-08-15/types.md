@@ -1,22 +1,49 @@
 # Microsoft.NetApp @ 2017-08-15
 
-## Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots
+## Microsoft.NetApp/netAppAccounts
 ### Properties
 * **apiVersion**: '2017-08-15' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: snapshotProperties (Required)
+* **properties**: accountProperties (Required)
 * **tags**: any
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
 
-## snapshotProperties
+## accountProperties
 ### Properties
-* **creationDate**: string (ReadOnly)
-* **fileSystemId**: string (Required)
+* **activeDirectories**: activeDirectory[]
 * **provisioningState**: string (ReadOnly)
-* **snapshotId**: string (ReadOnly)
+
+## activeDirectory
+### Properties
+* **activeDirectoryId**: string
+* **dNS**: string
+* **domain**: string
+* **organizationalUnit**: string
+* **password**: string
+* **sMBServerName**: string
+* **status**: string
+* **username**: string
+
+## Microsoft.NetApp/netAppAccounts/capacityPools
+### Properties
+* **apiVersion**: '2017-08-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: poolProperties (Required)
+* **tags**: any
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
+
+## poolProperties
+### Properties
+* **poolId**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra'
+* **size**: int
 
 ## Microsoft.NetApp/netAppAccounts/capacityPools/volumes
 ### Properties
@@ -53,48 +80,21 @@
 * **unixReadOnly**: bool
 * **unixReadWrite**: bool
 
-## Microsoft.NetApp/netAppAccounts/capacityPools
+## Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots
 ### Properties
 * **apiVersion**: '2017-08-15' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: poolProperties (Required)
+* **properties**: snapshotProperties (Required)
 * **tags**: any
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
 
-## poolProperties
+## snapshotProperties
 ### Properties
-* **poolId**: string (ReadOnly)
+* **creationDate**: string (ReadOnly)
+* **fileSystemId**: string (Required)
 * **provisioningState**: string (ReadOnly)
-* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra'
-* **size**: int
-
-## Microsoft.NetApp/netAppAccounts
-### Properties
-* **apiVersion**: '2017-08-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: accountProperties (Required)
-* **tags**: any
-* **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
-
-## accountProperties
-### Properties
-* **activeDirectories**: activeDirectory[]
-* **provisioningState**: string (ReadOnly)
-
-## activeDirectory
-### Properties
-* **activeDirectoryId**: string
-* **dNS**: string
-* **domain**: string
-* **organizationalUnit**: string
-* **password**: string
-* **sMBServerName**: string
-* **status**: string
-* **username**: string
+* **snapshotId**: string (ReadOnly)
 

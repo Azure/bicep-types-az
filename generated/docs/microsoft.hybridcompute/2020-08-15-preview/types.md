@@ -1,47 +1,5 @@
 # Microsoft.HybridCompute @ 2020-08-15-preview
 
-## Microsoft.HybridCompute/machines/extensions
-### Properties
-* **apiVersion**: '2020-08-15-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:13_properties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant)
-
-## schemas:13_properties
-### Properties
-* **autoUpgradeMinorVersion**: bool
-* **forceUpdateTag**: string
-* **instanceView**: schemas:15_instanceView
-* **protectedSettings**: any
-* **provisioningState**: string (ReadOnly)
-* **publisher**: string
-* **settings**: any
-* **type**: string
-* **typeHandlerVersion**: string
-
-## schemas:15_instanceView
-### Properties
-* **name**: string
-* **status**: schemas:17_status
-* **type**: string
-* **typeHandlerVersion**: string
-
-## schemas:17_status
-### Properties
-* **code**: string
-* **displayStatus**: string
-* **level**: 'Error' | 'Info' | 'Warning'
-* **message**: string
-* **time**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Microsoft.HybridCompute/machines
 ### Properties
 * **apiVersion**: '2020-08-15-preview' (ReadOnly, DeployTimeConstant)
@@ -97,6 +55,14 @@
 * **type**: string
 * **typeHandlerVersion**: string
 
+## schemas:17_status
+### Properties
+* **code**: string
+* **displayStatus**: string
+* **level**: 'Error' | 'Info' | 'Warning'
+* **message**: string
+* **time**: string
+
 ## locationData
 ### Properties
 * **city**: string
@@ -112,44 +78,39 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections
+## Microsoft.HybridCompute/machines/extensions
 ### Properties
 * **apiVersion**: '2020-08-15-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: 'Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+* **properties**: schemas:13_properties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant)
 
-## PrivateEndpointConnectionProperties
+## schemas:13_properties
 ### Properties
-* **privateEndpoint**: PrivateEndpointProperty
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionStateProperty
+* **autoUpgradeMinorVersion**: bool
+* **forceUpdateTag**: string
+* **instanceView**: schemas:15_instanceView
+* **protectedSettings**: any
 * **provisioningState**: string (ReadOnly)
+* **publisher**: string
+* **settings**: any
+* **type**: string
+* **typeHandlerVersion**: string
 
-## PrivateEndpointProperty
+## schemas:15_instanceView
 ### Properties
-* **id**: string
+* **name**: string
+* **status**: schemas:17_status
+* **type**: string
+* **typeHandlerVersion**: string
 
-## PrivateLinkServiceConnectionStateProperty
-### Properties
-* **actionsRequired**: string (ReadOnly)
-* **description**: string (Required)
-* **status**: string (Required)
-
-## Microsoft.HybridCompute/privateLinkScopes/scopedResources
-### Properties
-* **apiVersion**: '2020-08-15-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ScopedResourceProperties
-* **type**: 'Microsoft.HybridCompute/privateLinkScopes/scopedResources' (ReadOnly, DeployTimeConstant)
-
-## ScopedResourceProperties
-### Properties
-* **linkedResourceId**: string
-* **provisioningState**: string (ReadOnly)
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Microsoft.HybridCompute/privateLinkScopes
 ### Properties
@@ -175,7 +136,46 @@
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: string (ReadOnly)
 
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: PrivateEndpointProperty
+* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionStateProperty
+* **provisioningState**: string (ReadOnly)
+
+## PrivateEndpointProperty
+### Properties
+* **id**: string
+
+## PrivateLinkServiceConnectionStateProperty
+### Properties
+* **actionsRequired**: string (ReadOnly)
+* **description**: string (Required)
+* **status**: string (Required)
+
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections
+### Properties
+* **apiVersion**: '2020-08-15-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: 'Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.HybridCompute/privateLinkScopes/scopedResources
+### Properties
+* **apiVersion**: '2020-08-15-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ScopedResourceProperties
+* **type**: 'Microsoft.HybridCompute/privateLinkScopes/scopedResources' (ReadOnly, DeployTimeConstant)
+
+## ScopedResourceProperties
+### Properties
+* **linkedResourceId**: string
+* **provisioningState**: string (ReadOnly)
 

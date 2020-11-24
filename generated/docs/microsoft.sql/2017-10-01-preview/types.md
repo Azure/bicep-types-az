@@ -37,23 +37,6 @@
 * **failoverPolicy**: 'Automatic' | 'Manual' (Required)
 * **failoverWithDataLossGracePeriodMinutes**: int
 
-## Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines
-### Properties
-* **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'default' | 'master' (Required, DeployTimeConstant)
-* **properties**: DatabaseVulnerabilityAssessmentRuleBaselineProperties
-* **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant)
-
-## DatabaseVulnerabilityAssessmentRuleBaselineProperties
-### Properties
-* **baselineResults**: DatabaseVulnerabilityAssessmentRuleBaselineItem[] (Required)
-
-## DatabaseVulnerabilityAssessmentRuleBaselineItem
-### Properties
-* **result**: string[] (Required)
-
 ## Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments
 ### Properties
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant)
@@ -72,9 +55,26 @@
 
 ## VulnerabilityAssessmentRecurringScansProperties
 ### Properties
-* **emailSubscriptionAdmins**: bool
 * **emails**: string[]
+* **emailSubscriptionAdmins**: bool
 * **isEnabled**: bool
+
+## Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines
+### Properties
+* **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'default' | 'master' (Required, DeployTimeConstant)
+* **properties**: DatabaseVulnerabilityAssessmentRuleBaselineProperties
+* **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant)
+
+## DatabaseVulnerabilityAssessmentRuleBaselineProperties
+### Properties
+* **baselineResults**: DatabaseVulnerabilityAssessmentRuleBaselineItem[] (Required)
+
+## DatabaseVulnerabilityAssessmentRuleBaselineItem
+### Properties
+* **result**: string[] (Required)
 
 ## Microsoft.Sql/managedInstances/encryptionProtector
 ### Properties
@@ -109,19 +109,6 @@
 * **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required)
 * **thumbprint**: string (ReadOnly)
 * **uri**: string
-
-## Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies
-### Properties
-* **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BackupShortTermRetentionPolicyProperties
-* **type**: 'Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
-
-## BackupShortTermRetentionPolicyProperties
-### Properties
-* **retentionDays**: int
 
 ## Microsoft.Sql/servers/databases
 ### Properties
@@ -182,6 +169,19 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies
+### Properties
+* **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BackupShortTermRetentionPolicyProperties
+* **type**: 'Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
+
+## BackupShortTermRetentionPolicyProperties
+### Properties
+* **retentionDays**: int
 
 ## Microsoft.Sql/servers/elasticPools
 ### Properties

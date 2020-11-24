@@ -23,8 +23,8 @@
 * **path**: string (WriteOnly)
 * **publisherInfo**: PublisherInfo (WriteOnly)
 * **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature' (WriteOnly)
-* **userSids**: string[] (WriteOnly)
 * **usernames**: UserRecommendation[] (WriteOnly)
+* **userSids**: string[] (WriteOnly)
 
 ## PublisherInfo
 ### Properties

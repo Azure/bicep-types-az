@@ -18,6 +18,62 @@
 ### Properties
 * **serverId**: string (Required)
 
+## Microsoft.Sql/managedInstances
+### Properties
+* **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: ResourceIdentity
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ManagedInstanceProperties
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Sql/managedInstances' (ReadOnly, DeployTimeConstant)
+
+## ResourceIdentity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'SystemAssigned'
+
+## ManagedInstanceProperties
+### Properties
+* **administratorLogin**: string
+* **administratorLoginPassword**: string
+* **collation**: string
+* **dnsZone**: string (ReadOnly)
+* **dnsZonePartner**: string
+* **fullyQualifiedDomainName**: string (ReadOnly)
+* **instancePoolId**: string
+* **licenseType**: 'BasePrice' | 'LicenseIncluded'
+* **maintenanceConfigurationId**: string
+* **managedInstanceCreateMode**: 'Default' | 'PointInTimeRestore'
+* **minimalTlsVersion**: string
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
+* **proxyOverride**: 'Default' | 'Proxy' | 'Redirect'
+* **publicDataEndpointEnabled**: bool
+* **restorePointInTime**: string
+* **sourceManagedInstanceId**: string
+* **state**: string (ReadOnly)
+* **storageAccountType**: 'GRS' | 'LRS' | 'ZRS'
+* **storageSizeInGB**: int
+* **subnetId**: string
+* **timezoneId**: string
+* **vCores**: int
+
+## Sku
+### Properties
+* **capacity**: int
+* **family**: string
+* **name**: string (Required)
+* **size**: string
+* **tier**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Sql/managedInstances/azureADOnlyAuthentications
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
@@ -80,62 +136,6 @@
 * **creationTime**: string (ReadOnly)
 * **state**: 'Disabled' | 'Enabled' (Required)
 
-## Microsoft.Sql/managedInstances
-### Properties
-* **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ResourceIdentity
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedInstanceProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Sql/managedInstances' (ReadOnly, DeployTimeConstant)
-
-## ResourceIdentity
-### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'SystemAssigned'
-
-## ManagedInstanceProperties
-### Properties
-* **administratorLogin**: string
-* **administratorLoginPassword**: string
-* **collation**: string
-* **dnsZone**: string (ReadOnly)
-* **dnsZonePartner**: string
-* **fullyQualifiedDomainName**: string (ReadOnly)
-* **instancePoolId**: string
-* **licenseType**: 'BasePrice' | 'LicenseIncluded'
-* **maintenanceConfigurationId**: string
-* **managedInstanceCreateMode**: 'Default' | 'PointInTimeRestore'
-* **minimalTlsVersion**: string
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
-* **proxyOverride**: 'Default' | 'Proxy' | 'Redirect'
-* **publicDataEndpointEnabled**: bool
-* **restorePointInTime**: string
-* **sourceManagedInstanceId**: string
-* **state**: string (ReadOnly)
-* **storageAccountType**: 'GRS' | 'LRS' | 'ZRS'
-* **storageSizeInGB**: int
-* **subnetId**: string
-* **timezoneId**: string
-* **vCores**: int
-
-## Sku
-### Properties
-* **capacity**: int
-* **family**: string
-* **name**: string (Required)
-* **size**: string
-* **tier**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Microsoft.Sql/servers/azureADOnlyAuthentications
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
@@ -148,20 +148,6 @@
 ## AzureADOnlyAuthProperties
 ### Properties
 * **azureADOnlyAuthentication**: bool (Required)
-
-## Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies
-### Properties
-* **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BackupShortTermRetentionPolicyProperties
-* **type**: 'Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
-
-## BackupShortTermRetentionPolicyProperties
-### Properties
-* **diffBackupIntervalInHours**: int
-* **retentionDays**: int
 
 ## Microsoft.Sql/servers/databases/securityAlertPolicies
 ### Properties

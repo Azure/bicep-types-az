@@ -1,5 +1,44 @@
 # Microsoft.DataFactory @ 2017-09-01-preview
 
+## Microsoft.DataFactory/factories
+### Properties
+* **apiVersion**: '2017-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: FactoryIdentity
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: FactoryProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DataFactory/factories' (ReadOnly, DeployTimeConstant)
+
+## FactoryIdentity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: string (Required)
+
+## FactoryProperties
+### Properties
+* **createTime**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **version**: string (ReadOnly)
+* **vstsConfiguration**: FactoryVSTSConfiguration
+
+## FactoryVSTSConfiguration
+### Properties
+* **accountName**: string
+* **collaborationBranch**: string
+* **lastCommitId**: string
+* **projectName**: string
+* **repositoryName**: string
+* **rootFolder**: string
+* **tenantId**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.DataFactory/factories/datasets
 ### Properties
 * **apiVersion**: '2017-09-01-preview' (ReadOnly, DeployTimeConstant)
@@ -821,6 +860,11 @@
 * **type**: 'AzureBatch' (Required)
 * **typeProperties**: AzureBatchLinkedServiceTypeProperties (Required)
 
+### AzureDatabricks
+#### Properties
+* **type**: 'AzureDatabricks' (Required)
+* **typeProperties**: AzureDatabricksLinkedServiceTypeProperties (Required)
+
 ### AzureDataLakeAnalytics
 #### Properties
 * **type**: 'AzureDataLakeAnalytics' (Required)
@@ -830,11 +874,6 @@
 #### Properties
 * **type**: 'AzureDataLakeStore' (Required)
 * **typeProperties**: AzureDataLakeStoreLinkedServiceTypeProperties (Required)
-
-### AzureDatabricks
-#### Properties
-* **type**: 'AzureDatabricks' (Required)
-* **typeProperties**: AzureDatabricksLinkedServiceTypeProperties (Required)
 
 ### AzureKeyVault
 #### Properties
@@ -861,15 +900,15 @@
 * **type**: 'AzureSearch' (Required)
 * **typeProperties**: AzureSearchLinkedServiceTypeProperties (Required)
 
-### AzureSqlDW
-#### Properties
-* **type**: 'AzureSqlDW' (Required)
-* **typeProperties**: AzureSqlDWLinkedServiceTypeProperties (Required)
-
 ### AzureSqlDatabase
 #### Properties
 * **type**: 'AzureSqlDatabase' (Required)
 * **typeProperties**: AzureSqlDatabaseLinkedServiceTypeProperties (Required)
+
+### AzureSqlDW
+#### Properties
+* **type**: 'AzureSqlDW' (Required)
+* **typeProperties**: AzureSqlDWLinkedServiceTypeProperties (Required)
 
 ### AzureStorage
 #### Properties
@@ -946,6 +985,11 @@
 * **type**: 'HBase' (Required)
 * **typeProperties**: HBaseLinkedServiceTypeProperties (Required)
 
+### Hdfs
+#### Properties
+* **type**: 'Hdfs' (Required)
+* **typeProperties**: HdfsLinkedServiceTypeProperties (Required)
+
 ### HDInsight
 #### Properties
 * **type**: 'HDInsight' (Required)
@@ -955,11 +999,6 @@
 #### Properties
 * **type**: 'HDInsightOnDemand' (Required)
 * **typeProperties**: HDInsightOnDemandLinkedServiceTypeProperties (Required)
-
-### Hdfs
-#### Properties
-* **type**: 'Hdfs' (Required)
-* **typeProperties**: HdfsLinkedServiceTypeProperties (Required)
 
 ### Hive
 #### Properties
@@ -1246,6 +1285,26 @@
 * **linkedServiceName**: LinkedServiceReference (Required)
 * **poolName**: any (Required)
 
+## AzureDatabricks
+### Properties
+* **type**: 'AzureDatabricks' (Required)
+* **typeProperties**: AzureDatabricksLinkedServiceTypeProperties (Required)
+
+## AzureDatabricksLinkedServiceTypeProperties
+### Properties
+* **accessToken**: SecretBase (Required)
+* **domain**: any (Required)
+* **encryptedCredential**: any
+* **existingClusterId**: any
+* **newClusterNodeType**: any
+* **newClusterNumOfWorker**: any
+* **newClusterSparkConf**: Dictionary<string,Object>
+* **newClusterVersion**: any
+
+## Dictionary<string,Object>
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## AzureDataLakeAnalytics
 ### Properties
 * **type**: 'AzureDataLakeAnalytics' (Required)
@@ -1277,26 +1336,6 @@
 * **servicePrincipalKey**: SecretBase
 * **subscriptionId**: any
 * **tenant**: any
-
-## AzureDatabricks
-### Properties
-* **type**: 'AzureDatabricks' (Required)
-* **typeProperties**: AzureDatabricksLinkedServiceTypeProperties (Required)
-
-## AzureDatabricksLinkedServiceTypeProperties
-### Properties
-* **accessToken**: SecretBase (Required)
-* **domain**: any (Required)
-* **encryptedCredential**: any
-* **existingClusterId**: any
-* **newClusterNodeType**: any
-* **newClusterNumOfWorker**: any
-* **newClusterSparkConf**: Dictionary<string,Object>
-* **newClusterVersion**: any
-
-## Dictionary<string,Object>
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## AzureKeyVault
 ### Properties
@@ -1353,12 +1392,12 @@
 * **key**: SecretBase
 * **url**: any (Required)
 
-## AzureSqlDW
+## AzureSqlDatabase
 ### Properties
-* **type**: 'AzureSqlDW' (Required)
-* **typeProperties**: AzureSqlDWLinkedServiceTypeProperties (Required)
+* **type**: 'AzureSqlDatabase' (Required)
+* **typeProperties**: AzureSqlDatabaseLinkedServiceTypeProperties (Required)
 
-## AzureSqlDWLinkedServiceTypeProperties
+## AzureSqlDatabaseLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any (Required)
 * **encryptedCredential**: any
@@ -1366,12 +1405,12 @@
 * **servicePrincipalKey**: SecretBase
 * **tenant**: any
 
-## AzureSqlDatabase
+## AzureSqlDW
 ### Properties
-* **type**: 'AzureSqlDatabase' (Required)
-* **typeProperties**: AzureSqlDatabaseLinkedServiceTypeProperties (Required)
+* **type**: 'AzureSqlDW' (Required)
+* **typeProperties**: AzureSqlDWLinkedServiceTypeProperties (Required)
 
-## AzureSqlDatabaseLinkedServiceTypeProperties
+## AzureSqlDWLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any (Required)
 * **encryptedCredential**: any
@@ -1577,6 +1616,19 @@
 * **trustedCertPath**: any
 * **username**: any
 
+## Hdfs
+### Properties
+* **type**: 'Hdfs' (Required)
+* **typeProperties**: HdfsLinkedServiceTypeProperties (Required)
+
+## HdfsLinkedServiceTypeProperties
+### Properties
+* **authenticationType**: any
+* **encryptedCredential**: any
+* **password**: SecretBase
+* **url**: any (Required)
+* **userName**: any
+
 ## HDInsight
 ### Properties
 * **type**: 'HDInsight' (Required)
@@ -1629,19 +1681,6 @@
 * **yarnConfiguration**: any
 * **zookeeperNodeSize**: any
 
-## Hdfs
-### Properties
-* **type**: 'Hdfs' (Required)
-* **typeProperties**: HdfsLinkedServiceTypeProperties (Required)
-
-## HdfsLinkedServiceTypeProperties
-### Properties
-* **authenticationType**: any
-* **encryptedCredential**: any
-* **password**: SecretBase
-* **url**: any (Required)
-* **userName**: any
-
 ## Hive
 ### Properties
 * **type**: 'Hive' (Required)
@@ -1663,8 +1702,8 @@
 * **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL'
 * **trustedCertPath**: any
 * **useNativeQuery**: any
-* **useSystemTrustStore**: any
 * **username**: any
+* **useSystemTrustStore**: any
 * **zooKeeperNameSpace**: any
 
 ## HttpServer
@@ -1715,8 +1754,8 @@
 * **password**: SecretBase
 * **port**: any
 * **trustedCertPath**: any
-* **useSystemTrustStore**: any
 * **username**: any
+* **useSystemTrustStore**: any
 
 ## Jira
 ### Properties
@@ -1781,8 +1820,8 @@
 ## MongoDbLinkedServiceTypeProperties
 ### Properties
 * **allowSelfSignedServerCert**: any
-* **authSource**: any
 * **authenticationType**: 'Anonymous' | 'Basic'
+* **authSource**: any
 * **databaseName**: any (Required)
 * **enableSsl**: any
 * **encryptedCredential**: any
@@ -1880,8 +1919,8 @@
 * **password**: SecretBase
 * **port**: any
 * **trustedCertPath**: any
-* **useSystemTrustStore**: any
 * **username**: any
+* **useSystemTrustStore**: any
 
 ## PostgreSql
 ### Properties
@@ -1912,8 +1951,8 @@
 * **serverVersion**: any (Required)
 * **timeZoneID**: any
 * **trustedCertPath**: any
-* **useSystemTrustStore**: any
 * **username**: any
+* **useSystemTrustStore**: any
 
 ## QuickBooks
 ### Properties
@@ -2094,8 +2133,8 @@
 * **serverType**: 'SharkServer' | 'SharkServer2' | 'SparkThriftServer'
 * **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL'
 * **trustedCertPath**: any
-* **useSystemTrustStore**: any
 * **username**: any
+* **useSystemTrustStore**: any
 
 ## SqlServer
 ### Properties
@@ -2339,43 +2378,4 @@
 * **name**: string
 * **referenceName**: string (Required)
 * **type**: string (Required)
-
-## Microsoft.DataFactory/factories
-### Properties
-* **apiVersion**: '2017-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: FactoryIdentity
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: FactoryProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DataFactory/factories' (ReadOnly, DeployTimeConstant)
-
-## FactoryIdentity
-### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: string (Required)
-
-## FactoryProperties
-### Properties
-* **createTime**: string (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **version**: string (ReadOnly)
-* **vstsConfiguration**: FactoryVSTSConfiguration
-
-## FactoryVSTSConfiguration
-### Properties
-* **accountName**: string
-* **collaborationBranch**: string
-* **lastCommitId**: string
-* **projectName**: string
-* **repositoryName**: string
-* **rootFolder**: string
-* **tenantId**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

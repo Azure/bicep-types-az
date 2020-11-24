@@ -7,6 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ScopeMapProperties
+* **systemData**: SystemData (ReadOnly)
 * **type**: 'Microsoft.ContainerRegistry/registries/scopeMaps' (ReadOnly, DeployTimeConstant)
 
 ## ScopeMapProperties
@@ -17,6 +18,15 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **type**: string (ReadOnly)
 
+## SystemData
+### Properties
+* **createdAt**: string
+* **createdBy**: string
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+* **lastModifiedAt**: string
+* **lastModifiedBy**: string
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+
 ## Microsoft.ContainerRegistry/registries/tokens
 ### Properties
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
@@ -24,6 +34,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: TokenProperties
+* **systemData**: SystemData (ReadOnly)
 * **type**: 'Microsoft.ContainerRegistry/registries/tokens' (ReadOnly, DeployTimeConstant)
 
 ## TokenProperties

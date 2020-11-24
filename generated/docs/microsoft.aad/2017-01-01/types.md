@@ -14,6 +14,7 @@
 
 ## DomainServiceProperties
 ### Properties
+* **deploymentId**: string (ReadOnly)
 * **domainControllerIpAddress**: string[] (ReadOnly)
 * **domainName**: string
 * **domainSecuritySettings**: DomainSecuritySettings

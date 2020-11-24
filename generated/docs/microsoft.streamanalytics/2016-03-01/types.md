@@ -1,13 +1,44 @@
 # Microsoft.StreamAnalytics @ 2016-03-01
 
-## Microsoft.StreamAnalytics/streamingjobs/functions
+## Microsoft.StreamAnalytics/streamingjobs
 ### Properties
 * **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: StreamingJobProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.StreamAnalytics/streamingjobs' (ReadOnly, DeployTimeConstant)
+
+## StreamingJobProperties
+### Properties
+* **compatibilityLevel**: '1.0'
+* **createdDate**: string (ReadOnly)
+* **dataLocale**: string
+* **etag**: string (ReadOnly)
+* **eventsLateArrivalMaxDelayInSeconds**: int
+* **eventsOutOfOrderMaxDelayInSeconds**: int
+* **eventsOutOfOrderPolicy**: 'Adjust' | 'Drop'
+* **functions**: Function[]
+* **inputs**: Input[]
+* **jobId**: string (ReadOnly)
+* **jobState**: string (ReadOnly)
+* **lastOutputEventTime**: string (ReadOnly)
+* **outputErrorPolicy**: 'Drop' | 'Stop'
+* **outputs**: Output[]
+* **outputStartMode**: 'CustomTime' | 'JobStartTime' | 'LastOutputEventTime'
+* **outputStartTime**: string
+* **provisioningState**: string (ReadOnly)
+* **sku**: Sku
+* **transformation**: Transformation
+
+## Function
+### Properties
+* **id**: string (ReadOnly)
+* **name**: string
 * **properties**: FunctionProperties
-* **type**: 'Microsoft.StreamAnalytics/streamingjobs/functions' (ReadOnly, DeployTimeConstant)
+* **type**: string (ReadOnly)
 
 ## FunctionProperties
 * **Discriminator**: type
@@ -91,14 +122,12 @@
 ### Properties
 * **dataType**: string
 
-## Microsoft.StreamAnalytics/streamingjobs/inputs
+## Input
 ### Properties
-* **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **id**: string (ReadOnly)
+* **name**: string
 * **properties**: InputProperties
-* **type**: 'Microsoft.StreamAnalytics/streamingjobs/inputs' (ReadOnly, DeployTimeConstant)
+* **type**: string (ReadOnly)
 
 ## InputProperties
 * **Discriminator**: type
@@ -254,14 +283,12 @@
 * **sharedAccessPolicyKey**: string
 * **sharedAccessPolicyName**: string
 
-## Microsoft.StreamAnalytics/streamingjobs/outputs
+## Output
 ### Properties
-* **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **id**: string (ReadOnly)
+* **name**: string
 * **properties**: OutputProperties
-* **type**: 'Microsoft.StreamAnalytics/streamingjobs/outputs' (ReadOnly, DeployTimeConstant)
+* **type**: string (ReadOnly)
 
 ## OutputProperties
 ### Properties
@@ -418,75 +445,6 @@
 * **tokenUserDisplayName**: string
 * **tokenUserPrincipalName**: string
 
-## Microsoft.StreamAnalytics/streamingjobs/transformations
-### Properties
-* **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TransformationProperties
-* **type**: 'Microsoft.StreamAnalytics/streamingjobs/transformations' (ReadOnly, DeployTimeConstant)
-
-## TransformationProperties
-### Properties
-* **etag**: string (ReadOnly)
-* **query**: string
-* **streamingUnits**: int
-
-## Microsoft.StreamAnalytics/streamingjobs
-### Properties
-* **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StreamingJobProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.StreamAnalytics/streamingjobs' (ReadOnly, DeployTimeConstant)
-
-## StreamingJobProperties
-### Properties
-* **compatibilityLevel**: '1.0'
-* **createdDate**: string (ReadOnly)
-* **dataLocale**: string
-* **etag**: string (ReadOnly)
-* **eventsLateArrivalMaxDelayInSeconds**: int
-* **eventsOutOfOrderMaxDelayInSeconds**: int
-* **eventsOutOfOrderPolicy**: 'Adjust' | 'Drop'
-* **functions**: Function[]
-* **inputs**: Input[]
-* **jobId**: string (ReadOnly)
-* **jobState**: string (ReadOnly)
-* **lastOutputEventTime**: string (ReadOnly)
-* **outputErrorPolicy**: 'Drop' | 'Stop'
-* **outputStartMode**: 'CustomTime' | 'JobStartTime' | 'LastOutputEventTime'
-* **outputStartTime**: string
-* **outputs**: Output[]
-* **provisioningState**: string (ReadOnly)
-* **sku**: Sku
-* **transformation**: Transformation
-
-## Function
-### Properties
-* **id**: string (ReadOnly)
-* **name**: string
-* **properties**: FunctionProperties
-* **type**: string (ReadOnly)
-
-## Input
-### Properties
-* **id**: string (ReadOnly)
-* **name**: string
-* **properties**: InputProperties
-* **type**: string (ReadOnly)
-
-## Output
-### Properties
-* **id**: string (ReadOnly)
-* **name**: string
-* **properties**: OutputProperties
-* **type**: string (ReadOnly)
-
 ## Sku
 ### Properties
 * **name**: 'Standard'
@@ -498,7 +456,49 @@
 * **properties**: TransformationProperties
 * **type**: string (ReadOnly)
 
+## TransformationProperties
+### Properties
+* **etag**: string (ReadOnly)
+* **query**: string
+* **streamingUnits**: int
+
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.StreamAnalytics/streamingjobs/functions
+### Properties
+* **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: FunctionProperties
+* **type**: 'Microsoft.StreamAnalytics/streamingjobs/functions' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.StreamAnalytics/streamingjobs/inputs
+### Properties
+* **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: InputProperties
+* **type**: 'Microsoft.StreamAnalytics/streamingjobs/inputs' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.StreamAnalytics/streamingjobs/outputs
+### Properties
+* **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: OutputProperties
+* **type**: 'Microsoft.StreamAnalytics/streamingjobs/outputs' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.StreamAnalytics/streamingjobs/transformations
+### Properties
+* **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TransformationProperties
+* **type**: 'Microsoft.StreamAnalytics/streamingjobs/transformations' (ReadOnly, DeployTimeConstant)
 

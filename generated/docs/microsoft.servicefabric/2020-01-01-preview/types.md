@@ -1,81 +1,5 @@
 # Microsoft.ServiceFabric @ 2020-01-01-preview
 
-## Microsoft.ServiceFabric/managedClusters/nodeTypes
-### Properties
-* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: NodeTypeProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant)
-
-## NodeTypeProperties
-### Properties
-* **applicationPorts**: EndpointRangeDescription
-* **capacities**: Dictionary<string,String>
-* **dataDiskSizeGB**: int (Required)
-* **ephemeralPorts**: EndpointRangeDescription
-* **isPrimary**: bool (Required)
-* **placementProperties**: Dictionary<string,String>
-* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly)
-* **vmExtensions**: VMSSExtension[]
-* **vmImageOffer**: string
-* **vmImagePublisher**: string
-* **vmImageSku**: string
-* **vmImageVersion**: string
-* **vmInstanceCount**: int (Required)
-* **vmSecrets**: VaultSecretGroup[]
-* **vmSize**: string
-
-## EndpointRangeDescription
-### Properties
-* **endPort**: int (Required)
-* **startPort**: int (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## VMSSExtension
-### Properties
-* **name**: string (Required)
-* **properties**: VMSSExtensionProperties (Required)
-
-## VMSSExtensionProperties
-### Properties
-* **autoUpgradeMinorVersion**: bool
-* **forceUpdateTag**: string
-* **protectedSettings**: any
-* **provisionAfterExtensions**: string[]
-* **provisioningState**: string (ReadOnly)
-* **publisher**: string (Required)
-* **settings**: any
-* **type**: string (Required)
-* **typeHandlerVersion**: string (Required)
-
-## VaultSecretGroup
-### Properties
-* **sourceVault**: SubResource (Required)
-* **vaultCertificates**: VaultCertificate[] (Required)
-
-## SubResource
-### Properties
-* **id**: string
-
-## VaultCertificate
-### Properties
-* **certificateStore**: string (Required)
-* **certificateUrl**: string (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Microsoft.ServiceFabric/managedClusters
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
@@ -202,6 +126,82 @@
 ## Sku
 ### Properties
 * **name**: 'Basic' | 'Standard' (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.ServiceFabric/managedClusters/nodeTypes
+### Properties
+* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: NodeTypeProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant)
+
+## NodeTypeProperties
+### Properties
+* **applicationPorts**: EndpointRangeDescription
+* **capacities**: Dictionary<string,String>
+* **dataDiskSizeGB**: int (Required)
+* **ephemeralPorts**: EndpointRangeDescription
+* **isPrimary**: bool (Required)
+* **placementProperties**: Dictionary<string,String>
+* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly)
+* **vmExtensions**: VMSSExtension[]
+* **vmImageOffer**: string
+* **vmImagePublisher**: string
+* **vmImageSku**: string
+* **vmImageVersion**: string
+* **vmInstanceCount**: int (Required)
+* **vmSecrets**: VaultSecretGroup[]
+* **vmSize**: string
+
+## EndpointRangeDescription
+### Properties
+* **endPort**: int (Required)
+* **startPort**: int (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## VMSSExtension
+### Properties
+* **name**: string (Required)
+* **properties**: VMSSExtensionProperties (Required)
+
+## VMSSExtensionProperties
+### Properties
+* **autoUpgradeMinorVersion**: bool
+* **forceUpdateTag**: string
+* **protectedSettings**: any
+* **provisionAfterExtensions**: string[]
+* **provisioningState**: string (ReadOnly)
+* **publisher**: string (Required)
+* **settings**: any
+* **type**: string (Required)
+* **typeHandlerVersion**: string (Required)
+
+## VaultSecretGroup
+### Properties
+* **sourceVault**: SubResource (Required)
+* **vaultCertificates**: VaultCertificate[] (Required)
+
+## SubResource
+### Properties
+* **id**: string
+
+## VaultCertificate
+### Properties
+* **certificateStore**: string (Required)
+* **certificateUrl**: string (Required)
 
 ## Dictionary<string,String>
 ### Additional Properties
