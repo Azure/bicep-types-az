@@ -20,8 +20,8 @@
 ## QueryDefinition
 ### Properties
 * **dataset**: QueryDataset
-* **timePeriod**: QueryTimePeriod
 * **timeframe**: 'Custom' | 'MonthToDate' | 'TheLastMonth' | 'TheLastWeek' | 'TheLastYear' | 'WeekToDate' | 'YearToDate' (Required)
+* **timePeriod**: QueryTimePeriod
 * **type**: string (Required)
 
 ## QueryDataset

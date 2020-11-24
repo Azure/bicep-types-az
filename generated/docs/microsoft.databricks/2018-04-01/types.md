@@ -1,35 +1,5 @@
 # Microsoft.Databricks @ 2018-04-01
 
-## Microsoft.Databricks/workspaces/virtualNetworkPeerings
-### Properties
-* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkPeeringPropertiesFormat (Required)
-* **type**: 'Microsoft.Databricks/workspaces/virtualNetworkPeerings' (ReadOnly, DeployTimeConstant)
-
-## VirtualNetworkPeeringPropertiesFormat
-### Properties
-* **allowForwardedTraffic**: bool
-* **allowGatewayTransit**: bool
-* **allowVirtualNetworkAccess**: bool
-* **databricksAddressSpace**: AddressSpace
-* **databricksVirtualNetwork**: schemas:27_databricksVirtualNetwork
-* **peeringState**: 'Connected' | 'Disconnected' | 'Initiated' (ReadOnly)
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **remoteAddressSpace**: AddressSpace
-* **remoteVirtualNetwork**: schemas:27_databricksVirtualNetwork (Required)
-* **useRemoteGateways**: bool
-
-## AddressSpace
-### Properties
-* **addressPrefixes**: string[]
-
-## schemas:27_databricksVirtualNetwork
-### Properties
-* **id**: string
-
 ## Microsoft.Databricks/workspaces
 ### Properties
 * **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant)
@@ -114,4 +84,34 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Databricks/workspaces/virtualNetworkPeerings
+### Properties
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualNetworkPeeringPropertiesFormat (Required)
+* **type**: 'Microsoft.Databricks/workspaces/virtualNetworkPeerings' (ReadOnly, DeployTimeConstant)
+
+## VirtualNetworkPeeringPropertiesFormat
+### Properties
+* **allowForwardedTraffic**: bool
+* **allowGatewayTransit**: bool
+* **allowVirtualNetworkAccess**: bool
+* **databricksAddressSpace**: AddressSpace
+* **databricksVirtualNetwork**: schemas:27_databricksVirtualNetwork
+* **peeringState**: 'Connected' | 'Disconnected' | 'Initiated' (ReadOnly)
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+* **remoteAddressSpace**: AddressSpace
+* **remoteVirtualNetwork**: schemas:27_databricksVirtualNetwork (Required)
+* **useRemoteGateways**: bool
+
+## AddressSpace
+### Properties
+* **addressPrefixes**: string[]
+
+## schemas:27_databricksVirtualNetwork
+### Properties
+* **id**: string
 

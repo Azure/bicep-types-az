@@ -42,7 +42,7 @@
 ### Properties
 * **endpoint**: string (Required)
 * **name**: string (Required)
-* **routingType**: 'Proxy' | 'Proxy,Cache'
+* **routingType**: 'Proxy,Cache' | 'Proxy'
 
 ## CustomRPValidations
 ### Properties

@@ -1,5 +1,26 @@
 # Microsoft.HybridData @ 2019-06-01
 
+## Microsoft.HybridData/dataManagers
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.HybridData/dataManagers' (ReadOnly, DeployTimeConstant)
+
+## Sku
+### Properties
+* **name**: string
+* **tier**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.HybridData/dataManagers/dataServices/jobDefinitions
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
@@ -23,7 +44,7 @@
 
 ## CustomerSecret
 ### Properties
-* **algorithm**: 'None' | 'PlainText' | 'RSA1_5' | 'RSA_OAEP' (Required)
+* **algorithm**: 'None' | 'PlainText' | 'RSA_OAEP' | 'RSA1_5' (Required)
 * **keyIdentifier**: string (Required)
 * **keyValue**: string (Required)
 
@@ -48,25 +69,4 @@
 * **extendedProperties**: any
 * **repositoryId**: string
 * **state**: 'Disabled' | 'Enabled' | 'Supported' (Required)
-
-## Microsoft.HybridData/dataManagers
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.HybridData/dataManagers' (ReadOnly, DeployTimeConstant)
-
-## Sku
-### Properties
-* **name**: string
-* **tier**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

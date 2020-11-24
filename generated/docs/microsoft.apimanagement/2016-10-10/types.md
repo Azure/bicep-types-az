@@ -1,5 +1,105 @@
 # Microsoft.ApiManagement @ 2016-10-10
 
+## Microsoft.ApiManagement/service
+### Properties
+* **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApiManagementServiceProperties (Required)
+* **sku**: ApiManagementServiceSkuProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ApiManagement/service' (ReadOnly, DeployTimeConstant)
+
+## ApiManagementServiceProperties
+### Properties
+* **additionalLocations**: AdditionalRegion[]
+* **addresserEmail**: string
+* **createdAtUtc**: string (ReadOnly)
+* **customProperties**: Dictionary<string,String>
+* **hostnameConfigurations**: HostnameConfiguration[]
+* **managementApiUrl**: string (ReadOnly)
+* **portalUrl**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **publisherEmail**: string (Required)
+* **publisherName**: string (Required)
+* **runtimeUrl**: string (ReadOnly)
+* **scmUrl**: string (ReadOnly)
+* **staticIPs**: string[] (ReadOnly)
+* **targetProvisioningState**: string (ReadOnly)
+* **vpnconfiguration**: VirtualNetworkConfiguration
+* **vpnType**: 'External' | 'Internal' | 'None'
+
+## AdditionalRegion
+### Properties
+* **location**: string (Required)
+* **skuType**: 'Developer' | 'Premium' | 'Standard' (Required)
+* **skuUnitCount**: int
+* **staticIPs**: string[] (ReadOnly)
+* **vpnconfiguration**: VirtualNetworkConfiguration
+
+## VirtualNetworkConfiguration
+### Properties
+* **location**: string
+* **subnetname**: string (ReadOnly)
+* **subnetResourceId**: string
+* **vnetid**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## HostnameConfiguration
+### Properties
+* **certificate**: CertificateInformation (Required)
+* **hostname**: string (Required)
+* **type**: 'Management' | 'Portal' | 'Proxy' | 'Scm' (Required)
+
+## CertificateInformation
+### Properties
+* **expiry**: string (Required)
+* **subject**: string (Required)
+* **thumbprint**: string (Required)
+
+## ApiManagementServiceSkuProperties
+### Properties
+* **capacity**: int
+* **name**: 'Developer' | 'Premium' | 'Standard' (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.ApiManagement/service/apis
+### Properties
+* **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
+* **authenticationSettings**: AuthenticationSettingsContract
+* **dependsOn**: resourceref[] (WriteOnly)
+* **description**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **path**: string (Required)
+* **protocols**: 'Http' | 'Https'[] (Required)
+* **serviceUrl**: string (Required)
+* **subscriptionKeyParameterNames**: SubscriptionKeyParameterNamesContract
+* **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant)
+
+## AuthenticationSettingsContract
+### Properties
+* **oAuth2**: OAuth2AuthenticationSettingsContract
+
+## OAuth2AuthenticationSettingsContract
+### Properties
+* **authorizationServerId**: string
+* **scope**: string
+
+## SubscriptionKeyParameterNamesContract
+### Properties
+* **header**: string
+* **query**: string
+
 ## Microsoft.ApiManagement/service/apis/operations
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
@@ -40,34 +140,6 @@
 * **description**: string
 * **representations**: RepresentationContract[]
 * **statusCode**: int (Required)
-
-## Microsoft.ApiManagement/service/apis
-### Properties
-* **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
-* **authenticationSettings**: AuthenticationSettingsContract
-* **dependsOn**: resourceref[] (WriteOnly)
-* **description**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **path**: string (Required)
-* **protocols**: 'Http' | 'Https'[] (Required)
-* **serviceUrl**: string (Required)
-* **subscriptionKeyParameterNames**: SubscriptionKeyParameterNamesContract
-* **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant)
-
-## AuthenticationSettingsContract
-### Properties
-* **oAuth2**: OAuth2AuthenticationSettingsContract
-
-## OAuth2AuthenticationSettingsContract
-### Properties
-* **authorizationServerId**: string
-* **scope**: string
-
-## SubscriptionKeyParameterNamesContract
-### Properties
-* **header**: string
-* **query**: string
 
 ## Microsoft.ApiManagement/service/authorizationServers
 ### Properties
@@ -255,76 +327,4 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **provider**: string (ReadOnly)
-
-## Microsoft.ApiManagement/service
-### Properties
-* **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApiManagementServiceProperties (Required)
-* **sku**: ApiManagementServiceSkuProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ApiManagement/service' (ReadOnly, DeployTimeConstant)
-
-## ApiManagementServiceProperties
-### Properties
-* **additionalLocations**: AdditionalRegion[]
-* **addresserEmail**: string
-* **createdAtUtc**: string (ReadOnly)
-* **customProperties**: Dictionary<string,String>
-* **hostnameConfigurations**: HostnameConfiguration[]
-* **managementApiUrl**: string (ReadOnly)
-* **portalUrl**: string (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **publisherEmail**: string (Required)
-* **publisherName**: string (Required)
-* **runtimeUrl**: string (ReadOnly)
-* **scmUrl**: string (ReadOnly)
-* **staticIPs**: string[] (ReadOnly)
-* **targetProvisioningState**: string (ReadOnly)
-* **vpnType**: 'External' | 'Internal' | 'None'
-* **vpnconfiguration**: VirtualNetworkConfiguration
-
-## AdditionalRegion
-### Properties
-* **location**: string (Required)
-* **skuType**: 'Developer' | 'Premium' | 'Standard' (Required)
-* **skuUnitCount**: int
-* **staticIPs**: string[] (ReadOnly)
-* **vpnconfiguration**: VirtualNetworkConfiguration
-
-## VirtualNetworkConfiguration
-### Properties
-* **location**: string
-* **subnetResourceId**: string
-* **subnetname**: string (ReadOnly)
-* **vnetid**: string (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## HostnameConfiguration
-### Properties
-* **certificate**: CertificateInformation (Required)
-* **hostname**: string (Required)
-* **type**: 'Management' | 'Portal' | 'Proxy' | 'Scm' (Required)
-
-## CertificateInformation
-### Properties
-* **expiry**: string (Required)
-* **subject**: string (Required)
-* **thumbprint**: string (Required)
-
-## ApiManagementServiceSkuProperties
-### Properties
-* **capacity**: int
-* **name**: 'Developer' | 'Premium' | 'Standard' (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

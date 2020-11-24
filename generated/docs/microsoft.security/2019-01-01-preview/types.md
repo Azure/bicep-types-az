@@ -40,7 +40,7 @@
 
 ## SecurityAssessmentMetadataProperties
 ### Properties
-* **assessmentType**: 'BuiltIn' | 'CustomPolicy' | 'CustomerManaged' (Required)
+* **assessmentType**: 'BuiltIn' | 'CustomerManaged' | 'CustomPolicy' (Required)
 * **category**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking'[]
 * **description**: string
 * **displayName**: string (Required)
@@ -181,7 +181,7 @@
 
 ## AutomationSource
 ### Properties
-* **eventSource**: 'Alerts' | 'Assessments' | 'SubAssessments'
+* **eventSource**: 'Alerts' | 'Assessments' | 'SecureScoreControls' | 'SecureScores' | 'SubAssessments'
 * **ruleSets**: AutomationRuleSet[]
 
 ## AutomationRuleSet

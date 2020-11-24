@@ -21,8 +21,8 @@
 ## ManagementGroupChildInfo
 ### Properties
 * **childId**: string (ReadOnly)
-* **childType**: 'ManagementGroup' | 'Subscription' (ReadOnly)
 * **children**: ManagementGroupChildInfo[] (ReadOnly)
+* **childType**: 'ManagementGroup' | 'Subscription' (ReadOnly)
 * **displayName**: string (ReadOnly)
 
 ## ManagementGroupDetails

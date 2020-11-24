@@ -1,5 +1,25 @@
 # Microsoft.Logic @ 2015-08-01-preview
 
+## Microsoft.Logic/integrationAccounts
+### Properties
+* **apiVersion**: '2015-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: any
+* **sku**: IntegrationAccountSku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Logic/integrationAccounts' (ReadOnly, DeployTimeConstant)
+
+## IntegrationAccountSku
+### Properties
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard'
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Logic/integrationAccounts/agreements
 ### Properties
 * **apiVersion**: '2015-08-01-preview' (ReadOnly, DeployTimeConstant)
@@ -60,9 +80,9 @@
 ## AS2EnvelopeSettings
 ### Properties
 * **AutogenerateFileName**: bool
-* **SuspendMessageOnFileNameGenerationError**: bool
 * **fileNameTemplate**: string
 * **messageContentType**: string
+* **SuspendMessageOnFileNameGenerationError**: bool
 * **transmitFileNameInMimeHeader**: bool
 
 ## AS2ErrorSettings
@@ -107,8 +127,8 @@
 * **checkCertificateRevocationListOnSend**: bool
 * **checkDuplicateMessage**: bool
 * **compressMessage**: bool
-* **encryptMessage**: bool
 * **encryptionAlgorithm**: 'AES128' | 'AES192' | 'AES256' | 'DES3' | 'None' | 'NotSpecified' | 'RC2'
+* **encryptMessage**: bool
 * **interchangeDuplicatesValidityDays**: int
 * **overrideMessageProperties**: bool
 * **signMessage**: bool
@@ -204,11 +224,11 @@
 * **groupApplicationSenderId**: string
 * **groupApplicationSenderQualifier**: string
 * **groupAssociationAssignedCode**: string
+* **groupControllingAgencyCode**: string
 * **groupControlNumberLowerBound**: int
 * **groupControlNumberPrefix**: string
 * **groupControlNumberSuffix**: string
 * **groupControlNumberUpperBound**: int
-* **groupControllingAgencyCode**: string
 * **groupMessageRelease**: string
 * **groupMessageVersion**: string
 * **interchangeControlNumberLowerBound**: int
@@ -586,26 +606,6 @@
 * **metadata**: any
 * **schemaType**: 'NotSpecified' | 'Xml'
 * **targetNamespace**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Logic/integrationAccounts
-### Properties
-* **apiVersion**: '2015-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: any
-* **sku**: IntegrationAccountSku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Logic/integrationAccounts' (ReadOnly, DeployTimeConstant)
-
-## IntegrationAccountSku
-### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard'
 
 ## Dictionary<string,String>
 ### Additional Properties

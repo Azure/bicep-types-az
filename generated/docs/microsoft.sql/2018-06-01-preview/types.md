@@ -30,95 +30,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BaseLongTermRetentionPolicyProperties
-* **type**: 'Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
-
-## BaseLongTermRetentionPolicyProperties
-### Properties
-* **monthlyRetention**: string
-* **weekOfYear**: int
-* **weeklyRetention**: string
-* **yearlyRetention**: string
-
-## Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SensitivityLabelProperties
-* **type**: 'Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant)
-
-## SensitivityLabelProperties
-### Properties
-* **informationType**: string
-* **informationTypeId**: string
-* **isDisabled**: bool (ReadOnly)
-* **labelId**: string
-* **labelName**: string
-* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None'
-
-## Microsoft.Sql/managedInstances/databases
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedDatabaseProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant)
-
-## ManagedDatabaseProperties
-### Properties
-* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS'
-* **collation**: string
-* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'RestoreExternalBackup' | 'RestoreLongTermRetentionBackup'
-* **creationDate**: string (ReadOnly)
-* **defaultSecondaryLocation**: string (ReadOnly)
-* **earliestRestorePoint**: string (ReadOnly)
-* **failoverGroupId**: string (ReadOnly)
-* **longTermRetentionBackupResourceId**: string
-* **recoverableDatabaseId**: string
-* **restorableDroppedDatabaseId**: string
-* **restorePointInTime**: string
-* **sourceDatabaseId**: string
-* **status**: 'Creating' | 'Inaccessible' | 'Offline' | 'Online' | 'Restoring' | 'Shutdown' | 'Updating' (ReadOnly)
-* **storageContainerSasToken**: string
-* **storageContainerUri**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Sql/managedInstances/vulnerabilityAssessments
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedInstanceVulnerabilityAssessmentProperties
-* **type**: 'Microsoft.Sql/managedInstances/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
-
-## ManagedInstanceVulnerabilityAssessmentProperties
-### Properties
-* **recurringScans**: VulnerabilityAssessmentRecurringScansProperties
-* **storageAccountAccessKey**: string
-* **storageContainerPath**: string (Required)
-* **storageContainerSasKey**: string
-
-## VulnerabilityAssessmentRecurringScansProperties
-### Properties
-* **emailSubscriptionAdmins**: bool
-* **emails**: string[]
-* **isEnabled**: bool
-
 ## Microsoft.Sql/managedInstances
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
@@ -164,6 +75,95 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Sql/managedInstances/databases
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ManagedDatabaseProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant)
+
+## ManagedDatabaseProperties
+### Properties
+* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS'
+* **collation**: string
+* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'RestoreExternalBackup' | 'RestoreLongTermRetentionBackup'
+* **creationDate**: string (ReadOnly)
+* **defaultSecondaryLocation**: string (ReadOnly)
+* **earliestRestorePoint**: string (ReadOnly)
+* **failoverGroupId**: string (ReadOnly)
+* **longTermRetentionBackupResourceId**: string
+* **recoverableDatabaseId**: string
+* **restorableDroppedDatabaseId**: string
+* **restorePointInTime**: string
+* **sourceDatabaseId**: string
+* **status**: 'Creating' | 'Inaccessible' | 'Offline' | 'Online' | 'Restoring' | 'Shutdown' | 'Updating' (ReadOnly)
+* **storageContainerSasToken**: string
+* **storageContainerUri**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BaseLongTermRetentionPolicyProperties
+* **type**: 'Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
+
+## BaseLongTermRetentionPolicyProperties
+### Properties
+* **monthlyRetention**: string
+* **weeklyRetention**: string
+* **weekOfYear**: int
+* **yearlyRetention**: string
+
+## Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SensitivityLabelProperties
+* **type**: 'Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant)
+
+## SensitivityLabelProperties
+### Properties
+* **informationType**: string
+* **informationTypeId**: string
+* **isDisabled**: bool (ReadOnly)
+* **labelId**: string
+* **labelName**: string
+* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None'
+
+## Microsoft.Sql/managedInstances/vulnerabilityAssessments
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ManagedInstanceVulnerabilityAssessmentProperties
+* **type**: 'Microsoft.Sql/managedInstances/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
+
+## ManagedInstanceVulnerabilityAssessmentProperties
+### Properties
+* **recurringScans**: VulnerabilityAssessmentRecurringScansProperties
+* **storageAccountAccessKey**: string
+* **storageContainerPath**: string (Required)
+* **storageContainerSasKey**: string
+
+## VulnerabilityAssessmentRecurringScansProperties
+### Properties
+* **emails**: string[]
+* **emailSubscriptionAdmins**: bool
+* **isEnabled**: bool
 
 ## Microsoft.Sql/servers/administrators
 ### Properties

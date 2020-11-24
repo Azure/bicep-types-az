@@ -1,5 +1,177 @@
 # Microsoft.DataMigration @ 2018-07-15-preview
 
+## Microsoft.DataMigration/services
+### Properties
+* **apiVersion**: '2018-07-15-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DataMigrationServiceProperties
+* **sku**: ServiceSku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DataMigration/services' (ReadOnly, DeployTimeConstant)
+
+## DataMigrationServiceProperties
+### Properties
+* **provisioningState**: 'Accepted' | 'Deleting' | 'Deploying' | 'Failed' | 'FailedToStart' | 'FailedToStop' | 'Starting' | 'Stopped' | 'Stopping' | 'Succeeded' (ReadOnly)
+* **publicKey**: string
+* **virtualNicId**: string
+* **virtualSubnetId**: string (Required)
+
+## ServiceSku
+### Properties
+* **capacity**: int
+* **family**: string
+* **name**: string
+* **size**: string
+* **tier**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.DataMigration/services/projects
+### Properties
+* **apiVersion**: '2018-07-15-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ProjectProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DataMigration/services/projects' (ReadOnly, DeployTimeConstant)
+
+## ProjectProperties
+### Properties
+* **creationTime**: string (ReadOnly)
+* **databasesInfo**: DatabaseInfo[]
+* **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly)
+* **sourceConnectionInfo**: ConnectionInfo
+* **sourcePlatform**: 'MongoDb' | 'MySQL' | 'PostgreSql' | 'SQL' | 'Unknown' (Required)
+* **targetConnectionInfo**: ConnectionInfo
+* **targetPlatform**: 'AzureDbForMySql' | 'AzureDbForPostgreSql' | 'MongoDb' | 'SQLDB' | 'SQLMI' | 'Unknown' (Required)
+
+## DatabaseInfo
+### Properties
+* **sourceDatabaseName**: string (Required)
+
+## ConnectionInfo
+* **Discriminator**: type
+### Base Properties
+* **password**: string
+* **userName**: string
+### MiSqlConnectionInfo
+#### Properties
+* **managedInstanceResourceId**: string (Required)
+* **password**: string
+* **type**: 'MiSqlConnectionInfo' (Required)
+* **userName**: string
+
+### MongoDbConnectionInfo
+#### Properties
+* **connectionString**: string (Required)
+* **password**: string
+* **type**: 'MongoDbConnectionInfo' (Required)
+* **userName**: string
+
+### MySqlConnectionInfo
+#### Properties
+* **password**: string
+* **port**: int (Required)
+* **serverName**: string (Required)
+* **type**: 'MySqlConnectionInfo' (Required)
+* **userName**: string
+
+### OracleConnectionInfo
+#### Properties
+* **dataSource**: string (Required)
+* **password**: string
+* **type**: 'OracleConnectionInfo' (Required)
+* **userName**: string
+
+### PostgreSqlConnectionInfo
+#### Properties
+* **databaseName**: string
+* **encryptConnection**: bool
+* **password**: string
+* **port**: int (Required)
+* **serverName**: string (Required)
+* **trustServerCertificate**: bool
+* **type**: 'PostgreSqlConnectionInfo' (Required)
+* **userName**: string
+
+### SqlConnectionInfo
+#### Properties
+* **additionalSettings**: string
+* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication'
+* **dataSource**: string (Required)
+* **encryptConnection**: bool
+* **password**: string
+* **platform**: 'SqlOnPrem'
+* **trustServerCertificate**: bool
+* **type**: 'SqlConnectionInfo' (Required)
+* **userName**: string
+
+
+## MiSqlConnectionInfo
+### Properties
+* **managedInstanceResourceId**: string (Required)
+* **password**: string
+* **type**: 'MiSqlConnectionInfo' (Required)
+* **userName**: string
+
+## MongoDbConnectionInfo
+### Properties
+* **connectionString**: string (Required)
+* **password**: string
+* **type**: 'MongoDbConnectionInfo' (Required)
+* **userName**: string
+
+## MySqlConnectionInfo
+### Properties
+* **password**: string
+* **port**: int (Required)
+* **serverName**: string (Required)
+* **type**: 'MySqlConnectionInfo' (Required)
+* **userName**: string
+
+## OracleConnectionInfo
+### Properties
+* **dataSource**: string (Required)
+* **password**: string
+* **type**: 'OracleConnectionInfo' (Required)
+* **userName**: string
+
+## PostgreSqlConnectionInfo
+### Properties
+* **databaseName**: string
+* **encryptConnection**: bool
+* **password**: string
+* **port**: int (Required)
+* **serverName**: string (Required)
+* **trustServerCertificate**: bool
+* **type**: 'PostgreSqlConnectionInfo' (Required)
+* **userName**: string
+
+## SqlConnectionInfo
+### Properties
+* **additionalSettings**: string
+* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication'
+* **dataSource**: string (Required)
+* **encryptConnection**: bool
+* **password**: string
+* **platform**: 'SqlOnPrem'
+* **trustServerCertificate**: bool
+* **type**: 'SqlConnectionInfo' (Required)
+* **userName**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.DataMigration/services/projects/files
 ### Properties
 * **apiVersion**: '2018-07-15-preview' (ReadOnly, DeployTimeConstant)
@@ -261,6 +433,16 @@
 ### Base Properties
 * **errors**: ODataError[] (ReadOnly)
 * **state**: 'Accepted' | 'Failed' | 'Running' | 'Succeeded' | 'Unknown' (ReadOnly)
+### cancel
+#### Properties
+* **commandType**: 'cancel' (Required)
+* **input**: MongoDbCommandInput
+
+### finish
+#### Properties
+* **commandType**: 'finish' (Required)
+* **input**: MongoDbFinishCommandInput
+
 ### Migrate.SqlServer.AzureDbSqlMi.Complete
 #### Properties
 * **commandType**: 'Migrate.SqlServer.AzureDbSqlMi.Complete' (Required)
@@ -273,16 +455,6 @@
 * **input**: MigrateSyncCompleteCommandInput
 * **output**: MigrateSyncCompleteCommandOutput (ReadOnly)
 
-### cancel
-#### Properties
-* **commandType**: 'cancel' (Required)
-* **input**: MongoDbCommandInput
-
-### finish
-#### Properties
-* **commandType**: 'finish' (Required)
-* **input**: MongoDbFinishCommandInput
-
 ### restart
 #### Properties
 * **commandType**: 'restart' (Required)
@@ -294,6 +466,25 @@
 * **code**: string
 * **details**: ODataError[]
 * **message**: string
+
+## cancel
+### Properties
+* **commandType**: 'cancel' (Required)
+* **input**: MongoDbCommandInput
+
+## MongoDbCommandInput
+### Properties
+* **objectName**: string
+
+## finish
+### Properties
+* **commandType**: 'finish' (Required)
+* **input**: MongoDbFinishCommandInput
+
+## MongoDbFinishCommandInput
+### Properties
+* **immediate**: bool (Required)
+* **objectName**: string
 
 ## Migrate.SqlServer.AzureDbSqlMi.Complete
 ### Properties
@@ -334,25 +525,6 @@
 * **errors**: ReportableException[] (ReadOnly)
 * **id**: string (ReadOnly)
 
-## cancel
-### Properties
-* **commandType**: 'cancel' (Required)
-* **input**: MongoDbCommandInput
-
-## MongoDbCommandInput
-### Properties
-* **objectName**: string
-
-## finish
-### Properties
-* **commandType**: 'finish' (Required)
-* **input**: MongoDbFinishCommandInput
-
-## MongoDbFinishCommandInput
-### Properties
-* **immediate**: bool (Required)
-* **objectName**: string
-
 ## restart
 ### Properties
 * **commandType**: 'restart' (Required)
@@ -363,13 +535,6 @@
 * **input**: MongoDbConnectionInfo
 * **output**: MongoDbClusterInfo[] (ReadOnly)
 * **taskType**: 'Connect.MongoDb' (Required)
-
-## MongoDbConnectionInfo
-### Properties
-* **connectionString**: string (Required)
-* **password**: string
-* **type**: 'MongoDbConnectionInfo' (Required)
-* **userName**: string
 
 ## MongoDbClusterInfo
 ### Properties
@@ -391,8 +556,8 @@
 ## MongoDbCollectionInfo
 ### Properties
 * **averageDocumentSize**: int (Required)
-* **dataSize**: int (Required)
 * **databaseName**: string (Required)
+* **dataSize**: int (Required)
 * **documentCount**: int (Required)
 * **isCapped**: bool (Required)
 * **isSystemCollection**: bool (Required)
@@ -425,14 +590,6 @@
 * **sourceConnectionInfo**: MySqlConnectionInfo (Required)
 * **targetPlatform**: 'AzureDbForMySQL' | 'SqlServer'
 
-## MySqlConnectionInfo
-### Properties
-* **password**: string
-* **port**: int (Required)
-* **serverName**: string (Required)
-* **type**: 'MySqlConnectionInfo' (Required)
-* **userName**: string
-
 ## ConnectToSourceNonSqlTaskOutput
 ### Properties
 * **databases**: string[] (ReadOnly)
@@ -460,13 +617,6 @@
 ### Properties
 * **sourceConnectionInfo**: OracleConnectionInfo (Required)
 
-## OracleConnectionInfo
-### Properties
-* **dataSource**: string (Required)
-* **password**: string
-* **type**: 'OracleConnectionInfo' (Required)
-* **userName**: string
-
 ## ConnectToSourceOracleSyncTaskOutput
 ### Properties
 * **databases**: string[] (ReadOnly)
@@ -483,17 +633,6 @@
 ## ConnectToSourcePostgreSqlSyncTaskInput
 ### Properties
 * **sourceConnectionInfo**: PostgreSqlConnectionInfo (Required)
-
-## PostgreSqlConnectionInfo
-### Properties
-* **databaseName**: string
-* **encryptConnection**: bool
-* **password**: string
-* **port**: int (Required)
-* **serverName**: string (Required)
-* **trustServerCertificate**: bool
-* **type**: 'PostgreSqlConnectionInfo' (Required)
-* **userName**: string
 
 ## ConnectToSourcePostgreSqlSyncTaskOutput
 ### Properties
@@ -518,18 +657,6 @@
 * **collectTdeCertificateInfo**: bool
 * **sourceConnectionInfo**: SqlConnectionInfo (Required)
 * **validateSsisCatalogOnly**: bool
-
-## SqlConnectionInfo
-### Properties
-* **additionalSettings**: string
-* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication'
-* **dataSource**: string (Required)
-* **encryptConnection**: bool
-* **password**: string
-* **platform**: 'SqlOnPrem'
-* **trustServerCertificate**: bool
-* **type**: 'SqlConnectionInfo' (Required)
-* **userName**: string
 
 ## ConnectToSourceSqlServerTaskOutput
 * **Discriminator**: resultType
@@ -572,8 +699,8 @@
 ### TaskLevelOutput
 #### Properties
 * **agentJobs**: Dictionary<string,String> (ReadOnly)
-* **databaseTdeCertificateMapping**: Dictionary<string,String> (ReadOnly)
 * **databases**: Dictionary<string,String> (ReadOnly)
+* **databaseTdeCertificateMapping**: Dictionary<string,String> (ReadOnly)
 * **logins**: Dictionary<string,String> (ReadOnly)
 * **resultType**: 'TaskLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly)
@@ -623,8 +750,8 @@
 ## TaskLevelOutput
 ### Properties
 * **agentJobs**: Dictionary<string,String> (ReadOnly)
-* **databaseTdeCertificateMapping**: Dictionary<string,String> (ReadOnly)
 * **databases**: Dictionary<string,String> (ReadOnly)
+* **databaseTdeCertificateMapping**: Dictionary<string,String> (ReadOnly)
 * **logins**: Dictionary<string,String> (ReadOnly)
 * **resultType**: 'TaskLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly)
@@ -730,13 +857,6 @@
 * **applicationId**: string (Required)
 * **tenantId**: string (Required)
 
-## MiSqlConnectionInfo
-### Properties
-* **managedInstanceResourceId**: string (Required)
-* **password**: string
-* **type**: 'MiSqlConnectionInfo' (Required)
-* **userName**: string
-
 ## ConnectToTargetSqlMISyncTaskOutput
 ### Properties
 * **targetServerBrandVersion**: string (ReadOnly)
@@ -755,8 +875,8 @@
 
 ## ConnectToTargetOracleAzureDbForPostgreSqlSyncTaskOutput
 ### Properties
-* **databaseSchemaMap**: schemas:160_databaseSchemaMapItem[]
 * **databases**: string[] (ReadOnly)
+* **databaseSchemaMap**: schemas:160_databaseSchemaMapItem[]
 * **targetServerBrandVersion**: string (ReadOnly)
 * **targetServerVersion**: string (ReadOnly)
 * **validationErrors**: ReportableException[] (ReadOnly)
@@ -980,7 +1100,7 @@
 * **lastReplayTime**: string
 * **name**: string
 * **qualifiedName**: string
-* **state**: 'Canceled' | 'Complete' | 'Copying' | 'Failed' | 'Finalizing' | 'InitialReplay' | 'Initializing' | 'NotStarted' | 'Replaying' | 'Restarting' | 'ValidatingInput' (Required)
+* **state**: 'Canceled' | 'Complete' | 'Copying' | 'Failed' | 'Finalizing' | 'Initializing' | 'InitialReplay' | 'NotStarted' | 'Replaying' | 'Restarting' | 'ValidatingInput' (Required)
 * **totalBytes**: int (Required)
 * **totalDocuments**: int (Required)
 ### Collection
@@ -1694,7 +1814,7 @@
 * **message**: string (ReadOnly)
 * **projectName**: string (ReadOnly)
 * **resultType**: 'SsisProjectLevelOutput' (Required)
-* **stage**: 'Completed' | 'InProgress' | 'Initialize' | 'None' (ReadOnly)
+* **stage**: 'Completed' | 'Initialize' | 'InProgress' | 'None' (ReadOnly)
 * **startedOn**: string (ReadOnly)
 * **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly)
 
@@ -1707,7 +1827,7 @@
 * **message**: string (ReadOnly)
 * **projectName**: string (ReadOnly)
 * **resultType**: 'SsisProjectLevelOutput' (Required)
-* **stage**: 'Completed' | 'InProgress' | 'Initialize' | 'None' (ReadOnly)
+* **stage**: 'Completed' | 'Initialize' | 'InProgress' | 'None' (ReadOnly)
 * **startedOn**: string (ReadOnly)
 * **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly)
 
@@ -1927,93 +2047,6 @@
 * **name**: string (ReadOnly)
 * **validationErrors**: ReportableException[] (ReadOnly)
 
-## Microsoft.DataMigration/services/projects
-### Properties
-* **apiVersion**: '2018-07-15-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ProjectProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DataMigration/services/projects' (ReadOnly, DeployTimeConstant)
-
-## ProjectProperties
-### Properties
-* **creationTime**: string (ReadOnly)
-* **databasesInfo**: DatabaseInfo[]
-* **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly)
-* **sourceConnectionInfo**: ConnectionInfo
-* **sourcePlatform**: 'MongoDb' | 'MySQL' | 'PostgreSql' | 'SQL' | 'Unknown' (Required)
-* **targetConnectionInfo**: ConnectionInfo
-* **targetPlatform**: 'AzureDbForMySql' | 'AzureDbForPostgreSql' | 'MongoDb' | 'SQLDB' | 'SQLMI' | 'Unknown' (Required)
-
-## DatabaseInfo
-### Properties
-* **sourceDatabaseName**: string (Required)
-
-## ConnectionInfo
-* **Discriminator**: type
-### Base Properties
-* **password**: string
-* **userName**: string
-### MiSqlConnectionInfo
-#### Properties
-* **managedInstanceResourceId**: string (Required)
-* **password**: string
-* **type**: 'MiSqlConnectionInfo' (Required)
-* **userName**: string
-
-### MongoDbConnectionInfo
-#### Properties
-* **connectionString**: string (Required)
-* **password**: string
-* **type**: 'MongoDbConnectionInfo' (Required)
-* **userName**: string
-
-### MySqlConnectionInfo
-#### Properties
-* **password**: string
-* **port**: int (Required)
-* **serverName**: string (Required)
-* **type**: 'MySqlConnectionInfo' (Required)
-* **userName**: string
-
-### OracleConnectionInfo
-#### Properties
-* **dataSource**: string (Required)
-* **password**: string
-* **type**: 'OracleConnectionInfo' (Required)
-* **userName**: string
-
-### PostgreSqlConnectionInfo
-#### Properties
-* **databaseName**: string
-* **encryptConnection**: bool
-* **password**: string
-* **port**: int (Required)
-* **serverName**: string (Required)
-* **trustServerCertificate**: bool
-* **type**: 'PostgreSqlConnectionInfo' (Required)
-* **userName**: string
-
-### SqlConnectionInfo
-#### Properties
-* **additionalSettings**: string
-* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication'
-* **dataSource**: string (Required)
-* **encryptConnection**: bool
-* **password**: string
-* **platform**: 'SqlOnPrem'
-* **trustServerCertificate**: bool
-* **type**: 'SqlConnectionInfo' (Required)
-* **userName**: string
-
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Microsoft.DataMigration/services/serviceTasks
 ### Properties
 * **apiVersion**: '2018-07-15-preview' (ReadOnly, DeployTimeConstant)
@@ -2023,36 +2056,4 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ProjectTaskProperties
 * **type**: 'Microsoft.DataMigration/services/serviceTasks' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.DataMigration/services
-### Properties
-* **apiVersion**: '2018-07-15-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DataMigrationServiceProperties
-* **sku**: ServiceSku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DataMigration/services' (ReadOnly, DeployTimeConstant)
-
-## DataMigrationServiceProperties
-### Properties
-* **provisioningState**: 'Accepted' | 'Deleting' | 'Deploying' | 'Failed' | 'FailedToStart' | 'FailedToStop' | 'Starting' | 'Stopped' | 'Stopping' | 'Succeeded' (ReadOnly)
-* **publicKey**: string
-* **virtualSubnetId**: string (Required)
-
-## ServiceSku
-### Properties
-* **capacity**: int
-* **family**: string
-* **name**: string
-* **size**: string
-* **tier**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

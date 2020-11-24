@@ -1,13 +1,32 @@
 # Microsoft.StorageSync @ 2020-03-01
 
-## Microsoft.StorageSync/storageSyncServices/privateEndpointConnections
+## Microsoft.StorageSync/storageSyncServices
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: 'Microsoft.StorageSync/storageSyncServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+* **properties**: StorageSyncServiceCreateParametersProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant)
+
+## StorageSyncServiceCreateParametersProperties
+### Properties
+* **incomingTrafficPolicy**: 'AllowAllTraffic' | 'AllowVirtualNetworksOnly'
+* **lastOperationName**: string (ReadOnly)
+* **lastWorkflowId**: string (ReadOnly)
+* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **storageSyncServiceStatus**: int (ReadOnly)
+* **storageSyncServiceUid**: string (ReadOnly)
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
+* **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
@@ -24,6 +43,19 @@
 * **actionsRequired**: string (ReadOnly)
 * **description**: string (ReadOnly)
 * **status**: 'Approved' | 'Pending' | 'Rejected' (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.StorageSync/storageSyncServices/privateEndpointConnections
+### Properties
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: 'Microsoft.StorageSync/storageSyncServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.StorageSync/storageSyncServices/registeredServers
 ### Properties
@@ -56,6 +88,15 @@
 * **serverRole**: string
 * **serviceLocation**: string (ReadOnly)
 * **storageSyncServiceUid**: string (ReadOnly)
+
+## Microsoft.StorageSync/storageSyncServices/syncGroups
+### Properties
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: any
+* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints
 ### Properties
@@ -208,45 +249,4 @@
 * **errorCode**: int (ReadOnly)
 * **persistentCount**: int (ReadOnly)
 * **transientCount**: int (ReadOnly)
-
-## Microsoft.StorageSync/storageSyncServices/syncGroups
-### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: any
-* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.StorageSync/storageSyncServices
-### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageSyncServiceCreateParametersProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant)
-
-## StorageSyncServiceCreateParametersProperties
-### Properties
-* **incomingTrafficPolicy**: 'AllowAllTraffic' | 'AllowVirtualNetworksOnly'
-* **lastOperationName**: string (ReadOnly)
-* **lastWorkflowId**: string (ReadOnly)
-* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **storageSyncServiceStatus**: int (ReadOnly)
-* **storageSyncServiceUid**: string (ReadOnly)
-
-## PrivateEndpointConnection
-### Properties
-* **id**: string (ReadOnly)
-* **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
-* **type**: string (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

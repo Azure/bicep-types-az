@@ -1,6 +1,6 @@
 # Microsoft.BotService @ 2018-07-12
 
-## Microsoft.BotService/botServices/Connections
+## Microsoft.BotService/botServices
 ### Properties
 * **apiVersion**: '2018-07-12' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -9,25 +9,26 @@
 * **kind**: 'bot' | 'designer' | 'function' | 'sdk'
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectionSettingProperties
+* **properties**: BotProperties
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.BotService/botServices/Connections' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.BotService/botServices' (ReadOnly, DeployTimeConstant)
 
-## ConnectionSettingProperties
+## BotProperties
 ### Properties
-* **clientId**: string
-* **clientSecret**: string
-* **parameters**: ConnectionSettingParameter[]
-* **scopes**: string
-* **serviceProviderDisplayName**: string
-* **serviceProviderId**: string
-* **settingId**: string (ReadOnly)
-
-## ConnectionSettingParameter
-### Properties
-* **key**: string
-* **value**: string
+* **configuredChannels**: string[] (ReadOnly)
+* **description**: string
+* **developerAppInsightKey**: string
+* **developerAppInsightsApiKey**: string
+* **developerAppInsightsApplicationId**: string
+* **displayName**: string (Required)
+* **enabledChannels**: string[] (ReadOnly)
+* **endpoint**: string (Required)
+* **endpointVersion**: string (ReadOnly)
+* **iconUrl**: string
+* **luisAppIds**: string[]
+* **luisKey**: string
+* **msaAppId**: string (Required)
 
 ## Sku
 ### Properties
@@ -261,7 +262,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.BotService/botServices
+## Microsoft.BotService/botServices/Connections
 ### Properties
 * **apiVersion**: '2018-07-12' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -270,26 +271,25 @@
 * **kind**: 'bot' | 'designer' | 'function' | 'sdk'
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BotProperties
+* **properties**: ConnectionSettingProperties
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.BotService/botServices' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.BotService/botServices/Connections' (ReadOnly, DeployTimeConstant)
 
-## BotProperties
+## ConnectionSettingProperties
 ### Properties
-* **configuredChannels**: string[] (ReadOnly)
-* **description**: string
-* **developerAppInsightKey**: string
-* **developerAppInsightsApiKey**: string
-* **developerAppInsightsApplicationId**: string
-* **displayName**: string (Required)
-* **enabledChannels**: string[] (ReadOnly)
-* **endpoint**: string (Required)
-* **endpointVersion**: string (ReadOnly)
-* **iconUrl**: string
-* **luisAppIds**: string[]
-* **luisKey**: string
-* **msaAppId**: string (Required)
+* **clientId**: string
+* **clientSecret**: string
+* **parameters**: ConnectionSettingParameter[]
+* **scopes**: string
+* **serviceProviderDisplayName**: string
+* **serviceProviderId**: string
+* **settingId**: string (ReadOnly)
+
+## ConnectionSettingParameter
+### Properties
+* **key**: string
+* **value**: string
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -312,7 +312,7 @@
 ## EnterpriseChannelProperties
 ### Properties
 * **nodes**: EnterpriseChannelNode[] (Required)
-* **state**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'StartFailed' | 'Started' | 'Starting' | 'StopFailed' | 'Stopped' | 'Stopping'
+* **state**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'Started' | 'StartFailed' | 'Starting' | 'StopFailed' | 'Stopped' | 'Stopping'
 
 ## EnterpriseChannelNode
 ### Properties
@@ -320,7 +320,7 @@
 * **azureSku**: string (Required)
 * **id**: string (ReadOnly)
 * **name**: string (Required)
-* **state**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'StartFailed' | 'Started' | 'Starting' | 'StopFailed' | 'Stopped' | 'Stopping'
+* **state**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'Started' | 'StartFailed' | 'Starting' | 'StopFailed' | 'Stopped' | 'Stopping'
 
 ## Dictionary<string,String>
 ### Additional Properties

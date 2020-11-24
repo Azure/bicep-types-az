@@ -1,5 +1,44 @@
 # Microsoft.DataBoxEdge @ 2019-07-01
 
+## Microsoft.DataBoxEdge/dataBoxEdgeDevices
+### Properties
+* **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DataBoxEdgeDeviceProperties
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices' (ReadOnly, DeployTimeConstant)
+
+## DataBoxEdgeDeviceProperties
+### Properties
+* **configuredRoleTypes**: 'ASA' | 'Cognitive' | 'Functions' | 'IOT'[] (ReadOnly)
+* **culture**: string (ReadOnly)
+* **dataBoxEdgeDeviceStatus**: 'Disconnected' | 'Maintenance' | 'NeedsAttention' | 'Offline' | 'Online' | 'PartiallyDisconnected' | 'ReadyToSetup'
+* **description**: string
+* **deviceHcsVersion**: string (ReadOnly)
+* **deviceLocalCapacity**: int (ReadOnly)
+* **deviceModel**: string (ReadOnly)
+* **deviceSoftwareVersion**: string (ReadOnly)
+* **deviceType**: 'DataBoxEdgeDevice' (ReadOnly)
+* **friendlyName**: string
+* **modelDescription**: string
+* **nodeCount**: int (ReadOnly)
+* **serialNumber**: string (ReadOnly)
+* **timeZone**: string (ReadOnly)
+
+## Sku
+### Properties
+* **name**: 'Edge' | 'Gateway'
+* **tier**: 'Standard'
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules
 ### Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)
@@ -139,7 +178,7 @@
 * **monitoringStatus**: 'Disabled' | 'Enabled' (Required)
 * **refreshDetails**: RefreshDetails
 * **shareMappings**: MountPointMap[] (ReadOnly)
-* **shareStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating' (Required)
+* **shareStatus**: 'NeedsAttention' | 'Offline' | 'OK' | 'Unknown' | 'Updating' (Required)
 * **userAccessRights**: UserAccessRight[]
 
 ## AzureContainerInfo
@@ -258,43 +297,4 @@
 ### Properties
 * **accessType**: 'Change' | 'Custom' | 'Read' (Required)
 * **shareId**: string (Required)
-
-## Microsoft.DataBoxEdge/dataBoxEdgeDevices
-### Properties
-* **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DataBoxEdgeDeviceProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices' (ReadOnly, DeployTimeConstant)
-
-## DataBoxEdgeDeviceProperties
-### Properties
-* **configuredRoleTypes**: 'ASA' | 'Cognitive' | 'Functions' | 'IOT'[] (ReadOnly)
-* **culture**: string (ReadOnly)
-* **dataBoxEdgeDeviceStatus**: 'Disconnected' | 'Maintenance' | 'NeedsAttention' | 'Offline' | 'Online' | 'PartiallyDisconnected' | 'ReadyToSetup'
-* **description**: string
-* **deviceHcsVersion**: string (ReadOnly)
-* **deviceLocalCapacity**: int (ReadOnly)
-* **deviceModel**: string (ReadOnly)
-* **deviceSoftwareVersion**: string (ReadOnly)
-* **deviceType**: 'DataBoxEdgeDevice' (ReadOnly)
-* **friendlyName**: string
-* **modelDescription**: string
-* **nodeCount**: int (ReadOnly)
-* **serialNumber**: string (ReadOnly)
-* **timeZone**: string (ReadOnly)
-
-## Sku
-### Properties
-* **name**: 'Edge' | 'Gateway'
-* **tier**: 'Standard'
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

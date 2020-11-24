@@ -363,26 +363,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.ServiceFabricMesh/secrets/values
-### Properties
-* **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SecretValueResourceProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ServiceFabricMesh/secrets/values' (ReadOnly, DeployTimeConstant)
-
-## SecretValueResourceProperties
-### Properties
-* **provisioningState**: string (ReadOnly)
-* **value**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Microsoft.ServiceFabricMesh/secrets
 ### Properties
 * **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
@@ -401,6 +381,26 @@
 * **provisioningState**: string (ReadOnly)
 * **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly)
 * **statusDetails**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.ServiceFabricMesh/secrets/values
+### Properties
+* **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SecretValueResourceProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ServiceFabricMesh/secrets/values' (ReadOnly, DeployTimeConstant)
+
+## SecretValueResourceProperties
+### Properties
+* **provisioningState**: string (ReadOnly)
+* **value**: string
 
 ## Dictionary<string,String>
 ### Additional Properties

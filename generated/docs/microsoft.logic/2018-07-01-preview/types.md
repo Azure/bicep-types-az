@@ -1,5 +1,25 @@
 # Microsoft.Logic @ 2018-07-01-preview
 
+## Microsoft.Logic/integrationAccounts
+### Properties
+* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: any
+* **sku**: IntegrationAccountSku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Logic/integrationAccounts' (ReadOnly, DeployTimeConstant)
+
+## IntegrationAccountSku
+### Properties
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Standard' (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Logic/integrationAccounts/agreements
 ### Properties
 * **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
@@ -108,12 +128,12 @@
 * **checkCertificateRevocationListOnSend**: bool (Required)
 * **checkDuplicateMessage**: bool (Required)
 * **compressMessage**: bool (Required)
-* **encryptMessage**: bool (Required)
 * **encryptionAlgorithm**: 'AES128' | 'AES192' | 'AES256' | 'DES3' | 'None' | 'NotSpecified' | 'RC2' (Required)
+* **encryptMessage**: bool (Required)
 * **interchangeDuplicatesValidityDays**: int (Required)
 * **overrideMessageProperties**: bool (Required)
-* **signMessage**: bool (Required)
 * **signingAlgorithm**: 'Default' | 'NotSpecified' | 'SHA1' | 'SHA2256' | 'SHA2384' | 'SHA2512'
+* **signMessage**: bool (Required)
 
 ## BusinessIdentity
 ### Properties
@@ -206,11 +226,11 @@
 * **groupApplicationSenderId**: string
 * **groupApplicationSenderQualifier**: string
 * **groupAssociationAssignedCode**: string
+* **groupControllingAgencyCode**: string
 * **groupControlNumberLowerBound**: int (Required)
 * **groupControlNumberPrefix**: string
 * **groupControlNumberSuffix**: string
 * **groupControlNumberUpperBound**: int (Required)
-* **groupControllingAgencyCode**: string
 * **groupMessageRelease**: string
 * **groupMessageVersion**: string
 * **interchangeControlNumberLowerBound**: int (Required)
@@ -695,26 +715,6 @@
 * **changedTime**: string (ReadOnly)
 * **content**: any
 * **createdTime**: string (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Logic/integrationAccounts
-### Properties
-* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: any
-* **sku**: IntegrationAccountSku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Logic/integrationAccounts' (ReadOnly, DeployTimeConstant)
-
-## IntegrationAccountSku
-### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Standard' (Required)
 
 ## Dictionary<string,String>
 ### Additional Properties

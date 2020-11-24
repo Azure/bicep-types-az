@@ -1,39 +1,5 @@
 # Microsoft.Cache @ 2016-04-01
 
-## Microsoft.Cache/Redis/firewallRules
-### Properties
-* **apiVersion**: '2016-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RedisFirewallRuleProperties (Required)
-* **type**: 'Microsoft.Cache/Redis/firewallRules' (ReadOnly, DeployTimeConstant)
-
-## RedisFirewallRuleProperties
-### Properties
-* **endIP**: string (Required)
-* **startIP**: string (Required)
-
-## Microsoft.Cache/Redis/patchSchedules
-### Properties
-* **apiVersion**: '2016-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ScheduleEntries (Required)
-* **type**: 'Microsoft.Cache/Redis/patchSchedules' (ReadOnly, DeployTimeConstant)
-
-## ScheduleEntries
-### Properties
-* **scheduleEntries**: ScheduleEntry[] (Required)
-
-## ScheduleEntry
-### Properties
-* **dayOfWeek**: 'Everyday' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | 'Weekend' (Required)
-* **maintenanceWindow**: string
-* **startHourUtc**: int (Required)
-
 ## Microsoft.Cache/Redis
 ### Properties
 * **apiVersion**: '2016-04-01' (ReadOnly, DeployTimeConstant)
@@ -83,4 +49,38 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Cache/Redis/firewallRules
+### Properties
+* **apiVersion**: '2016-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RedisFirewallRuleProperties (Required)
+* **type**: 'Microsoft.Cache/Redis/firewallRules' (ReadOnly, DeployTimeConstant)
+
+## RedisFirewallRuleProperties
+### Properties
+* **endIP**: string (Required)
+* **startIP**: string (Required)
+
+## Microsoft.Cache/Redis/patchSchedules
+### Properties
+* **apiVersion**: '2016-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ScheduleEntries (Required)
+* **type**: 'Microsoft.Cache/Redis/patchSchedules' (ReadOnly, DeployTimeConstant)
+
+## ScheduleEntries
+### Properties
+* **scheduleEntries**: ScheduleEntry[] (Required)
+
+## ScheduleEntry
+### Properties
+* **dayOfWeek**: 'Everyday' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | 'Weekend' (Required)
+* **maintenanceWindow**: string
+* **startHourUtc**: int (Required)
 

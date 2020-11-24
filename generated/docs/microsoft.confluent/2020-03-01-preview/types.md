@@ -1,5 +1,25 @@
 # Microsoft.Confluent @ 2020-03-01-preview
 
+## Microsoft.Confluent/agreements
+### Properties
+* **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
+* **properties**: ConfluentAgreementProperties
+* **type**: 'Microsoft.Confluent/agreements' (ReadOnly, DeployTimeConstant)
+
+## ConfluentAgreementProperties
+### Properties
+* **accepted**: bool
+* **licenseTextLink**: string
+* **plan**: string
+* **privacyPolicyLink**: string
+* **product**: string
+* **publisher**: string
+* **retrieveDatetime**: string
+* **signature**: string
+
 ## Microsoft.Confluent/organizations
 ### Properties
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
@@ -7,20 +27,20 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:10_properties
+* **properties**: schemas:13_properties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Confluent/organizations' (ReadOnly, DeployTimeConstant)
 
-## schemas:10_properties
+## schemas:13_properties
 ### Properties
 * **createdTime**: string (ReadOnly)
-* **offerDetail**: schemas:9_offerDetail
+* **offerDetail**: schemas:12_offerDetail
 * **organizationId**: string (ReadOnly)
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating'
 * **ssoUrl**: string (ReadOnly)
-* **userDetail**: schemas:9_userDetail
+* **userDetail**: schemas:12_userDetail
 
-## schemas:9_offerDetail
+## schemas:12_offerDetail
 ### Properties
 * **id**: string
 * **planId**: string
@@ -29,7 +49,7 @@
 * **status**: 'Failed' | 'InProgress' | 'PendingFulfillmentStart' | 'Reinstated' | 'Started' | 'Subscribed' | 'Succeeded' | 'Suspended' | 'Unsubscribed' | 'Updating'
 * **termUnit**: string
 
-## schemas:9_userDetail
+## schemas:12_userDetail
 ### Properties
 * **emailAddress**: string
 * **firstName**: string

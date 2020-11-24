@@ -38,6 +38,22 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.Web/hostingEnvironments
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:1_properties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Web/hostingEnvironments' (ReadOnly, DeployTimeConstant)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Web/hostingEnvironments/multiRolePools
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
@@ -75,22 +91,6 @@
 * **sku**: SkuDescription
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Web/hostingEnvironments/workerPools' (ReadOnly, DeployTimeConstant)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Web/hostingEnvironments
-### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:1_properties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Web/hostingEnvironments' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -144,6 +144,23 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.Web/serverfarms
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:1_properties
+* **sku**: SkuDescription
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Web/serverfarms' (ReadOnly, DeployTimeConstant)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Web/serverfarms/virtualNetworkConnections/gateways
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
@@ -176,7 +193,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Web/serverfarms
+## Microsoft.Web/sites
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -185,9 +202,8 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: schemas:1_properties
-* **sku**: SkuDescription
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Web/serverfarms' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.Web/sites' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -293,6 +309,22 @@
 * **promotionCode**: string
 * **publisher**: string
 * **version**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/slots
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:1_properties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Web/sites/slots' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -411,22 +443,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Web/sites/slots/virtualNetworkConnections/gateways
-### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:1_properties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Web/sites/slots/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Microsoft.Web/sites/slots/virtualNetworkConnections
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
@@ -443,7 +459,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Web/sites/slots
+## Microsoft.Web/sites/slots/virtualNetworkConnections/gateways
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -453,7 +469,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: schemas:1_properties
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Web/sites/slots' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.Web/sites/slots/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -475,22 +491,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Web/sites/virtualNetworkConnections/gateways
-### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:1_properties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Web/sites/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Microsoft.Web/sites/virtualNetworkConnections
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
@@ -507,7 +507,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Web/sites
+## Microsoft.Web/sites/virtualNetworkConnections/gateways
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -517,7 +517,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: schemas:1_properties
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Web/sites' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.Web/sites/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties

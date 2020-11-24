@@ -1,57 +1,5 @@
 # Microsoft.Billing @ 2020-05-01
 
-## Microsoft.Billing/billingAccounts/billingProfiles/instructions
-### Properties
-* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: InstructionProperties
-* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/instructions' (ReadOnly, DeployTimeConstant)
-
-## InstructionProperties
-### Properties
-* **amount**: int (Required)
-* **creationDate**: string
-* **endDate**: string (Required)
-* **startDate**: string (Required)
-
-## Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections
-### Properties
-* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: InvoiceSectionProperties
-* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections' (ReadOnly, DeployTimeConstant)
-
-## InvoiceSectionProperties
-### Properties
-* **displayName**: string
-* **labels**: Dictionary<string,String>
-* **state**: 'Active' | 'Restricted' (ReadOnly)
-* **systemId**: string (ReadOnly)
-* **targetCloud**: 'USGov' | 'USNat' | 'USSec' (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Billing/billingAccounts/billingProfiles/policies
-### Properties
-* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyProperties
-* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/policies' (ReadOnly, DeployTimeConstant)
-
-## PolicyProperties
-### Properties
-* **marketplacePurchases**: 'AllAllowed' | 'NotAllowed' | 'OnlyFreeAllowed'
-* **reservationPurchases**: 'Allowed' | 'NotAllowed'
-* **viewCharges**: 'Allowed' | 'NotAllowed'
-
 ## Microsoft.Billing/billingAccounts/billingProfiles
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
@@ -63,8 +11,8 @@
 
 ## BillingProfileProperties
 ### Properties
-* **billTo**: AddressDetails
 * **billingRelationshipType**: 'CSPPartner' | 'Direct' | 'IndirectCustomer' | 'IndirectPartner' (ReadOnly)
+* **billTo**: AddressDetails
 * **currency**: string (ReadOnly)
 * **displayName**: string
 * **enabledAzurePlans**: AzurePlan[]
@@ -118,6 +66,58 @@
 * **name**: string (ReadOnly)
 * **properties**: InvoiceSectionProperties
 * **type**: string (ReadOnly)
+
+## InvoiceSectionProperties
+### Properties
+* **displayName**: string
+* **labels**: Dictionary<string,String>
+* **state**: 'Active' | 'Restricted' (ReadOnly)
+* **systemId**: string (ReadOnly)
+* **targetCloud**: 'USGov' | 'USNat' | 'USSec' (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Billing/billingAccounts/billingProfiles/instructions
+### Properties
+* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: InstructionProperties
+* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/instructions' (ReadOnly, DeployTimeConstant)
+
+## InstructionProperties
+### Properties
+* **amount**: int (Required)
+* **creationDate**: string
+* **endDate**: string (Required)
+* **startDate**: string (Required)
+
+## Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections
+### Properties
+* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: InvoiceSectionProperties
+* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Billing/billingAccounts/billingProfiles/policies
+### Properties
+* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PolicyProperties
+* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/policies' (ReadOnly, DeployTimeConstant)
+
+## PolicyProperties
+### Properties
+* **marketplacePurchases**: 'AllAllowed' | 'NotAllowed' | 'OnlyFreeAllowed'
+* **reservationPurchases**: 'Allowed' | 'NotAllowed'
+* **viewCharges**: 'Allowed' | 'NotAllowed'
 
 ## Microsoft.Billing/billingAccounts/customers/policies
 ### Properties

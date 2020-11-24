@@ -16,7 +16,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
 * **userAssignedIdentities**: Dictionary<string,Schemas18UserAssignedIdentitiesValue>
 
 ## Dictionary<string,Schemas18UserAssignedIdentitiesValue>

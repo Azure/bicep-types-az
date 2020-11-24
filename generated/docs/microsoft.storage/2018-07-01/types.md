@@ -1,107 +1,5 @@
 # Microsoft.Storage @ 2018-07-01
 
-## Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies
-### Properties
-* **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ImmutabilityPolicyProperty (Required)
-* **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies' (ReadOnly, DeployTimeConstant)
-
-## ImmutabilityPolicyProperty
-### Properties
-* **immutabilityPeriodSinceCreationInDays**: int (Required)
-* **state**: 'Locked' | 'Unlocked' (ReadOnly)
-
-## Microsoft.Storage/storageAccounts/blobServices/containers
-### Properties
-* **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ContainerProperties
-* **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers' (ReadOnly, DeployTimeConstant)
-
-## ContainerProperties
-### Properties
-* **hasImmutabilityPolicy**: bool (ReadOnly)
-* **hasLegalHold**: bool (ReadOnly)
-* **immutabilityPolicy**: ImmutabilityPolicyProperties (ReadOnly)
-* **lastModifiedTime**: string (ReadOnly)
-* **leaseDuration**: 'Fixed' | 'Infinite' (ReadOnly)
-* **leaseState**: 'Available' | 'Breaking' | 'Broken' | 'Expired' | 'Leased' (ReadOnly)
-* **leaseStatus**: 'Locked' | 'Unlocked' (ReadOnly)
-* **legalHold**: LegalHoldProperties (ReadOnly)
-* **metadata**: Dictionary<string,String>
-* **publicAccess**: 'Blob' | 'Container' | 'None'
-
-## ImmutabilityPolicyProperties
-### Properties
-* **etag**: string (ReadOnly)
-* **properties**: ImmutabilityPolicyProperty
-* **updateHistory**: UpdateHistoryProperty[] (ReadOnly)
-
-## UpdateHistoryProperty
-### Properties
-* **immutabilityPeriodSinceCreationInDays**: int (ReadOnly)
-* **objectIdentifier**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **timestamp**: string (ReadOnly)
-* **update**: 'extend' | 'lock' | 'put' (ReadOnly)
-* **upn**: string (ReadOnly)
-
-## LegalHoldProperties
-### Properties
-* **hasLegalHold**: bool (ReadOnly)
-* **tags**: TagProperty[]
-
-## TagProperty
-### Properties
-* **objectIdentifier**: string (ReadOnly)
-* **tag**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **timestamp**: string (ReadOnly)
-* **upn**: string (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Storage/storageAccounts/blobServices
-### Properties
-* **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:51_properties
-* **type**: 'Microsoft.Storage/storageAccounts/blobServices' (ReadOnly, DeployTimeConstant)
-
-## schemas:51_properties
-### Properties
-* **cors**: CorsRules
-* **defaultServiceVersion**: string
-* **deleteRetentionPolicy**: DeleteRetentionPolicy
-
-## CorsRules
-### Properties
-* **corsRules**: CorsRule[]
-
-## CorsRule
-### Properties
-* **allowedHeaders**: string[] (Required)
-* **allowedMethods**: 'DELETE' | 'GET' | 'HEAD' | 'MERGE' | 'OPTIONS' | 'POST' | 'PUT'[] (Required)
-* **allowedOrigins**: string[] (Required)
-* **exposedHeaders**: string[] (Required)
-* **maxAgeInSeconds**: int (Required)
-
-## DeleteRetentionPolicy
-### Properties
-* **days**: int
-* **enabled**: bool
-
 ## Microsoft.Storage/storageAccounts
 ### Properties
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
@@ -229,4 +127,106 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Storage/storageAccounts/blobServices
+### Properties
+* **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:51_properties
+* **type**: 'Microsoft.Storage/storageAccounts/blobServices' (ReadOnly, DeployTimeConstant)
+
+## schemas:51_properties
+### Properties
+* **cors**: CorsRules
+* **defaultServiceVersion**: string
+* **deleteRetentionPolicy**: DeleteRetentionPolicy
+
+## CorsRules
+### Properties
+* **corsRules**: CorsRule[]
+
+## CorsRule
+### Properties
+* **allowedHeaders**: string[] (Required)
+* **allowedMethods**: 'DELETE' | 'GET' | 'HEAD' | 'MERGE' | 'OPTIONS' | 'POST' | 'PUT'[] (Required)
+* **allowedOrigins**: string[] (Required)
+* **exposedHeaders**: string[] (Required)
+* **maxAgeInSeconds**: int (Required)
+
+## DeleteRetentionPolicy
+### Properties
+* **days**: int
+* **enabled**: bool
+
+## Microsoft.Storage/storageAccounts/blobServices/containers
+### Properties
+* **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ContainerProperties
+* **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers' (ReadOnly, DeployTimeConstant)
+
+## ContainerProperties
+### Properties
+* **hasImmutabilityPolicy**: bool (ReadOnly)
+* **hasLegalHold**: bool (ReadOnly)
+* **immutabilityPolicy**: ImmutabilityPolicyProperties (ReadOnly)
+* **lastModifiedTime**: string (ReadOnly)
+* **leaseDuration**: 'Fixed' | 'Infinite' (ReadOnly)
+* **leaseState**: 'Available' | 'Breaking' | 'Broken' | 'Expired' | 'Leased' (ReadOnly)
+* **leaseStatus**: 'Locked' | 'Unlocked' (ReadOnly)
+* **legalHold**: LegalHoldProperties (ReadOnly)
+* **metadata**: Dictionary<string,String>
+* **publicAccess**: 'Blob' | 'Container' | 'None'
+
+## ImmutabilityPolicyProperties
+### Properties
+* **etag**: string (ReadOnly)
+* **properties**: ImmutabilityPolicyProperty
+* **updateHistory**: UpdateHistoryProperty[] (ReadOnly)
+
+## ImmutabilityPolicyProperty
+### Properties
+* **immutabilityPeriodSinceCreationInDays**: int (Required)
+* **state**: 'Locked' | 'Unlocked' (ReadOnly)
+
+## UpdateHistoryProperty
+### Properties
+* **immutabilityPeriodSinceCreationInDays**: int (ReadOnly)
+* **objectIdentifier**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **timestamp**: string (ReadOnly)
+* **update**: 'extend' | 'lock' | 'put' (ReadOnly)
+* **upn**: string (ReadOnly)
+
+## LegalHoldProperties
+### Properties
+* **hasLegalHold**: bool (ReadOnly)
+* **tags**: TagProperty[]
+
+## TagProperty
+### Properties
+* **objectIdentifier**: string (ReadOnly)
+* **tag**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **timestamp**: string (ReadOnly)
+* **upn**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies
+### Properties
+* **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ImmutabilityPolicyProperty (Required)
+* **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies' (ReadOnly, DeployTimeConstant)
 

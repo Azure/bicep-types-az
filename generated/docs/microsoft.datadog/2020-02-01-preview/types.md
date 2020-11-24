@@ -1,50 +1,24 @@
 # Microsoft.Datadog @ 2020-02-01-preview
 
-## Microsoft.Datadog/monitors/singleSignOnConfigurations
+## Microsoft.Datadog/agreements
 ### Properties
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatadogSingleSignOnProperties
-* **type**: 'Microsoft.Datadog/monitors/singleSignOnConfigurations' (ReadOnly, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
+* **properties**: DatadogAgreementProperties
+* **type**: 'Microsoft.Datadog/agreements' (ReadOnly, DeployTimeConstant)
 
-## DatadogSingleSignOnProperties
+## DatadogAgreementProperties
 ### Properties
-* **enterpriseAppId**: string
-* **singleSignOnState**: 'Disable' | 'Enable' | 'Existing' | 'Initial'
-* **singleSignOnUrl**: string
-
-## Microsoft.Datadog/monitors/tagRules
-### Properties
-* **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MonitoringTagRulesProperties
-* **type**: 'Microsoft.Datadog/monitors/tagRules' (ReadOnly, DeployTimeConstant)
-
-## MonitoringTagRulesProperties
-### Properties
-* **logRules**: LogRules
-* **metricRules**: MetricRules
-
-## LogRules
-### Properties
-* **filteringTags**: FilteringTag[]
-* **sendAadLogs**: bool
-* **sendResourceLogs**: bool
-* **sendSubscriptionLogs**: bool
-
-## FilteringTag
-### Properties
-* **action**: 'Exclude' | 'Include'
-* **name**: string
-* **value**: string
-
-## MetricRules
-### Properties
-* **filteringTags**: FilteringTag[]
+* **accepted**: bool
+* **licenseTextLink**: string
+* **plan**: string
+* **privacyPolicyLink**: string
+* **product**: string
+* **publisher**: string
+* **retrieveDatetime**: string
+* **signature**: string
 
 ## Microsoft.Datadog/monitors
 ### Properties
@@ -96,4 +70,50 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Datadog/monitors/singleSignOnConfigurations
+### Properties
+* **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatadogSingleSignOnProperties
+* **type**: 'Microsoft.Datadog/monitors/singleSignOnConfigurations' (ReadOnly, DeployTimeConstant)
+
+## DatadogSingleSignOnProperties
+### Properties
+* **enterpriseAppId**: string
+* **singleSignOnState**: 'Disable' | 'Enable' | 'Existing' | 'Initial'
+* **singleSignOnUrl**: string
+
+## Microsoft.Datadog/monitors/tagRules
+### Properties
+* **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MonitoringTagRulesProperties
+* **type**: 'Microsoft.Datadog/monitors/tagRules' (ReadOnly, DeployTimeConstant)
+
+## MonitoringTagRulesProperties
+### Properties
+* **logRules**: LogRules
+* **metricRules**: MetricRules
+
+## LogRules
+### Properties
+* **filteringTags**: FilteringTag[]
+* **sendAadLogs**: bool
+* **sendResourceLogs**: bool
+* **sendSubscriptionLogs**: bool
+
+## FilteringTag
+### Properties
+* **action**: 'Exclude' | 'Include'
+* **name**: string
+* **value**: string
+
+## MetricRules
+### Properties
+* **filteringTags**: FilteringTag[]
 

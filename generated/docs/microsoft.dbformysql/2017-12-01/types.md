@@ -1,82 +1,5 @@
 # Microsoft.DBForMySQL @ 2017-12-01
 
-## Microsoft.DBForMySQL/servers/Administrators
-### Properties
-* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerAdministratorProperties
-* **type**: 'Microsoft.DBForMySQL/servers/Administrators' (ReadOnly, DeployTimeConstant)
-
-## ServerAdministratorProperties
-### Properties
-* **administratorType**: string (Required)
-* **login**: string (Required)
-* **sid**: string (Required)
-* **tenantId**: string (Required)
-
-## Microsoft.DBForMySQL/servers/configurations
-### Properties
-* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationProperties
-* **type**: 'Microsoft.DBForMySQL/servers/configurations' (ReadOnly, DeployTimeConstant)
-
-## ConfigurationProperties
-### Properties
-* **allowedValues**: string (ReadOnly)
-* **dataType**: string (ReadOnly)
-* **defaultValue**: string (ReadOnly)
-* **description**: string (ReadOnly)
-* **source**: string
-* **value**: string
-
-## Microsoft.DBForMySQL/servers/databases
-### Properties
-* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
-* **type**: 'Microsoft.DBForMySQL/servers/databases' (ReadOnly, DeployTimeConstant)
-
-## DatabaseProperties
-### Properties
-* **charset**: string
-* **collation**: string
-
-## Microsoft.DBForMySQL/servers/firewallRules
-### Properties
-* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: FirewallRuleProperties (Required)
-* **type**: 'Microsoft.DBForMySQL/servers/firewallRules' (ReadOnly, DeployTimeConstant)
-
-## FirewallRuleProperties
-### Properties
-* **endIpAddress**: string (Required)
-* **startIpAddress**: string (Required)
-
-## Microsoft.DBForMySQL/servers/virtualNetworkRules
-### Properties
-* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkRuleProperties
-* **type**: 'Microsoft.DBForMySQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
-
-## VirtualNetworkRuleProperties
-### Properties
-* **ignoreMissingVnetServiceEndpoint**: bool
-* **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly)
-* **virtualNetworkSubnetId**: string (Required)
-
 ## Microsoft.DBForMySQL/servers
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
@@ -199,6 +122,68 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.DBForMySQL/servers/Administrators
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServerAdministratorProperties
+* **type**: 'Microsoft.DBForMySQL/servers/Administrators' (ReadOnly, DeployTimeConstant)
+
+## ServerAdministratorProperties
+### Properties
+* **administratorType**: string (Required)
+* **login**: string (Required)
+* **sid**: string (Required)
+* **tenantId**: string (Required)
+
+## Microsoft.DBForMySQL/servers/configurations
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConfigurationProperties
+* **type**: 'Microsoft.DBForMySQL/servers/configurations' (ReadOnly, DeployTimeConstant)
+
+## ConfigurationProperties
+### Properties
+* **allowedValues**: string (ReadOnly)
+* **dataType**: string (ReadOnly)
+* **defaultValue**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **source**: string
+* **value**: string
+
+## Microsoft.DBForMySQL/servers/databases
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseProperties
+* **type**: 'Microsoft.DBForMySQL/servers/databases' (ReadOnly, DeployTimeConstant)
+
+## DatabaseProperties
+### Properties
+* **charset**: string
+* **collation**: string
+
+## Microsoft.DBForMySQL/servers/firewallRules
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: FirewallRuleProperties (Required)
+* **type**: 'Microsoft.DBForMySQL/servers/firewallRules' (ReadOnly, DeployTimeConstant)
+
+## FirewallRuleProperties
+### Properties
+* **endIpAddress**: string (Required)
+* **startIpAddress**: string (Required)
+
 ## Microsoft.DBforMySQL/servers/securityAlertPolicies
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
@@ -217,4 +202,19 @@
 * **state**: 'Disabled' | 'Enabled' (Required)
 * **storageAccountAccessKey**: string
 * **storageEndpoint**: string
+
+## Microsoft.DBForMySQL/servers/virtualNetworkRules
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualNetworkRuleProperties
+* **type**: 'Microsoft.DBForMySQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
+
+## VirtualNetworkRuleProperties
+### Properties
+* **ignoreMissingVnetServiceEndpoint**: bool
+* **state**: 'Deleting' | 'Initializing' | 'InProgress' | 'Ready' | 'Unknown' (ReadOnly)
+* **virtualNetworkSubnetId**: string (Required)
 

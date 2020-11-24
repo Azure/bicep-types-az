@@ -1,35 +1,5 @@
 # Microsoft.SqlVirtualMachine @ 2017-03-01-preview
 
-## Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners
-### Properties
-* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AvailabilityGroupListenerProperties
-* **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners' (ReadOnly, DeployTimeConstant)
-
-## AvailabilityGroupListenerProperties
-### Properties
-* **availabilityGroupName**: string
-* **createDefaultAvailabilityGroupIfNotExist**: bool
-* **loadBalancerConfigurations**: LoadBalancerConfiguration[]
-* **port**: int
-* **provisioningState**: string (ReadOnly)
-
-## LoadBalancerConfiguration
-### Properties
-* **loadBalancerResourceId**: string
-* **privateIpAddress**: PrivateIPAddress
-* **probePort**: int
-* **publicIpAddressResourceId**: string
-* **sqlVirtualMachineInstances**: string[]
-
-## PrivateIPAddress
-### Properties
-* **ipAddress**: string
-* **subnetResourceId**: string
-
 ## Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
@@ -65,6 +35,36 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AvailabilityGroupListenerProperties
+* **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners' (ReadOnly, DeployTimeConstant)
+
+## AvailabilityGroupListenerProperties
+### Properties
+* **availabilityGroupName**: string
+* **createDefaultAvailabilityGroupIfNotExist**: bool
+* **loadBalancerConfigurations**: LoadBalancerConfiguration[]
+* **port**: int
+* **provisioningState**: string (ReadOnly)
+
+## LoadBalancerConfiguration
+### Properties
+* **loadBalancerResourceId**: string
+* **privateIpAddress**: PrivateIPAddress
+* **probePort**: int
+* **publicIpAddressResourceId**: string
+* **sqlVirtualMachineInstances**: string[]
+
+## PrivateIPAddress
+### Properties
+* **ipAddress**: string
+* **subnetResourceId**: string
 
 ## Microsoft.SqlVirtualMachine/sqlVirtualMachines
 ### Properties

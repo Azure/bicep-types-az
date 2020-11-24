@@ -127,13 +127,19 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.HybridNetwork/vendors/vendorSkus/previewSubscriptions
+## Microsoft.HybridNetwork/vendors
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.HybridNetwork/vendors/vendorSkus/previewSubscriptions' (ReadOnly, DeployTimeConstant)
+* **properties**: VendorPropertiesFormat
+* **type**: 'Microsoft.HybridNetwork/vendors' (ReadOnly, DeployTimeConstant)
+
+## VendorPropertiesFormat
+### Properties
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly)
+* **skus**: SubResource[] (ReadOnly)
 
 ## Microsoft.HybridNetwork/vendors/vendorSkus
 ### Properties
@@ -168,7 +174,7 @@
 * **storageProfile**: StorageProfile
 * **userDataParameters**: any
 * **userDataTemplate**: any
-* **virtualMachineSize**: 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D1_v2' | 'Standard_D2_v2' | 'Standard_D3_v2' | 'Standard_D4_v2' | 'Standard_D5_v2' | 'Standard_DS11_v2' | 'Standard_DS12_v2' | 'Standard_DS13_v2' | 'Standard_DS1_v2' | 'Standard_DS2_v2' | 'Standard_DS3_v2' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_F1' | 'Standard_F16' | 'Standard_F16s' | 'Standard_F1s' | 'Standard_F2' | 'Standard_F2s' | 'Standard_F4' | 'Standard_F4s' | 'Standard_F8' | 'Standard_F8s' | 'Unknown'
+* **virtualMachineSize**: 'Standard_D1_v2' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D2_v2' | 'Standard_D3_v2' | 'Standard_D4_v2' | 'Standard_D5_v2' | 'Standard_DS1_v2' | 'Standard_DS11_v2' | 'Standard_DS12_v2' | 'Standard_DS13_v2' | 'Standard_DS2_v2' | 'Standard_DS3_v2' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_F1' | 'Standard_F16' | 'Standard_F16s' | 'Standard_F1s' | 'Standard_F2' | 'Standard_F2s' | 'Standard_F4' | 'Standard_F4s' | 'Standard_F8' | 'Standard_F8s' | 'Unknown'
 
 ## CustomProfile
 ### Properties
@@ -205,17 +211,11 @@
 ### Properties
 * **uri**: string
 
-## Microsoft.HybridNetwork/vendors
+## Microsoft.HybridNetwork/vendors/vendorSkus/previewSubscriptions
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VendorPropertiesFormat
-* **type**: 'Microsoft.HybridNetwork/vendors' (ReadOnly, DeployTimeConstant)
-
-## VendorPropertiesFormat
-### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly)
-* **skus**: SubResource[] (ReadOnly)
+* **type**: 'Microsoft.HybridNetwork/vendors/vendorSkus/previewSubscriptions' (ReadOnly, DeployTimeConstant)
 

@@ -1,5 +1,33 @@
 # Microsoft.Migrate @ 2019-10-01-preview
 
+## Microsoft.Migrate/moveCollections
+### Properties
+* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MoveCollectionProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Migrate/moveCollections' (ReadOnly, DeployTimeConstant)
+
+## Identity
+### Properties
+* **principalId**: string
+* **tenantId**: string
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned'
+
+## MoveCollectionProperties
+### Properties
+* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating'
+* **sourceRegion**: string (Required)
+* **targetRegion**: string (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Migrate/moveCollections/moveResources
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
@@ -19,7 +47,7 @@
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating'
 * **resourceSettings**: ResourceSettings
 * **sourceId**: string (Required)
-* **sourceResourceSettings**: schemas:14_sourceResourceSettings (ReadOnly)
+* **sourceResourceSettings**: ResourceSettings (ReadOnly)
 * **targetId**: string (ReadOnly)
 
 ## MoveResourceDependency
@@ -143,10 +171,6 @@
 #### Properties
 * **resourceType**: 'resourceGroups' (Required)
 
-### schemas:14_sourceResourceSettings
-#### Properties
-* **resourceType**: 'schemas:14_sourceResourceSettings' (Required)
-
 
 ## Microsoft.Compute/availabilitySets
 ### Properties
@@ -263,36 +287,4 @@
 ## resourceGroups
 ### Properties
 * **resourceType**: 'resourceGroups' (Required)
-
-## schemas:14_sourceResourceSettings
-### Properties
-* **resourceType**: 'schemas:14_sourceResourceSettings' (Required)
-
-## Microsoft.Migrate/moveCollections
-### Properties
-* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MoveCollectionProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Migrate/moveCollections' (ReadOnly, DeployTimeConstant)
-
-## Identity
-### Properties
-* **principalId**: string
-* **tenantId**: string
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned'
-
-## MoveCollectionProperties
-### Properties
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating'
-* **sourceRegion**: string (Required)
-* **targetRegion**: string (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

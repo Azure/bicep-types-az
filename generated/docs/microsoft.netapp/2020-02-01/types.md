@@ -1,20 +1,59 @@
 # Microsoft.NetApp @ 2020-02-01
 
-## Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots
+## Microsoft.NetApp/netAppAccounts
 ### Properties
 * **apiVersion**: '2020-02-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: snapshotProperties
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
+* **properties**: accountProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
 
-## snapshotProperties
+## accountProperties
 ### Properties
-* **created**: string (ReadOnly)
+* **activeDirectories**: activeDirectory[]
 * **provisioningState**: string (ReadOnly)
-* **snapshotId**: string (ReadOnly)
+
+## activeDirectory
+### Properties
+* **activeDirectoryId**: string
+* **backupOperators**: string[]
+* **dns**: string
+* **domain**: string
+* **organizationalUnit**: string
+* **password**: string
+* **site**: string
+* **smbServerName**: string
+* **status**: string
+* **username**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.NetApp/netAppAccounts/capacityPools
+### Properties
+* **apiVersion**: '2020-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: poolProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
+
+## poolProperties
+### Properties
+* **poolId**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' (Required)
+* **size**: int (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Microsoft.NetApp/netAppAccounts/capacityPools/volumes
 ### Properties
@@ -92,58 +131,19 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.NetApp/netAppAccounts/capacityPools
+## Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots
 ### Properties
 * **apiVersion**: '2020-02-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: poolProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
+* **properties**: snapshotProperties
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
 
-## poolProperties
+## snapshotProperties
 ### Properties
-* **poolId**: string (ReadOnly)
+* **created**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
-* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' (Required)
-* **size**: int (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.NetApp/netAppAccounts
-### Properties
-* **apiVersion**: '2020-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: accountProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
-
-## accountProperties
-### Properties
-* **activeDirectories**: activeDirectory[]
-* **provisioningState**: string (ReadOnly)
-
-## activeDirectory
-### Properties
-* **activeDirectoryId**: string
-* **backupOperators**: string[]
-* **dns**: string
-* **domain**: string
-* **organizationalUnit**: string
-* **password**: string
-* **site**: string
-* **smbServerName**: string
-* **status**: string
-* **username**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
+* **snapshotId**: string (ReadOnly)
 

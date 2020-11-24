@@ -1,21 +1,185 @@
 # Microsoft.ApiManagement @ 2019-12-01
 
-## Microsoft.ApiManagement/service/apiVersionSets
+## Microsoft.ApiManagement/service
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: ApiManagementServiceIdentity
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApiManagementServiceProperties (Required)
+* **sku**: ApiManagementServiceSkuProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ApiManagement/service' (ReadOnly, DeployTimeConstant)
+
+## ApiManagementServiceIdentity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned' (Required)
+* **userAssignedIdentities**: Dictionary<string,UserIdentityProperties>
+
+## Dictionary<string,UserIdentityProperties>
+### Additional Properties
+* **Additional Properties Type**: UserIdentityProperties
+
+## UserIdentityProperties
+### Properties
+* **clientId**: string
+* **principalId**: string
+
+## ApiManagementServiceProperties
+### Properties
+* **additionalLocations**: AdditionalLocation[]
+* **apiVersionConstraint**: ApiVersionConstraint
+* **certificates**: CertificateConfiguration[]
+* **createdAtUtc**: string (ReadOnly)
+* **customProperties**: Dictionary<string,String>
+* **developerPortalUrl**: string (ReadOnly)
+* **disableGateway**: bool
+* **enableClientCertificate**: bool
+* **gatewayRegionalUrl**: string (ReadOnly)
+* **gatewayUrl**: string (ReadOnly)
+* **hostnameConfigurations**: HostnameConfiguration[]
+* **managementApiUrl**: string (ReadOnly)
+* **notificationSenderEmail**: string
+* **portalUrl**: string (ReadOnly)
+* **privateIPAddresses**: string[] (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **publicIPAddresses**: string[] (ReadOnly)
+* **publisherEmail**: string (Required)
+* **publisherName**: string (Required)
+* **scmUrl**: string (ReadOnly)
+* **targetProvisioningState**: string (ReadOnly)
+* **virtualNetworkConfiguration**: VirtualNetworkConfiguration
+* **virtualNetworkType**: 'External' | 'Internal' | 'None'
+
+## AdditionalLocation
+### Properties
+* **disableGateway**: bool
+* **gatewayRegionalUrl**: string (ReadOnly)
+* **location**: string (Required)
+* **privateIPAddresses**: string[] (ReadOnly)
+* **publicIPAddresses**: string[] (ReadOnly)
+* **sku**: ApiManagementServiceSkuProperties (Required)
+* **virtualNetworkConfiguration**: VirtualNetworkConfiguration
+
+## ApiManagementServiceSkuProperties
+### Properties
+* **capacity**: int (Required)
+* **name**: 'Basic' | 'Consumption' | 'Developer' | 'Premium' | 'Standard' (Required)
+
+## VirtualNetworkConfiguration
+### Properties
+* **subnetname**: string (ReadOnly)
+* **subnetResourceId**: string
+* **vnetid**: string (ReadOnly)
+
+## ApiVersionConstraint
+### Properties
+* **minApiVersion**: string
+
+## CertificateConfiguration
+### Properties
+* **certificate**: CertificateInformation
+* **certificatePassword**: string
+* **encodedCertificate**: string
+* **storeName**: 'CertificateAuthority' | 'Root' (Required)
+
+## CertificateInformation
+### Properties
+* **expiry**: string (Required)
+* **subject**: string (Required)
+* **thumbprint**: string (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## HostnameConfiguration
+### Properties
+* **certificate**: CertificateInformation
+* **certificatePassword**: string
+* **defaultSslBinding**: bool
+* **encodedCertificate**: string
+* **hostName**: string (Required)
+* **keyVaultId**: string
+* **negotiateClientCertificate**: bool
+* **type**: 'DeveloperPortal' | 'Management' | 'Portal' | 'Proxy' | 'Scm' (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.ApiManagement/service/apis
 ### Properties
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApiVersionSetContractProperties
-* **type**: 'Microsoft.ApiManagement/service/apiVersionSets' (ReadOnly, DeployTimeConstant)
+* **properties**: ApiCreateOrUpdateProperties
+* **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant)
 
-## ApiVersionSetContractProperties
+## ApiCreateOrUpdateProperties
+### Properties
+* **apiRevision**: string
+* **apiRevisionDescription**: string
+* **apiType**: 'http' | 'soap' (WriteOnly)
+* **apiVersion**: string
+* **apiVersionDescription**: string
+* **apiVersionSet**: ApiVersionSetContractDetails
+* **apiVersionSetId**: string
+* **authenticationSettings**: AuthenticationSettingsContract
+* **description**: string
+* **displayName**: string
+* **format**: 'openapi-link' | 'openapi' | 'openapi+json-link' | 'openapi+json' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl-link' | 'wsdl' (WriteOnly)
+* **isCurrent**: bool
+* **isOnline**: bool (ReadOnly)
+* **path**: string (Required)
+* **protocols**: 'http' | 'https'[]
+* **serviceUrl**: string
+* **sourceApiId**: string
+* **subscriptionKeyParameterNames**: SubscriptionKeyParameterNamesContract
+* **subscriptionRequired**: bool
+* **type**: 'http' | 'soap'
+* **value**: string (WriteOnly)
+* **wsdlSelector**: schemas:43_wsdlSelector (WriteOnly)
+
+## ApiVersionSetContractDetails
 ### Properties
 * **description**: string
-* **displayName**: string (Required)
+* **id**: string
+* **name**: string
 * **versionHeaderName**: string
+* **versioningScheme**: 'Header' | 'Query' | 'Segment'
 * **versionQueryName**: string
-* **versioningScheme**: 'Header' | 'Query' | 'Segment' (Required)
+
+## AuthenticationSettingsContract
+### Properties
+* **oAuth2**: OAuth2AuthenticationSettingsContract
+* **openid**: OpenIdAuthenticationSettingsContract
+
+## OAuth2AuthenticationSettingsContract
+### Properties
+* **authorizationServerId**: string
+* **scope**: string
+
+## OpenIdAuthenticationSettingsContract
+### Properties
+* **bearerTokenSendingMethods**: 'authorizationHeader' | 'query'[]
+* **openidProviderId**: string
+
+## SubscriptionKeyParameterNamesContract
+### Properties
+* **header**: string
+* **query**: string
+
+## schemas:43_wsdlSelector
+### Properties
+* **wsdlEndpointName**: string (WriteOnly)
+* **wsdlServiceName**: string (WriteOnly)
 
 ## Microsoft.ApiManagement/service/apis/diagnostics
 ### Properties
@@ -56,6 +220,24 @@
 * **percentage**: int
 * **samplingType**: 'fixed'
 
+## Microsoft.ApiManagement/service/apis/issues
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IssueContractProperties
+* **type**: 'Microsoft.ApiManagement/service/apis/issues' (ReadOnly, DeployTimeConstant)
+
+## IssueContractProperties
+### Properties
+* **apiId**: string
+* **createdDate**: string
+* **description**: string (Required)
+* **state**: 'closed' | 'open' | 'proposed' | 'removed' | 'resolved'
+* **title**: string (Required)
+* **userId**: string (Required)
+
 ## Microsoft.ApiManagement/service/apis/issues/attachments
 ### Properties
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
@@ -85,38 +267,6 @@
 * **createdDate**: string
 * **text**: string (Required)
 * **userId**: string (Required)
-
-## Microsoft.ApiManagement/service/apis/issues
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IssueContractProperties
-* **type**: 'Microsoft.ApiManagement/service/apis/issues' (ReadOnly, DeployTimeConstant)
-
-## IssueContractProperties
-### Properties
-* **apiId**: string
-* **createdDate**: string
-* **description**: string (Required)
-* **state**: 'closed' | 'open' | 'proposed' | 'removed' | 'resolved'
-* **title**: string (Required)
-* **userId**: string (Required)
-
-## Microsoft.ApiManagement/service/apis/operations/policies
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyContractProperties
-* **type**: 'Microsoft.ApiManagement/service/apis/operations/policies' (ReadOnly, DeployTimeConstant)
-
-## PolicyContractProperties
-### Properties
-* **format**: 'rawxml' | 'rawxml-link' | 'xml' | 'xml-link'
-* **value**: string (Required)
 
 ## Microsoft.ApiManagement/service/apis/operations
 ### Properties
@@ -168,6 +318,20 @@
 * **headers**: ParameterContract[]
 * **representations**: RepresentationContract[]
 * **statusCode**: int (Required)
+
+## Microsoft.ApiManagement/service/apis/operations/policies
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PolicyContractProperties
+* **type**: 'Microsoft.ApiManagement/service/apis/operations/policies' (ReadOnly, DeployTimeConstant)
+
+## PolicyContractProperties
+### Properties
+* **format**: 'rawxml-link' | 'rawxml' | 'xml-link' | 'xml'
+* **value**: string (Required)
 
 ## Microsoft.ApiManagement/service/apis/policies
 ### Properties
@@ -230,73 +394,22 @@
 * **externalDocsUrl**: string
 * **tagId**: string (ReadOnly)
 
-## Microsoft.ApiManagement/service/apis
+## Microsoft.ApiManagement/service/apiVersionSets
 ### Properties
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApiCreateOrUpdateProperties
-* **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant)
+* **properties**: ApiVersionSetContractProperties
+* **type**: 'Microsoft.ApiManagement/service/apiVersionSets' (ReadOnly, DeployTimeConstant)
 
-## ApiCreateOrUpdateProperties
-### Properties
-* **apiRevision**: string
-* **apiRevisionDescription**: string
-* **apiType**: 'http' | 'soap' (WriteOnly)
-* **apiVersion**: string
-* **apiVersionDescription**: string
-* **apiVersionSet**: ApiVersionSetContractDetails
-* **apiVersionSetId**: string
-* **authenticationSettings**: AuthenticationSettingsContract
-* **description**: string
-* **displayName**: string
-* **format**: 'openapi' | 'openapi+json' | 'openapi+json-link' | 'openapi-link' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' (WriteOnly)
-* **isCurrent**: bool
-* **isOnline**: bool (ReadOnly)
-* **path**: string (Required)
-* **protocols**: 'http' | 'https'[]
-* **serviceUrl**: string
-* **sourceApiId**: string
-* **subscriptionKeyParameterNames**: SubscriptionKeyParameterNamesContract
-* **subscriptionRequired**: bool
-* **type**: 'http' | 'soap'
-* **value**: string (WriteOnly)
-* **wsdlSelector**: schemas:43_wsdlSelector (WriteOnly)
-
-## ApiVersionSetContractDetails
+## ApiVersionSetContractProperties
 ### Properties
 * **description**: string
-* **id**: string
-* **name**: string
+* **displayName**: string (Required)
 * **versionHeaderName**: string
+* **versioningScheme**: 'Header' | 'Query' | 'Segment' (Required)
 * **versionQueryName**: string
-* **versioningScheme**: 'Header' | 'Query' | 'Segment'
-
-## AuthenticationSettingsContract
-### Properties
-* **oAuth2**: OAuth2AuthenticationSettingsContract
-* **openid**: OpenIdAuthenticationSettingsContract
-
-## OAuth2AuthenticationSettingsContract
-### Properties
-* **authorizationServerId**: string
-* **scope**: string
-
-## OpenIdAuthenticationSettingsContract
-### Properties
-* **bearerTokenSendingMethods**: 'authorizationHeader' | 'query'[]
-* **openidProviderId**: string
-
-## SubscriptionKeyParameterNamesContract
-### Properties
-* **header**: string
-* **query**: string
-
-## schemas:43_wsdlSelector
-### Properties
-* **wsdlEndpointName**: string (WriteOnly)
-* **wsdlServiceName**: string (WriteOnly)
 
 ## Microsoft.ApiManagement/service/authorizationServers
 ### Properties
@@ -441,6 +554,27 @@
 * **properties**: DiagnosticContractProperties
 * **type**: 'Microsoft.ApiManagement/service/diagnostics' (ReadOnly, DeployTimeConstant)
 
+## Microsoft.ApiManagement/service/gateways
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GatewayContractProperties
+* **type**: 'Microsoft.ApiManagement/service/gateways' (ReadOnly, DeployTimeConstant)
+
+## GatewayContractProperties
+### Properties
+* **description**: string
+* **locationData**: ResourceLocationDataContract
+
+## ResourceLocationDataContract
+### Properties
+* **city**: string
+* **countryOrRegion**: string
+* **district**: string
+* **name**: string (Required)
+
 ## Microsoft.ApiManagement/service/gateways/apis
 ### Properties
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
@@ -468,27 +602,6 @@
 * **certificateId**: string
 * **hostname**: string
 * **negotiateClientCertificate**: bool
-
-## Microsoft.ApiManagement/service/gateways
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GatewayContractProperties
-* **type**: 'Microsoft.ApiManagement/service/gateways' (ReadOnly, DeployTimeConstant)
-
-## GatewayContractProperties
-### Properties
-* **description**: string
-* **locationData**: ResourceLocationDataContract
-
-## ResourceLocationDataContract
-### Properties
-* **city**: string
-* **countryOrRegion**: string
-* **district**: string
-* **name**: string (Required)
 
 ## Microsoft.ApiManagement/service/groups
 ### Properties
@@ -592,15 +705,6 @@
 * **properties**: PolicyContractProperties
 * **type**: 'Microsoft.ApiManagement/service/policies' (ReadOnly, DeployTimeConstant)
 
-## Microsoft.ApiManagement/service/products/policies
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyContractProperties
-* **type**: 'Microsoft.ApiManagement/service/products/policies' (ReadOnly, DeployTimeConstant)
-
 ## Microsoft.ApiManagement/service/products
 ### Properties
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
@@ -619,6 +723,15 @@
 * **subscriptionRequired**: bool
 * **subscriptionsLimit**: int
 * **terms**: string
+
+## Microsoft.ApiManagement/service/products/policies
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PolicyContractProperties
+* **type**: 'Microsoft.ApiManagement/service/products/policies' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.ApiManagement/service/subscriptions
 ### Properties
@@ -717,117 +830,4 @@
 ### Properties
 * **id**: string
 * **provider**: string
-
-## Microsoft.ApiManagement/service
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ApiManagementServiceIdentity
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApiManagementServiceProperties (Required)
-* **sku**: ApiManagementServiceSkuProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ApiManagement/service' (ReadOnly, DeployTimeConstant)
-
-## ApiManagementServiceIdentity
-### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' (Required)
-* **userAssignedIdentities**: Dictionary<string,UserIdentityProperties>
-
-## Dictionary<string,UserIdentityProperties>
-### Additional Properties
-* **Additional Properties Type**: UserIdentityProperties
-
-## UserIdentityProperties
-### Properties
-* **clientId**: string
-* **principalId**: string
-
-## ApiManagementServiceProperties
-### Properties
-* **additionalLocations**: AdditionalLocation[]
-* **apiVersionConstraint**: ApiVersionConstraint
-* **certificates**: CertificateConfiguration[]
-* **createdAtUtc**: string (ReadOnly)
-* **customProperties**: Dictionary<string,String>
-* **developerPortalUrl**: string (ReadOnly)
-* **disableGateway**: bool
-* **enableClientCertificate**: bool
-* **gatewayRegionalUrl**: string (ReadOnly)
-* **gatewayUrl**: string (ReadOnly)
-* **hostnameConfigurations**: HostnameConfiguration[]
-* **managementApiUrl**: string (ReadOnly)
-* **notificationSenderEmail**: string
-* **portalUrl**: string (ReadOnly)
-* **privateIPAddresses**: string[] (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **publicIPAddresses**: string[] (ReadOnly)
-* **publisherEmail**: string (Required)
-* **publisherName**: string (Required)
-* **scmUrl**: string (ReadOnly)
-* **targetProvisioningState**: string (ReadOnly)
-* **virtualNetworkConfiguration**: VirtualNetworkConfiguration
-* **virtualNetworkType**: 'External' | 'Internal' | 'None'
-
-## AdditionalLocation
-### Properties
-* **disableGateway**: bool
-* **gatewayRegionalUrl**: string (ReadOnly)
-* **location**: string (Required)
-* **privateIPAddresses**: string[] (ReadOnly)
-* **publicIPAddresses**: string[] (ReadOnly)
-* **sku**: ApiManagementServiceSkuProperties (Required)
-* **virtualNetworkConfiguration**: VirtualNetworkConfiguration
-
-## ApiManagementServiceSkuProperties
-### Properties
-* **capacity**: int (Required)
-* **name**: 'Basic' | 'Consumption' | 'Developer' | 'Premium' | 'Standard' (Required)
-
-## VirtualNetworkConfiguration
-### Properties
-* **subnetResourceId**: string
-* **subnetname**: string (ReadOnly)
-* **vnetid**: string (ReadOnly)
-
-## ApiVersionConstraint
-### Properties
-* **minApiVersion**: string
-
-## CertificateConfiguration
-### Properties
-* **certificate**: CertificateInformation
-* **certificatePassword**: string
-* **encodedCertificate**: string
-* **storeName**: 'CertificateAuthority' | 'Root' (Required)
-
-## CertificateInformation
-### Properties
-* **expiry**: string (Required)
-* **subject**: string (Required)
-* **thumbprint**: string (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## HostnameConfiguration
-### Properties
-* **certificate**: CertificateInformation
-* **certificatePassword**: string
-* **defaultSslBinding**: bool
-* **encodedCertificate**: string
-* **hostName**: string (Required)
-* **keyVaultId**: string
-* **negotiateClientCertificate**: bool
-* **type**: 'DeveloperPortal' | 'Management' | 'Portal' | 'Proxy' | 'Scm' (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

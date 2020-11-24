@@ -1,5 +1,31 @@
 # Microsoft.Network @ 2018-09-01
 
+## Microsoft.Network/privateDnsZones
+### Properties
+* **apiVersion**: '2018-09-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateZoneProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/privateDnsZones' (ReadOnly, DeployTimeConstant)
+
+## PrivateZoneProperties
+### Properties
+* **maxNumberOfRecordSets**: int (ReadOnly)
+* **maxNumberOfVirtualNetworkLinks**: int (ReadOnly)
+* **maxNumberOfVirtualNetworkLinksWithRegistration**: int (ReadOnly)
+* **numberOfRecordSets**: int (ReadOnly)
+* **numberOfVirtualNetworkLinks**: int (ReadOnly)
+* **numberOfVirtualNetworkLinksWithRegistration**: int (ReadOnly)
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Network/privateDnsZones/A
 ### Properties
 * **apiVersion**: '2018-09-01' (ReadOnly, DeployTimeConstant)
@@ -12,8 +38,8 @@
 
 ## RecordSetProperties
 ### Properties
-* **aRecords**: ARecord[]
 * **aaaaRecords**: AaaaRecord[]
+* **aRecords**: ARecord[]
 * **cnameRecord**: CnameRecord
 * **fqdn**: string (ReadOnly)
 * **isAutoRegistered**: bool (ReadOnly)
@@ -25,13 +51,13 @@
 * **ttl**: int
 * **txtRecords**: TxtRecord[]
 
-## ARecord
-### Properties
-* **ipv4Address**: string
-
 ## AaaaRecord
 ### Properties
 * **ipv6Address**: string
+
+## ARecord
+### Properties
+* **ipv4Address**: string
 
 ## CnameRecord
 ### Properties
@@ -163,32 +189,6 @@
 ## SubResource
 ### Properties
 * **id**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Network/privateDnsZones
-### Properties
-* **apiVersion**: '2018-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateZoneProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/privateDnsZones' (ReadOnly, DeployTimeConstant)
-
-## PrivateZoneProperties
-### Properties
-* **maxNumberOfRecordSets**: int (ReadOnly)
-* **maxNumberOfVirtualNetworkLinks**: int (ReadOnly)
-* **maxNumberOfVirtualNetworkLinksWithRegistration**: int (ReadOnly)
-* **numberOfRecordSets**: int (ReadOnly)
-* **numberOfVirtualNetworkLinks**: int (ReadOnly)
-* **numberOfVirtualNetworkLinksWithRegistration**: int (ReadOnly)
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## Dictionary<string,String>
 ### Additional Properties

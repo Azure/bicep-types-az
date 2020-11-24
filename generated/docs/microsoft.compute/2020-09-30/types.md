@@ -1,5 +1,65 @@
 # Microsoft.Compute @ 2020-09-30
 
+## Microsoft.Compute/galleries
+### Properties
+* **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GalleryProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/galleries' (ReadOnly, DeployTimeConstant)
+
+## GalleryProperties
+### Properties
+* **description**: string
+* **identifier**: GalleryIdentifier
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly)
+* **sharingProfile**: SharingProfile
+
+## GalleryIdentifier
+### Properties
+* **uniqueName**: string (ReadOnly)
+
+## SharingProfile
+### Properties
+* **groups**: SharingProfileGroup[] (ReadOnly)
+* **permissions**: 'Groups' | 'Private'
+
+## SharingProfileGroup
+### Properties
+* **ids**: string[]
+* **type**: 'AADTenants' | 'Subscriptions'
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Compute/galleries/applications
+### Properties
+* **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GalleryApplicationProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/galleries/applications' (ReadOnly, DeployTimeConstant)
+
+## GalleryApplicationProperties
+### Properties
+* **description**: string
+* **endOfLifeDate**: string
+* **eula**: string
+* **privacyStatementUri**: string
+* **releaseNoteUri**: string
+* **supportedOSType**: 'Linux' | 'Windows' (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Compute/galleries/applications/versions
 ### Properties
 * **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
@@ -77,85 +137,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Compute/galleries/applications
-### Properties
-* **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GalleryApplicationProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/galleries/applications' (ReadOnly, DeployTimeConstant)
-
-## GalleryApplicationProperties
-### Properties
-* **description**: string
-* **endOfLifeDate**: string
-* **eula**: string
-* **privacyStatementUri**: string
-* **releaseNoteUri**: string
-* **supportedOSType**: 'Linux' | 'Windows' (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Compute/galleries/images/versions
-### Properties
-* **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GalleryImageVersionProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/galleries/images/versions' (ReadOnly, DeployTimeConstant)
-
-## GalleryImageVersionProperties
-### Properties
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly)
-* **publishingProfile**: GalleryImageVersionPublishingProfile
-* **replicationStatus**: ReplicationStatus (ReadOnly)
-* **storageProfile**: GalleryImageVersionStorageProfile (Required)
-
-## GalleryImageVersionPublishingProfile
-### Properties
-* **endOfLifeDate**: string
-* **excludeFromLatest**: bool
-* **publishedDate**: string (ReadOnly)
-* **replicaCount**: int
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS'
-* **targetRegions**: TargetRegion[]
-
-## GalleryImageVersionStorageProfile
-### Properties
-* **dataDiskImages**: GalleryDataDiskImage[]
-* **osDiskImage**: GalleryOSDiskImage
-* **source**: GalleryArtifactVersionSource
-
-## GalleryDataDiskImage
-### Properties
-* **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite'
-* **lun**: int (Required)
-* **sizeInGB**: int (ReadOnly)
-* **source**: GalleryArtifactVersionSource
-
-## GalleryArtifactVersionSource
-### Properties
-* **id**: string
-* **uri**: string
-
-## GalleryOSDiskImage
-### Properties
-* **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite'
-* **sizeInGB**: int (ReadOnly)
-* **source**: GalleryArtifactVersionSource
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Microsoft.Compute/galleries/images
 ### Properties
 * **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
@@ -219,37 +200,56 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Compute/galleries
+## Microsoft.Compute/galleries/images/versions
 ### Properties
 * **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GalleryProperties
+* **properties**: GalleryImageVersionProperties
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/galleries' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.Compute/galleries/images/versions' (ReadOnly, DeployTimeConstant)
 
-## GalleryProperties
+## GalleryImageVersionProperties
 ### Properties
-* **description**: string
-* **identifier**: GalleryIdentifier
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly)
-* **sharingProfile**: SharingProfile
+* **publishingProfile**: GalleryImageVersionPublishingProfile
+* **replicationStatus**: ReplicationStatus (ReadOnly)
+* **storageProfile**: GalleryImageVersionStorageProfile (Required)
 
-## GalleryIdentifier
+## GalleryImageVersionPublishingProfile
 ### Properties
-* **uniqueName**: string (ReadOnly)
+* **endOfLifeDate**: string
+* **excludeFromLatest**: bool
+* **publishedDate**: string (ReadOnly)
+* **replicaCount**: int
+* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS'
+* **targetRegions**: TargetRegion[]
 
-## SharingProfile
+## GalleryImageVersionStorageProfile
 ### Properties
-* **groups**: SharingProfileGroup[] (ReadOnly)
-* **permissions**: 'Groups' | 'Private'
+* **dataDiskImages**: GalleryDataDiskImage[]
+* **osDiskImage**: GalleryOSDiskImage
+* **source**: GalleryArtifactVersionSource
 
-## SharingProfileGroup
+## GalleryDataDiskImage
 ### Properties
-* **ids**: string[]
-* **type**: 'AADTenants' | 'Subscriptions'
+* **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite'
+* **lun**: int (Required)
+* **sizeInGB**: int (ReadOnly)
+* **source**: GalleryArtifactVersionSource
+
+## GalleryArtifactVersionSource
+### Properties
+* **id**: string
+* **uri**: string
+
+## GalleryOSDiskImage
+### Properties
+* **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite'
+* **sizeInGB**: int (ReadOnly)
+* **source**: GalleryArtifactVersionSource
 
 ## Dictionary<string,String>
 ### Additional Properties

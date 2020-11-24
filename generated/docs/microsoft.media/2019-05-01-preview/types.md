@@ -1,31 +1,5 @@
 # Microsoft.Media @ 2019-05-01-preview
 
-## Microsoft.Media/mediaservices/liveEvents/liveOutputs
-### Properties
-* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LiveOutputProperties
-* **type**: 'Microsoft.Media/mediaservices/liveEvents/liveOutputs' (ReadOnly, DeployTimeConstant)
-
-## LiveOutputProperties
-### Properties
-* **archiveWindowLength**: string (Required)
-* **assetName**: string (Required)
-* **created**: string (ReadOnly)
-* **description**: string
-* **hls**: Hls
-* **lastModified**: string (ReadOnly)
-* **manifestName**: string
-* **outputSnapTime**: int
-* **provisioningState**: string (ReadOnly)
-* **resourceState**: 'Creating' | 'Deleting' | 'Running' (ReadOnly)
-
-## Hls
-### Properties
-* **fragmentsPerTsSegment**: int
-
 ## Microsoft.Media/mediaservices/liveEvents
 ### Properties
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
@@ -120,6 +94,32 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Media/mediaservices/liveEvents/liveOutputs
+### Properties
+* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LiveOutputProperties
+* **type**: 'Microsoft.Media/mediaservices/liveEvents/liveOutputs' (ReadOnly, DeployTimeConstant)
+
+## LiveOutputProperties
+### Properties
+* **archiveWindowLength**: string (Required)
+* **assetName**: string (Required)
+* **created**: string (ReadOnly)
+* **description**: string
+* **hls**: Hls
+* **lastModified**: string (ReadOnly)
+* **manifestName**: string
+* **outputSnapTime**: int
+* **provisioningState**: string (ReadOnly)
+* **resourceState**: 'Creating' | 'Deleting' | 'Running' (ReadOnly)
+
+## Hls
+### Properties
+* **fragmentsPerTsSegment**: int
 
 ## Microsoft.Media/mediaservices/streamingEndpoints
 ### Properties

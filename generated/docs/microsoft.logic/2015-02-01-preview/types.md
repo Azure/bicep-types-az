@@ -1,19 +1,5 @@
 # Microsoft.Logic @ 2015-02-01-preview
 
-## Microsoft.Logic/workflows/accessKeys
-### Properties
-* **apiVersion**: '2015-02-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkflowAccessKeyProperties
-* **type**: 'Microsoft.Logic/workflows/accessKeys' (ReadOnly, DeployTimeConstant)
-
-## WorkflowAccessKeyProperties
-### Properties
-* **notAfter**: string
-* **notBefore**: string
-
 ## Microsoft.Logic/workflows
 ### Properties
 * **apiVersion**: '2015-02-01-preview' (ReadOnly, DeployTimeConstant)
@@ -76,4 +62,18 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Logic/workflows/accessKeys
+### Properties
+* **apiVersion**: '2015-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkflowAccessKeyProperties
+* **type**: 'Microsoft.Logic/workflows/accessKeys' (ReadOnly, DeployTimeConstant)
+
+## WorkflowAccessKeyProperties
+### Properties
+* **notAfter**: string
+* **notBefore**: string
 

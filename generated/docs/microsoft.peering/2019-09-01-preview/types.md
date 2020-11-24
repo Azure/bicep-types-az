@@ -22,53 +22,6 @@
 * **emails**: string[]
 * **phone**: string[]
 
-## Microsoft.Peering/peeringServices/prefixes
-### Properties
-* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PeeringServicePrefixProperties
-* **type**: 'Microsoft.Peering/peeringServices/prefixes' (ReadOnly, DeployTimeConstant)
-
-## PeeringServicePrefixProperties
-### Properties
-* **errorMessage**: string (ReadOnly)
-* **events**: PeeringServicePrefixEvent[] (ReadOnly)
-* **learnedType**: 'None' | 'ViaServiceProvider' | 'ViaSession' (ReadOnly)
-* **prefix**: string
-* **prefixValidationState**: 'Failed' | 'Invalid' | 'None' | 'Pending' | 'Unknown' | 'Verified' | 'Warning' (ReadOnly)
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-
-## PeeringServicePrefixEvent
-### Properties
-* **eventDescription**: string (ReadOnly)
-* **eventLevel**: string (ReadOnly)
-* **eventSummary**: string (ReadOnly)
-* **eventTimestamp**: string (ReadOnly)
-* **eventType**: string (ReadOnly)
-
-## Microsoft.Peering/peeringServices
-### Properties
-* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PeeringServiceProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Peering/peeringServices' (ReadOnly, DeployTimeConstant)
-
-## PeeringServiceProperties
-### Properties
-* **peeringServiceLocation**: string
-* **peeringServiceProvider**: string
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Microsoft.Peering/peerings
 ### Properties
 * **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
@@ -149,4 +102,51 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Peering/peeringServices
+### Properties
+* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PeeringServiceProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Peering/peeringServices' (ReadOnly, DeployTimeConstant)
+
+## PeeringServiceProperties
+### Properties
+* **peeringServiceLocation**: string
+* **peeringServiceProvider**: string
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Peering/peeringServices/prefixes
+### Properties
+* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PeeringServicePrefixProperties
+* **type**: 'Microsoft.Peering/peeringServices/prefixes' (ReadOnly, DeployTimeConstant)
+
+## PeeringServicePrefixProperties
+### Properties
+* **errorMessage**: string (ReadOnly)
+* **events**: PeeringServicePrefixEvent[] (ReadOnly)
+* **learnedType**: 'None' | 'ViaServiceProvider' | 'ViaSession' (ReadOnly)
+* **prefix**: string
+* **prefixValidationState**: 'Failed' | 'Invalid' | 'None' | 'Pending' | 'Unknown' | 'Verified' | 'Warning' (ReadOnly)
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+
+## PeeringServicePrefixEvent
+### Properties
+* **eventDescription**: string (ReadOnly)
+* **eventLevel**: string (ReadOnly)
+* **eventSummary**: string (ReadOnly)
+* **eventTimestamp**: string (ReadOnly)
+* **eventType**: string (ReadOnly)
 

@@ -152,22 +152,20 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DeploymentManager/serviceTopologies/services/serviceUnits
+## Microsoft.DeploymentManager/serviceTopologies
 ### Properties
 * **apiVersion**: '2019-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:18_properties (Required)
+* **properties**: schemas:13_properties (Required)
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DeploymentManager/serviceTopologies/services/serviceUnits' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.DeploymentManager/serviceTopologies' (ReadOnly, DeployTimeConstant)
 
-## schemas:18_properties
+## schemas:13_properties
 ### Properties
-* **artifacts**: ServiceUnitArtifacts
-* **deploymentMode**: 'Complete' | 'Incremental' (Required)
-* **targetResourceGroup**: string (Required)
+* **artifactSourceId**: string
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -193,20 +191,22 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DeploymentManager/serviceTopologies
+## Microsoft.DeploymentManager/serviceTopologies/services/serviceUnits
 ### Properties
 * **apiVersion**: '2019-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:13_properties (Required)
+* **properties**: schemas:18_properties (Required)
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DeploymentManager/serviceTopologies' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.DeploymentManager/serviceTopologies/services/serviceUnits' (ReadOnly, DeployTimeConstant)
 
-## schemas:13_properties
+## schemas:18_properties
 ### Properties
-* **artifactSourceId**: string
+* **artifacts**: ServiceUnitArtifacts
+* **deploymentMode**: 'Complete' | 'Incremental' (Required)
+* **targetResourceGroup**: string (Required)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -308,8 +308,8 @@
 
 ## schemas:42_regex
 ### Properties
-* **matchQuantifier**: 'All' | 'Any'
 * **matches**: string[]
+* **matchQuantifier**: 'All' | 'Any'
 
 ## Wait
 ### Properties

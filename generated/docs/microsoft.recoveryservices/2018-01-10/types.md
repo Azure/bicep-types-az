@@ -16,876 +16,6 @@
 * **locale**: string
 * **sendToOwners**: string
 
-## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings
-### Properties
-* **apiVersion**: '2018-01-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateNetworkMappingInputProperties
-* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings' (ReadOnly, DeployTimeConstant)
-
-## CreateNetworkMappingInputProperties
-### Properties
-* **fabricSpecificDetails**: FabricSpecificCreateNetworkMappingInput (WriteOnly)
-* **fabricSpecificSettings**: NetworkMappingFabricSpecificSettings (ReadOnly)
-* **primaryFabricFriendlyName**: string (ReadOnly)
-* **primaryNetworkFriendlyName**: string (ReadOnly)
-* **primaryNetworkId**: string (ReadOnly)
-* **recoveryFabricArmId**: string (ReadOnly)
-* **recoveryFabricFriendlyName**: string (ReadOnly)
-* **recoveryFabricName**: string (WriteOnly)
-* **recoveryNetworkFriendlyName**: string (ReadOnly)
-* **recoveryNetworkId**: string
-* **state**: string (ReadOnly)
-
-## FabricSpecificCreateNetworkMappingInput
-* **Discriminator**: instanceType
-### Base Properties
-### AzureToAzure
-#### Properties
-* **instanceType**: 'AzureToAzure' (Required)
-* **primaryNetworkId**: string (WriteOnly)
-
-### VmmToAzure
-#### Properties
-* **instanceType**: 'VmmToAzure' (Required)
-
-### VmmToVmm
-#### Properties
-* **instanceType**: 'VmmToVmm' (Required)
-
-
-## AzureToAzure
-### Properties
-* **instanceType**: 'AzureToAzure' (Required)
-* **primaryNetworkId**: string (WriteOnly)
-
-## VmmToAzure
-### Properties
-* **instanceType**: 'VmmToAzure' (Required)
-
-## VmmToVmm
-### Properties
-* **instanceType**: 'VmmToVmm' (Required)
-
-## NetworkMappingFabricSpecificSettings
-* **Discriminator**: instanceType
-### Base Properties
-### AzureToAzure
-#### Properties
-* **instanceType**: 'AzureToAzure' (Required)
-* **primaryNetworkId**: string (WriteOnly)
-
-### VmmToAzure
-#### Properties
-* **instanceType**: 'VmmToAzure' (Required)
-
-### VmmToVmm
-#### Properties
-* **instanceType**: 'VmmToVmm' (Required)
-
-
-## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems
-### Properties
-* **apiVersion**: '2018-01-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EnableMigrationInputProperties (Required)
-* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems' (ReadOnly, DeployTimeConstant)
-
-## EnableMigrationInputProperties
-### Properties
-* **allowedOperations**: 'DisableMigration' | 'Migrate' | 'StartResync' | 'TestMigrate' | 'TestMigrateCleanup'[] (ReadOnly)
-* **currentJob**: CurrentJobDetails (ReadOnly)
-* **eventCorrelationId**: string (ReadOnly)
-* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly)
-* **healthErrors**: HealthError[] (ReadOnly)
-* **lastTestMigrationStatus**: string (ReadOnly)
-* **lastTestMigrationTime**: string (ReadOnly)
-* **machineName**: string (ReadOnly)
-* **migrationState**: 'DisableMigrationFailed' | 'DisableMigrationInProgress' | 'EnableMigrationFailed' | 'EnableMigrationInProgress' | 'InitialSeedingFailed' | 'InitialSeedingInProgress' | 'MigrationFailed' | 'MigrationInProgress' | 'MigrationSucceeded' | 'None' | 'Replicating' (ReadOnly)
-* **migrationStateDescription**: string (ReadOnly)
-* **policyFriendlyName**: string (ReadOnly)
-* **policyId**: string (Required)
-* **providerSpecificDetails**: EnableMigrationProviderSpecificInput (Required)
-* **testMigrateState**: 'None' | 'TestMigrationCleanupInProgress' | 'TestMigrationFailed' | 'TestMigrationInProgress' | 'TestMigrationSucceeded' (ReadOnly)
-* **testMigrateStateDescription**: string (ReadOnly)
-
-## CurrentJobDetails
-### Properties
-* **jobId**: string (ReadOnly)
-* **jobName**: string (ReadOnly)
-* **startTime**: string (ReadOnly)
-
-## HealthError
-### Properties
-* **creationTimeUtc**: string (ReadOnly)
-* **entityId**: string (ReadOnly)
-* **errorCategory**: string (ReadOnly)
-* **errorCode**: string (ReadOnly)
-* **errorLevel**: string (ReadOnly)
-* **errorMessage**: string (ReadOnly)
-* **errorSource**: string (ReadOnly)
-* **errorType**: string (ReadOnly)
-* **innerHealthErrors**: InnerHealthError[] (ReadOnly)
-* **possibleCauses**: string (ReadOnly)
-* **recommendedAction**: string (ReadOnly)
-* **recoveryProviderErrorMessage**: string (ReadOnly)
-* **summaryMessage**: string (ReadOnly)
-
-## InnerHealthError
-### Properties
-* **creationTimeUtc**: string (ReadOnly)
-* **entityId**: string (ReadOnly)
-* **errorCategory**: string (ReadOnly)
-* **errorCode**: string (ReadOnly)
-* **errorLevel**: string (ReadOnly)
-* **errorMessage**: string (ReadOnly)
-* **errorSource**: string (ReadOnly)
-* **errorType**: string (ReadOnly)
-* **possibleCauses**: string (ReadOnly)
-* **recommendedAction**: string (ReadOnly)
-* **recoveryProviderErrorMessage**: string (ReadOnly)
-* **summaryMessage**: string (ReadOnly)
-
-## EnableMigrationProviderSpecificInput
-* **Discriminator**: instanceType
-### Base Properties
-### VMwareCbt
-#### Properties
-* **instanceType**: 'VMwareCbt' (Required)
-
-
-## VMwareCbt
-### Properties
-* **instanceType**: 'VMwareCbt' (Required)
-
-## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems
-### Properties
-* **apiVersion**: '2018-01-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EnableProtectionInputProperties
-* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems' (ReadOnly, DeployTimeConstant)
-
-## EnableProtectionInputProperties
-### Properties
-* **activeLocation**: string (ReadOnly)
-* **allowedOperations**: string[] (ReadOnly)
-* **currentScenario**: CurrentScenarioDetails (ReadOnly)
-* **failoverHealth**: string (ReadOnly)
-* **failoverRecoveryPointId**: string (ReadOnly)
-* **friendlyName**: string (ReadOnly)
-* **healthErrors**: HealthError[] (ReadOnly)
-* **lastSuccessfulFailoverTime**: string (ReadOnly)
-* **lastSuccessfulTestFailoverTime**: string (ReadOnly)
-* **policyFriendlyName**: string (ReadOnly)
-* **policyId**: string
-* **primaryFabricFriendlyName**: string (ReadOnly)
-* **primaryFabricProvider**: string (ReadOnly)
-* **primaryProtectionContainerFriendlyName**: string (ReadOnly)
-* **protectableItemId**: string
-* **protectedItemType**: string (ReadOnly)
-* **protectionState**: string (ReadOnly)
-* **protectionStateDescription**: string (ReadOnly)
-* **providerSpecificDetails**: EnableProtectionProviderSpecificInput
-* **recoveryContainerId**: string (ReadOnly)
-* **recoveryFabricFriendlyName**: string (ReadOnly)
-* **recoveryFabricId**: string (ReadOnly)
-* **recoveryProtectionContainerFriendlyName**: string (ReadOnly)
-* **recoveryServicesProviderId**: string (ReadOnly)
-* **replicationHealth**: string (ReadOnly)
-* **testFailoverState**: string (ReadOnly)
-* **testFailoverStateDescription**: string (ReadOnly)
-
-## CurrentScenarioDetails
-### Properties
-* **jobId**: string (ReadOnly)
-* **scenarioName**: string (ReadOnly)
-* **startTime**: string (ReadOnly)
-
-## EnableProtectionProviderSpecificInput
-* **Discriminator**: instanceType
-### Base Properties
-### A2A
-#### Properties
-* **instanceType**: 'A2A' (Required)
-
-### HyperVReplica2012
-#### Properties
-* **initialReplicationDetails**: InitialReplicationDetails (ReadOnly)
-* **instanceType**: 'HyperVReplica2012' (Required)
-* **lastReplicatedTime**: string (ReadOnly)
-* **vMDiskDetails**: DiskDetails[] (ReadOnly)
-* **vmId**: string (ReadOnly)
-* **vmNics**: VMNicDetails[] (ReadOnly)
-* **vmProtectionState**: string (ReadOnly)
-* **vmProtectionStateDescription**: string (ReadOnly)
-
-### HyperVReplica2012R2
-#### Properties
-* **initialReplicationDetails**: InitialReplicationDetails (ReadOnly)
-* **instanceType**: 'HyperVReplica2012R2' (Required)
-* **lastReplicatedTime**: string (ReadOnly)
-* **vMDiskDetails**: DiskDetails[] (ReadOnly)
-* **vmId**: string (ReadOnly)
-* **vmNics**: VMNicDetails[] (ReadOnly)
-* **vmProtectionState**: string (ReadOnly)
-* **vmProtectionStateDescription**: string (ReadOnly)
-
-### HyperVReplicaAzure
-#### Properties
-* **azureVmDiskDetails**: AzureVmDiskDetails[] (ReadOnly)
-* **disksToInclude**: string[] (WriteOnly)
-* **enableRdpOnTargetOption**: string
-* **encryption**: string (ReadOnly)
-* **hvHostVmId**: string (WriteOnly)
-* **initialReplicationDetails**: InitialReplicationDetails (ReadOnly)
-* **instanceType**: 'HyperVReplicaAzure' (Required)
-* **lastReplicatedTime**: string (ReadOnly)
-* **lastRpoCalculatedTime**: string (ReadOnly)
-* **licenseType**: string (ReadOnly)
-* **logStorageAccountId**: string (WriteOnly)
-* **oSDetails**: OSDetails (ReadOnly)
-* **osType**: string (WriteOnly)
-* **recoveryAvailabilitySetId**: string (ReadOnly)
-* **recoveryAzureLogStorageAccountId**: string (ReadOnly)
-* **recoveryAzureResourceGroupId**: string (ReadOnly)
-* **recoveryAzureStorageAccount**: string (ReadOnly)
-* **recoveryAzureVMSize**: string (ReadOnly)
-* **recoveryAzureVmName**: string (ReadOnly)
-* **rpoInSeconds**: int (ReadOnly)
-* **selectedRecoveryAzureNetworkId**: string (ReadOnly)
-* **selectedSourceNicId**: string (ReadOnly)
-* **sourceVmCpuCount**: int (ReadOnly)
-* **sourceVmRamSizeInMB**: int (ReadOnly)
-* **targetAzureNetworkId**: string (WriteOnly)
-* **targetAzureSubnetId**: string (WriteOnly)
-* **targetAzureV1ResourceGroupId**: string (WriteOnly)
-* **targetAzureV2ResourceGroupId**: string (WriteOnly)
-* **targetAzureVmName**: string (WriteOnly)
-* **targetStorageAccountId**: string (WriteOnly)
-* **useManagedDisks**: string
-* **vhdId**: string (WriteOnly)
-* **vmId**: string (ReadOnly)
-* **vmName**: string (WriteOnly)
-* **vmNics**: VMNicDetails[] (ReadOnly)
-* **vmProtectionState**: string (ReadOnly)
-* **vmProtectionStateDescription**: string (ReadOnly)
-
-### HyperVReplicaBaseReplicationDetails
-#### Properties
-* **initialReplicationDetails**: InitialReplicationDetails (ReadOnly)
-* **instanceType**: 'HyperVReplicaBaseReplicationDetails' (Required)
-* **lastReplicatedTime**: string (ReadOnly)
-* **vMDiskDetails**: DiskDetails[] (ReadOnly)
-* **vmId**: string (ReadOnly)
-* **vmNics**: VMNicDetails[] (ReadOnly)
-* **vmProtectionState**: string (ReadOnly)
-* **vmProtectionStateDescription**: string (ReadOnly)
-
-### InMage
-#### Properties
-* **activeSiteType**: string (ReadOnly)
-* **agentDetails**: InMageAgentDetails (ReadOnly)
-* **azureStorageAccountId**: string (ReadOnly)
-* **compressedDataRateInMB**: int (ReadOnly)
-* **consistencyPoints**: Dictionary<string,DateTime> (ReadOnly)
-* **datastoreName**: string (WriteOnly)
-* **datastores**: string[] (ReadOnly)
-* **discoveryType**: string (ReadOnly)
-* **diskExclusionInput**: InMageDiskExclusionInput (WriteOnly)
-* **diskResized**: string (ReadOnly)
-* **disksToInclude**: string[] (WriteOnly)
-* **infrastructureVmId**: string (ReadOnly)
-* **instanceType**: 'InMage' (Required)
-* **ipAddress**: string (ReadOnly)
-* **lastHeartbeat**: string (ReadOnly)
-* **lastRpoCalculatedTime**: string (ReadOnly)
-* **lastUpdateReceivedTime**: string (ReadOnly)
-* **masterTargetId**: string (Required)
-* **multiVmGroupId**: string (Required)
-* **multiVmGroupName**: string (Required)
-* **multiVmSyncStatus**: string (ReadOnly)
-* **osDetails**: OSDiskDetails (ReadOnly)
-* **osVersion**: string (ReadOnly)
-* **processServerId**: string (Required)
-* **protectedDisks**: InMageProtectedDiskDetails[] (ReadOnly)
-* **protectionStage**: string (ReadOnly)
-* **rebootAfterUpdateStatus**: string (ReadOnly)
-* **replicaId**: string (ReadOnly)
-* **resyncDetails**: InitialReplicationDetails (ReadOnly)
-* **retentionDrive**: string (Required, WriteOnly)
-* **retentionWindowEnd**: string (ReadOnly)
-* **retentionWindowStart**: string (ReadOnly)
-* **rpoInSeconds**: int (ReadOnly)
-* **runAsAccountId**: string (WriteOnly)
-* **sourceVmCpuCount**: int (ReadOnly)
-* **sourceVmRamSizeInMB**: int (ReadOnly)
-* **uncompressedDataRateInMB**: int (ReadOnly)
-* **vCenterInfrastructureId**: string (ReadOnly)
-* **validationErrors**: HealthError[] (ReadOnly)
-* **vmFriendlyName**: string (WriteOnly)
-* **vmId**: string (ReadOnly)
-* **vmNics**: VMNicDetails[] (ReadOnly)
-* **vmProtectionState**: string (ReadOnly)
-* **vmProtectionStateDescription**: string (ReadOnly)
-
-### InMageAzureV2
-#### Properties
-* **agentExpiryDate**: string (ReadOnly)
-* **agentVersion**: string (ReadOnly)
-* **azureVMDiskDetails**: AzureVmDiskDetails[] (ReadOnly)
-* **compressedDataRateInMB**: int (ReadOnly)
-* **datastores**: string[] (ReadOnly)
-* **discoveryType**: string (ReadOnly)
-* **diskResized**: string (ReadOnly)
-* **disksToInclude**: string[] (WriteOnly)
-* **enableRdpOnTargetOption**: string
-* **infrastructureVmId**: string (ReadOnly)
-* **instanceType**: 'InMageAzureV2' (Required)
-* **ipAddress**: string (ReadOnly)
-* **isAgentUpdateRequired**: string (ReadOnly)
-* **isRebootAfterUpdateRequired**: string (ReadOnly)
-* **lastHeartbeat**: string (ReadOnly)
-* **lastRpoCalculatedTime**: string (ReadOnly)
-* **lastUpdateReceivedTime**: string (ReadOnly)
-* **licenseType**: string (ReadOnly)
-* **logStorageAccountId**: string (WriteOnly)
-* **masterTargetId**: string
-* **multiVmGroupId**: string
-* **multiVmGroupName**: string
-* **multiVmSyncStatus**: string (ReadOnly)
-* **osDiskId**: string (ReadOnly)
-* **osType**: string (ReadOnly)
-* **osVersion**: string (ReadOnly)
-* **processServerId**: string
-* **protectedDisks**: InMageAzureV2ProtectedDiskDetails[] (ReadOnly)
-* **protectionStage**: string (ReadOnly)
-* **recoveryAvailabilitySetId**: string (ReadOnly)
-* **recoveryAzureLogStorageAccountId**: string (ReadOnly)
-* **recoveryAzureResourceGroupId**: string (ReadOnly)
-* **recoveryAzureStorageAccount**: string (ReadOnly)
-* **recoveryAzureVMName**: string (ReadOnly)
-* **recoveryAzureVMSize**: string (ReadOnly)
-* **replicaId**: string (ReadOnly)
-* **resyncProgressPercentage**: int (ReadOnly)
-* **rpoInSeconds**: int (ReadOnly)
-* **runAsAccountId**: string (WriteOnly)
-* **selectedRecoveryAzureNetworkId**: string (ReadOnly)
-* **selectedSourceNicId**: string (ReadOnly)
-* **sourceVmCpuCount**: int (ReadOnly)
-* **sourceVmRamSizeInMB**: int (ReadOnly)
-* **storageAccountId**: string (Required, WriteOnly)
-* **targetAzureNetworkId**: string (WriteOnly)
-* **targetAzureSubnetId**: string (WriteOnly)
-* **targetAzureV1ResourceGroupId**: string (WriteOnly)
-* **targetAzureV2ResourceGroupId**: string (WriteOnly)
-* **targetAzureVmName**: string (WriteOnly)
-* **targetVmId**: string (ReadOnly)
-* **uncompressedDataRateInMB**: int (ReadOnly)
-* **useManagedDisks**: string
-* **vCenterInfrastructureId**: string (ReadOnly)
-* **validationErrors**: HealthError[] (ReadOnly)
-* **vhdName**: string (ReadOnly)
-* **vmId**: string (ReadOnly)
-* **vmNics**: VMNicDetails[] (ReadOnly)
-* **vmProtectionState**: string (ReadOnly)
-* **vmProtectionStateDescription**: string (ReadOnly)
-
-### San
-#### Properties
-* **instanceType**: 'San' (Required)
-
-
-## A2A
-### Properties
-* **instanceType**: 'A2A' (Required)
-
-## HyperVReplica2012
-### Properties
-* **initialReplicationDetails**: InitialReplicationDetails (ReadOnly)
-* **instanceType**: 'HyperVReplica2012' (Required)
-* **lastReplicatedTime**: string (ReadOnly)
-* **vMDiskDetails**: DiskDetails[] (ReadOnly)
-* **vmId**: string (ReadOnly)
-* **vmNics**: VMNicDetails[] (ReadOnly)
-* **vmProtectionState**: string (ReadOnly)
-* **vmProtectionStateDescription**: string (ReadOnly)
-
-## InitialReplicationDetails
-### Properties
-* **initialReplicationProgressPercentage**: string (ReadOnly)
-* **initialReplicationType**: string (ReadOnly)
-
-## DiskDetails
-### Properties
-* **maxSizeMB**: int (ReadOnly)
-* **vhdId**: string (ReadOnly)
-* **vhdName**: string (ReadOnly)
-* **vhdType**: string (ReadOnly)
-
-## VMNicDetails
-### Properties
-* **enableAcceleratedNetworkingOnRecovery**: bool (ReadOnly)
-* **ipAddressType**: string (ReadOnly)
-* **nicId**: string (ReadOnly)
-* **primaryNicStaticIPAddress**: string (ReadOnly)
-* **recoveryNicIpAddressType**: string (ReadOnly)
-* **recoveryVMNetworkId**: string (ReadOnly)
-* **recoveryVMSubnetName**: string (ReadOnly)
-* **replicaNicId**: string (ReadOnly)
-* **replicaNicStaticIPAddress**: string (ReadOnly)
-* **selectionType**: string (ReadOnly)
-* **sourceNicArmId**: string (ReadOnly)
-* **vMNetworkName**: string (ReadOnly)
-* **vMSubnetName**: string (ReadOnly)
-
-## HyperVReplica2012R2
-### Properties
-* **initialReplicationDetails**: InitialReplicationDetails (ReadOnly)
-* **instanceType**: 'HyperVReplica2012R2' (Required)
-* **lastReplicatedTime**: string (ReadOnly)
-* **vMDiskDetails**: DiskDetails[] (ReadOnly)
-* **vmId**: string (ReadOnly)
-* **vmNics**: VMNicDetails[] (ReadOnly)
-* **vmProtectionState**: string (ReadOnly)
-* **vmProtectionStateDescription**: string (ReadOnly)
-
-## HyperVReplicaAzure
-### Properties
-* **azureVmDiskDetails**: AzureVmDiskDetails[] (ReadOnly)
-* **disksToInclude**: string[] (WriteOnly)
-* **enableRdpOnTargetOption**: string
-* **encryption**: string (ReadOnly)
-* **hvHostVmId**: string (WriteOnly)
-* **initialReplicationDetails**: InitialReplicationDetails (ReadOnly)
-* **instanceType**: 'HyperVReplicaAzure' (Required)
-* **lastReplicatedTime**: string (ReadOnly)
-* **lastRpoCalculatedTime**: string (ReadOnly)
-* **licenseType**: string (ReadOnly)
-* **logStorageAccountId**: string (WriteOnly)
-* **oSDetails**: OSDetails (ReadOnly)
-* **osType**: string (WriteOnly)
-* **recoveryAvailabilitySetId**: string (ReadOnly)
-* **recoveryAzureLogStorageAccountId**: string (ReadOnly)
-* **recoveryAzureResourceGroupId**: string (ReadOnly)
-* **recoveryAzureStorageAccount**: string (ReadOnly)
-* **recoveryAzureVMSize**: string (ReadOnly)
-* **recoveryAzureVmName**: string (ReadOnly)
-* **rpoInSeconds**: int (ReadOnly)
-* **selectedRecoveryAzureNetworkId**: string (ReadOnly)
-* **selectedSourceNicId**: string (ReadOnly)
-* **sourceVmCpuCount**: int (ReadOnly)
-* **sourceVmRamSizeInMB**: int (ReadOnly)
-* **targetAzureNetworkId**: string (WriteOnly)
-* **targetAzureSubnetId**: string (WriteOnly)
-* **targetAzureV1ResourceGroupId**: string (WriteOnly)
-* **targetAzureV2ResourceGroupId**: string (WriteOnly)
-* **targetAzureVmName**: string (WriteOnly)
-* **targetStorageAccountId**: string (WriteOnly)
-* **useManagedDisks**: string
-* **vhdId**: string (WriteOnly)
-* **vmId**: string (ReadOnly)
-* **vmName**: string (WriteOnly)
-* **vmNics**: VMNicDetails[] (ReadOnly)
-* **vmProtectionState**: string (ReadOnly)
-* **vmProtectionStateDescription**: string (ReadOnly)
-
-## AzureVmDiskDetails
-### Properties
-* **lunId**: string (ReadOnly)
-* **maxSizeMB**: string (ReadOnly)
-* **targetDiskLocation**: string (ReadOnly)
-* **targetDiskName**: string (ReadOnly)
-* **vhdId**: string (ReadOnly)
-* **vhdName**: string (ReadOnly)
-* **vhdType**: string (ReadOnly)
-
-## OSDetails
-### Properties
-* **oSMajorVersion**: string (ReadOnly)
-* **oSMinorVersion**: string (ReadOnly)
-* **oSVersion**: string (ReadOnly)
-* **osEdition**: string (ReadOnly)
-* **osType**: string (ReadOnly)
-* **productType**: string (ReadOnly)
-
-## HyperVReplicaBaseReplicationDetails
-### Properties
-* **initialReplicationDetails**: InitialReplicationDetails (ReadOnly)
-* **instanceType**: 'HyperVReplicaBaseReplicationDetails' (Required)
-* **lastReplicatedTime**: string (ReadOnly)
-* **vMDiskDetails**: DiskDetails[] (ReadOnly)
-* **vmId**: string (ReadOnly)
-* **vmNics**: VMNicDetails[] (ReadOnly)
-* **vmProtectionState**: string (ReadOnly)
-* **vmProtectionStateDescription**: string (ReadOnly)
-
-## InMage
-### Properties
-* **activeSiteType**: string (ReadOnly)
-* **agentDetails**: InMageAgentDetails (ReadOnly)
-* **azureStorageAccountId**: string (ReadOnly)
-* **compressedDataRateInMB**: int (ReadOnly)
-* **consistencyPoints**: Dictionary<string,DateTime> (ReadOnly)
-* **datastoreName**: string (WriteOnly)
-* **datastores**: string[] (ReadOnly)
-* **discoveryType**: string (ReadOnly)
-* **diskExclusionInput**: InMageDiskExclusionInput (WriteOnly)
-* **diskResized**: string (ReadOnly)
-* **disksToInclude**: string[] (WriteOnly)
-* **infrastructureVmId**: string (ReadOnly)
-* **instanceType**: 'InMage' (Required)
-* **ipAddress**: string (ReadOnly)
-* **lastHeartbeat**: string (ReadOnly)
-* **lastRpoCalculatedTime**: string (ReadOnly)
-* **lastUpdateReceivedTime**: string (ReadOnly)
-* **masterTargetId**: string (Required)
-* **multiVmGroupId**: string (Required)
-* **multiVmGroupName**: string (Required)
-* **multiVmSyncStatus**: string (ReadOnly)
-* **osDetails**: OSDiskDetails (ReadOnly)
-* **osVersion**: string (ReadOnly)
-* **processServerId**: string (Required)
-* **protectedDisks**: InMageProtectedDiskDetails[] (ReadOnly)
-* **protectionStage**: string (ReadOnly)
-* **rebootAfterUpdateStatus**: string (ReadOnly)
-* **replicaId**: string (ReadOnly)
-* **resyncDetails**: InitialReplicationDetails (ReadOnly)
-* **retentionDrive**: string (Required, WriteOnly)
-* **retentionWindowEnd**: string (ReadOnly)
-* **retentionWindowStart**: string (ReadOnly)
-* **rpoInSeconds**: int (ReadOnly)
-* **runAsAccountId**: string (WriteOnly)
-* **sourceVmCpuCount**: int (ReadOnly)
-* **sourceVmRamSizeInMB**: int (ReadOnly)
-* **uncompressedDataRateInMB**: int (ReadOnly)
-* **vCenterInfrastructureId**: string (ReadOnly)
-* **validationErrors**: HealthError[] (ReadOnly)
-* **vmFriendlyName**: string (WriteOnly)
-* **vmId**: string (ReadOnly)
-* **vmNics**: VMNicDetails[] (ReadOnly)
-* **vmProtectionState**: string (ReadOnly)
-* **vmProtectionStateDescription**: string (ReadOnly)
-
-## InMageAgentDetails
-### Properties
-* **agentExpiryDate**: string (ReadOnly)
-* **agentUpdateStatus**: string (ReadOnly)
-* **agentVersion**: string (ReadOnly)
-* **postUpdateRebootStatus**: string (ReadOnly)
-
-## Dictionary<string,DateTime>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## InMageDiskExclusionInput
-### Properties
-* **diskSignatureOptions**: InMageDiskSignatureExclusionOptions[] (WriteOnly)
-* **volumeOptions**: InMageVolumeExclusionOptions[] (WriteOnly)
-
-## InMageDiskSignatureExclusionOptions
-### Properties
-* **diskSignature**: string (WriteOnly)
-
-## InMageVolumeExclusionOptions
-### Properties
-* **onlyExcludeIfSingleVolume**: string (WriteOnly)
-* **volumeLabel**: string (WriteOnly)
-
-## OSDiskDetails
-### Properties
-* **osType**: string (ReadOnly)
-* **osVhdId**: string (ReadOnly)
-* **vhdName**: string (ReadOnly)
-
-## InMageProtectedDiskDetails
-### Properties
-* **diskCapacityInBytes**: int (ReadOnly)
-* **diskId**: string (ReadOnly)
-* **diskName**: string (ReadOnly)
-* **diskResized**: string (ReadOnly)
-* **fileSystemCapacityInBytes**: int (ReadOnly)
-* **healthErrorCode**: string (ReadOnly)
-* **lastRpoCalculatedTime**: string (ReadOnly)
-* **protectionStage**: string (ReadOnly)
-* **psDataInMB**: int (ReadOnly)
-* **resyncDurationInSeconds**: int (ReadOnly)
-* **resyncProgressPercentage**: int (ReadOnly)
-* **resyncRequired**: string (ReadOnly)
-* **rpoInSeconds**: int (ReadOnly)
-* **sourceDataInMB**: int (ReadOnly)
-* **targetDataInMB**: int (ReadOnly)
-
-## InMageAzureV2
-### Properties
-* **agentExpiryDate**: string (ReadOnly)
-* **agentVersion**: string (ReadOnly)
-* **azureVMDiskDetails**: AzureVmDiskDetails[] (ReadOnly)
-* **compressedDataRateInMB**: int (ReadOnly)
-* **datastores**: string[] (ReadOnly)
-* **discoveryType**: string (ReadOnly)
-* **diskResized**: string (ReadOnly)
-* **disksToInclude**: string[] (WriteOnly)
-* **enableRdpOnTargetOption**: string
-* **infrastructureVmId**: string (ReadOnly)
-* **instanceType**: 'InMageAzureV2' (Required)
-* **ipAddress**: string (ReadOnly)
-* **isAgentUpdateRequired**: string (ReadOnly)
-* **isRebootAfterUpdateRequired**: string (ReadOnly)
-* **lastHeartbeat**: string (ReadOnly)
-* **lastRpoCalculatedTime**: string (ReadOnly)
-* **lastUpdateReceivedTime**: string (ReadOnly)
-* **licenseType**: string (ReadOnly)
-* **logStorageAccountId**: string (WriteOnly)
-* **masterTargetId**: string
-* **multiVmGroupId**: string
-* **multiVmGroupName**: string
-* **multiVmSyncStatus**: string (ReadOnly)
-* **osDiskId**: string (ReadOnly)
-* **osType**: string (ReadOnly)
-* **osVersion**: string (ReadOnly)
-* **processServerId**: string
-* **protectedDisks**: InMageAzureV2ProtectedDiskDetails[] (ReadOnly)
-* **protectionStage**: string (ReadOnly)
-* **recoveryAvailabilitySetId**: string (ReadOnly)
-* **recoveryAzureLogStorageAccountId**: string (ReadOnly)
-* **recoveryAzureResourceGroupId**: string (ReadOnly)
-* **recoveryAzureStorageAccount**: string (ReadOnly)
-* **recoveryAzureVMName**: string (ReadOnly)
-* **recoveryAzureVMSize**: string (ReadOnly)
-* **replicaId**: string (ReadOnly)
-* **resyncProgressPercentage**: int (ReadOnly)
-* **rpoInSeconds**: int (ReadOnly)
-* **runAsAccountId**: string (WriteOnly)
-* **selectedRecoveryAzureNetworkId**: string (ReadOnly)
-* **selectedSourceNicId**: string (ReadOnly)
-* **sourceVmCpuCount**: int (ReadOnly)
-* **sourceVmRamSizeInMB**: int (ReadOnly)
-* **storageAccountId**: string (Required, WriteOnly)
-* **targetAzureNetworkId**: string (WriteOnly)
-* **targetAzureSubnetId**: string (WriteOnly)
-* **targetAzureV1ResourceGroupId**: string (WriteOnly)
-* **targetAzureV2ResourceGroupId**: string (WriteOnly)
-* **targetAzureVmName**: string (WriteOnly)
-* **targetVmId**: string (ReadOnly)
-* **uncompressedDataRateInMB**: int (ReadOnly)
-* **useManagedDisks**: string
-* **vCenterInfrastructureId**: string (ReadOnly)
-* **validationErrors**: HealthError[] (ReadOnly)
-* **vhdName**: string (ReadOnly)
-* **vmId**: string (ReadOnly)
-* **vmNics**: VMNicDetails[] (ReadOnly)
-* **vmProtectionState**: string (ReadOnly)
-* **vmProtectionStateDescription**: string (ReadOnly)
-
-## InMageAzureV2ProtectedDiskDetails
-### Properties
-* **diskCapacityInBytes**: int (ReadOnly)
-* **diskId**: string (ReadOnly)
-* **diskName**: string (ReadOnly)
-* **diskResized**: string (ReadOnly)
-* **fileSystemCapacityInBytes**: int (ReadOnly)
-* **healthErrorCode**: string (ReadOnly)
-* **lastRpoCalculatedTime**: string (ReadOnly)
-* **protectionStage**: string (ReadOnly)
-* **psDataInMegaBytes**: int (ReadOnly)
-* **resyncDurationInSeconds**: int (ReadOnly)
-* **resyncProgressPercentage**: int (ReadOnly)
-* **resyncRequired**: string (ReadOnly)
-* **rpoInSeconds**: int (ReadOnly)
-* **sourceDataInMegaBytes**: int (ReadOnly)
-* **targetDataInMegaBytes**: int (ReadOnly)
-
-## San
-### Properties
-* **instanceType**: 'San' (Required)
-
-## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings
-### Properties
-* **apiVersion**: '2018-01-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateProtectionContainerMappingInputProperties
-* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings' (ReadOnly, DeployTimeConstant)
-
-## CreateProtectionContainerMappingInputProperties
-### Properties
-* **health**: string (ReadOnly)
-* **healthErrorDetails**: HealthError[] (ReadOnly)
-* **policyFriendlyName**: string (ReadOnly)
-* **policyId**: string
-* **providerSpecificDetails**: ProtectionContainerMappingProviderSpecificDetails (ReadOnly)
-* **providerSpecificInput**: ReplicationProviderSpecificContainerMappingInput (WriteOnly)
-* **sourceFabricFriendlyName**: string (ReadOnly)
-* **sourceProtectionContainerFriendlyName**: string (ReadOnly)
-* **state**: string (ReadOnly)
-* **targetFabricFriendlyName**: string (ReadOnly)
-* **targetProtectionContainerFriendlyName**: string (ReadOnly)
-* **targetProtectionContainerId**: string
-
-## ProtectionContainerMappingProviderSpecificDetails
-* **Discriminator**: instanceType
-### Base Properties
-### A2A
-#### Properties
-* **instanceType**: 'A2A' (Required)
-
-### VMwareCbt
-#### Properties
-* **instanceType**: 'VMwareCbt' (Required)
-
-
-## ReplicationProviderSpecificContainerMappingInput
-* **Discriminator**: instanceType
-### Base Properties
-### A2A
-#### Properties
-* **instanceType**: 'A2A' (Required)
-
-### VMwareCbt
-#### Properties
-* **instanceType**: 'VMwareCbt' (Required)
-
-
-## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers
-### Properties
-* **apiVersion**: '2018-01-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateProtectionContainerInputProperties
-* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers' (ReadOnly, DeployTimeConstant)
-
-## CreateProtectionContainerInputProperties
-### Properties
-* **fabricFriendlyName**: string (ReadOnly)
-* **fabricSpecificDetails**: ProtectionContainerFabricSpecificDetails (ReadOnly)
-* **fabricType**: string (ReadOnly)
-* **friendlyName**: string (ReadOnly)
-* **pairingStatus**: string (ReadOnly)
-* **protectedItemCount**: int (ReadOnly)
-* **providerSpecificInput**: ReplicationProviderSpecificContainerCreationInput[] (WriteOnly)
-* **role**: string (ReadOnly)
-
-## ProtectionContainerFabricSpecificDetails
-### Properties
-* **instanceType**: string (ReadOnly)
-
-## ReplicationProviderSpecificContainerCreationInput
-* **Discriminator**: instanceType
-### Base Properties
-### A2A
-#### Properties
-* **instanceType**: 'A2A' (Required)
-
-### VMwareCbt
-#### Properties
-* **instanceType**: 'VMwareCbt' (Required)
-
-
-## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders
-### Properties
-* **apiVersion**: '2018-01-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AddRecoveryServicesProviderInputProperties (Required)
-* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders' (ReadOnly, DeployTimeConstant)
-
-## AddRecoveryServicesProviderInputProperties
-### Properties
-* **allowedScenarios**: string[] (ReadOnly)
-* **authenticationIdentityDetails**: IdentityProviderDetails (ReadOnly)
-* **authenticationIdentityInput**: IdentityProviderInput (Required, WriteOnly)
-* **connectionStatus**: string (ReadOnly)
-* **draIdentifier**: string (ReadOnly)
-* **fabricFriendlyName**: string (ReadOnly)
-* **fabricType**: string (ReadOnly)
-* **friendlyName**: string (ReadOnly)
-* **healthErrorDetails**: HealthError[] (ReadOnly)
-* **lastHeartBeat**: string (ReadOnly)
-* **machineName**: string (Required, WriteOnly)
-* **protectedItemCount**: int (ReadOnly)
-* **providerVersion**: string (ReadOnly)
-* **providerVersionDetails**: VersionDetails (ReadOnly)
-* **providerVersionExpiryDate**: string (ReadOnly)
-* **providerVersionState**: string (ReadOnly)
-* **resourceAccessIdentityDetails**: IdentityProviderDetails (ReadOnly)
-* **resourceAccessIdentityInput**: IdentityProviderInput (Required, WriteOnly)
-* **serverVersion**: string (ReadOnly)
-
-## IdentityProviderDetails
-### Properties
-* **aadAuthority**: string (ReadOnly)
-* **applicationId**: string (ReadOnly)
-* **audience**: string (ReadOnly)
-* **objectId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-
-## IdentityProviderInput
-### Properties
-* **aadAuthority**: string (Required, WriteOnly)
-* **applicationId**: string (Required, WriteOnly)
-* **audience**: string (Required, WriteOnly)
-* **objectId**: string (Required, WriteOnly)
-* **tenantId**: string (Required, WriteOnly)
-
-## VersionDetails
-### Properties
-* **expiryDate**: string (ReadOnly)
-* **status**: 'Deprecated' | 'NotSupported' | 'SecurityUpdateRequired' | 'Supported' | 'UpdateRequired' (ReadOnly)
-* **version**: string (ReadOnly)
-
-## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications/replicationStorageClassificationMappings
-### Properties
-* **apiVersion**: '2018-01-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageMappingInputProperties
-* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications/replicationStorageClassificationMappings' (ReadOnly, DeployTimeConstant)
-
-## StorageMappingInputProperties
-### Properties
-* **targetStorageClassificationId**: string
-
-## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationvCenters
-### Properties
-* **apiVersion**: '2018-01-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AddVCenterRequestProperties
-* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationvCenters' (ReadOnly, DeployTimeConstant)
-
-## AddVCenterRequestProperties
-### Properties
-* **discoveryStatus**: string (ReadOnly)
-* **fabricArmResourceName**: string (ReadOnly)
-* **friendlyName**: string
-* **healthErrors**: HealthError[] (ReadOnly)
-* **infrastructureId**: string (ReadOnly)
-* **internalId**: string (ReadOnly)
-* **ipAddress**: string
-* **lastHeartbeat**: string (ReadOnly)
-* **port**: string
-* **processServerId**: string
-* **runAsAccountId**: string
-
 ## Microsoft.RecoveryServices/vaults/replicationFabrics
 ### Properties
 * **apiVersion**: '2018-01-10' (ReadOnly, DeployTimeConstant)
@@ -1020,6 +150,12 @@
 * **webLoad**: string (ReadOnly)
 * **webLoadStatus**: string (ReadOnly)
 
+## VersionDetails
+### Properties
+* **expiryDate**: string (ReadOnly)
+* **status**: 'Deprecated' | 'NotSupported' | 'SecurityUpdateRequired' | 'Supported' | 'UpdateRequired' (ReadOnly)
+* **version**: string (ReadOnly)
+
 ## MasterTargetServer
 ### Properties
 * **agentExpiryDate**: string (ReadOnly)
@@ -1048,6 +184,37 @@
 * **symbolicName**: string (ReadOnly)
 * **type**: string (ReadOnly)
 * **uuid**: string (ReadOnly)
+
+## HealthError
+### Properties
+* **creationTimeUtc**: string (ReadOnly)
+* **entityId**: string (ReadOnly)
+* **errorCategory**: string (ReadOnly)
+* **errorCode**: string (ReadOnly)
+* **errorLevel**: string (ReadOnly)
+* **errorMessage**: string (ReadOnly)
+* **errorSource**: string (ReadOnly)
+* **errorType**: string (ReadOnly)
+* **innerHealthErrors**: InnerHealthError[] (ReadOnly)
+* **possibleCauses**: string (ReadOnly)
+* **recommendedAction**: string (ReadOnly)
+* **recoveryProviderErrorMessage**: string (ReadOnly)
+* **summaryMessage**: string (ReadOnly)
+
+## InnerHealthError
+### Properties
+* **creationTimeUtc**: string (ReadOnly)
+* **entityId**: string (ReadOnly)
+* **errorCategory**: string (ReadOnly)
+* **errorCode**: string (ReadOnly)
+* **errorLevel**: string (ReadOnly)
+* **errorMessage**: string (ReadOnly)
+* **errorSource**: string (ReadOnly)
+* **errorType**: string (ReadOnly)
+* **possibleCauses**: string (ReadOnly)
+* **recommendedAction**: string (ReadOnly)
+* **recoveryProviderErrorMessage**: string (ReadOnly)
+* **summaryMessage**: string (ReadOnly)
 
 ## RetentionVolume
 ### Properties
@@ -1113,6 +280,839 @@
 * **kekCertThumbprint**: string (ReadOnly)
 * **kekState**: string (ReadOnly)
 
+## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings
+### Properties
+* **apiVersion**: '2018-01-10' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CreateNetworkMappingInputProperties
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings' (ReadOnly, DeployTimeConstant)
+
+## CreateNetworkMappingInputProperties
+### Properties
+* **fabricSpecificDetails**: FabricSpecificCreateNetworkMappingInput (WriteOnly)
+* **fabricSpecificSettings**: NetworkMappingFabricSpecificSettings (ReadOnly)
+* **primaryFabricFriendlyName**: string (ReadOnly)
+* **primaryNetworkFriendlyName**: string (ReadOnly)
+* **primaryNetworkId**: string (ReadOnly)
+* **recoveryFabricArmId**: string (ReadOnly)
+* **recoveryFabricFriendlyName**: string (ReadOnly)
+* **recoveryFabricName**: string (WriteOnly)
+* **recoveryNetworkFriendlyName**: string (ReadOnly)
+* **recoveryNetworkId**: string
+* **state**: string (ReadOnly)
+
+## FabricSpecificCreateNetworkMappingInput
+* **Discriminator**: instanceType
+### Base Properties
+### AzureToAzure
+#### Properties
+* **instanceType**: 'AzureToAzure' (Required)
+* **primaryNetworkId**: string (WriteOnly)
+
+### VmmToAzure
+#### Properties
+* **instanceType**: 'VmmToAzure' (Required)
+
+### VmmToVmm
+#### Properties
+* **instanceType**: 'VmmToVmm' (Required)
+
+
+## AzureToAzure
+### Properties
+* **instanceType**: 'AzureToAzure' (Required)
+* **primaryNetworkId**: string (WriteOnly)
+
+## VmmToAzure
+### Properties
+* **instanceType**: 'VmmToAzure' (Required)
+
+## VmmToVmm
+### Properties
+* **instanceType**: 'VmmToVmm' (Required)
+
+## NetworkMappingFabricSpecificSettings
+* **Discriminator**: instanceType
+### Base Properties
+### AzureToAzure
+#### Properties
+* **instanceType**: 'AzureToAzure' (Required)
+* **primaryNetworkId**: string (WriteOnly)
+
+### VmmToAzure
+#### Properties
+* **instanceType**: 'VmmToAzure' (Required)
+
+### VmmToVmm
+#### Properties
+* **instanceType**: 'VmmToVmm' (Required)
+
+
+## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers
+### Properties
+* **apiVersion**: '2018-01-10' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CreateProtectionContainerInputProperties
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers' (ReadOnly, DeployTimeConstant)
+
+## CreateProtectionContainerInputProperties
+### Properties
+* **fabricFriendlyName**: string (ReadOnly)
+* **fabricSpecificDetails**: ProtectionContainerFabricSpecificDetails (ReadOnly)
+* **fabricType**: string (ReadOnly)
+* **friendlyName**: string (ReadOnly)
+* **pairingStatus**: string (ReadOnly)
+* **protectedItemCount**: int (ReadOnly)
+* **providerSpecificInput**: ReplicationProviderSpecificContainerCreationInput[] (WriteOnly)
+* **role**: string (ReadOnly)
+
+## ProtectionContainerFabricSpecificDetails
+### Properties
+* **instanceType**: string (ReadOnly)
+
+## ReplicationProviderSpecificContainerCreationInput
+* **Discriminator**: instanceType
+### Base Properties
+### A2A
+#### Properties
+* **instanceType**: 'A2A' (Required)
+
+### VMwareCbt
+#### Properties
+* **instanceType**: 'VMwareCbt' (Required)
+
+
+## A2A
+### Properties
+* **instanceType**: 'A2A' (Required)
+
+## VMwareCbt
+### Properties
+* **instanceType**: 'VMwareCbt' (Required)
+
+## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems
+### Properties
+* **apiVersion**: '2018-01-10' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EnableMigrationInputProperties (Required)
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems' (ReadOnly, DeployTimeConstant)
+
+## EnableMigrationInputProperties
+### Properties
+* **allowedOperations**: 'DisableMigration' | 'Migrate' | 'StartResync' | 'TestMigrate' | 'TestMigrateCleanup'[] (ReadOnly)
+* **currentJob**: CurrentJobDetails (ReadOnly)
+* **eventCorrelationId**: string (ReadOnly)
+* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly)
+* **healthErrors**: HealthError[] (ReadOnly)
+* **lastTestMigrationStatus**: string (ReadOnly)
+* **lastTestMigrationTime**: string (ReadOnly)
+* **machineName**: string (ReadOnly)
+* **migrationState**: 'DisableMigrationFailed' | 'DisableMigrationInProgress' | 'EnableMigrationFailed' | 'EnableMigrationInProgress' | 'InitialSeedingFailed' | 'InitialSeedingInProgress' | 'MigrationFailed' | 'MigrationInProgress' | 'MigrationSucceeded' | 'None' | 'Replicating' (ReadOnly)
+* **migrationStateDescription**: string (ReadOnly)
+* **policyFriendlyName**: string (ReadOnly)
+* **policyId**: string (Required)
+* **providerSpecificDetails**: EnableMigrationProviderSpecificInput (Required)
+* **testMigrateState**: 'None' | 'TestMigrationCleanupInProgress' | 'TestMigrationFailed' | 'TestMigrationInProgress' | 'TestMigrationSucceeded' (ReadOnly)
+* **testMigrateStateDescription**: string (ReadOnly)
+
+## CurrentJobDetails
+### Properties
+* **jobId**: string (ReadOnly)
+* **jobName**: string (ReadOnly)
+* **startTime**: string (ReadOnly)
+
+## EnableMigrationProviderSpecificInput
+* **Discriminator**: instanceType
+### Base Properties
+### VMwareCbt
+#### Properties
+* **instanceType**: 'VMwareCbt' (Required)
+
+
+## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems
+### Properties
+* **apiVersion**: '2018-01-10' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EnableProtectionInputProperties
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems' (ReadOnly, DeployTimeConstant)
+
+## EnableProtectionInputProperties
+### Properties
+* **activeLocation**: string (ReadOnly)
+* **allowedOperations**: string[] (ReadOnly)
+* **currentScenario**: CurrentScenarioDetails (ReadOnly)
+* **failoverHealth**: string (ReadOnly)
+* **failoverRecoveryPointId**: string (ReadOnly)
+* **friendlyName**: string (ReadOnly)
+* **healthErrors**: HealthError[] (ReadOnly)
+* **lastSuccessfulFailoverTime**: string (ReadOnly)
+* **lastSuccessfulTestFailoverTime**: string (ReadOnly)
+* **policyFriendlyName**: string (ReadOnly)
+* **policyId**: string
+* **primaryFabricFriendlyName**: string (ReadOnly)
+* **primaryFabricProvider**: string (ReadOnly)
+* **primaryProtectionContainerFriendlyName**: string (ReadOnly)
+* **protectableItemId**: string
+* **protectedItemType**: string (ReadOnly)
+* **protectionState**: string (ReadOnly)
+* **protectionStateDescription**: string (ReadOnly)
+* **providerSpecificDetails**: EnableProtectionProviderSpecificInput
+* **recoveryContainerId**: string (ReadOnly)
+* **recoveryFabricFriendlyName**: string (ReadOnly)
+* **recoveryFabricId**: string (ReadOnly)
+* **recoveryProtectionContainerFriendlyName**: string (ReadOnly)
+* **recoveryServicesProviderId**: string (ReadOnly)
+* **replicationHealth**: string (ReadOnly)
+* **testFailoverState**: string (ReadOnly)
+* **testFailoverStateDescription**: string (ReadOnly)
+
+## CurrentScenarioDetails
+### Properties
+* **jobId**: string (ReadOnly)
+* **scenarioName**: string (ReadOnly)
+* **startTime**: string (ReadOnly)
+
+## EnableProtectionProviderSpecificInput
+* **Discriminator**: instanceType
+### Base Properties
+### A2A
+#### Properties
+* **instanceType**: 'A2A' (Required)
+
+### HyperVReplica2012
+#### Properties
+* **initialReplicationDetails**: InitialReplicationDetails (ReadOnly)
+* **instanceType**: 'HyperVReplica2012' (Required)
+* **lastReplicatedTime**: string (ReadOnly)
+* **vMDiskDetails**: DiskDetails[] (ReadOnly)
+* **vmId**: string (ReadOnly)
+* **vmNics**: VMNicDetails[] (ReadOnly)
+* **vmProtectionState**: string (ReadOnly)
+* **vmProtectionStateDescription**: string (ReadOnly)
+
+### HyperVReplica2012R2
+#### Properties
+* **initialReplicationDetails**: InitialReplicationDetails (ReadOnly)
+* **instanceType**: 'HyperVReplica2012R2' (Required)
+* **lastReplicatedTime**: string (ReadOnly)
+* **vMDiskDetails**: DiskDetails[] (ReadOnly)
+* **vmId**: string (ReadOnly)
+* **vmNics**: VMNicDetails[] (ReadOnly)
+* **vmProtectionState**: string (ReadOnly)
+* **vmProtectionStateDescription**: string (ReadOnly)
+
+### HyperVReplicaAzure
+#### Properties
+* **azureVmDiskDetails**: AzureVmDiskDetails[] (ReadOnly)
+* **disksToInclude**: string[] (WriteOnly)
+* **enableRdpOnTargetOption**: string
+* **encryption**: string (ReadOnly)
+* **hvHostVmId**: string (WriteOnly)
+* **initialReplicationDetails**: InitialReplicationDetails (ReadOnly)
+* **instanceType**: 'HyperVReplicaAzure' (Required)
+* **lastReplicatedTime**: string (ReadOnly)
+* **lastRpoCalculatedTime**: string (ReadOnly)
+* **licenseType**: string (ReadOnly)
+* **logStorageAccountId**: string (WriteOnly)
+* **oSDetails**: OSDetails (ReadOnly)
+* **osType**: string (WriteOnly)
+* **recoveryAvailabilitySetId**: string (ReadOnly)
+* **recoveryAzureLogStorageAccountId**: string (ReadOnly)
+* **recoveryAzureResourceGroupId**: string (ReadOnly)
+* **recoveryAzureStorageAccount**: string (ReadOnly)
+* **recoveryAzureVmName**: string (ReadOnly)
+* **recoveryAzureVMSize**: string (ReadOnly)
+* **rpoInSeconds**: int (ReadOnly)
+* **selectedRecoveryAzureNetworkId**: string (ReadOnly)
+* **selectedSourceNicId**: string (ReadOnly)
+* **sourceVmCpuCount**: int (ReadOnly)
+* **sourceVmRamSizeInMB**: int (ReadOnly)
+* **targetAzureNetworkId**: string (WriteOnly)
+* **targetAzureSubnetId**: string (WriteOnly)
+* **targetAzureV1ResourceGroupId**: string (WriteOnly)
+* **targetAzureV2ResourceGroupId**: string (WriteOnly)
+* **targetAzureVmName**: string (WriteOnly)
+* **targetStorageAccountId**: string (WriteOnly)
+* **useManagedDisks**: string
+* **vhdId**: string (WriteOnly)
+* **vmId**: string (ReadOnly)
+* **vmName**: string (WriteOnly)
+* **vmNics**: VMNicDetails[] (ReadOnly)
+* **vmProtectionState**: string (ReadOnly)
+* **vmProtectionStateDescription**: string (ReadOnly)
+
+### HyperVReplicaBaseReplicationDetails
+#### Properties
+* **initialReplicationDetails**: InitialReplicationDetails (ReadOnly)
+* **instanceType**: 'HyperVReplicaBaseReplicationDetails' (Required)
+* **lastReplicatedTime**: string (ReadOnly)
+* **vMDiskDetails**: DiskDetails[] (ReadOnly)
+* **vmId**: string (ReadOnly)
+* **vmNics**: VMNicDetails[] (ReadOnly)
+* **vmProtectionState**: string (ReadOnly)
+* **vmProtectionStateDescription**: string (ReadOnly)
+
+### InMage
+#### Properties
+* **activeSiteType**: string (ReadOnly)
+* **agentDetails**: InMageAgentDetails (ReadOnly)
+* **azureStorageAccountId**: string (ReadOnly)
+* **compressedDataRateInMB**: int (ReadOnly)
+* **consistencyPoints**: Dictionary<string,DateTime> (ReadOnly)
+* **datastoreName**: string (WriteOnly)
+* **datastores**: string[] (ReadOnly)
+* **discoveryType**: string (ReadOnly)
+* **diskExclusionInput**: InMageDiskExclusionInput (WriteOnly)
+* **diskResized**: string (ReadOnly)
+* **disksToInclude**: string[] (WriteOnly)
+* **infrastructureVmId**: string (ReadOnly)
+* **instanceType**: 'InMage' (Required)
+* **ipAddress**: string (ReadOnly)
+* **lastHeartbeat**: string (ReadOnly)
+* **lastRpoCalculatedTime**: string (ReadOnly)
+* **lastUpdateReceivedTime**: string (ReadOnly)
+* **masterTargetId**: string (Required)
+* **multiVmGroupId**: string (Required)
+* **multiVmGroupName**: string (Required)
+* **multiVmSyncStatus**: string (ReadOnly)
+* **osDetails**: OSDiskDetails (ReadOnly)
+* **osVersion**: string (ReadOnly)
+* **processServerId**: string (Required)
+* **protectedDisks**: InMageProtectedDiskDetails[] (ReadOnly)
+* **protectionStage**: string (ReadOnly)
+* **rebootAfterUpdateStatus**: string (ReadOnly)
+* **replicaId**: string (ReadOnly)
+* **resyncDetails**: InitialReplicationDetails (ReadOnly)
+* **retentionDrive**: string (Required, WriteOnly)
+* **retentionWindowEnd**: string (ReadOnly)
+* **retentionWindowStart**: string (ReadOnly)
+* **rpoInSeconds**: int (ReadOnly)
+* **runAsAccountId**: string (WriteOnly)
+* **sourceVmCpuCount**: int (ReadOnly)
+* **sourceVmRamSizeInMB**: int (ReadOnly)
+* **uncompressedDataRateInMB**: int (ReadOnly)
+* **validationErrors**: HealthError[] (ReadOnly)
+* **vCenterInfrastructureId**: string (ReadOnly)
+* **vmFriendlyName**: string (WriteOnly)
+* **vmId**: string (ReadOnly)
+* **vmNics**: VMNicDetails[] (ReadOnly)
+* **vmProtectionState**: string (ReadOnly)
+* **vmProtectionStateDescription**: string (ReadOnly)
+
+### InMageAzureV2
+#### Properties
+* **agentExpiryDate**: string (ReadOnly)
+* **agentVersion**: string (ReadOnly)
+* **azureVMDiskDetails**: AzureVmDiskDetails[] (ReadOnly)
+* **compressedDataRateInMB**: int (ReadOnly)
+* **datastores**: string[] (ReadOnly)
+* **discoveryType**: string (ReadOnly)
+* **diskResized**: string (ReadOnly)
+* **disksToInclude**: string[] (WriteOnly)
+* **enableRdpOnTargetOption**: string
+* **infrastructureVmId**: string (ReadOnly)
+* **instanceType**: 'InMageAzureV2' (Required)
+* **ipAddress**: string (ReadOnly)
+* **isAgentUpdateRequired**: string (ReadOnly)
+* **isRebootAfterUpdateRequired**: string (ReadOnly)
+* **lastHeartbeat**: string (ReadOnly)
+* **lastRpoCalculatedTime**: string (ReadOnly)
+* **lastUpdateReceivedTime**: string (ReadOnly)
+* **licenseType**: string (ReadOnly)
+* **logStorageAccountId**: string (WriteOnly)
+* **masterTargetId**: string
+* **multiVmGroupId**: string
+* **multiVmGroupName**: string
+* **multiVmSyncStatus**: string (ReadOnly)
+* **osDiskId**: string (ReadOnly)
+* **osType**: string (ReadOnly)
+* **osVersion**: string (ReadOnly)
+* **processServerId**: string
+* **protectedDisks**: InMageAzureV2ProtectedDiskDetails[] (ReadOnly)
+* **protectionStage**: string (ReadOnly)
+* **recoveryAvailabilitySetId**: string (ReadOnly)
+* **recoveryAzureLogStorageAccountId**: string (ReadOnly)
+* **recoveryAzureResourceGroupId**: string (ReadOnly)
+* **recoveryAzureStorageAccount**: string (ReadOnly)
+* **recoveryAzureVMName**: string (ReadOnly)
+* **recoveryAzureVMSize**: string (ReadOnly)
+* **replicaId**: string (ReadOnly)
+* **resyncProgressPercentage**: int (ReadOnly)
+* **rpoInSeconds**: int (ReadOnly)
+* **runAsAccountId**: string (WriteOnly)
+* **selectedRecoveryAzureNetworkId**: string (ReadOnly)
+* **selectedSourceNicId**: string (ReadOnly)
+* **sourceVmCpuCount**: int (ReadOnly)
+* **sourceVmRamSizeInMB**: int (ReadOnly)
+* **storageAccountId**: string (Required, WriteOnly)
+* **targetAzureNetworkId**: string (WriteOnly)
+* **targetAzureSubnetId**: string (WriteOnly)
+* **targetAzureV1ResourceGroupId**: string (WriteOnly)
+* **targetAzureV2ResourceGroupId**: string (WriteOnly)
+* **targetAzureVmName**: string (WriteOnly)
+* **targetVmId**: string (ReadOnly)
+* **uncompressedDataRateInMB**: int (ReadOnly)
+* **useManagedDisks**: string
+* **validationErrors**: HealthError[] (ReadOnly)
+* **vCenterInfrastructureId**: string (ReadOnly)
+* **vhdName**: string (ReadOnly)
+* **vmId**: string (ReadOnly)
+* **vmNics**: VMNicDetails[] (ReadOnly)
+* **vmProtectionState**: string (ReadOnly)
+* **vmProtectionStateDescription**: string (ReadOnly)
+
+### San
+#### Properties
+* **instanceType**: 'San' (Required)
+
+
+## HyperVReplica2012
+### Properties
+* **initialReplicationDetails**: InitialReplicationDetails (ReadOnly)
+* **instanceType**: 'HyperVReplica2012' (Required)
+* **lastReplicatedTime**: string (ReadOnly)
+* **vMDiskDetails**: DiskDetails[] (ReadOnly)
+* **vmId**: string (ReadOnly)
+* **vmNics**: VMNicDetails[] (ReadOnly)
+* **vmProtectionState**: string (ReadOnly)
+* **vmProtectionStateDescription**: string (ReadOnly)
+
+## InitialReplicationDetails
+### Properties
+* **initialReplicationProgressPercentage**: string (ReadOnly)
+* **initialReplicationType**: string (ReadOnly)
+
+## DiskDetails
+### Properties
+* **maxSizeMB**: int (ReadOnly)
+* **vhdId**: string (ReadOnly)
+* **vhdName**: string (ReadOnly)
+* **vhdType**: string (ReadOnly)
+
+## VMNicDetails
+### Properties
+* **enableAcceleratedNetworkingOnRecovery**: bool (ReadOnly)
+* **ipAddressType**: string (ReadOnly)
+* **nicId**: string (ReadOnly)
+* **primaryNicStaticIPAddress**: string (ReadOnly)
+* **recoveryNicIpAddressType**: string (ReadOnly)
+* **recoveryVMNetworkId**: string (ReadOnly)
+* **recoveryVMSubnetName**: string (ReadOnly)
+* **replicaNicId**: string (ReadOnly)
+* **replicaNicStaticIPAddress**: string (ReadOnly)
+* **selectionType**: string (ReadOnly)
+* **sourceNicArmId**: string (ReadOnly)
+* **vMNetworkName**: string (ReadOnly)
+* **vMSubnetName**: string (ReadOnly)
+
+## HyperVReplica2012R2
+### Properties
+* **initialReplicationDetails**: InitialReplicationDetails (ReadOnly)
+* **instanceType**: 'HyperVReplica2012R2' (Required)
+* **lastReplicatedTime**: string (ReadOnly)
+* **vMDiskDetails**: DiskDetails[] (ReadOnly)
+* **vmId**: string (ReadOnly)
+* **vmNics**: VMNicDetails[] (ReadOnly)
+* **vmProtectionState**: string (ReadOnly)
+* **vmProtectionStateDescription**: string (ReadOnly)
+
+## HyperVReplicaAzure
+### Properties
+* **azureVmDiskDetails**: AzureVmDiskDetails[] (ReadOnly)
+* **disksToInclude**: string[] (WriteOnly)
+* **enableRdpOnTargetOption**: string
+* **encryption**: string (ReadOnly)
+* **hvHostVmId**: string (WriteOnly)
+* **initialReplicationDetails**: InitialReplicationDetails (ReadOnly)
+* **instanceType**: 'HyperVReplicaAzure' (Required)
+* **lastReplicatedTime**: string (ReadOnly)
+* **lastRpoCalculatedTime**: string (ReadOnly)
+* **licenseType**: string (ReadOnly)
+* **logStorageAccountId**: string (WriteOnly)
+* **oSDetails**: OSDetails (ReadOnly)
+* **osType**: string (WriteOnly)
+* **recoveryAvailabilitySetId**: string (ReadOnly)
+* **recoveryAzureLogStorageAccountId**: string (ReadOnly)
+* **recoveryAzureResourceGroupId**: string (ReadOnly)
+* **recoveryAzureStorageAccount**: string (ReadOnly)
+* **recoveryAzureVmName**: string (ReadOnly)
+* **recoveryAzureVMSize**: string (ReadOnly)
+* **rpoInSeconds**: int (ReadOnly)
+* **selectedRecoveryAzureNetworkId**: string (ReadOnly)
+* **selectedSourceNicId**: string (ReadOnly)
+* **sourceVmCpuCount**: int (ReadOnly)
+* **sourceVmRamSizeInMB**: int (ReadOnly)
+* **targetAzureNetworkId**: string (WriteOnly)
+* **targetAzureSubnetId**: string (WriteOnly)
+* **targetAzureV1ResourceGroupId**: string (WriteOnly)
+* **targetAzureV2ResourceGroupId**: string (WriteOnly)
+* **targetAzureVmName**: string (WriteOnly)
+* **targetStorageAccountId**: string (WriteOnly)
+* **useManagedDisks**: string
+* **vhdId**: string (WriteOnly)
+* **vmId**: string (ReadOnly)
+* **vmName**: string (WriteOnly)
+* **vmNics**: VMNicDetails[] (ReadOnly)
+* **vmProtectionState**: string (ReadOnly)
+* **vmProtectionStateDescription**: string (ReadOnly)
+
+## AzureVmDiskDetails
+### Properties
+* **lunId**: string (ReadOnly)
+* **maxSizeMB**: string (ReadOnly)
+* **targetDiskLocation**: string (ReadOnly)
+* **targetDiskName**: string (ReadOnly)
+* **vhdId**: string (ReadOnly)
+* **vhdName**: string (ReadOnly)
+* **vhdType**: string (ReadOnly)
+
+## OSDetails
+### Properties
+* **osEdition**: string (ReadOnly)
+* **oSMajorVersion**: string (ReadOnly)
+* **oSMinorVersion**: string (ReadOnly)
+* **osType**: string (ReadOnly)
+* **oSVersion**: string (ReadOnly)
+* **productType**: string (ReadOnly)
+
+## HyperVReplicaBaseReplicationDetails
+### Properties
+* **initialReplicationDetails**: InitialReplicationDetails (ReadOnly)
+* **instanceType**: 'HyperVReplicaBaseReplicationDetails' (Required)
+* **lastReplicatedTime**: string (ReadOnly)
+* **vMDiskDetails**: DiskDetails[] (ReadOnly)
+* **vmId**: string (ReadOnly)
+* **vmNics**: VMNicDetails[] (ReadOnly)
+* **vmProtectionState**: string (ReadOnly)
+* **vmProtectionStateDescription**: string (ReadOnly)
+
+## InMage
+### Properties
+* **activeSiteType**: string (ReadOnly)
+* **agentDetails**: InMageAgentDetails (ReadOnly)
+* **azureStorageAccountId**: string (ReadOnly)
+* **compressedDataRateInMB**: int (ReadOnly)
+* **consistencyPoints**: Dictionary<string,DateTime> (ReadOnly)
+* **datastoreName**: string (WriteOnly)
+* **datastores**: string[] (ReadOnly)
+* **discoveryType**: string (ReadOnly)
+* **diskExclusionInput**: InMageDiskExclusionInput (WriteOnly)
+* **diskResized**: string (ReadOnly)
+* **disksToInclude**: string[] (WriteOnly)
+* **infrastructureVmId**: string (ReadOnly)
+* **instanceType**: 'InMage' (Required)
+* **ipAddress**: string (ReadOnly)
+* **lastHeartbeat**: string (ReadOnly)
+* **lastRpoCalculatedTime**: string (ReadOnly)
+* **lastUpdateReceivedTime**: string (ReadOnly)
+* **masterTargetId**: string (Required)
+* **multiVmGroupId**: string (Required)
+* **multiVmGroupName**: string (Required)
+* **multiVmSyncStatus**: string (ReadOnly)
+* **osDetails**: OSDiskDetails (ReadOnly)
+* **osVersion**: string (ReadOnly)
+* **processServerId**: string (Required)
+* **protectedDisks**: InMageProtectedDiskDetails[] (ReadOnly)
+* **protectionStage**: string (ReadOnly)
+* **rebootAfterUpdateStatus**: string (ReadOnly)
+* **replicaId**: string (ReadOnly)
+* **resyncDetails**: InitialReplicationDetails (ReadOnly)
+* **retentionDrive**: string (Required, WriteOnly)
+* **retentionWindowEnd**: string (ReadOnly)
+* **retentionWindowStart**: string (ReadOnly)
+* **rpoInSeconds**: int (ReadOnly)
+* **runAsAccountId**: string (WriteOnly)
+* **sourceVmCpuCount**: int (ReadOnly)
+* **sourceVmRamSizeInMB**: int (ReadOnly)
+* **uncompressedDataRateInMB**: int (ReadOnly)
+* **validationErrors**: HealthError[] (ReadOnly)
+* **vCenterInfrastructureId**: string (ReadOnly)
+* **vmFriendlyName**: string (WriteOnly)
+* **vmId**: string (ReadOnly)
+* **vmNics**: VMNicDetails[] (ReadOnly)
+* **vmProtectionState**: string (ReadOnly)
+* **vmProtectionStateDescription**: string (ReadOnly)
+
+## InMageAgentDetails
+### Properties
+* **agentExpiryDate**: string (ReadOnly)
+* **agentUpdateStatus**: string (ReadOnly)
+* **agentVersion**: string (ReadOnly)
+* **postUpdateRebootStatus**: string (ReadOnly)
+
+## Dictionary<string,DateTime>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## InMageDiskExclusionInput
+### Properties
+* **diskSignatureOptions**: InMageDiskSignatureExclusionOptions[] (WriteOnly)
+* **volumeOptions**: InMageVolumeExclusionOptions[] (WriteOnly)
+
+## InMageDiskSignatureExclusionOptions
+### Properties
+* **diskSignature**: string (WriteOnly)
+
+## InMageVolumeExclusionOptions
+### Properties
+* **onlyExcludeIfSingleVolume**: string (WriteOnly)
+* **volumeLabel**: string (WriteOnly)
+
+## OSDiskDetails
+### Properties
+* **osType**: string (ReadOnly)
+* **osVhdId**: string (ReadOnly)
+* **vhdName**: string (ReadOnly)
+
+## InMageProtectedDiskDetails
+### Properties
+* **diskCapacityInBytes**: int (ReadOnly)
+* **diskId**: string (ReadOnly)
+* **diskName**: string (ReadOnly)
+* **diskResized**: string (ReadOnly)
+* **fileSystemCapacityInBytes**: int (ReadOnly)
+* **healthErrorCode**: string (ReadOnly)
+* **lastRpoCalculatedTime**: string (ReadOnly)
+* **protectionStage**: string (ReadOnly)
+* **psDataInMB**: int (ReadOnly)
+* **resyncDurationInSeconds**: int (ReadOnly)
+* **resyncProgressPercentage**: int (ReadOnly)
+* **resyncRequired**: string (ReadOnly)
+* **rpoInSeconds**: int (ReadOnly)
+* **sourceDataInMB**: int (ReadOnly)
+* **targetDataInMB**: int (ReadOnly)
+
+## InMageAzureV2
+### Properties
+* **agentExpiryDate**: string (ReadOnly)
+* **agentVersion**: string (ReadOnly)
+* **azureVMDiskDetails**: AzureVmDiskDetails[] (ReadOnly)
+* **compressedDataRateInMB**: int (ReadOnly)
+* **datastores**: string[] (ReadOnly)
+* **discoveryType**: string (ReadOnly)
+* **diskResized**: string (ReadOnly)
+* **disksToInclude**: string[] (WriteOnly)
+* **enableRdpOnTargetOption**: string
+* **infrastructureVmId**: string (ReadOnly)
+* **instanceType**: 'InMageAzureV2' (Required)
+* **ipAddress**: string (ReadOnly)
+* **isAgentUpdateRequired**: string (ReadOnly)
+* **isRebootAfterUpdateRequired**: string (ReadOnly)
+* **lastHeartbeat**: string (ReadOnly)
+* **lastRpoCalculatedTime**: string (ReadOnly)
+* **lastUpdateReceivedTime**: string (ReadOnly)
+* **licenseType**: string (ReadOnly)
+* **logStorageAccountId**: string (WriteOnly)
+* **masterTargetId**: string
+* **multiVmGroupId**: string
+* **multiVmGroupName**: string
+* **multiVmSyncStatus**: string (ReadOnly)
+* **osDiskId**: string (ReadOnly)
+* **osType**: string (ReadOnly)
+* **osVersion**: string (ReadOnly)
+* **processServerId**: string
+* **protectedDisks**: InMageAzureV2ProtectedDiskDetails[] (ReadOnly)
+* **protectionStage**: string (ReadOnly)
+* **recoveryAvailabilitySetId**: string (ReadOnly)
+* **recoveryAzureLogStorageAccountId**: string (ReadOnly)
+* **recoveryAzureResourceGroupId**: string (ReadOnly)
+* **recoveryAzureStorageAccount**: string (ReadOnly)
+* **recoveryAzureVMName**: string (ReadOnly)
+* **recoveryAzureVMSize**: string (ReadOnly)
+* **replicaId**: string (ReadOnly)
+* **resyncProgressPercentage**: int (ReadOnly)
+* **rpoInSeconds**: int (ReadOnly)
+* **runAsAccountId**: string (WriteOnly)
+* **selectedRecoveryAzureNetworkId**: string (ReadOnly)
+* **selectedSourceNicId**: string (ReadOnly)
+* **sourceVmCpuCount**: int (ReadOnly)
+* **sourceVmRamSizeInMB**: int (ReadOnly)
+* **storageAccountId**: string (Required, WriteOnly)
+* **targetAzureNetworkId**: string (WriteOnly)
+* **targetAzureSubnetId**: string (WriteOnly)
+* **targetAzureV1ResourceGroupId**: string (WriteOnly)
+* **targetAzureV2ResourceGroupId**: string (WriteOnly)
+* **targetAzureVmName**: string (WriteOnly)
+* **targetVmId**: string (ReadOnly)
+* **uncompressedDataRateInMB**: int (ReadOnly)
+* **useManagedDisks**: string
+* **validationErrors**: HealthError[] (ReadOnly)
+* **vCenterInfrastructureId**: string (ReadOnly)
+* **vhdName**: string (ReadOnly)
+* **vmId**: string (ReadOnly)
+* **vmNics**: VMNicDetails[] (ReadOnly)
+* **vmProtectionState**: string (ReadOnly)
+* **vmProtectionStateDescription**: string (ReadOnly)
+
+## InMageAzureV2ProtectedDiskDetails
+### Properties
+* **diskCapacityInBytes**: int (ReadOnly)
+* **diskId**: string (ReadOnly)
+* **diskName**: string (ReadOnly)
+* **diskResized**: string (ReadOnly)
+* **fileSystemCapacityInBytes**: int (ReadOnly)
+* **healthErrorCode**: string (ReadOnly)
+* **lastRpoCalculatedTime**: string (ReadOnly)
+* **protectionStage**: string (ReadOnly)
+* **psDataInMegaBytes**: int (ReadOnly)
+* **resyncDurationInSeconds**: int (ReadOnly)
+* **resyncProgressPercentage**: int (ReadOnly)
+* **resyncRequired**: string (ReadOnly)
+* **rpoInSeconds**: int (ReadOnly)
+* **sourceDataInMegaBytes**: int (ReadOnly)
+* **targetDataInMegaBytes**: int (ReadOnly)
+
+## San
+### Properties
+* **instanceType**: 'San' (Required)
+
+## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings
+### Properties
+* **apiVersion**: '2018-01-10' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CreateProtectionContainerMappingInputProperties
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings' (ReadOnly, DeployTimeConstant)
+
+## CreateProtectionContainerMappingInputProperties
+### Properties
+* **health**: string (ReadOnly)
+* **healthErrorDetails**: HealthError[] (ReadOnly)
+* **policyFriendlyName**: string (ReadOnly)
+* **policyId**: string
+* **providerSpecificDetails**: ProtectionContainerMappingProviderSpecificDetails (ReadOnly)
+* **providerSpecificInput**: ReplicationProviderSpecificContainerMappingInput (WriteOnly)
+* **sourceFabricFriendlyName**: string (ReadOnly)
+* **sourceProtectionContainerFriendlyName**: string (ReadOnly)
+* **state**: string (ReadOnly)
+* **targetFabricFriendlyName**: string (ReadOnly)
+* **targetProtectionContainerFriendlyName**: string (ReadOnly)
+* **targetProtectionContainerId**: string
+
+## ProtectionContainerMappingProviderSpecificDetails
+* **Discriminator**: instanceType
+### Base Properties
+### A2A
+#### Properties
+* **instanceType**: 'A2A' (Required)
+
+### VMwareCbt
+#### Properties
+* **instanceType**: 'VMwareCbt' (Required)
+
+
+## ReplicationProviderSpecificContainerMappingInput
+* **Discriminator**: instanceType
+### Base Properties
+### A2A
+#### Properties
+* **instanceType**: 'A2A' (Required)
+
+### VMwareCbt
+#### Properties
+* **instanceType**: 'VMwareCbt' (Required)
+
+
+## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders
+### Properties
+* **apiVersion**: '2018-01-10' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AddRecoveryServicesProviderInputProperties (Required)
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders' (ReadOnly, DeployTimeConstant)
+
+## AddRecoveryServicesProviderInputProperties
+### Properties
+* **allowedScenarios**: string[] (ReadOnly)
+* **authenticationIdentityDetails**: IdentityProviderDetails (ReadOnly)
+* **authenticationIdentityInput**: IdentityProviderInput (Required, WriteOnly)
+* **connectionStatus**: string (ReadOnly)
+* **draIdentifier**: string (ReadOnly)
+* **fabricFriendlyName**: string (ReadOnly)
+* **fabricType**: string (ReadOnly)
+* **friendlyName**: string (ReadOnly)
+* **healthErrorDetails**: HealthError[] (ReadOnly)
+* **lastHeartBeat**: string (ReadOnly)
+* **machineName**: string (Required, WriteOnly)
+* **protectedItemCount**: int (ReadOnly)
+* **providerVersion**: string (ReadOnly)
+* **providerVersionDetails**: VersionDetails (ReadOnly)
+* **providerVersionExpiryDate**: string (ReadOnly)
+* **providerVersionState**: string (ReadOnly)
+* **resourceAccessIdentityDetails**: IdentityProviderDetails (ReadOnly)
+* **resourceAccessIdentityInput**: IdentityProviderInput (Required, WriteOnly)
+* **serverVersion**: string (ReadOnly)
+
+## IdentityProviderDetails
+### Properties
+* **aadAuthority**: string (ReadOnly)
+* **applicationId**: string (ReadOnly)
+* **audience**: string (ReadOnly)
+* **objectId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+
+## IdentityProviderInput
+### Properties
+* **aadAuthority**: string (Required, WriteOnly)
+* **applicationId**: string (Required, WriteOnly)
+* **audience**: string (Required, WriteOnly)
+* **objectId**: string (Required, WriteOnly)
+* **tenantId**: string (Required, WriteOnly)
+
+## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications/replicationStorageClassificationMappings
+### Properties
+* **apiVersion**: '2018-01-10' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: StorageMappingInputProperties
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications/replicationStorageClassificationMappings' (ReadOnly, DeployTimeConstant)
+
+## StorageMappingInputProperties
+### Properties
+* **targetStorageClassificationId**: string
+
+## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationvCenters
+### Properties
+* **apiVersion**: '2018-01-10' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AddVCenterRequestProperties
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationvCenters' (ReadOnly, DeployTimeConstant)
+
+## AddVCenterRequestProperties
+### Properties
+* **discoveryStatus**: string (ReadOnly)
+* **fabricArmResourceName**: string (ReadOnly)
+* **friendlyName**: string
+* **healthErrors**: HealthError[] (ReadOnly)
+* **infrastructureId**: string (ReadOnly)
+* **internalId**: string (ReadOnly)
+* **ipAddress**: string
+* **lastHeartbeat**: string (ReadOnly)
+* **port**: string
+* **processServerId**: string
+* **runAsAccountId**: string
+
 ## Microsoft.RecoveryServices/vaults/replicationPolicies
 ### Properties
 * **apiVersion**: '2018-01-10' (ReadOnly, DeployTimeConstant)
@@ -1177,8 +1177,8 @@
 * **recoveryAzureLogStorageAccountId**: string (ReadOnly)
 * **recoveryAzureResourceGroupId**: string (ReadOnly)
 * **recoveryAzureStorageAccount**: string (ReadOnly)
-* **recoveryAzureVMSize**: string (ReadOnly)
 * **recoveryAzureVmName**: string (ReadOnly)
+* **recoveryAzureVMSize**: string (ReadOnly)
 * **rpoInSeconds**: int (ReadOnly)
 * **selectedRecoveryAzureNetworkId**: string (ReadOnly)
 * **selectedSourceNicId**: string (ReadOnly)
@@ -1251,8 +1251,8 @@
 * **sourceVmCpuCount**: int (ReadOnly)
 * **sourceVmRamSizeInMB**: int (ReadOnly)
 * **uncompressedDataRateInMB**: int (ReadOnly)
-* **vCenterInfrastructureId**: string (ReadOnly)
 * **validationErrors**: HealthError[] (ReadOnly)
+* **vCenterInfrastructureId**: string (ReadOnly)
 * **vmFriendlyName**: string (WriteOnly)
 * **vmId**: string (ReadOnly)
 * **vmNics**: VMNicDetails[] (ReadOnly)
@@ -1313,8 +1313,8 @@
 * **targetVmId**: string (ReadOnly)
 * **uncompressedDataRateInMB**: int (ReadOnly)
 * **useManagedDisks**: string
-* **vCenterInfrastructureId**: string (ReadOnly)
 * **validationErrors**: HealthError[] (ReadOnly)
+* **vCenterInfrastructureId**: string (ReadOnly)
 * **vhdName**: string (ReadOnly)
 * **vmId**: string (ReadOnly)
 * **vmNics**: VMNicDetails[] (ReadOnly)
@@ -1422,8 +1422,8 @@
 * **recoveryAzureLogStorageAccountId**: string (ReadOnly)
 * **recoveryAzureResourceGroupId**: string (ReadOnly)
 * **recoveryAzureStorageAccount**: string (ReadOnly)
-* **recoveryAzureVMSize**: string (ReadOnly)
 * **recoveryAzureVmName**: string (ReadOnly)
+* **recoveryAzureVMSize**: string (ReadOnly)
 * **rpoInSeconds**: int (ReadOnly)
 * **selectedRecoveryAzureNetworkId**: string (ReadOnly)
 * **selectedSourceNicId**: string (ReadOnly)
@@ -1482,8 +1482,8 @@
 * **sourceVmCpuCount**: int (ReadOnly)
 * **sourceVmRamSizeInMB**: int (ReadOnly)
 * **uncompressedDataRateInMB**: int (ReadOnly)
-* **vCenterInfrastructureId**: string (ReadOnly)
 * **validationErrors**: HealthError[] (ReadOnly)
+* **vCenterInfrastructureId**: string (ReadOnly)
 * **vmFriendlyName**: string (WriteOnly)
 * **vmId**: string (ReadOnly)
 * **vmNics**: VMNicDetails[] (ReadOnly)
@@ -1544,8 +1544,8 @@
 * **targetVmId**: string (ReadOnly)
 * **uncompressedDataRateInMB**: int (ReadOnly)
 * **useManagedDisks**: string
-* **vCenterInfrastructureId**: string (ReadOnly)
 * **validationErrors**: HealthError[] (ReadOnly)
+* **vCenterInfrastructureId**: string (ReadOnly)
 * **vhdName**: string (ReadOnly)
 * **vmId**: string (ReadOnly)
 * **vmNics**: VMNicDetails[] (ReadOnly)

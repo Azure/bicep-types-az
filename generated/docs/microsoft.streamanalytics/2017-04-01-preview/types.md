@@ -1,13 +1,71 @@
 # Microsoft.StreamAnalytics @ 2017-04-01-preview
 
-## Microsoft.StreamAnalytics/streamingjobs/functions
+## Microsoft.StreamAnalytics/streamingjobs
 ### Properties
 * **apiVersion**: '2017-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity
+* **location**: string
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: StreamingJobProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.StreamAnalytics/streamingjobs' (ReadOnly, DeployTimeConstant)
+
+## Identity
+### Properties
+* **principalId**: string
+* **tenantId**: string
+* **type**: string
+
+## StreamingJobProperties
+### Properties
+* **cluster**: ClusterInfo
+* **compatibilityLevel**: '1.0'
+* **contentStoragePolicy**: 'JobStorageAccount' | 'SystemAccount'
+* **createdDate**: string (ReadOnly)
+* **dataLocale**: string
+* **etag**: string (ReadOnly)
+* **eventsLateArrivalMaxDelayInSeconds**: int
+* **eventsOutOfOrderMaxDelayInSeconds**: int
+* **eventsOutOfOrderPolicy**: 'Adjust' | 'Drop'
+* **externals**: External
+* **functions**: Function[]
+* **inputs**: Input[]
+* **jobId**: string (ReadOnly)
+* **jobState**: string (ReadOnly)
+* **jobStorageAccount**: JobStorageAccount
+* **jobType**: 'Cloud' | 'Edge'
+* **lastOutputEventTime**: string (ReadOnly)
+* **outputErrorPolicy**: 'Drop' | 'Stop'
+* **outputs**: Output[]
+* **outputStartMode**: 'CustomTime' | 'JobStartTime' | 'LastOutputEventTime'
+* **outputStartTime**: string
+* **provisioningState**: string (ReadOnly)
+* **sku**: StreamingJobSku
+* **transformation**: Transformation
+
+## ClusterInfo
+### Properties
+* **id**: string
+
+## External
+### Properties
+* **container**: string
+* **path**: string
+* **storageAccount**: StorageAccount
+
+## StorageAccount
+### Properties
+* **accountKey**: string
+* **accountName**: string
+
+## Function
+### Properties
+* **id**: string (ReadOnly)
+* **name**: string
 * **properties**: FunctionProperties
-* **type**: 'Microsoft.StreamAnalytics/streamingjobs/functions' (ReadOnly, DeployTimeConstant)
+* **type**: string (ReadOnly)
 
 ## FunctionProperties
 * **Discriminator**: type
@@ -146,14 +204,12 @@
 ### Properties
 * **type**: 'Scalar' (Required)
 
-## Microsoft.StreamAnalytics/streamingjobs/inputs
+## Input
 ### Properties
-* **apiVersion**: '2017-04-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **id**: string (ReadOnly)
+* **name**: string
 * **properties**: InputProperties
-* **type**: 'Microsoft.StreamAnalytics/streamingjobs/inputs' (ReadOnly, DeployTimeConstant)
+* **type**: string (ReadOnly)
 
 ## InputProperties
 * **Discriminator**: type
@@ -307,11 +363,6 @@
 * **storageAccounts**: StorageAccount[]
 * **timeFormat**: string
 
-## StorageAccount
-### Properties
-* **accountKey**: string
-* **accountName**: string
-
 ## Stream
 ### Properties
 * **datasource**: StreamInputDataSource
@@ -373,14 +424,18 @@
 * **properties**: EventHubStreamInputDataSourceProperties
 * **type**: 'Microsoft.ServiceBus/EventHub' (Required)
 
-## Microsoft.StreamAnalytics/streamingjobs/outputs
+## JobStorageAccount
 ### Properties
-* **apiVersion**: '2017-04-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **accountKey**: string
+* **accountName**: string
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken'
+
+## Output
+### Properties
+* **id**: string (ReadOnly)
+* **name**: string
 * **properties**: OutputProperties
-* **type**: 'Microsoft.StreamAnalytics/streamingjobs/outputs' (ReadOnly, DeployTimeConstant)
+* **type**: string (ReadOnly)
 
 ## OutputProperties
 ### Properties
@@ -424,15 +479,15 @@
 * **properties**: ServiceBusTopicOutputDataSourceProperties
 * **type**: 'Microsoft.ServiceBus/Topic' (Required)
 
-### Microsoft.Sql/Server/DataWarehouse
-#### Properties
-* **properties**: AzureSynapseOutputDataSourceProperties
-* **type**: 'Microsoft.Sql/Server/DataWarehouse' (Required)
-
 ### Microsoft.Sql/Server/Database
 #### Properties
 * **properties**: AzureSqlReferenceInputDataSourceProperties
 * **type**: 'Microsoft.Sql/Server/Database' (Required)
+
+### Microsoft.Sql/Server/DataWarehouse
+#### Properties
+* **properties**: AzureSynapseOutputDataSourceProperties
+* **type**: 'Microsoft.Sql/Server/DataWarehouse' (Required)
 
 ### Microsoft.Storage/Blob
 #### Properties
@@ -581,103 +636,6 @@
 * **tokenUserDisplayName**: string
 * **tokenUserPrincipalName**: string
 
-## Microsoft.StreamAnalytics/streamingjobs/transformations
-### Properties
-* **apiVersion**: '2017-04-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TransformationProperties
-* **type**: 'Microsoft.StreamAnalytics/streamingjobs/transformations' (ReadOnly, DeployTimeConstant)
-
-## TransformationProperties
-### Properties
-* **etag**: string (ReadOnly)
-* **query**: string
-* **streamingUnits**: int
-
-## Microsoft.StreamAnalytics/streamingjobs
-### Properties
-* **apiVersion**: '2017-04-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StreamingJobProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.StreamAnalytics/streamingjobs' (ReadOnly, DeployTimeConstant)
-
-## Identity
-### Properties
-* **principalId**: string
-* **tenantId**: string
-* **type**: string
-
-## StreamingJobProperties
-### Properties
-* **cluster**: ClusterInfo
-* **compatibilityLevel**: '1.0'
-* **contentStoragePolicy**: 'JobStorageAccount' | 'SystemAccount' (ReadOnly)
-* **createdDate**: string (ReadOnly)
-* **dataLocale**: string
-* **etag**: string (ReadOnly)
-* **eventsLateArrivalMaxDelayInSeconds**: int
-* **eventsOutOfOrderMaxDelayInSeconds**: int
-* **eventsOutOfOrderPolicy**: 'Adjust' | 'Drop'
-* **externals**: External
-* **functions**: Function[]
-* **inputs**: Input[]
-* **jobId**: string (ReadOnly)
-* **jobState**: string (ReadOnly)
-* **jobStorageAccount**: JobStorageAccount
-* **jobType**: 'Cloud' | 'Edge'
-* **lastOutputEventTime**: string (ReadOnly)
-* **outputErrorPolicy**: 'Drop' | 'Stop'
-* **outputStartMode**: 'CustomTime' | 'JobStartTime' | 'LastOutputEventTime'
-* **outputStartTime**: string
-* **outputs**: Output[]
-* **provisioningState**: string (ReadOnly)
-* **sku**: StreamingJobSku
-* **transformation**: Transformation
-
-## ClusterInfo
-### Properties
-* **id**: string
-
-## External
-### Properties
-* **container**: string
-* **path**: string
-* **storageAccount**: StorageAccount
-
-## Function
-### Properties
-* **id**: string (ReadOnly)
-* **name**: string
-* **properties**: FunctionProperties
-* **type**: string (ReadOnly)
-
-## Input
-### Properties
-* **id**: string (ReadOnly)
-* **name**: string
-* **properties**: InputProperties
-* **type**: string (ReadOnly)
-
-## JobStorageAccount
-### Properties
-* **accountKey**: string
-* **accountName**: string
-* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken'
-
-## Output
-### Properties
-* **id**: string (ReadOnly)
-* **name**: string
-* **properties**: OutputProperties
-* **type**: string (ReadOnly)
-
 ## StreamingJobSku
 ### Properties
 * **name**: 'Standard'
@@ -689,7 +647,49 @@
 * **properties**: TransformationProperties
 * **type**: string (ReadOnly)
 
+## TransformationProperties
+### Properties
+* **etag**: string (ReadOnly)
+* **query**: string
+* **streamingUnits**: int
+
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.StreamAnalytics/streamingjobs/functions
+### Properties
+* **apiVersion**: '2017-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: FunctionProperties
+* **type**: 'Microsoft.StreamAnalytics/streamingjobs/functions' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.StreamAnalytics/streamingjobs/inputs
+### Properties
+* **apiVersion**: '2017-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: InputProperties
+* **type**: 'Microsoft.StreamAnalytics/streamingjobs/inputs' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.StreamAnalytics/streamingjobs/outputs
+### Properties
+* **apiVersion**: '2017-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: OutputProperties
+* **type**: 'Microsoft.StreamAnalytics/streamingjobs/outputs' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.StreamAnalytics/streamingjobs/transformations
+### Properties
+* **apiVersion**: '2017-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TransformationProperties
+* **type**: 'Microsoft.StreamAnalytics/streamingjobs/transformations' (ReadOnly, DeployTimeConstant)
 

@@ -1,5 +1,35 @@
 # Microsoft.AzureBridge.Admin @ 2016-01-01
 
+## Microsoft.AzureBridge.Admin/activations
+### Properties
+* **apiVersion**: '2016-01-01' (ReadOnly, DeployTimeConstant)
+* **azureRegistrationResourceIdentifier**: string (WriteOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **displayName**: string (WriteOnly)
+* **expiration**: string (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **marketplaceSyndicationEnabled**: bool (WriteOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: Activation (ReadOnly)
+* **provisioningState**: 'Downloading' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Succeeded' (WriteOnly)
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.AzureBridge.Admin/activations' (ReadOnly, DeployTimeConstant)
+* **usageReportingEnabled**: bool (WriteOnly)
+
+## Activation
+### Properties
+* **azureRegistrationResourceIdentifier**: string (ReadOnly)
+* **displayName**: string (ReadOnly)
+* **expiration**: string (ReadOnly)
+* **marketplaceSyndicationEnabled**: bool (ReadOnly)
+* **provisioningState**: 'Downloading' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Succeeded' (ReadOnly)
+* **usageReportingEnabled**: bool (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.AzureBridge.Admin/activations/downloadedProducts
 ### Properties
 * **apiVersion**: '2016-01-01' (ReadOnly, DeployTimeConstant)
@@ -84,36 +114,6 @@
 ## ProductProperties
 ### Properties
 * **version**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.AzureBridge.Admin/activations
-### Properties
-* **apiVersion**: '2016-01-01' (ReadOnly, DeployTimeConstant)
-* **azureRegistrationResourceIdentifier**: string (WriteOnly)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **displayName**: string (WriteOnly)
-* **expiration**: string (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **marketplaceSyndicationEnabled**: bool (WriteOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: Activation (ReadOnly)
-* **provisioningState**: 'Downloading' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Succeeded' (WriteOnly)
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.AzureBridge.Admin/activations' (ReadOnly, DeployTimeConstant)
-* **usageReportingEnabled**: bool (WriteOnly)
-
-## Activation
-### Properties
-* **azureRegistrationResourceIdentifier**: string (ReadOnly)
-* **displayName**: string (ReadOnly)
-* **expiration**: string (ReadOnly)
-* **marketplaceSyndicationEnabled**: bool (ReadOnly)
-* **provisioningState**: 'Downloading' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Succeeded' (ReadOnly)
-* **usageReportingEnabled**: bool (ReadOnly)
 
 ## Dictionary<string,String>
 ### Additional Properties

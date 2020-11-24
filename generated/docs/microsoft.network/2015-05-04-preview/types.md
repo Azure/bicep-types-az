@@ -1,5 +1,26 @@
 # Microsoft.Network @ 2015-05-04-preview
 
+## Microsoft.Network/dnszones
+### Properties
+* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ZoneProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/dnszones' (ReadOnly, DeployTimeConstant)
+
+## ZoneProperties
+### Properties
+* **maxNumberOfRecordSets**: int
+* **numberOfRecordSets**: int
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Network/dnszones/A
 ### Properties
 * **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
@@ -198,27 +219,6 @@
 * **properties**: RecordSetProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Network/dnszones/TXT' (ReadOnly, DeployTimeConstant)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Network/dnszones
-### Properties
-* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ZoneProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/dnszones' (ReadOnly, DeployTimeConstant)
-
-## ZoneProperties
-### Properties
-* **maxNumberOfRecordSets**: int
-* **numberOfRecordSets**: int
 
 ## Dictionary<string,String>
 ### Additional Properties

@@ -1,54 +1,5 @@
 # Microsoft.HybridCompute @ 2019-08-02-preview
 
-## Microsoft.HybridCompute/machines/extensions
-### Properties
-* **apiVersion**: '2019-08-02-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MachineExtensionProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant)
-
-## Identity
-### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: string
-
-## MachineExtensionProperties
-### Properties
-* **autoUpgradeMinorVersion**: bool
-* **forceUpdateTag**: string
-* **instanceView**: MachineExtensionInstanceView
-* **protectedSettings**: any
-* **provisioningState**: string (ReadOnly)
-* **publisher**: string
-* **settings**: any
-* **type**: string
-* **typeHandlerVersion**: string
-
-## MachineExtensionInstanceView
-### Properties
-* **name**: string
-* **status**: schemas:20_status
-* **type**: string
-* **typeHandlerVersion**: string
-
-## schemas:20_status
-### Properties
-* **code**: string
-* **displayStatus**: string
-* **level**: 'Error' | 'Info' | 'Warning'
-* **message**: string
-* **time**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Microsoft.HybridCompute/machines
 ### Properties
 * **apiVersion**: '2019-08-02-preview' (ReadOnly, DeployTimeConstant)
@@ -60,6 +11,12 @@
 * **properties**: MachineProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant)
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: string
 
 ## MachineProperties
 ### Properties
@@ -85,9 +42,52 @@
 * **message**: string (Required)
 * **target**: string
 
+## MachineExtensionInstanceView
+### Properties
+* **name**: string
+* **status**: schemas:20_status
+* **type**: string
+* **typeHandlerVersion**: string
+
+## schemas:20_status
+### Properties
+* **code**: string
+* **displayStatus**: string
+* **level**: 'Error' | 'Info' | 'Warning'
+* **message**: string
+* **time**: string
+
 ## OSProfile
 ### Properties
 * **computerName**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.HybridCompute/machines/extensions
+### Properties
+* **apiVersion**: '2019-08-02-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MachineExtensionProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant)
+
+## MachineExtensionProperties
+### Properties
+* **autoUpgradeMinorVersion**: bool
+* **forceUpdateTag**: string
+* **instanceView**: MachineExtensionInstanceView
+* **protectedSettings**: any
+* **provisioningState**: string (ReadOnly)
+* **publisher**: string
+* **settings**: any
+* **type**: string
+* **typeHandlerVersion**: string
 
 ## Dictionary<string,String>
 ### Additional Properties

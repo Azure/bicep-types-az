@@ -33,19 +33,33 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.KeyVault/vaults/accessPolicies
+## Microsoft.KeyVault/vaults
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: 'add' | 'remove' | 'replace' (Required, DeployTimeConstant)
-* **properties**: VaultAccessPolicyProperties (Required)
-* **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VaultProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.KeyVault/vaults' (ReadOnly, DeployTimeConstant)
 
-## VaultAccessPolicyProperties
+## VaultProperties
 ### Properties
-* **accessPolicies**: AccessPolicyEntry[] (Required)
+* **accessPolicies**: AccessPolicyEntry[]
+* **createMode**: 'default' | 'recover'
+* **enabledForDeployment**: bool
+* **enabledForDiskEncryption**: bool
+* **enabledForTemplateDeployment**: bool
+* **enablePurgeProtection**: bool
+* **enableRbacAuthorization**: bool
+* **enableSoftDelete**: bool
+* **networkAcls**: NetworkRuleSet
+* **privateEndpointConnections**: PrivateEndpointConnectionItem[] (ReadOnly)
+* **sku**: Sku (Required)
+* **softDeleteRetentionInDays**: int
+* **tenantId**: string (Required)
+* **vaultUri**: string
 
 ## AccessPolicyEntry
 ### Properties
@@ -61,16 +75,24 @@
 * **secrets**: 'backup' | 'delete' | 'get' | 'list' | 'purge' | 'recover' | 'restore' | 'set'[]
 * **storage**: 'backup' | 'delete' | 'deletesas' | 'get' | 'getsas' | 'list' | 'listsas' | 'purge' | 'recover' | 'regeneratekey' | 'restore' | 'set' | 'setsas' | 'update'[]
 
-## Microsoft.KeyVault/vaults/privateEndpointConnections
+## NetworkRuleSet
 ### Properties
-* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **bypass**: 'AzureServices' | 'None'
+* **defaultAction**: 'Allow' | 'Deny'
+* **ipRules**: IPRule[]
+* **virtualNetworkRules**: VirtualNetworkRule[]
+
+## IPRule
+### Properties
+* **value**: string (Required)
+
+## VirtualNetworkRule
+### Properties
+* **id**: string (Required)
+
+## PrivateEndpointConnectionItem
+### Properties
 * **properties**: PrivateEndpointConnectionProperties
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.KeyVault/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
@@ -87,6 +109,40 @@
 * **actionRequired**: string
 * **description**: string
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
+
+## Sku
+### Properties
+* **family**: string (Required)
+* **name**: 'premium' | 'standard' (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.KeyVault/vaults/accessPolicies
+### Properties
+* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: 'add' | 'remove' | 'replace' (Required, DeployTimeConstant)
+* **properties**: VaultAccessPolicyProperties (Required)
+* **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant)
+
+## VaultAccessPolicyProperties
+### Properties
+* **accessPolicies**: AccessPolicyEntry[] (Required)
+
+## Microsoft.KeyVault/vaults/privateEndpointConnections
+### Properties
+* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.KeyVault/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -118,62 +174,6 @@
 * **exp**: int
 * **nbf**: int
 * **updated**: int (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.KeyVault/vaults
-### Properties
-* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VaultProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.KeyVault/vaults' (ReadOnly, DeployTimeConstant)
-
-## VaultProperties
-### Properties
-* **accessPolicies**: AccessPolicyEntry[]
-* **createMode**: 'default' | 'recover'
-* **enablePurgeProtection**: bool
-* **enableRbacAuthorization**: bool
-* **enableSoftDelete**: bool
-* **enabledForDeployment**: bool
-* **enabledForDiskEncryption**: bool
-* **enabledForTemplateDeployment**: bool
-* **networkAcls**: NetworkRuleSet
-* **privateEndpointConnections**: PrivateEndpointConnectionItem[] (ReadOnly)
-* **sku**: Sku (Required)
-* **softDeleteRetentionInDays**: int
-* **tenantId**: string (Required)
-* **vaultUri**: string
-
-## NetworkRuleSet
-### Properties
-* **bypass**: 'AzureServices' | 'None'
-* **defaultAction**: 'Allow' | 'Deny'
-* **ipRules**: IPRule[]
-* **virtualNetworkRules**: VirtualNetworkRule[]
-
-## IPRule
-### Properties
-* **value**: string (Required)
-
-## VirtualNetworkRule
-### Properties
-* **id**: string (Required)
-
-## PrivateEndpointConnectionItem
-### Properties
-* **properties**: PrivateEndpointConnectionProperties
-
-## Sku
-### Properties
-* **family**: string (Required)
-* **name**: 'premium' | 'standard' (Required)
 
 ## Dictionary<string,String>
 ### Additional Properties

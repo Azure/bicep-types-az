@@ -1,49 +1,5 @@
 # Microsoft.Devices @ 2020-09-01-preview
 
-## Microsoft.Devices/provisioningServices/certificates
-### Properties
-* **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **certificate**: string (WriteOnly)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CertificateProperties (ReadOnly)
-* **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant)
-
-## CertificateProperties
-### Properties
-* **created**: string (ReadOnly)
-* **expiry**: string (ReadOnly)
-* **isVerified**: bool (ReadOnly)
-* **subject**: string (ReadOnly)
-* **thumbprint**: string (ReadOnly)
-* **updated**: string (ReadOnly)
-
-## Microsoft.Devices/provisioningServices/privateEndpointConnections
-### Properties
-* **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties (Required)
-* **type**: 'Microsoft.Devices/provisioningServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
-
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly)
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionsRequired**: string
-* **description**: string (Required)
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (Required)
-
 ## Microsoft.Devices/provisioningServices
 ### Properties
 * **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
@@ -110,6 +66,21 @@
 * **properties**: PrivateEndpointConnectionProperties (Required)
 * **type**: string (ReadOnly)
 
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: PrivateEndpoint
+* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly)
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: string
+* **description**: string (Required)
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (Required)
+
 ## IotDpsSkuInfo
 ### Properties
 * **capacity**: int
@@ -119,4 +90,33 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Devices/provisioningServices/certificates
+### Properties
+* **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **certificate**: string (WriteOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CertificateProperties (ReadOnly)
+* **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant)
+
+## CertificateProperties
+### Properties
+* **created**: string (ReadOnly)
+* **expiry**: string (ReadOnly)
+* **isVerified**: bool (ReadOnly)
+* **subject**: string (ReadOnly)
+* **thumbprint**: string (ReadOnly)
+* **updated**: string (ReadOnly)
+
+## Microsoft.Devices/provisioningServices/privateEndpointConnections
+### Properties
+* **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties (Required)
+* **type**: 'Microsoft.Devices/provisioningServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 

@@ -1,5 +1,35 @@
 # Microsoft.Network @ 2018-05-01
 
+## Microsoft.Network/dnsZones
+### Properties
+* **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ZoneProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/dnsZones' (ReadOnly, DeployTimeConstant)
+
+## ZoneProperties
+### Properties
+* **maxNumberOfRecordSets**: int (ReadOnly)
+* **maxNumberOfRecordsPerRecordSet**: int (ReadOnly)
+* **nameServers**: string[] (ReadOnly)
+* **numberOfRecordSets**: int (ReadOnly)
+* **registrationVirtualNetworks**: SubResource[]
+* **resolutionVirtualNetworks**: SubResource[]
+* **zoneType**: 'Private' | 'Public'
+
+## SubResource
+### Properties
+* **id**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Network/dnsZones/A
 ### Properties
 * **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
@@ -14,19 +44,19 @@
 ### Properties
 * **AAAARecords**: AaaaRecord[]
 * **ARecords**: ARecord[]
+* **caaRecords**: CaaRecord[]
 * **CNAMERecord**: CnameRecord
+* **fqdn**: string (ReadOnly)
+* **metadata**: Dictionary<string,String>
 * **MXRecords**: MxRecord[]
 * **NSRecords**: NsRecord[]
+* **provisioningState**: string (ReadOnly)
 * **PTRRecords**: PtrRecord[]
 * **SOARecord**: SoaRecord
 * **SRVRecords**: SrvRecord[]
+* **targetResource**: SubResource
 * **TTL**: int
 * **TXTRecords**: TxtRecord[]
-* **caaRecords**: CaaRecord[]
-* **fqdn**: string (ReadOnly)
-* **metadata**: Dictionary<string,String>
-* **provisioningState**: string (ReadOnly)
-* **targetResource**: SubResource
 
 ## AaaaRecord
 ### Properties
@@ -36,9 +66,19 @@
 ### Properties
 * **ipv4Address**: string
 
+## CaaRecord
+### Properties
+* **flags**: int
+* **tag**: string
+* **value**: string
+
 ## CnameRecord
 ### Properties
 * **cname**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## MxRecord
 ### Properties
@@ -73,20 +113,6 @@
 ## TxtRecord
 ### Properties
 * **value**: string[]
-
-## CaaRecord
-### Properties
-* **flags**: int
-* **tag**: string
-* **value**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## SubResource
-### Properties
-* **id**: string
 
 ## Microsoft.Network/dnsZones/AAAA
 ### Properties
@@ -177,29 +203,4 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: RecordSetProperties
 * **type**: 'Microsoft.Network/dnsZones/TXT' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Network/dnsZones
-### Properties
-* **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ZoneProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/dnsZones' (ReadOnly, DeployTimeConstant)
-
-## ZoneProperties
-### Properties
-* **maxNumberOfRecordSets**: int (ReadOnly)
-* **nameServers**: string[] (ReadOnly)
-* **numberOfRecordSets**: int (ReadOnly)
-* **registrationVirtualNetworks**: SubResource[]
-* **resolutionVirtualNetworks**: SubResource[]
-* **zoneType**: 'Private' | 'Public'
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

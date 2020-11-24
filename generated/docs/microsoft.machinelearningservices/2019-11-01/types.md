@@ -1,5 +1,46 @@
 # Microsoft.MachineLearningServices @ 2019-11-01
 
+## Microsoft.MachineLearningServices/workspaces
+### Properties
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkspaceProperties
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant)
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'SystemAssigned'
+
+## WorkspaceProperties
+### Properties
+* **applicationInsights**: string
+* **containerRegistry**: string
+* **creationTime**: string (ReadOnly)
+* **description**: string
+* **discoveryUrl**: string
+* **friendlyName**: string
+* **keyVault**: string
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
+* **storageAccount**: string
+* **workspaceId**: string (ReadOnly)
+
+## Sku
+### Properties
+* **name**: string
+* **tier**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.MachineLearningServices/workspaces/computes
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
@@ -12,12 +53,6 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant)
-
-## Identity
-### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'SystemAssigned'
 
 ## Compute
 * **Discriminator**: computeType
@@ -40,6 +75,11 @@
 * **computeType**: 'AmlCompute' (Required)
 * **properties**: schemas:31_properties
 
+### Databricks
+#### Properties
+* **computeType**: 'Databricks' (Required)
+* **properties**: schemas:32_properties
+
 ### DataFactory
 #### Properties
 * **computeType**: 'DataFactory' (Required)
@@ -47,11 +87,6 @@
 ### DataLakeAnalytics
 #### Properties
 * **computeType**: 'DataLakeAnalytics' (Required)
-* **properties**: schemas:32_properties
-
-### Databricks
-#### Properties
-* **computeType**: 'Databricks' (Required)
 * **properties**: schemas:32_properties
 
 ### HDInsight
@@ -159,13 +194,9 @@
 * **adminUserPassword**: string
 * **adminUserSshPublicKey**: string
 
-## DataFactory
+## Databricks
 ### Properties
-* **computeType**: 'DataFactory' (Required)
-
-## DataLakeAnalytics
-### Properties
-* **computeType**: 'DataLakeAnalytics' (Required)
+* **computeType**: 'Databricks' (Required)
 * **properties**: schemas:32_properties
 
 ## schemas:32_properties
@@ -182,9 +213,13 @@
 * **publicKeyData**: string
 * **username**: string
 
-## Databricks
+## DataFactory
 ### Properties
-* **computeType**: 'Databricks' (Required)
+* **computeType**: 'DataFactory' (Required)
+
+## DataLakeAnalytics
+### Properties
+* **computeType**: 'DataLakeAnalytics' (Required)
 * **properties**: schemas:32_properties
 
 ## HDInsight
@@ -196,41 +231,6 @@
 ### Properties
 * **computeType**: 'VirtualMachine' (Required)
 * **properties**: schemas:32_properties
-
-## Sku
-### Properties
-* **name**: string
-* **tier**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.MachineLearningServices/workspaces
-### Properties
-* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant)
-
-## WorkspaceProperties
-### Properties
-* **applicationInsights**: string
-* **containerRegistry**: string
-* **creationTime**: string (ReadOnly)
-* **description**: string
-* **discoveryUrl**: string
-* **friendlyName**: string
-* **keyVault**: string
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
-* **storageAccount**: string
-* **workspaceId**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Additional Properties

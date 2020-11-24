@@ -1,85 +1,5 @@
 # Microsoft.DBForMariaDB @ 2018-06-01-preview
 
-## Microsoft.DBForMariaDB/servers/configurations
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationProperties
-* **type**: 'Microsoft.DBForMariaDB/servers/configurations' (ReadOnly, DeployTimeConstant)
-
-## ConfigurationProperties
-### Properties
-* **allowedValues**: string (ReadOnly)
-* **dataType**: string (ReadOnly)
-* **defaultValue**: string (ReadOnly)
-* **description**: string (ReadOnly)
-* **source**: string
-* **value**: string
-
-## Microsoft.DBForMariaDB/servers/databases
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
-* **type**: 'Microsoft.DBForMariaDB/servers/databases' (ReadOnly, DeployTimeConstant)
-
-## DatabaseProperties
-### Properties
-* **charset**: string
-* **collation**: string
-
-## Microsoft.DBForMariaDB/servers/firewallRules
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: FirewallRuleProperties (Required)
-* **type**: 'Microsoft.DBForMariaDB/servers/firewallRules' (ReadOnly, DeployTimeConstant)
-
-## FirewallRuleProperties
-### Properties
-* **endIpAddress**: string (Required)
-* **startIpAddress**: string (Required)
-
-## Microsoft.DBForMariaDB/servers/securityAlertPolicies
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityAlertPolicyProperties
-* **type**: 'Microsoft.DBForMariaDB/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
-
-## SecurityAlertPolicyProperties
-### Properties
-* **disabledAlerts**: string[]
-* **emailAccountAdmins**: bool
-* **emailAddresses**: string[]
-* **retentionDays**: int
-* **state**: 'Disabled' | 'Enabled' (Required)
-* **storageAccountAccessKey**: string
-* **storageEndpoint**: string
-
-## Microsoft.DBForMariaDB/servers/virtualNetworkRules
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkRuleProperties
-* **type**: 'Microsoft.DBForMariaDB/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
-
-## VirtualNetworkRuleProperties
-### Properties
-* **ignoreMissingVnetServiceEndpoint**: bool
-* **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly)
-* **virtualNetworkSubnetId**: string (Required)
-
 ## Microsoft.DBForMariaDB/servers
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
@@ -175,4 +95,84 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.DBForMariaDB/servers/configurations
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConfigurationProperties
+* **type**: 'Microsoft.DBForMariaDB/servers/configurations' (ReadOnly, DeployTimeConstant)
+
+## ConfigurationProperties
+### Properties
+* **allowedValues**: string (ReadOnly)
+* **dataType**: string (ReadOnly)
+* **defaultValue**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **source**: string
+* **value**: string
+
+## Microsoft.DBForMariaDB/servers/databases
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseProperties
+* **type**: 'Microsoft.DBForMariaDB/servers/databases' (ReadOnly, DeployTimeConstant)
+
+## DatabaseProperties
+### Properties
+* **charset**: string
+* **collation**: string
+
+## Microsoft.DBForMariaDB/servers/firewallRules
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: FirewallRuleProperties (Required)
+* **type**: 'Microsoft.DBForMariaDB/servers/firewallRules' (ReadOnly, DeployTimeConstant)
+
+## FirewallRuleProperties
+### Properties
+* **endIpAddress**: string (Required)
+* **startIpAddress**: string (Required)
+
+## Microsoft.DBForMariaDB/servers/securityAlertPolicies
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SecurityAlertPolicyProperties
+* **type**: 'Microsoft.DBForMariaDB/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
+
+## SecurityAlertPolicyProperties
+### Properties
+* **disabledAlerts**: string[]
+* **emailAccountAdmins**: bool
+* **emailAddresses**: string[]
+* **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' (Required)
+* **storageAccountAccessKey**: string
+* **storageEndpoint**: string
+
+## Microsoft.DBForMariaDB/servers/virtualNetworkRules
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualNetworkRuleProperties
+* **type**: 'Microsoft.DBForMariaDB/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
+
+## VirtualNetworkRuleProperties
+### Properties
+* **ignoreMissingVnetServiceEndpoint**: bool
+* **state**: 'Deleting' | 'Initializing' | 'InProgress' | 'Ready' | 'Unknown' (ReadOnly)
+* **virtualNetworkSubnetId**: string (Required)
 

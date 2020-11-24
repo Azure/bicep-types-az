@@ -24,8 +24,8 @@
 * **parameters**: Dictionary<string,String>
 * **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly)
 * **runOn**: string (ReadOnly)
-* **startTime**: string (ReadOnly)
 * **startedBy**: string (ReadOnly)
+* **startTime**: string (ReadOnly)
 * **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly)
 * **statusDetails**: string (ReadOnly)
 

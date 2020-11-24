@@ -1,5 +1,27 @@
 # Microsoft.Insights @ 2019-09-01-preview
 
+## Microsoft.Insights/queryPacks
+### Properties
+* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LogAnalyticsQueryPackProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Insights/queryPacks' (ReadOnly, DeployTimeConstant)
+
+## LogAnalyticsQueryPackProperties
+### Properties
+* **provisioningState**: string (ReadOnly)
+* **queryPackId**: string (ReadOnly)
+* **timeCreated**: string (ReadOnly)
+* **timeModified**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Insights/queryPacks/queries
 ### Properties
 * **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
@@ -41,26 +63,4 @@
 * **lastModifiedAt**: string
 * **lastModifiedBy**: string
 * **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user'
-
-## Microsoft.Insights/queryPacks
-### Properties
-* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LogAnalyticsQueryPackProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Insights/queryPacks' (ReadOnly, DeployTimeConstant)
-
-## LogAnalyticsQueryPackProperties
-### Properties
-* **provisioningState**: string (ReadOnly)
-* **queryPackId**: string (ReadOnly)
-* **timeCreated**: string (ReadOnly)
-* **timeModified**: string (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

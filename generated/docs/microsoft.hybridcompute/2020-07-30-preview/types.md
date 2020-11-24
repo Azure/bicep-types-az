@@ -1,47 +1,5 @@
 # Microsoft.HybridCompute @ 2020-07-30-preview
 
-## Microsoft.HybridCompute/machines/extensions
-### Properties
-* **apiVersion**: '2020-07-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:13_properties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant)
-
-## schemas:13_properties
-### Properties
-* **autoUpgradeMinorVersion**: bool
-* **forceUpdateTag**: string
-* **instanceView**: schemas:15_instanceView
-* **protectedSettings**: any
-* **provisioningState**: string (ReadOnly)
-* **publisher**: string
-* **settings**: any
-* **type**: string
-* **typeHandlerVersion**: string
-
-## schemas:15_instanceView
-### Properties
-* **name**: string
-* **status**: schemas:17_status
-* **type**: string
-* **typeHandlerVersion**: string
-
-## schemas:17_status
-### Properties
-* **code**: string
-* **displayStatus**: string
-* **level**: 'Error' | 'Info' | 'Warning'
-* **message**: string
-* **time**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Microsoft.HybridCompute/machines
 ### Properties
 * **apiVersion**: '2020-07-30-preview' (ReadOnly, DeployTimeConstant)
@@ -96,6 +54,14 @@
 * **type**: string
 * **typeHandlerVersion**: string
 
+## schemas:17_status
+### Properties
+* **code**: string
+* **displayStatus**: string
+* **level**: 'Error' | 'Info' | 'Warning'
+* **message**: string
+* **time**: string
+
 ## locationData
 ### Properties
 * **city**: string
@@ -106,6 +72,40 @@
 ## schemas:4_osProfile
 ### Properties
 * **computerName**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.HybridCompute/machines/extensions
+### Properties
+* **apiVersion**: '2020-07-30-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:13_properties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant)
+
+## schemas:13_properties
+### Properties
+* **autoUpgradeMinorVersion**: bool
+* **forceUpdateTag**: string
+* **instanceView**: schemas:15_instanceView
+* **protectedSettings**: any
+* **provisioningState**: string (ReadOnly)
+* **publisher**: string
+* **settings**: any
+* **type**: string
+* **typeHandlerVersion**: string
+
+## schemas:15_instanceView
+### Properties
+* **name**: string
+* **status**: schemas:17_status
+* **type**: string
+* **typeHandlerVersion**: string
 
 ## Dictionary<string,String>
 ### Additional Properties

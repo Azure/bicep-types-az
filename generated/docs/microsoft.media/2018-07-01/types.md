@@ -1,5 +1,30 @@
 # Microsoft.Media @ 2018-07-01
 
+## Microsoft.Media/mediaservices
+### Properties
+* **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MediaServiceProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Media/mediaservices' (ReadOnly, DeployTimeConstant)
+
+## MediaServiceProperties
+### Properties
+* **mediaServiceId**: string (ReadOnly)
+* **storageAccounts**: StorageAccount[]
+
+## StorageAccount
+### Properties
+* **id**: string
+* **type**: 'Primary' | 'Secondary' (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Media/mediaServices/accountFilters
 ### Properties
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
@@ -38,15 +63,6 @@
 * **property**: 'Bitrate' | 'FourCC' | 'Language' | 'Name' | 'Type' | 'Unknown' (Required)
 * **value**: string (Required)
 
-## Microsoft.Media/mediaServices/assets/assetFilters
-### Properties
-* **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MediaFilterProperties
-* **type**: 'Microsoft.Media/mediaServices/assets/assetFilters' (ReadOnly, DeployTimeConstant)
-
 ## Microsoft.Media/mediaServices/assets
 ### Properties
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
@@ -66,6 +82,15 @@
 * **lastModified**: string (ReadOnly)
 * **storageAccountName**: string
 * **storageEncryptionFormat**: 'MediaStorageClientEncryption' | 'None' (ReadOnly)
+
+## Microsoft.Media/mediaServices/assets/assetFilters
+### Properties
+* **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MediaFilterProperties
+* **type**: 'Microsoft.Media/mediaServices/assets/assetFilters' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.Media/mediaServices/contentKeyPolicies
 ### Properties
@@ -297,6 +322,159 @@
 ### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyUnknownRestriction' (Required)
 
+## Microsoft.Media/mediaservices/liveEvents
+### Properties
+* **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LiveEventProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Media/mediaservices/liveEvents' (ReadOnly, DeployTimeConstant)
+
+## LiveEventProperties
+### Properties
+* **created**: string (ReadOnly)
+* **crossSiteAccessPolicies**: CrossSiteAccessPolicies
+* **description**: string
+* **encoding**: LiveEventEncoding
+* **input**: LiveEventInput (Required)
+* **lastModified**: string (ReadOnly)
+* **preview**: LiveEventPreview
+* **provisioningState**: string (ReadOnly)
+* **resourceState**: 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
+* **streamOptions**: 'Default' | 'LowLatency'[]
+* **vanityUrl**: bool
+
+## CrossSiteAccessPolicies
+### Properties
+* **clientAccessPolicy**: string
+* **crossDomainPolicy**: string
+
+## LiveEventEncoding
+### Properties
+* **encodingType**: 'Basic' | 'None' | 'Premium1080p' | 'Standard'
+* **presetName**: string
+
+## LiveEventInput
+### Properties
+* **accessControl**: LiveEventInputAccessControl
+* **accessToken**: string
+* **endpoints**: LiveEventEndpoint[]
+* **keyFrameIntervalDuration**: string
+* **streamingProtocol**: 'FragmentedMP4' | 'RTMP' (Required)
+
+## LiveEventInputAccessControl
+### Properties
+* **ip**: IPAccessControl
+
+## IPAccessControl
+### Properties
+* **allow**: IPRange[]
+
+## IPRange
+### Properties
+* **address**: string
+* **name**: string
+* **subnetPrefixLength**: int
+
+## LiveEventEndpoint
+### Properties
+* **protocol**: string
+* **url**: string
+
+## LiveEventPreview
+### Properties
+* **accessControl**: LiveEventPreviewAccessControl
+* **alternativeMediaId**: string
+* **endpoints**: LiveEventEndpoint[]
+* **previewLocator**: string
+* **streamingPolicyName**: string
+
+## LiveEventPreviewAccessControl
+### Properties
+* **ip**: IPAccessControl
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Media/mediaservices/liveEvents/liveOutputs
+### Properties
+* **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LiveOutputProperties
+* **type**: 'Microsoft.Media/mediaservices/liveEvents/liveOutputs' (ReadOnly, DeployTimeConstant)
+
+## LiveOutputProperties
+### Properties
+* **archiveWindowLength**: string (Required)
+* **assetName**: string (Required)
+* **created**: string (ReadOnly)
+* **description**: string
+* **hls**: Hls
+* **lastModified**: string (ReadOnly)
+* **manifestName**: string
+* **outputSnapTime**: int
+* **provisioningState**: string (ReadOnly)
+* **resourceState**: 'Creating' | 'Deleting' | 'Running' (ReadOnly)
+
+## Hls
+### Properties
+* **fragmentsPerTsSegment**: int
+
+## Microsoft.Media/mediaservices/streamingEndpoints
+### Properties
+* **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: StreamingEndpointProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Media/mediaservices/streamingEndpoints' (ReadOnly, DeployTimeConstant)
+
+## StreamingEndpointProperties
+### Properties
+* **accessControl**: StreamingEndpointAccessControl
+* **availabilitySetName**: string
+* **cdnEnabled**: bool
+* **cdnProfile**: string
+* **cdnProvider**: string
+* **created**: string (ReadOnly)
+* **crossSiteAccessPolicies**: CrossSiteAccessPolicies
+* **customHostNames**: string[]
+* **description**: string
+* **freeTrialEndTime**: string (ReadOnly)
+* **hostName**: string (ReadOnly)
+* **lastModified**: string (ReadOnly)
+* **maxCacheAge**: int
+* **provisioningState**: string (ReadOnly)
+* **resourceState**: 'Deleting' | 'Running' | 'Scaling' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
+* **scaleUnits**: int (Required)
+
+## StreamingEndpointAccessControl
+### Properties
+* **akamai**: AkamaiAccessControl
+* **ip**: IPAccessControl
+
+## AkamaiAccessControl
+### Properties
+* **akamaiSignatureHeaderAuthenticationKeyList**: AkamaiSignatureHeaderAuthenticationKey[]
+
+## AkamaiSignatureHeaderAuthenticationKey
+### Properties
+* **base64Key**: string
+* **expiration**: string
+* **identifier**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Media/mediaServices/streamingLocators
 ### Properties
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
@@ -428,109 +606,6 @@
 ## NoEncryption
 ### Properties
 * **enabledProtocols**: EnabledProtocols
-
-## Microsoft.Media/mediaServices/transforms/jobs
-### Properties
-* **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: JobProperties
-* **type**: 'Microsoft.Media/mediaServices/transforms/jobs' (ReadOnly, DeployTimeConstant)
-
-## JobProperties
-### Properties
-* **correlationData**: Dictionary<string,String>
-* **created**: string (ReadOnly)
-* **description**: string
-* **endTime**: string (ReadOnly)
-* **input**: JobInput (Required)
-* **lastModified**: string (ReadOnly)
-* **outputs**: JobOutput[] (Required)
-* **priority**: 'High' | 'Low' | 'Normal'
-* **startTime**: string (ReadOnly)
-* **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## JobInput
-* **Discriminator**: @odata.type
-### Base Properties
-### #Microsoft.Media.JobInputClip
-#### Properties
-* **@odata.type**: '#Microsoft.Media.JobInputClip' (Required)
-* **end**: ClipTime
-* **files**: string[]
-* **label**: string
-* **start**: ClipTime
-
-### #Microsoft.Media.JobInputs
-#### Properties
-* **@odata.type**: '#Microsoft.Media.JobInputs' (Required)
-* **inputs**: JobInput[]
-
-
-## #Microsoft.Media.JobInputClip
-### Properties
-* **@odata.type**: '#Microsoft.Media.JobInputClip' (Required)
-* **end**: ClipTime
-* **files**: string[]
-* **label**: string
-* **start**: ClipTime
-
-## ClipTime
-* **Discriminator**: @odata.type
-### Base Properties
-### #Microsoft.Media.AbsoluteClipTime
-#### Properties
-* **@odata.type**: '#Microsoft.Media.AbsoluteClipTime' (Required)
-* **time**: string (Required)
-
-
-## #Microsoft.Media.AbsoluteClipTime
-### Properties
-* **@odata.type**: '#Microsoft.Media.AbsoluteClipTime' (Required)
-* **time**: string (Required)
-
-## #Microsoft.Media.JobInputs
-### Properties
-* **@odata.type**: '#Microsoft.Media.JobInputs' (Required)
-* **inputs**: JobInput[]
-
-## JobOutput
-* **Discriminator**: @odata.type
-### Base Properties
-* **endTime**: string (ReadOnly)
-* **error**: JobError (ReadOnly)
-* **label**: string
-* **progress**: int (ReadOnly)
-* **startTime**: string (ReadOnly)
-* **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' (ReadOnly)
-### #Microsoft.Media.JobOutputAsset
-#### Properties
-* **@odata.type**: '#Microsoft.Media.JobOutputAsset' (Required)
-* **assetName**: string (Required)
-
-
-## JobError
-### Properties
-* **category**: 'Configuration' | 'Content' | 'Download' | 'Service' | 'Upload' (ReadOnly)
-* **code**: 'ConfigurationUnsupported' | 'ContentMalformed' | 'ContentUnsupported' | 'DownloadNotAccessible' | 'DownloadTransientError' | 'ServiceError' | 'ServiceTransientError' | 'UploadNotAccessible' | 'UploadTransientError' (ReadOnly)
-* **details**: JobErrorDetail[] (ReadOnly)
-* **message**: string (ReadOnly)
-* **retry**: 'DoNotRetry' | 'MayRetry' (ReadOnly)
-
-## JobErrorDetail
-### Properties
-* **code**: string (ReadOnly)
-* **message**: string (ReadOnly)
-
-## #Microsoft.Media.JobOutputAsset
-### Properties
-* **@odata.type**: '#Microsoft.Media.JobOutputAsset' (Required)
-* **assetName**: string (Required)
 
 ## Microsoft.Media/mediaServices/transforms
 ### Properties
@@ -739,181 +814,106 @@
 ### Properties
 * **labels**: string[] (Required)
 
-## Microsoft.Media/mediaservices/liveEvents/liveOutputs
+## Microsoft.Media/mediaServices/transforms/jobs
 ### Properties
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LiveOutputProperties
-* **type**: 'Microsoft.Media/mediaservices/liveEvents/liveOutputs' (ReadOnly, DeployTimeConstant)
+* **properties**: JobProperties
+* **type**: 'Microsoft.Media/mediaServices/transforms/jobs' (ReadOnly, DeployTimeConstant)
 
-## LiveOutputProperties
+## JobProperties
 ### Properties
-* **archiveWindowLength**: string (Required)
+* **correlationData**: Dictionary<string,String>
+* **created**: string (ReadOnly)
+* **description**: string
+* **endTime**: string (ReadOnly)
+* **input**: JobInput (Required)
+* **lastModified**: string (ReadOnly)
+* **outputs**: JobOutput[] (Required)
+* **priority**: 'High' | 'Low' | 'Normal'
+* **startTime**: string (ReadOnly)
+* **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## JobInput
+* **Discriminator**: @odata.type
+### Base Properties
+### #Microsoft.Media.JobInputClip
+#### Properties
+* **@odata.type**: '#Microsoft.Media.JobInputClip' (Required)
+* **end**: ClipTime
+* **files**: string[]
+* **label**: string
+* **start**: ClipTime
+
+### #Microsoft.Media.JobInputs
+#### Properties
+* **@odata.type**: '#Microsoft.Media.JobInputs' (Required)
+* **inputs**: JobInput[]
+
+
+## #Microsoft.Media.JobInputClip
+### Properties
+* **@odata.type**: '#Microsoft.Media.JobInputClip' (Required)
+* **end**: ClipTime
+* **files**: string[]
+* **label**: string
+* **start**: ClipTime
+
+## ClipTime
+* **Discriminator**: @odata.type
+### Base Properties
+### #Microsoft.Media.AbsoluteClipTime
+#### Properties
+* **@odata.type**: '#Microsoft.Media.AbsoluteClipTime' (Required)
+* **time**: string (Required)
+
+
+## #Microsoft.Media.AbsoluteClipTime
+### Properties
+* **@odata.type**: '#Microsoft.Media.AbsoluteClipTime' (Required)
+* **time**: string (Required)
+
+## #Microsoft.Media.JobInputs
+### Properties
+* **@odata.type**: '#Microsoft.Media.JobInputs' (Required)
+* **inputs**: JobInput[]
+
+## JobOutput
+* **Discriminator**: @odata.type
+### Base Properties
+* **endTime**: string (ReadOnly)
+* **error**: JobError (ReadOnly)
+* **label**: string
+* **progress**: int (ReadOnly)
+* **startTime**: string (ReadOnly)
+* **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' (ReadOnly)
+### #Microsoft.Media.JobOutputAsset
+#### Properties
+* **@odata.type**: '#Microsoft.Media.JobOutputAsset' (Required)
 * **assetName**: string (Required)
-* **created**: string (ReadOnly)
-* **description**: string
-* **hls**: Hls
-* **lastModified**: string (ReadOnly)
-* **manifestName**: string
-* **outputSnapTime**: int
-* **provisioningState**: string (ReadOnly)
-* **resourceState**: 'Creating' | 'Deleting' | 'Running' (ReadOnly)
 
-## Hls
+
+## JobError
 ### Properties
-* **fragmentsPerTsSegment**: int
+* **category**: 'Configuration' | 'Content' | 'Download' | 'Service' | 'Upload' (ReadOnly)
+* **code**: 'ConfigurationUnsupported' | 'ContentMalformed' | 'ContentUnsupported' | 'DownloadNotAccessible' | 'DownloadTransientError' | 'ServiceError' | 'ServiceTransientError' | 'UploadNotAccessible' | 'UploadTransientError' (ReadOnly)
+* **details**: JobErrorDetail[] (ReadOnly)
+* **message**: string (ReadOnly)
+* **retry**: 'DoNotRetry' | 'MayRetry' (ReadOnly)
 
-## Microsoft.Media/mediaservices/liveEvents
+## JobErrorDetail
 ### Properties
-* **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LiveEventProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Media/mediaservices/liveEvents' (ReadOnly, DeployTimeConstant)
+* **code**: string (ReadOnly)
+* **message**: string (ReadOnly)
 
-## LiveEventProperties
+## #Microsoft.Media.JobOutputAsset
 ### Properties
-* **created**: string (ReadOnly)
-* **crossSiteAccessPolicies**: CrossSiteAccessPolicies
-* **description**: string
-* **encoding**: LiveEventEncoding
-* **input**: LiveEventInput (Required)
-* **lastModified**: string (ReadOnly)
-* **preview**: LiveEventPreview
-* **provisioningState**: string (ReadOnly)
-* **resourceState**: 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
-* **streamOptions**: 'Default' | 'LowLatency'[]
-* **vanityUrl**: bool
-
-## CrossSiteAccessPolicies
-### Properties
-* **clientAccessPolicy**: string
-* **crossDomainPolicy**: string
-
-## LiveEventEncoding
-### Properties
-* **encodingType**: 'Basic' | 'None' | 'Premium1080p' | 'Standard'
-* **presetName**: string
-
-## LiveEventInput
-### Properties
-* **accessControl**: LiveEventInputAccessControl
-* **accessToken**: string
-* **endpoints**: LiveEventEndpoint[]
-* **keyFrameIntervalDuration**: string
-* **streamingProtocol**: 'FragmentedMP4' | 'RTMP' (Required)
-
-## LiveEventInputAccessControl
-### Properties
-* **ip**: IPAccessControl
-
-## IPAccessControl
-### Properties
-* **allow**: IPRange[]
-
-## IPRange
-### Properties
-* **address**: string
-* **name**: string
-* **subnetPrefixLength**: int
-
-## LiveEventEndpoint
-### Properties
-* **protocol**: string
-* **url**: string
-
-## LiveEventPreview
-### Properties
-* **accessControl**: LiveEventPreviewAccessControl
-* **alternativeMediaId**: string
-* **endpoints**: LiveEventEndpoint[]
-* **previewLocator**: string
-* **streamingPolicyName**: string
-
-## LiveEventPreviewAccessControl
-### Properties
-* **ip**: IPAccessControl
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Media/mediaservices/streamingEndpoints
-### Properties
-* **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StreamingEndpointProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Media/mediaservices/streamingEndpoints' (ReadOnly, DeployTimeConstant)
-
-## StreamingEndpointProperties
-### Properties
-* **accessControl**: StreamingEndpointAccessControl
-* **availabilitySetName**: string
-* **cdnEnabled**: bool
-* **cdnProfile**: string
-* **cdnProvider**: string
-* **created**: string (ReadOnly)
-* **crossSiteAccessPolicies**: CrossSiteAccessPolicies
-* **customHostNames**: string[]
-* **description**: string
-* **freeTrialEndTime**: string (ReadOnly)
-* **hostName**: string (ReadOnly)
-* **lastModified**: string (ReadOnly)
-* **maxCacheAge**: int
-* **provisioningState**: string (ReadOnly)
-* **resourceState**: 'Deleting' | 'Running' | 'Scaling' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
-* **scaleUnits**: int (Required)
-
-## StreamingEndpointAccessControl
-### Properties
-* **akamai**: AkamaiAccessControl
-* **ip**: IPAccessControl
-
-## AkamaiAccessControl
-### Properties
-* **akamaiSignatureHeaderAuthenticationKeyList**: AkamaiSignatureHeaderAuthenticationKey[]
-
-## AkamaiSignatureHeaderAuthenticationKey
-### Properties
-* **base64Key**: string
-* **expiration**: string
-* **identifier**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Media/mediaservices
-### Properties
-* **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MediaServiceProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Media/mediaservices' (ReadOnly, DeployTimeConstant)
-
-## MediaServiceProperties
-### Properties
-* **mediaServiceId**: string (ReadOnly)
-* **storageAccounts**: StorageAccount[]
-
-## StorageAccount
-### Properties
-* **id**: string
-* **type**: 'Primary' | 'Secondary' (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
+* **@odata.type**: '#Microsoft.Media.JobOutputAsset' (Required)
+* **assetName**: string (Required)
 

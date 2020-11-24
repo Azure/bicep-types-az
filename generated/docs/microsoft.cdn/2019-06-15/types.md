@@ -100,66 +100,26 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Cdn/profiles/endpoints/customDomains
+## Microsoft.Cdn/profiles
 ### Properties
 * **apiVersion**: '2019-06-15' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CustomDomainPropertiesParameters
-* **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant)
+* **properties**: ProfileProperties
+* **sku**: Sku (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant)
 
-## CustomDomainPropertiesParameters
+## ProfileProperties
 ### Properties
-* **customHttpsParameters**: CustomDomainHttpsParameters (ReadOnly)
-* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly)
-* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly)
-* **hostName**: string (Required)
 * **provisioningState**: string (ReadOnly)
-* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
-* **validationData**: string (ReadOnly)
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' (ReadOnly)
 
-## CustomDomainHttpsParameters
-* **Discriminator**: certificateSource
-### Base Properties
-* **minimumTlsVersion**: 'None' | 'TLS10' | 'TLS12' (ReadOnly)
-* **protocolType**: 'IPBased' | 'ServerNameIndication' (ReadOnly)
-### AzureKeyVault
-#### Properties
-* **certificateSource**: 'AzureKeyVault' (Required)
-* **certificateSourceParameters**: KeyVaultCertificateSourceParameters (ReadOnly)
-
-### Cdn
-#### Properties
-* **certificateSource**: 'Cdn' (Required)
-* **certificateSourceParameters**: CdnCertificateSourceParameters (ReadOnly)
-
-
-## AzureKeyVault
-### Properties
-* **certificateSource**: 'AzureKeyVault' (Required)
-* **certificateSourceParameters**: KeyVaultCertificateSourceParameters (ReadOnly)
-
-## KeyVaultCertificateSourceParameters
-### Properties
-* **@odata.type**: string (ReadOnly)
-* **deleteRule**: string (ReadOnly)
-* **resourceGroupName**: string (ReadOnly)
-* **secretName**: string (ReadOnly)
-* **secretVersion**: string (ReadOnly)
-* **subscriptionId**: string (ReadOnly)
-* **updateRule**: string (ReadOnly)
-* **vaultName**: string (ReadOnly)
-
-## Cdn
-### Properties
-* **certificateSource**: 'Cdn' (Required)
-* **certificateSourceParameters**: CdnCertificateSourceParameters (ReadOnly)
-
-## CdnCertificateSourceParameters
-### Properties
-* **@odata.type**: string (ReadOnly)
-* **certificateType**: 'Dedicated' | 'Shared' (ReadOnly)
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Microsoft.Cdn/profiles/endpoints
 ### Properties
@@ -585,24 +545,64 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Cdn/profiles
+## Microsoft.Cdn/profiles/endpoints/customDomains
 ### Properties
 * **apiVersion**: '2019-06-15' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProfileProperties
-* **sku**: Sku (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant)
+* **properties**: CustomDomainPropertiesParameters
+* **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant)
 
-## ProfileProperties
+## CustomDomainPropertiesParameters
 ### Properties
+* **customHttpsParameters**: CustomDomainHttpsParameters (ReadOnly)
+* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly)
+* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly)
+* **hostName**: string (Required)
 * **provisioningState**: string (ReadOnly)
-* **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' (ReadOnly)
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
+* **validationData**: string (ReadOnly)
 
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
+## CustomDomainHttpsParameters
+* **Discriminator**: certificateSource
+### Base Properties
+* **minimumTlsVersion**: 'None' | 'TLS10' | 'TLS12' (ReadOnly)
+* **protocolType**: 'IPBased' | 'ServerNameIndication' (ReadOnly)
+### AzureKeyVault
+#### Properties
+* **certificateSource**: 'AzureKeyVault' (Required)
+* **certificateSourceParameters**: KeyVaultCertificateSourceParameters (ReadOnly)
+
+### Cdn
+#### Properties
+* **certificateSource**: 'Cdn' (Required)
+* **certificateSourceParameters**: CdnCertificateSourceParameters (ReadOnly)
+
+
+## AzureKeyVault
+### Properties
+* **certificateSource**: 'AzureKeyVault' (Required)
+* **certificateSourceParameters**: KeyVaultCertificateSourceParameters (ReadOnly)
+
+## KeyVaultCertificateSourceParameters
+### Properties
+* **@odata.type**: string (ReadOnly)
+* **deleteRule**: string (ReadOnly)
+* **resourceGroupName**: string (ReadOnly)
+* **secretName**: string (ReadOnly)
+* **secretVersion**: string (ReadOnly)
+* **subscriptionId**: string (ReadOnly)
+* **updateRule**: string (ReadOnly)
+* **vaultName**: string (ReadOnly)
+
+## Cdn
+### Properties
+* **certificateSource**: 'Cdn' (Required)
+* **certificateSourceParameters**: CdnCertificateSourceParameters (ReadOnly)
+
+## CdnCertificateSourceParameters
+### Properties
+* **@odata.type**: string (ReadOnly)
+* **certificateType**: 'Dedicated' | 'Shared' (ReadOnly)
 

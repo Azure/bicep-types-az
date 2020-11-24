@@ -66,7 +66,7 @@
 
 ## DiskSku
 ### Properties
-* **name**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | 'UltraSSD_LRS'
+* **name**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'UltraSSD_LRS'
 * **tier**: string (ReadOnly)
 
 ## Dictionary<string,String>

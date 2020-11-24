@@ -1,5 +1,31 @@
 # Microsoft.DevTestLab @ 2015-05-21-preview
 
+## Microsoft.DevTestLab/labs
+### Properties
+* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LabProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DevTestLab/labs' (ReadOnly, DeployTimeConstant)
+
+## LabProperties
+### Properties
+* **artifactsStorageAccount**: string
+* **createdDate**: string
+* **defaultStorageAccount**: string
+* **defaultVirtualNetworkId**: string
+* **labStorageType**: 'Premium' | 'Standard'
+* **provisioningState**: string
+* **storageAccounts**: string[]
+* **vaultName**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.DevTestLab/labs/artifactsources
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant)
@@ -269,32 +295,6 @@
 * **resourceId**: string
 * **useInVmCreationPermission**: 'Allow' | 'Default' | 'Deny'
 * **usePublicIpAddressPermission**: 'Allow' | 'Default' | 'Deny'
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.DevTestLab/labs
-### Properties
-* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LabProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DevTestLab/labs' (ReadOnly, DeployTimeConstant)
-
-## LabProperties
-### Properties
-* **artifactsStorageAccount**: string
-* **createdDate**: string
-* **defaultStorageAccount**: string
-* **defaultVirtualNetworkId**: string
-* **labStorageType**: 'Premium' | 'Standard'
-* **provisioningState**: string
-* **storageAccounts**: string[]
-* **vaultName**: string
 
 ## Dictionary<string,String>
 ### Additional Properties

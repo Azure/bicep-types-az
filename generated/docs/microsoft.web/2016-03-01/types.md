@@ -18,8 +18,8 @@
 * **expirationDate**: string (ReadOnly)
 * **friendlyName**: string (ReadOnly)
 * **geoRegion**: string (ReadOnly)
-* **hostNames**: string[]
 * **hostingEnvironmentProfile**: HostingEnvironmentProfile (ReadOnly)
+* **hostNames**: string[]
 * **issueDate**: string (ReadOnly)
 * **issuer**: string (ReadOnly)
 * **keyVaultId**: string

@@ -1,19 +1,5 @@
 # Microsoft.DomainRegistration @ 2019-08-01
 
-## Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers
-### Properties
-* **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:6_properties
-* **type**: 'Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant)
-
-## schemas:6_properties
-### Properties
-* **ownershipId**: string
-
 ## Microsoft.DomainRegistration/domains
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
@@ -88,4 +74,18 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers
+### Properties
+* **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:6_properties
+* **type**: 'Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant)
+
+## schemas:6_properties
+### Properties
+* **ownershipId**: string
 

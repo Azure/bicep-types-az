@@ -1,255 +1,195 @@
 # Microsoft.Network @ 2020-01-01
 
-## Microsoft.Network/frontDoors/rulesEngines
+## Microsoft.Network/privateDnsZones
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateZoneProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/privateDnsZones' (ReadOnly, DeployTimeConstant)
+
+## PrivateZoneProperties
+### Properties
+* **internalId**: string (ReadOnly)
+* **maxNumberOfRecordSets**: int (ReadOnly)
+* **maxNumberOfVirtualNetworkLinks**: int (ReadOnly)
+* **maxNumberOfVirtualNetworkLinksWithRegistration**: int (ReadOnly)
+* **numberOfRecordSets**: int (ReadOnly)
+* **numberOfVirtualNetworkLinks**: int (ReadOnly)
+* **numberOfVirtualNetworkLinksWithRegistration**: int (ReadOnly)
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Network/privateDnsZones/A
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RulesEngineProperties
-* **type**: 'Microsoft.Network/frontDoors/rulesEngines' (ReadOnly, DeployTimeConstant)
+* **properties**: RecordSetProperties
+* **type**: 'Microsoft.Network/privateDnsZones/A' (ReadOnly, DeployTimeConstant)
 
-## RulesEngineProperties
+## RecordSetProperties
 ### Properties
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
-* **rules**: RulesEngineRule[]
+* **aaaaRecords**: AaaaRecord[]
+* **aRecords**: ARecord[]
+* **cnameRecord**: CnameRecord
+* **fqdn**: string (ReadOnly)
+* **isAutoRegistered**: bool (ReadOnly)
+* **metadata**: Dictionary<string,String>
+* **mxRecords**: MxRecord[]
+* **ptrRecords**: PtrRecord[]
+* **soaRecord**: SoaRecord
+* **srvRecords**: SrvRecord[]
+* **ttl**: int
+* **txtRecords**: TxtRecord[]
 
-## RulesEngineRule
+## AaaaRecord
 ### Properties
-* **action**: RulesEngineAction (Required)
-* **matchConditions**: RulesEngineMatchCondition[]
-* **matchProcessingBehavior**: 'Continue' | 'Stop'
-* **name**: string (Required)
-* **priority**: int (Required)
+* **ipv6Address**: string
 
-## RulesEngineAction
+## ARecord
 ### Properties
-* **requestHeaderActions**: HeaderAction[]
-* **responseHeaderActions**: HeaderAction[]
-* **routeConfigurationOverride**: RouteConfiguration
+* **ipv4Address**: string
 
-## HeaderAction
+## CnameRecord
 ### Properties
-* **headerActionType**: 'Append' | 'Delete' | 'Overwrite' (Required)
-* **headerName**: string (Required)
-* **value**: string
+* **cname**: string
 
-## RouteConfiguration
-* **Discriminator**: @odata.type
-### Base Properties
-### #Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration
-#### Properties
-* **@odata.type**: '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration' (Required)
-* **backendPool**: SubResource
-* **cacheConfiguration**: CacheConfiguration
-* **customForwardingPath**: string
-* **forwardingProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest'
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
-### #Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration
-#### Properties
-* **@odata.type**: '#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration' (Required)
-* **customFragment**: string
-* **customHost**: string
-* **customPath**: string
-* **customQueryString**: string
-* **redirectProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest'
-* **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect'
-
-
-## #Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration
+## MxRecord
 ### Properties
-* **@odata.type**: '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration' (Required)
-* **backendPool**: SubResource
-* **cacheConfiguration**: CacheConfiguration
-* **customForwardingPath**: string
-* **forwardingProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest'
+* **exchange**: string
+* **preference**: int
+
+## PtrRecord
+### Properties
+* **ptrdname**: string
+
+## SoaRecord
+### Properties
+* **email**: string
+* **expireTime**: int
+* **host**: string
+* **minimumTtl**: int
+* **refreshTime**: int
+* **retryTime**: int
+* **serialNumber**: int
+
+## SrvRecord
+### Properties
+* **port**: int
+* **priority**: int
+* **target**: string
+* **weight**: int
+
+## TxtRecord
+### Properties
+* **value**: string[]
+
+## Microsoft.Network/privateDnsZones/AAAA
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RecordSetProperties
+* **type**: 'Microsoft.Network/privateDnsZones/AAAA' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Network/privateDnsZones/CNAME
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RecordSetProperties
+* **type**: 'Microsoft.Network/privateDnsZones/CNAME' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Network/privateDnsZones/MX
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RecordSetProperties
+* **type**: 'Microsoft.Network/privateDnsZones/MX' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Network/privateDnsZones/PTR
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RecordSetProperties
+* **type**: 'Microsoft.Network/privateDnsZones/PTR' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Network/privateDnsZones/SOA
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RecordSetProperties
+* **type**: 'Microsoft.Network/privateDnsZones/SOA' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Network/privateDnsZones/SRV
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RecordSetProperties
+* **type**: 'Microsoft.Network/privateDnsZones/SRV' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Network/privateDnsZones/TXT
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RecordSetProperties
+* **type**: 'Microsoft.Network/privateDnsZones/TXT' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Network/privateDnsZones/virtualNetworkLinks
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualNetworkLinkProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/privateDnsZones/virtualNetworkLinks' (ReadOnly, DeployTimeConstant)
+
+## VirtualNetworkLinkProperties
+### Properties
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+* **registrationEnabled**: bool
+* **virtualNetwork**: SubResource
+* **virtualNetworkLinkState**: 'Completed' | 'InProgress' (ReadOnly)
 
 ## SubResource
 ### Properties
 * **id**: string
-
-## CacheConfiguration
-### Properties
-* **cacheDuration**: string
-* **dynamicCompression**: 'Disabled' | 'Enabled'
-* **queryParameterStripDirective**: 'StripAll' | 'StripAllExcept' | 'StripNone' | 'StripOnly'
-* **queryParameters**: string
-
-## #Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration
-### Properties
-* **@odata.type**: '#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration' (Required)
-* **customFragment**: string
-* **customHost**: string
-* **customPath**: string
-* **customQueryString**: string
-* **redirectProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest'
-* **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect'
-
-## RulesEngineMatchCondition
-### Properties
-* **negateCondition**: bool
-* **rulesEngineMatchValue**: string[] (Required)
-* **rulesEngineMatchVariable**: 'IsMobile' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestFilename' | 'RequestFilenameExtension' | 'RequestHeader' | 'RequestMethod' | 'RequestPath' | 'RequestScheme' | 'RequestUri' (Required)
-* **rulesEngineOperator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' (Required)
-* **selector**: string
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]
-
-## Microsoft.Network/frontDoors
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: FrontDoorProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/frontDoors' (ReadOnly, DeployTimeConstant)
-
-## FrontDoorProperties
-### Properties
-* **backendPools**: BackendPool[]
-* **backendPoolsSettings**: BackendPoolsSettings
-* **cname**: string (ReadOnly)
-* **enabledState**: 'Disabled' | 'Enabled'
-* **friendlyName**: string
-* **frontdoorId**: string (ReadOnly)
-* **frontendEndpoints**: FrontendEndpoint[]
-* **healthProbeSettings**: HealthProbeSettingsModel[]
-* **loadBalancingSettings**: LoadBalancingSettingsModel[]
-* **provisioningState**: string (ReadOnly)
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
-* **routingRules**: RoutingRule[]
-* **rulesEngines**: RulesEngine[] (ReadOnly)
-
-## BackendPool
-### Properties
-* **id**: string
-* **name**: string
-* **properties**: BackendPoolProperties
-* **type**: string (ReadOnly)
-
-## BackendPoolProperties
-### Properties
-* **backends**: Backend[]
-* **healthProbeSettings**: SubResource
-* **loadBalancingSettings**: SubResource
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
-
-## Backend
-### Properties
-* **address**: string
-* **backendHostHeader**: string
-* **enabledState**: 'Disabled' | 'Enabled'
-* **httpPort**: int
-* **httpsPort**: int
-* **priority**: int
-* **privateEndpointStatus**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' (ReadOnly)
-* **privateLinkAlias**: string
-* **privateLinkApprovalMessage**: string
-* **weight**: int
-
-## BackendPoolsSettings
-### Properties
-* **enforceCertificateNameCheck**: 'Disabled' | 'Enabled'
-* **sendRecvTimeoutSeconds**: int
-
-## FrontendEndpoint
-### Properties
-* **id**: string
-* **name**: string
-* **properties**: FrontendEndpointProperties
-* **type**: string (ReadOnly)
-
-## FrontendEndpointProperties
-### Properties
-* **customHttpsConfiguration**: CustomHttpsConfiguration (ReadOnly)
-* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly)
-* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly)
-* **hostName**: string
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
-* **sessionAffinityEnabledState**: 'Disabled' | 'Enabled'
-* **sessionAffinityTtlSeconds**: int
-* **webApplicationFirewallPolicyLink**: schemas:37_webApplicationFirewallPolicyLink
-
-## CustomHttpsConfiguration
-### Properties
-* **certificateSource**: 'AzureKeyVault' | 'FrontDoor' (Required)
-* **frontDoorCertificateSourceParameters**: FrontDoorCertificateSourceParameters
-* **keyVaultCertificateSourceParameters**: KeyVaultCertificateSourceParameters
-* **minimumTlsVersion**: '1.0' | '1.2' (Required)
-* **protocolType**: string (Required)
-
-## FrontDoorCertificateSourceParameters
-### Properties
-* **certificateType**: 'Dedicated'
-
-## KeyVaultCertificateSourceParameters
-### Properties
-* **secretName**: string
-* **secretVersion**: string
-* **vault**: schemas:32_vault
-
-## schemas:32_vault
-### Properties
-* **id**: string
-
-## schemas:37_webApplicationFirewallPolicyLink
-### Properties
-* **id**: string
-
-## HealthProbeSettingsModel
-### Properties
-* **id**: string
-* **name**: string
-* **properties**: HealthProbeSettingsProperties
-* **type**: string (ReadOnly)
-
-## HealthProbeSettingsProperties
-### Properties
-* **enabledState**: 'Disabled' | 'Enabled'
-* **healthProbeMethod**: 'GET' | 'HEAD'
-* **intervalInSeconds**: int
-* **path**: string
-* **protocol**: 'Http' | 'Https'
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
-
-## LoadBalancingSettingsModel
-### Properties
-* **id**: string
-* **name**: string
-* **properties**: LoadBalancingSettingsProperties
-* **type**: string (ReadOnly)
-
-## LoadBalancingSettingsProperties
-### Properties
-* **additionalLatencyMilliseconds**: int
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
-* **sampleSize**: int
-* **successfulSamplesRequired**: int
-
-## RoutingRule
-### Properties
-* **id**: string
-* **name**: string
-* **properties**: RoutingRuleProperties
-* **type**: string (ReadOnly)
-
-## RoutingRuleProperties
-### Properties
-* **acceptedProtocols**: 'Http' | 'Https'[]
-* **enabledState**: 'Disabled' | 'Enabled'
-* **frontendEndpoints**: SubResource[]
-* **patternsToMatch**: string[]
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
-* **routeConfiguration**: RouteConfiguration
-* **rulesEngine**: SubResource
-
-## RulesEngine
-### Properties
-* **id**: string (ReadOnly)
-* **name**: string (ReadOnly)
-* **properties**: RulesEngineProperties
-* **type**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Additional Properties

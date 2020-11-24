@@ -1,5 +1,144 @@
 # Microsoft.DataMigration @ 2018-04-19
 
+## Microsoft.DataMigration/services
+### Properties
+* **apiVersion**: '2018-04-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DataMigrationServiceProperties
+* **sku**: ServiceSku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DataMigration/services' (ReadOnly, DeployTimeConstant)
+
+## DataMigrationServiceProperties
+### Properties
+* **provisioningState**: 'Accepted' | 'Deleting' | 'Deploying' | 'Failed' | 'FailedToStart' | 'FailedToStop' | 'Starting' | 'Stopped' | 'Stopping' | 'Succeeded' (ReadOnly)
+* **publicKey**: string
+* **virtualSubnetId**: string (Required)
+
+## ServiceSku
+### Properties
+* **capacity**: int
+* **family**: string
+* **name**: string
+* **size**: string
+* **tier**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.DataMigration/services/projects
+### Properties
+* **apiVersion**: '2018-04-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ProjectProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DataMigration/services/projects' (ReadOnly, DeployTimeConstant)
+
+## ProjectProperties
+### Properties
+* **creationTime**: string (ReadOnly)
+* **databasesInfo**: DatabaseInfo[]
+* **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly)
+* **sourceConnectionInfo**: ConnectionInfo
+* **sourcePlatform**: 'SQL' | 'Unknown' (Required)
+* **targetConnectionInfo**: ConnectionInfo
+* **targetPlatform**: 'SQLDB' | 'Unknown' (Required)
+
+## DatabaseInfo
+### Properties
+* **sourceDatabaseName**: string (Required)
+
+## ConnectionInfo
+* **Discriminator**: type
+### Base Properties
+* **password**: string
+* **userName**: string
+### MiSqlConnectionInfo
+#### Properties
+* **managedInstanceResourceId**: string (Required)
+* **password**: string
+* **type**: 'MiSqlConnectionInfo' (Required)
+* **userName**: string
+
+### MySqlConnectionInfo
+#### Properties
+* **password**: string
+* **port**: int (Required)
+* **serverName**: string (Required)
+* **type**: 'MySqlConnectionInfo' (Required)
+* **userName**: string
+
+### PostgreSqlConnectionInfo
+#### Properties
+* **databaseName**: string
+* **password**: string
+* **port**: int (Required)
+* **serverName**: string (Required)
+* **type**: 'PostgreSqlConnectionInfo' (Required)
+* **userName**: string
+
+### SqlConnectionInfo
+#### Properties
+* **additionalSettings**: string
+* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication'
+* **dataSource**: string (Required)
+* **encryptConnection**: bool
+* **password**: string
+* **platform**: 'SqlOnPrem'
+* **trustServerCertificate**: bool
+* **type**: 'SqlConnectionInfo' (Required)
+* **userName**: string
+
+
+## MiSqlConnectionInfo
+### Properties
+* **managedInstanceResourceId**: string (Required)
+* **password**: string
+* **type**: 'MiSqlConnectionInfo' (Required)
+* **userName**: string
+
+## MySqlConnectionInfo
+### Properties
+* **password**: string
+* **port**: int (Required)
+* **serverName**: string (Required)
+* **type**: 'MySqlConnectionInfo' (Required)
+* **userName**: string
+
+## PostgreSqlConnectionInfo
+### Properties
+* **databaseName**: string
+* **password**: string
+* **port**: int (Required)
+* **serverName**: string (Required)
+* **type**: 'PostgreSqlConnectionInfo' (Required)
+* **userName**: string
+
+## SqlConnectionInfo
+### Properties
+* **additionalSettings**: string
+* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication'
+* **dataSource**: string (Required)
+* **encryptConnection**: bool
+* **password**: string
+* **platform**: 'SqlOnPrem'
+* **trustServerCertificate**: bool
+* **type**: 'SqlConnectionInfo' (Required)
+* **userName**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.DataMigration/services/projects/tasks
 ### Properties
 * **apiVersion**: '2018-04-19' (ReadOnly, DeployTimeConstant)
@@ -224,14 +363,6 @@
 * **sourceConnectionInfo**: MySqlConnectionInfo (Required)
 * **targetPlatform**: 'AzureDbForMySQL' | 'SqlServer'
 
-## MySqlConnectionInfo
-### Properties
-* **password**: string
-* **port**: int (Required)
-* **serverName**: string (Required)
-* **type**: 'MySqlConnectionInfo' (Required)
-* **userName**: string
-
 ## ConnectToSourceNonSqlTaskOutput
 ### Properties
 * **databases**: string[] (ReadOnly)
@@ -259,15 +390,6 @@
 ### Properties
 * **sourceConnectionInfo**: PostgreSqlConnectionInfo (Required)
 
-## PostgreSqlConnectionInfo
-### Properties
-* **databaseName**: string
-* **password**: string
-* **port**: int (Required)
-* **serverName**: string (Required)
-* **type**: 'PostgreSqlConnectionInfo' (Required)
-* **userName**: string
-
 ## ConnectToSourcePostgreSqlSyncTaskOutput
 ### Properties
 * **databases**: string[] (ReadOnly)
@@ -288,18 +410,6 @@
 * **collectAgentJobs**: bool
 * **collectLogins**: bool
 * **sourceConnectionInfo**: SqlConnectionInfo (Required)
-
-## SqlConnectionInfo
-### Properties
-* **additionalSettings**: string
-* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication'
-* **dataSource**: string (Required)
-* **encryptConnection**: bool
-* **password**: string
-* **platform**: 'SqlOnPrem'
-* **trustServerCertificate**: bool
-* **type**: 'SqlConnectionInfo' (Required)
-* **userName**: string
 
 ## ConnectToSourceSqlServerTaskOutput
 * **Discriminator**: resultType
@@ -488,13 +598,6 @@
 * **appKey**: string (Required)
 * **applicationId**: string (Required)
 * **tenantId**: string (Required)
-
-## MiSqlConnectionInfo
-### Properties
-* **managedInstanceResourceId**: string (Required)
-* **password**: string
-* **type**: 'MiSqlConnectionInfo' (Required)
-* **userName**: string
 
 ## ConnectToTargetSqlMISyncTaskOutput
 ### Properties
@@ -1171,7 +1274,7 @@
 * **schemaValidationResult**: SchemaComparisonValidationResult (ReadOnly)
 * **sourceDatabaseName**: string (ReadOnly)
 * **startedOn**: string (ReadOnly)
-* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'InProgress' | 'Initialized' | 'NotStarted' | 'Stopped' (ReadOnly)
+* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'Initialized' | 'InProgress' | 'NotStarted' | 'Stopped' (ReadOnly)
 * **targetDatabaseName**: string (ReadOnly)
 
 ### MigrationLevelOutput
@@ -1197,7 +1300,7 @@
 #### Properties
 * **migrationId**: string (ReadOnly)
 * **resultType**: 'MigrationValidationOutput' (Required)
-* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'InProgress' | 'Initialized' | 'NotStarted' | 'Stopped' (ReadOnly)
+* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'Initialized' | 'InProgress' | 'NotStarted' | 'Stopped' (ReadOnly)
 * **summaryResults**: Dictionary<string,MigrationValidationDatabaseSummaryResult>
 
 ### TableLevelOutput
@@ -1224,7 +1327,7 @@
 * **schemaValidationResult**: SchemaComparisonValidationResult (ReadOnly)
 * **sourceDatabaseName**: string (ReadOnly)
 * **startedOn**: string (ReadOnly)
-* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'InProgress' | 'Initialized' | 'NotStarted' | 'Stopped' (ReadOnly)
+* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'Initialized' | 'InProgress' | 'NotStarted' | 'Stopped' (ReadOnly)
 * **targetDatabaseName**: string (ReadOnly)
 
 ## DataIntegrityValidationResult
@@ -1297,7 +1400,7 @@
 ### Properties
 * **migrationId**: string (ReadOnly)
 * **resultType**: 'MigrationValidationOutput' (Required)
-* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'InProgress' | 'Initialized' | 'NotStarted' | 'Stopped' (ReadOnly)
+* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'Initialized' | 'InProgress' | 'NotStarted' | 'Stopped' (ReadOnly)
 * **summaryResults**: Dictionary<string,MigrationValidationDatabaseSummaryResult>
 
 ## Dictionary<string,MigrationValidationDatabaseSummaryResult>
@@ -1311,7 +1414,7 @@
 * **migrationId**: string (ReadOnly)
 * **sourceDatabaseName**: string (ReadOnly)
 * **startedOn**: string (ReadOnly)
-* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'InProgress' | 'Initialized' | 'NotStarted' | 'Stopped' (ReadOnly)
+* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'Initialized' | 'InProgress' | 'NotStarted' | 'Stopped' (ReadOnly)
 * **targetDatabaseName**: string (ReadOnly)
 
 ## ValidateMigrationInput.SqlServer.AzureSqlDbMI
@@ -1390,107 +1493,4 @@
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
 * **validationErrors**: ReportableException[] (ReadOnly)
-
-## Microsoft.DataMigration/services/projects
-### Properties
-* **apiVersion**: '2018-04-19' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ProjectProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DataMigration/services/projects' (ReadOnly, DeployTimeConstant)
-
-## ProjectProperties
-### Properties
-* **creationTime**: string (ReadOnly)
-* **databasesInfo**: DatabaseInfo[]
-* **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly)
-* **sourceConnectionInfo**: ConnectionInfo
-* **sourcePlatform**: 'SQL' | 'Unknown' (Required)
-* **targetConnectionInfo**: ConnectionInfo
-* **targetPlatform**: 'SQLDB' | 'Unknown' (Required)
-
-## DatabaseInfo
-### Properties
-* **sourceDatabaseName**: string (Required)
-
-## ConnectionInfo
-* **Discriminator**: type
-### Base Properties
-* **password**: string
-* **userName**: string
-### MiSqlConnectionInfo
-#### Properties
-* **managedInstanceResourceId**: string (Required)
-* **password**: string
-* **type**: 'MiSqlConnectionInfo' (Required)
-* **userName**: string
-
-### MySqlConnectionInfo
-#### Properties
-* **password**: string
-* **port**: int (Required)
-* **serverName**: string (Required)
-* **type**: 'MySqlConnectionInfo' (Required)
-* **userName**: string
-
-### PostgreSqlConnectionInfo
-#### Properties
-* **databaseName**: string
-* **password**: string
-* **port**: int (Required)
-* **serverName**: string (Required)
-* **type**: 'PostgreSqlConnectionInfo' (Required)
-* **userName**: string
-
-### SqlConnectionInfo
-#### Properties
-* **additionalSettings**: string
-* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication'
-* **dataSource**: string (Required)
-* **encryptConnection**: bool
-* **password**: string
-* **platform**: 'SqlOnPrem'
-* **trustServerCertificate**: bool
-* **type**: 'SqlConnectionInfo' (Required)
-* **userName**: string
-
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.DataMigration/services
-### Properties
-* **apiVersion**: '2018-04-19' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DataMigrationServiceProperties
-* **sku**: ServiceSku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DataMigration/services' (ReadOnly, DeployTimeConstant)
-
-## DataMigrationServiceProperties
-### Properties
-* **provisioningState**: 'Accepted' | 'Deleting' | 'Deploying' | 'Failed' | 'FailedToStart' | 'FailedToStop' | 'Starting' | 'Stopped' | 'Stopping' | 'Succeeded' (ReadOnly)
-* **publicKey**: string
-* **virtualSubnetId**: string (Required)
-
-## ServiceSku
-### Properties
-* **capacity**: int
-* **family**: string
-* **name**: string
-* **size**: string
-* **tier**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

@@ -1,30 +1,5 @@
 # Microsoft.HealthcareApis @ 2020-03-30
 
-## Microsoft.HealthcareApis/services/privateEndpointConnections
-### Properties
-* **apiVersion**: '2020-03-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: 'Microsoft.HealthcareApis/services/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded'
-
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly)
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionsRequired**: string
-* **description**: string
-* **status**: 'Approved' | 'Pending' | 'Rejected'
-
 ## Microsoft.HealthcareApis/services
 ### Properties
 * **apiVersion**: '2020-03-30' (ReadOnly, DeployTimeConstant)
@@ -32,7 +7,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: schemas:12_identity
-* **kind**: 'fhir' | 'fhir-R4' | 'fhir-Stu3' (Required)
+* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ServicesProperties
@@ -90,7 +65,32 @@
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: string (ReadOnly)
 
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: PrivateEndpoint
+* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded'
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly)
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: string
+* **description**: string
+* **status**: 'Approved' | 'Pending' | 'Rejected'
+
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.HealthcareApis/services/privateEndpointConnections
+### Properties
+* **apiVersion**: '2020-03-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: 'Microsoft.HealthcareApis/services/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 

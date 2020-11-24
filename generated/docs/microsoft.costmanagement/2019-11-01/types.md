@@ -20,8 +20,8 @@
 ## QueryDefinition
 ### Properties
 * **dataset**: QueryDataset
-* **timePeriod**: QueryTimePeriod
 * **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'WeekToDate' (Required)
+* **timePeriod**: QueryTimePeriod
 * **type**: 'ActualCost' | 'AmortizedCost' | 'Usage' (Required)
 
 ## QueryDataset
@@ -109,9 +109,11 @@
 * **accumulated**: 'false' | 'true'
 * **chart**: 'Area' | 'GroupedColumn' | 'Line' | 'StackedColumn' | 'Table'
 * **createdOn**: string (ReadOnly)
+* **currency**: string (ReadOnly)
+* **dateRange**: string (ReadOnly)
 * **displayName**: string
 * **kpis**: KpiProperties[]
-* **metric**: 'AHUB' | 'ActualCost' | 'AmortizedCost'
+* **metric**: 'ActualCost' | 'AHUB' | 'AmortizedCost'
 * **modifiedOn**: string (ReadOnly)
 * **pivots**: PivotProperties[]
 * **query**: ReportConfigDefinition
@@ -131,8 +133,8 @@
 ## ReportConfigDefinition
 ### Properties
 * **dataset**: ReportConfigDataset
-* **timePeriod**: ReportConfigTimePeriod
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required)
+* **timePeriod**: ReportConfigTimePeriod
 * **type**: string (Required)
 
 ## ReportConfigDataset

@@ -1,30 +1,5 @@
 # Microsoft.AppConfiguration @ 2020-06-01
 
-## Microsoft.AppConfiguration/configurationStores/privateEndpointConnections
-### Properties
-* **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: 'Microsoft.AppConfiguration/configurationStores/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-
-## PrivateEndpoint
-### Properties
-* **id**: string
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionsRequired**: 'None' | 'Recreate' (ReadOnly)
-* **description**: string
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
-
 ## Microsoft.AppConfiguration/configurationStores
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
@@ -42,7 +17,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
 * **userAssignedIdentities**: Dictionary<string,UserIdentity>
 
 ## Dictionary<string,UserIdentity>
@@ -79,6 +54,22 @@
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: string (ReadOnly)
 
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: PrivateEndpoint
+* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+
+## PrivateEndpoint
+### Properties
+* **id**: string
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: 'None' | 'Recreate' (ReadOnly)
+* **description**: string
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
+
 ## Sku
 ### Properties
 * **name**: string (Required)
@@ -86,4 +77,13 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.AppConfiguration/configurationStores/privateEndpointConnections
+### Properties
+* **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: 'Microsoft.AppConfiguration/configurationStores/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 

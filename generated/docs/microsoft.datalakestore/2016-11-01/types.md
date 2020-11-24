@@ -1,45 +1,5 @@
 # Microsoft.DataLakeStore @ 2016-11-01
 
-## Microsoft.DataLakeStore/accounts/firewallRules
-### Properties
-* **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateOrUpdateFirewallRuleProperties (Required)
-* **type**: 'Microsoft.DataLakeStore/accounts/firewallRules' (ReadOnly, DeployTimeConstant)
-
-## CreateOrUpdateFirewallRuleProperties
-### Properties
-* **endIpAddress**: string (Required)
-* **startIpAddress**: string (Required)
-
-## Microsoft.DataLakeStore/accounts/trustedIdProviders
-### Properties
-* **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateOrUpdateTrustedIdProviderProperties (Required)
-* **type**: 'Microsoft.DataLakeStore/accounts/trustedIdProviders' (ReadOnly, DeployTimeConstant)
-
-## CreateOrUpdateTrustedIdProviderProperties
-### Properties
-* **idProvider**: string (Required)
-
-## Microsoft.DataLakeStore/accounts/virtualNetworkRules
-### Properties
-* **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateOrUpdateVirtualNetworkRuleProperties (Required)
-* **type**: 'Microsoft.DataLakeStore/accounts/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
-
-## CreateOrUpdateVirtualNetworkRuleProperties
-### Properties
-* **subnetId**: string (Required)
-
 ## Microsoft.DataLakeStore/accounts
 ### Properties
 * **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant)
@@ -75,8 +35,8 @@
 * **newTier**: 'Commitment_100TB' | 'Commitment_10TB' | 'Commitment_1PB' | 'Commitment_1TB' | 'Commitment_500TB' | 'Commitment_5PB' | 'Consumption'
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Patching' | 'Resuming' | 'Running' | 'Succeeded' | 'Suspending' | 'Undeleting' (ReadOnly)
 * **state**: 'Active' | 'Suspended' (ReadOnly)
-* **trustedIdProviderState**: 'Disabled' | 'Enabled'
 * **trustedIdProviders**: CreateTrustedIdProviderWithAccountParameters[]
+* **trustedIdProviderState**: 'Disabled' | 'Enabled'
 * **virtualNetworkRules**: CreateVirtualNetworkRuleWithAccountParameters[]
 
 ## EncryptionConfig
@@ -97,12 +57,21 @@
 * **properties**: CreateOrUpdateFirewallRuleProperties (Required)
 * **type**: string (ReadOnly)
 
+## CreateOrUpdateFirewallRuleProperties
+### Properties
+* **endIpAddress**: string (Required)
+* **startIpAddress**: string (Required)
+
 ## CreateTrustedIdProviderWithAccountParameters
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (Required)
 * **properties**: CreateOrUpdateTrustedIdProviderProperties (Required)
 * **type**: string (ReadOnly)
+
+## CreateOrUpdateTrustedIdProviderProperties
+### Properties
+* **idProvider**: string (Required)
 
 ## CreateVirtualNetworkRuleWithAccountParameters
 ### Properties
@@ -111,7 +80,38 @@
 * **properties**: CreateOrUpdateVirtualNetworkRuleProperties (Required)
 * **type**: string (ReadOnly)
 
+## CreateOrUpdateVirtualNetworkRuleProperties
+### Properties
+* **subnetId**: string (Required)
+
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.DataLakeStore/accounts/firewallRules
+### Properties
+* **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CreateOrUpdateFirewallRuleProperties (Required)
+* **type**: 'Microsoft.DataLakeStore/accounts/firewallRules' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.DataLakeStore/accounts/trustedIdProviders
+### Properties
+* **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CreateOrUpdateTrustedIdProviderProperties (Required)
+* **type**: 'Microsoft.DataLakeStore/accounts/trustedIdProviders' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.DataLakeStore/accounts/virtualNetworkRules
+### Properties
+* **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CreateOrUpdateVirtualNetworkRuleProperties (Required)
+* **type**: 'Microsoft.DataLakeStore/accounts/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
 

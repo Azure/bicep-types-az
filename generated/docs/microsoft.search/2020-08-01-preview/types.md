@@ -1,47 +1,5 @@
 # Microsoft.Search @ 2020-08-01-preview
 
-## Microsoft.Search/searchServices/privateEndpointConnections
-### Properties
-* **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: 'Microsoft.Search/searchServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: schemas:9_privateEndpoint
-* **privateLinkServiceConnectionState**: schemas:9_privateLinkServiceConnectionState
-
-## schemas:9_privateEndpoint
-### Properties
-* **id**: string
-
-## schemas:9_privateLinkServiceConnectionState
-### Properties
-* **actionsRequired**: string
-* **description**: string
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
-
-## Microsoft.Search/searchServices/sharedPrivateLinkResources
-### Properties
-* **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedPrivateLinkResourceProperties
-* **type**: 'Microsoft.Search/searchServices/sharedPrivateLinkResources' (ReadOnly, DeployTimeConstant)
-
-## SharedPrivateLinkResourceProperties
-### Properties
-* **groupId**: string
-* **privateLinkResourceId**: string
-* **provisioningState**: 'Deleting' | 'Failed' | 'Incomplete' | 'Succeeded' | 'Updating'
-* **requestMessage**: string
-* **resourceRegion**: string
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
-
 ## Microsoft.Search/searchServices
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
@@ -89,12 +47,36 @@
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: string (ReadOnly)
 
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: schemas:9_privateEndpoint
+* **privateLinkServiceConnectionState**: schemas:9_privateLinkServiceConnectionState
+
+## schemas:9_privateEndpoint
+### Properties
+* **id**: string
+
+## schemas:9_privateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: string
+* **description**: string
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
+
 ## SharedPrivateLinkResource
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
 * **properties**: SharedPrivateLinkResourceProperties
 * **type**: string (ReadOnly)
+
+## SharedPrivateLinkResourceProperties
+### Properties
+* **groupId**: string
+* **privateLinkResourceId**: string
+* **provisioningState**: 'Deleting' | 'Failed' | 'Incomplete' | 'Succeeded' | 'Updating'
+* **requestMessage**: string
+* **resourceRegion**: string
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
 
 ## Sku
 ### Properties
@@ -103,4 +85,22 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Search/searchServices/privateEndpointConnections
+### Properties
+* **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: 'Microsoft.Search/searchServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Search/searchServices/sharedPrivateLinkResources
+### Properties
+* **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SharedPrivateLinkResourceProperties
+* **type**: 'Microsoft.Search/searchServices/sharedPrivateLinkResources' (ReadOnly, DeployTimeConstant)
 

@@ -1,20 +1,5 @@
 # Microsoft.DataLakeStore @ 2015-10-01-preview
 
-## Microsoft.DataLakeStore/accounts/firewallRules
-### Properties
-* **apiVersion**: '2015-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: FirewallRuleProperties
-* **type**: 'Microsoft.DataLakeStore/accounts/firewallRules' (ReadOnly, DeployTimeConstant)
-
-## FirewallRuleProperties
-### Properties
-* **endIpAddress**: string
-* **startIpAddress**: string
-
 ## Microsoft.DataLakeStore/accounts
 ### Properties
 * **apiVersion**: '2015-10-01-preview' (ReadOnly, DeployTimeConstant)
@@ -59,4 +44,19 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.DataLakeStore/accounts/firewallRules
+### Properties
+* **apiVersion**: '2015-10-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: FirewallRuleProperties
+* **type**: 'Microsoft.DataLakeStore/accounts/firewallRules' (ReadOnly, DeployTimeConstant)
+
+## FirewallRuleProperties
+### Properties
+* **endIpAddress**: string
+* **startIpAddress**: string
 

@@ -19,7 +19,7 @@
 * **lastRecoveryPoint**: string
 * **policyId**: string
 * **sourceResourceId**: string
-* **workloadType**: 'AzureSqlDb' | 'DPMUnknown' | 'Exchange' | 'FileFolder' | 'Invalid' | 'SQLDB' | 'Sharepoint' | 'VM'
+* **workloadType**: 'AzureSqlDb' | 'DPMUnknown' | 'Exchange' | 'FileFolder' | 'Invalid' | 'Sharepoint' | 'SQLDB' | 'VM'
 ### AzureIaaSVMProtectedItem
 #### Properties
 * **extendedInfo**: AzureIaaSVMProtectedItemExtendedInfo
@@ -27,7 +27,7 @@
 * **lastBackupStatus**: string
 * **lastBackupTime**: string
 * **protectedItemType**: 'AzureIaaSVMProtectedItem' (Required)
-* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
 * **protectionStatus**: string
 * **virtualMachineId**: string
 
@@ -46,7 +46,7 @@
 * **extendedInfo**: AzureSqlProtectedItemExtendedInfo
 * **protectedItemDataId**: string
 * **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required)
-* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
 
 
 ## AzureIaaSVMProtectedItem
@@ -56,7 +56,7 @@
 * **lastBackupStatus**: string
 * **lastBackupTime**: string
 * **protectedItemType**: 'AzureIaaSVMProtectedItem' (Required)
-* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
 * **protectionStatus**: string
 * **virtualMachineId**: string
 
@@ -87,7 +87,7 @@
 * **extendedInfo**: AzureSqlProtectedItemExtendedInfo
 * **protectedItemDataId**: string
 * **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required)
-* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
 
 ## AzureSqlProtectedItemExtendedInfo
 ### Properties

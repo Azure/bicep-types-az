@@ -79,6 +79,64 @@
 * **managedResources**: string[] (ReadOnly)
 * **timeCreated**: string (ReadOnly)
 
+## Microsoft.Blueprint/blueprints
+### Properties
+* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BlueprintProperties (Required)
+* **type**: 'Microsoft.Blueprint/blueprints' (ReadOnly, DeployTimeConstant)
+
+## BlueprintProperties
+### Properties
+* **description**: string
+* **displayName**: string
+* **layout**: any
+* **parameters**: Dictionary<string,ParameterDefinition>
+* **resourceGroups**: Dictionary<string,ResourceGroupDefinition>
+* **status**: BlueprintStatus (ReadOnly)
+* **targetScope**: 'managementGroup' | 'subscription'
+* **versions**: any
+
+## Dictionary<string,ParameterDefinition>
+### Additional Properties
+* **Additional Properties Type**: ParameterDefinition
+
+## ParameterDefinition
+### Properties
+* **allowedValues**: any[]
+* **defaultValue**: any
+* **metadata**: ParameterDefinitionMetadata
+* **type**: 'array' | 'bool' | 'int' | 'object' | 'secureObject' | 'secureString' | 'string' (Required)
+
+## ParameterDefinitionMetadata
+### Properties
+* **description**: string
+* **displayName**: string
+* **strongType**: string
+
+## Dictionary<string,ResourceGroupDefinition>
+### Additional Properties
+* **Additional Properties Type**: ResourceGroupDefinition
+
+## ResourceGroupDefinition
+### Properties
+* **dependsOn**: string[]
+* **location**: string
+* **metadata**: ParameterDefinitionMetadata
+* **name**: string
+* **tags**: Dictionary<string,String>
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## BlueprintStatus
+### Properties
+* **lastModified**: string (ReadOnly)
+* **timeCreated**: string (ReadOnly)
+
 ## Microsoft.Blueprint/blueprints/artifacts
 * **Discriminator**: kind
 ### Base Properties
@@ -172,64 +230,6 @@
 * **resourceGroups**: Dictionary<string,ResourceGroupDefinition>
 * **status**: BlueprintStatus (ReadOnly)
 * **targetScope**: 'managementGroup' | 'subscription'
-
-## Dictionary<string,ParameterDefinition>
-### Additional Properties
-* **Additional Properties Type**: ParameterDefinition
-
-## ParameterDefinition
-### Properties
-* **allowedValues**: any[]
-* **defaultValue**: any
-* **metadata**: ParameterDefinitionMetadata
-* **type**: 'array' | 'bool' | 'int' | 'object' | 'secureObject' | 'secureString' | 'string' (Required)
-
-## ParameterDefinitionMetadata
-### Properties
-* **description**: string
-* **displayName**: string
-* **strongType**: string
-
-## Dictionary<string,ResourceGroupDefinition>
-### Additional Properties
-* **Additional Properties Type**: ResourceGroupDefinition
-
-## ResourceGroupDefinition
-### Properties
-* **dependsOn**: string[]
-* **location**: string
-* **metadata**: ParameterDefinitionMetadata
-* **name**: string
-* **tags**: Dictionary<string,String>
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## BlueprintStatus
-### Properties
-* **lastModified**: string (ReadOnly)
-* **timeCreated**: string (ReadOnly)
-
-## Microsoft.Blueprint/blueprints
-### Properties
-* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BlueprintProperties (Required)
-* **type**: 'Microsoft.Blueprint/blueprints' (ReadOnly, DeployTimeConstant)
-
-## BlueprintProperties
-### Properties
-* **description**: string
-* **displayName**: string
-* **layout**: any
-* **parameters**: Dictionary<string,ParameterDefinition>
-* **resourceGroups**: Dictionary<string,ResourceGroupDefinition>
-* **status**: BlueprintStatus (ReadOnly)
-* **targetScope**: 'managementGroup' | 'subscription'
-* **versions**: any
 
 ## Dictionary<string,ParameterDefinition>
 ### Additional Properties

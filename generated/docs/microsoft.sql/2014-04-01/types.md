@@ -1,5 +1,31 @@
 # Microsoft.Sql @ 2014-04-01
 
+## Microsoft.Sql/servers
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServerProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant)
+
+## ServerProperties
+### Properties
+* **administratorLogin**: string
+* **administratorLoginPassword**: string
+* **externalAdministratorLogin**: string (ReadOnly)
+* **externalAdministratorSid**: string (ReadOnly)
+* **fullyQualifiedDomainName**: string (ReadOnly)
+* **state**: 'Disabled' | 'Ready' (ReadOnly)
+* **version**: '12.0' | '2.0'
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Sql/servers/administrators
 ### Properties
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
@@ -47,8 +73,8 @@
 
 ## ServerTableAuditingPolicyProperties
 ### Properties
-* **auditLogsTableName**: string
 * **auditingState**: string
+* **auditLogsTableName**: string
 * **eventTypesToAudit**: string
 * **fullAuditLogsTableName**: string
 * **retentionDays**: string
@@ -89,179 +115,6 @@
 ## ServerConnectionPolicyProperties
 ### Properties
 * **connectionType**: 'Default' | 'Proxy' | 'Redirect' (Required)
-
-## Microsoft.Sql/servers/databases/advisors
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AdvisorProperties
-* **type**: 'Microsoft.Sql/servers/databases/advisors' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Sql/servers/databases/auditingPolicies
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseTableAuditingPolicyProperties
-* **type**: 'Microsoft.Sql/servers/databases/auditingPolicies' (ReadOnly, DeployTimeConstant)
-
-## DatabaseTableAuditingPolicyProperties
-### Properties
-* **auditLogsTableName**: string
-* **auditingState**: string
-* **eventTypesToAudit**: string
-* **fullAuditLogsTableName**: string
-* **retentionDays**: string
-* **storageAccountKey**: string
-* **storageAccountName**: string
-* **storageAccountResourceGroupName**: string
-* **storageAccountSecondaryKey**: string
-* **storageAccountSubscriptionId**: string
-* **storageTableEndpoint**: string
-* **useServerDefault**: string
-
-## Microsoft.Sql/servers/databases/connectionPolicies
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseConnectionPolicyProperties
-* **type**: 'Microsoft.Sql/servers/databases/connectionPolicies' (ReadOnly, DeployTimeConstant)
-
-## DatabaseConnectionPolicyProperties
-### Properties
-* **proxyDnsName**: string
-* **proxyPort**: string
-* **redirectionState**: string
-* **securityEnabledAccess**: string
-* **state**: string
-* **useServerDefault**: string
-* **visibility**: string
-
-## Microsoft.Sql/servers/databases/dataMaskingPolicies/rules
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DataMaskingRuleProperties
-* **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies/rules' (ReadOnly, DeployTimeConstant)
-
-## DataMaskingRuleProperties
-### Properties
-* **aliasName**: string
-* **columnName**: string (Required)
-* **id**: string (ReadOnly)
-* **maskingFunction**: 'CCN' | 'Default' | 'Email' | 'Number' | 'SSN' | 'Text' (Required)
-* **numberFrom**: string
-* **numberTo**: string
-* **prefixSize**: string
-* **replacementString**: string
-* **ruleState**: 'Disabled' | 'Enabled'
-* **schemaName**: string (Required)
-* **suffixSize**: string
-* **tableName**: string (Required)
-
-## Microsoft.Sql/servers/databases/dataMaskingPolicies
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DataMaskingPolicyProperties
-* **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies' (ReadOnly, DeployTimeConstant)
-
-## DataMaskingPolicyProperties
-### Properties
-* **applicationPrincipals**: string (ReadOnly)
-* **dataMaskingState**: 'Disabled' | 'Enabled' (Required)
-* **exemptPrincipals**: string
-* **maskingLevel**: string (ReadOnly)
-
-## Microsoft.Sql/servers/databases/extensions
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ImportExtensionProperties
-* **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant)
-
-## ImportExtensionProperties
-### Properties
-* **administratorLogin**: string (Required)
-* **administratorLoginPassword**: string (Required)
-* **authenticationType**: 'ADPassword' | 'SQL'
-* **operationMode**: string (Required)
-* **storageKey**: string (Required)
-* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required)
-* **storageUri**: string (Required)
-
-## Microsoft.Sql/servers/databases/geoBackupPolicies
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GeoBackupPolicyProperties (Required)
-* **type**: 'Microsoft.Sql/servers/databases/geoBackupPolicies' (ReadOnly, DeployTimeConstant)
-
-## GeoBackupPolicyProperties
-### Properties
-* **state**: 'Disabled' | 'Enabled' (Required)
-* **storageType**: string (ReadOnly)
-
-## Microsoft.Sql/servers/databases/securityAlertPolicies
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseSecurityAlertPolicyProperties
-* **type**: 'Microsoft.Sql/servers/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
-
-## DatabaseSecurityAlertPolicyProperties
-### Properties
-* **disabledAlerts**: string
-* **emailAccountAdmins**: 'Disabled' | 'Enabled'
-* **emailAddresses**: string
-* **retentionDays**: int
-* **state**: 'Disabled' | 'Enabled' | 'New' (Required)
-* **storageAccountAccessKey**: string
-* **storageEndpoint**: string
-* **useServerDefault**: 'Disabled' | 'Enabled'
-
-## Microsoft.Sql/servers/databases/transparentDataEncryption
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TransparentDataEncryptionProperties
-* **type**: 'Microsoft.Sql/servers/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant)
-
-## TransparentDataEncryptionProperties
-### Properties
-* **status**: 'Disabled' | 'Enabled'
 
 ## Microsoft.Sql/servers/databases
 ### Properties
@@ -376,9 +229,182 @@
 * **properties**: TransparentDataEncryptionProperties
 * **type**: string (ReadOnly)
 
+## TransparentDataEncryptionProperties
+### Properties
+* **status**: 'Disabled' | 'Enabled'
+
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Sql/servers/databases/advisors
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AdvisorProperties
+* **type**: 'Microsoft.Sql/servers/databases/advisors' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Sql/servers/databases/auditingPolicies
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseTableAuditingPolicyProperties
+* **type**: 'Microsoft.Sql/servers/databases/auditingPolicies' (ReadOnly, DeployTimeConstant)
+
+## DatabaseTableAuditingPolicyProperties
+### Properties
+* **auditingState**: string
+* **auditLogsTableName**: string
+* **eventTypesToAudit**: string
+* **fullAuditLogsTableName**: string
+* **retentionDays**: string
+* **storageAccountKey**: string
+* **storageAccountName**: string
+* **storageAccountResourceGroupName**: string
+* **storageAccountSecondaryKey**: string
+* **storageAccountSubscriptionId**: string
+* **storageTableEndpoint**: string
+* **useServerDefault**: string
+
+## Microsoft.Sql/servers/databases/connectionPolicies
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseConnectionPolicyProperties
+* **type**: 'Microsoft.Sql/servers/databases/connectionPolicies' (ReadOnly, DeployTimeConstant)
+
+## DatabaseConnectionPolicyProperties
+### Properties
+* **proxyDnsName**: string
+* **proxyPort**: string
+* **redirectionState**: string
+* **securityEnabledAccess**: string
+* **state**: string
+* **useServerDefault**: string
+* **visibility**: string
+
+## Microsoft.Sql/servers/databases/dataMaskingPolicies
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DataMaskingPolicyProperties
+* **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies' (ReadOnly, DeployTimeConstant)
+
+## DataMaskingPolicyProperties
+### Properties
+* **applicationPrincipals**: string (ReadOnly)
+* **dataMaskingState**: 'Disabled' | 'Enabled' (Required)
+* **exemptPrincipals**: string
+* **maskingLevel**: string (ReadOnly)
+
+## Microsoft.Sql/servers/databases/dataMaskingPolicies/rules
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DataMaskingRuleProperties
+* **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies/rules' (ReadOnly, DeployTimeConstant)
+
+## DataMaskingRuleProperties
+### Properties
+* **aliasName**: string
+* **columnName**: string (Required)
+* **id**: string (ReadOnly)
+* **maskingFunction**: 'CCN' | 'Default' | 'Email' | 'Number' | 'SSN' | 'Text' (Required)
+* **numberFrom**: string
+* **numberTo**: string
+* **prefixSize**: string
+* **replacementString**: string
+* **ruleState**: 'Disabled' | 'Enabled'
+* **schemaName**: string (Required)
+* **suffixSize**: string
+* **tableName**: string (Required)
+
+## Microsoft.Sql/servers/databases/extensions
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ImportExtensionProperties
+* **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant)
+
+## ImportExtensionProperties
+### Properties
+* **administratorLogin**: string (Required)
+* **administratorLoginPassword**: string (Required)
+* **authenticationType**: 'ADPassword' | 'SQL'
+* **operationMode**: string (Required)
+* **storageKey**: string (Required)
+* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required)
+* **storageUri**: string (Required)
+
+## Microsoft.Sql/servers/databases/geoBackupPolicies
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GeoBackupPolicyProperties (Required)
+* **type**: 'Microsoft.Sql/servers/databases/geoBackupPolicies' (ReadOnly, DeployTimeConstant)
+
+## GeoBackupPolicyProperties
+### Properties
+* **state**: 'Disabled' | 'Enabled' (Required)
+* **storageType**: string (ReadOnly)
+
+## Microsoft.Sql/servers/databases/securityAlertPolicies
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseSecurityAlertPolicyProperties
+* **type**: 'Microsoft.Sql/servers/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
+
+## DatabaseSecurityAlertPolicyProperties
+### Properties
+* **disabledAlerts**: string
+* **emailAccountAdmins**: 'Disabled' | 'Enabled'
+* **emailAddresses**: string
+* **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' | 'New' (Required)
+* **storageAccountAccessKey**: string
+* **storageEndpoint**: string
+* **useServerDefault**: 'Disabled' | 'Enabled'
+
+## Microsoft.Sql/servers/databases/transparentDataEncryption
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TransparentDataEncryptionProperties
+* **type**: 'Microsoft.Sql/servers/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.Sql/servers/elasticPools
 ### Properties
@@ -422,30 +448,4 @@
 ### Properties
 * **endIpAddress**: string (Required)
 * **startIpAddress**: string (Required)
-
-## Microsoft.Sql/servers
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant)
-
-## ServerProperties
-### Properties
-* **administratorLogin**: string
-* **administratorLoginPassword**: string
-* **externalAdministratorLogin**: string (ReadOnly)
-* **externalAdministratorSid**: string (ReadOnly)
-* **fullyQualifiedDomainName**: string (ReadOnly)
-* **state**: 'Disabled' | 'Ready' (ReadOnly)
-* **version**: '12.0' | '2.0'
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

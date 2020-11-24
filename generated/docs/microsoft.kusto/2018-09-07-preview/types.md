@@ -1,50 +1,5 @@
 # Microsoft.Kusto @ 2018-09-07-preview
 
-## Microsoft.Kusto/clusters/databases/eventhubconnections
-### Properties
-* **apiVersion**: '2018-09-07-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EventHubConnectionProperties
-* **type**: 'Microsoft.Kusto/clusters/databases/eventhubconnections' (ReadOnly, DeployTimeConstant)
-
-## EventHubConnectionProperties
-### Properties
-* **consumerGroup**: string (Required)
-* **dataFormat**: 'CSV' | 'JSON' | 'MULTIJSON'
-* **eventHubResourceId**: string (Required)
-* **mappingRuleName**: string
-* **tableName**: string
-
-## Microsoft.Kusto/clusters/databases
-### Properties
-* **apiVersion**: '2018-09-07-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant)
-
-## DatabaseProperties
-### Properties
-* **hotCachePeriodInDays**: int
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly)
-* **softDeletePeriodInDays**: int (Required)
-* **statistics**: DatabaseStatistics
-
-## DatabaseStatistics
-### Properties
-* **size**: int
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Microsoft.Kusto/clusters
 ### Properties
 * **apiVersion**: '2018-09-07-preview' (ReadOnly, DeployTimeConstant)
@@ -79,4 +34,49 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Kusto/clusters/databases
+### Properties
+* **apiVersion**: '2018-09-07-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant)
+
+## DatabaseProperties
+### Properties
+* **hotCachePeriodInDays**: int
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly)
+* **softDeletePeriodInDays**: int (Required)
+* **statistics**: DatabaseStatistics
+
+## DatabaseStatistics
+### Properties
+* **size**: int
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Kusto/clusters/databases/eventhubconnections
+### Properties
+* **apiVersion**: '2018-09-07-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EventHubConnectionProperties
+* **type**: 'Microsoft.Kusto/clusters/databases/eventhubconnections' (ReadOnly, DeployTimeConstant)
+
+## EventHubConnectionProperties
+### Properties
+* **consumerGroup**: string (Required)
+* **dataFormat**: 'CSV' | 'JSON' | 'MULTIJSON'
+* **eventHubResourceId**: string (Required)
+* **mappingRuleName**: string
+* **tableName**: string
 

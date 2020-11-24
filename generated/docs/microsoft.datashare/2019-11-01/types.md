@@ -1,13 +1,71 @@
 # Microsoft.DataShare @ 2019-11-01
 
-## Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings
+## Microsoft.DataShare/accounts
+### Properties
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity (Required)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AccountProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DataShare/accounts' (ReadOnly, DeployTimeConstant)
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'SystemAssigned'
+
+## AccountProperties
+### Properties
+* **createdAt**: string (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
+* **userEmail**: string (ReadOnly)
+* **userName**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.DataShare/accounts/shares
+### Properties
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ShareProperties
+* **type**: 'Microsoft.DataShare/accounts/shares' (ReadOnly, DeployTimeConstant)
+
+## ShareProperties
+### Properties
+* **createdAt**: string (ReadOnly)
+* **description**: string
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
+* **shareKind**: 'CopyBased' | 'InPlace'
+* **terms**: string
+* **userEmail**: string (ReadOnly)
+* **userName**: string (ReadOnly)
+
+## Microsoft.DataShare/accounts/shares/dataSets
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.DataShare/accounts/shares/dataSets' (ReadOnly, DeployTimeConstant)
+### AdlsGen1File
+#### Properties
+* **kind**: 'AdlsGen1File' (Required)
+* **properties**: ADLSGen1FileProperties (Required)
+
+### AdlsGen1Folder
+#### Properties
+* **kind**: 'AdlsGen1Folder' (Required)
+* **properties**: ADLSGen1FolderProperties (Required)
+
 ### AdlsGen2File
 #### Properties
 * **kind**: 'AdlsGen2File' (Required)
@@ -58,6 +116,33 @@
 * **kind**: 'SqlDWTable' (Required)
 * **properties**: SqlDWTableProperties
 
+
+## AdlsGen1File
+### Properties
+* **kind**: 'AdlsGen1File' (Required)
+* **properties**: ADLSGen1FileProperties (Required)
+
+## ADLSGen1FileProperties
+### Properties
+* **accountName**: string (Required)
+* **dataSetId**: string (ReadOnly)
+* **fileName**: string (Required)
+* **folderPath**: string (Required)
+* **resourceGroup**: string (Required)
+* **subscriptionId**: string (Required)
+
+## AdlsGen1Folder
+### Properties
+* **kind**: 'AdlsGen1Folder' (Required)
+* **properties**: ADLSGen1FolderProperties (Required)
+
+## ADLSGen1FolderProperties
+### Properties
+* **accountName**: string (Required)
+* **dataSetId**: string (ReadOnly)
+* **folderPath**: string (Required)
+* **resourceGroup**: string (Required)
+* **subscriptionId**: string (Required)
 
 ## AdlsGen2File
 ### Properties
@@ -172,8 +257,8 @@
 
 ## SqlDBTableProperties
 ### Properties
-* **dataSetId**: string (ReadOnly)
 * **databaseName**: string (Required)
+* **dataSetId**: string (ReadOnly)
 * **schemaName**: string (Required)
 * **sqlServerResourceId**: string (Required)
 * **tableName**: string (Required)
@@ -191,14 +276,35 @@
 * **sqlServerResourceId**: string (Required)
 * **tableName**: string (Required)
 
-## Microsoft.DataShare/accounts/shareSubscriptions/triggers
+## Microsoft.DataShare/accounts/shares/invitations
+### Properties
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: InvitationProperties
+* **type**: 'Microsoft.DataShare/accounts/shares/invitations' (ReadOnly, DeployTimeConstant)
+
+## InvitationProperties
+### Properties
+* **invitationId**: string (ReadOnly)
+* **invitationStatus**: 'Accepted' | 'Pending' | 'Rejected' | 'Withdrawn' (ReadOnly)
+* **respondedAt**: string (ReadOnly)
+* **sentAt**: string (ReadOnly)
+* **targetActiveDirectoryId**: string
+* **targetEmail**: string
+* **targetObjectId**: string
+* **userEmail**: string (ReadOnly)
+* **userName**: string (ReadOnly)
+
+## Microsoft.DataShare/accounts/shares/synchronizationSettings
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.DataShare/accounts/shareSubscriptions/triggers' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.DataShare/accounts/shares/synchronizationSettings' (ReadOnly, DeployTimeConstant)
 ### ScheduleBased
 #### Properties
 * **kind**: 'ScheduleBased' (Required)
@@ -244,24 +350,14 @@
 * **userEmail**: string (ReadOnly)
 * **userName**: string (ReadOnly)
 
-## Microsoft.DataShare/accounts/shares/dataSets
+## Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.DataShare/accounts/shares/dataSets' (ReadOnly, DeployTimeConstant)
-### AdlsGen1File
-#### Properties
-* **kind**: 'AdlsGen1File' (Required)
-* **properties**: ADLSGen1FileProperties (Required)
-
-### AdlsGen1Folder
-#### Properties
-* **kind**: 'AdlsGen1Folder' (Required)
-* **properties**: ADLSGen1FolderProperties (Required)
-
+* **type**: 'Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings' (ReadOnly, DeployTimeConstant)
 ### AdlsGen2File
 #### Properties
 * **kind**: 'AdlsGen2File' (Required)
@@ -313,113 +409,17 @@
 * **properties**: SqlDWTableProperties
 
 
-## AdlsGen1File
-### Properties
-* **kind**: 'AdlsGen1File' (Required)
-* **properties**: ADLSGen1FileProperties (Required)
-
-## ADLSGen1FileProperties
-### Properties
-* **accountName**: string (Required)
-* **dataSetId**: string (ReadOnly)
-* **fileName**: string (Required)
-* **folderPath**: string (Required)
-* **resourceGroup**: string (Required)
-* **subscriptionId**: string (Required)
-
-## AdlsGen1Folder
-### Properties
-* **kind**: 'AdlsGen1Folder' (Required)
-* **properties**: ADLSGen1FolderProperties (Required)
-
-## ADLSGen1FolderProperties
-### Properties
-* **accountName**: string (Required)
-* **dataSetId**: string (ReadOnly)
-* **folderPath**: string (Required)
-* **resourceGroup**: string (Required)
-* **subscriptionId**: string (Required)
-
-## Microsoft.DataShare/accounts/shares/invitations
-### Properties
-* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: InvitationProperties
-* **type**: 'Microsoft.DataShare/accounts/shares/invitations' (ReadOnly, DeployTimeConstant)
-
-## InvitationProperties
-### Properties
-* **invitationId**: string (ReadOnly)
-* **invitationStatus**: 'Accepted' | 'Pending' | 'Rejected' | 'Withdrawn' (ReadOnly)
-* **respondedAt**: string (ReadOnly)
-* **sentAt**: string (ReadOnly)
-* **targetActiveDirectoryId**: string
-* **targetEmail**: string
-* **targetObjectId**: string
-* **userEmail**: string (ReadOnly)
-* **userName**: string (ReadOnly)
-
-## Microsoft.DataShare/accounts/shares/synchronizationSettings
+## Microsoft.DataShare/accounts/shareSubscriptions/triggers
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.DataShare/accounts/shares/synchronizationSettings' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.DataShare/accounts/shareSubscriptions/triggers' (ReadOnly, DeployTimeConstant)
 ### ScheduleBased
 #### Properties
 * **kind**: 'ScheduleBased' (Required)
 * **properties**: ScheduledSynchronizationSettingProperties (Required)
 
-
-## Microsoft.DataShare/accounts/shares
-### Properties
-* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ShareProperties
-* **type**: 'Microsoft.DataShare/accounts/shares' (ReadOnly, DeployTimeConstant)
-
-## ShareProperties
-### Properties
-* **createdAt**: string (ReadOnly)
-* **description**: string
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
-* **shareKind**: 'CopyBased' | 'InPlace'
-* **terms**: string
-* **userEmail**: string (ReadOnly)
-* **userName**: string (ReadOnly)
-
-## Microsoft.DataShare/accounts
-### Properties
-* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity (Required)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AccountProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DataShare/accounts' (ReadOnly, DeployTimeConstant)
-
-## Identity
-### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'SystemAssigned'
-
-## AccountProperties
-### Properties
-* **createdAt**: string (ReadOnly)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
-* **userEmail**: string (ReadOnly)
-* **userName**: string (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

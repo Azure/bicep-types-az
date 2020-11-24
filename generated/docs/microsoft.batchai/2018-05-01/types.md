@@ -1,5 +1,26 @@
 # Microsoft.BatchAI @ 2018-05-01
 
+## Microsoft.BatchAI/workspaces
+### Properties
+* **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkspaceProperties (ReadOnly)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.BatchAI/workspaces' (ReadOnly, DeployTimeConstant)
+
+## WorkspaceProperties
+### Properties
+* **creationTime**: string (ReadOnly)
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly)
+* **provisioningStateTransitionTime**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.BatchAI/workspaces/clusters
 ### Properties
 * **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
@@ -350,25 +371,4 @@
 ### Properties
 * **publicIPsToAllow**: string[]
 * **userAccountSettings**: UserAccountSettings (Required)
-
-## Microsoft.BatchAI/workspaces
-### Properties
-* **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceProperties (ReadOnly)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.BatchAI/workspaces' (ReadOnly, DeployTimeConstant)
-
-## WorkspaceProperties
-### Properties
-* **creationTime**: string (ReadOnly)
-* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly)
-* **provisioningStateTransitionTime**: string (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

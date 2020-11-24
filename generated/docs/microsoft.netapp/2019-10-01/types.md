@@ -1,22 +1,53 @@
 # Microsoft.NetApp @ 2019-10-01
 
-## Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots
+## Microsoft.NetApp/netAppAccounts
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: snapshotProperties
+* **properties**: accountProperties
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
 
-## snapshotProperties
+## accountProperties
 ### Properties
-* **created**: string (ReadOnly)
-* **fileSystemId**: string
+* **activeDirectories**: activeDirectory[]
 * **provisioningState**: string (ReadOnly)
-* **snapshotId**: string (ReadOnly)
+
+## activeDirectory
+### Properties
+* **activeDirectoryId**: string
+* **dns**: string
+* **domain**: string
+* **organizationalUnit**: string
+* **password**: string
+* **smbServerName**: string
+* **status**: string
+* **username**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.NetApp/netAppAccounts/capacityPools
+### Properties
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: poolProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
+
+## poolProperties
+### Properties
+* **poolId**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' (Required)
+* **size**: int (Required)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -93,54 +124,23 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.NetApp/netAppAccounts/capacityPools
+## Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: poolProperties (Required)
+* **properties**: snapshotProperties
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
 
-## poolProperties
+## snapshotProperties
 ### Properties
-* **poolId**: string (ReadOnly)
+* **created**: string (ReadOnly)
+* **fileSystemId**: string
 * **provisioningState**: string (ReadOnly)
-* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' (Required)
-* **size**: int (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.NetApp/netAppAccounts
-### Properties
-* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: accountProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
-
-## accountProperties
-### Properties
-* **activeDirectories**: activeDirectory[]
-* **provisioningState**: string (ReadOnly)
-
-## activeDirectory
-### Properties
-* **activeDirectoryId**: string
-* **dns**: string
-* **domain**: string
-* **organizationalUnit**: string
-* **password**: string
-* **smbServerName**: string
-* **status**: string
-* **username**: string
+* **snapshotId**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Additional Properties

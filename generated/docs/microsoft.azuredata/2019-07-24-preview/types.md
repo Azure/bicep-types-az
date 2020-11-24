@@ -86,23 +86,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.AzureData/sqlServerRegistrations/sqlServers
-### Properties
-* **apiVersion**: '2019-07-24-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlServerProperties
-* **type**: 'Microsoft.AzureData/sqlServerRegistrations/sqlServers' (ReadOnly, DeployTimeConstant)
-
-## SqlServerProperties
-### Properties
-* **cores**: int
-* **edition**: string
-* **propertyBag**: string
-* **registrationID**: string
-* **version**: string
-
 ## Microsoft.AzureData/sqlServerRegistrations
 ### Properties
 * **apiVersion**: '2019-07-24-preview' (ReadOnly, DeployTimeConstant)
@@ -124,4 +107,21 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.AzureData/sqlServerRegistrations/sqlServers
+### Properties
+* **apiVersion**: '2019-07-24-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SqlServerProperties
+* **type**: 'Microsoft.AzureData/sqlServerRegistrations/sqlServers' (ReadOnly, DeployTimeConstant)
+
+## SqlServerProperties
+### Properties
+* **cores**: int
+* **edition**: string
+* **propertyBag**: string
+* **registrationID**: string
+* **version**: string
 

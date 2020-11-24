@@ -1,5 +1,77 @@
 # Microsoft.DataFactory @ 2018-06-01
 
+## Microsoft.DataFactory/factories
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **eTag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: FactoryIdentity
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: FactoryProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DataFactory/factories' (ReadOnly, DeployTimeConstant)
+
+## FactoryIdentity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: string (Required)
+
+## FactoryProperties
+### Properties
+* **createTime**: string (ReadOnly)
+* **globalParameters**: Dictionary<string,GlobalParameterSpecification>
+* **provisioningState**: string (ReadOnly)
+* **publicNetworkAccess**: 'Disabled' | 'Enabled'
+* **repoConfiguration**: FactoryRepoConfiguration
+* **version**: string (ReadOnly)
+
+## Dictionary<string,GlobalParameterSpecification>
+### Additional Properties
+* **Additional Properties Type**: GlobalParameterSpecification
+
+## GlobalParameterSpecification
+### Properties
+* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'String' (Required)
+* **value**: any (Required)
+
+## FactoryRepoConfiguration
+* **Discriminator**: type
+### Base Properties
+* **accountName**: string (Required)
+* **collaborationBranch**: string (Required)
+* **lastCommitId**: string
+* **repositoryName**: string (Required)
+* **rootFolder**: string (Required)
+### FactoryGitHubConfiguration
+#### Properties
+* **hostName**: string
+* **type**: 'FactoryGitHubConfiguration' (Required)
+
+### FactoryVSTSConfiguration
+#### Properties
+* **projectName**: string (Required)
+* **tenantId**: string
+* **type**: 'FactoryVSTSConfiguration' (Required)
+
+
+## FactoryGitHubConfiguration
+### Properties
+* **hostName**: string
+* **type**: 'FactoryGitHubConfiguration' (Required)
+
+## FactoryVSTSConfiguration
+### Properties
+* **projectName**: string (Required)
+* **tenantId**: string
+* **type**: 'FactoryVSTSConfiguration' (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.DataFactory/factories/dataflows
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
@@ -129,6 +201,11 @@
 * **type**: 'AzureBlobFSFile' (Required)
 * **typeProperties**: AzureBlobFSDatasetTypeProperties
 
+### AzureDatabricksDeltaLakeDataset
+#### Properties
+* **type**: 'AzureDatabricksDeltaLakeDataset' (Required)
+* **typeProperties**: AzureDatabricksDeltaLakeDatasetTypeProperties
+
 ### AzureDataExplorerTable
 #### Properties
 * **type**: 'AzureDataExplorerTable' (Required)
@@ -138,11 +215,6 @@
 #### Properties
 * **type**: 'AzureDataLakeStoreFile' (Required)
 * **typeProperties**: AzureDataLakeStoreDatasetTypeProperties
-
-### AzureDatabricksDeltaLakeDataset
-#### Properties
-* **type**: 'AzureDatabricksDeltaLakeDataset' (Required)
-* **typeProperties**: AzureDatabricksDeltaLakeDatasetTypeProperties
 
 ### AzureMariaDBTable
 #### Properties
@@ -893,6 +965,16 @@
 * **folderPath**: any
 * **format**: DatasetStorageFormat
 
+## AzureDatabricksDeltaLakeDataset
+### Properties
+* **type**: 'AzureDatabricksDeltaLakeDataset' (Required)
+* **typeProperties**: AzureDatabricksDeltaLakeDatasetTypeProperties
+
+## AzureDatabricksDeltaLakeDatasetTypeProperties
+### Properties
+* **database**: any
+* **table**: any
+
 ## AzureDataExplorerTable
 ### Properties
 * **type**: 'AzureDataExplorerTable' (Required)
@@ -913,16 +995,6 @@
 * **fileName**: any
 * **folderPath**: any
 * **format**: DatasetStorageFormat
-
-## AzureDatabricksDeltaLakeDataset
-### Properties
-* **type**: 'AzureDatabricksDeltaLakeDataset' (Required)
-* **typeProperties**: AzureDatabricksDeltaLakeDatasetTypeProperties
-
-## AzureDatabricksDeltaLakeDatasetTypeProperties
-### Properties
-* **database**: any
-* **table**: any
 
 ## AzureMariaDBTable
 ### Properties
@@ -1947,6 +2019,16 @@
 * **type**: 'AzureBlobStorage' (Required)
 * **typeProperties**: AzureBlobStorageLinkedServiceTypeProperties (Required)
 
+### AzureDatabricks
+#### Properties
+* **type**: 'AzureDatabricks' (Required)
+* **typeProperties**: AzureDatabricksLinkedServiceTypeProperties (Required)
+
+### AzureDatabricksDeltaLake
+#### Properties
+* **type**: 'AzureDatabricksDeltaLake' (Required)
+* **typeProperties**: AzureDatabricksDetltaLakeLinkedServiceTypeProperties (Required)
+
 ### AzureDataExplorer
 #### Properties
 * **type**: 'AzureDataExplorer' (Required)
@@ -1961,16 +2043,6 @@
 #### Properties
 * **type**: 'AzureDataLakeStore' (Required)
 * **typeProperties**: AzureDataLakeStoreLinkedServiceTypeProperties (Required)
-
-### AzureDatabricks
-#### Properties
-* **type**: 'AzureDatabricks' (Required)
-* **typeProperties**: AzureDatabricksLinkedServiceTypeProperties (Required)
-
-### AzureDatabricksDeltaLake
-#### Properties
-* **type**: 'AzureDatabricksDeltaLake' (Required)
-* **typeProperties**: AzureDatabricksDetltaLakeLinkedServiceTypeProperties (Required)
 
 ### AzureFileStorage
 #### Properties
@@ -1987,6 +2059,11 @@
 * **type**: 'AzureKeyVault' (Required)
 * **typeProperties**: AzureKeyVaultLinkedServiceTypeProperties (Required)
 
+### AzureMariaDB
+#### Properties
+* **type**: 'AzureMariaDB' (Required)
+* **typeProperties**: AzureMariaDBLinkedServiceTypeProperties (Required)
+
 ### AzureML
 #### Properties
 * **type**: 'AzureML' (Required)
@@ -1996,11 +2073,6 @@
 #### Properties
 * **type**: 'AzureMLService' (Required)
 * **typeProperties**: AzureMLServiceLinkedServiceTypeProperties (Required)
-
-### AzureMariaDB
-#### Properties
-* **type**: 'AzureMariaDB' (Required)
-* **typeProperties**: AzureMariaDBLinkedServiceTypeProperties (Required)
 
 ### AzureMySql
 #### Properties
@@ -2017,15 +2089,15 @@
 * **type**: 'AzureSearch' (Required)
 * **typeProperties**: AzureSearchLinkedServiceTypeProperties (Required)
 
-### AzureSqlDW
-#### Properties
-* **type**: 'AzureSqlDW' (Required)
-* **typeProperties**: AzureSqlDWLinkedServiceTypeProperties (Required)
-
 ### AzureSqlDatabase
 #### Properties
 * **type**: 'AzureSqlDatabase' (Required)
 * **typeProperties**: AzureSqlDatabaseLinkedServiceTypeProperties (Required)
+
+### AzureSqlDW
+#### Properties
+* **type**: 'AzureSqlDW' (Required)
+* **typeProperties**: AzureSqlDWLinkedServiceTypeProperties (Required)
 
 ### AzureSqlMI
 #### Properties
@@ -2142,6 +2214,11 @@
 * **type**: 'HBase' (Required)
 * **typeProperties**: HBaseLinkedServiceTypeProperties (Required)
 
+### Hdfs
+#### Properties
+* **type**: 'Hdfs' (Required)
+* **typeProperties**: HdfsLinkedServiceTypeProperties (Required)
+
 ### HDInsight
 #### Properties
 * **type**: 'HDInsight' (Required)
@@ -2151,11 +2228,6 @@
 #### Properties
 * **type**: 'HDInsightOnDemand' (Required)
 * **typeProperties**: HDInsightOnDemandLinkedServiceTypeProperties (Required)
-
-### Hdfs
-#### Properties
-* **type**: 'Hdfs' (Required)
-* **typeProperties**: HdfsLinkedServiceTypeProperties (Required)
 
 ### Hive
 #### Properties
@@ -2515,52 +2587,6 @@
 * **servicePrincipalKey**: SecretBase
 * **tenant**: any
 
-## AzureDataExplorer
-### Properties
-* **type**: 'AzureDataExplorer' (Required)
-* **typeProperties**: AzureDataExplorerLinkedServiceTypeProperties (Required)
-
-## AzureDataExplorerLinkedServiceTypeProperties
-### Properties
-* **database**: any (Required)
-* **endpoint**: any (Required)
-* **servicePrincipalId**: any (Required)
-* **servicePrincipalKey**: SecretBase (Required)
-* **tenant**: any (Required)
-
-## AzureDataLakeAnalytics
-### Properties
-* **type**: 'AzureDataLakeAnalytics' (Required)
-* **typeProperties**: AzureDataLakeAnalyticsLinkedServiceTypeProperties (Required)
-
-## AzureDataLakeAnalyticsLinkedServiceTypeProperties
-### Properties
-* **accountName**: any (Required)
-* **dataLakeAnalyticsUri**: any
-* **encryptedCredential**: any
-* **resourceGroupName**: any
-* **servicePrincipalId**: any
-* **servicePrincipalKey**: SecretBase
-* **subscriptionId**: any
-* **tenant**: any (Required)
-
-## AzureDataLakeStore
-### Properties
-* **type**: 'AzureDataLakeStore' (Required)
-* **typeProperties**: AzureDataLakeStoreLinkedServiceTypeProperties (Required)
-
-## AzureDataLakeStoreLinkedServiceTypeProperties
-### Properties
-* **accountName**: any
-* **azureCloudType**: any
-* **dataLakeStoreUri**: any (Required)
-* **encryptedCredential**: any
-* **resourceGroupName**: any
-* **servicePrincipalId**: any
-* **servicePrincipalKey**: SecretBase
-* **subscriptionId**: any
-* **tenant**: any
-
 ## AzureDatabricks
 ### Properties
 * **type**: 'AzureDatabricks' (Required)
@@ -2608,6 +2634,52 @@
 * **domain**: any (Required)
 * **encryptedCredential**: any
 
+## AzureDataExplorer
+### Properties
+* **type**: 'AzureDataExplorer' (Required)
+* **typeProperties**: AzureDataExplorerLinkedServiceTypeProperties (Required)
+
+## AzureDataExplorerLinkedServiceTypeProperties
+### Properties
+* **database**: any (Required)
+* **endpoint**: any (Required)
+* **servicePrincipalId**: any (Required)
+* **servicePrincipalKey**: SecretBase (Required)
+* **tenant**: any (Required)
+
+## AzureDataLakeAnalytics
+### Properties
+* **type**: 'AzureDataLakeAnalytics' (Required)
+* **typeProperties**: AzureDataLakeAnalyticsLinkedServiceTypeProperties (Required)
+
+## AzureDataLakeAnalyticsLinkedServiceTypeProperties
+### Properties
+* **accountName**: any (Required)
+* **dataLakeAnalyticsUri**: any
+* **encryptedCredential**: any
+* **resourceGroupName**: any
+* **servicePrincipalId**: any
+* **servicePrincipalKey**: SecretBase
+* **subscriptionId**: any
+* **tenant**: any (Required)
+
+## AzureDataLakeStore
+### Properties
+* **type**: 'AzureDataLakeStore' (Required)
+* **typeProperties**: AzureDataLakeStoreLinkedServiceTypeProperties (Required)
+
+## AzureDataLakeStoreLinkedServiceTypeProperties
+### Properties
+* **accountName**: any
+* **azureCloudType**: any
+* **dataLakeStoreUri**: any (Required)
+* **encryptedCredential**: any
+* **resourceGroupName**: any
+* **servicePrincipalId**: any
+* **servicePrincipalKey**: SecretBase
+* **subscriptionId**: any
+* **tenant**: any
+
 ## AzureFileStorage
 ### Properties
 * **type**: 'AzureFileStorage' (Required)
@@ -2646,6 +2718,17 @@
 ### Properties
 * **baseUrl**: any (Required)
 
+## AzureMariaDB
+### Properties
+* **type**: 'AzureMariaDB' (Required)
+* **typeProperties**: AzureMariaDBLinkedServiceTypeProperties (Required)
+
+## AzureMariaDBLinkedServiceTypeProperties
+### Properties
+* **connectionString**: any
+* **encryptedCredential**: any
+* **pwd**: AzureKeyVaultSecret
+
 ## AzureML
 ### Properties
 * **type**: 'AzureML' (Required)
@@ -2675,17 +2758,6 @@
 * **servicePrincipalKey**: SecretBase
 * **subscriptionId**: any (Required)
 * **tenant**: any
-
-## AzureMariaDB
-### Properties
-* **type**: 'AzureMariaDB' (Required)
-* **typeProperties**: AzureMariaDBLinkedServiceTypeProperties (Required)
-
-## AzureMariaDBLinkedServiceTypeProperties
-### Properties
-* **connectionString**: any
-* **encryptedCredential**: any
-* **pwd**: AzureKeyVaultSecret
 
 ## AzureMySql
 ### Properties
@@ -2720,12 +2792,12 @@
 * **key**: SecretBase
 * **url**: any (Required)
 
-## AzureSqlDW
+## AzureSqlDatabase
 ### Properties
-* **type**: 'AzureSqlDW' (Required)
-* **typeProperties**: AzureSqlDWLinkedServiceTypeProperties (Required)
+* **type**: 'AzureSqlDatabase' (Required)
+* **typeProperties**: AzureSqlDatabaseLinkedServiceTypeProperties (Required)
 
-## AzureSqlDWLinkedServiceTypeProperties
+## AzureSqlDatabaseLinkedServiceTypeProperties
 ### Properties
 * **azureCloudType**: any
 * **connectionString**: any (Required)
@@ -2735,12 +2807,12 @@
 * **servicePrincipalKey**: SecretBase
 * **tenant**: any
 
-## AzureSqlDatabase
+## AzureSqlDW
 ### Properties
-* **type**: 'AzureSqlDatabase' (Required)
-* **typeProperties**: AzureSqlDatabaseLinkedServiceTypeProperties (Required)
+* **type**: 'AzureSqlDW' (Required)
+* **typeProperties**: AzureSqlDWLinkedServiceTypeProperties (Required)
 
-## AzureSqlDatabaseLinkedServiceTypeProperties
+## AzureSqlDWLinkedServiceTypeProperties
 ### Properties
 * **azureCloudType**: any
 * **connectionString**: any (Required)
@@ -2805,7 +2877,7 @@
 ## CommonDataServiceForAppsLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'AADServicePrincipal' | 'Ifd' | 'Office365' (Required)
-* **deploymentType**: 'OnPremisesWithIfd' | 'Online' (Required)
+* **deploymentType**: 'Online' | 'OnPremisesWithIfd' (Required)
 * **encryptedCredential**: any
 * **hostName**: any
 * **organizationName**: any
@@ -2942,7 +3014,7 @@
 ## DynamicsCrmLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'AADServicePrincipal' | 'Ifd' | 'Office365' (Required)
-* **deploymentType**: 'OnPremisesWithIfd' | 'Online' (Required)
+* **deploymentType**: 'Online' | 'OnPremisesWithIfd' (Required)
 * **encryptedCredential**: any
 * **hostName**: any
 * **organizationName**: any
@@ -3078,6 +3150,19 @@
 * **trustedCertPath**: any
 * **username**: any
 
+## Hdfs
+### Properties
+* **type**: 'Hdfs' (Required)
+* **typeProperties**: HdfsLinkedServiceTypeProperties (Required)
+
+## HdfsLinkedServiceTypeProperties
+### Properties
+* **authenticationType**: any
+* **encryptedCredential**: any
+* **password**: SecretBase
+* **url**: any (Required)
+* **userName**: any
+
 ## HDInsight
 ### Properties
 * **type**: 'HDInsight' (Required)
@@ -3142,19 +3227,6 @@
 * **roles**: any (Required)
 * **uri**: string (Required)
 
-## Hdfs
-### Properties
-* **type**: 'Hdfs' (Required)
-* **typeProperties**: HdfsLinkedServiceTypeProperties (Required)
-
-## HdfsLinkedServiceTypeProperties
-### Properties
-* **authenticationType**: any
-* **encryptedCredential**: any
-* **password**: SecretBase
-* **url**: any (Required)
-* **userName**: any
-
 ## Hive
 ### Properties
 * **type**: 'Hive' (Required)
@@ -3176,8 +3248,8 @@
 * **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL'
 * **trustedCertPath**: any
 * **useNativeQuery**: any
-* **useSystemTrustStore**: any
 * **username**: any
+* **useSystemTrustStore**: any
 * **zooKeeperNameSpace**: any
 
 ## HttpServer
@@ -3228,8 +3300,8 @@
 * **password**: SecretBase
 * **port**: any
 * **trustedCertPath**: any
-* **useSystemTrustStore**: any
 * **username**: any
+* **useSystemTrustStore**: any
 
 ## Informix
 ### Properties
@@ -3323,8 +3395,8 @@
 ## MongoDbLinkedServiceTypeProperties
 ### Properties
 * **allowSelfSignedServerCert**: any
-* **authSource**: any
 * **authenticationType**: 'Anonymous' | 'Basic'
+* **authSource**: any
 * **databaseName**: any (Required)
 * **enableSsl**: any
 * **encryptedCredential**: any
@@ -3481,8 +3553,8 @@
 * **password**: SecretBase
 * **port**: any
 * **trustedCertPath**: any
-* **useSystemTrustStore**: any
 * **username**: any
+* **useSystemTrustStore**: any
 
 ## PostgreSql
 ### Properties
@@ -3514,8 +3586,8 @@
 * **serverVersion**: any (Required)
 * **timeZoneID**: any
 * **trustedCertPath**: any
-* **useSystemTrustStore**: any
 * **username**: any
+* **useSystemTrustStore**: any
 
 ## QuickBooks
 ### Properties
@@ -3801,8 +3873,8 @@
 * **serverType**: 'SharkServer' | 'SharkServer2' | 'SparkThriftServer'
 * **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL'
 * **trustedCertPath**: any
-* **useSystemTrustStore**: any
 * **username**: any
+* **useSystemTrustStore**: any
 
 ## SqlServer
 ### Properties
@@ -3946,6 +4018,23 @@
 * **useHostVerification**: any
 * **usePeerVerification**: any
 
+## Microsoft.DataFactory/factories/managedVirtualNetworks
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ManagedVirtualNetwork (Required)
+* **type**: 'Microsoft.DataFactory/factories/managedVirtualNetworks' (ReadOnly, DeployTimeConstant)
+
+## ManagedVirtualNetwork
+### Properties
+* **alias**: string (ReadOnly)
+* **vNetId**: string (ReadOnly)
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
@@ -3972,23 +4061,6 @@
 * **actionsRequired**: string (ReadOnly)
 * **description**: string (ReadOnly)
 * **status**: string (ReadOnly)
-
-## Microsoft.DataFactory/factories/managedVirtualNetworks
-### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedVirtualNetwork (Required)
-* **type**: 'Microsoft.DataFactory/factories/managedVirtualNetworks' (ReadOnly, DeployTimeConstant)
-
-## ManagedVirtualNetwork
-### Properties
-* **alias**: string (ReadOnly)
-* **vNetId**: string (ReadOnly)
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## Microsoft.DataFactory/factories/pipelines
 ### Properties
@@ -4102,7 +4174,7 @@
 #### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'ChainingTrigger' (Required)
-* **typeProperties**: schemas:873_typeProperties (Required)
+* **typeProperties**: schemas:878_typeProperties (Required)
 
 ### MultiplePipelineTrigger
 #### Properties
@@ -4112,20 +4184,20 @@
 ### RerunTumblingWindowTrigger
 #### Properties
 * **type**: 'RerunTumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:872_typeProperties (Required)
+* **typeProperties**: schemas:877_typeProperties (Required)
 
 ### TumblingWindowTrigger
 #### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'TumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:864_typeProperties (Required)
+* **typeProperties**: schemas:869_typeProperties (Required)
 
 
 ## ChainingTrigger
 ### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'ChainingTrigger' (Required)
-* **typeProperties**: schemas:873_typeProperties (Required)
+* **typeProperties**: schemas:878_typeProperties (Required)
 
 ## TriggerPipelineReference
 ### Properties
@@ -4142,7 +4214,7 @@
 * **referenceName**: string (Required)
 * **type**: string (Required)
 
-## schemas:873_typeProperties
+## schemas:878_typeProperties
 ### Properties
 * **dependsOn**: PipelineReference[] (Required)
 * **runDimension**: string (Required)
@@ -4155,9 +4227,9 @@
 ## RerunTumblingWindowTrigger
 ### Properties
 * **type**: 'RerunTumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:872_typeProperties (Required)
+* **typeProperties**: schemas:877_typeProperties (Required)
 
-## schemas:872_typeProperties
+## schemas:877_typeProperties
 ### Properties
 * **parentTrigger**: any (Required)
 * **requestedEndTime**: string (Required)
@@ -4168,9 +4240,9 @@
 ### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'TumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:864_typeProperties (Required)
+* **typeProperties**: schemas:869_typeProperties (Required)
 
-## schemas:864_typeProperties
+## schemas:869_typeProperties
 ### Properties
 * **delay**: any
 * **dependsOn**: DependencyReference[]
@@ -4216,76 +4288,4 @@
 ### Properties
 * **count**: any
 * **intervalInSeconds**: int
-
-## Microsoft.DataFactory/factories
-### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: FactoryIdentity
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: FactoryProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DataFactory/factories' (ReadOnly, DeployTimeConstant)
-
-## FactoryIdentity
-### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: string (Required)
-
-## FactoryProperties
-### Properties
-* **createTime**: string (ReadOnly)
-* **globalParameters**: Dictionary<string,GlobalParameterSpecification>
-* **provisioningState**: string (ReadOnly)
-* **publicNetworkAccess**: 'Disabled' | 'Enabled'
-* **repoConfiguration**: FactoryRepoConfiguration
-* **version**: string (ReadOnly)
-
-## Dictionary<string,GlobalParameterSpecification>
-### Additional Properties
-* **Additional Properties Type**: GlobalParameterSpecification
-
-## GlobalParameterSpecification
-### Properties
-* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'String' (Required)
-* **value**: any (Required)
-
-## FactoryRepoConfiguration
-* **Discriminator**: type
-### Base Properties
-* **accountName**: string (Required)
-* **collaborationBranch**: string (Required)
-* **lastCommitId**: string
-* **repositoryName**: string (Required)
-* **rootFolder**: string (Required)
-### FactoryGitHubConfiguration
-#### Properties
-* **hostName**: string
-* **type**: 'FactoryGitHubConfiguration' (Required)
-
-### FactoryVSTSConfiguration
-#### Properties
-* **projectName**: string (Required)
-* **tenantId**: string
-* **type**: 'FactoryVSTSConfiguration' (Required)
-
-
-## FactoryGitHubConfiguration
-### Properties
-* **hostName**: string
-* **type**: 'FactoryGitHubConfiguration' (Required)
-
-## FactoryVSTSConfiguration
-### Properties
-* **projectName**: string (Required)
-* **tenantId**: string
-* **type**: 'FactoryVSTSConfiguration' (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

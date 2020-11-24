@@ -1,5 +1,60 @@
 # Microsoft.Kusto @ 2019-01-21
 
+## Microsoft.Kusto/clusters
+### Properties
+* **apiVersion**: '2019-01-21' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ClusterProperties
+* **sku**: AzureSku (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant)
+
+## ClusterProperties
+### Properties
+* **dataIngestionUri**: string (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly)
+* **state**: 'Creating' | 'Deleted' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unavailable' | 'Updating' (ReadOnly)
+* **trustedExternalTenants**: TrustedExternalTenant[]
+* **uri**: string (ReadOnly)
+
+## TrustedExternalTenant
+### Properties
+* **value**: string
+
+## AzureSku
+### Properties
+* **capacity**: int
+* **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_L16s' | 'Standard_L4s' | 'Standard_L8s' (Required)
+* **tier**: 'Basic' | 'Standard' (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Kusto/clusters/databases
+### Properties
+* **apiVersion**: '2019-01-21' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseProperties
+* **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant)
+
+## DatabaseProperties
+### Properties
+* **hotCachePeriod**: string
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly)
+* **softDeletePeriod**: string
+* **statistics**: DatabaseStatistics
+
+## DatabaseStatistics
+### Properties
+* **size**: int
+
 ## Microsoft.Kusto/clusters/databases/dataConnections
 * **Discriminator**: kind
 ### Base Properties
@@ -46,59 +101,4 @@
 * **eventHubResourceId**: string (Required)
 * **mappingRuleName**: string
 * **tableName**: string
-
-## Microsoft.Kusto/clusters/databases
-### Properties
-* **apiVersion**: '2019-01-21' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
-* **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant)
-
-## DatabaseProperties
-### Properties
-* **hotCachePeriod**: string
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly)
-* **softDeletePeriod**: string
-* **statistics**: DatabaseStatistics
-
-## DatabaseStatistics
-### Properties
-* **size**: int
-
-## Microsoft.Kusto/clusters
-### Properties
-* **apiVersion**: '2019-01-21' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterProperties
-* **sku**: AzureSku (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant)
-
-## ClusterProperties
-### Properties
-* **dataIngestionUri**: string (ReadOnly)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly)
-* **state**: 'Creating' | 'Deleted' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unavailable' | 'Updating' (ReadOnly)
-* **trustedExternalTenants**: TrustedExternalTenant[]
-* **uri**: string (ReadOnly)
-
-## TrustedExternalTenant
-### Properties
-* **value**: string
-
-## AzureSku
-### Properties
-* **capacity**: int
-* **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_L16s' | 'Standard_L4s' | 'Standard_L8s' (Required)
-* **tier**: 'Basic' | 'Standard' (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

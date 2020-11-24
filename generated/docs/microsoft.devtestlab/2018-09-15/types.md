@@ -1,5 +1,62 @@
 # Microsoft.DevTestLab @ 2018-09-15
 
+## Microsoft.DevTestLab/labs
+### Properties
+* **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LabProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DevTestLab/labs' (ReadOnly, DeployTimeConstant)
+
+## LabProperties
+### Properties
+* **announcement**: LabAnnouncementProperties
+* **artifactsStorageAccount**: string (ReadOnly)
+* **createdDate**: string (ReadOnly)
+* **defaultPremiumStorageAccount**: string (ReadOnly)
+* **defaultStorageAccount**: string (ReadOnly)
+* **environmentPermission**: 'Contributor' | 'Reader'
+* **extendedProperties**: Dictionary<string,String>
+* **labStorageType**: 'Premium' | 'Standard' | 'StandardSSD'
+* **loadBalancerId**: string (ReadOnly)
+* **mandatoryArtifactsResourceIdsLinux**: string[]
+* **mandatoryArtifactsResourceIdsWindows**: string[]
+* **networkSecurityGroupId**: string (ReadOnly)
+* **premiumDataDisks**: 'Disabled' | 'Enabled'
+* **premiumDataDiskStorageAccount**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **publicIpId**: string (ReadOnly)
+* **support**: LabSupportProperties
+* **uniqueIdentifier**: string (ReadOnly)
+* **vaultName**: string (ReadOnly)
+* **vmCreationResourceGroup**: string (ReadOnly)
+
+## LabAnnouncementProperties
+### Properties
+* **enabled**: 'Disabled' | 'Enabled'
+* **expirationDate**: string
+* **expired**: bool
+* **markdown**: string
+* **provisioningState**: string (ReadOnly)
+* **title**: string
+* **uniqueIdentifier**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## LabSupportProperties
+### Properties
+* **enabled**: 'Disabled' | 'Enabled'
+* **markdown**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.DevTestLab/labs/artifactsources
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant)
@@ -68,12 +125,12 @@
 * **externalResourceId**: string
 * **resourceCost**: int
 * **resourceId**: string
+* **resourcename**: string
 * **resourceOwner**: string
 * **resourcePricingTier**: string
 * **resourceStatus**: string
 * **resourceType**: string
 * **resourceUId**: string
-* **resourcename**: string
 
 ## TargetCostProperties
 ### Properties
@@ -455,6 +512,42 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.DevTestLab/labs/users
+### Properties
+* **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: UserProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DevTestLab/labs/users' (ReadOnly, DeployTimeConstant)
+
+## UserProperties
+### Properties
+* **createdDate**: string (ReadOnly)
+* **identity**: UserIdentity
+* **provisioningState**: string (ReadOnly)
+* **secretStore**: UserSecretStore
+* **uniqueIdentifier**: string (ReadOnly)
+
+## UserIdentity
+### Properties
+* **appId**: string
+* **objectId**: string
+* **principalId**: string
+* **principalName**: string
+* **tenantId**: string
+
+## UserSecretStore
+### Properties
+* **keyVaultId**: string
+* **keyVaultUri**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.DevTestLab/labs/users/disks
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant)
@@ -538,21 +631,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DevTestLab/labs/users/servicefabrics/schedules
-### Properties
-* **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ScheduleProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DevTestLab/labs/users/servicefabrics/schedules' (ReadOnly, DeployTimeConstant)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Microsoft.DevTestLab/labs/users/servicefabrics
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant)
@@ -607,43 +685,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DevTestLab/labs/users
-### Properties
-* **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: UserProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DevTestLab/labs/users' (ReadOnly, DeployTimeConstant)
-
-## UserProperties
-### Properties
-* **createdDate**: string (ReadOnly)
-* **identity**: UserIdentity
-* **provisioningState**: string (ReadOnly)
-* **secretStore**: UserSecretStore
-* **uniqueIdentifier**: string (ReadOnly)
-
-## UserIdentity
-### Properties
-* **appId**: string
-* **objectId**: string
-* **principalId**: string
-* **principalName**: string
-* **tenantId**: string
-
-## UserSecretStore
-### Properties
-* **keyVaultId**: string
-* **keyVaultUri**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.DevTestLab/labs/virtualmachines/schedules
+## Microsoft.DevTestLab/labs/users/servicefabrics/schedules
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -652,7 +694,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ScheduleProperties (Required)
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DevTestLab/labs/virtualmachines/schedules' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.DevTestLab/labs/users/servicefabrics/schedules' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -734,6 +776,21 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.DevTestLab/labs/virtualmachines/schedules
+### Properties
+* **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ScheduleProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DevTestLab/labs/virtualmachines/schedules' (ReadOnly, DeployTimeConstant)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.DevTestLab/labs/virtualnetworks
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant)
@@ -784,63 +841,6 @@
 ### Properties
 * **backendPort**: int
 * **transportProtocol**: 'Tcp' | 'Udp'
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.DevTestLab/labs
-### Properties
-* **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LabProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DevTestLab/labs' (ReadOnly, DeployTimeConstant)
-
-## LabProperties
-### Properties
-* **announcement**: LabAnnouncementProperties
-* **artifactsStorageAccount**: string (ReadOnly)
-* **createdDate**: string (ReadOnly)
-* **defaultPremiumStorageAccount**: string (ReadOnly)
-* **defaultStorageAccount**: string (ReadOnly)
-* **environmentPermission**: 'Contributor' | 'Reader'
-* **extendedProperties**: Dictionary<string,String>
-* **labStorageType**: 'Premium' | 'Standard' | 'StandardSSD'
-* **loadBalancerId**: string (ReadOnly)
-* **mandatoryArtifactsResourceIdsLinux**: string[]
-* **mandatoryArtifactsResourceIdsWindows**: string[]
-* **networkSecurityGroupId**: string (ReadOnly)
-* **premiumDataDiskStorageAccount**: string (ReadOnly)
-* **premiumDataDisks**: 'Disabled' | 'Enabled'
-* **provisioningState**: string (ReadOnly)
-* **publicIpId**: string (ReadOnly)
-* **support**: LabSupportProperties
-* **uniqueIdentifier**: string (ReadOnly)
-* **vaultName**: string (ReadOnly)
-* **vmCreationResourceGroup**: string (ReadOnly)
-
-## LabAnnouncementProperties
-### Properties
-* **enabled**: 'Disabled' | 'Enabled'
-* **expirationDate**: string
-* **expired**: bool
-* **markdown**: string
-* **provisioningState**: string (ReadOnly)
-* **title**: string
-* **uniqueIdentifier**: string (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## LabSupportProperties
-### Properties
-* **enabled**: 'Disabled' | 'Enabled'
-* **markdown**: string
 
 ## Dictionary<string,String>
 ### Additional Properties

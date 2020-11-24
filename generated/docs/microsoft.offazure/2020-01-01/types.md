@@ -1,5 +1,46 @@
 # Microsoft.OffAzure @ 2020-01-01
 
+## Microsoft.OffAzure/HyperVSites
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **eTag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SiteProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.OffAzure/HyperVSites' (ReadOnly, DeployTimeConstant)
+
+## SiteProperties
+### Properties
+* **agentDetails**: SiteAgentProperties
+* **applianceName**: string
+* **discoverySolutionId**: string
+* **serviceEndpoint**: string (ReadOnly)
+* **servicePrincipalIdentityDetails**: SiteSpnProperties
+
+## SiteAgentProperties
+### Properties
+* **id**: string (ReadOnly)
+* **keyVaultId**: string
+* **keyVaultUri**: string
+* **lastHeartBeatUtc**: string (ReadOnly)
+* **version**: string (ReadOnly)
+
+## SiteSpnProperties
+### Properties
+* **aadAuthority**: string
+* **applicationId**: string
+* **audience**: string
+* **objectId**: string
+* **rawCertData**: string
+* **tenantId**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.OffAzure/HyperVSites/clusters
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
@@ -54,7 +95,7 @@
 * **updatedTimestamp**: string (ReadOnly)
 * **version**: string (ReadOnly)
 
-## Microsoft.OffAzure/HyperVSites
+## Microsoft.OffAzure/VMwareSites
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -64,32 +105,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SiteProperties
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.OffAzure/HyperVSites' (ReadOnly, DeployTimeConstant)
-
-## SiteProperties
-### Properties
-* **agentDetails**: SiteAgentProperties
-* **applianceName**: string
-* **discoverySolutionId**: string
-* **serviceEndpoint**: string (ReadOnly)
-* **servicePrincipalIdentityDetails**: SiteSpnProperties
-
-## SiteAgentProperties
-### Properties
-* **id**: string (ReadOnly)
-* **keyVaultId**: string
-* **keyVaultUri**: string
-* **lastHeartBeatUtc**: string (ReadOnly)
-* **version**: string (ReadOnly)
-
-## SiteSpnProperties
-### Properties
-* **aadAuthority**: string
-* **applicationId**: string
-* **audience**: string
-* **objectId**: string
-* **rawCertData**: string
-* **tenantId**: string
+* **type**: 'Microsoft.OffAzure/VMwareSites' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -115,20 +131,4 @@
 * **runAsAccountId**: string
 * **updatedTimestamp**: string (ReadOnly)
 * **version**: string (ReadOnly)
-
-## Microsoft.OffAzure/VMwareSites
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SiteProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.OffAzure/VMwareSites' (ReadOnly, DeployTimeConstant)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

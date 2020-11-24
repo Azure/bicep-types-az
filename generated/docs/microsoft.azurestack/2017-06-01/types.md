@@ -1,19 +1,5 @@
 # Microsoft.AzureStack @ 2017-06-01
 
-## Microsoft.AzureStack/registrations/customerSubscriptions
-### Properties
-* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CustomerSubscriptionProperties
-* **type**: 'Microsoft.AzureStack/registrations/customerSubscriptions' (ReadOnly, DeployTimeConstant)
-
-## CustomerSubscriptionProperties
-### Properties
-* **tenantId**: string
-
 ## Microsoft.AzureStack/registrations
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
@@ -36,4 +22,18 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.AzureStack/registrations/customerSubscriptions
+### Properties
+* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CustomerSubscriptionProperties
+* **type**: 'Microsoft.AzureStack/registrations/customerSubscriptions' (ReadOnly, DeployTimeConstant)
+
+## CustomerSubscriptionProperties
+### Properties
+* **tenantId**: string
 

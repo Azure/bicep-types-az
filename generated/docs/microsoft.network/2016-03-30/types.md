@@ -432,15 +432,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Network/connections/sharedkey
-### Properties
-* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Network/connections/sharedkey' (ReadOnly, DeployTimeConstant)
-* **value**: string
-
 ## Microsoft.Network/connections
 ### Properties
 * **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
@@ -457,7 +448,7 @@
 ### Properties
 * **authorizationKey**: string
 * **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown'
-* **connectionType**: 'ExpressRoute' | 'IPsec' | 'VPNClient' | 'Vnet2Vnet'
+* **connectionType**: 'ExpressRoute' | 'IPsec' | 'Vnet2Vnet' | 'VPNClient'
 * **egressBytesTransferred**: int
 * **enableBgp**: bool
 * **ingressBytesTransferred**: int
@@ -584,61 +575,14 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Network/expressRouteCircuits/authorizations
+## Microsoft.Network/connections/sharedkey
 ### Properties
 * **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AuthorizationPropertiesFormat
-* **type**: 'Microsoft.Network/expressRouteCircuits/authorizations' (ReadOnly, DeployTimeConstant)
-
-## AuthorizationPropertiesFormat
-### Properties
-* **authorizationKey**: string
-* **authorizationUseStatus**: 'Available' | 'InUse'
-* **provisioningState**: string
-
-## Microsoft.Network/expressRouteCircuits/peerings
-### Properties
-* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ExpressRouteCircuitPeeringPropertiesFormat
-* **type**: 'Microsoft.Network/expressRouteCircuits/peerings' (ReadOnly, DeployTimeConstant)
-
-## ExpressRouteCircuitPeeringPropertiesFormat
-### Properties
-* **azureASN**: int
-* **microsoftPeeringConfig**: ExpressRouteCircuitPeeringConfig
-* **peerASN**: int
-* **peeringType**: 'AzurePrivatePeering' | 'AzurePublicPeering' | 'MicrosoftPeering'
-* **primaryAzurePort**: string
-* **primaryPeerAddressPrefix**: string
-* **provisioningState**: string
-* **secondaryAzurePort**: string
-* **secondaryPeerAddressPrefix**: string
-* **sharedKey**: string
-* **state**: 'Disabled' | 'Enabled'
-* **stats**: ExpressRouteCircuitStats
-* **vlanId**: int
-
-## ExpressRouteCircuitPeeringConfig
-### Properties
-* **advertisedPublicPrefixes**: string[]
-* **advertisedPublicPrefixesState**: 'Configured' | 'Configuring' | 'NotConfigured' | 'ValidationNeeded'
-* **customerASN**: int
-* **routingRegistryName**: string
-
-## ExpressRouteCircuitStats
-### Properties
-* **primarybytesIn**: int
-* **primarybytesOut**: int
-* **secondarybytesIn**: int
-* **secondarybytesOut**: int
+* **type**: 'Microsoft.Network/connections/sharedkey' (ReadOnly, DeployTimeConstant)
+* **value**: string
 
 ## Microsoft.Network/expressRouteCircuits
 ### Properties
@@ -672,12 +616,48 @@
 * **name**: string
 * **properties**: AuthorizationPropertiesFormat
 
+## AuthorizationPropertiesFormat
+### Properties
+* **authorizationKey**: string
+* **authorizationUseStatus**: 'Available' | 'InUse'
+* **provisioningState**: string
+
 ## ExpressRouteCircuitPeering
 ### Properties
 * **etag**: string
 * **id**: string
 * **name**: string
 * **properties**: ExpressRouteCircuitPeeringPropertiesFormat
+
+## ExpressRouteCircuitPeeringPropertiesFormat
+### Properties
+* **azureASN**: int
+* **microsoftPeeringConfig**: ExpressRouteCircuitPeeringConfig
+* **peerASN**: int
+* **peeringType**: 'AzurePrivatePeering' | 'AzurePublicPeering' | 'MicrosoftPeering'
+* **primaryAzurePort**: string
+* **primaryPeerAddressPrefix**: string
+* **provisioningState**: string
+* **secondaryAzurePort**: string
+* **secondaryPeerAddressPrefix**: string
+* **sharedKey**: string
+* **state**: 'Disabled' | 'Enabled'
+* **stats**: ExpressRouteCircuitStats
+* **vlanId**: int
+
+## ExpressRouteCircuitPeeringConfig
+### Properties
+* **advertisedPublicPrefixes**: string[]
+* **advertisedPublicPrefixesState**: 'Configured' | 'Configuring' | 'NotConfigured' | 'ValidationNeeded'
+* **customerASN**: int
+* **routingRegistryName**: string
+
+## ExpressRouteCircuitStats
+### Properties
+* **primarybytesIn**: int
+* **primarybytesOut**: int
+* **secondarybytesIn**: int
+* **secondarybytesOut**: int
 
 ## ExpressRouteCircuitServiceProviderProperties
 ### Properties
@@ -694,6 +674,26 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Network/expressRouteCircuits/authorizations
+### Properties
+* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AuthorizationPropertiesFormat
+* **type**: 'Microsoft.Network/expressRouteCircuits/authorizations' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Network/expressRouteCircuits/peerings
+### Properties
+* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ExpressRouteCircuitPeeringPropertiesFormat
+* **type**: 'Microsoft.Network/expressRouteCircuits/peerings' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.Network/loadBalancers
 ### Properties
@@ -841,16 +841,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Network/networkSecurityGroups/securityRules
-### Properties
-* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityRulePropertiesFormat
-* **type**: 'Microsoft.Network/networkSecurityGroups/securityRules' (ReadOnly, DeployTimeConstant)
-
 ## Microsoft.Network/networkSecurityGroups
 ### Properties
 * **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
@@ -866,6 +856,16 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Network/networkSecurityGroups/securityRules
+### Properties
+* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SecurityRulePropertiesFormat
+* **type**: 'Microsoft.Network/networkSecurityGroups/securityRules' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.Network/publicIPAddresses
 ### Properties
@@ -883,16 +883,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Network/routeTables/routes
-### Properties
-* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RoutePropertiesFormat
-* **type**: 'Microsoft.Network/routeTables/routes' (ReadOnly, DeployTimeConstant)
-
 ## Microsoft.Network/routeTables
 ### Properties
 * **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
@@ -909,6 +899,16 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.Network/routeTables/routes
+### Properties
+* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RoutePropertiesFormat
+* **type**: 'Microsoft.Network/routeTables/routes' (ReadOnly, DeployTimeConstant)
+
 ## Microsoft.Network/virtualNetworkGateways
 ### Properties
 * **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
@@ -924,16 +924,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Network/virtualNetworks/subnets
-### Properties
-* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SubnetPropertiesFormat
-* **type**: 'Microsoft.Network/virtualNetworks/subnets' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.Network/virtualNetworks
 ### Properties
@@ -962,4 +952,14 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Network/virtualNetworks/subnets
+### Properties
+* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SubnetPropertiesFormat
+* **type**: 'Microsoft.Network/virtualNetworks/subnets' (ReadOnly, DeployTimeConstant)
 

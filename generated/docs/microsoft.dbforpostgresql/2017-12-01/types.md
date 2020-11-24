@@ -1,82 +1,5 @@
 # Microsoft.DBForPostgreSQL @ 2017-12-01
 
-## Microsoft.DBForPostgreSQL/servers/Administrators
-### Properties
-* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerAdministratorProperties
-* **type**: 'Microsoft.DBForPostgreSQL/servers/Administrators' (ReadOnly, DeployTimeConstant)
-
-## ServerAdministratorProperties
-### Properties
-* **administratorType**: string (Required)
-* **login**: string (Required)
-* **sid**: string (Required)
-* **tenantId**: string (Required)
-
-## Microsoft.DBForPostgreSQL/servers/configurations
-### Properties
-* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationProperties
-* **type**: 'Microsoft.DBForPostgreSQL/servers/configurations' (ReadOnly, DeployTimeConstant)
-
-## ConfigurationProperties
-### Properties
-* **allowedValues**: string (ReadOnly)
-* **dataType**: string (ReadOnly)
-* **defaultValue**: string (ReadOnly)
-* **description**: string (ReadOnly)
-* **source**: string
-* **value**: string
-
-## Microsoft.DBForPostgreSQL/servers/databases
-### Properties
-* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
-* **type**: 'Microsoft.DBForPostgreSQL/servers/databases' (ReadOnly, DeployTimeConstant)
-
-## DatabaseProperties
-### Properties
-* **charset**: string
-* **collation**: string
-
-## Microsoft.DBForPostgreSQL/servers/firewallRules
-### Properties
-* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: FirewallRuleProperties (Required)
-* **type**: 'Microsoft.DBForPostgreSQL/servers/firewallRules' (ReadOnly, DeployTimeConstant)
-
-## FirewallRuleProperties
-### Properties
-* **endIpAddress**: string (Required)
-* **startIpAddress**: string (Required)
-
-## Microsoft.DBForPostgreSQL/servers/virtualNetworkRules
-### Properties
-* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkRuleProperties
-* **type**: 'Microsoft.DBForPostgreSQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
-
-## VirtualNetworkRuleProperties
-### Properties
-* **ignoreMissingVnetServiceEndpoint**: bool
-* **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly)
-* **virtualNetworkSubnetId**: string (Required)
-
 ## Microsoft.DBForPostgreSQL/servers
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
@@ -113,7 +36,7 @@
 * **sslEnforcement**: 'Disabled' | 'Enabled'
 * **storageProfile**: StorageProfile
 * **userVisibleState**: 'Disabled' | 'Dropping' | 'Inaccessible' | 'Ready' (ReadOnly)
-* **version**: '10' | '10.0' | '10.2' | '11' | '9.5' | '9.6'
+* **version**: '10.0' | '10.2' | '10' | '11' | '9.5' | '9.6'
 ### Default
 #### Properties
 * **administratorLogin**: string (Required, WriteOnly)
@@ -199,6 +122,68 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.DBForPostgreSQL/servers/Administrators
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServerAdministratorProperties
+* **type**: 'Microsoft.DBForPostgreSQL/servers/Administrators' (ReadOnly, DeployTimeConstant)
+
+## ServerAdministratorProperties
+### Properties
+* **administratorType**: string (Required)
+* **login**: string (Required)
+* **sid**: string (Required)
+* **tenantId**: string (Required)
+
+## Microsoft.DBForPostgreSQL/servers/configurations
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConfigurationProperties
+* **type**: 'Microsoft.DBForPostgreSQL/servers/configurations' (ReadOnly, DeployTimeConstant)
+
+## ConfigurationProperties
+### Properties
+* **allowedValues**: string (ReadOnly)
+* **dataType**: string (ReadOnly)
+* **defaultValue**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **source**: string
+* **value**: string
+
+## Microsoft.DBForPostgreSQL/servers/databases
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseProperties
+* **type**: 'Microsoft.DBForPostgreSQL/servers/databases' (ReadOnly, DeployTimeConstant)
+
+## DatabaseProperties
+### Properties
+* **charset**: string
+* **collation**: string
+
+## Microsoft.DBForPostgreSQL/servers/firewallRules
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: FirewallRuleProperties (Required)
+* **type**: 'Microsoft.DBForPostgreSQL/servers/firewallRules' (ReadOnly, DeployTimeConstant)
+
+## FirewallRuleProperties
+### Properties
+* **endIpAddress**: string (Required)
+* **startIpAddress**: string (Required)
+
 ## Microsoft.DBforPostgreSQL/servers/securityAlertPolicies
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
@@ -217,4 +202,19 @@
 * **state**: 'Disabled' | 'Enabled' (Required)
 * **storageAccountAccessKey**: string
 * **storageEndpoint**: string
+
+## Microsoft.DBForPostgreSQL/servers/virtualNetworkRules
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualNetworkRuleProperties
+* **type**: 'Microsoft.DBForPostgreSQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
+
+## VirtualNetworkRuleProperties
+### Properties
+* **ignoreMissingVnetServiceEndpoint**: bool
+* **state**: 'Deleting' | 'Initializing' | 'InProgress' | 'Ready' | 'Unknown' (ReadOnly)
+* **virtualNetworkSubnetId**: string (Required)
 

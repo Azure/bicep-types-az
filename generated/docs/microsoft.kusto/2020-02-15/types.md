@@ -1,5 +1,92 @@
 # Microsoft.Kusto @ 2020-02-15
 
+## Microsoft.Kusto/clusters
+### Properties
+* **apiVersion**: '2020-02-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ClusterProperties
+* **sku**: AzureSku (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant)
+* **zones**: string[]
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned' (Required)
+* **userAssignedIdentities**: Dictionary<string,Schemas62UserAssignedIdentitiesValue>
+
+## Dictionary<string,Schemas62UserAssignedIdentitiesValue>
+### Additional Properties
+* **Additional Properties Type**: schemas:62_userAssignedIdentitiesValue
+
+## schemas:62_userAssignedIdentitiesValue
+### Properties
+* **clientId**: string (ReadOnly)
+* **principalId**: string (ReadOnly)
+
+## ClusterProperties
+### Properties
+* **dataIngestionUri**: string (ReadOnly)
+* **enableDiskEncryption**: bool
+* **enablePurge**: bool
+* **enableStreamingIngest**: bool
+* **keyVaultProperties**: KeyVaultProperties
+* **languageExtensions**: LanguageExtensionsList
+* **optimizedAutoscale**: OptimizedAutoscale
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
+* **state**: 'Creating' | 'Deleted' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unavailable' | 'Updating' (ReadOnly)
+* **stateReason**: string (ReadOnly)
+* **trustedExternalTenants**: TrustedExternalTenant[]
+* **uri**: string (ReadOnly)
+* **virtualNetworkConfiguration**: VirtualNetworkConfiguration
+
+## KeyVaultProperties
+### Properties
+* **keyName**: string (Required)
+* **keyVaultUri**: string (Required)
+* **keyVersion**: string (Required)
+
+## LanguageExtensionsList
+### Properties
+* **value**: LanguageExtension[]
+
+## LanguageExtension
+### Properties
+* **languageExtensionName**: 'PYTHON' | 'R'
+
+## OptimizedAutoscale
+### Properties
+* **isEnabled**: bool (Required)
+* **maximum**: int (Required)
+* **minimum**: int (Required)
+* **version**: int (Required)
+
+## TrustedExternalTenant
+### Properties
+* **value**: string
+
+## VirtualNetworkConfiguration
+### Properties
+* **dataManagementPublicIpId**: string (Required)
+* **enginePublicIpId**: string (Required)
+* **subnetId**: string (Required)
+
+## AzureSku
+### Properties
+* **capacity**: int
+* **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Dev(No SLA)_Standard_E2a_v4' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_E16a_v4' | 'Standard_E16as_v4+3TB_PS' | 'Standard_E16as_v4+4TB_PS' | 'Standard_E2a_v4' | 'Standard_E4a_v4' | 'Standard_E8a_v4' | 'Standard_E8as_v4+1TB_PS' | 'Standard_E8as_v4+2TB_PS' | 'Standard_L16s' | 'Standard_L4s' | 'Standard_L8s' (Required)
+* **tier**: 'Basic' | 'Standard' (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Kusto/clusters/attachedDatabaseConfigurations
 ### Properties
 * **apiVersion**: '2020-02-15' (ReadOnly, DeployTimeConstant)
@@ -17,6 +104,58 @@
 * **databaseName**: string (Required)
 * **defaultPrincipalsModificationKind**: 'None' | 'Replace' | 'Union' (Required)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
+
+## Microsoft.Kusto/clusters/databases
+* **Discriminator**: kind
+### Base Properties
+* **apiVersion**: '2020-02-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant)
+### ReadOnlyFollowing
+#### Properties
+* **kind**: 'ReadOnlyFollowing' (Required)
+* **properties**: ReadOnlyFollowingDatabaseProperties
+
+### ReadWrite
+#### Properties
+* **kind**: 'ReadWrite' (Required)
+* **properties**: ReadWriteDatabaseProperties
+
+
+## ReadOnlyFollowing
+### Properties
+* **kind**: 'ReadOnlyFollowing' (Required)
+* **properties**: ReadOnlyFollowingDatabaseProperties
+
+## ReadOnlyFollowingDatabaseProperties
+### Properties
+* **attachedDatabaseConfigurationName**: string (ReadOnly)
+* **hotCachePeriod**: string
+* **leaderClusterResourceId**: string (ReadOnly)
+* **principalsModificationKind**: 'None' | 'Replace' | 'Union' (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
+* **softDeletePeriod**: string (ReadOnly)
+* **statistics**: DatabaseStatistics
+
+## DatabaseStatistics
+### Properties
+* **size**: int
+
+## ReadWrite
+### Properties
+* **kind**: 'ReadWrite' (Required)
+* **properties**: ReadWriteDatabaseProperties
+
+## ReadWriteDatabaseProperties
+### Properties
+* **hotCachePeriod**: string
+* **isFollowed**: bool (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
+* **softDeletePeriod**: string
+* **statistics**: DatabaseStatistics
 
 ## Microsoft.Kusto/clusters/databases/dataConnections
 * **Discriminator**: kind
@@ -106,58 +245,6 @@
 * **tenantId**: string
 * **tenantName**: string (ReadOnly)
 
-## Microsoft.Kusto/clusters/databases
-* **Discriminator**: kind
-### Base Properties
-* **apiVersion**: '2020-02-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant)
-### ReadOnlyFollowing
-#### Properties
-* **kind**: 'ReadOnlyFollowing' (Required)
-* **properties**: ReadOnlyFollowingDatabaseProperties
-
-### ReadWrite
-#### Properties
-* **kind**: 'ReadWrite' (Required)
-* **properties**: ReadWriteDatabaseProperties
-
-
-## ReadOnlyFollowing
-### Properties
-* **kind**: 'ReadOnlyFollowing' (Required)
-* **properties**: ReadOnlyFollowingDatabaseProperties
-
-## ReadOnlyFollowingDatabaseProperties
-### Properties
-* **attachedDatabaseConfigurationName**: string (ReadOnly)
-* **hotCachePeriod**: string
-* **leaderClusterResourceId**: string (ReadOnly)
-* **principalsModificationKind**: 'None' | 'Replace' | 'Union' (ReadOnly)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
-* **softDeletePeriod**: string (ReadOnly)
-* **statistics**: DatabaseStatistics
-
-## DatabaseStatistics
-### Properties
-* **size**: int
-
-## ReadWrite
-### Properties
-* **kind**: 'ReadWrite' (Required)
-* **properties**: ReadWriteDatabaseProperties
-
-## ReadWriteDatabaseProperties
-### Properties
-* **hotCachePeriod**: string
-* **isFollowed**: bool (ReadOnly)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
-* **softDeletePeriod**: string
-* **statistics**: DatabaseStatistics
-
 ## Microsoft.Kusto/clusters/principalAssignments
 ### Properties
 * **apiVersion**: '2020-02-15' (ReadOnly, DeployTimeConstant)
@@ -176,91 +263,4 @@
 * **role**: 'AllDatabasesAdmin' | 'AllDatabasesViewer' (Required)
 * **tenantId**: string
 * **tenantName**: string (ReadOnly)
-
-## Microsoft.Kusto/clusters
-### Properties
-* **apiVersion**: '2020-02-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterProperties
-* **sku**: AzureSku (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant)
-* **zones**: string[]
-
-## Identity
-### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned' (Required)
-* **userAssignedIdentities**: Dictionary<string,Schemas62UserAssignedIdentitiesValue>
-
-## Dictionary<string,Schemas62UserAssignedIdentitiesValue>
-### Additional Properties
-* **Additional Properties Type**: schemas:62_userAssignedIdentitiesValue
-
-## schemas:62_userAssignedIdentitiesValue
-### Properties
-* **clientId**: string (ReadOnly)
-* **principalId**: string (ReadOnly)
-
-## ClusterProperties
-### Properties
-* **dataIngestionUri**: string (ReadOnly)
-* **enableDiskEncryption**: bool
-* **enablePurge**: bool
-* **enableStreamingIngest**: bool
-* **keyVaultProperties**: KeyVaultProperties
-* **languageExtensions**: LanguageExtensionsList
-* **optimizedAutoscale**: OptimizedAutoscale
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
-* **state**: 'Creating' | 'Deleted' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unavailable' | 'Updating' (ReadOnly)
-* **stateReason**: string (ReadOnly)
-* **trustedExternalTenants**: TrustedExternalTenant[]
-* **uri**: string (ReadOnly)
-* **virtualNetworkConfiguration**: VirtualNetworkConfiguration
-
-## KeyVaultProperties
-### Properties
-* **keyName**: string (Required)
-* **keyVaultUri**: string (Required)
-* **keyVersion**: string (Required)
-
-## LanguageExtensionsList
-### Properties
-* **value**: LanguageExtension[]
-
-## LanguageExtension
-### Properties
-* **languageExtensionName**: 'PYTHON' | 'R'
-
-## OptimizedAutoscale
-### Properties
-* **isEnabled**: bool (Required)
-* **maximum**: int (Required)
-* **minimum**: int (Required)
-* **version**: int (Required)
-
-## TrustedExternalTenant
-### Properties
-* **value**: string
-
-## VirtualNetworkConfiguration
-### Properties
-* **dataManagementPublicIpId**: string (Required)
-* **enginePublicIpId**: string (Required)
-* **subnetId**: string (Required)
-
-## AzureSku
-### Properties
-* **capacity**: int
-* **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Dev(No SLA)_Standard_E2a_v4' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_E16a_v4' | 'Standard_E16as_v4+3TB_PS' | 'Standard_E16as_v4+4TB_PS' | 'Standard_E2a_v4' | 'Standard_E4a_v4' | 'Standard_E8a_v4' | 'Standard_E8as_v4+1TB_PS' | 'Standard_E8as_v4+2TB_PS' | 'Standard_L16s' | 'Standard_L4s' | 'Standard_L8s' (Required)
-* **tier**: 'Basic' | 'Standard' (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

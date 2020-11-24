@@ -1,29 +1,66 @@
 # Microsoft.HDInsight @ 2018-06-01-preview
 
-## Microsoft.HDInsight/clusters/applications
+## Microsoft.HDInsight/clusters
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: ClusterIdentity
+* **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationProperties
+* **properties**: ClusterCreateProperties
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.HDInsight/clusters/applications' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.HDInsight/clusters' (ReadOnly, DeployTimeConstant)
 
-## ApplicationProperties
+## ClusterIdentity
 ### Properties
-* **applicationState**: string (ReadOnly)
-* **applicationType**: string
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
+* **userAssignedIdentities**: Dictionary<string,Schemas36UserAssignedIdentitiesValue>
+
+## Dictionary<string,Schemas36UserAssignedIdentitiesValue>
+### Additional Properties
+* **Additional Properties Type**: schemas:36_userAssignedIdentitiesValue
+
+## schemas:36_userAssignedIdentitiesValue
+### Properties
+* **clientId**: string (ReadOnly)
+* **principalId**: string (ReadOnly)
+
+## ClusterCreateProperties
+### Properties
+* **clusterDefinition**: ClusterDefinition
+* **clusterId**: string (ReadOnly)
+* **clusterState**: string (ReadOnly)
+* **clusterVersion**: string
 * **computeProfile**: ComputeProfile
+* **connectivityEndpoints**: ConnectivityEndpoint[] (ReadOnly)
 * **createdDate**: string (ReadOnly)
-* **errors**: Errors[]
-* **httpsEndpoints**: ApplicationGetHttpsEndpoint[]
-* **installScriptActions**: RuntimeScriptAction[]
-* **marketplaceIdentifier**: string (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **sshEndpoints**: ApplicationGetEndpoint[]
-* **uninstallScriptActions**: RuntimeScriptAction[]
+* **diskEncryptionProperties**: DiskEncryptionProperties
+* **encryptionInTransitProperties**: EncryptionInTransitProperties
+* **errors**: Errors[] (ReadOnly)
+* **kafkaRestProperties**: KafkaRestProperties
+* **minSupportedTlsVersion**: string
+* **networkProperties**: NetworkProperties
+* **osType**: 'Linux' | 'Windows'
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly)
+* **quotaInfo**: QuotaInfo (ReadOnly)
+* **securityProfile**: SecurityProfile
+* **storageProfile**: StorageProfile (WriteOnly)
+* **tier**: 'Premium' | 'Standard'
+
+## ClusterDefinition
+### Properties
+* **blueprint**: string
+* **componentVersion**: Dictionary<string,String>
+* **configurations**: any
+* **kind**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ComputeProfile
 ### Properties
@@ -106,10 +143,103 @@
 * **id**: string
 * **subnet**: string
 
+## ConnectivityEndpoint
+### Properties
+* **location**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **port**: int (ReadOnly)
+* **protocol**: string (ReadOnly)
+
+## DiskEncryptionProperties
+### Properties
+* **encryptionAlgorithm**: 'RSA-OAEP-256' | 'RSA-OAEP' | 'RSA1_5'
+* **encryptionAtHost**: bool
+* **keyName**: string
+* **keyVersion**: string
+* **msiResourceId**: string
+* **vaultUri**: string
+
+## EncryptionInTransitProperties
+### Properties
+* **isEncryptionInTransitEnabled**: bool
+
 ## Errors
 ### Properties
 * **code**: string (ReadOnly)
 * **message**: string (ReadOnly)
+
+## KafkaRestProperties
+### Properties
+* **clientGroupInfo**: ClientGroupInfo
+
+## ClientGroupInfo
+### Properties
+* **groupId**: string
+* **groupName**: string
+
+## NetworkProperties
+### Properties
+* **privateLink**: 'Disabled' | 'Enabled'
+* **resourceProviderConnection**: 'Inbound' | 'Outbound'
+
+## QuotaInfo
+### Properties
+* **coresUsed**: int (ReadOnly)
+
+## SecurityProfile
+### Properties
+* **aaddsResourceId**: string
+* **clusterUsersGroupDNs**: string[]
+* **directoryType**: 'ActiveDirectory'
+* **domain**: string
+* **domainUsername**: string
+* **domainUserPassword**: string
+* **ldapsUrls**: string[]
+* **msiResourceId**: string
+* **organizationalUnitDN**: string
+
+## StorageProfile
+### Properties
+* **storageaccounts**: StorageAccount[] (WriteOnly)
+
+## StorageAccount
+### Properties
+* **container**: string (WriteOnly)
+* **fileSystem**: string (WriteOnly)
+* **isDefault**: bool (WriteOnly)
+* **key**: string (WriteOnly)
+* **msiResourceId**: string (WriteOnly)
+* **name**: string (WriteOnly)
+* **resourceId**: string (WriteOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.HDInsight/clusters/applications
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.HDInsight/clusters/applications' (ReadOnly, DeployTimeConstant)
+
+## ApplicationProperties
+### Properties
+* **applicationState**: string (ReadOnly)
+* **applicationType**: string
+* **computeProfile**: ComputeProfile
+* **createdDate**: string (ReadOnly)
+* **errors**: Errors[]
+* **httpsEndpoints**: ApplicationGetHttpsEndpoint[]
+* **installScriptActions**: RuntimeScriptAction[]
+* **marketplaceIdentifier**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **sshEndpoints**: ApplicationGetEndpoint[]
+* **uninstallScriptActions**: RuntimeScriptAction[]
 
 ## ApplicationGetHttpsEndpoint
 ### Properties
@@ -158,134 +288,4 @@
 * **primaryKey**: string
 * **type**: 'Microsoft.HDInsight/clusters/extensions' (ReadOnly, DeployTimeConstant)
 * **workspaceId**: string
-
-## Microsoft.HDInsight/clusters
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ClusterIdentity
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterCreateProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.HDInsight/clusters' (ReadOnly, DeployTimeConstant)
-
-## ClusterIdentity
-### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: Dictionary<string,Schemas36UserAssignedIdentitiesValue>
-
-## Dictionary<string,Schemas36UserAssignedIdentitiesValue>
-### Additional Properties
-* **Additional Properties Type**: schemas:36_userAssignedIdentitiesValue
-
-## schemas:36_userAssignedIdentitiesValue
-### Properties
-* **clientId**: string (ReadOnly)
-* **principalId**: string (ReadOnly)
-
-## ClusterCreateProperties
-### Properties
-* **clusterDefinition**: ClusterDefinition
-* **clusterId**: string (ReadOnly)
-* **clusterState**: string (ReadOnly)
-* **clusterVersion**: string
-* **computeProfile**: ComputeProfile
-* **connectivityEndpoints**: ConnectivityEndpoint[] (ReadOnly)
-* **createdDate**: string (ReadOnly)
-* **diskEncryptionProperties**: DiskEncryptionProperties
-* **encryptionInTransitProperties**: EncryptionInTransitProperties
-* **errors**: Errors[] (ReadOnly)
-* **kafkaRestProperties**: KafkaRestProperties
-* **minSupportedTlsVersion**: string
-* **networkProperties**: NetworkProperties
-* **osType**: 'Linux' | 'Windows'
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly)
-* **quotaInfo**: QuotaInfo (ReadOnly)
-* **securityProfile**: SecurityProfile
-* **storageProfile**: StorageProfile (WriteOnly)
-* **tier**: 'Premium' | 'Standard'
-
-## ClusterDefinition
-### Properties
-* **blueprint**: string
-* **componentVersion**: Dictionary<string,String>
-* **configurations**: any
-* **kind**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ConnectivityEndpoint
-### Properties
-* **location**: string (ReadOnly)
-* **name**: string (ReadOnly)
-* **port**: int (ReadOnly)
-* **protocol**: string (ReadOnly)
-
-## DiskEncryptionProperties
-### Properties
-* **encryptionAlgorithm**: 'RSA-OAEP' | 'RSA-OAEP-256' | 'RSA1_5'
-* **encryptionAtHost**: bool
-* **keyName**: string
-* **keyVersion**: string
-* **msiResourceId**: string
-* **vaultUri**: string
-
-## EncryptionInTransitProperties
-### Properties
-* **isEncryptionInTransitEnabled**: bool
-
-## KafkaRestProperties
-### Properties
-* **clientGroupInfo**: ClientGroupInfo
-
-## ClientGroupInfo
-### Properties
-* **groupId**: string
-* **groupName**: string
-
-## NetworkProperties
-### Properties
-* **privateLink**: 'Disabled' | 'Enabled'
-* **resourceProviderConnection**: 'Inbound' | 'Outbound'
-
-## QuotaInfo
-### Properties
-* **coresUsed**: int (ReadOnly)
-
-## SecurityProfile
-### Properties
-* **aaddsResourceId**: string
-* **clusterUsersGroupDNs**: string[]
-* **directoryType**: 'ActiveDirectory'
-* **domain**: string
-* **domainUserPassword**: string
-* **domainUsername**: string
-* **ldapsUrls**: string[]
-* **msiResourceId**: string
-* **organizationalUnitDN**: string
-
-## StorageProfile
-### Properties
-* **storageaccounts**: StorageAccount[] (WriteOnly)
-
-## StorageAccount
-### Properties
-* **container**: string (WriteOnly)
-* **fileSystem**: string (WriteOnly)
-* **isDefault**: bool (WriteOnly)
-* **key**: string (WriteOnly)
-* **msiResourceId**: string (WriteOnly)
-* **name**: string (WriteOnly)
-* **resourceId**: string (WriteOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

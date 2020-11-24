@@ -1,5 +1,35 @@
 # Microsoft.TimeSeriesInsights @ 2017-02-28-preview
 
+## Microsoft.TimeSeriesInsights/environments
+### Properties
+* **apiVersion**: '2017-02-28-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EnvironmentCreationProperties (Required)
+* **sku**: Sku (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.TimeSeriesInsights/environments' (ReadOnly, DeployTimeConstant)
+
+## EnvironmentCreationProperties
+### Properties
+* **creationTime**: string (ReadOnly)
+* **dataAccessFqdn**: string (ReadOnly)
+* **dataAccessId**: string (ReadOnly)
+* **dataRetentionTime**: string (Required)
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+* **storageLimitExceededBehavior**: 'PauseIngress' | 'PurgeOldData'
+
+## Sku
+### Properties
+* **capacity**: int (Required)
+* **name**: 'S1' | 'S2' (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.TimeSeriesInsights/environments/accessPolicies
 ### Properties
 * **apiVersion**: '2017-02-28-preview' (ReadOnly, DeployTimeConstant)
@@ -30,15 +60,15 @@
 * **kind**: 'Microsoft.EventHub' (Required)
 * **properties**: EventHubEventSourceCreationProperties (Required)
 
-### Microsoft.IoTHub
-#### Properties
-* **kind**: 'Microsoft.IoTHub' (Required)
-* **properties**: IoTHubEventSourceCreationProperties (Required, WriteOnly)
-
 ### Microsoft.IotHub
 #### Properties
 * **kind**: 'Microsoft.IotHub' (Required)
 * **properties**: IoTHubEventSourceResourceProperties (ReadOnly)
+
+### Microsoft.IoTHub
+#### Properties
+* **kind**: 'Microsoft.IoTHub' (Required)
+* **properties**: IoTHubEventSourceCreationProperties (Required, WriteOnly)
 
 
 ## Dictionary<string,String>
@@ -62,6 +92,21 @@
 * **sharedAccessKey**: string (Required, WriteOnly)
 * **timestampPropertyName**: string
 
+## Microsoft.IotHub
+### Properties
+* **kind**: 'Microsoft.IotHub' (Required)
+* **properties**: IoTHubEventSourceResourceProperties (ReadOnly)
+
+## IoTHubEventSourceResourceProperties
+### Properties
+* **consumerGroupName**: string (ReadOnly)
+* **creationTime**: string (ReadOnly)
+* **eventSourceResourceId**: string (ReadOnly)
+* **iotHubName**: string (ReadOnly)
+* **keyName**: string (ReadOnly)
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+* **timestampPropertyName**: string (ReadOnly)
+
 ## Microsoft.IoTHub
 ### Properties
 * **kind**: 'Microsoft.IoTHub' (Required)
@@ -77,21 +122,6 @@
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly, WriteOnly)
 * **sharedAccessKey**: string (Required, WriteOnly)
 * **timestampPropertyName**: string (WriteOnly)
-
-## Microsoft.IotHub
-### Properties
-* **kind**: 'Microsoft.IotHub' (Required)
-* **properties**: IoTHubEventSourceResourceProperties (ReadOnly)
-
-## IoTHubEventSourceResourceProperties
-### Properties
-* **consumerGroupName**: string (ReadOnly)
-* **creationTime**: string (ReadOnly)
-* **eventSourceResourceId**: string (ReadOnly)
-* **iotHubName**: string (ReadOnly)
-* **keyName**: string (ReadOnly)
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **timestampPropertyName**: string (ReadOnly)
 
 ## Microsoft.TimeSeriesInsights/environments/referenceDataSets
 ### Properties
@@ -114,36 +144,6 @@
 ### Properties
 * **name**: string
 * **type**: 'Bool' | 'DateTime' | 'Double' | 'String'
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.TimeSeriesInsights/environments
-### Properties
-* **apiVersion**: '2017-02-28-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EnvironmentCreationProperties (Required)
-* **sku**: Sku (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.TimeSeriesInsights/environments' (ReadOnly, DeployTimeConstant)
-
-## EnvironmentCreationProperties
-### Properties
-* **creationTime**: string (ReadOnly)
-* **dataAccessFqdn**: string (ReadOnly)
-* **dataAccessId**: string (ReadOnly)
-* **dataRetentionTime**: string (Required)
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **storageLimitExceededBehavior**: 'PauseIngress' | 'PurgeOldData'
-
-## Sku
-### Properties
-* **capacity**: int (Required)
-* **name**: 'S1' | 'S2' (Required)
 
 ## Dictionary<string,String>
 ### Additional Properties

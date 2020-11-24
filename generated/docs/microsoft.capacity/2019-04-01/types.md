@@ -14,8 +14,8 @@
 
 ## PurchaseRequestProperties
 ### Properties
-* **appliedScopeType**: 'Shared' | 'Single' (WriteOnly)
 * **appliedScopes**: string[] (WriteOnly)
+* **appliedScopeType**: 'Shared' | 'Single' (WriteOnly)
 * **billingPlan**: 'Monthly' | 'Upfront'
 * **billingScopeId**: string (WriteOnly)
 * **createdDateTime**: string (ReadOnly)
@@ -29,7 +29,7 @@
 * **requestDateTime**: string (ReadOnly)
 * **reservations**: ReservationResponse[] (ReadOnly)
 * **reservedResourceProperties**: schemas:20_reservedResourceProperties (WriteOnly)
-* **reservedResourceType**: 'AppService' | 'AzureDataExplorer' | 'BlockBlob' | 'CosmosDb' | 'Databricks' | 'DedicatedHost' | 'ManagedDisk' | 'MariaDb' | 'MySql' | 'PostgreSql' | 'RedHat' | 'RedHatOsa' | 'RedisCache' | 'SapHana' | 'SqlAzureHybridBenefit' | 'SqlDataWarehouse' | 'SqlDatabases' | 'SuseLinux' | 'VMwareCloudSimple' | 'VirtualMachines' (WriteOnly)
+* **reservedResourceType**: 'AppService' | 'AzureDataExplorer' | 'BlockBlob' | 'CosmosDb' | 'Databricks' | 'DedicatedHost' | 'ManagedDisk' | 'MariaDb' | 'MySql' | 'PostgreSql' | 'RedHat' | 'RedHatOsa' | 'RedisCache' | 'SapHana' | 'SqlAzureHybridBenefit' | 'SqlDatabases' | 'SqlDataWarehouse' | 'SuseLinux' | 'VirtualMachines' | 'VMwareCloudSimple' (WriteOnly)
 * **term**: 'P1Y' | 'P3Y'
 
 ## ReservationOrderBillingPlanInformation
@@ -71,8 +71,8 @@
 
 ## ReservationProperties
 ### Properties
-* **appliedScopeType**: 'Shared' | 'Single' (ReadOnly)
 * **appliedScopes**: string[] (ReadOnly)
+* **appliedScopeType**: 'Shared' | 'Single' (ReadOnly)
 * **billingPlan**: 'Monthly' | 'Upfront' (ReadOnly)
 * **billingScopeId**: string (ReadOnly)
 * **displayName**: string (ReadOnly)
@@ -88,7 +88,7 @@
 * **renewDestination**: string (ReadOnly)
 * **renewProperties**: RenewPropertiesResponse (ReadOnly)
 * **renewSource**: string (ReadOnly)
-* **reservedResourceType**: 'AppService' | 'AzureDataExplorer' | 'BlockBlob' | 'CosmosDb' | 'Databricks' | 'DedicatedHost' | 'ManagedDisk' | 'MariaDb' | 'MySql' | 'PostgreSql' | 'RedHat' | 'RedHatOsa' | 'RedisCache' | 'SapHana' | 'SqlAzureHybridBenefit' | 'SqlDataWarehouse' | 'SqlDatabases' | 'SuseLinux' | 'VMwareCloudSimple' | 'VirtualMachines' (ReadOnly)
+* **reservedResourceType**: 'AppService' | 'AzureDataExplorer' | 'BlockBlob' | 'CosmosDb' | 'Databricks' | 'DedicatedHost' | 'ManagedDisk' | 'MariaDb' | 'MySql' | 'PostgreSql' | 'RedHat' | 'RedHatOsa' | 'RedisCache' | 'SapHana' | 'SqlAzureHybridBenefit' | 'SqlDatabases' | 'SqlDataWarehouse' | 'SuseLinux' | 'VirtualMachines' | 'VMwareCloudSimple' (ReadOnly)
 * **skuDescription**: string (ReadOnly)
 * **splitProperties**: ReservationSplitProperties (ReadOnly)
 * **term**: 'P1Y' | 'P3Y' (ReadOnly)

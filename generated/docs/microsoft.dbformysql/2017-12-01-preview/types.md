@@ -1,101 +1,5 @@
 # Microsoft.DBForMySQL @ 2017-12-01-preview
 
-## Microsoft.DBForMySQL/servers/Administrators
-### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerAdministratorProperties
-* **type**: 'Microsoft.DBForMySQL/servers/Administrators' (ReadOnly, DeployTimeConstant)
-
-## ServerAdministratorProperties
-### Properties
-* **administratorType**: string (Required)
-* **login**: string (Required)
-* **sid**: string (Required)
-* **tenantId**: string (Required)
-
-## Microsoft.DBForMySQL/servers/configurations
-### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationProperties
-* **type**: 'Microsoft.DBForMySQL/servers/configurations' (ReadOnly, DeployTimeConstant)
-
-## ConfigurationProperties
-### Properties
-* **allowedValues**: string (ReadOnly)
-* **dataType**: string (ReadOnly)
-* **defaultValue**: string (ReadOnly)
-* **description**: string (ReadOnly)
-* **source**: string
-* **value**: string
-
-## Microsoft.DBForMySQL/servers/databases
-### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
-* **type**: 'Microsoft.DBForMySQL/servers/databases' (ReadOnly, DeployTimeConstant)
-
-## DatabaseProperties
-### Properties
-* **charset**: string
-* **collation**: string
-
-## Microsoft.DBForMySQL/servers/firewallRules
-### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: FirewallRuleProperties (Required)
-* **type**: 'Microsoft.DBForMySQL/servers/firewallRules' (ReadOnly, DeployTimeConstant)
-
-## FirewallRuleProperties
-### Properties
-* **endIpAddress**: string (Required)
-* **startIpAddress**: string (Required)
-
-## Microsoft.DBForMySQL/servers/securityAlertPolicies
-### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityAlertPolicyProperties
-* **type**: 'Microsoft.DBForMySQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
-
-## SecurityAlertPolicyProperties
-### Properties
-* **disabledAlerts**: string[]
-* **emailAccountAdmins**: bool
-* **emailAddresses**: string[]
-* **retentionDays**: int
-* **state**: 'Disabled' | 'Enabled' (Required)
-* **storageAccountAccessKey**: string
-* **storageEndpoint**: string
-
-## Microsoft.DBForMySQL/servers/virtualNetworkRules
-### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkRuleProperties
-* **type**: 'Microsoft.DBForMySQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
-
-## VirtualNetworkRuleProperties
-### Properties
-* **ignoreMissingVnetServiceEndpoint**: bool
-* **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly)
-* **virtualNetworkSubnetId**: string (Required)
-
 ## Microsoft.DBForMySQL/servers
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
@@ -217,4 +121,100 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.DBForMySQL/servers/Administrators
+### Properties
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServerAdministratorProperties
+* **type**: 'Microsoft.DBForMySQL/servers/Administrators' (ReadOnly, DeployTimeConstant)
+
+## ServerAdministratorProperties
+### Properties
+* **administratorType**: string (Required)
+* **login**: string (Required)
+* **sid**: string (Required)
+* **tenantId**: string (Required)
+
+## Microsoft.DBForMySQL/servers/configurations
+### Properties
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConfigurationProperties
+* **type**: 'Microsoft.DBForMySQL/servers/configurations' (ReadOnly, DeployTimeConstant)
+
+## ConfigurationProperties
+### Properties
+* **allowedValues**: string (ReadOnly)
+* **dataType**: string (ReadOnly)
+* **defaultValue**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **source**: string
+* **value**: string
+
+## Microsoft.DBForMySQL/servers/databases
+### Properties
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseProperties
+* **type**: 'Microsoft.DBForMySQL/servers/databases' (ReadOnly, DeployTimeConstant)
+
+## DatabaseProperties
+### Properties
+* **charset**: string
+* **collation**: string
+
+## Microsoft.DBForMySQL/servers/firewallRules
+### Properties
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: FirewallRuleProperties (Required)
+* **type**: 'Microsoft.DBForMySQL/servers/firewallRules' (ReadOnly, DeployTimeConstant)
+
+## FirewallRuleProperties
+### Properties
+* **endIpAddress**: string (Required)
+* **startIpAddress**: string (Required)
+
+## Microsoft.DBForMySQL/servers/securityAlertPolicies
+### Properties
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SecurityAlertPolicyProperties
+* **type**: 'Microsoft.DBForMySQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
+
+## SecurityAlertPolicyProperties
+### Properties
+* **disabledAlerts**: string[]
+* **emailAccountAdmins**: bool
+* **emailAddresses**: string[]
+* **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' (Required)
+* **storageAccountAccessKey**: string
+* **storageEndpoint**: string
+
+## Microsoft.DBForMySQL/servers/virtualNetworkRules
+### Properties
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualNetworkRuleProperties
+* **type**: 'Microsoft.DBForMySQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
+
+## VirtualNetworkRuleProperties
+### Properties
+* **ignoreMissingVnetServiceEndpoint**: bool
+* **state**: 'Deleting' | 'Initializing' | 'InProgress' | 'Ready' | 'Unknown' (ReadOnly)
+* **virtualNetworkSubnetId**: string (Required)
 

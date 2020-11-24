@@ -1,5 +1,41 @@
 # Microsoft.Scheduler @ 2016-03-01
 
+## Microsoft.Scheduler/jobCollections
+### Properties
+* **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: JobCollectionProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Scheduler/jobCollections' (ReadOnly, DeployTimeConstant)
+
+## JobCollectionProperties
+### Properties
+* **quota**: JobCollectionQuota
+* **sku**: Sku
+* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'Suspended'
+
+## JobCollectionQuota
+### Properties
+* **maxJobCount**: int
+* **maxJobOccurrence**: int
+* **maxRecurrence**: JobMaxRecurrence
+
+## JobMaxRecurrence
+### Properties
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week'
+* **interval**: int
+
+## Sku
+### Properties
+* **name**: 'Free' | 'P10Premium' | 'P20Premium' | 'Standard'
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.Scheduler/jobCollections/jobs
 ### Properties
 * **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
@@ -179,8 +215,8 @@
 
 ## JobRecurrenceScheduleMonthlyOccurrence
 ### Properties
-* **Occurrence**: int
 * **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'
+* **Occurrence**: int
 
 ## JobStatus
 ### Properties
@@ -189,40 +225,4 @@
 * **faultedCount**: int (ReadOnly)
 * **lastExecutionTime**: string (ReadOnly)
 * **nextExecutionTime**: string (ReadOnly)
-
-## Microsoft.Scheduler/jobCollections
-### Properties
-* **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: JobCollectionProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Scheduler/jobCollections' (ReadOnly, DeployTimeConstant)
-
-## JobCollectionProperties
-### Properties
-* **quota**: JobCollectionQuota
-* **sku**: Sku
-* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'Suspended'
-
-## JobCollectionQuota
-### Properties
-* **maxJobCount**: int
-* **maxJobOccurrence**: int
-* **maxRecurrence**: JobMaxRecurrence
-
-## JobMaxRecurrence
-### Properties
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week'
-* **interval**: int
-
-## Sku
-### Properties
-* **name**: 'Free' | 'P10Premium' | 'P20Premium' | 'Standard'
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

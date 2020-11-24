@@ -17,8 +17,8 @@
 * **cerBlob**: array (ReadOnly)
 * **expirationDate**: string (ReadOnly)
 * **friendlyName**: string (ReadOnly)
-* **hostNames**: string[]
 * **hostingEnvironmentProfile**: HostingEnvironmentProfile (ReadOnly)
+* **hostNames**: string[]
 * **issueDate**: string (ReadOnly)
 * **issuer**: string (ReadOnly)
 * **keyVaultId**: string
@@ -43,60 +43,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Web/hostingEnvironments/multiRolePools
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkerPool
-* **sku**: SkuDescription
-* **type**: 'Microsoft.Web/hostingEnvironments/multiRolePools' (ReadOnly, DeployTimeConstant)
-
-## WorkerPool
-### Properties
-* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared'
-* **instanceNames**: string[] (ReadOnly)
-* **workerCount**: int
-* **workerSize**: string
-* **workerSizeId**: int
-
-## SkuDescription
-### Properties
-* **capabilities**: Capability[]
-* **capacity**: int
-* **family**: string
-* **locations**: string[]
-* **name**: string
-* **size**: string
-* **skuCapacity**: SkuCapacity
-* **tier**: string
-
-## Capability
-### Properties
-* **name**: string
-* **reason**: string
-* **value**: string
-
-## SkuCapacity
-### Properties
-* **default**: int
-* **maximum**: int
-* **minimum**: int
-* **scaleType**: string
-
-## Microsoft.Web/hostingEnvironments/workerPools
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkerPool
-* **sku**: SkuDescription
-* **type**: 'Microsoft.Web/hostingEnvironments/workerPools' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.Web/hostingEnvironments
 ### Properties
@@ -180,9 +126,9 @@
 
 ## VirtualIPMapping
 ### Properties
-* **inUse**: bool
 * **internalHttpPort**: int
 * **internalHttpsPort**: int
+* **inUse**: bool
 * **virtualIP**: string
 
 ## VirtualNetworkProfile
@@ -192,9 +138,63 @@
 * **subnet**: string
 * **type**: string (ReadOnly)
 
+## WorkerPool
+### Properties
+* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared'
+* **instanceNames**: string[] (ReadOnly)
+* **workerCount**: int
+* **workerSize**: string
+* **workerSizeId**: int
+
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Web/hostingEnvironments/multiRolePools
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkerPool
+* **sku**: SkuDescription
+* **type**: 'Microsoft.Web/hostingEnvironments/multiRolePools' (ReadOnly, DeployTimeConstant)
+
+## SkuDescription
+### Properties
+* **capabilities**: Capability[]
+* **capacity**: int
+* **family**: string
+* **locations**: string[]
+* **name**: string
+* **size**: string
+* **skuCapacity**: SkuCapacity
+* **tier**: string
+
+## Capability
+### Properties
+* **name**: string
+* **reason**: string
+* **value**: string
+
+## SkuCapacity
+### Properties
+* **default**: int
+* **maximum**: int
+* **minimum**: int
+* **scaleType**: string
+
+## Microsoft.Web/hostingEnvironments/workerPools
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkerPool
+* **sku**: SkuDescription
+* **type**: 'Microsoft.Web/hostingEnvironments/workerPools' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.Web/publishingUsers
 ### Properties
@@ -213,37 +213,6 @@
 * **publishingPasswordHashSalt**: string
 * **publishingUserName**: string (Required)
 * **scmUri**: string
-
-## Microsoft.Web/serverfarms/virtualNetworkConnections/gateways
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:72_properties
-* **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant)
-
-## schemas:72_properties
-### Properties
-* **vnetName**: string
-* **vpnPackageUri**: string (Required)
-
-## Microsoft.Web/serverfarms/virtualNetworkConnections/routes
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:74_properties
-* **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/routes' (ReadOnly, DeployTimeConstant)
-
-## schemas:74_properties
-### Properties
-* **endAddress**: string
-* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC'
-* **startAddress**: string
 
 ## Microsoft.Web/serverfarms
 ### Properties
@@ -284,436 +253,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Web/sites/deployments
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:175_properties
-* **type**: 'Microsoft.Web/sites/deployments' (ReadOnly, DeployTimeConstant)
-
-## schemas:175_properties
-### Properties
-* **active**: bool
-* **author**: string
-* **author_email**: string
-* **deployer**: string
-* **details**: string
-* **end_time**: string
-* **message**: string
-* **start_time**: string
-* **status**: int
-
-## Microsoft.Web/sites/domainOwnershipIdentifiers
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:30_properties
-* **type**: 'Microsoft.Web/sites/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant)
-
-## schemas:30_properties
-### Properties
-* **id**: string
-
-## Microsoft.Web/sites/extensions
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MSDeployCore
-* **type**: 'Microsoft.Web/sites/extensions' (ReadOnly, DeployTimeConstant)
-
-## MSDeployCore
-### Properties
-* **appOffline**: bool (WriteOnly)
-* **complete**: bool (ReadOnly)
-* **connectionString**: string (WriteOnly)
-* **dbType**: string (WriteOnly)
-* **deployer**: string (ReadOnly)
-* **endTime**: string (ReadOnly)
-* **packageUri**: string (WriteOnly)
-* **provisioningState**: 'accepted' | 'canceled' | 'failed' | 'running' | 'succeeded' (ReadOnly)
-* **setParameters**: Dictionary<string,String> (WriteOnly)
-* **setParametersXmlFileUri**: string (WriteOnly)
-* **skipAppData**: bool (WriteOnly)
-* **startTime**: string (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Web/sites/functions/keys
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Web/sites/functions/keys' (ReadOnly, DeployTimeConstant)
-* **value**: string
-
-## Microsoft.Web/sites/functions
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:180_properties
-* **type**: 'Microsoft.Web/sites/functions' (ReadOnly, DeployTimeConstant)
-
-## schemas:180_properties
-### Properties
-* **config**: any
-* **config_href**: string
-* **files**: Dictionary<string,String>
-* **function_app_id**: string
-* **href**: string
-* **invoke_url_template**: string
-* **isDisabled**: bool
-* **language**: string
-* **script_href**: string
-* **script_root_path_href**: string
-* **secrets_file_href**: string
-* **test_data**: string
-* **test_data_href**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Web/sites/hostNameBindings
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:184_properties
-* **type**: 'Microsoft.Web/sites/hostNameBindings' (ReadOnly, DeployTimeConstant)
-
-## schemas:184_properties
-### Properties
-* **azureResourceName**: string
-* **azureResourceType**: 'TrafficManager' | 'Website'
-* **customHostNameDnsRecordType**: 'A' | 'CName'
-* **domainId**: string
-* **hostNameType**: 'Managed' | 'Verified'
-* **siteName**: string
-* **sslState**: 'Disabled' | 'IpBasedEnabled' | 'SniEnabled'
-* **thumbprint**: string
-* **virtualIP**: string (ReadOnly)
-
-## Microsoft.Web/sites/hybridConnectionNamespaces/relays
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:28_properties
-* **type**: 'Microsoft.Web/sites/hybridConnectionNamespaces/relays' (ReadOnly, DeployTimeConstant)
-
-## schemas:28_properties
-### Properties
-* **hostname**: string
-* **port**: int
-* **relayArmUri**: string
-* **relayName**: string
-* **sendKeyName**: string
-* **sendKeyValue**: string
-* **serviceBusNamespace**: string
-* **serviceBusSuffix**: string
-
-## Microsoft.Web/sites/hybridconnection
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:214_properties
-* **type**: 'Microsoft.Web/sites/hybridconnection' (ReadOnly, DeployTimeConstant)
-
-## schemas:214_properties
-### Properties
-* **biztalkUri**: string
-* **entityConnectionString**: string
-* **entityName**: string
-* **hostname**: string
-* **port**: int
-* **resourceConnectionString**: string
-* **resourceType**: string
-
-## Microsoft.Web/sites/instances/extensions
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MSDeployCore
-* **type**: 'Microsoft.Web/sites/instances/extensions' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Web/sites/migrate
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:237_properties
-* **type**: 'Microsoft.Web/sites/migrate' (ReadOnly, DeployTimeConstant)
-
-## schemas:237_properties
-### Properties
-* **azurefilesConnectionString**: string (Required)
-* **azurefilesShare**: string (Required)
-* **blockWriteAccessToSite**: bool
-* **switchSiteAfterMigration**: bool
-
-## Microsoft.Web/sites/networkConfig
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:240_properties
-* **type**: 'Microsoft.Web/sites/networkConfig' (ReadOnly, DeployTimeConstant)
-
-## schemas:240_properties
-### Properties
-* **subnetResourceId**: string
-* **swiftSupported**: bool
-
-## Microsoft.Web/sites/premieraddons
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:201_properties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Web/sites/premieraddons' (ReadOnly, DeployTimeConstant)
-
-## schemas:201_properties
-### Properties
-* **marketplaceOffer**: string
-* **marketplacePublisher**: string
-* **product**: string
-* **sku**: string
-* **vendor**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Web/sites/privateAccess
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:203_properties
-* **type**: 'Microsoft.Web/sites/privateAccess' (ReadOnly, DeployTimeConstant)
-
-## schemas:203_properties
-### Properties
-* **enabled**: bool
-* **virtualNetworks**: PrivateAccessVirtualNetwork[]
-
-## PrivateAccessVirtualNetwork
-### Properties
-* **key**: int
-* **name**: string
-* **resourceId**: string
-* **subnets**: PrivateAccessSubnet[]
-
-## PrivateAccessSubnet
-### Properties
-* **key**: int
-* **name**: string
-
-## Microsoft.Web/sites/publicCertificates
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:212_properties
-* **type**: 'Microsoft.Web/sites/publicCertificates' (ReadOnly, DeployTimeConstant)
-
-## schemas:212_properties
-### Properties
-* **blob**: array
-* **publicCertificateLocation**: 'CurrentUserMy' | 'LocalMachineMy' | 'Unknown'
-* **thumbprint**: string (ReadOnly)
-
-## Microsoft.Web/sites/slots/deployments
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:175_properties
-* **type**: 'Microsoft.Web/sites/slots/deployments' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Web/sites/slots/domainOwnershipIdentifiers
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:30_properties
-* **type**: 'Microsoft.Web/sites/slots/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Web/sites/slots/extensions
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MSDeployCore
-* **type**: 'Microsoft.Web/sites/slots/extensions' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Web/sites/slots/functions/keys
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Web/sites/slots/functions/keys' (ReadOnly, DeployTimeConstant)
-* **value**: string
-
-## Microsoft.Web/sites/slots/functions
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:180_properties
-* **type**: 'Microsoft.Web/sites/slots/functions' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Web/sites/slots/hostNameBindings
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:184_properties
-* **type**: 'Microsoft.Web/sites/slots/hostNameBindings' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Web/sites/slots/hybridConnectionNamespaces/relays
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:28_properties
-* **type**: 'Microsoft.Web/sites/slots/hybridConnectionNamespaces/relays' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Web/sites/slots/hybridconnection
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:214_properties
-* **type**: 'Microsoft.Web/sites/slots/hybridconnection' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Web/sites/slots/instances/extensions
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MSDeployCore
-* **type**: 'Microsoft.Web/sites/slots/instances/extensions' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Web/sites/slots/networkConfig
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:240_properties
-* **type**: 'Microsoft.Web/sites/slots/networkConfig' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Web/sites/slots/premieraddons
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:201_properties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Web/sites/slots/premieraddons' (ReadOnly, DeployTimeConstant)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Web/sites/slots/privateAccess
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:203_properties
-* **type**: 'Microsoft.Web/sites/slots/privateAccess' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Web/sites/slots/publicCertificates
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:212_properties
-* **type**: 'Microsoft.Web/sites/slots/publicCertificates' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Web/sites/slots/sourcecontrols
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:229_properties
-* **type**: 'Microsoft.Web/sites/slots/sourcecontrols' (ReadOnly, DeployTimeConstant)
-
-## schemas:229_properties
-### Properties
-* **branch**: string
-* **deploymentRollbackEnabled**: bool
-* **isManualIntegration**: bool
-* **isMercurial**: bool
-* **repoUrl**: string
-
-## Microsoft.Web/sites/slots/virtualNetworkConnections/gateways
+## Microsoft.Web/serverfarms/virtualNetworkConnections/gateways
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -721,37 +261,30 @@
 * **kind**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: schemas:72_properties
-* **type**: 'Microsoft.Web/sites/slots/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant)
 
-## Microsoft.Web/sites/slots/virtualNetworkConnections
+## schemas:72_properties
+### Properties
+* **vnetName**: string
+* **vpnPackageUri**: string (Required)
+
+## Microsoft.Web/serverfarms/virtualNetworkConnections/routes
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:73_properties
-* **type**: 'Microsoft.Web/sites/slots/virtualNetworkConnections' (ReadOnly, DeployTimeConstant)
-
-## schemas:73_properties
-### Properties
-* **certBlob**: string
-* **certThumbprint**: string (ReadOnly)
-* **dnsServers**: string
-* **isSwift**: bool
-* **resyncRequired**: bool (ReadOnly)
-* **routes**: VnetRoute[] (ReadOnly)
-* **vnetResourceId**: string
-
-## VnetRoute
-### Properties
-* **id**: string (ReadOnly)
-* **kind**: string
-* **name**: string (ReadOnly)
 * **properties**: schemas:74_properties
-* **type**: string (ReadOnly)
+* **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/routes' (ReadOnly, DeployTimeConstant)
 
-## Microsoft.Web/sites/slots
+## schemas:74_properties
+### Properties
+* **endAddress**: string
+* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC'
+* **startAddress**: string
+
+## Microsoft.Web/sites
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -762,13 +295,13 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: schemas:56_properties
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Web/sites/slots' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.Web/sites' (ReadOnly, DeployTimeConstant)
 
 ## ManagedServiceIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
 * **userAssignedIdentities**: Dictionary<string,Schemas35UserAssignedIdentitiesValue>
 
 ## Dictionary<string,Schemas35UserAssignedIdentitiesValue>
@@ -793,10 +326,10 @@
 * **enabled**: bool
 * **enabledHostNames**: string[] (ReadOnly)
 * **geoDistributions**: GeoDistribution[]
-* **hostNameSslStates**: HostNameSslState[]
+* **hostingEnvironmentProfile**: HostingEnvironmentProfile
 * **hostNames**: string[] (ReadOnly)
 * **hostNamesDisabled**: bool
-* **hostingEnvironmentProfile**: HostingEnvironmentProfile
+* **hostNameSslStates**: HostNameSslState[]
 * **httpsOnly**: bool
 * **hyperV**: bool
 * **inProgressOperationId**: string (ReadOnly)
@@ -971,7 +504,7 @@
 ### Properties
 * **connectionString**: string
 * **name**: string
-* **type**: 'ApiHub' | 'Custom' | 'DocDb' | 'EventHub' | 'MySql' | 'NotificationHub' | 'PostgreSQL' | 'RedisCache' | 'SQLAzure' | 'SQLServer' | 'ServiceBus'
+* **type**: 'ApiHub' | 'Custom' | 'DocDb' | 'EventHub' | 'MySql' | 'NotificationHub' | 'PostgreSQL' | 'RedisCache' | 'ServiceBus' | 'SQLAzure' | 'SQLServer'
 
 ## CorsSettings
 ### Properties
@@ -1037,8 +570,8 @@
 ### Properties
 * **dynamicTagsJson**: string
 * **isPushEnabled**: bool (Required)
-* **tagWhitelistJson**: string
 * **tagsRequiringAuth**: string
+* **tagWhitelistJson**: string
 
 ## VirtualApplication
 ### Properties
@@ -1062,6 +595,490 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.Web/sites/deployments
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:175_properties
+* **type**: 'Microsoft.Web/sites/deployments' (ReadOnly, DeployTimeConstant)
+
+## schemas:175_properties
+### Properties
+* **active**: bool
+* **author**: string
+* **author_email**: string
+* **deployer**: string
+* **details**: string
+* **end_time**: string
+* **message**: string
+* **start_time**: string
+* **status**: int
+
+## Microsoft.Web/sites/domainOwnershipIdentifiers
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:30_properties
+* **type**: 'Microsoft.Web/sites/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant)
+
+## schemas:30_properties
+### Properties
+* **id**: string
+
+## Microsoft.Web/sites/extensions
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MSDeployCore
+* **type**: 'Microsoft.Web/sites/extensions' (ReadOnly, DeployTimeConstant)
+
+## MSDeployCore
+### Properties
+* **appOffline**: bool (WriteOnly)
+* **complete**: bool (ReadOnly)
+* **connectionString**: string (WriteOnly)
+* **dbType**: string (WriteOnly)
+* **deployer**: string (ReadOnly)
+* **endTime**: string (ReadOnly)
+* **packageUri**: string (WriteOnly)
+* **provisioningState**: 'accepted' | 'canceled' | 'failed' | 'running' | 'succeeded' (ReadOnly)
+* **setParameters**: Dictionary<string,String> (WriteOnly)
+* **setParametersXmlFileUri**: string (WriteOnly)
+* **skipAppData**: bool (WriteOnly)
+* **startTime**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/functions
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:180_properties
+* **type**: 'Microsoft.Web/sites/functions' (ReadOnly, DeployTimeConstant)
+
+## schemas:180_properties
+### Properties
+* **config**: any
+* **config_href**: string
+* **files**: Dictionary<string,String>
+* **function_app_id**: string
+* **href**: string
+* **invoke_url_template**: string
+* **isDisabled**: bool
+* **language**: string
+* **script_href**: string
+* **script_root_path_href**: string
+* **secrets_file_href**: string
+* **test_data**: string
+* **test_data_href**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/functions/keys
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.Web/sites/functions/keys' (ReadOnly, DeployTimeConstant)
+* **value**: string
+
+## Microsoft.Web/sites/hostNameBindings
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:184_properties
+* **type**: 'Microsoft.Web/sites/hostNameBindings' (ReadOnly, DeployTimeConstant)
+
+## schemas:184_properties
+### Properties
+* **azureResourceName**: string
+* **azureResourceType**: 'TrafficManager' | 'Website'
+* **customHostNameDnsRecordType**: 'A' | 'CName'
+* **domainId**: string
+* **hostNameType**: 'Managed' | 'Verified'
+* **siteName**: string
+* **sslState**: 'Disabled' | 'IpBasedEnabled' | 'SniEnabled'
+* **thumbprint**: string
+* **virtualIP**: string (ReadOnly)
+
+## Microsoft.Web/sites/hybridconnection
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:214_properties
+* **type**: 'Microsoft.Web/sites/hybridconnection' (ReadOnly, DeployTimeConstant)
+
+## schemas:214_properties
+### Properties
+* **biztalkUri**: string
+* **entityConnectionString**: string
+* **entityName**: string
+* **hostname**: string
+* **port**: int
+* **resourceConnectionString**: string
+* **resourceType**: string
+
+## Microsoft.Web/sites/hybridConnectionNamespaces/relays
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:28_properties
+* **type**: 'Microsoft.Web/sites/hybridConnectionNamespaces/relays' (ReadOnly, DeployTimeConstant)
+
+## schemas:28_properties
+### Properties
+* **hostname**: string
+* **port**: int
+* **relayArmUri**: string
+* **relayName**: string
+* **sendKeyName**: string
+* **sendKeyValue**: string
+* **serviceBusNamespace**: string
+* **serviceBusSuffix**: string
+
+## Microsoft.Web/sites/instances/extensions
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MSDeployCore
+* **type**: 'Microsoft.Web/sites/instances/extensions' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/migrate
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:237_properties
+* **type**: 'Microsoft.Web/sites/migrate' (ReadOnly, DeployTimeConstant)
+
+## schemas:237_properties
+### Properties
+* **azurefilesConnectionString**: string (Required)
+* **azurefilesShare**: string (Required)
+* **blockWriteAccessToSite**: bool
+* **switchSiteAfterMigration**: bool
+
+## Microsoft.Web/sites/networkConfig
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:240_properties
+* **type**: 'Microsoft.Web/sites/networkConfig' (ReadOnly, DeployTimeConstant)
+
+## schemas:240_properties
+### Properties
+* **subnetResourceId**: string
+* **swiftSupported**: bool
+
+## Microsoft.Web/sites/premieraddons
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:201_properties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Web/sites/premieraddons' (ReadOnly, DeployTimeConstant)
+
+## schemas:201_properties
+### Properties
+* **marketplaceOffer**: string
+* **marketplacePublisher**: string
+* **product**: string
+* **sku**: string
+* **vendor**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/privateAccess
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:203_properties
+* **type**: 'Microsoft.Web/sites/privateAccess' (ReadOnly, DeployTimeConstant)
+
+## schemas:203_properties
+### Properties
+* **enabled**: bool
+* **virtualNetworks**: PrivateAccessVirtualNetwork[]
+
+## PrivateAccessVirtualNetwork
+### Properties
+* **key**: int
+* **name**: string
+* **resourceId**: string
+* **subnets**: PrivateAccessSubnet[]
+
+## PrivateAccessSubnet
+### Properties
+* **key**: int
+* **name**: string
+
+## Microsoft.Web/sites/publicCertificates
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:212_properties
+* **type**: 'Microsoft.Web/sites/publicCertificates' (ReadOnly, DeployTimeConstant)
+
+## schemas:212_properties
+### Properties
+* **blob**: array
+* **publicCertificateLocation**: 'CurrentUserMy' | 'LocalMachineMy' | 'Unknown'
+* **thumbprint**: string (ReadOnly)
+
+## Microsoft.Web/sites/slots
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: ManagedServiceIdentity
+* **kind**: string
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:56_properties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Web/sites/slots' (ReadOnly, DeployTimeConstant)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/slots/deployments
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:175_properties
+* **type**: 'Microsoft.Web/sites/slots/deployments' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/slots/domainOwnershipIdentifiers
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:30_properties
+* **type**: 'Microsoft.Web/sites/slots/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/slots/extensions
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MSDeployCore
+* **type**: 'Microsoft.Web/sites/slots/extensions' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/slots/functions
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:180_properties
+* **type**: 'Microsoft.Web/sites/slots/functions' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/slots/functions/keys
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.Web/sites/slots/functions/keys' (ReadOnly, DeployTimeConstant)
+* **value**: string
+
+## Microsoft.Web/sites/slots/hostNameBindings
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:184_properties
+* **type**: 'Microsoft.Web/sites/slots/hostNameBindings' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/slots/hybridconnection
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:214_properties
+* **type**: 'Microsoft.Web/sites/slots/hybridconnection' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/slots/hybridConnectionNamespaces/relays
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:28_properties
+* **type**: 'Microsoft.Web/sites/slots/hybridConnectionNamespaces/relays' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/slots/instances/extensions
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MSDeployCore
+* **type**: 'Microsoft.Web/sites/slots/instances/extensions' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/slots/networkConfig
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:240_properties
+* **type**: 'Microsoft.Web/sites/slots/networkConfig' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/slots/premieraddons
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:201_properties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Web/sites/slots/premieraddons' (ReadOnly, DeployTimeConstant)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/slots/privateAccess
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:203_properties
+* **type**: 'Microsoft.Web/sites/slots/privateAccess' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/slots/publicCertificates
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:212_properties
+* **type**: 'Microsoft.Web/sites/slots/publicCertificates' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/slots/sourcecontrols
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:229_properties
+* **type**: 'Microsoft.Web/sites/slots/sourcecontrols' (ReadOnly, DeployTimeConstant)
+
+## schemas:229_properties
+### Properties
+* **branch**: string
+* **deploymentRollbackEnabled**: bool
+* **isManualIntegration**: bool
+* **isMercurial**: bool
+* **repoUrl**: string
+
+## Microsoft.Web/sites/slots/virtualNetworkConnections
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:73_properties
+* **type**: 'Microsoft.Web/sites/slots/virtualNetworkConnections' (ReadOnly, DeployTimeConstant)
+
+## schemas:73_properties
+### Properties
+* **certBlob**: string
+* **certThumbprint**: string (ReadOnly)
+* **dnsServers**: string
+* **isSwift**: bool
+* **resyncRequired**: bool (ReadOnly)
+* **routes**: VnetRoute[] (ReadOnly)
+* **vnetResourceId**: string
+
+## VnetRoute
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: schemas:74_properties
+* **type**: string (ReadOnly)
+
+## Microsoft.Web/sites/slots/virtualNetworkConnections/gateways
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:72_properties
+* **type**: 'Microsoft.Web/sites/slots/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant)
+
 ## Microsoft.Web/sites/sourcecontrols
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
@@ -1071,16 +1088,6 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: schemas:229_properties
 * **type**: 'Microsoft.Web/sites/sourcecontrols' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Web/sites/virtualNetworkConnections/gateways
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:72_properties
-* **type**: 'Microsoft.Web/sites/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.Web/sites/virtualNetworkConnections
 ### Properties
@@ -1092,22 +1099,15 @@
 * **properties**: schemas:73_properties
 * **type**: 'Microsoft.Web/sites/virtualNetworkConnections' (ReadOnly, DeployTimeConstant)
 
-## Microsoft.Web/sites
+## Microsoft.Web/sites/virtualNetworkConnections/gateways
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ManagedServiceIdentity
 * **kind**: string
-* **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:56_properties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Web/sites' (ReadOnly, DeployTimeConstant)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
+* **properties**: schemas:72_properties
+* **type**: 'Microsoft.Web/sites/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant)
 
 ## Microsoft.Web/sourcecontrols
 ### Properties

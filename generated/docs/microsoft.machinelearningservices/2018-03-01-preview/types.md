@@ -1,5 +1,41 @@
 # Microsoft.MachineLearningServices @ 2018-03-01-preview
 
+## Microsoft.MachineLearningServices/workspaces
+### Properties
+* **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkspaceProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant)
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'SystemAssigned'
+
+## WorkspaceProperties
+### Properties
+* **applicationInsights**: string
+* **batchaiWorkspace**: string
+* **containerRegistry**: string
+* **creationTime**: string (ReadOnly)
+* **description**: string
+* **discoveryUrl**: string
+* **friendlyName**: string
+* **keyVault**: string
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
+* **storageAccount**: string
+* **workspaceId**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.MachineLearningServices/workspaces/computes
 ### Properties
 * **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant)
@@ -11,12 +47,6 @@
 * **properties**: Compute
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant)
-
-## Identity
-### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'SystemAssigned'
 
 ## Compute
 * **Discriminator**: computeType
@@ -138,36 +168,6 @@
 ### Properties
 * **computeType**: 'VirtualMachine' (Required)
 * **properties**: schemas:17_properties
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.MachineLearningServices/workspaces
-### Properties
-* **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant)
-
-## WorkspaceProperties
-### Properties
-* **applicationInsights**: string
-* **batchaiWorkspace**: string
-* **containerRegistry**: string
-* **creationTime**: string (ReadOnly)
-* **description**: string
-* **discoveryUrl**: string
-* **friendlyName**: string
-* **keyVault**: string
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
-* **storageAccount**: string
-* **workspaceId**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Additional Properties

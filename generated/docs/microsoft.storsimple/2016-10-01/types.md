@@ -1,5 +1,35 @@
 # Microsoft.StorSimple @ 2016-10-01
 
+## Microsoft.StorSimple/managers
+### Properties
+* **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ManagerProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.StorSimple/managers' (ReadOnly, DeployTimeConstant)
+
+## ManagerProperties
+### Properties
+* **cisIntrinsicSettings**: ManagerIntrinsicSettings
+* **provisioningState**: string (ReadOnly)
+* **sku**: ManagerSku
+
+## ManagerIntrinsicSettings
+### Properties
+* **type**: 'GardaV1' | 'HelsinkiV1' (Required)
+
+## ManagerSku
+### Properties
+* **name**: string (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.StorSimple/managers/accessControlRecords
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
@@ -81,6 +111,22 @@
 * **encryptionCertificateThumbprint**: string
 * **value**: string (Required)
 
+## Microsoft.StorSimple/managers/devices/fileservers
+### Properties
+* **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: FileServerProperties (Required)
+* **type**: 'Microsoft.StorSimple/managers/devices/fileservers' (ReadOnly, DeployTimeConstant)
+
+## FileServerProperties
+### Properties
+* **backupScheduleGroupId**: string (Required)
+* **description**: string
+* **domainName**: string (Required)
+* **storageDomainId**: string (Required)
+
 ## Microsoft.StorSimple/managers/devices/fileservers/shares
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
@@ -101,20 +147,21 @@
 * **shareStatus**: 'Offline' | 'Online' (Required)
 * **usedCapacityInBytes**: int (ReadOnly)
 
-## Microsoft.StorSimple/managers/devices/fileservers
+## Microsoft.StorSimple/managers/devices/iscsiservers
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: FileServerProperties (Required)
-* **type**: 'Microsoft.StorSimple/managers/devices/fileservers' (ReadOnly, DeployTimeConstant)
+* **properties**: ISCSIServerProperties (Required)
+* **type**: 'Microsoft.StorSimple/managers/devices/iscsiservers' (ReadOnly, DeployTimeConstant)
 
-## FileServerProperties
+## ISCSIServerProperties
 ### Properties
 * **backupScheduleGroupId**: string (Required)
+* **chapId**: string
 * **description**: string
-* **domainName**: string (Required)
+* **reverseChapId**: string
 * **storageDomainId**: string (Required)
 
 ## Microsoft.StorSimple/managers/devices/iscsiservers/disks
@@ -136,23 +183,6 @@
 * **monitoringStatus**: 'Disabled' | 'Enabled' (Required)
 * **provisionedCapacityInBytes**: int (Required)
 * **usedCapacityInBytes**: int (ReadOnly)
-
-## Microsoft.StorSimple/managers/devices/iscsiservers
-### Properties
-* **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ISCSIServerProperties (Required)
-* **type**: 'Microsoft.StorSimple/managers/devices/iscsiservers' (ReadOnly, DeployTimeConstant)
-
-## ISCSIServerProperties
-### Properties
-* **backupScheduleGroupId**: string (Required)
-* **chapId**: string
-* **description**: string
-* **reverseChapId**: string
-* **storageDomainId**: string (Required)
 
 ## Microsoft.StorSimple/managers/extendedInformation
 ### Properties
@@ -185,7 +215,7 @@
 ## StorageAccountCredentialProperties
 ### Properties
 * **accessKey**: AsymmetricEncryptedSecret
-* **cloudType**: 'Azure' | 'HP' | 'OpenStack' | 'S3' | 'S3_RRS' (Required)
+* **cloudType**: 'Azure' | 'HP' | 'OpenStack' | 'S3_RRS' | 'S3' (Required)
 * **enableSSL**: 'Disabled' | 'Enabled' (Required)
 * **endPoint**: string (Required)
 * **location**: string
@@ -205,34 +235,4 @@
 * **encryptionKey**: AsymmetricEncryptedSecret
 * **encryptionStatus**: 'Disabled' | 'Enabled' (Required)
 * **storageAccountCredentialIds**: string[] (Required)
-
-## Microsoft.StorSimple/managers
-### Properties
-* **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagerProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.StorSimple/managers' (ReadOnly, DeployTimeConstant)
-
-## ManagerProperties
-### Properties
-* **cisIntrinsicSettings**: ManagerIntrinsicSettings
-* **provisioningState**: string (ReadOnly)
-* **sku**: ManagerSku
-
-## ManagerIntrinsicSettings
-### Properties
-* **type**: 'GardaV1' | 'HelsinkiV1' (Required)
-
-## ManagerSku
-### Properties
-* **name**: string (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 

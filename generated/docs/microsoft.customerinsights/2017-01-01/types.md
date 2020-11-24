@@ -1,5 +1,34 @@
 # Microsoft.CustomerInsights @ 2017-01-01
 
+## Microsoft.CustomerInsights/hubs
+### Properties
+* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: HubPropertiesFormat
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.CustomerInsights/hubs' (ReadOnly, DeployTimeConstant)
+
+## HubPropertiesFormat
+### Properties
+* **apiEndpoint**: string (ReadOnly)
+* **hubBillingInfo**: HubBillingInfoFormat
+* **provisioningState**: string (ReadOnly)
+* **tenantFeatures**: int
+* **webEndpoint**: string (ReadOnly)
+
+## HubBillingInfoFormat
+### Properties
+* **maxUnits**: int
+* **minUnits**: int
+* **skuName**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Microsoft.CustomerInsights/hubs/authorizationPolicies
 ### Properties
 * **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
@@ -15,6 +44,33 @@
 * **policyName**: string (ReadOnly)
 * **primaryKey**: string
 * **secondaryKey**: string
+
+## Microsoft.CustomerInsights/hubs/connectors
+### Properties
+* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: Connector
+* **type**: 'Microsoft.CustomerInsights/hubs/connectors' (ReadOnly, DeployTimeConstant)
+
+## Connector
+### Properties
+* **connectorId**: int (ReadOnly)
+* **connectorName**: string
+* **connectorProperties**: Dictionary<string,Object> (Required)
+* **connectorType**: 'AzureBlob' | 'CRM' | 'ExchangeOnline' | 'None' | 'Outbound' | 'Salesforce' (Required)
+* **created**: string (ReadOnly)
+* **description**: string
+* **displayName**: string
+* **isInternal**: bool
+* **lastModified**: string (ReadOnly)
+* **state**: 'Created' | 'Creating' | 'Deleting' | 'Expiring' | 'Failed' | 'Ready' (ReadOnly)
+* **tenantId**: string (ReadOnly)
+
+## Dictionary<string,Object>
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## Microsoft.CustomerInsights/hubs/connectors/mappings
 ### Properties
@@ -84,33 +140,6 @@
 * **customFormatSpecifier**: string
 * **isEncrypted**: bool
 * **propertyName**: string (Required)
-
-## Microsoft.CustomerInsights/hubs/connectors
-### Properties
-* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: Connector
-* **type**: 'Microsoft.CustomerInsights/hubs/connectors' (ReadOnly, DeployTimeConstant)
-
-## Connector
-### Properties
-* **connectorId**: int (ReadOnly)
-* **connectorName**: string
-* **connectorProperties**: Dictionary<string,Object> (Required)
-* **connectorType**: 'AzureBlob' | 'CRM' | 'ExchangeOnline' | 'None' | 'Outbound' | 'Salesforce' (Required)
-* **created**: string (ReadOnly)
-* **description**: string
-* **displayName**: string
-* **isInternal**: bool
-* **lastModified**: string (ReadOnly)
-* **state**: 'Created' | 'Creating' | 'Deleting' | 'Expiring' | 'Failed' | 'Ready' (ReadOnly)
-* **tenantId**: string (ReadOnly)
-
-## Dictionary<string,Object>
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## Microsoft.CustomerInsights/hubs/interactions
 ### Properties
@@ -553,35 +582,6 @@
 * **tenantId**: string (ReadOnly)
 * **userId**: string
 * **viewName**: string (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.CustomerInsights/hubs
-### Properties
-* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: HubPropertiesFormat
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.CustomerInsights/hubs' (ReadOnly, DeployTimeConstant)
-
-## HubPropertiesFormat
-### Properties
-* **apiEndpoint**: string (ReadOnly)
-* **hubBillingInfo**: HubBillingInfoFormat
-* **provisioningState**: string (ReadOnly)
-* **tenantFeatures**: int
-* **webEndpoint**: string (ReadOnly)
-
-## HubBillingInfoFormat
-### Properties
-* **maxUnits**: int
-* **minUnits**: int
-* **skuName**: string
 
 ## Dictionary<string,String>
 ### Additional Properties
