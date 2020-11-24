@@ -30,7 +30,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1.7.2
         with:
-          dotnet-version: 3.1.301
+          dotnet-version: 5.0.100
 
       - name: Clone azure-rest-api-specs
         uses: actions/checkout@v2
@@ -62,18 +62,20 @@ jobs:
         run: rsync -a ./bicep-types-az.generator/bicep-types/* ./bicep-types-az/generated
 
       - name: Rebuild index
-        run: dotnet ./bicep-types-az.generator/src/Bicep.TypeIndexBuilder/bin/Release/netcoreapp3.1/Bicep.TypeIndexBuilder.dll ./bicep-types-az/generated
+        run: dotnet ./bicep-types-az.generator/src/Bicep.TypeIndexBuilder/bin/Release/net5.0/Bicep.TypeIndexBuilder.dll ./bicep-types-az/generated
 
-      - name: Set rest_api_sha env variable
+      - id: get_restapi_sha
+        name: Get SHA for azure-rest-api-specs
         run: |
-          rest_api_sha=`git rev-parse --short HEAD`
-          echo "::set-env name=rest_api_sha::$rest_api_sha"
+          git_sha=`git rev-parse --short HEAD`
+          echo "::set-output name=git_sha::$git_sha"
         working-directory: azure-rest-api-specs
 
-      - name: Set generator_sha env variable
+      - id: get_generator_sha
+        name: Get SHA for bicep-types-az.generator
         run: |
-          generator_sha=`git rev-parse --short HEAD`
-          echo "::set-env name=generator_sha::$generator_sha"
+          git_sha=`git rev-parse --short HEAD`
+          echo "::set-output name=git_sha::$git_sha"
         working-directory: bicep-types-az.generator
 
       - name: Create Pull Request
@@ -88,7 +90,7 @@ jobs:
           delete-branch: true
           title: Update Generated Types
           body: |
-            Generate types for https://github.com/Azure/azure-rest-api-specs/tree/${{ env.rest_api_sha }}
-            Used generator from https://github.com/Azure/bicep-types-az.generator/tree/${{ env.generator_sha }}
+            Generate types for https://github.com/Azure/azure-rest-api-specs/tree/${{ steps.get_restapi_sha.outputs.git_sha }}
+            Used generator from https://github.com/Azure/bicep-types-az.generator/tree/${{ steps.get_generator_sha.outputs.git_sha }}
           labels: autogenerate
           draft: false
