@@ -1,3 +1,19 @@
+<#
+Prerequisites:
+- latest nuget.exe somewhere on your machine
+- API key to nuget.org with appropriate permissions (this is only available to Bicep team admins)
+
+Parameters:
+- PackageDirectory - directory where the nuget packages to publish are located. This should come from
+                     official build artifacts.
+
+- NuGetPath        - directory containing the nuget tool you want to use. If not specified, PATH will 
+                     be used.
+
+Usage example:
+  .\PublishPackages.ps1 -PackageDirectory D:\NugetUpload\drop_build_main -NuGetPath D:\NugetUpload
+#>
+
 param (
     [Parameter(Mandatory = $true)]
     [string]
