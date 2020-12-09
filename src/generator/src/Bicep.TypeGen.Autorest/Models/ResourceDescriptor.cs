@@ -4,7 +4,7 @@ using AutoRest.Core.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
+using Azure.Bicep.Types.Concrete;
 
 namespace Azure.Bicep.TypeGen.Autorest.Models
 {

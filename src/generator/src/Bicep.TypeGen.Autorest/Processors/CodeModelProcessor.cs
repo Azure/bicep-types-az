@@ -101,7 +101,7 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
             }
             else if (subscriptionPrefix.IsMatch(parentScope))
             {
-                scopeType = ScopeType.Subcription;
+                scopeType = ScopeType.Subscription;
             }
             else if (parentScopePrefix.IsMatch(parentScope))
             {
@@ -194,12 +194,23 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                     }
                     var providerDefinition = providerDefinitions[descriptor.ProviderNamespace];
 
-                    providerDefinition.ResourceDefinitions.Add(new ResourceDefinition
+                    var existingResourceDefinition = providerDefinition.ResourceDefinitions
+                        .FirstOrDefault(x => StringComparer.OrdinalIgnoreCase.Equals(x.Descriptor.FullyQualifiedType, descriptor.FullyQualifiedType));
+
+                    if (existingResourceDefinition == null)
                     {
-                        Descriptor = descriptor,
-                        DeclaringMethod = putMethod,
-                        GetMethod = getMethod,
-                    });
+                        providerDefinition.ResourceDefinitions.Add(new ResourceDefinition
+                        {
+                            Descriptor = descriptor,
+                            DeclaringMethod = putMethod,
+                            GetMethod = getMethod,
+                        });
+                    }
+                    else
+                    {
+                        // the same resource type has been declared at a different scope - combine the two definitions into one
+                        existingResourceDefinition.Descriptor.ScopeType |= descriptor.ScopeType;
+                    }
                 }
             }
 
