@@ -62,8 +62,7 @@ namespace Azure.Bicep.TypeGen.Index
 
                     if (typeDictionary.ContainsKey(resourceType.Name))
                     {
-                        Console.WriteLine($"WARNING: Found duplicate type {resourceType.Name}");
-                        continue;
+                        throw new ArgumentException($"Found duplicate resource definition for \"{resourceType.Name}\"");
                     }
 
                     typeDictionary.Add(resourceType.Name, new TypeLocation
