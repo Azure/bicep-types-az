@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../../Bicep.Types/Bicep.Types.csproj" />
+    <ProjectReference Include="../../../Bicep.Types.Az/Bicep.Types.Az.csproj" />
+  </ItemGroup>
+
+</Project>
