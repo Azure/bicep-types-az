@@ -23,74 +23,51 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          path: bicep-types-az
           fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
           submodules: true
 
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1.7.2
-        with:
-          dotnet-version: 5.0.100
 
       - name: Clone azure-rest-api-specs
         uses: actions/checkout@v2
         with:
           repository: Azure/azure-rest-api-specs
-          path: azure-rest-api-specs
+          path: workflow-temp/azure-rest-api-specs
           ref: ${{ github.event.inputs.api_specs_ref }}
-
-      - name: Clone bicep-types-az.generator
-        uses: actions/checkout@v2
-        with:
-          repository: Azure/bicep-types-az.generator
-          path: bicep-types-az.generator
-          submodules: true
       
       - name: Build generator
         run: dotnet build --configuration release
-        working-directory: bicep-types-az.generator
       
       - name: Install generator npm packages
         run: npm install
-        working-directory: bicep-types-az.generator
+        working-directory: src/generator
       
       - name: Run generator
-        run: npm run generate -- ../azure-rest-api-specs
-        working-directory: bicep-types-az.generator
+        run: npm run generate -- --specs-dir ../../workflow-temp/azure-rest-api-specs --out-dir ../../generated --log-file ../../generation.out
+        working-directory: src/generator
 
-      - name: Copy generated files
-        run: rsync -a ./bicep-types-az.generator/bicep-types/* ./bicep-types-az/generated
-
-      - name: Rebuild index
-        run: dotnet ./bicep-types-az.generator/src/Bicep.TypeIndexBuilder/bin/Release/net5.0/Bicep.TypeIndexBuilder.dll ./bicep-types-az/generated
-
-      - id: get_restapi_sha
-        name: Get SHA for azure-rest-api-specs
+      - id: get_swagger_gh_uri
+        name: Get GitHub URI for azure-rest-api-specs
         run: |
           git_sha=`git rev-parse --short HEAD`
-          echo "::set-output name=git_sha::$git_sha"
-        working-directory: azure-rest-api-specs
-
-      - id: get_generator_sha
-        name: Get SHA for bicep-types-az.generator
-        run: |
-          git_sha=`git rev-parse --short HEAD`
-          echo "::set-output name=git_sha::$git_sha"
-        working-directory: bicep-types-az.generator
+          echo "::set-output name=gh_uri::https://github.com/Azure/azure-rest-api-specs/tree/$git_sha"
+        working-directory: workflow-temp/azure-rest-api-specs
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          path: bicep-types-az
-          commit-message: Generate types for https://github.com/Azure/azure-rest-api-specs/tree/${{ env.rest_api_sha }}
+          commit-message: |
+            Update Generated Types
+            
+            Generate types for ${{ steps.get_swagger_gh_uri.outputs.gh_uri }}
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
           branch: autogenerate
+          branch-suffix: short-commit-hash
           delete-branch: true
           title: Update Generated Types
-          body: |
-            Generate types for https://github.com/Azure/azure-rest-api-specs/tree/${{ steps.get_restapi_sha.outputs.git_sha }}
-            Used generator from https://github.com/Azure/bicep-types-az.generator/tree/${{ steps.get_generator_sha.outputs.git_sha }}
+          body: Generate types for ${{ steps.get_swagger_gh_uri.outputs.gh_uri }}
           labels: autogenerate
           draft: false

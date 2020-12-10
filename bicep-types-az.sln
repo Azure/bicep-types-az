@@ -11,6 +11,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bicep.Types.UnitTests", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bicep.Types.Az.UnitTests", "src\Bicep.Types.Az.UnitTests\Bicep.Types.Az.UnitTests.csproj", "{F63447B8-2EC0-4C49-8E99-FF135275ECDF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{72C40400-136A-462C-B0A2-107A57E3092C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "generator", "generator", "{1DE3722A-29C6-4C09-8439-21D0324F9C71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BFE13642-B71E-438B-9298-B87AB5F06054}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicep.TypeGen.Index", "src\generator\src\Bicep.TypeGen.Index\Bicep.TypeGen.Index.csproj", "{76C902A3-FDE8-496E-BE10-599998457BFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicep.TypeGen.Autorest", "src\generator\src\Bicep.TypeGen.Autorest\Bicep.TypeGen.Autorest.csproj", "{CAA56EDD-3EEE-4089-992E-778C6E54EB43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,11 +43,25 @@ Global
 		{F63447B8-2EC0-4C49-8E99-FF135275ECDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F63447B8-2EC0-4C49-8E99-FF135275ECDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F63447B8-2EC0-4C49-8E99-FF135275ECDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76C902A3-FDE8-496E-BE10-599998457BFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76C902A3-FDE8-496E-BE10-599998457BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76C902A3-FDE8-496E-BE10-599998457BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76C902A3-FDE8-496E-BE10-599998457BFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAA56EDD-3EEE-4089-992E-778C6E54EB43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAA56EDD-3EEE-4089-992E-778C6E54EB43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAA56EDD-3EEE-4089-992E-778C6E54EB43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAA56EDD-3EEE-4089-992E-778C6E54EB43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C4E85544-D311-47E7-BF1F-1B5C152ACADA}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1DE3722A-29C6-4C09-8439-21D0324F9C71} = {72C40400-136A-462C-B0A2-107A57E3092C}
+		{BFE13642-B71E-438B-9298-B87AB5F06054} = {1DE3722A-29C6-4C09-8439-21D0324F9C71}
+		{76C902A3-FDE8-496E-BE10-599998457BFB} = {BFE13642-B71E-438B-9298-B87AB5F06054}
+		{CAA56EDD-3EEE-4089-992E-778C6E54EB43} = {BFE13642-B71E-438B-9298-B87AB5F06054}
 	EndGlobalSection
 EndGlobal
