@@ -1,15 +1,17 @@
 import os from 'os';
 import path from 'path';
+import { createWriteStream, existsSync, rmSync } from 'fs';
 import { readdir, stat, rmdir, mkdir } from 'fs/promises';
 import { series } from 'async';
 import { spawn } from 'child_process';
 import chalk from 'chalk';
+import stripAnsi from 'strip-ansi';
 import yargs from 'yargs';
-import { existsSync } from 'fs';
 
 const args = yargs
   .option('specs-dir', { type: 'string', demandOption: true, desc: 'Path to the azure-rest-api-specs dir' })
   .option('out-dir', { type: 'string', demandOption: true, desc: 'Output path for generated files' })
+  .option('log-file', { type: 'string', demandOption: true, desc: 'Output file for logging' })
   .option('verbose', { type: 'boolean', default: false, desc: 'Enable autorest verbose logging' })
   .option('wait-for-debugger', { type: 'boolean', default: false, desc: 'Wait for a C# debugger to be attached before running the Autorest extension' })
   .argv;
@@ -17,8 +19,8 @@ const args = yargs
 const extensionDir = path.resolve(`${__dirname}/../`);
 const autorestDll = path.resolve(`${extensionDir}/src/Bicep.TypeGen.Autorest/bin/net5.0/Bicep.TypeGen.Autorest.dll`);
 const indexBuilderDll = path.resolve(`${extensionDir}/src/Bicep.TypeGen.Index/bin/net5.0/Bicep.TypeGen.Index.dll`);
-
 const autorestBinary = os.platform() === 'win32' ? 'autorest.cmd' : 'autorest';
+const { writeOut, writeErr } = getLoggers(args['log-file']);
 
 executeSynchronous(async () => {
   const inputBaseDir = path.resolve(args['specs-dir']);
@@ -49,7 +51,7 @@ executeSynchronous(async () => {
     try {
       await generateSchema(path, outputBaseDir, verbose, waitForDebugger);
     } catch (e) {
-      console.log(e);
+      writeOut(e);
     }
   }
 
@@ -129,8 +131,8 @@ async function findRecursive(basePath: string, filter: (name: string) => boolean
 
 function executeCmd(cwd: string, cmd: string, args: string[]) : Promise<number> {
   return new Promise((resolve, reject) => {
-    console.log();
-    console.log(chalk.green(`Executing: ${cmd} ${args.join(' ')}`));
+    writeOut('');
+    writeOut(chalk.green(`Executing: ${cmd} ${args.join(' ')}`));
 
     const child = spawn(cmd, args, {
       cwd: cwd,
@@ -138,8 +140,8 @@ function executeCmd(cwd: string, cmd: string, args: string[]) : Promise<number> 
       shell: true,
     });
 
-    child.stdout.on('data', data => process.stdout.write(chalk.grey(data.toString())));
-    child.stderr.on('data', data => process.stdout.write(chalk.red(data.toString())));
+    child.stdout.on('data', data => writeOut(chalk.grey(data.toString())));
+    child.stderr.on('data', data => writeErr(chalk.red(data.toString())));
 
     child.on('error', err => {
       reject(err);
@@ -172,4 +174,20 @@ function lowerCaseCompare(a: string, b: string) {
   }
 
   return aLower < bLower ? -1 : 1;
+}
+
+function getLoggers(logFilePath: string): { writeOut: (data: string) => void, writeErr: (data: string) => void } {
+  rmSync(logFilePath, { force: true });
+  const logFileStream = createWriteStream(logFilePath, { flags: 'a' });
+
+  return {
+    writeOut: (data: string) => {
+      process.stdout.write(data);
+      logFileStream.write(stripAnsi(data));
+    },
+    writeErr: (data: string) => {
+      process.stdout.write(data);
+      logFileStream.write(stripAnsi(data));
+    },
+  };
 }

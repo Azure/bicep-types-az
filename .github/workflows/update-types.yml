@@ -44,7 +44,7 @@ jobs:
         working-directory: src/generator
       
       - name: Run generator
-        run: npm run generate -- --specs-dir ../../workflow-temp/azure-rest-api-specs --out-dir ../../generated
+        run: npm run generate -- --specs-dir ../../workflow-temp/azure-rest-api-specs --out-dir ../../generated --log-file ../../generation.out
         working-directory: src/generator
 
       - id: get_swagger_gh_uri
