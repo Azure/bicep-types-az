@@ -84,7 +84,7 @@
 ### Properties
 * **enterpriseAppId**: string
 * **singleSignOnState**: 'Disable' | 'Enable' | 'Existing' | 'Initial'
-* **singleSignOnUrl**: string
+* **singleSignOnUrl**: string (ReadOnly)
 
 ## Microsoft.Datadog/monitors/tagRules
 ### Properties

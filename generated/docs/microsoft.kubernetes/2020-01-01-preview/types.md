@@ -23,8 +23,15 @@
 * **aadProfile**: ConnectedClusterAADProfile (Required)
 * **agentPublicKeyCertificate**: string (Required)
 * **agentVersion**: string (ReadOnly)
+* **connectivityStatus**: 'Connected' | 'Connecting' | 'Expired' | 'Offline'
+* **distribution**: string
+* **infrastructure**: string
 * **kubernetesVersion**: string (ReadOnly)
+* **lastConnectivityTime**: string (ReadOnly)
+* **managedIdentityCertificateExpirationTime**: string (ReadOnly)
+* **offering**: string (ReadOnly)
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating'
+* **totalCoreCount**: int (ReadOnly)
 * **totalNodeCount**: int (ReadOnly)
 
 ## ConnectedClusterAADProfile

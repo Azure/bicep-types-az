@@ -372,9 +372,9 @@
 ## MCASDataConnectorDataTypes
 ### Properties
 * **alerts**: schemas:31_alerts
-* **discoveryLogs**: schemas:130_discoveryLogs
+* **discoveryLogs**: schemas:132_discoveryLogs
 
-## schemas:130_discoveryLogs
+## schemas:132_discoveryLogs
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -400,19 +400,19 @@
 
 ## OfficeDataConnectorDataTypes
 ### Properties
-* **exchange**: schemas:152_exchange
-* **sharePoint**: schemas:152_sharePoint
-* **teams**: schemas:152_teams
+* **exchange**: schemas:154_exchange
+* **sharePoint**: schemas:154_sharePoint
+* **teams**: schemas:154_teams
 
-## schemas:152_exchange
+## schemas:154_exchange
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
-## schemas:152_sharePoint
+## schemas:154_sharePoint
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
-## schemas:152_teams
+## schemas:154_teams
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -438,9 +438,9 @@
 
 ## TIDataConnectorDataTypes
 ### Properties
-* **indicators**: schemas:183_indicators
+* **indicators**: schemas:185_indicators
 
-## schemas:183_indicators
+## schemas:185_indicators
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -462,9 +462,9 @@
 
 ## TiTaxiiDataConnectorDataTypes
 ### Properties
-* **taxiiClient**: schemas:188_taxiiClient
+* **taxiiClient**: schemas:190_taxiiClient
 
-## schemas:188_taxiiClient
+## schemas:190_taxiiClient
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 

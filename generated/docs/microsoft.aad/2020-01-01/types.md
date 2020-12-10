@@ -20,6 +20,7 @@
 * **domainSecuritySettings**: DomainSecuritySettings
 * **filteredSync**: 'Disabled' | 'Enabled'
 * **ldapsSettings**: LdapsSettings
+* **migrationProperties**: MigrationProperties
 * **notificationSettings**: NotificationSettings
 * **provisioningState**: string (ReadOnly)
 * **replicaSets**: ReplicaSet[]
@@ -46,6 +47,17 @@
 * **pfxCertificate**: string
 * **pfxCertificatePassword**: string
 * **publicCertificate**: string (ReadOnly)
+
+## MigrationProperties
+### Properties
+* **migrationProgress**: MigrationProgress
+* **oldSubnetId**: string
+* **oldVnetSiteId**: string
+
+## MigrationProgress
+### Properties
+* **completionPercentage**: int
+* **progressMessage**: string
 
 ## NotificationSettings
 ### Properties

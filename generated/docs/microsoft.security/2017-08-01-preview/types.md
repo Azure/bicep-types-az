@@ -201,13 +201,27 @@
 * **phone**: string
 
 ## Microsoft.Security/settings
-### Properties
+* **Discriminator**: kind
+### Base Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'AlertSuppressionSetting' | 'DataExportSetting' (Required)
 * **name**: 'MCAS' | 'WDATP' (Required, DeployTimeConstant)
 * **type**: 'Microsoft.Security/settings' (ReadOnly, DeployTimeConstant)
+### DataExportSetting
+#### Properties
+* **kind**: 'DataExportSetting' (Required)
+* **properties**: DataExportSettingProperties
+
+
+## DataExportSetting
+### Properties
+* **kind**: 'DataExportSetting' (Required)
+* **properties**: DataExportSettingProperties
+
+## DataExportSettingProperties
+### Properties
+* **enabled**: bool (Required)
 
 ## Microsoft.Security/workspaceSettings
 ### Properties

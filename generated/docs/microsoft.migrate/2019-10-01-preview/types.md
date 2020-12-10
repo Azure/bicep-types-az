@@ -4,6 +4,7 @@
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity
 * **location**: string
@@ -20,9 +21,21 @@
 
 ## MoveCollectionProperties
 ### Properties
+* **errors**: schemas:18_errors (ReadOnly)
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating'
 * **sourceRegion**: string (Required)
 * **targetRegion**: string (Required)
+
+## schemas:18_errors
+### Properties
+* **properties**: MoveResourceErrorBody
+
+## MoveResourceErrorBody
+### Properties
+* **code**: string (ReadOnly)
+* **details**: MoveResourceErrorBody[] (ReadOnly)
+* **message**: string (ReadOnly)
+* **target**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -43,6 +56,7 @@
 * **dependsOnOverrides**: MoveResourceDependencyOverride[]
 * **errors**: schemas:14_errors (ReadOnly)
 * **existingTargetId**: string
+* **isResolveRequired**: bool (ReadOnly)
 * **moveStatus**: schemas:14_moveStatus (ReadOnly)
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating'
 * **resourceSettings**: ResourceSettings
@@ -76,13 +90,6 @@
 ## schemas:14_errors
 ### Properties
 * **properties**: MoveResourceErrorBody
-
-## MoveResourceErrorBody
-### Properties
-* **code**: string (ReadOnly)
-* **details**: MoveResourceErrorBody[] (ReadOnly)
-* **message**: string (ReadOnly)
-* **target**: string (ReadOnly)
 
 ## schemas:14_moveStatus
 ### Properties

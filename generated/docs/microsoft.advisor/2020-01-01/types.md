@@ -44,6 +44,7 @@
 
 ## SuppressionProperties
 ### Properties
+* **expirationTimeStamp**: string (ReadOnly)
 * **suppressionId**: string
 * **ttl**: string
 

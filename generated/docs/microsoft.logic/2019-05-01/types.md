@@ -29,11 +29,28 @@
 
 ## IntegrationServiceEnvironmentProperties
 ### Properties
+* **encryptionConfiguration**: IntegrationServiceEnvironmenEncryptionConfiguration
 * **endpointsConfiguration**: FlowEndpointsConfiguration
 * **integrationServiceEnvironmentId**: string
 * **networkConfiguration**: NetworkConfiguration
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting'
 * **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended'
+
+## IntegrationServiceEnvironmenEncryptionConfiguration
+### Properties
+* **encryptionKeyReference**: IntegrationServiceEnvironmenEncryptionKeyReference
+
+## IntegrationServiceEnvironmenEncryptionKeyReference
+### Properties
+* **keyName**: string
+* **keyVault**: ResourceReference
+* **keyVersion**: string
+
+## ResourceReference
+### Properties
+* **id**: string
+* **name**: string (ReadOnly)
+* **type**: string (ReadOnly)
 
 ## FlowEndpointsConfiguration
 ### Properties
@@ -58,12 +75,6 @@
 ## IntegrationServiceEnvironmentAccessEndpoint
 ### Properties
 * **type**: 'External' | 'Internal' | 'NotSpecified'
-
-## ResourceReference
-### Properties
-* **id**: string
-* **name**: string (ReadOnly)
-* **type**: string (ReadOnly)
 
 ## IntegrationServiceEnvironmentSku
 ### Properties
@@ -659,10 +670,10 @@
 ## KeyVaultKeyReference
 ### Properties
 * **keyName**: string (Required)
-* **keyVault**: schemas:203_keyVault (Required)
+* **keyVault**: schemas:205_keyVault (Required)
 * **keyVersion**: string
 
-## schemas:203_keyVault
+## schemas:205_keyVault
 ### Properties
 * **id**: string
 * **name**: string (ReadOnly)
@@ -692,9 +703,9 @@
 * **createdTime**: string (ReadOnly)
 * **mapType**: 'Liquid' | 'NotSpecified' | 'Xslt' | 'Xslt20' | 'Xslt30' (Required)
 * **metadata**: any
-* **parametersSchema**: schemas:130_parametersSchema
+* **parametersSchema**: schemas:132_parametersSchema
 
-## schemas:130_parametersSchema
+## schemas:132_parametersSchema
 ### Properties
 * **ref**: string
 

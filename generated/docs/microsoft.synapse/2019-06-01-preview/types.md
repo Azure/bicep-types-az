@@ -579,6 +579,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **location**: string (ReadOnly)
+* **managedBy**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: DataMaskingPolicyProperties
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies' (ReadOnly, DeployTimeConstant)

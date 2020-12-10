@@ -31,12 +31,29 @@
 
 ## ClusterProperties
 ### Properties
+* **associatedWorkspaces**: AssociatedWorkspace[]
 * **billingType**: 'Cluster' | 'Workspaces'
+* **capacityReservationProperties**: CapacityReservationProperties
 * **clusterId**: string (ReadOnly)
+* **createdDate**: string (ReadOnly)
 * **isAvailabilityZonesEnabled**: bool
 * **isDoubleEncryptionEnabled**: bool
 * **keyVaultProperties**: keyVaultProperties
+* **lastModifiedDate**: string (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' (ReadOnly)
+
+## AssociatedWorkspace
+### Properties
+* **associateDate**: string (ReadOnly)
+* **resourceId**: string (ReadOnly)
+* **workspaceId**: string (ReadOnly)
+* **workspaceName**: string (ReadOnly)
+
+## CapacityReservationProperties
+### Properties
+* **lastSkuUpdate**: string (ReadOnly)
+* **maxCapacity**: int (ReadOnly)
+* **minCapacity**: int (ReadOnly)
 
 ## keyVaultProperties
 ### Properties
@@ -88,7 +105,7 @@
 * **capacityReservationLevel**: int
 * **lastSkuUpdate**: string (ReadOnly)
 * **maxCapacityReservationLevel**: int (ReadOnly)
-* **name**: 'CapacityReservation' | 'Free' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' (Required)
+* **name**: 'CapacityReservation' | 'Free' | 'LACluster' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' (Required)
 
 ## WorkspaceCapping
 ### Properties

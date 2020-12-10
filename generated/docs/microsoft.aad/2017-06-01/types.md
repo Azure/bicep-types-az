@@ -24,6 +24,7 @@
 * **healthLastEvaluated**: string (ReadOnly)
 * **healthMonitors**: HealthMonitor[] (ReadOnly)
 * **ldapsSettings**: LdapsSettings
+* **migrationProperties**: MigrationProperties
 * **notificationSettings**: NotificationSettings
 * **provisioningState**: string (ReadOnly)
 * **resourceForestSettings**: ResourceForestSettings
@@ -68,6 +69,17 @@
 * **pfxCertificate**: string
 * **pfxCertificatePassword**: string
 * **publicCertificate**: string (ReadOnly)
+
+## MigrationProperties
+### Properties
+* **migrationProgress**: MigrationProgress
+* **oldSubnetId**: string
+* **oldVnetSiteId**: string
+
+## MigrationProgress
+### Properties
+* **completionPercentage**: int
+* **progressMessage**: string
 
 ## NotificationSettings
 ### Properties

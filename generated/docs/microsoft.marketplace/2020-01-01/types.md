@@ -35,7 +35,7 @@
 ### Properties
 * **createdAt**: string (ReadOnly)
 * **eTag**: string
-* **iconFileUris**: schemas:7_iconFileUris
+* **iconFileUris**: Dictionary<string,String>
 * **modifiedAt**: string (ReadOnly)
 * **offerDisplayName**: string (ReadOnly)
 * **plans**: Plan[]
@@ -45,10 +45,9 @@
 * **uniqueOfferId**: string (ReadOnly)
 * **updateSuppressedDueIdempotence**: bool
 
-## schemas:7_iconFileUris
-### Properties
-* **iconKind**: 'Hero' | 'Large' | 'Medium' | 'Small' | 'Wide'
-* **uri**: string
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Plan
 ### Properties

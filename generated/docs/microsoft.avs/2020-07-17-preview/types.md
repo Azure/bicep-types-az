@@ -172,6 +172,45 @@
 * **leaseTime**: int
 * **serverAddress**: string
 
+## Microsoft.AVS/privateClouds/workloadNetworks/dnsServices
+### Properties
+* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkloadNetworkDnsServiceProperties
+* **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/dnsServices' (ReadOnly, DeployTimeConstant)
+
+## WorkloadNetworkDnsServiceProperties
+### Properties
+* **defaultDnsZone**: string
+* **displayName**: string
+* **dnsServiceIp**: string
+* **fqdnZones**: string[]
+* **logLevel**: 'DEBUG' | 'ERROR' | 'FATAL' | 'INFO' | 'WARNING'
+* **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+* **revision**: int
+* **status**: 'FAILURE' | 'SUCCESS' (ReadOnly)
+
+## Microsoft.AVS/privateClouds/workloadNetworks/dnsZones
+### Properties
+* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkloadNetworkDnsZoneProperties
+* **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/dnsZones' (ReadOnly, DeployTimeConstant)
+
+## WorkloadNetworkDnsZoneProperties
+### Properties
+* **displayName**: string
+* **dnsServerIps**: string[]
+* **dnsServices**: int
+* **domain**: string[]
+* **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+* **revision**: int
+* **sourceIp**: string
+
 ## Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles
 ### Properties
 * **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)

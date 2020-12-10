@@ -34,8 +34,8 @@
 
 ## UserAssignedIdentity
 ### Properties
-* **clientId**: string
-* **principalId**: string
+* **clientId**: string (ReadOnly)
+* **principalId**: string (ReadOnly)
 
 ## systemData
 ### Properties
