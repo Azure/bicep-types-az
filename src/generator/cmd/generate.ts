@@ -1,41 +1,68 @@
-import process, { argv } from 'process';
 import os from 'os';
 import path from 'path';
-import fs from 'fs';
+import { readdir, stat, rmdir, mkdir } from 'fs/promises';
 import { series } from 'async';
-import { promisify } from 'util';
 import { spawn } from 'child_process';
 import chalk from 'chalk';
+import yargs from 'yargs';
+import { existsSync } from 'fs';
 
-const readdir = promisify(fs.readdir);
-const stat = promisify(fs.stat);
+const args = yargs
+  .option('specs-dir', { type: 'string', demandOption: true, desc: 'Path to the azure-rest-api-specs dir' })
+  .option('out-dir', { type: 'string', demandOption: true, desc: 'Output path for generated files' })
+  .option('verbose', { type: 'boolean', default: false, desc: 'Enable autorest verbose logging' })
+  .option('wait-for-debugger', { type: 'boolean', default: false, desc: 'Wait for a C# debugger to be attached before running the Autorest extension' })
+  .argv;
 
-const outputBaseDir = path.resolve(`${__dirname}/../bicep-types`);
 const extensionDir = path.resolve(`${__dirname}/../`);
+const autorestDll = path.resolve(`${extensionDir}/src/Bicep.TypeGen.Autorest/bin/net5.0/Bicep.TypeGen.Autorest.dll`);
+const indexBuilderDll = path.resolve(`${extensionDir}/src/Bicep.TypeGen.Index/bin/net5.0/Bicep.TypeGen.Index.dll`);
+
 const autorestBinary = os.platform() === 'win32' ? 'autorest.cmd' : 'autorest';
-const autorestCoreVersion = '3.0.6320';
 
 executeSynchronous(async () => {
-  const inputBaseDir = path.resolve(argv[2]);
+  const inputBaseDir = path.resolve(args['specs-dir']);
+  const outputBaseDir = path.resolve(args['out-dir']);
+  const verbose = args['verbose'];
+  const waitForDebugger = args['wait-for-debugger'];
+
+  if (!existsSync(autorestDll)) {
+    throw `Unable to find ${autorestDll}. Did you forget to run dotnet build?`;
+  }
+
+  if (!existsSync(indexBuilderDll)) {
+    throw `Unable to find ${indexBuilderDll}. Did you forget to run dotnet build?`;
+  }
+
+  // remove all previously-generated files
+  await rmdir(outputBaseDir, { recursive: true });
+  await mkdir(outputBaseDir);
  
+  // find all readme paths in the azure-rest-api-specs repo
   const readmePaths = await findReadmePaths(inputBaseDir);
   if (readmePaths.length === 0) {
     throw `Unable to find rest-api-specs in folder ${inputBaseDir}`;
   }
 
-  for (const path of readmePaths) {
+  // use consistent sorting to make log changes easier to review
+  for (const path of readmePaths.sort(lowerCaseCompare)) {
     try {
-      await generateSchema(path, outputBaseDir);
+      await generateSchema(path, outputBaseDir, verbose, waitForDebugger);
     } catch (e) {
       console.log(e);
     }
   }
+
+  // build the type index
+  await executeCmd(
+    __dirname,
+    'dotnet',
+    [indexBuilderDll, outputBaseDir]);
 });
 
-async function generateSchema(readme: string, outputBaseDir: string) {
+async function generateSchema(readme: string, outputBaseDir: string, verbose: boolean, waitForDebugger: boolean) {
   const debug = false; // change to true for debugging
   let autoRestParams = [
-    `--version=${autorestCoreVersion}`,
     `--use=${extensionDir}`,
     '--azureresourceschema',
     `--output-folder=${outputBaseDir}`,
@@ -43,11 +70,16 @@ async function generateSchema(readme: string, outputBaseDir: string) {
     readme,
   ];
 
-  if (debug) {
+  if (verbose) {
     autoRestParams = autoRestParams.concat([
-      `--azureresourceschema.debugger=true`,
       `--debug`,
       `--verbose`,
+    ]);
+  }
+
+  if (waitForDebugger) {
+    autoRestParams = autoRestParams.concat([
+      `--azureresourceschema.debugger=true`,
     ]);
   }
 
@@ -97,15 +129,18 @@ async function findRecursive(basePath: string, filter: (name: string) => boolean
 
 function executeCmd(cwd: string, cmd: string, args: string[]) : Promise<number> {
   return new Promise((resolve, reject) => {
-    console.log(`[${cwd}] executing: ${cmd} ${args.join(' ')}`);
+    console.log();
+    console.log(chalk.green(`Executing: ${cmd} ${args.join(' ')}`));
 
     const child = spawn(cmd, args, {
       cwd: cwd,
       windowsHide: true,
+      shell: true,
     });
 
     child.stdout.on('data', data => process.stdout.write(chalk.grey(data.toString())));
     child.stderr.on('data', data => process.stdout.write(chalk.red(data.toString())));
+
     child.on('error', err => {
       reject(err);
     });
@@ -126,4 +161,15 @@ function executeSynchronous<T>(asyncFunc: () => Promise<T>) {
         throw error;
       }
     });
+}
+
+function lowerCaseCompare(a: string, b: string) {
+  const aLower = a.toLowerCase();
+  const bLower = b.toLowerCase();
+
+  if (aLower === bLower) {
+    return 0;
+  }
+
+  return aLower < bLower ? -1 : 1;
 }

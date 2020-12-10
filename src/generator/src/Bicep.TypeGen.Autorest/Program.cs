@@ -15,23 +15,11 @@ using IAnyPlugin = AutoRest.Core.Extensibility.IPlugin<AutoRest.Core.Extensibili
 
 namespace Azure.Bicep.TypeGen.Autorest
 {
-    public static class ExtensionsLoader
-    {
-        public static IAnyPlugin GetPlugin(string name)
-        {
-            switch (name)
-            {
-                case "AzureResourceSchema": return new BicepTypesPlugin();
-            }
-            throw new Exception("Unknown plugin: " + name);
-        }
-    }
-
     public class Program : NewPlugin
     {
         private static IEnumerable<string> PluginNames = new []{ "azureresourceschema", "imodeler2" };
 
-        public static int Main(string[] args )
+        public static async Task<int> Main(string[] args)
         {
             if(args != null && args.Length > 0 && args[0] == "--server") {
                 var connection = new Connection(Console.OpenStandardOutput(), Console.OpenStandardInput());
@@ -47,7 +35,7 @@ namespace Azure.Bicep.TypeGen.Autorest
                 connection.DispatchNotification("Shutdown", connection.Stop);
 
                 // wait for something to do.
-                connection.GetAwaiter().GetResult();
+                await connection;
 
                 Console.Error.WriteLine("Shutting Down");
                 return 0;

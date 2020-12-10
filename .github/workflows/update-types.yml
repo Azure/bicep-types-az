@@ -44,7 +44,7 @@ jobs:
         working-directory: src/generator
       
       - name: Run generator
-        run: npm run generate -- ../azure-rest-api-specs
+        run: npm run generate -- --specs-dir ../../workflow-temp/azure-rest-api-specs --out-dir ../../generated
         working-directory: src/generator
 
       - id: get_swagger_gh_uri
@@ -52,11 +52,11 @@ jobs:
         run: |
           git_sha=`git rev-parse --short HEAD`
           echo "::set-output name=gh_uri::https://github.com/Azure/azure-rest-api-specs/tree/$git_sha"
+        working-directory: workflow-temp/azure-rest-api-specs
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          path: bicep-types-az
           commit-message: |
             Update Generated Types
             
