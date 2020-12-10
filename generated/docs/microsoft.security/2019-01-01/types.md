@@ -14,10 +14,25 @@
 * **isEnabled**: bool
 
 ## Microsoft.Security/settings
-### Properties
+* **Discriminator**: kind
+### Base Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'MCAS' | 'WDATP' (Required, DeployTimeConstant)
 * **type**: 'Microsoft.Security/settings' (ReadOnly, DeployTimeConstant)
+### DataExportSettings
+#### Properties
+* **kind**: 'DataExportSettings' (Required)
+* **properties**: DataExportSettingProperties
+
+
+## DataExportSettings
+### Properties
+* **kind**: 'DataExportSettings' (Required)
+* **properties**: DataExportSettingProperties
+
+## DataExportSettingProperties
+### Properties
+* **enabled**: bool (Required)
 

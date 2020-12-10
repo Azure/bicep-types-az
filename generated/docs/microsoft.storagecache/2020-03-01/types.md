@@ -10,6 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: schemas:6_properties
 * **sku**: schemas:6_sku
+* **systemData**: systemData (ReadOnly)
 * **tags**: any
 * **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant)
 
@@ -70,13 +71,24 @@
 ### Properties
 * **name**: string
 
+## systemData
+### Properties
+* **createdAt**: string
+* **createdBy**: string
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+* **lastModifiedAt**: string
+* **lastModifiedBy**: string
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+
 ## Microsoft.StorageCache/caches/storageTargets
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: StorageTargetProperties
+* **systemData**: systemData (ReadOnly)
 * **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant)
 
 ## StorageTargetProperties

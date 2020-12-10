@@ -18,15 +18,32 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: string (Required)
+* **userAssignedIdentities**: Dictionary<string,Object>
+
+## Dictionary<string,Object>
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## FactoryProperties
 ### Properties
 * **createTime**: string (ReadOnly)
+* **encryption**: EncryptionConfiguration
 * **globalParameters**: Dictionary<string,GlobalParameterSpecification>
 * **provisioningState**: string (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 * **repoConfiguration**: FactoryRepoConfiguration
 * **version**: string (ReadOnly)
+
+## EncryptionConfiguration
+### Properties
+* **identity**: CMKIdentityDefinition
+* **keyName**: string (Required)
+* **keyVersion**: string
+* **vaultBaseUrl**: string (Required)
+
+## CMKIdentityDefinition
+### Properties
+* **userAssignedIdentity**: string
 
 ## Dictionary<string,GlobalParameterSpecification>
 ### Additional Properties
@@ -87,14 +104,14 @@
 ### Base Properties
 * **annotations**: any[]
 * **description**: string
-* **folder**: schemas:102_folder
+* **folder**: schemas:106_folder
 ### MappingDataFlow
 #### Properties
 * **type**: 'MappingDataFlow' (Required)
 * **typeProperties**: MappingDataFlowTypeProperties
 
 
-## schemas:102_folder
+## schemas:106_folder
 ### Properties
 * **name**: string
 
@@ -166,7 +183,7 @@
 ### Base Properties
 * **annotations**: any[]
 * **description**: string
-* **folder**: schemas:108_folder
+* **folder**: schemas:112_folder
 * **linkedServiceName**: LinkedServiceReference (Required)
 * **parameters**: Dictionary<string,ParameterSpecification>
 * **schema**: any
@@ -636,7 +653,7 @@
 * **typeProperties**: GenericDatasetTypeProperties
 
 
-## schemas:108_folder
+## schemas:112_folder
 ### Properties
 * **name**: string
 
@@ -4078,7 +4095,7 @@
 * **annotations**: any[]
 * **concurrency**: int
 * **description**: string
-* **folder**: schemas:557_folder
+* **folder**: schemas:561_folder
 * **parameters**: Dictionary<string,ParameterSpecification>
 * **runDimensions**: Dictionary<string,Object>
 * **variables**: Dictionary<string,VariableSpecification>
@@ -4133,7 +4150,7 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## schemas:557_folder
+## schemas:561_folder
 ### Properties
 * **name**: string
 
@@ -4174,7 +4191,7 @@
 #### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'ChainingTrigger' (Required)
-* **typeProperties**: schemas:878_typeProperties (Required)
+* **typeProperties**: schemas:882_typeProperties (Required)
 
 ### MultiplePipelineTrigger
 #### Properties
@@ -4184,20 +4201,20 @@
 ### RerunTumblingWindowTrigger
 #### Properties
 * **type**: 'RerunTumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:877_typeProperties (Required)
+* **typeProperties**: schemas:881_typeProperties (Required)
 
 ### TumblingWindowTrigger
 #### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'TumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:869_typeProperties (Required)
+* **typeProperties**: schemas:873_typeProperties (Required)
 
 
 ## ChainingTrigger
 ### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'ChainingTrigger' (Required)
-* **typeProperties**: schemas:878_typeProperties (Required)
+* **typeProperties**: schemas:882_typeProperties (Required)
 
 ## TriggerPipelineReference
 ### Properties
@@ -4214,7 +4231,7 @@
 * **referenceName**: string (Required)
 * **type**: string (Required)
 
-## schemas:878_typeProperties
+## schemas:882_typeProperties
 ### Properties
 * **dependsOn**: PipelineReference[] (Required)
 * **runDimension**: string (Required)
@@ -4227,9 +4244,9 @@
 ## RerunTumblingWindowTrigger
 ### Properties
 * **type**: 'RerunTumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:877_typeProperties (Required)
+* **typeProperties**: schemas:881_typeProperties (Required)
 
-## schemas:877_typeProperties
+## schemas:881_typeProperties
 ### Properties
 * **parentTrigger**: any (Required)
 * **requestedEndTime**: string (Required)
@@ -4240,9 +4257,9 @@
 ### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'TumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:869_typeProperties (Required)
+* **typeProperties**: schemas:873_typeProperties (Required)
 
-## schemas:869_typeProperties
+## schemas:873_typeProperties
 ### Properties
 * **delay**: any
 * **dependsOn**: DependencyReference[]

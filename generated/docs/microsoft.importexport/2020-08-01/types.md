@@ -22,7 +22,7 @@
 ### Properties
 * **backupDriveManifest**: bool
 * **cancelRequested**: bool
-* **deliveryPackage**: PackageInformation
+* **deliveryPackage**: DeliveryPackageInformation
 * **diagnosticsPath**: string
 * **driveList**: DriveStatus[]
 * **encryptionKey**: EncryptionKeyDetails
@@ -39,11 +39,11 @@
 * **state**: string
 * **storageAccountId**: string
 
-## PackageInformation
+## DeliveryPackageInformation
 ### Properties
 * **carrierName**: string (Required)
-* **driveCount**: int (Required)
-* **shipDate**: string (Required)
+* **driveCount**: int
+* **shipDate**: string
 * **trackingNumber**: string (Required)
 
 ## DriveStatus
@@ -69,10 +69,10 @@
 
 ## Export
 ### Properties
-* **blobList**: schemas:15_blobList
+* **blobList**: schemas:16_blobList
 * **blobListBlobPath**: string
 
-## schemas:15_blobList
+## schemas:16_blobList
 ### Properties
 * **blobPath**: string[]
 * **blobPathPrefix**: string[]
@@ -88,6 +88,13 @@
 * **stateOrProvince**: string
 * **streetAddress1**: string (Required)
 * **streetAddress2**: string
+
+## PackageInformation
+### Properties
+* **carrierName**: string (Required)
+* **driveCount**: int (Required)
+* **shipDate**: string (Required)
+* **trackingNumber**: string (Required)
 
 ## ReturnShipping
 ### Properties

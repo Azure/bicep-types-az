@@ -117,7 +117,7 @@
 * **fqdn**: string
 * **httpsOnly**: bool
 * **persistentDisk**: PersistentDisk
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **public**: bool
 * **temporaryDisk**: TemporaryDisk
 * **url**: string (ReadOnly)
@@ -164,6 +164,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: DeploymentResourceProperties
+* **sku**: Sku
 * **type**: 'Microsoft.AppPlatform/Spring/apps/deployments' (ReadOnly, DeployTimeConstant)
 
 ## DeploymentResourceProperties
@@ -173,7 +174,7 @@
 * **createdTime**: string (ReadOnly)
 * **deploymentSettings**: DeploymentSettings
 * **instances**: DeploymentInstance[] (ReadOnly)
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **source**: UserSourceInfo
 * **status**: 'Allocating' | 'Compiling' | 'Failed' | 'Running' | 'Stopped' | 'Unknown' | 'Upgrading' (ReadOnly)
 

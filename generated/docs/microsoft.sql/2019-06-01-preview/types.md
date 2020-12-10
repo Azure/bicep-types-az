@@ -50,7 +50,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: 'SystemAssigned'
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned'
 
 ## ServerProperties
 ### Properties

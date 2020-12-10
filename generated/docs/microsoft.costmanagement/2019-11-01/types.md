@@ -4,22 +4,22 @@
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
+* **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ExportProperties
-* **tags**: Dictionary<string,String> (ReadOnly)
 * **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant)
 
 ## ExportProperties
 ### Properties
-* **definition**: QueryDefinition (Required)
+* **definition**: ExportDefinition (Required)
 * **deliveryInfo**: ExportDeliveryInfo (Required)
 * **format**: 'Csv'
 * **schedule**: ExportSchedule
 
-## QueryDefinition
+## ExportDefinition
 ### Properties
-* **dataset**: QueryDataset
+* **dataSet**: QueryDataset
 * **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'WeekToDate' (Required)
 * **timePeriod**: QueryTimePeriod
 * **type**: 'ActualCost' | 'AmortizedCost' | 'Usage' (Required)
@@ -89,10 +89,6 @@
 ### Properties
 * **from**: string (Required)
 * **to**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## Microsoft.CostManagement/views
 ### Properties

@@ -23,12 +23,12 @@
 ### Properties
 * **appNetworkResourceGroup**: string
 * **appSubnetId**: string
-* **outboundIPs**: schemas:10_outboundIPs (ReadOnly)
+* **outboundIPs**: schemas:12_outboundIPs (ReadOnly)
 * **serviceCidr**: string
 * **serviceRuntimeNetworkResourceGroup**: string
 * **serviceRuntimeSubnetId**: string
 
-## schemas:10_outboundIPs
+## schemas:12_outboundIPs
 ### Properties
 * **publicIPs**: string[] (ReadOnly)
 
