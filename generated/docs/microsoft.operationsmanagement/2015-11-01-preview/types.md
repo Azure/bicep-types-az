@@ -1,28 +1,40 @@
 # Microsoft.OperationsManagement @ 2015-11-01-preview
 
-## Microsoft.OperationsManagement/ManagementAssociations
+## Resource Microsoft.OperationsManagement/ManagementAssociations@2015-11-01-preview
+* **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ManagementAssociationProperties
 * **type**: 'Microsoft.OperationsManagement/ManagementAssociations' (ReadOnly, DeployTimeConstant)
 
-## ManagementAssociationProperties
-### Properties
-* **applicationId**: string (Required)
-
-## Microsoft.OperationsManagement/ManagementConfigurations
+## Resource Microsoft.OperationsManagement/ManagementConfigurations@2015-11-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ManagementConfigurationProperties
 * **type**: 'Microsoft.OperationsManagement/ManagementConfigurations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.OperationsManagement/solutions@2015-11-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **plan**: SolutionPlan
+* **properties**: SolutionProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.OperationsManagement/solutions' (ReadOnly, DeployTimeConstant)
+
+## ManagementAssociationProperties
+### Properties
+* **applicationId**: string (Required)
 
 ## ManagementConfigurationProperties
 ### Properties
@@ -36,18 +48,6 @@
 ### Properties
 * **name**: string
 * **value**: string
-
-## Microsoft.OperationsManagement/solutions
-### Properties
-* **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **plan**: SolutionPlan
-* **properties**: SolutionProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.OperationsManagement/solutions' (ReadOnly, DeployTimeConstant)
 
 ## SolutionPlan
 ### Properties

@@ -1,9 +1,9 @@
 # Microsoft.Cdn @ 2016-04-02
 
-## Microsoft.Cdn/profiles
+## Resource Microsoft.Cdn/profiles@2016-04-02
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-04-02' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
@@ -11,6 +11,35 @@
 * **sku**: Sku (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Cdn/profiles/endpoints@2016-04-02
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-04-02' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EndpointPropertiesCreateParameters
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2016-04-02
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-04-02' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CustomDomainPropertiesParameters
+* **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Cdn/profiles/endpoints/origins@2016-04-02
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-04-02' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: OriginPropertiesParameters
+* **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant)
 
 ## ProfileProperties
 ### Properties
@@ -24,17 +53,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Cdn/profiles/endpoints
-### Properties
-* **apiVersion**: '2016-04-02' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EndpointPropertiesCreateParameters
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant)
 
 ## EndpointPropertiesCreateParameters
 ### Properties
@@ -65,29 +83,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Cdn/profiles/endpoints/customDomains
-### Properties
-* **apiVersion**: '2016-04-02' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CustomDomainPropertiesParameters
-* **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant)
-
 ## CustomDomainPropertiesParameters
 ### Properties
 * **hostName**: string (Required)
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly)
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
-
-## Microsoft.Cdn/profiles/endpoints/origins
-### Properties
-* **apiVersion**: '2016-04-02' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: OriginPropertiesParameters
-* **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant)
 
 ## OriginPropertiesParameters
 ### Properties

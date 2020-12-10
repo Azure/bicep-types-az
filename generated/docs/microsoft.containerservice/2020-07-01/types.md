@@ -1,9 +1,9 @@
 # Microsoft.ContainerService @ 2020-07-01
 
-## Microsoft.ContainerService/managedClusters
+## Resource Microsoft.ContainerService/managedClusters@2020-07-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: ManagedClusterIdentity
 * **location**: string (Required)
@@ -12,6 +12,24 @@
 * **sku**: ManagedClusterSKU
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ContainerService/managedClusters/agentPools@2020-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ManagedClusterAgentPoolProfileProperties
+* **type**: 'Microsoft.ContainerService/managedClusters/agentPools' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ContainerService/managedClusters/privateEndpointConnections@2020-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: 'Microsoft.ContainerService/managedClusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## ManagedClusterIdentity
 ### Properties
@@ -215,15 +233,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.ContainerService/managedClusters/agentPools
-### Properties
-* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedClusterAgentPoolProfileProperties
-* **type**: 'Microsoft.ContainerService/managedClusters/agentPools' (ReadOnly, DeployTimeConstant)
-
 ## ManagedClusterAgentPoolProfileProperties
 ### Properties
 * **availabilityZones**: string[]
@@ -258,15 +267,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.ContainerService/managedClusters/privateEndpointConnections
-### Properties
-* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: 'Microsoft.ContainerService/managedClusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## PrivateEndpointConnectionProperties
 ### Properties

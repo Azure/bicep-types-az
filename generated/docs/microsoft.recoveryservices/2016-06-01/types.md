@@ -1,9 +1,9 @@
 # Microsoft.RecoveryServices @ 2016-06-01
 
-## Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems
+## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2016-06-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
@@ -11,6 +11,18 @@
 * **properties**: ProtectedItem
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.RecoveryServices/vaults/backupPolicies@2016-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant)
+* **eTag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ProtectionPolicy
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies' (ReadOnly, DeployTimeConstant)
 
 ## ProtectedItem
 * **Discriminator**: protectedItemType
@@ -98,18 +110,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.RecoveryServices/vaults/backupPolicies
-### Properties
-* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ProtectionPolicy
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies' (ReadOnly, DeployTimeConstant)
 
 ## ProtectionPolicy
 * **Discriminator**: backupManagementType

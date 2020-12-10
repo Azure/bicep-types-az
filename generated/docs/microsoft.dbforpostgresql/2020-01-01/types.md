@@ -1,9 +1,9 @@
 # Microsoft.DBforPostgreSQL @ 2020-01-01
 
-## Microsoft.DBforPostgreSQL/servers/keys
+## Resource Microsoft.DBforPostgreSQL/servers/keys@2020-01-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)

@@ -1,13 +1,24 @@
 # Microsoft.EventGrid @ 2018-01-01
 
-## Microsoft.EventGrid/eventSubscriptions
+## Resource Microsoft.EventGrid/eventSubscriptions@2018-01-01
+* **Valid Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: EventSubscriptionProperties
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventGrid/topics@2018-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TopicProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
 ## EventSubscriptionProperties
 ### Properties
@@ -56,17 +67,6 @@
 * **isSubjectCaseSensitive**: bool
 * **subjectBeginsWith**: string
 * **subjectEndsWith**: string
-
-## Microsoft.EventGrid/topics
-### Properties
-* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TopicProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
 ## TopicProperties
 ### Properties

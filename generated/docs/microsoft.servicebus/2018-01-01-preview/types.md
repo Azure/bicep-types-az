@@ -1,9 +1,9 @@
 # Microsoft.ServiceBus @ 2018-01-01-preview
 
-## Microsoft.ServiceBus/namespaces
+## Resource Microsoft.ServiceBus/namespaces@2018-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity
 * **location**: string (Required)
@@ -12,6 +12,42 @@
 * **sku**: SBSku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ServiceBus/namespaces' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceBus/namespaces/ipfilterrules@2018-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:0_properties
+* **type**: 'Microsoft.ServiceBus/namespaces/ipfilterrules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceBus/namespaces/networkrulesets@2018-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:22_properties
+* **type**: 'Microsoft.ServiceBus/namespaces/networkrulesets' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceBus/namespaces/privateEndpointConnections@2018-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: 'Microsoft.ServiceBus/namespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceBus/namespaces/virtualnetworkrules@2018-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:23_properties
+* **type**: 'Microsoft.ServiceBus/namespaces/virtualnetworkrules' (ReadOnly, DeployTimeConstant)
 
 ## Identity
 ### Properties
@@ -49,29 +85,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.ServiceBus/namespaces/ipfilterrules
-### Properties
-* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:0_properties
-* **type**: 'Microsoft.ServiceBus/namespaces/ipfilterrules' (ReadOnly, DeployTimeConstant)
-
 ## schemas:0_properties
 ### Properties
 * **action**: 'Accept' | 'Reject'
 * **filterName**: string
 * **ipMask**: string
-
-## Microsoft.ServiceBus/namespaces/networkrulesets
-### Properties
-* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:22_properties
-* **type**: 'Microsoft.ServiceBus/namespaces/networkrulesets' (ReadOnly, DeployTimeConstant)
 
 ## schemas:22_properties
 ### Properties
@@ -93,15 +111,6 @@
 ### Properties
 * **id**: string
 
-## Microsoft.ServiceBus/namespaces/privateEndpointConnections
-### Properties
-* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: 'Microsoft.ServiceBus/namespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
-
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **privateEndpoint**: PrivateEndpoint
@@ -116,15 +125,6 @@
 ### Properties
 * **description**: string
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
-
-## Microsoft.ServiceBus/namespaces/virtualnetworkrules
-### Properties
-* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:23_properties
-* **type**: 'Microsoft.ServiceBus/namespaces/virtualnetworkrules' (ReadOnly, DeployTimeConstant)
 
 ## schemas:23_properties
 ### Properties

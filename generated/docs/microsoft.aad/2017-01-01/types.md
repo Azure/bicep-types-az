@@ -1,9 +1,9 @@
 # Microsoft.AAD @ 2017-01-01
 
-## Microsoft.AAD/domainServices
+## Resource Microsoft.AAD/domainServices@2017-01-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string

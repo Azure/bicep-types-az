@@ -1,15 +1,35 @@
 # Microsoft.EventGrid @ 2020-01-01-preview
 
-## Microsoft.EventGrid/domains
+## Resource Microsoft.EventGrid/domains@2020-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: DomainProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventGrid/eventSubscriptions@2020-01-01-preview
+* **Valid Scope(s)**: None
+### Properties
+* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EventSubscriptionProperties
+* **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventGrid/topics@2020-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TopicProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
 ## DomainProperties
 ### Properties
@@ -54,15 +74,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.EventGrid/eventSubscriptions
-### Properties
-* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EventSubscriptionProperties
-* **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant)
 
 ## EventSubscriptionProperties
 ### Properties
@@ -342,17 +353,6 @@
 ### Properties
 * **eventTimeToLiveInMinutes**: int
 * **maxDeliveryAttempts**: int
-
-## Microsoft.EventGrid/topics
-### Properties
-* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TopicProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
 ## TopicProperties
 ### Properties

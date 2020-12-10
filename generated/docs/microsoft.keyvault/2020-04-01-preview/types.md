@@ -1,9 +1,9 @@
 # Microsoft.KeyVault @ 2020-04-01-preview
 
-## Microsoft.KeyVault/managedHSMs
+## Resource Microsoft.KeyVault/managedHSMs@2020-04-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
@@ -11,6 +11,49 @@
 * **sku**: ManagedHsmSku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.KeyVault/managedHSMs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.KeyVault/vaults@2020-04-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VaultProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.KeyVault/vaults' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.KeyVault/vaults/accessPolicies@2020-04-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: 'add' | 'remove' | 'replace' (Required, DeployTimeConstant)
+* **properties**: VaultAccessPolicyProperties (Required)
+* **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.KeyVault/vaults/privateEndpointConnections@2020-04-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.KeyVault/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.KeyVault/vaults/secrets@2020-04-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SecretProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.KeyVault/vaults/secrets' (ReadOnly, DeployTimeConstant)
 
 ## ManagedHsmProperties
 ### Properties
@@ -32,17 +75,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.KeyVault/vaults
-### Properties
-* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VaultProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.KeyVault/vaults' (ReadOnly, DeployTimeConstant)
 
 ## VaultProperties
 ### Properties
@@ -119,45 +151,13 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.KeyVault/vaults/accessPolicies
-### Properties
-* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: 'add' | 'remove' | 'replace' (Required, DeployTimeConstant)
-* **properties**: VaultAccessPolicyProperties (Required)
-* **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant)
-
 ## VaultAccessPolicyProperties
 ### Properties
 * **accessPolicies**: AccessPolicyEntry[] (Required)
 
-## Microsoft.KeyVault/vaults/privateEndpointConnections
-### Properties
-* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.KeyVault/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.KeyVault/vaults/secrets
-### Properties
-* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SecretProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.KeyVault/vaults/secrets' (ReadOnly, DeployTimeConstant)
 
 ## SecretProperties
 ### Properties

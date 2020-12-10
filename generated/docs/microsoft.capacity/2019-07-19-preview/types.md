@@ -1,13 +1,22 @@
 # Microsoft.Capacity @ 2019-07-19-preview
 
-## Microsoft.Capacity/autoQuotaIncrease
+## Resource Microsoft.Capacity/autoQuotaIncrease@2019-07-19-preview
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2019-07-19-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'autoQuotaIncrease' (Required, DeployTimeConstant)
 * **properties**: autoQuotaIncreaseSettings
 * **type**: 'Microsoft.Capacity/autoQuotaIncrease' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Capacity/resourceProviders/locations/serviceLimits@2019-07-19-preview
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2019-07-19-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: QuotaProperties
+* **type**: 'Microsoft.Capacity/resourceProviders/locations/serviceLimits' (ReadOnly, DeployTimeConstant)
 
 ## autoQuotaIncreaseSettings
 ### Properties
@@ -43,15 +52,6 @@
 * **primaryEmailAddress**: string
 * **severity**: any
 * **supportLanguage**: string
-
-## Microsoft.Capacity/resourceProviders/locations/serviceLimits
-### Properties
-* **apiVersion**: '2019-07-19-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: QuotaProperties
-* **type**: 'Microsoft.Capacity/resourceProviders/locations/serviceLimits' (ReadOnly, DeployTimeConstant)
 
 ## QuotaProperties
 ### Properties

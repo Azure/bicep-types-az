@@ -1,9 +1,9 @@
 # Microsoft.AnalysisServices @ 2016-05-16
 
-## Microsoft.AnalysisServices/servers
+## Resource Microsoft.AnalysisServices/servers@2016-05-16
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-05-16' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)

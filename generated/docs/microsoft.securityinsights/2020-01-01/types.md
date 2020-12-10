@@ -1,10 +1,10 @@
 # Microsoft.SecurityInsights @ 2020-01-01
 
-## Microsoft.SecurityInsights/alertRules
+## Resource Microsoft.SecurityInsights/alertRules@2020-01-01
+* **Valid Scope(s)**: Extension
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -24,6 +24,95 @@
 * **kind**: 'Scheduled' (Required)
 * **properties**: ScheduledAlertRuleProperties
 
+
+## Resource Microsoft.SecurityInsights/alertRules/actions@2020-01-01
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ActionRequestProperties
+* **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.SecurityInsights/bookmarks@2020-01-01
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BookmarkProperties
+* **type**: 'Microsoft.SecurityInsights/bookmarks' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.SecurityInsights/dataConnectors@2020-01-01
+* **Valid Scope(s)**: Extension
+* **Discriminator**: kind
+### Base Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.SecurityInsights/dataConnectors' (ReadOnly, DeployTimeConstant)
+### AmazonWebServicesCloudTrail
+#### Properties
+* **kind**: 'AmazonWebServicesCloudTrail' (Required)
+* **properties**: AwsCloudTrailDataConnectorProperties
+
+### AzureActiveDirectory
+#### Properties
+* **kind**: 'AzureActiveDirectory' (Required)
+* **properties**: AADDataConnectorProperties
+
+### AzureAdvancedThreatProtection
+#### Properties
+* **kind**: 'AzureAdvancedThreatProtection' (Required)
+* **properties**: AATPDataConnectorProperties
+
+### AzureSecurityCenter
+#### Properties
+* **kind**: 'AzureSecurityCenter' (Required)
+* **properties**: ASCDataConnectorProperties
+
+### MicrosoftCloudAppSecurity
+#### Properties
+* **kind**: 'MicrosoftCloudAppSecurity' (Required)
+* **properties**: MCASDataConnectorProperties
+
+### MicrosoftDefenderAdvancedThreatProtection
+#### Properties
+* **kind**: 'MicrosoftDefenderAdvancedThreatProtection' (Required)
+* **properties**: MDATPDataConnectorProperties
+
+### Office365
+#### Properties
+* **kind**: 'Office365' (Required)
+* **properties**: OfficeDataConnectorProperties
+
+### ThreatIntelligence
+#### Properties
+* **kind**: 'ThreatIntelligence' (Required)
+* **properties**: TIDataConnectorProperties
+
+
+## Resource Microsoft.SecurityInsights/incidents@2020-01-01
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IncidentProperties
+* **type**: 'Microsoft.SecurityInsights/incidents' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.SecurityInsights/incidents/comments@2020-01-01
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IncidentCommentProperties
+* **type**: 'Microsoft.SecurityInsights/incidents/comments' (ReadOnly, DeployTimeConstant)
 
 ## Fusion
 ### Properties
@@ -79,31 +168,11 @@
 * **triggerOperator**: 'Equal' | 'GreaterThan' | 'LessThan' | 'NotEqual'
 * **triggerThreshold**: int
 
-## Microsoft.SecurityInsights/alertRules/actions
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ActionRequestProperties
-* **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant)
-
 ## ActionRequestProperties
 ### Properties
 * **logicAppResourceId**: string (Required)
 * **triggerUri**: string (WriteOnly)
 * **workflowId**: string (ReadOnly)
-
-## Microsoft.SecurityInsights/bookmarks
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BookmarkProperties
-* **type**: 'Microsoft.SecurityInsights/bookmarks' (ReadOnly, DeployTimeConstant)
 
 ## BookmarkProperties
 ### Properties
@@ -130,56 +199,6 @@
 * **relationName**: string (Required)
 * **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium' (Required)
 * **title**: string (Required)
-
-## Microsoft.SecurityInsights/dataConnectors
-* **Discriminator**: kind
-### Base Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.SecurityInsights/dataConnectors' (ReadOnly, DeployTimeConstant)
-### AmazonWebServicesCloudTrail
-#### Properties
-* **kind**: 'AmazonWebServicesCloudTrail' (Required)
-* **properties**: AwsCloudTrailDataConnectorProperties
-
-### AzureActiveDirectory
-#### Properties
-* **kind**: 'AzureActiveDirectory' (Required)
-* **properties**: AADDataConnectorProperties
-
-### AzureAdvancedThreatProtection
-#### Properties
-* **kind**: 'AzureAdvancedThreatProtection' (Required)
-* **properties**: AATPDataConnectorProperties
-
-### AzureSecurityCenter
-#### Properties
-* **kind**: 'AzureSecurityCenter' (Required)
-* **properties**: ASCDataConnectorProperties
-
-### MicrosoftCloudAppSecurity
-#### Properties
-* **kind**: 'MicrosoftCloudAppSecurity' (Required)
-* **properties**: MCASDataConnectorProperties
-
-### MicrosoftDefenderAdvancedThreatProtection
-#### Properties
-* **kind**: 'MicrosoftDefenderAdvancedThreatProtection' (Required)
-* **properties**: MDATPDataConnectorProperties
-
-### Office365
-#### Properties
-* **kind**: 'Office365' (Required)
-* **properties**: OfficeDataConnectorProperties
-
-### ThreatIntelligence
-#### Properties
-* **kind**: 'ThreatIntelligence' (Required)
-* **properties**: TIDataConnectorProperties
-
 
 ## AmazonWebServicesCloudTrail
 ### Properties
@@ -303,16 +322,6 @@
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
-## Microsoft.SecurityInsights/incidents
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IncidentProperties
-* **type**: 'Microsoft.SecurityInsights/incidents' (ReadOnly, DeployTimeConstant)
-
 ## IncidentProperties
 ### Properties
 * **additionalData**: IncidentAdditionalData (ReadOnly)
@@ -352,15 +361,6 @@
 * **email**: string
 * **objectId**: string
 * **userPrincipalName**: string
-
-## Microsoft.SecurityInsights/incidents/comments
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IncidentCommentProperties
-* **type**: 'Microsoft.SecurityInsights/incidents/comments' (ReadOnly, DeployTimeConstant)
 
 ## IncidentCommentProperties
 ### Properties

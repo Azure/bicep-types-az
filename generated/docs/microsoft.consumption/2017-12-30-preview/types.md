@@ -1,9 +1,9 @@
 # Microsoft.Consumption @ 2017-12-30-preview
 
-## Microsoft.Consumption/budgets
+## Resource Microsoft.Consumption/budgets@2017-12-30-preview
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2017-12-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)

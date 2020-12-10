@@ -1,9 +1,9 @@
 # Microsoft.SignalRService @ 2018-10-01
 
-## Microsoft.SignalRService/signalR
+## Resource Microsoft.SignalRService/signalR@2018-10-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)

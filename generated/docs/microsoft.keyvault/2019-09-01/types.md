@@ -1,15 +1,36 @@
 # Microsoft.KeyVault @ 2019-09-01
 
-## Microsoft.KeyVault/vaults
+## Resource Microsoft.KeyVault/vaults@2019-09-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: VaultProperties (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.KeyVault/vaults' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.KeyVault/vaults/accessPolicies@2019-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: 'add' | 'remove' | 'replace' (Required, DeployTimeConstant)
+* **properties**: VaultAccessPolicyProperties (Required)
+* **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.KeyVault/vaults/privateEndpointConnections@2019-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.KeyVault/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## VaultProperties
 ### Properties
@@ -86,30 +107,9 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.KeyVault/vaults/accessPolicies
-### Properties
-* **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: 'add' | 'remove' | 'replace' (Required, DeployTimeConstant)
-* **properties**: VaultAccessPolicyProperties (Required)
-* **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant)
-
 ## VaultAccessPolicyProperties
 ### Properties
 * **accessPolicies**: AccessPolicyEntry[] (Required)
-
-## Microsoft.KeyVault/vaults/privateEndpointConnections
-### Properties
-* **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.KeyVault/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties

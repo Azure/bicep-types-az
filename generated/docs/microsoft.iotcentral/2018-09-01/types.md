@@ -1,9 +1,9 @@
 # Microsoft.IoTCentral @ 2018-09-01
 
-## Microsoft.IoTCentral/IoTApps
+## Resource Microsoft.IoTCentral/IoTApps@2018-09-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)

@@ -1,15 +1,23 @@
 # Microsoft.Compute @ 2020-10-01-preview
 
-## Microsoft.Compute/cloudServices
+## Resource Microsoft.Compute/cloudServices@2020-10-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: CloudServiceProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Compute/cloudServices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Compute/cloudServices/updateDomains@2020-10-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: int (Required, DeployTimeConstant)
+* **type**: 'Microsoft.Compute/cloudServices/updateDomains' (ReadOnly, DeployTimeConstant)
 
 ## CloudServiceProperties
 ### Properties
@@ -112,12 +120,4 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Compute/cloudServices/updateDomains
-### Properties
-* **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: int (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Compute/cloudServices/updateDomains' (ReadOnly, DeployTimeConstant)
 

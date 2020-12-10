@@ -1,9 +1,9 @@
 # Microsoft.StorageSync @ 2019-03-01
 
-## Microsoft.StorageSync/storageSyncServices
+## Resource Microsoft.StorageSync/storageSyncServices@2019-03-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
@@ -11,18 +11,45 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant)
 
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.StorageSync/storageSyncServices/registeredServers
+## Resource Microsoft.StorageSync/storageSyncServices/registeredServers@2019-03-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: RegisteredServerCreateParametersProperties
 * **type**: 'Microsoft.StorageSync/storageSyncServices/registeredServers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.StorageSync/storageSyncServices/syncGroups@2019-03-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: any
+* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2019-03-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CloudEndpointCreateParametersProperties
+* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints@2019-03-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServerEndpointCreateParametersProperties
+* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## RegisteredServerCreateParametersProperties
 ### Properties
@@ -46,24 +73,6 @@
 * **serviceLocation**: string (ReadOnly)
 * **storageSyncServiceUid**: string (ReadOnly)
 
-## Microsoft.StorageSync/storageSyncServices/syncGroups
-### Properties
-* **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: any
-* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints
-### Properties
-* **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CloudEndpointCreateParametersProperties
-* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints' (ReadOnly, DeployTimeConstant)
-
 ## CloudEndpointCreateParametersProperties
 ### Properties
 * **azureFileShareName**: string
@@ -75,15 +84,6 @@
 * **provisioningState**: string (ReadOnly)
 * **storageAccountResourceId**: string
 * **storageAccountTenantId**: string
-
-## Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints
-### Properties
-* **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerEndpointCreateParametersProperties
-* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## ServerEndpointCreateParametersProperties
 ### Properties

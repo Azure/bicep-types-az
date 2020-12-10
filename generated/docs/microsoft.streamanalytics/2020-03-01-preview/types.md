@@ -1,9 +1,9 @@
 # Microsoft.StreamAnalytics @ 2020-03-01-preview
 
-## Microsoft.StreamAnalytics/clusters
+## Resource Microsoft.StreamAnalytics/clusters@2020-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
@@ -12,6 +12,16 @@
 * **sku**: ClusterSku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.StreamAnalytics/clusters' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.StreamAnalytics/clusters/privateEndpoints@2020-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointProperties
+* **type**: 'Microsoft.StreamAnalytics/clusters/privateEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## ClusterProperties
 ### Properties
@@ -29,16 +39,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.StreamAnalytics/clusters/privateEndpoints
-### Properties
-* **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointProperties
-* **type**: 'Microsoft.StreamAnalytics/clusters/privateEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## PrivateEndpointProperties
 ### Properties

@@ -1,9 +1,9 @@
 # Microsoft.WindowsIoT @ 2018-02-16-preview
 
-## Microsoft.WindowsIoT/deviceServices
+## Resource Microsoft.WindowsIoT/deviceServices@2018-02-16-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-16-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string

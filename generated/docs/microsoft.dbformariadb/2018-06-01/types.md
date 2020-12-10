@@ -1,9 +1,9 @@
 # Microsoft.DBForMariaDB @ 2018-06-01
 
-## Microsoft.DBForMariaDB/servers
+## Resource Microsoft.DBForMariaDB/servers@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
@@ -11,6 +11,60 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DBForMariaDB/servers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DBForMariaDB/servers/configurations@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConfigurationProperties
+* **type**: 'Microsoft.DBForMariaDB/servers/configurations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DBForMariaDB/servers/databases@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseProperties
+* **type**: 'Microsoft.DBForMariaDB/servers/databases' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DBForMariaDB/servers/firewallRules@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: FirewallRuleProperties (Required)
+* **type**: 'Microsoft.DBForMariaDB/servers/firewallRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DBforMariaDB/servers/privateEndpointConnections@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: 'Microsoft.DBforMariaDB/servers/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DBforMariaDB/servers/securityAlertPolicies@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SecurityAlertPolicyProperties
+* **type**: 'Microsoft.DBforMariaDB/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DBForMariaDB/servers/virtualNetworkRules@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualNetworkRuleProperties
+* **type**: 'Microsoft.DBForMariaDB/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
 
 ## ServerPropertiesForCreate
 * **Discriminator**: createMode
@@ -112,15 +166,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DBForMariaDB/servers/configurations
-### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationProperties
-* **type**: 'Microsoft.DBForMariaDB/servers/configurations' (ReadOnly, DeployTimeConstant)
-
 ## ConfigurationProperties
 ### Properties
 * **allowedValues**: string (ReadOnly)
@@ -130,42 +175,15 @@
 * **source**: string
 * **value**: string
 
-## Microsoft.DBForMariaDB/servers/databases
-### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
-* **type**: 'Microsoft.DBForMariaDB/servers/databases' (ReadOnly, DeployTimeConstant)
-
 ## DatabaseProperties
 ### Properties
 * **charset**: string
 * **collation**: string
 
-## Microsoft.DBForMariaDB/servers/firewallRules
-### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: FirewallRuleProperties (Required)
-* **type**: 'Microsoft.DBForMariaDB/servers/firewallRules' (ReadOnly, DeployTimeConstant)
-
 ## FirewallRuleProperties
 ### Properties
 * **endIpAddress**: string (Required)
 * **startIpAddress**: string (Required)
-
-## Microsoft.DBforMariaDB/servers/privateEndpointConnections
-### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: 'Microsoft.DBforMariaDB/servers/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
@@ -179,15 +197,6 @@
 * **description**: string (Required)
 * **status**: string (Required)
 
-## Microsoft.DBforMariaDB/servers/securityAlertPolicies
-### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityAlertPolicyProperties
-* **type**: 'Microsoft.DBforMariaDB/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
-
 ## SecurityAlertPolicyProperties
 ### Properties
 * **disabledAlerts**: string[]
@@ -197,15 +206,6 @@
 * **state**: 'Disabled' | 'Enabled' (Required)
 * **storageAccountAccessKey**: string
 * **storageEndpoint**: string
-
-## Microsoft.DBForMariaDB/servers/virtualNetworkRules
-### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkRuleProperties
-* **type**: 'Microsoft.DBForMariaDB/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
 
 ## VirtualNetworkRuleProperties
 ### Properties

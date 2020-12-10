@@ -1,9 +1,9 @@
 # Microsoft.CertificateRegistration @ 2019-08-01
 
-## Microsoft.CertificateRegistration/certificateOrders
+## Resource Microsoft.CertificateRegistration/certificateOrders@2019-08-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **location**: string (Required)
@@ -11,6 +11,18 @@
 * **properties**: schemas:2_properties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.CertificateRegistration/certificateOrders' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.CertificateRegistration/certificateOrders/certificates@2019-08-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AppServiceCertificate
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.CertificateRegistration/certificateOrders/certificates' (ReadOnly, DeployTimeConstant)
 
 ## schemas:2_properties
 ### Properties
@@ -59,18 +71,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.CertificateRegistration/certificateOrders/certificates
-### Properties
-* **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AppServiceCertificate
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.CertificateRegistration/certificateOrders/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties

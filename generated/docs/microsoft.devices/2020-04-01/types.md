@@ -1,9 +1,9 @@
 # Microsoft.Devices @ 2020-04-01
 
-## Microsoft.Devices/IotHubs
+## Resource Microsoft.Devices/IotHubs@2020-04-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
@@ -12,6 +12,26 @@
 * **sku**: IotHubSkuInfo (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Devices/IotHubs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Devices/IotHubs/certificates@2020-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant)
+* **certificate**: string (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CertificateProperties (ReadOnly)
+* **type**: 'Microsoft.Devices/IotHubs/certificates' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Devices/iotHubs/privateEndpointConnections@2020-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties (Required)
+* **type**: 'Microsoft.Devices/iotHubs/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## IotHubProperties
 ### Properties
@@ -212,17 +232,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Devices/IotHubs/certificates
-### Properties
-* **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant)
-* **certificate**: string (WriteOnly)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CertificateProperties (ReadOnly)
-* **type**: 'Microsoft.Devices/IotHubs/certificates' (ReadOnly, DeployTimeConstant)
-
 ## CertificateProperties
 ### Properties
 * **certificate**: string (ReadOnly)
@@ -232,13 +241,4 @@
 * **subject**: string (ReadOnly)
 * **thumbprint**: string (ReadOnly)
 * **updated**: string (ReadOnly)
-
-## Microsoft.Devices/iotHubs/privateEndpointConnections
-### Properties
-* **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties (Required)
-* **type**: 'Microsoft.Devices/iotHubs/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 

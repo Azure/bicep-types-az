@@ -1,9 +1,9 @@
 # Microsoft.DataBox @ 2020-11-01
 
-## Microsoft.DataBox/jobs
+## Resource Microsoft.DataBox/jobs@2020-11-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: ResourceIdentity
 * **location**: string (Required)

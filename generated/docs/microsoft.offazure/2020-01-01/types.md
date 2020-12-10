@@ -1,9 +1,9 @@
 # Microsoft.OffAzure @ 2020-01-01
 
-## Microsoft.OffAzure/HyperVSites
+## Resource Microsoft.OffAzure/HyperVSites@2020-01-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
@@ -11,6 +11,45 @@
 * **properties**: SiteProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.OffAzure/HyperVSites' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.OffAzure/HyperVSites/clusters@2020-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: HyperVClusterProperties
+* **type**: 'Microsoft.OffAzure/HyperVSites/clusters' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.OffAzure/HyperVSites/hosts@2020-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: HyperVHostProperties
+* **type**: 'Microsoft.OffAzure/HyperVSites/hosts' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.OffAzure/VMwareSites@2020-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **eTag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SiteProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.OffAzure/VMwareSites' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.OffAzure/VMwareSites/vCenters@2020-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VCenterProperties
+* **type**: 'Microsoft.OffAzure/VMwareSites/vCenters' (ReadOnly, DeployTimeConstant)
 
 ## SiteProperties
 ### Properties
@@ -41,15 +80,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.OffAzure/HyperVSites/clusters
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: HyperVClusterProperties
-* **type**: 'Microsoft.OffAzure/HyperVSites/clusters' (ReadOnly, DeployTimeConstant)
-
 ## HyperVClusterProperties
 ### Properties
 * **createdTimestamp**: string (ReadOnly)
@@ -77,15 +107,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.OffAzure/HyperVSites/hosts
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: HyperVHostProperties
-* **type**: 'Microsoft.OffAzure/HyperVSites/hosts' (ReadOnly, DeployTimeConstant)
-
 ## HyperVHostProperties
 ### Properties
 * **createdTimestamp**: string (ReadOnly)
@@ -95,30 +116,9 @@
 * **updatedTimestamp**: string (ReadOnly)
 * **version**: string (ReadOnly)
 
-## Microsoft.OffAzure/VMwareSites
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SiteProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.OffAzure/VMwareSites' (ReadOnly, DeployTimeConstant)
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.OffAzure/VMwareSites/vCenters
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VCenterProperties
-* **type**: 'Microsoft.OffAzure/VMwareSites/vCenters' (ReadOnly, DeployTimeConstant)
 
 ## VCenterProperties
 ### Properties

@@ -1,9 +1,9 @@
 # Microsoft.Fabric.Admin @ 2016-05-01
 
-## Microsoft.Fabric.Admin/fabricLocations/ipPools
+## Resource Microsoft.Fabric.Admin/fabricLocations/ipPools@2016-05-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)

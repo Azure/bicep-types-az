@@ -1,9 +1,9 @@
 # Microsoft.Insights @ 2018-05-01-preview
 
-## Microsoft.Insights/components
+## Resource Microsoft.Insights/components@2018-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (Required)
 * **location**: string (Required)
@@ -11,6 +11,16 @@
 * **properties**: ApplicationInsightsComponentProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Insights/components' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Insights/components/ProactiveDetectionConfigs@2018-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationInsightsComponentProactiveDetectionConfigurationProperties
+* **type**: 'Microsoft.Insights/components/ProactiveDetectionConfigs' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationInsightsComponentProperties
 ### Properties
@@ -43,16 +53,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Insights/components/ProactiveDetectionConfigs
-### Properties
-* **apiVersion**: '2018-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationInsightsComponentProactiveDetectionConfigurationProperties
-* **type**: 'Microsoft.Insights/components/ProactiveDetectionConfigs' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationInsightsComponentProactiveDetectionConfigurationProperties
 ### Properties

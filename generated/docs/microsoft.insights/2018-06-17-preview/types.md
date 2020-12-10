@@ -1,9 +1,9 @@
 # microsoft.insights @ 2018-06-17-preview
 
-## microsoft.insights/workbooks
+## Resource microsoft.insights/workbooks@2018-06-17-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-17-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'shared' | 'user'
 * **location**: string (Required)

@@ -1,15 +1,92 @@
 # Microsoft.DevTestLab @ 2015-05-21-preview
 
-## Microsoft.DevTestLab/labs
+## Resource Microsoft.DevTestLab/labs@2015-05-21-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: LabProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DevTestLab/labs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DevTestLab/labs/artifactsources@2015-05-21-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ArtifactSourceProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DevTestLab/labs/artifactsources' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DevTestLab/labs/customimages@2015-05-21-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CustomImageProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DevTestLab/labs/customimages' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DevTestLab/labs/formulas@2015-05-21-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: FormulaProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DevTestLab/labs/formulas' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DevTestLab/labs/policysets/policies@2015-05-21-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PolicyProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DevTestLab/labs/policysets/policies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DevTestLab/labs/schedules@2015-05-21-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ScheduleProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DevTestLab/labs/schedules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DevTestLab/labs/virtualmachines@2015-05-21-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LabVirtualMachineProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DevTestLab/labs/virtualmachines' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DevTestLab/labs/virtualnetworks@2015-05-21-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualNetworkProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DevTestLab/labs/virtualnetworks' (ReadOnly, DeployTimeConstant)
 
 ## LabProperties
 ### Properties
@@ -26,17 +103,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DevTestLab/labs/artifactsources
-### Properties
-* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ArtifactSourceProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DevTestLab/labs/artifactsources' (ReadOnly, DeployTimeConstant)
-
 ## ArtifactSourceProperties
 ### Properties
 * **branchRef**: string
@@ -51,17 +117,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DevTestLab/labs/customimages
-### Properties
-* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CustomImageProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DevTestLab/labs/customimages' (ReadOnly, DeployTimeConstant)
 
 ## CustomImageProperties
 ### Properties
@@ -96,17 +151,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DevTestLab/labs/formulas
-### Properties
-* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: FormulaProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DevTestLab/labs/formulas' (ReadOnly, DeployTimeConstant)
 
 ## FormulaProperties
 ### Properties
@@ -186,17 +230,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DevTestLab/labs/policysets/policies
-### Properties
-* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DevTestLab/labs/policysets/policies' (ReadOnly, DeployTimeConstant)
-
 ## PolicyProperties
 ### Properties
 * **description**: string
@@ -210,17 +243,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DevTestLab/labs/schedules
-### Properties
-* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ScheduleProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DevTestLab/labs/schedules' (ReadOnly, DeployTimeConstant)
 
 ## ScheduleProperties
 ### Properties
@@ -249,31 +271,9 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DevTestLab/labs/virtualmachines
-### Properties
-* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LabVirtualMachineProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DevTestLab/labs/virtualmachines' (ReadOnly, DeployTimeConstant)
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DevTestLab/labs/virtualnetworks
-### Properties
-* **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DevTestLab/labs/virtualnetworks' (ReadOnly, DeployTimeConstant)
 
 ## VirtualNetworkProperties
 ### Properties

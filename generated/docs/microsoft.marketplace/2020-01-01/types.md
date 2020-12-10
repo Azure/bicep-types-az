@@ -1,13 +1,22 @@
 # Microsoft.Marketplace @ 2020-01-01
 
-## Microsoft.Marketplace/privateStores
+## Resource Microsoft.Marketplace/privateStores@2020-01-01
+* **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PrivateStoreProperties
 * **type**: 'Microsoft.Marketplace/privateStores' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Marketplace/privateStores/offers@2020-01-01
+* **Valid Scope(s)**: Tenant, Subscription
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: OfferProperties
+* **type**: 'Microsoft.Marketplace/privateStores/offers' (ReadOnly, DeployTimeConstant)
 
 ## PrivateStoreProperties
 ### Properties
@@ -21,15 +30,6 @@
 * **privateStoreName**: string
 * **tenantIds**: string[]
 * **tenantTag**: string
-
-## Microsoft.Marketplace/privateStores/offers
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: OfferProperties
-* **type**: 'Microsoft.Marketplace/privateStores/offers' (ReadOnly, DeployTimeConstant)
 
 ## OfferProperties
 ### Properties
@@ -57,13 +57,4 @@
 * **planId**: string (ReadOnly)
 * **skuId**: string (ReadOnly)
 * **stackType**: string (ReadOnly)
-
-## Microsoft.Marketplace/privateStores/offers
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: OfferProperties
-* **type**: 'Microsoft.Marketplace/privateStores/offers' (ReadOnly, DeployTimeConstant)
 

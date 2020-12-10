@@ -1,9 +1,9 @@
 # Microsoft.Synapse @ 2020-04-01-preview
 
-## Microsoft.Synapse/workspaces/sqlDatabases
+## Resource Microsoft.Synapse/workspaces/sqlDatabases@2020-04-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
@@ -11,6 +11,20 @@
 * **systemData**: SystemData (ReadOnly)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Synapse/workspaces/sqlDatabases' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Synapse/workspaces/sqlPools@2020-04-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SqlPoolProperties
+* **sku**: Sku
+* **systemData**: SystemData (ReadOnly)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools' (ReadOnly, DeployTimeConstant)
 
 ## SqlDatabaseProperties
 ### Properties
@@ -31,20 +45,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Synapse/workspaces/sqlPools
-### Properties
-* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlPoolProperties
-* **sku**: Sku
-* **systemData**: SystemData (ReadOnly)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Synapse/workspaces/sqlPools' (ReadOnly, DeployTimeConstant)
 
 ## SqlPoolProperties
 ### Properties

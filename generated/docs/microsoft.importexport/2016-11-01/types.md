@@ -1,9 +1,9 @@
 # Microsoft.ImportExport @ 2016-11-01
 
-## Microsoft.ImportExport/jobs
+## Resource Microsoft.ImportExport/jobs@2016-11-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)

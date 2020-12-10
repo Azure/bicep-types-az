@@ -1,15 +1,46 @@
 # Microsoft.NotificationHubs @ 2014-09-01
 
-## Microsoft.NotificationHubs/namespaces
+## Resource Microsoft.NotificationHubs/namespaces@2014-09-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: NamespaceProperties (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.NotificationHubs/namespaces' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.NotificationHubs/namespaces/AuthorizationRules@2014-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SharedAccessAuthorizationRuleProperties (Required)
+* **type**: 'Microsoft.NotificationHubs/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.NotificationHubs/namespaces/notificationHubs@2014-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: NotificationHubProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2014-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SharedAccessAuthorizationRuleProperties (Required)
+* **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## NamespaceProperties
 ### Properties
@@ -29,16 +60,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.NotificationHubs/namespaces/AuthorizationRules
-### Properties
-* **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties (Required)
-* **type**: 'Microsoft.NotificationHubs/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
-
 ## SharedAccessAuthorizationRuleProperties
 ### Properties
 * **claimType**: string
@@ -50,17 +71,6 @@
 * **revision**: int
 * **rights**: 'Listen' | 'Manage' | 'Send'[]
 * **secondaryKey**: string
-
-## Microsoft.NotificationHubs/namespaces/notificationHubs
-### Properties
-* **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: NotificationHubProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs' (ReadOnly, DeployTimeConstant)
 
 ## NotificationHubProperties
 ### Properties
@@ -137,14 +147,4 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules
-### Properties
-* **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties (Required)
-* **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 

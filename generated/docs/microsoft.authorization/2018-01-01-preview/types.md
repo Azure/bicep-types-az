@@ -1,13 +1,22 @@
 # Microsoft.Authorization @ 2018-01-01-preview
 
-## Microsoft.Authorization/roleAssignments
+## Resource Microsoft.Authorization/roleAssignments@2018-01-01-preview
+* **Valid Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: RoleAssignmentProperties (Required)
 * **type**: 'Microsoft.Authorization/roleAssignments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Authorization/roleDefinitions@2018-01-01-preview
+* **Valid Scope(s)**: None
+### Properties
+* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RoleDefinitionProperties
+* **type**: 'Microsoft.Authorization/roleDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## RoleAssignmentProperties
 ### Properties
@@ -15,15 +24,6 @@
 * **principalId**: string (Required)
 * **roleDefinitionId**: string (Required)
 * **scope**: string (ReadOnly)
-
-## Microsoft.Authorization/roleDefinitions
-### Properties
-* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RoleDefinitionProperties
-* **type**: 'Microsoft.Authorization/roleDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## RoleDefinitionProperties
 ### Properties

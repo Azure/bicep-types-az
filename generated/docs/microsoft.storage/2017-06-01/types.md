@@ -1,9 +1,9 @@
 # Microsoft.Storage @ 2017-06-01
 
-## Microsoft.Storage/storageAccounts
+## Resource Microsoft.Storage/storageAccounts@2017-06-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity
 * **kind**: 'BlobStorage' | 'Storage' (Required)

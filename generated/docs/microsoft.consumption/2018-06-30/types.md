@@ -1,14 +1,24 @@
 # Microsoft.Consumption @ 2018-06-30
 
-## Microsoft.Consumption/budgets
+## Resource Microsoft.Consumption/budgets@2018-06-30
+* **Valid Scope(s)**: Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: BudgetProperties
 * **type**: 'Microsoft.Consumption/budgets' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Consumption/costTags@2018-06-30
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant)
+* **eTag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'costTags' (Required, DeployTimeConstant)
+* **properties**: CostTagsModel
+* **type**: 'Microsoft.Consumption/costTags' (ReadOnly, DeployTimeConstant)
 
 ## BudgetProperties
 ### Properties
@@ -53,26 +63,6 @@
 ### Properties
 * **endDate**: string
 * **startDate**: string (Required)
-
-## Microsoft.Consumption/budgets
-### Properties
-* **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BudgetProperties
-* **type**: 'Microsoft.Consumption/budgets' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Consumption/costTags
-### Properties
-* **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'costTags' (Required, DeployTimeConstant)
-* **properties**: CostTagsModel
-* **type**: 'Microsoft.Consumption/costTags' (ReadOnly, DeployTimeConstant)
 
 ## CostTagsModel
 ### Properties
