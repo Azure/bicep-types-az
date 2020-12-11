@@ -1,9 +1,9 @@
 # Microsoft.Network @ 2015-05-04-preview
 
-## Microsoft.Network/dnszones
+## Resource Microsoft.Network/dnszones@2015-05-04-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
@@ -11,6 +11,114 @@
 * **properties**: ZoneProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Network/dnszones' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/dnszones/A@2015-05-04-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RecordSetProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/dnszones/A' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/dnszones/AAAA@2015-05-04-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RecordSetProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/dnszones/AAAA' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/dnszones/CNAME@2015-05-04-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RecordSetProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/dnszones/CNAME' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/dnszones/MX@2015-05-04-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RecordSetProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/dnszones/MX' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/dnszones/NS@2015-05-04-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RecordSetProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/dnszones/NS' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/dnszones/PTR@2015-05-04-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RecordSetProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/dnszones/PTR' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/dnszones/SOA@2015-05-04-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RecordSetProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/dnszones/SOA' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/dnszones/SRV@2015-05-04-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RecordSetProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/dnszones/SRV' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/dnszones/TXT@2015-05-04-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RecordSetProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/dnszones/TXT' (ReadOnly, DeployTimeConstant)
 
 ## ZoneProperties
 ### Properties
@@ -20,18 +128,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Network/dnszones/A
-### Properties
-* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/dnszones/A' (ReadOnly, DeployTimeConstant)
 
 ## RecordSetProperties
 ### Properties
@@ -96,129 +192,33 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Network/dnszones/AAAA
-### Properties
-* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/dnszones/AAAA' (ReadOnly, DeployTimeConstant)
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Network/dnszones/CNAME
-### Properties
-* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/dnszones/CNAME' (ReadOnly, DeployTimeConstant)
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Network/dnszones/MX
-### Properties
-* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/dnszones/MX' (ReadOnly, DeployTimeConstant)
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Network/dnszones/NS
-### Properties
-* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/dnszones/NS' (ReadOnly, DeployTimeConstant)
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Network/dnszones/PTR
-### Properties
-* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/dnszones/PTR' (ReadOnly, DeployTimeConstant)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Network/dnszones/SOA
-### Properties
-* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/dnszones/SOA' (ReadOnly, DeployTimeConstant)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Network/dnszones/SRV
-### Properties
-* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/dnszones/SRV' (ReadOnly, DeployTimeConstant)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Network/dnszones/TXT
-### Properties
-* **apiVersion**: '2015-05-04-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/dnszones/TXT' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties

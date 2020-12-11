@@ -1,9 +1,9 @@
 # Microsoft.Automation @ 2018-06-30
 
-## Microsoft.Automation/automationAccounts/python2Packages
+## Resource Microsoft.Automation/automationAccounts/python2Packages@2018-06-30
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
@@ -11,6 +11,18 @@
 * **properties**: PythonPackageCreateProperties (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Automation/automationAccounts/python2Packages' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/runbooks@2018-06-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RunbookCreateOrUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Automation/automationAccounts/runbooks' (ReadOnly, DeployTimeConstant)
 
 ## PythonPackageCreateProperties
 ### Properties
@@ -45,18 +57,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Automation/automationAccounts/runbooks
-### Properties
-* **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RunbookCreateOrUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Automation/automationAccounts/runbooks' (ReadOnly, DeployTimeConstant)
 
 ## RunbookCreateOrUpdateProperties
 ### Properties

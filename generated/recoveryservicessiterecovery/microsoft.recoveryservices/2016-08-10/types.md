@@ -1,30 +1,110 @@
 # Microsoft.RecoveryServices @ 2016-08-10
 
-## Microsoft.RecoveryServices/vaults/replicationAlertSettings
+## Resource Microsoft.RecoveryServices/vaults/replicationAlertSettings@2016-08-10
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-08-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ConfigureAlertRequestProperties
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationAlertSettings' (ReadOnly, DeployTimeConstant)
 
-## ConfigureAlertRequestProperties
-### Properties
-* **customEmailAddresses**: string[]
-* **locale**: string
-* **sendToOwners**: string
-
-## Microsoft.RecoveryServices/vaults/replicationFabrics
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics@2016-08-10
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-08-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: FabricCreationInputProperties
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings@2016-08-10
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-08-10' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CreateNetworkMappingInputProperties
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers@2016-08-10
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-08-10' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CreateProtectionContainerInputProperties
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems@2016-08-10
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-08-10' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EnableProtectionInputProperties
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings@2016-08-10
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-08-10' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CreateProtectionContainerMappingInputProperties
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications/replicationStorageClassificationMappings@2016-08-10
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-08-10' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: StorageMappingInputProperties
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications/replicationStorageClassificationMappings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationvCenters@2016-08-10
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-08-10' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AddVCenterRequestProperties
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationvCenters' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.RecoveryServices/vaults/replicationPolicies@2016-08-10
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-08-10' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CreatePolicyInputProperties
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.RecoveryServices/vaults/replicationRecoveryPlans@2016-08-10
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-08-10' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CreateRecoveryPlanInputProperties (Required)
+* **type**: 'Microsoft.RecoveryServices/vaults/replicationRecoveryPlans' (ReadOnly, DeployTimeConstant)
+
+## ConfigureAlertRequestProperties
+### Properties
+* **customEmailAddresses**: string[]
+* **locale**: string
+* **sendToOwners**: string
 
 ## FabricCreationInputProperties
 ### Properties
@@ -238,16 +318,6 @@
 * **kekCertThumbprint**: string (ReadOnly)
 * **kekState**: string (ReadOnly)
 
-## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings
-### Properties
-* **apiVersion**: '2016-08-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateNetworkMappingInputProperties
-* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings' (ReadOnly, DeployTimeConstant)
-
 ## CreateNetworkMappingInputProperties
 ### Properties
 * **fabricSpecificDetails**: FabricSpecificCreateNetworkMappingInput (WriteOnly)
@@ -308,16 +378,6 @@
 #### Properties
 * **instanceType**: 'VmmToVmm' (Required)
 
-
-## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers
-### Properties
-* **apiVersion**: '2016-08-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateProtectionContainerInputProperties
-* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers' (ReadOnly, DeployTimeConstant)
 
 ## CreateProtectionContainerInputProperties
 ### Properties
@@ -498,16 +558,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems
-### Properties
-* **apiVersion**: '2016-08-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EnableProtectionInputProperties
-* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems' (ReadOnly, DeployTimeConstant)
 
 ## EnableProtectionInputProperties
 ### Properties
@@ -1047,16 +1097,6 @@
 ### Properties
 * **instanceType**: 'San' (Required)
 
-## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings
-### Properties
-* **apiVersion**: '2016-08-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateProtectionContainerMappingInputProperties
-* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings' (ReadOnly, DeployTimeConstant)
-
 ## CreateProtectionContainerMappingInputProperties
 ### Properties
 * **health**: string (ReadOnly)
@@ -1080,29 +1120,9 @@
 ### Properties
 * **instanceType**: string (WriteOnly)
 
-## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications/replicationStorageClassificationMappings
-### Properties
-* **apiVersion**: '2016-08-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageMappingInputProperties
-* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications/replicationStorageClassificationMappings' (ReadOnly, DeployTimeConstant)
-
 ## StorageMappingInputProperties
 ### Properties
 * **targetStorageClassificationId**: string
-
-## Microsoft.RecoveryServices/vaults/replicationFabrics/replicationvCenters
-### Properties
-* **apiVersion**: '2016-08-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AddVCenterRequestProperties
-* **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationvCenters' (ReadOnly, DeployTimeConstant)
 
 ## AddVCenterRequestProperties
 ### Properties
@@ -1116,16 +1136,6 @@
 * **port**: string
 * **processServerId**: string
 * **runAsAccountId**: string
-
-## Microsoft.RecoveryServices/vaults/replicationPolicies
-### Properties
-* **apiVersion**: '2016-08-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CreatePolicyInputProperties
-* **type**: 'Microsoft.RecoveryServices/vaults/replicationPolicies' (ReadOnly, DeployTimeConstant)
 
 ## CreatePolicyInputProperties
 ### Properties
@@ -1633,16 +1643,6 @@
 * **instanceType**: 'VMwareCbt' (Required)
 * **recoveryPointHistory**: int (WriteOnly)
 
-
-## Microsoft.RecoveryServices/vaults/replicationRecoveryPlans
-### Properties
-* **apiVersion**: '2016-08-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateRecoveryPlanInputProperties (Required)
-* **type**: 'Microsoft.RecoveryServices/vaults/replicationRecoveryPlans' (ReadOnly, DeployTimeConstant)
 
 ## CreateRecoveryPlanInputProperties
 ### Properties

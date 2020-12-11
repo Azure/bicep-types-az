@@ -1,13 +1,22 @@
 # Microsoft.Management @ 2020-02-01
 
-## Microsoft.Management/managementGroups
+## Resource Microsoft.Management/managementGroups@2020-02-01
+* **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2020-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: CreateManagementGroupProperties
 * **type**: 'Microsoft.Management/managementGroups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Management/managementGroups/settings@2020-02-01
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2020-02-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CreateOrUpdateSettingsProperties
+* **type**: 'Microsoft.Management/managementGroups/settings' (ReadOnly, DeployTimeConstant)
 
 ## CreateManagementGroupProperties
 ### Properties
@@ -44,15 +53,6 @@
 ### Properties
 * **displayName**: string (ReadOnly)
 * **name**: string (ReadOnly)
-
-## Microsoft.Management/managementGroups/settings
-### Properties
-* **apiVersion**: '2020-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateOrUpdateSettingsProperties
-* **type**: 'Microsoft.Management/managementGroups/settings' (ReadOnly, DeployTimeConstant)
 
 ## CreateOrUpdateSettingsProperties
 ### Properties

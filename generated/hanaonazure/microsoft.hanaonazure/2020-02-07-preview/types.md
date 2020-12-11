@@ -1,15 +1,24 @@
 # Microsoft.HanaOnAzure @ 2020-02-07-preview
 
-## Microsoft.HanaOnAzure/sapMonitors
+## Resource Microsoft.HanaOnAzure/sapMonitors@2020-02-07-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-07-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SapMonitorProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.HanaOnAzure/sapMonitors' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.HanaOnAzure/sapMonitors/providerInstances@2020-02-07-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-02-07-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ProviderInstanceProperties
+* **type**: 'Microsoft.HanaOnAzure/sapMonitors/providerInstances' (ReadOnly, DeployTimeConstant)
 
 ## SapMonitorProperties
 ### Properties
@@ -25,15 +34,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.HanaOnAzure/sapMonitors/providerInstances
-### Properties
-* **apiVersion**: '2020-02-07-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ProviderInstanceProperties
-* **type**: 'Microsoft.HanaOnAzure/sapMonitors/providerInstances' (ReadOnly, DeployTimeConstant)
 
 ## ProviderInstanceProperties
 ### Properties

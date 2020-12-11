@@ -1,9 +1,9 @@
 # Microsoft.BotService @ 2018-07-12
 
-## Microsoft.BotService/botServices
+## Resource Microsoft.BotService/botServices@2018-07-12
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'bot' | 'designer' | 'function' | 'sdk'
@@ -13,6 +13,48 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.BotService/botServices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.BotService/botServices/channels@2018-07-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-07-12' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk'
+* **location**: string
+* **name**: 'DirectLineChannel' | 'EmailChannel' | 'FacebookChannel' | 'KikChannel' | 'MsTeamsChannel' | 'SkypeChannel' | 'SlackChannel' | 'SmsChannel' | 'TelegramChannel' | 'WebChatChannel' (Required, DeployTimeConstant)
+* **properties**: Channel
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.BotService/botServices/channels' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.BotService/botServices/Connections@2018-07-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-07-12' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk'
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConnectionSettingProperties
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.BotService/botServices/Connections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.BotService/enterpriseChannels@2018-07-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-07-12' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk'
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EnterpriseChannelProperties
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.BotService/enterpriseChannels' (ReadOnly, DeployTimeConstant)
 
 ## BotProperties
 ### Properties
@@ -38,20 +80,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.BotService/botServices/channels
-### Properties
-* **apiVersion**: '2018-07-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk'
-* **location**: string
-* **name**: 'DirectLineChannel' | 'EmailChannel' | 'FacebookChannel' | 'KikChannel' | 'MsTeamsChannel' | 'SkypeChannel' | 'SlackChannel' | 'SmsChannel' | 'TelegramChannel' | 'WebChatChannel' (Required, DeployTimeConstant)
-* **properties**: Channel
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.BotService/botServices/channels' (ReadOnly, DeployTimeConstant)
 
 ## Channel
 * **Discriminator**: channelName
@@ -262,20 +290,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.BotService/botServices/Connections
-### Properties
-* **apiVersion**: '2018-07-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk'
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectionSettingProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.BotService/botServices/Connections' (ReadOnly, DeployTimeConstant)
-
 ## ConnectionSettingProperties
 ### Properties
 * **clientId**: string
@@ -294,20 +308,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.BotService/enterpriseChannels
-### Properties
-* **apiVersion**: '2018-07-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk'
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EnterpriseChannelProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.BotService/enterpriseChannels' (ReadOnly, DeployTimeConstant)
 
 ## EnterpriseChannelProperties
 ### Properties

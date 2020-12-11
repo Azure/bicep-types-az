@@ -1,15 +1,55 @@
 # Microsoft.Compute @ 2020-06-30
 
-## Microsoft.Compute/diskAccesses
+## Resource Microsoft.Compute/diskAccesses@2020-06-30
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: DiskAccessProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Compute/diskAccesses' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Compute/diskEncryptionSets@2020-06-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-06-30' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: EncryptionSetIdentity
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EncryptionSetProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/diskEncryptionSets' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Compute/disks@2020-06-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-06-30' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **managedBy**: string (ReadOnly)
+* **managedByExtended**: string[] (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DiskProperties
+* **sku**: DiskSku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/disks' (ReadOnly, DeployTimeConstant)
+* **zones**: string[]
+
+## Resource Microsoft.Compute/snapshots@2020-06-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-06-30' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **managedBy**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SnapshotProperties
+* **sku**: SnapshotSku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant)
 
 ## DiskAccessProperties
 ### Properties
@@ -44,18 +84,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Compute/diskEncryptionSets
-### Properties
-* **apiVersion**: '2020-06-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: EncryptionSetIdentity
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EncryptionSetProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/diskEncryptionSets' (ReadOnly, DeployTimeConstant)
-
 ## EncryptionSetIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -81,21 +109,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Compute/disks
-### Properties
-* **apiVersion**: '2020-06-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **managedBy**: string (ReadOnly)
-* **managedByExtended**: string[] (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DiskProperties
-* **sku**: DiskSku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/disks' (ReadOnly, DeployTimeConstant)
-* **zones**: string[]
 
 ## DiskProperties
 ### Properties
@@ -170,19 +183,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Compute/snapshots
-### Properties
-* **apiVersion**: '2020-06-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **managedBy**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SnapshotProperties
-* **sku**: SnapshotSku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant)
 
 ## SnapshotProperties
 ### Properties

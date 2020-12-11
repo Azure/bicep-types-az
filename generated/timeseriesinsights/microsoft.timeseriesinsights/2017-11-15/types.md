@@ -1,9 +1,9 @@
 # Microsoft.TimeSeriesInsights @ 2017-11-15
 
-## Microsoft.TimeSeriesInsights/environments
+## Resource Microsoft.TimeSeriesInsights/environments@2017-11-15
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-11-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
@@ -11,6 +11,52 @@
 * **sku**: Sku (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.TimeSeriesInsights/environments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.TimeSeriesInsights/environments/accessPolicies@2017-11-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-11-15' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AccessPolicyResourceProperties (Required)
+* **type**: 'Microsoft.TimeSeriesInsights/environments/accessPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.TimeSeriesInsights/environments/eventSources@2017-11-15
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: kind
+### Base Properties
+* **apiVersion**: '2017-11-15' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.TimeSeriesInsights/environments/eventSources' (ReadOnly, DeployTimeConstant)
+### Microsoft.EventHub
+#### Properties
+* **kind**: 'Microsoft.EventHub' (Required)
+* **properties**: EventHubEventSourceCreationProperties (Required)
+
+### Microsoft.IotHub
+#### Properties
+* **kind**: 'Microsoft.IotHub' (Required)
+* **properties**: IoTHubEventSourceResourceProperties (ReadOnly)
+
+### Microsoft.IoTHub
+#### Properties
+* **kind**: 'Microsoft.IoTHub' (Required)
+* **properties**: IoTHubEventSourceCreationProperties (Required, WriteOnly)
+
+
+## Resource Microsoft.TimeSeriesInsights/environments/referenceDataSets@2017-11-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-11-15' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ReferenceDataSetCreationProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.TimeSeriesInsights/environments/referenceDataSets' (ReadOnly, DeployTimeConstant)
 
 ## EnvironmentCreationProperties
 ### Properties
@@ -51,46 +97,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.TimeSeriesInsights/environments/accessPolicies
-### Properties
-* **apiVersion**: '2017-11-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AccessPolicyResourceProperties (Required)
-* **type**: 'Microsoft.TimeSeriesInsights/environments/accessPolicies' (ReadOnly, DeployTimeConstant)
-
 ## AccessPolicyResourceProperties
 ### Properties
 * **description**: string
 * **principalObjectId**: string
 * **roles**: 'Contributor' | 'Reader'[]
-
-## Microsoft.TimeSeriesInsights/environments/eventSources
-* **Discriminator**: kind
-### Base Properties
-* **apiVersion**: '2017-11-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.TimeSeriesInsights/environments/eventSources' (ReadOnly, DeployTimeConstant)
-### Microsoft.EventHub
-#### Properties
-* **kind**: 'Microsoft.EventHub' (Required)
-* **properties**: EventHubEventSourceCreationProperties (Required)
-
-### Microsoft.IotHub
-#### Properties
-* **kind**: 'Microsoft.IotHub' (Required)
-* **properties**: IoTHubEventSourceResourceProperties (ReadOnly)
-
-### Microsoft.IoTHub
-#### Properties
-* **kind**: 'Microsoft.IoTHub' (Required)
-* **properties**: IoTHubEventSourceCreationProperties (Required, WriteOnly)
-
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -143,17 +154,6 @@
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (WriteOnly)
 * **sharedAccessKey**: string (Required, WriteOnly)
 * **timestampPropertyName**: string (WriteOnly)
-
-## Microsoft.TimeSeriesInsights/environments/referenceDataSets
-### Properties
-* **apiVersion**: '2017-11-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ReferenceDataSetCreationProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.TimeSeriesInsights/environments/referenceDataSets' (ReadOnly, DeployTimeConstant)
 
 ## ReferenceDataSetCreationProperties
 ### Properties

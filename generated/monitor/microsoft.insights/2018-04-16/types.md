@@ -1,9 +1,9 @@
 # microsoft.insights @ 2018-04-16
 
-## microsoft.insights/scheduledQueryRules
+## Resource microsoft.insights/scheduledQueryRules@2018-04-16
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-04-16' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)

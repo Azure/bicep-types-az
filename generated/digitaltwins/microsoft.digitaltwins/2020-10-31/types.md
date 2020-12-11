@@ -1,15 +1,24 @@
 # Microsoft.DigitalTwins @ 2020-10-31
 
-## Microsoft.DigitalTwins/digitalTwinsInstances
+## Resource Microsoft.DigitalTwins/digitalTwinsInstances@2020-10-31
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: DigitalTwinsProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DigitalTwins/digitalTwinsInstances/endpoints@2020-10-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-10-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DigitalTwinsEndpointResourceProperties (Required)
+* **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/endpoints' (ReadOnly, DeployTimeConstant)
 
 ## DigitalTwinsProperties
 ### Properties
@@ -21,15 +30,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DigitalTwins/digitalTwinsInstances/endpoints
-### Properties
-* **apiVersion**: '2020-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DigitalTwinsEndpointResourceProperties (Required)
-* **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/endpoints' (ReadOnly, DeployTimeConstant)
 
 ## DigitalTwinsEndpointResourceProperties
 * **Discriminator**: endpointType

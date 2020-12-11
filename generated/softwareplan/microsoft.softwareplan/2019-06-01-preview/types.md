@@ -1,9 +1,9 @@
 # Microsoft.SoftwarePlan @ 2019-06-01-preview
 
-## Microsoft.SoftwarePlan/hybridUseBenefits
+## Resource Microsoft.SoftwarePlan/hybridUseBenefits@2019-06-01-preview
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: int (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)

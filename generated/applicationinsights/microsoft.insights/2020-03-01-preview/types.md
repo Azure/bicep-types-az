@@ -1,9 +1,9 @@
 # microsoft.insights @ 2020-03-01-preview
 
-## microsoft.insights/components/linkedStorageAccounts
+## Resource microsoft.insights/components/linkedStorageAccounts@2020-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: LinkedStorageAccountsProperties

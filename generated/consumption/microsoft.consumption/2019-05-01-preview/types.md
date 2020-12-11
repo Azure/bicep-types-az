@@ -1,9 +1,9 @@
 # Microsoft.Consumption @ 2019-05-01-preview
 
-## Microsoft.Consumption/budgets
+## Resource Microsoft.Consumption/budgets@2019-05-01-preview
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)

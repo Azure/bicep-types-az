@@ -1,9 +1,9 @@
 # Microsoft.Cdn @ 2019-12-31
 
-## Microsoft.Cdn/profiles
+## Resource Microsoft.Cdn/profiles@2019-12-31
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-12-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
@@ -11,6 +11,44 @@
 * **sku**: Sku (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Cdn/profiles/endpoints@2019-12-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EndpointProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2019-12-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CustomDomainPropertiesParameters
+* **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Cdn/profiles/endpoints/originGroups@2019-12-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: OriginGroupProperties
+* **type**: 'Microsoft.Cdn/profiles/endpoints/originGroups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Cdn/profiles/endpoints/origins@2019-12-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: OriginProperties
+* **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant)
 
 ## ProfileProperties
 ### Properties
@@ -24,17 +62,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Cdn/profiles/endpoints
-### Properties
-* **apiVersion**: '2019-12-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EndpointProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant)
 
 ## EndpointProperties
 ### Properties
@@ -499,15 +526,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Cdn/profiles/endpoints/customDomains
-### Properties
-* **apiVersion**: '2019-12-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CustomDomainPropertiesParameters
-* **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant)
-
 ## CustomDomainPropertiesParameters
 ### Properties
 * **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly)
@@ -517,15 +535,6 @@
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
 * **validationData**: string (ReadOnly)
 
-## Microsoft.Cdn/profiles/endpoints/originGroups
-### Properties
-* **apiVersion**: '2019-12-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: OriginGroupProperties
-* **type**: 'Microsoft.Cdn/profiles/endpoints/originGroups' (ReadOnly, DeployTimeConstant)
-
 ## OriginGroupProperties
 ### Properties
 * **healthProbeSettings**: HealthProbeParameters
@@ -534,15 +543,6 @@
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
 * **responseBasedOriginErrorDetectionSettings**: ResponseBasedOriginErrorDetectionParameters
 * **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int
-
-## Microsoft.Cdn/profiles/endpoints/origins
-### Properties
-* **apiVersion**: '2019-12-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: OriginProperties
-* **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant)
 
 ## OriginProperties
 ### Properties

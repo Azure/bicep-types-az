@@ -1,9 +1,9 @@
 # Microsoft.Web @ 2016-09-01
 
-## Microsoft.Web/hostingEnvironments
+## Resource Microsoft.Web/hostingEnvironments@2016-09-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **location**: string (Required)
@@ -11,6 +11,61 @@
 * **properties**: AppServiceEnvironment
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Web/hostingEnvironments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/hostingEnvironments/multiRolePools@2016-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkerPool
+* **sku**: SkuDescription
+* **type**: 'Microsoft.Web/hostingEnvironments/multiRolePools' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/hostingEnvironments/workerPools@2016-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkerPool
+* **sku**: SkuDescription
+* **type**: 'Microsoft.Web/hostingEnvironments/workerPools' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/serverfarms@2016-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:20_properties
+* **sku**: SkuDescription
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Web/serverfarms' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/serverfarms/virtualNetworkConnections/gateways@2016-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:87_properties
+* **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/serverfarms/virtualNetworkConnections/routes@2016-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:89_properties
+* **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/routes' (ReadOnly, DeployTimeConstant)
 
 ## AppServiceEnvironment
 ### Properties
@@ -102,17 +157,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Web/hostingEnvironments/multiRolePools
-### Properties
-* **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkerPool
-* **sku**: SkuDescription
-* **type**: 'Microsoft.Web/hostingEnvironments/multiRolePools' (ReadOnly, DeployTimeConstant)
-
 ## SkuDescription
 ### Properties
 * **capabilities**: Capability[]
@@ -136,30 +180,6 @@
 * **maximum**: int
 * **minimum**: int
 * **scaleType**: string
-
-## Microsoft.Web/hostingEnvironments/workerPools
-### Properties
-* **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkerPool
-* **sku**: SkuDescription
-* **type**: 'Microsoft.Web/hostingEnvironments/workerPools' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Web/serverfarms
-### Properties
-* **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:20_properties
-* **sku**: SkuDescription
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Web/serverfarms' (ReadOnly, DeployTimeConstant)
 
 ## schemas:20_properties
 ### Properties
@@ -191,30 +211,10 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Web/serverfarms/virtualNetworkConnections/gateways
-### Properties
-* **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:87_properties
-* **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant)
-
 ## schemas:87_properties
 ### Properties
 * **vnetName**: string
 * **vpnPackageUri**: string (Required)
-
-## Microsoft.Web/serverfarms/virtualNetworkConnections/routes
-### Properties
-* **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:89_properties
-* **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/routes' (ReadOnly, DeployTimeConstant)
 
 ## schemas:89_properties
 ### Properties

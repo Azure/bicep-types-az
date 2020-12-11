@@ -1,9 +1,9 @@
 # Microsoft.ServiceFabric @ 2019-03-01
 
-## Microsoft.ServiceFabric/clusters
+## Resource Microsoft.ServiceFabric/clusters@2019-03-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
@@ -11,6 +11,54 @@
 * **properties**: ClusterProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ServiceFabric/clusters' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceFabric/clusters/applications@2019-03-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationResourceProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ServiceFabric/clusters/applications' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceFabric/clusters/applications/services@2019-03-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServiceResourceProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ServiceFabric/clusters/applications/services' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceFabric/clusters/applicationTypes@2019-03-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationTypeResourceProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceFabric/clusters/applicationTypes/versions@2019-03-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationTypeVersionResourceProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant)
 
 ## ClusterProperties
 ### Properties
@@ -185,18 +233,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.ServiceFabric/clusters/applications
-### Properties
-* **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationResourceProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ServiceFabric/clusters/applications' (ReadOnly, DeployTimeConstant)
-
 ## ApplicationResourceProperties
 ### Properties
 * **maximumNodes**: int
@@ -256,18 +292,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.ServiceFabric/clusters/applications/services
-### Properties
-* **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ServiceResourceProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ServiceFabric/clusters/applications/services' (ReadOnly, DeployTimeConstant)
 
 ## ServiceResourceProperties
 * **Discriminator**: serviceKind
@@ -371,18 +395,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.ServiceFabric/clusters/applicationTypes
-### Properties
-* **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationTypeResourceProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes' (ReadOnly, DeployTimeConstant)
-
 ## ApplicationTypeResourceProperties
 ### Properties
 * **provisioningState**: string (ReadOnly)
@@ -390,18 +402,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.ServiceFabric/clusters/applicationTypes/versions
-### Properties
-* **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationTypeVersionResourceProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationTypeVersionResourceProperties
 ### Properties

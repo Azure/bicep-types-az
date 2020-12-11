@@ -1,9 +1,9 @@
 # Microsoft.AAD @ 2020-01-01
 
-## Microsoft.AAD/domainServices
+## Resource Microsoft.AAD/domainServices@2020-01-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
@@ -11,6 +11,21 @@
 * **properties**: DomainServiceProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.AAD/domainServices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Aad/domainServices/ouContainer@2020-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **accountName**: string (WriteOnly)
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **password**: string (WriteOnly)
+* **properties**: OuContainerProperties (ReadOnly)
+* **spn**: string (WriteOnly)
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.Aad/domainServices/ouContainer' (ReadOnly, DeployTimeConstant)
 
 ## DomainServiceProperties
 ### Properties
@@ -110,21 +125,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Aad/domainServices/ouContainer
-### Properties
-* **accountName**: string (WriteOnly)
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **password**: string (WriteOnly)
-* **properties**: OuContainerProperties (ReadOnly)
-* **spn**: string (WriteOnly)
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.Aad/domainServices/ouContainer' (ReadOnly, DeployTimeConstant)
 
 ## OuContainerProperties
 ### Properties

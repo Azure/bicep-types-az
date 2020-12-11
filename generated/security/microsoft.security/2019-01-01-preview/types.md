@@ -1,13 +1,44 @@
 # Microsoft.Security @ 2019-01-01-preview
 
-## Microsoft.Security/alertsSuppressionRules
+## Resource Microsoft.Security/alertsSuppressionRules@2019-01-01-preview
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AlertsSuppressionRuleProperties
 * **type**: 'Microsoft.Security/alertsSuppressionRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Security/assessmentMetadata@2019-01-01-preview
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SecurityAssessmentMetadataProperties
+* **type**: 'Microsoft.Security/assessmentMetadata' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Security/assessments@2019-01-01-preview
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SecurityAssessmentProperties
+* **type**: 'Microsoft.Security/assessments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Security/automations@2019-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AutomationProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Security/automations' (ReadOnly, DeployTimeConstant)
 
 ## AlertsSuppressionRuleProperties
 ### Properties
@@ -29,15 +60,6 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## Microsoft.Security/assessmentMetadata
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityAssessmentMetadataProperties
-* **type**: 'Microsoft.Security/assessmentMetadata' (ReadOnly, DeployTimeConstant)
-
 ## SecurityAssessmentMetadataProperties
 ### Properties
 * **assessmentType**: 'BuiltIn' | 'CustomerManaged' | 'CustomPolicy' (Required)
@@ -51,15 +73,6 @@
 * **severity**: 'High' | 'Low' | 'Medium' (Required)
 * **threats**: 'accountBreach' | 'dataExfiltration' | 'dataSpillage' | 'denialOfService' | 'elevationOfPrivilege' | 'maliciousInsider' | 'missingCoverage' | 'threatResistance'[]
 * **userImpact**: 'High' | 'Low' | 'Moderate'
-
-## Microsoft.Security/assessments
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityAssessmentProperties
-* **type**: 'Microsoft.Security/assessments' (ReadOnly, DeployTimeConstant)
 
 ## SecurityAssessmentProperties
 ### Properties
@@ -112,19 +125,6 @@
 * **cause**: string
 * **code**: 'Healthy' | 'NotApplicable' | 'Unhealthy' (Required)
 * **description**: string
-
-## Microsoft.Security/automations
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AutomationProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Security/automations' (ReadOnly, DeployTimeConstant)
 
 ## AutomationProperties
 ### Properties

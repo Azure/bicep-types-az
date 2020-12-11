@@ -1,9 +1,9 @@
 # Microsoft.ImportExport @ 2020-08-01
 
-## Microsoft.ImportExport/jobs
+## Resource Microsoft.ImportExport/jobs@2020-08-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: IdentityDetails (ReadOnly)
 * **location**: string

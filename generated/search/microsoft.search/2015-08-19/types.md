@@ -1,9 +1,9 @@
 # Microsoft.Search @ 2015-08-19
 
-## Microsoft.Search/searchServices
+## Resource Microsoft.Search/searchServices@2015-08-19
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-08-19' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity
 * **location**: string

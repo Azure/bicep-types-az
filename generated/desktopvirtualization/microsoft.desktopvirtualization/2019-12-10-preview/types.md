@@ -1,15 +1,46 @@
 # Microsoft.DesktopVirtualization @ 2019-12-10-preview
 
-## Microsoft.DesktopVirtualization/applicationGroups
+## Resource Microsoft.DesktopVirtualization/applicationGroups@2019-12-10-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-12-10-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ApplicationGroupProperties (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DesktopVirtualization/applicationGroups/applications@2019-12-10-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-10-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationProperties (Required)
+* **type**: 'Microsoft.DesktopVirtualization/applicationGroups/applications' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DesktopVirtualization/hostPools@2019-12-10-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-10-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: HostPoolProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DesktopVirtualization/workspaces@2019-12-10-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-10-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkspaceProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationGroupProperties
 ### Properties
@@ -23,15 +54,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DesktopVirtualization/applicationGroups/applications
-### Properties
-* **apiVersion**: '2019-12-10-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationProperties (Required)
-* **type**: 'Microsoft.DesktopVirtualization/applicationGroups/applications' (ReadOnly, DeployTimeConstant)
-
 ## ApplicationProperties
 ### Properties
 * **commandLineArguments**: string
@@ -44,17 +66,6 @@
 * **iconIndex**: int
 * **iconPath**: string
 * **showInPortal**: bool
-
-## Microsoft.DesktopVirtualization/hostPools
-### Properties
-* **apiVersion**: '2019-12-10-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: HostPoolProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant)
 
 ## HostPoolProperties
 ### Properties
@@ -82,17 +93,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DesktopVirtualization/workspaces
-### Properties
-* **apiVersion**: '2019-12-10-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## WorkspaceProperties
 ### Properties

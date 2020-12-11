@@ -1,9 +1,9 @@
 # Microsoft.AVS @ 2020-07-17-preview
 
-## Microsoft.AVS/privateClouds
+## Resource Microsoft.AVS/privateClouds@2020-07-17-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
@@ -11,6 +11,97 @@
 * **sku**: Sku (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.AVS/privateClouds' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AVS/privateClouds/authorizations@2020-07-17-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ExpressRouteAuthorizationProperties (ReadOnly)
+* **type**: 'Microsoft.AVS/privateClouds/authorizations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AVS/privateClouds/clusters@2020-07-17-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ClusterProperties
+* **sku**: Sku (Required)
+* **type**: 'Microsoft.AVS/privateClouds/clusters' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AVS/privateClouds/globalReachConnections@2020-07-17-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GlobalReachConnectionProperties
+* **type**: 'Microsoft.AVS/privateClouds/globalReachConnections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AVS/privateClouds/hcxEnterpriseSites@2020-07-17-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: HcxEnterpriseSiteProperties (ReadOnly)
+* **type**: 'Microsoft.AVS/privateClouds/hcxEnterpriseSites' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/dhcpConfigurations@2020-07-17-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkloadNetworkDhcpEntity
+* **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/dhcpConfigurations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/dnsServices@2020-07-17-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkloadNetworkDnsServiceProperties
+* **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/dnsServices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/dnsZones@2020-07-17-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkloadNetworkDnsZoneProperties
+* **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/dnsZones' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles@2020-07-17-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkloadNetworkPortMirroringProperties
+* **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/segments@2020-07-17-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkloadNetworkSegmentProperties
+* **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/segments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/vmGroups@2020-07-17-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkloadNetworkVMGroupProperties
+* **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/vmGroups' (ReadOnly, DeployTimeConstant)
 
 ## PrivateCloudProperties
 ### Properties
@@ -70,30 +161,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.AVS/privateClouds/authorizations
-### Properties
-* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ExpressRouteAuthorizationProperties (ReadOnly)
-* **type**: 'Microsoft.AVS/privateClouds/authorizations' (ReadOnly, DeployTimeConstant)
-
 ## ExpressRouteAuthorizationProperties
 ### Properties
 * **expressRouteAuthorizationId**: string (ReadOnly)
 * **expressRouteAuthorizationKey**: string (ReadOnly)
 * **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-
-## Microsoft.AVS/privateClouds/clusters
-### Properties
-* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterProperties
-* **sku**: Sku (Required)
-* **type**: 'Microsoft.AVS/privateClouds/clusters' (ReadOnly, DeployTimeConstant)
 
 ## ClusterProperties
 ### Properties
@@ -101,15 +173,6 @@
 * **clusterSize**: int
 * **hosts**: string[] (ReadOnly)
 * **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-
-## Microsoft.AVS/privateClouds/globalReachConnections
-### Properties
-* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GlobalReachConnectionProperties
-* **type**: 'Microsoft.AVS/privateClouds/globalReachConnections' (ReadOnly, DeployTimeConstant)
 
 ## GlobalReachConnectionProperties
 ### Properties
@@ -119,28 +182,10 @@
 * **peerExpressRouteCircuit**: string
 * **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
-## Microsoft.AVS/privateClouds/hcxEnterpriseSites
-### Properties
-* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: HcxEnterpriseSiteProperties (ReadOnly)
-* **type**: 'Microsoft.AVS/privateClouds/hcxEnterpriseSites' (ReadOnly, DeployTimeConstant)
-
 ## HcxEnterpriseSiteProperties
 ### Properties
 * **activationKey**: string (ReadOnly)
 * **status**: 'Available' | 'Consumed' | 'Deactivated' | 'Deleted' (ReadOnly)
-
-## Microsoft.AVS/privateClouds/workloadNetworks/dhcpConfigurations
-### Properties
-* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkloadNetworkDhcpEntity
-* **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/dhcpConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## WorkloadNetworkDhcpEntity
 * **Discriminator**: dhcpType
@@ -172,15 +217,6 @@
 * **leaseTime**: int
 * **serverAddress**: string
 
-## Microsoft.AVS/privateClouds/workloadNetworks/dnsServices
-### Properties
-* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkloadNetworkDnsServiceProperties
-* **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/dnsServices' (ReadOnly, DeployTimeConstant)
-
 ## WorkloadNetworkDnsServiceProperties
 ### Properties
 * **defaultDnsZone**: string
@@ -192,15 +228,6 @@
 * **revision**: int
 * **status**: 'FAILURE' | 'SUCCESS' (ReadOnly)
 
-## Microsoft.AVS/privateClouds/workloadNetworks/dnsZones
-### Properties
-* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkloadNetworkDnsZoneProperties
-* **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/dnsZones' (ReadOnly, DeployTimeConstant)
-
 ## WorkloadNetworkDnsZoneProperties
 ### Properties
 * **displayName**: string
@@ -211,15 +238,6 @@
 * **revision**: int
 * **sourceIp**: string
 
-## Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles
-### Properties
-* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkloadNetworkPortMirroringProperties
-* **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles' (ReadOnly, DeployTimeConstant)
-
 ## WorkloadNetworkPortMirroringProperties
 ### Properties
 * **destination**: string
@@ -229,15 +247,6 @@
 * **revision**: int
 * **source**: string
 * **status**: 'SUCCESS, FAILURE' (ReadOnly)
-
-## Microsoft.AVS/privateClouds/workloadNetworks/segments
-### Properties
-* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkloadNetworkSegmentProperties
-* **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/segments' (ReadOnly, DeployTimeConstant)
 
 ## WorkloadNetworkSegmentProperties
 ### Properties
@@ -257,15 +266,6 @@
 ### Properties
 * **dhcpRanges**: string[]
 * **gatewayAddress**: string
-
-## Microsoft.AVS/privateClouds/workloadNetworks/vmGroups
-### Properties
-* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkloadNetworkVMGroupProperties
-* **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/vmGroups' (ReadOnly, DeployTimeConstant)
 
 ## WorkloadNetworkVMGroupProperties
 ### Properties

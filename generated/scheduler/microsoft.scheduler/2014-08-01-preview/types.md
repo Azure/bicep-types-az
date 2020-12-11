@@ -1,15 +1,24 @@
 # Microsoft.Scheduler @ 2014-08-01-preview
 
-## Microsoft.Scheduler/jobCollections
+## Resource Microsoft.Scheduler/jobCollections@2014-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2014-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: JobCollectionProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Scheduler/jobCollections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Scheduler/jobCollections/jobs@2014-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: JobProperties
+* **type**: 'Microsoft.Scheduler/jobCollections/jobs' (ReadOnly, DeployTimeConstant)
 
 ## JobCollectionProperties
 ### Properties
@@ -35,15 +44,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Scheduler/jobCollections/jobs
-### Properties
-* **apiVersion**: '2014-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: JobProperties
-* **type**: 'Microsoft.Scheduler/jobCollections/jobs' (ReadOnly, DeployTimeConstant)
 
 ## JobProperties
 ### Properties

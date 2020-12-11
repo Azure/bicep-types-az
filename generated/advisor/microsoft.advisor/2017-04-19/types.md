@@ -1,15 +1,24 @@
 # Microsoft.Advisor @ 2017-04-19
 
-## Microsoft.Advisor/configurations
+## Resource Microsoft.Advisor/configurations@2017-04-19
+* **Valid Scope(s)**: Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-19' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'configurations' (Required, DeployTimeConstant)
 * **nextLink**: string (ReadOnly)
 * **properties**: schemas:5_properties (WriteOnly)
 * **type**: 'Microsoft.Advisor/configurations' (ReadOnly, DeployTimeConstant)
 * **value**: ConfigData[] (ReadOnly)
+
+## Resource Microsoft.Advisor/recommendations/suppressions@2017-04-19
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2017-04-19' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SuppressionProperties
+* **type**: 'Microsoft.Advisor/recommendations/suppressions' (ReadOnly, DeployTimeConstant)
 
 ## schemas:5_properties
 ### Properties
@@ -24,26 +33,6 @@
 * **name**: string (ReadOnly)
 * **properties**: schemas:5_properties (ReadOnly)
 * **type**: string (ReadOnly)
-
-## Microsoft.Advisor/configurations
-### Properties
-* **apiVersion**: '2017-04-19' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'configurations' (Required, DeployTimeConstant)
-* **nextLink**: string (ReadOnly)
-* **properties**: schemas:5_properties (WriteOnly)
-* **type**: 'Microsoft.Advisor/configurations' (ReadOnly, DeployTimeConstant)
-* **value**: ConfigData[] (ReadOnly)
-
-## Microsoft.Advisor/recommendations/suppressions
-### Properties
-* **apiVersion**: '2017-04-19' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SuppressionProperties
-* **type**: 'Microsoft.Advisor/recommendations/suppressions' (ReadOnly, DeployTimeConstant)
 
 ## SuppressionProperties
 ### Properties

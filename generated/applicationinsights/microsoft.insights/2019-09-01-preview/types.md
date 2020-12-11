@@ -1,15 +1,25 @@
 # Microsoft.Insights @ 2019-09-01-preview
 
-## Microsoft.Insights/queryPacks
+## Resource Microsoft.Insights/queryPacks@2019-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: LogAnalyticsQueryPackProperties (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Insights/queryPacks' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Insights/queryPacks/queries@2019-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LogAnalyticsQueryPackQueryProperties
+* **systemData**: SystemData (ReadOnly)
+* **type**: 'Microsoft.Insights/queryPacks/queries' (ReadOnly, DeployTimeConstant)
 
 ## LogAnalyticsQueryPackProperties
 ### Properties
@@ -21,16 +31,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Insights/queryPacks/queries
-### Properties
-* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LogAnalyticsQueryPackQueryProperties
-* **systemData**: SystemData (ReadOnly)
-* **type**: 'Microsoft.Insights/queryPacks/queries' (ReadOnly, DeployTimeConstant)
 
 ## LogAnalyticsQueryPackQueryProperties
 ### Properties

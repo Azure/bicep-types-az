@@ -1,9 +1,9 @@
 # Microsoft.Kusto @ 2019-11-09
 
-## Microsoft.Kusto/clusters
+## Resource Microsoft.Kusto/clusters@2019-11-09
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-09' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity
 * **location**: string (Required)
@@ -13,6 +13,79 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
+
+## Resource Microsoft.Kusto/clusters/attachedDatabaseConfigurations@2019-11-09
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-11-09' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AttachedDatabaseConfigurationProperties
+* **type**: 'Microsoft.Kusto/clusters/attachedDatabaseConfigurations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Kusto/clusters/databases@2019-11-09
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: kind
+### Base Properties
+* **apiVersion**: '2019-11-09' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant)
+### ReadOnlyFollowing
+#### Properties
+* **kind**: 'ReadOnlyFollowing' (Required)
+* **properties**: ReadOnlyFollowingDatabaseProperties
+
+### ReadWrite
+#### Properties
+* **kind**: 'ReadWrite' (Required)
+* **properties**: ReadWriteDatabaseProperties
+
+
+## Resource Microsoft.Kusto/clusters/databases/dataConnections@2019-11-09
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: kind
+### Base Properties
+* **apiVersion**: '2019-11-09' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.Kusto/clusters/databases/dataConnections' (ReadOnly, DeployTimeConstant)
+### EventGrid
+#### Properties
+* **kind**: 'EventGrid' (Required)
+* **properties**: EventGridConnectionProperties
+
+### EventHub
+#### Properties
+* **kind**: 'EventHub' (Required)
+* **properties**: EventHubConnectionProperties
+
+### IotHub
+#### Properties
+* **kind**: 'IotHub' (Required)
+* **properties**: IotHubConnectionProperties
+
+
+## Resource Microsoft.Kusto/clusters/databases/principalAssignments@2019-11-09
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-11-09' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabasePrincipalProperties
+* **type**: 'Microsoft.Kusto/clusters/databases/principalAssignments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Kusto/clusters/principalAssignments@2019-11-09
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-11-09' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ClusterPrincipalProperties
+* **type**: 'Microsoft.Kusto/clusters/principalAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Identity
 ### Properties
@@ -77,16 +150,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Kusto/clusters/attachedDatabaseConfigurations
-### Properties
-* **apiVersion**: '2019-11-09' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AttachedDatabaseConfigurationProperties
-* **type**: 'Microsoft.Kusto/clusters/attachedDatabaseConfigurations' (ReadOnly, DeployTimeConstant)
-
 ## AttachedDatabaseConfigurationProperties
 ### Properties
 * **attachedDatabaseNames**: string[] (ReadOnly)
@@ -94,26 +157,6 @@
 * **databaseName**: string (Required)
 * **defaultPrincipalsModificationKind**: 'None' | 'Replace' | 'Union' (Required)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
-
-## Microsoft.Kusto/clusters/databases
-* **Discriminator**: kind
-### Base Properties
-* **apiVersion**: '2019-11-09' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant)
-### ReadOnlyFollowing
-#### Properties
-* **kind**: 'ReadOnlyFollowing' (Required)
-* **properties**: ReadOnlyFollowingDatabaseProperties
-
-### ReadWrite
-#### Properties
-* **kind**: 'ReadWrite' (Required)
-* **properties**: ReadWriteDatabaseProperties
-
 
 ## ReadOnlyFollowing
 ### Properties
@@ -146,31 +189,6 @@
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
 * **softDeletePeriod**: string
 * **statistics**: DatabaseStatistics
-
-## Microsoft.Kusto/clusters/databases/dataConnections
-* **Discriminator**: kind
-### Base Properties
-* **apiVersion**: '2019-11-09' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Kusto/clusters/databases/dataConnections' (ReadOnly, DeployTimeConstant)
-### EventGrid
-#### Properties
-* **kind**: 'EventGrid' (Required)
-* **properties**: EventGridConnectionProperties
-
-### EventHub
-#### Properties
-* **kind**: 'EventHub' (Required)
-* **properties**: EventHubConnectionProperties
-
-### IotHub
-#### Properties
-* **kind**: 'IotHub' (Required)
-* **properties**: IotHubConnectionProperties
-
 
 ## EventGrid
 ### Properties
@@ -216,15 +234,6 @@
 * **sharedAccessPolicyName**: string (Required)
 * **tableName**: string
 
-## Microsoft.Kusto/clusters/databases/principalAssignments
-### Properties
-* **apiVersion**: '2019-11-09' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabasePrincipalProperties
-* **type**: 'Microsoft.Kusto/clusters/databases/principalAssignments' (ReadOnly, DeployTimeConstant)
-
 ## DatabasePrincipalProperties
 ### Properties
 * **principalId**: string (Required)
@@ -234,15 +243,6 @@
 * **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' (Required)
 * **tenantId**: string
 * **tenantName**: string (ReadOnly)
-
-## Microsoft.Kusto/clusters/principalAssignments
-### Properties
-* **apiVersion**: '2019-11-09' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterPrincipalProperties
-* **type**: 'Microsoft.Kusto/clusters/principalAssignments' (ReadOnly, DeployTimeConstant)
 
 ## ClusterPrincipalProperties
 ### Properties

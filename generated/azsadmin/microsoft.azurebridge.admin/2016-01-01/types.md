@@ -1,10 +1,10 @@
 # Microsoft.AzureBridge.Admin @ 2016-01-01
 
-## Microsoft.AzureBridge.Admin/activations
+## Resource Microsoft.AzureBridge.Admin/activations@2016-01-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-01-01' (ReadOnly, DeployTimeConstant)
 * **azureRegistrationResourceIdentifier**: string (WriteOnly)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **displayName**: string (WriteOnly)
 * **expiration**: string (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
@@ -16,6 +16,17 @@
 * **tags**: Dictionary<string,String> (ReadOnly)
 * **type**: 'Microsoft.AzureBridge.Admin/activations' (ReadOnly, DeployTimeConstant)
 * **usageReportingEnabled**: bool (WriteOnly)
+
+## Resource Microsoft.AzureBridge.Admin/activations/downloadedProducts@2016-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DownloadedProduct
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.AzureBridge.Admin/activations/downloadedProducts' (ReadOnly, DeployTimeConstant)
 
 ## Activation
 ### Properties
@@ -29,17 +40,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.AzureBridge.Admin/activations/downloadedProducts
-### Properties
-* **apiVersion**: '2016-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DownloadedProduct
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.AzureBridge.Admin/activations/downloadedProducts' (ReadOnly, DeployTimeConstant)
 
 ## DownloadedProduct
 ### Properties

@@ -1,9 +1,9 @@
 # Microsoft.Network @ 2019-04-01
 
-## Microsoft.Network/frontDoors
+## Resource Microsoft.Network/frontDoors@2019-04-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)

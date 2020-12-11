@@ -1,9 +1,9 @@
 # Microsoft.Security @ 2015-06-01-preview
 
-## Microsoft.Security/locations/applicationWhitelistings
+## Resource Microsoft.Security/locations/applicationWhitelistings@2015-06-01-preview
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2015-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **enforcementMode**: 'Audit' | 'Enforce' | 'None' (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
@@ -13,6 +13,17 @@
 * **protectionMode**: ProtectionMode (WriteOnly)
 * **type**: 'Microsoft.Security/locations/applicationWhitelistings' (ReadOnly, DeployTimeConstant)
 * **vmRecommendations**: VmRecommendation[] (WriteOnly)
+
+## Resource Microsoft.Security/locations/jitNetworkAccessPolicies@2015-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: JitNetworkAccessPolicyProperties (Required)
+* **type**: 'Microsoft.Security/locations/jitNetworkAccessPolicies' (ReadOnly, DeployTimeConstant)
 
 ## PathRecommendation
 ### Properties
@@ -67,17 +78,6 @@
 * **enforcementSupport**: 'NotSupported' | 'Supported' | 'Unknown' (WriteOnly)
 * **recommendationAction**: 'Add' | 'Recommended' | 'Remove' (WriteOnly)
 * **resourceId**: string (WriteOnly)
-
-## Microsoft.Security/locations/jitNetworkAccessPolicies
-### Properties
-* **apiVersion**: '2015-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: JitNetworkAccessPolicyProperties (Required)
-* **type**: 'Microsoft.Security/locations/jitNetworkAccessPolicies' (ReadOnly, DeployTimeConstant)
 
 ## JitNetworkAccessPolicyProperties
 ### Properties

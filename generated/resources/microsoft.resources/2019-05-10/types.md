@@ -1,14 +1,26 @@
 # Microsoft.Resources @ 2019-05-10
 
-## Microsoft.Resources/deployments
+## Resource Microsoft.Resources/deployments@2019-05-10
+* **Valid Scope(s)**: ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2019-05-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: DeploymentProperties (Required)
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Resources/resourceGroups@2019-05-10
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2019-05-10' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **managedBy**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ResourceGroupProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Resources/resourceGroups' (ReadOnly, DeployTimeConstant)
 
 ## DeploymentProperties
 ### Properties
@@ -90,38 +102,6 @@
 ### Properties
 * **contentVersion**: string
 * **uri**: string (Required)
-
-## Microsoft.Resources/deployments
-### Properties
-* **apiVersion**: '2019-05-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DeploymentProperties (Required)
-* **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Resources/deployments
-### Properties
-* **apiVersion**: '2019-05-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DeploymentProperties (Required)
-* **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Resources/resourceGroups
-### Properties
-* **apiVersion**: '2019-05-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **managedBy**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ResourceGroupProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Resources/resourceGroups' (ReadOnly, DeployTimeConstant)
 
 ## ResourceGroupProperties
 ### Properties

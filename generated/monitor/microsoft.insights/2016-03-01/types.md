@@ -1,15 +1,26 @@
 # microsoft.insights @ 2016-03-01
 
-## microsoft.insights/alertrules
+## Resource microsoft.insights/alertrules@2016-03-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AlertRule (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'microsoft.insights/alertrules' (ReadOnly, DeployTimeConstant)
+
+## Resource microsoft.insights/logprofiles@2016-03-01
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LogProfileProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'microsoft.insights/logprofiles' (ReadOnly, DeployTimeConstant)
 
 ## AlertRule
 ### Properties
@@ -149,17 +160,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## microsoft.insights/logprofiles
-### Properties
-* **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LogProfileProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'microsoft.insights/logprofiles' (ReadOnly, DeployTimeConstant)
 
 ## LogProfileProperties
 ### Properties

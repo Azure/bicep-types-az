@@ -1,14 +1,23 @@
 # Microsoft.CostManagement @ 2019-03-01-preview
 
-## Microsoft.CostManagement/cloudConnectors
+## Resource Microsoft.CostManagement/cloudConnectors@2019-03-01-preview
+* **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ConnectorProperties
 * **type**: 'Microsoft.CostManagement/cloudConnectors' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.CostManagement/showbackRules@2019-03-01-preview
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ShowbackRuleProperties
+* **type**: 'Microsoft.CostManagement/showbackRules' (ReadOnly, DeployTimeConstant)
 
 ## ConnectorProperties
 ### Properties
@@ -41,15 +50,6 @@
 * **errorInnerMessage**: string (ReadOnly)
 * **errorMessage**: string (ReadOnly)
 * **errorStartTime**: string (ReadOnly)
-
-## Microsoft.CostManagement/showbackRules
-### Properties
-* **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ShowbackRuleProperties
-* **type**: 'Microsoft.CostManagement/showbackRules' (ReadOnly, DeployTimeConstant)
 
 ## ShowbackRuleProperties
 * **Discriminator**: ruleType

@@ -1,9 +1,9 @@
 # Microsoft.CostManagement @ 2019-09-01
 
-## Microsoft.CostManagement/exports
+## Resource Microsoft.CostManagement/exports@2019-09-01
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ExportProperties

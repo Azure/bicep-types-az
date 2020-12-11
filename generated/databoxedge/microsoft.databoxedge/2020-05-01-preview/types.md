@@ -1,9 +1,9 @@
 # Microsoft.DataBoxEdge @ 2020-05-01-preview
 
-## Microsoft.DataBoxEdge/dataBoxEdgeDevices
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices@2020-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
@@ -12,6 +12,102 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules@2020-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BandwidthScheduleProperties (Required)
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders@2020-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: OrderProperties
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles@2020-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: kind
+### Base Properties
+* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles' (ReadOnly, DeployTimeConstant)
+### IOT
+#### Properties
+* **kind**: 'IOT' (Required)
+* **properties**: IoTRoleProperties
+
+
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares@2020-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ShareProperties (Required)
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials@2020-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: StorageAccountCredentialProperties (Required)
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts@2020-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: StorageAccountProperties (Required)
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers@2020-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ContainerProperties (Required)
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers@2020-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: kind
+### Base Properties
+* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers' (ReadOnly, DeployTimeConstant)
+### FileEvent
+#### Properties
+* **kind**: 'FileEvent' (Required)
+* **properties**: FileTriggerProperties (Required)
+
+### PeriodicTimerEvent
+#### Properties
+* **kind**: 'PeriodicTimerEvent' (Required)
+* **properties**: PeriodicTimerProperties (Required)
+
+
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/users@2020-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: UserProperties (Required)
+* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/users' (ReadOnly, DeployTimeConstant)
 
 ## DataBoxEdgeDeviceProperties
 ### Properties
@@ -39,30 +135,12 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules
-### Properties
-* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BandwidthScheduleProperties (Required)
-* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules' (ReadOnly, DeployTimeConstant)
-
 ## BandwidthScheduleProperties
 ### Properties
 * **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[] (Required)
 * **rateInMbps**: int (Required)
 * **start**: string (Required)
 * **stop**: string (Required)
-
-## Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders
-### Properties
-* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: OrderProperties
-* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders' (ReadOnly, DeployTimeConstant)
 
 ## OrderProperties
 ### Properties
@@ -108,20 +186,6 @@
 * **country**: string (Required)
 * **postalCode**: string (Required)
 * **state**: string (Required)
-
-## Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles
-* **Discriminator**: kind
-### Base Properties
-* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles' (ReadOnly, DeployTimeConstant)
-### IOT
-#### Properties
-* **kind**: 'IOT' (Required)
-* **properties**: IoTRoleProperties
-
 
 ## IOT
 ### Properties
@@ -179,15 +243,6 @@
 * **roleType**: 'ASA' | 'Cognitive' | 'Functions' | 'IOT' (ReadOnly)
 * **shareId**: string (Required)
 
-## Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares
-### Properties
-* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ShareProperties (Required)
-* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares' (ReadOnly, DeployTimeConstant)
-
 ## ShareProperties
 ### Properties
 * **accessProtocol**: 'NFS' | 'SMB' (Required)
@@ -224,15 +279,6 @@
 * **accessType**: 'Change' | 'Custom' | 'Read' (Required)
 * **userId**: string (Required)
 
-## Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials
-### Properties
-* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageAccountCredentialProperties (Required)
-* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials' (ReadOnly, DeployTimeConstant)
-
 ## StorageAccountCredentialProperties
 ### Properties
 * **accountKey**: AsymmetricEncryptedSecret
@@ -244,15 +290,6 @@
 * **storageAccountId**: string
 * **userName**: string
 
-## Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts
-### Properties
-* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageAccountProperties (Required)
-* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts' (ReadOnly, DeployTimeConstant)
-
 ## StorageAccountProperties
 ### Properties
 * **blobEndpoint**: string (ReadOnly)
@@ -262,40 +299,12 @@
 * **storageAccountCredentialId**: string
 * **storageAccountStatus**: 'NeedsAttention' | 'Offline' | 'OK' | 'Unknown' | 'Updating'
 
-## Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers
-### Properties
-* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ContainerProperties (Required)
-* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers' (ReadOnly, DeployTimeConstant)
-
 ## ContainerProperties
 ### Properties
 * **containerStatus**: 'NeedsAttention' | 'Offline' | 'OK' | 'Unknown' | 'Updating' (ReadOnly)
 * **createdDateTime**: string (ReadOnly)
 * **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' (Required)
 * **refreshDetails**: RefreshDetails (ReadOnly)
-
-## Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers
-* **Discriminator**: kind
-### Base Properties
-* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers' (ReadOnly, DeployTimeConstant)
-### FileEvent
-#### Properties
-* **kind**: 'FileEvent' (Required)
-* **properties**: FileTriggerProperties (Required)
-
-### PeriodicTimerEvent
-#### Properties
-* **kind**: 'PeriodicTimerEvent' (Required)
-* **properties**: PeriodicTimerProperties (Required)
-
 
 ## FileEvent
 ### Properties
@@ -332,15 +341,6 @@
 * **schedule**: string (Required)
 * **startTime**: string (Required)
 * **topic**: string
-
-## Microsoft.DataBoxEdge/dataBoxEdgeDevices/users
-### Properties
-* **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: UserProperties (Required)
-* **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/users' (ReadOnly, DeployTimeConstant)
 
 ## UserProperties
 ### Properties

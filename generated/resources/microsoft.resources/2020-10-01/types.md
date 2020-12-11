@@ -1,10 +1,10 @@
 # Microsoft.Resources @ 2020-10-01
 
-## Microsoft.Resources/deploymentScripts
+## Resource Microsoft.Resources/deploymentScripts@2020-10-01
+* **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: ManagedServiceIdentity
 * **location**: string (Required)

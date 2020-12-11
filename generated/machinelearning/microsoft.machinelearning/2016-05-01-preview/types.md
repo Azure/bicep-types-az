@@ -1,9 +1,9 @@
 # Microsoft.MachineLearning @ 2016-05-01-preview
 
-## Microsoft.MachineLearning/commitmentPlans
+## Resource Microsoft.MachineLearning/commitmentPlans@2016-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
@@ -12,6 +12,17 @@
 * **sku**: ResourceSku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.MachineLearning/commitmentPlans' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.MachineLearning/webServices@2016-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WebServiceProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.MachineLearning/webServices' (ReadOnly, DeployTimeConstant)
 
 ## CommitmentPlanProperties
 ### Properties
@@ -46,17 +57,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.MachineLearning/webServices
-### Properties
-* **apiVersion**: '2016-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WebServiceProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.MachineLearning/webServices' (ReadOnly, DeployTimeConstant)
 
 ## WebServiceProperties
 * **Discriminator**: packageType

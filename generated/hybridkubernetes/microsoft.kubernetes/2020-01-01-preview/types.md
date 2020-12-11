@@ -1,9 +1,9 @@
 # Microsoft.Kubernetes @ 2020-01-01-preview
 
-## Microsoft.Kubernetes/connectedClusters
+## Resource Microsoft.Kubernetes/connectedClusters@2020-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: ConnectedClusterIdentity (Required)
 * **location**: string (Required)

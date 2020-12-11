@@ -1,9 +1,9 @@
 # Microsoft.HDInsight @ 2018-06-01-preview
 
-## Microsoft.HDInsight/clusters
+## Resource Microsoft.HDInsight/clusters@2018-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: ClusterIdentity
@@ -12,6 +12,28 @@
 * **properties**: ClusterCreateProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.HDInsight/clusters' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.HDInsight/clusters/applications@2018-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.HDInsight/clusters/applications' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.HDInsight/clusters/extensions@2018-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **clusterMonitoringEnabled**: bool (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **primaryKey**: string (WriteOnly)
+* **type**: 'Microsoft.HDInsight/clusters/extensions' (ReadOnly, DeployTimeConstant)
+* **workspaceId**: string
 
 ## ClusterIdentity
 ### Properties
@@ -216,17 +238,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.HDInsight/clusters/applications
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.HDInsight/clusters/applications' (ReadOnly, DeployTimeConstant)
-
 ## ApplicationProperties
 ### Properties
 * **applicationState**: string (ReadOnly)
@@ -267,25 +278,4 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.HDInsight/clusters/extensions
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **clusterMonitoringEnabled**: bool (ReadOnly)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **primaryKey**: string (WriteOnly)
-* **type**: 'Microsoft.HDInsight/clusters/extensions' (ReadOnly, DeployTimeConstant)
-* **workspaceId**: string
-
-## Microsoft.HDInsight/clusters/extensions
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **primaryKey**: string
-* **type**: 'Microsoft.HDInsight/clusters/extensions' (ReadOnly, DeployTimeConstant)
-* **workspaceId**: string
 
