@@ -38,10 +38,10 @@ namespace Azure.Bicep.TypeGen.Autorest.Plugin
                     var generatedTypes = result.TypeFactory.GetTypes();
 
                     var typesJson = TypeSerializer.Serialize(generatedTypes);
-                    await Write(typesJson, Path.Combine("types", result.ProviderNamespace.ToLowerInvariant(), result.ApiVersion.ToLowerInvariant(), "types.json"), false);
+                    await Write(typesJson, Path.Combine(result.ProviderNamespace.ToLowerInvariant(), result.ApiVersion.ToLowerInvariant(), "types.json"), false);
 
                     var typesMarkdown = new TypeMarkdownWriter(generatedTypes).Write(result.ProviderNamespace, result.ApiVersion);
-                    await Write(typesMarkdown, Path.Combine("docs", result.ProviderNamespace.ToLowerInvariant(), result.ApiVersion.ToLowerInvariant(), "types.md"), false);
+                    await Write(typesMarkdown, Path.Combine(result.ProviderNamespace.ToLowerInvariant(), result.ApiVersion.ToLowerInvariant(), "types.md"), false);
                 }
             }
         }

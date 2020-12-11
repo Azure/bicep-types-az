@@ -41,15 +41,19 @@ executeSynchronous(async () => {
   await mkdir(outputBaseDir);
  
   // find all readme paths in the azure-rest-api-specs repo
-  const readmePaths = await findReadmePaths(inputBaseDir);
+  const specsPath = path.join(inputBaseDir, 'specification');
+  const readmePaths = await findReadmePaths(specsPath);
   if (readmePaths.length === 0) {
     throw `Unable to find rest-api-specs in folder ${inputBaseDir}`;
   }
 
   // use consistent sorting to make log changes easier to review
-  for (const path of readmePaths.sort(lowerCaseCompare)) {
+  for (const readmePath of readmePaths.sort(lowerCaseCompare)) {
+    const basePath = path.relative(specsPath, readmePath).split(path.sep)[0];
+    const outputDir = `${outputBaseDir}/${basePath}`;
+
     try {
-      await generateSchema(path, outputBaseDir, verbose, waitForDebugger);
+      await generateSchema(readmePath, outputDir, verbose, waitForDebugger);
     } catch (e) {
       writeOut(e);
     }
@@ -88,9 +92,7 @@ async function generateSchema(readme: string, outputBaseDir: string, verbose: bo
   return await executeCmd(__dirname, autorestBinary, autoRestParams);
 }
 
-async function findReadmePaths(inputBaseDir: string) {
-  const specsPath = path.join(inputBaseDir, 'specification');
-
+async function findReadmePaths(specsPath: string) {
   return await findRecursive(specsPath, filePath => {
     if (path.basename(filePath) !== 'readme.md') {
       return false;
