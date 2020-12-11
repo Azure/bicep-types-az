@@ -58,6 +58,37 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
             return method.Url;
         }
 
+        private static ScopeType GetScopeTypeFromParentScope(string parentScope)
+        {
+            if (tenantPrefix.IsMatch(parentScope))
+            {
+                return ScopeType.Tenant;
+            }
+
+            if (managementGroupPrefix.IsMatch(parentScope))
+            {
+                return ScopeType.ManagementGroup;
+            }
+
+            if (resourceGroupPrefix.IsMatch(parentScope))
+            {
+                return ScopeType.ResourceGroup;
+            }
+
+            if (subscriptionPrefix.IsMatch(parentScope))
+            {
+                return ScopeType.Subscription;
+            }
+
+            if (parentScopePrefix.IsMatch(parentScope))
+            {
+                return ScopeType.Extension;
+            }
+
+            // ambiguous - without any further information, we have to assume 'all'
+            return ScopeType.Tenant | ScopeType.ManagementGroup | ScopeType.ResourceGroup | ScopeType.Subscription | ScopeType.Extension;
+        }
+
         private static (bool success, string failureReason, IEnumerable<ResourceDescriptor> resourceDescriptors) ParseMethod(Method method, string apiVersion)
         {
             var methodUrl = GetNormalizedMethodUrl(method);
@@ -86,27 +117,7 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
             var resNameParam = routingScope.Substring(routingScope.LastIndexOf('/') + 1);
             var hasVariableName = IsPathVariable(resNameParam);
 
-            var scopeType = ScopeType.Unknown;
-            if (tenantPrefix.IsMatch(parentScope))
-            {
-                scopeType = ScopeType.Tenant;
-            }
-            else if (managementGroupPrefix.IsMatch(parentScope))
-            {
-                scopeType = ScopeType.ManagementGroup;
-            }
-            else if (resourceGroupPrefix.IsMatch(parentScope))
-            {
-                scopeType = ScopeType.ResourceGroup;
-            }
-            else if (subscriptionPrefix.IsMatch(parentScope))
-            {
-                scopeType = ScopeType.Subscription;
-            }
-            else if (parentScopePrefix.IsMatch(parentScope))
-            {
-                scopeType = ScopeType.Extension;
-            }
+            var scopeType = GetScopeTypeFromParentScope(parentScope);
 
             return (true, string.Empty, resourceTypesFound.Select(type => new ResourceDescriptor
             {

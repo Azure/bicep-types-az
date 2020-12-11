@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0",
+    "configurations": [
+        {
+            "name": "Generate",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "generate",
+                "--",
+                "cmd/generate.ts",
+                "--specs-dir",
+                "../../../azure-rest-api-specs",
+                "--out-dir",
+                "../../generated",
+                "--log-file",
+                "../../generation.out"
+            ],
+            "cwd": "${workspaceFolder}/src/generator",
+            "preLaunchTask": "build"
+        },
+        {
+            "name": "Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ]
+}
