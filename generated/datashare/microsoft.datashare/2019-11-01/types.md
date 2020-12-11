@@ -1,9 +1,9 @@
 # Microsoft.DataShare @ 2019-11-01
 
-## Microsoft.DataShare/accounts
+## Resource Microsoft.DataShare/accounts@2019-11-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity (Required)
 * **location**: string
@@ -12,47 +12,20 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DataShare/accounts' (ReadOnly, DeployTimeConstant)
 
-## Identity
-### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'SystemAssigned'
-
-## AccountProperties
-### Properties
-* **createdAt**: string (ReadOnly)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
-* **userEmail**: string (ReadOnly)
-* **userName**: string (ReadOnly)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.DataShare/accounts/shares
+## Resource Microsoft.DataShare/accounts/shares@2019-11-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ShareProperties
 * **type**: 'Microsoft.DataShare/accounts/shares' (ReadOnly, DeployTimeConstant)
 
-## ShareProperties
-### Properties
-* **createdAt**: string (ReadOnly)
-* **description**: string
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
-* **shareKind**: 'CopyBased' | 'InPlace'
-* **terms**: string
-* **userEmail**: string (ReadOnly)
-* **userName**: string (ReadOnly)
-
-## Microsoft.DataShare/accounts/shares/dataSets
+## Resource Microsoft.DataShare/accounts/shares/dataSets@2019-11-01
+* **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **type**: 'Microsoft.DataShare/accounts/shares/dataSets' (ReadOnly, DeployTimeConstant)
@@ -116,6 +89,138 @@
 * **kind**: 'SqlDWTable' (Required)
 * **properties**: SqlDWTableProperties
 
+
+## Resource Microsoft.DataShare/accounts/shares/invitations@2019-11-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: InvitationProperties
+* **type**: 'Microsoft.DataShare/accounts/shares/invitations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataShare/accounts/shares/synchronizationSettings@2019-11-01
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: kind
+### Base Properties
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.DataShare/accounts/shares/synchronizationSettings' (ReadOnly, DeployTimeConstant)
+### ScheduleBased
+#### Properties
+* **kind**: 'ScheduleBased' (Required)
+* **properties**: ScheduledSynchronizationSettingProperties (Required)
+
+
+## Resource Microsoft.DataShare/accounts/shareSubscriptions@2019-11-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ShareSubscriptionProperties (Required)
+* **type**: 'Microsoft.DataShare/accounts/shareSubscriptions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings@2019-11-01
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: kind
+### Base Properties
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings' (ReadOnly, DeployTimeConstant)
+### AdlsGen2File
+#### Properties
+* **kind**: 'AdlsGen2File' (Required)
+* **properties**: ADLSGen2FileProperties (Required)
+
+### AdlsGen2FileSystem
+#### Properties
+* **kind**: 'AdlsGen2FileSystem' (Required)
+* **properties**: ADLSGen2FileSystemProperties (Required)
+
+### AdlsGen2Folder
+#### Properties
+* **kind**: 'AdlsGen2Folder' (Required)
+* **properties**: ADLSGen2FolderProperties (Required)
+
+### Blob
+#### Properties
+* **kind**: 'Blob' (Required)
+* **properties**: BlobProperties (Required)
+
+### BlobFolder
+#### Properties
+* **kind**: 'BlobFolder' (Required)
+* **properties**: BlobFolderProperties (Required)
+
+### Container
+#### Properties
+* **kind**: 'Container' (Required)
+* **properties**: BlobContainerProperties (Required)
+
+### KustoCluster
+#### Properties
+* **kind**: 'KustoCluster' (Required)
+* **properties**: KustoClusterDataSetProperties (Required)
+
+### KustoDatabase
+#### Properties
+* **kind**: 'KustoDatabase' (Required)
+* **properties**: KustoDatabaseDataSetProperties (Required)
+
+### SqlDBTable
+#### Properties
+* **kind**: 'SqlDBTable' (Required)
+* **properties**: SqlDBTableProperties
+
+### SqlDWTable
+#### Properties
+* **kind**: 'SqlDWTable' (Required)
+* **properties**: SqlDWTableProperties
+
+
+## Resource Microsoft.DataShare/accounts/shareSubscriptions/triggers@2019-11-01
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: kind
+### Base Properties
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.DataShare/accounts/shareSubscriptions/triggers' (ReadOnly, DeployTimeConstant)
+### ScheduleBased
+#### Properties
+* **kind**: 'ScheduleBased' (Required)
+* **properties**: ScheduledSynchronizationSettingProperties (Required)
+
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'SystemAssigned'
+
+## AccountProperties
+### Properties
+* **createdAt**: string (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
+* **userEmail**: string (ReadOnly)
+* **userName**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ShareProperties
+### Properties
+* **createdAt**: string (ReadOnly)
+* **description**: string
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
+* **shareKind**: 'CopyBased' | 'InPlace'
+* **terms**: string
+* **userEmail**: string (ReadOnly)
+* **userName**: string (ReadOnly)
 
 ## AdlsGen1File
 ### Properties
@@ -276,15 +381,6 @@
 * **sqlServerResourceId**: string (Required)
 * **tableName**: string (Required)
 
-## Microsoft.DataShare/accounts/shares/invitations
-### Properties
-* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: InvitationProperties
-* **type**: 'Microsoft.DataShare/accounts/shares/invitations' (ReadOnly, DeployTimeConstant)
-
 ## InvitationProperties
 ### Properties
 * **invitationId**: string (ReadOnly)
@@ -296,20 +392,6 @@
 * **targetObjectId**: string
 * **userEmail**: string (ReadOnly)
 * **userName**: string (ReadOnly)
-
-## Microsoft.DataShare/accounts/shares/synchronizationSettings
-* **Discriminator**: kind
-### Base Properties
-* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.DataShare/accounts/shares/synchronizationSettings' (ReadOnly, DeployTimeConstant)
-### ScheduleBased
-#### Properties
-* **kind**: 'ScheduleBased' (Required)
-* **properties**: ScheduledSynchronizationSettingProperties (Required)
-
 
 ## ScheduleBased
 ### Properties
@@ -323,15 +405,6 @@
 * **recurrenceInterval**: 'Day' | 'Hour' (Required)
 * **synchronizationTime**: string (Required)
 * **userName**: string (ReadOnly)
-
-## Microsoft.DataShare/accounts/shareSubscriptions
-### Properties
-* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ShareSubscriptionProperties (Required)
-* **type**: 'Microsoft.DataShare/accounts/shareSubscriptions' (ReadOnly, DeployTimeConstant)
 
 ## ShareSubscriptionProperties
 ### Properties
@@ -349,77 +422,4 @@
 * **sourceShareLocation**: string (Required)
 * **userEmail**: string (ReadOnly)
 * **userName**: string (ReadOnly)
-
-## Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings
-* **Discriminator**: kind
-### Base Properties
-* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings' (ReadOnly, DeployTimeConstant)
-### AdlsGen2File
-#### Properties
-* **kind**: 'AdlsGen2File' (Required)
-* **properties**: ADLSGen2FileProperties (Required)
-
-### AdlsGen2FileSystem
-#### Properties
-* **kind**: 'AdlsGen2FileSystem' (Required)
-* **properties**: ADLSGen2FileSystemProperties (Required)
-
-### AdlsGen2Folder
-#### Properties
-* **kind**: 'AdlsGen2Folder' (Required)
-* **properties**: ADLSGen2FolderProperties (Required)
-
-### Blob
-#### Properties
-* **kind**: 'Blob' (Required)
-* **properties**: BlobProperties (Required)
-
-### BlobFolder
-#### Properties
-* **kind**: 'BlobFolder' (Required)
-* **properties**: BlobFolderProperties (Required)
-
-### Container
-#### Properties
-* **kind**: 'Container' (Required)
-* **properties**: BlobContainerProperties (Required)
-
-### KustoCluster
-#### Properties
-* **kind**: 'KustoCluster' (Required)
-* **properties**: KustoClusterDataSetProperties (Required)
-
-### KustoDatabase
-#### Properties
-* **kind**: 'KustoDatabase' (Required)
-* **properties**: KustoDatabaseDataSetProperties (Required)
-
-### SqlDBTable
-#### Properties
-* **kind**: 'SqlDBTable' (Required)
-* **properties**: SqlDBTableProperties
-
-### SqlDWTable
-#### Properties
-* **kind**: 'SqlDWTable' (Required)
-* **properties**: SqlDWTableProperties
-
-
-## Microsoft.DataShare/accounts/shareSubscriptions/triggers
-* **Discriminator**: kind
-### Base Properties
-* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.DataShare/accounts/shareSubscriptions/triggers' (ReadOnly, DeployTimeConstant)
-### ScheduleBased
-#### Properties
-* **kind**: 'ScheduleBased' (Required)
-* **properties**: ScheduledSynchronizationSettingProperties (Required)
-
 

@@ -1,9 +1,9 @@
 # Microsoft.Devices @ 2017-01-19
 
-## Microsoft.Devices/IotHubs
+## Resource Microsoft.Devices/IotHubs@2017-01-19
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-01-19' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)

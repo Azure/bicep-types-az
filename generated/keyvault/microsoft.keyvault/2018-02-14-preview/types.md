@@ -1,15 +1,25 @@
 # Microsoft.KeyVault @ 2018-02-14-preview
 
-## Microsoft.KeyVault/vaults
+## Resource Microsoft.KeyVault/vaults@2018-02-14-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-14-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: VaultProperties (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.KeyVault/vaults' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.KeyVault/vaults/accessPolicies@2018-02-14-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-14-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: 'add' | 'remove' | 'replace' (Required, DeployTimeConstant)
+* **properties**: VaultAccessPolicyProperties (Required)
+* **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant)
 
 ## VaultProperties
 ### Properties
@@ -62,16 +72,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.KeyVault/vaults/accessPolicies
-### Properties
-* **apiVersion**: '2018-02-14-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: 'add' | 'remove' | 'replace' (Required, DeployTimeConstant)
-* **properties**: VaultAccessPolicyProperties (Required)
-* **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant)
 
 ## VaultAccessPolicyProperties
 ### Properties

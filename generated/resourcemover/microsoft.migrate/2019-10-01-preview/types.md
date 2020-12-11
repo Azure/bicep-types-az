@@ -1,9 +1,9 @@
 # Microsoft.Migrate @ 2019-10-01-preview
 
-## Microsoft.Migrate/moveCollections
+## Resource Microsoft.Migrate/moveCollections@2019-10-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity
@@ -12,6 +12,15 @@
 * **properties**: MoveCollectionProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Migrate/moveCollections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Migrate/moveCollections/moveResources@2019-10-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MoveResourceProperties
+* **type**: 'Microsoft.Migrate/moveCollections/moveResources' (ReadOnly, DeployTimeConstant)
 
 ## Identity
 ### Properties
@@ -40,15 +49,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Migrate/moveCollections/moveResources
-### Properties
-* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MoveResourceProperties
-* **type**: 'Microsoft.Migrate/moveCollections/moveResources' (ReadOnly, DeployTimeConstant)
 
 ## MoveResourceProperties
 ### Properties

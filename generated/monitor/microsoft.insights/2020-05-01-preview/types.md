@@ -1,9 +1,9 @@
 # Microsoft.Insights @ 2020-05-01-preview
 
-## Microsoft.Insights/scheduledQueryRules
+## Resource Microsoft.Insights/scheduledQueryRules@2020-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)

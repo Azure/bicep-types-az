@@ -1,13 +1,43 @@
 # Microsoft.Security @ 2020-01-01
 
-## Microsoft.Security/assessmentMetadata
+## Resource Microsoft.Security/assessmentMetadata@2020-01-01
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SecurityAssessmentMetadataProperties
 * **type**: 'Microsoft.Security/assessmentMetadata' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Security/assessments@2020-01-01
+* **Valid Scope(s)**: None
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SecurityAssessmentProperties
+* **type**: 'Microsoft.Security/assessments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Security/locations/applicationWhitelistings@2020-01-01
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AdaptiveApplicationControlGroupData (Required)
+* **type**: 'Microsoft.Security/locations/applicationWhitelistings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Security/locations/jitNetworkAccessPolicies@2020-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: JitNetworkAccessPolicyProperties (Required)
+* **type**: 'Microsoft.Security/locations/jitNetworkAccessPolicies' (ReadOnly, DeployTimeConstant)
 
 ## SecurityAssessmentMetadataProperties
 ### Properties
@@ -29,15 +59,6 @@
 * **partnerName**: string (Required)
 * **productName**: string
 * **secret**: string (Required)
-
-## Microsoft.Security/assessments
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityAssessmentProperties
-* **type**: 'Microsoft.Security/assessments' (ReadOnly, DeployTimeConstant)
 
 ## SecurityAssessmentProperties
 ### Properties
@@ -98,16 +119,6 @@
 * **code**: 'Healthy' | 'NotApplicable' | 'Unhealthy' (Required)
 * **description**: string
 
-## Microsoft.Security/locations/applicationWhitelistings
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AdaptiveApplicationControlGroupData (Required)
-* **type**: 'Microsoft.Security/locations/applicationWhitelistings' (ReadOnly, DeployTimeConstant)
-
 ## AdaptiveApplicationControlGroupData
 ### Properties
 * **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (ReadOnly)
@@ -161,17 +172,6 @@
 * **enforcementSupport**: 'NotSupported' | 'Supported' | 'Unknown'
 * **recommendationAction**: 'Add' | 'Recommended' | 'Remove'
 * **resourceId**: string
-
-## Microsoft.Security/locations/jitNetworkAccessPolicies
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: JitNetworkAccessPolicyProperties (Required)
-* **type**: 'Microsoft.Security/locations/jitNetworkAccessPolicies' (ReadOnly, DeployTimeConstant)
 
 ## JitNetworkAccessPolicyProperties
 ### Properties

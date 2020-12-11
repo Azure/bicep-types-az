@@ -1,9 +1,9 @@
 # Microsoft.Migrate @ 2018-02-02
 
-## Microsoft.Migrate/projects
+## Resource Microsoft.Migrate/projects@2018-02-02
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-02' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
@@ -11,6 +11,26 @@
 * **properties**: ProjectProperties
 * **tags**: any
 * **type**: 'Microsoft.Migrate/projects' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Migrate/projects/groups@2018-02-02
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-02' (ReadOnly, DeployTimeConstant)
+* **eTag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GroupProperties (Required)
+* **type**: 'Microsoft.Migrate/projects/groups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Migrate/projects/groups/assessments@2018-02-02
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-02' (ReadOnly, DeployTimeConstant)
+* **eTag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AssessmentProperties (Required)
+* **type**: 'Microsoft.Migrate/projects/groups/assessments' (ReadOnly, DeployTimeConstant)
 
 ## ProjectProperties
 ### Properties
@@ -27,32 +47,12 @@
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded'
 * **updatedTimestamp**: string (ReadOnly)
 
-## Microsoft.Migrate/projects/groups
-### Properties
-* **apiVersion**: '2018-02-02' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GroupProperties (Required)
-* **type**: 'Microsoft.Migrate/projects/groups' (ReadOnly, DeployTimeConstant)
-
 ## GroupProperties
 ### Properties
 * **assessments**: string[] (ReadOnly)
 * **createdTimestamp**: string (ReadOnly)
 * **machines**: string[] (Required)
 * **updatedTimestamp**: string (ReadOnly)
-
-## Microsoft.Migrate/projects/groups/assessments
-### Properties
-* **apiVersion**: '2018-02-02' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AssessmentProperties (Required)
-* **type**: 'Microsoft.Migrate/projects/groups/assessments' (ReadOnly, DeployTimeConstant)
 
 ## AssessmentProperties
 ### Properties

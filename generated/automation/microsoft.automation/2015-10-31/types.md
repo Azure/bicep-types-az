@@ -1,9 +1,9 @@
 # Microsoft.Automation @ 2015-10-31
 
-## Microsoft.Automation/automationAccounts
+## Resource Microsoft.Automation/automationAccounts@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
@@ -11,6 +11,159 @@
 * **properties**: AutomationAccountCreateOrUpdateProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Automation/automationAccounts' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/certificates@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CertificateCreateOrUpdateProperties (Required)
+* **type**: 'Microsoft.Automation/automationAccounts/certificates' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/compilationjobs@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (WriteOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DscCompilationJobCreateProperties (Required)
+* **tags**: Dictionary<string,String> (WriteOnly)
+* **type**: 'Microsoft.Automation/automationAccounts/compilationjobs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/configurations@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DscConfigurationCreateOrUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Automation/automationAccounts/configurations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/connections@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConnectionCreateOrUpdateProperties (Required)
+* **type**: 'Microsoft.Automation/automationAccounts/connections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/connectionTypes@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConnectionTypeCreateOrUpdateProperties (Required)
+* **type**: 'Microsoft.Automation/automationAccounts/connectionTypes' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/credentials@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CredentialCreateOrUpdateProperties (Required)
+* **type**: 'Microsoft.Automation/automationAccounts/credentials' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/jobs@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: JobCreateProperties (Required)
+* **type**: 'Microsoft.Automation/automationAccounts/jobs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/jobSchedules@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: JobScheduleCreateProperties (Required)
+* **type**: 'Microsoft.Automation/automationAccounts/jobSchedules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/modules@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ModuleCreateOrUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Automation/automationAccounts/modules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/nodeConfigurations@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **configuration**: DscConfigurationAssociationProperty (Required)
+* **creationTime**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **incrementNodeConfigurationBuild**: bool (WriteOnly)
+* **lastModifiedTime**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **source**: ContentSource (Required, WriteOnly)
+* **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/runbooks@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RunbookCreateOrUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Automation/automationAccounts/runbooks' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/schedules@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ScheduleCreateOrUpdateProperties (Required)
+* **type**: 'Microsoft.Automation/automationAccounts/schedules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/variables@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VariableCreateOrUpdateProperties (Required)
+* **type**: 'Microsoft.Automation/automationAccounts/variables' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/watchers@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WatcherProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Automation/automationAccounts/watchers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/webhooks@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WebhookCreateOrUpdateProperties (Required)
+* **type**: 'Microsoft.Automation/automationAccounts/webhooks' (ReadOnly, DeployTimeConstant)
 
 ## AutomationAccountCreateOrUpdateProperties
 ### Properties
@@ -31,15 +184,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Automation/automationAccounts/certificates
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CertificateCreateOrUpdateProperties (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/certificates' (ReadOnly, DeployTimeConstant)
-
 ## CertificateCreateOrUpdateProperties
 ### Properties
 * **base64Value**: string (Required, WriteOnly)
@@ -49,17 +193,6 @@
 * **isExportable**: bool
 * **lastModifiedTime**: string (ReadOnly)
 * **thumbprint**: string
-
-## Microsoft.Automation/automationAccounts/compilationjobs
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (WriteOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DscCompilationJobCreateProperties (Required)
-* **tags**: Dictionary<string,String> (WriteOnly)
-* **type**: 'Microsoft.Automation/automationAccounts/compilationjobs' (ReadOnly, DeployTimeConstant)
 
 ## DscCompilationJobCreateProperties
 ### Properties
@@ -90,18 +223,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Automation/automationAccounts/configurations
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DscConfigurationCreateOrUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Automation/automationAccounts/configurations' (ReadOnly, DeployTimeConstant)
 
 ## DscConfigurationCreateOrUpdateProperties
 ### Properties
@@ -144,15 +265,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Automation/automationAccounts/connections
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectionCreateOrUpdateProperties (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/connections' (ReadOnly, DeployTimeConstant)
-
 ## ConnectionCreateOrUpdateProperties
 ### Properties
 * **connectionType**: ConnectionTypeAssociationProperty (Required)
@@ -168,15 +280,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Automation/automationAccounts/connectionTypes
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectionTypeCreateOrUpdateProperties (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/connectionTypes' (ReadOnly, DeployTimeConstant)
 
 ## ConnectionTypeCreateOrUpdateProperties
 ### Properties
@@ -196,15 +299,6 @@
 * **isOptional**: bool
 * **type**: string (Required)
 
-## Microsoft.Automation/automationAccounts/credentials
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CredentialCreateOrUpdateProperties (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/credentials' (ReadOnly, DeployTimeConstant)
-
 ## CredentialCreateOrUpdateProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
@@ -212,15 +306,6 @@
 * **lastModifiedTime**: string (ReadOnly)
 * **password**: string (Required, WriteOnly)
 * **userName**: string (Required)
-
-## Microsoft.Automation/automationAccounts/jobs
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: JobCreateProperties (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/jobs' (ReadOnly, DeployTimeConstant)
 
 ## JobCreateProperties
 ### Properties
@@ -253,15 +338,6 @@
 ### Properties
 * **name**: string (ReadOnly)
 
-## Microsoft.Automation/automationAccounts/jobSchedules
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: JobScheduleCreateProperties (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/jobSchedules' (ReadOnly, DeployTimeConstant)
-
 ## JobScheduleCreateProperties
 ### Properties
 * **jobScheduleId**: string (ReadOnly)
@@ -273,18 +349,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Automation/automationAccounts/modules
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ModuleCreateOrUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Automation/automationAccounts/modules' (ReadOnly, DeployTimeConstant)
 
 ## ModuleCreateOrUpdateProperties
 ### Properties
@@ -314,31 +378,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Automation/automationAccounts/nodeConfigurations
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **configuration**: DscConfigurationAssociationProperty (Required)
-* **creationTime**: string (ReadOnly)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **incrementNodeConfigurationBuild**: bool (WriteOnly)
-* **lastModifiedTime**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **source**: ContentSource (Required, WriteOnly)
-* **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Automation/automationAccounts/runbooks
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RunbookCreateOrUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Automation/automationAccounts/runbooks' (ReadOnly, DeployTimeConstant)
 
 ## RunbookCreateOrUpdateProperties
 ### Properties
@@ -386,15 +425,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Automation/automationAccounts/schedules
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ScheduleCreateOrUpdateProperties (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/schedules' (ReadOnly, DeployTimeConstant)
-
 ## ScheduleCreateOrUpdateProperties
 ### Properties
 * **advancedSchedule**: AdvancedSchedule
@@ -423,15 +453,6 @@
 * **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'
 * **occurrence**: int
 
-## Microsoft.Automation/automationAccounts/variables
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VariableCreateOrUpdateProperties (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/variables' (ReadOnly, DeployTimeConstant)
-
 ## VariableCreateOrUpdateProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
@@ -439,18 +460,6 @@
 * **isEncrypted**: bool
 * **lastModifiedTime**: string (ReadOnly)
 * **value**: string
-
-## Microsoft.Automation/automationAccounts/watchers
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WatcherProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Automation/automationAccounts/watchers' (ReadOnly, DeployTimeConstant)
 
 ## WatcherProperties
 ### Properties
@@ -471,15 +480,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Automation/automationAccounts/webhooks
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WebhookCreateOrUpdateProperties (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/webhooks' (ReadOnly, DeployTimeConstant)
 
 ## WebhookCreateOrUpdateProperties
 ### Properties

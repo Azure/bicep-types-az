@@ -1,9 +1,9 @@
 # microsoft.insights @ 2017-10-01
 
-## microsoft.insights/components/pricingPlans
+## Resource microsoft.insights/components/pricingPlans@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PricingPlanProperties

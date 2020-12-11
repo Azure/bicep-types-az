@@ -1,13 +1,40 @@
 # Microsoft.Automation @ 2017-05-15-preview
 
-## Microsoft.Automation/automationAccounts/jobs
+## Resource Microsoft.Automation/automationAccounts/jobs@2017-05-15-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-05-15-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: JobCreateProperties (Required)
 * **type**: 'Microsoft.Automation/automationAccounts/jobs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/softwareUpdateConfigurations@2017-05-15-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-05-15-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: softwareUpdateConfigurationProperties (Required)
+* **type**: 'Microsoft.Automation/automationAccounts/softwareUpdateConfigurations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/sourceControls@2017-05-15-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-05-15-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SourceControlCreateOrUpdateProperties (Required)
+* **type**: 'Microsoft.Automation/automationAccounts/sourceControls' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs@2017-05-15-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-05-15-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SourceControlSyncJobCreateProperties (Required)
+* **type**: 'Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs' (ReadOnly, DeployTimeConstant)
 
 ## JobCreateProperties
 ### Properties
@@ -33,15 +60,6 @@
 ## RunbookAssociationProperty
 ### Properties
 * **name**: string
-
-## Microsoft.Automation/automationAccounts/softwareUpdateConfigurations
-### Properties
-* **apiVersion**: '2017-05-15-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: softwareUpdateConfigurationProperties (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/softwareUpdateConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## softwareUpdateConfigurationProperties
 ### Properties
@@ -151,15 +169,6 @@
 * **includedUpdateClassifications**: 'Critical' | 'Definition' | 'FeaturePack' | 'Security' | 'ServicePack' | 'Tools' | 'Unclassified' | 'UpdateRollup' | 'Updates'
 * **rebootSetting**: string
 
-## Microsoft.Automation/automationAccounts/sourceControls
-### Properties
-* **apiVersion**: '2017-05-15-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SourceControlCreateOrUpdateProperties (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/sourceControls' (ReadOnly, DeployTimeConstant)
-
 ## SourceControlCreateOrUpdateProperties
 ### Properties
 * **autoSync**: bool
@@ -178,15 +187,6 @@
 * **accessToken**: string (WriteOnly)
 * **refreshToken**: string (WriteOnly)
 * **tokenType**: 'Oauth' | 'PersonalAccessToken' (WriteOnly)
-
-## Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs
-### Properties
-* **apiVersion**: '2017-05-15-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SourceControlSyncJobCreateProperties (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs' (ReadOnly, DeployTimeConstant)
 
 ## SourceControlSyncJobCreateProperties
 ### Properties

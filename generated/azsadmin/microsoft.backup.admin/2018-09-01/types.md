@@ -1,9 +1,9 @@
 # Microsoft.Backup.Admin @ 2018-09-01
 
-## Microsoft.Backup.Admin/backupLocations
+## Resource Microsoft.Backup.Admin/backupLocations@2018-09-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)

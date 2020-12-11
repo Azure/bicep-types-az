@@ -1,9 +1,9 @@
 # Microsoft.Network @ 2019-11-01
 
-## Microsoft.Network/NetworkExperimentProfiles
+## Resource Microsoft.Network/NetworkExperimentProfiles@2019-11-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
@@ -11,6 +11,17 @@
 * **properties**: ProfileProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Network/NetworkExperimentProfiles' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/NetworkExperimentProfiles/Experiments@2019-11-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ExperimentProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/NetworkExperimentProfiles/Experiments' (ReadOnly, DeployTimeConstant)
 
 ## ProfileProperties
 ### Properties
@@ -20,17 +31,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Network/NetworkExperimentProfiles/Experiments
-### Properties
-* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ExperimentProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/NetworkExperimentProfiles/Experiments' (ReadOnly, DeployTimeConstant)
 
 ## ExperimentProperties
 ### Properties

@@ -1,10 +1,10 @@
 # microsoft.aadiam @ 2020-03-01-preview
 
-## microsoft.aadiam/privateLinkForAzureAd
+## Resource microsoft.aadiam/privateLinkForAzureAd@2020-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **allTenants**: bool
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **ownerTenantId**: string

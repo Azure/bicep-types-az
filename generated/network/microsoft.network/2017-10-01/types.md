@@ -1,9 +1,9 @@
 # Microsoft.Network @ 2017-10-01
 
-## Microsoft.Network/applicationGateways
+## Resource Microsoft.Network/applicationGateways@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
@@ -11,6 +11,279 @@
 * **properties**: ApplicationGatewayPropertiesFormat
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Network/applicationGateways' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/applicationSecurityGroups@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationSecurityGroupPropertiesFormat
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/applicationSecurityGroups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/connections@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualNetworkGatewayConnectionPropertiesFormat (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/connections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/connections/sharedkey@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.Network/connections/sharedkey' (ReadOnly, DeployTimeConstant)
+* **value**: string (Required)
+
+## Resource Microsoft.Network/expressRouteCircuits@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ExpressRouteCircuitPropertiesFormat
+* **sku**: ExpressRouteCircuitSku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/expressRouteCircuits' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/expressRouteCircuits/authorizations@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AuthorizationPropertiesFormat
+* **type**: 'Microsoft.Network/expressRouteCircuits/authorizations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/expressRouteCircuits/peerings@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ExpressRouteCircuitPeeringPropertiesFormat
+* **type**: 'Microsoft.Network/expressRouteCircuits/peerings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/loadBalancers@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LoadBalancerPropertiesFormat
+* **sku**: LoadBalancerSku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/loadBalancers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/loadBalancers/inboundNatRules@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: InboundNatRulePropertiesFormat
+* **type**: 'Microsoft.Network/loadBalancers/inboundNatRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/localNetworkGateways@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LocalNetworkGatewayPropertiesFormat (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/localNetworkGateways' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/networkInterfaces@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: NetworkInterfacePropertiesFormat
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/networkInterfaces' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/networkSecurityGroups@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: NetworkSecurityGroupPropertiesFormat
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/networkSecurityGroups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/networkSecurityGroups/securityRules@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SecurityRulePropertiesFormat
+* **type**: 'Microsoft.Network/networkSecurityGroups/securityRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/networkWatchers@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: NetworkWatcherPropertiesFormat
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/networkWatchers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/networkWatchers/connectionMonitors@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConnectionMonitorParameters (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/networkWatchers/connectionMonitors' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/networkWatchers/packetCaptures@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PacketCaptureParameters (Required)
+* **type**: 'Microsoft.Network/networkWatchers/packetCaptures' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/publicIPAddresses@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PublicIPAddressPropertiesFormat
+* **sku**: PublicIPAddressSku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/publicIPAddresses' (ReadOnly, DeployTimeConstant)
+* **zones**: string[]
+
+## Resource Microsoft.Network/routeFilters@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RouteFilterPropertiesFormat
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/routeFilters' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/routeFilters/routeFilterRules@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RouteFilterRulePropertiesFormat
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/routeFilters/routeFilterRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/routeTables@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RouteTablePropertiesFormat
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/routeTables' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/routeTables/routes@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RoutePropertiesFormat
+* **type**: 'Microsoft.Network/routeTables/routes' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/virtualNetworkGateways@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualNetworkGatewayPropertiesFormat (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/virtualNetworkGateways' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/virtualNetworks@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualNetworkPropertiesFormat
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Network/virtualNetworks' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/virtualNetworks/subnets@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SubnetPropertiesFormat
+* **type**: 'Microsoft.Network/virtualNetworks/subnets' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualNetworkPeeringPropertiesFormat
+* **type**: 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationGatewayPropertiesFormat
 ### Properties
@@ -579,33 +852,9 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Network/applicationSecurityGroups
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationSecurityGroupPropertiesFormat
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/applicationSecurityGroups' (ReadOnly, DeployTimeConstant)
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Network/connections
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkGatewayConnectionPropertiesFormat (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/connections' (ReadOnly, DeployTimeConstant)
 
 ## VirtualNetworkGatewayConnectionPropertiesFormat
 ### Properties
@@ -763,28 +1012,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Network/connections/sharedkey
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Network/connections/sharedkey' (ReadOnly, DeployTimeConstant)
-* **value**: string (Required)
-
-## Microsoft.Network/expressRouteCircuits
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ExpressRouteCircuitPropertiesFormat
-* **sku**: ExpressRouteCircuitSku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/expressRouteCircuits' (ReadOnly, DeployTimeConstant)
-
 ## ExpressRouteCircuitPropertiesFormat
 ### Properties
 * **allowClassicOperations**: bool
@@ -918,39 +1145,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Network/expressRouteCircuits/authorizations
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AuthorizationPropertiesFormat
-* **type**: 'Microsoft.Network/expressRouteCircuits/authorizations' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Network/expressRouteCircuits/peerings
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ExpressRouteCircuitPeeringPropertiesFormat
-* **type**: 'Microsoft.Network/expressRouteCircuits/peerings' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Network/loadBalancers
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LoadBalancerPropertiesFormat
-* **sku**: LoadBalancerSku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/loadBalancers' (ReadOnly, DeployTimeConstant)
-
 ## LoadBalancerPropertiesFormat
 ### Properties
 * **backendAddressPools**: BackendAddressPool[]
@@ -1059,85 +1253,17 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Network/loadBalancers/inboundNatRules
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: InboundNatRulePropertiesFormat
-* **type**: 'Microsoft.Network/loadBalancers/inboundNatRules' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Network/localNetworkGateways
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LocalNetworkGatewayPropertiesFormat (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/localNetworkGateways' (ReadOnly, DeployTimeConstant)
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Network/networkInterfaces
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: NetworkInterfacePropertiesFormat
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/networkInterfaces' (ReadOnly, DeployTimeConstant)
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Network/networkSecurityGroups
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: NetworkSecurityGroupPropertiesFormat
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/networkSecurityGroups' (ReadOnly, DeployTimeConstant)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Network/networkSecurityGroups/securityRules
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityRulePropertiesFormat
-* **type**: 'Microsoft.Network/networkSecurityGroups/securityRules' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Network/networkWatchers
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: NetworkWatcherPropertiesFormat
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/networkWatchers' (ReadOnly, DeployTimeConstant)
 
 ## NetworkWatcherPropertiesFormat
 ### Properties
@@ -1146,18 +1272,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Network/networkWatchers/connectionMonitors
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectionMonitorParameters (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/networkWatchers/connectionMonitors' (ReadOnly, DeployTimeConstant)
 
 ## ConnectionMonitorParameters
 ### Properties
@@ -1184,16 +1298,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Network/networkWatchers/packetCaptures
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PacketCaptureParameters (Required)
-* **type**: 'Microsoft.Network/networkWatchers/packetCaptures' (ReadOnly, DeployTimeConstant)
-
 ## PacketCaptureParameters
 ### Properties
 * **bytesToCapturePerPacket**: int
@@ -1218,109 +1322,25 @@
 * **storageId**: string
 * **storagePath**: string
 
-## Microsoft.Network/publicIPAddresses
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PublicIPAddressPropertiesFormat
-* **sku**: PublicIPAddressSku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/publicIPAddresses' (ReadOnly, DeployTimeConstant)
-* **zones**: string[]
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Network/routeFilters
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RouteFilterPropertiesFormat
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/routeFilters' (ReadOnly, DeployTimeConstant)
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Network/routeFilters/routeFilterRules
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RouteFilterRulePropertiesFormat
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/routeFilters/routeFilterRules' (ReadOnly, DeployTimeConstant)
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Network/routeTables
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RouteTablePropertiesFormat
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/routeTables' (ReadOnly, DeployTimeConstant)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Network/routeTables/routes
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RoutePropertiesFormat
-* **type**: 'Microsoft.Network/routeTables/routes' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Network/virtualNetworkGateways
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkGatewayPropertiesFormat (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/virtualNetworkGateways' (ReadOnly, DeployTimeConstant)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Network/virtualNetworks
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkPropertiesFormat
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Network/virtualNetworks' (ReadOnly, DeployTimeConstant)
 
 ## VirtualNetworkPropertiesFormat
 ### Properties
@@ -1358,24 +1378,4 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Network/virtualNetworks/subnets
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SubnetPropertiesFormat
-* **type**: 'Microsoft.Network/virtualNetworks/subnets' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Network/virtualNetworks/virtualNetworkPeerings
-### Properties
-* **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkPeeringPropertiesFormat
-* **type**: 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings' (ReadOnly, DeployTimeConstant)
 

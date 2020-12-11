@@ -1,13 +1,23 @@
 # Microsoft.ManagedServices @ 2020-02-01-preview
 
-## Microsoft.ManagedServices/registrationAssignments
+## Resource Microsoft.ManagedServices/registrationAssignments@2020-02-01-preview
+* **Valid Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: RegistrationAssignmentProperties
 * **type**: 'Microsoft.ManagedServices/registrationAssignments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ManagedServices/registrationDefinitions@2020-02-01-preview
+* **Valid Scope(s)**: None
+### Properties
+* **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **plan**: Plan
+* **properties**: RegistrationDefinitionProperties
+* **type**: 'Microsoft.ManagedServices/registrationDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## RegistrationAssignmentProperties
 ### Properties
@@ -60,16 +70,6 @@
 ### Properties
 * **maximumActivationDuration**: string
 * **multiFactorAuthProvider**: 'Azure' | 'None' (Required)
-
-## Microsoft.ManagedServices/registrationDefinitions
-### Properties
-* **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **plan**: Plan
-* **properties**: RegistrationDefinitionProperties
-* **type**: 'Microsoft.ManagedServices/registrationDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## RegistrationDefinitionProperties
 ### Properties

@@ -1,15 +1,26 @@
 # microsoft.insights @ 2018-06-01-preview
 
-## microsoft.insights/guestDiagnosticSettings
+## Resource microsoft.insights/guestDiagnosticSettings@2018-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: GuestDiagnosticSettings (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'microsoft.insights/guestDiagnosticSettings' (ReadOnly, DeployTimeConstant)
+
+## Resource microsoft.insights/guestDiagnosticSettingsAssociation@2018-06-01-preview
+* **Valid Scope(s)**: None
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GuestDiagnosticSettingsAssociation (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'microsoft.insights/guestDiagnosticSettingsAssociation' (ReadOnly, DeployTimeConstant)
 
 ## GuestDiagnosticSettings
 ### Properties
@@ -58,17 +69,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## microsoft.insights/guestDiagnosticSettingsAssociation
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GuestDiagnosticSettingsAssociation (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'microsoft.insights/guestDiagnosticSettingsAssociation' (ReadOnly, DeployTimeConstant)
 
 ## GuestDiagnosticSettingsAssociation
 ### Properties

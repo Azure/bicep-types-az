@@ -1,9 +1,9 @@
 # Microsoft.DBforMySQL @ 2020-01-01
 
-## Microsoft.DBforMySQL/servers/keys
+## Resource Microsoft.DBforMySQL/servers/keys@2020-01-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)

@@ -1,9 +1,9 @@
 # Microsoft.StorSimple @ 2017-06-01
 
-## Microsoft.StorSimple/managers
+## Resource Microsoft.StorSimple/managers@2017-06-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
@@ -11,6 +11,107 @@
 * **properties**: ManagerProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.StorSimple/managers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.StorSimple/managers/accessControlRecords@2017-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'Series8000'
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AccessControlRecordProperties (Required)
+* **type**: 'Microsoft.StorSimple/managers/accessControlRecords' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.StorSimple/managers/bandwidthSettings@2017-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'Series8000'
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BandwidthRateSettingProperties (Required)
+* **type**: 'Microsoft.StorSimple/managers/bandwidthSettings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.StorSimple/managers/devices/alertSettings@2017-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'Series8000'
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AlertNotificationProperties (Required)
+* **type**: 'Microsoft.StorSimple/managers/devices/alertSettings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.StorSimple/managers/devices/backupPolicies@2017-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'Series8000'
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BackupPolicyProperties (Required)
+* **type**: 'Microsoft.StorSimple/managers/devices/backupPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.StorSimple/managers/devices/backupPolicies/schedules@2017-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'Series8000'
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BackupScheduleProperties (Required)
+* **type**: 'Microsoft.StorSimple/managers/devices/backupPolicies/schedules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.StorSimple/managers/devices/timeSettings@2017-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'Series8000'
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TimeSettingsProperties (Required)
+* **type**: 'Microsoft.StorSimple/managers/devices/timeSettings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.StorSimple/managers/devices/volumeContainers@2017-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'Series8000'
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VolumeContainerProperties (Required)
+* **type**: 'Microsoft.StorSimple/managers/devices/volumeContainers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.StorSimple/managers/devices/volumeContainers/volumes@2017-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'Series8000'
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VolumeProperties (Required)
+* **type**: 'Microsoft.StorSimple/managers/devices/volumeContainers/volumes' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.StorSimple/managers/extendedInformation@2017-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'Series8000'
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ManagerExtendedInfoProperties
+* **type**: 'Microsoft.StorSimple/managers/extendedInformation' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.StorSimple/managers/storageAccountCredentials@2017-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'Series8000'
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: StorageAccountCredentialProperties (Required)
+* **type**: 'Microsoft.StorSimple/managers/storageAccountCredentials' (ReadOnly, DeployTimeConstant)
 
 ## ManagerProperties
 ### Properties
@@ -30,30 +131,10 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.StorSimple/managers/accessControlRecords
-### Properties
-* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'Series8000'
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AccessControlRecordProperties (Required)
-* **type**: 'Microsoft.StorSimple/managers/accessControlRecords' (ReadOnly, DeployTimeConstant)
-
 ## AccessControlRecordProperties
 ### Properties
 * **initiatorName**: string (Required)
 * **volumeCount**: int (ReadOnly)
-
-## Microsoft.StorSimple/managers/bandwidthSettings
-### Properties
-* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'Series8000'
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BandwidthRateSettingProperties (Required)
-* **type**: 'Microsoft.StorSimple/managers/bandwidthSettings' (ReadOnly, DeployTimeConstant)
 
 ## BandwidthRateSettingProperties
 ### Properties
@@ -73,32 +154,12 @@
 * **minutes**: int (Required)
 * **seconds**: int (Required)
 
-## Microsoft.StorSimple/managers/devices/alertSettings
-### Properties
-* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'Series8000'
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AlertNotificationProperties (Required)
-* **type**: 'Microsoft.StorSimple/managers/devices/alertSettings' (ReadOnly, DeployTimeConstant)
-
 ## AlertNotificationProperties
 ### Properties
 * **additionalRecipientEmailList**: string[]
 * **alertNotificationCulture**: string
 * **emailNotification**: 'Disabled' | 'Enabled' (Required)
 * **notificationToServiceOwners**: 'Disabled' | 'Enabled'
-
-## Microsoft.StorSimple/managers/devices/backupPolicies
-### Properties
-* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'Series8000'
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BackupPolicyProperties (Required)
-* **type**: 'Microsoft.StorSimple/managers/devices/backupPolicies' (ReadOnly, DeployTimeConstant)
 
 ## BackupPolicyProperties
 ### Properties
@@ -109,16 +170,6 @@
 * **schedulesCount**: int (ReadOnly)
 * **ssmHostName**: string (ReadOnly)
 * **volumeIds**: string[] (Required)
-
-## Microsoft.StorSimple/managers/devices/backupPolicies/schedules
-### Properties
-* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'Series8000'
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BackupScheduleProperties (Required)
-* **type**: 'Microsoft.StorSimple/managers/devices/backupPolicies/schedules' (ReadOnly, DeployTimeConstant)
 
 ## BackupScheduleProperties
 ### Properties
@@ -135,31 +186,11 @@
 * **recurrenceValue**: int (Required)
 * **weeklyDaysList**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]
 
-## Microsoft.StorSimple/managers/devices/timeSettings
-### Properties
-* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'Series8000'
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TimeSettingsProperties (Required)
-* **type**: 'Microsoft.StorSimple/managers/devices/timeSettings' (ReadOnly, DeployTimeConstant)
-
 ## TimeSettingsProperties
 ### Properties
 * **primaryTimeServer**: string
 * **secondaryTimeServer**: string[]
 * **timeZone**: string (Required)
-
-## Microsoft.StorSimple/managers/devices/volumeContainers
-### Properties
-* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'Series8000'
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VolumeContainerProperties (Required)
-* **type**: 'Microsoft.StorSimple/managers/devices/volumeContainers' (ReadOnly, DeployTimeConstant)
 
 ## VolumeContainerProperties
 ### Properties
@@ -178,16 +209,6 @@
 * **encryptionCertThumbprint**: string
 * **value**: string (Required)
 
-## Microsoft.StorSimple/managers/devices/volumeContainers/volumes
-### Properties
-* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'Series8000'
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VolumeProperties (Required)
-* **type**: 'Microsoft.StorSimple/managers/devices/volumeContainers/volumes' (ReadOnly, DeployTimeConstant)
-
 ## VolumeProperties
 ### Properties
 * **accessControlRecordIds**: string[] (Required)
@@ -200,17 +221,6 @@
 * **volumeStatus**: 'Offline' | 'Online' (Required)
 * **volumeType**: 'Archival' | 'LocallyPinned' | 'Tiered' (Required)
 
-## Microsoft.StorSimple/managers/extendedInformation
-### Properties
-* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'Series8000'
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagerExtendedInfoProperties
-* **type**: 'Microsoft.StorSimple/managers/extendedInformation' (ReadOnly, DeployTimeConstant)
-
 ## ManagerExtendedInfoProperties
 ### Properties
 * **algorithm**: string (Required)
@@ -219,16 +229,6 @@
 * **integrityKey**: string (Required)
 * **portalCertificateThumbprint**: string
 * **version**: string
-
-## Microsoft.StorSimple/managers/storageAccountCredentials
-### Properties
-* **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'Series8000'
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageAccountCredentialProperties (Required)
-* **type**: 'Microsoft.StorSimple/managers/storageAccountCredentials' (ReadOnly, DeployTimeConstant)
 
 ## StorageAccountCredentialProperties
 ### Properties

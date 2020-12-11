@@ -1,9 +1,9 @@
 # Microsoft.Migrate @ 2018-09-01-preview
 
-## Microsoft.Migrate/migrateProjects
+## Resource Microsoft.Migrate/migrateProjects@2018-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
@@ -11,6 +11,16 @@
 * **properties**: MigrateProjectProperties
 * **tags**: schemas:57_tags
 * **type**: 'Microsoft.Migrate/migrateProjects' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Migrate/migrateProjects/solutions@2018-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SolutionProperties
+* **type**: 'Microsoft.Migrate/migrateProjects/solutions' (ReadOnly, DeployTimeConstant)
 
 ## MigrateProjectProperties
 ### Properties
@@ -64,16 +74,6 @@
 ## schemas:57_tags
 ### Properties
 * **additionalProperties**: string
-
-## Microsoft.Migrate/migrateProjects/solutions
-### Properties
-* **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SolutionProperties
-* **type**: 'Microsoft.Migrate/migrateProjects/solutions' (ReadOnly, DeployTimeConstant)
 
 ## SolutionProperties
 ### Properties

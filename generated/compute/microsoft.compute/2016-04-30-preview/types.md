@@ -1,9 +1,9 @@
 # Microsoft.Compute @ 2016-04-30-preview
 
-## Microsoft.Compute/availabilitySets
+## Resource Microsoft.Compute/availabilitySets@2016-04-30-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
@@ -11,6 +11,78 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Compute/availabilitySets' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Compute/disks@2016-04-30-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DiskProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/disks' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Compute/images@2016-04-30-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ImageProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/images' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Compute/snapshots@2016-04-30-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DiskProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Compute/virtualMachines@2016-04-30-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: VirtualMachineIdentity
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **plan**: Plan
+* **properties**: VirtualMachineProperties
+* **resources**: VirtualMachineExtension[] (ReadOnly)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/virtualMachines' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Compute/virtualMachines/extensions@2016-04-30-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualMachineExtensionProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/virtualMachines/extensions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Compute/virtualMachineScaleSets@2016-04-30-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: VirtualMachineScaleSetIdentity
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **plan**: Plan
+* **properties**: VirtualMachineScaleSetProperties
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/virtualMachineScaleSets' (ReadOnly, DeployTimeConstant)
 
 ## AvailabilitySetProperties
 ### Properties
@@ -41,17 +113,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Compute/disks
-### Properties
-* **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DiskProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/disks' (ReadOnly, DeployTimeConstant)
 
 ## DiskProperties
 ### Properties
@@ -101,17 +162,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Compute/images
-### Properties
-* **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ImageProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/images' (ReadOnly, DeployTimeConstant)
-
 ## ImageProperties
 ### Properties
 * **provisioningState**: string (ReadOnly)
@@ -146,34 +196,9 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Compute/snapshots
-### Properties
-* **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DiskProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant)
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Compute/virtualMachines
-### Properties
-* **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: VirtualMachineIdentity
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **plan**: Plan
-* **properties**: VirtualMachineProperties
-* **resources**: VirtualMachineExtension[] (ReadOnly)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/virtualMachines' (ReadOnly, DeployTimeConstant)
 
 ## VirtualMachineIdentity
 ### Properties
@@ -417,34 +442,9 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Compute/virtualMachines/extensions
-### Properties
-* **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualMachineExtensionProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/virtualMachines/extensions' (ReadOnly, DeployTimeConstant)
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Compute/virtualMachineScaleSets
-### Properties
-* **apiVersion**: '2016-04-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: VirtualMachineScaleSetIdentity
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **plan**: Plan
-* **properties**: VirtualMachineScaleSetProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/virtualMachineScaleSets' (ReadOnly, DeployTimeConstant)
 
 ## VirtualMachineScaleSetIdentity
 ### Properties

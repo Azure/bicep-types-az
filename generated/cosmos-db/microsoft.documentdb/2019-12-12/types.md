@@ -1,9 +1,9 @@
 # Microsoft.DocumentDB @ 2019-12-12
 
-## Microsoft.DocumentDB/databaseAccounts
+## Resource Microsoft.DocumentDB/databaseAccounts@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'GlobalDocumentDB' | 'MongoDB' | 'Parse'
 * **location**: string
@@ -11,6 +11,246 @@
 * **properties**: DatabaseAccountCreateUpdateProperties (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DocumentDB/databaseAccounts' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CassandraKeyspaceCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CassandraTableCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ThroughputSettingsUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ThroughputSettingsUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GremlinDatabaseCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GremlinGraphCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ThroughputSettingsUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ThroughputSettingsUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MongoDBDatabaseCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MongoDBCollectionCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ThroughputSettingsUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ThroughputSettingsUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: NotebookWorkspaceProperties (ReadOnly)
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SqlDatabaseCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SqlContainerCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SqlStoredProcedureCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ThroughputSettingsUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SqlTriggerCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SqlUserDefinedFunctionCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ThroughputSettingsUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/tables@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TableCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/tables' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2019-12-12
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ThroughputSettingsUpdateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## DatabaseAccountCreateUpdateProperties
 ### Properties
@@ -67,17 +307,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CassandraKeyspaceCreateUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces' (ReadOnly, DeployTimeConstant)
-
 ## CassandraKeyspaceCreateUpdateProperties
 ### Properties
 * **options**: CreateUpdateOptions (Required, WriteOnly)
@@ -101,17 +330,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CassandraTableCreateUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables' (ReadOnly, DeployTimeConstant)
 
 ## CassandraTableCreateUpdateProperties
 ### Properties
@@ -153,17 +371,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings' (ReadOnly, DeployTimeConstant)
-
 ## ThroughputSettingsUpdateProperties
 ### Properties
 * **resource**: ThroughputSettingsResource (Required)
@@ -200,31 +407,9 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings' (ReadOnly, DeployTimeConstant)
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DocumentDB/databaseAccounts/gremlinDatabases
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GremlinDatabaseCreateUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases' (ReadOnly, DeployTimeConstant)
 
 ## GremlinDatabaseCreateUpdateProperties
 ### Properties
@@ -243,17 +428,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GremlinGraphCreateUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs' (ReadOnly, DeployTimeConstant)
 
 ## GremlinGraphCreateUpdateProperties
 ### Properties
@@ -332,46 +506,13 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings' (ReadOnly, DeployTimeConstant)
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DocumentDB/databaseAccounts/mongodbDatabases
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MongoDBDatabaseCreateUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases' (ReadOnly, DeployTimeConstant)
 
 ## MongoDBDatabaseCreateUpdateProperties
 ### Properties
@@ -390,17 +531,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MongoDBCollectionCreateUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections' (ReadOnly, DeployTimeConstant)
 
 ## MongoDBCollectionCreateUpdateProperties
 ### Properties
@@ -440,60 +570,18 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings' (ReadOnly, DeployTimeConstant)
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: NotebookWorkspaceProperties (ReadOnly)
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces' (ReadOnly, DeployTimeConstant)
 
 ## NotebookWorkspaceProperties
 ### Properties
 * **notebookServerEndpoint**: string (ReadOnly)
 * **status**: string (ReadOnly)
-
-## Microsoft.DocumentDB/databaseAccounts/sqlDatabases
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlDatabaseCreateUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases' (ReadOnly, DeployTimeConstant)
 
 ## SqlDatabaseCreateUpdateProperties
 ### Properties
@@ -512,17 +600,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlContainerCreateUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers' (ReadOnly, DeployTimeConstant)
 
 ## SqlContainerCreateUpdateProperties
 ### Properties
@@ -547,17 +624,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlStoredProcedureCreateUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures' (ReadOnly, DeployTimeConstant)
-
 ## SqlStoredProcedureCreateUpdateProperties
 ### Properties
 * **options**: CreateUpdateOptions (Required, WriteOnly)
@@ -577,31 +643,9 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings' (ReadOnly, DeployTimeConstant)
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlTriggerCreateUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers' (ReadOnly, DeployTimeConstant)
 
 ## SqlTriggerCreateUpdateProperties
 ### Properties
@@ -624,17 +668,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlUserDefinedFunctionCreateUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions' (ReadOnly, DeployTimeConstant)
-
 ## SqlUserDefinedFunctionCreateUpdateProperties
 ### Properties
 * **options**: CreateUpdateOptions (Required, WriteOnly)
@@ -654,31 +687,9 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DocumentDB/databaseAccounts/tables
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TableCreateUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/tables' (ReadOnly, DeployTimeConstant)
 
 ## TableCreateUpdateProperties
 ### Properties
@@ -697,17 +708,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings
-### Properties
-* **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties

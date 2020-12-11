@@ -1,13 +1,44 @@
 # Microsoft.Datadog @ 2020-02-01-preview
 
-## Microsoft.Datadog/agreements
+## Resource Microsoft.Datadog/agreements@2020-02-01-preview
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: DatadogAgreementProperties
 * **type**: 'Microsoft.Datadog/agreements' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Datadog/monitors@2020-02-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: IdentityProperties
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MonitorProperties
+* **sku**: ResourceSku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Datadog/monitors' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Datadog/monitors/singleSignOnConfigurations@2020-02-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatadogSingleSignOnProperties
+* **type**: 'Microsoft.Datadog/monitors/singleSignOnConfigurations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Datadog/monitors/tagRules@2020-02-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MonitoringTagRulesProperties
+* **type**: 'Microsoft.Datadog/monitors/tagRules' (ReadOnly, DeployTimeConstant)
 
 ## DatadogAgreementProperties
 ### Properties
@@ -19,19 +50,6 @@
 * **publisher**: string
 * **retrieveDatetime**: string
 * **signature**: string
-
-## Microsoft.Datadog/monitors
-### Properties
-* **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: IdentityProperties
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MonitorProperties
-* **sku**: ResourceSku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Datadog/monitors' (ReadOnly, DeployTimeConstant)
 
 ## IdentityProperties
 ### Properties
@@ -71,29 +89,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Datadog/monitors/singleSignOnConfigurations
-### Properties
-* **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatadogSingleSignOnProperties
-* **type**: 'Microsoft.Datadog/monitors/singleSignOnConfigurations' (ReadOnly, DeployTimeConstant)
-
 ## DatadogSingleSignOnProperties
 ### Properties
 * **enterpriseAppId**: string
 * **singleSignOnState**: 'Disable' | 'Enable' | 'Existing' | 'Initial'
 * **singleSignOnUrl**: string (ReadOnly)
-
-## Microsoft.Datadog/monitors/tagRules
-### Properties
-* **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MonitoringTagRulesProperties
-* **type**: 'Microsoft.Datadog/monitors/tagRules' (ReadOnly, DeployTimeConstant)
 
 ## MonitoringTagRulesProperties
 ### Properties

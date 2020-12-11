@@ -1,9 +1,9 @@
 # Microsoft.SaaS @ 2018-03-01-beta
 
-## Microsoft.SaaS/saasresources
+## Resource Microsoft.SaaS/saasresources@2018-03-01-beta
+* **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2018-03-01-beta' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'saasresources' (Required, DeployTimeConstant)
 * **nextLink**: string (ReadOnly)

@@ -1,9 +1,9 @@
 # Microsoft.RecoveryServices @ 2016-06-01
 
-## Microsoft.RecoveryServices/vaults
+## Resource Microsoft.RecoveryServices/vaults@2016-06-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: IdentityData
@@ -13,6 +13,25 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.RecoveryServices/vaults' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.RecoveryServices/vaults/certificates@2016-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RawCertificateData
+* **type**: 'Microsoft.RecoveryServices/vaults/certificates' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.RecoveryServices/vaults/extendedInformation@2016-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant)
+* **eTag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VaultExtendedInfo
+* **type**: 'Microsoft.RecoveryServices/vaults/extendedInformation' (ReadOnly, DeployTimeConstant)
 
 ## IdentityData
 ### Properties
@@ -69,29 +88,10 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.RecoveryServices/vaults/certificates
-### Properties
-* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RawCertificateData
-* **type**: 'Microsoft.RecoveryServices/vaults/certificates' (ReadOnly, DeployTimeConstant)
-
 ## RawCertificateData
 ### Properties
 * **authType**: 'AAD' | 'AccessControlService' | 'ACS' | 'AzureActiveDirectory' | 'Invalid'
 * **certificate**: array
-
-## Microsoft.RecoveryServices/vaults/extendedInformation
-### Properties
-* **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VaultExtendedInfo
-* **type**: 'Microsoft.RecoveryServices/vaults/extendedInformation' (ReadOnly, DeployTimeConstant)
 
 ## VaultExtendedInfo
 ### Properties

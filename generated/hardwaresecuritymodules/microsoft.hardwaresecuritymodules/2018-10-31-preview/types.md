@@ -1,9 +1,9 @@
 # Microsoft.HardwareSecurityModules @ 2018-10-31-preview
 
-## Microsoft.HardwareSecurityModules/dedicatedHSMs
+## Resource Microsoft.HardwareSecurityModules/dedicatedHSMs@2018-10-31-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-10-31-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)

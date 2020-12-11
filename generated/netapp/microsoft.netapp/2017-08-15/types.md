@@ -1,15 +1,48 @@
 # Microsoft.NetApp @ 2017-08-15
 
-## Microsoft.NetApp/netAppAccounts
+## Resource Microsoft.NetApp/netAppAccounts@2017-08-15
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-08-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: accountProperties (Required)
 * **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2017-08-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-08-15' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: poolProperties (Required)
+* **tags**: any
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2017-08-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-08-15' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: volumeProperties (Required)
+* **tags**: any
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2017-08-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-08-15' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: snapshotProperties (Required)
+* **tags**: any
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
 
 ## accountProperties
 ### Properties
@@ -27,34 +60,12 @@
 * **status**: string
 * **username**: string
 
-## Microsoft.NetApp/netAppAccounts/capacityPools
-### Properties
-* **apiVersion**: '2017-08-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: poolProperties (Required)
-* **tags**: any
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
-
 ## poolProperties
 ### Properties
 * **poolId**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra'
 * **size**: int
-
-## Microsoft.NetApp/netAppAccounts/capacityPools/volumes
-### Properties
-* **apiVersion**: '2017-08-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: volumeProperties (Required)
-* **tags**: any
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant)
 
 ## volumeProperties
 ### Properties
@@ -79,17 +90,6 @@
 * **ruleIndex**: int
 * **unixReadOnly**: bool
 * **unixReadWrite**: bool
-
-## Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots
-### Properties
-* **apiVersion**: '2017-08-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: snapshotProperties (Required)
-* **tags**: any
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
 
 ## snapshotProperties
 ### Properties

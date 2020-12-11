@@ -1,9 +1,9 @@
 # Microsoft.DBForPostgreSQL @ 2017-12-01-preview
 
-## Microsoft.DBForPostgreSQL/servers
+## Resource Microsoft.DBForPostgreSQL/servers@2017-12-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: ResourceIdentity (ReadOnly)
 * **location**: string (Required)
@@ -12,6 +12,60 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DBForPostgreSQL/servers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DBForPostgreSQL/servers/Administrators@2017-12-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServerAdministratorProperties
+* **type**: 'Microsoft.DBForPostgreSQL/servers/Administrators' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DBForPostgreSQL/servers/configurations@2017-12-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConfigurationProperties
+* **type**: 'Microsoft.DBForPostgreSQL/servers/configurations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DBForPostgreSQL/servers/databases@2017-12-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseProperties
+* **type**: 'Microsoft.DBForPostgreSQL/servers/databases' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DBForPostgreSQL/servers/firewallRules@2017-12-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: FirewallRuleProperties (Required)
+* **type**: 'Microsoft.DBForPostgreSQL/servers/firewallRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DBForPostgreSQL/servers/securityAlertPolicies@2017-12-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SecurityAlertPolicyProperties
+* **type**: 'Microsoft.DBForPostgreSQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DBForPostgreSQL/servers/virtualNetworkRules@2017-12-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualNetworkRuleProperties
+* **type**: 'Microsoft.DBForPostgreSQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
 
 ## ResourceIdentity
 ### Properties
@@ -122,30 +176,12 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DBForPostgreSQL/servers/Administrators
-### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerAdministratorProperties
-* **type**: 'Microsoft.DBForPostgreSQL/servers/Administrators' (ReadOnly, DeployTimeConstant)
-
 ## ServerAdministratorProperties
 ### Properties
 * **administratorType**: string (Required)
 * **login**: string (Required)
 * **sid**: string (Required)
 * **tenantId**: string (Required)
-
-## Microsoft.DBForPostgreSQL/servers/configurations
-### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationProperties
-* **type**: 'Microsoft.DBForPostgreSQL/servers/configurations' (ReadOnly, DeployTimeConstant)
 
 ## ConfigurationProperties
 ### Properties
@@ -156,42 +192,15 @@
 * **source**: string
 * **value**: string
 
-## Microsoft.DBForPostgreSQL/servers/databases
-### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
-* **type**: 'Microsoft.DBForPostgreSQL/servers/databases' (ReadOnly, DeployTimeConstant)
-
 ## DatabaseProperties
 ### Properties
 * **charset**: string
 * **collation**: string
 
-## Microsoft.DBForPostgreSQL/servers/firewallRules
-### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: FirewallRuleProperties (Required)
-* **type**: 'Microsoft.DBForPostgreSQL/servers/firewallRules' (ReadOnly, DeployTimeConstant)
-
 ## FirewallRuleProperties
 ### Properties
 * **endIpAddress**: string (Required)
 * **startIpAddress**: string (Required)
-
-## Microsoft.DBForPostgreSQL/servers/securityAlertPolicies
-### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityAlertPolicyProperties
-* **type**: 'Microsoft.DBForPostgreSQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
 ## SecurityAlertPolicyProperties
 ### Properties
@@ -202,15 +211,6 @@
 * **state**: 'Disabled' | 'Enabled' (Required)
 * **storageAccountAccessKey**: string
 * **storageEndpoint**: string
-
-## Microsoft.DBForPostgreSQL/servers/virtualNetworkRules
-### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkRuleProperties
-* **type**: 'Microsoft.DBForPostgreSQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
 
 ## VirtualNetworkRuleProperties
 ### Properties

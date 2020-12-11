@@ -1,9 +1,9 @@
 # Microsoft.Devices @ 2017-08-21-preview
 
-## Microsoft.Devices/provisioningServices
+## Resource Microsoft.Devices/provisioningServices@2017-08-21-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-08-21-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
@@ -12,6 +12,17 @@
 * **sku**: IotDpsSkuInfo (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Devices/provisioningServices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Devices/provisioningServices/certificates@2017-08-21-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-08-21-preview' (ReadOnly, DeployTimeConstant)
+* **certificate**: string (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CertificateProperties (ReadOnly)
+* **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant)
 
 ## IotDpsPropertiesDescription
 ### Properties
@@ -48,17 +59,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Devices/provisioningServices/certificates
-### Properties
-* **apiVersion**: '2017-08-21-preview' (ReadOnly, DeployTimeConstant)
-* **certificate**: string (WriteOnly)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CertificateProperties (ReadOnly)
-* **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant)
 
 ## CertificateProperties
 ### Properties

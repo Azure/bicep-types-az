@@ -1,9 +1,9 @@
 # Microsoft.EventHub @ 2014-09-01
 
-## Microsoft.EventHub/namespaces
+## Resource Microsoft.EventHub/namespaces@2014-09-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
@@ -11,6 +11,46 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.EventHub/namespaces' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventHub/namespaces/AuthorizationRules@2014-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SharedAccessAuthorizationRuleProperties
+* **type**: 'Microsoft.EventHub/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventHub/namespaces/eventhubs@2014-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EventHubProperties
+* **type**: 'Microsoft.EventHub/namespaces/eventhubs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2014-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SharedAccessAuthorizationRuleProperties
+* **type**: 'Microsoft.EventHub/namespaces/eventhubs/authorizationRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventHub/namespaces/eventhubs/consumergroups@2014-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConsumerGroupProperties
+* **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant)
 
 ## NamespaceProperties
 ### Properties
@@ -32,29 +72,9 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.EventHub/namespaces/AuthorizationRules
-### Properties
-* **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties
-* **type**: 'Microsoft.EventHub/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
-
 ## SharedAccessAuthorizationRuleProperties
 ### Properties
 * **rights**: 'Listen' | 'Manage' | 'Send'[] (Required)
-
-## Microsoft.EventHub/namespaces/eventhubs
-### Properties
-* **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EventHubProperties
-* **type**: 'Microsoft.EventHub/namespaces/eventhubs' (ReadOnly, DeployTimeConstant)
 
 ## EventHubProperties
 ### Properties
@@ -64,26 +84,6 @@
 * **partitionIds**: string[] (ReadOnly)
 * **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown'
 * **updatedAt**: string (ReadOnly)
-
-## Microsoft.EventHub/namespaces/eventhubs/authorizationRules
-### Properties
-* **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties
-* **type**: 'Microsoft.EventHub/namespaces/eventhubs/authorizationRules' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.EventHub/namespaces/eventhubs/consumergroups
-### Properties
-* **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConsumerGroupProperties
-* **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant)
 
 ## ConsumerGroupProperties
 ### Properties

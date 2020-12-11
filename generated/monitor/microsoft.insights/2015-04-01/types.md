@@ -1,9 +1,9 @@
 # microsoft.insights @ 2015-04-01
 
-## microsoft.insights/autoscalesettings
+## Resource microsoft.insights/autoscalesettings@2015-04-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)

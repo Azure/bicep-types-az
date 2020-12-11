@@ -1,9 +1,9 @@
 # Microsoft.CostManagement @ 2018-08-01-preview
 
-## Microsoft.CostManagement/connectors
+## Resource Microsoft.CostManagement/connectors@2018-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **location**: string
@@ -11,6 +11,16 @@
 * **properties**: ConnectorProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.CostManagement/connectors' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.CostManagement/reports@2018-08-01-preview
+* **Valid Scope(s)**: Subscription, ResourceGroup, Extension
+### Properties
+* **apiVersion**: '2018-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ReportProperties
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.CostManagement/reports' (ReadOnly, DeployTimeConstant)
 
 ## ConnectorProperties
 ### Properties
@@ -40,16 +50,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.CostManagement/reports
-### Properties
-* **apiVersion**: '2018-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ReportProperties
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.CostManagement/reports' (ReadOnly, DeployTimeConstant)
 
 ## ReportProperties
 ### Properties
@@ -130,20 +130,6 @@
 ### Properties
 * **from**: string (Required)
 * **to**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.CostManagement/reports
-### Properties
-* **apiVersion**: '2018-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ReportProperties
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.CostManagement/reports' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties

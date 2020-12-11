@@ -1,13 +1,40 @@
 # Microsoft.Billing @ 2018-11-01-preview
 
-## Microsoft.Billing/billingAccounts/billingProfiles
+## Resource Microsoft.Billing/billingAccounts/billingProfiles@2018-11-01-preview
+* **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: BillingProfileProperties
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/policies@2018-11-01-preview
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PolicyProperties
+* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/policies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Billing/billingAccounts/invoiceSections@2018-11-01-preview
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: InvoiceSectionProperties
+* **type**: 'Microsoft.Billing/billingAccounts/invoiceSections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Billing/billingAccounts/lineOfCredit@2018-11-01-preview
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LineOfCreditProperties
+* **type**: 'Microsoft.Billing/billingAccounts/lineOfCredit' (ReadOnly, DeployTimeConstant)
 
 ## BillingProfileProperties
 ### Properties
@@ -58,38 +85,11 @@
 * **properties**: BillingProfileProperties
 * **type**: string (ReadOnly)
 
-## Microsoft.Billing/billingAccounts/billingProfiles/policies
-### Properties
-* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyProperties
-* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/policies' (ReadOnly, DeployTimeConstant)
-
 ## PolicyProperties
 ### Properties
 * **marketplacePurchasesAllowed**: bool
 * **reservationPurchasesAllowed**: bool
 * **subscriptionOwnerCanViewCharges**: bool
-
-## Microsoft.Billing/billingAccounts/invoiceSections
-### Properties
-* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: InvoiceSectionProperties
-* **type**: 'Microsoft.Billing/billingAccounts/invoiceSections' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Billing/billingAccounts/lineOfCredit
-### Properties
-* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LineOfCreditProperties
-* **type**: 'Microsoft.Billing/billingAccounts/lineOfCredit' (ReadOnly, DeployTimeConstant)
 
 ## LineOfCreditProperties
 ### Properties

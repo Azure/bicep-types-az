@@ -1,9 +1,9 @@
 # Microsoft.ManagedIdentity @ 2015-08-31-preview
 
-## Microsoft.ManagedIdentity/userAssignedIdentities
+## Resource Microsoft.ManagedIdentity/userAssignedIdentities@2015-08-31-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-08-31-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)

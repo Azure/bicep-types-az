@@ -1,9 +1,9 @@
 # Microsoft.DevOps @ 2019-07-01-preview
 
-## Microsoft.DevOps/pipelines
+## Resource Microsoft.DevOps/pipelines@2019-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)

@@ -1,9 +1,9 @@
 # Microsoft.Kusto @ 2019-01-21
 
-## Microsoft.Kusto/clusters
+## Resource Microsoft.Kusto/clusters@2019-01-21
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-01-21' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
@@ -11,6 +11,36 @@
 * **sku**: AzureSku (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Kusto/clusters/databases@2019-01-21
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-01-21' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseProperties
+* **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Kusto/clusters/databases/dataConnections@2019-01-21
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: kind
+### Base Properties
+* **apiVersion**: '2019-01-21' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.Kusto/clusters/databases/dataConnections' (ReadOnly, DeployTimeConstant)
+### EventGrid
+#### Properties
+* **kind**: 'EventGrid' (Required)
+* **properties**: EventGridConnectionProperties
+
+### EventHub
+#### Properties
+* **kind**: 'EventHub' (Required)
+* **properties**: EventHubConnectionProperties
+
 
 ## ClusterProperties
 ### Properties
@@ -34,16 +64,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Kusto/clusters/databases
-### Properties
-* **apiVersion**: '2019-01-21' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
-* **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant)
-
 ## DatabaseProperties
 ### Properties
 * **hotCachePeriod**: string
@@ -54,26 +74,6 @@
 ## DatabaseStatistics
 ### Properties
 * **size**: int
-
-## Microsoft.Kusto/clusters/databases/dataConnections
-* **Discriminator**: kind
-### Base Properties
-* **apiVersion**: '2019-01-21' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Kusto/clusters/databases/dataConnections' (ReadOnly, DeployTimeConstant)
-### EventGrid
-#### Properties
-* **kind**: 'EventGrid' (Required)
-* **properties**: EventGridConnectionProperties
-
-### EventHub
-#### Properties
-* **kind**: 'EventHub' (Required)
-* **properties**: EventHubConnectionProperties
-
 
 ## EventGrid
 ### Properties

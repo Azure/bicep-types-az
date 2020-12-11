@@ -1,15 +1,33 @@
 # microsoft.insights @ 2019-10-17-preview
 
-## microsoft.insights/privateLinkScopes
+## Resource microsoft.insights/privateLinkScopes@2019-10-17-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-17-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AzureMonitorPrivateLinkScopeProperties (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'microsoft.insights/privateLinkScopes' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Insights/privateLinkScopes/privateEndpointConnections@2019-10-17-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-10-17-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: 'Microsoft.Insights/privateLinkScopes/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Insights/privateLinkScopes/scopedResources@2019-10-17-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-10-17-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ScopedResourceProperties
+* **type**: 'Microsoft.Insights/privateLinkScopes/scopedResources' (ReadOnly, DeployTimeConstant)
 
 ## AzureMonitorPrivateLinkScopeProperties
 ### Properties
@@ -42,24 +60,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Insights/privateLinkScopes/privateEndpointConnections
-### Properties
-* **apiVersion**: '2019-10-17-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: 'Microsoft.Insights/privateLinkScopes/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Insights/privateLinkScopes/scopedResources
-### Properties
-* **apiVersion**: '2019-10-17-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ScopedResourceProperties
-* **type**: 'Microsoft.Insights/privateLinkScopes/scopedResources' (ReadOnly, DeployTimeConstant)
 
 ## ScopedResourceProperties
 ### Properties

@@ -1,15 +1,70 @@
 # Microsoft.LabServices @ 2018-10-15
 
-## Microsoft.LabServices/labaccounts
+## Resource Microsoft.LabServices/labaccounts@2018-10-15
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-10-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: LabAccountProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.LabServices/labaccounts' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.LabServices/labaccounts/galleryimages@2018-10-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-10-15' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GalleryImageProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.LabServices/labaccounts/galleryimages' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.LabServices/labaccounts/labs@2018-10-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-10-15' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LabProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.LabServices/labaccounts/labs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.LabServices/labaccounts/labs/environmentsettings@2018-10-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-10-15' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EnvironmentSettingProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.LabServices/labaccounts/labs/environmentsettings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.LabServices/labaccounts/labs/environmentsettings/environments@2018-10-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-10-15' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EnvironmentProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.LabServices/labaccounts/labs/environmentsettings/environments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.LabServices/labaccounts/labs/users@2018-10-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-10-15' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: UserProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.LabServices/labaccounts/labs/users' (ReadOnly, DeployTimeConstant)
 
 ## LabAccountProperties
 ### Properties
@@ -51,17 +106,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.LabServices/labaccounts/galleryimages
-### Properties
-* **apiVersion**: '2018-10-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GalleryImageProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.LabServices/labaccounts/galleryimages' (ReadOnly, DeployTimeConstant)
-
 ## GalleryImageProperties
 ### Properties
 * **author**: string (ReadOnly)
@@ -89,17 +133,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.LabServices/labaccounts/labs
-### Properties
-* **apiVersion**: '2018-10-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LabProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.LabServices/labaccounts/labs' (ReadOnly, DeployTimeConstant)
-
 ## LabProperties
 ### Properties
 * **createdByObjectId**: string (ReadOnly)
@@ -117,17 +150,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.LabServices/labaccounts/labs/environmentsettings
-### Properties
-* **apiVersion**: '2018-10-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EnvironmentSettingProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.LabServices/labaccounts/labs/environmentsettings' (ReadOnly, DeployTimeConstant)
 
 ## EnvironmentSettingProperties
 ### Properties
@@ -169,17 +191,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.LabServices/labaccounts/labs/environmentsettings/environments
-### Properties
-* **apiVersion**: '2018-10-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EnvironmentProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.LabServices/labaccounts/labs/environmentsettings/environments' (ReadOnly, DeployTimeConstant)
-
 ## EnvironmentProperties
 ### Properties
 * **claimedByUserName**: string (ReadOnly)
@@ -210,17 +221,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.LabServices/labaccounts/labs/users
-### Properties
-* **apiVersion**: '2018-10-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: UserProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.LabServices/labaccounts/labs/users' (ReadOnly, DeployTimeConstant)
 
 ## UserProperties
 ### Properties

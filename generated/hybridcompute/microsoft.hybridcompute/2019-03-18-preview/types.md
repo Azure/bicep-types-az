@@ -1,9 +1,9 @@
 # Microsoft.HybridCompute @ 2019-03-18-preview
 
-## Microsoft.HybridCompute/machines
+## Resource Microsoft.HybridCompute/machines@2019-03-18-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-03-18-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity
 * **location**: string (Required)

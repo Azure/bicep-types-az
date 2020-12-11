@@ -1,15 +1,36 @@
 # Microsoft.SqlVirtualMachine @ 2017-03-01-preview
 
-## Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups
+## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups@2017-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SqlVirtualMachineGroupProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners@2017-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AvailabilityGroupListenerProperties
+* **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachines@2017-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: ResourceIdentity
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SqlVirtualMachineProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachines' (ReadOnly, DeployTimeConstant)
 
 ## SqlVirtualMachineGroupProperties
 ### Properties
@@ -36,15 +57,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners
-### Properties
-* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AvailabilityGroupListenerProperties
-* **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners' (ReadOnly, DeployTimeConstant)
-
 ## AvailabilityGroupListenerProperties
 ### Properties
 * **availabilityGroupName**: string
@@ -65,18 +77,6 @@
 ### Properties
 * **ipAddress**: string
 * **subnetResourceId**: string
-
-## Microsoft.SqlVirtualMachine/sqlVirtualMachines
-### Properties
-* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ResourceIdentity
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlVirtualMachineProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachines' (ReadOnly, DeployTimeConstant)
 
 ## ResourceIdentity
 ### Properties

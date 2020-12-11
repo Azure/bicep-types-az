@@ -1,9 +1,9 @@
 # Microsoft.OperationalInsights @ 2019-08-01-preview
 
-## Microsoft.OperationalInsights/clusters
+## Resource Microsoft.OperationalInsights/clusters@2019-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity
 * **location**: string
@@ -12,6 +12,33 @@
 * **sku**: sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.OperationalInsights/workspaces/dataExports@2019-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DataExportProperties
+* **type**: 'Microsoft.OperationalInsights/workspaces/dataExports' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.OperationalInsights/workspaces/linkedServices@2019-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LinkedServiceProperties (Required)
+* **type**: 'Microsoft.OperationalInsights/workspaces/linkedServices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.OperationalInsights/workspaces/linkedStorageAccounts@2019-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'AzureWatson' | 'CustomLogs' (Required, DeployTimeConstant)
+* **properties**: LinkedStorageAccountsProperties (Required)
+* **type**: 'Microsoft.OperationalInsights/workspaces/linkedStorageAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Identity
 ### Properties
@@ -41,15 +68,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.OperationalInsights/workspaces/dataExports
-### Properties
-* **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DataExportProperties
-* **type**: 'Microsoft.OperationalInsights/workspaces/dataExports' (ReadOnly, DeployTimeConstant)
-
 ## DataExportProperties
 ### Properties
 * **createdDate**: string
@@ -69,28 +87,10 @@
 ### Properties
 * **eventHubName**: string
 
-## Microsoft.OperationalInsights/workspaces/linkedServices
-### Properties
-* **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LinkedServiceProperties (Required)
-* **type**: 'Microsoft.OperationalInsights/workspaces/linkedServices' (ReadOnly, DeployTimeConstant)
-
 ## LinkedServiceProperties
 ### Properties
 * **resourceId**: string
 * **writeAccessResourceId**: string
-
-## Microsoft.OperationalInsights/workspaces/linkedStorageAccounts
-### Properties
-* **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'AzureWatson' | 'CustomLogs' (Required, DeployTimeConstant)
-* **properties**: LinkedStorageAccountsProperties (Required)
-* **type**: 'Microsoft.OperationalInsights/workspaces/linkedStorageAccounts' (ReadOnly, DeployTimeConstant)
 
 ## LinkedStorageAccountsProperties
 ### Properties

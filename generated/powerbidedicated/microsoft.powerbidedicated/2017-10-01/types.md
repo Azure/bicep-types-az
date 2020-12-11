@@ -1,9 +1,9 @@
 # Microsoft.PowerBIDedicated @ 2017-10-01
 
-## Microsoft.PowerBIDedicated/capacities
+## Resource Microsoft.PowerBIDedicated/capacities@2017-10-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)

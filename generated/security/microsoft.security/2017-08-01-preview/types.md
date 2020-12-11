@@ -1,39 +1,100 @@
 # Microsoft.Security @ 2017-08-01-preview
 
-## Microsoft.Security/advancedThreatProtectionSettings
+## Resource Microsoft.Security/advancedThreatProtectionSettings@2017-08-01-preview
+* **Valid Scope(s)**: None
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AdvancedThreatProtectionProperties
 * **type**: 'Microsoft.Security/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant)
 
-## AdvancedThreatProtectionProperties
-### Properties
-* **isEnabled**: bool
-
-## Microsoft.Security/autoProvisioningSettings
+## Resource Microsoft.Security/autoProvisioningSettings@2017-08-01-preview
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AutoProvisioningSettingProperties
 * **type**: 'Microsoft.Security/autoProvisioningSettings' (ReadOnly, DeployTimeConstant)
 
-## AutoProvisioningSettingProperties
-### Properties
-* **autoProvision**: 'Off' | 'On' (Required)
-
-## Microsoft.Security/deviceSecurityGroups
+## Resource Microsoft.Security/deviceSecurityGroups@2017-08-01-preview
+* **Valid Scope(s)**: None
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: DeviceSecurityGroupProperties
 * **type**: 'Microsoft.Security/deviceSecurityGroups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Security/informationProtectionPolicies@2017-08-01-preview
+* **Valid Scope(s)**: None
+### Properties
+* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'custom' | 'effective' (Required, DeployTimeConstant)
+* **properties**: InformationProtectionPolicyProperties
+* **type**: 'Microsoft.Security/informationProtectionPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Security/iotSecuritySolutions@2017-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IoTSecuritySolutionProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Security/iotSecuritySolutions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Security/pricings@2017-08-01-preview
+* **Valid Scope(s)**: Subscription, ResourceGroup
+### Properties
+* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PricingProperties
+* **type**: 'Microsoft.Security/pricings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Security/securityContacts@2017-08-01-preview
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SecurityContactProperties
+* **type**: 'Microsoft.Security/securityContacts' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Security/settings@2017-08-01-preview
+* **Valid Scope(s)**: Subscription
+* **Discriminator**: kind
+### Base Properties
+* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'MCAS' | 'WDATP' (Required, DeployTimeConstant)
+* **type**: 'Microsoft.Security/settings' (ReadOnly, DeployTimeConstant)
+### DataExportSetting
+#### Properties
+* **kind**: 'DataExportSetting' (Required)
+* **properties**: DataExportSettingProperties
+
+
+## Resource Microsoft.Security/workspaceSettings@2017-08-01-preview
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkspaceSettingProperties
+* **type**: 'Microsoft.Security/workspaceSettings' (ReadOnly, DeployTimeConstant)
+
+## AdvancedThreatProtectionProperties
+### Properties
+* **isEnabled**: bool
+
+## AutoProvisioningSettingProperties
+### Properties
+* **autoProvision**: 'Off' | 'On' (Required)
 
 ## DeviceSecurityGroupProperties
 ### Properties
@@ -75,15 +136,6 @@
 * **minThreshold**: int (Required)
 * **timeWindowSize**: string (Required)
 
-## Microsoft.Security/informationProtectionPolicies
-### Properties
-* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'custom' | 'effective' (Required, DeployTimeConstant)
-* **properties**: InformationProtectionPolicyProperties
-* **type**: 'Microsoft.Security/informationProtectionPolicies' (ReadOnly, DeployTimeConstant)
-
 ## InformationProtectionPolicyProperties
 ### Properties
 * **informationTypes**: Dictionary<string,InformationType>
@@ -124,17 +176,6 @@
 * **order**: int
 * **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None'
 
-## Microsoft.Security/iotSecuritySolutions
-### Properties
-* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IoTSecuritySolutionProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Security/iotSecuritySolutions' (ReadOnly, DeployTimeConstant)
-
 ## IoTSecuritySolutionProperties
 ### Properties
 * **autoDiscoveredResources**: string[] (ReadOnly)
@@ -162,36 +203,9 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Security/pricings
-### Properties
-* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PricingProperties
-* **type**: 'Microsoft.Security/pricings' (ReadOnly, DeployTimeConstant)
-
 ## PricingProperties
 ### Properties
 * **pricingTier**: 'Free' | 'Standard' (Required)
-
-## Microsoft.Security/pricings
-### Properties
-* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PricingProperties
-* **type**: 'Microsoft.Security/pricings' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Security/securityContacts
-### Properties
-* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityContactProperties
-* **type**: 'Microsoft.Security/securityContacts' (ReadOnly, DeployTimeConstant)
 
 ## SecurityContactProperties
 ### Properties
@@ -199,20 +213,6 @@
 * **alertsToAdmins**: 'Off' | 'On' (Required)
 * **email**: string (Required)
 * **phone**: string
-
-## Microsoft.Security/settings
-* **Discriminator**: kind
-### Base Properties
-* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'MCAS' | 'WDATP' (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Security/settings' (ReadOnly, DeployTimeConstant)
-### DataExportSetting
-#### Properties
-* **kind**: 'DataExportSetting' (Required)
-* **properties**: DataExportSettingProperties
-
 
 ## DataExportSetting
 ### Properties
@@ -222,15 +222,6 @@
 ## DataExportSettingProperties
 ### Properties
 * **enabled**: bool (Required)
-
-## Microsoft.Security/workspaceSettings
-### Properties
-* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceSettingProperties
-* **type**: 'Microsoft.Security/workspaceSettings' (ReadOnly, DeployTimeConstant)
 
 ## WorkspaceSettingProperties
 ### Properties
