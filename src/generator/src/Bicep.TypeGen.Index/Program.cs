@@ -15,7 +15,7 @@ namespace Azure.Bicep.TypeGen.Index
     {
         static void Main(string[] args)
         {
-            var baseDir = Path.Join(args[0], "types");
+            var baseDir = args[0];
             var indexContent = BuildSerializedIndex(baseDir);
             var indexPath = Path.Combine(baseDir, "index.json");
 

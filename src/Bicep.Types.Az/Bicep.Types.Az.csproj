@@ -8,11 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="../../generated/types/**/*.json" LogicalName="$([System.String]::new('%(RecursiveDir)%(Filename)%(Extension)').Replace('\', '/').ToLowerInvariant())" />
+    <EmbeddedResource Include="../../generated/**/*.json" LogicalName="$([System.String]::new('%(RecursiveDir)%(Filename)%(Extension)').Replace('\', '/').ToLowerInvariant())" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Bicep.Types\Bicep.Types.csproj" />
+    <ProjectReference Include="../Bicep.Types/Bicep.Types.csproj" />
   </ItemGroup>
 
 </Project>
