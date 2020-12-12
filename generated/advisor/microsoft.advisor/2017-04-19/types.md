@@ -12,7 +12,7 @@
 * **value**: ConfigData[] (ReadOnly)
 
 ## Resource Microsoft.Advisor/recommendations/suppressions@2017-04-19
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2017-04-19' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)

@@ -1,7 +1,7 @@
 # Microsoft.Authorization @ 2015-10-01-preview
 
 ## Resource Microsoft.Authorization/policyassignments@2015-10-01-preview
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2015-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)

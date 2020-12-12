@@ -1,7 +1,7 @@
 # Microsoft.Blueprint @ 2018-11-01-preview
 
 ## Resource Microsoft.Blueprint/blueprintAssignments@2018-11-01-preview
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
@@ -12,7 +12,7 @@
 * **type**: 'Microsoft.Blueprint/blueprintAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Blueprint/blueprints@2018-11-01-preview
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
@@ -21,7 +21,7 @@
 * **type**: 'Microsoft.Blueprint/blueprints' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Blueprint/blueprints/artifacts@2018-11-01-preview
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
@@ -45,7 +45,7 @@
 
 
 ## Resource Microsoft.Blueprint/blueprints/versions@2018-11-01-preview
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)

@@ -1,7 +1,7 @@
 # Microsoft.Authorization @ 2018-03-01
 
 ## Resource Microsoft.Authorization/policyAssignments@2018-03-01
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)

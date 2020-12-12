@@ -1,7 +1,7 @@
 # Microsoft.Consumption @ 2019-05-01-preview
 
 ## Resource Microsoft.Consumption/budgets@2019-05-01-preview
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **eTag**: string

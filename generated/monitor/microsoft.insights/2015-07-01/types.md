@@ -1,7 +1,7 @@
 # microsoft.insights @ 2015-07-01
 
 ## Resource microsoft.insights/diagnosticSettings@2015-07-01
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2015-07-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)

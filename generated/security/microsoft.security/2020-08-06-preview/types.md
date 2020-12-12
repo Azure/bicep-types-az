@@ -10,7 +10,7 @@
 * **type**: 'Microsoft.Security/iotDefenderSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/iotSensors@2020-08-06-preview
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)

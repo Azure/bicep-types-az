@@ -1,7 +1,7 @@
 # Microsoft.Authorization @ 2015-07-01
 
 ## Resource Microsoft.Authorization/roleAssignments@2015-07-01
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2015-07-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
@@ -10,7 +10,7 @@
 * **type**: 'Microsoft.Authorization/roleAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Authorization/roleDefinitions@2015-07-01
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2015-07-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
