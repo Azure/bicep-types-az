@@ -86,7 +86,7 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
             }
 
             // ambiguous - without any further information, we have to assume 'all'
-            return ScopeType.Tenant | ScopeType.ManagementGroup | ScopeType.ResourceGroup | ScopeType.Subscription | ScopeType.Extension;
+            return ScopeType.Unknown;
         }
 
         private static (bool success, string failureReason, IEnumerable<ResourceDescriptor> resourceDescriptors) ParseMethod(Method method, string apiVersion)
@@ -119,15 +119,14 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
 
             var scopeType = GetScopeTypeFromParentScope(parentScope);
 
-            return (true, string.Empty, resourceTypesFound.Select(type => new ResourceDescriptor
-            {
-                ScopeType = scopeType,
-                ProviderNamespace = providerNamespace,
-                ResourceTypeSegments = type.ToList(),
-                ApiVersion = apiVersion,
-                HasVariableName = hasVariableName,
-                XmsMetadata = method.XMsMetadata,
-            }));
+            return (true, string.Empty, resourceTypesFound.Select(type => new ResourceDescriptor(
+                ScopeType: scopeType,
+                ProviderNamespace: providerNamespace,
+                ResourceTypeSegments: type.ToList(),
+                ApiVersion: apiVersion,
+                ConstantName: hasVariableName ? null : resNameParam,
+                XmsMetadata: method.XMsMetadata
+            )));
         }
 
         private static (bool success, string failureReason, IEnumerable<IEnumerable<string>> resourceTypesFound) ParseResourceTypes(IEnumerableWithIndex<Parameter> parameters, string routingScope)
@@ -205,20 +204,10 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                     }
                     var providerDefinition = providerDefinitions[descriptor.ProviderNamespace];
 
-                    if (!providerDefinition.ResourceDefinitions.ContainsKey(descriptor.FullyQualifiedType))
-                    {
-                        providerDefinition.ResourceDefinitions[descriptor.FullyQualifiedType] = new ResourceDefinition
-                        {
-                            Descriptor = descriptor,
-                            DeclaringMethod = putMethod,
-                            GetMethod = getMethod,
-                        };
-                    }
-                    else
-                    {
-                        // the same resource type has been declared at a different scope - combine the two definitions into one
-                        providerDefinition.ResourceDefinitions[descriptor.FullyQualifiedType].Descriptor.ScopeType |= descriptor.ScopeType;
-                    }
+                    providerDefinition.ResourceDefinitions.Add(new ResourceDefinition(
+                        Descriptor: descriptor,
+                        DeclaringMethod: putMethod,
+                        GetMethod: getMethod));
                 }
             }
 

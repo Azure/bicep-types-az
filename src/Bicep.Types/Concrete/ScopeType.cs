@@ -7,7 +7,7 @@ namespace Azure.Bicep.Types.Concrete
     [Flags]
     public enum ScopeType
     {
-        None = 0,
+        Unknown = 0,
 
         Tenant = 1 << 0,
 

@@ -66,16 +66,58 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 ["name"] = CreateObjectProperty(resourceName, ObjectPropertyFlags.Required | ObjectPropertyFlags.DeployTimeConstant),
                 ["type"] = CreateObjectProperty(type, ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.DeployTimeConstant),
                 ["apiVersion"] = CreateObjectProperty(apiVersionType, ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.DeployTimeConstant),
+                ["dependsOn"] = CreateObjectProperty(dependsOnType, ObjectPropertyFlags.WriteOnly),
             };
+        }
+
+        private static ScopeType MergeScopes(ScopeType scopeA, ScopeType scopeB)
+        {
+            if (scopeA == ScopeType.Unknown || scopeB == ScopeType.Unknown)
+            {
+                return ScopeType.Unknown;
+            }
+
+            return scopeA | scopeB;
+        }
+
+        private static IReadOnlyList<ResourceDefinition> CollapseDefinitionScopes(IEnumerable<ResourceDefinition> definitions)
+        {
+            var definitionsByName = new Dictionary<string, ResourceDefinition>(StringComparer.OrdinalIgnoreCase);
+            foreach (var definition in definitions)
+            {
+                var name = definition.Descriptor.ConstantName ?? "";
+
+                if (definitionsByName.TryGetValue(name, out var existingDefinition))
+                {
+                    var mergedDescriptor = existingDefinition.Descriptor with { ScopeType = MergeScopes(existingDefinition.Descriptor.ScopeType, definition.Descriptor.ScopeType) };
+                    
+                    definitionsByName[name] = existingDefinition with { Descriptor = mergedDescriptor };
+                }
+                else
+                {
+                    definitionsByName[name] = definition;
+                }
+            }
+
+            return definitionsByName.Values.ToList();
         }
 
         private GenerateResult Process()
         {
             var definitionsByDescriptor = definition.ResourceDefinitions
-                .ToDictionary(kvp => kvp.Value.Descriptor, kvp => kvp.Value, ResourceDescriptor.Comparer);
+                .ToLookup(x => x.Descriptor)
+                .ToDictionary(x => x.Key, x => CollapseDefinitionScopes(x));
 
-            foreach (var (descriptor, resource) in definitionsByDescriptor)
+            foreach (var (descriptor, definitions) in definitionsByDescriptor)
             {
+                if (definitions.Count > 1)
+                {
+                    CodeModelProcessor.LogWarning($"Skipping resource type {descriptor.FullyQualifiedType} under path '{definitions[0].DeclaringMethod.Url}': Found multiple definitions for the same type");
+                    continue;
+                }
+
+                var resource = definitions.Single();
+
                 var putBody = resource.DeclaringMethod.Body?.ModelType as CompositeType;
                 var getBody = (resource.GetMethod?.Responses.GetValueOrDefault(HttpStatusCode.OK)?.Body as CompositeType) ?? 
                     (resource.GetMethod?.DefaultResponse?.Body as CompositeType) ??
@@ -129,7 +171,7 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 definition.Namespace,
                 definition.ApiVersion,
                 factory,
-                definition.ResourceDefinitions.Select(kvp => kvp.Value.Descriptor));
+                definition.ResourceDefinitions.Select(x => x.Descriptor));
         }
 
         private (bool success, string failureReason, TypeBase name) ParseNameSchema(ResourceDefinition resource, ProviderDefinition providerDefinition)
