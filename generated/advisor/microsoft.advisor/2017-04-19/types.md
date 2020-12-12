@@ -1,9 +1,22 @@
 # Microsoft.Advisor @ 2017-04-19
 
 ## Resource Microsoft.Advisor/configurations@2017-04-19
-* **Valid Scope(s)**: Subscription, ResourceGroup
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2017-04-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'configurations' (Required, DeployTimeConstant)
+* **nextLink**: string (ReadOnly)
+* **properties**: schemas:5_properties (WriteOnly)
+* **type**: 'Microsoft.Advisor/configurations' (ReadOnly, DeployTimeConstant)
+* **value**: ConfigData[] (ReadOnly)
+
+## Resource Microsoft.Advisor/configurations@2017-04-19
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'configurations' (Required, DeployTimeConstant)
 * **nextLink**: string (ReadOnly)
@@ -12,9 +25,10 @@
 * **value**: ConfigData[] (ReadOnly)
 
 ## Resource Microsoft.Advisor/recommendations/suppressions@2017-04-19
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2017-04-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SuppressionProperties

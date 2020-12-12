@@ -5,6 +5,7 @@
 ### Properties
 * **apiVersion**: '2016-01-01' (ReadOnly, DeployTimeConstant)
 * **azureRegistrationResourceIdentifier**: string (WriteOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **displayName**: string (WriteOnly)
 * **expiration**: string (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
@@ -21,6 +22,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)

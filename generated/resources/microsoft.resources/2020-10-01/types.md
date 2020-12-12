@@ -5,6 +5,7 @@
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: ManagedServiceIdentity
 * **location**: string (Required)

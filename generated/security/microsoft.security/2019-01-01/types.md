@@ -1,9 +1,10 @@
 # Microsoft.Security @ 2019-01-01
 
 ## Resource Microsoft.Security/advancedThreatProtectionSettings@2019-01-01
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AdvancedThreatProtectionProperties
@@ -14,6 +15,7 @@
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'MCAS' | 'WDATP' (Required, DeployTimeConstant)
 * **type**: 'Microsoft.Security/settings' (ReadOnly, DeployTimeConstant)

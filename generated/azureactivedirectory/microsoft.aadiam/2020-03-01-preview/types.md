@@ -5,6 +5,7 @@
 ### Properties
 * **allTenants**: bool
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **ownerTenantId**: string

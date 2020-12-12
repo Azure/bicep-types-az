@@ -4,15 +4,27 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PrivateStoreProperties
 * **type**: 'Microsoft.Marketplace/privateStores' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Marketplace/privateStores/offers@2020-01-01
-* **Valid Scope(s)**: Tenant, Subscription
+* **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: OfferProperties
+* **type**: 'Microsoft.Marketplace/privateStores/offers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Marketplace/privateStores/offers@2020-01-01
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: OfferProperties

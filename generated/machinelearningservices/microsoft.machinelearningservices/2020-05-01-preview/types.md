@@ -4,6 +4,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity
 * **location**: string
@@ -17,6 +18,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity
 * **location**: string
@@ -31,6 +33,7 @@
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **datasetType**: 'file' | 'tabular' (Required, WriteOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity (ReadOnly)
 * **location**: string (ReadOnly)
@@ -58,6 +61,7 @@
 * **containerName**: string (WriteOnly)
 * **databaseName**: string (WriteOnly)
 * **dataStoreType**: 'adls-gen2' | 'adls' | 'blob' | 'dbfs' | 'file' | 'mysqldb' | 'psqldb' | 'sqldb' (Required, WriteOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **description**: string (WriteOnly)
 * **endpoint**: string (WriteOnly)
 * **enforceSSL**: bool (WriteOnly)
@@ -91,6 +95,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: LinkedWorkspaceProps
@@ -100,6 +105,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity
 * **location**: string
@@ -114,6 +120,7 @@
 * **Discriminator**: computeType
 ### Base Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **description**: string (WriteOnly)
 * **environmentImageRequest**: schemas:139_environmentImageRequest (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)

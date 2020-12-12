@@ -1,9 +1,21 @@
 # Microsoft.CostManagement @ 2018-05-31
 
 ## Resource Microsoft.CostManagement/reportconfigs@2018-05-31
-* **Valid Scope(s)**: Subscription, ResourceGroup
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2018-05-31' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ReportConfigProperties
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.CostManagement/reportconfigs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.CostManagement/reportconfigs@2018-05-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-05-31' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ReportConfigProperties
@@ -89,6 +101,10 @@
 ### Properties
 * **from**: string (Required)
 * **to**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Dictionary<string,String>
 ### Additional Properties

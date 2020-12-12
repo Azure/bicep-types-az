@@ -4,15 +4,17 @@
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: IotDefenderSettingsProperties
 * **type**: 'Microsoft.Security/iotDefenderSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/iotSensors@2020-08-06-preview
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: IotSensorProperties
