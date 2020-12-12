@@ -1,6 +1,7 @@
 # Microsoft.Peering @ 2019-09-01-preview
 
-## Microsoft.Peering/peerAsns
+## Resource Microsoft.Peering/peerAsns@2019-09-01-preview
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -8,6 +9,42 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PeerAsnProperties
 * **type**: 'Microsoft.Peering/peerAsns' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Peering/peerings@2019-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'Direct' | 'Exchange' (Required)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PeeringProperties
+* **sku**: PeeringSku (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Peering/peerings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Peering/peeringServices@2019-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PeeringServiceProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Peering/peeringServices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Peering/peeringServices/prefixes@2019-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PeeringServicePrefixProperties
+* **type**: 'Microsoft.Peering/peeringServices/prefixes' (ReadOnly, DeployTimeConstant)
 
 ## PeerAsnProperties
 ### Properties
@@ -21,19 +58,6 @@
 ### Properties
 * **emails**: string[]
 * **phone**: string[]
-
-## Microsoft.Peering/peerings
-### Properties
-* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'Direct' | 'Exchange' (Required)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PeeringProperties
-* **sku**: PeeringSku (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Peering/peerings' (ReadOnly, DeployTimeConstant)
 
 ## PeeringProperties
 ### Properties
@@ -103,17 +127,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Peering/peeringServices
-### Properties
-* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PeeringServiceProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Peering/peeringServices' (ReadOnly, DeployTimeConstant)
-
 ## PeeringServiceProperties
 ### Properties
 * **peeringServiceLocation**: string
@@ -123,15 +136,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Peering/peeringServices/prefixes
-### Properties
-* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PeeringServicePrefixProperties
-* **type**: 'Microsoft.Peering/peeringServices/prefixes' (ReadOnly, DeployTimeConstant)
 
 ## PeeringServicePrefixProperties
 ### Properties

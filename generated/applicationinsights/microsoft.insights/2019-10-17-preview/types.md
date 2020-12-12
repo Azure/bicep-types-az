@@ -1,6 +1,7 @@
 # microsoft.insights @ 2019-10-17-preview
 
-## microsoft.insights/workbooktemplates
+## Resource microsoft.insights/workbooktemplates@2019-10-17-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-17-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

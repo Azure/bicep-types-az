@@ -1,6 +1,7 @@
 # Microsoft.ContainerInstance @ 2017-10-01-preview
 
-## Microsoft.ContainerInstance/containerGroups
+## Resource Microsoft.ContainerInstance/containerGroups@2017-10-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

@@ -1,6 +1,7 @@
 # Microsoft.DomainRegistration @ 2015-08-01
 
-## Microsoft.DomainRegistration/domains
+## Resource Microsoft.DomainRegistration/domains@2015-08-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

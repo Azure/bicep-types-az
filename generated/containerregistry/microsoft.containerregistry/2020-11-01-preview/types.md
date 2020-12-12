@@ -1,6 +1,7 @@
 # Microsoft.ContainerRegistry @ 2020-11-01-preview
 
-## Microsoft.ContainerRegistry/registries
+## Resource Microsoft.ContainerRegistry/registries@2020-11-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -13,6 +14,113 @@
 * **systemData**: SystemData (ReadOnly)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ContainerRegistry/registries' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ContainerRegistry/registries/connectedRegistries@2020-11-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConnectedRegistryProperties
+* **systemData**: SystemData (ReadOnly)
+* **type**: 'Microsoft.ContainerRegistry/registries/connectedRegistries' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ContainerRegistry/registries/exportPipelines@2020-11-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: IdentityProperties
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ExportPipelineProperties
+* **systemData**: SystemData (ReadOnly)
+* **type**: 'Microsoft.ContainerRegistry/registries/exportPipelines' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ContainerRegistry/registries/importPipelines@2020-11-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: IdentityProperties
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ImportPipelineProperties
+* **systemData**: SystemData (ReadOnly)
+* **type**: 'Microsoft.ContainerRegistry/registries/importPipelines' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ContainerRegistry/registries/pipelineRuns@2020-11-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PipelineRunProperties
+* **systemData**: SystemData (ReadOnly)
+* **type**: 'Microsoft.ContainerRegistry/registries/pipelineRuns' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ContainerRegistry/registries/privateEndpointConnections@2020-11-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **systemData**: SystemData (ReadOnly)
+* **type**: 'Microsoft.ContainerRegistry/registries/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ContainerRegistry/registries/replications@2020-11-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ReplicationProperties
+* **systemData**: SystemData (ReadOnly)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ContainerRegistry/registries/replications' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ContainerRegistry/registries/scopeMaps@2020-11-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ScopeMapProperties
+* **systemData**: SystemData (ReadOnly)
+* **type**: 'Microsoft.ContainerRegistry/registries/scopeMaps' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ContainerRegistry/registries/tokens@2020-11-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TokenProperties
+* **systemData**: SystemData (ReadOnly)
+* **type**: 'Microsoft.ContainerRegistry/registries/tokens' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ContainerRegistry/registries/webhooks@2020-11-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WebhookPropertiesCreateParameters
+* **systemData**: SystemData (ReadOnly)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ContainerRegistry/registries/webhooks' (ReadOnly, DeployTimeConstant)
 
 ## IdentityProperties
 ### Properties
@@ -150,16 +258,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.ContainerRegistry/registries/connectedRegistries
-### Properties
-* **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectedRegistryProperties
-* **systemData**: SystemData (ReadOnly)
-* **type**: 'Microsoft.ContainerRegistry/registries/connectedRegistries' (ReadOnly, DeployTimeConstant)
-
 ## ConnectedRegistryProperties
 ### Properties
 * **activation**: ActivationProperties (ReadOnly)
@@ -220,18 +318,6 @@
 * **timestamp**: string (ReadOnly)
 * **type**: string (ReadOnly)
 
-## Microsoft.ContainerRegistry/registries/exportPipelines
-### Properties
-* **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: IdentityProperties
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ExportPipelineProperties
-* **systemData**: SystemData (ReadOnly)
-* **type**: 'Microsoft.ContainerRegistry/registries/exportPipelines' (ReadOnly, DeployTimeConstant)
-
 ## ExportPipelineProperties
 ### Properties
 * **options**: 'ContinueOnErrors' | 'DeleteSourceBlobOnSuccess' | 'OverwriteBlobs' | 'OverwriteTags'[]
@@ -243,18 +329,6 @@
 * **keyVaultUri**: string (Required)
 * **type**: string
 * **uri**: string
-
-## Microsoft.ContainerRegistry/registries/importPipelines
-### Properties
-* **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: IdentityProperties
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ImportPipelineProperties
-* **systemData**: SystemData (ReadOnly)
-* **type**: 'Microsoft.ContainerRegistry/registries/importPipelines' (ReadOnly, DeployTimeConstant)
 
 ## ImportPipelineProperties
 ### Properties
@@ -276,16 +350,6 @@
 ## PipelineSourceTriggerProperties
 ### Properties
 * **status**: 'Disabled' | 'Enabled' (Required)
-
-## Microsoft.ContainerRegistry/registries/pipelineRuns
-### Properties
-* **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PipelineRunProperties
-* **systemData**: SystemData (ReadOnly)
-* **type**: 'Microsoft.ContainerRegistry/registries/pipelineRuns' (ReadOnly, DeployTimeConstant)
 
 ## PipelineRunProperties
 ### Properties
@@ -337,28 +401,6 @@
 ### Properties
 * **timestamp**: string
 
-## Microsoft.ContainerRegistry/registries/privateEndpointConnections
-### Properties
-* **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **systemData**: SystemData (ReadOnly)
-* **type**: 'Microsoft.ContainerRegistry/registries/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.ContainerRegistry/registries/replications
-### Properties
-* **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ReplicationProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ContainerRegistry/registries/replications' (ReadOnly, DeployTimeConstant)
-
 ## ReplicationProperties
 ### Properties
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
@@ -370,16 +412,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.ContainerRegistry/registries/scopeMaps
-### Properties
-* **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ScopeMapProperties
-* **systemData**: SystemData (ReadOnly)
-* **type**: 'Microsoft.ContainerRegistry/registries/scopeMaps' (ReadOnly, DeployTimeConstant)
-
 ## ScopeMapProperties
 ### Properties
 * **actions**: string[] (Required)
@@ -387,16 +419,6 @@
 * **description**: string
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **type**: string (ReadOnly)
-
-## Microsoft.ContainerRegistry/registries/tokens
-### Properties
-* **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TokenProperties
-* **systemData**: SystemData (ReadOnly)
-* **type**: 'Microsoft.ContainerRegistry/registries/tokens' (ReadOnly, DeployTimeConstant)
 
 ## TokenProperties
 ### Properties
@@ -424,18 +446,6 @@
 * **expiry**: string
 * **name**: 'password1' | 'password2'
 * **value**: string (ReadOnly)
-
-## Microsoft.ContainerRegistry/registries/webhooks
-### Properties
-* **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WebhookPropertiesCreateParameters
-* **systemData**: SystemData (ReadOnly)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ContainerRegistry/registries/webhooks' (ReadOnly, DeployTimeConstant)
 
 ## WebhookPropertiesCreateParameters
 ### Properties

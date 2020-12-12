@@ -1,6 +1,7 @@
 # Microsoft.Compute @ 2020-09-30
 
-## Microsoft.Compute/galleries
+## Resource Microsoft.Compute/galleries@2020-09-30
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,54 @@
 * **properties**: GalleryProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Compute/galleries' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Compute/galleries/applications@2020-09-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GalleryApplicationProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/galleries/applications' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Compute/galleries/applications/versions@2020-09-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GalleryApplicationVersionProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/galleries/applications/versions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Compute/galleries/images@2020-09-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GalleryImageProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/galleries/images' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Compute/galleries/images/versions@2020-09-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GalleryImageVersionProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/galleries/images/versions' (ReadOnly, DeployTimeConstant)
 
 ## GalleryProperties
 ### Properties
@@ -36,17 +85,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Compute/galleries/applications
-### Properties
-* **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GalleryApplicationProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/galleries/applications' (ReadOnly, DeployTimeConstant)
-
 ## GalleryApplicationProperties
 ### Properties
 * **description**: string
@@ -59,17 +97,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Compute/galleries/applications/versions
-### Properties
-* **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GalleryApplicationVersionProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/galleries/applications/versions' (ReadOnly, DeployTimeConstant)
 
 ## GalleryApplicationVersionProperties
 ### Properties
@@ -137,17 +164,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Compute/galleries/images
-### Properties
-* **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GalleryImageProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/galleries/images' (ReadOnly, DeployTimeConstant)
-
 ## GalleryImageProperties
 ### Properties
 * **description**: string
@@ -199,17 +215,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Compute/galleries/images/versions
-### Properties
-* **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GalleryImageVersionProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/galleries/images/versions' (ReadOnly, DeployTimeConstant)
 
 ## GalleryImageVersionProperties
 ### Properties

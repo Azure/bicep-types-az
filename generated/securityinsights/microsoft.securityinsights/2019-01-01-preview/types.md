@@ -1,6 +1,7 @@
 # Microsoft.SecurityInsights @ 2019-01-01-preview
 
-## Microsoft.SecurityInsights/alertRules
+## Resource Microsoft.SecurityInsights/alertRules@2019-01-01-preview
+* **Valid Scope(s)**: Extension
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
@@ -24,6 +25,215 @@
 * **kind**: 'Scheduled' (Required)
 * **properties**: ScheduledAlertRuleProperties
 
+
+## Resource Microsoft.SecurityInsights/alertRules/actions@2019-01-01-preview
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ActionRequestProperties
+* **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.SecurityInsights/bookmarks@2019-01-01-preview
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BookmarkProperties
+* **type**: 'Microsoft.SecurityInsights/bookmarks' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.SecurityInsights/bookmarks/relations@2019-01-01-preview
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RelationProperties
+* **type**: 'Microsoft.SecurityInsights/bookmarks/relations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.SecurityInsights/cases@2019-01-01-preview
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CaseProperties
+* **type**: 'Microsoft.SecurityInsights/cases' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.SecurityInsights/cases/comments@2019-01-01-preview
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CaseCommentProperties
+* **type**: 'Microsoft.SecurityInsights/cases/comments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.SecurityInsights/cases/relations@2019-01-01-preview
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'CasesToBookmarks' (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RelationsModelInputProperties
+* **type**: 'Microsoft.SecurityInsights/cases/relations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.SecurityInsights/dataConnectors@2019-01-01-preview
+* **Valid Scope(s)**: Extension
+* **Discriminator**: kind
+### Base Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.SecurityInsights/dataConnectors' (ReadOnly, DeployTimeConstant)
+### AmazonWebServicesCloudTrail
+#### Properties
+* **kind**: 'AmazonWebServicesCloudTrail' (Required)
+* **properties**: AwsCloudTrailDataConnectorProperties
+
+### AzureActiveDirectory
+#### Properties
+* **kind**: 'AzureActiveDirectory' (Required)
+* **properties**: AADDataConnectorProperties
+
+### AzureAdvancedThreatProtection
+#### Properties
+* **kind**: 'AzureAdvancedThreatProtection' (Required)
+* **properties**: AATPDataConnectorProperties
+
+### AzureSecurityCenter
+#### Properties
+* **kind**: 'AzureSecurityCenter' (Required)
+* **properties**: ASCDataConnectorProperties
+
+### MicrosoftCloudAppSecurity
+#### Properties
+* **kind**: 'MicrosoftCloudAppSecurity' (Required)
+* **properties**: MCASDataConnectorProperties
+
+### MicrosoftDefenderAdvancedThreatProtection
+#### Properties
+* **kind**: 'MicrosoftDefenderAdvancedThreatProtection' (Required)
+* **properties**: MDATPDataConnectorProperties
+
+### Office365
+#### Properties
+* **kind**: 'Office365' (Required)
+* **properties**: OfficeDataConnectorProperties
+
+### OfficeATP
+#### Properties
+* **kind**: 'OfficeATP' (Required)
+* **properties**: OfficeATPDataConnectorProperties
+
+### ThreatIntelligence
+#### Properties
+* **kind**: 'ThreatIntelligence' (Required)
+* **properties**: TIDataConnectorProperties
+
+### ThreatIntelligenceTaxii
+#### Properties
+* **kind**: 'ThreatIntelligenceTaxii' (Required)
+* **properties**: TiTaxiiDataConnectorProperties
+
+
+## Resource Microsoft.SecurityInsights/incidents@2019-01-01-preview
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IncidentProperties
+* **type**: 'Microsoft.SecurityInsights/incidents' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.SecurityInsights/incidents/comments@2019-01-01-preview
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IncidentCommentProperties
+* **type**: 'Microsoft.SecurityInsights/incidents/comments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.SecurityInsights/incidents/relations@2019-01-01-preview
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RelationProperties
+* **type**: 'Microsoft.SecurityInsights/incidents/relations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.SecurityInsights/settings@2019-01-01-preview
+* **Valid Scope(s)**: Extension
+* **Discriminator**: kind
+### Base Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.SecurityInsights/settings' (ReadOnly, DeployTimeConstant)
+### EntityAnalytics
+#### Properties
+* **kind**: 'EntityAnalytics' (Required)
+* **properties**: EntityAnalyticsProperties
+
+### EyesOn
+#### Properties
+* **kind**: 'EyesOn' (Required)
+* **properties**: EyesOnSettingsProperties
+
+### Ueba
+#### Properties
+* **kind**: 'Ueba' (Required)
+* **properties**: UebaProperties
+
+
+## Resource Microsoft.SecurityInsights/threatIntelligence/indicators@2019-01-01-preview
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (Required, WriteOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ThreatIntelligenceIndicatorProperties (WriteOnly)
+* **type**: 'Microsoft.SecurityInsights/threatIntelligence/indicators' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.SecurityInsights/watchlists@2019-01-01-preview
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WatchlistProperties
+* **type**: 'Microsoft.SecurityInsights/watchlists' (ReadOnly, DeployTimeConstant)
 
 ## Fusion
 ### Properties
@@ -98,31 +308,11 @@
 * **lookbackDuration**: string (Required)
 * **reopenClosedIncident**: bool (Required)
 
-## Microsoft.SecurityInsights/alertRules/actions
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ActionRequestProperties
-* **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant)
-
 ## ActionRequestProperties
 ### Properties
 * **logicAppResourceId**: string
 * **triggerUri**: string (WriteOnly)
 * **workflowId**: string (ReadOnly)
-
-## Microsoft.SecurityInsights/bookmarks
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BookmarkProperties
-* **type**: 'Microsoft.SecurityInsights/bookmarks' (ReadOnly, DeployTimeConstant)
 
 ## BookmarkProperties
 ### Properties
@@ -150,32 +340,12 @@
 * **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium' (Required)
 * **title**: string (Required)
 
-## Microsoft.SecurityInsights/bookmarks/relations
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RelationProperties
-* **type**: 'Microsoft.SecurityInsights/bookmarks/relations' (ReadOnly, DeployTimeConstant)
-
 ## RelationProperties
 ### Properties
 * **relatedResourceId**: string (Required)
 * **relatedResourceKind**: string (ReadOnly)
 * **relatedResourceName**: string (ReadOnly)
 * **relatedResourceType**: string (ReadOnly)
-
-## Microsoft.SecurityInsights/cases
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CaseProperties
-* **type**: 'Microsoft.SecurityInsights/cases' (ReadOnly, DeployTimeConstant)
 
 ## CaseProperties
 ### Properties
@@ -197,31 +367,11 @@
 * **title**: string (Required)
 * **totalComments**: int (ReadOnly)
 
-## Microsoft.SecurityInsights/cases/comments
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CaseCommentProperties
-* **type**: 'Microsoft.SecurityInsights/cases/comments' (ReadOnly, DeployTimeConstant)
-
 ## CaseCommentProperties
 ### Properties
 * **createdTimeUtc**: string (ReadOnly)
 * **message**: string (Required)
 * **userInfo**: UserInfo (ReadOnly)
-
-## Microsoft.SecurityInsights/cases/relations
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'CasesToBookmarks' (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RelationsModelInputProperties
-* **type**: 'Microsoft.SecurityInsights/cases/relations' (ReadOnly, DeployTimeConstant)
 
 ## RelationsModelInputProperties
 ### Properties
@@ -242,66 +392,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.SecurityInsights/dataConnectors
-* **Discriminator**: kind
-### Base Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.SecurityInsights/dataConnectors' (ReadOnly, DeployTimeConstant)
-### AmazonWebServicesCloudTrail
-#### Properties
-* **kind**: 'AmazonWebServicesCloudTrail' (Required)
-* **properties**: AwsCloudTrailDataConnectorProperties
-
-### AzureActiveDirectory
-#### Properties
-* **kind**: 'AzureActiveDirectory' (Required)
-* **properties**: AADDataConnectorProperties
-
-### AzureAdvancedThreatProtection
-#### Properties
-* **kind**: 'AzureAdvancedThreatProtection' (Required)
-* **properties**: AATPDataConnectorProperties
-
-### AzureSecurityCenter
-#### Properties
-* **kind**: 'AzureSecurityCenter' (Required)
-* **properties**: ASCDataConnectorProperties
-
-### MicrosoftCloudAppSecurity
-#### Properties
-* **kind**: 'MicrosoftCloudAppSecurity' (Required)
-* **properties**: MCASDataConnectorProperties
-
-### MicrosoftDefenderAdvancedThreatProtection
-#### Properties
-* **kind**: 'MicrosoftDefenderAdvancedThreatProtection' (Required)
-* **properties**: MDATPDataConnectorProperties
-
-### Office365
-#### Properties
-* **kind**: 'Office365' (Required)
-* **properties**: OfficeDataConnectorProperties
-
-### OfficeATP
-#### Properties
-* **kind**: 'OfficeATP' (Required)
-* **properties**: OfficeATPDataConnectorProperties
-
-### ThreatIntelligence
-#### Properties
-* **kind**: 'ThreatIntelligence' (Required)
-* **properties**: TIDataConnectorProperties
-
-### ThreatIntelligenceTaxii
-#### Properties
-* **kind**: 'ThreatIntelligenceTaxii' (Required)
-* **properties**: TiTaxiiDataConnectorProperties
-
 
 ## AmazonWebServicesCloudTrail
 ### Properties
@@ -468,16 +558,6 @@
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
-## Microsoft.SecurityInsights/incidents
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IncidentProperties
-* **type**: 'Microsoft.SecurityInsights/incidents' (ReadOnly, DeployTimeConstant)
-
 ## IncidentProperties
 ### Properties
 * **additionalData**: IncidentAdditionalData (ReadOnly)
@@ -518,16 +598,6 @@
 * **objectId**: string
 * **userPrincipalName**: string
 
-## Microsoft.SecurityInsights/incidents/comments
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IncidentCommentProperties
-* **type**: 'Microsoft.SecurityInsights/incidents/comments' (ReadOnly, DeployTimeConstant)
-
 ## IncidentCommentProperties
 ### Properties
 * **author**: ClientInfo (ReadOnly)
@@ -541,41 +611,6 @@
 * **name**: string
 * **objectId**: string
 * **userPrincipalName**: string
-
-## Microsoft.SecurityInsights/incidents/relations
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RelationProperties
-* **type**: 'Microsoft.SecurityInsights/incidents/relations' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.SecurityInsights/settings
-* **Discriminator**: kind
-### Base Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.SecurityInsights/settings' (ReadOnly, DeployTimeConstant)
-### EntityAnalytics
-#### Properties
-* **kind**: 'EntityAnalytics' (Required)
-* **properties**: EntityAnalyticsProperties
-
-### EyesOn
-#### Properties
-* **kind**: 'EyesOn' (Required)
-* **properties**: EyesOnSettingsProperties
-
-### Ueba
-#### Properties
-* **kind**: 'Ueba' (Required)
-* **properties**: UebaProperties
-
 
 ## EntityAnalytics
 ### Properties
@@ -603,17 +638,6 @@
 ## UebaProperties
 ### Properties
 * **dataSources**: 'AuditLogs' | 'AzureActivity' | 'SecurityEvent' | 'SigninLogs'[]
-
-## Microsoft.SecurityInsights/threatIntelligence/indicators
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (Required, WriteOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ThreatIntelligenceIndicatorProperties (WriteOnly)
-* **type**: 'Microsoft.SecurityInsights/threatIntelligence/indicators' (ReadOnly, DeployTimeConstant)
 
 ## ThreatIntelligenceIndicatorProperties
 ### Properties
@@ -655,16 +679,6 @@
 ### Properties
 * **killChainName**: string (WriteOnly)
 * **phaseName**: int (WriteOnly)
-
-## Microsoft.SecurityInsights/watchlists
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WatchlistProperties
-* **type**: 'Microsoft.SecurityInsights/watchlists' (ReadOnly, DeployTimeConstant)
 
 ## WatchlistProperties
 ### Properties

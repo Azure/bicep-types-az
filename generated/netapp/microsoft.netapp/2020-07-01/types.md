@@ -1,6 +1,7 @@
 # Microsoft.NetApp @ 2020-07-01
 
-## Microsoft.NetApp/netAppAccounts
+## Resource Microsoft.NetApp/netAppAccounts@2020-07-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,76 @@
 * **properties**: accountProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.NetApp/netAppAccounts/backupPolicies@2020-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: backupPolicyProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.NetApp/netAppAccounts/backupPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2020-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: poolProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: volumeProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups@2020-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: backupProperties (Required)
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2020-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: snapshotProperties
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.NetApp/netAppAccounts/snapshotPolicies@2020-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: snapshotPolicyProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.NetApp/netAppAccounts/snapshotPolicies' (ReadOnly, DeployTimeConstant)
 
 ## accountProperties
 ### Properties
@@ -39,17 +110,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.NetApp/netAppAccounts/backupPolicies
-### Properties
-* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: backupPolicyProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.NetApp/netAppAccounts/backupPolicies' (ReadOnly, DeployTimeConstant)
-
 ## backupPolicyProperties
 ### Properties
 * **dailyBackupsToKeep**: int
@@ -72,17 +132,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.NetApp/netAppAccounts/capacityPools
-### Properties
-* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: poolProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
-
 ## poolProperties
 ### Properties
 * **poolId**: string (ReadOnly)
@@ -96,17 +145,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.NetApp/netAppAccounts/capacityPools/volumes
-### Properties
-* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: volumeProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant)
 
 ## volumeProperties
 ### Properties
@@ -187,16 +225,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups
-### Properties
-* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: backupProperties (Required)
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups' (ReadOnly, DeployTimeConstant)
-
 ## backupProperties
 ### Properties
 * **backupId**: string (ReadOnly)
@@ -206,32 +234,11 @@
 * **provisioningState**: string (ReadOnly)
 * **size**: int (ReadOnly)
 
-## Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots
-### Properties
-* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: snapshotProperties
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
-
 ## snapshotProperties
 ### Properties
 * **created**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **snapshotId**: string (ReadOnly)
-
-## Microsoft.NetApp/netAppAccounts/snapshotPolicies
-### Properties
-* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: snapshotPolicyProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.NetApp/netAppAccounts/snapshotPolicies' (ReadOnly, DeployTimeConstant)
 
 ## snapshotPolicyProperties
 ### Properties

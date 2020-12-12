@@ -1,6 +1,7 @@
 # Microsoft.Security @ 2018-06-01
 
-## Microsoft.Security/pricings
+## Resource Microsoft.Security/pricings@2018-06-01
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

@@ -1,6 +1,7 @@
 # Microsoft.MarketplaceOrdering @ 2015-06-01
 
-## Microsoft.MarketplaceOrdering/offerTypes/publishers/offers/plans/agreements
+## Resource Microsoft.MarketplaceOrdering/offerTypes/publishers/offers/plans/agreements@2015-06-01
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2015-06-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

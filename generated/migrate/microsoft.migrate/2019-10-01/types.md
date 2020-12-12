@@ -1,6 +1,7 @@
 # Microsoft.Migrate @ 2019-10-01
 
-## Microsoft.Migrate/assessmentProjects
+## Resource Microsoft.Migrate/assessmentProjects@2019-10-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,50 @@
 * **properties**: ProjectProperties
 * **tags**: any
 * **type**: 'Microsoft.Migrate/assessmentProjects' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Migrate/assessmentProjects/groups@2019-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **eTag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GroupProperties (Required)
+* **type**: 'Microsoft.Migrate/assessmentProjects/groups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Migrate/assessmentProjects/groups/assessments@2019-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **eTag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AssessmentProperties (Required)
+* **type**: 'Microsoft.Migrate/assessmentProjects/groups/assessments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Migrate/assessmentProjects/hypervcollectors@2019-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **eTag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CollectorProperties
+* **type**: 'Microsoft.Migrate/assessmentProjects/hypervcollectors' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Migrate/assessmentProjects/vmwarecollectors@2019-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **eTag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CollectorProperties
+* **type**: 'Microsoft.Migrate/assessmentProjects/vmwarecollectors' (ReadOnly, DeployTimeConstant)
 
 ## ProjectProperties
 ### Properties
@@ -27,16 +72,6 @@
 * **serviceEndpoint**: string (ReadOnly)
 * **updatedTimestamp**: string (ReadOnly)
 
-## Microsoft.Migrate/assessmentProjects/groups
-### Properties
-* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GroupProperties (Required)
-* **type**: 'Microsoft.Migrate/assessmentProjects/groups' (ReadOnly, DeployTimeConstant)
-
 ## GroupProperties
 ### Properties
 * **areAssessmentsRunning**: bool (ReadOnly)
@@ -45,16 +80,6 @@
 * **groupStatus**: 'Completed' | 'Created' | 'Invalid' | 'Running' | 'Updated' (ReadOnly)
 * **machineCount**: int (ReadOnly)
 * **updatedTimestamp**: string (ReadOnly)
-
-## Microsoft.Migrate/assessmentProjects/groups/assessments
-### Properties
-* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AssessmentProperties (Required)
-* **type**: 'Microsoft.Migrate/assessmentProjects/groups/assessments' (ReadOnly, DeployTimeConstant)
 
 ## AssessmentProperties
 ### Properties
@@ -94,16 +119,6 @@
 * **daysPerMonth**: int
 * **hoursPerDay**: int
 
-## Microsoft.Migrate/assessmentProjects/hypervcollectors
-### Properties
-* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CollectorProperties
-* **type**: 'Microsoft.Migrate/assessmentProjects/hypervcollectors' (ReadOnly, DeployTimeConstant)
-
 ## CollectorProperties
 ### Properties
 * **agentProperties**: CollectorAgentProperties
@@ -125,14 +140,4 @@
 * **authority**: string
 * **objectId**: string
 * **tenantId**: string
-
-## Microsoft.Migrate/assessmentProjects/vmwarecollectors
-### Properties
-* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CollectorProperties
-* **type**: 'Microsoft.Migrate/assessmentProjects/vmwarecollectors' (ReadOnly, DeployTimeConstant)
 

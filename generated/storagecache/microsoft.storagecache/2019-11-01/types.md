@@ -1,6 +1,7 @@
 # Microsoft.StorageCache @ 2019-11-01
 
-## Microsoft.StorageCache/caches
+## Resource Microsoft.StorageCache/caches@2019-11-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,16 @@
 * **sku**: schemas:4_sku
 * **tags**: any
 * **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.StorageCache/caches/storageTargets@2019-11-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:18_properties
+* **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant)
 
 ## schemas:4_properties
 ### Properties
@@ -37,15 +48,6 @@
 ## schemas:4_sku
 ### Properties
 * **name**: string
-
-## Microsoft.StorageCache/caches/storageTargets
-### Properties
-* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:18_properties
-* **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant)
 
 ## schemas:18_properties
 ### Properties

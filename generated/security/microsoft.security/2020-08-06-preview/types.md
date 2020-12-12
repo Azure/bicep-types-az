@@ -1,6 +1,7 @@
 # Microsoft.Security @ 2020-08-06-preview
 
-## Microsoft.Security/iotDefenderSettings
+## Resource Microsoft.Security/iotDefenderSettings@2020-08-06-preview
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -9,12 +10,8 @@
 * **properties**: IotDefenderSettingsProperties
 * **type**: 'Microsoft.Security/iotDefenderSettings' (ReadOnly, DeployTimeConstant)
 
-## IotDefenderSettingsProperties
-### Properties
-* **deviceQuota**: int (Required)
-* **sentinelWorkspaceResourceIds**: string[] (Required)
-
-## Microsoft.Security/iotSensors
+## Resource Microsoft.Security/iotSensors@2020-08-06-preview
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -22,6 +19,11 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: IotSensorProperties
 * **type**: 'Microsoft.Security/iotSensors' (ReadOnly, DeployTimeConstant)
+
+## IotDefenderSettingsProperties
+### Properties
+* **deviceQuota**: int (Required)
+* **sentinelWorkspaceResourceIds**: string[] (Required)
 
 ## IotSensorProperties
 ### Properties

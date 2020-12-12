@@ -1,6 +1,7 @@
 # Microsoft.Automanage @ 2020-06-30-preview
 
-## Microsoft.Automanage/accounts
+## Resource Microsoft.Automanage/accounts@2020-06-30-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-30-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,28 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Automanage/accounts' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Automanage/configurationProfileAssignments@2020-06-30-preview
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2020-06-30-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConfigurationProfileAssignmentProperties
+* **type**: 'Microsoft.Automanage/configurationProfileAssignments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automanage/configurationProfilePreferences@2020-06-30-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-06-30-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConfigurationProfilePreferenceProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Automanage/configurationProfilePreferences' (ReadOnly, DeployTimeConstant)
+
 ## AccountIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -20,15 +43,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Automanage/configurationProfileAssignments
-### Properties
-* **apiVersion**: '2020-06-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationProfileAssignmentProperties
-* **type**: 'Microsoft.Automanage/configurationProfileAssignments' (ReadOnly, DeployTimeConstant)
 
 ## ConfigurationProfileAssignmentProperties
 ### Properties
@@ -42,17 +56,6 @@
 ## ConfigurationProfileAssignmentCompliance
 ### Properties
 * **updateStatus**: 'Created' | 'Failed' | 'Succeeded' (ReadOnly)
-
-## Microsoft.Automanage/configurationProfilePreferences
-### Properties
-* **apiVersion**: '2020-06-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationProfilePreferenceProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Automanage/configurationProfilePreferences' (ReadOnly, DeployTimeConstant)
 
 ## ConfigurationProfilePreferenceProperties
 ### Properties

@@ -1,6 +1,7 @@
 # Microsoft.TimeSeriesInsights @ 2020-05-15
 
-## Microsoft.TimeSeriesInsights/environments
+## Resource Microsoft.TimeSeriesInsights/environments@2020-05-15
+* **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2020-05-15' (ReadOnly, DeployTimeConstant)
@@ -21,6 +22,51 @@
 * **kind**: 'Gen2' (Required)
 * **properties**: Gen2EnvironmentCreationProperties (Required)
 
+
+## Resource Microsoft.TimeSeriesInsights/environments/accessPolicies@2020-05-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-05-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AccessPolicyResourceProperties (Required)
+* **type**: 'Microsoft.TimeSeriesInsights/environments/accessPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.TimeSeriesInsights/environments/eventSources@2020-05-15
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: kind
+### Base Properties
+* **apiVersion**: '2020-05-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **localTimestamp**: LocalTimestamp (WriteOnly)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.TimeSeriesInsights/environments/eventSources' (ReadOnly, DeployTimeConstant)
+### Microsoft.EventHub
+#### Properties
+* **kind**: 'Microsoft.EventHub' (Required)
+* **properties**: EventHubEventSourceCreationProperties (Required)
+
+### Microsoft.IoTHub
+#### Properties
+* **kind**: 'Microsoft.IoTHub' (Required)
+* **properties**: IoTHubEventSourceCreationProperties (Required)
+
+
+## Resource Microsoft.TimeSeriesInsights/environments/referenceDataSets@2020-05-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-05-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ReferenceDataSetCreationProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.TimeSeriesInsights/environments/referenceDataSets' (ReadOnly, DeployTimeConstant)
 
 ## Sku
 ### Properties
@@ -106,42 +152,11 @@
 ### Properties
 * **dataRetention**: string (Required)
 
-## Microsoft.TimeSeriesInsights/environments/accessPolicies
-### Properties
-* **apiVersion**: '2020-05-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AccessPolicyResourceProperties (Required)
-* **type**: 'Microsoft.TimeSeriesInsights/environments/accessPolicies' (ReadOnly, DeployTimeConstant)
-
 ## AccessPolicyResourceProperties
 ### Properties
 * **description**: string
 * **principalObjectId**: string
 * **roles**: 'Contributor' | 'Reader'[]
-
-## Microsoft.TimeSeriesInsights/environments/eventSources
-* **Discriminator**: kind
-### Base Properties
-* **apiVersion**: '2020-05-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **localTimestamp**: LocalTimestamp (WriteOnly)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.TimeSeriesInsights/environments/eventSources' (ReadOnly, DeployTimeConstant)
-### Microsoft.EventHub
-#### Properties
-* **kind**: 'Microsoft.EventHub' (Required)
-* **properties**: EventHubEventSourceCreationProperties (Required)
-
-### Microsoft.IoTHub
-#### Properties
-* **kind**: 'Microsoft.IoTHub' (Required)
-* **properties**: IoTHubEventSourceCreationProperties (Required)
-
 
 ## LocalTimestamp
 ### Properties
@@ -188,17 +203,6 @@
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
 * **sharedAccessKey**: string (Required, WriteOnly)
 * **timestampPropertyName**: string
-
-## Microsoft.TimeSeriesInsights/environments/referenceDataSets
-### Properties
-* **apiVersion**: '2020-05-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ReferenceDataSetCreationProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.TimeSeriesInsights/environments/referenceDataSets' (ReadOnly, DeployTimeConstant)
 
 ## ReferenceDataSetCreationProperties
 ### Properties

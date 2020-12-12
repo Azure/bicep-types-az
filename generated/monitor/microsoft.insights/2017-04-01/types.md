@@ -1,6 +1,7 @@
 # microsoft.insights @ 2017-04-01
 
-## microsoft.insights/actionGroups
+## Resource microsoft.insights/actionGroups@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,18 @@
 * **properties**: ActionGroup
 * **tags**: Dictionary<string,String>
 * **type**: 'microsoft.insights/actionGroups' (ReadOnly, DeployTimeConstant)
+
+## Resource microsoft.insights/activityLogAlerts@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ActivityLogAlert
+* **tags**: Dictionary<string,String>
+* **type**: 'microsoft.insights/activityLogAlerts' (ReadOnly, DeployTimeConstant)
 
 ## ActionGroup
 ### Properties
@@ -65,17 +78,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## microsoft.insights/activityLogAlerts
-### Properties
-* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ActivityLogAlert
-* **tags**: Dictionary<string,String>
-* **type**: 'microsoft.insights/activityLogAlerts' (ReadOnly, DeployTimeConstant)
 
 ## ActivityLogAlert
 ### Properties

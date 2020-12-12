@@ -1,6 +1,7 @@
 # microsoft.aadiam @ 2020-07-01-preview
 
-## microsoft.aadiam/azureADMetrics
+## Resource microsoft.aadiam/azureADMetrics@2020-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

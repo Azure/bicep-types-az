@@ -1,6 +1,7 @@
 # Microsoft.AppConfiguration @ 2019-02-01-preview
 
-## Microsoft.AppConfiguration/configurationStores
+## Resource Microsoft.AppConfiguration/configurationStores@2019-02-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

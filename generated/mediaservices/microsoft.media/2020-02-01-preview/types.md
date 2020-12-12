@@ -1,6 +1,7 @@
 # Microsoft.Media @ 2020-02-01-preview
 
-## Microsoft.Media/mediaServices/mediaGraphs
+## Resource Microsoft.Media/mediaServices/mediaGraphs@2020-02-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

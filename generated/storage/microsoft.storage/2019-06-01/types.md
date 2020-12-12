@@ -1,6 +1,7 @@
 # Microsoft.Storage @ 2019-06-01
 
-## Microsoft.Storage/storageAccounts
+## Resource Microsoft.Storage/storageAccounts@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -13,6 +14,131 @@
 * **sku**: Sku (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Storage/storageAccounts/blobServices@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:81_properties
+* **sku**: Sku (ReadOnly)
+* **type**: 'Microsoft.Storage/storageAccounts/blobServices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Storage/storageAccounts/blobServices/containers@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ContainerProperties
+* **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ImmutabilityPolicyProperty (Required)
+* **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Storage/storageAccounts/encryptionScopes@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EncryptionScopeProperties
+* **type**: 'Microsoft.Storage/storageAccounts/encryptionScopes' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Storage/storageAccounts/fileServices@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:88_properties
+* **sku**: Sku (ReadOnly)
+* **type**: 'Microsoft.Storage/storageAccounts/fileServices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Storage/storageAccounts/fileServices/shares@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: FileShareProperties
+* **type**: 'Microsoft.Storage/storageAccounts/fileServices/shares' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Storage/storageAccounts/managementPolicies@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ManagementPolicyProperties
+* **type**: 'Microsoft.Storage/storageAccounts/managementPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Storage/storageAccounts/objectReplicationPolicies@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ObjectReplicationPolicyProperties
+* **type**: 'Microsoft.Storage/storageAccounts/objectReplicationPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Storage/storageAccounts/privateEndpointConnections@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: 'Microsoft.Storage/storageAccounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Storage/storageAccounts/queueServices@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:97_properties
+* **type**: 'Microsoft.Storage/storageAccounts/queueServices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Storage/storageAccounts/queueServices/queues@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: QueueProperties
+* **type**: 'Microsoft.Storage/storageAccounts/queueServices/queues' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Storage/storageAccounts/tableServices@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:104_properties
+* **type**: 'Microsoft.Storage/storageAccounts/tableServices' (ReadOnly, DeployTimeConstant)
 
 ## Identity
 ### Properties
@@ -200,16 +326,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Storage/storageAccounts/blobServices
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:81_properties
-* **sku**: Sku (ReadOnly)
-* **type**: 'Microsoft.Storage/storageAccounts/blobServices' (ReadOnly, DeployTimeConstant)
-
 ## schemas:81_properties
 ### Properties
 * **automaticSnapshotPolicyEnabled**: bool
@@ -248,16 +364,6 @@
 * **enabled**: bool (Required)
 * **lastEnabledTime**: string (ReadOnly)
 * **minRestoreTime**: string (ReadOnly)
-
-## Microsoft.Storage/storageAccounts/blobServices/containers
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ContainerProperties
-* **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers' (ReadOnly, DeployTimeConstant)
 
 ## ContainerProperties
 ### Properties
@@ -316,25 +422,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ImmutabilityPolicyProperty (Required)
-* **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Storage/storageAccounts/encryptionScopes
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EncryptionScopeProperties
-* **type**: 'Microsoft.Storage/storageAccounts/encryptionScopes' (ReadOnly, DeployTimeConstant)
-
 ## EncryptionScopeProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
@@ -347,30 +434,10 @@
 ### Properties
 * **keyUri**: string
 
-## Microsoft.Storage/storageAccounts/fileServices
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:88_properties
-* **sku**: Sku (ReadOnly)
-* **type**: 'Microsoft.Storage/storageAccounts/fileServices' (ReadOnly, DeployTimeConstant)
-
 ## schemas:88_properties
 ### Properties
 * **cors**: CorsRules
 * **shareDeleteRetentionPolicy**: DeleteRetentionPolicy
-
-## Microsoft.Storage/storageAccounts/fileServices/shares
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: FileShareProperties
-* **type**: 'Microsoft.Storage/storageAccounts/fileServices/shares' (ReadOnly, DeployTimeConstant)
 
 ## FileShareProperties
 ### Properties
@@ -391,15 +458,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Storage/storageAccounts/managementPolicies
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagementPolicyProperties
-* **type**: 'Microsoft.Storage/storageAccounts/managementPolicies' (ReadOnly, DeployTimeConstant)
 
 ## ManagementPolicyProperties
 ### Properties
@@ -457,15 +515,6 @@
 * **op**: string (Required)
 * **value**: string (Required)
 
-## Microsoft.Storage/storageAccounts/objectReplicationPolicies
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ObjectReplicationPolicyProperties
-* **type**: 'Microsoft.Storage/storageAccounts/objectReplicationPolicies' (ReadOnly, DeployTimeConstant)
-
 ## ObjectReplicationPolicyProperties
 ### Properties
 * **destinationAccount**: string (Required)
@@ -486,36 +535,9 @@
 * **minCreationTime**: string
 * **prefixMatch**: string[]
 
-## Microsoft.Storage/storageAccounts/privateEndpointConnections
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: 'Microsoft.Storage/storageAccounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Storage/storageAccounts/queueServices
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:97_properties
-* **type**: 'Microsoft.Storage/storageAccounts/queueServices' (ReadOnly, DeployTimeConstant)
-
 ## schemas:97_properties
 ### Properties
 * **cors**: CorsRules
-
-## Microsoft.Storage/storageAccounts/queueServices/queues
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: QueueProperties
-* **type**: 'Microsoft.Storage/storageAccounts/queueServices/queues' (ReadOnly, DeployTimeConstant)
 
 ## QueueProperties
 ### Properties
@@ -525,15 +547,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Storage/storageAccounts/tableServices
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:104_properties
-* **type**: 'Microsoft.Storage/storageAccounts/tableServices' (ReadOnly, DeployTimeConstant)
 
 ## schemas:104_properties
 ### Properties

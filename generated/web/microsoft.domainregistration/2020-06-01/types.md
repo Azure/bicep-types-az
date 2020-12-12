@@ -1,6 +1,7 @@
 # Microsoft.DomainRegistration @ 2020-06-01
 
-## Microsoft.DomainRegistration/domains
+## Resource Microsoft.DomainRegistration/domains@2020-06-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,17 @@
 * **properties**: schemas:2_properties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers@2020-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:6_properties
+* **type**: 'Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant)
 
 ## schemas:2_properties
 ### Properties
@@ -74,16 +86,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers
-### Properties
-* **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:6_properties
-* **type**: 'Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant)
 
 ## schemas:6_properties
 ### Properties

@@ -1,6 +1,7 @@
 # Microsoft.ServiceFabric @ 2018-02-01
 
-## Microsoft.ServiceFabric/clusters
+## Resource Microsoft.ServiceFabric/clusters@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

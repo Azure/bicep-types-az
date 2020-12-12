@@ -1,6 +1,7 @@
 # Microsoft.Kusto @ 2018-09-07-preview
 
-## Microsoft.Kusto/clusters
+## Resource Microsoft.Kusto/clusters@2018-09-07-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-07-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -12,6 +13,30 @@
 * **sku**: AzureSku (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Kusto/clusters/databases@2018-09-07-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-09-07-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Kusto/clusters/databases/eventhubconnections@2018-09-07-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-09-07-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EventHubConnectionProperties
+* **type**: 'Microsoft.Kusto/clusters/databases/eventhubconnections' (ReadOnly, DeployTimeConstant)
 
 ## ClusterProperties
 ### Properties
@@ -35,18 +60,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Kusto/clusters/databases
-### Properties
-* **apiVersion**: '2018-09-07-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant)
-
 ## DatabaseProperties
 ### Properties
 * **hotCachePeriodInDays**: int
@@ -61,16 +74,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Kusto/clusters/databases/eventhubconnections
-### Properties
-* **apiVersion**: '2018-09-07-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EventHubConnectionProperties
-* **type**: 'Microsoft.Kusto/clusters/databases/eventhubconnections' (ReadOnly, DeployTimeConstant)
 
 ## EventHubConnectionProperties
 ### Properties

@@ -1,6 +1,7 @@
 # Microsoft.Authorization @ 2015-07-01
 
-## Microsoft.Authorization/roleAssignments
+## Resource Microsoft.Authorization/roleAssignments@2015-07-01
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2015-07-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -9,13 +10,8 @@
 * **properties**: RoleAssignmentProperties (Required)
 * **type**: 'Microsoft.Authorization/roleAssignments' (ReadOnly, DeployTimeConstant)
 
-## RoleAssignmentProperties
-### Properties
-* **principalId**: string (Required)
-* **roleDefinitionId**: string (Required)
-* **scope**: string (ReadOnly)
-
-## Microsoft.Authorization/roleDefinitions
+## Resource Microsoft.Authorization/roleDefinitions@2015-07-01
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2015-07-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -23,6 +19,12 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: RoleDefinitionProperties
 * **type**: 'Microsoft.Authorization/roleDefinitions' (ReadOnly, DeployTimeConstant)
+
+## RoleAssignmentProperties
+### Properties
+* **principalId**: string (Required)
+* **roleDefinitionId**: string (Required)
+* **scope**: string (ReadOnly)
 
 ## RoleDefinitionProperties
 ### Properties

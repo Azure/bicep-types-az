@@ -1,6 +1,7 @@
 # Microsoft.Security @ 2019-08-01
 
-## Microsoft.Security/deviceSecurityGroups
+## Resource Microsoft.Security/deviceSecurityGroups@2019-08-01
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -8,6 +9,18 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: DeviceSecurityGroupProperties
 * **type**: 'Microsoft.Security/deviceSecurityGroups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Security/iotSecuritySolutions@2019-08-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IoTSecuritySolutionProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Security/iotSecuritySolutions' (ReadOnly, DeployTimeConstant)
 
 ## DeviceSecurityGroupProperties
 ### Properties
@@ -48,17 +61,6 @@
 * **maxThreshold**: int (Required)
 * **minThreshold**: int (Required)
 * **timeWindowSize**: string (Required)
-
-## Microsoft.Security/iotSecuritySolutions
-### Properties
-* **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IoTSecuritySolutionProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Security/iotSecuritySolutions' (ReadOnly, DeployTimeConstant)
 
 ## IoTSecuritySolutionProperties
 ### Properties

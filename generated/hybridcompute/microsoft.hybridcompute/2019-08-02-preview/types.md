@@ -1,6 +1,7 @@
 # Microsoft.HybridCompute @ 2019-08-02-preview
 
-## Microsoft.HybridCompute/machines
+## Resource Microsoft.HybridCompute/machines@2019-08-02-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-08-02-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,19 @@
 * **properties**: MachineProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.HybridCompute/machines/extensions@2019-08-02-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-08-02-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MachineExtensionProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant)
 
 ## Identity
 ### Properties
@@ -64,18 +78,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.HybridCompute/machines/extensions
-### Properties
-* **apiVersion**: '2019-08-02-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MachineExtensionProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant)
 
 ## MachineExtensionProperties
 ### Properties

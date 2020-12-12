@@ -1,6 +1,7 @@
 # Microsoft.Devices @ 2018-04-01
 
-## Microsoft.Devices/IotHubs
+## Resource Microsoft.Devices/IotHubs@2018-04-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -12,6 +13,18 @@
 * **sku**: IotHubSkuInfo (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Devices/IotHubs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Devices/IotHubs/certificates@2018-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant)
+* **certificate**: string (WriteOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CertificateProperties (ReadOnly)
+* **type**: 'Microsoft.Devices/IotHubs/certificates' (ReadOnly, DeployTimeConstant)
 
 ## IotHubProperties
 ### Properties
@@ -166,17 +179,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Devices/IotHubs/certificates
-### Properties
-* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant)
-* **certificate**: string (WriteOnly)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CertificateProperties (ReadOnly)
-* **type**: 'Microsoft.Devices/IotHubs/certificates' (ReadOnly, DeployTimeConstant)
 
 ## CertificateProperties
 ### Properties

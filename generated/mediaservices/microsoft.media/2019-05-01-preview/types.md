@@ -1,6 +1,7 @@
 # Microsoft.Media @ 2019-05-01-preview
 
-## Microsoft.Media/mediaservices/liveEvents
+## Resource Microsoft.Media/mediaservices/liveEvents@2019-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,28 @@
 * **properties**: LiveEventProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Media/mediaservices/liveEvents' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Media/mediaservices/liveEvents/liveOutputs@2019-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LiveOutputProperties
+* **type**: 'Microsoft.Media/mediaservices/liveEvents/liveOutputs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Media/mediaservices/streamingEndpoints@2019-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: StreamingEndpointProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Media/mediaservices/streamingEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## LiveEventProperties
 ### Properties
@@ -95,15 +118,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Media/mediaservices/liveEvents/liveOutputs
-### Properties
-* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LiveOutputProperties
-* **type**: 'Microsoft.Media/mediaservices/liveEvents/liveOutputs' (ReadOnly, DeployTimeConstant)
-
 ## LiveOutputProperties
 ### Properties
 * **archiveWindowLength**: string (Required)
@@ -120,17 +134,6 @@
 ## Hls
 ### Properties
 * **fragmentsPerTsSegment**: int
-
-## Microsoft.Media/mediaservices/streamingEndpoints
-### Properties
-* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StreamingEndpointProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Media/mediaservices/streamingEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## StreamingEndpointProperties
 ### Properties

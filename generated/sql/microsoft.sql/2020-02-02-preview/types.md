@@ -1,6 +1,7 @@
 # Microsoft.Sql @ 2020-02-02-preview
 
-## Microsoft.Sql/locations/serverTrustGroups
+## Resource Microsoft.Sql/locations/serverTrustGroups@2020-02-02-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -9,16 +10,8 @@
 * **properties**: ServerTrustGroupProperties
 * **type**: 'Microsoft.Sql/locations/serverTrustGroups' (ReadOnly, DeployTimeConstant)
 
-## ServerTrustGroupProperties
-### Properties
-* **groupMembers**: ServerInfo[] (Required)
-* **trustScopes**: 'GlobalTransactions'[] (Required)
-
-## ServerInfo
-### Properties
-* **serverId**: string (Required)
-
-## Microsoft.Sql/managedInstances
+## Resource Microsoft.Sql/managedInstances@2020-02-02-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -30,6 +23,77 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Sql/managedInstances' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/managedInstances/azureADOnlyAuthentications@2020-02-02-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ManagedInstanceAzureADOnlyAuthProperties
+* **type**: 'Microsoft.Sql/managedInstances/azureADOnlyAuthentications' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/managedInstances/databases@2020-02-02-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ManagedDatabaseProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/managedInstances/securityAlertPolicies@2020-02-02-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SecurityAlertsPolicyProperties
+* **type**: 'Microsoft.Sql/managedInstances/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/azureADOnlyAuthentications@2020-02-02-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AzureADOnlyAuthProperties
+* **type**: 'Microsoft.Sql/servers/azureADOnlyAuthentications' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases/securityAlertPolicies@2020-02-02-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SecurityAlertsPolicyProperties
+* **type**: 'Microsoft.Sql/servers/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/securityAlertPolicies@2020-02-02-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SecurityAlertsPolicyProperties
+* **type**: 'Microsoft.Sql/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
+
+## ServerTrustGroupProperties
+### Properties
+* **groupMembers**: ServerInfo[] (Required)
+* **trustScopes**: 'GlobalTransactions'[] (Required)
+
+## ServerInfo
+### Properties
+* **serverId**: string (Required)
 
 ## ResourceIdentity
 ### Properties
@@ -74,29 +138,9 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Sql/managedInstances/azureADOnlyAuthentications
-### Properties
-* **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedInstanceAzureADOnlyAuthProperties
-* **type**: 'Microsoft.Sql/managedInstances/azureADOnlyAuthentications' (ReadOnly, DeployTimeConstant)
-
 ## ManagedInstanceAzureADOnlyAuthProperties
 ### Properties
 * **azureADOnlyAuthentication**: bool (Required)
-
-## Microsoft.Sql/managedInstances/databases
-### Properties
-* **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedDatabaseProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant)
 
 ## ManagedDatabaseProperties
 ### Properties
@@ -122,48 +166,12 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Sql/managedInstances/securityAlertPolicies
-### Properties
-* **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityAlertsPolicyProperties
-* **type**: 'Microsoft.Sql/managedInstances/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
-
 ## SecurityAlertsPolicyProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
 * **state**: 'Disabled' | 'Enabled' (Required)
 
-## Microsoft.Sql/servers/azureADOnlyAuthentications
-### Properties
-* **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AzureADOnlyAuthProperties
-* **type**: 'Microsoft.Sql/servers/azureADOnlyAuthentications' (ReadOnly, DeployTimeConstant)
-
 ## AzureADOnlyAuthProperties
 ### Properties
 * **azureADOnlyAuthentication**: bool (Required)
-
-## Microsoft.Sql/servers/databases/securityAlertPolicies
-### Properties
-* **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityAlertsPolicyProperties
-* **type**: 'Microsoft.Sql/servers/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Sql/servers/securityAlertPolicies
-### Properties
-* **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityAlertsPolicyProperties
-* **type**: 'Microsoft.Sql/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 

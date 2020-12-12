@@ -1,6 +1,7 @@
 # Microsoft.Automation @ 2018-01-15
 
-## Microsoft.Automation/automationAccounts/compilationjobs
+## Resource Microsoft.Automation/automationAccounts/compilationjobs@2018-01-15
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-15' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,17 @@
 * **properties**: DscCompilationJobCreateProperties (Required)
 * **tags**: Dictionary<string,String> (WriteOnly)
 * **type**: 'Microsoft.Automation/automationAccounts/compilationjobs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/nodeConfigurations@2018-01-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DscNodeConfigurationCreateOrUpdateParametersProperties
+* **tags**: Dictionary<string,String> (WriteOnly)
+* **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## DscCompilationJobCreateProperties
 ### Properties
@@ -40,16 +52,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Automation/automationAccounts/nodeConfigurations
-### Properties
-* **apiVersion**: '2018-01-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DscNodeConfigurationCreateOrUpdateParametersProperties
-* **tags**: Dictionary<string,String> (WriteOnly)
-* **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## DscNodeConfigurationCreateOrUpdateParametersProperties
 ### Properties

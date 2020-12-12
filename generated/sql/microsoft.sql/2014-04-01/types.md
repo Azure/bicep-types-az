@@ -1,6 +1,7 @@
 # Microsoft.Sql @ 2014-04-01
 
-## Microsoft.Sql/servers
+## Resource Microsoft.Sql/servers@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,207 @@
 * **properties**: ServerProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/administrators@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServerAdministratorProperties
+* **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/advisors@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AdvisorProperties
+* **type**: 'Microsoft.Sql/servers/advisors' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/auditingPolicies@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServerTableAuditingPolicyProperties
+* **type**: 'Microsoft.Sql/servers/auditingPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/communicationLinks@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServerCommunicationLinkProperties
+* **type**: 'Microsoft.Sql/servers/communicationLinks' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/connectionPolicies@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServerConnectionPolicyProperties
+* **type**: 'Microsoft.Sql/servers/connectionPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases/advisors@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AdvisorProperties
+* **type**: 'Microsoft.Sql/servers/databases/advisors' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases/auditingPolicies@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseTableAuditingPolicyProperties
+* **type**: 'Microsoft.Sql/servers/databases/auditingPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases/connectionPolicies@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseConnectionPolicyProperties
+* **type**: 'Microsoft.Sql/servers/databases/connectionPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases/dataMaskingPolicies@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DataMaskingPolicyProperties
+* **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases/dataMaskingPolicies/rules@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DataMaskingRuleProperties
+* **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies/rules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases/extensions@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ImportExtensionProperties
+* **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases/geoBackupPolicies@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GeoBackupPolicyProperties (Required)
+* **type**: 'Microsoft.Sql/servers/databases/geoBackupPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases/securityAlertPolicies@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseSecurityAlertPolicyProperties
+* **type**: 'Microsoft.Sql/servers/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases/transparentDataEncryption@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TransparentDataEncryptionProperties
+* **type**: 'Microsoft.Sql/servers/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/elasticPools@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ElasticPoolProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Sql/servers/elasticPools' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/firewallRules@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: FirewallRuleProperties
+* **type**: 'Microsoft.Sql/servers/firewallRules' (ReadOnly, DeployTimeConstant)
 
 ## ServerProperties
 ### Properties
@@ -26,15 +228,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Sql/servers/administrators
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerAdministratorProperties
-* **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant)
-
 ## ServerAdministratorProperties
 ### Properties
 * **administratorType**: string (Required)
@@ -42,34 +235,12 @@
 * **sid**: string (Required)
 * **tenantId**: string (Required)
 
-## Microsoft.Sql/servers/advisors
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AdvisorProperties
-* **type**: 'Microsoft.Sql/servers/advisors' (ReadOnly, DeployTimeConstant)
-
 ## AdvisorProperties
 ### Properties
 * **advisorStatus**: 'GA' | 'LimitedPublicPreview' | 'PrivatePreview' | 'PublicPreview' (ReadOnly)
 * **autoExecuteValue**: 'Default' | 'Disabled' | 'Enabled' (Required)
 * **lastChecked**: string (ReadOnly)
 * **recommendationsStatus**: string (ReadOnly)
-
-## Microsoft.Sql/servers/auditingPolicies
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerTableAuditingPolicyProperties
-* **type**: 'Microsoft.Sql/servers/auditingPolicies' (ReadOnly, DeployTimeConstant)
 
 ## ServerTableAuditingPolicyProperties
 ### Properties
@@ -85,48 +256,14 @@
 * **storageAccountSubscriptionId**: string
 * **storageTableEndpoint**: string
 
-## Microsoft.Sql/servers/communicationLinks
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerCommunicationLinkProperties
-* **type**: 'Microsoft.Sql/servers/communicationLinks' (ReadOnly, DeployTimeConstant)
-
 ## ServerCommunicationLinkProperties
 ### Properties
 * **partnerServer**: string (Required)
 * **state**: string (ReadOnly)
 
-## Microsoft.Sql/servers/connectionPolicies
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerConnectionPolicyProperties
-* **type**: 'Microsoft.Sql/servers/connectionPolicies' (ReadOnly, DeployTimeConstant)
-
 ## ServerConnectionPolicyProperties
 ### Properties
 * **connectionType**: 'Default' | 'Proxy' | 'Redirect' (Required)
-
-## Microsoft.Sql/servers/databases
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant)
 
 ## DatabaseProperties
 ### Properties
@@ -237,28 +374,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Sql/servers/databases/advisors
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AdvisorProperties
-* **type**: 'Microsoft.Sql/servers/databases/advisors' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Sql/servers/databases/auditingPolicies
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseTableAuditingPolicyProperties
-* **type**: 'Microsoft.Sql/servers/databases/auditingPolicies' (ReadOnly, DeployTimeConstant)
-
 ## DatabaseTableAuditingPolicyProperties
 ### Properties
 * **auditingState**: string
@@ -274,17 +389,6 @@
 * **storageTableEndpoint**: string
 * **useServerDefault**: string
 
-## Microsoft.Sql/servers/databases/connectionPolicies
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseConnectionPolicyProperties
-* **type**: 'Microsoft.Sql/servers/databases/connectionPolicies' (ReadOnly, DeployTimeConstant)
-
 ## DatabaseConnectionPolicyProperties
 ### Properties
 * **proxyDnsName**: string
@@ -295,34 +399,12 @@
 * **useServerDefault**: string
 * **visibility**: string
 
-## Microsoft.Sql/servers/databases/dataMaskingPolicies
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DataMaskingPolicyProperties
-* **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies' (ReadOnly, DeployTimeConstant)
-
 ## DataMaskingPolicyProperties
 ### Properties
 * **applicationPrincipals**: string (ReadOnly)
 * **dataMaskingState**: 'Disabled' | 'Enabled' (Required)
 * **exemptPrincipals**: string
 * **maskingLevel**: string (ReadOnly)
-
-## Microsoft.Sql/servers/databases/dataMaskingPolicies/rules
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DataMaskingRuleProperties
-* **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies/rules' (ReadOnly, DeployTimeConstant)
 
 ## DataMaskingRuleProperties
 ### Properties
@@ -339,15 +421,6 @@
 * **suffixSize**: string
 * **tableName**: string (Required)
 
-## Microsoft.Sql/servers/databases/extensions
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ImportExtensionProperties
-* **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant)
-
 ## ImportExtensionProperties
 ### Properties
 * **administratorLogin**: string (Required)
@@ -358,32 +431,10 @@
 * **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required)
 * **storageUri**: string (Required)
 
-## Microsoft.Sql/servers/databases/geoBackupPolicies
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GeoBackupPolicyProperties (Required)
-* **type**: 'Microsoft.Sql/servers/databases/geoBackupPolicies' (ReadOnly, DeployTimeConstant)
-
 ## GeoBackupPolicyProperties
 ### Properties
 * **state**: 'Disabled' | 'Enabled' (Required)
 * **storageType**: string (ReadOnly)
-
-## Microsoft.Sql/servers/databases/securityAlertPolicies
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseSecurityAlertPolicyProperties
-* **type**: 'Microsoft.Sql/servers/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
 ## DatabaseSecurityAlertPolicyProperties
 ### Properties
@@ -395,28 +446,6 @@
 * **storageAccountAccessKey**: string
 * **storageEndpoint**: string
 * **useServerDefault**: 'Disabled' | 'Enabled'
-
-## Microsoft.Sql/servers/databases/transparentDataEncryption
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TransparentDataEncryptionProperties
-* **type**: 'Microsoft.Sql/servers/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Sql/servers/elasticPools
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ElasticPoolProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Sql/servers/elasticPools' (ReadOnly, DeployTimeConstant)
 
 ## ElasticPoolProperties
 ### Properties
@@ -432,17 +461,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Sql/servers/firewallRules
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: FirewallRuleProperties
-* **type**: 'Microsoft.Sql/servers/firewallRules' (ReadOnly, DeployTimeConstant)
 
 ## FirewallRuleProperties
 ### Properties

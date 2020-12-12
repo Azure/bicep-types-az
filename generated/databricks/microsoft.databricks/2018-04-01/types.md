@@ -1,6 +1,7 @@
 # Microsoft.Databricks @ 2018-04-01
 
-## Microsoft.Databricks/workspaces
+## Resource Microsoft.Databricks/workspaces@2018-04-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,16 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Databricks/workspaces' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Databricks/workspaces/virtualNetworkPeerings@2018-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualNetworkPeeringPropertiesFormat (Required)
+* **type**: 'Microsoft.Databricks/workspaces/virtualNetworkPeerings' (ReadOnly, DeployTimeConstant)
 
 ## WorkspaceProperties
 ### Properties
@@ -84,15 +95,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Databricks/workspaces/virtualNetworkPeerings
-### Properties
-* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkPeeringPropertiesFormat (Required)
-* **type**: 'Microsoft.Databricks/workspaces/virtualNetworkPeerings' (ReadOnly, DeployTimeConstant)
 
 ## VirtualNetworkPeeringPropertiesFormat
 ### Properties

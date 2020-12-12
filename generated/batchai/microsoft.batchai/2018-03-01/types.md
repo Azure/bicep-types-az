@@ -1,6 +1,7 @@
 # Microsoft.BatchAI @ 2018-03-01
 
-## Microsoft.BatchAI/clusters
+## Resource Microsoft.BatchAI/clusters@2018-03-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,30 @@
 * **properties**: ClusterBaseProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.BatchAI/clusters' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.BatchAI/fileServers@2018-03-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: FileServerBaseProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.BatchAI/fileServers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.BatchAI/jobs@2018-03-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: JobBaseProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.BatchAI/jobs' (ReadOnly, DeployTimeConstant)
 
 ## ClusterBaseProperties
 ### Properties
@@ -172,17 +197,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.BatchAI/fileServers
-### Properties
-* **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: FileServerBaseProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.BatchAI/fileServers' (ReadOnly, DeployTimeConstant)
-
 ## FileServerBaseProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
@@ -216,17 +230,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.BatchAI/jobs
-### Properties
-* **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: JobBaseProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.BatchAI/jobs' (ReadOnly, DeployTimeConstant)
 
 ## JobBaseProperties
 ### Properties

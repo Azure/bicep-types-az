@@ -1,6 +1,7 @@
 # Microsoft.Security @ 2019-01-01
 
-## Microsoft.Security/advancedThreatProtectionSettings
+## Resource Microsoft.Security/advancedThreatProtectionSettings@2019-01-01
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -9,11 +10,8 @@
 * **properties**: AdvancedThreatProtectionProperties
 * **type**: 'Microsoft.Security/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant)
 
-## AdvancedThreatProtectionProperties
-### Properties
-* **isEnabled**: bool
-
-## Microsoft.Security/settings
+## Resource Microsoft.Security/settings@2019-01-01
+* **Valid Scope(s)**: Subscription
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
@@ -26,6 +24,10 @@
 * **kind**: 'DataExportSettings' (Required)
 * **properties**: DataExportSettingProperties
 
+
+## AdvancedThreatProtectionProperties
+### Properties
+* **isEnabled**: bool
 
 ## DataExportSettings
 ### Properties

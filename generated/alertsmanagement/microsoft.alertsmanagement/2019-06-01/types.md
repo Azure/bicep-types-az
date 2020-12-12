@@ -1,6 +1,7 @@
 # microsoft.alertsManagement @ 2019-06-01
 
-## microsoft.alertsManagement/smartDetectorAlertRules
+## Resource microsoft.alertsManagement/smartDetectorAlertRules@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

@@ -1,6 +1,7 @@
 # Microsoft.Insights @ 2015-05-01
 
-## Microsoft.Insights/components
+## Resource Microsoft.Insights/components@2015-05-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,165 @@
 * **properties**: ApplicationInsightsComponentProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Insights/components' (ReadOnly, DeployTimeConstant)
+
+## Resource microsoft.insights/components/analyticsItems@2015-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **Content**: string
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **Properties**: ApplicationInsightsComponentAnalyticsItemProperties
+* **Scope**: 'shared' | 'user'
+* **TimeCreated**: string (ReadOnly)
+* **TimeModified**: string (ReadOnly)
+* **type**: 'microsoft.insights/components/analyticsItems' (ReadOnly, DeployTimeConstant)
+* **Version**: string (ReadOnly)
+
+## Resource Microsoft.Insights/components/Annotations@2015-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **AnnotationName**: string (WriteOnly)
+* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **Category**: string (WriteOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **EventTime**: string (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **Properties**: string (WriteOnly)
+* **RelatedAnnotation**: string (WriteOnly)
+* **type**: 'Microsoft.Insights/components/Annotations' (ReadOnly, DeployTimeConstant)
+* **value**: Annotation[] (ReadOnly)
+
+## Resource Microsoft.Insights/components/currentbillingfeatures@2015-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **CurrentBillingFeatures**: string[]
+* **DataVolumeCap**: ApplicationInsightsComponentDataVolumeCap
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.Insights/components/currentbillingfeatures' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Insights/components/exportconfiguration@2015-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **ApplicationName**: string (ReadOnly)
+* **ContainerName**: string (ReadOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **DestinationAccountId**: string
+* **DestinationAddress**: string (WriteOnly)
+* **DestinationStorageLocationId**: string
+* **DestinationStorageSubscriptionId**: string
+* **DestinationType**: string
+* **ExportId**: string (ReadOnly)
+* **ExportStatus**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **InstrumentationKey**: string (ReadOnly)
+* **IsEnabled**: string (WriteOnly)
+* **IsUserEnabled**: string (ReadOnly)
+* **LastGapTime**: string (ReadOnly)
+* **LastSuccessTime**: string (ReadOnly)
+* **LastUserUpdate**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **NotificationQueueEnabled**: string
+* **NotificationQueueUri**: string (WriteOnly)
+* **PermanentErrorReason**: string (ReadOnly)
+* **RecordTypes**: string
+* **ResourceGroup**: string (ReadOnly)
+* **StorageName**: string (ReadOnly)
+* **SubscriptionId**: string (ReadOnly)
+* **type**: 'Microsoft.Insights/components/exportconfiguration' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Insights/components/favorites@2015-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **Category**: string
+* **Config**: string
+* **dependsOn**: resourceref[] (WriteOnly)
+* **FavoriteId**: string (ReadOnly)
+* **FavoriteType**: 'shared' | 'user'
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **IsGeneratedFromTemplate**: bool
+* **name**: string (Required, DeployTimeConstant)
+* **SourceType**: string
+* **Tags**: string[]
+* **TimeModified**: string (ReadOnly)
+* **type**: 'Microsoft.Insights/components/favorites' (ReadOnly, DeployTimeConstant)
+* **UserId**: string (ReadOnly)
+* **Version**: string
+
+## Resource microsoft.insights/components/myanalyticsItems@2015-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **Content**: string
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **Properties**: ApplicationInsightsComponentAnalyticsItemProperties
+* **Scope**: 'shared' | 'user'
+* **TimeCreated**: string (ReadOnly)
+* **TimeModified**: string (ReadOnly)
+* **type**: 'microsoft.insights/components/myanalyticsItems' (ReadOnly, DeployTimeConstant)
+* **Version**: string (ReadOnly)
+
+## Resource Microsoft.Insights/components/ProactiveDetectionConfigs@2015-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **CustomEmails**: string[]
+* **dependsOn**: resourceref[] (WriteOnly)
+* **Enabled**: bool
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **LastUpdatedTime**: string
+* **name**: string (Required, DeployTimeConstant)
+* **RuleDefinitions**: schemas:21_RuleDefinitions
+* **SendEmailsToSubscriptionOwners**: bool
+* **type**: 'Microsoft.Insights/components/ProactiveDetectionConfigs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Insights/myWorkbooks@2015-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'shared' | 'user'
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MyWorkbookProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Insights/myWorkbooks' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Insights/webtests@2015-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'multistep' | 'ping'
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WebTestProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Insights/webtests' (ReadOnly, DeployTimeConstant)
+
+## Resource microsoft.insights/workbooks@2015-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'shared' | 'user'
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkbookProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'microsoft.insights/workbooks' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationInsightsComponentProperties
 ### Properties
@@ -42,37 +202,9 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## microsoft.insights/components/analyticsItems
-### Properties
-* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **Content**: string
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **Properties**: ApplicationInsightsComponentAnalyticsItemProperties
-* **Scope**: 'shared' | 'user'
-* **TimeCreated**: string (ReadOnly)
-* **TimeModified**: string (ReadOnly)
-* **type**: 'microsoft.insights/components/analyticsItems' (ReadOnly, DeployTimeConstant)
-* **Version**: string (ReadOnly)
-
 ## ApplicationInsightsComponentAnalyticsItemProperties
 ### Properties
 * **functionAlias**: string
-
-## Microsoft.Insights/components/Annotations
-### Properties
-* **AnnotationName**: string (WriteOnly)
-* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **Category**: string (WriteOnly)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **EventTime**: string (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **Properties**: string (WriteOnly)
-* **RelatedAnnotation**: string (WriteOnly)
-* **type**: 'Microsoft.Insights/components/Annotations' (ReadOnly, DeployTimeConstant)
-* **value**: Annotation[] (ReadOnly)
 
 ## Annotation
 ### Properties
@@ -83,16 +215,6 @@
 * **Properties**: string (ReadOnly)
 * **RelatedAnnotation**: string (ReadOnly)
 
-## Microsoft.Insights/components/currentbillingfeatures
-### Properties
-* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **CurrentBillingFeatures**: string[]
-* **DataVolumeCap**: ApplicationInsightsComponentDataVolumeCap
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Insights/components/currentbillingfeatures' (ReadOnly, DeployTimeConstant)
-
 ## ApplicationInsightsComponentDataVolumeCap
 ### Properties
 * **Cap**: int
@@ -101,81 +223,6 @@
 * **StopSendNotificationWhenHitCap**: bool
 * **StopSendNotificationWhenHitThreshold**: bool
 * **WarningThreshold**: int
-
-## Microsoft.Insights/components/exportconfiguration
-### Properties
-* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **ApplicationName**: string (ReadOnly)
-* **ContainerName**: string (ReadOnly)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **DestinationAccountId**: string
-* **DestinationAddress**: string (WriteOnly)
-* **DestinationStorageLocationId**: string
-* **DestinationStorageSubscriptionId**: string
-* **DestinationType**: string
-* **ExportId**: string (ReadOnly)
-* **ExportStatus**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **InstrumentationKey**: string (ReadOnly)
-* **IsEnabled**: string (WriteOnly)
-* **IsUserEnabled**: string (ReadOnly)
-* **LastGapTime**: string (ReadOnly)
-* **LastSuccessTime**: string (ReadOnly)
-* **LastUserUpdate**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **NotificationQueueEnabled**: string
-* **NotificationQueueUri**: string (WriteOnly)
-* **PermanentErrorReason**: string (ReadOnly)
-* **RecordTypes**: string
-* **ResourceGroup**: string (ReadOnly)
-* **StorageName**: string (ReadOnly)
-* **SubscriptionId**: string (ReadOnly)
-* **type**: 'Microsoft.Insights/components/exportconfiguration' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Insights/components/favorites
-### Properties
-* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **Category**: string
-* **Config**: string
-* **dependsOn**: resourceref[] (WriteOnly)
-* **FavoriteId**: string (ReadOnly)
-* **FavoriteType**: 'shared' | 'user'
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **IsGeneratedFromTemplate**: bool
-* **name**: string (Required, DeployTimeConstant)
-* **SourceType**: string
-* **Tags**: string[]
-* **TimeModified**: string (ReadOnly)
-* **type**: 'Microsoft.Insights/components/favorites' (ReadOnly, DeployTimeConstant)
-* **UserId**: string (ReadOnly)
-* **Version**: string
-
-## microsoft.insights/components/myanalyticsItems
-### Properties
-* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **Content**: string
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **Properties**: ApplicationInsightsComponentAnalyticsItemProperties
-* **Scope**: 'shared' | 'user'
-* **TimeCreated**: string (ReadOnly)
-* **TimeModified**: string (ReadOnly)
-* **type**: 'microsoft.insights/components/myanalyticsItems' (ReadOnly, DeployTimeConstant)
-* **Version**: string (ReadOnly)
-
-## Microsoft.Insights/components/ProactiveDetectionConfigs
-### Properties
-* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **CustomEmails**: string[]
-* **dependsOn**: resourceref[] (WriteOnly)
-* **Enabled**: bool
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **LastUpdatedTime**: string
-* **name**: string (Required, DeployTimeConstant)
-* **RuleDefinitions**: schemas:21_RuleDefinitions
-* **SendEmailsToSubscriptionOwners**: bool
-* **type**: 'Microsoft.Insights/components/ProactiveDetectionConfigs' (ReadOnly, DeployTimeConstant)
 
 ## schemas:21_RuleDefinitions
 ### Properties
@@ -187,18 +234,6 @@
 * **IsInPreview**: bool
 * **Name**: string
 * **SupportsEmailNotifications**: bool
-
-## Microsoft.Insights/myWorkbooks
-### Properties
-* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'shared' | 'user'
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MyWorkbookProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Insights/myWorkbooks' (ReadOnly, DeployTimeConstant)
 
 ## MyWorkbookProperties
 ### Properties
@@ -214,18 +249,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Insights/webtests
-### Properties
-* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'multistep' | 'ping'
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WebTestProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Insights/webtests' (ReadOnly, DeployTimeConstant)
 
 ## WebTestProperties
 ### Properties
@@ -252,18 +275,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## microsoft.insights/workbooks
-### Properties
-* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'shared' | 'user'
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkbookProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'microsoft.insights/workbooks' (ReadOnly, DeployTimeConstant)
 
 ## WorkbookProperties
 ### Properties

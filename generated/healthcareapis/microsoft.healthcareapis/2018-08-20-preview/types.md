@@ -1,6 +1,7 @@
 # Microsoft.HealthcareApis @ 2018-08-20-preview
 
-## Microsoft.HealthcareApis/services
+## Resource Microsoft.HealthcareApis/services@2018-08-20-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-08-20-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

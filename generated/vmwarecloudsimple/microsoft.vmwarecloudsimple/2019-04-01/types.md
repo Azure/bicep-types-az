@@ -1,6 +1,7 @@
 # Microsoft.VMwareCloudSimple @ 2019-04-01
 
-## Microsoft.VMwareCloudSimple/dedicatedCloudNodes
+## Resource Microsoft.VMwareCloudSimple/dedicatedCloudNodes@2019-04-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,30 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.VMwareCloudSimple/dedicatedCloudNodes' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.VMwareCloudSimple/dedicatedCloudServices@2019-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DedicatedCloudServiceProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.VMwareCloudSimple/dedicatedCloudServices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.VMwareCloudSimple/virtualMachines@2019-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualMachineProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.VMwareCloudSimple/virtualMachines' (ReadOnly, DeployTimeConstant)
 
 ## DedicatedCloudNodeProperties
 ### Properties
@@ -46,17 +71,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.VMwareCloudSimple/dedicatedCloudServices
-### Properties
-* **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DedicatedCloudServiceProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.VMwareCloudSimple/dedicatedCloudServices' (ReadOnly, DeployTimeConstant)
-
 ## DedicatedCloudServiceProperties
 ### Properties
 * **gatewaySubnet**: string (Required)
@@ -67,17 +81,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.VMwareCloudSimple/virtualMachines
-### Properties
-* **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualMachineProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.VMwareCloudSimple/virtualMachines' (ReadOnly, DeployTimeConstant)
 
 ## VirtualMachineProperties
 ### Properties

@@ -1,6 +1,7 @@
 # Microsoft.MachineLearningServices @ 2020-09-01-preview
 
-## Microsoft.MachineLearningServices/workspaces
+## Resource Microsoft.MachineLearningServices/workspaces@2020-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -12,6 +13,97 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.MachineLearningServices/workspaces/computes@2020-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: Compute
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.MachineLearningServices/workspaces/connections@2020-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkspaceConnectionProps
+* **type**: 'Microsoft.MachineLearningServices/workspaces/connections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.MachineLearningServices/workspaces/linkedServices@2020-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LinkedServiceProps
+* **type**: 'Microsoft.MachineLearningServices/workspaces/linkedServices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.MachineLearningServices/workspaces/privateEndpointConnections@2020-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.MachineLearningServices/workspaces/services@2020-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: computeType
+### Base Properties
+* **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **description**: string (WriteOnly)
+* **environmentImageRequest**: schemas:122_environmentImageRequest (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity (ReadOnly)
+* **keys**: schemas:122_keys (WriteOnly)
+* **kvTags**: Dictionary<string,String> (WriteOnly)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: Dictionary<string,String>
+* **sku**: Sku (ReadOnly)
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.MachineLearningServices/workspaces/services' (ReadOnly, DeployTimeConstant)
+### ACI
+#### Properties
+* **appInsightsEnabled**: bool (WriteOnly)
+* **authEnabled**: bool (WriteOnly)
+* **cname**: string (WriteOnly)
+* **computeType**: 'ACI' (Required)
+* **containerResourceRequirements**: ContainerResourceRequirements (WriteOnly)
+* **dataCollection**: schemas:91_dataCollection (WriteOnly)
+* **dnsNameLabel**: string (WriteOnly)
+* **encryptionProperties**: schemas:91_encryptionProperties (WriteOnly)
+* **sslCertificate**: string (WriteOnly)
+* **sslEnabled**: bool (WriteOnly)
+* **sslKey**: string (WriteOnly)
+* **vnetConfiguration**: schemas:91_vnetConfiguration (WriteOnly)
+
+### Custom
+#### Properties
+* **computeType**: 'Custom' (Required)
+* **isDefault**: bool (WriteOnly)
+* **trafficPercentile**: int (WriteOnly)
+* **type**: 'Control' | 'Treatment' (WriteOnly)
+
 
 ## Identity
 ### Properties
@@ -113,19 +205,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.MachineLearningServices/workspaces/computes
-### Properties
-* **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: Compute
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant)
 
 ## Compute
 * **Discriminator**: computeType
@@ -380,32 +459,12 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.MachineLearningServices/workspaces/connections
-### Properties
-* **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceConnectionProps
-* **type**: 'Microsoft.MachineLearningServices/workspaces/connections' (ReadOnly, DeployTimeConstant)
-
 ## WorkspaceConnectionProps
 ### Properties
 * **authType**: string
 * **category**: string
 * **target**: string
 * **value**: string
-
-## Microsoft.MachineLearningServices/workspaces/linkedServices
-### Properties
-* **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LinkedServiceProps
-* **type**: 'Microsoft.MachineLearningServices/workspaces/linkedServices' (ReadOnly, DeployTimeConstant)
 
 ## LinkedServiceProps
 ### Properties
@@ -414,62 +473,9 @@
 * **linkType**: 'Synapse'
 * **modifiedTime**: string
 
-## Microsoft.MachineLearningServices/workspaces/privateEndpointConnections
-### Properties
-* **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.MachineLearningServices/workspaces/services
-* **Discriminator**: computeType
-### Base Properties
-* **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **description**: string (WriteOnly)
-* **environmentImageRequest**: schemas:122_environmentImageRequest (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity (ReadOnly)
-* **keys**: schemas:122_keys (WriteOnly)
-* **kvTags**: Dictionary<string,String> (WriteOnly)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: Dictionary<string,String>
-* **sku**: Sku (ReadOnly)
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.MachineLearningServices/workspaces/services' (ReadOnly, DeployTimeConstant)
-### ACI
-#### Properties
-* **appInsightsEnabled**: bool (WriteOnly)
-* **authEnabled**: bool (WriteOnly)
-* **cname**: string (WriteOnly)
-* **computeType**: 'ACI' (Required)
-* **containerResourceRequirements**: ContainerResourceRequirements (WriteOnly)
-* **dataCollection**: schemas:91_dataCollection (WriteOnly)
-* **dnsNameLabel**: string (WriteOnly)
-* **encryptionProperties**: schemas:91_encryptionProperties (WriteOnly)
-* **sslCertificate**: string (WriteOnly)
-* **sslEnabled**: bool (WriteOnly)
-* **sslKey**: string (WriteOnly)
-* **vnetConfiguration**: schemas:91_vnetConfiguration (WriteOnly)
-
-### Custom
-#### Properties
-* **computeType**: 'Custom' (Required)
-* **isDefault**: bool (WriteOnly)
-* **trafficPercentile**: int (WriteOnly)
-* **type**: 'Control' | 'Treatment' (WriteOnly)
-
 
 ## schemas:122_environmentImageRequest
 ### Properties

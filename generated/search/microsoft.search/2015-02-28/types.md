@@ -1,6 +1,7 @@
 # Microsoft.Search @ 2015-02-28
 
-## Microsoft.Search/searchServices
+## Resource Microsoft.Search/searchServices@2015-02-28
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-02-28' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

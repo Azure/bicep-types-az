@@ -1,6 +1,7 @@
 # Microsoft.SignalRService @ 2020-05-01
 
-## Microsoft.SignalRService/signalR
+## Resource Microsoft.SignalRService/signalR@2020-05-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -12,6 +13,16 @@
 * **sku**: ResourceSku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.SignalRService/signalR/privateEndpointConnections@2020-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: 'Microsoft.SignalRService/signalR/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## SignalRProperties
 ### Properties
@@ -104,13 +115,4 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.SignalRService/signalR/privateEndpointConnections
-### Properties
-* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: 'Microsoft.SignalRService/signalR/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 

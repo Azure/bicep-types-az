@@ -1,6 +1,7 @@
 # Microsoft.CognitiveServices @ 2016-02-01-preview
 
-## Microsoft.CognitiveServices/accounts
+## Resource Microsoft.CognitiveServices/accounts@2016-02-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

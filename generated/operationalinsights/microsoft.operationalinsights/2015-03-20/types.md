@@ -1,6 +1,7 @@
 # Microsoft.OperationalInsights @ 2015-03-20
 
-## Microsoft.OperationalInsights/workspaces/savedSearches
+## Resource Microsoft.OperationalInsights/workspaces/savedSearches@2015-03-20
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-03-20' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -9,6 +10,18 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SavedSearchProperties (Required)
 * **type**: 'Microsoft.OperationalInsights/workspaces/savedSearches' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.OperationalInsights/workspaces/storageInsightConfigs@2015-03-20
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-03-20' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **eTag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: StorageInsightProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.OperationalInsights/workspaces/storageInsightConfigs' (ReadOnly, DeployTimeConstant)
 
 ## SavedSearchProperties
 ### Properties
@@ -22,17 +35,6 @@
 ### Properties
 * **name**: string (Required)
 * **value**: string (Required)
-
-## Microsoft.OperationalInsights/workspaces/storageInsightConfigs
-### Properties
-* **apiVersion**: '2015-03-20' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageInsightProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.OperationalInsights/workspaces/storageInsightConfigs' (ReadOnly, DeployTimeConstant)
 
 ## StorageInsightProperties
 ### Properties

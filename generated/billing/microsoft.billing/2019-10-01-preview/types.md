@@ -1,6 +1,7 @@
 # Microsoft.Billing @ 2019-10-01-preview
 
-## Microsoft.Billing/billingAccounts/billingProfiles
+## Resource Microsoft.Billing/billingAccounts/billingProfiles@2019-10-01-preview
+* **Valid Scope(s)**: Tenant
 ### Properties
 * **address**: AddressDetails (WriteOnly)
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
@@ -13,6 +14,77 @@
 * **poNumber**: string (WriteOnly)
 * **properties**: BillingProfileProperties (ReadOnly)
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/instructions@2019-10-01-preview
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: InstructionProperties
+* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/instructions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections@2019-10-01-preview
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **displayName**: string (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: InvoiceSectionProperties (ReadOnly)
+* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/policies@2019-10-01-preview
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PolicyProperties
+* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/policies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Billing/billingAccounts/billingRoleAssignments@2019-10-01-preview
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BillingRoleAssignmentProperties
+* **type**: 'Microsoft.Billing/billingAccounts/billingRoleAssignments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Billing/billingAccounts/customers/policies@2019-10-01-preview
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CustomerPolicyProperties
+* **type**: 'Microsoft.Billing/billingAccounts/customers/policies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Billing/billingAccounts/departments/billingRoleAssignments@2019-10-01-preview
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BillingRoleAssignmentProperties
+* **type**: 'Microsoft.Billing/billingAccounts/departments/billingRoleAssignments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleAssignments@2019-10-01-preview
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BillingRoleAssignmentProperties
+* **type**: 'Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleAssignments' (ReadOnly, DeployTimeConstant)
 
 ## AddressDetails
 ### Properties
@@ -68,15 +140,6 @@
 * **state**: 'Active' | 'Restricted' (ReadOnly)
 * **targetCloud**: 'USGov' | 'USNat' | 'USSec' (ReadOnly)
 
-## Microsoft.Billing/billingAccounts/billingProfiles/instructions
-### Properties
-* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: InstructionProperties
-* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/instructions' (ReadOnly, DeployTimeConstant)
-
 ## InstructionProperties
 ### Properties
 * **amount**: int (Required)
@@ -84,39 +147,11 @@
 * **endDate**: string (Required)
 * **startDate**: string (Required)
 
-## Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections
-### Properties
-* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **displayName**: string (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: InvoiceSectionProperties (ReadOnly)
-* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Billing/billingAccounts/billingProfiles/policies
-### Properties
-* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyProperties
-* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/policies' (ReadOnly, DeployTimeConstant)
-
 ## PolicyProperties
 ### Properties
 * **marketplacePurchases**: 'AllAllowed' | 'NotAllowed' | 'OnlyFreeAllowed'
 * **reservationPurchases**: 'Allowed' | 'NotAllowed'
 * **viewCharges**: 'Allowed' | 'NotAllowed'
-
-## Microsoft.Billing/billingAccounts/billingRoleAssignments
-### Properties
-* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BillingRoleAssignmentProperties
-* **type**: 'Microsoft.Billing/billingAccounts/billingRoleAssignments' (ReadOnly, DeployTimeConstant)
 
 ## BillingRoleAssignmentProperties
 ### Properties
@@ -132,34 +167,7 @@
 * **userAuthenticationType**: string
 * **userEmailAddress**: string
 
-## Microsoft.Billing/billingAccounts/customers/policies
-### Properties
-* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CustomerPolicyProperties
-* **type**: 'Microsoft.Billing/billingAccounts/customers/policies' (ReadOnly, DeployTimeConstant)
-
 ## CustomerPolicyProperties
 ### Properties
 * **viewCharges**: 'Allowed' | 'NotAllowed'
-
-## Microsoft.Billing/billingAccounts/departments/billingRoleAssignments
-### Properties
-* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BillingRoleAssignmentProperties
-* **type**: 'Microsoft.Billing/billingAccounts/departments/billingRoleAssignments' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleAssignments
-### Properties
-* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BillingRoleAssignmentProperties
-* **type**: 'Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleAssignments' (ReadOnly, DeployTimeConstant)
 

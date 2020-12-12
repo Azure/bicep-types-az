@@ -1,6 +1,7 @@
 # Microsoft.AzureData @ 2020-09-08-preview
 
-## Microsoft.AzureData/dataControllers
+## Resource Microsoft.AzureData/dataControllers@2020-09-08-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-09-08-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,45 @@
 * **systemData**: SystemData (ReadOnly)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.AzureData/dataControllers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AzureData/postgresInstances@2020-09-08-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-08-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PostgresInstanceProperties
+* **systemData**: SystemData (ReadOnly)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.AzureData/postgresInstances' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AzureData/sqlManagedInstances@2020-09-08-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-08-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SqlManagedInstanceProperties
+* **systemData**: SystemData (ReadOnly)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.AzureData/sqlManagedInstances' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AzureData/sqlServerInstances@2020-09-08-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-08-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SqlServerInstanceProperties
+* **systemData**: SystemData (ReadOnly)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.AzureData/sqlServerInstances' (ReadOnly, DeployTimeConstant)
 
 ## DataControllerProperties
 ### Properties
@@ -37,18 +77,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.AzureData/postgresInstances
-### Properties
-* **apiVersion**: '2020-09-08-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PostgresInstanceProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.AzureData/postgresInstances' (ReadOnly, DeployTimeConstant)
-
 ## PostgresInstanceProperties
 ### Properties
 * **admin**: string
@@ -59,18 +87,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.AzureData/sqlManagedInstances
-### Properties
-* **apiVersion**: '2020-09-08-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlManagedInstanceProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.AzureData/sqlManagedInstances' (ReadOnly, DeployTimeConstant)
 
 ## SqlManagedInstanceProperties
 ### Properties
@@ -86,18 +102,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.AzureData/sqlServerInstances
-### Properties
-* **apiVersion**: '2020-09-08-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlServerInstanceProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.AzureData/sqlServerInstances' (ReadOnly, DeployTimeConstant)
 
 ## SqlServerInstanceProperties
 ### Properties

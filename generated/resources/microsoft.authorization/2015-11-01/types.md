@@ -1,6 +1,7 @@
 # Microsoft.Authorization @ 2015-11-01
 
-## Microsoft.Authorization/policyAssignments
+## Resource Microsoft.Authorization/policyAssignments@2015-11-01
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -9,13 +10,8 @@
 * **properties**: PolicyAssignmentProperties
 * **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant)
 
-## PolicyAssignmentProperties
-### Properties
-* **displayName**: string
-* **policyDefinitionId**: string
-* **scope**: string
-
-## Microsoft.Authorization/policydefinitions
+## Resource Microsoft.Authorization/policydefinitions@2015-11-01
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -23,6 +19,12 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PolicyDefinitionProperties
 * **type**: 'Microsoft.Authorization/policydefinitions' (ReadOnly, DeployTimeConstant)
+
+## PolicyAssignmentProperties
+### Properties
+* **displayName**: string
+* **policyDefinitionId**: string
+* **scope**: string
 
 ## PolicyDefinitionProperties
 ### Properties

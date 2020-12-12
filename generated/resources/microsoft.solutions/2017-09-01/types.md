@@ -1,6 +1,7 @@
 # Microsoft.Solutions @ 2017-09-01
 
-## Microsoft.Solutions/applicationDefinitions
+## Resource Microsoft.Solutions/applicationDefinitions@2017-09-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -13,6 +14,23 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Solutions/applicationDefinitions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Solutions/applications@2017-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity
+* **kind**: string (Required)
+* **location**: string
+* **managedBy**: string
+* **name**: string (Required, DeployTimeConstant)
+* **plan**: Plan
+* **properties**: ApplicationProperties (Required)
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Solutions/applications' (ReadOnly, DeployTimeConstant)
 
 ## Identity
 ### Properties
@@ -55,22 +73,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Solutions/applications
-### Properties
-* **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
-* **kind**: string (Required)
-* **location**: string
-* **managedBy**: string
-* **name**: string (Required, DeployTimeConstant)
-* **plan**: Plan
-* **properties**: ApplicationProperties (Required)
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Solutions/applications' (ReadOnly, DeployTimeConstant)
 
 ## Plan
 ### Properties

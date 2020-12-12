@@ -1,6 +1,7 @@
 # Microsoft.Cdn @ 2020-04-15
 
-## Microsoft.Cdn/CdnWebApplicationFirewallPolicies
+## Resource Microsoft.Cdn/CdnWebApplicationFirewallPolicies@2020-04-15
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-15' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -12,6 +13,61 @@
 * **sku**: Sku (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Cdn/CdnWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Cdn/profiles@2020-04-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-04-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ProfileProperties
+* **sku**: Sku (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Cdn/profiles/endpoints@2020-04-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-04-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EndpointProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2020-04-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-04-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CustomDomainPropertiesParameters
+* **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Cdn/profiles/endpoints/originGroups@2020-04-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-04-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: OriginGroupProperties
+* **type**: 'Microsoft.Cdn/profiles/endpoints/originGroups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Cdn/profiles/endpoints/origins@2020-04-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-04-15' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: OriginProperties
+* **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant)
 
 ## CdnWebApplicationFirewallPolicyProperties
 ### Properties
@@ -100,18 +156,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Cdn/profiles
-### Properties
-* **apiVersion**: '2020-04-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ProfileProperties
-* **sku**: Sku (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant)
-
 ## ProfileProperties
 ### Properties
 * **provisioningState**: string (ReadOnly)
@@ -120,17 +164,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Cdn/profiles/endpoints
-### Properties
-* **apiVersion**: '2020-04-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EndpointProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant)
 
 ## EndpointProperties
 ### Properties
@@ -627,15 +660,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Cdn/profiles/endpoints/customDomains
-### Properties
-* **apiVersion**: '2020-04-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CustomDomainPropertiesParameters
-* **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant)
-
 ## CustomDomainPropertiesParameters
 ### Properties
 * **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly)
@@ -645,15 +669,6 @@
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
 * **validationData**: string (ReadOnly)
 
-## Microsoft.Cdn/profiles/endpoints/originGroups
-### Properties
-* **apiVersion**: '2020-04-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: OriginGroupProperties
-* **type**: 'Microsoft.Cdn/profiles/endpoints/originGroups' (ReadOnly, DeployTimeConstant)
-
 ## OriginGroupProperties
 ### Properties
 * **healthProbeSettings**: HealthProbeParameters
@@ -662,15 +677,6 @@
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
 * **responseBasedOriginErrorDetectionSettings**: ResponseBasedOriginErrorDetectionParameters
 * **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int
-
-## Microsoft.Cdn/profiles/endpoints/origins
-### Properties
-* **apiVersion**: '2020-04-15' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: OriginProperties
-* **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant)
 
 ## OriginProperties
 ### Properties

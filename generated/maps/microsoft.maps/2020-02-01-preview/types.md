@@ -1,6 +1,7 @@
 # Microsoft.Maps @ 2020-02-01-preview
 
-## Microsoft.Maps/accounts
+## Resource Microsoft.Maps/accounts@2020-02-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -12,6 +13,30 @@
 * **systemData**: systemData (ReadOnly)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Maps/accounts' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Maps/accounts/creators@2020-02-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CreatorProperties (ReadOnly)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Maps/accounts/creators' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Maps/accounts/privateAtlases@2020-02-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateAtlasProperties (ReadOnly)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Maps/accounts/privateAtlases' (ReadOnly, DeployTimeConstant)
 
 ## MapsAccountProperties
 ### Properties
@@ -35,17 +60,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Maps/accounts/creators
-### Properties
-* **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CreatorProperties (ReadOnly)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Maps/accounts/creators' (ReadOnly, DeployTimeConstant)
-
 ## CreatorProperties
 ### Properties
 * **provisioningState**: string (ReadOnly)
@@ -53,17 +67,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Maps/accounts/privateAtlases
-### Properties
-* **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateAtlasProperties (ReadOnly)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Maps/accounts/privateAtlases' (ReadOnly, DeployTimeConstant)
 
 ## PrivateAtlasProperties
 ### Properties

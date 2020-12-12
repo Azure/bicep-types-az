@@ -1,6 +1,7 @@
 # Microsoft.WindowsIoT @ 2019-06-01
 
-## Microsoft.WindowsIoT/deviceServices
+## Resource Microsoft.WindowsIoT/deviceServices@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **adminDomainName**: string (WriteOnly)
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)

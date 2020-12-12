@@ -1,6 +1,7 @@
 # Microsoft.Authorization @ 2017-06-01-preview
 
-## Microsoft.Authorization/policyAssignments
+## Resource Microsoft.Authorization/policyAssignments@2017-06-01-preview
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2017-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -9,6 +10,16 @@
 * **properties**: PolicyAssignmentProperties
 * **sku**: PolicySku
 * **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Authorization/policySetDefinitions@2017-06-01-preview
+* **Valid Scope(s)**: ManagementGroup, Subscription
+### Properties
+* **apiVersion**: '2017-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PolicySetDefinitionProperties
+* **type**: 'Microsoft.Authorization/policySetDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## PolicyAssignmentProperties
 ### Properties
@@ -25,15 +36,6 @@
 * **name**: string (Required)
 * **tier**: string
 
-## Microsoft.Authorization/policySetDefinitions
-### Properties
-* **apiVersion**: '2017-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicySetDefinitionProperties
-* **type**: 'Microsoft.Authorization/policySetDefinitions' (ReadOnly, DeployTimeConstant)
-
 ## PolicySetDefinitionProperties
 ### Properties
 * **description**: string
@@ -47,13 +49,4 @@
 ### Properties
 * **parameters**: any
 * **policyDefinitionId**: string
-
-## Microsoft.Authorization/policySetDefinitions
-### Properties
-* **apiVersion**: '2017-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicySetDefinitionProperties
-* **type**: 'Microsoft.Authorization/policySetDefinitions' (ReadOnly, DeployTimeConstant)
 

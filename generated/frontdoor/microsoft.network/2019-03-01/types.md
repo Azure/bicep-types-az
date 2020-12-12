@@ -1,6 +1,7 @@
 # Microsoft.Network @ 2019-03-01
 
-## Microsoft.Network/FrontDoorWebApplicationFirewallPolicies
+## Resource Microsoft.Network/FrontDoorWebApplicationFirewallPolicies@2019-03-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

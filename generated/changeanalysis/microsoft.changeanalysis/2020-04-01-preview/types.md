@@ -1,6 +1,7 @@
 # Microsoft.ChangeAnalysis @ 2020-04-01-preview
 
-## Microsoft.ChangeAnalysis/profile
+## Resource Microsoft.ChangeAnalysis/profile@2020-04-01-preview
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

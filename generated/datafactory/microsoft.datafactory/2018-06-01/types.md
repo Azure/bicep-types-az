@@ -1,6 +1,7 @@
 # Microsoft.DataFactory @ 2018-06-01
 
-## Microsoft.DataFactory/factories
+## Resource Microsoft.DataFactory/factories@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -12,6 +13,94 @@
 * **properties**: FactoryProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DataFactory/factories' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataFactory/factories/dataflows@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DataFlow (Required)
+* **type**: 'Microsoft.DataFactory/factories/dataflows' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataFactory/factories/datasets@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: Dataset (Required)
+* **type**: 'Microsoft.DataFactory/factories/datasets' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataFactory/factories/integrationRuntimes@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IntegrationRuntime (Required)
+* **type**: 'Microsoft.DataFactory/factories/integrationRuntimes' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataFactory/factories/linkedservices@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LinkedService (Required)
+* **type**: 'Microsoft.DataFactory/factories/linkedservices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataFactory/factories/managedVirtualNetworks@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ManagedVirtualNetwork (Required)
+* **type**: 'Microsoft.DataFactory/factories/managedVirtualNetworks' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ManagedPrivateEndpoint (Required)
+* **type**: 'Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataFactory/factories/pipelines@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: Pipeline (Required)
+* **type**: 'Microsoft.DataFactory/factories/pipelines' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataFactory/factories/triggers@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: Trigger (Required)
+* **type**: 'Microsoft.DataFactory/factories/triggers' (ReadOnly, DeployTimeConstant)
 
 ## FactoryIdentity
 ### Properties
@@ -89,16 +178,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DataFactory/factories/dataflows
-### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DataFlow (Required)
-* **type**: 'Microsoft.DataFactory/factories/dataflows' (ReadOnly, DeployTimeConstant)
-
 ## DataFlow
 * **Discriminator**: type
 ### Base Properties
@@ -167,16 +246,6 @@
 ### Properties
 * **description**: string
 * **name**: string (Required)
-
-## Microsoft.DataFactory/factories/datasets
-### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: Dataset (Required)
-* **type**: 'Microsoft.DataFactory/factories/datasets' (ReadOnly, DeployTimeConstant)
 
 ## Dataset
 * **Discriminator**: type
@@ -1758,16 +1827,6 @@
 * **type**: 'ZohoObject' (Required)
 * **typeProperties**: GenericDatasetTypeProperties
 
-## Microsoft.DataFactory/factories/integrationRuntimes
-### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IntegrationRuntime (Required)
-* **type**: 'Microsoft.DataFactory/factories/integrationRuntimes' (ReadOnly, DeployTimeConstant)
-
 ## IntegrationRuntime
 * **Discriminator**: type
 ### Base Properties
@@ -1988,16 +2047,6 @@
 ### Properties
 * **authorizationType**: 'RBAC' (Required)
 * **resourceId**: string (Required)
-
-## Microsoft.DataFactory/factories/linkedservices
-### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LinkedService (Required)
-* **type**: 'Microsoft.DataFactory/factories/linkedservices' (ReadOnly, DeployTimeConstant)
 
 ## LinkedService
 * **Discriminator**: type
@@ -4035,32 +4084,12 @@
 * **useHostVerification**: any
 * **usePeerVerification**: any
 
-## Microsoft.DataFactory/factories/managedVirtualNetworks
-### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedVirtualNetwork (Required)
-* **type**: 'Microsoft.DataFactory/factories/managedVirtualNetworks' (ReadOnly, DeployTimeConstant)
-
 ## ManagedVirtualNetwork
 ### Properties
 * **alias**: string (ReadOnly)
 * **vNetId**: string (ReadOnly)
 ### Additional Properties
 * **Additional Properties Type**: any
-
-## Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints
-### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedPrivateEndpoint (Required)
-* **type**: 'Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## ManagedPrivateEndpoint
 ### Properties
@@ -4078,16 +4107,6 @@
 * **actionsRequired**: string (ReadOnly)
 * **description**: string (ReadOnly)
 * **status**: string (ReadOnly)
-
-## Microsoft.DataFactory/factories/pipelines
-### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: Pipeline (Required)
-* **type**: 'Microsoft.DataFactory/factories/pipelines' (ReadOnly, DeployTimeConstant)
 
 ## Pipeline
 ### Properties
@@ -4170,16 +4189,6 @@
 ### Properties
 * **defaultValue**: any
 * **type**: 'Array' | 'Bool' | 'String' (Required)
-
-## Microsoft.DataFactory/factories/triggers
-### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: Trigger (Required)
-* **type**: 'Microsoft.DataFactory/factories/triggers' (ReadOnly, DeployTimeConstant)
 
 ## Trigger
 * **Discriminator**: type

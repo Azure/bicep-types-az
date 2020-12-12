@@ -49,7 +49,7 @@ executeSynchronous(async () => {
 
   // use consistent sorting to make log changes easier to review
   for (const readmePath of readmePaths.sort(lowerCaseCompare)) {
-    const basePath = path.relative(specsPath, readmePath).split(path.sep)[0];
+    const basePath = path.relative(specsPath, readmePath).split(path.sep)[0].toLowerCase();
     const outputDir = `${outputBaseDir}/${basePath}`;
 
     try {

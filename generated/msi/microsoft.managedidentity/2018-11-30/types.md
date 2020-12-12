@@ -1,6 +1,7 @@
 # Microsoft.ManagedIdentity @ 2018-11-30
 
-## Microsoft.ManagedIdentity/userAssignedIdentities
+## Resource Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-11-30' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

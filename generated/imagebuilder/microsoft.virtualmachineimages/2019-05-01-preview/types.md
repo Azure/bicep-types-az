@@ -1,6 +1,7 @@
 # Microsoft.VirtualMachineImages @ 2019-05-01-preview
 
-## Microsoft.VirtualMachineImages/imageTemplates
+## Resource Microsoft.VirtualMachineImages/imageTemplates@2019-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

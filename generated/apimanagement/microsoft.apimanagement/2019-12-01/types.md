@@ -1,6 +1,7 @@
 # Microsoft.ApiManagement @ 2019-12-01
 
-## Microsoft.ApiManagement/service
+## Resource Microsoft.ApiManagement/service@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -13,6 +14,326 @@
 * **sku**: ApiManagementServiceSkuProperties (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ApiManagement/service' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/apis@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApiCreateOrUpdateProperties
+* **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/apis/diagnostics@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DiagnosticContractProperties
+* **type**: 'Microsoft.ApiManagement/service/apis/diagnostics' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/apis/issues@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IssueContractProperties
+* **type**: 'Microsoft.ApiManagement/service/apis/issues' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/apis/issues/attachments@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IssueAttachmentContractProperties
+* **type**: 'Microsoft.ApiManagement/service/apis/issues/attachments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/apis/issues/comments@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IssueCommentContractProperties
+* **type**: 'Microsoft.ApiManagement/service/apis/issues/comments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/apis/operations@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: OperationContractProperties
+* **type**: 'Microsoft.ApiManagement/service/apis/operations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/apis/operations/policies@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PolicyContractProperties
+* **type**: 'Microsoft.ApiManagement/service/apis/operations/policies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/apis/policies@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PolicyContractProperties
+* **type**: 'Microsoft.ApiManagement/service/apis/policies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/apis/releases@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApiReleaseContractProperties
+* **type**: 'Microsoft.ApiManagement/service/apis/releases' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/apis/schemas@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SchemaContractProperties
+* **type**: 'Microsoft.ApiManagement/service/apis/schemas' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/apis/tagDescriptions@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TagDescriptionBaseProperties
+* **type**: 'Microsoft.ApiManagement/service/apis/tagDescriptions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/apiVersionSets@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApiVersionSetContractProperties
+* **type**: 'Microsoft.ApiManagement/service/apiVersionSets' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/authorizationServers@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AuthorizationServerContractProperties
+* **type**: 'Microsoft.ApiManagement/service/authorizationServers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/backends@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BackendContractProperties
+* **type**: 'Microsoft.ApiManagement/service/backends' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/caches@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CacheContractProperties
+* **type**: 'Microsoft.ApiManagement/service/caches' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/certificates@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CertificateCreateOrUpdateProperties
+* **type**: 'Microsoft.ApiManagement/service/certificates' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/diagnostics@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DiagnosticContractProperties
+* **type**: 'Microsoft.ApiManagement/service/diagnostics' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/gateways@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GatewayContractProperties
+* **type**: 'Microsoft.ApiManagement/service/gateways' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/gateways/apis@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:268_properties
+* **type**: 'Microsoft.ApiManagement/service/gateways/apis' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/gateways/hostnameConfigurations@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GatewayHostnameConfigurationContractProperties
+* **type**: 'Microsoft.ApiManagement/service/gateways/hostnameConfigurations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/groups@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GroupCreateParametersProperties
+* **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/identityProviders@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter' (Required, DeployTimeConstant)
+* **properties**: IdentityProviderCreateContractProperties
+* **type**: 'Microsoft.ApiManagement/service/identityProviders' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/loggers@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LoggerContractProperties
+* **type**: 'Microsoft.ApiManagement/service/loggers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/namedValues@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: NamedValueCreateContractProperties
+* **type**: 'Microsoft.ApiManagement/service/namedValues' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/openidConnectProviders@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: OpenidConnectProviderContractProperties
+* **type**: 'Microsoft.ApiManagement/service/openidConnectProviders' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/policies@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PolicyContractProperties
+* **type**: 'Microsoft.ApiManagement/service/policies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/products@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ProductContractProperties
+* **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/products/policies@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PolicyContractProperties
+* **type**: 'Microsoft.ApiManagement/service/products/policies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/subscriptions@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SubscriptionCreateParameterProperties
+* **type**: 'Microsoft.ApiManagement/service/subscriptions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/tags@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TagContractProperties
+* **type**: 'Microsoft.ApiManagement/service/tags' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/templates@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'accountClosedDeveloper' | 'applicationApprovedNotificationMessage' | 'confirmSignUpIdentityDefault' | 'emailChangeIdentityDefault' | 'inviteUserNotificationMessage' | 'newCommentNotificationMessage' | 'newDeveloperNotificationMessage' | 'newIssueNotificationMessage' | 'passwordResetByAdminNotificationMessage' | 'passwordResetIdentityDefault' | 'purchaseDeveloperNotificationMessage' | 'quotaLimitApproachingDeveloperNotificationMessage' | 'rejectDeveloperNotificationMessage' | 'requestDeveloperNotificationMessage' (Required, DeployTimeConstant)
+* **properties**: EmailTemplateUpdateParameterProperties
+* **type**: 'Microsoft.ApiManagement/service/templates' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/users@2019-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: UserCreateParameterProperties
+* **type**: 'Microsoft.ApiManagement/service/users' (ReadOnly, DeployTimeConstant)
 
 ## ApiManagementServiceIdentity
 ### Properties
@@ -113,15 +434,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.ApiManagement/service/apis
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApiCreateOrUpdateProperties
-* **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant)
-
 ## ApiCreateOrUpdateProperties
 ### Properties
 * **apiRevision**: string
@@ -181,15 +493,6 @@
 * **wsdlEndpointName**: string (WriteOnly)
 * **wsdlServiceName**: string (WriteOnly)
 
-## Microsoft.ApiManagement/service/apis/diagnostics
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DiagnosticContractProperties
-* **type**: 'Microsoft.ApiManagement/service/apis/diagnostics' (ReadOnly, DeployTimeConstant)
-
 ## DiagnosticContractProperties
 ### Properties
 * **alwaysLog**: 'allErrors'
@@ -220,15 +523,6 @@
 * **percentage**: int
 * **samplingType**: 'fixed'
 
-## Microsoft.ApiManagement/service/apis/issues
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IssueContractProperties
-* **type**: 'Microsoft.ApiManagement/service/apis/issues' (ReadOnly, DeployTimeConstant)
-
 ## IssueContractProperties
 ### Properties
 * **apiId**: string
@@ -238,44 +532,17 @@
 * **title**: string (Required)
 * **userId**: string (Required)
 
-## Microsoft.ApiManagement/service/apis/issues/attachments
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IssueAttachmentContractProperties
-* **type**: 'Microsoft.ApiManagement/service/apis/issues/attachments' (ReadOnly, DeployTimeConstant)
-
 ## IssueAttachmentContractProperties
 ### Properties
 * **content**: string (Required)
 * **contentFormat**: string (Required)
 * **title**: string (Required)
 
-## Microsoft.ApiManagement/service/apis/issues/comments
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IssueCommentContractProperties
-* **type**: 'Microsoft.ApiManagement/service/apis/issues/comments' (ReadOnly, DeployTimeConstant)
-
 ## IssueCommentContractProperties
 ### Properties
 * **createdDate**: string
 * **text**: string (Required)
 * **userId**: string (Required)
-
-## Microsoft.ApiManagement/service/apis/operations
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: OperationContractProperties
-* **type**: 'Microsoft.ApiManagement/service/apis/operations' (ReadOnly, DeployTimeConstant)
 
 ## OperationContractProperties
 ### Properties
@@ -319,37 +586,10 @@
 * **representations**: RepresentationContract[]
 * **statusCode**: int (Required)
 
-## Microsoft.ApiManagement/service/apis/operations/policies
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyContractProperties
-* **type**: 'Microsoft.ApiManagement/service/apis/operations/policies' (ReadOnly, DeployTimeConstant)
-
 ## PolicyContractProperties
 ### Properties
 * **format**: 'rawxml-link' | 'rawxml' | 'xml-link' | 'xml'
 * **value**: string (Required)
-
-## Microsoft.ApiManagement/service/apis/policies
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyContractProperties
-* **type**: 'Microsoft.ApiManagement/service/apis/policies' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.ApiManagement/service/apis/releases
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApiReleaseContractProperties
-* **type**: 'Microsoft.ApiManagement/service/apis/releases' (ReadOnly, DeployTimeConstant)
 
 ## ApiReleaseContractProperties
 ### Properties
@@ -357,15 +597,6 @@
 * **createdDateTime**: string (ReadOnly)
 * **notes**: string
 * **updatedDateTime**: string (ReadOnly)
-
-## Microsoft.ApiManagement/service/apis/schemas
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SchemaContractProperties
-* **type**: 'Microsoft.ApiManagement/service/apis/schemas' (ReadOnly, DeployTimeConstant)
 
 ## SchemaContractProperties
 ### Properties
@@ -377,15 +608,6 @@
 * **definitions**: any
 * **value**: string
 
-## Microsoft.ApiManagement/service/apis/tagDescriptions
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TagDescriptionBaseProperties
-* **type**: 'Microsoft.ApiManagement/service/apis/tagDescriptions' (ReadOnly, DeployTimeConstant)
-
 ## TagDescriptionBaseProperties
 ### Properties
 * **description**: string
@@ -394,15 +616,6 @@
 * **externalDocsUrl**: string
 * **tagId**: string (ReadOnly)
 
-## Microsoft.ApiManagement/service/apiVersionSets
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApiVersionSetContractProperties
-* **type**: 'Microsoft.ApiManagement/service/apiVersionSets' (ReadOnly, DeployTimeConstant)
-
 ## ApiVersionSetContractProperties
 ### Properties
 * **description**: string
@@ -410,15 +623,6 @@
 * **versionHeaderName**: string
 * **versioningScheme**: 'Header' | 'Query' | 'Segment' (Required)
 * **versionQueryName**: string
-
-## Microsoft.ApiManagement/service/authorizationServers
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AuthorizationServerContractProperties
-* **type**: 'Microsoft.ApiManagement/service/authorizationServers' (ReadOnly, DeployTimeConstant)
 
 ## AuthorizationServerContractProperties
 ### Properties
@@ -443,15 +647,6 @@
 ### Properties
 * **name**: string (Required)
 * **value**: string (Required)
-
-## Microsoft.ApiManagement/service/backends
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BackendContractProperties
-* **type**: 'Microsoft.ApiManagement/service/backends' (ReadOnly, DeployTimeConstant)
 
 ## BackendContractProperties
 ### Properties
@@ -513,29 +708,11 @@
 * **validateCertificateChain**: bool
 * **validateCertificateName**: bool
 
-## Microsoft.ApiManagement/service/caches
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CacheContractProperties
-* **type**: 'Microsoft.ApiManagement/service/caches' (ReadOnly, DeployTimeConstant)
-
 ## CacheContractProperties
 ### Properties
 * **connectionString**: string (Required)
 * **description**: string
 * **resourceId**: string
-
-## Microsoft.ApiManagement/service/certificates
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CertificateCreateOrUpdateProperties
-* **type**: 'Microsoft.ApiManagement/service/certificates' (ReadOnly, DeployTimeConstant)
 
 ## CertificateCreateOrUpdateProperties
 ### Properties
@@ -544,24 +721,6 @@
 * **password**: string (Required, WriteOnly)
 * **subject**: string (ReadOnly)
 * **thumbprint**: string (ReadOnly)
-
-## Microsoft.ApiManagement/service/diagnostics
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DiagnosticContractProperties
-* **type**: 'Microsoft.ApiManagement/service/diagnostics' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.ApiManagement/service/gateways
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GatewayContractProperties
-* **type**: 'Microsoft.ApiManagement/service/gateways' (ReadOnly, DeployTimeConstant)
 
 ## GatewayContractProperties
 ### Properties
@@ -575,42 +734,15 @@
 * **district**: string
 * **name**: string (Required)
 
-## Microsoft.ApiManagement/service/gateways/apis
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:268_properties
-* **type**: 'Microsoft.ApiManagement/service/gateways/apis' (ReadOnly, DeployTimeConstant)
-
 ## schemas:268_properties
 ### Properties
 * **provisioningState**: 'created'
-
-## Microsoft.ApiManagement/service/gateways/hostnameConfigurations
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GatewayHostnameConfigurationContractProperties
-* **type**: 'Microsoft.ApiManagement/service/gateways/hostnameConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## GatewayHostnameConfigurationContractProperties
 ### Properties
 * **certificateId**: string
 * **hostname**: string
 * **negotiateClientCertificate**: bool
-
-## Microsoft.ApiManagement/service/groups
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GroupCreateParametersProperties
-* **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant)
 
 ## GroupCreateParametersProperties
 ### Properties
@@ -619,15 +751,6 @@
 * **displayName**: string (Required)
 * **externalId**: string
 * **type**: 'custom' | 'external' | 'system'
-
-## Microsoft.ApiManagement/service/identityProviders
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter' (Required, DeployTimeConstant)
-* **properties**: IdentityProviderCreateContractProperties
-* **type**: 'Microsoft.ApiManagement/service/identityProviders' (ReadOnly, DeployTimeConstant)
 
 ## IdentityProviderCreateContractProperties
 ### Properties
@@ -642,15 +765,6 @@
 * **signupPolicyName**: string
 * **type**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter'
 
-## Microsoft.ApiManagement/service/loggers
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LoggerContractProperties
-* **type**: 'Microsoft.ApiManagement/service/loggers' (ReadOnly, DeployTimeConstant)
-
 ## LoggerContractProperties
 ### Properties
 * **credentials**: Dictionary<string,String> (Required)
@@ -663,30 +777,12 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.ApiManagement/service/namedValues
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: NamedValueCreateContractProperties
-* **type**: 'Microsoft.ApiManagement/service/namedValues' (ReadOnly, DeployTimeConstant)
-
 ## NamedValueCreateContractProperties
 ### Properties
 * **displayName**: string (Required)
 * **secret**: bool
 * **tags**: string[]
 * **value**: string (Required)
-
-## Microsoft.ApiManagement/service/openidConnectProviders
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: OpenidConnectProviderContractProperties
-* **type**: 'Microsoft.ApiManagement/service/openidConnectProviders' (ReadOnly, DeployTimeConstant)
 
 ## OpenidConnectProviderContractProperties
 ### Properties
@@ -695,24 +791,6 @@
 * **description**: string
 * **displayName**: string (Required)
 * **metadataEndpoint**: string (Required)
-
-## Microsoft.ApiManagement/service/policies
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyContractProperties
-* **type**: 'Microsoft.ApiManagement/service/policies' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.ApiManagement/service/products
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ProductContractProperties
-* **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant)
 
 ## ProductContractProperties
 ### Properties
@@ -723,24 +801,6 @@
 * **subscriptionRequired**: bool
 * **subscriptionsLimit**: int
 * **terms**: string
-
-## Microsoft.ApiManagement/service/products/policies
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyContractProperties
-* **type**: 'Microsoft.ApiManagement/service/products/policies' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.ApiManagement/service/subscriptions
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SubscriptionCreateParameterProperties
-* **type**: 'Microsoft.ApiManagement/service/subscriptions' (ReadOnly, DeployTimeConstant)
 
 ## SubscriptionCreateParameterProperties
 ### Properties
@@ -758,27 +818,9 @@
 * **state**: 'active' | 'cancelled' | 'expired' | 'rejected' | 'submitted' | 'suspended'
 * **stateComment**: string (ReadOnly)
 
-## Microsoft.ApiManagement/service/tags
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TagContractProperties
-* **type**: 'Microsoft.ApiManagement/service/tags' (ReadOnly, DeployTimeConstant)
-
 ## TagContractProperties
 ### Properties
 * **displayName**: string (Required)
-
-## Microsoft.ApiManagement/service/templates
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'accountClosedDeveloper' | 'applicationApprovedNotificationMessage' | 'confirmSignUpIdentityDefault' | 'emailChangeIdentityDefault' | 'inviteUserNotificationMessage' | 'newCommentNotificationMessage' | 'newDeveloperNotificationMessage' | 'newIssueNotificationMessage' | 'passwordResetByAdminNotificationMessage' | 'passwordResetIdentityDefault' | 'purchaseDeveloperNotificationMessage' | 'quotaLimitApproachingDeveloperNotificationMessage' | 'rejectDeveloperNotificationMessage' | 'requestDeveloperNotificationMessage' (Required, DeployTimeConstant)
-* **properties**: EmailTemplateUpdateParameterProperties
-* **type**: 'Microsoft.ApiManagement/service/templates' (ReadOnly, DeployTimeConstant)
 
 ## EmailTemplateUpdateParameterProperties
 ### Properties
@@ -794,15 +836,6 @@
 * **description**: string
 * **name**: string
 * **title**: string
-
-## Microsoft.ApiManagement/service/users
-### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: UserCreateParameterProperties
-* **type**: 'Microsoft.ApiManagement/service/users' (ReadOnly, DeployTimeConstant)
 
 ## UserCreateParameterProperties
 ### Properties

@@ -1,6 +1,7 @@
 # Microsoft.Notebooks @ 2019-10-11-preview
 
-## Microsoft.Notebooks/notebookProxies
+## Resource Microsoft.Notebooks/notebookProxies@2019-10-11-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-11-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

@@ -1,6 +1,7 @@
 # Microsoft.Network @ 2020-01-01
 
-## Microsoft.Network/frontDoors
+## Resource Microsoft.Network/frontDoors@2020-01-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,16 @@
 * **properties**: FrontDoorProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Network/frontDoors' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/frontDoors/rulesEngines@2020-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RulesEngineProperties
+* **type**: 'Microsoft.Network/frontDoors/rulesEngines' (ReadOnly, DeployTimeConstant)
 
 ## FrontDoorProperties
 ### Properties
@@ -245,13 +256,4 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Network/frontDoors/rulesEngines
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RulesEngineProperties
-* **type**: 'Microsoft.Network/frontDoors/rulesEngines' (ReadOnly, DeployTimeConstant)
 

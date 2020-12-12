@@ -1,6 +1,7 @@
 # Microsoft.Maps @ 2018-05-01
 
-## Microsoft.Maps/accounts
+## Resource Microsoft.Maps/accounts@2018-05-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

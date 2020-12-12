@@ -1,6 +1,7 @@
 # Microsoft.Batch @ 2015-12-01
 
-## Microsoft.Batch/batchAccounts
+## Resource Microsoft.Batch/batchAccounts@2015-12-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-12-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,19 @@
 * **properties**: BatchAccountBaseProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Batch/batchAccounts/applications@2015-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **allowUpdates**: bool
+* **apiVersion**: '2015-12-01' (ReadOnly, DeployTimeConstant)
+* **defaultVersion**: string (ReadOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **displayName**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **packages**: ApplicationPackage[] (ReadOnly)
+* **type**: 'Microsoft.Batch/batchAccounts/applications' (ReadOnly, DeployTimeConstant)
 
 ## BatchAccountBaseProperties
 ### Properties
@@ -28,18 +42,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Batch/batchAccounts/applications
-### Properties
-* **allowUpdates**: bool
-* **apiVersion**: '2015-12-01' (ReadOnly, DeployTimeConstant)
-* **defaultVersion**: string (ReadOnly)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **displayName**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **packages**: ApplicationPackage[] (ReadOnly)
-* **type**: 'Microsoft.Batch/batchAccounts/applications' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationPackage
 ### Properties

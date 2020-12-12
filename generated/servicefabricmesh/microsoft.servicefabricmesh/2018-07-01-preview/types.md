@@ -1,6 +1,7 @@
 # Microsoft.ServiceFabricMesh @ 2018-07-01-preview
 
-## Microsoft.ServiceFabricMesh/applications
+## Resource Microsoft.ServiceFabricMesh/applications@2018-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,30 @@
 * **properties**: ApplicationResourceProperties (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ServiceFabricMesh/applications' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceFabricMesh/networks@2018-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: NetworkResourceProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ServiceFabricMesh/networks' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceFabricMesh/volumes@2018-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VolumeResourceProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ServiceFabricMesh/volumes' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationResourceProperties
 ### Properties
@@ -172,17 +197,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.ServiceFabricMesh/networks
-### Properties
-* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: NetworkResourceProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ServiceFabricMesh/networks' (ReadOnly, DeployTimeConstant)
-
 ## NetworkResourceProperties
 ### Properties
 * **addressPrefix**: string (Required)
@@ -207,17 +221,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.ServiceFabricMesh/volumes
-### Properties
-* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VolumeResourceProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ServiceFabricMesh/volumes' (ReadOnly, DeployTimeConstant)
 
 ## VolumeResourceProperties
 ### Properties

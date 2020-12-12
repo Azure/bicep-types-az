@@ -1,6 +1,7 @@
 # Microsoft.DocumentDB @ 2019-08-01-preview
 
-## Microsoft.DocumentDB/databaseAccounts/privateEndpointConnections
+## Resource Microsoft.DocumentDB/databaseAccounts/privateEndpointConnections@2019-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

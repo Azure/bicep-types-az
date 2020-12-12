@@ -1,6 +1,7 @@
 # Microsoft.Cache @ 2019-07-01
 
-## Microsoft.Cache/Redis
+## Resource Microsoft.Cache/Redis@2019-07-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,36 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Cache/Redis' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
+
+## Resource Microsoft.Cache/Redis/firewallRules@2019-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RedisFirewallRuleProperties (Required)
+* **type**: 'Microsoft.Cache/Redis/firewallRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Cache/Redis/linkedServers@2019-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RedisLinkedServerCreateProperties (Required)
+* **type**: 'Microsoft.Cache/Redis/linkedServers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Cache/Redis/patchSchedules@2019-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ScheduleEntries (Required)
+* **type**: 'Microsoft.Cache/Redis/patchSchedules' (ReadOnly, DeployTimeConstant)
 
 ## RedisCreateProperties
 ### Properties
@@ -67,28 +98,10 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Cache/Redis/firewallRules
-### Properties
-* **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RedisFirewallRuleProperties (Required)
-* **type**: 'Microsoft.Cache/Redis/firewallRules' (ReadOnly, DeployTimeConstant)
-
 ## RedisFirewallRuleProperties
 ### Properties
 * **endIP**: string (Required)
 * **startIP**: string (Required)
-
-## Microsoft.Cache/Redis/linkedServers
-### Properties
-* **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RedisLinkedServerCreateProperties (Required)
-* **type**: 'Microsoft.Cache/Redis/linkedServers' (ReadOnly, DeployTimeConstant)
 
 ## RedisLinkedServerCreateProperties
 ### Properties
@@ -96,15 +109,6 @@
 * **linkedRedisCacheLocation**: string (Required)
 * **provisioningState**: string (ReadOnly)
 * **serverRole**: 'Primary' | 'Secondary' (Required)
-
-## Microsoft.Cache/Redis/patchSchedules
-### Properties
-* **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ScheduleEntries (Required)
-* **type**: 'Microsoft.Cache/Redis/patchSchedules' (ReadOnly, DeployTimeConstant)
 
 ## ScheduleEntries
 ### Properties

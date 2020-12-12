@@ -1,6 +1,7 @@
 # microsoft.insights @ 2018-09-01
 
-## microsoft.insights/actionGroups
+## Resource microsoft.insights/actionGroups@2018-09-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

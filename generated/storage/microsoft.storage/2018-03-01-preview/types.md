@@ -1,6 +1,7 @@
 # Microsoft.Storage @ 2018-03-01-preview
 
-## Microsoft.Storage/storageAccounts
+## Resource Microsoft.Storage/storageAccounts@2018-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -13,6 +14,38 @@
 * **sku**: Sku (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Storage/storageAccounts/blobServices/containers@2018-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ContainerProperties
+* **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies@2018-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ImmutabilityPolicyProperty (Required)
+* **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Storage/storageAccounts/managementPolicies@2018-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ManagementPoliciesRules
+* **type**: 'Microsoft.Storage/storageAccounts/managementPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Identity
 ### Properties
@@ -119,16 +152,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Storage/storageAccounts/blobServices/containers
-### Properties
-* **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ContainerProperties
-* **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers' (ReadOnly, DeployTimeConstant)
-
 ## ContainerProperties
 ### Properties
 * **hasImmutabilityPolicy**: bool (ReadOnly)
@@ -179,13 +202,8 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies
+## ManagementPoliciesRules
 ### Properties
-* **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ImmutabilityPolicyProperty (Required)
-* **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies' (ReadOnly, DeployTimeConstant)
+* **lastModifiedTime**: string (ReadOnly)
+* **policy**: any
 

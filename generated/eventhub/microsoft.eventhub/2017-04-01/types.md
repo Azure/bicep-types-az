@@ -1,6 +1,7 @@
 # Microsoft.EventHub @ 2017-04-01
 
-## Microsoft.EventHub/namespaces
+## Resource Microsoft.EventHub/namespaces@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,66 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.EventHub/namespaces' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventHub/namespaces/authorizationRules@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:1_properties
+* **type**: 'Microsoft.EventHub/namespaces/authorizationRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:12_properties
+* **type**: 'Microsoft.EventHub/namespaces/disasterRecoveryConfigs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventHub/namespaces/eventhubs@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:15_properties
+* **type**: 'Microsoft.EventHub/namespaces/eventhubs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:1_properties
+* **type**: 'Microsoft.EventHub/namespaces/eventhubs/authorizationRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventHub/namespaces/eventhubs/consumergroups@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:7_properties
+* **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventHub/namespaces/networkRuleSets@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:25_properties
+* **type**: 'Microsoft.EventHub/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant)
 
 ## schemas:20_properties
 ### Properties
@@ -33,27 +94,9 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.EventHub/namespaces/authorizationRules
-### Properties
-* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:1_properties
-* **type**: 'Microsoft.EventHub/namespaces/authorizationRules' (ReadOnly, DeployTimeConstant)
-
 ## schemas:1_properties
 ### Properties
 * **rights**: 'Listen' | 'Manage' | 'Send'[] (Required)
-
-## Microsoft.EventHub/namespaces/disasterRecoveryConfigs
-### Properties
-* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:12_properties
-* **type**: 'Microsoft.EventHub/namespaces/disasterRecoveryConfigs' (ReadOnly, DeployTimeConstant)
 
 ## schemas:12_properties
 ### Properties
@@ -62,15 +105,6 @@
 * **pendingReplicationOperationsCount**: int (ReadOnly)
 * **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly)
 * **role**: 'Primary' | 'PrimaryNotReplicating' | 'Secondary' (ReadOnly)
-
-## Microsoft.EventHub/namespaces/eventhubs
-### Properties
-* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:15_properties
-* **type**: 'Microsoft.EventHub/namespaces/eventhubs' (ReadOnly, DeployTimeConstant)
 
 ## schemas:15_properties
 ### Properties
@@ -102,38 +136,11 @@
 * **blobContainer**: string
 * **storageAccountResourceId**: string
 
-## Microsoft.EventHub/namespaces/eventhubs/authorizationRules
-### Properties
-* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:1_properties
-* **type**: 'Microsoft.EventHub/namespaces/eventhubs/authorizationRules' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.EventHub/namespaces/eventhubs/consumergroups
-### Properties
-* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:7_properties
-* **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant)
-
 ## schemas:7_properties
 ### Properties
 * **createdAt**: string (ReadOnly)
 * **updatedAt**: string (ReadOnly)
 * **userMetadata**: string
-
-## Microsoft.EventHub/namespaces/networkRuleSets
-### Properties
-* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:25_properties
-* **type**: 'Microsoft.EventHub/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant)
 
 ## schemas:25_properties
 ### Properties

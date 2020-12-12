@@ -1,6 +1,7 @@
 # Microsoft.ContainerRegistry @ 2018-02-01-preview
 
-## Microsoft.ContainerRegistry/registries/buildTasks
+## Resource Microsoft.ContainerRegistry/registries/buildTasks@2018-02-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,16 @@
 * **properties**: BuildTaskProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ContainerRegistry/registries/buildTasks' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ContainerRegistry/registries/buildTasks/steps@2018-02-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BuildStepProperties
+* **type**: 'Microsoft.ContainerRegistry/registries/buildTasks/steps' (ReadOnly, DeployTimeConstant)
 
 ## BuildTaskProperties
 ### Properties
@@ -44,15 +55,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.ContainerRegistry/registries/buildTasks/steps
-### Properties
-* **apiVersion**: '2018-02-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BuildStepProperties
-* **type**: 'Microsoft.ContainerRegistry/registries/buildTasks/steps' (ReadOnly, DeployTimeConstant)
 
 ## BuildStepProperties
 * **Discriminator**: type

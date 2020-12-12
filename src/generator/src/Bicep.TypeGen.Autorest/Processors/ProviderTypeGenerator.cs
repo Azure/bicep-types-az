@@ -70,24 +70,55 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
             };
         }
 
+        private static ScopeType MergeScopes(ScopeType scopeA, ScopeType scopeB)
+        {
+            if (scopeA == ScopeType.Unknown || scopeB == ScopeType.Unknown)
+            {
+                return ScopeType.Unknown;
+            }
+
+            return scopeA | scopeB;
+        }
+
+        private static IReadOnlyList<ResourceDefinition> CollapseDefinitionScopes(IEnumerable<ResourceDefinition> definitions)
+        {
+            var definitionsByName = new Dictionary<string, ResourceDefinition>(StringComparer.OrdinalIgnoreCase);
+            foreach (var definition in definitions)
+            {
+                var name = definition.Descriptor.ConstantName ?? "";
+
+                if (definitionsByName.TryGetValue(name, out var existingDefinition))
+                {
+                    var mergedDescriptor = existingDefinition.Descriptor with { ScopeType = MergeScopes(existingDefinition.Descriptor.ScopeType, definition.Descriptor.ScopeType) };
+                    
+                    definitionsByName[name] = existingDefinition with { Descriptor = mergedDescriptor };
+                }
+                else
+                {
+                    definitionsByName[name] = definition;
+                }
+            }
+
+            return definitionsByName.Values.ToList();
+        }
+
         private GenerateResult Process()
         {
             var definitionsByDescriptor = definition.ResourceDefinitions
-                .ToLookup(x => x.Descriptor, ResourceDescriptor.Comparer)
-                .ToDictionary(x => x.Key, x => x.ToArray(), ResourceDescriptor.Comparer);
+                .ToLookup(x => x.Descriptor.FullyQualifiedType)
+                .ToDictionary(x => x.Key, x => CollapseDefinitionScopes(x));
 
-            foreach (var kvp in definitionsByDescriptor)
+            foreach (var (fullyQualifiedType, definitions) in definitionsByDescriptor)
             {
-                var descriptor = kvp.Key;
-
-                var definitions = definitionsByDescriptor[descriptor];
-                if (definitions.Length > 1)
+                if (definitions.Count > 1)
                 {
-                    CodeModelProcessor.LogWarning($"Skipping resource type {descriptor.FullyQualifiedType} under path '{definitions[0].DeclaringMethod.Url}': Found multiple definitions for the same type");
+                    CodeModelProcessor.LogWarning($"Skipping resource type {fullyQualifiedType} under path '{definitions[0].DeclaringMethod.Url}': Found multiple definitions for the same type");
                     continue;
                 }
 
                 var resource = definitions.Single();
+                var descriptor = resource.Descriptor;
+
                 var putBody = resource.DeclaringMethod.Body?.ModelType as CompositeType;
                 var getBody = (resource.GetMethod?.Responses.GetValueOrDefault(HttpStatusCode.OK)?.Body as CompositeType) ?? 
                     (resource.GetMethod?.DefaultResponse?.Body as CompositeType) ??
@@ -96,13 +127,13 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 var (success, failureReason, resourceName) = ParseNameSchema(resource, definition);
                 if (!success)
                 {
-                    CodeModelProcessor.LogWarning($"Skipping resource type {descriptor.FullyQualifiedType} under path '{resource.DeclaringMethod.Url}': {failureReason}");
+                    CodeModelProcessor.LogWarning($"Skipping resource type {fullyQualifiedType} under path '{resource.DeclaringMethod.Url}': {failureReason}");
                     continue;
                 }
 
                 if (putBody == null)
                 {
-                    CodeModelProcessor.LogWarning($"Skipping resource type {descriptor.FullyQualifiedType} under path '{resource.DeclaringMethod.Url}': No resource body defined");
+                    CodeModelProcessor.LogWarning($"Skipping resource type {fullyQualifiedType} under path '{resource.DeclaringMethod.Url}': No resource body defined");
                     continue;
                 }
 
@@ -112,6 +143,7 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 resource.Type = factory.Create(() => new ResourceType
                 { 
                     Name = $"{descriptor.FullyQualifiedType}@{descriptor.ApiVersion}",
+                    ScopeType = descriptor.ScopeType,
                     Body = factory.GetReference(resourceDefinition),
                 });
 

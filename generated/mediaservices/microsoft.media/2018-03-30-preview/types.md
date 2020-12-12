@@ -1,6 +1,7 @@
 # Microsoft.Media @ 2018-03-30-preview
 
-## Microsoft.Media/mediaservices
+## Resource Microsoft.Media/mediaservices@2018-03-30-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,100 @@
 * **properties**: MediaServiceProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Media/mediaservices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Media/mediaServices/assets@2018-03-30-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AssetProperties
+* **type**: 'Microsoft.Media/mediaServices/assets' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Media/mediaServices/contentKeyPolicies@2018-03-30-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ContentKeyPolicyProperties
+* **type**: 'Microsoft.Media/mediaServices/contentKeyPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Media/mediaservices/liveEvents@2018-03-30-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LiveEventProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Media/mediaservices/liveEvents' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Media/mediaservices/liveEvents/liveOutputs@2018-03-30-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LiveOutputProperties
+* **type**: 'Microsoft.Media/mediaservices/liveEvents/liveOutputs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Media/mediaservices/streamingEndpoints@2018-03-30-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: StreamingEndpointProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Media/mediaservices/streamingEndpoints' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Media/mediaServices/streamingLocators@2018-03-30-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: StreamingLocatorProperties
+* **type**: 'Microsoft.Media/mediaServices/streamingLocators' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Media/mediaServices/streamingPolicies@2018-03-30-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: StreamingPolicyProperties
+* **type**: 'Microsoft.Media/mediaServices/streamingPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Media/mediaServices/transforms@2018-03-30-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TransformProperties
+* **type**: 'Microsoft.Media/mediaServices/transforms' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Media/mediaServices/transforms/jobs@2018-03-30-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: JobProperties
+* **type**: 'Microsoft.Media/mediaServices/transforms/jobs' (ReadOnly, DeployTimeConstant)
 
 ## MediaServiceProperties
 ### Properties
@@ -25,15 +120,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Media/mediaServices/assets
-### Properties
-* **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AssetProperties
-* **type**: 'Microsoft.Media/mediaServices/assets' (ReadOnly, DeployTimeConstant)
-
 ## AssetProperties
 ### Properties
 * **alternateId**: string
@@ -44,15 +130,6 @@
 * **lastModified**: string (ReadOnly)
 * **storageAccountName**: string
 * **storageEncryptionFormat**: 'MediaStorageClientEncryption' | 'None' (ReadOnly)
-
-## Microsoft.Media/mediaServices/contentKeyPolicies
-### Properties
-* **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ContentKeyPolicyProperties
-* **type**: 'Microsoft.Media/mediaServices/contentKeyPolicies' (ReadOnly, DeployTimeConstant)
 
 ## ContentKeyPolicyProperties
 ### Properties
@@ -268,17 +345,6 @@
 ### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyUnknownRestriction' (Required)
 
-## Microsoft.Media/mediaservices/liveEvents
-### Properties
-* **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LiveEventProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Media/mediaservices/liveEvents' (ReadOnly, DeployTimeConstant)
-
 ## LiveEventProperties
 ### Properties
 * **created**: string (ReadOnly)
@@ -340,15 +406,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Media/mediaservices/liveEvents/liveOutputs
-### Properties
-* **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LiveOutputProperties
-* **type**: 'Microsoft.Media/mediaservices/liveEvents/liveOutputs' (ReadOnly, DeployTimeConstant)
-
 ## LiveOutputProperties
 ### Properties
 * **archiveWindowLength**: string (Required)
@@ -365,17 +422,6 @@
 ## Hls
 ### Properties
 * **fragmentsPerTsSegment**: int
-
-## Microsoft.Media/mediaservices/streamingEndpoints
-### Properties
-* **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StreamingEndpointProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Media/mediaservices/streamingEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## StreamingEndpointProperties
 ### Properties
@@ -415,15 +461,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Media/mediaServices/streamingLocators
-### Properties
-* **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StreamingLocatorProperties
-* **type**: 'Microsoft.Media/mediaServices/streamingLocators' (ReadOnly, DeployTimeConstant)
-
 ## StreamingLocatorProperties
 ### Properties
 * **assetName**: string (Required)
@@ -440,15 +477,6 @@
 * **id**: string (Required)
 * **label**: string
 * **value**: string
-
-## Microsoft.Media/mediaServices/streamingPolicies
-### Properties
-* **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StreamingPolicyProperties
-* **type**: 'Microsoft.Media/mediaServices/streamingPolicies' (ReadOnly, DeployTimeConstant)
 
 ## StreamingPolicyProperties
 ### Properties
@@ -541,15 +569,6 @@
 ## NoEncryption
 ### Properties
 * **enabledProtocols**: EnabledProtocols
-
-## Microsoft.Media/mediaServices/transforms
-### Properties
-* **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TransformProperties
-* **type**: 'Microsoft.Media/mediaServices/transforms' (ReadOnly, DeployTimeConstant)
 
 ## TransformProperties
 ### Properties
@@ -726,15 +745,6 @@
 ## OutputFile
 ### Properties
 * **labels**: string[]
-
-## Microsoft.Media/mediaServices/transforms/jobs
-### Properties
-* **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: JobProperties
-* **type**: 'Microsoft.Media/mediaServices/transforms/jobs' (ReadOnly, DeployTimeConstant)
 
 ## JobProperties
 ### Properties

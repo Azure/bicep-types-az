@@ -1,6 +1,7 @@
 # Microsoft.Billing @ 2020-05-01
 
-## Microsoft.Billing/billingAccounts/billingProfiles
+## Resource Microsoft.Billing/billingAccounts/billingProfiles@2020-05-01
+* **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -8,6 +9,46 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: BillingProfileProperties
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/instructions@2020-05-01
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: InstructionProperties
+* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/instructions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections@2020-05-01
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: InvoiceSectionProperties
+* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/policies@2020-05-01
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PolicyProperties
+* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/policies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Billing/billingAccounts/customers/policies@2020-05-01
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CustomerPolicyProperties
+* **type**: 'Microsoft.Billing/billingAccounts/customers/policies' (ReadOnly, DeployTimeConstant)
 
 ## BillingProfileProperties
 ### Properties
@@ -79,15 +120,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Billing/billingAccounts/billingProfiles/instructions
-### Properties
-* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: InstructionProperties
-* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/instructions' (ReadOnly, DeployTimeConstant)
-
 ## InstructionProperties
 ### Properties
 * **amount**: int (Required)
@@ -95,38 +127,11 @@
 * **endDate**: string (Required)
 * **startDate**: string (Required)
 
-## Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections
-### Properties
-* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: InvoiceSectionProperties
-* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Billing/billingAccounts/billingProfiles/policies
-### Properties
-* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyProperties
-* **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/policies' (ReadOnly, DeployTimeConstant)
-
 ## PolicyProperties
 ### Properties
 * **marketplacePurchases**: 'AllAllowed' | 'NotAllowed' | 'OnlyFreeAllowed'
 * **reservationPurchases**: 'Allowed' | 'NotAllowed'
 * **viewCharges**: 'Allowed' | 'NotAllowed'
-
-## Microsoft.Billing/billingAccounts/customers/policies
-### Properties
-* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CustomerPolicyProperties
-* **type**: 'Microsoft.Billing/billingAccounts/customers/policies' (ReadOnly, DeployTimeConstant)
 
 ## CustomerPolicyProperties
 ### Properties

@@ -1,6 +1,7 @@
 # Microsoft.SoftwarePlan @ 2019-12-01
 
-## Microsoft.SoftwarePlan/hybridUseBenefits
+## Resource Microsoft.SoftwarePlan/hybridUseBenefits@2019-12-01
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

@@ -1,6 +1,7 @@
 # Microsoft.Search @ 2020-03-13
 
-## Microsoft.Search/searchServices
+## Resource Microsoft.Search/searchServices@2020-03-13
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-13' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -12,6 +13,16 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Search/searchServices/privateEndpointConnections@2020-03-13
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-03-13' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: 'Microsoft.Search/searchServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Identity
 ### Properties
@@ -68,13 +79,4 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Search/searchServices/privateEndpointConnections
-### Properties
-* **apiVersion**: '2020-03-13' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: 'Microsoft.Search/searchServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 

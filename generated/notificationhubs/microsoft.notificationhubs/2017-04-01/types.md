@@ -1,6 +1,7 @@
 # Microsoft.NotificationHubs @ 2017-04-01
 
-## Microsoft.NotificationHubs/namespaces
+## Resource Microsoft.NotificationHubs/namespaces@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,45 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.NotificationHubs/namespaces' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.NotificationHubs/namespaces/AuthorizationRules@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SharedAccessAuthorizationRuleProperties (Required)
+* **sku**: Sku (ReadOnly)
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.NotificationHubs/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.NotificationHubs/namespaces/notificationHubs@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: NotificationHubProperties (Required)
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SharedAccessAuthorizationRuleProperties (Required)
+* **sku**: Sku (ReadOnly)
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## NamespaceProperties
 ### Properties
@@ -41,18 +81,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.NotificationHubs/namespaces/AuthorizationRules
-### Properties
-* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties (Required)
-* **sku**: Sku (ReadOnly)
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.NotificationHubs/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
-
 ## SharedAccessAuthorizationRuleProperties
 ### Properties
 * **claimType**: string (ReadOnly)
@@ -68,18 +96,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.NotificationHubs/namespaces/notificationHubs
-### Properties
-* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: NotificationHubProperties (Required)
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs' (ReadOnly, DeployTimeConstant)
 
 ## NotificationHubProperties
 ### Properties
@@ -160,18 +176,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules
-### Properties
-* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties (Required)
-* **sku**: Sku (ReadOnly)
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Additional Properties

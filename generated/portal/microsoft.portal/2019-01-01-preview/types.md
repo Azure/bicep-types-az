@@ -1,6 +1,7 @@
 # Microsoft.Portal @ 2019-01-01-preview
 
-## Microsoft.Portal/dashboards
+## Resource Microsoft.Portal/dashboards@2019-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,16 @@
 * **properties**: DashboardProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Portal/dashboards' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Portal/tenantConfigurations@2019-01-01-preview
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConfigurationProperties
+* **type**: 'Microsoft.Portal/tenantConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## DashboardProperties
 ### Properties
@@ -62,15 +73,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Portal/tenantConfigurations
-### Properties
-* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationProperties
-* **type**: 'Microsoft.Portal/tenantConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## ConfigurationProperties
 ### Properties

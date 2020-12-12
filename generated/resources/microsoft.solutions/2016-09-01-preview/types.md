@@ -1,6 +1,7 @@
 # Microsoft.Solutions @ 2016-09-01-preview
 
-## Microsoft.Solutions/applianceDefinitions
+## Resource Microsoft.Solutions/applianceDefinitions@2016-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-09-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -13,6 +14,23 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Solutions/applianceDefinitions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Solutions/appliances@2016-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity
+* **kind**: string
+* **location**: string
+* **managedBy**: string
+* **name**: string (Required, DeployTimeConstant)
+* **plan**: Plan
+* **properties**: ApplianceProperties
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Solutions/appliances' (ReadOnly, DeployTimeConstant)
 
 ## Identity
 ### Properties
@@ -52,22 +70,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Solutions/appliances
-### Properties
-* **apiVersion**: '2016-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
-* **kind**: string
-* **location**: string
-* **managedBy**: string
-* **name**: string (Required, DeployTimeConstant)
-* **plan**: Plan
-* **properties**: ApplianceProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Solutions/appliances' (ReadOnly, DeployTimeConstant)
 
 ## Plan
 ### Properties

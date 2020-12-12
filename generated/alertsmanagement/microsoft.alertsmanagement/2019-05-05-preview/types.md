@@ -1,6 +1,7 @@
 # Microsoft.AlertsManagement @ 2019-05-05-preview
 
-## Microsoft.AlertsManagement/actionRules
+## Resource Microsoft.AlertsManagement/actionRules@2019-05-05-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-05-05-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

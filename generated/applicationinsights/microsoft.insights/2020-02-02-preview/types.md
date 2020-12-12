@@ -1,6 +1,7 @@
 # Microsoft.Insights @ 2020-02-02-preview
 
-## Microsoft.Insights/components
+## Resource Microsoft.Insights/components@2020-02-02-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

@@ -1,6 +1,7 @@
 # Microsoft.Cache @ 2015-08-01
 
-## Microsoft.Cache/Redis
+## Resource Microsoft.Cache/Redis@2015-08-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

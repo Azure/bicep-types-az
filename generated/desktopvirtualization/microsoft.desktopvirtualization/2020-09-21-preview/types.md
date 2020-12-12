@@ -1,6 +1,7 @@
 # Microsoft.DesktopVirtualization @ 2020-09-21-preview
 
-## Microsoft.DesktopVirtualization/applicationGroups
+## Resource Microsoft.DesktopVirtualization/applicationGroups@2020-09-21-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-09-21-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,50 @@
 * **properties**: ApplicationGroupProperties (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DesktopVirtualization/applicationGroups/applications@2020-09-21-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-21-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationProperties (Required)
+* **type**: 'Microsoft.DesktopVirtualization/applicationGroups/applications' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DesktopVirtualization/hostPools@2020-09-21-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-21-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: HostPoolProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DesktopVirtualization/hostPools/msixPackages@2020-09-21-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-21-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MSIXPackageProperties (Required)
+* **type**: 'Microsoft.DesktopVirtualization/hostPools/msixPackages' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DesktopVirtualization/workspaces@2020-09-21-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-21-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkspaceProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationGroupProperties
 ### Properties
@@ -22,15 +67,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DesktopVirtualization/applicationGroups/applications
-### Properties
-* **apiVersion**: '2020-09-21-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationProperties (Required)
-* **type**: 'Microsoft.DesktopVirtualization/applicationGroups/applications' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationProperties
 ### Properties
@@ -47,17 +83,6 @@
 * **msixPackageApplicationId**: string
 * **msixPackageFamilyName**: string
 * **showInPortal**: bool
-
-## Microsoft.DesktopVirtualization/hostPools
-### Properties
-* **apiVersion**: '2020-09-21-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: HostPoolProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant)
 
 ## HostPoolProperties
 ### Properties
@@ -85,15 +110,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DesktopVirtualization/hostPools/msixPackages
-### Properties
-* **apiVersion**: '2020-09-21-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MSIXPackageProperties (Required)
-* **type**: 'Microsoft.DesktopVirtualization/hostPools/msixPackages' (ReadOnly, DeployTimeConstant)
 
 ## MSIXPackageProperties
 ### Properties
@@ -124,17 +140,6 @@
 * **dependencyName**: string
 * **minVersion**: string
 * **publisher**: string
-
-## Microsoft.DesktopVirtualization/workspaces
-### Properties
-* **apiVersion**: '2020-09-21-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## WorkspaceProperties
 ### Properties

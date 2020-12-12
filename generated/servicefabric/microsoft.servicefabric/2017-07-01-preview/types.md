@@ -1,6 +1,7 @@
 # Microsoft.ServiceFabric @ 2017-07-01-preview
 
-## Microsoft.ServiceFabric/clusters
+## Resource Microsoft.ServiceFabric/clusters@2017-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-07-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,50 @@
 * **properties**: ClusterProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ServiceFabric/clusters' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceFabric/clusters/applications@2017-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationResourceProperties
+* **type**: 'Microsoft.ServiceFabric/clusters/applications' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceFabric/clusters/applications/services@2017-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServiceResourceProperties
+* **type**: 'Microsoft.ServiceFabric/clusters/applications/services' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceFabric/clusters/applicationTypes@2017-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationTypeResourceProperties
+* **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceFabric/clusters/applicationTypes/versions@2017-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationTypeVersionResourceProperties
+* **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant)
 
 ## ClusterProperties
 ### Properties
@@ -135,16 +180,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.ServiceFabric/clusters/applications
-### Properties
-* **apiVersion**: '2017-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationResourceProperties
-* **type**: 'Microsoft.ServiceFabric/clusters/applications' (ReadOnly, DeployTimeConstant)
-
 ## ApplicationResourceProperties
 ### Properties
 * **maximumNodes**: int
@@ -200,16 +235,6 @@
 * **healthCheckWaitDuration**: string
 * **upgradeDomainTimeout**: string
 * **upgradeTimeout**: string
-
-## Microsoft.ServiceFabric/clusters/applications/services
-### Properties
-* **apiVersion**: '2017-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ServiceResourceProperties
-* **type**: 'Microsoft.ServiceFabric/clusters/applications/services' (ReadOnly, DeployTimeConstant)
 
 ## ServiceResourceProperties
 * **Discriminator**: serviceKind
@@ -308,29 +333,9 @@
 * **instanceCount**: int
 * **serviceKind**: 'Stateless' (Required)
 
-## Microsoft.ServiceFabric/clusters/applicationTypes
-### Properties
-* **apiVersion**: '2017-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationTypeResourceProperties
-* **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes' (ReadOnly, DeployTimeConstant)
-
 ## ApplicationTypeResourceProperties
 ### Properties
 * **provisioningState**: string (ReadOnly)
-
-## Microsoft.ServiceFabric/clusters/applicationTypes/versions
-### Properties
-* **apiVersion**: '2017-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationTypeVersionResourceProperties
-* **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationTypeVersionResourceProperties
 ### Properties

@@ -1,6 +1,7 @@
 # Microsoft.HybridNetwork @ 2020-01-01-preview
 
-## Microsoft.HybridNetwork/devices
+## Resource Microsoft.HybridNetwork/devices@2020-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,58 @@
 * **properties**: DevicePropertiesFormat
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.HybridNetwork/devices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.HybridNetwork/locations/vendors/networkFunctions@2020-01-01-preview
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VendorNetworkFunctionPropertiesFormat
+* **type**: 'Microsoft.HybridNetwork/locations/vendors/networkFunctions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.HybridNetwork/networkFunctions@2020-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: NetworkFunctionPropertiesFormat
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.HybridNetwork/networkFunctions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.HybridNetwork/vendors@2020-01-01-preview
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VendorPropertiesFormat
+* **type**: 'Microsoft.HybridNetwork/vendors' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.HybridNetwork/vendors/vendorSkus@2020-01-01-preview
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VendorSkuPropertiesFormat
+* **type**: 'Microsoft.HybridNetwork/vendors/vendorSkus' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.HybridNetwork/vendors/vendorSkus/previewSubscriptions@2020-01-01-preview
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.HybridNetwork/vendors/vendorSkus/previewSubscriptions' (ReadOnly, DeployTimeConstant)
 
 ## DevicePropertiesFormat
 * **Discriminator**: deviceType
@@ -26,15 +79,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.HybridNetwork/locations/vendors/networkFunctions
-### Properties
-* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VendorNetworkFunctionPropertiesFormat
-* **type**: 'Microsoft.HybridNetwork/locations/vendors/networkFunctions' (ReadOnly, DeployTimeConstant)
 
 ## VendorNetworkFunctionPropertiesFormat
 ### Properties
@@ -87,18 +131,6 @@
 * **keyData**: string
 * **path**: string
 
-## Microsoft.HybridNetwork/networkFunctions
-### Properties
-* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: NetworkFunctionPropertiesFormat
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.HybridNetwork/networkFunctions' (ReadOnly, DeployTimeConstant)
-
 ## NetworkFunctionPropertiesFormat
 ### Properties
 * **device**: SubResource
@@ -127,28 +159,10 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.HybridNetwork/vendors
-### Properties
-* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VendorPropertiesFormat
-* **type**: 'Microsoft.HybridNetwork/vendors' (ReadOnly, DeployTimeConstant)
-
 ## VendorPropertiesFormat
 ### Properties
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly)
 * **skus**: SubResource[] (ReadOnly)
-
-## Microsoft.HybridNetwork/vendors/vendorSkus
-### Properties
-* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VendorSkuPropertiesFormat
-* **type**: 'Microsoft.HybridNetwork/vendors/vendorSkus' (ReadOnly, DeployTimeConstant)
 
 ## VendorSkuPropertiesFormat
 ### Properties
@@ -210,12 +224,4 @@
 ## VirtualHardDisk
 ### Properties
 * **uri**: string
-
-## Microsoft.HybridNetwork/vendors/vendorSkus/previewSubscriptions
-### Properties
-* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.HybridNetwork/vendors/vendorSkus/previewSubscriptions' (ReadOnly, DeployTimeConstant)
 

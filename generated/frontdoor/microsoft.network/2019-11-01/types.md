@@ -1,6 +1,7 @@
 # Microsoft.Network @ 2019-11-01
 
-## Microsoft.Network/NetworkExperimentProfiles
+## Resource Microsoft.Network/NetworkExperimentProfiles@2019-11-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -12,16 +13,8 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Network/NetworkExperimentProfiles' (ReadOnly, DeployTimeConstant)
 
-## ProfileProperties
-### Properties
-* **enabledState**: 'Disabled' | 'Enabled'
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Network/NetworkExperimentProfiles/Experiments
+## Resource Microsoft.Network/NetworkExperimentProfiles/Experiments@2019-11-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -31,6 +24,15 @@
 * **properties**: ExperimentProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Network/NetworkExperimentProfiles/Experiments' (ReadOnly, DeployTimeConstant)
+
+## ProfileProperties
+### Properties
+* **enabledState**: 'Disabled' | 'Enabled'
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ExperimentProperties
 ### Properties

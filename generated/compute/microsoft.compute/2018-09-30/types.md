@@ -1,6 +1,7 @@
 # Microsoft.Compute @ 2018-09-30
 
-## Microsoft.Compute/disks
+## Resource Microsoft.Compute/disks@2018-09-30
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-30' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -13,6 +14,20 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Compute/disks' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
+
+## Resource Microsoft.Compute/snapshots@2018-09-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-09-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **managedBy**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SnapshotProperties
+* **sku**: SnapshotSku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant)
 
 ## DiskProperties
 ### Properties
@@ -72,19 +87,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Compute/snapshots
-### Properties
-* **apiVersion**: '2018-09-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **managedBy**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SnapshotProperties
-* **sku**: SnapshotSku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant)
 
 ## SnapshotProperties
 ### Properties

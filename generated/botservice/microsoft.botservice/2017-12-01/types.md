@@ -1,6 +1,7 @@
 # Microsoft.BotService @ 2017-12-01
 
-## Microsoft.BotService/botServices
+## Resource Microsoft.BotService/botServices@2017-12-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -13,6 +14,36 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.BotService/botServices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.BotService/botServices/channels@2017-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk'
+* **location**: string
+* **name**: 'DirectLineChannel' | 'EmailChannel' | 'FacebookChannel' | 'KikChannel' | 'MsTeamsChannel' | 'SkypeChannel' | 'SlackChannel' | 'SmsChannel' | 'TelegramChannel' | 'WebChatChannel' (Required, DeployTimeConstant)
+* **properties**: Channel
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.BotService/botServices/channels' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.BotService/botServices/Connections@2017-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk'
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConnectionSettingProperties
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.BotService/botServices/Connections' (ReadOnly, DeployTimeConstant)
 
 ## BotProperties
 ### Properties
@@ -38,20 +69,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.BotService/botServices/channels
-### Properties
-* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk'
-* **location**: string
-* **name**: 'DirectLineChannel' | 'EmailChannel' | 'FacebookChannel' | 'KikChannel' | 'MsTeamsChannel' | 'SkypeChannel' | 'SlackChannel' | 'SmsChannel' | 'TelegramChannel' | 'WebChatChannel' (Required, DeployTimeConstant)
-* **properties**: Channel
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.BotService/botServices/channels' (ReadOnly, DeployTimeConstant)
 
 ## Channel
 * **Discriminator**: channelName
@@ -262,20 +279,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.BotService/botServices/Connections
-### Properties
-* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk'
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectionSettingProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.BotService/botServices/Connections' (ReadOnly, DeployTimeConstant)
 
 ## ConnectionSettingProperties
 ### Properties

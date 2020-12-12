@@ -1,6 +1,7 @@
 # Microsoft.Cache @ 2020-10-01-preview
 
-## Microsoft.Cache/redisEnterprise
+## Resource Microsoft.Cache/redisEnterprise@2020-10-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -12,6 +13,26 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Cache/redisEnterprise' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
+
+## Resource Microsoft.Cache/redisEnterprise/databases@2020-10-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseProperties
+* **type**: 'Microsoft.Cache/redisEnterprise/databases' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Cache/redisEnterprise/privateEndpointConnections@2020-10-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: 'Microsoft.Cache/redisEnterprise/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## ClusterProperties
 ### Properties
@@ -54,15 +75,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Cache/redisEnterprise/databases
-### Properties
-* **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
-* **type**: 'Microsoft.Cache/redisEnterprise/databases' (ReadOnly, DeployTimeConstant)
-
 ## DatabaseProperties
 ### Properties
 * **clientProtocol**: 'Encrypted' | 'Plaintext'
@@ -78,13 +90,4 @@
 * **args**: string
 * **name**: string (Required)
 * **version**: string (ReadOnly)
-
-## Microsoft.Cache/redisEnterprise/privateEndpointConnections
-### Properties
-* **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: 'Microsoft.Cache/redisEnterprise/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 

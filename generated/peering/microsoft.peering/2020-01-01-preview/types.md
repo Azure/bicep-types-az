@@ -1,6 +1,7 @@
 # Microsoft.Peering @ 2020-01-01-preview
 
-## Microsoft.Peering/peerAsns
+## Resource Microsoft.Peering/peerAsns@2020-01-01-preview
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -8,6 +9,63 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PeerAsnProperties
 * **type**: 'Microsoft.Peering/peerAsns' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Peering/peerings@2020-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'Direct' | 'Exchange' (Required)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PeeringProperties
+* **sku**: PeeringSku (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Peering/peerings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Peering/peerings/registeredAsns@2020-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PeeringRegisteredAsnProperties
+* **type**: 'Microsoft.Peering/peerings/registeredAsns' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Peering/peerings/registeredPrefixes@2020-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PeeringRegisteredPrefixProperties
+* **type**: 'Microsoft.Peering/peerings/registeredPrefixes' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Peering/peeringServices@2020-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PeeringServiceProperties
+* **sku**: PeeringServiceSku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Peering/peeringServices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Peering/peeringServices/prefixes@2020-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PeeringServicePrefixProperties
+* **type**: 'Microsoft.Peering/peeringServices/prefixes' (ReadOnly, DeployTimeConstant)
 
 ## PeerAsnProperties
 ### Properties
@@ -22,19 +80,6 @@
 * **email**: string
 * **phone**: string
 * **role**: 'Noc' | 'Other' | 'Policy' | 'Service' | 'Technical'
-
-## Microsoft.Peering/peerings
-### Properties
-* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'Direct' | 'Exchange' (Required)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PeeringProperties
-* **sku**: PeeringSku (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Peering/peerings' (ReadOnly, DeployTimeConstant)
 
 ## PeeringProperties
 ### Properties
@@ -104,29 +149,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Peering/peerings/registeredAsns
-### Properties
-* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PeeringRegisteredAsnProperties
-* **type**: 'Microsoft.Peering/peerings/registeredAsns' (ReadOnly, DeployTimeConstant)
-
 ## PeeringRegisteredAsnProperties
 ### Properties
 * **asn**: int
 * **peeringServicePrefixKey**: string (ReadOnly)
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-
-## Microsoft.Peering/peerings/registeredPrefixes
-### Properties
-* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PeeringRegisteredPrefixProperties
-* **type**: 'Microsoft.Peering/peerings/registeredPrefixes' (ReadOnly, DeployTimeConstant)
 
 ## PeeringRegisteredPrefixProperties
 ### Properties
@@ -135,18 +162,6 @@
 * **prefix**: string
 * **prefixValidationState**: 'Failed' | 'Invalid' | 'None' | 'Pending' | 'Unknown' | 'Verified' | 'Warning' (ReadOnly)
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-
-## Microsoft.Peering/peeringServices
-### Properties
-* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PeeringServiceProperties
-* **sku**: PeeringServiceSku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Peering/peeringServices' (ReadOnly, DeployTimeConstant)
 
 ## PeeringServiceProperties
 ### Properties
@@ -161,15 +176,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Peering/peeringServices/prefixes
-### Properties
-* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PeeringServicePrefixProperties
-* **type**: 'Microsoft.Peering/peeringServices/prefixes' (ReadOnly, DeployTimeConstant)
 
 ## PeeringServicePrefixProperties
 ### Properties

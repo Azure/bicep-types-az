@@ -1,6 +1,7 @@
 # Microsoft.EngagementFabric @ 2018-09-01-preview
 
-## Microsoft.EngagementFabric/Accounts
+## Resource Microsoft.EngagementFabric/Accounts@2018-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,16 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.EngagementFabric/Accounts' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.EngagementFabric/Accounts/Channels@2018-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ChannelProperties
+* **type**: 'Microsoft.EngagementFabric/Accounts/Channels' (ReadOnly, DeployTimeConstant)
+
 ## SKU
 ### Properties
 * **name**: string (Required)
@@ -19,15 +30,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.EngagementFabric/Accounts/Channels
-### Properties
-* **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ChannelProperties
-* **type**: 'Microsoft.EngagementFabric/Accounts/Channels' (ReadOnly, DeployTimeConstant)
 
 ## ChannelProperties
 ### Properties

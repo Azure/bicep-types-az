@@ -1,6 +1,7 @@
 # Microsoft.Network @ 2015-11-01
 
-## Microsoft.Network/trafficmanagerprofiles
+## Resource Microsoft.Network/trafficmanagerprofiles@2015-11-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

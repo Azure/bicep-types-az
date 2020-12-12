@@ -1,6 +1,7 @@
 # Microsoft.ContainerRegistry @ 2019-05-01
 
-## Microsoft.ContainerRegistry/registries
+## Resource Microsoft.ContainerRegistry/registries@2019-05-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,30 @@
 * **sku**: Sku (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ContainerRegistry/registries' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ContainerRegistry/registries/replications@2019-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ReplicationProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ContainerRegistry/registries/replications' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ContainerRegistry/registries/webhooks@2019-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WebhookPropertiesCreateParameters
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ContainerRegistry/registries/webhooks' (ReadOnly, DeployTimeConstant)
 
 ## RegistryProperties
 ### Properties
@@ -79,17 +104,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.ContainerRegistry/registries/replications
-### Properties
-* **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ReplicationProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ContainerRegistry/registries/replications' (ReadOnly, DeployTimeConstant)
-
 ## ReplicationProperties
 ### Properties
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
@@ -98,17 +112,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.ContainerRegistry/registries/webhooks
-### Properties
-* **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WebhookPropertiesCreateParameters
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ContainerRegistry/registries/webhooks' (ReadOnly, DeployTimeConstant)
 
 ## WebhookPropertiesCreateParameters
 ### Properties

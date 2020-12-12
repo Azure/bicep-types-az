@@ -1,6 +1,7 @@
 # Microsoft.CustomerInsights @ 2017-04-26
 
-## Microsoft.CustomerInsights/hubs
+## Resource Microsoft.CustomerInsights/hubs@2017-04-26
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,126 @@
 * **properties**: HubPropertiesFormat
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.CustomerInsights/hubs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.CustomerInsights/hubs/authorizationPolicies@2017-04-26
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AuthorizationPolicy
+* **type**: 'Microsoft.CustomerInsights/hubs/authorizationPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.CustomerInsights/hubs/connectors@2017-04-26
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: Connector
+* **type**: 'Microsoft.CustomerInsights/hubs/connectors' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.CustomerInsights/hubs/connectors/mappings@2017-04-26
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConnectorMapping
+* **type**: 'Microsoft.CustomerInsights/hubs/connectors/mappings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.CustomerInsights/hubs/interactions@2017-04-26
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: InteractionTypeDefinition
+* **type**: 'Microsoft.CustomerInsights/hubs/interactions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.CustomerInsights/hubs/kpi@2017-04-26
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: KpiDefinition
+* **type**: 'Microsoft.CustomerInsights/hubs/kpi' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.CustomerInsights/hubs/links@2017-04-26
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: LinkDefinition
+* **type**: 'Microsoft.CustomerInsights/hubs/links' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.CustomerInsights/hubs/predictions@2017-04-26
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: Prediction
+* **type**: 'Microsoft.CustomerInsights/hubs/predictions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.CustomerInsights/hubs/profiles@2017-04-26
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ProfileTypeDefinition
+* **type**: 'Microsoft.CustomerInsights/hubs/profiles' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.CustomerInsights/hubs/relationshipLinks@2017-04-26
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RelationshipLinkDefinition
+* **type**: 'Microsoft.CustomerInsights/hubs/relationshipLinks' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.CustomerInsights/hubs/relationships@2017-04-26
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RelationshipDefinition
+* **type**: 'Microsoft.CustomerInsights/hubs/relationships' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.CustomerInsights/hubs/roleAssignments@2017-04-26
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RoleAssignment
+* **type**: 'Microsoft.CustomerInsights/hubs/roleAssignments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.CustomerInsights/hubs/views@2017-04-26
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: View
+* **type**: 'Microsoft.CustomerInsights/hubs/views' (ReadOnly, DeployTimeConstant)
 
 ## HubPropertiesFormat
 ### Properties
@@ -29,30 +150,12 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.CustomerInsights/hubs/authorizationPolicies
-### Properties
-* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AuthorizationPolicy
-* **type**: 'Microsoft.CustomerInsights/hubs/authorizationPolicies' (ReadOnly, DeployTimeConstant)
-
 ## AuthorizationPolicy
 ### Properties
 * **permissions**: 'Manage' | 'Read' | 'Write'[] (Required)
 * **policyName**: string (ReadOnly)
 * **primaryKey**: string
 * **secondaryKey**: string
-
-## Microsoft.CustomerInsights/hubs/connectors
-### Properties
-* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: Connector
-* **type**: 'Microsoft.CustomerInsights/hubs/connectors' (ReadOnly, DeployTimeConstant)
 
 ## Connector
 ### Properties
@@ -71,15 +174,6 @@
 ## Dictionary<string,Object>
 ### Additional Properties
 * **Additional Properties Type**: any
-
-## Microsoft.CustomerInsights/hubs/connectors/mappings
-### Properties
-* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectorMapping
-* **type**: 'Microsoft.CustomerInsights/hubs/connectors/mappings' (ReadOnly, DeployTimeConstant)
 
 ## ConnectorMapping
 ### Properties
@@ -140,15 +234,6 @@
 * **customFormatSpecifier**: string
 * **isEncrypted**: bool
 * **propertyName**: string (Required)
-
-## Microsoft.CustomerInsights/hubs/interactions
-### Properties
-* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: InteractionTypeDefinition
-* **type**: 'Microsoft.CustomerInsights/hubs/interactions' (ReadOnly, DeployTimeConstant)
 
 ## InteractionTypeDefinition
 ### Properties
@@ -259,15 +344,6 @@
 * **sourcePropertyName**: string (Required)
 * **targetPropertyName**: string (Required)
 
-## Microsoft.CustomerInsights/hubs/kpi
-### Properties
-* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: KpiDefinition
-* **type**: 'Microsoft.CustomerInsights/hubs/kpi' (ReadOnly, DeployTimeConstant)
-
 ## KpiDefinition
 ### Properties
 * **aliases**: KpiAlias[]
@@ -328,15 +404,6 @@
 * **lowerLimit**: int (Required)
 * **upperLimit**: int (Required)
 
-## Microsoft.CustomerInsights/hubs/links
-### Properties
-* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: LinkDefinition
-* **type**: 'Microsoft.CustomerInsights/hubs/links' (ReadOnly, DeployTimeConstant)
-
 ## LinkDefinition
 ### Properties
 * **description**: Dictionary<string,String>
@@ -366,15 +433,6 @@
 * **linkType**: 'CopyIfNull' | 'UpdateAlways'
 * **sourcePropertyName**: string (Required)
 * **targetPropertyName**: string (Required)
-
-## Microsoft.CustomerInsights/hubs/predictions
-### Properties
-* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: Prediction
-* **type**: 'Microsoft.CustomerInsights/hubs/predictions' (ReadOnly, DeployTimeConstant)
 
 ## Prediction
 ### Properties
@@ -425,15 +483,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.CustomerInsights/hubs/profiles
-### Properties
-* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ProfileTypeDefinition
-* **type**: 'Microsoft.CustomerInsights/hubs/profiles' (ReadOnly, DeployTimeConstant)
 
 ## ProfileTypeDefinition
 ### Properties
@@ -491,15 +540,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.CustomerInsights/hubs/relationshipLinks
-### Properties
-* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RelationshipLinkDefinition
-* **type**: 'Microsoft.CustomerInsights/hubs/relationshipLinks' (ReadOnly, DeployTimeConstant)
-
 ## RelationshipLinkDefinition
 ### Properties
 * **description**: Dictionary<string,String>
@@ -533,15 +573,6 @@
 * **interactionPropertyName**: string (Required)
 * **profilePropertyName**: string (Required)
 
-## Microsoft.CustomerInsights/hubs/relationships
-### Properties
-* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RelationshipDefinition
-* **type**: 'Microsoft.CustomerInsights/hubs/relationships' (ReadOnly, DeployTimeConstant)
-
 ## RelationshipDefinition
 ### Properties
 * **cardinality**: 'ManyToMany' | 'OneToMany' | 'OneToOne'
@@ -573,15 +604,6 @@
 ### Properties
 * **profileFieldName**: string (Required)
 * **relatedProfileKeyProperty**: string (Required)
-
-## Microsoft.CustomerInsights/hubs/roleAssignments
-### Properties
-* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RoleAssignment
-* **type**: 'Microsoft.CustomerInsights/hubs/roleAssignments' (ReadOnly, DeployTimeConstant)
 
 ## RoleAssignment
 ### Properties
@@ -628,15 +650,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.CustomerInsights/hubs/views
-### Properties
-* **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: View
-* **type**: 'Microsoft.CustomerInsights/hubs/views' (ReadOnly, DeployTimeConstant)
 
 ## View
 ### Properties

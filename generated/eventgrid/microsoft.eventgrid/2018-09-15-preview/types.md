@@ -1,6 +1,7 @@
 # Microsoft.EventGrid @ 2018-09-15-preview
 
-## Microsoft.EventGrid/domains
+## Resource Microsoft.EventGrid/domains@2018-09-15-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-15-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,28 @@
 * **properties**: DomainProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventGrid/eventSubscriptions@2018-09-15-preview
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2018-09-15-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EventSubscriptionProperties
+* **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventGrid/topics@2018-09-15-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-09-15-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TopicProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
 ## DomainProperties
 ### Properties
@@ -53,15 +76,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.EventGrid/eventSubscriptions
-### Properties
-* **apiVersion**: '2018-09-15-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EventSubscriptionProperties
-* **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant)
 
 ## EventSubscriptionProperties
 ### Properties
@@ -293,17 +307,6 @@
 ### Properties
 * **eventTimeToLiveInMinutes**: int
 * **maxDeliveryAttempts**: int
-
-## Microsoft.EventGrid/topics
-### Properties
-* **apiVersion**: '2018-09-15-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TopicProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
 ## TopicProperties
 ### Properties

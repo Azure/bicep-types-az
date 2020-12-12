@@ -1,6 +1,7 @@
 # Microsoft.GuestConfiguration @ 2018-01-20-preview
 
-## Microsoft.GuestConfiguration/guestConfigurationAssignments
+## Resource Microsoft.GuestConfiguration/guestConfigurationAssignments@2018-01-20-preview
+* **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2018-01-20-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

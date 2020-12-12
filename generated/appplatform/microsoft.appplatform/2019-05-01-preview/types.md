@@ -1,6 +1,7 @@
 # Microsoft.AppPlatform @ 2019-05-01-preview
 
-## Microsoft.AppPlatform/Spring
+## Resource Microsoft.AppPlatform/Spring@2019-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,59 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.AppPlatform/Spring' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AppPlatform/Spring/apps@2019-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: ManagedIdentityProperties
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AppResourceProperties
+* **type**: 'Microsoft.AppPlatform/Spring/apps' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AppPlatform/Spring/apps/bindings@2019-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BindingResourceProperties
+* **type**: 'Microsoft.AppPlatform/Spring/apps/bindings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AppPlatform/Spring/apps/deployments@2019-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DeploymentResourceProperties
+* **sku**: Sku
+* **type**: 'Microsoft.AppPlatform/Spring/apps/deployments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AppPlatform/Spring/apps/domains@2019-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CustomDomainProperties
+* **type**: 'Microsoft.AppPlatform/Spring/apps/domains' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AppPlatform/Spring/certificates@2019-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CertificateProperties
+* **type**: 'Microsoft.AppPlatform/Spring/certificates' (ReadOnly, DeployTimeConstant)
 
 ## ClusterResourceProperties
 ### Properties
@@ -93,17 +147,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.AppPlatform/Spring/apps
-### Properties
-* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ManagedIdentityProperties
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AppResourceProperties
-* **type**: 'Microsoft.AppPlatform/Spring/apps' (ReadOnly, DeployTimeConstant)
-
 ## ManagedIdentityProperties
 ### Properties
 * **principalId**: string
@@ -133,15 +176,6 @@
 * **mountPath**: string
 * **sizeInGB**: int
 
-## Microsoft.AppPlatform/Spring/apps/bindings
-### Properties
-* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BindingResourceProperties
-* **type**: 'Microsoft.AppPlatform/Spring/apps/bindings' (ReadOnly, DeployTimeConstant)
-
 ## BindingResourceProperties
 ### Properties
 * **bindingParameters**: Dictionary<string,Object>
@@ -156,16 +190,6 @@
 ## Dictionary<string,Object>
 ### Additional Properties
 * **Additional Properties Type**: any
-
-## Microsoft.AppPlatform/Spring/apps/deployments
-### Properties
-* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DeploymentResourceProperties
-* **sku**: Sku
-* **type**: 'Microsoft.AppPlatform/Spring/apps/deployments' (ReadOnly, DeployTimeConstant)
 
 ## DeploymentResourceProperties
 ### Properties
@@ -207,29 +231,11 @@
 * **type**: 'Jar' | 'NetCoreZip' | 'Source'
 * **version**: string
 
-## Microsoft.AppPlatform/Spring/apps/domains
-### Properties
-* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CustomDomainProperties
-* **type**: 'Microsoft.AppPlatform/Spring/apps/domains' (ReadOnly, DeployTimeConstant)
-
 ## CustomDomainProperties
 ### Properties
 * **appName**: string (ReadOnly)
 * **certName**: string
 * **thumbprint**: string
-
-## Microsoft.AppPlatform/Spring/certificates
-### Properties
-* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CertificateProperties
-* **type**: 'Microsoft.AppPlatform/Spring/certificates' (ReadOnly, DeployTimeConstant)
 
 ## CertificateProperties
 ### Properties

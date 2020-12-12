@@ -1,6 +1,7 @@
 # Microsoft.StorageCache @ 2020-03-01
 
-## Microsoft.StorageCache/caches
+## Resource Microsoft.StorageCache/caches@2020-03-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -13,6 +14,18 @@
 * **systemData**: systemData (ReadOnly)
 * **tags**: any
 * **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.StorageCache/caches/storageTargets@2020-03-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: StorageTargetProperties
+* **systemData**: systemData (ReadOnly)
+* **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant)
 
 ## CacheIdentity
 ### Properties
@@ -79,17 +92,6 @@
 * **lastModifiedAt**: string
 * **lastModifiedBy**: string
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
-
-## Microsoft.StorageCache/caches/storageTargets
-### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageTargetProperties
-* **systemData**: systemData (ReadOnly)
-* **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant)
 
 ## StorageTargetProperties
 * **Discriminator**: targetType

@@ -1,6 +1,7 @@
 # Microsoft.ContainerRegistry @ 2019-05-01-preview
 
-## Microsoft.ContainerRegistry/registries/scopeMaps
+## Resource Microsoft.ContainerRegistry/registries/scopeMaps@2019-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -9,6 +10,17 @@
 * **properties**: ScopeMapProperties
 * **systemData**: SystemData (ReadOnly)
 * **type**: 'Microsoft.ContainerRegistry/registries/scopeMaps' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ContainerRegistry/registries/tokens@2019-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TokenProperties
+* **systemData**: SystemData (ReadOnly)
+* **type**: 'Microsoft.ContainerRegistry/registries/tokens' (ReadOnly, DeployTimeConstant)
 
 ## ScopeMapProperties
 ### Properties
@@ -26,16 +38,6 @@
 * **lastModifiedAt**: string
 * **lastModifiedBy**: string
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
-
-## Microsoft.ContainerRegistry/registries/tokens
-### Properties
-* **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TokenProperties
-* **systemData**: SystemData (ReadOnly)
-* **type**: 'Microsoft.ContainerRegistry/registries/tokens' (ReadOnly, DeployTimeConstant)
 
 ## TokenProperties
 ### Properties

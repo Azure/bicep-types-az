@@ -1,6 +1,7 @@
 # Microsoft.MachineLearningExperimentation @ 2017-05-01-preview
 
-## Microsoft.MachineLearningExperimentation/accounts
+## Resource Microsoft.MachineLearningExperimentation/accounts@2017-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,30 @@
 * **properties**: AccountProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.MachineLearningExperimentation/accounts' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.MachineLearningExperimentation/accounts/workspaces@2017-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkspaceProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.MachineLearningExperimentation/accounts/workspaces' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.MachineLearningExperimentation/accounts/workspaces/projects@2017-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ProjectProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.MachineLearningExperimentation/accounts/workspaces/projects' (ReadOnly, DeployTimeConstant)
 
 ## AccountProperties
 ### Properties
@@ -33,17 +58,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.MachineLearningExperimentation/accounts/workspaces
-### Properties
-* **apiVersion**: '2017-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.MachineLearningExperimentation/accounts/workspaces' (ReadOnly, DeployTimeConstant)
-
 ## WorkspaceProperties
 ### Properties
 * **accountId**: string (ReadOnly)
@@ -56,17 +70,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.MachineLearningExperimentation/accounts/workspaces/projects
-### Properties
-* **apiVersion**: '2017-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ProjectProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.MachineLearningExperimentation/accounts/workspaces/projects' (ReadOnly, DeployTimeConstant)
 
 ## ProjectProperties
 ### Properties

@@ -1,6 +1,7 @@
 # Microsoft.HybridData @ 2019-06-01
 
-## Microsoft.HybridData/dataManagers
+## Resource Microsoft.HybridData/dataManagers@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -12,6 +13,26 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.HybridData/dataManagers' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.HybridData/dataManagers/dataServices/jobDefinitions@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: JobDefinitionProperties (Required)
+* **type**: 'Microsoft.HybridData/dataManagers/dataServices/jobDefinitions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.HybridData/dataManagers/dataStores@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DataStoreProperties (Required)
+* **type**: 'Microsoft.HybridData/dataManagers/dataStores' (ReadOnly, DeployTimeConstant)
+
 ## Sku
 ### Properties
 * **name**: string
@@ -20,15 +41,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.HybridData/dataManagers/dataServices/jobDefinitions
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: JobDefinitionProperties (Required)
-* **type**: 'Microsoft.HybridData/dataManagers/dataServices/jobDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## JobDefinitionProperties
 ### Properties
@@ -52,15 +64,6 @@
 ### Properties
 * **name**: string
 * **policyList**: string[]
-
-## Microsoft.HybridData/dataManagers/dataStores
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DataStoreProperties (Required)
-* **type**: 'Microsoft.HybridData/dataManagers/dataStores' (ReadOnly, DeployTimeConstant)
 
 ## DataStoreProperties
 ### Properties

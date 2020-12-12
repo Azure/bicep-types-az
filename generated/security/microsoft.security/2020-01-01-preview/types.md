@@ -1,6 +1,7 @@
 # Microsoft.Security @ 2020-01-01-preview
 
-## Microsoft.Security/connectors
+## Resource Microsoft.Security/connectors@2020-01-01-preview
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

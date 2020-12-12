@@ -1,6 +1,7 @@
 # Microsoft.Compute @ 2016-03-30
 
-## Microsoft.Compute/availabilitySets
+## Resource Microsoft.Compute/availabilitySets@2016-03-30
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,47 @@
 * **properties**: AvailabilitySetProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Compute/availabilitySets' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Compute/virtualMachines@2016-03-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: VirtualMachineIdentity
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **plan**: Plan
+* **properties**: VirtualMachineProperties
+* **resources**: VirtualMachineExtension[] (ReadOnly)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/virtualMachines' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Compute/virtualMachines/extensions@2016-03-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualMachineExtensionProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/virtualMachines/extensions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Compute/virtualMachineScaleSets@2016-03-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: VirtualMachineScaleSetIdentity
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualMachineScaleSetProperties
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Compute/virtualMachineScaleSets' (ReadOnly, DeployTimeConstant)
 
 ## AvailabilitySetProperties
 ### Properties
@@ -33,20 +75,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Compute/virtualMachines
-### Properties
-* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: VirtualMachineIdentity
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **plan**: Plan
-* **properties**: VirtualMachineProperties
-* **resources**: VirtualMachineExtension[] (ReadOnly)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/virtualMachines' (ReadOnly, DeployTimeConstant)
 
 ## VirtualMachineIdentity
 ### Properties
@@ -282,33 +310,9 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Compute/virtualMachines/extensions
-### Properties
-* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualMachineExtensionProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/virtualMachines/extensions' (ReadOnly, DeployTimeConstant)
-
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Compute/virtualMachineScaleSets
-### Properties
-* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: VirtualMachineScaleSetIdentity
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualMachineScaleSetProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Compute/virtualMachineScaleSets' (ReadOnly, DeployTimeConstant)
 
 ## VirtualMachineScaleSetIdentity
 ### Properties

@@ -1,6 +1,7 @@
 # Microsoft.Automation @ 2020-01-13-preview
 
-## Microsoft.Automation/automationAccounts/privateEndpointConnections
+## Resource Microsoft.Automation/automationAccounts/privateEndpointConnections@2020-01-13-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

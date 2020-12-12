@@ -1,6 +1,7 @@
 # Microsoft.RedHatOpenShift @ 2020-04-30
 
-## Microsoft.RedHatOpenShift/openShiftClusters
+## Resource Microsoft.RedHatOpenShift/openShiftClusters@2020-04-30
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-30' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

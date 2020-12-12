@@ -1,6 +1,7 @@
 # Microsoft.BatchAI @ 2018-05-01
 
-## Microsoft.BatchAI/workspaces
+## Resource Microsoft.BatchAI/workspaces@2018-05-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,36 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.BatchAI/workspaces' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.BatchAI/workspaces/clusters@2018-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ClusterBaseProperties
+* **type**: 'Microsoft.BatchAI/workspaces/clusters' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.BatchAI/workspaces/experiments/jobs@2018-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: JobBaseProperties
+* **type**: 'Microsoft.BatchAI/workspaces/experiments/jobs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.BatchAI/workspaces/fileServers@2018-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: FileServerBaseProperties
+* **type**: 'Microsoft.BatchAI/workspaces/fileServers' (ReadOnly, DeployTimeConstant)
+
 ## WorkspaceProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
@@ -20,15 +51,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.BatchAI/workspaces/clusters
-### Properties
-* **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterBaseProperties
-* **type**: 'Microsoft.BatchAI/workspaces/clusters' (ReadOnly, DeployTimeConstant)
 
 ## ClusterBaseProperties
 ### Properties
@@ -186,15 +208,6 @@
 * **version**: string
 * **virtualMachineImageId**: string
 
-## Microsoft.BatchAI/workspaces/experiments/jobs
-### Properties
-* **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: JobBaseProperties
-* **type**: 'Microsoft.BatchAI/workspaces/experiments/jobs' (ReadOnly, DeployTimeConstant)
-
 ## JobBaseProperties
 ### Properties
 * **caffe2Settings**: Caffe2Settings
@@ -333,15 +346,6 @@
 * **pythonScriptFilePath**: string (Required)
 * **workerCommandLineArgs**: string
 * **workerCount**: int
-
-## Microsoft.BatchAI/workspaces/fileServers
-### Properties
-* **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: FileServerBaseProperties
-* **type**: 'Microsoft.BatchAI/workspaces/fileServers' (ReadOnly, DeployTimeConstant)
 
 ## FileServerBaseProperties
 ### Properties

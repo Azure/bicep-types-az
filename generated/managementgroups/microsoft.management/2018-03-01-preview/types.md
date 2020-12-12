@@ -1,6 +1,7 @@
 # Microsoft.Management @ 2018-03-01-preview
 
-## Microsoft.Management/managementGroups
+## Resource Microsoft.Management/managementGroups@2018-03-01-preview
+* **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

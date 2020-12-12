@@ -1,6 +1,7 @@
 # Microsoft.AutonomousDevelopmentPlatform @ 2020-07-01-preview
 
-## Microsoft.AutonomousDevelopmentPlatform/accounts
+## Resource Microsoft.AutonomousDevelopmentPlatform/accounts@2020-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,16 @@
 * **systemData**: systemData (ReadOnly)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.AutonomousDevelopmentPlatform/accounts' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AutonomousDevelopmentPlatform/accounts/dataPools@2020-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DataPoolProperties
+* **type**: 'Microsoft.AutonomousDevelopmentPlatform/accounts/dataPools' (ReadOnly, DeployTimeConstant)
 
 ## AccountProperties
 ### Properties
@@ -29,15 +40,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.AutonomousDevelopmentPlatform/accounts/dataPools
-### Properties
-* **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DataPoolProperties
-* **type**: 'Microsoft.AutonomousDevelopmentPlatform/accounts/dataPools' (ReadOnly, DeployTimeConstant)
 
 ## DataPoolProperties
 ### Properties

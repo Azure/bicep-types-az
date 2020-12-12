@@ -1,6 +1,7 @@
 # Microsoft.Resources @ 2019-10-01-preview
 
-## Microsoft.Resources/deploymentScripts
+## Resource Microsoft.Resources/deploymentScripts@2019-10-01-preview
+* **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)

@@ -1,6 +1,7 @@
 # Microsoft.ServiceBus @ 2015-08-01
 
-## Microsoft.ServiceBus/namespaces
+## Resource Microsoft.ServiceBus/namespaces@2015-08-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,72 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ServiceBus/namespaces' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceBus/namespaces/AuthorizationRules@2015-08-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SharedAccessAuthorizationRuleProperties
+* **type**: 'Microsoft.ServiceBus/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceBus/namespaces/queues@2015-08-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: QueueProperties
+* **type**: 'Microsoft.ServiceBus/namespaces/queues' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceBus/namespaces/queues/authorizationRules@2015-08-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SharedAccessAuthorizationRuleProperties
+* **type**: 'Microsoft.ServiceBus/namespaces/queues/authorizationRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceBus/namespaces/topics@2015-08-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TopicProperties
+* **type**: 'Microsoft.ServiceBus/namespaces/topics' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceBus/namespaces/topics/authorizationRules@2015-08-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SharedAccessAuthorizationRuleProperties
+* **type**: 'Microsoft.ServiceBus/namespaces/topics/authorizationRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceBus/namespaces/topics/subscriptions@2015-08-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SubscriptionProperties
+* **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions' (ReadOnly, DeployTimeConstant)
 
 ## NamespaceProperties
 ### Properties
@@ -32,29 +99,9 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.ServiceBus/namespaces/AuthorizationRules
-### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties
-* **type**: 'Microsoft.ServiceBus/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
-
 ## SharedAccessAuthorizationRuleProperties
 ### Properties
 * **rights**: 'Listen' | 'Manage' | 'Send'[] (Required)
-
-## Microsoft.ServiceBus/namespaces/queues
-### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: QueueProperties
-* **type**: 'Microsoft.ServiceBus/namespaces/queues' (ReadOnly, DeployTimeConstant)
 
 ## QueueProperties
 ### Properties
@@ -89,26 +136,6 @@
 * **transferDeadLetterMessageCount**: int (ReadOnly)
 * **transferMessageCount**: int (ReadOnly)
 
-## Microsoft.ServiceBus/namespaces/queues/authorizationRules
-### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties
-* **type**: 'Microsoft.ServiceBus/namespaces/queues/authorizationRules' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.ServiceBus/namespaces/topics
-### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TopicProperties
-* **type**: 'Microsoft.ServiceBus/namespaces/topics' (ReadOnly, DeployTimeConstant)
-
 ## TopicProperties
 ### Properties
 * **accessedAt**: string (ReadOnly)
@@ -131,26 +158,6 @@
 * **subscriptionCount**: int (ReadOnly)
 * **supportOrdering**: bool
 * **updatedAt**: string (ReadOnly)
-
-## Microsoft.ServiceBus/namespaces/topics/authorizationRules
-### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties
-* **type**: 'Microsoft.ServiceBus/namespaces/topics/authorizationRules' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.ServiceBus/namespaces/topics/subscriptions
-### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SubscriptionProperties
-* **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions' (ReadOnly, DeployTimeConstant)
 
 ## SubscriptionProperties
 ### Properties

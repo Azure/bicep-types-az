@@ -1,6 +1,7 @@
 # Microsoft.ServiceFabric @ 2020-01-01-preview
 
-## Microsoft.ServiceFabric/managedClusters
+## Resource Microsoft.ServiceFabric/managedClusters@2020-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -12,6 +13,17 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ServiceFabric/managedClusters' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceFabric/managedClusters/nodeTypes@2020-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: NodeTypeProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant)
 
 ## ManagedClusterProperties
 ### Properties
@@ -130,16 +142,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.ServiceFabric/managedClusters/nodeTypes
-### Properties
-* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: NodeTypeProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant)
 
 ## NodeTypeProperties
 ### Properties

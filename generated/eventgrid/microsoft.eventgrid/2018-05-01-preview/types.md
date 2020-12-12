@@ -1,6 +1,7 @@
 # Microsoft.EventGrid @ 2018-05-01-preview
 
-## Microsoft.EventGrid/eventSubscriptions
+## Resource Microsoft.EventGrid/eventSubscriptions@2018-05-01-preview
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2018-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -8,6 +9,18 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: EventSubscriptionProperties
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventGrid/topics@2018-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TopicProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
 ## EventSubscriptionProperties
 ### Properties
@@ -112,17 +125,6 @@
 ### Properties
 * **eventTimeToLiveInMinutes**: int
 * **maxDeliveryAttempts**: int
-
-## Microsoft.EventGrid/topics
-### Properties
-* **apiVersion**: '2018-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TopicProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
 ## TopicProperties
 ### Properties

@@ -1,6 +1,7 @@
 # Microsoft.DataMigration @ 2018-04-19
 
-## Microsoft.DataMigration/services
+## Resource Microsoft.DataMigration/services@2018-04-19
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-04-19' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -13,6 +14,29 @@
 * **sku**: ServiceSku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DataMigration/services' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataMigration/services/projects@2018-04-19
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-04-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ProjectProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DataMigration/services/projects' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataMigration/services/projects/tasks@2018-04-19
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-04-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ProjectTaskProperties
+* **type**: 'Microsoft.DataMigration/services/projects/tasks' (ReadOnly, DeployTimeConstant)
 
 ## DataMigrationServiceProperties
 ### Properties
@@ -31,17 +55,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DataMigration/services/projects
-### Properties
-* **apiVersion**: '2018-04-19' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ProjectProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DataMigration/services/projects' (ReadOnly, DeployTimeConstant)
 
 ## ProjectProperties
 ### Properties
@@ -138,16 +151,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DataMigration/services/projects/tasks
-### Properties
-* **apiVersion**: '2018-04-19' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ProjectTaskProperties
-* **type**: 'Microsoft.DataMigration/services/projects/tasks' (ReadOnly, DeployTimeConstant)
 
 ## ProjectTaskProperties
 * **Discriminator**: taskType

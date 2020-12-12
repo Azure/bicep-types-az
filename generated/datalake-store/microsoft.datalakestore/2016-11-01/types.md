@@ -1,6 +1,7 @@
 # Microsoft.DataLakeStore @ 2016-11-01
 
-## Microsoft.DataLakeStore/accounts
+## Resource Microsoft.DataLakeStore/accounts@2016-11-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,36 @@
 * **properties**: CreateDataLakeStoreAccountProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DataLakeStore/accounts' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataLakeStore/accounts/firewallRules@2016-11-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CreateOrUpdateFirewallRuleProperties (Required)
+* **type**: 'Microsoft.DataLakeStore/accounts/firewallRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataLakeStore/accounts/trustedIdProviders@2016-11-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CreateOrUpdateTrustedIdProviderProperties (Required)
+* **type**: 'Microsoft.DataLakeStore/accounts/trustedIdProviders' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataLakeStore/accounts/virtualNetworkRules@2016-11-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CreateOrUpdateVirtualNetworkRuleProperties (Required)
+* **type**: 'Microsoft.DataLakeStore/accounts/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
 
 ## EncryptionIdentity
 ### Properties
@@ -87,31 +118,4 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DataLakeStore/accounts/firewallRules
-### Properties
-* **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateOrUpdateFirewallRuleProperties (Required)
-* **type**: 'Microsoft.DataLakeStore/accounts/firewallRules' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.DataLakeStore/accounts/trustedIdProviders
-### Properties
-* **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateOrUpdateTrustedIdProviderProperties (Required)
-* **type**: 'Microsoft.DataLakeStore/accounts/trustedIdProviders' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.DataLakeStore/accounts/virtualNetworkRules
-### Properties
-* **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateOrUpdateVirtualNetworkRuleProperties (Required)
-* **type**: 'Microsoft.DataLakeStore/accounts/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
 

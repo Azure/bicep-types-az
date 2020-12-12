@@ -1,6 +1,7 @@
 # Microsoft.Logic @ 2018-07-01-preview
 
-## Microsoft.Logic/integrationAccounts
+## Resource Microsoft.Logic/integrationAccounts@2018-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -12,15 +13,8 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Logic/integrationAccounts' (ReadOnly, DeployTimeConstant)
 
-## IntegrationAccountSku
-### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Standard' (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Logic/integrationAccounts/agreements
+## Resource Microsoft.Logic/integrationAccounts/agreements@2018-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -30,6 +24,110 @@
 * **properties**: IntegrationAccountAgreementProperties (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Logic/integrationAccounts/agreements' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Logic/integrationAccounts/assemblies@2018-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AssemblyProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Logic/integrationAccounts/assemblies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Logic/integrationAccounts/batchConfigurations@2018-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BatchConfigurationProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Logic/integrationAccounts/batchConfigurations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Logic/integrationAccounts/certificates@2018-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IntegrationAccountCertificateProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Logic/integrationAccounts/certificates' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Logic/integrationAccounts/maps@2018-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IntegrationAccountMapProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Logic/integrationAccounts/maps' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Logic/integrationAccounts/partners@2018-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IntegrationAccountPartnerProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Logic/integrationAccounts/partners' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Logic/integrationAccounts/schemas@2018-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IntegrationAccountSchemaProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Logic/integrationAccounts/schemas' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Logic/integrationAccounts/sessions@2018-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IntegrationAccountSessionProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Logic/integrationAccounts/sessions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Logic/workflows@2018-07-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkflowProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Logic/workflows' (ReadOnly, DeployTimeConstant)
+
+## IntegrationAccountSku
+### Properties
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Standard' (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## IntegrationAccountAgreementProperties
 ### Properties
@@ -483,17 +581,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Logic/integrationAccounts/assemblies
-### Properties
-* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AssemblyProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Logic/integrationAccounts/assemblies' (ReadOnly, DeployTimeConstant)
-
 ## AssemblyProperties
 ### Properties
 * **assemblyCulture**: string
@@ -523,17 +610,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Logic/integrationAccounts/batchConfigurations
-### Properties
-* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BatchConfigurationProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Logic/integrationAccounts/batchConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## BatchConfigurationProperties
 ### Properties
@@ -575,17 +651,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Logic/integrationAccounts/certificates
-### Properties
-* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IntegrationAccountCertificateProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Logic/integrationAccounts/certificates' (ReadOnly, DeployTimeConstant)
-
 ## IntegrationAccountCertificateProperties
 ### Properties
 * **changedTime**: string (ReadOnly)
@@ -610,17 +675,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Logic/integrationAccounts/maps
-### Properties
-* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IntegrationAccountMapProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Logic/integrationAccounts/maps' (ReadOnly, DeployTimeConstant)
-
 ## IntegrationAccountMapProperties
 ### Properties
 * **changedTime**: string (ReadOnly)
@@ -639,17 +693,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Logic/integrationAccounts/partners
-### Properties
-* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IntegrationAccountPartnerProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Logic/integrationAccounts/partners' (ReadOnly, DeployTimeConstant)
 
 ## IntegrationAccountPartnerProperties
 ### Properties
@@ -671,17 +714,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Logic/integrationAccounts/schemas
-### Properties
-* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IntegrationAccountSchemaProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Logic/integrationAccounts/schemas' (ReadOnly, DeployTimeConstant)
-
 ## IntegrationAccountSchemaProperties
 ### Properties
 * **changedTime**: string (ReadOnly)
@@ -699,17 +731,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Logic/integrationAccounts/sessions
-### Properties
-* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IntegrationAccountSessionProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Logic/integrationAccounts/sessions' (ReadOnly, DeployTimeConstant)
-
 ## IntegrationAccountSessionProperties
 ### Properties
 * **changedTime**: string (ReadOnly)
@@ -719,17 +740,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Logic/workflows
-### Properties
-* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkflowProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Logic/workflows' (ReadOnly, DeployTimeConstant)
 
 ## WorkflowProperties
 ### Properties

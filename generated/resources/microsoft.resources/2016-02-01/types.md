@@ -1,6 +1,7 @@
 # Microsoft.Resources @ 2016-02-01
 
-## Microsoft.Resources/deployments
+## Resource Microsoft.Resources/deployments@2016-02-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-02-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -8,6 +9,18 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: DeploymentProperties
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Resources/resourceGroups@2016-02-01
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2016-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ResourceGroupProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Resources/resourceGroups' (ReadOnly, DeployTimeConstant)
 
 ## DeploymentProperties
 ### Properties
@@ -79,17 +92,6 @@
 ### Properties
 * **contentVersion**: string
 * **uri**: string (Required)
-
-## Microsoft.Resources/resourceGroups
-### Properties
-* **apiVersion**: '2016-02-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ResourceGroupProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Resources/resourceGroups' (ReadOnly, DeployTimeConstant)
 
 ## ResourceGroupProperties
 ### Properties

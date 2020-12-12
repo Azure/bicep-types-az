@@ -1,6 +1,7 @@
 # Microsoft.EventGrid @ 2019-06-01
 
-## Microsoft.EventGrid/domains
+## Resource Microsoft.EventGrid/domains@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,28 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.EventGrid/eventSubscriptions@2019-06-01
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EventSubscriptionProperties
+* **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventGrid/topics@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TopicProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
+
 ## DomainProperties
 ### Properties
 * **endpoint**: string (ReadOnly)
@@ -19,15 +42,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.EventGrid/eventSubscriptions
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: EventSubscriptionProperties
-* **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant)
 
 ## EventSubscriptionProperties
 ### Properties
@@ -272,17 +286,6 @@
 ### Properties
 * **eventTimeToLiveInMinutes**: int
 * **maxDeliveryAttempts**: int
-
-## Microsoft.EventGrid/topics
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TopicProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
 ## TopicProperties
 ### Properties

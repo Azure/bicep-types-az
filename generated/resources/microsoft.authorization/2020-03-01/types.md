@@ -1,6 +1,7 @@
 # Microsoft.Authorization @ 2020-03-01
 
-## Microsoft.Authorization/policyAssignments
+## Resource Microsoft.Authorization/policyAssignments@2020-03-01
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,26 @@
 * **properties**: PolicyAssignmentProperties
 * **sku**: PolicySku
 * **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Authorization/policyDefinitions@2020-03-01
+* **Valid Scope(s)**: ManagementGroup, Subscription
+### Properties
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PolicyDefinitionProperties
+* **type**: 'Microsoft.Authorization/policyDefinitions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Authorization/policySetDefinitions@2020-03-01
+* **Valid Scope(s)**: ManagementGroup, Subscription
+### Properties
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PolicySetDefinitionProperties
+* **type**: 'Microsoft.Authorization/policySetDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## Identity
 ### Properties
@@ -42,15 +63,6 @@
 * **name**: string (Required)
 * **tier**: string
 
-## Microsoft.Authorization/policyDefinitions
-### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyDefinitionProperties
-* **type**: 'Microsoft.Authorization/policyDefinitions' (ReadOnly, DeployTimeConstant)
-
 ## PolicyDefinitionProperties
 ### Properties
 * **description**: string
@@ -78,24 +90,6 @@
 * **displayName**: string
 ### Additional Properties
 * **Additional Properties Type**: any
-
-## Microsoft.Authorization/policyDefinitions
-### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyDefinitionProperties
-* **type**: 'Microsoft.Authorization/policyDefinitions' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Authorization/policySetDefinitions
-### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicySetDefinitionProperties
-* **type**: 'Microsoft.Authorization/policySetDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## PolicySetDefinitionProperties
 ### Properties
@@ -129,13 +123,4 @@
 ## Dictionary<string,ParameterValuesValue>
 ### Additional Properties
 * **Additional Properties Type**: ParameterValuesValue
-
-## Microsoft.Authorization/policySetDefinitions
-### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicySetDefinitionProperties
-* **type**: 'Microsoft.Authorization/policySetDefinitions' (ReadOnly, DeployTimeConstant)
 

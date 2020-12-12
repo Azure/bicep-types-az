@@ -1,6 +1,7 @@
 # Microsoft.Relay @ 2016-07-01
 
-## Microsoft.Relay/namespaces
+## Resource Microsoft.Relay/namespaces@2016-07-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,56 @@
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Relay/namespaces' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Relay/namespaces/AuthorizationRules@2016-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AuthorizationRuleProperties (Required)
+* **type**: 'Microsoft.Relay/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Relay/namespaces/HybridConnections@2016-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: HybridConnectionProperties
+* **type**: 'Microsoft.Relay/namespaces/HybridConnections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Relay/namespaces/HybridConnections/authorizationRules@2016-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AuthorizationRuleProperties (Required)
+* **type**: 'Microsoft.Relay/namespaces/HybridConnections/authorizationRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Relay/namespaces/WcfRelays@2016-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WcfRelayProperties
+* **type**: 'Microsoft.Relay/namespaces/WcfRelays' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Relay/namespaces/WcfRelays/authorizationRules@2016-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AuthorizationRuleProperties (Required)
+* **type**: 'Microsoft.Relay/namespaces/WcfRelays/authorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## RelayNamespaceProperties
 ### Properties
@@ -29,27 +80,9 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Relay/namespaces/AuthorizationRules
-### Properties
-* **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AuthorizationRuleProperties (Required)
-* **type**: 'Microsoft.Relay/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
-
 ## AuthorizationRuleProperties
 ### Properties
 * **rights**: 'Listen' | 'Manage' | 'Send'[] (Required)
-
-## Microsoft.Relay/namespaces/HybridConnections
-### Properties
-* **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: HybridConnectionProperties
-* **type**: 'Microsoft.Relay/namespaces/HybridConnections' (ReadOnly, DeployTimeConstant)
 
 ## HybridConnectionProperties
 ### Properties
@@ -58,24 +91,6 @@
 * **requiresClientAuthorization**: bool
 * **updatedAt**: string (ReadOnly)
 * **userMetadata**: string
-
-## Microsoft.Relay/namespaces/HybridConnections/authorizationRules
-### Properties
-* **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AuthorizationRuleProperties (Required)
-* **type**: 'Microsoft.Relay/namespaces/HybridConnections/authorizationRules' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Relay/namespaces/WcfRelays
-### Properties
-* **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WcfRelayProperties
-* **type**: 'Microsoft.Relay/namespaces/WcfRelays' (ReadOnly, DeployTimeConstant)
 
 ## WcfRelayProperties
 ### Properties
@@ -87,13 +102,4 @@
 * **requiresTransportSecurity**: bool
 * **updatedAt**: string (ReadOnly)
 * **userMetadata**: string
-
-## Microsoft.Relay/namespaces/WcfRelays/authorizationRules
-### Properties
-* **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AuthorizationRuleProperties (Required)
-* **type**: 'Microsoft.Relay/namespaces/WcfRelays/authorizationRules' (ReadOnly, DeployTimeConstant)
 

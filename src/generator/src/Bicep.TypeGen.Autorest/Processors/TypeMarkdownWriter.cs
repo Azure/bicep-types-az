@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,21 +12,47 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
 {
     public class TypeMarkdownWriter
     {
+        private class OrderedTypes : IEnumerable<TypeBase>
+        {
+            public OrderedTypes(IEnumerable<TypeBase> types)
+            {
+                typesSet = new(types);
+                typesList = new(types);
+            }
+
+            private readonly HashSet<TypeBase> typesSet;
+            private readonly List<TypeBase> typesList;
+
+            public void Add(TypeBase type)
+            {
+                if (typesSet.Contains(type))
+                {
+                    return;
+                }
+
+                typesSet.Add(type);
+                typesList.Add(type);
+            }
+
+            public bool Contains(TypeBase type) => typesSet.Contains(type);
+
+            public IEnumerator<TypeBase> GetEnumerator() => typesList.GetEnumerator();
+
+            IEnumerator IEnumerable.GetEnumerator() => typesList.GetEnumerator();
+        }
+
         private readonly StringBuilder output;
         private readonly TypeBase[] types;
-        private HashSet<TypeBase> pendingWriteSet;
-        private Queue<TypeBase> pendingWriteTypes;
 
         public TypeMarkdownWriter(TypeBase[] types)
         {
             this.output = new StringBuilder();
             this.types = types;
-            this.pendingWriteSet = new HashSet<TypeBase>();
-            this.pendingWriteTypes = new Queue<TypeBase>();
         }
 
         private static string GetTypeName(ITypeReference typeReference)
-            => typeReference.Type switch {
+            => typeReference.Type switch
+            {
                 BuiltInType type => type.Kind.ToString().ToLowerInvariant(),
                 ObjectType type => type.Name,
                 ArrayType type => $"{GetTypeName(type.ItemType)}[]",
@@ -41,7 +68,7 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
 
         private void WriteTypeProperty(string name, ObjectProperty property)
         {
-            var flagsString = property.Flags != ObjectPropertyFlags.None ? $" ({property.Flags.ToString()})" : "";
+            var flagsString = property.Flags != ObjectPropertyFlags.None ? $" ({property.Flags})" : "";
             WriteBullet(name, $"{GetTypeName(property.Type)}{flagsString}");
         }
 
@@ -51,42 +78,44 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
         private void WriteNewLine()
             => output.AppendLine();
 
-        private void EnqueuePendingWrite(TypeBase type)
+        private static void FindTypesToWrite(OrderedTypes typesToWrite, ITypeReference typeReference)
         {
-            if (pendingWriteSet.Contains(type))
+            void addToOrderedTypes(ITypeReference typeReference)
             {
-                return;
+                // this is needed to avoid circular type references causing stack overflows
+                if (!typesToWrite.Contains(typeReference.Type))
+                {
+                    typesToWrite.Add(typeReference.Type);
+                    FindTypesToWrite(typesToWrite, typeReference);
+                }
             }
 
-            pendingWriteSet.Add(type);
-            pendingWriteTypes.Enqueue(type);
-
-            switch (type)
+            switch (typeReference.Type)
             {
                 case ArrayType arrayType:
-                    EnqueuePendingWrite(arrayType.ItemType.Type);
+                    addToOrderedTypes(arrayType.ItemType);
                     return;
                 case ObjectType objectType:
                     if (objectType.Properties != null)
                     {
                         foreach (var property in objectType.Properties.OrderBy(x => x.Key))
                         {
-                            EnqueuePendingWrite(property.Value.Type.Type);
+                            addToOrderedTypes(property.Value.Type);
                         }
                     }
                     if (objectType.AdditionalProperties != null)
                     {
-                        EnqueuePendingWrite(objectType.AdditionalProperties.Type);
+                        addToOrderedTypes(objectType.AdditionalProperties);
                     }
                     return;
                 case DiscriminatedObjectType discriminatedObjectType:
                     foreach (var property in discriminatedObjectType.BaseProperties.OrderBy(x => x.Key))
                     {
-                        EnqueuePendingWrite(property.Value.Type.Type);
+                        addToOrderedTypes(property.Value.Type);
                     }
                     foreach (var element in discriminatedObjectType.Elements.OrderBy(x => x.Key))
                     {
-                        EnqueuePendingWrite(element.Value.Type);
+                        addToOrderedTypes(element.Value);
                     }
                     return;
             }
@@ -97,68 +126,77 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
             WriteHeading(1, $"{providerNamespace} @ {apiVersion}");
             WriteNewLine();
 
-            foreach (var resourceType in types.OfType<ResourceType>().OrderBy(x => x.Name))
+            var resourceTypes = types.OfType<ResourceType>().OrderBy(x => x.Name.Split("@")[0], StringComparer.OrdinalIgnoreCase).ToList();
+            var typesToWrite = new OrderedTypes(resourceTypes);
+            foreach (var resourceType in resourceTypes)
             {
-                EnqueuePendingWrite(resourceType.Body.Type);
+                FindTypesToWrite(typesToWrite, resourceType.Body);
             }
 
-            while (pendingWriteTypes.Any())
+            foreach (var type in typesToWrite)
             {
-                var type = pendingWriteTypes.Dequeue();
-
-                WriteComplexType(type, 2);
+                WriteComplexType(type, 2, true);
             }
 
             return output.ToString();
         }
 
-        private void WriteComplexType(TypeBase type, int nesting)
+        private void WriteComplexType(TypeBase type, int nesting, bool includeHeader)
         {
-            if (type is ObjectType objectType)
+            switch (type)
             {
-                WriteHeading(nesting, objectType.Name);
-                
-                if (objectType.Properties != null)
-                {
-                    WriteHeading(nesting + 1, "Properties");
-                    foreach (var property in objectType.Properties.OrderBy(x => x.Key))
+                case ResourceType resourceType:
+                    WriteHeading(nesting, $"Resource {resourceType.Name}");
+                    WriteBullet("Valid Scope(s)", $"{resourceType.ScopeType}");
+                    WriteComplexType(resourceType.Body.Type, nesting, false);
+                    return;
+                case ObjectType objectType:
+                    if (includeHeader)
                     {
-                        WriteTypeProperty(property.Key, property.Value);
+                        WriteHeading(nesting, objectType.Name);
                     }
-                }
 
-                if (objectType.AdditionalProperties != null)
-                {
-                    WriteHeading(nesting + 1, "Additional Properties");
-                    WriteBullet("Additional Properties Type", GetTypeName(objectType.AdditionalProperties));
-                }
-
-                WriteNewLine();
-                return;
-            }
-
-            if (type is DiscriminatedObjectType discriminatedObjectType)
-            {
-                WriteHeading(nesting, discriminatedObjectType.Name);
-
-                WriteBullet("Discriminator", discriminatedObjectType.Discriminator);
-
-                if (discriminatedObjectType.BaseProperties != null)
-                {
-                    WriteHeading(nesting + 1, "Base Properties");
-                    foreach (var property in discriminatedObjectType.BaseProperties.OrderBy(x => x.Key))
+                    if (objectType.Properties != null)
                     {
-                        WriteTypeProperty(property.Key, property.Value);
+                        WriteHeading(nesting + 1, "Properties");
+                        foreach (var property in objectType.Properties.OrderBy(x => x.Key))
+                        {
+                            WriteTypeProperty(property.Key, property.Value);
+                        }
                     }
-                }
 
-                foreach (var element in discriminatedObjectType.Elements.OrderBy(x => x.Key))
-                {
-                    WriteComplexType(element.Value.Type, nesting + 1);
-                }
+                    if (objectType.AdditionalProperties != null)
+                    {
+                        WriteHeading(nesting + 1, "Additional Properties");
+                        WriteBullet("Additional Properties Type", GetTypeName(objectType.AdditionalProperties));
+                    }
 
-                WriteNewLine();
-                return;
+                    WriteNewLine();
+                    return;
+                case DiscriminatedObjectType discriminatedObjectType:
+                    if (includeHeader)
+                    {
+                        WriteHeading(nesting, discriminatedObjectType.Name);
+                    }
+
+                    WriteBullet("Discriminator", discriminatedObjectType.Discriminator);
+
+                    if (discriminatedObjectType.BaseProperties != null)
+                    {
+                        WriteHeading(nesting + 1, "Base Properties");
+                        foreach (var property in discriminatedObjectType.BaseProperties.OrderBy(x => x.Key))
+                        {
+                            WriteTypeProperty(property.Key, property.Value);
+                        }
+                    }
+
+                    foreach (var element in discriminatedObjectType.Elements.OrderBy(x => x.Key))
+                    {
+                        WriteComplexType(element.Value.Type, nesting + 1, true);
+                    }
+
+                    WriteNewLine();
+                    return;
             }
         }
     }

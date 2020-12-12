@@ -1,6 +1,7 @@
 # Microsoft.Web @ 2016-03-01
 
-## Microsoft.Web/certificates
+## Resource Microsoft.Web/certificates@2016-03-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,28 @@
 * **properties**: schemas:0_properties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Web/certificates' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/publishingUsers@2016-03-01
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'web' (Required, DeployTimeConstant)
+* **properties**: schemas:67_properties
+* **type**: 'Microsoft.Web/publishingUsers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sourcecontrols@2016-03-01
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:124_properties
+* **type**: 'Microsoft.Web/sourcecontrols' (ReadOnly, DeployTimeConstant)
 
 ## schemas:0_properties
 ### Properties
@@ -45,16 +68,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Web/publishingUsers
-### Properties
-* **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: 'web' (Required, DeployTimeConstant)
-* **properties**: schemas:67_properties
-* **type**: 'Microsoft.Web/publishingUsers' (ReadOnly, DeployTimeConstant)
-
 ## schemas:67_properties
 ### Properties
 * **name**: string
@@ -62,16 +75,6 @@
 * **publishingPasswordHash**: string
 * **publishingPasswordHashSalt**: string
 * **publishingUserName**: string (Required)
-
-## Microsoft.Web/sourcecontrols
-### Properties
-* **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:124_properties
-* **type**: 'Microsoft.Web/sourcecontrols' (ReadOnly, DeployTimeConstant)
 
 ## schemas:124_properties
 ### Properties

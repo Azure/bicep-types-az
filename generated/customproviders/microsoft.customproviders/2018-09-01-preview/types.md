@@ -1,6 +1,7 @@
 # Microsoft.CustomProviders @ 2018-09-01-preview
 
-## Microsoft.CustomProviders/associations
+## Resource Microsoft.CustomProviders/associations@2018-09-01-preview
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -9,12 +10,8 @@
 * **properties**: schemas:8_properties
 * **type**: 'Microsoft.CustomProviders/associations' (ReadOnly, DeployTimeConstant)
 
-## schemas:8_properties
-### Properties
-* **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly)
-* **targetResourceId**: string
-
-## Microsoft.CustomProviders/resourceProviders
+## Resource Microsoft.CustomProviders/resourceProviders@2018-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -24,6 +21,11 @@
 * **properties**: schemas:5_properties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.CustomProviders/resourceProviders' (ReadOnly, DeployTimeConstant)
+
+## schemas:8_properties
+### Properties
+* **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly)
+* **targetResourceId**: string
 
 ## schemas:5_properties
 ### Properties

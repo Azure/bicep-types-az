@@ -1,6 +1,7 @@
 # Microsoft.TimeSeriesInsights @ 2017-02-28-preview
 
-## Microsoft.TimeSeriesInsights/environments
+## Resource Microsoft.TimeSeriesInsights/environments@2017-02-28-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-02-28-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -12,25 +13,8 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.TimeSeriesInsights/environments' (ReadOnly, DeployTimeConstant)
 
-## EnvironmentCreationProperties
-### Properties
-* **creationTime**: string (ReadOnly)
-* **dataAccessFqdn**: string (ReadOnly)
-* **dataAccessId**: string (ReadOnly)
-* **dataRetentionTime**: string (Required)
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **storageLimitExceededBehavior**: 'PauseIngress' | 'PurgeOldData'
-
-## Sku
-### Properties
-* **capacity**: int (Required)
-* **name**: 'S1' | 'S2' (Required)
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.TimeSeriesInsights/environments/accessPolicies
+## Resource Microsoft.TimeSeriesInsights/environments/accessPolicies@2017-02-28-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-02-28-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -39,13 +23,8 @@
 * **properties**: AccessPolicyResourceProperties (Required)
 * **type**: 'Microsoft.TimeSeriesInsights/environments/accessPolicies' (ReadOnly, DeployTimeConstant)
 
-## AccessPolicyResourceProperties
-### Properties
-* **description**: string
-* **principalObjectId**: string
-* **roles**: 'Contributor' | 'Reader'[]
-
-## Microsoft.TimeSeriesInsights/environments/eventSources
+## Resource Microsoft.TimeSeriesInsights/environments/eventSources@2017-02-28-preview
+* **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2017-02-28-preview' (ReadOnly, DeployTimeConstant)
@@ -70,6 +49,42 @@
 * **kind**: 'Microsoft.IoTHub' (Required)
 * **properties**: IoTHubEventSourceCreationProperties (Required, WriteOnly)
 
+
+## Resource Microsoft.TimeSeriesInsights/environments/referenceDataSets@2017-02-28-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-02-28-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ReferenceDataSetCreationProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.TimeSeriesInsights/environments/referenceDataSets' (ReadOnly, DeployTimeConstant)
+
+## EnvironmentCreationProperties
+### Properties
+* **creationTime**: string (ReadOnly)
+* **dataAccessFqdn**: string (ReadOnly)
+* **dataAccessId**: string (ReadOnly)
+* **dataRetentionTime**: string (Required)
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+* **storageLimitExceededBehavior**: 'PauseIngress' | 'PurgeOldData'
+
+## Sku
+### Properties
+* **capacity**: int (Required)
+* **name**: 'S1' | 'S2' (Required)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## AccessPolicyResourceProperties
+### Properties
+* **description**: string
+* **principalObjectId**: string
+* **roles**: 'Contributor' | 'Reader'[]
 
 ## Dictionary<string,String>
 ### Additional Properties
@@ -122,17 +137,6 @@
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly, WriteOnly)
 * **sharedAccessKey**: string (Required, WriteOnly)
 * **timestampPropertyName**: string (WriteOnly)
-
-## Microsoft.TimeSeriesInsights/environments/referenceDataSets
-### Properties
-* **apiVersion**: '2017-02-28-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ReferenceDataSetCreationProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.TimeSeriesInsights/environments/referenceDataSets' (ReadOnly, DeployTimeConstant)
 
 ## ReferenceDataSetCreationProperties
 ### Properties

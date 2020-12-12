@@ -1,6 +1,7 @@
 # Microsoft.ContainerRegistry @ 2017-03-01
 
-## Microsoft.ContainerRegistry/registries
+## Resource Microsoft.ContainerRegistry/registries@2017-03-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

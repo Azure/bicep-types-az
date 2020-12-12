@@ -1,6 +1,7 @@
 # Microsoft.Insights @ 2018-03-01
 
-## microsoft.insights/actionGroups
+## Resource microsoft.insights/actionGroups@2018-03-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,18 @@
 * **properties**: ActionGroup
 * **tags**: Dictionary<string,String>
 * **type**: 'microsoft.insights/actionGroups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Insights/metricAlerts@2018-03-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MetricAlertProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Insights/metricAlerts' (ReadOnly, DeployTimeConstant)
 
 ## ActionGroup
 ### Properties
@@ -87,17 +100,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Insights/metricAlerts
-### Properties
-* **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MetricAlertProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Insights/metricAlerts' (ReadOnly, DeployTimeConstant)
 
 ## MetricAlertProperties
 ### Properties

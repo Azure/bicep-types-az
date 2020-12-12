@@ -1,6 +1,7 @@
 # Microsoft.Portal @ 2018-10-01-preview
 
-## Microsoft.Portal/dashboards
+## Resource Microsoft.Portal/dashboards@2018-10-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

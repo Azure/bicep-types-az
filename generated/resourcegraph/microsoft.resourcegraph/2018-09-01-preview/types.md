@@ -1,6 +1,7 @@
 # Microsoft.ResourceGraph @ 2018-09-01-preview
 
-## Microsoft.ResourceGraph/queries
+## Resource Microsoft.ResourceGraph/queries@2018-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

@@ -1,6 +1,7 @@
 # Microsoft.Sql @ 2019-06-01-preview
 
-## Microsoft.Sql/managedInstances/databases
+## Resource Microsoft.Sql/managedInstances/databases@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,85 @@
 * **properties**: ManagedDatabaseProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: ResourceIdentity
+* **kind**: string (ReadOnly)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServerProperties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/administrators@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AdministratorProperties
+* **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (Required)
+* **managedBy**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseProperties
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases/syncGroups@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SyncGroupProperties
+* **type**: 'Microsoft.Sql/servers/databases/syncGroups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases/syncGroups/syncMembers@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SyncMemberProperties
+* **type**: 'Microsoft.Sql/servers/databases/syncGroups/syncMembers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases/workloadGroups@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkloadGroupProperties
+* **type**: 'Microsoft.Sql/servers/databases/workloadGroups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkloadClassifierProperties
+* **type**: 'Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers' (ReadOnly, DeployTimeConstant)
 
 ## ManagedDatabaseProperties
 ### Properties
@@ -32,19 +112,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Sql/servers
-### Properties
-* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ResourceIdentity
-* **kind**: string (ReadOnly)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerProperties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant)
 
 ## ResourceIdentity
 ### Properties
@@ -88,15 +155,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Sql/servers/administrators
-### Properties
-* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AdministratorProperties
-* **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant)
-
 ## AdministratorProperties
 ### Properties
 * **administratorType**: string (Required)
@@ -104,20 +162,6 @@
 * **login**: string (Required)
 * **sid**: string (Required)
 * **tenantId**: string
-
-## Microsoft.Sql/servers/databases
-### Properties
-* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **location**: string (Required)
-* **managedBy**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant)
 
 ## DatabaseProperties
 ### Properties
@@ -166,15 +210,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Sql/servers/databases/syncGroups
-### Properties
-* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SyncGroupProperties
-* **type**: 'Microsoft.Sql/servers/databases/syncGroups' (ReadOnly, DeployTimeConstant)
-
 ## SyncGroupProperties
 ### Properties
 * **conflictResolutionPolicy**: 'HubWin' | 'MemberWin'
@@ -204,15 +239,6 @@
 * **dataType**: string
 * **quotedName**: string
 
-## Microsoft.Sql/servers/databases/syncGroups/syncMembers
-### Properties
-* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SyncMemberProperties
-* **type**: 'Microsoft.Sql/servers/databases/syncGroups/syncMembers' (ReadOnly, DeployTimeConstant)
-
 ## SyncMemberProperties
 ### Properties
 * **databaseName**: string
@@ -228,15 +254,6 @@
 * **usePrivateLinkConnection**: bool
 * **userName**: string
 
-## Microsoft.Sql/servers/databases/workloadGroups
-### Properties
-* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkloadGroupProperties
-* **type**: 'Microsoft.Sql/servers/databases/workloadGroups' (ReadOnly, DeployTimeConstant)
-
 ## WorkloadGroupProperties
 ### Properties
 * **importance**: string
@@ -245,15 +262,6 @@
 * **minResourcePercent**: int (Required)
 * **minResourcePercentPerRequest**: int (Required)
 * **queryExecutionTimeout**: int
-
-## Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers
-### Properties
-* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkloadClassifierProperties
-* **type**: 'Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers' (ReadOnly, DeployTimeConstant)
 
 ## WorkloadClassifierProperties
 ### Properties

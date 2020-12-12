@@ -1,6 +1,7 @@
 # Microsoft.WorkloadMonitor @ 2018-08-31-preview
 
-## Microsoft.WorkloadMonitor/notificationSettings
+## Resource Microsoft.WorkloadMonitor/notificationSettings@2018-08-31-preview
+* **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2018-08-31-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

@@ -1,6 +1,7 @@
 # Microsoft.Blueprint @ 2018-11-01-preview
 
-## Microsoft.Blueprint/blueprintAssignments
+## Resource Microsoft.Blueprint/blueprintAssignments@2018-11-01-preview
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,51 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AssignmentProperties (Required)
 * **type**: 'Microsoft.Blueprint/blueprintAssignments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Blueprint/blueprints@2018-11-01-preview
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BlueprintProperties (Required)
+* **type**: 'Microsoft.Blueprint/blueprints' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Blueprint/blueprints/artifacts@2018-11-01-preview
+* **Valid Scope(s)**: Unknown
+* **Discriminator**: kind
+### Base Properties
+* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.Blueprint/blueprints/artifacts' (ReadOnly, DeployTimeConstant)
+### policyAssignment
+#### Properties
+* **kind**: 'policyAssignment' (Required)
+* **properties**: PolicyAssignmentArtifactProperties (Required)
+
+### roleAssignment
+#### Properties
+* **kind**: 'roleAssignment' (Required)
+* **properties**: RoleAssignmentArtifactProperties (Required)
+
+### template
+#### Properties
+* **kind**: 'template' (Required)
+* **properties**: TemplateArtifactProperties (Required)
+
+
+## Resource Microsoft.Blueprint/blueprints/versions@2018-11-01-preview
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PublishedBlueprintProperties (Required)
+* **type**: 'Microsoft.Blueprint/blueprints/versions' (ReadOnly, DeployTimeConstant)
 
 ## ManagedServiceIdentity
 ### Properties
@@ -79,15 +125,6 @@
 * **managedResources**: string[] (ReadOnly)
 * **timeCreated**: string (ReadOnly)
 
-## Microsoft.Blueprint/blueprints
-### Properties
-* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BlueprintProperties (Required)
-* **type**: 'Microsoft.Blueprint/blueprints' (ReadOnly, DeployTimeConstant)
-
 ## BlueprintProperties
 ### Properties
 * **description**: string
@@ -136,30 +173,6 @@
 ### Properties
 * **lastModified**: string (ReadOnly)
 * **timeCreated**: string (ReadOnly)
-
-## Microsoft.Blueprint/blueprints/artifacts
-* **Discriminator**: kind
-### Base Properties
-* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Blueprint/blueprints/artifacts' (ReadOnly, DeployTimeConstant)
-### policyAssignment
-#### Properties
-* **kind**: 'policyAssignment' (Required)
-* **properties**: PolicyAssignmentArtifactProperties (Required)
-
-### roleAssignment
-#### Properties
-* **kind**: 'roleAssignment' (Required)
-* **properties**: RoleAssignmentArtifactProperties (Required)
-
-### template
-#### Properties
-* **kind**: 'template' (Required)
-* **properties**: TemplateArtifactProperties (Required)
-
 
 ## policyAssignment
 ### Properties
@@ -210,15 +223,6 @@
 ## Dictionary<string,ParameterValue>
 ### Additional Properties
 * **Additional Properties Type**: ParameterValue
-
-## Microsoft.Blueprint/blueprints/versions
-### Properties
-* **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PublishedBlueprintProperties (Required)
-* **type**: 'Microsoft.Blueprint/blueprints/versions' (ReadOnly, DeployTimeConstant)
 
 ## PublishedBlueprintProperties
 ### Properties

@@ -1,6 +1,7 @@
 # Microsoft.HanaOnAzure @ 2017-11-03-preview
 
-## Microsoft.HanaOnAzure/hanaInstances
+## Resource Microsoft.HanaOnAzure/hanaInstances@2017-11-03-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-11-03-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,18 @@
 * **properties**: HanaInstanceProperties
 * **tags**: Dictionary<string,String> (ReadOnly)
 * **type**: 'Microsoft.HanaOnAzure/hanaInstances' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.HanaOnAzure/sapMonitors@2017-11-03-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-11-03-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SapMonitorProperties
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.HanaOnAzure/sapMonitors' (ReadOnly, DeployTimeConstant)
 
 ## HanaInstanceProperties
 ### Properties
@@ -59,17 +72,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.HanaOnAzure/sapMonitors
-### Properties
-* **apiVersion**: '2017-11-03-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SapMonitorProperties
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.HanaOnAzure/sapMonitors' (ReadOnly, DeployTimeConstant)
 
 ## SapMonitorProperties
 ### Properties

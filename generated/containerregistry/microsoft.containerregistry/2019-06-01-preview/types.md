@@ -1,6 +1,7 @@
 # Microsoft.ContainerRegistry @ 2019-06-01-preview
 
-## Microsoft.ContainerRegistry/registries/agentPools
+## Resource Microsoft.ContainerRegistry/registries/agentPools@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,33 @@
 * **systemData**: SystemData (ReadOnly)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ContainerRegistry/registries/agentPools' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ContainerRegistry/registries/taskRuns@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: IdentityProperties
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TaskRunProperties
+* **systemData**: SystemData (ReadOnly)
+* **type**: 'Microsoft.ContainerRegistry/registries/taskRuns' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ContainerRegistry/registries/tasks@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: IdentityProperties
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TaskProperties
+* **systemData**: SystemData (ReadOnly)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant)
 
 ## AgentPoolProperties
 ### Properties
@@ -32,18 +60,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.ContainerRegistry/registries/taskRuns
-### Properties
-* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: IdentityProperties
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TaskRunProperties
-* **systemData**: SystemData (ReadOnly)
-* **type**: 'Microsoft.ContainerRegistry/registries/taskRuns' (ReadOnly, DeployTimeConstant)
 
 ## IdentityProperties
 ### Properties
@@ -280,19 +296,6 @@
 ### Properties
 * **scheduleOccurrence**: string
 * **timerTriggerName**: string
-
-## Microsoft.ContainerRegistry/registries/tasks
-### Properties
-* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: IdentityProperties
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: TaskProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant)
 
 ## TaskProperties
 ### Properties

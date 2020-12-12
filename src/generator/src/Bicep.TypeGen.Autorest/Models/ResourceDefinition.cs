@@ -5,14 +5,12 @@ using Azure.Bicep.Types.Concrete;
 
 namespace Azure.Bicep.TypeGen.Autorest.Models
 {
-    public class ResourceDefinition
+    public record ResourceDefinition(
+        ResourceDescriptor Descriptor,
+        Method DeclaringMethod,
+        Method GetMethod
+    )
     {
-        public ResourceDescriptor Descriptor { get; set; }
-
-        public Method DeclaringMethod { get; set; }
-
-        public Method GetMethod { get; set; }
-
         public ResourceType Type { get; set; }
     }
 }

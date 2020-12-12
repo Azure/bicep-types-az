@@ -1,6 +1,7 @@
 # Microsoft.Devices @ 2020-01-01
 
-## Microsoft.Devices/provisioningServices
+## Resource Microsoft.Devices/provisioningServices@2020-01-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -12,6 +13,18 @@
 * **sku**: IotDpsSkuInfo (Required)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Devices/provisioningServices' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Devices/provisioningServices/certificates@2020-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **certificate**: string (WriteOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CertificateProperties (ReadOnly)
+* **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant)
 
 ## IotDpsPropertiesDescription
 ### Properties
@@ -56,17 +69,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Devices/provisioningServices/certificates
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **certificate**: string (WriteOnly)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CertificateProperties (ReadOnly)
-* **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant)
 
 ## CertificateProperties
 ### Properties

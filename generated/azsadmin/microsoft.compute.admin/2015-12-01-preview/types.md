@@ -1,6 +1,7 @@
 # Microsoft.Compute.Admin @ 2015-12-01-preview
 
-## Microsoft.Compute.Admin/locations/artifactTypes/publishers/offers/skus/versions
+## Resource Microsoft.Compute.Admin/locations/artifactTypes/publishers/offers/skus/versions@2015-12-01-preview
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2015-12-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -9,6 +10,17 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PlatformImageProperties
 * **type**: 'Microsoft.Compute.Admin/locations/artifactTypes/publishers/offers/skus/versions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Compute.Admin/locations/artifactTypes/publishers/types/versions@2015-12-01-preview
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2015-12-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VMExtensionProperties
+* **type**: 'Microsoft.Compute.Admin/locations/artifactTypes/publishers/types/versions' (ReadOnly, DeployTimeConstant)
 
 ## PlatformImageProperties
 ### Properties
@@ -30,16 +42,6 @@
 ### Properties
 * **osType**: 'Linux' | 'Unknown' | 'Windows'
 * **uri**: string
-
-## Microsoft.Compute.Admin/locations/artifactTypes/publishers/types/versions
-### Properties
-* **apiVersion**: '2015-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VMExtensionProperties
-* **type**: 'Microsoft.Compute.Admin/locations/artifactTypes/publishers/types/versions' (ReadOnly, DeployTimeConstant)
 
 ## VMExtensionProperties
 ### Properties

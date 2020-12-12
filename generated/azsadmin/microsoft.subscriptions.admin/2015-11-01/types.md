@@ -1,6 +1,7 @@
 # Microsoft.Subscriptions.Admin @ 2015-11-01
 
-## Microsoft.Subscriptions.Admin/directoryTenants
+## Resource Microsoft.Subscriptions.Admin/directoryTenants@2015-11-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,15 +12,8 @@
 * **tags**: Dictionary<string,String> (ReadOnly)
 * **type**: 'Microsoft.Subscriptions.Admin/directoryTenants' (ReadOnly, DeployTimeConstant)
 
-## DirectoryTenantProperties
-### Properties
-* **tenantId**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Microsoft.Subscriptions.Admin/locations
+## Resource Microsoft.Subscriptions.Admin/locations@2015-11-01
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -30,7 +24,8 @@
 * **name**: string (Required, DeployTimeConstant)
 * **type**: 'Microsoft.Subscriptions.Admin/locations' (ReadOnly, DeployTimeConstant)
 
-## Microsoft.Subscriptions.Admin/offers
+## Resource Microsoft.Subscriptions.Admin/offers@2015-11-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -40,6 +35,70 @@
 * **properties**: OfferProperties
 * **tags**: Dictionary<string,String> (ReadOnly)
 * **type**: 'Microsoft.Subscriptions.Admin/offers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Subscriptions.Admin/offers/offerDelegations@2015-11-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: OfferDelegationProperties
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.Subscriptions.Admin/offers/offerDelegations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Subscriptions.Admin/plans@2015-11-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PlanProperties
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.Subscriptions.Admin/plans' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Subscriptions.Admin/subscriptions@2015-11-01
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
+* **delegatedProviderSubscriptionId**: string
+* **dependsOn**: resourceref[] (WriteOnly)
+* **displayName**: string
+* **externalReferenceId**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **offerId**: string
+* **owner**: string
+* **routingResourceManagerType**: 'Admin' | 'Default'
+* **state**: 'Deleted' | 'Deleting' | 'Disabled' | 'Enabled' | 'NotDefined' | 'PartiallyDeleted' | 'PastDue' | 'Warned'
+* **subscriptionId**: string
+* **tenantId**: string
+* **type**: 'Microsoft.Subscriptions.Admin/subscriptions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Subscriptions.Admin/subscriptions/acquiredPlans@2015-11-01
+* **Valid Scope(s)**: Subscription
+### Properties
+* **acquisitionId**: string
+* **acquisitionTime**: string
+* **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **externalReferenceId**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **planId**: string
+* **provisioningState**: 'Accepted' | 'Failed' | 'NotSpecified' | 'Succeeded'
+* **type**: 'Microsoft.Subscriptions.Admin/subscriptions/acquiredPlans' (ReadOnly, DeployTimeConstant)
+
+## DirectoryTenantProperties
+### Properties
+* **tenantId**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## OfferProperties
 ### Properties
@@ -62,17 +121,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Subscriptions.Admin/offers/offerDelegations
-### Properties
-* **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: OfferDelegationProperties
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.Subscriptions.Admin/offers/offerDelegations' (ReadOnly, DeployTimeConstant)
-
 ## OfferDelegationProperties
 ### Properties
 * **subscriptionId**: string
@@ -80,17 +128,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Subscriptions.Admin/plans
-### Properties
-* **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PlanProperties
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.Subscriptions.Admin/plans' (ReadOnly, DeployTimeConstant)
 
 ## PlanProperties
 ### Properties
@@ -105,34 +142,4 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Subscriptions.Admin/subscriptions
-### Properties
-* **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
-* **delegatedProviderSubscriptionId**: string
-* **dependsOn**: resourceref[] (WriteOnly)
-* **displayName**: string
-* **externalReferenceId**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **offerId**: string
-* **owner**: string
-* **routingResourceManagerType**: 'Admin' | 'Default'
-* **state**: 'Deleted' | 'Deleting' | 'Disabled' | 'Enabled' | 'NotDefined' | 'PartiallyDeleted' | 'PastDue' | 'Warned'
-* **subscriptionId**: string
-* **tenantId**: string
-* **type**: 'Microsoft.Subscriptions.Admin/subscriptions' (ReadOnly, DeployTimeConstant)
-
-## Microsoft.Subscriptions.Admin/subscriptions/acquiredPlans
-### Properties
-* **acquisitionId**: string
-* **acquisitionTime**: string
-* **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **externalReferenceId**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **planId**: string
-* **provisioningState**: 'Accepted' | 'Failed' | 'NotSpecified' | 'Succeeded'
-* **type**: 'Microsoft.Subscriptions.Admin/subscriptions/acquiredPlans' (ReadOnly, DeployTimeConstant)
 

@@ -1,6 +1,7 @@
 # Microsoft.Support @ 2020-04-01
 
-## Microsoft.Support/supportTickets
+## Resource Microsoft.Support/supportTickets@2020-04-01
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -8,6 +9,16 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SupportTicketDetailsProperties
 * **type**: 'Microsoft.Support/supportTickets' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Support/supportTickets/communications@2020-04-01
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CommunicationDetailsProperties
+* **type**: 'Microsoft.Support/supportTickets/communications' (ReadOnly, DeployTimeConstant)
 
 ## SupportTicketDetailsProperties
 ### Properties
@@ -68,15 +79,6 @@
 ## TechnicalTicketDetails
 ### Properties
 * **resourceId**: string
-
-## Microsoft.Support/supportTickets/communications
-### Properties
-* **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CommunicationDetailsProperties
-* **type**: 'Microsoft.Support/supportTickets/communications' (ReadOnly, DeployTimeConstant)
 
 ## CommunicationDetailsProperties
 ### Properties

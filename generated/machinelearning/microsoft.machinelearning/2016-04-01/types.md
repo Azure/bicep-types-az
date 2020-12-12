@@ -1,6 +1,7 @@
 # Microsoft.MachineLearning @ 2016-04-01
 
-## Microsoft.MachineLearning/workspaces
+## Resource Microsoft.MachineLearning/workspaces@2016-04-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-04-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

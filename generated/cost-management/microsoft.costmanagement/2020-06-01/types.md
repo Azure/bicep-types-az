@@ -1,6 +1,7 @@
 # Microsoft.CostManagement @ 2020-06-01
 
-## Microsoft.CostManagement/views
+## Resource Microsoft.CostManagement/views@2020-06-01
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -91,14 +92,4 @@
 ### Properties
 * **from**: string (Required)
 * **to**: string (Required)
-
-## Microsoft.CostManagement/views
-### Properties
-* **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ViewProperties
-* **type**: 'Microsoft.CostManagement/views' (ReadOnly, DeployTimeConstant)
 

@@ -1,6 +1,7 @@
 # Microsoft.DBforPostgreSQL @ 2018-06-01
 
-## Microsoft.DBforPostgreSQL/servers/privateEndpointConnections
+## Resource Microsoft.DBforPostgreSQL/servers/privateEndpointConnections@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

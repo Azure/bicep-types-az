@@ -1,6 +1,7 @@
 # Microsoft.Media @ 2015-10-01
 
-## Microsoft.Media/mediaservices
+## Resource Microsoft.Media/mediaservices@2015-10-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

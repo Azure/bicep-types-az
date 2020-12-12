@@ -1,6 +1,7 @@
 # Microsoft.DeploymentManager @ 2018-09-01-preview
 
-## Microsoft.DeploymentManager/artifactSources
+## Resource Microsoft.DeploymentManager/artifactSources@2018-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,67 @@
 * **properties**: schemas:5_properties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DeploymentManager/artifactSources' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DeploymentManager/rollouts@2018-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity (Required)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RolloutRequestProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DeploymentManager/rollouts' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DeploymentManager/serviceTopologies@2018-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:13_properties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DeploymentManager/serviceTopologies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DeploymentManager/serviceTopologies/services@2018-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:15_properties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DeploymentManager/serviceTopologies/services' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DeploymentManager/serviceTopologies/services/serviceUnits@2018-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:18_properties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DeploymentManager/serviceTopologies/services/serviceUnits' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DeploymentManager/steps@2018-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: StepProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.DeploymentManager/steps' (ReadOnly, DeployTimeConstant)
 
 ## schemas:5_properties
 ### Properties
@@ -38,18 +100,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DeploymentManager/rollouts
-### Properties
-* **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity (Required)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RolloutRequestProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DeploymentManager/rollouts' (ReadOnly, DeployTimeConstant)
 
 ## Identity
 ### Properties
@@ -152,17 +202,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DeploymentManager/serviceTopologies
-### Properties
-* **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:13_properties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DeploymentManager/serviceTopologies' (ReadOnly, DeployTimeConstant)
-
 ## schemas:13_properties
 ### Properties
 * **artifactSourceId**: string
@@ -170,17 +209,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DeploymentManager/serviceTopologies/services
-### Properties
-* **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:15_properties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DeploymentManager/serviceTopologies/services' (ReadOnly, DeployTimeConstant)
 
 ## schemas:15_properties
 ### Properties
@@ -191,17 +219,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.DeploymentManager/serviceTopologies/services/serviceUnits
-### Properties
-* **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:18_properties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DeploymentManager/serviceTopologies/services/serviceUnits' (ReadOnly, DeployTimeConstant)
-
 ## schemas:18_properties
 ### Properties
 * **artifacts**: ServiceUnitArtifacts
@@ -211,17 +228,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.DeploymentManager/steps
-### Properties
-* **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: StepProperties (Required)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.DeploymentManager/steps' (ReadOnly, DeployTimeConstant)
 
 ## StepProperties
 * **Discriminator**: stepType

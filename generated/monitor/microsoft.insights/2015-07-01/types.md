@@ -1,6 +1,7 @@
 # microsoft.insights @ 2015-07-01
 
-## microsoft.insights/diagnosticSettings
+## Resource microsoft.insights/diagnosticSettings@2015-07-01
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2015-07-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

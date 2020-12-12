@@ -1,6 +1,7 @@
 # Microsoft.Batch @ 2017-09-01
 
-## Microsoft.Batch/batchAccounts
+## Resource Microsoft.Batch/batchAccounts@2017-09-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -10,6 +11,41 @@
 * **properties**: BatchAccountCreateProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Batch/batchAccounts/applications@2017-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **allowUpdates**: bool
+* **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant)
+* **defaultVersion**: string (ReadOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **displayName**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **packages**: ApplicationPackage[] (ReadOnly)
+* **type**: 'Microsoft.Batch/batchAccounts/applications' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Batch/batchAccounts/certificates@2017-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: CertificateCreateOrUpdateProperties
+* **type**: 'Microsoft.Batch/batchAccounts/certificates' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Batch/batchAccounts/pools@2017-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PoolProperties
+* **type**: 'Microsoft.Batch/batchAccounts/pools' (ReadOnly, DeployTimeConstant)
 
 ## BatchAccountCreateProperties
 ### Properties
@@ -37,18 +73,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Batch/batchAccounts/applications
-### Properties
-* **allowUpdates**: bool
-* **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant)
-* **defaultVersion**: string (ReadOnly)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **displayName**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **packages**: ApplicationPackage[] (ReadOnly)
-* **type**: 'Microsoft.Batch/batchAccounts/applications' (ReadOnly, DeployTimeConstant)
-
 ## ApplicationPackage
 ### Properties
 * **format**: string (ReadOnly)
@@ -58,16 +82,6 @@
 * **storageUrl**: string (ReadOnly)
 * **storageUrlExpiry**: string (ReadOnly)
 * **version**: string (ReadOnly)
-
-## Microsoft.Batch/batchAccounts/certificates
-### Properties
-* **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: CertificateCreateOrUpdateProperties
-* **type**: 'Microsoft.Batch/batchAccounts/certificates' (ReadOnly, DeployTimeConstant)
 
 ## CertificateCreateOrUpdateProperties
 ### Properties
@@ -89,16 +103,6 @@
 * **details**: DeleteCertificateError[] (ReadOnly)
 * **message**: string (ReadOnly)
 * **target**: string (ReadOnly)
-
-## Microsoft.Batch/batchAccounts/pools
-### Properties
-* **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PoolProperties
-* **type**: 'Microsoft.Batch/batchAccounts/pools' (ReadOnly, DeployTimeConstant)
 
 ## PoolProperties
 ### Properties

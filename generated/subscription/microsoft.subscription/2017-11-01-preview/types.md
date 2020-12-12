@@ -1,6 +1,7 @@
 # Microsoft.Subscription @ 2017-11-01-preview
 
-## Microsoft.Subscription/subscriptionDefinitions
+## Resource Microsoft.Subscription/subscriptionDefinitions@2017-11-01-preview
+* **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2017-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

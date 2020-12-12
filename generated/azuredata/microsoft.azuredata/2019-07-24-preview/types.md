@@ -1,6 +1,7 @@
 # Microsoft.AzureData @ 2019-07-24-preview
 
-## Microsoft.AzureData/dataControllers
+## Resource Microsoft.AzureData/dataControllers@2019-07-24-preview
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-07-24-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -11,6 +12,55 @@
 * **systemData**: SystemData (ReadOnly)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.AzureData/dataControllers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AzureData/sqlManagedInstances@2019-07-24-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-07-24-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SqlManagedInstanceProperties
+* **systemData**: SystemData (ReadOnly)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.AzureData/sqlManagedInstances' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AzureData/sqlServerInstances@2019-07-24-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-07-24-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SqlServerInstanceProperties
+* **systemData**: SystemData (ReadOnly)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.AzureData/sqlServerInstances' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AzureData/sqlServerRegistrations@2019-07-24-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-07-24-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SqlServerRegistrationProperties
+* **systemData**: SystemData (ReadOnly)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.AzureData/sqlServerRegistrations' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.AzureData/sqlServerRegistrations/sqlServers@2019-07-24-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-07-24-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SqlServerProperties
+* **type**: 'Microsoft.AzureData/sqlServerRegistrations/sqlServers' (ReadOnly, DeployTimeConstant)
 
 ## DataControllerProperties
 ### Properties
@@ -35,18 +85,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.AzureData/sqlManagedInstances
-### Properties
-* **apiVersion**: '2019-07-24-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlManagedInstanceProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.AzureData/sqlManagedInstances' (ReadOnly, DeployTimeConstant)
-
 ## SqlManagedInstanceProperties
 ### Properties
 * **admin**: string
@@ -59,18 +97,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.AzureData/sqlServerInstances
-### Properties
-* **apiVersion**: '2019-07-24-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlServerInstanceProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.AzureData/sqlServerInstances' (ReadOnly, DeployTimeConstant)
 
 ## SqlServerInstanceProperties
 ### Properties
@@ -86,18 +112,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.AzureData/sqlServerRegistrations
-### Properties
-* **apiVersion**: '2019-07-24-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlServerRegistrationProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.AzureData/sqlServerRegistrations' (ReadOnly, DeployTimeConstant)
-
 ## SqlServerRegistrationProperties
 ### Properties
 * **propertyBag**: string
@@ -107,15 +121,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.AzureData/sqlServerRegistrations/sqlServers
-### Properties
-* **apiVersion**: '2019-07-24-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlServerProperties
-* **type**: 'Microsoft.AzureData/sqlServerRegistrations/sqlServers' (ReadOnly, DeployTimeConstant)
 
 ## SqlServerProperties
 ### Properties

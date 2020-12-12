@@ -1,6 +1,7 @@
 # Microsoft.Confluent @ 2020-03-01-preview
 
-## Microsoft.Confluent/agreements
+## Resource Microsoft.Confluent/agreements@2020-03-01-preview
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -8,6 +9,18 @@
 * **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: ConfluentAgreementProperties
 * **type**: 'Microsoft.Confluent/agreements' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Confluent/organizations@2020-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:13_properties
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Confluent/organizations' (ReadOnly, DeployTimeConstant)
 
 ## ConfluentAgreementProperties
 ### Properties
@@ -19,17 +32,6 @@
 * **publisher**: string
 * **retrieveDatetime**: string
 * **signature**: string
-
-## Microsoft.Confluent/organizations
-### Properties
-* **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:13_properties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Confluent/organizations' (ReadOnly, DeployTimeConstant)
 
 ## schemas:13_properties
 ### Properties

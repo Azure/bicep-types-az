@@ -1,6 +1,7 @@
 # Microsoft.Deployment.Admin @ 2019-01-01
 
-## Microsoft.Deployment.Admin/locations/fileContainers
+## Resource Microsoft.Deployment.Admin/locations/fileContainers@2019-01-01
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -9,6 +10,17 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: FileContainerBody
 * **type**: 'Microsoft.Deployment.Admin/locations/fileContainers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Deployment.Admin/locations/productPackages@2019-01-01
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ProductPackageBody
+* **type**: 'Microsoft.Deployment.Admin/locations/productPackages' (ReadOnly, DeployTimeConstant)
 
 ## FileContainerBody
 ### Properties
@@ -24,16 +36,6 @@
 * **code**: string (ReadOnly)
 * **details**: ErrorInfo[] (ReadOnly)
 * **message**: string (ReadOnly)
-
-## Microsoft.Deployment.Admin/locations/productPackages
-### Properties
-* **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ProductPackageBody
-* **type**: 'Microsoft.Deployment.Admin/locations/productPackages' (ReadOnly, DeployTimeConstant)
 
 ## ProductPackageBody
 ### Properties
