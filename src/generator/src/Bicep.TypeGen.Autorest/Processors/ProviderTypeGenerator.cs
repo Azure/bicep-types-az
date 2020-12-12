@@ -72,21 +72,10 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
         private GenerateResult Process()
         {
             var definitionsByDescriptor = definition.ResourceDefinitions
-                .ToLookup(x => x.Descriptor, ResourceDescriptor.Comparer)
-                .ToDictionary(x => x.Key, x => x.ToArray(), ResourceDescriptor.Comparer);
+                .ToDictionary(kvp => kvp.Value.Descriptor, kvp => kvp.Value, ResourceDescriptor.Comparer);
 
-            foreach (var kvp in definitionsByDescriptor)
+            foreach (var (descriptor, resource) in definitionsByDescriptor)
             {
-                var descriptor = kvp.Key;
-
-                var definitions = definitionsByDescriptor[descriptor];
-                if (definitions.Length > 1)
-                {
-                    CodeModelProcessor.LogWarning($"Skipping resource type {descriptor.FullyQualifiedType} under path '{definitions[0].DeclaringMethod.Url}': Found multiple definitions for the same type");
-                    continue;
-                }
-
-                var resource = definitions.Single();
                 var putBody = resource.DeclaringMethod.Body?.ModelType as CompositeType;
                 var getBody = (resource.GetMethod?.Responses.GetValueOrDefault(HttpStatusCode.OK)?.Body as CompositeType) ?? 
                     (resource.GetMethod?.DefaultResponse?.Body as CompositeType) ??
@@ -140,7 +129,7 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 definition.Namespace,
                 definition.ApiVersion,
                 factory,
-                definition.ResourceDefinitions.Select(x => x.Descriptor));
+                definition.ResourceDefinitions.Select(kvp => kvp.Value.Descriptor));
         }
 
         private (bool success, string failureReason, TypeBase name) ParseNameSchema(ResourceDefinition resource, ProviderDefinition providerDefinition)

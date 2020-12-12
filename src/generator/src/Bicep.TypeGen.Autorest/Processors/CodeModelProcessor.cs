@@ -205,22 +205,19 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                     }
                     var providerDefinition = providerDefinitions[descriptor.ProviderNamespace];
 
-                    var existingResourceDefinition = providerDefinition.ResourceDefinitions
-                        .FirstOrDefault(x => StringComparer.OrdinalIgnoreCase.Equals(x.Descriptor.FullyQualifiedType, descriptor.FullyQualifiedType));
-
-                    if (existingResourceDefinition == null)
+                    if (!providerDefinition.ResourceDefinitions.ContainsKey(descriptor.FullyQualifiedType))
                     {
-                        providerDefinition.ResourceDefinitions.Add(new ResourceDefinition
+                        providerDefinition.ResourceDefinitions[descriptor.FullyQualifiedType] = new ResourceDefinition
                         {
                             Descriptor = descriptor,
                             DeclaringMethod = putMethod,
                             GetMethod = getMethod,
-                        });
+                        };
                     }
                     else
                     {
                         // the same resource type has been declared at a different scope - combine the two definitions into one
-                        existingResourceDefinition.Descriptor.ScopeType |= descriptor.ScopeType;
+                        providerDefinition.ResourceDefinitions[descriptor.FullyQualifiedType].Descriptor.ScopeType |= descriptor.ScopeType;
                     }
                 }
             }

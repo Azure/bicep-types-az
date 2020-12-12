@@ -14,6 +14,6 @@ namespace Azure.Bicep.TypeGen.Autorest.Models
 
         public CodeModel Model { get; set; }
 
-        public IList<ResourceDefinition> ResourceDefinitions { get; } = new List<ResourceDefinition>();
+        public IDictionary<string, ResourceDefinition> ResourceDefinitions { get; } = new Dictionary<string, ResourceDefinition>(StringComparer.OrdinalIgnoreCase);
     }
 }
