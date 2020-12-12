@@ -10,7 +10,7 @@
 * **type**: 'Microsoft.Security/assessmentMetadata' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/assessments@2020-01-01
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)

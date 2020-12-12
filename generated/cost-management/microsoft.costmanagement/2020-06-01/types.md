@@ -1,7 +1,7 @@
 # Microsoft.CostManagement @ 2020-06-01
 
 ## Resource Microsoft.CostManagement/views@2020-06-01
-* **Valid Scope(s)**: Tenant
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
 * **eTag**: string

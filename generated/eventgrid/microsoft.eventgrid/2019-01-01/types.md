@@ -1,7 +1,7 @@
 # Microsoft.EventGrid @ 2019-01-01
 
 ## Resource Microsoft.EventGrid/eventSubscriptions@2019-01-01
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)

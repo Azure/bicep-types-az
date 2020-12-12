@@ -1,7 +1,7 @@
 # Microsoft.Insights @ 2019-11-01-preview
 
 ## Resource Microsoft.Insights/dataCollectionRuleAssociations@2019-11-01-preview
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2019-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **etag**: string (ReadOnly)

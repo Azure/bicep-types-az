@@ -1,7 +1,7 @@
 # Microsoft.Resources @ 2019-08-01
 
 ## Resource Microsoft.Resources/deployments@2019-08-01
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)

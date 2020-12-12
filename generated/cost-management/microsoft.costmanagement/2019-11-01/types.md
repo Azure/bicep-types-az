@@ -1,7 +1,7 @@
 # Microsoft.CostManagement @ 2019-11-01
 
 ## Resource Microsoft.CostManagement/exports@2019-11-01
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
 * **eTag**: string
@@ -11,7 +11,7 @@
 * **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CostManagement/views@2019-11-01
-* **Valid Scope(s)**: Tenant
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
 * **eTag**: string

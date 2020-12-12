@@ -1,7 +1,7 @@
 # Microsoft.Resources @ 2019-10-01
 
 ## Resource Microsoft.Resources/deployments@2019-10-01
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
@@ -24,7 +24,7 @@
 * **type**: 'Microsoft.Resources/resourceGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Resources/tags@2019-10-01
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)

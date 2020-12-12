@@ -1,7 +1,7 @@
 # Microsoft.PolicyInsights @ 2019-07-01
 
 ## Resource Microsoft.PolicyInsights/remediations@2019-07-01
-* **Valid Scope(s)**: Subscription, ResourceGroup, Extension
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
