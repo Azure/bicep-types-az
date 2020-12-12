@@ -105,18 +105,19 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
         private GenerateResult Process()
         {
             var definitionsByDescriptor = definition.ResourceDefinitions
-                .ToLookup(x => x.Descriptor)
+                .ToLookup(x => x.Descriptor.FullyQualifiedType)
                 .ToDictionary(x => x.Key, x => CollapseDefinitionScopes(x));
 
-            foreach (var (descriptor, definitions) in definitionsByDescriptor)
+            foreach (var (fullyQualifiedType, definitions) in definitionsByDescriptor)
             {
                 if (definitions.Count > 1)
                 {
-                    CodeModelProcessor.LogWarning($"Skipping resource type {descriptor.FullyQualifiedType} under path '{definitions[0].DeclaringMethod.Url}': Found multiple definitions for the same type");
+                    CodeModelProcessor.LogWarning($"Skipping resource type {fullyQualifiedType} under path '{definitions[0].DeclaringMethod.Url}': Found multiple definitions for the same type");
                     continue;
                 }
 
                 var resource = definitions.Single();
+                var descriptor = resource.Descriptor;
 
                 var putBody = resource.DeclaringMethod.Body?.ModelType as CompositeType;
                 var getBody = (resource.GetMethod?.Responses.GetValueOrDefault(HttpStatusCode.OK)?.Body as CompositeType) ?? 
@@ -126,13 +127,13 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 var (success, failureReason, resourceName) = ParseNameSchema(resource, definition);
                 if (!success)
                 {
-                    CodeModelProcessor.LogWarning($"Skipping resource type {descriptor.FullyQualifiedType} under path '{resource.DeclaringMethod.Url}': {failureReason}");
+                    CodeModelProcessor.LogWarning($"Skipping resource type {fullyQualifiedType} under path '{resource.DeclaringMethod.Url}': {failureReason}");
                     continue;
                 }
 
                 if (putBody == null)
                 {
-                    CodeModelProcessor.LogWarning($"Skipping resource type {descriptor.FullyQualifiedType} under path '{resource.DeclaringMethod.Url}': No resource body defined");
+                    CodeModelProcessor.LogWarning($"Skipping resource type {fullyQualifiedType} under path '{resource.DeclaringMethod.Url}': No resource body defined");
                     continue;
                 }
 
