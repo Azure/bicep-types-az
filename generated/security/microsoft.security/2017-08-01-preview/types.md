@@ -53,17 +53,7 @@
 * **type**: 'Microsoft.Security/iotSecuritySolutions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/pricings@2017-08-01-preview
-* **Valid Scope(s)**: Subscription
-### Properties
-* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PricingProperties
-* **type**: 'Microsoft.Security/pricings' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.Security/pricings@2017-08-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Valid Scope(s)**: Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

@@ -11,17 +11,6 @@
 * **properties**: GuestConfigurationAssignmentProperties
 * **type**: 'Microsoft.GuestConfiguration/guestConfigurationAssignments' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.GuestConfiguration/guestConfigurationAssignments@2020-06-25
-* **Valid Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2020-06-25' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: GuestConfigurationAssignmentProperties
-* **type**: 'Microsoft.GuestConfiguration/guestConfigurationAssignments' (ReadOnly, DeployTimeConstant)
-
 ## GuestConfigurationAssignmentProperties
 ### Properties
 * **assignmentHash**: string (ReadOnly)

@@ -1,17 +1,7 @@
 # Microsoft.Advisor @ 2020-01-01
 
 ## Resource Microsoft.Advisor/configurations@2020-01-01
-* **Valid Scope(s)**: Subscription
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigDataProperties
-* **type**: 'Microsoft.Advisor/configurations' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.Advisor/configurations@2020-01-01
-* **Valid Scope(s)**: ResourceGroup
+* **Valid Scope(s)**: Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

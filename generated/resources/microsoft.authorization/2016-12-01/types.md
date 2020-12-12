@@ -11,17 +11,7 @@
 * **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Authorization/policyDefinitions@2016-12-01
-* **Valid Scope(s)**: Subscription
-### Properties
-* **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyDefinitionProperties
-* **type**: 'Microsoft.Authorization/policyDefinitions' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.Authorization/policyDefinitions@2016-12-01
-* **Valid Scope(s)**: ManagementGroup
+* **Valid Scope(s)**: ManagementGroup, Subscription
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

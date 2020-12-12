@@ -225,36 +225,6 @@
 * **properties**: PolicyContractProperties
 * **type**: 'Microsoft.ApiManagement/service/policies' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.ApiManagement/service/portalsettings@2018-01-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PortalSigninSettingProperties
-* **type**: 'Microsoft.ApiManagement/service/portalsettings' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.ApiManagement/service/portalsettings@2018-01-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PortalSignupSettingsProperties
-* **type**: 'Microsoft.ApiManagement/service/portalsettings' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.ApiManagement/service/portalsettings@2018-01-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PortalDelegationSettingsProperties
-* **type**: 'Microsoft.ApiManagement/service/portalsettings' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.ApiManagement/service/products@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -694,36 +664,6 @@
 * **description**: string
 * **displayName**: string (Required)
 * **metadataEndpoint**: string (Required)
-
-## PortalSigninSettingProperties
-### Properties
-* **enabled**: bool
-
-## PortalSignupSettingsProperties
-### Properties
-* **enabled**: bool
-* **termsOfService**: TermsOfServiceProperties
-
-## TermsOfServiceProperties
-### Properties
-* **consentRequired**: bool
-* **enabled**: bool
-* **text**: string
-
-## PortalDelegationSettingsProperties
-### Properties
-* **subscriptions**: SubscriptionsDelegationSettingsProperties
-* **url**: string
-* **userRegistration**: RegistrationDelegationSettingsProperties
-* **validationKey**: string
-
-## SubscriptionsDelegationSettingsProperties
-### Properties
-* **enabled**: bool
-
-## RegistrationDelegationSettingsProperties
-### Properties
-* **enabled**: bool
 
 ## ProductContractProperties
 ### Properties

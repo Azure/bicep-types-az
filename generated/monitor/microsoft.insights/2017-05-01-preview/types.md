@@ -10,17 +10,6 @@
 * **properties**: DiagnosticSettings
 * **type**: 'microsoft.insights/diagnosticSettings' (ReadOnly, DeployTimeConstant)
 
-## Resource microsoft.insights/diagnosticSettings@2017-05-01-preview
-* **Valid Scope(s)**: Subscription
-### Properties
-* **apiVersion**: '2017-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SubscriptionDiagnosticSettings
-* **type**: 'microsoft.insights/diagnosticSettings' (ReadOnly, DeployTimeConstant)
-
 ## DiagnosticSettings
 ### Properties
 * **eventHubAuthorizationRuleId**: string
@@ -49,18 +38,4 @@
 * **enabled**: bool (Required)
 * **retentionPolicy**: RetentionPolicy
 * **timeGrain**: string
-
-## SubscriptionDiagnosticSettings
-### Properties
-* **eventHubAuthorizationRuleId**: string
-* **eventHubName**: string
-* **logs**: SubscriptionLogSettings[]
-* **serviceBusRuleId**: string
-* **storageAccountId**: string
-* **workspaceId**: string
-
-## SubscriptionLogSettings
-### Properties
-* **category**: string
-* **enabled**: bool (Required)
 
