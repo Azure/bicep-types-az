@@ -16,6 +16,11 @@ namespace Azure.Bicep.Types.Concrete
 
     public class BuiltInType : TypeBase
     {
-        public BuiltInTypeKind? Kind { get; set; }
+        public BuiltInType(BuiltInTypeKind kind)
+        {
+            Kind = kind;
+        }
+
+        public BuiltInTypeKind Kind { get; set; }
     }
 }

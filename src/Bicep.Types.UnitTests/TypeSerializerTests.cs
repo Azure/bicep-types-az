@@ -16,14 +16,14 @@ namespace Azure.Bicep.Types.UnitTests
         {
             var builtIns = new []
             {
-                new BuiltInType { Kind = BuiltInTypeKind.Any },
-                new BuiltInType { Kind = BuiltInTypeKind.Null },
-                new BuiltInType { Kind = BuiltInTypeKind.Bool },
-                new BuiltInType { Kind = BuiltInTypeKind.Int },
-                new BuiltInType { Kind = BuiltInTypeKind.String },
-                new BuiltInType { Kind = BuiltInTypeKind.Object },
-                new BuiltInType { Kind = BuiltInTypeKind.Array },
-                new BuiltInType { Kind = BuiltInTypeKind.ResourceRef },
+                new BuiltInType(BuiltInTypeKind.Any),
+                new BuiltInType(BuiltInTypeKind.Null),
+                new BuiltInType(BuiltInTypeKind.Bool),
+                new BuiltInType(BuiltInTypeKind.Int),
+                new BuiltInType(BuiltInTypeKind.String),
+                new BuiltInType(BuiltInTypeKind.Object),
+                new BuiltInType(BuiltInTypeKind.Array),
+                new BuiltInType(BuiltInTypeKind.ResourceRef),
             };
 
             var serialized = TypeSerializer.Serialize(builtIns);
@@ -42,11 +42,11 @@ namespace Azure.Bicep.Types.UnitTests
         public void Circular_references_are_allowed()
         {
             var factory = new TypeFactory(Enumerable.Empty<TypeBase>());
-            var typeA = factory.Create(() => new ObjectType { Name = "typeA", Properties = new Dictionary<string, ObjectProperty>() });
-            var typeB = factory.Create(() => new ObjectType { Name = "typeB", Properties = new Dictionary<string, ObjectProperty>() });
+            var typeA = factory.Create(() => new ObjectType("typeA", new Dictionary<string, ObjectProperty>(), null));
+            var typeB = factory.Create(() => new ObjectType("typeB", new Dictionary<string, ObjectProperty>(), null));
 
-            typeA.Properties!["typeB"] = new ObjectProperty { Type = factory.GetReference(typeB), Flags = ObjectPropertyFlags.None, };
-            typeB.Properties!["typeA"] = new ObjectProperty { Type = factory.GetReference(typeA), Flags = ObjectPropertyFlags.None, };
+            typeA.Properties!["typeB"] = new ObjectProperty(factory.GetReference(typeB), ObjectPropertyFlags.None);
+            typeB.Properties!["typeA"] = new ObjectProperty(factory.GetReference(typeA), ObjectPropertyFlags.None);
 
             var serialized = TypeSerializer.Serialize(factory.GetTypes());
             var deserialized = TypeSerializer.Deserialize(serialized);
@@ -66,13 +66,13 @@ namespace Azure.Bicep.Types.UnitTests
         {
             var factory = new TypeFactory(Enumerable.Empty<TypeBase>());
 
-            var intType = factory.Create(() => new BuiltInType { Kind = BuiltInTypeKind.Int });
-            var objectType = factory.Create(() => new ObjectType { Name = "steven", Properties = new Dictionary<string, ObjectProperty>() });
-            var arrayType = factory.Create(() => new ArrayType { ItemType = factory.GetReference(objectType) });
-            var resourceType = factory.Create(() => new ResourceType { Name = "gerrard", Body = factory.GetReference(objectType) });
-            var unionType = factory.Create(() => new UnionType { Elements = new [] { factory.GetReference(intType), factory.GetReference(objectType) } });
-            var stringLiteralType = factory.Create(() => new StringLiteralType { Value = "abcdef" });
-            var discriminatedObjectType = factory.Create(() => new DiscriminatedObjectType { Name = "disctest" });
+            var intType = factory.Create(() => new BuiltInType(BuiltInTypeKind.Int));
+            var objectType = factory.Create(() => new ObjectType("steven", new Dictionary<string, ObjectProperty>(), null));
+            var arrayType = factory.Create(() => new ArrayType(factory.GetReference(objectType)));
+            var resourceType = factory.Create(() => new ResourceType("gerrard", ScopeType.ResourceGroup, factory.GetReference(objectType)));
+            var unionType = factory.Create(() => new UnionType(new [] { factory.GetReference(intType), factory.GetReference(objectType) }));
+            var stringLiteralType = factory.Create(() => new StringLiteralType("abcdef"));
+            var discriminatedObjectType = factory.Create(() => new DiscriminatedObjectType("disctest", "disctest", new Dictionary<string, ObjectProperty>(), new Dictionary<string, ITypeReference>()));
 
             var serialized = TypeSerializer.Serialize(factory.GetTypes());
             var deserialized = TypeSerializer.Deserialize(serialized);

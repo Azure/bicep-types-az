@@ -6,14 +6,11 @@ using AutoRest.Core.Model;
 
 namespace Azure.Bicep.TypeGen.Autorest.Models
 {
-    public class ProviderDefinition
+    public record ProviderDefinition(
+        string Namespace,
+        string ApiVersion,
+        CodeModel Model)
     {
-        public string Namespace { get; set; }
-
-        public string ApiVersion { get; set; }
-
-        public CodeModel Model { get; set; }
-
         public IList<ResourceDefinition> ResourceDefinitions { get; } = new List<ResourceDefinition>();
     }
 }

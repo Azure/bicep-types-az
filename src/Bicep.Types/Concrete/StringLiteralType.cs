@@ -4,6 +4,11 @@ namespace Azure.Bicep.Types.Concrete
 {
     public class StringLiteralType : TypeBase
     {
-        public string? Value { get; set; }
+        public StringLiteralType(string value)
+        {
+            Value = value;
+        }
+
+        public string Value { get; set; }
     }
 }

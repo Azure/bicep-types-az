@@ -33,32 +33,28 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
             factory = new TypeFactory(Enumerable.Empty<TypeBase>());
             this.builtInTypes = new Dictionary<BuiltInTypeKind, BuiltInType>
             {
-                [BuiltInTypeKind.Any] = factory.Create(() => new BuiltInType { Kind = BuiltInTypeKind.Any }),
-                [BuiltInTypeKind.Null] = factory.Create(() => new BuiltInType { Kind = BuiltInTypeKind.Null }),
-                [BuiltInTypeKind.Bool] = factory.Create(() => new BuiltInType { Kind = BuiltInTypeKind.Bool }),
-                [BuiltInTypeKind.Int] = factory.Create(() => new BuiltInType { Kind = BuiltInTypeKind.Int }),
-                [BuiltInTypeKind.String] = factory.Create(() => new BuiltInType { Kind = BuiltInTypeKind.String }),
-                [BuiltInTypeKind.Object] = factory.Create(() => new BuiltInType { Kind = BuiltInTypeKind.Object }),
-                [BuiltInTypeKind.Array] = factory.Create(() => new BuiltInType { Kind = BuiltInTypeKind.Array }),
-                [BuiltInTypeKind.ResourceRef] = factory.Create(() => new BuiltInType { Kind = BuiltInTypeKind.ResourceRef }),
+                [BuiltInTypeKind.Any] = factory.Create(() => new BuiltInType(BuiltInTypeKind.Any)),
+                [BuiltInTypeKind.Null] = factory.Create(() => new BuiltInType(BuiltInTypeKind.Null)),
+                [BuiltInTypeKind.Bool] = factory.Create(() => new BuiltInType(BuiltInTypeKind.Bool)),
+                [BuiltInTypeKind.Int] = factory.Create(() => new BuiltInType(BuiltInTypeKind.Int)),
+                [BuiltInTypeKind.String] = factory.Create(() => new BuiltInType(BuiltInTypeKind.String)),
+                [BuiltInTypeKind.Object] = factory.Create(() => new BuiltInType(BuiltInTypeKind.Object)),
+                [BuiltInTypeKind.Array] = factory.Create(() => new BuiltInType(BuiltInTypeKind.Array)),
+                [BuiltInTypeKind.ResourceRef] = factory.Create(() => new BuiltInType(BuiltInTypeKind.ResourceRef)),
             };
-            this.apiVersionType = factory.Create(() => new StringLiteralType { Value = definition.ApiVersion });
-            this.dependsOnType = factory.Create(() => new ArrayType { ItemType = factory.GetReference(builtInTypes[BuiltInTypeKind.ResourceRef]) });
+            this.apiVersionType = factory.Create(() => new StringLiteralType(definition.ApiVersion));
+            this.dependsOnType = factory.Create(() => new ArrayType(factory.GetReference(builtInTypes[BuiltInTypeKind.ResourceRef])));
             this.codeModel = codeModel;
             this.definition = definition;
             this.namedDefinitions = new Dictionary<string, TypeBase>();
         }
 
         private ObjectProperty CreateObjectProperty(TypeBase type, ObjectPropertyFlags flags)
-            => new ObjectProperty
-            {
-                Type = factory.GetReference(type),
-                Flags = flags,
-            };
+            => new ObjectProperty(factory.GetReference(type), flags);
 
         private Dictionary<string, ObjectProperty> GetStandardizedResourceProperties(ResourceDescriptor resourceDescriptor, TypeBase resourceName)
         {
-            var type = factory.Create(() => new StringLiteralType { Value = resourceDescriptor.FullyQualifiedType });
+            var type = factory.Create(() => new StringLiteralType(resourceDescriptor.FullyQualifiedType));
 
             return new Dictionary<string, ObjectProperty>(StringComparer.OrdinalIgnoreCase)
             {
@@ -137,15 +133,14 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                     continue;
                 }
 
-                var resourceProperties = GetStandardizedResourceProperties(resource.Descriptor, resourceName);
+                var resourceProperties = GetStandardizedResourceProperties(resource.Descriptor, resourceName!);
                 var resourceDefinition = CreateObject(descriptor.FullyQualifiedType, putBody, resourceProperties);
 
-                resource.Type = factory.Create(() => new ResourceType
-                { 
-                    Name = $"{descriptor.FullyQualifiedType}@{descriptor.ApiVersion}",
-                    ScopeType = descriptor.ScopeType,
-                    Body = factory.GetReference(resourceDefinition),
-                });
+                resource.Type = factory.Create(() => new ResourceType(
+                    $"{descriptor.FullyQualifiedType}@{descriptor.ApiVersion}",
+                    descriptor.ScopeType,
+                    factory.GetReference(resourceDefinition)
+                ));
 
                 foreach (var (propertyName, putProperty, getProperty) in GetCompositeTypeProperties(putBody, getBody, true))
                 {
@@ -172,10 +167,10 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 definition.Namespace,
                 definition.ApiVersion,
                 factory,
-                definition.ResourceDefinitions.Select(x => x.Descriptor));
+                definition.ResourceDefinitions.Select(x => x.Descriptor).ToList());
         }
 
-        private (bool success, string failureReason, TypeBase name) ParseNameSchema(ResourceDefinition resource, ProviderDefinition providerDefinition)
+        private (bool success, string failureReason, TypeBase? name) ParseNameSchema(ResourceDefinition resource, ProviderDefinition providerDefinition)
         {
             var finalProvidersMatch = CodeModelProcessor.parentScopePrefix.Match(resource.DeclaringMethod.Url);
             var routingScope = resource.DeclaringMethod.Url.Substring(finalProvidersMatch.Length);
@@ -210,7 +205,7 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
             return (true, string.Empty, CreateConstantResourceName(resource.Descriptor, resNameParam));
         }
 
-        private ObjectPropertyFlags ParsePropertyFlags(Property putProperty, Property getProperty)
+        private ObjectPropertyFlags ParsePropertyFlags(Property? putProperty, Property? getProperty)
         {
             var flags = ObjectPropertyFlags.None;
 
@@ -232,9 +227,9 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
             return flags;
         }
 
-        private TypeBase ParseType(IModelType putType, IModelType getType)
+        private TypeBase ParseType(IModelType? putType, IModelType? getType)
         {
-            var combinedType = putType ?? getType;
+            var combinedType = CombineAndThrowIfNull(putType, getType);
 
             // A schema that matches a JSON object with specific properties, such as
             // { "name": { "type": "string" }, "age": { "type": "number" } }
@@ -279,23 +274,17 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
         {
             if (compositeType.IsPolymorphic && compositeType.BasePolymorphicDiscriminator != null)
             {
-                return factory.Create(() => new DiscriminatedObjectType
-                {
-                    Name = definitionName,
-                    BaseProperties = properties,
-                    Discriminator = compositeType.BasePolymorphicDiscriminator,
-                    Elements = new Dictionary<string, ITypeReference>(),
-                });
+                return factory.Create(() => new DiscriminatedObjectType(
+                    name: definitionName,
+                    discriminator: compositeType.BasePolymorphicDiscriminator,
+                    baseProperties: properties,
+                    elements: new Dictionary<string, ITypeReference>()));
             }
 
-            return factory.Create(() => new ObjectType
-            {
-                Name = definitionName,
-                Properties = properties
-            });
+            return factory.Create(() => new ObjectType(definitionName, properties, null));
         }
 
-        private IEnumerable<(string name, Property putProperty, Property getProperty)> GetCompositeTypeProperties(CompositeType putType, CompositeType getType, bool includeBaseModelTypeProperties)
+        private IEnumerable<(string name, Property? putProperty, Property? getProperty)> GetCompositeTypeProperties(CompositeType? putType, CompositeType? getType, bool includeBaseModelTypeProperties)
         {
             var putProperties = ((includeBaseModelTypeProperties ? putType?.ComposedProperties : putType?.Properties) ?? Enumerable.Empty<Property>())
                 .Where(p => p.Flavor == PropertyFlavor.Regular && p.SerializedName != null)
@@ -314,7 +303,7 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
             }
         }
 
-        private (DictionaryType putProperty, DictionaryType getProperty) GetCompositeTypeAdditionalProperties(CompositeType putType, CompositeType getType, bool includeBaseModelTypeProperties)
+        private (DictionaryType? putProperty, DictionaryType? getProperty) GetCompositeTypeAdditionalProperties(CompositeType? putType, CompositeType? getType, bool includeBaseModelTypeProperties)
         {
             var putAdditionalProperty = ((includeBaseModelTypeProperties ? putType?.ComposedProperties : putType?.Properties) ?? Enumerable.Empty<Property>())
                 .Where(p => p.Flavor == PropertyFlavor.AdditionalProperties)
@@ -326,9 +315,9 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
             return (putAdditionalProperty?.ModelType as DictionaryType, getAdditionalProperty?.ModelType as DictionaryType);
         }
 
-        private TypeBase ParseCompositeType(CompositeType putType, CompositeType getType, bool includeBaseModelTypeProperties)
+        private TypeBase ParseCompositeType(CompositeType? putType, CompositeType? getType, bool includeBaseModelTypeProperties)
         {
-            var combinedType = putType ?? getType;
+            var combinedType = CombineAndThrowIfNull(putType, getType);
             var definitionName = combinedType.SerializedName;
 
             if (!namedDefinitions.ContainsKey(definitionName))
@@ -367,21 +356,20 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
             return namedDefinitions[definitionName];
         }
 
-        private TypeBase ParseDictionaryType(DictionaryType putType, DictionaryType getType)
+        private TypeBase ParseDictionaryType(DictionaryType? putType, DictionaryType? getType)
         {
-            var combinedType = putType ?? getType;
+            var combinedType = CombineAndThrowIfNull(putType, getType);
             var additionalPropertiesType = ParseType(putType?.ValueType, getType?.ValueType);
 
-            return factory.Create(() => new ObjectType
-            {
-                Name = combinedType.DeclarationName,
-                AdditionalProperties = factory.GetReference(additionalPropertiesType),
-            });
+            return factory.Create(() => new ObjectType(
+                name: combinedType.DeclarationName,
+                properties: new Dictionary<string, ObjectProperty>(),
+                additionalProperties: factory.GetReference(additionalPropertiesType)));
         }
 
-        private StringLiteralType GetDiscriminatorType(CompositeType putType, CompositeType getType)
+        private StringLiteralType GetDiscriminatorType(CompositeType? putType, CompositeType? getType)
         {
-            var combinedType = putType ?? getType;
+            var combinedType = CombineAndThrowIfNull(putType, getType);
 
             if (!(combinedType.Extensions.TryGetValue("x-ms-discriminator-value", out var ext) && ext is string discriminator && !string.IsNullOrEmpty(discriminator)))
             {
@@ -389,10 +377,10 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 discriminator = combinedType.SerializedName;
             }
 
-            return factory.Create(() => new StringLiteralType { Value = discriminator });
+            return factory.Create(() => new StringLiteralType(discriminator));
         }
 
-        private void HandlePolymorphicType(DiscriminatedObjectType discriminatedObjectType, CompositeType putType, CompositeType getType)
+        private void HandlePolymorphicType(DiscriminatedObjectType discriminatedObjectType, CompositeType? putType, CompositeType? getType)
         {
             var putSubTypes = (putType != null ? codeModel.ModelTypes.Where(type => type.BaseModelType == putType) : Enumerable.Empty<CompositeType>())
                 .ToDictionary(x => x.SerializedName);
@@ -413,25 +401,24 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 if (namedDefinitions[subTypeName] is ObjectType objectType)
                 {
                     var discriminatorEnum = GetDiscriminatorType(putSubType, getSubType);
-                    objectType.Properties[discriminatedObjectType.Discriminator] = new ObjectProperty
-                    {
-                        Type = factory.GetReference(discriminatorEnum),
-                        Flags = ObjectPropertyFlags.Required,
-                    };
+                    objectType.Properties[discriminatedObjectType.Discriminator] = new ObjectProperty(
+                        type: factory.GetReference(discriminatorEnum),
+                        flags: ObjectPropertyFlags.Required
+                    );
                 }
 
                 discriminatedObjectType.Elements[subTypeName] = factory.GetReference(polymorphicType);
             }
         }
 
-        private TypeBase ParseEnumType(EnumType putType, EnumType getType)
+        private TypeBase ParseEnumType(EnumType? putType, EnumType? getType)
         {
-            var combinedType = putType ?? getType;
+            var combinedType = CombineAndThrowIfNull(putType, getType);
             var enumTypes = new List<TypeBase>();
 
             foreach (var enumValue in combinedType.Values)
             {
-                var stringLiteralType = factory.Create(() => new StringLiteralType { Value = enumValue.SerializedName });
+                var stringLiteralType = factory.Create(() => new StringLiteralType(enumValue.SerializedName));
                 enumTypes.Add(stringLiteralType);
             }
 
@@ -440,12 +427,12 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 return enumTypes.Single();
             }
 
-            return factory.Create(() => new UnionType { Elements = enumTypes.Select(x => factory.GetReference(x)).ToArray() });
+            return factory.Create(() => new UnionType(enumTypes.Select(x => factory.GetReference(x)).ToArray()));
         }
 
-        private TypeBase ParsePrimaryType(PrimaryType putType, PrimaryType getType)
+        private TypeBase ParsePrimaryType(PrimaryType? putType, PrimaryType? getType)
         {
-            var combinedType = putType ?? getType;
+            var combinedType = CombineAndThrowIfNull(putType, getType);
 
             switch (combinedType.KnownPrimaryType)
             {
@@ -479,13 +466,13 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
         {
             if (descriptor.IsRootType)
             {
-                return factory.Create(() => new StringLiteralType { Value = nameValue });
+                return factory.Create(() => new StringLiteralType(nameValue));
             }
 
             return builtInTypes[BuiltInTypeKind.String];
         }
 
-        private TypeBase ParseSequenceType(SequenceType putType, SequenceType getType)
+        private TypeBase ParseSequenceType(SequenceType? putType, SequenceType? getType)
         {
             var itemType = ParseType(putType?.ElementType, getType?.ElementType);
 
@@ -494,10 +481,10 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 return builtInTypes[BuiltInTypeKind.Array];
             }
 
-            return factory.Create(() => new ArrayType
-            {
-                ItemType = factory.GetReference(itemType),
-            });
+            return factory.Create(() => new ArrayType(factory.GetReference(itemType)));
         }
+
+        private static T CombineAndThrowIfNull<T>(T? putType, T? getType)
+            => putType ?? getType ?? throw new ArgumentNullException($"Unable to find PUT or GET type for {typeof(T)}");
     }
 }
