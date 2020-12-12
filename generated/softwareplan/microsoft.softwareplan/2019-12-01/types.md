@@ -1,9 +1,10 @@
 # Microsoft.SoftwarePlan @ 2019-12-01
 
 ## Resource Microsoft.SoftwarePlan/hybridUseBenefits@2019-12-01
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: int (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)

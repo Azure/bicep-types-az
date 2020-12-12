@@ -4,6 +4,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: IdentityDetails (ReadOnly)
 * **location**: string

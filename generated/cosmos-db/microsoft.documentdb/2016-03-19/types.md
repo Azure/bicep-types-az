@@ -4,6 +4,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'GlobalDocumentDB' | 'MongoDB' | 'Parse'
 * **location**: string
@@ -16,6 +17,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -23,10 +25,35 @@
 * **tags**: Dictionary<string,String> (ReadOnly)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/databases' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.DocumentDB/databaseAccounts/apis/databases@2016-03-19
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MongoDBDatabaseCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/databases' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/apis/databases@2016-03-19
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GremlinDatabaseCreateUpdateProperties (Required)
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/databases' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.DocumentDB/databaseAccounts/apis/databases/collections@2016-03-19
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -38,6 +65,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -49,6 +77,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -60,6 +89,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -71,6 +101,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -82,6 +113,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -93,6 +125,31 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ThroughputUpdateProperties (Required)
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/databases/settings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/apis/databases/settings@2016-03-19
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ThroughputUpdateProperties (Required)
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/databases/settings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/apis/databases/settings@2016-03-19
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -104,6 +161,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -115,6 +173,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -126,6 +185,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -137,6 +197,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -148,6 +209,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -159,6 +221,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -235,6 +298,45 @@
 * **Additional Properties Type**: string
 
 ## SqlDatabaseResource
+### Properties
+* **id**: string (Required, WriteOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## MongoDBDatabaseCreateUpdateProperties
+### Properties
+* **id**: string (ReadOnly)
+* **options**: Dictionary<string,String> (Required, WriteOnly)
+* **resource**: MongoDBDatabaseResource (Required, WriteOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## MongoDBDatabaseResource
+### Properties
+* **id**: string (Required, WriteOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## GremlinDatabaseCreateUpdateProperties
+### Properties
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
+* **id**: string (ReadOnly)
+* **options**: Dictionary<string,String> (Required, WriteOnly)
+* **resource**: GremlinDatabaseResource (Required, WriteOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## GremlinDatabaseResource
 ### Properties
 * **id**: string (Required, WriteOnly)
 
@@ -401,6 +503,14 @@
 * **indexingPolicy**: IndexingPolicy (WriteOnly)
 * **partitionKey**: ContainerPartitionKey (WriteOnly)
 * **uniqueKeyPolicy**: UniqueKeyPolicy (WriteOnly)
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Dictionary<string,String>
 ### Additional Properties

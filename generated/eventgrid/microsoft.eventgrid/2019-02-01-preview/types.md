@@ -4,6 +4,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
@@ -12,9 +13,10 @@
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/eventSubscriptions@2019-02-01-preview
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2019-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: EventSubscriptionProperties
@@ -24,6 +26,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)

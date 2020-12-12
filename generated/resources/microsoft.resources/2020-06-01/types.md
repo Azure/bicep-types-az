@@ -1,9 +1,58 @@
 # Microsoft.Resources @ 2020-06-01
 
 ## Resource Microsoft.Resources/deployments@2020-06-01
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DeploymentProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Resources/deployments@2020-06-01
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DeploymentProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Resources/deployments@2020-06-01
+* **Valid Scope(s)**: ManagementGroup
+### Properties
+* **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DeploymentProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Resources/deployments@2020-06-01
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DeploymentProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Resources/deployments@2020-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
@@ -15,6 +64,7 @@
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **managedBy**: string
@@ -24,9 +74,10 @@
 * **type**: 'Microsoft.Resources/resourceGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Resources/tags@2020-06-01
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: Tags (Required)
@@ -164,6 +215,22 @@
 * **id**: string
 * **relativePath**: string
 * **uri**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Dictionary<string,String>
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Dictionary<string,String>
 ### Additional Properties

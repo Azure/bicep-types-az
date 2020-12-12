@@ -1,9 +1,10 @@
 # Microsoft.Authorization @ 2020-07-01-preview
 
 ## Resource Microsoft.Authorization/policyExemptions@2020-07-01-preview
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PolicyExemptionProperties (Required)

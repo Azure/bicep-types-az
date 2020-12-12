@@ -4,6 +4,7 @@
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2017-11-11-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: ManagedServiceIdentity (Required)
 * **location**: string (Required)
@@ -15,6 +16,7 @@
 * **Valid Scope(s)**: ManagementGroup
 ### Properties
 * **apiVersion**: '2017-11-11-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: BlueprintProperties (Required)
@@ -25,6 +27,7 @@
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2017-11-11-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **type**: 'Microsoft.Blueprint/blueprints/artifacts' (ReadOnly, DeployTimeConstant)

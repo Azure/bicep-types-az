@@ -1,9 +1,10 @@
 # Microsoft.Advisor @ 2016-07-12-preview
 
 ## Resource Microsoft.Advisor/recommendations/suppressions@2016-07-12-preview
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2016-07-12-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)

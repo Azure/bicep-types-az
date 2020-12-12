@@ -1,9 +1,10 @@
 # Microsoft.Blueprint @ 2018-11-01-preview
 
 ## Resource Microsoft.Blueprint/blueprintAssignments@2018-11-01-preview
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: ManagedServiceIdentity (Required)
 * **location**: string (Required)
@@ -12,19 +13,21 @@
 * **type**: 'Microsoft.Blueprint/blueprintAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Blueprint/blueprints@2018-11-01-preview
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: BlueprintProperties (Required)
 * **type**: 'Microsoft.Blueprint/blueprints' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Blueprint/blueprints/artifacts@2018-11-01-preview
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Valid Scope(s)**: Unknown
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **type**: 'Microsoft.Blueprint/blueprints/artifacts' (ReadOnly, DeployTimeConstant)
@@ -45,9 +48,10 @@
 
 
 ## Resource Microsoft.Blueprint/blueprints/versions@2018-11-01-preview
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PublishedBlueprintProperties (Required)

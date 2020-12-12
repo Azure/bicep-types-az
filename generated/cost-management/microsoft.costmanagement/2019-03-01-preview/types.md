@@ -4,6 +4,7 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **name**: string (Required, DeployTimeConstant)
@@ -14,6 +15,7 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ShowbackRuleProperties

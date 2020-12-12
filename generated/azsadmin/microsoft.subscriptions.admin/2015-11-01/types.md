@@ -4,6 +4,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
@@ -15,6 +16,7 @@
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **displayName**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **latitude**: string
@@ -26,6 +28,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
@@ -37,6 +40,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
@@ -48,6 +52,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
@@ -60,6 +65,7 @@
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
 * **delegatedProviderSubscriptionId**: string
+* **dependsOn**: resourceref[] (WriteOnly)
 * **displayName**: string
 * **externalReferenceId**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
@@ -78,6 +84,7 @@
 * **acquisitionId**: string
 * **acquisitionTime**: string
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **externalReferenceId**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)

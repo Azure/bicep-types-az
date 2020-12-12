@@ -4,6 +4,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **location**: string (Required)
@@ -16,6 +17,7 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **name**: 'web' (Required, DeployTimeConstant)
@@ -26,6 +28,7 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **name**: string (Required, DeployTimeConstant)

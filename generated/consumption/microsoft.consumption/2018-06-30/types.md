@@ -1,9 +1,21 @@
 # Microsoft.Consumption @ 2018-06-30
 
 ## Resource Microsoft.Consumption/budgets@2018-06-30
-* **Valid Scope(s)**: Subscription, ResourceGroup
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **eTag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BudgetProperties
+* **type**: 'Microsoft.Consumption/budgets' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Consumption/budgets@2018-06-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -14,6 +26,7 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'costTags' (Required, DeployTimeConstant)

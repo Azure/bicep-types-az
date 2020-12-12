@@ -4,6 +4,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: ClusterIdentity
@@ -17,6 +18,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -29,9 +31,21 @@
 ### Properties
 * **apiVersion**: '2015-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **clusterMonitoringEnabled**: bool (ReadOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **primaryKey**: string (WriteOnly)
+* **type**: 'Microsoft.HDInsight/clusters/extensions' (ReadOnly, DeployTimeConstant)
+* **workspaceId**: string
+
+## Resource Microsoft.HDInsight/clusters/extensions@2015-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **primaryKey**: string
 * **type**: 'Microsoft.HDInsight/clusters/extensions' (ReadOnly, DeployTimeConstant)
 * **workspaceId**: string
 

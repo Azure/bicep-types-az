@@ -6,6 +6,7 @@
 * **adminDomainName**: string (WriteOnly)
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **billingDomainName**: string (WriteOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)

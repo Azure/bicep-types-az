@@ -1,9 +1,10 @@
 # Microsoft.CostManagement @ 2019-04-01-preview
 
 ## Resource Microsoft.CostManagement/budgets@2019-04-01-preview
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2019-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -11,9 +12,21 @@
 * **type**: 'Microsoft.CostManagement/budgets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CostManagement/views@2019-04-01-preview
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **eTag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ViewProperties
+* **type**: 'Microsoft.CostManagement/views' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.CostManagement/views@2019-04-01-preview
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2019-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)

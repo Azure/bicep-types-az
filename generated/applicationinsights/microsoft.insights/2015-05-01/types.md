@@ -4,6 +4,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (Required)
 * **location**: string (Required)
@@ -17,6 +18,7 @@
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
 * **Content**: string
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **Properties**: ApplicationInsightsComponentAnalyticsItemProperties
@@ -32,6 +34,7 @@
 * **AnnotationName**: string (WriteOnly)
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
 * **Category**: string (WriteOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **EventTime**: string (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -46,6 +49,7 @@
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
 * **CurrentBillingFeatures**: string[]
 * **DataVolumeCap**: ApplicationInsightsComponentDataVolumeCap
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **type**: 'Microsoft.Insights/components/currentbillingfeatures' (ReadOnly, DeployTimeConstant)
@@ -56,6 +60,7 @@
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
 * **ApplicationName**: string (ReadOnly)
 * **ContainerName**: string (ReadOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **DestinationAccountId**: string
 * **DestinationAddress**: string (WriteOnly)
 * **DestinationStorageLocationId**: string
@@ -86,6 +91,7 @@
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
 * **Category**: string
 * **Config**: string
+* **dependsOn**: resourceref[] (WriteOnly)
 * **FavoriteId**: string (ReadOnly)
 * **FavoriteType**: 'shared' | 'user'
 * **id**: string (ReadOnly, DeployTimeConstant)
@@ -103,6 +109,7 @@
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
 * **Content**: string
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **Properties**: ApplicationInsightsComponentAnalyticsItemProperties
@@ -117,6 +124,7 @@
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
 * **CustomEmails**: string[]
+* **dependsOn**: resourceref[] (WriteOnly)
 * **Enabled**: bool
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **LastUpdatedTime**: string
@@ -129,6 +137,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'shared' | 'user'
 * **location**: string
@@ -141,6 +150,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'multistep' | 'ping'
 * **location**: string (Required)
@@ -153,6 +163,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'shared' | 'user'
 * **location**: string

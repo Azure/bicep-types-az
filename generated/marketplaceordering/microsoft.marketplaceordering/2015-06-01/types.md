@@ -4,6 +4,7 @@
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2015-06-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AgreementProperties

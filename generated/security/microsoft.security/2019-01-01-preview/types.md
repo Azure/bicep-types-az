@@ -4,6 +4,7 @@
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AlertsSuppressionRuleProperties
@@ -13,15 +14,17 @@
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SecurityAssessmentMetadataProperties
 * **type**: 'Microsoft.Security/assessmentMetadata' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/assessments@2019-01-01-preview
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SecurityAssessmentProperties
@@ -31,6 +34,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string

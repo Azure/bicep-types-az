@@ -4,6 +4,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
@@ -18,6 +19,7 @@
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
 * **authenticationSettings**: AuthenticationSettingsContract
+* **dependsOn**: resourceref[] (WriteOnly)
 * **description**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -31,6 +33,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **description**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **method**: string (Required)
@@ -53,6 +56,7 @@
 * **clientRegistrationEndpoint**: string (Required)
 * **clientSecret**: string
 * **defaultScope**: string
+* **dependsOn**: resourceref[] (WriteOnly)
 * **description**: string
 * **grantTypes**: 'authorizationCode' | 'clientCredentials' | 'implicit' | 'resourceOwnerPassword'[] (Required)
 * **id**: string (ReadOnly, DeployTimeConstant)
@@ -69,6 +73,7 @@
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
 * **certificate**: string[]
+* **dependsOn**: resourceref[] (WriteOnly)
 * **description**: string
 * **header**: Dictionary<string,IList<String>>
 * **id**: string (ReadOnly, DeployTimeConstant)
@@ -88,6 +93,7 @@
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
 * **data**: string (Required, WriteOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **expirationDate**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -101,6 +107,7 @@
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
 * **builtIn**: bool (ReadOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **description**: string
 * **externalId**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
@@ -114,6 +121,7 @@
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
 * **clientId**: string (Required)
 * **clientSecret**: string (Required)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter' (Required, DeployTimeConstant)
 * **type**: 'Microsoft.ApiManagement/service/identityProviders' (ReadOnly, DeployTimeConstant)
@@ -123,6 +131,7 @@
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
 * **credentials**: Dictionary<string,String> (Required)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **description**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **isBuffered**: bool
@@ -135,6 +144,7 @@
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
 * **clientId**: string (Required)
 * **clientSecret**: string
+* **dependsOn**: resourceref[] (WriteOnly)
 * **description**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **metadataEndpoint**: string (Required)
@@ -146,6 +156,7 @@
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
 * **approvalRequired**: bool
+* **dependsOn**: resourceref[] (WriteOnly)
 * **description**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -159,6 +170,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **secret**: bool
@@ -171,6 +183,7 @@
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
 * **createdDate**: string (ReadOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **endDate**: string (ReadOnly)
 * **expirationDate**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
@@ -189,6 +202,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
 * **email**: string (Required)
 * **firstName**: string (Required)
 * **id**: string (ReadOnly, DeployTimeConstant)
