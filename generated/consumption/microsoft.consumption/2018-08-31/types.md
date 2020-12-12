@@ -1,18 +1,7 @@
 # Microsoft.Consumption @ 2018-08-31
 
 ## Resource Microsoft.Consumption/budgets@2018-08-31
-* **Valid Scope(s)**: Subscription
-### Properties
-* **apiVersion**: '2018-08-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: BudgetProperties
-* **type**: 'Microsoft.Consumption/budgets' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.Consumption/budgets@2018-08-31
-* **Valid Scope(s)**: ResourceGroup
+* **Valid Scope(s)**: Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2018-08-31' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

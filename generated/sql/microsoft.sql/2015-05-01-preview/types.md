@@ -83,28 +83,6 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Sql/servers/failoverGroups' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.Sql/servers/firewallRules@2015-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerFirewallRuleProperties
-* **type**: 'Microsoft.Sql/servers/firewallRules' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.Sql/servers/firewallRules@2015-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **nextLink**: string (ReadOnly)
-* **type**: 'Microsoft.Sql/servers/firewallRules' (ReadOnly, DeployTimeConstant)
-* **value**: FirewallRule[] (ReadOnly)
-* **values**: FirewallRule[] (WriteOnly)
-
 ## Resource Microsoft.Sql/servers/keys@2015-05-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -276,18 +254,6 @@
 ## Dictionary<string,String>
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ServerFirewallRuleProperties
-### Properties
-* **endIpAddress**: string
-* **startIpAddress**: string
-
-## FirewallRule
-### Properties
-* **id**: string (ReadOnly, WriteOnly)
-* **name**: string (WriteOnly)
-* **properties**: ServerFirewallRuleProperties (WriteOnly)
-* **type**: string (ReadOnly, WriteOnly)
 
 ## ServerKeyProperties
 ### Properties

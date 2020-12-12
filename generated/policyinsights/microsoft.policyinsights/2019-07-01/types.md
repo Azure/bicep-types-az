@@ -1,36 +1,6 @@
 # Microsoft.PolicyInsights @ 2019-07-01
 
 ## Resource Microsoft.PolicyInsights/remediations@2019-07-01
-* **Valid Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RemediationProperties
-* **type**: 'Microsoft.PolicyInsights/remediations' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.PolicyInsights/remediations@2019-07-01
-* **Valid Scope(s)**: Subscription
-### Properties
-* **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RemediationProperties
-* **type**: 'Microsoft.PolicyInsights/remediations' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.PolicyInsights/remediations@2019-07-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: RemediationProperties
-* **type**: 'Microsoft.PolicyInsights/remediations' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.PolicyInsights/remediations@2019-07-01
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)

@@ -14,40 +14,7 @@
 * **type**: 'Microsoft.CostManagement/connectors' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CostManagement/reports@2018-08-01-preview
-* **Valid Scope(s)**: Subscription
-### Properties
-* **apiVersion**: '2018-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ReportProperties
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.CostManagement/reports' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.CostManagement/reports@2018-08-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ReportProperties
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.CostManagement/reports' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.CostManagement/reports@2018-08-01-preview
-* **Valid Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2018-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ReportProperties
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.CostManagement/reports' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.CostManagement/reports@2018-08-01-preview
-* **Valid Scope(s)**: Extension
+* **Valid Scope(s)**: Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2018-08-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -165,18 +132,6 @@
 ### Properties
 * **from**: string (Required)
 * **to**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Dictionary<string,String>
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## Dictionary<string,String>
 ### Additional Properties

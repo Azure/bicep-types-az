@@ -12,17 +12,7 @@
 * **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Authorization/policyDefinitions@2018-03-01
-* **Valid Scope(s)**: Subscription
-### Properties
-* **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyDefinitionProperties
-* **type**: 'Microsoft.Authorization/policyDefinitions' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.Authorization/policyDefinitions@2018-03-01
-* **Valid Scope(s)**: ManagementGroup
+* **Valid Scope(s)**: ManagementGroup, Subscription
 ### Properties
 * **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
@@ -32,17 +22,7 @@
 * **type**: 'Microsoft.Authorization/policyDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Authorization/policySetDefinitions@2018-03-01
-* **Valid Scope(s)**: Subscription
-### Properties
-* **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicySetDefinitionProperties
-* **type**: 'Microsoft.Authorization/policySetDefinitions' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.Authorization/policySetDefinitions@2018-03-01
-* **Valid Scope(s)**: ManagementGroup
+* **Valid Scope(s)**: ManagementGroup, Subscription
 ### Properties
 * **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

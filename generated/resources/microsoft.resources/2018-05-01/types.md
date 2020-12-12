@@ -1,18 +1,7 @@
 # Microsoft.Resources @ 2018-05-01
 
 ## Resource Microsoft.Resources/deployments@2018-05-01
-* **Valid Scope(s)**: Subscription
-### Properties
-* **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: DeploymentProperties (Required)
-* **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.Resources/deployments@2018-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Valid Scope(s)**: Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)

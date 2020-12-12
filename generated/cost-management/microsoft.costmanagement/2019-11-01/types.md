@@ -12,17 +12,6 @@
 * **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CostManagement/views@2019-11-01
-* **Valid Scope(s)**: Tenant
-### Properties
-* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ViewProperties
-* **type**: 'Microsoft.CostManagement/views' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.CostManagement/views@2019-11-01
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)

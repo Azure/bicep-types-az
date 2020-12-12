@@ -11,17 +11,6 @@
 * **properties**: ConfigurationAssignmentProperties
 * **type**: 'Microsoft.Maintenance/configurationAssignments' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.Maintenance/configurationAssignments@2018-06-01-preview
-* **Valid Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationAssignmentProperties
-* **type**: 'Microsoft.Maintenance/configurationAssignments' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.Maintenance/maintenanceConfigurations@2018-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
