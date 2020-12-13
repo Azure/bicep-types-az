@@ -98,6 +98,7 @@
 * **sasUri**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -199,6 +200,7 @@
 * **stepId**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -207,6 +209,7 @@
 * **artifactSourceId**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -216,6 +219,7 @@
 * **targetSubscriptionId**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -226,6 +230,7 @@
 * **targetResourceGroup**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -327,6 +332,7 @@
 * **duration**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

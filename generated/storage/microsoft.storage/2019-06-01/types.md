@@ -323,6 +323,7 @@
 * **tier**: 'Premium' | 'Standard'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -419,6 +420,7 @@
 * **upn**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -456,6 +458,7 @@
 * **version**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -545,6 +548,7 @@
 * **metadata**: Dictionary<string,String>
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

@@ -197,6 +197,7 @@
 * **name**: 'Basic' | 'Free' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -233,10 +234,12 @@
 * **name**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -255,6 +258,7 @@
 * **state**: 'Edit' | 'New' | 'Published' (ReadOnly)
 
 ## Dictionary<string,DscConfigurationParameter>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: DscConfigurationParameter
 
@@ -278,6 +282,7 @@
 * **value**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -294,6 +299,7 @@
 * **name**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -306,6 +312,7 @@
 * **lastModifiedTime**: string (ReadOnly)
 
 ## Dictionary<string,FieldDefinition>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: FieldDefinition
 
@@ -343,6 +350,7 @@
 * **statusDetails**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -363,6 +371,7 @@
 * **schedule**: ScheduleAssociationProperty (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -392,6 +401,7 @@
 * **message**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -423,6 +433,7 @@
 * **parameters**: Dictionary<string,RunbookParameter>
 
 ## Dictionary<string,RunbookParameter>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: RunbookParameter
 
@@ -434,10 +445,12 @@
 * **type**: string
 
 ## Dictionary<string,RunbookParameter>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: RunbookParameter
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -490,10 +503,12 @@
 * **status**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -512,6 +527,7 @@
 * **uri**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

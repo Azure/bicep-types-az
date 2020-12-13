@@ -21,6 +21,7 @@
 * **userAssignedIdentities**: Dictionary<string,Schemas18UserAssignedIdentitiesValue>
 
 ## Dictionary<string,Schemas18UserAssignedIdentitiesValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: schemas:18_userAssignedIdentitiesValue
 
@@ -30,6 +31,7 @@
 * **principalId**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

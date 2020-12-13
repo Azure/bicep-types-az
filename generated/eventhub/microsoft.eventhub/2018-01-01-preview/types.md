@@ -80,6 +80,7 @@
 * **name**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -121,6 +122,7 @@
 * **tier**: 'Basic' | 'Standard'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

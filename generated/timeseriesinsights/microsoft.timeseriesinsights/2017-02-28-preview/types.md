@@ -77,6 +77,7 @@
 * **name**: 'S1' | 'S2' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -87,6 +88,7 @@
 * **roles**: 'Contributor' | 'Reader'[]
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -150,6 +152,7 @@
 * **type**: 'Bool' | 'DateTime' | 'Double' | 'String'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

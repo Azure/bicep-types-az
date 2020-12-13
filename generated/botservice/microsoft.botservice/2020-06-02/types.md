@@ -67,6 +67,7 @@
 * **tier**: 'Free' | 'Standard' (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -334,6 +335,7 @@
 * **siteName**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -353,6 +355,7 @@
 * **value**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

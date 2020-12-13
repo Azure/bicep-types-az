@@ -231,6 +231,7 @@
 * **totalDiskStorageSizeInBytes**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -245,6 +246,7 @@
 * **sourceAssociations**: Dictionary<string,String>
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -279,6 +281,7 @@
 * **recoveryPointCount**: int
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -499,6 +502,7 @@
 * **schedulePolicy**: SchedulePolicy
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

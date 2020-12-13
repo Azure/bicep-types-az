@@ -43,6 +43,7 @@
 
 
 ## Dictionary<string,AssetItem>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: AssetItem
 
@@ -58,6 +59,7 @@
 * **type**: 'Module' | 'Resource' (Required)
 
 ## Dictionary<string,InputPort>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: InputPort
 
@@ -71,10 +73,12 @@
 * **uri**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,OutputPort>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: OutputPort
 
@@ -89,6 +93,7 @@
 * **parameterType**: string
 
 ## Dictionary<string,ModeValueInfo>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ModeValueInfo
 
@@ -112,10 +117,12 @@
 * **inputs**: Dictionary<string,IList<IList<Object>>>
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## Dictionary<string,IList<IList<Object>>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any[][]
 
@@ -127,6 +134,7 @@
 * **type**: string (Required)
 
 ## Dictionary<string,TableSpecification>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: TableSpecification
 
@@ -139,6 +147,7 @@
 * **type**: string (Required)
 
 ## Dictionary<string,ColumnSpecification>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ColumnSpecification
 
@@ -160,6 +169,7 @@
 * **id**: string (Required)
 
 ## Dictionary<string,WebServiceParameter>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: WebServiceParameter
 
@@ -196,6 +206,7 @@
 * **targetPortId**: string
 
 ## Dictionary<string,GraphParameter>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: GraphParameter
 
@@ -211,6 +222,7 @@
 * **parameterKey**: string (Required)
 
 ## Dictionary<string,GraphNode>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: GraphNode
 
@@ -222,10 +234,12 @@
 * **parameters**: Dictionary<string,WebServiceParameter>
 
 ## Dictionary<string,WebServiceParameter>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: WebServiceParameter
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

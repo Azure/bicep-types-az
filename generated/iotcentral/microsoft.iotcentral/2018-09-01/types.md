@@ -25,6 +25,7 @@
 * **name**: 'F1' | 'S1' | 'ST0' | 'ST1' | 'ST2' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

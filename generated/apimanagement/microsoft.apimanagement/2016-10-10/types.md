@@ -250,6 +250,7 @@
 * **vnetid**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -271,6 +272,7 @@
 * **name**: 'Developer' | 'Premium' | 'Standard' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -321,6 +323,7 @@
 * **value**: string (Required)
 
 ## Dictionary<string,IList<String>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
 
@@ -330,10 +333,12 @@
 * **skipCertificateNameValidation**: bool
 
 ## Dictionary<string,IList<String>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

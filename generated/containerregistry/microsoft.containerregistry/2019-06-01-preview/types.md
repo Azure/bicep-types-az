@@ -58,6 +58,7 @@
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -69,6 +70,7 @@
 * **userAssignedIdentities**: Dictionary<string,UserIdentityProperties>
 
 ## Dictionary<string,UserIdentityProperties>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: UserIdentityProperties
 
@@ -167,6 +169,7 @@
 * **sourceRegistry**: SourceRegistryCredentials
 
 ## Dictionary<string,CustomRegistryCredentials>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: CustomRegistryCredentials
 
@@ -418,6 +421,7 @@
 * **status**: 'Disabled' | 'Enabled'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

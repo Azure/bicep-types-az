@@ -52,6 +52,7 @@
 * **values**: string[] (Required)
 
 ## Dictionary<string,Notification>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: Notification
 
@@ -110,6 +111,7 @@
 * **sorting**: ReportConfigSorting[]
 
 ## Dictionary<string,ReportConfigAggregation>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ReportConfigAggregation
 

@@ -65,6 +65,7 @@
 * **userAssignedIdentities**: Dictionary<string,UserAssignedIdentity>
 
 ## Dictionary<string,UserAssignedIdentity>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: UserAssignedIdentity
 
@@ -92,6 +93,7 @@
 * **mode**: 'AllResourcesDoNotDelete' | 'AllResourcesReadOnly' | 'None'
 
 ## Dictionary<string,ParameterValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterValue
 
@@ -111,6 +113,7 @@
 * **id**: string (Required)
 
 ## Dictionary<string,ResourceGroupValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ResourceGroupValue
 
@@ -137,6 +140,7 @@
 * **versions**: any
 
 ## Dictionary<string,ParameterDefinition>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterDefinition
 
@@ -154,6 +158,7 @@
 * **strongType**: string
 
 ## Dictionary<string,ResourceGroupDefinition>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ResourceGroupDefinition
 
@@ -166,6 +171,7 @@
 * **tags**: Dictionary<string,String>
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -189,6 +195,7 @@
 * **resourceGroup**: string
 
 ## Dictionary<string,ParameterValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterValue
 
@@ -221,6 +228,7 @@
 * **template**: any (Required)
 
 ## Dictionary<string,ParameterValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterValue
 
@@ -236,10 +244,12 @@
 * **targetScope**: 'managementGroup' | 'subscription'
 
 ## Dictionary<string,ParameterDefinition>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterDefinition
 
 ## Dictionary<string,ResourceGroupDefinition>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ResourceGroupDefinition
 

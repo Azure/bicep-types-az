@@ -47,6 +47,7 @@
 * **tenantID**: string
 
 ## Dictionary<string,ManagedClusterAddonProfile>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ManagedClusterAddonProfile
 
@@ -56,6 +57,7 @@
 * **enabled**: bool (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -104,6 +106,7 @@
 * **secret**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

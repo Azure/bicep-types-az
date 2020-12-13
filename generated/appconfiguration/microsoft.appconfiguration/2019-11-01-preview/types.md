@@ -32,6 +32,7 @@
 * **userAssignedIdentities**: Dictionary<string,UserIdentity>
 
 ## Dictionary<string,UserIdentity>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: UserIdentity
 
@@ -86,6 +87,7 @@
 * **name**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

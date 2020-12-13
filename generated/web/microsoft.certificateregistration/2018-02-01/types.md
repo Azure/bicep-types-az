@@ -49,6 +49,7 @@
 * **validityInYears**: int
 
 ## Dictionary<string,AppServiceCertificate>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: AppServiceCertificate
 
@@ -71,10 +72,12 @@
 * **version**: int (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

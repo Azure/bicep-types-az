@@ -33,6 +33,7 @@
 * **summary**: Dictionary<string,ProjectSummary> (ReadOnly)
 
 ## Dictionary<string,ProjectSummary>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ProjectSummary
 
@@ -57,6 +58,7 @@
 
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -94,6 +96,7 @@
 * **groupCount**: int
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

@@ -146,6 +146,7 @@
 * **tier**: 'Basic' | 'Premium'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -174,6 +175,7 @@
 * **name**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

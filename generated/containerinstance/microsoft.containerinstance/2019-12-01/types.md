@@ -21,6 +21,7 @@
 * **userAssignedIdentities**: Dictionary<string,Schemas18UserAssignedIdentitiesValue>
 
 ## Dictionary<string,Schemas18UserAssignedIdentitiesValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: schemas:18_userAssignedIdentitiesValue
 
@@ -158,6 +159,7 @@
 * **workspaceKey**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -243,10 +245,12 @@
 * **revision**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

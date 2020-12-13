@@ -87,6 +87,7 @@
 * **status**: AssessmentStatus (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -200,6 +201,7 @@
 * **propertyType**: 'Boolean' | 'Integer' | 'Number' | 'String'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

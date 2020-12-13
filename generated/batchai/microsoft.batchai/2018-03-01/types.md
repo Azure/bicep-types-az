@@ -194,6 +194,7 @@
 * **virtualMachineImageId**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -228,6 +229,7 @@
 * **userAccountSettings**: UserAccountSettings (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -359,6 +361,7 @@
 * **workerCount**: int
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

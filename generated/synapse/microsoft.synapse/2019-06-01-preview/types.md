@@ -305,6 +305,7 @@
 * **status**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -333,6 +334,7 @@
 * **workspaceUID**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -357,6 +359,7 @@
 * **name**: string
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -392,6 +395,7 @@
 * **type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -450,6 +454,7 @@
 * **time**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -698,6 +703,7 @@
 * **tier**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

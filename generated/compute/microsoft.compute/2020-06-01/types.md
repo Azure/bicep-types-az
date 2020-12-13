@@ -207,6 +207,7 @@
 * **tier**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -242,6 +243,7 @@
 * **vmSize**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -263,6 +265,7 @@
 * **statuses**: InstanceViewStatus[]
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -307,6 +310,7 @@
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'UltraSSD_LRS'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -324,6 +328,7 @@
 * **id**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -332,6 +337,7 @@
 * **publicKey**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -343,6 +349,7 @@
 * **userAssignedIdentities**: Dictionary<string,Schemas107UserAssignedIdentitiesValue>
 
 ## Dictionary<string,Schemas107UserAssignedIdentitiesValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: schemas:107_userAssignedIdentitiesValue
 
@@ -699,14 +706,17 @@
 * **typeHandlerVersion**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -747,6 +757,7 @@
 * **scriptUri**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -758,6 +769,7 @@
 * **userAssignedIdentities**: Dictionary<string,Schemas107UserAssignedIdentitiesValue>
 
 ## Dictionary<string,Schemas107UserAssignedIdentitiesValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: schemas:107_userAssignedIdentitiesValue
 
@@ -967,6 +979,7 @@
 * **writeAcceleratorEnabled**: bool
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -1014,10 +1027,12 @@
 * **protectFromScaleSetActions**: bool
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

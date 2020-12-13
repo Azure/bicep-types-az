@@ -55,6 +55,7 @@
 * **name**: 'Premium' | 'Standard'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -84,6 +85,7 @@
 * **httpsPort**: int
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

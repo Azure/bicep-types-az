@@ -33,6 +33,7 @@
 * **resources**: string[]
 
 ## Dictionary<string,Notification>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: Notification
 

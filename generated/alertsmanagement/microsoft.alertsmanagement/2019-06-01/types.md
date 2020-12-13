@@ -39,6 +39,7 @@
 * **supportedResourceTypes**: string[]
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 

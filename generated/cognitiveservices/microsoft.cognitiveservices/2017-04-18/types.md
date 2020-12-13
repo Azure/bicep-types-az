@@ -34,6 +34,7 @@
 * **userAssignedIdentities**: Dictionary<string,UserAssignedIdentity>
 
 ## Dictionary<string,UserAssignedIdentity>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: UserAssignedIdentity
 
@@ -133,6 +134,7 @@
 * **tier**: 'Enterprise' | 'Free' | 'Premium' | 'Standard' (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

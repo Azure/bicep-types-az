@@ -44,6 +44,7 @@
 * **name**: 'Free' | 'P10Premium' | 'P20Premium' | 'Standard'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -140,6 +141,7 @@
 * **type**: 'ClientCertificate' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -182,6 +184,7 @@
 * **viaPartitionKey**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -196,6 +199,7 @@
 * **transportType**: 'AMQP' | 'NetMessaging' | 'NotSpecified'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

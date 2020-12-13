@@ -81,6 +81,7 @@
 * **tier**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -321,6 +322,7 @@
 * **properties**: schemas:33_properties
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -341,6 +343,7 @@
 * **status**: 'Approved' | 'Pending' | 'Rejected'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

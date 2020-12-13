@@ -53,6 +53,7 @@
 * **tier**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -149,6 +150,7 @@
 * **userName**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -511,14 +513,17 @@
 * **validationErrors**: ReportableException[] (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -626,6 +631,7 @@
 * **targetServerVersion**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -669,6 +675,7 @@
 * **validationErrors**: ReportableException[] (ReadOnly)
 
 ## Dictionary<string,IList<String>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
 
@@ -693,6 +700,7 @@
 * **validationErrors**: ReportableException[] (ReadOnly)
 
 ## Dictionary<string,IList<DatabaseTable>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: DatabaseTable[]
 
@@ -702,10 +710,12 @@
 * **name**: string (ReadOnly)
 
 ## Dictionary<string,IList<DatabaseTable>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: DatabaseTable[]
 
 ## Dictionary<string,IList<String>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
 
@@ -727,6 +737,7 @@
 * **validationErrors**: ReportableException[] (ReadOnly)
 
 ## Dictionary<string,IList<DatabaseTable>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: DatabaseTable[]
 
@@ -751,14 +762,17 @@
 * **targetSetting**: Dictionary<string,String>
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -856,14 +870,17 @@
 * **targetServerVersion**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -873,6 +890,7 @@
 * **name**: string
 
 ## Dictionary<string,StartMigrationScenarioServerRoleResult>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: StartMigrationScenarioServerRoleResult
 
@@ -916,14 +934,17 @@
 * **targetSetting**: Dictionary<string,String>
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -1009,18 +1030,22 @@
 * **targetSetting**: Dictionary<string,String>
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -1246,6 +1271,7 @@
 * **targetDatabaseName**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -1339,6 +1365,7 @@
 * **validationErrors**: ValidationError (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -1369,6 +1396,7 @@
 * **waitStats**: Dictionary<string,WaitStatistics>
 
 ## Dictionary<string,WaitStatistics>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: WaitStatistics
 
@@ -1392,10 +1420,12 @@
 * **updateAction**: 'AddedOnTarget' | 'ChangedOnTarget' | 'DeletedOnTarget' (ReadOnly)
 
 ## Dictionary<string,Long>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: int
 
 ## Dictionary<string,Long>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: int
 
@@ -1407,6 +1437,7 @@
 * **summaryResults**: Dictionary<string,MigrationValidationDatabaseSummaryResult>
 
 ## Dictionary<string,MigrationValidationDatabaseSummaryResult>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: MigrationValidationDatabaseSummaryResult
 

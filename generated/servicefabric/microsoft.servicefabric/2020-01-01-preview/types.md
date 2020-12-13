@@ -78,6 +78,7 @@
 * **maxPercentUpgradeDomainDeltaUnhealthyNodes**: int (Required)
 
 ## Dictionary<string,ApplicationDeltaHealthPolicy>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ApplicationDeltaHealthPolicy
 
@@ -91,6 +92,7 @@
 * **maxPercentDeltaUnhealthyServices**: int
 
 ## Dictionary<string,ServiceTypeDeltaHealthPolicy>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ServiceTypeDeltaHealthPolicy
 
@@ -101,6 +103,7 @@
 * **maxPercentUnhealthyNodes**: int
 
 ## Dictionary<string,ApplicationHealthPolicy>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ApplicationHealthPolicy
 
@@ -114,6 +117,7 @@
 * **maxPercentUnhealthyServices**: int
 
 ## Dictionary<string,ServiceTypeHealthPolicy>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ServiceTypeHealthPolicy
 
@@ -140,6 +144,7 @@
 * **name**: 'Basic' | 'Standard' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -167,10 +172,12 @@
 * **startPort**: int (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -206,6 +213,7 @@
 * **certificateUrl**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

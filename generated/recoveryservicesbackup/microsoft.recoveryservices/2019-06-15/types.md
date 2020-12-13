@@ -48,6 +48,7 @@
 * **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -168,6 +169,7 @@
 * **resourceStateSyncTime**: string (ReadOnly)
 
 ## Dictionary<string,KPIResourceHealthDetails>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: KPIResourceHealthDetails
 
@@ -222,6 +224,7 @@
 * **title**: string (ReadOnly)
 
 ## Dictionary<string,KPIResourceHealthDetails>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: KPIResourceHealthDetails
 
@@ -249,6 +252,7 @@
 * **recoveryPointCount**: int
 
 ## Dictionary<string,KPIResourceHealthDetails>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: KPIResourceHealthDetails
 
@@ -284,6 +288,7 @@
 * **totalDiskStorageSizeInBytes**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -298,6 +303,7 @@
 * **sourceAssociations**: Dictionary<string,String>
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -332,6 +338,7 @@
 * **recoveryPointCount**: int
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -559,6 +566,7 @@
 * **schedulePolicy**: SchedulePolicy
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

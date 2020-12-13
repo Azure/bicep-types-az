@@ -32,6 +32,7 @@
 * **name**: 'F1' | 'S1' | 'S2' | 'S3' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

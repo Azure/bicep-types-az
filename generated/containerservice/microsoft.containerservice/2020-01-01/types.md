@@ -59,6 +59,7 @@
 * **tenantID**: string
 
 ## Dictionary<string,ManagedClusterAddonProfile>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ManagedClusterAddonProfile
 
@@ -69,6 +70,7 @@
 * **identity**: schemas:37_identity (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -102,10 +104,12 @@
 * **vnetSubnetID**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -115,6 +119,7 @@
 * **enablePrivateCluster**: bool
 
 ## Dictionary<string,Schemas28IdentityProfileValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: schemas:28_identityProfileValue
 
@@ -185,6 +190,7 @@
 * **adminUsername**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -211,10 +217,12 @@
 * **vnetSubnetID**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

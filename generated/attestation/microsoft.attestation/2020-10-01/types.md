@@ -44,6 +44,7 @@
 * **y**: string (WriteOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
