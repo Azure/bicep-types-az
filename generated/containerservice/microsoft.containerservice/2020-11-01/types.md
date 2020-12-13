@@ -42,6 +42,7 @@
 * **userAssignedIdentities**: Dictionary<string,Schemas42ProvisioningInfo>
 
 ## Dictionary<string,Schemas42ProvisioningInfo>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: schemas:42_provisioningInfo
 
@@ -97,6 +98,7 @@
 * **tenantID**: string
 
 ## Dictionary<string,ManagedClusterAddonProfile>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ManagedClusterAddonProfile
 
@@ -107,6 +109,7 @@
 * **identity**: schemas:41_identity (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -199,6 +202,7 @@
 * **vmVfsCachePressure**: int
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -207,6 +211,7 @@
 * **code**: 'Running' | 'Stopped'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -244,6 +249,7 @@
 * **upgradeChannel**: 'none' | 'patch' | 'rapid' | 'stable'
 
 ## Dictionary<string,Schemas42ProvisioningInfo>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: schemas:42_provisioningInfo
 
@@ -325,6 +331,7 @@
 * **podLabels**: Dictionary<string,String> (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -345,6 +352,7 @@
 * **tier**: 'Free' | 'Paid'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -381,10 +389,12 @@
 * **vnetSubnetID**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

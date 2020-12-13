@@ -34,6 +34,7 @@
 * **sourceRegistry**: SourceRegistryCredentials
 
 ## Dictionary<string,CustomRegistryCredentials>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: CustomRegistryCredentials
 
@@ -166,6 +167,7 @@
 * **tokenType**: 'OAuth' | 'PAT' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

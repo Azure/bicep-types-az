@@ -113,6 +113,7 @@
 * **tier**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -157,6 +158,7 @@
 * **updatedAt**: string (ReadOnly)
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -181,6 +183,7 @@
 * **runtimeVersion**: 'Java_11' | 'Java_8' | 'NetCore_31'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

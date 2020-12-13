@@ -176,6 +176,7 @@
 * **uniqueName**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -221,6 +222,7 @@
 * **title**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -231,6 +233,7 @@
 * **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

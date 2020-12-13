@@ -88,6 +88,7 @@
 * **screenCapture**: 'allow' | 'block'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -119,6 +120,7 @@
 * **touchId**: 'disable' | 'enable'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

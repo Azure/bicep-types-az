@@ -28,6 +28,7 @@
 * **metadata**: Dictionary<string,Object>
 
 ## Dictionary<string,DashboardLens>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: DashboardLens
 
@@ -38,10 +39,12 @@
 * **parts**: Dictionary<string,DashboardParts> (Required)
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## Dictionary<string,DashboardParts>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: DashboardParts
 
@@ -51,6 +54,7 @@
 * **position**: schemas:1_position (Required)
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -63,14 +67,17 @@
 * **y**: int (Required)
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

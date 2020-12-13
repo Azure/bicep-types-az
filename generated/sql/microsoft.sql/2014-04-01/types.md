@@ -225,6 +225,7 @@
 * **version**: '12.0' | '2.0'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -371,6 +372,7 @@
 * **status**: 'Disabled' | 'Enabled'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -459,6 +461,7 @@
 * **zoneRedundant**: bool
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

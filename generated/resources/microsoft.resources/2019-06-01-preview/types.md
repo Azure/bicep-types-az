@@ -33,6 +33,7 @@
 * **versions**: Dictionary<string,TemplateSpecVersionInfo> (ReadOnly)
 
 ## Dictionary<string,TemplateSpecVersionInfo>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: TemplateSpecVersionInfo
 
@@ -52,6 +53,7 @@
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -77,6 +79,7 @@
 * **template**: any (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

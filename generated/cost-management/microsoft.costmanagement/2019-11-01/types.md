@@ -45,6 +45,7 @@
 * **grouping**: QueryGrouping[]
 
 ## Dictionary<string,QueryAggregation>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: QueryAggregation
 
@@ -145,6 +146,7 @@
 * **sorting**: ReportConfigSorting[]
 
 ## Dictionary<string,ReportConfigAggregation>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ReportConfigAggregation
 

@@ -127,6 +127,7 @@
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -421,6 +422,7 @@
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

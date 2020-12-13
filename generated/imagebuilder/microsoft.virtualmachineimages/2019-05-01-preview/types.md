@@ -19,6 +19,7 @@
 * **userAssignedIdentities**: Dictionary<string,Schemas20UserAssignedIdentitiesValue>
 
 ## Dictionary<string,Schemas20UserAssignedIdentitiesValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: schemas:20_userAssignedIdentitiesValue
 
@@ -125,6 +126,7 @@
 
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -208,6 +210,7 @@
 * **vmSize**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

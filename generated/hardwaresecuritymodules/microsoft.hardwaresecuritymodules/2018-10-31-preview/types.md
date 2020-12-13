@@ -40,6 +40,7 @@
 * **name**: 'SafeNet Luna Network HSM A790'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

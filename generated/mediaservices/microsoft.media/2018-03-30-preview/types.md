@@ -117,6 +117,7 @@
 * **type**: 'Primary' | 'Secondary' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -403,6 +404,7 @@
 * **subnetPrefixLength**: int
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -458,6 +460,7 @@
 * **identifier**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

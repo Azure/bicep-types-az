@@ -31,6 +31,7 @@
 * **webHookProperties**: Dictionary<string,String>
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -61,6 +62,7 @@
 * **numberOfEvaluationPeriods**: int
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

@@ -58,6 +58,7 @@
 * **statusDetails**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -121,6 +122,7 @@
 * **source**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -158,6 +160,7 @@
 * **tags**: Dictionary<string,IList<String>>
 
 ## Dictionary<string,IList<String>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
 

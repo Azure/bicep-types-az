@@ -76,6 +76,7 @@
 * **tier**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -204,6 +205,7 @@
 * **userName**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -440,6 +442,7 @@
 
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -774,18 +777,22 @@
 * **validationErrors**: ReportableException[] (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -919,6 +926,7 @@
 * **targetServerVersion**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -962,6 +970,7 @@
 * **validationErrors**: ReportableException[] (ReadOnly)
 
 ## Dictionary<string,IList<String>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
 
@@ -986,6 +995,7 @@
 * **validationErrors**: ReportableException[] (ReadOnly)
 
 ## Dictionary<string,IList<DatabaseTable>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: DatabaseTable[]
 
@@ -995,10 +1005,12 @@
 * **name**: string (ReadOnly)
 
 ## Dictionary<string,IList<DatabaseTable>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: DatabaseTable[]
 
 ## Dictionary<string,IList<String>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
 
@@ -1020,6 +1032,7 @@
 * **validationErrors**: ReportableException[] (ReadOnly)
 
 ## Dictionary<string,IList<DatabaseTable>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: DatabaseTable[]
 
@@ -1073,6 +1086,7 @@
 * **throttling**: MongoDbThrottlingSettings
 
 ## Dictionary<string,MongoDbDatabaseSettings>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: MongoDbDatabaseSettings
 
@@ -1082,6 +1096,7 @@
 * **targetRUs**: int
 
 ## Dictionary<string,MongoDbCollectionSettings>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: MongoDbCollectionSettings
 
@@ -1134,6 +1149,7 @@
 
 
 ## Dictionary<string,MongoDbError>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: MongoDbError
 
@@ -1154,6 +1170,7 @@
 * **resultType**: 'Database' (Required)
 
 ## Dictionary<string,MongoDbCollectionProgress>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: Collection
 
@@ -1163,6 +1180,7 @@
 * **resultType**: 'Migration' (Required)
 
 ## Dictionary<string,MongoDbDatabaseProgress>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: Database
 
@@ -1188,18 +1206,22 @@
 * **targetSetting**: Dictionary<string,String>
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -1322,18 +1344,22 @@
 * **targetSetting**: Dictionary<string,String>
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -1413,6 +1439,7 @@
 * **targetSetting**: Dictionary<string,String>
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -1421,10 +1448,12 @@
 * **name**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -1507,18 +1536,22 @@
 * **targetSetting**: Dictionary<string,String>
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -1737,6 +1770,7 @@
 * **targetDatabaseName**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

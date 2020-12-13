@@ -204,6 +204,7 @@
 * **name**: 'Developer' | 'NotSpecified' | 'Premium'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -212,6 +213,7 @@
 * **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Standard' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -664,6 +666,7 @@
 * **targetNamespace**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -694,6 +697,7 @@
 * **value**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -734,6 +738,7 @@
 * **occurrence**: int
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -758,6 +763,7 @@
 * **type**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -777,6 +783,7 @@
 * **ref**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -797,6 +804,7 @@
 * **businessIdentities**: BusinessIdentity[]
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -814,6 +822,7 @@
 * **targetNamespace**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -824,10 +833,12 @@
 * **createdTime**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -868,6 +879,7 @@
 * **policies**: Dictionary<string,OpenAuthenticationAccessPolicy>
 
 ## Dictionary<string,OpenAuthenticationAccessPolicy>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: OpenAuthenticationAccessPolicy
 
@@ -882,6 +894,7 @@
 * **value**: string
 
 ## Dictionary<string,WorkflowParameter>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: WorkflowParameter
 
@@ -898,6 +911,7 @@
 * **plan**: ResourceReference
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

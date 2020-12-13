@@ -96,6 +96,7 @@
 * **status**: 'Approved' | 'Pending' | 'Rejected' (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

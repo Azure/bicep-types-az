@@ -390,6 +390,7 @@
 * **relationNodeKind**: 'Bookmark' | 'Case' (ReadOnly, WriteOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -666,6 +667,7 @@
 * **validUntil**: string (WriteOnly)
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 

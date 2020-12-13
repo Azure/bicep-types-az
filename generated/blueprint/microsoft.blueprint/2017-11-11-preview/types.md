@@ -69,6 +69,7 @@
 * **mode**: 'AllResources' | 'None'
 
 ## Dictionary<string,ParameterValueBase>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterValueBase
 
@@ -77,6 +78,7 @@
 * **description**: string
 
 ## Dictionary<string,ResourceGroupValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ResourceGroupValue
 
@@ -102,6 +104,7 @@
 * **versions**: any
 
 ## Dictionary<string,ParameterDefinition>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterDefinition
 
@@ -119,6 +122,7 @@
 * **strongType**: string
 
 ## Dictionary<string,ResourceGroupDefinition>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ResourceGroupDefinition
 
@@ -149,6 +153,7 @@
 * **resourceGroup**: string
 
 ## Dictionary<string,ParameterValueBase>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterValueBase
 
@@ -181,6 +186,7 @@
 * **template**: any (Required)
 
 ## Dictionary<string,ParameterValueBase>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterValueBase
 

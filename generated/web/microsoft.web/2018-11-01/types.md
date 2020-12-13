@@ -415,6 +415,7 @@
 * **type**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -426,6 +427,7 @@
 * **userAssignedIdentities**: Dictionary<string,Schemas128UserAssignedIdentitiesValue>
 
 ## Dictionary<string,Schemas128UserAssignedIdentitiesValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: schemas:128_userAssignedIdentitiesValue
 
@@ -489,6 +491,7 @@
 * **trafficManagerProfileName**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -614,6 +617,7 @@
 * **win32Status**: int
 
 ## Dictionary<string,AzureStorageInfoValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: AzureStorageInfoValue
 
@@ -718,6 +722,7 @@
 * **timestampUtc**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -753,6 +758,7 @@
 * **startTime**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -769,6 +775,7 @@
 * **test_data**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -826,6 +833,7 @@
 * **vendor**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -853,10 +861,12 @@
 * **thumbprint**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

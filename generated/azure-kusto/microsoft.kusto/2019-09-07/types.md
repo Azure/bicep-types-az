@@ -81,6 +81,7 @@
 * **userAssignedIdentities**: Dictionary<string,Schemas50UserAssignedIdentitiesValue>
 
 ## Dictionary<string,Schemas50UserAssignedIdentitiesValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: schemas:50_userAssignedIdentitiesValue
 
@@ -132,6 +133,7 @@
 * **tier**: 'Basic' | 'Standard' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

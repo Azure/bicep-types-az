@@ -35,6 +35,7 @@
 * **userAssignedIdentities**: Dictionary<string,UserIdentityProperties>
 
 ## Dictionary<string,UserIdentityProperties>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: UserIdentityProperties
 
@@ -82,6 +83,7 @@
 * **name**: 'CapacityReservation'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -116,6 +118,7 @@
 * **quotaNextResetTime**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

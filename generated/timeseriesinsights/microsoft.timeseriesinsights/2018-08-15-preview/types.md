@@ -74,6 +74,7 @@
 * **name**: 'L1' | 'P1' | 'S1' | 'S2' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -168,6 +169,7 @@
 * **propertyName**: string (WriteOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -217,6 +219,7 @@
 * **type**: 'Bool' | 'DateTime' | 'Double' | 'String'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

@@ -19,6 +19,7 @@
 * **userAssignedIdentities**: Dictionary<string,Schemas22UserAssignedIdentitiesValue>
 
 ## Dictionary<string,Schemas22UserAssignedIdentitiesValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: schemas:22_userAssignedIdentitiesValue
 
@@ -143,6 +144,7 @@
 
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -230,6 +232,7 @@
 * **subnetId**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

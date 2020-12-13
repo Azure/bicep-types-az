@@ -130,6 +130,7 @@
 * **userAssignedIdentities**: Dictionary<string,UserIdentityProperties>
 
 ## Dictionary<string,UserIdentityProperties>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: UserIdentityProperties
 
@@ -255,6 +256,7 @@
 * **tier**: 'Basic' | 'Classic' | 'Premium' | 'Standard' (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -409,6 +411,7 @@
 * **zoneRedundancy**: 'Disabled' | 'Enabled'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -457,10 +460,12 @@
 * **status**: 'disabled' | 'enabled'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

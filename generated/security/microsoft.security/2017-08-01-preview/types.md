@@ -153,6 +153,7 @@
 * **version**: string (ReadOnly)
 
 ## Dictionary<string,InformationType>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: InformationType
 
@@ -174,6 +175,7 @@
 * **pattern**: string
 
 ## Dictionary<string,SensitivityLabel>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: SensitivityLabel
 
@@ -209,6 +211,7 @@
 * **querySubscriptions**: string[] (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

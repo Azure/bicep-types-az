@@ -56,6 +56,7 @@
 * **policyDefinitionReferenceId**: string
 
 ## Dictionary<string,ParameterValuesValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterValuesValue
 
@@ -74,6 +75,7 @@
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static'
 
 ## Dictionary<string,ParameterDefinitionsValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterDefinitionsValue
 
@@ -104,6 +106,7 @@
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static'
 
 ## Dictionary<string,ParameterDefinitionsValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterDefinitionsValue
 
@@ -123,6 +126,7 @@
 * **policyDefinitionReferenceId**: string
 
 ## Dictionary<string,ParameterValuesValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterValuesValue
 

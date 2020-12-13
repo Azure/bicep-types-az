@@ -57,6 +57,7 @@
 * **message**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -88,6 +89,7 @@
 * **parameters**: Dictionary<string,RunbookParameter>
 
 ## Dictionary<string,RunbookParameter>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: RunbookParameter
 
@@ -99,10 +101,12 @@
 * **type**: string
 
 ## Dictionary<string,RunbookParameter>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: RunbookParameter
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

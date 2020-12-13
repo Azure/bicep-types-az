@@ -34,6 +34,7 @@
 * **userAssignedIdentities**: Dictionary<string,Schemas36UserAssignedIdentitiesValue>
 
 ## Dictionary<string,Schemas36UserAssignedIdentitiesValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: schemas:36_userAssignedIdentitiesValue
 
@@ -72,6 +73,7 @@
 * **kind**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -226,6 +228,7 @@
 * **resourceId**: string (WriteOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -267,6 +270,7 @@
 * **publicPort**: int
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

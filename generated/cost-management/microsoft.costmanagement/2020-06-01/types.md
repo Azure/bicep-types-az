@@ -52,6 +52,7 @@
 * **sorting**: ReportConfigSorting[]
 
 ## Dictionary<string,ReportConfigAggregation>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ReportConfigAggregation
 

@@ -53,6 +53,7 @@
 * **tier**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -99,6 +100,7 @@
 * **userName**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -199,6 +201,7 @@
 * **validationErrors**: ReportableException[] (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -228,6 +231,7 @@
 * **targetServerVersion**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -249,6 +253,7 @@
 * **validationErrors**: ReportableException[] (ReadOnly)
 
 ## Dictionary<string,IList<DatabaseTable>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: DatabaseTable[]
 
@@ -278,6 +283,7 @@
 * **targetDatabaseName**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -361,10 +367,12 @@
 * **targetServerVersion**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,DatabaseSummaryResult>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: DatabaseSummaryResult
 

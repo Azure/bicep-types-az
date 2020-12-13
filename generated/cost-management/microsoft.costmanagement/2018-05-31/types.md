@@ -34,6 +34,7 @@
 * **grouping**: ReportConfigGrouping[]
 
 ## Dictionary<string,ReportConfigAggregation>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ReportConfigAggregation
 
@@ -92,6 +93,7 @@
 * **to**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

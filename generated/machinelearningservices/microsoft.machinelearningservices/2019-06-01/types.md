@@ -46,6 +46,7 @@
 * **workspaceId**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -228,6 +229,7 @@
 * **properties**: schemas:30_properties
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

@@ -107,6 +107,7 @@
 * **tier**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -118,6 +119,7 @@
 * **userAssignedIdentities**: Dictionary<string,UserAssignedResourceIdentity>
 
 ## Dictionary<string,UserAssignedResourceIdentity>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: userAssignedResourceIdentity
 
@@ -193,6 +195,7 @@
 * **publicAzure**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -219,6 +222,7 @@
 * **type**: 'NotSpecified' | 'Once' | 'Recurring' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

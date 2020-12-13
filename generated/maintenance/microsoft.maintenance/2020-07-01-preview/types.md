@@ -37,6 +37,7 @@
 * **visibility**: 'Custom' | 'Public'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -49,6 +50,7 @@
 * **timeZone**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

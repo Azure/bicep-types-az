@@ -135,6 +135,7 @@
 * **tier**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -172,6 +173,7 @@
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'UltraSSD_LRS'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -183,6 +185,7 @@
 * **virtualMachineScaleSets**: SubResource[] (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -194,6 +197,7 @@
 * **userAssignedIdentities**: Dictionary<string,Schemas73UserAssignedIdentitiesValue>
 
 ## Dictionary<string,Schemas73UserAssignedIdentitiesValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: schemas:73_userAssignedIdentitiesValue
 
@@ -462,14 +466,17 @@
 * **typeHandlerVersion**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -481,6 +488,7 @@
 * **userAssignedIdentities**: Dictionary<string,Schemas73UserAssignedIdentitiesValue>
 
 ## Dictionary<string,Schemas73UserAssignedIdentitiesValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: schemas:73_userAssignedIdentitiesValue
 
@@ -665,6 +673,7 @@
 * **writeAcceleratorEnabled**: bool
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -702,6 +711,7 @@
 * **status**: InstanceViewStatus (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
