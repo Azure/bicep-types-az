@@ -31,14 +31,14 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: Dictionary<string,Schemas36UserAssignedIdentitiesValue>
+* **userAssignedIdentities**: Dictionary<string,Schemas37UserAssignedIdentitiesValue>
 
-## Dictionary<string,Schemas36UserAssignedIdentitiesValue>
+## Dictionary<string,Schemas37UserAssignedIdentitiesValue>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: schemas:36_userAssignedIdentitiesValue
+* **Additional Properties Type**: schemas:37_userAssignedIdentitiesValue
 
-## schemas:36_userAssignedIdentitiesValue
+## schemas:37_userAssignedIdentitiesValue
 ### Properties
 * **clientId**: string (ReadOnly)
 * **principalId**: string (ReadOnly)
@@ -49,6 +49,7 @@
 * **clusterId**: string (ReadOnly)
 * **clusterState**: string (ReadOnly)
 * **clusterVersion**: string
+* **computeIsolationProperties**: ComputeIsolationProperties
 * **computeProfile**: ComputeProfile
 * **connectivityEndpoints**: ConnectivityEndpoint[] (ReadOnly)
 * **createdDate**: string (ReadOnly)
@@ -76,6 +77,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ComputeIsolationProperties
+### Properties
+* **enableComputeIsolation**: bool
+* **hostSku**: string
 
 ## ComputeProfile
 ### Properties

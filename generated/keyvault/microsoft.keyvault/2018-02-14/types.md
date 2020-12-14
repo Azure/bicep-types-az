@@ -35,6 +35,18 @@
 * **tags**: Dictionary<string,String> (ReadOnly)
 * **type**: 'Microsoft.KeyVault/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.KeyVault/vaults/secrets@2018-02-14
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-14' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SecretProperties (Required)
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.KeyVault/vaults/secrets' (ReadOnly, DeployTimeConstant)
+
 ## VaultProperties
 ### Properties
 * **accessPolicies**: AccessPolicyEntry[]
@@ -112,6 +124,27 @@
 ## VaultAccessPolicyProperties
 ### Properties
 * **accessPolicies**: AccessPolicyEntry[] (Required)
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SecretProperties
+### Properties
+* **attributes**: SecretAttributes
+* **contentType**: string
+* **secretUri**: string (ReadOnly)
+* **secretUriWithVersion**: string (ReadOnly)
+* **value**: string
+
+## SecretAttributes
+### Properties
+* **created**: int (ReadOnly)
+* **enabled**: bool
+* **exp**: int
+* **nbf**: int
+* **updated**: int (ReadOnly)
 
 ## Dictionary<string,String>
 ### Properties
