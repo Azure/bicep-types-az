@@ -304,7 +304,7 @@
 ### Properties
 * **enabled**: bool (Required)
 * **entitiesMatchingMethod**: 'All' | 'Custom' | 'None' (Required)
-* **groupByEntities**: 'Account' | 'Host' | 'Ip' | 'Url'[]
+* **groupByEntities**: 'Account' | 'FileHash' | 'Host' | 'Ip' | 'Url'[]
 * **lookbackDuration**: string (Required)
 * **reopenClosedIncident**: bool (Required)
 

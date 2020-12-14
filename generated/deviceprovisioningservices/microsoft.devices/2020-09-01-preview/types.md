@@ -7,6 +7,7 @@
 * **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: ArmIdentity
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: IotDpsPropertiesDescription (Required)
@@ -36,6 +37,23 @@
 * **properties**: PrivateEndpointConnectionProperties (Required)
 * **type**: 'Microsoft.Devices/provisioningServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
+## ArmIdentity
+### Properties
+* **identityType**: string
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **userAssignedIdentities**: Dictionary<string,ArmUserIdentity>
+
+## Dictionary<string,ArmUserIdentity>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: ArmUserIdentity
+
+## ArmUserIdentity
+### Properties
+* **clientId**: string (ReadOnly)
+* **principalId**: string (ReadOnly)
+
 ## IotDpsPropertiesDescription
 ### Properties
 * **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static'
@@ -60,8 +78,13 @@
 
 ## EncryptionPropertiesDescription
 ### Properties
+* **identity**: EncryptionKeyIdentity
 * **keySource**: string
 * **keyVaultProperties**: KeyVaultKeyProperties[]
+
+## EncryptionKeyIdentity
+### Properties
+* **userAssignedIdentity**: string
 
 ## KeyVaultKeyProperties
 ### Properties

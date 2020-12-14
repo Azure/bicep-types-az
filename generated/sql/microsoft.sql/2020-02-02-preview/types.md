@@ -66,6 +66,21 @@
 * **properties**: AzureADOnlyAuthProperties
 * **type**: 'Microsoft.Sql/servers/azureADOnlyAuthentications' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Sql/servers/databases@2020-02-02-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (Required)
+* **managedBy**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DatabaseProperties
+* **sku**: Sku
+* **tags**: Dictionary<string,String>
+* **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Sql/servers/databases/securityAlertPolicies@2020-02-02-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -114,6 +129,7 @@
 * **maintenanceConfigurationId**: string
 * **managedInstanceCreateMode**: 'Default' | 'PointInTimeRestore'
 * **minimalTlsVersion**: string
+* **privateEndpointConnections**: ManagedInstancePecProperty[] (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
 * **proxyOverride**: 'Default' | 'Proxy' | 'Redirect'
 * **publicDataEndpointEnabled**: bool
@@ -125,6 +141,28 @@
 * **subnetId**: string
 * **timezoneId**: string
 * **vCores**: int
+* **zoneRedundant**: bool
+
+## ManagedInstancePecProperty
+### Properties
+* **id**: string (ReadOnly)
+* **properties**: ManagedInstancePrivateEndpointConnectionProperties (ReadOnly)
+
+## ManagedInstancePrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: ManagedInstancePrivateEndpointProperty
+* **privateLinkServiceConnectionState**: ManagedInstancePrivateLinkServiceConnectionStateProperty
+* **provisioningState**: string (ReadOnly)
+
+## ManagedInstancePrivateEndpointProperty
+### Properties
+* **id**: string
+
+## ManagedInstancePrivateLinkServiceConnectionStateProperty
+### Properties
+* **actionsRequired**: string (ReadOnly)
+* **description**: string (Required)
+* **status**: string (Required)
 
 ## Sku
 ### Properties
@@ -176,4 +214,44 @@
 ## AzureADOnlyAuthProperties
 ### Properties
 * **azureADOnlyAuthentication**: bool (Required)
+
+## DatabaseProperties
+### Properties
+* **autoPauseDelay**: int
+* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS'
+* **collation**: string
+* **createMode**: 'Copy' | 'Default' | 'OnlineSecondary' | 'PointInTimeRestore' | 'Recovery' | 'Restore' | 'RestoreExternalBackup' | 'RestoreExternalBackupSecondary' | 'RestoreLongTermRetentionBackup' | 'Secondary'
+* **creationDate**: string (ReadOnly)
+* **currentServiceObjectiveName**: string (ReadOnly)
+* **currentSku**: Sku (ReadOnly)
+* **databaseId**: string (ReadOnly)
+* **defaultSecondaryLocation**: string (ReadOnly)
+* **earliestRestoreDate**: string (ReadOnly)
+* **elasticPoolId**: string
+* **failoverGroupId**: string (ReadOnly)
+* **licenseType**: 'BasePrice' | 'LicenseIncluded'
+* **longTermRetentionBackupResourceId**: string
+* **maxLogSizeBytes**: int (ReadOnly)
+* **maxSizeBytes**: int
+* **minCapacity**: int
+* **pausedDate**: string (ReadOnly)
+* **readReplicaCount**: int
+* **readScale**: 'Disabled' | 'Enabled'
+* **recoverableDatabaseId**: string
+* **recoveryServicesRecoveryPointId**: string
+* **requestedServiceObjectiveName**: string (ReadOnly)
+* **restorableDroppedDatabaseId**: string
+* **restorePointInTime**: string
+* **resumedDate**: string (ReadOnly)
+* **sampleName**: 'AdventureWorksLT' | 'WideWorldImportersFull' | 'WideWorldImportersStd'
+* **sourceDatabaseDeletionDate**: string
+* **sourceDatabaseId**: string
+* **status**: 'AutoClosed' | 'Copying' | 'Creating' | 'Disabled' | 'EmergencyMode' | 'Inaccessible' | 'Offline' | 'OfflineChangingDwPerformanceTiers' | 'OfflineSecondary' | 'Online' | 'OnlineChangingDwPerformanceTiers' | 'Paused' | 'Pausing' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Resuming' | 'Scaling' | 'Shutdown' | 'Standby' | 'Suspect' (ReadOnly)
+* **storageAccountType**: 'GRS' | 'LRS' | 'ZRS'
+* **zoneRedundant**: bool
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
