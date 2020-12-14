@@ -110,6 +110,7 @@
 * **userAssignedIdentities**: Dictionary<string,Object>
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -135,6 +136,7 @@
 * **userAssignedIdentity**: string
 
 ## Dictionary<string,GlobalParameterSpecification>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: GlobalParameterSpecification
 
@@ -175,6 +177,7 @@
 * **type**: 'FactoryVSTSConfiguration' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -221,6 +224,7 @@
 * **type**: string (Required)
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -231,6 +235,7 @@
 * **type**: string (Required)
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -727,6 +732,7 @@
 * **name**: string
 
 ## Dictionary<string,ParameterSpecification>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterSpecification
 
@@ -2553,10 +2559,12 @@
 * **type**: string (Required)
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## Dictionary<string,ParameterSpecification>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterSpecification
 
@@ -2677,14 +2685,17 @@
 * **newClusterVersion**: any
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -4174,14 +4185,17 @@
 * **name**: string
 
 ## Dictionary<string,ParameterSpecification>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterSpecification
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## Dictionary<string,VariableSpecification>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: VariableSpecification
 
@@ -4231,6 +4245,7 @@
 * **pipelineReference**: PipelineReference
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 

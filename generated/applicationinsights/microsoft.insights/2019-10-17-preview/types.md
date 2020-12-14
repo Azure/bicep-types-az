@@ -29,6 +29,7 @@
 * **type**: string
 
 ## Dictionary<string,IList<WorkbookTemplateLocalizedGallery>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: WorkbookTemplateLocalizedGallery[]
 
@@ -38,6 +39,7 @@
 * **templateData**: any
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

@@ -202,6 +202,7 @@
 * **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

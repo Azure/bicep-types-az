@@ -63,6 +63,7 @@
 * **tenantID**: string
 
 ## Dictionary<string,ManagedClusterAddonProfile>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ManagedClusterAddonProfile
 
@@ -73,6 +74,7 @@
 * **identity**: schemas:38_identity (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -108,10 +110,12 @@
 * **vnetSubnetID**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -133,6 +137,7 @@
 * **scan-interval**: string
 
 ## Dictionary<string,Schemas29IdentityProfileValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: schemas:29_identityProfileValue
 
@@ -209,6 +214,7 @@
 * **tier**: 'Free' | 'Paid'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -237,10 +243,12 @@
 * **vnetSubnetID**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

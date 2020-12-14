@@ -23,6 +23,7 @@
 * **name**: 'free' | 'standard' | 'standard2'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

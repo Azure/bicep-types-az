@@ -357,6 +357,7 @@
 * **thumbprint**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -372,6 +373,7 @@
 * **type**: 'Management' | 'Portal' | 'Proxy' | 'Scm' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -584,10 +586,12 @@
 * **scheme**: string (Required)
 
 ## Dictionary<string,IList<String>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
 
 ## Dictionary<string,IList<String>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
 
@@ -654,6 +658,7 @@
 * **loggerType**: 'applicationInsights' | 'azureEventHub' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

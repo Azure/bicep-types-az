@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 using AutoRest.Core.Model;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Azure.Bicep.Types.Concrete;
@@ -14,7 +13,7 @@ namespace Azure.Bicep.TypeGen.Autorest.Models
         string ProviderNamespace,
         IReadOnlyList<string> ResourceTypeSegments,
         string ApiVersion,
-        string ConstantName,
+        string? ConstantName,
         XmsMetadata XmsMetadata
     )
     {

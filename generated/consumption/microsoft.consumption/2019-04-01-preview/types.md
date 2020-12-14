@@ -34,10 +34,12 @@
 * **tags**: Dictionary<string,IList<String>>
 
 ## Dictionary<string,IList<String>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
 
 ## Dictionary<string,Notification>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: Notification
 

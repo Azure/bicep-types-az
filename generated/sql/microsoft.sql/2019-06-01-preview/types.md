@@ -110,6 +110,7 @@
 * **storageContainerUri**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -152,6 +153,7 @@
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -207,6 +209,7 @@
 * **tier**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

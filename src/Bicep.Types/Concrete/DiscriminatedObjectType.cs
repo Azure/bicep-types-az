@@ -6,12 +6,20 @@ namespace Azure.Bicep.Types.Concrete
 {
     public class DiscriminatedObjectType : TypeBase
     {
-        public string? Name { get; set; }
+        public DiscriminatedObjectType(string name, string discriminator, IDictionary<string, ObjectProperty> baseProperties, IDictionary<string, ITypeReference> elements)
+        {
+            Name = name;
+            Discriminator = discriminator;
+            BaseProperties = baseProperties;
+            Elements = elements;
+        }
 
-        public string? Discriminator { get; set; }
+        public string Name { get; set; }
 
-        public IDictionary<string, ObjectProperty>? BaseProperties { get; set; }
+        public string Discriminator { get; set; }
 
-        public IDictionary<string, ITypeReference>? Elements { get; set; }
+        public IDictionary<string, ObjectProperty> BaseProperties { get; set; }
+
+        public IDictionary<string, ITypeReference> Elements { get; set; }
     }
 }

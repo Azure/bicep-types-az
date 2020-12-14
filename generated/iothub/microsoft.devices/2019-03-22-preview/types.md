@@ -68,6 +68,7 @@
 * **streamingEndpoints**: string[]
 
 ## Dictionary<string,EventHubProperties>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: EventHubProperties
 
@@ -91,6 +92,7 @@
 * **role**: 'primary' | 'secondary'
 
 ## Dictionary<string,MessagingEndpointProperties>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: MessagingEndpointProperties
 
@@ -170,6 +172,7 @@
 * **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'Invalid' | 'TwinChangeEvents' (Required)
 
 ## Dictionary<string,StorageEndpointProperties>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: StorageEndpointProperties
 
@@ -186,6 +189,7 @@
 * **tier**: 'Basic' | 'Free' | 'Standard' (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

@@ -6,10 +6,6 @@
     <OutputPath>$(MSBuildProjectDirectory)/bin</OutputPath>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <Nullable>disable</Nullable>
-  </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="../../../Bicep.Types/Bicep.Types.csproj" />
     <ProjectReference Include="../../../../autorest.common/src/autorest.common.csproj" />

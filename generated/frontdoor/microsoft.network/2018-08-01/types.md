@@ -162,6 +162,7 @@
 * **queryParameterStripDirective**: 'StripAll' | 'StripNone'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -228,6 +229,7 @@
 * **mode**: 'Detection' | 'Prevention'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

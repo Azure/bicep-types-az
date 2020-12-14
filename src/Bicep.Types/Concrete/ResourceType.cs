@@ -5,10 +5,17 @@ namespace Azure.Bicep.Types.Concrete
 {
     public class ResourceType : TypeBase
     {
-        public string? Name { get; set; }
+        public ResourceType(string name, ScopeType scopeType, ITypeReference body)
+        {
+            Name = name;
+            ScopeType = scopeType;
+            Body = body;
+        }
 
-        public ScopeType? ScopeType { get; set; }
-        
-        public ITypeReference? Body { get; set; }
+        public string Name { get; set; }
+
+        public ScopeType ScopeType { get; set; }
+
+        public ITypeReference Body { get; set; }
     }
 }

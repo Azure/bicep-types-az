@@ -530,6 +530,7 @@
 * **type**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -624,6 +625,7 @@
 * **workerSizeId**: int
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -682,6 +684,7 @@
 * **workerTierName**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -704,6 +707,7 @@
 * **userAssignedIdentities**: Dictionary<string,Schemas35UserAssignedIdentitiesValue>
 
 ## Dictionary<string,Schemas35UserAssignedIdentitiesValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: schemas:35_userAssignedIdentitiesValue
 
@@ -767,6 +771,7 @@
 * **trafficManagerProfileName**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -887,6 +892,7 @@
 * **win32Status**: int
 
 ## Dictionary<string,AzureStorageInfoValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: AzureStorageInfoValue
 
@@ -991,6 +997,7 @@
 * **timestampUtc**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -1026,6 +1033,7 @@
 * **startTime**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -1046,6 +1054,7 @@
 * **test_data_href**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -1103,6 +1112,7 @@
 * **vendor**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -1130,10 +1140,12 @@
 * **thumbprint**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

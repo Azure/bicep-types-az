@@ -82,6 +82,7 @@
 * **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -95,6 +96,7 @@
 * **vCore**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -109,6 +111,7 @@
 * **version**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -119,6 +122,7 @@
 * **subscriptionId**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

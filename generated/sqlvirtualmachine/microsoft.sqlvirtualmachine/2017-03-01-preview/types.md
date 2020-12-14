@@ -57,6 +57,7 @@
 * **storageAccountUrl**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -181,6 +182,7 @@
 * **sqlServiceAccountPassword**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

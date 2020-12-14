@@ -74,6 +74,7 @@
 * **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -85,6 +86,7 @@
 * **lastUploadedDate**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -100,6 +102,7 @@
 * **vCore**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -114,6 +117,7 @@
 * **version**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

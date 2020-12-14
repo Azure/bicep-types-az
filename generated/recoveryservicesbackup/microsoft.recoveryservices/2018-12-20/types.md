@@ -21,6 +21,7 @@
 * **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

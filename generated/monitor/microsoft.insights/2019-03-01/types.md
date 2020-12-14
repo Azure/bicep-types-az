@@ -98,6 +98,7 @@
 * **useCommonAlertSchema**: bool (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

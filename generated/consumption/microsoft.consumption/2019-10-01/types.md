@@ -45,6 +45,7 @@
 * **values**: string[] (Required)
 
 ## Dictionary<string,Notification>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: Notification
 

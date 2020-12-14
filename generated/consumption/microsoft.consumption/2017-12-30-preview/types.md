@@ -26,6 +26,7 @@
 * **unit**: string (ReadOnly)
 
 ## Dictionary<string,Notification>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: Notification
 

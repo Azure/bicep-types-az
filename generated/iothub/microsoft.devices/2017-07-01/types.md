@@ -64,6 +64,7 @@
 * **ttlAsIso8601**: string
 
 ## Dictionary<string,EventHubProperties>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: EventHubProperties
 
@@ -82,6 +83,7 @@
 * **ipMask**: string (Required)
 
 ## Dictionary<string,MessagingEndpointProperties>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: MessagingEndpointProperties
 
@@ -96,6 +98,7 @@
 * **events**: Dictionary<string,OperationMonitoringLevel>
 
 ## Dictionary<string,OperationMonitoringLevel>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: 'Error, Information' | 'Error' | 'Information' | 'None'
 
@@ -161,6 +164,7 @@
 * **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'TwinChangeEvents' (Required)
 
 ## Dictionary<string,StorageEndpointProperties>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: StorageEndpointProperties
 
@@ -177,6 +181,7 @@
 * **tier**: 'Free' | 'Standard' (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

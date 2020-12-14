@@ -175,10 +175,12 @@
 * **startPort**: int (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -202,6 +204,7 @@
 * **maxPercentUpgradeDomainDeltaUnhealthyNodes**: int (Required)
 
 ## Dictionary<string,ApplicationDeltaHealthPolicy>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ApplicationDeltaHealthPolicy
 
@@ -215,6 +218,7 @@
 * **maxPercentDeltaUnhealthyServices**: int
 
 ## Dictionary<string,ServiceTypeDeltaHealthPolicy>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ServiceTypeDeltaHealthPolicy
 
@@ -225,6 +229,7 @@
 * **maxPercentUnhealthyNodes**: int
 
 ## Dictionary<string,ApplicationHealthPolicy>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ApplicationHealthPolicy
 
@@ -238,10 +243,12 @@
 * **maxPercentUnhealthyServices**: int
 
 ## Dictionary<string,ServiceTypeHealthPolicy>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ServiceTypeHealthPolicy
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -253,6 +260,7 @@
 * **userAssignedIdentities**: Dictionary<string,UserAssignedIdentity>
 
 ## Dictionary<string,UserAssignedIdentity>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: UserAssignedIdentity
 
@@ -287,6 +295,7 @@
 * **totalApplicationCapacity**: int
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -312,6 +321,7 @@
 * **maxPercentUnhealthyServices**: int
 
 ## Dictionary<string,ArmServiceTypeHealthPolicy>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ArmServiceTypeHealthPolicy
 
@@ -325,6 +335,7 @@
 * **upgradeTimeout**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -430,6 +441,7 @@
 * **serviceKind**: 'Stateless' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -438,6 +450,7 @@
 * **provisioningState**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -448,10 +461,12 @@
 * **provisioningState**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

@@ -82,6 +82,7 @@
 * **type**: 'AADTenants' | 'Subscriptions'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -95,6 +96,7 @@
 * **supportedOSType**: 'Linux' | 'Windows' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -161,6 +163,7 @@
 * **state**: 'Completed' | 'Failed' | 'Replicating' | 'Unknown' (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -213,6 +216,7 @@
 * **min**: int
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -257,6 +261,7 @@
 * **source**: GalleryArtifactVersionSource
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

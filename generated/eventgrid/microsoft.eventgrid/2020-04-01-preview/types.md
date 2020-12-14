@@ -132,6 +132,7 @@
 * **userAssignedIdentities**: Dictionary<string,UserIdentityProperties>
 
 ## Dictionary<string,UserIdentityProperties>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: UserIdentityProperties
 
@@ -217,6 +218,7 @@
 * **name**: 'Basic' | 'Premium'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -523,6 +525,7 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -567,6 +570,7 @@
 * **visibilityState**: 'GenerallyAvailable' | 'Hidden' | 'PublicPreview'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -578,6 +582,7 @@
 * **topicType**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -593,6 +598,7 @@
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

@@ -7,9 +7,16 @@ namespace Azure.Bicep.Types.Concrete
 {
     public class ObjectType : TypeBase
     {
-        public string? Name { get; set; }
+        public ObjectType(string name, IDictionary<string, ObjectProperty> properties, ITypeReference? additionalProperties)
+        {
+            Name = name;
+            Properties = properties;
+            AdditionalProperties = additionalProperties;
+        }
 
-        public IDictionary<string, ObjectProperty>? Properties { get; set; }
+        public string Name { get; set; }
+
+        public IDictionary<string, ObjectProperty> Properties { get; set; }
 
         public ITypeReference? AdditionalProperties { get; set; }
     }
@@ -30,7 +37,13 @@ namespace Azure.Bicep.Types.Concrete
 
     public class ObjectProperty
     {
-        public ITypeReference? Type { get; set; }
+        public ObjectProperty(ITypeReference type, ObjectPropertyFlags flags)
+        {
+            Type = type;
+            Flags = flags;
+        }
+
+        public ITypeReference Type { get; set; }
 
         public ObjectPropertyFlags Flags { get; set; }
     }

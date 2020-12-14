@@ -4,6 +4,11 @@ namespace Azure.Bicep.Types.Concrete
 {
     public class ArrayType : TypeBase
     {
-        public ITypeReference? ItemType { get; set; }
+        public ArrayType(ITypeReference itemType)
+        {
+            ItemType = itemType;
+        }
+
+        public ITypeReference ItemType { get; set; }
     }
 }

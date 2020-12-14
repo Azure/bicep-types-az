@@ -355,6 +355,7 @@
 * **thumbprint**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -370,6 +371,7 @@
 * **type**: 'Management' | 'Portal' | 'Proxy' | 'Scm' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -570,10 +572,12 @@
 * **scheme**: string (Required)
 
 ## Dictionary<string,IList<String>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
 
 ## Dictionary<string,IList<String>>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
 
@@ -641,6 +645,7 @@
 * **sampling**: LoggerSamplingContract
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

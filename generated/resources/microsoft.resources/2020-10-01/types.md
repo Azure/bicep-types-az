@@ -30,6 +30,7 @@
 * **userAssignedIdentities**: Dictionary<string,UserAssignedIdentity>
 
 ## Dictionary<string,UserAssignedIdentity>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: UserAssignedIdentity
 
@@ -48,6 +49,7 @@
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -85,6 +87,7 @@
 * **value**: string
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -139,6 +142,7 @@
 * **timeout**: string
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 

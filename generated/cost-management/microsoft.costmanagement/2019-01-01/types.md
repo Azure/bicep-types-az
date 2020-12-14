@@ -35,6 +35,7 @@
 * **sorting**: QuerySortingConfiguration[]
 
 ## Dictionary<string,QueryAggregation>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: QueryAggregation
 
@@ -98,6 +99,7 @@
 * **to**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

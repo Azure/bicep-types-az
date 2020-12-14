@@ -40,10 +40,12 @@
 * **type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,ConnectionParameter>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ConnectionParameter
 
@@ -65,6 +67,7 @@
 * **scopes**: string[]
 
 ## Dictionary<string,ApiOAuthSettingsParameter>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ApiOAuthSettingsParameter
 
@@ -85,6 +88,7 @@
 * **type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -99,10 +103,12 @@
 * **type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

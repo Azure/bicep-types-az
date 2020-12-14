@@ -8,9 +8,9 @@ namespace Azure.Bicep.TypeGen.Autorest.Models
     public record ResourceDefinition(
         ResourceDescriptor Descriptor,
         Method DeclaringMethod,
-        Method GetMethod
+        Method? GetMethod
     )
     {
-        public ResourceType Type { get; set; }
+        public ResourceType? Type { get; set; }
     }
 }

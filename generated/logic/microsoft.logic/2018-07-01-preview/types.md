@@ -126,6 +126,7 @@
 * **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Standard' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -578,6 +579,7 @@
 * **targetNamespace**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -608,6 +610,7 @@
 * **value**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -648,6 +651,7 @@
 * **occurrence**: int
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -672,6 +676,7 @@
 * **type**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -691,6 +696,7 @@
 * **ref**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -711,6 +717,7 @@
 * **businessIdentities**: BusinessIdentity[]
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -728,6 +735,7 @@
 * **targetNamespace**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -738,6 +746,7 @@
 * **createdTime**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -761,6 +770,7 @@
 * **type**: string (ReadOnly)
 
 ## Dictionary<string,WorkflowParameter>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: WorkflowParameter
 
@@ -777,6 +787,7 @@
 * **plan**: ResourceReference
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

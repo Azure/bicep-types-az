@@ -101,6 +101,7 @@
 * **userAssignedIdentities**: Dictionary<string,Schemas63UserAssignedIdentitiesValue>
 
 ## Dictionary<string,Schemas63UserAssignedIdentitiesValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: schemas:63_userAssignedIdentitiesValue
 
@@ -164,6 +165,7 @@
 * **tier**: 'Basic' | 'Standard' (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

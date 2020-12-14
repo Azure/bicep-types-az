@@ -50,6 +50,7 @@
 * **errorStartTime**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -76,6 +77,7 @@
 * **grouping**: ReportGrouping[]
 
 ## Dictionary<string,ReportAggregation>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ReportAggregation
 
@@ -134,6 +136,7 @@
 * **to**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

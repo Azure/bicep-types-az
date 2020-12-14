@@ -120,12 +120,12 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
             var scopeType = GetScopeTypeFromParentScope(parentScope);
 
             return (true, string.Empty, resourceTypesFound.Select(type => new ResourceDescriptor(
-                ScopeType: scopeType,
-                ProviderNamespace: providerNamespace,
-                ResourceTypeSegments: type.ToList(),
-                ApiVersion: apiVersion,
-                ConstantName: hasVariableName ? null : resNameParam,
-                XmsMetadata: method.XMsMetadata
+                scopeType,
+                providerNamespace,
+                type.ToList(),
+                apiVersion,
+                hasVariableName ? null : resNameParam,
+                method.XMsMetadata
             )));
         }
 
@@ -195,19 +195,17 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 {
                     if (!providerDefinitions.ContainsKey(descriptor.ProviderNamespace))
                     {
-                        providerDefinitions[descriptor.ProviderNamespace] = new ProviderDefinition
-                        {
-                            Namespace = descriptor.ProviderNamespace,
-                            ApiVersion = apiVersion,
-                            Model = serviceClient,
-                        };
+                        providerDefinitions[descriptor.ProviderNamespace] = new ProviderDefinition(
+                            descriptor.ProviderNamespace,
+                            apiVersion,
+                            serviceClient);
                     }
                     var providerDefinition = providerDefinitions[descriptor.ProviderNamespace];
 
                     providerDefinition.ResourceDefinitions.Add(new ResourceDefinition(
-                        Descriptor: descriptor,
-                        DeclaringMethod: putMethod,
-                        GetMethod: getMethod));
+                        descriptor,
+                        putMethod,
+                        getMethod));
                 }
             }
 

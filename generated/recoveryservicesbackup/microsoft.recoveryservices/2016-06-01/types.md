@@ -110,6 +110,7 @@
 * **recoveryPointCount**: int
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -258,6 +259,7 @@
 * **schedulePolicy**: SchedulePolicy
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

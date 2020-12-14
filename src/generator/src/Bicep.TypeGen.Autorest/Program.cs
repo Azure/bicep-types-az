@@ -45,21 +45,9 @@ namespace Azure.Bicep.TypeGen.Autorest
             return 1;
         }
 
-        public Program(Connection connection, string plugin, string sessionId) : base(connection, plugin, sessionId) { }
-
-        private T GetXmsCodeGenSetting<T>(CodeModel codeModel, string name)
+        public Program(Connection connection, string plugin, string sessionId)
+            : base(connection, plugin, sessionId)
         {
-            try
-            {
-                return (T)Convert.ChangeType(
-                    codeModel.CodeGenExtensions[name], 
-                    typeof(T).GenericTypeArguments.Length == 0 ? typeof(T) : typeof(T).GenericTypeArguments[0] // un-nullable
-                );
-            }
-            catch
-            {
-                return default(T);
-            }
         }
 
         protected override async Task<bool> ProcessInternal()

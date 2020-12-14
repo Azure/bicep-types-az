@@ -38,6 +38,7 @@
 * **timeGrain**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

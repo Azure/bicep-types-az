@@ -50,6 +50,7 @@
 * **userAssignedIdentities**: Dictionary<string,Schemas24UserAssignedIdentitiesValue>
 
 ## Dictionary<string,Schemas24UserAssignedIdentitiesValue>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: schemas:24_userAssignedIdentitiesValue
 
@@ -135,6 +136,7 @@
 * **tier**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -151,6 +153,7 @@
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -322,10 +325,12 @@
 * **properties**: schemas:24_userAssignedIdentitiesValue
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

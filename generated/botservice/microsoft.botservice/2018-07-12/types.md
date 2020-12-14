@@ -82,6 +82,7 @@
 * **tier**: 'Free' | 'Standard' (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -291,6 +292,7 @@
 * **siteName**: string (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -310,6 +312,7 @@
 * **value**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -327,6 +330,7 @@
 * **state**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'Started' | 'StartFailed' | 'Starting' | 'StopFailed' | 'Stopped' | 'Stopping'
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

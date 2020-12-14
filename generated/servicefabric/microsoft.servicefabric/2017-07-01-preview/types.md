@@ -146,10 +146,12 @@
 * **startPort**: int (Required)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -177,6 +179,7 @@
 * **maxPercentUnhealthyNodes**: int
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -200,6 +203,7 @@
 * **TotalApplicationCapacity**: int
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -224,6 +228,7 @@
 * **maxPercentUnhealthyServices**: int
 
 ## Dictionary<string,ArmServiceTypeHealthPolicy>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ArmServiceTypeHealthPolicy
 
@@ -344,6 +349,7 @@
 * **provisioningState**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

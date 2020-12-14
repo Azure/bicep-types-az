@@ -50,6 +50,7 @@
 * **value**: string
 
 ## Dictionary<string,WorkflowParameter>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: WorkflowParameter
 
@@ -71,6 +72,7 @@
 * **type**: string (ReadOnly)
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

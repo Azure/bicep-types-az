@@ -1209,6 +1209,7 @@
 * **postUpdateRebootStatus**: string (ReadOnly)
 
 ## Dictionary<string,DateTime>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 

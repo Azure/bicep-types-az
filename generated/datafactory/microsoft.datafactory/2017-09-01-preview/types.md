@@ -92,6 +92,7 @@
 * **tenantId**: string
 
 ## Dictionary<string,String>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
@@ -341,10 +342,12 @@
 * **type**: string (Required)
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## Dictionary<string,ParameterSpecification>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterSpecification
 
@@ -1224,10 +1227,12 @@
 * **type**: string (Required)
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## Dictionary<string,ParameterSpecification>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterSpecification
 
@@ -1328,6 +1333,7 @@
 * **newClusterVersion**: any
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -2351,6 +2357,7 @@
 * **Additional Properties Type**: any
 
 ## Dictionary<string,ParameterSpecification>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterSpecification
 
@@ -2376,6 +2383,7 @@
 * **pipelineReference**: PipelineReference
 
 ## Dictionary<string,Object>
+### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
