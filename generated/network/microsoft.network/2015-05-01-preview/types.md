@@ -26,16 +26,6 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Network/connections' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.Network/connections/sharedkey@2015-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Network/connections/sharedkey' (ReadOnly, DeployTimeConstant)
-* **value**: string
-
 ## Resource Microsoft.Network/expressRouteCircuits@2015-05-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties

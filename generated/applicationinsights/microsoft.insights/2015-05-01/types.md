@@ -28,32 +28,6 @@
 * **type**: 'microsoft.insights/components/analyticsItems' (ReadOnly, DeployTimeConstant)
 * **Version**: string (ReadOnly)
 
-## Resource Microsoft.Insights/components/Annotations@2015-05-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **AnnotationName**: string (WriteOnly)
-* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **Category**: string (WriteOnly)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **EventTime**: string (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **Properties**: string (WriteOnly)
-* **RelatedAnnotation**: string (WriteOnly)
-* **type**: 'Microsoft.Insights/components/Annotations' (ReadOnly, DeployTimeConstant)
-* **value**: Annotation[] (ReadOnly)
-
-## Resource Microsoft.Insights/components/currentbillingfeatures@2015-05-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **CurrentBillingFeatures**: string[]
-* **DataVolumeCap**: ApplicationInsightsComponentDataVolumeCap
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Insights/components/currentbillingfeatures' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.Insights/components/exportconfiguration@2015-05-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -206,24 +180,6 @@
 ## ApplicationInsightsComponentAnalyticsItemProperties
 ### Properties
 * **functionAlias**: string
-
-## Annotation
-### Properties
-* **AnnotationName**: string (ReadOnly)
-* **Category**: string (ReadOnly)
-* **EventTime**: string (ReadOnly)
-* **Id**: string (ReadOnly)
-* **Properties**: string (ReadOnly)
-* **RelatedAnnotation**: string (ReadOnly)
-
-## ApplicationInsightsComponentDataVolumeCap
-### Properties
-* **Cap**: int
-* **MaxHistoryCap**: int (ReadOnly)
-* **ResetTime**: int (ReadOnly)
-* **StopSendNotificationWhenHitCap**: bool
-* **StopSendNotificationWhenHitThreshold**: bool
-* **WarningThreshold**: int
 
 ## schemas:21_RuleDefinitions
 ### Properties
