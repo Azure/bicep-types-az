@@ -131,40 +131,46 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
 
         private static (bool success, string failureReason, IEnumerable<IEnumerable<string>> resourceTypesFound) ParseResourceTypes(IEnumerableWithIndex<Parameter> parameters, string routingScope)
         {
-            var nameSegments = routingScope.Split('/').Skip(1).Where((_, i) => i % 2 == 0);
+            var typeSegments = routingScope.Split('/').Skip(1).Where((_, i) => i % 2 == 0);
+            var nameSegments = routingScope.Split('/').Skip(1).Where((_, i) => i % 2 == 1);
 
-            if (nameSegments.Count() == 0)
+            if (typeSegments.Count() == 0)
             {
-                return (false, $"Unable to find name segments", Enumerable.Empty<IEnumerable<string>>());
+                return (false, $"Unable to find type segments", Enumerable.Empty<IEnumerable<string>>());
+            }
+
+            if (typeSegments.Count() != nameSegments.Count())
+            {
+                return (false, $"Found mismatch betwen type segments ({typeSegments.Count()}) and name segments ({nameSegments.Count()})", Enumerable.Empty<IEnumerable<string>>());
             }
 
             IEnumerable<IEnumerable<string>> resourceTypes = new[] { Enumerable.Empty<string>() };
-            foreach (var nameSegment in nameSegments)
+            foreach (var typeSegment in typeSegments)
             {
-                if (IsPathVariable(nameSegment))
+                if (IsPathVariable(typeSegment))
                 {
-                    var parameterName = TrimParamBraces(nameSegment);
+                    var parameterName = TrimParamBraces(typeSegment);
                     var parameter = parameters.FirstOrDefault(methodParameter => methodParameter.SerializedName == parameterName);
                     if (parameter == null)
                     {
-                        return (false, $"Found undefined parameter reference {nameSegment}", Enumerable.Empty<IEnumerable<string>>());
+                        return (false, $"Found undefined parameter reference {typeSegment}", Enumerable.Empty<IEnumerable<string>>());
                     }
 
                     if (parameter.ModelType == null || !(parameter.ModelType is EnumType parameterType))
                     {
-                        return (false, $"Parameter reference {nameSegment} is not defined as an enum", Enumerable.Empty<IEnumerable<string>>());
+                        return (false, $"Parameter reference {typeSegment} is not defined as an enum", Enumerable.Empty<IEnumerable<string>>());
                     }
 
                     if (parameterType.Values == null || parameterType.Values.Count == 0)
                     {
-                        return (false, $"Parameter reference {nameSegment} is defined as an enum, but doesn't have any specified values", Enumerable.Empty<IEnumerable<string>>());
+                        return (false, $"Parameter reference {typeSegment} is defined as an enum, but doesn't have any specified values", Enumerable.Empty<IEnumerable<string>>());
                     }
 
                     resourceTypes = resourceTypes.SelectMany(type => parameterType.Values.Select(v => type.Append(v.SerializedName)));
                 }
                 else
                 {
-                    resourceTypes = resourceTypes.Select(type => type.Append(nameSegment));
+                    resourceTypes = resourceTypes.Select(type => type.Append(typeSegment));
                 }
             }
 

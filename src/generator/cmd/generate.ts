@@ -67,7 +67,6 @@ executeSynchronous(async () => {
 });
 
 async function generateSchema(readme: string, outputBaseDir: string, verbose: boolean, waitForDebugger: boolean) {
-  const debug = false; // change to true for debugging
   let autoRestParams = [
     `--use=${extensionDir}`,
     '--azureresourceschema',
