@@ -80,19 +80,6 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Web/managedHostingEnvironments' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.Web/publishingCredentials@2015-08-01
-* **Valid Scope(s)**: Subscription
-### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **location**: string (Required)
-* **name**: 'publishingCredentials' (Required, DeployTimeConstant)
-* **properties**: schemas:1_properties
-* **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.Web/publishingCredentials' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.Web/publishingUsers@2015-08-01
 * **Valid Scope(s)**: Tenant
 ### Properties
@@ -449,11 +436,6 @@
 * **name**: string
 * **size**: string
 * **tier**: string
-
-## Dictionary<string,String>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## Dictionary<string,String>
 ### Properties
