@@ -11,17 +11,6 @@
 * **properties**: BudgetProperties
 * **type**: 'Microsoft.Consumption/budgets' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.Consumption/costTags@2018-06-30
-* **Valid Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'costTags' (Required, DeployTimeConstant)
-* **properties**: CostTagsModel
-* **type**: 'Microsoft.Consumption/costTags' (ReadOnly, DeployTimeConstant)
-
 ## BudgetProperties
 ### Properties
 * **amount**: int (Required)
@@ -67,12 +56,4 @@
 ### Properties
 * **endDate**: string
 * **startDate**: string (Required)
-
-## CostTagsModel
-### Properties
-* **costTags**: CostTagProperties[]
-
-## CostTagProperties
-### Properties
-* **key**: string
 

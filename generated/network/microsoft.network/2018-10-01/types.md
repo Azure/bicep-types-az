@@ -54,16 +54,6 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Network/connections' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.Network/connections/sharedkey@2018-10-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Network/connections/sharedkey' (ReadOnly, DeployTimeConstant)
-* **value**: string (Required)
-
 ## Resource Microsoft.Network/ddosProtectionPlans@2018-10-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties

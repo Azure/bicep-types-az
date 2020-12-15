@@ -115,17 +115,6 @@
 * **properties**: MSDeployCore
 * **type**: 'Microsoft.Web/sites/instances/extensions' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.Web/sites/migrate@2018-11-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:81_properties
-* **type**: 'Microsoft.Web/sites/migrate' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.Web/sites/networkConfig@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -811,13 +800,6 @@
 * **sendKeyValue**: string
 * **serviceBusNamespace**: string
 * **serviceBusSuffix**: string
-
-## schemas:81_properties
-### Properties
-* **azurefilesConnectionString**: string (Required)
-* **azurefilesShare**: string (Required)
-* **blockWriteAccessToSite**: bool
-* **switchSiteAfterMigration**: bool
 
 ## schemas:84_properties
 ### Properties
