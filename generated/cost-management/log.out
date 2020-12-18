@@ -1,0 +1,21 @@
+
+Executing: autorest --use=/home/runner/work/bicep-types-az/bicep-types-az/src/generator --azureresourceschema --output-folder=/home/runner/work/bicep-types-az/bicep-types-az/generated/cost-management --multiapi /home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/readme.md
+AutoRest code generation utility [cli version: 3.0.6322; node: v14.15.1, max-memory: 2048 MB]
+(C) 2018 Microsoft Corporation.
+https://aka.ms/autorest
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.0.6349)
+   Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+   Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+Processing batch task - {"tag":"schema-costmanagement-2020-06-01"} .
+Processing batch task - {"tag":"schema-costmanagement-2020-03-01-preview"} .
+Processing batch task - {"tag":"schema-costmanagement-2019-11-01"} .
+Processing batch task - {"tag":"schema-costmanagement-2019-10-01"} .
+Processing batch task - {"tag":"schema-costmanagement-2019-09-01"} .
+Processing batch task - {"tag":"schema-costmanagement-2019-04-01-preview"} .
+Processing batch task - {"tag":"schema-costmanagement-2019-03-01-preview"} .
+WARNING: Skipping resource type Microsoft.CostManagement/externalSubscriptions under path '/providers/Microsoft.Management/managementGroups/{managementGroupId}/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}': No resource body defined
+Processing batch task - {"tag":"schema-costmanagement-2019-01-01"} .
+Processing batch task - {"tag":"schema-costmanagement-2018-12-01-preview"} .
+Processing batch task - {"tag":"schema-costmanagement-2018-08-01-preview"} .
+Processing batch task - {"tag":"schema-costmanagement-2018-05-31"} .
+[39.43 s] Generation Complete

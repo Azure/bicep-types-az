@@ -1,0 +1,28 @@
+
+Executing: autorest --use=/home/runner/work/bicep-types-az/bicep-types-az/src/generator --azureresourceschema --output-folder=/home/runner/work/bicep-types-az/bicep-types-az/generated/vmware --multiapi /home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/vmware/resource-manager/readme.md
+AutoRest code generation utility [cli version: 3.0.6322; node: v14.15.1, max-memory: 2048 MB]
+(C) 2018 Microsoft Corporation.
+https://aka.ms/autorest
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.0.6349)
+   Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+   Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+Processing batch task - {"tag":"schema-avs-2020-07-17-preview"} .
+Processing batch task - {"tag":"schema-avs-2020-03-20"} .
+Processing batch task - {"tag":"schema-avs-2019-08-09-preview"} .
+FATAL: System.ArgumentException: An item with the same key has already been added. Key: clusterId
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey](IEnumerable1 source, Func2 keySelector, IEqualityComparer`1 comparer)
+   at Azure.Bicep.TypeGen.Autorest.Processors.ProviderTypeGenerator.GetCompositeTypeProperties(CompositeType putType, CompositeType getType, Boolean includeBaseModelTypeProperties)+MoveNext() in /home/runner/work/bicep-types-az/bicep-types-az/src/generator/src/Bicep.TypeGen.Autorest/Processors/ProviderTypeGenerator.cs:line 289
+   at Azure.Bicep.TypeGen.Autorest.Processors.ProviderTypeGenerator.ParseCompositeType(CompositeType putType, CompositeType getType, Boolean includeBaseModelTypeProperties) in /home/runner/work/bicep-types-az/bicep-types-az/src/generator/src/Bicep.TypeGen.Autorest/Processors/ProviderTypeGenerator.cs:line 333
+   at Azure.Bicep.TypeGen.Autorest.Processors.ProviderTypeGenerator.ParseCompositeType(CompositeType putType, CompositeType getType, Boolean includeBaseModelTypeProperties) in /home/runner/work/bicep-types-az/bicep-types-az/src/generator/src/Bicep.TypeGen.Autorest/Processors/ProviderTypeGenerator.cs:line 335
+   at Azure.Bicep.TypeGen.Autorest.Processors.ProviderTypeGenerator.Process() in /home/runner/work/bicep-types-az/bicep-types-az/src/generator/src/Bicep.TypeGen.Autorest/Processors/ProviderTypeGenerator.cs:line 152
+   at Azure.Bicep.TypeGen.Autorest.Processors.ProviderTypeGenerator.Generate(CodeModel codeModel, ProviderDefinition definition) in /home/runner/work/bicep-types-az/bicep-types-az/src/generator/src/Bicep.TypeGen.Autorest/Processors/ProviderTypeGenerator.cs:line 28
+   at Azure.Bicep.TypeGen.Autorest.Processors.CodeModelProcessor.<>cDisplayClass14_0.<GenerateTypes>b0(KeyValuePair`2 definition) in /home/runner/work/bicep-types-az/bicep-types-az/src/generator/src/Bicep.TypeGen.Autorest/Processors/CodeModelProcessor.cs:line 218
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Azure.Bicep.TypeGen.Autorest.Plugin.BicepTypesCodeGenerator.Generate(CodeModel serviceClient) in /home/runner/work/bicep-types-az/bicep-types-az/src/generator/src/Bicep.TypeGen.Autorest/Plugin/BicepTypesCodeGenerator.cs:line 36
+   at Azure.Bicep.TypeGen.Autorest.Program.ProcessInternal() in /home/runner/work/bicep-types-az/bicep-types-az/src/generator/src/Bicep.TypeGen.Autorest/Program.cs:line 76
+   at NewPlugin.Process() in /home/runner/work/bicep-types-az/bicep-types-az/autorest.common/src/common/Plugins/NewPlugin.cs:line 164
+Failure during batch task - {"tag":"schema-avs-2019-08-09-preview"} -- Error: Plugin azureresourceschema reported failure..
+  Error: Plugin azureresourceschema reported failure.
+Exited with code 1
