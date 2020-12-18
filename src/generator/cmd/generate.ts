@@ -1,32 +1,44 @@
 import os from 'os';
 import path from 'path';
-import { createWriteStream, existsSync, rmSync } from 'fs';
-import { readdir, stat, rmdir, mkdir } from 'fs/promises';
+import { createWriteStream, existsSync } from 'fs';
+import { readdir, stat, rmdir, mkdir, rm } from 'fs/promises';
 import { series } from 'async';
 import { spawn } from 'child_process';
 import chalk from 'chalk';
 import stripAnsi from 'strip-ansi';
 import yargs from 'yargs';
 
-const args = yargs
-  .option('specs-dir', { type: 'string', demandOption: true, desc: 'Path to the azure-rest-api-specs dir' })
-  .option('out-dir', { type: 'string', demandOption: true, desc: 'Output path for generated files' })
-  .option('log-file', { type: 'string', demandOption: true, desc: 'Output file for logging' })
-  .option('verbose', { type: 'boolean', default: false, desc: 'Enable autorest verbose logging' })
-  .option('wait-for-debugger', { type: 'boolean', default: false, desc: 'Wait for a C# debugger to be attached before running the Autorest extension' })
-  .argv;
+interface ILogger {
+  out: (data: string) => void;
+  err: (data: string) => void;
+}
+
+const defaultLogger: ILogger = {
+  out: data => process.stdout.write(data),
+  err: data => process.stderr.write(data),
+}
 
 const extensionDir = path.resolve(`${__dirname}/../`);
 const autorestDll = path.resolve(`${extensionDir}/src/Bicep.TypeGen.Autorest/bin/net5.0/Bicep.TypeGen.Autorest.dll`);
 const indexBuilderDll = path.resolve(`${extensionDir}/src/Bicep.TypeGen.Index/bin/net5.0/Bicep.TypeGen.Index.dll`);
 const autorestBinary = os.platform() === 'win32' ? 'autorest.cmd' : 'autorest';
-const { writeOut, writeErr } = getLoggers(args['log-file']);
+const defaultOutDir = path.resolve(`${extensionDir}/../../generated`);
+
+const args = yargs
+  .strict()
+  .option('specs-dir', { type: 'string', demandOption: true, desc: 'Path to the azure-rest-api-specs dir' })
+  .option('out-dir', { type: 'string', default: defaultOutDir, desc: 'Output path for generated files' })
+  .option('single-path', { type: 'string', default: undefined, desc: 'Only regenerate under a specific file path - e.g. "compute"' })
+  .option('verbose', { type: 'boolean', default: false, desc: 'Enable autorest verbose logging' })
+  .option('wait-for-debugger', { type: 'boolean', default: false, desc: 'Wait for a C# debugger to be attached before running the Autorest extension' })
+  .argv;
 
 executeSynchronous(async () => {
   const inputBaseDir = path.resolve(args['specs-dir']);
   const outputBaseDir = path.resolve(args['out-dir']);
   const verbose = args['verbose'];
   const waitForDebugger = args['wait-for-debugger'];
+  const singlePath = args['single-path'];
 
   if (!existsSync(autorestDll)) {
     throw `Unable to find ${autorestDll}. Did you forget to run dotnet build?`;
@@ -36,10 +48,6 @@ executeSynchronous(async () => {
     throw `Unable to find ${indexBuilderDll}. Did you forget to run dotnet build?`;
   }
 
-  // remove all previously-generated files
-  await rmdir(outputBaseDir, { recursive: true });
-  await mkdir(outputBaseDir);
- 
   // find all readme paths in the azure-rest-api-specs repo
   const specsPath = path.join(inputBaseDir, 'specification');
   const readmePaths = await findReadmePaths(specsPath);
@@ -52,21 +60,31 @@ executeSynchronous(async () => {
     const basePath = path.relative(specsPath, readmePath).split(path.sep)[0].toLowerCase();
     const outputDir = `${outputBaseDir}/${basePath}`;
 
+    if (singlePath && lowerCaseCompare(singlePath, basePath) !== 0) {
+      continue;
+    }
+
+    // remove all previously-generated files
+    await rmdir(outputDir, { recursive: true });
+    await mkdir(outputDir, { recursive: true });
+    const logger = await getLogger(`${outputDir}/log.out`);
+
     try {
-      await generateSchema(readmePath, outputDir, verbose, waitForDebugger);
+      await generateSchema(logger, readmePath, outputDir, verbose, waitForDebugger);
     } catch (e) {
-      writeOut(e);
+      logErr(logger, e);
     }
   }
 
   // build the type index
   await executeCmd(
+    defaultLogger,
     __dirname,
     'dotnet',
     [indexBuilderDll, outputBaseDir]);
 });
 
-async function generateSchema(readme: string, outputBaseDir: string, verbose: boolean, waitForDebugger: boolean) {
+async function generateSchema(logger: ILogger, readme: string, outputBaseDir: string, verbose: boolean, waitForDebugger: boolean) {
   let autoRestParams = [
     `--use=${extensionDir}`,
     '--azureresourceschema',
@@ -88,7 +106,7 @@ async function generateSchema(readme: string, outputBaseDir: string, verbose: bo
     ]);
   }
 
-  return await executeCmd(__dirname, autorestBinary, autoRestParams);
+  return await executeCmd(logger, __dirname, autorestBinary, autoRestParams);
 }
 
 async function findReadmePaths(specsPath: string) {
@@ -130,10 +148,10 @@ async function findRecursive(basePath: string, filter: (name: string) => boolean
   return results;
 }
 
-function executeCmd(cwd: string, cmd: string, args: string[]) : Promise<number> {
+function executeCmd(logger: ILogger, cwd: string, cmd: string, args: string[]) : Promise<number> {
   return new Promise((resolve, reject) => {
-    writeOut('');
-    writeOut(chalk.green(`Executing: ${cmd} ${args.join(' ')}`));
+    logOut(logger, '');
+    logOut(logger, chalk.green(`Executing: ${cmd} ${args.join(' ')}`));
 
     const child = spawn(cmd, args, {
       cwd: cwd,
@@ -141,8 +159,8 @@ function executeCmd(cwd: string, cmd: string, args: string[]) : Promise<number> 
       shell: true,
     });
 
-    child.stdout.on('data', data => writeOut(chalk.grey(data.toString())));
-    child.stderr.on('data', data => writeErr(chalk.red(data.toString())));
+    child.stdout.on('data', data => logger.out(chalk.grey(data.toString())));
+    child.stderr.on('data', data => logger.err(chalk.red(data.toString())));
 
     child.on('error', err => {
       reject(err);
@@ -177,16 +195,24 @@ function lowerCaseCompare(a: string, b: string) {
   return aLower < bLower ? -1 : 1;
 }
 
-function getLoggers(logFilePath: string): { writeOut: (data: string) => void, writeErr: (data: string) => void } {
-  rmSync(logFilePath, { force: true });
+function logOut(logger: ILogger, line: string) {
+  logger.out(`${line}\n`);
+}
+
+function logErr(logger: ILogger, line: string) {
+  logger.err(`${line}\n`);
+}
+
+async function getLogger(logFilePath: string): Promise<ILogger> {
+  await rm(logFilePath, { force: true });
   const logFileStream = createWriteStream(logFilePath, { flags: 'a' });
 
   return {
-    writeOut: (data: string) => {
+    out: (data: string) => {
       process.stdout.write(data);
       logFileStream.write(stripAnsi(data));
     },
-    writeErr: (data: string) => {
+    err: (data: string) => {
       process.stdout.write(data);
       logFileStream.write(stripAnsi(data));
     },

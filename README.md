@@ -9,6 +9,30 @@ Bicep type definitions for ARM resources
 1. To workaround [this issue](https://github.com/peter-evans/create-pull-request/issues/48), close the PR and open it to trigger Merge Validation to run.
 1. Merge the PR. Type differences can be reviewed by looking at the Markdown files in [/generated/docs](./generated/docs).
 
+## Running generation locally
+1. Ensure you have a copy of the [azure-rest-api-specs](https://github.com/Azure/azure-rest-api-specs) repo checked out locally.
+1. Build the dotnet generator code:
+    ```sh
+    dotnet build
+    ```
+1. Change to the generator directory, and install dependencies:
+    ```sh
+    cd src/generator
+    npm i
+    ```
+1. To run generation across the entire specs repo:
+    ```sh
+    npm run generate -- --specs-dir {path to azure-rest-api-specs}
+    ```
+1. To run generation for a single path in the specs repo (e.g. 'compute'):
+    ```sh
+    npm run generate -- --specs-dir {path to azure-rest-api-specs} --single-path compute
+    ```
+1. To see other available generation parameters, including debugging options:
+    ```sh
+    npm run generate -- --help
+    ```
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a

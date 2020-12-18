@@ -11,11 +11,24 @@
                 "generate",
                 "--",
                 "--specs-dir",
+                "../../../azure-rest-api-specs"
+            ],
+            "cwd": "${workspaceFolder}/src/generator",
+            "preLaunchTask": "build"
+        },
+        {
+            "name": "Generate Single",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "generate",
+                "--",
+                "--specs-dir",
                 "../../../azure-rest-api-specs",
-                "--out-dir",
-                "../../generated",
-                "--log-file",
-                "../../generation.out"
+                "--single-path",
+                "${input:pickSinglePath}"
             ],
             "cwd": "${workspaceFolder}/src/generator",
             "preLaunchTask": "build"
@@ -26,5 +39,13 @@
             "request": "attach",
             "processId": "${command:pickProcess}"
         }
+    ],
+    "inputs": [
+      {
+        "id": "pickSinglePath",
+        "default": "compute",
+        "type": "promptString",
+        "description": "Pick a specific base path to generate types for"
+      }
     ]
 }

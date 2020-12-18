@@ -1,34 +1,34 @@
 {
-  "name": "@autorest/azureresourceschema",
-  "version": "3.0.0",
-  "description": "The Azure Resource Schema extension for classic generators in AutoRest.",
+  "name": "@autorest/bicep",
+  "version": "0.0.0",
+  "description": "The Azure Bicep extension for classic generators in AutoRest.",
   "scripts": {
     "generate": "ts-node cmd/generate",
     "start": "dotnet ./src/Bicep.TypeGen.Autorest/bin/net5.0/Bicep.TypeGen.Autorest.dll --server"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Azure/autorest.azureresourceschema"
+    "url": "https://github.com/Azure/bicep-types-az"
   },
-  "readme": "https://github.com/Azure/autorest.azureresourceschema/readme.md",
+  "readme": "https://github.com/Azure/bicep-types-az/readme.md",
   "keywords": [
     "autorest",
     "classic-generators",
-    "azureresourceschema"
+    "bicep"
   ],
   "author": "Microsoft Corporation",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Azure/autorest/issues"
   },
-  "homepage": "https://github.com/Azure/autorest.azureresourceschema/blob/master/README.md",
+  "homepage": "https://github.com/Azure/bicep-types-az/blob/main/README.md",
   "devDependencies": {
     "@autorest/core": "^3.0.6338",
     "@types/async": "^3.2.0",
     "@types/node": "^14.11.2",
     "@types/yargs": "^15.0.11",
     "async": "^3.2.0",
-    "autorest": "^3.0.6247",
+    "autorest": "^3.0.6322",
     "chalk": "^4.1.0",
     "strip-ansi": "^6.0.0",
     "ts-node": "^9.0.0",
