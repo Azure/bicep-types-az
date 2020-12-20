@@ -124,6 +124,14 @@
 * **properties**: StorageAccountCredentialProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/storageAccountCredentials' (ReadOnly, DeployTimeConstant)
 
+## Function listActivationKey (Microsoft.StorSimple/managers@2017-06-01
+* **Resource**: Microsoft.StorSimple/managers@2017-06-01
+* **Output**: Key
+
+## Function listPublicEncryptionKey (Microsoft.StorSimple/managers@2017-06-01
+* **Resource**: Microsoft.StorSimple/managers@2017-06-01
+* **Output**: SymmetricEncryptedSecret
+
 ## ManagerProperties
 ### Properties
 * **cisIntrinsicSettings**: ManagerIntrinsicSettings
@@ -248,4 +256,14 @@
 * **endPoint**: string (Required)
 * **sslStatus**: 'Disabled' | 'Enabled' (Required)
 * **volumesCount**: int (ReadOnly)
+
+## Key
+### Properties
+* **activationKey**: string (ReadOnly)
+
+## SymmetricEncryptedSecret
+### Properties
+* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' (ReadOnly)
+* **value**: string (ReadOnly)
+* **valueCertificateThumbprint**: string (ReadOnly)
 

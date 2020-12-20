@@ -40,6 +40,18 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant)
 
+## Function listDetails (Microsoft.ContainerRegistry/registries/taskRuns@2019-06-01-preview
+* **Resource**: Microsoft.ContainerRegistry/registries/taskRuns@2019-06-01-preview
+* **Output**: TaskRun
+
+## Function listDetails (Microsoft.ContainerRegistry/registries/tasks@2019-06-01-preview
+* **Resource**: Microsoft.ContainerRegistry/registries/tasks@2019-06-01-preview
+* **Output**: Task
+
+## Function listQueueStatus (Microsoft.ContainerRegistry/registries/agentPools@2019-06-01-preview
+* **Resource**: Microsoft.ContainerRegistry/registries/agentPools@2019-06-01-preview
+* **Output**: AgentPoolQueueStatus
+
 ## AgentPoolProperties
 ### Properties
 * **count**: int
@@ -424,4 +436,34 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TaskRun
+### Properties
+* **id**: string (ReadOnly)
+* **identity**: IdentityProperties (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: TaskRunProperties (ReadOnly)
+* **systemData**: SystemData (ReadOnly)
+* **type**: string (ReadOnly)
+
+## Task
+### Properties
+* **id**: string (ReadOnly)
+* **identity**: IdentityProperties (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: TaskProperties (ReadOnly)
+* **systemData**: SystemData (ReadOnly)
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## AgentPoolQueueStatus
+### Properties
+* **count**: int (ReadOnly)
 

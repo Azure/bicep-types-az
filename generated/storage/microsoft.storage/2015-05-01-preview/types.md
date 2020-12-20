@@ -12,6 +12,10 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.Storage/storageAccounts@2015-05-01-preview
+* **Resource**: Microsoft.Storage/storageAccounts@2015-05-01-preview
+* **Output**: StorageAccountKeys
+
 ## StorageAccountPropertiesCreateParameters
 ### Properties
 * **accountType**: 'Premium_LRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_ZRS'
@@ -41,4 +45,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## StorageAccountKeys
+### Properties
+* **key1**: string (ReadOnly)
+* **key2**: string (ReadOnly)
 

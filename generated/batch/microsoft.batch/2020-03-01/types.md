@@ -56,6 +56,10 @@
 * **properties**: PoolProperties
 * **type**: 'Microsoft.Batch/batchAccounts/pools' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.Batch/batchAccounts@2020-03-01
+* **Resource**: Microsoft.Batch/batchAccounts@2020-03-01
+* **Output**: BatchAccountKeys
+
 ## BatchAccountCreateProperties
 ### Properties
 * **accountEndpoint**: string (ReadOnly)
@@ -436,4 +440,10 @@
 ## WindowsUserConfiguration
 ### Properties
 * **loginMode**: 'Batch' | 'Interactive'
+
+## BatchAccountKeys
+### Properties
+* **accountName**: string (ReadOnly)
+* **primary**: string (ReadOnly)
+* **secondary**: string (ReadOnly)
 

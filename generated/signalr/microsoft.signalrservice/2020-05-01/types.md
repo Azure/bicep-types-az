@@ -24,6 +24,10 @@
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: 'Microsoft.SignalRService/signalR/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.SignalRService/signalR@2020-05-01
+* **Resource**: Microsoft.SignalRService/signalR@2020-05-01
+* **Output**: SignalRKeys
+
 ## SignalRProperties
 ### Properties
 * **cors**: SignalRCorsSettings
@@ -117,4 +121,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SignalRKeys
+### Properties
+* **primaryConnectionString**: string (ReadOnly)
+* **primaryKey**: string (ReadOnly)
+* **secondaryConnectionString**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

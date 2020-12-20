@@ -1,0 +1,20 @@
+
+Executing: autorest --use=/home/runner/work/bicep-types-az/bicep-types-az/src/generator --azureresourceschema --output-folder=/home/runner/work/bicep-types-az/bicep-types-az/generated/portal --multiapi /home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/portal/resource-manager/readme.md
+AutoRest code generation utility [cli version: 3.0.6322; node: v14.15.1, max-memory: 2048 MB]
+(C) 2018 Microsoft Corporation.
+https://aka.ms/autorest
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.0.6349)
+   Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+   Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+Processing batch task - {"tag":"schema-portal-2020-09-01-preview"} .
+FATAL: System.ArgumentOutOfRangeException: Length cannot be less than zero. (Parameter 'length')
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at Azure.Bicep.TypeGen.Autorest.Processors.CodeModelProcessor.ParseResourceDescriptors(Method method, String apiVersion, ScopeType scopeType, String routingScope) in /home/runner/work/bicep-types-az/bicep-types-az/src/generator/src/Bicep.TypeGen.Autorest/Processors/CodeModelProcessor.cs:line 133
+   at Azure.Bicep.TypeGen.Autorest.Processors.CodeModelProcessor.ParseResourceActionMethod(Method method, String apiVersion) in /home/runner/work/bicep-types-az/bicep-types-az/src/generator/src/Bicep.TypeGen.Autorest/Processors/CodeModelProcessor.cs:line 172
+   at Azure.Bicep.TypeGen.Autorest.Processors.CodeModelProcessor.GenerateTypes(CodeModel serviceClient, String apiVersion) in /home/runner/work/bicep-types-az/bicep-types-az/src/generator/src/Bicep.TypeGen.Autorest/Processors/CodeModelProcessor.cs:line 263
+   at Azure.Bicep.TypeGen.Autorest.Plugin.BicepTypesCodeGenerator.Generate(CodeModel serviceClient) in /home/runner/work/bicep-types-az/bicep-types-az/src/generator/src/Bicep.TypeGen.Autorest/Plugin/BicepTypesCodeGenerator.cs:line 34
+   at Azure.Bicep.TypeGen.Autorest.Program.ProcessInternal() in /home/runner/work/bicep-types-az/bicep-types-az/src/generator/src/Bicep.TypeGen.Autorest/Program.cs:line 76
+   at NewPlugin.Process() in /home/runner/work/bicep-types-az/bicep-types-az/autorest.common/src/common/Plugins/NewPlugin.cs:line 164
+Failure during batch task - {"tag":"schema-portal-2020-09-01-preview"} -- Error: Plugin azureresourceschema reported failure..
+  Error: Plugin azureresourceschema reported failure.
+Exited with code 1

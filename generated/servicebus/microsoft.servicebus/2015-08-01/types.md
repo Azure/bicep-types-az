@@ -79,6 +79,18 @@
 * **properties**: SubscriptionProperties
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2015-08-01
+* **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules@2015-08-01
+* **Output**: ResourceListKeys
+
+## Function listKeys (Microsoft.ServiceBus/namespaces/queues/authorizationRules@2015-08-01
+* **Resource**: Microsoft.ServiceBus/namespaces/queues/authorizationRules@2015-08-01
+* **Output**: ResourceListKeys
+
+## Function listKeys (Microsoft.ServiceBus/namespaces/topics/authorizationRules@2015-08-01
+* **Resource**: Microsoft.ServiceBus/namespaces/topics/authorizationRules@2015-08-01
+* **Output**: ResourceListKeys
+
 ## NamespaceProperties
 ### Properties
 * **createACSNamespace**: bool
@@ -178,4 +190,12 @@
 * **requiresSession**: bool
 * **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown'
 * **updatedAt**: string (ReadOnly)
+
+## ResourceListKeys
+### Properties
+* **keyName**: string (ReadOnly)
+* **primaryConnectionString**: string (ReadOnly)
+* **primaryKey**: string (ReadOnly)
+* **secondaryConnectionString**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

@@ -52,6 +52,14 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.NotificationHubs/namespaces/AuthorizationRules@2016-03-01
+* **Resource**: Microsoft.NotificationHubs/namespaces/AuthorizationRules@2016-03-01
+* **Output**: ResourceListKeys
+
+## Function listKeys (Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2016-03-01
+* **Resource**: Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2016-03-01
+* **Output**: ResourceListKeys
+
 ## NamespaceProperties
 ### Properties
 * **createdAt**: string
@@ -169,4 +177,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceListKeys
+### Properties
+* **keyName**: string (ReadOnly)
+* **primaryConnectionString**: string (ReadOnly)
+* **primaryKey**: string (ReadOnly)
+* **secondaryConnectionString**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

@@ -13,6 +13,11 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Kubernetes/connectedClusters' (ReadOnly, DeployTimeConstant)
 
+## Function listClusterUserCredentials (Microsoft.Kubernetes/connectedClusters@2020-01-01-preview
+* **Resource**: Microsoft.Kubernetes/connectedClusters@2020-01-01-preview
+* **Input**: AuthenticationDetails
+* **Output**: CredentialResults
+
 ## ConnectedClusterIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -45,4 +50,30 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## AuthenticationDetails
+### Properties
+* **authenticationMethod**: string (Required, WriteOnly)
+* **value**: schemas:9_value (Required, WriteOnly)
+
+## schemas:9_value
+### Properties
+* **token**: string (WriteOnly)
+
+## CredentialResults
+### Properties
+* **hybridConnectionConfig**: HybridConnectionConfig (ReadOnly)
+* **kubeconfigs**: CredentialResult[] (ReadOnly)
+
+## HybridConnectionConfig
+### Properties
+* **expirationTime**: int (ReadOnly)
+* **hybridConnectionName**: string (ReadOnly)
+* **relay**: string (ReadOnly)
+* **token**: string (ReadOnly)
+
+## CredentialResult
+### Properties
+* **name**: string (ReadOnly)
+* **value**: array (ReadOnly)
 

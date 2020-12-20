@@ -36,6 +36,10 @@
 * **properties**: PrivateEndpointConnectionProperties (Required)
 * **type**: 'Microsoft.Devices/provisioningServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
+## Function listkeys (Microsoft.Devices/provisioningServices@2020-03-01
+* **Resource**: Microsoft.Devices/provisioningServices@2020-03-01
+* **Output**: SharedAccessSignatureAuthorizationRuleListResult
+
 ## IotDpsPropertiesDescription
 ### Properties
 * **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static'
@@ -113,4 +117,9 @@
 * **subject**: string (ReadOnly)
 * **thumbprint**: string (ReadOnly)
 * **updated**: string (ReadOnly)
+
+## SharedAccessSignatureAuthorizationRuleListResult
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: SharedAccessSignatureAuthorizationRule_AccessRightsDescription_[] (ReadOnly)
 

@@ -34,6 +34,14 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.EventGrid/domains@2018-09-15-preview
+* **Resource**: Microsoft.EventGrid/domains@2018-09-15-preview
+* **Output**: DomainSharedAccessKeys
+
+## Function listKeys (Microsoft.EventGrid/topics@2018-09-15-preview
+* **Resource**: Microsoft.EventGrid/topics@2018-09-15-preview
+* **Output**: TopicSharedAccessKeys
+
 ## DomainProperties
 ### Properties
 * **endpoint**: string (ReadOnly)
@@ -320,4 +328,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DomainSharedAccessKeys
+### Properties
+* **key1**: string (ReadOnly)
+* **key2**: string (ReadOnly)
+
+## TopicSharedAccessKeys
+### Properties
+* **key1**: string (ReadOnly)
+* **key2**: string (ReadOnly)
 

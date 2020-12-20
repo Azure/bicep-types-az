@@ -12,6 +12,10 @@
 * **tags**: any
 * **type**: 'Microsoft.ImportExport/jobs' (ReadOnly, DeployTimeConstant)
 
+## Function listBitLockerKeys (Microsoft.ImportExport/jobs@2016-11-01
+* **Resource**: Microsoft.ImportExport/jobs@2016-11-01
+* **Output**: GetBitLockerKeysResponse
+
 ## JobDetails
 ### Properties
 * **backupDriveManifest**: bool
@@ -91,4 +95,13 @@
 * **stateOrProvince**: string (Required)
 * **streetAddress1**: string (Required)
 * **streetAddress2**: string
+
+## GetBitLockerKeysResponse
+### Properties
+* **value**: DriveBitLockerKey[] (ReadOnly)
+
+## DriveBitLockerKey
+### Properties
+* **bitLockerKey**: string (ReadOnly)
+* **driveId**: string (ReadOnly)
 

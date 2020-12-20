@@ -134,6 +134,49 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Logic/workflows' (ReadOnly, DeployTimeConstant)
 
+## Function listCallbackUrl (Microsoft.Logic/workflows@2019-05-01
+* **Resource**: Microsoft.Logic/workflows@2019-05-01
+* **Input**: GetCallbackUrlParameters
+* **Output**: WorkflowTriggerCallbackUrl
+
+## Function listCallbackUrl (Microsoft.Logic/integrationAccounts@2019-05-01
+* **Resource**: Microsoft.Logic/integrationAccounts@2019-05-01
+* **Input**: GetCallbackUrlParameters
+* **Output**: CallbackUrl
+
+## Function listContentCallbackUrl (Microsoft.Logic/integrationAccounts/assemblies@2019-05-01
+* **Resource**: Microsoft.Logic/integrationAccounts/assemblies@2019-05-01
+* **Output**: WorkflowTriggerCallbackUrl
+
+## Function listContentCallbackUrl (Microsoft.Logic/integrationAccounts/schemas@2019-05-01
+* **Resource**: Microsoft.Logic/integrationAccounts/schemas@2019-05-01
+* **Input**: GetCallbackUrlParameters
+* **Output**: WorkflowTriggerCallbackUrl
+
+## Function listContentCallbackUrl (Microsoft.Logic/integrationAccounts/maps@2019-05-01
+* **Resource**: Microsoft.Logic/integrationAccounts/maps@2019-05-01
+* **Input**: GetCallbackUrlParameters
+* **Output**: WorkflowTriggerCallbackUrl
+
+## Function listContentCallbackUrl (Microsoft.Logic/integrationAccounts/partners@2019-05-01
+* **Resource**: Microsoft.Logic/integrationAccounts/partners@2019-05-01
+* **Input**: GetCallbackUrlParameters
+* **Output**: WorkflowTriggerCallbackUrl
+
+## Function listContentCallbackUrl (Microsoft.Logic/integrationAccounts/agreements@2019-05-01
+* **Resource**: Microsoft.Logic/integrationAccounts/agreements@2019-05-01
+* **Input**: GetCallbackUrlParameters
+* **Output**: WorkflowTriggerCallbackUrl
+
+## Function listKeyVaultKeys (Microsoft.Logic/integrationAccounts@2019-05-01
+* **Resource**: Microsoft.Logic/integrationAccounts@2019-05-01
+* **Input**: ListKeyVaultKeysDefinition
+* **Output**: KeyVaultKeyCollection
+
+## Function listSwagger (Microsoft.Logic/workflows@2019-05-01
+* **Resource**: Microsoft.Logic/workflows@2019-05-01
+* **Output**: ErrorResponse
+
 ## IntegrationAccountProperties
 ### Properties
 * **integrationServiceEnvironment**: IntegrationServiceEnvironment
@@ -914,4 +957,66 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## GetCallbackUrlParameters
+### Properties
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly)
+* **notAfter**: string (WriteOnly)
+
+## WorkflowTriggerCallbackUrl
+### Properties
+* **basePath**: string (ReadOnly)
+* **method**: string (ReadOnly)
+* **queries**: WorkflowTriggerListCallbackUrlQueries (ReadOnly)
+* **relativePath**: string (ReadOnly)
+* **relativePathParameters**: string[] (ReadOnly)
+* **value**: string (ReadOnly)
+
+## WorkflowTriggerListCallbackUrlQueries
+### Properties
+* **api-version**: string (ReadOnly)
+* **se**: string (ReadOnly)
+* **sig**: string (ReadOnly)
+* **sp**: string (ReadOnly)
+* **sv**: string (ReadOnly)
+
+## CallbackUrl
+### Properties
+* **value**: string (ReadOnly)
+
+## ListKeyVaultKeysDefinition
+### Properties
+* **keyVault**: KeyVaultReference (Required, WriteOnly)
+* **skipToken**: string (WriteOnly)
+
+## KeyVaultReference
+### Properties
+* **id**: string (WriteOnly)
+* **name**: string (ReadOnly, WriteOnly)
+* **type**: string (ReadOnly, WriteOnly)
+
+## KeyVaultKeyCollection
+### Properties
+* **skipToken**: string (ReadOnly)
+* **value**: KeyVaultKey[] (ReadOnly)
+
+## KeyVaultKey
+### Properties
+* **attributes**: schemas:217_attributes (ReadOnly)
+* **kid**: string (ReadOnly)
+
+## schemas:217_attributes
+### Properties
+* **created**: int (ReadOnly)
+* **enabled**: bool (ReadOnly)
+* **updated**: int (ReadOnly)
+
+## ErrorResponse
+### Properties
+* **error**: ErrorProperties (ReadOnly)
+
+## ErrorProperties
+### Properties
+* **code**: string (ReadOnly)
+* **message**: string (ReadOnly)
 

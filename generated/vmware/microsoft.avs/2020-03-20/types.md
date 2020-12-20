@@ -44,6 +44,10 @@
 * **properties**: HcxEnterpriseSiteProperties (ReadOnly)
 * **type**: 'Microsoft.AVS/privateClouds/hcxEnterpriseSites' (ReadOnly, DeployTimeConstant)
 
+## Function listAdminCredentials (Microsoft.AVS/privateClouds@2020-03-20
+* **Resource**: Microsoft.AVS/privateClouds@2020-03-20
+* **Output**: AdminCredentials
+
 ## PrivateCloudProperties
 ### Properties
 * **circuit**: Circuit
@@ -120,4 +124,11 @@
 ### Properties
 * **activationKey**: string (ReadOnly)
 * **status**: 'Available' | 'Consumed' | 'Deactivated' | 'Deleted' (ReadOnly)
+
+## AdminCredentials
+### Properties
+* **nsxtPassword**: string (ReadOnly)
+* **nsxtUsername**: string (ReadOnly)
+* **vcenterPassword**: string (ReadOnly)
+* **vcenterUsername**: string (ReadOnly)
 

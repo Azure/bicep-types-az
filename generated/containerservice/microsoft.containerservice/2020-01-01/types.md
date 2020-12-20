@@ -23,6 +23,18 @@
 * **properties**: ManagedClusterAgentPoolProfileProperties
 * **type**: 'Microsoft.ContainerService/managedClusters/agentPools' (ReadOnly, DeployTimeConstant)
 
+## Function listClusterAdminCredential (Microsoft.ContainerService/managedClusters@2020-01-01
+* **Resource**: Microsoft.ContainerService/managedClusters@2020-01-01
+* **Output**: CredentialResults
+
+## Function listClusterMonitoringUserCredential (Microsoft.ContainerService/managedClusters@2020-01-01
+* **Resource**: Microsoft.ContainerService/managedClusters@2020-01-01
+* **Output**: CredentialResults
+
+## Function listClusterUserCredential (Microsoft.ContainerService/managedClusters@2020-01-01
+* **Resource**: Microsoft.ContainerService/managedClusters@2020-01-01
+* **Output**: CredentialResults
+
 ## ManagedClusterIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -225,4 +237,13 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## CredentialResults
+### Properties
+* **kubeconfigs**: CredentialResult[] (ReadOnly)
+
+## CredentialResult
+### Properties
+* **name**: string (ReadOnly)
+* **value**: array (ReadOnly)
 

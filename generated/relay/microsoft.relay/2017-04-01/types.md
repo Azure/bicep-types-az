@@ -63,6 +63,18 @@
 * **properties**: schemas:13_properties (Required)
 * **type**: 'Microsoft.Relay/namespaces/wcfRelays/authorizationRules' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.Relay/namespaces/authorizationRules@2017-04-01
+* **Resource**: Microsoft.Relay/namespaces/authorizationRules@2017-04-01
+* **Output**: AccessKeys
+
+## Function listKeys (Microsoft.Relay/namespaces/hybridConnections/authorizationRules@2017-04-01
+* **Resource**: Microsoft.Relay/namespaces/hybridConnections/authorizationRules@2017-04-01
+* **Output**: AccessKeys
+
+## Function listKeys (Microsoft.Relay/namespaces/wcfRelays/authorizationRules@2017-04-01
+* **Resource**: Microsoft.Relay/namespaces/wcfRelays/authorizationRules@2017-04-01
+* **Output**: AccessKeys
+
 ## RelayNamespaceProperties
 ### Properties
 * **createdAt**: string (ReadOnly)
@@ -103,4 +115,12 @@
 * **requiresTransportSecurity**: bool
 * **updatedAt**: string (ReadOnly)
 * **userMetadata**: string
+
+## AccessKeys
+### Properties
+* **keyName**: string (ReadOnly)
+* **primaryConnectionString**: string (ReadOnly)
+* **primaryKey**: string (ReadOnly)
+* **secondaryConnectionString**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

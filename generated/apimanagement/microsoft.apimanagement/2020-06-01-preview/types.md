@@ -276,6 +276,36 @@
 * **properties**: PolicyContractProperties
 * **type**: 'Microsoft.ApiManagement/service/policies' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.ApiManagement/service/portalsettings@2020-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PortalSigninSettingProperties
+* **type**: 'Microsoft.ApiManagement/service/portalsettings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/portalsettings@2020-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PortalSignupSettingsProperties
+* **type**: 'Microsoft.ApiManagement/service/portalsettings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/portalsettings@2020-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PortalDelegationSettingsProperties
+* **type**: 'Microsoft.ApiManagement/service/portalsettings' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.ApiManagement/service/products@2020-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -335,6 +365,34 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: UserCreateParameterProperties
 * **type**: 'Microsoft.ApiManagement/service/users' (ReadOnly, DeployTimeConstant)
+
+## Function listKeys (Microsoft.ApiManagement/service/gateways@2020-06-01-preview
+* **Resource**: Microsoft.ApiManagement/service/gateways@2020-06-01-preview
+* **Output**: GatewayKeysContract
+
+## Function listSecrets (Microsoft.ApiManagement/service/authorizationServers@2020-06-01-preview
+* **Resource**: Microsoft.ApiManagement/service/authorizationServers@2020-06-01-preview
+* **Output**: AuthorizationServerSecretsContract
+
+## Function listSecrets (Microsoft.ApiManagement/service/identityProviders@2020-06-01-preview
+* **Resource**: Microsoft.ApiManagement/service/identityProviders@2020-06-01-preview
+* **Output**: ClientSecretContract
+
+## Function listSecrets (Microsoft.ApiManagement/service/openidConnectProviders@2020-06-01-preview
+* **Resource**: Microsoft.ApiManagement/service/openidConnectProviders@2020-06-01-preview
+* **Output**: ClientSecretContract
+
+## Function listSecrets (Microsoft.ApiManagement/service/portalsettings@2020-06-01-preview
+* **Resource**: Microsoft.ApiManagement/service/portalsettings@2020-06-01-preview
+* **Output**: PortalSettingValidationKeyContract
+
+## Function listSecrets (Microsoft.ApiManagement/service/subscriptions@2020-06-01-preview
+* **Resource**: Microsoft.ApiManagement/service/subscriptions@2020-06-01-preview
+* **Output**: SubscriptionKeysContract
+
+## Function listValue (Microsoft.ApiManagement/service/namedValues@2020-06-01-preview
+* **Resource**: Microsoft.ApiManagement/service/namedValues@2020-06-01-preview
+* **Output**: NamedValueSecretContract
 
 ## ApiManagementServiceIdentity
 ### Properties
@@ -832,6 +890,36 @@
 * **displayName**: string (Required)
 * **metadataEndpoint**: string (Required)
 
+## PortalSigninSettingProperties
+### Properties
+* **enabled**: bool
+
+## PortalSignupSettingsProperties
+### Properties
+* **enabled**: bool
+* **termsOfService**: TermsOfServiceProperties
+
+## TermsOfServiceProperties
+### Properties
+* **consentRequired**: bool
+* **enabled**: bool
+* **text**: string
+
+## PortalDelegationSettingsProperties
+### Properties
+* **subscriptions**: SubscriptionsDelegationSettingsProperties
+* **url**: string
+* **userRegistration**: RegistrationDelegationSettingsProperties
+* **validationKey**: string
+
+## SubscriptionsDelegationSettingsProperties
+### Properties
+* **enabled**: bool
+
+## RegistrationDelegationSettingsProperties
+### Properties
+* **enabled**: bool
+
 ## ProductContractProperties
 ### Properties
 * **approvalRequired**: bool
@@ -903,4 +991,32 @@
 ### Properties
 * **id**: string
 * **provider**: string
+
+## GatewayKeysContract
+### Properties
+* **primary**: string (ReadOnly)
+* **secondary**: string (ReadOnly)
+
+## AuthorizationServerSecretsContract
+### Properties
+* **clientSecret**: string (ReadOnly)
+* **resourceOwnerPassword**: string (ReadOnly)
+* **resourceOwnerUsername**: string (ReadOnly)
+
+## ClientSecretContract
+### Properties
+* **clientSecret**: string (ReadOnly)
+
+## PortalSettingValidationKeyContract
+### Properties
+* **validationKey**: string (ReadOnly)
+
+## SubscriptionKeysContract
+### Properties
+* **primaryKey**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
+
+## NamedValueSecretContract
+### Properties
+* **value**: string (ReadOnly)
 

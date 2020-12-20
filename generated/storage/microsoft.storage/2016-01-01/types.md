@@ -14,6 +14,10 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.Storage/storageAccounts@2016-01-01
+* **Resource**: Microsoft.Storage/storageAccounts@2016-01-01
+* **Output**: StorageAccountListKeysResult
+
 ## StorageAccountPropertiesCreateParameters
 ### Properties
 * **accessTier**: 'Cool' | 'Hot'
@@ -64,4 +68,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## StorageAccountListKeysResult
+### Properties
+* **keys**: StorageAccountKey[] (ReadOnly)
+
+## StorageAccountKey
+### Properties
+* **keyName**: string (ReadOnly)
+* **permissions**: 'FULL' | 'READ' (ReadOnly)
+* **value**: string (ReadOnly)
 

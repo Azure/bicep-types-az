@@ -22,6 +22,14 @@
 * **properties**: ChannelProperties
 * **type**: 'Microsoft.EngagementFabric/Accounts/Channels' (ReadOnly, DeployTimeConstant)
 
+## Function listChannelTypes (Microsoft.EngagementFabric/Accounts@2018-09-01-preview
+* **Resource**: Microsoft.EngagementFabric/Accounts@2018-09-01-preview
+* **Output**: ChannelTypeDescriptionList
+
+## Function listKeys (Microsoft.EngagementFabric/Accounts@2018-09-01-preview
+* **Resource**: Microsoft.EngagementFabric/Accounts@2018-09-01-preview
+* **Output**: KeyDescriptionList
+
 ## SKU
 ### Properties
 * **name**: string (Required)
@@ -42,4 +50,24 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ChannelTypeDescriptionList
+### Properties
+* **value**: ChannelTypeDescription[] (ReadOnly)
+
+## ChannelTypeDescription
+### Properties
+* **channelDescription**: string (ReadOnly)
+* **channelFunctions**: string[] (ReadOnly)
+* **channelType**: string (ReadOnly)
+
+## KeyDescriptionList
+### Properties
+* **value**: KeyDescription[] (ReadOnly)
+
+## KeyDescription
+### Properties
+* **name**: string (ReadOnly)
+* **rank**: 'PrimaryKey' | 'SecondaryKey' (ReadOnly)
+* **value**: string (ReadOnly)
 

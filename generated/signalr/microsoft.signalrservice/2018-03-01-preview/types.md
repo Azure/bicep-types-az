@@ -13,6 +13,10 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.SignalRService/SignalR' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.SignalRService/SignalR@2018-03-01-preview
+* **Resource**: Microsoft.SignalRService/SignalR@2018-03-01-preview
+* **Output**: SignalRKeys
+
 ## SignalRCreateOrUpdateProperties
 ### Properties
 * **externalIP**: string (ReadOnly)
@@ -35,4 +39,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SignalRKeys
+### Properties
+* **primaryConnectionString**: string (ReadOnly)
+* **primaryKey**: string (ReadOnly)
+* **secondaryConnectionString**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

@@ -278,6 +278,10 @@
 * **properties**: ServerVulnerabilityAssessmentProperties
 * **type**: 'Microsoft.Synapse/workspaces/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
 
+## Function listAuthKeys (Microsoft.Synapse/workspaces/integrationRuntimes@2019-06-01-preview
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes@2019-06-01-preview
+* **Output**: IntegrationRuntimeAuthKeys
+
 ## PrivateLinkHubProperties
 ### Properties
 * **privateEndpointConnections**: PrivateEndpointConnectionForPrivateLinkHubBasic[] (ReadOnly)
@@ -826,4 +830,9 @@
 * **storageAccountAccessKey**: string
 * **storageContainerPath**: string (Required)
 * **storageContainerSasKey**: string
+
+## IntegrationRuntimeAuthKeys
+### Properties
+* **authKey1**: string (ReadOnly)
+* **authKey2**: string (ReadOnly)
 

@@ -47,6 +47,10 @@
 * **properties**: PoolProperties
 * **type**: 'Microsoft.Batch/batchAccounts/pools' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.Batch/batchAccounts@2017-09-01
+* **Resource**: Microsoft.Batch/batchAccounts@2017-09-01
+* **Output**: BatchAccountKeys
+
 ## BatchAccountCreateProperties
 ### Properties
 * **accountEndpoint**: string (ReadOnly)
@@ -306,4 +310,10 @@
 * **gid**: int
 * **sshPrivateKey**: string
 * **uid**: int
+
+## BatchAccountKeys
+### Properties
+* **accountName**: string (ReadOnly)
+* **primary**: string (ReadOnly)
+* **secondary**: string (ReadOnly)
 

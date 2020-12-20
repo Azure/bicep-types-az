@@ -34,6 +34,18 @@
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: 'Microsoft.ContainerService/managedClusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
+## Function listClusterAdminCredential (Microsoft.ContainerService/managedClusters@2020-06-01
+* **Resource**: Microsoft.ContainerService/managedClusters@2020-06-01
+* **Output**: CredentialResults
+
+## Function listClusterMonitoringUserCredential (Microsoft.ContainerService/managedClusters@2020-06-01
+* **Resource**: Microsoft.ContainerService/managedClusters@2020-06-01
+* **Output**: CredentialResults
+
+## Function listClusterUserCredential (Microsoft.ContainerService/managedClusters@2020-06-01
+* **Resource**: Microsoft.ContainerService/managedClusters@2020-06-01
+* **Output**: CredentialResults
+
 ## ManagedClusterIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -293,4 +305,13 @@
 ### Properties
 * **description**: string
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
+
+## CredentialResults
+### Properties
+* **kubeconfigs**: CredentialResult[] (ReadOnly)
+
+## CredentialResult
+### Properties
+* **name**: string (ReadOnly)
+* **value**: array (ReadOnly)
 

@@ -298,6 +298,18 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings' (ReadOnly, DeployTimeConstant)
 
+## Function listConnectionInfo (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2020-06-01-preview
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2020-06-01-preview
+* **Output**: NotebookWorkspaceConnectionInfoResult
+
+## Function listConnectionStrings (Microsoft.DocumentDB/databaseAccounts@2020-06-01-preview
+* **Resource**: Microsoft.DocumentDB/databaseAccounts@2020-06-01-preview
+* **Output**: DatabaseAccountListConnectionStringsResult
+
+## Function listKeys (Microsoft.DocumentDB/databaseAccounts@2020-06-01-preview
+* **Resource**: Microsoft.DocumentDB/databaseAccounts@2020-06-01-preview
+* **Output**: DatabaseAccountListKeysResult
+
 ## ManagedServiceIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -927,4 +939,25 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## NotebookWorkspaceConnectionInfoResult
+### Properties
+* **authToken**: string (ReadOnly)
+* **notebookServerEndpoint**: string (ReadOnly)
+
+## DatabaseAccountListConnectionStringsResult
+### Properties
+* **connectionStrings**: DatabaseAccountConnectionString[] (ReadOnly)
+
+## DatabaseAccountConnectionString
+### Properties
+* **connectionString**: string (ReadOnly)
+* **description**: string (ReadOnly)
+
+## DatabaseAccountListKeysResult
+### Properties
+* **primaryMasterKey**: string (ReadOnly)
+* **primaryReadonlyMasterKey**: string (ReadOnly)
+* **secondaryMasterKey**: string (ReadOnly)
+* **secondaryReadonlyMasterKey**: string (ReadOnly)
 

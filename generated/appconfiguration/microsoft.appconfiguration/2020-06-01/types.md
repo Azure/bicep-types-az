@@ -24,6 +24,15 @@
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: 'Microsoft.AppConfiguration/configurationStores/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.AppConfiguration/configurationStores@2020-06-01
+* **Resource**: Microsoft.AppConfiguration/configurationStores@2020-06-01
+* **Output**: ApiKeyListResult
+
+## Function listKeyValue (Microsoft.AppConfiguration/configurationStores@2020-06-01
+* **Resource**: Microsoft.AppConfiguration/configurationStores@2020-06-01
+* **Input**: ListKeyValueParameters
+* **Output**: KeyValue
+
 ## ResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -85,6 +94,41 @@
 ## Sku
 ### Properties
 * **name**: string (Required)
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ApiKeyListResult
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: ApiKey[] (ReadOnly)
+
+## ApiKey
+### Properties
+* **connectionString**: string (ReadOnly)
+* **id**: string (ReadOnly)
+* **lastModified**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **readOnly**: bool (ReadOnly)
+* **value**: string (ReadOnly)
+
+## ListKeyValueParameters
+### Properties
+* **key**: string (Required, WriteOnly)
+* **label**: string (WriteOnly)
+
+## KeyValue
+### Properties
+* **contentType**: string (ReadOnly)
+* **eTag**: string (ReadOnly)
+* **key**: string (ReadOnly)
+* **label**: string (ReadOnly)
+* **lastModified**: string (ReadOnly)
+* **locked**: bool (ReadOnly)
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **value**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Properties

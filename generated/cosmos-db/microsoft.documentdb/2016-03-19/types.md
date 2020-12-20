@@ -13,18 +13,6 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DocumentDB/databaseAccounts' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.DocumentDB/databaseAccounts/apis/databases@2016-03-19
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlDatabaseCreateUpdateProperties (Required)
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/databases' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.DocumentDB/databaseAccounts/apis/databases/collections@2016-03-19
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -96,18 +84,6 @@
 * **properties**: ThroughputUpdateProperties (Required)
 * **tags**: Dictionary<string,String> (ReadOnly)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/databases/graphs/settings' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.DocumentDB/databaseAccounts/apis/databases/settings@2016-03-19
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2016-03-19' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputUpdateProperties (Required)
-* **tags**: Dictionary<string,String> (ReadOnly)
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/databases/settings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/apis/keyspaces@2016-03-19
 * **Valid Scope(s)**: ResourceGroup
@@ -181,6 +157,14 @@
 * **tags**: Dictionary<string,String> (ReadOnly)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/tables/settings' (ReadOnly, DeployTimeConstant)
 
+## Function listConnectionStrings (Microsoft.DocumentDB/databaseAccounts@2016-03-19
+* **Resource**: Microsoft.DocumentDB/databaseAccounts@2016-03-19
+* **Output**: DatabaseAccountListConnectionStringsResult
+
+## Function listKeys (Microsoft.DocumentDB/databaseAccounts@2016-03-19
+* **Resource**: Microsoft.DocumentDB/databaseAccounts@2016-03-19
+* **Output**: DatabaseAccountListKeysResult
+
 ## DatabaseAccountCreateUpdateProperties
 ### Properties
 * **capabilities**: Capability[]
@@ -229,31 +213,6 @@
 ### Properties
 * **id**: string
 * **ignoreMissingVNetServiceEndpoint**: bool
-
-## Dictionary<string,String>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## SqlDatabaseCreateUpdateProperties
-### Properties
-* **_colls**: string (ReadOnly)
-* **_etag**: string (ReadOnly)
-* **_rid**: string (ReadOnly)
-* **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
-* **id**: string (ReadOnly)
-* **options**: Dictionary<string,String> (Required, WriteOnly)
-* **resource**: SqlDatabaseResource (Required, WriteOnly)
-
-## Dictionary<string,String>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## SqlDatabaseResource
-### Properties
-* **id**: string (Required, WriteOnly)
 
 ## Dictionary<string,String>
 ### Properties
@@ -439,11 +398,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## CassandraKeyspaceCreateUpdateProperties
 ### Properties
 * **id**: string (ReadOnly)
@@ -542,4 +496,20 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DatabaseAccountListConnectionStringsResult
+### Properties
+* **connectionStrings**: DatabaseAccountConnectionString[] (ReadOnly)
+
+## DatabaseAccountConnectionString
+### Properties
+* **connectionString**: string (ReadOnly)
+* **description**: string (ReadOnly)
+
+## DatabaseAccountListKeysResult
+### Properties
+* **primaryMasterKey**: string (ReadOnly)
+* **primaryReadonlyMasterKey**: string (ReadOnly)
+* **secondaryMasterKey**: string (ReadOnly)
+* **secondaryReadonlyMasterKey**: string (ReadOnly)
 

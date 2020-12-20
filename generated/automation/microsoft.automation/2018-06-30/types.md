@@ -26,6 +26,26 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Automation/automationAccounts/runbooks' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Automation/automationAccounts/runbooks/draft@2018-06-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant)
+* **creationTime**: string (ReadOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **endTime**: string (ReadOnly)
+* **exception**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **lastModifiedTime**: string (ReadOnly)
+* **lastStatusModifiedTime**: string (ReadOnly)
+* **logActivityTrace**: int (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **parameters**: Dictionary<string,String>
+* **runOn**: string
+* **startTime**: string (ReadOnly)
+* **status**: string (ReadOnly)
+* **statusDetails**: string (ReadOnly)
+* **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant)
+
 ## PythonPackageCreateProperties
 ### Properties
 * **activityCount**: int (ReadOnly)
@@ -104,6 +124,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: RunbookParameter
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Dictionary<string,String>
 ### Properties

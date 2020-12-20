@@ -64,6 +64,10 @@
 * **name**: string (Required, DeployTimeConstant)
 * **type**: 'Microsoft.HybridNetwork/vendors/vendorSkus/previewSubscriptions' (ReadOnly, DeployTimeConstant)
 
+## Function listRegistrationKey (Microsoft.HybridNetwork/devices@2020-01-01-preview
+* **Resource**: Microsoft.HybridNetwork/devices@2020-01-01-preview
+* **Output**: DeviceRegistrationKey
+
 ## DevicePropertiesFormat
 * **Discriminator**: deviceType
 ### Base Properties
@@ -226,4 +230,8 @@
 ## VirtualHardDisk
 ### Properties
 * **uri**: string
+
+## DeviceRegistrationKey
+### Properties
+* **registrationKey**: string (ReadOnly)
 

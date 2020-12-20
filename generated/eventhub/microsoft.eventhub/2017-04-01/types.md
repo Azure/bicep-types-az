@@ -73,6 +73,14 @@
 * **properties**: schemas:25_properties
 * **type**: 'Microsoft.EventHub/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.EventHub/namespaces/authorizationRules@2017-04-01
+* **Resource**: Microsoft.EventHub/namespaces/authorizationRules@2017-04-01
+* **Output**: AccessKeys
+
+## Function listKeys (Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2017-04-01
+* **Resource**: Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2017-04-01
+* **Output**: AccessKeys
+
 ## schemas:20_properties
 ### Properties
 * **createdAt**: string (ReadOnly)
@@ -162,4 +170,14 @@
 ## Subnet
 ### Properties
 * **id**: string (Required)
+
+## AccessKeys
+### Properties
+* **aliasPrimaryConnectionString**: string (ReadOnly)
+* **aliasSecondaryConnectionString**: string (ReadOnly)
+* **keyName**: string (ReadOnly)
+* **primaryConnectionString**: string (ReadOnly)
+* **primaryKey**: string (ReadOnly)
+* **secondaryConnectionString**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

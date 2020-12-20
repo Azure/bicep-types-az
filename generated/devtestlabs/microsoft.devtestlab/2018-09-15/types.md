@@ -228,6 +228,22 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DevTestLab/schedules' (ReadOnly, DeployTimeConstant)
 
+## Function listApplicable (Microsoft.DevTestLab/labs/schedules@2018-09-15
+* **Resource**: Microsoft.DevTestLab/labs/schedules@2018-09-15
+* **Output**: ScheduleList
+
+## Function listApplicableSchedules (Microsoft.DevTestLab/labs/users/servicefabrics@2018-09-15
+* **Resource**: Microsoft.DevTestLab/labs/users/servicefabrics@2018-09-15
+* **Output**: ApplicableSchedule
+
+## Function listApplicableSchedules (Microsoft.DevTestLab/labs/virtualmachines@2018-09-15
+* **Resource**: Microsoft.DevTestLab/labs/virtualmachines@2018-09-15
+* **Output**: ApplicableSchedule
+
+## Function listVhds (Microsoft.DevTestLab/labs@2018-09-15
+* **Resource**: Microsoft.DevTestLab/labs@2018-09-15
+* **Output**: LabVhdList
+
 ## LabProperties
 ### Properties
 * **announcement**: LabAnnouncementProperties
@@ -903,4 +919,18 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ScheduleList
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: Schedule[] (ReadOnly)
+
+## LabVhdList
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: LabVhd[] (ReadOnly)
+
+## LabVhd
+### Properties
+* **id**: string (ReadOnly)
 

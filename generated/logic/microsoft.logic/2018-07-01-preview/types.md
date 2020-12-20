@@ -121,6 +121,45 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Logic/workflows' (ReadOnly, DeployTimeConstant)
 
+## Function listCallbackUrl (Microsoft.Logic/workflows@2018-07-01-preview
+* **Resource**: Microsoft.Logic/workflows@2018-07-01-preview
+* **Input**: GetCallbackUrlParameters
+* **Output**: WorkflowTriggerCallbackUrl
+
+## Function listCallbackUrl (Microsoft.Logic/integrationAccounts@2018-07-01-preview
+* **Resource**: Microsoft.Logic/integrationAccounts@2018-07-01-preview
+* **Input**: GetCallbackUrlParameters
+* **Output**: CallbackUrl
+
+## Function listContentCallbackUrl (Microsoft.Logic/integrationAccounts/assemblies@2018-07-01-preview
+* **Resource**: Microsoft.Logic/integrationAccounts/assemblies@2018-07-01-preview
+* **Output**: WorkflowTriggerCallbackUrl
+
+## Function listContentCallbackUrl (Microsoft.Logic/integrationAccounts/schemas@2018-07-01-preview
+* **Resource**: Microsoft.Logic/integrationAccounts/schemas@2018-07-01-preview
+* **Input**: GetCallbackUrlParameters
+* **Output**: WorkflowTriggerCallbackUrl
+
+## Function listContentCallbackUrl (Microsoft.Logic/integrationAccounts/maps@2018-07-01-preview
+* **Resource**: Microsoft.Logic/integrationAccounts/maps@2018-07-01-preview
+* **Input**: GetCallbackUrlParameters
+* **Output**: WorkflowTriggerCallbackUrl
+
+## Function listContentCallbackUrl (Microsoft.Logic/integrationAccounts/partners@2018-07-01-preview
+* **Resource**: Microsoft.Logic/integrationAccounts/partners@2018-07-01-preview
+* **Input**: GetCallbackUrlParameters
+* **Output**: WorkflowTriggerCallbackUrl
+
+## Function listContentCallbackUrl (Microsoft.Logic/integrationAccounts/agreements@2018-07-01-preview
+* **Resource**: Microsoft.Logic/integrationAccounts/agreements@2018-07-01-preview
+* **Input**: GetCallbackUrlParameters
+* **Output**: WorkflowTriggerCallbackUrl
+
+## Function listKeyVaultKeys (Microsoft.Logic/integrationAccounts@2018-07-01-preview
+* **Resource**: Microsoft.Logic/integrationAccounts@2018-07-01-preview
+* **Input**: ListKeyVaultKeysDefinition
+* **Output**: KeyVaultKeyCollection
+
 ## IntegrationAccountSku
 ### Properties
 * **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Standard' (Required)
@@ -790,4 +829,57 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## GetCallbackUrlParameters
+### Properties
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly)
+* **notAfter**: string (WriteOnly)
+
+## WorkflowTriggerCallbackUrl
+### Properties
+* **basePath**: string (ReadOnly)
+* **method**: string (ReadOnly)
+* **queries**: WorkflowTriggerListCallbackUrlQueries (ReadOnly)
+* **relativePath**: string (ReadOnly)
+* **relativePathParameters**: string[] (ReadOnly)
+* **value**: string (ReadOnly)
+
+## WorkflowTriggerListCallbackUrlQueries
+### Properties
+* **api-version**: string (ReadOnly)
+* **se**: string (ReadOnly)
+* **sig**: string (ReadOnly)
+* **sp**: string (ReadOnly)
+* **sv**: string (ReadOnly)
+
+## CallbackUrl
+### Properties
+* **value**: string (ReadOnly)
+
+## ListKeyVaultKeysDefinition
+### Properties
+* **keyVault**: KeyVaultReference (Required, WriteOnly)
+* **skipToken**: string (WriteOnly)
+
+## KeyVaultReference
+### Properties
+* **id**: string (WriteOnly)
+* **name**: string (ReadOnly, WriteOnly)
+* **type**: string (ReadOnly, WriteOnly)
+
+## KeyVaultKeyCollection
+### Properties
+* **skipToken**: string (ReadOnly)
+* **value**: KeyVaultKey[] (ReadOnly)
+
+## KeyVaultKey
+### Properties
+* **attributes**: schemas:148_attributes (ReadOnly)
+* **kid**: string (ReadOnly)
+
+## schemas:148_attributes
+### Properties
+* **created**: int (ReadOnly)
+* **enabled**: bool (ReadOnly)
+* **updated**: int (ReadOnly)
 

@@ -38,6 +38,10 @@
 * **properties**: EventHubConnectionProperties
 * **type**: 'Microsoft.Kusto/clusters/databases/eventhubconnections' (ReadOnly, DeployTimeConstant)
 
+## Function listPrincipals (Microsoft.Kusto/clusters/databases@2018-09-07-preview
+* **Resource**: Microsoft.Kusto/clusters/databases@2018-09-07-preview
+* **Output**: DatabasePrincipalListResult
+
 ## ClusterProperties
 ### Properties
 * **dataIngestionUri**: string (ReadOnly)
@@ -84,4 +88,17 @@
 * **eventHubResourceId**: string (Required)
 * **mappingRuleName**: string
 * **tableName**: string
+
+## DatabasePrincipalListResult
+### Properties
+* **value**: DatabasePrincipal[] (ReadOnly)
+
+## DatabasePrincipal
+### Properties
+* **appId**: string (ReadOnly)
+* **email**: string (ReadOnly)
+* **fqn**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' (ReadOnly)
+* **type**: 'App' | 'Group' | 'User' (ReadOnly)
 

@@ -46,6 +46,10 @@
 * **properties**: PrivateEndpointConnectionProperties (Required)
 * **type**: 'Microsoft.Devices/iotHubs/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
+## Function listkeys (Microsoft.Devices/IotHubs@2020-08-01
+* **Resource**: Microsoft.Devices/IotHubs@2020-08-01
+* **Output**: SharedAccessSignatureAuthorizationRuleListResult
+
 ## IotHubProperties
 ### Properties
 * **authorizationPolicies**: SharedAccessSignatureAuthorizationRule[]
@@ -262,4 +266,9 @@
 ## EventHubConsumerGroupName
 ### Properties
 * **name**: string (WriteOnly)
+
+## SharedAccessSignatureAuthorizationRuleListResult
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: SharedAccessSignatureAuthorizationRule[] (ReadOnly)
 

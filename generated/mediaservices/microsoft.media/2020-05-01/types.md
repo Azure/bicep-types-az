@@ -137,6 +137,28 @@
 * **properties**: JobProperties
 * **type**: 'Microsoft.Media/mediaServices/transforms/jobs' (ReadOnly, DeployTimeConstant)
 
+## Function listContainerSas (Microsoft.Media/mediaServices/assets@2020-05-01
+* **Resource**: Microsoft.Media/mediaServices/assets@2020-05-01
+* **Input**: ListContainerSasInput
+* **Output**: AssetContainerSas
+
+## Function listContentKeys (Microsoft.Media/mediaServices/streamingLocators@2020-05-01
+* **Resource**: Microsoft.Media/mediaServices/streamingLocators@2020-05-01
+* **Output**: ListContentKeysResponse
+
+## Function listEdgePolicies (Microsoft.Media/mediaservices@2020-05-01
+* **Resource**: Microsoft.Media/mediaservices@2020-05-01
+* **Input**: ListEdgePoliciesInput
+* **Output**: EdgePolicies
+
+## Function listPaths (Microsoft.Media/mediaServices/streamingLocators@2020-05-01
+* **Resource**: Microsoft.Media/mediaServices/streamingLocators@2020-05-01
+* **Output**: ListPathsResponse
+
+## Function listStreamingLocators (Microsoft.Media/mediaServices/assets@2020-05-01
+* **Resource**: Microsoft.Media/mediaServices/assets@2020-05-01
+* **Output**: ListStreamingLocatorsResponse
+
 ## MediaServiceIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -1013,4 +1035,64 @@
 ### Properties
 * **@odata.type**: '#Microsoft.Media.JobOutputAsset' (Required)
 * **assetName**: string (Required)
+
+## ListContainerSasInput
+### Properties
+* **expiryTime**: string (WriteOnly)
+* **permissions**: 'Read' | 'ReadWrite' | 'ReadWriteDelete' (WriteOnly)
+
+## AssetContainerSas
+### Properties
+* **assetContainerSasUrls**: string[] (ReadOnly)
+
+## ListContentKeysResponse
+### Properties
+* **contentKeys**: StreamingLocatorContentKey[] (ReadOnly)
+
+## ListEdgePoliciesInput
+### Properties
+* **deviceId**: string (WriteOnly)
+
+## EdgePolicies
+### Properties
+* **usageDataCollectionPolicy**: EdgeUsageDataCollectionPolicy (ReadOnly)
+
+## EdgeUsageDataCollectionPolicy
+### Properties
+* **dataCollectionFrequency**: string (ReadOnly)
+* **dataReportingFrequency**: string (ReadOnly)
+* **eventHubDetails**: EdgeUsageDataEventHub (ReadOnly)
+* **maxAllowedUnreportedUsageDuration**: string (ReadOnly)
+
+## EdgeUsageDataEventHub
+### Properties
+* **name**: string (ReadOnly)
+* **namespace**: string (ReadOnly)
+* **token**: string (ReadOnly)
+
+## ListPathsResponse
+### Properties
+* **downloadPaths**: string[] (ReadOnly)
+* **streamingPaths**: StreamingPath[] (ReadOnly)
+
+## StreamingPath
+### Properties
+* **encryptionScheme**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' | 'NoEncryption' (ReadOnly)
+* **paths**: string[] (ReadOnly)
+* **streamingProtocol**: 'Dash' | 'Download' | 'Hls' | 'SmoothStreaming' (ReadOnly)
+
+## ListStreamingLocatorsResponse
+### Properties
+* **streamingLocators**: AssetStreamingLocator[] (ReadOnly)
+
+## AssetStreamingLocator
+### Properties
+* **assetName**: string (ReadOnly)
+* **created**: string (ReadOnly)
+* **defaultContentKeyPolicyName**: string (ReadOnly)
+* **endTime**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **startTime**: string (ReadOnly)
+* **streamingLocatorId**: string (ReadOnly)
+* **streamingPolicyName**: string (ReadOnly)
 

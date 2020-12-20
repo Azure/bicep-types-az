@@ -44,6 +44,22 @@
 * **properties**: MonitoringTagRulesProperties
 * **type**: 'Microsoft.Datadog/monitors/tagRules' (ReadOnly, DeployTimeConstant)
 
+## Function listApiKeys (Microsoft.Datadog/monitors@2020-02-01-preview
+* **Resource**: Microsoft.Datadog/monitors@2020-02-01-preview
+* **Output**: DatadogApiKeyListResponse
+
+## Function listHosts (Microsoft.Datadog/monitors@2020-02-01-preview
+* **Resource**: Microsoft.Datadog/monitors@2020-02-01-preview
+* **Output**: DatadogHostListResponse
+
+## Function listLinkedResources (Microsoft.Datadog/monitors@2020-02-01-preview
+* **Resource**: Microsoft.Datadog/monitors@2020-02-01-preview
+* **Output**: LinkedResourceListResponse
+
+## Function listMonitoredResources (Microsoft.Datadog/monitors@2020-02-01-preview
+* **Resource**: Microsoft.Datadog/monitors@2020-02-01-preview
+* **Output**: MonitoredResourceListResponse
+
 ## DatadogAgreementProperties
 ### Properties
 * **accepted**: bool
@@ -121,4 +137,66 @@
 ## MetricRules
 ### Properties
 * **filteringTags**: FilteringTag[]
+
+## DatadogApiKeyListResponse
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: DatadogApiKey[] (ReadOnly)
+
+## DatadogApiKey
+### Properties
+* **created**: string (ReadOnly)
+* **createdBy**: string (ReadOnly)
+* **key**: string (ReadOnly)
+* **name**: string (ReadOnly)
+
+## DatadogHostListResponse
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: DatadogHost[] (ReadOnly)
+
+## DatadogHost
+### Properties
+* **aliases**: string[] (ReadOnly)
+* **apps**: string[] (ReadOnly)
+* **meta**: DatadogHostMetadata (ReadOnly)
+* **name**: string (ReadOnly)
+
+## DatadogHostMetadata
+### Properties
+* **agentVersion**: string (ReadOnly)
+* **installMethod**: DatadogInstallMethod (ReadOnly)
+* **logsAgent**: DatadogLogsAgent (ReadOnly)
+
+## DatadogInstallMethod
+### Properties
+* **installerVersion**: string (ReadOnly)
+* **tool**: string (ReadOnly)
+* **toolVersion**: string (ReadOnly)
+
+## DatadogLogsAgent
+### Properties
+* **transport**: string (ReadOnly)
+
+## LinkedResourceListResponse
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: LinkedResource[] (ReadOnly)
+
+## LinkedResource
+### Properties
+* **id**: string (ReadOnly)
+
+## MonitoredResourceListResponse
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: MonitoredResource[] (ReadOnly)
+
+## MonitoredResource
+### Properties
+* **id**: string (ReadOnly)
+* **reasonForLogsStatus**: string (ReadOnly)
+* **reasonForMetricsStatus**: string (ReadOnly)
+* **sendingLogs**: bool (ReadOnly)
+* **sendingMetrics**: bool (ReadOnly)
 

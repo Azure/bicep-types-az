@@ -48,6 +48,18 @@
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.MachineLearningServices/workspaces@2020-06-01
+* **Resource**: Microsoft.MachineLearningServices/workspaces@2020-06-01
+* **Output**: ListWorkspaceKeysResult
+
+## Function listKeys (Microsoft.MachineLearningServices/workspaces/computes@2020-06-01
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes@2020-06-01
+* **Output**: ComputeSecrets
+
+## Function listNodes (Microsoft.MachineLearningServices/workspaces/computes@2020-06-01
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes@2020-06-01
+* **Output**: AmlCompute
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -374,4 +386,47 @@
 * **category**: string
 * **target**: string
 * **value**: string
+
+## ListWorkspaceKeysResult
+### Properties
+* **appInsightsInstrumentationKey**: string (ReadOnly)
+* **containerRegistryCredentials**: RegistryListCredentialsResult (ReadOnly)
+* **notebookAccessKeys**: NotebookListCredentialsResult (ReadOnly)
+* **userStorageKey**: string (ReadOnly)
+* **userStorageResourceId**: string (ReadOnly)
+
+## RegistryListCredentialsResult
+### Properties
+* **location**: string (ReadOnly)
+* **passwords**: Password[] (ReadOnly)
+* **username**: string (ReadOnly)
+
+## Password
+### Properties
+* **name**: string (ReadOnly)
+* **value**: string (ReadOnly)
+
+## NotebookListCredentialsResult
+### Properties
+* **primaryAccessKey**: string (ReadOnly)
+* **secondaryAccessKey**: string (ReadOnly)
+
+## ComputeSecrets
+* **Discriminator**: computeType
+### Base Properties
+### AKS
+#### Properties
+* **computeType**: 'AKS' (Required)
+* **properties**: schemas:33_properties
+
+### Databricks
+#### Properties
+* **computeType**: 'Databricks' (Required)
+* **properties**: schemas:24_userAssignedIdentitiesValue
+
+### VirtualMachine
+#### Properties
+* **computeType**: 'VirtualMachine' (Required)
+* **properties**: schemas:24_userAssignedIdentitiesValue
+
 

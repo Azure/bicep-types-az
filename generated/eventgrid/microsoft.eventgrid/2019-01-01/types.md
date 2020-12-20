@@ -22,6 +22,10 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.EventGrid/topics@2019-01-01
+* **Resource**: Microsoft.EventGrid/topics@2019-01-01
+* **Output**: TopicSharedAccessKeys
+
 ## EventSubscriptionProperties
 ### Properties
 * **deadLetterDestination**: DeadLetterDestination
@@ -134,4 +138,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TopicSharedAccessKeys
+### Properties
+* **key1**: string (ReadOnly)
+* **key2**: string (ReadOnly)
 

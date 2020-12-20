@@ -12,6 +12,10 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Media/mediaservices' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.Media/mediaservices@2015-10-01
+* **Resource**: Microsoft.Media/mediaservices@2015-10-01
+* **Output**: ServiceKeys
+
 ## MediaServiceProperties
 ### Properties
 * **apiEndpoints**: ApiEndpoint[] (ReadOnly)
@@ -31,4 +35,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ServiceKeys
+### Properties
+* **primaryAuthEndpoint**: string (ReadOnly)
+* **primaryKey**: string (ReadOnly)
+* **scope**: string (ReadOnly)
+* **secondaryAuthEndpoint**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

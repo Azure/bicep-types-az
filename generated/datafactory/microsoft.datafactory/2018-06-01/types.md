@@ -102,6 +102,10 @@
 * **properties**: Trigger (Required)
 * **type**: 'Microsoft.DataFactory/factories/triggers' (ReadOnly, DeployTimeConstant)
 
+## Function listAuthKeys (Microsoft.DataFactory/factories/integrationRuntimes@2018-06-01
+* **Resource**: Microsoft.DataFactory/factories/integrationRuntimes@2018-06-01
+* **Output**: IntegrationRuntimeAuthKeys
+
 ## FactoryIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -4329,4 +4333,9 @@
 ### Properties
 * **count**: any
 * **intervalInSeconds**: int
+
+## IntegrationRuntimeAuthKeys
+### Properties
+* **authKey1**: string (ReadOnly)
+* **authKey2**: string (ReadOnly)
 

@@ -34,6 +34,14 @@
 * **properties**: SharedPrivateLinkResourceProperties
 * **type**: 'Microsoft.Search/searchServices/sharedPrivateLinkResources' (ReadOnly, DeployTimeConstant)
 
+## Function listAdminKeys (Microsoft.Search/searchServices@2020-08-01-preview
+* **Resource**: Microsoft.Search/searchServices@2020-08-01-preview
+* **Output**: AdminKeyResult
+
+## Function listQueryKeys (Microsoft.Search/searchServices@2020-08-01-preview
+* **Resource**: Microsoft.Search/searchServices@2020-08-01-preview
+* **Output**: ListQueryKeysResult
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -107,4 +115,19 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## AdminKeyResult
+### Properties
+* **primaryKey**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
+
+## ListQueryKeysResult
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: QueryKey[] (ReadOnly)
+
+## QueryKey
+### Properties
+* **key**: string (ReadOnly)
+* **name**: string (ReadOnly)
 

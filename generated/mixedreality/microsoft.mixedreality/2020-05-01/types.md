@@ -12,6 +12,10 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.MixedReality/spatialAnchorsAccounts' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.MixedReality/spatialAnchorsAccounts@2020-05-01
+* **Resource**: Microsoft.MixedReality/spatialAnchorsAccounts@2020-05-01
+* **Output**: AccountKeys
+
 ## MixedRealityAccountProperties
 ### Properties
 * **accountDomain**: string (ReadOnly)
@@ -21,4 +25,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## AccountKeys
+### Properties
+* **primaryKey**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

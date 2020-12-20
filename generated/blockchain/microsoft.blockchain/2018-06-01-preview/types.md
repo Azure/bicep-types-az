@@ -24,6 +24,14 @@
 * **properties**: TransactionNodeProperties
 * **type**: 'Microsoft.Blockchain/blockchainMembers/transactionNodes' (ReadOnly, DeployTimeConstant)
 
+## Function listApiKeys (Microsoft.Blockchain/blockchainMembers@2018-06-01-preview
+* **Resource**: Microsoft.Blockchain/blockchainMembers@2018-06-01-preview
+* **Output**: ApiKeyCollection
+
+## Function listApiKeys (Microsoft.Blockchain/blockchainMembers/transactionNodes@2018-06-01-preview
+* **Resource**: Microsoft.Blockchain/blockchainMembers/transactionNodes@2018-06-01-preview
+* **Output**: ApiKeyCollection
+
 ## BlockchainMemberProperties
 ### Properties
 * **consortium**: string
@@ -69,4 +77,13 @@
 * **provisioningState**: 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly)
 * **publicKey**: string (ReadOnly)
 * **userName**: string (ReadOnly)
+
+## ApiKeyCollection
+### Properties
+* **keys**: ApiKey[] (ReadOnly)
+
+## ApiKey
+### Properties
+* **keyName**: string (ReadOnly)
+* **value**: string (ReadOnly)
 

@@ -15,6 +15,10 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.CognitiveServices/accounts' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.CognitiveServices/accounts@2016-02-01-preview
+* **Resource**: Microsoft.CognitiveServices/accounts@2016-02-01-preview
+* **Output**: CognitiveServicesAccountKeys
+
 ## Sku
 ### Properties
 * **name**: 'F0' | 'P0' | 'P1' | 'P2' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4' | 'S5' | 'S6' (Required)
@@ -24,4 +28,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## CognitiveServicesAccountKeys
+### Properties
+* **key1**: string (ReadOnly)
+* **key2**: string (ReadOnly)
 

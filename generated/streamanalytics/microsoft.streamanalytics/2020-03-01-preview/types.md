@@ -25,6 +25,10 @@
 * **properties**: PrivateEndpointProperties
 * **type**: 'Microsoft.StreamAnalytics/clusters/privateEndpoints' (ReadOnly, DeployTimeConstant)
 
+## Function listStreamingJobs (Microsoft.StreamAnalytics/clusters@2020-03-01-preview
+* **Resource**: Microsoft.StreamAnalytics/clusters@2020-03-01-preview
+* **Output**: ClusterJobListResult
+
 ## ClusterProperties
 ### Properties
 * **capacityAllocated**: int (ReadOnly)
@@ -64,4 +68,15 @@
 * **actionsRequired**: string (ReadOnly)
 * **description**: string (ReadOnly)
 * **status**: string (ReadOnly)
+
+## ClusterJobListResult
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: ClusterJob[] (ReadOnly)
+
+## ClusterJob
+### Properties
+* **id**: string (ReadOnly)
+* **jobState**: 'Created' | 'Degraded' | 'Deleting' | 'Failed' | 'Restarting' | 'Running' | 'Scaling' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
+* **streamingUnits**: int (ReadOnly)
 

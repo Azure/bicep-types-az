@@ -12,6 +12,10 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Communication/communicationServices' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.Communication/communicationServices@2020-08-20-preview
+* **Resource**: Microsoft.Communication/communicationServices@2020-08-20-preview
+* **Output**: CommunicationServiceKeys
+
 ## CommunicationServiceProperties
 ### Properties
 * **dataLocation**: string (Required)
@@ -25,4 +29,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## CommunicationServiceKeys
+### Properties
+* **primaryConnectionString**: string (ReadOnly)
+* **primaryKey**: string (ReadOnly)
+* **secondaryConnectionString**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

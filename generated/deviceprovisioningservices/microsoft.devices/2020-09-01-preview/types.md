@@ -37,6 +37,10 @@
 * **properties**: PrivateEndpointConnectionProperties (Required)
 * **type**: 'Microsoft.Devices/provisioningServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
+## Function listkeys (Microsoft.Devices/provisioningServices@2020-09-01-preview
+* **Resource**: Microsoft.Devices/provisioningServices@2020-09-01-preview
+* **Output**: SharedAccessSignatureAuthorizationRuleListResult
+
 ## ArmIdentity
 ### Properties
 * **identityType**: string
@@ -146,4 +150,9 @@
 * **subject**: string (ReadOnly)
 * **thumbprint**: string (ReadOnly)
 * **updated**: string (ReadOnly)
+
+## SharedAccessSignatureAuthorizationRuleListResult
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: SharedAccessSignatureAuthorizationRule_AccessRightsDescription_[] (ReadOnly)
 

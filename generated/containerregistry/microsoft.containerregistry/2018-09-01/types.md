@@ -12,6 +12,10 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant)
 
+## Function listDetails (Microsoft.ContainerRegistry/registries/tasks@2018-09-01
+* **Resource**: Microsoft.ContainerRegistry/registries/tasks@2018-09-01
+* **Output**: Task
+
 ## TaskProperties
 ### Properties
 * **agentConfiguration**: AgentProperties
@@ -165,6 +169,20 @@
 * **scope**: string
 * **token**: string (Required)
 * **tokenType**: 'OAuth' | 'PAT' (Required)
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Task
+### Properties
+* **id**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: TaskProperties (ReadOnly)
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Properties

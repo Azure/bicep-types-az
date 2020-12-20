@@ -204,6 +204,18 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DevTestLab/schedules' (ReadOnly, DeployTimeConstant)
 
+## Function listApplicable (Microsoft.DevTestLab/labs/schedules@2016-05-15
+* **Resource**: Microsoft.DevTestLab/labs/schedules@2016-05-15
+* **Output**: ResponseWithContinuation_Schedule_
+
+## Function listApplicableSchedules (Microsoft.DevTestLab/labs/virtualmachines@2016-05-15
+* **Resource**: Microsoft.DevTestLab/labs/virtualmachines@2016-05-15
+* **Output**: ApplicableSchedule
+
+## Function listVhds (Microsoft.DevTestLab/labs@2016-05-15
+* **Resource**: Microsoft.DevTestLab/labs@2016-05-15
+* **Output**: ResponseWithContinuation_LabVhd_
+
 ## LabProperties
 ### Properties
 * **artifactsStorageAccount**: string (ReadOnly)
@@ -771,4 +783,18 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResponseWithContinuation_Schedule_
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: Schedule[] (ReadOnly)
+
+## ResponseWithContinuation_LabVhd_
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: LabVhd[] (ReadOnly)
+
+## LabVhd
+### Properties
+* **id**: string (ReadOnly)
 
