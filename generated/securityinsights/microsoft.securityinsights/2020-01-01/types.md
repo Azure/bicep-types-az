@@ -301,12 +301,17 @@
 ### Properties
 * **exchange**: schemas:66_exchange
 * **sharePoint**: schemas:66_sharePoint
+* **teams**: schemas:66_teams
 
 ## schemas:66_exchange
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
 ## schemas:66_sharePoint
+### Properties
+* **state**: 'Disabled' | 'Enabled'
+
+## schemas:66_teams
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 

@@ -842,6 +842,7 @@
 * **selectedSourceNicId**: string (ReadOnly)
 * **sourceVmCpuCount**: int (ReadOnly)
 * **sourceVmRamSizeInMB**: int (ReadOnly)
+* **targetAvailabilitySetId**: string (WriteOnly)
 * **targetAvailabilityZone**: string
 * **targetAzureNetworkId**: string (WriteOnly)
 * **targetAzureSubnetId**: string (WriteOnly)
@@ -967,6 +968,7 @@
 * **sourceVmCpuCount**: int (ReadOnly)
 * **sourceVmRamSizeInMB**: int (ReadOnly)
 * **storageAccountId**: string (WriteOnly)
+* **targetAvailabilitySetId**: string (WriteOnly)
 * **targetAvailabilityZone**: string
 * **targetAzureNetworkId**: string (WriteOnly)
 * **targetAzureSubnetId**: string (WriteOnly)
@@ -1106,6 +1108,7 @@
 * **selectedSourceNicId**: string (ReadOnly)
 * **sourceVmCpuCount**: int (ReadOnly)
 * **sourceVmRamSizeInMB**: int (ReadOnly)
+* **targetAvailabilitySetId**: string (WriteOnly)
 * **targetAvailabilityZone**: string
 * **targetAzureNetworkId**: string (WriteOnly)
 * **targetAzureSubnetId**: string (WriteOnly)
@@ -1302,6 +1305,7 @@
 * **sourceVmCpuCount**: int (ReadOnly)
 * **sourceVmRamSizeInMB**: int (ReadOnly)
 * **storageAccountId**: string (WriteOnly)
+* **targetAvailabilitySetId**: string (WriteOnly)
 * **targetAvailabilityZone**: string
 * **targetAzureNetworkId**: string (WriteOnly)
 * **targetAzureSubnetId**: string (WriteOnly)
@@ -1541,6 +1545,7 @@
 * **selectedSourceNicId**: string (ReadOnly)
 * **sourceVmCpuCount**: int (ReadOnly)
 * **sourceVmRamSizeInMB**: int (ReadOnly)
+* **targetAvailabilitySetId**: string (WriteOnly)
 * **targetAvailabilityZone**: string
 * **targetAzureNetworkId**: string (WriteOnly)
 * **targetAzureSubnetId**: string (WriteOnly)
@@ -1669,6 +1674,7 @@
 * **sourceVmCpuCount**: int (ReadOnly)
 * **sourceVmRamSizeInMB**: int (ReadOnly)
 * **storageAccountId**: string (WriteOnly)
+* **targetAvailabilitySetId**: string (WriteOnly)
 * **targetAvailabilityZone**: string
 * **targetAzureNetworkId**: string (WriteOnly)
 * **targetAzureSubnetId**: string (WriteOnly)
@@ -1833,6 +1839,7 @@
 * **selectedSourceNicId**: string (ReadOnly)
 * **sourceVmCpuCount**: int (ReadOnly)
 * **sourceVmRamSizeInMB**: int (ReadOnly)
+* **targetAvailabilitySetId**: string (WriteOnly)
 * **targetAvailabilityZone**: string
 * **targetAzureNetworkId**: string (WriteOnly)
 * **targetAzureSubnetId**: string (WriteOnly)
@@ -1947,6 +1954,7 @@
 * **sourceVmCpuCount**: int (ReadOnly)
 * **sourceVmRamSizeInMB**: int (ReadOnly)
 * **storageAccountId**: string (WriteOnly)
+* **targetAvailabilitySetId**: string (WriteOnly)
 * **targetAvailabilityZone**: string
 * **targetAzureNetworkId**: string (WriteOnly)
 * **targetAzureSubnetId**: string (WriteOnly)

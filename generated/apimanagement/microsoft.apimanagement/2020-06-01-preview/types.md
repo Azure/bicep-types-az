@@ -203,7 +203,7 @@
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:274_properties
+* **properties**: schemas:282_properties
 * **type**: 'Microsoft.ApiManagement/service/gateways/apis' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/gateways/hostnameConfigurations@2020-06-01-preview
@@ -325,6 +325,16 @@
 * **name**: 'accountClosedDeveloper' | 'applicationApprovedNotificationMessage' | 'confirmSignUpIdentityDefault' | 'emailChangeIdentityDefault' | 'inviteUserNotificationMessage' | 'newCommentNotificationMessage' | 'newDeveloperNotificationMessage' | 'newIssueNotificationMessage' | 'passwordResetByAdminNotificationMessage' | 'passwordResetIdentityDefault' | 'purchaseDeveloperNotificationMessage' | 'quotaLimitApproachingDeveloperNotificationMessage' | 'rejectDeveloperNotificationMessage' | 'requestDeveloperNotificationMessage' (Required, DeployTimeConstant)
 * **properties**: EmailTemplateUpdateParameterProperties
 * **type**: 'Microsoft.ApiManagement/service/templates' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/tenant@2020-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'access' | 'getAccess' (Required, DeployTimeConstant)
+* **properties**: AccessInformationCreateParameterProperties
+* **type**: 'Microsoft.ApiManagement/service/tenant' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/users@2020-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -464,7 +474,7 @@
 * **subscriptionRequired**: bool
 * **type**: 'http' | 'soap'
 * **value**: string (WriteOnly)
-* **wsdlSelector**: schemas:43_wsdlSelector (WriteOnly)
+* **wsdlSelector**: schemas:51_wsdlSelector (WriteOnly)
 
 ## ApiVersionSetContractDetails
 ### Properties
@@ -495,7 +505,7 @@
 * **header**: string
 * **query**: string
 
-## schemas:43_wsdlSelector
+## schemas:51_wsdlSelector
 ### Properties
 * **wsdlEndpointName**: string (WriteOnly)
 * **wsdlServiceName**: string (WriteOnly)
@@ -683,6 +693,7 @@
 ### Properties
 * **authorization**: BackendAuthorizationHeaderCredentials
 * **certificate**: string[]
+* **certificateIds**: string[]
 * **header**: Dictionary<string,IList<String>>
 * **query**: Dictionary<string,IList<String>>
 
@@ -707,7 +718,8 @@
 
 ## BackendServiceFabricClusterProperties
 ### Properties
-* **clientCertificatethumbprint**: string (Required)
+* **clientCertificateId**: string
+* **clientCertificatethumbprint**: string
 * **managementEndpoints**: string[] (Required)
 * **maxPartitionResolutionRetries**: int
 * **serverCertificateThumbprints**: string[]
@@ -769,7 +781,7 @@
 * **district**: string
 * **name**: string (Required)
 
-## schemas:274_properties
+## schemas:282_properties
 ### Properties
 * **provisioningState**: 'created'
 
@@ -876,6 +888,14 @@
 * **description**: string
 * **name**: string
 * **title**: string
+
+## AccessInformationCreateParameterProperties
+### Properties
+* **enabled**: bool
+* **id**: string (ReadOnly)
+* **primaryKey**: string (WriteOnly)
+* **principalId**: string
+* **secondaryKey**: string (WriteOnly)
 
 ## UserCreateParameterProperties
 ### Properties

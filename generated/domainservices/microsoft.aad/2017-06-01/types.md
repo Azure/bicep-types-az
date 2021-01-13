@@ -41,7 +41,7 @@
 * **healthLastEvaluated**: string (ReadOnly)
 * **healthMonitors**: HealthMonitor[] (ReadOnly)
 * **ldapsSettings**: LdapsSettings
-* **migrationProperties**: MigrationProperties
+* **migrationProperties**: MigrationProperties (ReadOnly)
 * **notificationSettings**: NotificationSettings
 * **provisioningState**: string (ReadOnly)
 * **resourceForestSettings**: ResourceForestSettings
@@ -89,9 +89,9 @@
 
 ## MigrationProperties
 ### Properties
-* **migrationProgress**: MigrationProgress
-* **oldSubnetId**: string
-* **oldVnetSiteId**: string
+* **migrationProgress**: MigrationProgress (ReadOnly)
+* **oldSubnetId**: string (ReadOnly)
+* **oldVnetSiteId**: string (ReadOnly)
 
 ## MigrationProgress
 ### Properties
