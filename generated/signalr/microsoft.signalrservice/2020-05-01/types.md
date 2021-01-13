@@ -30,7 +30,7 @@
 * **externalIP**: string (ReadOnly)
 * **features**: SignalRFeature[]
 * **hostName**: string (ReadOnly)
-* **hostNamePrefix**: string
+* **hostNamePrefix**: string (ReadOnly)
 * **networkACLs**: SignalRNetworkACLs
 * **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
@@ -108,9 +108,9 @@
 ## ResourceSku
 ### Properties
 * **capacity**: int
-* **family**: string
+* **family**: string (ReadOnly)
 * **name**: string (Required)
-* **size**: string
+* **size**: string (ReadOnly)
 * **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard'
 
 ## Dictionary<string,String>

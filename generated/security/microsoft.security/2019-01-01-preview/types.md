@@ -186,7 +186,7 @@
 
 ## AutomationSource
 ### Properties
-* **eventSource**: 'Alerts' | 'Assessments' | 'SecureScoreControls' | 'SecureScores' | 'SubAssessments'
+* **eventSource**: 'Alerts' | 'Assessments' | 'RegulatoryComplianceAssessment' | 'RegulatoryComplianceAssessmentSnapshot' | 'SecureScoreControls' | 'SecureScoreControlsSnapshot' | 'SecureScores' | 'SecureScoresSnapshot' | 'SubAssessments'
 * **ruleSets**: AutomationRuleSet[]
 
 ## AutomationRuleSet

@@ -14,7 +14,7 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DBForMySQL/servers' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.DBForMySQL/servers/Administrators@2017-12-01
+## Resource Microsoft.DBForMySQL/servers/administrators@2017-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
@@ -22,7 +22,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ServerAdministratorProperties
-* **type**: 'Microsoft.DBForMySQL/servers/Administrators' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.DBForMySQL/servers/administrators' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMySQL/servers/configurations@2017-12-01
 * **Valid Scope(s)**: ResourceGroup

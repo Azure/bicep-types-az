@@ -1,6 +1,6 @@
 # Microsoft.IoTCentral @ 2018-09-01
 
-## Resource Microsoft.IoTCentral/IoTApps@2018-09-01
+## Resource Microsoft.IoTCentral/iotApps@2018-09-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-01' (ReadOnly, DeployTimeConstant)
@@ -11,7 +11,7 @@
 * **properties**: AppProperties
 * **sku**: AppSkuInfo (Required)
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.IoTCentral/IoTApps' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.IoTCentral/iotApps' (ReadOnly, DeployTimeConstant)
 
 ## AppProperties
 ### Properties

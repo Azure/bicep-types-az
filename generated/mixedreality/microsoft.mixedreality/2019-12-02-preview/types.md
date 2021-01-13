@@ -6,6 +6,7 @@
 * **apiVersion**: '2019-12-02-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: MixedRealityAccountProperties
@@ -18,11 +19,18 @@
 * **apiVersion**: '2019-12-02-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: MixedRealityAccountProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.MixedReality/spatialAnchorsAccounts' (ReadOnly, DeployTimeConstant)
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'SystemAssigned'
 
 ## MixedRealityAccountProperties
 ### Properties

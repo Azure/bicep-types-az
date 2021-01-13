@@ -47,6 +47,7 @@
 * **dataPoolId**: string (ReadOnly)
 * **locations**: DataPoolLocation[]
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly)
+* **systemData**: systemData (ReadOnly)
 
 ## DataPoolLocation
 ### Properties

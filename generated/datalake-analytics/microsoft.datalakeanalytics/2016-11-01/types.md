@@ -59,11 +59,13 @@
 * **creationTime**: string (ReadOnly)
 * **currentTier**: 'Commitment_100000AUHours' | 'Commitment_10000AUHours' | 'Commitment_1000AUHours' | 'Commitment_100AUHours' | 'Commitment_500000AUHours' | 'Commitment_50000AUHours' | 'Commitment_5000AUHours' | 'Commitment_500AUHours' | 'Consumption' (ReadOnly)
 * **dataLakeStoreAccounts**: AddDataLakeStoreWithAccountParameters[] (Required)
+* **debugDataAccessLevel**: 'All' | 'Customer' | 'None' (ReadOnly)
 * **defaultDataLakeStoreAccount**: string (Required)
 * **endpoint**: string (ReadOnly)
 * **firewallAllowAzureIps**: 'Disabled' | 'Enabled'
 * **firewallRules**: CreateFirewallRuleWithAccountParameters[]
 * **firewallState**: 'Disabled' | 'Enabled'
+* **hiveMetastores**: HiveMetastore[] (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **maxDegreeOfParallelism**: int
 * **maxDegreeOfParallelismPerJob**: int
@@ -76,6 +78,7 @@
 * **storageAccounts**: AddStorageAccountWithAccountParameters[]
 * **systemMaxDegreeOfParallelism**: int (ReadOnly)
 * **systemMaxJobCount**: int (ReadOnly)
+* **virtualNetworkRules**: VirtualNetworkRule[] (ReadOnly)
 
 ## CreateComputePolicyWithAccountParameters
 ### Properties
@@ -114,6 +117,22 @@
 * **endIpAddress**: string (Required)
 * **startIpAddress**: string (Required)
 
+## HiveMetastore
+### Properties
+* **id**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: HiveMetastoreProperties (ReadOnly)
+* **type**: string (ReadOnly)
+
+## HiveMetastoreProperties
+### Properties
+* **databaseName**: string (ReadOnly)
+* **nestedResourceProvisioningState**: 'Canceled' | 'Failed' | 'Succeeded' (ReadOnly)
+* **password**: string (ReadOnly)
+* **runtimeVersion**: string (ReadOnly)
+* **serverUri**: string (ReadOnly)
+* **userName**: string (ReadOnly)
+
 ## AddStorageAccountWithAccountParameters
 ### Properties
 * **id**: string (ReadOnly)
@@ -125,6 +144,18 @@
 ### Properties
 * **accessKey**: string (Required, WriteOnly)
 * **suffix**: string
+
+## VirtualNetworkRule
+### Properties
+* **id**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: VirtualNetworkRuleProperties (ReadOnly)
+* **type**: string (ReadOnly)
+
+## VirtualNetworkRuleProperties
+### Properties
+* **subnetId**: string (ReadOnly)
+* **virtualNetworkRuleState**: 'Active' | 'Failed' | 'NetworkSourceDeleted' (ReadOnly)
 
 ## Dictionary<string,String>
 ### Properties

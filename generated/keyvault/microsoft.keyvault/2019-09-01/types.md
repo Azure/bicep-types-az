@@ -40,6 +40,7 @@
 ### Properties
 * **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -71,6 +72,7 @@
 * **enableSoftDelete**: bool
 * **networkAcls**: NetworkRuleSet
 * **privateEndpointConnections**: PrivateEndpointConnectionItem[] (ReadOnly)
+* **provisioningState**: 'RegisteringDns' | 'Succeeded'
 * **sku**: Sku (Required)
 * **softDeleteRetentionInDays**: int
 * **tenantId**: string (Required)
@@ -121,7 +123,7 @@
 
 ## PrivateLinkServiceConnectionState
 ### Properties
-* **actionRequired**: string
+* **actionsRequired**: string
 * **description**: string
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
 

@@ -47,6 +47,7 @@
 
 ## BotProperties
 ### Properties
+* **cmekKeyVaultUrl**: string
 * **configuredChannels**: string[] (ReadOnly)
 * **description**: string
 * **developerAppInsightKey**: string
@@ -57,6 +58,7 @@
 * **endpoint**: string (Required)
 * **endpointVersion**: string (ReadOnly)
 * **iconUrl**: string
+* **isCmekEnabled**: bool
 * **luisAppIds**: string[]
 * **luisKey**: string
 * **msaAppId**: string (Required)
@@ -195,7 +197,7 @@
 ### Properties
 * **emailAddress**: string (Required)
 * **isEnabled**: bool (Required)
-* **password**: string (Required)
+* **password**: string
 
 ## FacebookChannel
 ### Properties
@@ -205,7 +207,7 @@
 ## FacebookChannelProperties
 ### Properties
 * **appId**: string (Required)
-* **appSecret**: string (Required)
+* **appSecret**: string
 * **callbackUrl**: string (ReadOnly)
 * **isEnabled**: bool (Required)
 * **pages**: FacebookPage[]
@@ -213,7 +215,7 @@
 
 ## FacebookPage
 ### Properties
-* **accessToken**: string (Required)
+* **accessToken**: string
 * **id**: string (Required)
 
 ## KikChannel
@@ -223,7 +225,7 @@
 
 ## KikChannelProperties
 ### Properties
-* **apiKey**: string (Required)
+* **apiKey**: string
 * **isEnabled**: bool (Required)
 * **isValidated**: bool
 * **userName**: string (Required)
@@ -280,8 +282,8 @@
 
 ## SlackChannelProperties
 ### Properties
-* **clientId**: string (Required)
-* **clientSecret**: string (Required)
+* **clientId**: string
+* **clientSecret**: string
 * **isEnabled**: bool (Required)
 * **isValidated**: bool (ReadOnly)
 * **landingPageUrl**: string
@@ -289,7 +291,7 @@
 * **redirectAction**: string (ReadOnly)
 * **registerBeforeOAuthFlow**: bool (ReadOnly)
 * **signingSecret**: string
-* **verificationToken**: string (Required)
+* **verificationToken**: string
 
 ## SmsChannel
 ### Properties
@@ -299,7 +301,7 @@
 ## SmsChannelProperties
 ### Properties
 * **accountSID**: string (Required)
-* **authToken**: string (Required)
+* **authToken**: string
 * **isEnabled**: bool (Required)
 * **isValidated**: bool
 * **phone**: string (Required)
@@ -311,7 +313,7 @@
 
 ## TelegramChannelProperties
 ### Properties
-* **accessToken**: string (Required)
+* **accessToken**: string
 * **isEnabled**: bool (Required)
 * **isValidated**: bool
 

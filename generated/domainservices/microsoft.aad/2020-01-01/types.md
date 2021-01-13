@@ -37,7 +37,7 @@
 * **domainSecuritySettings**: DomainSecuritySettings
 * **filteredSync**: 'Disabled' | 'Enabled'
 * **ldapsSettings**: LdapsSettings
-* **migrationProperties**: MigrationProperties
+* **migrationProperties**: MigrationProperties (ReadOnly)
 * **notificationSettings**: NotificationSettings
 * **provisioningState**: string (ReadOnly)
 * **replicaSets**: ReplicaSet[]
@@ -67,9 +67,9 @@
 
 ## MigrationProperties
 ### Properties
-* **migrationProgress**: MigrationProgress
-* **oldSubnetId**: string
-* **oldVnetSiteId**: string
+* **migrationProgress**: MigrationProgress (ReadOnly)
+* **oldSubnetId**: string (ReadOnly)
+* **oldVnetSiteId**: string (ReadOnly)
 
 ## MigrationProgress
 ### Properties

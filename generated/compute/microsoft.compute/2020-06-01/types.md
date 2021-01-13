@@ -875,6 +875,7 @@
 ### Properties
 * **dnsSettings**: VirtualMachineScaleSetNetworkConfigurationDnsSettings
 * **enableAcceleratedNetworking**: bool
+* **enableFpga**: bool
 * **enableIPForwarding**: bool
 * **ipConfigurations**: VirtualMachineScaleSetIPConfiguration[] (Required)
 * **networkSecurityGroup**: SubResource
