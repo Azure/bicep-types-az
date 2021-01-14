@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text.Json;
 using Azure.Bicep.Types.Concrete;
 
-namespace Azure.Bicep.Types.Az
+namespace Azure.Bicep.Types.Az.Index
 {
     public static class TypeIndexer
     {
-        public static IReadOnlyDictionary<string, TypeLocation> DeserializeIndex(string content)
+        public static IndexedTypes DeserializeIndex(string content)
         {
-            return JsonSerializer.Deserialize<Dictionary<string, TypeLocation>>(content) ?? throw new JsonException("Failed to deserialize index");
+            return JsonSerializer.Deserialize<IndexedTypes>(content) ?? throw new JsonException("Failed to deserialize index");
         }
     }
 }

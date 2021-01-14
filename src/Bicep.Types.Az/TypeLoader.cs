@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Azure.Bicep.Types.Az.Index;
 using Azure.Bicep.Types.Concrete;
 
 namespace Azure.Bicep.Types.Az
@@ -58,7 +59,7 @@ namespace Azure.Bicep.Types.Az
             }
         }
 
-        public IReadOnlyDictionary<string, TypeLocation> ListAllAvailableTypes()
+        public IndexedTypes GetIndexedTypes()
         {
             var fileStream = typeof(TypeLoader).Assembly.GetManifestResourceStream(TypeIndexResourceName);
             if (fileStream == null)
