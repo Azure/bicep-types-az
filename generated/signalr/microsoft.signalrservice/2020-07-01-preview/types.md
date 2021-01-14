@@ -140,9 +140,9 @@
 ## ResourceSku
 ### Properties
 * **capacity**: int
-* **family**: string
+* **family**: string (ReadOnly)
 * **name**: string (Required)
-* **size**: string
+* **size**: string (ReadOnly)
 * **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard'
 
 ## Dictionary<string,String>

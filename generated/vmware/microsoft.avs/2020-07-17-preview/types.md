@@ -13,6 +13,16 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.AVS/privateClouds' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.AVS/privateClouds/addons@2020-07-17-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AddonProperties
+* **type**: 'Microsoft.AVS/privateClouds/addons' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.AVS/privateClouds/authorizations@2020-07-17-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -124,11 +134,11 @@
 * **managementNetwork**: string (ReadOnly)
 * **networkBlock**: string (Required)
 * **nsxtCertificateThumbprint**: string (ReadOnly)
-* **nsxtPassword**: 'OnetimeRotate'
+* **nsxtPassword**: string
 * **provisioningNetwork**: string (ReadOnly)
 * **provisioningState**: 'Building' | 'Cancelled' | 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | 'Updating' (ReadOnly)
 * **vcenterCertificateThumbprint**: string (ReadOnly)
-* **vcenterPassword**: 'OnetimeRotate'
+* **vcenterPassword**: string
 * **vmotionNetwork**: string (ReadOnly)
 
 ## Circuit
@@ -172,6 +182,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## AddonProperties
+### Properties
+* **addonType**: 'SRM' | 'VR'
+* **licenseKey**: string
+* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## ExpressRouteAuthorizationProperties
 ### Properties

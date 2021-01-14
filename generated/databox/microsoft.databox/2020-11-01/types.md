@@ -62,7 +62,7 @@
 * **deliveryPackage**: PackageShippingDetails (ReadOnly)
 * **expectedDataSizeInTerabytes**: int
 * **jobStages**: JobStages[] (ReadOnly)
-* **keyEncryptionKey**: KeyEncryptionKey (ReadOnly)
+* **keyEncryptionKey**: KeyEncryptionKey
 * **preferences**: Preferences
 * **returnPackage**: PackageShippingDetails (ReadOnly)
 * **reverseShipmentLabelSasKey**: string (ReadOnly)

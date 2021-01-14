@@ -83,10 +83,10 @@
 ### Properties
 * **allowedValues**: any[]
 * **defaultValue**: any
-* **metadata**: schemas:10_metadata
+* **metadata**: schemas:8_metadata
 * **type**: 'Array' | 'Boolean' | 'DateTime' | 'Float' | 'Integer' | 'Object' | 'String'
 
-## schemas:10_metadata
+## schemas:8_metadata
 ### Properties
 * **assignPermissions**: bool
 * **description**: string

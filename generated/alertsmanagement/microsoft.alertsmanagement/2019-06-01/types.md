@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AlertRuleProperties
-* **tags**: any
+* **tags**: Dictionary<string,String>
 * **type**: 'microsoft.alertsManagement/smartDetectorAlertRules' (ReadOnly, DeployTimeConstant)
 
 ## AlertRuleProperties
@@ -46,4 +46,9 @@
 ## ThrottlingInformation
 ### Properties
 * **duration**: string
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

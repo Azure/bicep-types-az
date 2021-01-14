@@ -3,27 +3,22 @@
 ## Resource Microsoft.WindowsIoT/deviceServices@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **adminDomainName**: string (WriteOnly)
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **billingDomainName**: string (WriteOnly)
 * **dependsOn**: resourceref[] (WriteOnly)
-* **etag**: string (ReadOnly)
+* **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
+* **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **notes**: string (WriteOnly)
-* **properties**: DeviceServiceProperties (ReadOnly)
-* **quantity**: int (WriteOnly)
-* **startDate**: string (ReadOnly, WriteOnly)
-* **tags**: Dictionary<string,String> (ReadOnly)
+* **properties**: DeviceServiceProperties
+* **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.WindowsIoT/deviceServices' (ReadOnly, DeployTimeConstant)
 
 ## DeviceServiceProperties
 ### Properties
-* **adminDomainName**: string (ReadOnly)
-* **billingDomainName**: string (ReadOnly)
-* **notes**: string (ReadOnly)
-* **quantity**: int (ReadOnly)
+* **adminDomainName**: string
+* **billingDomainName**: string
+* **notes**: string
+* **quantity**: int
 * **startDate**: string (ReadOnly)
 
 ## Dictionary<string,String>

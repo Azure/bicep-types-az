@@ -14,7 +14,7 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DBForPostgreSQL/servers' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.DBForPostgreSQL/servers/Administrators@2017-12-01
+## Resource Microsoft.DBForPostgreSQL/servers/administrators@2017-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
@@ -22,7 +22,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ServerAdministratorProperties
-* **type**: 'Microsoft.DBForPostgreSQL/servers/Administrators' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.DBForPostgreSQL/servers/administrators' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForPostgreSQL/servers/configurations@2017-12-01
 * **Valid Scope(s)**: ResourceGroup

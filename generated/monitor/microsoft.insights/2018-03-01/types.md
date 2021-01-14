@@ -107,7 +107,7 @@
 * **actions**: MetricAlertAction[]
 * **autoMitigate**: bool
 * **criteria**: MetricAlertCriteria (Required)
-* **description**: string (Required)
+* **description**: string
 * **enabled**: bool (Required)
 * **evaluationFrequency**: string (Required)
 * **lastUpdatedTime**: string (ReadOnly)
@@ -161,7 +161,7 @@
 * **metricNamespace**: string
 * **name**: string (Required)
 * **skipMetricValidation**: bool
-* **timeAggregation**: any (Required)
+* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required)
 ### DynamicThresholdCriterion
 #### Properties
 * **alertSensitivity**: 'High' | 'Low' | 'Medium' (Required)
@@ -180,7 +180,7 @@
 * **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'NotEquals' (Required)
 * **skipMetricValidation**: bool
 * **threshold**: int (Required)
-* **timeAggregation**: any (Required)
+* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required)
 #### Additional Properties
 * **Additional Properties Type**: any
 
@@ -214,7 +214,7 @@
 * **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'NotEquals' (Required)
 * **skipMetricValidation**: bool
 * **threshold**: int (Required)
-* **timeAggregation**: any (Required)
+* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required)
 ### Additional Properties
 * **Additional Properties Type**: any
 

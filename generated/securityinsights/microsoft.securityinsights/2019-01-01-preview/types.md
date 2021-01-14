@@ -122,6 +122,11 @@
 * **kind**: 'AzureSecurityCenter' (Required)
 * **properties**: ASCDataConnectorProperties
 
+### Dynamics365
+#### Properties
+* **kind**: 'Dynamics365' (Required)
+* **properties**: Dynamics365DataConnectorProperties
+
 ### MicrosoftCloudAppSecurity
 #### Properties
 * **kind**: 'MicrosoftCloudAppSecurity' (Required)
@@ -234,6 +239,17 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: WatchlistProperties
 * **type**: 'Microsoft.SecurityInsights/watchlists' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.SecurityInsights/watchlists/watchlistItems@2019-01-01-preview
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WatchlistItemProperties
+* **type**: 'Microsoft.SecurityInsights/watchlists/watchlistItems' (ReadOnly, DeployTimeConstant)
 
 ## Fusion
 ### Properties
@@ -450,6 +466,24 @@
 * **dataTypes**: AlertsDataTypeOfDataConnector
 * **subscriptionId**: string
 
+## Dynamics365
+### Properties
+* **kind**: 'Dynamics365' (Required)
+* **properties**: Dynamics365DataConnectorProperties
+
+## Dynamics365DataConnectorProperties
+### Properties
+* **dataTypes**: Dynamics365DataConnectorDataTypes
+* **tenantId**: string
+
+## Dynamics365DataConnectorDataTypes
+### Properties
+* **dynamics365CdsActivities**: schemas:79_dynamics365CdsActivities
+
+## schemas:79_dynamics365CdsActivities
+### Properties
+* **state**: 'Disabled' | 'Enabled'
+
 ## MicrosoftCloudAppSecurity
 ### Properties
 * **kind**: 'MicrosoftCloudAppSecurity' (Required)
@@ -463,9 +497,9 @@
 ## MCASDataConnectorDataTypes
 ### Properties
 * **alerts**: schemas:31_alerts
-* **discoveryLogs**: schemas:132_discoveryLogs
+* **discoveryLogs**: schemas:140_discoveryLogs
 
-## schemas:132_discoveryLogs
+## schemas:140_discoveryLogs
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -491,19 +525,19 @@
 
 ## OfficeDataConnectorDataTypes
 ### Properties
-* **exchange**: schemas:154_exchange
-* **sharePoint**: schemas:154_sharePoint
-* **teams**: schemas:154_teams
+* **exchange**: schemas:162_exchange
+* **sharePoint**: schemas:162_sharePoint
+* **teams**: schemas:162_teams
 
-## schemas:154_exchange
+## schemas:162_exchange
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
-## schemas:154_sharePoint
+## schemas:162_sharePoint
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
-## schemas:154_teams
+## schemas:162_teams
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -529,9 +563,9 @@
 
 ## TIDataConnectorDataTypes
 ### Properties
-* **indicators**: schemas:185_indicators
+* **indicators**: schemas:193_indicators
 
-## schemas:185_indicators
+## schemas:193_indicators
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -553,9 +587,9 @@
 
 ## TiTaxiiDataConnectorDataTypes
 ### Properties
-* **taxiiClient**: schemas:190_taxiiClient
+* **taxiiClient**: schemas:198_taxiiClient
 
-## schemas:190_taxiiClient
+## schemas:198_taxiiClient
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -702,4 +736,17 @@
 * **watchlistAlias**: string
 * **watchlistId**: string
 * **watchlistType**: string
+
+## WatchlistItemProperties
+### Properties
+* **created**: string
+* **createdBy**: UserInfo
+* **entityMapping**: any
+* **isDeleted**: bool
+* **itemsKeyValue**: any (Required)
+* **tenantId**: string
+* **updated**: string
+* **updatedBy**: UserInfo
+* **watchlistItemId**: string
+* **watchlistItemType**: string
 

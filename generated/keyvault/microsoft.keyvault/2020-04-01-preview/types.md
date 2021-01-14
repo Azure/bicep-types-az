@@ -41,6 +41,7 @@
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -65,7 +66,7 @@
 * **createMode**: 'default' | 'recover'
 * **enablePurgeProtection**: bool
 * **enableSoftDelete**: bool
-* **hsmUri**: string
+* **hsmUri**: string (ReadOnly)
 * **initialAdminObjectIds**: string[]
 * **provisioningState**: 'Activated' | 'Deleting' | 'Failed' | 'Provisioning' | 'Restoring' | 'SecurityDomainRestore' | 'Succeeded' | 'Updating' (ReadOnly)
 * **softDeleteRetentionInDays**: int
@@ -94,6 +95,7 @@
 * **enableSoftDelete**: bool
 * **networkAcls**: NetworkRuleSet
 * **privateEndpointConnections**: PrivateEndpointConnectionItem[] (ReadOnly)
+* **provisioningState**: 'RegisteringDns' | 'Succeeded'
 * **sku**: Sku (Required)
 * **softDeleteRetentionInDays**: int
 * **tenantId**: string (Required)
@@ -144,7 +146,7 @@
 
 ## PrivateLinkServiceConnectionState
 ### Properties
-* **actionRequired**: string
+* **actionsRequired**: 'None'
 * **description**: string
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
 

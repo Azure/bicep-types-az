@@ -31,21 +31,23 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: Dictionary<string,Schemas37UserAssignedIdentitiesValue>
+* **userAssignedIdentities**: Dictionary<string,Schemas38UserAssignedIdentitiesValue>
 
-## Dictionary<string,Schemas37UserAssignedIdentitiesValue>
+## Dictionary<string,Schemas38UserAssignedIdentitiesValue>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: schemas:37_userAssignedIdentitiesValue
+* **Additional Properties Type**: schemas:38_userAssignedIdentitiesValue
 
-## schemas:37_userAssignedIdentitiesValue
+## schemas:38_userAssignedIdentitiesValue
 ### Properties
 * **clientId**: string (ReadOnly)
 * **principalId**: string (ReadOnly)
+* **tenantId**: string
 
 ## ClusterCreateProperties
 ### Properties
 * **clusterDefinition**: ClusterDefinition
+* **clusterHdpVersion**: string (ReadOnly)
 * **clusterId**: string (ReadOnly)
 * **clusterState**: string (ReadOnly)
 * **clusterVersion**: string
@@ -56,6 +58,7 @@
 * **diskEncryptionProperties**: DiskEncryptionProperties
 * **encryptionInTransitProperties**: EncryptionInTransitProperties
 * **errors**: Errors[] (ReadOnly)
+* **excludedServicesConfig**: ExcludedServicesConfig (ReadOnly)
 * **kafkaRestProperties**: KafkaRestProperties
 * **minSupportedTlsVersion**: string
 * **networkProperties**: NetworkProperties
@@ -63,7 +66,7 @@
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly)
 * **quotaInfo**: QuotaInfo (ReadOnly)
 * **securityProfile**: SecurityProfile
-* **storageProfile**: StorageProfile (WriteOnly)
+* **storageProfile**: StorageProfile
 * **tier**: 'Premium' | 'Standard'
 
 ## ClusterDefinition
@@ -91,6 +94,7 @@
 ### Properties
 * **autoscale**: Autoscale
 * **dataDisksGroups**: DataDisksGroups[]
+* **encryptDataDisks**: bool
 * **hardwareProfile**: HardwareProfile
 * **minInstanceCount**: int
 * **name**: string
@@ -189,6 +193,11 @@
 * **code**: string (ReadOnly)
 * **message**: string (ReadOnly)
 
+## ExcludedServicesConfig
+### Properties
+* **excludedServicesConfigId**: string (ReadOnly)
+* **excludedServicesList**: string (ReadOnly)
+
 ## KafkaRestProperties
 ### Properties
 * **clientGroupInfo**: ClientGroupInfo
@@ -221,17 +230,17 @@
 
 ## StorageProfile
 ### Properties
-* **storageaccounts**: StorageAccount[] (WriteOnly)
+* **storageaccounts**: StorageAccount[]
 
 ## StorageAccount
 ### Properties
-* **container**: string (WriteOnly)
-* **fileSystem**: string (WriteOnly)
-* **isDefault**: bool (WriteOnly)
-* **key**: string (WriteOnly)
-* **msiResourceId**: string (WriteOnly)
-* **name**: string (WriteOnly)
-* **resourceId**: string (WriteOnly)
+* **container**: string
+* **fileSystem**: string
+* **isDefault**: bool
+* **key**: string
+* **msiResourceId**: string
+* **name**: string
+* **resourceId**: string
 
 ## Dictionary<string,String>
 ### Properties

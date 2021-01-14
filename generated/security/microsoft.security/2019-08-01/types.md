@@ -19,6 +19,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: IoTSecuritySolutionProperties
+* **systemData**: systemData (ReadOnly)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Security/iotSecuritySolutions' (ReadOnly, DeployTimeConstant)
 
@@ -64,6 +65,7 @@
 
 ## IoTSecuritySolutionProperties
 ### Properties
+* **additionalWorkspaces**: AdditionalWorkspacesProperties[]
 * **autoDiscoveredResources**: string[] (ReadOnly)
 * **disabledDataSources**: 'TwinData'[]
 * **displayName**: string (Required)
@@ -73,6 +75,12 @@
 * **status**: 'Disabled' | 'Enabled'
 * **unmaskedIpLoggingStatus**: 'Disabled' | 'Enabled'
 * **userDefinedResources**: UserDefinedResourcesProperties
+* **workspace**: string
+
+## AdditionalWorkspacesProperties
+### Properties
+* **dataTypes**: 'Alerts' | 'RawEvents'[]
+* **type**: 'Sentinel'
 * **workspace**: string
 
 ## RecommendationConfigurationProperties
@@ -85,6 +93,15 @@
 ### Properties
 * **query**: string (Required)
 * **querySubscriptions**: string[] (Required)
+
+## systemData
+### Properties
+* **createdAt**: string
+* **createdBy**: string
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+* **lastModifiedAt**: string
+* **lastModifiedBy**: string
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
 ## Dictionary<string,String>
 ### Properties

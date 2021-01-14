@@ -19,9 +19,12 @@
 * **backupBlobContainerUri**: string
 * **gatewayDetails**: GatewayDetails
 * **ipV4FirewallSettings**: IPv4FirewallSettings
+* **managedMode**: int
 * **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly)
 * **querypoolConnectionMode**: 'All' | 'ReadOnly'
 * **serverFullName**: string (ReadOnly)
+* **serverMonitorMode**: int
+* **sku**: ResourceSku
 * **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly)
 
 ## ServerAdministrators

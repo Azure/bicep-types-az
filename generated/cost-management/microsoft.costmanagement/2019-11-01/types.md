@@ -61,10 +61,9 @@
 ## QueryFilter
 ### Properties
 * **and**: QueryFilter[]
-* **dimension**: QueryComparisonExpression
-* **not**: QueryFilter
+* **dimensions**: QueryComparisonExpression
 * **or**: QueryFilter[]
-* **tag**: QueryComparisonExpression
+* **tags**: QueryComparisonExpression
 
 ## QueryComparisonExpression
 ### Properties
@@ -131,7 +130,8 @@
 
 ## ReportConfigDefinition
 ### Properties
-* **dataset**: ReportConfigDataset
+* **dataSet**: ReportConfigDataset
+* **includeMonetaryCommitment**: bool (ReadOnly)
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required)
 * **timePeriod**: ReportConfigTimePeriod
 * **type**: string (Required)
@@ -162,10 +162,9 @@
 ## ReportConfigFilter
 ### Properties
 * **and**: ReportConfigFilter[]
-* **dimension**: ReportConfigComparisonExpression
-* **not**: ReportConfigFilter
+* **dimensions**: ReportConfigComparisonExpression
 * **or**: ReportConfigFilter[]
-* **tag**: ReportConfigComparisonExpression
+* **tags**: ReportConfigComparisonExpression
 
 ## ReportConfigComparisonExpression
 ### Properties
