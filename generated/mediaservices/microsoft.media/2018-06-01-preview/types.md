@@ -106,6 +106,22 @@
 * **properties**: JobProperties
 * **type**: 'Microsoft.Media/mediaServices/transforms/jobs' (ReadOnly, DeployTimeConstant)
 
+## Function listContainerSas (Microsoft.Media/mediaServices/assets@2018-06-01-preview)
+* **Resource**: Microsoft.Media/mediaServices/assets
+* **ApiVersion**: 2018-06-01-preview
+* **Input**: ListContainerSasInput
+* **Output**: AssetContainerSas
+
+## Function listContentKeys (Microsoft.Media/mediaServices/streamingLocators@2018-06-01-preview)
+* **Resource**: Microsoft.Media/mediaServices/streamingLocators
+* **ApiVersion**: 2018-06-01-preview
+* **Output**: ListContentKeysResponse
+
+## Function listPaths (Microsoft.Media/mediaServices/streamingLocators@2018-06-01-preview)
+* **Resource**: Microsoft.Media/mediaServices/streamingLocators
+* **ApiVersion**: 2018-06-01-preview
+* **Output**: ListPathsResponse
+
 ## MediaServiceProperties
 ### Properties
 * **mediaServiceId**: string (ReadOnly)
@@ -824,4 +840,28 @@
 ### Properties
 * **@odata.type**: '#Microsoft.Media.JobOutputAsset' (Required)
 * **assetName**: string (Required)
+
+## ListContainerSasInput
+### Properties
+* **expiryTime**: string (WriteOnly)
+* **permissions**: 'Read' | 'ReadWrite' | 'ReadWriteDelete' (WriteOnly)
+
+## AssetContainerSas
+### Properties
+* **assetContainerSasUrls**: string[] (ReadOnly)
+
+## ListContentKeysResponse
+### Properties
+* **contentKeys**: StreamingLocatorContentKey[] (ReadOnly)
+
+## ListPathsResponse
+### Properties
+* **downloadPaths**: string[] (ReadOnly)
+* **streamingPaths**: StreamingPath[] (ReadOnly)
+
+## StreamingPath
+### Properties
+* **encryptionScheme**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' | 'NoEncryption' (ReadOnly)
+* **paths**: string[] (ReadOnly)
+* **streamingProtocol**: 'Dash' | 'Download' | 'Hls' | 'SmoothStreaming' (ReadOnly)
 

@@ -22,6 +22,16 @@
 * **properties**: BuildStepProperties
 * **type**: 'Microsoft.ContainerRegistry/registries/buildTasks/steps' (ReadOnly, DeployTimeConstant)
 
+## Function listBuildArguments (Microsoft.ContainerRegistry/registries/buildTasks/steps@2018-02-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/buildTasks/steps
+* **ApiVersion**: 2018-02-01-preview
+* **Output**: BuildArgumentList
+
+## Function listSourceRepositoryProperties (Microsoft.ContainerRegistry/registries/buildTasks@2018-02-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/buildTasks
+* **ApiVersion**: 2018-02-01-preview
+* **Output**: SourceRepositoryProperties
+
 ## BuildTaskProperties
 ### Properties
 * **alias**: string (Required)
@@ -102,4 +112,9 @@
 * **name**: string (Required)
 * **type**: string (Required)
 * **value**: string (Required)
+
+## BuildArgumentList
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: BuildArgument[] (ReadOnly)
 

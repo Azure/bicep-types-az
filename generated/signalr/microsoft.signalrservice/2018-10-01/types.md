@@ -1,6 +1,6 @@
 # Microsoft.SignalRService @ 2018-10-01
 
-## Resource Microsoft.SignalRService/signalR@2018-10-01
+## Resource Microsoft.SignalRService/SignalR@2018-10-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant)
@@ -12,6 +12,11 @@
 * **sku**: ResourceSku
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant)
+
+## Function listKeys (Microsoft.SignalRService/SignalR@2018-10-01)
+* **Resource**: Microsoft.SignalRService/SignalR
+* **ApiVersion**: 2018-10-01
+* **Output**: SignalRKeys
 
 ## SignalRCreateOrUpdateProperties
 ### Properties
@@ -52,4 +57,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SignalRKeys
+### Properties
+* **primaryConnectionString**: string (ReadOnly)
+* **primaryKey**: string (ReadOnly)
+* **secondaryConnectionString**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

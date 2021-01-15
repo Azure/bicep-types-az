@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: HanaInstanceProperties
-* **tags**: Dictionary<string,String> (ReadOnly)
+* **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.HanaOnAzure/hanaInstances' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HanaOnAzure/sapMonitors@2017-11-03-preview
@@ -21,30 +21,30 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SapMonitorProperties
-* **tags**: Dictionary<string,String> (ReadOnly)
+* **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.HanaOnAzure/sapMonitors' (ReadOnly, DeployTimeConstant)
 
 ## HanaInstanceProperties
 ### Properties
-* **hanaInstanceId**: string (ReadOnly)
+* **hanaInstanceId**: string
 * **hardwareProfile**: HardwareProfile
-* **hwRevision**: string (ReadOnly)
+* **hwRevision**: string
 * **networkProfile**: NetworkProfile
 * **osProfile**: OSProfile
 * **partnerNodeId**: string
-* **powerState**: 'restarting' | 'started' | 'starting' | 'stopped' | 'stopping' | 'unknown' (ReadOnly)
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly)
-* **proximityPlacementGroup**: string (ReadOnly)
+* **powerState**: 'restarting' | 'started' | 'starting' | 'stopped' | 'stopping' | 'unknown'
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating'
+* **proximityPlacementGroup**: string
 * **storageProfile**: StorageProfile
 
 ## HardwareProfile
 ### Properties
-* **hanaInstanceSize**: 'S112' | 'S144' | 'S144m' | 'S192' | 'S192m' | 'S192xm' | 'S224' | 'S224m' | 'S224om' | 'S224oo' | 'S224oom' | 'S224ooo' | 'S384' | 'S384m' | 'S384xm' | 'S384xxm' | 'S448' | 'S448m' | 'S448om' | 'S448oo' | 'S448oom' | 'S448ooo' | 'S576m' | 'S576xm' | 'S672' | 'S672m' | 'S672om' | 'S672oo' | 'S672oom' | 'S672ooo' | 'S72' | 'S72m' | 'S768' | 'S768m' | 'S768xm' | 'S896' | 'S896m' | 'S896om' | 'S896oo' | 'S896oom' | 'S896ooo' | 'S96' | 'S960m' (ReadOnly)
-* **hardwareType**: 'Cisco_UCS' | 'HPE' (ReadOnly)
+* **hanaInstanceSize**: 'S112' | 'S144' | 'S144m' | 'S192' | 'S192m' | 'S192xm' | 'S224' | 'S224m' | 'S224om' | 'S224oo' | 'S224oom' | 'S224ooo' | 'S384' | 'S384m' | 'S384xm' | 'S384xxm' | 'S448' | 'S448m' | 'S448om' | 'S448oo' | 'S448oom' | 'S448ooo' | 'S576m' | 'S576xm' | 'S672' | 'S672m' | 'S672om' | 'S672oo' | 'S672oom' | 'S672ooo' | 'S72' | 'S72m' | 'S768' | 'S768m' | 'S768xm' | 'S896' | 'S896m' | 'S896om' | 'S896oo' | 'S896oom' | 'S896ooo' | 'S96' | 'S960m'
+* **hardwareType**: 'Cisco_UCS' | 'HPE'
 
 ## NetworkProfile
 ### Properties
-* **circuitId**: string (ReadOnly)
+* **circuitId**: string
 * **networkInterfaces**: IpAddress[]
 
 ## IpAddress
@@ -54,13 +54,13 @@
 ## OSProfile
 ### Properties
 * **computerName**: string
-* **osType**: string (ReadOnly)
+* **osType**: string
 * **sshPublicKey**: string
-* **version**: string (ReadOnly)
+* **version**: string
 
 ## StorageProfile
 ### Properties
-* **nfsIpAddress**: string (ReadOnly)
+* **nfsIpAddress**: string
 * **osDisks**: Disk[]
 
 ## Disk
@@ -90,7 +90,7 @@
 * **logAnalyticsWorkspaceId**: string
 * **logAnalyticsWorkspaceSharedKey**: string
 * **managedResourceGroupName**: string (ReadOnly)
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly)
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating'
 
 ## Dictionary<string,String>
 ### Properties

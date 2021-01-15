@@ -11,6 +11,11 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.SaaS/resources' (ReadOnly, DeployTimeConstant)
 
+## Function listAccessToken (Microsoft.SaaS/resources@2018-03-01-beta)
+* **Resource**: Microsoft.SaaS/resources
+* **ApiVersion**: 2018-03-01-beta
+* **Output**: AccessTokenResult
+
 ## SaasCreationProperties
 ### Properties
 * **autoRenew**: bool
@@ -46,4 +51,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## AccessTokenResult
+### Properties
+* **publisherOfferBaseUri**: string (ReadOnly)
+* **token**: string (ReadOnly)
 

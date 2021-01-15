@@ -14,6 +14,11 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DataBox/jobs' (ReadOnly, DeployTimeConstant)
 
+## Function listCredentials (Microsoft.DataBox/jobs@2020-11-01)
+* **Resource**: Microsoft.DataBox/jobs
+* **ApiVersion**: 2020-11-01
+* **Output**: UnencryptedCredentialsList
+
 ## ResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -74,6 +79,7 @@
 * **copyLogLink**: string (ReadOnly)
 * **copyVerboseLogLink**: string (ReadOnly)
 * **jobDetailsType**: 'DataBox' (Required)
+* **jobSecretsType**: 'DataBox' (Required)
 
 ### DataBoxDisk
 #### Properties
@@ -81,6 +87,7 @@
 * **diskSerialNumber**: string (ReadOnly)
 * **errorLogLink**: string (ReadOnly)
 * **jobDetailsType**: 'DataBoxDisk' (Required)
+* **jobSecretsType**: 'DataBoxDisk' (Required)
 * **verboseLogLink**: string (ReadOnly)
 
 ### DataBoxHeavy
@@ -90,6 +97,7 @@
 * **copyLogLink**: string[] (ReadOnly)
 * **copyVerboseLogLink**: string[] (ReadOnly)
 * **jobDetailsType**: 'DataBoxHeavy' (Required)
+* **jobSecretsType**: 'DataBoxHeavy' (Required)
 
 
 ## ContactDetails
@@ -116,6 +124,7 @@
 * **copyLogLink**: string (ReadOnly)
 * **copyVerboseLogLink**: string (ReadOnly)
 * **jobDetailsType**: 'DataBox' (Required)
+* **jobSecretsType**: 'DataBox' (Required)
 
 ### DataBoxDisk
 #### Properties
@@ -123,6 +132,7 @@
 * **diskSerialNumber**: string (ReadOnly)
 * **errorLogLink**: string (ReadOnly)
 * **jobDetailsType**: 'DataBoxDisk' (Required)
+* **jobSecretsType**: 'DataBoxDisk' (Required)
 * **verboseLogLink**: string (ReadOnly)
 
 ### DataBoxHeavy
@@ -132,6 +142,7 @@
 * **copyLogLink**: string[] (ReadOnly)
 * **copyVerboseLogLink**: string[] (ReadOnly)
 * **jobDetailsType**: 'DataBoxHeavy' (Required)
+* **jobSecretsType**: 'DataBoxHeavy' (Required)
 
 
 ## DataBox
@@ -141,6 +152,7 @@
 * **copyLogLink**: string (ReadOnly)
 * **copyVerboseLogLink**: string (ReadOnly)
 * **jobDetailsType**: 'DataBox' (Required)
+* **jobSecretsType**: 'DataBox' (Required)
 
 ## DataBoxDisk
 ### Properties
@@ -148,6 +160,7 @@
 * **diskSerialNumber**: string (ReadOnly)
 * **errorLogLink**: string (ReadOnly)
 * **jobDetailsType**: 'DataBoxDisk' (Required)
+* **jobSecretsType**: 'DataBoxDisk' (Required)
 * **verboseLogLink**: string (ReadOnly)
 
 ## DataBoxHeavy
@@ -157,6 +170,7 @@
 * **copyLogLink**: string[] (ReadOnly)
 * **copyVerboseLogLink**: string[] (ReadOnly)
 * **jobDetailsType**: 'DataBoxHeavy' (Required)
+* **jobSecretsType**: 'DataBoxHeavy' (Required)
 
 ## DataExportDetails
 ### Properties
@@ -319,4 +333,52 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UnencryptedCredentialsList
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: UnencryptedCredentials[] (ReadOnly)
+
+## UnencryptedCredentials
+### Properties
+* **jobName**: string (ReadOnly)
+* **jobSecrets**: JobSecrets (ReadOnly)
+
+## JobSecrets
+* **Discriminator**: jobSecretsType
+### Base Properties
+* **dcAccessSecurityCode**: DcAccessSecurityCode (ReadOnly)
+* **error**: CloudError (ReadOnly)
+### DataBox
+#### Properties
+* **accountName**: string (ReadOnly)
+* **copyLogDetailsType**: 'DataBox' (Required)
+* **copyLogLink**: string (ReadOnly)
+* **copyVerboseLogLink**: string (ReadOnly)
+* **jobDetailsType**: 'DataBox' (Required)
+* **jobSecretsType**: 'DataBox' (Required)
+
+### DataBoxDisk
+#### Properties
+* **copyLogDetailsType**: 'DataBoxDisk' (Required)
+* **diskSerialNumber**: string (ReadOnly)
+* **errorLogLink**: string (ReadOnly)
+* **jobDetailsType**: 'DataBoxDisk' (Required)
+* **jobSecretsType**: 'DataBoxDisk' (Required)
+* **verboseLogLink**: string (ReadOnly)
+
+### DataBoxHeavy
+#### Properties
+* **accountName**: string (ReadOnly)
+* **copyLogDetailsType**: 'DataBoxHeavy' (Required)
+* **copyLogLink**: string[] (ReadOnly)
+* **copyVerboseLogLink**: string[] (ReadOnly)
+* **jobDetailsType**: 'DataBoxHeavy' (Required)
+* **jobSecretsType**: 'DataBoxHeavy' (Required)
+
+
+## DcAccessSecurityCode
+### Properties
+* **forwardDcAccessCode**: string (ReadOnly)
+* **reverseDcAccessCode**: string (ReadOnly)
 

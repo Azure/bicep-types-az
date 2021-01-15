@@ -14,6 +14,16 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant)
 
+## Function listAdminKeys (Microsoft.Search/searchServices@2015-08-19)
+* **Resource**: Microsoft.Search/searchServices
+* **ApiVersion**: 2015-08-19
+* **Output**: AdminKeyResult
+
+## Function listQueryKeys (Microsoft.Search/searchServices@2015-08-19)
+* **Resource**: Microsoft.Search/searchServices
+* **ApiVersion**: 2015-08-19
+* **Output**: ListQueryKeysResult
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -37,4 +47,18 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## AdminKeyResult
+### Properties
+* **primaryKey**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
+
+## ListQueryKeysResult
+### Properties
+* **value**: QueryKey[] (ReadOnly)
+
+## QueryKey
+### Properties
+* **key**: string (ReadOnly)
+* **name**: string (ReadOnly)
 

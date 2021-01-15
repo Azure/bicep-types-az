@@ -203,6 +203,33 @@
 * **properties**: ScheduledSynchronizationSettingProperties (Required)
 
 
+## Function listSourceShareSynchronizationSettings (Microsoft.DataShare/accounts/shareSubscriptions@2019-11-01)
+* **Resource**: Microsoft.DataShare/accounts/shareSubscriptions
+* **ApiVersion**: 2019-11-01
+* **Output**: SourceShareSynchronizationSettingList
+
+## Function listSynchronizationDetails (Microsoft.DataShare/accounts/shares@2019-11-01)
+* **Resource**: Microsoft.DataShare/accounts/shares
+* **ApiVersion**: 2019-11-01
+* **Input**: ShareSynchronization
+* **Output**: SynchronizationDetailsList
+
+## Function listSynchronizationDetails (Microsoft.DataShare/accounts/shareSubscriptions@2019-11-01)
+* **Resource**: Microsoft.DataShare/accounts/shareSubscriptions
+* **ApiVersion**: 2019-11-01
+* **Input**: ShareSubscriptionSynchronization
+* **Output**: SynchronizationDetailsList
+
+## Function listSynchronizations (Microsoft.DataShare/accounts/shares@2019-11-01)
+* **Resource**: Microsoft.DataShare/accounts/shares
+* **ApiVersion**: 2019-11-01
+* **Output**: ShareSynchronizationList
+
+## Function listSynchronizations (Microsoft.DataShare/accounts/shareSubscriptions@2019-11-01)
+* **Resource**: Microsoft.DataShare/accounts/shareSubscriptions
+* **ApiVersion**: 2019-11-01
+* **Output**: ShareSubscriptionSynchronizationList
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -431,4 +458,74 @@
 * **sourceShareLocation**: string (Required)
 * **userEmail**: string (ReadOnly)
 * **userName**: string (ReadOnly)
+
+## SourceShareSynchronizationSettingList
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: SourceShareSynchronizationSetting[] (ReadOnly)
+
+## SourceShareSynchronizationSetting
+* **Discriminator**: kind
+### Base Properties
+### ScheduleBased
+#### Properties
+* **kind**: 'ScheduleBased' (Required)
+* **properties**: ScheduledSynchronizationSettingProperties (Required)
+
+
+## ShareSynchronization
+### Properties
+* **consumerEmail**: string (WriteOnly)
+* **consumerName**: string (WriteOnly)
+* **consumerTenantName**: string (WriteOnly)
+* **durationMs**: int (WriteOnly)
+* **endTime**: string (WriteOnly)
+* **message**: string (WriteOnly)
+* **startTime**: string (WriteOnly)
+* **status**: string (WriteOnly)
+* **synchronizationId**: string (WriteOnly)
+* **synchronizationMode**: 'FullSync' | 'Incremental' (ReadOnly, WriteOnly)
+
+## SynchronizationDetailsList
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: SynchronizationDetails[] (ReadOnly)
+
+## SynchronizationDetails
+### Properties
+* **dataSetId**: string (ReadOnly)
+* **dataSetType**: 'AdlsGen1File' | 'AdlsGen1Folder' | 'AdlsGen2File' | 'AdlsGen2FileSystem' | 'AdlsGen2Folder' | 'Blob' | 'BlobFolder' | 'Container' | 'KustoCluster' | 'KustoDatabase' | 'SqlDBTable' | 'SqlDWTable' (ReadOnly)
+* **durationMs**: int (ReadOnly)
+* **endTime**: string (ReadOnly)
+* **filesRead**: int (ReadOnly)
+* **filesWritten**: int (ReadOnly)
+* **message**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **rowsCopied**: int (ReadOnly)
+* **rowsRead**: int (ReadOnly)
+* **sizeRead**: int (ReadOnly)
+* **sizeWritten**: int (ReadOnly)
+* **startTime**: string (ReadOnly)
+* **status**: string (ReadOnly)
+* **vCore**: int (ReadOnly)
+
+## ShareSubscriptionSynchronization
+### Properties
+* **durationMs**: int (ReadOnly, WriteOnly)
+* **endTime**: string (ReadOnly, WriteOnly)
+* **message**: string (ReadOnly, WriteOnly)
+* **startTime**: string (ReadOnly, WriteOnly)
+* **status**: string (ReadOnly, WriteOnly)
+* **synchronizationId**: string (Required, WriteOnly)
+* **synchronizationMode**: 'FullSync' | 'Incremental' (ReadOnly, WriteOnly)
+
+## ShareSynchronizationList
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: ShareSynchronization[] (ReadOnly)
+
+## ShareSubscriptionSynchronizationList
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: ShareSubscriptionSynchronization[] (ReadOnly)
 

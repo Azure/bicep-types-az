@@ -26,6 +26,11 @@
 * **properties**: CertificateProperties (ReadOnly)
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant)
 
+## Function listkeys (Microsoft.Devices/provisioningServices@2017-11-15)
+* **Resource**: Microsoft.Devices/provisioningServices
+* **ApiVersion**: 2017-11-15
+* **Output**: SharedAccessSignatureAuthorizationRuleListResult
+
 ## IotDpsPropertiesDescription
 ### Properties
 * **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static'
@@ -71,4 +76,9 @@
 * **subject**: string (ReadOnly)
 * **thumbprint**: string (ReadOnly)
 * **updated**: string (ReadOnly)
+
+## SharedAccessSignatureAuthorizationRuleListResult
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: SharedAccessSignatureAuthorizationRule_AccessRightsDescription_[] (ReadOnly)
 

@@ -45,6 +45,16 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.BotService/botServices/Connections' (ReadOnly, DeployTimeConstant)
 
+## Function listChannelWithKeys (Microsoft.BotService/botServices/channels@2017-12-01)
+* **Resource**: Microsoft.BotService/botServices/channels
+* **ApiVersion**: 2017-12-01
+* **Output**: BotChannel
+
+## Function listWithSecrets (Microsoft.BotService/botServices/Connections@2017-12-01)
+* **Resource**: Microsoft.BotService/botServices/Connections
+* **ApiVersion**: 2017-12-01
+* **Output**: ConnectionSetting
+
 ## BotProperties
 ### Properties
 * **configuredChannels**: string[] (ReadOnly)
@@ -296,6 +306,40 @@
 ### Properties
 * **key**: string
 * **value**: string
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## BotChannel
+### Properties
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly)
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk' (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: Channel (ReadOnly)
+* **sku**: Sku (ReadOnly)
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ConnectionSetting
+### Properties
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly)
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk' (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: ConnectionSettingProperties (ReadOnly)
+* **sku**: Sku (ReadOnly)
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Properties

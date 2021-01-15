@@ -144,6 +144,21 @@
 * **properties**: schemas:19_properties
 * **type**: 'Microsoft.ServiceBus/namespaces/virtualnetworkrules' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2018-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules
+* **ApiVersion**: 2018-01-01-preview
+* **Output**: AccessKeys
+
+## Function listKeys (Microsoft.ServiceBus/namespaces/queues/authorizationRules@2018-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/queues/authorizationRules
+* **ApiVersion**: 2018-01-01-preview
+* **Output**: AccessKeys
+
+## Function listKeys (Microsoft.ServiceBus/namespaces/topics/authorizationRules@2018-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/topics/authorizationRules
+* **ApiVersion**: 2018-01-01-preview
+* **Output**: AccessKeys
+
 ## Identity
 ### Properties
 * **principalId**: string
@@ -353,4 +368,14 @@
 ## schemas:19_properties
 ### Properties
 * **virtualNetworkSubnetId**: string
+
+## AccessKeys
+### Properties
+* **aliasPrimaryConnectionString**: string (ReadOnly)
+* **aliasSecondaryConnectionString**: string (ReadOnly)
+* **keyName**: string (ReadOnly)
+* **primaryConnectionString**: string (ReadOnly)
+* **primaryKey**: string (ReadOnly)
+* **secondaryConnectionString**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

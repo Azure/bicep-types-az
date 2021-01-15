@@ -24,6 +24,11 @@
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: 'Microsoft.Purview/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
+## Function listkeys (Microsoft.Purview/accounts@2020-12-01-preview)
+* **Resource**: Microsoft.Purview/accounts
+* **ApiVersion**: 2020-12-01-preview
+* **Output**: AccessKeys
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -95,4 +100,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## AccessKeys
+### Properties
+* **atlasKafkaPrimaryEndpoint**: string (ReadOnly)
+* **atlasKafkaSecondaryEndpoint**: string (ReadOnly)
 

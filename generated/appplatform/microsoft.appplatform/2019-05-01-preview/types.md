@@ -66,6 +66,11 @@
 * **properties**: CertificateProperties
 * **type**: 'Microsoft.AppPlatform/Spring/certificates' (ReadOnly, DeployTimeConstant)
 
+## Function listTestKeys (Microsoft.AppPlatform/Spring@2019-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2019-05-01-preview
+* **Output**: TestKeys
+
 ## ClusterResourceProperties
 ### Properties
 * **configServerProperties**: ConfigServerProperties
@@ -252,4 +257,12 @@
 * **subjectName**: string (ReadOnly)
 * **thumbprint**: string (ReadOnly)
 * **vaultUri**: string (Required)
+
+## TestKeys
+### Properties
+* **enabled**: bool (ReadOnly)
+* **primaryKey**: string (ReadOnly)
+* **primaryTestEndpoint**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
+* **secondaryTestEndpoint**: string (ReadOnly)
 

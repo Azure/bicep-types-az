@@ -96,6 +96,11 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DevTestLab/labs/virtualnetworks' (ReadOnly, DeployTimeConstant)
 
+## Function listVhds (Microsoft.DevTestLab/labs@2015-05-21-preview)
+* **Resource**: Microsoft.DevTestLab/labs
+* **ApiVersion**: 2015-05-21-preview
+* **Output**: ResponseWithContinuation_LabVhd_
+
 ## LabProperties
 ### Properties
 * **artifactsStorageAccount**: string
@@ -316,4 +321,13 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResponseWithContinuation_LabVhd_
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: LabVhd[] (ReadOnly)
+
+## LabVhd
+### Properties
+* **id**: string (ReadOnly)
 

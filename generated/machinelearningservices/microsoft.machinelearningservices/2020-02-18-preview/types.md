@@ -42,6 +42,21 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.MachineLearningServices/workspaces@2020-02-18-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2020-02-18-preview
+* **Output**: ListWorkspaceKeysResult
+
+## Function listKeys (Microsoft.MachineLearningServices/workspaces/computes@2020-02-18-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2020-02-18-preview
+* **Output**: ComputeSecrets
+
+## Function listNodes (Microsoft.MachineLearningServices/workspaces/computes@2020-02-18-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2020-02-18-preview
+* **Output**: AmlCompute
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -346,4 +361,41 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ListWorkspaceKeysResult
+### Properties
+* **appInsightsInstrumentationKey**: string (ReadOnly)
+* **containerRegistryCredentials**: RegistryListCredentialsResult (ReadOnly)
+* **userStorageKey**: string (ReadOnly)
+* **userStorageResourceId**: string (ReadOnly)
+
+## RegistryListCredentialsResult
+### Properties
+* **location**: string (ReadOnly)
+* **passwords**: Password[] (ReadOnly)
+* **username**: string (ReadOnly)
+
+## Password
+### Properties
+* **name**: string (ReadOnly)
+* **value**: string (ReadOnly)
+
+## ComputeSecrets
+* **Discriminator**: computeType
+### Base Properties
+### AKS
+#### Properties
+* **computeType**: 'AKS' (Required)
+* **properties**: schemas:30_properties
+
+### Databricks
+#### Properties
+* **computeType**: 'Databricks' (Required)
+* **properties**: schemas:33_properties
+
+### VirtualMachine
+#### Properties
+* **computeType**: 'VirtualMachine' (Required)
+* **properties**: schemas:33_properties
+
 

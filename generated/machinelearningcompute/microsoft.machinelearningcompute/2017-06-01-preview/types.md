@@ -12,6 +12,11 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.MachineLearningCompute/operationalizationClusters' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.MachineLearningCompute/operationalizationClusters@2017-06-01-preview)
+* **Resource**: Microsoft.MachineLearningCompute/operationalizationClusters
+* **ApiVersion**: 2017-06-01-preview
+* **Output**: OperationalizationClusterCredentials
+
 ## OperationalizationClusterProperties
 ### Properties
 * **appInsights**: AppInsightsCredentials
@@ -88,4 +93,31 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## OperationalizationClusterCredentials
+### Properties
+* **appInsights**: AppInsightsCredentials (ReadOnly)
+* **containerRegistry**: ContainerRegistryCredentials (ReadOnly)
+* **containerService**: ContainerServiceCredentials (ReadOnly)
+* **serviceAuthConfiguration**: ServiceAuthConfiguration (ReadOnly)
+* **sslConfiguration**: SslConfiguration (ReadOnly)
+* **storageAccount**: StorageAccountCredentials (ReadOnly)
+
+## ContainerRegistryCredentials
+### Properties
+* **loginServer**: string (ReadOnly)
+* **password**: string (ReadOnly)
+* **password2**: string (ReadOnly)
+
+## ContainerServiceCredentials
+### Properties
+* **acsKubeConfig**: string (ReadOnly)
+* **imagePullSecretName**: string (ReadOnly)
+* **servicePrincipalConfiguration**: ServicePrincipalProperties (ReadOnly)
+
+## StorageAccountCredentials
+### Properties
+* **primaryKey**: string (ReadOnly)
+* **resourceId**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

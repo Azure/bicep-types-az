@@ -34,6 +34,11 @@
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: 'Microsoft.Cache/redisEnterprise/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.Cache/redisEnterprise/databases@2020-10-01-preview)
+* **Resource**: Microsoft.Cache/redisEnterprise/databases
+* **ApiVersion**: 2020-10-01-preview
+* **Output**: AccessKeys
+
 ## ClusterProperties
 ### Properties
 * **hostName**: string (ReadOnly)
@@ -91,4 +96,9 @@
 * **args**: string
 * **name**: string (Required)
 * **version**: string (ReadOnly)
+
+## AccessKeys
+### Properties
+* **primaryKey**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

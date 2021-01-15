@@ -122,6 +122,16 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ContainerRegistry/registries/webhooks' (ReadOnly, DeployTimeConstant)
 
+## Function listCredentials (Microsoft.ContainerRegistry/registries@2020-11-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries
+* **ApiVersion**: 2020-11-01-preview
+* **Output**: RegistryListCredentialsResult
+
+## Function listEvents (Microsoft.ContainerRegistry/registries/webhooks@2020-11-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/webhooks
+* **ApiVersion**: 2020-11-01-preview
+* **Output**: EventListResult
+
 ## IdentityProperties
 ### Properties
 * **principalId**: string
@@ -463,6 +473,92 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RegistryListCredentialsResult
+### Properties
+* **passwords**: RegistryPassword[] (ReadOnly)
+* **username**: string (ReadOnly)
+
+## RegistryPassword
+### Properties
+* **name**: 'password' | 'password2' (ReadOnly)
+* **value**: string (ReadOnly)
+
+## EventListResult
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: Event[] (ReadOnly)
+
+## Event
+### Properties
+* **eventRequestMessage**: EventRequestMessage (ReadOnly)
+* **eventResponseMessage**: EventResponseMessage (ReadOnly)
+* **id**: string (ReadOnly)
+
+## EventRequestMessage
+### Properties
+* **content**: EventContent (ReadOnly)
+* **headers**: Dictionary<string,String> (ReadOnly)
+* **method**: string (ReadOnly)
+* **requestUri**: string (ReadOnly)
+* **version**: string (ReadOnly)
+
+## EventContent
+### Properties
+* **action**: string (ReadOnly)
+* **actor**: Actor (ReadOnly)
+* **id**: string (ReadOnly)
+* **request**: Request (ReadOnly)
+* **source**: Source (ReadOnly)
+* **target**: Target (ReadOnly)
+* **timestamp**: string (ReadOnly)
+
+## Actor
+### Properties
+* **name**: string (ReadOnly)
+
+## Request
+### Properties
+* **addr**: string (ReadOnly)
+* **host**: string (ReadOnly)
+* **id**: string (ReadOnly)
+* **method**: string (ReadOnly)
+* **useragent**: string (ReadOnly)
+
+## Source
+### Properties
+* **addr**: string (ReadOnly)
+* **instanceID**: string (ReadOnly)
+
+## Target
+### Properties
+* **digest**: string (ReadOnly)
+* **length**: int (ReadOnly)
+* **mediaType**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **repository**: string (ReadOnly)
+* **size**: int (ReadOnly)
+* **tag**: string (ReadOnly)
+* **url**: string (ReadOnly)
+* **version**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## EventResponseMessage
+### Properties
+* **content**: string (ReadOnly)
+* **headers**: Dictionary<string,String> (ReadOnly)
+* **reasonPhrase**: string (ReadOnly)
+* **statusCode**: string (ReadOnly)
+* **version**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Properties

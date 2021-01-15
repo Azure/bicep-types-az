@@ -12,6 +12,11 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Cache/Redis' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.Cache/Redis@2015-08-01)
+* **Resource**: Microsoft.Cache/Redis
+* **ApiVersion**: 2015-08-01
+* **Output**: RedisListKeysResult
+
 ## RedisProperties
 ### Properties
 * **enableNonSslPort**: bool
@@ -48,4 +53,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## RedisListKeysResult
+### Properties
+* **primaryKey**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

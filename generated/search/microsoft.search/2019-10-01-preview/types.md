@@ -24,6 +24,16 @@
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: 'Microsoft.Search/searchServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
+## Function listAdminKeys (Microsoft.Search/searchServices@2019-10-01-preview)
+* **Resource**: Microsoft.Search/searchServices
+* **ApiVersion**: 2019-10-01-preview
+* **Output**: AdminKeyResult
+
+## Function listQueryKeys (Microsoft.Search/searchServices@2019-10-01-preview)
+* **Resource**: Microsoft.Search/searchServices
+* **ApiVersion**: 2019-10-01-preview
+* **Output**: ListQueryKeysResult
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -80,4 +90,18 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## AdminKeyResult
+### Properties
+* **primaryKey**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
+
+## ListQueryKeysResult
+### Properties
+* **value**: QueryKey[] (ReadOnly)
+
+## QueryKey
+### Properties
+* **key**: string (ReadOnly)
+* **name**: string (ReadOnly)
 

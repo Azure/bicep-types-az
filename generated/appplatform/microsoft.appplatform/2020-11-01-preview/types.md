@@ -86,6 +86,11 @@
 * **properties**: MonitoringSettingProperties
 * **type**: 'Microsoft.AppPlatform/Spring/monitoringSettings' (ReadOnly, DeployTimeConstant)
 
+## Function listTestKeys (Microsoft.AppPlatform/Spring@2020-11-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2020-11-01-preview
+* **Output**: TestKeys
+
 ## ClusterResourceProperties
 ### Properties
 * **networkProfile**: NetworkProfile
@@ -284,4 +289,12 @@
 ## applicationInsightsAgentVersions
 ### Properties
 * **java**: string (ReadOnly)
+
+## TestKeys
+### Properties
+* **enabled**: bool (ReadOnly)
+* **primaryKey**: string (ReadOnly)
+* **primaryTestEndpoint**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
+* **secondaryTestEndpoint**: string (ReadOnly)
 

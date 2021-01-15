@@ -13,6 +13,11 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Maps/accounts' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.Maps/accounts@2017-01-01-preview)
+* **Resource**: Microsoft.Maps/accounts
+* **ApiVersion**: 2017-01-01-preview
+* **Output**: MapsAccountKeys
+
 ## MapsAccountProperties
 ### Properties
 * **x-ms-client-id**: string (ReadOnly)
@@ -26,4 +31,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## MapsAccountKeys
+### Properties
+* **id**: string (ReadOnly)
+* **primaryKey**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

@@ -33,6 +33,11 @@
 * **properties**: ScheduleEntries (Required)
 * **type**: 'Microsoft.Cache/Redis/patchSchedules' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.Cache/Redis@2016-04-01)
+* **Resource**: Microsoft.Cache/Redis
+* **ApiVersion**: 2016-04-01
+* **Output**: RedisAccessKeys
+
 ## RedisCreateProperties
 ### Properties
 * **accessKeys**: RedisAccessKeys (ReadOnly)

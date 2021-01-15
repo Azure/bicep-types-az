@@ -1,6 +1,6 @@
 
 Executing: autorest --use=/home/runner/work/bicep-types-az/bicep-types-az/src/generator --azureresourceschema --output-folder=/home/runner/work/bicep-types-az/bicep-types-az/generated/addons --multiapi /home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/addons/resource-manager/readme.md
-AutoRest code generation utility [cli version: 3.0.6322; node: v14.15.1, max-memory: 2048 MB]
+AutoRest code generation utility [cli version: 3.0.6322; node: v14.15.4, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.0.6351)
@@ -8,6 +8,7 @@ https://aka.ms/autorest
    Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
 Processing batch task - {"tag":"schema-addons-2018-03-01"} .
 WARNING: Skipping resource type Microsoft.Addons/supportProviders/supportPlanTypes under path '/subscriptions/{subscriptionId}/providers/Microsoft.Addons/supportProviders/{providerName}/supportPlanTypes/{planTypeName}': No resource body defined
+WARNING: Skipping action listSupportPlanInfo for resource type Microsoft.Addons/supportProviders under path '/subscriptions/{subscriptionId}/providers/Microsoft.Addons/supportProviders/canonical/listSupportPlanInfo': Unable to find associated resource definition
 Processing batch task - {"tag":"schema-addons-2017-05-15"} .
 WARNING: Skipping resource type Microsoft.Addons/supportProviders/supportPlanTypes under path '/subscriptions/{subscriptionId}/providers/Microsoft.Addons/supportProviders/{providerName}/supportPlanTypes/{planTypeName}': No resource body defined
-[6.58 s] Generation Complete
+[5.14 s] Generation Complete

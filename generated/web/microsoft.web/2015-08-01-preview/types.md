@@ -13,6 +13,18 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Web/connections' (ReadOnly, DeployTimeConstant)
 
+## Function listConnectionKeys (Microsoft.Web/connections@2015-08-01-preview)
+* **Resource**: Microsoft.Web/connections
+* **ApiVersion**: 2015-08-01-preview
+* **Input**: ListConnectionKeysInput
+* **Output**: ConnectionSecrets
+
+## Function listConsentLinks (Microsoft.Web/connections@2015-08-01-preview)
+* **Resource**: Microsoft.Web/connections
+* **ApiVersion**: 2015-08-01-preview
+* **Input**: ConsentLinkInput
+* **Output**: ConsentLinkPayload
+
 ## schemas:1_properties
 ### Properties
 * **apiDefinitionUrl**: string
@@ -111,4 +123,55 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ListConnectionKeysInput
+### Properties
+* **id**: string (WriteOnly)
+* **kind**: string (WriteOnly)
+* **location**: string (Required, WriteOnly)
+* **name**: string (WriteOnly)
+* **properties**: schemas:1_properties (WriteOnly)
+* **tags**: Dictionary<string,String> (WriteOnly)
+* **type**: string (WriteOnly)
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ConnectionSecrets
+### Properties
+* **connectionKey**: string (ReadOnly)
+* **parameterValues**: Dictionary<string,Object> (ReadOnly)
+
+## Dictionary<string,Object>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ConsentLinkInput
+### Properties
+* **id**: string (WriteOnly)
+* **kind**: string (WriteOnly)
+* **location**: string (Required, WriteOnly)
+* **name**: string (WriteOnly)
+* **properties**: schemas:1_properties (WriteOnly)
+* **tags**: Dictionary<string,String> (WriteOnly)
+* **type**: string (WriteOnly)
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ConsentLinkPayload
+### Properties
+* **value**: ConsentLink[] (ReadOnly)
+
+## ConsentLink
+### Properties
+* **displayName**: string (ReadOnly)
+* **firstPartyLoginUri**: string (ReadOnly)
+* **link**: string (ReadOnly)
+* **status**: 'Authenticated' | 'Error' | 'Unauthenticated' (ReadOnly)
 

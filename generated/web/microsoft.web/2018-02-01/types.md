@@ -111,6 +111,116 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Web/sites' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Web/sites/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: Dictionary<string,String>
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:216_properties
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: Dictionary<string,AzureStorageInfoValue>
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:164_properties
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: Dictionary<string,ConnStringValueTypePair>
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:226_properties
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: Dictionary<string,String>
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:43_properties
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SlotConfigNames
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SiteConfig
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Web/sites/deployments@2018-02-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -268,6 +378,105 @@
 * **properties**: schemas:56_properties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Web/sites/slots' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/slots/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: Dictionary<string,String>
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/slots/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:216_properties
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/slots/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: Dictionary<string,AzureStorageInfoValue>
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/slots/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:164_properties
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/slots/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: Dictionary<string,ConnStringValueTypePair>
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/slots/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:226_properties
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/slots/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: Dictionary<string,String>
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/slots/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:43_properties
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/slots/config@2018-02-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SiteConfig
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/slots/deployments@2018-02-01
 * **Valid Scope(s)**: ResourceGroup
@@ -489,6 +698,116 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: schemas:121_properties
 * **type**: 'Microsoft.Web/sourcecontrols' (ReadOnly, DeployTimeConstant)
+
+## Function list (Microsoft.Web/sites/config@2018-02-01)
+* **Resource**: Microsoft.Web/sites/config
+* **ApiVersion**: 2018-02-01
+* **Output**: StringDictionary
+
+## Function list (Microsoft.Web/sites/config@2018-02-01)
+* **Resource**: Microsoft.Web/sites/config
+* **ApiVersion**: 2018-02-01
+* **Output**: SiteAuthSettings
+
+## Function list (Microsoft.Web/sites/config@2018-02-01)
+* **Resource**: Microsoft.Web/sites/config
+* **ApiVersion**: 2018-02-01
+* **Output**: AzureStoragePropertyDictionaryResource
+
+## Function list (Microsoft.Web/sites/config@2018-02-01)
+* **Resource**: Microsoft.Web/sites/config
+* **ApiVersion**: 2018-02-01
+* **Output**: BackupRequest
+
+## Function list (Microsoft.Web/sites/config@2018-02-01)
+* **Resource**: Microsoft.Web/sites/config
+* **ApiVersion**: 2018-02-01
+* **Output**: ConnectionStringDictionary
+
+## Function list (Microsoft.Web/sites/config@2018-02-01)
+* **Resource**: Microsoft.Web/sites/config
+* **ApiVersion**: 2018-02-01
+* **Output**: StringDictionary
+
+## Function list (Microsoft.Web/sites/config@2018-02-01)
+* **Resource**: Microsoft.Web/sites/config
+* **ApiVersion**: 2018-02-01
+* **Output**: PushSettings
+
+## Function list (Microsoft.Web/sites/slots/config@2018-02-01)
+* **Resource**: Microsoft.Web/sites/slots/config
+* **ApiVersion**: 2018-02-01
+* **Output**: StringDictionary
+
+## Function list (Microsoft.Web/sites/slots/config@2018-02-01)
+* **Resource**: Microsoft.Web/sites/slots/config
+* **ApiVersion**: 2018-02-01
+* **Output**: SiteAuthSettings
+
+## Function list (Microsoft.Web/sites/slots/config@2018-02-01)
+* **Resource**: Microsoft.Web/sites/slots/config
+* **ApiVersion**: 2018-02-01
+* **Output**: AzureStoragePropertyDictionaryResource
+
+## Function list (Microsoft.Web/sites/slots/config@2018-02-01)
+* **Resource**: Microsoft.Web/sites/slots/config
+* **ApiVersion**: 2018-02-01
+* **Output**: BackupRequest
+
+## Function list (Microsoft.Web/sites/slots/config@2018-02-01)
+* **Resource**: Microsoft.Web/sites/slots/config
+* **ApiVersion**: 2018-02-01
+* **Output**: ConnectionStringDictionary
+
+## Function list (Microsoft.Web/sites/slots/config@2018-02-01)
+* **Resource**: Microsoft.Web/sites/slots/config
+* **ApiVersion**: 2018-02-01
+* **Output**: StringDictionary
+
+## Function list (Microsoft.Web/sites/slots/config@2018-02-01)
+* **Resource**: Microsoft.Web/sites/slots/config
+* **ApiVersion**: 2018-02-01
+* **Output**: PushSettings
+
+## Function listkeys (Microsoft.Web/sites/functions@2018-02-01)
+* **Resource**: Microsoft.Web/sites/functions
+* **ApiVersion**: 2018-02-01
+* **Output**: StringDictionary
+
+## Function listkeys (Microsoft.Web/sites/slots/functions@2018-02-01)
+* **Resource**: Microsoft.Web/sites/slots/functions
+* **ApiVersion**: 2018-02-01
+* **Output**: StringDictionary
+
+## Function listKeys (Microsoft.Web/sites/hybridConnectionNamespaces/relays@2018-02-01)
+* **Resource**: Microsoft.Web/sites/hybridConnectionNamespaces/relays
+* **ApiVersion**: 2018-02-01
+* **Output**: HybridConnectionKey
+
+## Function listKeys (Microsoft.Web/sites/slots/hybridConnectionNamespaces/relays@2018-02-01)
+* **Resource**: Microsoft.Web/sites/slots/hybridConnectionNamespaces/relays
+* **ApiVersion**: 2018-02-01
+* **Output**: HybridConnectionKey
+
+## Function listsecrets (Microsoft.Web/sites/functions@2018-02-01)
+* **Resource**: Microsoft.Web/sites/functions
+* **ApiVersion**: 2018-02-01
+* **Output**: FunctionSecrets
+
+## Function listsecrets (Microsoft.Web/sites/slots/functions@2018-02-01)
+* **Resource**: Microsoft.Web/sites/slots/functions
+* **ApiVersion**: 2018-02-01
+* **Output**: FunctionSecrets
+
+## Function listsyncfunctiontriggerstatus (Microsoft.Web/sites@2018-02-01)
+* **Resource**: Microsoft.Web/sites
+* **ApiVersion**: 2018-02-01
+* **Output**: FunctionSecrets
+
+## Function listsyncfunctiontriggerstatus (Microsoft.Web/sites/slots@2018-02-01)
+* **Resource**: Microsoft.Web/sites/slots
+* **ApiVersion**: 2018-02-01
+* **Output**: FunctionSecrets
 
 ## schemas:249_properties
 ### Properties
@@ -990,6 +1309,138 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## schemas:216_properties
+### Properties
+* **additionalLoginParams**: string[]
+* **allowedAudiences**: string[]
+* **allowedExternalRedirectUrls**: string[]
+* **clientId**: string
+* **clientSecret**: string
+* **clientSecretCertificateThumbprint**: string
+* **defaultProvider**: 'AzureActiveDirectory' | 'Facebook' | 'Google' | 'MicrosoftAccount' | 'Twitter'
+* **enabled**: bool
+* **facebookAppId**: string
+* **facebookAppSecret**: string
+* **facebookOAuthScopes**: string[]
+* **googleClientId**: string
+* **googleClientSecret**: string
+* **googleOAuthScopes**: string[]
+* **issuer**: string
+* **microsoftAccountClientId**: string
+* **microsoftAccountClientSecret**: string
+* **microsoftAccountOAuthScopes**: string[]
+* **runtimeVersion**: string
+* **tokenRefreshExtensionHours**: int
+* **tokenStoreEnabled**: bool
+* **twitterConsumerKey**: string
+* **twitterConsumerSecret**: string
+* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage'
+* **validateIssuer**: bool
+
+## Dictionary<string,AzureStorageInfoValue>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: AzureStorageInfoValue
+
+## schemas:164_properties
+### Properties
+* **backupName**: string
+* **backupSchedule**: BackupSchedule
+* **databases**: DatabaseBackupSetting[]
+* **enabled**: bool
+* **storageAccountUrl**: string (Required)
+
+## BackupSchedule
+### Properties
+* **frequencyInterval**: int (Required)
+* **frequencyUnit**: 'Day' | 'Hour' (Required)
+* **keepAtLeastOneBackup**: bool (Required)
+* **lastExecutionTime**: string (ReadOnly)
+* **retentionPeriodInDays**: int (Required)
+* **startTime**: string
+
+## DatabaseBackupSetting
+### Properties
+* **connectionString**: string
+* **connectionStringName**: string
+* **databaseType**: 'LocalMySql' | 'MySql' | 'PostgreSql' | 'SqlAzure' (Required)
+* **name**: string
+
+## Dictionary<string,ConnStringValueTypePair>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: ConnStringValueTypePair
+
+## ConnStringValueTypePair
+### Properties
+* **type**: 'ApiHub' | 'Custom' | 'DocDb' | 'EventHub' | 'MySql' | 'NotificationHub' | 'PostgreSQL' | 'RedisCache' | 'ServiceBus' | 'SQLAzure' | 'SQLServer' (Required)
+* **value**: string (Required)
+
+## schemas:226_properties
+### Properties
+* **applicationLogs**: ApplicationLogsConfig
+* **detailedErrorMessages**: EnabledConfig
+* **failedRequestsTracing**: EnabledConfig
+* **httpLogs**: HttpLogsConfig
+
+## ApplicationLogsConfig
+### Properties
+* **azureBlobStorage**: AzureBlobStorageApplicationLogsConfig
+* **azureTableStorage**: AzureTableStorageApplicationLogsConfig
+* **fileSystem**: FileSystemApplicationLogsConfig
+
+## AzureBlobStorageApplicationLogsConfig
+### Properties
+* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning'
+* **retentionInDays**: int
+* **sasUrl**: string
+
+## AzureTableStorageApplicationLogsConfig
+### Properties
+* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning'
+* **sasUrl**: string (Required)
+
+## FileSystemApplicationLogsConfig
+### Properties
+* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning'
+
+## EnabledConfig
+### Properties
+* **enabled**: bool
+
+## HttpLogsConfig
+### Properties
+* **azureBlobStorage**: AzureBlobStorageHttpLogsConfig
+* **fileSystem**: FileSystemHttpLogsConfig
+
+## AzureBlobStorageHttpLogsConfig
+### Properties
+* **enabled**: bool
+* **retentionInDays**: int
+* **sasUrl**: string
+
+## FileSystemHttpLogsConfig
+### Properties
+* **enabled**: bool
+* **retentionInDays**: int
+* **retentionInMb**: int
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SlotConfigNames
+### Properties
+* **appSettingNames**: string[]
+* **azureStorageConfigNames**: string[]
+* **connectionStringNames**: string[]
+
 ## schemas:175_properties
 ### Properties
 * **active**: bool
@@ -1131,6 +1582,26 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Dictionary<string,AzureStorageInfoValue>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: AzureStorageInfoValue
+
+## Dictionary<string,ConnStringValueTypePair>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: ConnStringValueTypePair
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## schemas:229_properties
 ### Properties
 * **branch**: string
@@ -1163,4 +1634,85 @@
 * **refreshToken**: string
 * **token**: string
 * **tokenSecret**: string
+
+## StringDictionary
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: Dictionary<string,String> (ReadOnly)
+* **type**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SiteAuthSettings
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: schemas:216_properties (ReadOnly)
+* **type**: string (ReadOnly)
+
+## AzureStoragePropertyDictionaryResource
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: Dictionary<string,AzureStorageInfoValue> (ReadOnly)
+* **type**: string (ReadOnly)
+
+## Dictionary<string,AzureStorageInfoValue>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: AzureStorageInfoValue
+
+## BackupRequest
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: schemas:164_properties (ReadOnly)
+* **type**: string (ReadOnly)
+
+## ConnectionStringDictionary
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: Dictionary<string,ConnStringValueTypePair> (ReadOnly)
+* **type**: string (ReadOnly)
+
+## Dictionary<string,ConnStringValueTypePair>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: ConnStringValueTypePair
+
+## HybridConnectionKey
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: schemas:29_properties (ReadOnly)
+* **type**: string (ReadOnly)
+
+## schemas:29_properties
+### Properties
+* **sendKeyName**: string (ReadOnly)
+* **sendKeyValue**: string (ReadOnly)
+
+## FunctionSecrets
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: schemas:182_properties (ReadOnly)
+* **type**: string (ReadOnly)
+
+## schemas:182_properties
+### Properties
+* **key**: string (ReadOnly)
+* **trigger_url**: string (ReadOnly)
 

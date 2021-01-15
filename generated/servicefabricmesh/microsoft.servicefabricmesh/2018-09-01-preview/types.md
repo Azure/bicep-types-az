@@ -72,6 +72,11 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ServiceFabricMesh/volumes' (ReadOnly, DeployTimeConstant)
 
+## Function list_value (Microsoft.ServiceFabricMesh/secrets/values@2018-09-01-preview)
+* **Resource**: Microsoft.ServiceFabricMesh/secrets/values
+* **ApiVersion**: 2018-09-01-preview
+* **Output**: SecretValue
+
 ## ApplicationResourceProperties
 ### Properties
 * **debugParams**: string
@@ -447,4 +452,8 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SecretValue
+### Properties
+* **value**: string (ReadOnly)
 

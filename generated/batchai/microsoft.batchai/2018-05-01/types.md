@@ -42,6 +42,21 @@
 * **properties**: FileServerBaseProperties
 * **type**: 'Microsoft.BatchAI/workspaces/fileServers' (ReadOnly, DeployTimeConstant)
 
+## Function listOutputFiles (Microsoft.BatchAI/workspaces/experiments/jobs@2018-05-01)
+* **Resource**: Microsoft.BatchAI/workspaces/experiments/jobs
+* **ApiVersion**: 2018-05-01
+* **Output**: FileListResult
+
+## Function listRemoteLoginInformation (Microsoft.BatchAI/workspaces/experiments/jobs@2018-05-01)
+* **Resource**: Microsoft.BatchAI/workspaces/experiments/jobs
+* **ApiVersion**: 2018-05-01
+* **Output**: RemoteLoginInformationListResult
+
+## Function listRemoteLoginInformation (Microsoft.BatchAI/workspaces/clusters@2018-05-01)
+* **Resource**: Microsoft.BatchAI/workspaces/clusters
+* **ApiVersion**: 2018-05-01
+* **Output**: RemoteLoginInformationListResult
+
 ## WorkspaceProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
@@ -376,4 +391,32 @@
 ### Properties
 * **publicIPsToAllow**: string[]
 * **userAccountSettings**: UserAccountSettings (Required)
+
+## FileListResult
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: File[] (ReadOnly)
+
+## File
+### Properties
+* **downloadUrl**: string (ReadOnly)
+* **fileType**: 'directory' | 'file' (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: FileProperties (ReadOnly)
+
+## FileProperties
+### Properties
+* **contentLength**: int (ReadOnly)
+* **lastModified**: string (ReadOnly)
+
+## RemoteLoginInformationListResult
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: RemoteLoginInformation[] (ReadOnly)
+
+## RemoteLoginInformation
+### Properties
+* **ipAddress**: string (ReadOnly)
+* **nodeId**: string (ReadOnly)
+* **port**: int (ReadOnly)
 

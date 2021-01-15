@@ -25,6 +25,11 @@
 * **packages**: ApplicationPackage[] (ReadOnly)
 * **type**: 'Microsoft.Batch/batchAccounts/applications' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.Batch/batchAccounts@2015-12-01)
+* **Resource**: Microsoft.Batch/batchAccounts
+* **ApiVersion**: 2015-12-01
+* **Output**: BatchAccountKeys
+
 ## BatchAccountBaseProperties
 ### Properties
 * **accountEndpoint**: string (ReadOnly)
@@ -53,4 +58,9 @@
 * **storageUrl**: string (ReadOnly)
 * **storageUrlExpiry**: string (ReadOnly)
 * **version**: string (ReadOnly)
+
+## BatchAccountKeys
+### Properties
+* **primary**: string (ReadOnly)
+* **secondary**: string (ReadOnly)
 

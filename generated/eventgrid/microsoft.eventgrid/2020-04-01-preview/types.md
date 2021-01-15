@@ -124,6 +124,21 @@
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: 'Microsoft.EventGrid/topics/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.EventGrid/domains@2020-04-01-preview)
+* **Resource**: Microsoft.EventGrid/domains
+* **ApiVersion**: 2020-04-01-preview
+* **Output**: DomainSharedAccessKeys
+
+## Function listKeys (Microsoft.EventGrid/partnerNamespaces@2020-04-01-preview)
+* **Resource**: Microsoft.EventGrid/partnerNamespaces
+* **ApiVersion**: 2020-04-01-preview
+* **Output**: PartnerNamespaceSharedAccessKeys
+
+## Function listKeys (Microsoft.EventGrid/topics@2020-04-01-preview)
+* **Resource**: Microsoft.EventGrid/topics
+* **ApiVersion**: 2020-04-01-preview
+* **Output**: TopicSharedAccessKeys
+
 ## IdentityInfo
 ### Properties
 * **principalId**: string
@@ -601,4 +616,19 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DomainSharedAccessKeys
+### Properties
+* **key1**: string (ReadOnly)
+* **key2**: string (ReadOnly)
+
+## PartnerNamespaceSharedAccessKeys
+### Properties
+* **key1**: string (ReadOnly)
+* **key2**: string (ReadOnly)
+
+## TopicSharedAccessKeys
+### Properties
+* **key1**: string (ReadOnly)
+* **key2**: string (ReadOnly)
 

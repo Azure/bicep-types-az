@@ -1,12 +1,35 @@
 
 Executing: autorest --use=/home/runner/work/bicep-types-az/bicep-types-az/src/generator --azureresourceschema --output-folder=/home/runner/work/bicep-types-az/bicep-types-az/generated/recoveryservicessiterecovery --multiapi /home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/readme.md
-AutoRest code generation utility [cli version: 3.0.6322; node: v14.15.1, max-memory: 2048 MB]
+AutoRest code generation utility [cli version: 3.0.6322; node: v14.15.4, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.0.6351)
    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
    Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
 Processing batch task - {"tag":"schema-recoveryservices-2018-07-10"} .
-Processing batch task - {"tag":"schema-recoveryservices-2018-01-10"} .
-Processing batch task - {"tag":"schema-recoveryservices-2016-08-10"} .
-[77.49 s] Generation Complete
+
+
+#
+# Fatal error in , line 0
+# Check failed: feedback_value->IsPropertyCell().
+#
+#
+#
+#FailureMessage Object: 0x7fffc2febce0
+ 1: 0xa71261  [/usr/local/bin/node]
+ 2: 0x19d3254 V8_Fatal(char const*, ...) [/usr/local/bin/node]
+ 3: 0x1a3f12e v8::internal::compiler::JSHeapBroker::ReadFeedbackForGlobalAccess(v8::internal::compiler::FeedbackSource const&) [/usr/local/bin/node]
+ 4: 0x1a461a8 v8::internal::compiler::JSHeapBroker::GetFeedbackForGlobalAccess(v8::internal::compiler::FeedbackSource const&) [/usr/local/bin/node]
+ 5: 0x1c16bf6 v8::internal::compiler::JSNativeContextSpecialization::ReduceJSLoadGlobal(v8::internal::compiler::Node*) [/usr/local/bin/node]
+ 6: 0x1a74b73  [/usr/local/bin/node]
+ 7: 0x1bb4500 v8::internal::compiler::GraphReducer::Reduce(v8::internal::compiler::Node*) [/usr/local/bin/node]
+ 8: 0x1bb5af5 v8::internal::compiler::GraphReducer::ReduceTop() [/usr/local/bin/node]
+ 9: 0x1bb5ea8 v8::internal::compiler::GraphReducer::ReduceNode(v8::internal::compiler::Node*) [/usr/local/bin/node]
+10: 0x1a80905 v8::internal::compiler::InliningPhase::Run(v8::internal::compiler::PipelineData*, v8::internal::Zone*) [/usr/local/bin/node]
+11: 0x1a80e88 v8::internal::compiler::PipelineImpl::CreateGraph() [/usr/local/bin/node]
+12: 0x1a812a8 v8::internal::compiler::PipelineCompilationJob::PrepareJobImpl(v8::internal::Isolate*) [/usr/local/bin/node]
+13: 0xc4294e v8::internal::OptimizedCompilationJob::PrepareJob(v8::internal::Isolate*) [/usr/local/bin/node]
+14: 0xc4405b  [/usr/local/bin/node]
+15: 0xc451ed v8::internal::Compiler::CompileOptimized(v8::internal::Handle<v8::internal::JSFunction>, v8::internal::ConcurrencyMode) [/usr/local/bin/node]
+16: 0x1041cc1 v8::internal::Runtime_CompileOptimized_Concurrent(int, unsigned long*, v8::internal::Isolate*) [/usr/local/bin/node]
+17: 0x14011f9  [/usr/local/bin/node]

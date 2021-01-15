@@ -13,6 +13,11 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant)
 
+## Function listDetails (Microsoft.ContainerRegistry/registries/tasks@2019-04-01)
+* **Resource**: Microsoft.ContainerRegistry/registries/tasks
+* **ApiVersion**: 2019-04-01
+* **Output**: Task
+
 ## IdentityProperties
 ### Properties
 * **principalId**: string
@@ -191,6 +196,21 @@
 * **name**: string (Required)
 * **schedule**: string (Required)
 * **status**: 'Disabled' | 'Enabled'
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Task
+### Properties
+* **id**: string (ReadOnly)
+* **identity**: IdentityProperties (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: TaskProperties (ReadOnly)
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Properties

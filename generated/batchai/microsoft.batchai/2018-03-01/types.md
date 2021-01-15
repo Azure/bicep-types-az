@@ -36,6 +36,21 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.BatchAI/jobs' (ReadOnly, DeployTimeConstant)
 
+## Function listOutputFiles (Microsoft.BatchAI/jobs@2018-03-01)
+* **Resource**: Microsoft.BatchAI/jobs
+* **ApiVersion**: 2018-03-01
+* **Output**: FileListResult
+
+## Function listRemoteLoginInformation (Microsoft.BatchAI/clusters@2018-03-01)
+* **Resource**: Microsoft.BatchAI/clusters
+* **ApiVersion**: 2018-03-01
+* **Output**: RemoteLoginInformationListResult
+
+## Function listRemoteLoginInformation (Microsoft.BatchAI/jobs@2018-03-01)
+* **Resource**: Microsoft.BatchAI/jobs
+* **ApiVersion**: 2018-03-01
+* **Output**: RemoteLoginInformationListResult
+
 ## ClusterBaseProperties
 ### Properties
 * **allocationState**: 'resizing' | 'steady' (ReadOnly)
@@ -364,4 +379,32 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## FileListResult
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: File[] (ReadOnly)
+
+## File
+### Properties
+* **downloadUrl**: string (ReadOnly)
+* **isDirectory**: bool (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: FileProperties (ReadOnly)
+
+## FileProperties
+### Properties
+* **contentLength**: int (ReadOnly)
+* **lastModified**: string (ReadOnly)
+
+## RemoteLoginInformationListResult
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: RemoteLoginInformation[] (ReadOnly)
+
+## RemoteLoginInformation
+### Properties
+* **ipAddress**: string (ReadOnly)
+* **nodeId**: string (ReadOnly)
+* **port**: int (ReadOnly)
 

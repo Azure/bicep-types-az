@@ -1,6 +1,6 @@
 
 Executing: autorest --use=/home/runner/work/bicep-types-az/bicep-types-az/src/generator --azureresourceschema --output-folder=/home/runner/work/bicep-types-az/bicep-types-az/generated/storage --multiapi /home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storage/resource-manager/readme.md
-AutoRest code generation utility [cli version: 3.0.6322; node: v14.15.1, max-memory: 2048 MB]
+AutoRest code generation utility [cli version: 3.0.6322; node: v14.15.4, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.0.6351)
@@ -14,6 +14,7 @@ Processing batch task - {"tag":"schema-storage-2019-04-01"} .
 Processing batch task - {"tag":"schema-storage-2018-11-01"} .
 Processing batch task - {"tag":"schema-storage-2018-07-01"} .
 Processing batch task - {"tag":"schema-storage-2018-03-01-preview"} .
+WARNING: Skipping resource type Microsoft.Storage/storageAccounts/managementPolicies under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/managementPolicies/{managementPolicyName}': Found multiple definitions for the same type
 Processing batch task - {"tag":"schema-storage-2018-02-01"} .
 Processing batch task - {"tag":"schema-storage-2017-10-01"} .
 Processing batch task - {"tag":"schema-storage-2017-06-01"} .
@@ -22,4 +23,4 @@ Processing batch task - {"tag":"schema-storage-2016-05-01"} .
 Processing batch task - {"tag":"schema-storage-2016-01-01"} .
 Processing batch task - {"tag":"schema-storage-2015-06-15"} .
 Processing batch task - {"tag":"schema-storage-2015-05-01-preview"} .
-[73.9 s] Generation Complete
+[59.98 s] Generation Complete

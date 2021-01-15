@@ -13,6 +13,12 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DevSpaces/controllers' (ReadOnly, DeployTimeConstant)
 
+## Function listConnectionDetails (Microsoft.DevSpaces/controllers@2019-04-01)
+* **Resource**: Microsoft.DevSpaces/controllers
+* **ApiVersion**: 2019-04-01
+* **Input**: ListConnectionDetailsParameters
+* **Output**: ControllerConnectionDetailsList
+
 ## ControllerProperties
 ### Properties
 * **dataPlaneFqdn**: string (ReadOnly)
@@ -31,4 +37,30 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ListConnectionDetailsParameters
+### Properties
+* **targetContainerHostResourceId**: string (Required, WriteOnly)
+
+## ControllerConnectionDetailsList
+### Properties
+* **connectionDetailsList**: ControllerConnectionDetails[] (ReadOnly)
+
+## ControllerConnectionDetails
+### Properties
+* **orchestratorSpecificConnectionDetails**: OrchestratorSpecificConnectionDetails (ReadOnly)
+
+## OrchestratorSpecificConnectionDetails
+* **Discriminator**: instanceType
+### Base Properties
+### Kubernetes
+#### Properties
+* **instanceType**: 'Kubernetes' (Required)
+* **kubeConfig**: string (ReadOnly)
+
+
+## Kubernetes
+### Properties
+* **instanceType**: 'Kubernetes' (Required)
+* **kubeConfig**: string (ReadOnly)
 

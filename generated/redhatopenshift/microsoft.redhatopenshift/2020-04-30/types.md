@@ -12,6 +12,11 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.RedHatOpenShift/openShiftClusters' (ReadOnly, DeployTimeConstant)
 
+## Function listCredentials (Microsoft.RedHatOpenShift/openShiftClusters@2020-04-30)
+* **Resource**: Microsoft.RedHatOpenShift/openShiftClusters
+* **ApiVersion**: 2020-04-30
+* **Output**: OpenShiftClusterCredentials
+
 ## OpenShiftClusterProperties
 ### Properties
 * **apiserverProfile**: APIServerProfile
@@ -74,4 +79,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## OpenShiftClusterCredentials
+### Properties
+* **kubeadminPassword**: string (ReadOnly)
+* **kubeadminUsername**: string (ReadOnly)
 

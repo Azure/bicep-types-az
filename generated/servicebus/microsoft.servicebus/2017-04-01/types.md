@@ -113,6 +113,21 @@
 * **properties**: Ruleproperties
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions/rules' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2017-04-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules
+* **ApiVersion**: 2017-04-01
+* **Output**: AccessKeys
+
+## Function listKeys (Microsoft.ServiceBus/namespaces/queues/authorizationRules@2017-04-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/queues/authorizationRules
+* **ApiVersion**: 2017-04-01
+* **Output**: AccessKeys
+
+## Function listKeys (Microsoft.ServiceBus/namespaces/topics/authorizationRules@2017-04-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/topics/authorizationRules
+* **ApiVersion**: 2017-04-01
+* **Output**: AccessKeys
+
 ## SBNamespaceProperties
 ### Properties
 * **createdAt**: string (ReadOnly)
@@ -279,4 +294,14 @@
 * **compatibilityLevel**: int
 * **requiresPreprocessing**: bool
 * **sqlExpression**: string
+
+## AccessKeys
+### Properties
+* **aliasPrimaryConnectionString**: string (ReadOnly)
+* **aliasSecondaryConnectionString**: string (ReadOnly)
+* **keyName**: string (ReadOnly)
+* **primaryConnectionString**: string (ReadOnly)
+* **primaryKey**: string (ReadOnly)
+* **secondaryConnectionString**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

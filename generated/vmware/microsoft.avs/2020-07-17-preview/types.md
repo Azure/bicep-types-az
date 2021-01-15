@@ -124,6 +124,11 @@
 * **properties**: WorkloadNetworkVMGroupProperties
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/vmGroups' (ReadOnly, DeployTimeConstant)
 
+## Function listAdminCredentials (Microsoft.AVS/privateClouds@2020-07-17-preview)
+* **Resource**: Microsoft.AVS/privateClouds
+* **ApiVersion**: 2020-07-17-preview
+* **Output**: AdminCredentials
+
 ## PrivateCloudProperties
 ### Properties
 * **circuit**: Circuit
@@ -302,4 +307,11 @@
 * **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **revision**: int
 * **status**: 'SUCCESS, FAILURE' (ReadOnly)
+
+## AdminCredentials
+### Properties
+* **nsxtPassword**: string (ReadOnly)
+* **nsxtUsername**: string (ReadOnly)
+* **vcenterPassword**: string (ReadOnly)
+* **vcenterUsername**: string (ReadOnly)
 

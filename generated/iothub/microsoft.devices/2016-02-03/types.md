@@ -16,6 +16,11 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Devices/IotHubs' (ReadOnly, DeployTimeConstant)
 
+## Function listkeys (Microsoft.Devices/IotHubs@2016-02-03)
+* **Resource**: Microsoft.Devices/IotHubs
+* **ApiVersion**: 2016-02-03
+* **Output**: SharedAccessSignatureAuthorizationRuleListResult
+
 ## IotHubProperties
 ### Properties
 * **authorizationPolicies**: SharedAccessSignatureAuthorizationRule[]
@@ -110,4 +115,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SharedAccessSignatureAuthorizationRuleListResult
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: SharedAccessSignatureAuthorizationRule[] (ReadOnly)
 

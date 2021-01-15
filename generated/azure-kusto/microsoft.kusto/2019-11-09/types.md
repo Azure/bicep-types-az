@@ -93,6 +93,16 @@
 * **properties**: ClusterPrincipalProperties
 * **type**: 'Microsoft.Kusto/clusters/principalAssignments' (ReadOnly, DeployTimeConstant)
 
+## Function listFollowerDatabases (Microsoft.Kusto/clusters@2019-11-09)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2019-11-09
+* **Output**: FollowerDatabaseListResult
+
+## Function listPrincipals (Microsoft.Kusto/clusters/databases@2019-11-09)
+* **Resource**: Microsoft.Kusto/clusters/databases
+* **ApiVersion**: 2019-11-09
+* **Output**: DatabasePrincipalListResult
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -261,4 +271,28 @@
 * **role**: 'AllDatabasesAdmin' | 'AllDatabasesViewer' (Required)
 * **tenantId**: string
 * **tenantName**: string (ReadOnly)
+
+## FollowerDatabaseListResult
+### Properties
+* **value**: FollowerDatabaseDefinition[] (ReadOnly)
+
+## FollowerDatabaseDefinition
+### Properties
+* **attachedDatabaseConfigurationName**: string (ReadOnly)
+* **clusterResourceId**: string (ReadOnly)
+* **databaseName**: string (ReadOnly)
+
+## DatabasePrincipalListResult
+### Properties
+* **value**: DatabasePrincipal[] (ReadOnly)
+
+## DatabasePrincipal
+### Properties
+* **appId**: string (ReadOnly)
+* **email**: string (ReadOnly)
+* **fqn**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' (ReadOnly)
+* **tenantName**: string (ReadOnly)
+* **type**: 'App' | 'Group' | 'User' (ReadOnly)
 

@@ -25,6 +25,11 @@
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: 'Microsoft.SignalRService/signalR/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.SignalRService/signalR@2020-07-01-preview)
+* **Resource**: Microsoft.SignalRService/signalR
+* **ApiVersion**: 2020-07-01-preview
+* **Output**: SignalRKeys
+
 ## ManagedIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -149,4 +154,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SignalRKeys
+### Properties
+* **primaryConnectionString**: string (ReadOnly)
+* **primaryKey**: string (ReadOnly)
+* **secondaryConnectionString**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

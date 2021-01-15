@@ -22,6 +22,11 @@
 * **properties**: WorkflowAccessKeyProperties
 * **type**: 'Microsoft.Logic/workflows/accessKeys' (ReadOnly, DeployTimeConstant)
 
+## Function list (Microsoft.Logic/workflows/accessKeys@2015-02-01-preview)
+* **Resource**: Microsoft.Logic/workflows/accessKeys
+* **ApiVersion**: 2015-02-01-preview
+* **Output**: WorkflowSecretKeys
+
 ## WorkflowProperties
 ### Properties
 * **accessEndpoint**: string (ReadOnly)
@@ -80,4 +85,9 @@
 ### Properties
 * **notAfter**: string
 * **notBefore**: string
+
+## WorkflowSecretKeys
+### Properties
+* **primarySecretKey**: string (ReadOnly)
+* **secondarySecretKey**: string (ReadOnly)
 

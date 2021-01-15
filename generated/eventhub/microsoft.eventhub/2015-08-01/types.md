@@ -57,6 +57,16 @@
 * **properties**: ConsumerGroupProperties
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.EventHub/namespaces/AuthorizationRules@2015-08-01)
+* **Resource**: Microsoft.EventHub/namespaces/AuthorizationRules
+* **ApiVersion**: 2015-08-01
+* **Output**: ResourceListKeys
+
+## Function listKeys (Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2015-08-01)
+* **Resource**: Microsoft.EventHub/namespaces/eventhubs/authorizationRules
+* **ApiVersion**: 2015-08-01
+* **Output**: ResourceListKeys
+
 ## NamespaceProperties
 ### Properties
 * **createdAt**: string
@@ -97,4 +107,12 @@
 * **eventHubPath**: string (ReadOnly)
 * **updatedAt**: string (ReadOnly)
 * **userMetadata**: string
+
+## ResourceListKeys
+### Properties
+* **keyName**: string (ReadOnly)
+* **primaryConnectionString**: string (ReadOnly)
+* **primaryKey**: string (ReadOnly)
+* **secondaryConnectionString**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

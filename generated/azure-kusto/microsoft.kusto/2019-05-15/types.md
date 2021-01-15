@@ -51,6 +51,11 @@
 * **properties**: IotHubConnectionProperties
 
 
+## Function listPrincipals (Microsoft.Kusto/clusters/databases@2019-05-15)
+* **Resource**: Microsoft.Kusto/clusters/databases
+* **ApiVersion**: 2019-05-15
+* **Output**: DatabasePrincipalListResult
+
 ## ClusterProperties
 ### Properties
 * **dataIngestionUri**: string (ReadOnly)
@@ -144,4 +149,18 @@
 * **mappingRuleName**: string
 * **sharedAccessPolicyName**: string (Required)
 * **tableName**: string
+
+## DatabasePrincipalListResult
+### Properties
+* **value**: DatabasePrincipal[] (ReadOnly)
+
+## DatabasePrincipal
+### Properties
+* **appId**: string (ReadOnly)
+* **email**: string (ReadOnly)
+* **fqn**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' (ReadOnly)
+* **tenantName**: string (ReadOnly)
+* **type**: 'App' | 'Group' | 'User' (ReadOnly)
 

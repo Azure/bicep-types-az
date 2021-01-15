@@ -12,6 +12,11 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant)
 
+## Function listAdminKeys (Microsoft.Search/searchServices@2015-02-28)
+* **Resource**: Microsoft.Search/searchServices
+* **ApiVersion**: 2015-02-28
+* **Output**: AdminKeyResult
+
 ## SearchServiceProperties
 ### Properties
 * **partitionCount**: int
@@ -26,4 +31,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## AdminKeyResult
+### Properties
+* **primaryKey**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

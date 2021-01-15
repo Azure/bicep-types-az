@@ -13,26 +13,6 @@
 * **sku**: PolicySku
 * **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.Authorization/policyDefinitions@2018-05-01
-* **Valid Scope(s)**: ManagementGroup, Subscription
-### Properties
-* **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyDefinitionProperties
-* **type**: 'Microsoft.Authorization/policyDefinitions' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.Authorization/policySetDefinitions@2018-05-01
-* **Valid Scope(s)**: ManagementGroup, Subscription
-### Properties
-* **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicySetDefinitionProperties
-* **type**: 'Microsoft.Authorization/policySetDefinitions' (ReadOnly, DeployTimeConstant)
-
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -53,28 +33,4 @@
 ### Properties
 * **name**: string (Required)
 * **tier**: string
-
-## PolicyDefinitionProperties
-### Properties
-* **description**: string
-* **displayName**: string
-* **metadata**: any
-* **mode**: 'All' | 'Indexed' | 'NotSpecified'
-* **parameters**: any
-* **policyRule**: any
-* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified'
-
-## PolicySetDefinitionProperties
-### Properties
-* **description**: string
-* **displayName**: string
-* **metadata**: any
-* **parameters**: any
-* **policyDefinitions**: PolicyDefinitionReference[] (Required)
-* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified'
-
-## PolicyDefinitionReference
-### Properties
-* **parameters**: any
-* **policyDefinitionId**: string
 

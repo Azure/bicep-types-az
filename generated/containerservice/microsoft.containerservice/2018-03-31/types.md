@@ -12,6 +12,16 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant)
 
+## Function listClusterAdminCredential (Microsoft.ContainerService/managedClusters@2018-03-31)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2018-03-31
+* **Output**: CredentialResults
+
+## Function listClusterUserCredential (Microsoft.ContainerService/managedClusters@2018-03-31)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2018-03-31
+* **Output**: CredentialResults
+
 ## ManagedClusterProperties
 ### Properties
 * **aadProfile**: ManagedClusterAADProfile
@@ -91,4 +101,13 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## CredentialResults
+### Properties
+* **kubeconfigs**: CredentialResult[] (ReadOnly)
+
+## CredentialResult
+### Properties
+* **name**: string (ReadOnly)
+* **value**: array (ReadOnly)
 

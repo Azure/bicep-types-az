@@ -13,6 +13,11 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.ContainerRegistry/registries' (ReadOnly, DeployTimeConstant)
 
+## Function listCredentials (Microsoft.ContainerRegistry/registries@2017-03-01)
+* **Resource**: Microsoft.ContainerRegistry/registries
+* **ApiVersion**: 2017-03-01
+* **Output**: RegistryListCredentialsResult
+
 ## RegistryPropertiesCreateParameters
 ### Properties
 * **adminUserEnabled**: bool
@@ -35,4 +40,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## RegistryListCredentialsResult
+### Properties
+* **passwords**: RegistryPassword[] (ReadOnly)
+* **username**: string (ReadOnly)
+
+## RegistryPassword
+### Properties
+* **name**: 'password' | 'password2' (ReadOnly)
+* **value**: string (ReadOnly)
 

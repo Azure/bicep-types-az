@@ -86,6 +86,11 @@
 * **properties**: MonitoringSettingProperties
 * **type**: 'Microsoft.AppPlatform/Spring/monitoringSettings' (ReadOnly, DeployTimeConstant)
 
+## Function listTestKeys (Microsoft.AppPlatform/Spring@2020-07-01)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2020-07-01
+* **Output**: TestKeys
+
 ## ClusterResourceProperties
 ### Properties
 * **networkProfile**: NetworkProfile
@@ -269,4 +274,12 @@
 * **error**: Error
 * **provisioningState**: 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' (ReadOnly)
 * **traceEnabled**: bool
+
+## TestKeys
+### Properties
+* **enabled**: bool (ReadOnly)
+* **primaryKey**: string (ReadOnly)
+* **primaryTestEndpoint**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
+* **secondaryTestEndpoint**: string (ReadOnly)
 

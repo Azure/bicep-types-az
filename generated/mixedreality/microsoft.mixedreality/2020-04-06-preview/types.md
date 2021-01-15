@@ -13,6 +13,11 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.MixedReality/remoteRenderingAccounts' (ReadOnly, DeployTimeConstant)
 
+## Function listKeys (Microsoft.MixedReality/remoteRenderingAccounts@2020-04-06-preview)
+* **Resource**: Microsoft.MixedReality/remoteRenderingAccounts
+* **ApiVersion**: 2020-04-06-preview
+* **Output**: AccountKeys
+
 ## schemas:0_identity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -28,4 +33,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## AccountKeys
+### Properties
+* **primaryKey**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 

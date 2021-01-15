@@ -57,6 +57,23 @@
 * **properties**: ManagementPolicyProperties (ReadOnly)
 * **type**: 'Microsoft.Storage/storageAccounts/managementPolicies' (ReadOnly, DeployTimeConstant)
 
+## Function listAccountSas (Microsoft.Storage/storageAccounts@2018-11-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2018-11-01
+* **Input**: AccountSasParameters
+* **Output**: ListAccountSasResponse
+
+## Function listKeys (Microsoft.Storage/storageAccounts@2018-11-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2018-11-01
+* **Output**: StorageAccountListKeysResult
+
+## Function listServiceSas (Microsoft.Storage/storageAccounts@2018-11-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2018-11-01
+* **Input**: ServiceSasParameters
+* **Output**: ListServiceSasResponse
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -294,4 +311,54 @@
 ### Properties
 * **blobTypes**: string[] (Required)
 * **prefixMatch**: string[]
+
+## AccountSasParameters
+### Properties
+* **keyToSign**: string (WriteOnly)
+* **signedExpiry**: string (Required, WriteOnly)
+* **signedIp**: string (WriteOnly)
+* **signedPermission**: 'a' | 'c' | 'd' | 'l' | 'p' | 'r' | 'u' | 'w' (Required, WriteOnly)
+* **signedProtocol**: 'https,http' | 'https' (WriteOnly)
+* **signedResourceTypes**: 'c' | 'o' | 's' (Required, WriteOnly)
+* **signedServices**: 'b' | 'f' | 'q' | 't' (Required, WriteOnly)
+* **signedStart**: string (WriteOnly)
+
+## ListAccountSasResponse
+### Properties
+* **accountSasToken**: string (ReadOnly)
+
+## StorageAccountListKeysResult
+### Properties
+* **keys**: StorageAccountKey[] (ReadOnly)
+
+## StorageAccountKey
+### Properties
+* **keyName**: string (ReadOnly)
+* **permissions**: 'Full' | 'Read' (ReadOnly)
+* **value**: string (ReadOnly)
+
+## ServiceSasParameters
+### Properties
+* **canonicalizedResource**: string (Required, WriteOnly)
+* **endPk**: string (WriteOnly)
+* **endRk**: string (WriteOnly)
+* **keyToSign**: string (WriteOnly)
+* **rscc**: string (WriteOnly)
+* **rscd**: string (WriteOnly)
+* **rsce**: string (WriteOnly)
+* **rscl**: string (WriteOnly)
+* **rsct**: string (WriteOnly)
+* **signedExpiry**: string (WriteOnly)
+* **signedIdentifier**: string (WriteOnly)
+* **signedIp**: string (WriteOnly)
+* **signedPermission**: 'a' | 'c' | 'd' | 'l' | 'p' | 'r' | 'u' | 'w' (WriteOnly)
+* **signedProtocol**: 'https,http' | 'https' (WriteOnly)
+* **signedResource**: 'b' | 'c' | 'f' | 's' (WriteOnly)
+* **signedStart**: string (WriteOnly)
+* **startPk**: string (WriteOnly)
+* **startRk**: string (WriteOnly)
+
+## ListServiceSasResponse
+### Properties
+* **serviceSasToken**: string (ReadOnly)
 

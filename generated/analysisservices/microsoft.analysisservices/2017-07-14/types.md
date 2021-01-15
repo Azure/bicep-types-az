@@ -13,6 +13,11 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.AnalysisServices/servers' (ReadOnly, DeployTimeConstant)
 
+## Function listGatewayStatus (Microsoft.AnalysisServices/servers@2017-07-14)
+* **Resource**: Microsoft.AnalysisServices/servers
+* **ApiVersion**: 2017-07-14
+* **Output**: GatewayListStatusLive
+
 ## AnalysisServicesServerProperties
 ### Properties
 * **asAdministrators**: ServerAdministrators
@@ -43,4 +48,8 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## GatewayListStatusLive
+### Properties
+* **status**: int (ReadOnly)
 

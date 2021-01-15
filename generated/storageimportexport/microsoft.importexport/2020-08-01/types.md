@@ -13,6 +13,11 @@
 * **tags**: any
 * **type**: 'Microsoft.ImportExport/jobs' (ReadOnly, DeployTimeConstant)
 
+## Function listBitLockerKeys (Microsoft.ImportExport/jobs@2020-08-01)
+* **Resource**: Microsoft.ImportExport/jobs
+* **ApiVersion**: 2020-08-01
+* **Output**: GetBitLockerKeysResponse
+
 ## IdentityDetails
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -113,4 +118,13 @@
 * **stateOrProvince**: string (Required)
 * **streetAddress1**: string (Required)
 * **streetAddress2**: string
+
+## GetBitLockerKeysResponse
+### Properties
+* **value**: DriveBitLockerKey[] (ReadOnly)
+
+## DriveBitLockerKey
+### Properties
+* **bitLockerKey**: string (ReadOnly)
+* **driveId**: string (ReadOnly)
 

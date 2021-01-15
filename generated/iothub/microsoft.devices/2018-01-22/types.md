@@ -26,6 +26,11 @@
 * **properties**: CertificateProperties (ReadOnly)
 * **type**: 'Microsoft.Devices/IotHubs/certificates' (ReadOnly, DeployTimeConstant)
 
+## Function listkeys (Microsoft.Devices/IotHubs@2018-01-22)
+* **Resource**: Microsoft.Devices/IotHubs
+* **ApiVersion**: 2018-01-22
+* **Output**: SharedAccessSignatureAuthorizationRuleListResult
+
 ## IotHubProperties
 ### Properties
 * **authorizationPolicies**: SharedAccessSignatureAuthorizationRule[]
@@ -193,4 +198,9 @@
 * **subject**: string (ReadOnly)
 * **thumbprint**: string (ReadOnly)
 * **updated**: string (ReadOnly)
+
+## SharedAccessSignatureAuthorizationRuleListResult
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: SharedAccessSignatureAuthorizationRule[] (ReadOnly)
 

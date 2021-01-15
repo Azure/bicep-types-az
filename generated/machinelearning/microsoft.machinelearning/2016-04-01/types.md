@@ -12,6 +12,11 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.MachineLearning/workspaces' (ReadOnly, DeployTimeConstant)
 
+## Function listWorkspaceKeys (Microsoft.MachineLearning/workspaces@2016-04-01)
+* **Resource**: Microsoft.MachineLearning/workspaces
+* **ApiVersion**: 2016-04-01
+* **Output**: WorkspaceKeysResponse
+
 ## WorkspaceProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
@@ -27,4 +32,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## WorkspaceKeysResponse
+### Properties
+* **primaryToken**: string (ReadOnly)
+* **secondaryToken**: string (ReadOnly)
 

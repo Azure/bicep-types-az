@@ -26,6 +26,34 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.HDInsight/clusters/applications' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.HDInsight/clusters/extensions@2018-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **clusterMonitoringEnabled**: bool (ReadOnly)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **primaryKey**: string (WriteOnly)
+* **type**: 'Microsoft.HDInsight/clusters/extensions' (ReadOnly, DeployTimeConstant)
+* **workspaceId**: string
+
+## Resource Microsoft.HDInsight/clusters/extensions@2018-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **dependsOn**: resourceref[] (WriteOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **primaryKey**: string
+* **type**: 'Microsoft.HDInsight/clusters/extensions' (ReadOnly, DeployTimeConstant)
+* **workspaceId**: string
+
+## Function listHosts (Microsoft.HDInsight/clusters@2018-06-01-preview)
+* **Resource**: Microsoft.HDInsight/clusters
+* **ApiVersion**: 2018-06-01-preview
+* **Output**: ErrorResponse
+
 ## ClusterIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -288,4 +316,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ErrorResponse
+### Properties
+* **code**: string (ReadOnly)
+* **message**: string (ReadOnly)
 

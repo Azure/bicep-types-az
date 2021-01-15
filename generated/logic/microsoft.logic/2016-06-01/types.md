@@ -133,6 +133,53 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Logic/workflows' (ReadOnly, DeployTimeConstant)
 
+## Function listCallbackUrl (Microsoft.Logic/workflows@2016-06-01)
+* **Resource**: Microsoft.Logic/workflows
+* **ApiVersion**: 2016-06-01
+* **Input**: GetCallbackUrlParameters
+* **Output**: WorkflowTriggerCallbackUrl
+
+## Function listCallbackUrl (Microsoft.Logic/integrationAccounts@2016-06-01)
+* **Resource**: Microsoft.Logic/integrationAccounts
+* **ApiVersion**: 2016-06-01
+* **Input**: GetCallbackUrlParameters
+* **Output**: CallbackUrl
+
+## Function listContentCallbackUrl (Microsoft.Logic/integrationAccounts/assemblies@2016-06-01)
+* **Resource**: Microsoft.Logic/integrationAccounts/assemblies
+* **ApiVersion**: 2016-06-01
+* **Output**: WorkflowTriggerCallbackUrl
+
+## Function listContentCallbackUrl (Microsoft.Logic/integrationAccounts/schemas@2016-06-01)
+* **Resource**: Microsoft.Logic/integrationAccounts/schemas
+* **ApiVersion**: 2016-06-01
+* **Input**: GetCallbackUrlParameters
+* **Output**: WorkflowTriggerCallbackUrl
+
+## Function listContentCallbackUrl (Microsoft.Logic/integrationAccounts/maps@2016-06-01)
+* **Resource**: Microsoft.Logic/integrationAccounts/maps
+* **ApiVersion**: 2016-06-01
+* **Input**: GetCallbackUrlParameters
+* **Output**: WorkflowTriggerCallbackUrl
+
+## Function listContentCallbackUrl (Microsoft.Logic/integrationAccounts/partners@2016-06-01)
+* **Resource**: Microsoft.Logic/integrationAccounts/partners
+* **ApiVersion**: 2016-06-01
+* **Input**: GetCallbackUrlParameters
+* **Output**: WorkflowTriggerCallbackUrl
+
+## Function listContentCallbackUrl (Microsoft.Logic/integrationAccounts/agreements@2016-06-01)
+* **Resource**: Microsoft.Logic/integrationAccounts/agreements
+* **ApiVersion**: 2016-06-01
+* **Input**: GetCallbackUrlParameters
+* **Output**: WorkflowTriggerCallbackUrl
+
+## Function listKeyVaultKeys (Microsoft.Logic/integrationAccounts@2016-06-01)
+* **Resource**: Microsoft.Logic/integrationAccounts
+* **ApiVersion**: 2016-06-01
+* **Input**: ListKeyVaultKeysDefinition
+* **Output**: KeyVaultKeyCollection
+
 ## IntegrationAccountSku
 ### Properties
 * **name**: 'Free' | 'NotSpecified' | 'Standard' (Required)
@@ -863,4 +910,57 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## GetCallbackUrlParameters
+### Properties
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly)
+* **notAfter**: string (WriteOnly)
+
+## WorkflowTriggerCallbackUrl
+### Properties
+* **basePath**: string (ReadOnly)
+* **method**: string (ReadOnly)
+* **queries**: WorkflowTriggerListCallbackUrlQueries (ReadOnly)
+* **relativePath**: string (ReadOnly)
+* **relativePathParameters**: string[] (ReadOnly)
+* **value**: string (ReadOnly)
+
+## WorkflowTriggerListCallbackUrlQueries
+### Properties
+* **api-version**: string (ReadOnly)
+* **se**: string (ReadOnly)
+* **sig**: string (ReadOnly)
+* **sp**: string (ReadOnly)
+* **sv**: string (ReadOnly)
+
+## CallbackUrl
+### Properties
+* **value**: string (ReadOnly)
+
+## ListKeyVaultKeysDefinition
+### Properties
+* **keyVault**: KeyVaultReference (Required, WriteOnly)
+* **skipToken**: string (WriteOnly)
+
+## KeyVaultReference
+### Properties
+* **id**: string (ReadOnly, WriteOnly)
+* **name**: string (ReadOnly, WriteOnly)
+* **type**: string (ReadOnly, WriteOnly)
+
+## KeyVaultKeyCollection
+### Properties
+* **skipToken**: string (ReadOnly)
+* **value**: KeyVaultKey[] (ReadOnly)
+
+## KeyVaultKey
+### Properties
+* **attributes**: schemas:162_attributes (ReadOnly)
+* **kid**: string (ReadOnly)
+
+## schemas:162_attributes
+### Properties
+* **created**: int (ReadOnly)
+* **enabled**: bool (ReadOnly)
+* **updated**: int (ReadOnly)
 

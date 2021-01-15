@@ -73,6 +73,12 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Logic/integrationAccounts/schemas' (ReadOnly, DeployTimeConstant)
 
+## Function listCallbackUrl (Microsoft.Logic/integrationAccounts@2015-08-01-preview)
+* **Resource**: Microsoft.Logic/integrationAccounts
+* **ApiVersion**: 2015-08-01-preview
+* **Input**: ListCallbackUrlParameters
+* **Output**: CallbackUrl
+
 ## IntegrationAccountSku
 ### Properties
 * **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard'
@@ -622,4 +628,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ListCallbackUrlParameters
+### Properties
+* **NotAfter**: string (WriteOnly)
+
+## CallbackUrl
+### Properties
+* **value**: string (ReadOnly)
 
