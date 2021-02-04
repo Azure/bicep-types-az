@@ -35,18 +35,14 @@ namespace Azure.Bicep.TypeGen.Index
             return (typeFile, relativePath);
         }
 
-        private static IndexedTypes BuildIndex(string baseDir)
+        private static TypeIndex BuildIndex(string baseDir)
         {
             // Use a consistent sort order so that file system differences don't generate changes
             var typeFiles = Directory.GetFiles(baseDir, "types.json", SearchOption.AllDirectories)
                 .Select(typeFile => GetRelativeAssemblyPath(baseDir, typeFile))
                 .OrderBy(x => x.relativePath, StringComparer.OrdinalIgnoreCase);
 
-            var tenant = new Dictionary<string, TypeLocation>(StringComparer.OrdinalIgnoreCase);
-            var managementGroup = new Dictionary<string, TypeLocation>(StringComparer.OrdinalIgnoreCase);
-            var subscription = new Dictionary<string, TypeLocation>(StringComparer.OrdinalIgnoreCase);
-            var resourceGroup = new Dictionary<string, TypeLocation>(StringComparer.OrdinalIgnoreCase);
-            var extension = new Dictionary<string, TypeLocation>(StringComparer.OrdinalIgnoreCase);
+            var typeDictionary = new Dictionary<string, TypeLocation>(StringComparer.OrdinalIgnoreCase);
 
             foreach (var (originalPath, relativePath) in typeFiles)
             {
@@ -55,7 +51,7 @@ namespace Azure.Bicep.TypeGen.Index
 
                 foreach (var (type, index) in indexedTypes.OrderBy(x => x.index))
                 {
-                    if (!(type is ResourceType resourceType))
+                    if (type is not ResourceType resourceType)
                     {
                         continue;
                     }
@@ -65,45 +61,21 @@ namespace Azure.Bicep.TypeGen.Index
                         throw new ArgumentException($"Found resource with null resource name");
                     }
 
-                    var typeLocation = new TypeLocation
+                    if (typeDictionary.ContainsKey(resourceType.Name))
+                    {
+                        Console.WriteLine($"WARNING: Found duplicate type {resourceType.Name}");
+                        continue;
+                    }
+
+                    typeDictionary.Add(resourceType.Name, new TypeLocation
                     {
                         RelativePath = relativePath,
                         Index = index,
-                    };
-
-                    if (resourceType.ScopeType == ScopeType.Unknown || resourceType.ScopeType.HasFlag(ScopeType.Tenant))
-                    {
-                        tenant[resourceType.Name] = typeLocation;
-                    }
-
-                    if (resourceType.ScopeType == ScopeType.Unknown || resourceType.ScopeType.HasFlag(ScopeType.ManagementGroup))
-                    {
-                        managementGroup[resourceType.Name] = typeLocation;
-                    }
-
-                    if (resourceType.ScopeType == ScopeType.Unknown || resourceType.ScopeType.HasFlag(ScopeType.Subscription))
-                    {
-                        subscription[resourceType.Name] = typeLocation;
-                    }
-
-                    if (resourceType.ScopeType == ScopeType.Unknown || resourceType.ScopeType.HasFlag(ScopeType.ResourceGroup))
-                    {
-                        resourceGroup[resourceType.Name] = typeLocation;
-                    }
-
-                    if (resourceType.ScopeType == ScopeType.Unknown || resourceType.ScopeType.HasFlag(ScopeType.Extension))
-                    {
-                        extension[resourceType.Name] = typeLocation;
-                    }
+                    });
                 }
             }
 
-            return new IndexedTypes(
-                tenant,
-                managementGroup,
-                subscription,
-                resourceGroup,
-                extension);
+            return new TypeIndex(typeDictionary);
         }
 
         public static string BuildSerializedIndex(string baseDir)

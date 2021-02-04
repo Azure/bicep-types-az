@@ -59,7 +59,7 @@ namespace Azure.Bicep.Types.Az
             }
         }
 
-        public IndexedTypes GetIndexedTypes()
+        public TypeIndex GetIndexedTypes()
         {
             var fileStream = typeof(TypeLoader).Assembly.GetManifestResourceStream(TypeIndexResourceName);
             if (fileStream == null)

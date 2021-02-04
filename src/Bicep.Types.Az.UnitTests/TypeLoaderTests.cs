@@ -14,27 +14,7 @@ namespace Azure.Bicep.Types.Az.UnitTests
             var typeLoader = new TypeLoader();
             var indexedTypes = typeLoader.GetIndexedTypes();
 
-            foreach (var kvp in indexedTypes.Tenant)
-            {
-                var resourceType = typeLoader.LoadResourceType(kvp.Value);
-            }
-
-            foreach (var kvp in indexedTypes.ManagementGroup)
-            {
-                var resourceType = typeLoader.LoadResourceType(kvp.Value);
-            }
-
-            foreach (var kvp in indexedTypes.Subscription)
-            {
-                var resourceType = typeLoader.LoadResourceType(kvp.Value);
-            }
-
-            foreach (var kvp in indexedTypes.ResourceGroup)
-            {
-                var resourceType = typeLoader.LoadResourceType(kvp.Value);
-            }
-
-            foreach (var kvp in indexedTypes.Extension)
+            foreach (var kvp in indexedTypes.Types)
             {
                 var resourceType = typeLoader.LoadResourceType(kvp.Value);
             }
