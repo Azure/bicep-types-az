@@ -28,7 +28,7 @@
     "@types/node": "^14.14.24",
     "@types/yargs": "^16.0.0",
     "async": "^3.2.0",
-    "autorest": "^3.0.6335",
+    "autorest": "^3.0.6336",
     "chalk": "^4.1.0",
     "strip-ansi": "^6.0.0",
     "ts-node": "^9.0.0",
