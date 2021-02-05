@@ -12,6 +12,6 @@ namespace Azure.Bicep.Types.Az
 
         ResourceType LoadResourceType(TypeLocation location);
 
-        IndexedTypes GetIndexedTypes();
+        TypeIndex GetIndexedTypes();
     }
 }
