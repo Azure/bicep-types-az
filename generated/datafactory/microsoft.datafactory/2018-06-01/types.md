@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **eTag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: FactoryIdentity
@@ -18,7 +17,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -29,7 +27,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -40,7 +37,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -51,7 +47,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -62,7 +57,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -73,7 +67,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -84,7 +77,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -95,7 +87,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -2676,7 +2667,8 @@
 
 ## AzureDatabricksLinkedServiceTypeProperties
 ### Properties
-* **accessToken**: SecretBase (Required)
+* **accessToken**: SecretBase
+* **authentication**: any
 * **domain**: any (Required)
 * **encryptedCredential**: any
 * **existingClusterId**: any
@@ -2691,6 +2683,8 @@
 * **newClusterSparkConf**: Dictionary<string,Object>
 * **newClusterSparkEnvVars**: Dictionary<string,Object>
 * **newClusterVersion**: any
+* **policyId**: any
+* **workspaceResourceId**: any
 
 ## Dictionary<string,Object>
 ### Properties
@@ -4222,7 +4216,7 @@
 #### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'ChainingTrigger' (Required)
-* **typeProperties**: schemas:883_typeProperties (Required)
+* **typeProperties**: schemas:884_typeProperties (Required)
 
 ### MultiplePipelineTrigger
 #### Properties
@@ -4232,20 +4226,20 @@
 ### RerunTumblingWindowTrigger
 #### Properties
 * **type**: 'RerunTumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:882_typeProperties (Required)
+* **typeProperties**: schemas:883_typeProperties (Required)
 
 ### TumblingWindowTrigger
 #### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'TumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:874_typeProperties (Required)
+* **typeProperties**: schemas:875_typeProperties (Required)
 
 
 ## ChainingTrigger
 ### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'ChainingTrigger' (Required)
-* **typeProperties**: schemas:883_typeProperties (Required)
+* **typeProperties**: schemas:884_typeProperties (Required)
 
 ## TriggerPipelineReference
 ### Properties
@@ -4263,7 +4257,7 @@
 * **referenceName**: string (Required)
 * **type**: string (Required)
 
-## schemas:883_typeProperties
+## schemas:884_typeProperties
 ### Properties
 * **dependsOn**: PipelineReference[] (Required)
 * **runDimension**: string (Required)
@@ -4276,9 +4270,9 @@
 ## RerunTumblingWindowTrigger
 ### Properties
 * **type**: 'RerunTumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:882_typeProperties (Required)
+* **typeProperties**: schemas:883_typeProperties (Required)
 
-## schemas:882_typeProperties
+## schemas:883_typeProperties
 ### Properties
 * **parentTrigger**: any (Required)
 * **requestedEndTime**: string (Required)
@@ -4289,9 +4283,9 @@
 ### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'TumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:874_typeProperties (Required)
+* **typeProperties**: schemas:875_typeProperties (Required)
 
-## schemas:874_typeProperties
+## schemas:875_typeProperties
 ### Properties
 * **delay**: any
 * **dependsOn**: DependencyReference[]

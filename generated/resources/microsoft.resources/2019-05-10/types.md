@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2019-05-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
@@ -15,7 +14,6 @@
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2019-05-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **managedBy**: string

@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -15,7 +14,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -26,7 +24,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -37,7 +34,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -48,7 +44,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -59,7 +54,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -70,7 +64,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -81,7 +74,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -92,7 +84,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -103,7 +94,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -114,7 +104,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -125,7 +114,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -136,7 +124,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -147,7 +134,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-10' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -851,6 +837,7 @@
 * **targetAzureVmName**: string (WriteOnly)
 * **targetProximityPlacementGroupId**: string
 * **targetStorageAccountId**: string (WriteOnly)
+* **targetVmSize**: string (WriteOnly)
 * **useManagedDisks**: string
 * **vhdId**: string (WriteOnly)
 * **vmId**: string (ReadOnly)
@@ -977,6 +964,7 @@
 * **targetAzureVmName**: string (WriteOnly)
 * **targetProximityPlacementGroupId**: string
 * **targetVmId**: string (ReadOnly)
+* **targetVmSize**: string (WriteOnly)
 * **uncompressedDataRateInMB**: int (ReadOnly)
 * **useManagedDisks**: string (ReadOnly)
 * **validationErrors**: HealthError[] (ReadOnly)
@@ -1117,6 +1105,7 @@
 * **targetAzureVmName**: string (WriteOnly)
 * **targetProximityPlacementGroupId**: string
 * **targetStorageAccountId**: string (WriteOnly)
+* **targetVmSize**: string (WriteOnly)
 * **useManagedDisks**: string
 * **vhdId**: string (WriteOnly)
 * **vmId**: string (ReadOnly)
@@ -1314,6 +1303,7 @@
 * **targetAzureVmName**: string (WriteOnly)
 * **targetProximityPlacementGroupId**: string
 * **targetVmId**: string (ReadOnly)
+* **targetVmSize**: string (WriteOnly)
 * **uncompressedDataRateInMB**: int (ReadOnly)
 * **useManagedDisks**: string (ReadOnly)
 * **validationErrors**: HealthError[] (ReadOnly)
@@ -1554,6 +1544,7 @@
 * **targetAzureVmName**: string (WriteOnly)
 * **targetProximityPlacementGroupId**: string
 * **targetStorageAccountId**: string (WriteOnly)
+* **targetVmSize**: string (WriteOnly)
 * **useManagedDisks**: string
 * **vhdId**: string (WriteOnly)
 * **vmId**: string (ReadOnly)
@@ -1683,6 +1674,7 @@
 * **targetAzureVmName**: string (WriteOnly)
 * **targetProximityPlacementGroupId**: string
 * **targetVmId**: string (ReadOnly)
+* **targetVmSize**: string (WriteOnly)
 * **uncompressedDataRateInMB**: int (ReadOnly)
 * **useManagedDisks**: string (ReadOnly)
 * **validationErrors**: HealthError[] (ReadOnly)
@@ -1848,6 +1840,7 @@
 * **targetAzureVmName**: string (WriteOnly)
 * **targetProximityPlacementGroupId**: string
 * **targetStorageAccountId**: string (WriteOnly)
+* **targetVmSize**: string (WriteOnly)
 * **useManagedDisks**: string
 * **vhdId**: string (WriteOnly)
 * **vmId**: string (ReadOnly)
@@ -1963,6 +1956,7 @@
 * **targetAzureVmName**: string (WriteOnly)
 * **targetProximityPlacementGroupId**: string
 * **targetVmId**: string (ReadOnly)
+* **targetVmSize**: string (WriteOnly)
 * **uncompressedDataRateInMB**: int (ReadOnly)
 * **useManagedDisks**: string (ReadOnly)
 * **validationErrors**: HealthError[] (ReadOnly)

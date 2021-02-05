@@ -4,12 +4,12 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: IdentityDetails (ReadOnly)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: JobDetails
+* **systemData**: systemData (ReadOnly)
 * **tags**: any
 * **type**: 'Microsoft.ImportExport/jobs' (ReadOnly, DeployTimeConstant)
 
@@ -105,12 +105,21 @@
 ## ShippingInformation
 ### Properties
 * **additionalInformation**: string (ReadOnly)
-* **city**: string (Required)
-* **countryOrRegion**: string (Required)
+* **city**: string
+* **countryOrRegion**: string
 * **phone**: string
-* **postalCode**: string (Required)
-* **recipientName**: string (Required)
-* **stateOrProvince**: string (Required)
-* **streetAddress1**: string (Required)
+* **postalCode**: string
+* **recipientName**: string
+* **stateOrProvince**: string
+* **streetAddress1**: string
 * **streetAddress2**: string
+
+## systemData
+### Properties
+* **createdAt**: string (ReadOnly)
+* **createdBy**: string (ReadOnly)
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly)
+* **lastModifiedAt**: string (ReadOnly)
+* **lastModifiedBy**: string (ReadOnly)
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly)
 

@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
@@ -16,7 +15,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PrivateEndpointConnectionProperties
@@ -35,20 +33,20 @@
 
 ## JSONWebKey
 ### Properties
-* **alg**: string (Required, WriteOnly)
+* **alg**: string (WriteOnly)
 * **crv**: string (WriteOnly)
 * **d**: string (WriteOnly)
 * **dp**: string (WriteOnly)
 * **dq**: string (WriteOnly)
 * **e**: string (WriteOnly)
 * **k**: string (WriteOnly)
-* **kid**: string (Required, WriteOnly)
+* **kid**: string (WriteOnly)
 * **kty**: string (Required, WriteOnly)
 * **n**: string (WriteOnly)
 * **p**: string (WriteOnly)
 * **q**: string (WriteOnly)
 * **qi**: string (WriteOnly)
-* **use**: string (Required, WriteOnly)
+* **use**: string (WriteOnly)
 * **x**: string (WriteOnly)
 * **x5c**: string[] (WriteOnly)
 * **y**: string (WriteOnly)

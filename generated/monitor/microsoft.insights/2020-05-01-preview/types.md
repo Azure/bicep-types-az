@@ -4,8 +4,9 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ScheduledQueryRuleProperties (Required)
@@ -15,11 +16,15 @@
 ## ScheduledQueryRuleProperties
 ### Properties
 * **actions**: Action[]
+* **createdWithApiVersion**: string (ReadOnly)
 * **criteria**: ScheduledQueryRuleCriteria
 * **description**: string
+* **displayName**: string
 * **enabled**: bool
 * **evaluationFrequency**: string
+* **isLegacyLogAnalyticsRule**: bool (ReadOnly)
 * **muteActionsDuration**: string
+* **OverrideQueryTimeRange**: string
 * **scopes**: string[]
 * **severity**: int
 * **targetResourceTypes**: string[]

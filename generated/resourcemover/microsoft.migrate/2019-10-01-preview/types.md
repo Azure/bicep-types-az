@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity
@@ -18,7 +17,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: MoveResourceProperties
@@ -98,8 +96,7 @@
 ### Properties
 * **errors**: MoveResourceError
 * **jobStatus**: JobStatus
-* **moveState**: 'AssignmentPending' | 'CommitFailed' | 'CommitInProgress' | 'CommitPending' | 'Committed' | 'DiscardFailed' | 'DiscardInProgress' | 'MoveFailed' | 'MoveInProgress' | 'MovePending' | 'PrepareFailed' | 'PrepareInProgress' | 'PreparePending'
-* **targetId**: string (ReadOnly)
+* **moveState**: 'AssignmentPending' | 'CommitFailed' | 'CommitInProgress' | 'CommitPending' | 'Committed' | 'DeleteSourcePending' | 'DiscardFailed' | 'DiscardInProgress' | 'MoveFailed' | 'MoveInProgress' | 'MovePending' | 'PrepareFailed' | 'PrepareInProgress' | 'PreparePending' | 'ResourceMoveCompleted'
 
 ## MoveResourceError
 ### Properties
@@ -120,12 +117,20 @@
 * **resourceType**: 'Microsoft.Compute/availabilitySets' (Required)
 * **updateDomain**: int
 
+### Microsoft.Compute/diskEncryptionSets
+#### Properties
+* **resourceType**: 'Microsoft.Compute/diskEncryptionSets' (Required)
+
 ### Microsoft.Compute/virtualMachines
 #### Properties
 * **resourceType**: 'Microsoft.Compute/virtualMachines' (Required)
 * **targetAvailabilitySetId**: string
 * **targetAvailabilityZone**: '1' | '2' | '3' | 'NA'
 * **targetVmSize**: string
+
+### Microsoft.KeyVault/vaults
+#### Properties
+* **resourceType**: 'Microsoft.KeyVault/vaults' (Required)
 
 ### Microsoft.Network/loadBalancers
 #### Properties
@@ -149,7 +154,7 @@
 ### Microsoft.Network/publicIPAddresses
 #### Properties
 * **domainNameLabel**: string
-* **fQDN**: string
+* **fqdn**: string
 * **publicIpAllocationMethod**: string
 * **resourceType**: 'Microsoft.Network/publicIPAddresses' (Required)
 * **sku**: string
@@ -188,12 +193,20 @@
 * **resourceType**: 'Microsoft.Compute/availabilitySets' (Required)
 * **updateDomain**: int
 
+## Microsoft.Compute/diskEncryptionSets
+### Properties
+* **resourceType**: 'Microsoft.Compute/diskEncryptionSets' (Required)
+
 ## Microsoft.Compute/virtualMachines
 ### Properties
 * **resourceType**: 'Microsoft.Compute/virtualMachines' (Required)
 * **targetAvailabilitySetId**: string
 * **targetAvailabilityZone**: '1' | '2' | '3' | 'NA'
 * **targetVmSize**: string
+
+## Microsoft.KeyVault/vaults
+### Properties
+* **resourceType**: 'Microsoft.KeyVault/vaults' (Required)
 
 ## Microsoft.Network/loadBalancers
 ### Properties
@@ -229,15 +242,26 @@
 ## NicIpConfigurationResourceSettings
 ### Properties
 * **loadBalancerBackendAddressPools**: LoadBalancerBackendAddressPoolReference[]
+* **loadBalancerNatRules**: LoadBalancerNatRuleReference[]
 * **name**: string
 * **primary**: bool
 * **privateIpAddress**: string
 * **privateIpAllocationMethod**: string
+* **publicIp**: PublicIpReference
 * **subnet**: SubnetReference
 
 ## LoadBalancerBackendAddressPoolReference
 ### Properties
 * **name**: string
+* **sourceArmResourceId**: string (Required)
+
+## LoadBalancerNatRuleReference
+### Properties
+* **name**: string
+* **sourceArmResourceId**: string (Required)
+
+## PublicIpReference
+### Properties
 * **sourceArmResourceId**: string (Required)
 
 ## Microsoft.Network/networkSecurityGroups
@@ -261,7 +285,7 @@
 ## Microsoft.Network/publicIPAddresses
 ### Properties
 * **domainNameLabel**: string
-* **fQDN**: string
+* **fqdn**: string
 * **publicIpAllocationMethod**: string
 * **resourceType**: 'Microsoft.Network/publicIPAddresses' (Required)
 * **sku**: string
@@ -279,6 +303,11 @@
 ### Properties
 * **addressPrefix**: string
 * **name**: string
+* **networkSecurityGroup**: NsgReference
+
+## NsgReference
+### Properties
+* **sourceArmResourceId**: string (Required)
 
 ## Microsoft.Sql/servers
 ### Properties

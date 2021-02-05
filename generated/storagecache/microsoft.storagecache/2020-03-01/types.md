@@ -4,13 +4,12 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: CacheIdentity
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:6_properties
-* **sku**: schemas:6_sku
+* **properties**: schemas:7_properties
+* **sku**: schemas:7_sku
 * **systemData**: systemData (ReadOnly)
 * **tags**: any
 * **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant)
@@ -19,7 +18,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -33,7 +31,7 @@
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned'
 
-## schemas:6_properties
+## schemas:7_properties
 ### Properties
 * **cacheSizeGB**: int
 * **encryptionSettings**: CacheEncryptionSettings
@@ -52,9 +50,9 @@
 ## KeyVaultKeyReference
 ### Properties
 * **keyUrl**: string (Required)
-* **sourceVault**: schemas:11_sourceVault (Required)
+* **sourceVault**: schemas:12_sourceVault (Required)
 
-## schemas:11_sourceVault
+## schemas:12_sourceVault
 ### Properties
 * **id**: string
 
@@ -80,7 +78,7 @@
 * **lastFirmwareUpdate**: string (ReadOnly)
 * **pendingFirmwareVersion**: string (ReadOnly)
 
-## schemas:6_sku
+## schemas:7_sku
 ### Properties
 * **name**: string
 

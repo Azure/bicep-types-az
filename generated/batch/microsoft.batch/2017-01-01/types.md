@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
@@ -18,7 +17,6 @@
 * **allowUpdates**: bool
 * **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
 * **defaultVersion**: string (ReadOnly)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **displayName**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)

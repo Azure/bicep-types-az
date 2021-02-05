@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
@@ -16,7 +15,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: ManagedIdentity
 * **location**: string (Required)
@@ -29,7 +27,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AadAdminProperties
@@ -39,7 +36,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ServerBlobAuditingPolicyProperties
@@ -49,7 +45,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
@@ -61,7 +56,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ExtendedServerBlobAuditingPolicyProperties
@@ -71,7 +65,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: IpFirewallRuleProperties
@@ -81,28 +74,34 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: IntegrationRuntime (Required)
 * **type**: 'Microsoft.Synapse/workspaces/integrationRuntimes' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Synapse/workspaces/keys@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: KeyProperties
+* **type**: 'Microsoft.Synapse/workspaces/keys' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Synapse/workspaces/managedIdentitySqlControlSettings@2019-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:117_properties
+* **properties**: schemas:129_properties
 * **type**: 'Microsoft.Synapse/workspaces/managedIdentitySqlControlSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Synapse/workspaces/privateEndpointConnections@2019-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PrivateEndpointConnectionProperties
@@ -112,7 +111,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ServerSecurityAlertPolicyProperties
@@ -122,7 +120,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AadAdminProperties
@@ -132,7 +129,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
@@ -145,7 +141,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -156,7 +151,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **location**: string (ReadOnly)
@@ -169,7 +163,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **location**: string (ReadOnly)
@@ -181,28 +174,46 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ExtendedSqlPoolBlobAuditingPolicyProperties
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/extendedAuditingSettings' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Synapse/workspaces/sqlPools/geoBackupPolicies@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GeoBackupPolicyProperties (Required)
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/geoBackupPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Synapse/workspaces/sqlPools/maintenancewindows@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MaintenanceWindowsProperties
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/maintenancewindows' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Synapse/workspaces/sqlPools/metadataSync@2019-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:27_properties
+* **properties**: schemas:28_properties
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/metadataSync' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels@2019-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **managedBy**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SensitivityLabelProperties
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant)
@@ -211,7 +222,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SecurityAlertPolicyProperties
@@ -221,7 +231,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -232,7 +241,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SqlPoolVulnerabilityAssessmentProperties
@@ -242,7 +250,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' | 'master' (Required, DeployTimeConstant)
 * **properties**: SqlPoolVulnerabilityAssessmentRuleBaselineProperties
@@ -252,7 +259,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: WorkloadGroupProperties
@@ -262,7 +268,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: WorkloadClassifierProperties
@@ -272,7 +277,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ServerVulnerabilityAssessmentProperties
@@ -317,6 +321,7 @@
 
 ## WorkspaceProperties
 ### Properties
+* **adlaResourceId**: string (ReadOnly)
 * **connectivityEndpoints**: Dictionary<string,String>
 * **defaultDataLakeStorage**: DataLakeStorageAccountDetails
 * **encryption**: EncryptionDetails
@@ -389,9 +394,11 @@
 * **accountName**: string
 * **collaborationBranch**: string
 * **hostName**: string
+* **lastCommitId**: string
 * **projectName**: string
 * **repositoryName**: string
 * **rootFolder**: string
+* **tenantId**: string
 * **type**: string
 
 ## Dictionary<string,String>
@@ -422,9 +429,11 @@
 ### Properties
 * **autoPause**: AutoPauseProperties
 * **autoScale**: AutoScaleProperties
+* **cacheSize**: int
 * **creationDate**: string
+* **customLibraries**: LibraryResourceProperties[]
 * **defaultSparkLogFolder**: string
-* **haveLibraryRequirementsChanged**: bool
+* **dynamicExecutorAllocation**: DynamicExecutorAllocation
 * **isComputeIsolationEnabled**: bool
 * **libraryRequirements**: LibraryRequirements
 * **nodeCount**: int
@@ -446,6 +455,20 @@
 * **enabled**: bool
 * **maxNodeCount**: int
 * **minNodeCount**: int
+
+## LibraryResourceProperties
+### Properties
+* **containerName**: string (ReadOnly)
+* **creatorId**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **path**: string (ReadOnly)
+* **provisioningStatus**: string (ReadOnly)
+* **type**: string (ReadOnly)
+* **uploadedTimestamp**: string (ReadOnly)
+
+## DynamicExecutorAllocation
+### Properties
+* **enabled**: bool
 
 ## LibraryRequirements
 ### Properties
@@ -664,11 +687,16 @@
 * **authorizationType**: 'RBAC' (Required)
 * **resourceId**: string (Required)
 
-## schemas:117_properties
+## KeyProperties
 ### Properties
-* **grantSqlControlToManagedIdentity**: schemas:117_properties_grantSqlControlToManagedIdentity
+* **isActiveCMK**: bool
+* **keyVaultUrl**: string
 
-## schemas:117_properties_grantSqlControlToManagedIdentity
+## schemas:129_properties
+### Properties
+* **grantSqlControlToManagedIdentity**: schemas:129_properties_grantSqlControlToManagedIdentity
+
+## schemas:129_properties_grantSqlControlToManagedIdentity
 ### Properties
 * **actualState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Unknown' (ReadOnly)
 * **desiredState**: 'Disabled' | 'Enabled'
@@ -753,18 +781,37 @@
 * **storageAccountSubscriptionId**: string
 * **storageEndpoint**: string
 
-## schemas:27_properties
+## GeoBackupPolicyProperties
+### Properties
+* **state**: 'Disabled' | 'Enabled' (Required)
+* **storageType**: string (ReadOnly)
+
+## MaintenanceWindowsProperties
+### Properties
+* **timeRanges**: MaintenanceWindowTimeRange[]
+
+## MaintenanceWindowTimeRange
+### Properties
+* **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'
+* **duration**: string
+* **startTime**: string
+
+## schemas:28_properties
 ### Properties
 * **enabled**: bool
 * **syncIntervalInMinutes**: int
 
 ## SensitivityLabelProperties
 ### Properties
+* **columnName**: string (ReadOnly)
 * **informationType**: string
 * **informationTypeId**: string
 * **isDisabled**: bool (ReadOnly)
 * **labelId**: string
 * **labelName**: string
+* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None'
+* **schemaName**: string (ReadOnly)
+* **tableName**: string (ReadOnly)
 
 ## SecurityAlertPolicyProperties
 ### Properties

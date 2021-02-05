@@ -4,8 +4,9 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-04-16' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: LogSearchRule (Required)
@@ -15,8 +16,11 @@
 ## LogSearchRule
 ### Properties
 * **action**: Action (Required)
+* **createdWithApiVersion**: string (ReadOnly)
 * **description**: string
+* **displayName**: string
 * **enabled**: 'false' | 'true'
+* **isLegacyLogAnalyticsRule**: bool (ReadOnly)
 * **lastUpdatedTime**: string (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Deploying' | 'Failed' | 'Succeeded' (ReadOnly)
 * **schedule**: Schedule
@@ -57,14 +61,14 @@
 ### Properties
 * **metricTrigger**: LogMetricTrigger
 * **threshold**: int (Required)
-* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'LessThan' (Required)
+* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required)
 
 ## LogMetricTrigger
 ### Properties
 * **metricColumn**: string
 * **metricTriggerType**: 'Consecutive' | 'Total'
 * **threshold**: int
-* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'LessThan'
+* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual'
 
 ## Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction
 ### Properties

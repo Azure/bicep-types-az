@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **extendedLocation**: ExtendedLocation
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity
@@ -20,10 +19,9 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:95_properties
+* **properties**: schemas:96_properties
 * **sku**: Sku (ReadOnly)
 * **type**: 'Microsoft.Storage/storageAccounts/blobServices' (ReadOnly, DeployTimeConstant)
 
@@ -31,7 +29,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -42,7 +39,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -53,7 +49,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: EncryptionScopeProperties
@@ -63,10 +58,9 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:103_properties
+* **properties**: schemas:104_properties
 * **sku**: Sku (ReadOnly)
 * **type**: 'Microsoft.Storage/storageAccounts/fileServices' (ReadOnly, DeployTimeConstant)
 
@@ -74,7 +68,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -85,7 +78,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: BlobInventoryPolicyProperties
@@ -96,7 +88,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ManagementPolicyProperties
@@ -106,7 +97,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ObjectReplicationPolicyProperties
@@ -116,7 +106,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PrivateEndpointConnectionProperties
@@ -126,17 +115,15 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:115_properties
+* **properties**: schemas:116_properties
 * **type**: 'Microsoft.Storage/storageAccounts/queueServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/queueServices/queues@2020-08-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: QueueProperties
@@ -146,10 +133,9 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:122_properties
+* **properties**: schemas:123_properties
 * **type**: 'Microsoft.Storage/storageAccounts/tableServices' (ReadOnly, DeployTimeConstant)
 
 ## ExtendedLocation
@@ -167,6 +153,7 @@
 ### Properties
 * **accessTier**: 'Cool' | 'Hot'
 * **allowBlobPublicAccess**: bool
+* **allowSharedKeyAccess**: bool
 * **azureFilesIdentityBasedAuthentication**: AzureFilesIdentityBasedAuthentication
 * **blobRestoreStatus**: BlobRestoreStatus (ReadOnly)
 * **creationTime**: string (ReadOnly)
@@ -350,7 +337,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:95_properties
+## schemas:96_properties
 ### Properties
 * **automaticSnapshotPolicyEnabled**: bool
 * **changeFeed**: ChangeFeed
@@ -365,6 +352,7 @@
 ## ChangeFeed
 ### Properties
 * **enabled**: bool
+* **retentionInDays**: int
 
 ## DeleteRetentionPolicy
 ### Properties
@@ -467,7 +455,7 @@
 ### Properties
 * **keyUri**: string
 
-## schemas:103_properties
+## schemas:104_properties
 ### Properties
 * **cors**: CorsRules
 * **protocolSettings**: ProtocolSettings
@@ -570,6 +558,7 @@
 ### Properties
 * **baseBlob**: ManagementPolicyBaseBlob
 * **snapshot**: ManagementPolicySnapShot
+* **version**: ManagementPolicyVersion
 
 ## ManagementPolicyBaseBlob
 ### Properties
@@ -586,10 +575,18 @@
 ## ManagementPolicySnapShot
 ### Properties
 * **delete**: DateAfterCreation
+* **tierToArchive**: DateAfterCreation
+* **tierToCool**: DateAfterCreation
 
 ## DateAfterCreation
 ### Properties
 * **daysAfterCreationGreaterThan**: int (Required)
+
+## ManagementPolicyVersion
+### Properties
+* **delete**: DateAfterCreation
+* **tierToArchive**: DateAfterCreation
+* **tierToCool**: DateAfterCreation
 
 ## ManagementPolicyFilter
 ### Properties
@@ -623,7 +620,7 @@
 * **minCreationTime**: string
 * **prefixMatch**: string[]
 
-## schemas:115_properties
+## schemas:116_properties
 ### Properties
 * **cors**: CorsRules
 
@@ -637,7 +634,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:122_properties
+## schemas:123_properties
 ### Properties
 * **cors**: CorsRules
 

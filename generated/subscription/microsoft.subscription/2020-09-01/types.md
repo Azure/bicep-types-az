@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PutAliasRequestProperties (Required)

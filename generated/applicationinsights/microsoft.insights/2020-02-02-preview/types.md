@@ -4,7 +4,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
+* **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (Required)
 * **location**: string (Required)
@@ -28,6 +28,7 @@
 * **IngestionMode**: 'ApplicationInsights' | 'ApplicationInsightsWithDiagnosticSettings' | 'LogAnalytics'
 * **InstrumentationKey**: string (ReadOnly)
 * **LaMigrationDate**: string (ReadOnly)
+* **Name**: string (ReadOnly)
 * **PrivateLinkScopedResources**: PrivateLinkScopedResource[] (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled'
@@ -36,7 +37,7 @@
 * **RetentionInDays**: int (ReadOnly)
 * **SamplingPercentage**: int
 * **TenantId**: string (ReadOnly)
-* **WorkspaceResourceId**: string (Required)
+* **WorkspaceResourceId**: string
 
 ## PrivateLinkScopedResource
 ### Properties
