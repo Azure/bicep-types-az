@@ -5,7 +5,6 @@
 ### Properties
 * **address**: AddressDetails (WriteOnly)
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **displayName**: string (WriteOnly)
 * **enabledAzurePlans**: AzurePlan[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
@@ -19,7 +18,6 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: InstructionProperties
@@ -29,7 +27,6 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **displayName**: string (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -40,7 +37,6 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PolicyProperties
@@ -50,7 +46,6 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: BillingRoleAssignmentProperties
@@ -60,7 +55,6 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: CustomerPolicyProperties
@@ -70,7 +64,6 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: BillingRoleAssignmentProperties
@@ -80,7 +73,6 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: BillingRoleAssignmentProperties

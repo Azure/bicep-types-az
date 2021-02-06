@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AdvancedThreatProtectionProperties
@@ -14,7 +13,6 @@
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AutoProvisioningSettingProperties
@@ -24,7 +22,6 @@
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: DeviceSecurityGroupProperties
@@ -34,7 +31,6 @@
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'custom' | 'effective' (Required, DeployTimeConstant)
 * **properties**: InformationProtectionPolicyProperties
@@ -44,7 +40,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
@@ -56,7 +51,6 @@
 * **Valid Scope(s)**: Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PricingProperties
@@ -66,7 +60,6 @@
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SecurityContactProperties
@@ -77,7 +70,6 @@
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'MCAS' | 'WDATP' (Required, DeployTimeConstant)
 * **type**: 'Microsoft.Security/settings' (ReadOnly, DeployTimeConstant)
@@ -91,7 +83,6 @@
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: WorkspaceSettingProperties

@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
@@ -18,7 +17,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: NodeTypeProperties
@@ -27,6 +25,7 @@
 
 ## ManagedClusterProperties
 ### Properties
+* **addonFeatures**: 'BackupRestoreService' | 'DnsService' | 'ResourceMonitorService'[]
 * **adminPassword**: string
 * **adminUserName**: string (Required)
 * **azureActiveDirectory**: AzureActiveDirectory
@@ -36,8 +35,6 @@
 * **clusterCodeVersion**: string
 * **clusterId**: string (ReadOnly)
 * **clusterState**: 'AutoScale' | 'BaselineUpgrade' | 'Deploying' | 'EnforcingClusterVersion' | 'Ready' | 'UpdatingInfrastructure' | 'UpdatingUserCertificate' | 'UpdatingUserConfiguration' | 'UpgradeServiceUnreachable' | 'WaitingForNodes' (ReadOnly)
-* **clusterUpgradeDescription**: ClusterUpgradePolicy
-* **clusterUpgradeMode**: 'Automatic' | 'Manual'
 * **dnsName**: string (Required)
 * **fabricSettings**: SettingsSectionDescription[]
 * **fqdn**: string (ReadOnly)
@@ -57,69 +54,6 @@
 * **isAdmin**: bool (Required)
 * **issuerThumbprint**: string
 * **thumbprint**: string
-
-## ClusterUpgradePolicy
-### Properties
-* **deltaHealthPolicy**: ClusterUpgradeDeltaHealthPolicy
-* **forceRestart**: bool
-* **healthCheckRetryTimeout**: string (Required)
-* **healthCheckStableDuration**: string (Required)
-* **healthCheckWaitDuration**: string (Required)
-* **healthPolicy**: ClusterHealthPolicy (Required)
-* **upgradeDomainTimeout**: string (Required)
-* **upgradeReplicaSetCheckTimeout**: string (Required)
-* **upgradeTimeout**: string (Required)
-
-## ClusterUpgradeDeltaHealthPolicy
-### Properties
-* **applicationDeltaHealthPolicies**: Dictionary<string,ApplicationDeltaHealthPolicy>
-* **maxPercentDeltaUnhealthyApplications**: int (Required)
-* **maxPercentDeltaUnhealthyNodes**: int (Required)
-* **maxPercentUpgradeDomainDeltaUnhealthyNodes**: int (Required)
-
-## Dictionary<string,ApplicationDeltaHealthPolicy>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: ApplicationDeltaHealthPolicy
-
-## ApplicationDeltaHealthPolicy
-### Properties
-* **defaultServiceTypeDeltaHealthPolicy**: ServiceTypeDeltaHealthPolicy
-* **serviceTypeDeltaHealthPolicies**: Dictionary<string,ServiceTypeDeltaHealthPolicy>
-
-## ServiceTypeDeltaHealthPolicy
-### Properties
-* **maxPercentDeltaUnhealthyServices**: int
-
-## Dictionary<string,ServiceTypeDeltaHealthPolicy>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: ServiceTypeDeltaHealthPolicy
-
-## ClusterHealthPolicy
-### Properties
-* **applicationHealthPolicies**: Dictionary<string,ApplicationHealthPolicy>
-* **maxPercentUnhealthyApplications**: int
-* **maxPercentUnhealthyNodes**: int
-
-## Dictionary<string,ApplicationHealthPolicy>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: ApplicationHealthPolicy
-
-## ApplicationHealthPolicy
-### Properties
-* **defaultServiceTypeHealthPolicy**: ServiceTypeHealthPolicy
-* **serviceTypeHealthPolicies**: Dictionary<string,ServiceTypeHealthPolicy>
-
-## ServiceTypeHealthPolicy
-### Properties
-* **maxPercentUnhealthyServices**: int
-
-## Dictionary<string,ServiceTypeHealthPolicy>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: ServiceTypeHealthPolicy
 
 ## SettingsSectionDescription
 ### Properties

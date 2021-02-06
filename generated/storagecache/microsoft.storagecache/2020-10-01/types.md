@@ -4,13 +4,12 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: CacheIdentity
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:6_properties
-* **sku**: schemas:6_sku
+* **properties**: schemas:7_properties
+* **sku**: schemas:7_sku
 * **systemData**: systemData (ReadOnly)
 * **tags**: any
 * **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant)
@@ -19,7 +18,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
@@ -33,7 +31,7 @@
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned'
 
-## schemas:6_properties
+## schemas:7_properties
 ### Properties
 * **cacheSizeGB**: int
 * **directoryServicesSettings**: CacheDirectorySettings
@@ -54,14 +52,14 @@
 ## CacheActiveDirectorySettings
 ### Properties
 * **cacheNetBiosName**: string (Required)
-* **credentials**: schemas:12_credentials
+* **credentials**: schemas:13_credentials
 * **domainJoined**: 'Error' | 'No' | 'Yes' (ReadOnly)
 * **domainName**: string (Required)
 * **domainNetBiosName**: string (Required)
 * **primaryDnsIpAddress**: string (Required)
 * **secondaryDnsIpAddress**: string
 
-## schemas:12_credentials
+## schemas:13_credentials
 ### Properties
 * **password**: string (Required)
 * **username**: string (Required)
@@ -70,18 +68,18 @@
 ### Properties
 * **autoDownloadCertificate**: bool
 * **caCertificateURI**: string
-* **credentials**: schemas:13_credentials
+* **credentials**: schemas:14_credentials
 * **encryptLdapConnection**: bool
-* **extendedGroupsEnabled**: bool
+* **extendedGroups**: bool
 * **groupFileURI**: string
-* **ldapBaseDn**: string
+* **ldapBaseDN**: string
 * **ldapServer**: string
 * **requireValidCertificate**: bool
 * **userFileURI**: string
 * **usernameDownloaded**: 'Error' | 'No' | 'Yes' (ReadOnly)
 * **usernameSource**: 'AD' | 'File' | 'LDAP' | 'None'
 
-## schemas:13_credentials
+## schemas:14_credentials
 ### Properties
 * **bindDn**: string
 * **bindPassword**: string
@@ -93,9 +91,9 @@
 ## KeyVaultKeyReference
 ### Properties
 * **keyUrl**: string (Required)
-* **sourceVault**: schemas:16_sourceVault (Required)
+* **sourceVault**: schemas:17_sourceVault (Required)
 
-## schemas:16_sourceVault
+## schemas:17_sourceVault
 ### Properties
 * **id**: string
 
@@ -137,7 +135,7 @@
 * **lastFirmwareUpdate**: string (ReadOnly)
 * **pendingFirmwareVersion**: string (ReadOnly)
 
-## schemas:6_sku
+## schemas:7_sku
 ### Properties
 * **name**: string
 

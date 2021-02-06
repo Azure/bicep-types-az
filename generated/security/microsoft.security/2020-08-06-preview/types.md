@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: IotDefenderSettingsProperties
@@ -14,7 +13,6 @@
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: IotSensorProperties

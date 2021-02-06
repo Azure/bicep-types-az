@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2017-03-31' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SuppressionProperties

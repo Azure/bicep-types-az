@@ -5,7 +5,6 @@
 ### Properties
 * **apiVersion**: '2018-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **createdBy**: AccessReviewActorIdentity (ReadOnly, WriteOnly)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **descriptionForAdmins**: string (WriteOnly)
 * **descriptionForReviewers**: string (WriteOnly)
 * **displayName**: string (WriteOnly)
@@ -27,7 +26,6 @@
 * **autoApplyDecisionsEnabled**: bool (WriteOnly)
 * **defaultDecision**: 'Approve' | 'Deny' | 'Recommendation' (WriteOnly)
 * **defaultDecisionEnabled**: bool (WriteOnly)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **instanceDurationInDays**: int (WriteOnly)
 * **justificationRequiredOnApproval**: bool (WriteOnly)

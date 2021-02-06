@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SerialPortProperties

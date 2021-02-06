@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: ClusterIdentity
@@ -18,7 +17,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -102,6 +100,7 @@
 * **scriptActions**: ScriptAction[]
 * **targetInstanceCount**: int
 * **virtualNetworkProfile**: VirtualNetworkProfile
+* **VMGroupName**: string
 
 ## Autoscale
 ### Properties
@@ -173,6 +172,7 @@
 * **location**: string (ReadOnly)
 * **name**: string (ReadOnly)
 * **port**: int (ReadOnly)
+* **privateIPAddress**: string (ReadOnly)
 * **protocol**: string (ReadOnly)
 
 ## DiskEncryptionProperties
@@ -235,12 +235,14 @@
 ## StorageAccount
 ### Properties
 * **container**: string
+* **fileshare**: string
 * **fileSystem**: string
 * **isDefault**: bool
 * **key**: string
 * **msiResourceId**: string
 * **name**: string
 * **resourceId**: string
+* **saskey**: string
 
 ## Dictionary<string,String>
 ### Properties
@@ -267,6 +269,7 @@
 * **destinationPort**: int
 * **disableGatewayAuth**: bool
 * **location**: string
+* **privateIPAddress**: string
 * **publicPort**: int
 * **subDomainSuffix**: string
 
@@ -282,6 +285,7 @@
 ### Properties
 * **destinationPort**: int
 * **location**: string
+* **privateIPAddress**: string
 * **publicPort**: int
 
 ## Dictionary<string,String>

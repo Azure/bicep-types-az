@@ -4,15 +4,21 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-08-20-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: schemas:11_identity
 * **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ServicesProperties
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.HealthcareApis/services' (ReadOnly, DeployTimeConstant)
+
+## schemas:11_identity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned'
 
 ## ServicesProperties
 ### Properties

@@ -4,21 +4,29 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: IdentityDetails (ReadOnly)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: JobDetails
+* **systemData**: systemData (ReadOnly)
 * **tags**: any
 * **type**: 'Microsoft.ImportExport/jobs' (ReadOnly, DeployTimeConstant)
+
+## IdentityDetails
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (ReadOnly)
 
 ## JobDetails
 ### Properties
 * **backupDriveManifest**: bool
 * **cancelRequested**: bool
-* **deliveryPackage**: PackageInfomation
+* **deliveryPackage**: DeliveryPackageInformation
 * **diagnosticsPath**: string
 * **driveList**: DriveStatus[]
+* **encryptionKey**: EncryptionKeyDetails
 * **export**: Export
 * **incompleteBlobListUri**: string
 * **jobType**: string
@@ -32,11 +40,11 @@
 * **state**: string
 * **storageAccountId**: string
 
-## PackageInfomation
+## DeliveryPackageInformation
 ### Properties
 * **carrierName**: string (Required)
-* **driveCount**: int (Required)
-* **shipDate**: string (Required)
+* **driveCount**: int
+* **shipDate**: string
 * **trackingNumber**: string (Required)
 
 ## DriveStatus
@@ -54,12 +62,18 @@
 * **state**: 'Completed' | 'CompletedMoreInfo' | 'NeverReceived' | 'Received' | 'ShippedBack' | 'Specified' | 'Transferring'
 * **verboseLogUri**: string
 
+## EncryptionKeyDetails
+### Properties
+* **kekType**: 'CustomerManaged' | 'MicrosoftManaged'
+* **kekUrl**: string
+* **kekVaultResourceID**: string
+
 ## Export
 ### Properties
-* **blobList**: schemas:13_blobList
-* **blobListblobPath**: string
+* **blobList**: schemas:16_blobList
+* **blobListBlobPath**: string
 
-## schemas:13_blobList
+## schemas:16_blobList
 ### Properties
 * **blobPath**: string[]
 * **blobPathPrefix**: string[]
@@ -76,6 +90,13 @@
 * **streetAddress1**: string (Required)
 * **streetAddress2**: string
 
+## PackageInfomation
+### Properties
+* **carrierName**: string (Required)
+* **driveCount**: int (Required)
+* **shipDate**: string (Required)
+* **trackingNumber**: string (Required)
+
 ## ReturnShipping
 ### Properties
 * **carrierAccountNumber**: string (Required)
@@ -83,12 +104,22 @@
 
 ## ShippingInformation
 ### Properties
-* **city**: string (Required)
-* **countryOrRegion**: string (Required)
+* **additionalInformation**: string (ReadOnly)
+* **city**: string
+* **countryOrRegion**: string
 * **phone**: string
-* **postalCode**: string (Required)
-* **recipientName**: string (Required)
-* **stateOrProvince**: string (Required)
-* **streetAddress1**: string (Required)
+* **postalCode**: string
+* **recipientName**: string
+* **stateOrProvince**: string
+* **streetAddress1**: string
 * **streetAddress2**: string
+
+## systemData
+### Properties
+* **createdAt**: string (ReadOnly)
+* **createdBy**: string (ReadOnly)
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly)
+* **lastModifiedAt**: string (ReadOnly)
+* **lastModifiedBy**: string (ReadOnly)
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly)
 

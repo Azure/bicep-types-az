@@ -5,7 +5,6 @@
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -30,7 +29,6 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -41,7 +39,6 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -53,7 +50,6 @@
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -103,7 +99,6 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -114,7 +109,6 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: IncidentCommentProperties
@@ -185,11 +179,14 @@
 * **created**: string
 * **createdBy**: UserInfo
 * **displayName**: string (Required)
+* **eventTime**: string
 * **incidentInfo**: IncidentInfo
 * **labels**: string[]
 * **notes**: string
 * **query**: string (Required)
+* **queryEndTime**: string
 * **queryResult**: string
+* **queryStartTime**: string
 * **updated**: string
 * **updatedBy**: UserInfo
 
@@ -201,10 +198,10 @@
 
 ## IncidentInfo
 ### Properties
-* **incidentId**: string (Required)
-* **relationName**: string (Required)
-* **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium' (Required)
-* **title**: string (Required)
+* **incidentId**: string
+* **relationName**: string
+* **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium'
+* **title**: string
 
 ## AmazonWebServicesCloudTrail
 ### Properties

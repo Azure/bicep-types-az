@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
@@ -16,7 +15,6 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: MAMPolicyAppOrGroupIdProperties
@@ -26,7 +24,6 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: MAMPolicyAppOrGroupIdProperties
@@ -36,7 +33,6 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
@@ -48,7 +44,6 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: MAMPolicyAppOrGroupIdProperties
@@ -58,7 +53,6 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: MAMPolicyAppOrGroupIdProperties

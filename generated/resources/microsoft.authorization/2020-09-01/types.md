@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity
 * **location**: string
@@ -16,7 +15,6 @@
 * **Valid Scope(s)**: ManagementGroup, Subscription
 ### Properties
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PolicyDefinitionProperties
@@ -26,7 +24,6 @@
 * **Valid Scope(s)**: ManagementGroup, Subscription
 ### Properties
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PolicySetDefinitionProperties
@@ -83,10 +80,10 @@
 ### Properties
 * **allowedValues**: any[]
 * **defaultValue**: any
-* **metadata**: schemas:8_metadata
+* **metadata**: schemas:10_metadata
 * **type**: 'Array' | 'Boolean' | 'DateTime' | 'Float' | 'Integer' | 'Object' | 'String'
 
-## schemas:8_metadata
+## schemas:10_metadata
 ### Properties
 * **assignPermissions**: bool
 * **description**: string

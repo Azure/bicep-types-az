@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
@@ -16,7 +15,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
@@ -110,8 +108,9 @@
 * **description**: string
 * **enabled**: bool (Required)
 * **evaluationFrequency**: string (Required)
+* **isMigrated**: bool (ReadOnly)
 * **lastUpdatedTime**: string (ReadOnly)
-* **scopes**: string[]
+* **scopes**: string[] (Required)
 * **severity**: int (Required)
 * **targetResourceRegion**: string
 * **targetResourceType**: string

@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2020-06-25' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)

@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)

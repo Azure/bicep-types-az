@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-10-25' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: QuotaProperties

@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PolicyAssignmentProperties
@@ -15,7 +14,6 @@
 * **Valid Scope(s)**: ManagementGroup, Subscription
 ### Properties
 * **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PolicyDefinitionProperties
@@ -25,7 +23,6 @@
 * **Valid Scope(s)**: ManagementGroup, Subscription
 ### Properties
 * **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PolicySetDefinitionProperties

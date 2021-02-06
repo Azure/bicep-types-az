@@ -1,22 +1,20 @@
-# microsoft.insights @ 2016-03-01
+# Microsoft.Insights @ 2016-03-01
 
-## Resource microsoft.insights/alertrules@2016-03-01
+## Resource Microsoft.Insights/alertrules@2016-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AlertRule (Required)
 * **tags**: Dictionary<string,String>
-* **type**: 'microsoft.insights/alertrules' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.Insights/alertrules' (ReadOnly, DeployTimeConstant)
 
 ## Resource microsoft.insights/logprofiles@2016-03-01
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
@@ -26,12 +24,14 @@
 
 ## AlertRule
 ### Properties
+* **action**: RuleAction
 * **actions**: RuleAction[]
 * **condition**: RuleCondition (Required)
 * **description**: string
 * **isEnabled**: bool (Required)
 * **lastUpdatedTime**: string (ReadOnly)
 * **name**: string (Required)
+* **provisioningState**: string
 
 ## RuleAction
 * **Discriminator**: odata.type
@@ -93,6 +93,9 @@
 ## RuleDataSource
 * **Discriminator**: odata.type
 ### Base Properties
+* **legacyResourceId**: string
+* **metricNamespace**: string
+* **resourceLocation**: string
 * **resourceUri**: string
 ### Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource
 #### Properties

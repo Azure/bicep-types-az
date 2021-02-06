@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-02' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'bot' | 'designer' | 'function' | 'sdk'
@@ -19,7 +18,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-02' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'bot' | 'designer' | 'function' | 'sdk'
@@ -30,11 +28,10 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.BotService/botServices/channels' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.BotService/botServices/Connections@2020-06-02
+## Resource Microsoft.BotService/botServices/connections@2020-06-02
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-02' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'bot' | 'designer' | 'function' | 'sdk'
@@ -43,7 +40,7 @@
 * **properties**: ConnectionSettingProperties
 * **sku**: Sku
 * **tags**: Dictionary<string,String>
-* **type**: 'Microsoft.BotService/botServices/Connections' (ReadOnly, DeployTimeConstant)
+* **type**: 'Microsoft.BotService/botServices/connections' (ReadOnly, DeployTimeConstant)
 
 ## BotProperties
 ### Properties

@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: int (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (WriteOnly)

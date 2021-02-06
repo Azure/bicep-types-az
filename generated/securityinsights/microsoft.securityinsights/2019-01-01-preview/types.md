@@ -5,7 +5,6 @@
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -20,17 +19,26 @@
 * **kind**: 'MicrosoftSecurityIncidentCreation' (Required)
 * **properties**: MicrosoftSecurityIncidentCreationAlertRuleProperties
 
+### MLBehaviorAnalytics
+#### Properties
+* **kind**: 'MLBehaviorAnalytics' (Required)
+* **properties**: MLBehaviorAnalyticsAlertRuleProperties
+
 ### Scheduled
 #### Properties
 * **kind**: 'Scheduled' (Required)
 * **properties**: ScheduledAlertRuleProperties
+
+### ThreatIntelligence
+#### Properties
+* **kind**: 'ThreatIntelligence' (Required)
+* **properties**: ThreatIntelligenceAlertRuleProperties
 
 
 ## Resource Microsoft.SecurityInsights/alertRules/actions@2019-01-01-preview
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -41,7 +49,6 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -52,7 +59,6 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -63,7 +69,6 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -74,7 +79,6 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: CaseCommentProperties
@@ -84,7 +88,6 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'CasesToBookmarks' (ReadOnly)
@@ -97,7 +100,6 @@
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -150,7 +152,7 @@
 ### ThreatIntelligence
 #### Properties
 * **kind**: 'ThreatIntelligence' (Required)
-* **properties**: TIDataConnectorProperties
+* **properties**: ThreatIntelligenceAlertRuleProperties
 
 ### ThreatIntelligenceTaxii
 #### Properties
@@ -162,7 +164,6 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -173,7 +174,6 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -184,7 +184,6 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -196,7 +195,6 @@
 * **Discriminator**: kind
 ### Base Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -221,7 +219,6 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (Required, WriteOnly)
@@ -233,7 +230,6 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -244,7 +240,6 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
@@ -282,6 +277,21 @@
 * **lastModifiedUtc**: string (ReadOnly)
 * **productFilter**: 'Azure Active Directory Identity Protection' | 'Azure Advanced Threat Protection' | 'Azure Security Center for IoT' | 'Azure Security Center' | 'Microsoft Cloud App Security' | 'Microsoft Defender Advanced Threat Protection' | 'Office 365 Advanced Threat Protection' (Required)
 * **severitiesFilter**: 'High' | 'Informational' | 'Low' | 'Medium'[]
+
+## MLBehaviorAnalytics
+### Properties
+* **kind**: 'MLBehaviorAnalytics' (Required)
+* **properties**: MLBehaviorAnalyticsAlertRuleProperties
+
+## MLBehaviorAnalyticsAlertRuleProperties
+### Properties
+* **alertRuleTemplateName**: string (Required)
+* **description**: string (ReadOnly)
+* **displayName**: string (ReadOnly)
+* **enabled**: bool (Required)
+* **lastModifiedUtc**: string (ReadOnly)
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (ReadOnly)
+* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation'[] (ReadOnly)
 
 ## Scheduled
 ### Properties
@@ -324,6 +334,21 @@
 * **lookbackDuration**: string (Required)
 * **reopenClosedIncident**: bool (Required)
 
+## ThreatIntelligence
+### Properties
+* **kind**: 'ThreatIntelligence' (Required)
+* **properties**: ThreatIntelligenceAlertRuleProperties
+
+## ThreatIntelligenceAlertRuleProperties
+### Properties
+* **alertRuleTemplateName**: string (Required)
+* **description**: string (ReadOnly)
+* **displayName**: string (ReadOnly)
+* **enabled**: bool (Required)
+* **lastModifiedUtc**: string (ReadOnly)
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (ReadOnly)
+* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation'[] (ReadOnly)
+
 ## ActionRequestProperties
 ### Properties
 * **logicAppResourceId**: string
@@ -335,11 +360,14 @@
 * **created**: string
 * **createdBy**: UserInfo
 * **displayName**: string (Required)
+* **eventTime**: string
 * **incidentInfo**: IncidentInfo
 * **labels**: string[]
 * **notes**: string
 * **query**: string (Required)
+* **queryEndTime**: string
 * **queryResult**: string
+* **queryStartTime**: string
 * **updated**: string
 * **updatedBy**: UserInfo
 
@@ -351,10 +379,10 @@
 
 ## IncidentInfo
 ### Properties
-* **incidentId**: string (Required)
-* **relationName**: string (Required)
-* **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium' (Required)
-* **title**: string (Required)
+* **incidentId**: string
+* **relationName**: string
+* **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium'
+* **title**: string
 
 ## RelationProperties
 ### Properties
@@ -374,14 +402,21 @@
 * **labels**: string[]
 * **lastComment**: string (ReadOnly)
 * **lastUpdatedTimeUtc**: string (ReadOnly)
+* **metrics**: Dictionary<string,Int> (ReadOnly)
 * **owner**: UserInfo
 * **relatedAlertIds**: string[] (ReadOnly)
+* **relatedAlertProductNames**: string[] (ReadOnly)
 * **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium' (Required)
-* **startTimeUtc**: string (Required)
+* **startTimeUtc**: string
 * **status**: 'Closed' | 'Draft' | 'InProgress' | 'New' (Required)
 * **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation'[] (ReadOnly)
 * **title**: string (Required)
 * **totalComments**: int (ReadOnly)
+
+## Dictionary<string,Int>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: int
 
 ## CaseCommentProperties
 ### Properties
@@ -422,9 +457,9 @@
 
 ## AwsCloudTrailDataConnectorDataTypes
 ### Properties
-* **logs**: schemas:34_logs
+* **logs**: schemas:37_logs
 
-## schemas:34_logs
+## schemas:37_logs
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -440,9 +475,9 @@
 
 ## AlertsDataTypeOfDataConnector
 ### Properties
-* **alerts**: schemas:31_alerts
+* **alerts**: schemas:34_alerts
 
-## schemas:31_alerts
+## schemas:34_alerts
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -478,9 +513,9 @@
 
 ## Dynamics365DataConnectorDataTypes
 ### Properties
-* **dynamics365CdsActivities**: schemas:79_dynamics365CdsActivities
+* **dynamics365CdsActivities**: schemas:82_dynamics365CdsActivities
 
-## schemas:79_dynamics365CdsActivities
+## schemas:82_dynamics365CdsActivities
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -496,10 +531,10 @@
 
 ## MCASDataConnectorDataTypes
 ### Properties
-* **alerts**: schemas:31_alerts
-* **discoveryLogs**: schemas:140_discoveryLogs
+* **alerts**: schemas:34_alerts
+* **discoveryLogs**: schemas:155_discoveryLogs
 
-## schemas:140_discoveryLogs
+## schemas:155_discoveryLogs
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -525,19 +560,19 @@
 
 ## OfficeDataConnectorDataTypes
 ### Properties
-* **exchange**: schemas:162_exchange
-* **sharePoint**: schemas:162_sharePoint
-* **teams**: schemas:162_teams
+* **exchange**: schemas:177_exchange
+* **sharePoint**: schemas:177_sharePoint
+* **teams**: schemas:177_teams
 
-## schemas:162_exchange
+## schemas:177_exchange
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
-## schemas:162_sharePoint
+## schemas:177_sharePoint
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
-## schemas:162_teams
+## schemas:177_teams
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -550,24 +585,6 @@
 ### Properties
 * **dataTypes**: AlertsDataTypeOfDataConnector
 * **tenantId**: string
-
-## ThreatIntelligence
-### Properties
-* **kind**: 'ThreatIntelligence' (Required)
-* **properties**: TIDataConnectorProperties
-
-## TIDataConnectorProperties
-### Properties
-* **dataTypes**: TIDataConnectorDataTypes
-* **tenantId**: string
-
-## TIDataConnectorDataTypes
-### Properties
-* **indicators**: schemas:193_indicators
-
-## schemas:193_indicators
-### Properties
-* **state**: 'Disabled' | 'Enabled'
 
 ## ThreatIntelligenceTaxii
 ### Properties
@@ -587,9 +604,9 @@
 
 ## TiTaxiiDataConnectorDataTypes
 ### Properties
-* **taxiiClient**: schemas:198_taxiiClient
+* **taxiiClient**: schemas:213_taxiiClient
 
-## schemas:198_taxiiClient
+## schemas:213_taxiiClient
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -608,6 +625,8 @@
 * **lastActivityTimeUtc**: string
 * **lastModifiedTimeUtc**: string (ReadOnly)
 * **owner**: IncidentOwnerInfo
+* **providerIncidentId**: string
+* **providerName**: string
 * **relatedAnalyticRuleIds**: string[] (ReadOnly)
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (Required)
 * **status**: 'Active' | 'Closed' | 'New' (Required)
@@ -682,6 +701,7 @@
 * **createdByRef**: string (WriteOnly)
 * **description**: string (WriteOnly)
 * **displayName**: string (WriteOnly)
+* **extensions**: Dictionary<string,Object> (WriteOnly)
 * **externalId**: string (WriteOnly)
 * **externalReferences**: string[] (WriteOnly)
 * **friendlyName**: string (ReadOnly, WriteOnly)
@@ -689,8 +709,10 @@
 * **indicatorTypes**: string[] (WriteOnly)
 * **killChainPhases**: ThreatIntelligenceKillChainPhase[] (WriteOnly)
 * **labels**: string[] (WriteOnly)
+* **language**: string (WriteOnly)
 * **lastUpdatedTimeUtc**: string (WriteOnly)
 * **modified**: string (WriteOnly)
+* **parsedPattern**: ThreatIntelligenceParsedPattern[] (WriteOnly)
 * **pattern**: string (WriteOnly)
 * **patternType**: string (WriteOnly)
 * **revoked**: bool (WriteOnly)
@@ -699,6 +721,11 @@
 * **threatTypes**: string[] (WriteOnly)
 * **validFrom**: string (WriteOnly)
 * **validUntil**: string (WriteOnly)
+
+## Dictionary<string,Object>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## Dictionary<string,Object>
 ### Properties
@@ -714,7 +741,17 @@
 ## ThreatIntelligenceKillChainPhase
 ### Properties
 * **killChainName**: string (WriteOnly)
-* **phaseName**: int (WriteOnly)
+* **phaseName**: string (WriteOnly)
+
+## ThreatIntelligenceParsedPattern
+### Properties
+* **patternTypeKey**: string (WriteOnly)
+* **patternTypeValues**: ThreatIntelligenceParsedPatternTypeValue[] (WriteOnly)
+
+## ThreatIntelligenceParsedPatternTypeValue
+### Properties
+* **value**: string (WriteOnly)
+* **valueType**: string (WriteOnly)
 
 ## WatchlistProperties
 ### Properties
@@ -733,8 +770,10 @@
 * **tenantId**: string
 * **updated**: string
 * **updatedBy**: UserInfo
+* **uploadStatus**: string
 * **watchlistAlias**: string
 * **watchlistId**: string
+* **watchlistItemsCount**: int
 * **watchlistType**: string
 
 ## WatchlistItemProperties

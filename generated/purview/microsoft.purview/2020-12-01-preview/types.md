@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity
 * **location**: string
@@ -18,7 +17,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **dependsOn**: resourceref[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PrivateEndpointConnectionProperties
@@ -39,9 +37,9 @@
 * **endpoints**: schemas:3_endpoints (ReadOnly)
 * **friendlyName**: string (ReadOnly)
 * **managedResources**: schemas:3_managedResources (ReadOnly)
-* **networkAcls**: NetworkAcls
 * **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'SoftDeleted' | 'SoftDeleting' | 'Succeeded' | 'Unknown' (ReadOnly)
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'NotSpecified'
 
 ## CloudConnectors
 ### Properties
@@ -58,10 +56,6 @@
 * **eventHubNamespace**: string (ReadOnly)
 * **resourceGroup**: string (ReadOnly)
 * **storageAccount**: string (ReadOnly)
-
-## NetworkAcls
-### Properties
-* **defaultAction**: 'Allow' | 'Deny'
 
 ## PrivateEndpointConnection
 ### Properties
