@@ -81,12 +81,10 @@
 
 ## Gen1EnvironmentCreationProperties
 ### Properties
-* **creationTime**: string (ReadOnly)
 * **dataAccessFqdn**: string (ReadOnly)
 * **dataAccessId**: string (ReadOnly)
 * **dataRetentionTime**: string (Required)
 * **partitionKeyProperties**: TimeSeriesIdProperty[]
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **status**: EnvironmentStatus (ReadOnly)
 * **storageLimitExceededBehavior**: 'PauseIngress' | 'PurgeOldData'
 

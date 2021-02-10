@@ -9,6 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: MediaServiceProperties
+* **systemData**: systemData (ReadOnly)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Media/mediaservices' (ReadOnly, DeployTimeConstant)
 
@@ -19,6 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: MediaFilterProperties
+* **systemData**: systemData (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/accountFilters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/assets@2020-05-01
@@ -28,6 +30,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AssetProperties
+* **systemData**: systemData (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/assets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/assets/assetFilters@2020-05-01
@@ -37,6 +40,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: MediaFilterProperties
+* **systemData**: systemData (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/assets/assetFilters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/contentKeyPolicies@2020-05-01
@@ -46,6 +50,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ContentKeyPolicyProperties
+* **systemData**: systemData (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/contentKeyPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaservices/liveEvents@2020-05-01
@@ -56,6 +61,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: LiveEventProperties
+* **systemData**: systemData (ReadOnly)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Media/mediaservices/liveEvents' (ReadOnly, DeployTimeConstant)
 
@@ -85,6 +91,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: StreamingEndpointProperties
+* **systemData**: systemData (ReadOnly)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Media/mediaservices/streamingEndpoints' (ReadOnly, DeployTimeConstant)
 
@@ -95,6 +102,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: StreamingLocatorProperties
+* **systemData**: systemData (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/streamingLocators' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/streamingPolicies@2020-05-01
@@ -104,6 +112,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: StreamingPolicyProperties
+* **systemData**: systemData (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/streamingPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/transforms@2020-05-01
@@ -113,6 +122,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: TransformProperties
+* **systemData**: systemData (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/transforms' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/transforms/jobs@2020-05-01
@@ -122,6 +132,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: JobProperties
+* **systemData**: systemData (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/transforms/jobs' (ReadOnly, DeployTimeConstant)
 
 ## MediaServiceIdentity
@@ -151,6 +162,15 @@
 ### Properties
 * **id**: string
 * **type**: 'Primary' | 'Secondary' (Required)
+
+## systemData
+### Properties
+* **createdAt**: string
+* **createdBy**: string
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+* **lastModifiedAt**: string
+* **lastModifiedBy**: string
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
 ## Dictionary<string,String>
 ### Properties
@@ -718,12 +738,14 @@
 ### #Microsoft.Media.BuiltInStandardEncoderPreset
 #### Properties
 * **@odata.type**: '#Microsoft.Media.BuiltInStandardEncoderPreset' (Required)
-* **presetName**: 'AACGoodQualityAudio' | 'AdaptiveStreaming' | 'ContentAwareEncoding' | 'ContentAwareEncodingExperimental' | 'CopyAllBitrateNonInterleaved' | 'H264MultipleBitrate1080p' | 'H264MultipleBitrate720p' | 'H264MultipleBitrateSD' | 'H264SingleBitrate1080p' | 'H264SingleBitrate720p' | 'H264SingleBitrateSD' (Required)
+* **presetName**: 'AACGoodQualityAudio' | 'AdaptiveStreaming' | 'ContentAwareEncoding' | 'ContentAwareEncodingExperimental' | 'CopyAllBitrateNonInterleaved' | 'H264MultipleBitrate1080p' | 'H264MultipleBitrate720p' | 'H264MultipleBitrateSD' | 'H264SingleBitrate1080p' | 'H264SingleBitrate720p' | 'H264SingleBitrateSD' | 'H265AdaptiveStreaming' | 'H265ContentAwareEncoding' | 'H265SingleBitrate1080p' | 'H265SingleBitrate4K' | 'H265SingleBitrate720p' (Required)
 
 ### #Microsoft.Media.FaceDetectorPreset
 #### Properties
 * **@odata.type**: '#Microsoft.Media.FaceDetectorPreset' (Required)
+* **blurType**: 'Black' | 'Box' | 'High' | 'Low' | 'Med'
 * **experimentalOptions**: Dictionary<string,String>
+* **mode**: 'Analyze' | 'Combined' | 'Redact'
 * **resolution**: 'SourceResolution' | 'StandardDefinition'
 
 ### #Microsoft.Media.StandardEncoderPreset
@@ -749,12 +771,14 @@
 ## #Microsoft.Media.BuiltInStandardEncoderPreset
 ### Properties
 * **@odata.type**: '#Microsoft.Media.BuiltInStandardEncoderPreset' (Required)
-* **presetName**: 'AACGoodQualityAudio' | 'AdaptiveStreaming' | 'ContentAwareEncoding' | 'ContentAwareEncodingExperimental' | 'CopyAllBitrateNonInterleaved' | 'H264MultipleBitrate1080p' | 'H264MultipleBitrate720p' | 'H264MultipleBitrateSD' | 'H264SingleBitrate1080p' | 'H264SingleBitrate720p' | 'H264SingleBitrateSD' (Required)
+* **presetName**: 'AACGoodQualityAudio' | 'AdaptiveStreaming' | 'ContentAwareEncoding' | 'ContentAwareEncodingExperimental' | 'CopyAllBitrateNonInterleaved' | 'H264MultipleBitrate1080p' | 'H264MultipleBitrate720p' | 'H264MultipleBitrateSD' | 'H264SingleBitrate1080p' | 'H264SingleBitrate720p' | 'H264SingleBitrateSD' | 'H265AdaptiveStreaming' | 'H265ContentAwareEncoding' | 'H265SingleBitrate1080p' | 'H265SingleBitrate4K' | 'H265SingleBitrate720p' (Required)
 
 ## #Microsoft.Media.FaceDetectorPreset
 ### Properties
 * **@odata.type**: '#Microsoft.Media.FaceDetectorPreset' (Required)
+* **blurType**: 'Black' | 'Box' | 'High' | 'Low' | 'Med'
 * **experimentalOptions**: Dictionary<string,String>
+* **mode**: 'Analyze' | 'Combined' | 'Redact'
 * **resolution**: 'SourceResolution' | 'StandardDefinition'
 
 ## Dictionary<string,String>
@@ -922,6 +946,7 @@
 * **@odata.type**: '#Microsoft.Media.JobInputClip' (Required)
 * **end**: ClipTime
 * **files**: string[]
+* **inputDefinitions**: InputDefinition[]
 * **label**: string
 * **start**: ClipTime
 
@@ -930,12 +955,18 @@
 * **@odata.type**: '#Microsoft.Media.JobInputs' (Required)
 * **inputs**: JobInput[]
 
+### #Microsoft.Media.JobInputSequence
+#### Properties
+* **@odata.type**: '#Microsoft.Media.JobInputSequence' (Required)
+* **inputs**: #Microsoft.Media.JobInputClip[]
+
 
 ## #Microsoft.Media.JobInputClip
 ### Properties
 * **@odata.type**: '#Microsoft.Media.JobInputClip' (Required)
 * **end**: ClipTime
 * **files**: string[]
+* **inputDefinitions**: InputDefinition[]
 * **label**: string
 * **start**: ClipTime
 
@@ -963,10 +994,68 @@
 * **@odata.type**: '#Microsoft.Media.UtcClipTime' (Required)
 * **time**: string (Required)
 
+## InputDefinition
+* **Discriminator**: @odata.type
+### Base Properties
+* **includedTracks**: TrackDescriptor[]
+### #Microsoft.Media.FromAllInputFile
+#### Properties
+* **@odata.type**: '#Microsoft.Media.FromAllInputFile' (Required)
+
+### #Microsoft.Media.FromEachInputFile
+#### Properties
+* **@odata.type**: '#Microsoft.Media.FromEachInputFile' (Required)
+
+### #Microsoft.Media.InputFile
+#### Properties
+* **@odata.type**: '#Microsoft.Media.InputFile' (Required)
+* **filename**: string
+
+
+## TrackDescriptor
+* **Discriminator**: @odata.type
+### Base Properties
+### #Microsoft.Media.AudioTrackDescriptor
+#### Properties
+* **@odata.type**: '#Microsoft.Media.AudioTrackDescriptor' (Required)
+* **channelMapping**: 'BackLeft' | 'BackRight' | 'Center' | 'FrontLeft' | 'FrontRight' | 'LowFrequencyEffects' | 'StereoLeft' | 'StereoRight'
+
+### #Microsoft.Media.VideoTrackDescriptor
+#### Properties
+* **@odata.type**: '#Microsoft.Media.VideoTrackDescriptor' (Required)
+
+
+## #Microsoft.Media.AudioTrackDescriptor
+### Properties
+* **@odata.type**: '#Microsoft.Media.AudioTrackDescriptor' (Required)
+* **channelMapping**: 'BackLeft' | 'BackRight' | 'Center' | 'FrontLeft' | 'FrontRight' | 'LowFrequencyEffects' | 'StereoLeft' | 'StereoRight'
+
+## #Microsoft.Media.VideoTrackDescriptor
+### Properties
+* **@odata.type**: '#Microsoft.Media.VideoTrackDescriptor' (Required)
+
+## #Microsoft.Media.FromAllInputFile
+### Properties
+* **@odata.type**: '#Microsoft.Media.FromAllInputFile' (Required)
+
+## #Microsoft.Media.FromEachInputFile
+### Properties
+* **@odata.type**: '#Microsoft.Media.FromEachInputFile' (Required)
+
+## #Microsoft.Media.InputFile
+### Properties
+* **@odata.type**: '#Microsoft.Media.InputFile' (Required)
+* **filename**: string
+
 ## #Microsoft.Media.JobInputs
 ### Properties
 * **@odata.type**: '#Microsoft.Media.JobInputs' (Required)
 * **inputs**: JobInput[]
+
+## #Microsoft.Media.JobInputSequence
+### Properties
+* **@odata.type**: '#Microsoft.Media.JobInputSequence' (Required)
+* **inputs**: #Microsoft.Media.JobInputClip[]
 
 ## JobOutput
 * **Discriminator**: @odata.type

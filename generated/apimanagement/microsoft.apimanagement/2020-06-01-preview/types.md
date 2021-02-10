@@ -183,8 +183,17 @@
 * **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:285_properties
+* **properties**: schemas:288_properties
 * **type**: 'Microsoft.ApiManagement/service/gateways/apis' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/gateways/certificateAuthorities@2020-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: GatewayCertificateAuthorityContractProperties
+* **type**: 'Microsoft.ApiManagement/service/gateways/certificateAuthorities' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/gateways/hostnameConfigurations@2020-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -248,6 +257,15 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PolicyContractProperties
 * **type**: 'Microsoft.ApiManagement/service/policies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/portalRevisions@2020-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PortalRevisionContractProperties
+* **type**: 'Microsoft.ApiManagement/service/portalRevisions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/products@2020-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -747,9 +765,13 @@
 * **district**: string
 * **name**: string (Required)
 
-## schemas:285_properties
+## schemas:288_properties
 ### Properties
 * **provisioningState**: 'created'
+
+## GatewayCertificateAuthorityContractProperties
+### Properties
+* **isTrusted**: bool
 
 ## GatewayHostnameConfigurationContractProperties
 ### Properties
@@ -809,6 +831,15 @@
 * **description**: string
 * **displayName**: string (Required)
 * **metadataEndpoint**: string (Required)
+
+## PortalRevisionContractProperties
+### Properties
+* **createdDateTime**: string (ReadOnly)
+* **description**: string
+* **isCurrent**: bool
+* **status**: 'completed' | 'failed' | 'pending' | 'publishing' (ReadOnly)
+* **statusDetails**: string (ReadOnly)
+* **updatedDateTime**: string (ReadOnly)
 
 ## ProductContractProperties
 ### Properties

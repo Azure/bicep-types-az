@@ -251,6 +251,24 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments@2020-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SqlRoleAssignmentResource
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitions@2020-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SqlRoleDefinitionResource
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitions' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.DocumentDB/databaseAccounts/tables@2020-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -881,6 +899,24 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SqlRoleAssignmentResource
+### Properties
+* **principalId**: string
+* **roleDefinitionId**: string
+* **scope**: string
+
+## SqlRoleDefinitionResource
+### Properties
+* **assignableScopes**: string[]
+* **permissions**: Permission[]
+* **roleName**: string
+* **type**: 'BuiltInRole' | 'CustomRole'
+
+## Permission
+### Properties
+* **dataActions**: string[]
+* **notDataActions**: string[]
 
 ## TableCreateUpdateProperties
 ### Properties
