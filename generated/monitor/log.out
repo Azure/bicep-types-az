@@ -1,11 +1,12 @@
 
 Executing: autorest --use=/home/runner/work/bicep-types-az/bicep-types-az/src/generator --azureresourceschema --output-folder=/home/runner/work/bicep-types-az/bicep-types-az/generated/monitor --multiapi /home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/readme.md
-AutoRest code generation utility [cli version: 3.0.6336; node: v14.15.4, max-memory: 2048 MB]
+AutoRest code generation utility [cli version: 3.0.6338; node: v14.15.4, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.0.6370)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.0.6372)
    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
    Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+Processing batch task - {"tag":"schema-insights-2020-10-01"} .
 Processing batch task - {"tag":"schema-insights-2020-05-01-preview"} .
 Processing batch task - {"tag":"schema-insights-2020-01-01-preview"} .
 Processing batch task - {"tag":"schema-insights-2019-11-01-preview"} .
@@ -27,4 +28,5 @@ Processing batch task - {"tag":"schema-insights-2016-09-01"} .
 Processing batch task - {"tag":"schema-insights-2016-03-01"} .
 Processing batch task - {"tag":"schema-insights-2015-07-01"} .
 Processing batch task - {"tag":"schema-insights-2015-04-01"} .
-[39.4 s] Generation Complete
+Processing batch task - {"tag":"schema-insights-2014-04-01"} .
+[57.89 s] Generation Complete

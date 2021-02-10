@@ -4216,7 +4216,7 @@
 #### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'ChainingTrigger' (Required)
-* **typeProperties**: schemas:884_typeProperties (Required)
+* **typeProperties**: schemas:885_typeProperties (Required)
 
 ### MultiplePipelineTrigger
 #### Properties
@@ -4226,20 +4226,20 @@
 ### RerunTumblingWindowTrigger
 #### Properties
 * **type**: 'RerunTumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:883_typeProperties (Required)
+* **typeProperties**: schemas:884_typeProperties (Required)
 
 ### TumblingWindowTrigger
 #### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'TumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:875_typeProperties (Required)
+* **typeProperties**: schemas:876_typeProperties (Required)
 
 
 ## ChainingTrigger
 ### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'ChainingTrigger' (Required)
-* **typeProperties**: schemas:884_typeProperties (Required)
+* **typeProperties**: schemas:885_typeProperties (Required)
 
 ## TriggerPipelineReference
 ### Properties
@@ -4257,7 +4257,7 @@
 * **referenceName**: string (Required)
 * **type**: string (Required)
 
-## schemas:884_typeProperties
+## schemas:885_typeProperties
 ### Properties
 * **dependsOn**: PipelineReference[] (Required)
 * **runDimension**: string (Required)
@@ -4270,9 +4270,9 @@
 ## RerunTumblingWindowTrigger
 ### Properties
 * **type**: 'RerunTumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:883_typeProperties (Required)
+* **typeProperties**: schemas:884_typeProperties (Required)
 
-## schemas:883_typeProperties
+## schemas:884_typeProperties
 ### Properties
 * **parentTrigger**: any (Required)
 * **requestedEndTime**: string (Required)
@@ -4283,9 +4283,9 @@
 ### Properties
 * **pipeline**: TriggerPipelineReference (Required)
 * **type**: 'TumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:875_typeProperties (Required)
+* **typeProperties**: schemas:876_typeProperties (Required)
 
-## schemas:875_typeProperties
+## schemas:876_typeProperties
 ### Properties
 * **delay**: any
 * **dependsOn**: DependencyReference[]

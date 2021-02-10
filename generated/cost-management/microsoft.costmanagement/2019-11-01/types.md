@@ -162,6 +162,7 @@
 * **and**: ReportConfigFilter[]
 * **dimensions**: ReportConfigComparisonExpression
 * **or**: ReportConfigFilter[]
+* **tagKey**: ReportConfigComparisonExpression
 * **tags**: ReportConfigComparisonExpression
 
 ## ReportConfigComparisonExpression

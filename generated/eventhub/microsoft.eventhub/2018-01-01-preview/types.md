@@ -25,6 +25,51 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.EventHub/namespaces' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.EventHub/namespaces/authorizationRules@2018-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:31_properties
+* **type**: 'Microsoft.EventHub/namespaces/authorizationRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2018-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:42_properties
+* **type**: 'Microsoft.EventHub/namespaces/disasterRecoveryConfigs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventHub/namespaces/eventhubs@2018-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:47_properties
+* **type**: 'Microsoft.EventHub/namespaces/eventhubs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2018-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:31_properties
+* **type**: 'Microsoft.EventHub/namespaces/eventhubs/authorizationRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.EventHub/namespaces/eventhubs/consumergroups@2018-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:37_properties
+* **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.EventHub/namespaces/ipfilterrules@2018-01-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -119,6 +164,54 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## schemas:31_properties
+### Properties
+* **rights**: 'Listen' | 'Manage' | 'Send'[] (Required)
+
+## schemas:42_properties
+### Properties
+* **alternateName**: string
+* **partnerNamespace**: string
+* **pendingReplicationOperationsCount**: int (ReadOnly)
+* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly)
+* **role**: 'Primary' | 'PrimaryNotReplicating' | 'Secondary' (ReadOnly)
+
+## schemas:47_properties
+### Properties
+* **captureDescription**: CaptureDescription
+* **createdAt**: string (ReadOnly)
+* **messageRetentionInDays**: int
+* **partitionCount**: int
+* **partitionIds**: string[] (ReadOnly)
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown'
+* **updatedAt**: string (ReadOnly)
+
+## CaptureDescription
+### Properties
+* **destination**: Destination
+* **enabled**: bool
+* **encoding**: 'Avro' | 'AvroDeflate'
+* **intervalInSeconds**: int
+* **sizeLimitInBytes**: int
+* **skipEmptyArchives**: bool
+
+## Destination
+### Properties
+* **name**: string
+* **properties**: schemas:49_properties
+
+## schemas:49_properties
+### Properties
+* **archiveNameFormat**: string
+* **blobContainer**: string
+* **storageAccountResourceId**: string
+
+## schemas:37_properties
+### Properties
+* **createdAt**: string (ReadOnly)
+* **updatedAt**: string (ReadOnly)
+* **userMetadata**: string
 
 ## schemas:7_properties
 ### Properties

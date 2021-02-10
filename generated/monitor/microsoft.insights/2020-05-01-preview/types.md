@@ -24,7 +24,7 @@
 * **evaluationFrequency**: string
 * **isLegacyLogAnalyticsRule**: bool (ReadOnly)
 * **muteActionsDuration**: string
-* **OverrideQueryTimeRange**: string
+* **overrideQueryTimeRange**: string
 * **scopes**: string[]
 * **severity**: int
 * **targetResourceTypes**: string[]

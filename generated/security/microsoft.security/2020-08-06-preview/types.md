@@ -18,6 +18,15 @@
 * **properties**: IotSensorProperties
 * **type**: 'Microsoft.Security/iotSensors' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Security/iotSites@2020-08-06-preview
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
+* **properties**: IotSiteProperties
+* **type**: 'Microsoft.Security/iotSites' (ReadOnly, DeployTimeConstant)
+
 ## IotDefenderSettingsProperties
 ### Properties
 * **deviceQuota**: int (Required)
@@ -35,4 +44,14 @@
 * **tiStatus**: 'Failed' | 'InProgress' | 'Ok' | 'UpdateAvailable' (ReadOnly)
 * **tiVersion**: string (ReadOnly)
 * **zone**: string
+
+## IotSiteProperties
+### Properties
+* **displayName**: string (Required)
+* **tags**: Dictionary<string,String>
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

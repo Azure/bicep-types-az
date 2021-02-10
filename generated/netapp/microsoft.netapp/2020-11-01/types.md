@@ -171,7 +171,6 @@
 * **isRestoring**: bool
 * **kerberosEnabled**: bool
 * **mountTargets**: mountTargetProperties[] (ReadOnly)
-* **name**: string (ReadOnly)
 * **protocolTypes**: string[]
 * **provisioningState**: string (ReadOnly)
 * **securityStyle**: 'ntfs' | 'unix'

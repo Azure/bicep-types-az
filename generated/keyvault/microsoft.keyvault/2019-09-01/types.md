@@ -101,9 +101,11 @@
 ## VirtualNetworkRule
 ### Properties
 * **id**: string (Required)
+* **ignoreMissingVnetServiceEndpoint**: bool
 
 ## PrivateEndpointConnectionItem
 ### Properties
+* **id**: string
 * **properties**: PrivateEndpointConnectionProperties
 
 ## PrivateEndpointConnectionProperties

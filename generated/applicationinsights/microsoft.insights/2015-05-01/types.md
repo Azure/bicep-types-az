@@ -1,4 +1,4 @@
-# Microsoft.Insights @ 2015-05-01
+# microsoft.insights @ 2015-05-01
 
 ## Resource Microsoft.Insights/components@2015-05-01
 * **Valid Scope(s)**: ResourceGroup
@@ -97,7 +97,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **LastUpdatedTime**: string
 * **name**: string (Required, DeployTimeConstant)
-* **RuleDefinitions**: schemas:21_RuleDefinitions
+* **RuleDefinitions**: schemas:20_RuleDefinitions
 * **SendEmailsToSubscriptionOwners**: bool
 * **type**: 'Microsoft.Insights/components/ProactiveDetectionConfigs' (ReadOnly, DeployTimeConstant)
 
@@ -172,7 +172,7 @@
 ### Properties
 * **functionAlias**: string
 
-## schemas:21_RuleDefinitions
+## schemas:20_RuleDefinitions
 ### Properties
 * **Description**: string
 * **DisplayName**: string
@@ -201,7 +201,7 @@
 
 ## WebTestProperties
 ### Properties
-* **Configuration**: schemas:34_Configuration
+* **Configuration**: schemas:43_Configuration
 * **Description**: string
 * **Enabled**: bool
 * **Frequency**: int
@@ -213,7 +213,7 @@
 * **SyntheticMonitorId**: string (Required)
 * **Timeout**: int
 
-## schemas:34_Configuration
+## schemas:43_Configuration
 ### Properties
 * **WebTest**: string
 

@@ -8,6 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AttestationServiceCreationSpecificParams (Required)
+* **systemData**: systemData (ReadOnly)
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Attestation/attestationProviders' (ReadOnly, DeployTimeConstant)
 
@@ -24,6 +25,7 @@
 ### Properties
 * **attestUri**: string (ReadOnly)
 * **policySigningCertificates**: JSONWebKeySet (WriteOnly)
+* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
 * **status**: 'Error' | 'NotReady' | 'Ready' (ReadOnly)
 * **trustModel**: string (ReadOnly)
 
@@ -51,16 +53,18 @@
 * **x5c**: string[] (WriteOnly)
 * **y**: string (WriteOnly)
 
-## Dictionary<string,String>
+## PrivateEndpointConnection
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **id**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
+* **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded'
+* **privateEndpoint**: PrivateEndpoint (ReadOnly)
+* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
 
 ## PrivateEndpoint
 ### Properties
@@ -68,7 +72,21 @@
 
 ## PrivateLinkServiceConnectionState
 ### Properties
-* **actionsRequired**: string
-* **description**: string
-* **status**: 'Approved' | 'Pending' | 'Rejected'
+* **actionsRequired**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **status**: 'Approved' | 'Pending' | 'Rejected' (ReadOnly)
+
+## systemData
+### Properties
+* **createdAt**: string (ReadOnly)
+* **createdBy**: string (ReadOnly)
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly)
+* **lastModifiedAt**: string (ReadOnly)
+* **lastModifiedBy**: string (ReadOnly)
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly)
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

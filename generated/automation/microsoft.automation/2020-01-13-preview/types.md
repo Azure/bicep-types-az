@@ -81,6 +81,16 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Automation/automationAccounts/modules' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Automation/automationAccounts/nodeConfigurations@2020-01-13-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DscNodeConfigurationCreateOrUpdateParametersProperties
+* **tags**: Dictionary<string,String> (WriteOnly)
+* **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Automation/automationAccounts/privateEndpointConnections@2020-01-13-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -348,6 +358,27 @@
 ### Properties
 * **code**: string (ReadOnly)
 * **message**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DscNodeConfigurationCreateOrUpdateParametersProperties
+### Properties
+* **configuration**: DscConfigurationAssociationProperty (Required)
+* **creationTime**: string (ReadOnly)
+* **incrementNodeConfigurationBuild**: bool
+* **lastModifiedTime**: string (ReadOnly)
+* **nodeCount**: int (ReadOnly)
+* **source**: ContentSource (Required)
+
+## ContentSource
+### Properties
+* **hash**: ContentHash (WriteOnly)
+* **type**: 'embeddedContent' | 'uri' (WriteOnly)
+* **value**: string (WriteOnly)
+* **version**: string (WriteOnly)
 
 ## Dictionary<string,String>
 ### Properties

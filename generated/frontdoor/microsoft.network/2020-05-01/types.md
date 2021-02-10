@@ -90,7 +90,7 @@
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
 * **sessionAffinityEnabledState**: 'Disabled' | 'Enabled'
 * **sessionAffinityTtlSeconds**: int
-* **webApplicationFirewallPolicyLink**: schemas:37_webApplicationFirewallPolicyLink
+* **webApplicationFirewallPolicyLink**: schemas:31_webApplicationFirewallPolicyLink
 
 ## CustomHttpsConfiguration
 ### Properties
@@ -108,13 +108,13 @@
 ### Properties
 * **secretName**: string
 * **secretVersion**: string
-* **vault**: schemas:32_vault
+* **vault**: schemas:26_vault
 
-## schemas:32_vault
+## schemas:26_vault
 ### Properties
 * **id**: string
 
-## schemas:37_webApplicationFirewallPolicyLink
+## schemas:31_webApplicationFirewallPolicyLink
 ### Properties
 * **id**: string
 
@@ -164,7 +164,7 @@
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
 * **routeConfiguration**: RouteConfiguration
 * **rulesEngine**: SubResource
-* **webApplicationFirewallPolicyLink**: schemas:14_webApplicationFirewallPolicyLink
+* **webApplicationFirewallPolicyLink**: schemas:8_webApplicationFirewallPolicyLink
 
 ## RouteConfiguration
 * **Discriminator**: @odata.type
@@ -213,7 +213,7 @@
 * **redirectProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest'
 * **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect'
 
-## schemas:14_webApplicationFirewallPolicyLink
+## schemas:8_webApplicationFirewallPolicyLink
 ### Properties
 * **id**: string
 

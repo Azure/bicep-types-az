@@ -45,7 +45,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:55_properties
+* **properties**: schemas:32_properties
 * **type**: 'Microsoft.ServiceBus/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceBus/namespaces/queues@2017-04-01
@@ -141,7 +141,7 @@
 * **provisioningState**: string (ReadOnly)
 * **targetNamespace**: string (Required)
 
-## schemas:55_properties
+## schemas:32_properties
 ### Properties
 * **defaultAction**: 'Allow' | 'Deny'
 * **ipRules**: NWRuleSetIpRules[]
