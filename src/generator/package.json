@@ -25,7 +25,7 @@
   "devDependencies": {
     "@autorest/core": "^3.0.6373",
     "@types/async": "^3.2.0",
-    "@types/node": "^14.14.25",
+    "@types/node": "^14.14.26",
     "@types/yargs": "^16.0.0",
     "async": "^3.2.0",
     "autorest": "^3.0.6339",
