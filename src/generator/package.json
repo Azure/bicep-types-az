@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "description": "The Azure Bicep extension for classic generators in AutoRest.",
   "scripts": {
-    "generate": "ts-node cmd/generate",
-    "start": "dotnet ./src/Bicep.TypeGen.Autorest/bin/net5.0/Bicep.TypeGen.Autorest.dll --server"
+    "generate": "ts-node cmd/generate"
   },
   "repository": {
     "type": "git",

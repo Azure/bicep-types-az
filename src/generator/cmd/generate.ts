@@ -18,11 +18,10 @@ const defaultLogger: ILogger = {
   err: data => process.stderr.write(data),
 }
 
-const extensionDir = path.resolve(`${__dirname}/../`);
-const autorestDll = path.resolve(`${extensionDir}/src/Bicep.TypeGen.Autorest/bin/net5.0/Bicep.TypeGen.Autorest.dll`);
-const indexBuilderDll = path.resolve(`${extensionDir}/src/Bicep.TypeGen.Index/bin/net5.0/Bicep.TypeGen.Index.dll`);
+const extensionDir = path.resolve(`${__dirname}/../../autorest.bicep/`);
+const indexBuilderDll = path.resolve(`${__dirname}/../src/Bicep.TypeGen.Index/bin/net5.0/Bicep.TypeGen.Index.dll`);
 const autorestBinary = os.platform() === 'win32' ? 'autorest.cmd' : 'autorest';
-const defaultOutDir = path.resolve(`${extensionDir}/../../generated`);
+const defaultOutDir = path.resolve(`${__dirname}/../../../generated`);
 
 const args = yargs
   .strict()
@@ -40,12 +39,12 @@ executeSynchronous(async () => {
   const waitForDebugger = args['wait-for-debugger'];
   const singlePath = args['single-path'];
 
-  if (!existsSync(autorestDll)) {
-    throw `Unable to find ${autorestDll}. Did you forget to run dotnet build?`;
+  if (!existsSync(indexBuilderDll)) {
+    throw `Unable to find ${indexBuilderDll}. Did you forget to run 'dotnet build'?`;
   }
 
-  if (!existsSync(indexBuilderDll)) {
-    throw `Unable to find ${indexBuilderDll}. Did you forget to run dotnet build?`;
+  if (!existsSync(`${extensionDir}/dist`)) {
+    throw `Unable to find ${extensionDir}/dist. Did you forget to run 'npm run build'?`;
   }
 
   // find all readme paths in the azure-rest-api-specs repo
@@ -102,7 +101,7 @@ async function generateSchema(logger: ILogger, readme: string, outputBaseDir: st
 
   if (waitForDebugger) {
     autoRestParams = autoRestParams.concat([
-      `--azureresourceschema.debugger=true`,
+      `--azureresourceschema.debugger`,
     ]);
   }
 

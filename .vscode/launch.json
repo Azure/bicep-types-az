@@ -34,18 +34,18 @@
             "preLaunchTask": "build"
         },
         {
-            "name": "Attach",
-            "type": "coreclr",
+            "type": "node",
             "request": "attach",
-            "processId": "${command:pickProcess}"
-        }
+            "name": "Attach",
+            "port": 9229
+        },
     ],
     "inputs": [
-      {
-        "id": "pickSinglePath",
-        "default": "compute",
-        "type": "promptString",
-        "description": "Pick a specific base path to generate types for"
-      }
+        {
+            "id": "pickSinglePath",
+            "default": "compute",
+            "type": "promptString",
+            "description": "Pick a specific base path to generate types for"
+        }
     ]
 }
