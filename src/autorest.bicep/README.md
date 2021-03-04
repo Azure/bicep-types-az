@@ -1,7 +1,6 @@
 # AutoRest extension configuration
 
 ```yaml
-version: 3.0.6320
 use-extension:
   "@autorest/modelerfour": "4.16.2"
 

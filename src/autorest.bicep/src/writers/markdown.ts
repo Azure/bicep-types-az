@@ -1,7 +1,7 @@
 import { Dictionary, keys, orderBy } from 'lodash';
-import { ArrayType, BuiltInType, DiscriminatedObjectType, getBuiltInTypeKindLabel, getObjectPropertyFlagsLabels, getScopeTypeLabels, ObjectProperty, ObjectType, ResourceType, StringLiteralType, TypeBase, TypeBaseKind, TypeReference, UnionType } from './types';
+import { ArrayType, BuiltInType, DiscriminatedObjectType, getBuiltInTypeKindLabel, getObjectPropertyFlagsLabels, getScopeTypeLabels, ObjectProperty, ObjectType, ResourceType, StringLiteralType, TypeBase, TypeBaseKind, TypeReference, UnionType } from '../types';
 
-export function generateMarkdown(provider: string, apiVersion: string, types: TypeBase[]) {
+export function writeMarkdown(provider: string, apiVersion: string, types: TypeBase[]) {
   let output = '';
 
   function getTypeName(types: TypeBase[], typeReference: TypeReference): string {

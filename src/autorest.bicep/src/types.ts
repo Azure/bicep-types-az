@@ -116,8 +116,6 @@ export class TypeReference {
     this.index = index;
   }
   readonly index: number;
-
-  toJson = () => (this.index);
 }
 
 export class BuiltInType extends TypeBase {

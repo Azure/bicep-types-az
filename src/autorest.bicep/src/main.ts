@@ -4,7 +4,8 @@
 import { AutoRestExtension, Host, startSession } from "@autorest/extension-base";
 import { generateTypes } from "./generator";
 import { CodeModel, codeModelSchema } from "@autorest/codemodel";
-import { generateMarkdown } from "./writer";
+import { writeJson } from './writers/json';
+import { writeMarkdown } from "./writers/markdown";
 
 export async function processRequest(host: Host) {
   try {
@@ -19,10 +20,10 @@ export async function processRequest(host: Host) {
       const outFolder = `${provider}/${apiVersion}`.toLowerCase();
 
       // write types.json
-      host.WriteFile(`${outFolder}/types.json`, JSON.stringify(types));
+      host.WriteFile(`${outFolder}/types.json`, writeJson(types));
 
       // writer types.md
-      host.WriteFile(`${outFolder}/types.md`, generateMarkdown(provider, apiVersion, types));
+      host.WriteFile(`${outFolder}/types.md`, writeMarkdown(provider, apiVersion, types));
     }
 
     session.log(`Autorest.AzureResourceSchema took ${Date.now() - start}ms`, "");

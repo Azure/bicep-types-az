@@ -7,7 +7,7 @@ import { ProviderDefinition, ResourceDefinition, ResourceDescriptor, ScopeType }
 import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
 import { uniq, keys, keyBy, Dictionary, mapValues, flatMap, values } from 'lodash';
 
-export function* generateTypes(codeModel: CodeModel, host: Host) {
+export function generateTypes(codeModel: CodeModel, host: Host) {
   function logWarning(message: string) {
     host.Message({
       Channel: Channel.Warning,
