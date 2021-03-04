@@ -14,14 +14,14 @@
     "declaration": true,
     "stripInternal": true,
     "noEmitHelpers": false,
-    "target": "es2018",
+    "target": "es2019",
     "types": ["node", "mocha"],
+    "esModuleInterop": true,
     "lib": ["es2020"],
-    "experimentalDecorators": true,
     "newLine": "LF",
     "outDir": "dist",
     "rootDir": "."
   },
   "include": ["src"],
-  "exclude": ["dist", "resources", "node_modules", "**/*.d.ts", "generated"]
+  "exclude": ["dist", "node_modules", "**/*.d.ts"]
 }

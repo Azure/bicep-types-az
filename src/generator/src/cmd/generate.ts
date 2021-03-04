@@ -1,12 +1,14 @@
 import os from 'os';
 import path from 'path';
 import { createWriteStream, existsSync } from 'fs';
-import { readdir, stat, rmdir, mkdir, rm } from 'fs/promises';
-import { series } from 'async';
+import { readdir, stat, rmdir, mkdir, rm, writeFile, readFile } from 'fs/promises';
+import { Dictionary, series } from 'async';
 import { spawn } from 'child_process';
 import chalk from 'chalk';
 import stripAnsi from 'strip-ansi';
 import yargs from 'yargs';
+import { orderBy } from 'lodash';
+import { TypeBaseKind } from '../types';
 
 interface ILogger {
   out: (data: string) => void;
@@ -18,10 +20,11 @@ const defaultLogger: ILogger = {
   err: data => process.stderr.write(data),
 }
 
-const extensionDir = path.resolve(`${__dirname}/../../autorest.bicep/`);
-const indexBuilderDll = path.resolve(`${__dirname}/../src/Bicep.TypeGen.Index/bin/net5.0/Bicep.TypeGen.Index.dll`);
+const rootDir = `${__dirname}/../../../../`;
+
+const extensionDir = path.resolve(`${rootDir}/src/autorest.bicep/`);
 const autorestBinary = os.platform() === 'win32' ? 'autorest.cmd' : 'autorest';
-const defaultOutDir = path.resolve(`${__dirname}/../../../generated`);
+const defaultOutDir = path.resolve(`${rootDir}/generated`);
 
 const args = yargs
   .strict()
@@ -38,10 +41,6 @@ executeSynchronous(async () => {
   const verbose = args['verbose'];
   const waitForDebugger = args['wait-for-debugger'];
   const singlePath = args['single-path'];
-
-  if (!existsSync(indexBuilderDll)) {
-    throw `Unable to find ${indexBuilderDll}. Did you forget to run 'dotnet build'?`;
-  }
 
   if (!existsSync(`${extensionDir}/dist`)) {
     throw `Unable to find ${extensionDir}/dist. Did you forget to run 'npm run build'?`;
@@ -62,7 +61,6 @@ executeSynchronous(async () => {
     if (singlePath && lowerCaseCompare(singlePath, basePath) !== 0) {
       continue;
     }
-
     // remove all previously-generated files
     await rmdir(outputDir, { recursive: true });
     await mkdir(outputDir, { recursive: true });
@@ -76,11 +74,7 @@ executeSynchronous(async () => {
   }
 
   // build the type index
-  await executeCmd(
-    defaultLogger,
-    __dirname,
-    'dotnet',
-    [indexBuilderDll, outputBaseDir]);
+  await buildTypeIndex(defaultLogger, outputBaseDir);
 });
 
 async function generateSchema(logger: ILogger, readme: string, outputBaseDir: string, verbose: boolean, waitForDebugger: boolean) {
@@ -216,4 +210,58 @@ async function getLogger(logFilePath: string): Promise<ILogger> {
       logFileStream.write(stripAnsi(data));
     },
   };
+}
+
+async function buildTypeIndex(logger: ILogger, baseDir: string) {
+  const indexContent = await buildIndex(logger, baseDir);
+
+  await writeFile(
+    `${baseDir}/index.json`,
+    JSON.stringify(indexContent, null, 0));
+}
+
+interface TypeIndex {
+  types: Dictionary<TypeIndexEntry>;
+}
+
+interface TypeIndexEntry {
+  relativePath: string;
+  index: number;
+}
+
+async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> {
+  const typeFiles = await findRecursive(baseDir, filePath => {
+    return path.basename(filePath) === 'types.json';
+  });
+  
+  const resourceTypes = new Set<string>();
+  const typeDictionary: Dictionary<TypeIndexEntry> = {};
+
+  // Use a consistent sort order so that file system differences don't generate changes
+  for (const typeFilePath of orderBy(typeFiles, f => f.toLowerCase(), 'asc')) {
+    const content = await readFile(typeFilePath);
+
+    const types = JSON.parse(content.toString()) as any[];
+    for (const type of types) {
+      const resource = type[TypeBaseKind.ResourceType];
+      if (!resource) {
+        continue;
+      }
+
+      if (resourceTypes.has(resource.name.toLowerCase())) {
+        logger.out(`WARNING: Found duplicate type ${type.name}`);
+        continue;
+      }
+      resourceTypes.add(resource.name.toLowerCase());
+
+      typeDictionary[resource.name] = {
+        relativePath: path.relative(baseDir, typeFilePath),
+        index: types.indexOf(type),
+      };
+    }
+  }
+
+  return {
+    types: typeDictionary,
+  }
 }

@@ -13,8 +13,7 @@
                 "--specs-dir",
                 "../../../azure-rest-api-specs"
             ],
-            "cwd": "${workspaceFolder}/src/generator",
-            "preLaunchTask": "build"
+            "cwd": "${workspaceFolder}/src/generator"
         },
         {
             "name": "Generate Single",
@@ -30,8 +29,7 @@
                 "--single-path",
                 "${input:pickSinglePath}"
             ],
-            "cwd": "${workspaceFolder}/src/generator",
-            "preLaunchTask": "build"
+            "cwd": "${workspaceFolder}/src/generator"
         },
         {
             "type": "node",
