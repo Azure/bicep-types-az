@@ -29,7 +29,7 @@ jobs:
         run: npm ci
         working-directory: src/autorest.bicep
       
-      - name: Build autorest npm packages
+      - name: Build autorest.bicep
         run: npm run build
         working-directory: src/autorest.bicep
       
