@@ -1,4 +1,4 @@
-import { Dictionary } from "lodash";
+import { Dictionary, keys } from "lodash";
 
 export enum BuiltInTypeKind {
   Any = 1,
@@ -11,6 +11,21 @@ export enum BuiltInTypeKind {
   ResourceRef = 8,
 }
 
+const BuiltInTypeKindLabel = new Map<BuiltInTypeKind, string>([
+  [BuiltInTypeKind.Any, 'Any'],
+  [BuiltInTypeKind.Null, 'Null'],
+  [BuiltInTypeKind.Bool, 'Bool'],
+  [BuiltInTypeKind.Int, 'Int'],
+  [BuiltInTypeKind.String, 'String'],
+  [BuiltInTypeKind.Object, 'Object'],
+  [BuiltInTypeKind.Array, 'Array'],
+  [BuiltInTypeKind.ResourceRef, 'ResourceRef'],
+]);
+
+export function getBuiltInTypeKindLabel(input: BuiltInTypeKind) {
+  return BuiltInTypeKindLabel.get(input) ?? '';
+}
+
 export enum ScopeType {
   Unknown = 0,
   Tenant = 1 << 0,
@@ -18,6 +33,25 @@ export enum ScopeType {
   Subscription = 1 << 2,
   ResourceGroup = 1 << 3,
   Extension = 1 << 4,
+}
+
+const ScopeTypeLabel = new Map<ScopeType, string>([
+  [ScopeType.Tenant, 'Tenant'],
+  [ScopeType.ManagementGroup, 'ManagementGroup'],
+  [ScopeType.Subscription, 'Subscription'],
+  [ScopeType.ResourceGroup, 'ResourceGroup'],
+  [ScopeType.Extension, 'Extension'],
+]);
+
+export function getScopeTypeLabels(input: ScopeType) {
+  const types = [];
+  for (const [key, value] of ScopeTypeLabel) {
+    if ((key & input) === key) {
+      types.push(value);
+    }
+  }
+
+  return types
 }
 
 export enum ObjectPropertyFlags {
@@ -28,6 +62,24 @@ export enum ObjectPropertyFlags {
   DeployTimeConstant = 1 << 3,
 }
 
+const ObjectPropertyFlagsLabel = new Map<ObjectPropertyFlags, string>([
+  [ObjectPropertyFlags.Required, 'Required'],
+  [ObjectPropertyFlags.ReadOnly, 'ReadOnly'],
+  [ObjectPropertyFlags.WriteOnly, 'WriteOnly'],
+  [ObjectPropertyFlags.DeployTimeConstant, 'DeployTimeConstant'],
+]);
+
+export function getObjectPropertyFlagsLabels(input: ObjectPropertyFlags) {
+  const types = [];
+  for (const [key, value] of ObjectPropertyFlagsLabel) {
+    if ((key & input) === key) {
+      types.push(value);
+    }
+  }
+
+  return types;
+}
+
 export enum TypeBaseKind {
   BuiltInType = 1,
   ObjectType = 2,
@@ -36,6 +88,20 @@ export enum TypeBaseKind {
   UnionType = 5,
   StringLiteralType = 6,
   DiscriminatedObjectType = 7,
+}
+
+const TypeBaseKindLabel = new Map<TypeBaseKind, string>([
+  [TypeBaseKind.BuiltInType, 'BuiltInType'],
+  [TypeBaseKind.ObjectType, 'ObjectType'],
+  [TypeBaseKind.ArrayType, 'ArrayType'],
+  [TypeBaseKind.ResourceType, 'ResourceType'],
+  [TypeBaseKind.UnionType, 'UnionType'],
+  [TypeBaseKind.StringLiteralType, 'StringLiteralType'],
+  [TypeBaseKind.DiscriminatedObjectType, 'DiscriminatedObjectType'],
+]);
+
+export function getTypeBaseKindLabel(input: TypeBaseKind) {
+  return TypeBaseKindLabel.get(input) ?? '';
 }
 
 export abstract class TypeBase {

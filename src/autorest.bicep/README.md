@@ -8,10 +8,6 @@ use-extension:
 modelerfour:
   # this runs a pre-namer step to clean up names
   prenamer: true
-  # this will flatten modelers marked with 'x-ms-client-flatten'
-  flatten-models: true
-  # this will flatten parameters marked with 'x-ms-client-flatten'
-  flatten-payloads: true
   # this will make the content-type parameter always specified
   always-create-content-type-parameter: true
   # enables parameter grouping via x-ms-parameter-grouping

@@ -5,7 +5,8 @@ import { ArraySchema, ChoiceSchema, CodeModel, DictionarySchema, HttpMethod, Htt
 import { Host } from "@autorest/extension-base";
 import { ProviderDefinition, ResourceDefinition, ResourceDescriptor, ScopeType } from './models';
 import { ArrayType, BuiltInType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceType, StringLiteralType, TypeBase, TypeFactory, TypeReference, UnionType } from "./types";
-import { uniq, keys, keyBy, Dictionary, values, mapValues } from 'lodash';
+import { uniq, keys, keyBy, Dictionary, values, mapValues, flatMap } from 'lodash';
+import { write } from "./writer";
 
 export function logWarning(message: string) {
   console.error(message);
@@ -30,6 +31,10 @@ export async function generate(codeModel: CodeModel, host: Host): Promise<void> 
       host.WriteFile(
         `${provider.toLowerCase()}/${apiVersion.toLowerCase()}/types.json`,
         JSON.stringify(typesByProvider[provider]));
+
+      host.WriteFile(
+        `${provider.toLowerCase()}/${apiVersion.toLowerCase()}/types.md`,
+        write(typesByProvider[provider], provider, apiVersion));
     }
   }
 }
@@ -414,6 +419,7 @@ function generateProviderTypes(codeModel: CodeModel, host: Host, definition: Pro
 
     const resourceProperties = getStandardizedResourceProperties(factory, descriptor, name);
     const resourceDefinition = createObject(factory, getFullyQualifiedType(descriptor), putSchema, resourceProperties);
+    const combinedSchema = combineAndThrowIfNull(getSchema, putSchema);
 
     factory.addType(new ResourceType(
       `${getFullyQualifiedType(descriptor)}@${descriptor.apiVersion}`,
@@ -428,16 +434,15 @@ function generateProviderTypes(codeModel: CodeModel, host: Host, definition: Pro
       const propertyDefinition = parseType(factory, putProperty?.schema, getProperty?.schema);
       if (propertyDefinition) {
         var flags = parsePropertyFlags(putProperty, getProperty);
-        resourceProperties[propertyName] = { type: propertyDefinition, flags, };
+        resourceProperties[propertyName] = new ObjectProperty(propertyDefinition, flags);
       }
     }
 
-/*
-    if (resourceDefinition is DiscriminatedObjectType discriminatedObjectType)
-    {
-        HandlePolymorphicType(discriminatedObjectType, putBody, getBody);
+    if (combinedSchema.discriminator) {
+      const discriminatedObjectType = factory.lookupType(resourceDefinition) as DiscriminatedObjectType;
+      
+      handlePolymorphicType(factory, discriminatedObjectType, putSchema, getSchema);
     }
-*/
   }
 
   return factory.types;
@@ -464,15 +469,45 @@ function combineAndThrowIfNull<TSchema extends Schema>(putSchema: TSchema | unde
   return output;
 }
 
-function* getObjectTypeProperties(putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined, includeBaseModelTypeProperties: boolean) {
-  const putProperties = keyBy(putSchema?.properties ?? [], p => p.language.default.name);
-  const getProperties = keyBy(getSchema?.properties ?? [], p => p.language.default.name);
+function getSchemaProperties(schema: ObjectSchema, includeParents: boolean): Dictionary<Property> {
+  const objects = [schema];
+  if (includeParents) {
+    for (const parent of schema.parents?.all || []) {
+      if (parent instanceof ObjectSchema) {
+        objects.push(parent);
+      }
+    }
+  }
+
+  return keyBy(flatMap(objects, o => o.properties || []), p => p?.language.default.name);
+}
+
+function* getObjectTypeProperties(putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined, includeParents: boolean) {
+  const putProperties = putSchema ? getSchemaProperties(putSchema, includeParents) : {};
+  const getProperties = getSchema ? getSchemaProperties(getSchema, includeParents) : {};
 
   for (const propertyName of uniq([...keys(putProperties), ...keys(getProperties)])) {
+    if (putSchema?.discriminator?.property === putProperties[propertyName] ||
+      getSchema?.discriminator?.property === getProperties[propertyName]) {
+      continue;
+    }
+
     const putProperty = putProperties[propertyName] as Property | undefined
     const getProperty = getProperties[propertyName] as Property | undefined
 
     yield { propertyName, putProperty, getProperty };
+  }
+}
+
+function* getDiscriminatedSubTypes(putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined) {
+  const putSubTypes = putSchema?.discriminator?.all || {};
+  const getSubTypes = getSchema?.discriminator?.all || {};
+
+  for (const subTypeName of uniq([...keys(putSubTypes), ...keys(getSubTypes)])) {
+    const putSubType = putSubTypes[subTypeName] instanceof ObjectSchema ? (putSubTypes[subTypeName] as ObjectSchema) : undefined;
+    const getSubType = putSubTypes[subTypeName] instanceof ObjectSchema ? (getSubTypes[subTypeName] as ObjectSchema) : undefined;
+
+    yield { subTypeName, putSubType, getSubType };
   }
 }
 
@@ -558,31 +593,55 @@ function parsePrimaryType(factory: TypeFactory, putSchema: PrimitiveSchema | und
   }
 }
 
-function parseObjectType(factory: TypeFactory, putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined, includeBaseModelTypeProperties: boolean) {
+function handlePolymorphicType(factory: TypeFactory, discriminatedObjectType: DiscriminatedObjectType, putSchema?: ObjectSchema, getSchema?: ObjectSchema) {
+  for (const { putSubType, getSubType } of getDiscriminatedSubTypes(putSchema, getSchema)) {
+    const combinedSubType = combineAndThrowIfNull(putSubType, getSubType);
+    
+    if (!combinedSubType.discriminatorValue) {
+      continue;
+    }
+
+    const objectTypeRef = parseObjectType(factory, putSubType, getSubType, false);
+    discriminatedObjectType.elements[combinedSubType.discriminatorValue] = objectTypeRef;
+
+    const objectType = factory.lookupType(objectTypeRef) as ObjectType;
+    objectType.properties[discriminatedObjectType.discriminator] = new ObjectProperty(
+      factory.addType(new StringLiteralType(combinedSubType.discriminatorValue)),
+      ObjectPropertyFlags.Required);
+  }
+}
+
+function parseObjectType(factory: TypeFactory, putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined, includeParents: boolean) {
   const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
   const definitionName = combinedSchema.language.default.name;
 
-  if (factory.namedDefinitions[definitionName]) {
+  if (!factory.namedDefinitions[definitionName]) {
     const definitionProperties: Dictionary<ObjectProperty> = {};
-    const definition = new ObjectType(definitionName, definitionProperties);
-    factory.namedDefinitions[definitionName] = factory.addType(definition);
+    const definition = createObject(factory, definitionName, combinedSchema, definitionProperties);
+    factory.namedDefinitions[definitionName] = definition;
 
-    for (const { propertyName, putProperty, getProperty } of getObjectTypeProperties(putSchema, getSchema, includeBaseModelTypeProperties)) {
+    for (const { propertyName, putProperty, getProperty } of getObjectTypeProperties(putSchema, getSchema, includeParents)) {
       const propertyDefinition = parseType(factory, putProperty?.schema, getProperty?.schema);
       if (propertyDefinition) {
         const flags = parsePropertyFlags(putProperty, getProperty);
-        definitionProperties[propertyName] = { type: propertyDefinition, flags, };
+        definitionProperties[propertyName] = new ObjectProperty(propertyDefinition, flags);
       }
     }
 
-    /*
-    var (putAdditionalType, getAdditionalType) = getObjectTypeAdditionalProperties(factory, putSchema, getSchema, includeBaseModelTypeProperties);
+        /*
+    var (putAdditionalType, getAdditionalType) = getObjectTypeAdditionalProperties(factory, putSchema, getSchema, includeParents);
     if ((putAdditionalType ?? getAdditionalType) != null && definition is ObjectType definitionObjectType)
     {
         var additionalPropertiesType = ParseType(putAdditionalType?.ValueType, getAdditionalType?.ValueType);
         definitionObjectType.AdditionalProperties = factory.GetReference(additionalPropertiesType);
     }
     */
+
+    if (combinedSchema.discriminator) {
+      const discriminatedObjectType = factory.lookupType(definition) as DiscriminatedObjectType;
+      
+      handlePolymorphicType(factory, discriminatedObjectType, putSchema, getSchema);
+    }
   }
 
   return factory.namedDefinitions[definitionName];
