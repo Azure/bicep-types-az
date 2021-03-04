@@ -1,0 +1,65 @@
+# Microsoft.Consumption @ 2019-10-01
+
+## Resource Microsoft.Consumption/budgets@2019-10-01
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
+* **eTag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: BudgetProperties
+* **type**: 'Microsoft.Consumption/budgets' (ReadOnly, DeployTimeConstant)
+
+## BudgetProperties
+### Properties
+* **amount**: int (Required)
+* **category**: 'Cost' (Required)
+* **currentSpend**: CurrentSpend (ReadOnly)
+* **filter**: BudgetFilter
+* **notifications**: BudgetPropertiesNotifications
+* **timeGrain**: 'Annually' | 'BillingAnnual' | 'BillingMonth' | 'BillingQuarter' | 'Monthly' | 'Quarterly' (Required)
+* **timePeriod**: BudgetTimePeriod (Required)
+
+## CurrentSpend
+### Properties
+* **amount**: int (ReadOnly)
+* **unit**: string (ReadOnly)
+
+## BudgetFilter
+### Properties
+* **and**: BudgetFilterProperties[]
+* **dimensions**: BudgetComparisonExpression
+* **not**: BudgetFilterProperties
+* **tags**: BudgetComparisonExpression
+
+## BudgetFilterProperties
+### Properties
+* **dimensions**: BudgetComparisonExpression
+* **tags**: BudgetComparisonExpression
+
+## BudgetComparisonExpression
+### Properties
+* **name**: string (Required)
+* **operator**: 'In' (Required)
+* **values**: string[] (Required)
+
+## BudgetPropertiesNotifications
+### Properties
+### Additional Properties
+* **Additional Properties Type**: Notification
+
+## Notification
+### Properties
+* **contactEmails**: string[] (Required)
+* **contactGroups**: string[]
+* **contactRoles**: string[]
+* **enabled**: bool (Required)
+* **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' (Required)
+* **threshold**: int (Required)
+* **thresholdType**: 'Actual'
+
+## BudgetTimePeriod
+### Properties
+* **endDate**: string
+* **startDate**: string (Required)
+

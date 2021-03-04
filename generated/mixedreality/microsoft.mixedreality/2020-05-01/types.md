@@ -1,0 +1,50 @@
+# Microsoft.MixedReality @ 2020-05-01
+
+## Resource Microsoft.MixedReality/spatialAnchorsAccounts@2020-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity
+* **kind**: Sku
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **plan**: Identity
+* **properties**: MixedRealityAccountProperties
+* **sku**: Sku
+* **systemData**: SystemData (ReadOnly)
+* **tags**: TrackedResourceTags
+* **type**: 'Microsoft.MixedReality/spatialAnchorsAccounts' (ReadOnly, DeployTimeConstant)
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+
+## Sku
+### Properties
+* **capacity**: int
+* **family**: string
+* **name**: string (Required)
+* **size**: string
+
+## MixedRealityAccountProperties
+### Properties
+* **accountDomain**: string (ReadOnly)
+* **accountId**: string (ReadOnly)
+* **storageAccountName**: string
+
+## SystemData
+### Properties
+* **createdAt**: string
+* **createdBy**: string
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+* **lastModifiedAt**: string
+* **lastModifiedBy**: string
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
