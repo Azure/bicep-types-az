@@ -1,13 +1,10 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {
-  AutoRestExtension,
-  Host,
-  startSession
-} from "@autorest/extension-base";
-import { generate } from "./generator";
+import { AutoRestExtension, Host, startSession } from "@autorest/extension-base";
+import { generateTypes } from "./generator";
 import { CodeModel, codeModelSchema } from "@autorest/codemodel";
+import { generateMarkdown } from "./writer";
 
 export async function processRequest(host: Host) {
   try {
@@ -17,7 +14,17 @@ export async function processRequest(host: Host) {
       codeModelSchema
     );
     const start = Date.now();
-    await generate(session.model, host);
+
+    for (const { provider, apiVersion, types } of generateTypes(session.model, host)) {
+      const outFolder = `${provider}/${apiVersion}`.toLowerCase();
+
+      // write types.json
+      host.WriteFile(`${outFolder}/types.json`, JSON.stringify(types));
+
+      // writer types.md
+      host.WriteFile(`${outFolder}/types.md`, generateMarkdown(provider, apiVersion, types));
+    }
+
     session.log(`Autorest.AzureResourceSchema took ${Date.now() - start}ms`, "");
   } catch (err) {
     console.error("An error was encountered while handling a request:", err);

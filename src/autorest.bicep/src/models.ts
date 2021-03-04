@@ -1,4 +1,4 @@
-import { CodeModel, HttpRequest, ObjectSchema, Parameter } from "@autorest/codemodel";
+import { HttpRequest, ObjectSchema, Parameter } from "@autorest/codemodel";
 
 export enum ScopeType {
   Unknown = 0,
@@ -21,7 +21,6 @@ export interface ProviderDefinition {
   namespace: string;
   apiVersion: string;
   resources: ResourceDefinition[];
-  codeModel: CodeModel;
 }
 
 export interface ResourceDefinition {

@@ -1,4 +1,4 @@
-import { Dictionary, keys } from "lodash";
+import { Dictionary } from "lodash";
 
 export enum BuiltInTypeKind {
   Any = 1,
