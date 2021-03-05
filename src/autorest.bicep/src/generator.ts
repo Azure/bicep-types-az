@@ -678,8 +678,9 @@ export function generateTypes(codeModel: CodeModel, host: Host) {
 
   function parseConstant(factory: TypeFactory, putSchema: ConstantSchema | undefined, getSchema: ConstantSchema | undefined) {
     const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
+    const constantValue = combinedSchema.value;
 
-    return factory.addType(new StringLiteralType(combinedSchema.value.toString()));
+    return factory.addType(new StringLiteralType(constantValue.value.toString()));
   }
 
   function parseDictionaryType(factory: TypeFactory, putSchema: DictionarySchema | undefined, getSchema: DictionarySchema | undefined) {
