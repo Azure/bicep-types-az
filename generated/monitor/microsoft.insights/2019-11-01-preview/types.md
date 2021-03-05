@@ -1,4 +1,4 @@
-# Microsoft.Insights @ 2019-11-01-preview
+# microsoft.insights @ 2019-11-01-preview
 
 ## Resource Microsoft.Insights/dataCollectionRuleAssociations@2019-11-01-preview
 * **Valid Scope(s)**: Unknown

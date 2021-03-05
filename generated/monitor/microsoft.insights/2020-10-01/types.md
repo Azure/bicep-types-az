@@ -1,4 +1,4 @@
-# Microsoft.Insights @ 2020-10-01
+# microsoft.insights @ 2020-10-01
 
 ## Resource Microsoft.Insights/activityLogAlerts@2020-10-01
 * **Valid Scope(s)**: ResourceGroup

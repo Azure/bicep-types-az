@@ -1,4 +1,4 @@
-# Microsoft.Insights @ 2020-05-01-preview
+# microsoft.insights @ 2020-05-01-preview
 
 ## Resource Microsoft.Insights/scheduledQueryRules@2020-05-01-preview
 * **Valid Scope(s)**: ResourceGroup

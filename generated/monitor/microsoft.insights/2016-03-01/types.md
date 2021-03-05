@@ -1,5 +1,16 @@
 # microsoft.insights @ 2016-03-01
 
+## Resource Microsoft.Insights/alertrules@2016-03-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AlertRule (Required)
+* **tags**: ResourceTags
+* **type**: 'Microsoft.Insights/alertrules' (ReadOnly, DeployTimeConstant)
+
 ## Resource microsoft.insights/logprofiles@2016-03-01
 * **Valid Scope(s)**: Subscription
 ### Properties
@@ -11,25 +22,25 @@
 * **tags**: ResourceTags
 * **type**: 'microsoft.insights/logprofiles' (ReadOnly, DeployTimeConstant)
 
-## LogProfileProperties
+## AlertRule
 ### Properties
-* **categories**: string[] (Required)
-* **locations**: string[] (Required)
-* **retentionPolicy**: RetentionPolicy (Required)
-* **serviceBusRuleId**: string
-* **storageAccountId**: string
+* **action**: RuleAction
+* **actions**: RuleAction[]
+* **condition**: RuleCondition (Required)
+* **description**: string
+* **isEnabled**: bool (Required)
+* **lastUpdatedTime**: string (ReadOnly)
+* **name**: string (Required)
+* **provisioningState**: string
 
-## RetentionPolicy
-### Properties
-* **days**: int (Required)
-* **enabled**: bool (Required)
+## RuleAction
+* **Discriminator**: odata.type
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-e**: 'Microsoft.Azure.Management.Insights.Models.RuleEmailAction' (Required)
+### Base Properties
+### RuleEmailAction
+#### Properties
+* **customEmails**: string[]
+* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleEmailAction' (Required)
 * **sendToServiceOwners**: bool
 
 ### RuleWebhookAction
@@ -149,6 +160,24 @@ e**: 'Microsoft.Azure.Management.Insights.Models.RuleEmailAction' (Required)
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition' (Required)
 * **threshold**: int (Required)
 * **windowSize**: any
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## LogProfileProperties
+### Properties
+* **categories**: string[] (Required)
+* **locations**: string[] (Required)
+* **retentionPolicy**: RetentionPolicy (Required)
+* **serviceBusRuleId**: string
+* **storageAccountId**: string
+
+## RetentionPolicy
+### Properties
+* **days**: int (Required)
+* **enabled**: bool (Required)
 
 ## ResourceTags
 ### Properties

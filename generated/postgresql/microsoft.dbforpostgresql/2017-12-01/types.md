@@ -1,24 +1,22 @@
-# Microsoft.DBforPostgreSQL @ 2017-12-01
+# microsoft.dbforpostgresql @ 2017-12-01
 
-## Resource Microsoft.DBforPostgreSQL/servers/securityAlertPolicies@2017-12-01
+## Resource Microsoft.DBForPostgreSQL/servers@2017-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'Default' (Required, DeployTimeConstant)
-* **properties**: SecurityAlertPolicyProperties
-* **type**: 'Microsoft.DBforPostgreSQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
+* **identity**: ResourceIdentity
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServerPropertiesForCreate (Required)
+* **sku**: Sku
+* **tags**: ServerForCreateTags
+* **type**: 'Microsoft.DBForPostgreSQL/servers' (ReadOnly, DeployTimeConstant)
 
-## SecurityAlertPolicyProperties
+## Resource Microsoft.DBForPostgreSQL/servers/administrators@2017-12-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **disabledAlerts**: string[]
-* **emailAccountAdmins**: bool
-* **emailAddresses**: string[]
-* **retentionDays**: int
-* **storageAccountAccessKey**: string
-* **storageEndpoint**: string
-
-ly, DeployTimeConstant)
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ServerAdministratorProperties
@@ -59,6 +57,15 @@ ly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: VirtualNetworkRuleProperties
 * **type**: 'Microsoft.DBForPostgreSQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DBforPostgreSQL/servers/securityAlertPolicies@2017-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'Default' (Required, DeployTimeConstant)
+* **properties**: SecurityAlertPolicyProperties
+* **type**: 'Microsoft.DBforPostgreSQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
 ## ResourceIdentity
 ### Properties
@@ -170,4 +177,13 @@ ly, DeployTimeConstant)
 * **ignoreMissingVnetServiceEndpoint**: bool
 * **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly)
 * **virtualNetworkSubnetId**: string (Required)
+
+## SecurityAlertPolicyProperties
+### Properties
+* **disabledAlerts**: string[]
+* **emailAccountAdmins**: bool
+* **emailAddresses**: string[]
+* **retentionDays**: int
+* **storageAccountAccessKey**: string
+* **storageEndpoint**: string
 

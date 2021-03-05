@@ -1,4 +1,4 @@
-# Microsoft.DBForMySQL @ 2017-12-01-preview
+# microsoft.dbformysql @ 2017-12-01-preview
 
 ## Resource Microsoft.DBForMySQL/servers@2017-12-01-preview
 * **Valid Scope(s)**: ResourceGroup

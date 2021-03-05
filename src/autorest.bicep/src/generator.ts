@@ -50,14 +50,16 @@ export function generateTypes(codeModel: CodeModel, host: Host) {
       }
 
       for (const descriptor of descriptors) {
-        if (!providerDefinitions[descriptor.namespace]) {
-          providerDefinitions[descriptor.namespace] = {
+        const namespace = descriptor.namespace.toLowerCase();
+
+        if (!providerDefinitions[namespace]) {
+          providerDefinitions[namespace] = {
             namespace: descriptor.namespace,
             apiVersion,
             resources: []
           };
         }
-        const providerDefinition = providerDefinitions[descriptor.namespace];
+        const providerDefinition = providerDefinitions[namespace];
 
         providerDefinition.resources.push({
           descriptor,

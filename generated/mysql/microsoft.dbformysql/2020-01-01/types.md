@@ -1,4 +1,4 @@
-# Microsoft.DBforMySQL @ 2020-01-01
+# microsoft.dbformysql @ 2020-01-01
 
 ## Resource Microsoft.DBforMySQL/servers/keys@2020-01-01
 * **Valid Scope(s)**: ResourceGroup

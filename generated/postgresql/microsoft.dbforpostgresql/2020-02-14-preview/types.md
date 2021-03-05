@@ -1,4 +1,4 @@
-# Microsoft.DBForPostgreSql @ 2020-02-14-preview
+# microsoft.dbforpostgresql @ 2020-02-14-preview
 
 ## Resource Microsoft.DBForPostgreSql/flexibleServers@2020-02-14-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -41,9 +41,7 @@
 * **maintenanceWindow**: MaintenanceWindow
 * **pointInTimeUTC**: string
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly)
-* **sourceResourceGroupName**: string
 * **sourceServerName**: string
-* **sourceSubscriptionId**: string
 * **standbyAvailabilityZone**: string (ReadOnly)
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly)
 * **storageProfile**: StorageProfile

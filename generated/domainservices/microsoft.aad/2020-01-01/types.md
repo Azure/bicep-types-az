@@ -1,4 +1,16 @@
-# Microsoft.Aad @ 2020-01-01
+# microsoft.aad @ 2020-01-01
+
+## Resource Microsoft.AAD/domainServices@2020-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DomainServiceProperties
+* **tags**: ResourceTags
+* **type**: 'Microsoft.AAD/domainServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Aad/domainServices/ouContainer@2020-01-01
 * **Valid Scope(s)**: ResourceGroup
@@ -7,9 +19,6 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **type**: 'Microsoft.Aad/domainServices/ouContainer' (ReadOnly, DeployTimeConstant)
-
-ourceTags
-* **type**: 'Microsoft.AAD/domainServices' (ReadOnly, DeployTimeConstant)
 
 ## DomainServiceProperties
 ### Properties

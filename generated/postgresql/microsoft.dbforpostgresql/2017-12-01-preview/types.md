@@ -1,4 +1,4 @@
-# Microsoft.DBForPostgreSQL @ 2017-12-01-preview
+# microsoft.dbforpostgresql @ 2017-12-01-preview
 
 ## Resource Microsoft.DBForPostgreSQL/servers@2017-12-01-preview
 * **Valid Scope(s)**: ResourceGroup

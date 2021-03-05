@@ -74,7 +74,7 @@ executeSynchronous(async () => {
   }
 
   // build the type index
-  //await buildTypeIndex(defaultLogger, outputBaseDir);
+  await buildTypeIndex(defaultLogger, outputBaseDir);
 });
 
 async function generateSchema(logger: ILogger, readme: string, outputBaseDir: string, verbose: boolean, waitForDebugger: boolean) {
@@ -249,7 +249,7 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
       }
 
       if (resourceTypes.has(resource.name.toLowerCase())) {
-        logger.out(`WARNING: Found duplicate type ${type.name}`);
+        logger.out(`WARNING: Found duplicate type \"${resource.name}\"\n`);
         continue;
       }
       resourceTypes.add(resource.name.toLowerCase());

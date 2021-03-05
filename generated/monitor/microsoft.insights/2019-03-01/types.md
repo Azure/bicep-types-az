@@ -5,12 +5,10 @@
 ### Properties
 * **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: string (ReadOnly)
-* **kind**: string (ReadOnly)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ActionGroup
-* **tags**: AzureResourceTags
+* **tags**: ResourceTags
 * **type**: 'microsoft.insights/actionGroups' (ReadOnly, DeployTimeConstant)
 
 ## ActionGroup
@@ -96,7 +94,7 @@
 * **serviceUri**: string (Required)
 * **useCommonAlertSchema**: bool (Required)
 
-## AzureResourceTags
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

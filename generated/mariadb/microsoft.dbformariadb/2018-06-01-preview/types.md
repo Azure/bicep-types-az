@@ -1,4 +1,4 @@
-# Microsoft.DBForMariaDB @ 2018-06-01-preview
+# microsoft.dbformariadb @ 2018-06-01-preview
 
 ## Resource Microsoft.DBForMariaDB/servers@2018-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -69,7 +69,7 @@
 * **replicationRole**: string (ReadOnly)
 * **storageProfile**: StorageProfile
 * **userVisibleState**: 'Disabled' | 'Dropping' | 'Ready' (ReadOnly)
-* **version**: '10.2' | '10.3'
+* **version**: '5.6' | '5.7'
 ### ServerPropertiesForDefaultCreate
 #### Properties
 * **createMode**: 'Default' (Required)

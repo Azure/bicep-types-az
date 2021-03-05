@@ -1,24 +1,22 @@
-# Microsoft.DBforMySQL @ 2017-12-01
+# microsoft.dbformysql @ 2017-12-01
 
-## Resource Microsoft.DBforMySQL/servers/securityAlertPolicies@2017-12-01
+## Resource Microsoft.DBForMySQL/servers@2017-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'Default' (Required, DeployTimeConstant)
-* **properties**: SecurityAlertPolicyProperties
-* **type**: 'Microsoft.DBforMySQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
+* **identity**: ResourceIdentity
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServerPropertiesForCreate (Required)
+* **sku**: Sku
+* **tags**: ServerForCreateTags
+* **type**: 'Microsoft.DBForMySQL/servers' (ReadOnly, DeployTimeConstant)
 
-## SecurityAlertPolicyProperties
+## Resource Microsoft.DBForMySQL/servers/administrators@2017-12-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **disabledAlerts**: string[]
-* **emailAccountAdmins**: bool
-* **emailAddresses**: string[]
-* **retentionDays**: int
-* **storageAccountAccessKey**: string
-* **storageEndpoint**: string
-
-eployTimeConstant)
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ServerAdministratorProperties
@@ -59,6 +57,15 @@ eployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: VirtualNetworkRuleProperties
 * **type**: 'Microsoft.DBForMySQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DBforMySQL/servers/securityAlertPolicies@2017-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'Default' (Required, DeployTimeConstant)
+* **properties**: SecurityAlertPolicyProperties
+* **type**: 'Microsoft.DBforMySQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
 ## ResourceIdentity
 ### Properties
@@ -170,4 +177,13 @@ eployTimeConstant)
 * **ignoreMissingVnetServiceEndpoint**: bool
 * **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly)
 * **virtualNetworkSubnetId**: string (Required)
+
+## SecurityAlertPolicyProperties
+### Properties
+* **disabledAlerts**: string[]
+* **emailAccountAdmins**: bool
+* **emailAddresses**: string[]
+* **retentionDays**: int
+* **storageAccountAccessKey**: string
+* **storageEndpoint**: string
 
