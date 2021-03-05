@@ -481,7 +481,7 @@ export function generateTypes(codeModel: CodeModel, host: Host) {
       }
     }
 
-    return keyBy(flatMap(objects, o => o.properties || []), p => p?.language.default.name);
+    return keyBy(flatMap(objects, o => o.properties || []), p => p.serializedName);
   }
 
   function* getObjectTypeProperties(putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined, includeParents: boolean) {
