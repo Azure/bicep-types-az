@@ -1,4 +1,4 @@
-# microsoft.dbformysql @ 2018-06-01
+# Microsoft.DBforMySQL @ 2018-06-01
 
 ## Resource Microsoft.DBforMySQL/servers/privateEndpointConnections@2018-06-01
 * **Valid Scope(s)**: ResourceGroup

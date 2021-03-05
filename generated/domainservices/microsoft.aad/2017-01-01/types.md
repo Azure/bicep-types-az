@@ -1,4 +1,4 @@
-# microsoft.aad @ 2017-01-01
+# Microsoft.AAD @ 2017-01-01
 
 ## Resource Microsoft.AAD/domainServices@2017-01-01
 * **Valid Scope(s)**: ResourceGroup

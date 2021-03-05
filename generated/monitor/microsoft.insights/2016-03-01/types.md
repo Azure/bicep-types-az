@@ -1,4 +1,4 @@
-# microsoft.insights @ 2016-03-01
+# Microsoft.Insights @ 2016-03-01
 
 ## Resource Microsoft.Insights/alertrules@2016-03-01
 * **Valid Scope(s)**: ResourceGroup

@@ -1,4 +1,4 @@
-# microsoft.dbformysql @ 2020-07-01-preview
+# Microsoft.DBForMySql @ 2020-07-01-preview
 
 ## Resource Microsoft.DBForMySql/flexibleServers@2020-07-01-preview
 * **Valid Scope(s)**: ResourceGroup

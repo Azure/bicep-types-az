@@ -1,4 +1,4 @@
-# microsoft.dbforpostgresql @ 2018-06-01
+# Microsoft.DBforPostgreSQL @ 2018-06-01
 
 ## Resource Microsoft.DBforPostgreSQL/servers/privateEndpointConnections@2018-06-01
 * **Valid Scope(s)**: ResourceGroup

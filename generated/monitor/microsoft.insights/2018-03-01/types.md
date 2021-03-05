@@ -1,4 +1,4 @@
-# microsoft.insights @ 2018-03-01
+# Microsoft.Insights @ 2018-03-01
 
 ## Resource Microsoft.Insights/metricAlerts@2018-03-01
 * **Valid Scope(s)**: ResourceGroup

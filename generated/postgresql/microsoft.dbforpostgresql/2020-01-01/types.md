@@ -1,4 +1,4 @@
-# microsoft.dbforpostgresql @ 2020-01-01
+# Microsoft.DBforPostgreSQL @ 2020-01-01
 
 ## Resource Microsoft.DBforPostgreSQL/servers/keys@2020-01-01
 * **Valid Scope(s)**: ResourceGroup

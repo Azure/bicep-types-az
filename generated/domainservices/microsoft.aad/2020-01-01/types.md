@@ -1,4 +1,4 @@
-# microsoft.aad @ 2020-01-01
+# Microsoft.AAD @ 2020-01-01
 
 ## Resource Microsoft.AAD/domainServices@2020-01-01
 * **Valid Scope(s)**: ResourceGroup
@@ -15,9 +15,16 @@
 ## Resource Microsoft.Aad/domainServices/ouContainer@2020-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
+* **accountName**: string (WriteOnly)
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
+* **password**: string (WriteOnly)
+* **properties**: OuContainerProperties (ReadOnly)
+* **spn**: string (WriteOnly)
+* **tags**: ResourceTags (ReadOnly)
 * **type**: 'Microsoft.Aad/domainServices/ouContainer' (ReadOnly, DeployTimeConstant)
 
 ## DomainServiceProperties
@@ -114,6 +121,28 @@
 * **trustDirection**: string
 * **trustedDomainFqdn**: string
 * **trustPassword**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## OuContainerProperties
+### Properties
+* **accounts**: ContainerAccount[] (ReadOnly)
+* **containerId**: string (ReadOnly)
+* **deploymentId**: string (ReadOnly)
+* **distinguishedName**: string (ReadOnly)
+* **domainName**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **serviceStatus**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+
+## ContainerAccount
+### Properties
+* **accountName**: string (ReadOnly)
+* **password**: string (ReadOnly)
+* **spn**: string (ReadOnly)
 
 ## ResourceTags
 ### Properties

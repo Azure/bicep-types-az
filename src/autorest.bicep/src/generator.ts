@@ -15,7 +15,24 @@ export function generateTypes(codeModel: CodeModel, host: Host) {
     })
   }
 
-  function generateTypesForApiVersion(apiVersion: string) {
+  function* generateTypes() {
+    const apiVersions = codeModel.operationGroups
+      .flatMap(group => group.operations
+        .flatMap(op => (op.apiVersions ?? []).map(v => v.version)))
+      .filter((x, i, a) => a.indexOf(x) === i);
+
+    for (const apiVersion of apiVersions) {
+      for (const { provider, types } of generateTypesForApiVersion(apiVersion)) {
+        yield {
+          provider,
+          apiVersion,
+          types,
+        };
+      }
+    }
+  }
+
+  function *generateTypesForApiVersion(apiVersion: string) {
     const providerDefinitions: Dictionary<ProviderDefinition> = {};
     const operations = codeModel.operationGroups.flatMap(x => x.operations);
 
@@ -71,9 +88,14 @@ export function generateTypes(codeModel: CodeModel, host: Host) {
       }
     }
 
-    return mapValues(
-      providerDefinitions,
-      definition => generateProviderTypes(definition));
+    for (const definition of values(providerDefinitions)) {
+      const types = generateProviderTypes(definition);
+
+      yield {
+        provider: definition.namespace,
+        types,
+      }
+    }
   }
 
   function generateProviderTypes(definition: ProviderDefinition) {
@@ -467,8 +489,8 @@ export function generateTypes(codeModel: CodeModel, host: Host) {
     const getProperties = getSchema ? getSchemaProperties(getSchema, includeParents) : {};
 
     for (const propertyName of uniq([...keys(putProperties), ...keys(getProperties)])) {
-      if (putSchema?.discriminator?.property === putProperties[propertyName] ||
-        getSchema?.discriminator?.property === getProperties[propertyName]) {
+      if ((putSchema?.discriminator?.property && putSchema.discriminator.property === putProperties[propertyName]) ||
+        (getSchema?.discriminator?.property && getSchema.discriminator.property === getProperties[propertyName])) {
         continue;
       }
 
@@ -657,25 +679,6 @@ export function generateTypes(codeModel: CodeModel, host: Host) {
     }
 
     return factory.addType(new ArrayType(itemType));
-  }
-
-  function* generateTypes() {
-    const apiVersions = codeModel.operationGroups
-      .flatMap(group => group.operations
-        .flatMap(op => (op.apiVersions ?? []).map(v => v.version)))
-      .filter((x, i, a) => a.indexOf(x) === i);
-
-    for (const apiVersion of apiVersions) {
-      const typesByProvider = generateTypesForApiVersion(apiVersion);
-
-      for (const provider of keys(typesByProvider)) {
-        yield {
-          provider,
-          apiVersion,
-          types: typesByProvider[provider],
-        };
-      }
-    }
   }
 
   return generateTypes();

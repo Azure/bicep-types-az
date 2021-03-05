@@ -1,4 +1,4 @@
-# microsoft.dbformariadb @ 2018-06-01
+# Microsoft.DBForMariaDB @ 2018-06-01
 
 ## Resource Microsoft.DBForMariaDB/servers@2018-06-01
 * **Valid Scope(s)**: ResourceGroup
@@ -83,23 +83,47 @@
 * **version**: '5.6' | '5.7'
 ### ServerPropertiesForDefaultCreate
 #### Properties
+* **administratorLogin**: string (Required, WriteOnly)
+* **administratorLoginPassword**: any (Required, WriteOnly)
 * **createMode**: 'Default' (Required)
 
 ### ServerPropertiesForGeoRestore
 #### Properties
 * **createMode**: 'GeoRestore' (Required)
+* **sourceServerId**: string (Required, WriteOnly)
 
 ### ServerPropertiesForRestore
 #### Properties
 * **createMode**: 'PointInTimeRestore' (Required)
+* **restorePointInTime**: string (Required, WriteOnly)
+* **sourceServerId**: string (Required, WriteOnly)
 
 ### ServerPropertiesForReplica
 #### Properties
 * **createMode**: 'Replica' (Required)
+* **sourceServerId**: string (Required, WriteOnly)
 
 
 ## ServerPrivateEndpointConnection
 ### Properties
+* **id**: string (ReadOnly)
+* **properties**: ServerPrivateEndpointConnectionProperties (ReadOnly)
+
+## ServerPrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: PrivateEndpointProperty (ReadOnly)
+* **privateLinkServiceConnectionState**: ServerPrivateLinkServiceConnectionStateProperty (ReadOnly)
+* **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' (ReadOnly)
+
+## PrivateEndpointProperty
+### Properties
+* **id**: string (ReadOnly)
+
+## ServerPrivateLinkServiceConnectionStateProperty
+### Properties
+* **actionsRequired**: 'None' (ReadOnly)
+* **description**: string (ReadOnly)
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly)
 
 ## StorageProfile
 ### Properties
@@ -110,19 +134,25 @@
 
 ## ServerPropertiesForDefaultCreate
 ### Properties
+* **administratorLogin**: string (Required, WriteOnly)
+* **administratorLoginPassword**: any (Required, WriteOnly)
 * **createMode**: 'Default' (Required)
 
 ## ServerPropertiesForGeoRestore
 ### Properties
 * **createMode**: 'GeoRestore' (Required)
+* **sourceServerId**: string (Required, WriteOnly)
 
 ## ServerPropertiesForRestore
 ### Properties
 * **createMode**: 'PointInTimeRestore' (Required)
+* **restorePointInTime**: string (Required, WriteOnly)
+* **sourceServerId**: string (Required, WriteOnly)
 
 ## ServerPropertiesForReplica
 ### Properties
 * **createMode**: 'Replica' (Required)
+* **sourceServerId**: string (Required, WriteOnly)
 
 ## Sku
 ### Properties
@@ -167,10 +197,6 @@
 * **privateEndpoint**: PrivateEndpointProperty
 * **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionStateProperty
 * **provisioningState**: string (ReadOnly)
-
-## PrivateEndpointProperty
-### Properties
-* **id**: string
 
 ## PrivateLinkServiceConnectionStateProperty
 ### Properties

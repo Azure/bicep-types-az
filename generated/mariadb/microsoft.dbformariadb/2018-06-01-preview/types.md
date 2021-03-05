@@ -1,10 +1,11 @@
-# microsoft.dbformariadb @ 2018-06-01-preview
+# Microsoft.DBForMariaDB @ 2018-06-01-preview
 
 ## Resource Microsoft.DBForMariaDB/servers@2018-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: ResourceIdentity (ReadOnly)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ServerPropertiesForCreate (Required)
@@ -57,6 +58,12 @@
 * **properties**: VirtualNetworkRuleProperties
 * **type**: 'Microsoft.DBForMariaDB/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
 
+## ResourceIdentity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'SystemAssigned' (ReadOnly)
+
 ## ServerPropertiesForCreate
 * **Discriminator**: createMode
 
@@ -72,19 +79,25 @@
 * **version**: '5.6' | '5.7'
 ### ServerPropertiesForDefaultCreate
 #### Properties
+* **administratorLogin**: string (Required, WriteOnly)
+* **administratorLoginPassword**: any (Required, WriteOnly)
 * **createMode**: 'Default' (Required)
 
 ### ServerPropertiesForGeoRestore
 #### Properties
 * **createMode**: 'GeoRestore' (Required)
+* **sourceServerId**: string (Required, WriteOnly)
 
 ### ServerPropertiesForRestore
 #### Properties
 * **createMode**: 'PointInTimeRestore' (Required)
+* **restorePointInTime**: string (Required, WriteOnly)
+* **sourceServerId**: string (Required, WriteOnly)
 
 ### ServerPropertiesForReplica
 #### Properties
 * **createMode**: 'Replica' (Required)
+* **sourceServerId**: string (Required, WriteOnly)
 
 
 ## StorageProfile
@@ -96,19 +109,25 @@
 
 ## ServerPropertiesForDefaultCreate
 ### Properties
+* **administratorLogin**: string (Required, WriteOnly)
+* **administratorLoginPassword**: any (Required, WriteOnly)
 * **createMode**: 'Default' (Required)
 
 ## ServerPropertiesForGeoRestore
 ### Properties
 * **createMode**: 'GeoRestore' (Required)
+* **sourceServerId**: string (Required, WriteOnly)
 
 ## ServerPropertiesForRestore
 ### Properties
 * **createMode**: 'PointInTimeRestore' (Required)
+* **restorePointInTime**: string (Required, WriteOnly)
+* **sourceServerId**: string (Required, WriteOnly)
 
 ## ServerPropertiesForReplica
 ### Properties
 * **createMode**: 'Replica' (Required)
+* **sourceServerId**: string (Required, WriteOnly)
 
 ## Sku
 ### Properties

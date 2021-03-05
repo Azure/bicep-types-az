@@ -1,10 +1,11 @@
-# microsoft.dbformysql @ 2017-12-01-preview
+# Microsoft.DBForMySQL @ 2017-12-01-preview
 
 ## Resource Microsoft.DBForMySQL/servers@2017-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: ResourceIdentity (ReadOnly)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ServerPropertiesForCreate (Required)
@@ -66,6 +67,12 @@
 * **properties**: VirtualNetworkRuleProperties
 * **type**: 'Microsoft.DBForMySQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
 
+## ResourceIdentity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'SystemAssigned' (ReadOnly)
+
 ## ServerPropertiesForCreate
 * **Discriminator**: createMode
 
@@ -86,23 +93,47 @@
 * **version**: '5.6' | '5.7' | '8.0'
 ### ServerPropertiesForDefaultCreate
 #### Properties
+* **administratorLogin**: string (Required, WriteOnly)
+* **administratorLoginPassword**: any (Required, WriteOnly)
 * **createMode**: 'Default' (Required)
 
 ### ServerPropertiesForGeoRestore
 #### Properties
 * **createMode**: 'GeoRestore' (Required)
+* **sourceServerId**: string (Required, WriteOnly)
 
 ### ServerPropertiesForRestore
 #### Properties
 * **createMode**: 'PointInTimeRestore' (Required)
+* **restorePointInTime**: string (Required, WriteOnly)
+* **sourceServerId**: string (Required, WriteOnly)
 
 ### ServerPropertiesForReplica
 #### Properties
 * **createMode**: 'Replica' (Required)
+* **sourceServerId**: string (Required, WriteOnly)
 
 
 ## ServerPrivateEndpointConnection
 ### Properties
+* **id**: string (ReadOnly)
+* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: PrivateEndpointProperty (ReadOnly)
+* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionStateProperty (ReadOnly)
+* **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' (ReadOnly)
+
+## PrivateEndpointProperty
+### Properties
+* **id**: string (ReadOnly)
+
+## PrivateLinkServiceConnectionStateProperty
+### Properties
+* **actionsRequired**: 'None' (ReadOnly)
+* **description**: string (ReadOnly)
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly)
 
 ## StorageProfile
 ### Properties
@@ -113,19 +144,25 @@
 
 ## ServerPropertiesForDefaultCreate
 ### Properties
+* **administratorLogin**: string (Required, WriteOnly)
+* **administratorLoginPassword**: any (Required, WriteOnly)
 * **createMode**: 'Default' (Required)
 
 ## ServerPropertiesForGeoRestore
 ### Properties
 * **createMode**: 'GeoRestore' (Required)
+* **sourceServerId**: string (Required, WriteOnly)
 
 ## ServerPropertiesForRestore
 ### Properties
 * **createMode**: 'PointInTimeRestore' (Required)
+* **restorePointInTime**: string (Required, WriteOnly)
+* **sourceServerId**: string (Required, WriteOnly)
 
 ## ServerPropertiesForReplica
 ### Properties
 * **createMode**: 'Replica' (Required)
+* **sourceServerId**: string (Required, WriteOnly)
 
 ## Sku
 ### Properties

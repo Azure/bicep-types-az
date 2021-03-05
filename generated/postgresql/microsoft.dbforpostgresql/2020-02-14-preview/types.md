@@ -1,4 +1,4 @@
-# microsoft.dbforpostgresql @ 2020-02-14-preview
+# Microsoft.DBForPostgreSql @ 2020-02-14-preview
 
 ## Resource Microsoft.DBForPostgreSql/flexibleServers@2020-02-14-preview
 * **Valid Scope(s)**: ResourceGroup
