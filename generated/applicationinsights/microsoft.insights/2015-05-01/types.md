@@ -1,4 +1,4 @@
-# Microsoft.Insights @ 2015-05-01
+# microsoft.insights @ 2015-05-01
 
 ## Resource Microsoft.Insights/components@2015-05-01
 * **Valid Scope(s)**: ResourceGroup
@@ -16,14 +16,30 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **applicationName**: string (ReadOnly)
+* **containerName**: string (ReadOnly)
 * **destinationAccountId**: string
+* **destinationAddress**: string (WriteOnly)
 * **destinationStorageLocationId**: string
 * **destinationStorageSubscriptionId**: string
 * **destinationType**: string
+* **exportId**: string (ReadOnly)
+* **exportStatus**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **instrumentationKey**: string (ReadOnly)
+* **IsEnabled**: string (WriteOnly)
+* **IsUserEnabled**: string (ReadOnly)
+* **lastGapTime**: string (ReadOnly)
+* **lastSuccessTime**: string (ReadOnly)
+* **lastUserUpdate**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **notificationQueueEnabled**: string
+* **notificationQueueUri**: string (WriteOnly)
+* **permanentErrorReason**: string (ReadOnly)
 * **recordTypes**: string
+* **resourceGroup**: string (ReadOnly)
+* **storageName**: string (ReadOnly)
+* **subscriptionId**: string (ReadOnly)
 * **type**: 'Microsoft.Insights/components/exportconfiguration' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Insights/components/favorites@2015-05-01
@@ -65,6 +81,46 @@
 * **properties**: WebTestProperties
 * **tags**: WebtestsResourceTags
 * **type**: 'Microsoft.Insights/webtests' (ReadOnly, DeployTimeConstant)
+
+## Resource microsoft.insights/components/analyticsItems@2015-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **content**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationInsightsComponentAnalyticsItemProperties
+* **scope**: 'shared' | 'user'
+* **timeCreated**: string (ReadOnly)
+* **timeModified**: string (ReadOnly)
+* **type**: 'microsoft.insights/components/analyticsItems' (ReadOnly, DeployTimeConstant)
+* **version**: string (ReadOnly)
+
+## Resource microsoft.insights/components/myanalyticsItems@2015-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **content**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationInsightsComponentAnalyticsItemProperties
+* **scope**: 'shared' | 'user'
+* **timeCreated**: string (ReadOnly)
+* **timeModified**: string (ReadOnly)
+* **type**: 'microsoft.insights/components/myanalyticsItems' (ReadOnly, DeployTimeConstant)
+* **version**: string (ReadOnly)
+
+## Resource microsoft.insights/workbooks@2015-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'shared' | 'user'
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkbookProperties
+* **tags**: WorkbookResourceTags
+* **type**: 'microsoft.insights/workbooks' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationInsightsComponentProperties
 ### Properties
@@ -135,6 +191,28 @@
 * **location**: string
 
 ## WebtestsResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ApplicationInsightsComponentAnalyticsItemProperties
+### Properties
+* **functionAlias**: string
+
+## WorkbookProperties
+### Properties
+* **category**: string (Required)
+* **name**: string (Required)
+* **serializedData**: string (Required)
+* **sharedTypeKind**: 'shared' | 'user' (Required)
+* **sourceResourceId**: string
+* **tags**: string[]
+* **timeModified**: string (ReadOnly)
+* **userId**: string (Required)
+* **version**: string
+* **workbookId**: string (Required)
+
+## WorkbookResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

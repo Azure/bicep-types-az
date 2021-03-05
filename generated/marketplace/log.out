@@ -21,21 +21,23 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING (Modeler/MissingType): The schema 'planDetails-requestDate' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/marketplace/resource-manager/Microsoft.Marketplace/stable/2020-12-01/Marketplace.json#/components/schemas/planDetails-requestDate
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 8ms
 Processing batch task - {"tag":"schema-marketplace-2020-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse-error' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'SingleOperation-display' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 1ms
+
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named Operation -- type: undefined => "string",properties: {"name":{"description":"Operation name: {provider}/{resource}/{operation}","$ref":"#/components/schemas/schemas:48"},"display":{"description":"The object that represents the operation.","$ref":"#/components/schemas/schemas:49"}} => <none>,enum: undefined => ["DeletePrivateStoreOffer","Ping"],x-ms-enum: undefined => {"name":"Operation","modelAsString":true} 
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-marketplace-2019-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -70,14 +72,16 @@ INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse-error' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'SingleOperation-display' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named Operation -- type: undefined => "string",properties: {"name":{"description":"Operation name: {provider}/{resource}/{operation}","$ref":"#/components/schemas/schemas:48"},"display":{"description":"The object that represents the operation.","$ref":"#/components/schemas/schemas:49"}} => <none>,enum: undefined => ["DeletePrivateStoreOffer","Ping"],x-ms-enum: undefined => {"name":"Operation","modelAsString":true} 
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-marketplace-2019-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -90,4 +94,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an u
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 0ms
-[9.2 s] Generation Complete
+[11.25 s] Generation Complete

@@ -46,4 +46,4 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING: Unrecognized property type: constant
 WARNING: Skipping resource type microsoft.workloadmonitor/notificationsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/notificationSettings/{notificationSettingName}': 
 INFORMATION: Autorest.AzureResourceSchema took 1ms
-[14.53 s] Generation Complete
+[17.45 s] Generation Complete

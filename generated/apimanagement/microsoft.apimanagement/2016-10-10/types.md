@@ -17,8 +17,15 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
+* **authenticationSettings**: AuthenticationSettingsContract (WriteOnly)
+* **description**: string (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
+* **path**: string (Required, WriteOnly)
+* **protocols**: array (Required, WriteOnly)
+* **requestId**: string (ReadOnly)
+* **serviceUrl**: string (Required, WriteOnly)
+* **subscriptionKeyParameterNames**: SubscriptionKeyParameterNamesContract (WriteOnly)
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis/operations@2016-10-10
@@ -83,14 +90,20 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
+* **data**: string (Required, WriteOnly)
+* **expirationDate**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
+* **password**: string (Required, WriteOnly)
+* **subject**: string (ReadOnly)
+* **thumbprint**: string (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/service/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/groups@2016-10-10
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
+* **builtIn**: bool (ReadOnly)
 * **description**: string
 * **externalId**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
@@ -159,11 +172,17 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
+* **createdDate**: string (ReadOnly)
+* **endDate**: string (ReadOnly)
+* **expirationDate**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
+* **notificationDate**: string (ReadOnly)
 * **primaryKey**: string
 * **productId**: string (Required)
 * **secondaryKey**: string
+* **startDate**: string (ReadOnly)
+* **stateComment**: string (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/service/subscriptions' (ReadOnly, DeployTimeConstant)
 * **userId**: string (Required)
 
@@ -182,9 +201,12 @@
 * **email**: string (Required)
 * **firstName**: string (Required)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **identities**: UserIdentityContract[] (ReadOnly)
 * **lastName**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **note**: string
+* **password**: string (Required, WriteOnly)
+* **registrationDate**: string (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/service/users' (ReadOnly, DeployTimeConstant)
 
 ## ApiManagementServiceProperties
@@ -244,6 +266,20 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## AuthenticationSettingsContract
+### Properties
+* **oAuth2**: OAuth2AuthenticationSettingsContract (WriteOnly)
+
+## OAuth2AuthenticationSettingsContract
+### Properties
+* **authorizationServerId**: string (WriteOnly)
+* **scope**: string (WriteOnly)
+
+## SubscriptionKeyParameterNamesContract
+### Properties
+* **header**: string (WriteOnly)
+* **query**: string (WriteOnly)
+
 ## RequestContract
 ### Properties
 * **description**: string
@@ -295,4 +331,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UserIdentityContract
+### Properties
+* **id**: string (ReadOnly)
+* **provider**: string (ReadOnly)
 

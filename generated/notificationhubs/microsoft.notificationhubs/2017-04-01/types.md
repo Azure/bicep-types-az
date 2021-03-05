@@ -17,8 +17,11 @@
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SharedAccessAuthorizationRuleProperties (Required)
+* **sku**: Sku (ReadOnly)
+* **tags**: ResourceTags (ReadOnly)
 * **type**: 'Microsoft.NotificationHubs/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NotificationHubs/namespaces/notificationHubs@2017-04-01
@@ -38,8 +41,11 @@
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SharedAccessAuthorizationRuleProperties (Required)
+* **sku**: Sku (ReadOnly)
+* **tags**: ResourceTags (ReadOnly)
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## NamespaceProperties
@@ -82,6 +88,11 @@
 * **revision**: int (ReadOnly)
 * **rights**: array
 * **secondaryKey**: string (ReadOnly)
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## NotificationHubProperties
 ### Properties
@@ -158,6 +169,11 @@
 * **packageSid**: string
 * **secretKey**: string
 * **windowsLiveEndpoint**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

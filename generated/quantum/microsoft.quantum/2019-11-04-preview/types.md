@@ -9,7 +9,6 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: WorkspaceResourceProperties
-* **systemData**: SystemData (ReadOnly)
 * **tags**: TrackedResourceTags
 * **type**: 'Microsoft.Quantum/workspaces' (ReadOnly, DeployTimeConstant)
 
@@ -29,21 +28,12 @@
 
 ## Provider
 ### Properties
-* **applicationName**: string (ReadOnly)
+* **applicationName**: string
 * **instanceUri**: string
 * **providerId**: string
 * **providerSku**: string
 * **provisioningState**: 'Deleted' | 'Deleting' | 'Failed' | 'Launching' | 'Succeeded' | 'Updating'
-* **resourceUsageId**: string (ReadOnly)
-
-## SystemData
-### Properties
-* **createdAt**: string
-* **createdBy**: string
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
-* **lastModifiedAt**: string
-* **lastModifiedBy**: string
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+* **resourceUsageId**: string
 
 ## TrackedResourceTags
 ### Properties

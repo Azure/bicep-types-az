@@ -32,13 +32,24 @@
 
 ## RedisCreateProperties
 ### Properties
+* **accessKeys**: RedisAccessKeys (ReadOnly)
 * **enableNonSslPort**: bool
+* **hostName**: string (ReadOnly)
+* **port**: int (ReadOnly)
+* **provisioningState**: string (ReadOnly)
 * **redisConfiguration**: RedisPropertiesRedisConfiguration
+* **redisVersion**: string (ReadOnly)
 * **shardCount**: int
 * **sku**: Sku (Required)
+* **sslPort**: int (ReadOnly)
 * **staticIP**: string
 * **subnetId**: string
 * **tenantSettings**: RedisPropertiesTenantSettings
+
+## RedisAccessKeys
+### Properties
+* **primaryKey**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
 
 ## RedisPropertiesRedisConfiguration
 ### Properties

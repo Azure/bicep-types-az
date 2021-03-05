@@ -634,7 +634,12 @@
 
 ## CustomDomainPropertiesParameters
 ### Properties
+* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly)
+* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly)
 * **hostName**: string (Required)
+* **provisioningState**: string (ReadOnly)
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
+* **validationData**: string (ReadOnly)
 
 ## OriginGroupProperties
 ### Properties

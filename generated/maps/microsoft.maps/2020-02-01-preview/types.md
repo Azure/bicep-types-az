@@ -7,7 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: MapsAccountProperties (ReadOnly)
 * **sku**: Sku (Required)
+* **systemData**: SystemData (ReadOnly)
 * **tags**: MapsAccountCreateParametersTags
 * **type**: 'Microsoft.Maps/accounts' (ReadOnly, DeployTimeConstant)
 
@@ -18,6 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: CreatorProperties (ReadOnly)
 * **tags**: CreatorCreateParametersTags
 * **type**: 'Microsoft.Maps/accounts/creators' (ReadOnly, DeployTimeConstant)
 
@@ -28,23 +31,45 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: PrivateAtlasProperties (ReadOnly)
 * **tags**: PrivateAtlasCreateParametersTags
 * **type**: 'Microsoft.Maps/accounts/privateAtlases' (ReadOnly, DeployTimeConstant)
+
+## MapsAccountProperties
+### Properties
+* **xMsClientId**: string (ReadOnly)
 
 ## Sku
 ### Properties
 * **name**: string (Required)
 * **tier**: string (ReadOnly)
 
+## SystemData
+### Properties
+* **createdAt**: string (ReadOnly)
+* **createdBy**: string (ReadOnly)
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly)
+* **lastModifiedAt**: string (ReadOnly)
+* **lastModifiedBy**: string (ReadOnly)
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly)
+
 ## MapsAccountCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## CreatorProperties
+### Properties
+* **provisioningState**: string (ReadOnly)
+
 ## CreatorCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## PrivateAtlasProperties
+### Properties
+* **provisioningState**: string (ReadOnly)
 
 ## PrivateAtlasCreateParametersTags
 ### Properties

@@ -106,11 +106,7 @@
 
 ## WorkspaceProperties
 ### Properties
-* **createdDate**: string (ReadOnly)
 * **customerId**: string (ReadOnly)
-* **features**: WorkspaceFeatures
-* **forceCmkForQuery**: bool
-* **modifiedDate**: string (ReadOnly)
 * **privateLinkScopedResources**: PrivateLinkScopedResource[] (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating'
 * **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled'
@@ -118,9 +114,6 @@
 * **retentionInDays**: int
 * **sku**: WorkspaceSku
 * **workspaceCapping**: WorkspaceCapping
-
-## WorkspaceFeatures
-### Properties
 
 ## PrivateLinkScopedResource
 ### Properties
@@ -132,7 +125,7 @@
 * **capacityReservationLevel**: int
 * **lastSkuUpdate**: string (ReadOnly)
 * **maxCapacityReservationLevel**: int (ReadOnly)
-* **name**: 'CapacityReservation' | 'Free' | 'LACluster' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' (Required)
+* **name**: 'CapacityReservation' | 'Free' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' (Required)
 
 ## WorkspaceCapping
 ### Properties

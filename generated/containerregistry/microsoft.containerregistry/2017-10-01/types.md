@@ -93,8 +93,16 @@
 ## WebhookPropertiesCreateParameters
 ### Properties
 * **actions**: 'chart_delete' | 'chart_push' | 'delete' | 'push' | 'quarantine'[] (Required)
+* **customHeaders**: WebhookPropertiesCreateParametersCustomHeaders (WriteOnly)
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **scope**: string
+* **serviceUri**: string (Required, WriteOnly)
 * **status**: 'disabled' | 'enabled'
+
+## WebhookPropertiesCreateParametersCustomHeaders
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## WebhookCreateParametersTags
 ### Properties

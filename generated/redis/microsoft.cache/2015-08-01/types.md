@@ -14,10 +14,14 @@
 ## RedisProperties
 ### Properties
 * **enableNonSslPort**: bool
+* **hostName**: string (ReadOnly)
+* **port**: int (ReadOnly)
+* **provisioningState**: string (ReadOnly)
 * **redisConfiguration**: RedisPropertiesRedisConfiguration
 * **redisVersion**: string
 * **shardCount**: int
 * **sku**: Sku (Required)
+* **sslPort**: int (ReadOnly)
 * **staticIP**: string
 * **subnet**: string
 * **tenantSettings**: RedisPropertiesTenantSettings

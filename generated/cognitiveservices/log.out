@@ -20,8 +20,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CognitiveServicesAccountApiPro
 
 WARNING (PreCheck/SchemaMissingType): The schema 'CognitiveServicesAccountKeys' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'CognitiveServicesAccountSkuChangeInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/SchemaMissingType): The schema 'RegenerateKeyParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'CognitiveServicesAccountEnumerateSkusResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
@@ -90,7 +88,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 8ms
+INFORMATION: Autorest.AzureResourceSchema took 9ms
 Processing batch task - {"tag":"schema-cognitiveservices-2016-02-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -138,8 +136,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CognitiveServicesAccountApiPro
 
 WARNING (PreCheck/SchemaMissingType): The schema 'CognitiveServicesAccountKeys' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'CognitiveServicesAccountSkuChangeInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/SchemaMissingType): The schema 'RegenerateKeyParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'CognitiveServicesAccountEnumerateSkusResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
@@ -208,7 +204,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-cognitiveservices-2016-02-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -242,4 +238,4 @@ WARNING (Modeler/MissingType): The schema 'CognitiveServicesAccountPropertiesCre
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: any
 INFORMATION: Autorest.AzureResourceSchema took 1ms
-[10.63 s] Generation Complete
+[12.49 s] Generation Complete

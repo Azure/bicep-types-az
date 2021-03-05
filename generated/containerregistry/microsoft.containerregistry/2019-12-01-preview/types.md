@@ -78,6 +78,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: WebhookPropertiesCreateParameters
+* **systemData**: SystemData (ReadOnly)
 * **tags**: WebhookCreateParametersTags
 * **type**: 'Microsoft.ContainerRegistry/registries/webhooks' (ReadOnly, DeployTimeConstant)
 
@@ -112,6 +113,7 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 * **status**: Status (ReadOnly)
+* **storageAccount**: StorageAccountProperties
 
 ## EncryptionProperty
 ### Properties
@@ -201,6 +203,10 @@
 * **displayStatus**: string (ReadOnly)
 * **message**: string (ReadOnly)
 * **timestamp**: string (ReadOnly)
+
+## StorageAccountProperties
+### Properties
+* **id**: string (Required)
 
 ## Sku
 ### Properties
@@ -309,8 +315,16 @@
 ## WebhookPropertiesCreateParameters
 ### Properties
 * **actions**: 'chart_delete' | 'chart_push' | 'delete' | 'push' | 'quarantine'[] (Required)
+* **customHeaders**: WebhookPropertiesCreateParametersCustomHeaders (WriteOnly)
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **scope**: string
+* **serviceUri**: string (Required, WriteOnly)
 * **status**: 'disabled' | 'enabled'
+
+## WebhookPropertiesCreateParametersCustomHeaders
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## WebhookCreateParametersTags
 ### Properties

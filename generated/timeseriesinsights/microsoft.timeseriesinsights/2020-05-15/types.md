@@ -83,14 +83,48 @@
 
 ## Gen1EnvironmentCreationProperties
 ### Properties
+* **creationTime**: string (ReadOnly)
+* **dataAccessFqdn**: string (ReadOnly)
+* **dataAccessId**: string (ReadOnly)
 * **dataRetentionTime**: any (Required)
 * **partitionKeyProperties**: TimeSeriesIdProperty[]
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+* **status**: EnvironmentStatus (ReadOnly)
 * **storageLimitExceededBehavior**: 'PauseIngress' | 'PurgeOldData'
 
 ## TimeSeriesIdProperty
 ### Properties
 * **name**: string
 * **type**: 'String'
+
+## EnvironmentStatus
+### Properties
+* **ingress**: IngressEnvironmentStatus (ReadOnly)
+* **warmStorage**: WarmStorageEnvironmentStatus (ReadOnly)
+
+## IngressEnvironmentStatus
+### Properties
+* **state**: 'Disabled' | 'Paused' | 'Ready' | 'Running' | 'Unknown' (ReadOnly)
+* **stateDetails**: EnvironmentStateDetails (ReadOnly)
+
+## EnvironmentStateDetails
+### Properties
+* **code**: string (ReadOnly)
+* **message**: string (ReadOnly)
+
+## WarmStorageEnvironmentStatus
+### Properties
+* **propertiesUsage**: WarmStoragePropertiesUsage (ReadOnly)
+
+## WarmStoragePropertiesUsage
+### Properties
+* **state**: 'Error' | 'Ok' | 'Unknown' (ReadOnly)
+* **stateDetails**: WarmStoragePropertiesUsageStateDetails (ReadOnly)
+
+## WarmStoragePropertiesUsageStateDetails
+### Properties
+* **currentCount**: int (ReadOnly)
+* **maxCount**: int (ReadOnly)
 
 ## Gen2EnvironmentCreateOrUpdateParameters
 ### Properties
@@ -99,6 +133,11 @@
 
 ## Gen2EnvironmentCreationProperties
 ### Properties
+* **creationTime**: string (ReadOnly)
+* **dataAccessFqdn**: string (ReadOnly)
+* **dataAccessId**: string (ReadOnly)
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+* **status**: EnvironmentStatus (ReadOnly)
 * **storageConfiguration**: Gen2StorageConfigurationInput (Required)
 * **timeSeriesIdProperties**: TimeSeriesIdProperty[] (Required)
 * **warmStoreConfiguration**: WarmStoreConfigurationProperties
@@ -106,6 +145,7 @@
 ## Gen2StorageConfigurationInput
 ### Properties
 * **accountName**: string (Required)
+* **managementKey**: string (Required, WriteOnly)
 
 ## WarmStoreConfigurationProperties
 ### Properties
@@ -119,6 +159,12 @@
 
 ## LocalTimestamp
 ### Properties
+* **format**: 'Embedded' (WriteOnly)
+* **timeZoneOffset**: LocalTimestampTimeZoneOffset (WriteOnly)
+
+## LocalTimestampTimeZoneOffset
+### Properties
+* **propertyName**: string (WriteOnly)
 
 ## CreateOrUpdateTrackedResourcePropertiesTags
 ### Properties
@@ -139,6 +185,7 @@
 * **keyName**: string (Required)
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **serviceBusNamespace**: string (Required)
+* **sharedAccessKey**: string (Required, WriteOnly)
 * **timestampPropertyName**: string
 
 ## IoTHubEventSourceCreateOrUpdateParameters
@@ -154,12 +201,15 @@
 * **iotHubName**: string (Required)
 * **keyName**: string (Required)
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+* **sharedAccessKey**: string (Required, WriteOnly)
 * **timestampPropertyName**: string
 
 ## ReferenceDataSetCreationProperties
 ### Properties
+* **creationTime**: string (ReadOnly)
 * **dataStringComparisonBehavior**: 'Ordinal' | 'OrdinalIgnoreCase'
 * **keyProperties**: ReferenceDataSetKeyProperty[] (Required)
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## ReferenceDataSetKeyProperty
 ### Properties

@@ -5,7 +5,9 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: ConfigurationAssignmentProperties (WriteOnly)
 * **type**: 'Microsoft.Maintenance/configurationAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Maintenance/maintenanceConfigurations@2018-06-01-preview
@@ -18,6 +20,11 @@
 * **properties**: MaintenanceConfigurationProperties
 * **tags**: MaintenanceConfigurationTags
 * **type**: 'Microsoft.Maintenance/maintenanceConfigurations' (ReadOnly, DeployTimeConstant)
+
+## ConfigurationAssignmentProperties
+### Properties
+* **maintenanceConfigurationId**: string (WriteOnly)
+* **resourceId**: string (WriteOnly)
 
 ## MaintenanceConfigurationProperties
 ### Properties

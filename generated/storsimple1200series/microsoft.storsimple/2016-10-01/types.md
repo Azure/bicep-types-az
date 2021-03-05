@@ -27,6 +27,7 @@
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: RawCertificateData (Required, WriteOnly)
 * **type**: 'Microsoft.StorSimple/managers/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/devices/alertSettings@2016-10-01
@@ -140,6 +141,10 @@
 ## AccessControlRecordProperties
 ### Properties
 * **initiatorName**: string (Required)
+
+## RawCertificateData
+### Properties
+* **certificate**: string (Required, WriteOnly)
 
 ## AlertSettingsProperties
 ### Properties

@@ -16,9 +16,11 @@
 ### Properties
 * **allowUpdates**: bool
 * **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant)
+* **defaultVersion**: string (ReadOnly)
 * **displayName**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
+* **packages**: ApplicationPackage[] (ReadOnly)
 * **type**: 'Microsoft.Batch/batchAccounts/applications' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Batch/batchAccounts/certificates@2017-09-01
@@ -43,11 +45,17 @@
 
 ## BatchAccountCreateProperties
 ### Properties
+* **accountEndpoint**: string (ReadOnly)
+* **activeJobAndJobScheduleQuota**: int (ReadOnly)
 * **autoStorage**: AutoStorageBaseProperties
+* **dedicatedCoreQuota**: int (ReadOnly)
 * **keyVaultReference**: KeyVaultReference
+* **lowPriorityCoreQuota**: int (ReadOnly)
+* **poolQuota**: int (ReadOnly)
 
 ## AutoStorageBaseProperties
 ### Properties
+* **lastKeySync**: string (ReadOnly)
 * **storageAccountId**: string (Required)
 
 ## KeyVaultReference
@@ -60,10 +68,32 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ApplicationPackage
+### Properties
+* **format**: string (ReadOnly)
+* **id**: string (ReadOnly)
+* **lastActivationTime**: string (ReadOnly)
+* **storageUrl**: string (ReadOnly)
+* **storageUrlExpiry**: string (ReadOnly)
+* **version**: string (ReadOnly)
+
 ## CertificateCreateOrUpdateProperties
 ### Properties
+* **data**: string (Required, WriteOnly)
+* **deleteCertificateError**: DeleteCertificateError (ReadOnly)
+* **password**: string (WriteOnly)
+* **previousProvisioningStateTransitionTime**: string (ReadOnly)
+* **provisioningStateTransitionTime**: string (ReadOnly)
+* **publicData**: string (ReadOnly)
 * **thumbprint**: string
 * **thumbprintAlgorithm**: string
+
+## DeleteCertificateError
+### Properties
+* **code**: string (ReadOnly)
+* **details**: DeleteCertificateError[] (ReadOnly)
+* **message**: string (ReadOnly)
+* **target**: string (ReadOnly)
 
 ## PoolProperties
 ### Properties

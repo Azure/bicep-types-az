@@ -17,8 +17,11 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
+* **certificate**: string (WriteOnly)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: CertificateProperties (ReadOnly)
 * **type**: 'Microsoft.Devices/IotHubs/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Devices/iotHubs/privateEndpointConnections@2020-03-01
@@ -229,4 +232,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## CertificateProperties
+### Properties
+* **certificate**: string (ReadOnly)
+* **created**: string (ReadOnly)
+* **expiry**: string (ReadOnly)
+* **isVerified**: bool (ReadOnly)
+* **subject**: string (ReadOnly)
+* **thumbprint**: string (ReadOnly)
+* **updated**: string (ReadOnly)
 

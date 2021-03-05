@@ -22,6 +22,7 @@
 ### Properties
 * **principalId**: string (Required)
 * **roleDefinitionId**: string (Required)
+* **scope**: string (ReadOnly)
 
 ## RoleDefinitionProperties
 ### Properties

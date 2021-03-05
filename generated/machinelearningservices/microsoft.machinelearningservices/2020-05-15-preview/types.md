@@ -54,8 +54,12 @@
 
 ### Base Properties
 * **apiVersion**: '2020-05-15-preview' (ReadOnly, DeployTimeConstant)
+* **description**: string (WriteOnly)
+* **environmentImageRequest**: CreateServiceRequestEnvironmentImageRequest (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity (ReadOnly)
+* **keys**: CreateServiceRequestKeys (WriteOnly)
+* **kvTags**: CreateServiceRequestKvTags (WriteOnly)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: CreateServiceRequestProperties
@@ -378,6 +382,150 @@
 * **userAssignedIdentityResourceId**: string
 
 ## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## CreateServiceRequestEnvironmentImageRequest
+### Properties
+* **assets**: ImageAsset[] (WriteOnly)
+* **driverProgram**: string (WriteOnly)
+* **environment**: EnvironmentImageRequestEnvironment (WriteOnly)
+* **environmentReference**: EnvironmentImageRequestEnvironmentReference (WriteOnly)
+* **modelIds**: string[] (WriteOnly)
+* **models**: Model[] (WriteOnly)
+
+## ImageAsset
+### Properties
+* **id**: string (WriteOnly)
+* **mimeType**: string (WriteOnly)
+* **unpack**: bool (WriteOnly)
+* **url**: string (WriteOnly)
+
+## EnvironmentImageRequestEnvironment
+### Properties
+* **docker**: ModelEnvironmentDefinitionDocker (WriteOnly)
+* **environmentVariables**: ModelEnvironmentDefinitionEnvironmentVariables (WriteOnly)
+* **inferencingStackVersion**: string (WriteOnly)
+* **name**: string (WriteOnly)
+* **python**: ModelEnvironmentDefinitionPython (WriteOnly)
+* **r**: ModelEnvironmentDefinitionR (WriteOnly)
+* **spark**: ModelEnvironmentDefinitionSpark (WriteOnly)
+* **version**: string (WriteOnly)
+
+## ModelEnvironmentDefinitionDocker
+### Properties
+* **baseDockerfile**: string (WriteOnly)
+* **baseImage**: string (WriteOnly)
+* **baseImageRegistry**: ModelDockerSectionBaseImageRegistry (WriteOnly)
+
+## ModelDockerSectionBaseImageRegistry
+### Properties
+* **address**: string (WriteOnly)
+* **password**: string (WriteOnly)
+* **username**: string (WriteOnly)
+
+## ModelEnvironmentDefinitionEnvironmentVariables
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ModelEnvironmentDefinitionPython
+### Properties
+* **baseCondaEnvironment**: string (WriteOnly)
+* **interpreterPath**: string (WriteOnly)
+* **userManagedDependencies**: bool (WriteOnly)
+
+## ModelEnvironmentDefinitionR
+### Properties
+* **bioConductorPackages**: string[] (WriteOnly)
+* **cranPackages**: RCranPackage[] (WriteOnly)
+* **customUrlPackages**: string[] (WriteOnly)
+* **gitHubPackages**: RGitHubPackage[] (WriteOnly)
+* **rscriptPath**: string (WriteOnly)
+* **rVersion**: string (WriteOnly)
+* **snapshotDate**: string (WriteOnly)
+* **userManaged**: bool (WriteOnly)
+
+## RCranPackage
+### Properties
+* **name**: string (WriteOnly)
+* **repository**: string (WriteOnly)
+
+## RGitHubPackage
+### Properties
+* **authToken**: string (WriteOnly)
+* **repository**: string (WriteOnly)
+
+## ModelEnvironmentDefinitionSpark
+### Properties
+* **packages**: SparkMavenPackage[] (WriteOnly)
+* **precachePackages**: bool (WriteOnly)
+* **repositories**: string[] (WriteOnly)
+
+## SparkMavenPackage
+### Properties
+* **artifact**: string (WriteOnly)
+* **group**: string (WriteOnly)
+* **version**: string (WriteOnly)
+
+## EnvironmentImageRequestEnvironmentReference
+### Properties
+* **name**: string (WriteOnly)
+* **version**: string (WriteOnly)
+
+## Model
+### Properties
+* **createdTime**: string (WriteOnly)
+* **datasets**: DatasetReference[] (WriteOnly)
+* **derivedModelIds**: string[] (WriteOnly)
+* **description**: string (WriteOnly)
+* **experimentName**: string (WriteOnly)
+* **framework**: string (WriteOnly)
+* **frameworkVersion**: string (WriteOnly)
+* **id**: string (WriteOnly)
+* **kvTags**: ModelKvTags (WriteOnly)
+* **mimeType**: string (Required, WriteOnly)
+* **modifiedTime**: string (WriteOnly)
+* **name**: string (Required, WriteOnly)
+* **parentModelId**: string (WriteOnly)
+* **properties**: ModelProperties (WriteOnly)
+* **resourceRequirements**: ContainerResourceRequirements (WriteOnly)
+* **runId**: string (WriteOnly)
+* **sampleInputData**: string (WriteOnly)
+* **sampleOutputData**: string (WriteOnly)
+* **unpack**: bool (WriteOnly)
+* **url**: string (Required, WriteOnly)
+* **version**: int (WriteOnly)
+
+## DatasetReference
+### Properties
+* **id**: string (WriteOnly)
+* **name**: string (WriteOnly)
+
+## ModelKvTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ModelProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ContainerResourceRequirements
+### Properties
+* **cpu**: int (WriteOnly)
+* **fpga**: int (WriteOnly)
+* **gpu**: int (WriteOnly)
+* **memoryInGB**: int (WriteOnly)
+
+## CreateServiceRequestKeys
+### Properties
+* **primaryKey**: string (WriteOnly)
+* **secondaryKey**: string (WriteOnly)
+
+## CreateServiceRequestKvTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

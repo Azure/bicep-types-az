@@ -3,6 +3,7 @@
 ## Resource microsoft.visualstudio/account@2014-04-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
+* **accountName**: string (WriteOnly)
 * **apiVersion**: '2014-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string

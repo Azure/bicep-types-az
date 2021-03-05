@@ -37,7 +37,6 @@
 * **connectivityTime**: string (ReadOnly)
 * **creationTime**: string (ReadOnly)
 * **dynamicLearning**: bool (ReadOnly)
-* **isEnterpriseSensor**: bool
 * **learningMode**: bool (ReadOnly)
 * **sensorStatus**: 'Disconnected' | 'Ok' | 'Unavailable' (ReadOnly)
 * **sensorVersion**: string (ReadOnly)

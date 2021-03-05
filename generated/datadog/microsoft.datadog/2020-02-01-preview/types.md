@@ -6,6 +6,7 @@
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' (Required, DeployTimeConstant)
+* **properties**: DatadogAgreementProperties (WriteOnly)
 * **type**: 'Microsoft.Datadog/agreements' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Datadog/monitors@2020-02-01-preview
@@ -39,6 +40,17 @@
 * **properties**: MonitoringTagRulesProperties
 * **type**: 'Microsoft.Datadog/monitors/tagRules' (ReadOnly, DeployTimeConstant)
 
+## DatadogAgreementProperties
+### Properties
+* **accepted**: bool (WriteOnly)
+* **licenseTextLink**: string (WriteOnly)
+* **plan**: string (WriteOnly)
+* **privacyPolicyLink**: string (WriteOnly)
+* **product**: string (WriteOnly)
+* **publisher**: string (WriteOnly)
+* **retrieveDatetime**: string (WriteOnly)
+* **signature**: string (WriteOnly)
+
 ## IdentityProperties
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -50,21 +62,18 @@
 * **datadogOrganizationProperties**: DatadogOrganizationProperties
 * **liftrResourceCategory**: 'MonitorLogs' | 'Unknown' (ReadOnly)
 * **liftrResourcePreference**: int (ReadOnly)
-* **marketplaceSubscriptionStatus**: 'Active' | 'Provisioning' | 'Suspended' | 'Unsubscribed' (ReadOnly)
-* **monitoringStatus**: 'Disabled' | 'Enabled'
+* **marketplaceSubscriptionStatus**: 'Active' | 'Suspended' (ReadOnly)
+* **monitoringStatus**: 'Disabled' | 'Enabled' (ReadOnly)
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating'
 * **userInfo**: UserInfo
 
 ## DatadogOrganizationProperties
 ### Properties
-* **apiKey**: string
-* **applicationKey**: string
 * **enterpriseAppId**: string
 * **id**: string (ReadOnly)
 * **linkingAuthCode**: string
 * **linkingClientId**: string
 * **name**: string (ReadOnly)
-* **redirectUri**: string
 
 ## UserInfo
 ### Properties
@@ -84,7 +93,6 @@
 ## DatadogSingleSignOnProperties
 ### Properties
 * **enterpriseAppId**: string
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating'
 * **singleSignOnState**: 'Disable' | 'Enable' | 'Existing' | 'Initial'
 * **singleSignOnUrl**: string (ReadOnly)
 
@@ -92,7 +100,6 @@
 ### Properties
 * **logRules**: LogRules
 * **metricRules**: MetricRules
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating'
 
 ## LogRules
 ### Properties

@@ -41,15 +41,40 @@
 
 ## RedisCreateProperties
 ### Properties
+* **accessKeys**: RedisAccessKeys (ReadOnly)
 * **enableNonSslPort**: bool
+* **hostName**: string (ReadOnly)
+* **instances**: RedisInstanceDetails[] (ReadOnly)
+* **linkedServers**: RedisLinkedServer[] (ReadOnly)
 * **minimumTlsVersion**: '1.0' | '1.1' | '1.2'
+* **port**: int (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Disabled' | 'Failed' | 'Linking' | 'Provisioning' | 'RecoveringScaleFailure' | 'Scaling' | 'Succeeded' | 'Unlinking' | 'Unprovisioning' | 'Updating' (ReadOnly)
 * **redisConfiguration**: RedisCommonPropertiesRedisConfiguration
+* **redisVersion**: string (ReadOnly)
 * **replicasPerMaster**: int
 * **shardCount**: int
 * **sku**: Sku (Required)
+* **sslPort**: int (ReadOnly)
 * **staticIP**: string
 * **subnetId**: string
 * **tenantSettings**: RedisCommonPropertiesTenantSettings
+
+## RedisAccessKeys
+### Properties
+* **primaryKey**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
+
+## RedisInstanceDetails
+### Properties
+* **isMaster**: bool (ReadOnly)
+* **nonSslPort**: int (ReadOnly)
+* **shardId**: int (ReadOnly)
+* **sslPort**: int (ReadOnly)
+* **zone**: string (ReadOnly)
+
+## RedisLinkedServer
+### Properties
+* **id**: string (ReadOnly)
 
 ## RedisCommonPropertiesRedisConfiguration
 ### Properties
@@ -81,6 +106,7 @@
 ### Properties
 * **linkedRedisCacheId**: string (Required)
 * **linkedRedisCacheLocation**: string (Required)
+* **provisioningState**: string (ReadOnly)
 
 ## ScheduleEntries
 ### Properties

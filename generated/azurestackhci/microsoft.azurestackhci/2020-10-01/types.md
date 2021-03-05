@@ -8,7 +8,6 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ClusterProperties
-* **systemData**: SystemData (ReadOnly)
 * **tags**: TrackedResourceTags
 * **type**: 'Microsoft.AzureStackHCI/clusters' (ReadOnly, DeployTimeConstant)
 
@@ -45,15 +44,6 @@
 * **osName**: string (ReadOnly)
 * **osVersion**: string (ReadOnly)
 * **serialNumber**: string (ReadOnly)
-
-## SystemData
-### Properties
-* **createdAt**: string
-* **createdBy**: string
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
-* **lastModifiedAt**: string
-* **lastModifiedBy**: string
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
 ## TrackedResourceTags
 ### Properties

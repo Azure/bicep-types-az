@@ -15,8 +15,14 @@
 ## SignalRCreateOrUpdateProperties
 ### Properties
 * **cors**: SignalRCorsSettings
+* **externalIP**: string (ReadOnly)
 * **features**: SignalRFeature[]
+* **hostName**: string (ReadOnly)
 * **hostNamePrefix**: string
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
+* **publicPort**: int (ReadOnly)
+* **serverPort**: int (ReadOnly)
+* **version**: string (ReadOnly)
 
 ## SignalRCorsSettings
 ### Properties

@@ -6,7 +6,7 @@ https://aka.ms/autorest
    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.1.0)
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
-Processing batch task - {"tag":"schema-recoveryservices-2021-02-01"} .
+Processing batch task - {"tag":"schema-recoveryservices-2021-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
@@ -34,8 +34,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'RestoreRequestResource' with a
 
 WARNING (PreCheck/SchemaMissingType): The schema 'BackupResourceVaultConfigResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'ProtectionIntentResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/SchemaMissingType): The schema 'BackupEngineBaseResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'BackupRequestResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
@@ -53,18 +51,18 @@ WARNING (PreCheck/SchemaMissingType): The schema 'WorkloadProtectableItemResourc
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorAdditionalInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-An error was encountered while handling a request: TypeError: Cannot set property 'protectionIntentItemType' of undefined
-    at handlePolymorphicType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:476:74)
-    at parseObjectType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:503:17)
-    at parseType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:404:20)
-    at generateProviderTypes (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:94:44)
-    at /home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:65:70
-    at /home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/node_modules/lodash/lodash.js:13469:38
-    at /home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/node_modules/lodash/lodash.js:4967:15
-    at baseForOwn (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/node_modules/lodash/lodash.js:3032:24)
-    at Function.mapValues (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/node_modules/lodash/lodash.js:13468:7)
-    at generateTypesForApiVersion (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:65:25)
-FATAL: TypeError: Cannot set property 'protectionIntentItemType' of undefined
-Failure during batch task - {"tag":"schema-recoveryservices-2021-02-01"} -- Error: Plugin azureresourceschema reported failure..
+An error was encountered while handling a request: TypeError: Cannot set property 'protectedItemType' of undefined
+    at handlePolymorphicType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:498:74)
+    at parseObjectType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:525:17)
+    at parseType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:426:20)
+    at generateProviderTypes (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:116:44)
+    at generateTypesForApiVersion (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:82:27)
+    at generateTypesForApiVersion.next (<anonymous>)
+    at generateTypes (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:24:42)
+    at generateTypes.next (<anonymous>)
+    at processRequest (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/main.js:15:50)
+    at async /home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/node_modules/@autorest/extension-base/dist/extension-base.js:55:17
+FATAL: TypeError: Cannot set property 'protectedItemType' of undefined
+Failure during batch task - {"tag":"schema-recoveryservices-2021-01-01"} -- Error: Plugin azureresourceschema reported failure..
   Error: Plugin azureresourceschema reported failure.
 Exited with code 1

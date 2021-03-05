@@ -16,6 +16,7 @@
 ### Properties
 * **apiVersion**: '2018-02-14-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SecretProperties (Required)
 * **tags**: SecretCreateOrUpdateParametersTags

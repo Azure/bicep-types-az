@@ -76,8 +76,16 @@
 ## WebhookPropertiesCreateParameters
 ### Properties
 * **actions**: 'delete' | 'push'[] (Required)
+* **customHeaders**: WebhookPropertiesCreateParametersCustomHeaders (WriteOnly)
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **scope**: string
+* **serviceUri**: string (Required, WriteOnly)
 * **status**: 'disabled' | 'enabled'
+
+## WebhookPropertiesCreateParametersCustomHeaders
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## WebhookCreateParametersTags
 ### Properties

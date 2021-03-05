@@ -30,17 +30,62 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **datasetType**: 'file' | 'tabular' (Required, WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity (ReadOnly)
+* **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
+* **parameters**: DatasetCreateRequestParameters (Required, WriteOnly)
+* **properties**: Dataset (ReadOnly)
+* **registration**: DatasetCreateRequestRegistration (Required, WriteOnly)
+* **skipValidation**: bool (WriteOnly)
+* **sku**: Sku (ReadOnly)
+* **tags**: ResourceTags (ReadOnly)
+* **timeSeries**: DatasetCreateRequestTimeSeries (WriteOnly)
 * **type**: 'Microsoft.MachineLearningServices/workspaces/datasets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.MachineLearningServices/workspaces/datastores@2020-05-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
+* **accountKey**: string (WriteOnly)
+* **accountName**: string (WriteOnly)
+* **adlsResourceGroup**: string (WriteOnly)
+* **adlsSubscriptionId**: string (WriteOnly)
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **authorityUrl**: string (WriteOnly)
+* **clientId**: string (WriteOnly)
+* **clientSecret**: string (WriteOnly)
+* **containerName**: string (WriteOnly)
+* **databaseName**: string (WriteOnly)
+* **dataStoreType**: 'adls' | 'adls-gen2' | 'blob' | 'dbfs' | 'file' | 'mysqldb' | 'psqldb' | 'sqldb' (Required, WriteOnly)
+* **description**: string (WriteOnly)
+* **endpoint**: string (WriteOnly)
+* **enforceSSL**: bool (WriteOnly)
+* **fileSystem**: string (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: Identity (ReadOnly)
+* **includeSecret**: bool (WriteOnly)
+* **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
+* **password**: string (WriteOnly)
+* **port**: string (WriteOnly)
+* **properties**: Datastore (ReadOnly)
+* **protocol**: string (WriteOnly)
+* **resourceUrl**: string (WriteOnly)
+* **sasToken**: string (WriteOnly)
+* **serverName**: string (WriteOnly)
+* **shareName**: string (WriteOnly)
+* **skipValidation**: bool (WriteOnly)
+* **sku**: Sku (ReadOnly)
+* **storageAccountResourceGroup**: string (WriteOnly)
+* **storageAccountSubscriptionId**: string (WriteOnly)
+* **storeName**: string (WriteOnly)
+* **tags**: ResourceTags (ReadOnly)
+* **tenantId**: string (WriteOnly)
 * **type**: 'Microsoft.MachineLearningServices/workspaces/datastores' (ReadOnly, DeployTimeConstant)
+* **userId**: string (WriteOnly)
+* **userName**: string (WriteOnly)
+* **workspaceSystemAssignedIdentity**: bool (WriteOnly)
 
 ## Resource Microsoft.MachineLearningServices/workspaces/linkedWorkspaces@2020-05-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -70,8 +115,12 @@
 
 ### Base Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **description**: string (WriteOnly)
+* **environmentImageRequest**: CreateServiceRequestEnvironmentImageRequest (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity (ReadOnly)
+* **keys**: CreateServiceRequestKeys (WriteOnly)
+* **kvTags**: CreateServiceRequestKvTags (WriteOnly)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: CreateServiceRequestProperties
@@ -380,12 +429,451 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## DatasetCreateRequestParameters
+### Properties
+* **header**: 'all_files_have_same_headers' | 'combine_all_files_headers' | 'no_headers' | 'only_first_file_has_headers' (WriteOnly)
+* **includePath**: bool (WriteOnly)
+* **partitionFormat**: string (WriteOnly)
+* **path**: DatasetCreateRequestParametersPath (WriteOnly)
+* **query**: DatasetCreateRequestParametersQuery (WriteOnly)
+* **separator**: string (WriteOnly)
+* **sourceType**: 'delimited_files' | 'json_lines_files' | 'parquet_files' (WriteOnly)
+
+## DatasetCreateRequestParametersPath
+### Properties
+* **dataPath**: DatasetCreateRequestParametersPathDataPath (WriteOnly)
+* **httpUrl**: string (WriteOnly)
+
+## DatasetCreateRequestParametersPathDataPath
+### Properties
+* **datastoreName**: string (WriteOnly)
+* **relativePath**: string (WriteOnly)
+
+## DatasetCreateRequestParametersQuery
+### Properties
+* **datastoreName**: string (WriteOnly)
+* **query**: string (WriteOnly)
+
+## Dataset
+### Properties
+* **createdTime**: string (ReadOnly)
+* **datasetId**: string (ReadOnly)
+* **datasetState**: DatasetState (ReadOnly)
+* **datasetType**: string (ReadOnly)
+* **defaultCompute**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **etag**: string (ReadOnly)
+* **isVisible**: bool (ReadOnly)
+* **latest**: DatasetLatest (ReadOnly)
+* **modifiedTime**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **tags**: DatasetTags (ReadOnly)
+
+## DatasetState
+### Properties
+* **deprecatedBy**: DatasetStateDeprecatedBy (ReadOnly)
+* **etag**: string (ReadOnly)
+* **state**: string (ReadOnly)
+
+## DatasetStateDeprecatedBy
+### Properties
+* **datasetId**: string (ReadOnly)
+* **definitionVersion**: string (ReadOnly)
+
+## DatasetLatest
+### Properties
+* **createdBy**: UserInfo (ReadOnly)
+* **createdTime**: string (ReadOnly)
+* **dataflow**: string (ReadOnly)
+* **dataPath**: DatasetLatestDataPath (ReadOnly)
+* **datasetDefinitionState**: DatasetState (ReadOnly)
+* **datasetId**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **etag**: string (ReadOnly)
+* **fileType**: string (ReadOnly)
+* **modifiedTime**: string (ReadOnly)
+* **notes**: string (ReadOnly)
+* **partitionFormatInPath**: bool (ReadOnly)
+* **properties**: DatasetLatestProperties (ReadOnly)
+* **savedDatasetId**: string (ReadOnly)
+* **tags**: DatasetLatestTags (ReadOnly)
+* **telemetryInfo**: DatasetLatestTelemetryInfo (ReadOnly)
+* **useDescriptionTagsFromDefinition**: bool (ReadOnly)
+* **versionId**: string (ReadOnly)
+
+## UserInfo
+### Properties
+* **userAltSecId**: string (ReadOnly)
+* **userIdp**: string (ReadOnly)
+* **userIss**: string (ReadOnly)
+* **userName**: string (ReadOnly)
+* **userObjectId**: string (ReadOnly)
+* **userPuId**: string (ReadOnly)
+* **userTenantId**: string (ReadOnly)
+
+## DatasetLatestDataPath
+### Properties
+* **additionalProperties**: DatasetLatestDataPathAdditionalProperties (ReadOnly)
+* **azureFilePath**: string (ReadOnly)
+* **datastoreName**: string (ReadOnly)
+* **httpUrl**: string (ReadOnly)
+* **partitionFormat**: string (ReadOnly)
+* **partitionFormatIgnoreError**: bool (ReadOnly)
+* **paths**: string[] (ReadOnly)
+* **relativePath**: string (ReadOnly)
+* **sqlDataPath**: DatasetLatestDataPathSqlDataPath (ReadOnly)
+
+## DatasetLatestDataPathAdditionalProperties
+### Properties
+
+## DatasetLatestDataPathSqlDataPath
+### Properties
+* **queryTimeout**: int (ReadOnly)
+* **sqlQuery**: string (ReadOnly)
+* **sqlStoredProcedureName**: string (ReadOnly)
+* **sqlTableName**: string (ReadOnly)
+
+## DatasetLatestProperties
+### Properties
+
+## DatasetLatestTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DatasetLatestTelemetryInfo
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DatasetTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DatasetCreateRequestRegistration
+### Properties
+* **description**: string (WriteOnly)
+* **name**: string (WriteOnly)
+* **tags**: DatasetCreateRequestRegistrationTags (WriteOnly)
+
+## DatasetCreateRequestRegistrationTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DatasetCreateRequestTimeSeries
+### Properties
+* **coarseGrainTimestamp**: string (WriteOnly)
+* **fineGrainTimestamp**: string (WriteOnly)
+
+## Datastore
+### Properties
+* **azureDataLakeSection**: AzureDataLakeSection (ReadOnly)
+* **azureMySqlSection**: AzureMySqlSection (ReadOnly)
+* **azurePostgreSqlSection**: AzurePostgreSqlSection (ReadOnly)
+* **azureSqlDatabaseSection**: AzureSqlDatabaseSection (ReadOnly)
+* **azureStorageSection**: AzureStorageSection (ReadOnly)
+* **createdBy**: UserInfo (ReadOnly)
+* **createdTime**: string (ReadOnly)
+* **dataStoreType**: 'AzureBlob' | 'AzureDataLake' | 'AzureDataLakeGen2' | 'AzureFile' | 'AzureMySql' | 'AzurePostgreSql' | 'AzureSqlDatabase' | 'DBFS' (ReadOnly)
+* **description**: string (ReadOnly)
+* **glusterFsSection**: GlusterFsSection (ReadOnly)
+* **hasBeenValidated**: bool (ReadOnly)
+* **linkedInfo**: LinkedInfo (ReadOnly)
+* **modifiedBy**: UserInfo (ReadOnly)
+* **modifiedTime**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **tags**: DatastoreTags (ReadOnly)
+
+## AzureDataLakeSection
+### Properties
+* **authorityUrl**: string (ReadOnly)
+* **certificate**: string (ReadOnly)
+* **clientId**: string (ReadOnly)
+* **clientSecret**: string (ReadOnly)
+* **credentialType**: 'None' | 'ServicePrincipal' (ReadOnly)
+* **isCertAuth**: bool (ReadOnly)
+* **resourceGroup**: string (ReadOnly)
+* **resourceUri**: string (ReadOnly)
+* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' (ReadOnly)
+* **storeName**: string (ReadOnly)
+* **subscriptionId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **thumbprint**: string (ReadOnly)
+
+## AzureMySqlSection
+### Properties
+* **authorityUrl**: string (ReadOnly)
+* **certificate**: string (ReadOnly)
+* **clientId**: string (ReadOnly)
+* **clientSecret**: string (ReadOnly)
+* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' (ReadOnly)
+* **databaseName**: string (ReadOnly)
+* **endpoint**: string (ReadOnly)
+* **isCertAuth**: bool (ReadOnly)
+* **portNumber**: string (ReadOnly)
+* **resourceGroup**: string (ReadOnly)
+* **resourceUri**: string (ReadOnly)
+* **serverName**: string (ReadOnly)
+* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' (ReadOnly)
+* **subscriptionId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **thumbprint**: string (ReadOnly)
+* **userId**: string (ReadOnly)
+* **userPassword**: string (ReadOnly)
+
+## AzurePostgreSqlSection
+### Properties
+* **authorityUrl**: string (ReadOnly)
+* **certificate**: string (ReadOnly)
+* **clientId**: string (ReadOnly)
+* **clientSecret**: string (ReadOnly)
+* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' (ReadOnly)
+* **databaseName**: string (ReadOnly)
+* **enableSsl**: bool (ReadOnly)
+* **endpoint**: string (ReadOnly)
+* **isCertAuth**: bool (ReadOnly)
+* **portNumber**: string (ReadOnly)
+* **resourceGroup**: string (ReadOnly)
+* **resourceUri**: string (ReadOnly)
+* **serverName**: string (ReadOnly)
+* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' (ReadOnly)
+* **subscriptionId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **thumbprint**: string (ReadOnly)
+* **userId**: string (ReadOnly)
+* **userPassword**: string (ReadOnly)
+
+## AzureSqlDatabaseSection
+### Properties
+* **authorityUrl**: string (ReadOnly)
+* **certificate**: string (ReadOnly)
+* **clientId**: string (ReadOnly)
+* **clientSecret**: string (ReadOnly)
+* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' (ReadOnly)
+* **databaseName**: string (ReadOnly)
+* **endpoint**: string (ReadOnly)
+* **isCertAuth**: bool (ReadOnly)
+* **portNumber**: string (ReadOnly)
+* **resourceGroup**: string (ReadOnly)
+* **resourceUri**: string (ReadOnly)
+* **serverName**: string (ReadOnly)
+* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' (ReadOnly)
+* **subscriptionId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **thumbprint**: string (ReadOnly)
+* **userId**: string (ReadOnly)
+* **userPassword**: string (ReadOnly)
+
+## AzureStorageSection
+### Properties
+* **accountKey**: string (ReadOnly)
+* **accountName**: string (ReadOnly)
+* **areWorkspaceManagedIdentitiesAllowed**: bool (ReadOnly)
+* **blobCacheTimeout**: int (ReadOnly)
+* **clientCredentials**: ClientCredentials (ReadOnly)
+* **containerName**: string (ReadOnly)
+* **credential**: string (ReadOnly)
+* **credentialType**: 'AccountKey' | 'ClientCredentials' | 'None' | 'Sas' (ReadOnly)
+* **endpoint**: string (ReadOnly)
+* **isSas**: bool (ReadOnly)
+* **protocol**: string (ReadOnly)
+* **resourceGroup**: string (ReadOnly)
+* **sasToken**: string (ReadOnly)
+* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' (ReadOnly)
+* **subscriptionId**: string (ReadOnly)
+
+## ClientCredentials
+### Properties
+* **authorityUrl**: string (ReadOnly)
+* **certificate**: string (ReadOnly)
+* **clientId**: string (ReadOnly)
+* **clientSecret**: string (ReadOnly)
+* **isCertAuth**: bool (ReadOnly)
+* **resourceGroup**: string (ReadOnly)
+* **resourceUri**: string (ReadOnly)
+* **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' (ReadOnly)
+* **subscriptionId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **thumbprint**: string (ReadOnly)
+
+## GlusterFsSection
+### Properties
+* **serverAddress**: string (ReadOnly)
+* **volumeName**: string (ReadOnly)
+
+## LinkedInfo
+### Properties
+* **linkedId**: string (ReadOnly)
+* **linkedResourceName**: string (ReadOnly)
+* **origin**: 'Synapse' (ReadOnly)
+
+## DatastoreTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## LinkedWorkspaceProps
 ### Properties
 * **linkedWorkspaceResourceId**: string
 * **userAssignedIdentityResourceId**: string
 
 ## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## CreateServiceRequestEnvironmentImageRequest
+### Properties
+* **assets**: ImageAsset[] (WriteOnly)
+* **driverProgram**: string (WriteOnly)
+* **environment**: EnvironmentImageRequestEnvironment (WriteOnly)
+* **environmentReference**: EnvironmentImageRequestEnvironmentReference (WriteOnly)
+* **modelIds**: string[] (WriteOnly)
+* **models**: Model[] (WriteOnly)
+
+## ImageAsset
+### Properties
+* **id**: string (WriteOnly)
+* **mimeType**: string (WriteOnly)
+* **unpack**: bool (WriteOnly)
+* **url**: string (WriteOnly)
+
+## EnvironmentImageRequestEnvironment
+### Properties
+* **docker**: ModelEnvironmentDefinitionDocker (WriteOnly)
+* **environmentVariables**: ModelEnvironmentDefinitionEnvironmentVariables (WriteOnly)
+* **inferencingStackVersion**: string (WriteOnly)
+* **name**: string (WriteOnly)
+* **python**: ModelEnvironmentDefinitionPython (WriteOnly)
+* **r**: ModelEnvironmentDefinitionR (WriteOnly)
+* **spark**: ModelEnvironmentDefinitionSpark (WriteOnly)
+* **version**: string (WriteOnly)
+
+## ModelEnvironmentDefinitionDocker
+### Properties
+* **baseDockerfile**: string (WriteOnly)
+* **baseImage**: string (WriteOnly)
+* **baseImageRegistry**: ModelDockerSectionBaseImageRegistry (WriteOnly)
+
+## ModelDockerSectionBaseImageRegistry
+### Properties
+* **address**: string (WriteOnly)
+* **password**: string (WriteOnly)
+* **username**: string (WriteOnly)
+
+## ModelEnvironmentDefinitionEnvironmentVariables
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ModelEnvironmentDefinitionPython
+### Properties
+* **baseCondaEnvironment**: string (WriteOnly)
+* **interpreterPath**: string (WriteOnly)
+* **userManagedDependencies**: bool (WriteOnly)
+
+## ModelEnvironmentDefinitionR
+### Properties
+* **bioConductorPackages**: string[] (WriteOnly)
+* **cranPackages**: RCranPackage[] (WriteOnly)
+* **customUrlPackages**: string[] (WriteOnly)
+* **gitHubPackages**: RGitHubPackage[] (WriteOnly)
+* **rscriptPath**: string (WriteOnly)
+* **rVersion**: string (WriteOnly)
+* **snapshotDate**: string (WriteOnly)
+* **userManaged**: bool (WriteOnly)
+
+## RCranPackage
+### Properties
+* **name**: string (WriteOnly)
+* **repository**: string (WriteOnly)
+
+## RGitHubPackage
+### Properties
+* **authToken**: string (WriteOnly)
+* **repository**: string (WriteOnly)
+
+## ModelEnvironmentDefinitionSpark
+### Properties
+* **packages**: SparkMavenPackage[] (WriteOnly)
+* **precachePackages**: bool (WriteOnly)
+* **repositories**: string[] (WriteOnly)
+
+## SparkMavenPackage
+### Properties
+* **artifact**: string (WriteOnly)
+* **group**: string (WriteOnly)
+* **version**: string (WriteOnly)
+
+## EnvironmentImageRequestEnvironmentReference
+### Properties
+* **name**: string (WriteOnly)
+* **version**: string (WriteOnly)
+
+## Model
+### Properties
+* **createdTime**: string (WriteOnly)
+* **datasets**: DatasetReference[] (WriteOnly)
+* **derivedModelIds**: string[] (WriteOnly)
+* **description**: string (WriteOnly)
+* **experimentName**: string (WriteOnly)
+* **framework**: string (WriteOnly)
+* **frameworkVersion**: string (WriteOnly)
+* **id**: string (WriteOnly)
+* **kvTags**: ModelKvTags (WriteOnly)
+* **mimeType**: string (Required, WriteOnly)
+* **modifiedTime**: string (WriteOnly)
+* **name**: string (Required, WriteOnly)
+* **parentModelId**: string (WriteOnly)
+* **properties**: ModelProperties (WriteOnly)
+* **resourceRequirements**: ContainerResourceRequirements (WriteOnly)
+* **runId**: string (WriteOnly)
+* **sampleInputData**: string (WriteOnly)
+* **sampleOutputData**: string (WriteOnly)
+* **unpack**: bool (WriteOnly)
+* **url**: string (Required, WriteOnly)
+* **version**: int (WriteOnly)
+
+## DatasetReference
+### Properties
+* **id**: string (WriteOnly)
+* **name**: string (WriteOnly)
+
+## ModelKvTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ModelProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ContainerResourceRequirements
+### Properties
+* **cpu**: int (WriteOnly)
+* **fpga**: int (WriteOnly)
+* **gpu**: int (WriteOnly)
+* **memoryInGB**: int (WriteOnly)
+
+## CreateServiceRequestKeys
+### Properties
+* **primaryKey**: string (WriteOnly)
+* **secondaryKey**: string (WriteOnly)
+
+## CreateServiceRequestKvTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

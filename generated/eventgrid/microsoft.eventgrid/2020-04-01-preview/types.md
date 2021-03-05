@@ -29,7 +29,6 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: EventSubscriptionProperties
-* **systemData**: SystemData (ReadOnly)
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/partnerNamespaces@2020-04-01-preview
@@ -40,7 +39,6 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PartnerNamespaceProperties
-* **systemData**: SystemData (ReadOnly)
 * **tags**: TrackedResourceTags
 * **type**: 'Microsoft.EventGrid/partnerNamespaces' (ReadOnly, DeployTimeConstant)
 
@@ -51,7 +49,6 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: EventChannelProperties
-* **systemData**: SystemData (ReadOnly)
 * **type**: 'Microsoft.EventGrid/partnerNamespaces/eventChannels' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/partnerRegistrations@2020-04-01-preview
@@ -62,7 +59,6 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PartnerRegistrationProperties
-* **systemData**: SystemData (ReadOnly)
 * **tags**: TrackedResourceTags
 * **type**: 'Microsoft.EventGrid/partnerRegistrations' (ReadOnly, DeployTimeConstant)
 
@@ -73,7 +69,6 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: EventSubscriptionProperties
-* **systemData**: SystemData (ReadOnly)
 * **type**: 'Microsoft.EventGrid/partnerTopics/eventSubscriptions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/systemTopics@2020-04-01-preview
@@ -84,7 +79,6 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SystemTopicProperties
-* **systemData**: SystemData (ReadOnly)
 * **tags**: TrackedResourceTags
 * **type**: 'Microsoft.EventGrid/systemTopics' (ReadOnly, DeployTimeConstant)
 
@@ -95,7 +89,6 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: EventSubscriptionProperties
-* **systemData**: SystemData (ReadOnly)
 * **type**: 'Microsoft.EventGrid/systemTopics/eventSubscriptions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/topics@2020-04-01-preview
@@ -517,15 +510,6 @@
 ### Properties
 * **eventTimeToLiveInMinutes**: int
 * **maxDeliveryAttempts**: int
-
-## SystemData
-### Properties
-* **createdAt**: string
-* **createdBy**: string
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
-* **lastModifiedAt**: string
-* **lastModifiedBy**: string
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
 ## PartnerNamespaceProperties
 ### Properties

@@ -14,7 +14,13 @@
 
 ## SignalRCreateOrUpdateProperties
 ### Properties
+* **externalIP**: string (ReadOnly)
+* **hostName**: string (ReadOnly)
 * **hostNamePrefix**: string
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
+* **publicPort**: int (ReadOnly)
+* **serverPort**: int (ReadOnly)
+* **version**: string (ReadOnly)
 
 ## ResourceSku
 ### Properties

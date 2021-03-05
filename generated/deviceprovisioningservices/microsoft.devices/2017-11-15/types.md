@@ -17,8 +17,11 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-11-15' (ReadOnly, DeployTimeConstant)
+* **certificate**: string (WriteOnly)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: CertificateProperties (ReadOnly)
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant)
 
 ## IotDpsPropertiesDescription
@@ -57,4 +60,13 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## CertificateProperties
+### Properties
+* **created**: string (ReadOnly)
+* **expiry**: string (ReadOnly)
+* **isVerified**: bool (ReadOnly)
+* **subject**: string (ReadOnly)
+* **thumbprint**: string (ReadOnly)
+* **updated**: string (ReadOnly)
 

@@ -40,6 +40,7 @@
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SecretProperties (Required)
 * **tags**: SecretCreateOrUpdateParametersTags

@@ -53,12 +53,25 @@
 
 ## BatchAccountCreateProperties
 ### Properties
+* **accountEndpoint**: string (ReadOnly)
+* **activeJobAndJobScheduleQuota**: int (ReadOnly)
 * **autoStorage**: AutoStorageBaseProperties
+* **dedicatedCoreQuota**: int (ReadOnly)
+* **dedicatedCoreQuotaPerVMFamily**: VirtualMachineFamilyCoreQuota[] (ReadOnly)
+* **dedicatedCoreQuotaPerVMFamilyEnforced**: bool (ReadOnly)
 * **keyVaultReference**: KeyVaultReference
+* **lowPriorityCoreQuota**: int (ReadOnly)
+* **poolQuota**: int (ReadOnly)
 
 ## AutoStorageBaseProperties
 ### Properties
+* **lastKeySync**: string (ReadOnly)
 * **storageAccountId**: string (Required)
+
+## VirtualMachineFamilyCoreQuota
+### Properties
+* **coreQuota**: int (ReadOnly)
+* **name**: string (ReadOnly)
 
 ## KeyVaultReference
 ### Properties
@@ -85,8 +98,21 @@
 
 ## CertificateCreateOrUpdateProperties
 ### Properties
+* **data**: string (Required, WriteOnly)
+* **deleteCertificateError**: DeleteCertificateError (ReadOnly)
+* **password**: string (WriteOnly)
+* **previousProvisioningStateTransitionTime**: string (ReadOnly)
+* **provisioningStateTransitionTime**: string (ReadOnly)
+* **publicData**: string (ReadOnly)
 * **thumbprint**: string
 * **thumbprintAlgorithm**: string
+
+## DeleteCertificateError
+### Properties
+* **code**: string (ReadOnly)
+* **details**: DeleteCertificateError[] (ReadOnly)
+* **message**: string (ReadOnly)
+* **target**: string (ReadOnly)
 
 ## PoolProperties
 ### Properties

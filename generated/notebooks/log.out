@@ -15,4 +15,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an u
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 5ms
-[2.83 s] Generation Complete
+[3.4 s] Generation Complete

@@ -78,6 +78,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: CustomDomainPropertiesParameters
+* **systemData**: SystemData (ReadOnly)
 * **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Cdn/profiles/endpoints/originGroups@2020-09-01
@@ -791,7 +792,12 @@
 
 ## CustomDomainPropertiesParameters
 ### Properties
+* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly)
+* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly)
 * **hostName**: string (Required)
+* **provisioningState**: string (ReadOnly)
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
+* **validationData**: string (ReadOnly)
 
 ## OriginGroupProperties
 ### Properties

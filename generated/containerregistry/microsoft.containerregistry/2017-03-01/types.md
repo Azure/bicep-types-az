@@ -15,10 +15,13 @@
 ## RegistryPropertiesCreateParameters
 ### Properties
 * **adminUserEnabled**: bool
+* **creationDate**: string (ReadOnly)
+* **loginServer**: string (ReadOnly)
 * **storageAccount**: StorageAccountParameters (Required)
 
 ## StorageAccountParameters
 ### Properties
+* **accessKey**: string (Required, WriteOnly)
 * **name**: string (Required)
 
 ## Sku

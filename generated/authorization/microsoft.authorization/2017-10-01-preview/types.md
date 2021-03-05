@@ -14,4 +14,5 @@
 * **canDelegate**: bool
 * **principalId**: string
 * **roleDefinitionId**: string
+* **scope**: string (ReadOnly)
 

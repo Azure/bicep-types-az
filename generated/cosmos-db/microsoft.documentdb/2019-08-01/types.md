@@ -150,6 +150,7 @@
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' (Required, DeployTimeConstant)
+* **properties**: NotebookWorkspaceProperties (ReadOnly)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2019-08-01
@@ -257,13 +258,18 @@
 * **connectorOffer**: 'Small'
 * **consistencyPolicy**: ConsistencyPolicy
 * **disableKeyBasedMetadataWriteAccess**: bool
+* **documentEndpoint**: string (ReadOnly)
 * **enableAutomaticFailover**: bool
 * **enableCassandraConnector**: bool
 * **enableMultipleWriteLocations**: bool
+* **failoverPolicies**: FailoverPolicy[] (ReadOnly)
 * **ipRangeFilter**: string
 * **isVirtualNetworkFilterEnabled**: bool
 * **locations**: Location[] (Required)
+* **provisioningState**: string (ReadOnly)
+* **readLocations**: Location[] (ReadOnly)
 * **virtualNetworkRules**: VirtualNetworkRule[]
+* **writeLocations**: Location[] (ReadOnly)
 
 ## Capability
 ### Properties
@@ -273,6 +279,12 @@
 ### Properties
 * **maxIntervalInSeconds**: int
 * **maxStalenessPrefix**: int
+
+## FailoverPolicy
+### Properties
+* **failoverPriority**: int (ReadOnly)
+* **id**: string (ReadOnly)
+* **locationName**: string (ReadOnly)
 
 ## Location
 ### Properties
@@ -295,11 +307,19 @@
 
 ## CassandraKeyspaceCreateUpdateProperties
 ### Properties
+* **options**: CreateUpdateOptions (Required, WriteOnly)
 * **resource**: CassandraKeyspaceResource (Required)
+
+## CreateUpdateOptions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## CassandraKeyspaceResource
 ### Properties
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
+* **rid**: string (ReadOnly)
 
 ## Tags
 ### Properties
@@ -308,12 +328,20 @@
 
 ## CassandraTableCreateUpdateProperties
 ### Properties
+* **options**: CreateUpdateOptions (Required, WriteOnly)
 * **resource**: CassandraTableResource (Required)
+
+## CreateUpdateOptions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## CassandraTableResource
 ### Properties
 * **defaultTtl**: int
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
+* **rid**: string (ReadOnly)
 * **schema**: CassandraSchema
 
 ## CassandraSchema
@@ -347,8 +375,10 @@
 
 ## ThroughputSettingsResource
 ### Properties
+* **etag**: string (ReadOnly)
 * **minimumThroughput**: string (ReadOnly)
 * **offerReplacePending**: string (ReadOnly)
+* **rid**: string (ReadOnly)
 * **throughput**: int (Required)
 
 ## Tags
@@ -363,11 +393,19 @@
 
 ## GremlinDatabaseCreateUpdateProperties
 ### Properties
+* **options**: CreateUpdateOptions (Required, WriteOnly)
 * **resource**: GremlinDatabaseResource (Required)
+
+## CreateUpdateOptions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## GremlinDatabaseResource
 ### Properties
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
+* **rid**: string (ReadOnly)
 
 ## Tags
 ### Properties
@@ -376,15 +414,23 @@
 
 ## GremlinGraphCreateUpdateProperties
 ### Properties
+* **options**: CreateUpdateOptions (Required, WriteOnly)
 * **resource**: GremlinGraphResource (Required)
+
+## CreateUpdateOptions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## GremlinGraphResource
 ### Properties
 * **conflictResolutionPolicy**: ConflictResolutionPolicy
 * **defaultTtl**: int
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
 * **indexingPolicy**: IndexingPolicy
 * **partitionKey**: ContainerPartitionKey
+* **rid**: string (ReadOnly)
 * **uniqueKeyPolicy**: UniqueKeyPolicy
 
 ## ConflictResolutionPolicy
@@ -458,11 +504,19 @@
 
 ## MongoDBDatabaseCreateUpdateProperties
 ### Properties
+* **options**: CreateUpdateOptions (Required, WriteOnly)
 * **resource**: MongoDBDatabaseResource (Required)
+
+## CreateUpdateOptions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## MongoDBDatabaseResource
 ### Properties
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
+* **rid**: string (ReadOnly)
 
 ## Tags
 ### Properties
@@ -471,12 +525,20 @@
 
 ## MongoDBCollectionCreateUpdateProperties
 ### Properties
+* **options**: CreateUpdateOptions (Required, WriteOnly)
 * **resource**: MongoDBCollectionResource (Required)
+
+## CreateUpdateOptions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## MongoDBCollectionResource
 ### Properties
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
 * **indexes**: MongoIndex[]
+* **rid**: string (ReadOnly)
 * **shardKey**: ShardKeys
 
 ## MongoIndex
@@ -513,13 +575,28 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## NotebookWorkspaceProperties
+### Properties
+* **notebookServerEndpoint**: string (ReadOnly)
+* **status**: string (ReadOnly)
+
 ## SqlDatabaseCreateUpdateProperties
 ### Properties
+* **options**: CreateUpdateOptions (Required, WriteOnly)
 * **resource**: SqlDatabaseResource (Required)
+
+## CreateUpdateOptions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SqlDatabaseResource
 ### Properties
+* **colls**: string (ReadOnly)
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
+* **rid**: string (ReadOnly)
+* **users**: string (ReadOnly)
 
 ## Tags
 ### Properties
@@ -528,15 +605,23 @@
 
 ## SqlContainerCreateUpdateProperties
 ### Properties
+* **options**: CreateUpdateOptions (Required, WriteOnly)
 * **resource**: SqlContainerResource (Required)
+
+## CreateUpdateOptions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SqlContainerResource
 ### Properties
 * **conflictResolutionPolicy**: ConflictResolutionPolicy
 * **defaultTtl**: int
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
 * **indexingPolicy**: IndexingPolicy
 * **partitionKey**: ContainerPartitionKey
+* **rid**: string (ReadOnly)
 * **uniqueKeyPolicy**: UniqueKeyPolicy
 
 ## Tags
@@ -546,12 +631,20 @@
 
 ## SqlStoredProcedureCreateUpdateProperties
 ### Properties
+* **options**: CreateUpdateOptions (Required, WriteOnly)
 * **resource**: SqlStoredProcedureResource (Required)
+
+## CreateUpdateOptions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SqlStoredProcedureResource
 ### Properties
 * **body**: string
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
+* **rid**: string (ReadOnly)
 
 ## Tags
 ### Properties
@@ -565,12 +658,20 @@
 
 ## SqlTriggerCreateUpdateProperties
 ### Properties
+* **options**: CreateUpdateOptions (Required, WriteOnly)
 * **resource**: SqlTriggerResource (Required)
+
+## CreateUpdateOptions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SqlTriggerResource
 ### Properties
 * **body**: string
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
+* **rid**: string (ReadOnly)
 * **triggerOperation**: 'All' | 'Create' | 'Delete' | 'Replace' | 'Update'
 * **triggerType**: 'Post' | 'Pre'
 
@@ -581,12 +682,20 @@
 
 ## SqlUserDefinedFunctionCreateUpdateProperties
 ### Properties
+* **options**: CreateUpdateOptions (Required, WriteOnly)
 * **resource**: SqlUserDefinedFunctionResource (Required)
+
+## CreateUpdateOptions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## SqlUserDefinedFunctionResource
 ### Properties
 * **body**: string
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
+* **rid**: string (ReadOnly)
 
 ## Tags
 ### Properties
@@ -600,11 +709,19 @@
 
 ## TableCreateUpdateProperties
 ### Properties
+* **options**: CreateUpdateOptions (Required, WriteOnly)
 * **resource**: TableResource (Required)
+
+## CreateUpdateOptions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TableResource
 ### Properties
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
+* **rid**: string (ReadOnly)
 
 ## Tags
 ### Properties

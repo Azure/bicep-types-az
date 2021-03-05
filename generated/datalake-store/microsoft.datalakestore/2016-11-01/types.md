@@ -46,9 +46,13 @@
 
 ## CreateDataLakeStoreAccountProperties
 ### Properties
+* **accountId**: string (ReadOnly)
+* **creationTime**: string (ReadOnly)
 * **defaultGroup**: string
 * **encryptionConfig**: EncryptionConfig
+* **endpoint**: string (ReadOnly)
 * **firewallRules**: CreateFirewallRuleWithAccountParameters[]
+* **lastModifiedTime**: string (ReadOnly)
 * **trustedIdProviders**: CreateTrustedIdProviderWithAccountParameters[]
 * **virtualNetworkRules**: CreateVirtualNetworkRuleWithAccountParameters[]
 
@@ -64,8 +68,10 @@
 
 ## CreateFirewallRuleWithAccountParameters
 ### Properties
+* **id**: string (ReadOnly)
 * **name**: string (Required)
 * **properties**: CreateOrUpdateFirewallRuleProperties (Required)
+* **type**: string (ReadOnly)
 
 ## CreateOrUpdateFirewallRuleProperties
 ### Properties
@@ -74,8 +80,10 @@
 
 ## CreateTrustedIdProviderWithAccountParameters
 ### Properties
+* **id**: string (ReadOnly)
 * **name**: string (Required)
 * **properties**: CreateOrUpdateTrustedIdProviderProperties (Required)
+* **type**: string (ReadOnly)
 
 ## CreateOrUpdateTrustedIdProviderProperties
 ### Properties
@@ -83,8 +91,10 @@
 
 ## CreateVirtualNetworkRuleWithAccountParameters
 ### Properties
+* **id**: string (ReadOnly)
 * **name**: string (Required)
 * **properties**: CreateOrUpdateVirtualNetworkRuleProperties (Required)
+* **type**: string (ReadOnly)
 
 ## CreateOrUpdateVirtualNetworkRuleProperties
 ### Properties

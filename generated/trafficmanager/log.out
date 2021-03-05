@@ -6,7 +6,7 @@ https://aka.ms/autorest
    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.1.0)
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
-Processing batch task - {"tag":"schema-network-2018-08-01"} .
+Processing batch task - {"tag":"schema-network-2018-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
@@ -58,14 +58,15 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefin
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 An error was encountered while handling a request: TypeError: Cannot read property 'length' of undefined
-    at parseResourceTypes (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:226:42)
-    at parseMethod (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:188:59)
-    at generateTypesForApiVersion (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:42:61)
-    at generateTypes (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:538:37)
+    at parseResourceTypes (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:248:42)
+    at parseMethod (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:210:59)
+    at generateTypesForApiVersion (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:57:61)
+    at generateTypesForApiVersion.next (<anonymous>)
+    at generateTypes (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:24:42)
     at generateTypes.next (<anonymous>)
     at processRequest (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/main.js:15:50)
     at async /home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/node_modules/@autorest/extension-base/dist/extension-base.js:55:17
 FATAL: TypeError: Cannot read property 'length' of undefined
-Failure during batch task - {"tag":"schema-network-2018-08-01"} -- Error: Plugin azureresourceschema reported failure..
+Failure during batch task - {"tag":"schema-network-2018-04-01"} -- Error: Plugin azureresourceschema reported failure..
   Error: Plugin azureresourceschema reported failure.
 Exited with code 1

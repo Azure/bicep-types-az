@@ -54,7 +54,7 @@ WARNING: Skipping resource type microsoft.sql/servers/databases/schemas/tables/c
 WARNING: Skipping resource type microsoft.sql/servers/dnsaliases under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/dnsAliases/{dnsAliasName}': No resource body defined
 WARNING: Unrecognized property type: constant
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 27ms
+INFORMATION: Autorest.AzureResourceSchema took 34ms
 Processing batch task - {"tag":"schema-sql-2020-02-02-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -103,13 +103,13 @@ WARNING: Skipping resource type microsoft.sql/servers/databases/schemas/tables/c
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.sql/servers/dnsaliases under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/dnsAliases/{dnsAliasName}': No resource body defined
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 29ms
+INFORMATION: Autorest.AzureResourceSchema took 39ms
 Processing batch task - {"tag":"schema-sql-2019-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 11ms
+INFORMATION: Autorest.AzureResourceSchema took 15ms
 Processing batch task - {"tag":"schema-sql-2018-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -118,7 +118,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING: Unrecognized property type: constant
 WARNING: Skipping resource type microsoft.sql/managedinstances/databases/schemas/tables/columns/sensitivitylabels under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/databases/{databaseName}/schemas/{schemaName}/tables/{tableName}/columns/{columnName}/sensitivityLabels/{sensitivityLabelSource}': 
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-sql-2017-10-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -126,7 +126,7 @@ INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.sql/managedinstances/databases/vulnerabilityassessments/rules/baselines under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/databases/{databaseName}/vulnerabilityAssessments/{vulnerabilityAssessmentName}/rules/{ruleId}/baselines/{baselineName}': 
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-sql-2017-03-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -153,7 +153,7 @@ WARNING: Unrecognized property type: constant
 WARNING: Skipping resource type microsoft.sql/servers/databases/schemas/tables/columns/sensitivitylabels under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/schemas/{schemaName}/tables/{tableName}/columns/{columnName}/sensitivityLabels/{sensitivityLabelSource}': 
 WARNING: Unrecognized property type: constant
 WARNING: Skipping resource type microsoft.sql/managedinstances/administrators under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/administrators/{administratorName}': 
-INFORMATION: Autorest.AzureResourceSchema took 16ms
+INFORMATION: Autorest.AzureResourceSchema took 8ms
 Processing batch task - {"tag":"schema-sql-2015-05-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -162,7 +162,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
 WARNING: Unrecognized property type: constant
 WARNING: Skipping resource type microsoft.sql/servers/databases/auditingsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/auditingSettings/{blobAuditingPolicyName}': 
-INFORMATION: Autorest.AzureResourceSchema took 9ms
+INFORMATION: Autorest.AzureResourceSchema took 8ms
 Processing batch task - {"tag":"schema-sql-2015-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -455,12 +455,17 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: constant
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: constant
 WARNING: Skipping resource type microsoft.sql/servers/administrators under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/administrators/{administratorName}': 
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.sql/servers/disasterrecoveryconfiguration under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/disasterRecoveryConfiguration/{disasterRecoveryConfigurationName}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 9ms
+INFORMATION: Autorest.AzureResourceSchema took 17ms
 Processing batch task - {"tag":"schema-sql-2020-08-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -509,15 +514,71 @@ WARNING: Skipping resource type microsoft.sql/servers/databases/schemas/tables/c
 WARNING: Skipping resource type microsoft.sql/servers/dnsaliases under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/dnsAliases/{dnsAliasName}': No resource body defined
 WARNING: Unrecognized property type: constant
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 28ms
+INFORMATION: Autorest.AzureResourceSchema took 31ms
 Processing batch task - {"tag":"schema-sql-2020-02-02-preview"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named AdvisorProperties -- properties.recommendedActions.$ref: undefined => "#/components/schemas/schemas:1797" 
+
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named RecommendedAction -- properties.id: {"description":"Resource ID.","readOnly":true,"$ref":"#/components/schemas/schemas:293"} => <none>,properties.name: {"description":"Resource name.","readOnly":true,"$ref":"#/components/schemas/schemas:294"} => <none>,properties.type: {"description":"Resource type.","readOnly":true,"$ref":"#/components/schemas/schemas:295"} => <none>,allOf: undefined => [{"$ref":"#/components/schemas/schemas:2253"}] 
+
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named Advisor -- properties.properties.$ref: undefined => "#/components/schemas/schemas:1791" 
+
+WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'SecurityAlertPolicyName' -> 'SecurityAlertPolicyNameAutoGenerated'
+
+WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'RecommendedAction' -> 'RecommendedActionAutoGenerated'
+
+WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'Advisor' -> 'AdvisorAutoGenerated'
+
+WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'AdvisorProperties' -> 'AdvisorPropertiesAutoGenerated'
+
+WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'RecommendedAction' -> 'RecommendedActionAutoGenerated2'
+WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
+WARNING: Unrecognized property type: constant
+WARNING: Unrecognized property type: constant
+WARNING: Skipping resource type microsoft.sql/servers/databases/extendedauditingsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/extendedAuditingSettings/{blobAuditingPolicyName}': 
+WARNING: Unrecognized property type: constant
+WARNING: Skipping resource type microsoft.sql/servers/extendedauditingsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/extendedAuditingSettings/{blobAuditingPolicyName}': 
+WARNING: Unrecognized property type: constant
+WARNING: Skipping resource type microsoft.sql/servers/auditingsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/auditingSettings/{blobAuditingPolicyName}': 
+WARNING: Unrecognized property type: constant
+WARNING: Skipping resource type microsoft.sql/servers/databases/auditingsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/auditingSettings/{blobAuditingPolicyName}': 
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Skipping resource type microsoft.sql/servers/databases/vulnerabilityassessments/rules/baselines under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/vulnerabilityAssessments/{vulnerabilityAssessmentName}/rules/{ruleId}/baselines/{baselineName}': 
+WARNING: Skipping resource type microsoft.sql/servers/jobagents/jobs/executions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/jobAgents/{jobAgentName}/jobs/{jobName}/executions/{jobExecutionId}': No resource body defined
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: constant
+WARNING: Skipping resource type microsoft.sql/managedinstances/databases/schemas/tables/columns/sensitivitylabels under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/databases/{databaseName}/schemas/{schemaName}/tables/{tableName}/columns/{columnName}/sensitivityLabels/{sensitivityLabelSource}': 
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Skipping resource type microsoft.sql/managedinstances/databases/vulnerabilityassessments/rules/baselines under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/databases/{databaseName}/vulnerabilityAssessments/{vulnerabilityAssessmentName}/rules/{ruleId}/baselines/{baselineName}': 
+WARNING: Unrecognized property type: constant
+WARNING: Skipping resource type microsoft.sql/servers/databases/schemas/tables/columns/sensitivitylabels under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/schemas/{schemaName}/tables/{tableName}/columns/{columnName}/sensitivityLabels/{sensitivityLabelSource}': 
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Skipping resource type microsoft.sql/servers/dnsaliases under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/dnsAliases/{dnsAliasName}': No resource body defined
+WARNING: Unrecognized property type: sealed-choice
+INFORMATION: Autorest.AzureResourceSchema took 30ms
+Processing batch task - {"tag":"schema-sql-2019-06-01-preview"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+INFORMATION: Autorest.AzureResourceSchema took 18ms
+Processing batch task - {"tag":"schema-sql-2018-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
 <--- Last few GCs --->
 
-[12143:0x5b3df70]   611583 ms: Mark-sweep 2024.7 (2074.9) -> 2010.5 (2076.6) MB, 917.1 / 0.0 ms  (average mu = 0.195, current mu = 0.131) allocation failure scavenge might not succeed
-[12143:0x5b3df70]   612663 ms: Mark-sweep 2027.8 (2077.6) -> 2014.8 (2081.3) MB, 969.8 / 0.0 ms  (average mu = 0.151, current mu = 0.103) allocation failure scavenge might not succeed
+[12508:0x47c4f70]   762810 ms: Scavenge 2030.3 (2053.0) -> 2025.5 (2054.5) MB, 10.8 / 0.0 ms  (average mu = 0.125, current mu = 0.009) allocation failure 
+[12508:0x47c4f70]   763103 ms: Scavenge (reduce) 2032.9 (2070.5) -> 2027.7 (2071.0) MB, 24.4 / 0.0 ms  (average mu = 0.125, current mu = 0.009) allocation failure 
+[12508:0x47c4f70]   763416 ms: Scavenge (reduce) 2029.8 (2042.8) -> 2027.9 (2047.8) MB, 8.9 / 0.0 ms  (average mu = 0.125, current mu = 0.009) allocation failure 
 
 
 <--- JS stacktrace --->
@@ -530,7 +591,7 @@ FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaS
  5: 0xd34395  [/usr/local/bin/node]
  6: 0xd34f1f  [/usr/local/bin/node]
  7: 0xd42fab v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/usr/local/bin/node]
- 8: 0xd46b6c v8::internal::Heap::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/usr/local/bin/node]
- 9: 0xd1524b v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationType, v8::internal::AllocationOrigin) [/usr/local/bin/node]
-10: 0x105b23f v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/usr/local/bin/node]
+ 8: 0xd45665 v8::internal::Heap::HandleGCRequest() [/usr/local/bin/node]
+ 9: 0xcebca7 v8::internal::StackGuard::HandleInterrupts() [/usr/local/bin/node]
+10: 0x105ac93 v8::internal::Runtime_StackGuard(int, unsigned long*, v8::internal::Isolate*) [/usr/local/bin/node]
 11: 0x1401219  [/usr/local/bin/node]

@@ -106,7 +106,10 @@
 ### Properties
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly, WriteOnly)
+* **location**: string (ReadOnly, WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: DataMaskingRuleProperties (WriteOnly)
 * **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies/rules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/extensions@2014-04-01
@@ -115,6 +118,7 @@
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'import' (Required, DeployTimeConstant)
+* **properties**: ImportExtensionProperties (WriteOnly)
 * **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/geoBackupPolicies@2014-04-01
@@ -342,6 +346,26 @@
 * **state**: string
 * **useServerDefault**: string
 * **visibility**: string
+
+## DataMaskingRuleProperties
+### Properties
+* **aliasName**: string (WriteOnly)
+* **columnName**: string (Required, WriteOnly)
+* **id**: string (ReadOnly, WriteOnly)
+* **numberFrom**: string (WriteOnly)
+* **numberTo**: string (WriteOnly)
+* **prefixSize**: string (WriteOnly)
+* **replacementString**: string (WriteOnly)
+* **schemaName**: string (Required, WriteOnly)
+* **suffixSize**: string (WriteOnly)
+* **tableName**: string (Required, WriteOnly)
+
+## ImportExtensionProperties
+### Properties
+* **administratorLogin**: string (Required, WriteOnly)
+* **administratorLoginPassword**: string (Required, WriteOnly)
+* **storageKey**: string (Required, WriteOnly)
+* **storageUri**: string (Required, WriteOnly)
 
 ## GeoBackupPolicyProperties
 ### Properties

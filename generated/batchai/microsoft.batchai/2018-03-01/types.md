@@ -35,12 +35,29 @@
 
 ## ClusterBaseProperties
 ### Properties
+* **allocationStateTransitionTime**: string (ReadOnly)
+* **creationTime**: string (ReadOnly)
+* **currentNodeCount**: int (ReadOnly)
+* **errors**: BatchAIError[] (ReadOnly)
 * **nodeSetup**: NodeSetup
+* **nodeStateCounts**: NodeStateCounts (ReadOnly)
+* **provisioningStateTransitionTime**: string (ReadOnly)
 * **scaleSettings**: ScaleSettings
 * **subnet**: ResourceId
 * **userAccountSettings**: UserAccountSettings (Required)
 * **virtualMachineConfiguration**: VirtualMachineConfiguration
 * **vmSize**: string (Required)
+
+## BatchAIError
+### Properties
+* **code**: string (ReadOnly)
+* **details**: NameValuePair[] (ReadOnly)
+* **message**: string (ReadOnly)
+
+## NameValuePair
+### Properties
+* **name**: string (ReadOnly)
+* **value**: string (ReadOnly)
 
 ## NodeSetup
 ### Properties
@@ -128,6 +145,14 @@
 * **value**: string
 * **valueSecretReference**: KeyVaultSecretReference
 
+## NodeStateCounts
+### Properties
+* **idleNodeCount**: int (ReadOnly)
+* **leavingNodeCount**: int (ReadOnly)
+* **preparingNodeCount**: int (ReadOnly)
+* **runningNodeCount**: int (ReadOnly)
+* **unusableNodeCount**: int (ReadOnly)
+
 ## ScaleSettings
 ### Properties
 * **autoScale**: AutoScaleSettings
@@ -168,7 +193,10 @@
 
 ## FileServerBaseProperties
 ### Properties
+* **creationTime**: string (ReadOnly)
 * **dataDisks**: DataDisks (Required)
+* **mountSettings**: MountSettings (ReadOnly)
+* **provisioningStateTransitionTime**: string (ReadOnly)
 * **sshConfiguration**: SshConfiguration (Required)
 * **subnet**: ResourceId
 * **vmSize**: string (Required)
@@ -178,6 +206,13 @@
 * **diskCount**: int (Required)
 * **diskSizeInGB**: int (Required)
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' (Required)
+
+## MountSettings
+### Properties
+* **fileServerInternalIP**: string (ReadOnly)
+* **fileServerPublicIP**: string (ReadOnly)
+* **fileServerType**: 'glusterfs' | 'nfs' (ReadOnly)
+* **mountPoint**: string (ReadOnly)
 
 ## SshConfiguration
 ### Properties
@@ -191,25 +226,38 @@
 
 ## JobBaseProperties
 ### Properties
+* **caffe2Settings**: Caffe2Settings (WriteOnly)
 * **caffeSettings**: CaffeSettings
 * **chainerSettings**: ChainerSettings
 * **cluster**: ResourceId (Required)
 * **cntkSettings**: CNTKsettings
 * **constraints**: JobBasePropertiesConstraints
 * **containerSettings**: ContainerSettings
+* **creationTime**: string (ReadOnly)
 * **customToolkitSettings**: CustomToolkitSettings
 * **environmentVariables**: EnvironmentVariable[]
+* **executionInfo**: JobPropertiesExecutionInfo (ReadOnly)
+* **executionStateTransitionTime**: string (ReadOnly)
 * **experimentName**: string
 * **inputDirectories**: InputDirectory[]
+* **jobOutputDirectoryPathSegment**: string (ReadOnly)
 * **jobPreparation**: JobPreparation
 * **mountVolumes**: MountVolumes
 * **nodeCount**: int (Required)
 * **outputDirectories**: OutputDirectory[]
 * **priority**: int
+* **provisioningStateTransitionTime**: string (ReadOnly)
 * **pyTorchSettings**: PyTorchSettings
 * **secrets**: EnvironmentVariableWithSecretValue[]
 * **stdOutErrPathPrefix**: string (Required)
 * **tensorFlowSettings**: TensorFlowSettings
+* **toolType**: 'caffe' | 'caffe2' | 'chainer' | 'cntk' | 'custom' | 'tensorflow' (ReadOnly)
+
+## Caffe2Settings
+### Properties
+* **commandLineArgs**: string (WriteOnly)
+* **pythonInterpreterPath**: string (WriteOnly)
+* **pythonScriptFilePath**: string (Required, WriteOnly)
 
 ## CaffeSettings
 ### Properties
@@ -258,6 +306,13 @@
 ## CustomToolkitSettings
 ### Properties
 * **commandLine**: string
+
+## JobPropertiesExecutionInfo
+### Properties
+* **endTime**: string (ReadOnly)
+* **errors**: BatchAIError[] (ReadOnly)
+* **exitCode**: int (ReadOnly)
+* **startTime**: string (ReadOnly)
 
 ## InputDirectory
 ### Properties

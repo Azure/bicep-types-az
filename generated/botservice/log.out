@@ -410,4 +410,4 @@ WARNING (?): Operation 'Bots/GetCheckNameAvailability' really should not have a 
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.botservice/botservices/channels under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.BotService/botServices/{resourceName}/channels/{channelName}': 
 INFORMATION: Autorest.AzureResourceSchema took 3ms
-[18.91 s] Generation Complete
+[21.05 s] Generation Complete

@@ -41,7 +41,7 @@ WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 10ms
+INFORMATION: Autorest.AzureResourceSchema took 15ms
 Processing batch task - {"tag":"schema-blueprint-2017-11-11-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -109,7 +109,7 @@ WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-blueprint-2017-11-11-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -141,5 +141,5 @@ WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
 WARNING: Skipping resource type microsoft.blueprint/blueprints/versions under path '/providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Blueprint/blueprints/{blueprintName}/versions/{versionId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 4ms
-[13.26 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 6ms
+[15.56 s] Generation Complete

@@ -76,7 +76,7 @@
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'AmazonWebServicesCloudTrail' | 'AzureActiveDirectory' | 'AzureAdvancedThreatProtection' | 'AzureSecurityCenter' | 'Dynamics365' | 'MicrosoftCloudAppSecurity' | 'MicrosoftDefenderAdvancedThreatProtection' | 'MicrosoftThreatIntelligence' | 'MicrosoftThreatProtection' | 'Office365' | 'OfficeATP' | 'ThreatIntelligence' | 'ThreatIntelligenceTaxii' (Required)
+* **kind**: 'AmazonWebServicesCloudTrail' | 'AzureActiveDirectory' | 'AzureAdvancedThreatProtection' | 'AzureSecurityCenter' | 'Dynamics365' | 'MicrosoftCloudAppSecurity' | 'MicrosoftDefenderAdvancedThreatProtection' | 'Office365' | 'OfficeATP' | 'ThreatIntelligence' | 'ThreatIntelligenceTaxii' (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **type**: 'Microsoft.SecurityInsights/dataConnectors' (ReadOnly, DeployTimeConstant)
 
@@ -128,6 +128,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'indicator' (Required)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: ThreatIntelligenceIndicatorProperties (WriteOnly)
 * **type**: 'Microsoft.SecurityInsights/threatIntelligence/indicators' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityInsights/watchlists@2019-01-01-preview
@@ -144,15 +145,17 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **etag**: string
+* **etag**: string (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WatchlistItemProperties
+* **properties**: WatchlistItemProperties (WriteOnly)
 * **type**: 'Microsoft.SecurityInsights/watchlists/watchlistItems' (ReadOnly, DeployTimeConstant)
 
 ## ActionRequestProperties
 ### Properties
-* **logicAppResourceId**: string (Required)
+* **logicAppResourceId**: string
+* **triggerUri**: string (WriteOnly)
+* **workflowId**: string (ReadOnly)
 
 ## BookmarkProperties
 ### Properties
@@ -225,7 +228,24 @@
 
 ## RelationsModelInputProperties
 ### Properties
+* **bookmarkId**: string (ReadOnly)
+* **bookmarkName**: string (ReadOnly)
+* **caseIdentifier**: string (ReadOnly)
 * **relationName**: string
+* **sourceRelationNode**: RelationNode (WriteOnly)
+* **targetRelationNode**: RelationNode (WriteOnly)
+
+## RelationNode
+### Properties
+* **etag**: string (WriteOnly)
+* **relationAdditionalProperties**: RelationNodeRelationAdditionalProperties (WriteOnly)
+* **relationNodeId**: string (WriteOnly)
+* **relationNodeKind**: 'Bookmark' | 'Case' (ReadOnly, WriteOnly)
+
+## RelationNodeRelationAdditionalProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## IncidentProperties
 ### Properties
@@ -283,6 +303,62 @@
 * **objectId**: string
 * **userPrincipalName**: string
 
+## ThreatIntelligenceIndicatorProperties
+### Properties
+* **additionalData**: EntityCommonPropertiesAdditionalData (ReadOnly, WriteOnly)
+* **confidence**: int (WriteOnly)
+* **created**: string (WriteOnly)
+* **createdByRef**: string (WriteOnly)
+* **description**: string (WriteOnly)
+* **displayName**: string (WriteOnly)
+* **extensions**: ThreatIntelligenceIndicatorPropertiesExtensions (WriteOnly)
+* **externalId**: string (WriteOnly)
+* **externalReferences**: string[] (WriteOnly)
+* **friendlyName**: string (ReadOnly, WriteOnly)
+* **granularMarkings**: ThreatIntelligenceGranularMarkingModel[] (WriteOnly)
+* **indicatorTypes**: string[] (WriteOnly)
+* **killChainPhases**: ThreatIntelligenceKillChainPhase[] (WriteOnly)
+* **labels**: string[] (WriteOnly)
+* **language**: string (WriteOnly)
+* **lastUpdatedTimeUtc**: string (WriteOnly)
+* **modified**: string (WriteOnly)
+* **parsedPattern**: ThreatIntelligenceParsedPattern[] (WriteOnly)
+* **pattern**: string (WriteOnly)
+* **patternType**: string (WriteOnly)
+* **revoked**: bool (WriteOnly)
+* **source**: string (WriteOnly)
+* **threatIntelligenceTags**: string[] (WriteOnly)
+* **threatTypes**: string[] (WriteOnly)
+* **validFrom**: string (WriteOnly)
+* **validUntil**: string (WriteOnly)
+
+## EntityCommonPropertiesAdditionalData
+### Properties
+
+## ThreatIntelligenceIndicatorPropertiesExtensions
+### Properties
+
+## ThreatIntelligenceGranularMarkingModel
+### Properties
+* **language**: string (WriteOnly)
+* **markingRef**: int (WriteOnly)
+* **selectors**: string[] (WriteOnly)
+
+## ThreatIntelligenceKillChainPhase
+### Properties
+* **killChainName**: string (WriteOnly)
+* **phaseName**: string (WriteOnly)
+
+## ThreatIntelligenceParsedPattern
+### Properties
+* **patternTypeKey**: string (WriteOnly)
+* **patternTypeValues**: ThreatIntelligenceParsedPatternTypeValue[] (WriteOnly)
+
+## ThreatIntelligenceParsedPatternTypeValue
+### Properties
+* **value**: string (WriteOnly)
+* **valueType**: string (WriteOnly)
+
 ## WatchlistProperties
 ### Properties
 * **contentType**: string
@@ -308,12 +384,12 @@
 
 ## WatchlistItemProperties
 ### Properties
-* **created**: string
-* **createdBy**: UserInfo
-* **isDeleted**: bool
-* **tenantId**: string
-* **updated**: string
-* **updatedBy**: UserInfo
-* **watchlistItemId**: string
-* **watchlistItemType**: string
+* **created**: string (WriteOnly)
+* **createdBy**: UserInfo (WriteOnly)
+* **isDeleted**: bool (WriteOnly)
+* **tenantId**: string (WriteOnly)
+* **updated**: string (WriteOnly)
+* **updatedBy**: UserInfo (WriteOnly)
+* **watchlistItemId**: string (WriteOnly)
+* **watchlistItemType**: string (WriteOnly)
 

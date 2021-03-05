@@ -4,6 +4,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
@@ -25,16 +26,22 @@
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: DscCompilationJobCreateProperties (Required)
+* **tags**: DscCompilationJobCreateParametersTags (WriteOnly)
 * **type**: 'Microsoft.Automation/automationAccounts/compilationjobs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/configurations@2015-10-31
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: DscConfigurationProperties (ReadOnly)
+* **tags**: TrackedResourceTags (ReadOnly)
 * **type**: 'Microsoft.Automation/automationAccounts/configurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/connectionTypes@2015-10-31
@@ -86,6 +93,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
@@ -98,14 +106,19 @@
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
 * **configuration**: DscConfigurationAssociationProperty (Required)
+* **creationTime**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **incrementNodeConfigurationBuild**: bool (WriteOnly)
+* **lastModifiedTime**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
+* **source**: ContentSource (Required, WriteOnly)
 * **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/runbooks@2015-10-31
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
@@ -154,7 +167,12 @@
 
 ## AutomationAccountCreateOrUpdateProperties
 ### Properties
+* **creationTime**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **lastModifiedBy**: string (ReadOnly)
+* **lastModifiedTime**: string (ReadOnly)
 * **sku**: Sku
+* **state**: 'Ok' | 'Suspended' | 'Unavailable' (ReadOnly)
 
 ## Sku
 ### Properties
@@ -169,14 +187,31 @@
 
 ## CertificateCreateOrUpdateProperties
 ### Properties
+* **base64Value**: string (Required, WriteOnly)
+* **creationTime**: string (ReadOnly)
 * **description**: string
+* **expiryTime**: string (ReadOnly)
 * **isExportable**: bool
+* **lastModifiedTime**: string (ReadOnly)
 * **thumbprint**: string
 
 ## DscCompilationJobCreateProperties
 ### Properties
 * **configuration**: DscConfigurationAssociationProperty (Required)
+* **creationTime**: string (ReadOnly)
+* **endTime**: string (ReadOnly)
+* **exception**: string (ReadOnly)
+* **incrementNodeConfigurationBuild**: bool (WriteOnly)
+* **jobId**: string (ReadOnly)
+* **lastModifiedTime**: string (ReadOnly)
+* **lastStatusModifiedTime**: string (ReadOnly)
 * **parameters**: DscCompilationJobCreatePropertiesParameters
+* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly)
+* **runOn**: string (ReadOnly)
+* **startedBy**: string (ReadOnly)
+* **startTime**: string (ReadOnly)
+* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly)
+* **statusDetails**: string (ReadOnly)
 
 ## DscConfigurationAssociationProperty
 ### Properties
@@ -187,10 +222,59 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## DscCompilationJobCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## DscConfigurationProperties
+### Properties
+* **creationTime**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **jobCount**: int (ReadOnly)
+* **lastModifiedTime**: string (ReadOnly)
+* **logVerbose**: bool (ReadOnly)
+* **nodeConfigurationCount**: int (ReadOnly)
+* **parameters**: DscConfigurationPropertiesParameters (ReadOnly)
+* **source**: ContentSource (ReadOnly)
+* **state**: 'Edit' | 'New' | 'Published' (ReadOnly)
+
+## DscConfigurationPropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: DscConfigurationParameter
+
+## DscConfigurationParameter
+### Properties
+* **defaultValue**: string (ReadOnly)
+* **isMandatory**: bool (ReadOnly)
+* **position**: int (ReadOnly)
+* **type**: string (ReadOnly)
+
+## ContentSource
+### Properties
+* **hash**: ContentHash (ReadOnly)
+* **type**: 'embeddedContent' | 'uri' (ReadOnly)
+* **value**: string (ReadOnly)
+* **version**: string (ReadOnly)
+
+## ContentHash
+### Properties
+* **algorithm**: string (ReadOnly)
+* **value**: string (ReadOnly)
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ConnectionTypeCreateOrUpdateProperties
 ### Properties
+* **creationTime**: string (ReadOnly)
+* **description**: string (ReadOnly)
 * **fieldDefinitions**: ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions (Required)
 * **isGlobal**: bool
+* **lastModifiedTime**: string (ReadOnly)
 
 ## ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions
 ### Properties
@@ -206,8 +290,10 @@
 ## ConnectionCreateOrUpdateProperties
 ### Properties
 * **connectionType**: ConnectionTypeAssociationProperty (Required)
+* **creationTime**: string (ReadOnly)
 * **description**: string
 * **fieldDefinitionValues**: ConnectionCreateOrUpdatePropertiesFieldDefinitionValues
+* **lastModifiedTime**: string (ReadOnly)
 
 ## ConnectionTypeAssociationProperty
 ### Properties
@@ -220,11 +306,15 @@
 
 ## CredentialCreateOrUpdateProperties
 ### Properties
+* **creationTime**: string (ReadOnly)
 * **description**: string
+* **lastModifiedTime**: string (ReadOnly)
+* **password**: string (Required, WriteOnly)
 * **userName**: string (Required)
 
 ## JobScheduleCreateProperties
 ### Properties
+* **jobScheduleId**: string (ReadOnly)
 * **parameters**: JobScheduleCreatePropertiesParameters
 * **runbook**: RunbookAssociationProperty (Required)
 * **runOn**: string
@@ -241,13 +331,26 @@
 
 ## ScheduleAssociationProperty
 ### Properties
-* **name**: string
+* **name**: string (ReadOnly)
 
 ## JobCreateProperties
 ### Properties
+* **creationTime**: string (ReadOnly)
+* **endTime**: string (ReadOnly)
+* **exception**: string (ReadOnly)
+* **jobId**: string (ReadOnly)
+* **jobScheduleId**: string (ReadOnly)
+* **lastModifiedTime**: string (ReadOnly)
+* **lastStatusModifiedTime**: string (ReadOnly)
 * **parameters**: JobCreatePropertiesParameters
+* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly)
 * **runbook**: RunbookAssociationProperty (Required)
 * **runOn**: string
+* **schedule**: ScheduleAssociationProperty (ReadOnly)
+* **startedBy**: string (ReadOnly)
+* **startTime**: string (ReadOnly)
+* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly)
+* **statusDetails**: string (ReadOnly)
 
 ## JobCreatePropertiesParameters
 ### Properties
@@ -256,7 +359,16 @@
 
 ## ModuleCreateOrUpdateProperties
 ### Properties
+* **activityCount**: int (ReadOnly)
 * **contentLink**: ContentLink (Required)
+* **creationTime**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **error**: ModuleErrorInfo (ReadOnly)
+* **isComposite**: bool (ReadOnly)
+* **isGlobal**: bool (ReadOnly)
+* **lastModifiedTime**: string (ReadOnly)
+* **sizeInBytes**: int (ReadOnly)
+* **version**: string (ReadOnly)
 
 ## ContentLink
 ### Properties
@@ -264,10 +376,10 @@
 * **uri**: string
 * **version**: string
 
-## ContentHash
+## ModuleErrorInfo
 ### Properties
-* **algorithm**: string (Required)
-* **value**: string (Required)
+* **code**: string (ReadOnly)
+* **message**: string (ReadOnly)
 
 ## ModuleCreateOrUpdateParametersTags
 ### Properties
@@ -276,13 +388,20 @@
 
 ## RunbookCreateOrUpdateProperties
 ### Properties
+* **creationTime**: string (ReadOnly)
 * **description**: string
 * **draft**: RunbookDraft
+* **jobCount**: int (ReadOnly)
+* **lastModifiedBy**: string (ReadOnly)
+* **lastModifiedTime**: string (ReadOnly)
 * **logActivityTrace**: int
 * **logProgress**: bool
 * **logVerbose**: bool
+* **outputTypes**: string[] (ReadOnly)
+* **parameters**: RunbookPropertiesParameters (ReadOnly)
 * **publishContentLink**: ContentLink
 * **runbookType**: 'Graph' | 'GraphPowerShell' | 'GraphPowerShellWorkflow' | 'PowerShell' | 'PowerShellWorkflow' | 'Script' (Required)
+* **state**: 'Edit' | 'New' | 'Published' (ReadOnly)
 
 ## RunbookDraft
 ### Properties
@@ -305,6 +424,11 @@
 * **position**: int
 * **type**: string
 
+## RunbookPropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: RunbookParameter
+
 ## RunbookCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
@@ -313,10 +437,17 @@
 ## ScheduleCreateOrUpdateProperties
 ### Properties
 * **advancedSchedule**: AdvancedSchedule
+* **creationTime**: string (ReadOnly)
 * **description**: string
 * **expiryTime**: string
+* **expiryTimeOffsetMinutes**: int (ReadOnly)
 * **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'OneTime' | 'Week' (Required)
+* **isEnabled**: bool (ReadOnly)
+* **lastModifiedTime**: string (ReadOnly)
+* **nextRun**: string (ReadOnly)
+* **nextRunOffsetMinutes**: int (ReadOnly)
 * **startTime**: string (Required)
+* **startTimeOffsetMinutes**: int (ReadOnly)
 * **timeZone**: string
 
 ## AdvancedSchedule
@@ -332,8 +463,10 @@
 
 ## VariableCreateOrUpdateProperties
 ### Properties
+* **creationTime**: string (ReadOnly)
 * **description**: string
 * **isEncrypted**: bool
+* **lastModifiedTime**: string (ReadOnly)
 * **value**: string
 
 ## WatcherProperties
@@ -360,8 +493,13 @@
 
 ## WebhookCreateOrUpdateProperties
 ### Properties
+* **creationTime**: string (ReadOnly)
+* **description**: string (ReadOnly)
 * **expiryTime**: string
 * **isEnabled**: bool
+* **lastInvokedTime**: string (ReadOnly)
+* **lastModifiedBy**: string (ReadOnly)
+* **lastModifiedTime**: string (ReadOnly)
 * **parameters**: WebhookCreateOrUpdatePropertiesParameters
 * **runbook**: RunbookAssociationProperty
 * **runOn**: string

@@ -14,6 +14,18 @@
 
 ## CreateTenantRequestBodyProperties
 ### Properties
+* **billingConfig**: B2CTenantResourcePropertiesBillingConfig (ReadOnly)
+* **createTenantProperties**: CreateTenantProperties (WriteOnly)
+* **tenantId**: string (ReadOnly)
+
+## B2CTenantResourcePropertiesBillingConfig
+### Properties
+* **effectiveStartDateUtc**: string (ReadOnly)
+
+## CreateTenantProperties
+### Properties
+* **countryCode**: string (WriteOnly)
+* **displayName**: string (WriteOnly)
 
 ## B2CResourceSKU
 ### Properties

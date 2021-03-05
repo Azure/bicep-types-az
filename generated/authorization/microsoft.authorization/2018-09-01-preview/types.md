@@ -15,4 +15,5 @@
 * **principalId**: string (Required)
 * **principalType**: 'Application' | 'DirectoryObjectOrGroup' | 'DirectoryRoleTemplate' | 'Everyone' | 'ForeignGroup' | 'Group' | 'MSI' | 'ServicePrincipal' | 'Unknown' | 'User'
 * **roleDefinitionId**: string (Required)
+* **scope**: string (ReadOnly)
 

@@ -55,15 +55,31 @@
 * **agentVersion**: string
 * **clusterId**: string
 * **clusterName**: string
+* **discoveryEndpointUri**: string (ReadOnly)
 * **friendlyName**: string
 * **lastHeartBeat**: string
+* **lastOperationName**: string (ReadOnly)
+* **lastWorkflowId**: string (ReadOnly)
+* **managementEndpointUri**: string (ReadOnly)
+* **monitoringConfiguration**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **resourceLocation**: string (ReadOnly)
 * **serverCertificate**: string
 * **serverId**: string
+* **serverManagementErrorCode**: int (ReadOnly)
 * **serverOSVersion**: string
 * **serverRole**: string
+* **serviceLocation**: string (ReadOnly)
+* **storageSyncServiceUid**: string (ReadOnly)
 
 ## CloudEndpointCreateParametersProperties
 ### Properties
+* **backupEnabled**: string (ReadOnly)
+* **friendlyName**: string (ReadOnly)
+* **lastOperationName**: string (ReadOnly)
+* **lastWorkflowId**: string (ReadOnly)
+* **partnershipId**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
 * **storageAccountResourceId**: string
 * **storageAccountShareName**: string
 * **storageAccountTenantId**: string
@@ -72,10 +88,44 @@
 ### Properties
 * **cloudTiering**: 'off' | 'on'
 * **friendlyName**: string
+* **lastOperationName**: string (ReadOnly)
+* **lastWorkflowId**: string (ReadOnly)
 * **offlineDataTransfer**: 'off' | 'on'
 * **offlineDataTransferShareName**: string
+* **offlineDataTransferStorageAccountResourceId**: string (ReadOnly)
+* **offlineDataTransferStorageAccountTenantId**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
 * **serverLocalPath**: string
 * **serverResourceId**: string
+* **syncStatus**: ServerEndpointHealth (ReadOnly)
 * **tierFilesOlderThanDays**: int
 * **volumeFreeSpacePercent**: int
+
+## ServerEndpointHealth
+### Properties
+* **combinedHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly)
+* **currentProgress**: SyncProgressStatus (ReadOnly)
+* **downloadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly)
+* **downloadStatus**: SyncSessionStatus (ReadOnly)
+* **lastUpdatedTimestamp**: string (ReadOnly)
+* **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' (ReadOnly)
+* **uploadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly)
+* **uploadStatus**: SyncSessionStatus (ReadOnly)
+
+## SyncProgressStatus
+### Properties
+* **appliedBytes**: int (ReadOnly)
+* **appliedItemCount**: int (ReadOnly)
+* **perItemErrorCount**: int (ReadOnly)
+* **progressTimestamp**: string (ReadOnly)
+* **syncDirection**: 'download' | 'initialize' | 'none' | 'recall' | 'upload' (ReadOnly)
+* **totalBytes**: int (ReadOnly)
+* **totalItemCount**: int (ReadOnly)
+
+## SyncSessionStatus
+### Properties
+* **lastSyncPerItemErrorCount**: int (ReadOnly)
+* **lastSyncResult**: int (ReadOnly)
+* **lastSyncSuccessTimestamp**: string (ReadOnly)
+* **lastSyncTimestamp**: string (ReadOnly)
 
