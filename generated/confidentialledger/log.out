@@ -29,5 +29,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefin
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorAdditionalInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 1ms
-[5.86 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 2ms
+[5.76 s] Generation Complete

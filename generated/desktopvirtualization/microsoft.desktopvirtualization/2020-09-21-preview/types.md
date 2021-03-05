@@ -72,6 +72,7 @@
 * **description**: string
 * **filePath**: string
 * **friendlyName**: string
+* **iconContent**: any (ReadOnly)
 * **iconHash**: string (ReadOnly)
 * **iconIndex**: int
 * **iconPath**: string
@@ -128,6 +129,8 @@
 * **description**: string
 * **friendlyName**: string
 * **iconImageName**: string
+* **rawIcon**: any
+* **rawPng**: any
 
 ## MsixPackageDependencies
 ### Properties

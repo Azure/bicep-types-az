@@ -88,6 +88,7 @@
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly)
 * **replicaCapacity**: int (ReadOnly)
 * **replicationRole**: string (ReadOnly)
+* **sslEnforcement**: 'Disabled' | 'Enabled'
 * **storageProfile**: StorageProfile
 * **userVisibleState**: 'Disabled' | 'Dropping' | 'Inaccessible' | 'Ready' (ReadOnly)
 * **version**: '5.6' | '5.7' | '8.0'
@@ -179,6 +180,7 @@
 
 ## ServerAdministratorProperties
 ### Properties
+* **administratorType**: '[object Object]' (Required)
 * **login**: string (Required)
 * **sid**: string (Required)
 * **tenantId**: string (Required)
@@ -208,6 +210,7 @@
 * **emailAccountAdmins**: bool
 * **emailAddresses**: string[]
 * **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' (Required)
 * **storageAccountAccessKey**: string
 * **storageEndpoint**: string
 

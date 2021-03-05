@@ -198,6 +198,7 @@
 #### Properties
 * **defaultDatabase**: string (ReadOnly)
 * **isEnabled**: bool (ReadOnly)
+* **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly)
 * **migrationEligibility**: MigrationEligibilityInfo (ReadOnly)
 * **name**: string (ReadOnly)
 * **resultType**: 'LoginLevelOutput' (Required)
@@ -251,6 +252,7 @@
 ### Properties
 * **defaultDatabase**: string (ReadOnly)
 * **isEnabled**: bool (ReadOnly)
+* **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly)
 * **migrationEligibility**: MigrationEligibilityInfo (ReadOnly)
 * **name**: string (ReadOnly)
 * **resultType**: 'LoginLevelOutput' (Required)
@@ -398,6 +400,7 @@
 * **loginName**: string (ReadOnly)
 * **message**: string (ReadOnly)
 * **resultType**: 'LoginLevelOutput' (Required)
+* **stage**: 'AssignRoleMembership' | 'AssignRoleOwnership' | 'Completed' | 'EstablishObjectPermissions' | 'EstablishServerPermissions' | 'EstablishUserMapping' | 'Initialize' | 'LoginMigration' | 'None' (ReadOnly)
 * **startedOn**: string (ReadOnly)
 * **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly)
 
@@ -456,6 +459,7 @@
 * **loginName**: string (ReadOnly)
 * **message**: string (ReadOnly)
 * **resultType**: 'LoginLevelOutput' (Required)
+* **stage**: 'AssignRoleMembership' | 'AssignRoleOwnership' | 'Completed' | 'EstablishObjectPermissions' | 'EstablishServerPermissions' | 'EstablishUserMapping' | 'Initialize' | 'LoginMigration' | 'None' (ReadOnly)
 * **startedOn**: string (ReadOnly)
 * **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly)
 

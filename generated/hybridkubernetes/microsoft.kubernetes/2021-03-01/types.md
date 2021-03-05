@@ -17,6 +17,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned' (Required)
 
 ## ConnectedClusterProperties
 ### Properties

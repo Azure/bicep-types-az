@@ -23,6 +23,7 @@
 ### Properties
 * **cancellationReason**: string (ReadOnly)
 * **deliveryInfo**: JobDeliveryInfo
+* **deliveryType**: 'NonScheduled' | 'Scheduled'
 * **details**: JobDetails
 * **error**: CloudError (ReadOnly)
 * **isCancellable**: bool (ReadOnly)
@@ -31,6 +32,8 @@
 * **isPrepareToShipEnabled**: bool (ReadOnly)
 * **isShippingAddressEditable**: bool (ReadOnly)
 * **startTime**: string (ReadOnly)
+* **status**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' (ReadOnly)
+* **transferType**: 'ExportFromAzure' | 'ImportToAzure' (Required)
 
 ## JobDeliveryInfo
 ### Properties
@@ -86,6 +89,7 @@
 ## NotificationPreference
 ### Properties
 * **sendNotification**: bool (Required)
+* **stageName**: 'AtAzureDC' | 'DataCopy' | 'Delivered' | 'DevicePrepared' | 'Dispatched' | 'PickedUp' (Required)
 
 ## CopyLogDetails
 * **Discriminator**: copyLogDetailsType
@@ -137,6 +141,7 @@
 ## DataExportDetails
 ### Properties
 * **accountDetails**: DataAccountDetails (Required)
+* **logCollectionLevel**: 'Error' | 'Verbose'
 * **transferConfiguration**: TransferConfiguration (Required)
 
 ## DataAccountDetails
@@ -170,6 +175,7 @@
 ## TransferConfiguration
 ### Properties
 * **transferAllDetails**: TransferConfigurationTransferAllDetails
+* **transferConfigurationType**: 'TransferAll' | 'TransferUsingFilter' (Required)
 * **transferFilterDetails**: TransferConfigurationTransferFilterDetails
 
 ## TransferConfigurationTransferAllDetails
@@ -178,6 +184,7 @@
 
 ## TransferAllDetails
 ### Properties
+* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (Required)
 * **transferAllBlobs**: bool
 * **transferAllFiles**: bool
 
@@ -189,6 +196,7 @@
 ### Properties
 * **azureFileFilterDetails**: AzureFileFilterDetails
 * **blobFilterDetails**: BlobFilterDetails
+* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (Required)
 * **filterFileDetails**: FilterFileDetails[]
 
 ## AzureFileFilterDetails
@@ -206,6 +214,7 @@
 ## FilterFileDetails
 ### Properties
 * **filterFilePath**: string (Required)
+* **filterFileType**: 'AzureBlob' | 'AzureFile' (Required)
 
 ## DataImportDetails
 ### Properties
@@ -220,10 +229,14 @@
 ## JobStages
 ### Properties
 * **displayName**: string (ReadOnly)
+* **jobStageDetails**: any (ReadOnly)
+* **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' (ReadOnly)
+* **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' | 'SucceededWithErrors' | 'SucceededWithWarnings' | 'WaitingForCustomerAction' (ReadOnly)
 * **stageTime**: string (ReadOnly)
 
 ## KeyEncryptionKey
 ### Properties
+* **kekType**: 'CustomerManaged' | 'MicrosoftManaged' (Required)
 * **kekUrl**: string
 * **kekVaultResourceID**: string
 
@@ -234,9 +247,11 @@
 
 ## TransportPreferences
 ### Properties
+* **preferredShipmentType**: 'CustomerManaged' | 'MicrosoftManaged' (Required)
 
 ## ShippingAddress
 ### Properties
+* **addressType**: 'Commercial' | 'None' | 'Residential'
 * **city**: string
 * **companyName**: string
 * **country**: string (Required)
@@ -257,6 +272,7 @@
 ### Properties
 * **accountId**: string (ReadOnly)
 * **bytesProcessed**: int (ReadOnly)
+* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (ReadOnly)
 * **directoriesErroredOut**: int (ReadOnly)
 * **filesErroredOut**: int (ReadOnly)
 * **filesProcessed**: int (ReadOnly)
@@ -268,6 +284,7 @@
 * **storageAccountName**: string (ReadOnly)
 * **totalBytesToProcess**: int (ReadOnly)
 * **totalFilesToProcess**: int (ReadOnly)
+* **transferType**: 'ExportFromAzure' | 'ImportToAzure' (ReadOnly)
 
 ## DataBoxDiskJobDetails
 ### Properties
@@ -282,6 +299,7 @@
 * **bytesCopied**: int (ReadOnly)
 * **percentComplete**: int (ReadOnly)
 * **serialNumber**: string (ReadOnly)
+* **status**: 'Completed' | 'CompletedWithErrors' | 'DeviceFormatted' | 'DeviceMetadataModified' | 'Failed' | 'HardwareError' | 'InProgress' | 'NotReturned' | 'NotStarted' | 'StorageAccountNotAccessible' | 'UnsupportedData' (ReadOnly)
 
 ## DataBoxDiskJobDetailsDisksAndSizeDetails
 ### Properties
@@ -309,12 +327,14 @@
 
 ## AdditionalErrorInfo
 ### Properties
+* **info**: any
 * **type**: string
 
 ## Sku
 ### Properties
 * **displayName**: string
 * **family**: string
+* **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required)
 
 ## ResourceTags
 ### Properties

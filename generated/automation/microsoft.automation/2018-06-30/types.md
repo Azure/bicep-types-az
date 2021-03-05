@@ -34,6 +34,7 @@
 * **isComposite**: bool (ReadOnly)
 * **isGlobal**: bool (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
+* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly)
 * **sizeInBytes**: int (ReadOnly)
 * **version**: string (ReadOnly)
 
@@ -71,6 +72,7 @@
 * **logVerbose**: bool
 * **outputTypes**: string[] (ReadOnly)
 * **parameters**: RunbookPropertiesParameters (ReadOnly)
+* **provisioningState**: '[object Object]' (ReadOnly)
 * **publishContentLink**: ContentLink
 * **runbookType**: 'Graph' | 'GraphPowerShell' | 'GraphPowerShellWorkflow' | 'PowerShell' | 'PowerShellWorkflow' | 'Script' (Required)
 * **state**: 'Edit' | 'New' | 'Published' (ReadOnly)

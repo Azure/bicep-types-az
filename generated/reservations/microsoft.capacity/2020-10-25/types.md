@@ -14,6 +14,7 @@
 * **currentValue**: int (ReadOnly)
 * **limit**: int
 * **name**: ResourceName
+* **properties**: any
 * **quotaPeriod**: string (ReadOnly)
 * **resourceType**: 'dedicated' | 'lowPriority' | 'serviceSpecific' | 'shared' | 'standard'
 * **unit**: string

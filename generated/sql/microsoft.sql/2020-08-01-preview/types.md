@@ -90,6 +90,16 @@
 * **properties**: ManagedBackupShortTermRetentionPolicyProperties
 * **type**: 'Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels@2020-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **managedBy**: string (ReadOnly)
+* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **properties**: SensitivityLabelProperties
+* **type**: 'Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Sql/managedInstances/databases/securityAlertPolicies@2020-08-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -116,6 +126,15 @@
 * **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: DatabaseVulnerabilityAssessmentProperties
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines@2020-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'default' | 'master' (Required, DeployTimeConstant)
+* **properties**: DatabaseVulnerabilityAssessmentRuleBaselineProperties
+* **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/managedInstances/encryptionProtector@2020-08-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -204,6 +223,15 @@
 * **properties**: AdministratorProperties
 * **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Sql/servers/auditingSettings@2020-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **properties**: ServerBlobAuditingPolicyProperties
+* **type**: 'Microsoft.Sql/servers/auditingSettings' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Sql/servers/azureADOnlyAuthentications@2020-08-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -227,6 +255,16 @@
 * **tags**: TrackedResourceTags
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Sql/servers/databases/auditingSettings@2020-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **properties**: DatabaseBlobAuditingPolicyProperties
+* **type**: 'Microsoft.Sql/servers/databases/auditingSettings' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies@2020-08-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -244,6 +282,15 @@
 * **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: BackupShortTermRetentionPolicyProperties
 * **type**: 'Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases/extendedAuditingSettings@2020-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **properties**: ExtendedDatabaseBlobAuditingPolicyProperties
+* **type**: 'Microsoft.Sql/servers/databases/extendedAuditingSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/extensions@2020-08-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -268,6 +315,16 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: MaintenanceWindowsProperties
 * **type**: 'Microsoft.Sql/servers/databases/maintenanceWindows' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels@2020-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **managedBy**: string (ReadOnly)
+* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **properties**: SensitivityLabelProperties
+* **type**: 'Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/securityAlertPolicies@2020-08-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -314,6 +371,15 @@
 * **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: DatabaseVulnerabilityAssessmentProperties
 * **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/databases/vulnerabilityAssessments/rules/baselines@2020-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'default' | 'master' (Required, DeployTimeConstant)
+* **properties**: DatabaseVulnerabilityAssessmentRuleBaselineProperties
+* **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/workloadGroups@2020-08-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -366,6 +432,15 @@
 * **name**: 'current' (Required, DeployTimeConstant)
 * **properties**: EncryptionProtectorProperties
 * **type**: 'Microsoft.Sql/servers/encryptionProtector' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/extendedAuditingSettings@2020-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **properties**: ExtendedServerBlobAuditingPolicyProperties
+* **type**: 'Microsoft.Sql/servers/extendedAuditingSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/failoverGroups@2020-08-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -541,7 +616,7 @@
 ## ServerTrustGroupProperties
 ### Properties
 * **groupMembers**: ServerInfo[] (Required)
-* **trustScopes**: array (Required)
+* **trustScopes**: '[object Object]'[] (Required)
 
 ## ServerInfo
 ### Properties
@@ -653,6 +728,18 @@
 ### Properties
 * **retentionDays**: int
 
+## SensitivityLabelProperties
+### Properties
+* **columnName**: string (ReadOnly)
+* **informationType**: string
+* **informationTypeId**: string
+* **isDisabled**: bool (ReadOnly)
+* **labelId**: string
+* **labelName**: string
+* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None'
+* **schemaName**: string (ReadOnly)
+* **tableName**: string (ReadOnly)
+
 ## SecurityAlertPolicyProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
@@ -660,11 +747,13 @@
 * **emailAccountAdmins**: bool
 * **emailAddresses**: string[]
 * **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' | 'New' (Required)
 * **storageAccountAccessKey**: string
 * **storageEndpoint**: string
 
 ## ManagedTransparentDataEncryptionProperties
 ### Properties
+* **state**: 'Disabled' | 'Enabled' (Required)
 
 ## DatabaseVulnerabilityAssessmentProperties
 ### Properties
@@ -678,6 +767,14 @@
 * **emails**: string[]
 * **emailSubscriptionAdmins**: bool
 * **isEnabled**: bool
+
+## DatabaseVulnerabilityAssessmentRuleBaselineProperties
+### Properties
+* **baselineResults**: DatabaseVulnerabilityAssessmentRuleBaselineItem[] (Required)
+
+## DatabaseVulnerabilityAssessmentRuleBaselineItem
+### Properties
+* **result**: string[] (Required)
 
 ## ManagedInstanceEncryptionProtectorProperties
 ### Properties
@@ -697,6 +794,7 @@
 ## SecurityAlertsPolicyProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
+* **state**: 'Disabled' | 'Enabled' (Required)
 
 ## SqlAgentConfigurationProperties
 ### Properties
@@ -755,6 +853,19 @@
 * **sid**: string (Required)
 * **tenantId**: string
 
+## ServerBlobAuditingPolicyProperties
+### Properties
+* **auditActionsAndGroups**: string[]
+* **isAzureMonitorTargetEnabled**: bool
+* **isDevopsAuditEnabled**: bool
+* **isStorageSecondaryKeyInUse**: bool
+* **queueDelayMs**: int
+* **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' (Required)
+* **storageAccountAccessKey**: string
+* **storageAccountSubscriptionId**: string
+* **storageEndpoint**: string
+
 ## AzureADOnlyAuthProperties
 ### Properties
 * **azureADOnlyAuthentication**: bool (Required)
@@ -801,9 +912,34 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## DatabaseBlobAuditingPolicyProperties
+### Properties
+* **auditActionsAndGroups**: string[]
+* **isAzureMonitorTargetEnabled**: bool
+* **isStorageSecondaryKeyInUse**: bool
+* **queueDelayMs**: int
+* **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' (Required)
+* **storageAccountAccessKey**: string
+* **storageAccountSubscriptionId**: string
+* **storageEndpoint**: string
+
 ## BackupShortTermRetentionPolicyProperties
 ### Properties
 * **retentionDays**: int
+
+## ExtendedDatabaseBlobAuditingPolicyProperties
+### Properties
+* **auditActionsAndGroups**: string[]
+* **isAzureMonitorTargetEnabled**: bool
+* **isStorageSecondaryKeyInUse**: bool
+* **predicateExpression**: string
+* **queueDelayMs**: int
+* **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' (Required)
+* **storageAccountAccessKey**: string
+* **storageAccountSubscriptionId**: string
+* **storageEndpoint**: string
 
 ## MaintenanceWindowsProperties
 ### Properties
@@ -863,6 +999,7 @@
 
 ## TransparentDataEncryptionProperties
 ### Properties
+* **state**: 'Disabled' | 'Enabled' (Required)
 
 ## WorkloadGroupProperties
 ### Properties
@@ -885,6 +1022,7 @@
 ## ServerDevOpsAuditSettingsProperties
 ### Properties
 * **isAzureMonitorTargetEnabled**: bool
+* **state**: 'Disabled' | 'Enabled' (Required)
 * **storageAccountAccessKey**: string
 * **storageAccountSubscriptionId**: string
 * **storageEndpoint**: string
@@ -926,6 +1064,20 @@
 * **subregion**: string (ReadOnly)
 * **thumbprint**: string (ReadOnly)
 * **uri**: string (ReadOnly)
+
+## ExtendedServerBlobAuditingPolicyProperties
+### Properties
+* **auditActionsAndGroups**: string[]
+* **isAzureMonitorTargetEnabled**: bool
+* **isDevopsAuditEnabled**: bool
+* **isStorageSecondaryKeyInUse**: bool
+* **predicateExpression**: string
+* **queueDelayMs**: int
+* **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' (Required)
+* **storageAccountAccessKey**: string
+* **storageAccountSubscriptionId**: string
+* **storageEndpoint**: string
 
 ## FailoverGroupProperties
 ### Properties
@@ -988,6 +1140,7 @@
 * **endTime**: string
 * **interval**: string
 * **startTime**: string
+* **type**: 'Once' | 'Recurring'
 
 ## JobStepProperties
 ### Properties
@@ -1031,6 +1184,7 @@
 ### Properties
 * **databaseName**: string
 * **elasticPoolName**: string
+* **membershipType**: 'Exclude' | 'Include'
 * **refreshCredential**: string
 * **serverName**: string
 * **shardMapName**: string

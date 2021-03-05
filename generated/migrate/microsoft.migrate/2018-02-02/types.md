@@ -9,6 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ProjectProperties
+* **tags**: any
 * **type**: 'Microsoft.Migrate/projects' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Migrate/projects/groups@2018-02-02

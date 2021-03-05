@@ -75,7 +75,9 @@
 ### ThresholdRuleCondition
 #### Properties
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition' (Required)
+* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required)
 * **threshold**: int (Required)
+* **timeAggregation**: 'Average' | 'Last' | 'Maximum' | 'Minimum' | 'Total'
 * **windowSize**: any
 
 
@@ -141,13 +143,16 @@
 
 ## ManagementEventAggregationCondition
 ### Properties
+* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual'
 * **threshold**: int
 * **windowSize**: any
 
 ## ThresholdRuleCondition
 ### Properties
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition' (Required)
+* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required)
 * **threshold**: int (Required)
+* **timeAggregation**: 'Average' | 'Last' | 'Maximum' | 'Minimum' | 'Total'
 * **windowSize**: any
 
 ## ResourceTags

@@ -45,6 +45,15 @@
 * **properties**: BaseLongTermRetentionPolicyProperties
 * **type**: 'Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels@2018-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **properties**: SensitivityLabelProperties
+* **type**: 'Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Sql/managedInstances/vulnerabilityAssessments@2018-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -173,6 +182,15 @@
 * **weekOfYear**: int
 * **yearlyRetention**: string
 
+## SensitivityLabelProperties
+### Properties
+* **informationType**: string
+* **informationTypeId**: string
+* **isDisabled**: bool (ReadOnly)
+* **labelId**: string
+* **labelName**: string
+* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None'
+
 ## ManagedInstanceVulnerabilityAssessmentProperties
 ### Properties
 * **recurringScans**: VulnerabilityAssessmentRecurringScansProperties
@@ -200,6 +218,7 @@
 * **emailAccountAdmins**: bool
 * **emailAddresses**: string[]
 * **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' | 'New' (Required)
 * **storageAccountAccessKey**: string
 * **storageEndpoint**: string
 

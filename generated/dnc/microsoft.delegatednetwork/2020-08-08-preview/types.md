@@ -72,6 +72,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned'
 
 ## OrchestratorResourceProperties
 ### Properties

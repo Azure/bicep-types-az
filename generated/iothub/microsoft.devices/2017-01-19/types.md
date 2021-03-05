@@ -35,6 +35,7 @@
 ### Properties
 * **keyName**: string (Required)
 * **primaryKey**: string
+* **rights**: 'DeviceConnect' | 'RegistryRead' | 'RegistryRead, DeviceConnect' | 'RegistryRead, RegistryWrite' | 'RegistryRead, RegistryWrite, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryRead, ServiceConnect' | 'RegistryRead, ServiceConnect, DeviceConnect' | 'RegistryWrite' | 'RegistryWrite, DeviceConnect' | 'RegistryWrite, ServiceConnect' | 'RegistryWrite, ServiceConnect, DeviceConnect' | 'ServiceConnect' | 'ServiceConnect, DeviceConnect' (Required)
 * **secondaryKey**: string
 
 ## CloudToDeviceProperties
@@ -64,6 +65,7 @@
 
 ## IpFilterRule
 ### Properties
+* **action**: 'Accept' | 'Reject' (Required)
 * **filterName**: string (Required)
 * **ipMask**: string (Required)
 
@@ -150,6 +152,7 @@
 ### Properties
 * **capacity**: int (Required)
 * **name**: 'F1' | 'S1' | 'S2' | 'S3' (Required)
+* **tier**: 'Free' | 'Standard' (ReadOnly)
 
 ## ResourceTags
 ### Properties

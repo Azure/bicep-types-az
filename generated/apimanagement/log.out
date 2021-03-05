@@ -611,27 +611,19 @@ WARNING (PreCheck/SchemaMissingType): The schema 'PortalRevisionContract' with a
 WARNING (PreCheck/SchemaMissingType): The schema 'PortalRevisionContractProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}': No resource body defined
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/contenttypes under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/contentTypes/{contentTypeId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/contenttypes/contentitems under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/contentTypes/{contentTypeId}/contentItems/{contentItemId}': No resource body defined
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientusers under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientUsers/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 26ms
+INFORMATION: Autorest.AzureResourceSchema took 28ms
 Processing batch task - {"tag":"schema-apimanagement-2019-12-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1171,25 +1163,17 @@ WARNING (PreCheck/SchemaMissingType): The schema 'AssociationContract' with an u
 WARNING (PreCheck/SchemaMissingType): The schema 'AssociationContract-properties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}': No resource body defined
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientusers under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientUsers/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 23ms
+INFORMATION: Autorest.AzureResourceSchema took 40ms
 Processing batch task - {"tag":"schema-apimanagement-2019-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1743,27 +1727,19 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ContentItemContract' with an u
 WARNING (PreCheck/SchemaMissingType): The schema 'ContentItemContractProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}': No resource body defined
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/contenttypes under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/contentTypes/{contentTypeId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/contenttypes/contentitems under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/contentTypes/{contentTypeId}/contentItems/{contentItemId}': No resource body defined
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientusers under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientUsers/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 21ms
+INFORMATION: Autorest.AzureResourceSchema took 22ms
 Processing batch task - {"tag":"schema-apimanagement-2019-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2261,23 +2237,17 @@ WARNING (PreCheck/SchemaMissingType): The schema 'UserUpdateParametersProperties
 WARNING (PreCheck/SchemaMissingType): The schema 'X509CertificateName' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientusers under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientUsers/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 23ms
+INFORMATION: Autorest.AzureResourceSchema took 22ms
 Processing batch task - {"tag":"schema-apimanagement-2018-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2776,20 +2746,14 @@ INFORMATION: Accept-param true
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientusers under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientUsers/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 27ms
+INFORMATION: Autorest.AzureResourceSchema took 19ms
 Processing batch task - {"tag":"schema-apimanagement-2018-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -3265,26 +3229,19 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ApiVersionSetUpdateParametersP
 WARNING (PreCheck/SchemaMissingType): The schema 'ApiVersionSetUpdateParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/diagnostics/loggers under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/diagnostics/{diagnosticId}/loggers/{loggerid}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/diagnostics/loggers under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/diagnostics/{diagnosticId}/loggers/{loggerid}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{uid}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientusers under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientUsers/{uid}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 16ms
+INFORMATION: Autorest.AzureResourceSchema took 36ms
 Processing batch task - {"tag":"schema-apimanagement-2017-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -3742,29 +3699,21 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ApiVersionSetUpdateParametersP
 WARNING (PreCheck/SchemaMissingType): The schema 'ApiVersionSetUpdateParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/diagnostics/loggers under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/diagnostics/{diagnosticId}/loggers/{loggerid}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/diagnostics/loggers under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/diagnostics/{diagnosticId}/loggers/{loggerid}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{uid}': No resource body defined
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Skipping resource type microsoft.apimanagement/service/notifications under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}': 
+WARNING: Skipping resource type microsoft.apimanagement/service/notifications under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientusers under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientUsers/{uid}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
 INFORMATION: Autorest.AzureResourceSchema took 18ms
 Processing batch task - {"tag":"schema-apimanagement-2016-10-10"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -3992,24 +3941,11 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'BackendUpdateParameters
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/policy': Found mismatch between type segments (4) and name segments (3)
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/policy': Found mismatch between type segments (3) and name segments (2)
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/policy': Found mismatch between type segments (3) and name segments (2)
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Skipping resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{uid}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 10ms
+INFORMATION: Autorest.AzureResourceSchema took 18ms
 Processing batch task - {"tag":"schema-apimanagement-2016-07-07"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -4195,24 +4131,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ApiManagementServiceUpdateHost
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{uid}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 9ms
 Processing batch task - {"tag":"schema-apimanagement-2020-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -4818,27 +4741,19 @@ WARNING (PreCheck/SchemaMissingType): The schema 'PortalRevisionContract' with a
 WARNING (PreCheck/SchemaMissingType): The schema 'PortalRevisionContractProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}': No resource body defined
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/contenttypes under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/contentTypes/{contentTypeId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/contenttypes/contentitems under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/contentTypes/{contentTypeId}/contentItems/{contentItemId}': No resource body defined
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientusers under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientUsers/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 27ms
+INFORMATION: Autorest.AzureResourceSchema took 19ms
 Processing batch task - {"tag":"schema-apimanagement-2019-12-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -5378,25 +5293,17 @@ WARNING (PreCheck/SchemaMissingType): The schema 'AssociationContract' with an u
 WARNING (PreCheck/SchemaMissingType): The schema 'AssociationContract-properties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}': No resource body defined
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientusers under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientUsers/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 20ms
+INFORMATION: Autorest.AzureResourceSchema took 22ms
 Processing batch task - {"tag":"schema-apimanagement-2019-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -5950,27 +5857,19 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ContentItemContract' with an u
 WARNING (PreCheck/SchemaMissingType): The schema 'ContentItemContractProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}': No resource body defined
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/contenttypes under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/contentTypes/{contentTypeId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/contenttypes/contentitems under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/contentTypes/{contentTypeId}/contentItems/{contentItemId}': No resource body defined
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientusers under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientUsers/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 31ms
+INFORMATION: Autorest.AzureResourceSchema took 18ms
 Processing batch task - {"tag":"schema-apimanagement-2019-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -6468,23 +6367,17 @@ WARNING (PreCheck/SchemaMissingType): The schema 'UserUpdateParametersProperties
 WARNING (PreCheck/SchemaMissingType): The schema 'X509CertificateName' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientusers under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientUsers/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 18ms
+INFORMATION: Autorest.AzureResourceSchema took 24ms
 Processing batch task - {"tag":"schema-apimanagement-2018-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -6983,28 +6876,22 @@ INFORMATION: Accept-param true
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientusers under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientUsers/{userId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 18ms
+INFORMATION: Autorest.AzureResourceSchema took 22ms
 Processing batch task - {"tag":"schema-apimanagement-2018-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
 <--- Last few GCs --->
 
-[2363:0x4a0dfc0]   507262 ms: Mark-sweep 2036.1 (2058.1) -> 2031.5 (2057.9) MB, 587.3 / 0.0 ms  (average mu = 0.196, current mu = 0.055) allocation failure scavenge might not succeed
-[2363:0x4a0dfc0]   507868 ms: Mark-sweep 2035.6 (2057.9) -> 2032.3 (2058.4) MB, 597.1 / 0.0 ms  (average mu = 0.109, current mu = 0.015) allocation failure scavenge might not succeed
+[2199:0x51e1fc0]   549047 ms: Mark-sweep (reduce) 2035.3 (2056.7) -> 2034.5 (2056.9) MB, 637.3 / 0.0 ms  (average mu = 0.161, current mu = 0.004) allocation failure scavenge might not succeed
+[2199:0x51e1fc0]   549720 ms: Mark-sweep (reduce) 2035.5 (2053.9) -> 2034.7 (2055.2) MB, 669.6 / 0.0 ms  (average mu = 0.084, current mu = 0.004) allocation failure scavenge might not succeed
 
 
 <--- JS stacktrace --->

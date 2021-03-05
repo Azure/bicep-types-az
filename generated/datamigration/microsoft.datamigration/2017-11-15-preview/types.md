@@ -37,6 +37,7 @@
 
 ## DataMigrationServiceProperties
 ### Properties
+* **provisioningState**: 'Accepted' | 'Deleting' | 'Deploying' | 'Failed' | 'FailedToStart' | 'FailedToStop' | 'Starting' | 'Stopped' | 'Stopping' | 'Succeeded' (ReadOnly)
 * **publicKey**: string
 * **virtualSubnetId**: string (Required)
 
@@ -57,8 +58,11 @@
 ### Properties
 * **creationTime**: string (ReadOnly)
 * **databasesInfo**: DatabaseInfo[]
+* **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly)
 * **sourceConnectionInfo**: ConnectionInfo
+* **sourcePlatform**: 'SQL' | 'Unknown' (Required)
 * **targetConnectionInfo**: ConnectionInfo
+* **targetPlatform**: 'SQLDB' | 'Unknown' (Required)
 
 ## DatabaseInfo
 ### Properties
@@ -73,6 +77,7 @@
 ### SqlConnectionInfo
 #### Properties
 * **additionalSettings**: string
+* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication'
 * **dataSource**: string (Required)
 * **encryptConnection**: bool
 * **password**: string
@@ -84,6 +89,7 @@
 ## SqlConnectionInfo
 ### Properties
 * **additionalSettings**: string
+* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication'
 * **dataSource**: string (Required)
 * **encryptConnection**: bool
 * **password**: string
@@ -101,6 +107,7 @@
 
 ### Base Properties
 * **errors**: ODataError[] (ReadOnly)
+* **state**: 'Canceled' | 'Failed' | 'FailedInputValidation' | 'Faulted' | 'Queued' | 'Running' | 'Succeeded' | 'Unknown' (ReadOnly)
 ### ConnectToSourceSqlServerTaskProperties
 #### Properties
 * **input**: ConnectToSourceSqlServerTaskInput
@@ -140,6 +147,7 @@
 
 ## ConnectToSourceSqlServerTaskInput
 ### Properties
+* **checkPermissionsGroup**: 'Default' | 'MigrationFromSqlServerToAzureDB'
 * **sourceConnectionInfo**: SqlConnectionInfo (Required)
 
 ## ConnectToSourceSqlServerTaskOutput
@@ -149,7 +157,9 @@
 * **id**: string (ReadOnly)
 ### ConnectToSourceSqlServerTaskOutputDatabaseLevel
 #### Properties
+* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly)
 * **databaseFiles**: DatabaseFileInfo[] (ReadOnly)
+* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly)
 * **name**: string (ReadOnly)
 * **resultType**: 'DatabaseLevelOutput' (Required)
 * **sizeMB**: int (ReadOnly)
@@ -165,7 +175,9 @@
 
 ## ConnectToSourceSqlServerTaskOutputDatabaseLevel
 ### Properties
+* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly)
 * **databaseFiles**: DatabaseFileInfo[] (ReadOnly)
+* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly)
 * **name**: string (ReadOnly)
 * **resultType**: 'DatabaseLevelOutput' (Required)
 * **sizeMB**: int (ReadOnly)
@@ -173,6 +185,7 @@
 ## DatabaseFileInfo
 ### Properties
 * **databaseName**: string
+* **fileType**: 'Filestream' | 'Fulltext' | 'Log' | 'NotSupported' | 'Rows'
 * **id**: string
 * **logicalName**: string
 * **physicalFullName**: string
@@ -278,7 +291,9 @@
 * **objectSummary**: string (ReadOnly)
 * **resultPrefix**: string (ReadOnly)
 * **resultType**: 'DatabaseLevelOutput' (Required)
+* **stage**: 'Backup' | 'Completed' | 'FileCopy' | 'Initialize' | 'None' | 'Restore' (ReadOnly)
 * **startedOn**: string (ReadOnly)
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly)
 * **statusMessage**: string (ReadOnly)
 
 ### MigrateSqlServerSqlDbTaskOutputError
@@ -299,6 +314,7 @@
 * **sourceServerBrandVersion**: string (ReadOnly)
 * **sourceServerVersion**: string (ReadOnly)
 * **startedOn**: string (ReadOnly)
+* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly)
 * **statusMessage**: string (ReadOnly)
 * **targetServerBrandVersion**: string (ReadOnly)
 * **targetServerVersion**: string (ReadOnly)
@@ -313,6 +329,7 @@
 * **resultPrefix**: string (ReadOnly)
 * **resultType**: 'TableLevelOutput' (Required)
 * **startedOn**: string (ReadOnly)
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly)
 * **statusMessage**: string (ReadOnly)
 
 
@@ -329,7 +346,9 @@
 * **objectSummary**: string (ReadOnly)
 * **resultPrefix**: string (ReadOnly)
 * **resultType**: 'DatabaseLevelOutput' (Required)
+* **stage**: 'Backup' | 'Completed' | 'FileCopy' | 'Initialize' | 'None' | 'Restore' (ReadOnly)
 * **startedOn**: string (ReadOnly)
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly)
 * **statusMessage**: string (ReadOnly)
 
 ## MigrateSqlServerSqlDbTaskOutputError
@@ -350,6 +369,7 @@
 * **sourceServerBrandVersion**: string (ReadOnly)
 * **sourceServerVersion**: string (ReadOnly)
 * **startedOn**: string (ReadOnly)
+* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly)
 * **statusMessage**: string (ReadOnly)
 * **targetServerBrandVersion**: string (ReadOnly)
 * **targetServerVersion**: string (ReadOnly)
@@ -369,5 +389,6 @@
 * **resultPrefix**: string (ReadOnly)
 * **resultType**: 'TableLevelOutput' (Required)
 * **startedOn**: string (ReadOnly)
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly)
 * **statusMessage**: string (ReadOnly)
 

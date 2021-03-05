@@ -273,40 +273,8 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleDefinition' with an
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named DeliveryRuleAction -- discriminator: {"propertyName":"name"} => <none>,properties: {"name":{"description":"The name of the action for the delivery rule.","$ref":"#/components/schemas/DeliveryRuleAction"}} => <none>,required: ["name"] => <none>,type: undefined => "string",enum: undefined => ["CacheExpiration","CacheKeyQueryString","ModifyRequestHeader","ModifyResponseHeader","UrlRedirect","UrlRewrite","UrlSigning","OriginGroupOverride"],x-ms-enum: undefined => {"name":"DeliveryRuleAction","modelAsString":true} 
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.cdn/profiles/rulesets under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/ruleSets/{ruleSetName}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 31ms
+INFORMATION: Autorest.AzureResourceSchema took 26ms
 Processing batch task - {"tag":"schema-cdn-2020-04-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -496,34 +464,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleDefinition' with an
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named DeliveryRuleAction -- discriminator: {"propertyName":"name"} => <none>,properties: {"name":{"description":"The name of the action for the delivery rule.","$ref":"#/components/schemas/DeliveryRuleAction"}} => <none>,required: ["name"] => <none>,type: undefined => "string",enum: undefined => ["CacheExpiration","CacheKeyQueryString","ModifyRequestHeader","ModifyResponseHeader","UrlRedirect","UrlRewrite","UrlSigning"],x-ms-enum: undefined => {"name":"DeliveryRuleAction","modelAsString":true} 
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-INFORMATION: Autorest.AzureResourceSchema took 15ms
+INFORMATION: Autorest.AzureResourceSchema took 12ms
 Processing batch task - {"tag":"schema-cdn-2019-12-31"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -677,33 +618,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefin
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named DeliveryRuleAction -- discriminator: {"propertyName":"name"} => <none>,properties: {"name":{"description":"The name of the action for the delivery rule.","$ref":"#/components/schemas/DeliveryRuleAction"}} => <none>,required: ["name"] => <none>,type: undefined => "string",enum: undefined => ["CacheExpiration","CacheKeyQueryString","ModifyRequestHeader","ModifyResponseHeader","UrlRedirect","UrlRewrite","OriginGroupOverride"],x-ms-enum: undefined => {"name":"DeliveryRuleAction","modelAsString":true} 
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-INFORMATION: Autorest.AzureResourceSchema took 21ms
+INFORMATION: Autorest.AzureResourceSchema took 15ms
 Processing batch task - {"tag":"schema-cdn-2019-06-15-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -871,30 +786,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleDefinition' with an
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named DeliveryRuleAction -- discriminator: {"propertyName":"name"} => <none>,properties: {"name":{"description":"The name of the action for the delivery rule.","$ref":"#/components/schemas/DeliveryRuleAction"}} => <none>,required: ["name"] => <none>,type: undefined => "string",enum: undefined => ["CacheExpiration","CacheKeyQueryString","ModifyRequestHeader","ModifyResponseHeader","UrlRedirect","UrlRewrite"],x-ms-enum: undefined => {"name":"DeliveryRuleAction","modelAsString":true} 
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
 An error was encountered while handling a request: Unable to find PUT or GET type
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: sealed-choice
 FATAL: Unable to find PUT or GET type
 Failure during batch task - {"tag":"schema-cdn-2019-06-15-preview"} -- Error: Plugin azureresourceschema reported failure..
   Error: Plugin azureresourceschema reported failure.

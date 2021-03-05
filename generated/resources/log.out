@@ -94,16 +94,8 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorAdditionalInfo' with an u
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping path '/{applicationId}': Unable to locate "/providers/" segment
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 11ms
+INFORMATION: Autorest.AzureResourceSchema took 15ms
 Processing batch task - {"tag":"schema-solutions-2019-07-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -186,14 +178,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an u
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping path '/{applicationId}': Unable to locate "/providers/" segment
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
 WARNING: Unrecognized known property type: "duration"
 INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-solutions-2018-06-01"} .
@@ -238,13 +222,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an u
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping path '/{applicationId}': Unable to locate "/providers/" segment
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
 INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-solutions-2017-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -285,14 +262,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ApplicationProviderAuthorizati
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping path '/{applicationId}': Unable to locate "/providers/" segment
 WARNING: Skipping path '/{applicationDefinitionId}': Unable to locate "/providers/" segment
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-solutions-2016-09-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -336,11 +306,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an u
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping path '/{applianceId}': Unable to locate "/providers/" segment
 WARNING: Skipping path '/{applianceDefinitionId}': Unable to locate "/providers/" segment
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: constant
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
 INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-resources-2020-10-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)

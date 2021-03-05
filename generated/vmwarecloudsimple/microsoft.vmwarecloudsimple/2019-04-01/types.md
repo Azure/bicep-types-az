@@ -39,6 +39,7 @@
 * **availabilityZoneId**: string (Required)
 * **availabilityZoneName**: string (ReadOnly)
 * **cloudRackName**: string (ReadOnly)
+* **created**: any (ReadOnly)
 * **nodesCount**: int (Required)
 * **placementGroupId**: string (Required)
 * **placementGroupName**: string (ReadOnly)
@@ -47,6 +48,7 @@
 * **provisioningState**: string (ReadOnly)
 * **purchaseId**: string (Required)
 * **skuDescription**: SkuDescription
+* **status**: 'unused' | 'used' (ReadOnly)
 * **vmwareClusterName**: string (ReadOnly)
 
 ## SkuDescription
@@ -70,6 +72,7 @@
 ## DedicatedCloudServiceProperties
 ### Properties
 * **gatewaySubnet**: string (Required)
+* **isAccountOnboarded**: 'notOnBoarded' | 'onBoarded' | 'onBoarding' | 'onBoardingFailed' (ReadOnly)
 * **nodes**: int (ReadOnly)
 * **serviceURL**: string (ReadOnly)
 
@@ -88,6 +91,7 @@
 * **exposeToGuestVM**: bool
 * **folder**: string (ReadOnly)
 * **guestOS**: string (ReadOnly)
+* **guestOSType**: 'linux' | 'other' | 'windows' (ReadOnly)
 * **nics**: VirtualNic[]
 * **numberOfCores**: int (Required)
 * **password**: string
@@ -95,6 +99,7 @@
 * **provisioningState**: string (ReadOnly)
 * **publicIP**: string (ReadOnly)
 * **resourcePool**: ResourcePool
+* **status**: 'deallocating' | 'deleting' | 'poweredoff' | 'running' | 'suspended' | 'updating' (ReadOnly)
 * **templateId**: string
 * **username**: string
 * **vmId**: string (ReadOnly)
@@ -119,6 +124,7 @@
 ## VirtualDisk
 ### Properties
 * **controllerId**: string (Required)
+* **independenceMode**: 'independent_nonpersistent' | 'independent_persistent' | 'persistent' (Required)
 * **totalSize**: int (Required)
 * **virtualDiskId**: string
 * **virtualDiskName**: string (ReadOnly)
@@ -129,6 +135,7 @@
 * **ipAddresses**: string[]
 * **macAddress**: string
 * **network**: VirtualNetwork (Required)
+* **nicType**: 'E1000' | 'E1000E' | 'PCNET32' | 'VMXNET' | 'VMXNET2' | 'VMXNET3' (Required)
 * **powerOnBoot**: bool
 * **virtualNicId**: string
 * **virtualNicName**: string (ReadOnly)

@@ -35,17 +35,20 @@
 
 ## ClusterBaseProperties
 ### Properties
+* **allocationState**: 'resizing' | 'steady' (ReadOnly)
 * **allocationStateTransitionTime**: string (ReadOnly)
 * **creationTime**: string (ReadOnly)
 * **currentNodeCount**: int (ReadOnly)
 * **errors**: BatchAIError[] (ReadOnly)
 * **nodeSetup**: NodeSetup
 * **nodeStateCounts**: NodeStateCounts (ReadOnly)
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly)
 * **provisioningStateTransitionTime**: string (ReadOnly)
 * **scaleSettings**: ScaleSettings
 * **subnet**: ResourceId
 * **userAccountSettings**: UserAccountSettings (Required)
 * **virtualMachineConfiguration**: VirtualMachineConfiguration
+* **vmPriority**: 'dedicated' | 'lowpriority'
 * **vmSize**: string (Required)
 
 ## BatchAIError
@@ -166,6 +169,7 @@
 
 ## ManualScaleSettings
 ### Properties
+* **nodeDeallocationOption**: 'requeue' | 'terminate' | 'unknown' | 'waitforjobcompletion'
 * **targetNodeCount**: int (Required)
 
 ## UserAccountSettings
@@ -196,6 +200,7 @@
 * **creationTime**: string (ReadOnly)
 * **dataDisks**: DataDisks (Required)
 * **mountSettings**: MountSettings (ReadOnly)
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' | 'updating' (ReadOnly)
 * **provisioningStateTransitionTime**: string (ReadOnly)
 * **sshConfiguration**: SshConfiguration (Required)
 * **subnet**: ResourceId
@@ -203,6 +208,7 @@
 
 ## DataDisks
 ### Properties
+* **cachingType**: 'none' | 'readonly' | 'readwrite'
 * **diskCount**: int (Required)
 * **diskSizeInGB**: int (Required)
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' (Required)
@@ -237,6 +243,7 @@
 * **customToolkitSettings**: CustomToolkitSettings
 * **environmentVariables**: EnvironmentVariable[]
 * **executionInfo**: JobPropertiesExecutionInfo (ReadOnly)
+* **executionState**: 'failed' | 'queued' | 'running' | 'succeeded' | 'terminating' (ReadOnly)
 * **executionStateTransitionTime**: string (ReadOnly)
 * **experimentName**: string
 * **inputDirectories**: InputDirectory[]
@@ -246,6 +253,7 @@
 * **nodeCount**: int (Required)
 * **outputDirectories**: OutputDirectory[]
 * **priority**: int
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly)
 * **provisioningStateTransitionTime**: string (ReadOnly)
 * **pyTorchSettings**: PyTorchSettings
 * **secrets**: EnvironmentVariableWithSecretValue[]

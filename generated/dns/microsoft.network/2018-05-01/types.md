@@ -120,6 +120,7 @@
 * **numberOfRecordSets**: int (ReadOnly)
 * **registrationVirtualNetworks**: SubResource[]
 * **resolutionVirtualNetworks**: SubResource[]
+* **zoneType**: 'Private' | 'Public'
 
 ## SubResource
 ### Properties

@@ -14,6 +14,7 @@
 
 ## ImageTemplateIdentity
 ### Properties
+* **type**: 'None' | 'UserAssigned'
 * **userAssignedIdentities**: ImageTemplateIdentityUserAssignedIdentities
 
 ## ImageTemplateIdentityUserAssignedIdentities
@@ -33,6 +34,7 @@
 * **distribute**: ImageTemplateDistributor[] (Required)
 * **lastRunStatus**: ImageTemplateLastRunStatus (ReadOnly)
 * **provisioningError**: ProvisioningError (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **source**: ImageTemplateSource (Required)
 * **vmProfile**: ImageTemplateVmProfile
 
@@ -150,6 +152,8 @@
 ### Properties
 * **endTime**: string
 * **message**: string
+* **runState**: 'Failed' | 'PartiallySucceeded' | 'Running' | 'Succeeded'
+* **runSubState**: 'Building' | 'Customizing' | 'Distributing' | 'Queued'
 * **startTime**: string
 
 ## ProvisioningError

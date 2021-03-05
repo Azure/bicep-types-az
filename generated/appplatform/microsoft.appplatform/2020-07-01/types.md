@@ -151,6 +151,8 @@
 
 ## BindingResourcePropertiesBindingParameters
 ### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## DeploymentResourceProperties
 ### Properties

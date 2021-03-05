@@ -24,6 +24,7 @@
 ### Properties
 * **quota**: JobCollectionQuota
 * **sku**: Sku
+* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'Suspended'
 
 ## JobCollectionQuota
 ### Properties
@@ -33,10 +34,12 @@
 
 ## JobMaxRecurrence
 ### Properties
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week'
 * **interval**: int
 
 ## Sku
 ### Properties
+* **name**: 'Free' | 'P10Premium' | 'P20Premium' | 'Standard'
 
 ## JobCollectionDefinitionTags
 ### Properties
@@ -48,6 +51,7 @@
 * **action**: JobAction
 * **recurrence**: JobRecurrence
 * **startTime**: string
+* **state**: 'Completed' | 'Disabled' | 'Enabled' | 'Faulted'
 * **status**: JobStatus (ReadOnly)
 
 ## JobAction
@@ -58,6 +62,7 @@
 * **retryPolicy**: RetryPolicy
 * **serviceBusQueueMessage**: ServiceBusQueueMessage
 * **serviceBusTopicMessage**: ServiceBusTopicMessage
+* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue'
 
 ## JobErrorAction
 ### Properties
@@ -66,6 +71,7 @@
 * **retryPolicy**: RetryPolicy
 * **serviceBusQueueMessage**: ServiceBusQueueMessage
 * **serviceBusTopicMessage**: ServiceBusTopicMessage
+* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue'
 
 ## StorageQueueMessage
 ### Properties
@@ -142,6 +148,7 @@
 ### Properties
 * **retryCount**: int
 * **retryInterval**: any
+* **retryType**: 'Fixed' | 'None'
 
 ## ServiceBusQueueMessage
 ### Properties
@@ -151,11 +158,13 @@
 * **message**: string
 * **namespace**: string
 * **queueName**: string
+* **transportType**: 'AMQP' | 'NetMessaging' | 'NotSpecified'
 
 ## ServiceBusAuthentication
 ### Properties
 * **sasKey**: string
 * **sasKeyName**: string
+* **type**: 'NotSpecified' | 'SharedAccessKey'
 
 ## ServiceBusBrokeredMessageProperties
 ### Properties
@@ -186,6 +195,7 @@
 * **message**: string
 * **namespace**: string
 * **topicPath**: string
+* **transportType**: 'AMQP' | 'NetMessaging' | 'NotSpecified'
 
 ## ServiceBusMessageCustomMessageProperties
 ### Properties
@@ -196,6 +206,7 @@
 ### Properties
 * **count**: int
 * **endTime**: string
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week'
 * **interval**: int
 * **schedule**: JobRecurrenceSchedule
 
@@ -205,10 +216,11 @@
 * **minutes**: int[]
 * **monthDays**: int[]
 * **monthlyOccurrences**: JobRecurrenceScheduleMonthlyOccurrence[]
-* **weekDays**: array
+* **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]
 
 ## JobRecurrenceScheduleMonthlyOccurrence
 ### Properties
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'
 * **occurrence**: int
 
 ## JobStatus

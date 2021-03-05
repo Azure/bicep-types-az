@@ -171,6 +171,7 @@
 * **capabilities**: Capability[]
 * **connectorOffer**: 'Small'
 * **consistencyPolicy**: ConsistencyPolicy
+* **databaseAccountOfferType**: '[object Object]' (Required)
 * **documentEndpoint**: string (ReadOnly)
 * **enableAutomaticFailover**: bool
 * **enableCassandraConnector**: bool
@@ -190,6 +191,7 @@
 
 ## ConsistencyPolicy
 ### Properties
+* **defaultConsistencyLevel**: 'BoundedStaleness' | 'ConsistentPrefix' | 'Eventual' | 'Session' | 'Strong' (Required)
 * **maxIntervalInSeconds**: int
 * **maxStalenessPrefix**: int
 
@@ -226,6 +228,7 @@
 * **options**: CreateUpdateOptions (Required, WriteOnly)
 * **resource**: SqlDatabaseResource (Required, WriteOnly)
 * **rid**: string (ReadOnly)
+* **ts**: any (ReadOnly)
 * **users**: string (ReadOnly)
 
 ## CreateUpdateOptions
@@ -315,6 +318,7 @@
 * **partitionKey**: ContainerPartitionKey (ReadOnly)
 * **resource**: SqlContainerResource (Required, WriteOnly)
 * **rid**: string (ReadOnly)
+* **ts**: any (ReadOnly)
 * **uniqueKeyPolicy**: UniqueKeyPolicy (ReadOnly)
 
 ## ConflictResolutionPolicy
@@ -393,6 +397,7 @@
 * **partitionKey**: ContainerPartitionKey (ReadOnly)
 * **resource**: GremlinGraphResource (Required, WriteOnly)
 * **rid**: string (ReadOnly)
+* **ts**: any (ReadOnly)
 * **uniqueKeyPolicy**: UniqueKeyPolicy (ReadOnly)
 
 ## CreateUpdateOptions

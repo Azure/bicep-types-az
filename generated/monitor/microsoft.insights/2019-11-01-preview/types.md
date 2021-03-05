@@ -51,6 +51,7 @@
 ## ExtensionDataSource
 ### Properties
 * **extensionName**: string (Required)
+* **extensionSettings**: any
 * **name**: string (Required)
 * **streams**: 'Microsoft-AntiMalwareStatus' | 'Microsoft-Auditd' | 'Microsoft-CISCOASA' | 'Microsoft-CommonSecurityLog' | 'Microsoft-ComputerGroup' | 'Microsoft-Event' | 'Microsoft-FirewallLog' | 'Microsoft-HealthStateChange' | 'Microsoft-Heartbeat' | 'Microsoft-InsightsMetrics' | 'Microsoft-OperationLog' | 'Microsoft-Perf' | 'Microsoft-ProcessInvestigator' | 'Microsoft-ProtectionStatus' | 'Microsoft-RomeDetectionEvent' | 'Microsoft-SecurityBaseline' | 'Microsoft-SecurityBaselineSummary' | 'Microsoft-SecurityEvent' | 'Microsoft-Syslog' | 'Microsoft-WindowsEvent'[] (Required)
 

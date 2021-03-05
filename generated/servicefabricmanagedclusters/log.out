@@ -183,10 +183,7 @@ WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'UniformInt64RangePartitionS
 WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'ManagedCluster' has an allOf list with an empty object schema as a parent, removing it.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "credential"
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
 INFORMATION: Autorest.AzureResourceSchema took 16ms
 Processing batch task - {"tag":"schema-servicefabricmanagedclusters-2021-01-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -365,9 +362,6 @@ WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'UniformInt64RangePartitionS
 WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'ManagedCluster' has an allOf list with an empty object schema as a parent, removing it.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "credential"
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 11ms
-[14.71 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 9ms
+[14.7 s] Generation Complete

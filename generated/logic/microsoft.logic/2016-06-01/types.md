@@ -7,6 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: any
 * **sku**: IntegrationAccountSku
 * **tags**: ResourceTags
 * **type**: 'Microsoft.Logic/integrationAccounts' (ReadOnly, DeployTimeConstant)
@@ -123,6 +124,7 @@
 
 ## IntegrationAccountSku
 ### Properties
+* **name**: 'Free' | 'NotSpecified' | 'Standard' (Required)
 
 ## ResourceTags
 ### Properties
@@ -131,6 +133,7 @@
 
 ## IntegrationAccountAgreementProperties
 ### Properties
+* **agreementType**: 'AS2' | 'Edifact' | 'NotSpecified' | 'X12' (Required)
 * **changedTime**: string (ReadOnly)
 * **content**: AgreementContent (Required)
 * **createdTime**: string (ReadOnly)
@@ -138,6 +141,7 @@
 * **guestPartner**: string (Required)
 * **hostIdentity**: BusinessIdentity (Required)
 * **hostPartner**: string (Required)
+* **metadata**: any
 
 ## AgreementContent
 ### Properties
@@ -190,6 +194,7 @@
 ### Properties
 * **dispositionNotificationTo**: string
 * **mdnText**: string
+* **micHashingAlgorithm**: 'MD5' | 'None' | 'NotSpecified' | 'SHA1' | 'SHA2256' | 'SHA2384' | 'SHA2512' (Required)
 * **needMdn**: bool (Required)
 * **receiptDeliveryUrl**: string
 * **sendInboundMdnToMessageBox**: bool (Required)
@@ -223,6 +228,7 @@
 * **checkCertificateRevocationListOnSend**: bool (Required)
 * **checkDuplicateMessage**: bool (Required)
 * **compressMessage**: bool (Required)
+* **encryptionAlgorithm**: 'AES128' | 'AES192' | 'AES256' | 'DES3' | 'None' | 'NotSpecified' | 'RC2' (Required)
 * **encryptMessage**: bool (Required)
 * **interchangeDuplicatesValidityDays**: int (Required)
 * **overrideMessageProperties**: bool (Required)
@@ -277,6 +283,7 @@
 ### Properties
 * **componentSeparator**: int (Required)
 * **dataElementSeparator**: int (Required)
+* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified' (Required)
 * **messageAssociationAssignedCode**: string
 * **messageId**: string
 * **messageRelease**: string
@@ -284,6 +291,7 @@
 * **releaseIndicator**: int (Required)
 * **repetitionSeparator**: int (Required)
 * **segmentTerminator**: int (Required)
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required)
 * **targetNamespace**: string
 
 ## EdifactEnvelopeOverride
@@ -351,16 +359,20 @@
 ## EdifactFramingSettings
 ### Properties
 * **characterEncoding**: string
+* **characterSet**: 'KECA' | 'NotSpecified' | 'UNOA' | 'UNOB' | 'UNOC' | 'UNOD' | 'UNOE' | 'UNOF' | 'UNOG' | 'UNOH' | 'UNOI' | 'UNOJ' | 'UNOK' | 'UNOX' | 'UNOY' (Required)
 * **componentSeparator**: int (Required)
 * **dataElementSeparator**: int (Required)
+* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified' (Required)
 * **protocolVersion**: int (Required)
 * **releaseIndicator**: int (Required)
 * **repetitionSeparator**: int (Required)
 * **segmentTerminator**: int (Required)
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required)
 * **serviceCodeListDirectoryVersion**: string
 
 ## EdifactMessageFilter
 ### Properties
+* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified' (Required)
 
 ## EdifactMessageIdentifier
 ### Properties
@@ -389,6 +401,7 @@
 * **allowLeadingAndTrailingSpacesAndZeroes**: bool (Required)
 * **enforceCharacterSet**: bool (Required)
 * **messageId**: string (Required)
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required)
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool (Required)
 * **validateEdiTypes**: bool (Required)
 * **validateXsdTypes**: bool (Required)
@@ -400,6 +413,7 @@
 * **checkDuplicateInterchangeControlNumber**: bool (Required)
 * **checkDuplicateTransactionSetControlNumber**: bool (Required)
 * **interchangeControlNumberValidityDays**: int (Required)
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required)
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool (Required)
 * **validateCharacterSet**: bool (Required)
 * **validateEdiTypes**: bool (Required)
@@ -451,6 +465,7 @@
 
 ## X12EnvelopeOverride
 ### Properties
+* **dateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD' (Required)
 * **functionalIdentifierCode**: string
 * **headerVersion**: string (Required)
 * **messageId**: string (Required)
@@ -459,6 +474,7 @@
 * **responsibleAgencyCode**: string (Required)
 * **senderApplicationId**: string (Required)
 * **targetNamespace**: string (Required)
+* **timeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified' (Required)
 
 ## X12EnvelopeSettings
 ### Properties
@@ -469,6 +485,8 @@
 * **groupControlNumberLowerBound**: int (Required)
 * **groupControlNumberUpperBound**: int (Required)
 * **groupHeaderAgencyCode**: string (Required)
+* **groupHeaderDateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD' (Required)
+* **groupHeaderTimeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified' (Required)
 * **groupHeaderVersion**: string (Required)
 * **interchangeControlNumberLowerBound**: int (Required)
 * **interchangeControlNumberUpperBound**: int (Required)
@@ -482,18 +500,22 @@
 * **transactionSetControlNumberPrefix**: string
 * **transactionSetControlNumberSuffix**: string
 * **transactionSetControlNumberUpperBound**: int (Required)
+* **usageIndicator**: 'Information' | 'NotSpecified' | 'Production' | 'Test' (Required)
 * **useControlStandardsIdAsRepetitionCharacter**: bool (Required)
 
 ## X12FramingSettings
 ### Properties
+* **characterSet**: 'Basic' | 'Extended' | 'NotSpecified' | 'UTF8' (Required)
 * **componentSeparator**: int (Required)
 * **dataElementSeparator**: int (Required)
 * **replaceCharacter**: int (Required)
 * **replaceSeparatorsInPayload**: bool (Required)
 * **segmentTerminator**: int (Required)
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required)
 
 ## X12MessageFilter
 ### Properties
+* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified' (Required)
 
 ## X12MessageIdentifier
 ### Properties
@@ -526,6 +548,7 @@
 ### Properties
 * **allowLeadingAndTrailingSpacesAndZeroes**: bool (Required)
 * **messageId**: string (Required)
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required)
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool (Required)
 * **validateCharacterSet**: bool (Required)
 * **validateEdiTypes**: bool (Required)
@@ -538,6 +561,7 @@
 * **checkDuplicateInterchangeControlNumber**: bool (Required)
 * **checkDuplicateTransactionSetControlNumber**: bool (Required)
 * **interchangeControlNumberValidityDays**: int (Required)
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required)
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool (Required)
 * **validateCharacterSet**: bool (Required)
 * **validateEdiTypes**: bool (Required)
@@ -552,6 +576,7 @@
 * **replaceCharacter**: int (Required)
 * **replaceSeparatorsInPayload**: bool (Required)
 * **segmentTerminator**: int (Required)
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required)
 * **targetNamespace**: string
 
 ## ResourceTags
@@ -566,15 +591,18 @@
 * **assemblyPublicKeyToken**: string
 * **assemblyVersion**: string
 * **changedTime**: string
+* **content**: any
 * **contentLink**: ContentLink
 * **contentType**: string
 * **createdTime**: string
+* **metadata**: any
 
 ## ContentLink
 ### Properties
 * **contentHash**: ContentHash
 * **contentSize**: int
 * **contentVersion**: string
+* **metadata**: any
 * **uri**: string
 
 ## ContentHash
@@ -592,6 +620,7 @@
 * **batchGroupName**: string (Required)
 * **changedTime**: string
 * **createdTime**: string
+* **metadata**: any
 * **releaseCriteria**: BatchReleaseCriteria (Required)
 
 ## BatchReleaseCriteria
@@ -603,6 +632,7 @@
 ## WorkflowTriggerRecurrence
 ### Properties
 * **endTime**: string
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'NotSpecified' | 'Second' | 'Week' | 'Year'
 * **interval**: int
 * **schedule**: RecurrenceSchedule
 * **startTime**: string
@@ -614,10 +644,11 @@
 * **minutes**: int[]
 * **monthDays**: int[]
 * **monthlyOccurrences**: RecurrenceScheduleOccurrence[]
-* **weekDays**: array
+* **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]
 
 ## RecurrenceScheduleOccurrence
 ### Properties
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'
 * **occurrence**: int
 
 ## ResourceTags
@@ -630,6 +661,7 @@
 * **changedTime**: string (ReadOnly)
 * **createdTime**: string (ReadOnly)
 * **key**: KeyVaultKeyReference
+* **metadata**: any
 * **publicCertificate**: string
 
 ## KeyVaultKeyReference
@@ -656,6 +688,8 @@
 * **contentLink**: ContentLink (ReadOnly)
 * **contentType**: string
 * **createdTime**: string (ReadOnly)
+* **mapType**: 'NotSpecified' | 'Xslt' (Required)
+* **metadata**: any
 * **parametersSchema**: IntegrationAccountMapPropertiesParametersSchema
 
 ## IntegrationAccountMapPropertiesParametersSchema
@@ -672,6 +706,8 @@
 * **changedTime**: string (ReadOnly)
 * **content**: PartnerContent (Required)
 * **createdTime**: string (ReadOnly)
+* **metadata**: any
+* **partnerType**: 'B2B' | 'NotSpecified' (Required)
 
 ## PartnerContent
 ### Properties
@@ -703,6 +739,7 @@
 ### Properties
 * **acknowledgmentOfReceiptSettings**: RosettaNetPipAcknowledgmentOfReceiptSettings (Required)
 * **activityBehavior**: RosettaNetPipActivityBehavior (Required)
+* **activityType**: 'BusinessTransaction' | 'InformationDistribution' | 'NotSpecified' | 'Notification' | 'QueryResponse' | 'RequestConfirm' | 'RequestResponse' (Required)
 
 ## RosettaNetPipAcknowledgmentOfReceiptSettings
 ### Properties
@@ -711,9 +748,12 @@
 
 ## RosettaNetPipActivityBehavior
 ### Properties
+* **actionType**: 'DoubleAction' | 'NotSpecified' | 'SingleAction' (Required)
 * **isAuthorizationRequired**: bool (Required)
 * **isSecuredTransportRequired**: bool (Required)
 * **nonRepudiationOfOriginAndContent**: bool (Required)
+* **persistentConfidentialityScope**: 'None' | 'NotSpecified' | 'Payload' | 'PayloadContainer' (Required)
+* **responseType**: 'Async' | 'NotSpecified' | 'Sync' (Required)
 * **retryCount**: int (Required)
 * **timeToPerformInSeconds**: int (Required)
 
@@ -723,6 +763,7 @@
 * **businessDocument**: RosettaNetPipBusinessDocument (Required)
 * **description**: string
 * **role**: string (Required)
+* **roleType**: 'Employee' | 'Functional' | 'NotSpecified' | 'Organizational' (Required)
 * **service**: string (Required)
 * **serviceClassification**: string (Required)
 
@@ -751,6 +792,8 @@
 * **createdTime**: string (ReadOnly)
 * **documentName**: string
 * **fileName**: string
+* **metadata**: any
+* **schemaType**: 'NotSpecified' | 'Xml' (Required)
 * **targetNamespace**: string
 
 ## ResourceTags
@@ -761,6 +804,7 @@
 ## IntegrationAccountSessionProperties
 ### Properties
 * **changedTime**: string (ReadOnly)
+* **content**: any
 * **createdTime**: string (ReadOnly)
 
 ## ResourceTags
@@ -773,9 +817,12 @@
 * **accessEndpoint**: string (ReadOnly)
 * **changedTime**: string (ReadOnly)
 * **createdTime**: string (ReadOnly)
+* **definition**: any
 * **integrationAccount**: ResourceReference
 * **parameters**: WorkflowPropertiesParameters
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'NotSpecified' | 'Ready' | 'Registered' | 'Registering' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' (ReadOnly)
 * **sku**: Sku
+* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended'
 * **version**: string (ReadOnly)
 
 ## ResourceReference
@@ -792,9 +839,13 @@
 ## WorkflowParameter
 ### Properties
 * **description**: string
+* **metadata**: any
+* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String'
+* **value**: any
 
 ## Sku
 ### Properties
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard' (Required)
 * **plan**: ResourceReference
 
 ## ResourceTags

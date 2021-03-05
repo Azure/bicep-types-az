@@ -137,6 +137,28 @@
 * **tags**: TrackedResourceTags
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Synapse/workspaces/sqlPools/auditingSettings@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **properties**: SqlPoolBlobAuditingPolicyProperties
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/auditingSettings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **managedBy**: string (ReadOnly)
+* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **properties**: DataMaskingPolicyProperties
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies/rules@2019-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -147,6 +169,15 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: DataMaskingRuleProperties
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies/rules' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Synapse/workspaces/sqlPools/extendedAuditingSettings@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **properties**: ExtendedSqlPoolBlobAuditingPolicyProperties
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/extendedAuditingSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/geoBackupPolicies@2019-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -177,6 +208,16 @@
 * **properties**: MetadataSyncConfigProperties
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/metadataSync' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **managedBy**: string (ReadOnly)
+* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **properties**: SensitivityLabelProperties
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Synapse/workspaces/sqlPools/securityAlertPolicies@2019-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -204,6 +245,15 @@
 * **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: SqlPoolVulnerabilityAssessmentProperties
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/rules/baselines@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'default' | 'master' (Required, DeployTimeConstant)
+* **properties**: SqlPoolVulnerabilityAssessmentRuleBaselineProperties
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/workloadGroups@2019-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -267,6 +317,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned'
 
 ## WorkspaceProperties
 ### Properties
@@ -314,6 +365,8 @@
 
 ## WorkspacePropertiesExtraProperties
 ### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## ManagedVirtualNetworkSettings
 ### Properties
@@ -367,6 +420,7 @@
 * **isStorageSecondaryKeyInUse**: bool
 * **queueDelayMs**: int
 * **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' (Required)
 * **storageAccountAccessKey**: string
 * **storageAccountSubscriptionId**: string
 * **storageEndpoint**: string
@@ -435,6 +489,7 @@
 * **predicateExpression**: string
 * **queueDelayMs**: int
 * **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' (Required)
 * **storageAccountAccessKey**: string
 * **storageAccountSubscriptionId**: string
 * **storageEndpoint**: string
@@ -559,6 +614,8 @@
 ## CmdkeySetupTypeProperties
 ### Properties
 * **password**: SecretBase (Required)
+* **targetName**: any (Required)
+* **userName**: any (Required)
 
 ## SecretBase
 * **Discriminator**: type
@@ -645,6 +702,7 @@
 * **emailAccountAdmins**: bool
 * **emailAddresses**: string[]
 * **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' | 'New' (Required)
 * **storageAccountAccessKey**: string
 * **storageEndpoint**: string
 
@@ -671,21 +729,55 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## SqlPoolBlobAuditingPolicyProperties
+### Properties
+* **auditActionsAndGroups**: string[]
+* **isAzureMonitorTargetEnabled**: bool
+* **isStorageSecondaryKeyInUse**: bool
+* **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' (Required)
+* **storageAccountAccessKey**: string
+* **storageAccountSubscriptionId**: string
+* **storageEndpoint**: string
+
+## DataMaskingPolicyProperties
+### Properties
+* **applicationPrincipals**: string (ReadOnly)
+* **dataMaskingState**: 'Disabled' | 'Enabled' (Required)
+* **exemptPrincipals**: string
+* **maskingLevel**: string (ReadOnly)
+
 ## DataMaskingRuleProperties
 ### Properties
 * **aliasName**: string
 * **columnName**: string (Required)
 * **id**: string (ReadOnly)
+* **maskingFunction**: 'CCN' | 'Default' | 'Email' | 'Number' | 'SSN' | 'Text' (Required)
 * **numberFrom**: string
 * **numberTo**: string
 * **prefixSize**: string
 * **replacementString**: string
+* **ruleState**: 'Disabled' | 'Enabled'
 * **schemaName**: string (Required)
 * **suffixSize**: string
 * **tableName**: string (Required)
 
+## ExtendedSqlPoolBlobAuditingPolicyProperties
+### Properties
+* **auditActionsAndGroups**: string[]
+* **isAzureMonitorTargetEnabled**: bool
+* **isStorageSecondaryKeyInUse**: bool
+* **predicateExpression**: string
+* **queueDelayMs**: int
+* **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' (Required)
+* **storageAccountAccessKey**: string
+* **storageAccountSubscriptionId**: string
+* **storageEndpoint**: string
+
 ## GeoBackupPolicyProperties
 ### Properties
+* **state**: 'Disabled' | 'Enabled' (Required)
 * **storageType**: string (ReadOnly)
 
 ## MaintenanceWindowsProperties
@@ -703,6 +795,18 @@
 * **enabled**: bool
 * **syncIntervalInMinutes**: int
 
+## SensitivityLabelProperties
+### Properties
+* **columnName**: string (ReadOnly)
+* **informationType**: string
+* **informationTypeId**: string
+* **isDisabled**: bool (ReadOnly)
+* **labelId**: string
+* **labelName**: string
+* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None'
+* **schemaName**: string (ReadOnly)
+* **tableName**: string (ReadOnly)
+
 ## SecurityAlertPolicyProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
@@ -710,11 +814,13 @@
 * **emailAccountAdmins**: bool
 * **emailAddresses**: string[]
 * **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' | 'New' (Required)
 * **storageAccountAccessKey**: string
 * **storageEndpoint**: string
 
 ## TransparentDataEncryptionProperties
 ### Properties
+* **status**: 'Disabled' | 'Enabled'
 
 ## SqlPoolVulnerabilityAssessmentProperties
 ### Properties
@@ -728,6 +834,14 @@
 * **emails**: string[]
 * **emailSubscriptionAdmins**: bool
 * **isEnabled**: bool
+
+## SqlPoolVulnerabilityAssessmentRuleBaselineProperties
+### Properties
+* **baselineResults**: SqlPoolVulnerabilityAssessmentRuleBaselineItem[] (Required)
+
+## SqlPoolVulnerabilityAssessmentRuleBaselineItem
+### Properties
+* **result**: string[] (Required)
 
 ## WorkloadGroupProperties
 ### Properties

@@ -94,10 +94,12 @@
 ### Properties
 * **description**: string
 * **displayName**: string
+* **layout**: any
 * **parameters**: ParameterDefinitionCollection
 * **resourceGroups**: ResourceGroupDefinitionCollection
 * **status**: BlueprintStatus (ReadOnly)
 * **targetScope**: 'managementGroup' | 'subscription'
+* **versions**: any
 
 ## ParameterDefinitionCollection
 ### Properties
@@ -106,7 +108,8 @@
 
 ## ParameterDefinition
 ### Properties
-* **allowedValues**: array
+* **allowedValues**: any[]
+* **defaultValue**: any
 * **metadata**: ParameterDefinitionMetadata
 * **type**: 'array' | 'bool' | 'int' | 'object' | 'secureObject' | 'secureString' | 'string' (Required)
 
@@ -162,6 +165,7 @@
 * **dependsOn**: string[]
 * **description**: string
 * **displayName**: string
+* **principalIds**: any (Required)
 * **resourceGroup**: string
 * **roleDefinitionId**: string (Required)
 
@@ -177,6 +181,7 @@
 * **displayName**: string
 * **parameters**: ParameterValueCollection (Required)
 * **resourceGroup**: string
+* **template**: any (Required)
 
 ## ParameterValueCollection
 ### Properties

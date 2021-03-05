@@ -19,6 +19,7 @@
 
 ## Sku
 ### Properties
+* **name**: 'free' | 'standard' | 'standard2' (WriteOnly)
 
 ## SearchServiceCreateOrUpdateParametersTags
 ### Properties

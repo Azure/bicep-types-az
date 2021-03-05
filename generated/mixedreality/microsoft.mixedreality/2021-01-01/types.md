@@ -36,6 +36,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: '[object Object]'
 
 ## Sku
 ### Properties
@@ -43,6 +44,7 @@
 * **family**: string
 * **name**: string (Required)
 * **size**: string
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard'
 
 ## MixedRealityAccountProperties
 ### Properties

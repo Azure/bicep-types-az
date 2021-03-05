@@ -15,6 +15,7 @@
 ## EnterpriseKnowledgeGraphProperties
 ### Properties
 * **description**: string
+* **metadata**: any
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded'
 
 ## Sku

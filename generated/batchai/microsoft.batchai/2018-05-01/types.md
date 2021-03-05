@@ -64,6 +64,7 @@
 * **subnet**: ResourceId
 * **userAccountSettings**: UserAccountSettings (Required)
 * **virtualMachineConfiguration**: VirtualMachineConfiguration
+* **vmPriority**: 'dedicated' | 'lowpriority'
 * **vmSize**: string (Required)
 
 ## BatchAIError
@@ -356,6 +357,7 @@
 
 ## DataDisks
 ### Properties
+* **cachingType**: 'none' | 'readonly' | 'readwrite'
 * **diskCount**: int (Required)
 * **diskSizeInGB**: int (Required)
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' (Required)

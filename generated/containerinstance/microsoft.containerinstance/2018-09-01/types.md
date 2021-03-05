@@ -164,6 +164,7 @@
 ## Volume
 ### Properties
 * **azureFile**: AzureFileVolume
+* **emptyDir**: any
 * **gitRepo**: GitRepoVolume
 * **name**: string (Required)
 * **secret**: SecretVolume

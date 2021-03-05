@@ -289,6 +289,7 @@
 ### Base Properties
 ### AvroSerialization
 #### Properties
+* **properties**: any
 * **type**: 'Avro' (Required)
 
 ### CsvSerialization
@@ -308,11 +309,13 @@
 
 ### ParquetSerialization
 #### Properties
+* **properties**: any
 * **type**: 'Parquet' (Required)
 
 
 ## AvroSerialization
 ### Properties
+* **properties**: any
 * **type**: 'Avro' (Required)
 
 ## CsvSerialization
@@ -347,6 +350,7 @@
 
 ## ParquetSerialization
 ### Properties
+* **properties**: any
 * **type**: 'Parquet' (Required)
 
 ## ReferenceInputProperties

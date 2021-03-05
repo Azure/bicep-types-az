@@ -98,4 +98,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorDetails' with an undefine
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 1ms
-[6.16 s] Generation Complete
+[5.86 s] Generation Complete

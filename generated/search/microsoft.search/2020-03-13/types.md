@@ -26,13 +26,18 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned' (Required)
 
 ## SearchServiceProperties
 ### Properties
+* **hostingMode**: 'default' | 'highDensity'
 * **networkRuleSet**: NetworkRuleSet
 * **partitionCount**: int
 * **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **provisioningState**: 'failed' | 'provisioning' | 'succeeded' (ReadOnly)
+* **publicNetworkAccess**: 'disabled' | 'enabled'
 * **replicaCount**: int
+* **status**: 'degraded' | 'deleting' | 'disabled' | 'error' | 'provisioning' | 'running' (ReadOnly)
 * **statusDetails**: string (ReadOnly)
 
 ## NetworkRuleSet
@@ -63,9 +68,11 @@
 ### Properties
 * **actionsRequired**: string
 * **description**: string
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
 
 ## Sku
 ### Properties
+* **name**: 'basic' | 'free' | 'standard' | 'standard2' | 'standard3' | 'storage_optimized_l1' | 'storage_optimized_l2'
 
 ## ResourceTags
 ### Properties

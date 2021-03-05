@@ -89,6 +89,7 @@
 * **networkInterfaces**: NetworkInterface[]
 * **osProfile**: OsProfile
 * **roleName**: string
+* **userDataParameters**: any (ReadOnly)
 
 ## NetworkInterface
 ### Properties
@@ -130,6 +131,7 @@
 ### Properties
 * **device**: SubResource
 * **managedApplication**: SubResource (ReadOnly)
+* **managedApplicationParameters**: any
 * **networkFunctionUserConfigurations**: NetworkFunctionUserConfiguration[]
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly)
 * **serviceKey**: string (ReadOnly)
@@ -143,6 +145,7 @@
 * **networkInterfaces**: NetworkInterface[]
 * **osProfile**: NetworkFunctionUserConfigurationOsProfile
 * **roleName**: string
+* **userDataParameters**: any
 
 ## NetworkFunctionUserConfigurationOsProfile
 ### Properties
@@ -161,6 +164,8 @@
 ## VendorSkuPropertiesFormat
 ### Properties
 * **deploymentMode**: 'Azure' | 'PrivateEdgeZone' | 'Unknown'
+* **managedApplicationParameters**: any
+* **managedApplicationTemplate**: any
 * **networkFunctionTemplate**: NetworkFunctionTemplate
 * **preview**: bool
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly)
@@ -178,6 +183,8 @@
 * **roleName**: string
 * **roleType**: 'Unknown' | 'VirtualMachine'
 * **storageProfile**: StorageProfile
+* **userDataParameters**: any
+* **userDataTemplate**: any
 * **virtualMachineSize**: 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D1_v2' | 'Standard_D2_v2' | 'Standard_D3_v2' | 'Standard_D4_v2' | 'Standard_D5_v2' | 'Standard_DS11_v2' | 'Standard_DS12_v2' | 'Standard_DS13_v2' | 'Standard_DS1_v2' | 'Standard_DS2_v2' | 'Standard_DS3_v2' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_F1' | 'Standard_F16' | 'Standard_F16s' | 'Standard_F1s' | 'Standard_F2' | 'Standard_F2s' | 'Standard_F4' | 'Standard_F4s' | 'Standard_F8' | 'Standard_F8s' | 'Unknown'
 
 ## CustomProfile

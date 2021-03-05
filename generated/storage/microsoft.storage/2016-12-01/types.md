@@ -5,6 +5,7 @@
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'BlobStorage' | 'Storage' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: StorageAccountPropertiesCreateParameters
@@ -14,6 +15,7 @@
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
+* **accessTier**: 'Cool' | 'Hot'
 * **creationTime**: string (ReadOnly)
 * **customDomain**: CustomDomain
 * **enableHttpsTrafficOnly**: bool
@@ -21,8 +23,11 @@
 * **lastGeoFailoverTime**: string (ReadOnly)
 * **primaryEndpoints**: Endpoints (ReadOnly)
 * **primaryLocation**: string (ReadOnly)
+* **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly)
 * **secondaryEndpoints**: Endpoints (ReadOnly)
 * **secondaryLocation**: string (ReadOnly)
+* **statusOfPrimary**: 'available' | 'unavailable' (ReadOnly)
+* **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly)
 
 ## CustomDomain
 ### Properties
@@ -31,6 +36,7 @@
 
 ## Encryption
 ### Properties
+* **keySource**: '[object Object]' (Required)
 * **services**: EncryptionServices
 
 ## EncryptionServices
@@ -54,6 +60,8 @@
 
 ## Sku
 ### Properties
+* **name**: 'Premium_LRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_ZRS' (Required)
+* **tier**: 'Premium' | 'Standard' (ReadOnly)
 
 ## StorageAccountCreateParametersTags
 ### Properties

@@ -17,6 +17,7 @@
 * **galleries**: WorkbookTemplateGallery[] (Required)
 * **localized**: WorkbookTemplatePropertiesLocalized
 * **priority**: int
+* **templateData**: any (Required)
 
 ## WorkbookTemplateGallery
 ### Properties
@@ -34,6 +35,7 @@
 ## WorkbookTemplateLocalizedGallery
 ### Properties
 * **galleries**: WorkbookTemplateGallery[]
+* **templateData**: any
 
 ## WorkbookTemplateResourceTags
 ### Properties

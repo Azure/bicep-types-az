@@ -8,6 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AccountProperties
+* **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2019-05-01
@@ -18,6 +19,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PoolProperties (Required)
+* **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2019-05-01
@@ -28,6 +30,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: VolumeProperties (Required)
+* **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2019-05-01
@@ -38,6 +41,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SnapshotProperties
+* **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
 
 ## AccountProperties

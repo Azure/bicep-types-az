@@ -201,6 +201,7 @@
 ### Base Properties
 ### AvroSerialization
 #### Properties
+* **properties**: any
 * **type**: 'Avro' (Required)
 
 ### CsvSerialization
@@ -216,6 +217,7 @@
 
 ## AvroSerialization
 ### Properties
+* **properties**: any
 * **type**: 'Avro' (Required)
 
 ## CsvSerialization

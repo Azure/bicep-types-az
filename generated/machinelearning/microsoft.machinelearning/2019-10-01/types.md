@@ -20,6 +20,8 @@
 * **studioEndpoint**: string (ReadOnly)
 * **userStorageAccountId**: string (Required)
 * **workspaceId**: string (ReadOnly)
+* **workspaceState**: 'Deleted' | 'Disabled' | 'Enabled' | 'Migrated' | 'Registered' | 'Unregistered' | 'Updated' (ReadOnly)
+* **workspaceType**: 'Anonymous' | 'Free' | 'PaidPremium' | 'PaidStandard' | 'Production' (ReadOnly)
 
 ## Sku
 ### Properties

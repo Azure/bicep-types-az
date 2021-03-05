@@ -40,6 +40,7 @@
 * **description**: string
 * **displayName**: string (Required)
 * **id**: string (ReadOnly)
+* **properties**: any
 * **related**: LogAnalyticsQueryPackQueryPropertiesRelated
 * **tags**: LogAnalyticsQueryPackQueryPropertiesTags
 * **timeCreated**: string (ReadOnly)

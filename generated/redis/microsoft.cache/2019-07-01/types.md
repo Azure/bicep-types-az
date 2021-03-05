@@ -107,6 +107,7 @@
 * **linkedRedisCacheId**: string (Required)
 * **linkedRedisCacheLocation**: string (Required)
 * **provisioningState**: string (ReadOnly)
+* **serverRole**: 'Primary' | 'Secondary' (Required)
 
 ## ScheduleEntries
 ### Properties
@@ -114,6 +115,7 @@
 
 ## ScheduleEntry
 ### Properties
+* **dayOfWeek**: 'Everyday' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | 'Weekend' (Required)
 * **maintenanceWindow**: any
 * **startHourUtc**: int (Required)
 

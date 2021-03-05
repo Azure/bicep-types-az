@@ -8,6 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
+* **operationType**: 'create' | 'link' | 'unknown' | 'update' (WriteOnly)
 * **properties**: AccountResourceRequestProperties
 * **tags**: AccountResourceRequestTags
 * **type**: 'microsoft.visualstudio/account' (ReadOnly, DeployTimeConstant)

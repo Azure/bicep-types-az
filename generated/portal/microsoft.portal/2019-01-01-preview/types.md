@@ -38,6 +38,8 @@
 
 ## DashboardLensMetadata
 ### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## DashboardLensParts
 ### Properties
@@ -51,6 +53,8 @@
 
 ## DashboardPartsMetadata
 ### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## DashboardPartsPosition
 ### Properties
@@ -62,9 +66,13 @@
 
 ## DashboardPartsPositionMetadata
 ### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## DashboardPropertiesMetadata
 ### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## DashboardTags
 ### Properties

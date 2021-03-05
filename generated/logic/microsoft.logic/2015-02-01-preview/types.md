@@ -25,10 +25,13 @@
 * **accessEndpoint**: string (ReadOnly)
 * **changedTime**: string (ReadOnly)
 * **createdTime**: string (ReadOnly)
+* **definition**: any
 * **definitionLink**: ContentLink
 * **parameters**: WorkflowPropertiesParameters
 * **parametersLink**: ContentLink
+* **provisioningState**: 'Moving' | 'NotSpecified' | 'Succeeded' (ReadOnly)
 * **sku**: Sku
+* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended'
 * **version**: string (ReadOnly)
 
 ## ContentLink
@@ -36,6 +39,7 @@
 * **contentHash**: ContentHash
 * **contentSize**: int
 * **contentVersion**: string
+* **metadata**: any
 * **uri**: string
 
 ## ContentHash
@@ -50,9 +54,13 @@
 
 ## WorkflowParameter
 ### Properties
+* **metadata**: any
+* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String'
+* **value**: any
 
 ## Sku
 ### Properties
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard'
 * **plan**: ResourceReference
 
 ## ResourceReference

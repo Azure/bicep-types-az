@@ -27,7 +27,6 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING (Modeler/MissingType): The enum schema 'ResourceType' with an undefined type and enum values is ambigious. This has been auto-corrected to 'type:string'
 
 WARNING (Modeler/MissingType): The enum schema 'QuotaRequestState' with an undefined type and enum values is ambigious. This has been auto-corrected to 'type:string'
-WARNING: Unrecognized property type: any
 INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-capacity-2020-10-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -61,14 +60,13 @@ WARNING (Modeler/MissingType): The enum schema 'ContactMethodType' with an undef
 
 WARNING (Modeler/MissingType): The enum schema 'SupportContactType' with an undefined type and enum values is ambigious. This has been auto-corrected to 'type:string'
 WARNING: Skipping path '/subscriptions/{subscriptionId}/providers/Microsoft.Capacity/autoQuotaIncrease': Found mismatch between type segments (1) and name segments (0)
-WARNING: Unrecognized property type: any
 INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-capacity-2019-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-capacity-2018-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -102,14 +100,13 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING (Modeler/MissingType): The enum schema 'ResourceType' with an undefined type and enum values is ambigious. This has been auto-corrected to 'type:string'
 
 WARNING (Modeler/MissingType): The enum schema 'QuotaRequestState' with an undefined type and enum values is ambigious. This has been auto-corrected to 'type:string'
-WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-capacity-2020-10-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-capacity-2019-07-19"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -136,7 +133,6 @@ WARNING (Modeler/MissingType): The enum schema 'ContactMethodType' with an undef
 
 WARNING (Modeler/MissingType): The enum schema 'SupportContactType' with an undefined type and enum values is ambigious. This has been auto-corrected to 'type:string'
 WARNING: Skipping path '/subscriptions/{subscriptionId}/providers/Microsoft.Capacity/autoQuotaIncrease': Found mismatch between type segments (1) and name segments (0)
-WARNING: Unrecognized property type: any
 INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-capacity-2019-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -156,4 +152,4 @@ INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 0ms
-[33.48 s] Generation Complete
+[33.27 s] Generation Complete

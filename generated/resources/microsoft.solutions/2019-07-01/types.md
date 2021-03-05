@@ -44,11 +44,14 @@
 ### Properties
 * **artifacts**: ApplicationDefinitionArtifact[]
 * **authorizations**: ApplicationAuthorization[]
+* **createUiDefinition**: any
 * **deploymentPolicy**: ApplicationDeploymentPolicy
 * **description**: string
 * **displayName**: string
 * **isEnabled**: bool
 * **lockingPolicy**: ApplicationPackageLockingPolicyDefinition
+* **lockLevel**: 'CanNotDelete' | 'None' | 'ReadOnly' (Required)
+* **mainTemplate**: any
 * **managementPolicy**: ApplicationManagementPolicy
 * **notificationPolicy**: ApplicationNotificationPolicy
 * **packageFileUri**: string
@@ -57,6 +60,7 @@
 ## ApplicationDefinitionArtifact
 ### Properties
 * **name**: 'ApplicationResourceTemplate' | 'CreateUiDefinition' | 'MainTemplateParameters' | 'NotSpecified' (Required)
+* **type**: 'Custom' | 'NotSpecified' | 'Template' (Required)
 * **uri**: string (Required)
 
 ## ApplicationAuthorization
@@ -108,6 +112,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
 * **userAssignedIdentities**: IdentityUserAssignedIdentities
 
 ## IdentityUserAssignedIdentities
@@ -139,6 +144,8 @@
 * **jitAccessPolicy**: ApplicationJitAccessPolicy
 * **managedResourceGroupId**: string
 * **managementMode**: 'Managed' | 'NotSpecified' | 'Unmanaged' (ReadOnly)
+* **outputs**: any (ReadOnly)
+* **parameters**: any
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly)
 * **publisherTenantId**: string (ReadOnly)
 * **supportUrls**: ApplicationPackageSupportUrls (ReadOnly)
@@ -147,6 +154,7 @@
 ## ApplicationArtifact
 ### Properties
 * **name**: 'Authorizations' | 'CustomRoleDefinition' | 'NotSpecified' | 'ViewDefinition' (Required)
+* **type**: 'Custom' | 'NotSpecified' | 'Template' (Required)
 * **uri**: string (Required)
 
 ## ApplicationBillingDetailsDefinition

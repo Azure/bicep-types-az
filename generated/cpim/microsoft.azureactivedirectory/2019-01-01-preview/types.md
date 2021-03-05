@@ -20,6 +20,7 @@
 
 ## B2CTenantResourcePropertiesBillingConfig
 ### Properties
+* **billingType**: 'Auths' | 'MAU' (ReadOnly)
 * **effectiveStartDateUtc**: string (ReadOnly)
 
 ## CreateTenantProperties
@@ -29,6 +30,8 @@
 
 ## B2CResourceSKU
 ### Properties
+* **name**: 'PremiumP1' | 'PremiumP2' | 'Standard'
+* **tier**: '[object Object]'
 
 ## CreateTenantRequestBodyTags
 ### Properties

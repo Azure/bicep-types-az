@@ -276,6 +276,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
 * **userAssignedIdentities**: UserAssignedIdentityMap
 
 ## UserAssignedIdentityMap

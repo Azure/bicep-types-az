@@ -124,9 +124,11 @@
 ### Properties
 * **autoUpgradeMinorVersion**: bool
 * **forceUpdateTag**: string
+* **protectedSettings**: any
 * **provisionAfterExtensions**: string[]
 * **provisioningState**: string (ReadOnly)
 * **publisher**: string (Required)
+* **settings**: any
 * **type**: string (Required)
 * **typeHandlerVersion**: string (Required)
 

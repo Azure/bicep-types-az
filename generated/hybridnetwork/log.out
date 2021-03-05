@@ -119,14 +119,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefin
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorAdditionalInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 14ms
+INFORMATION: Autorest.AzureResourceSchema took 12ms
 Processing batch task - {"tag":"schema-hybridnetwork-2020-01-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -240,12 +233,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefin
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorAdditionalInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 7ms
-[11.72 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 5ms
+[11.55 s] Generation Complete

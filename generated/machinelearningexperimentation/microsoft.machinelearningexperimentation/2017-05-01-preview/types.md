@@ -41,6 +41,7 @@
 * **discoveryUri**: string (ReadOnly)
 * **friendlyName**: string
 * **keyVaultId**: string (Required)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **seats**: string
 * **storageAccount**: StorageAccountProperties (Required)
 * **vsoAccountId**: string (Required)
@@ -61,6 +62,7 @@
 * **creationDate**: string (ReadOnly)
 * **description**: string
 * **friendlyName**: string (Required)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **workspaceId**: string (ReadOnly)
 
 ## ResourceTags
@@ -76,6 +78,7 @@
 * **friendlyName**: string (Required)
 * **gitrepo**: string
 * **projectId**: string (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **workspaceId**: string (ReadOnly)
 
 ## ResourceTags

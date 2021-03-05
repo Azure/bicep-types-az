@@ -65,6 +65,7 @@
 
 ## ContainerServiceOrchestratorProfile
 ### Properties
+* **orchestratorType**: 'Custom' | 'DCOS' | 'Kubernetes' | 'Swarm' (Required)
 
 ## ContainerServicePrincipalProfile
 ### Properties

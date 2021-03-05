@@ -38,6 +38,7 @@
 ## Sku
 ### Properties
 * **family**: 'A' (Required)
+* **name**: 'premium' | 'standard' (Required)
 
 ## VaultCreateOrUpdateParametersTags
 ### Properties

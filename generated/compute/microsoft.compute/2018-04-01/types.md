@@ -143,6 +143,7 @@
 ### Properties
 * **code**: string
 * **displayStatus**: string
+* **level**: 'Error' | 'Info' | 'Warning'
 * **message**: string
 * **time**: string
 
@@ -162,6 +163,7 @@
 * **creationData**: CreationData (Required)
 * **diskSizeGB**: int
 * **encryptionSettings**: EncryptionSettings
+* **osType**: 'Linux' | 'Windows'
 * **provisioningState**: string (ReadOnly)
 * **timeCreated**: string (ReadOnly)
 
@@ -223,6 +225,7 @@
 ## ImageDataDisk
 ### Properties
 * **blobUri**: string
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **diskSizeGB**: int
 * **lun**: int (Required)
 * **managedDisk**: SubResource
@@ -232,8 +235,11 @@
 ## ImageOSDisk
 ### Properties
 * **blobUri**: string
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **diskSizeGB**: int
 * **managedDisk**: SubResource
+* **osState**: 'Generalized' | 'Specialized' (Required)
+* **osType**: 'Linux' | 'Windows' (Required)
 * **snapshot**: SubResource
 * **storageAccountType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS'
 
@@ -269,6 +275,7 @@
 * **identityIds**: string[]
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
 
 ## Plan
 ### Properties
@@ -293,6 +300,7 @@
 ### Properties
 * **automaticOSUpgrade**: bool
 * **autoOSUpgradePolicy**: AutoOSUpgradePolicy
+* **mode**: 'Automatic' | 'Manual' | 'Rolling'
 * **rollingUpgradePolicy**: RollingUpgradePolicy
 
 ## AutoOSUpgradePolicy
@@ -340,8 +348,10 @@
 ### Properties
 * **autoUpgradeMinorVersion**: bool
 * **forceUpdateTag**: string
+* **protectedSettings**: any
 * **provisioningState**: string (ReadOnly)
 * **publisher**: string
+* **settings**: any
 * **type**: string
 * **typeHandlerVersion**: string
 
@@ -453,7 +463,10 @@
 
 ## AdditionalUnattendContent
 ### Properties
+* **componentName**: '[object Object]'
 * **content**: string
+* **passName**: '[object Object]'
+* **settingName**: 'AutoLogon' | 'FirstLogonCommands'
 
 ## WinRMConfiguration
 ### Properties
@@ -462,6 +475,7 @@
 ## WinRMListener
 ### Properties
 * **certificateUrl**: string
+* **protocol**: 'Http' | 'Https'
 
 ## VirtualMachineScaleSetStorageProfile
 ### Properties
@@ -471,6 +485,7 @@
 
 ## VirtualMachineScaleSetDataDisk
 ### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
 * **diskSizeGB**: int
 * **lun**: int (Required)
@@ -492,11 +507,13 @@
 
 ## VirtualMachineScaleSetOSDisk
 ### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
 * **diskSizeGB**: int
 * **image**: VirtualHardDisk
 * **managedDisk**: VirtualMachineScaleSetManagedDiskParameters
 * **name**: string
+* **osType**: 'Linux' | 'Windows'
 * **vhdContainers**: string[]
 * **writeAcceleratorEnabled**: bool
 
@@ -581,6 +598,7 @@
 ### Properties
 * **isCustomerInitiatedMaintenanceAllowed**: bool
 * **lastOperationMessage**: string
+* **lastOperationResultCode**: 'MaintenanceAborted' | 'MaintenanceCompleted' | 'None' | 'RetryLater'
 * **maintenanceWindowEndTime**: string
 * **maintenanceWindowStartTime**: string
 * **preMaintenanceWindowEndTime**: string
@@ -633,6 +651,7 @@
 
 ## DataDisk
 ### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
 * **diskSizeGB**: int
 * **image**: VirtualHardDisk
@@ -649,12 +668,14 @@
 
 ## OSDisk
 ### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
 * **diskSizeGB**: int
 * **encryptionSettings**: DiskEncryptionSettings
 * **image**: VirtualHardDisk
 * **managedDisk**: ManagedDiskParameters
 * **name**: string
+* **osType**: 'Linux' | 'Windows'
 * **vhd**: VirtualHardDisk
 * **writeAcceleratorEnabled**: bool
 
@@ -672,8 +693,10 @@
 * **autoUpgradeMinorVersion**: bool
 * **forceUpdateTag**: string
 * **instanceView**: VirtualMachineExtensionInstanceView
+* **protectedSettings**: any
 * **provisioningState**: string (ReadOnly)
 * **publisher**: string
+* **settings**: any
 * **type**: string
 * **typeHandlerVersion**: string
 
@@ -692,6 +715,7 @@
 * **identityIds**: string[]
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
 
 ## VirtualMachineProperties
 ### Properties

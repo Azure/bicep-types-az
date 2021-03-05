@@ -71,6 +71,7 @@
 ## AssignmentReportResource
 ### Properties
 * **complianceStatus**: 'Compliant' | 'NonCompliant' | 'Pending' (ReadOnly)
+* **properties**: any (ReadOnly)
 * **reasons**: AssignmentReportResourceComplianceReason[]
 * **resourceId**: string (ReadOnly)
 

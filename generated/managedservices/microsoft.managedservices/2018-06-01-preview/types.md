@@ -21,6 +21,7 @@
 
 ## RegistrationAssignmentProperties
 ### Properties
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly)
 * **registrationDefinition**: RegistrationAssignmentPropertiesRegistrationDefinition (ReadOnly)
 * **registrationDefinitionId**: string (Required)
 
@@ -47,6 +48,7 @@
 * **managedByTenantName**: string
 * **manageeTenantId**: string
 * **manageeTenantName**: string
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating'
 * **registrationDefinitionName**: string
 
 ## Authorization
@@ -62,5 +64,6 @@
 * **description**: string
 * **managedByTenantId**: string (Required)
 * **managedByTenantName**: string (ReadOnly)
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly)
 * **registrationDefinitionName**: string
 

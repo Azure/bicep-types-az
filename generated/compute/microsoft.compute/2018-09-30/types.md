@@ -36,6 +36,7 @@
 * **diskState**: 'ActiveSAS' | 'ActiveUpload' | 'Attached' | 'ReadyToUpload' | 'Reserved' | 'Unattached' (ReadOnly)
 * **encryptionSettingsCollection**: EncryptionSettingsCollection
 * **hyperVGeneration**: 'V1' | 'V2'
+* **osType**: 'Linux' | 'Windows'
 * **provisioningState**: string (ReadOnly)
 * **timeCreated**: string (ReadOnly)
 
@@ -92,6 +93,7 @@
 * **diskSizeGB**: int
 * **encryptionSettingsCollection**: EncryptionSettingsCollection
 * **hyperVGeneration**: 'V1' | 'V2'
+* **osType**: 'Linux' | 'Windows'
 * **provisioningState**: string (ReadOnly)
 * **timeCreated**: string (ReadOnly)
 

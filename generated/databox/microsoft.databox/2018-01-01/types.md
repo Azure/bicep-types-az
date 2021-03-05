@@ -21,6 +21,7 @@
 * **isDeletable**: bool (ReadOnly)
 * **isShippingAddressEditable**: bool (ReadOnly)
 * **startTime**: string (ReadOnly)
+* **status**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' (ReadOnly)
 
 ## JobDetails
 * **Discriminator**: jobDetailsType
@@ -69,6 +70,7 @@
 ## NotificationPreference
 ### Properties
 * **sendNotification**: bool (Required)
+* **stageName**: 'AtAzureDC' | 'DataCopy' | 'Delivered' | 'DevicePrepared' | 'Dispatched' | 'PickedUp' (Required)
 
 ## CopyLogDetails
 * **Discriminator**: copyLogDetailsType
@@ -158,6 +160,9 @@
 ### Properties
 * **displayName**: string (ReadOnly)
 * **errorDetails**: JobErrorDetails[] (ReadOnly)
+* **jobStageDetails**: any (ReadOnly)
+* **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' (ReadOnly)
+* **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' | 'SucceededWithErrors' (ReadOnly)
 * **stageTime**: string (ReadOnly)
 
 ## Preferences
@@ -166,6 +171,7 @@
 
 ## ShippingAddress
 ### Properties
+* **addressType**: 'Commercial' | 'None' | 'Residential'
 * **city**: string
 * **companyName**: string
 * **country**: string (Required)
@@ -203,6 +209,7 @@
 * **bytesCopied**: int (ReadOnly)
 * **percentComplete**: int (ReadOnly)
 * **serialNumber**: string (ReadOnly)
+* **status**: 'Completed' | 'CompletedWithErrors' | 'Failed' | 'InProgress' | 'NotReturned' | 'NotStarted' (ReadOnly)
 
 ## DataBoxDiskJobDetailsDisksAndSizeDetails
 ### Properties
@@ -228,6 +235,7 @@
 ### Properties
 * **displayName**: string
 * **family**: string
+* **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required)
 
 ## ResourceTags
 ### Properties

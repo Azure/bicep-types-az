@@ -97,6 +97,7 @@
 ## ParameterValue
 ### Properties
 * **reference**: SecretValueReference
+* **value**: any
 
 ## SecretValueReference
 ### Properties
@@ -128,10 +129,12 @@
 ### Properties
 * **description**: string
 * **displayName**: string
+* **layout**: any
 * **parameters**: SharedBlueprintPropertiesParameters
 * **resourceGroups**: SharedBlueprintPropertiesResourceGroups
 * **status**: BlueprintStatus (ReadOnly)
 * **targetScope**: 'managementGroup' | 'subscription'
+* **versions**: any
 
 ## SharedBlueprintPropertiesParameters
 ### Properties
@@ -140,7 +143,8 @@
 
 ## ParameterDefinition
 ### Properties
-* **allowedValues**: array
+* **allowedValues**: any[]
+* **defaultValue**: any
 * **metadata**: ParameterDefinitionMetadata
 * **type**: 'array' | 'bool' | 'int' | 'object' | 'secureObject' | 'secureString' | 'string' (Required)
 
@@ -202,6 +206,7 @@
 * **dependsOn**: string[]
 * **description**: string
 * **displayName**: string
+* **principalIds**: any (Required)
 * **resourceGroup**: string
 * **roleDefinitionId**: string (Required)
 
@@ -217,6 +222,7 @@
 * **displayName**: string
 * **parameters**: TemplateArtifactPropertiesParameters (Required)
 * **resourceGroup**: string
+* **template**: any (Required)
 
 ## TemplateArtifactPropertiesParameters
 ### Properties

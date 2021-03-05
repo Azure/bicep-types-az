@@ -7,6 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: any (ReadOnly)
 * **sku**: AzureSku
 * **tags**: CreateWorkspaceCollectionRequestTags
 * **type**: 'Microsoft.PowerBI/workspaceCollections' (ReadOnly, DeployTimeConstant)

@@ -340,6 +340,7 @@
 * **hostName**: string (Required)
 * **keyVaultId**: string
 * **negotiateClientCertificate**: bool
+* **type**: 'Management' | 'Portal' | 'Proxy' | 'Scm' (Required)
 
 ## ApimResourceTags
 ### Properties
@@ -369,7 +370,7 @@
 * **isCurrent**: bool (ReadOnly, WriteOnly)
 * **isOnline**: bool (ReadOnly, WriteOnly)
 * **path**: string (Required, WriteOnly)
-* **protocols**: array (WriteOnly)
+* **protocols**: 'http' | 'https'[] (WriteOnly)
 * **serviceUrl**: string (WriteOnly)
 * **subscriptionKeyParameterNames**: SubscriptionKeyParameterNamesContract (WriteOnly)
 * **wsdlSelector**: ApiCreateOrUpdatePropertiesWsdlSelector (WriteOnly)
@@ -497,7 +498,7 @@
 ## AuthorizationServerContractProperties
 ### Properties
 * **authorizationEndpoint**: string (Required)
-* **authorizationMethods**: array
+* **authorizationMethods**: 'DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'PATCH' | 'POST' | 'PUT' | 'TRACE'[]
 * **bearerTokenSendingMethods**: 'authorizationHeader' | 'query'[]
 * **clientAuthenticationMethod**: 'Basic' | 'Body'[]
 * **clientId**: string (Required)
@@ -594,6 +595,7 @@
 * **description**: string
 * **displayName**: string (Required)
 * **externalId**: string
+* **type**: 'custom' | 'external' | 'system'
 
 ## IdentityProviderContractProperties
 ### Properties
@@ -649,6 +651,7 @@
 * **approvalRequired**: bool
 * **description**: string
 * **displayName**: string (Required)
+* **state**: 'notPublished' | 'published'
 * **subscriptionRequired**: bool
 * **subscriptionsLimit**: int
 * **terms**: string
@@ -671,6 +674,7 @@
 * **productId**: string (Required)
 * **secondaryKey**: string
 * **startDate**: string (ReadOnly)
+* **state**: 'active' | 'cancelled' | 'expired' | 'rejected' | 'submitted' | 'suspended'
 * **stateComment**: string (ReadOnly)
 * **userId**: string (Required)
 
@@ -719,6 +723,7 @@
 * **description**: string (ReadOnly)
 * **displayName**: string (ReadOnly)
 * **externalId**: string (ReadOnly)
+* **type**: 'custom' | 'external' | 'system' (ReadOnly)
 
 ## UserIdentityContract
 ### Properties

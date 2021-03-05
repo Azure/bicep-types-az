@@ -27,6 +27,7 @@
 ### Properties
 * **createdAt**: string (ReadOnly)
 * **metricId**: string (ReadOnly)
+* **provisioningState**: 'Created' | 'Deleted' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
 * **serviceBusEndpoint**: string (ReadOnly)
 * **updatedAt**: string (ReadOnly)
 

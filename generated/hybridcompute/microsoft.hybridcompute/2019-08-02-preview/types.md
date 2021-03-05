@@ -44,6 +44,7 @@
 * **osVersion**: string
 * **physicalLocation**: string
 * **provisioningState**: string (ReadOnly)
+* **status**: 'Connected' | 'Disconnected' | 'Error' (ReadOnly)
 * **vmId**: string (ReadOnly)
 
 ## ErrorDetail
@@ -64,6 +65,7 @@
 ### Properties
 * **code**: string
 * **displayStatus**: string
+* **level**: 'Error' | 'Info' | 'Warning'
 * **message**: string
 * **time**: string
 
@@ -81,8 +83,10 @@
 * **autoUpgradeMinorVersion**: bool
 * **forceUpdateTag**: string
 * **instanceView**: MachineExtensionInstanceView
+* **protectedSettings**: any
 * **provisioningState**: string (ReadOnly)
 * **publisher**: string
+* **settings**: any
 * **type**: string
 * **typeHandlerVersion**: string
 

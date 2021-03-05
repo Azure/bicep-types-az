@@ -45,5 +45,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'MarketplaceProductLogUpdate' w
 WARNING (PreCheck/SchemaMissingType): The schema 'ProductLog' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
-[7.16 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 1ms
+[8.06 s] Generation Complete

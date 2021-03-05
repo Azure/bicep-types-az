@@ -7,6 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: any
 * **tags**: StorageSyncServiceCreateParametersTags
 * **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant)
 
@@ -25,6 +26,7 @@
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: any
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2018-07-01
@@ -93,6 +95,7 @@
 * **provisioningState**: string (ReadOnly)
 * **serverLocalPath**: string
 * **serverResourceId**: string
+* **syncStatus**: any (ReadOnly)
 * **tierFilesOlderThanDays**: int
 * **volumeFreeSpacePercent**: int
 

@@ -60,15 +60,18 @@
 
 ## DiskProperties
 ### Properties
+* **accountType**: 'Premium_LRS' | 'Standard_LRS'
 * **creationData**: CreationData (Required)
 * **diskSizeGB**: int
 * **encryptionSettings**: EncryptionSettings
+* **osType**: 'Linux' | 'Windows'
 * **ownerId**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **timeCreated**: string (ReadOnly)
 
 ## CreationData
 ### Properties
+* **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Import' | 'Restore' (Required)
 * **imageReference**: ImageDiskReference
 * **sourceResourceId**: string
 * **sourceUri**: string
@@ -122,6 +125,7 @@
 ## ImageDataDisk
 ### Properties
 * **blobUri**: string
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **diskSizeGB**: int
 * **lun**: int (Required)
 * **managedDisk**: SubResource
@@ -130,8 +134,11 @@
 ## ImageOSDisk
 ### Properties
 * **blobUri**: string
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **diskSizeGB**: int
 * **managedDisk**: SubResource
+* **osState**: 'Generalized' | 'Specialized' (Required)
+* **osType**: 'Linux' | 'Windows' (Required)
 * **snapshot**: SubResource
 
 ## ResourceTags
@@ -148,6 +155,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: '[object Object]'
 
 ## Plan
 ### Properties
@@ -207,6 +215,7 @@
 ### Properties
 * **code**: string
 * **displayStatus**: string
+* **level**: 'Error' | 'Info' | 'Warning'
 * **message**: string
 * **time**: string
 
@@ -287,7 +296,10 @@
 
 ## AdditionalUnattendContent
 ### Properties
+* **componentName**: '[object Object]'
 * **content**: string
+* **passName**: '[object Object]'
+* **settingName**: 'AutoLogon' | 'FirstLogonCommands'
 
 ## WinRMConfiguration
 ### Properties
@@ -296,6 +308,7 @@
 ## WinRMListener
 ### Properties
 * **certificateUrl**: string
+* **protocol**: 'Http' | 'Https'
 
 ## StorageProfile
 ### Properties
@@ -305,6 +318,8 @@
 
 ## DataDisk
 ### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
+* **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
 * **diskSizeGB**: int
 * **image**: VirtualHardDisk
 * **lun**: int (Required)
@@ -319,6 +334,7 @@
 ## ManagedDiskParameters
 ### Properties
 * **id**: string
+* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS'
 
 ## ImageReference
 ### Properties
@@ -330,11 +346,14 @@
 
 ## OSDisk
 ### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
+* **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
 * **diskSizeGB**: int
 * **encryptionSettings**: DiskEncryptionSettings
 * **image**: VirtualHardDisk
 * **managedDisk**: ManagedDiskParameters
 * **name**: string
+* **osType**: 'Linux' | 'Windows'
 * **vhd**: VirtualHardDisk
 
 ## DiskEncryptionSettings
@@ -367,8 +386,10 @@
 * **autoUpgradeMinorVersion**: bool
 * **forceUpdateTag**: string
 * **instanceView**: VirtualMachineExtensionInstanceView
+* **protectedSettings**: any
 * **provisioningState**: string (ReadOnly)
 * **publisher**: string
+* **settings**: any
 * **type**: string
 * **typeHandlerVersion**: string
 

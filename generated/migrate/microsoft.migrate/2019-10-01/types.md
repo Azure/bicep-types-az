@@ -9,6 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ProjectProperties
+* **tags**: any
 * **type**: 'Microsoft.Migrate/assessmentProjects' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Migrate/assessmentProjects/groups@2019-10-01

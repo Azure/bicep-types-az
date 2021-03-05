@@ -25,6 +25,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
+* **contractVersion**: 'InvalidVersion' | 'V2011_09' | 'V2012_02' | 'V2012_05' | 'V2012_12' | 'V2013_04' | 'V2013_10' | 'V2013_11' | 'V2014_04' | 'V2014_06' | 'V2014_07' | 'V2014_09' | 'V2014_10' | 'V2014_12' | 'V2015_01' | 'V2015_02' | 'V2015_04' | 'V2015_05' | 'V2015_06' | 'V2015_07' | 'V2015_08' | 'V2015_10' | 'V2015_12' | 'V2016_01' | 'V2016_02' | 'V2016_04' | 'V2016_05' | 'V2016_07' | 'V2016_08' (ReadOnly, WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: RawCertificateData (Required, WriteOnly)
@@ -129,9 +130,11 @@
 
 ## ManagerIntrinsicSettings
 ### Properties
+* **type**: 'GardaV1' | 'HelsinkiV1' (Required)
 
 ## ManagerSku
 ### Properties
+* **name**: '[object Object]' (Required)
 
 ## ResourceTags
 ### Properties
@@ -144,12 +147,15 @@
 
 ## RawCertificateData
 ### Properties
+* **authType**: 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid' (WriteOnly)
 * **certificate**: string (Required, WriteOnly)
 
 ## AlertSettingsProperties
 ### Properties
 * **additionalRecipientEmailList**: string[]
 * **alertNotificationCulture**: string (Required)
+* **emailNotification**: 'Disabled' | 'Enabled' (Required)
+* **notificationToServiceOwners**: 'Disabled' | 'Enabled' (Required)
 
 ## BackupScheduleGroupProperties
 ### Properties
@@ -166,6 +172,7 @@
 
 ## AsymmetricEncryptedSecret
 ### Properties
+* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' (Required)
 * **encryptionCertificateThumbprint**: string
 * **value**: string (Required)
 
@@ -179,9 +186,12 @@
 ## FileShareProperties
 ### Properties
 * **adminUser**: string (Required)
+* **dataPolicy**: 'Cloud' | 'Invalid' | 'Local' | 'Tiered' (Required)
 * **description**: string
 * **localUsedCapacityInBytes**: int (ReadOnly)
+* **monitoringStatus**: 'Disabled' | 'Enabled' (Required)
 * **provisionedCapacityInBytes**: int (Required)
+* **shareStatus**: 'Offline' | 'Online' (Required)
 * **usedCapacityInBytes**: int (ReadOnly)
 
 ## IscsiServerProperties
@@ -195,8 +205,11 @@
 ## IscsiDiskProperties
 ### Properties
 * **accessControlRecords**: string[] (Required)
+* **dataPolicy**: 'Cloud' | 'Invalid' | 'Local' | 'Tiered' (Required)
 * **description**: string
+* **diskStatus**: 'Offline' | 'Online' (Required)
 * **localUsedCapacityInBytes**: int (ReadOnly)
+* **monitoringStatus**: 'Disabled' | 'Enabled' (Required)
 * **provisionedCapacityInBytes**: int (Required)
 * **usedCapacityInBytes**: int (ReadOnly)
 
@@ -212,6 +225,8 @@
 ## StorageAccountCredentialProperties
 ### Properties
 * **accessKey**: AsymmetricEncryptedSecret
+* **cloudType**: 'Azure' | 'HP' | 'OpenStack' | 'S3' | 'S3_RRS' (Required)
+* **enableSSL**: 'Disabled' | 'Enabled' (Required)
 * **endPoint**: string (Required)
 * **location**: string
 * **login**: string (Required)
@@ -219,5 +234,6 @@
 ## StorageDomainProperties
 ### Properties
 * **encryptionKey**: AsymmetricEncryptedSecret
+* **encryptionStatus**: 'Disabled' | 'Enabled' (Required)
 * **storageAccountCredentialIds**: string[] (Required)
 

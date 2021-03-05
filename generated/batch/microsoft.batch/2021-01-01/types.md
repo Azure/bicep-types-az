@@ -57,6 +57,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required)
 * **userAssignedIdentities**: BatchAccountIdentityUserAssignedIdentities
 
 ## BatchAccountIdentityUserAssignedIdentities
@@ -80,8 +81,11 @@
 * **encryption**: EncryptionProperties
 * **keyVaultReference**: KeyVaultReference
 * **lowPriorityCoreQuota**: int (ReadOnly)
+* **poolAllocationMode**: 'BatchService' | 'UserSubscription'
 * **poolQuota**: int (ReadOnly)
 * **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly)
+* **publicNetworkAccess**: 'Disabled' | 'Enabled'
 
 ## AutoStorageBaseProperties
 ### Properties
@@ -95,6 +99,7 @@
 
 ## EncryptionProperties
 ### Properties
+* **keySource**: 'Microsoft.Batch' | 'Microsoft.KeyVault'
 * **keyVaultProperties**: KeyVaultProperties
 
 ## KeyVaultProperties
@@ -118,6 +123,7 @@
 ### Properties
 * **privateEndpoint**: PrivateEndpoint (ReadOnly)
 * **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (ReadOnly)
+* **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## PrivateEndpoint
 ### Properties
@@ -127,6 +133,7 @@
 ### Properties
 * **actionRequired**: string (ReadOnly)
 * **description**: string (ReadOnly)
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly)
 
 ## BatchAccountCreateParametersTags
 ### Properties
@@ -143,6 +150,7 @@
 ### Properties
 * **format**: string (ReadOnly)
 * **lastActivationTime**: string (ReadOnly)
+* **state**: 'Active' | 'Pending' (ReadOnly)
 * **storageUrl**: string (ReadOnly)
 * **storageUrlExpiry**: string (ReadOnly)
 
@@ -150,8 +158,11 @@
 ### Properties
 * **data**: string (Required, WriteOnly)
 * **deleteCertificateError**: DeleteCertificateError (ReadOnly)
+* **format**: 'Cer' | 'Pfx'
 * **password**: string (WriteOnly)
+* **previousProvisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
 * **previousProvisioningStateTransitionTime**: string (ReadOnly)
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
 * **provisioningStateTransitionTime**: string (ReadOnly)
 * **publicData**: string (ReadOnly)
 * **thumbprint**: string
@@ -166,6 +177,7 @@
 
 ## BatchPoolIdentity
 ### Properties
+* **type**: 'None' | 'UserAssigned' (Required)
 * **userAssignedIdentities**: BatchPoolIdentityUserAssignedIdentities
 
 ## BatchPoolIdentityUserAssignedIdentities
@@ -180,6 +192,7 @@
 
 ## PoolProperties
 ### Properties
+* **allocationState**: 'Resizing' | 'Steady' | 'Stopping' (ReadOnly)
 * **allocationStateTransitionTime**: string (ReadOnly)
 * **applicationLicenses**: string[]
 * **applicationPackages**: ApplicationPackageReference[]
@@ -190,10 +203,12 @@
 * **currentLowPriorityNodes**: int (ReadOnly)
 * **deploymentConfiguration**: DeploymentConfiguration
 * **displayName**: string
+* **interNodeCommunication**: 'Disabled' | 'Enabled'
 * **lastModified**: string (ReadOnly)
 * **metadata**: MetadataItem[]
 * **mountConfiguration**: MountConfiguration[]
 * **networkConfiguration**: NetworkConfiguration
+* **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly)
 * **provisioningStateTransitionTime**: string (ReadOnly)
 * **resizeOperationStatus**: ResizeOperationStatus (ReadOnly)
 * **scaleSettings**: ScaleSettings
@@ -223,8 +238,9 @@
 ## CertificateReference
 ### Properties
 * **id**: string (Required)
+* **storeLocation**: 'CurrentUser' | 'LocalMachine'
 * **storeName**: string
-* **visibility**: array
+* **visibility**: 'RemoteUser' | 'StartTask' | 'Task'[]
 
 ## DeploymentConfiguration
 ### Properties
@@ -252,6 +268,7 @@
 ### Properties
 * **containerImageNames**: string[]
 * **containerRegistries**: ContainerRegistry[]
+* **type**: '[object Object]' (Required)
 
 ## ContainerRegistry
 ### Properties
@@ -261,19 +278,23 @@
 
 ## DataDisk
 ### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **diskSizeGB**: int (Required)
 * **lun**: int (Required)
+* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS'
 
 ## DiskEncryptionConfiguration
 ### Properties
-* **targets**: array
+* **targets**: 'OsDisk' | 'TemporaryDisk'[]
 
 ## VMExtension
 ### Properties
 * **autoUpgradeMinorVersion**: bool
 * **name**: string (Required)
+* **protectedSettings**: any
 * **provisionAfterExtensions**: string[]
 * **publisher**: string (Required)
+* **settings**: any
 * **type**: string (Required)
 * **typeHandlerVersion**: string
 
@@ -287,6 +308,7 @@
 
 ## NodePlacementConfiguration
 ### Properties
+* **policy**: 'Regional' | 'Zonal'
 
 ## WindowsConfiguration
 ### Properties
@@ -352,9 +374,11 @@
 * **frontendPortRangeStart**: int (Required)
 * **name**: string (Required)
 * **networkSecurityGroupRules**: NetworkSecurityGroupRule[]
+* **protocol**: 'TCP' | 'UDP' (Required)
 
 ## NetworkSecurityGroupRule
 ### Properties
+* **access**: 'Allow' | 'Deny' (Required)
 * **priority**: int (Required)
 * **sourceAddressPrefix**: string (Required)
 * **sourcePortRanges**: string[]
@@ -362,10 +386,12 @@
 ## PublicIPAddressConfiguration
 ### Properties
 * **ipAddressIds**: string[]
+* **provision**: 'BatchManaged' | 'NoPublicIPAddresses' | 'UserManaged'
 
 ## ResizeOperationStatus
 ### Properties
 * **errors**: ResizeError[]
+* **nodeDeallocationOption**: 'Requeue' | 'RetainedData' | 'TaskCompletion' | 'Terminate'
 * **resizeTimeout**: any
 * **startTime**: string
 * **targetDedicatedNodes**: int
@@ -389,6 +415,7 @@
 
 ## FixedScaleSettings
 ### Properties
+* **nodeDeallocationOption**: 'Requeue' | 'RetainedData' | 'TaskCompletion' | 'Terminate'
 * **resizeTimeout**: any
 * **targetDedicatedNodes**: int
 * **targetLowPriorityNodes**: int
@@ -408,6 +435,7 @@
 * **containerRunOptions**: string
 * **imageName**: string (Required)
 * **registry**: ContainerRegistry
+* **workingDirectory**: 'ContainerImageDefault' | 'TaskWorkingDirectory'
 
 ## EnvironmentSetting
 ### Properties
@@ -430,12 +458,16 @@
 
 ## AutoUserSpecification
 ### Properties
+* **elevationLevel**: 'Admin' | 'NonAdmin'
+* **scope**: 'Pool' | 'Task'
 
 ## TaskSchedulingPolicy
 ### Properties
+* **nodeFillType**: 'Pack' | 'Spread' (Required)
 
 ## UserAccount
 ### Properties
+* **elevationLevel**: 'Admin' | 'NonAdmin'
 * **linuxUserConfiguration**: LinuxUserConfiguration
 * **name**: string (Required)
 * **password**: string (Required)
@@ -449,4 +481,5 @@
 
 ## WindowsUserConfiguration
 ### Properties
+* **loginMode**: 'Batch' | 'Interactive'
 

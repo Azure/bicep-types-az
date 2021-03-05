@@ -61,11 +61,14 @@
 ### Properties
 * **createdAt**: string (ReadOnly)
 * **metricId**: string (ReadOnly)
+* **provisioningState**: 'Created' | 'Deleted' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
 * **serviceBusEndpoint**: string (ReadOnly)
 * **updatedAt**: string (ReadOnly)
 
 ## Sku
 ### Properties
+* **name**: '[object Object]' (Required)
+* **tier**: '[object Object]'
 
 ## TrackedResourceTags
 ### Properties
@@ -74,7 +77,7 @@
 
 ## AuthorizationRuleProperties
 ### Properties
-* **rights**: array (Required)
+* **rights**: 'Listen' | 'Manage' | 'Send'[] (Required)
 
 ## HybridConnectionProperties
 ### Properties
@@ -89,6 +92,7 @@
 * **createdAt**: string (ReadOnly)
 * **isDynamic**: bool (ReadOnly)
 * **listenerCount**: int (ReadOnly)
+* **relayType**: 'Http' | 'NetTcp'
 * **requiresClientAuthorization**: bool
 * **requiresTransportSecurity**: bool
 * **updatedAt**: string (ReadOnly)

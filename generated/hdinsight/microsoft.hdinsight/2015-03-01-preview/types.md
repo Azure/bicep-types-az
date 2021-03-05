@@ -28,6 +28,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
 * **userAssignedIdentities**: ClusterIdentityUserAssignedIdentities
 
 ## ClusterIdentityUserAssignedIdentities
@@ -55,14 +56,18 @@
 * **kafkaRestProperties**: KafkaRestProperties
 * **minSupportedTlsVersion**: string
 * **networkProperties**: NetworkProperties
+* **osType**: 'Linux' | 'Windows'
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly)
 * **quotaInfo**: QuotaInfo (ReadOnly)
 * **securityProfile**: SecurityProfile
 * **storageProfile**: StorageProfile (WriteOnly)
+* **tier**: 'Premium' | 'Standard'
 
 ## ClusterDefinition
 ### Properties
 * **blueprint**: string
 * **componentVersion**: ClusterDefinitionComponentVersion
+* **configurations**: any
 * **kind**: string
 
 ## ClusterDefinitionComponentVersion
@@ -103,7 +108,7 @@
 
 ## AutoscaleSchedule
 ### Properties
-* **days**: array
+* **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]
 * **timeAndCapacity**: AutoscaleTimeAndCapacity
 
 ## AutoscaleTimeAndCapacity
@@ -198,6 +203,7 @@
 ### Properties
 * **aaddsResourceId**: string
 * **clusterUsersGroupDNs**: string[]
+* **directoryType**: '[object Object]'
 * **domain**: string
 * **domainUsername**: string
 * **domainUserPassword**: any

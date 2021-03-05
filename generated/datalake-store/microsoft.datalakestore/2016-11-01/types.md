@@ -43,22 +43,33 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: '[object Object]' (Required)
 
 ## CreateDataLakeStoreAccountProperties
 ### Properties
 * **accountId**: string (ReadOnly)
 * **creationTime**: string (ReadOnly)
+* **currentTier**: 'Commitment_100TB' | 'Commitment_10TB' | 'Commitment_1PB' | 'Commitment_1TB' | 'Commitment_500TB' | 'Commitment_5PB' | 'Consumption' (ReadOnly)
 * **defaultGroup**: string
 * **encryptionConfig**: EncryptionConfig
+* **encryptionProvisioningState**: 'Creating' | 'Succeeded' (ReadOnly)
+* **encryptionState**: 'Disabled' | 'Enabled'
 * **endpoint**: string (ReadOnly)
+* **firewallAllowAzureIps**: 'Disabled' | 'Enabled'
 * **firewallRules**: CreateFirewallRuleWithAccountParameters[]
+* **firewallState**: 'Disabled' | 'Enabled'
 * **lastModifiedTime**: string (ReadOnly)
+* **newTier**: 'Commitment_100TB' | 'Commitment_10TB' | 'Commitment_1PB' | 'Commitment_1TB' | 'Commitment_500TB' | 'Commitment_5PB' | 'Consumption'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Patching' | 'Resuming' | 'Running' | 'Succeeded' | 'Suspending' | 'Undeleting' (ReadOnly)
+* **state**: 'Active' | 'Suspended' (ReadOnly)
 * **trustedIdProviders**: CreateTrustedIdProviderWithAccountParameters[]
+* **trustedIdProviderState**: 'Disabled' | 'Enabled'
 * **virtualNetworkRules**: CreateVirtualNetworkRuleWithAccountParameters[]
 
 ## EncryptionConfig
 ### Properties
 * **keyVaultMetaInfo**: KeyVaultMetaInfo
+* **type**: 'ServiceManaged' | 'UserManaged' (Required)
 
 ## KeyVaultMetaInfo
 ### Properties

@@ -49,6 +49,7 @@
 * **category**: string
 * **config**: string
 * **favoriteId**: string (ReadOnly)
+* **favoriteType**: 'shared' | 'user'
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **IsGeneratedFromTemplate**: bool
 * **name**: string (Required, DeployTimeConstant)
@@ -76,6 +77,7 @@
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'multistep' | 'ping'
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: WebTestProperties
@@ -180,6 +182,7 @@
 * **retryEnabled**: bool
 * **syntheticMonitorId**: string (Required)
 * **timeout**: int
+* **webTestKind**: 'multistep' | 'ping' (Required)
 * **webTestName**: string (Required)
 
 ## WebTestPropertiesConfiguration

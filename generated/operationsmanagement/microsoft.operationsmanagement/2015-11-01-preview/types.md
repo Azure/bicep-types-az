@@ -42,6 +42,7 @@
 * **parameters**: ArmTemplateParameter[] (Required)
 * **parentResourceType**: string (Required)
 * **provisioningState**: string (ReadOnly)
+* **template**: any (Required)
 
 ## ArmTemplateParameter
 ### Properties

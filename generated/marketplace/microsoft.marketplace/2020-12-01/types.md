@@ -65,5 +65,6 @@
 ### Properties
 * **justification**: string
 * **planId**: string
+* **requestDate**: any (ReadOnly)
 * **status**: 'Approved' | 'None' | 'Pending' | 'Rejected' (ReadOnly)
 

@@ -26,6 +26,16 @@
 * **tags**: TrackedResourceTags
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Sql/servers/databases/auditingSettings@2015-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **properties**: DatabaseBlobAuditingPolicyProperties
+* **type**: 'Microsoft.Sql/servers/databases/auditingSettings' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Sql/servers/databases/syncGroups@2015-05-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -158,6 +168,18 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DatabaseBlobAuditingPolicyProperties
+### Properties
+* **auditActionsAndGroups**: string[]
+* **isAzureMonitorTargetEnabled**: bool
+* **isStorageSecondaryKeyInUse**: bool
+* **queueDelayMs**: int
+* **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' (Required)
+* **storageAccountAccessKey**: string
+* **storageAccountSubscriptionId**: string
+* **storageEndpoint**: string
 
 ## SyncGroupProperties
 ### Properties

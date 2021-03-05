@@ -43,13 +43,18 @@
 ## JobDefinitionProperties
 ### Properties
 * **customerSecrets**: CustomerSecret[]
+* **dataServiceInput**: any
 * **dataSinkId**: string (Required)
 * **dataSourceId**: string (Required)
 * **lastModifiedTime**: string
+* **runLocation**: 'australiaeast' | 'australiasoutheast' | 'brazilsouth' | 'canadacentral' | 'canadaeast' | 'centralindia' | 'centralus' | 'eastasia' | 'eastus' | 'eastus2' | 'japaneast' | 'japanwest' | 'koreacentral' | 'koreasouth' | 'none' | 'northcentralus' | 'northeurope' | 'southcentralus' | 'southeastasia' | 'southindia' | 'uksouth' | 'ukwest' | 'westcentralus' | 'westeurope' | 'westindia' | 'westus' | 'westus2'
 * **schedules**: Schedule[]
+* **state**: 'Disabled' | 'Enabled' | 'Supported' (Required)
+* **userConfirmation**: 'NotRequired' | 'Required'
 
 ## CustomerSecret
 ### Properties
+* **algorithm**: 'None' | 'PlainText' | 'RSA1_5' | 'RSA_OAEP' (Required)
 * **keyIdentifier**: string (Required)
 * **keyValue**: string (Required)
 
@@ -62,5 +67,7 @@
 ### Properties
 * **customerSecrets**: CustomerSecret[]
 * **dataStoreTypeId**: string (Required)
+* **extendedProperties**: any
 * **repositoryId**: string
+* **state**: 'Disabled' | 'Enabled' | 'Supported' (Required)
 

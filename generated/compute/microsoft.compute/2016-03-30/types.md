@@ -29,6 +29,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: '[object Object]'
 
 ## Plan
 ### Properties
@@ -92,6 +93,7 @@
 ### Properties
 * **code**: string
 * **displayStatus**: string
+* **level**: 'Error' | 'Info' | 'Warning'
 * **message**: string
 * **time**: string
 
@@ -172,7 +174,10 @@
 
 ## AdditionalUnattendContent
 ### Properties
+* **componentName**: '[object Object]'
 * **content**: string
+* **passName**: '[object Object]'
+* **settingName**: 'AutoLogon' | 'FirstLogonCommands'
 
 ## WinRMConfiguration
 ### Properties
@@ -181,6 +186,7 @@
 ## WinRMListener
 ### Properties
 * **certificateUrl**: string
+* **protocol**: 'Http' | 'Https'
 
 ## StorageProfile
 ### Properties
@@ -190,6 +196,8 @@
 
 ## DataDisk
 ### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
+* **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
 * **diskSizeGB**: int
 * **image**: VirtualHardDisk
 * **lun**: int (Required)
@@ -209,10 +217,13 @@
 
 ## OSDisk
 ### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
+* **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
 * **diskSizeGB**: int
 * **encryptionSettings**: DiskEncryptionSettings
 * **image**: VirtualHardDisk
 * **name**: string (Required)
+* **osType**: 'Linux' | 'Windows'
 * **vhd**: VirtualHardDisk (Required)
 
 ## DiskEncryptionSettings
@@ -245,8 +256,10 @@
 * **autoUpgradeMinorVersion**: bool
 * **forceUpdateTag**: string
 * **instanceView**: VirtualMachineExtensionInstanceView
+* **protectedSettings**: any
 * **provisioningState**: string (ReadOnly)
 * **publisher**: string
+* **settings**: any
 * **type**: string
 * **typeHandlerVersion**: string
 

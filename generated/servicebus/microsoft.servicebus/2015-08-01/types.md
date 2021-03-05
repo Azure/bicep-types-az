@@ -79,6 +79,7 @@
 * **enabled**: bool
 * **provisioningState**: string (ReadOnly)
 * **serviceBusEndpoint**: string (ReadOnly)
+* **status**: 'Activating' | 'Active' | 'Created' | 'Creating' | 'Disabled' | 'Disabling' | 'Enabling' | 'Failed' | 'Removed' | 'Removing' | 'SoftDeleted' | 'SoftDeleting' | 'Unknown'
 * **updatedAt**: string (ReadOnly)
 
 ## Sku
@@ -94,7 +95,7 @@
 
 ## SharedAccessAuthorizationRuleProperties
 ### Properties
-* **rights**: array (Required)
+* **rights**: 'Listen' | 'Manage' | 'Send'[] (Required)
 
 ## QueueProperties
 ### Properties
@@ -108,6 +109,7 @@
 * **enableBatchedOperations**: bool
 * **enableExpress**: bool
 * **enablePartitioning**: bool
+* **entityAvailabilityStatus**: 'Available' | 'Limited' | 'Renaming' | 'Restoring' | 'Unknown'
 * **isAnonymousAccessible**: bool
 * **lockDuration**: string
 * **maxDeliveryCount**: int
@@ -116,6 +118,7 @@
 * **requiresDuplicateDetection**: bool
 * **requiresSession**: bool
 * **sizeInBytes**: int (ReadOnly)
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown'
 * **supportOrdering**: bool
 * **updatedAt**: string (ReadOnly)
 
@@ -138,12 +141,14 @@
 * **enableBatchedOperations**: bool
 * **enableExpress**: bool
 * **enablePartitioning**: bool
+* **entityAvailabilityStatus**: 'Available' | 'Limited' | 'Renaming' | 'Restoring' | 'Unknown'
 * **filteringMessagesBeforePublishing**: bool
 * **isAnonymousAccessible**: bool
 * **isExpress**: bool
 * **maxSizeInMegabytes**: int
 * **requiresDuplicateDetection**: bool
 * **sizeInBytes**: int (ReadOnly)
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown'
 * **subscriptionCount**: int (ReadOnly)
 * **supportOrdering**: bool
 * **updatedAt**: string (ReadOnly)
@@ -158,10 +163,12 @@
 * **deadLetteringOnMessageExpiration**: bool
 * **defaultMessageTimeToLive**: string
 * **enableBatchedOperations**: bool
+* **entityAvailabilityStatus**: 'Available' | 'Limited' | 'Renaming' | 'Restoring' | 'Unknown'
 * **isReadOnly**: bool
 * **lockDuration**: string
 * **maxDeliveryCount**: int
 * **messageCount**: int (ReadOnly)
 * **requiresSession**: bool
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown'
 * **updatedAt**: string (ReadOnly)
 

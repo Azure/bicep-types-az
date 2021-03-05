@@ -118,11 +118,13 @@
 
 ## ExampleRequestGlobalParameters
 ### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## ExampleRequestInputs
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: array[]
+* **Additional Properties Type**: any[][]
 
 ## ServiceInputOutputSpecification
 ### Properties
@@ -151,7 +153,7 @@
 
 ## ColumnSpecification
 ### Properties
-* **enum**: array
+* **enum**: any[]
 * **format**: 'Byte' | 'Char' | 'Complex128' | 'Complex64' | 'Date-time' | 'Date-timeOffset' | 'Double' | 'Duration' | 'Float' | 'Int16' | 'Int32' | 'Int64' | 'Int8' | 'Uint16' | 'Uint32' | 'Uint64' | 'Uint8'
 * **type**: 'Boolean' | 'Integer' | 'Number' | 'String' (Required)
 * **xMsIsnullable**: bool
@@ -174,6 +176,7 @@
 ## WebServiceParameter
 ### Properties
 * **certificateThumbprint**: string
+* **value**: any
 
 ## RealtimeConfiguration
 ### Properties

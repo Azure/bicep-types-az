@@ -92,6 +92,7 @@
 ## RawCertificateData
 ### Properties
 * **authType**: 'AAD' | 'ACS' | 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid' (WriteOnly)
+* **certificate**: any (WriteOnly)
 
 ## VaultExtendedInfo
 ### Properties

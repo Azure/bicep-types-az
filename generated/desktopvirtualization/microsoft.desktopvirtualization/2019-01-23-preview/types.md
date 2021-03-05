@@ -62,6 +62,7 @@
 * **description**: string
 * **filePath**: string
 * **friendlyName**: string
+* **iconContent**: any (ReadOnly)
 * **iconHash**: string (ReadOnly)
 * **iconIndex**: int
 * **iconPath**: string

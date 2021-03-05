@@ -461,7 +461,7 @@
 * **isCurrent**: bool (WriteOnly)
 * **isOnline**: bool (ReadOnly, WriteOnly)
 * **path**: string (Required, WriteOnly)
-* **protocols**: array (WriteOnly)
+* **protocols**: 'http' | 'https'[] (WriteOnly)
 * **serviceUrl**: string (WriteOnly)
 * **soapApiType**: 'http' | 'soap' (WriteOnly)
 * **sourceApiId**: string (WriteOnly)
@@ -632,6 +632,7 @@
 
 ## SchemaDocumentProperties
 ### Properties
+* **definitions**: any
 * **value**: string
 
 ## TagDescriptionBaseProperties
@@ -645,7 +646,7 @@
 ## AuthorizationServerContractProperties
 ### Properties
 * **authorizationEndpoint**: string (Required)
-* **authorizationMethods**: array
+* **authorizationMethods**: 'DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'PATCH' | 'POST' | 'PUT' | 'TRACE'[]
 * **bearerTokenSendingMethods**: 'authorizationHeader' | 'query'[]
 * **clientAuthenticationMethod**: 'Basic' | 'Body'[]
 * **clientId**: string (Required)
@@ -772,6 +773,7 @@
 
 ## AssociationContractProperties
 ### Properties
+* **provisioningState**: '[object Object]' (WriteOnly)
 
 ## GatewayCertificateAuthorityContractProperties
 ### Properties
@@ -792,6 +794,7 @@
 * **description**: string
 * **displayName**: string (Required)
 * **externalId**: string
+* **type**: 'custom' | 'external' | 'system'
 
 ## IdentityProviderCreateContractProperties
 ### Properties
@@ -849,6 +852,7 @@
 * **approvalRequired**: bool
 * **description**: string
 * **displayName**: string (Required)
+* **state**: 'notPublished' | 'published'
 * **subscriptionRequired**: bool
 * **subscriptionsLimit**: int
 * **terms**: string
@@ -866,6 +870,7 @@
 * **scope**: string (Required)
 * **secondaryKey**: string
 * **startDate**: string (ReadOnly)
+* **state**: 'active' | 'cancelled' | 'expired' | 'rejected' | 'submitted' | 'suspended'
 * **stateComment**: string (ReadOnly)
 
 ## TagContractProperties
@@ -915,6 +920,7 @@
 * **description**: string (ReadOnly)
 * **displayName**: string (ReadOnly)
 * **externalId**: string (ReadOnly)
+* **type**: 'custom' | 'external' | 'system' (ReadOnly)
 
 ## UserIdentityContract
 ### Properties

@@ -138,6 +138,7 @@
 ## ServiceUnit
 ### Properties
 * **artifacts**: ServiceUnitArtifacts (ReadOnly)
+* **deploymentMode**: 'Complete' | 'Incremental' (ReadOnly)
 * **name**: string (ReadOnly)
 * **steps**: RolloutStep[] (ReadOnly)
 * **targetResourceGroup**: string (ReadOnly)
@@ -220,6 +221,7 @@
 ## ServiceUnitResourceProperties
 ### Properties
 * **artifacts**: ServiceUnitArtifacts
+* **deploymentMode**: 'Complete' | 'Incremental' (Required)
 * **targetResourceGroup**: string (Required)
 
 ## TrackedResourceTags
@@ -278,6 +280,7 @@
 ## RestRequest
 ### Properties
 * **authentication**: RestRequestAuthentication (Required)
+* **method**: 'GET' | 'POST' (Required)
 * **uri**: string (Required)
 
 ## RestRequestAuthentication
@@ -286,6 +289,7 @@
 ### Base Properties
 ### ApiKeyAuthentication
 #### Properties
+* **in**: 'Header' | 'Query' (Required)
 * **name**: string (Required)
 * **type**: 'ApiKey' (Required)
 * **value**: string (Required)
@@ -297,6 +301,7 @@
 
 ## ApiKeyAuthentication
 ### Properties
+* **in**: 'Header' | 'Query' (Required)
 * **name**: string (Required)
 * **type**: 'ApiKey' (Required)
 * **value**: string (Required)
@@ -313,6 +318,7 @@
 ## RestResponseRegex
 ### Properties
 * **matches**: string[]
+* **matchQuantifier**: 'All' | 'Any'
 
 ## WaitStepProperties
 ### Properties

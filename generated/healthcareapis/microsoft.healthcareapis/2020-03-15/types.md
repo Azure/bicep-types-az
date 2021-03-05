@@ -7,6 +7,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: ResourceIdentity
+* **kind**: 'fhir' | 'fhir-R4' | 'fhir-Stu3' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ServicesProperties
