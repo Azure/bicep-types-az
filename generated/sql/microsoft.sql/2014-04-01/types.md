@@ -12,6 +12,15 @@
 * **tags**: TrackedResourceTags
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Sql/servers/administrators@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **properties**: ServerAdministratorProperties
+* **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Sql/servers/advisors@2014-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -101,6 +110,17 @@
 * **properties**: DatabaseConnectionPolicyProperties
 * **type**: 'Microsoft.Sql/servers/databases/connectionPolicies' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Sql/servers/databases/dataMaskingPolicies@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
+* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **properties**: DataMaskingPolicyProperties
+* **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Sql/servers/databases/dataMaskingPolicies/rules@2014-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -183,6 +203,7 @@
 * **externalAdministratorLogin**: string (ReadOnly)
 * **externalAdministratorSid**: string (ReadOnly)
 * **fullyQualifiedDomainName**: string (ReadOnly)
+* **state**: 'Disabled' | 'Ready' (ReadOnly)
 * **version**: '12.0' | '2.0'
 
 ## TrackedResourceTags
@@ -190,8 +211,17 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ServerAdministratorProperties
+### Properties
+* **administratorType**: '[object Object]' (Required)
+* **login**: string (Required)
+* **sid**: string (Required)
+* **tenantId**: string (Required)
+
 ## AdvisorProperties
 ### Properties
+* **advisorStatus**: 'GA' | 'LimitedPublicPreview' | 'PrivatePreview' | 'PublicPreview' (ReadOnly)
+* **autoExecuteValue**: 'Default' | 'Disabled' | 'Enabled' (Required)
 * **lastChecked**: string (ReadOnly)
 * **recommendationsStatus**: string (ReadOnly)
 
@@ -216,6 +246,7 @@
 
 ## ServerConnectionPolicyProperties
 ### Properties
+* **connectionType**: 'Default' | 'Proxy' | 'Redirect' (Required)
 
 ## DatabaseProperties
 ### Properties
@@ -231,6 +262,7 @@
 * **elasticPoolName**: string
 * **failoverGroupId**: string (ReadOnly)
 * **maxSizeBytes**: string
+* **readScale**: 'Disabled' | 'Enabled'
 * **recommendedIndex**: RecommendedIndex[] (ReadOnly)
 * **recoveryServicesRecoveryPointResourceId**: string
 * **requestedServiceObjectiveId**: string
@@ -254,14 +286,17 @@
 
 ## RecommendedIndexProperties
 ### Properties
+* **action**: 'Create' | 'Drop' | 'Rebuild' (ReadOnly)
 * **columns**: string[] (ReadOnly)
 * **created**: string (ReadOnly)
 * **estimatedImpact**: OperationImpact[] (ReadOnly)
 * **includedColumns**: string[] (ReadOnly)
 * **indexScript**: string (ReadOnly)
+* **indexType**: 'CLUSTERED COLUMNSTORE' | 'CLUSTERED' | 'COLUMNSTORE' | 'NONCLUSTERED' (ReadOnly)
 * **lastModified**: string (ReadOnly)
 * **reportedImpact**: OperationImpact[] (ReadOnly)
 * **schema**: string (ReadOnly)
+* **state**: 'Active' | 'Blocked' | 'Executing' | 'Expired' | 'Ignored' | 'Pending Revert' | 'Pending' | 'Reverted' | 'Reverting' | 'Success' | 'Verifying' (ReadOnly)
 * **table**: string (ReadOnly)
 
 ## OperationImpact
@@ -316,6 +351,7 @@
 
 ## TransparentDataEncryptionProperties
 ### Properties
+* **status**: 'Disabled' | 'Enabled'
 
 ## TrackedResourceTags
 ### Properties
@@ -347,15 +383,24 @@
 * **useServerDefault**: string
 * **visibility**: string
 
+## DataMaskingPolicyProperties
+### Properties
+* **applicationPrincipals**: string (ReadOnly)
+* **dataMaskingState**: 'Disabled' | 'Enabled' (Required)
+* **exemptPrincipals**: string
+* **maskingLevel**: string (ReadOnly)
+
 ## DataMaskingRuleProperties
 ### Properties
 * **aliasName**: string (WriteOnly)
 * **columnName**: string (Required, WriteOnly)
 * **id**: string (ReadOnly, WriteOnly)
+* **maskingFunction**: 'CCN' | 'Default' | 'Email' | 'Number' | 'SSN' | 'Text' (Required, WriteOnly)
 * **numberFrom**: string (WriteOnly)
 * **numberTo**: string (WriteOnly)
 * **prefixSize**: string (WriteOnly)
 * **replacementString**: string (WriteOnly)
+* **ruleState**: 'Disabled' | 'Enabled' (WriteOnly)
 * **schemaName**: string (Required, WriteOnly)
 * **suffixSize**: string (WriteOnly)
 * **tableName**: string (Required, WriteOnly)
@@ -364,20 +409,27 @@
 ### Properties
 * **administratorLogin**: string (Required, WriteOnly)
 * **administratorLoginPassword**: string (Required, WriteOnly)
+* **authenticationType**: 'ADPassword' | 'SQL' (WriteOnly)
+* **operationMode**: '[object Object]' (Required, WriteOnly)
 * **storageKey**: string (Required, WriteOnly)
+* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly)
 * **storageUri**: string (Required, WriteOnly)
 
 ## GeoBackupPolicyProperties
 ### Properties
+* **state**: 'Disabled' | 'Enabled' (Required)
 * **storageType**: string (ReadOnly)
 
 ## DatabaseSecurityAlertPolicyProperties
 ### Properties
 * **disabledAlerts**: string
+* **emailAccountAdmins**: 'Disabled' | 'Enabled'
 * **emailAddresses**: string
 * **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' | 'New' (Required)
 * **storageAccountAccessKey**: string
 * **storageEndpoint**: string
+* **useServerDefault**: 'Disabled' | 'Enabled'
 
 ## ElasticPoolProperties
 ### Properties

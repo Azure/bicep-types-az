@@ -43,6 +43,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' (Required)
 * **userAssignedIdentities**: IdentityUserAssignedIdentities
 
 ## IdentityUserAssignedIdentities

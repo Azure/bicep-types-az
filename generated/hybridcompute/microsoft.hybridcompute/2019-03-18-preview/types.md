@@ -31,6 +31,7 @@
 * **osVersion**: string (ReadOnly)
 * **physicalLocation**: string
 * **provisioningState**: string (ReadOnly)
+* **status**: 'Connected' | 'Disconnected' | 'Error' (ReadOnly)
 * **vmId**: string (ReadOnly)
 
 ## ErrorDetail

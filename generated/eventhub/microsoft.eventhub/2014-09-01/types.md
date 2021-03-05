@@ -59,6 +59,7 @@
 * **metricId**: string (ReadOnly)
 * **provisioningState**: string
 * **serviceBusEndpoint**: string
+* **status**: 'Activating' | 'Active' | 'Created' | 'Creating' | 'Disabled' | 'Disabling' | 'Enabling' | 'Failed' | 'Removed' | 'Removing' | 'SoftDeleted' | 'SoftDeleting' | 'Unknown'
 * **updatedAt**: string
 
 ## Sku
@@ -74,7 +75,7 @@
 
 ## SharedAccessAuthorizationRuleProperties
 ### Properties
-* **rights**: array (Required)
+* **rights**: 'Listen' | 'Manage' | 'Send'[] (Required)
 
 ## EventHubProperties
 ### Properties
@@ -82,6 +83,7 @@
 * **messageRetentionInDays**: int
 * **partitionCount**: int
 * **partitionIds**: string[] (ReadOnly)
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown'
 * **updatedAt**: string (ReadOnly)
 
 ## ConsumerGroupProperties

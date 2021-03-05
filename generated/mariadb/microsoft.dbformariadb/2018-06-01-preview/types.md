@@ -74,6 +74,7 @@
 * **masterServerId**: string (ReadOnly)
 * **replicaCapacity**: int (ReadOnly)
 * **replicationRole**: string (ReadOnly)
+* **sslEnforcement**: 'Disabled' | 'Enabled'
 * **storageProfile**: StorageProfile
 * **userVisibleState**: 'Disabled' | 'Dropping' | 'Ready' (ReadOnly)
 * **version**: '5.6' | '5.7'
@@ -167,6 +168,7 @@
 * **emailAccountAdmins**: bool
 * **emailAddresses**: string[]
 * **retentionDays**: int
+* **state**: 'Disabled' | 'Enabled' (Required)
 * **storageAccountAccessKey**: string
 * **storageEndpoint**: string
 

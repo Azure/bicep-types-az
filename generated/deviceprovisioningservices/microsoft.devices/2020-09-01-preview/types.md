@@ -97,8 +97,10 @@
 
 ## IpFilterRule
 ### Properties
+* **action**: 'Accept' | 'Reject' (Required)
 * **filterName**: string (Required)
 * **ipMask**: string (Required)
+* **target**: 'all' | 'deviceApi' | 'serviceApi'
 
 ## PrivateEndpointConnection
 ### Properties

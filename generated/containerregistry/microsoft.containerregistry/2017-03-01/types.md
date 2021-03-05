@@ -17,6 +17,7 @@
 * **adminUserEnabled**: bool
 * **creationDate**: string (ReadOnly)
 * **loginServer**: string (ReadOnly)
+* **provisioningState**: 'Creating' | 'Succeeded' (ReadOnly)
 * **storageAccount**: StorageAccountParameters (Required)
 
 ## StorageAccountParameters

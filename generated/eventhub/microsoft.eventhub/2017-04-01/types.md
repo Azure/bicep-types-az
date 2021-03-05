@@ -97,6 +97,8 @@
 * **alternateName**: string
 * **partnerNamespace**: string
 * **pendingReplicationOperationsCount**: int (ReadOnly)
+* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly)
+* **role**: 'Primary' | 'PrimaryNotReplicating' | 'Secondary' (ReadOnly)
 
 ## EventhubProperties
 ### Properties
@@ -105,12 +107,14 @@
 * **messageRetentionInDays**: int
 * **partitionCount**: int
 * **partitionIds**: string[] (ReadOnly)
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown'
 * **updatedAt**: string (ReadOnly)
 
 ## CaptureDescription
 ### Properties
 * **destination**: Destination
 * **enabled**: bool
+* **encoding**: 'Avro' | 'AvroDeflate'
 * **intervalInSeconds**: int
 * **sizeLimitInBytes**: int
 * **skipEmptyArchives**: bool

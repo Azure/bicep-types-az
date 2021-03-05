@@ -334,9 +334,13 @@
 
 ## EntityCommonPropertiesAdditionalData
 ### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## ThreatIntelligenceIndicatorPropertiesExtensions
 ### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## ThreatIntelligenceGranularMarkingModel
 ### Properties
@@ -386,7 +390,9 @@
 ### Properties
 * **created**: string (WriteOnly)
 * **createdBy**: UserInfo (WriteOnly)
+* **entityMapping**: any (WriteOnly)
 * **isDeleted**: bool (WriteOnly)
+* **itemsKeyValue**: any (Required, WriteOnly)
 * **tenantId**: string (WriteOnly)
 * **updated**: string (WriteOnly)
 * **updatedBy**: UserInfo (WriteOnly)

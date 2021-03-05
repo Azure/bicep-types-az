@@ -11,6 +11,7 @@
 * **properties**: CacheProperties
 * **sku**: CacheSku
 * **systemData**: SystemData (ReadOnly)
+* **tags**: any
 * **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorageCache/caches/storageTargets@2020-03-01
@@ -28,6 +29,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned'
 
 ## CacheProperties
 ### Properties

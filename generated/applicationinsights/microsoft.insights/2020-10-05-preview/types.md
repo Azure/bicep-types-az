@@ -5,6 +5,7 @@
 ### Properties
 * **apiVersion**: '2020-10-05-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'multistep' | 'ping'
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: WebTestProperties
@@ -28,6 +29,7 @@
 * **SSLCheck**: bool
 * **syntheticMonitorId**: string (Required)
 * **timeout**: int
+* **webTestKind**: 'basic' | 'multistep' | 'ping' | 'standard' (Required)
 * **webTestName**: string (Required)
 
 ## WebTestPropertiesConfiguration

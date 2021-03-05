@@ -39,6 +39,8 @@
 
 ## DetectorParameters
 ### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## ThrottlingInformation
 ### Properties

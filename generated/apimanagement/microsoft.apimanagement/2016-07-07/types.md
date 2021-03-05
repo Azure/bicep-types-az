@@ -18,13 +18,15 @@
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant)
 * **authenticationSettings**: AuthenticationSettingsContract (WriteOnly)
+* **content**: any (ReadOnly)
 * **description**: string (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **path**: string (Required, WriteOnly)
-* **protocols**: array (Required, WriteOnly)
+* **protocols**: 'Http' | 'Https'[] (Required, WriteOnly)
 * **requestId**: string (ReadOnly)
 * **serviceUrl**: string (Required, WriteOnly)
+* **statusCode**: 'Accepted' | 'Conflict' | 'Continue' | 'Created' | 'NotFound' | 'OK' (ReadOnly)
 * **subscriptionKeyParameterNames**: SubscriptionKeyParameterNamesContract (WriteOnly)
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant)
 
@@ -47,15 +49,15 @@
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant)
 * **authorizationEndpoint**: string (Required)
-* **authorizationMethods**: array
-* **bearerTokenSendingMethods**: array
-* **clientAuthenticationMethod**: array
+* **authorizationMethods**: 'DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'PATCH' | 'POST' | 'PUT' | 'TRACE'[]
+* **bearerTokenSendingMethods**: 'authorizationHeader' | 'query'[]
+* **clientAuthenticationMethod**: 'Basic' | 'Body'[]
 * **clientId**: string (Required)
 * **clientRegistrationEndpoint**: string (Required)
 * **clientSecret**: string
 * **defaultScope**: string
 * **description**: string
-* **grantTypes**: array (Required)
+* **grantTypes**: 'authorizationCode' | 'clientCredentials' | 'implicit' | 'resourceOwnerPassword'[] (Required)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **resourceOwnerPassword**: string
@@ -141,6 +143,7 @@
 * **description**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
+* **state**: 'NotPublished' | 'Published'
 * **subscriptionRequired**: bool
 * **subscriptionsLimit**: int
 * **terms**: string
@@ -171,6 +174,7 @@
 * **productId**: string (Required)
 * **secondaryKey**: string
 * **startDate**: string (ReadOnly)
+* **state**: 'Active' | 'Cancelled' | 'Expired' | 'Rejected' | 'Submitted' | 'Suspended'
 * **stateComment**: string (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/service/subscriptions' (ReadOnly, DeployTimeConstant)
 * **userId**: string (Required)
@@ -188,6 +192,7 @@
 * **note**: string
 * **password**: string (Required, WriteOnly)
 * **registrationDate**: string (ReadOnly)
+* **state**: 'Active' | 'Blocked'
 * **type**: 'Microsoft.ApiManagement/service/users' (ReadOnly, DeployTimeConstant)
 
 ## ApiManagementServiceProperties
@@ -207,10 +212,12 @@
 * **staticIPs**: string[] (ReadOnly)
 * **targetProvisioningState**: string (ReadOnly)
 * **vpnconfiguration**: VirtualNetworkConfiguration
+* **vpnType**: 'External' | 'Internal' | 'None'
 
 ## AdditionalRegion
 ### Properties
 * **location**: string (Required)
+* **skuType**: 'Developer' | 'Premium' | 'Standard' (Required)
 * **skuUnitCount**: int
 * **staticIPs**: string[] (ReadOnly)
 * **vpnconfiguration**: VirtualNetworkConfiguration
@@ -231,6 +238,7 @@
 ### Properties
 * **certificate**: CertificateInformation (Required)
 * **hostname**: string (Required)
+* **type**: 'Management' | 'Portal' | 'Proxy' | 'Scm' (Required)
 
 ## CertificateInformation
 ### Properties
@@ -241,6 +249,7 @@
 ## ApiManagementServiceSkuProperties
 ### Properties
 * **capacity**: int
+* **name**: 'Developer' | 'Premium' | 'Standard' (Required)
 
 ## ApiManagementServiceBaseParametersTags
 ### Properties

@@ -59,6 +59,7 @@
 ### Properties
 * **emailAddress**: string (Required)
 * **name**: string (Required)
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly)
 * **useCommonAlertSchema**: bool (Required)
 
 ## ItsmReceiver
@@ -81,6 +82,7 @@
 * **countryCode**: string (Required)
 * **name**: string (Required)
 * **phoneNumber**: string (Required)
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly)
 
 ## VoiceReceiver
 ### Properties

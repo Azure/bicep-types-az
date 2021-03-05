@@ -29,6 +29,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required)
 * **userAssignedIdentities**: IdentityUserAssignedIdentities
 
 ## IdentityUserAssignedIdentities

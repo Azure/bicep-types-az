@@ -54,6 +54,7 @@
 * **critical**: bool
 * **enabled**: bool
 * **name**: string
+* **namespaceType**: 'Messaging' | 'NotificationHub'
 * **provisioningState**: string
 * **region**: string
 * **scaleUnit**: string
@@ -76,7 +77,7 @@
 
 ## SharedAccessAuthorizationRuleProperties
 ### Properties
-* **rights**: array
+* **rights**: 'Listen' | 'Manage' | 'Send'[]
 
 ## ResourceTags
 ### Properties

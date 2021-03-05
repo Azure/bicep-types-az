@@ -364,6 +364,7 @@
 
 ## ConnectToSourceMySqlTaskInput
 ### Properties
+* **checkPermissionsGroup**: 'Default' | 'MigrationFromMySQLToAzureDBForMySQL' | 'MigrationFromSqlServerToAzureDB' | 'MigrationFromSqlServerToAzureMI'
 * **sourceConnectionInfo**: MySqlConnectionInfo (Required)
 * **targetPlatform**: 'AzureDbForMySQL' | 'SqlServer'
 
@@ -410,6 +411,7 @@
 
 ## ConnectToSourceSqlServerTaskInput
 ### Properties
+* **checkPermissionsGroup**: 'Default' | 'MigrationFromMySQLToAzureDBForMySQL' | 'MigrationFromSqlServerToAzureDB' | 'MigrationFromSqlServerToAzureMI'
 * **collectAgentJobs**: bool
 * **collectLogins**: bool
 * **sourceConnectionInfo**: SqlConnectionInfo (Required)

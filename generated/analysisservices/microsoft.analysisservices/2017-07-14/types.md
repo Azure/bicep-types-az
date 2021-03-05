@@ -17,8 +17,10 @@
 * **asAdministrators**: ServerAdministrators
 * **backupBlobContainerUri**: string
 * **gatewayDetails**: GatewayDetails
+* **managedMode**: '0' | '1'
 * **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly)
 * **serverFullName**: string (ReadOnly)
+* **serverMonitorMode**: '0' | '1'
 * **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly)
 
 ## ServerAdministrators

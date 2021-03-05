@@ -34,6 +34,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: '[object Object]'
 
 ## ApplianceDefinitionProperties
 ### Properties
@@ -41,11 +42,13 @@
 * **authorizations**: ApplianceProviderAuthorization[] (Required)
 * **description**: string
 * **displayName**: string
+* **lockLevel**: 'CanNotDelete' | 'None' | 'ReadOnly' (Required)
 * **packageFileUri**: string (Required)
 
 ## ApplianceArtifact
 ### Properties
 * **name**: string
+* **type**: 'Custom' | 'Template'
 * **uri**: string
 
 ## ApplianceProviderAuthorization
@@ -79,6 +82,8 @@
 ### Properties
 * **applianceDefinitionId**: string
 * **managedResourceGroupId**: string (Required)
+* **outputs**: any (ReadOnly)
+* **parameters**: any
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly)
 * **uiDefinitionUri**: string
 

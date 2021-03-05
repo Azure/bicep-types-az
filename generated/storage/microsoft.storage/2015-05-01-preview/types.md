@@ -13,13 +13,17 @@
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
+* **accountType**: 'Premium_LRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_ZRS'
 * **creationTime**: string (ReadOnly)
 * **customDomain**: CustomDomain (ReadOnly)
 * **lastGeoFailoverTime**: string (ReadOnly)
 * **primaryEndpoints**: Endpoints (ReadOnly)
 * **primaryLocation**: string (ReadOnly)
+* **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly)
 * **secondaryEndpoints**: Endpoints (ReadOnly)
 * **secondaryLocation**: string (ReadOnly)
+* **statusOfPrimary**: 'Available' | 'Unavailable' (ReadOnly)
+* **statusOfSecondary**: 'Available' | 'Unavailable' (ReadOnly)
 
 ## CustomDomain
 ### Properties

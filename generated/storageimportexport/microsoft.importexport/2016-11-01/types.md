@@ -10,6 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: JobDetails
 * **systemData**: SystemData (ReadOnly)
+* **tags**: any
 * **type**: 'Microsoft.ImportExport/jobs' (ReadOnly, DeployTimeConstant)
 
 ## IdentityDetails

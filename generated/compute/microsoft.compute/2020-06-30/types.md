@@ -128,6 +128,7 @@
 * **hyperVGeneration**: 'V1' | 'V2'
 * **maxShares**: int
 * **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll'
+* **osType**: 'Linux' | 'Windows'
 * **provisioningState**: string (ReadOnly)
 * **shareInfo**: ShareInfoElement[] (ReadOnly)
 * **tier**: string
@@ -198,6 +199,7 @@
 * **hyperVGeneration**: 'V1' | 'V2'
 * **incremental**: bool
 * **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll'
+* **osType**: 'Linux' | 'Windows'
 * **provisioningState**: string (ReadOnly)
 * **timeCreated**: string (ReadOnly)
 * **uniqueId**: string (ReadOnly)

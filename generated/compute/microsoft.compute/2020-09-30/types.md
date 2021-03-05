@@ -200,6 +200,7 @@
 * **hyperVGeneration**: 'V1' | 'V2'
 * **maxShares**: int
 * **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll'
+* **osType**: 'Linux' | 'Windows'
 * **provisioningState**: string (ReadOnly)
 * **purchasePlan**: PurchasePlan
 * **shareInfo**: ShareInfoElement[] (ReadOnly)
@@ -304,6 +305,7 @@
 * **eula**: string
 * **privacyStatementUri**: string
 * **releaseNoteUri**: string
+* **supportedOSType**: 'Linux' | 'Windows' (Required)
 
 ## ResourceTags
 ### Properties
@@ -386,6 +388,8 @@
 * **features**: GalleryImageFeature[]
 * **hyperVGeneration**: 'V1' | 'V2'
 * **identifier**: GalleryImageIdentifier (Required)
+* **osState**: 'Generalized' | 'Specialized' (Required)
+* **osType**: 'Linux' | 'Windows' (Required)
 * **privacyStatementUri**: string
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly)
 * **purchasePlan**: ImagePurchasePlan
@@ -452,6 +456,7 @@
 
 ## GalleryDataDiskImage
 ### Properties
+* **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **lun**: int (Required)
 * **sizeInGB**: int (ReadOnly)
 * **source**: GalleryArtifactVersionSource
@@ -463,6 +468,7 @@
 
 ## GalleryOSDiskImage
 ### Properties
+* **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **sizeInGB**: int (ReadOnly)
 * **source**: GalleryArtifactVersionSource
 
@@ -483,6 +489,7 @@
 * **hyperVGeneration**: 'V1' | 'V2'
 * **incremental**: bool
 * **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll'
+* **osType**: 'Linux' | 'Windows'
 * **provisioningState**: string (ReadOnly)
 * **purchasePlan**: PurchasePlan
 * **timeCreated**: string (ReadOnly)

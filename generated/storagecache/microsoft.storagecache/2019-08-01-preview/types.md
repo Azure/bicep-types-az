@@ -9,6 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: CacheProperties
 * **sku**: CacheSku
+* **tags**: any
 * **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorageCache/caches/storageTargets@2019-08-01-preview

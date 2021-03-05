@@ -22,6 +22,7 @@
 ## AutoscaleNotification
 ### Properties
 * **email**: EmailNotification
+* **operation**: '[object Object]' (Required)
 * **webhooks**: WebhookNotification[]
 
 ## EmailNotification
@@ -62,6 +63,7 @@
 
 ## Recurrence
 ### Properties
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'None' | 'Second' | 'Week' | 'Year' (Required)
 * **schedule**: RecurrentSchedule (Required)
 
 ## RecurrentSchedule
@@ -82,7 +84,10 @@
 * **metricName**: string (Required)
 * **metricNamespace**: string
 * **metricResourceUri**: string (Required)
+* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'NotEquals' (Required)
+* **statistic**: 'Average' | 'Max' | 'Min' | 'Sum' (Required)
 * **threshold**: int (Required)
+* **timeAggregation**: 'Average' | 'Count' | 'Last' | 'Maximum' | 'Minimum' | 'Total' (Required)
 * **timeGrain**: any (Required)
 * **timeWindow**: any (Required)
 
@@ -95,6 +100,8 @@
 ## ScaleAction
 ### Properties
 * **cooldown**: any (Required)
+* **direction**: 'Decrease' | 'Increase' | 'None' (Required)
+* **type**: 'ChangeCount' | 'ExactCount' | 'PercentChangeCount' (Required)
 * **value**: string
 
 ## ResourceTags

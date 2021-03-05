@@ -95,6 +95,7 @@
 #### Properties
 * **accountName**: string
 * **autoKeyConfigUrl**: string
+* **fluentdConfigUrl**: any
 * **kind**: 'AzureInternalMonitoringPipeline' (Required)
 * **maConfigUrl**: string
 * **namespace**: string
@@ -104,6 +105,7 @@
 ### Properties
 * **accountName**: string
 * **autoKeyConfigUrl**: string
+* **fluentdConfigUrl**: any
 * **kind**: 'AzureInternalMonitoringPipeline' (Required)
 * **maConfigUrl**: string
 * **namespace**: string

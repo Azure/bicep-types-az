@@ -26,6 +26,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: '[object Object]'
 
 ## ServerProperties
 ### Properties
@@ -37,6 +38,7 @@
 * **delegatedSubnetArguments**: ServerPropertiesDelegatedSubnetArguments
 * **displayName**: string
 * **fullyQualifiedDomainName**: string (ReadOnly)
+* **haEnabled**: 'Disabled' | 'Enabled'
 * **haState**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' (ReadOnly)
 * **maintenanceWindow**: MaintenanceWindow
 * **pointInTimeUTC**: string

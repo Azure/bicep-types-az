@@ -257,6 +257,7 @@
 * **capabilities**: Capability[]
 * **connectorOffer**: 'Small'
 * **consistencyPolicy**: ConsistencyPolicy
+* **databaseAccountOfferType**: '[object Object]' (Required)
 * **disableKeyBasedMetadataWriteAccess**: bool
 * **documentEndpoint**: string (ReadOnly)
 * **enableAutomaticFailover**: bool
@@ -277,6 +278,7 @@
 
 ## ConsistencyPolicy
 ### Properties
+* **defaultConsistencyLevel**: 'BoundedStaleness' | 'ConsistentPrefix' | 'Eventual' | 'Session' | 'Strong' (Required)
 * **maxIntervalInSeconds**: int
 * **maxStalenessPrefix**: int
 
@@ -320,6 +322,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (Required)
 * **rid**: string (ReadOnly)
+* **ts**: any (ReadOnly)
 
 ## Tags
 ### Properties
@@ -343,6 +346,7 @@
 * **id**: string (Required)
 * **rid**: string (ReadOnly)
 * **schema**: CassandraSchema
+* **ts**: any (ReadOnly)
 
 ## CassandraSchema
 ### Properties
@@ -380,6 +384,7 @@
 * **offerReplacePending**: string (ReadOnly)
 * **rid**: string (ReadOnly)
 * **throughput**: int (Required)
+* **ts**: any (ReadOnly)
 
 ## Tags
 ### Properties
@@ -406,6 +411,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (Required)
 * **rid**: string (ReadOnly)
+* **ts**: any (ReadOnly)
 
 ## Tags
 ### Properties
@@ -431,6 +437,7 @@
 * **indexingPolicy**: IndexingPolicy
 * **partitionKey**: ContainerPartitionKey
 * **rid**: string (ReadOnly)
+* **ts**: any (ReadOnly)
 * **uniqueKeyPolicy**: UniqueKeyPolicy
 
 ## ConflictResolutionPolicy
@@ -517,6 +524,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (Required)
 * **rid**: string (ReadOnly)
+* **ts**: any (ReadOnly)
 
 ## Tags
 ### Properties
@@ -540,6 +548,7 @@
 * **indexes**: MongoIndex[]
 * **rid**: string (ReadOnly)
 * **shardKey**: ShardKeys
+* **ts**: any (ReadOnly)
 
 ## MongoIndex
 ### Properties
@@ -596,6 +605,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (Required)
 * **rid**: string (ReadOnly)
+* **ts**: any (ReadOnly)
 * **users**: string (ReadOnly)
 
 ## Tags
@@ -622,6 +632,7 @@
 * **indexingPolicy**: IndexingPolicy
 * **partitionKey**: ContainerPartitionKey
 * **rid**: string (ReadOnly)
+* **ts**: any (ReadOnly)
 * **uniqueKeyPolicy**: UniqueKeyPolicy
 
 ## Tags
@@ -645,6 +656,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (Required)
 * **rid**: string (ReadOnly)
+* **ts**: any (ReadOnly)
 
 ## Tags
 ### Properties
@@ -674,6 +686,7 @@
 * **rid**: string (ReadOnly)
 * **triggerOperation**: 'All' | 'Create' | 'Delete' | 'Replace' | 'Update'
 * **triggerType**: 'Post' | 'Pre'
+* **ts**: any (ReadOnly)
 
 ## Tags
 ### Properties
@@ -696,6 +709,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (Required)
 * **rid**: string (ReadOnly)
+* **ts**: any (ReadOnly)
 
 ## Tags
 ### Properties
@@ -722,6 +736,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (Required)
 * **rid**: string (ReadOnly)
+* **ts**: any (ReadOnly)
 
 ## Tags
 ### Properties

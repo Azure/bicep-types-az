@@ -132,6 +132,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned'
 * **userAssignedIdentities**: UserAssignedIdentities
 
 ## UserAssignedIdentities
@@ -525,6 +526,8 @@
 
 ## DatasetLatestDataPathAdditionalProperties
 ### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## DatasetLatestDataPathSqlDataPath
 ### Properties
@@ -535,6 +538,8 @@
 
 ## DatasetLatestProperties
 ### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## DatasetLatestTags
 ### Properties
@@ -781,6 +786,7 @@
 ## ModelEnvironmentDefinitionPython
 ### Properties
 * **baseCondaEnvironment**: string (WriteOnly)
+* **condaDependencies**: any (WriteOnly)
 * **interpreterPath**: string (WriteOnly)
 * **userManagedDependencies**: bool (WriteOnly)
 

@@ -7,6 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: any
 * **sku**: IntegrationAccountSku
 * **tags**: ResourceTags
 * **type**: 'Microsoft.Logic/integrationAccounts' (ReadOnly, DeployTimeConstant)
@@ -121,6 +122,7 @@
 
 ## IntegrationAccountAgreementProperties
 ### Properties
+* **agreementType**: 'AS2' | 'Edifact' | 'NotSpecified' | 'X12' (Required)
 * **changedTime**: string (ReadOnly)
 * **content**: AgreementContent (Required)
 * **createdTime**: string (ReadOnly)
@@ -128,6 +130,7 @@
 * **guestPartner**: string (Required)
 * **hostIdentity**: BusinessIdentity (Required)
 * **hostPartner**: string (Required)
+* **metadata**: any
 
 ## AgreementContent
 ### Properties
@@ -269,6 +272,7 @@
 ### Properties
 * **componentSeparator**: int (Required)
 * **dataElementSeparator**: int (Required)
+* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified' (Required)
 * **messageAssociationAssignedCode**: string
 * **messageId**: string
 * **messageRelease**: string
@@ -276,6 +280,7 @@
 * **releaseIndicator**: int (Required)
 * **repetitionSeparator**: int (Required)
 * **segmentTerminator**: int (Required)
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required)
 * **targetNamespace**: string
 
 ## EdifactEnvelopeOverride
@@ -346,10 +351,12 @@
 * **characterSet**: 'KECA' | 'NotSpecified' | 'UNOA' | 'UNOB' | 'UNOC' | 'UNOD' | 'UNOE' | 'UNOF' | 'UNOG' | 'UNOH' | 'UNOI' | 'UNOJ' | 'UNOK' | 'UNOX' | 'UNOY' (Required)
 * **componentSeparator**: int (Required)
 * **dataElementSeparator**: int (Required)
+* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified' (Required)
 * **protocolVersion**: int (Required)
 * **releaseIndicator**: int (Required)
 * **repetitionSeparator**: int (Required)
 * **segmentTerminator**: int (Required)
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required)
 * **serviceCodeListDirectoryVersion**: string
 
 ## EdifactMessageFilter
@@ -493,6 +500,7 @@
 * **replaceCharacter**: int (Required)
 * **replaceSeparatorsInPayload**: bool (Required)
 * **segmentTerminator**: int (Required)
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required)
 
 ## X12MessageFilter
 ### Properties
@@ -557,6 +565,7 @@
 * **replaceCharacter**: int (Required)
 * **replaceSeparatorsInPayload**: bool (Required)
 * **segmentTerminator**: int (Required)
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required)
 * **targetNamespace**: string
 
 ## ResourceTags
@@ -571,15 +580,18 @@
 * **assemblyPublicKeyToken**: string
 * **assemblyVersion**: string
 * **changedTime**: string
+* **content**: any
 * **contentLink**: ContentLink
 * **contentType**: string
 * **createdTime**: string
+* **metadata**: any
 
 ## ContentLink
 ### Properties
 * **contentHash**: ContentHash
 * **contentSize**: int
 * **contentVersion**: string
+* **metadata**: any
 * **uri**: string
 
 ## ContentHash
@@ -597,6 +609,7 @@
 * **batchGroupName**: string (Required)
 * **changedTime**: string
 * **createdTime**: string
+* **metadata**: any
 * **releaseCriteria**: BatchReleaseCriteria (Required)
 
 ## BatchReleaseCriteria
@@ -620,10 +633,11 @@
 * **minutes**: int[]
 * **monthDays**: int[]
 * **monthlyOccurrences**: RecurrenceScheduleOccurrence[]
-* **weekDays**: array
+* **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]
 
 ## RecurrenceScheduleOccurrence
 ### Properties
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'
 * **occurrence**: int
 
 ## ResourceTags
@@ -636,6 +650,7 @@
 * **changedTime**: string (ReadOnly)
 * **createdTime**: string (ReadOnly)
 * **key**: KeyVaultKeyReference
+* **metadata**: any
 * **publicCertificate**: string
 
 ## KeyVaultKeyReference
@@ -663,6 +678,7 @@
 * **contentType**: string
 * **createdTime**: string (ReadOnly)
 * **mapType**: 'Liquid' | 'NotSpecified' | 'Xslt' | 'Xslt20' | 'Xslt30' (Required)
+* **metadata**: any
 * **parametersSchema**: IntegrationAccountMapPropertiesParametersSchema
 
 ## IntegrationAccountMapPropertiesParametersSchema
@@ -679,6 +695,7 @@
 * **changedTime**: string (ReadOnly)
 * **content**: PartnerContent (Required)
 * **createdTime**: string (ReadOnly)
+* **metadata**: any
 * **partnerType**: 'B2B' | 'NotSpecified' (Required)
 
 ## PartnerContent
@@ -703,6 +720,7 @@
 * **createdTime**: string (ReadOnly)
 * **documentName**: string
 * **fileName**: string
+* **metadata**: any
 * **schemaType**: 'NotSpecified' | 'Xml' (Required)
 * **targetNamespace**: string
 
@@ -714,6 +732,7 @@
 ## IntegrationAccountSessionProperties
 ### Properties
 * **changedTime**: string (ReadOnly)
+* **content**: any
 * **createdTime**: string (ReadOnly)
 
 ## ResourceTags
@@ -726,6 +745,7 @@
 * **accessEndpoint**: string (ReadOnly)
 * **changedTime**: string (ReadOnly)
 * **createdTime**: string (ReadOnly)
+* **definition**: any
 * **integrationAccount**: ResourceReference
 * **parameters**: WorkflowPropertiesParameters
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'NotSpecified' | 'Ready' | 'Registered' | 'Registering' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' (ReadOnly)
@@ -747,7 +767,9 @@
 ## WorkflowParameter
 ### Properties
 * **description**: string
+* **metadata**: any
 * **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String'
+* **value**: any
 
 ## Sku
 ### Properties

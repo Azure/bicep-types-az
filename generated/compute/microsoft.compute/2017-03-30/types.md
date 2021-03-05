@@ -111,6 +111,7 @@
 ### Properties
 * **code**: string
 * **displayStatus**: string
+* **level**: 'Error' | 'Info' | 'Warning'
 * **message**: string
 * **time**: string
 
@@ -134,11 +135,13 @@
 * **creationData**: CreationData (Required)
 * **diskSizeGB**: int
 * **encryptionSettings**: EncryptionSettings
+* **osType**: 'Linux' | 'Windows'
 * **provisioningState**: string (ReadOnly)
 * **timeCreated**: string (ReadOnly)
 
 ## CreationData
 ### Properties
+* **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Import' (Required)
 * **imageReference**: ImageDiskReference
 * **sourceResourceId**: string
 * **sourceUri**: string
@@ -193,6 +196,7 @@
 ## ImageDataDisk
 ### Properties
 * **blobUri**: string
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **diskSizeGB**: int
 * **lun**: int (Required)
 * **managedDisk**: SubResource
@@ -202,8 +206,11 @@
 ## ImageOSDisk
 ### Properties
 * **blobUri**: string
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **diskSizeGB**: int
 * **managedDisk**: SubResource
+* **osState**: 'Generalized' | 'Specialized' (Required)
+* **osType**: 'Linux' | 'Windows' (Required)
 * **snapshot**: SubResource
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS'
 
@@ -221,6 +228,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: '[object Object]'
 
 ## Plan
 ### Properties
@@ -241,6 +249,7 @@
 ## UpgradePolicy
 ### Properties
 * **automaticOSUpgrade**: bool
+* **mode**: 'Automatic' | 'Manual' | 'Rolling'
 * **rollingUpgradePolicy**: RollingUpgradePolicy
 
 ## RollingUpgradePolicy
@@ -282,8 +291,10 @@
 ### Properties
 * **autoUpgradeMinorVersion**: bool
 * **forceUpdateTag**: string
+* **protectedSettings**: any
 * **provisioningState**: string (ReadOnly)
 * **publisher**: string
+* **settings**: any
 * **type**: string
 * **typeHandlerVersion**: string
 
@@ -388,7 +399,10 @@
 
 ## AdditionalUnattendContent
 ### Properties
+* **componentName**: '[object Object]'
 * **content**: string
+* **passName**: '[object Object]'
+* **settingName**: 'AutoLogon' | 'FirstLogonCommands'
 
 ## WinRMConfiguration
 ### Properties
@@ -397,6 +411,7 @@
 ## WinRMListener
 ### Properties
 * **certificateUrl**: string
+* **protocol**: 'Http' | 'Https'
 
 ## VirtualMachineScaleSetStorageProfile
 ### Properties
@@ -406,6 +421,8 @@
 
 ## VirtualMachineScaleSetDataDisk
 ### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
+* **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
 * **diskSizeGB**: int
 * **lun**: int (Required)
 * **managedDisk**: VirtualMachineScaleSetManagedDiskParameters
@@ -425,9 +442,12 @@
 
 ## VirtualMachineScaleSetOSDisk
 ### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
+* **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
 * **image**: VirtualHardDisk
 * **managedDisk**: VirtualMachineScaleSetManagedDiskParameters
 * **name**: string
+* **osType**: 'Linux' | 'Windows'
 * **vhdContainers**: string[]
 
 ## VirtualHardDisk
@@ -443,6 +463,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: '[object Object]'
 
 ## VirtualMachineProperties
 ### Properties
@@ -512,6 +533,7 @@
 ### Properties
 * **isCustomerInitiatedMaintenanceAllowed**: bool
 * **lastOperationMessage**: string
+* **lastOperationResultCode**: 'MaintenanceAborted' | 'MaintenanceCompleted' | 'None' | 'RetryLater'
 * **maintenanceWindowEndTime**: string
 * **maintenanceWindowStartTime**: string
 * **preMaintenanceWindowEndTime**: string
@@ -560,6 +582,8 @@
 
 ## DataDisk
 ### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
+* **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
 * **diskSizeGB**: int
 * **image**: VirtualHardDisk
 * **lun**: int (Required)
@@ -574,11 +598,14 @@
 
 ## OSDisk
 ### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
+* **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
 * **diskSizeGB**: int
 * **encryptionSettings**: DiskEncryptionSettings
 * **image**: VirtualHardDisk
 * **managedDisk**: ManagedDiskParameters
 * **name**: string
+* **osType**: 'Linux' | 'Windows'
 * **vhd**: VirtualHardDisk
 
 ## VirtualMachineExtension
@@ -595,8 +622,10 @@
 * **autoUpgradeMinorVersion**: bool
 * **forceUpdateTag**: string
 * **instanceView**: VirtualMachineExtensionInstanceView
+* **protectedSettings**: any
 * **provisioningState**: string (ReadOnly)
 * **publisher**: string
+* **settings**: any
 * **type**: string
 * **typeHandlerVersion**: string
 

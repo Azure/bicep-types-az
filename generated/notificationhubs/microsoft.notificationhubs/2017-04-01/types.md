@@ -56,6 +56,7 @@
 * **enabled**: bool
 * **metricId**: string (ReadOnly)
 * **name**: string
+* **namespaceType**: 'Messaging' | 'NotificationHub'
 * **provisioningState**: string
 * **region**: string
 * **scaleUnit**: string
@@ -86,7 +87,7 @@
 * **modifiedTime**: string (ReadOnly)
 * **primaryKey**: string (ReadOnly)
 * **revision**: int (ReadOnly)
-* **rights**: array
+* **rights**: 'Listen' | 'Manage' | 'Send'[]
 * **secondaryKey**: string (ReadOnly)
 
 ## ResourceTags

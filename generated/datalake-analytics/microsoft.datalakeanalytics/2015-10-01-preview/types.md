@@ -52,17 +52,24 @@
 * **accountId**: string (ReadOnly)
 * **computePolicies**: CreateComputePolicyWithAccountParameters[]
 * **creationTime**: string (ReadOnly)
+* **currentTier**: 'Commitment_100000AUHours' | 'Commitment_10000AUHours' | 'Commitment_1000AUHours' | 'Commitment_100AUHours' | 'Commitment_500000AUHours' | 'Commitment_50000AUHours' | 'Commitment_5000AUHours' | 'Commitment_500AUHours' | 'Consumption' (ReadOnly)
 * **dataLakeStoreAccounts**: AddDataLakeStoreWithAccountParameters[] (Required)
+* **debugDataAccessLevel**: 'All' | 'Customer' | 'None' (ReadOnly)
 * **defaultDataLakeStoreAccount**: string (Required)
 * **endpoint**: string (ReadOnly)
+* **firewallAllowAzureIps**: 'Disabled' | 'Enabled'
 * **firewallRules**: CreateFirewallRuleWithAccountParameters[]
+* **firewallState**: 'Disabled' | 'Enabled'
 * **hiveMetastores**: HiveMetastore[] (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **maxDegreeOfParallelism**: int
 * **maxDegreeOfParallelismPerJob**: int
 * **maxJobCount**: int
 * **minPriorityPerJob**: int
+* **newTier**: 'Commitment_100000AUHours' | 'Commitment_10000AUHours' | 'Commitment_1000AUHours' | 'Commitment_100AUHours' | 'Commitment_500000AUHours' | 'Commitment_50000AUHours' | 'Commitment_5000AUHours' | 'Commitment_500AUHours' | 'Consumption'
+* **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Patching' | 'Resuming' | 'Running' | 'Succeeded' | 'Suspending' (ReadOnly)
 * **queryStoreRetention**: int
+* **state**: 'active' | 'suspended' (ReadOnly)
 * **storageAccounts**: AddStorageAccountWithAccountParameters[]
 * **systemMaxDegreeOfParallelism**: int (ReadOnly)
 * **systemMaxJobCount**: int (ReadOnly)
@@ -115,6 +122,7 @@
 ## HiveMetastoreProperties
 ### Properties
 * **databaseName**: string (ReadOnly)
+* **nestedResourceProvisioningState**: 'Canceled' | 'Failed' | 'Succeeded' (ReadOnly)
 * **password**: string (ReadOnly)
 * **runtimeVersion**: string (ReadOnly)
 * **serverUri**: string (ReadOnly)
@@ -142,6 +150,7 @@
 ## VirtualNetworkRuleProperties
 ### Properties
 * **subnetId**: string (ReadOnly)
+* **virtualNetworkRuleState**: 'Active' | 'Failed' | 'NetworkSourceDeleted' (ReadOnly)
 
 ## CreateDataLakeAnalyticsAccountParametersTags
 ### Properties

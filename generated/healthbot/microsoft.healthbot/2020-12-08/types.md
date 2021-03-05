@@ -20,6 +20,7 @@
 
 ## Sku
 ### Properties
+* **name**: 'C0' | 'F0' | 'S1' (Required)
 
 ## SystemData
 ### Properties

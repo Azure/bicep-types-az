@@ -263,6 +263,7 @@
 * **logVerbose**: bool (ReadOnly)
 * **nodeConfigurationCount**: int (ReadOnly)
 * **parameters**: DscConfigurationPropertiesParameters (ReadOnly)
+* **provisioningState**: '[object Object]' (ReadOnly)
 * **source**: ContentSource (ReadOnly)
 * **state**: 'Edit' | 'New' | 'Published' (ReadOnly)
 
@@ -392,6 +393,7 @@
 * **isComposite**: bool (ReadOnly)
 * **isGlobal**: bool (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
+* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly)
 * **sizeInBytes**: int (ReadOnly)
 * **version**: string (ReadOnly)
 
@@ -435,6 +437,7 @@
 * **isComposite**: bool (ReadOnly)
 * **isGlobal**: bool (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
+* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly)
 * **sizeInBytes**: int (ReadOnly)
 * **version**: string (ReadOnly)
 
@@ -456,6 +459,7 @@
 * **logVerbose**: bool
 * **outputTypes**: string[] (ReadOnly)
 * **parameters**: RunbookPropertiesParameters (ReadOnly)
+* **provisioningState**: '[object Object]' (ReadOnly)
 * **publishContentLink**: ContentLink
 * **runbookType**: 'Graph' | 'GraphPowerShell' | 'GraphPowerShellWorkflow' | 'PowerShell' | 'PowerShellWorkflow' | 'Script' (Required)
 * **state**: 'Edit' | 'New' | 'Published' (ReadOnly)
@@ -499,6 +503,7 @@
 * **expiryTime**: string
 * **expiryTimeOffsetMinutes**: int (ReadOnly)
 * **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'OneTime' | 'Week' (Required)
+* **interval**: any
 * **isEnabled**: bool (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **nextRun**: string (ReadOnly)
@@ -573,6 +578,7 @@
 * **duration**: any
 * **linux**: LinuxProperties
 * **nonAzureComputerNames**: string[]
+* **operatingSystem**: 'Linux' | 'Windows' (Required)
 * **targets**: TargetProperties
 * **windows**: WindowsProperties
 
@@ -596,6 +602,7 @@
 
 ## TagSettingsProperties
 ### Properties
+* **filterOperator**: 'All' | 'Any'
 * **tags**: TagSettingsPropertiesTags
 
 ## TagSettingsPropertiesTags

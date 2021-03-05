@@ -6,6 +6,7 @@
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity
+* **kind**: 'BlobStorage' | 'Storage' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: StorageAccountPropertiesCreateParameters
@@ -17,9 +18,11 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: '[object Object]' (Required)
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
+* **accessTier**: 'Cool' | 'Hot'
 * **creationTime**: string (ReadOnly)
 * **customDomain**: CustomDomain
 * **enableHttpsTrafficOnly**: bool
@@ -28,8 +31,11 @@
 * **networkRuleSet**: NetworkRuleSet
 * **primaryEndpoints**: Endpoints (ReadOnly)
 * **primaryLocation**: string (ReadOnly)
+* **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly)
 * **secondaryEndpoints**: Endpoints (ReadOnly)
 * **secondaryLocation**: string (ReadOnly)
+* **statusOfPrimary**: 'available' | 'unavailable' (ReadOnly)
+* **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly)
 
 ## CustomDomain
 ### Properties
@@ -63,15 +69,19 @@
 ## NetworkRuleSet
 ### Properties
 * **bypass**: 'AzureServices' | 'Logging' | 'Metrics' | 'None'
+* **defaultAction**: 'Allow' | 'Deny' (Required)
 * **ipRules**: IPRule[]
 * **virtualNetworkRules**: VirtualNetworkRule[]
 
 ## IPRule
 ### Properties
+* **action**: '[object Object]'
 * **IPAddressOrRange**: string (Required)
 
 ## VirtualNetworkRule
 ### Properties
+* **action**: '[object Object]'
+* **state**: 'deprovisioning' | 'failed' | 'networkSourceDeleted' | 'provisioning' | 'succeeded'
 * **virtualNetworkResourceId**: string (Required)
 
 ## Endpoints
@@ -84,9 +94,12 @@
 ## Sku
 ### Properties
 * **capabilities**: SKUCapability[] (ReadOnly)
+* **kind**: 'BlobStorage' | 'Storage' (ReadOnly)
 * **locations**: string[] (ReadOnly)
+* **name**: 'Premium_LRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_ZRS' (Required)
 * **resourceType**: string (ReadOnly)
 * **restrictions**: Restriction[]
+* **tier**: 'Premium' | 'Standard' (ReadOnly)
 
 ## SKUCapability
 ### Properties

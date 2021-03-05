@@ -108,6 +108,7 @@
 * **maxNumberOfRecordsPerRecordSet**: int (ReadOnly)
 * **nameServers**: string[] (ReadOnly)
 * **numberOfRecordSets**: int
+* **zoneType**: 'Private' | 'Public'
 
 ## TrackedResourceTags
 ### Properties

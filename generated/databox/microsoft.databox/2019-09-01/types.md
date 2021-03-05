@@ -16,6 +16,7 @@
 ### Properties
 * **cancellationReason**: string (ReadOnly)
 * **deliveryInfo**: JobDeliveryInfo
+* **deliveryType**: 'NonScheduled' | 'Scheduled'
 * **details**: JobDetails
 * **error**: Error (ReadOnly)
 * **isCancellable**: bool (ReadOnly)
@@ -23,6 +24,7 @@
 * **isDeletable**: bool (ReadOnly)
 * **isShippingAddressEditable**: bool (ReadOnly)
 * **startTime**: string (ReadOnly)
+* **status**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' (ReadOnly)
 
 ## JobDeliveryInfo
 ### Properties
@@ -77,6 +79,7 @@
 ## NotificationPreference
 ### Properties
 * **sendNotification**: bool (Required)
+* **stageName**: 'AtAzureDC' | 'DataCopy' | 'Delivered' | 'DevicePrepared' | 'Dispatched' | 'PickedUp' (Required)
 
 ## CopyLogDetails
 * **Discriminator**: copyLogDetailsType
@@ -167,6 +170,9 @@
 ### Properties
 * **displayName**: string (ReadOnly)
 * **errorDetails**: JobErrorDetails[] (ReadOnly)
+* **jobStageDetails**: any (ReadOnly)
+* **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' (ReadOnly)
+* **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' | 'SucceededWithErrors' (ReadOnly)
 * **stageTime**: string (ReadOnly)
 
 ## Preferences
@@ -176,9 +182,11 @@
 
 ## TransportPreferences
 ### Properties
+* **preferredShipmentType**: 'CustomerManaged' | 'MicrosoftManaged' (Required)
 
 ## ShippingAddress
 ### Properties
+* **addressType**: 'Commercial' | 'None' | 'Residential'
 * **city**: string
 * **companyName**: string
 * **country**: string (Required)
@@ -199,6 +207,7 @@
 ### Properties
 * **accountId**: string (ReadOnly)
 * **bytesSentToCloud**: int (ReadOnly)
+* **dataDestinationType**: 'ManagedDisk' | 'StorageAccount' (ReadOnly)
 * **filesErroredOut**: int (ReadOnly)
 * **filesProcessed**: int (ReadOnly)
 * **invalidFileBytesUploaded**: int (ReadOnly)
@@ -221,6 +230,7 @@
 * **bytesCopied**: int (ReadOnly)
 * **percentComplete**: int (ReadOnly)
 * **serialNumber**: string (ReadOnly)
+* **status**: 'Completed' | 'CompletedWithErrors' | 'DeviceFormatted' | 'DeviceMetadataModified' | 'Failed' | 'HardwareError' | 'InProgress' | 'NotReturned' | 'NotStarted' | 'StorageAccountNotAccessible' | 'UnsupportedData' (ReadOnly)
 
 ## DataBoxDiskJobDetailsDisksAndSizeDetails
 ### Properties
@@ -247,6 +257,7 @@
 ### Properties
 * **displayName**: string
 * **family**: string
+* **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required)
 
 ## ResourceTags
 ### Properties

@@ -59,6 +59,7 @@
 
 ## ContainerServiceOrchestratorProfile
 ### Properties
+* **orchestratorType**: 'DCOS' | 'Swarm' (Required)
 
 ## ContainerServiceWindowsProfile
 ### Properties

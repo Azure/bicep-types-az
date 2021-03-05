@@ -260,6 +260,7 @@
 * **connectorOffer**: 'Small'
 * **consistencyPolicy**: ConsistencyPolicy
 * **cors**: CorsPolicy[]
+* **databaseAccountOfferType**: '[object Object]' (Required)
 * **disableKeyBasedMetadataWriteAccess**: bool
 * **documentEndpoint**: string (ReadOnly)
 * **enableAnalyticalStorage**: bool
@@ -317,6 +318,7 @@
 
 ## ConsistencyPolicy
 ### Properties
+* **defaultConsistencyLevel**: 'BoundedStaleness' | 'ConsistentPrefix' | 'Eventual' | 'Session' | 'Strong' (Required)
 * **maxIntervalInSeconds**: int
 * **maxStalenessPrefix**: int
 

@@ -164,6 +164,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned'
 
 ## AutomationAccountCreateOrUpdateProperties
 ### Properties
@@ -179,6 +180,7 @@
 
 ## EncryptionProperties
 ### Properties
+* **keySource**: 'Microsoft.Automation' | 'Microsoft.Keyvault'
 * **keyVaultProperties**: KeyVaultProperties
 
 ## KeyVaultProperties
@@ -337,6 +339,7 @@
 * **isComposite**: bool (ReadOnly)
 * **isGlobal**: bool (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
+* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly)
 * **sizeInBytes**: int (ReadOnly)
 * **version**: string (ReadOnly)
 
@@ -392,6 +395,7 @@
 * **isComposite**: bool (ReadOnly)
 * **isGlobal**: bool (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
+* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly)
 * **sizeInBytes**: int (ReadOnly)
 * **version**: string (ReadOnly)
 
@@ -408,6 +412,7 @@
 * **expiryTime**: string
 * **expiryTimeOffsetMinutes**: int (ReadOnly)
 * **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'OneTime' | 'Week' (Required)
+* **interval**: any
 * **isEnabled**: bool (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **nextRun**: string (ReadOnly)

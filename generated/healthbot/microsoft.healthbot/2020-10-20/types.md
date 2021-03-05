@@ -24,6 +24,7 @@
 * **family**: string
 * **name**: 'F0' | 'S1' (Required)
 * **size**: string
+* **tier**: 'Free' | 'Standard'
 
 ## SystemData
 ### Properties

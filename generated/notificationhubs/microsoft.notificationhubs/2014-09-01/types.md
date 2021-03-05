@@ -48,6 +48,7 @@
 * **critical**: bool
 * **enabled**: bool
 * **name**: string
+* **namespaceType**: 'Messaging' | 'NotificationHub'
 * **provisioningState**: string
 * **region**: string
 * **scaleUnit**: string
@@ -69,7 +70,7 @@
 * **modifiedTime**: string (WriteOnly)
 * **primaryKey**: string (WriteOnly)
 * **revision**: int (WriteOnly)
-* **rights**: array (WriteOnly)
+* **rights**: 'Listen' | 'Manage' | 'Send'[] (WriteOnly)
 * **secondaryKey**: string (WriteOnly)
 
 ## NotificationHubProperties

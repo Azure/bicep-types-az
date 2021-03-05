@@ -63,6 +63,7 @@
 ### Properties
 * **principalId**: string
 * **tenantId**: string
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
 * **userAssignedIdentities**: IdentityPropertiesUserAssignedIdentities
 
 ## IdentityPropertiesUserAssignedIdentities

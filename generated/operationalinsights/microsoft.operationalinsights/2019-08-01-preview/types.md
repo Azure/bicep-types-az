@@ -31,10 +31,20 @@
 * **properties**: LinkedServiceProperties (Required)
 * **type**: 'Microsoft.OperationalInsights/workspaces/linkedServices' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.OperationalInsights/workspaces/linkedStorageAccounts@2019-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'AzureWatson' | 'CustomLogs' (Required, DeployTimeConstant)
+* **properties**: LinkedStorageAccountsProperties (Required)
+* **type**: 'Microsoft.OperationalInsights/workspaces/linkedStorageAccounts' (ReadOnly, DeployTimeConstant)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned' (Required)
 
 ## ClusterProperties
 ### Properties
@@ -82,4 +92,9 @@
 ### Properties
 * **resourceId**: string
 * **writeAccessResourceId**: string
+
+## LinkedStorageAccountsProperties
+### Properties
+* **dataSourceType**: 'AzureWatson' | 'CustomLogs' (ReadOnly)
+* **storageAccountIds**: string[]
 

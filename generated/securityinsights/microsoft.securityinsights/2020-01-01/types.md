@@ -167,6 +167,7 @@
 * **suppressionDuration**: any (Required)
 * **suppressionEnabled**: bool (Required)
 * **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PrivilegeEscalation'[]
+* **triggerOperator**: 'Equal' | 'GreaterThan' | 'LessThan' | 'NotEqual'
 * **triggerThreshold**: int
 
 ## ActionRequestProperties

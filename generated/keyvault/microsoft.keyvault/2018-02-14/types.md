@@ -11,6 +11,16 @@
 * **tags**: VaultCreateOrUpdateParametersTags
 * **type**: 'Microsoft.KeyVault/vaults' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.KeyVault/vaults/accessPolicies@2018-02-14
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-02-14' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly, WriteOnly)
+* **name**: 'add' | 'remove' | 'replace' (Required, DeployTimeConstant)
+* **properties**: VaultAccessPolicyProperties (Required, WriteOnly)
+* **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.KeyVault/vaults/privateEndpointConnections@2018-02-14
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -36,6 +46,7 @@
 ## VaultProperties
 ### Properties
 * **accessPolicies**: AccessPolicyEntry[]
+* **createMode**: 'default' | 'recover'
 * **enabledForDeployment**: bool
 * **enabledForDiskEncryption**: bool
 * **enabledForTemplateDeployment**: bool
@@ -99,11 +110,16 @@
 ## Sku
 ### Properties
 * **family**: 'A' (Required)
+* **name**: 'premium' | 'standard' (Required)
 
 ## VaultCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## VaultAccessPolicyProperties
+### Properties
+* **accessPolicies**: AccessPolicyEntry[] (Required, WriteOnly)
 
 ## ResourceTags
 ### Properties

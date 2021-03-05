@@ -117,6 +117,7 @@
 ## Volume
 ### Properties
 * **azureFile**: AzureFileVolume
+* **emptyDir**: any
 * **name**: string (Required)
 
 ## AzureFileVolume

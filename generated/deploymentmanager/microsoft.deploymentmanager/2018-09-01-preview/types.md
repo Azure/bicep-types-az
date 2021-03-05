@@ -138,6 +138,7 @@
 ## ServiceUnit
 ### Properties
 * **artifacts**: ServiceUnitArtifacts (ReadOnly)
+* **deploymentMode**: 'Complete' | 'Incremental' (ReadOnly)
 * **name**: string (ReadOnly)
 * **steps**: RolloutStep[] (ReadOnly)
 * **targetResourceGroup**: string (ReadOnly)
@@ -220,6 +221,7 @@
 ## ServiceUnitResourceProperties
 ### Properties
 * **artifacts**: ServiceUnitArtifacts
+* **deploymentMode**: 'Complete' | 'Incremental' (Required)
 * **targetResourceGroup**: string (Required)
 
 ## TrackedResourceTags

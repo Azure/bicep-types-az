@@ -29,6 +29,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: any
 * **tags**: SyncGroupCreateParametersTags (WriteOnly)
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant)
 
@@ -121,6 +122,7 @@
 * **provisioningState**: string (ReadOnly)
 * **serverLocalPath**: string
 * **serverResourceId**: string
+* **syncStatus**: any (ReadOnly)
 * **volumeFreeSpacePercent**: int
 
 ## ServerEndpointCreateParametersTags

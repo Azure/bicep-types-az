@@ -56,6 +56,7 @@
 ### Properties
 * **emailAddress**: string (Required)
 * **name**: string (Required)
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly)
 
 ## ItsmReceiver
 ### Properties
@@ -76,6 +77,7 @@
 * **countryCode**: string (Required)
 * **name**: string (Required)
 * **phoneNumber**: string (Required)
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly)
 
 ## VoiceReceiver
 ### Properties

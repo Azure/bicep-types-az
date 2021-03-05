@@ -59,6 +59,7 @@
 
 ## ContainerServiceOrchestratorProfile
 ### Properties
+* **orchestratorType**: 'DCOS' | 'Mesos' | 'SwarmPreview'
 
 ## ContainerServiceWindowsProfile
 ### Properties

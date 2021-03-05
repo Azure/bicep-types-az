@@ -23,10 +23,10 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-INFORMATION: Autorest.AzureResourceSchema took 14ms
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+INFORMATION: Autorest.AzureResourceSchema took 12ms
 Processing batch task - {"tag":"schema-desktopvirtualization-2021-01-14-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -44,9 +44,9 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-desktopvirtualization-2020-11-10-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -65,9 +65,9 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: Autorest.AzureResourceSchema took 8ms
 Processing batch task - {"tag":"schema-desktopvirtualization-2020-11-02-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -86,10 +86,10 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-desktopvirtualization-2020-10-19-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -107,10 +107,10 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-desktopvirtualization-2020-09-21-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -128,10 +128,10 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-desktopvirtualization-2019-12-10-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -147,7 +147,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-desktopvirtualization-2019-09-24-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -164,7 +164,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-desktopvirtualization-2019-01-23-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -181,7 +181,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-desktopvirtualization-2021-02-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -200,9 +200,9 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-desktopvirtualization-2021-01-14-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -221,10 +221,10 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-INFORMATION: Autorest.AzureResourceSchema took 7ms
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-desktopvirtualization-2020-11-10-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -242,10 +242,10 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-desktopvirtualization-2020-11-02-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -263,10 +263,10 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-desktopvirtualization-2020-10-19-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -284,9 +284,9 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-desktopvirtualization-2020-09-21-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -305,10 +305,10 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-WARNING: Unrecognized property type: byte-array
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-desktopvirtualization-2019-12-10-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -324,7 +324,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-desktopvirtualization-2019-09-24-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -341,8 +341,8 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array
-INFORMATION: Autorest.AzureResourceSchema took 1ms
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-desktopvirtualization-2019-01-23-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -358,6 +358,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array
-INFORMATION: Autorest.AzureResourceSchema took 3ms
-[86.66 s] Generation Complete
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+INFORMATION: Autorest.AzureResourceSchema took 2ms
+[88.96 s] Generation Complete

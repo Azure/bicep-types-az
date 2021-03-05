@@ -128,6 +128,7 @@
 * **duration**: any
 * **linux**: LinuxProperties
 * **nonAzureComputerNames**: string[]
+* **operatingSystem**: 'Linux' | 'Windows' (Required)
 * **targets**: TargetProperties
 * **windows**: WindowsProperties
 
@@ -151,6 +152,7 @@
 
 ## TagSettingsProperties
 ### Properties
+* **filterOperator**: 'All' | 'Any'
 * **tags**: TagSettingsPropertiesTags
 
 ## TagSettingsPropertiesTags

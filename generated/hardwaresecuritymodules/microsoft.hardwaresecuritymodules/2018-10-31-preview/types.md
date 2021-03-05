@@ -36,6 +36,7 @@
 
 ## Sku
 ### Properties
+* **name**: '[object Object]'
 
 ## ResourceTags
 ### Properties

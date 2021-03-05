@@ -131,7 +131,7 @@
 
 ## AuthorizationPolicy
 ### Properties
-* **permissions**: array (Required)
+* **permissions**: 'Manage' | 'Read' | 'Write'[] (Required)
 * **policyName**: string (ReadOnly)
 * **primaryKey**: string
 * **secondaryKey**: string
@@ -147,10 +147,13 @@
 * **displayName**: string
 * **isInternal**: bool
 * **lastModified**: string (ReadOnly)
+* **state**: 'Created' | 'Creating' | 'Deleting' | 'Expiring' | 'Failed' | 'Ready' (ReadOnly)
 * **tenantId**: string (ReadOnly)
 
 ## ConnectorProperties
 ### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## ConnectorMapping
 ### Properties
@@ -161,11 +164,13 @@
 * **dataFormatId**: string (ReadOnly)
 * **description**: string
 * **displayName**: string
+* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required)
 * **entityTypeName**: string (Required)
 * **lastModified**: string (ReadOnly)
 * **mappingProperties**: ConnectorMappingProperties (Required)
 * **nextRunTime**: string (ReadOnly)
 * **runId**: string (ReadOnly)
+* **state**: 'Created' | 'Creating' | 'Expiring' | 'Failed' | 'Ready' | 'Running' | 'Stopped' (ReadOnly)
 * **tenantId**: string (ReadOnly)
 
 ## ConnectorMappingProperties
@@ -181,21 +186,25 @@
 
 ## ConnectorMappingAvailability
 ### Properties
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week'
 * **interval**: int (Required)
 
 ## ConnectorMappingCompleteOperation
 ### Properties
+* **completionOperationType**: 'DeleteFile' | 'DoNothing' | 'MoveFile'
 * **destinationFolder**: string
 
 ## ConnectorMappingErrorManagement
 ### Properties
 * **errorLimit**: int
+* **errorManagementType**: 'RejectAndContinue' | 'RejectUntilLimit' | 'StopImport' (Required)
 
 ## ConnectorMappingFormat
 ### Properties
 * **acceptLanguage**: string
 * **arraySeparator**: string
 * **columnDelimiter**: string
+* **formatType**: '[object Object]' (Required)
 * **quoteCharacter**: string
 * **quoteEscapeCharacter**: string
 
@@ -214,6 +223,7 @@
 * **defaultDataSource**: DataSource
 * **description**: MetadataDefinitionBaseDescription
 * **displayName**: MetadataDefinitionBaseDisplayName
+* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship'
 * **fields**: PropertyDefinition[]
 * **idPropertyNames**: string[]
 * **instancesCount**: int
@@ -325,13 +335,16 @@
 ## KpiDefinition
 ### Properties
 * **aliases**: KpiAlias[]
+* **calculationWindow**: 'Day' | 'Hour' | 'Lifetime' | 'Month' | 'Week' (Required)
 * **calculationWindowFieldName**: string
 * **description**: KpiDefinitionDescription
 * **displayName**: KpiDefinitionDisplayName
+* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required)
 * **entityTypeName**: string (Required)
 * **expression**: string (Required)
 * **extracts**: KpiExtract[]
 * **filter**: string
+* **function**: 'Avg' | 'Count' | 'CountDistinct' | 'Last' | 'Max' | 'Min' | 'None' | 'Sum' (Required)
 * **groupBy**: string[]
 * **groupByMetadata**: KpiGroupByMetadata[] (ReadOnly)
 * **kpiName**: string (ReadOnly)
@@ -388,6 +401,7 @@
 * **displayName**: LinkDefinitionDisplayName
 * **linkName**: string (ReadOnly)
 * **mappings**: TypePropertiesMapping[]
+* **operationType**: 'Delete' | 'Upsert'
 * **participantPropertyReferences**: ParticipantPropertyReference[] (Required)
 * **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
 * **referenceOnly**: bool
@@ -409,6 +423,7 @@
 ### Properties
 * **interactionTypePropertyName**: string (Required)
 * **isProfileTypeId**: bool
+* **linkType**: 'CopyIfNull' | 'UpdateAlways'
 * **profileTypePropertyName**: string (Required)
 
 ## ProfileTypeDefinition
@@ -417,6 +432,7 @@
 * **attributes**: MetadataDefinitionBaseAttributes
 * **description**: MetadataDefinitionBaseDescription
 * **displayName**: MetadataDefinitionBaseDisplayName
+* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship'
 * **fields**: PropertyDefinition[]
 * **instancesCount**: int
 * **largeImage**: string
@@ -500,10 +516,12 @@
 ## RelationshipLinkFieldMapping
 ### Properties
 * **interactionFieldName**: string (Required)
+* **linkType**: 'CopyIfNull' | 'UpdateAlways'
 * **relationshipFieldName**: string (Required)
 
 ## RelationshipDefinition
 ### Properties
+* **cardinality**: 'ManyToMany' | 'OneToMany' | 'OneToOne'
 * **description**: RelationshipDefinitionDescription
 * **displayName**: RelationshipDefinitionDisplayName
 * **expiryDateTimeUtc**: string
@@ -550,6 +568,7 @@
 * **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
 * **relationshipLinks**: ResourceSetDescription
 * **relationships**: ResourceSetDescription
+* **role**: 'Admin' | 'DataAdmin' | 'DataReader' | 'ManageAdmin' | 'ManageReader' | 'Reader' (Required)
 * **roleAssignments**: ResourceSetDescription
 * **sasPolicies**: ResourceSetDescription
 * **segments**: ResourceSetDescription

@@ -134,6 +134,7 @@
 ### Properties
 * **principalId**: string
 * **tenantId**: string
+* **type**: '[object Object]'
 
 ## SBNamespaceProperties
 ### Properties
@@ -147,6 +148,7 @@
 
 ## Encryption
 ### Properties
+* **keySource**: '[object Object]'
 * **keyVaultProperties**: KeyVaultProperties
 
 ## KeyVaultProperties
@@ -157,6 +159,8 @@
 ## SBSku
 ### Properties
 * **capacity**: int
+* **name**: 'Basic' | 'Premium' | 'Standard' (Required)
+* **tier**: 'Basic' | 'Premium' | 'Standard'
 
 ## TrackedResourceTags
 ### Properties
@@ -165,13 +169,15 @@
 
 ## SBAuthorizationRuleProperties
 ### Properties
-* **rights**: array (Required)
+* **rights**: 'Listen' | 'Manage' | 'Send'[] (Required)
 
 ## ArmDisasterRecoveryProperties
 ### Properties
 * **alternateName**: string
 * **partnerNamespace**: string
 * **pendingReplicationOperationsCount**: int (ReadOnly)
+* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly)
+* **role**: 'Primary' | 'PrimaryNotReplicating' | 'Secondary' (ReadOnly)
 
 ## IpFilterRuleProperties
 ### Properties
@@ -243,6 +249,7 @@
 * **requiresDuplicateDetection**: bool
 * **requiresSession**: bool
 * **sizeInBytes**: int (ReadOnly)
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown'
 * **updatedAt**: string (ReadOnly)
 
 ## MessageCountDetails
@@ -267,6 +274,7 @@
 * **maxSizeInMegabytes**: int
 * **requiresDuplicateDetection**: bool
 * **sizeInBytes**: int (ReadOnly)
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown'
 * **subscriptionCount**: int (ReadOnly)
 * **supportOrdering**: bool
 * **updatedAt**: string (ReadOnly)
@@ -288,12 +296,14 @@
 * **maxDeliveryCount**: int
 * **messageCount**: int (ReadOnly)
 * **requiresSession**: bool
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown'
 * **updatedAt**: string (ReadOnly)
 
 ## Ruleproperties
 ### Properties
 * **action**: Action
 * **correlationFilter**: CorrelationFilter
+* **filterType**: 'CorrelationFilter' | 'SqlFilter'
 * **sqlFilter**: SqlFilter
 
 ## Action

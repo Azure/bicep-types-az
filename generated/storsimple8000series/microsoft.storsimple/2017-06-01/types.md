@@ -17,6 +17,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: '[object Object]'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AccessControlRecordProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/accessControlRecords' (ReadOnly, DeployTimeConstant)
@@ -26,6 +27,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: '[object Object]'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: BandwidthRateSettingProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/bandwidthSettings' (ReadOnly, DeployTimeConstant)
@@ -35,6 +37,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: '[object Object]'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AlertNotificationProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/alertSettings' (ReadOnly, DeployTimeConstant)
@@ -44,6 +47,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: '[object Object]'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: BackupPolicyProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/backupPolicies' (ReadOnly, DeployTimeConstant)
@@ -53,6 +57,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: '[object Object]'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: BackupScheduleProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/backupPolicies/schedules' (ReadOnly, DeployTimeConstant)
@@ -62,6 +67,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: '[object Object]'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: TimeSettingsProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/timeSettings' (ReadOnly, DeployTimeConstant)
@@ -71,6 +77,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: '[object Object]'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: VolumeContainerProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/volumeContainers' (ReadOnly, DeployTimeConstant)
@@ -80,6 +87,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: '[object Object]'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: VolumeProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/volumeContainers/volumes' (ReadOnly, DeployTimeConstant)
@@ -90,6 +98,7 @@
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: '[object Object]'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ManagerExtendedInfoProperties
 * **type**: 'Microsoft.StorSimple/managers/extendedInformation' (ReadOnly, DeployTimeConstant)
@@ -99,6 +108,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: '[object Object]'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: StorageAccountCredentialProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/storageAccountCredentials' (ReadOnly, DeployTimeConstant)
@@ -111,9 +121,11 @@
 
 ## ManagerIntrinsicSettings
 ### Properties
+* **type**: 'GardaV1' | 'HelsinkiV1' (Required)
 
 ## ManagerSku
 ### Properties
+* **name**: '[object Object]' (Required)
 
 ## ResourceTags
 ### Properties
@@ -132,7 +144,7 @@
 
 ## BandwidthSchedule
 ### Properties
-* **days**: array (Required)
+* **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[] (Required)
 * **rateInMbps**: int (Required)
 * **start**: Time (Required)
 * **stop**: Time (Required)
@@ -147,26 +159,33 @@
 ### Properties
 * **additionalRecipientEmailList**: string[]
 * **alertNotificationCulture**: string
+* **emailNotification**: 'Disabled' | 'Enabled' (Required)
+* **notificationToServiceOwners**: 'Disabled' | 'Enabled'
 
 ## BackupPolicyProperties
 ### Properties
+* **backupPolicyCreationType**: 'BySSM' | 'BySaaS' (ReadOnly)
 * **lastBackupTime**: string (ReadOnly)
 * **nextBackupTime**: string (ReadOnly)
+* **scheduledBackupStatus**: 'Disabled' | 'Enabled' (ReadOnly)
 * **schedulesCount**: int (ReadOnly)
 * **ssmHostName**: string (ReadOnly)
 * **volumeIds**: string[] (Required)
 
 ## BackupScheduleProperties
 ### Properties
+* **backupType**: 'CloudSnapshot' | 'LocalSnapshot' (Required)
 * **lastSuccessfulRun**: string (ReadOnly)
 * **retentionCount**: int (Required)
 * **scheduleRecurrence**: ScheduleRecurrence (Required)
+* **scheduleStatus**: 'Disabled' | 'Enabled' (Required)
 * **startTime**: string (Required)
 
 ## ScheduleRecurrence
 ### Properties
+* **recurrenceType**: 'Daily' | 'Hourly' | 'Minutes' | 'Weekly' (Required)
 * **recurrenceValue**: int (Required)
-* **weeklyDaysList**: array
+* **weeklyDaysList**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]
 
 ## TimeSettingsProperties
 ### Properties
@@ -179,12 +198,15 @@
 * **bandWidthRateInMbps**: int
 * **bandwidthSettingId**: string
 * **encryptionKey**: AsymmetricEncryptedSecret
+* **encryptionStatus**: 'Disabled' | 'Enabled' (ReadOnly)
+* **ownerShipStatus**: 'NotOwned' | 'Owned' (ReadOnly)
 * **storageAccountCredentialId**: string (Required)
 * **totalCloudStorageUsageInBytes**: int (ReadOnly)
 * **volumeCount**: int (ReadOnly)
 
 ## AsymmetricEncryptedSecret
 ### Properties
+* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' (Required)
 * **encryptionCertThumbprint**: string
 * **value**: string (Required)
 
@@ -192,8 +214,13 @@
 ### Properties
 * **accessControlRecordIds**: string[] (Required)
 * **backupPolicyIds**: string[] (ReadOnly)
+* **backupStatus**: 'Disabled' | 'Enabled' (ReadOnly)
+* **monitoringStatus**: 'Disabled' | 'Enabled' (Required)
+* **operationStatus**: 'Deleting' | 'None' | 'Restoring' | 'Updating' (ReadOnly)
 * **sizeInBytes**: int (Required)
 * **volumeContainerId**: string (ReadOnly)
+* **volumeStatus**: 'Offline' | 'Online' (Required)
+* **volumeType**: 'Archival' | 'LocallyPinned' | 'Tiered' (Required)
 
 ## ManagerExtendedInfoProperties
 ### Properties
@@ -208,5 +235,6 @@
 ### Properties
 * **accessKey**: AsymmetricEncryptedSecret
 * **endPoint**: string (Required)
+* **sslStatus**: 'Disabled' | 'Enabled' (Required)
 * **volumesCount**: int (ReadOnly)
 

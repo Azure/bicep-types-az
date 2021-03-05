@@ -33,6 +33,8 @@
 
 ## DashboardLensMetadata
 ### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## DashboardParts
 ### Properties
@@ -45,14 +47,14 @@
 ### Base Properties
 ### MarkdownPartMetadata
 #### Properties
-* **inputs**: array
+* **inputs**: any[]
 * **settings**: MarkdownPartMetadataSettings
 * **type**: 'Extension/HubsExtension/PartType/MarkdownPart' (Required)
 
 
 ## MarkdownPartMetadata
 ### Properties
-* **inputs**: array
+* **inputs**: any[]
 * **settings**: MarkdownPartMetadataSettings
 * **type**: 'Extension/HubsExtension/PartType/MarkdownPart' (Required)
 
@@ -82,9 +84,13 @@
 
 ## DashboardPartsPositionMetadata
 ### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## DashboardPropertiesMetadata
 ### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## DashboardTags
 ### Properties

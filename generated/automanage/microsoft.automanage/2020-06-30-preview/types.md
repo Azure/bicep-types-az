@@ -35,6 +35,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned'
 
 ## TrackedResourceTags
 ### Properties
@@ -62,6 +63,7 @@
 ## ConfigurationProfilePreferenceAntiMalware
 ### Properties
 * **enableRealTimeProtection**: 'False' | 'True'
+* **exclusions**: any
 * **runScheduledScan**: 'False' | 'True'
 * **scanDay**: string
 * **scanTimeInMinutes**: string

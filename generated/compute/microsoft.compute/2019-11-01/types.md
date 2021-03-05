@@ -80,6 +80,7 @@
 * **encryptionSettingsCollection**: EncryptionSettingsCollection
 * **hyperVGeneration**: 'V1' | 'V2'
 * **maxShares**: int
+* **osType**: 'Linux' | 'Windows'
 * **provisioningState**: string (ReadOnly)
 * **shareInfo**: ShareInfoElement[] (ReadOnly)
 * **timeCreated**: string (ReadOnly)
@@ -145,6 +146,7 @@
 * **encryptionSettingsCollection**: EncryptionSettingsCollection
 * **hyperVGeneration**: 'V1' | 'V2'
 * **incremental**: bool
+* **osType**: 'Linux' | 'Windows'
 * **provisioningState**: string (ReadOnly)
 * **timeCreated**: string (ReadOnly)
 * **uniqueId**: string (ReadOnly)

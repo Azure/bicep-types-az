@@ -81,6 +81,7 @@
 * **origins**: DeepCreatedOrigin[] (Required)
 * **probePath**: string
 * **provisioningState**: string (ReadOnly)
+* **queryStringCachingBehavior**: 'BypassCaching' | 'IgnoreQueryString' | 'NotSet' | 'UseQueryString'
 * **resourceState**: 'Creating' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
 
 ## ResourceReference
@@ -149,6 +150,7 @@
 * **cacheBehavior**: 'BypassCache' | 'Override' | 'SetIfMissing' (Required)
 * **cacheDuration**: string
 * **cacheType**: 'All' (Required)
+* **odataType**: '[object Object]' (Required)
 
 ## DeliveryRuleCacheKeyQueryStringAction
 ### Properties
@@ -157,6 +159,7 @@
 
 ## CacheKeyQueryStringActionParameters
 ### Properties
+* **odataType**: '[object Object]' (Required)
 * **queryParameters**: string
 * **queryStringBehavior**: 'Exclude' | 'ExcludeAll' | 'Include' | 'IncludeAll' (Required)
 
@@ -169,6 +172,7 @@
 ### Properties
 * **headerAction**: 'Append' | 'Delete' | 'Overwrite' (Required)
 * **headerName**: string (Required)
+* **odataType**: '[object Object]' (Required)
 * **value**: string
 
 ## DeliveryRuleResponseHeaderAction
@@ -183,6 +187,7 @@
 
 ## OriginGroupOverrideActionParameters
 ### Properties
+* **odataType**: '[object Object]' (Required)
 * **originGroup**: ResourceReference (Required)
 
 ## UrlRedirectAction
@@ -197,6 +202,7 @@
 * **customPath**: string
 * **customQueryString**: string
 * **destinationProtocol**: 'Http' | 'Https' | 'MatchRequest'
+* **odataType**: '[object Object]' (Required)
 * **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect' (Required)
 
 ## UrlRewriteAction
@@ -207,6 +213,7 @@
 ## UrlRewriteActionParameters
 ### Properties
 * **destination**: string (Required)
+* **odataType**: '[object Object]' (Required)
 * **preserveUnmatchedPath**: bool
 * **sourcePattern**: string (Required)
 
@@ -294,6 +301,7 @@
 ### Properties
 * **matchValues**: string[]
 * **negateCondition**: bool
+* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required)
 * **selector**: string
 * **transforms**: 'Lowercase' | 'Uppercase'[]
@@ -307,6 +315,7 @@
 ### Properties
 * **matchValues**: string[]
 * **negateCondition**: bool
+* **odataType**: '[object Object]' (Required)
 * **operator**: 'Equal' (Required)
 
 ## DeliveryRuleIsDeviceCondition
@@ -318,6 +327,7 @@
 ### Properties
 * **matchValues**: 'Desktop' | 'Mobile'[]
 * **negateCondition**: bool
+* **odataType**: '[object Object]' (Required)
 * **operator**: 'Equal' (Required)
 * **transforms**: 'Lowercase' | 'Uppercase'[]
 
@@ -330,6 +340,7 @@
 ### Properties
 * **matchValues**: string[]
 * **negateCondition**: bool
+* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required)
 * **selector**: string
 * **transforms**: 'Lowercase' | 'Uppercase'[]
@@ -343,6 +354,7 @@
 ### Properties
 * **matchValues**: string[]
 * **negateCondition**: bool
+* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required)
 * **transforms**: 'Lowercase' | 'Uppercase'[]
 
@@ -355,6 +367,7 @@
 ### Properties
 * **matchValues**: string[]
 * **negateCondition**: bool
+* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'GeoMatch' | 'IPMatch' (Required)
 * **transforms**: 'Lowercase' | 'Uppercase'[]
 
@@ -367,6 +380,7 @@
 ### Properties
 * **matchValues**: string[]
 * **negateCondition**: bool
+* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required)
 * **transforms**: 'Lowercase' | 'Uppercase'[]
 
@@ -379,6 +393,7 @@
 ### Properties
 * **matchValues**: string[]
 * **negateCondition**: bool
+* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required)
 * **selector**: string
 * **transforms**: 'Lowercase' | 'Uppercase'[]
@@ -392,6 +407,7 @@
 ### Properties
 * **matchValues**: 'DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'POST' | 'PUT' | 'TRACE'[]
 * **negateCondition**: bool
+* **odataType**: '[object Object]' (Required)
 * **operator**: 'Equal' (Required)
 
 ## DeliveryRuleRequestSchemeCondition
@@ -403,6 +419,8 @@
 ### Properties
 * **matchValues**: 'HTTP' | 'HTTPS'[]
 * **negateCondition**: bool
+* **odataType**: '[object Object]' (Required)
+* **operator**: '[object Object]' (Required)
 
 ## DeliveryRuleRequestUriCondition
 ### Properties
@@ -413,6 +431,7 @@
 ### Properties
 * **matchValues**: string[]
 * **negateCondition**: bool
+* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required)
 * **transforms**: 'Lowercase' | 'Uppercase'[]
 
@@ -425,6 +444,7 @@
 ### Properties
 * **matchValues**: string[]
 * **negateCondition**: bool
+* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required)
 * **transforms**: 'Lowercase' | 'Uppercase'[]
 
@@ -437,6 +457,7 @@
 ### Properties
 * **matchValues**: string[]
 * **negateCondition**: bool
+* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required)
 * **transforms**: 'Lowercase' | 'Uppercase'[]
 
@@ -449,11 +470,13 @@
 ### Properties
 * **matchValues**: string[]
 * **negateCondition**: bool
+* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'Wildcard' (Required)
 * **transforms**: 'Lowercase' | 'Uppercase'[]
 
 ## GeoFilter
 ### Properties
+* **action**: 'Allow' | 'Block' (Required)
 * **countryCodes**: string[] (Required)
 * **relativePath**: string (Required)
 
@@ -473,10 +496,13 @@
 ### Properties
 * **probeIntervalInSeconds**: int
 * **probePath**: string
+* **probeProtocol**: 'Http' | 'Https' | 'NotSet'
+* **probeRequestType**: 'GET' | 'HEAD' | 'NotSet'
 
 ## ResponseBasedOriginErrorDetectionParameters
 ### Properties
 * **httpErrorRanges**: HttpErrorRangeParameters[]
+* **responseBasedDetectedErrorTypes**: 'None' | 'TcpAndHttpErrors' | 'TcpErrorsOnly'
 * **responseBasedFailoverThresholdPercentage**: int
 
 ## HttpErrorRangeParameters

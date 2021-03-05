@@ -50,6 +50,7 @@
 
 ## ShippingAddress
 ### Properties
+* **addressType**: 'Commercial' | 'None' | 'Residential'
 * **city**: string
 * **companyName**: string
 * **country**: string (Required)
@@ -98,14 +99,19 @@
 ## OrderDetails
 ### Properties
 * **cancellationReason**: string (ReadOnly)
+* **cancellationStatus**: 'Cancellable' | 'CancellableWithFee' | 'NotCancellable' (ReadOnly)
 * **currentStatus**: OrderStatusDetails (ReadOnly)
+* **deletionStatus**: 'Allowed' | 'NotAllowed' (ReadOnly)
 * **error**: CloudError (ReadOnly)
 * **forwardShippingDetails**: ShippingDetails (ReadOnly)
+* **managementRpDetails**: any (ReadOnly)
 * **notificationEmailList**: string[]
 * **orderStatusHistory**: OrderStatusDetails[] (ReadOnly)
+* **orderType**: 'Purchase' | 'Rental' (Required)
 * **preferences**: Preferences
 * **productDetails**: ProductDetails (Required)
 * **returnReason**: string (ReadOnly)
+* **returnStatus**: 'NotReturnable' | 'Returnable' | 'ReturnableWithFee' (ReadOnly)
 * **reverseShippingDetails**: ShippingDetails (ReadOnly)
 
 ## OrderStatusDetails
@@ -123,6 +129,7 @@
 
 ## AdditionalErrorInfo
 ### Properties
+* **info**: any
 * **type**: string
 
 ## ShippingDetails
@@ -140,9 +147,11 @@
 ## NotificationPreference
 ### Properties
 * **sendNotification**: bool (Required)
+* **stageName**: 'AtAzureDC' | 'DataCopy' | 'Delivered' | 'DevicePrepared' | 'Dispatched' | 'PickedUp' (Required)
 
 ## TransportPreferences
 ### Properties
+* **preferredShipmentType**: 'CustomerManaged' | 'MicrosoftManaged' (Required)
 
 ## ProductDetails
 ### Properties

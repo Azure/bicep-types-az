@@ -18,6 +18,15 @@
 * **properties**: DatabaseVulnerabilityAssessmentProperties
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines@2017-10-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'default' | 'master' (Required, DeployTimeConstant)
+* **properties**: DatabaseVulnerabilityAssessmentRuleBaselineProperties
+* **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Sql/managedInstances/encryptionProtector@2017-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -114,6 +123,14 @@
 * **emails**: string[]
 * **emailSubscriptionAdmins**: bool
 * **isEnabled**: bool
+
+## DatabaseVulnerabilityAssessmentRuleBaselineProperties
+### Properties
+* **baselineResults**: DatabaseVulnerabilityAssessmentRuleBaselineItem[] (Required)
+
+## DatabaseVulnerabilityAssessmentRuleBaselineItem
+### Properties
+* **result**: string[] (Required)
 
 ## ManagedInstanceEncryptionProtectorProperties
 ### Properties

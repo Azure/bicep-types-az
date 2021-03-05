@@ -23,6 +23,16 @@
 * **tags**: VaultCreateOrUpdateParametersTags
 * **type**: 'Microsoft.KeyVault/vaults' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.KeyVault/vaults/accessPolicies@2020-04-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly, WriteOnly)
+* **name**: 'add' | 'remove' | 'replace' (Required, DeployTimeConstant)
+* **properties**: VaultAccessPolicyProperties (Required, WriteOnly)
+* **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.KeyVault/vaults/privateEndpointConnections@2020-04-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -48,6 +58,7 @@
 
 ## ManagedHsmProperties
 ### Properties
+* **createMode**: 'default' | 'recover'
 * **enablePurgeProtection**: bool
 * **enableSoftDelete**: bool
 * **hsmUri**: string (ReadOnly)
@@ -60,6 +71,7 @@
 ## ManagedHsmSku
 ### Properties
 * **family**: 'B' (Required)
+* **name**: 'Custom_B32' | 'Standard_B1' (Required)
 
 ## ManagedHsmResourceTags
 ### Properties
@@ -69,6 +81,7 @@
 ## VaultProperties
 ### Properties
 * **accessPolicies**: AccessPolicyEntry[]
+* **createMode**: 'default' | 'recover'
 * **enabledForDeployment**: bool
 * **enabledForDiskEncryption**: bool
 * **enabledForTemplateDeployment**: bool
@@ -137,11 +150,16 @@
 ## Sku
 ### Properties
 * **family**: 'A' (Required)
+* **name**: 'premium' | 'standard' (Required)
 
 ## VaultCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## VaultAccessPolicyProperties
+### Properties
+* **accessPolicies**: AccessPolicyEntry[] (Required, WriteOnly)
 
 ## ResourceTags
 ### Properties

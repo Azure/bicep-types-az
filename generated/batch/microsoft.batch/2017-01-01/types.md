@@ -30,7 +30,9 @@
 * **autoStorage**: AutoStorageBaseProperties
 * **coreQuota**: int (ReadOnly)
 * **keyVaultReference**: KeyVaultReference
+* **poolAllocationMode**: 'BatchService' | 'UserSubscription'
 * **poolQuota**: int (ReadOnly)
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly)
 
 ## AutoStorageBaseProperties
 ### Properties
@@ -52,6 +54,7 @@
 * **format**: string (ReadOnly)
 * **id**: string (ReadOnly)
 * **lastActivationTime**: string (ReadOnly)
+* **state**: 'active' | 'pending' | 'unmapped' (ReadOnly)
 * **storageUrl**: string (ReadOnly)
 * **storageUrlExpiry**: string (ReadOnly)
 * **version**: string (ReadOnly)

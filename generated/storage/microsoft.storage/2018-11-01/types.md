@@ -6,6 +6,7 @@
 * **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity
+* **kind**: 'BlobStorage' | 'BlockBlobStorage' | 'FileStorage' | 'Storage' | 'StorageV2' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: StorageAccountPropertiesCreateParameters
@@ -23,6 +24,16 @@
 * **name**: string (Required, DeployTimeConstant)
 * **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies@2018-11-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **properties**: ImmutabilityPolicyProperty (Required)
+* **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Storage/storageAccounts/managementPolicies@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -36,9 +47,11 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: '[object Object]' (Required)
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
+* **accessTier**: 'Cool' | 'Hot'
 * **creationTime**: string (ReadOnly)
 * **customDomain**: CustomDomain
 * **enableAzureFilesAadIntegration**: bool
@@ -51,8 +64,11 @@
 * **networkRuleSet**: NetworkRuleSet
 * **primaryEndpoints**: Endpoints (ReadOnly)
 * **primaryLocation**: string (ReadOnly)
+* **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly)
 * **secondaryEndpoints**: Endpoints (ReadOnly)
 * **secondaryLocation**: string (ReadOnly)
+* **statusOfPrimary**: 'available' | 'unavailable' (ReadOnly)
+* **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly)
 
 ## CustomDomain
 ### Properties
@@ -92,15 +108,19 @@
 ## NetworkRuleSet
 ### Properties
 * **bypass**: 'AzureServices' | 'Logging' | 'Metrics' | 'None'
+* **defaultAction**: 'Allow' | 'Deny' (Required)
 * **ipRules**: IPRule[]
 * **virtualNetworkRules**: VirtualNetworkRule[]
 
 ## IPRule
 ### Properties
+* **action**: '[object Object]'
 * **IPAddressOrRange**: string (Required)
 
 ## VirtualNetworkRule
 ### Properties
+* **action**: '[object Object]'
+* **state**: 'deprovisioning' | 'failed' | 'networkSourceDeleted' | 'provisioning' | 'succeeded'
 * **virtualNetworkResourceId**: string (Required)
 
 ## Endpoints
@@ -115,9 +135,12 @@
 ## Sku
 ### Properties
 * **capabilities**: SKUCapability[] (ReadOnly)
+* **kind**: 'BlobStorage' | 'BlockBlobStorage' | 'FileStorage' | 'Storage' | 'StorageV2' (ReadOnly)
 * **locations**: string[] (ReadOnly)
+* **name**: 'Premium_LRS' | 'Premium_ZRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_ZRS' (Required)
 * **resourceType**: string (ReadOnly)
 * **restrictions**: Restriction[]
+* **tier**: 'Premium' | 'Standard' (ReadOnly)
 
 ## SKUCapability
 ### Properties
@@ -146,6 +169,7 @@
 * **leaseStatus**: 'Locked' | 'Unlocked' (ReadOnly)
 * **legalHold**: LegalHoldProperties (ReadOnly)
 * **metadata**: ContainerPropertiesMetadata
+* **publicAccess**: 'Blob' | 'Container' | 'None'
 
 ## ImmutabilityPolicyProperties
 ### Properties

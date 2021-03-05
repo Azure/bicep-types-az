@@ -118,6 +118,7 @@
 
 ## AutoPatchingSettings
 ### Properties
+* **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'
 * **enable**: bool
 * **maintenanceWindowDuration**: int
 * **maintenanceWindowStartingHour**: int

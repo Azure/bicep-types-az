@@ -16,6 +16,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
 * **userAssignedIdentities**: ContainerGroupIdentityUserAssignedIdentities
 
 ## ContainerGroupIdentityUserAssignedIdentities
@@ -224,6 +225,7 @@
 ## Volume
 ### Properties
 * **azureFile**: AzureFileVolume
+* **emptyDir**: any
 * **gitRepo**: GitRepoVolume
 * **name**: string (Required)
 * **secret**: SecretVolume

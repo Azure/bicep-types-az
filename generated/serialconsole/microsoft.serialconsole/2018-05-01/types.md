@@ -11,4 +11,5 @@
 
 ## SerialPortProperties
 ### Properties
+* **state**: 'disabled' | 'enabled'
 

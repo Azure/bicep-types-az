@@ -92,6 +92,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned'
 * **userAssignedIdentities**: UserAssignedIdentities
 
 ## UserAssignedIdentities
@@ -590,6 +591,7 @@
 ### Properties
 * **createdTime**: string
 * **linkedServiceResourceId**: string (Required)
+* **linkType**: '[object Object]'
 * **modifiedTime**: string
 
 ## ResourceTags
@@ -644,6 +646,7 @@
 ## ModelEnvironmentDefinitionPython
 ### Properties
 * **baseCondaEnvironment**: string (WriteOnly)
+* **condaDependencies**: any (WriteOnly)
 * **interpreterPath**: string (WriteOnly)
 * **userManagedDependencies**: bool (WriteOnly)
 
