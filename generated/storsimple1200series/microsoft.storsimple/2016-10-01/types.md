@@ -134,7 +134,7 @@
 
 ## ManagerSku
 ### Properties
-* **name**: '[object Object]' (Required)
+* **name**: 'Standard' (Required)
 
 ## ResourceTags
 ### Properties

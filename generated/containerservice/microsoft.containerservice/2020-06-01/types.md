@@ -58,7 +58,7 @@
 * **diskEncryptionSetID**: string
 * **dnsPrefix**: string
 * **enablePodSecurityPolicy**: bool
-* **enableRbac**: bool
+* **enableRBAC**: bool
 * **fqdn**: string (ReadOnly)
 * **identityProfile**: ManagedClusterPropertiesIdentityProfile
 * **kubernetesVersion**: string
@@ -66,7 +66,7 @@
 * **maxAgentPools**: int (ReadOnly)
 * **networkProfile**: ContainerServiceNetworkProfile
 * **nodeResourceGroup**: string
-* **privateFqdn**: string (ReadOnly)
+* **privateFQDN**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **servicePrincipalProfile**: ManagedClusterServicePrincipalProfile
 * **windowsProfile**: ManagedClusterWindowsProfile
@@ -75,7 +75,7 @@
 ### Properties
 * **adminGroupObjectIDs**: string[]
 * **clientAppID**: string
-* **enableAzureRbac**: bool
+* **enableAzureRBAC**: bool
 * **managed**: bool
 * **serverAppID**: string
 * **serverAppSecret**: string
@@ -152,15 +152,15 @@
 
 ## ManagedClusterPropertiesAutoScalerProfile
 ### Properties
-* **balanceSimilarNodeGroups**: string
-* **maxGracefulTerminationSec**: string
-* **scaleDownDelayAfterAdd**: string
-* **scaleDownDelayAfterDelete**: string
-* **scaleDownDelayAfterFailure**: string
-* **scaleDownUnneededTime**: string
-* **scaleDownUnreadyTime**: string
-* **scaleDownUtilizationThreshold**: string
-* **scanInterval**: string
+* **balance-similar-node-groups**: string
+* **max-graceful-termination-sec**: string
+* **scale-down-delay-after-add**: string
+* **scale-down-delay-after-delete**: string
+* **scale-down-delay-after-failure**: string
+* **scale-down-unneeded-time**: string
+* **scale-down-unready-time**: string
+* **scale-down-utilization-threshold**: string
+* **scan-interval**: string
 
 ## ManagedClusterPropertiesIdentityProfile
 ### Properties

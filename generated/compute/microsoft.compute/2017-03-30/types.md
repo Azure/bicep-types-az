@@ -228,7 +228,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: '[object Object]'
+* **type**: 'SystemAssigned'
 
 ## Plan
 ### Properties
@@ -399,9 +399,9 @@
 
 ## AdditionalUnattendContent
 ### Properties
-* **componentName**: '[object Object]'
+* **componentName**: 'Microsoft-Windows-Shell-Setup'
 * **content**: string
-* **passName**: '[object Object]'
+* **passName**: 'OobeSystem'
 * **settingName**: 'AutoLogon' | 'FirstLogonCommands'
 
 ## WinRMConfiguration
@@ -463,7 +463,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: '[object Object]'
+* **type**: 'SystemAssigned'
 
 ## VirtualMachineProperties
 ### Properties

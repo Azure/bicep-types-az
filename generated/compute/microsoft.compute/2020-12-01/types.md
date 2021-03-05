@@ -581,9 +581,9 @@
 
 ## AdditionalUnattendContent
 ### Properties
-* **componentName**: '[object Object]'
+* **componentName**: 'Microsoft-Windows-Shell-Setup'
 * **content**: string
-* **passName**: '[object Object]'
+* **passName**: 'OobeSystem'
 * **settingName**: 'AutoLogon' | 'FirstLogonCommands'
 
 ## PatchSettings
@@ -612,7 +612,7 @@
 ## SecurityProfile
 ### Properties
 * **encryptionAtHost**: bool
-* **securityType**: '[object Object]'
+* **securityType**: 'TrustedLaunch'
 * **uefiSettings**: UefiSettings
 
 ## UefiSettings
@@ -630,7 +630,7 @@
 ### Properties
 * **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
-* **diskIopsReadWrite**: int
+* **diskIOPSReadWrite**: int
 * **diskMBpsReadWrite**: int
 * **diskSizeGB**: int
 * **lun**: int (Required)
@@ -878,7 +878,7 @@
 * **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
 * **detachOption**: 'ForceDetach'
-* **diskIopsReadWrite**: int (ReadOnly)
+* **diskIOPSReadWrite**: int (ReadOnly)
 * **diskMBpsReadWrite**: int (ReadOnly)
 * **diskSizeGB**: int
 * **image**: VirtualHardDisk

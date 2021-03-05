@@ -134,7 +134,7 @@
 ### Properties
 * **principalId**: string
 * **tenantId**: string
-* **type**: '[object Object]'
+* **type**: 'SystemAssigned'
 
 ## SBNamespaceProperties
 ### Properties
@@ -148,7 +148,7 @@
 
 ## Encryption
 ### Properties
-* **keySource**: '[object Object]'
+* **keySource**: 'Microsoft.KeyVault'
 * **keyVaultProperties**: KeyVaultProperties
 
 ## KeyVaultProperties

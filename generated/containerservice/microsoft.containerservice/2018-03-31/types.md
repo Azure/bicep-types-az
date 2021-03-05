@@ -17,7 +17,7 @@
 * **addonProfiles**: ManagedClusterPropertiesAddonProfiles
 * **agentPoolProfiles**: ManagedClusterAgentPoolProfile[]
 * **dnsPrefix**: string
-* **enableRbac**: bool
+* **enableRBAC**: bool
 * **fqdn**: string (ReadOnly)
 * **kubernetesVersion**: string
 * **linuxProfile**: ContainerServiceLinuxProfile

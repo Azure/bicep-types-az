@@ -188,8 +188,8 @@
 * **burstingEnabled**: bool
 * **creationData**: CreationData (Required)
 * **diskAccessId**: string
-* **diskIopsReadOnly**: int
-* **diskIopsReadWrite**: int
+* **diskIOPSReadOnly**: int
+* **diskIOPSReadWrite**: int
 * **diskMBpsReadOnly**: int
 * **diskMBpsReadWrite**: int
 * **diskSizeBytes**: int (ReadOnly)

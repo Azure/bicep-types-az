@@ -207,10 +207,10 @@
 
 ## ApplicationMetricDescription
 ### Properties
-* **maximumCapacity**: int
-* **name**: string
-* **reservationCapacity**: int
-* **totalApplicationCapacity**: int
+* **MaximumCapacity**: int
+* **Name**: string
+* **ReservationCapacity**: int
+* **TotalApplicationCapacity**: int
 
 ## ApplicationParameterList
 ### Properties
@@ -226,10 +226,10 @@
 
 ## ArmApplicationHealthPolicy
 ### Properties
-* **considerWarningAsError**: bool
-* **defaultServiceTypeHealthPolicy**: ArmServiceTypeHealthPolicy
-* **maxPercentUnhealthyDeployedApplications**: int
-* **serviceTypeHealthPolicyMap**: ArmServiceTypeHealthPolicyMap
+* **ConsiderWarningAsError**: bool
+* **DefaultServiceTypeHealthPolicy**: ArmServiceTypeHealthPolicy
+* **MaxPercentUnhealthyDeployedApplications**: int
+* **ServiceTypeHealthPolicyMap**: ArmServiceTypeHealthPolicyMap
 
 ## ArmServiceTypeHealthPolicy
 ### Properties
@@ -281,8 +281,8 @@
 
 ## ServiceCorrelationDescription
 ### Properties
-* **scheme**: 'Affinity' | 'AlignedAffinity' | 'Invalid' | 'NonAlignedAffinity' (Required)
-* **serviceName**: string (Required)
+* **Scheme**: 'Affinity' | 'AlignedAffinity' | 'Invalid' | 'NonAlignedAffinity' (Required)
+* **ServiceName**: string (Required)
 
 ## PartitionSchemeDescription
 * **Discriminator**: PartitionScheme
@@ -290,8 +290,8 @@
 ### Base Properties
 ### NamedPartitionSchemeDescription
 #### Properties
-* **count**: int (Required)
-* **names**: string[] (Required)
+* **Count**: int (Required)
+* **Names**: string[] (Required)
 * **PartitionScheme**: 'Named' (Required)
 
 ### SingletonPartitionSchemeDescription
@@ -300,16 +300,16 @@
 
 ### UniformInt64RangePartitionSchemeDescription
 #### Properties
-* **count**: int (Required)
-* **highKey**: string (Required)
-* **lowKey**: string (Required)
+* **Count**: int (Required)
+* **HighKey**: string (Required)
+* **LowKey**: string (Required)
 * **PartitionScheme**: 'UniformInt64Range' (Required)
 
 
 ## NamedPartitionSchemeDescription
 ### Properties
-* **count**: int (Required)
-* **names**: string[] (Required)
+* **Count**: int (Required)
+* **Names**: string[] (Required)
 * **PartitionScheme**: 'Named' (Required)
 
 ## SingletonPartitionSchemeDescription
@@ -318,18 +318,18 @@
 
 ## UniformInt64RangePartitionSchemeDescription
 ### Properties
-* **count**: int (Required)
-* **highKey**: string (Required)
-* **lowKey**: string (Required)
+* **Count**: int (Required)
+* **HighKey**: string (Required)
+* **LowKey**: string (Required)
 * **PartitionScheme**: 'UniformInt64Range' (Required)
 
 ## ServiceLoadMetricDescription
 ### Properties
-* **defaultLoad**: int
-* **name**: string (Required)
-* **primaryDefaultLoad**: int
-* **secondaryDefaultLoad**: int
-* **weight**: 'High' | 'Low' | 'Medium' | 'Zero'
+* **DefaultLoad**: int
+* **Name**: string (Required)
+* **PrimaryDefaultLoad**: int
+* **SecondaryDefaultLoad**: int
+* **Weight**: 'High' | 'Low' | 'Medium' | 'Zero'
 
 ## ServicePlacementPolicyDescription
 * **Discriminator**: Type

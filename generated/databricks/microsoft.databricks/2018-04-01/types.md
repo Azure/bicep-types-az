@@ -74,10 +74,10 @@
 
 ## Encryption
 ### Properties
-* **keyName**: string
+* **KeyName**: string
 * **keySource**: 'Default' | 'Microsoft.Keyvault'
-* **keyVaultUri**: string
-* **keyVersion**: string
+* **keyvaulturi**: string
+* **keyversion**: string
 
 ## ManagedIdentityConfiguration
 ### Properties

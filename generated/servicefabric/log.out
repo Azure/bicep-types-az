@@ -137,7 +137,7 @@ WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'NamedPartitionSchemeDescrip
 WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'UniformInt64RangePartitionSchemeDescription' has an allOf list with an empty object schema as a parent, removing it.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 14ms
+INFORMATION: Autorest.AzureResourceSchema took 12ms
 Processing batch task - {"tag":"schema-servicefabric-2020-01-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -218,7 +218,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'OperationResult' with an undef
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized known property type: "credential"
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-servicefabric-2019-11-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -350,7 +350,7 @@ WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'NamedPartitionSchemeDescrip
 WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'UniformInt64RangePartitionSchemeDescription' has an allOf list with an empty object schema as a parent, removing it.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 10ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-servicefabric-2019-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -480,7 +480,7 @@ WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'NamedPartitionSchemeDescrip
 WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'UniformInt64RangePartitionSchemeDescription' has an allOf list with an empty object schema as a parent, removing it.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 7ms
+INFORMATION: Autorest.AzureResourceSchema took 13ms
 Processing batch task - {"tag":"schema-servicefabric-2019-03-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -604,7 +604,7 @@ WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'NamedPartitionSchemeDescrip
 WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'UniformInt64RangePartitionSchemeDescription' has an allOf list with an empty object schema as a parent, removing it.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 7ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-servicefabric-2019-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -728,7 +728,7 @@ WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'NamedPartitionSchemeDescrip
 WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'UniformInt64RangePartitionSchemeDescription' has an allOf list with an empty object schema as a parent, removing it.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 9ms
+INFORMATION: Autorest.AzureResourceSchema took 7ms
 Processing batch task - {"tag":"schema-servicefabric-2018-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1050,7 +1050,7 @@ WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'StatelessService
 WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'StatefulServiceProperties' -> 'StatefulServicePropertiesAutoGenerated'
 
 WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'StatefulServiceUpdateProperties' -> 'StatefulServiceUpdatePropertiesAutoGenerated'
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-servicefabric-2016-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1108,7 +1108,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorModel-error' with an unde
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-servicefabric-2020-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1240,7 +1240,7 @@ WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'NamedPartitionSchemeDescrip
 WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'UniformInt64RangePartitionSchemeDescription' has an allOf list with an empty object schema as a parent, removing it.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 7ms
 Processing batch task - {"tag":"schema-servicefabric-2020-01-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1321,7 +1321,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'OperationResult' with an undef
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized known property type: "credential"
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-servicefabric-2019-11-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1831,7 +1831,7 @@ WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'NamedPartitionSchemeDescrip
 WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'UniformInt64RangePartitionSchemeDescription' has an allOf list with an empty object schema as a parent, removing it.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 7ms
 Processing batch task - {"tag":"schema-servicefabric-2018-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1889,7 +1889,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorModel' with an undefined 
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorModelError' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-servicefabric-2017-07-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2153,7 +2153,7 @@ WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'StatelessService
 WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'StatefulServiceProperties' -> 'StatefulServicePropertiesAutoGenerated'
 
 WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'StatefulServiceUpdateProperties' -> 'StatefulServiceUpdatePropertiesAutoGenerated'
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-servicefabric-2016-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2212,4 +2212,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 1ms
-[79.62 s] Generation Complete
+[67.82 s] Generation Complete

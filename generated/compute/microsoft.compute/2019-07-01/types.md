@@ -289,7 +289,7 @@
 ## DiskProperties
 ### Properties
 * **creationData**: CreationData (Required)
-* **diskIopsReadWrite**: int
+* **diskIOPSReadWrite**: int
 * **diskMBpsReadWrite**: int
 * **diskSizeBytes**: int (ReadOnly)
 * **diskSizeGB**: int
@@ -884,9 +884,9 @@
 
 ## AdditionalUnattendContent
 ### Properties
-* **componentName**: '[object Object]'
+* **componentName**: 'Microsoft-Windows-Shell-Setup'
 * **content**: string
-* **passName**: '[object Object]'
+* **passName**: 'OobeSystem'
 * **settingName**: 'AutoLogon' | 'FirstLogonCommands'
 
 ## WinRMConfiguration
@@ -917,7 +917,7 @@
 ### Properties
 * **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
-* **diskIopsReadWrite**: int
+* **diskIOPSReadWrite**: int
 * **diskMBpsReadWrite**: int
 * **diskSizeGB**: int
 * **lun**: int (Required)
@@ -1124,7 +1124,7 @@
 ### Properties
 * **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
-* **diskIopsReadWrite**: int (ReadOnly)
+* **diskIOPSReadWrite**: int (ReadOnly)
 * **diskMBpsReadWrite**: int (ReadOnly)
 * **diskSizeGB**: int
 * **image**: VirtualHardDisk

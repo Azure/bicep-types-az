@@ -18,10 +18,10 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant)
-* **containerProperties**: ContainerProperties
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: ContainerProperties
 * **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies@2019-04-01
@@ -30,7 +30,7 @@
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: ImmutabilityPolicyProperty (Required)
 * **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -39,9 +39,9 @@
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant)
 * **etag**: string (ReadOnly)
-* **fileShareProperties**: FileShareProperties
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: FileShareProperties
 * **type**: 'Microsoft.Storage/storageAccounts/fileServices/shares' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/managementPolicies@2019-04-01
@@ -57,7 +57,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: '[object Object]' (Required)
+* **type**: 'SystemAssigned' (Required)
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
@@ -67,15 +67,14 @@
 * **azureFilesIdentityBasedAuthentication**: AzureFilesIdentityBasedAuthentication
 * **creationTime**: string (ReadOnly)
 * **customDomain**: CustomDomain
-* **enableHttpsTrafficOnly**: bool
 * **encryption**: Encryption
 * **failoverInProgress**: bool (ReadOnly)
 * **geoReplicationStats**: GeoReplicationStats (ReadOnly)
-* **IsHnsEnabled**: bool
+* **isHnsEnabled**: bool
 * **largeFileSharesState**: 'Disabled' | 'Enabled'
 * **lastGeoFailoverTime**: string (ReadOnly)
 * **minimumTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2'
-* **networkRuleSet**: NetworkRuleSet
+* **networkAcls**: NetworkRuleSet
 * **primaryEndpoints**: Endpoints (ReadOnly)
 * **primaryLocation**: string (ReadOnly)
 * **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly)
@@ -83,6 +82,7 @@
 * **secondaryLocation**: string (ReadOnly)
 * **statusOfPrimary**: 'available' | 'unavailable' (ReadOnly)
 * **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly)
+* **supportsHttpsTrafficOnly**: bool
 
 ## AzureFilesIdentityBasedAuthentication
 ### Properties
@@ -106,14 +106,14 @@
 ## Encryption
 ### Properties
 * **keySource**: 'Microsoft.Keyvault' | 'Microsoft.Storage' (Required)
-* **keyVaultProperties**: KeyVaultProperties
+* **keyvaultproperties**: KeyVaultProperties
 * **services**: EncryptionServices
 
 ## KeyVaultProperties
 ### Properties
-* **keyName**: string
-* **keyVaultUri**: string
-* **keyVersion**: string
+* **keyname**: string
+* **keyvaulturi**: string
+* **keyversion**: string
 
 ## EncryptionServices
 ### Properties
@@ -142,14 +142,14 @@
 
 ## IPRule
 ### Properties
-* **action**: '[object Object]'
-* **IPAddressOrRange**: string (Required)
+* **action**: 'Allow'
+* **value**: string (Required)
 
 ## VirtualNetworkRule
 ### Properties
-* **action**: '[object Object]'
+* **action**: 'Allow'
+* **id**: string (Required)
 * **state**: 'deprovisioning' | 'failed' | 'networkSourceDeleted' | 'provisioning' | 'succeeded'
-* **virtualNetworkResourceId**: string (Required)
 
 ## Endpoints
 ### Properties

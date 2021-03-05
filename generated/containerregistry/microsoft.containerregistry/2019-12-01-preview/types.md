@@ -138,12 +138,12 @@
 ## IPRule
 ### Properties
 * **action**: 'Allow'
-* **IPAddressOrRange**: string (Required)
+* **value**: string (Required)
 
 ## VirtualNetworkRule
 ### Properties
 * **action**: 'Allow'
-* **virtualNetworkResourceId**: string (Required)
+* **id**: string (Required)
 
 ## Policies
 ### Properties

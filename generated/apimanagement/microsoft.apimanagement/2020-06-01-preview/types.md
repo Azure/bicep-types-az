@@ -28,7 +28,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **exportResultFormat**: 'openapi-link' | 'swagger-link-json' | 'wadl-link-json' | 'wsdl-link+xml' (ReadOnly)
+* **format**: 'openapi-link' | 'swagger-link-json' | 'wadl-link-json' | 'wsdl-link+xml' (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ApiCreateOrUpdateProperties (WriteOnly)
@@ -463,10 +463,10 @@
 * **path**: string (Required, WriteOnly)
 * **protocols**: 'http' | 'https'[] (WriteOnly)
 * **serviceUrl**: string (WriteOnly)
-* **soapApiType**: 'http' | 'soap' (WriteOnly)
 * **sourceApiId**: string (WriteOnly)
 * **subscriptionKeyParameterNames**: SubscriptionKeyParameterNamesContract (WriteOnly)
 * **subscriptionRequired**: bool (WriteOnly)
+* **type**: 'http' | 'soap' (WriteOnly)
 * **value**: string (WriteOnly)
 * **wsdlSelector**: ApiCreateOrUpdatePropertiesWsdlSelector (WriteOnly)
 
@@ -773,7 +773,7 @@
 
 ## AssociationContractProperties
 ### Properties
-* **provisioningState**: '[object Object]' (WriteOnly)
+* **provisioningState**: 'created' (WriteOnly)
 
 ## GatewayCertificateAuthorityContractProperties
 ### Properties

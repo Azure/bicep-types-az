@@ -18,17 +18,16 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: '[object Object]' (Required)
+* **type**: 'SystemAssigned' (Required)
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
 * **accessTier**: 'Cool' | 'Hot'
 * **creationTime**: string (ReadOnly)
 * **customDomain**: CustomDomain
-* **enableHttpsTrafficOnly**: bool
 * **encryption**: Encryption
 * **lastGeoFailoverTime**: string (ReadOnly)
-* **networkRuleSet**: NetworkRuleSet
+* **networkAcls**: NetworkRuleSet
 * **primaryEndpoints**: Endpoints (ReadOnly)
 * **primaryLocation**: string (ReadOnly)
 * **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly)
@@ -36,6 +35,7 @@
 * **secondaryLocation**: string (ReadOnly)
 * **statusOfPrimary**: 'available' | 'unavailable' (ReadOnly)
 * **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly)
+* **supportsHttpsTrafficOnly**: bool
 
 ## CustomDomain
 ### Properties
@@ -45,14 +45,14 @@
 ## Encryption
 ### Properties
 * **keySource**: 'Microsoft.Keyvault' | 'Microsoft.Storage' (Required)
-* **keyVaultProperties**: KeyVaultProperties
+* **keyvaultproperties**: KeyVaultProperties
 * **services**: EncryptionServices
 
 ## KeyVaultProperties
 ### Properties
-* **keyName**: string
-* **keyVaultUri**: string
-* **keyVersion**: string
+* **keyname**: string
+* **keyvaulturi**: string
+* **keyversion**: string
 
 ## EncryptionServices
 ### Properties
@@ -75,14 +75,14 @@
 
 ## IPRule
 ### Properties
-* **action**: '[object Object]'
-* **IPAddressOrRange**: string (Required)
+* **action**: 'Allow'
+* **value**: string (Required)
 
 ## VirtualNetworkRule
 ### Properties
-* **action**: '[object Object]'
+* **action**: 'Allow'
+* **id**: string (Required)
 * **state**: 'deprovisioning' | 'failed' | 'networkSourceDeleted' | 'provisioning' | 'succeeded'
-* **virtualNetworkResourceId**: string (Required)
 
 ## Endpoints
 ### Properties

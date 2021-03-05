@@ -145,7 +145,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RoleManagementPolicyNot
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RoleManagementPolicyNotificationRule' has a property 'ruleType' that is already declared the parent schema 'RoleManagementPolicyRule' but isn't significantly different. The property has been removed from RoleManagementPolicyNotificationRule
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RoleManagementPolicyNotificationRule' has a property 'target' that is already declared the parent schema 'RoleManagementPolicyRule' but isn't significantly different. The property has been removed from RoleManagementPolicyNotificationRule
-INFORMATION: Autorest.AzureResourceSchema took 11ms
+INFORMATION: Autorest.AzureResourceSchema took 9ms
 Processing batch task - {"tag":"schema-authorization-2020-04-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -296,7 +296,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'RoleAssignmentCreateParameters
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping path '/{roleId}': Unable to locate "/providers/" segment
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-authorization-2017-10-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -537,7 +537,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorAdditionalInfo' with an u
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping path '/{roleId}': Unable to locate "/providers/" segment
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-authorization-2018-09-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -556,7 +556,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'RoleAssignmentCreateParameters
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping path '/{roleId}': Unable to locate "/providers/" segment
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-authorization-2018-07-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -624,7 +624,7 @@ WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'UserDecisionTarget' has an 
 WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'ServicePrincipalDecisionTarget' has an allOf list with an empty object schema as a parent, removing it.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-authorization-2018-01-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -663,7 +663,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'RoleAssignmentCreateParameters
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping path '/{roleId}': Unable to locate "/providers/" segment
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-authorization-2017-10-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -727,7 +727,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ClassicAdministratorListResult
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping path '/{roleAssignmentId}': Unable to locate "/providers/" segment
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-authorization-2015-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -740,4 +740,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ClassicAdministratorListResult
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 0ms
-[41.19 s] Generation Complete
+[33.12 s] Generation Complete

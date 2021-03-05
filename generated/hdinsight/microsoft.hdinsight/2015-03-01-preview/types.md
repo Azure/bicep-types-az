@@ -81,7 +81,7 @@
 
 ## Role
 ### Properties
-* **autoscaleConfiguration**: Autoscale
+* **autoscale**: Autoscale
 * **dataDisksGroups**: DataDisksGroups[]
 * **hardwareProfile**: HardwareProfile
 * **minInstanceCount**: int
@@ -203,7 +203,7 @@
 ### Properties
 * **aaddsResourceId**: string
 * **clusterUsersGroupDNs**: string[]
-* **directoryType**: '[object Object]'
+* **directoryType**: 'ActiveDirectory'
 * **domain**: string
 * **domainUsername**: string
 * **domainUserPassword**: any

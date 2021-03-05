@@ -361,7 +361,7 @@ WARNING (Modeler/MissingType): The schema 'ScheduleCreateOrUpdateProperties-inte
 
 WARNING (Modeler/MissingType): The schema 'ScheduleProperties-interval' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/preview/2020-01-13-preview/schedule.json#/components/schemas/ScheduleProperties-interval
-INFORMATION: Autorest.AzureResourceSchema took 19ms
+INFORMATION: Autorest.AzureResourceSchema took 15ms
 Processing batch task - {"tag":"schema-automation-2019-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -819,7 +819,7 @@ WARNING (Modeler/MissingType): The schema 'ScheduleProperties-interval' has no t
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/schedule.json#/components/schemas/ScheduleProperties-interval
 WARNING: Skipping resource type microsoft.automation/automationaccounts/runbooks/draft under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/runbooks/{runbookName}/draft/content': Found multiple definitions for the same type
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 23ms
+INFORMATION: Autorest.AzureResourceSchema took 13ms
 Processing batch task - {"tag":"schema-automation-2018-06-30"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -902,7 +902,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 INFORMATION: Options {"input":["prechecker"],"prenamer":true,"always-create-content-type-parameter":true,"group-parameters":true,"additional-checks":false,"lenient-model-deduplication":true,"naming":{"override":{"cmyk":"CMYK","$host":"$host"}},"always-create-accept-parameter":true}
 INFORMATION: Accept-param true
 WARNING: Skipping resource type microsoft.automation/automationaccounts/runbooks/draft under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/runbooks/{runbookName}/draft/content': Found multiple definitions for the same type
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-automation-2018-01-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -980,7 +980,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'NodeCount' with an undefined t
 WARNING (PreCheck/SchemaMissingType): The schema 'NodeCountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-automation-2017-05-15-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1069,7 +1069,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'JobCreateProperties' with an u
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-automation-2015-10-31"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1422,7 +1422,7 @@ WARNING (Modeler/MissingType): The schema 'ScheduleCreateOrUpdateProperties-inte
 WARNING (Modeler/MissingType): The schema 'ScheduleProperties-interval' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/schedule.json#/components/schemas/ScheduleProperties-interval
 WARNING: Skipping resource type microsoft.automation/automationaccounts/runbooks/draft under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/runbooks/{runbookName}/draft/content': Found multiple definitions for the same type
-INFORMATION: Autorest.AzureResourceSchema took 13ms
+INFORMATION: Autorest.AzureResourceSchema took 16ms
 Processing batch task - {"tag":"schema-automation-2020-01-13-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1778,7 +1778,7 @@ WARNING (Modeler/MissingType): The schema 'ScheduleCreateOrUpdateProperties-inte
 
 WARNING (Modeler/MissingType): The schema 'ScheduleProperties-interval' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/preview/2020-01-13-preview/schedule.json#/components/schemas/ScheduleProperties-interval
-INFORMATION: Autorest.AzureResourceSchema took 17ms
+INFORMATION: Autorest.AzureResourceSchema took 9ms
 Processing batch task - {"tag":"schema-automation-2019-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2236,7 +2236,7 @@ WARNING (Modeler/MissingType): The schema 'ScheduleProperties-interval' has no t
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/schedule.json#/components/schemas/ScheduleProperties-interval
 WARNING: Skipping resource type microsoft.automation/automationaccounts/runbooks/draft under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/runbooks/{runbookName}/draft/content': Found multiple definitions for the same type
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 15ms
+INFORMATION: Autorest.AzureResourceSchema took 17ms
 Processing batch task - {"tag":"schema-automation-2018-06-30"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2319,7 +2319,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 INFORMATION: Options {"input":["prechecker"],"prenamer":true,"always-create-content-type-parameter":true,"group-parameters":true,"additional-checks":false,"lenient-model-deduplication":true,"naming":{"override":{"cmyk":"CMYK","$host":"$host"}},"always-create-accept-parameter":true}
 INFORMATION: Accept-param true
 WARNING: Skipping resource type microsoft.automation/automationaccounts/runbooks/draft under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/runbooks/{runbookName}/draft/content': Found multiple definitions for the same type
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-automation-2018-01-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2839,5 +2839,5 @@ WARNING (Modeler/MissingType): The schema 'ScheduleCreateOrUpdateProperties-inte
 WARNING (Modeler/MissingType): The schema 'ScheduleProperties-interval' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/schedule.json#/components/schemas/ScheduleProperties-interval
 WARNING: Skipping resource type microsoft.automation/automationaccounts/runbooks/draft under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/runbooks/{runbookName}/draft/content': Found multiple definitions for the same type
-INFORMATION: Autorest.AzureResourceSchema took 14ms
-[164.46 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 10ms
+[134.05 s] Generation Complete

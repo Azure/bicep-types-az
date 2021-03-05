@@ -50,7 +50,7 @@
 
 ## DataControllerProperties
 ### Properties
-* **k8SRaw**: any
+* **k8sRaw**: any
 * **lastUploadedDate**: string
 * **onPremiseProperty**: OnPremiseProperty (Required)
 
@@ -78,7 +78,7 @@
 ### Properties
 * **admin**: string
 * **dataControllerId**: string
-* **k8SRaw**: any
+* **k8sRaw**: any
 * **lastUploadedDate**: string
 
 ## TrackedResourceTags
@@ -92,7 +92,7 @@
 * **dataControllerId**: string
 * **endTime**: string
 * **instanceEndpoint**: string
-* **k8SRaw**: any
+* **k8sRaw**: any
 * **lastUploadedDate**: string
 * **startTime**: string
 * **vCore**: string

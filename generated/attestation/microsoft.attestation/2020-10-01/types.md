@@ -50,7 +50,7 @@
 * **qi**: string (WriteOnly)
 * **use**: string (WriteOnly)
 * **x**: string (WriteOnly)
-* **x5C**: string[] (WriteOnly)
+* **x5c**: string[] (WriteOnly)
 * **y**: string (WriteOnly)
 
 ## PrivateEndpointConnection

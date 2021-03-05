@@ -16,49 +16,50 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **applicationName**: string (ReadOnly)
-* **containerName**: string (ReadOnly)
-* **destinationAccountId**: string
-* **destinationAddress**: string (WriteOnly)
-* **destinationStorageLocationId**: string
-* **destinationStorageSubscriptionId**: string
-* **destinationType**: string
-* **exportId**: string (ReadOnly)
-* **exportStatus**: string (ReadOnly)
+* **ApplicationName**: string (ReadOnly)
+* **ContainerName**: string (ReadOnly)
+* **DestinationAccountId**: string
+* **DestinationAddress**: string (WriteOnly)
+* **DestinationStorageLocationId**: string
+* **DestinationStorageSubscriptionId**: string
+* **DestinationType**: string
+* **ExportId**: string (ReadOnly)
+* **ExportStatus**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **instrumentationKey**: string (ReadOnly)
+* **InstrumentationKey**: string (ReadOnly)
 * **IsEnabled**: string (WriteOnly)
 * **IsUserEnabled**: string (ReadOnly)
-* **lastGapTime**: string (ReadOnly)
-* **lastSuccessTime**: string (ReadOnly)
-* **lastUserUpdate**: string (ReadOnly)
+* **LastGapTime**: string (ReadOnly)
+* **LastSuccessTime**: string (ReadOnly)
+* **LastUserUpdate**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **notificationQueueEnabled**: string
-* **notificationQueueUri**: string (WriteOnly)
-* **permanentErrorReason**: string (ReadOnly)
-* **recordTypes**: string
-* **resourceGroup**: string (ReadOnly)
-* **storageName**: string (ReadOnly)
-* **subscriptionId**: string (ReadOnly)
+* **NotificationQueueEnabled**: string
+* **NotificationQueueUri**: string (WriteOnly)
+* **PermanentErrorReason**: string (ReadOnly)
+* **RecordTypes**: string
+* **ResourceGroup**: string (ReadOnly)
+* **StorageName**: string (ReadOnly)
+* **SubscriptionId**: string (ReadOnly)
 * **type**: 'Microsoft.Insights/components/exportconfiguration' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Insights/components/favorites@2015-05-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **category**: string
-* **config**: string
-* **favoriteId**: string (ReadOnly)
-* **favoriteType**: 'shared' | 'user'
+* **Category**: string
+* **Config**: string
+* **FavoriteId**: string (ReadOnly)
+* **FavoriteType**: 'shared' | 'user'
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **IsGeneratedFromTemplate**: bool
 * **name**: string (Required, DeployTimeConstant)
-* **sourceType**: string
-* **tags**: string[]
-* **timeModified**: string (ReadOnly)
+* **Name**: string
+* **SourceType**: string
+* **Tags**: string[]
+* **TimeModified**: string (ReadOnly)
 * **type**: 'Microsoft.Insights/components/favorites' (ReadOnly, DeployTimeConstant)
-* **userId**: string (ReadOnly)
-* **version**: string
+* **UserId**: string (ReadOnly)
+* **Version**: string
 
 ## Resource Microsoft.Insights/myWorkbooks@2015-05-01
 * **Valid Scope(s)**: ResourceGroup
@@ -88,29 +89,35 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **content**: string
+* **Content**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **Id**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationInsightsComponentAnalyticsItemProperties
-* **scope**: 'shared' | 'user'
-* **timeCreated**: string (ReadOnly)
-* **timeModified**: string (ReadOnly)
+* **Name**: string
+* **Properties**: ApplicationInsightsComponentAnalyticsItemProperties
+* **Scope**: 'shared' | 'user'
+* **TimeCreated**: string (ReadOnly)
+* **TimeModified**: string (ReadOnly)
 * **type**: 'microsoft.insights/components/analyticsItems' (ReadOnly, DeployTimeConstant)
-* **version**: string (ReadOnly)
+* **Type**: 'folder' | 'function' | 'query' | 'recent'
+* **Version**: string (ReadOnly)
 
 ## Resource microsoft.insights/components/myanalyticsItems@2015-05-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **content**: string
+* **Content**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **Id**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationInsightsComponentAnalyticsItemProperties
-* **scope**: 'shared' | 'user'
-* **timeCreated**: string (ReadOnly)
-* **timeModified**: string (ReadOnly)
+* **Name**: string
+* **Properties**: ApplicationInsightsComponentAnalyticsItemProperties
+* **Scope**: 'shared' | 'user'
+* **TimeCreated**: string (ReadOnly)
+* **TimeModified**: string (ReadOnly)
 * **type**: 'microsoft.insights/components/myanalyticsItems' (ReadOnly, DeployTimeConstant)
-* **version**: string (ReadOnly)
+* **Type**: 'folder' | 'function' | 'query' | 'recent'
+* **Version**: string (ReadOnly)
 
 ## Resource microsoft.insights/workbooks@2015-05-01
 * **Valid Scope(s)**: ResourceGroup
@@ -126,29 +133,29 @@
 
 ## ApplicationInsightsComponentProperties
 ### Properties
-* **appId**: string (ReadOnly)
-* **applicationId**: string (ReadOnly)
-* **applicationType**: 'other' | 'web' (Required)
-* **connectionString**: string (ReadOnly)
-* **creationDate**: string (ReadOnly)
-* **disableIpMasking**: bool
-* **flowType**: 'Bluefield'
-* **hockeyAppId**: string
-* **hockeyAppToken**: string (ReadOnly)
-* **immediatePurgeDataOn30Days**: bool
-* **ingestionMode**: 'ApplicationInsights' | 'ApplicationInsightsWithDiagnosticSettings' | 'LogAnalytics'
-* **instrumentationKey**: string (ReadOnly)
-* **privateLinkScopedResources**: PrivateLinkScopedResource[] (ReadOnly)
+* **AppId**: string (ReadOnly)
+* **Application_Type**: 'other' | 'web' (Required)
+* **ApplicationId**: string (ReadOnly)
+* **ConnectionString**: string (ReadOnly)
+* **CreationDate**: string (ReadOnly)
+* **DisableIpMasking**: bool
+* **Flow_Type**: 'Bluefield'
+* **HockeyAppId**: string
+* **HockeyAppToken**: string (ReadOnly)
+* **ImmediatePurgeDataOn30Days**: bool
+* **IngestionMode**: 'ApplicationInsights' | 'ApplicationInsightsWithDiagnosticSettings' | 'LogAnalytics'
+* **InstrumentationKey**: string (ReadOnly)
+* **PrivateLinkScopedResources**: PrivateLinkScopedResource[] (ReadOnly)
 * **provisioningState**: string (ReadOnly)
-* **requestSource**: 'rest'
-* **retentionInDays**: int
-* **samplingPercentage**: int
-* **tenantId**: string (ReadOnly)
+* **Request_Source**: 'rest'
+* **RetentionInDays**: int
+* **SamplingPercentage**: int
+* **TenantId**: string (ReadOnly)
 
 ## PrivateLinkScopedResource
 ### Properties
-* **resourceId**: string
-* **scopeId**: string
+* **ResourceId**: string
+* **ScopeId**: string
 
 ## ComponentsResourceTags
 ### Properties
@@ -173,25 +180,25 @@
 
 ## WebTestProperties
 ### Properties
-* **configuration**: WebTestPropertiesConfiguration
-* **description**: string
-* **enabled**: bool
-* **frequency**: int
-* **locations**: WebTestGeolocation[] (Required)
+* **Configuration**: WebTestPropertiesConfiguration
+* **Description**: string
+* **Enabled**: bool
+* **Frequency**: int
+* **Kind**: 'multistep' | 'ping' (Required)
+* **Locations**: WebTestGeolocation[] (Required)
+* **Name**: string (Required)
 * **provisioningState**: string (ReadOnly)
-* **retryEnabled**: bool
-* **syntheticMonitorId**: string (Required)
-* **timeout**: int
-* **webTestKind**: 'multistep' | 'ping' (Required)
-* **webTestName**: string (Required)
+* **RetryEnabled**: bool
+* **SyntheticMonitorId**: string (Required)
+* **Timeout**: int
 
 ## WebTestPropertiesConfiguration
 ### Properties
-* **webTest**: string
+* **WebTest**: string
 
 ## WebTestGeolocation
 ### Properties
-* **location**: string
+* **Id**: string
 
 ## WebtestsResourceTags
 ### Properties
@@ -205,9 +212,9 @@
 ## WorkbookProperties
 ### Properties
 * **category**: string (Required)
+* **kind**: 'shared' | 'user' (Required)
 * **name**: string (Required)
 * **serializedData**: string (Required)
-* **sharedTypeKind**: 'shared' | 'user' (Required)
 * **sourceResourceId**: string
 * **tags**: string[]
 * **timeModified**: string (ReadOnly)

@@ -38,4 +38,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CanonicalSupportPlanStatusItem
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping resource type microsoft.addons/supportproviders/supportplantypes under path '/subscriptions/{subscriptionId}/providers/Microsoft.Addons/supportProviders/{providerName}/supportPlanTypes/{planTypeName}': No resource body defined
 INFORMATION: Autorest.AzureResourceSchema took 0ms
-[7.64 s] Generation Complete
+[7.02 s] Generation Complete

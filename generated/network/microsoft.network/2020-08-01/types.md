@@ -2361,7 +2361,7 @@
 
 ## VirtualNetworkGatewayPropertiesFormat
 ### Properties
-* **active**: bool
+* **activeActive**: bool
 * **bgpSettings**: BgpSettings
 * **customRoutes**: AddressSpace
 * **enableBgp**: bool
@@ -3335,7 +3335,7 @@
 * **method**: 'Get' | 'Post'
 * **path**: string
 * **port**: int
-* **preferHttps**: bool
+* **preferHTTPS**: bool
 * **requestHeaders**: HttpHeader[]
 * **validStatusCodeRanges**: string[]
 
@@ -3620,7 +3620,7 @@
 * **securityPartnerProvider**: SubResource
 * **securityProviderName**: string
 * **sku**: string
-* **virtualHubRouteTableV2S**: VirtualHubRouteTableV2[]
+* **virtualHubRouteTableV2s**: VirtualHubRouteTableV2[]
 * **virtualRouterAsn**: int
 * **virtualRouterIps**: string[]
 * **virtualWan**: SubResource

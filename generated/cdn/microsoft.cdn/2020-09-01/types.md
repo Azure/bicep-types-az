@@ -400,10 +400,10 @@
 
 ## CacheExpirationActionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters' (Required)
 * **cacheBehavior**: 'BypassCache' | 'Override' | 'SetIfMissing' (Required)
 * **cacheDuration**: string
 * **cacheType**: 'All' (Required)
-* **odataType**: '[object Object]' (Required)
 
 ## DeliveryRuleCacheKeyQueryStringAction
 ### Properties
@@ -412,7 +412,7 @@
 
 ## CacheKeyQueryStringActionParameters
 ### Properties
-* **odataType**: '[object Object]' (Required)
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheKeyQueryStringBehaviorActionParameters' (Required)
 * **queryParameters**: string
 * **queryStringBehavior**: 'Exclude' | 'ExcludeAll' | 'Include' | 'IncludeAll' (Required)
 
@@ -423,9 +423,9 @@
 
 ## HeaderActionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters' (Required)
 * **headerAction**: 'Append' | 'Delete' | 'Overwrite' (Required)
 * **headerName**: string (Required)
-* **odataType**: '[object Object]' (Required)
 * **value**: string
 
 ## DeliveryRuleResponseHeaderAction
@@ -440,7 +440,7 @@
 
 ## OriginGroupOverrideActionParameters
 ### Properties
-* **odataType**: '[object Object]' (Required)
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleOriginGroupOverrideActionParameters' (Required)
 * **originGroup**: ResourceReference (Required)
 
 ## UrlRedirectAction
@@ -450,12 +450,12 @@
 
 ## UrlRedirectActionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlRedirectActionParameters' (Required)
 * **customFragment**: string
 * **customHostname**: string
 * **customPath**: string
 * **customQueryString**: string
 * **destinationProtocol**: 'Http' | 'Https' | 'MatchRequest'
-* **odataType**: '[object Object]' (Required)
 * **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect' (Required)
 
 ## UrlRewriteAction
@@ -465,8 +465,8 @@
 
 ## UrlRewriteActionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlRewriteActionParameters' (Required)
 * **destination**: string (Required)
-* **odataType**: '[object Object]' (Required)
 * **preserveUnmatchedPath**: bool
 * **sourcePattern**: string (Required)
 
@@ -477,8 +477,8 @@
 
 ## UrlSigningActionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlSigningActionParameters' (Required)
 * **algorithm**: 'SHA256'
-* **odataType**: '[object Object]' (Required)
 * **parameterNameOverride**: UrlSigningParamIdentifier[]
 
 ## UrlSigningParamIdentifier
@@ -568,9 +568,9 @@
 
 ## CookiesMatchConditionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleCookiesConditionParameters' (Required)
 * **matchValues**: string[]
 * **negateCondition**: bool
-* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required)
 * **selector**: string
 * **transforms**: 'Lowercase' | 'Uppercase'[]
@@ -582,9 +582,9 @@
 
 ## HttpVersionMatchConditionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleHttpVersionConditionParameters' (Required)
 * **matchValues**: string[]
 * **negateCondition**: bool
-* **odataType**: '[object Object]' (Required)
 * **operator**: 'Equal' (Required)
 
 ## DeliveryRuleIsDeviceCondition
@@ -594,9 +594,9 @@
 
 ## IsDeviceMatchConditionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleIsDeviceConditionParameters' (Required)
 * **matchValues**: 'Desktop' | 'Mobile'[]
 * **negateCondition**: bool
-* **odataType**: '[object Object]' (Required)
 * **operator**: 'Equal' (Required)
 * **transforms**: 'Lowercase' | 'Uppercase'[]
 
@@ -607,9 +607,9 @@
 
 ## PostArgsMatchConditionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRulePostArgsConditionParameters' (Required)
 * **matchValues**: string[]
 * **negateCondition**: bool
-* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required)
 * **selector**: string
 * **transforms**: 'Lowercase' | 'Uppercase'[]
@@ -621,9 +621,9 @@
 
 ## QueryStringMatchConditionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleQueryStringConditionParameters' (Required)
 * **matchValues**: string[]
 * **negateCondition**: bool
-* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required)
 * **transforms**: 'Lowercase' | 'Uppercase'[]
 
@@ -634,9 +634,9 @@
 
 ## RemoteAddressMatchConditionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters' (Required)
 * **matchValues**: string[]
 * **negateCondition**: bool
-* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'GeoMatch' | 'IPMatch' (Required)
 * **transforms**: 'Lowercase' | 'Uppercase'[]
 
@@ -647,9 +647,9 @@
 
 ## RequestBodyMatchConditionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestBodyConditionParameters' (Required)
 * **matchValues**: string[]
 * **negateCondition**: bool
-* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required)
 * **transforms**: 'Lowercase' | 'Uppercase'[]
 
@@ -660,9 +660,9 @@
 
 ## RequestHeaderMatchConditionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestHeaderConditionParameters' (Required)
 * **matchValues**: string[]
 * **negateCondition**: bool
-* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required)
 * **selector**: string
 * **transforms**: 'Lowercase' | 'Uppercase'[]
@@ -674,9 +674,9 @@
 
 ## RequestMethodMatchConditionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestMethodConditionParameters' (Required)
 * **matchValues**: 'DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'POST' | 'PUT' | 'TRACE'[]
 * **negateCondition**: bool
-* **odataType**: '[object Object]' (Required)
 * **operator**: 'Equal' (Required)
 
 ## DeliveryRuleRequestSchemeCondition
@@ -686,10 +686,10 @@
 
 ## RequestSchemeMatchConditionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestSchemeConditionParameters' (Required)
 * **matchValues**: 'HTTP' | 'HTTPS'[]
 * **negateCondition**: bool
-* **odataType**: '[object Object]' (Required)
-* **operator**: '[object Object]' (Required)
+* **operator**: 'Equal' (Required)
 
 ## DeliveryRuleRequestUriCondition
 ### Properties
@@ -698,9 +698,9 @@
 
 ## RequestUriMatchConditionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestUriConditionParameters' (Required)
 * **matchValues**: string[]
 * **negateCondition**: bool
-* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required)
 * **transforms**: 'Lowercase' | 'Uppercase'[]
 
@@ -711,9 +711,9 @@
 
 ## UrlFileExtensionMatchConditionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlFileExtensionMatchConditionParameters' (Required)
 * **matchValues**: string[]
 * **negateCondition**: bool
-* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required)
 * **transforms**: 'Lowercase' | 'Uppercase'[]
 
@@ -724,9 +724,9 @@
 
 ## UrlFileNameMatchConditionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlFilenameConditionParameters' (Required)
 * **matchValues**: string[]
 * **negateCondition**: bool
-* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required)
 * **transforms**: 'Lowercase' | 'Uppercase'[]
 
@@ -737,9 +737,9 @@
 
 ## UrlPathMatchConditionParameters
 ### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlPathMatchConditionParameters' (Required)
 * **matchValues**: string[]
 * **negateCondition**: bool
-* **odataType**: '[object Object]' (Required)
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | 'Wildcard' (Required)
 * **transforms**: 'Lowercase' | 'Uppercase'[]
 
@@ -805,7 +805,7 @@
 
 ## KeyVaultSigningKeyParameters
 ### Properties
-* **odataType**: '[object Object]' (Required)
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.KeyVaultSigningKeyParameters' (Required)
 * **resourceGroupName**: string (Required)
 * **secretName**: string (Required)
 * **secretVersion**: string (Required)

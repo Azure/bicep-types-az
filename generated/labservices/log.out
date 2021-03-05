@@ -14,7 +14,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 12ms
+INFORMATION: Autorest.AzureResourceSchema took 11ms
 Processing batch task - {"tag":"schema-labservices-2018-10-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -23,5 +23,5 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 5ms
-[13.68 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 4ms
+[10.98 s] Generation Complete

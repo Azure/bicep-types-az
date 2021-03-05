@@ -204,7 +204,7 @@
 * **acceptLanguage**: string
 * **arraySeparator**: string
 * **columnDelimiter**: string
-* **formatType**: '[object Object]' (Required)
+* **formatType**: 'TextFormat' (Required)
 * **quoteCharacter**: string
 * **quoteEscapeCharacter**: string
 

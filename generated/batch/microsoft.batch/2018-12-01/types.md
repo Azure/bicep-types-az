@@ -187,13 +187,13 @@
 ### Properties
 * **containerImageNames**: string[]
 * **containerRegistries**: ContainerRegistry[]
-* **type**: '[object Object]' (Required)
+* **type**: 'DockerCompatible' (Required)
 
 ## ContainerRegistry
 ### Properties
 * **password**: string (Required)
 * **registryServer**: string
-* **userName**: string (Required)
+* **username**: string (Required)
 
 ## DataDisk
 ### Properties

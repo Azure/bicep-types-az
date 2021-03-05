@@ -133,21 +133,21 @@
 
 ## RecordSetProperties
 ### Properties
-* **aaaaRecords**: AaaaRecord[]
-* **aRecords**: ARecord[]
+* **AAAARecords**: AaaaRecord[]
+* **ARecords**: ARecord[]
 * **caaRecords**: CaaRecord[]
-* **cnameRecord**: CnameRecord
+* **CNAMERecord**: CnameRecord
 * **fqdn**: string (ReadOnly)
 * **metadata**: RecordSetPropertiesMetadata
-* **mxRecords**: MxRecord[]
-* **NsRecords**: NsRecord[]
+* **MXRecords**: MxRecord[]
+* **NSRecords**: NsRecord[]
 * **provisioningState**: string (ReadOnly)
-* **ptrRecords**: PtrRecord[]
-* **soaRecord**: SoaRecord
-* **srvRecords**: SrvRecord[]
+* **PTRRecords**: PtrRecord[]
+* **SOARecord**: SoaRecord
+* **SRVRecords**: SrvRecord[]
 * **targetResource**: SubResource
 * **TTL**: int
-* **txtRecords**: TxtRecord[]
+* **TXTRecords**: TxtRecord[]
 
 ## AaaaRecord
 ### Properties
@@ -190,7 +190,7 @@
 * **email**: string
 * **expireTime**: int
 * **host**: string
-* **minimumTtl**: int
+* **minimumTTL**: int
 * **refreshTime**: int
 * **retryTime**: int
 * **serialNumber**: int

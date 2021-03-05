@@ -41,7 +41,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefin
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorDefinition' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 9ms
+INFORMATION: Autorest.AzureResourceSchema took 7ms
 Processing batch task - {"tag":"schema-customproviders-2018-09-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -78,4 +78,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorDefinition' with an undef
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 2ms
-[6.12 s] Generation Complete
+[5.4 s] Generation Complete

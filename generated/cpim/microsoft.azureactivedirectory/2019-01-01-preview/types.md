@@ -31,7 +31,7 @@
 ## B2CResourceSKU
 ### Properties
 * **name**: 'PremiumP1' | 'PremiumP2' | 'Standard'
-* **tier**: '[object Object]'
+* **tier**: 'A0'
 
 ## CreateTenantRequestBodyTags
 ### Properties

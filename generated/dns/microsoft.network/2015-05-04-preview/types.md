@@ -115,9 +115,9 @@
 
 ## RecordSetProperties
 ### Properties
-* **aaaaRecords**: AaaaRecord[]
-* **aRecords**: ARecord[]
-* **cnameRecord**: CnameRecord
+* **AAAARecords**: AaaaRecord[]
+* **ARecords**: ARecord[]
+* **CNAMERecord**: CnameRecord
 * **fqdn**: string (ReadOnly)
 * **MXRecords**: MxRecord[]
 * **NSRecords**: NsRecord[]

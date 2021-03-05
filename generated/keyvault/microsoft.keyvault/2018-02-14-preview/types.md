@@ -101,8 +101,8 @@
 ### Properties
 * **created**: int (ReadOnly)
 * **enabled**: bool
-* **expires**: int
-* **notBefore**: int
+* **exp**: int
+* **nbf**: int
 * **updated**: int (ReadOnly)
 
 ## SecretCreateOrUpdateParametersTags

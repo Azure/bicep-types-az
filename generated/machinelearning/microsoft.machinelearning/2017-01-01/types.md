@@ -156,8 +156,8 @@
 * **enum**: any[]
 * **format**: 'Byte' | 'Char' | 'Complex128' | 'Complex64' | 'Date-time' | 'Date-timeOffset' | 'Double' | 'Duration' | 'Float' | 'Int16' | 'Int32' | 'Int64' | 'Int8' | 'Uint16' | 'Uint32' | 'Uint64' | 'Uint8'
 * **type**: 'Boolean' | 'Integer' | 'Number' | 'String' (Required)
-* **xMsIsnullable**: bool
-* **xMsIsordered**: bool
+* **x-ms-isnullable**: bool
+* **x-ms-isordered**: bool
 
 ## WebServiceKeys
 ### Properties

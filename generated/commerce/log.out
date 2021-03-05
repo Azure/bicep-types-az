@@ -35,7 +35,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'RecurringCharge' with an undef
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named OfferTermInfo -- discriminator: {"propertyName":"Name"} => <none>,properties: {"Name":{"description":"Name of the offer term","$ref":"#/components/schemas/OfferTermInfo"},"EffectiveDate":{"description":"Indicates the date from which the offer term is effective.","$ref":"#/components/schemas/schemas:44"}} => <none>,required: ["Name"] => <none>,type: undefined => "string",enum: undefined => ["Recurring Charge","Monetary Commitment","Monetary Credit"],x-ms-enum: undefined => {"name":"OfferTermInfo","modelAsString":false} 
-INFORMATION: Autorest.AzureResourceSchema took 0ms
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-commerce-2015-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -66,4 +66,4 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named OfferTermInfo -- discriminator: {"propertyName":"Name"} => <none>,properties: {"Name":{"description":"Name of the offer term","$ref":"#/components/schemas/OfferTermInfo"},"EffectiveDate":{"description":"Indicates the date from which the offer term is effective.","$ref":"#/components/schemas/schemas:44"}} => <none>,required: ["Name"] => <none>,type: undefined => "string",enum: undefined => ["Recurring Charge","Monetary Commitment","Monetary Credit"],x-ms-enum: undefined => {"name":"OfferTermInfo","modelAsString":false} 
 INFORMATION: Autorest.AzureResourceSchema took 0ms
-[5.25 s] Generation Complete
+[4.74 s] Generation Complete

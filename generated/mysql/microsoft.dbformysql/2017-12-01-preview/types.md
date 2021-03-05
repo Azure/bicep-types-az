@@ -180,7 +180,7 @@
 
 ## ServerAdministratorProperties
 ### Properties
-* **administratorType**: '[object Object]' (Required)
+* **administratorType**: 'ActiveDirectory' (Required)
 * **login**: string (Required)
 * **sid**: string (Required)
 * **tenantId**: string (Required)

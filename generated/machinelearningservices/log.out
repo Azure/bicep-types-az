@@ -249,7 +249,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'AmlComputeNodesInformation' has a property 'nextLink' that is already declared the parent schema 'ComputeNodesInformation' but isn't significantly different. The property has been removed from AmlComputeNodesInformation
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 11ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-machinelearningservices-2020-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -330,7 +330,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'SharedPrivateLinkResourcePrope
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 9ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-machinelearningservices-2020-05-15-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -485,7 +485,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'AKSServiceCreateRequest-livene
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 14ms
+INFORMATION: Autorest.AzureResourceSchema took 9ms
 Processing batch task - {"tag":"schema-machinelearningservices-2020-05-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -636,7 +636,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'AKSServiceCreateRequest-livene
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 14ms
+INFORMATION: Autorest.AzureResourceSchema took 16ms
 Processing batch task - {"tag":"schema-machinelearningservices-2020-04-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -722,7 +722,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'SharedPrivateLinkResourcePrope
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.MachineLearningServices/workspaces/{workspaceName}/linkedWorkspaces/{linkName}': Unable to locate "/providers/" segment
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-machinelearningservices-2020-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -805,7 +805,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'SharedPrivateLinkResourcePrope
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 8ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-machinelearningservices-2020-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -888,7 +888,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'SharedPrivateLinkResourcePrope
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 8ms
 Processing batch task - {"tag":"schema-machinelearningservices-2020-02-18-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1111,7 +1111,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Restriction' with an undefined
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-machinelearningservices-2019-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1211,7 +1211,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'AmlComputeNodeInformation' wit
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-machinelearningservices-2018-11-19"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1276,7 +1276,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'DataFactory' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-machinelearningservices-2020-09-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1433,7 +1433,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'AmlComputeNodesInformation' has a property 'nextLink' that is already declared the parent schema 'ComputeNodesInformation' but isn't significantly different. The property has been removed from AmlComputeNodesInformation
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 11ms
+INFORMATION: Autorest.AzureResourceSchema took 10ms
 Processing batch task - {"tag":"schema-machinelearningservices-2020-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1520,7 +1520,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'AmlComputeNodesInformation' has a property 'nextLink' that is already declared the parent schema 'ComputeNodesInformation' but isn't significantly different. The property has been removed from AmlComputeNodesInformation
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 8ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-machinelearningservices-2020-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1756,7 +1756,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'AKSServiceCreateRequest-livene
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 7ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-machinelearningservices-2020-05-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2159,7 +2159,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'SharedPrivateLinkResourcePrope
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-machinelearningservices-2020-02-18-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2382,7 +2382,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Restriction' with an undefined
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-machinelearningservices-2019-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2548,4 +2548,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'DataFactory' with an undefined
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 2ms
-[154.69 s] Generation Complete
+[141.2 s] Generation Complete

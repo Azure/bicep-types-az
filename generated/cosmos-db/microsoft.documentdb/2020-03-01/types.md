@@ -257,7 +257,7 @@
 * **capabilities**: Capability[]
 * **connectorOffer**: 'Small'
 * **consistencyPolicy**: ConsistencyPolicy
-* **databaseAccountOfferType**: '[object Object]' (Required)
+* **databaseAccountOfferType**: 'Standard' (Required)
 * **disableKeyBasedMetadataWriteAccess**: bool
 * **documentEndpoint**: string (ReadOnly)
 * **enableAutomaticFailover**: bool
@@ -342,10 +342,10 @@
 
 ## CassandraKeyspaceResource
 ### Properties
-* **etag**: string (ReadOnly)
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
 * **id**: string (Required)
-* **rid**: string (ReadOnly)
-* **ts**: any (ReadOnly)
 
 ## Tags
 ### Properties
@@ -359,12 +359,12 @@
 
 ## CassandraTableResource
 ### Properties
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
 * **defaultTtl**: int
-* **etag**: string (ReadOnly)
 * **id**: string (Required)
-* **rid**: string (ReadOnly)
 * **schema**: CassandraSchema
-* **ts**: any (ReadOnly)
 
 ## CassandraSchema
 ### Properties
@@ -397,13 +397,13 @@
 
 ## ThroughputSettingsResource
 ### Properties
-* **etag**: string (ReadOnly)
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
 * **minimumThroughput**: string (ReadOnly)
 * **offerReplacePending**: string (ReadOnly)
 * **provisionedThroughputSettings**: ProvisionedThroughputSettingsResource
-* **rid**: string (ReadOnly)
 * **throughput**: int
-* **ts**: any (ReadOnly)
 
 ## ProvisionedThroughputSettingsResource
 ### Properties
@@ -437,10 +437,10 @@
 
 ## GremlinDatabaseResource
 ### Properties
-* **etag**: string (ReadOnly)
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
 * **id**: string (Required)
-* **rid**: string (ReadOnly)
-* **ts**: any (ReadOnly)
 
 ## Tags
 ### Properties
@@ -454,14 +454,14 @@
 
 ## GremlinGraphResource
 ### Properties
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
 * **conflictResolutionPolicy**: ConflictResolutionPolicy
 * **defaultTtl**: int
-* **etag**: string (ReadOnly)
 * **id**: string (Required)
 * **indexingPolicy**: IndexingPolicy
 * **partitionKey**: ContainerPartitionKey
-* **rid**: string (ReadOnly)
-* **ts**: any (ReadOnly)
 * **uniqueKeyPolicy**: UniqueKeyPolicy
 
 ## ConflictResolutionPolicy
@@ -540,10 +540,10 @@
 
 ## MongoDBDatabaseResource
 ### Properties
-* **etag**: string (ReadOnly)
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
 * **id**: string (Required)
-* **rid**: string (ReadOnly)
-* **ts**: any (ReadOnly)
 
 ## Tags
 ### Properties
@@ -557,12 +557,12 @@
 
 ## MongoDBCollectionResource
 ### Properties
-* **etag**: string (ReadOnly)
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
 * **id**: string (Required)
 * **indexes**: MongoIndex[]
-* **rid**: string (ReadOnly)
 * **shardKey**: ShardKeys
-* **ts**: any (ReadOnly)
 
 ## MongoIndex
 ### Properties
@@ -610,12 +610,12 @@
 
 ## SqlDatabaseResource
 ### Properties
-* **colls**: string (ReadOnly)
-* **etag**: string (ReadOnly)
+* **_colls**: string (ReadOnly)
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
+* **_users**: string (ReadOnly)
 * **id**: string (Required)
-* **rid**: string (ReadOnly)
-* **ts**: any (ReadOnly)
-* **users**: string (ReadOnly)
 
 ## Tags
 ### Properties
@@ -629,14 +629,14 @@
 
 ## SqlContainerResource
 ### Properties
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
 * **conflictResolutionPolicy**: ConflictResolutionPolicy
 * **defaultTtl**: int
-* **etag**: string (ReadOnly)
 * **id**: string (Required)
 * **indexingPolicy**: IndexingPolicy
 * **partitionKey**: ContainerPartitionKey
-* **rid**: string (ReadOnly)
-* **ts**: any (ReadOnly)
 * **uniqueKeyPolicy**: UniqueKeyPolicy
 
 ## Tags
@@ -651,11 +651,11 @@
 
 ## SqlStoredProcedureResource
 ### Properties
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
 * **body**: string
-* **etag**: string (ReadOnly)
 * **id**: string (Required)
-* **rid**: string (ReadOnly)
-* **ts**: any (ReadOnly)
 
 ## Tags
 ### Properties
@@ -674,13 +674,13 @@
 
 ## SqlTriggerResource
 ### Properties
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
 * **body**: string
-* **etag**: string (ReadOnly)
 * **id**: string (Required)
-* **rid**: string (ReadOnly)
 * **triggerOperation**: 'All' | 'Create' | 'Delete' | 'Replace' | 'Update'
 * **triggerType**: 'Post' | 'Pre'
-* **ts**: any (ReadOnly)
 
 ## Tags
 ### Properties
@@ -694,11 +694,11 @@
 
 ## SqlUserDefinedFunctionResource
 ### Properties
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
 * **body**: string
-* **etag**: string (ReadOnly)
 * **id**: string (Required)
-* **rid**: string (ReadOnly)
-* **ts**: any (ReadOnly)
 
 ## Tags
 ### Properties
@@ -717,10 +717,10 @@
 
 ## TableResource
 ### Properties
-* **etag**: string (ReadOnly)
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
 * **id**: string (Required)
-* **rid**: string (ReadOnly)
-* **ts**: any (ReadOnly)
 
 ## Tags
 ### Properties

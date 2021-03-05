@@ -22,7 +22,7 @@
 ## AutoscaleNotification
 ### Properties
 * **email**: EmailNotification
-* **operation**: '[object Object]' (Required)
+* **operation**: 'Scale' (Required)
 * **webhooks**: WebhookNotification[]
 
 ## EmailNotification
@@ -93,9 +93,9 @@
 
 ## ScaleRuleMetricDimension
 ### Properties
-* **dimensionName**: string (Required)
-* **operator**: 'Equals' | 'NotEquals' (Required)
-* **values**: string[] (Required)
+* **DimensionName**: string (Required)
+* **Operator**: 'Equals' | 'NotEquals' (Required)
+* **Values**: string[] (Required)
 
 ## ScaleAction
 ### Properties

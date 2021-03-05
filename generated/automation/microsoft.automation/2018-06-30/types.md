@@ -72,7 +72,7 @@
 * **logVerbose**: bool
 * **outputTypes**: string[] (ReadOnly)
 * **parameters**: RunbookPropertiesParameters (ReadOnly)
-* **provisioningState**: '[object Object]' (ReadOnly)
+* **provisioningState**: 'Succeeded' (ReadOnly)
 * **publishContentLink**: ContentLink
 * **runbookType**: 'Graph' | 'GraphPowerShell' | 'GraphPowerShellWorkflow' | 'PowerShell' | 'PowerShellWorkflow' | 'Script' (Required)
 * **state**: 'Edit' | 'New' | 'Published' (ReadOnly)

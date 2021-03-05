@@ -29,7 +29,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 12ms
+INFORMATION: Autorest.AzureResourceSchema took 11ms
 Processing batch task - {"tag":"schema-devices-2020-08-31"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -53,7 +53,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 7ms
 Processing batch task - {"tag":"schema-devices-2020-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -77,7 +77,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 9ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-devices-2020-07-10-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -101,7 +101,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-devices-2020-06-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -125,7 +125,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-devices-2020-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -150,7 +150,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-devices-2020-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -175,7 +175,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 7ms
 Processing batch task - {"tag":"schema-devices-2019-11-04"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -200,7 +200,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-devices-2019-07-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -225,7 +225,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 10ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-devices-2019-03-22-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -250,7 +250,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-devices-2019-03-22"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -275,7 +275,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-devices-2018-12-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -300,7 +300,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-devices-2018-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -325,7 +325,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-devices-2018-01-22"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -348,7 +348,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-devices-2017-07-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -367,7 +367,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-devices-2017-01-19"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -397,7 +397,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-devices-2020-08-31-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -421,7 +421,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-devices-2020-08-31"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -493,7 +493,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-devices-2020-06-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -567,7 +567,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 10ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-devices-2019-11-04"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -592,7 +592,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-devices-2019-07-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -617,7 +617,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-devices-2019-03-22-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -642,7 +642,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-devices-2019-03-22"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -667,7 +667,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-devices-2018-12-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -692,7 +692,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 8ms
 Processing batch task - {"tag":"schema-devices-2018-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -717,7 +717,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-devices-2018-01-22"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -759,7 +759,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-devices-2017-01-19"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -789,5 +789,5 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Skipping resource type microsoft.devices/iothubs/eventhubendpoints/consumergroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 2ms
-[142.99 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 1ms
+[119.32 s] Generation Complete

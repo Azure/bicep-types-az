@@ -35,7 +35,7 @@
 * **apiServerAccessProfile**: ManagedClusterAPIServerAccessProfile
 * **dnsPrefix**: string
 * **enablePodSecurityPolicy**: bool
-* **enableRbac**: bool
+* **enableRBAC**: bool
 * **fqdn**: string (ReadOnly)
 * **identityProfile**: ManagedClusterPropertiesIdentityProfile
 * **kubernetesVersion**: string
@@ -43,7 +43,7 @@
 * **maxAgentPools**: int (ReadOnly)
 * **networkProfile**: ContainerServiceNetworkProfile
 * **nodeResourceGroup**: string
-* **privateFqdn**: string (ReadOnly)
+* **privateFQDN**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **servicePrincipalProfile**: ManagedClusterServicePrincipalProfile
 * **windowsProfile**: ManagedClusterWindowsProfile

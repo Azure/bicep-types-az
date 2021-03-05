@@ -15,34 +15,34 @@
 
 ## ApplicationInsightsComponentProperties
 ### Properties
-* **appId**: string (ReadOnly)
-* **applicationId**: string (ReadOnly)
-* **applicationType**: 'other' | 'web' (Required)
-* **connectionString**: string (ReadOnly)
-* **creationDate**: string (ReadOnly)
-* **disableIpMasking**: bool
-* **flowType**: 'Bluefield'
-* **hockeyAppId**: string
-* **hockeyAppToken**: string (ReadOnly)
-* **immediatePurgeDataOn30Days**: bool
-* **ingestionMode**: 'ApplicationInsights' | 'ApplicationInsightsWithDiagnosticSettings' | 'LogAnalytics'
-* **instrumentationKey**: string (ReadOnly)
-* **laMigrationDate**: string (ReadOnly)
-* **name**: string (ReadOnly)
-* **privateLinkScopedResources**: PrivateLinkScopedResource[] (ReadOnly)
+* **AppId**: string (ReadOnly)
+* **Application_Type**: 'other' | 'web' (Required)
+* **ApplicationId**: string (ReadOnly)
+* **ConnectionString**: string (ReadOnly)
+* **CreationDate**: string (ReadOnly)
+* **DisableIpMasking**: bool
+* **Flow_Type**: 'Bluefield'
+* **HockeyAppId**: string
+* **HockeyAppToken**: string (ReadOnly)
+* **ImmediatePurgeDataOn30Days**: bool
+* **IngestionMode**: 'ApplicationInsights' | 'ApplicationInsightsWithDiagnosticSettings' | 'LogAnalytics'
+* **InstrumentationKey**: string (ReadOnly)
+* **LaMigrationDate**: string (ReadOnly)
+* **Name**: string (ReadOnly)
+* **PrivateLinkScopedResources**: PrivateLinkScopedResource[] (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled'
 * **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled'
-* **requestSource**: 'rest'
-* **retentionInDays**: int (ReadOnly)
-* **samplingPercentage**: int
-* **tenantId**: string (ReadOnly)
-* **workspaceResourceId**: string
+* **Request_Source**: 'rest'
+* **RetentionInDays**: int (ReadOnly)
+* **SamplingPercentage**: int
+* **TenantId**: string (ReadOnly)
+* **WorkspaceResourceId**: string
 
 ## PrivateLinkScopedResource
 ### Properties
-* **resourceId**: string
-* **scopeId**: string
+* **ResourceId**: string
+* **ScopeId**: string
 
 ## ComponentsResourceTags
 ### Properties

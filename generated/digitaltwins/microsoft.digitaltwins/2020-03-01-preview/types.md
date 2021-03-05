@@ -49,12 +49,12 @@
 * **accessKey1**: string (Required)
 * **accessKey2**: string (Required)
 * **endpointType**: 'EventGrid' (Required)
-* **topicEndpoint**: string
+* **TopicEndpoint**: string
 
 ### EventHub
 #### Properties
-* **connectionStringPrimaryKey**: string (Required)
-* **connectionStringSecondaryKey**: string (Required)
+* **connectionString-PrimaryKey**: string (Required)
+* **connectionString-SecondaryKey**: string (Required)
 * **endpointType**: 'EventHub' (Required)
 
 ### ServiceBus
@@ -74,12 +74,12 @@
 * **accessKey1**: string (Required)
 * **accessKey2**: string (Required)
 * **endpointType**: 'EventGrid' (Required)
-* **topicEndpoint**: string
+* **TopicEndpoint**: string
 
 ## EventHub
 ### Properties
-* **connectionStringPrimaryKey**: string (Required)
-* **connectionStringSecondaryKey**: string (Required)
+* **connectionString-PrimaryKey**: string (Required)
+* **connectionString-SecondaryKey**: string (Required)
 * **endpointType**: 'EventHub' (Required)
 
 ## ServiceBus

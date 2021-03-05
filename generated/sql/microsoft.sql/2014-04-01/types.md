@@ -17,7 +17,7 @@
 ### Properties
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **name**: 'activeDirectory' (Required, DeployTimeConstant)
 * **properties**: ServerAdministratorProperties
 * **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant)
 
@@ -117,7 +117,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **location**: string (ReadOnly)
-* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **name**: 'Default' (Required, DeployTimeConstant)
 * **properties**: DataMaskingPolicyProperties
 * **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -213,7 +213,7 @@
 
 ## ServerAdministratorProperties
 ### Properties
-* **administratorType**: '[object Object]' (Required)
+* **administratorType**: 'ActiveDirectory' (Required)
 * **login**: string (Required)
 * **sid**: string (Required)
 * **tenantId**: string (Required)
@@ -410,7 +410,7 @@
 * **administratorLogin**: string (Required, WriteOnly)
 * **administratorLoginPassword**: string (Required, WriteOnly)
 * **authenticationType**: 'ADPassword' | 'SQL' (WriteOnly)
-* **operationMode**: '[object Object]' (Required, WriteOnly)
+* **operationMode**: 'Import' (Required, WriteOnly)
 * **storageKey**: string (Required, WriteOnly)
 * **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly)
 * **storageUri**: string (Required, WriteOnly)

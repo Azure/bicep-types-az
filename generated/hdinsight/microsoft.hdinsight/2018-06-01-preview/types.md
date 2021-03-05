@@ -90,7 +90,7 @@
 
 ## Role
 ### Properties
-* **autoscaleConfiguration**: Autoscale
+* **autoscale**: Autoscale
 * **dataDisksGroups**: DataDisksGroups[]
 * **encryptDataDisks**: bool
 * **hardwareProfile**: HardwareProfile
@@ -220,7 +220,7 @@
 ### Properties
 * **aaddsResourceId**: string
 * **clusterUsersGroupDNs**: string[]
-* **directoryType**: '[object Object]'
+* **directoryType**: 'ActiveDirectory'
 * **domain**: string
 * **domainUsername**: string
 * **domainUserPassword**: any

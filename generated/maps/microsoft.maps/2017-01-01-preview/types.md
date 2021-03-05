@@ -14,7 +14,7 @@
 
 ## MapsAccountProperties
 ### Properties
-* **xMsClientId**: string (ReadOnly)
+* **x-ms-client-id**: string (ReadOnly)
 
 ## Sku
 ### Properties

@@ -174,7 +174,7 @@
 ## JobRecurrenceScheduleMonthlyOccurrence
 ### Properties
 * **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'
-* **occurrence**: int
+* **Occurrence**: int
 
 ## JobStatus
 ### Properties

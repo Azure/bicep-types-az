@@ -786,7 +786,7 @@
 
 ## PartnerContent
 ### Properties
-* **b2B**: B2BPartnerContent
+* **b2b**: B2BPartnerContent
 
 ## B2BPartnerContent
 ### Properties

@@ -58,7 +58,7 @@
 * **diskEncryptionSetID**: string
 * **dnsPrefix**: string
 * **enablePodSecurityPolicy**: bool
-* **enableRbac**: bool
+* **enableRBAC**: bool
 * **fqdn**: string (ReadOnly)
 * **identityProfile**: ManagedClusterPropertiesIdentityProfile
 * **kubernetesVersion**: string
@@ -67,7 +67,7 @@
 * **networkProfile**: ContainerServiceNetworkProfile
 * **nodeResourceGroup**: string
 * **powerState**: PowerState (ReadOnly)
-* **privateFqdn**: string (ReadOnly)
+* **privateFQDN**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **servicePrincipalProfile**: ManagedClusterServicePrincipalProfile
 * **windowsProfile**: ManagedClusterWindowsProfile
@@ -76,7 +76,7 @@
 ### Properties
 * **adminGroupObjectIDs**: string[]
 * **clientAppID**: string
-* **enableAzureRbac**: bool
+* **enableAzureRBAC**: bool
 * **managed**: bool
 * **serverAppID**: string
 * **serverAppSecret**: string
@@ -159,22 +159,22 @@
 
 ## ManagedClusterPropertiesAutoScalerProfile
 ### Properties
-* **balanceSimilarNodeGroups**: string
+* **balance-similar-node-groups**: string
 * **expander**: 'least-waste' | 'most-pods' | 'random'
-* **maxEmptyBulkDelete**: string
-* **maxGracefulTerminationSec**: string
-* **maxTotalUnreadyPercentage**: string
-* **newPodScaleUpDelay**: string
-* **okTotalUnreadyCount**: string
-* **scaleDownDelayAfterAdd**: string
-* **scaleDownDelayAfterDelete**: string
-* **scaleDownDelayAfterFailure**: string
-* **scaleDownUnneededTime**: string
-* **scaleDownUnreadyTime**: string
-* **scaleDownUtilizationThreshold**: string
-* **scanInterval**: string
-* **skipNodesWithLocalStorage**: string
-* **skipNodesWithSystemPods**: string
+* **max-empty-bulk-delete**: string
+* **max-graceful-termination-sec**: string
+* **max-total-unready-percentage**: string
+* **new-pod-scale-up-delay**: string
+* **ok-total-unready-count**: string
+* **scale-down-delay-after-add**: string
+* **scale-down-delay-after-delete**: string
+* **scale-down-delay-after-failure**: string
+* **scale-down-unneeded-time**: string
+* **scale-down-unready-time**: string
+* **scale-down-utilization-threshold**: string
+* **scan-interval**: string
+* **skip-nodes-with-local-storage**: string
+* **skip-nodes-with-system-pods**: string
 
 ## ManagedClusterPropertiesIdentityProfile
 ### Properties

@@ -93,7 +93,7 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 11ms
+INFORMATION: Autorest.AzureResourceSchema took 8ms
 Processing batch task - {"tag":"schema-intune-2015-01-14-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -182,4 +182,4 @@ WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized known property type: "duration"
 INFORMATION: Autorest.AzureResourceSchema took 4ms
-[8.7 s] Generation Complete
+[7.19 s] Generation Complete
