@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { ArraySchema, ChoiceSchema, CodeModel, DictionarySchema, HttpMethod, HttpParameter, HttpRequest, HttpResponse, ImplementationLocation, ObjectSchema, Operation, Parameter, ParameterLocation, PrimitiveSchema, Property, Request, Response, Schema, SchemaResponse, SchemaType, StringSchema } from "@autorest/codemodel";
+import { AnySchema, ArraySchema, ChoiceSchema, CodeModel, ConstantSchema, DictionarySchema, HttpMethod, HttpParameter, HttpRequest, HttpResponse, ImplementationLocation, ObjectSchema, Operation, Parameter, ParameterLocation, PrimitiveSchema, Property, Request, Response, Schema, SchemaResponse, SchemaType, SealedChoiceSchema, StringSchema } from "@autorest/codemodel";
 import { Channel, Host } from "@autorest/extension-base";
 import { ProviderDefinition, ResourceDefinition, ResourceDescriptor, ScopeType } from './models';
 import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
@@ -533,10 +533,11 @@ export function generateTypes(codeModel: CodeModel, host: Host) {
     if (combinedSchema instanceof ChoiceSchema) {
       return parseEnumType(factory, putSchema as ChoiceSchema, getSchema as ChoiceSchema);
     }
-
-    // A schema that matches simple values, such as { "type": "number" }
-    if (combinedSchema instanceof PrimitiveSchema) {
-      return parsePrimaryType(factory, putSchema as PrimitiveSchema, getSchema as PrimitiveSchema);
+    if (combinedSchema instanceof SealedChoiceSchema) {
+      return parseEnumType(factory, putSchema as SealedChoiceSchema, getSchema as SealedChoiceSchema);
+    }
+    if (combinedSchema instanceof ConstantSchema) {
+      return parseConstant(factory, putSchema as ConstantSchema, getSchema as ConstantSchema);
     }
 
     // A schema that matches an array of values, such as
@@ -545,8 +546,18 @@ export function generateTypes(codeModel: CodeModel, host: Host) {
       return parseArrayType(factory, putSchema as ArraySchema, getSchema as ArraySchema);
     }
 
-    logWarning(`Unrecognized property type: ${combinedSchema.type}`);
-    return;
+    // A schema that matches simple values, such as { "type": "number" }
+    if (combinedSchema instanceof PrimitiveSchema) {
+      return parsePrimaryType(factory, putSchema as PrimitiveSchema, getSchema as PrimitiveSchema);
+    }
+
+    // The 'any' type
+    if (combinedSchema instanceof AnySchema) {
+      return factory.lookupBuiltInType(BuiltInTypeKind.Any);
+    }
+
+    logWarning(`Unrecognized property type: ${combinedSchema.type}. Returning 'any'.`);
+    return factory.lookupBuiltInType(BuiltInTypeKind.Any);
   }
 
   function parsePropertyFlags(putProperty: Property | undefined, getProperty: Property | undefined) {
@@ -649,7 +660,7 @@ export function generateTypes(codeModel: CodeModel, host: Host) {
     return factory.namedDefinitions[definitionName];
   }
 
-  function parseEnumType(factory: TypeFactory, putSchema: ChoiceSchema | undefined, getSchema: ChoiceSchema | undefined) {
+  function parseEnumType(factory: TypeFactory, putSchema: ChoiceSchema | SealedChoiceSchema | undefined, getSchema: ChoiceSchema | SealedChoiceSchema | undefined) {
     const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
 
     const enumTypes = [];
@@ -663,6 +674,12 @@ export function generateTypes(codeModel: CodeModel, host: Host) {
     }
 
     return factory.addType(new UnionType(enumTypes));
+  }
+
+  function parseConstant(factory: TypeFactory, putSchema: ConstantSchema | undefined, getSchema: ConstantSchema | undefined) {
+    const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
+
+    return factory.addType(new StringLiteralType(combinedSchema.value.toString()));
   }
 
   function parseDictionaryType(factory: TypeFactory, putSchema: DictionarySchema | undefined, getSchema: DictionarySchema | undefined) {
