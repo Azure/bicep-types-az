@@ -1,0 +1,31 @@
+# Microsoft.SignalRService @ 2018-03-01-preview
+
+## Resource Microsoft.SignalRService/SignalR@2018-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SignalRCreateOrUpdateProperties
+* **sku**: ResourceSku
+* **tags**: SignalRUpdateParametersTags
+* **type**: 'Microsoft.SignalRService/SignalR' (ReadOnly, DeployTimeConstant)
+
+## SignalRCreateOrUpdateProperties
+### Properties
+* **hostNamePrefix**: string
+
+## ResourceSku
+### Properties
+* **capacity**: int
+* **family**: string
+* **name**: string (Required)
+* **size**: string
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard'
+
+## SignalRUpdateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
