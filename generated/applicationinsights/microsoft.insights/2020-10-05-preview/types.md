@@ -14,51 +14,51 @@
 
 ## WebTestProperties
 ### Properties
-* **configuration**: WebTestPropertiesConfiguration
-* **contentValidation**: WebTestPropertiesContentValidation
-* **description**: string
-* **enabled**: bool
-* **expectedHttpStatusCode**: int
-* **frequency**: int
-* **ignoreHttpsStatusCode**: bool
-* **locations**: WebTestGeolocation[] (Required)
+* **Configuration**: WebTestPropertiesConfiguration
+* **ContentValidation**: WebTestPropertiesContentValidation
+* **Description**: string
+* **Enabled**: bool
+* **ExpectedHttpStatusCode**: int
+* **Frequency**: int
+* **IgnoreHttpsStatusCode**: bool
+* **Kind**: 'basic' | 'multistep' | 'ping' | 'standard' (Required)
+* **Locations**: WebTestGeolocation[] (Required)
+* **Name**: string (Required)
 * **provisioningState**: string (ReadOnly)
-* **request**: WebTestPropertiesRequest
-* **retryEnabled**: bool
+* **Request**: WebTestPropertiesRequest
+* **RetryEnabled**: bool
 * **SSLCertRemainingLifetimeCheck**: int
 * **SSLCheck**: bool
-* **syntheticMonitorId**: string (Required)
-* **timeout**: int
-* **webTestKind**: 'basic' | 'multistep' | 'ping' | 'standard' (Required)
-* **webTestName**: string (Required)
+* **SyntheticMonitorId**: string (Required)
+* **Timeout**: int
 
 ## WebTestPropertiesConfiguration
 ### Properties
-* **webTest**: string
+* **WebTest**: string
 
 ## WebTestPropertiesContentValidation
 ### Properties
-* **contentMatch**: string
-* **ignoreCase**: bool
-* **passIfTextFound**: bool
+* **ContentMatch**: string
+* **IgnoreCase**: bool
+* **PassIfTextFound**: bool
 
 ## WebTestGeolocation
 ### Properties
-* **location**: string
+* **Id**: string
 
 ## WebTestPropertiesRequest
 ### Properties
-* **followRedirects**: bool
-* **headers**: HeaderField[]
-* **httpVerb**: string
-* **parseDependentRequests**: bool
-* **requestBody**: string
-* **requestUrl**: string
+* **FollowRedirects**: bool
+* **Headers**: HeaderField[]
+* **HttpVerb**: string
+* **ParseDependentRequests**: bool
+* **RequestBody**: string
+* **RequestUrl**: string
 
 ## HeaderField
 ### Properties
-* **headerFieldName**: string
-* **headerFieldValue**: string
+* **key**: string
+* **value**: string
 
 ## WebtestsResourceTags
 ### Properties

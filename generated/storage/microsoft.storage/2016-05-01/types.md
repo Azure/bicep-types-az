@@ -35,7 +35,7 @@
 
 ## Encryption
 ### Properties
-* **keySource**: '[object Object]' (Required)
+* **keySource**: 'Microsoft.Storage' (Required)
 * **services**: EncryptionServices
 
 ## EncryptionServices

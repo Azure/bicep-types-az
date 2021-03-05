@@ -274,7 +274,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named DeliveryRuleAction -- discriminator: {"propertyName":"name"} => <none>,properties: {"name":{"description":"The name of the action for the delivery rule.","$ref":"#/components/schemas/DeliveryRuleAction"}} => <none>,required: ["name"] => <none>,type: undefined => "string",enum: undefined => ["CacheExpiration","CacheKeyQueryString","ModifyRequestHeader","ModifyResponseHeader","UrlRedirect","UrlRewrite","UrlSigning","OriginGroupOverride"],x-ms-enum: undefined => {"name":"DeliveryRuleAction","modelAsString":true} 
 WARNING: Skipping resource type microsoft.cdn/profiles/rulesets under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/ruleSets/{ruleSetName}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 26ms
+INFORMATION: Autorest.AzureResourceSchema took 25ms
 Processing batch task - {"tag":"schema-cdn-2020-04-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -464,7 +464,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleDefinition' with an
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named DeliveryRuleAction -- discriminator: {"propertyName":"name"} => <none>,properties: {"name":{"description":"The name of the action for the delivery rule.","$ref":"#/components/schemas/DeliveryRuleAction"}} => <none>,required: ["name"] => <none>,type: undefined => "string",enum: undefined => ["CacheExpiration","CacheKeyQueryString","ModifyRequestHeader","ModifyResponseHeader","UrlRedirect","UrlRewrite","UrlSigning"],x-ms-enum: undefined => {"name":"DeliveryRuleAction","modelAsString":true} 
-INFORMATION: Autorest.AzureResourceSchema took 12ms
+INFORMATION: Autorest.AzureResourceSchema took 11ms
 Processing batch task - {"tag":"schema-cdn-2019-12-31"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -618,7 +618,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefin
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named DeliveryRuleAction -- discriminator: {"propertyName":"name"} => <none>,properties: {"name":{"description":"The name of the action for the delivery rule.","$ref":"#/components/schemas/DeliveryRuleAction"}} => <none>,required: ["name"] => <none>,type: undefined => "string",enum: undefined => ["CacheExpiration","CacheKeyQueryString","ModifyRequestHeader","ModifyResponseHeader","UrlRedirect","UrlRewrite","OriginGroupOverride"],x-ms-enum: undefined => {"name":"DeliveryRuleAction","modelAsString":true} 
-INFORMATION: Autorest.AzureResourceSchema took 15ms
+INFORMATION: Autorest.AzureResourceSchema took 17ms
 Processing batch task - {"tag":"schema-cdn-2019-06-15-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)

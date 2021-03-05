@@ -18,7 +18,6 @@
 * **accessTier**: 'Cool' | 'Hot'
 * **creationTime**: string (ReadOnly)
 * **customDomain**: CustomDomain
-* **enableHttpsTrafficOnly**: bool
 * **encryption**: Encryption
 * **lastGeoFailoverTime**: string (ReadOnly)
 * **primaryEndpoints**: Endpoints (ReadOnly)
@@ -28,6 +27,7 @@
 * **secondaryLocation**: string (ReadOnly)
 * **statusOfPrimary**: 'available' | 'unavailable' (ReadOnly)
 * **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly)
+* **supportsHttpsTrafficOnly**: bool
 
 ## CustomDomain
 ### Properties
@@ -36,7 +36,7 @@
 
 ## Encryption
 ### Properties
-* **keySource**: '[object Object]' (Required)
+* **keySource**: 'Microsoft.Storage' (Required)
 * **services**: EncryptionServices
 
 ## EncryptionServices

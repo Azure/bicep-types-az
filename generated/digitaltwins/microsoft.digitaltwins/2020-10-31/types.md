@@ -44,7 +44,7 @@
 * **accessKey1**: string (Required)
 * **accessKey2**: string
 * **endpointType**: 'EventGrid' (Required)
-* **topicEndpoint**: string (Required)
+* **TopicEndpoint**: string (Required)
 
 ### EventHub
 #### Properties
@@ -64,7 +64,7 @@
 * **accessKey1**: string (Required)
 * **accessKey2**: string
 * **endpointType**: 'EventGrid' (Required)
-* **topicEndpoint**: string (Required)
+* **TopicEndpoint**: string (Required)
 
 ## EventHub
 ### Properties

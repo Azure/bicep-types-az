@@ -393,8 +393,8 @@
 ### Base Properties
 ### NamedPartitionSchemeDescription
 #### Properties
-* **count**: int (Required)
-* **names**: string[] (Required)
+* **Count**: int (Required)
+* **Names**: string[] (Required)
 * **partitionScheme**: 'Named' (Required)
 
 ### SingletonPartitionSchemeDescription
@@ -403,16 +403,16 @@
 
 ### UniformInt64RangePartitionSchemeDescription
 #### Properties
-* **count**: int (Required)
-* **highKey**: string (Required)
-* **lowKey**: string (Required)
+* **Count**: int (Required)
+* **HighKey**: string (Required)
+* **LowKey**: string (Required)
 * **partitionScheme**: 'UniformInt64Range' (Required)
 
 
 ## NamedPartitionSchemeDescription
 ### Properties
-* **count**: int (Required)
-* **names**: string[] (Required)
+* **Count**: int (Required)
+* **Names**: string[] (Required)
 * **partitionScheme**: 'Named' (Required)
 
 ## SingletonPartitionSchemeDescription
@@ -421,9 +421,9 @@
 
 ## UniformInt64RangePartitionSchemeDescription
 ### Properties
-* **count**: int (Required)
-* **highKey**: string (Required)
-* **lowKey**: string (Required)
+* **Count**: int (Required)
+* **HighKey**: string (Required)
+* **LowKey**: string (Required)
 * **partitionScheme**: 'UniformInt64Range' (Required)
 
 ## ServiceLoadMetricDescription

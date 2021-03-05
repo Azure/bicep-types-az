@@ -196,10 +196,10 @@
 * **allowedClients**: string
 * **cifs**: bool
 * **hasRootAccess**: bool
-* **kerberos5IReadOnly**: bool
-* **kerberos5IReadWrite**: bool
-* **kerberos5PReadOnly**: bool
-* **kerberos5PReadWrite**: bool
+* **kerberos5iReadOnly**: bool
+* **kerberos5iReadWrite**: bool
+* **kerberos5pReadOnly**: bool
+* **kerberos5pReadWrite**: bool
 * **kerberos5ReadOnly**: bool
 * **kerberos5ReadWrite**: bool
 * **nfsv3**: bool

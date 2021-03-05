@@ -17,7 +17,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: '[object Object]'
+* **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AccessControlRecordProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/accessControlRecords' (ReadOnly, DeployTimeConstant)
@@ -27,7 +27,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: '[object Object]'
+* **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: BandwidthRateSettingProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/bandwidthSettings' (ReadOnly, DeployTimeConstant)
@@ -37,7 +37,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: '[object Object]'
+* **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: AlertNotificationProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/alertSettings' (ReadOnly, DeployTimeConstant)
@@ -47,7 +47,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: '[object Object]'
+* **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: BackupPolicyProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/backupPolicies' (ReadOnly, DeployTimeConstant)
@@ -57,7 +57,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: '[object Object]'
+* **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: BackupScheduleProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/backupPolicies/schedules' (ReadOnly, DeployTimeConstant)
@@ -67,7 +67,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: '[object Object]'
+* **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: TimeSettingsProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/timeSettings' (ReadOnly, DeployTimeConstant)
@@ -77,7 +77,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: '[object Object]'
+* **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: VolumeContainerProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/volumeContainers' (ReadOnly, DeployTimeConstant)
@@ -87,7 +87,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: '[object Object]'
+* **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: VolumeProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/volumeContainers/volumes' (ReadOnly, DeployTimeConstant)
@@ -98,7 +98,7 @@
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: '[object Object]'
+* **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ManagerExtendedInfoProperties
 * **type**: 'Microsoft.StorSimple/managers/extendedInformation' (ReadOnly, DeployTimeConstant)
@@ -108,7 +108,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: '[object Object]'
+* **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: StorageAccountCredentialProperties (Required)
 * **type**: 'Microsoft.StorSimple/managers/storageAccountCredentials' (ReadOnly, DeployTimeConstant)
@@ -125,7 +125,7 @@
 
 ## ManagerSku
 ### Properties
-* **name**: '[object Object]' (Required)
+* **name**: 'Standard' (Required)
 
 ## ResourceTags
 ### Properties

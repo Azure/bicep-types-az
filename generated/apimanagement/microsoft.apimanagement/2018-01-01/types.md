@@ -376,8 +376,8 @@
 * **path**: string (Required, WriteOnly)
 * **protocols**: 'http' | 'https'[] (WriteOnly)
 * **serviceUrl**: string (WriteOnly)
-* **soapApiType**: 'http' | 'soap' (WriteOnly)
 * **subscriptionKeyParameterNames**: SubscriptionKeyParameterNamesContract (WriteOnly)
+* **type**: 'http' | 'soap' (WriteOnly)
 * **wsdlSelector**: ApiCreateOrUpdatePropertiesWsdlSelector (WriteOnly)
 
 ## ApiVersionSetContractDetails

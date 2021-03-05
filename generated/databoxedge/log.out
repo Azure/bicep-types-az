@@ -63,7 +63,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-INFORMATION: Autorest.AzureResourceSchema took 21ms
+INFORMATION: Autorest.AzureResourceSchema took 20ms
 Processing batch task - {"tag":"schema-databoxedge-2020-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -121,7 +121,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-INFORMATION: Autorest.AzureResourceSchema took 12ms
+INFORMATION: Autorest.AzureResourceSchema took 27ms
 Processing batch task - {"tag":"schema-databoxedge-2020-05-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -149,7 +149,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-INFORMATION: Autorest.AzureResourceSchema took 7ms
+INFORMATION: Autorest.AzureResourceSchema took 9ms
 Processing batch task - {"tag":"schema-databoxedge-2019-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -177,7 +177,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-INFORMATION: Autorest.AzureResourceSchema took 7ms
+INFORMATION: Autorest.AzureResourceSchema took 9ms
 Processing batch task - {"tag":"schema-databoxedge-2019-07-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -205,7 +205,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-INFORMATION: Autorest.AzureResourceSchema took 9ms
+INFORMATION: Autorest.AzureResourceSchema took 10ms
 Processing batch task - {"tag":"schema-databoxedge-2019-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -233,7 +233,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-INFORMATION: Autorest.AzureResourceSchema took 9ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-databoxedge-2020-09-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -291,7 +291,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-INFORMATION: Autorest.AzureResourceSchema took 11ms
+INFORMATION: Autorest.AzureResourceSchema took 9ms
 Processing batch task - {"tag":"schema-databoxedge-2020-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -349,7 +349,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-INFORMATION: Autorest.AzureResourceSchema took 11ms
+INFORMATION: Autorest.AzureResourceSchema took 9ms
 Processing batch task - {"tag":"schema-databoxedge-2020-05-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -377,7 +377,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-INFORMATION: Autorest.AzureResourceSchema took 9ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-databoxedge-2019-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -405,7 +405,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-INFORMATION: Autorest.AzureResourceSchema took 7ms
+INFORMATION: Autorest.AzureResourceSchema took 9ms
 Processing batch task - {"tag":"schema-databoxedge-2019-07-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -433,7 +433,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-INFORMATION: Autorest.AzureResourceSchema took 8ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-databoxedge-2019-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -461,5 +461,5 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'name' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
-INFORMATION: Autorest.AzureResourceSchema took 7ms
-[89.66 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 3ms
+[79.38 s] Generation Complete

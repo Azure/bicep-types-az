@@ -1395,7 +1395,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: Autorest.AzureResourceSchema took 147ms
+INFORMATION: Autorest.AzureResourceSchema took 139ms
 Processing batch task - {"tag":"schema-network-2020-07-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2777,7 +2777,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: Autorest.AzureResourceSchema took 133ms
+INFORMATION: Autorest.AzureResourceSchema took 117ms
 Processing batch task - {"tag":"schema-network-2020-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -4137,7 +4137,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: Autorest.AzureResourceSchema took 139ms
+INFORMATION: Autorest.AzureResourceSchema took 128ms
 Processing batch task - {"tag":"schema-network-2020-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -5439,7 +5439,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: Autorest.AzureResourceSchema took 122ms
+INFORMATION: Autorest.AzureResourceSchema took 118ms
 Processing batch task - {"tag":"schema-network-2020-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -6677,15 +6677,15 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: Autorest.AzureResourceSchema took 122ms
+INFORMATION: Autorest.AzureResourceSchema took 88ms
 Processing batch task - {"tag":"schema-network-2020-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
 <--- Last few GCs --->
 
-[9893:0x4781fc0]   633226 ms: Scavenge (reduce) 2030.0 (2050.6) -> 2029.2 (2051.6) MB, 2.6 / 0.0 ms  (average mu = 0.152, current mu = 0.168) allocation failure 
-[9893:0x4781fc0]   633241 ms: Scavenge (reduce) 2030.0 (2050.6) -> 2029.4 (2052.1) MB, 12.4 / 0.0 ms  (average mu = 0.152, current mu = 0.168) allocation failure 
+[9535:0x46f1fc0]   600123 ms: Scavenge (reduce) 2029.5 (2053.5) -> 2028.9 (2053.7) MB, 10.2 / 0.0 ms  (average mu = 0.101, current mu = 0.031) allocation failure 
+[9535:0x46f1fc0]   600964 ms: Mark-sweep (reduce) 2029.7 (2050.7) -> 2028.7 (2051.7) MB, 838.7 / 0.0 ms  (average mu = 0.125, current mu = 0.149) allocation failure scavenge might not succeed
 
 
 <--- JS stacktrace --->

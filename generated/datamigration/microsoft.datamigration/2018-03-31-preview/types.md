@@ -166,8 +166,8 @@
 ## ConnectToSourceSqlServerTaskInput
 ### Properties
 * **checkPermissionsGroup**: 'Default' | 'MigrationFromSqlServerToAzureDB'
-* **collectAgentJobs**: bool
-* **collectLogins**: bool
+* **CollectAgentJobs**: bool
+* **CollectLogins**: bool
 * **sourceConnectionInfo**: SqlConnectionInfo (Required)
 
 ## ConnectToSourceSqlServerTaskOutput
@@ -205,9 +205,9 @@
 
 ### ConnectToSourceSqlServerTaskOutputTaskLevel
 #### Properties
-* **agentJobs**: string (ReadOnly)
+* **AgentJobs**: string (ReadOnly)
 * **databases**: string (ReadOnly)
-* **logins**: string (ReadOnly)
+* **Logins**: string (ReadOnly)
 * **resultType**: 'TaskLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly)
 * **sourceServerVersion**: string (ReadOnly)
@@ -259,9 +259,9 @@
 
 ## ConnectToSourceSqlServerTaskOutputTaskLevel
 ### Properties
-* **agentJobs**: string (ReadOnly)
+* **AgentJobs**: string (ReadOnly)
 * **databases**: string (ReadOnly)
-* **logins**: string (ReadOnly)
+* **Logins**: string (ReadOnly)
 * **resultType**: 'TaskLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly)
 * **sourceServerVersion**: string (ReadOnly)
@@ -287,9 +287,9 @@
 
 ## ConnectToTargetSqlMITaskOutput
 ### Properties
-* **agentJobs**: string[] (ReadOnly)
+* **AgentJobs**: string[] (ReadOnly)
 * **id**: string (ReadOnly)
-* **logins**: string[] (ReadOnly)
+* **Logins**: string[] (ReadOnly)
 * **targetServerBrandVersion**: string (ReadOnly)
 * **targetServerVersion**: string (ReadOnly)
 * **validationErrors**: ReportableException[] (ReadOnly)

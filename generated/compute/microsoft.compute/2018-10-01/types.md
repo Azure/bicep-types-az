@@ -400,9 +400,9 @@
 
 ## AdditionalUnattendContent
 ### Properties
-* **componentName**: '[object Object]'
+* **componentName**: 'Microsoft-Windows-Shell-Setup'
 * **content**: string
-* **passName**: '[object Object]'
+* **passName**: 'OobeSystem'
 * **settingName**: 'AutoLogon' | 'FirstLogonCommands'
 
 ## WinRMConfiguration

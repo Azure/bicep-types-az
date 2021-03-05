@@ -91,8 +91,8 @@
 ## AgreementContent
 ### Properties
 * **AS2**: AS2AgreementContent
-* **edifact**: EdifactAgreementContent
-* **x12**: X12AgreementContent
+* **Edifact**: EdifactAgreementContent
+* **X12**: X12AgreementContent
 
 ## AS2AgreementContent
 ### Properties
@@ -124,16 +124,16 @@
 
 ## AS2EnvelopeSettings
 ### Properties
-* **autogenerateFileName**: bool
+* **AutogenerateFileName**: bool
 * **fileNameTemplate**: string
 * **messageContentType**: string
-* **suspendMessageOnFileNameGenerationError**: bool
+* **SuspendMessageOnFileNameGenerationError**: bool
 * **transmitFileNameInMimeHeader**: bool
 
 ## AS2ErrorSettings
 ### Properties
-* **resendIfMdnNotReceived**: bool
-* **suspendDuplicateMessage**: bool
+* **ResendIfMdnNotReceived**: bool
+* **SuspendDuplicateMessage**: bool
 
 ## AS2MdnSettings
 ### Properties
@@ -180,8 +180,8 @@
 
 ## BusinessIdentity
 ### Properties
-* **qualifier**: string
-* **value**: string
+* **Qualifier**: string
+* **Value**: string
 
 ## EdifactAgreementContent
 ### Properties
@@ -590,7 +590,7 @@
 
 ## PartnerContent
 ### Properties
-* **b2B**: B2BPartnerContent
+* **b2b**: B2BPartnerContent
 
 ## B2BPartnerContent
 ### Properties

@@ -31,7 +31,7 @@
 * **description**: string
 * **permissions**: Permission[]
 * **roleName**: string
-* **roleType**: string
+* **type**: string
 
 ## Permission
 ### Properties

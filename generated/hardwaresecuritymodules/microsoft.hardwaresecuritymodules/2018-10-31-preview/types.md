@@ -36,7 +36,7 @@
 
 ## Sku
 ### Properties
-* **name**: '[object Object]'
+* **name**: 'SafeNet Luna Network HSM A790'
 
 ## ResourceTags
 ### Properties

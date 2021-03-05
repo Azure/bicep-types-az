@@ -88,25 +88,25 @@ WARNING (PreCheck/SchemaMissingType): The schema 'PrivateLinkResourceListResult'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
 An error was encountered while handling a request: TypeError: Cannot set property '@odata.type' of undefined
     at handlePolymorphicType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:508:74)
     at parseObjectType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:535:17)
     at parseType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:426:20)
     at parseObjectType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:519:44)
     at parseType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:426:20)
-    at parseArrayType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:562:24)
+    at parseArrayType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:563:24)
     at parseType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:447:20)
     at parseObjectType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:519:44)
     at parseType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:426:20)
     at generateProviderTypes (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:116:44)
+WARNING: Unrecognized known property type: "duration"
+WARNING: Unrecognized known property type: "duration"
+WARNING: Unrecognized known property type: "duration"
+WARNING: Unrecognized known property type: "duration"
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
+WARNING: Unrecognized property type: byte-array. Returning 'any'.
 FATAL: TypeError: Cannot set property '@odata.type' of undefined
 Failure during batch task - {"tag":"schema-media-2020-05-01"} -- Error: Plugin azureresourceschema reported failure..
   Error: Plugin azureresourceschema reported failure.

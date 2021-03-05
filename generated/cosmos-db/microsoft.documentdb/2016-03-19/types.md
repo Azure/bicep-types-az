@@ -171,7 +171,7 @@
 * **capabilities**: Capability[]
 * **connectorOffer**: 'Small'
 * **consistencyPolicy**: ConsistencyPolicy
-* **databaseAccountOfferType**: '[object Object]' (Required)
+* **databaseAccountOfferType**: 'Standard' (Required)
 * **documentEndpoint**: string (ReadOnly)
 * **enableAutomaticFailover**: bool
 * **enableCassandraConnector**: bool
@@ -222,14 +222,14 @@
 
 ## SqlDatabaseCreateUpdateProperties
 ### Properties
-* **colls**: string (ReadOnly)
-* **etag**: string (ReadOnly)
+* **_colls**: string (ReadOnly)
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
+* **_users**: string (ReadOnly)
 * **id**: string (ReadOnly)
 * **options**: CreateUpdateOptions (Required, WriteOnly)
 * **resource**: SqlDatabaseResource (Required, WriteOnly)
-* **rid**: string (ReadOnly)
-* **ts**: any (ReadOnly)
-* **users**: string (ReadOnly)
 
 ## CreateUpdateOptions
 ### Properties
@@ -309,16 +309,16 @@
 
 ## SqlContainerCreateUpdateProperties
 ### Properties
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
 * **conflictResolutionPolicy**: ConflictResolutionPolicy (ReadOnly)
 * **defaultTtl**: int (ReadOnly)
-* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly)
 * **indexingPolicy**: IndexingPolicy (ReadOnly)
 * **options**: CreateUpdateOptions (Required, WriteOnly)
 * **partitionKey**: ContainerPartitionKey (ReadOnly)
 * **resource**: SqlContainerResource (Required, WriteOnly)
-* **rid**: string (ReadOnly)
-* **ts**: any (ReadOnly)
 * **uniqueKeyPolicy**: UniqueKeyPolicy (ReadOnly)
 
 ## ConflictResolutionPolicy
@@ -388,16 +388,16 @@
 
 ## GremlinGraphCreateUpdateProperties
 ### Properties
+* **_etag**: string (ReadOnly)
+* **_rid**: string (ReadOnly)
+* **_ts**: any (ReadOnly)
 * **conflictResolutionPolicy**: ConflictResolutionPolicy (ReadOnly)
 * **defaultTtl**: int (ReadOnly)
-* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly)
 * **indexingPolicy**: IndexingPolicy (ReadOnly)
 * **options**: CreateUpdateOptions (Required, WriteOnly)
 * **partitionKey**: ContainerPartitionKey (ReadOnly)
 * **resource**: GremlinGraphResource (Required, WriteOnly)
-* **rid**: string (ReadOnly)
-* **ts**: any (ReadOnly)
 * **uniqueKeyPolicy**: UniqueKeyPolicy (ReadOnly)
 
 ## CreateUpdateOptions

@@ -358,7 +358,6 @@
 ## ApiCreateOrUpdateProperties
 ### Properties
 * **apiRevision**: string (WriteOnly)
-* **apiType**: 'http' | 'soap' (WriteOnly)
 * **apiVersion**: string (WriteOnly)
 * **apiVersionSet**: ApiVersionSetContract (WriteOnly)
 * **apiVersionSetId**: string (WriteOnly)
@@ -373,6 +372,7 @@
 * **protocols**: 'http' | 'https'[] (WriteOnly)
 * **serviceUrl**: string (WriteOnly)
 * **subscriptionKeyParameterNames**: SubscriptionKeyParameterNamesContract (WriteOnly)
+* **type**: 'http' | 'soap' (WriteOnly)
 * **wsdlSelector**: ApiCreateOrUpdatePropertiesWsdlSelector (WriteOnly)
 
 ## ApiVersionSetContract

@@ -67,8 +67,8 @@
 
 ## Sku
 ### Properties
-* **name**: '[object Object]' (Required)
-* **tier**: '[object Object]'
+* **name**: 'Standard' (Required)
+* **tier**: 'Standard'
 
 ## TrackedResourceTags
 ### Properties

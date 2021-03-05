@@ -35,7 +35,7 @@
 * **apiServerAuthorizedIPRanges**: string[]
 * **dnsPrefix**: string
 * **enablePodSecurityPolicy**: bool
-* **enableRbac**: bool
+* **enableRBAC**: bool
 * **fqdn**: string (ReadOnly)
 * **kubernetesVersion**: string
 * **linuxProfile**: ContainerServiceLinuxProfile

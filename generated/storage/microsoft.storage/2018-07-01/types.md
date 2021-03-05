@@ -18,10 +18,10 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
-* **containerProperties**: ContainerProperties
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: ContainerProperties
 * **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies@2018-07-01
@@ -30,7 +30,7 @@
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: '[object Object]' (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: ImmutabilityPolicyProperty (Required)
 * **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -38,21 +38,20 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: '[object Object]' (Required)
+* **type**: 'SystemAssigned' (Required)
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
 * **accessTier**: 'Cool' | 'Hot'
+* **azureFilesAadIntegration**: bool
 * **creationTime**: string (ReadOnly)
 * **customDomain**: CustomDomain
-* **enableAzureFilesAadIntegration**: bool
-* **enableHttpsTrafficOnly**: bool
 * **encryption**: Encryption
 * **failoverInProgress**: bool (ReadOnly)
 * **geoReplicationStats**: GeoReplicationStats (ReadOnly)
-* **IsHnsEnabled**: bool
+* **isHnsEnabled**: bool
 * **lastGeoFailoverTime**: string (ReadOnly)
-* **networkRuleSet**: NetworkRuleSet
+* **networkAcls**: NetworkRuleSet
 * **primaryEndpoints**: Endpoints (ReadOnly)
 * **primaryLocation**: string (ReadOnly)
 * **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly)
@@ -60,6 +59,7 @@
 * **secondaryLocation**: string (ReadOnly)
 * **statusOfPrimary**: 'available' | 'unavailable' (ReadOnly)
 * **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly)
+* **supportsHttpsTrafficOnly**: bool
 
 ## CustomDomain
 ### Properties
@@ -69,14 +69,14 @@
 ## Encryption
 ### Properties
 * **keySource**: 'Microsoft.Keyvault' | 'Microsoft.Storage' (Required)
-* **keyVaultProperties**: KeyVaultProperties
+* **keyvaultproperties**: KeyVaultProperties
 * **services**: EncryptionServices
 
 ## KeyVaultProperties
 ### Properties
-* **keyName**: string
-* **keyVaultUri**: string
-* **keyVersion**: string
+* **keyname**: string
+* **keyvaulturi**: string
+* **keyversion**: string
 
 ## EncryptionServices
 ### Properties
@@ -105,14 +105,14 @@
 
 ## IPRule
 ### Properties
-* **action**: '[object Object]'
-* **IPAddressOrRange**: string (Required)
+* **action**: 'Allow'
+* **value**: string (Required)
 
 ## VirtualNetworkRule
 ### Properties
-* **action**: '[object Object]'
+* **action**: 'Allow'
+* **id**: string (Required)
 * **state**: 'deprovisioning' | 'failed' | 'networkSourceDeleted' | 'provisioning' | 'succeeded'
-* **virtualNetworkResourceId**: string (Required)
 
 ## Endpoints
 ### Properties

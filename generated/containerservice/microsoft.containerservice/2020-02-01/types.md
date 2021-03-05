@@ -37,7 +37,7 @@
 * **diskEncryptionSetID**: string
 * **dnsPrefix**: string
 * **enablePodSecurityPolicy**: bool
-* **enableRbac**: bool
+* **enableRBAC**: bool
 * **fqdn**: string (ReadOnly)
 * **identityProfile**: ManagedClusterPropertiesIdentityProfile
 * **kubernetesVersion**: string
@@ -45,7 +45,7 @@
 * **maxAgentPools**: int (ReadOnly)
 * **networkProfile**: ContainerServiceNetworkProfile
 * **nodeResourceGroup**: string
-* **privateFqdn**: string (ReadOnly)
+* **privateFQDN**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **servicePrincipalProfile**: ManagedClusterServicePrincipalProfile
 * **windowsProfile**: ManagedClusterWindowsProfile
@@ -120,14 +120,14 @@
 
 ## ManagedClusterPropertiesAutoScalerProfile
 ### Properties
-* **maxGracefulTerminationSec**: string
-* **scaleDownDelayAfterAdd**: string
-* **scaleDownDelayAfterDelete**: string
-* **scaleDownDelayAfterFailure**: string
-* **scaleDownUnneededTime**: string
-* **scaleDownUnreadyTime**: string
-* **scaleDownUtilizationThreshold**: string
-* **scanInterval**: string
+* **max-graceful-termination-sec**: string
+* **scale-down-delay-after-add**: string
+* **scale-down-delay-after-delete**: string
+* **scale-down-delay-after-failure**: string
+* **scale-down-unneeded-time**: string
+* **scale-down-unready-time**: string
+* **scale-down-utilization-threshold**: string
+* **scan-interval**: string
 
 ## ManagedClusterPropertiesIdentityProfile
 ### Properties

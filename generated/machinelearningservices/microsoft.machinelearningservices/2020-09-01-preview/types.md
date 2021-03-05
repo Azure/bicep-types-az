@@ -591,7 +591,7 @@
 ### Properties
 * **createdTime**: string
 * **linkedServiceResourceId**: string (Required)
-* **linkType**: '[object Object]'
+* **linkType**: 'Synapse'
 * **modifiedTime**: string
 
 ## ResourceTags

@@ -194,7 +194,7 @@
 ## DiskProperties
 ### Properties
 * **creationData**: CreationData (Required)
-* **diskIopsReadWrite**: int
+* **diskIOPSReadWrite**: int
 * **diskMBpsReadWrite**: int
 * **diskSizeGB**: int
 * **encryptionSettings**: EncryptionSettings
@@ -649,9 +649,9 @@
 
 ## AdditionalUnattendContent
 ### Properties
-* **componentName**: '[object Object]'
+* **componentName**: 'Microsoft-Windows-Shell-Setup'
 * **content**: string
-* **passName**: '[object Object]'
+* **passName**: 'OobeSystem'
 * **settingName**: 'AutoLogon' | 'FirstLogonCommands'
 
 ## WinRMConfiguration

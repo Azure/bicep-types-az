@@ -30,7 +30,7 @@
 ## DiskProperties
 ### Properties
 * **creationData**: CreationData (Required)
-* **diskIopsReadWrite**: int
+* **diskIOPSReadWrite**: int
 * **diskMBpsReadWrite**: int
 * **diskSizeGB**: int
 * **diskState**: 'ActiveSAS' | 'ActiveUpload' | 'Attached' | 'ReadyToUpload' | 'Reserved' | 'Unattached' (ReadOnly)

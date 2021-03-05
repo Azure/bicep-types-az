@@ -69,8 +69,8 @@
 ## DiskProperties
 ### Properties
 * **creationData**: CreationData (Required)
-* **diskIopsReadOnly**: int
-* **diskIopsReadWrite**: int
+* **diskIOPSReadOnly**: int
+* **diskIOPSReadWrite**: int
 * **diskMBpsReadOnly**: int
 * **diskMBpsReadWrite**: int
 * **diskSizeBytes**: int (ReadOnly)

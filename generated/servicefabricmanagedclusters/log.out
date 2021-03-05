@@ -184,7 +184,7 @@ WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'ManagedCluster' has an allO
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized known property type: "credential"
-INFORMATION: Autorest.AzureResourceSchema took 16ms
+INFORMATION: Autorest.AzureResourceSchema took 15ms
 Processing batch task - {"tag":"schema-servicefabricmanagedclusters-2021-01-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -364,4 +364,4 @@ WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'ManagedCluster' has an allO
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized known property type: "credential"
 INFORMATION: Autorest.AzureResourceSchema took 9ms
-[14.7 s] Generation Complete
+[12.58 s] Generation Complete
