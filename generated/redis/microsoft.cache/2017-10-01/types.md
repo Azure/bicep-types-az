@@ -41,13 +41,29 @@
 
 ## RedisCreateProperties
 ### Properties
+* **accessKeys**: RedisAccessKeys (ReadOnly)
 * **enableNonSslPort**: bool
+* **hostName**: string (ReadOnly)
+* **linkedServers**: RedisLinkedServer[] (ReadOnly)
+* **port**: int (ReadOnly)
+* **provisioningState**: string (ReadOnly)
 * **redisConfiguration**: RedisCommonPropertiesRedisConfiguration
+* **redisVersion**: string (ReadOnly)
 * **shardCount**: int
 * **sku**: Sku (Required)
+* **sslPort**: int (ReadOnly)
 * **staticIP**: string
 * **subnetId**: string
 * **tenantSettings**: RedisCommonPropertiesTenantSettings
+
+## RedisAccessKeys
+### Properties
+* **primaryKey**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
+
+## RedisLinkedServer
+### Properties
+* **id**: string (ReadOnly)
 
 ## RedisCommonPropertiesRedisConfiguration
 ### Properties
@@ -79,6 +95,7 @@
 ### Properties
 * **linkedRedisCacheId**: string (Required)
 * **linkedRedisCacheLocation**: string (Required)
+* **provisioningState**: string (ReadOnly)
 
 ## ScheduleEntries
 ### Properties

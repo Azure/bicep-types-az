@@ -23,6 +23,7 @@
 * **children**: CreateManagementGroupChildInfo[] (ReadOnly)
 * **details**: CreateManagementGroupDetails
 * **displayName**: string
+* **path**: ManagementGroupPathElement[] (ReadOnly)
 * **tenantId**: string (ReadOnly)
 
 ## CreateManagementGroupChildInfo
@@ -46,8 +47,14 @@
 * **id**: string
 * **name**: string (ReadOnly)
 
+## ManagementGroupPathElement
+### Properties
+* **displayName**: string (ReadOnly)
+* **name**: string (ReadOnly)
+
 ## CreateOrUpdateSettingsProperties
 ### Properties
 * **defaultManagementGroup**: string
 * **requireAuthorizationForGroupCreation**: bool
+* **tenantId**: string (ReadOnly)
 

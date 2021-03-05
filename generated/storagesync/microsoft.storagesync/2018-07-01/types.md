@@ -55,15 +55,31 @@
 * **agentVersion**: string
 * **clusterId**: string
 * **clusterName**: string
+* **discoveryEndpointUri**: string (ReadOnly)
 * **friendlyName**: string
 * **lastHeartBeat**: string
+* **lastOperationName**: string (ReadOnly)
+* **lastWorkflowId**: string (ReadOnly)
+* **managementEndpointUri**: string (ReadOnly)
+* **monitoringConfiguration**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **resourceLocation**: string (ReadOnly)
 * **serverCertificate**: string
 * **serverId**: string
+* **serverManagementtErrorCode**: int (ReadOnly)
 * **serverOSVersion**: string
 * **serverRole**: string
+* **serviceLocation**: string (ReadOnly)
+* **storageSyncServiceUid**: string (ReadOnly)
 
 ## CloudEndpointCreateParametersProperties
 ### Properties
+* **backupEnabled**: bool (ReadOnly)
+* **friendlyName**: string (ReadOnly)
+* **lastOperationName**: string (ReadOnly)
+* **lastWorkflowId**: string (ReadOnly)
+* **partnershipId**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
 * **storageAccountResourceId**: string
 * **storageAccountShareName**: string
 * **storageAccountTenantId**: string
@@ -72,6 +88,9 @@
 ### Properties
 * **cloudTiering**: 'off' | 'on'
 * **friendlyName**: string
+* **lastOperationName**: string (ReadOnly)
+* **lastWorkflowId**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
 * **serverLocalPath**: string
 * **serverResourceId**: string
 * **tierFilesOlderThanDays**: int

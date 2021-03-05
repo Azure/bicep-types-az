@@ -88,7 +88,6 @@
 * **clusterCodeVersion**: string
 * **clusterId**: string (ReadOnly)
 * **clusterState**: 'BaselineUpgrade' | 'Deploying' | 'Ready' | 'UpgradeFailed' | 'Upgrading' | 'WaitingForNodes' (ReadOnly)
-* **clusterUpgradeCadence**: 'Wave0' | 'Wave1' | 'Wave2'
 * **dnsName**: string (Required)
 * **enableAutoOSUpgrade**: bool
 * **fabricSettings**: SettingsSectionDescription[]
@@ -155,10 +154,10 @@
 ### Properties
 * **createdAt**: string
 * **createdBy**: string
-* **createdByType**: string
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 * **lastModifiedAt**: string
 * **lastModifiedBy**: string
-* **lastModifiedByType**: string
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
 ## ResourceTags
 ### Properties

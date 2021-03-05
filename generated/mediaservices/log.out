@@ -97,16 +97,16 @@ WARNING: Unrecognized property type: byte-array
 WARNING: Unrecognized property type: byte-array
 WARNING: Unrecognized property type: byte-array
 An error was encountered while handling a request: TypeError: Cannot set property '@odata.type' of undefined
-    at handlePolymorphicType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:476:74)
-    at parseObjectType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:503:17)
-    at parseType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:404:20)
-    at parseObjectType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:487:44)
-    at parseType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:404:20)
-    at parseArrayType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:526:24)
-    at parseType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:423:20)
-    at parseObjectType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:487:44)
-    at parseType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:404:20)
-    at generateProviderTypes (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:94:44)
+    at handlePolymorphicType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:498:74)
+    at parseObjectType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:525:17)
+    at parseType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:426:20)
+    at parseObjectType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:509:44)
+    at parseType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:426:20)
+    at parseArrayType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:548:24)
+    at parseType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:445:20)
+    at parseObjectType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:509:44)
+    at parseType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:426:20)
+    at generateProviderTypes (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:116:44)
 FATAL: TypeError: Cannot set property '@odata.type' of undefined
 Failure during batch task - {"tag":"schema-media-2020-05-01"} -- Error: Plugin azureresourceschema reported failure..
   Error: Plugin azureresourceschema reported failure.

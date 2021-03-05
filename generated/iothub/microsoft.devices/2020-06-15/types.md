@@ -27,6 +27,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-15' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: EventHubConsumerGroupName
@@ -253,4 +254,5 @@
 
 ## EventHubConsumerGroupName
 ### Properties
+* **name**: string (WriteOnly)
 

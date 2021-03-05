@@ -22,7 +22,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Principals' with an undefined 
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping resource type microsoft.datacatalog/catalogs under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataCatalog/catalogs/{catalogName}': Unable to locate parameter with name 'catalogName'
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-datacatalog-2016-03-30"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -40,4 +40,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Principals' with an undefined 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping resource type microsoft.datacatalog/catalogs under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataCatalog/catalogs/{catalogName}': Unable to locate parameter with name 'catalogName'
 INFORMATION: Autorest.AzureResourceSchema took 1ms
-[4.67 s] Generation Complete
+[5.17 s] Generation Complete

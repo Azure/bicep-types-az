@@ -248,9 +248,16 @@
 ## Resource Microsoft.Sql/servers/databases/extensions@2020-08-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
+* **administratorLogin**: string (WriteOnly)
+* **administratorLoginPassword**: string (WriteOnly)
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant)
+* **authenticationType**: string (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
+* **operationMode**: 'PolybaseImport' (Required, WriteOnly)
+* **storageKey**: string (Required, WriteOnly)
+* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly)
+* **storageUri**: string (Required, WriteOnly)
 * **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/maintenanceWindows@2020-08-01-preview

@@ -4,6 +4,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: ClusterIdentity
 * **location**: string
@@ -43,14 +44,22 @@
 ## ClusterCreateProperties
 ### Properties
 * **clusterDefinition**: ClusterDefinition
+* **clusterHdpVersion**: string (ReadOnly)
+* **clusterId**: string (ReadOnly)
+* **clusterState**: string (ReadOnly)
 * **clusterVersion**: string
 * **computeIsolationProperties**: ComputeIsolationProperties
 * **computeProfile**: ComputeProfile
+* **connectivityEndpoints**: ConnectivityEndpoint[] (ReadOnly)
+* **createdDate**: string (ReadOnly)
 * **diskEncryptionProperties**: DiskEncryptionProperties
 * **encryptionInTransitProperties**: EncryptionInTransitProperties
+* **errors**: Errors[] (ReadOnly)
+* **excludedServicesConfig**: ExcludedServicesConfig (ReadOnly)
 * **kafkaRestProperties**: KafkaRestProperties
 * **minSupportedTlsVersion**: string
 * **networkProperties**: NetworkProperties
+* **quotaInfo**: QuotaInfo (ReadOnly)
 * **securityProfile**: SecurityProfile
 * **storageProfile**: StorageProfile
 
@@ -153,6 +162,14 @@
 * **id**: string
 * **subnet**: string
 
+## ConnectivityEndpoint
+### Properties
+* **location**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **port**: int (ReadOnly)
+* **privateIPAddress**: string (ReadOnly)
+* **protocol**: string (ReadOnly)
+
 ## DiskEncryptionProperties
 ### Properties
 * **encryptionAlgorithm**: 'RSA-OAEP' | 'RSA-OAEP-256' | 'RSA1_5'
@@ -166,25 +183,33 @@
 ### Properties
 * **isEncryptionInTransitEnabled**: bool
 
+## Errors
+### Properties
+* **code**: string (ReadOnly)
+* **message**: string (ReadOnly)
+
+## ExcludedServicesConfig
+### Properties
+* **excludedServicesConfigId**: string (ReadOnly)
+* **excludedServicesList**: string (ReadOnly)
+
 ## KafkaRestProperties
 ### Properties
 * **clientGroupInfo**: ClientGroupInfo
-* **configurationOverride**: KafkaRestPropertiesConfigurationOverride
 
 ## ClientGroupInfo
 ### Properties
 * **groupId**: string
 * **groupName**: string
 
-## KafkaRestPropertiesConfigurationOverride
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## NetworkProperties
 ### Properties
 * **privateLink**: 'Disabled' | 'Enabled'
 * **resourceProviderConnection**: 'Inbound' | 'Outbound'
+
+## QuotaInfo
+### Properties
+* **coresUsed**: int (ReadOnly)
 
 ## SecurityProfile
 ### Properties
@@ -232,19 +257,14 @@
 * **sshEndpoints**: ApplicationGetEndpoint[]
 * **uninstallScriptActions**: RuntimeScriptAction[]
 
-## Errors
-### Properties
-* **code**: string
-* **message**: string
-
 ## ApplicationGetHttpsEndpoint
 ### Properties
 * **accessModes**: string[]
 * **destinationPort**: int
 * **disableGatewayAuth**: bool
-* **location**: string (ReadOnly)
+* **location**: string
 * **privateIPAddress**: string
-* **publicPort**: int (ReadOnly)
+* **publicPort**: int
 * **subDomainSuffix**: string
 
 ## RuntimeScriptAction

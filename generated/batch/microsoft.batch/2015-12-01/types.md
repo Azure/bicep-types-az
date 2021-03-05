@@ -16,21 +16,37 @@
 ### Properties
 * **allowUpdates**: bool
 * **apiVersion**: '2015-12-01' (ReadOnly, DeployTimeConstant)
+* **defaultVersion**: string (ReadOnly)
 * **displayName**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
+* **packages**: ApplicationPackage[] (ReadOnly)
 * **type**: 'Microsoft.Batch/batchAccounts/applications' (ReadOnly, DeployTimeConstant)
 
 ## BatchAccountBaseProperties
 ### Properties
+* **accountEndpoint**: string (ReadOnly)
+* **activeJobAndJobScheduleQuota**: int (ReadOnly)
 * **autoStorage**: AutoStorageBaseProperties
+* **coreQuota**: int (ReadOnly)
+* **poolQuota**: int (ReadOnly)
 
 ## AutoStorageBaseProperties
 ### Properties
+* **lastKeySync**: string (ReadOnly)
 * **storageAccountId**: string (Required)
 
 ## BatchAccountCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ApplicationPackage
+### Properties
+* **format**: string (ReadOnly)
+* **id**: string (ReadOnly)
+* **lastActivationTime**: string (ReadOnly)
+* **storageUrl**: string (ReadOnly)
+* **storageUrlExpiry**: string (ReadOnly)
+* **version**: string (ReadOnly)
 

@@ -28,7 +28,9 @@
 ### Properties
 * **apiVersion**: '2017-03-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **link**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: ApiCreateOrUpdateProperties (WriteOnly)
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis/diagnostics@2017-03-01
@@ -346,11 +348,57 @@
 
 ## ApiVersionSetContractProperties
 ### Properties
-* **description**: string
-* **displayName**: string (Required)
-* **versionHeaderName**: string
-* **versioningScheme**: 'Header' | 'Query' | 'Segment' (Required)
-* **versionQueryName**: string
+* **description**: string (WriteOnly)
+* **displayName**: string (Required, WriteOnly)
+* **versionHeaderName**: string (WriteOnly)
+* **versioningScheme**: 'Header' | 'Query' | 'Segment' (Required, WriteOnly)
+* **versionQueryName**: string (WriteOnly)
+
+## ApiCreateOrUpdateProperties
+### Properties
+* **apiRevision**: string (WriteOnly)
+* **apiType**: 'http' | 'soap' (WriteOnly)
+* **apiVersion**: string (WriteOnly)
+* **apiVersionSet**: ApiVersionSetContract (WriteOnly)
+* **apiVersionSetId**: string (WriteOnly)
+* **authenticationSettings**: AuthenticationSettingsContract (WriteOnly)
+* **contentFormat**: 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' (WriteOnly)
+* **contentValue**: string (WriteOnly)
+* **description**: string (WriteOnly)
+* **displayName**: string (WriteOnly)
+* **isCurrent**: bool (ReadOnly, WriteOnly)
+* **isOnline**: bool (ReadOnly, WriteOnly)
+* **path**: string (Required, WriteOnly)
+* **protocols**: array (WriteOnly)
+* **serviceUrl**: string (WriteOnly)
+* **subscriptionKeyParameterNames**: SubscriptionKeyParameterNamesContract (WriteOnly)
+* **wsdlSelector**: ApiCreateOrUpdatePropertiesWsdlSelector (WriteOnly)
+
+## ApiVersionSetContract
+### Properties
+* **id**: string (ReadOnly, WriteOnly)
+* **name**: string (ReadOnly, WriteOnly)
+* **properties**: ApiVersionSetContractProperties (WriteOnly)
+* **type**: string (ReadOnly, WriteOnly)
+
+## AuthenticationSettingsContract
+### Properties
+* **oAuth2**: OAuth2AuthenticationSettingsContract (WriteOnly)
+
+## OAuth2AuthenticationSettingsContract
+### Properties
+* **authorizationServerId**: string (WriteOnly)
+* **scope**: string (WriteOnly)
+
+## SubscriptionKeyParameterNamesContract
+### Properties
+* **header**: string (WriteOnly)
+* **query**: string (WriteOnly)
+
+## ApiCreateOrUpdatePropertiesWsdlSelector
+### Properties
+* **wsdlEndpointName**: string (WriteOnly)
+* **wsdlServiceName**: string (WriteOnly)
 
 ## DiagnosticContractProperties
 ### Properties
@@ -442,6 +490,7 @@
 ## TagDescriptionBaseProperties
 ### Properties
 * **description**: string
+* **displayName**: string (ReadOnly)
 * **externalDocsDescription**: string
 * **externalDocsUrl**: string
 
@@ -533,9 +582,15 @@
 
 ## CertificateCreateOrUpdateProperties
 ### Properties
+* **data**: string (Required, WriteOnly)
+* **expirationDate**: string (ReadOnly)
+* **password**: string (Required, WriteOnly)
+* **subject**: string (ReadOnly)
+* **thumbprint**: string (ReadOnly)
 
 ## GroupCreateParametersProperties
 ### Properties
+* **builtIn**: bool (ReadOnly)
 * **description**: string
 * **displayName**: string (Required)
 * **externalId**: string
@@ -607,10 +662,16 @@
 
 ## SubscriptionCreateParameterProperties
 ### Properties
+* **createdDate**: string (ReadOnly)
 * **displayName**: string (Required)
+* **endDate**: string (ReadOnly)
+* **expirationDate**: string (ReadOnly)
+* **notificationDate**: string (ReadOnly)
 * **primaryKey**: string
 * **productId**: string (Required)
 * **secondaryKey**: string
+* **startDate**: string (ReadOnly)
+* **stateComment**: string (ReadOnly)
 * **userId**: string (Required)
 
 ## TagContractProperties
@@ -621,6 +682,7 @@
 ### Properties
 * **body**: string
 * **description**: string
+* **isDefault**: bool (ReadOnly)
 * **parameters**: EmailTemplateParametersContractProperties[]
 * **subject**: string
 * **title**: string
@@ -633,12 +695,30 @@
 
 ## UserCreateParameterProperties
 ### Properties
+* **confirmation**: 'invite' | 'signup' (WriteOnly)
 * **email**: string (Required)
 * **firstName**: string (Required)
+* **groups**: GroupContract[] (ReadOnly)
 * **identities**: UserIdentityContract[] (ReadOnly)
 * **lastName**: string (Required)
 * **note**: string
+* **password**: string (WriteOnly)
+* **registrationDate**: string (ReadOnly)
 * **state**: 'active' | 'blocked' | 'deleted' | 'pending'
+
+## GroupContract
+### Properties
+* **id**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: GroupContractProperties (ReadOnly)
+* **type**: string (ReadOnly)
+
+## GroupContractProperties
+### Properties
+* **builtIn**: bool (ReadOnly)
+* **description**: string (ReadOnly)
+* **displayName**: string (ReadOnly)
+* **externalId**: string (ReadOnly)
 
 ## UserIdentityContract
 ### Properties

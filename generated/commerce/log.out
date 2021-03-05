@@ -66,4 +66,4 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named OfferTermInfo -- discriminator: {"propertyName":"Name"} => <none>,properties: {"Name":{"description":"Name of the offer term","$ref":"#/components/schemas/OfferTermInfo"},"EffectiveDate":{"description":"Indicates the date from which the offer term is effective.","$ref":"#/components/schemas/schemas:44"}} => <none>,required: ["Name"] => <none>,type: undefined => "string",enum: undefined => ["Recurring Charge","Monetary Commitment","Monetary Credit"],x-ms-enum: undefined => {"name":"OfferTermInfo","modelAsString":false} 
 INFORMATION: Autorest.AzureResourceSchema took 0ms
-[4.35 s] Generation Complete
+[5.09 s] Generation Complete

@@ -34,7 +34,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 8ms
+INFORMATION: Autorest.AzureResourceSchema took 9ms
 Processing batch task - {"tag":"schema-edgeorder-2020-12-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -63,5 +63,5 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 4ms
-[8.64 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 3ms
+[9.42 s] Generation Complete

@@ -80,4 +80,4 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 INFORMATION: Autorest.AzureResourceSchema took 3ms
-[5.96 s] Generation Complete
+[6.75 s] Generation Complete

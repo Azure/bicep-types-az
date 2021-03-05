@@ -14,8 +14,14 @@
 * **canDelegate**: bool
 * **condition**: string
 * **conditionVersion**: string
+* **createdBy**: string (ReadOnly)
+* **createdOn**: string (ReadOnly)
+* **delegatedManagedIdentityResourceId**: string (ReadOnly)
 * **description**: string
 * **principalId**: string (Required)
 * **principalType**: 'Application' | 'DirectoryObjectOrGroup' | 'DirectoryRoleTemplate' | 'Everyone' | 'ForeignGroup' | 'Group' | 'MSI' | 'ServicePrincipal' | 'Unknown' | 'User'
 * **roleDefinitionId**: string (Required)
+* **scope**: string (ReadOnly)
+* **updatedBy**: string (ReadOnly)
+* **updatedOn**: string (ReadOnly)
 

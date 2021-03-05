@@ -8,6 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: DiskPoolCreateProperties (Required)
+* **systemData**: SystemMetadata (ReadOnly)
 * **tags**: DiskPoolCreateTags
 * **type**: 'Microsoft.StoragePool/diskPools' (ReadOnly, DeployTimeConstant)
 
@@ -25,12 +26,23 @@
 * **additionalCapabilities**: string[]
 * **availabilityZones**: string[] (Required)
 * **disks**: Disk[]
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' (ReadOnly)
+* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' (ReadOnly)
 * **subnetId**: string (Required)
 * **tier**: 'Basic' | 'Premium' | 'Standard' (Required)
 
 ## Disk
 ### Properties
 * **id**: string (Required)
+
+## SystemMetadata
+### Properties
+* **createdAt**: string (ReadOnly)
+* **createdBy**: string (ReadOnly)
+* **createdByType**: string (ReadOnly)
+* **lastModifiedAt**: string (ReadOnly)
+* **lastModifiedBy**: string (ReadOnly)
+* **lastModifiedByType**: string (ReadOnly)
 
 ## DiskPoolCreateTags
 ### Properties
@@ -39,6 +51,8 @@
 
 ## IscsiTargetCreateProperties
 ### Properties
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' (ReadOnly)
+* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' (ReadOnly)
 * **targetIqn**: string
 * **tpgs**: TargetPortalGroupCreate[] (Required)
 
@@ -46,7 +60,10 @@
 ### Properties
 * **acls**: Acl[] (Required)
 * **attributes**: Attributes (Required)
+* **endpoints**: string[] (ReadOnly)
 * **luns**: IscsiLun[] (Required)
+* **port**: int (ReadOnly)
+* **tag**: int (ReadOnly)
 
 ## Acl
 ### Properties

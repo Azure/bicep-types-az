@@ -59,7 +59,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a proper
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a property 'name' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
-INFORMATION: Autorest.AzureResourceSchema took 8ms
+INFORMATION: Autorest.AzureResourceSchema took 13ms
 Processing batch task - {"tag":"schema-network-2020-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -113,7 +113,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a proper
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a property 'name' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-network-2018-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -167,7 +167,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a proper
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a property 'name' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-network-2020-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -221,7 +221,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a proper
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a property 'name' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-network-2020-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -275,7 +275,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a proper
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a property 'name' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-network-2018-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -330,4 +330,4 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a proper
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
 INFORMATION: Autorest.AzureResourceSchema took 3ms
-[16.88 s] Generation Complete
+[20.75 s] Generation Complete

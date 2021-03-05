@@ -205,6 +205,11 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: constant
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
@@ -228,7 +233,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 12ms
+INFORMATION: Autorest.AzureResourceSchema took 18ms
 Processing batch task - {"tag":"schema-batch-2020-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -422,6 +427,11 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: constant
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
@@ -441,7 +451,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 16ms
 Processing batch task - {"tag":"schema-batch-2020-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -635,6 +645,11 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: constant
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
@@ -654,7 +669,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 11ms
+INFORMATION: Autorest.AzureResourceSchema took 16ms
 Processing batch task - {"tag":"schema-batch-2020-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -845,6 +860,11 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: constant
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
@@ -864,7 +884,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 15ms
 Processing batch task - {"tag":"schema-batch-2019-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1029,6 +1049,9 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: constant
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
@@ -1046,7 +1069,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 8ms
+INFORMATION: Autorest.AzureResourceSchema took 11ms
 Processing batch task - {"tag":"schema-batch-2019-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1194,6 +1217,9 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CheckNameAvailabilityParameter
 WARNING (PreCheck/SchemaMissingType): The schema 'CheckNameAvailabilityResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
@@ -1370,6 +1396,9 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: constant
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
@@ -1386,7 +1415,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 13ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-batch-2017-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1525,6 +1554,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CheckNameAvailabilityResult' w
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.batch/batchaccounts/applications/versions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}/applications/{applicationId}/versions/{version}': No resource body defined
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
@@ -1532,21 +1562,24 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+WARNING: Unrecognized known property type: "duration"
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized known property type: "duration"
+WARNING: Unrecognized property type: sealed-choice
+INFORMATION: Autorest.AzureResourceSchema took 7ms
 Processing batch task - {"tag":"schema-batch-2017-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1605,8 +1638,10 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CheckNameAvailabilityResult' w
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.batch/batchaccounts/applications/versions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}/applications/{applicationId}/versions/{version}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+WARNING: Unrecognized property type: sealed-choice
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-batch-2017-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1655,7 +1690,9 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudError' with an undefined 
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.batch/batchaccounts/applications/versions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}/applications/{applicationId}/versions/{version}': No resource body defined
+WARNING: Unrecognized property type: sealed-choice
 INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-batch-2015-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -1700,8 +1737,10 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'CloudError' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.batch/batchaccounts/applications/versions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}/applications/{applicationId}/versions/{version}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 1ms
+WARNING: Unrecognized property type: sealed-choice
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-batch-2021-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1901,6 +1940,11 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: constant
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
@@ -1924,7 +1968,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 15ms
+INFORMATION: Autorest.AzureResourceSchema took 7ms
 Processing batch task - {"tag":"schema-batch-2020-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2118,6 +2162,11 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: constant
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
@@ -2137,7 +2186,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 8ms
+INFORMATION: Autorest.AzureResourceSchema took 15ms
 Processing batch task - {"tag":"schema-batch-2020-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2331,6 +2380,11 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: constant
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
@@ -2350,7 +2404,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 13ms
+INFORMATION: Autorest.AzureResourceSchema took 17ms
 Processing batch task - {"tag":"schema-batch-2020-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2541,6 +2595,11 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: constant
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
@@ -2560,7 +2619,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 14ms
+INFORMATION: Autorest.AzureResourceSchema took 7ms
 Processing batch task - {"tag":"schema-batch-2019-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2725,6 +2784,9 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: constant
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
@@ -2742,7 +2804,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+INFORMATION: Autorest.AzureResourceSchema took 14ms
 Processing batch task - {"tag":"schema-batch-2019-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2897,6 +2959,9 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: constant
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
@@ -2913,7 +2978,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-batch-2018-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -3066,6 +3131,9 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: constant
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
@@ -3082,7 +3150,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 10ms
 Processing batch task - {"tag":"schema-batch-2017-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -3221,6 +3289,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CheckNameAvailabilityResult' w
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.batch/batchaccounts/applications/versions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}/applications/{applicationId}/versions/{version}': No resource body defined
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
@@ -3228,21 +3297,24 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+WARNING: Unrecognized known property type: "duration"
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized known property type: "duration"
+WARNING: Unrecognized property type: sealed-choice
+INFORMATION: Autorest.AzureResourceSchema took 10ms
 Processing batch task - {"tag":"schema-batch-2017-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -3301,8 +3373,10 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CheckNameAvailabilityResult' w
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.batch/batchaccounts/applications/versions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}/applications/{applicationId}/versions/{version}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 1ms
+WARNING: Unrecognized property type: sealed-choice
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-batch-2017-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -3351,7 +3425,9 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudError' with an undefined 
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.batch/batchaccounts/applications/versions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}/applications/{applicationId}/versions/{version}': No resource body defined
+WARNING: Unrecognized property type: sealed-choice
 INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-batch-2015-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -3396,6 +3472,8 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'CloudError' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.batch/batchaccounts/applications/versions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}/applications/{applicationId}/versions/{version}': No resource body defined
+WARNING: Unrecognized property type: sealed-choice
 INFORMATION: Autorest.AzureResourceSchema took 1ms
-[83.32 s] Generation Complete
+[95.58 s] Generation Complete

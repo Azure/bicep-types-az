@@ -16,6 +16,7 @@
 ### Properties
 * **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: KeyProperties (Required)
 * **tags**: KeyCreateParametersTags
@@ -38,6 +39,7 @@
 ### Properties
 * **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: SecretProperties (Required)
 * **tags**: SecretCreateOrUpdateParametersTags
@@ -92,7 +94,6 @@
 
 ## PrivateEndpointConnectionItem
 ### Properties
-* **etag**: string
 * **id**: string
 * **properties**: PrivateEndpointConnectionProperties
 

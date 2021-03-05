@@ -19,9 +19,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-18' (ReadOnly, DeployTimeConstant)
-* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: 'Microsoft.CognitiveServices/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
@@ -51,12 +49,10 @@
 * **encryption**: Encryption
 * **endpoint**: string (ReadOnly)
 * **internalId**: string (ReadOnly)
-* **isMigrated**: bool (ReadOnly)
 * **networkAcls**: NetworkRuleSet
 * **privateEndpointConnections**: PrivateEndpointConnection[]
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'ResolvingDNS' | 'Succeeded' (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
-* **skuChangeInfo**: CognitiveServicesAccountSkuChangeInfo (ReadOnly)
 * **userOwnedStorage**: UserOwnedStorage[]
 
 ## CognitiveServicesAccountApiProperties
@@ -64,8 +60,6 @@
 * **aadClientId**: string
 * **aadTenantId**: string
 * **eventHubConnectionString**: string
-* **qnaAzureSearchEndpointId**: string
-* **qnaAzureSearchEndpointKey**: string
 * **qnaRuntimeEndpoint**: string
 * **statisticsEnabled**: bool
 * **storageAccountConnectionString**: string
@@ -106,9 +100,7 @@
 
 ## PrivateEndpointConnection
 ### Properties
-* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly)
-* **location**: string
 * **name**: string (ReadOnly)
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: string (ReadOnly)
@@ -125,15 +117,9 @@
 
 ## PrivateLinkServiceConnectionState
 ### Properties
-* **actionsRequired**: string
+* **actionRequired**: string
 * **description**: string
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
-
-## CognitiveServicesAccountSkuChangeInfo
-### Properties
-* **countOfDowngrades**: int (ReadOnly)
-* **countOfUpgradesAfterDowngrades**: int (ReadOnly)
-* **lastChangeDate**: string (ReadOnly)
 
 ## UserOwnedStorage
 ### Properties

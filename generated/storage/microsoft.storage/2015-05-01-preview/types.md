@@ -13,6 +13,24 @@
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
+* **creationTime**: string (ReadOnly)
+* **customDomain**: CustomDomain (ReadOnly)
+* **lastGeoFailoverTime**: string (ReadOnly)
+* **primaryEndpoints**: Endpoints (ReadOnly)
+* **primaryLocation**: string (ReadOnly)
+* **secondaryEndpoints**: Endpoints (ReadOnly)
+* **secondaryLocation**: string (ReadOnly)
+
+## CustomDomain
+### Properties
+* **name**: string (ReadOnly)
+* **useSubDomainName**: bool (ReadOnly)
+
+## Endpoints
+### Properties
+* **blob**: string (ReadOnly)
+* **queue**: string (ReadOnly)
+* **table**: string (ReadOnly)
 
 ## ResourceTags
 ### Properties

@@ -7,6 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: WorkspaceProperties (ReadOnly)
 * **tags**: WorkspaceCreateParametersTags
 * **type**: 'Microsoft.BatchAI/workspaces' (ReadOnly, DeployTimeConstant)
 
@@ -37,6 +38,12 @@
 * **properties**: FileServerBaseProperties
 * **type**: 'Microsoft.BatchAI/workspaces/fileServers' (ReadOnly, DeployTimeConstant)
 
+## WorkspaceProperties
+### Properties
+* **creationTime**: string (ReadOnly)
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly)
+* **provisioningStateTransitionTime**: string (ReadOnly)
+
 ## WorkspaceCreateParametersTags
 ### Properties
 ### Additional Properties
@@ -44,12 +51,31 @@
 
 ## ClusterBaseProperties
 ### Properties
+* **allocationState**: 'resizing' | 'steady' (ReadOnly)
+* **allocationStateTransitionTime**: string (ReadOnly)
+* **creationTime**: string (ReadOnly)
+* **currentNodeCount**: int (ReadOnly)
+* **errors**: BatchAIError[] (ReadOnly)
 * **nodeSetup**: NodeSetup
+* **nodeStateCounts**: NodeStateCounts (ReadOnly)
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly)
+* **provisioningStateTransitionTime**: string (ReadOnly)
 * **scaleSettings**: ScaleSettings
 * **subnet**: ResourceId
 * **userAccountSettings**: UserAccountSettings (Required)
 * **virtualMachineConfiguration**: VirtualMachineConfiguration
 * **vmSize**: string (Required)
+
+## BatchAIError
+### Properties
+* **code**: string (ReadOnly)
+* **details**: NameValuePair[] (ReadOnly)
+* **message**: string (ReadOnly)
+
+## NameValuePair
+### Properties
+* **name**: string (ReadOnly)
+* **value**: string (ReadOnly)
 
 ## NodeSetup
 ### Properties
@@ -136,6 +162,14 @@
 * **value**: string
 * **valueSecretReference**: KeyVaultSecretReference
 
+## NodeStateCounts
+### Properties
+* **idleNodeCount**: int (ReadOnly)
+* **leavingNodeCount**: int (ReadOnly)
+* **preparingNodeCount**: int (ReadOnly)
+* **runningNodeCount**: int (ReadOnly)
+* **unusableNodeCount**: int (ReadOnly)
+
 ## ScaleSettings
 ### Properties
 * **autoScale**: AutoScaleSettings
@@ -179,20 +213,28 @@
 * **cntkSettings**: CNTKsettings
 * **constraints**: JobBasePropertiesConstraints
 * **containerSettings**: ContainerSettings
+* **creationTime**: string (ReadOnly)
 * **customMpiSettings**: CustomMpiSettings
 * **customToolkitSettings**: CustomToolkitSettings
 * **environmentVariables**: EnvironmentVariable[]
+* **executionInfo**: JobPropertiesExecutionInfo (ReadOnly)
+* **executionState**: 'failed' | 'queued' | 'running' | 'succeeded' | 'terminating' (ReadOnly)
+* **executionStateTransitionTime**: string (ReadOnly)
 * **horovodSettings**: HorovodSettings
 * **inputDirectories**: InputDirectory[]
+* **jobOutputDirectoryPathSegment**: string (ReadOnly)
 * **jobPreparation**: JobPreparation
 * **mountVolumes**: MountVolumes
 * **nodeCount**: int (Required)
 * **outputDirectories**: OutputDirectory[]
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly)
+* **provisioningStateTransitionTime**: string (ReadOnly)
 * **pyTorchSettings**: PyTorchSettings
 * **schedulingPriority**: 'high' | 'low' | 'normal'
 * **secrets**: EnvironmentVariableWithSecretValue[]
 * **stdOutErrPathPrefix**: string (Required)
 * **tensorFlowSettings**: TensorFlowSettings
+* **toolType**: 'caffe' | 'caffe2' | 'chainer' | 'cntk' | 'custom' | 'custommpi' | 'horovod' | 'tensorflow' (ReadOnly)
 
 ## Caffe2Settings
 ### Properties
@@ -254,6 +296,13 @@
 ### Properties
 * **commandLine**: string
 
+## JobPropertiesExecutionInfo
+### Properties
+* **endTime**: string (ReadOnly)
+* **errors**: BatchAIError[] (ReadOnly)
+* **exitCode**: int (ReadOnly)
+* **startTime**: string (ReadOnly)
+
 ## HorovodSettings
 ### Properties
 * **commandLineArgs**: string
@@ -296,7 +345,11 @@
 
 ## FileServerBaseProperties
 ### Properties
+* **creationTime**: string (ReadOnly)
 * **dataDisks**: DataDisks (Required)
+* **mountSettings**: MountSettings (ReadOnly)
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' | 'updating' (ReadOnly)
+* **provisioningStateTransitionTime**: string (ReadOnly)
 * **sshConfiguration**: SshConfiguration (Required)
 * **subnet**: ResourceId
 * **vmSize**: string (Required)
@@ -306,6 +359,12 @@
 * **diskCount**: int (Required)
 * **diskSizeInGB**: int (Required)
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' (Required)
+
+## MountSettings
+### Properties
+* **fileServerInternalIP**: string (ReadOnly)
+* **fileServerPublicIP**: string (ReadOnly)
+* **mountPoint**: string (ReadOnly)
 
 ## SshConfiguration
 ### Properties

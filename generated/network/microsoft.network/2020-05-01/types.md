@@ -408,6 +408,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
@@ -431,6 +432,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PacketCaptureParameters (Required)
@@ -3038,12 +3040,16 @@
 ## ConnectionMonitorParameters
 ### Properties
 * **autoStart**: bool
+* **connectionMonitorType**: 'MultiEndpoint' | 'SingleSourceDestination' (ReadOnly)
 * **destination**: ConnectionMonitorDestination
 * **endpoints**: ConnectionMonitorEndpoint[]
 * **monitoringIntervalInSeconds**: int
+* **monitoringStatus**: string (ReadOnly)
 * **notes**: string
 * **outputs**: ConnectionMonitorOutput[]
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **source**: ConnectionMonitorSource
+* **startTime**: string (ReadOnly)
 * **testConfigurations**: ConnectionMonitorTestConfiguration[]
 * **testGroups**: ConnectionMonitorTestGroup[]
 
@@ -3145,6 +3151,7 @@
 ### Properties
 * **bytesToCapturePerPacket**: int
 * **filters**: PacketCaptureFilter[]
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **storageLocation**: PacketCaptureStorageLocation (Required)
 * **target**: string (Required)
 * **timeLimitInSeconds**: int

@@ -4,6 +4,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: Identity
 * **location**: string
@@ -26,8 +27,10 @@
 ### Properties
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: DscCompilationJobCreateProperties (Required)
+* **tags**: DscCompilationJobCreateParametersTags (WriteOnly)
 * **type**: 'Microsoft.Automation/automationAccounts/compilationjobs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/connectionTypes@2020-01-13-preview
@@ -70,6 +73,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
@@ -84,6 +88,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: DscNodeConfigurationCreateOrUpdateParametersProperties
+* **tags**: DscNodeConfigurationCreateOrUpdateParametersTags (WriteOnly)
 * **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/privateEndpointConnections@2020-01-13-preview
@@ -99,7 +104,9 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PythonPackageCreateProperties (Required)
 * **tags**: PythonPackageCreateParametersTags
@@ -157,37 +164,50 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **userAssignedIdentities**: IdentityUserAssignedIdentities
-
-## IdentityUserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
-
-## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
-### Properties
-* **clientId**: string (ReadOnly)
-* **principalId**: string (ReadOnly)
 
 ## AutomationAccountCreateOrUpdateProperties
 ### Properties
+* **creationTime**: string (ReadOnly)
+* **description**: string (ReadOnly)
 * **encryption**: EncryptionProperties
-* **publicNetworkAccess**: bool
+* **lastModifiedBy**: string (ReadOnly)
+* **lastModifiedTime**: string (ReadOnly)
+* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **publicNetworkAccess**: bool (ReadOnly)
 * **sku**: Sku
+* **state**: 'Ok' | 'Suspended' | 'Unavailable' (ReadOnly)
 
 ## EncryptionProperties
 ### Properties
-* **identity**: EncryptionPropertiesIdentity
 * **keyVaultProperties**: KeyVaultProperties
-
-## EncryptionPropertiesIdentity
-### Properties
 
 ## KeyVaultProperties
 ### Properties
 * **keyName**: string
 * **keyvaultUri**: string
 * **keyVersion**: string
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
+* **type**: string (ReadOnly)
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: PrivateEndpointProperty
+* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionStateProperty
+
+## PrivateEndpointProperty
+### Properties
+* **id**: string
+
+## PrivateLinkServiceConnectionStateProperty
+### Properties
+* **actionsRequired**: string (ReadOnly)
+* **description**: string
+* **status**: string
 
 ## Sku
 ### Properties
@@ -202,14 +222,31 @@
 
 ## CertificateCreateOrUpdateProperties
 ### Properties
+* **base64Value**: string (Required, WriteOnly)
+* **creationTime**: string (ReadOnly)
 * **description**: string
+* **expiryTime**: string (ReadOnly)
 * **isExportable**: bool
+* **lastModifiedTime**: string (ReadOnly)
 * **thumbprint**: string
 
 ## DscCompilationJobCreateProperties
 ### Properties
 * **configuration**: DscConfigurationAssociationProperty (Required)
+* **creationTime**: string (ReadOnly)
+* **endTime**: string (ReadOnly)
+* **exception**: string (ReadOnly)
+* **incrementNodeConfigurationBuild**: bool (WriteOnly)
+* **jobId**: string (ReadOnly)
+* **lastModifiedTime**: string (ReadOnly)
+* **lastStatusModifiedTime**: string (ReadOnly)
 * **parameters**: DscCompilationJobCreatePropertiesParameters
+* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly)
+* **runOn**: string (ReadOnly)
+* **startedBy**: string (ReadOnly)
+* **startTime**: string (ReadOnly)
+* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly)
+* **statusDetails**: string (ReadOnly)
 
 ## DscConfigurationAssociationProperty
 ### Properties
@@ -220,10 +257,18 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## DscCompilationJobCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ConnectionTypeCreateOrUpdateProperties
 ### Properties
+* **creationTime**: string (ReadOnly)
+* **description**: string (ReadOnly)
 * **fieldDefinitions**: ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions (Required)
 * **isGlobal**: bool
+* **lastModifiedTime**: string (ReadOnly)
 
 ## ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions
 ### Properties
@@ -239,8 +284,10 @@
 ## ConnectionCreateOrUpdateProperties
 ### Properties
 * **connectionType**: ConnectionTypeAssociationProperty (Required)
+* **creationTime**: string (ReadOnly)
 * **description**: string
 * **fieldDefinitionValues**: ConnectionCreateOrUpdatePropertiesFieldDefinitionValues
+* **lastModifiedTime**: string (ReadOnly)
 
 ## ConnectionTypeAssociationProperty
 ### Properties
@@ -253,11 +300,15 @@
 
 ## CredentialCreateOrUpdateProperties
 ### Properties
+* **creationTime**: string (ReadOnly)
 * **description**: string
+* **lastModifiedTime**: string (ReadOnly)
+* **password**: string (Required, WriteOnly)
 * **userName**: string (Required)
 
 ## JobScheduleCreateProperties
 ### Properties
+* **jobScheduleId**: string (ReadOnly)
 * **parameters**: JobScheduleCreatePropertiesParameters
 * **runbook**: RunbookAssociationProperty (Required)
 * **runOn**: string
@@ -278,7 +329,16 @@
 
 ## ModuleCreateOrUpdateProperties
 ### Properties
+* **activityCount**: int (ReadOnly)
 * **contentLink**: ContentLink (Required)
+* **creationTime**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **error**: ModuleErrorInfo (ReadOnly)
+* **isComposite**: bool (ReadOnly)
+* **isGlobal**: bool (ReadOnly)
+* **lastModifiedTime**: string (ReadOnly)
+* **sizeInBytes**: int (ReadOnly)
+* **version**: string (ReadOnly)
 
 ## ContentLink
 ### Properties
@@ -291,6 +351,11 @@
 * **algorithm**: string (Required)
 * **value**: string (Required)
 
+## ModuleErrorInfo
+### Properties
+* **code**: string (ReadOnly)
+* **message**: string (ReadOnly)
+
 ## ModuleCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
@@ -299,30 +364,36 @@
 ## DscNodeConfigurationCreateOrUpdateParametersProperties
 ### Properties
 * **configuration**: DscConfigurationAssociationProperty (Required)
+* **creationTime**: string (ReadOnly)
 * **incrementNodeConfigurationBuild**: bool
+* **lastModifiedTime**: string (ReadOnly)
+* **nodeCount**: int (ReadOnly)
 * **source**: ContentSource (Required)
 
 ## ContentSource
 ### Properties
+* **hash**: ContentHash (WriteOnly)
+* **type**: 'embeddedContent' | 'uri' (WriteOnly)
+* **value**: string (WriteOnly)
+* **version**: string (WriteOnly)
 
-## PrivateEndpointConnectionProperties
+## DscNodeConfigurationCreateOrUpdateParametersTags
 ### Properties
-* **privateEndpoint**: PrivateEndpointProperty
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionStateProperty
-
-## PrivateEndpointProperty
-### Properties
-* **id**: string
-
-## PrivateLinkServiceConnectionStateProperty
-### Properties
-* **actionsRequired**: string (ReadOnly)
-* **description**: string
-* **status**: string
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## PythonPackageCreateProperties
 ### Properties
+* **activityCount**: int (ReadOnly)
 * **contentLink**: ContentLink (Required)
+* **creationTime**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **error**: ModuleErrorInfo (ReadOnly)
+* **isComposite**: bool (ReadOnly)
+* **isGlobal**: bool (ReadOnly)
+* **lastModifiedTime**: string (ReadOnly)
+* **sizeInBytes**: int (ReadOnly)
+* **version**: string (ReadOnly)
 
 ## PythonPackageCreateParametersTags
 ### Properties
@@ -332,10 +403,17 @@
 ## ScheduleCreateOrUpdateProperties
 ### Properties
 * **advancedSchedule**: AdvancedSchedule
+* **creationTime**: string (ReadOnly)
 * **description**: string
 * **expiryTime**: string
+* **expiryTimeOffsetMinutes**: int (ReadOnly)
 * **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'OneTime' | 'Week' (Required)
+* **isEnabled**: bool (ReadOnly)
+* **lastModifiedTime**: string (ReadOnly)
+* **nextRun**: string (ReadOnly)
+* **nextRunOffsetMinutes**: int (ReadOnly)
 * **startTime**: string (Required)
+* **startTimeOffsetMinutes**: int (ReadOnly)
 * **timeZone**: string
 
 ## AdvancedSchedule
@@ -353,19 +431,38 @@
 ### Properties
 * **autoSync**: bool
 * **branch**: string
+* **creationTime**: string (ReadOnly)
 * **description**: string
 * **folderPath**: string
+* **lastModifiedTime**: string (ReadOnly)
 * **publishRunbook**: bool
 * **repoUrl**: string
+* **securityToken**: SourceControlSecurityTokenProperties (WriteOnly)
 * **sourceType**: 'GitHub' | 'VsoGit' | 'VsoTfvc'
+
+## SourceControlSecurityTokenProperties
+### Properties
+* **accessToken**: string (WriteOnly)
+* **refreshToken**: string (WriteOnly)
+* **tokenType**: 'Oauth' | 'PersonalAccessToken' (WriteOnly)
 
 ## SourceControlSyncJobCreateProperties
 ### Properties
+* **commitId**: string (Required, WriteOnly)
+* **creationTime**: string (ReadOnly)
+* **endTime**: string (ReadOnly)
+* **exception**: string (ReadOnly)
+* **provisioningState**: 'Completed' | 'Failed' | 'Running' (ReadOnly)
+* **sourceControlSyncJobId**: string (ReadOnly)
+* **startTime**: string (ReadOnly)
+* **syncType**: 'FullSync' | 'PartialSync' (ReadOnly)
 
 ## VariableCreateOrUpdateProperties
 ### Properties
+* **creationTime**: string (ReadOnly)
 * **description**: string
 * **isEncrypted**: bool
+* **lastModifiedTime**: string (ReadOnly)
 * **value**: string
 
 ## WatcherProperties

@@ -10,7 +10,6 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: DomainProperties
 * **sku**: ResourceSku
-* **systemData**: SystemData (ReadOnly)
 * **tags**: TrackedResourceTags
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant)
 
@@ -112,7 +111,6 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: TopicProperties
 * **sku**: ResourceSku
-* **systemData**: SystemData (ReadOnly)
 * **tags**: TrackedResourceTags
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
@@ -218,15 +216,6 @@
 ## ResourceSku
 ### Properties
 * **name**: 'Basic' | 'Premium'
-
-## SystemData
-### Properties
-* **createdAt**: string
-* **createdBy**: string
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
-* **lastModifiedAt**: string
-* **lastModifiedBy**: string
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
 ## TrackedResourceTags
 ### Properties
@@ -640,6 +629,15 @@
 ### Properties
 * **eventTimeToLiveInMinutes**: int
 * **maxDeliveryAttempts**: int
+
+## SystemData
+### Properties
+* **createdAt**: string
+* **createdBy**: string
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+* **lastModifiedAt**: string
+* **lastModifiedBy**: string
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
 ## PartnerNamespaceProperties
 ### Properties

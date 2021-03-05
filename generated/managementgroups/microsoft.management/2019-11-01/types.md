@@ -14,6 +14,7 @@
 * **children**: CreateManagementGroupChildInfo[] (ReadOnly)
 * **details**: CreateManagementGroupDetails
 * **displayName**: string
+* **path**: ManagementGroupPathElement[] (ReadOnly)
 * **roles**: string[] (ReadOnly)
 * **tenantId**: string (ReadOnly)
 
@@ -37,5 +38,10 @@
 ### Properties
 * **displayName**: string (ReadOnly)
 * **id**: string
+* **name**: string (ReadOnly)
+
+## ManagementGroupPathElement
+### Properties
+* **displayName**: string (ReadOnly)
 * **name**: string (ReadOnly)
 

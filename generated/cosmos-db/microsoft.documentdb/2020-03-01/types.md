@@ -150,6 +150,7 @@
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' (Required, DeployTimeConstant)
+* **properties**: NotebookWorkspaceProperties (ReadOnly)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2020-03-01
@@ -257,15 +258,21 @@
 * **connectorOffer**: 'Small'
 * **consistencyPolicy**: ConsistencyPolicy
 * **disableKeyBasedMetadataWriteAccess**: bool
+* **documentEndpoint**: string (ReadOnly)
 * **enableAutomaticFailover**: bool
 * **enableCassandraConnector**: bool
 * **enableMultipleWriteLocations**: bool
+* **failoverPolicies**: FailoverPolicy[] (ReadOnly)
 * **ipRangeFilter**: string
 * **isVirtualNetworkFilterEnabled**: bool
 * **keyVaultKeyUri**: string
 * **locations**: Location[] (Required)
+* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **provisioningState**: string (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly)
+* **readLocations**: Location[] (ReadOnly)
 * **virtualNetworkRules**: VirtualNetworkRule[]
+* **writeLocations**: Location[] (ReadOnly)
 
 ## Capability
 ### Properties
@@ -276,6 +283,12 @@
 * **maxIntervalInSeconds**: int
 * **maxStalenessPrefix**: int
 
+## FailoverPolicy
+### Properties
+* **failoverPriority**: int (ReadOnly)
+* **id**: string (ReadOnly)
+* **locationName**: string (ReadOnly)
+
 ## Location
 ### Properties
 * **documentEndpoint**: string (ReadOnly)
@@ -284,6 +297,27 @@
 * **isZoneRedundant**: bool
 * **locationName**: string
 * **provisioningState**: string (ReadOnly)
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
+* **type**: string (ReadOnly)
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: PrivateEndpointProperty (ReadOnly)
+* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionStateProperty (ReadOnly)
+
+## PrivateEndpointProperty
+### Properties
+* **id**: string (ReadOnly)
+
+## PrivateLinkServiceConnectionStateProperty
+### Properties
+* **actionsRequired**: string (ReadOnly)
+* **status**: string (ReadOnly)
 
 ## VirtualNetworkRule
 ### Properties
@@ -306,7 +340,9 @@
 
 ## CassandraKeyspaceResource
 ### Properties
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
+* **rid**: string (ReadOnly)
 
 ## Tags
 ### Properties
@@ -321,7 +357,9 @@
 ## CassandraTableResource
 ### Properties
 * **defaultTtl**: int
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
+* **rid**: string (ReadOnly)
 * **schema**: CassandraSchema
 
 ## CassandraSchema
@@ -355,9 +393,11 @@
 
 ## ThroughputSettingsResource
 ### Properties
+* **etag**: string (ReadOnly)
 * **minimumThroughput**: string (ReadOnly)
 * **offerReplacePending**: string (ReadOnly)
 * **provisionedThroughputSettings**: ProvisionedThroughputSettingsResource
+* **rid**: string (ReadOnly)
 * **throughput**: int
 
 ## ProvisionedThroughputSettingsResource
@@ -392,7 +432,9 @@
 
 ## GremlinDatabaseResource
 ### Properties
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
+* **rid**: string (ReadOnly)
 
 ## Tags
 ### Properties
@@ -408,9 +450,11 @@
 ### Properties
 * **conflictResolutionPolicy**: ConflictResolutionPolicy
 * **defaultTtl**: int
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
 * **indexingPolicy**: IndexingPolicy
 * **partitionKey**: ContainerPartitionKey
+* **rid**: string (ReadOnly)
 * **uniqueKeyPolicy**: UniqueKeyPolicy
 
 ## ConflictResolutionPolicy
@@ -489,7 +533,9 @@
 
 ## MongoDBDatabaseResource
 ### Properties
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
+* **rid**: string (ReadOnly)
 
 ## Tags
 ### Properties
@@ -503,8 +549,10 @@
 
 ## MongoDBCollectionResource
 ### Properties
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
 * **indexes**: MongoIndex[]
+* **rid**: string (ReadOnly)
 * **shardKey**: ShardKeys
 
 ## MongoIndex
@@ -541,6 +589,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## NotebookWorkspaceProperties
+### Properties
+* **notebookServerEndpoint**: string (ReadOnly)
+* **status**: string (ReadOnly)
+
 ## SqlDatabaseCreateUpdateProperties
 ### Properties
 * **options**: CreateUpdateOptions (Required)
@@ -548,7 +601,11 @@
 
 ## SqlDatabaseResource
 ### Properties
+* **colls**: string (ReadOnly)
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
+* **rid**: string (ReadOnly)
+* **users**: string (ReadOnly)
 
 ## Tags
 ### Properties
@@ -564,9 +621,11 @@
 ### Properties
 * **conflictResolutionPolicy**: ConflictResolutionPolicy
 * **defaultTtl**: int
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
 * **indexingPolicy**: IndexingPolicy
 * **partitionKey**: ContainerPartitionKey
+* **rid**: string (ReadOnly)
 * **uniqueKeyPolicy**: UniqueKeyPolicy
 
 ## Tags
@@ -576,12 +635,15 @@
 
 ## SqlStoredProcedureCreateUpdateProperties
 ### Properties
+* **options**: CreateUpdateOptions (Required, WriteOnly)
 * **resource**: SqlStoredProcedureResource (Required)
 
 ## SqlStoredProcedureResource
 ### Properties
 * **body**: string
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
+* **rid**: string (ReadOnly)
 
 ## Tags
 ### Properties
@@ -595,12 +657,15 @@
 
 ## SqlTriggerCreateUpdateProperties
 ### Properties
+* **options**: CreateUpdateOptions (Required, WriteOnly)
 * **resource**: SqlTriggerResource (Required)
 
 ## SqlTriggerResource
 ### Properties
 * **body**: string
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
+* **rid**: string (ReadOnly)
 * **triggerOperation**: 'All' | 'Create' | 'Delete' | 'Replace' | 'Update'
 * **triggerType**: 'Post' | 'Pre'
 
@@ -611,12 +676,15 @@
 
 ## SqlUserDefinedFunctionCreateUpdateProperties
 ### Properties
+* **options**: CreateUpdateOptions (Required, WriteOnly)
 * **resource**: SqlUserDefinedFunctionResource (Required)
 
 ## SqlUserDefinedFunctionResource
 ### Properties
 * **body**: string
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
+* **rid**: string (ReadOnly)
 
 ## Tags
 ### Properties
@@ -635,7 +703,9 @@
 
 ## TableResource
 ### Properties
+* **etag**: string (ReadOnly)
 * **id**: string (Required)
+* **rid**: string (ReadOnly)
 
 ## Tags
 ### Properties

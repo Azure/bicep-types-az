@@ -50,16 +50,65 @@
 
 ## RedisCreateProperties
 ### Properties
+* **accessKeys**: RedisAccessKeys (ReadOnly)
 * **enableNonSslPort**: bool
+* **hostName**: string (ReadOnly)
+* **instances**: RedisInstanceDetails[] (ReadOnly)
+* **linkedServers**: RedisLinkedServer[] (ReadOnly)
 * **minimumTlsVersion**: '1.0' | '1.1' | '1.2'
+* **port**: int (ReadOnly)
+* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Disabled' | 'Failed' | 'Linking' | 'Provisioning' | 'RecoveringScaleFailure' | 'Scaling' | 'Succeeded' | 'Unlinking' | 'Unprovisioning' | 'Updating' (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 * **redisConfiguration**: RedisCommonPropertiesRedisConfiguration
+* **redisVersion**: string (ReadOnly)
 * **replicasPerMaster**: int
 * **shardCount**: int
 * **sku**: Sku (Required)
+* **sslPort**: int (ReadOnly)
 * **staticIP**: string
 * **subnetId**: string
 * **tenantSettings**: RedisCommonPropertiesTenantSettings
+
+## RedisAccessKeys
+### Properties
+* **primaryKey**: string (ReadOnly)
+* **secondaryKey**: string (ReadOnly)
+
+## RedisInstanceDetails
+### Properties
+* **isMaster**: bool (ReadOnly)
+* **nonSslPort**: int (ReadOnly)
+* **shardId**: int (ReadOnly)
+* **sslPort**: int (ReadOnly)
+* **zone**: string (ReadOnly)
+
+## RedisLinkedServer
+### Properties
+* **id**: string (ReadOnly)
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
+* **type**: string (ReadOnly)
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: PrivateEndpoint (ReadOnly)
+* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly)
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **status**: 'Approved' | 'Pending' | 'Rejected' (ReadOnly)
 
 ## RedisCommonPropertiesRedisConfiguration
 ### Properties
@@ -91,6 +140,7 @@
 ### Properties
 * **linkedRedisCacheId**: string (Required)
 * **linkedRedisCacheLocation**: string (Required)
+* **provisioningState**: string (ReadOnly)
 
 ## ScheduleEntries
 ### Properties
@@ -100,20 +150,4 @@
 ### Properties
 * **maintenanceWindow**: any
 * **startHourUtc**: int (Required)
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
-
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly)
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionsRequired**: string
-* **description**: string
-* **status**: 'Approved' | 'Pending' | 'Rejected'
 

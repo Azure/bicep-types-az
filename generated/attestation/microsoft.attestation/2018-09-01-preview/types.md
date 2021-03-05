@@ -13,6 +13,35 @@
 
 ## AttestationServiceCreationSpecificParams
 ### Properties
+* **attestationPolicy**: string (WriteOnly)
+* **attestUri**: string (ReadOnly)
+* **policySigningCertificates**: JsonWebKeySet (WriteOnly)
+* **status**: 'Error' | 'NotReady' | 'Ready' (ReadOnly)
+* **trustModel**: string (ReadOnly)
+
+## JsonWebKeySet
+### Properties
+* **keys**: JsonWebKey[] (WriteOnly)
+
+## JsonWebKey
+### Properties
+* **alg**: string (WriteOnly)
+* **crv**: string (WriteOnly)
+* **d**: string (WriteOnly)
+* **dp**: string (WriteOnly)
+* **dq**: string (WriteOnly)
+* **e**: string (WriteOnly)
+* **k**: string (WriteOnly)
+* **kid**: string (WriteOnly)
+* **kty**: string (Required, WriteOnly)
+* **n**: string (WriteOnly)
+* **p**: string (WriteOnly)
+* **q**: string (WriteOnly)
+* **qi**: string (WriteOnly)
+* **use**: string (WriteOnly)
+* **x**: string (WriteOnly)
+* **x5C**: string[] (WriteOnly)
+* **y**: string (WriteOnly)
 
 ## AttestationServiceCreationParamsTags
 ### Properties

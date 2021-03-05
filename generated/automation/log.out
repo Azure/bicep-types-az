@@ -192,8 +192,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Identity' with an undefined ty
 
 WARNING (PreCheck/SchemaMissingType): The schema 'EncryptionProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'EncryptionProperties-identity' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/SchemaMissingType): The schema 'CertificateCreateOrUpdateProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'CertificateCreateOrUpdateParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
@@ -364,10 +362,11 @@ WARNING (Modeler/MissingType): The schema 'ScheduleCreateOrUpdateProperties-inte
 WARNING (Modeler/MissingType): The schema 'ScheduleProperties-interval' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/preview/2020-01-13-preview/schedule.json#/components/schemas/ScheduleProperties-interval
 WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: any
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 13ms
+INFORMATION: Autorest.AzureResourceSchema took 22ms
 Processing batch task - {"tag":"schema-automation-2019-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -824,11 +823,15 @@ WARNING (Modeler/MissingType): The schema 'ScheduleCreateOrUpdateProperties-inte
 WARNING (Modeler/MissingType): The schema 'ScheduleProperties-interval' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/schedule.json#/components/schemas/ScheduleProperties-interval
 WARNING: Skipping resource type microsoft.automation/automationaccounts/runbooks/draft under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/runbooks/{runbookName}/draft/content': Found multiple definitions for the same type
+WARNING: Unrecognized property type: constant
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: constant
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 13ms
+INFORMATION: Autorest.AzureResourceSchema took 14ms
 Processing batch task - {"tag":"schema-automation-2018-06-30"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -911,6 +914,8 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 INFORMATION: Options {"input":["prechecker"],"prenamer":true,"always-create-content-type-parameter":true,"group-parameters":true,"additional-checks":false,"lenient-model-deduplication":true,"naming":{"override":{"cmyk":"CMYK","$host":"$host"}},"always-create-accept-parameter":true}
 INFORMATION: Accept-param true
 WARNING: Skipping resource type microsoft.automation/automationaccounts/runbooks/draft under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/runbooks/{runbookName}/draft/content': Found multiple definitions for the same type
+WARNING: Unrecognized property type: constant
+WARNING: Unrecognized property type: sealed-choice
 INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-automation-2018-01-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -989,7 +994,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'NodeCount' with an undefined t
 WARNING (PreCheck/SchemaMissingType): The schema 'NodeCountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 1ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-automation-2017-05-15-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1080,7 +1085,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-automation-2015-10-31"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1432,9 +1437,12 @@ WARNING (Modeler/MissingType): The schema 'ScheduleCreateOrUpdateProperties-inte
 
 WARNING (Modeler/MissingType): The schema 'ScheduleProperties-interval' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/schedule.json#/components/schemas/ScheduleProperties-interval
+WARNING: Unrecognized property type: constant
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.automation/automationaccounts/runbooks/draft under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/runbooks/{runbookName}/draft/content': Found multiple definitions for the same type
+WARNING: Unrecognized property type: constant
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 7ms
+INFORMATION: Autorest.AzureResourceSchema took 18ms
 Processing batch task - {"tag":"schema-automation-2020-01-13-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1621,8 +1629,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Identity' with an undefined ty
 
 WARNING (PreCheck/SchemaMissingType): The schema 'EncryptionProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'EncryptionProperties-identity' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/SchemaMissingType): The schema 'CertificateCreateOrUpdateProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'CertificateCreateOrUpdateParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
@@ -1793,10 +1799,11 @@ WARNING (Modeler/MissingType): The schema 'ScheduleCreateOrUpdateProperties-inte
 WARNING (Modeler/MissingType): The schema 'ScheduleProperties-interval' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/preview/2020-01-13-preview/schedule.json#/components/schemas/ScheduleProperties-interval
 WARNING: Unrecognized property type: sealed-choice
-WARNING: Unrecognized property type: any
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 7ms
+INFORMATION: Autorest.AzureResourceSchema took 8ms
 Processing batch task - {"tag":"schema-automation-2019-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2253,11 +2260,15 @@ WARNING (Modeler/MissingType): The schema 'ScheduleCreateOrUpdateProperties-inte
 WARNING (Modeler/MissingType): The schema 'ScheduleProperties-interval' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2019-06-01/schedule.json#/components/schemas/ScheduleProperties-interval
 WARNING: Skipping resource type microsoft.automation/automationaccounts/runbooks/draft under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/runbooks/{runbookName}/draft/content': Found multiple definitions for the same type
+WARNING: Unrecognized property type: constant
+WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: constant
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 13ms
+INFORMATION: Autorest.AzureResourceSchema took 20ms
 Processing batch task - {"tag":"schema-automation-2018-06-30"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2340,7 +2351,9 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 INFORMATION: Options {"input":["prechecker"],"prenamer":true,"always-create-content-type-parameter":true,"group-parameters":true,"additional-checks":false,"lenient-model-deduplication":true,"naming":{"override":{"cmyk":"CMYK","$host":"$host"}},"always-create-accept-parameter":true}
 INFORMATION: Accept-param true
 WARNING: Skipping resource type microsoft.automation/automationaccounts/runbooks/draft under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/runbooks/{runbookName}/draft/content': Found multiple definitions for the same type
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+WARNING: Unrecognized property type: constant
+WARNING: Unrecognized property type: sealed-choice
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-automation-2018-01-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2418,7 +2431,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'NodeCount' with an undefined t
 WARNING (PreCheck/SchemaMissingType): The schema 'NodeCountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 1ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-automation-2017-05-15-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2509,7 +2522,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized known property type: "duration"
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-automation-2015-10-31"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2861,7 +2874,10 @@ WARNING (Modeler/MissingType): The schema 'ScheduleCreateOrUpdateProperties-inte
 
 WARNING (Modeler/MissingType): The schema 'ScheduleProperties-interval' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/automation/resource-manager/Microsoft.Automation/stable/2015-10-31/schedule.json#/components/schemas/ScheduleProperties-interval
+WARNING: Unrecognized property type: constant
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.automation/automationaccounts/runbooks/draft under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/runbooks/{runbookName}/draft/content': Found multiple definitions for the same type
+WARNING: Unrecognized property type: constant
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 12ms
-[139.55 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 11ms
+[155.17 s] Generation Complete

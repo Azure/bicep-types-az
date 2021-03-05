@@ -99,14 +99,24 @@
 * **allowBlobPublicAccess**: bool
 * **allowSharedKeyAccess**: bool
 * **azureFilesIdentityBasedAuthentication**: AzureFilesIdentityBasedAuthentication
+* **blobRestoreStatus**: BlobRestoreStatus (ReadOnly)
+* **creationTime**: string (ReadOnly)
 * **customDomain**: CustomDomain
 * **enableHttpsTrafficOnly**: bool
 * **encryption**: Encryption
+* **failoverInProgress**: bool (ReadOnly)
+* **geoReplicationStats**: GeoReplicationStats (ReadOnly)
 * **IsHnsEnabled**: bool
 * **largeFileSharesState**: 'Disabled' | 'Enabled'
+* **lastGeoFailoverTime**: string (ReadOnly)
 * **minimumTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2'
 * **networkRuleSet**: NetworkRuleSet
+* **primaryEndpoints**: Endpoints (ReadOnly)
+* **primaryLocation**: string (ReadOnly)
+* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
 * **routingPreference**: RoutingPreference
+* **secondaryEndpoints**: Endpoints (ReadOnly)
+* **secondaryLocation**: string (ReadOnly)
 
 ## AzureFilesIdentityBasedAuthentication
 ### Properties
@@ -121,6 +131,23 @@
 * **domainSid**: string (Required)
 * **forestName**: string (Required)
 * **netBiosDomainName**: string (Required)
+
+## BlobRestoreStatus
+### Properties
+* **failureReason**: string (ReadOnly)
+* **parameters**: BlobRestoreParameters (ReadOnly)
+* **restoreId**: string (ReadOnly)
+* **status**: 'Complete' | 'Failed' | 'InProgress' (ReadOnly)
+
+## BlobRestoreParameters
+### Properties
+* **blobRanges**: BlobRestoreRange[] (ReadOnly)
+* **timeToRestore**: string (ReadOnly)
+
+## BlobRestoreRange
+### Properties
+* **endRange**: string (ReadOnly)
+* **startRange**: string (ReadOnly)
 
 ## CustomDomain
 ### Properties
@@ -155,6 +182,12 @@
 * **keyType**: 'Account' | 'Service'
 * **lastEnabledTime**: string (ReadOnly)
 
+## GeoReplicationStats
+### Properties
+* **canFailover**: bool (ReadOnly)
+* **lastSyncTime**: string (ReadOnly)
+* **status**: 'Bootstrap' | 'Live' | 'Unavailable' (ReadOnly)
+
 ## NetworkRuleSet
 ### Properties
 * **bypass**: 'AzureServices' | 'Logging' | 'Metrics' | 'None'
@@ -168,6 +201,56 @@
 ## VirtualNetworkRule
 ### Properties
 * **virtualNetworkResourceId**: string (Required)
+
+## Endpoints
+### Properties
+* **blob**: string (ReadOnly)
+* **dfs**: string (ReadOnly)
+* **file**: string (ReadOnly)
+* **internetEndpoints**: StorageAccountInternetEndpoints (ReadOnly)
+* **microsoftEndpoints**: StorageAccountMicrosoftEndpoints (ReadOnly)
+* **queue**: string (ReadOnly)
+* **table**: string (ReadOnly)
+* **web**: string (ReadOnly)
+
+## StorageAccountInternetEndpoints
+### Properties
+* **blob**: string (ReadOnly)
+* **dfs**: string (ReadOnly)
+* **file**: string (ReadOnly)
+* **web**: string (ReadOnly)
+
+## StorageAccountMicrosoftEndpoints
+### Properties
+* **blob**: string (ReadOnly)
+* **dfs**: string (ReadOnly)
+* **file**: string (ReadOnly)
+* **queue**: string (ReadOnly)
+* **table**: string (ReadOnly)
+* **web**: string (ReadOnly)
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
+* **type**: string (ReadOnly)
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: PrivateEndpoint (ReadOnly)
+* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly)
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionRequired**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **status**: 'Approved' | 'Pending' | 'Rejected' (ReadOnly)
 
 ## RoutingPreference
 ### Properties
@@ -398,22 +481,6 @@
 ### Properties
 * **minCreationTime**: string
 * **prefixMatch**: string[]
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
-
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly)
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionRequired**: string
-* **description**: string
-* **status**: 'Approved' | 'Pending' | 'Rejected'
 
 ## QueueProperties
 ### Properties

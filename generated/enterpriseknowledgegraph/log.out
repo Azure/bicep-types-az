@@ -47,5 +47,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorBody' with an undefined t
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 1ms
-[5.5 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 2ms
+[5.13 s] Generation Complete

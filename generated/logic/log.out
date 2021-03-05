@@ -62,7 +62,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
 WARNING: Skipping resource type microsoft.logic/integrationserviceenvironments/managedapis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Logic/integrationServiceEnvironments/{integrationServiceEnvironmentName}/managedApis/{apiName}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 29ms
+INFORMATION: Autorest.AzureResourceSchema took 26ms
 Processing batch task - {"tag":"schema-logic-2018-07-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -117,7 +117,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 17ms
+INFORMATION: Autorest.AzureResourceSchema took 40ms
 Processing batch task - {"tag":"schema-logic-2016-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -201,7 +201,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 15ms
+INFORMATION: Autorest.AzureResourceSchema took 22ms
 Processing batch task - {"tag":"schema-logic-2015-08-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -244,7 +244,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 11ms
+INFORMATION: Autorest.AzureResourceSchema took 14ms
 Processing batch task - {"tag":"schema-logic-2015-02-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -262,7 +262,7 @@ WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-logic-2019-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -319,7 +319,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
 WARNING: Skipping resource type microsoft.logic/integrationserviceenvironments/managedapis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Logic/integrationServiceEnvironments/{integrationServiceEnvironmentName}/managedApis/{apiName}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 17ms
+INFORMATION: Autorest.AzureResourceSchema took 18ms
 Processing batch task - {"tag":"schema-logic-2018-07-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -374,7 +374,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 21ms
+INFORMATION: Autorest.AzureResourceSchema took 19ms
 Processing batch task - {"tag":"schema-logic-2016-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -458,7 +458,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
-INFORMATION: Autorest.AzureResourceSchema took 13ms
+INFORMATION: Autorest.AzureResourceSchema took 24ms
 Processing batch task - {"tag":"schema-logic-2015-08-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -501,7 +501,7 @@ WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 8ms
+INFORMATION: Autorest.AzureResourceSchema took 10ms
 Processing batch task - {"tag":"schema-logic-2015-02-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -519,5 +519,5 @@ WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 3ms
-[85.78 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 5ms
+[105.28 s] Generation Complete

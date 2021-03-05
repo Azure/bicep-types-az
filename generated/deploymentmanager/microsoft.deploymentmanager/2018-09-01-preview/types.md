@@ -106,8 +106,80 @@
 ### Properties
 * **artifactSourceId**: string
 * **buildVersion**: string (Required)
+* **operationInfo**: RolloutOperationInfo (ReadOnly)
+* **services**: Service[] (ReadOnly)
+* **status**: string (ReadOnly)
 * **stepGroups**: Step[] (Required)
 * **targetServiceTopologyId**: string (Required)
+* **totalRetryAttempts**: int (ReadOnly)
+
+## RolloutOperationInfo
+### Properties
+* **endTime**: string (ReadOnly)
+* **error**: CloudErrorBody (ReadOnly)
+* **retryAttempt**: int (ReadOnly)
+* **skipSucceededOnRetry**: bool (ReadOnly)
+* **startTime**: string (ReadOnly)
+
+## CloudErrorBody
+### Properties
+* **code**: string (ReadOnly)
+* **details**: CloudErrorBody[] (ReadOnly)
+* **message**: string (ReadOnly)
+* **target**: string (ReadOnly)
+
+## Service
+### Properties
+* **name**: string (ReadOnly)
+* **serviceUnits**: ServiceUnit[] (ReadOnly)
+* **targetLocation**: string (ReadOnly)
+* **targetSubscriptionId**: string (ReadOnly)
+
+## ServiceUnit
+### Properties
+* **artifacts**: ServiceUnitArtifacts (ReadOnly)
+* **name**: string (ReadOnly)
+* **steps**: RolloutStep[] (ReadOnly)
+* **targetResourceGroup**: string (ReadOnly)
+
+## ServiceUnitArtifacts
+### Properties
+* **parametersArtifactSourceRelativePath**: string
+* **parametersUri**: string
+* **templateArtifactSourceRelativePath**: string
+* **templateUri**: string
+
+## RolloutStep
+### Properties
+* **messages**: Message[] (ReadOnly)
+* **name**: string (ReadOnly)
+* **operationInfo**: StepOperationInfo (ReadOnly)
+* **resourceOperations**: ResourceOperation[] (ReadOnly)
+* **status**: string (ReadOnly)
+* **stepGroup**: string (ReadOnly)
+
+## Message
+### Properties
+* **message**: string (ReadOnly)
+* **timeStamp**: string (ReadOnly)
+
+## StepOperationInfo
+### Properties
+* **correlationId**: string (ReadOnly)
+* **deploymentName**: string (ReadOnly)
+* **endTime**: string (ReadOnly)
+* **error**: CloudErrorBody (ReadOnly)
+* **lastUpdatedTime**: string (ReadOnly)
+* **startTime**: string (ReadOnly)
+
+## ResourceOperation
+### Properties
+* **operationId**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **resourceName**: string (ReadOnly)
+* **resourceType**: string (ReadOnly)
+* **statusCode**: string (ReadOnly)
+* **statusMessage**: string (ReadOnly)
 
 ## Step
 ### Properties
@@ -149,13 +221,6 @@
 ### Properties
 * **artifacts**: ServiceUnitArtifacts
 * **targetResourceGroup**: string (Required)
-
-## ServiceUnitArtifacts
-### Properties
-* **parametersArtifactSourceRelativePath**: string
-* **parametersUri**: string
-* **templateArtifactSourceRelativePath**: string
-* **templateUri**: string
 
 ## TrackedResourceTags
 ### Properties

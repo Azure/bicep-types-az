@@ -39,12 +39,20 @@
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
+* **creationTime**: string (ReadOnly)
 * **customDomain**: CustomDomain
 * **enableAzureFilesAadIntegration**: bool
 * **enableHttpsTrafficOnly**: bool
 * **encryption**: Encryption
+* **failoverInProgress**: bool (ReadOnly)
+* **geoReplicationStats**: GeoReplicationStats (ReadOnly)
 * **IsHnsEnabled**: bool
+* **lastGeoFailoverTime**: string (ReadOnly)
 * **networkRuleSet**: NetworkRuleSet
+* **primaryEndpoints**: Endpoints (ReadOnly)
+* **primaryLocation**: string (ReadOnly)
+* **secondaryEndpoints**: Endpoints (ReadOnly)
+* **secondaryLocation**: string (ReadOnly)
 
 ## CustomDomain
 ### Properties
@@ -75,6 +83,12 @@
 * **enabled**: bool
 * **lastEnabledTime**: string (ReadOnly)
 
+## GeoReplicationStats
+### Properties
+* **canFailover**: bool (ReadOnly)
+* **lastSyncTime**: string (ReadOnly)
+* **status**: 'Bootstrap' | 'Live' | 'Unavailable' (ReadOnly)
+
 ## NetworkRuleSet
 ### Properties
 * **bypass**: 'AzureServices' | 'Logging' | 'Metrics' | 'None'
@@ -88,6 +102,15 @@
 ## VirtualNetworkRule
 ### Properties
 * **virtualNetworkResourceId**: string (Required)
+
+## Endpoints
+### Properties
+* **blob**: string (ReadOnly)
+* **dfs**: string (ReadOnly)
+* **file**: string (ReadOnly)
+* **queue**: string (ReadOnly)
+* **table**: string (ReadOnly)
+* **web**: string (ReadOnly)
 
 ## Sku
 ### Properties

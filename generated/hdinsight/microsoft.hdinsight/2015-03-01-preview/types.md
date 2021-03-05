@@ -4,6 +4,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: ClusterIdentity
 * **location**: string
@@ -38,21 +39,25 @@
 ### Properties
 * **clientId**: string (ReadOnly)
 * **principalId**: string (ReadOnly)
-* **tenantId**: string
 
 ## ClusterCreateProperties
 ### Properties
 * **clusterDefinition**: ClusterDefinition
+* **clusterId**: string (ReadOnly)
+* **clusterState**: string (ReadOnly)
 * **clusterVersion**: string
-* **computeIsolationProperties**: ComputeIsolationProperties
 * **computeProfile**: ComputeProfile
+* **connectivityEndpoints**: ConnectivityEndpoint[] (ReadOnly)
+* **createdDate**: string (ReadOnly)
 * **diskEncryptionProperties**: DiskEncryptionProperties
 * **encryptionInTransitProperties**: EncryptionInTransitProperties
+* **errors**: Errors[] (ReadOnly)
 * **kafkaRestProperties**: KafkaRestProperties
 * **minSupportedTlsVersion**: string
 * **networkProperties**: NetworkProperties
+* **quotaInfo**: QuotaInfo (ReadOnly)
 * **securityProfile**: SecurityProfile
-* **storageProfile**: StorageProfile
+* **storageProfile**: StorageProfile (WriteOnly)
 
 ## ClusterDefinition
 ### Properties
@@ -65,11 +70,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ComputeIsolationProperties
-### Properties
-* **enableComputeIsolation**: bool
-* **hostSku**: string
-
 ## ComputeProfile
 ### Properties
 * **roles**: Role[]
@@ -78,7 +78,6 @@
 ### Properties
 * **autoscaleConfiguration**: Autoscale
 * **dataDisksGroups**: DataDisksGroups[]
-* **encryptDataDisks**: bool
 * **hardwareProfile**: HardwareProfile
 * **minInstanceCount**: int
 * **name**: string
@@ -86,7 +85,6 @@
 * **scriptActions**: ScriptAction[]
 * **targetInstanceCount**: int
 * **virtualNetworkProfile**: VirtualNetworkProfile
-* **VMGroupName**: string
 
 ## Autoscale
 ### Properties
@@ -153,6 +151,13 @@
 * **id**: string
 * **subnet**: string
 
+## ConnectivityEndpoint
+### Properties
+* **location**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **port**: int (ReadOnly)
+* **protocol**: string (ReadOnly)
+
 ## DiskEncryptionProperties
 ### Properties
 * **encryptionAlgorithm**: 'RSA-OAEP' | 'RSA-OAEP-256' | 'RSA1_5'
@@ -166,25 +171,28 @@
 ### Properties
 * **isEncryptionInTransitEnabled**: bool
 
+## Errors
+### Properties
+* **code**: string (ReadOnly)
+* **message**: string (ReadOnly)
+
 ## KafkaRestProperties
 ### Properties
 * **clientGroupInfo**: ClientGroupInfo
-* **configurationOverride**: KafkaRestPropertiesConfigurationOverride
 
 ## ClientGroupInfo
 ### Properties
 * **groupId**: string
 * **groupName**: string
 
-## KafkaRestPropertiesConfigurationOverride
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## NetworkProperties
 ### Properties
 * **privateLink**: 'Disabled' | 'Enabled'
 * **resourceProviderConnection**: 'Inbound' | 'Outbound'
+
+## QuotaInfo
+### Properties
+* **coresUsed**: int (ReadOnly)
 
 ## SecurityProfile
 ### Properties
@@ -199,19 +207,17 @@
 
 ## StorageProfile
 ### Properties
-* **storageaccounts**: StorageAccount[]
+* **storageaccounts**: StorageAccount[] (WriteOnly)
 
 ## StorageAccount
 ### Properties
-* **container**: string
-* **fileshare**: string
-* **fileSystem**: string
-* **isDefault**: bool
-* **key**: string
-* **msiResourceId**: string
-* **name**: string
-* **resourceId**: string
-* **saskey**: string
+* **container**: string (WriteOnly)
+* **fileSystem**: string (WriteOnly)
+* **isDefault**: bool (WriteOnly)
+* **key**: string (WriteOnly)
+* **msiResourceId**: string (WriteOnly)
+* **name**: string (WriteOnly)
+* **resourceId**: string (WriteOnly)
 
 ## ClusterCreateParametersExtendedTags
 ### Properties
@@ -232,19 +238,13 @@
 * **sshEndpoints**: ApplicationGetEndpoint[]
 * **uninstallScriptActions**: RuntimeScriptAction[]
 
-## Errors
-### Properties
-* **code**: string
-* **message**: string
-
 ## ApplicationGetHttpsEndpoint
 ### Properties
 * **accessModes**: string[]
 * **destinationPort**: int
 * **disableGatewayAuth**: bool
-* **location**: string (ReadOnly)
-* **privateIPAddress**: string
-* **publicPort**: int (ReadOnly)
+* **location**: string
+* **publicPort**: int
 * **subDomainSuffix**: string
 
 ## RuntimeScriptAction
@@ -259,7 +259,6 @@
 ### Properties
 * **destinationPort**: int
 * **location**: string
-* **privateIPAddress**: string
 * **publicPort**: int
 
 ## ApplicationTags

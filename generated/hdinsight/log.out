@@ -134,8 +134,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Usage' with an undefined type 
 
 WARNING (PreCheck/SchemaMissingType): The schema 'UsagesListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'ClusterCreateRequestValidationParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/SchemaMissingType): The schema 'ClusterConfigurations' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Extension' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
@@ -172,8 +170,9 @@ WARNING: Unrecognized property type: constant
 WARNING: Unrecognized known property type: "credential"
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.hdinsight/clusters/extensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HDInsight/clusters/{clusterName}/extensions/clustermonitoring': Found multiple definitions for the same type
-INFORMATION: Autorest.AzureResourceSchema took 12ms
+INFORMATION: Autorest.AzureResourceSchema took 15ms
 Processing batch task - {"tag":"schema-hdinsight-2015-03-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -220,11 +219,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccount' with an undefi
 
 WARNING (PreCheck/SchemaMissingType): The schema 'StorageProfile' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'ExcludedServicesConfig' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/SchemaMissingType): The schema 'NetworkProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'ComputeIsolationProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ClusterCreateProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
@@ -270,7 +265,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'UpdateGatewaySettingsParameter
 
 WARNING (PreCheck/SchemaMissingType): The schema 'GatewaySettings' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'AsyncOperationResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
@@ -302,8 +297,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Usage' with an undefined type 
 
 WARNING (PreCheck/SchemaMissingType): The schema 'UsagesListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'ClusterCreateRequestValidationParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/SchemaMissingType): The schema 'ClusterConfigurations' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Extension' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
@@ -326,8 +319,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an und
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'HostInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named ClusterListRuntimeScriptActionDetailResult -- properties.value.description: undefined => "The list of persisted script action details for the cluster." 
@@ -340,8 +331,9 @@ WARNING: Unrecognized property type: constant
 WARNING: Unrecognized known property type: "credential"
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.hdinsight/clusters/extensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HDInsight/clusters/{clusterName}/extensions/clustermonitoring': Found multiple definitions for the same type
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-hdinsight-2018-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -470,8 +462,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Usage' with an undefined type 
 
 WARNING (PreCheck/SchemaMissingType): The schema 'UsagesListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'ClusterCreateRequestValidationParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/SchemaMissingType): The schema 'ClusterConfigurations' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Extension' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
@@ -508,8 +498,9 @@ WARNING: Unrecognized property type: constant
 WARNING: Unrecognized known property type: "credential"
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.hdinsight/clusters/extensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HDInsight/clusters/{clusterName}/extensions/clustermonitoring': Found multiple definitions for the same type
-INFORMATION: Autorest.AzureResourceSchema took 7ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-hdinsight-2015-03-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -556,11 +547,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccount' with an undefi
 
 WARNING (PreCheck/SchemaMissingType): The schema 'StorageProfile' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'ExcludedServicesConfig' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/SchemaMissingType): The schema 'NetworkProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'ComputeIsolationProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ClusterCreateProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
@@ -606,7 +593,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'UpdateGatewaySettingsParameter
 
 WARNING (PreCheck/SchemaMissingType): The schema 'GatewaySettings' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'AsyncOperationResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
@@ -638,8 +625,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Usage' with an undefined type 
 
 WARNING (PreCheck/SchemaMissingType): The schema 'UsagesListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'ClusterCreateRequestValidationParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/SchemaMissingType): The schema 'ClusterConfigurations' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Extension' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
@@ -662,8 +647,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an und
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'HostInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named ClusterListRuntimeScriptActionDetailResult -- properties.value.description: undefined => "The list of persisted script action details for the cluster." 
@@ -676,6 +659,7 @@ WARNING: Unrecognized property type: constant
 WARNING: Unrecognized known property type: "credential"
 WARNING: Unrecognized property type: sealed-choice
 WARNING: Unrecognized property type: sealed-choice
+WARNING: Unrecognized property type: sealed-choice
 WARNING: Skipping resource type microsoft.hdinsight/clusters/extensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HDInsight/clusters/{clusterName}/extensions/clustermonitoring': Found multiple definitions for the same type
 INFORMATION: Autorest.AzureResourceSchema took 7ms
-[27.84 s] Generation Complete
+[28.14 s] Generation Complete

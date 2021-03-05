@@ -14,8 +14,14 @@
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
+* **creationTime**: string (ReadOnly)
 * **customDomain**: CustomDomain
 * **encryption**: Encryption
+* **lastGeoFailoverTime**: string (ReadOnly)
+* **primaryEndpoints**: Endpoints (ReadOnly)
+* **primaryLocation**: string (ReadOnly)
+* **secondaryEndpoints**: Endpoints (ReadOnly)
+* **secondaryLocation**: string (ReadOnly)
 
 ## CustomDomain
 ### Properties
@@ -34,6 +40,13 @@
 ### Properties
 * **enabled**: bool
 * **lastEnabledTime**: string (ReadOnly)
+
+## Endpoints
+### Properties
+* **blob**: string (ReadOnly)
+* **file**: string (ReadOnly)
+* **queue**: string (ReadOnly)
+* **table**: string (ReadOnly)
 
 ## Sku
 ### Properties

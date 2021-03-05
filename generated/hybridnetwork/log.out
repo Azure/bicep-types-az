@@ -126,7 +126,7 @@ WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 11ms
+INFORMATION: Autorest.AzureResourceSchema took 14ms
 Processing batch task - {"tag":"schema-hybridnetwork-2020-01-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -247,5 +247,5 @@ WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
 WARNING: Unrecognized property type: any
-INFORMATION: Autorest.AzureResourceSchema took 6ms
-[9.82 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 7ms
+[11.72 s] Generation Complete

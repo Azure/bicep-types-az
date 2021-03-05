@@ -13,7 +13,8 @@ INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (Modeler/MissingType): The enum schema 'AccountResourceRequestOperationType' with an undefined type and enum values is ambigious. This has been auto-corrected to 'type:string'
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+WARNING: Unrecognized property type: sealed-choice
+INFORMATION: Autorest.AzureResourceSchema took 9ms
 Processing batch task - {"tag":"schema-visualstudio-2014-04-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -21,5 +22,6 @@ INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (Modeler/MissingType): The enum schema 'AccountResourceRequestOperationType' with an undefined type and enum values is ambigious. This has been auto-corrected to 'type:string'
+WARNING: Unrecognized property type: sealed-choice
 INFORMATION: Autorest.AzureResourceSchema took 2ms
-[5.47 s] Generation Complete
+[6.56 s] Generation Complete

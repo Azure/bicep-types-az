@@ -38,9 +38,20 @@
 
 ## JobCreateProperties
 ### Properties
+* **creationTime**: string (ReadOnly)
+* **endTime**: string (ReadOnly)
+* **exception**: string (ReadOnly)
+* **jobId**: string (ReadOnly)
+* **lastModifiedTime**: string (ReadOnly)
+* **lastStatusModifiedTime**: string (ReadOnly)
 * **parameters**: JobCreatePropertiesParameters
+* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly)
 * **runbook**: RunbookAssociationProperty
 * **runOn**: string
+* **startedBy**: string (ReadOnly)
+* **startTime**: string (ReadOnly)
+* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly)
+* **statusDetails**: string (ReadOnly)
 
 ## JobCreatePropertiesParameters
 ### Properties
@@ -163,12 +174,29 @@
 ### Properties
 * **autoSync**: bool
 * **branch**: string
+* **creationTime**: string (ReadOnly)
 * **description**: string
 * **folderPath**: string
+* **lastModifiedTime**: string (ReadOnly)
 * **publishRunbook**: bool
 * **repoUrl**: string
+* **securityToken**: SourceControlSecurityTokenProperties (WriteOnly)
 * **sourceType**: 'GitHub' | 'VsoGit' | 'VsoTfvc'
+
+## SourceControlSecurityTokenProperties
+### Properties
+* **accessToken**: string (WriteOnly)
+* **refreshToken**: string (WriteOnly)
+* **tokenType**: 'Oauth' | 'PersonalAccessToken' (WriteOnly)
 
 ## SourceControlSyncJobCreateProperties
 ### Properties
+* **commitId**: string (Required, WriteOnly)
+* **creationTime**: string (ReadOnly)
+* **endTime**: string (ReadOnly)
+* **exception**: string (ReadOnly)
+* **provisioningState**: 'Completed' | 'Failed' | 'Running' (ReadOnly)
+* **sourceControlSyncJobId**: string (ReadOnly)
+* **startTime**: string (ReadOnly)
+* **syncType**: 'FullSync' | 'PartialSync' (ReadOnly)
 

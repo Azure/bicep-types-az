@@ -28,6 +28,7 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **link**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant)
 
@@ -478,6 +479,7 @@
 ## TagDescriptionBaseProperties
 ### Properties
 * **description**: string
+* **displayName**: string (ReadOnly)
 * **externalDocsDescription**: string
 * **externalDocsUrl**: string
 
@@ -575,9 +577,15 @@
 
 ## CertificateCreateOrUpdateProperties
 ### Properties
+* **data**: string (Required, WriteOnly)
+* **expirationDate**: string (ReadOnly)
+* **password**: string (Required, WriteOnly)
+* **subject**: string (ReadOnly)
+* **thumbprint**: string (ReadOnly)
 
 ## GroupCreateParametersProperties
 ### Properties
+* **builtIn**: bool (ReadOnly)
 * **description**: string
 * **displayName**: string (Required)
 * **externalId**: string
@@ -634,11 +642,17 @@
 ## SubscriptionCreateParameterProperties
 ### Properties
 * **allowTracing**: bool
+* **createdDate**: string (ReadOnly)
 * **displayName**: string (Required)
+* **endDate**: string (ReadOnly)
+* **expirationDate**: string (ReadOnly)
+* **notificationDate**: string (ReadOnly)
 * **ownerId**: string
 * **primaryKey**: string
 * **scope**: string (Required)
 * **secondaryKey**: string
+* **startDate**: string (ReadOnly)
+* **stateComment**: string (ReadOnly)
 
 ## TagContractProperties
 ### Properties
@@ -648,6 +662,7 @@
 ### Properties
 * **body**: string
 * **description**: string
+* **isDefault**: bool (ReadOnly)
 * **parameters**: EmailTemplateParametersContractProperties[]
 * **subject**: string
 * **title**: string
@@ -660,12 +675,23 @@
 
 ## UserCreateParameterProperties
 ### Properties
+* **confirmation**: 'invite' | 'signup' (WriteOnly)
 * **email**: string (Required)
 * **firstName**: string (Required)
+* **groups**: GroupContractProperties[] (ReadOnly)
 * **identities**: UserIdentityContract[]
 * **lastName**: string (Required)
 * **note**: string
+* **password**: string (WriteOnly)
+* **registrationDate**: string (ReadOnly)
 * **state**: 'active' | 'blocked' | 'deleted' | 'pending'
+
+## GroupContractProperties
+### Properties
+* **builtIn**: bool (ReadOnly)
+* **description**: string (ReadOnly)
+* **displayName**: string (ReadOnly)
+* **externalId**: string (ReadOnly)
 
 ## UserIdentityContract
 ### Properties

@@ -53,13 +53,21 @@
 * **allowBlobPublicAccess**: bool
 * **allowSharedKeyAccess**: bool
 * **azureFilesIdentityBasedAuthentication**: AzureFilesIdentityBasedAuthentication
+* **creationTime**: string (ReadOnly)
 * **customDomain**: CustomDomain
 * **enableHttpsTrafficOnly**: bool
 * **encryption**: Encryption
+* **failoverInProgress**: bool (ReadOnly)
+* **geoReplicationStats**: GeoReplicationStats (ReadOnly)
 * **IsHnsEnabled**: bool
 * **largeFileSharesState**: 'Disabled' | 'Enabled'
+* **lastGeoFailoverTime**: string (ReadOnly)
 * **minimumTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2'
 * **networkRuleSet**: NetworkRuleSet
+* **primaryEndpoints**: Endpoints (ReadOnly)
+* **primaryLocation**: string (ReadOnly)
+* **secondaryEndpoints**: Endpoints (ReadOnly)
+* **secondaryLocation**: string (ReadOnly)
 
 ## AzureFilesIdentityBasedAuthentication
 ### Properties
@@ -104,6 +112,12 @@
 * **enabled**: bool
 * **lastEnabledTime**: string (ReadOnly)
 
+## GeoReplicationStats
+### Properties
+* **canFailover**: bool (ReadOnly)
+* **lastSyncTime**: string (ReadOnly)
+* **status**: 'Bootstrap' | 'Live' | 'Unavailable' (ReadOnly)
+
 ## NetworkRuleSet
 ### Properties
 * **bypass**: 'AzureServices' | 'Logging' | 'Metrics' | 'None'
@@ -117,6 +131,15 @@
 ## VirtualNetworkRule
 ### Properties
 * **virtualNetworkResourceId**: string (Required)
+
+## Endpoints
+### Properties
+* **blob**: string (ReadOnly)
+* **dfs**: string (ReadOnly)
+* **file**: string (ReadOnly)
+* **queue**: string (ReadOnly)
+* **table**: string (ReadOnly)
+* **web**: string (ReadOnly)
 
 ## Sku
 ### Properties

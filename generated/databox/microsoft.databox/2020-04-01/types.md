@@ -46,7 +46,7 @@
 * **dataExportDetails**: DataExportDetails[]
 * **dataImportDetails**: DataImportDetails[]
 * **deliveryPackage**: PackageShippingDetails (ReadOnly)
-* **expectedDataSizeInTeraBytes**: int
+* **expectedDataSizeInTerabytes**: int
 * **jobStages**: JobStages[] (ReadOnly)
 * **keyEncryptionKey**: KeyEncryptionKey (ReadOnly)
 * **preferences**: Preferences

@@ -16,7 +16,9 @@
 ### Properties
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: SharedAccessAuthorizationRuleProperties (Required, WriteOnly)
 * **type**: 'Microsoft.NotificationHubs/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NotificationHubs/namespaces/notificationHubs@2014-09-01
@@ -35,7 +37,9 @@
 ### Properties
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: SharedAccessAuthorizationRuleProperties (Required, WriteOnly)
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## NamespaceProperties
@@ -55,6 +59,18 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SharedAccessAuthorizationRuleProperties
+### Properties
+* **claimType**: string (WriteOnly)
+* **claimValue**: string (WriteOnly)
+* **createdTime**: string (WriteOnly)
+* **keyName**: string (WriteOnly)
+* **modifiedTime**: string (WriteOnly)
+* **primaryKey**: string (WriteOnly)
+* **revision**: int (WriteOnly)
+* **rights**: array (WriteOnly)
+* **secondaryKey**: string (WriteOnly)
 
 ## NotificationHubProperties
 ### Properties
@@ -88,18 +104,6 @@
 * **certificateKey**: string
 * **endpoint**: string
 * **thumbprint**: string
-
-## SharedAccessAuthorizationRuleProperties
-### Properties
-* **claimType**: string
-* **claimValue**: string
-* **createdTime**: string
-* **keyName**: string
-* **modifiedTime**: string
-* **primaryKey**: string
-* **revision**: int
-* **rights**: array
-* **secondaryKey**: string
 
 ## BaiduCredential
 ### Properties

@@ -20,6 +20,7 @@
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
+* **properties**: RawCertificateData (WriteOnly)
 * **type**: 'Microsoft.RecoveryServices/vaults/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.RecoveryServices/vaults/extendedInformation@2016-06-01
@@ -87,6 +88,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## RawCertificateData
+### Properties
+* **authType**: 'AAD' | 'ACS' | 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid' (WriteOnly)
 
 ## VaultExtendedInfo
 ### Properties

@@ -11,5 +11,10 @@
 
 ## PutAliasRequestProperties
 ### Properties
+* **billingScope**: string (WriteOnly)
+* **displayName**: string (WriteOnly)
+* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly)
+* **resellerId**: string (WriteOnly)
 * **subscriptionId**: string
+* **workload**: 'DevTest' | 'Production' (WriteOnly)
 
