@@ -5,7 +5,7 @@ import { AnySchema, ArraySchema, ChoiceSchema, CodeModel, ConstantSchema, Dictio
 import { Channel, Host } from "@autorest/extension-base";
 import { ProviderDefinition, ResourceDefinition, ResourceDescriptor, ScopeType } from './models';
 import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
-import { uniq, keys, keyBy, Dictionary, mapValues, flatMap, values } from 'lodash';
+import { uniq, keys, keyBy, Dictionary, flatMap, values } from 'lodash';
 
 export function generateTypes(codeModel: CodeModel, host: Host) {
   function logWarning(message: string) {
@@ -55,7 +55,7 @@ export function generateTypes(codeModel: CodeModel, host: Host) {
       const getOperation = getOperationsByPath[lcPath];
 
       const putData = getPutSchema(putOperation);
-      const getData = getGetSchema(getOperation);
+      const getData = getGetSchema(getOperation) ?? putData;
       if (!putData) {
         continue;
       }
@@ -599,6 +599,8 @@ export function generateTypes(codeModel: CodeModel, host: Host) {
       case SchemaType.UnixTime:
       case SchemaType.String:
       case SchemaType.Uuid:
+      case SchemaType.Duration:
+      case SchemaType.Credential:
         return factory.lookupBuiltInType(BuiltInTypeKind.String);
       default:
         logWarning(`Unrecognized known property type: "${combinedSchema.type}"`);
@@ -662,6 +664,11 @@ export function generateTypes(codeModel: CodeModel, host: Host) {
 
   function parseEnumType(factory: TypeFactory, putSchema: ChoiceSchema | SealedChoiceSchema | undefined, getSchema: ChoiceSchema | SealedChoiceSchema | undefined) {
     const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
+
+    if (!(combinedSchema.choiceType instanceof StringSchema)) {
+      // we can only handle string enums right now
+      return parseType(factory, putSchema?.choiceType, getSchema?.choiceType);
+    }
 
     const enumTypes = [];
     for (const enumValue of combinedSchema.choices) {

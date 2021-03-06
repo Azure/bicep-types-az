@@ -149,7 +149,7 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
     writeHeading(1, `${provider} @ ${apiVersion}`);
     writeNewLine();
 
-    const resourceTypes = orderBy(types.filter(t => t instanceof ResourceType) as ResourceType[], x => x.name.split('@')[0]);
+    const resourceTypes = orderBy(types.filter(t => t instanceof ResourceType) as ResourceType[], x => x.name.split('@')[0].toLowerCase());
     const typesToWrite = [...resourceTypes];
 
     for (const resourceType of resourceTypes) {
