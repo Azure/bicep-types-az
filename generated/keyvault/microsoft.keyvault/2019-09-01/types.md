@@ -16,9 +16,9 @@
 ### Properties
 * **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly, WriteOnly)
+* **location**: string (ReadOnly)
 * **name**: 'add' | 'remove' | 'replace' (Required, DeployTimeConstant)
-* **properties**: VaultAccessPolicyProperties (Required, WriteOnly)
+* **properties**: VaultAccessPolicyProperties (Required)
 * **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.KeyVault/vaults/keys@2019-09-01
@@ -136,7 +136,7 @@
 
 ## VaultAccessPolicyProperties
 ### Properties
-* **accessPolicies**: AccessPolicyEntry[] (Required, WriteOnly)
+* **accessPolicies**: AccessPolicyEntry[] (Required)
 
 ## KeyProperties
 ### Properties

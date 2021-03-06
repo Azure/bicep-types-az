@@ -206,7 +206,7 @@
 * **directoryType**: 'ActiveDirectory'
 * **domain**: string
 * **domainUsername**: string
-* **domainUserPassword**: any
+* **domainUserPassword**: string
 * **ldapsUrls**: string[]
 * **msiResourceId**: string
 * **organizationalUnitDN**: string

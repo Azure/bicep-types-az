@@ -33,15 +33,6 @@
 * **tags**: DscCompilationJobCreateParametersTags (WriteOnly)
 * **type**: 'Microsoft.Automation/automationAccounts/compilationjobs' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.Automation/automationAccounts/connectionTypes@2020-01-13-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectionTypeCreateOrUpdateProperties (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/connectionTypes' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.Automation/automationAccounts/connections@2020-01-13-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -50,6 +41,15 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ConnectionCreateOrUpdateProperties (Required)
 * **type**: 'Microsoft.Automation/automationAccounts/connections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/connectionTypes@2020-01-13-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConnectionTypeCreateOrUpdateProperties (Required)
+* **type**: 'Microsoft.Automation/automationAccounts/connectionTypes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/credentials@2020-01-13-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -264,6 +264,23 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ConnectionCreateOrUpdateProperties
+### Properties
+* **connectionType**: ConnectionTypeAssociationProperty (Required)
+* **creationTime**: string (ReadOnly)
+* **description**: string
+* **fieldDefinitionValues**: ConnectionCreateOrUpdatePropertiesFieldDefinitionValues
+* **lastModifiedTime**: string (ReadOnly)
+
+## ConnectionTypeAssociationProperty
+### Properties
+* **name**: string
+
+## ConnectionCreateOrUpdatePropertiesFieldDefinitionValues
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ConnectionTypeCreateOrUpdateProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
@@ -282,23 +299,6 @@
 * **isEncrypted**: bool
 * **isOptional**: bool
 * **type**: string (Required)
-
-## ConnectionCreateOrUpdateProperties
-### Properties
-* **connectionType**: ConnectionTypeAssociationProperty (Required)
-* **creationTime**: string (ReadOnly)
-* **description**: string
-* **fieldDefinitionValues**: ConnectionCreateOrUpdatePropertiesFieldDefinitionValues
-* **lastModifiedTime**: string (ReadOnly)
-
-## ConnectionTypeAssociationProperty
-### Properties
-* **name**: string
-
-## ConnectionCreateOrUpdatePropertiesFieldDefinitionValues
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## CredentialCreateOrUpdateProperties
 ### Properties

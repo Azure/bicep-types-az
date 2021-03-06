@@ -196,7 +196,7 @@
 
 ## CacheConfiguration
 ### Properties
-* **cacheDuration**: any
+* **cacheDuration**: string
 * **dynamicCompression**: 'Disabled' | 'Enabled'
 * **queryParameters**: string
 * **queryParameterStripDirective**: 'StripAll' | 'StripAllExcept' | 'StripNone' | 'StripOnly'

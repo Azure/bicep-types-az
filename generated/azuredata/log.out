@@ -62,7 +62,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudErrorBody' with an undefi
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping resource type microsoft.azuredata/postgresinstances under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureData/postgresInstances/{postgresInstanceName}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-azuredata-2020-09-08-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -119,5 +119,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudErrorBody' with an undefi
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping resource type microsoft.azuredata/postgresinstances under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureData/postgresInstances/{postgresInstanceName}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 6ms
-[13.24 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 4ms
+[15.24 s] Generation Complete

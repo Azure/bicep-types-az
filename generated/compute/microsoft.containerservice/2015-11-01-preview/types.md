@@ -53,7 +53,7 @@
 
 ## ContainerServiceMasterProfile
 ### Properties
-* **count**: '1' | '3' | '5'
+* **count**: int
 * **dnsPrefix**: string (Required)
 * **fqdn**: string (ReadOnly)
 

@@ -92,15 +92,15 @@
 
 ## CloudToDeviceProperties
 ### Properties
-* **defaultTtlAsIso8601**: any
+* **defaultTtlAsIso8601**: string
 * **feedback**: FeedbackProperties
 * **maxDeliveryCount**: int
 
 ## FeedbackProperties
 ### Properties
-* **lockDurationAsIso8601**: any
+* **lockDurationAsIso8601**: string
 * **maxDeliveryCount**: int
-* **ttlAsIso8601**: any
+* **ttlAsIso8601**: string
 
 ## IotHubPropertiesDeviceStreams
 ### Properties
@@ -151,9 +151,9 @@
 
 ## MessagingEndpointProperties
 ### Properties
-* **lockDurationAsIso8601**: any
+* **lockDurationAsIso8601**: string
 * **maxDeliveryCount**: int
-* **ttlAsIso8601**: any
+* **ttlAsIso8601**: string
 
 ## NetworkRuleSetProperties
 ### Properties
@@ -283,7 +283,7 @@
 * **authenticationType**: 'identityBased' | 'keyBased'
 * **connectionString**: string (Required)
 * **containerName**: string (Required)
-* **sasTtlAsIso8601**: any
+* **sasTtlAsIso8601**: string
 
 ## IotHubSkuInfo
 ### Properties

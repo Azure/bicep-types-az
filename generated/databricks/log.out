@@ -110,4 +110,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'AddressSpace' with an undefine
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 3ms
-[5.84 s] Generation Complete
+[6.91 s] Generation Complete

@@ -126,10 +126,10 @@
 ### Properties
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly, WriteOnly)
-* **location**: string (ReadOnly, WriteOnly)
+* **kind**: string (ReadOnly)
+* **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DataMaskingRuleProperties (WriteOnly)
+* **properties**: DataMaskingRuleProperties
 * **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies/rules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/extensions@2014-04-01
@@ -392,18 +392,18 @@
 
 ## DataMaskingRuleProperties
 ### Properties
-* **aliasName**: string (WriteOnly)
-* **columnName**: string (Required, WriteOnly)
-* **id**: string (ReadOnly, WriteOnly)
-* **maskingFunction**: 'CCN' | 'Default' | 'Email' | 'Number' | 'SSN' | 'Text' (Required, WriteOnly)
-* **numberFrom**: string (WriteOnly)
-* **numberTo**: string (WriteOnly)
-* **prefixSize**: string (WriteOnly)
-* **replacementString**: string (WriteOnly)
-* **ruleState**: 'Disabled' | 'Enabled' (WriteOnly)
-* **schemaName**: string (Required, WriteOnly)
-* **suffixSize**: string (WriteOnly)
-* **tableName**: string (Required, WriteOnly)
+* **aliasName**: string
+* **columnName**: string (Required)
+* **id**: string (ReadOnly)
+* **maskingFunction**: 'CCN' | 'Default' | 'Email' | 'Number' | 'SSN' | 'Text' (Required)
+* **numberFrom**: string
+* **numberTo**: string
+* **prefixSize**: string
+* **replacementString**: string
+* **ruleState**: 'Disabled' | 'Enabled'
+* **schemaName**: string (Required)
+* **suffixSize**: string
+* **tableName**: string (Required)
 
 ## ImportExtensionProperties
 ### Properties

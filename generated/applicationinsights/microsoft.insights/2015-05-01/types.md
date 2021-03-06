@@ -12,6 +12,23 @@
 * **tags**: ComponentsResourceTags
 * **type**: 'Microsoft.Insights/components' (ReadOnly, DeployTimeConstant)
 
+## Resource microsoft.insights/components/analyticsItems@2015-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **Content**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **Id**: string
+* **name**: string (Required, DeployTimeConstant)
+* **Name**: string
+* **Properties**: ApplicationInsightsComponentAnalyticsItemProperties
+* **Scope**: 'shared' | 'user'
+* **TimeCreated**: string (ReadOnly)
+* **TimeModified**: string (ReadOnly)
+* **type**: 'microsoft.insights/components/analyticsItems' (ReadOnly, DeployTimeConstant)
+* **Type**: 'folder' | 'function' | 'query' | 'recent'
+* **Version**: string (ReadOnly)
+
 ## Resource Microsoft.Insights/components/exportconfiguration@2015-05-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -61,6 +78,23 @@
 * **UserId**: string (ReadOnly)
 * **Version**: string
 
+## Resource microsoft.insights/components/myanalyticsItems@2015-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
+* **Content**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **Id**: string
+* **name**: string (Required, DeployTimeConstant)
+* **Name**: string
+* **Properties**: ApplicationInsightsComponentAnalyticsItemProperties
+* **Scope**: 'shared' | 'user'
+* **TimeCreated**: string (ReadOnly)
+* **TimeModified**: string (ReadOnly)
+* **type**: 'microsoft.insights/components/myanalyticsItems' (ReadOnly, DeployTimeConstant)
+* **Type**: 'folder' | 'function' | 'query' | 'recent'
+* **Version**: string (ReadOnly)
+
 ## Resource Microsoft.Insights/myWorkbooks@2015-05-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -84,40 +118,6 @@
 * **properties**: WebTestProperties
 * **tags**: WebtestsResourceTags
 * **type**: 'Microsoft.Insights/webtests' (ReadOnly, DeployTimeConstant)
-
-## Resource microsoft.insights/components/analyticsItems@2015-05-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **Content**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **Id**: string
-* **name**: string (Required, DeployTimeConstant)
-* **Name**: string
-* **Properties**: ApplicationInsightsComponentAnalyticsItemProperties
-* **Scope**: 'shared' | 'user'
-* **TimeCreated**: string (ReadOnly)
-* **TimeModified**: string (ReadOnly)
-* **type**: 'microsoft.insights/components/analyticsItems' (ReadOnly, DeployTimeConstant)
-* **Type**: 'folder' | 'function' | 'query' | 'recent'
-* **Version**: string (ReadOnly)
-
-## Resource microsoft.insights/components/myanalyticsItems@2015-05-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **Content**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **Id**: string
-* **name**: string (Required, DeployTimeConstant)
-* **Name**: string
-* **Properties**: ApplicationInsightsComponentAnalyticsItemProperties
-* **Scope**: 'shared' | 'user'
-* **TimeCreated**: string (ReadOnly)
-* **TimeModified**: string (ReadOnly)
-* **type**: 'microsoft.insights/components/myanalyticsItems' (ReadOnly, DeployTimeConstant)
-* **Type**: 'folder' | 'function' | 'query' | 'recent'
-* **Version**: string (ReadOnly)
 
 ## Resource microsoft.insights/workbooks@2015-05-01
 * **Valid Scope(s)**: ResourceGroup
@@ -162,6 +162,10 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ApplicationInsightsComponentAnalyticsItemProperties
+### Properties
+* **functionAlias**: string
+
 ## MyWorkbookProperties
 ### Properties
 * **category**: string (Required)
@@ -204,10 +208,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ApplicationInsightsComponentAnalyticsItemProperties
-### Properties
-* **functionAlias**: string
 
 ## WorkbookProperties
 ### Properties

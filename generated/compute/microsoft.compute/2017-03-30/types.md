@@ -50,30 +50,6 @@
 * **tags**: ResourceTags
 * **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.Compute/virtualMachineScaleSets@2017-03-30
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2017-03-30' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: VirtualMachineScaleSetIdentity
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **plan**: Plan
-* **properties**: VirtualMachineScaleSetProperties
-* **sku**: Sku
-* **tags**: ResourceTags
-* **type**: 'Microsoft.Compute/virtualMachineScaleSets' (ReadOnly, DeployTimeConstant)
-* **zones**: string[]
-
-## Resource Microsoft.Compute/virtualMachineScaleSets/extensions@2017-03-30
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2017-03-30' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualMachineScaleSetExtensionProperties
-* **type**: 'Microsoft.Compute/virtualMachineScaleSets/extensions' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.Compute/virtualMachines@2017-03-30
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -99,6 +75,30 @@
 * **properties**: VirtualMachineExtensionProperties
 * **tags**: ResourceTags
 * **type**: 'Microsoft.Compute/virtualMachines/extensions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Compute/virtualMachineScaleSets@2017-03-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-03-30' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: VirtualMachineScaleSetIdentity
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **plan**: Plan
+* **properties**: VirtualMachineScaleSetProperties
+* **sku**: Sku
+* **tags**: ResourceTags
+* **type**: 'Microsoft.Compute/virtualMachineScaleSets' (ReadOnly, DeployTimeConstant)
+* **zones**: string[]
+
+## Resource Microsoft.Compute/virtualMachineScaleSets/extensions@2017-03-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-03-30' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualMachineScaleSetExtensionProperties
+* **type**: 'Microsoft.Compute/virtualMachineScaleSets/extensions' (ReadOnly, DeployTimeConstant)
 
 ## AvailabilitySetProperties
 ### Properties
@@ -224,7 +224,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## VirtualMachineScaleSetIdentity
+## VirtualMachineIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
@@ -236,234 +236,6 @@
 * **product**: string
 * **promotionCode**: string
 * **publisher**: string
-
-## VirtualMachineScaleSetProperties
-### Properties
-* **overprovision**: bool
-* **provisioningState**: string (ReadOnly)
-* **singlePlacementGroup**: bool
-* **uniqueId**: string (ReadOnly)
-* **upgradePolicy**: UpgradePolicy
-* **virtualMachineProfile**: VirtualMachineScaleSetVMProfile
-
-## UpgradePolicy
-### Properties
-* **automaticOSUpgrade**: bool
-* **mode**: 'Automatic' | 'Manual' | 'Rolling'
-* **rollingUpgradePolicy**: RollingUpgradePolicy
-
-## RollingUpgradePolicy
-### Properties
-* **maxBatchInstancePercent**: int
-* **maxUnhealthyInstancePercent**: int
-* **maxUnhealthyUpgradedInstancePercent**: int
-* **pauseTimeBetweenBatches**: string
-
-## VirtualMachineScaleSetVMProfile
-### Properties
-* **diagnosticsProfile**: DiagnosticsProfile
-* **extensionProfile**: VirtualMachineScaleSetExtensionProfile
-* **licenseType**: string
-* **networkProfile**: VirtualMachineScaleSetNetworkProfile
-* **osProfile**: VirtualMachineScaleSetOSProfile
-* **storageProfile**: VirtualMachineScaleSetStorageProfile
-
-## DiagnosticsProfile
-### Properties
-* **bootDiagnostics**: BootDiagnostics
-
-## BootDiagnostics
-### Properties
-* **enabled**: bool
-* **storageUri**: string
-
-## VirtualMachineScaleSetExtensionProfile
-### Properties
-* **extensions**: VirtualMachineScaleSetExtension[]
-
-## VirtualMachineScaleSetExtension
-### Properties
-* **id**: string (ReadOnly)
-* **name**: string
-* **properties**: VirtualMachineScaleSetExtensionProperties
-
-## VirtualMachineScaleSetExtensionProperties
-### Properties
-* **autoUpgradeMinorVersion**: bool
-* **forceUpdateTag**: string
-* **protectedSettings**: any
-* **provisioningState**: string (ReadOnly)
-* **publisher**: string
-* **settings**: any
-* **type**: string
-* **typeHandlerVersion**: string
-
-## VirtualMachineScaleSetNetworkProfile
-### Properties
-* **healthProbe**: ApiEntityReference
-* **networkInterfaceConfigurations**: VirtualMachineScaleSetNetworkConfiguration[]
-
-## ApiEntityReference
-### Properties
-* **id**: string
-
-## VirtualMachineScaleSetNetworkConfiguration
-### Properties
-* **id**: string
-* **name**: string (Required)
-* **properties**: VirtualMachineScaleSetNetworkConfigurationProperties
-
-## VirtualMachineScaleSetNetworkConfigurationProperties
-### Properties
-* **dnsSettings**: VirtualMachineScaleSetNetworkConfigurationDnsSettings
-* **enableAcceleratedNetworking**: bool
-* **ipConfigurations**: VirtualMachineScaleSetIPConfiguration[] (Required)
-* **networkSecurityGroup**: SubResource
-* **primary**: bool
-
-## VirtualMachineScaleSetNetworkConfigurationDnsSettings
-### Properties
-* **dnsServers**: string[]
-
-## VirtualMachineScaleSetIPConfiguration
-### Properties
-* **id**: string
-* **name**: string (Required)
-* **properties**: VirtualMachineScaleSetIPConfigurationProperties
-
-## VirtualMachineScaleSetIPConfigurationProperties
-### Properties
-* **applicationGatewayBackendAddressPools**: SubResource[]
-* **loadBalancerBackendAddressPools**: SubResource[]
-* **loadBalancerInboundNatPools**: SubResource[]
-* **primary**: bool
-* **privateIPAddressVersion**: 'IPv4' | 'IPv6'
-* **publicIPAddressConfiguration**: VirtualMachineScaleSetPublicIPAddressConfiguration
-* **subnet**: ApiEntityReference
-
-## VirtualMachineScaleSetPublicIPAddressConfiguration
-### Properties
-* **name**: string (Required)
-* **properties**: VirtualMachineScaleSetPublicIPAddressConfigurationProperties
-
-## VirtualMachineScaleSetPublicIPAddressConfigurationProperties
-### Properties
-* **dnsSettings**: VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
-* **idleTimeoutInMinutes**: int
-
-## VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
-### Properties
-* **domainNameLabel**: string (Required)
-
-## VirtualMachineScaleSetOSProfile
-### Properties
-* **adminPassword**: string
-* **adminUsername**: string
-* **computerNamePrefix**: string
-* **customData**: string
-* **linuxConfiguration**: LinuxConfiguration
-* **secrets**: VaultSecretGroup[]
-* **windowsConfiguration**: WindowsConfiguration
-
-## LinuxConfiguration
-### Properties
-* **disablePasswordAuthentication**: bool
-* **ssh**: SshConfiguration
-
-## SshConfiguration
-### Properties
-* **publicKeys**: SshPublicKey[]
-
-## SshPublicKey
-### Properties
-* **keyData**: string
-* **path**: string
-
-## VaultSecretGroup
-### Properties
-* **sourceVault**: SubResource
-* **vaultCertificates**: VaultCertificate[]
-
-## VaultCertificate
-### Properties
-* **certificateStore**: string
-* **certificateUrl**: string
-
-## WindowsConfiguration
-### Properties
-* **additionalUnattendContent**: AdditionalUnattendContent[]
-* **enableAutomaticUpdates**: bool
-* **provisionVMAgent**: bool
-* **timeZone**: string
-* **winRM**: WinRMConfiguration
-
-## AdditionalUnattendContent
-### Properties
-* **componentName**: 'Microsoft-Windows-Shell-Setup'
-* **content**: string
-* **passName**: 'OobeSystem'
-* **settingName**: 'AutoLogon' | 'FirstLogonCommands'
-
-## WinRMConfiguration
-### Properties
-* **listeners**: WinRMListener[]
-
-## WinRMListener
-### Properties
-* **certificateUrl**: string
-* **protocol**: 'Http' | 'Https'
-
-## VirtualMachineScaleSetStorageProfile
-### Properties
-* **dataDisks**: VirtualMachineScaleSetDataDisk[]
-* **imageReference**: ImageReference
-* **osDisk**: VirtualMachineScaleSetOSDisk
-
-## VirtualMachineScaleSetDataDisk
-### Properties
-* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
-* **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
-* **diskSizeGB**: int
-* **lun**: int (Required)
-* **managedDisk**: VirtualMachineScaleSetManagedDiskParameters
-* **name**: string
-
-## VirtualMachineScaleSetManagedDiskParameters
-### Properties
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS'
-
-## ImageReference
-### Properties
-* **id**: string
-* **offer**: string
-* **publisher**: string
-* **sku**: string
-* **version**: string
-
-## VirtualMachineScaleSetOSDisk
-### Properties
-* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
-* **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
-* **image**: VirtualHardDisk
-* **managedDisk**: VirtualMachineScaleSetManagedDiskParameters
-* **name**: string
-* **osType**: 'Linux' | 'Windows'
-* **vhdContainers**: string[]
-
-## VirtualHardDisk
-### Properties
-* **uri**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## VirtualMachineIdentity
-### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'SystemAssigned'
 
 ## VirtualMachineProperties
 ### Properties
@@ -477,6 +249,15 @@
 * **provisioningState**: string (ReadOnly)
 * **storageProfile**: StorageProfile
 * **vmId**: string (ReadOnly)
+
+## DiagnosticsProfile
+### Properties
+* **bootDiagnostics**: BootDiagnostics
+
+## BootDiagnostics
+### Properties
+* **enabled**: bool
+* **storageUri**: string
 
 ## HardwareProfile
 ### Properties
@@ -574,6 +355,54 @@
 * **secrets**: VaultSecretGroup[]
 * **windowsConfiguration**: WindowsConfiguration
 
+## LinuxConfiguration
+### Properties
+* **disablePasswordAuthentication**: bool
+* **ssh**: SshConfiguration
+
+## SshConfiguration
+### Properties
+* **publicKeys**: SshPublicKey[]
+
+## SshPublicKey
+### Properties
+* **keyData**: string
+* **path**: string
+
+## VaultSecretGroup
+### Properties
+* **sourceVault**: SubResource
+* **vaultCertificates**: VaultCertificate[]
+
+## VaultCertificate
+### Properties
+* **certificateStore**: string
+* **certificateUrl**: string
+
+## WindowsConfiguration
+### Properties
+* **additionalUnattendContent**: AdditionalUnattendContent[]
+* **enableAutomaticUpdates**: bool
+* **provisionVMAgent**: bool
+* **timeZone**: string
+* **winRM**: WinRMConfiguration
+
+## AdditionalUnattendContent
+### Properties
+* **componentName**: 'Microsoft-Windows-Shell-Setup'
+* **content**: string
+* **passName**: 'OobeSystem'
+* **settingName**: 'AutoLogon' | 'FirstLogonCommands'
+
+## WinRMConfiguration
+### Properties
+* **listeners**: WinRMListener[]
+
+## WinRMListener
+### Properties
+* **certificateUrl**: string
+* **protocol**: 'Http' | 'Https'
+
 ## StorageProfile
 ### Properties
 * **dataDisks**: DataDisk[]
@@ -591,10 +420,22 @@
 * **name**: string
 * **vhd**: VirtualHardDisk
 
+## VirtualHardDisk
+### Properties
+* **uri**: string
+
 ## ManagedDiskParameters
 ### Properties
 * **id**: string
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS'
+
+## ImageReference
+### Properties
+* **id**: string
+* **offer**: string
+* **publisher**: string
+* **sku**: string
+* **version**: string
 
 ## OSDisk
 ### Properties
@@ -638,6 +479,165 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## VirtualMachineScaleSetIdentity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'SystemAssigned'
+
+## VirtualMachineScaleSetProperties
+### Properties
+* **overprovision**: bool
+* **provisioningState**: string (ReadOnly)
+* **singlePlacementGroup**: bool
+* **uniqueId**: string (ReadOnly)
+* **upgradePolicy**: UpgradePolicy
+* **virtualMachineProfile**: VirtualMachineScaleSetVMProfile
+
+## UpgradePolicy
+### Properties
+* **automaticOSUpgrade**: bool
+* **mode**: 'Automatic' | 'Manual' | 'Rolling'
+* **rollingUpgradePolicy**: RollingUpgradePolicy
+
+## RollingUpgradePolicy
+### Properties
+* **maxBatchInstancePercent**: int
+* **maxUnhealthyInstancePercent**: int
+* **maxUnhealthyUpgradedInstancePercent**: int
+* **pauseTimeBetweenBatches**: string
+
+## VirtualMachineScaleSetVMProfile
+### Properties
+* **diagnosticsProfile**: DiagnosticsProfile
+* **extensionProfile**: VirtualMachineScaleSetExtensionProfile
+* **licenseType**: string
+* **networkProfile**: VirtualMachineScaleSetNetworkProfile
+* **osProfile**: VirtualMachineScaleSetOSProfile
+* **storageProfile**: VirtualMachineScaleSetStorageProfile
+
+## VirtualMachineScaleSetExtensionProfile
+### Properties
+* **extensions**: VirtualMachineScaleSetExtension[]
+
+## VirtualMachineScaleSetExtension
+### Properties
+* **id**: string (ReadOnly)
+* **name**: string
+* **properties**: VirtualMachineScaleSetExtensionProperties
+
+## VirtualMachineScaleSetExtensionProperties
+### Properties
+* **autoUpgradeMinorVersion**: bool
+* **forceUpdateTag**: string
+* **protectedSettings**: any
+* **provisioningState**: string (ReadOnly)
+* **publisher**: string
+* **settings**: any
+* **type**: string
+* **typeHandlerVersion**: string
+
+## VirtualMachineScaleSetNetworkProfile
+### Properties
+* **healthProbe**: ApiEntityReference
+* **networkInterfaceConfigurations**: VirtualMachineScaleSetNetworkConfiguration[]
+
+## ApiEntityReference
+### Properties
+* **id**: string
+
+## VirtualMachineScaleSetNetworkConfiguration
+### Properties
+* **id**: string
+* **name**: string (Required)
+* **properties**: VirtualMachineScaleSetNetworkConfigurationProperties
+
+## VirtualMachineScaleSetNetworkConfigurationProperties
+### Properties
+* **dnsSettings**: VirtualMachineScaleSetNetworkConfigurationDnsSettings
+* **enableAcceleratedNetworking**: bool
+* **ipConfigurations**: VirtualMachineScaleSetIPConfiguration[] (Required)
+* **networkSecurityGroup**: SubResource
+* **primary**: bool
+
+## VirtualMachineScaleSetNetworkConfigurationDnsSettings
+### Properties
+* **dnsServers**: string[]
+
+## VirtualMachineScaleSetIPConfiguration
+### Properties
+* **id**: string
+* **name**: string (Required)
+* **properties**: VirtualMachineScaleSetIPConfigurationProperties
+
+## VirtualMachineScaleSetIPConfigurationProperties
+### Properties
+* **applicationGatewayBackendAddressPools**: SubResource[]
+* **loadBalancerBackendAddressPools**: SubResource[]
+* **loadBalancerInboundNatPools**: SubResource[]
+* **primary**: bool
+* **privateIPAddressVersion**: 'IPv4' | 'IPv6'
+* **publicIPAddressConfiguration**: VirtualMachineScaleSetPublicIPAddressConfiguration
+* **subnet**: ApiEntityReference
+
+## VirtualMachineScaleSetPublicIPAddressConfiguration
+### Properties
+* **name**: string (Required)
+* **properties**: VirtualMachineScaleSetPublicIPAddressConfigurationProperties
+
+## VirtualMachineScaleSetPublicIPAddressConfigurationProperties
+### Properties
+* **dnsSettings**: VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
+* **idleTimeoutInMinutes**: int
+
+## VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
+### Properties
+* **domainNameLabel**: string (Required)
+
+## VirtualMachineScaleSetOSProfile
+### Properties
+* **adminPassword**: string
+* **adminUsername**: string
+* **computerNamePrefix**: string
+* **customData**: string
+* **linuxConfiguration**: LinuxConfiguration
+* **secrets**: VaultSecretGroup[]
+* **windowsConfiguration**: WindowsConfiguration
+
+## VirtualMachineScaleSetStorageProfile
+### Properties
+* **dataDisks**: VirtualMachineScaleSetDataDisk[]
+* **imageReference**: ImageReference
+* **osDisk**: VirtualMachineScaleSetOSDisk
+
+## VirtualMachineScaleSetDataDisk
+### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
+* **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
+* **diskSizeGB**: int
+* **lun**: int (Required)
+* **managedDisk**: VirtualMachineScaleSetManagedDiskParameters
+* **name**: string
+
+## VirtualMachineScaleSetManagedDiskParameters
+### Properties
+* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS'
+
+## VirtualMachineScaleSetOSDisk
+### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
+* **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
+* **image**: VirtualHardDisk
+* **managedDisk**: VirtualMachineScaleSetManagedDiskParameters
+* **name**: string
+* **osType**: 'Linux' | 'Windows'
+* **vhdContainers**: string[]
 
 ## ResourceTags
 ### Properties

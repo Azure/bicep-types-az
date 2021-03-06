@@ -95,7 +95,7 @@
 ### ServerPropertiesForDefaultCreate
 #### Properties
 * **administratorLogin**: string (Required, WriteOnly)
-* **administratorLoginPassword**: any (Required, WriteOnly)
+* **administratorLoginPassword**: string (Required, WriteOnly)
 * **createMode**: 'Default' (Required)
 
 ### ServerPropertiesForGeoRestore
@@ -146,7 +146,7 @@
 ## ServerPropertiesForDefaultCreate
 ### Properties
 * **administratorLogin**: string (Required, WriteOnly)
-* **administratorLoginPassword**: any (Required, WriteOnly)
+* **administratorLoginPassword**: string (Required, WriteOnly)
 * **createMode**: 'Default' (Required)
 
 ## ServerPropertiesForGeoRestore

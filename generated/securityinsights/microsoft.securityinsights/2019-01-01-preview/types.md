@@ -145,10 +145,10 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **etag**: string (WriteOnly)
+* **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WatchlistItemProperties (WriteOnly)
+* **properties**: WatchlistItemProperties
 * **type**: 'Microsoft.SecurityInsights/watchlists/watchlistItems' (ReadOnly, DeployTimeConstant)
 
 ## ActionRequestProperties
@@ -368,7 +368,7 @@
 * **contentType**: string
 * **created**: string
 * **createdBy**: UserInfo
-* **defaultDuration**: any
+* **defaultDuration**: string
 * **description**: string
 * **displayName**: string (Required)
 * **isDeleted**: bool
@@ -388,14 +388,14 @@
 
 ## WatchlistItemProperties
 ### Properties
-* **created**: string (WriteOnly)
-* **createdBy**: UserInfo (WriteOnly)
-* **entityMapping**: any (WriteOnly)
-* **isDeleted**: bool (WriteOnly)
-* **itemsKeyValue**: any (Required, WriteOnly)
-* **tenantId**: string (WriteOnly)
-* **updated**: string (WriteOnly)
-* **updatedBy**: UserInfo (WriteOnly)
-* **watchlistItemId**: string (WriteOnly)
-* **watchlistItemType**: string (WriteOnly)
+* **created**: string
+* **createdBy**: UserInfo
+* **entityMapping**: any
+* **isDeleted**: bool
+* **itemsKeyValue**: any (Required)
+* **tenantId**: string
+* **updated**: string
+* **updatedBy**: UserInfo
+* **watchlistItemId**: string
+* **watchlistItemType**: string
 

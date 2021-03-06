@@ -627,15 +627,15 @@
 
 ## LoggerSamplingProperties
 ### Properties
-* **evaluationInterval**: any
+* **evaluationInterval**: string
 * **initialPercentage**: int
 * **maxPercentage**: int
 * **maxTelemetryItemsPerSecond**: int
 * **minPercentage**: int
 * **movingAverageRatio**: int
 * **percentage**: int
-* **percentageDecreaseTimeout**: any
-* **percentageIncreaseTimeout**: any
+* **percentageDecreaseTimeout**: string
+* **percentageIncreaseTimeout**: string
 * **samplingType**: 'adaptive' | 'fixed'
 
 ## OpenidConnectProviderContractProperties

@@ -170,11 +170,11 @@
 ## ReadOnlyFollowingDatabaseProperties
 ### Properties
 * **attachedDatabaseConfigurationName**: string (ReadOnly)
-* **hotCachePeriod**: any
+* **hotCachePeriod**: string
 * **leaderClusterResourceId**: string (ReadOnly)
 * **principalsModificationKind**: 'None' | 'Replace' | 'Union' (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
-* **softDeletePeriod**: any (ReadOnly)
+* **softDeletePeriod**: string (ReadOnly)
 * **statistics**: DatabaseStatistics (ReadOnly)
 
 ## DatabaseStatistics
@@ -188,10 +188,10 @@
 
 ## ReadWriteDatabaseProperties
 ### Properties
-* **hotCachePeriod**: any
+* **hotCachePeriod**: string
 * **isFollowed**: string (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
-* **softDeletePeriod**: any
+* **softDeletePeriod**: string
 * **statistics**: DatabaseStatistics (ReadOnly)
 
 ## EventGridDataConnection

@@ -14,20 +14,6 @@
 * **tags**: ResourceTags
 * **type**: 'Microsoft.BotService/botServices' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.BotService/botServices/Connections@2017-12-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk'
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectionSettingProperties
-* **sku**: Sku
-* **tags**: ResourceTags
-* **type**: 'Microsoft.BotService/botServices/Connections' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.BotService/botServices/channels@2017-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -41,6 +27,20 @@
 * **sku**: Sku
 * **tags**: ResourceTags
 * **type**: 'Microsoft.BotService/botServices/channels' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.BotService/botServices/Connections@2017-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk'
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConnectionSettingProperties
+* **sku**: Sku
+* **tags**: ResourceTags
+* **type**: 'Microsoft.BotService/botServices/Connections' (ReadOnly, DeployTimeConstant)
 
 ## BotProperties
 ### Properties
@@ -62,26 +62,6 @@
 ### Properties
 * **name**: 'F0' | 'S1' (Required)
 * **tier**: 'Free' | 'Standard' (ReadOnly)
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ConnectionSettingProperties
-### Properties
-* **clientId**: string
-* **clientSecret**: string
-* **parameters**: ConnectionSettingParameter[]
-* **scopes**: string
-* **serviceProviderDisplayName**: string
-* **serviceProviderId**: string
-* **settingId**: string (ReadOnly)
-
-## ConnectionSettingParameter
-### Properties
-* **key**: string
-* **value**: string
 
 ## ResourceTags
 ### Properties
@@ -294,6 +274,26 @@
 * **key2**: string (ReadOnly)
 * **siteId**: string (ReadOnly)
 * **siteName**: string (Required)
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ConnectionSettingProperties
+### Properties
+* **clientId**: string
+* **clientSecret**: string
+* **parameters**: ConnectionSettingParameter[]
+* **scopes**: string
+* **serviceProviderDisplayName**: string
+* **serviceProviderId**: string
+* **settingId**: string (ReadOnly)
+
+## ConnectionSettingParameter
+### Properties
+* **key**: string
+* **value**: string
 
 ## ResourceTags
 ### Properties

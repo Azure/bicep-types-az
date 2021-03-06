@@ -28,9 +28,9 @@
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly, WriteOnly)
+* **location**: string (ReadOnly)
 * **name**: 'add' | 'remove' | 'replace' (Required, DeployTimeConstant)
-* **properties**: VaultAccessPolicyProperties (Required, WriteOnly)
+* **properties**: VaultAccessPolicyProperties (Required)
 * **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.KeyVault/vaults/privateEndpointConnections@2020-04-01-preview
@@ -159,7 +159,7 @@
 
 ## VaultAccessPolicyProperties
 ### Properties
-* **accessPolicies**: AccessPolicyEntry[] (Required, WriteOnly)
+* **accessPolicies**: AccessPolicyEntry[] (Required)
 
 ## ResourceTags
 ### Properties

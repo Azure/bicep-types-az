@@ -65,7 +65,7 @@
 #### Properties
 * **failedLocationCount**: int (Required)
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition' (Required)
-* **windowSize**: any
+* **windowSize**: string
 
 ### ManagementEventRuleCondition
 #### Properties
@@ -78,7 +78,7 @@
 * **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required)
 * **threshold**: int (Required)
 * **timeAggregation**: 'Average' | 'Last' | 'Maximum' | 'Minimum' | 'Total'
-* **windowSize**: any
+* **windowSize**: string
 
 
 ## RuleDataSource
@@ -134,7 +134,7 @@
 ### Properties
 * **failedLocationCount**: int (Required)
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition' (Required)
-* **windowSize**: any
+* **windowSize**: string
 
 ## ManagementEventRuleCondition
 ### Properties
@@ -145,7 +145,7 @@
 ### Properties
 * **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual'
 * **threshold**: int
-* **windowSize**: any
+* **windowSize**: string
 
 ## ThresholdRuleCondition
 ### Properties
@@ -153,7 +153,7 @@
 * **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required)
 * **threshold**: int (Required)
 * **timeAggregation**: 'Average' | 'Last' | 'Maximum' | 'Minimum' | 'Total'
-* **windowSize**: any
+* **windowSize**: string
 
 ## ResourceTags
 ### Properties

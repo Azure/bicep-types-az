@@ -269,7 +269,7 @@
 
 ## JobBasePropertiesConstraints
 ### Properties
-* **maxWallClockTime**: any
+* **maxWallClockTime**: string
 
 ## ContainerSettings
 ### Properties

@@ -18,7 +18,7 @@ WARNING: Skipping resource type microsoft.portal/locations/usersettings under pa
 WARNING: Skipping resource type microsoft.portal/locations/consoles under path '/providers/Microsoft.Portal/locations/{location}/consoles/{consoleName}': Unable to locate parameter with name 'consoleName'
 WARNING: Skipping resource type microsoft.portal/usersettings under path '/providers/Microsoft.Portal/userSettings/{userSettingsName}': Unable to locate parameter with name 'userSettingsName'
 WARNING: Skipping resource type microsoft.portal/consoles under path '/providers/Microsoft.Portal/consoles/{consoleName}': Unable to locate parameter with name 'consoleName'
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-portal-2018-10-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -32,4 +32,4 @@ WARNING: Skipping resource type microsoft.portal/locations/consoles under path '
 WARNING: Skipping resource type microsoft.portal/usersettings under path '/providers/Microsoft.Portal/userSettings/{userSettingsName}': Unable to locate parameter with name 'userSettingsName'
 WARNING: Skipping resource type microsoft.portal/consoles under path '/providers/Microsoft.Portal/consoles/{consoleName}': Unable to locate parameter with name 'consoleName'
 INFORMATION: Autorest.AzureResourceSchema took 1ms
-[5.3 s] Generation Complete
+[6.23 s] Generation Complete

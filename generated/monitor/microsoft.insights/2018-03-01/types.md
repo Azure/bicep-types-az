@@ -1,16 +1,5 @@
 # Microsoft.Insights @ 2018-03-01
 
-## Resource Microsoft.Insights/metricAlerts@2018-03-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: MetricAlertProperties (Required)
-* **tags**: ResourceTags
-* **type**: 'Microsoft.Insights/metricAlerts' (ReadOnly, DeployTimeConstant)
-
 ## Resource microsoft.insights/actionGroups@2018-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -22,6 +11,95 @@
 * **tags**: ResourceTags
 * **type**: 'microsoft.insights/actionGroups' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Insights/metricAlerts@2018-03-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: MetricAlertProperties (Required)
+* **tags**: ResourceTags
+* **type**: 'Microsoft.Insights/metricAlerts' (ReadOnly, DeployTimeConstant)
+
+## ActionGroup
+### Properties
+* **automationRunbookReceivers**: AutomationRunbookReceiver[]
+* **azureAppPushReceivers**: AzureAppPushReceiver[]
+* **azureFunctionReceivers**: AzureFunctionReceiver[]
+* **emailReceivers**: EmailReceiver[]
+* **enabled**: bool (Required)
+* **groupShortName**: string (Required)
+* **itsmReceivers**: ItsmReceiver[]
+* **logicAppReceivers**: LogicAppReceiver[]
+* **smsReceivers**: SmsReceiver[]
+* **voiceReceivers**: VoiceReceiver[]
+* **webhookReceivers**: WebhookReceiver[]
+
+## AutomationRunbookReceiver
+### Properties
+* **automationAccountId**: string (Required)
+* **isGlobalRunbook**: bool (Required)
+* **name**: string
+* **runbookName**: string (Required)
+* **serviceUri**: string
+* **webhookResourceId**: string (Required)
+
+## AzureAppPushReceiver
+### Properties
+* **emailAddress**: string (Required)
+* **name**: string (Required)
+
+## AzureFunctionReceiver
+### Properties
+* **functionAppResourceId**: string (Required)
+* **functionName**: string (Required)
+* **httpTriggerUrl**: string (Required)
+* **name**: string (Required)
+
+## EmailReceiver
+### Properties
+* **emailAddress**: string (Required)
+* **name**: string (Required)
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly)
+
+## ItsmReceiver
+### Properties
+* **connectionId**: string (Required)
+* **name**: string (Required)
+* **region**: string (Required)
+* **ticketConfiguration**: string (Required)
+* **workspaceId**: string (Required)
+
+## LogicAppReceiver
+### Properties
+* **callbackUrl**: string (Required)
+* **name**: string (Required)
+* **resourceId**: string (Required)
+
+## SmsReceiver
+### Properties
+* **countryCode**: string (Required)
+* **name**: string (Required)
+* **phoneNumber**: string (Required)
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly)
+
+## VoiceReceiver
+### Properties
+* **countryCode**: string (Required)
+* **name**: string (Required)
+* **phoneNumber**: string (Required)
+
+## WebhookReceiver
+### Properties
+* **name**: string (Required)
+* **serviceUri**: string (Required)
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## MetricAlertProperties
 ### Properties
 * **actions**: MetricAlertAction[]
@@ -29,14 +107,14 @@
 * **criteria**: MetricAlertCriteria (Required)
 * **description**: string
 * **enabled**: bool (Required)
-* **evaluationFrequency**: any (Required)
+* **evaluationFrequency**: string (Required)
 * **isMigrated**: bool (ReadOnly)
 * **lastUpdatedTime**: string (ReadOnly)
 * **scopes**: string[] (Required)
 * **severity**: int (Required)
 * **targetResourceRegion**: string
 * **targetResourceType**: string
-* **windowSize**: any (Required)
+* **windowSize**: string (Required)
 
 ## MetricAlertAction
 ### Properties
@@ -136,84 +214,6 @@
 * **failedLocationCount**: int (Required)
 * **odata.type**: 'Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria' (Required)
 * **webTestId**: string (Required)
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ActionGroup
-### Properties
-* **automationRunbookReceivers**: AutomationRunbookReceiver[]
-* **azureAppPushReceivers**: AzureAppPushReceiver[]
-* **azureFunctionReceivers**: AzureFunctionReceiver[]
-* **emailReceivers**: EmailReceiver[]
-* **enabled**: bool (Required)
-* **groupShortName**: string (Required)
-* **itsmReceivers**: ItsmReceiver[]
-* **logicAppReceivers**: LogicAppReceiver[]
-* **smsReceivers**: SmsReceiver[]
-* **voiceReceivers**: VoiceReceiver[]
-* **webhookReceivers**: WebhookReceiver[]
-
-## AutomationRunbookReceiver
-### Properties
-* **automationAccountId**: string (Required)
-* **isGlobalRunbook**: bool (Required)
-* **name**: string
-* **runbookName**: string (Required)
-* **serviceUri**: string
-* **webhookResourceId**: string (Required)
-
-## AzureAppPushReceiver
-### Properties
-* **emailAddress**: string (Required)
-* **name**: string (Required)
-
-## AzureFunctionReceiver
-### Properties
-* **functionAppResourceId**: string (Required)
-* **functionName**: string (Required)
-* **httpTriggerUrl**: string (Required)
-* **name**: string (Required)
-
-## EmailReceiver
-### Properties
-* **emailAddress**: string (Required)
-* **name**: string (Required)
-* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly)
-
-## ItsmReceiver
-### Properties
-* **connectionId**: string (Required)
-* **name**: string (Required)
-* **region**: string (Required)
-* **ticketConfiguration**: string (Required)
-* **workspaceId**: string (Required)
-
-## LogicAppReceiver
-### Properties
-* **callbackUrl**: string (Required)
-* **name**: string (Required)
-* **resourceId**: string (Required)
-
-## SmsReceiver
-### Properties
-* **countryCode**: string (Required)
-* **name**: string (Required)
-* **phoneNumber**: string (Required)
-* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly)
-
-## VoiceReceiver
-### Properties
-* **countryCode**: string (Required)
-* **name**: string (Required)
-* **phoneNumber**: string (Required)
-
-## WebhookReceiver
-### Properties
-* **name**: string (Required)
-* **serviceUri**: string (Required)
 
 ## ResourceTags
 ### Properties

@@ -17,7 +17,7 @@
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MAMPolicyAppOrGroupIdProperties (WriteOnly)
+* **properties**: MAMPolicyAppOrGroupIdProperties
 * **type**: 'Microsoft.Intune/locations/androidPolicies/apps' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Intune/locations/androidPolicies/groups@2015-01-14-preview
@@ -26,7 +26,7 @@
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MAMPolicyAppOrGroupIdProperties (WriteOnly)
+* **properties**: MAMPolicyAppOrGroupIdProperties
 * **type**: 'Microsoft.Intune/locations/androidPolicies/groups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Intune/locations/iosPolicies@2015-01-14-preview
@@ -46,7 +46,7 @@
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MAMPolicyAppOrGroupIdProperties (WriteOnly)
+* **properties**: MAMPolicyAppOrGroupIdProperties
 * **type**: 'Microsoft.Intune/locations/iosPolicies/apps' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Intune/locations/iosPolicies/groups@2015-01-14-preview
@@ -55,13 +55,13 @@
 * **apiVersion**: '2015-01-14-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MAMPolicyAppOrGroupIdProperties (WriteOnly)
+* **properties**: MAMPolicyAppOrGroupIdProperties
 * **type**: 'Microsoft.Intune/locations/iosPolicies/groups' (ReadOnly, DeployTimeConstant)
 
 ## AndroidMAMPolicyProperties
 ### Properties
-* **accessRecheckOfflineTimeout**: any
-* **accessRecheckOnlineTimeout**: any
+* **accessRecheckOfflineTimeout**: string
+* **accessRecheckOnlineTimeout**: string
 * **appSharingFromLevel**: 'allApps' | 'none' | 'policyManagedApps'
 * **appSharingToLevel**: 'allApps' | 'none' | 'policyManagedApps'
 * **authentication**: 'notRequired' | 'required'
@@ -76,7 +76,7 @@
 * **lastModifiedTime**: string (ReadOnly)
 * **managedBrowser**: 'notRequired' | 'required'
 * **numOfApps**: int (ReadOnly)
-* **offlineWipeTimeout**: any
+* **offlineWipeTimeout**: string
 * **pin**: 'notRequired' | 'required'
 * **pinNumRetry**: int
 * **screenCapture**: 'allow' | 'block'
@@ -88,12 +88,12 @@
 
 ## MAMPolicyAppOrGroupIdProperties
 ### Properties
-* **url**: string (Required, WriteOnly)
+* **url**: string (Required)
 
 ## IOsmamPolicyProperties
 ### Properties
-* **accessRecheckOfflineTimeout**: any
-* **accessRecheckOnlineTimeout**: any
+* **accessRecheckOfflineTimeout**: string
+* **accessRecheckOnlineTimeout**: string
 * **appSharingFromLevel**: 'allApps' | 'none' | 'policyManagedApps'
 * **appSharingToLevel**: 'allApps' | 'none' | 'policyManagedApps'
 * **authentication**: 'notRequired' | 'required'
@@ -108,7 +108,7 @@
 * **lastModifiedTime**: string (ReadOnly)
 * **managedBrowser**: 'notRequired' | 'required'
 * **numOfApps**: int (ReadOnly)
-* **offlineWipeTimeout**: any
+* **offlineWipeTimeout**: string
 * **pin**: 'notRequired' | 'required'
 * **pinNumRetry**: int
 * **touchId**: 'disable' | 'enable'

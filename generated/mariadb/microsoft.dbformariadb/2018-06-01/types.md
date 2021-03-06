@@ -39,15 +39,6 @@
 * **properties**: FirewallRuleProperties (Required)
 * **type**: 'Microsoft.DBForMariaDB/servers/firewallRules' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.DBForMariaDB/servers/virtualNetworkRules@2018-06-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkRuleProperties
-* **type**: 'Microsoft.DBForMariaDB/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.DBforMariaDB/servers/privateEndpointConnections@2018-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -65,6 +56,15 @@
 * **name**: 'Default' (Required, DeployTimeConstant)
 * **properties**: SecurityAlertPolicyProperties
 * **type**: 'Microsoft.DBforMariaDB/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DBForMariaDB/servers/virtualNetworkRules@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualNetworkRuleProperties
+* **type**: 'Microsoft.DBForMariaDB/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
 
 ## ServerPropertiesForCreate
 * **Discriminator**: createMode
@@ -85,7 +85,7 @@
 ### ServerPropertiesForDefaultCreate
 #### Properties
 * **administratorLogin**: string (Required, WriteOnly)
-* **administratorLoginPassword**: any (Required, WriteOnly)
+* **administratorLoginPassword**: string (Required, WriteOnly)
 * **createMode**: 'Default' (Required)
 
 ### ServerPropertiesForGeoRestore
@@ -136,7 +136,7 @@
 ## ServerPropertiesForDefaultCreate
 ### Properties
 * **administratorLogin**: string (Required, WriteOnly)
-* **administratorLoginPassword**: any (Required, WriteOnly)
+* **administratorLoginPassword**: string (Required, WriteOnly)
 * **createMode**: 'Default' (Required)
 
 ## ServerPropertiesForGeoRestore
@@ -187,12 +187,6 @@
 * **endIpAddress**: string (Required)
 * **startIpAddress**: string (Required)
 
-## VirtualNetworkRuleProperties
-### Properties
-* **ignoreMissingVnetServiceEndpoint**: bool
-* **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly)
-* **virtualNetworkSubnetId**: string (Required)
-
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **privateEndpoint**: PrivateEndpointProperty
@@ -214,4 +208,10 @@
 * **state**: 'Disabled' | 'Enabled' (Required)
 * **storageAccountAccessKey**: string
 * **storageEndpoint**: string
+
+## VirtualNetworkRuleProperties
+### Properties
+* **ignoreMissingVnetServiceEndpoint**: bool
+* **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly)
+* **virtualNetworkSubnetId**: string (Required)
 

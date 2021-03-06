@@ -21,14 +21,14 @@
 * **description**: string
 * **displayName**: string
 * **enabled**: bool
-* **evaluationFrequency**: any
+* **evaluationFrequency**: string
 * **isLegacyLogAnalyticsRule**: bool (ReadOnly)
-* **muteActionsDuration**: any
-* **overrideQueryTimeRange**: any
+* **muteActionsDuration**: string
+* **overrideQueryTimeRange**: string
 * **scopes**: string[]
-* **severity**: '0' | '1' | '2' | '3' | '4'
+* **severity**: int
 * **targetResourceTypes**: string[]
-* **windowSize**: any
+* **windowSize**: string
 
 ## Action
 ### Properties

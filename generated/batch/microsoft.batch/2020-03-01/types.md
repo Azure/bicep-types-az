@@ -341,7 +341,7 @@
 ### Properties
 * **errors**: ResizeError[]
 * **nodeDeallocationOption**: 'Requeue' | 'RetainedData' | 'TaskCompletion' | 'Terminate'
-* **resizeTimeout**: any
+* **resizeTimeout**: string
 * **startTime**: string
 * **targetDedicatedNodes**: int
 * **targetLowPriorityNodes**: int
@@ -359,13 +359,13 @@
 
 ## AutoScaleSettings
 ### Properties
-* **evaluationInterval**: any
+* **evaluationInterval**: string
 * **formula**: string (Required)
 
 ## FixedScaleSettings
 ### Properties
 * **nodeDeallocationOption**: 'Requeue' | 'RetainedData' | 'TaskCompletion' | 'Terminate'
-* **resizeTimeout**: any
+* **resizeTimeout**: string
 * **targetDedicatedNodes**: int
 * **targetLowPriorityNodes**: int
 

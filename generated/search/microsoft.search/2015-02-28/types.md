@@ -5,21 +5,21 @@
 ### Properties
 * **apiVersion**: '2015-02-28' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (WriteOnly)
+* **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SearchServiceProperties (WriteOnly)
-* **tags**: SearchServiceCreateOrUpdateParametersTags (WriteOnly)
+* **properties**: SearchServiceProperties
+* **tags**: SearchServiceCreateOrUpdateParametersTags
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant)
 
 ## SearchServiceProperties
 ### Properties
-* **partitionCount**: int (WriteOnly)
-* **replicaCount**: int (WriteOnly)
-* **sku**: Sku (WriteOnly)
+* **partitionCount**: int
+* **replicaCount**: int
+* **sku**: Sku
 
 ## Sku
 ### Properties
-* **name**: 'free' | 'standard' | 'standard2' (WriteOnly)
+* **name**: 'free' | 'standard' | 'standard2'
 
 ## SearchServiceCreateOrUpdateParametersTags
 ### Properties

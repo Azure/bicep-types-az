@@ -14,41 +14,6 @@
 * **tags**: ResourceTags
 * **type**: 'Microsoft.ServiceFabric/managedClusters' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.ServiceFabric/managedClusters/nodeTypes@2021-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: NodeTypeProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: ManagedProxyResourceTags
-* **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.ServiceFabric/managedclusters/applicationTypes@2021-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationTypeResourceProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: ProxyResourceTags
-* **type**: 'Microsoft.ServiceFabric/managedclusters/applicationTypes' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.ServiceFabric/managedclusters/applicationTypes/versions@2021-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationTypeVersionResourceProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: ProxyResourceTags
-* **type**: 'Microsoft.ServiceFabric/managedclusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.ServiceFabric/managedclusters/applications@2021-01-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -74,10 +39,45 @@
 * **tags**: ProxyResourceTags
 * **type**: 'Microsoft.ServiceFabric/managedclusters/applications/services' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.ServiceFabric/managedclusters/applicationTypes@2021-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationTypeResourceProperties
+* **systemData**: SystemData (ReadOnly)
+* **tags**: ProxyResourceTags
+* **type**: 'Microsoft.ServiceFabric/managedclusters/applicationTypes' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceFabric/managedclusters/applicationTypes/versions@2021-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationTypeVersionResourceProperties
+* **systemData**: SystemData (ReadOnly)
+* **tags**: ProxyResourceTags
+* **type**: 'Microsoft.ServiceFabric/managedclusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceFabric/managedClusters/nodeTypes@2021-01-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: NodeTypeProperties
+* **systemData**: SystemData (ReadOnly)
+* **tags**: ManagedProxyResourceTags
+* **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant)
+
 ## ManagedClusterProperties
 ### Properties
 * **addonFeatures**: 'BackupRestoreService' | 'DnsService' | 'ResourceMonitorService'[]
-* **adminPassword**: any
+* **adminPassword**: string
 * **adminUserName**: string (Required)
 * **allowRdpAccess**: bool
 * **applicationTypeVersionsCleanupPolicy**: ApplicationTypeVersionsCleanupPolicy
@@ -160,99 +160,6 @@
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
 ## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## NodeTypeProperties
-### Properties
-* **applicationPorts**: EndpointRangeDescription
-* **capacities**: NodeTypePropertiesCapacities
-* **dataDiskSizeGB**: int (Required)
-* **ephemeralPorts**: EndpointRangeDescription
-* **isPrimary**: bool (Required)
-* **placementProperties**: NodeTypePropertiesPlacementProperties
-* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly)
-* **vmExtensions**: VmssExtension[]
-* **vmImageOffer**: string
-* **vmImagePublisher**: string
-* **vmImageSku**: string
-* **vmImageVersion**: string
-* **vmInstanceCount**: int (Required)
-* **vmManagedIdentity**: VmManagedIdentity
-* **vmSecrets**: VaultSecretGroup[]
-* **vmSize**: string
-
-## EndpointRangeDescription
-### Properties
-* **endPort**: int (Required)
-* **startPort**: int (Required)
-
-## NodeTypePropertiesCapacities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## NodeTypePropertiesPlacementProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## VmssExtension
-### Properties
-* **name**: string (Required)
-* **properties**: VmssExtensionProperties (Required)
-
-## VmssExtensionProperties
-### Properties
-* **autoUpgradeMinorVersion**: bool
-* **forceUpdateTag**: string
-* **protectedSettings**: any
-* **provisionAfterExtensions**: string[]
-* **provisioningState**: string (ReadOnly)
-* **publisher**: string (Required)
-* **settings**: any
-* **type**: string (Required)
-* **typeHandlerVersion**: string (Required)
-
-## VmManagedIdentity
-### Properties
-* **userAssignedIdentities**: string[]
-
-## VaultSecretGroup
-### Properties
-* **sourceVault**: SubResource (Required)
-* **vaultCertificates**: VaultCertificate[] (Required)
-
-## SubResource
-### Properties
-* **id**: string
-
-## VaultCertificate
-### Properties
-* **certificateStore**: string (Required)
-* **certificateUrl**: string (Required)
-
-## ManagedProxyResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ApplicationTypeResourceProperties
-### Properties
-* **provisioningState**: string (ReadOnly)
-
-## ProxyResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ApplicationTypeVersionResourceProperties
-### Properties
-* **appPackageUrl**: string (Required)
-* **provisioningState**: string (ReadOnly)
-
-## ProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -569,6 +476,99 @@
 * **serviceKind**: 'Stateless' (Required)
 
 ## ProxyResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ApplicationTypeResourceProperties
+### Properties
+* **provisioningState**: string (ReadOnly)
+
+## ProxyResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ApplicationTypeVersionResourceProperties
+### Properties
+* **appPackageUrl**: string (Required)
+* **provisioningState**: string (ReadOnly)
+
+## ProxyResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## NodeTypeProperties
+### Properties
+* **applicationPorts**: EndpointRangeDescription
+* **capacities**: NodeTypePropertiesCapacities
+* **dataDiskSizeGB**: int (Required)
+* **ephemeralPorts**: EndpointRangeDescription
+* **isPrimary**: bool (Required)
+* **placementProperties**: NodeTypePropertiesPlacementProperties
+* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly)
+* **vmExtensions**: VmssExtension[]
+* **vmImageOffer**: string
+* **vmImagePublisher**: string
+* **vmImageSku**: string
+* **vmImageVersion**: string
+* **vmInstanceCount**: int (Required)
+* **vmManagedIdentity**: VmManagedIdentity
+* **vmSecrets**: VaultSecretGroup[]
+* **vmSize**: string
+
+## EndpointRangeDescription
+### Properties
+* **endPort**: int (Required)
+* **startPort**: int (Required)
+
+## NodeTypePropertiesCapacities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## NodeTypePropertiesPlacementProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## VmssExtension
+### Properties
+* **name**: string (Required)
+* **properties**: VmssExtensionProperties (Required)
+
+## VmssExtensionProperties
+### Properties
+* **autoUpgradeMinorVersion**: bool
+* **forceUpdateTag**: string
+* **protectedSettings**: any
+* **provisionAfterExtensions**: string[]
+* **provisioningState**: string (ReadOnly)
+* **publisher**: string (Required)
+* **settings**: any
+* **type**: string (Required)
+* **typeHandlerVersion**: string (Required)
+
+## VmManagedIdentity
+### Properties
+* **userAssignedIdentities**: string[]
+
+## VaultSecretGroup
+### Properties
+* **sourceVault**: SubResource (Required)
+* **vaultCertificates**: VaultCertificate[] (Required)
+
+## SubResource
+### Properties
+* **id**: string
+
+## VaultCertificate
+### Properties
+* **certificateStore**: string (Required)
+* **certificateUrl**: string (Required)
+
+## ManagedProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

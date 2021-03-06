@@ -14,7 +14,7 @@
 * **actionGroups**: ActionGroupsInformation (Required)
 * **description**: string
 * **detector**: Detector (Required)
-* **frequency**: any (Required)
+* **frequency**: string (Required)
 * **scope**: string[] (Required)
 * **severity**: 'Sev0' | 'Sev1' | 'Sev2' | 'Sev3' | 'Sev4' (Required)
 * **state**: 'Disabled' | 'Enabled' (Required)
@@ -42,5 +42,5 @@
 
 ## ThrottlingInformation
 ### Properties
-* **duration**: any
+* **duration**: string
 

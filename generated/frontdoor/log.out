@@ -55,7 +55,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleDefinition' with an
 WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleExclusion' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 7ms
+INFORMATION: Autorest.AzureResourceSchema took 9ms
 Processing batch task - {"tag":"schema-network-2020-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -131,8 +131,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined
 WARNING (PreCheck/SchemaMissingType): The schema 'TagsObject' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 7ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-network-2020-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -240,8 +239,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'RulesEngineProperties' with an
 WARNING (PreCheck/SchemaMissingType): The schema 'RulesEngineRule' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 7ms
+INFORMATION: Autorest.AzureResourceSchema took 9ms
 Processing batch task - {"tag":"schema-network-2020-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -317,8 +315,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'RulesEngineProperties' with an
 WARNING (PreCheck/SchemaMissingType): The schema 'RulesEngineRule' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 9ms
 Processing batch task - {"tag":"schema-network-2019-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -358,7 +355,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'Profile' has a property
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'Experiment' has a property 'name' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Experiment
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PreconfiguredEndpoint' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from PreconfiguredEndpoint
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-network-2019-10-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -398,7 +395,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleExclusion' with an 
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-network-2019-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -460,7 +457,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined
 WARNING (PreCheck/SchemaMissingType): The schema 'TagsObject' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-network-2019-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -560,7 +557,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleDefinition' with an
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 1ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-network-2019-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -598,7 +595,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleDefinition' with an
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 1ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-network-2018-08-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -676,7 +673,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named WebApplicationFirewallPolicy -- properties: {"properties":{"x-ms-client-flatten":true,"description":"Properties of the web application firewall policy.","$ref":"#/components/schemas/schemas:143"},"etag":{"description":"Gets a unique read-only string that changes whenever the resource is updated.","$ref":"#/components/schemas/schemas:142"}} => <none>,allOf: [{"$ref":"#/components/schemas/schemas:127"}] => <none>,type: undefined => "string",title: undefined => "Resource status of the policy.",readOnly: undefined => true,enum: undefined => ["Creating","Enabling","Enabled","Disabling","Disabled","Deleting"],x-ms-enum: undefined => {"name":"WebApplicationFirewallPolicy","modelAsString":true} 
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named MatchCondition -- properties: {"matchVariable":{"description":"Match Variable","$ref":"#/components/schemas/MatchCondition"},"selector":{"description":"Name of selector in RequestHeader or RequestBody to be matched","$ref":"#/components/schemas/schemas:164"},"operator":{"description":"Describes operator to be matched","$ref":"#/components/schemas/operator"},"negateCondition":{"description":"Describes if this is negate condition or not","type":"boolean"},"matchValue":{"description":"Match value","$ref":"#/components/schemas/schemas:166"}} => <none>,required: ["matchVariable","operator","matchValue"] => <none>,type: undefined => "string",enum: undefined => ["RemoteAddr","RequestMethod","QueryString","PostArgs","RequestUri","RequestHeader","RequestBody"],x-ms-enum: undefined => {"name":"MatchCondition","modelAsString":true} 
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-network-2020-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -802,8 +799,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined
 WARNING (PreCheck/SchemaMissingType): The schema 'TagsObject' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-network-2020-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -911,8 +907,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'RulesEngineProperties' with an
 WARNING (PreCheck/SchemaMissingType): The schema 'RulesEngineRule' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 7ms
 Processing batch task - {"tag":"schema-network-2020-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -988,8 +983,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'RulesEngineProperties' with an
 WARNING (PreCheck/SchemaMissingType): The schema 'RulesEngineRule' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-network-2019-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1029,7 +1023,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'Profile' has a property
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'Experiment' has a property 'name' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Experiment
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PreconfiguredEndpoint' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from PreconfiguredEndpoint
-INFORMATION: Autorest.AzureResourceSchema took 1ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-network-2019-10-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1069,7 +1063,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleExclusion' with an 
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 1ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-network-2019-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1131,7 +1125,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined
 WARNING (PreCheck/SchemaMissingType): The schema 'TagsObject' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-network-2019-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1231,7 +1225,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleDefinition' with an
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-network-2019-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1347,5 +1341,5 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named WebApplicationFirewallPolicy -- properties: {"properties":{"x-ms-client-flatten":true,"description":"Properties of the web application firewall policy.","$ref":"#/components/schemas/schemas:143"},"etag":{"description":"Gets a unique read-only string that changes whenever the resource is updated.","$ref":"#/components/schemas/schemas:142"}} => <none>,allOf: [{"$ref":"#/components/schemas/schemas:127"}] => <none>,type: undefined => "string",title: undefined => "Resource status of the policy.",readOnly: undefined => true,enum: undefined => ["Creating","Enabling","Enabled","Disabling","Disabled","Deleting"],x-ms-enum: undefined => {"name":"WebApplicationFirewallPolicy","modelAsString":true} 
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named MatchCondition -- properties: {"matchVariable":{"description":"Match Variable","$ref":"#/components/schemas/MatchCondition"},"selector":{"description":"Name of selector in RequestHeader or RequestBody to be matched","$ref":"#/components/schemas/schemas:164"},"operator":{"description":"Describes operator to be matched","$ref":"#/components/schemas/operator"},"negateCondition":{"description":"Describes if this is negate condition or not","type":"boolean"},"matchValue":{"description":"Match value","$ref":"#/components/schemas/schemas:166"}} => <none>,required: ["matchVariable","operator","matchValue"] => <none>,type: undefined => "string",enum: undefined => ["RemoteAddr","RequestMethod","QueryString","PostArgs","RequestUri","RequestHeader","RequestBody"],x-ms-enum: undefined => {"name":"MatchCondition","modelAsString":true} 
-INFORMATION: Autorest.AzureResourceSchema took 3ms
-[51.69 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 4ms
+[63.91 s] Generation Complete

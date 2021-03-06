@@ -36,5 +36,5 @@
 * **category**: string
 * **enabled**: bool (Required)
 * **retentionPolicy**: RetentionPolicy
-* **timeGrain**: any
+* **timeGrain**: string
 

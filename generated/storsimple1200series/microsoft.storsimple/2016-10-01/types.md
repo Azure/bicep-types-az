@@ -25,10 +25,10 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
-* **contractVersion**: 'InvalidVersion' | 'V2011_09' | 'V2012_02' | 'V2012_05' | 'V2012_12' | 'V2013_04' | 'V2013_10' | 'V2013_11' | 'V2014_04' | 'V2014_06' | 'V2014_07' | 'V2014_09' | 'V2014_10' | 'V2014_12' | 'V2015_01' | 'V2015_02' | 'V2015_04' | 'V2015_05' | 'V2015_06' | 'V2015_07' | 'V2015_08' | 'V2015_10' | 'V2015_12' | 'V2016_01' | 'V2016_02' | 'V2016_04' | 'V2016_05' | 'V2016_07' | 'V2016_08' (ReadOnly, WriteOnly)
+* **contractVersion**: 'InvalidVersion' | 'V2011_09' | 'V2012_02' | 'V2012_05' | 'V2012_12' | 'V2013_04' | 'V2013_10' | 'V2013_11' | 'V2014_04' | 'V2014_06' | 'V2014_07' | 'V2014_09' | 'V2014_10' | 'V2014_12' | 'V2015_01' | 'V2015_02' | 'V2015_04' | 'V2015_05' | 'V2015_06' | 'V2015_07' | 'V2015_08' | 'V2015_10' | 'V2015_12' | 'V2016_01' | 'V2016_02' | 'V2016_04' | 'V2016_05' | 'V2016_07' | 'V2016_08' (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RawCertificateData (Required, WriteOnly)
+* **properties**: RawCertificateData (Required)
 * **type**: 'Microsoft.StorSimple/managers/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/devices/alertSettings@2016-10-01
@@ -147,8 +147,8 @@
 
 ## RawCertificateData
 ### Properties
-* **authType**: 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid' (WriteOnly)
-* **certificate**: string (Required, WriteOnly)
+* **authType**: 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid'
+* **certificate**: string (Required)
 
 ## AlertSettingsProperties
 ### Properties

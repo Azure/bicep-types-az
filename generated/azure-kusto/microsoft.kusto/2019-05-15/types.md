@@ -91,9 +91,9 @@
 
 ## DatabaseProperties
 ### Properties
-* **hotCachePeriod**: any
+* **hotCachePeriod**: string
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
-* **softDeletePeriod**: any
+* **softDeletePeriod**: string
 * **statistics**: DatabaseStatistics (ReadOnly)
 
 ## DatabaseStatistics
