@@ -11,9 +11,11 @@
                 "generate",
                 "--",
                 "--specs-dir",
-                "../../../azure-rest-api-specs"
+                "../../../azure-rest-api-specs",
+                "--wait-for-debugger"
             ],
-            "cwd": "${workspaceFolder}/src/generator"
+            "cwd": "${workspaceFolder}/src/generator",
+            "preLaunchTask": "build autorest.bicep"
         },
         {
             "name": "Generate Single",
@@ -27,9 +29,11 @@
                 "--specs-dir",
                 "../../../azure-rest-api-specs",
                 "--single-path",
-                "${input:pickSinglePath}"
+                "${input:pickSinglePath}",
+                "--wait-for-debugger"
             ],
-            "cwd": "${workspaceFolder}/src/generator"
+            "cwd": "${workspaceFolder}/src/generator",
+            "preLaunchTask": "build autorest.bicep"
         },
         {
             "type": "node",

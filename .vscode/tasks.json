@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "build",
+            "path": "src/autorest.bicep/",
+            "group": "build",
+            "problemMatcher": [],
+            "label": "build autorest.bicep",
+            "detail": "tsc -p ."
+        }
+    ]
+}

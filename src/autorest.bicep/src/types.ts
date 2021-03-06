@@ -200,7 +200,6 @@ export class ObjectProperty {
 export class TypeFactory {
   readonly types: TypeBase[];
   readonly builtInTypes: Record<BuiltInTypeKind, TypeReference>;
-  readonly namedDefinitions: Dictionary<TypeReference> = {};
 
   constructor() {
     this.types = [];

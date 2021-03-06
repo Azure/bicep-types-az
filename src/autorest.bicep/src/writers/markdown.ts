@@ -10,7 +10,7 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
       case TypeBaseKind.BuiltInType:
         return getBuiltInTypeKindLabel((type as BuiltInType).kind).toLowerCase();
       case TypeBaseKind.ObjectType:
-        return (type as ObjectType).name;
+        return generateAnchorLink((type as ObjectType).name);
       case TypeBaseKind.ArrayType:
         return `${getTypeName(types, (type as ArrayType).itemType)}[]`;
       case TypeBaseKind.ResourceType:
@@ -21,10 +21,16 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
       case TypeBaseKind.StringLiteralType:
         return `'${(type as StringLiteralType).value}'`;
       case TypeBaseKind.DiscriminatedObjectType:
-        return (type as DiscriminatedObjectType).name;
+        return generateAnchorLink((type as DiscriminatedObjectType).name);
       default:
         throw `Unrecognized type`;
     }
+  }
+
+  function generateAnchorLink(name: string) {
+    // TODO use this implementation once changes have been reviewed
+    // return `[${name}](#${name.replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()})`;
+    return name;
   }
 
   function writeTypeProperty(types: TypeBase[], name: string, property: ObjectProperty) {

@@ -2,10 +2,11 @@
 // Licensed under the MIT License.
 
 import { AutoRestExtension, Host, startSession } from "@autorest/extension-base";
-import { generateTypes } from "./generator";
+import { generateTypes } from "./type-generator";
 import { CodeModel, codeModelSchema } from "@autorest/codemodel";
 import { writeJson } from './writers/json';
 import { writeMarkdown } from "./writers/markdown";
+import { getProviderDefinitions } from "./resources";
 
 export async function processRequest(host: Host) {
   try {
@@ -16,14 +17,17 @@ export async function processRequest(host: Host) {
     );
     const start = Date.now();
 
-    for (const { provider, apiVersion, types } of generateTypes(session.model, host)) {
-      const outFolder = `${provider}/${apiVersion}`.toLowerCase();
+    for (const definition of getProviderDefinitions(session.model, host)) {
+      const { namespace, apiVersion } = definition;
+      const types = generateTypes(host, definition);
+
+      const outFolder = `${namespace}/${apiVersion}`.toLowerCase();
 
       // write types.json
       host.WriteFile(`${outFolder}/types.json`, writeJson(types));
 
       // writer types.md
-      host.WriteFile(`${outFolder}/types.md`, writeMarkdown(provider, apiVersion, types));
+      host.WriteFile(`${outFolder}/types.md`, writeMarkdown(namespace, apiVersion, types));
     }
 
     session.log(`Autorest.AzureResourceSchema took ${Date.now() - start}ms`, "");

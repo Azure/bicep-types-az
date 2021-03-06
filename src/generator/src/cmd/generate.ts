@@ -7,7 +7,7 @@ import { spawn } from 'child_process';
 import chalk from 'chalk';
 import stripAnsi from 'strip-ansi';
 import yargs from 'yargs';
-import { orderBy } from 'lodash';
+import { groupBy, keys, orderBy, sortBy } from 'lodash';
 import { TypeBaseKind } from '../types';
 
 interface ILogger {
@@ -218,6 +218,10 @@ async function buildTypeIndex(logger: ILogger, baseDir: string) {
   await writeFile(
     `${baseDir}/index.json`,
     JSON.stringify(indexContent, null, 0));
+
+  await writeFile(
+    `${baseDir}/index.md`,
+    generateIndexMarkdown(indexContent));
 }
 
 interface TypeIndex {
@@ -227,6 +231,32 @@ interface TypeIndex {
 interface TypeIndexEntry {
   relativePath: string;
   index: number;
+}
+
+function generateIndexMarkdown(index: TypeIndex) {
+  let markdown = '# Bicep Types\n';
+
+  const byProvider = groupBy(keys(index.types), x => x.split('/')[0].toLowerCase());
+  for (const namespace of sortBy(keys(byProvider), x => x.toLowerCase())) {
+    markdown += `## ${namespace}\n`;
+
+    const byResourceType = groupBy(byProvider[namespace], x => x.split('@')[0].toLowerCase());
+    for (const resourceType of sortBy(keys(byResourceType), x => x.toLowerCase())) {
+      markdown += `### ${resourceType}\n`;
+
+      for (const typeString of sortBy(byResourceType[resourceType], x => x.toLowerCase())) {
+        const version = typeString.split('@')[1];
+        const jsonPath = index.types[typeString].relativePath;
+        const anchor = `resource-${typeString.replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`
+
+        markdown += `* [${version}](${path.dirname(jsonPath)}/types.md#${anchor})\n`;
+      }
+
+      markdown += '\n';
+    }
+  }
+
+  return markdown;
 }
 
 async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> {
