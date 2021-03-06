@@ -73,7 +73,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Error' with an undefined type 
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorBody' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 10ms
+INFORMATION: Autorest.AzureResourceSchema took 12ms
 Processing batch task - {"tag":"schema-botservice-2018-07-12"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -139,7 +139,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'EnterpriseChannelProperties' w
 WARNING (PreCheck/SchemaMissingType): The schema 'EnterpriseChannelNode' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-botservice-2017-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -269,7 +269,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Error' with an undefined type 
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorBody' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 9ms
 Processing batch task - {"tag":"schema-botservice-2018-07-12"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -335,7 +335,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'EnterpriseChannelProperties' w
 WARNING (PreCheck/SchemaMissingType): The schema 'EnterpriseChannelNode' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 7ms
 Processing batch task - {"tag":"schema-botservice-2017-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -397,5 +397,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorBody' with an undefined t
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (?): Operation 'Bots/GetCheckNameAvailability' really should not have a media type (because there should be no body)
-INFORMATION: Autorest.AzureResourceSchema took 4ms
-[19.89 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 10ms
+[22.97 s] Generation Complete

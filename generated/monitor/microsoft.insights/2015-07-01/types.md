@@ -34,7 +34,7 @@
 ### Properties
 * **enabled**: bool (Required)
 * **retentionPolicy**: RetentionPolicy
-* **timeGrain**: any (Required)
+* **timeGrain**: string (Required)
 
 ## ResourceTags
 ### Properties

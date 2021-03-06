@@ -215,7 +215,7 @@
 
 ## JitSchedulingPolicy
 ### Properties
-* **duration**: any (Required)
+* **duration**: string (Required)
 * **startTime**: string (Required)
 * **type**: 'NotSpecified' | 'Once' | 'Recurring' (Required, ReadOnly)
 

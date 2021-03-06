@@ -58,9 +58,9 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefin
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 An error was encountered while handling a request: TypeError: Cannot read property 'length' of undefined
-    at parseResourceTypes (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:248:42)
-    at parseMethod (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:210:59)
-    at generateTypesForApiVersion (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:57:61)
+    at parseResourceTypes (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:249:42)
+    at parseMethod (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:211:59)
+    at generateTypesForApiVersion (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:58:61)
     at generateTypesForApiVersion.next (<anonymous>)
     at generateTypes (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:24:42)
     at generateTypes.next (<anonymous>)

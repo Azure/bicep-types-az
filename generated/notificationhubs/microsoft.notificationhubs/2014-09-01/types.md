@@ -16,9 +16,9 @@
 ### Properties
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (WriteOnly)
+* **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties (Required, WriteOnly)
+* **properties**: SharedAccessAuthorizationRuleProperties (Required)
 * **type**: 'Microsoft.NotificationHubs/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NotificationHubs/namespaces/notificationHubs@2014-09-01
@@ -37,9 +37,9 @@
 ### Properties
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (WriteOnly)
+* **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties (Required, WriteOnly)
+* **properties**: SharedAccessAuthorizationRuleProperties (Required)
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## NamespaceProperties
@@ -63,15 +63,15 @@
 
 ## SharedAccessAuthorizationRuleProperties
 ### Properties
-* **claimType**: string (WriteOnly)
-* **claimValue**: string (WriteOnly)
-* **createdTime**: string (WriteOnly)
-* **keyName**: string (WriteOnly)
-* **modifiedTime**: string (WriteOnly)
-* **primaryKey**: string (WriteOnly)
-* **revision**: int (WriteOnly)
-* **rights**: 'Listen' | 'Manage' | 'Send'[] (WriteOnly)
-* **secondaryKey**: string (WriteOnly)
+* **claimType**: string
+* **claimValue**: string
+* **createdTime**: string
+* **keyName**: string
+* **modifiedTime**: string
+* **primaryKey**: string
+* **revision**: int
+* **rights**: 'Listen' | 'Manage' | 'Send'[]
+* **secondaryKey**: string
 
 ## NotificationHubProperties
 ### Properties

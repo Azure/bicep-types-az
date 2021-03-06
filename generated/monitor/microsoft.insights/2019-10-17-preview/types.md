@@ -1,5 +1,16 @@
 # microsoft.insights @ 2019-10-17-preview
 
+## Resource microsoft.insights/privateLinkScopes@2019-10-17-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-10-17-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: AzureMonitorPrivateLinkScopeProperties (Required)
+* **tags**: PrivateLinkScopesResourceTags
+* **type**: 'microsoft.insights/privateLinkScopes' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Insights/privateLinkScopes/privateEndpointConnections@2019-10-17-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -18,16 +29,17 @@
 * **properties**: ScopedResourceProperties
 * **type**: 'Microsoft.Insights/privateLinkScopes/scopedResources' (ReadOnly, DeployTimeConstant)
 
-## Resource microsoft.insights/privateLinkScopes@2019-10-17-preview
-* **Valid Scope(s)**: ResourceGroup
+## AzureMonitorPrivateLinkScopeProperties
 ### Properties
-* **apiVersion**: '2019-10-17-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: AzureMonitorPrivateLinkScopeProperties (Required)
-* **tags**: PrivateLinkScopesResourceTags
-* **type**: 'microsoft.insights/privateLinkScopes' (ReadOnly, DeployTimeConstant)
+* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: PrivateEndpointConnectionProperties
+* **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
@@ -45,25 +57,13 @@
 * **description**: string (Required)
 * **status**: string (Required)
 
-## ScopedResourceProperties
-### Properties
-* **linkedResourceId**: string
-* **provisioningState**: string (ReadOnly)
-
-## AzureMonitorPrivateLinkScopeProperties
-### Properties
-* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-
-## PrivateEndpointConnection
-### Properties
-* **id**: string (ReadOnly)
-* **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties
-* **type**: string (ReadOnly)
-
 ## PrivateLinkScopesResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ScopedResourceProperties
+### Properties
+* **linkedResourceId**: string
+* **provisioningState**: string (ReadOnly)
 

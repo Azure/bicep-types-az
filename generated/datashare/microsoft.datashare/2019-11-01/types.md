@@ -12,90 +12,6 @@
 * **tags**: DefaultDtoTags
 * **type**: 'Microsoft.DataShare/accounts' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.DataShare/accounts/shareSubscriptions@2019-11-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ShareSubscriptionProperties (Required)
-* **type**: 'Microsoft.DataShare/accounts/shareSubscriptions' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings@2019-11-01
-* **Valid Scope(s)**: ResourceGroup
-* **Discriminator**: kind
-
-### Base Properties
-* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings' (ReadOnly, DeployTimeConstant)
-### AdlsGen2FileDataSetMapping
-#### Properties
-* **kind**: 'AdlsGen2File' (Required)
-* **properties**: AdlsGen2FileDataSetMappingProperties (Required)
-
-### AdlsGen2FileSystemDataSetMapping
-#### Properties
-* **kind**: 'AdlsGen2FileSystem' (Required)
-* **properties**: AdlsGen2FileSystemDataSetMappingProperties (Required)
-
-### AdlsGen2FolderDataSetMapping
-#### Properties
-* **kind**: 'AdlsGen2Folder' (Required)
-* **properties**: AdlsGen2FolderDataSetMappingProperties (Required)
-
-### BlobDataSetMapping
-#### Properties
-* **kind**: 'Blob' (Required)
-* **properties**: BlobMappingProperties (Required)
-
-### BlobFolderDataSetMapping
-#### Properties
-* **kind**: 'BlobFolder' (Required)
-* **properties**: BlobFolderMappingProperties (Required)
-
-### BlobContainerDataSetMapping
-#### Properties
-* **kind**: 'Container' (Required)
-* **properties**: BlobContainerMappingProperties (Required)
-
-### KustoClusterDataSetMapping
-#### Properties
-* **kind**: 'KustoCluster' (Required)
-* **properties**: KustoClusterDataSetMappingProperties (Required)
-
-### KustoDatabaseDataSetMapping
-#### Properties
-* **kind**: 'KustoDatabase' (Required)
-* **properties**: KustoDatabaseDataSetMappingProperties (Required)
-
-### SqlDBTableDataSetMapping
-#### Properties
-* **kind**: 'SqlDBTable' (Required)
-* **properties**: SqlDBTableDataSetMappingProperties (Required)
-
-### SqlDWTableDataSetMapping
-#### Properties
-* **kind**: 'SqlDWTable' (Required)
-* **properties**: SqlDWTableDataSetMappingProperties (Required)
-
-
-## Resource Microsoft.DataShare/accounts/shareSubscriptions/triggers@2019-11-01
-* **Valid Scope(s)**: ResourceGroup
-* **Discriminator**: kind
-
-### Base Properties
-* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.DataShare/accounts/shareSubscriptions/triggers' (ReadOnly, DeployTimeConstant)
-### ScheduledTrigger
-#### Properties
-* **kind**: 'ScheduleBased' (Required)
-* **properties**: ScheduledTriggerProperties (Required)
-
-
 ## Resource Microsoft.DataShare/accounts/shares@2019-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -199,6 +115,90 @@
 * **properties**: ScheduledSynchronizationSettingProperties (Required)
 
 
+## Resource Microsoft.DataShare/accounts/shareSubscriptions@2019-11-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ShareSubscriptionProperties (Required)
+* **type**: 'Microsoft.DataShare/accounts/shareSubscriptions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings@2019-11-01
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: kind
+
+### Base Properties
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings' (ReadOnly, DeployTimeConstant)
+### AdlsGen2FileDataSetMapping
+#### Properties
+* **kind**: 'AdlsGen2File' (Required)
+* **properties**: AdlsGen2FileDataSetMappingProperties (Required)
+
+### AdlsGen2FileSystemDataSetMapping
+#### Properties
+* **kind**: 'AdlsGen2FileSystem' (Required)
+* **properties**: AdlsGen2FileSystemDataSetMappingProperties (Required)
+
+### AdlsGen2FolderDataSetMapping
+#### Properties
+* **kind**: 'AdlsGen2Folder' (Required)
+* **properties**: AdlsGen2FolderDataSetMappingProperties (Required)
+
+### BlobDataSetMapping
+#### Properties
+* **kind**: 'Blob' (Required)
+* **properties**: BlobMappingProperties (Required)
+
+### BlobFolderDataSetMapping
+#### Properties
+* **kind**: 'BlobFolder' (Required)
+* **properties**: BlobFolderMappingProperties (Required)
+
+### BlobContainerDataSetMapping
+#### Properties
+* **kind**: 'Container' (Required)
+* **properties**: BlobContainerMappingProperties (Required)
+
+### KustoClusterDataSetMapping
+#### Properties
+* **kind**: 'KustoCluster' (Required)
+* **properties**: KustoClusterDataSetMappingProperties (Required)
+
+### KustoDatabaseDataSetMapping
+#### Properties
+* **kind**: 'KustoDatabase' (Required)
+* **properties**: KustoDatabaseDataSetMappingProperties (Required)
+
+### SqlDBTableDataSetMapping
+#### Properties
+* **kind**: 'SqlDBTable' (Required)
+* **properties**: SqlDBTableDataSetMappingProperties (Required)
+
+### SqlDWTableDataSetMapping
+#### Properties
+* **kind**: 'SqlDWTable' (Required)
+* **properties**: SqlDWTableDataSetMappingProperties (Required)
+
+
+## Resource Microsoft.DataShare/accounts/shareSubscriptions/triggers@2019-11-01
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: kind
+
+### Base Properties
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.DataShare/accounts/shareSubscriptions/triggers' (ReadOnly, DeployTimeConstant)
+### ScheduledTrigger
+#### Properties
+* **kind**: 'ScheduleBased' (Required)
+* **properties**: ScheduledTriggerProperties (Required)
+
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -216,190 +216,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ShareSubscriptionProperties
-### Properties
-* **createdAt**: string (ReadOnly)
-* **invitationId**: string (Required)
-* **providerEmail**: string (ReadOnly)
-* **providerName**: string (ReadOnly)
-* **providerTenantName**: string (ReadOnly)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
-* **shareDescription**: string (ReadOnly)
-* **shareKind**: 'CopyBased' | 'InPlace' (ReadOnly)
-* **shareName**: string (ReadOnly)
-* **shareSubscriptionStatus**: 'Active' | 'Revoked' | 'Revoking' | 'SourceDeleted' (ReadOnly)
-* **shareTerms**: string (ReadOnly)
-* **sourceShareLocation**: string (Required)
-* **userEmail**: string (ReadOnly)
-* **userName**: string (ReadOnly)
-
-## AdlsGen2FileDataSetMapping
-### Properties
-* **kind**: 'AdlsGen2File' (Required)
-* **properties**: AdlsGen2FileDataSetMappingProperties (Required)
-
-## AdlsGen2FileDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required)
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
-* **filePath**: string (Required)
-* **fileSystem**: string (Required)
-* **outputType**: 'Csv' | 'Parquet'
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
-* **resourceGroup**: string (Required)
-* **storageAccountName**: string (Required)
-* **subscriptionId**: string (Required)
-
-## AdlsGen2FileSystemDataSetMapping
-### Properties
-* **kind**: 'AdlsGen2FileSystem' (Required)
-* **properties**: AdlsGen2FileSystemDataSetMappingProperties (Required)
-
-## AdlsGen2FileSystemDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required)
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
-* **fileSystem**: string (Required)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
-* **resourceGroup**: string (Required)
-* **storageAccountName**: string (Required)
-* **subscriptionId**: string (Required)
-
-## AdlsGen2FolderDataSetMapping
-### Properties
-* **kind**: 'AdlsGen2Folder' (Required)
-* **properties**: AdlsGen2FolderDataSetMappingProperties (Required)
-
-## AdlsGen2FolderDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required)
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
-* **fileSystem**: string (Required)
-* **folderPath**: string (Required)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
-* **resourceGroup**: string (Required)
-* **storageAccountName**: string (Required)
-* **subscriptionId**: string (Required)
-
-## BlobDataSetMapping
-### Properties
-* **kind**: 'Blob' (Required)
-* **properties**: BlobMappingProperties (Required)
-
-## BlobMappingProperties
-### Properties
-* **containerName**: string (Required)
-* **dataSetId**: string (Required)
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
-* **filePath**: string (Required)
-* **outputType**: 'Csv' | 'Parquet'
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
-* **resourceGroup**: string (Required)
-* **storageAccountName**: string (Required)
-* **subscriptionId**: string (Required)
-
-## BlobFolderDataSetMapping
-### Properties
-* **kind**: 'BlobFolder' (Required)
-* **properties**: BlobFolderMappingProperties (Required)
-
-## BlobFolderMappingProperties
-### Properties
-* **containerName**: string (Required)
-* **dataSetId**: string (Required)
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
-* **prefix**: string (Required)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
-* **resourceGroup**: string (Required)
-* **storageAccountName**: string (Required)
-* **subscriptionId**: string (Required)
-
-## BlobContainerDataSetMapping
-### Properties
-* **kind**: 'Container' (Required)
-* **properties**: BlobContainerMappingProperties (Required)
-
-## BlobContainerMappingProperties
-### Properties
-* **containerName**: string (Required)
-* **dataSetId**: string (Required)
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
-* **resourceGroup**: string (Required)
-* **storageAccountName**: string (Required)
-* **subscriptionId**: string (Required)
-
-## KustoClusterDataSetMapping
-### Properties
-* **kind**: 'KustoCluster' (Required)
-* **properties**: KustoClusterDataSetMappingProperties (Required)
-
-## KustoClusterDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required)
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
-* **kustoClusterResourceId**: string (Required)
-* **location**: string (ReadOnly)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
-
-## KustoDatabaseDataSetMapping
-### Properties
-* **kind**: 'KustoDatabase' (Required)
-* **properties**: KustoDatabaseDataSetMappingProperties (Required)
-
-## KustoDatabaseDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required)
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
-* **kustoClusterResourceId**: string (Required)
-* **location**: string (ReadOnly)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
-
-## SqlDBTableDataSetMapping
-### Properties
-* **kind**: 'SqlDBTable' (Required)
-* **properties**: SqlDBTableDataSetMappingProperties (Required)
-
-## SqlDBTableDataSetMappingProperties
-### Properties
-* **databaseName**: string (Required)
-* **dataSetId**: string (Required)
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
-* **schemaName**: string (Required)
-* **sqlServerResourceId**: string (Required)
-* **tableName**: string (Required)
-
-## SqlDWTableDataSetMapping
-### Properties
-* **kind**: 'SqlDWTable' (Required)
-* **properties**: SqlDWTableDataSetMappingProperties (Required)
-
-## SqlDWTableDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required)
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
-* **dataWarehouseName**: string (Required)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
-* **schemaName**: string (Required)
-* **sqlServerResourceId**: string (Required)
-* **tableName**: string (Required)
-
-## ScheduledTrigger
-### Properties
-* **kind**: 'ScheduleBased' (Required)
-* **properties**: ScheduledTriggerProperties (Required)
-
-## ScheduledTriggerProperties
-### Properties
-* **createdAt**: string (ReadOnly)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
-* **recurrenceInterval**: 'Day' | 'Hour' (Required)
-* **synchronizationMode**: 'FullSync' | 'Incremental'
-* **synchronizationTime**: string (Required)
-* **triggerStatus**: 'Active' | 'Inactive' | 'SourceSynchronizationSettingDeleted' (ReadOnly)
-* **userName**: string (ReadOnly)
 
 ## ShareProperties
 ### Properties
@@ -593,5 +409,189 @@
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
 * **recurrenceInterval**: 'Day' | 'Hour' (Required)
 * **synchronizationTime**: string (Required)
+* **userName**: string (ReadOnly)
+
+## ShareSubscriptionProperties
+### Properties
+* **createdAt**: string (ReadOnly)
+* **invitationId**: string (Required)
+* **providerEmail**: string (ReadOnly)
+* **providerName**: string (ReadOnly)
+* **providerTenantName**: string (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
+* **shareDescription**: string (ReadOnly)
+* **shareKind**: 'CopyBased' | 'InPlace' (ReadOnly)
+* **shareName**: string (ReadOnly)
+* **shareSubscriptionStatus**: 'Active' | 'Revoked' | 'Revoking' | 'SourceDeleted' (ReadOnly)
+* **shareTerms**: string (ReadOnly)
+* **sourceShareLocation**: string (Required)
+* **userEmail**: string (ReadOnly)
+* **userName**: string (ReadOnly)
+
+## AdlsGen2FileDataSetMapping
+### Properties
+* **kind**: 'AdlsGen2File' (Required)
+* **properties**: AdlsGen2FileDataSetMappingProperties (Required)
+
+## AdlsGen2FileDataSetMappingProperties
+### Properties
+* **dataSetId**: string (Required)
+* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
+* **filePath**: string (Required)
+* **fileSystem**: string (Required)
+* **outputType**: 'Csv' | 'Parquet'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
+* **resourceGroup**: string (Required)
+* **storageAccountName**: string (Required)
+* **subscriptionId**: string (Required)
+
+## AdlsGen2FileSystemDataSetMapping
+### Properties
+* **kind**: 'AdlsGen2FileSystem' (Required)
+* **properties**: AdlsGen2FileSystemDataSetMappingProperties (Required)
+
+## AdlsGen2FileSystemDataSetMappingProperties
+### Properties
+* **dataSetId**: string (Required)
+* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
+* **fileSystem**: string (Required)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
+* **resourceGroup**: string (Required)
+* **storageAccountName**: string (Required)
+* **subscriptionId**: string (Required)
+
+## AdlsGen2FolderDataSetMapping
+### Properties
+* **kind**: 'AdlsGen2Folder' (Required)
+* **properties**: AdlsGen2FolderDataSetMappingProperties (Required)
+
+## AdlsGen2FolderDataSetMappingProperties
+### Properties
+* **dataSetId**: string (Required)
+* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
+* **fileSystem**: string (Required)
+* **folderPath**: string (Required)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
+* **resourceGroup**: string (Required)
+* **storageAccountName**: string (Required)
+* **subscriptionId**: string (Required)
+
+## BlobDataSetMapping
+### Properties
+* **kind**: 'Blob' (Required)
+* **properties**: BlobMappingProperties (Required)
+
+## BlobMappingProperties
+### Properties
+* **containerName**: string (Required)
+* **dataSetId**: string (Required)
+* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
+* **filePath**: string (Required)
+* **outputType**: 'Csv' | 'Parquet'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
+* **resourceGroup**: string (Required)
+* **storageAccountName**: string (Required)
+* **subscriptionId**: string (Required)
+
+## BlobFolderDataSetMapping
+### Properties
+* **kind**: 'BlobFolder' (Required)
+* **properties**: BlobFolderMappingProperties (Required)
+
+## BlobFolderMappingProperties
+### Properties
+* **containerName**: string (Required)
+* **dataSetId**: string (Required)
+* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
+* **prefix**: string (Required)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
+* **resourceGroup**: string (Required)
+* **storageAccountName**: string (Required)
+* **subscriptionId**: string (Required)
+
+## BlobContainerDataSetMapping
+### Properties
+* **kind**: 'Container' (Required)
+* **properties**: BlobContainerMappingProperties (Required)
+
+## BlobContainerMappingProperties
+### Properties
+* **containerName**: string (Required)
+* **dataSetId**: string (Required)
+* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
+* **resourceGroup**: string (Required)
+* **storageAccountName**: string (Required)
+* **subscriptionId**: string (Required)
+
+## KustoClusterDataSetMapping
+### Properties
+* **kind**: 'KustoCluster' (Required)
+* **properties**: KustoClusterDataSetMappingProperties (Required)
+
+## KustoClusterDataSetMappingProperties
+### Properties
+* **dataSetId**: string (Required)
+* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
+* **kustoClusterResourceId**: string (Required)
+* **location**: string (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
+
+## KustoDatabaseDataSetMapping
+### Properties
+* **kind**: 'KustoDatabase' (Required)
+* **properties**: KustoDatabaseDataSetMappingProperties (Required)
+
+## KustoDatabaseDataSetMappingProperties
+### Properties
+* **dataSetId**: string (Required)
+* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
+* **kustoClusterResourceId**: string (Required)
+* **location**: string (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
+
+## SqlDBTableDataSetMapping
+### Properties
+* **kind**: 'SqlDBTable' (Required)
+* **properties**: SqlDBTableDataSetMappingProperties (Required)
+
+## SqlDBTableDataSetMappingProperties
+### Properties
+* **databaseName**: string (Required)
+* **dataSetId**: string (Required)
+* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
+* **schemaName**: string (Required)
+* **sqlServerResourceId**: string (Required)
+* **tableName**: string (Required)
+
+## SqlDWTableDataSetMapping
+### Properties
+* **kind**: 'SqlDWTable' (Required)
+* **properties**: SqlDWTableDataSetMappingProperties (Required)
+
+## SqlDWTableDataSetMappingProperties
+### Properties
+* **dataSetId**: string (Required)
+* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly)
+* **dataWarehouseName**: string (Required)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
+* **schemaName**: string (Required)
+* **sqlServerResourceId**: string (Required)
+* **tableName**: string (Required)
+
+## ScheduledTrigger
+### Properties
+* **kind**: 'ScheduleBased' (Required)
+* **properties**: ScheduledTriggerProperties (Required)
+
+## ScheduledTriggerProperties
+### Properties
+* **createdAt**: string (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
+* **recurrenceInterval**: 'Day' | 'Hour' (Required)
+* **synchronizationMode**: 'FullSync' | 'Incremental'
+* **synchronizationTime**: string (Required)
+* **triggerStatus**: 'Active' | 'Inactive' | 'SourceSynchronizationSettingDeleted' (ReadOnly)
 * **userName**: string (ReadOnly)
 

@@ -14,15 +14,6 @@
 * **tags**: ApimResourceTags
 * **type**: 'Microsoft.ApiManagement/service' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.ApiManagement/service/apiVersionSets@2019-01-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApiVersionSetContractProperties
-* **type**: 'Microsoft.ApiManagement/service/apiVersionSets' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.ApiManagement/service/apis@2019-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -123,6 +114,15 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: TagDescriptionBaseProperties
 * **type**: 'Microsoft.ApiManagement/service/apis/tagDescriptions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/apiVersionSets@2019-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApiVersionSetContractProperties
+* **type**: 'Microsoft.ApiManagement/service/apiVersionSets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/authorizationServers@2019-01-01
 * **Valid Scope(s)**: ResourceGroup
@@ -361,14 +361,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ApiVersionSetContractProperties
-### Properties
-* **description**: string
-* **displayName**: string (Required)
-* **versionHeaderName**: string
-* **versioningScheme**: 'Header' | 'Query' | 'Segment' (Required)
-* **versionQueryName**: string
-
 ## ApiCreateOrUpdateProperties
 ### Properties
 * **apiRevision**: string (WriteOnly)
@@ -552,6 +544,14 @@
 * **displayName**: string (ReadOnly)
 * **externalDocsDescription**: string
 * **externalDocsUrl**: string
+
+## ApiVersionSetContractProperties
+### Properties
+* **description**: string
+* **displayName**: string (Required)
+* **versionHeaderName**: string
+* **versioningScheme**: 'Header' | 'Query' | 'Segment' (Required)
+* **versionQueryName**: string
 
 ## AuthorizationServerContractProperties
 ### Properties

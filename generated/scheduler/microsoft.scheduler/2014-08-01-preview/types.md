@@ -100,7 +100,7 @@
 ## RetryPolicy
 ### Properties
 * **retryCount**: int
-* **retryInterval**: any
+* **retryInterval**: string
 * **retryType**: 'Fixed' | 'None'
 
 ## ServiceBusQueueMessage

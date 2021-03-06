@@ -26,7 +26,7 @@
 ## ManagedClusterProperties
 ### Properties
 * **addonFeatures**: 'BackupRestoreService' | 'DnsService' | 'ResourceMonitorService'[]
-* **adminPassword**: any
+* **adminPassword**: string
 * **adminUserName**: string (Required)
 * **azureActiveDirectory**: AzureActiveDirectory
 * **clientConnectionPort**: int

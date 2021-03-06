@@ -86,7 +86,7 @@
 * **creationTime**: string (ReadOnly)
 * **dataAccessFqdn**: string (ReadOnly)
 * **dataAccessId**: string (ReadOnly)
-* **dataRetentionTime**: any (Required)
+* **dataRetentionTime**: string (Required)
 * **partitionKeyProperties**: TimeSeriesIdProperty[]
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **status**: EnvironmentStatus (ReadOnly)
@@ -149,7 +149,7 @@
 
 ## WarmStoreConfigurationProperties
 ### Properties
-* **dataRetention**: any (Required)
+* **dataRetention**: string (Required)
 
 ## AccessPolicyResourceProperties
 ### Properties

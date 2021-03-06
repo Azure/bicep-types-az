@@ -1,17 +1,5 @@
 # Microsoft.Network @ 2018-08-01
 
-## Resource Microsoft.Network/FrontDoorWebApplicationFirewallPolicies@2018-08-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WebApplicationFirewallPolicyPropertiesFormat
-* **tags**: ResourceTags
-* **type**: 'Microsoft.Network/FrontDoorWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.Network/frontDoors@2018-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -23,73 +11,17 @@
 * **tags**: ResourceTags
 * **type**: 'Microsoft.Network/frontDoors' (ReadOnly, DeployTimeConstant)
 
-## WebApplicationFirewallPolicyPropertiesFormat
+## Resource Microsoft.Network/FrontDoorWebApplicationFirewallPolicies@2018-08-01
+* **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **customRules**: CustomRules
-* **managedRules**: ManagedRuleSets
-* **policySettings**: PolicySettings
-* **provisioningState**: string (ReadOnly)
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly)
-
-## CustomRules
-### Properties
-* **rules**: CustomRule[]
-
-## CustomRule
-### Properties
-* **action**: 'Allow' | 'Block' | 'Log' (Required)
-* **etag**: string (ReadOnly)
-* **matchConditions**: MatchCondition[] (Required)
-* **name**: string
-* **priority**: int (Required)
-* **rateLimitDurationInMinutes**: int
-* **rateLimitThreshold**: int
-* **ruleType**: 'MatchRule' | 'RateLimitRule' (Required)
-* **transforms**: 'HtmlEntityDecode' | 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]
-
-## MatchCondition
-### Properties
-* **matchValue**: string[] (Required)
-* **matchVariable**: 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestHeader' | 'RequestMethod' | 'RequestUri' (Required)
-* **negateCondition**: bool
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' (Required)
-* **selector**: string
-
-## ManagedRuleSets
-### Properties
-* **ruleSets**: ManagedRuleSet[]
-
-## ManagedRuleSet
-* **Discriminator**: ruleSetType
-
-### Base Properties
-* **priority**: int
-* **version**: int
-### AzureManagedRuleSet
-#### Properties
-* **ruleGroupOverrides**: AzureManagedOverrideRuleGroup[]
-* **ruleSetType**: 'AzureManagedRuleSet' (Required)
-
-
-## AzureManagedRuleSet
-### Properties
-* **ruleGroupOverrides**: AzureManagedOverrideRuleGroup[]
-* **ruleSetType**: 'AzureManagedRuleSet' (Required)
-
-## AzureManagedOverrideRuleGroup
-### Properties
-* **action**: 'Allow' | 'Block' | 'Log' (Required)
-* **ruleGroupOverride**: 'SqlInjection' | 'XSS' (Required)
-
-## PolicySettings
-### Properties
-* **enabledState**: 'Disabled' | 'Enabled'
-* **mode**: 'Detection' | 'Prevention'
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WebApplicationFirewallPolicyPropertiesFormat
+* **tags**: ResourceTags
+* **type**: 'Microsoft.Network/FrontDoorWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant)
 
 ## FrontDoorProperties
 ### Properties
@@ -226,6 +158,74 @@
 ### Properties
 * **dynamicCompression**: 'Disabled' | 'Enabled'
 * **queryParameterStripDirective**: 'StripAll' | 'StripNone'
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## WebApplicationFirewallPolicyPropertiesFormat
+### Properties
+* **customRules**: CustomRules
+* **managedRules**: ManagedRuleSets
+* **policySettings**: PolicySettings
+* **provisioningState**: string (ReadOnly)
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly)
+
+## CustomRules
+### Properties
+* **rules**: CustomRule[]
+
+## CustomRule
+### Properties
+* **action**: 'Allow' | 'Block' | 'Log' (Required)
+* **etag**: string (ReadOnly)
+* **matchConditions**: MatchCondition[] (Required)
+* **name**: string
+* **priority**: int (Required)
+* **rateLimitDurationInMinutes**: int
+* **rateLimitThreshold**: int
+* **ruleType**: 'MatchRule' | 'RateLimitRule' (Required)
+* **transforms**: 'HtmlEntityDecode' | 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]
+
+## MatchCondition
+### Properties
+* **matchValue**: string[] (Required)
+* **matchVariable**: 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestHeader' | 'RequestMethod' | 'RequestUri' (Required)
+* **negateCondition**: bool
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' (Required)
+* **selector**: string
+
+## ManagedRuleSets
+### Properties
+* **ruleSets**: ManagedRuleSet[]
+
+## ManagedRuleSet
+* **Discriminator**: ruleSetType
+
+### Base Properties
+* **priority**: int
+* **version**: int
+### AzureManagedRuleSet
+#### Properties
+* **ruleGroupOverrides**: AzureManagedOverrideRuleGroup[]
+* **ruleSetType**: 'AzureManagedRuleSet' (Required)
+
+
+## AzureManagedRuleSet
+### Properties
+* **ruleGroupOverrides**: AzureManagedOverrideRuleGroup[]
+* **ruleSetType**: 'AzureManagedRuleSet' (Required)
+
+## AzureManagedOverrideRuleGroup
+### Properties
+* **action**: 'Allow' | 'Block' | 'Log' (Required)
+* **ruleGroupOverride**: 'SqlInjection' | 'XSS' (Required)
+
+## PolicySettings
+### Properties
+* **enabledState**: 'Disabled' | 'Enabled'
+* **mode**: 'Detection' | 'Prevention'
 
 ## ResourceTags
 ### Properties

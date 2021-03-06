@@ -18,7 +18,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorAdditionalInfo' with an u
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: Autorest.AzureResourceSchema took 8ms
+INFORMATION: Autorest.AzureResourceSchema took 10ms
 Processing batch task - {"tag":"schema-recoveryservices-2016-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -38,12 +38,12 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorAdditionalInfo' with an u
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-recoveryservices-2016-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
-[12.95 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 4ms
+[15.76 s] Generation Complete

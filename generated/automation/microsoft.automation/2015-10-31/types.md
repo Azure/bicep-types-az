@@ -44,15 +44,6 @@
 * **tags**: TrackedResourceTags (ReadOnly)
 * **type**: 'Microsoft.Automation/automationAccounts/configurations' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.Automation/automationAccounts/connectionTypes@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectionTypeCreateOrUpdateProperties (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/connectionTypes' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.Automation/automationAccounts/connections@2015-10-31
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -61,6 +52,15 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ConnectionCreateOrUpdateProperties (Required)
 * **type**: 'Microsoft.Automation/automationAccounts/connections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/connectionTypes@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ConnectionTypeCreateOrUpdateProperties (Required)
+* **type**: 'Microsoft.Automation/automationAccounts/connectionTypes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/credentials@2015-10-31
 * **Valid Scope(s)**: ResourceGroup
@@ -71,15 +71,6 @@
 * **properties**: CredentialCreateOrUpdateProperties (Required)
 * **type**: 'Microsoft.Automation/automationAccounts/credentials' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.Automation/automationAccounts/jobSchedules@2015-10-31
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: JobScheduleCreateProperties (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/jobSchedules' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.Automation/automationAccounts/jobs@2015-10-31
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -88,6 +79,15 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: JobCreateProperties (Required)
 * **type**: 'Microsoft.Automation/automationAccounts/jobs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Automation/automationAccounts/jobSchedules@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: JobScheduleCreateProperties (Required)
+* **type**: 'Microsoft.Automation/automationAccounts/jobSchedules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/modules@2015-10-31
 * **Valid Scope(s)**: ResourceGroup
@@ -269,6 +269,23 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ConnectionCreateOrUpdateProperties
+### Properties
+* **connectionType**: ConnectionTypeAssociationProperty (Required)
+* **creationTime**: string (ReadOnly)
+* **description**: string
+* **fieldDefinitionValues**: ConnectionCreateOrUpdatePropertiesFieldDefinitionValues
+* **lastModifiedTime**: string (ReadOnly)
+
+## ConnectionTypeAssociationProperty
+### Properties
+* **name**: string
+
+## ConnectionCreateOrUpdatePropertiesFieldDefinitionValues
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ConnectionTypeCreateOrUpdateProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
@@ -288,23 +305,6 @@
 * **isOptional**: bool
 * **type**: string (Required)
 
-## ConnectionCreateOrUpdateProperties
-### Properties
-* **connectionType**: ConnectionTypeAssociationProperty (Required)
-* **creationTime**: string (ReadOnly)
-* **description**: string
-* **fieldDefinitionValues**: ConnectionCreateOrUpdatePropertiesFieldDefinitionValues
-* **lastModifiedTime**: string (ReadOnly)
-
-## ConnectionTypeAssociationProperty
-### Properties
-* **name**: string
-
-## ConnectionCreateOrUpdatePropertiesFieldDefinitionValues
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## CredentialCreateOrUpdateProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
@@ -312,27 +312,6 @@
 * **lastModifiedTime**: string (ReadOnly)
 * **password**: string (Required, WriteOnly)
 * **userName**: string (Required)
-
-## JobScheduleCreateProperties
-### Properties
-* **jobScheduleId**: string (ReadOnly)
-* **parameters**: JobScheduleCreatePropertiesParameters
-* **runbook**: RunbookAssociationProperty (Required)
-* **runOn**: string
-* **schedule**: ScheduleAssociationProperty (Required)
-
-## JobScheduleCreatePropertiesParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## RunbookAssociationProperty
-### Properties
-* **name**: string
-
-## ScheduleAssociationProperty
-### Properties
-* **name**: string (ReadOnly)
 
 ## JobCreateProperties
 ### Properties
@@ -354,6 +333,27 @@
 * **statusDetails**: string (ReadOnly)
 
 ## JobCreatePropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RunbookAssociationProperty
+### Properties
+* **name**: string
+
+## ScheduleAssociationProperty
+### Properties
+* **name**: string (ReadOnly)
+
+## JobScheduleCreateProperties
+### Properties
+* **jobScheduleId**: string (ReadOnly)
+* **parameters**: JobScheduleCreatePropertiesParameters
+* **runbook**: RunbookAssociationProperty (Required)
+* **runOn**: string
+* **schedule**: ScheduleAssociationProperty (Required)
+
+## JobScheduleCreatePropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

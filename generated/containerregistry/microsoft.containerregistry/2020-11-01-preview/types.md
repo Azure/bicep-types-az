@@ -297,9 +297,9 @@
 ### Properties
 * **gatewayEndpoint**: string (ReadOnly)
 * **lastSyncTime**: string (ReadOnly)
-* **messageTtl**: any (Required)
+* **messageTtl**: string (Required)
 * **schedule**: string
-* **syncWindow**: any
+* **syncWindow**: string
 * **tokenId**: string (Required)
 
 ## StatusDetailProperties

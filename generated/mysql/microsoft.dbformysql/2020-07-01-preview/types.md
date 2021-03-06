@@ -50,7 +50,7 @@
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string
-* **administratorLoginPassword**: any
+* **administratorLoginPassword**: string
 * **availabilityZone**: string
 * **byokEnforcement**: string (ReadOnly)
 * **createMode**: 'Default' | 'PointInTimeRestore' | 'Replica'

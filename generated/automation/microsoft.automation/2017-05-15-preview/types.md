@@ -125,7 +125,7 @@
 ## UpdateConfiguration
 ### Properties
 * **azureVirtualMachines**: string[]
-* **duration**: any
+* **duration**: string
 * **linux**: LinuxProperties
 * **nonAzureComputerNames**: string[]
 * **operatingSystem**: 'Linux' | 'Windows' (Required)

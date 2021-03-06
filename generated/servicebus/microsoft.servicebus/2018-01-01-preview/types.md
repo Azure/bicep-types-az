@@ -231,18 +231,18 @@
 ## SBQueueProperties
 ### Properties
 * **accessedAt**: string (ReadOnly)
-* **autoDeleteOnIdle**: any
+* **autoDeleteOnIdle**: string
 * **countDetails**: MessageCountDetails (ReadOnly)
 * **createdAt**: string (ReadOnly)
 * **deadLetteringOnMessageExpiration**: bool
-* **defaultMessageTimeToLive**: any
-* **duplicateDetectionHistoryTimeWindow**: any
+* **defaultMessageTimeToLive**: string
+* **duplicateDetectionHistoryTimeWindow**: string
 * **enableBatchedOperations**: bool
 * **enableExpress**: bool
 * **enablePartitioning**: bool
 * **forwardDeadLetteredMessagesTo**: string
 * **forwardTo**: string
-* **lockDuration**: any
+* **lockDuration**: string
 * **maxDeliveryCount**: int
 * **maxSizeInMegabytes**: int
 * **messageCount**: int (ReadOnly)
@@ -263,11 +263,11 @@
 ## SBTopicProperties
 ### Properties
 * **accessedAt**: string (ReadOnly)
-* **autoDeleteOnIdle**: any
+* **autoDeleteOnIdle**: string
 * **countDetails**: MessageCountDetails (ReadOnly)
 * **createdAt**: string (ReadOnly)
-* **defaultMessageTimeToLive**: any
-* **duplicateDetectionHistoryTimeWindow**: any
+* **defaultMessageTimeToLive**: string
+* **duplicateDetectionHistoryTimeWindow**: string
 * **enableBatchedOperations**: bool
 * **enableExpress**: bool
 * **enablePartitioning**: bool
@@ -282,17 +282,17 @@
 ## SBSubscriptionProperties
 ### Properties
 * **accessedAt**: string (ReadOnly)
-* **autoDeleteOnIdle**: any
+* **autoDeleteOnIdle**: string
 * **countDetails**: MessageCountDetails (ReadOnly)
 * **createdAt**: string (ReadOnly)
 * **deadLetteringOnFilterEvaluationExceptions**: bool
 * **deadLetteringOnMessageExpiration**: bool
-* **defaultMessageTimeToLive**: any
-* **duplicateDetectionHistoryTimeWindow**: any
+* **defaultMessageTimeToLive**: string
+* **duplicateDetectionHistoryTimeWindow**: string
 * **enableBatchedOperations**: bool
 * **forwardDeadLetteredMessagesTo**: string
 * **forwardTo**: string
-* **lockDuration**: any
+* **lockDuration**: string
 * **maxDeliveryCount**: int
 * **messageCount**: int (ReadOnly)
 * **requiresSession**: bool

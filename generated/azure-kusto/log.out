@@ -97,11 +97,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undef
 WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 11ms
+INFORMATION: Autorest.AzureResourceSchema took 13ms
 Processing batch task - {"tag":"schema-kusto-2020-06-14"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -193,10 +189,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undef
 WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
 INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-kusto-2020-02-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -289,11 +281,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undef
 WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-kusto-2019-11-09"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -383,11 +371,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undef
 WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 7ms
+INFORMATION: Autorest.AzureResourceSchema took 10ms
 Processing batch task - {"tag":"schema-kusto-2019-09-07"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -467,11 +451,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undef
 WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 7ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-kusto-2019-05-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -535,8 +515,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undef
 WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
 INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-kusto-2019-01-21"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -597,8 +575,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undef
 WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
 INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-kusto-2018-09-07-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -747,11 +723,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undef
 WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 11ms
+INFORMATION: Autorest.AzureResourceSchema took 8ms
 Processing batch task - {"tag":"schema-kusto-2020-06-14"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -843,10 +815,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undef
 WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
 INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-kusto-2020-02-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -939,11 +907,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undef
 WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-kusto-2019-11-09"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1033,11 +997,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undef
 WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-kusto-2019-09-07"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1117,10 +1077,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undef
 WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
 INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-kusto-2019-05-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -1185,8 +1141,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undef
 WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
 INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-kusto-2019-01-21"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -1247,8 +1201,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undef
 WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized known property type: "duration"
-WARNING: Unrecognized known property type: "duration"
 INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-kusto-2018-09-07-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -1305,5 +1257,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undef
 WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 1ms
-[56.62 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 2ms
+[68.77 s] Generation Complete

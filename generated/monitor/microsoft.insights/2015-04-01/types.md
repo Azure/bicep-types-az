@@ -88,8 +88,8 @@
 * **statistic**: 'Average' | 'Max' | 'Min' | 'Sum' (Required)
 * **threshold**: int (Required)
 * **timeAggregation**: 'Average' | 'Count' | 'Last' | 'Maximum' | 'Minimum' | 'Total' (Required)
-* **timeGrain**: any (Required)
-* **timeWindow**: any (Required)
+* **timeGrain**: string (Required)
+* **timeWindow**: string (Required)
 
 ## ScaleRuleMetricDimension
 ### Properties
@@ -99,7 +99,7 @@
 
 ## ScaleAction
 ### Properties
-* **cooldown**: any (Required)
+* **cooldown**: string (Required)
 * **direction**: 'Decrease' | 'Increase' | 'None' (Required)
 * **type**: 'ChangeCount' | 'ExactCount' | 'PercentChangeCount' (Required)
 * **value**: string

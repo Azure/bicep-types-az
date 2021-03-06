@@ -218,7 +218,7 @@
 ### Properties
 * **maxNodeCount**: int (Required)
 * **minNodeCount**: int
-* **nodeIdleTimeBeforeScaleDown**: any
+* **nodeIdleTimeBeforeScaleDown**: string
 
 ## ResourceId
 ### Properties

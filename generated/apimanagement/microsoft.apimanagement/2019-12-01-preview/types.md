@@ -14,15 +14,6 @@
 * **tags**: ApimResourceTags
 * **type**: 'Microsoft.ApiManagement/service' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.ApiManagement/service/apiVersionSets@2019-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApiVersionSetContractProperties
-* **type**: 'Microsoft.ApiManagement/service/apiVersionSets' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.ApiManagement/service/apis@2019-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -124,6 +115,15 @@
 * **properties**: TagDescriptionBaseProperties
 * **type**: 'Microsoft.ApiManagement/service/apis/tagDescriptions' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.ApiManagement/service/apiVersionSets@2019-12-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApiVersionSetContractProperties
+* **type**: 'Microsoft.ApiManagement/service/apiVersionSets' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.ApiManagement/service/authorizationServers@2019-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -184,7 +184,7 @@
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AssociationContractProperties (WriteOnly)
+* **properties**: AssociationContractProperties
 * **type**: 'Microsoft.ApiManagement/service/gateways/apis' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/gateways/hostnameConfigurations@2019-12-01-preview
@@ -406,14 +406,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ApiVersionSetContractProperties
-### Properties
-* **description**: string
-* **displayName**: string (Required)
-* **versionHeaderName**: string
-* **versioningScheme**: 'Header' | 'Query' | 'Segment' (Required)
-* **versionQueryName**: string
-
 ## ApiCreateOrUpdateProperties
 ### Properties
 * **apiRevision**: string (WriteOnly)
@@ -600,6 +592,14 @@
 * **externalDocsUrl**: string
 * **tagId**: string (ReadOnly)
 
+## ApiVersionSetContractProperties
+### Properties
+* **description**: string
+* **displayName**: string (Required)
+* **versionHeaderName**: string
+* **versioningScheme**: 'Header' | 'Query' | 'Segment' (Required)
+* **versionQueryName**: string
+
 ## AuthorizationServerContractProperties
 ### Properties
 * **authorizationEndpoint**: string (Required)
@@ -714,7 +714,7 @@
 
 ## AssociationContractProperties
 ### Properties
-* **provisioningState**: 'created' (WriteOnly)
+* **provisioningState**: 'created'
 
 ## GatewayHostnameConfigurationContractProperties
 ### Properties

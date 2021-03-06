@@ -68,7 +68,7 @@
 
 ## JustInTimeAccessPolicy
 ### Properties
-* **maximumActivationDuration**: any
+* **maximumActivationDuration**: string
 * **multiFactorAuthProvider**: 'Azure' | 'None' (Required)
 
 ## RegistrationDefinitionProperties

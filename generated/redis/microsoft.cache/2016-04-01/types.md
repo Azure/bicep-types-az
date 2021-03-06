@@ -84,6 +84,6 @@
 ## ScheduleEntry
 ### Properties
 * **dayOfWeek**: 'Everyday' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | 'Weekend' (Required)
-* **maintenanceWindow**: any
+* **maintenanceWindow**: string
 * **startHourUtc**: int (Required)
 

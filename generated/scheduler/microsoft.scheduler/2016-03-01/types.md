@@ -147,7 +147,7 @@
 ## RetryPolicy
 ### Properties
 * **retryCount**: int
-* **retryInterval**: any
+* **retryInterval**: string
 * **retryType**: 'Fixed' | 'None'
 
 ## ServiceBusQueueMessage
@@ -178,7 +178,7 @@
 * **replyToSessionId**: string
 * **scheduledEnqueueTimeUtc**: string
 * **sessionId**: string
-* **timeToLive**: any
+* **timeToLive**: string
 * **to**: string
 * **viaPartitionKey**: string
 

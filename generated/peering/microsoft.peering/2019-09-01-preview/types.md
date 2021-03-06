@@ -9,6 +9,19 @@
 * **properties**: PeerAsnProperties
 * **type**: 'Microsoft.Peering/peerAsns' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Peering/peerings@2019-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'Direct' | 'Exchange' (Required)
+* **location**: string (Required)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PeeringProperties
+* **sku**: PeeringSku (Required)
+* **tags**: PeeringTags
+* **type**: 'Microsoft.Peering/peerings' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Peering/peeringServices@2019-09-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -29,19 +42,6 @@
 * **properties**: PeeringServicePrefixProperties
 * **type**: 'Microsoft.Peering/peeringServices/prefixes' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.Peering/peerings@2019-09-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'Direct' | 'Exchange' (Required)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: PeeringProperties
-* **sku**: PeeringSku (Required)
-* **tags**: PeeringTags
-* **type**: 'Microsoft.Peering/peerings' (ReadOnly, DeployTimeConstant)
-
 ## PeerAsnProperties
 ### Properties
 * **errorMessage**: string (ReadOnly)
@@ -54,34 +54,6 @@
 ### Properties
 * **emails**: string[]
 * **phone**: string[]
-
-## PeeringServiceProperties
-### Properties
-* **peeringServiceLocation**: string
-* **peeringServiceProvider**: string
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-
-## PeeringServiceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## PeeringServicePrefixProperties
-### Properties
-* **errorMessage**: string (ReadOnly)
-* **events**: PeeringServicePrefixEvent[] (ReadOnly)
-* **learnedType**: 'None' | 'ViaServiceProvider' | 'ViaSession' (ReadOnly)
-* **prefix**: string
-* **prefixValidationState**: 'Failed' | 'Invalid' | 'None' | 'Pending' | 'Unknown' | 'Verified' | 'Warning' (ReadOnly)
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-
-## PeeringServicePrefixEvent
-### Properties
-* **eventDescription**: string (ReadOnly)
-* **eventLevel**: string (ReadOnly)
-* **eventSummary**: string (ReadOnly)
-* **eventTimestamp**: string (ReadOnly)
-* **eventType**: string (ReadOnly)
 
 ## PeeringProperties
 ### Properties
@@ -151,4 +123,32 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## PeeringServiceProperties
+### Properties
+* **peeringServiceLocation**: string
+* **peeringServiceProvider**: string
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+
+## PeeringServiceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## PeeringServicePrefixProperties
+### Properties
+* **errorMessage**: string (ReadOnly)
+* **events**: PeeringServicePrefixEvent[] (ReadOnly)
+* **learnedType**: 'None' | 'ViaServiceProvider' | 'ViaSession' (ReadOnly)
+* **prefix**: string
+* **prefixValidationState**: 'Failed' | 'Invalid' | 'None' | 'Pending' | 'Unknown' | 'Verified' | 'Warning' (ReadOnly)
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+
+## PeeringServicePrefixEvent
+### Properties
+* **eventDescription**: string (ReadOnly)
+* **eventLevel**: string (ReadOnly)
+* **eventSummary**: string (ReadOnly)
+* **eventTimestamp**: string (ReadOnly)
+* **eventType**: string (ReadOnly)
 

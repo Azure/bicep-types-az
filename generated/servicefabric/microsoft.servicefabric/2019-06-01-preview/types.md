@@ -12,30 +12,6 @@
 * **tags**: ResourceTags
 * **type**: 'Microsoft.ServiceFabric/clusters' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.ServiceFabric/clusters/applicationTypes@2019-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationTypeResourceProperties
-* **tags**: ProxyResourceTags
-* **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.ServiceFabric/clusters/applicationTypes/versions@2019-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationTypeVersionResourceProperties
-* **tags**: ProxyResourceTags
-* **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.ServiceFabric/clusters/applications@2019-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -60,6 +36,30 @@
 * **properties**: ServiceResourceProperties
 * **tags**: ProxyResourceTags
 * **type**: 'Microsoft.ServiceFabric/clusters/applications/services' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceFabric/clusters/applicationTypes@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationTypeResourceProperties
+* **tags**: ProxyResourceTags
+* **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ServiceFabric/clusters/applicationTypes/versions@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApplicationTypeVersionResourceProperties
+* **tags**: ProxyResourceTags
+* **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant)
 
 ## ClusterProperties
 ### Properties
@@ -238,31 +238,6 @@
 * **Additional Properties Type**: ServiceTypeHealthPolicy
 
 ## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ApplicationTypeResourceProperties
-### Properties
-* **provisioningState**: string (ReadOnly)
-
-## ProxyResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ApplicationTypeVersionResourceProperties
-### Properties
-* **appPackageUrl**: string (Required)
-* **defaultParameterList**: ApplicationTypeParameterList (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-
-## ApplicationTypeParameterList
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -453,6 +428,31 @@
 ### Properties
 * **instanceCount**: int
 * **serviceKind**: 'Stateless' (Required)
+
+## ProxyResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ApplicationTypeResourceProperties
+### Properties
+* **provisioningState**: string (ReadOnly)
+
+## ProxyResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ApplicationTypeVersionResourceProperties
+### Properties
+* **appPackageUrl**: string (Required)
+* **defaultParameterList**: ApplicationTypeParameterList (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+
+## ApplicationTypeParameterList
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ProxyResourceTags
 ### Properties

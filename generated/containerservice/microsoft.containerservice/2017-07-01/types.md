@@ -64,7 +64,7 @@
 
 ## ContainerServiceMasterProfile
 ### Properties
-* **count**: '1' | '3' | '5'
+* **count**: int
 * **dnsPrefix**: string (Required)
 * **firstConsecutiveStaticIP**: string
 * **fqdn**: string (ReadOnly)

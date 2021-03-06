@@ -211,7 +211,7 @@
 ## PolicySettings
 ### Properties
 * **defaultCustomBlockResponseBody**: string
-* **defaultCustomBlockResponseStatusCode**: '200' | '403' | '405' | '406' | '429'
+* **defaultCustomBlockResponseStatusCode**: int
 * **defaultRedirectUrl**: string
 * **enabledState**: 'Disabled' | 'Enabled'
 * **mode**: 'Detection' | 'Prevention'

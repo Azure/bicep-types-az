@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' (Required, DeployTimeConstant)
-* **properties**: DatadogAgreementProperties (WriteOnly)
+* **properties**: DatadogAgreementProperties
 * **type**: 'Microsoft.Datadog/agreements' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Datadog/monitors@2020-02-01-preview
@@ -42,14 +42,14 @@
 
 ## DatadogAgreementProperties
 ### Properties
-* **accepted**: bool (WriteOnly)
-* **licenseTextLink**: string (WriteOnly)
-* **plan**: string (WriteOnly)
-* **privacyPolicyLink**: string (WriteOnly)
-* **product**: string (WriteOnly)
-* **publisher**: string (WriteOnly)
-* **retrieveDatetime**: string (WriteOnly)
-* **signature**: string (WriteOnly)
+* **accepted**: bool
+* **licenseTextLink**: string
+* **plan**: string
+* **privacyPolicyLink**: string
+* **product**: string
+* **publisher**: string
+* **retrieveDatetime**: string
+* **signature**: string
 
 ## IdentityProperties
 ### Properties

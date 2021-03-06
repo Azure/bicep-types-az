@@ -49,15 +49,6 @@
 * **properties**: FirewallRuleProperties (Required)
 * **type**: 'Microsoft.DBForPostgreSQL/servers/firewallRules' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.DBForPostgreSQL/servers/virtualNetworkRules@2017-12-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkRuleProperties
-* **type**: 'Microsoft.DBForPostgreSQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.DBforPostgreSQL/servers/securityAlertPolicies@2017-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -66,6 +57,15 @@
 * **name**: 'Default' (Required, DeployTimeConstant)
 * **properties**: SecurityAlertPolicyProperties
 * **type**: 'Microsoft.DBforPostgreSQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.DBForPostgreSQL/servers/virtualNetworkRules@2017-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualNetworkRuleProperties
+* **type**: 'Microsoft.DBForPostgreSQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
 
 ## ResourceIdentity
 ### Properties
@@ -95,7 +95,7 @@
 ### ServerPropertiesForDefaultCreate
 #### Properties
 * **administratorLogin**: string (Required, WriteOnly)
-* **administratorLoginPassword**: any (Required, WriteOnly)
+* **administratorLoginPassword**: string (Required, WriteOnly)
 * **createMode**: 'Default' (Required)
 
 ### ServerPropertiesForGeoRestore
@@ -146,7 +146,7 @@
 ## ServerPropertiesForDefaultCreate
 ### Properties
 * **administratorLogin**: string (Required, WriteOnly)
-* **administratorLoginPassword**: any (Required, WriteOnly)
+* **administratorLoginPassword**: string (Required, WriteOnly)
 * **createMode**: 'Default' (Required)
 
 ## ServerPropertiesForGeoRestore
@@ -204,12 +204,6 @@
 * **endIpAddress**: string (Required)
 * **startIpAddress**: string (Required)
 
-## VirtualNetworkRuleProperties
-### Properties
-* **ignoreMissingVnetServiceEndpoint**: bool
-* **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly)
-* **virtualNetworkSubnetId**: string (Required)
-
 ## SecurityAlertPolicyProperties
 ### Properties
 * **disabledAlerts**: string[]
@@ -219,4 +213,10 @@
 * **state**: 'Disabled' | 'Enabled' (Required)
 * **storageAccountAccessKey**: string
 * **storageEndpoint**: string
+
+## VirtualNetworkRuleProperties
+### Properties
+* **ignoreMissingVnetServiceEndpoint**: bool
+* **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly)
+* **virtualNetworkSubnetId**: string (Required)
 

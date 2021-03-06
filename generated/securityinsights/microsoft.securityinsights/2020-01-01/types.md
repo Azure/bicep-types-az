@@ -161,10 +161,10 @@
 * **enabled**: bool (Required)
 * **lastModifiedUtc**: string (ReadOnly)
 * **query**: string
-* **queryFrequency**: any
-* **queryPeriod**: any
+* **queryFrequency**: string
+* **queryPeriod**: string
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium'
-* **suppressionDuration**: any (Required)
+* **suppressionDuration**: string (Required)
 * **suppressionEnabled**: bool (Required)
 * **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PrivilegeEscalation'[]
 * **triggerOperator**: 'Equal' | 'GreaterThan' | 'LessThan' | 'NotEqual'

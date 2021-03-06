@@ -5,9 +5,9 @@
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (WriteOnly)
+* **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationAssignmentProperties (WriteOnly)
+* **properties**: ConfigurationAssignmentProperties
 * **type**: 'Microsoft.Maintenance/configurationAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Maintenance/maintenanceConfigurations@2020-07-01-preview
@@ -23,8 +23,8 @@
 
 ## ConfigurationAssignmentProperties
 ### Properties
-* **maintenanceConfigurationId**: string (WriteOnly)
-* **resourceId**: string (WriteOnly)
+* **maintenanceConfigurationId**: string
+* **resourceId**: string
 
 ## MaintenanceConfigurationProperties
 ### Properties

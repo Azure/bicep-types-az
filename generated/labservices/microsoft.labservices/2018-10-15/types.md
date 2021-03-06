@@ -145,7 +145,7 @@
 * **maxUsersInLab**: int
 * **provisioningState**: string
 * **uniqueIdentifier**: string
-* **usageQuota**: any
+* **usageQuota**: string
 * **userAccessMode**: 'Open' | 'Restricted'
 * **userQuota**: int (ReadOnly)
 
@@ -207,7 +207,7 @@
 * **passwordLastReset**: string (ReadOnly)
 * **provisioningState**: string
 * **resourceSets**: ResourceSet
-* **totalUsage**: any (ReadOnly)
+* **totalUsage**: string (ReadOnly)
 * **uniqueIdentifier**: string
 
 ## NetworkInterface
@@ -235,7 +235,7 @@
 * **latestOperationResult**: LatestOperationResult (ReadOnly)
 * **provisioningState**: string
 * **tenantId**: string (ReadOnly)
-* **totalUsage**: any (ReadOnly)
+* **totalUsage**: string (ReadOnly)
 * **uniqueIdentifier**: string
 
 ## ResourceTags

@@ -1,42 +1,5 @@
 # Microsoft.Network @ 2020-07-01
 
-## Resource Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies@2020-07-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: WebApplicationFirewallPolicyPropertiesFormat
-* **tags**: ResourceTags
-* **type**: 'Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.Network/ExpressRoutePorts@2020-07-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ManagedServiceIdentity
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: ExpressRoutePortPropertiesFormat
-* **tags**: ResourceTags
-* **type**: 'Microsoft.Network/ExpressRoutePorts' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.Network/IpAllocations@2020-07-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: IpAllocationPropertiesFormat
-* **tags**: ResourceTags
-* **type**: 'Microsoft.Network/IpAllocations' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.Network/applicationGateways@2020-07-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -60,6 +23,18 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: ApplicationGatewayPrivateEndpointConnectionProperties
 * **type**: 'Microsoft.Network/applicationGateways/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies@2020-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: WebApplicationFirewallPolicyPropertiesFormat
+* **tags**: ResourceTags
+* **type**: 'Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/applicationSecurityGroups@2020-07-01
 * **Valid Scope(s)**: ResourceGroup
@@ -245,6 +220,19 @@
 * **properties**: ExpressRouteConnectionProperties
 * **type**: 'Microsoft.Network/expressRouteGateways/expressRouteConnections' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Network/ExpressRoutePorts@2020-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **identity**: ManagedServiceIdentity
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ExpressRoutePortPropertiesFormat
+* **tags**: ResourceTags
+* **type**: 'Microsoft.Network/ExpressRoutePorts' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Network/firewallPolicies@2020-07-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -267,6 +255,18 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: FirewallPolicyRuleCollectionGroupProperties
 * **type**: 'Microsoft.Network/firewallPolicies/ruleCollectionGroups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/IpAllocations@2020-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: IpAllocationPropertiesFormat
+* **tags**: ResourceTags
+* **type**: 'Microsoft.Network/IpAllocations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/ipGroups@2020-07-01
 * **Valid Scope(s)**: ResourceGroup
@@ -414,10 +414,10 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
-* **etag**: string (ReadOnly, WriteOnly)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: InboundSecurityRuleProperties (WriteOnly)
+* **properties**: InboundSecurityRuleProperties
 * **type**: 'Microsoft.Network/networkVirtualAppliances/inboundSecurityRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/networkVirtualAppliances/virtualApplianceSites@2020-07-01
@@ -715,18 +715,6 @@
 * **tags**: ResourceTags
 * **type**: 'Microsoft.Network/virtualNetworkGateways' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.Network/virtualNetworkTaps@2020-07-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkTapPropertiesFormat
-* **tags**: ResourceTags
-* **type**: 'Microsoft.Network/virtualNetworkTaps' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.Network/virtualNetworks@2020-07-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -759,6 +747,18 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: VirtualNetworkPeeringPropertiesFormat
 * **type**: 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Network/virtualNetworkTaps@2020-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: VirtualNetworkTapPropertiesFormat
+* **tags**: ResourceTags
+* **type**: 'Microsoft.Network/virtualNetworkTaps' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/virtualRouters@2020-07-01
 * **Valid Scope(s)**: ResourceGroup
@@ -827,29 +827,6 @@
 * **properties**: VpnSiteProperties
 * **tags**: ResourceTags
 * **type**: 'Microsoft.Network/vpnSites' (ReadOnly, DeployTimeConstant)
-
-## WebApplicationFirewallPolicyPropertiesFormat
-### Properties
-* **applicationGateways**: ApplicationGateway[] (ReadOnly)
-* **customRules**: WebApplicationFirewallCustomRule[]
-* **httpListeners**: SubResource[] (ReadOnly)
-* **managedRules**: ManagedRulesDefinition (Required)
-* **pathBasedRules**: SubResource[] (ReadOnly)
-* **policySettings**: PolicySettings
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly)
-
-## ApplicationGateway
-### Properties
-* **etag**: string (ReadOnly)
-* **id**: string
-* **identity**: ManagedServiceIdentity
-* **location**: string
-* **name**: string (ReadOnly)
-* **properties**: ApplicationGatewayPropertiesFormat
-* **tags**: ResourceTags
-* **type**: string (ReadOnly)
-* **zones**: string[]
 
 ## ManagedServiceIdentity
 ### Properties
@@ -1920,6 +1897,34 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## WebApplicationFirewallPolicyPropertiesFormat
+### Properties
+* **applicationGateways**: ApplicationGateway[] (ReadOnly)
+* **customRules**: WebApplicationFirewallCustomRule[]
+* **httpListeners**: SubResource[] (ReadOnly)
+* **managedRules**: ManagedRulesDefinition (Required)
+* **pathBasedRules**: SubResource[] (ReadOnly)
+* **policySettings**: PolicySettings
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly)
+
+## ApplicationGateway
+### Properties
+* **etag**: string (ReadOnly)
+* **id**: string
+* **identity**: ManagedServiceIdentity
+* **location**: string
+* **name**: string (ReadOnly)
+* **properties**: ApplicationGatewayPropertiesFormat
+* **tags**: ResourceTags
+* **type**: string (ReadOnly)
+* **zones**: string[]
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## WebApplicationFirewallCustomRule
 ### Properties
 * **action**: 'Allow' | 'Block' | 'Log' (Required)
@@ -1976,76 +1981,6 @@
 * **mode**: 'Detection' | 'Prevention'
 * **requestBodyCheck**: bool
 * **state**: 'Disabled' | 'Enabled'
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ExpressRoutePortPropertiesFormat
-### Properties
-* **allocationDate**: string (ReadOnly)
-* **bandwidthInGbps**: int
-* **circuits**: SubResource[] (ReadOnly)
-* **encapsulation**: 'Dot1Q' | 'QinQ'
-* **etherType**: string (ReadOnly)
-* **links**: ExpressRouteLink[]
-* **mtu**: string (ReadOnly)
-* **peeringLocation**: string
-* **provisionedBandwidthInGbps**: int (ReadOnly)
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **resourceGuid**: string (ReadOnly)
-
-## ExpressRouteLink
-### Properties
-* **etag**: string (ReadOnly)
-* **id**: string
-* **name**: string
-* **properties**: ExpressRouteLinkPropertiesFormat
-
-## ExpressRouteLinkPropertiesFormat
-### Properties
-* **adminState**: 'Disabled' | 'Enabled'
-* **connectorType**: 'LC' | 'SC' (ReadOnly)
-* **interfaceName**: string (ReadOnly)
-* **macSecConfig**: ExpressRouteLinkMacSecConfig
-* **patchPanelId**: string (ReadOnly)
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **rackId**: string (ReadOnly)
-* **routerName**: string (ReadOnly)
-
-## ExpressRouteLinkMacSecConfig
-### Properties
-* **cakSecretIdentifier**: string
-* **cipher**: 'GcmAes128' | 'GcmAes256' | 'GcmAesXpn128' | 'GcmAesXpn256'
-* **cknSecretIdentifier**: string
-* **sciState**: 'Disabled' | 'Enabled'
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IpAllocationPropertiesFormat
-### Properties
-* **allocationTags**: IpAllocationPropertiesFormatAllocationTags
-* **ipamAllocationId**: string
-* **prefix**: string
-* **prefixLength**: int
-* **prefixType**: 'IPv4' | 'IPv6'
-* **subnet**: SubResource (ReadOnly)
-* **type**: 'Hypernet' | 'Undefined'
-* **virtualNetwork**: SubResource (ReadOnly)
-
-## IpAllocationPropertiesFormatAllocationTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
@@ -2767,6 +2702,50 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ExpressRoutePortPropertiesFormat
+### Properties
+* **allocationDate**: string (ReadOnly)
+* **bandwidthInGbps**: int
+* **circuits**: SubResource[] (ReadOnly)
+* **encapsulation**: 'Dot1Q' | 'QinQ'
+* **etherType**: string (ReadOnly)
+* **links**: ExpressRouteLink[]
+* **mtu**: string (ReadOnly)
+* **peeringLocation**: string
+* **provisionedBandwidthInGbps**: int (ReadOnly)
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+* **resourceGuid**: string (ReadOnly)
+
+## ExpressRouteLink
+### Properties
+* **etag**: string (ReadOnly)
+* **id**: string
+* **name**: string
+* **properties**: ExpressRouteLinkPropertiesFormat
+
+## ExpressRouteLinkPropertiesFormat
+### Properties
+* **adminState**: 'Disabled' | 'Enabled'
+* **connectorType**: 'LC' | 'SC' (ReadOnly)
+* **interfaceName**: string (ReadOnly)
+* **macSecConfig**: ExpressRouteLinkMacSecConfig
+* **patchPanelId**: string (ReadOnly)
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+* **rackId**: string (ReadOnly)
+* **routerName**: string (ReadOnly)
+
+## ExpressRouteLinkMacSecConfig
+### Properties
+* **cakSecretIdentifier**: string
+* **cipher**: 'GcmAes128' | 'GcmAes256' | 'GcmAesXpn128' | 'GcmAesXpn256'
+* **cknSecretIdentifier**: string
+* **sciState**: 'Disabled' | 'Enabled'
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## FirewallPolicyPropertiesFormat
 ### Properties
 * **basePolicy**: SubResource
@@ -2964,6 +2943,27 @@
 ## FirewallPolicyNatRuleCollectionAction
 ### Properties
 * **type**: 'DNAT'
+
+## IpAllocationPropertiesFormat
+### Properties
+* **allocationTags**: IpAllocationPropertiesFormatAllocationTags
+* **ipamAllocationId**: string
+* **prefix**: string
+* **prefixLength**: int
+* **prefixType**: 'IPv4' | 'IPv6'
+* **subnet**: SubResource (ReadOnly)
+* **type**: 'Hypernet' | 'Undefined'
+* **virtualNetwork**: SubResource (ReadOnly)
+
+## IpAllocationPropertiesFormatAllocationTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## IpGroupPropertiesFormat
 ### Properties
@@ -3200,14 +3200,14 @@
 
 ## InboundSecurityRuleProperties
 ### Properties
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly, WriteOnly)
-* **rules**: InboundSecurityRules[] (WriteOnly)
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+* **rules**: InboundSecurityRules[]
 
 ## InboundSecurityRules
 ### Properties
-* **destinationPortRange**: int (WriteOnly)
-* **protocol**: 'TCP' | 'UDP' (WriteOnly)
-* **sourceAddressPrefix**: string (WriteOnly)
+* **destinationPortRange**: int
+* **protocol**: 'TCP' | 'UDP'
+* **sourceAddressPrefix**: string
 
 ## VirtualApplianceSiteProperties
 ### Properties
@@ -3685,11 +3685,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## VirtualNetworkPropertiesFormat
 ### Properties
 * **addressSpace**: AddressSpace
@@ -3731,6 +3726,11 @@
 * **remoteBgpCommunities**: VirtualNetworkBgpCommunities
 * **remoteVirtualNetwork**: SubResource
 * **useRemoteGateways**: bool
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
