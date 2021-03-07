@@ -308,10 +308,10 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
           return { success: false, failureReason: `Found undefined parameter reference ${typeSegment}`, resourceTypes: [] };
         }
 
-        const choiceSchema = (parameter.schema as ChoiceSchema);
-        if (!choiceSchema) {
+        const choiceSchema = parameter.schema;
+        if (!(choiceSchema instanceof ChoiceSchema)) {
           return { success: false, failureReason: `Parameter reference ${typeSegment} is not defined as an enum`, resourceTypes: [] };
-        }
+        }        
 
         if (choiceSchema.choices.length === 0) {
           return { success: false, failureReason: `Parameter reference ${typeSegment} is defined as an enum, but doesn't have any specified values`, resourceTypes: [] };

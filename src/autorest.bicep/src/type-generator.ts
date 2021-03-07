@@ -153,7 +153,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
 
     for (const subTypeName of uniq([...keys(putSubTypes), ...keys(getSubTypes)])) {
       const putSubType = putSubTypes[subTypeName] instanceof ObjectSchema ? (putSubTypes[subTypeName] as ObjectSchema) : undefined;
-      const getSubType = putSubTypes[subTypeName] instanceof ObjectSchema ? (getSubTypes[subTypeName] as ObjectSchema) : undefined;
+      const getSubType = getSubTypes[subTypeName] instanceof ObjectSchema ? (getSubTypes[subTypeName] as ObjectSchema) : undefined;
 
       yield { subTypeName, putSubType, getSubType };
     }
