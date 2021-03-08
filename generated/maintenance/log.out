@@ -19,21 +19,21 @@ INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping resource type microsoft.maintenance/applyupdates under path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{providerName}/{resourceParentType}/{resourceParentName}/{resourceType}/{resourceName}/providers/Microsoft.Maintenance/applyUpdates/default': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-maintenance-2018-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping resource type microsoft.maintenance/applyupdates under path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{providerName}/{resourceParentType}/{resourceParentName}/{resourceType}/{resourceName}/providers/Microsoft.Maintenance/applyUpdates/default': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-maintenance-2020-07-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping resource type microsoft.maintenance/applyupdates under path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{providerName}/{resourceParentType}/{resourceParentName}/{resourceType}/{resourceName}/providers/Microsoft.Maintenance/applyUpdates/default': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-maintenance-2020-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -47,5 +47,5 @@ INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping resource type microsoft.maintenance/applyupdates under path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{providerName}/{resourceParentType}/{resourceParentName}/{resourceType}/{resourceName}/providers/Microsoft.Maintenance/applyUpdates/default': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 2ms
-[16.62 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 1ms
+[16.27 s] Generation Complete

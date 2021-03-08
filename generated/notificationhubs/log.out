@@ -89,7 +89,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'DebugSendResult' with an undef
 WARNING (PreCheck/SchemaMissingType): The schema 'Sku' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 11ms
+INFORMATION: Autorest.AzureResourceSchema took 22ms
 Processing batch task - {"tag":"schema-notificationhubs-2016-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -227,7 +227,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 9ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-notificationhubs-2017-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -311,7 +311,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'DebugSendResult' with an undef
 WARNING (PreCheck/SchemaMissingType): The schema 'Sku' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 10ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-notificationhubs-2016-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -450,4 +450,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 3ms
-[20.91 s] Generation Complete
+[20.1 s] Generation Complete

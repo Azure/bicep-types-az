@@ -52,15 +52,12 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorAdditionalInfo' with an u
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 An error was encountered while handling a request: TypeError: Cannot set property 'protectedItemType' of undefined
-    at handlePolymorphicType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:511:74)
-    at parseObjectType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:538:17)
-    at parseType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:427:20)
-    at generateProviderTypes (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:117:44)
-    at generateTypesForApiVersion (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:83:27)
-    at generateTypesForApiVersion.next (<anonymous>)
-    at generateTypes (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/generator.js:24:42)
-    at generateTypes.next (<anonymous>)
-    at processRequest (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/main.js:15:50)
+    at handlePolymorphicType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/type-generator.js:212:74)
+    at parseObjectType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/type-generator.js:239:17)
+    at parseType (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/type-generator.js:128:20)
+    at generateTypes (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/type-generator.js:46:44)
+    at Object.generateTypes (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/type-generator.js:277:12)
+    at processRequest (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/dist/src/main.js:18:44)
     at async /home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/node_modules/@autorest/extension-base/dist/extension-base.js:55:17
 FATAL: TypeError: Cannot set property 'protectedItemType' of undefined
 Failure during batch task - {"tag":"schema-recoveryservices-2021-01-01"} -- Error: Plugin azureresourceschema reported failure..

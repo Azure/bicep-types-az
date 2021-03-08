@@ -119,7 +119,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponseCommon' with an u
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorAdditionalInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-insights-2019-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -215,7 +215,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ActionGroupPatchBody-tags' wit
 WARNING (PreCheck/SchemaMissingType): The schema 'ActionGroupPatch' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-insights-2018-11-27-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -335,7 +335,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'LogSearchRule' with an undefin
 WARNING (PreCheck/SchemaMissingType): The schema 'LogSearchRulePatch' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-insights-2018-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -615,7 +615,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ServiceDiagnosticSettingsResou
 WARNING (PreCheck/SchemaMissingType): The schema 'ServiceDiagnosticSettingsResourcePatch-tags' with an undefined type and additionalProperties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-insights-2016-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -887,7 +887,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponseCommon' with an u
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorAdditionalInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-insights-2019-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -931,7 +931,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ActionGroupPatchBody-tags' wit
 WARNING (PreCheck/SchemaMissingType): The schema 'ActionGroupPatch' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-insights-2019-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -983,7 +983,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ActionGroupPatchBody-tags' wit
 WARNING (PreCheck/SchemaMissingType): The schema 'ActionGroupPatch' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-insights-2018-11-27-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1053,7 +1053,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TimeSeriesInformation' with an
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ErrorType' -> 'ErrorTypeAutoGenerated'
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-insights-2018-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1215,7 +1215,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'BaselineProperties' with an un
 WARNING (PreCheck/SchemaMissingType): The schema 'TimeSeriesInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 0ms
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-insights-2017-05-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1353,7 +1353,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ActivityLogAlertResourcePatch'
 WARNING (PreCheck/SchemaMissingType): The schema 'ActivityLogAlertPatch' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-insights-2016-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1431,7 +1431,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'MetricDefinition' with an unde
 WARNING (PreCheck/SchemaMissingType): The schema 'MetricDefinitionCollection' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-insights-2015-07-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1541,5 +1541,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'AlertRuleResourcePatch-tags' w
 WARNING (PreCheck/SchemaMissingType): The schema 'AlertRuleResourceCollection' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 3ms
-[112.9 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 2ms
+[114.45 s] Generation Complete

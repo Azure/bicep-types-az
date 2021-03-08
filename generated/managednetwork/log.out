@@ -113,5 +113,5 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'HubAndSpokePeeringPolic
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'HubAndSpokePeeringPolicyProperties' has a property 'spokes' that is already declared the parent schema 'ManagedNetworkPeeringPolicyProperties' but isn't significantly different. The property has been removed from HubAndSpokePeeringPolicyProperties
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'MeshPeeringPolicyProperties' has a property 'mesh' that is already declared the parent schema 'ManagedNetworkPeeringPolicyProperties' but isn't significantly different. The property has been removed from MeshPeeringPolicyProperties
-INFORMATION: Autorest.AzureResourceSchema took 2ms
-[7.28 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 3ms
+[7.11 s] Generation Complete

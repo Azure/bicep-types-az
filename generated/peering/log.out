@@ -11,7 +11,7 @@ INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' 
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 14ms
+INFORMATION: Autorest.AzureResourceSchema took 11ms
 Processing batch task - {"tag":"schema-peering-2020-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -19,41 +19,11 @@ INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-peering-2020-01-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 8ms
-Processing batch task - {"tag":"schema-peering-2019-09-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 4ms
-Processing batch task - {"tag":"schema-peering-2019-08-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 4ms
-Processing batch task - {"tag":"schema-peering-2020-10-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 4ms
-Processing batch task - {"tag":"schema-peering-2020-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 6ms
-Processing batch task - {"tag":"schema-peering-2020-01-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-peering-2019-09-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -65,5 +35,35 @@ INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' 
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+INFORMATION: Autorest.AzureResourceSchema took 3ms
+Processing batch task - {"tag":"schema-peering-2020-10-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 4ms
-[42.76 s] Generation Complete
+Processing batch task - {"tag":"schema-peering-2020-04-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+INFORMATION: Autorest.AzureResourceSchema took 4ms
+Processing batch task - {"tag":"schema-peering-2020-01-01-preview"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+INFORMATION: Autorest.AzureResourceSchema took 4ms
+Processing batch task - {"tag":"schema-peering-2019-09-01-preview"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+INFORMATION: Autorest.AzureResourceSchema took 3ms
+Processing batch task - {"tag":"schema-peering-2019-08-01-preview"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+INFORMATION: Autorest.AzureResourceSchema took 3ms
+[41.13 s] Generation Complete

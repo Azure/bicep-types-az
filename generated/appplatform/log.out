@@ -25,7 +25,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudError' with an undefined 
 WARNING (PreCheck/SchemaMissingType): The schema 'CloudErrorBody' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-appplatform-2019-05-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -35,7 +35,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudError' with an undefined 
 WARNING (PreCheck/SchemaMissingType): The schema 'CloudErrorBody' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 10ms
+INFORMATION: Autorest.AzureResourceSchema took 8ms
 Processing batch task - {"tag":"schema-appplatform-2020-11-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -55,7 +55,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudError' with an undefined 
 WARNING (PreCheck/SchemaMissingType): The schema 'CloudErrorBody' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 6ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-appplatform-2019-05-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -65,5 +65,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudError' with an undefined 
 WARNING (PreCheck/SchemaMissingType): The schema 'CloudErrorBody' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 5ms
-[33.1 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 8ms
+[33.58 s] Generation Complete

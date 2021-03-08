@@ -32,4 +32,4 @@ WARNING: Skipping resource type microsoft.portal/locations/consoles under path '
 WARNING: Skipping resource type microsoft.portal/usersettings under path '/providers/Microsoft.Portal/userSettings/{userSettingsName}': Unable to locate parameter with name 'userSettingsName'
 WARNING: Skipping resource type microsoft.portal/consoles under path '/providers/Microsoft.Portal/consoles/{consoleName}': Unable to locate parameter with name 'consoleName'
 INFORMATION: Autorest.AzureResourceSchema took 1ms
-[6.23 s] Generation Complete
+[6.08 s] Generation Complete

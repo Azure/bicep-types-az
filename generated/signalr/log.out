@@ -11,7 +11,7 @@ INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' 
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 11ms
+INFORMATION: Autorest.AzureResourceSchema took 12ms
 Processing batch task - {"tag":"schema-signalrservice-2020-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -47,7 +47,7 @@ INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' 
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-signalrservice-2020-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -78,4 +78,4 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'SignalRResource' has a 
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'SignalRResource' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from SignalRResource
 INFORMATION: Autorest.AzureResourceSchema took 1ms
-[20.81 s] Generation Complete
+[21.13 s] Generation Complete

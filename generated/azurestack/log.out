@@ -46,4 +46,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProductLog' with an undefined 
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 2ms
-[8.31 s] Generation Complete
+[8.11 s] Generation Complete

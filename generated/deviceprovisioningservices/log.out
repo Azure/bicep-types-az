@@ -21,7 +21,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource' with an undefine
 WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 9ms
+INFORMATION: Autorest.AzureResourceSchema took 19ms
 Processing batch task - {"tag":"schema-devices-2020-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -37,7 +37,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource' with an undefine
 WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-devices-2020-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -69,7 +69,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource' with an undefine
 WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 1ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-devices-2017-11-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -85,7 +85,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource' with an undefine
 WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-devices-2017-08-21-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -113,7 +113,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource' with an undefine
 WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-devices-2020-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -145,7 +145,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource' with an undefine
 WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 1ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-devices-2018-01-22"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -177,7 +177,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource' with an undefine
 WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-devices-2017-08-21-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -190,4 +190,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an und
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 2ms
-[37.72 s] Generation Complete
+[38.23 s] Generation Complete
