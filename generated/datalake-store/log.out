@@ -153,7 +153,7 @@ INFORMATION: Options {"input":["prechecker"],"prenamer":true,"always-create-cont
 INFORMATION: Accept-param true
 INFORMATION: Options {"input":["prechecker"],"prenamer":true,"always-create-content-type-parameter":true,"group-parameters":true,"additional-checks":false,"lenient-model-deduplication":true,"naming":{"override":{"cmyk":"CMYK","$host":"$host"}},"always-create-accept-parameter":true}
 INFORMATION: Accept-param true
-INFORMATION: Autorest.AzureResourceSchema took 1ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-datalakestore-2016-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -302,4 +302,4 @@ INFORMATION: Accept-param true
 INFORMATION: Options {"input":["prechecker"],"prenamer":true,"always-create-content-type-parameter":true,"group-parameters":true,"additional-checks":false,"lenient-model-deduplication":true,"naming":{"override":{"cmyk":"CMYK","$host":"$host"}},"always-create-accept-parameter":true}
 INFORMATION: Accept-param true
 INFORMATION: Autorest.AzureResourceSchema took 1ms
-[12.48 s] Generation Complete
+[12.66 s] Generation Complete

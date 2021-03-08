@@ -34,7 +34,7 @@ WARNING (Modeler/MissingType): The schema 'ParameterDefinition-allowedValuesItem
 
 WARNING (Modeler/MissingType): The schema 'RoleAssignmentArtifactProperties-principalIds' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json#/components/schemas/RoleAssignmentArtifactProperties-principalIds
-INFORMATION: Autorest.AzureResourceSchema took 12ms
+INFORMATION: Autorest.AzureResourceSchema took 11ms
 Processing batch task - {"tag":"schema-blueprint-2017-11-11-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -60,7 +60,7 @@ WARNING (Modeler/MissingType): The schema 'ParameterValue-value' has no type or 
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json#/components/schemas/ParameterValue-value
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintAssignment.json#/components/schemas/ParameterValue-value
 WARNING: Skipping resource type microsoft.blueprint/blueprints/versions under path '/providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Blueprint/blueprints/{blueprintName}/versions/{versionId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 5ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-blueprint-2018-11-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -115,5 +115,5 @@ WARNING (Modeler/MissingType): The schema 'ParameterValue-value' has no type or 
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json#/components/schemas/ParameterValue-value
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintAssignment.json#/components/schemas/ParameterValue-value
 WARNING: Skipping resource type microsoft.blueprint/blueprints/versions under path '/providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Blueprint/blueprints/{blueprintName}/versions/{versionId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 5ms
-[16.47 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 3ms
+[15.86 s] Generation Complete

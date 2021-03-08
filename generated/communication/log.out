@@ -22,4 +22,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse-error' with an u
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 1ms
-[6.63 s] Generation Complete
+[6.41 s] Generation Complete

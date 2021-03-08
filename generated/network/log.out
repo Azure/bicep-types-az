@@ -1392,10 +1392,10 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'ResourceNavigationLink'
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'VpnServerConfiguration' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from VpnServerConfiguration
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
-WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: Autorest.AzureResourceSchema took 153ms
+WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
+INFORMATION: Autorest.AzureResourceSchema took 135ms
 Processing batch task - {"tag":"schema-network-2020-07-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2774,10 +2774,10 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'ResourceNavigationLink'
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'VpnServerConfiguration' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from VpnServerConfiguration
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
-WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: Autorest.AzureResourceSchema took 129ms
+WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
+INFORMATION: Autorest.AzureResourceSchema took 126ms
 Processing batch task - {"tag":"schema-network-2020-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -4134,10 +4134,10 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'ResourceNavigationLink'
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'VpnServerConfiguration' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from VpnServerConfiguration
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
-WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: Autorest.AzureResourceSchema took 134ms
+WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
+INFORMATION: Autorest.AzureResourceSchema took 126ms
 Processing batch task - {"tag":"schema-network-2020-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -5436,10 +5436,10 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'ResourceNavigationLink'
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'VpnServerConfiguration' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from VpnServerConfiguration
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
-WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: Autorest.AzureResourceSchema took 125ms
+WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
+INFORMATION: Autorest.AzureResourceSchema took 118ms
 Processing batch task - {"tag":"schema-network-2020-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -6674,18 +6674,18 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'ResourceNavigationLink'
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'VpnServerConfiguration' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from VpnServerConfiguration
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
-WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: Autorest.AzureResourceSchema took 105ms
+WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
+INFORMATION: Autorest.AzureResourceSchema took 114ms
 Processing batch task - {"tag":"schema-network-2020-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
 <--- Last few GCs --->
 
-[9924:0x4a96fc0]   655947 ms: Mark-sweep (reduce) 2029.9 (2050.9) -> 2029.1 (2052.2) MB, 1090.0 / 0.0 ms  (average mu = 0.168, current mu = 0.016) allocation failure scavenge might not succeed
-[9924:0x4a96fc0]   657053 ms: Mark-sweep (reduce) 2030.1 (2051.2) -> 2029.3 (2052.2) MB, 1103.3 / 0.0 ms  (average mu = 0.089, current mu = 0.002) allocation failure scavenge might not succeed
+[9977:0x4909fc0]   648564 ms: Mark-sweep 2027.7 (2055.2) -> 2024.5 (2055.9) MB, 1034.5 / 0.0 ms  (average mu = 0.087, current mu = 0.020) allocation failure scavenge might not succeed
+[9977:0x4909fc0]   649634 ms: Mark-sweep 2028.7 (2055.9) -> 2025.4 (2057.2) MB, 1048.9 / 0.0 ms  (average mu = 0.054, current mu = 0.020) allocation failure scavenge might not succeed
 
 
 <--- JS stacktrace --->
@@ -6699,12 +6699,6 @@ FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaS
  6: 0xd34f1f  [/usr/local/bin/node]
  7: 0xd42fab v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/usr/local/bin/node]
  8: 0xd46b6c v8::internal::Heap::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/usr/local/bin/node]
- 9: 0xd0c472 v8::internal::Factory::AllocateRaw(int, v8::internal::AllocationType, v8::internal::AllocationAlignment) [/usr/local/bin/node]
-10: 0xd062f4 v8::internal::FactoryBase<v8::internal::Factory>::AllocateRawWithImmortalMap(int, v8::internal::AllocationType, v8::internal::Map, v8::internal::AllocationAlignment) [/usr/local/bin/node]
-11: 0xd08641 v8::internal::FactoryBase<v8::internal::Factory>::NewRawTwoByteString(int, v8::internal::AllocationType) [/usr/local/bin/node]
-12: 0x10f24cc v8::internal::IncrementalStringBuilder::Extend() [/usr/local/bin/node]
-13: 0xe3233e v8::internal::JsonStringifier::SerializeString(v8::internal::Handle<v8::internal::String>) [/usr/local/bin/node]
-14: 0xe380ea v8::internal::JsonStringifier::Result v8::internal::JsonStringifier::Serialize_<false>(v8::internal::Handle<v8::internal::Object>, bool, v8::internal::Handle<v8::internal::Object>) [/usr/local/bin/node]
-15: 0xe3a2cf v8::internal::JsonStringify(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>) [/usr/local/bin/node]
-16: 0xc24f4f v8::internal::Builtin_JsonStringify(int, unsigned long*, v8::internal::Isolate*) [/usr/local/bin/node]
-17: 0x14012f9  [/usr/local/bin/node]
+ 9: 0xd1524b v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationType, v8::internal::AllocationOrigin) [/usr/local/bin/node]
+10: 0x105b23f v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/usr/local/bin/node]
+11: 0x1401219  [/usr/local/bin/node]

@@ -101,5 +101,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Sku' with an undefined type an
 WARNING (PreCheck/SchemaMissingType): The schema 'MapsAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
-[14.09 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 1ms
+[14.34 s] Generation Complete

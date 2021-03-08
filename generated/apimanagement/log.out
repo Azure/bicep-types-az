@@ -623,7 +623,7 @@ WARNING: Skipping resource type microsoft.apimanagement/service/notifications/re
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 29ms
+INFORMATION: Autorest.AzureResourceSchema took 27ms
 Processing batch task - {"tag":"schema-apimanagement-2019-12-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1173,7 +1173,7 @@ WARNING: Skipping resource type microsoft.apimanagement/service/notifications/re
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 29ms
+INFORMATION: Autorest.AzureResourceSchema took 26ms
 Processing batch task - {"tag":"schema-apimanagement-2019-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1739,7 +1739,7 @@ WARNING: Skipping resource type microsoft.apimanagement/service/notifications/re
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 22ms
+INFORMATION: Autorest.AzureResourceSchema took 20ms
 Processing batch task - {"tag":"schema-apimanagement-2019-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2247,7 +2247,7 @@ WARNING: Skipping resource type microsoft.apimanagement/service/notifications/re
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 22ms
+INFORMATION: Autorest.AzureResourceSchema took 25ms
 Processing batch task - {"tag":"schema-apimanagement-2018-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2753,7 +2753,7 @@ WARNING: Skipping resource type microsoft.apimanagement/service/notifications/re
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 23ms
+INFORMATION: Autorest.AzureResourceSchema took 27ms
 Processing batch task - {"tag":"schema-apimanagement-2018-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -3241,7 +3241,7 @@ WARNING: Skipping resource type microsoft.apimanagement/service/products/groups 
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 35ms
+INFORMATION: Autorest.AzureResourceSchema took 18ms
 Processing batch task - {"tag":"schema-apimanagement-2017-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -3711,7 +3711,7 @@ WARNING: Skipping resource type microsoft.apimanagement/service/products/groups 
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 25ms
+INFORMATION: Autorest.AzureResourceSchema took 36ms
 Processing batch task - {"tag":"schema-apimanagement-2016-10-10"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -3942,7 +3942,7 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Skipping resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{uid}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 15ms
+INFORMATION: Autorest.AzureResourceSchema took 11ms
 Processing batch task - {"tag":"schema-apimanagement-2016-07-07"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -4132,7 +4132,7 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{uid}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 12ms
+INFORMATION: Autorest.AzureResourceSchema took 8ms
 Processing batch task - {"tag":"schema-apimanagement-2020-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -5866,7 +5866,7 @@ WARNING: Skipping resource type microsoft.apimanagement/service/notifications/re
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 22ms
+INFORMATION: Autorest.AzureResourceSchema took 27ms
 Processing batch task - {"tag":"schema-apimanagement-2019-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -6374,7 +6374,7 @@ WARNING: Skipping resource type microsoft.apimanagement/service/notifications/re
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 25ms
+INFORMATION: Autorest.AzureResourceSchema took 22ms
 Processing batch task - {"tag":"schema-apimanagement-2018-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -6880,15 +6880,15 @@ WARNING: Skipping resource type microsoft.apimanagement/service/notifications/re
 WARNING: Skipping resource type microsoft.apimanagement/service/portalsettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/portalsettings/signin': Found multiple definitions for the same type
 WARNING: Skipping resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}': No resource body defined
 WARNING: Skipping resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 19ms
+INFORMATION: Autorest.AzureResourceSchema took 20ms
 Processing batch task - {"tag":"schema-apimanagement-2018-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
 <--- Last few GCs --->
 
-[2223:0x52ddfc0]   563979 ms: Scavenge (reduce) 2032.7 (2052.9) -> 2032.1 (2053.9) MB, 9.4 / 0.0 ms  (average mu = 0.234, current mu = 0.262) allocation failure 
-[2223:0x52ddfc0]   563995 ms: Scavenge (reduce) 2032.8 (2052.9) -> 2032.3 (2054.4) MB, 14.9 / 0.0 ms  (average mu = 0.234, current mu = 0.262) allocation failure 
+[2224:0x6090fc0]   567423 ms: Mark-sweep (reduce) 2035.4 (2053.4) -> 2034.6 (2054.6) MB, 577.3 / 0.0 ms  (average mu = 0.261, current mu = 0.221) allocation failure scavenge might not succeed
+[2224:0x6090fc0]   568101 ms: Mark-sweep (reduce) 2035.6 (2053.6) -> 2034.8 (2054.6) MB, 675.9 / 0.0 ms  (average mu = 0.142, current mu = 0.004) allocation failure scavenge might not succeed
 
 
 <--- JS stacktrace --->
@@ -6902,6 +6902,12 @@ FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaS
  6: 0xd34f1f  [/usr/local/bin/node]
  7: 0xd42fab v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/usr/local/bin/node]
  8: 0xd46b6c v8::internal::Heap::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/usr/local/bin/node]
- 9: 0xd1524b v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationType, v8::internal::AllocationOrigin) [/usr/local/bin/node]
-10: 0x105b23f v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/usr/local/bin/node]
-11: 0x1401219  [/usr/local/bin/node]
+ 9: 0xd0c472 v8::internal::Factory::AllocateRaw(int, v8::internal::AllocationType, v8::internal::AllocationAlignment) [/usr/local/bin/node]
+10: 0xd086c2 v8::internal::FactoryBase<v8::internal::Factory>::AllocateRawArray(int, v8::internal::AllocationType) [/usr/local/bin/node]
+11: 0xd08774 v8::internal::FactoryBase<v8::internal::Factory>::NewFixedArrayWithFiller(v8::internal::Handle<v8::internal::Map>, int, v8::internal::Handle<v8::internal::Oddball>, v8::internal::AllocationType) [/usr/local/bin/node]
+12: 0xf39f1e v8::internal::Handle<v8::internal::EphemeronHashTable> v8::internal::HashTable<v8::internal::EphemeronHashTable, v8::internal::EphemeronHashTableShape>::New<v8::internal::Isolate>(v8::internal::Isolate*, int, v8::internal::AllocationType, v8::internal::MinimumCapacity) [/usr/local/bin/node]
+13: 0xf3a1e6 v8::internal::Handle<v8::internal::EphemeronHashTable> v8::internal::HashTable<v8::internal::EphemeronHashTable, v8::internal::EphemeronHashTableShape>::EnsureCapacity<v8::internal::Isolate>(v8::internal::Isolate*, v8::internal::Handle<v8::internal::EphemeronHashTable>, int, v8::internal::AllocationType) [/usr/local/bin/node]
+14: 0xf3a932 v8::internal::ObjectHashTableBase<v8::internal::EphemeronHashTable, v8::internal::EphemeronHashTableShape>::Put(v8::internal::Isolate*, v8::internal::Handle<v8::internal::EphemeronHashTable>, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, int) [/usr/local/bin/node]
+15: 0xf3aaab v8::internal::JSWeakCollection::Set(v8::internal::Handle<v8::internal::JSWeakCollection>, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, int) [/usr/local/bin/node]
+16: 0x103f361 v8::internal::Runtime_WeakCollectionSet(int, unsigned long*, v8::internal::Isolate*) [/usr/local/bin/node]
+17: 0x1401219  [/usr/local/bin/node]
