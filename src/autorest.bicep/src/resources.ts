@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { ChoiceSchema, CodeModel, HttpMethod, HttpParameter, HttpRequest, HttpResponse, ImplementationLocation, ObjectSchema, Operation, Parameter, ParameterLocation, Request, Response, Schema, SchemaResponse } from "@autorest/codemodel";
+import { ChoiceSchema, CodeModel, HttpMethod, HttpParameter, HttpRequest, HttpResponse, ImplementationLocation, ObjectSchema, Operation, Parameter, ParameterLocation, Request, Response, Schema, SchemaResponse, SealedChoiceSchema } from "@autorest/codemodel";
 import { Channel, Host } from "@autorest/extension-base";
 import { keys, Dictionary, values } from 'lodash';
 
@@ -309,7 +309,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
         }
 
         const choiceSchema = parameter.schema;
-        if (!(choiceSchema instanceof ChoiceSchema)) {
+        if (!(choiceSchema instanceof ChoiceSchema || choiceSchema instanceof SealedChoiceSchema)) {
           return { success: false, failureReason: `Parameter reference ${typeSegment} is not defined as an enum`, resourceTypes: [] };
         }        
 
