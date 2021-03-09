@@ -67,7 +67,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CreateManagementGroupChildInfo
 WARNING (PreCheck/SchemaMissingType): The schema 'CreateParentGroupInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Skipping resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}': No resource body defined
+WARNING: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
 INFORMATION: Autorest.AzureResourceSchema took 9ms
 Processing batch task - {"tag":"schema-management-2020-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -126,8 +126,8 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CreateManagementGroupChildInfo
 WARNING (PreCheck/SchemaMissingType): The schema 'CreateParentGroupInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Skipping resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+WARNING: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-management-2019-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -177,7 +177,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CreateManagementGroupChildInfo
 WARNING (PreCheck/SchemaMissingType): The schema 'CreateParentGroupInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Skipping resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}': No resource body defined
+WARNING: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
 INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-management-2018-03-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -226,8 +226,8 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CreateManagementGroupChildInfo
 WARNING (PreCheck/SchemaMissingType): The schema 'CreateParentGroupInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Skipping resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 1ms
+WARNING: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-management-2018-01-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -267,7 +267,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CreateManagementGroupChildInfo
 WARNING (PreCheck/SchemaMissingType): The schema 'CreateParentGroupInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Skipping resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}': No resource body defined
+WARNING: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
 INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-management-2017-11-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -292,8 +292,8 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagementGroupChildInfo' with
 WARNING (PreCheck/SchemaMissingType): The schema 'ParentGroupInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Skipping resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+WARNING: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-management-2017-08-31-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -323,7 +323,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagementGroupWithHierarchy' 
 WARNING (PreCheck/SchemaMissingType): The schema 'ManagementGroupRecursiveChildInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 0ms
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-management-2020-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -385,8 +385,8 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CreateManagementGroupChildInfo
 WARNING (PreCheck/SchemaMissingType): The schema 'CreateParentGroupInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Skipping resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+WARNING: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-management-2020-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -444,7 +444,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CreateManagementGroupChildInfo
 WARNING (PreCheck/SchemaMissingType): The schema 'CreateParentGroupInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Skipping resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}': No resource body defined
+WARNING: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
 INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-management-2019-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -495,8 +495,8 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CreateManagementGroupChildInfo
 WARNING (PreCheck/SchemaMissingType): The schema 'CreateParentGroupInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Skipping resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 1ms
+WARNING: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-management-2018-03-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -544,7 +544,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CreateManagementGroupChildInfo
 WARNING (PreCheck/SchemaMissingType): The schema 'CreateParentGroupInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Skipping resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}': No resource body defined
+WARNING: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
 INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-management-2018-01-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -585,8 +585,8 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CreateManagementGroupChildInfo
 WARNING (PreCheck/SchemaMissingType): The schema 'CreateParentGroupInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Skipping resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+WARNING: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-management-2017-11-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -610,8 +610,8 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagementGroupChildInfo' with
 WARNING (PreCheck/SchemaMissingType): The schema 'ParentGroupInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Skipping resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+WARNING: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-management-2017-08-31-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -642,4 +642,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagementGroupRecursiveChildI
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 0ms
-[34.62 s] Generation Complete
+[37.95 s] Generation Complete

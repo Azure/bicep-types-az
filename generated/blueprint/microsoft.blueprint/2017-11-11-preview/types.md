@@ -45,6 +45,15 @@
 * **properties**: TemplateArtifactProperties (Required)
 
 
+## Resource Microsoft.Blueprint/blueprints/versions@2017-11-11-preview
+* **Valid Scope(s)**: ManagementGroup
+### Properties
+* **apiVersion**: '2017-11-11-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PublishedBlueprintProperties (ReadOnly)
+* **type**: 'Microsoft.Blueprint/blueprints/versions' (ReadOnly, DeployTimeConstant)
+
 ## ManagedServiceIdentity
 ### Properties
 * **principalId**: string
@@ -187,4 +196,25 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: ParameterValueBase
+
+## PublishedBlueprintProperties
+### Properties
+* **blueprintName**: string (ReadOnly)
+* **changeNotes**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **displayName**: string (ReadOnly)
+* **parameters**: ParameterDefinitionCollection (ReadOnly)
+* **resourceGroups**: ResourceGroupDefinitionCollection (ReadOnly)
+* **status**: BlueprintStatus (ReadOnly)
+* **targetScope**: 'managementGroup' | 'subscription' (ReadOnly)
+
+## ParameterDefinitionCollection
+### Properties
+### Additional Properties
+* **Additional Properties Type**: ParameterDefinition
+
+## ResourceGroupDefinitionCollection
+### Properties
+### Additional Properties
+* **Additional Properties Type**: ResourceGroupDefinition
 

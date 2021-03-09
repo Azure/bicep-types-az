@@ -15,6 +15,15 @@
 * **tags**: ResourceTags
 * **type**: 'Microsoft.Devices/IotHubs' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups@2016-02-03
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-02-03' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **tags**: EventHubConsumerGroupInfoTags (ReadOnly)
+* **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant)
+
 ## IotHubProperties
 ### Properties
 * **authorizationPolicies**: SharedAccessSignatureAuthorizationRule[]
@@ -106,6 +115,11 @@
 * **tier**: 'Free' | 'Standard' (ReadOnly)
 
 ## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## EventHubConsumerGroupInfoTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

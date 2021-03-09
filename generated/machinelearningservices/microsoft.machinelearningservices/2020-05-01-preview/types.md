@@ -127,6 +127,38 @@
 * **sku**: Sku (ReadOnly)
 * **tags**: ResourceTags (ReadOnly)
 * **type**: 'Microsoft.MachineLearningServices/workspaces/services' (ReadOnly, DeployTimeConstant)
+### ACIServiceCreateRequest
+#### Properties
+* **appInsightsEnabled**: bool (WriteOnly)
+* **authEnabled**: bool (WriteOnly)
+* **cname**: string (WriteOnly)
+* **computeType**: 'ACI' (Required)
+* **containerResourceRequirements**: ContainerResourceRequirements (WriteOnly)
+* **dataCollection**: ACIServiceCreateRequestDataCollection (WriteOnly)
+* **dnsNameLabel**: string (WriteOnly)
+* **encryptionProperties**: ACIServiceCreateRequestEncryptionProperties (WriteOnly)
+* **sslCertificate**: string (WriteOnly)
+* **sslEnabled**: bool (WriteOnly)
+* **sslKey**: string (WriteOnly)
+* **vnetConfiguration**: ACIServiceCreateRequestVnetConfiguration (WriteOnly)
+
+### AKSServiceCreateRequest
+#### Properties
+* **aadAuthEnabled**: bool (WriteOnly)
+* **appInsightsEnabled**: bool (WriteOnly)
+* **authEnabled**: bool (WriteOnly)
+* **autoScaler**: AKSServiceCreateRequestAutoScaler (WriteOnly)
+* **computeName**: string (WriteOnly)
+* **computeType**: 'AKS' (Required)
+* **containerResourceRequirements**: ContainerResourceRequirements (WriteOnly)
+* **dataCollection**: AKSServiceCreateRequestDataCollection (WriteOnly)
+* **livenessProbeRequirements**: AKSServiceCreateRequestLivenessProbeRequirements (WriteOnly)
+* **maxConcurrentRequestsPerContainer**: int (WriteOnly)
+* **maxQueueWaitMs**: int (WriteOnly)
+* **namespace**: string (WriteOnly)
+* **numReplicas**: int (WriteOnly)
+* **scoringTimeoutMs**: int (WriteOnly)
+
 
 ## Identity
 ### Properties
@@ -893,4 +925,73 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ACIServiceCreateRequest
+### Properties
+* **appInsightsEnabled**: bool (WriteOnly)
+* **authEnabled**: bool (WriteOnly)
+* **cname**: string (WriteOnly)
+* **computeType**: 'ACI' (Required)
+* **containerResourceRequirements**: ContainerResourceRequirements (WriteOnly)
+* **dataCollection**: ACIServiceCreateRequestDataCollection (WriteOnly)
+* **dnsNameLabel**: string (WriteOnly)
+* **encryptionProperties**: ACIServiceCreateRequestEncryptionProperties (WriteOnly)
+* **sslCertificate**: string (WriteOnly)
+* **sslEnabled**: bool (WriteOnly)
+* **sslKey**: string (WriteOnly)
+* **vnetConfiguration**: ACIServiceCreateRequestVnetConfiguration (WriteOnly)
+
+## ACIServiceCreateRequestDataCollection
+### Properties
+* **eventHubEnabled**: bool (WriteOnly)
+* **storageEnabled**: bool (WriteOnly)
+
+## ACIServiceCreateRequestEncryptionProperties
+### Properties
+* **keyName**: string (Required, WriteOnly)
+* **keyVersion**: string (Required, WriteOnly)
+* **vaultBaseUrl**: string (Required, WriteOnly)
+
+## ACIServiceCreateRequestVnetConfiguration
+### Properties
+* **subnetName**: string (WriteOnly)
+* **vnetName**: string (WriteOnly)
+
+## AKSServiceCreateRequest
+### Properties
+* **aadAuthEnabled**: bool (WriteOnly)
+* **appInsightsEnabled**: bool (WriteOnly)
+* **authEnabled**: bool (WriteOnly)
+* **autoScaler**: AKSServiceCreateRequestAutoScaler (WriteOnly)
+* **computeName**: string (WriteOnly)
+* **computeType**: 'AKS' (Required)
+* **containerResourceRequirements**: ContainerResourceRequirements (WriteOnly)
+* **dataCollection**: AKSServiceCreateRequestDataCollection (WriteOnly)
+* **livenessProbeRequirements**: AKSServiceCreateRequestLivenessProbeRequirements (WriteOnly)
+* **maxConcurrentRequestsPerContainer**: int (WriteOnly)
+* **maxQueueWaitMs**: int (WriteOnly)
+* **namespace**: string (WriteOnly)
+* **numReplicas**: int (WriteOnly)
+* **scoringTimeoutMs**: int (WriteOnly)
+
+## AKSServiceCreateRequestAutoScaler
+### Properties
+* **autoscaleEnabled**: bool (WriteOnly)
+* **maxReplicas**: int (WriteOnly)
+* **minReplicas**: int (WriteOnly)
+* **refreshPeriodInSeconds**: int (WriteOnly)
+* **targetUtilization**: int (WriteOnly)
+
+## AKSServiceCreateRequestDataCollection
+### Properties
+* **eventHubEnabled**: bool (WriteOnly)
+* **storageEnabled**: bool (WriteOnly)
+
+## AKSServiceCreateRequestLivenessProbeRequirements
+### Properties
+* **failureThreshold**: int (WriteOnly)
+* **initialDelaySeconds**: int (WriteOnly)
+* **periodSeconds**: int (WriteOnly)
+* **successThreshold**: int (WriteOnly)
+* **timeoutSeconds**: int (WriteOnly)
 

@@ -112,6 +112,17 @@
 * **tags**: ResourceTags
 * **type**: 'Microsoft.Logic/integrationServiceEnvironments' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Logic/integrationServiceEnvironments/managedApis@2019-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ApiResourceProperties (ReadOnly)
+* **tags**: ResourceTags (ReadOnly)
+* **type**: 'Microsoft.Logic/integrationServiceEnvironments/managedApis' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Logic/workflows@2019-05-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -825,6 +836,91 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ApiResourceProperties
+### Properties
+* **apiDefinitions**: ApiResourceDefinitions (ReadOnly)
+* **apiDefinitionUrl**: string (ReadOnly)
+* **backendService**: ApiResourceBackendService (ReadOnly)
+* **capabilities**: string[] (ReadOnly)
+* **category**: 'Enterprise' | 'NotSpecified' | 'Premium' | 'Standard' (ReadOnly)
+* **connectionParameters**: ApiResourcePropertiesConnectionParameters (ReadOnly)
+* **generalInformation**: ApiResourceGeneralInformation (ReadOnly)
+* **integrationServiceEnvironment**: ResourceReference (ReadOnly)
+* **metadata**: ApiResourceMetadata (ReadOnly)
+* **name**: string (ReadOnly)
+* **policies**: ApiResourcePolicies (ReadOnly)
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' (ReadOnly)
+* **runtimeUrls**: string[] (ReadOnly)
+
+## ApiResourceDefinitions
+### Properties
+* **modifiedSwaggerUrl**: string (ReadOnly)
+* **originalSwaggerUrl**: string (ReadOnly)
+
+## ApiResourceBackendService
+### Properties
+* **serviceUrl**: string (ReadOnly)
+
+## ApiResourcePropertiesConnectionParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ApiResourceGeneralInformation
+### Properties
+* **description**: string (ReadOnly)
+* **displayName**: string (ReadOnly)
+* **iconUrl**: string (ReadOnly)
+* **releaseTag**: string (ReadOnly)
+* **termsOfUseUrl**: string (ReadOnly)
+* **tier**: 'Enterprise' | 'NotSpecified' | 'Premium' | 'Standard' (ReadOnly)
+
+## ApiResourceMetadata
+### Properties
+* **ApiType**: 'NotSpecified' | 'Rest' | 'Soap' (ReadOnly)
+* **brandColor**: string (ReadOnly)
+* **connectionType**: string (ReadOnly)
+* **deploymentParameters**: ApiDeploymentParameterMetadataSet (ReadOnly)
+* **hideKey**: string (ReadOnly)
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' (ReadOnly)
+* **source**: string (ReadOnly)
+* **tags**: ApiResourceMetadataTags (ReadOnly)
+* **wsdlImportMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest' (ReadOnly)
+* **wsdlService**: WsdlService (ReadOnly)
+
+## ApiDeploymentParameterMetadataSet
+### Properties
+* **packageContentLink**: ApiDeploymentParameterMetadata (ReadOnly)
+* **redisCacheConnectionString**: ApiDeploymentParameterMetadata (ReadOnly)
+
+## ApiDeploymentParameterMetadata
+### Properties
+* **description**: string (ReadOnly)
+* **displayName**: string (ReadOnly)
+* **isRequired**: bool (ReadOnly)
+* **type**: string (ReadOnly)
+* **visibility**: 'Default' | 'Internal' | 'NotSpecified' (ReadOnly)
+
+## ApiResourceMetadataTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## WsdlService
+### Properties
+* **EndpointQualifiedNames**: string[] (ReadOnly)
+* **qualifiedName**: string (ReadOnly)
+
+## ApiResourcePolicies
+### Properties
+* **content**: string (ReadOnly)
+* **contentLink**: string (ReadOnly)
 
 ## ResourceTags
 ### Properties

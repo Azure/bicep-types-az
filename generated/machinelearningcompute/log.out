@@ -38,4 +38,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 2ms
-[11.15 s] Generation Complete
+[12.4 s] Generation Complete

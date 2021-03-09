@@ -23,6 +23,20 @@
 * **packages**: ApplicationPackage[] (ReadOnly)
 * **type**: 'Microsoft.Batch/batchAccounts/applications' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Batch/batchAccounts/applications/versions@2015-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-12-01' (ReadOnly, DeployTimeConstant)
+* **format**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **lastActivationTime**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **state**: 'active' | 'pending' | 'unmapped' (ReadOnly)
+* **storageUrl**: string (ReadOnly)
+* **storageUrlExpiry**: string (ReadOnly)
+* **type**: 'Microsoft.Batch/batchAccounts/applications/versions' (ReadOnly, DeployTimeConstant)
+* **version**: string (ReadOnly)
+
 ## BatchAccountBaseProperties
 ### Properties
 * **accountEndpoint**: string (ReadOnly)

@@ -71,7 +71,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'JobRecurrenceScheduleMonthlyOc
 WARNING (PreCheck/SchemaMissingType): The schema 'JobStatus' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 26ms
+INFORMATION: Autorest.AzureResourceSchema took 24ms
 Processing batch task - {"tag":"schema-scheduler-2016-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -137,7 +137,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'JobRecurrenceScheduleMonthlyOc
 WARNING (PreCheck/SchemaMissingType): The schema 'JobStatus' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-scheduler-2014-08-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -203,7 +203,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'JobRecurrenceScheduleMonthlyOc
 WARNING (PreCheck/SchemaMissingType): The schema 'JobStatus' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-scheduler-2016-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -269,7 +269,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'JobRecurrenceScheduleMonthlyOc
 WARNING (PreCheck/SchemaMissingType): The schema 'JobStatus' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-scheduler-2016-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -401,5 +401,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'JobRecurrenceScheduleMonthlyOc
 WARNING (PreCheck/SchemaMissingType): The schema 'JobStatus' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 3ms
-[15.91 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 2ms
+[17.82 s] Generation Complete

@@ -79,6 +79,15 @@
 * **properties**: PolicyContractProperties
 * **type**: 'Microsoft.ApiManagement/service/apis/operations/policies' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.ApiManagement/service/apis/operations/tags@2019-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TagContractProperties (ReadOnly)
+* **type**: 'Microsoft.ApiManagement/service/apis/operations/tags' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.ApiManagement/service/apis/policies@2019-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -114,6 +123,15 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: TagDescriptionBaseProperties
 * **type**: 'Microsoft.ApiManagement/service/apis/tagDescriptions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/apis/tags@2019-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TagContractProperties (ReadOnly)
+* **type**: 'Microsoft.ApiManagement/service/apis/tags' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apiVersionSets@2019-01-01
 * **Valid Scope(s)**: ResourceGroup
@@ -178,6 +196,14 @@
 * **properties**: GroupCreateParametersProperties
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.ApiManagement/service/groups/users@2019-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.ApiManagement/service/groups/users' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.ApiManagement/service/identityProviders@2019-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -195,6 +221,31 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: LoggerContractProperties
 * **type**: 'Microsoft.ApiManagement/service/loggers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/notifications@2019-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'AccountClosedPublisher' | 'BCC' | 'NewApplicationNotificationMessage' | 'NewIssuePublisherNotificationMessage' | 'PurchasePublisherNotificationMessage' | 'QuotaLimitApproachingPublisherNotificationMessage' | 'RequestPublisherNotificationMessage' (Required, DeployTimeConstant)
+* **properties**: NotificationContractProperties (ReadOnly)
+* **type**: 'Microsoft.ApiManagement/service/notifications' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/notifications/recipientEmails@2019-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.ApiManagement/service/notifications/recipientEmails' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/notifications/recipientUsers@2019-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.ApiManagement/service/notifications/recipientUsers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/openidConnectProviders@2019-01-01
 * **Valid Scope(s)**: ResourceGroup
@@ -223,6 +274,22 @@
 * **properties**: ProductContractProperties
 * **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.ApiManagement/service/products/apis@2019-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/products/groups@2019-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.ApiManagement/service/products/groups' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.ApiManagement/service/products/policies@2019-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -231,6 +298,15 @@
 * **name**: 'policy' (Required, DeployTimeConstant)
 * **properties**: PolicyContractProperties
 * **type**: 'Microsoft.ApiManagement/service/products/policies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/products/tags@2019-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TagContractProperties (ReadOnly)
+* **type**: 'Microsoft.ApiManagement/service/products/tags' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/properties@2019-01-01
 * **Valid Scope(s)**: ResourceGroup
@@ -522,6 +598,10 @@
 * **format**: 'rawxml' | 'rawxml-link' | 'xml' | 'xml-link'
 * **value**: string (Required)
 
+## TagContractProperties
+### Properties
+* **displayName**: string (ReadOnly)
+
 ## ApiReleaseContractProperties
 ### Properties
 * **apiId**: string
@@ -687,6 +767,17 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## NotificationContractProperties
+### Properties
+* **description**: string (ReadOnly)
+* **recipients**: RecipientsContractProperties (ReadOnly)
+* **title**: string (ReadOnly)
+
+## RecipientsContractProperties
+### Properties
+* **emails**: string[] (ReadOnly)
+* **users**: string[] (ReadOnly)
+
 ## OpenidConnectProviderContractProperties
 ### Properties
 * **clientId**: string (Required)
@@ -727,10 +818,6 @@
 * **startDate**: string (ReadOnly)
 * **state**: 'active' | 'cancelled' | 'expired' | 'rejected' | 'submitted' | 'suspended'
 * **stateComment**: string (ReadOnly)
-
-## TagContractProperties
-### Properties
-* **displayName**: string (Required)
 
 ## EmailTemplateUpdateParameterProperties
 ### Properties

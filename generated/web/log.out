@@ -261,11 +261,11 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Skipping resource type microsoft.web/sites/basicpublishingcredentialspolicies under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/basicPublishingCredentialsPolicies/ftp': Found multiple definitions for the same type
 WARNING: Skipping resource type microsoft.web/sites/config under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/config/appsettings': Found multiple definitions for the same type
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Skipping resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}': No resource body defined
+WARNING: Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
 WARNING: Skipping resource type microsoft.web/sites/slots/config under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/config/appsettings': Found multiple definitions for the same type
-WARNING: Skipping resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}': No resource body defined
-WARNING: Skipping resource type microsoft.web/staticsites/customdomains under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/customDomains/{domainName}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 32ms
+WARNING: Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
+WARNING: Resource type microsoft.web/staticsites/customdomains under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/customDomains/{domainName}' has no body defined.
+INFORMATION: Autorest.AzureResourceSchema took 36ms
 Processing batch task - {"tag":"schema-web-2020-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -521,11 +521,11 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Skipping resource type microsoft.web/sites/basicpublishingcredentialspolicies under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/basicPublishingCredentialsPolicies/ftp': Found multiple definitions for the same type
 WARNING: Skipping resource type microsoft.web/sites/config under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/config/appsettings': Found multiple definitions for the same type
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Skipping resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}': No resource body defined
+WARNING: Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
 WARNING: Skipping resource type microsoft.web/sites/slots/config under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/config/appsettings': Found multiple definitions for the same type
-WARNING: Skipping resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}': No resource body defined
-WARNING: Skipping resource type microsoft.web/staticsites/customdomains under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/customDomains/{domainName}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 35ms
+WARNING: Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
+WARNING: Resource type microsoft.web/staticsites/customdomains under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/customDomains/{domainName}' has no body defined.
+INFORMATION: Autorest.AzureResourceSchema took 32ms
 Processing batch task - {"tag":"schema-web-2019-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -717,11 +717,11 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Skipping resource type microsoft.web/sites/basicpublishingcredentialspolicies under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/basicPublishingCredentialsPolicies/ftp': Found multiple definitions for the same type
 WARNING: Skipping resource type microsoft.web/sites/config under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/config/appsettings': Found multiple definitions for the same type
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Skipping resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}': No resource body defined
+WARNING: Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
 WARNING: Skipping resource type microsoft.web/sites/slots/config under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/config/appsettings': Found multiple definitions for the same type
-WARNING: Skipping resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}': No resource body defined
-WARNING: Skipping resource type microsoft.web/staticsites/customdomains under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/customDomains/{domainName}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 27ms
+WARNING: Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
+WARNING: Resource type microsoft.web/staticsites/customdomains under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/customDomains/{domainName}' has no body defined.
+INFORMATION: Autorest.AzureResourceSchema took 31ms
 Processing batch task - {"tag":"schema-web-2018-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -844,10 +844,10 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Skipping resource type microsoft.web/sites/config under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/config/appsettings': Found multiple definitions for the same type
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Skipping resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}': No resource body defined
+WARNING: Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
 WARNING: Skipping resource type microsoft.web/sites/slots/config under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/config/appsettings': Found multiple definitions for the same type
-WARNING: Skipping resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 26ms
+WARNING: Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
+INFORMATION: Autorest.AzureResourceSchema took 25ms
 Processing batch task - {"tag":"schema-web-2018-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1014,12 +1014,12 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/host/default/{keyType}/{keyName}': Parameter reference {keyType} is not defined as an enum
 WARNING: Skipping resource type microsoft.web/sites/config under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/config/appsettings': Found multiple definitions for the same type
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Skipping resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}': No resource body defined
+WARNING: Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
 WARNING: Skipping resource type microsoft.web/sites/slots/config under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/config/appsettings': Found multiple definitions for the same type
-WARNING: Skipping resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}': No resource body defined
+WARNING: Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: Autorest.AzureResourceSchema took 33ms
+INFORMATION: Autorest.AzureResourceSchema took 24ms
 Processing batch task - {"tag":"schema-web-2016-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1057,7 +1057,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'VnetInfo-properties' with an u
 WARNING (PreCheck/SchemaMissingType): The schema 'VnetRoute-properties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-web-2016-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1166,11 +1166,11 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/migrate': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.web/sites/config under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/config/appsettings': Found multiple definitions for the same type
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Skipping resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}': No resource body defined
+WARNING: Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
 WARNING: Skipping resource type microsoft.web/sites/slots/config under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/config/appsettings': Found multiple definitions for the same type
-WARNING: Skipping resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}': No resource body defined
+WARNING: Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: Autorest.AzureResourceSchema took 12ms
+INFORMATION: Autorest.AzureResourceSchema took 18ms
 Processing batch task - {"tag":"schema-web-2016-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1244,7 +1244,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'VnetValidationTestFailure-prop
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 5ms
 Processing batch task - {"tag":"schema-web-2015-08-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1375,7 +1375,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/snapshots': Found mismatch between type segments (3) and name segments (2)
 WARNING: Skipping resource type microsoft.web/sites/config under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/config/slotConfigNames': Found multiple definitions for the same type
 WARNING: Skipping resource type microsoft.web/sites/slots/config under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/config/web': Found multiple definitions for the same type
-INFORMATION: Autorest.AzureResourceSchema took 26ms
+INFORMATION: Autorest.AzureResourceSchema took 28ms
 Processing batch task - {"tag":"schema-domainregistration-2020-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1395,7 +1395,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProxyOnlyResource' with an und
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-domainregistration-2020-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1415,7 +1415,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProxyOnlyResource' with an und
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 4ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-domainregistration-2019-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1435,7 +1435,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProxyOnlyResource' with an und
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 1ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-domainregistration-2018-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1455,7 +1455,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProxyOnlyResource' with an und
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-domainregistration-2015-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1475,7 +1475,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProxyOnlyResource' with an und
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 3ms
+INFORMATION: Autorest.AzureResourceSchema took 1ms
 Processing batch task - {"tag":"schema-certificateregistration-2020-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1523,7 +1523,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProxyOnlyResource' with an und
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 1ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-certificateregistration-2019-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1547,7 +1547,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProxyOnlyResource' with an und
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 6ms
 Processing batch task - {"tag":"schema-certificateregistration-2018-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1593,7 +1593,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProxyOnlyResource' with an und
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 1ms
+INFORMATION: Autorest.AzureResourceSchema took 2ms
 Processing batch task - {"tag":"schema-web-2020-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -1849,11 +1849,11 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Skipping resource type microsoft.web/sites/basicpublishingcredentialspolicies under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/basicPublishingCredentialsPolicies/ftp': Found multiple definitions for the same type
 WARNING: Skipping resource type microsoft.web/sites/config under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/config/appsettings': Found multiple definitions for the same type
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Skipping resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}': No resource body defined
+WARNING: Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
 WARNING: Skipping resource type microsoft.web/sites/slots/config under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/config/appsettings': Found multiple definitions for the same type
-WARNING: Skipping resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}': No resource body defined
-WARNING: Skipping resource type microsoft.web/staticsites/customdomains under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/customDomains/{domainName}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 28ms
+WARNING: Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
+WARNING: Resource type microsoft.web/staticsites/customdomains under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/customDomains/{domainName}' has no body defined.
+INFORMATION: Autorest.AzureResourceSchema took 31ms
 Processing batch task - {"tag":"schema-web-2020-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -2109,19 +2109,19 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Skipping resource type microsoft.web/sites/basicpublishingcredentialspolicies under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/basicPublishingCredentialsPolicies/ftp': Found multiple definitions for the same type
 WARNING: Skipping resource type microsoft.web/sites/config under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/config/appsettings': Found multiple definitions for the same type
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Skipping resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}': No resource body defined
+WARNING: Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
 WARNING: Skipping resource type microsoft.web/sites/slots/config under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/config/appsettings': Found multiple definitions for the same type
-WARNING: Skipping resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}': No resource body defined
-WARNING: Skipping resource type microsoft.web/staticsites/customdomains under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/customDomains/{domainName}': No resource body defined
-INFORMATION: Autorest.AzureResourceSchema took 23ms
+WARNING: Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
+WARNING: Resource type microsoft.web/staticsites/customdomains under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/customDomains/{domainName}' has no body defined.
+INFORMATION: Autorest.AzureResourceSchema took 21ms
 Processing batch task - {"tag":"schema-web-2019-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 
 <--- Last few GCs --->
 
-[14303:0x57aef70]   585338 ms: Scavenge (reduce) 2033.2 (2053.9) -> 2033.1 (2054.9) MB, 18.7 / 0.0 ms  (average mu = 0.171, current mu = 0.020) allocation failure 
-[14303:0x57aef70]   586382 ms: Mark-sweep (reduce) 2034.0 (2051.9) -> 2032.9 (2052.4) MB, 1038.8 / 0.0 ms  (average mu = 0.144, current mu = 0.116) allocation failure scavenge might not succeed
+[15161:0x5743f70]   645770 ms: Scavenge (reduce) 2031.0 (2050.5) -> 2030.0 (2051.5) MB, 12.6 / 0.0 ms  (average mu = 0.152, current mu = 0.044) allocation failure 
+[15161:0x5743f70]   645779 ms: Scavenge (reduce) 2031.0 (2050.5) -> 2030.0 (2051.5) MB, 5.0 / 0.0 ms  (average mu = 0.152, current mu = 0.044) allocation failure 
 
 
 <--- JS stacktrace --->
@@ -2136,16 +2136,11 @@ FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaS
  7: 0xd42fab v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/usr/local/bin/node]
  8: 0xd46b6c v8::internal::Heap::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/usr/local/bin/node]
  9: 0xd0c472 v8::internal::Factory::AllocateRaw(int, v8::internal::AllocationType, v8::internal::AllocationAlignment) [/usr/local/bin/node]
-10: 0xd062f4 v8::internal::FactoryBase<v8::internal::Factory>::AllocateRawWithImmortalMap(int, v8::internal::AllocationType, v8::internal::Map, v8::internal::AllocationAlignment) [/usr/local/bin/node]
-11: 0xd08300 v8::internal::FactoryBase<v8::internal::Factory>::NewRawOneByteString(int, v8::internal::AllocationType) [/usr/local/bin/node]
-12: 0x10f24f5 v8::internal::IncrementalStringBuilder::Extend() [/usr/local/bin/node]
-13: 0xe32b00 v8::internal::JsonStringifier::SerializeString(v8::internal::Handle<v8::internal::String>) [/usr/local/bin/node]
-14: 0xe34bbe v8::internal::JsonStringifier::Result v8::internal::JsonStringifier::Serialize_<true>(v8::internal::Handle<v8::internal::Object>, bool, v8::internal::Handle<v8::internal::Object>) [/usr/local/bin/node]
-15: 0xe359a3 v8::internal::JsonStringifier::Result v8::internal::JsonStringifier::Serialize_<true>(v8::internal::Handle<v8::internal::Object>, bool, v8::internal::Handle<v8::internal::Object>) [/usr/local/bin/node]
-16: 0xe359a3 v8::internal::JsonStringifier::Result v8::internal::JsonStringifier::Serialize_<true>(v8::internal::Handle<v8::internal::Object>, bool, v8::internal::Handle<v8::internal::Object>) [/usr/local/bin/node]
-17: 0xe36d3f v8::internal::JsonStringifier::SerializeJSReceiverSlow(v8::internal::Handle<v8::internal::JSReceiver>) [/usr/local/bin/node]
-18: 0xe33fbc v8::internal::JsonStringifier::Result v8::internal::JsonStringifier::Serialize_<true>(v8::internal::Handle<v8::internal::Object>, bool, v8::internal::Handle<v8::internal::Object>) [/usr/local/bin/node]
-19: 0xe3890b v8::internal::JsonStringifier::Result v8::internal::JsonStringifier::Serialize_<false>(v8::internal::Handle<v8::internal::Object>, bool, v8::internal::Handle<v8::internal::Object>) [/usr/local/bin/node]
-20: 0xe3a2cf v8::internal::JsonStringify(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>) [/usr/local/bin/node]
-21: 0xc24f4f v8::internal::Builtin_JsonStringify(int, unsigned long*, v8::internal::Isolate*) [/usr/local/bin/node]
-22: 0x14012f9  [/usr/local/bin/node]
+10: 0xd086c2 v8::internal::FactoryBase<v8::internal::Factory>::AllocateRawArray(int, v8::internal::AllocationType) [/usr/local/bin/node]
+11: 0xd08774 v8::internal::FactoryBase<v8::internal::Factory>::NewFixedArrayWithFiller(v8::internal::Handle<v8::internal::Map>, int, v8::internal::Handle<v8::internal::Oddball>, v8::internal::AllocationType) [/usr/local/bin/node]
+12: 0xf39f1e v8::internal::Handle<v8::internal::EphemeronHashTable> v8::internal::HashTable<v8::internal::EphemeronHashTable, v8::internal::EphemeronHashTableShape>::New<v8::internal::Isolate>(v8::internal::Isolate*, int, v8::internal::AllocationType, v8::internal::MinimumCapacity) [/usr/local/bin/node]
+13: 0xf3a1e6 v8::internal::Handle<v8::internal::EphemeronHashTable> v8::internal::HashTable<v8::internal::EphemeronHashTable, v8::internal::EphemeronHashTableShape>::EnsureCapacity<v8::internal::Isolate>(v8::internal::Isolate*, v8::internal::Handle<v8::internal::EphemeronHashTable>, int, v8::internal::AllocationType) [/usr/local/bin/node]
+14: 0xf3a932 v8::internal::ObjectHashTableBase<v8::internal::EphemeronHashTable, v8::internal::EphemeronHashTableShape>::Put(v8::internal::Isolate*, v8::internal::Handle<v8::internal::EphemeronHashTable>, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, int) [/usr/local/bin/node]
+15: 0xf3aaab v8::internal::JSWeakCollection::Set(v8::internal::Handle<v8::internal::JSWeakCollection>, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, int) [/usr/local/bin/node]
+16: 0x103f361 v8::internal::Runtime_WeakCollectionSet(int, unsigned long*, v8::internal::Isolate*) [/usr/local/bin/node]
+17: 0x1401219  [/usr/local/bin/node]

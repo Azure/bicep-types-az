@@ -265,6 +265,17 @@
 * **systemData**: SystemData (ReadOnly)
 * **type**: 'Microsoft.Web/sites/publicCertificates' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Web/sites/siteextensions@2020-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SiteExtensionInfoProperties (ReadOnly)
+* **systemData**: SystemData (ReadOnly)
+* **type**: 'Microsoft.Web/sites/siteextensions' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Web/sites/slots@2020-09-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -422,6 +433,17 @@
 * **systemData**: SystemData (ReadOnly)
 * **type**: 'Microsoft.Web/sites/slots/publicCertificates' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Web/sites/slots/siteextensions@2020-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SiteExtensionInfoProperties (ReadOnly)
+* **systemData**: SystemData (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/siteextensions' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Web/sites/slots/sourcecontrols@2020-09-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -534,6 +556,14 @@
 * **properties**: StringDictionaryProperties
 * **systemData**: SystemData (ReadOnly)
 * **type**: 'Microsoft.Web/staticSites/config' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/staticSites/customDomains@2020-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.Web/staticSites/customDomains' (ReadOnly, DeployTimeConstant)
 
 ## CertificateProperties
 ### Properties
@@ -1190,6 +1220,29 @@
 * **blob**: any
 * **publicCertificateLocation**: 'CurrentUserMy' | 'LocalMachineMy' | 'Unknown'
 * **thumbprint**: string (ReadOnly)
+
+## SiteExtensionInfoProperties
+### Properties
+* **authors**: string[] (ReadOnly)
+* **comment**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **download_count**: int (ReadOnly)
+* **extension_id**: string (ReadOnly)
+* **extension_type**: 'Gallery' | 'WebRoot' (ReadOnly)
+* **extension_url**: string (ReadOnly)
+* **feed_url**: string (ReadOnly)
+* **icon_url**: string (ReadOnly)
+* **installed_date_time**: string (ReadOnly)
+* **installer_command_line_params**: string (ReadOnly)
+* **license_url**: string (ReadOnly)
+* **local_is_latest_version**: bool (ReadOnly)
+* **local_path**: string (ReadOnly)
+* **project_url**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **published_date_time**: string (ReadOnly)
+* **summary**: string (ReadOnly)
+* **title**: string (ReadOnly)
+* **version**: string (ReadOnly)
 
 ## ResourceTags
 ### Properties

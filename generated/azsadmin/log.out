@@ -12,4 +12,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'SubscriptionList' with an unde
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping path '/subscriptions/{subscriptionId}': Unable to locate "/providers/" segment
 INFORMATION: Autorest.AzureResourceSchema took 2ms
-[4.65 s] Generation Complete
+[4.85 s] Generation Complete

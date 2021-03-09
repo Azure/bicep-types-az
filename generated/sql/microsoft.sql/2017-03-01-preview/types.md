@@ -133,6 +133,15 @@
 * **properties**: DatabaseVulnerabilityAssessmentRuleBaselineProperties
 * **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Sql/servers/dnsAliases@2017-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServerDnsAliasProperties (ReadOnly)
+* **type**: 'Microsoft.Sql/servers/dnsAliases' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Sql/servers/extendedAuditingSettings@2017-03-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -171,6 +180,15 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: JobProperties
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Sql/servers/jobAgents/jobs/executions@2017-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: JobExecutionProperties (ReadOnly)
+* **type**: 'Microsoft.Sql/servers/jobAgents/jobs/executions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/jobAgents/jobs/steps@2017-03-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -354,6 +372,10 @@
 ### Properties
 * **result**: string[] (Required)
 
+## ServerDnsAliasProperties
+### Properties
+* **azureDnsRecord**: string (ReadOnly)
+
 ## ExtendedServerBlobAuditingPolicyProperties
 ### Properties
 * **auditActionsAndGroups**: string[]
@@ -395,6 +417,28 @@
 * **interval**: string
 * **startTime**: string
 * **type**: 'Once' | 'Recurring'
+
+## JobExecutionProperties
+### Properties
+* **createTime**: string (ReadOnly)
+* **currentAttempts**: int (ReadOnly)
+* **currentAttemptStartTime**: string (ReadOnly)
+* **endTime**: string (ReadOnly)
+* **jobExecutionId**: string (ReadOnly)
+* **jobVersion**: int (ReadOnly)
+* **lastMessage**: string (ReadOnly)
+* **lifecycle**: 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Skipped' | 'Succeeded' | 'SucceededWithSkipped' | 'TimedOut' | 'WaitingForChildJobExecutions' | 'WaitingForRetry' (ReadOnly)
+* **provisioningState**: 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly)
+* **startTime**: string (ReadOnly)
+* **stepId**: int (ReadOnly)
+* **stepName**: string (ReadOnly)
+* **target**: JobExecutionTarget (ReadOnly)
+
+## JobExecutionTarget
+### Properties
+* **databaseName**: string (ReadOnly)
+* **serverName**: string (ReadOnly)
+* **type**: 'SqlDatabase' | 'SqlElasticPool' | 'SqlServer' | 'SqlShardMap' | 'TargetGroup' (ReadOnly)
 
 ## JobStepProperties
 ### Properties

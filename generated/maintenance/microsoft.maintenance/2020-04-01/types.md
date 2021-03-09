@@ -1,5 +1,13 @@
 # Microsoft.Maintenance @ 2020-04-01
 
+## Resource Microsoft.Maintenance/applyUpdates@2020-04-01
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
+* **type**: 'Microsoft.Maintenance/applyUpdates' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Maintenance/configurationAssignments@2020-04-01
 * **Valid Scope(s)**: Extension
 ### Properties
