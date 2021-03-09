@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { AnySchema, ArraySchema, ChoiceSchema, ConstantSchema, DictionarySchema, HttpRequest, ObjectSchema, Parameter, PrimitiveSchema, Property, Schema, SchemaType, SealedChoiceSchema, StringSchema } from "@autorest/codemodel";
+import { AnySchema, ArraySchema, ChoiceSchema, ConstantSchema, DictionarySchema, ObjectSchema, PrimitiveSchema, Property, Schema, SchemaType, SealedChoiceSchema, StringSchema } from "@autorest/codemodel";
 import { Channel, Host } from "@autorest/extension-base";
 import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
 import { uniq, keys, keyBy, Dictionary, flatMap } from 'lodash';
@@ -148,15 +148,47 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
     }
   }
 
+  function flattenDiscriminatorSubTypes(schema: ObjectSchema | undefined) {
+    if (!schema || !schema.discriminator) {
+      return {};
+    }
+
+    const output: Dictionary<ObjectSchema> = {};
+    for (const key in schema.discriminator.all) {
+      const value = schema.discriminator.all[key];
+
+      if (!(value instanceof ObjectSchema)) {
+        throw `Unable to flatten discriminated properties - schema '${schema.language.default.name}' has non-object discriminated value '${value.language.default.name}'.`;
+      }
+
+      if (!value.discriminator) {
+        output[key] = value;
+        continue;
+      }
+
+      if (schema.discriminator.property.serializedName !== value.discriminator.property.serializedName) {
+        throw `Unable to flatten discriminated properties - schemas '${schema.language.default.name}' and '${value.language.default.name}' have conflicting discriminators '${schema.discriminator.property.serializedName}' and '${value.discriminator.property.serializedName}'`;
+      }
+
+      const subTypes = flattenDiscriminatorSubTypes(value);
+      for (const subTypeKey in subTypes) {
+        output[subTypeKey] = subTypes[subTypeKey];
+      }
+    }
+
+    return output;
+  }
+
   function* getDiscriminatedSubTypes(putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined) {
-    const putSubTypes = putSchema?.discriminator?.all || {};
-    const getSubTypes = getSchema?.discriminator?.all || {};
+    const putSubTypes = flattenDiscriminatorSubTypes(putSchema);
+    const getSubTypes = flattenDiscriminatorSubTypes(getSchema);
 
     for (const subTypeName of uniq([...keys(putSubTypes), ...keys(getSubTypes)])) {
-      const putSubType = putSubTypes[subTypeName] instanceof ObjectSchema ? (putSubTypes[subTypeName] as ObjectSchema) : undefined;
-      const getSubType = getSubTypes[subTypeName] instanceof ObjectSchema ? (getSubTypes[subTypeName] as ObjectSchema) : undefined;
-
-      yield { subTypeName, putSubType, getSubType };
+      yield { 
+        subTypeName,
+        putSubType: putSubTypes[subTypeName],
+        getSubType: getSubTypes[subTypeName],
+      };
     }
   }
 
@@ -264,9 +296,14 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
       }
 
       const objectTypeRef = parseObjectType(putSubType, getSubType, false);
+      const objectType = factory.lookupType(objectTypeRef);
+      if (!(objectType instanceof ObjectType)) {
+        logWarning(`Found unexpected element of discriminated type '${discriminatedObjectType.name}'`)
+        continue;
+      }
+
       discriminatedObjectType.elements[combinedSubType.discriminatorValue] = objectTypeRef;
 
-      const objectType = factory.lookupType(objectTypeRef) as ObjectType;
       objectType.properties[discriminatedObjectType.discriminator] = new ObjectProperty(
         factory.addType(new StringLiteralType(combinedSubType.discriminatorValue)),
         ObjectPropertyFlags.Required);
