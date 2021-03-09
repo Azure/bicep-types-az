@@ -22,6 +22,16 @@
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: 'Microsoft.PowerPlatform/enterprisePolicies/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.PowerPlatform/enterprisePolicies/subnets@2020-10-30-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-10-30-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: SubnetProperties (ReadOnly)
+* **type**: 'Microsoft.PowerPlatform/enterprisePolicies/subnets' (ReadOnly, DeployTimeConstant)
+
 ## EnterprisePolicyIdentity
 ### Properties
 * **systemAssignedIdentityPrincipalId**: string (ReadOnly)
@@ -82,4 +92,15 @@
 * **actionsRequired**: string
 * **description**: string
 * **status**: 'Approved' | 'Pending' | 'Rejected'
+
+## SubnetProperties
+### Properties
+* **status**: 'Disabled' | 'Enabled' | 'NotConfigured' (ReadOnly)
+* **subnet**: SubnetEndpointProperty (ReadOnly)
+* **systemData**: systemData (ReadOnly)
+* **vnetid**: string (ReadOnly)
+
+## SubnetEndpointProperty
+### Properties
+* **id**: string (ReadOnly)
 

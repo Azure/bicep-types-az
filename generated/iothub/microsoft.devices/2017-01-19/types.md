@@ -15,6 +15,15 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Devices/IotHubs' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups@2017-01-19
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-01-19' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant)
+
 ## IotHubProperties
 ### Properties
 * **authorizationPolicies**: SharedAccessSignatureAuthorizationRule[]
@@ -153,6 +162,11 @@
 * **capacity**: int (Required)
 * **name**: 'F1' | 'S1' | 'S2' | 'S3' (Required)
 * **tier**: 'Free' | 'Standard' (ReadOnly)
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Dictionary<string,String>
 ### Properties

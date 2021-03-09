@@ -41,6 +41,14 @@
 * **properties**: DiagnosticContractProperties
 * **type**: 'Microsoft.ApiManagement/service/apis/diagnostics' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.ApiManagement/service/apis/diagnostics/loggers@2018-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.ApiManagement/service/apis/diagnostics/loggers' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.ApiManagement/service/apis/issues@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -86,6 +94,15 @@
 * **properties**: PolicyContractProperties
 * **type**: 'Microsoft.ApiManagement/service/apis/operations/policies' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.ApiManagement/service/apis/operations/tags@2018-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TagContractProperties (ReadOnly)
+* **type**: 'Microsoft.ApiManagement/service/apis/operations/tags' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.ApiManagement/service/apis/policies@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -121,6 +138,15 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: TagDescriptionBaseProperties
 * **type**: 'Microsoft.ApiManagement/service/apis/tagDescriptions' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/apis/tags@2018-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TagContractProperties (ReadOnly)
+* **type**: 'Microsoft.ApiManagement/service/apis/tags' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/authorizationServers@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
@@ -158,6 +184,14 @@
 * **properties**: DiagnosticContractProperties
 * **type**: 'Microsoft.ApiManagement/service/diagnostics' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.ApiManagement/service/diagnostics/loggers@2018-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.ApiManagement/service/diagnostics/loggers' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.ApiManagement/service/groups@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -166,6 +200,14 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: GroupCreateParametersProperties
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/groups/users@2018-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.ApiManagement/service/groups/users' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/identityProviders@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
@@ -184,6 +226,31 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: LoggerContractProperties
 * **type**: 'Microsoft.ApiManagement/service/loggers' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/notifications@2018-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'AccountClosedPublisher' | 'BCC' | 'NewApplicationNotificationMessage' | 'NewIssuePublisherNotificationMessage' | 'PurchasePublisherNotificationMessage' | 'QuotaLimitApproachingPublisherNotificationMessage' | 'RequestPublisherNotificationMessage' (Required, DeployTimeConstant)
+* **properties**: NotificationContractProperties (ReadOnly)
+* **type**: 'Microsoft.ApiManagement/service/notifications' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/notifications/recipientEmails@2018-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.ApiManagement/service/notifications/recipientEmails' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/notifications/recipientUsers@2018-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.ApiManagement/service/notifications/recipientUsers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/openidConnectProviders@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
@@ -212,6 +279,22 @@
 * **properties**: ProductContractProperties
 * **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.ApiManagement/service/products/apis@2018-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/products/groups@2018-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.ApiManagement/service/products/groups' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.ApiManagement/service/products/policies@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -220,6 +303,15 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: PolicyContractProperties
 * **type**: 'Microsoft.ApiManagement/service/products/policies' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/products/tags@2018-01-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TagContractProperties (ReadOnly)
+* **type**: 'Microsoft.ApiManagement/service/products/tags' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/properties@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
@@ -485,6 +577,10 @@
 * **contentFormat**: 'rawxml-link' | 'rawxml' | 'xml-link' | 'xml'
 * **policyContent**: string (Required)
 
+## TagContractProperties
+### Properties
+* **displayName**: string (Required)
+
 ## ApiReleaseContractProperties
 ### Properties
 * **apiId**: string
@@ -633,6 +729,17 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## NotificationContractProperties
+### Properties
+* **description**: string (ReadOnly)
+* **recipients**: RecipientsContractProperties (ReadOnly)
+* **title**: string (ReadOnly)
+
+## RecipientsContractProperties
+### Properties
+* **emails**: string[] (ReadOnly)
+* **users**: string[] (ReadOnly)
+
 ## OpenidConnectProviderContractProperties
 ### Properties
 * **clientId**: string (Required)
@@ -672,10 +779,6 @@
 * **state**: 'active' | 'cancelled' | 'expired' | 'rejected' | 'submitted' | 'suspended'
 * **stateComment**: string (ReadOnly)
 * **userId**: string (Required)
-
-## TagContractProperties
-### Properties
-* **displayName**: string (Required)
 
 ## EmailTemplateUpdateParameterProperties
 ### Properties
