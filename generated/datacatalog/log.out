@@ -40,4 +40,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Principals' with an undefined 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping resource type microsoft.datacatalog/catalogs under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataCatalog/catalogs/{catalogName}': Unable to locate parameter with name 'catalogName'
 INFORMATION: Autorest.AzureResourceSchema took 1ms
-[5.36 s] Generation Complete
+[5.79 s] Generation Complete

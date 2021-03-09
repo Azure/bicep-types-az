@@ -18,6 +18,14 @@
 * **properties**: CreateOrUpdateSettingsProperties
 * **type**: 'Microsoft.Management/managementGroups/settings' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Management/managementGroups/subscriptions@2020-02-01
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2020-02-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.Management/managementGroups/subscriptions' (ReadOnly, DeployTimeConstant)
+
 ## CreateManagementGroupProperties
 ### Properties
 * **children**: CreateManagementGroupChildInfo[] (ReadOnly)

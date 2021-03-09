@@ -24,6 +24,16 @@
 * **properties**: CertificateProperties (ReadOnly)
 * **type**: 'Microsoft.Devices/IotHubs/certificates' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups@2019-03-22
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-03-22' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: EventHubConsumerGroupInfoProperties (ReadOnly)
+* **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant)
+
 ## IotHubProperties
 ### Properties
 * **authorizationPolicies**: SharedAccessSignatureAuthorizationRule[]
@@ -188,4 +198,9 @@
 * **subject**: string (ReadOnly)
 * **thumbprint**: string (ReadOnly)
 * **updated**: string (ReadOnly)
+
+## EventHubConsumerGroupInfoProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

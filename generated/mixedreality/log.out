@@ -178,4 +178,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Identity' with an undefined ty
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 1ms
-[23 s] Generation Complete
+[25.51 s] Generation Complete

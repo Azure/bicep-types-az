@@ -27,6 +27,15 @@
 * **properties**: IotSiteProperties
 * **type**: 'Microsoft.Security/iotSites' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Security/onPremiseIotSensors@2020-08-06-preview
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: any (ReadOnly)
+* **type**: 'Microsoft.Security/onPremiseIotSensors' (ReadOnly, DeployTimeConstant)
+
 ## IotDefenderSettingsProperties
 ### Properties
 * **deviceQuota**: int (Required)

@@ -20,6 +20,15 @@
 * **properties**: ClusterBaseProperties
 * **type**: 'Microsoft.BatchAI/workspaces/clusters' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.BatchAI/workspaces/experiments@2018-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ExperimentProperties (ReadOnly)
+* **type**: 'Microsoft.BatchAI/workspaces/experiments' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.BatchAI/workspaces/experiments/jobs@2018-05-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -204,6 +213,12 @@
 * **sku**: string (Required)
 * **version**: string
 * **virtualMachineImageId**: string
+
+## ExperimentProperties
+### Properties
+* **creationTime**: string (ReadOnly)
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly)
+* **provisioningStateTransitionTime**: string (ReadOnly)
 
 ## JobBaseProperties
 ### Properties

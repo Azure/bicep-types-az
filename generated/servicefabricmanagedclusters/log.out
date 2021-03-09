@@ -183,7 +183,7 @@ WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'UniformInt64RangePartitionS
 WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'ManagedCluster' has an allOf list with an empty object schema as a parent, removing it.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 18ms
+INFORMATION: Autorest.AzureResourceSchema took 17ms
 Processing batch task - {"tag":"schema-servicefabricmanagedclusters-2021-01-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -361,5 +361,5 @@ WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'UniformInt64RangePartitionS
 WARNING (PreCheck/EmptyParentSchemaWarning): Schema 'ManagedCluster' has an allOf list with an empty object schema as a parent, removing it.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 9ms
-[15.16 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 10ms
+[16.98 s] Generation Complete

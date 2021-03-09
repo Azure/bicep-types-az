@@ -22,6 +22,15 @@
 * **properties**: PrivateEndpointConnectionProperties
 * **type**: 'Microsoft.EventGrid/domains/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.EventGrid/domains/topics@2020-04-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DomainTopicProperties (ReadOnly)
+* **type**: 'Microsoft.EventGrid/domains/topics' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.EventGrid/eventSubscriptions@2020-04-01-preview
 * **Valid Scope(s)**: Unknown
 ### Properties
@@ -211,6 +220,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DomainTopicProperties
+### Properties
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## EventSubscriptionProperties
 ### Properties

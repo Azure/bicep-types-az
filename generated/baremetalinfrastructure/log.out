@@ -74,4 +74,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undef
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 1ms
-[6.15 s] Generation Complete
+[7.08 s] Generation Complete

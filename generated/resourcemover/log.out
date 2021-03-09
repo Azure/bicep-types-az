@@ -118,4 +118,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudErrorBody' with an undefi
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Autorest.AzureResourceSchema took 5ms
-[16.39 s] Generation Complete
+[17.65 s] Generation Complete

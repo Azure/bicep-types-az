@@ -121,6 +121,16 @@
 * **systemData**: SystemData (ReadOnly)
 * **type**: 'Microsoft.Cdn/profiles/originGroups/origins' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Cdn/profiles/ruleSets@2020-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: RuleSetProperties (ReadOnly)
+* **systemData**: SystemData (ReadOnly)
+* **type**: 'Microsoft.Cdn/profiles/ruleSets' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Cdn/profiles/ruleSets/rules@2020-09-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -885,6 +895,11 @@
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **sharedPrivateLinkResource**: any
 * **weight**: int
+
+## RuleSetProperties
+### Properties
+* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## RuleProperties
 ### Properties
