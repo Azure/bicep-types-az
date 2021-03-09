@@ -76,9 +76,24 @@ function hasStatusCode(response: Response, statusCode: string) {
   return (statusCodes as string[]).includes(statusCode);
 }
 
+function getNormalizedMethodPath(path: string) {
+  if (resourceGroupMethod.test(path)) {
+    // resource groups are a special case - the swagger API is not defined as a provider API, but they are still deployable in a template as if it was.
+    return "/subscriptions/{subscriptionId}/providers/Microsoft.Resources/resourceGroups/{resourceGroupName}";
+  }
+
+  return path;
+}
+
 export function parseNameSchema<T>(descriptor: ResourceDescriptor, request: HttpRequest, parameters: Parameter[], parseType: (schema: Schema) => T, createConstantName: (descriptor: ResourceDescriptor, name: string) => T) {
-  const finalProvidersMatch = request.path.match(parentScopePrefix)?.last;
-  const routingScope = trimScope(request.path.substr(finalProvidersMatch!.length));
+  const path = getNormalizedMethodPath(request.path);
+
+  const finalProvidersMatch = path.match(parentScopePrefix)?.last;
+  if (!finalProvidersMatch) {
+    return { success: false, failureReason: `Unable to locate "/providers/" segment`, name: null };
+  }
+
+  const routingScope = trimScope(path.substr(finalProvidersMatch.length));
 
   // get the resource name parameter, e.g. {fooName}
   var resNameParam = routingScope.substr(routingScope.lastIndexOf('/') + 1);
@@ -324,15 +339,6 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
     }
 
     return { success: true, failureReason: '', resourceTypes };
-  }
-
-  function getNormalizedMethodPath(path: string) {
-    if (resourceGroupMethod.test(path)) {
-      // resource groups are a special case - the swagger API is not defined as a provider API, but they are still deployable in a template as if it was.
-      return "/subscriptions/{subscriptionId}/providers/Microsoft.Resources/resourceGroups/{resourceGroupName}";
-    }
-
-    return path;
   }
 
   function getScopeTypeFromParentScope(parentScope: string) {

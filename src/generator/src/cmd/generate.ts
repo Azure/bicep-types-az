@@ -83,6 +83,7 @@ async function generateSchema(logger: ILogger, readme: string, outputBaseDir: st
     '--azureresourceschema',
     `--output-folder=${outputBaseDir}`,
     `--multiapi`,
+    '--title=none',
     readme,
   ];
 
