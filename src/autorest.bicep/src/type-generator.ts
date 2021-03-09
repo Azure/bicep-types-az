@@ -41,14 +41,15 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
         continue;
       }
 
-      if (!putSchema) {
-        logWarning(`Skipping resource type ${fullyQualifiedType} under path '${putRequest.path}': No resource body defined`);
-        continue;
-      }
-
       const resourceProperties = getStandardizedResourceProperties(descriptor, name);
-      const resourceDefinition = createObject(getFullyQualifiedType(descriptor), putSchema, resourceProperties);
-      const combinedSchema = combineAndThrowIfNull(getSchema, putSchema);
+
+      let resourceDefinition: TypeReference;
+      if (putSchema) {
+        resourceDefinition = createObject(getFullyQualifiedType(descriptor), putSchema, resourceProperties);
+      } else {
+        logWarning(`Resource type ${fullyQualifiedType} under path '${putRequest.path}' has no body defined.`);
+        resourceDefinition = factory.addType(new ObjectType(getFullyQualifiedType(descriptor), resourceProperties));
+      }
 
       factory.addType(new ResourceType(
         `${getFullyQualifiedType(descriptor)}@${descriptor.apiVersion}`,
@@ -67,7 +68,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
         }
       }
 
-      if (combinedSchema.discriminator) {
+      if (putSchema?.discriminator || getSchema?.discriminator) {
         const discriminatedObjectType = factory.lookupType(resourceDefinition) as DiscriminatedObjectType;
 
         handlePolymorphicType(discriminatedObjectType, putSchema, getSchema);
