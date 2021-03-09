@@ -107,6 +107,14 @@
 * **name**: string (Required, DeployTimeConstant)
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.ApiManagement/service/groups/users@2016-10-10
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.ApiManagement/service/groups/users' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.ApiManagement/service/identityProviders@2016-10-10
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -155,6 +163,22 @@
 * **terms**: string
 * **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.ApiManagement/service/products/apis@2016-10-10
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.ApiManagement/service/products/groups@2016-10-10
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.ApiManagement/service/products/groups' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.ApiManagement/service/properties@2016-10-10
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -184,6 +208,14 @@
 * **stateComment**: string (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/service/subscriptions' (ReadOnly, DeployTimeConstant)
 * **userId**: string (Required)
+
+## Resource Microsoft.ApiManagement/service/tenant@2016-10-10
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **type**: 'Microsoft.ApiManagement/service/tenant' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/users@2016-10-10
 * **Valid Scope(s)**: ResourceGroup

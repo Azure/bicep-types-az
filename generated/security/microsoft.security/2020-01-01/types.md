@@ -39,6 +39,15 @@
 * **properties**: JitNetworkAccessPolicyProperties (Required)
 * **type**: 'Microsoft.Security/locations/jitNetworkAccessPolicies' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Security/serverVulnerabilityAssessments@2020-01-01
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: ServerVulnerabilityAssessmentProperties (ReadOnly)
+* **type**: 'Microsoft.Security/serverVulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
+
 ## SecurityAssessmentMetadataProperties
 ### Properties
 * **assessmentType**: 'BuiltIn' | 'CustomerManaged' | 'CustomPolicy' | 'VerifiedPartner' (Required)
@@ -215,4 +224,8 @@
 * **maxRequestAccessDuration**: string (Required)
 * **number**: int (Required)
 * **protocol**: '*' | 'TCP' | 'UDP' (Required)
+
+## ServerVulnerabilityAssessmentProperties
+### Properties
+* **provisioningState**: 'Canceled' | 'Deprovisioning' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly)
 

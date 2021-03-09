@@ -126,14 +126,17 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                     continue;
                 }
 
-                if (putBody == null)
-                {
-                    CodeModelProcessor.LogWarning($"Skipping resource type {fullyQualifiedType} under path '{resource.DeclaringMethod.Url}': No resource body defined");
-                    continue;
-                }
-
                 var resourceProperties = GetStandardizedResourceProperties(resource.Descriptor, resourceName!);
-                var resourceDefinition = CreateObject(descriptor.FullyQualifiedType, putBody, resourceProperties);
+                TypeBase resourceDefinition;
+                if (putBody != null)
+                {
+                    resourceDefinition = CreateObject(descriptor.FullyQualifiedType, putBody, resourceProperties);
+                }
+                else
+                {
+                    CodeModelProcessor.LogWarning($"Resource type {fullyQualifiedType} under path '{resource.DeclaringMethod.Url}' has no body defined.");
+                    resourceDefinition = factory.Create(() => new ObjectType(descriptor.FullyQualifiedType, resourceProperties, null));
+                }
 
                 resource.Type = factory.Create(() => new ResourceType(
                     $"{descriptor.FullyQualifiedType}@{descriptor.ApiVersion}",

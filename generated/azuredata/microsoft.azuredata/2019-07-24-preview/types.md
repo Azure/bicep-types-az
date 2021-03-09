@@ -12,6 +12,18 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.AzureData/dataControllers' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.AzureData/postgresInstances@2019-07-24-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-07-24-preview' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: PostgresInstanceProperties (ReadOnly)
+* **systemData**: SystemData (ReadOnly)
+* **tags**: Dictionary<string,String> (ReadOnly)
+* **type**: 'Microsoft.AzureData/postgresInstances' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.AzureData/sqlManagedInstances@2019-07-24-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -75,6 +87,15 @@
 * **lastModifiedAt**: string
 * **lastModifiedBy**: string
 * **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user'
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## PostgresInstanceProperties
+### Properties
+* **hybridDataManagerId**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Properties
