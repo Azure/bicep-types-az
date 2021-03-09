@@ -137,6 +137,15 @@
 * **properties**: schemas:114_properties
 * **type**: 'Microsoft.Storage/storageAccounts/tableServices' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Storage/storageAccounts/tableServices/tables@2019-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: TableProperties (ReadOnly)
+* **type**: 'Microsoft.Storage/storageAccounts/tableServices/tables' (ReadOnly, DeployTimeConstant)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly)
@@ -611,4 +620,8 @@
 ## schemas:114_properties
 ### Properties
 * **cors**: CorsRules
+
+## TableProperties
+### Properties
+* **tableName**: string (ReadOnly)
 

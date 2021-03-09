@@ -173,6 +173,16 @@
 * **properties**: TransparentDataEncryptionProperties
 * **type**: 'Microsoft.Sql/servers/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Sql/servers/disasterRecoveryConfiguration@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: DisasterRecoveryConfigurationProperties (ReadOnly)
+* **type**: 'Microsoft.Sql/servers/disasterRecoveryConfiguration' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Sql/servers/elasticPools@2014-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -430,6 +440,16 @@
 * **storageAccountAccessKey**: string
 * **storageEndpoint**: string
 * **useServerDefault**: 'Disabled' | 'Enabled'
+
+## DisasterRecoveryConfigurationProperties
+### Properties
+* **autoFailover**: 'Off' | 'On' (ReadOnly)
+* **failoverPolicy**: 'Automatic' | 'Manual' (ReadOnly)
+* **logicalServerName**: string (ReadOnly)
+* **partnerLogicalServerName**: string (ReadOnly)
+* **partnerServerId**: string (ReadOnly)
+* **role**: 'None' | 'Primary' | 'Secondary' (ReadOnly)
+* **status**: 'Creating' | 'Dropping' | 'FailingOver' | 'Ready' (ReadOnly)
 
 ## ElasticPoolProperties
 ### Properties

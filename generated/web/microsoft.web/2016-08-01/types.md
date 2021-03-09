@@ -125,6 +125,16 @@
 * **properties**: schemas:46_properties
 * **type**: 'Microsoft.Web/sites/publicCertificates' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Web/sites/siteextensions@2016-08-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:58_properties (ReadOnly)
+* **type**: 'Microsoft.Web/sites/siteextensions' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.Web/sites/slots@2016-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -249,6 +259,16 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: schemas:46_properties
 * **type**: 'Microsoft.Web/sites/slots/publicCertificates' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/slots/siteextensions@2016-08-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: schemas:58_properties (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/siteextensions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/slots/sourcecontrols@2016-08-01
 * **Valid Scope(s)**: ResourceGroup
@@ -727,6 +747,29 @@
 * **blob**: array
 * **publicCertificateLocation**: 'CurrentUserMy' | 'LocalMachineMy' | 'Unknown'
 * **thumbprint**: string (ReadOnly)
+
+## schemas:58_properties
+### Properties
+* **authors**: string[] (ReadOnly)
+* **comment**: string (ReadOnly)
+* **description**: string (ReadOnly)
+* **downloadCount**: int (ReadOnly)
+* **extensionUrl**: string (ReadOnly)
+* **feedUrl**: string (ReadOnly)
+* **iconUrl**: string (ReadOnly)
+* **id**: string (ReadOnly)
+* **installationArgs**: string (ReadOnly)
+* **installedDateTime**: string (ReadOnly)
+* **licenseUrl**: string (ReadOnly)
+* **localIsLatestVersion**: bool (ReadOnly)
+* **localPath**: string (ReadOnly)
+* **projectUrl**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly)
+* **publishedDateTime**: string (ReadOnly)
+* **summary**: string (ReadOnly)
+* **title**: string (ReadOnly)
+* **type**: 'Gallery' | 'WebRoot' (ReadOnly)
+* **version**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Properties

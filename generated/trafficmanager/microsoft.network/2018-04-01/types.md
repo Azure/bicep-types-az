@@ -11,6 +11,15 @@
 * **tags**: Dictionary<string,String>
 * **type**: 'Microsoft.Network/trafficmanagerprofiles' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Network/trafficManagerUserMetricsKeys@2018-04-01
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
+* **properties**: UserMetricsProperties (ReadOnly)
+* **type**: 'Microsoft.Network/trafficManagerUserMetricsKeys' (ReadOnly, DeployTimeConstant)
+
 ## ProfileProperties
 ### Properties
 * **dnsConfig**: DnsConfig
@@ -80,4 +89,8 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UserMetricsProperties
+### Properties
+* **key**: string (ReadOnly)
 
