@@ -23,6 +23,7 @@ namespace Azure.Bicep.Types.Serialization
         public override bool CanConvert(Type typeToConvert) =>
             typeof(TypeBase).IsAssignableFrom(typeToConvert);
 
+        // This enum should be kept in-sync with src/generator/types.ts
         private enum TypeBaseKind
         {
             // These enum values should never be changed because they are serialized as integers.

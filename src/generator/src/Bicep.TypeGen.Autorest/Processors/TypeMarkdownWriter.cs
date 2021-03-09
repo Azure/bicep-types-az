@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using Azure.Bicep.Types.Concrete;
 
 namespace Azure.Bicep.TypeGen.Autorest.Processors
@@ -54,14 +55,17 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
             => typeReference.Type switch
             {
                 BuiltInType type => type.Kind.ToString().ToLowerInvariant(),
-                ObjectType type => type.Name,
+                ObjectType type => GenerateAnchorLink(type.Name),
                 ArrayType type => $"{GetTypeName(type.ItemType)}[]",
                 ResourceType type => type.Name,
                 UnionType type => string.Join(" | ", type.Elements.Select(GetTypeName).OrderBy(x => x)),
                 StringLiteralType type => $"'{type.Value}'",
-                DiscriminatedObjectType type => type.Name,
+                DiscriminatedObjectType type => GenerateAnchorLink(type.Name),
                 _ => throw new ArgumentException(),
             };
+        
+        private static string GenerateAnchorLink(string name)
+            => $"[{name}](#{Regex.Replace(name, "[^a-zA-Z0-9-]", "").ToLowerInvariant()})";
 
         private void WriteHeading(int nesting, string message)
             => output.AppendLine($"{new String('#', nesting)} {message}");
