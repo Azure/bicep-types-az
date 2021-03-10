@@ -8,11 +8,11 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IotHubProperties
+* **properties**: [IotHubProperties](#iothubproperties)
 * **resourcegroup**: string (Required)
-* **sku**: IotHubSkuInfo (Required)
+* **sku**: [IotHubSkuInfo](#iothubskuinfo) (Required)
 * **subscriptionid**: string (Required)
-* **tags**: ResourceTags
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Devices/IotHubs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups@2016-02-03
@@ -21,23 +21,23 @@
 * **apiVersion**: '2016-02-03' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **tags**: EventHubConsumerGroupInfoTags (ReadOnly)
+* **tags**: [EventHubConsumerGroupInfoTags](#eventhubconsumergroupinfotags) (ReadOnly)
 * **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant)
 
 ## IotHubProperties
 ### Properties
-* **authorizationPolicies**: SharedAccessSignatureAuthorizationRule[]
-* **cloudToDevice**: CloudToDeviceProperties
+* **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[]
+* **cloudToDevice**: [CloudToDeviceProperties](#cloudtodeviceproperties)
 * **comments**: string
 * **enableFileUploadNotifications**: bool
-* **eventHubEndpoints**: IotHubPropertiesEventHubEndpoints
+* **eventHubEndpoints**: [IotHubPropertiesEventHubEndpoints](#iothubpropertieseventhubendpoints)
 * **features**: 'DeviceManagement' | 'None'
 * **hostName**: string (ReadOnly)
-* **ipFilterRules**: IpFilterRule[]
-* **messagingEndpoints**: IotHubPropertiesMessagingEndpoints
-* **operationsMonitoringProperties**: OperationsMonitoringProperties
+* **ipFilterRules**: [IpFilterRule](#ipfilterrule)[]
+* **messagingEndpoints**: [IotHubPropertiesMessagingEndpoints](#iothubpropertiesmessagingendpoints)
+* **operationsMonitoringProperties**: [OperationsMonitoringProperties](#operationsmonitoringproperties)
 * **provisioningState**: string (ReadOnly)
-* **storageEndpoints**: IotHubPropertiesStorageEndpoints
+* **storageEndpoints**: [IotHubPropertiesStorageEndpoints](#iothubpropertiesstorageendpoints)
 
 ## SharedAccessSignatureAuthorizationRule
 ### Properties
@@ -49,7 +49,7 @@
 ## CloudToDeviceProperties
 ### Properties
 * **defaultTtlAsIso8601**: string
-* **feedback**: FeedbackProperties
+* **feedback**: [FeedbackProperties](#feedbackproperties)
 * **maxDeliveryCount**: int
 
 ## FeedbackProperties
@@ -61,7 +61,7 @@
 ## IotHubPropertiesEventHubEndpoints
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: EventHubProperties
+* **Additional Properties Type**: [EventHubProperties](#eventhubproperties)
 
 ## EventHubProperties
 ### Properties
@@ -80,7 +80,7 @@
 ## IotHubPropertiesMessagingEndpoints
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: MessagingEndpointProperties
+* **Additional Properties Type**: [MessagingEndpointProperties](#messagingendpointproperties)
 
 ## MessagingEndpointProperties
 ### Properties
@@ -90,7 +90,7 @@
 
 ## OperationsMonitoringProperties
 ### Properties
-* **events**: OperationsMonitoringPropertiesEvents
+* **events**: [OperationsMonitoringPropertiesEvents](#operationsmonitoringpropertiesevents)
 
 ## OperationsMonitoringPropertiesEvents
 ### Properties
@@ -100,7 +100,7 @@
 ## IotHubPropertiesStorageEndpoints
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: StorageEndpointProperties
+* **Additional Properties Type**: [StorageEndpointProperties](#storageendpointproperties)
 
 ## StorageEndpointProperties
 ### Properties

@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SubscriptionDefinitionProperties
+* **properties**: [SubscriptionDefinitionProperties](#subscriptiondefinitionproperties)
 * **type**: 'Microsoft.Subscription/subscriptionDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## SubscriptionDefinitionProperties

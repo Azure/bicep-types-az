@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: UserAssignedIdentityProperties (ReadOnly)
-* **tags**: TrackedResourceTags
+* **properties**: [UserAssignedIdentityProperties](#userassignedidentityproperties) (ReadOnly)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.ManagedIdentity/userAssignedIdentities' (ReadOnly, DeployTimeConstant)
 
 ## UserAssignedIdentityProperties

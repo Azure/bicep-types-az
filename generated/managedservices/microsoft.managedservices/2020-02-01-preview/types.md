@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RegistrationAssignmentProperties
+* **properties**: [RegistrationAssignmentProperties](#registrationassignmentproperties)
 * **type**: 'Microsoft.ManagedServices/registrationAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ManagedServices/registrationDefinitions@2020-02-01-preview
@@ -15,22 +15,22 @@
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **plan**: Plan
-* **properties**: RegistrationDefinitionProperties
+* **plan**: [Plan](#plan)
+* **properties**: [RegistrationDefinitionProperties](#registrationdefinitionproperties)
 * **type**: 'Microsoft.ManagedServices/registrationDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## RegistrationAssignmentProperties
 ### Properties
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly)
-* **registrationDefinition**: RegistrationAssignmentPropertiesRegistrationDefinition (ReadOnly)
+* **registrationDefinition**: [RegistrationAssignmentPropertiesRegistrationDefinition](#registrationassignmentpropertiesregistrationdefinition) (ReadOnly)
 * **registrationDefinitionId**: string (Required)
 
 ## RegistrationAssignmentPropertiesRegistrationDefinition
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **plan**: Plan
-* **properties**: RegistrationAssignmentPropertiesRegistrationDefinitionProperties
+* **plan**: [Plan](#plan)
+* **properties**: [RegistrationAssignmentPropertiesRegistrationDefinitionProperties](#registrationassignmentpropertiesregistrationdefinitionproperties)
 * **type**: string (ReadOnly)
 
 ## Plan
@@ -42,9 +42,9 @@
 
 ## RegistrationAssignmentPropertiesRegistrationDefinitionProperties
 ### Properties
-* **authorizations**: Authorization[]
+* **authorizations**: [Authorization](#authorization)[]
 * **description**: string
-* **eligibleAuthorizations**: EligibleAuthorization[]
+* **eligibleAuthorizations**: [EligibleAuthorization](#eligibleauthorization)[]
 * **managedByTenantId**: string
 * **managedByTenantName**: string
 * **manageeTenantId**: string
@@ -61,7 +61,7 @@
 
 ## EligibleAuthorization
 ### Properties
-* **justInTimeAccessPolicy**: JustInTimeAccessPolicy
+* **justInTimeAccessPolicy**: [JustInTimeAccessPolicy](#justintimeaccesspolicy)
 * **principalId**: string (Required)
 * **principalIdDisplayName**: string
 * **roleDefinitionId**: string (Required)
@@ -73,9 +73,9 @@
 
 ## RegistrationDefinitionProperties
 ### Properties
-* **authorizations**: Authorization[] (Required)
+* **authorizations**: [Authorization](#authorization)[] (Required)
 * **description**: string
-* **eligibleAuthorizations**: EligibleAuthorization[]
+* **eligibleAuthorizations**: [EligibleAuthorization](#eligibleauthorization)[]
 * **managedByTenantId**: string (Required)
 * **managedByTenantName**: string (ReadOnly)
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly)

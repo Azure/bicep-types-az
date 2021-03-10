@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: MediaServiceIdentity
+* **identity**: [MediaServiceIdentity](#mediaserviceidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MediaServiceProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: TrackedResourceTags
+* **properties**: [MediaServiceProperties](#mediaserviceproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Media/mediaservices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/accountFilters@2020-05-01
@@ -19,8 +19,8 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MediaFilterProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [MediaFilterProperties](#mediafilterproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/accountFilters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/assets@2020-05-01
@@ -29,8 +29,8 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AssetProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [AssetProperties](#assetproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/assets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/assets/assetFilters@2020-05-01
@@ -39,8 +39,8 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MediaFilterProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [MediaFilterProperties](#mediafilterproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/assets/assetFilters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/contentKeyPolicies@2020-05-01
@@ -49,8 +49,8 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ContentKeyPolicyProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [ContentKeyPolicyProperties](#contentkeypolicyproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/contentKeyPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaservices/liveEvents@2020-05-01
@@ -60,9 +60,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LiveEventProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: TrackedResourceTags
+* **properties**: [LiveEventProperties](#liveeventproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Media/mediaservices/liveEvents' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaservices/liveEvents/liveOutputs@2020-05-01
@@ -71,7 +71,7 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LiveOutputProperties
+* **properties**: [LiveOutputProperties](#liveoutputproperties)
 * **type**: 'Microsoft.Media/mediaservices/liveEvents/liveOutputs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaservices/privateEndpointConnections@2020-05-01
@@ -80,7 +80,7 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: 'Microsoft.Media/mediaservices/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaservices/streamingEndpoints@2020-05-01
@@ -90,9 +90,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: StreamingEndpointProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: TrackedResourceTags
+* **properties**: [StreamingEndpointProperties](#streamingendpointproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Media/mediaservices/streamingEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/streamingLocators@2020-05-01
@@ -101,8 +101,8 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: StreamingLocatorProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [StreamingLocatorProperties](#streaminglocatorproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/streamingLocators' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/streamingPolicies@2020-05-01
@@ -111,8 +111,8 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: StreamingPolicyProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [StreamingPolicyProperties](#streamingpolicyproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/streamingPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/transforms@2020-05-01
@@ -121,8 +121,8 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TransformProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [TransformProperties](#transformproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/transforms' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/transforms/jobs@2020-05-01
@@ -131,8 +131,8 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: JobProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [JobProperties](#jobproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/transforms/jobs' (ReadOnly, DeployTimeConstant)
 
 ## MediaServiceIdentity
@@ -143,14 +143,14 @@
 
 ## MediaServiceProperties
 ### Properties
-* **encryption**: AccountEncryption
+* **encryption**: [AccountEncryption](#accountencryption)
 * **mediaServiceId**: string (ReadOnly)
-* **storageAccounts**: StorageAccount[]
+* **storageAccounts**: [StorageAccount](#storageaccount)[]
 * **storageAuthentication**: 'ManagedIdentity' | 'System'
 
 ## AccountEncryption
 ### Properties
-* **keyVaultProperties**: KeyVaultProperties
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
 * **type**: 'CustomerKey' | 'SystemKey' (Required)
 
 ## KeyVaultProperties
@@ -179,9 +179,9 @@
 
 ## MediaFilterProperties
 ### Properties
-* **firstQuality**: FirstQuality
-* **presentationTimeRange**: PresentationTimeRange
-* **tracks**: FilterTrackSelection[]
+* **firstQuality**: [FirstQuality](#firstquality)
+* **presentationTimeRange**: [PresentationTimeRange](#presentationtimerange)
+* **tracks**: [FilterTrackSelection](#filtertrackselection)[]
 
 ## FirstQuality
 ### Properties
@@ -198,7 +198,7 @@
 
 ## FilterTrackSelection
 ### Properties
-* **trackSelections**: FilterTrackPropertyCondition[] (Required)
+* **trackSelections**: [FilterTrackPropertyCondition](#filtertrackpropertycondition)[] (Required)
 
 ## FilterTrackPropertyCondition
 ### Properties
@@ -222,15 +222,15 @@
 * **created**: string (ReadOnly)
 * **description**: string
 * **lastModified**: string (ReadOnly)
-* **options**: ContentKeyPolicyOption[] (Required)
+* **options**: [ContentKeyPolicyOption](#contentkeypolicyoption)[] (Required)
 * **policyId**: string (ReadOnly)
 
 ## ContentKeyPolicyOption
 ### Properties
-* **configuration**: ContentKeyPolicyConfiguration (Required)
+* **configuration**: [ContentKeyPolicyConfiguration](#contentkeypolicyconfiguration) (Required)
 * **name**: string
 * **policyOptionId**: string (ReadOnly)
-* **restriction**: ContentKeyPolicyRestriction (Required)
+* **restriction**: [ContentKeyPolicyRestriction](#contentkeypolicyrestriction) (Required)
 
 ## ContentKeyPolicyConfiguration
 * **Discriminator**: @odata.type
@@ -246,14 +246,14 @@
 * **ask**: any (Required)
 * **fairPlayPfx**: string (Required)
 * **fairPlayPfxPassword**: string (Required)
-* **offlineRentalConfiguration**: ContentKeyPolicyFairPlayOfflineRentalConfiguration
+* **offlineRentalConfiguration**: [ContentKeyPolicyFairPlayOfflineRentalConfiguration](#contentkeypolicyfairplayofflinerentalconfiguration)
 * **rentalAndLeaseKeyType**: 'DualExpiry' | 'PersistentLimited' | 'PersistentUnlimited' | 'Undefined' | 'Unknown' (Required)
 * **rentalDuration**: int (Required)
 
 ### ContentKeyPolicyPlayReadyConfiguration
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration' (Required)
-* **licenses**: ContentKeyPolicyPlayReadyLicense[] (Required)
+* **licenses**: [ContentKeyPolicyPlayReadyLicense](#contentkeypolicyplayreadylicense)[] (Required)
 * **responseCustomData**: string
 
 ### ContentKeyPolicyUnknownConfiguration
@@ -276,7 +276,7 @@
 * **ask**: any (Required)
 * **fairPlayPfx**: string (Required)
 * **fairPlayPfxPassword**: string (Required)
-* **offlineRentalConfiguration**: ContentKeyPolicyFairPlayOfflineRentalConfiguration
+* **offlineRentalConfiguration**: [ContentKeyPolicyFairPlayOfflineRentalConfiguration](#contentkeypolicyfairplayofflinerentalconfiguration)
 * **rentalAndLeaseKeyType**: 'DualExpiry' | 'PersistentLimited' | 'PersistentUnlimited' | 'Undefined' | 'Unknown' (Required)
 * **rentalDuration**: int (Required)
 
@@ -288,19 +288,19 @@
 ## ContentKeyPolicyPlayReadyConfiguration
 ### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration' (Required)
-* **licenses**: ContentKeyPolicyPlayReadyLicense[] (Required)
+* **licenses**: [ContentKeyPolicyPlayReadyLicense](#contentkeypolicyplayreadylicense)[] (Required)
 * **responseCustomData**: string
 
 ## ContentKeyPolicyPlayReadyLicense
 ### Properties
 * **allowTestDevices**: bool (Required)
 * **beginDate**: string
-* **contentKeyLocation**: ContentKeyPolicyPlayReadyContentKeyLocation (Required)
+* **contentKeyLocation**: [ContentKeyPolicyPlayReadyContentKeyLocation](#contentkeypolicyplayreadycontentkeylocation) (Required)
 * **contentType**: 'UltraVioletDownload' | 'UltraVioletStreaming' | 'Unknown' | 'Unspecified' (Required)
 * **expirationDate**: string
 * **gracePeriod**: string
 * **licenseType**: 'NonPersistent' | 'Persistent' | 'Unknown' (Required)
-* **playRight**: ContentKeyPolicyPlayReadyPlayRight
+* **playRight**: [ContentKeyPolicyPlayReadyPlayRight](#contentkeypolicyplayreadyplayright)
 * **relativeBeginDate**: string
 * **relativeExpirationDate**: string
 
@@ -335,7 +335,7 @@
 * **compressedDigitalAudioOpl**: int
 * **compressedDigitalVideoOpl**: int
 * **digitalVideoOnlyContentRestriction**: bool (Required)
-* **explicitAnalogTelevisionOutputRestriction**: ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestriction
+* **explicitAnalogTelevisionOutputRestriction**: [ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestriction](#contentkeypolicyplayreadyexplicitanalogtelevisionrestriction)
 * **firstPlayExpiration**: string
 * **imageConstraintForAnalogComponentVideoRestriction**: bool (Required)
 * **imageConstraintForAnalogComputerMonitorRestriction**: bool (Required)
@@ -368,12 +368,12 @@
 ### ContentKeyPolicyTokenRestriction
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyTokenRestriction' (Required)
-* **alternateVerificationKeys**: ContentKeyPolicyRestrictionTokenKey[]
+* **alternateVerificationKeys**: [ContentKeyPolicyRestrictionTokenKey](#contentkeypolicyrestrictiontokenkey)[]
 * **audience**: string (Required)
 * **issuer**: string (Required)
 * **openIdConnectDiscoveryDocument**: string
-* **primaryVerificationKey**: ContentKeyPolicyRestrictionTokenKey (Required)
-* **requiredClaims**: ContentKeyPolicyTokenClaim[]
+* **primaryVerificationKey**: [ContentKeyPolicyRestrictionTokenKey](#contentkeypolicyrestrictiontokenkey) (Required)
+* **requiredClaims**: [ContentKeyPolicyTokenClaim](#contentkeypolicytokenclaim)[]
 * **restrictionTokenType**: 'Jwt' | 'Swt' | 'Unknown' (Required)
 
 ### ContentKeyPolicyUnknownRestriction
@@ -388,12 +388,12 @@
 ## ContentKeyPolicyTokenRestriction
 ### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyTokenRestriction' (Required)
-* **alternateVerificationKeys**: ContentKeyPolicyRestrictionTokenKey[]
+* **alternateVerificationKeys**: [ContentKeyPolicyRestrictionTokenKey](#contentkeypolicyrestrictiontokenkey)[]
 * **audience**: string (Required)
 * **issuer**: string (Required)
 * **openIdConnectDiscoveryDocument**: string
-* **primaryVerificationKey**: ContentKeyPolicyRestrictionTokenKey (Required)
-* **requiredClaims**: ContentKeyPolicyTokenClaim[]
+* **primaryVerificationKey**: [ContentKeyPolicyRestrictionTokenKey](#contentkeypolicyrestrictiontokenkey) (Required)
+* **requiredClaims**: [ContentKeyPolicyTokenClaim](#contentkeypolicytokenclaim)[]
 * **restrictionTokenType**: 'Jwt' | 'Swt' | 'Unknown' (Required)
 
 ## ContentKeyPolicyRestrictionTokenKey
@@ -445,17 +445,17 @@
 ## LiveEventProperties
 ### Properties
 * **created**: string (ReadOnly)
-* **crossSiteAccessPolicies**: CrossSiteAccessPolicies
+* **crossSiteAccessPolicies**: [CrossSiteAccessPolicies](#crosssiteaccesspolicies)
 * **description**: string
-* **encoding**: LiveEventEncoding
+* **encoding**: [LiveEventEncoding](#liveeventencoding)
 * **hostnamePrefix**: string
-* **input**: LiveEventInput (Required)
+* **input**: [LiveEventInput](#liveeventinput) (Required)
 * **lastModified**: string (ReadOnly)
-* **preview**: LiveEventPreview
+* **preview**: [LiveEventPreview](#liveeventpreview)
 * **provisioningState**: string (ReadOnly)
 * **resourceState**: 'Allocating' | 'Deleting' | 'Running' | 'StandBy' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
 * **streamOptions**: 'Default' | 'LowLatency'[]
-* **transcriptions**: LiveEventTranscription[]
+* **transcriptions**: [LiveEventTranscription](#liveeventtranscription)[]
 * **useStaticHostname**: bool
 
 ## CrossSiteAccessPolicies
@@ -472,19 +472,19 @@
 
 ## LiveEventInput
 ### Properties
-* **accessControl**: LiveEventInputAccessControl
+* **accessControl**: [LiveEventInputAccessControl](#liveeventinputaccesscontrol)
 * **accessToken**: string
-* **endpoints**: LiveEventEndpoint[]
+* **endpoints**: [LiveEventEndpoint](#liveeventendpoint)[]
 * **keyFrameIntervalDuration**: string
 * **streamingProtocol**: 'FragmentedMP4' | 'RTMP' (Required)
 
 ## LiveEventInputAccessControl
 ### Properties
-* **ip**: IPAccessControl
+* **ip**: [IPAccessControl](#ipaccesscontrol)
 
 ## IPAccessControl
 ### Properties
-* **allow**: IPRange[]
+* **allow**: [IPRange](#iprange)[]
 
 ## IPRange
 ### Properties
@@ -499,21 +499,21 @@
 
 ## LiveEventPreview
 ### Properties
-* **accessControl**: LiveEventPreviewAccessControl
+* **accessControl**: [LiveEventPreviewAccessControl](#liveeventpreviewaccesscontrol)
 * **alternativeMediaId**: string
-* **endpoints**: LiveEventEndpoint[]
+* **endpoints**: [LiveEventEndpoint](#liveeventendpoint)[]
 * **previewLocator**: string
 * **streamingPolicyName**: string
 
 ## LiveEventPreviewAccessControl
 ### Properties
-* **ip**: IPAccessControl
+* **ip**: [IPAccessControl](#ipaccesscontrol)
 
 ## LiveEventTranscription
 ### Properties
-* **inputTrackSelection**: LiveEventInputTrackSelection[]
+* **inputTrackSelection**: [LiveEventInputTrackSelection](#liveeventinputtrackselection)[]
 * **language**: string
-* **outputTranscriptionTrack**: LiveEventOutputTranscriptionTrack
+* **outputTranscriptionTrack**: [LiveEventOutputTranscriptionTrack](#liveeventoutputtranscriptiontrack)
 
 ## LiveEventInputTrackSelection
 ### Properties
@@ -536,7 +536,7 @@
 * **assetName**: string (Required)
 * **created**: string (ReadOnly)
 * **description**: string
-* **hls**: Hls
+* **hls**: [Hls](#hls)
 * **lastModified**: string (ReadOnly)
 * **manifestName**: string
 * **outputSnapTime**: int
@@ -549,8 +549,8 @@
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
 
 ## PrivateEndpoint
@@ -565,13 +565,13 @@
 
 ## StreamingEndpointProperties
 ### Properties
-* **accessControl**: StreamingEndpointAccessControl
+* **accessControl**: [StreamingEndpointAccessControl](#streamingendpointaccesscontrol)
 * **availabilitySetName**: string
 * **cdnEnabled**: bool
 * **cdnProfile**: string
 * **cdnProvider**: string
 * **created**: string (ReadOnly)
-* **crossSiteAccessPolicies**: CrossSiteAccessPolicies
+* **crossSiteAccessPolicies**: [CrossSiteAccessPolicies](#crosssiteaccesspolicies)
 * **customHostNames**: string[]
 * **description**: string
 * **freeTrialEndTime**: string (ReadOnly)
@@ -584,12 +584,12 @@
 
 ## StreamingEndpointAccessControl
 ### Properties
-* **akamai**: AkamaiAccessControl
-* **ip**: IPAccessControl
+* **akamai**: [AkamaiAccessControl](#akamaiaccesscontrol)
+* **ip**: [IPAccessControl](#ipaccesscontrol)
 
 ## AkamaiAccessControl
 ### Properties
-* **akamaiSignatureHeaderAuthenticationKeyList**: AkamaiSignatureHeaderAuthenticationKey[]
+* **akamaiSignatureHeaderAuthenticationKeyList**: [AkamaiSignatureHeaderAuthenticationKey](#akamaisignatureheaderauthenticationkey)[]
 
 ## AkamaiSignatureHeaderAuthenticationKey
 ### Properties
@@ -606,7 +606,7 @@
 ### Properties
 * **alternativeMediaId**: string
 * **assetName**: string (Required)
-* **contentKeys**: StreamingLocatorContentKey[]
+* **contentKeys**: [StreamingLocatorContentKey](#streaminglocatorcontentkey)[]
 * **created**: string (ReadOnly)
 * **defaultContentKeyPolicyName**: string
 * **endTime**: string
@@ -620,13 +620,13 @@
 * **id**: string (Required)
 * **labelReferenceInStreamingPolicy**: string
 * **policyName**: string (ReadOnly)
-* **tracks**: TrackSelection[] (ReadOnly)
+* **tracks**: [TrackSelection](#trackselection)[] (ReadOnly)
 * **type**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' (ReadOnly)
 * **value**: string
 
 ## TrackSelection
 ### Properties
-* **trackSelections**: TrackPropertyCondition[]
+* **trackSelections**: [TrackPropertyCondition](#trackpropertycondition)[]
 
 ## TrackPropertyCondition
 ### Properties
@@ -636,24 +636,24 @@
 
 ## StreamingPolicyProperties
 ### Properties
-* **commonEncryptionCbcs**: CommonEncryptionCbcs
-* **commonEncryptionCenc**: CommonEncryptionCenc
+* **commonEncryptionCbcs**: [CommonEncryptionCbcs](#commonencryptioncbcs)
+* **commonEncryptionCenc**: [CommonEncryptionCenc](#commonencryptioncenc)
 * **created**: string (ReadOnly)
 * **defaultContentKeyPolicyName**: string
-* **envelopeEncryption**: EnvelopeEncryption
-* **noEncryption**: NoEncryption
+* **envelopeEncryption**: [EnvelopeEncryption](#envelopeencryption)
+* **noEncryption**: [NoEncryption](#noencryption)
 
 ## CommonEncryptionCbcs
 ### Properties
-* **clearTracks**: TrackSelection[]
-* **contentKeys**: StreamingPolicyContentKeys
-* **drm**: CbcsDrmConfiguration
-* **enabledProtocols**: EnabledProtocols
+* **clearTracks**: [TrackSelection](#trackselection)[]
+* **contentKeys**: [StreamingPolicyContentKeys](#streamingpolicycontentkeys)
+* **drm**: [CbcsDrmConfiguration](#cbcsdrmconfiguration)
+* **enabledProtocols**: [EnabledProtocols](#enabledprotocols)
 
 ## StreamingPolicyContentKeys
 ### Properties
-* **defaultKey**: DefaultKey
-* **keyToTrackMappings**: StreamingPolicyContentKey[]
+* **defaultKey**: [DefaultKey](#defaultkey)
+* **keyToTrackMappings**: [StreamingPolicyContentKey](#streamingpolicycontentkey)[]
 
 ## DefaultKey
 ### Properties
@@ -664,13 +664,13 @@
 ### Properties
 * **label**: string
 * **policyName**: string
-* **tracks**: TrackSelection[]
+* **tracks**: [TrackSelection](#trackselection)[]
 
 ## CbcsDrmConfiguration
 ### Properties
-* **fairPlay**: StreamingPolicyFairPlayConfiguration
-* **playReady**: StreamingPolicyPlayReadyConfiguration
-* **widevine**: StreamingPolicyWidevineConfiguration
+* **fairPlay**: [StreamingPolicyFairPlayConfiguration](#streamingpolicyfairplayconfiguration)
+* **playReady**: [StreamingPolicyPlayReadyConfiguration](#streamingpolicyplayreadyconfiguration)
+* **widevine**: [StreamingPolicyWidevineConfiguration](#streamingpolicywidevineconfiguration)
 
 ## StreamingPolicyFairPlayConfiguration
 ### Properties
@@ -695,38 +695,38 @@
 
 ## CommonEncryptionCenc
 ### Properties
-* **clearTracks**: TrackSelection[]
-* **contentKeys**: StreamingPolicyContentKeys
-* **drm**: CencDrmConfiguration
-* **enabledProtocols**: EnabledProtocols
+* **clearTracks**: [TrackSelection](#trackselection)[]
+* **contentKeys**: [StreamingPolicyContentKeys](#streamingpolicycontentkeys)
+* **drm**: [CencDrmConfiguration](#cencdrmconfiguration)
+* **enabledProtocols**: [EnabledProtocols](#enabledprotocols)
 
 ## CencDrmConfiguration
 ### Properties
-* **playReady**: StreamingPolicyPlayReadyConfiguration
-* **widevine**: StreamingPolicyWidevineConfiguration
+* **playReady**: [StreamingPolicyPlayReadyConfiguration](#streamingpolicyplayreadyconfiguration)
+* **widevine**: [StreamingPolicyWidevineConfiguration](#streamingpolicywidevineconfiguration)
 
 ## EnvelopeEncryption
 ### Properties
-* **clearTracks**: TrackSelection[]
-* **contentKeys**: StreamingPolicyContentKeys
+* **clearTracks**: [TrackSelection](#trackselection)[]
+* **contentKeys**: [StreamingPolicyContentKeys](#streamingpolicycontentkeys)
 * **customKeyAcquisitionUrlTemplate**: string
-* **enabledProtocols**: EnabledProtocols
+* **enabledProtocols**: [EnabledProtocols](#enabledprotocols)
 
 ## NoEncryption
 ### Properties
-* **enabledProtocols**: EnabledProtocols
+* **enabledProtocols**: [EnabledProtocols](#enabledprotocols)
 
 ## TransformProperties
 ### Properties
 * **created**: string (ReadOnly)
 * **description**: string
 * **lastModified**: string (ReadOnly)
-* **outputs**: TransformOutput[] (Required)
+* **outputs**: [TransformOutput](#transformoutput)[] (Required)
 
 ## TransformOutput
 ### Properties
 * **onError**: 'ContinueJob' | 'StopProcessingJob'
-* **preset**: Preset (Required)
+* **preset**: [Preset](#preset) (Required)
 * **relativePriority**: 'High' | 'Low' | 'Normal'
 
 ## Preset
@@ -742,16 +742,16 @@
 #### Properties
 * **@odata.type**: '#Microsoft.Media.FaceDetectorPreset' (Required)
 * **blurType**: 'Black' | 'Box' | 'High' | 'Low' | 'Med'
-* **experimentalOptions**: FaceDetectorPresetExperimentalOptions
+* **experimentalOptions**: [FaceDetectorPresetExperimentalOptions](#facedetectorpresetexperimentaloptions)
 * **mode**: 'Analyze' | 'Combined' | 'Redact'
 * **resolution**: 'SourceResolution' | 'StandardDefinition'
 
 ### StandardEncoderPreset
 #### Properties
 * **@odata.type**: '#Microsoft.Media.StandardEncoderPreset' (Required)
-* **codecs**: Codec[] (Required)
-* **filters**: Filters
-* **formats**: Format[] (Required)
+* **codecs**: [Codec](#codec)[] (Required)
+* **filters**: [Filters](#filters)
+* **formats**: [Format](#format)[] (Required)
 
 ### VideoAnalyzerPreset
 #### Properties
@@ -768,7 +768,7 @@
 ### Properties
 * **@odata.type**: '#Microsoft.Media.FaceDetectorPreset' (Required)
 * **blurType**: 'Black' | 'Box' | 'High' | 'Low' | 'Med'
-* **experimentalOptions**: FaceDetectorPresetExperimentalOptions
+* **experimentalOptions**: [FaceDetectorPresetExperimentalOptions](#facedetectorpresetexperimentaloptions)
 * **mode**: 'Analyze' | 'Combined' | 'Redact'
 * **resolution**: 'SourceResolution' | 'StandardDefinition'
 
@@ -780,9 +780,9 @@
 ## StandardEncoderPreset
 ### Properties
 * **@odata.type**: '#Microsoft.Media.StandardEncoderPreset' (Required)
-* **codecs**: Codec[] (Required)
-* **filters**: Filters
-* **formats**: Format[] (Required)
+* **codecs**: [Codec](#codec)[] (Required)
+* **filters**: [Filters](#filters)
+* **formats**: [Format](#format)[] (Required)
 
 ## Codec
 * **Discriminator**: @odata.type
@@ -806,26 +806,26 @@
 #### Properties
 * **@odata.type**: '#Microsoft.Media.H264Video' (Required)
 * **complexity**: 'Balanced' | 'Quality' | 'Speed'
-* **layers**: H264Layer[]
+* **layers**: [H264Layer](#h264layer)[]
 * **sceneChangeDetection**: bool
 
 ### H265Video
 #### Properties
 * **@odata.type**: '#Microsoft.Media.H265Video' (Required)
 * **complexity**: 'Balanced' | 'Quality' | 'Speed'
-* **layers**: H265Layer[]
+* **layers**: [H265Layer](#h265layer)[]
 * **sceneChangeDetection**: bool
 
 ### JpgImage
 #### Properties
 * **@odata.type**: '#Microsoft.Media.JpgImage' (Required)
-* **layers**: JpgLayer[]
+* **layers**: [JpgLayer](#jpglayer)[]
 * **spriteColumn**: int
 
 ### PngImage
 #### Properties
 * **@odata.type**: '#Microsoft.Media.PngImage' (Required)
-* **layers**: PngLayer[]
+* **layers**: [PngLayer](#pnglayer)[]
 
 
 ## AacAudio
@@ -845,7 +845,7 @@
 ### Properties
 * **@odata.type**: '#Microsoft.Media.H264Video' (Required)
 * **complexity**: 'Balanced' | 'Quality' | 'Speed'
-* **layers**: H264Layer[]
+* **layers**: [H264Layer](#h264layer)[]
 * **sceneChangeDetection**: bool
 
 ## H264Layer
@@ -870,7 +870,7 @@
 ### Properties
 * **@odata.type**: '#Microsoft.Media.H265Video' (Required)
 * **complexity**: 'Balanced' | 'Quality' | 'Speed'
-* **layers**: H265Layer[]
+* **layers**: [H265Layer](#h265layer)[]
 * **sceneChangeDetection**: bool
 
 ## H265Layer
@@ -893,7 +893,7 @@
 ## JpgImage
 ### Properties
 * **@odata.type**: '#Microsoft.Media.JpgImage' (Required)
-* **layers**: JpgLayer[]
+* **layers**: [JpgLayer](#jpglayer)[]
 * **spriteColumn**: int
 
 ## JpgLayer
@@ -907,7 +907,7 @@
 ## PngImage
 ### Properties
 * **@odata.type**: '#Microsoft.Media.PngImage' (Required)
-* **layers**: PngLayer[]
+* **layers**: [PngLayer](#pnglayer)[]
 
 ## PngLayer
 ### Properties
@@ -918,9 +918,9 @@
 
 ## Filters
 ### Properties
-* **crop**: Rectangle
-* **deinterlace**: Deinterlace
-* **overlays**: Overlay[]
+* **crop**: [Rectangle](#rectangle)
+* **deinterlace**: [Deinterlace](#deinterlace)
+* **overlays**: [Overlay](#overlay)[]
 * **rotation**: 'Auto' | 'None' | 'Rotate0' | 'Rotate180' | 'Rotate270' | 'Rotate90'
 
 ## Rectangle
@@ -952,9 +952,9 @@
 ### VideoOverlay
 #### Properties
 * **@odata.type**: '#Microsoft.Media.VideoOverlay' (Required)
-* **cropRectangle**: Rectangle
+* **cropRectangle**: [Rectangle](#rectangle)
 * **opacity**: int
-* **position**: Rectangle
+* **position**: [Rectangle](#rectangle)
 
 
 ## AudioOverlay
@@ -964,9 +964,9 @@
 ## VideoOverlay
 ### Properties
 * **@odata.type**: '#Microsoft.Media.VideoOverlay' (Required)
-* **cropRectangle**: Rectangle
+* **cropRectangle**: [Rectangle](#rectangle)
 * **opacity**: int
-* **position**: Rectangle
+* **position**: [Rectangle](#rectangle)
 
 ## Format
 * **Discriminator**: @odata.type
@@ -1013,13 +1013,13 @@
 
 ## JobProperties
 ### Properties
-* **correlationData**: JobPropertiesCorrelationData
+* **correlationData**: [JobPropertiesCorrelationData](#jobpropertiescorrelationdata)
 * **created**: string (ReadOnly)
 * **description**: string
 * **endTime**: string (ReadOnly)
-* **input**: JobInput (Required)
+* **input**: [JobInput](#jobinput) (Required)
 * **lastModified**: string (ReadOnly)
-* **outputs**: JobOutput[] (Required)
+* **outputs**: [JobOutput](#joboutput)[] (Required)
 * **priority**: 'High' | 'Low' | 'Normal'
 * **startTime**: string (ReadOnly)
 * **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' (ReadOnly)
@@ -1046,12 +1046,12 @@
 ### JobInputs
 #### Properties
 * **@odata.type**: '#Microsoft.Media.JobInputs' (Required)
-* **inputs**: JobInput[]
+* **inputs**: [JobInput](#jobinput)[]
 
 ### JobInputSequence
 #### Properties
 * **@odata.type**: '#Microsoft.Media.JobInputSequence' (Required)
-* **inputs**: JobInputClip[]
+* **inputs**: [JobInputClip](#jobinputclip)[]
 
 
 ## JobInputAsset
@@ -1067,22 +1067,22 @@
 ## JobInputs
 ### Properties
 * **@odata.type**: '#Microsoft.Media.JobInputs' (Required)
-* **inputs**: JobInput[]
+* **inputs**: [JobInput](#jobinput)[]
 
 ## JobInputSequence
 ### Properties
 * **@odata.type**: '#Microsoft.Media.JobInputSequence' (Required)
-* **inputs**: JobInputClip[]
+* **inputs**: [JobInputClip](#jobinputclip)[]
 
 ## JobInputClip
 * **Discriminator**: @odata.type
 
 ### Base Properties
-* **end**: ClipTime
+* **end**: [ClipTime](#cliptime)
 * **files**: string[]
-* **inputDefinitions**: InputDefinition[]
+* **inputDefinitions**: [InputDefinition](#inputdefinition)[]
 * **label**: string
-* **start**: ClipTime
+* **start**: [ClipTime](#cliptime)
 ### JobInputAsset
 #### Properties
 * **@odata.type**: '#Microsoft.Media.JobInputAsset' (Required)
@@ -1123,7 +1123,7 @@
 * **Discriminator**: @odata.type
 
 ### Base Properties
-* **includedTracks**: TrackDescriptor[]
+* **includedTracks**: [TrackDescriptor](#trackdescriptor)[]
 ### FromAllInputFile
 #### Properties
 * **@odata.type**: '#Microsoft.Media.FromAllInputFile' (Required)
@@ -1209,7 +1209,7 @@
 
 ### Base Properties
 * **endTime**: string (ReadOnly)
-* **error**: JobError (ReadOnly)
+* **error**: [JobError](#joberror) (ReadOnly)
 * **label**: string
 * **progress**: int (ReadOnly)
 * **startTime**: string (ReadOnly)
@@ -1224,7 +1224,7 @@
 ### Properties
 * **category**: 'Configuration' | 'Content' | 'Download' | 'Service' | 'Upload' (ReadOnly)
 * **code**: 'ConfigurationUnsupported' | 'ContentMalformed' | 'ContentUnsupported' | 'DownloadNotAccessible' | 'DownloadTransientError' | 'ServiceError' | 'ServiceTransientError' | 'UploadNotAccessible' | 'UploadTransientError' (ReadOnly)
-* **details**: JobErrorDetail[] (ReadOnly)
+* **details**: [JobErrorDetail](#joberrordetail)[] (ReadOnly)
 * **message**: string (ReadOnly)
 * **retry**: 'DoNotRetry' | 'MayRetry' (ReadOnly)
 

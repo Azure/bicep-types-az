@@ -6,12 +6,12 @@
 * **apiVersion**: '2020-03-30' (ReadOnly, DeployTimeConstant)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ServicesResourceIdentity
+* **identity**: [ServicesResourceIdentity](#servicesresourceidentity)
 * **kind**: 'fhir' | 'fhir-R4' | 'fhir-Stu3' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServicesProperties
-* **tags**: ServicesResourceTags
+* **properties**: [ServicesProperties](#servicesproperties)
+* **tags**: [ServicesResourceTags](#servicesresourcetags)
 * **type**: 'Microsoft.HealthcareApis/services' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HealthcareApis/services/privateEndpointConnections@2020-03-30
@@ -20,7 +20,7 @@
 * **apiVersion**: '2020-03-30' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: 'Microsoft.HealthcareApis/services/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## ServicesResourceIdentity
@@ -31,12 +31,12 @@
 
 ## ServicesProperties
 ### Properties
-* **accessPolicies**: ServiceAccessPolicyEntry[]
-* **authenticationConfiguration**: ServiceAuthenticationConfigurationInfo
-* **corsConfiguration**: ServiceCorsConfigurationInfo
-* **cosmosDbConfiguration**: ServiceCosmosDbConfigurationInfo
-* **exportConfiguration**: ServiceExportConfigurationInfo
-* **privateEndpointConnections**: PrivateEndpointConnection[]
+* **accessPolicies**: [ServiceAccessPolicyEntry](#serviceaccesspolicyentry)[]
+* **authenticationConfiguration**: [ServiceAuthenticationConfigurationInfo](#serviceauthenticationconfigurationinfo)
+* **corsConfiguration**: [ServiceCorsConfigurationInfo](#servicecorsconfigurationinfo)
+* **cosmosDbConfiguration**: [ServiceCosmosDbConfigurationInfo](#servicecosmosdbconfigurationinfo)
+* **exportConfiguration**: [ServiceExportConfigurationInfo](#serviceexportconfigurationinfo)
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Succeeded' | 'Updating' | 'Verifying' (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 
@@ -71,13 +71,13 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
 
 ## PrivateEndpoint

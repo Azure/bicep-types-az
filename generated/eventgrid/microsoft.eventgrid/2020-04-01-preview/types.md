@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: IdentityInfo
+* **identity**: [IdentityInfo](#identityinfo)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DomainProperties
-* **sku**: ResourceSku
-* **tags**: TrackedResourceTags
+* **properties**: [DomainProperties](#domainproperties)
+* **sku**: [ResourceSku](#resourcesku)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/domains/privateEndpointConnections@2020-04-01-preview
@@ -19,7 +19,7 @@
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: 'Microsoft.EventGrid/domains/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/domains/topics@2020-04-01-preview
@@ -28,7 +28,7 @@
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DomainTopicProperties (ReadOnly)
+* **properties**: [DomainTopicProperties](#domaintopicproperties) (ReadOnly)
 * **type**: 'Microsoft.EventGrid/domains/topics' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/eventSubscriptions@2020-04-01-preview
@@ -37,7 +37,7 @@
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EventSubscriptionProperties
+* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties)
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/partnerNamespaces@2020-04-01-preview
@@ -47,8 +47,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PartnerNamespaceProperties
-* **tags**: TrackedResourceTags
+* **properties**: [PartnerNamespaceProperties](#partnernamespaceproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.EventGrid/partnerNamespaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/partnerNamespaces/eventChannels@2020-04-01-preview
@@ -57,7 +57,7 @@
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EventChannelProperties
+* **properties**: [EventChannelProperties](#eventchannelproperties)
 * **type**: 'Microsoft.EventGrid/partnerNamespaces/eventChannels' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/partnerRegistrations@2020-04-01-preview
@@ -67,8 +67,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PartnerRegistrationProperties
-* **tags**: TrackedResourceTags
+* **properties**: [PartnerRegistrationProperties](#partnerregistrationproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.EventGrid/partnerRegistrations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/partnerTopics/eventSubscriptions@2020-04-01-preview
@@ -77,7 +77,7 @@
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EventSubscriptionProperties
+* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties)
 * **type**: 'Microsoft.EventGrid/partnerTopics/eventSubscriptions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/systemTopics@2020-04-01-preview
@@ -87,8 +87,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SystemTopicProperties
-* **tags**: TrackedResourceTags
+* **properties**: [SystemTopicProperties](#systemtopicproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.EventGrid/systemTopics' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/systemTopics/eventSubscriptions@2020-04-01-preview
@@ -97,7 +97,7 @@
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EventSubscriptionProperties
+* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties)
 * **type**: 'Microsoft.EventGrid/systemTopics/eventSubscriptions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/topics@2020-04-01-preview
@@ -105,12 +105,12 @@
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: IdentityInfo
+* **identity**: [IdentityInfo](#identityinfo)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TopicProperties
-* **sku**: ResourceSku
-* **tags**: TrackedResourceTags
+* **properties**: [TopicProperties](#topicproperties)
+* **sku**: [ResourceSku](#resourcesku)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/topics/privateEndpointConnections@2020-04-01-preview
@@ -119,7 +119,7 @@
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: 'Microsoft.EventGrid/topics/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## IdentityInfo
@@ -127,12 +127,12 @@
 * **principalId**: string
 * **tenantId**: string
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: IdentityInfoUserAssignedIdentities
+* **userAssignedIdentities**: [IdentityInfoUserAssignedIdentities](#identityinfouserassignedidentities)
 
 ## IdentityInfoUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: UserIdentityProperties
+* **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
 
 ## UserIdentityProperties
 ### Properties
@@ -142,11 +142,11 @@
 ## DomainProperties
 ### Properties
 * **endpoint**: string (ReadOnly)
-* **inboundIpRules**: InboundIpRule[]
+* **inboundIpRules**: [InboundIpRule](#inboundiprule)[]
 * **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema'
-* **inputSchemaMapping**: InputSchemaMapping
+* **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping)
 * **metricResourceId**: string (ReadOnly)
-* **privateEndpointConnections**: PrivateEndpointConnection[]
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 
@@ -162,22 +162,22 @@
 ### JsonInputSchemaMapping
 #### Properties
 * **inputSchemaMappingType**: 'Json' (Required)
-* **properties**: JsonInputSchemaMappingProperties
+* **properties**: [JsonInputSchemaMappingProperties](#jsoninputschemamappingproperties)
 
 
 ## JsonInputSchemaMapping
 ### Properties
 * **inputSchemaMappingType**: 'Json' (Required)
-* **properties**: JsonInputSchemaMappingProperties
+* **properties**: [JsonInputSchemaMappingProperties](#jsoninputschemamappingproperties)
 
 ## JsonInputSchemaMappingProperties
 ### Properties
-* **dataVersion**: JsonFieldWithDefault
-* **eventTime**: JsonField
-* **eventType**: JsonFieldWithDefault
-* **id**: JsonField
-* **subject**: JsonFieldWithDefault
-* **topic**: JsonField
+* **dataVersion**: [JsonFieldWithDefault](#jsonfieldwithdefault)
+* **eventTime**: [JsonField](#jsonfield)
+* **eventType**: [JsonFieldWithDefault](#jsonfieldwithdefault)
+* **id**: [JsonField](#jsonfield)
+* **subject**: [JsonFieldWithDefault](#jsonfieldwithdefault)
+* **topic**: [JsonField](#jsonfield)
 
 ## JsonFieldWithDefault
 ### Properties
@@ -192,14 +192,14 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **groupIds**: string[]
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: ConnectionState
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
+* **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
 
 ## PrivateEndpoint
@@ -227,16 +227,16 @@
 
 ## EventSubscriptionProperties
 ### Properties
-* **deadLetterDestination**: DeadLetterDestination
-* **deadLetterWithResourceIdentity**: DeadLetterWithResourceIdentity
-* **deliveryWithResourceIdentity**: DeliveryWithResourceIdentity
-* **destination**: EventSubscriptionDestination
+* **deadLetterDestination**: [DeadLetterDestination](#deadletterdestination)
+* **deadLetterWithResourceIdentity**: [DeadLetterWithResourceIdentity](#deadletterwithresourceidentity)
+* **deliveryWithResourceIdentity**: [DeliveryWithResourceIdentity](#deliverywithresourceidentity)
+* **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination)
 * **eventDeliverySchema**: 'CloudEventSchemaV1_0' | 'CustomInputSchema' | 'EventGridSchema'
 * **expirationTimeUtc**: string
-* **filter**: EventSubscriptionFilter
+* **filter**: [EventSubscriptionFilter](#eventsubscriptionfilter)
 * **labels**: string[]
 * **provisioningState**: 'AwaitingManualAction' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **retryPolicy**: RetryPolicy
+* **retryPolicy**: [RetryPolicy](#retrypolicy)
 * **topic**: string (ReadOnly)
 
 ## DeadLetterDestination
@@ -246,13 +246,13 @@
 ### StorageBlobDeadLetterDestination
 #### Properties
 * **endpointType**: 'StorageBlob' (Required)
-* **properties**: StorageBlobDeadLetterDestinationProperties
+* **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties)
 
 
 ## StorageBlobDeadLetterDestination
 ### Properties
 * **endpointType**: 'StorageBlob' (Required)
-* **properties**: StorageBlobDeadLetterDestinationProperties
+* **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties)
 
 ## StorageBlobDeadLetterDestinationProperties
 ### Properties
@@ -261,8 +261,8 @@
 
 ## DeadLetterWithResourceIdentity
 ### Properties
-* **deadLetterDestination**: DeadLetterDestination
-* **identity**: EventSubscriptionIdentity
+* **deadLetterDestination**: [DeadLetterDestination](#deadletterdestination)
+* **identity**: [EventSubscriptionIdentity](#eventsubscriptionidentity)
 
 ## EventSubscriptionIdentity
 ### Properties
@@ -271,8 +271,8 @@
 
 ## DeliveryWithResourceIdentity
 ### Properties
-* **destination**: EventSubscriptionDestination
-* **identity**: EventSubscriptionIdentity
+* **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination)
+* **identity**: [EventSubscriptionIdentity](#eventsubscriptionidentity)
 
 ## EventSubscriptionDestination
 * **Discriminator**: endpointType
@@ -281,43 +281,43 @@
 ### AzureFunctionEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'AzureFunction' (Required)
-* **properties**: AzureFunctionEventSubscriptionDestinationProperties
+* **properties**: [AzureFunctionEventSubscriptionDestinationProperties](#azurefunctioneventsubscriptiondestinationproperties)
 
 ### EventHubEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'EventHub' (Required)
-* **properties**: EventHubEventSubscriptionDestinationProperties
+* **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties)
 
 ### HybridConnectionEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'HybridConnection' (Required)
-* **properties**: HybridConnectionEventSubscriptionDestinationProperties
+* **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties)
 
 ### ServiceBusQueueEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'ServiceBusQueue' (Required)
-* **properties**: ServiceBusQueueEventSubscriptionDestinationProperties
+* **properties**: [ServiceBusQueueEventSubscriptionDestinationProperties](#servicebusqueueeventsubscriptiondestinationproperties)
 
 ### ServiceBusTopicEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'ServiceBusTopic' (Required)
-* **properties**: ServiceBusTopicEventSubscriptionDestinationProperties
+* **properties**: [ServiceBusTopicEventSubscriptionDestinationProperties](#servicebustopiceventsubscriptiondestinationproperties)
 
 ### StorageQueueEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'StorageQueue' (Required)
-* **properties**: StorageQueueEventSubscriptionDestinationProperties
+* **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties)
 
 ### WebHookEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'WebHook' (Required)
-* **properties**: WebHookEventSubscriptionDestinationProperties
+* **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties)
 
 
 ## AzureFunctionEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'AzureFunction' (Required)
-* **properties**: AzureFunctionEventSubscriptionDestinationProperties
+* **properties**: [AzureFunctionEventSubscriptionDestinationProperties](#azurefunctioneventsubscriptiondestinationproperties)
 
 ## AzureFunctionEventSubscriptionDestinationProperties
 ### Properties
@@ -328,7 +328,7 @@
 ## EventHubEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'EventHub' (Required)
-* **properties**: EventHubEventSubscriptionDestinationProperties
+* **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties)
 
 ## EventHubEventSubscriptionDestinationProperties
 ### Properties
@@ -337,7 +337,7 @@
 ## HybridConnectionEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'HybridConnection' (Required)
-* **properties**: HybridConnectionEventSubscriptionDestinationProperties
+* **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties)
 
 ## HybridConnectionEventSubscriptionDestinationProperties
 ### Properties
@@ -346,7 +346,7 @@
 ## ServiceBusQueueEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'ServiceBusQueue' (Required)
-* **properties**: ServiceBusQueueEventSubscriptionDestinationProperties
+* **properties**: [ServiceBusQueueEventSubscriptionDestinationProperties](#servicebusqueueeventsubscriptiondestinationproperties)
 
 ## ServiceBusQueueEventSubscriptionDestinationProperties
 ### Properties
@@ -355,7 +355,7 @@
 ## ServiceBusTopicEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'ServiceBusTopic' (Required)
-* **properties**: ServiceBusTopicEventSubscriptionDestinationProperties
+* **properties**: [ServiceBusTopicEventSubscriptionDestinationProperties](#servicebustopiceventsubscriptiondestinationproperties)
 
 ## ServiceBusTopicEventSubscriptionDestinationProperties
 ### Properties
@@ -364,7 +364,7 @@
 ## StorageQueueEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'StorageQueue' (Required)
-* **properties**: StorageQueueEventSubscriptionDestinationProperties
+* **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties)
 
 ## StorageQueueEventSubscriptionDestinationProperties
 ### Properties
@@ -374,7 +374,7 @@
 ## WebHookEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'WebHook' (Required)
-* **properties**: WebHookEventSubscriptionDestinationProperties
+* **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties)
 
 ## WebHookEventSubscriptionDestinationProperties
 ### Properties
@@ -387,7 +387,7 @@
 
 ## EventSubscriptionFilter
 ### Properties
-* **advancedFilters**: AdvancedFilter[]
+* **advancedFilters**: [AdvancedFilter](#advancedfilter)[]
 * **includedEventTypes**: string[]
 * **isSubjectCaseSensitive**: bool
 * **subjectBeginsWith**: string
@@ -537,13 +537,13 @@
 
 ## EventChannelProperties
 ### Properties
-* **destination**: EventChannelDestination
+* **destination**: [EventChannelDestination](#eventchanneldestination)
 * **expirationTimeIfNotActivatedUtc**: string
-* **filter**: EventChannelFilter
+* **filter**: [EventChannelFilter](#eventchannelfilter)
 * **partnerTopicFriendlyDescription**: string
 * **partnerTopicReadinessState**: 'ActivatedByUser' | 'DeactivatedByUser' | 'DeletedByUser' | 'NotActivatedByUserYet' (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **source**: EventChannelSource
+* **source**: [EventChannelSource](#eventchannelsource)
 
 ## EventChannelDestination
 ### Properties
@@ -553,7 +553,7 @@
 
 ## EventChannelFilter
 ### Properties
-* **advancedFilters**: AdvancedFilter[]
+* **advancedFilters**: [AdvancedFilter](#advancedfilter)[]
 
 ## EventChannelSource
 ### Properties
@@ -595,11 +595,11 @@
 ## TopicProperties
 ### Properties
 * **endpoint**: string (ReadOnly)
-* **inboundIpRules**: InboundIpRule[]
+* **inboundIpRules**: [InboundIpRule](#inboundiprule)[]
 * **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema'
-* **inputSchemaMapping**: InputSchemaMapping
+* **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping)
 * **metricResourceId**: string (ReadOnly)
-* **privateEndpointConnections**: PrivateEndpointConnection[]
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 

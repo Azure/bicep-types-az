@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: NamespaceProperties
-* **sku**: Sku
-* **tags**: NamespaceCreateOrUpdateParametersTags
+* **properties**: [NamespaceProperties](#namespaceproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [NamespaceCreateOrUpdateParametersTags](#namespacecreateorupdateparameterstags)
 * **type**: 'Microsoft.EventHub/namespaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/AuthorizationRules@2014-09-01
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties
+* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties)
 * **type**: 'Microsoft.EventHub/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/eventhubs@2014-09-01
@@ -29,7 +29,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EventHubProperties
+* **properties**: [EventHubProperties](#eventhubproperties)
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2014-09-01
@@ -39,7 +39,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties
+* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties)
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/authorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/eventhubs/consumergroups@2014-09-01
@@ -49,7 +49,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConsumerGroupProperties
+* **properties**: [ConsumerGroupProperties](#consumergroupproperties)
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant)
 
 ## NamespaceProperties

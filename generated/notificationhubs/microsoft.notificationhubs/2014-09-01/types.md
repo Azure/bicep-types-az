@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: NamespaceProperties (Required)
-* **tags**: NamespaceCreateOrUpdateParametersTags
+* **properties**: [NamespaceProperties](#namespaceproperties) (Required)
+* **tags**: [NamespaceCreateOrUpdateParametersTags](#namespacecreateorupdateparameterstags)
 * **type**: 'Microsoft.NotificationHubs/namespaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NotificationHubs/namespaces/AuthorizationRules@2014-09-01
@@ -18,7 +18,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties (Required)
+* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required)
 * **type**: 'Microsoft.NotificationHubs/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NotificationHubs/namespaces/notificationHubs@2014-09-01
@@ -28,8 +28,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: NotificationHubProperties (Required)
-* **tags**: NotificationHubCreateOrUpdateParametersTags
+* **properties**: [NotificationHubProperties](#notificationhubproperties) (Required)
+* **tags**: [NotificationHubCreateOrUpdateParametersTags](#notificationhubcreateorupdateparameterstags)
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2014-09-01
@@ -39,7 +39,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties (Required)
+* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required)
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## NamespaceProperties
@@ -75,19 +75,19 @@
 
 ## NotificationHubProperties
 ### Properties
-* **admCredential**: AdmCredential
-* **apnsCredential**: ApnsCredential
-* **authorizationRules**: SharedAccessAuthorizationRuleProperties[]
-* **baiduCredential**: BaiduCredential
-* **gcmCredential**: GcmCredential
-* **mpnsCredential**: MpnsCredential
+* **admCredential**: [AdmCredential](#admcredential)
+* **apnsCredential**: [ApnsCredential](#apnscredential)
+* **authorizationRules**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties)[]
+* **baiduCredential**: [BaiduCredential](#baiducredential)
+* **gcmCredential**: [GcmCredential](#gcmcredential)
+* **mpnsCredential**: [MpnsCredential](#mpnscredential)
 * **name**: string
 * **registrationTtl**: string
-* **wnsCredential**: WnsCredential
+* **wnsCredential**: [WnsCredential](#wnscredential)
 
 ## AdmCredential
 ### Properties
-* **properties**: AdmCredentialProperties
+* **properties**: [AdmCredentialProperties](#admcredentialproperties)
 
 ## AdmCredentialProperties
 ### Properties
@@ -97,7 +97,7 @@
 
 ## ApnsCredential
 ### Properties
-* **properties**: ApnsCredentialProperties
+* **properties**: [ApnsCredentialProperties](#apnscredentialproperties)
 
 ## ApnsCredentialProperties
 ### Properties
@@ -108,7 +108,7 @@
 
 ## BaiduCredential
 ### Properties
-* **properties**: BaiduCredentialProperties
+* **properties**: [BaiduCredentialProperties](#baiducredentialproperties)
 
 ## BaiduCredentialProperties
 ### Properties
@@ -118,7 +118,7 @@
 
 ## GcmCredential
 ### Properties
-* **properties**: GcmCredentialProperties
+* **properties**: [GcmCredentialProperties](#gcmcredentialproperties)
 
 ## GcmCredentialProperties
 ### Properties
@@ -127,7 +127,7 @@
 
 ## MpnsCredential
 ### Properties
-* **properties**: MpnsCredentialProperties
+* **properties**: [MpnsCredentialProperties](#mpnscredentialproperties)
 
 ## MpnsCredentialProperties
 ### Properties
@@ -137,7 +137,7 @@
 
 ## WnsCredential
 ### Properties
-* **properties**: WnsCredentialProperties
+* **properties**: [WnsCredentialProperties](#wnscredentialproperties)
 
 ## WnsCredentialProperties
 ### Properties

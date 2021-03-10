@@ -8,24 +8,24 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectionProperties
-* **tags**: ResourceTags
+* **properties**: [ConnectionProperties](#connectionproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/connections' (ReadOnly, DeployTimeConstant)
 
 ## ConnectionProperties
 ### Properties
-* **api**: ExpandedParentApiEntity
+* **api**: [ExpandedParentApiEntity](#expandedparentapientity)
 * **changedTime**: string
 * **createdTime**: string
-* **customParameterValues**: ConnectionPropertiesCustomParameterValues
+* **customParameterValues**: [ConnectionPropertiesCustomParameterValues](#connectionpropertiescustomparametervalues)
 * **displayName**: string
 * **firstExpirationTime**: string
 * **keywords**: string[]
 * **metadata**: any
 * **name**: string
-* **nonSecretParameterValues**: ConnectionPropertiesNonSecretParameterValues
-* **parameterValues**: ConnectionPropertiesParameterValues
-* **statuses**: ConnectionStatus[]
+* **nonSecretParameterValues**: [ConnectionPropertiesNonSecretParameterValues](#connectionpropertiesnonsecretparametervalues)
+* **parameterValues**: [ConnectionPropertiesParameterValues](#connectionpropertiesparametervalues)
+* **statuses**: [ConnectionStatus](#connectionstatus)[]
 * **tenantId**: string
 
 ## ExpandedParentApiEntity
@@ -34,13 +34,13 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string
-* **properties**: ExpandedParentApiEntityProperties
-* **tags**: ResourceTags
+* **properties**: [ExpandedParentApiEntityProperties](#expandedparentapientityproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string
 
 ## ExpandedParentApiEntityProperties
 ### Properties
-* **entity**: ResponseMessageEnvelopeApiEntity
+* **entity**: [ResponseMessageEnvelopeApiEntity](#responsemessageenvelopeapientity)
 * **id**: string
 
 ## ResponseMessageEnvelopeApiEntity
@@ -48,10 +48,10 @@
 * **id**: string
 * **location**: string
 * **name**: string
-* **plan**: ArmPlan
-* **properties**: ApiEntity
-* **sku**: SkuDescription
-* **tags**: ResponseMessageEnvelopeApiEntityTags
+* **plan**: [ArmPlan](#armplan)
+* **properties**: [ApiEntity](#apientity)
+* **sku**: [SkuDescription](#skudescription)
+* **tags**: [ResponseMessageEnvelopeApiEntityTags](#responsemessageenvelopeapientitytags)
 * **type**: string
 
 ## ArmPlan
@@ -68,23 +68,23 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string
-* **properties**: ApiEntityProperties
-* **tags**: ResourceTags
+* **properties**: [ApiEntityProperties](#apientityproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string
 
 ## ApiEntityProperties
 ### Properties
 * **apiDefinitionUrl**: string
-* **backendService**: BackendServiceDefinition
+* **backendService**: [BackendServiceDefinition](#backendservicedefinition)
 * **capabilities**: string[]
 * **changedTime**: string
-* **connectionParameters**: ApiEntityPropertiesConnectionParameters
+* **connectionParameters**: [ApiEntityPropertiesConnectionParameters](#apientitypropertiesconnectionparameters)
 * **createdTime**: string
-* **generalInformation**: GeneralApiInformation
+* **generalInformation**: [GeneralApiInformation](#generalapiinformation)
 * **metadata**: any
 * **name**: string
 * **path**: string
-* **policies**: ApiPolicies
+* **policies**: [ApiPolicies](#apipolicies)
 * **protocols**: string[]
 * **runtimeUrls**: string[]
 
@@ -94,13 +94,13 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string
-* **properties**: BackendServiceDefinitionProperties
-* **tags**: ResourceTags
+* **properties**: [BackendServiceDefinitionProperties](#backendservicedefinitionproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string
 
 ## BackendServiceDefinitionProperties
 ### Properties
-* **hostingEnvironmentServiceUrls**: HostingEnvironmentServiceDescriptions[]
+* **hostingEnvironmentServiceUrls**: [HostingEnvironmentServiceDescriptions](#hostingenvironmentservicedescriptions)[]
 * **serviceUrl**: string
 
 ## HostingEnvironmentServiceDescriptions
@@ -118,12 +118,12 @@
 ## ApiEntityPropertiesConnectionParameters
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ConnectionParameter
+* **Additional Properties Type**: [ConnectionParameter](#connectionparameter)
 
 ## ConnectionParameter
 ### Properties
 * **defaultValue**: any
-* **oAuthSettings**: ApiOAuthSettings
+* **oAuthSettings**: [ApiOAuthSettings](#apioauthsettings)
 * **type**: 'array' | 'bool' | 'connection' | 'int' | 'oauthSetting' | 'object' | 'secureobject' | 'securestring' | 'string'
 * **uiDefinition**: any
 
@@ -131,7 +131,7 @@
 ### Properties
 * **clientId**: string
 * **clientSecret**: string
-* **customParameters**: ApiOAuthSettingsCustomParameters
+* **customParameters**: [ApiOAuthSettingsCustomParameters](#apioauthsettingscustomparameters)
 * **identityProvider**: string
 * **properties**: any
 * **redirectUrl**: string
@@ -140,7 +140,7 @@
 ## ApiOAuthSettingsCustomParameters
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ApiOAuthSettingsParameter
+* **Additional Properties Type**: [ApiOAuthSettingsParameter](#apioauthsettingsparameter)
 
 ## ApiOAuthSettingsParameter
 ### Properties
@@ -154,8 +154,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string
-* **properties**: GeneralApiInformationProperties
-* **tags**: ResourceTags
+* **properties**: [GeneralApiInformationProperties](#generalapiinformationproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string
 
 ## GeneralApiInformationProperties
@@ -178,8 +178,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string
-* **properties**: ApiPoliciesProperties
-* **tags**: ResourceTags
+* **properties**: [ApiPoliciesProperties](#apipoliciesproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string
 
 ## ApiPoliciesProperties
@@ -217,7 +217,7 @@
 ## ConnectionPropertiesCustomParameterValues
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ParameterCustomLoginSettingValues
+* **Additional Properties Type**: [ParameterCustomLoginSettingValues](#parametercustomloginsettingvalues)
 
 ## ParameterCustomLoginSettingValues
 ### Properties
@@ -225,18 +225,18 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string
-* **properties**: ParameterCustomLoginSettingValuesProperties
-* **tags**: ResourceTags
+* **properties**: [ParameterCustomLoginSettingValuesProperties](#parametercustomloginsettingvaluesproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string
 
 ## ParameterCustomLoginSettingValuesProperties
 ### Properties
-* **customParameters**: ParameterCustomLoginSettingValuesPropertiesCustomParameters
+* **customParameters**: [ParameterCustomLoginSettingValuesPropertiesCustomParameters](#parametercustomloginsettingvaluespropertiescustomparameters)
 
 ## ParameterCustomLoginSettingValuesPropertiesCustomParameters
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: CustomLoginSettingValue
+* **Additional Properties Type**: [CustomLoginSettingValue](#customloginsettingvalue)
 
 ## CustomLoginSettingValue
 ### Properties
@@ -244,8 +244,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string
-* **properties**: CustomLoginSettingValueProperties
-* **tags**: ResourceTags
+* **properties**: [CustomLoginSettingValueProperties](#customloginsettingvalueproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string
 
 ## CustomLoginSettingValueProperties
@@ -278,13 +278,13 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string
-* **properties**: ConnectionStatusProperties
-* **tags**: ResourceTags
+* **properties**: [ConnectionStatusProperties](#connectionstatusproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string
 
 ## ConnectionStatusProperties
 ### Properties
-* **error**: ConnectionError
+* **error**: [ConnectionError](#connectionerror)
 * **status**: string
 * **target**: string
 
@@ -294,8 +294,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string
-* **properties**: ConnectionErrorProperties
-* **tags**: ResourceTags
+* **properties**: [ConnectionErrorProperties](#connectionerrorproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string
 
 ## ConnectionErrorProperties

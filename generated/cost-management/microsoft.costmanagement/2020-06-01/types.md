@@ -7,7 +7,7 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ExportProperties
+* **properties**: [ExportProperties](#exportproperties)
 * **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CostManagement/views@2020-06-01
@@ -17,28 +17,28 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ViewProperties
+* **properties**: [ViewProperties](#viewproperties)
 * **type**: 'Microsoft.CostManagement/views' (ReadOnly, DeployTimeConstant)
 
 ## ExportProperties
 ### Properties
-* **definition**: ExportDefinition (Required)
-* **deliveryInfo**: ExportDeliveryInfo (Required)
+* **definition**: [ExportDefinition](#exportdefinition) (Required)
+* **deliveryInfo**: [ExportDeliveryInfo](#exportdeliveryinfo) (Required)
 * **format**: 'Csv'
 * **nextRunTimeEstimate**: string (ReadOnly)
-* **runHistory**: ExportExecutionListResult
-* **schedule**: ExportSchedule
+* **runHistory**: [ExportExecutionListResult](#exportexecutionlistresult)
+* **schedule**: [ExportSchedule](#exportschedule)
 
 ## ExportDefinition
 ### Properties
-* **dataSet**: ExportDataset
+* **dataSet**: [ExportDataset](#exportdataset)
 * **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'WeekToDate' (Required)
-* **timePeriod**: ExportTimePeriod
+* **timePeriod**: [ExportTimePeriod](#exporttimeperiod)
 * **type**: 'ActualCost' | 'AmortizedCost' | 'Usage' (Required)
 
 ## ExportDataset
 ### Properties
-* **configuration**: ExportDatasetConfiguration
+* **configuration**: [ExportDatasetConfiguration](#exportdatasetconfiguration)
 * **granularity**: 'Daily'
 
 ## ExportDatasetConfiguration
@@ -52,7 +52,7 @@
 
 ## ExportDeliveryInfo
 ### Properties
-* **destination**: ExportDeliveryDestination (Required)
+* **destination**: [ExportDeliveryDestination](#exportdeliverydestination) (Required)
 
 ## ExportDeliveryDestination
 ### Properties
@@ -62,24 +62,24 @@
 
 ## ExportExecutionListResult
 ### Properties
-* **value**: ExportExecution[] (ReadOnly)
+* **value**: [ExportExecution](#exportexecution)[] (ReadOnly)
 
 ## ExportExecution
 ### Properties
 * **eTag**: string
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: ExportExecutionProperties
+* **properties**: [ExportExecutionProperties](#exportexecutionproperties)
 * **type**: string (ReadOnly)
 
 ## ExportExecutionProperties
 ### Properties
-* **error**: ErrorDetails
+* **error**: [ErrorDetails](#errordetails)
 * **executionType**: 'OnDemand' | 'Scheduled'
 * **fileName**: string
 * **processingEndTime**: string
 * **processingStartTime**: string
-* **runSettings**: CommonExportProperties
+* **runSettings**: [CommonExportProperties](#commonexportproperties)
 * **status**: 'Completed' | 'DataNotAvailable' | 'Failed' | 'InProgress' | 'NewDataNotAvailable' | 'Queued' | 'Timeout'
 * **submittedBy**: string
 * **submittedTime**: string
@@ -91,16 +91,16 @@
 
 ## CommonExportProperties
 ### Properties
-* **definition**: ExportDefinition (Required)
-* **deliveryInfo**: ExportDeliveryInfo (Required)
+* **definition**: [ExportDefinition](#exportdefinition) (Required)
+* **deliveryInfo**: [ExportDeliveryInfo](#exportdeliveryinfo) (Required)
 * **format**: 'Csv'
 * **nextRunTimeEstimate**: string (ReadOnly)
-* **runHistory**: ExportExecutionListResult
+* **runHistory**: [ExportExecutionListResult](#exportexecutionlistresult)
 
 ## ExportSchedule
 ### Properties
 * **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly'
-* **recurrencePeriod**: ExportRecurrencePeriod
+* **recurrencePeriod**: [ExportRecurrencePeriod](#exportrecurrenceperiod)
 * **status**: 'Active' | 'Inactive'
 
 ## ExportRecurrencePeriod
@@ -114,11 +114,11 @@
 * **chart**: 'Area' | 'GroupedColumn' | 'Line' | 'StackedColumn' | 'Table'
 * **createdOn**: string (ReadOnly)
 * **displayName**: string
-* **kpis**: KpiProperties[]
+* **kpis**: [KpiProperties](#kpiproperties)[]
 * **metric**: 'AHUB' | 'ActualCost' | 'AmortizedCost'
 * **modifiedOn**: string (ReadOnly)
-* **pivots**: PivotProperties[]
-* **query**: ReportConfigDefinition
+* **pivots**: [PivotProperties](#pivotproperties)[]
+* **query**: [ReportConfigDefinition](#reportconfigdefinition)
 * **scope**: string
 
 ## KpiProperties
@@ -134,24 +134,24 @@
 
 ## ReportConfigDefinition
 ### Properties
-* **dataset**: ReportConfigDataset
+* **dataset**: [ReportConfigDataset](#reportconfigdataset)
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required)
-* **timePeriod**: ReportConfigTimePeriod
+* **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod)
 * **type**: 'Usage' (Required)
 
 ## ReportConfigDataset
 ### Properties
-* **aggregation**: ReportConfigDatasetAggregation
-* **configuration**: ReportConfigDatasetConfiguration
-* **filter**: ReportConfigFilter
+* **aggregation**: [ReportConfigDatasetAggregation](#reportconfigdatasetaggregation)
+* **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration)
+* **filter**: [ReportConfigFilter](#reportconfigfilter)
 * **granularity**: 'Daily' | 'Monthly'
-* **grouping**: ReportConfigGrouping[]
-* **sorting**: ReportConfigSorting[]
+* **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[]
+* **sorting**: [ReportConfigSorting](#reportconfigsorting)[]
 
 ## ReportConfigDatasetAggregation
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ReportConfigAggregation
+* **Additional Properties Type**: [ReportConfigAggregation](#reportconfigaggregation)
 
 ## ReportConfigAggregation
 ### Properties
@@ -164,11 +164,11 @@
 
 ## ReportConfigFilter
 ### Properties
-* **and**: ReportConfigFilter[]
-* **dimension**: ReportConfigComparisonExpression
-* **not**: ReportConfigFilter
-* **or**: ReportConfigFilter[]
-* **tag**: ReportConfigComparisonExpression
+* **and**: [ReportConfigFilter](#reportconfigfilter)[]
+* **dimension**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression)
+* **not**: [ReportConfigFilter](#reportconfigfilter)
+* **or**: [ReportConfigFilter](#reportconfigfilter)[]
+* **tag**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression)
 
 ## ReportConfigComparisonExpression
 ### Properties

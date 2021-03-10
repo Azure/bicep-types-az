@@ -8,8 +8,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AppServiceCertificateOrderProperties
-* **tags**: ResourceTags
+* **properties**: [AppServiceCertificateOrderProperties](#appservicecertificateorderproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.CertificateRegistration/certificateOrders' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CertificateRegistration/certificateOrders/certificates@2019-08-01
@@ -20,36 +20,36 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AppServiceCertificate
-* **tags**: ResourceTags
+* **properties**: [AppServiceCertificate](#appservicecertificate)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.CertificateRegistration/certificateOrders/certificates' (ReadOnly, DeployTimeConstant)
 
 ## AppServiceCertificateOrderProperties
 ### Properties
 * **appServiceCertificateNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive'[] (ReadOnly)
 * **autoRenew**: bool
-* **certificates**: AppServiceCertificateOrderPropertiesCertificates
+* **certificates**: [AppServiceCertificateOrderPropertiesCertificates](#appservicecertificateorderpropertiescertificates)
 * **csr**: string
 * **distinguishedName**: string
 * **domainVerificationToken**: string (ReadOnly)
 * **expirationTime**: string (ReadOnly)
-* **intermediate**: CertificateDetails (ReadOnly)
+* **intermediate**: [CertificateDetails](#certificatedetails) (ReadOnly)
 * **isPrivateKeyExternal**: bool (ReadOnly)
 * **keySize**: int
 * **lastCertificateIssuanceTime**: string (ReadOnly)
 * **nextAutoRenewalTimeStamp**: string (ReadOnly)
 * **productType**: 'StandardDomainValidatedSsl' | 'StandardDomainValidatedWildCardSsl' (Required)
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly)
-* **root**: CertificateDetails (ReadOnly)
+* **root**: [CertificateDetails](#certificatedetails) (ReadOnly)
 * **serialNumber**: string (ReadOnly)
-* **signedCertificate**: CertificateDetails (ReadOnly)
+* **signedCertificate**: [CertificateDetails](#certificatedetails) (ReadOnly)
 * **status**: 'Canceled' | 'Denied' | 'Expired' | 'Issued' | 'NotSubmitted' | 'PendingRekey' | 'Pendingissuance' | 'Pendingrevocation' | 'Revoked' | 'Unused' (ReadOnly)
 * **validityInYears**: int
 
 ## AppServiceCertificateOrderPropertiesCertificates
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: AppServiceCertificate
+* **Additional Properties Type**: [AppServiceCertificate](#appservicecertificate)
 
 ## AppServiceCertificate
 ### Properties

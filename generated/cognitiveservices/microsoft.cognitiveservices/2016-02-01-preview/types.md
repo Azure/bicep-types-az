@@ -10,8 +10,8 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: any (Required)
-* **sku**: Sku (Required)
-* **tags**: CognitiveServicesAccountCreateParametersTags
+* **sku**: [Sku](#sku) (Required)
+* **tags**: [CognitiveServicesAccountCreateParametersTags](#cognitiveservicesaccountcreateparameterstags)
 * **type**: 'Microsoft.CognitiveServices/accounts' (ReadOnly, DeployTimeConstant)
 
 ## Sku

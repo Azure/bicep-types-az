@@ -5,22 +5,22 @@
 ### Properties
 * **apiVersion**: '2020-02-14' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ImageTemplateIdentity (Required)
+* **identity**: [ImageTemplateIdentity](#imagetemplateidentity) (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ImageTemplateProperties
-* **tags**: ResourceTags
+* **properties**: [ImageTemplateProperties](#imagetemplateproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.VirtualMachineImages/imageTemplates' (ReadOnly, DeployTimeConstant)
 
 ## ImageTemplateIdentity
 ### Properties
 * **type**: 'None' | 'UserAssigned'
-* **userAssignedIdentities**: ImageTemplateIdentityUserAssignedIdentities
+* **userAssignedIdentities**: [ImageTemplateIdentityUserAssignedIdentities](#imagetemplateidentityuserassignedidentities)
 
 ## ImageTemplateIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ComponentsVrq145SchemasImagetemplateidentityPropertiesUserassignedidentitiesAdditionalproperties
+* **Additional Properties Type**: [ComponentsVrq145SchemasImagetemplateidentityPropertiesUserassignedidentitiesAdditionalproperties](#componentsvrq145schemasimagetemplateidentitypropertiesuserassignedidentitiesadditionalproperties)
 
 ## ComponentsVrq145SchemasImagetemplateidentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
@@ -30,13 +30,13 @@
 ## ImageTemplateProperties
 ### Properties
 * **buildTimeoutInMinutes**: int
-* **customize**: ImageTemplateCustomizer[]
-* **distribute**: ImageTemplateDistributor[] (Required)
-* **lastRunStatus**: ImageTemplateLastRunStatus (ReadOnly)
-* **provisioningError**: ProvisioningError (ReadOnly)
+* **customize**: [ImageTemplateCustomizer](#imagetemplatecustomizer)[]
+* **distribute**: [ImageTemplateDistributor](#imagetemplatedistributor)[] (Required)
+* **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly)
+* **provisioningError**: [ProvisioningError](#provisioningerror) (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **source**: ImageTemplateSource (Required)
-* **vmProfile**: ImageTemplateVmProfile
+* **source**: [ImageTemplateSource](#imagetemplatesource) (Required)
+* **vmProfile**: [ImageTemplateVmProfile](#imagetemplatevmprofile)
 
 ## ImageTemplateCustomizer
 * **Discriminator**: type
@@ -124,7 +124,7 @@
 * **Discriminator**: type
 
 ### Base Properties
-* **artifactTags**: ImageTemplateDistributorArtifactTags
+* **artifactTags**: [ImageTemplateDistributorArtifactTags](#imagetemplatedistributorartifacttags)
 * **runOutputName**: string (Required)
 ### ImageTemplateManagedImageDistributor
 #### Properties
@@ -193,7 +193,7 @@
 ### ImageTemplatePlatformImageSource
 #### Properties
 * **offer**: string
-* **planInfo**: PlatformImagePurchasePlan
+* **planInfo**: [PlatformImagePurchasePlan](#platformimagepurchaseplan)
 * **publisher**: string
 * **sku**: string
 * **type**: 'PlatformImage' (Required)
@@ -213,7 +213,7 @@
 ## ImageTemplatePlatformImageSource
 ### Properties
 * **offer**: string
-* **planInfo**: PlatformImagePurchasePlan
+* **planInfo**: [PlatformImagePurchasePlan](#platformimagepurchaseplan)
 * **publisher**: string
 * **sku**: string
 * **type**: 'PlatformImage' (Required)
@@ -234,7 +234,7 @@
 ### Properties
 * **osDiskSizeGB**: int
 * **vmSize**: string
-* **vnetConfig**: VirtualNetworkConfig
+* **vnetConfig**: [VirtualNetworkConfig](#virtualnetworkconfig)
 
 ## VirtualNetworkConfig
 ### Properties

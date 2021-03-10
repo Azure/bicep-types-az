@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-11-05-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
+* **properties**: [DatabaseProperties](#databaseproperties)
 * **type**: 'Microsoft.DBForPostgreSql/flexibleServers/databases' (ReadOnly, DeployTimeConstant)
 
 ## DatabaseProperties

@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: HubPropertiesFormat
-* **tags**: ResourceTags
+* **properties**: [HubPropertiesFormat](#hubpropertiesformat)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.CustomerInsights/hubs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CustomerInsights/hubs/authorizationPolicies@2017-04-26
@@ -17,7 +17,7 @@
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AuthorizationPolicy
+* **properties**: [AuthorizationPolicy](#authorizationpolicy)
 * **type**: 'Microsoft.CustomerInsights/hubs/authorizationPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CustomerInsights/hubs/connectors@2017-04-26
@@ -26,7 +26,7 @@
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: Connector
+* **properties**: [Connector](#connector)
 * **type**: 'Microsoft.CustomerInsights/hubs/connectors' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CustomerInsights/hubs/connectors/mappings@2017-04-26
@@ -35,7 +35,7 @@
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectorMapping
+* **properties**: [ConnectorMapping](#connectormapping)
 * **type**: 'Microsoft.CustomerInsights/hubs/connectors/mappings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CustomerInsights/hubs/interactions@2017-04-26
@@ -44,7 +44,7 @@
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: InteractionTypeDefinition
+* **properties**: [InteractionTypeDefinition](#interactiontypedefinition)
 * **type**: 'Microsoft.CustomerInsights/hubs/interactions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CustomerInsights/hubs/kpi@2017-04-26
@@ -53,7 +53,7 @@
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: KpiDefinition
+* **properties**: [KpiDefinition](#kpidefinition)
 * **type**: 'Microsoft.CustomerInsights/hubs/kpi' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CustomerInsights/hubs/links@2017-04-26
@@ -62,7 +62,7 @@
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LinkDefinition
+* **properties**: [LinkDefinition](#linkdefinition)
 * **type**: 'Microsoft.CustomerInsights/hubs/links' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CustomerInsights/hubs/predictions@2017-04-26
@@ -71,7 +71,7 @@
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: Prediction
+* **properties**: [Prediction](#prediction)
 * **type**: 'Microsoft.CustomerInsights/hubs/predictions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CustomerInsights/hubs/profiles@2017-04-26
@@ -80,7 +80,7 @@
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProfileTypeDefinition
+* **properties**: [ProfileTypeDefinition](#profiletypedefinition)
 * **type**: 'Microsoft.CustomerInsights/hubs/profiles' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CustomerInsights/hubs/relationshipLinks@2017-04-26
@@ -89,7 +89,7 @@
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RelationshipLinkDefinition
+* **properties**: [RelationshipLinkDefinition](#relationshiplinkdefinition)
 * **type**: 'Microsoft.CustomerInsights/hubs/relationshipLinks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CustomerInsights/hubs/relationships@2017-04-26
@@ -98,7 +98,7 @@
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RelationshipDefinition
+* **properties**: [RelationshipDefinition](#relationshipdefinition)
 * **type**: 'Microsoft.CustomerInsights/hubs/relationships' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CustomerInsights/hubs/roleAssignments@2017-04-26
@@ -107,7 +107,7 @@
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RoleAssignment
+* **properties**: [RoleAssignment](#roleassignment)
 * **type**: 'Microsoft.CustomerInsights/hubs/roleAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CustomerInsights/hubs/views@2017-04-26
@@ -116,13 +116,13 @@
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: View
+* **properties**: [View](#view)
 * **type**: 'Microsoft.CustomerInsights/hubs/views' (ReadOnly, DeployTimeConstant)
 
 ## HubPropertiesFormat
 ### Properties
 * **apiEndpoint**: string (ReadOnly)
-* **hubBillingInfo**: HubBillingInfoFormat
+* **hubBillingInfo**: [HubBillingInfoFormat](#hubbillinginfoformat)
 * **provisioningState**: string (ReadOnly)
 * **tenantFeatures**: int
 * **webEndpoint**: string (ReadOnly)
@@ -149,7 +149,7 @@
 ### Properties
 * **connectorId**: int (ReadOnly)
 * **connectorName**: string
-* **connectorProperties**: ConnectorProperties (Required)
+* **connectorProperties**: [ConnectorProperties](#connectorproperties) (Required)
 * **connectorType**: 'AzureBlob' | 'CRM' | 'ExchangeOnline' | 'None' | 'Outbound' | 'Salesforce' (Required)
 * **created**: string (ReadOnly)
 * **description**: string
@@ -176,7 +176,7 @@
 * **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required)
 * **entityTypeName**: string (Required)
 * **lastModified**: string (ReadOnly)
-* **mappingProperties**: ConnectorMappingProperties (Required)
+* **mappingProperties**: [ConnectorMappingProperties](#connectormappingproperties) (Required)
 * **nextRunTime**: string (ReadOnly)
 * **runId**: string (ReadOnly)
 * **state**: 'Created' | 'Creating' | 'Expiring' | 'Failed' | 'Ready' | 'Running' | 'Stopped' (ReadOnly)
@@ -184,14 +184,14 @@
 
 ## ConnectorMappingProperties
 ### Properties
-* **availability**: ConnectorMappingAvailability (Required)
-* **completeOperation**: ConnectorMappingCompleteOperation (Required)
-* **errorManagement**: ConnectorMappingErrorManagement (Required)
+* **availability**: [ConnectorMappingAvailability](#connectormappingavailability) (Required)
+* **completeOperation**: [ConnectorMappingCompleteOperation](#connectormappingcompleteoperation) (Required)
+* **errorManagement**: [ConnectorMappingErrorManagement](#connectormappingerrormanagement) (Required)
 * **fileFilter**: string
 * **folderPath**: string
-* **format**: ConnectorMappingFormat (Required)
+* **format**: [ConnectorMappingFormat](#connectormappingformat) (Required)
 * **hasHeader**: bool
-* **structure**: ConnectorMappingStructure[] (Required)
+* **structure**: [ConnectorMappingStructure](#connectormappingstructure)[] (Required)
 
 ## ConnectorMappingAvailability
 ### Properties
@@ -227,21 +227,21 @@
 ## InteractionTypeDefinition
 ### Properties
 * **apiEntitySetName**: string
-* **attributes**: MetadataDefinitionBaseAttributes
-* **dataSourcePrecedenceRules**: DataSourcePrecedence[] (ReadOnly)
-* **defaultDataSource**: DataSource
-* **description**: MetadataDefinitionBaseDescription
-* **displayName**: MetadataDefinitionBaseDisplayName
+* **attributes**: [MetadataDefinitionBaseAttributes](#metadatadefinitionbaseattributes)
+* **dataSourcePrecedenceRules**: [DataSourcePrecedence](#datasourceprecedence)[] (ReadOnly)
+* **defaultDataSource**: [DataSource](#datasource)
+* **description**: [MetadataDefinitionBaseDescription](#metadatadefinitionbasedescription)
+* **displayName**: [MetadataDefinitionBaseDisplayName](#metadatadefinitionbasedisplayname)
 * **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship'
-* **fields**: PropertyDefinition[]
+* **fields**: [PropertyDefinition](#propertydefinition)[]
 * **idPropertyNames**: string[]
 * **instancesCount**: int
 * **isActivity**: bool
 * **largeImage**: string
 * **lastChangedUtc**: string (ReadOnly)
-* **localizedAttributes**: MetadataDefinitionBaseLocalizedAttributes
+* **localizedAttributes**: [MetadataDefinitionBaseLocalizedAttributes](#metadatadefinitionbaselocalizedattributes)
 * **mediumImage**: string
-* **participantProfiles**: Participant[]
+* **participantProfiles**: [Participant](#participant)[]
 * **primaryParticipantProfilePropertyName**: string
 * **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
 * **schemaItemTypeLink**: string
@@ -257,7 +257,7 @@
 
 ## DataSourcePrecedence
 ### Properties
-* **dataSource**: DataSource
+* **dataSource**: [DataSource](#datasource)
 * **precedence**: int
 
 ## DataSource
@@ -281,8 +281,8 @@
 ## PropertyDefinition
 ### Properties
 * **arrayValueSeparator**: string
-* **dataSourcePrecedenceRules**: DataSourcePrecedence[] (ReadOnly)
-* **enumValidValues**: ProfileEnumValidValuesFormat[]
+* **dataSourcePrecedenceRules**: [DataSourcePrecedence](#datasourceprecedence)[] (ReadOnly)
+* **enumValidValues**: [ProfileEnumValidValuesFormat](#profileenumvalidvaluesformat)[]
 * **fieldName**: string (Required)
 * **fieldType**: string (Required)
 * **isArray**: bool
@@ -299,7 +299,7 @@
 
 ## ProfileEnumValidValuesFormat
 ### Properties
-* **localizedValueNames**: ProfileEnumValidValuesFormatLocalizedValueNames
+* **localizedValueNames**: [ProfileEnumValidValuesFormatLocalizedValueNames](#profileenumvalidvaluesformatlocalizedvaluenames)
 * **value**: int
 
 ## ProfileEnumValidValuesFormatLocalizedValueNames
@@ -310,7 +310,7 @@
 ## MetadataDefinitionBaseLocalizedAttributes
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: DictionaryOfString
+* **Additional Properties Type**: [DictionaryOfString](#dictionaryofstring)
 
 ## DictionaryOfString
 ### Properties
@@ -319,10 +319,10 @@
 
 ## Participant
 ### Properties
-* **description**: ParticipantDescription
-* **displayName**: ParticipantDisplayName
+* **description**: [ParticipantDescription](#participantdescription)
+* **displayName**: [ParticipantDisplayName](#participantdisplayname)
 * **participantName**: string (Required)
-* **participantPropertyReferences**: ParticipantPropertyReference[] (Required)
+* **participantPropertyReferences**: [ParticipantPropertyReference](#participantpropertyreference)[] (Required)
 * **profileTypeName**: string (Required)
 * **role**: string
 
@@ -343,24 +343,24 @@
 
 ## KpiDefinition
 ### Properties
-* **aliases**: KpiAlias[]
+* **aliases**: [KpiAlias](#kpialias)[]
 * **calculationWindow**: 'Day' | 'Hour' | 'Lifetime' | 'Month' | 'Week' (Required)
 * **calculationWindowFieldName**: string
-* **description**: KpiDefinitionDescription
-* **displayName**: KpiDefinitionDisplayName
+* **description**: [KpiDefinitionDescription](#kpidefinitiondescription)
+* **displayName**: [KpiDefinitionDisplayName](#kpidefinitiondisplayname)
 * **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required)
 * **entityTypeName**: string (Required)
 * **expression**: string (Required)
-* **extracts**: KpiExtract[]
+* **extracts**: [KpiExtract](#kpiextract)[]
 * **filter**: string
 * **function**: 'Avg' | 'Count' | 'CountDistinct' | 'Last' | 'Max' | 'Min' | 'None' | 'Sum' (Required)
 * **groupBy**: string[]
-* **groupByMetadata**: KpiGroupByMetadata[] (ReadOnly)
+* **groupByMetadata**: [KpiGroupByMetadata](#kpigroupbymetadata)[] (ReadOnly)
 * **kpiName**: string (ReadOnly)
-* **participantProfilesMetadata**: KpiParticipantProfilesMetadata[] (ReadOnly)
+* **participantProfilesMetadata**: [KpiParticipantProfilesMetadata](#kpiparticipantprofilesmetadata)[] (ReadOnly)
 * **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **thresHolds**: KpiThresholds
+* **thresHolds**: [KpiThresholds](#kpithresholds)
 * **unit**: string
 
 ## KpiAlias
@@ -385,7 +385,7 @@
 
 ## KpiGroupByMetadata
 ### Properties
-* **displayName**: KpiGroupByMetadataDisplayName
+* **displayName**: [KpiGroupByMetadataDisplayName](#kpigroupbymetadatadisplayname)
 * **fieldName**: string
 * **fieldType**: string
 
@@ -406,12 +406,12 @@
 
 ## LinkDefinition
 ### Properties
-* **description**: LinkDefinitionDescription
-* **displayName**: LinkDefinitionDisplayName
+* **description**: [LinkDefinitionDescription](#linkdefinitiondescription)
+* **displayName**: [LinkDefinitionDisplayName](#linkdefinitiondisplayname)
 * **linkName**: string (ReadOnly)
-* **mappings**: TypePropertiesMapping[]
+* **mappings**: [TypePropertiesMapping](#typepropertiesmapping)[]
 * **operationType**: 'Delete' | 'Upsert'
-* **participantPropertyReferences**: ParticipantPropertyReference[] (Required)
+* **participantPropertyReferences**: [ParticipantPropertyReference](#participantpropertyreference)[] (Required)
 * **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
 * **referenceOnly**: bool
 * **sourceEntityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required)
@@ -439,13 +439,13 @@
 ## Prediction
 ### Properties
 * **autoAnalyze**: bool (Required)
-* **description**: PredictionDescription
-* **displayName**: PredictionDisplayName
-* **grades**: PredictionGradesItem[]
+* **description**: [PredictionDescription](#predictiondescription)
+* **displayName**: [PredictionDisplayName](#predictiondisplayname)
+* **grades**: [PredictionGradesItem](#predictiongradesitem)[]
 * **involvedInteractionTypes**: string[]
 * **involvedKpiTypes**: string[]
 * **involvedRelationships**: string[]
-* **mappings**: PredictionMappings (Required)
+* **mappings**: [PredictionMappings](#predictionmappings) (Required)
 * **negativeOutcomeExpression**: string (Required)
 * **positiveOutcomeExpression**: string (Required)
 * **predictionName**: string
@@ -453,7 +453,7 @@
 * **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
 * **scopeExpression**: string (Required)
 * **scoreLabel**: string (Required)
-* **systemGeneratedEntities**: PredictionSystemGeneratedEntities (ReadOnly)
+* **systemGeneratedEntities**: [PredictionSystemGeneratedEntities](#predictionsystemgeneratedentities) (ReadOnly)
 * **tenantId**: string (ReadOnly)
 
 ## PredictionDescription
@@ -481,7 +481,7 @@
 ## PredictionSystemGeneratedEntities
 ### Properties
 * **generatedInteractionTypes**: string[]
-* **generatedKpis**: PredictionSystemGeneratedEntitiesGeneratedKpis
+* **generatedKpis**: [PredictionSystemGeneratedEntitiesGeneratedKpis](#predictionsystemgeneratedentitiesgeneratedkpis)
 * **generatedLinks**: string[]
 
 ## PredictionSystemGeneratedEntitiesGeneratedKpis
@@ -492,20 +492,20 @@
 ## ProfileTypeDefinition
 ### Properties
 * **apiEntitySetName**: string
-* **attributes**: MetadataDefinitionBaseAttributes
-* **description**: MetadataDefinitionBaseDescription
-* **displayName**: MetadataDefinitionBaseDisplayName
+* **attributes**: [MetadataDefinitionBaseAttributes](#metadatadefinitionbaseattributes)
+* **description**: [MetadataDefinitionBaseDescription](#metadatadefinitionbasedescription)
+* **displayName**: [MetadataDefinitionBaseDisplayName](#metadatadefinitionbasedisplayname)
 * **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship'
-* **fields**: PropertyDefinition[]
+* **fields**: [PropertyDefinition](#propertydefinition)[]
 * **instancesCount**: int
 * **largeImage**: string
 * **lastChangedUtc**: string (ReadOnly)
-* **localizedAttributes**: MetadataDefinitionBaseLocalizedAttributes
+* **localizedAttributes**: [MetadataDefinitionBaseLocalizedAttributes](#metadatadefinitionbaselocalizedattributes)
 * **mediumImage**: string
 * **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
 * **schemaItemTypeLink**: string
 * **smallImage**: string
-* **strongIds**: StrongId[]
+* **strongIds**: [StrongId](#strongid)[]
 * **tenantId**: string (ReadOnly)
 * **timestampFieldName**: string
 * **typeName**: string
@@ -528,7 +528,7 @@
 ## MetadataDefinitionBaseLocalizedAttributes
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: DictionaryOfString
+* **Additional Properties Type**: [DictionaryOfString](#dictionaryofstring)
 
 ## DictionaryOfString
 ### Properties
@@ -537,8 +537,8 @@
 
 ## StrongId
 ### Properties
-* **description**: StrongIdDescription
-* **displayName**: StrongIdDisplayName
+* **description**: [StrongIdDescription](#strongiddescription)
+* **displayName**: [StrongIdDisplayName](#strongiddisplayname)
 * **keyPropertyNames**: string[] (Required)
 * **strongIdName**: string (Required)
 
@@ -554,14 +554,14 @@
 
 ## RelationshipLinkDefinition
 ### Properties
-* **description**: RelationshipLinkDefinitionDescription
-* **displayName**: RelationshipLinkDefinitionDisplayName
+* **description**: [RelationshipLinkDefinitionDescription](#relationshiplinkdefinitiondescription)
+* **displayName**: [RelationshipLinkDefinitionDisplayName](#relationshiplinkdefinitiondisplayname)
 * **interactionType**: string (Required)
 * **linkName**: string (ReadOnly)
-* **mappings**: RelationshipLinkFieldMapping[]
-* **profilePropertyReferences**: ParticipantProfilePropertyReference[] (Required)
+* **mappings**: [RelationshipLinkFieldMapping](#relationshiplinkfieldmapping)[]
+* **profilePropertyReferences**: [ParticipantProfilePropertyReference](#participantprofilepropertyreference)[] (Required)
 * **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
-* **relatedProfilePropertyReferences**: ParticipantProfilePropertyReference[] (Required)
+* **relatedProfilePropertyReferences**: [ParticipantProfilePropertyReference](#participantprofilepropertyreference)[] (Required)
 * **relationshipGuidId**: string (ReadOnly)
 * **relationshipName**: string (Required)
 * **tenantId**: string (ReadOnly)
@@ -590,11 +590,11 @@
 ## RelationshipDefinition
 ### Properties
 * **cardinality**: 'ManyToMany' | 'OneToMany' | 'OneToOne'
-* **description**: RelationshipDefinitionDescription
-* **displayName**: RelationshipDefinitionDisplayName
+* **description**: [RelationshipDefinitionDescription](#relationshipdefinitiondescription)
+* **displayName**: [RelationshipDefinitionDisplayName](#relationshipdefinitiondisplayname)
 * **expiryDateTimeUtc**: string
-* **fields**: PropertyDefinition[]
-* **lookupMappings**: RelationshipTypeMapping[]
+* **fields**: [PropertyDefinition](#propertydefinition)[]
+* **lookupMappings**: [RelationshipTypeMapping](#relationshiptypemapping)[]
 * **profileType**: string (Required)
 * **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
 * **relatedProfileType**: string (Required)
@@ -614,7 +614,7 @@
 
 ## RelationshipTypeMapping
 ### Properties
-* **fieldMappings**: RelationshipTypeFieldMapping[] (Required)
+* **fieldMappings**: [RelationshipTypeFieldMapping](#relationshiptypefieldmapping)[] (Required)
 
 ## RelationshipTypeFieldMapping
 ### Properties
@@ -624,25 +624,25 @@
 ## RoleAssignment
 ### Properties
 * **assignmentName**: string (ReadOnly)
-* **conflationPolicies**: ResourceSetDescription
-* **connectors**: ResourceSetDescription
-* **description**: RoleAssignmentDescription
-* **displayName**: RoleAssignmentDisplayName
-* **interactions**: ResourceSetDescription
-* **kpis**: ResourceSetDescription
-* **links**: ResourceSetDescription
-* **principals**: AssignmentPrincipal[] (Required)
-* **profiles**: ResourceSetDescription
+* **conflationPolicies**: [ResourceSetDescription](#resourcesetdescription)
+* **connectors**: [ResourceSetDescription](#resourcesetdescription)
+* **description**: [RoleAssignmentDescription](#roleassignmentdescription)
+* **displayName**: [RoleAssignmentDisplayName](#roleassignmentdisplayname)
+* **interactions**: [ResourceSetDescription](#resourcesetdescription)
+* **kpis**: [ResourceSetDescription](#resourcesetdescription)
+* **links**: [ResourceSetDescription](#resourcesetdescription)
+* **principals**: [AssignmentPrincipal](#assignmentprincipal)[] (Required)
+* **profiles**: [ResourceSetDescription](#resourcesetdescription)
 * **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
-* **relationshipLinks**: ResourceSetDescription
-* **relationships**: ResourceSetDescription
+* **relationshipLinks**: [ResourceSetDescription](#resourcesetdescription)
+* **relationships**: [ResourceSetDescription](#resourcesetdescription)
 * **role**: 'Admin' | 'DataAdmin' | 'DataReader' | 'ManageAdmin' | 'ManageReader' | 'Reader' (Required)
-* **roleAssignments**: ResourceSetDescription
-* **sasPolicies**: ResourceSetDescription
-* **segments**: ResourceSetDescription
+* **roleAssignments**: [ResourceSetDescription](#resourcesetdescription)
+* **sasPolicies**: [ResourceSetDescription](#resourcesetdescription)
+* **segments**: [ResourceSetDescription](#resourcesetdescription)
 * **tenantId**: string (ReadOnly)
-* **views**: ResourceSetDescription
-* **widgetTypes**: ResourceSetDescription
+* **views**: [ResourceSetDescription](#resourcesetdescription)
+* **widgetTypes**: [ResourceSetDescription](#resourcesetdescription)
 
 ## ResourceSetDescription
 ### Properties
@@ -662,7 +662,7 @@
 ## AssignmentPrincipal
 ### Properties
 * **principalId**: string (Required)
-* **principalMetadata**: AssignmentPrincipalMetadata
+* **principalMetadata**: [AssignmentPrincipalMetadata](#assignmentprincipalmetadata)
 * **principalType**: string (Required)
 
 ## AssignmentPrincipalMetadata
@@ -675,7 +675,7 @@
 * **changed**: string (ReadOnly)
 * **created**: string (ReadOnly)
 * **definition**: string (Required)
-* **displayName**: ViewDisplayName
+* **displayName**: [ViewDisplayName](#viewdisplayname)
 * **tenantId**: string (ReadOnly)
 * **userId**: string
 * **viewName**: string (ReadOnly)

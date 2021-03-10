@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: NamespaceProperties
-* **sku**: Sku
-* **tags**: NamespaceCreateOrUpdateParametersTags
+* **properties**: [NamespaceProperties](#namespaceproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [NamespaceCreateOrUpdateParametersTags](#namespacecreateorupdateparameterstags)
 * **type**: 'Microsoft.ServiceBus/namespaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceBus/namespaces/AuthorizationRules@2015-08-01
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties
+* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties)
 * **type**: 'Microsoft.ServiceBus/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceBus/namespaces/queues@2015-08-01
@@ -29,7 +29,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: QueueProperties
+* **properties**: [QueueProperties](#queueproperties)
 * **type**: 'Microsoft.ServiceBus/namespaces/queues' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceBus/namespaces/queues/authorizationRules@2015-08-01
@@ -39,7 +39,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties
+* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties)
 * **type**: 'Microsoft.ServiceBus/namespaces/queues/authorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceBus/namespaces/topics@2015-08-01
@@ -49,7 +49,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TopicProperties
+* **properties**: [TopicProperties](#topicproperties)
 * **type**: 'Microsoft.ServiceBus/namespaces/topics' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceBus/namespaces/topics/authorizationRules@2015-08-01
@@ -59,7 +59,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedAccessAuthorizationRuleProperties
+* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties)
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/authorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceBus/namespaces/topics/subscriptions@2015-08-01
@@ -69,7 +69,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SubscriptionProperties
+* **properties**: [SubscriptionProperties](#subscriptionproperties)
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions' (ReadOnly, DeployTimeConstant)
 
 ## NamespaceProperties
@@ -101,7 +101,7 @@
 ### Properties
 * **accessedAt**: string (ReadOnly)
 * **autoDeleteOnIdle**: string
-* **countDetails**: MessageCountDetails (ReadOnly)
+* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly)
 * **createdAt**: string (ReadOnly)
 * **deadLetteringOnMessageExpiration**: bool
 * **defaultMessageTimeToLive**: string
@@ -134,7 +134,7 @@
 ### Properties
 * **accessedAt**: string (ReadOnly)
 * **autoDeleteOnIdle**: string
-* **countDetails**: MessageCountDetails (ReadOnly)
+* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly)
 * **createdAt**: string (ReadOnly)
 * **defaultMessageTimeToLive**: string
 * **duplicateDetectionHistoryTimeWindow**: string
@@ -157,7 +157,7 @@
 ### Properties
 * **accessedAt**: string (ReadOnly)
 * **autoDeleteOnIdle**: string
-* **countDetails**: MessageCountDetails (ReadOnly)
+* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly)
 * **createdAt**: string (ReadOnly)
 * **deadLetteringOnFilterEvaluationExceptions**: bool
 * **deadLetteringOnMessageExpiration**: bool

@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ZoneProperties
-* **tags**: TrackedResourceTags
+* **properties**: [ZoneProperties](#zoneproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Network/dnszones' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/dnszones/A@2015-05-04-preview
@@ -19,7 +19,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
+* **properties**: [RecordSetProperties](#recordsetproperties)
 * **type**: 'Microsoft.Network/dnszones/A' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/dnszones/AAAA@2015-05-04-preview
@@ -29,7 +29,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
+* **properties**: [RecordSetProperties](#recordsetproperties)
 * **type**: 'Microsoft.Network/dnszones/AAAA' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/dnszones/CNAME@2015-05-04-preview
@@ -39,7 +39,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
+* **properties**: [RecordSetProperties](#recordsetproperties)
 * **type**: 'Microsoft.Network/dnszones/CNAME' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/dnszones/MX@2015-05-04-preview
@@ -49,7 +49,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
+* **properties**: [RecordSetProperties](#recordsetproperties)
 * **type**: 'Microsoft.Network/dnszones/MX' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/dnszones/NS@2015-05-04-preview
@@ -59,7 +59,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
+* **properties**: [RecordSetProperties](#recordsetproperties)
 * **type**: 'Microsoft.Network/dnszones/NS' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/dnszones/PTR@2015-05-04-preview
@@ -69,7 +69,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
+* **properties**: [RecordSetProperties](#recordsetproperties)
 * **type**: 'Microsoft.Network/dnszones/PTR' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/dnszones/SOA@2015-05-04-preview
@@ -79,7 +79,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
+* **properties**: [RecordSetProperties](#recordsetproperties)
 * **type**: 'Microsoft.Network/dnszones/SOA' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/dnszones/SRV@2015-05-04-preview
@@ -89,7 +89,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
+* **properties**: [RecordSetProperties](#recordsetproperties)
 * **type**: 'Microsoft.Network/dnszones/SRV' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/dnszones/TXT@2015-05-04-preview
@@ -99,7 +99,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
+* **properties**: [RecordSetProperties](#recordsetproperties)
 * **type**: 'Microsoft.Network/dnszones/TXT' (ReadOnly, DeployTimeConstant)
 
 ## ZoneProperties
@@ -115,17 +115,17 @@
 
 ## RecordSetProperties
 ### Properties
-* **AAAARecords**: AaaaRecord[]
-* **ARecords**: ARecord[]
-* **CNAMERecord**: CnameRecord
+* **AAAARecords**: [AaaaRecord](#aaaarecord)[]
+* **ARecords**: [ARecord](#arecord)[]
+* **CNAMERecord**: [CnameRecord](#cnamerecord)
 * **fqdn**: string (ReadOnly)
-* **MXRecords**: MxRecord[]
-* **NSRecords**: NsRecord[]
-* **PTRRecords**: PtrRecord[]
-* **SOARecord**: SoaRecord
-* **SRVRecords**: SrvRecord[]
+* **MXRecords**: [MxRecord](#mxrecord)[]
+* **NSRecords**: [NsRecord](#nsrecord)[]
+* **PTRRecords**: [PtrRecord](#ptrrecord)[]
+* **SOARecord**: [SoaRecord](#soarecord)
+* **SRVRecords**: [SrvRecord](#srvrecord)[]
 * **TTL**: int
-* **TXTRecords**: TxtRecord[]
+* **TXTRecords**: [TxtRecord](#txtrecord)[]
 
 ## AaaaRecord
 ### Properties

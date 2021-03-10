@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlVirtualMachineGroupProperties
-* **tags**: TrackedResourceTags
+* **properties**: [SqlVirtualMachineGroupProperties](#sqlvirtualmachinegroupproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners@2017-03-01-preview
@@ -17,7 +17,7 @@
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AvailabilityGroupListenerProperties
+* **properties**: [AvailabilityGroupListenerProperties](#availabilitygrouplistenerproperties)
 * **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachines@2017-03-01-preview
@@ -25,11 +25,11 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ResourceIdentity
+* **identity**: [ResourceIdentity](#resourceidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlVirtualMachineProperties
-* **tags**: TrackedResourceTags
+* **properties**: [SqlVirtualMachineProperties](#sqlvirtualmachineproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachines' (ReadOnly, DeployTimeConstant)
 
 ## SqlVirtualMachineGroupProperties
@@ -40,7 +40,7 @@
 * **scaleType**: 'HA' (ReadOnly)
 * **sqlImageOffer**: string
 * **sqlImageSku**: 'Developer' | 'Enterprise'
-* **wsfcDomainProfile**: WsfcDomainProfile
+* **wsfcDomainProfile**: [WsfcDomainProfile](#wsfcdomainprofile)
 
 ## WsfcDomainProfile
 ### Properties
@@ -62,14 +62,14 @@
 ### Properties
 * **availabilityGroupName**: string
 * **createDefaultAvailabilityGroupIfNotExist**: bool
-* **loadBalancerConfigurations**: LoadBalancerConfiguration[]
+* **loadBalancerConfigurations**: [LoadBalancerConfiguration](#loadbalancerconfiguration)[]
 * **port**: int
 * **provisioningState**: string (ReadOnly)
 
 ## LoadBalancerConfiguration
 ### Properties
 * **loadBalancerResourceId**: string
-* **privateIpAddress**: PrivateIPAddress
+* **privateIpAddress**: [PrivateIPAddress](#privateipaddress)
 * **probePort**: int
 * **publicIpAddressResourceId**: string
 * **sqlVirtualMachineInstances**: string[]
@@ -87,19 +87,19 @@
 
 ## SqlVirtualMachineProperties
 ### Properties
-* **autoBackupSettings**: AutoBackupSettings
-* **autoPatchingSettings**: AutoPatchingSettings
-* **keyVaultCredentialSettings**: KeyVaultCredentialSettings
+* **autoBackupSettings**: [AutoBackupSettings](#autobackupsettings)
+* **autoPatchingSettings**: [AutoPatchingSettings](#autopatchingsettings)
+* **keyVaultCredentialSettings**: [KeyVaultCredentialSettings](#keyvaultcredentialsettings)
 * **provisioningState**: string (ReadOnly)
-* **serverConfigurationsManagementSettings**: ServerConfigurationsManagementSettings
+* **serverConfigurationsManagementSettings**: [ServerConfigurationsManagementSettings](#serverconfigurationsmanagementsettings)
 * **sqlImageOffer**: string
 * **sqlImageSku**: 'Developer' | 'Enterprise' | 'Express' | 'Standard' | 'Web'
 * **sqlManagement**: 'Full' | 'LightWeight' | 'NoAgent'
 * **sqlServerLicenseType**: 'AHUB' | 'DR' | 'PAYG'
 * **sqlVirtualMachineGroupResourceId**: string
-* **storageConfigurationSettings**: StorageConfigurationSettings
+* **storageConfigurationSettings**: [StorageConfigurationSettings](#storageconfigurationsettings)
 * **virtualMachineResourceId**: string
-* **wsfcDomainCredentials**: WsfcDomainCredentials
+* **wsfcDomainCredentials**: [WsfcDomainCredentials](#wsfcdomaincredentials)
 
 ## AutoBackupSettings
 ### Properties
@@ -133,10 +133,10 @@
 
 ## ServerConfigurationsManagementSettings
 ### Properties
-* **additionalFeaturesServerConfigurations**: AdditionalFeaturesServerConfigurations
-* **sqlConnectivityUpdateSettings**: SqlConnectivityUpdateSettings
-* **sqlStorageUpdateSettings**: SqlStorageUpdateSettings
-* **sqlWorkloadTypeUpdateSettings**: SqlWorkloadTypeUpdateSettings
+* **additionalFeaturesServerConfigurations**: [AdditionalFeaturesServerConfigurations](#additionalfeaturesserverconfigurations)
+* **sqlConnectivityUpdateSettings**: [SqlConnectivityUpdateSettings](#sqlconnectivityupdatesettings)
+* **sqlStorageUpdateSettings**: [SqlStorageUpdateSettings](#sqlstorageupdatesettings)
+* **sqlWorkloadTypeUpdateSettings**: [SqlWorkloadTypeUpdateSettings](#sqlworkloadtypeupdatesettings)
 
 ## AdditionalFeaturesServerConfigurations
 ### Properties
@@ -162,9 +162,9 @@
 ## StorageConfigurationSettings
 ### Properties
 * **diskConfigurationType**: 'ADD' | 'EXTEND' | 'NEW'
-* **sqlDataSettings**: SQLStorageSettings
-* **sqlLogSettings**: SQLStorageSettings
-* **sqlTempDbSettings**: SQLStorageSettings
+* **sqlDataSettings**: [SQLStorageSettings](#sqlstoragesettings)
+* **sqlLogSettings**: [SQLStorageSettings](#sqlstoragesettings)
+* **sqlTempDbSettings**: [SQLStorageSettings](#sqlstoragesettings)
 * **storageWorkloadType**: 'DW' | 'GENERAL' | 'OLTP'
 
 ## SQLStorageSettings

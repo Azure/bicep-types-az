@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceProperties
-* **tags**: ResourceTags
+* **properties**: [WorkspaceProperties](#workspaceproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces/dataSources@2015-11-01-preview
@@ -21,7 +21,7 @@
 * **kind**: 'AzureActivityLog' | 'ChangeTrackingCustomRegistry' | 'ChangeTrackingDefaultPath' | 'ChangeTrackingDefaultRegistry' | 'ChangeTrackingPath' | 'CustomLog' | 'CustomLogCollection' | 'GenericDataSource' | 'IISLogs' | 'LinuxPerformanceCollection' | 'LinuxPerformanceObject' | 'LinuxSyslog' | 'LinuxSyslogCollection' | 'WindowsEvent' | 'WindowsPerformanceCounter' (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: any (Required)
-* **tags**: ProxyResourceTags
+* **tags**: [ProxyResourceTags](#proxyresourcetags)
 * **type**: 'Microsoft.OperationalInsights/workspaces/dataSources' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces/linkedServices@2015-11-01-preview
@@ -30,7 +30,7 @@
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LinkedServiceProperties (Required)
+* **properties**: [LinkedServiceProperties](#linkedserviceproperties) (Required)
 * **type**: 'Microsoft.OperationalInsights/workspaces/linkedServices' (ReadOnly, DeployTimeConstant)
 
 ## WorkspaceProperties
@@ -39,7 +39,7 @@
 * **portalUrl**: string (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded'
 * **retentionInDays**: int
-* **sku**: Sku
+* **sku**: [Sku](#sku)
 * **source**: string (ReadOnly)
 
 ## Sku

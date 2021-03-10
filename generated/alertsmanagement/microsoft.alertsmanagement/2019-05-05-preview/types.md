@@ -7,21 +7,21 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ActionRuleProperties
-* **tags**: ManagedResourceTags
+* **properties**: [ActionRuleProperties](#actionruleproperties)
+* **tags**: [ManagedResourceTags](#managedresourcetags)
 * **type**: 'Microsoft.AlertsManagement/actionRules' (ReadOnly, DeployTimeConstant)
 
 ## ActionRuleProperties
 * **Discriminator**: type
 
 ### Base Properties
-* **conditions**: Conditions
+* **conditions**: [Conditions](#conditions)
 * **createdAt**: string (ReadOnly)
 * **createdBy**: string (ReadOnly)
 * **description**: string
 * **lastModifiedAt**: string (ReadOnly)
 * **lastModifiedBy**: string (ReadOnly)
-* **scope**: Scope
+* **scope**: [Scope](#scope)
 * **status**: 'Disabled' | 'Enabled'
 ### ActionGroup
 #### Properties
@@ -34,19 +34,19 @@
 
 ### Suppression
 #### Properties
-* **suppressionConfig**: SuppressionConfig (Required)
+* **suppressionConfig**: [SuppressionConfig](#suppressionconfig) (Required)
 * **type**: 'Suppression' (Required)
 
 
 ## Conditions
 ### Properties
-* **alertContext**: Condition
-* **alertRuleId**: Condition
-* **description**: Condition
-* **monitorCondition**: Condition
-* **monitorService**: Condition
-* **severity**: Condition
-* **targetResourceType**: Condition
+* **alertContext**: [Condition](#condition)
+* **alertRuleId**: [Condition](#condition)
+* **description**: [Condition](#condition)
+* **monitorCondition**: [Condition](#condition)
+* **monitorService**: [Condition](#condition)
+* **severity**: [Condition](#condition)
+* **targetResourceType**: [Condition](#condition)
 
 ## Condition
 ### Properties
@@ -69,13 +69,13 @@
 
 ## Suppression
 ### Properties
-* **suppressionConfig**: SuppressionConfig (Required)
+* **suppressionConfig**: [SuppressionConfig](#suppressionconfig) (Required)
 * **type**: 'Suppression' (Required)
 
 ## SuppressionConfig
 ### Properties
 * **recurrenceType**: 'Always' | 'Daily' | 'Monthly' | 'Once' | 'Weekly' (Required)
-* **schedule**: SuppressionSchedule
+* **schedule**: [SuppressionSchedule](#suppressionschedule)
 
 ## SuppressionSchedule
 ### Properties

@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EHNamespaceProperties
-* **sku**: Sku
-* **tags**: TrackedResourceTags
+* **properties**: [EHNamespaceProperties](#ehnamespaceproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.EventHub/namespaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/authorizationRules@2017-04-01
@@ -18,7 +18,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AuthorizationRuleProperties
+* **properties**: [AuthorizationRuleProperties](#authorizationruleproperties)
 * **type**: 'Microsoft.EventHub/namespaces/authorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2017-04-01
@@ -27,7 +27,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ArmDisasterRecoveryProperties
+* **properties**: [ArmDisasterRecoveryProperties](#armdisasterrecoveryproperties)
 * **type**: 'Microsoft.EventHub/namespaces/disasterRecoveryConfigs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/eventhubs@2017-04-01
@@ -36,7 +36,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EventhubProperties
+* **properties**: [EventhubProperties](#eventhubproperties)
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2017-04-01
@@ -45,7 +45,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AuthorizationRuleProperties
+* **properties**: [AuthorizationRuleProperties](#authorizationruleproperties)
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/authorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/eventhubs/consumergroups@2017-04-01
@@ -54,7 +54,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConsumerGroupProperties
+* **properties**: [ConsumerGroupProperties](#consumergroupproperties)
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/networkRuleSets@2017-04-01
@@ -63,7 +63,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: NetworkRuleSetProperties
+* **properties**: [NetworkRuleSetProperties](#networkrulesetproperties)
 * **type**: 'Microsoft.EventHub/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant)
 
 ## EHNamespaceProperties
@@ -102,7 +102,7 @@
 
 ## EventhubProperties
 ### Properties
-* **captureDescription**: CaptureDescription
+* **captureDescription**: [CaptureDescription](#capturedescription)
 * **createdAt**: string (ReadOnly)
 * **messageRetentionInDays**: int
 * **partitionCount**: int
@@ -112,7 +112,7 @@
 
 ## CaptureDescription
 ### Properties
-* **destination**: Destination
+* **destination**: [Destination](#destination)
 * **enabled**: bool
 * **encoding**: 'Avro' | 'AvroDeflate'
 * **intervalInSeconds**: int
@@ -122,7 +122,7 @@
 ## Destination
 ### Properties
 * **name**: string
-* **properties**: DestinationProperties
+* **properties**: [DestinationProperties](#destinationproperties)
 
 ## DestinationProperties
 ### Properties
@@ -139,8 +139,8 @@
 ## NetworkRuleSetProperties
 ### Properties
 * **defaultAction**: 'Allow' | 'Deny'
-* **ipRules**: NWRuleSetIpRules[]
-* **virtualNetworkRules**: NWRuleSetVirtualNetworkRules[]
+* **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]
+* **virtualNetworkRules**: [NWRuleSetVirtualNetworkRules](#nwrulesetvirtualnetworkrules)[]
 
 ## NWRuleSetIpRules
 ### Properties
@@ -150,7 +150,7 @@
 ## NWRuleSetVirtualNetworkRules
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool
-* **subnet**: Subnet
+* **subnet**: [Subnet](#subnet)
 
 ## Subnet
 ### Properties

@@ -7,23 +7,23 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AutoscaleSetting (Required)
-* **tags**: ResourceTags
+* **properties**: [AutoscaleSetting](#autoscalesetting) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'microsoft.insights/autoscalesettings' (ReadOnly, DeployTimeConstant)
 
 ## AutoscaleSetting
 ### Properties
 * **enabled**: bool
 * **name**: string
-* **notifications**: AutoscaleNotification[]
-* **profiles**: AutoscaleProfile[] (Required)
+* **notifications**: [AutoscaleNotification](#autoscalenotification)[]
+* **profiles**: [AutoscaleProfile](#autoscaleprofile)[] (Required)
 * **targetResourceUri**: string
 
 ## AutoscaleNotification
 ### Properties
-* **email**: EmailNotification
+* **email**: [EmailNotification](#emailnotification)
 * **operation**: 'Scale' (Required)
-* **webhooks**: WebhookNotification[]
+* **webhooks**: [WebhookNotification](#webhooknotification)[]
 
 ## EmailNotification
 ### Properties
@@ -33,7 +33,7 @@
 
 ## WebhookNotification
 ### Properties
-* **properties**: WebhookNotificationProperties
+* **properties**: [WebhookNotificationProperties](#webhooknotificationproperties)
 * **serviceUri**: string
 
 ## WebhookNotificationProperties
@@ -43,11 +43,11 @@
 
 ## AutoscaleProfile
 ### Properties
-* **capacity**: ScaleCapacity (Required)
-* **fixedDate**: TimeWindow
+* **capacity**: [ScaleCapacity](#scalecapacity) (Required)
+* **fixedDate**: [TimeWindow](#timewindow)
 * **name**: string (Required)
-* **recurrence**: Recurrence
-* **rules**: ScaleRule[] (Required)
+* **recurrence**: [Recurrence](#recurrence)
+* **rules**: [ScaleRule](#scalerule)[] (Required)
 
 ## ScaleCapacity
 ### Properties
@@ -64,7 +64,7 @@
 ## Recurrence
 ### Properties
 * **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'None' | 'Second' | 'Week' | 'Year' (Required)
-* **schedule**: RecurrentSchedule (Required)
+* **schedule**: [RecurrentSchedule](#recurrentschedule) (Required)
 
 ## RecurrentSchedule
 ### Properties
@@ -75,12 +75,12 @@
 
 ## ScaleRule
 ### Properties
-* **metricTrigger**: MetricTrigger (Required)
-* **scaleAction**: ScaleAction (Required)
+* **metricTrigger**: [MetricTrigger](#metrictrigger) (Required)
+* **scaleAction**: [ScaleAction](#scaleaction) (Required)
 
 ## MetricTrigger
 ### Properties
-* **dimensions**: ScaleRuleMetricDimension[]
+* **dimensions**: [ScaleRuleMetricDimension](#scalerulemetricdimension)[]
 * **metricName**: string (Required)
 * **metricNamespace**: string
 * **metricResourceUri**: string (Required)

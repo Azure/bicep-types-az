@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CommunicationServiceProperties
-* **tags**: TaggedResourceTags
+* **properties**: [CommunicationServiceProperties](#communicationserviceproperties)
+* **tags**: [TaggedResourceTags](#taggedresourcetags)
 * **type**: 'Microsoft.Communication/communicationServices' (ReadOnly, DeployTimeConstant)
 
 ## CommunicationServiceProperties

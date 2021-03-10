@@ -5,13 +5,13 @@
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ManagedIdentity
+* **identity**: [ManagedIdentity](#managedidentity)
 * **kind**: 'RawWebSockets' | 'SignalR'
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SignalRProperties
-* **sku**: ResourceSku
-* **tags**: TrackedResourceTags
+* **properties**: [SignalRProperties](#signalrproperties)
+* **sku**: [ResourceSku](#resourcesku)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SignalRService/signalR/privateEndpointConnections@2020-07-01-preview
@@ -20,7 +20,7 @@
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: 'Microsoft.SignalRService/signalR/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## ManagedIdentity
@@ -28,12 +28,12 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: ManagedIdentityUserAssignedIdentities
+* **userAssignedIdentities**: [ManagedIdentityUserAssignedIdentities](#managedidentityuserassignedidentities)
 
 ## ManagedIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: UserAssignedIdentityProperty
+* **Additional Properties Type**: [UserAssignedIdentityProperty](#userassignedidentityproperty)
 
 ## UserAssignedIdentityProperty
 ### Properties
@@ -42,17 +42,17 @@
 
 ## SignalRProperties
 ### Properties
-* **cors**: SignalRCorsSettings
+* **cors**: [SignalRCorsSettings](#signalrcorssettings)
 * **externalIP**: string (ReadOnly)
-* **features**: SignalRFeature[]
+* **features**: [SignalRFeature](#signalrfeature)[]
 * **hostName**: string (ReadOnly)
-* **networkACLs**: SignalRNetworkACLs
-* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **networkACLs**: [SignalRNetworkACLs](#signalrnetworkacls)
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
 * **publicPort**: int (ReadOnly)
 * **serverPort**: int (ReadOnly)
-* **tls**: SignalRTlsSettings
-* **upstream**: ServerlessUpstreamSettings
+* **tls**: [SignalRTlsSettings](#signalrtlssettings)
+* **upstream**: [ServerlessUpstreamSettings](#serverlessupstreamsettings)
 * **version**: string (ReadOnly)
 
 ## SignalRCorsSettings
@@ -62,7 +62,7 @@
 ## SignalRFeature
 ### Properties
 * **flag**: 'EnableConnectivityLogs' | 'EnableMessagingLogs' | 'ServiceMode' (Required)
-* **properties**: SignalRFeatureProperties
+* **properties**: [SignalRFeatureProperties](#signalrfeatureproperties)
 * **value**: string (Required)
 
 ## SignalRFeatureProperties
@@ -73,8 +73,8 @@
 ## SignalRNetworkACLs
 ### Properties
 * **defaultAction**: 'Allow' | 'Deny'
-* **privateEndpoints**: PrivateEndpointACL[]
-* **publicNetwork**: NetworkACL
+* **privateEndpoints**: [PrivateEndpointACL](#privateendpointacl)[]
+* **publicNetwork**: [NetworkACL](#networkacl)
 
 ## PrivateEndpointACL
 ### Properties
@@ -91,13 +91,13 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
 
 ## PrivateEndpoint
@@ -116,11 +116,11 @@
 
 ## ServerlessUpstreamSettings
 ### Properties
-* **templates**: UpstreamTemplate[]
+* **templates**: [UpstreamTemplate](#upstreamtemplate)[]
 
 ## UpstreamTemplate
 ### Properties
-* **auth**: UpstreamAuthSettings
+* **auth**: [UpstreamAuthSettings](#upstreamauthsettings)
 * **categoryPattern**: string
 * **eventPattern**: string
 * **hubPattern**: string
@@ -128,7 +128,7 @@
 
 ## UpstreamAuthSettings
 ### Properties
-* **managedIdentity**: ManagedIdentitySettings
+* **managedIdentity**: [ManagedIdentitySettings](#managedidentitysettings)
 * **type**: 'ManagedIdentity' | 'None'
 
 ## ManagedIdentitySettings

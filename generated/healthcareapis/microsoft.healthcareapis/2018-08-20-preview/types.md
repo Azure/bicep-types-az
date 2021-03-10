@@ -6,12 +6,12 @@
 * **apiVersion**: '2018-08-20-preview' (ReadOnly, DeployTimeConstant)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ResourceIdentity
+* **identity**: [ResourceIdentity](#resourceidentity)
 * **kind**: 'fhir' | 'fhir-R4' | 'fhir-Stu3' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServicesProperties
-* **tags**: ResourceTags
+* **properties**: [ServicesProperties](#servicesproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.HealthcareApis/services' (ReadOnly, DeployTimeConstant)
 
 ## ResourceIdentity
@@ -22,10 +22,10 @@
 
 ## ServicesProperties
 ### Properties
-* **accessPolicies**: ServiceAccessPolicyEntry[]
-* **authenticationConfiguration**: ServiceAuthenticationConfigurationInfo
-* **corsConfiguration**: ServiceCorsConfigurationInfo
-* **cosmosDbConfiguration**: ServiceCosmosDbConfigurationInfo
+* **accessPolicies**: [ServiceAccessPolicyEntry](#serviceaccesspolicyentry)[]
+* **authenticationConfiguration**: [ServiceAuthenticationConfigurationInfo](#serviceauthenticationconfigurationinfo)
+* **corsConfiguration**: [ServiceCorsConfigurationInfo](#servicecorsconfigurationinfo)
+* **cosmosDbConfiguration**: [ServiceCosmosDbConfigurationInfo](#servicecosmosdbconfigurationinfo)
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Succeeded' | 'Updating' | 'Verifying' (ReadOnly)
 
 ## ServiceAccessPolicyEntry

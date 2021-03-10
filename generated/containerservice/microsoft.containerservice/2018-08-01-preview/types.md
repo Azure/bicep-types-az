@@ -7,24 +7,24 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedClusterProperties
-* **tags**: ResourceTags
+* **properties**: [ManagedClusterProperties](#managedclusterproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant)
 
 ## ManagedClusterProperties
 ### Properties
-* **aadProfile**: ManagedClusterAADProfile
-* **addonProfiles**: ManagedClusterPropertiesAddonProfiles
-* **agentPoolProfiles**: ManagedClusterAgentPoolProfile[]
+* **aadProfile**: [ManagedClusterAADProfile](#managedclusteraadprofile)
+* **addonProfiles**: [ManagedClusterPropertiesAddonProfiles](#managedclusterpropertiesaddonprofiles)
+* **agentPoolProfiles**: [ManagedClusterAgentPoolProfile](#managedclusteragentpoolprofile)[]
 * **dnsPrefix**: string
 * **enableRBAC**: bool
 * **fqdn**: string (ReadOnly)
 * **kubernetesVersion**: string
-* **linuxProfile**: ContainerServiceLinuxProfile
-* **networkProfile**: ContainerServiceNetworkProfile
+* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile)
+* **networkProfile**: [ContainerServiceNetworkProfile](#containerservicenetworkprofile)
 * **nodeResourceGroup**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
-* **servicePrincipalProfile**: ManagedClusterServicePrincipalProfile
+* **servicePrincipalProfile**: [ManagedClusterServicePrincipalProfile](#managedclusterserviceprincipalprofile)
 
 ## ManagedClusterAADProfile
 ### Properties
@@ -36,11 +36,11 @@
 ## ManagedClusterPropertiesAddonProfiles
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ManagedClusterAddonProfile
+* **Additional Properties Type**: [ManagedClusterAddonProfile](#managedclusteraddonprofile)
 
 ## ManagedClusterAddonProfile
 ### Properties
-* **config**: ManagedClusterAddonProfileConfig
+* **config**: [ManagedClusterAddonProfileConfig](#managedclusteraddonprofileconfig)
 * **enabled**: bool (Required)
 
 ## ManagedClusterAddonProfileConfig
@@ -65,11 +65,11 @@
 ## ContainerServiceLinuxProfile
 ### Properties
 * **adminUsername**: string (Required)
-* **ssh**: ContainerServiceSshConfiguration (Required)
+* **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required)
 
 ## ContainerServiceSshConfiguration
 ### Properties
-* **publicKeys**: ContainerServiceSshPublicKey[] (Required)
+* **publicKeys**: [ContainerServiceSshPublicKey](#containerservicesshpublickey)[] (Required)
 
 ## ContainerServiceSshPublicKey
 ### Properties

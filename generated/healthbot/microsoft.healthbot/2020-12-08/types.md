@@ -7,10 +7,10 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: HealthBotProperties
-* **sku**: Sku (Required)
-* **systemData**: SystemData (ReadOnly)
-* **tags**: TrackedResourceTags
+* **properties**: [HealthBotProperties](#healthbotproperties)
+* **sku**: [Sku](#sku) (Required)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.HealthBot/healthBots' (ReadOnly, DeployTimeConstant)
 
 ## HealthBotProperties

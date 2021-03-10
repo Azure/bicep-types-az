@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: JobCollectionProperties
-* **tags**: JobCollectionDefinitionTags
+* **properties**: [JobCollectionProperties](#jobcollectionproperties)
+* **tags**: [JobCollectionDefinitionTags](#jobcollectiondefinitiontags)
 * **type**: 'Microsoft.Scheduler/jobCollections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Scheduler/jobCollections/jobs@2016-01-01
@@ -17,20 +17,20 @@
 * **apiVersion**: '2016-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: JobProperties
+* **properties**: [JobProperties](#jobproperties)
 * **type**: 'Microsoft.Scheduler/jobCollections/jobs' (ReadOnly, DeployTimeConstant)
 
 ## JobCollectionProperties
 ### Properties
-* **quota**: JobCollectionQuota
-* **sku**: Sku
+* **quota**: [JobCollectionQuota](#jobcollectionquota)
+* **sku**: [Sku](#sku)
 * **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'Suspended'
 
 ## JobCollectionQuota
 ### Properties
 * **maxJobCount**: int
 * **maxJobOccurrence**: int
-* **maxRecurrence**: JobMaxRecurrence
+* **maxRecurrence**: [JobMaxRecurrence](#jobmaxrecurrence)
 
 ## JobMaxRecurrence
 ### Properties
@@ -48,29 +48,29 @@
 
 ## JobProperties
 ### Properties
-* **action**: JobAction
-* **recurrence**: JobRecurrence
+* **action**: [JobAction](#jobaction)
+* **recurrence**: [JobRecurrence](#jobrecurrence)
 * **startTime**: string
 * **state**: 'Completed' | 'Disabled' | 'Enabled' | 'Faulted'
-* **status**: JobStatus (ReadOnly)
+* **status**: [JobStatus](#jobstatus) (ReadOnly)
 
 ## JobAction
 ### Properties
-* **errorAction**: JobErrorAction
-* **queueMessage**: StorageQueueMessage
-* **request**: HttpRequest
-* **retryPolicy**: RetryPolicy
-* **serviceBusQueueMessage**: ServiceBusQueueMessage
-* **serviceBusTopicMessage**: ServiceBusTopicMessage
+* **errorAction**: [JobErrorAction](#joberroraction)
+* **queueMessage**: [StorageQueueMessage](#storagequeuemessage)
+* **request**: [HttpRequest](#httprequest)
+* **retryPolicy**: [RetryPolicy](#retrypolicy)
+* **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage)
+* **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage)
 * **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue'
 
 ## JobErrorAction
 ### Properties
-* **queueMessage**: StorageQueueMessage
-* **request**: HttpRequest
-* **retryPolicy**: RetryPolicy
-* **serviceBusQueueMessage**: ServiceBusQueueMessage
-* **serviceBusTopicMessage**: ServiceBusTopicMessage
+* **queueMessage**: [StorageQueueMessage](#storagequeuemessage)
+* **request**: [HttpRequest](#httprequest)
+* **retryPolicy**: [RetryPolicy](#retrypolicy)
+* **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage)
+* **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage)
 * **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue'
 
 ## StorageQueueMessage
@@ -82,9 +82,9 @@
 
 ## HttpRequest
 ### Properties
-* **authentication**: HttpAuthentication
+* **authentication**: [HttpAuthentication](#httpauthentication)
 * **body**: string
-* **headers**: HttpRequestHeaders
+* **headers**: [HttpRequestHeaders](#httprequestheaders)
 * **method**: string
 * **uri**: string
 
@@ -105,9 +105,9 @@
 
 ## ServiceBusQueueMessage
 ### Properties
-* **authentication**: ServiceBusAuthentication
-* **brokeredMessageProperties**: ServiceBusBrokeredMessageProperties
-* **customMessageProperties**: ServiceBusMessageCustomMessageProperties
+* **authentication**: [ServiceBusAuthentication](#servicebusauthentication)
+* **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties)
+* **customMessageProperties**: [ServiceBusMessageCustomMessageProperties](#servicebusmessagecustommessageproperties)
 * **message**: string
 * **namespace**: string
 * **queueName**: string
@@ -142,9 +142,9 @@
 
 ## ServiceBusTopicMessage
 ### Properties
-* **authentication**: ServiceBusAuthentication
-* **brokeredMessageProperties**: ServiceBusBrokeredMessageProperties
-* **customMessageProperties**: ServiceBusMessageCustomMessageProperties
+* **authentication**: [ServiceBusAuthentication](#servicebusauthentication)
+* **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties)
+* **customMessageProperties**: [ServiceBusMessageCustomMessageProperties](#servicebusmessagecustommessageproperties)
 * **message**: string
 * **namespace**: string
 * **topicPath**: string
@@ -161,14 +161,14 @@
 * **endTime**: string
 * **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week'
 * **interval**: int
-* **schedule**: JobRecurrenceSchedule
+* **schedule**: [JobRecurrenceSchedule](#jobrecurrenceschedule)
 
 ## JobRecurrenceSchedule
 ### Properties
 * **hours**: int[]
 * **minutes**: int[]
 * **monthDays**: int[]
-* **monthlyOccurrences**: JobRecurrenceScheduleMonthlyOccurrence[]
+* **monthlyOccurrences**: [JobRecurrenceScheduleMonthlyOccurrence](#jobrecurrenceschedulemonthlyoccurrence)[]
 * **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]
 
 ## JobRecurrenceScheduleMonthlyOccurrence

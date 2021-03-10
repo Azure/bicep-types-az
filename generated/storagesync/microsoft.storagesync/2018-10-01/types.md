@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: any
-* **tags**: StorageSyncServiceCreateParametersTags
+* **tags**: [StorageSyncServiceCreateParametersTags](#storagesyncservicecreateparameterstags)
 * **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorageSync/storageSyncServices/registeredServers@2018-10-01
@@ -17,7 +17,7 @@
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RegisteredServerCreateParametersProperties
+* **properties**: [RegisteredServerCreateParametersProperties](#registeredservercreateparametersproperties)
 * **type**: 'Microsoft.StorageSync/storageSyncServices/registeredServers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups@2018-10-01
@@ -35,7 +35,7 @@
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CloudEndpointCreateParametersProperties
+* **properties**: [CloudEndpointCreateParametersProperties](#cloudendpointcreateparametersproperties)
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints@2018-10-01
@@ -44,7 +44,7 @@
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerEndpointCreateParametersProperties
+* **properties**: [ServerEndpointCreateParametersProperties](#serverendpointcreateparametersproperties)
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## StorageSyncServiceCreateParametersTags
@@ -99,20 +99,20 @@
 * **provisioningState**: string (ReadOnly)
 * **serverLocalPath**: string
 * **serverResourceId**: string
-* **syncStatus**: ServerEndpointHealth (ReadOnly)
+* **syncStatus**: [ServerEndpointHealth](#serverendpointhealth) (ReadOnly)
 * **tierFilesOlderThanDays**: int
 * **volumeFreeSpacePercent**: int
 
 ## ServerEndpointHealth
 ### Properties
 * **combinedHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly)
-* **currentProgress**: SyncProgressStatus (ReadOnly)
+* **currentProgress**: [SyncProgressStatus](#syncprogressstatus) (ReadOnly)
 * **downloadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly)
-* **downloadStatus**: SyncSessionStatus (ReadOnly)
+* **downloadStatus**: [SyncSessionStatus](#syncsessionstatus) (ReadOnly)
 * **lastUpdatedTimestamp**: string (ReadOnly)
 * **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' (ReadOnly)
 * **uploadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly)
-* **uploadStatus**: SyncSessionStatus (ReadOnly)
+* **uploadStatus**: [SyncSessionStatus](#syncsessionstatus) (ReadOnly)
 
 ## SyncProgressStatus
 ### Properties

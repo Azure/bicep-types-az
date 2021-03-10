@@ -17,7 +17,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ActionRequestProperties
+* **properties**: [ActionRequestProperties](#actionrequestproperties)
 * **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityInsights/bookmarks@2019-01-01-preview
@@ -27,7 +27,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BookmarkProperties
+* **properties**: [BookmarkProperties](#bookmarkproperties)
 * **type**: 'Microsoft.SecurityInsights/bookmarks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityInsights/bookmarks/relations@2019-01-01-preview
@@ -37,7 +37,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RelationProperties
+* **properties**: [RelationProperties](#relationproperties)
 * **type**: 'Microsoft.SecurityInsights/bookmarks/relations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityInsights/cases@2019-01-01-preview
@@ -47,7 +47,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CaseProperties
+* **properties**: [CaseProperties](#caseproperties)
 * **type**: 'Microsoft.SecurityInsights/cases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityInsights/cases/comments@2019-01-01-preview
@@ -56,7 +56,7 @@
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CaseCommentProperties
+* **properties**: [CaseCommentProperties](#casecommentproperties)
 * **type**: 'Microsoft.SecurityInsights/cases/comments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityInsights/cases/relations@2019-01-01-preview
@@ -67,7 +67,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'CasesToBookmarks' (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RelationsModelInputProperties
+* **properties**: [RelationsModelInputProperties](#relationsmodelinputproperties)
 * **type**: 'Microsoft.SecurityInsights/cases/relations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityInsights/dataConnectors@2019-01-01-preview
@@ -87,7 +87,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IncidentProperties
+* **properties**: [IncidentProperties](#incidentproperties)
 * **type**: 'Microsoft.SecurityInsights/incidents' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityInsights/incidents/comments@2019-01-01-preview
@@ -97,7 +97,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IncidentCommentProperties
+* **properties**: [IncidentCommentProperties](#incidentcommentproperties)
 * **type**: 'Microsoft.SecurityInsights/incidents/comments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityInsights/incidents/relations@2019-01-01-preview
@@ -107,7 +107,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RelationProperties
+* **properties**: [RelationProperties](#relationproperties)
 * **type**: 'Microsoft.SecurityInsights/incidents/relations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityInsights/settings@2019-01-01-preview
@@ -128,7 +128,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'indicator' (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ThreatIntelligenceIndicatorProperties (WriteOnly)
+* **properties**: [ThreatIntelligenceIndicatorProperties](#threatintelligenceindicatorproperties) (WriteOnly)
 * **type**: 'Microsoft.SecurityInsights/threatIntelligence/indicators' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityInsights/watchlists@2019-01-01-preview
@@ -138,7 +138,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WatchlistProperties
+* **properties**: [WatchlistProperties](#watchlistproperties)
 * **type**: 'Microsoft.SecurityInsights/watchlists' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityInsights/watchlists/watchlistItems@2019-01-01-preview
@@ -148,7 +148,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WatchlistItemProperties
+* **properties**: [WatchlistItemProperties](#watchlistitemproperties)
 * **type**: 'Microsoft.SecurityInsights/watchlists/watchlistItems' (ReadOnly, DeployTimeConstant)
 
 ## ActionRequestProperties
@@ -160,10 +160,10 @@
 ## BookmarkProperties
 ### Properties
 * **created**: string
-* **createdBy**: UserInfo
+* **createdBy**: [UserInfo](#userinfo)
 * **displayName**: string (Required)
 * **eventTime**: string
-* **incidentInfo**: IncidentInfo
+* **incidentInfo**: [IncidentInfo](#incidentinfo)
 * **labels**: string[]
 * **notes**: string
 * **query**: string (Required)
@@ -171,7 +171,7 @@
 * **queryResult**: string
 * **queryStartTime**: string
 * **updated**: string
-* **updatedBy**: UserInfo
+* **updatedBy**: [UserInfo](#userinfo)
 
 ## UserInfo
 ### Properties
@@ -204,8 +204,8 @@
 * **labels**: string[]
 * **lastComment**: string (ReadOnly)
 * **lastUpdatedTimeUtc**: string (ReadOnly)
-* **metrics**: CasePropertiesMetrics (ReadOnly)
-* **owner**: UserInfo
+* **metrics**: [CasePropertiesMetrics](#casepropertiesmetrics) (ReadOnly)
+* **owner**: [UserInfo](#userinfo)
 * **relatedAlertIds**: string[] (ReadOnly)
 * **relatedAlertProductNames**: string[] (ReadOnly)
 * **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium' (Required)
@@ -224,7 +224,7 @@
 ### Properties
 * **createdTimeUtc**: string (ReadOnly)
 * **message**: string (Required)
-* **userInfo**: UserInfo (ReadOnly)
+* **userInfo**: [UserInfo](#userinfo) (ReadOnly)
 
 ## RelationsModelInputProperties
 ### Properties
@@ -232,13 +232,13 @@
 * **bookmarkName**: string (ReadOnly)
 * **caseIdentifier**: string (ReadOnly)
 * **relationName**: string
-* **sourceRelationNode**: RelationNode (WriteOnly)
-* **targetRelationNode**: RelationNode (WriteOnly)
+* **sourceRelationNode**: [RelationNode](#relationnode) (WriteOnly)
+* **targetRelationNode**: [RelationNode](#relationnode) (WriteOnly)
 
 ## RelationNode
 ### Properties
 * **etag**: string (WriteOnly)
-* **relationAdditionalProperties**: RelationNodeRelationAdditionalProperties (WriteOnly)
+* **relationAdditionalProperties**: [RelationNodeRelationAdditionalProperties](#relationnoderelationadditionalproperties) (WriteOnly)
 * **relationNodeId**: string (WriteOnly)
 * **relationNodeKind**: 'Bookmark' | 'Case' (ReadOnly, WriteOnly)
 
@@ -249,7 +249,7 @@
 
 ## IncidentProperties
 ### Properties
-* **additionalData**: IncidentAdditionalData (ReadOnly)
+* **additionalData**: [IncidentAdditionalData](#incidentadditionaldata) (ReadOnly)
 * **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined'
 * **classificationComment**: string
 * **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected'
@@ -258,10 +258,10 @@
 * **firstActivityTimeUtc**: string
 * **incidentNumber**: int (ReadOnly)
 * **incidentUrl**: string (ReadOnly)
-* **labels**: IncidentLabel[]
+* **labels**: [IncidentLabel](#incidentlabel)[]
 * **lastActivityTimeUtc**: string
 * **lastModifiedTimeUtc**: string (ReadOnly)
-* **owner**: IncidentOwnerInfo
+* **owner**: [IncidentOwnerInfo](#incidentownerinfo)
 * **providerIncidentId**: string
 * **providerName**: string
 * **relatedAnalyticRuleIds**: string[] (ReadOnly)
@@ -291,7 +291,7 @@
 
 ## IncidentCommentProperties
 ### Properties
-* **author**: ClientInfo (ReadOnly)
+* **author**: [ClientInfo](#clientinfo) (ReadOnly)
 * **createdTimeUtc**: string (ReadOnly)
 * **lastModifiedTimeUtc**: string (ReadOnly)
 * **message**: string (Required)
@@ -305,24 +305,24 @@
 
 ## ThreatIntelligenceIndicatorProperties
 ### Properties
-* **additionalData**: EntityCommonPropertiesAdditionalData (ReadOnly, WriteOnly)
+* **additionalData**: [EntityCommonPropertiesAdditionalData](#entitycommonpropertiesadditionaldata) (ReadOnly, WriteOnly)
 * **confidence**: int (WriteOnly)
 * **created**: string (WriteOnly)
 * **createdByRef**: string (WriteOnly)
 * **description**: string (WriteOnly)
 * **displayName**: string (WriteOnly)
-* **extensions**: ThreatIntelligenceIndicatorPropertiesExtensions (WriteOnly)
+* **extensions**: [ThreatIntelligenceIndicatorPropertiesExtensions](#threatintelligenceindicatorpropertiesextensions) (WriteOnly)
 * **externalId**: string (WriteOnly)
 * **externalReferences**: string[] (WriteOnly)
 * **friendlyName**: string (ReadOnly, WriteOnly)
-* **granularMarkings**: ThreatIntelligenceGranularMarkingModel[] (WriteOnly)
+* **granularMarkings**: [ThreatIntelligenceGranularMarkingModel](#threatintelligencegranularmarkingmodel)[] (WriteOnly)
 * **indicatorTypes**: string[] (WriteOnly)
-* **killChainPhases**: ThreatIntelligenceKillChainPhase[] (WriteOnly)
+* **killChainPhases**: [ThreatIntelligenceKillChainPhase](#threatintelligencekillchainphase)[] (WriteOnly)
 * **labels**: string[] (WriteOnly)
 * **language**: string (WriteOnly)
 * **lastUpdatedTimeUtc**: string (WriteOnly)
 * **modified**: string (WriteOnly)
-* **parsedPattern**: ThreatIntelligenceParsedPattern[] (WriteOnly)
+* **parsedPattern**: [ThreatIntelligenceParsedPattern](#threatintelligenceparsedpattern)[] (WriteOnly)
 * **pattern**: string (WriteOnly)
 * **patternType**: string (WriteOnly)
 * **revoked**: bool (WriteOnly)
@@ -356,7 +356,7 @@
 ## ThreatIntelligenceParsedPattern
 ### Properties
 * **patternTypeKey**: string (WriteOnly)
-* **patternTypeValues**: ThreatIntelligenceParsedPatternTypeValue[] (WriteOnly)
+* **patternTypeValues**: [ThreatIntelligenceParsedPatternTypeValue](#threatintelligenceparsedpatterntypevalue)[] (WriteOnly)
 
 ## ThreatIntelligenceParsedPatternTypeValue
 ### Properties
@@ -367,7 +367,7 @@
 ### Properties
 * **contentType**: string
 * **created**: string
-* **createdBy**: UserInfo
+* **createdBy**: [UserInfo](#userinfo)
 * **defaultDuration**: string
 * **description**: string
 * **displayName**: string (Required)
@@ -379,7 +379,7 @@
 * **source**: 'Local file' | 'Remote storage' (Required)
 * **tenantId**: string
 * **updated**: string
-* **updatedBy**: UserInfo
+* **updatedBy**: [UserInfo](#userinfo)
 * **uploadStatus**: string
 * **watchlistAlias**: string
 * **watchlistId**: string
@@ -389,13 +389,13 @@
 ## WatchlistItemProperties
 ### Properties
 * **created**: string
-* **createdBy**: UserInfo
+* **createdBy**: [UserInfo](#userinfo)
 * **entityMapping**: any
 * **isDeleted**: bool
 * **itemsKeyValue**: any (Required)
 * **tenantId**: string
 * **updated**: string
-* **updatedBy**: UserInfo
+* **updatedBy**: [UserInfo](#userinfo)
 * **watchlistItemId**: string
 * **watchlistItemType**: string
 

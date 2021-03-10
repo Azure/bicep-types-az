@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EnterpriseKnowledgeGraphProperties
-* **sku**: Sku
-* **tags**: ResourceTags
+* **properties**: [EnterpriseKnowledgeGraphProperties](#enterpriseknowledgegraphproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.EnterpriseKnowledgeGraph/services' (ReadOnly, DeployTimeConstant)
 
 ## EnterpriseKnowledgeGraphProperties

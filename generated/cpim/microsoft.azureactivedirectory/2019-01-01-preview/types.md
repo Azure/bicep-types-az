@@ -7,15 +7,15 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateTenantRequestBodyProperties (Required)
-* **sku**: B2CResourceSKU (Required)
-* **tags**: CreateTenantRequestBodyTags
+* **properties**: [CreateTenantRequestBodyProperties](#createtenantrequestbodyproperties) (Required)
+* **sku**: [B2CResourceSKU](#b2cresourcesku) (Required)
+* **tags**: [CreateTenantRequestBodyTags](#createtenantrequestbodytags)
 * **type**: 'Microsoft.AzureActiveDirectory/b2cDirectories' (ReadOnly, DeployTimeConstant)
 
 ## CreateTenantRequestBodyProperties
 ### Properties
-* **billingConfig**: B2CTenantResourcePropertiesBillingConfig (ReadOnly)
-* **createTenantProperties**: CreateTenantProperties (WriteOnly)
+* **billingConfig**: [B2CTenantResourcePropertiesBillingConfig](#b2ctenantresourcepropertiesbillingconfig) (ReadOnly)
+* **createTenantProperties**: [CreateTenantProperties](#createtenantproperties) (WriteOnly)
 * **tenantId**: string (ReadOnly)
 
 ## B2CTenantResourcePropertiesBillingConfig

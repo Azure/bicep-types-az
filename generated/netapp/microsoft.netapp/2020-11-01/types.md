@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AccountProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: ResourceTags
+* **properties**: [AccountProperties](#accountproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/backupPolicies@2020-11-01
@@ -19,8 +19,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BackupPolicyProperties (Required)
-* **tags**: ResourceTags
+* **properties**: [BackupPolicyProperties](#backuppolicyproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.NetApp/netAppAccounts/backupPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2020-11-01
@@ -30,8 +30,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PoolProperties (Required)
-* **tags**: ResourceTags
+* **properties**: [PoolProperties](#poolproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-11-01
@@ -41,8 +41,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VolumeProperties (Required)
-* **tags**: ResourceTags
+* **properties**: [VolumeProperties](#volumeproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups@2020-11-01
@@ -52,7 +52,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BackupProperties (Required)
+* **properties**: [BackupProperties](#backupproperties) (Required)
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2020-11-01
@@ -62,7 +62,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SnapshotProperties
+* **properties**: [SnapshotProperties](#snapshotproperties)
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/snapshotPolicies@2020-11-01
@@ -72,14 +72,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SnapshotPolicyProperties (Required)
-* **tags**: ResourceTags
+* **properties**: [SnapshotPolicyProperties](#snapshotpolicyproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.NetApp/netAppAccounts/snapshotPolicies' (ReadOnly, DeployTimeConstant)
 
 ## AccountProperties
 ### Properties
-* **activeDirectories**: ActiveDirectory[]
-* **encryption**: AccountEncryption
+* **activeDirectories**: [ActiveDirectory](#activedirectory)[]
+* **encryption**: [AccountEncryption](#accountencryption)
 * **provisioningState**: string (ReadOnly)
 
 ## ActiveDirectory
@@ -128,7 +128,7 @@
 * **monthlyBackupsToKeep**: int
 * **name**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
-* **volumeBackups**: VolumeBackups[]
+* **volumeBackups**: [VolumeBackups](#volumebackups)[]
 * **volumesAssigned**: int
 * **weeklyBackupsToKeep**: int
 * **yearlyBackupsToKeep**: int
@@ -164,13 +164,13 @@
 * **backupId**: string
 * **baremetalTenantId**: string (ReadOnly)
 * **creationToken**: string (Required)
-* **dataProtection**: VolumePropertiesDataProtection
+* **dataProtection**: [VolumePropertiesDataProtection](#volumepropertiesdataprotection)
 * **encryptionKeySource**: string
-* **exportPolicy**: VolumePropertiesExportPolicy
+* **exportPolicy**: [VolumePropertiesExportPolicy](#volumepropertiesexportpolicy)
 * **fileSystemId**: string (ReadOnly)
 * **isRestoring**: bool
 * **kerberosEnabled**: bool
-* **mountTargets**: MountTargetProperties[] (ReadOnly)
+* **mountTargets**: [MountTargetProperties](#mounttargetproperties)[] (ReadOnly)
 * **protocolTypes**: string[]
 * **provisioningState**: string (ReadOnly)
 * **securityStyle**: 'ntfs' | 'unix'
@@ -186,9 +186,9 @@
 
 ## VolumePropertiesDataProtection
 ### Properties
-* **backup**: VolumeBackupProperties
-* **replication**: ReplicationObject
-* **snapshot**: VolumeSnapshotProperties
+* **backup**: [VolumeBackupProperties](#volumebackupproperties)
+* **replication**: [ReplicationObject](#replicationobject)
+* **snapshot**: [VolumeSnapshotProperties](#volumesnapshotproperties)
 
 ## VolumeBackupProperties
 ### Properties
@@ -211,7 +211,7 @@
 
 ## VolumePropertiesExportPolicy
 ### Properties
-* **rules**: ExportPolicyRule[]
+* **rules**: [ExportPolicyRule](#exportpolicyrule)[]
 
 ## ExportPolicyRule
 ### Properties
@@ -260,13 +260,13 @@
 
 ## SnapshotPolicyProperties
 ### Properties
-* **dailySchedule**: DailySchedule
+* **dailySchedule**: [DailySchedule](#dailyschedule)
 * **enabled**: bool
-* **hourlySchedule**: HourlySchedule
-* **monthlySchedule**: MonthlySchedule
+* **hourlySchedule**: [HourlySchedule](#hourlyschedule)
+* **monthlySchedule**: [MonthlySchedule](#monthlyschedule)
 * **name**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
-* **weeklySchedule**: WeeklySchedule
+* **weeklySchedule**: [WeeklySchedule](#weeklyschedule)
 
 ## DailySchedule
 ### Properties

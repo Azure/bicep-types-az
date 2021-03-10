@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AzureADMetricsPropertiesFormat
-* **tags**: TrackedResourceTags
+* **properties**: [AzureADMetricsPropertiesFormat](#azureadmetricspropertiesformat)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'microsoft.aadiam/azureADMetrics' (ReadOnly, DeployTimeConstant)
 
 ## AzureADMetricsPropertiesFormat

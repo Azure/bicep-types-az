@@ -15,7 +15,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationAssignmentProperties
+* **properties**: [ConfigurationAssignmentProperties](#configurationassignmentproperties)
 * **type**: 'Microsoft.Maintenance/configurationAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Maintenance/maintenanceConfigurations@2020-07-01-preview
@@ -25,8 +25,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MaintenanceConfigurationProperties
-* **tags**: MaintenanceConfigurationTags
+* **properties**: [MaintenanceConfigurationProperties](#maintenanceconfigurationproperties)
+* **tags**: [MaintenanceConfigurationTags](#maintenanceconfigurationtags)
 * **type**: 'Microsoft.Maintenance/maintenanceConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## ConfigurationAssignmentProperties
@@ -36,9 +36,9 @@
 
 ## MaintenanceConfigurationProperties
 ### Properties
-* **extensionProperties**: MaintenanceConfigurationPropertiesExtensionProperties
+* **extensionProperties**: [MaintenanceConfigurationPropertiesExtensionProperties](#maintenanceconfigurationpropertiesextensionproperties)
 * **maintenanceScope**: 'All' | 'Extension' | 'Host' | 'InGuestPatch' | 'InResource' | 'OSImage' | 'Resource' | 'SQLDB' | 'SQLManagedInstance'
-* **maintenanceWindow**: MaintenanceWindow
+* **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow)
 * **namespace**: string
 * **visibility**: 'Custom' | 'Public'
 

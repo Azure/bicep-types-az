@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: 'global' (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RegistrationParameterProperties (Required)
-* **tags**: TrackedResourceTags (ReadOnly)
+* **properties**: [RegistrationParameterProperties](#registrationparameterproperties) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly)
 * **type**: 'Microsoft.AzureStack/registrations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.AzureStack/registrations/customerSubscriptions@2017-06-01
@@ -19,7 +19,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CustomerSubscriptionProperties
+* **properties**: [CustomerSubscriptionProperties](#customersubscriptionproperties)
 * **type**: 'Microsoft.AzureStack/registrations/customerSubscriptions' (ReadOnly, DeployTimeConstant)
 
 ## RegistrationParameterProperties

@@ -7,26 +7,26 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ActivityLogAlert
-* **tags**: ResourceTags
+* **properties**: [ActivityLogAlert](#activitylogalert)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'microsoft.insights/activityLogAlerts' (ReadOnly, DeployTimeConstant)
 
 ## ActivityLogAlert
 ### Properties
-* **actions**: ActivityLogAlertActionList (Required)
-* **condition**: ActivityLogAlertAllOfCondition (Required)
+* **actions**: [ActivityLogAlertActionList](#activitylogalertactionlist) (Required)
+* **condition**: [ActivityLogAlertAllOfCondition](#activitylogalertallofcondition) (Required)
 * **description**: string
 * **enabled**: bool
 * **scopes**: string[] (Required)
 
 ## ActivityLogAlertActionList
 ### Properties
-* **actionGroups**: ActivityLogAlertActionGroup[]
+* **actionGroups**: [ActivityLogAlertActionGroup](#activitylogalertactiongroup)[]
 
 ## ActivityLogAlertActionGroup
 ### Properties
 * **actionGroupId**: string (Required)
-* **webhookProperties**: ActivityLogAlertActionGroupWebhookProperties
+* **webhookProperties**: [ActivityLogAlertActionGroupWebhookProperties](#activitylogalertactiongroupwebhookproperties)
 
 ## ActivityLogAlertActionGroupWebhookProperties
 ### Properties
@@ -35,7 +35,7 @@
 
 ## ActivityLogAlertAllOfCondition
 ### Properties
-* **allOf**: ActivityLogAlertLeafCondition[] (Required)
+* **allOf**: [ActivityLogAlertLeafCondition](#activitylogalertleafcondition)[] (Required)
 
 ## ActivityLogAlertLeafCondition
 ### Properties

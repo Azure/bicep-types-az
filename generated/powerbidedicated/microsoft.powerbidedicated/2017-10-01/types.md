@@ -7,14 +7,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DedicatedCapacityProperties
-* **sku**: ResourceSku (Required)
-* **tags**: ResourceTags
+* **properties**: [DedicatedCapacityProperties](#dedicatedcapacityproperties)
+* **sku**: [ResourceSku](#resourcesku) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.PowerBIDedicated/capacities' (ReadOnly, DeployTimeConstant)
 
 ## DedicatedCapacityProperties
 ### Properties
-* **administration**: DedicatedCapacityAdministrators
+* **administration**: [DedicatedCapacityAdministrators](#dedicatedcapacityadministrators)
 * **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly)
 * **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly)
 

@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProfileProperties
-* **tags**: ResourceTags
+* **properties**: [ProfileProperties](#profileproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/NetworkExperimentProfiles' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/NetworkExperimentProfiles/Experiments@2019-11-01
@@ -19,8 +19,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ExperimentProperties
-* **tags**: ResourceTags
+* **properties**: [ExperimentProperties](#experimentproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/NetworkExperimentProfiles/Experiments' (ReadOnly, DeployTimeConstant)
 
 ## ProfileProperties
@@ -37,8 +37,8 @@
 ### Properties
 * **description**: string
 * **enabledState**: 'Disabled' | 'Enabled'
-* **endpointA**: Endpoint
-* **endpointB**: Endpoint
+* **endpointA**: [Endpoint](#endpoint)
+* **endpointB**: [Endpoint](#endpoint)
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly)
 * **scriptFileUri**: string (ReadOnly)
 * **status**: string (ReadOnly)

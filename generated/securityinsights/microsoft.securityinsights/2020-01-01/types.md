@@ -13,17 +13,17 @@
 ### FusionAlertRule
 #### Properties
 * **kind**: 'Fusion' (Required)
-* **properties**: FusionAlertRuleProperties
+* **properties**: [FusionAlertRuleProperties](#fusionalertruleproperties)
 
 ### MicrosoftSecurityIncidentCreationAlertRule
 #### Properties
 * **kind**: 'MicrosoftSecurityIncidentCreation' (Required)
-* **properties**: MicrosoftSecurityIncidentCreationAlertRuleProperties
+* **properties**: [MicrosoftSecurityIncidentCreationAlertRuleProperties](#microsoftsecurityincidentcreationalertruleproperties)
 
 ### ScheduledAlertRule
 #### Properties
 * **kind**: 'Scheduled' (Required)
-* **properties**: ScheduledAlertRuleProperties
+* **properties**: [ScheduledAlertRuleProperties](#scheduledalertruleproperties)
 
 
 ## Resource Microsoft.SecurityInsights/alertRules/actions@2020-01-01
@@ -33,7 +33,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ActionRequestProperties
+* **properties**: [ActionRequestProperties](#actionrequestproperties)
 * **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityInsights/bookmarks@2020-01-01
@@ -43,7 +43,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BookmarkProperties
+* **properties**: [BookmarkProperties](#bookmarkproperties)
 * **type**: 'Microsoft.SecurityInsights/bookmarks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityInsights/dataConnectors@2020-01-01
@@ -59,42 +59,42 @@
 ### AwsCloudTrailDataConnector
 #### Properties
 * **kind**: 'AmazonWebServicesCloudTrail' (Required)
-* **properties**: AwsCloudTrailDataConnectorProperties
+* **properties**: [AwsCloudTrailDataConnectorProperties](#awscloudtraildataconnectorproperties)
 
 ### AADDataConnector
 #### Properties
 * **kind**: 'AzureActiveDirectory' (Required)
-* **properties**: AADDataConnectorProperties
+* **properties**: [AADDataConnectorProperties](#aaddataconnectorproperties)
 
 ### AatpDataConnector
 #### Properties
 * **kind**: 'AzureAdvancedThreatProtection' (Required)
-* **properties**: AatpDataConnectorProperties
+* **properties**: [AatpDataConnectorProperties](#aatpdataconnectorproperties)
 
 ### ASCDataConnector
 #### Properties
 * **kind**: 'AzureSecurityCenter' (Required)
-* **properties**: ASCDataConnectorProperties
+* **properties**: [ASCDataConnectorProperties](#ascdataconnectorproperties)
 
 ### McasDataConnector
 #### Properties
 * **kind**: 'MicrosoftCloudAppSecurity' (Required)
-* **properties**: McasDataConnectorProperties
+* **properties**: [McasDataConnectorProperties](#mcasdataconnectorproperties)
 
 ### MdatpDataConnector
 #### Properties
 * **kind**: 'MicrosoftDefenderAdvancedThreatProtection' (Required)
-* **properties**: MdatpDataConnectorProperties
+* **properties**: [MdatpDataConnectorProperties](#mdatpdataconnectorproperties)
 
 ### OfficeDataConnector
 #### Properties
 * **kind**: 'Office365' (Required)
-* **properties**: OfficeDataConnectorProperties
+* **properties**: [OfficeDataConnectorProperties](#officedataconnectorproperties)
 
 ### TIDataConnector
 #### Properties
 * **kind**: 'ThreatIntelligence' (Required)
-* **properties**: TIDataConnectorProperties
+* **properties**: [TIDataConnectorProperties](#tidataconnectorproperties)
 
 
 ## Resource Microsoft.SecurityInsights/incidents@2020-01-01
@@ -104,7 +104,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IncidentProperties
+* **properties**: [IncidentProperties](#incidentproperties)
 * **type**: 'Microsoft.SecurityInsights/incidents' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityInsights/incidents/comments@2020-01-01
@@ -113,13 +113,13 @@
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IncidentCommentProperties
+* **properties**: [IncidentCommentProperties](#incidentcommentproperties)
 * **type**: 'Microsoft.SecurityInsights/incidents/comments' (ReadOnly, DeployTimeConstant)
 
 ## FusionAlertRule
 ### Properties
 * **kind**: 'Fusion' (Required)
-* **properties**: FusionAlertRuleProperties
+* **properties**: [FusionAlertRuleProperties](#fusionalertruleproperties)
 
 ## FusionAlertRuleProperties
 ### Properties
@@ -134,7 +134,7 @@
 ## MicrosoftSecurityIncidentCreationAlertRule
 ### Properties
 * **kind**: 'MicrosoftSecurityIncidentCreation' (Required)
-* **properties**: MicrosoftSecurityIncidentCreationAlertRuleProperties
+* **properties**: [MicrosoftSecurityIncidentCreationAlertRuleProperties](#microsoftsecurityincidentcreationalertruleproperties)
 
 ## MicrosoftSecurityIncidentCreationAlertRuleProperties
 ### Properties
@@ -151,7 +151,7 @@
 ## ScheduledAlertRule
 ### Properties
 * **kind**: 'Scheduled' (Required)
-* **properties**: ScheduledAlertRuleProperties
+* **properties**: [ScheduledAlertRuleProperties](#scheduledalertruleproperties)
 
 ## ScheduledAlertRuleProperties
 ### Properties
@@ -179,10 +179,10 @@
 ## BookmarkProperties
 ### Properties
 * **created**: string
-* **createdBy**: UserInfo
+* **createdBy**: [UserInfo](#userinfo)
 * **displayName**: string (Required)
 * **eventTime**: string
-* **incidentInfo**: IncidentInfo
+* **incidentInfo**: [IncidentInfo](#incidentinfo)
 * **labels**: string[]
 * **notes**: string
 * **query**: string (Required)
@@ -190,7 +190,7 @@
 * **queryResult**: string
 * **queryStartTime**: string
 * **updated**: string
-* **updatedBy**: UserInfo
+* **updatedBy**: [UserInfo](#userinfo)
 
 ## UserInfo
 ### Properties
@@ -208,16 +208,16 @@
 ## AwsCloudTrailDataConnector
 ### Properties
 * **kind**: 'AmazonWebServicesCloudTrail' (Required)
-* **properties**: AwsCloudTrailDataConnectorProperties
+* **properties**: [AwsCloudTrailDataConnectorProperties](#awscloudtraildataconnectorproperties)
 
 ## AwsCloudTrailDataConnectorProperties
 ### Properties
 * **awsRoleArn**: string
-* **dataTypes**: AwsCloudTrailDataConnectorDataTypes
+* **dataTypes**: [AwsCloudTrailDataConnectorDataTypes](#awscloudtraildataconnectordatatypes)
 
 ## AwsCloudTrailDataConnectorDataTypes
 ### Properties
-* **logs**: AwsCloudTrailDataConnectorDataTypesLogs
+* **logs**: [AwsCloudTrailDataConnectorDataTypesLogs](#awscloudtraildataconnectordatatypeslogs)
 
 ## AwsCloudTrailDataConnectorDataTypesLogs
 ### Properties
@@ -226,16 +226,16 @@
 ## AADDataConnector
 ### Properties
 * **kind**: 'AzureActiveDirectory' (Required)
-* **properties**: AADDataConnectorProperties
+* **properties**: [AADDataConnectorProperties](#aaddataconnectorproperties)
 
 ## AADDataConnectorProperties
 ### Properties
-* **dataTypes**: AlertsDataTypeOfDataConnector
+* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector)
 * **tenantId**: string
 
 ## AlertsDataTypeOfDataConnector
 ### Properties
-* **alerts**: DataConnectorDataTypeCommon
+* **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon)
 
 ## DataConnectorDataTypeCommon
 ### Properties
@@ -244,63 +244,63 @@
 ## AatpDataConnector
 ### Properties
 * **kind**: 'AzureAdvancedThreatProtection' (Required)
-* **properties**: AatpDataConnectorProperties
+* **properties**: [AatpDataConnectorProperties](#aatpdataconnectorproperties)
 
 ## AatpDataConnectorProperties
 ### Properties
-* **dataTypes**: AlertsDataTypeOfDataConnector
+* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector)
 * **tenantId**: string
 
 ## ASCDataConnector
 ### Properties
 * **kind**: 'AzureSecurityCenter' (Required)
-* **properties**: ASCDataConnectorProperties
+* **properties**: [ASCDataConnectorProperties](#ascdataconnectorproperties)
 
 ## ASCDataConnectorProperties
 ### Properties
-* **dataTypes**: AlertsDataTypeOfDataConnector
+* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector)
 * **subscriptionId**: string
 
 ## McasDataConnector
 ### Properties
 * **kind**: 'MicrosoftCloudAppSecurity' (Required)
-* **properties**: McasDataConnectorProperties
+* **properties**: [McasDataConnectorProperties](#mcasdataconnectorproperties)
 
 ## McasDataConnectorProperties
 ### Properties
-* **dataTypes**: McasDataConnectorDataTypes
+* **dataTypes**: [McasDataConnectorDataTypes](#mcasdataconnectordatatypes)
 * **tenantId**: string
 
 ## McasDataConnectorDataTypes
 ### Properties
-* **alerts**: DataConnectorDataTypeCommon
-* **discoveryLogs**: DataConnectorDataTypeCommon
+* **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon)
+* **discoveryLogs**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon)
 
 ## MdatpDataConnector
 ### Properties
 * **kind**: 'MicrosoftDefenderAdvancedThreatProtection' (Required)
-* **properties**: MdatpDataConnectorProperties
+* **properties**: [MdatpDataConnectorProperties](#mdatpdataconnectorproperties)
 
 ## MdatpDataConnectorProperties
 ### Properties
-* **dataTypes**: AlertsDataTypeOfDataConnector
+* **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector)
 * **tenantId**: string
 
 ## OfficeDataConnector
 ### Properties
 * **kind**: 'Office365' (Required)
-* **properties**: OfficeDataConnectorProperties
+* **properties**: [OfficeDataConnectorProperties](#officedataconnectorproperties)
 
 ## OfficeDataConnectorProperties
 ### Properties
-* **dataTypes**: OfficeDataConnectorDataTypes
+* **dataTypes**: [OfficeDataConnectorDataTypes](#officedataconnectordatatypes)
 * **tenantId**: string
 
 ## OfficeDataConnectorDataTypes
 ### Properties
-* **exchange**: OfficeDataConnectorDataTypesExchange
-* **sharePoint**: OfficeDataConnectorDataTypesSharePoint
-* **teams**: OfficeDataConnectorDataTypesTeams
+* **exchange**: [OfficeDataConnectorDataTypesExchange](#officedataconnectordatatypesexchange)
+* **sharePoint**: [OfficeDataConnectorDataTypesSharePoint](#officedataconnectordatatypessharepoint)
+* **teams**: [OfficeDataConnectorDataTypesTeams](#officedataconnectordatatypesteams)
 
 ## OfficeDataConnectorDataTypesExchange
 ### Properties
@@ -317,16 +317,16 @@
 ## TIDataConnector
 ### Properties
 * **kind**: 'ThreatIntelligence' (Required)
-* **properties**: TIDataConnectorProperties
+* **properties**: [TIDataConnectorProperties](#tidataconnectorproperties)
 
 ## TIDataConnectorProperties
 ### Properties
-* **dataTypes**: TIDataConnectorDataTypes
+* **dataTypes**: [TIDataConnectorDataTypes](#tidataconnectordatatypes)
 * **tenantId**: string
 
 ## TIDataConnectorDataTypes
 ### Properties
-* **indicators**: TIDataConnectorDataTypesIndicators
+* **indicators**: [TIDataConnectorDataTypesIndicators](#tidataconnectordatatypesindicators)
 
 ## TIDataConnectorDataTypesIndicators
 ### Properties
@@ -334,7 +334,7 @@
 
 ## IncidentProperties
 ### Properties
-* **additionalData**: IncidentAdditionalData (ReadOnly)
+* **additionalData**: [IncidentAdditionalData](#incidentadditionaldata) (ReadOnly)
 * **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined'
 * **classificationComment**: string
 * **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected'
@@ -343,10 +343,10 @@
 * **firstActivityTimeUtc**: string
 * **incidentNumber**: int (ReadOnly)
 * **incidentUrl**: string (ReadOnly)
-* **labels**: IncidentLabel[]
+* **labels**: [IncidentLabel](#incidentlabel)[]
 * **lastActivityTimeUtc**: string
 * **lastModifiedTimeUtc**: string (ReadOnly)
-* **owner**: IncidentOwnerInfo
+* **owner**: [IncidentOwnerInfo](#incidentownerinfo)
 * **relatedAnalyticRuleIds**: string[] (ReadOnly)
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (Required)
 * **status**: 'Active' | 'Closed' | 'New' (Required)
@@ -374,7 +374,7 @@
 
 ## IncidentCommentProperties
 ### Properties
-* **author**: ClientInfo (ReadOnly)
+* **author**: [ClientInfo](#clientinfo) (ReadOnly)
 * **createdTimeUtc**: string (ReadOnly)
 * **message**: string (Required)
 

@@ -8,9 +8,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IotHubProperties
-* **sku**: IotHubSkuInfo (Required)
-* **tags**: ResourceTags
+* **properties**: [IotHubProperties](#iothubproperties)
+* **sku**: [IotHubSkuInfo](#iothubskuinfo) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Devices/IotHubs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Devices/IotHubs/certificates@2020-04-01
@@ -21,7 +21,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CertificateProperties (ReadOnly)
+* **properties**: [CertificateProperties](#certificateproperties) (ReadOnly)
 * **type**: 'Microsoft.Devices/IotHubs/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups@2020-04-01
@@ -31,7 +31,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EventHubConsumerGroupInfoProperties (ReadOnly)
+* **properties**: [EventHubConsumerGroupInfoProperties](#eventhubconsumergroupinfoproperties) (ReadOnly)
 * **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Devices/iotHubs/privateEndpointConnections@2020-04-01
@@ -40,28 +40,28 @@
 * **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties (Required)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required)
 * **type**: 'Microsoft.Devices/iotHubs/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## IotHubProperties
 ### Properties
-* **authorizationPolicies**: SharedAccessSignatureAuthorizationRule[]
-* **cloudToDevice**: CloudToDeviceProperties
+* **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[]
+* **cloudToDevice**: [CloudToDeviceProperties](#cloudtodeviceproperties)
 * **comments**: string
 * **enableFileUploadNotifications**: bool
-* **eventHubEndpoints**: IotHubPropertiesEventHubEndpoints
+* **eventHubEndpoints**: [IotHubPropertiesEventHubEndpoints](#iothubpropertieseventhubendpoints)
 * **features**: 'DeviceManagement' | 'None'
 * **hostName**: string (ReadOnly)
-* **ipFilterRules**: IpFilterRule[]
-* **locations**: IotHubLocationDescription[] (ReadOnly)
-* **messagingEndpoints**: IotHubPropertiesMessagingEndpoints
+* **ipFilterRules**: [IpFilterRule](#ipfilterrule)[]
+* **locations**: [IotHubLocationDescription](#iothublocationdescription)[] (ReadOnly)
+* **messagingEndpoints**: [IotHubPropertiesMessagingEndpoints](#iothubpropertiesmessagingendpoints)
 * **minTlsVersion**: string
-* **privateEndpointConnections**: PrivateEndpointConnection[]
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]
 * **provisioningState**: string (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
-* **routing**: RoutingProperties
+* **routing**: [RoutingProperties](#routingproperties)
 * **state**: string (ReadOnly)
-* **storageEndpoints**: IotHubPropertiesStorageEndpoints
+* **storageEndpoints**: [IotHubPropertiesStorageEndpoints](#iothubpropertiesstorageendpoints)
 
 ## SharedAccessSignatureAuthorizationRule
 ### Properties
@@ -73,7 +73,7 @@
 ## CloudToDeviceProperties
 ### Properties
 * **defaultTtlAsIso8601**: string
-* **feedback**: FeedbackProperties
+* **feedback**: [FeedbackProperties](#feedbackproperties)
 * **maxDeliveryCount**: int
 
 ## FeedbackProperties
@@ -85,7 +85,7 @@
 ## IotHubPropertiesEventHubEndpoints
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: EventHubProperties
+* **Additional Properties Type**: [EventHubProperties](#eventhubproperties)
 
 ## EventHubProperties
 ### Properties
@@ -109,7 +109,7 @@
 ## IotHubPropertiesMessagingEndpoints
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: MessagingEndpointProperties
+* **Additional Properties Type**: [MessagingEndpointProperties](#messagingendpointproperties)
 
 ## MessagingEndpointProperties
 ### Properties
@@ -121,13 +121,13 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties (Required)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required)
 
 ## PrivateEndpoint
 ### Properties
@@ -141,17 +141,17 @@
 
 ## RoutingProperties
 ### Properties
-* **endpoints**: RoutingEndpoints
-* **enrichments**: EnrichmentProperties[]
-* **fallbackRoute**: FallbackRouteProperties
-* **routes**: RouteProperties[]
+* **endpoints**: [RoutingEndpoints](#routingendpoints)
+* **enrichments**: [EnrichmentProperties](#enrichmentproperties)[]
+* **fallbackRoute**: [FallbackRouteProperties](#fallbackrouteproperties)
+* **routes**: [RouteProperties](#routeproperties)[]
 
 ## RoutingEndpoints
 ### Properties
-* **eventHubs**: RoutingEventHubProperties[]
-* **serviceBusQueues**: RoutingServiceBusQueueEndpointProperties[]
-* **serviceBusTopics**: RoutingServiceBusTopicEndpointProperties[]
-* **storageContainers**: RoutingStorageContainerProperties[]
+* **eventHubs**: [RoutingEventHubProperties](#routingeventhubproperties)[]
+* **serviceBusQueues**: [RoutingServiceBusQueueEndpointProperties](#routingservicebusqueueendpointproperties)[]
+* **serviceBusTopics**: [RoutingServiceBusTopicEndpointProperties](#routingservicebustopicendpointproperties)[]
+* **storageContainers**: [RoutingStorageContainerProperties](#routingstoragecontainerproperties)[]
 
 ## RoutingEventHubProperties
 ### Properties
@@ -226,7 +226,7 @@
 ## IotHubPropertiesStorageEndpoints
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: StorageEndpointProperties
+* **Additional Properties Type**: [StorageEndpointProperties](#storageendpointproperties)
 
 ## StorageEndpointProperties
 ### Properties

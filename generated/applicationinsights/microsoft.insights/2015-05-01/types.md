@@ -8,8 +8,8 @@
 * **kind**: string (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationInsightsComponentProperties
-* **tags**: ComponentsResourceTags
+* **properties**: [ApplicationInsightsComponentProperties](#applicationinsightscomponentproperties)
+* **tags**: [ComponentsResourceTags](#componentsresourcetags)
 * **type**: 'Microsoft.Insights/components' (ReadOnly, DeployTimeConstant)
 
 ## Resource microsoft.insights/components/analyticsItems@2015-05-01
@@ -21,7 +21,7 @@
 * **Id**: string
 * **name**: string (Required, DeployTimeConstant)
 * **Name**: string
-* **Properties**: ApplicationInsightsComponentAnalyticsItemProperties
+* **Properties**: [ApplicationInsightsComponentAnalyticsItemProperties](#applicationinsightscomponentanalyticsitemproperties)
 * **Scope**: 'shared' | 'user'
 * **TimeCreated**: string (ReadOnly)
 * **TimeModified**: string (ReadOnly)
@@ -87,7 +87,7 @@
 * **Id**: string
 * **name**: string (Required, DeployTimeConstant)
 * **Name**: string
-* **Properties**: ApplicationInsightsComponentAnalyticsItemProperties
+* **Properties**: [ApplicationInsightsComponentAnalyticsItemProperties](#applicationinsightscomponentanalyticsitemproperties)
 * **Scope**: 'shared' | 'user'
 * **TimeCreated**: string (ReadOnly)
 * **TimeModified**: string (ReadOnly)
@@ -103,8 +103,8 @@
 * **kind**: 'shared' | 'user'
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MyWorkbookProperties
-* **tags**: MyWorkbookResourceTags
+* **properties**: [MyWorkbookProperties](#myworkbookproperties)
+* **tags**: [MyWorkbookResourceTags](#myworkbookresourcetags)
 * **type**: 'Microsoft.Insights/myWorkbooks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Insights/webtests@2015-05-01
@@ -115,8 +115,8 @@
 * **kind**: 'multistep' | 'ping'
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WebTestProperties
-* **tags**: WebtestsResourceTags
+* **properties**: [WebTestProperties](#webtestproperties)
+* **tags**: [WebtestsResourceTags](#webtestsresourcetags)
 * **type**: 'Microsoft.Insights/webtests' (ReadOnly, DeployTimeConstant)
 
 ## Resource microsoft.insights/workbooks@2015-05-01
@@ -127,8 +127,8 @@
 * **kind**: 'shared' | 'user'
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkbookProperties
-* **tags**: WorkbookResourceTags
+* **properties**: [WorkbookProperties](#workbookproperties)
+* **tags**: [WorkbookResourceTags](#workbookresourcetags)
 * **type**: 'microsoft.insights/workbooks' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationInsightsComponentProperties
@@ -145,7 +145,7 @@
 * **ImmediatePurgeDataOn30Days**: bool
 * **IngestionMode**: 'ApplicationInsights' | 'ApplicationInsightsWithDiagnosticSettings' | 'LogAnalytics'
 * **InstrumentationKey**: string (ReadOnly)
-* **PrivateLinkScopedResources**: PrivateLinkScopedResource[] (ReadOnly)
+* **PrivateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **Request_Source**: 'rest'
 * **RetentionInDays**: int
@@ -184,12 +184,12 @@
 
 ## WebTestProperties
 ### Properties
-* **Configuration**: WebTestPropertiesConfiguration
+* **Configuration**: [WebTestPropertiesConfiguration](#webtestpropertiesconfiguration)
 * **Description**: string
 * **Enabled**: bool
 * **Frequency**: int
 * **Kind**: 'multistep' | 'ping' (Required)
-* **Locations**: WebTestGeolocation[] (Required)
+* **Locations**: [WebTestGeolocation](#webtestgeolocation)[] (Required)
 * **Name**: string (Required)
 * **provisioningState**: string (ReadOnly)
 * **RetryEnabled**: bool

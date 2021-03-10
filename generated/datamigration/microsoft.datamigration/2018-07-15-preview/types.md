@@ -9,9 +9,9 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DataMigrationServiceProperties
-* **sku**: ServiceSku
-* **tags**: TrackedResourceTags
+* **properties**: [DataMigrationServiceProperties](#datamigrationserviceproperties)
+* **sku**: [ServiceSku](#servicesku)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DataMigration/services' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataMigration/services/projects@2018-07-15-preview
@@ -21,8 +21,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProjectProperties
-* **tags**: TrackedResourceTags
+* **properties**: [ProjectProperties](#projectproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DataMigration/services/projects' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataMigration/services/projects/files@2018-07-15-preview
@@ -32,7 +32,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProjectFileProperties
+* **properties**: [ProjectFileProperties](#projectfileproperties)
 * **type**: 'Microsoft.DataMigration/services/projects/files' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataMigration/services/projects/tasks@2018-07-15-preview
@@ -42,7 +42,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProjectTaskProperties
+* **properties**: [ProjectTaskProperties](#projecttaskproperties)
 * **type**: 'Microsoft.DataMigration/services/projects/tasks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataMigration/services/serviceTasks@2018-07-15-preview
@@ -52,7 +52,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProjectTaskProperties
+* **properties**: [ProjectTaskProperties](#projecttaskproperties)
 * **type**: 'Microsoft.DataMigration/services/serviceTasks' (ReadOnly, DeployTimeConstant)
 
 ## DataMigrationServiceProperties
@@ -78,11 +78,11 @@
 ## ProjectProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
-* **databasesInfo**: DatabaseInfo[]
+* **databasesInfo**: [DatabaseInfo](#databaseinfo)[]
 * **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly)
-* **sourceConnectionInfo**: ConnectionInfo
+* **sourceConnectionInfo**: [ConnectionInfo](#connectioninfo)
 * **sourcePlatform**: 'MongoDb' | 'MySQL' | 'PostgreSql' | 'SQL' | 'Unknown' (Required)
-* **targetConnectionInfo**: ConnectionInfo
+* **targetConnectionInfo**: [ConnectionInfo](#connectioninfo)
 * **targetPlatform**: 'AzureDbForMySql' | 'AzureDbForPostgreSql' | 'MongoDb' | 'SQLDB' | 'SQLMI' | 'Unknown' (Required)
 
 ## DatabaseInfo
@@ -217,224 +217,224 @@
 * **Discriminator**: taskType
 
 ### Base Properties
-* **clientData**: ProjectTaskPropertiesClientData
-* **commands**: CommandProperties[] (ReadOnly)
-* **errors**: ODataError[] (ReadOnly)
+* **clientData**: [ProjectTaskPropertiesClientData](#projecttaskpropertiesclientdata)
+* **commands**: [CommandProperties](#commandproperties)[] (ReadOnly)
+* **errors**: [ODataError](#odataerror)[] (ReadOnly)
 * **state**: 'Canceled' | 'Failed' | 'FailedInputValidation' | 'Faulted' | 'Queued' | 'Running' | 'Succeeded' | 'Unknown' (ReadOnly)
 ### ConnectToMongoDbTaskProperties
 #### Properties
-* **input**: MongoDbConnectionInfo
-* **output**: MongoDbClusterInfo[] (ReadOnly)
+* **input**: [MongoDbConnectionInfo](#mongodbconnectioninfo)
+* **output**: [MongoDbClusterInfo](#mongodbclusterinfo)[] (ReadOnly)
 * **taskType**: 'Connect.MongoDb' (Required)
 
 ### ConnectToSourceMySqlTaskProperties
 #### Properties
-* **input**: ConnectToSourceMySqlTaskInput
-* **output**: ConnectToSourceNonSqlTaskOutput[] (ReadOnly)
+* **input**: [ConnectToSourceMySqlTaskInput](#connecttosourcemysqltaskinput)
+* **output**: [ConnectToSourceNonSqlTaskOutput](#connecttosourcenonsqltaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToSource.MySql' (Required)
 
 ### ConnectToSourceOracleSyncTaskProperties
 #### Properties
-* **input**: ConnectToSourceOracleSyncTaskInput
-* **output**: ConnectToSourceOracleSyncTaskOutput[] (ReadOnly)
+* **input**: [ConnectToSourceOracleSyncTaskInput](#connecttosourceoraclesynctaskinput)
+* **output**: [ConnectToSourceOracleSyncTaskOutput](#connecttosourceoraclesynctaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToSource.Oracle.Sync' (Required)
 
 ### ConnectToSourcePostgreSqlSyncTaskProperties
 #### Properties
-* **input**: ConnectToSourcePostgreSqlSyncTaskInput
-* **output**: ConnectToSourcePostgreSqlSyncTaskOutput[] (ReadOnly)
+* **input**: [ConnectToSourcePostgreSqlSyncTaskInput](#connecttosourcepostgresqlsynctaskinput)
+* **output**: [ConnectToSourcePostgreSqlSyncTaskOutput](#connecttosourcepostgresqlsynctaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToSource.PostgreSql.Sync' (Required)
 
 ### ConnectToSourceSqlServerTaskProperties
 #### Properties
-* **input**: ConnectToSourceSqlServerTaskInput
-* **output**: ConnectToSourceSqlServerTaskOutput[] (ReadOnly)
+* **input**: [ConnectToSourceSqlServerTaskInput](#connecttosourcesqlservertaskinput)
+* **output**: [ConnectToSourceSqlServerTaskOutput](#connecttosourcesqlservertaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToSource.SqlServer' (Required)
 
 ### ConnectToSourceSqlServerSyncTaskProperties
 #### Properties
-* **input**: ConnectToSourceSqlServerTaskInput
-* **output**: ConnectToSourceSqlServerTaskOutput[] (ReadOnly)
+* **input**: [ConnectToSourceSqlServerTaskInput](#connecttosourcesqlservertaskinput)
+* **output**: [ConnectToSourceSqlServerTaskOutput](#connecttosourcesqlservertaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToSource.SqlServer.Sync' (Required)
 
 ### ConnectToTargetAzureDbForMySqlTaskProperties
 #### Properties
-* **input**: ConnectToTargetAzureDbForMySqlTaskInput
-* **output**: ConnectToTargetAzureDbForMySqlTaskOutput[] (ReadOnly)
+* **input**: [ConnectToTargetAzureDbForMySqlTaskInput](#connecttotargetazuredbformysqltaskinput)
+* **output**: [ConnectToTargetAzureDbForMySqlTaskOutput](#connecttotargetazuredbformysqltaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToTarget.AzureDbForMySql' (Required)
 
 ### ConnectToTargetAzureDbForPostgreSqlSyncTaskProperties
 #### Properties
-* **input**: ConnectToTargetAzureDbForPostgreSqlSyncTaskInput
-* **output**: ConnectToTargetAzureDbForPostgreSqlSyncTaskOutput[] (ReadOnly)
+* **input**: [ConnectToTargetAzureDbForPostgreSqlSyncTaskInput](#connecttotargetazuredbforpostgresqlsynctaskinput)
+* **output**: [ConnectToTargetAzureDbForPostgreSqlSyncTaskOutput](#connecttotargetazuredbforpostgresqlsynctaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToTarget.AzureDbForPostgreSql.Sync' (Required)
 
 ### ConnectToTargetSqlMITaskProperties
 #### Properties
-* **input**: ConnectToTargetSqlMITaskInput
-* **output**: ConnectToTargetSqlMITaskOutput[] (ReadOnly)
+* **input**: [ConnectToTargetSqlMITaskInput](#connecttotargetsqlmitaskinput)
+* **output**: [ConnectToTargetSqlMITaskOutput](#connecttotargetsqlmitaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToTarget.AzureSqlDbMI' (Required)
 
 ### ConnectToTargetSqlMISyncTaskProperties
 #### Properties
-* **input**: ConnectToTargetSqlMISyncTaskInput
-* **output**: ConnectToTargetSqlMISyncTaskOutput[] (ReadOnly)
+* **input**: [ConnectToTargetSqlMISyncTaskInput](#connecttotargetsqlmisynctaskinput)
+* **output**: [ConnectToTargetSqlMISyncTaskOutput](#connecttotargetsqlmisynctaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToTarget.AzureSqlDbMI.Sync.LRS' (Required)
 
 ### ConnectToTargetOracleAzureDbForPostgreSqlSyncTaskProperties
 #### Properties
-* **input**: ConnectToTargetOracleAzureDbForPostgreSqlSyncTaskInput
-* **output**: ConnectToTargetOracleAzureDbForPostgreSqlSyncTaskOutput[] (ReadOnly)
+* **input**: [ConnectToTargetOracleAzureDbForPostgreSqlSyncTaskInput](#connecttotargetoracleazuredbforpostgresqlsynctaskinput)
+* **output**: [ConnectToTargetOracleAzureDbForPostgreSqlSyncTaskOutput](#connecttotargetoracleazuredbforpostgresqlsynctaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToTarget.Oracle.AzureDbForPostgreSql.Sync' (Required)
 
 ### ConnectToTargetSqlDbTaskProperties
 #### Properties
-* **input**: ConnectToTargetSqlDbTaskInput
-* **output**: ConnectToTargetSqlDbTaskOutput[] (ReadOnly)
+* **input**: [ConnectToTargetSqlDbTaskInput](#connecttotargetsqldbtaskinput)
+* **output**: [ConnectToTargetSqlDbTaskOutput](#connecttotargetsqldbtaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToTarget.SqlDb' (Required)
 
 ### ConnectToTargetSqlDbSyncTaskProperties
 #### Properties
-* **input**: ConnectToTargetSqlDbSyncTaskInput
-* **output**: ConnectToTargetSqlDbTaskOutput[] (ReadOnly)
+* **input**: [ConnectToTargetSqlDbSyncTaskInput](#connecttotargetsqldbsynctaskinput)
+* **output**: [ConnectToTargetSqlDbTaskOutput](#connecttotargetsqldbtaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToTarget.SqlDb.Sync' (Required)
 
 ### GetTdeCertificatesSqlTaskProperties
 #### Properties
-* **input**: GetTdeCertificatesSqlTaskInput
-* **output**: GetTdeCertificatesSqlTaskOutput[] (ReadOnly)
+* **input**: [GetTdeCertificatesSqlTaskInput](#gettdecertificatessqltaskinput)
+* **output**: [GetTdeCertificatesSqlTaskOutput](#gettdecertificatessqltaskoutput)[] (ReadOnly)
 * **taskType**: 'GetTDECertificates.Sql' (Required)
 
 ### GetUserTablesSqlSyncTaskProperties
 #### Properties
-* **input**: GetUserTablesSqlSyncTaskInput
-* **output**: GetUserTablesSqlSyncTaskOutput[] (ReadOnly)
+* **input**: [GetUserTablesSqlSyncTaskInput](#getusertablessqlsynctaskinput)
+* **output**: [GetUserTablesSqlSyncTaskOutput](#getusertablessqlsynctaskoutput)[] (ReadOnly)
 * **taskType**: 'GetUserTables.AzureSqlDb.Sync' (Required)
 
 ### GetUserTablesSqlTaskProperties
 #### Properties
-* **input**: GetUserTablesSqlTaskInput
-* **output**: GetUserTablesSqlTaskOutput[] (ReadOnly)
+* **input**: [GetUserTablesSqlTaskInput](#getusertablessqltaskinput)
+* **output**: [GetUserTablesSqlTaskOutput](#getusertablessqltaskoutput)[] (ReadOnly)
 * **taskType**: 'GetUserTables.Sql' (Required)
 
 ### GetUserTablesOracleTaskProperties
 #### Properties
-* **input**: GetUserTablesOracleTaskInput
-* **output**: GetUserTablesOracleTaskOutput[] (ReadOnly)
+* **input**: [GetUserTablesOracleTaskInput](#getusertablesoracletaskinput)
+* **output**: [GetUserTablesOracleTaskOutput](#getusertablesoracletaskoutput)[] (ReadOnly)
 * **taskType**: 'GetUserTablesOracle' (Required)
 
 ### GetUserTablesPostgreSqlTaskProperties
 #### Properties
-* **input**: GetUserTablesPostgreSqlTaskInput
-* **output**: GetUserTablesPostgreSqlTaskOutput[] (ReadOnly)
+* **input**: [GetUserTablesPostgreSqlTaskInput](#getusertablespostgresqltaskinput)
+* **output**: [GetUserTablesPostgreSqlTaskOutput](#getusertablespostgresqltaskoutput)[] (ReadOnly)
 * **taskType**: 'GetUserTablesPostgreSql' (Required)
 
 ### MigrateMongoDbTaskProperties
 #### Properties
-* **input**: MongoDbMigrationSettings
-* **output**: MongoDbProgress[] (ReadOnly)
+* **input**: [MongoDbMigrationSettings](#mongodbmigrationsettings)
+* **output**: [MongoDbProgress](#mongodbprogress)[] (ReadOnly)
 * **taskType**: 'Migrate.MongoDb' (Required)
 
 ### MigrateMySqlAzureDbForMySqlSyncTaskProperties
 #### Properties
-* **input**: MigrateMySqlAzureDbForMySqlSyncTaskInput
-* **output**: MigrateMySqlAzureDbForMySqlSyncTaskOutput[] (ReadOnly)
+* **input**: [MigrateMySqlAzureDbForMySqlSyncTaskInput](#migratemysqlazuredbformysqlsynctaskinput)
+* **output**: [MigrateMySqlAzureDbForMySqlSyncTaskOutput](#migratemysqlazuredbformysqlsynctaskoutput)[] (ReadOnly)
 * **taskType**: 'Migrate.MySql.AzureDbForMySql.Sync' (Required)
 
 ### MigrateOracleAzureDbForPostgreSqlSyncTaskProperties
 #### Properties
-* **input**: MigrateOracleAzureDbPostgreSqlSyncTaskInput
-* **output**: MigrateOracleAzureDbPostgreSqlSyncTaskOutput[] (ReadOnly)
+* **input**: [MigrateOracleAzureDbPostgreSqlSyncTaskInput](#migrateoracleazuredbpostgresqlsynctaskinput)
+* **output**: [MigrateOracleAzureDbPostgreSqlSyncTaskOutput](#migrateoracleazuredbpostgresqlsynctaskoutput)[] (ReadOnly)
 * **taskType**: 'Migrate.Oracle.AzureDbForPostgreSql.Sync' (Required)
 
 ### MigratePostgreSqlAzureDbForPostgreSqlSyncTaskProperties
 #### Properties
-* **input**: MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInput
-* **output**: MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutput[] (ReadOnly)
+* **input**: [MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInput](#migratepostgresqlazuredbforpostgresqlsynctaskinput)
+* **output**: [MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutput](#migratepostgresqlazuredbforpostgresqlsynctaskoutput)[] (ReadOnly)
 * **taskType**: 'Migrate.PostgreSql.AzureDbForPostgreSql.SyncV2' (Required)
 
 ### MigrateSqlServerSqlDbSyncTaskProperties
 #### Properties
-* **input**: MigrateSqlServerSqlDbSyncTaskInput
-* **output**: MigrateSqlServerSqlDbSyncTaskOutput[] (ReadOnly)
+* **input**: [MigrateSqlServerSqlDbSyncTaskInput](#migratesqlserversqldbsynctaskinput)
+* **output**: [MigrateSqlServerSqlDbSyncTaskOutput](#migratesqlserversqldbsynctaskoutput)[] (ReadOnly)
 * **taskType**: 'Migrate.SqlServer.AzureSqlDb.Sync' (Required)
 
 ### MigrateSqlServerSqlMITaskProperties
 #### Properties
-* **input**: MigrateSqlServerSqlMITaskInput
-* **output**: MigrateSqlServerSqlMITaskOutput[] (ReadOnly)
+* **input**: [MigrateSqlServerSqlMITaskInput](#migratesqlserversqlmitaskinput)
+* **output**: [MigrateSqlServerSqlMITaskOutput](#migratesqlserversqlmitaskoutput)[] (ReadOnly)
 * **taskType**: 'Migrate.SqlServer.AzureSqlDbMI' (Required)
 
 ### MigrateSqlServerSqlMISyncTaskProperties
 #### Properties
-* **input**: MigrateSqlServerSqlMISyncTaskInput
-* **output**: MigrateSqlServerSqlMISyncTaskOutput[] (ReadOnly)
+* **input**: [MigrateSqlServerSqlMISyncTaskInput](#migratesqlserversqlmisynctaskinput)
+* **output**: [MigrateSqlServerSqlMISyncTaskOutput](#migratesqlserversqlmisynctaskoutput)[] (ReadOnly)
 * **taskType**: 'Migrate.SqlServer.AzureSqlDbMI.Sync.LRS' (Required)
 
 ### MigrateSqlServerSqlDbTaskProperties
 #### Properties
-* **input**: MigrateSqlServerSqlDbTaskInput
-* **output**: MigrateSqlServerSqlDbTaskOutput[] (ReadOnly)
+* **input**: [MigrateSqlServerSqlDbTaskInput](#migratesqlserversqldbtaskinput)
+* **output**: [MigrateSqlServerSqlDbTaskOutput](#migratesqlserversqldbtaskoutput)[] (ReadOnly)
 * **taskType**: 'Migrate.SqlServer.SqlDb' (Required)
 
 ### MigrateSsisTaskProperties
 #### Properties
-* **input**: MigrateSsisTaskInput
-* **output**: MigrateSsisTaskOutput[] (ReadOnly)
+* **input**: [MigrateSsisTaskInput](#migratessistaskinput)
+* **output**: [MigrateSsisTaskOutput](#migratessistaskoutput)[] (ReadOnly)
 * **taskType**: 'Migrate.Ssis' (Required)
 
 ### MigrateSchemaSqlServerSqlDbTaskProperties
 #### Properties
-* **input**: MigrateSchemaSqlServerSqlDbTaskInput
-* **output**: MigrateSchemaSqlServerSqlDbTaskOutput[] (ReadOnly)
+* **input**: [MigrateSchemaSqlServerSqlDbTaskInput](#migrateschemasqlserversqldbtaskinput)
+* **output**: [MigrateSchemaSqlServerSqlDbTaskOutput](#migrateschemasqlserversqldbtaskoutput)[] (ReadOnly)
 * **taskType**: 'MigrateSchemaSqlServerSqlDb' (Required)
 
 ### CheckOCIDriverTaskProperties
 #### Properties
-* **input**: CheckOCIDriverTaskInput
-* **output**: CheckOCIDriverTaskOutput[] (ReadOnly)
+* **input**: [CheckOCIDriverTaskInput](#checkocidrivertaskinput)
+* **output**: [CheckOCIDriverTaskOutput](#checkocidrivertaskoutput)[] (ReadOnly)
 * **taskType**: 'Service.Check.OCI' (Required)
 
 ### InstallOCIDriverTaskProperties
 #### Properties
-* **input**: InstallOCIDriverTaskInput
-* **output**: InstallOCIDriverTaskOutput[] (ReadOnly)
+* **input**: [InstallOCIDriverTaskInput](#installocidrivertaskinput)
+* **output**: [InstallOCIDriverTaskOutput](#installocidrivertaskoutput)[] (ReadOnly)
 * **taskType**: 'Service.Install.OCI' (Required)
 
 ### UploadOCIDriverTaskProperties
 #### Properties
-* **input**: UploadOCIDriverTaskInput
-* **output**: UploadOCIDriverTaskOutput[] (ReadOnly)
+* **input**: [UploadOCIDriverTaskInput](#uploadocidrivertaskinput)
+* **output**: [UploadOCIDriverTaskOutput](#uploadocidrivertaskoutput)[] (ReadOnly)
 * **taskType**: 'Service.Upload.OCI' (Required)
 
 ### ValidateMongoDbTaskProperties
 #### Properties
-* **input**: MongoDbMigrationSettings
-* **output**: MongoDbMigrationProgress[] (ReadOnly)
+* **input**: [MongoDbMigrationSettings](#mongodbmigrationsettings)
+* **output**: [MongoDbMigrationProgress](#mongodbmigrationprogress)[] (ReadOnly)
 * **taskType**: 'Validate.MongoDb' (Required)
 
 ### ValidateOracleAzureDbForPostgreSqlSyncTaskProperties
 #### Properties
-* **input**: MigrateOracleAzureDbPostgreSqlSyncTaskInput
-* **output**: ValidateOracleAzureDbPostgreSqlSyncTaskOutput[] (ReadOnly)
+* **input**: [MigrateOracleAzureDbPostgreSqlSyncTaskInput](#migrateoracleazuredbpostgresqlsynctaskinput)
+* **output**: [ValidateOracleAzureDbPostgreSqlSyncTaskOutput](#validateoracleazuredbpostgresqlsynctaskoutput)[] (ReadOnly)
 * **taskType**: 'Validate.Oracle.AzureDbPostgreSql.Sync' (Required)
 
 ### ValidateMigrationInputSqlServerSqlMITaskProperties
 #### Properties
-* **input**: ValidateMigrationInputSqlServerSqlMITaskInput
-* **output**: ValidateMigrationInputSqlServerSqlMITaskOutput[] (ReadOnly)
+* **input**: [ValidateMigrationInputSqlServerSqlMITaskInput](#validatemigrationinputsqlserversqlmitaskinput)
+* **output**: [ValidateMigrationInputSqlServerSqlMITaskOutput](#validatemigrationinputsqlserversqlmitaskoutput)[] (ReadOnly)
 * **taskType**: 'ValidateMigrationInput.SqlServer.AzureSqlDbMI' (Required)
 
 ### ValidateMigrationInputSqlServerSqlMISyncTaskProperties
 #### Properties
-* **input**: ValidateMigrationInputSqlServerSqlMISyncTaskInput
-* **output**: ValidateMigrationInputSqlServerSqlMISyncTaskOutput[] (ReadOnly)
+* **input**: [ValidateMigrationInputSqlServerSqlMISyncTaskInput](#validatemigrationinputsqlserversqlmisynctaskinput)
+* **output**: [ValidateMigrationInputSqlServerSqlMISyncTaskOutput](#validatemigrationinputsqlserversqlmisynctaskoutput)[] (ReadOnly)
 * **taskType**: 'ValidateMigrationInput.SqlServer.AzureSqlDbMI.Sync.LRS' (Required)
 
 ### ValidateMigrationInputSqlServerSqlDbSyncTaskProperties
 #### Properties
-* **input**: ValidateSyncMigrationInputSqlServerTaskInput
-* **output**: ValidateSyncMigrationInputSqlServerTaskOutput[] (ReadOnly)
+* **input**: [ValidateSyncMigrationInputSqlServerTaskInput](#validatesyncmigrationinputsqlservertaskinput)
+* **output**: [ValidateSyncMigrationInputSqlServerTaskOutput](#validatesyncmigrationinputsqlservertaskoutput)[] (ReadOnly)
 * **taskType**: 'ValidateMigrationInput.SqlServer.SqlDb.Sync' (Required)
 
 
@@ -447,46 +447,46 @@
 * **Discriminator**: commandType
 
 ### Base Properties
-* **errors**: ODataError[] (ReadOnly)
+* **errors**: [ODataError](#odataerror)[] (ReadOnly)
 * **state**: 'Accepted' | 'Failed' | 'Running' | 'Succeeded' | 'Unknown' (ReadOnly)
 ### MongoDbCancelCommand
 #### Properties
 * **commandType**: 'cancel' (Required)
-* **input**: MongoDbCommandInput
+* **input**: [MongoDbCommandInput](#mongodbcommandinput)
 
 ### MongoDbFinishCommand
 #### Properties
 * **commandType**: 'finish' (Required)
-* **input**: MongoDbFinishCommandInput
+* **input**: [MongoDbFinishCommandInput](#mongodbfinishcommandinput)
 
 ### MigrateMISyncCompleteCommandProperties
 #### Properties
 * **commandType**: 'Migrate.SqlServer.AzureDbSqlMi.Complete' (Required)
-* **input**: MigrateMISyncCompleteCommandInput
-* **output**: MigrateMISyncCompleteCommandOutput (ReadOnly)
+* **input**: [MigrateMISyncCompleteCommandInput](#migratemisynccompletecommandinput)
+* **output**: [MigrateMISyncCompleteCommandOutput](#migratemisynccompletecommandoutput) (ReadOnly)
 
 ### MigrateSyncCompleteCommandProperties
 #### Properties
 * **commandType**: 'Migrate.Sync.Complete.Database' (Required)
-* **input**: MigrateSyncCompleteCommandInput
-* **output**: MigrateSyncCompleteCommandOutput (ReadOnly)
+* **input**: [MigrateSyncCompleteCommandInput](#migratesynccompletecommandinput)
+* **output**: [MigrateSyncCompleteCommandOutput](#migratesynccompletecommandoutput) (ReadOnly)
 
 ### MongoDbRestartCommand
 #### Properties
 * **commandType**: 'restart' (Required)
-* **input**: MongoDbCommandInput
+* **input**: [MongoDbCommandInput](#mongodbcommandinput)
 
 
 ## ODataError
 ### Properties
 * **code**: string
-* **details**: ODataError[]
+* **details**: [ODataError](#odataerror)[]
 * **message**: string
 
 ## MongoDbCancelCommand
 ### Properties
 * **commandType**: 'cancel' (Required)
-* **input**: MongoDbCommandInput
+* **input**: [MongoDbCommandInput](#mongodbcommandinput)
 
 ## MongoDbCommandInput
 ### Properties
@@ -495,7 +495,7 @@
 ## MongoDbFinishCommand
 ### Properties
 * **commandType**: 'finish' (Required)
-* **input**: MongoDbFinishCommandInput
+* **input**: [MongoDbFinishCommandInput](#mongodbfinishcommandinput)
 
 ## MongoDbFinishCommandInput
 ### Properties
@@ -505,8 +505,8 @@
 ## MigrateMISyncCompleteCommandProperties
 ### Properties
 * **commandType**: 'Migrate.SqlServer.AzureDbSqlMi.Complete' (Required)
-* **input**: MigrateMISyncCompleteCommandInput
-* **output**: MigrateMISyncCompleteCommandOutput (ReadOnly)
+* **input**: [MigrateMISyncCompleteCommandInput](#migratemisynccompletecommandinput)
+* **output**: [MigrateMISyncCompleteCommandOutput](#migratemisynccompletecommandoutput) (ReadOnly)
 
 ## MigrateMISyncCompleteCommandInput
 ### Properties
@@ -514,7 +514,7 @@
 
 ## MigrateMISyncCompleteCommandOutput
 ### Properties
-* **errors**: ReportableException[]
+* **errors**: [ReportableException](#reportableexception)[]
 
 ## ReportableException
 ### Properties
@@ -528,8 +528,8 @@
 ## MigrateSyncCompleteCommandProperties
 ### Properties
 * **commandType**: 'Migrate.Sync.Complete.Database' (Required)
-* **input**: MigrateSyncCompleteCommandInput
-* **output**: MigrateSyncCompleteCommandOutput (ReadOnly)
+* **input**: [MigrateSyncCompleteCommandInput](#migratesynccompletecommandinput)
+* **output**: [MigrateSyncCompleteCommandOutput](#migratesynccompletecommandoutput) (ReadOnly)
 
 ## MigrateSyncCompleteCommandInput
 ### Properties
@@ -538,23 +538,23 @@
 
 ## MigrateSyncCompleteCommandOutput
 ### Properties
-* **errors**: ReportableException[] (ReadOnly)
+* **errors**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **id**: string (ReadOnly)
 
 ## MongoDbRestartCommand
 ### Properties
 * **commandType**: 'restart' (Required)
-* **input**: MongoDbCommandInput
+* **input**: [MongoDbCommandInput](#mongodbcommandinput)
 
 ## ConnectToMongoDbTaskProperties
 ### Properties
-* **input**: MongoDbConnectionInfo
-* **output**: MongoDbClusterInfo[] (ReadOnly)
+* **input**: [MongoDbConnectionInfo](#mongodbconnectioninfo)
+* **output**: [MongoDbClusterInfo](#mongodbclusterinfo)[] (ReadOnly)
 * **taskType**: 'Connect.MongoDb' (Required)
 
 ## MongoDbClusterInfo
 ### Properties
-* **databases**: MongoDbDatabaseInfo[] (Required)
+* **databases**: [MongoDbDatabaseInfo](#mongodbdatabaseinfo)[] (Required)
 * **supportsSharding**: bool (Required)
 * **type**: 'BlobContainer' | 'CosmosDb' | 'MongoDb' (Required)
 * **version**: string (Required)
@@ -562,7 +562,7 @@
 ## MongoDbDatabaseInfo
 ### Properties
 * **averageDocumentSize**: int (Required)
-* **collections**: MongoDbCollectionInfo[] (Required)
+* **collections**: [MongoDbCollectionInfo](#mongodbcollectioninfo)[] (Required)
 * **dataSize**: int (Required)
 * **documentCount**: int (Required)
 * **name**: string (Required)
@@ -580,13 +580,13 @@
 * **isView**: bool (Required)
 * **name**: string (Required)
 * **qualifiedName**: string (Required)
-* **shardKey**: MongoDbShardKeyInfo
+* **shardKey**: [MongoDbShardKeyInfo](#mongodbshardkeyinfo)
 * **supportsSharding**: bool (Required)
 * **viewOf**: string
 
 ## MongoDbShardKeyInfo
 ### Properties
-* **fields**: MongoDbShardKeyField[] (Required)
+* **fields**: [MongoDbShardKeyField](#mongodbshardkeyfield)[] (Required)
 * **isUnique**: bool (Required)
 
 ## MongoDbShardKeyField
@@ -596,23 +596,23 @@
 
 ## ConnectToSourceMySqlTaskProperties
 ### Properties
-* **input**: ConnectToSourceMySqlTaskInput
-* **output**: ConnectToSourceNonSqlTaskOutput[] (ReadOnly)
+* **input**: [ConnectToSourceMySqlTaskInput](#connecttosourcemysqltaskinput)
+* **output**: [ConnectToSourceNonSqlTaskOutput](#connecttosourcenonsqltaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToSource.MySql' (Required)
 
 ## ConnectToSourceMySqlTaskInput
 ### Properties
 * **checkPermissionsGroup**: 'Default' | 'MigrationFromMySQLToAzureDBForMySQL' | 'MigrationFromSqlServerToAzureDB' | 'MigrationFromSqlServerToAzureMI'
-* **sourceConnectionInfo**: MySqlConnectionInfo (Required)
+* **sourceConnectionInfo**: [MySqlConnectionInfo](#mysqlconnectioninfo) (Required)
 * **targetPlatform**: 'AzureDbForMySQL' | 'SqlServer'
 
 ## ConnectToSourceNonSqlTaskOutput
 ### Properties
 * **databases**: string[] (ReadOnly)
 * **id**: string (ReadOnly)
-* **serverProperties**: ServerProperties (ReadOnly)
+* **serverProperties**: [ServerProperties](#serverproperties) (ReadOnly)
 * **sourceServerBrandVersion**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## ServerProperties
 ### Properties
@@ -625,30 +625,30 @@
 
 ## ConnectToSourceOracleSyncTaskProperties
 ### Properties
-* **input**: ConnectToSourceOracleSyncTaskInput
-* **output**: ConnectToSourceOracleSyncTaskOutput[] (ReadOnly)
+* **input**: [ConnectToSourceOracleSyncTaskInput](#connecttosourceoraclesynctaskinput)
+* **output**: [ConnectToSourceOracleSyncTaskOutput](#connecttosourceoraclesynctaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToSource.Oracle.Sync' (Required)
 
 ## ConnectToSourceOracleSyncTaskInput
 ### Properties
-* **sourceConnectionInfo**: OracleConnectionInfo (Required)
+* **sourceConnectionInfo**: [OracleConnectionInfo](#oracleconnectioninfo) (Required)
 
 ## ConnectToSourceOracleSyncTaskOutput
 ### Properties
 * **databases**: string[] (ReadOnly)
 * **sourceServerBrandVersion**: string (ReadOnly)
 * **sourceServerVersion**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## ConnectToSourcePostgreSqlSyncTaskProperties
 ### Properties
-* **input**: ConnectToSourcePostgreSqlSyncTaskInput
-* **output**: ConnectToSourcePostgreSqlSyncTaskOutput[] (ReadOnly)
+* **input**: [ConnectToSourcePostgreSqlSyncTaskInput](#connecttosourcepostgresqlsynctaskinput)
+* **output**: [ConnectToSourcePostgreSqlSyncTaskOutput](#connecttosourcepostgresqlsynctaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToSource.PostgreSql.Sync' (Required)
 
 ## ConnectToSourcePostgreSqlSyncTaskInput
 ### Properties
-* **sourceConnectionInfo**: PostgreSqlConnectionInfo (Required)
+* **sourceConnectionInfo**: [PostgreSqlConnectionInfo](#postgresqlconnectioninfo) (Required)
 
 ## ConnectToSourcePostgreSqlSyncTaskOutput
 ### Properties
@@ -656,12 +656,12 @@
 * **id**: string (ReadOnly)
 * **sourceServerBrandVersion**: string (ReadOnly)
 * **sourceServerVersion**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## ConnectToSourceSqlServerTaskProperties
 ### Properties
-* **input**: ConnectToSourceSqlServerTaskInput
-* **output**: ConnectToSourceSqlServerTaskOutput[] (ReadOnly)
+* **input**: [ConnectToSourceSqlServerTaskInput](#connecttosourcesqlservertaskinput)
+* **output**: [ConnectToSourceSqlServerTaskOutput](#connecttosourcesqlservertaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToSource.SqlServer' (Required)
 
 ## ConnectToSourceSqlServerTaskInput
@@ -671,7 +671,7 @@
 * **collectDatabases**: bool
 * **collectLogins**: bool
 * **collectTdeCertificateInfo**: bool
-* **sourceConnectionInfo**: SqlConnectionInfo (Required)
+* **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
 * **validateSsisCatalogOnly**: bool
 
 ## ConnectToSourceSqlServerTaskOutput
@@ -685,15 +685,15 @@
 * **jobCategory**: string (ReadOnly)
 * **jobOwner**: string (ReadOnly)
 * **lastExecutedOn**: string (ReadOnly)
-* **migrationEligibility**: MigrationEligibilityInfo (ReadOnly)
+* **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly)
 * **name**: string (ReadOnly)
 * **resultType**: 'AgentJobLevelOutput' (Required)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ### ConnectToSourceSqlServerTaskOutputDatabaseLevel
 #### Properties
 * **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly)
-* **databaseFiles**: DatabaseFileInfo[] (ReadOnly)
+* **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly)
 * **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly)
 * **name**: string (ReadOnly)
 * **resultType**: 'DatabaseLevelOutput' (Required)
@@ -704,7 +704,7 @@
 * **defaultDatabase**: string (ReadOnly)
 * **isEnabled**: bool (ReadOnly)
 * **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly)
-* **migrationEligibility**: MigrationEligibilityInfo (ReadOnly)
+* **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly)
 * **name**: string (ReadOnly)
 * **resultType**: 'LoginLevelOutput' (Required)
 
@@ -717,7 +717,7 @@
 * **resultType**: 'TaskLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly)
 * **sourceServerVersion**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 
 ## ConnectToSourceSqlServerTaskOutputAgentJobLevel
@@ -726,10 +726,10 @@
 * **jobCategory**: string (ReadOnly)
 * **jobOwner**: string (ReadOnly)
 * **lastExecutedOn**: string (ReadOnly)
-* **migrationEligibility**: MigrationEligibilityInfo (ReadOnly)
+* **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly)
 * **name**: string (ReadOnly)
 * **resultType**: 'AgentJobLevelOutput' (Required)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## MigrationEligibilityInfo
 ### Properties
@@ -739,7 +739,7 @@
 ## ConnectToSourceSqlServerTaskOutputDatabaseLevel
 ### Properties
 * **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly)
-* **databaseFiles**: DatabaseFileInfo[] (ReadOnly)
+* **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly)
 * **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly)
 * **name**: string (ReadOnly)
 * **resultType**: 'DatabaseLevelOutput' (Required)
@@ -760,7 +760,7 @@
 * **defaultDatabase**: string (ReadOnly)
 * **isEnabled**: bool (ReadOnly)
 * **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly)
-* **migrationEligibility**: MigrationEligibilityInfo (ReadOnly)
+* **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly)
 * **name**: string (ReadOnly)
 * **resultType**: 'LoginLevelOutput' (Required)
 
@@ -773,24 +773,24 @@
 * **resultType**: 'TaskLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly)
 * **sourceServerVersion**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## ConnectToSourceSqlServerSyncTaskProperties
 ### Properties
-* **input**: ConnectToSourceSqlServerTaskInput
-* **output**: ConnectToSourceSqlServerTaskOutput[] (ReadOnly)
+* **input**: [ConnectToSourceSqlServerTaskInput](#connecttosourcesqlservertaskinput)
+* **output**: [ConnectToSourceSqlServerTaskOutput](#connecttosourcesqlservertaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToSource.SqlServer.Sync' (Required)
 
 ## ConnectToTargetAzureDbForMySqlTaskProperties
 ### Properties
-* **input**: ConnectToTargetAzureDbForMySqlTaskInput
-* **output**: ConnectToTargetAzureDbForMySqlTaskOutput[] (ReadOnly)
+* **input**: [ConnectToTargetAzureDbForMySqlTaskInput](#connecttotargetazuredbformysqltaskinput)
+* **output**: [ConnectToTargetAzureDbForMySqlTaskOutput](#connecttotargetazuredbformysqltaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToTarget.AzureDbForMySql' (Required)
 
 ## ConnectToTargetAzureDbForMySqlTaskInput
 ### Properties
-* **sourceConnectionInfo**: MySqlConnectionInfo (Required)
-* **targetConnectionInfo**: MySqlConnectionInfo (Required)
+* **sourceConnectionInfo**: [MySqlConnectionInfo](#mysqlconnectioninfo) (Required)
+* **targetConnectionInfo**: [MySqlConnectionInfo](#mysqlconnectioninfo) (Required)
 
 ## ConnectToTargetAzureDbForMySqlTaskOutput
 ### Properties
@@ -798,18 +798,18 @@
 * **id**: string (ReadOnly)
 * **serverVersion**: string (ReadOnly)
 * **targetServerBrandVersion**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## ConnectToTargetAzureDbForPostgreSqlSyncTaskProperties
 ### Properties
-* **input**: ConnectToTargetAzureDbForPostgreSqlSyncTaskInput
-* **output**: ConnectToTargetAzureDbForPostgreSqlSyncTaskOutput[] (ReadOnly)
+* **input**: [ConnectToTargetAzureDbForPostgreSqlSyncTaskInput](#connecttotargetazuredbforpostgresqlsynctaskinput)
+* **output**: [ConnectToTargetAzureDbForPostgreSqlSyncTaskOutput](#connecttotargetazuredbforpostgresqlsynctaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToTarget.AzureDbForPostgreSql.Sync' (Required)
 
 ## ConnectToTargetAzureDbForPostgreSqlSyncTaskInput
 ### Properties
-* **sourceConnectionInfo**: PostgreSqlConnectionInfo (Required)
-* **targetConnectionInfo**: PostgreSqlConnectionInfo (Required)
+* **sourceConnectionInfo**: [PostgreSqlConnectionInfo](#postgresqlconnectioninfo) (Required)
+* **targetConnectionInfo**: [PostgreSqlConnectionInfo](#postgresqlconnectioninfo) (Required)
 
 ## ConnectToTargetAzureDbForPostgreSqlSyncTaskOutput
 ### Properties
@@ -817,19 +817,19 @@
 * **id**: string (ReadOnly)
 * **targetServerBrandVersion**: string (ReadOnly)
 * **targetServerVersion**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## ConnectToTargetSqlMITaskProperties
 ### Properties
-* **input**: ConnectToTargetSqlMITaskInput
-* **output**: ConnectToTargetSqlMITaskOutput[] (ReadOnly)
+* **input**: [ConnectToTargetSqlMITaskInput](#connecttotargetsqlmitaskinput)
+* **output**: [ConnectToTargetSqlMITaskOutput](#connecttotargetsqlmitaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToTarget.AzureSqlDbMI' (Required)
 
 ## ConnectToTargetSqlMITaskInput
 ### Properties
 * **collectAgentJobs**: bool
 * **collectLogins**: bool
-* **targetConnectionInfo**: SqlConnectionInfo (Required)
+* **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
 * **validateSsisCatalogOnly**: bool
 
 ## ConnectToTargetSqlMITaskOutput
@@ -839,18 +839,18 @@
 * **logins**: string[] (ReadOnly)
 * **targetServerBrandVersion**: string (ReadOnly)
 * **targetServerVersion**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## ConnectToTargetSqlMISyncTaskProperties
 ### Properties
-* **input**: ConnectToTargetSqlMISyncTaskInput
-* **output**: ConnectToTargetSqlMISyncTaskOutput[] (ReadOnly)
+* **input**: [ConnectToTargetSqlMISyncTaskInput](#connecttotargetsqlmisynctaskinput)
+* **output**: [ConnectToTargetSqlMISyncTaskOutput](#connecttotargetsqlmisynctaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToTarget.AzureSqlDbMI.Sync.LRS' (Required)
 
 ## ConnectToTargetSqlMISyncTaskInput
 ### Properties
-* **azureApp**: AzureActiveDirectoryApp (Required)
-* **targetConnectionInfo**: MiSqlConnectionInfo (Required)
+* **azureApp**: [AzureActiveDirectoryApp](#azureactivedirectoryapp) (Required)
+* **targetConnectionInfo**: [MiSqlConnectionInfo](#misqlconnectioninfo) (Required)
 
 ## AzureActiveDirectoryApp
 ### Properties
@@ -862,25 +862,25 @@
 ### Properties
 * **targetServerBrandVersion**: string (ReadOnly)
 * **targetServerVersion**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## ConnectToTargetOracleAzureDbForPostgreSqlSyncTaskProperties
 ### Properties
-* **input**: ConnectToTargetOracleAzureDbForPostgreSqlSyncTaskInput
-* **output**: ConnectToTargetOracleAzureDbForPostgreSqlSyncTaskOutput[] (ReadOnly)
+* **input**: [ConnectToTargetOracleAzureDbForPostgreSqlSyncTaskInput](#connecttotargetoracleazuredbforpostgresqlsynctaskinput)
+* **output**: [ConnectToTargetOracleAzureDbForPostgreSqlSyncTaskOutput](#connecttotargetoracleazuredbforpostgresqlsynctaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToTarget.Oracle.AzureDbForPostgreSql.Sync' (Required)
 
 ## ConnectToTargetOracleAzureDbForPostgreSqlSyncTaskInput
 ### Properties
-* **targetConnectionInfo**: PostgreSqlConnectionInfo (Required)
+* **targetConnectionInfo**: [PostgreSqlConnectionInfo](#postgresqlconnectioninfo) (Required)
 
 ## ConnectToTargetOracleAzureDbForPostgreSqlSyncTaskOutput
 ### Properties
 * **databases**: string[] (ReadOnly)
-* **databaseSchemaMap**: ConnectToTargetOracleAzureDbForPostgreSqlSyncTaskOutputDatabaseSchemaMapItem[]
+* **databaseSchemaMap**: [ConnectToTargetOracleAzureDbForPostgreSqlSyncTaskOutputDatabaseSchemaMapItem](#connecttotargetoracleazuredbforpostgresqlsynctaskoutputdatabaseschemamapitem)[]
 * **targetServerBrandVersion**: string (ReadOnly)
 * **targetServerVersion**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## ConnectToTargetOracleAzureDbForPostgreSqlSyncTaskOutputDatabaseSchemaMapItem
 ### Properties
@@ -889,13 +889,13 @@
 
 ## ConnectToTargetSqlDbTaskProperties
 ### Properties
-* **input**: ConnectToTargetSqlDbTaskInput
-* **output**: ConnectToTargetSqlDbTaskOutput[] (ReadOnly)
+* **input**: [ConnectToTargetSqlDbTaskInput](#connecttotargetsqldbtaskinput)
+* **output**: [ConnectToTargetSqlDbTaskOutput](#connecttotargetsqldbtaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToTarget.SqlDb' (Required)
 
 ## ConnectToTargetSqlDbTaskInput
 ### Properties
-* **targetConnectionInfo**: SqlConnectionInfo (Required)
+* **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
 
 ## ConnectToTargetSqlDbTaskOutput
 ### Properties
@@ -906,26 +906,26 @@
 
 ## ConnectToTargetSqlDbSyncTaskProperties
 ### Properties
-* **input**: ConnectToTargetSqlDbSyncTaskInput
-* **output**: ConnectToTargetSqlDbTaskOutput[] (ReadOnly)
+* **input**: [ConnectToTargetSqlDbSyncTaskInput](#connecttotargetsqldbsynctaskinput)
+* **output**: [ConnectToTargetSqlDbTaskOutput](#connecttotargetsqldbtaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToTarget.SqlDb.Sync' (Required)
 
 ## ConnectToTargetSqlDbSyncTaskInput
 ### Properties
-* **sourceConnectionInfo**: SqlConnectionInfo (Required)
-* **targetConnectionInfo**: SqlConnectionInfo (Required)
+* **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
+* **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
 
 ## GetTdeCertificatesSqlTaskProperties
 ### Properties
-* **input**: GetTdeCertificatesSqlTaskInput
-* **output**: GetTdeCertificatesSqlTaskOutput[] (ReadOnly)
+* **input**: [GetTdeCertificatesSqlTaskInput](#gettdecertificatessqltaskinput)
+* **output**: [GetTdeCertificatesSqlTaskOutput](#gettdecertificatessqltaskoutput)[] (ReadOnly)
 * **taskType**: 'GetTDECertificates.Sql' (Required)
 
 ## GetTdeCertificatesSqlTaskInput
 ### Properties
-* **backupFileShare**: FileShare (Required)
-* **connectionInfo**: SqlConnectionInfo (Required)
-* **selectedCertificates**: SelectedCertificateInput[] (Required)
+* **backupFileShare**: [FileShare](#fileshare) (Required)
+* **connectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
+* **selectedCertificates**: [SelectedCertificateInput](#selectedcertificateinput)[] (Required)
 
 ## FileShare
 ### Properties
@@ -941,61 +941,61 @@
 ## GetTdeCertificatesSqlTaskOutput
 ### Properties
 * **base64EncodedCertificates**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## GetUserTablesSqlSyncTaskProperties
 ### Properties
-* **input**: GetUserTablesSqlSyncTaskInput
-* **output**: GetUserTablesSqlSyncTaskOutput[] (ReadOnly)
+* **input**: [GetUserTablesSqlSyncTaskInput](#getusertablessqlsynctaskinput)
+* **output**: [GetUserTablesSqlSyncTaskOutput](#getusertablessqlsynctaskoutput)[] (ReadOnly)
 * **taskType**: 'GetUserTables.AzureSqlDb.Sync' (Required)
 
 ## GetUserTablesSqlSyncTaskInput
 ### Properties
 * **selectedSourceDatabases**: string[] (Required)
 * **selectedTargetDatabases**: string[] (Required)
-* **sourceConnectionInfo**: SqlConnectionInfo (Required)
-* **targetConnectionInfo**: SqlConnectionInfo (Required)
+* **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
+* **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
 
 ## GetUserTablesSqlSyncTaskOutput
 ### Properties
 * **databasesToSourceTables**: string (ReadOnly)
 * **databasesToTargetTables**: string (ReadOnly)
 * **tableValidationErrors**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## GetUserTablesSqlTaskProperties
 ### Properties
-* **input**: GetUserTablesSqlTaskInput
-* **output**: GetUserTablesSqlTaskOutput[] (ReadOnly)
+* **input**: [GetUserTablesSqlTaskInput](#getusertablessqltaskinput)
+* **output**: [GetUserTablesSqlTaskOutput](#getusertablessqltaskoutput)[] (ReadOnly)
 * **taskType**: 'GetUserTables.Sql' (Required)
 
 ## GetUserTablesSqlTaskInput
 ### Properties
-* **connectionInfo**: SqlConnectionInfo (Required)
+* **connectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
 * **selectedDatabases**: string[] (Required)
 
 ## GetUserTablesSqlTaskOutput
 ### Properties
 * **databasesToTables**: string (ReadOnly)
 * **id**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## GetUserTablesOracleTaskProperties
 ### Properties
-* **input**: GetUserTablesOracleTaskInput
-* **output**: GetUserTablesOracleTaskOutput[] (ReadOnly)
+* **input**: [GetUserTablesOracleTaskInput](#getusertablesoracletaskinput)
+* **output**: [GetUserTablesOracleTaskOutput](#getusertablesoracletaskoutput)[] (ReadOnly)
 * **taskType**: 'GetUserTablesOracle' (Required)
 
 ## GetUserTablesOracleTaskInput
 ### Properties
-* **connectionInfo**: OracleConnectionInfo (Required)
+* **connectionInfo**: [OracleConnectionInfo](#oracleconnectioninfo) (Required)
 * **selectedSchemas**: string[] (Required)
 
 ## GetUserTablesOracleTaskOutput
 ### Properties
 * **schemaName**: string (ReadOnly)
-* **tables**: DatabaseTable[] (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **tables**: [DatabaseTable](#databasetable)[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## DatabaseTable
 ### Properties
@@ -1004,60 +1004,60 @@
 
 ## GetUserTablesPostgreSqlTaskProperties
 ### Properties
-* **input**: GetUserTablesPostgreSqlTaskInput
-* **output**: GetUserTablesPostgreSqlTaskOutput[] (ReadOnly)
+* **input**: [GetUserTablesPostgreSqlTaskInput](#getusertablespostgresqltaskinput)
+* **output**: [GetUserTablesPostgreSqlTaskOutput](#getusertablespostgresqltaskoutput)[] (ReadOnly)
 * **taskType**: 'GetUserTablesPostgreSql' (Required)
 
 ## GetUserTablesPostgreSqlTaskInput
 ### Properties
-* **connectionInfo**: PostgreSqlConnectionInfo (Required)
+* **connectionInfo**: [PostgreSqlConnectionInfo](#postgresqlconnectioninfo) (Required)
 * **selectedDatabases**: string[] (Required)
 
 ## GetUserTablesPostgreSqlTaskOutput
 ### Properties
 * **databaseName**: string (ReadOnly)
-* **tables**: DatabaseTable[] (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **tables**: [DatabaseTable](#databasetable)[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## MigrateMongoDbTaskProperties
 ### Properties
-* **input**: MongoDbMigrationSettings
-* **output**: MongoDbProgress[] (ReadOnly)
+* **input**: [MongoDbMigrationSettings](#mongodbmigrationsettings)
+* **output**: [MongoDbProgress](#mongodbprogress)[] (ReadOnly)
 * **taskType**: 'Migrate.MongoDb' (Required)
 
 ## MongoDbMigrationSettings
 ### Properties
 * **boostRUs**: int
-* **databases**: MongoDbMigrationSettingsDatabases (Required)
+* **databases**: [MongoDbMigrationSettingsDatabases](#mongodbmigrationsettingsdatabases) (Required)
 * **replication**: 'Continuous' | 'Disabled' | 'OneTime'
-* **source**: MongoDbConnectionInfo (Required)
-* **target**: MongoDbConnectionInfo (Required)
-* **throttling**: MongoDbThrottlingSettings
+* **source**: [MongoDbConnectionInfo](#mongodbconnectioninfo) (Required)
+* **target**: [MongoDbConnectionInfo](#mongodbconnectioninfo) (Required)
+* **throttling**: [MongoDbThrottlingSettings](#mongodbthrottlingsettings)
 
 ## MongoDbMigrationSettingsDatabases
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: MongoDbDatabaseSettings
+* **Additional Properties Type**: [MongoDbDatabaseSettings](#mongodbdatabasesettings)
 
 ## MongoDbDatabaseSettings
 ### Properties
-* **collections**: MongoDbDatabaseSettingsCollections (Required)
+* **collections**: [MongoDbDatabaseSettingsCollections](#mongodbdatabasesettingscollections) (Required)
 * **targetRUs**: int
 
 ## MongoDbDatabaseSettingsCollections
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: MongoDbCollectionSettings
+* **Additional Properties Type**: [MongoDbCollectionSettings](#mongodbcollectionsettings)
 
 ## MongoDbCollectionSettings
 ### Properties
 * **canDelete**: bool
-* **shardKey**: MongoDbShardKeySetting
+* **shardKey**: [MongoDbShardKeySetting](#mongodbshardkeysetting)
 * **targetRUs**: int
 
 ## MongoDbShardKeySetting
 ### Properties
-* **fields**: MongoDbShardKeyField[] (Required)
+* **fields**: [MongoDbShardKeyField](#mongodbshardkeyfield)[] (Required)
 * **isUnique**: bool (Required)
 
 ## MongoDbThrottlingSettings
@@ -1073,7 +1073,7 @@
 * **bytesCopied**: int (Required)
 * **documentsCopied**: int (Required)
 * **elapsedTime**: string (Required)
-* **errors**: MongoDbProgressErrors (Required)
+* **errors**: [MongoDbProgressErrors](#mongodbprogresserrors) (Required)
 * **eventsPending**: int (Required)
 * **eventsReplayed**: int (Required)
 * **lastEventTime**: string
@@ -1089,19 +1089,19 @@
 
 ### MongoDbDatabaseProgress
 #### Properties
-* **collections**: MongoDbDatabaseProgressCollections
+* **collections**: [MongoDbDatabaseProgressCollections](#mongodbdatabaseprogresscollections)
 * **resultType**: 'Database' (Required)
 
 ### MongoDbMigrationProgress
 #### Properties
-* **databases**: MongoDbMigrationProgressDatabases
+* **databases**: [MongoDbMigrationProgressDatabases](#mongodbmigrationprogressdatabases)
 * **resultType**: 'Migration' (Required)
 
 
 ## MongoDbProgressErrors
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: MongoDbError
+* **Additional Properties Type**: [MongoDbError](#mongodberror)
 
 ## MongoDbError
 ### Properties
@@ -1116,44 +1116,44 @@
 
 ## MongoDbDatabaseProgress
 ### Properties
-* **collections**: MongoDbDatabaseProgressCollections
+* **collections**: [MongoDbDatabaseProgressCollections](#mongodbdatabaseprogresscollections)
 * **resultType**: 'Database' (Required)
 
 ## MongoDbDatabaseProgressCollections
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: MongoDbCollectionProgress
+* **Additional Properties Type**: [MongoDbCollectionProgress](#mongodbcollectionprogress)
 
 ## MongoDbMigrationProgress
 ### Properties
-* **databases**: MongoDbMigrationProgressDatabases
+* **databases**: [MongoDbMigrationProgressDatabases](#mongodbmigrationprogressdatabases)
 * **resultType**: 'Migration' (Required)
 
 ## MongoDbMigrationProgressDatabases
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: MongoDbDatabaseProgress
+* **Additional Properties Type**: [MongoDbDatabaseProgress](#mongodbdatabaseprogress)
 
 ## MigrateMySqlAzureDbForMySqlSyncTaskProperties
 ### Properties
-* **input**: MigrateMySqlAzureDbForMySqlSyncTaskInput
-* **output**: MigrateMySqlAzureDbForMySqlSyncTaskOutput[] (ReadOnly)
+* **input**: [MigrateMySqlAzureDbForMySqlSyncTaskInput](#migratemysqlazuredbformysqlsynctaskinput)
+* **output**: [MigrateMySqlAzureDbForMySqlSyncTaskOutput](#migratemysqlazuredbformysqlsynctaskoutput)[] (ReadOnly)
 * **taskType**: 'Migrate.MySql.AzureDbForMySql.Sync' (Required)
 
 ## MigrateMySqlAzureDbForMySqlSyncTaskInput
 ### Properties
-* **selectedDatabases**: MigrateMySqlAzureDbForMySqlSyncDatabaseInput[] (Required)
-* **sourceConnectionInfo**: MySqlConnectionInfo (Required)
-* **targetConnectionInfo**: MySqlConnectionInfo (Required)
+* **selectedDatabases**: [MigrateMySqlAzureDbForMySqlSyncDatabaseInput](#migratemysqlazuredbformysqlsyncdatabaseinput)[] (Required)
+* **sourceConnectionInfo**: [MySqlConnectionInfo](#mysqlconnectioninfo) (Required)
+* **targetConnectionInfo**: [MySqlConnectionInfo](#mysqlconnectioninfo) (Required)
 
 ## MigrateMySqlAzureDbForMySqlSyncDatabaseInput
 ### Properties
-* **migrationSetting**: MigrateMySqlAzureDbForMySqlSyncDatabaseInputMigrationSetting
+* **migrationSetting**: [MigrateMySqlAzureDbForMySqlSyncDatabaseInputMigrationSetting](#migratemysqlazuredbformysqlsyncdatabaseinputmigrationsetting)
 * **name**: string
-* **sourceSetting**: MigrateMySqlAzureDbForMySqlSyncDatabaseInputSourceSetting
-* **tableMap**: MigrateMySqlAzureDbForMySqlSyncDatabaseInputTableMap
+* **sourceSetting**: [MigrateMySqlAzureDbForMySqlSyncDatabaseInputSourceSetting](#migratemysqlazuredbformysqlsyncdatabaseinputsourcesetting)
+* **tableMap**: [MigrateMySqlAzureDbForMySqlSyncDatabaseInputTableMap](#migratemysqlazuredbformysqlsyncdatabaseinputtablemap)
 * **targetDatabaseName**: string
-* **targetSetting**: MigrateMySqlAzureDbForMySqlSyncDatabaseInputTargetSetting
+* **targetSetting**: [MigrateMySqlAzureDbForMySqlSyncDatabaseInputTargetSetting](#migratemysqlazuredbformysqlsyncdatabaseinputtargetsetting)
 
 ## MigrateMySqlAzureDbForMySqlSyncDatabaseInputMigrationSetting
 ### Properties
@@ -1183,7 +1183,7 @@
 ### MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseError
 #### Properties
 * **errorMessage**: string
-* **events**: SyncMigrationDatabaseErrorEvent[]
+* **events**: [SyncMigrationDatabaseErrorEvent](#syncmigrationdatabaseerrorevent)[]
 * **resultType**: 'DatabaseLevelErrorOutput' (Required)
 
 ### MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevel
@@ -1207,7 +1207,7 @@
 
 ### MigrateMySqlAzureDbForMySqlSyncTaskOutputError
 #### Properties
-* **error**: ReportableException (ReadOnly)
+* **error**: [ReportableException](#reportableexception) (ReadOnly)
 * **resultType**: 'ErrorOutput' (Required)
 
 ### MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevel
@@ -1241,7 +1241,7 @@
 ## MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseError
 ### Properties
 * **errorMessage**: string
-* **events**: SyncMigrationDatabaseErrorEvent[]
+* **events**: [SyncMigrationDatabaseErrorEvent](#syncmigrationdatabaseerrorevent)[]
 * **resultType**: 'DatabaseLevelErrorOutput' (Required)
 
 ## SyncMigrationDatabaseErrorEvent
@@ -1271,7 +1271,7 @@
 
 ## MigrateMySqlAzureDbForMySqlSyncTaskOutputError
 ### Properties
-* **error**: ReportableException (ReadOnly)
+* **error**: [ReportableException](#reportableexception) (ReadOnly)
 * **resultType**: 'ErrorOutput' (Required)
 
 ## MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevel
@@ -1303,26 +1303,26 @@
 
 ## MigrateOracleAzureDbForPostgreSqlSyncTaskProperties
 ### Properties
-* **input**: MigrateOracleAzureDbPostgreSqlSyncTaskInput
-* **output**: MigrateOracleAzureDbPostgreSqlSyncTaskOutput[] (ReadOnly)
+* **input**: [MigrateOracleAzureDbPostgreSqlSyncTaskInput](#migrateoracleazuredbpostgresqlsynctaskinput)
+* **output**: [MigrateOracleAzureDbPostgreSqlSyncTaskOutput](#migrateoracleazuredbpostgresqlsynctaskoutput)[] (ReadOnly)
 * **taskType**: 'Migrate.Oracle.AzureDbForPostgreSql.Sync' (Required)
 
 ## MigrateOracleAzureDbPostgreSqlSyncTaskInput
 ### Properties
-* **selectedDatabases**: MigrateOracleAzureDbPostgreSqlSyncDatabaseInput[] (Required)
-* **sourceConnectionInfo**: OracleConnectionInfo (Required)
-* **targetConnectionInfo**: PostgreSqlConnectionInfo (Required)
+* **selectedDatabases**: [MigrateOracleAzureDbPostgreSqlSyncDatabaseInput](#migrateoracleazuredbpostgresqlsyncdatabaseinput)[] (Required)
+* **sourceConnectionInfo**: [OracleConnectionInfo](#oracleconnectioninfo) (Required)
+* **targetConnectionInfo**: [PostgreSqlConnectionInfo](#postgresqlconnectioninfo) (Required)
 
 ## MigrateOracleAzureDbPostgreSqlSyncDatabaseInput
 ### Properties
 * **caseManipulation**: string
-* **migrationSetting**: MigrateOracleAzureDbPostgreSqlSyncDatabaseInputMigrationSetting
+* **migrationSetting**: [MigrateOracleAzureDbPostgreSqlSyncDatabaseInputMigrationSetting](#migrateoracleazuredbpostgresqlsyncdatabaseinputmigrationsetting)
 * **name**: string
 * **schemaName**: string
-* **sourceSetting**: MigrateOracleAzureDbPostgreSqlSyncDatabaseInputSourceSetting
-* **tableMap**: MigrateOracleAzureDbPostgreSqlSyncDatabaseInputTableMap
+* **sourceSetting**: [MigrateOracleAzureDbPostgreSqlSyncDatabaseInputSourceSetting](#migrateoracleazuredbpostgresqlsyncdatabaseinputsourcesetting)
+* **tableMap**: [MigrateOracleAzureDbPostgreSqlSyncDatabaseInputTableMap](#migrateoracleazuredbpostgresqlsyncdatabaseinputtablemap)
 * **targetDatabaseName**: string
-* **targetSetting**: MigrateOracleAzureDbPostgreSqlSyncDatabaseInputTargetSetting
+* **targetSetting**: [MigrateOracleAzureDbPostgreSqlSyncDatabaseInputTargetSetting](#migrateoracleazuredbpostgresqlsyncdatabaseinputtargetsetting)
 
 ## MigrateOracleAzureDbPostgreSqlSyncDatabaseInputMigrationSetting
 ### Properties
@@ -1352,7 +1352,7 @@
 ### MigrateOracleAzureDbPostgreSqlSyncTaskOutputDatabaseError
 #### Properties
 * **errorMessage**: string
-* **events**: SyncMigrationDatabaseErrorEvent[]
+* **events**: [SyncMigrationDatabaseErrorEvent](#syncmigrationdatabaseerrorevent)[]
 * **resultType**: 'DatabaseLevelErrorOutput' (Required)
 
 ### MigrateOracleAzureDbPostgreSqlSyncTaskOutputDatabaseLevel
@@ -1376,7 +1376,7 @@
 
 ### MigrateOracleAzureDbPostgreSqlSyncTaskOutputError
 #### Properties
-* **error**: ReportableException (ReadOnly)
+* **error**: [ReportableException](#reportableexception) (ReadOnly)
 * **resultType**: 'ErrorOutput' (Required)
 
 ### MigrateOracleAzureDbPostgreSqlSyncTaskOutputMigrationLevel
@@ -1410,7 +1410,7 @@
 ## MigrateOracleAzureDbPostgreSqlSyncTaskOutputDatabaseError
 ### Properties
 * **errorMessage**: string
-* **events**: SyncMigrationDatabaseErrorEvent[]
+* **events**: [SyncMigrationDatabaseErrorEvent](#syncmigrationdatabaseerrorevent)[]
 * **resultType**: 'DatabaseLevelErrorOutput' (Required)
 
 ## MigrateOracleAzureDbPostgreSqlSyncTaskOutputDatabaseLevel
@@ -1434,7 +1434,7 @@
 
 ## MigrateOracleAzureDbPostgreSqlSyncTaskOutputError
 ### Properties
-* **error**: ReportableException (ReadOnly)
+* **error**: [ReportableException](#reportableexception) (ReadOnly)
 * **resultType**: 'ErrorOutput' (Required)
 
 ## MigrateOracleAzureDbPostgreSqlSyncTaskOutputMigrationLevel
@@ -1466,24 +1466,24 @@
 
 ## MigratePostgreSqlAzureDbForPostgreSqlSyncTaskProperties
 ### Properties
-* **input**: MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInput
-* **output**: MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutput[] (ReadOnly)
+* **input**: [MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInput](#migratepostgresqlazuredbforpostgresqlsynctaskinput)
+* **output**: [MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutput](#migratepostgresqlazuredbforpostgresqlsynctaskoutput)[] (ReadOnly)
 * **taskType**: 'Migrate.PostgreSql.AzureDbForPostgreSql.SyncV2' (Required)
 
 ## MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInput
 ### Properties
-* **selectedDatabases**: MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInput[] (Required)
-* **sourceConnectionInfo**: PostgreSqlConnectionInfo (Required)
-* **targetConnectionInfo**: PostgreSqlConnectionInfo (Required)
+* **selectedDatabases**: [MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInput](#migratepostgresqlazuredbforpostgresqlsyncdatabaseinput)[] (Required)
+* **sourceConnectionInfo**: [PostgreSqlConnectionInfo](#postgresqlconnectioninfo) (Required)
+* **targetConnectionInfo**: [PostgreSqlConnectionInfo](#postgresqlconnectioninfo) (Required)
 
 ## MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInput
 ### Properties
-* **migrationSetting**: MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputMigrationSetting
+* **migrationSetting**: [MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputMigrationSetting](#migratepostgresqlazuredbforpostgresqlsyncdatabaseinputmigrationsetting)
 * **name**: string
-* **selectedTables**: MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseTableInput[]
-* **sourceSetting**: MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputSourceSetting
+* **selectedTables**: [MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseTableInput](#migratepostgresqlazuredbforpostgresqlsyncdatabasetableinput)[]
+* **sourceSetting**: [MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputSourceSetting](#migratepostgresqlazuredbforpostgresqlsyncdatabaseinputsourcesetting)
 * **targetDatabaseName**: string
-* **targetSetting**: MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputTargetSetting
+* **targetSetting**: [MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputTargetSetting](#migratepostgresqlazuredbforpostgresqlsyncdatabaseinputtargetsetting)
 
 ## MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputMigrationSetting
 ### Properties
@@ -1512,7 +1512,7 @@
 ### MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseError
 #### Properties
 * **errorMessage**: string
-* **events**: SyncMigrationDatabaseErrorEvent[]
+* **events**: [SyncMigrationDatabaseErrorEvent](#syncmigrationdatabaseerrorevent)[]
 * **resultType**: 'DatabaseLevelErrorOutput' (Required)
 
 ### MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLevel
@@ -1536,7 +1536,7 @@
 
 ### MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputError
 #### Properties
-* **error**: ReportableException (ReadOnly)
+* **error**: [ReportableException](#reportableexception) (ReadOnly)
 * **resultType**: 'ErrorOutput' (Required)
 
 ### MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevel
@@ -1573,7 +1573,7 @@
 ## MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseError
 ### Properties
 * **errorMessage**: string
-* **events**: SyncMigrationDatabaseErrorEvent[]
+* **events**: [SyncMigrationDatabaseErrorEvent](#syncmigrationdatabaseerrorevent)[]
 * **resultType**: 'DatabaseLevelErrorOutput' (Required)
 
 ## MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLevel
@@ -1597,7 +1597,7 @@
 
 ## MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputError
 ### Properties
-* **error**: ReportableException (ReadOnly)
+* **error**: [ReportableException](#reportableexception) (ReadOnly)
 * **resultType**: 'ErrorOutput' (Required)
 
 ## MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevel
@@ -1632,27 +1632,27 @@
 
 ## MigrateSqlServerSqlDbSyncTaskProperties
 ### Properties
-* **input**: MigrateSqlServerSqlDbSyncTaskInput
-* **output**: MigrateSqlServerSqlDbSyncTaskOutput[] (ReadOnly)
+* **input**: [MigrateSqlServerSqlDbSyncTaskInput](#migratesqlserversqldbsynctaskinput)
+* **output**: [MigrateSqlServerSqlDbSyncTaskOutput](#migratesqlserversqldbsynctaskoutput)[] (ReadOnly)
 * **taskType**: 'Migrate.SqlServer.AzureSqlDb.Sync' (Required)
 
 ## MigrateSqlServerSqlDbSyncTaskInput
 ### Properties
-* **selectedDatabases**: MigrateSqlServerSqlDbSyncDatabaseInput[] (Required)
-* **sourceConnectionInfo**: SqlConnectionInfo (Required)
-* **targetConnectionInfo**: SqlConnectionInfo (Required)
-* **validationOptions**: MigrationValidationOptions
+* **selectedDatabases**: [MigrateSqlServerSqlDbSyncDatabaseInput](#migratesqlserversqldbsyncdatabaseinput)[] (Required)
+* **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
+* **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
+* **validationOptions**: [MigrationValidationOptions](#migrationvalidationoptions)
 
 ## MigrateSqlServerSqlDbSyncDatabaseInput
 ### Properties
 * **id**: string
-* **migrationSetting**: MigrateSqlServerSqlDbSyncDatabaseInputMigrationSetting
+* **migrationSetting**: [MigrateSqlServerSqlDbSyncDatabaseInputMigrationSetting](#migratesqlserversqldbsyncdatabaseinputmigrationsetting)
 * **name**: string
 * **schemaName**: string
-* **sourceSetting**: MigrateSqlServerSqlDbSyncDatabaseInputSourceSetting
-* **tableMap**: MigrateSqlServerSqlDbSyncDatabaseInputTableMap
+* **sourceSetting**: [MigrateSqlServerSqlDbSyncDatabaseInputSourceSetting](#migratesqlserversqldbsyncdatabaseinputsourcesetting)
+* **tableMap**: [MigrateSqlServerSqlDbSyncDatabaseInputTableMap](#migratesqlserversqldbsyncdatabaseinputtablemap)
 * **targetDatabaseName**: string
-* **targetSetting**: MigrateSqlServerSqlDbSyncDatabaseInputTargetSetting
+* **targetSetting**: [MigrateSqlServerSqlDbSyncDatabaseInputTargetSetting](#migratesqlserversqldbsyncdatabaseinputtargetsetting)
 
 ## MigrateSqlServerSqlDbSyncDatabaseInputMigrationSetting
 ### Properties
@@ -1688,7 +1688,7 @@
 ### MigrateSqlServerSqlDbSyncTaskOutputDatabaseError
 #### Properties
 * **errorMessage**: string
-* **events**: SyncMigrationDatabaseErrorEvent[]
+* **events**: [SyncMigrationDatabaseErrorEvent](#syncmigrationdatabaseerrorevent)[]
 * **resultType**: 'DatabaseLevelErrorOutput' (Required)
 
 ### MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevel
@@ -1712,7 +1712,7 @@
 
 ### MigrateSqlServerSqlDbSyncTaskOutputError
 #### Properties
-* **error**: ReportableException (ReadOnly)
+* **error**: [ReportableException](#reportableexception) (ReadOnly)
 * **resultType**: 'ErrorOutput' (Required)
 
 ### MigrateSqlServerSqlDbSyncTaskOutputMigrationLevel
@@ -1747,7 +1747,7 @@
 ## MigrateSqlServerSqlDbSyncTaskOutputDatabaseError
 ### Properties
 * **errorMessage**: string
-* **events**: SyncMigrationDatabaseErrorEvent[]
+* **events**: [SyncMigrationDatabaseErrorEvent](#syncmigrationdatabaseerrorevent)[]
 * **resultType**: 'DatabaseLevelErrorOutput' (Required)
 
 ## MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevel
@@ -1771,7 +1771,7 @@
 
 ## MigrateSqlServerSqlDbSyncTaskOutputError
 ### Properties
-* **error**: ReportableException (ReadOnly)
+* **error**: [ReportableException](#reportableexception) (ReadOnly)
 * **resultType**: 'ErrorOutput' (Required)
 
 ## MigrateSqlServerSqlDbSyncTaskOutputMigrationLevel
@@ -1804,21 +1804,21 @@
 
 ## MigrateSqlServerSqlMITaskProperties
 ### Properties
-* **input**: MigrateSqlServerSqlMITaskInput
-* **output**: MigrateSqlServerSqlMITaskOutput[] (ReadOnly)
+* **input**: [MigrateSqlServerSqlMITaskInput](#migratesqlserversqlmitaskinput)
+* **output**: [MigrateSqlServerSqlMITaskOutput](#migratesqlserversqlmitaskoutput)[] (ReadOnly)
 * **taskType**: 'Migrate.SqlServer.AzureSqlDbMI' (Required)
 
 ## MigrateSqlServerSqlMITaskInput
 ### Properties
 * **aadDomainName**: string
-* **backupBlobShare**: BlobShare (Required)
-* **backupFileShare**: FileShare
+* **backupBlobShare**: [BlobShare](#blobshare) (Required)
+* **backupFileShare**: [FileShare](#fileshare)
 * **backupMode**: 'CreateBackup' | 'ExistingBackup'
 * **selectedAgentJobs**: string[]
-* **selectedDatabases**: MigrateSqlServerSqlMIDatabaseInput[] (Required)
+* **selectedDatabases**: [MigrateSqlServerSqlMIDatabaseInput](#migratesqlserversqlmidatabaseinput)[] (Required)
 * **selectedLogins**: string[]
-* **sourceConnectionInfo**: SqlConnectionInfo (Required)
-* **targetConnectionInfo**: SqlConnectionInfo (Required)
+* **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
+* **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
 
 ## BlobShare
 ### Properties
@@ -1827,7 +1827,7 @@
 ## MigrateSqlServerSqlMIDatabaseInput
 ### Properties
 * **backupFilePaths**: string[]
-* **backupFileShare**: FileShare
+* **backupFileShare**: [FileShare](#fileshare)
 * **name**: string (Required)
 * **restoreDatabaseName**: string (Required)
 
@@ -1839,7 +1839,7 @@
 ### MigrateSqlServerSqlMITaskOutputAgentJobLevel
 #### Properties
 * **endedOn**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **isEnabled**: bool (ReadOnly)
 * **message**: string (ReadOnly)
 * **name**: string (ReadOnly)
@@ -1851,7 +1851,7 @@
 #### Properties
 * **databaseName**: string (ReadOnly)
 * **endedOn**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **message**: string (ReadOnly)
 * **resultType**: 'DatabaseLevelOutput' (Required)
 * **sizeMB**: int (ReadOnly)
@@ -1861,13 +1861,13 @@
 
 ### MigrateSqlServerSqlMITaskOutputError
 #### Properties
-* **error**: ReportableException (ReadOnly)
+* **error**: [ReportableException](#reportableexception) (ReadOnly)
 * **resultType**: 'ErrorOutput' (Required)
 
 ### MigrateSqlServerSqlMITaskOutputLoginLevel
 #### Properties
 * **endedOn**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **loginName**: string (ReadOnly)
 * **message**: string (ReadOnly)
 * **resultType**: 'LoginLevelOutput' (Required)
@@ -1880,10 +1880,10 @@
 * **agentJobs**: string (ReadOnly)
 * **databases**: string (ReadOnly)
 * **endedOn**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **logins**: string (ReadOnly)
 * **message**: string (ReadOnly)
-* **orphanedUsersInfo**: OrphanedUserInfo[] (ReadOnly)
+* **orphanedUsersInfo**: [OrphanedUserInfo](#orphaneduserinfo)[] (ReadOnly)
 * **resultType**: 'MigrationLevelOutput' (Required)
 * **serverRoleResults**: string (ReadOnly)
 * **sourceServerBrandVersion**: string (ReadOnly)
@@ -1898,7 +1898,7 @@
 ## MigrateSqlServerSqlMITaskOutputAgentJobLevel
 ### Properties
 * **endedOn**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **isEnabled**: bool (ReadOnly)
 * **message**: string (ReadOnly)
 * **name**: string (ReadOnly)
@@ -1910,7 +1910,7 @@
 ### Properties
 * **databaseName**: string (ReadOnly)
 * **endedOn**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **message**: string (ReadOnly)
 * **resultType**: 'DatabaseLevelOutput' (Required)
 * **sizeMB**: int (ReadOnly)
@@ -1920,13 +1920,13 @@
 
 ## MigrateSqlServerSqlMITaskOutputError
 ### Properties
-* **error**: ReportableException (ReadOnly)
+* **error**: [ReportableException](#reportableexception) (ReadOnly)
 * **resultType**: 'ErrorOutput' (Required)
 
 ## MigrateSqlServerSqlMITaskOutputLoginLevel
 ### Properties
 * **endedOn**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **loginName**: string (ReadOnly)
 * **message**: string (ReadOnly)
 * **resultType**: 'LoginLevelOutput' (Required)
@@ -1939,10 +1939,10 @@
 * **agentJobs**: string (ReadOnly)
 * **databases**: string (ReadOnly)
 * **endedOn**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **logins**: string (ReadOnly)
 * **message**: string (ReadOnly)
-* **orphanedUsersInfo**: OrphanedUserInfo[] (ReadOnly)
+* **orphanedUsersInfo**: [OrphanedUserInfo](#orphaneduserinfo)[] (ReadOnly)
 * **resultType**: 'MigrationLevelOutput' (Required)
 * **serverRoleResults**: string (ReadOnly)
 * **sourceServerBrandVersion**: string (ReadOnly)
@@ -1960,18 +1960,18 @@
 
 ## MigrateSqlServerSqlMISyncTaskProperties
 ### Properties
-* **input**: MigrateSqlServerSqlMISyncTaskInput
-* **output**: MigrateSqlServerSqlMISyncTaskOutput[] (ReadOnly)
+* **input**: [MigrateSqlServerSqlMISyncTaskInput](#migratesqlserversqlmisynctaskinput)
+* **output**: [MigrateSqlServerSqlMISyncTaskOutput](#migratesqlserversqlmisynctaskoutput)[] (ReadOnly)
 * **taskType**: 'Migrate.SqlServer.AzureSqlDbMI.Sync.LRS' (Required)
 
 ## MigrateSqlServerSqlMISyncTaskInput
 ### Properties
-* **azureApp**: AzureActiveDirectoryApp (Required)
-* **backupFileShare**: FileShare
-* **selectedDatabases**: MigrateSqlServerSqlMIDatabaseInput[] (Required)
-* **sourceConnectionInfo**: SqlConnectionInfo (Required)
+* **azureApp**: [AzureActiveDirectoryApp](#azureactivedirectoryapp) (Required)
+* **backupFileShare**: [FileShare](#fileshare)
+* **selectedDatabases**: [MigrateSqlServerSqlMIDatabaseInput](#migratesqlserversqlmidatabaseinput)[] (Required)
+* **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
 * **storageResourceId**: string (Required)
-* **targetConnectionInfo**: MiSqlConnectionInfo (Required)
+* **targetConnectionInfo**: [MiSqlConnectionInfo](#misqlconnectioninfo) (Required)
 
 ## MigrateSqlServerSqlMISyncTaskOutput
 * **Discriminator**: resultType
@@ -1980,14 +1980,14 @@
 * **id**: string (ReadOnly)
 ### MigrateSqlServerSqlMISyncTaskOutputDatabaseLevel
 #### Properties
-* **activeBackupSets**: BackupSetInfo[] (ReadOnly)
+* **activeBackupSets**: [BackupSetInfo](#backupsetinfo)[] (ReadOnly)
 * **containerName**: string (ReadOnly)
 * **endedOn**: string (ReadOnly)
 * **errorPrefix**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
-* **fullBackupSetInfo**: BackupSetInfo (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
+* **fullBackupSetInfo**: [BackupSetInfo](#backupsetinfo) (ReadOnly)
 * **isFullBackupRestored**: bool (ReadOnly)
-* **lastRestoredBackupSetInfo**: BackupSetInfo (ReadOnly)
+* **lastRestoredBackupSetInfo**: [BackupSetInfo](#backupsetinfo) (ReadOnly)
 * **migrationState**: 'CANCELLED' | 'COMPLETED' | 'CUTOVER_START' | 'FAILED' | 'FULL_BACKUP_UPLOAD_START' | 'INITIAL' | 'LOG_SHIPPING_START' | 'POST_CUTOVER_COMPLETE' | 'UNDEFINED' | 'UPLOAD_LOG_FILES_START' (ReadOnly)
 * **resultType**: 'DatabaseLevelOutput' (Required)
 * **sourceDatabaseName**: string (ReadOnly)
@@ -1995,7 +1995,7 @@
 
 ### MigrateSqlServerSqlMISyncTaskOutputError
 #### Properties
-* **error**: ReportableException (ReadOnly)
+* **error**: [ReportableException](#reportableexception) (ReadOnly)
 * **resultType**: 'ErrorOutput' (Required)
 
 ### MigrateSqlServerSqlMISyncTaskOutputMigrationLevel
@@ -2016,14 +2016,14 @@
 
 ## MigrateSqlServerSqlMISyncTaskOutputDatabaseLevel
 ### Properties
-* **activeBackupSets**: BackupSetInfo[] (ReadOnly)
+* **activeBackupSets**: [BackupSetInfo](#backupsetinfo)[] (ReadOnly)
 * **containerName**: string (ReadOnly)
 * **endedOn**: string (ReadOnly)
 * **errorPrefix**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
-* **fullBackupSetInfo**: BackupSetInfo (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
+* **fullBackupSetInfo**: [BackupSetInfo](#backupsetinfo) (ReadOnly)
 * **isFullBackupRestored**: bool (ReadOnly)
-* **lastRestoredBackupSetInfo**: BackupSetInfo (ReadOnly)
+* **lastRestoredBackupSetInfo**: [BackupSetInfo](#backupsetinfo) (ReadOnly)
 * **migrationState**: 'CANCELLED' | 'COMPLETED' | 'CUTOVER_START' | 'FAILED' | 'FULL_BACKUP_UPLOAD_START' | 'INITIAL' | 'LOG_SHIPPING_START' | 'POST_CUTOVER_COMPLETE' | 'UNDEFINED' | 'UPLOAD_LOG_FILES_START' (ReadOnly)
 * **resultType**: 'DatabaseLevelOutput' (Required)
 * **sourceDatabaseName**: string (ReadOnly)
@@ -2040,7 +2040,7 @@
 * **isBackupRestored**: bool
 * **lastLsn**: string
 * **lastModifiedTime**: string
-* **listOfBackupFiles**: BackupFileInfo[]
+* **listOfBackupFiles**: [BackupFileInfo](#backupfileinfo)[]
 
 ## BackupFileInfo
 ### Properties
@@ -2050,7 +2050,7 @@
 
 ## MigrateSqlServerSqlMISyncTaskOutputError
 ### Properties
-* **error**: ReportableException (ReadOnly)
+* **error**: [ReportableException](#reportableexception) (ReadOnly)
 * **resultType**: 'ErrorOutput' (Required)
 
 ## MigrateSqlServerSqlMISyncTaskOutputMigrationLevel
@@ -2070,22 +2070,22 @@
 
 ## MigrateSqlServerSqlDbTaskProperties
 ### Properties
-* **input**: MigrateSqlServerSqlDbTaskInput
-* **output**: MigrateSqlServerSqlDbTaskOutput[] (ReadOnly)
+* **input**: [MigrateSqlServerSqlDbTaskInput](#migratesqlserversqldbtaskinput)
+* **output**: [MigrateSqlServerSqlDbTaskOutput](#migratesqlserversqldbtaskoutput)[] (ReadOnly)
 * **taskType**: 'Migrate.SqlServer.SqlDb' (Required)
 
 ## MigrateSqlServerSqlDbTaskInput
 ### Properties
-* **selectedDatabases**: MigrateSqlServerSqlDbDatabaseInput[] (Required)
-* **sourceConnectionInfo**: SqlConnectionInfo (Required)
-* **targetConnectionInfo**: SqlConnectionInfo (Required)
-* **validationOptions**: MigrationValidationOptions
+* **selectedDatabases**: [MigrateSqlServerSqlDbDatabaseInput](#migratesqlserversqldbdatabaseinput)[] (Required)
+* **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
+* **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
+* **validationOptions**: [MigrationValidationOptions](#migrationvalidationoptions)
 
 ## MigrateSqlServerSqlDbDatabaseInput
 ### Properties
 * **makeSourceDbReadOnly**: bool
 * **name**: string
-* **tableMap**: MigrateSqlServerSqlDbDatabaseInputTableMap
+* **tableMap**: [MigrateSqlServerSqlDbDatabaseInputTableMap](#migratesqlserversqldbdatabaseinputtablemap)
 * **targetDatabaseName**: string
 
 ## MigrateSqlServerSqlDbDatabaseInputTableMap
@@ -2104,7 +2104,7 @@
 * **endedOn**: string (ReadOnly)
 * **errorCount**: int (ReadOnly)
 * **errorPrefix**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **message**: string (ReadOnly)
 * **numberOfObjects**: int (ReadOnly)
 * **numberOfObjectsCompleted**: int (ReadOnly)
@@ -2118,7 +2118,7 @@
 
 ### MigrateSqlServerSqlDbTaskOutputError
 #### Properties
-* **error**: ReportableException (ReadOnly)
+* **error**: [ReportableException](#reportableexception) (ReadOnly)
 * **resultType**: 'ErrorOutput' (Required)
 
 ### MigrateSqlServerSqlDbTaskOutputMigrationLevel
@@ -2127,10 +2127,10 @@
 * **databaseSummary**: string (ReadOnly)
 * **durationInSeconds**: int (ReadOnly)
 * **endedOn**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **message**: string (ReadOnly)
-* **migrationReportResult**: MigrationReportResult
-* **migrationValidationResult**: MigrationValidationResult
+* **migrationReportResult**: [MigrationReportResult](#migrationreportresult)
+* **migrationValidationResult**: [MigrationValidationResult](#migrationvalidationresult)
 * **resultType**: 'MigrationLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly)
 * **sourceServerVersion**: string (ReadOnly)
@@ -2160,7 +2160,7 @@
 * **endedOn**: string (ReadOnly)
 * **errorCount**: int (ReadOnly)
 * **errorPrefix**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **message**: string (ReadOnly)
 * **numberOfObjects**: int (ReadOnly)
 * **numberOfObjectsCompleted**: int (ReadOnly)
@@ -2174,7 +2174,7 @@
 
 ## MigrateSqlServerSqlDbTaskOutputError
 ### Properties
-* **error**: ReportableException (ReadOnly)
+* **error**: [ReportableException](#reportableexception) (ReadOnly)
 * **resultType**: 'ErrorOutput' (Required)
 
 ## MigrateSqlServerSqlDbTaskOutputMigrationLevel
@@ -2183,10 +2183,10 @@
 * **databaseSummary**: string (ReadOnly)
 * **durationInSeconds**: int (ReadOnly)
 * **endedOn**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **message**: string (ReadOnly)
-* **migrationReportResult**: MigrationReportResult
-* **migrationValidationResult**: MigrationValidationResult
+* **migrationReportResult**: [MigrationReportResult](#migrationreportresult)
+* **migrationValidationResult**: [MigrationValidationResult](#migrationvalidationresult)
 * **resultType**: 'MigrationLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly)
 * **sourceServerVersion**: string (ReadOnly)
@@ -2206,12 +2206,12 @@
 * **id**: string (ReadOnly)
 * **migrationId**: string (ReadOnly)
 * **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'InProgress' | 'Initialized' | 'NotStarted' | 'Stopped' (ReadOnly)
-* **summaryResults**: MigrationValidationResultSummaryResults
+* **summaryResults**: [MigrationValidationResultSummaryResults](#migrationvalidationresultsummaryresults)
 
 ## MigrationValidationResultSummaryResults
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: MigrationValidationDatabaseSummaryResult
+* **Additional Properties Type**: [MigrationValidationDatabaseSummaryResult](#migrationvalidationdatabasesummaryresult)
 
 ## MigrationValidationDatabaseSummaryResult
 ### Properties
@@ -2238,15 +2238,15 @@
 
 ## MigrateSsisTaskProperties
 ### Properties
-* **input**: MigrateSsisTaskInput
-* **output**: MigrateSsisTaskOutput[] (ReadOnly)
+* **input**: [MigrateSsisTaskInput](#migratessistaskinput)
+* **output**: [MigrateSsisTaskOutput](#migratessistaskoutput)[] (ReadOnly)
 * **taskType**: 'Migrate.Ssis' (Required)
 
 ## MigrateSsisTaskInput
 ### Properties
-* **sourceConnectionInfo**: SqlConnectionInfo (Required)
-* **ssisMigrationInfo**: SsisMigrationInfo (Required)
-* **targetConnectionInfo**: SqlConnectionInfo (Required)
+* **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
+* **ssisMigrationInfo**: [SsisMigrationInfo](#ssismigrationinfo) (Required)
+* **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
 
 ## SsisMigrationInfo
 ### Properties
@@ -2262,7 +2262,7 @@
 ### MigrateSsisTaskOutputMigrationLevel
 #### Properties
 * **endedOn**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **message**: string (ReadOnly)
 * **resultType**: 'MigrationLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly)
@@ -2276,7 +2276,7 @@
 ### MigrateSsisTaskOutputProjectLevel
 #### Properties
 * **endedOn**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **folderName**: string (ReadOnly)
 * **message**: string (ReadOnly)
 * **projectName**: string (ReadOnly)
@@ -2289,7 +2289,7 @@
 ## MigrateSsisTaskOutputMigrationLevel
 ### Properties
 * **endedOn**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **message**: string (ReadOnly)
 * **resultType**: 'MigrationLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly)
@@ -2303,7 +2303,7 @@
 ## MigrateSsisTaskOutputProjectLevel
 ### Properties
 * **endedOn**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **folderName**: string (ReadOnly)
 * **message**: string (ReadOnly)
 * **projectName**: string (ReadOnly)
@@ -2314,20 +2314,20 @@
 
 ## MigrateSchemaSqlServerSqlDbTaskProperties
 ### Properties
-* **input**: MigrateSchemaSqlServerSqlDbTaskInput
-* **output**: MigrateSchemaSqlServerSqlDbTaskOutput[] (ReadOnly)
+* **input**: [MigrateSchemaSqlServerSqlDbTaskInput](#migrateschemasqlserversqldbtaskinput)
+* **output**: [MigrateSchemaSqlServerSqlDbTaskOutput](#migrateschemasqlserversqldbtaskoutput)[] (ReadOnly)
 * **taskType**: 'MigrateSchemaSqlServerSqlDb' (Required)
 
 ## MigrateSchemaSqlServerSqlDbTaskInput
 ### Properties
-* **selectedDatabases**: MigrateSchemaSqlServerSqlDbDatabaseInput[] (Required)
-* **sourceConnectionInfo**: SqlConnectionInfo (Required)
-* **targetConnectionInfo**: SqlConnectionInfo (Required)
+* **selectedDatabases**: [MigrateSchemaSqlServerSqlDbDatabaseInput](#migrateschemasqlserversqldbdatabaseinput)[] (Required)
+* **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
+* **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
 
 ## MigrateSchemaSqlServerSqlDbDatabaseInput
 ### Properties
 * **name**: string
-* **schemaSetting**: SchemaMigrationSetting
+* **schemaSetting**: [SchemaMigrationSetting](#schemamigrationsetting)
 * **targetDatabaseName**: string
 
 ## SchemaMigrationSetting
@@ -2356,7 +2356,7 @@
 
 ### MigrateSchemaSqlTaskOutputError
 #### Properties
-* **error**: ReportableException (ReadOnly)
+* **error**: [ReportableException](#reportableexception) (ReadOnly)
 * **resultType**: 'ErrorOutput' (Required)
 
 ### MigrateSchemaSqlServerSqlDbTaskOutputMigrationLevel
@@ -2393,7 +2393,7 @@
 
 ## MigrateSchemaSqlTaskOutputError
 ### Properties
-* **error**: ReportableException (ReadOnly)
+* **error**: [ReportableException](#reportableexception) (ReadOnly)
 * **resultType**: 'ErrorOutput' (Required)
 
 ## MigrateSchemaSqlServerSqlDbTaskOutputMigrationLevel
@@ -2415,8 +2415,8 @@
 
 ## CheckOCIDriverTaskProperties
 ### Properties
-* **input**: CheckOCIDriverTaskInput
-* **output**: CheckOCIDriverTaskOutput[] (ReadOnly)
+* **input**: [CheckOCIDriverTaskInput](#checkocidrivertaskinput)
+* **output**: [CheckOCIDriverTaskOutput](#checkocidrivertaskoutput)[] (ReadOnly)
 * **taskType**: 'Service.Check.OCI' (Required)
 
 ## CheckOCIDriverTaskInput
@@ -2425,8 +2425,8 @@
 
 ## CheckOCIDriverTaskOutput
 ### Properties
-* **installedDriver**: OracleOCIDriverInfo
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **installedDriver**: [OracleOCIDriverInfo](#oracleocidriverinfo)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## OracleOCIDriverInfo
 ### Properties
@@ -2439,8 +2439,8 @@
 
 ## InstallOCIDriverTaskProperties
 ### Properties
-* **input**: InstallOCIDriverTaskInput
-* **output**: InstallOCIDriverTaskOutput[] (ReadOnly)
+* **input**: [InstallOCIDriverTaskInput](#installocidrivertaskinput)
+* **output**: [InstallOCIDriverTaskOutput](#installocidrivertaskoutput)[] (ReadOnly)
 * **taskType**: 'Service.Install.OCI' (Required)
 
 ## InstallOCIDriverTaskInput
@@ -2449,65 +2449,65 @@
 
 ## InstallOCIDriverTaskOutput
 ### Properties
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## UploadOCIDriverTaskProperties
 ### Properties
-* **input**: UploadOCIDriverTaskInput
-* **output**: UploadOCIDriverTaskOutput[] (ReadOnly)
+* **input**: [UploadOCIDriverTaskInput](#uploadocidrivertaskinput)
+* **output**: [UploadOCIDriverTaskOutput](#uploadocidrivertaskoutput)[] (ReadOnly)
 * **taskType**: 'Service.Upload.OCI' (Required)
 
 ## UploadOCIDriverTaskInput
 ### Properties
-* **driverShare**: FileShare
+* **driverShare**: [FileShare](#fileshare)
 
 ## UploadOCIDriverTaskOutput
 ### Properties
 * **driverPackageName**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## ValidateMongoDbTaskProperties
 ### Properties
-* **input**: MongoDbMigrationSettings
-* **output**: MongoDbMigrationProgress[] (ReadOnly)
+* **input**: [MongoDbMigrationSettings](#mongodbmigrationsettings)
+* **output**: [MongoDbMigrationProgress](#mongodbmigrationprogress)[] (ReadOnly)
 * **taskType**: 'Validate.MongoDb' (Required)
 
 ## ValidateOracleAzureDbForPostgreSqlSyncTaskProperties
 ### Properties
-* **input**: MigrateOracleAzureDbPostgreSqlSyncTaskInput
-* **output**: ValidateOracleAzureDbPostgreSqlSyncTaskOutput[] (ReadOnly)
+* **input**: [MigrateOracleAzureDbPostgreSqlSyncTaskInput](#migrateoracleazuredbpostgresqlsynctaskinput)
+* **output**: [ValidateOracleAzureDbPostgreSqlSyncTaskOutput](#validateoracleazuredbpostgresqlsynctaskoutput)[] (ReadOnly)
 * **taskType**: 'Validate.Oracle.AzureDbPostgreSql.Sync' (Required)
 
 ## ValidateOracleAzureDbPostgreSqlSyncTaskOutput
 ### Properties
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## ValidateMigrationInputSqlServerSqlMITaskProperties
 ### Properties
-* **input**: ValidateMigrationInputSqlServerSqlMITaskInput
-* **output**: ValidateMigrationInputSqlServerSqlMITaskOutput[] (ReadOnly)
+* **input**: [ValidateMigrationInputSqlServerSqlMITaskInput](#validatemigrationinputsqlserversqlmitaskinput)
+* **output**: [ValidateMigrationInputSqlServerSqlMITaskOutput](#validatemigrationinputsqlserversqlmitaskoutput)[] (ReadOnly)
 * **taskType**: 'ValidateMigrationInput.SqlServer.AzureSqlDbMI' (Required)
 
 ## ValidateMigrationInputSqlServerSqlMITaskInput
 ### Properties
-* **backupBlobShare**: BlobShare (Required)
-* **backupFileShare**: FileShare
+* **backupBlobShare**: [BlobShare](#blobshare) (Required)
+* **backupFileShare**: [FileShare](#fileshare)
 * **backupMode**: 'CreateBackup' | 'ExistingBackup'
-* **selectedDatabases**: MigrateSqlServerSqlMIDatabaseInput[] (Required)
+* **selectedDatabases**: [MigrateSqlServerSqlMIDatabaseInput](#migratesqlserversqlmidatabaseinput)[] (Required)
 * **selectedLogins**: string[]
-* **sourceConnectionInfo**: SqlConnectionInfo (Required)
-* **targetConnectionInfo**: SqlConnectionInfo (Required)
+* **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
+* **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
 
 ## ValidateMigrationInputSqlServerSqlMITaskOutput
 ### Properties
-* **backupFolderErrors**: ReportableException[] (ReadOnly)
-* **backupShareCredentialsErrors**: ReportableException[] (ReadOnly)
-* **backupStorageAccountErrors**: ReportableException[] (ReadOnly)
-* **databaseBackupInfo**: DatabaseBackupInfo
-* **existingBackupErrors**: ReportableException[] (ReadOnly)
+* **backupFolderErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
+* **backupShareCredentialsErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
+* **backupStorageAccountErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
+* **databaseBackupInfo**: [DatabaseBackupInfo](#databasebackupinfo)
+* **existingBackupErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **restoreDatabaseNameErrors**: ReportableException[] (ReadOnly)
+* **restoreDatabaseNameErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## DatabaseBackupInfo
 ### Properties
@@ -2522,40 +2522,40 @@
 
 ## ValidateMigrationInputSqlServerSqlMISyncTaskProperties
 ### Properties
-* **input**: ValidateMigrationInputSqlServerSqlMISyncTaskInput
-* **output**: ValidateMigrationInputSqlServerSqlMISyncTaskOutput[] (ReadOnly)
+* **input**: [ValidateMigrationInputSqlServerSqlMISyncTaskInput](#validatemigrationinputsqlserversqlmisynctaskinput)
+* **output**: [ValidateMigrationInputSqlServerSqlMISyncTaskOutput](#validatemigrationinputsqlserversqlmisynctaskoutput)[] (ReadOnly)
 * **taskType**: 'ValidateMigrationInput.SqlServer.AzureSqlDbMI.Sync.LRS' (Required)
 
 ## ValidateMigrationInputSqlServerSqlMISyncTaskInput
 ### Properties
-* **azureApp**: AzureActiveDirectoryApp (Required)
-* **backupFileShare**: FileShare
-* **selectedDatabases**: MigrateSqlServerSqlMIDatabaseInput[] (Required)
-* **sourceConnectionInfo**: SqlConnectionInfo (Required)
+* **azureApp**: [AzureActiveDirectoryApp](#azureactivedirectoryapp) (Required)
+* **backupFileShare**: [FileShare](#fileshare)
+* **selectedDatabases**: [MigrateSqlServerSqlMIDatabaseInput](#migratesqlserversqlmidatabaseinput)[] (Required)
+* **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
 * **storageResourceId**: string (Required)
-* **targetConnectionInfo**: MiSqlConnectionInfo (Required)
+* **targetConnectionInfo**: [MiSqlConnectionInfo](#misqlconnectioninfo) (Required)
 
 ## ValidateMigrationInputSqlServerSqlMISyncTaskOutput
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## ValidateMigrationInputSqlServerSqlDbSyncTaskProperties
 ### Properties
-* **input**: ValidateSyncMigrationInputSqlServerTaskInput
-* **output**: ValidateSyncMigrationInputSqlServerTaskOutput[] (ReadOnly)
+* **input**: [ValidateSyncMigrationInputSqlServerTaskInput](#validatesyncmigrationinputsqlservertaskinput)
+* **output**: [ValidateSyncMigrationInputSqlServerTaskOutput](#validatesyncmigrationinputsqlservertaskoutput)[] (ReadOnly)
 * **taskType**: 'ValidateMigrationInput.SqlServer.SqlDb.Sync' (Required)
 
 ## ValidateSyncMigrationInputSqlServerTaskInput
 ### Properties
-* **selectedDatabases**: MigrateSqlServerSqlDbSyncDatabaseInput[] (Required)
-* **sourceConnectionInfo**: SqlConnectionInfo (Required)
-* **targetConnectionInfo**: SqlConnectionInfo (Required)
+* **selectedDatabases**: [MigrateSqlServerSqlDbSyncDatabaseInput](#migratesqlserversqldbsyncdatabaseinput)[] (Required)
+* **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
+* **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
 
 ## ValidateSyncMigrationInputSqlServerTaskOutput
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 

@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MultipleActivationKeyProperties
-* **tags**: TrackedResourceTags
+* **properties**: [MultipleActivationKeyProperties](#multipleactivationkeyproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.WindowsESU/multipleActivationKeys' (ReadOnly, DeployTimeConstant)
 
 ## MultipleActivationKeyProperties

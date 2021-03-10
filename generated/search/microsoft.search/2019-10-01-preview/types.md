@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SearchServiceProperties
-* **sku**: Sku
-* **tags**: ResourceTags
+* **properties**: [SearchServiceProperties](#searchserviceproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Search/searchServices/privateEndpointConnections@2019-10-01-preview
@@ -19,7 +19,7 @@
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: 'Microsoft.Search/searchServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -31,9 +31,9 @@
 ## SearchServiceProperties
 ### Properties
 * **hostingMode**: 'default' | 'highDensity'
-* **networkRuleSet**: NetworkRuleSet
+* **networkRuleSet**: [NetworkRuleSet](#networkruleset)
 * **partitionCount**: int
-* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **provisioningState**: 'failed' | 'provisioning' | 'succeeded' (ReadOnly)
 * **replicaCount**: int
 * **status**: 'degraded' | 'deleting' | 'disabled' | 'error' | 'provisioning' | 'running' (ReadOnly)
@@ -42,7 +42,7 @@
 ## NetworkRuleSet
 ### Properties
 * **endpointAccess**: 'Private' | 'Public'
-* **ipRules**: IpRule[]
+* **ipRules**: [IpRule](#iprule)[]
 
 ## IpRule
 ### Properties
@@ -52,13 +52,13 @@
 ### Properties
 * **id**: string
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpointConnectionPropertiesPrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionState
+* **privateEndpoint**: [PrivateEndpointConnectionPropertiesPrivateEndpoint](#privateendpointconnectionpropertiesprivateendpoint)
+* **privateLinkServiceConnectionState**: [PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionState](#privateendpointconnectionpropertiesprivatelinkserviceconnectionstate)
 
 ## PrivateEndpointConnectionPropertiesPrivateEndpoint
 ### Properties

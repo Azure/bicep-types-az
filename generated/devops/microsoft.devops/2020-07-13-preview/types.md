@@ -7,46 +7,46 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PipelineProperties (Required)
-* **systemData**: SystemData (ReadOnly)
-* **tags**: ResourceTags
+* **properties**: [PipelineProperties](#pipelineproperties) (Required)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevOps/pipelines' (ReadOnly, DeployTimeConstant)
 
 ## PipelineProperties
 * **Discriminator**: pipelineType
 
 ### Base Properties
-* **bootstrapConfiguration**: BootstrapConfiguration (Required)
+* **bootstrapConfiguration**: [BootstrapConfiguration](#bootstrapconfiguration) (Required)
 * **pipelineId**: int (ReadOnly)
 ### AzurePipelineProperties
 #### Properties
-* **organization**: OrganizationReference (Required)
+* **organization**: [OrganizationReference](#organizationreference) (Required)
 * **pipelineType**: 'azurePipeline' (Required)
-* **project**: ProjectReference (Required)
+* **project**: [ProjectReference](#projectreference) (Required)
 
 ### GithubWorkflowProperties
 #### Properties
 * **pipelineType**: 'githubWorkflow' (Required)
-* **repository**: CodeRepository (Required)
+* **repository**: [CodeRepository](#coderepository) (Required)
 
 
 ## BootstrapConfiguration
 ### Properties
-* **sourceRepository**: CodeRepository
-* **template**: PipelineTemplate (Required)
+* **sourceRepository**: [CodeRepository](#coderepository)
+* **template**: [PipelineTemplate](#pipelinetemplate) (Required)
 
 ## CodeRepository
 ### Properties
-* **authorization**: Authorization
+* **authorization**: [Authorization](#authorization)
 * **defaultBranch**: string (Required)
 * **id**: string (Required)
-* **properties**: CodeRepositoryProperties
+* **properties**: [CodeRepositoryProperties](#coderepositoryproperties)
 * **repositoryType**: 'gitHub' | 'vstsGit' (Required)
 
 ## Authorization
 ### Properties
 * **authorizationType**: 'personalAccessToken' (Required)
-* **parameters**: AuthorizationParameters
+* **parameters**: [AuthorizationParameters](#authorizationparameters)
 
 ## AuthorizationParameters
 ### Properties
@@ -61,7 +61,7 @@
 ## PipelineTemplate
 ### Properties
 * **id**: string (Required)
-* **parameters**: PipelineTemplateParameters
+* **parameters**: [PipelineTemplateParameters](#pipelinetemplateparameters)
 
 ## PipelineTemplateParameters
 ### Properties
@@ -70,9 +70,9 @@
 
 ## AzurePipelineProperties
 ### Properties
-* **organization**: OrganizationReference (Required)
+* **organization**: [OrganizationReference](#organizationreference) (Required)
 * **pipelineType**: 'azurePipeline' (Required)
-* **project**: ProjectReference (Required)
+* **project**: [ProjectReference](#projectreference) (Required)
 
 ## OrganizationReference
 ### Properties
@@ -87,7 +87,7 @@
 ## GithubWorkflowProperties
 ### Properties
 * **pipelineType**: 'githubWorkflow' (Required)
-* **repository**: CodeRepository (Required)
+* **repository**: [CodeRepository](#coderepository) (Required)
 
 ## SystemData
 ### Properties

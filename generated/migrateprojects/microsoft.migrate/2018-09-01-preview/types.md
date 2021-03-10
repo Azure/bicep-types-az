@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MigrateProjectProperties
-* **tags**: MigrateProjectTags
+* **properties**: [MigrateProjectProperties](#migrateprojectproperties)
+* **tags**: [MigrateProjectTags](#migrateprojecttags)
 * **type**: 'Microsoft.Migrate/migrateProjects' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Migrate/migrateProjects/solutions@2018-09-01-preview
@@ -19,7 +19,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SolutionProperties
+* **properties**: [SolutionProperties](#solutionproperties)
 * **type**: 'Microsoft.Migrate/migrateProjects/solutions' (ReadOnly, DeployTimeConstant)
 
 ## MigrateProjectProperties
@@ -28,18 +28,18 @@
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded'
 * **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started' (ReadOnly)
 * **registeredTools**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration' | 'ServerMigration_Replication' | 'Turbonomic' | 'Zerto'[]
-* **summary**: MigrateProjectPropertiesSummary (ReadOnly)
+* **summary**: [MigrateProjectPropertiesSummary](#migrateprojectpropertiessummary) (ReadOnly)
 
 ## MigrateProjectPropertiesSummary
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ProjectSummary
+* **Additional Properties Type**: [ProjectSummary](#projectsummary)
 
 ## ProjectSummary
 * **Discriminator**: instanceType
 
 ### Base Properties
-* **extendedSummary**: ProjectSummaryExtendedSummary
+* **extendedSummary**: [ProjectSummaryExtendedSummary](#projectsummaryextendedsummary)
 * **lastSummaryRefreshedTime**: string
 * **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started'
 ### DatabaseProjectSummary
@@ -81,17 +81,17 @@
 ## SolutionProperties
 ### Properties
 * **cleanupState**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Started'
-* **details**: SolutionDetails
+* **details**: [SolutionDetails](#solutiondetails)
 * **goal**: 'Databases' | 'Servers'
 * **purpose**: 'Assessment' | 'Discovery' | 'Migration'
 * **status**: 'Active' | 'Inactive'
-* **summary**: SolutionSummary
+* **summary**: [SolutionSummary](#solutionsummary)
 * **tool**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration' | 'ServerMigration_Replication' | 'Turbonomic' | 'Zerto'
 
 ## SolutionDetails
 ### Properties
 * **assessmentCount**: int
-* **extendedDetails**: SolutionDetailsExtendedDetails
+* **extendedDetails**: [SolutionDetailsExtendedDetails](#solutiondetailsextendeddetails)
 * **groupCount**: int
 
 ## SolutionDetailsExtendedDetails

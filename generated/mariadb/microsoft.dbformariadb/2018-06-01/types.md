@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerPropertiesForCreate (Required)
-* **sku**: Sku
-* **tags**: ServerForCreateTags
+* **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required)
+* **sku**: [Sku](#sku)
+* **tags**: [ServerForCreateTags](#serverforcreatetags)
 * **type**: 'Microsoft.DBForMariaDB/servers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMariaDB/servers/configurations@2018-06-01
@@ -18,7 +18,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationProperties
+* **properties**: [ConfigurationProperties](#configurationproperties)
 * **type**: 'Microsoft.DBForMariaDB/servers/configurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMariaDB/servers/databases@2018-06-01
@@ -27,7 +27,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
+* **properties**: [DatabaseProperties](#databaseproperties)
 * **type**: 'Microsoft.DBForMariaDB/servers/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMariaDB/servers/firewallRules@2018-06-01
@@ -36,7 +36,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: FirewallRuleProperties (Required)
+* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required)
 * **type**: 'Microsoft.DBForMariaDB/servers/firewallRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBforMariaDB/servers/privateEndpointConnections@2018-06-01
@@ -45,7 +45,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: 'Microsoft.DBforMariaDB/servers/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBforMariaDB/servers/securityAlertPolicies@2018-06-01
@@ -54,7 +54,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'Default' (Required, DeployTimeConstant)
-* **properties**: SecurityAlertPolicyProperties
+* **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties)
 * **type**: 'Microsoft.DBforMariaDB/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMariaDB/servers/virtualNetworkRules@2018-06-01
@@ -63,7 +63,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkRuleProperties
+* **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties)
 * **type**: 'Microsoft.DBForMariaDB/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
 
 ## ServerPropertiesForCreate
@@ -74,12 +74,12 @@
 * **earliestRestoreDate**: string (ReadOnly)
 * **fullyQualifiedDomainName**: string (ReadOnly)
 * **masterServerId**: string (ReadOnly)
-* **privateEndpointConnections**: ServerPrivateEndpointConnection[] (ReadOnly)
+* **privateEndpointConnections**: [ServerPrivateEndpointConnection](#serverprivateendpointconnection)[] (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 * **replicaCapacity**: int (ReadOnly)
 * **replicationRole**: string (ReadOnly)
 * **sslEnforcement**: 'Disabled' | 'Enabled'
-* **storageProfile**: StorageProfile
+* **storageProfile**: [StorageProfile](#storageprofile)
 * **userVisibleState**: 'Disabled' | 'Dropping' | 'Ready' (ReadOnly)
 * **version**: '5.6' | '5.7'
 ### ServerPropertiesForDefaultCreate
@@ -108,12 +108,12 @@
 ## ServerPrivateEndpointConnection
 ### Properties
 * **id**: string (ReadOnly)
-* **properties**: ServerPrivateEndpointConnectionProperties (ReadOnly)
+* **properties**: [ServerPrivateEndpointConnectionProperties](#serverprivateendpointconnectionproperties) (ReadOnly)
 
 ## ServerPrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpointProperty (ReadOnly)
-* **privateLinkServiceConnectionState**: ServerPrivateLinkServiceConnectionStateProperty (ReadOnly)
+* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty) (ReadOnly)
+* **privateLinkServiceConnectionState**: [ServerPrivateLinkServiceConnectionStateProperty](#serverprivatelinkserviceconnectionstateproperty) (ReadOnly)
 * **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' (ReadOnly)
 
 ## PrivateEndpointProperty
@@ -189,8 +189,8 @@
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpointProperty
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionStateProperty
+* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty)
 * **provisioningState**: string (ReadOnly)
 
 ## PrivateLinkServiceConnectionStateProperty

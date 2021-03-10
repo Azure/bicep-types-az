@@ -8,23 +8,23 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DomainProperties
-* **tags**: ResourceTags
+* **properties**: [DomainProperties](#domainproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant)
 
 ## DomainProperties
 ### Properties
 * **autoRenew**: bool
-* **consent**: DomainPurchaseConsent
-* **contactAdmin**: Contact
-* **contactBilling**: Contact
-* **contactRegistrant**: Contact
-* **contactTech**: Contact
+* **consent**: [DomainPurchaseConsent](#domainpurchaseconsent)
+* **contactAdmin**: [Contact](#contact)
+* **contactBilling**: [Contact](#contact)
+* **contactRegistrant**: [Contact](#contact)
+* **contactTech**: [Contact](#contact)
 * **createdTime**: string
 * **domainNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive'[]
 * **expirationTime**: string
 * **lastRenewedTime**: string
-* **managedHostNames**: HostName[]
+* **managedHostNames**: [HostName](#hostname)[]
 * **nameServers**: string[]
 * **privacy**: bool
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded'
@@ -39,7 +39,7 @@
 
 ## Contact
 ### Properties
-* **addressMailing**: Address
+* **addressMailing**: [Address](#address)
 * **email**: string
 * **fax**: string
 * **jobTitle**: string

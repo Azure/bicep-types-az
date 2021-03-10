@@ -7,18 +7,18 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ImageTemplateProperties
-* **tags**: ResourceTags
+* **properties**: [ImageTemplateProperties](#imagetemplateproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.VirtualMachineImages/imageTemplates' (ReadOnly, DeployTimeConstant)
 
 ## ImageTemplateProperties
 ### Properties
-* **customize**: ImageTemplateCustomizer[]
-* **distribute**: ImageTemplateDistributor[] (Required)
-* **lastRunStatus**: ImageTemplateLastRunStatus (ReadOnly)
-* **provisioningError**: ProvisioningError (ReadOnly)
+* **customize**: [ImageTemplateCustomizer](#imagetemplatecustomizer)[]
+* **distribute**: [ImageTemplateDistributor](#imagetemplatedistributor)[] (Required)
+* **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly)
+* **provisioningError**: [ProvisioningError](#provisioningerror) (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
-* **source**: ImageTemplateSource (Required)
+* **source**: [ImageTemplateSource](#imagetemplatesource) (Required)
 
 ## ImageTemplateCustomizer
 * **Discriminator**: type
@@ -70,7 +70,7 @@
 * **Discriminator**: type
 
 ### Base Properties
-* **artifactTags**: ImageTemplateDistributorArtifactTags
+* **artifactTags**: [ImageTemplateDistributorArtifactTags](#imagetemplatedistributorartifacttags)
 * **runOutputName**: string (Required)
 ### ImageTemplateManagedImageDistributor
 #### Properties

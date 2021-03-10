@@ -7,16 +7,16 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: JobProperties (Required)
-* **sku**: Sku (Required)
-* **tags**: ResourceTags
+* **properties**: [JobProperties](#jobproperties) (Required)
+* **sku**: [Sku](#sku) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DataBox/jobs' (ReadOnly, DeployTimeConstant)
 
 ## JobProperties
 ### Properties
 * **cancellationReason**: string (ReadOnly)
-* **details**: JobDetails
-* **error**: Error (ReadOnly)
+* **details**: [JobDetails](#jobdetails)
+* **error**: [Error](#error) (ReadOnly)
 * **isCancellable**: bool (ReadOnly)
 * **isDeletable**: bool (ReadOnly)
 * **isShippingAddressEditable**: bool (ReadOnly)
@@ -28,33 +28,33 @@
 
 ### Base Properties
 * **chainOfCustodySasKey**: string (ReadOnly)
-* **contactDetails**: ContactDetails (Required)
-* **copyLogDetails**: CopyLogDetails[] (ReadOnly)
-* **deliveryPackage**: PackageShippingDetails (ReadOnly)
-* **destinationAccountDetails**: DestinationAccountDetails[] (Required)
-* **errorDetails**: JobErrorDetails[] (ReadOnly)
+* **contactDetails**: [ContactDetails](#contactdetails) (Required)
+* **copyLogDetails**: [CopyLogDetails](#copylogdetails)[] (ReadOnly)
+* **deliveryPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly)
+* **destinationAccountDetails**: [DestinationAccountDetails](#destinationaccountdetails)[] (Required)
+* **errorDetails**: [JobErrorDetails](#joberrordetails)[] (ReadOnly)
 * **expectedDataSizeInTeraBytes**: int
-* **jobStages**: JobStages[] (ReadOnly)
-* **preferences**: Preferences
-* **returnPackage**: PackageShippingDetails (ReadOnly)
+* **jobStages**: [JobStages](#jobstages)[] (ReadOnly)
+* **preferences**: [Preferences](#preferences)
+* **returnPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly)
 * **reverseShipmentLabelSasKey**: string (ReadOnly)
-* **shippingAddress**: ShippingAddress (Required)
+* **shippingAddress**: [ShippingAddress](#shippingaddress) (Required)
 ### DataBoxJobDetails
 #### Properties
-* **copyProgress**: CopyProgress[] (ReadOnly)
+* **copyProgress**: [CopyProgress](#copyprogress)[] (ReadOnly)
 * **jobDetailsType**: 'DataBox' (Required)
 
 ### DataBoxDiskJobDetails
 #### Properties
-* **copyProgress**: DataBoxDiskCopyProgress[] (ReadOnly)
-* **disksAndSizeDetails**: DataBoxDiskJobDetailsDisksAndSizeDetails (ReadOnly)
+* **copyProgress**: [DataBoxDiskCopyProgress](#databoxdiskcopyprogress)[] (ReadOnly)
+* **disksAndSizeDetails**: [DataBoxDiskJobDetailsDisksAndSizeDetails](#databoxdiskjobdetailsdisksandsizedetails) (ReadOnly)
 * **jobDetailsType**: 'DataBoxDisk' (Required)
 * **passkey**: string
-* **preferredDisks**: DataBoxDiskJobDetailsPreferredDisks
+* **preferredDisks**: [DataBoxDiskJobDetailsPreferredDisks](#databoxdiskjobdetailspreferreddisks)
 
 ### DataBoxHeavyJobDetails
 #### Properties
-* **copyProgress**: CopyProgress[] (ReadOnly)
+* **copyProgress**: [CopyProgress](#copyprogress)[] (ReadOnly)
 * **jobDetailsType**: 'DataBoxHeavy' (Required)
 
 
@@ -63,7 +63,7 @@
 * **contactName**: string (Required)
 * **emailList**: string[] (Required)
 * **mobile**: string
-* **notificationPreference**: NotificationPreference[]
+* **notificationPreference**: [NotificationPreference](#notificationpreference)[]
 * **phone**: string (Required)
 * **phoneExtension**: string
 
@@ -159,7 +159,7 @@
 ## JobStages
 ### Properties
 * **displayName**: string (ReadOnly)
-* **errorDetails**: JobErrorDetails[] (ReadOnly)
+* **errorDetails**: [JobErrorDetails](#joberrordetails)[] (ReadOnly)
 * **jobStageDetails**: any (ReadOnly)
 * **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' (ReadOnly)
 * **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' | 'SucceededWithErrors' (ReadOnly)
@@ -184,7 +184,7 @@
 
 ## DataBoxJobDetails
 ### Properties
-* **copyProgress**: CopyProgress[] (ReadOnly)
+* **copyProgress**: [CopyProgress](#copyprogress)[] (ReadOnly)
 * **jobDetailsType**: 'DataBox' (Required)
 
 ## CopyProgress
@@ -198,11 +198,11 @@
 
 ## DataBoxDiskJobDetails
 ### Properties
-* **copyProgress**: DataBoxDiskCopyProgress[] (ReadOnly)
-* **disksAndSizeDetails**: DataBoxDiskJobDetailsDisksAndSizeDetails (ReadOnly)
+* **copyProgress**: [DataBoxDiskCopyProgress](#databoxdiskcopyprogress)[] (ReadOnly)
+* **disksAndSizeDetails**: [DataBoxDiskJobDetailsDisksAndSizeDetails](#databoxdiskjobdetailsdisksandsizedetails) (ReadOnly)
 * **jobDetailsType**: 'DataBoxDisk' (Required)
 * **passkey**: string
-* **preferredDisks**: DataBoxDiskJobDetailsPreferredDisks
+* **preferredDisks**: [DataBoxDiskJobDetailsPreferredDisks](#databoxdiskjobdetailspreferreddisks)
 
 ## DataBoxDiskCopyProgress
 ### Properties
@@ -223,7 +223,7 @@
 
 ## DataBoxHeavyJobDetails
 ### Properties
-* **copyProgress**: CopyProgress[] (ReadOnly)
+* **copyProgress**: [CopyProgress](#copyprogress)[] (ReadOnly)
 * **jobDetailsType**: 'DataBoxHeavy' (Required)
 
 ## Error

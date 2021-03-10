@@ -6,7 +6,7 @@
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DeviceSecurityGroupProperties
+* **properties**: [DeviceSecurityGroupProperties](#devicesecuritygroupproperties)
 * **type**: 'Microsoft.Security/deviceSecurityGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/iotSecuritySolutions@2019-08-01
@@ -16,17 +16,17 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IoTSecuritySolutionProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: TagsResourceTags
+* **properties**: [IoTSecuritySolutionProperties](#iotsecuritysolutionproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [TagsResourceTags](#tagsresourcetags)
 * **type**: 'Microsoft.Security/iotSecuritySolutions' (ReadOnly, DeployTimeConstant)
 
 ## DeviceSecurityGroupProperties
 ### Properties
-* **allowlistRules**: AllowlistCustomAlertRule[]
-* **denylistRules**: DenylistCustomAlertRule[]
-* **thresholdRules**: ThresholdCustomAlertRule[]
-* **timeWindowRules**: TimeWindowCustomAlertRule[]
+* **allowlistRules**: [AllowlistCustomAlertRule](#allowlistcustomalertrule)[]
+* **denylistRules**: [DenylistCustomAlertRule](#denylistcustomalertrule)[]
+* **thresholdRules**: [ThresholdCustomAlertRule](#thresholdcustomalertrule)[]
+* **timeWindowRules**: [TimeWindowCustomAlertRule](#timewindowcustomalertrule)[]
 
 ## AllowlistCustomAlertRule
 * **Discriminator**: ruleType
@@ -294,16 +294,16 @@
 
 ## IoTSecuritySolutionProperties
 ### Properties
-* **additionalWorkspaces**: AdditionalWorkspacesProperties[]
+* **additionalWorkspaces**: [AdditionalWorkspacesProperties](#additionalworkspacesproperties)[]
 * **autoDiscoveredResources**: string[] (ReadOnly)
 * **disabledDataSources**: 'TwinData'[]
 * **displayName**: string (Required)
 * **export**: 'RawEvents'[]
 * **iotHubs**: string[] (Required)
-* **recommendationsConfiguration**: RecommendationConfigurationProperties[]
+* **recommendationsConfiguration**: [RecommendationConfigurationProperties](#recommendationconfigurationproperties)[]
 * **status**: 'Disabled' | 'Enabled'
 * **unmaskedIpLoggingStatus**: 'Disabled' | 'Enabled'
-* **userDefinedResources**: UserDefinedResourcesProperties
+* **userDefinedResources**: [UserDefinedResourcesProperties](#userdefinedresourcesproperties)
 * **workspace**: string
 
 ## AdditionalWorkspacesProperties

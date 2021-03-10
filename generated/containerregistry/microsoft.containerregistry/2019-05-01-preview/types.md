@@ -6,8 +6,8 @@
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ScopeMapProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [ScopeMapProperties](#scopemapproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.ContainerRegistry/registries/scopeMaps' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerRegistry/registries/tokens@2019-05-01-preview
@@ -16,8 +16,8 @@
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TokenProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [TokenProperties](#tokenproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.ContainerRegistry/registries/tokens' (ReadOnly, DeployTimeConstant)
 
 ## ScopeMapProperties
@@ -40,16 +40,16 @@
 ## TokenProperties
 ### Properties
 * **creationDate**: string (ReadOnly)
-* **credentials**: TokenCredentialsProperties
+* **credentials**: [TokenCredentialsProperties](#tokencredentialsproperties)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **scopeMapId**: string
 * **status**: 'disabled' | 'enabled'
 
 ## TokenCredentialsProperties
 ### Properties
-* **activeDirectoryObject**: ActiveDirectoryObject
-* **certificates**: TokenCertificate[]
-* **passwords**: TokenPassword[]
+* **activeDirectoryObject**: [ActiveDirectoryObject](#activedirectoryobject)
+* **certificates**: [TokenCertificate](#tokencertificate)[]
+* **passwords**: [TokenPassword](#tokenpassword)[]
 
 ## ActiveDirectoryObject
 ### Properties

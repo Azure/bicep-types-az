@@ -8,8 +8,8 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: any (ReadOnly)
-* **sku**: AzureSku
-* **tags**: CreateWorkspaceCollectionRequestTags
+* **sku**: [AzureSku](#azuresku)
+* **tags**: [CreateWorkspaceCollectionRequestTags](#createworkspacecollectionrequesttags)
 * **type**: 'Microsoft.PowerBI/workspaceCollections' (ReadOnly, DeployTimeConstant)
 
 ## AzureSku

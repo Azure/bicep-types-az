@@ -7,10 +7,10 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **plan**: Plan
-* **properties**: VirtualMachineProperties
-* **resources**: VirtualMachineExtension[] (ReadOnly)
-* **tags**: ResourceTags
+* **plan**: [Plan](#plan)
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
+* **resources**: [VirtualMachineExtension](#virtualmachineextension)[] (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/virtualMachines' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Compute/virtualMachines/extensions@2015-06-15
@@ -20,8 +20,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualMachineExtensionProperties
-* **tags**: ResourceTags
+* **properties**: [VirtualMachineExtensionProperties](#virtualmachineextensionproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/virtualMachines/extensions' (ReadOnly, DeployTimeConstant)
 
 ## Plan
@@ -33,15 +33,15 @@
 
 ## VirtualMachineProperties
 ### Properties
-* **availabilitySet**: SubResource
-* **diagnosticsProfile**: DiagnosticsProfile
-* **hardwareProfile**: HardwareProfile
-* **instanceView**: VirtualMachineInstanceView (ReadOnly)
+* **availabilitySet**: [SubResource](#subresource)
+* **diagnosticsProfile**: [DiagnosticsProfile](#diagnosticsprofile)
+* **hardwareProfile**: [HardwareProfile](#hardwareprofile)
+* **instanceView**: [VirtualMachineInstanceView](#virtualmachineinstanceview) (ReadOnly)
 * **licenseType**: string
-* **networkProfile**: NetworkProfile
-* **osProfile**: OSProfile
+* **networkProfile**: [NetworkProfile](#networkprofile)
+* **osProfile**: [OSProfile](#osprofile)
 * **provisioningState**: string (ReadOnly)
-* **storageProfile**: StorageProfile
+* **storageProfile**: [StorageProfile](#storageprofile)
 
 ## SubResource
 ### Properties
@@ -49,7 +49,7 @@
 
 ## DiagnosticsProfile
 ### Properties
-* **bootDiagnostics**: BootDiagnostics
+* **bootDiagnostics**: [BootDiagnostics](#bootdiagnostics)
 
 ## BootDiagnostics
 ### Properties
@@ -62,14 +62,14 @@
 
 ## VirtualMachineInstanceView
 ### Properties
-* **bootDiagnostics**: BootDiagnosticsInstanceView
-* **disks**: DiskInstanceView[]
-* **extensions**: VirtualMachineExtensionInstanceView[]
+* **bootDiagnostics**: [BootDiagnosticsInstanceView](#bootdiagnosticsinstanceview)
+* **disks**: [DiskInstanceView](#diskinstanceview)[]
+* **extensions**: [VirtualMachineExtensionInstanceView](#virtualmachineextensioninstanceview)[]
 * **platformFaultDomain**: int
 * **platformUpdateDomain**: int
 * **rdpThumbPrint**: string
-* **statuses**: InstanceViewStatus[]
-* **vmAgent**: VirtualMachineAgentInstanceView
+* **statuses**: [InstanceViewStatus](#instanceviewstatus)[]
+* **vmAgent**: [VirtualMachineAgentInstanceView](#virtualmachineagentinstanceview)
 
 ## BootDiagnosticsInstanceView
 ### Properties
@@ -79,7 +79,7 @@
 ## DiskInstanceView
 ### Properties
 * **name**: string
-* **statuses**: InstanceViewStatus[]
+* **statuses**: [InstanceViewStatus](#instanceviewstatus)[]
 
 ## InstanceViewStatus
 ### Properties
@@ -92,31 +92,31 @@
 ## VirtualMachineExtensionInstanceView
 ### Properties
 * **name**: string
-* **statuses**: InstanceViewStatus[]
-* **substatuses**: InstanceViewStatus[]
+* **statuses**: [InstanceViewStatus](#instanceviewstatus)[]
+* **substatuses**: [InstanceViewStatus](#instanceviewstatus)[]
 * **type**: string
 * **typeHandlerVersion**: string
 
 ## VirtualMachineAgentInstanceView
 ### Properties
-* **extensionHandlers**: VirtualMachineExtensionHandlerInstanceView[]
-* **statuses**: InstanceViewStatus[]
+* **extensionHandlers**: [VirtualMachineExtensionHandlerInstanceView](#virtualmachineextensionhandlerinstanceview)[]
+* **statuses**: [InstanceViewStatus](#instanceviewstatus)[]
 * **vmAgentVersion**: string
 
 ## VirtualMachineExtensionHandlerInstanceView
 ### Properties
-* **status**: InstanceViewStatus
+* **status**: [InstanceViewStatus](#instanceviewstatus)
 * **type**: string
 * **typeHandlerVersion**: string
 
 ## NetworkProfile
 ### Properties
-* **networkInterfaces**: NetworkInterfaceReference[]
+* **networkInterfaces**: [NetworkInterfaceReference](#networkinterfacereference)[]
 
 ## NetworkInterfaceReference
 ### Properties
 * **id**: string
-* **properties**: NetworkInterfaceReferenceProperties
+* **properties**: [NetworkInterfaceReferenceProperties](#networkinterfacereferenceproperties)
 
 ## NetworkInterfaceReferenceProperties
 ### Properties
@@ -128,18 +128,18 @@
 * **adminUsername**: string
 * **computerName**: string
 * **customData**: string
-* **linuxConfiguration**: LinuxConfiguration
-* **secrets**: VaultSecretGroup[]
-* **windowsConfiguration**: WindowsConfiguration
+* **linuxConfiguration**: [LinuxConfiguration](#linuxconfiguration)
+* **secrets**: [VaultSecretGroup](#vaultsecretgroup)[]
+* **windowsConfiguration**: [WindowsConfiguration](#windowsconfiguration)
 
 ## LinuxConfiguration
 ### Properties
 * **disablePasswordAuthentication**: bool
-* **ssh**: SshConfiguration
+* **ssh**: [SshConfiguration](#sshconfiguration)
 
 ## SshConfiguration
 ### Properties
-* **publicKeys**: SshPublicKey[]
+* **publicKeys**: [SshPublicKey](#sshpublickey)[]
 
 ## SshPublicKey
 ### Properties
@@ -148,8 +148,8 @@
 
 ## VaultSecretGroup
 ### Properties
-* **sourceVault**: SubResource
-* **vaultCertificates**: VaultCertificate[]
+* **sourceVault**: [SubResource](#subresource)
+* **vaultCertificates**: [VaultCertificate](#vaultcertificate)[]
 
 ## VaultCertificate
 ### Properties
@@ -158,11 +158,11 @@
 
 ## WindowsConfiguration
 ### Properties
-* **additionalUnattendContent**: AdditionalUnattendContent[]
+* **additionalUnattendContent**: [AdditionalUnattendContent](#additionalunattendcontent)[]
 * **enableAutomaticUpdates**: bool
 * **provisionVMAgent**: bool
 * **timeZone**: string
-* **winRM**: WinRMConfiguration
+* **winRM**: [WinRMConfiguration](#winrmconfiguration)
 
 ## AdditionalUnattendContent
 ### Properties
@@ -173,7 +173,7 @@
 
 ## WinRMConfiguration
 ### Properties
-* **listeners**: WinRMListener[]
+* **listeners**: [WinRMListener](#winrmlistener)[]
 
 ## WinRMListener
 ### Properties
@@ -182,19 +182,19 @@
 
 ## StorageProfile
 ### Properties
-* **dataDisks**: DataDisk[]
-* **imageReference**: ImageReference
-* **osDisk**: OSDisk
+* **dataDisks**: [DataDisk](#datadisk)[]
+* **imageReference**: [ImageReference](#imagereference)
+* **osDisk**: [OSDisk](#osdisk)
 
 ## DataDisk
 ### Properties
 * **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
 * **diskSizeGB**: int
-* **image**: VirtualHardDisk
+* **image**: [VirtualHardDisk](#virtualharddisk)
 * **lun**: int (Required)
 * **name**: string (Required)
-* **vhd**: VirtualHardDisk (Required)
+* **vhd**: [VirtualHardDisk](#virtualharddisk) (Required)
 
 ## VirtualHardDisk
 ### Properties
@@ -212,42 +212,42 @@
 * **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
 * **diskSizeGB**: int
-* **encryptionSettings**: DiskEncryptionSettings
-* **image**: VirtualHardDisk
+* **encryptionSettings**: [DiskEncryptionSettings](#diskencryptionsettings)
+* **image**: [VirtualHardDisk](#virtualharddisk)
 * **name**: string (Required)
 * **osType**: 'Linux' | 'Windows'
-* **vhd**: VirtualHardDisk (Required)
+* **vhd**: [VirtualHardDisk](#virtualharddisk) (Required)
 
 ## DiskEncryptionSettings
 ### Properties
-* **diskEncryptionKey**: KeyVaultSecretReference (Required)
+* **diskEncryptionKey**: [KeyVaultSecretReference](#keyvaultsecretreference) (Required)
 * **enabled**: bool
-* **keyEncryptionKey**: KeyVaultKeyReference
+* **keyEncryptionKey**: [KeyVaultKeyReference](#keyvaultkeyreference)
 
 ## KeyVaultSecretReference
 ### Properties
 * **secretUrl**: string (Required)
-* **sourceVault**: SubResource (Required)
+* **sourceVault**: [SubResource](#subresource) (Required)
 
 ## KeyVaultKeyReference
 ### Properties
 * **keyUrl**: string (Required)
-* **sourceVault**: SubResource (Required)
+* **sourceVault**: [SubResource](#subresource) (Required)
 
 ## VirtualMachineExtension
 ### Properties
 * **id**: string (ReadOnly)
 * **location**: string (Required)
 * **name**: string (ReadOnly)
-* **properties**: VirtualMachineExtensionProperties
-* **tags**: ResourceTags
+* **properties**: [VirtualMachineExtensionProperties](#virtualmachineextensionproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
 ## VirtualMachineExtensionProperties
 ### Properties
 * **autoUpgradeMinorVersion**: bool
 * **forceUpdateTag**: string
-* **instanceView**: VirtualMachineExtensionInstanceView
+* **instanceView**: [VirtualMachineExtensionInstanceView](#virtualmachineextensioninstanceview)
 * **protectedSettings**: any
 * **provisioningState**: string (ReadOnly)
 * **publisher**: string

@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationStoreProperties
-* **tags**: ResourceTags
+* **properties**: [ConfigurationStoreProperties](#configurationstoreproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.AppConfiguration/configurationStores' (ReadOnly, DeployTimeConstant)
 
 ## ConfigurationStoreProperties

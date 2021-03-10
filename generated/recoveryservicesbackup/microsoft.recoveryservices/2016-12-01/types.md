@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProtectionContainer
-* **tags**: ResourceTags
+* **properties**: [ProtectionContainer](#protectioncontainer)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.RecoveryServices/vaults/backupstorageconfig@2016-12-01
@@ -20,8 +20,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BackupResourceConfig
-* **tags**: ResourceTags
+* **properties**: [BackupResourceConfig](#backupresourceconfig)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupstorageconfig' (ReadOnly, DeployTimeConstant)
 
 ## ProtectionContainer
@@ -43,7 +43,7 @@
 ### GenericContainer
 #### Properties
 * **containerType**: 'GenericContainer' (Required)
-* **extendedInformation**: GenericContainerExtendedInfo
+* **extendedInformation**: [GenericContainerExtendedInfo](#genericcontainerextendedinfo)
 * **fabricName**: string
 
 ### AzureIaaSClassicComputeVMContainer
@@ -77,8 +77,8 @@
 * **containerHealthState**: string
 * **containerId**: int
 * **containerType**: 'Windows' (Required)
-* **extendedInfo**: MabContainerExtendedInfo
-* **mabContainerHealthDetails**: MABContainerHealthDetails[]
+* **extendedInfo**: [MabContainerExtendedInfo](#mabcontainerextendedinfo)
+* **mabContainerHealthDetails**: [MABContainerHealthDetails](#mabcontainerhealthdetails)[]
 * **protectedItemCount**: int
 
 
@@ -93,14 +93,14 @@
 ## GenericContainer
 ### Properties
 * **containerType**: 'GenericContainer' (Required)
-* **extendedInformation**: GenericContainerExtendedInfo
+* **extendedInformation**: [GenericContainerExtendedInfo](#genericcontainerextendedinfo)
 * **fabricName**: string
 
 ## GenericContainerExtendedInfo
 ### Properties
-* **containerIdentityInfo**: ContainerIdentityInfo
+* **containerIdentityInfo**: [ContainerIdentityInfo](#containeridentityinfo)
 * **rawCertData**: string
-* **serviceEndpoints**: GenericContainerExtendedInfoServiceEndpoints
+* **serviceEndpoints**: [GenericContainerExtendedInfoServiceEndpoints](#genericcontainerextendedinfoserviceendpoints)
 
 ## ContainerIdentityInfo
 ### Properties
@@ -145,8 +145,8 @@
 * **containerHealthState**: string
 * **containerId**: int
 * **containerType**: 'Windows' (Required)
-* **extendedInfo**: MabContainerExtendedInfo
-* **mabContainerHealthDetails**: MABContainerHealthDetails[]
+* **extendedInfo**: [MabContainerExtendedInfo](#mabcontainerextendedinfo)
+* **mabContainerHealthDetails**: [MABContainerHealthDetails](#mabcontainerhealthdetails)[]
 * **protectedItemCount**: int
 
 ## MabContainerExtendedInfo

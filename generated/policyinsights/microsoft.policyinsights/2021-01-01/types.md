@@ -6,15 +6,15 @@
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AttestationProperties (Required)
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [AttestationProperties](#attestationproperties) (Required)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.PolicyInsights/attestations' (ReadOnly, DeployTimeConstant)
 
 ## AttestationProperties
 ### Properties
 * **comments**: string
 * **complianceState**: 'Compliant' | 'NonCompliant' | 'Unknown'
-* **evidence**: AttestationEvidence[]
+* **evidence**: [AttestationEvidence](#attestationevidence)[]
 * **expiresOn**: string
 * **lastComplianceStateChangeAt**: string (ReadOnly)
 * **owner**: string

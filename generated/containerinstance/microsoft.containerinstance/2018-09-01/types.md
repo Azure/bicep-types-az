@@ -7,39 +7,39 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ContainerGroupProperties (Required)
-* **tags**: ResourceTags
+* **properties**: [ContainerGroupProperties](#containergroupproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant)
 
 ## ContainerGroupProperties
 ### Properties
-* **containers**: Container[] (Required)
-* **diagnostics**: ContainerGroupDiagnostics
-* **imageRegistryCredentials**: ImageRegistryCredential[]
-* **instanceView**: ContainerGroupPropertiesInstanceView (ReadOnly)
-* **ipAddress**: IpAddress
-* **networkProfile**: ContainerGroupNetworkProfile
+* **containers**: [Container](#container)[] (Required)
+* **diagnostics**: [ContainerGroupDiagnostics](#containergroupdiagnostics)
+* **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]
+* **instanceView**: [ContainerGroupPropertiesInstanceView](#containergrouppropertiesinstanceview) (ReadOnly)
+* **ipAddress**: [IpAddress](#ipaddress)
+* **networkProfile**: [ContainerGroupNetworkProfile](#containergroupnetworkprofile)
 * **osType**: 'Linux' | 'Windows' (Required)
 * **provisioningState**: string (ReadOnly)
 * **restartPolicy**: 'Always' | 'Never' | 'OnFailure'
-* **volumes**: Volume[]
+* **volumes**: [Volume](#volume)[]
 
 ## Container
 ### Properties
 * **name**: string (Required)
-* **properties**: ContainerProperties (Required)
+* **properties**: [ContainerProperties](#containerproperties) (Required)
 
 ## ContainerProperties
 ### Properties
 * **command**: string[]
-* **environmentVariables**: EnvironmentVariable[]
+* **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]
 * **image**: string (Required)
-* **instanceView**: ContainerPropertiesInstanceView (ReadOnly)
-* **livenessProbe**: ContainerProbe
-* **ports**: ContainerPort[]
-* **readinessProbe**: ContainerProbe
-* **resources**: ResourceRequirements (Required)
-* **volumeMounts**: VolumeMount[]
+* **instanceView**: [ContainerPropertiesInstanceView](#containerpropertiesinstanceview) (ReadOnly)
+* **livenessProbe**: [ContainerProbe](#containerprobe)
+* **ports**: [ContainerPort](#containerport)[]
+* **readinessProbe**: [ContainerProbe](#containerprobe)
+* **resources**: [ResourceRequirements](#resourcerequirements) (Required)
+* **volumeMounts**: [VolumeMount](#volumemount)[]
 
 ## EnvironmentVariable
 ### Properties
@@ -49,9 +49,9 @@
 
 ## ContainerPropertiesInstanceView
 ### Properties
-* **currentState**: ContainerState (ReadOnly)
-* **events**: Event[] (ReadOnly)
-* **previousState**: ContainerState (ReadOnly)
+* **currentState**: [ContainerState](#containerstate) (ReadOnly)
+* **events**: [Event](#event)[] (ReadOnly)
+* **previousState**: [ContainerState](#containerstate) (ReadOnly)
 * **restartCount**: int (ReadOnly)
 
 ## ContainerState
@@ -73,9 +73,9 @@
 
 ## ContainerProbe
 ### Properties
-* **exec**: ContainerExec
+* **exec**: [ContainerExec](#containerexec)
 * **failureThreshold**: int
-* **httpGet**: ContainerHttpGet
+* **httpGet**: [ContainerHttpGet](#containerhttpget)
 * **initialDelaySeconds**: int
 * **periodSeconds**: int
 * **successThreshold**: int
@@ -98,8 +98,8 @@
 
 ## ResourceRequirements
 ### Properties
-* **limits**: ResourceLimits
-* **requests**: ResourceRequests (Required)
+* **limits**: [ResourceLimits](#resourcelimits)
+* **requests**: [ResourceRequests](#resourcerequests) (Required)
 
 ## ResourceLimits
 ### Properties
@@ -119,12 +119,12 @@
 
 ## ContainerGroupDiagnostics
 ### Properties
-* **logAnalytics**: LogAnalytics
+* **logAnalytics**: [LogAnalytics](#loganalytics)
 
 ## LogAnalytics
 ### Properties
 * **logType**: 'ContainerInsights' | 'ContainerInstanceLogs'
-* **metadata**: LogAnalyticsMetadata
+* **metadata**: [LogAnalyticsMetadata](#loganalyticsmetadata)
 * **workspaceId**: string (Required)
 * **workspaceKey**: string (Required)
 
@@ -141,7 +141,7 @@
 
 ## ContainerGroupPropertiesInstanceView
 ### Properties
-* **events**: Event[] (ReadOnly)
+* **events**: [Event](#event)[] (ReadOnly)
 * **state**: string (ReadOnly)
 
 ## IpAddress
@@ -149,7 +149,7 @@
 * **dnsNameLabel**: string
 * **fqdn**: string (ReadOnly)
 * **ip**: string
-* **ports**: Port[] (Required)
+* **ports**: [Port](#port)[] (Required)
 * **type**: 'Private' | 'Public' (Required)
 
 ## Port
@@ -163,11 +163,11 @@
 
 ## Volume
 ### Properties
-* **azureFile**: AzureFileVolume
+* **azureFile**: [AzureFileVolume](#azurefilevolume)
 * **emptyDir**: any
-* **gitRepo**: GitRepoVolume
+* **gitRepo**: [GitRepoVolume](#gitrepovolume)
 * **name**: string (Required)
-* **secret**: SecretVolume
+* **secret**: [SecretVolume](#secretvolume)
 
 ## AzureFileVolume
 ### Properties

@@ -7,7 +7,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DataCollectionRuleAssociationProxyOnlyResourceProperties (Required)
+* **properties**: [DataCollectionRuleAssociationProxyOnlyResourceProperties](#datacollectionruleassociationproxyonlyresourceproperties) (Required)
 * **type**: 'Microsoft.Insights/dataCollectionRuleAssociations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Insights/dataCollectionRules@2019-11-01-preview
@@ -18,8 +18,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DataCollectionRuleResourceProperties (Required)
-* **tags**: DataCollectionRuleResourceTags
+* **properties**: [DataCollectionRuleResourceProperties](#datacollectionruleresourceproperties) (Required)
+* **tags**: [DataCollectionRuleResourceTags](#datacollectionruleresourcetags)
 * **type**: 'Microsoft.Insights/dataCollectionRules' (ReadOnly, DeployTimeConstant)
 
 ## DataCollectionRuleAssociationProxyOnlyResourceProperties
@@ -30,10 +30,10 @@
 
 ## DataCollectionRuleResourceProperties
 ### Properties
-* **dataFlows**: DataFlow[] (Required)
-* **dataSources**: DataCollectionRuleDataSources
+* **dataFlows**: [DataFlow](#dataflow)[] (Required)
+* **dataSources**: [DataCollectionRuleDataSources](#datacollectionruledatasources)
 * **description**: string
-* **destinations**: DataCollectionRuleDestinations (Required)
+* **destinations**: [DataCollectionRuleDestinations](#datacollectionruledestinations) (Required)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## DataFlow
@@ -43,10 +43,10 @@
 
 ## DataCollectionRuleDataSources
 ### Properties
-* **extensions**: ExtensionDataSource[]
-* **performanceCounters**: PerfCounterDataSource[]
-* **syslog**: SyslogDataSource[]
-* **windowsEventLogs**: WindowsEventLogDataSource[]
+* **extensions**: [ExtensionDataSource](#extensiondatasource)[]
+* **performanceCounters**: [PerfCounterDataSource](#perfcounterdatasource)[]
+* **syslog**: [SyslogDataSource](#syslogdatasource)[]
+* **windowsEventLogs**: [WindowsEventLogDataSource](#windowseventlogdatasource)[]
 
 ## ExtensionDataSource
 ### Properties
@@ -79,8 +79,8 @@
 
 ## DataCollectionRuleDestinations
 ### Properties
-* **azureMonitorMetrics**: DestinationsSpecAzureMonitorMetrics
-* **logAnalytics**: LogAnalyticsDestination[]
+* **azureMonitorMetrics**: [DestinationsSpecAzureMonitorMetrics](#destinationsspecazuremonitormetrics)
+* **logAnalytics**: [LogAnalyticsDestination](#loganalyticsdestination)[]
 
 ## DestinationsSpecAzureMonitorMetrics
 ### Properties

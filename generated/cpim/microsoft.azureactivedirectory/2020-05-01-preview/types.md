@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GuestUsagesResourceProperties
-* **tags**: GuestUsagesResourceTags
+* **properties**: [GuestUsagesResourceProperties](#guestusagesresourceproperties)
+* **tags**: [GuestUsagesResourceTags](#guestusagesresourcetags)
 * **type**: 'Microsoft.AzureActiveDirectory/guestUsages' (ReadOnly, DeployTimeConstant)
 
 ## GuestUsagesResourceProperties

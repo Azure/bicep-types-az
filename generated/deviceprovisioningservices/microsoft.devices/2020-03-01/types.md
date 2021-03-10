@@ -8,9 +8,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IotDpsPropertiesDescription (Required)
-* **sku**: IotDpsSkuInfo (Required)
-* **tags**: ResourceTags
+* **properties**: [IotDpsPropertiesDescription](#iotdpspropertiesdescription) (Required)
+* **sku**: [IotDpsSkuInfo](#iotdpsskuinfo) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Devices/provisioningServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Devices/provisioningServices/certificates@2020-03-01
@@ -21,7 +21,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CertificateProperties (ReadOnly)
+* **properties**: [CertificateProperties](#certificateproperties) (ReadOnly)
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Devices/provisioningServices/privateEndpointConnections@2020-03-01
@@ -30,18 +30,18 @@
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties (Required)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required)
 * **type**: 'Microsoft.Devices/provisioningServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## IotDpsPropertiesDescription
 ### Properties
 * **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static'
-* **authorizationPolicies**: SharedAccessSignatureAuthorizationRuleAccessRightsDescription[]
+* **authorizationPolicies**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[]
 * **deviceProvisioningHostName**: string (ReadOnly)
 * **idScope**: string (ReadOnly)
-* **iotHubs**: IotHubDefinitionDescription[]
-* **ipFilterRules**: IpFilterRule[]
-* **privateEndpointConnections**: PrivateEndpointConnection[]
+* **iotHubs**: [IotHubDefinitionDescription](#iothubdefinitiondescription)[]
+* **ipFilterRules**: [IpFilterRule](#ipfilterrule)[]
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]
 * **provisioningState**: string
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 * **serviceOperationsHostName**: string (ReadOnly)
@@ -73,13 +73,13 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties (Required)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required)
 
 ## PrivateEndpoint
 ### Properties

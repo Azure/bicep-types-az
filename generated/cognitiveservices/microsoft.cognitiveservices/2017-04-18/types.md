@@ -6,13 +6,13 @@
 * **apiVersion**: '2017-04-18' (ReadOnly, DeployTimeConstant)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **kind**: string
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CognitiveServicesAccountProperties
-* **sku**: Sku
-* **tags**: CognitiveServicesAccountTags
+* **properties**: [CognitiveServicesAccountProperties](#cognitiveservicesaccountproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [CognitiveServicesAccountTags](#cognitiveservicesaccounttags)
 * **type**: 'Microsoft.CognitiveServices/accounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CognitiveServices/accounts/privateEndpointConnections@2017-04-18
@@ -21,7 +21,7 @@
 * **apiVersion**: '2017-04-18' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: 'Microsoft.CognitiveServices/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -29,12 +29,12 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: IdentityUserAssignedIdentities
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities)
 
 ## IdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: UserAssignedIdentity
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
 
 ## UserAssignedIdentity
 ### Properties
@@ -43,18 +43,18 @@
 
 ## CognitiveServicesAccountProperties
 ### Properties
-* **apiProperties**: CognitiveServicesAccountApiProperties
-* **capabilities**: SkuCapability[] (ReadOnly)
+* **apiProperties**: [CognitiveServicesAccountApiProperties](#cognitiveservicesaccountapiproperties)
+* **capabilities**: [SkuCapability](#skucapability)[] (ReadOnly)
 * **customSubDomainName**: string
 * **dateCreated**: string (ReadOnly)
-* **encryption**: Encryption
+* **encryption**: [Encryption](#encryption)
 * **endpoint**: string (ReadOnly)
 * **internalId**: string (ReadOnly)
-* **networkAcls**: NetworkRuleSet
-* **privateEndpointConnections**: PrivateEndpointConnection[]
+* **networkAcls**: [NetworkRuleSet](#networkruleset)
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'ResolvingDNS' | 'Succeeded' (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
-* **userOwnedStorage**: UserOwnedStorage[]
+* **userOwnedStorage**: [UserOwnedStorage](#userownedstorage)[]
 
 ## CognitiveServicesAccountApiProperties
 ### Properties
@@ -75,7 +75,7 @@
 ## Encryption
 ### Properties
 * **keySource**: 'Microsoft.CognitiveServices' | 'Microsoft.KeyVault'
-* **keyVaultProperties**: KeyVaultProperties
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
 
 ## KeyVaultProperties
 ### Properties
@@ -86,8 +86,8 @@
 ## NetworkRuleSet
 ### Properties
 * **defaultAction**: 'Allow' | 'Deny'
-* **ipRules**: IpRule[]
-* **virtualNetworkRules**: VirtualNetworkRule[]
+* **ipRules**: [IpRule](#iprule)[]
+* **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]
 
 ## IpRule
 ### Properties
@@ -103,14 +103,14 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **groupIds**: string[]
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required)
 
 ## PrivateEndpoint
 ### Properties

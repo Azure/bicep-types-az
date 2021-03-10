@@ -7,14 +7,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagementGroupDiagnosticSettings
+* **properties**: [ManagementGroupDiagnosticSettings](#managementgroupdiagnosticsettings)
 * **type**: 'microsoft.insights/diagnosticSettings' (ReadOnly, DeployTimeConstant)
 
 ## ManagementGroupDiagnosticSettings
 ### Properties
 * **eventHubAuthorizationRuleId**: string
 * **eventHubName**: string
-* **logs**: ManagementGroupLogSettings[]
+* **logs**: [ManagementGroupLogSettings](#managementgrouplogsettings)[]
 * **serviceBusRuleId**: string
 * **storageAccountId**: string
 * **workspaceId**: string

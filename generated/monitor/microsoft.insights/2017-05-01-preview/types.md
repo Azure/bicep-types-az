@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DiagnosticSettings
+* **properties**: [DiagnosticSettings](#diagnosticsettings)
 * **type**: 'microsoft.insights/diagnosticSettings' (ReadOnly, DeployTimeConstant)
 
 ## DiagnosticSettings
@@ -14,8 +14,8 @@
 * **eventHubAuthorizationRuleId**: string
 * **eventHubName**: string
 * **logAnalyticsDestinationType**: string
-* **logs**: LogSettings[]
-* **metrics**: MetricSettings[]
+* **logs**: [LogSettings](#logsettings)[]
+* **metrics**: [MetricSettings](#metricsettings)[]
 * **serviceBusRuleId**: string
 * **storageAccountId**: string
 * **workspaceId**: string
@@ -24,7 +24,7 @@
 ### Properties
 * **category**: string
 * **enabled**: bool (Required)
-* **retentionPolicy**: RetentionPolicy
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 
 ## RetentionPolicy
 ### Properties
@@ -35,6 +35,6 @@
 ### Properties
 * **category**: string
 * **enabled**: bool (Required)
-* **retentionPolicy**: RetentionPolicy
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 * **timeGrain**: string
 

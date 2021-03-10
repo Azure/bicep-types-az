@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2019-11-04-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: QuantumWorkspaceIdentity
+* **identity**: [QuantumWorkspaceIdentity](#quantumworkspaceidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceResourceProperties
-* **tags**: TrackedResourceTags
+* **properties**: [WorkspaceResourceProperties](#workspaceresourceproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Quantum/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## QuantumWorkspaceIdentity
@@ -21,7 +21,7 @@
 ## WorkspaceResourceProperties
 ### Properties
 * **endpointUri**: string (ReadOnly)
-* **providers**: Provider[]
+* **providers**: [Provider](#provider)[]
 * **provisioningState**: 'Failed' | 'ProviderDeleting' | 'ProviderLaunching' | 'ProviderProvisioning' | 'ProviderUpdating' | 'Succeeded' (ReadOnly)
 * **storageAccount**: string
 * **usable**: 'No' | 'Partial' | 'Yes' (ReadOnly)

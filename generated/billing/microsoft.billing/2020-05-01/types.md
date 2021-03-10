@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BillingProfileProperties
+* **properties**: [BillingProfileProperties](#billingprofileproperties)
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles/instructions@2020-05-01
@@ -15,7 +15,7 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: InstructionProperties
+* **properties**: [InstructionProperties](#instructionproperties)
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/instructions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections@2020-05-01
@@ -24,7 +24,7 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: InvoiceSectionProperties
+* **properties**: [InvoiceSectionProperties](#invoicesectionproperties)
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles/policies@2020-05-01
@@ -33,7 +33,7 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyProperties
+* **properties**: [PolicyProperties](#policyproperties)
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/policies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Billing/billingAccounts/customers/policies@2020-05-01
@@ -42,21 +42,21 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CustomerPolicyProperties
+* **properties**: [CustomerPolicyProperties](#customerpolicyproperties)
 * **type**: 'Microsoft.Billing/billingAccounts/customers/policies' (ReadOnly, DeployTimeConstant)
 
 ## BillingProfileProperties
 ### Properties
 * **billingRelationshipType**: 'CSPPartner' | 'Direct' | 'IndirectCustomer' | 'IndirectPartner' (ReadOnly)
-* **billTo**: AddressDetails
+* **billTo**: [AddressDetails](#addressdetails)
 * **currency**: string (ReadOnly)
 * **displayName**: string
-* **enabledAzurePlans**: AzurePlan[]
+* **enabledAzurePlans**: [AzurePlan](#azureplan)[]
 * **hasReadAccess**: bool (ReadOnly)
-* **indirectRelationshipInfo**: IndirectRelationshipInfo (ReadOnly)
+* **indirectRelationshipInfo**: [IndirectRelationshipInfo](#indirectrelationshipinfo) (ReadOnly)
 * **invoiceDay**: int (ReadOnly)
 * **invoiceEmailOptIn**: bool
-* **invoiceSections**: InvoiceSectionsOnExpand
+* **invoiceSections**: [InvoiceSectionsOnExpand](#invoicesectionsonexpand)
 * **poNumber**: string
 * **spendingLimit**: 'Off' | 'On' (ReadOnly)
 * **status**: 'Active' | 'Disabled' | 'Warned' (ReadOnly)
@@ -94,19 +94,19 @@
 ## InvoiceSectionsOnExpand
 ### Properties
 * **hasMoreResults**: bool (ReadOnly)
-* **value**: InvoiceSection[]
+* **value**: [InvoiceSection](#invoicesection)[]
 
 ## InvoiceSection
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: InvoiceSectionProperties
+* **properties**: [InvoiceSectionProperties](#invoicesectionproperties)
 * **type**: string (ReadOnly)
 
 ## InvoiceSectionProperties
 ### Properties
 * **displayName**: string
-* **labels**: InvoiceSectionPropertiesLabels
+* **labels**: [InvoiceSectionPropertiesLabels](#invoicesectionpropertieslabels)
 * **state**: 'Active' | 'Restricted' (ReadOnly)
 * **systemId**: string (ReadOnly)
 * **targetCloud**: 'USGov' | 'USNat' | 'USSec' (ReadOnly)

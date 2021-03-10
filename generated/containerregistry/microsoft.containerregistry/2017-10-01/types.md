@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RegistryProperties
-* **sku**: Sku (Required)
-* **tags**: ResourceTags
+* **properties**: [RegistryProperties](#registryproperties)
+* **sku**: [Sku](#sku) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerRegistry/registries' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerRegistry/registries/replications@2017-10-01
@@ -19,8 +19,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ReplicationProperties
-* **tags**: ResourceTags
+* **properties**: [ReplicationProperties](#replicationproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerRegistry/registries/replications' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerRegistry/registries/webhooks@2017-10-01
@@ -30,8 +30,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WebhookPropertiesCreateParameters
-* **tags**: WebhookCreateParametersTags
+* **properties**: [WebhookPropertiesCreateParameters](#webhookpropertiescreateparameters)
+* **tags**: [WebhookCreateParametersTags](#webhookcreateparameterstags)
 * **type**: 'Microsoft.ContainerRegistry/registries/webhooks' (ReadOnly, DeployTimeConstant)
 
 ## RegistryProperties
@@ -39,16 +39,16 @@
 * **adminUserEnabled**: bool
 * **creationDate**: string (ReadOnly)
 * **loginServer**: string (ReadOnly)
-* **networkRuleSet**: NetworkRuleSet
+* **networkRuleSet**: [NetworkRuleSet](#networkruleset)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **status**: Status (ReadOnly)
-* **storageAccount**: StorageAccountProperties
+* **status**: [Status](#status) (ReadOnly)
+* **storageAccount**: [StorageAccountProperties](#storageaccountproperties)
 
 ## NetworkRuleSet
 ### Properties
 * **defaultAction**: 'Allow' | 'Deny' (Required)
-* **ipRules**: IPRule[]
-* **virtualNetworkRules**: VirtualNetworkRule[]
+* **ipRules**: [IPRule](#iprule)[]
+* **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]
 
 ## IPRule
 ### Properties
@@ -83,7 +83,7 @@
 ## ReplicationProperties
 ### Properties
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **status**: Status (ReadOnly)
+* **status**: [Status](#status) (ReadOnly)
 
 ## ResourceTags
 ### Properties
@@ -93,7 +93,7 @@
 ## WebhookPropertiesCreateParameters
 ### Properties
 * **actions**: 'chart_delete' | 'chart_push' | 'delete' | 'push' | 'quarantine'[] (Required)
-* **customHeaders**: WebhookPropertiesCreateParametersCustomHeaders (WriteOnly)
+* **customHeaders**: [WebhookPropertiesCreateParametersCustomHeaders](#webhookpropertiescreateparameterscustomheaders) (WriteOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **scope**: string
 * **serviceUri**: string (Required, WriteOnly)

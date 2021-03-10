@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationResourceProperties (Required)
-* **tags**: TrackedResourceTags
+* **properties**: [ApplicationResourceProperties](#applicationresourceproperties) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.ServiceFabricMesh/applications' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabricMesh/networks@2018-07-01-preview
@@ -18,8 +18,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: NetworkResourceProperties (Required)
-* **tags**: TrackedResourceTags
+* **properties**: [NetworkResourceProperties](#networkresourceproperties) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.ServiceFabricMesh/networks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabricMesh/volumes@2018-07-01-preview
@@ -29,19 +29,19 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VolumeResourceProperties (Required)
-* **tags**: TrackedResourceTags
+* **properties**: [VolumeResourceProperties](#volumeresourceproperties) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.ServiceFabricMesh/volumes' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationResourceProperties
 ### Properties
 * **debugParams**: string
 * **description**: string
-* **diagnostics**: DiagnosticsDescription
+* **diagnostics**: [DiagnosticsDescription](#diagnosticsdescription)
 * **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **serviceNames**: string[] (ReadOnly)
-* **services**: ServiceResourceDescription[]
+* **services**: [ServiceResourceDescription](#serviceresourcedescription)[]
 * **status**: 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Ready' | 'Upgrading' (ReadOnly)
 * **statusDetails**: string (ReadOnly)
 * **unhealthyEvaluation**: string (ReadOnly)
@@ -50,7 +50,7 @@
 ### Properties
 * **defaultSinkRefs**: string[]
 * **enabled**: bool
-* **sinks**: DiagnosticsSinkProperties[]
+* **sinks**: [DiagnosticsSinkProperties](#diagnosticssinkproperties)[]
 
 ## DiagnosticsSinkProperties
 * **Discriminator**: kind
@@ -81,16 +81,16 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string
-* **properties**: ServiceResourceProperties (Required)
+* **properties**: [ServiceResourceProperties](#serviceresourceproperties) (Required)
 * **type**: string (ReadOnly)
 
 ## ServiceResourceProperties
 ### Properties
-* **codePackages**: ContainerCodePackageProperties[] (Required)
+* **codePackages**: [ContainerCodePackageProperties](#containercodepackageproperties)[] (Required)
 * **description**: string
-* **diagnostics**: DiagnosticsRef
+* **diagnostics**: [DiagnosticsRef](#diagnosticsref)
 * **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning'
-* **networkRefs**: NetworkRef[]
+* **networkRefs**: [NetworkRef](#networkref)[]
 * **osType**: 'Linux' | 'Windows' (Required)
 * **replicaCount**: int
 * **status**: 'Active' | 'Creating' | 'Deleting' | 'Failed' | 'Unknown' | 'Upgrading' (ReadOnly)
@@ -98,18 +98,18 @@
 ## ContainerCodePackageProperties
 ### Properties
 * **commands**: string[]
-* **diagnostics**: DiagnosticsRef
-* **endpoints**: EndpointProperties[]
+* **diagnostics**: [DiagnosticsRef](#diagnosticsref)
+* **endpoints**: [EndpointProperties](#endpointproperties)[]
 * **entrypoint**: string
-* **environmentVariables**: EnvironmentVariable[]
+* **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]
 * **image**: string (Required)
-* **imageRegistryCredential**: ImageRegistryCredential
-* **instanceView**: ContainerInstanceView (ReadOnly)
-* **labels**: ContainerLabel[]
+* **imageRegistryCredential**: [ImageRegistryCredential](#imageregistrycredential)
+* **instanceView**: [ContainerInstanceView](#containerinstanceview) (ReadOnly)
+* **labels**: [ContainerLabel](#containerlabel)[]
 * **name**: string (Required)
-* **resources**: ResourceRequirements (Required)
-* **settings**: Setting[]
-* **volumeRefs**: ContainerVolume[]
+* **resources**: [ResourceRequirements](#resourcerequirements) (Required)
+* **settings**: [Setting](#setting)[]
+* **volumeRefs**: [ContainerVolume](#containervolume)[]
 
 ## DiagnosticsRef
 ### Properties
@@ -134,9 +134,9 @@
 
 ## ContainerInstanceView
 ### Properties
-* **currentState**: ContainerState
-* **events**: ContainerEvent[]
-* **previousState**: ContainerState
+* **currentState**: [ContainerState](#containerstate)
+* **events**: [ContainerEvent](#containerevent)[]
+* **previousState**: [ContainerState](#containerstate)
 * **restartCount**: int
 
 ## ContainerState
@@ -163,8 +163,8 @@
 
 ## ResourceRequirements
 ### Properties
-* **limits**: ResourceLimits
-* **requests**: ResourceRequests (Required)
+* **limits**: [ResourceLimits](#resourcelimits)
+* **requests**: [ResourceRequests](#resourcerequests) (Required)
 
 ## ResourceLimits
 ### Properties
@@ -200,12 +200,12 @@
 ### Properties
 * **addressPrefix**: string (Required)
 * **description**: string
-* **ingressConfig**: IngressConfig
+* **ingressConfig**: [IngressConfig](#ingressconfig)
 * **provisioningState**: string (ReadOnly)
 
 ## IngressConfig
 ### Properties
-* **layer4**: Layer4IngressConfig[]
+* **layer4**: [Layer4IngressConfig](#layer4ingressconfig)[]
 * **publicIPAddress**: string (ReadOnly)
 * **qosLevel**: 'Bronze'
 
@@ -224,7 +224,7 @@
 
 ## VolumeResourceProperties
 ### Properties
-* **azureFileParameters**: VolumeProviderParametersAzureFile
+* **azureFileParameters**: [VolumeProviderParametersAzureFile](#volumeproviderparametersazurefile)
 * **description**: string
 * **provider**: 'SFAzureFile' (Required)
 * **provisioningState**: string (ReadOnly)

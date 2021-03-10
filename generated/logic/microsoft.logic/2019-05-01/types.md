@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IntegrationAccountProperties
-* **sku**: IntegrationAccountSku
-* **tags**: ResourceTags
+* **properties**: [IntegrationAccountProperties](#integrationaccountproperties)
+* **sku**: [IntegrationAccountSku](#integrationaccountsku)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/agreements@2019-05-01
@@ -19,8 +19,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IntegrationAccountAgreementProperties (Required)
-* **tags**: ResourceTags
+* **properties**: [IntegrationAccountAgreementProperties](#integrationaccountagreementproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/agreements' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/assemblies@2019-05-01
@@ -30,8 +30,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AssemblyProperties (Required)
-* **tags**: ResourceTags
+* **properties**: [AssemblyProperties](#assemblyproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/assemblies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/batchConfigurations@2019-05-01
@@ -41,8 +41,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BatchConfigurationProperties (Required)
-* **tags**: ResourceTags
+* **properties**: [BatchConfigurationProperties](#batchconfigurationproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/batchConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/certificates@2019-05-01
@@ -52,8 +52,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IntegrationAccountCertificateProperties (Required)
-* **tags**: ResourceTags
+* **properties**: [IntegrationAccountCertificateProperties](#integrationaccountcertificateproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/maps@2019-05-01
@@ -63,8 +63,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IntegrationAccountMapProperties (Required)
-* **tags**: ResourceTags
+* **properties**: [IntegrationAccountMapProperties](#integrationaccountmapproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/maps' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/partners@2019-05-01
@@ -74,8 +74,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IntegrationAccountPartnerProperties (Required)
-* **tags**: ResourceTags
+* **properties**: [IntegrationAccountPartnerProperties](#integrationaccountpartnerproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/partners' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/schemas@2019-05-01
@@ -85,8 +85,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IntegrationAccountSchemaProperties (Required)
-* **tags**: ResourceTags
+* **properties**: [IntegrationAccountSchemaProperties](#integrationaccountschemaproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/schemas' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/sessions@2019-05-01
@@ -96,8 +96,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IntegrationAccountSessionProperties (Required)
-* **tags**: ResourceTags
+* **properties**: [IntegrationAccountSessionProperties](#integrationaccountsessionproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/sessions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationServiceEnvironments@2019-05-01
@@ -107,9 +107,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IntegrationServiceEnvironmentProperties
-* **sku**: IntegrationServiceEnvironmentSku
-* **tags**: ResourceTags
+* **properties**: [IntegrationServiceEnvironmentProperties](#integrationserviceenvironmentproperties)
+* **sku**: [IntegrationServiceEnvironmentSku](#integrationserviceenvironmentsku)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationServiceEnvironments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationServiceEnvironments/managedApis@2019-05-01
@@ -119,8 +119,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApiResourceProperties (ReadOnly)
-* **tags**: ResourceTags (ReadOnly)
+* **properties**: [ApiResourceProperties](#apiresourceproperties) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly)
 * **type**: 'Microsoft.Logic/integrationServiceEnvironments/managedApis' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/workflows@2019-05-01
@@ -130,13 +130,13 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkflowProperties
-* **tags**: ResourceTags
+* **properties**: [WorkflowProperties](#workflowproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/workflows' (ReadOnly, DeployTimeConstant)
 
 ## IntegrationAccountProperties
 ### Properties
-* **integrationServiceEnvironment**: IntegrationServiceEnvironment
+* **integrationServiceEnvironment**: [IntegrationServiceEnvironment](#integrationserviceenvironment)
 * **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended'
 
 ## IntegrationServiceEnvironment
@@ -144,28 +144,28 @@
 * **id**: string (ReadOnly)
 * **location**: string
 * **name**: string (ReadOnly)
-* **properties**: IntegrationServiceEnvironmentProperties
-* **sku**: IntegrationServiceEnvironmentSku
-* **tags**: ResourceTags
+* **properties**: [IntegrationServiceEnvironmentProperties](#integrationserviceenvironmentproperties)
+* **sku**: [IntegrationServiceEnvironmentSku](#integrationserviceenvironmentsku)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
 ## IntegrationServiceEnvironmentProperties
 ### Properties
-* **encryptionConfiguration**: IntegrationServiceEnvironmenEncryptionConfiguration
-* **endpointsConfiguration**: FlowEndpointsConfiguration
+* **encryptionConfiguration**: [IntegrationServiceEnvironmenEncryptionConfiguration](#integrationserviceenvironmenencryptionconfiguration)
+* **endpointsConfiguration**: [FlowEndpointsConfiguration](#flowendpointsconfiguration)
 * **integrationServiceEnvironmentId**: string
-* **networkConfiguration**: NetworkConfiguration
+* **networkConfiguration**: [NetworkConfiguration](#networkconfiguration)
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting'
 * **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended'
 
 ## IntegrationServiceEnvironmenEncryptionConfiguration
 ### Properties
-* **encryptionKeyReference**: IntegrationServiceEnvironmenEncryptionKeyReference
+* **encryptionKeyReference**: [IntegrationServiceEnvironmenEncryptionKeyReference](#integrationserviceenvironmenencryptionkeyreference)
 
 ## IntegrationServiceEnvironmenEncryptionKeyReference
 ### Properties
 * **keyName**: string
-* **keyVault**: ResourceReference
+* **keyVault**: [ResourceReference](#resourcereference)
 * **keyVersion**: string
 
 ## ResourceReference
@@ -176,13 +176,13 @@
 
 ## FlowEndpointsConfiguration
 ### Properties
-* **connector**: FlowEndpoints
-* **workflow**: FlowEndpoints
+* **connector**: [FlowEndpoints](#flowendpoints)
+* **workflow**: [FlowEndpoints](#flowendpoints)
 
 ## FlowEndpoints
 ### Properties
-* **accessEndpointIpAddresses**: IpAddress[]
-* **outgoingIpAddresses**: IpAddress[]
+* **accessEndpointIpAddresses**: [IpAddress](#ipaddress)[]
+* **outgoingIpAddresses**: [IpAddress](#ipaddress)[]
 
 ## IpAddress
 ### Properties
@@ -190,8 +190,8 @@
 
 ## NetworkConfiguration
 ### Properties
-* **accessEndpoint**: IntegrationServiceEnvironmentAccessEndpoint
-* **subnets**: ResourceReference[]
+* **accessEndpoint**: [IntegrationServiceEnvironmentAccessEndpoint](#integrationserviceenvironmentaccessendpoint)
+* **subnets**: [ResourceReference](#resourcereference)[]
 * **virtualNetworkAddressSpace**: string
 
 ## IntegrationServiceEnvironmentAccessEndpoint
@@ -221,40 +221,40 @@
 ### Properties
 * **agreementType**: 'AS2' | 'Edifact' | 'NotSpecified' | 'X12' (Required)
 * **changedTime**: string (ReadOnly)
-* **content**: AgreementContent (Required)
+* **content**: [AgreementContent](#agreementcontent) (Required)
 * **createdTime**: string (ReadOnly)
-* **guestIdentity**: BusinessIdentity (Required)
+* **guestIdentity**: [BusinessIdentity](#businessidentity) (Required)
 * **guestPartner**: string (Required)
-* **hostIdentity**: BusinessIdentity (Required)
+* **hostIdentity**: [BusinessIdentity](#businessidentity) (Required)
 * **hostPartner**: string (Required)
 * **metadata**: any
 
 ## AgreementContent
 ### Properties
-* **aS2**: AS2AgreementContent
-* **edifact**: EdifactAgreementContent
-* **x12**: X12AgreementContent
+* **aS2**: [AS2AgreementContent](#as2agreementcontent)
+* **edifact**: [EdifactAgreementContent](#edifactagreementcontent)
+* **x12**: [X12AgreementContent](#x12agreementcontent)
 
 ## AS2AgreementContent
 ### Properties
-* **receiveAgreement**: AS2OneWayAgreement (Required)
-* **sendAgreement**: AS2OneWayAgreement (Required)
+* **receiveAgreement**: [AS2OneWayAgreement](#as2onewayagreement) (Required)
+* **sendAgreement**: [AS2OneWayAgreement](#as2onewayagreement) (Required)
 
 ## AS2OneWayAgreement
 ### Properties
-* **protocolSettings**: AS2ProtocolSettings (Required)
-* **receiverBusinessIdentity**: BusinessIdentity (Required)
-* **senderBusinessIdentity**: BusinessIdentity (Required)
+* **protocolSettings**: [AS2ProtocolSettings](#as2protocolsettings) (Required)
+* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required)
+* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required)
 
 ## AS2ProtocolSettings
 ### Properties
-* **acknowledgementConnectionSettings**: AS2AcknowledgementConnectionSettings (Required)
-* **envelopeSettings**: AS2EnvelopeSettings (Required)
-* **errorSettings**: AS2ErrorSettings (Required)
-* **mdnSettings**: AS2MdnSettings (Required)
-* **messageConnectionSettings**: AS2MessageConnectionSettings (Required)
-* **securitySettings**: AS2SecuritySettings (Required)
-* **validationSettings**: AS2ValidationSettings (Required)
+* **acknowledgementConnectionSettings**: [AS2AcknowledgementConnectionSettings](#as2acknowledgementconnectionsettings) (Required)
+* **envelopeSettings**: [AS2EnvelopeSettings](#as2envelopesettings) (Required)
+* **errorSettings**: [AS2ErrorSettings](#as2errorsettings) (Required)
+* **mdnSettings**: [AS2MdnSettings](#as2mdnsettings) (Required)
+* **messageConnectionSettings**: [AS2MessageConnectionSettings](#as2messageconnectionsettings) (Required)
+* **securitySettings**: [AS2SecuritySettings](#as2securitysettings) (Required)
+* **validationSettings**: [AS2ValidationSettings](#as2validationsettings) (Required)
 
 ## AS2AcknowledgementConnectionSettings
 ### Properties
@@ -328,28 +328,28 @@
 
 ## EdifactAgreementContent
 ### Properties
-* **receiveAgreement**: EdifactOneWayAgreement (Required)
-* **sendAgreement**: EdifactOneWayAgreement (Required)
+* **receiveAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement) (Required)
+* **sendAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement) (Required)
 
 ## EdifactOneWayAgreement
 ### Properties
-* **protocolSettings**: EdifactProtocolSettings (Required)
-* **receiverBusinessIdentity**: BusinessIdentity (Required)
-* **senderBusinessIdentity**: BusinessIdentity (Required)
+* **protocolSettings**: [EdifactProtocolSettings](#edifactprotocolsettings) (Required)
+* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required)
+* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required)
 
 ## EdifactProtocolSettings
 ### Properties
-* **acknowledgementSettings**: EdifactAcknowledgementSettings (Required)
-* **edifactDelimiterOverrides**: EdifactDelimiterOverride[]
-* **envelopeOverrides**: EdifactEnvelopeOverride[]
-* **envelopeSettings**: EdifactEnvelopeSettings (Required)
-* **framingSettings**: EdifactFramingSettings (Required)
-* **messageFilter**: EdifactMessageFilter (Required)
-* **messageFilterList**: EdifactMessageIdentifier[]
-* **processingSettings**: EdifactProcessingSettings (Required)
-* **schemaReferences**: EdifactSchemaReference[] (Required)
-* **validationOverrides**: EdifactValidationOverride[]
-* **validationSettings**: EdifactValidationSettings (Required)
+* **acknowledgementSettings**: [EdifactAcknowledgementSettings](#edifactacknowledgementsettings) (Required)
+* **edifactDelimiterOverrides**: [EdifactDelimiterOverride](#edifactdelimiteroverride)[]
+* **envelopeOverrides**: [EdifactEnvelopeOverride](#edifactenvelopeoverride)[]
+* **envelopeSettings**: [EdifactEnvelopeSettings](#edifactenvelopesettings) (Required)
+* **framingSettings**: [EdifactFramingSettings](#edifactframingsettings) (Required)
+* **messageFilter**: [EdifactMessageFilter](#edifactmessagefilter) (Required)
+* **messageFilterList**: [EdifactMessageIdentifier](#edifactmessageidentifier)[]
+* **processingSettings**: [EdifactProcessingSettings](#edifactprocessingsettings) (Required)
+* **schemaReferences**: [EdifactSchemaReference](#edifactschemareference)[] (Required)
+* **validationOverrides**: [EdifactValidationOverride](#edifactvalidationoverride)[]
+* **validationSettings**: [EdifactValidationSettings](#edifactvalidationsettings) (Required)
 
 ## EdifactAcknowledgementSettings
 ### Properties
@@ -507,29 +507,29 @@
 
 ## X12AgreementContent
 ### Properties
-* **receiveAgreement**: X12OneWayAgreement (Required)
-* **sendAgreement**: X12OneWayAgreement (Required)
+* **receiveAgreement**: [X12OneWayAgreement](#x12onewayagreement) (Required)
+* **sendAgreement**: [X12OneWayAgreement](#x12onewayagreement) (Required)
 
 ## X12OneWayAgreement
 ### Properties
-* **protocolSettings**: X12ProtocolSettings (Required)
-* **receiverBusinessIdentity**: BusinessIdentity (Required)
-* **senderBusinessIdentity**: BusinessIdentity (Required)
+* **protocolSettings**: [X12ProtocolSettings](#x12protocolsettings) (Required)
+* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required)
+* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity) (Required)
 
 ## X12ProtocolSettings
 ### Properties
-* **acknowledgementSettings**: X12AcknowledgementSettings (Required)
-* **envelopeOverrides**: X12EnvelopeOverride[]
-* **envelopeSettings**: X12EnvelopeSettings (Required)
-* **framingSettings**: X12FramingSettings (Required)
-* **messageFilter**: X12MessageFilter (Required)
-* **messageFilterList**: X12MessageIdentifier[]
-* **processingSettings**: X12ProcessingSettings (Required)
-* **schemaReferences**: X12SchemaReference[] (Required)
-* **securitySettings**: X12SecuritySettings (Required)
-* **validationOverrides**: X12ValidationOverride[]
-* **validationSettings**: X12ValidationSettings (Required)
-* **x12DelimiterOverrides**: X12DelimiterOverrides[]
+* **acknowledgementSettings**: [X12AcknowledgementSettings](#x12acknowledgementsettings) (Required)
+* **envelopeOverrides**: [X12EnvelopeOverride](#x12envelopeoverride)[]
+* **envelopeSettings**: [X12EnvelopeSettings](#x12envelopesettings) (Required)
+* **framingSettings**: [X12FramingSettings](#x12framingsettings) (Required)
+* **messageFilter**: [X12MessageFilter](#x12messagefilter) (Required)
+* **messageFilterList**: [X12MessageIdentifier](#x12messageidentifier)[]
+* **processingSettings**: [X12ProcessingSettings](#x12processingsettings) (Required)
+* **schemaReferences**: [X12SchemaReference](#x12schemareference)[] (Required)
+* **securitySettings**: [X12SecuritySettings](#x12securitysettings) (Required)
+* **validationOverrides**: [X12ValidationOverride](#x12validationoverride)[]
+* **validationSettings**: [X12ValidationSettings](#x12validationsettings) (Required)
+* **x12DelimiterOverrides**: [X12DelimiterOverrides](#x12delimiteroverrides)[]
 
 ## X12AcknowledgementSettings
 ### Properties
@@ -678,14 +678,14 @@
 * **assemblyVersion**: string
 * **changedTime**: string
 * **content**: any
-* **contentLink**: ContentLink
+* **contentLink**: [ContentLink](#contentlink)
 * **contentType**: string
 * **createdTime**: string
 * **metadata**: any
 
 ## ContentLink
 ### Properties
-* **contentHash**: ContentHash
+* **contentHash**: [ContentHash](#contenthash)
 * **contentSize**: int
 * **contentVersion**: string
 * **metadata**: any
@@ -707,20 +707,20 @@
 * **changedTime**: string
 * **createdTime**: string
 * **metadata**: any
-* **releaseCriteria**: BatchReleaseCriteria (Required)
+* **releaseCriteria**: [BatchReleaseCriteria](#batchreleasecriteria) (Required)
 
 ## BatchReleaseCriteria
 ### Properties
 * **batchSize**: int
 * **messageCount**: int
-* **recurrence**: WorkflowTriggerRecurrence
+* **recurrence**: [WorkflowTriggerRecurrence](#workflowtriggerrecurrence)
 
 ## WorkflowTriggerRecurrence
 ### Properties
 * **endTime**: string
 * **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'NotSpecified' | 'Second' | 'Week' | 'Year'
 * **interval**: int
-* **schedule**: RecurrenceSchedule
+* **schedule**: [RecurrenceSchedule](#recurrenceschedule)
 * **startTime**: string
 * **timeZone**: string
 
@@ -729,7 +729,7 @@
 * **hours**: int[]
 * **minutes**: int[]
 * **monthDays**: int[]
-* **monthlyOccurrences**: RecurrenceScheduleOccurrence[]
+* **monthlyOccurrences**: [RecurrenceScheduleOccurrence](#recurrencescheduleoccurrence)[]
 * **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]
 
 ## RecurrenceScheduleOccurrence
@@ -746,14 +746,14 @@
 ### Properties
 * **changedTime**: string (ReadOnly)
 * **createdTime**: string (ReadOnly)
-* **key**: KeyVaultKeyReference
+* **key**: [KeyVaultKeyReference](#keyvaultkeyreference)
 * **metadata**: any
 * **publicCertificate**: string
 
 ## KeyVaultKeyReference
 ### Properties
 * **keyName**: string (Required)
-* **keyVault**: KeyVaultKeyReferenceKeyVault (Required)
+* **keyVault**: [KeyVaultKeyReferenceKeyVault](#keyvaultkeyreferencekeyvault) (Required)
 * **keyVersion**: string
 
 ## KeyVaultKeyReferenceKeyVault
@@ -771,12 +771,12 @@
 ### Properties
 * **changedTime**: string (ReadOnly)
 * **content**: string
-* **contentLink**: ContentLink (ReadOnly)
+* **contentLink**: [ContentLink](#contentlink) (ReadOnly)
 * **contentType**: string
 * **createdTime**: string (ReadOnly)
 * **mapType**: 'Liquid' | 'NotSpecified' | 'Xslt' | 'Xslt20' | 'Xslt30' (Required)
 * **metadata**: any
-* **parametersSchema**: IntegrationAccountMapPropertiesParametersSchema
+* **parametersSchema**: [IntegrationAccountMapPropertiesParametersSchema](#integrationaccountmappropertiesparametersschema)
 
 ## IntegrationAccountMapPropertiesParametersSchema
 ### Properties
@@ -790,18 +790,18 @@
 ## IntegrationAccountPartnerProperties
 ### Properties
 * **changedTime**: string (ReadOnly)
-* **content**: PartnerContent (Required)
+* **content**: [PartnerContent](#partnercontent) (Required)
 * **createdTime**: string (ReadOnly)
 * **metadata**: any
 * **partnerType**: 'B2B' | 'NotSpecified' (Required)
 
 ## PartnerContent
 ### Properties
-* **b2b**: B2BPartnerContent
+* **b2b**: [B2BPartnerContent](#b2bpartnercontent)
 
 ## B2BPartnerContent
 ### Properties
-* **businessIdentities**: BusinessIdentity[]
+* **businessIdentities**: [BusinessIdentity](#businessidentity)[]
 
 ## ResourceTags
 ### Properties
@@ -812,7 +812,7 @@
 ### Properties
 * **changedTime**: string (ReadOnly)
 * **content**: string
-* **contentLink**: ContentLink (ReadOnly)
+* **contentLink**: [ContentLink](#contentlink) (ReadOnly)
 * **contentType**: string
 * **createdTime**: string (ReadOnly)
 * **documentName**: string
@@ -844,17 +844,17 @@
 
 ## ApiResourceProperties
 ### Properties
-* **apiDefinitions**: ApiResourceDefinitions (ReadOnly)
+* **apiDefinitions**: [ApiResourceDefinitions](#apiresourcedefinitions) (ReadOnly)
 * **apiDefinitionUrl**: string (ReadOnly)
-* **backendService**: ApiResourceBackendService (ReadOnly)
+* **backendService**: [ApiResourceBackendService](#apiresourcebackendservice) (ReadOnly)
 * **capabilities**: string[] (ReadOnly)
 * **category**: 'Enterprise' | 'NotSpecified' | 'Premium' | 'Standard' (ReadOnly)
-* **connectionParameters**: ApiResourcePropertiesConnectionParameters (ReadOnly)
-* **generalInformation**: ApiResourceGeneralInformation (ReadOnly)
-* **integrationServiceEnvironment**: ResourceReference (ReadOnly)
-* **metadata**: ApiResourceMetadata (ReadOnly)
+* **connectionParameters**: [ApiResourcePropertiesConnectionParameters](#apiresourcepropertiesconnectionparameters) (ReadOnly)
+* **generalInformation**: [ApiResourceGeneralInformation](#apiresourcegeneralinformation) (ReadOnly)
+* **integrationServiceEnvironment**: [ResourceReference](#resourcereference) (ReadOnly)
+* **metadata**: [ApiResourceMetadata](#apiresourcemetadata) (ReadOnly)
 * **name**: string (ReadOnly)
-* **policies**: ApiResourcePolicies (ReadOnly)
+* **policies**: [ApiResourcePolicies](#apiresourcepolicies) (ReadOnly)
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' (ReadOnly)
 * **runtimeUrls**: string[] (ReadOnly)
 
@@ -886,18 +886,18 @@
 * **ApiType**: 'NotSpecified' | 'Rest' | 'Soap' (ReadOnly)
 * **brandColor**: string (ReadOnly)
 * **connectionType**: string (ReadOnly)
-* **deploymentParameters**: ApiDeploymentParameterMetadataSet (ReadOnly)
+* **deploymentParameters**: [ApiDeploymentParameterMetadataSet](#apideploymentparametermetadataset) (ReadOnly)
 * **hideKey**: string (ReadOnly)
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' (ReadOnly)
 * **source**: string (ReadOnly)
-* **tags**: ApiResourceMetadataTags (ReadOnly)
+* **tags**: [ApiResourceMetadataTags](#apiresourcemetadatatags) (ReadOnly)
 * **wsdlImportMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest' (ReadOnly)
-* **wsdlService**: WsdlService (ReadOnly)
+* **wsdlService**: [WsdlService](#wsdlservice) (ReadOnly)
 
 ## ApiDeploymentParameterMetadataSet
 ### Properties
-* **packageContentLink**: ApiDeploymentParameterMetadata (ReadOnly)
-* **redisCacheConnectionString**: ApiDeploymentParameterMetadata (ReadOnly)
+* **packageContentLink**: [ApiDeploymentParameterMetadata](#apideploymentparametermetadata) (ReadOnly)
+* **redisCacheConnectionString**: [ApiDeploymentParameterMetadata](#apideploymentparametermetadata) (ReadOnly)
 
 ## ApiDeploymentParameterMetadata
 ### Properties
@@ -929,31 +929,31 @@
 
 ## WorkflowProperties
 ### Properties
-* **accessControl**: FlowAccessControlConfiguration
+* **accessControl**: [FlowAccessControlConfiguration](#flowaccesscontrolconfiguration)
 * **accessEndpoint**: string (ReadOnly)
 * **changedTime**: string (ReadOnly)
 * **createdTime**: string (ReadOnly)
 * **definition**: any
-* **endpointsConfiguration**: FlowEndpointsConfiguration
-* **integrationAccount**: ResourceReference
-* **integrationServiceEnvironment**: ResourceReference
-* **parameters**: WorkflowPropertiesParameters
+* **endpointsConfiguration**: [FlowEndpointsConfiguration](#flowendpointsconfiguration)
+* **integrationAccount**: [ResourceReference](#resourcereference)
+* **integrationServiceEnvironment**: [ResourceReference](#resourcereference)
+* **parameters**: [WorkflowPropertiesParameters](#workflowpropertiesparameters)
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' (ReadOnly)
-* **sku**: Sku (ReadOnly)
+* **sku**: [Sku](#sku) (ReadOnly)
 * **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended'
 * **version**: string (ReadOnly)
 
 ## FlowAccessControlConfiguration
 ### Properties
-* **actions**: FlowAccessControlConfigurationPolicy
-* **contents**: FlowAccessControlConfigurationPolicy
-* **triggers**: FlowAccessControlConfigurationPolicy
-* **workflowManagement**: FlowAccessControlConfigurationPolicy
+* **actions**: [FlowAccessControlConfigurationPolicy](#flowaccesscontrolconfigurationpolicy)
+* **contents**: [FlowAccessControlConfigurationPolicy](#flowaccesscontrolconfigurationpolicy)
+* **triggers**: [FlowAccessControlConfigurationPolicy](#flowaccesscontrolconfigurationpolicy)
+* **workflowManagement**: [FlowAccessControlConfigurationPolicy](#flowaccesscontrolconfigurationpolicy)
 
 ## FlowAccessControlConfigurationPolicy
 ### Properties
-* **allowedCallerIpAddresses**: IpAddressRange[]
-* **openAuthenticationPolicies**: OpenAuthenticationAccessPolicies
+* **allowedCallerIpAddresses**: [IpAddressRange](#ipaddressrange)[]
+* **openAuthenticationPolicies**: [OpenAuthenticationAccessPolicies](#openauthenticationaccesspolicies)
 
 ## IpAddressRange
 ### Properties
@@ -961,16 +961,16 @@
 
 ## OpenAuthenticationAccessPolicies
 ### Properties
-* **policies**: OpenAuthenticationAccessPolicies
+* **policies**: [OpenAuthenticationAccessPolicies](#openauthenticationaccesspolicies)
 
 ## OpenAuthenticationAccessPolicies
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: OpenAuthenticationAccessPolicy
+* **Additional Properties Type**: [OpenAuthenticationAccessPolicy](#openauthenticationaccesspolicy)
 
 ## OpenAuthenticationAccessPolicy
 ### Properties
-* **claims**: OpenAuthenticationPolicyClaim[]
+* **claims**: [OpenAuthenticationPolicyClaim](#openauthenticationpolicyclaim)[]
 * **type**: 'AAD' (ReadOnly)
 
 ## OpenAuthenticationPolicyClaim
@@ -981,7 +981,7 @@
 ## WorkflowPropertiesParameters
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: WorkflowParameter
+* **Additional Properties Type**: [WorkflowParameter](#workflowparameter)
 
 ## WorkflowParameter
 ### Properties
@@ -993,7 +993,7 @@
 ## Sku
 ### Properties
 * **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard' (Required)
-* **plan**: ResourceReference
+* **plan**: [ResourceReference](#resourcereference)
 
 ## ResourceTags
 ### Properties

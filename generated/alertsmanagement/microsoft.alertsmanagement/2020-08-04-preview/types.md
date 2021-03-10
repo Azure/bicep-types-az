@@ -7,14 +7,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: HealthAlertProperties (Required)
-* **tags**: ResourceTags
+* **properties**: [HealthAlertProperties](#healthalertproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.AlertsManagement/resourceHealthAlertRules' (ReadOnly, DeployTimeConstant)
 
 ## HealthAlertProperties
 ### Properties
-* **actions**: HealthAlertAction[]
-* **criteria**: HealthAlertCriteria (Required)
+* **actions**: [HealthAlertAction](#healthalertaction)[]
+* **criteria**: [HealthAlertCriteria](#healthalertcriteria) (Required)
 * **description**: string (Required)
 * **enabled**: bool (Required)
 * **lastUpdatedTime**: string (ReadOnly)
@@ -23,7 +23,7 @@
 ## HealthAlertAction
 ### Properties
 * **actionGroupId**: string
-* **webHookProperties**: HealthAlertActionWebHookProperties
+* **webHookProperties**: [HealthAlertActionWebHookProperties](#healthalertactionwebhookproperties)
 
 ## HealthAlertActionWebHookProperties
 ### Properties
@@ -32,7 +32,7 @@
 
 ## HealthAlertCriteria
 ### Properties
-* **allOf**: HealthAlertCriterion[]
+* **allOf**: [HealthAlertCriterion](#healthalertcriterion)[]
 
 ## HealthAlertCriterion
 * **Discriminator**: namespace
@@ -40,7 +40,7 @@
 ### Base Properties
 ### VmGuestHealthAlertCriterion
 #### Properties
-* **healthStates**: HealthState[] (Required)
+* **healthStates**: [HealthState](#healthstate)[] (Required)
 * **monitorNames**: string[]
 * **monitorTypes**: string[]
 * **namespace**: 'GuestVmHealth' (Required)
@@ -48,7 +48,7 @@
 
 ## VmGuestHealthAlertCriterion
 ### Properties
-* **healthStates**: HealthState[] (Required)
+* **healthStates**: [HealthState](#healthstate)[] (Required)
 * **monitorNames**: string[]
 * **monitorTypes**: string[]
 * **namespace**: 'GuestVmHealth' (Required)

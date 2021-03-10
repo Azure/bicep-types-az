@@ -7,18 +7,18 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BudgetProperties
+* **properties**: [BudgetProperties](#budgetproperties)
 * **type**: 'Microsoft.Consumption/budgets' (ReadOnly, DeployTimeConstant)
 
 ## BudgetProperties
 ### Properties
 * **amount**: int (Required)
 * **category**: 'Cost' | 'Usage' (Required)
-* **currentSpend**: CurrentSpend (ReadOnly)
-* **filters**: Filters
-* **notifications**: BudgetPropertiesNotifications
+* **currentSpend**: [CurrentSpend](#currentspend) (ReadOnly)
+* **filters**: [Filters](#filters)
+* **notifications**: [BudgetPropertiesNotifications](#budgetpropertiesnotifications)
 * **timeGrain**: 'Annually' | 'Monthly' | 'Quarterly' (Required)
-* **timePeriod**: BudgetTimePeriod (Required)
+* **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required)
 
 ## CurrentSpend
 ### Properties
@@ -34,7 +34,7 @@
 ## BudgetPropertiesNotifications
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: Notification
+* **Additional Properties Type**: [Notification](#notification)
 
 ## Notification
 ### Properties

@@ -7,34 +7,34 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PipelineProperties (Required)
-* **tags**: ResourceTags
+* **properties**: [PipelineProperties](#pipelineproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevOps/pipelines' (ReadOnly, DeployTimeConstant)
 
 ## PipelineProperties
 ### Properties
-* **bootstrapConfiguration**: BootstrapConfiguration (Required)
-* **organization**: OrganizationReference (Required)
+* **bootstrapConfiguration**: [BootstrapConfiguration](#bootstrapconfiguration) (Required)
+* **organization**: [OrganizationReference](#organizationreference) (Required)
 * **pipelineId**: int (ReadOnly)
-* **project**: ProjectReference (Required)
+* **project**: [ProjectReference](#projectreference) (Required)
 
 ## BootstrapConfiguration
 ### Properties
-* **repository**: CodeRepository
-* **template**: PipelineTemplate (Required)
+* **repository**: [CodeRepository](#coderepository)
+* **template**: [PipelineTemplate](#pipelinetemplate) (Required)
 
 ## CodeRepository
 ### Properties
-* **authorization**: Authorization
+* **authorization**: [Authorization](#authorization)
 * **defaultBranch**: string (Required)
 * **id**: string (Required)
-* **properties**: CodeRepositoryProperties
+* **properties**: [CodeRepositoryProperties](#coderepositoryproperties)
 * **repositoryType**: 'gitHub' | 'vstsGit' (Required)
 
 ## Authorization
 ### Properties
 * **authorizationType**: 'personalAccessToken' (Required)
-* **parameters**: AuthorizationParameters
+* **parameters**: [AuthorizationParameters](#authorizationparameters)
 
 ## AuthorizationParameters
 ### Properties
@@ -49,7 +49,7 @@
 ## PipelineTemplate
 ### Properties
 * **id**: string (Required)
-* **parameters**: PipelineTemplateParameters
+* **parameters**: [PipelineTemplateParameters](#pipelinetemplateparameters)
 
 ## PipelineTemplateParameters
 ### Properties

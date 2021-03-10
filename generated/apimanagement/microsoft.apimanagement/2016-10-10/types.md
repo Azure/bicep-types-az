@@ -8,16 +8,16 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApiManagementServiceProperties (Required)
-* **sku**: ApiManagementServiceSkuProperties (Required)
-* **tags**: ResourceTags
+* **properties**: [ApiManagementServiceProperties](#apimanagementserviceproperties) (Required)
+* **sku**: [ApiManagementServiceSkuProperties](#apimanagementserviceskuproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ApiManagement/service' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis@2016-10-10
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
-* **authenticationSettings**: AuthenticationSettingsContract (WriteOnly)
+* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (WriteOnly)
 * **content**: any (ReadOnly)
 * **description**: string (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
@@ -27,7 +27,7 @@
 * **requestId**: string (ReadOnly)
 * **serviceUrl**: string (Required, WriteOnly)
 * **statusCode**: 'Accepted' | 'Conflict' | 'Continue' | 'Created' | 'NotFound' | 'OK' (ReadOnly)
-* **subscriptionKeyParameterNames**: SubscriptionKeyParameterNamesContract (WriteOnly)
+* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (WriteOnly)
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis/operations@2016-10-10
@@ -38,9 +38,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **method**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **request**: RequestContract
-* **responses**: ResultContract[]
-* **templateParameters**: ParameterContract[]
+* **request**: [RequestContract](#requestcontract)
+* **responses**: [ResultContract](#resultcontract)[]
+* **templateParameters**: [ParameterContract](#parametercontract)[]
 * **type**: 'Microsoft.ApiManagement/service/apis/operations' (ReadOnly, DeployTimeConstant)
 * **urlTemplate**: string (Required)
 
@@ -63,7 +63,7 @@
 * **resourceOwnerPassword**: string
 * **resourceOwnerUsername**: string
 * **supportState**: bool
-* **tokenBodyParameters**: TokenBodyParameterContract[]
+* **tokenBodyParameters**: [TokenBodyParameterContract](#tokenbodyparametercontract)[]
 * **tokenEndpoint**: string
 * **type**: 'Microsoft.ApiManagement/service/authorizationServers' (ReadOnly, DeployTimeConstant)
 
@@ -73,14 +73,14 @@
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
 * **certificate**: string[]
 * **description**: string
-* **header**: BackendCredentialsContractHeader
+* **header**: [BackendCredentialsContractHeader](#backendcredentialscontractheader)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **parameter**: string (Required)
 * **password**: string
-* **properties**: BackendProperties
+* **properties**: [BackendProperties](#backendproperties)
 * **protocol**: 'http' | 'soap' (Required)
-* **query**: BackendCredentialsContractQuery
+* **query**: [BackendCredentialsContractQuery](#backendcredentialscontractquery)
 * **resourceId**: string
 * **scheme**: string (Required)
 * **title**: string
@@ -135,7 +135,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
-* **credentials**: LoggerCreateParametersCredentials (Required)
+* **credentials**: [LoggerCreateParametersCredentials](#loggercreateparameterscredentials) (Required)
 * **description**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **isBuffered**: bool
@@ -229,7 +229,7 @@
 * **email**: string (Required)
 * **firstName**: string (Required)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identities**: UserIdentityContract[] (ReadOnly)
+* **identities**: [UserIdentityContract](#useridentitycontract)[] (ReadOnly)
 * **lastName**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **note**: string
@@ -240,11 +240,11 @@
 
 ## ApiManagementServiceProperties
 ### Properties
-* **additionalLocations**: AdditionalRegion[]
+* **additionalLocations**: [AdditionalRegion](#additionalregion)[]
 * **addresserEmail**: string
 * **createdAtUtc**: string (ReadOnly)
-* **customProperties**: ApiManagementServicePropertiesCustomProperties
-* **hostnameConfigurations**: HostnameConfiguration[]
+* **customProperties**: [ApiManagementServicePropertiesCustomProperties](#apimanagementservicepropertiescustomproperties)
+* **hostnameConfigurations**: [HostnameConfiguration](#hostnameconfiguration)[]
 * **managementApiUrl**: string (ReadOnly)
 * **portalUrl**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
@@ -254,7 +254,7 @@
 * **scmUrl**: string (ReadOnly)
 * **staticIPs**: string[] (ReadOnly)
 * **targetProvisioningState**: string (ReadOnly)
-* **vpnconfiguration**: VirtualNetworkConfiguration
+* **vpnconfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration)
 * **vpnType**: 'External' | 'Internal' | 'None'
 
 ## AdditionalRegion
@@ -263,7 +263,7 @@
 * **skuType**: 'Developer' | 'Premium' | 'Standard' (Required)
 * **skuUnitCount**: int
 * **staticIPs**: string[] (ReadOnly)
-* **vpnconfiguration**: VirtualNetworkConfiguration
+* **vpnconfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration)
 
 ## VirtualNetworkConfiguration
 ### Properties
@@ -279,7 +279,7 @@
 
 ## HostnameConfiguration
 ### Properties
-* **certificate**: CertificateInformation (Required)
+* **certificate**: [CertificateInformation](#certificateinformation) (Required)
 * **hostname**: string (Required)
 * **type**: 'Management' | 'Portal' | 'Proxy' | 'Scm' (Required)
 
@@ -301,7 +301,7 @@
 
 ## AuthenticationSettingsContract
 ### Properties
-* **oAuth2**: OAuth2AuthenticationSettingsContract (WriteOnly)
+* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract) (WriteOnly)
 
 ## OAuth2AuthenticationSettingsContract
 ### Properties
@@ -316,9 +316,9 @@
 ## RequestContract
 ### Properties
 * **description**: string
-* **headers**: ParameterContract[]
-* **queryParameters**: ParameterContract[]
-* **representations**: RepresentationContract[]
+* **headers**: [ParameterContract](#parametercontract)[]
+* **queryParameters**: [ParameterContract](#parametercontract)[]
+* **representations**: [RepresentationContract](#representationcontract)[]
 
 ## ParameterContract
 ### Properties
@@ -337,7 +337,7 @@
 ## ResultContract
 ### Properties
 * **description**: string
-* **representations**: RepresentationContract[]
+* **representations**: [RepresentationContract](#representationcontract)[]
 * **statusCode**: int (Required)
 
 ## TokenBodyParameterContract

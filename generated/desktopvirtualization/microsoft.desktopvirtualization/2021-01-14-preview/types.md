@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationGroupProperties (Required)
-* **tags**: TrackedResourceTags
+* **properties**: [ApplicationGroupProperties](#applicationgroupproperties) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DesktopVirtualization/applicationGroups/applications@2021-01-14-preview
@@ -17,7 +17,7 @@
 * **apiVersion**: '2021-01-14-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationProperties (Required)
+* **properties**: [ApplicationProperties](#applicationproperties) (Required)
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups/applications' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DesktopVirtualization/hostPools@2021-01-14-preview
@@ -27,8 +27,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: HostPoolProperties (Required)
-* **tags**: TrackedResourceTags
+* **properties**: [HostPoolProperties](#hostpoolproperties) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DesktopVirtualization/hostPools/msixPackages@2021-01-14-preview
@@ -37,7 +37,7 @@
 * **apiVersion**: '2021-01-14-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MsixPackageProperties (Required)
+* **properties**: [MsixPackageProperties](#msixpackageproperties) (Required)
 * **type**: 'Microsoft.DesktopVirtualization/hostPools/msixPackages' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DesktopVirtualization/scalingPlans@2021-01-14-preview
@@ -47,8 +47,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ScalingPlanProperties
-* **tags**: TrackedResourceTags
+* **properties**: [ScalingPlanProperties](#scalingplanproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DesktopVirtualization/scalingPlans' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DesktopVirtualization/workspaces@2021-01-14-preview
@@ -58,8 +58,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceProperties
-* **tags**: TrackedResourceTags
+* **properties**: [WorkspaceProperties](#workspaceproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationGroupProperties
@@ -102,7 +102,7 @@
 * **maxSessionLimit**: int
 * **personalDesktopAssignmentType**: 'Automatic' | 'Direct'
 * **preferredAppGroupType**: 'Desktop' | 'None' | 'RailApplications' (Required)
-* **registrationInfo**: RegistrationInfo
+* **registrationInfo**: [RegistrationInfo](#registrationinfo)
 * **ring**: int
 * **ssoadfsAuthority**: string
 * **ssoClientId**: string
@@ -131,8 +131,8 @@
 * **isActive**: bool
 * **isRegularRegistration**: bool
 * **lastUpdated**: string
-* **packageApplications**: MsixPackageApplications[]
-* **packageDependencies**: MsixPackageDependencies[]
+* **packageApplications**: [MsixPackageApplications](#msixpackageapplications)[]
+* **packageDependencies**: [MsixPackageDependencies](#msixpackagedependencies)[]
 * **packageFamilyName**: string
 * **packageName**: string
 * **packageRelativePath**: string
@@ -159,9 +159,9 @@
 * **description**: string
 * **exclusionTag**: string
 * **friendlyName**: string
-* **hostPoolReferences**: ScalingHostPoolReference[]
+* **hostPoolReferences**: [ScalingHostPoolReference](#scalinghostpoolreference)[]
 * **hostPoolType**: 'Personal' | 'Pooled'
-* **schedules**: ScalingSchedule[]
+* **schedules**: [ScalingSchedule](#scalingschedule)[]
 * **timeZone**: string
 
 ## ScalingHostPoolReference

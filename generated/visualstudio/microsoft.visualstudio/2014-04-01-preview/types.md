@@ -9,8 +9,8 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **operationType**: 'create' | 'link' | 'unknown' | 'update' (WriteOnly)
-* **properties**: AccountResourceRequestProperties
-* **tags**: AccountResourceRequestTags
+* **properties**: [AccountResourceRequestProperties](#accountresourcerequestproperties)
+* **tags**: [AccountResourceRequestTags](#accountresourcerequesttags)
 * **type**: 'microsoft.visualstudio/account' (ReadOnly, DeployTimeConstant)
 
 ## Resource microsoft.visualstudio/account/extension@2014-04-01-preview
@@ -20,9 +20,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **plan**: ExtensionResourcePlan
-* **properties**: ExtensionResourceRequestProperties
-* **tags**: ExtensionResourceRequestTags
+* **plan**: [ExtensionResourcePlan](#extensionresourceplan)
+* **properties**: [ExtensionResourceRequestProperties](#extensionresourcerequestproperties)
+* **tags**: [ExtensionResourceRequestTags](#extensionresourcerequesttags)
 * **type**: 'microsoft.visualstudio/account/extension' (ReadOnly, DeployTimeConstant)
 
 ## Resource microsoft.visualstudio/account/project@2014-04-01-preview
@@ -32,8 +32,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProjectResourceProperties
-* **tags**: ResourceTags
+* **properties**: [ProjectResourceProperties](#projectresourceproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'microsoft.visualstudio/account/project' (ReadOnly, DeployTimeConstant)
 
 ## AccountResourceRequestProperties

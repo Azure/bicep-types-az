@@ -7,15 +7,15 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkbookTemplateProperties
-* **tags**: WorkbookTemplateResourceTags
+* **properties**: [WorkbookTemplateProperties](#workbooktemplateproperties)
+* **tags**: [WorkbookTemplateResourceTags](#workbooktemplateresourcetags)
 * **type**: 'microsoft.insights/workbooktemplates' (ReadOnly, DeployTimeConstant)
 
 ## WorkbookTemplateProperties
 ### Properties
 * **author**: string
-* **galleries**: WorkbookTemplateGallery[] (Required)
-* **localized**: WorkbookTemplatePropertiesLocalized
+* **galleries**: [WorkbookTemplateGallery](#workbooktemplategallery)[] (Required)
+* **localized**: [WorkbookTemplatePropertiesLocalized](#workbooktemplatepropertieslocalized)
 * **priority**: int
 * **templateData**: any (Required)
 
@@ -30,11 +30,11 @@
 ## WorkbookTemplatePropertiesLocalized
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: WorkbookTemplateLocalizedGallery[]
+* **Additional Properties Type**: [WorkbookTemplateLocalizedGallery](#workbooktemplatelocalizedgallery)[]
 
 ## WorkbookTemplateLocalizedGallery
 ### Properties
-* **galleries**: WorkbookTemplateGallery[]
+* **galleries**: [WorkbookTemplateGallery](#workbooktemplategallery)[]
 * **templateData**: any
 
 ## WorkbookTemplateResourceTags

@@ -9,8 +9,8 @@
 * **kind**: string (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationInsightsComponentProperties
-* **tags**: ComponentsResourceTags
+* **properties**: [ApplicationInsightsComponentProperties](#applicationinsightscomponentproperties)
+* **tags**: [ComponentsResourceTags](#componentsresourcetags)
 * **type**: 'Microsoft.Insights/components' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationInsightsComponentProperties
@@ -29,7 +29,7 @@
 * **InstrumentationKey**: string (ReadOnly)
 * **LaMigrationDate**: string (ReadOnly)
 * **Name**: string (ReadOnly)
-* **PrivateLinkScopedResources**: PrivateLinkScopedResource[] (ReadOnly)
+* **PrivateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled'
 * **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled'

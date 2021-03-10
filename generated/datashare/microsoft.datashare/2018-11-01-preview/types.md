@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity (Required)
+* **identity**: [Identity](#identity) (Required)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AccountProperties
-* **tags**: DefaultDtoTags
+* **properties**: [AccountProperties](#accountproperties)
+* **tags**: [DefaultDtoTags](#defaultdtotags)
 * **type**: 'Microsoft.DataShare/accounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataShare/accounts/shares@2018-11-01-preview
@@ -18,7 +18,7 @@
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ShareProperties
+* **properties**: [ShareProperties](#shareproperties)
 * **type**: 'Microsoft.DataShare/accounts/shares' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataShare/accounts/shares/dataSets@2018-11-01-preview
@@ -33,62 +33,62 @@
 ### AdlsGen1FileDataSet
 #### Properties
 * **kind**: 'AdlsGen1File' (Required)
-* **properties**: AdlsGen1FileProperties (Required)
+* **properties**: [AdlsGen1FileProperties](#adlsgen1fileproperties) (Required)
 
 ### AdlsGen1FolderDataSet
 #### Properties
 * **kind**: 'AdlsGen1Folder' (Required)
-* **properties**: AdlsGen1FolderProperties (Required)
+* **properties**: [AdlsGen1FolderProperties](#adlsgen1folderproperties) (Required)
 
 ### AdlsGen2FileDataSet
 #### Properties
 * **kind**: 'AdlsGen2File' (Required)
-* **properties**: AdlsGen2FileProperties (Required)
+* **properties**: [AdlsGen2FileProperties](#adlsgen2fileproperties) (Required)
 
 ### AdlsGen2FileSystemDataSet
 #### Properties
 * **kind**: 'AdlsGen2FileSystem' (Required)
-* **properties**: AdlsGen2FileSystemProperties (Required)
+* **properties**: [AdlsGen2FileSystemProperties](#adlsgen2filesystemproperties) (Required)
 
 ### AdlsGen2FolderDataSet
 #### Properties
 * **kind**: 'AdlsGen2Folder' (Required)
-* **properties**: AdlsGen2FolderProperties (Required)
+* **properties**: [AdlsGen2FolderProperties](#adlsgen2folderproperties) (Required)
 
 ### BlobDataSet
 #### Properties
 * **kind**: 'Blob' (Required)
-* **properties**: BlobProperties (Required)
+* **properties**: [BlobProperties](#blobproperties) (Required)
 
 ### BlobFolderDataSet
 #### Properties
 * **kind**: 'BlobFolder' (Required)
-* **properties**: BlobFolderProperties (Required)
+* **properties**: [BlobFolderProperties](#blobfolderproperties) (Required)
 
 ### BlobContainerDataSet
 #### Properties
 * **kind**: 'Container' (Required)
-* **properties**: BlobContainerProperties (Required)
+* **properties**: [BlobContainerProperties](#blobcontainerproperties) (Required)
 
 ### KustoClusterDataSet
 #### Properties
 * **kind**: 'KustoCluster' (Required)
-* **properties**: KustoClusterDataSetProperties (Required)
+* **properties**: [KustoClusterDataSetProperties](#kustoclusterdatasetproperties) (Required)
 
 ### KustoDatabaseDataSet
 #### Properties
 * **kind**: 'KustoDatabase' (Required)
-* **properties**: KustoDatabaseDataSetProperties (Required)
+* **properties**: [KustoDatabaseDataSetProperties](#kustodatabasedatasetproperties) (Required)
 
 ### SqlDBTableDataSet
 #### Properties
 * **kind**: 'SqlDBTable' (Required)
-* **properties**: SqlDBTableProperties
+* **properties**: [SqlDBTableProperties](#sqldbtableproperties)
 
 ### SqlDWTableDataSet
 #### Properties
 * **kind**: 'SqlDWTable' (Required)
-* **properties**: SqlDWTableProperties
+* **properties**: [SqlDWTableProperties](#sqldwtableproperties)
 
 
 ## Resource Microsoft.DataShare/accounts/shares/invitations@2018-11-01-preview
@@ -97,7 +97,7 @@
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: InvitationProperties
+* **properties**: [InvitationProperties](#invitationproperties)
 * **type**: 'Microsoft.DataShare/accounts/shares/invitations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataShare/accounts/shares/synchronizationSettings@2018-11-01-preview
@@ -112,7 +112,7 @@
 ### ScheduledSynchronizationSetting
 #### Properties
 * **kind**: 'ScheduleBased' (Required)
-* **properties**: ScheduledSynchronizationSettingProperties (Required)
+* **properties**: [ScheduledSynchronizationSettingProperties](#scheduledsynchronizationsettingproperties) (Required)
 
 
 ## Resource Microsoft.DataShare/accounts/shareSubscriptions@2018-11-01-preview
@@ -121,7 +121,7 @@
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ShareSubscriptionProperties (Required)
+* **properties**: [ShareSubscriptionProperties](#sharesubscriptionproperties) (Required)
 * **type**: 'Microsoft.DataShare/accounts/shareSubscriptions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings@2018-11-01-preview
@@ -136,52 +136,52 @@
 ### AdlsGen2FileDataSetMapping
 #### Properties
 * **kind**: 'AdlsGen2File' (Required)
-* **properties**: AdlsGen2FileDataSetMappingProperties (Required)
+* **properties**: [AdlsGen2FileDataSetMappingProperties](#adlsgen2filedatasetmappingproperties) (Required)
 
 ### AdlsGen2FileSystemDataSetMapping
 #### Properties
 * **kind**: 'AdlsGen2FileSystem' (Required)
-* **properties**: AdlsGen2FileSystemDataSetMappingProperties (Required)
+* **properties**: [AdlsGen2FileSystemDataSetMappingProperties](#adlsgen2filesystemdatasetmappingproperties) (Required)
 
 ### AdlsGen2FolderDataSetMapping
 #### Properties
 * **kind**: 'AdlsGen2Folder' (Required)
-* **properties**: AdlsGen2FolderDataSetMappingProperties (Required)
+* **properties**: [AdlsGen2FolderDataSetMappingProperties](#adlsgen2folderdatasetmappingproperties) (Required)
 
 ### BlobDataSetMapping
 #### Properties
 * **kind**: 'Blob' (Required)
-* **properties**: BlobMappingProperties (Required)
+* **properties**: [BlobMappingProperties](#blobmappingproperties) (Required)
 
 ### BlobFolderDataSetMapping
 #### Properties
 * **kind**: 'BlobFolder' (Required)
-* **properties**: BlobFolderMappingProperties (Required)
+* **properties**: [BlobFolderMappingProperties](#blobfoldermappingproperties) (Required)
 
 ### BlobContainerDataSetMapping
 #### Properties
 * **kind**: 'Container' (Required)
-* **properties**: BlobContainerMappingProperties (Required)
+* **properties**: [BlobContainerMappingProperties](#blobcontainermappingproperties) (Required)
 
 ### KustoClusterDataSetMapping
 #### Properties
 * **kind**: 'KustoCluster' (Required)
-* **properties**: KustoClusterDataSetMappingProperties (Required)
+* **properties**: [KustoClusterDataSetMappingProperties](#kustoclusterdatasetmappingproperties) (Required)
 
 ### KustoDatabaseDataSetMapping
 #### Properties
 * **kind**: 'KustoDatabase' (Required)
-* **properties**: KustoDatabaseDataSetMappingProperties (Required)
+* **properties**: [KustoDatabaseDataSetMappingProperties](#kustodatabasedatasetmappingproperties) (Required)
 
 ### SqlDBTableDataSetMapping
 #### Properties
 * **kind**: 'SqlDBTable' (Required)
-* **properties**: SqlDBTableDataSetMappingProperties (Required)
+* **properties**: [SqlDBTableDataSetMappingProperties](#sqldbtabledatasetmappingproperties) (Required)
 
 ### SqlDWTableDataSetMapping
 #### Properties
 * **kind**: 'SqlDWTable' (Required)
-* **properties**: SqlDWTableDataSetMappingProperties (Required)
+* **properties**: [SqlDWTableDataSetMappingProperties](#sqldwtabledatasetmappingproperties) (Required)
 
 
 ## Resource Microsoft.DataShare/accounts/shareSubscriptions/triggers@2018-11-01-preview
@@ -196,7 +196,7 @@
 ### ScheduledTrigger
 #### Properties
 * **kind**: 'ScheduleBased' (Required)
-* **properties**: ScheduledTriggerProperties (Required)
+* **properties**: [ScheduledTriggerProperties](#scheduledtriggerproperties) (Required)
 
 
 ## Identity
@@ -230,7 +230,7 @@
 ## AdlsGen1FileDataSet
 ### Properties
 * **kind**: 'AdlsGen1File' (Required)
-* **properties**: AdlsGen1FileProperties (Required)
+* **properties**: [AdlsGen1FileProperties](#adlsgen1fileproperties) (Required)
 
 ## AdlsGen1FileProperties
 ### Properties
@@ -244,7 +244,7 @@
 ## AdlsGen1FolderDataSet
 ### Properties
 * **kind**: 'AdlsGen1Folder' (Required)
-* **properties**: AdlsGen1FolderProperties (Required)
+* **properties**: [AdlsGen1FolderProperties](#adlsgen1folderproperties) (Required)
 
 ## AdlsGen1FolderProperties
 ### Properties
@@ -257,7 +257,7 @@
 ## AdlsGen2FileDataSet
 ### Properties
 * **kind**: 'AdlsGen2File' (Required)
-* **properties**: AdlsGen2FileProperties (Required)
+* **properties**: [AdlsGen2FileProperties](#adlsgen2fileproperties) (Required)
 
 ## AdlsGen2FileProperties
 ### Properties
@@ -271,7 +271,7 @@
 ## AdlsGen2FileSystemDataSet
 ### Properties
 * **kind**: 'AdlsGen2FileSystem' (Required)
-* **properties**: AdlsGen2FileSystemProperties (Required)
+* **properties**: [AdlsGen2FileSystemProperties](#adlsgen2filesystemproperties) (Required)
 
 ## AdlsGen2FileSystemProperties
 ### Properties
@@ -284,7 +284,7 @@
 ## AdlsGen2FolderDataSet
 ### Properties
 * **kind**: 'AdlsGen2Folder' (Required)
-* **properties**: AdlsGen2FolderProperties (Required)
+* **properties**: [AdlsGen2FolderProperties](#adlsgen2folderproperties) (Required)
 
 ## AdlsGen2FolderProperties
 ### Properties
@@ -298,7 +298,7 @@
 ## BlobDataSet
 ### Properties
 * **kind**: 'Blob' (Required)
-* **properties**: BlobProperties (Required)
+* **properties**: [BlobProperties](#blobproperties) (Required)
 
 ## BlobProperties
 ### Properties
@@ -312,7 +312,7 @@
 ## BlobFolderDataSet
 ### Properties
 * **kind**: 'BlobFolder' (Required)
-* **properties**: BlobFolderProperties (Required)
+* **properties**: [BlobFolderProperties](#blobfolderproperties) (Required)
 
 ## BlobFolderProperties
 ### Properties
@@ -326,7 +326,7 @@
 ## BlobContainerDataSet
 ### Properties
 * **kind**: 'Container' (Required)
-* **properties**: BlobContainerProperties (Required)
+* **properties**: [BlobContainerProperties](#blobcontainerproperties) (Required)
 
 ## BlobContainerProperties
 ### Properties
@@ -339,7 +339,7 @@
 ## KustoClusterDataSet
 ### Properties
 * **kind**: 'KustoCluster' (Required)
-* **properties**: KustoClusterDataSetProperties (Required)
+* **properties**: [KustoClusterDataSetProperties](#kustoclusterdatasetproperties) (Required)
 
 ## KustoClusterDataSetProperties
 ### Properties
@@ -351,7 +351,7 @@
 ## KustoDatabaseDataSet
 ### Properties
 * **kind**: 'KustoDatabase' (Required)
-* **properties**: KustoDatabaseDataSetProperties (Required)
+* **properties**: [KustoDatabaseDataSetProperties](#kustodatabasedatasetproperties) (Required)
 
 ## KustoDatabaseDataSetProperties
 ### Properties
@@ -363,7 +363,7 @@
 ## SqlDBTableDataSet
 ### Properties
 * **kind**: 'SqlDBTable' (Required)
-* **properties**: SqlDBTableProperties
+* **properties**: [SqlDBTableProperties](#sqldbtableproperties)
 
 ## SqlDBTableProperties
 ### Properties
@@ -376,7 +376,7 @@
 ## SqlDWTableDataSet
 ### Properties
 * **kind**: 'SqlDWTable' (Required)
-* **properties**: SqlDWTableProperties
+* **properties**: [SqlDWTableProperties](#sqldwtableproperties)
 
 ## SqlDWTableProperties
 ### Properties
@@ -401,7 +401,7 @@
 ## ScheduledSynchronizationSetting
 ### Properties
 * **kind**: 'ScheduleBased' (Required)
-* **properties**: ScheduledSynchronizationSettingProperties (Required)
+* **properties**: [ScheduledSynchronizationSettingProperties](#scheduledsynchronizationsettingproperties) (Required)
 
 ## ScheduledSynchronizationSettingProperties
 ### Properties
@@ -430,7 +430,7 @@
 ## AdlsGen2FileDataSetMapping
 ### Properties
 * **kind**: 'AdlsGen2File' (Required)
-* **properties**: AdlsGen2FileDataSetMappingProperties (Required)
+* **properties**: [AdlsGen2FileDataSetMappingProperties](#adlsgen2filedatasetmappingproperties) (Required)
 
 ## AdlsGen2FileDataSetMappingProperties
 ### Properties
@@ -447,7 +447,7 @@
 ## AdlsGen2FileSystemDataSetMapping
 ### Properties
 * **kind**: 'AdlsGen2FileSystem' (Required)
-* **properties**: AdlsGen2FileSystemDataSetMappingProperties (Required)
+* **properties**: [AdlsGen2FileSystemDataSetMappingProperties](#adlsgen2filesystemdatasetmappingproperties) (Required)
 
 ## AdlsGen2FileSystemDataSetMappingProperties
 ### Properties
@@ -462,7 +462,7 @@
 ## AdlsGen2FolderDataSetMapping
 ### Properties
 * **kind**: 'AdlsGen2Folder' (Required)
-* **properties**: AdlsGen2FolderDataSetMappingProperties (Required)
+* **properties**: [AdlsGen2FolderDataSetMappingProperties](#adlsgen2folderdatasetmappingproperties) (Required)
 
 ## AdlsGen2FolderDataSetMappingProperties
 ### Properties
@@ -478,7 +478,7 @@
 ## BlobDataSetMapping
 ### Properties
 * **kind**: 'Blob' (Required)
-* **properties**: BlobMappingProperties (Required)
+* **properties**: [BlobMappingProperties](#blobmappingproperties) (Required)
 
 ## BlobMappingProperties
 ### Properties
@@ -495,7 +495,7 @@
 ## BlobFolderDataSetMapping
 ### Properties
 * **kind**: 'BlobFolder' (Required)
-* **properties**: BlobFolderMappingProperties (Required)
+* **properties**: [BlobFolderMappingProperties](#blobfoldermappingproperties) (Required)
 
 ## BlobFolderMappingProperties
 ### Properties
@@ -511,7 +511,7 @@
 ## BlobContainerDataSetMapping
 ### Properties
 * **kind**: 'Container' (Required)
-* **properties**: BlobContainerMappingProperties (Required)
+* **properties**: [BlobContainerMappingProperties](#blobcontainermappingproperties) (Required)
 
 ## BlobContainerMappingProperties
 ### Properties
@@ -526,7 +526,7 @@
 ## KustoClusterDataSetMapping
 ### Properties
 * **kind**: 'KustoCluster' (Required)
-* **properties**: KustoClusterDataSetMappingProperties (Required)
+* **properties**: [KustoClusterDataSetMappingProperties](#kustoclusterdatasetmappingproperties) (Required)
 
 ## KustoClusterDataSetMappingProperties
 ### Properties
@@ -539,7 +539,7 @@
 ## KustoDatabaseDataSetMapping
 ### Properties
 * **kind**: 'KustoDatabase' (Required)
-* **properties**: KustoDatabaseDataSetMappingProperties (Required)
+* **properties**: [KustoDatabaseDataSetMappingProperties](#kustodatabasedatasetmappingproperties) (Required)
 
 ## KustoDatabaseDataSetMappingProperties
 ### Properties
@@ -552,7 +552,7 @@
 ## SqlDBTableDataSetMapping
 ### Properties
 * **kind**: 'SqlDBTable' (Required)
-* **properties**: SqlDBTableDataSetMappingProperties (Required)
+* **properties**: [SqlDBTableDataSetMappingProperties](#sqldbtabledatasetmappingproperties) (Required)
 
 ## SqlDBTableDataSetMappingProperties
 ### Properties
@@ -567,7 +567,7 @@
 ## SqlDWTableDataSetMapping
 ### Properties
 * **kind**: 'SqlDWTable' (Required)
-* **properties**: SqlDWTableDataSetMappingProperties (Required)
+* **properties**: [SqlDWTableDataSetMappingProperties](#sqldwtabledatasetmappingproperties) (Required)
 
 ## SqlDWTableDataSetMappingProperties
 ### Properties
@@ -582,7 +582,7 @@
 ## ScheduledTrigger
 ### Properties
 * **kind**: 'ScheduleBased' (Required)
-* **properties**: ScheduledTriggerProperties (Required)
+* **properties**: [ScheduledTriggerProperties](#scheduledtriggerproperties) (Required)
 
 ## ScheduledTriggerProperties
 ### Properties

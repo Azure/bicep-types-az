@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AccountProperties (Required)
+* **properties**: [AccountProperties](#accountproperties) (Required)
 * **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
 
@@ -18,7 +18,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PoolProperties (Required)
+* **properties**: [PoolProperties](#poolproperties) (Required)
 * **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
 
@@ -29,7 +29,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VolumeProperties (Required)
+* **properties**: [VolumeProperties](#volumeproperties) (Required)
 * **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant)
 
@@ -40,13 +40,13 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SnapshotProperties (Required)
+* **properties**: [SnapshotProperties](#snapshotproperties) (Required)
 * **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
 
 ## AccountProperties
 ### Properties
-* **activeDirectories**: ActiveDirectory[]
+* **activeDirectories**: [ActiveDirectory](#activedirectory)[]
 * **provisioningState**: string (ReadOnly)
 
 ## ActiveDirectory
@@ -70,7 +70,7 @@
 ## VolumeProperties
 ### Properties
 * **creationToken**: string (Required)
-* **exportPolicy**: VolumePropertiesExportPolicy
+* **exportPolicy**: [VolumePropertiesExportPolicy](#volumepropertiesexportpolicy)
 * **fileSystemId**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' (Required)
@@ -79,7 +79,7 @@
 
 ## VolumePropertiesExportPolicy
 ### Properties
-* **rules**: ExportPolicyRule[]
+* **rules**: [ExportPolicyRule](#exportpolicyrule)[]
 
 ## ExportPolicyRule
 ### Properties

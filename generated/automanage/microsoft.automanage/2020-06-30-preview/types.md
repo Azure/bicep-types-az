@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2020-06-30-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: AccountIdentity
+* **identity**: [AccountIdentity](#accountidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **tags**: TrackedResourceTags
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Automanage/accounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automanage/configurationProfileAssignments@2020-06-30-preview
@@ -17,7 +17,7 @@
 * **apiVersion**: '2020-06-30-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationProfileAssignmentProperties
+* **properties**: [ConfigurationProfileAssignmentProperties](#configurationprofileassignmentproperties)
 * **type**: 'Microsoft.Automanage/configurationProfileAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automanage/configurationProfilePreferences@2020-06-30-preview
@@ -27,8 +27,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationProfilePreferenceProperties
-* **tags**: TrackedResourceTags
+* **properties**: [ConfigurationProfilePreferenceProperties](#configurationprofilepreferenceproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Automanage/configurationProfilePreferences' (ReadOnly, DeployTimeConstant)
 
 ## AccountIdentity
@@ -45,7 +45,7 @@
 ## ConfigurationProfileAssignmentProperties
 ### Properties
 * **accountId**: string
-* **compliance**: ConfigurationProfileAssignmentCompliance
+* **compliance**: [ConfigurationProfileAssignmentCompliance](#configurationprofileassignmentcompliance)
 * **configurationProfile**: 'Azure virtual machine best practices – Dev/Test' | 'Azure virtual machine best practices – Production'
 * **configurationProfilePreferenceId**: string
 * **provisioningState**: 'Created' | 'Failed' | 'Succeeded' (ReadOnly)
@@ -57,8 +57,8 @@
 
 ## ConfigurationProfilePreferenceProperties
 ### Properties
-* **antiMalware**: ConfigurationProfilePreferenceAntiMalware
-* **vmBackup**: ConfigurationProfilePreferenceVmBackup
+* **antiMalware**: [ConfigurationProfilePreferenceAntiMalware](#configurationprofilepreferenceantimalware)
+* **vmBackup**: [ConfigurationProfilePreferenceVmBackup](#configurationprofilepreferencevmbackup)
 
 ## ConfigurationProfilePreferenceAntiMalware
 ### Properties

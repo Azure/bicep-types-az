@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LogAnalyticsQueryPackProperties (Required)
-* **tags**: QueryPacksResourceTags
+* **properties**: [LogAnalyticsQueryPackProperties](#loganalyticsquerypackproperties) (Required)
+* **tags**: [QueryPacksResourceTags](#querypacksresourcetags)
 * **type**: 'Microsoft.OperationalInsights/queryPacks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/queryPacks/queries@2019-09-01-preview
@@ -17,8 +17,8 @@
 * **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LogAnalyticsQueryPackQueryProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [LogAnalyticsQueryPackQueryProperties](#loganalyticsquerypackqueryproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.OperationalInsights/queryPacks/queries' (ReadOnly, DeployTimeConstant)
 
 ## LogAnalyticsQueryPackProperties
@@ -41,8 +41,8 @@
 * **displayName**: string (Required)
 * **id**: string (ReadOnly)
 * **properties**: any
-* **related**: LogAnalyticsQueryPackQueryPropertiesRelated
-* **tags**: LogAnalyticsQueryPackQueryPropertiesTags
+* **related**: [LogAnalyticsQueryPackQueryPropertiesRelated](#loganalyticsquerypackquerypropertiesrelated)
+* **tags**: [LogAnalyticsQueryPackQueryPropertiesTags](#loganalyticsquerypackquerypropertiestags)
 * **timeCreated**: string (ReadOnly)
 * **timeModified**: string (ReadOnly)
 

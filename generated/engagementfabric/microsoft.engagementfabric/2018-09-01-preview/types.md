@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **sku**: SKU (Required)
-* **tags**: TrackedResourceTags
+* **sku**: [SKU](#sku) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.EngagementFabric/Accounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EngagementFabric/Accounts/Channels@2018-09-01-preview
@@ -17,7 +17,7 @@
 * **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ChannelProperties
+* **properties**: [ChannelProperties](#channelproperties)
 * **type**: 'Microsoft.EngagementFabric/Accounts/Channels' (ReadOnly, DeployTimeConstant)
 
 ## SKU
@@ -34,7 +34,7 @@
 ### Properties
 * **channelFunctions**: string[]
 * **channelType**: string (Required)
-* **credentials**: ChannelPropertiesCredentials
+* **credentials**: [ChannelPropertiesCredentials](#channelpropertiescredentials)
 
 ## ChannelPropertiesCredentials
 ### Properties

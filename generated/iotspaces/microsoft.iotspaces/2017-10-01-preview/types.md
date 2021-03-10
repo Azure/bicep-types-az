@@ -7,16 +7,16 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IoTSpacesProperties
-* **sku**: IoTSpacesSkuInfo (Required)
-* **tags**: ResourceTags
+* **properties**: [IoTSpacesProperties](#iotspacesproperties)
+* **sku**: [IoTSpacesSkuInfo](#iotspacesskuinfo) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.IoTSpaces/Graph' (ReadOnly, DeployTimeConstant)
 
 ## IoTSpacesProperties
 ### Properties
 * **managementApiUrl**: string (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly)
-* **storageContainer**: StorageContainerProperties
+* **storageContainer**: [StorageContainerProperties](#storagecontainerproperties)
 * **webPortalUrl**: string (ReadOnly)
 
 ## StorageContainerProperties

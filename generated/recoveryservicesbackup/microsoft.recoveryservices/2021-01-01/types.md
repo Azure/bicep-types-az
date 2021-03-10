@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BackupResourceVaultConfig
-* **tags**: ResourceTags
+* **properties**: [BackupResourceVaultConfig](#backupresourcevaultconfig)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupconfig' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.RecoveryServices/vaults/backupEncryptionConfigs@2021-01-01
@@ -20,8 +20,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BackupResourceEncryptionConfig
-* **tags**: ResourceTags
+* **properties**: [BackupResourceEncryptionConfig](#backupresourceencryptionconfig)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupEncryptionConfigs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers@2021-01-01
@@ -32,8 +32,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProtectionContainer
-* **tags**: ResourceTags
+* **properties**: [ProtectionContainer](#protectioncontainer)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2021-01-01
@@ -44,8 +44,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProtectedItem
-* **tags**: ResourceTags
+* **properties**: [ProtectedItem](#protecteditem)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.RecoveryServices/vaults/backupPolicies@2021-01-01
@@ -56,8 +56,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProtectionPolicy
-* **tags**: ResourceTags
+* **properties**: [ProtectionPolicy](#protectionpolicy)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.RecoveryServices/vaults/privateEndpointConnections@2021-01-01
@@ -68,8 +68,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnection
-* **tags**: ResourceTags
+* **properties**: [PrivateEndpointConnection](#privateendpointconnection)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## BackupResourceVaultConfig
@@ -117,7 +117,7 @@
 ### GenericContainer
 #### Properties
 * **containerType**: 'GenericContainer' (Required)
-* **extendedInformation**: GenericContainerExtendedInfo
+* **extendedInformation**: [GenericContainerExtendedInfo](#genericcontainerextendedinfo)
 * **fabricName**: string
 
 ### AzureIaaSClassicComputeVMContainer
@@ -151,8 +151,8 @@
 * **containerHealthState**: string
 * **containerId**: int
 * **containerType**: 'Windows' (Required)
-* **extendedInfo**: MabContainerExtendedInfo
-* **mabContainerHealthDetails**: MABContainerHealthDetails[]
+* **extendedInfo**: [MabContainerExtendedInfo](#mabcontainerextendedinfo)
+* **mabContainerHealthDetails**: [MABContainerHealthDetails](#mabcontainerhealthdetails)[]
 * **protectedItemCount**: int
 
 
@@ -167,14 +167,14 @@
 ## GenericContainer
 ### Properties
 * **containerType**: 'GenericContainer' (Required)
-* **extendedInformation**: GenericContainerExtendedInfo
+* **extendedInformation**: [GenericContainerExtendedInfo](#genericcontainerextendedinfo)
 * **fabricName**: string
 
 ## GenericContainerExtendedInfo
 ### Properties
-* **containerIdentityInfo**: ContainerIdentityInfo
+* **containerIdentityInfo**: [ContainerIdentityInfo](#containeridentityinfo)
 * **rawCertData**: string
-* **serviceEndpoints**: GenericContainerExtendedInfoServiceEndpoints
+* **serviceEndpoints**: [GenericContainerExtendedInfoServiceEndpoints](#genericcontainerextendedinfoserviceendpoints)
 
 ## ContainerIdentityInfo
 ### Properties
@@ -219,8 +219,8 @@
 * **containerHealthState**: string
 * **containerId**: int
 * **containerType**: 'Windows' (Required)
-* **extendedInfo**: MabContainerExtendedInfo
-* **mabContainerHealthDetails**: MABContainerHealthDetails[]
+* **extendedInfo**: [MabContainerExtendedInfo](#mabcontainerextendedinfo)
+* **mabContainerHealthDetails**: [MABContainerHealthDetails](#mabcontainerhealthdetails)[]
 * **protectedItemCount**: int
 
 ## MabContainerExtendedInfo
@@ -262,9 +262,9 @@
 * **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM'
 ### AzureFileshareProtectedItem
 #### Properties
-* **extendedInfo**: AzureFileshareProtectedItemExtendedInfo
+* **extendedInfo**: [AzureFileshareProtectedItemExtendedInfo](#azurefileshareprotecteditemextendedinfo)
 * **friendlyName**: string
-* **kpisHealths**: AzureFileshareProtectedItemKpisHealths
+* **kpisHealths**: [AzureFileshareProtectedItemKpisHealths](#azurefileshareprotecteditemkpishealths)
 * **lastBackupStatus**: string
 * **lastBackupTime**: string
 * **protectedItemType**: 'AzureFileShareProtectedItem' (Required)
@@ -286,7 +286,7 @@
 ### DPMProtectedItem
 #### Properties
 * **backupEngineName**: string
-* **extendedInfo**: DPMProtectedItemExtendedInfo
+* **extendedInfo**: [DPMProtectedItemExtendedInfo](#dpmprotecteditemextendedinfo)
 * **friendlyName**: string
 * **protectedItemType**: 'DPMProtectedItem' (Required)
 * **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
@@ -299,13 +299,13 @@
 * **protectedItemId**: int
 * **protectedItemType**: 'GenericProtectedItem' (Required)
 * **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
-* **sourceAssociations**: GenericProtectedItemSourceAssociations
+* **sourceAssociations**: [GenericProtectedItemSourceAssociations](#genericprotecteditemsourceassociations)
 
 ### MabFileFolderProtectedItem
 #### Properties
 * **computerName**: string
 * **deferredDeleteSyncTimeInUTC**: int
-* **extendedInfo**: MabFileFolderProtectedItemExtendedInfo
+* **extendedInfo**: [MabFileFolderProtectedItemExtendedInfo](#mabfilefolderprotecteditemextendedinfo)
 * **friendlyName**: string
 * **lastBackupStatus**: string
 * **lastBackupTime**: string
@@ -322,7 +322,7 @@
 
 ### AzureSqlProtectedItem
 #### Properties
-* **extendedInfo**: AzureSqlProtectedItemExtendedInfo
+* **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo)
 * **protectedItemDataId**: string
 * **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required)
 * **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
@@ -330,9 +330,9 @@
 
 ## AzureFileshareProtectedItem
 ### Properties
-* **extendedInfo**: AzureFileshareProtectedItemExtendedInfo
+* **extendedInfo**: [AzureFileshareProtectedItemExtendedInfo](#azurefileshareprotecteditemextendedinfo)
 * **friendlyName**: string
-* **kpisHealths**: AzureFileshareProtectedItemKpisHealths
+* **kpisHealths**: [AzureFileshareProtectedItemKpisHealths](#azurefileshareprotecteditemkpishealths)
 * **lastBackupStatus**: string
 * **lastBackupTime**: string
 * **protectedItemType**: 'AzureFileShareProtectedItem' (Required)
@@ -350,11 +350,11 @@
 ## AzureFileshareProtectedItemKpisHealths
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: KPIResourceHealthDetails
+* **Additional Properties Type**: [KPIResourceHealthDetails](#kpiresourcehealthdetails)
 
 ## KPIResourceHealthDetails
 ### Properties
-* **resourceHealthDetails**: ResourceHealthDetails[]
+* **resourceHealthDetails**: [ResourceHealthDetails](#resourcehealthdetails)[]
 * **resourceHealthStatus**: 'Healthy' | 'Invalid' | 'PersistentDegraded' | 'PersistentUnhealthy' | 'TransientDegraded' | 'TransientUnhealthy'
 
 ## ResourceHealthDetails
@@ -379,7 +379,7 @@
 ## DPMProtectedItem
 ### Properties
 * **backupEngineName**: string
-* **extendedInfo**: DPMProtectedItemExtendedInfo
+* **extendedInfo**: [DPMProtectedItemExtendedInfo](#dpmprotecteditemextendedinfo)
 * **friendlyName**: string
 * **protectedItemType**: 'DPMProtectedItem' (Required)
 * **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
@@ -395,7 +395,7 @@
 * **onPremiseLatestRecoveryPoint**: string
 * **onPremiseOldestRecoveryPoint**: string
 * **onPremiseRecoveryPointCount**: int
-* **protectableObjectLoadPath**: DPMProtectedItemExtendedInfoProtectableObjectLoadPath
+* **protectableObjectLoadPath**: [DPMProtectedItemExtendedInfoProtectableObjectLoadPath](#dpmprotecteditemextendedinfoprotectableobjectloadpath)
 * **protected**: bool
 * **protectionGroupName**: string
 * **recoveryPointCount**: int
@@ -414,7 +414,7 @@
 * **protectedItemId**: int
 * **protectedItemType**: 'GenericProtectedItem' (Required)
 * **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
-* **sourceAssociations**: GenericProtectedItemSourceAssociations
+* **sourceAssociations**: [GenericProtectedItemSourceAssociations](#genericprotecteditemsourceassociations)
 
 ## GenericProtectedItemSourceAssociations
 ### Properties
@@ -425,7 +425,7 @@
 ### Properties
 * **computerName**: string
 * **deferredDeleteSyncTimeInUTC**: int
-* **extendedInfo**: MabFileFolderProtectedItemExtendedInfo
+* **extendedInfo**: [MabFileFolderProtectedItemExtendedInfo](#mabfilefolderprotecteditemextendedinfo)
 * **friendlyName**: string
 * **lastBackupStatus**: string
 * **lastBackupTime**: string
@@ -448,7 +448,7 @@
 
 ## AzureSqlProtectedItem
 ### Properties
-* **extendedInfo**: AzureSqlProtectedItemExtendedInfo
+* **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo)
 * **protectedItemDataId**: string
 * **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required)
 * **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
@@ -472,22 +472,22 @@
 ### AzureIaaSVMProtectionPolicy
 #### Properties
 * **backupManagementType**: 'AzureIaasVM' (Required)
-* **instantRPDetails**: InstantRPAdditionalDetails
+* **instantRPDetails**: [InstantRPAdditionalDetails](#instantrpadditionaldetails)
 * **instantRpRetentionRangeInDays**: int
-* **retentionPolicy**: RetentionPolicy
-* **schedulePolicy**: SchedulePolicy
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
+* **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 * **timeZone**: string
 
 ### AzureSqlProtectionPolicy
 #### Properties
 * **backupManagementType**: 'AzureSql' (Required)
-* **retentionPolicy**: RetentionPolicy
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 
 ### AzureFileShareProtectionPolicy
 #### Properties
 * **backupManagementType**: 'AzureStorage' (Required)
-* **retentionPolicy**: RetentionPolicy
-* **schedulePolicy**: SchedulePolicy
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
+* **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 * **timeZone**: string
 * **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM'
 
@@ -495,31 +495,31 @@
 #### Properties
 * **backupManagementType**: 'AzureWorkload' (Required)
 * **makePolicyConsistent**: bool
-* **settings**: Settings
-* **subProtectionPolicy**: SubProtectionPolicy[]
+* **settings**: [Settings](#settings)
+* **subProtectionPolicy**: [SubProtectionPolicy](#subprotectionpolicy)[]
 * **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM'
 
 ### GenericProtectionPolicy
 #### Properties
 * **backupManagementType**: 'GenericProtectionPolicy' (Required)
 * **fabricName**: string
-* **subProtectionPolicy**: SubProtectionPolicy[]
+* **subProtectionPolicy**: [SubProtectionPolicy](#subprotectionpolicy)[]
 * **timeZone**: string
 
 ### MabProtectionPolicy
 #### Properties
 * **backupManagementType**: 'MAB' (Required)
-* **retentionPolicy**: RetentionPolicy
-* **schedulePolicy**: SchedulePolicy
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
+* **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 
 
 ## AzureIaaSVMProtectionPolicy
 ### Properties
 * **backupManagementType**: 'AzureIaasVM' (Required)
-* **instantRPDetails**: InstantRPAdditionalDetails
+* **instantRPDetails**: [InstantRPAdditionalDetails](#instantrpadditionaldetails)
 * **instantRpRetentionRangeInDays**: int
-* **retentionPolicy**: RetentionPolicy
-* **schedulePolicy**: SchedulePolicy
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
+* **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 * **timeZone**: string
 
 ## InstantRPAdditionalDetails
@@ -533,29 +533,29 @@
 ### Base Properties
 ### LongTermRetentionPolicy
 #### Properties
-* **dailySchedule**: DailyRetentionSchedule
-* **monthlySchedule**: MonthlyRetentionSchedule
+* **dailySchedule**: [DailyRetentionSchedule](#dailyretentionschedule)
+* **monthlySchedule**: [MonthlyRetentionSchedule](#monthlyretentionschedule)
 * **retentionPolicyType**: 'LongTermRetentionPolicy' (Required)
-* **weeklySchedule**: WeeklyRetentionSchedule
-* **yearlySchedule**: YearlyRetentionSchedule
+* **weeklySchedule**: [WeeklyRetentionSchedule](#weeklyretentionschedule)
+* **yearlySchedule**: [YearlyRetentionSchedule](#yearlyretentionschedule)
 
 ### SimpleRetentionPolicy
 #### Properties
-* **retentionDuration**: RetentionDuration
+* **retentionDuration**: [RetentionDuration](#retentionduration)
 * **retentionPolicyType**: 'SimpleRetentionPolicy' (Required)
 
 
 ## LongTermRetentionPolicy
 ### Properties
-* **dailySchedule**: DailyRetentionSchedule
-* **monthlySchedule**: MonthlyRetentionSchedule
+* **dailySchedule**: [DailyRetentionSchedule](#dailyretentionschedule)
+* **monthlySchedule**: [MonthlyRetentionSchedule](#monthlyretentionschedule)
 * **retentionPolicyType**: 'LongTermRetentionPolicy' (Required)
-* **weeklySchedule**: WeeklyRetentionSchedule
-* **yearlySchedule**: YearlyRetentionSchedule
+* **weeklySchedule**: [WeeklyRetentionSchedule](#weeklyretentionschedule)
+* **yearlySchedule**: [YearlyRetentionSchedule](#yearlyretentionschedule)
 
 ## DailyRetentionSchedule
 ### Properties
-* **retentionDuration**: RetentionDuration
+* **retentionDuration**: [RetentionDuration](#retentionduration)
 * **retentionTimes**: string[]
 
 ## RetentionDuration
@@ -565,15 +565,15 @@
 
 ## MonthlyRetentionSchedule
 ### Properties
-* **retentionDuration**: RetentionDuration
-* **retentionScheduleDaily**: DailyRetentionFormat
+* **retentionDuration**: [RetentionDuration](#retentionduration)
+* **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat)
 * **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly'
-* **retentionScheduleWeekly**: WeeklyRetentionFormat
+* **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat)
 * **retentionTimes**: string[]
 
 ## DailyRetentionFormat
 ### Properties
-* **daysOfTheMonth**: Day[]
+* **daysOfTheMonth**: [Day](#day)[]
 
 ## Day
 ### Properties
@@ -588,21 +588,21 @@
 ## WeeklyRetentionSchedule
 ### Properties
 * **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]
-* **retentionDuration**: RetentionDuration
+* **retentionDuration**: [RetentionDuration](#retentionduration)
 * **retentionTimes**: string[]
 
 ## YearlyRetentionSchedule
 ### Properties
 * **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'Invalid' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]
-* **retentionDuration**: RetentionDuration
-* **retentionScheduleDaily**: DailyRetentionFormat
+* **retentionDuration**: [RetentionDuration](#retentionduration)
+* **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat)
 * **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly'
-* **retentionScheduleWeekly**: WeeklyRetentionFormat
+* **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat)
 * **retentionTimes**: string[]
 
 ## SimpleRetentionPolicy
 ### Properties
-* **retentionDuration**: RetentionDuration
+* **retentionDuration**: [RetentionDuration](#retentionduration)
 * **retentionPolicyType**: 'SimpleRetentionPolicy' (Required)
 
 ## SchedulePolicy
@@ -647,13 +647,13 @@
 ## AzureSqlProtectionPolicy
 ### Properties
 * **backupManagementType**: 'AzureSql' (Required)
-* **retentionPolicy**: RetentionPolicy
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 
 ## AzureFileShareProtectionPolicy
 ### Properties
 * **backupManagementType**: 'AzureStorage' (Required)
-* **retentionPolicy**: RetentionPolicy
-* **schedulePolicy**: SchedulePolicy
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
+* **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 * **timeZone**: string
 * **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM'
 
@@ -661,8 +661,8 @@
 ### Properties
 * **backupManagementType**: 'AzureWorkload' (Required)
 * **makePolicyConsistent**: bool
-* **settings**: Settings
-* **subProtectionPolicy**: SubProtectionPolicy[]
+* **settings**: [Settings](#settings)
+* **subProtectionPolicy**: [SubProtectionPolicy](#subprotectionpolicy)[]
 * **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM'
 
 ## Settings
@@ -674,21 +674,21 @@
 ## SubProtectionPolicy
 ### Properties
 * **policyType**: 'CopyOnlyFull' | 'Differential' | 'Full' | 'Incremental' | 'Invalid' | 'Log'
-* **retentionPolicy**: RetentionPolicy
-* **schedulePolicy**: SchedulePolicy
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
+* **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 
 ## GenericProtectionPolicy
 ### Properties
 * **backupManagementType**: 'GenericProtectionPolicy' (Required)
 * **fabricName**: string
-* **subProtectionPolicy**: SubProtectionPolicy[]
+* **subProtectionPolicy**: [SubProtectionPolicy](#subprotectionpolicy)[]
 * **timeZone**: string
 
 ## MabProtectionPolicy
 ### Properties
 * **backupManagementType**: 'MAB' (Required)
-* **retentionPolicy**: RetentionPolicy
-* **schedulePolicy**: SchedulePolicy
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
+* **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 
 ## ResourceTags
 ### Properties
@@ -697,8 +697,8 @@
 
 ## PrivateEndpointConnection
 ### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate)
 * **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded'
 
 ## PrivateEndpoint

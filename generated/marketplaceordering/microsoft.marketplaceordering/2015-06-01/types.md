@@ -6,7 +6,7 @@
 * **apiVersion**: '2015-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AgreementProperties
+* **properties**: [AgreementProperties](#agreementproperties)
 * **type**: 'Microsoft.MarketplaceOrdering/offerTypes/publishers/offers/plans/agreements' (ReadOnly, DeployTimeConstant)
 
 ## AgreementProperties

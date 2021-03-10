@@ -6,7 +6,7 @@
 * **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MediaGraphProperties
+* **properties**: [MediaGraphProperties](#mediagraphproperties)
 * **type**: 'Microsoft.Media/mediaServices/mediaGraphs' (ReadOnly, DeployTimeConstant)
 
 ## MediaGraphProperties
@@ -14,8 +14,8 @@
 * **created**: string (ReadOnly)
 * **description**: string
 * **lastModified**: string (ReadOnly)
-* **sinks**: MediaGraphSink[] (Required)
-* **sources**: MediaGraphSource[] (Required)
+* **sinks**: [MediaGraphSink](#mediagraphsink)[] (Required)
+* **sources**: [MediaGraphSource](#mediagraphsource)[] (Required)
 * **state**: 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
 
 ## MediaGraphSink
@@ -43,14 +43,14 @@
 ### MediaGraphRtspSource
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required)
-* **credentials**: MediaGraphUserCredentials
+* **credentials**: [MediaGraphUserCredentials](#mediagraphusercredentials)
 * **rtspUrl**: string (Required)
 
 
 ## MediaGraphRtspSource
 ### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required)
-* **credentials**: MediaGraphUserCredentials
+* **credentials**: [MediaGraphUserCredentials](#mediagraphusercredentials)
 * **rtspUrl**: string (Required)
 
 ## MediaGraphUserCredentials

@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2019-09-07' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterProperties
-* **sku**: AzureSku (Required)
-* **tags**: TrackedResourceTags
+* **properties**: [ClusterProperties](#clusterproperties)
+* **sku**: [AzureSku](#azuresku) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
 
@@ -21,7 +21,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AttachedDatabaseConfigurationProperties
+* **properties**: [AttachedDatabaseConfigurationProperties](#attacheddatabaseconfigurationproperties)
 * **type**: 'Microsoft.Kusto/clusters/attachedDatabaseConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Kusto/clusters/databases@2019-09-07
@@ -37,12 +37,12 @@
 ### ReadOnlyFollowingDatabase
 #### Properties
 * **kind**: 'ReadOnlyFollowing' (Required)
-* **properties**: ReadOnlyFollowingDatabaseProperties
+* **properties**: [ReadOnlyFollowingDatabaseProperties](#readonlyfollowingdatabaseproperties)
 
 ### ReadWriteDatabase
 #### Properties
 * **kind**: 'ReadWrite' (Required)
-* **properties**: ReadWriteDatabaseProperties
+* **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties)
 
 
 ## Resource Microsoft.Kusto/clusters/databases/dataConnections@2019-09-07
@@ -58,17 +58,17 @@
 ### EventGridDataConnection
 #### Properties
 * **kind**: 'EventGrid' (Required)
-* **properties**: EventGridConnectionProperties
+* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties)
 
 ### EventHubDataConnection
 #### Properties
 * **kind**: 'EventHub' (Required)
-* **properties**: EventHubConnectionProperties
+* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties)
 
 ### IotHubDataConnection
 #### Properties
 * **kind**: 'IotHub' (Required)
-* **properties**: IotHubConnectionProperties
+* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties)
 
 
 ## Identity
@@ -76,12 +76,12 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned' (Required)
-* **userAssignedIdentities**: IdentityUserAssignedIdentities
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities)
 
 ## IdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
+* **Additional Properties Type**: [ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties](#componentssgqdofschemasidentitypropertiesuserassignedidentitiesadditionalproperties)
 
 ## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
@@ -93,13 +93,13 @@
 * **dataIngestionUri**: string (ReadOnly)
 * **enableDiskEncryption**: bool
 * **enableStreamingIngest**: bool
-* **keyVaultProperties**: KeyVaultProperties
-* **optimizedAutoscale**: OptimizedAutoscale
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
+* **optimizedAutoscale**: [OptimizedAutoscale](#optimizedautoscale)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
 * **state**: 'Creating' | 'Deleted' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unavailable' | 'Updating' (ReadOnly)
-* **trustedExternalTenants**: TrustedExternalTenant[]
+* **trustedExternalTenants**: [TrustedExternalTenant](#trustedexternaltenant)[]
 * **uri**: string (ReadOnly)
-* **virtualNetworkConfiguration**: VirtualNetworkConfiguration
+* **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration)
 
 ## KeyVaultProperties
 ### Properties
@@ -146,7 +146,7 @@
 ## ReadOnlyFollowingDatabase
 ### Properties
 * **kind**: 'ReadOnlyFollowing' (Required)
-* **properties**: ReadOnlyFollowingDatabaseProperties
+* **properties**: [ReadOnlyFollowingDatabaseProperties](#readonlyfollowingdatabaseproperties)
 
 ## ReadOnlyFollowingDatabaseProperties
 ### Properties
@@ -156,7 +156,7 @@
 * **principalsModificationKind**: 'None' | 'Replace' | 'Union' (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
 * **softDeletePeriod**: string (ReadOnly)
-* **statistics**: DatabaseStatistics (ReadOnly)
+* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly)
 
 ## DatabaseStatistics
 ### Properties
@@ -165,19 +165,19 @@
 ## ReadWriteDatabase
 ### Properties
 * **kind**: 'ReadWrite' (Required)
-* **properties**: ReadWriteDatabaseProperties
+* **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties)
 
 ## ReadWriteDatabaseProperties
 ### Properties
 * **hotCachePeriod**: string
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
 * **softDeletePeriod**: string
-* **statistics**: DatabaseStatistics (ReadOnly)
+* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly)
 
 ## EventGridDataConnection
 ### Properties
 * **kind**: 'EventGrid' (Required)
-* **properties**: EventGridConnectionProperties
+* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties)
 
 ## EventGridConnectionProperties
 ### Properties
@@ -191,7 +191,7 @@
 ## EventHubDataConnection
 ### Properties
 * **kind**: 'EventHub' (Required)
-* **properties**: EventHubConnectionProperties
+* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties)
 
 ## EventHubConnectionProperties
 ### Properties
@@ -205,7 +205,7 @@
 ## IotHubDataConnection
 ### Properties
 * **kind**: 'IotHub' (Required)
-* **properties**: IotHubConnectionProperties
+* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties)
 
 ## IotHubConnectionProperties
 ### Properties
