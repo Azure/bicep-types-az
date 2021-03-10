@@ -8,8 +8,8 @@
 * **kind**: 'GlobalDocumentDB' | 'MongoDB' | 'Parse'
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseAccountCreateUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [DatabaseAccountCreateUpdateProperties](#databaseaccountcreateupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces@2020-09-01
@@ -19,8 +19,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CassandraKeyspaceCreateUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [CassandraKeyspaceCreateUpdateProperties](#cassandrakeyspacecreateupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables@2020-09-01
@@ -30,8 +30,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CassandraTableCreateUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [CassandraTableCreateUpdateProperties](#cassandratablecreateupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2020-09-01
@@ -41,8 +41,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2020-09-01
@@ -52,8 +52,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases@2020-09-01
@@ -63,8 +63,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GremlinDatabaseCreateUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [GremlinDatabaseCreateUpdateProperties](#gremlindatabasecreateupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2020-09-01
@@ -74,8 +74,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GremlinGraphCreateUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [GremlinGraphCreateUpdateProperties](#gremlingraphcreateupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2020-09-01
@@ -85,8 +85,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2020-09-01
@@ -96,8 +96,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2020-09-01
@@ -107,8 +107,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MongoDBDatabaseCreateUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [MongoDBDatabaseCreateUpdateProperties](#mongodbdatabasecreateupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2020-09-01
@@ -118,8 +118,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MongoDBCollectionCreateUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [MongoDBCollectionCreateUpdateProperties](#mongodbcollectioncreateupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2020-09-01
@@ -129,8 +129,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2020-09-01
@@ -140,8 +140,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2020-09-01
@@ -150,7 +150,7 @@
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' (Required, DeployTimeConstant)
-* **properties**: NotebookWorkspaceProperties (ReadOnly)
+* **properties**: [NotebookWorkspaceProperties](#notebookworkspaceproperties) (ReadOnly)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2020-09-01
@@ -160,8 +160,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlDatabaseCreateUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [SqlDatabaseCreateUpdateProperties](#sqldatabasecreateupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2020-09-01
@@ -171,8 +171,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlContainerCreateUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [SqlContainerCreateUpdateProperties](#sqlcontainercreateupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures@2020-09-01
@@ -182,8 +182,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlStoredProcedureCreateUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [SqlStoredProcedureCreateUpdateProperties](#sqlstoredprocedurecreateupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2020-09-01
@@ -193,8 +193,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers@2020-09-01
@@ -204,8 +204,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlTriggerCreateUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [SqlTriggerCreateUpdateProperties](#sqltriggercreateupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions@2020-09-01
@@ -215,8 +215,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SqlUserDefinedFunctionCreateUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [SqlUserDefinedFunctionCreateUpdateProperties](#sqluserdefinedfunctioncreateupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2020-09-01
@@ -226,8 +226,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/tables@2020-09-01
@@ -237,8 +237,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TableCreateUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [TableCreateUpdateProperties](#tablecreateupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/tables' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2020-09-01
@@ -248,18 +248,18 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ThroughputSettingsUpdateProperties (Required)
-* **tags**: Tags
+* **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## DatabaseAccountCreateUpdateProperties
 ### Properties
-* **apiProperties**: ApiProperties
-* **backupPolicy**: BackupPolicy
-* **capabilities**: Capability[]
+* **apiProperties**: [ApiProperties](#apiproperties)
+* **backupPolicy**: [BackupPolicy](#backuppolicy)
+* **capabilities**: [Capability](#capability)[]
 * **connectorOffer**: 'Small'
-* **consistencyPolicy**: ConsistencyPolicy
-* **cors**: CorsPolicy[]
+* **consistencyPolicy**: [ConsistencyPolicy](#consistencypolicy)
+* **cors**: [CorsPolicy](#corspolicy)[]
 * **databaseAccountOfferType**: 'Standard' (Required)
 * **disableKeyBasedMetadataWriteAccess**: bool
 * **documentEndpoint**: string (ReadOnly)
@@ -268,17 +268,17 @@
 * **enableCassandraConnector**: bool
 * **enableFreeTier**: bool
 * **enableMultipleWriteLocations**: bool
-* **failoverPolicies**: FailoverPolicy[] (ReadOnly)
-* **ipRules**: IpAddressOrRange[]
+* **failoverPolicies**: [FailoverPolicy](#failoverpolicy)[] (ReadOnly)
+* **ipRules**: [IpAddressOrRange](#ipaddressorrange)[]
 * **isVirtualNetworkFilterEnabled**: bool
 * **keyVaultKeyUri**: string
-* **locations**: Location[] (Required)
-* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **locations**: [Location](#location)[] (Required)
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly)
-* **readLocations**: Location[] (ReadOnly)
-* **virtualNetworkRules**: VirtualNetworkRule[]
-* **writeLocations**: Location[] (ReadOnly)
+* **readLocations**: [Location](#location)[] (ReadOnly)
+* **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]
+* **writeLocations**: [Location](#location)[] (ReadOnly)
 
 ## ApiProperties
 ### Properties
@@ -294,7 +294,7 @@
 
 ### PeriodicModeBackupPolicy
 #### Properties
-* **periodicModeProperties**: PeriodicModeProperties
+* **periodicModeProperties**: [PeriodicModeProperties](#periodicmodeproperties)
 * **type**: 'Periodic' (Required)
 
 
@@ -304,7 +304,7 @@
 
 ## PeriodicModeBackupPolicy
 ### Properties
-* **periodicModeProperties**: PeriodicModeProperties
+* **periodicModeProperties**: [PeriodicModeProperties](#periodicmodeproperties)
 * **type**: 'Periodic' (Required)
 
 ## PeriodicModeProperties
@@ -353,13 +353,13 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpointProperty (ReadOnly)
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionStateProperty (ReadOnly)
+* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty) (ReadOnly)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty) (ReadOnly)
 
 ## PrivateEndpointProperty
 ### Properties
@@ -382,12 +382,12 @@
 
 ## CassandraKeyspaceCreateUpdateProperties
 ### Properties
-* **options**: CreateUpdateOptions
-* **resource**: CassandraKeyspaceResource (Required)
+* **options**: [CreateUpdateOptions](#createupdateoptions)
+* **resource**: [CassandraKeyspaceResource](#cassandrakeyspaceresource) (Required)
 
 ## CreateUpdateOptions
 ### Properties
-* **autoscaleSettings**: AutoscaleSettings
+* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings)
 * **throughput**: int
 
 ## AutoscaleSettings
@@ -408,8 +408,8 @@
 
 ## CassandraTableCreateUpdateProperties
 ### Properties
-* **options**: CreateUpdateOptions
-* **resource**: CassandraTableResource (Required)
+* **options**: [CreateUpdateOptions](#createupdateoptions)
+* **resource**: [CassandraTableResource](#cassandratableresource) (Required)
 
 ## CassandraTableResource
 ### Properties
@@ -419,13 +419,13 @@
 * **analyticalStorageTtl**: int
 * **defaultTtl**: int
 * **id**: string (Required)
-* **schema**: CassandraSchema
+* **schema**: [CassandraSchema](#cassandraschema)
 
 ## CassandraSchema
 ### Properties
-* **clusterKeys**: ClusterKey[]
-* **columns**: Column[]
-* **partitionKeys**: CassandraPartitionKey[]
+* **clusterKeys**: [ClusterKey](#clusterkey)[]
+* **columns**: [Column](#column)[]
+* **partitionKeys**: [CassandraPartitionKey](#cassandrapartitionkey)[]
 
 ## ClusterKey
 ### Properties
@@ -448,27 +448,27 @@
 
 ## ThroughputSettingsUpdateProperties
 ### Properties
-* **resource**: ThroughputSettingsResource (Required)
+* **resource**: [ThroughputSettingsResource](#throughputsettingsresource) (Required)
 
 ## ThroughputSettingsResource
 ### Properties
 * **_etag**: string (ReadOnly)
 * **_rid**: string (ReadOnly)
 * **_ts**: int (ReadOnly)
-* **autoscaleSettings**: AutoscaleSettingsResource
+* **autoscaleSettings**: [AutoscaleSettingsResource](#autoscalesettingsresource)
 * **minimumThroughput**: string (ReadOnly)
 * **offerReplacePending**: string (ReadOnly)
 * **throughput**: int
 
 ## AutoscaleSettingsResource
 ### Properties
-* **autoUpgradePolicy**: AutoUpgradePolicyResource
+* **autoUpgradePolicy**: [AutoUpgradePolicyResource](#autoupgradepolicyresource)
 * **maxThroughput**: int (Required)
 * **targetMaxThroughput**: int (ReadOnly)
 
 ## AutoUpgradePolicyResource
 ### Properties
-* **throughputPolicy**: ThroughputPolicyResource
+* **throughputPolicy**: [ThroughputPolicyResource](#throughputpolicyresource)
 
 ## ThroughputPolicyResource
 ### Properties
@@ -487,8 +487,8 @@
 
 ## GremlinDatabaseCreateUpdateProperties
 ### Properties
-* **options**: CreateUpdateOptions
-* **resource**: GremlinDatabaseResource (Required)
+* **options**: [CreateUpdateOptions](#createupdateoptions)
+* **resource**: [GremlinDatabaseResource](#gremlindatabaseresource) (Required)
 
 ## GremlinDatabaseResource
 ### Properties
@@ -504,20 +504,20 @@
 
 ## GremlinGraphCreateUpdateProperties
 ### Properties
-* **options**: CreateUpdateOptions
-* **resource**: GremlinGraphResource (Required)
+* **options**: [CreateUpdateOptions](#createupdateoptions)
+* **resource**: [GremlinGraphResource](#gremlingraphresource) (Required)
 
 ## GremlinGraphResource
 ### Properties
 * **_etag**: string (ReadOnly)
 * **_rid**: string (ReadOnly)
 * **_ts**: int (ReadOnly)
-* **conflictResolutionPolicy**: ConflictResolutionPolicy
+* **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy)
 * **defaultTtl**: int
 * **id**: string (Required)
-* **indexingPolicy**: IndexingPolicy
-* **partitionKey**: ContainerPartitionKey
-* **uniqueKeyPolicy**: UniqueKeyPolicy
+* **indexingPolicy**: [IndexingPolicy](#indexingpolicy)
+* **partitionKey**: [ContainerPartitionKey](#containerpartitionkey)
+* **uniqueKeyPolicy**: [UniqueKeyPolicy](#uniquekeypolicy)
 
 ## ConflictResolutionPolicy
 ### Properties
@@ -528,11 +528,11 @@
 ## IndexingPolicy
 ### Properties
 * **automatic**: bool
-* **compositeIndexes**: CompositePath[][]
-* **excludedPaths**: ExcludedPath[]
-* **includedPaths**: IncludedPath[]
+* **compositeIndexes**: [CompositePath](#compositepath)[][]
+* **excludedPaths**: [ExcludedPath](#excludedpath)[]
+* **includedPaths**: [IncludedPath](#includedpath)[]
 * **indexingMode**: 'Consistent' | 'Lazy' | 'None'
-* **spatialIndexes**: SpatialSpec[]
+* **spatialIndexes**: [SpatialSpec](#spatialspec)[]
 
 ## CompositePath
 ### Properties
@@ -545,7 +545,7 @@
 
 ## IncludedPath
 ### Properties
-* **indexes**: Indexes[]
+* **indexes**: [Indexes](#indexes)[]
 * **path**: string
 
 ## Indexes
@@ -567,7 +567,7 @@
 
 ## UniqueKeyPolicy
 ### Properties
-* **uniqueKeys**: UniqueKey[]
+* **uniqueKeys**: [UniqueKey](#uniquekey)[]
 
 ## UniqueKey
 ### Properties
@@ -590,8 +590,8 @@
 
 ## MongoDBDatabaseCreateUpdateProperties
 ### Properties
-* **options**: CreateUpdateOptions
-* **resource**: MongoDBDatabaseResource (Required)
+* **options**: [CreateUpdateOptions](#createupdateoptions)
+* **resource**: [MongoDBDatabaseResource](#mongodbdatabaseresource) (Required)
 
 ## MongoDBDatabaseResource
 ### Properties
@@ -607,8 +607,8 @@
 
 ## MongoDBCollectionCreateUpdateProperties
 ### Properties
-* **options**: CreateUpdateOptions
-* **resource**: MongoDBCollectionResource (Required)
+* **options**: [CreateUpdateOptions](#createupdateoptions)
+* **resource**: [MongoDBCollectionResource](#mongodbcollectionresource) (Required)
 
 ## MongoDBCollectionResource
 ### Properties
@@ -617,13 +617,13 @@
 * **_ts**: int (ReadOnly)
 * **analyticalStorageTtl**: int
 * **id**: string (Required)
-* **indexes**: MongoIndex[]
-* **shardKey**: ShardKeys
+* **indexes**: [MongoIndex](#mongoindex)[]
+* **shardKey**: [ShardKeys](#shardkeys)
 
 ## MongoIndex
 ### Properties
-* **key**: MongoIndexKeys
-* **options**: MongoIndexOptions
+* **key**: [MongoIndexKeys](#mongoindexkeys)
+* **options**: [MongoIndexOptions](#mongoindexoptions)
 
 ## MongoIndexKeys
 ### Properties
@@ -661,8 +661,8 @@
 
 ## SqlDatabaseCreateUpdateProperties
 ### Properties
-* **options**: CreateUpdateOptions
-* **resource**: SqlDatabaseResource (Required)
+* **options**: [CreateUpdateOptions](#createupdateoptions)
+* **resource**: [SqlDatabaseResource](#sqldatabaseresource) (Required)
 
 ## SqlDatabaseResource
 ### Properties
@@ -680,8 +680,8 @@
 
 ## SqlContainerCreateUpdateProperties
 ### Properties
-* **options**: CreateUpdateOptions
-* **resource**: SqlContainerResource (Required)
+* **options**: [CreateUpdateOptions](#createupdateoptions)
+* **resource**: [SqlContainerResource](#sqlcontainerresource) (Required)
 
 ## SqlContainerResource
 ### Properties
@@ -689,12 +689,12 @@
 * **_rid**: string (ReadOnly)
 * **_ts**: int (ReadOnly)
 * **analyticalStorageTtl**: int
-* **conflictResolutionPolicy**: ConflictResolutionPolicy
+* **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy)
 * **defaultTtl**: int
 * **id**: string (Required)
-* **indexingPolicy**: IndexingPolicy
-* **partitionKey**: ContainerPartitionKey
-* **uniqueKeyPolicy**: UniqueKeyPolicy
+* **indexingPolicy**: [IndexingPolicy](#indexingpolicy)
+* **partitionKey**: [ContainerPartitionKey](#containerpartitionkey)
+* **uniqueKeyPolicy**: [UniqueKeyPolicy](#uniquekeypolicy)
 
 ## Tags
 ### Properties
@@ -703,8 +703,8 @@
 
 ## SqlStoredProcedureCreateUpdateProperties
 ### Properties
-* **options**: CreateUpdateOptions (WriteOnly)
-* **resource**: SqlStoredProcedureResource (Required)
+* **options**: [CreateUpdateOptions](#createupdateoptions) (WriteOnly)
+* **resource**: [SqlStoredProcedureResource](#sqlstoredprocedureresource) (Required)
 
 ## SqlStoredProcedureResource
 ### Properties
@@ -726,8 +726,8 @@
 
 ## SqlTriggerCreateUpdateProperties
 ### Properties
-* **options**: CreateUpdateOptions (WriteOnly)
-* **resource**: SqlTriggerResource (Required)
+* **options**: [CreateUpdateOptions](#createupdateoptions) (WriteOnly)
+* **resource**: [SqlTriggerResource](#sqltriggerresource) (Required)
 
 ## SqlTriggerResource
 ### Properties
@@ -746,8 +746,8 @@
 
 ## SqlUserDefinedFunctionCreateUpdateProperties
 ### Properties
-* **options**: CreateUpdateOptions (WriteOnly)
-* **resource**: SqlUserDefinedFunctionResource (Required)
+* **options**: [CreateUpdateOptions](#createupdateoptions) (WriteOnly)
+* **resource**: [SqlUserDefinedFunctionResource](#sqluserdefinedfunctionresource) (Required)
 
 ## SqlUserDefinedFunctionResource
 ### Properties
@@ -769,8 +769,8 @@
 
 ## TableCreateUpdateProperties
 ### Properties
-* **options**: CreateUpdateOptions
-* **resource**: TableResource (Required)
+* **options**: [CreateUpdateOptions](#createupdateoptions)
+* **resource**: [TableResource](#tableresource) (Required)
 
 ## TableResource
 ### Properties

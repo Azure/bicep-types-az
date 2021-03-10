@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProfileProperties
-* **sku**: Sku (Required)
-* **tags**: ResourceTags
+* **properties**: [ProfileProperties](#profileproperties)
+* **sku**: [Sku](#sku) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Cdn/profiles/endpoints@2016-10-02
@@ -19,8 +19,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EndpointProperties
-* **tags**: ResourceTags
+* **properties**: [EndpointProperties](#endpointproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2016-10-02
@@ -30,8 +30,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CustomDomainPropertiesParameters
-* **tags**: ResourceTags (ReadOnly)
+* **properties**: [CustomDomainPropertiesParameters](#customdomainpropertiesparameters)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly)
 * **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant)
 
 ## ProfileProperties
@@ -51,7 +51,7 @@
 ## EndpointProperties
 ### Properties
 * **contentTypesToCompress**: string[]
-* **geoFilters**: GeoFilter[]
+* **geoFilters**: [GeoFilter](#geofilter)[]
 * **hostName**: string (ReadOnly)
 * **isCompressionEnabled**: bool
 * **isHttpAllowed**: bool
@@ -59,7 +59,7 @@
 * **optimizationType**: 'DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming'
 * **originHostHeader**: string
 * **originPath**: string
-* **origins**: DeepCreatedOrigin[] (Required)
+* **origins**: [DeepCreatedOrigin](#deepcreatedorigin)[] (Required)
 * **provisioningState**: string (ReadOnly)
 * **queryStringCachingBehavior**: 'BypassCaching' | 'IgnoreQueryString' | 'NotSet' | 'UseQueryString'
 * **resourceState**: 'Creating' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
@@ -73,7 +73,7 @@
 ## DeepCreatedOrigin
 ### Properties
 * **name**: string (Required)
-* **properties**: DeepCreatedOriginProperties
+* **properties**: [DeepCreatedOriginProperties](#deepcreatedoriginproperties)
 
 ## DeepCreatedOriginProperties
 ### Properties

@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2019-03-18-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MachineProperties
-* **tags**: ResourceTags
+* **properties**: [MachineProperties](#machineproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -23,11 +23,11 @@
 * **agentVersion**: string (ReadOnly)
 * **clientPublicKey**: string
 * **displayName**: string (ReadOnly)
-* **errorDetails**: ErrorDetail[] (ReadOnly)
+* **errorDetails**: [ErrorDetail](#errordetail)[] (ReadOnly)
 * **lastStatusChange**: string (ReadOnly)
 * **machineFqdn**: string (ReadOnly)
 * **osName**: string (ReadOnly)
-* **osProfile**: OSProfile (ReadOnly)
+* **osProfile**: [OSProfile](#osprofile) (ReadOnly)
 * **osVersion**: string (ReadOnly)
 * **physicalLocation**: string
 * **provisioningState**: string (ReadOnly)
@@ -37,7 +37,7 @@
 ## ErrorDetail
 ### Properties
 * **code**: string (Required)
-* **details**: ErrorDetail[]
+* **details**: [ErrorDetail](#errordetail)[]
 * **message**: string (Required)
 * **target**: string
 

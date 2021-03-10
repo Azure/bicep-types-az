@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BuildTaskProperties
-* **tags**: ResourceTags
+* **properties**: [BuildTaskProperties](#buildtaskproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerRegistry/registries/buildTasks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerRegistry/registries/buildTasks/steps@2018-02-01-preview
@@ -17,16 +17,16 @@
 * **apiVersion**: '2018-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BuildStepProperties
+* **properties**: [BuildStepProperties](#buildstepproperties)
 * **type**: 'Microsoft.ContainerRegistry/registries/buildTasks/steps' (ReadOnly, DeployTimeConstant)
 
 ## BuildTaskProperties
 ### Properties
 * **alias**: string (Required)
 * **creationDate**: string (ReadOnly)
-* **platform**: PlatformProperties (Required)
+* **platform**: [PlatformProperties](#platformproperties) (Required)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **sourceRepository**: SourceRepositoryProperties (Required)
+* **sourceRepository**: [SourceRepositoryProperties](#sourcerepositoryproperties) (Required)
 * **status**: 'Disabled' | 'Enabled'
 * **timeout**: int
 
@@ -39,7 +39,7 @@
 ### Properties
 * **isCommitTriggerEnabled**: bool
 * **repositoryUrl**: string (Required)
-* **sourceControlAuthProperties**: SourceControlAuthInfo
+* **sourceControlAuthProperties**: [SourceControlAuthInfo](#sourcecontrolauthinfo)
 * **sourceControlType**: 'Github' | 'VisualStudioTeamService' (Required)
 
 ## SourceControlAuthInfo
@@ -62,10 +62,10 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 ### DockerBuildStep
 #### Properties
-* **baseImageDependencies**: BaseImageDependency[] (ReadOnly)
+* **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly)
 * **baseImageTrigger**: 'All' | 'None' | 'Runtime'
 * **branch**: string
-* **buildArguments**: BuildArgument[]
+* **buildArguments**: [BuildArgument](#buildargument)[]
 * **contextPath**: string
 * **dockerFilePath**: string
 * **imageNames**: string[]
@@ -76,10 +76,10 @@
 
 ## DockerBuildStep
 ### Properties
-* **baseImageDependencies**: BaseImageDependency[] (ReadOnly)
+* **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly)
 * **baseImageTrigger**: 'All' | 'None' | 'Runtime'
 * **branch**: string
-* **buildArguments**: BuildArgument[]
+* **buildArguments**: [BuildArgument](#buildargument)[]
 * **contextPath**: string
 * **dockerFilePath**: string
 * **imageNames**: string[]

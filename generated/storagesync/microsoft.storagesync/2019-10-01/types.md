@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: any
-* **tags**: StorageSyncServiceCreateParametersTags
+* **tags**: [StorageSyncServiceCreateParametersTags](#storagesyncservicecreateparameterstags)
 * **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorageSync/storageSyncServices/registeredServers@2019-10-01
@@ -17,7 +17,7 @@
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RegisteredServerCreateParametersProperties
+* **properties**: [RegisteredServerCreateParametersProperties](#registeredservercreateparametersproperties)
 * **type**: 'Microsoft.StorageSync/storageSyncServices/registeredServers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups@2019-10-01
@@ -35,7 +35,7 @@
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CloudEndpointCreateParametersProperties
+* **properties**: [CloudEndpointCreateParametersProperties](#cloudendpointcreateparametersproperties)
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints@2019-10-01
@@ -44,7 +44,7 @@
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerEndpointCreateParametersProperties
+* **properties**: [ServerEndpointCreateParametersProperties](#serverendpointcreateparametersproperties)
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## StorageSyncServiceCreateParametersTags
@@ -89,7 +89,7 @@
 ## ServerEndpointCreateParametersProperties
 ### Properties
 * **cloudTiering**: 'off' | 'on'
-* **cloudTieringStatus**: ServerEndpointCloudTieringStatus (ReadOnly)
+* **cloudTieringStatus**: [ServerEndpointCloudTieringStatus](#serverendpointcloudtieringstatus) (ReadOnly)
 * **friendlyName**: string
 * **lastOperationName**: string (ReadOnly)
 * **lastWorkflowId**: string (ReadOnly)
@@ -98,25 +98,25 @@
 * **offlineDataTransferStorageAccountResourceId**: string (ReadOnly)
 * **offlineDataTransferStorageAccountTenantId**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
-* **recallStatus**: ServerEndpointRecallStatus (ReadOnly)
+* **recallStatus**: [ServerEndpointRecallStatus](#serverendpointrecallstatus) (ReadOnly)
 * **serverLocalPath**: string
 * **serverResourceId**: string
-* **syncStatus**: ServerEndpointSyncStatus (ReadOnly)
+* **syncStatus**: [ServerEndpointSyncStatus](#serverendpointsyncstatus) (ReadOnly)
 * **tierFilesOlderThanDays**: int
 * **volumeFreeSpacePercent**: int
 
 ## ServerEndpointCloudTieringStatus
 ### Properties
-* **cachePerformance**: CloudTieringCachePerformance (ReadOnly)
-* **datePolicyStatus**: CloudTieringDatePolicyStatus (ReadOnly)
-* **filesNotTiering**: CloudTieringFilesNotTiering (ReadOnly)
+* **cachePerformance**: [CloudTieringCachePerformance](#cloudtieringcacheperformance) (ReadOnly)
+* **datePolicyStatus**: [CloudTieringDatePolicyStatus](#cloudtieringdatepolicystatus) (ReadOnly)
+* **filesNotTiering**: [CloudTieringFilesNotTiering](#cloudtieringfilesnottiering) (ReadOnly)
 * **health**: 'Error' | 'Healthy' (ReadOnly)
 * **healthLastUpdatedTimestamp**: string (ReadOnly)
 * **lastCloudTieringResult**: int (ReadOnly)
 * **lastSuccessTimestamp**: string (ReadOnly)
 * **lastUpdatedTimestamp**: string (ReadOnly)
-* **spaceSavings**: CloudTieringSpaceSavings (ReadOnly)
-* **volumeFreeSpacePolicyStatus**: CloudTieringVolumeFreeSpacePolicyStatus (ReadOnly)
+* **spaceSavings**: [CloudTieringSpaceSavings](#cloudtieringspacesavings) (ReadOnly)
+* **volumeFreeSpacePolicyStatus**: [CloudTieringVolumeFreeSpacePolicyStatus](#cloudtieringvolumefreespacepolicystatus) (ReadOnly)
 
 ## CloudTieringCachePerformance
 ### Properties
@@ -132,7 +132,7 @@
 
 ## CloudTieringFilesNotTiering
 ### Properties
-* **errors**: FilesNotTieringError[] (ReadOnly)
+* **errors**: [FilesNotTieringError](#filesnottieringerror)[] (ReadOnly)
 * **lastUpdatedTimestamp**: string (ReadOnly)
 * **totalFileCount**: int (ReadOnly)
 
@@ -159,7 +159,7 @@
 ## ServerEndpointRecallStatus
 ### Properties
 * **lastUpdatedTimestamp**: string (ReadOnly)
-* **recallErrors**: ServerEndpointRecallError[] (ReadOnly)
+* **recallErrors**: [ServerEndpointRecallError](#serverendpointrecallerror)[] (ReadOnly)
 * **totalRecallErrorsCount**: int (ReadOnly)
 
 ## ServerEndpointRecallError
@@ -170,16 +170,16 @@
 ## ServerEndpointSyncStatus
 ### Properties
 * **combinedHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly)
-* **downloadActivity**: SyncActivityStatus (ReadOnly)
+* **downloadActivity**: [SyncActivityStatus](#syncactivitystatus) (ReadOnly)
 * **downloadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly)
-* **downloadStatus**: SyncSessionStatus (ReadOnly)
+* **downloadStatus**: [SyncSessionStatus](#syncsessionstatus) (ReadOnly)
 * **lastUpdatedTimestamp**: string (ReadOnly)
 * **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' (ReadOnly)
 * **syncActivity**: 'Download' | 'Upload' | 'UploadAndDownload' (ReadOnly)
 * **totalPersistentFilesNotSyncingCount**: int (ReadOnly)
-* **uploadActivity**: SyncActivityStatus (ReadOnly)
+* **uploadActivity**: [SyncActivityStatus](#syncactivitystatus) (ReadOnly)
 * **uploadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly)
-* **uploadStatus**: SyncSessionStatus (ReadOnly)
+* **uploadStatus**: [SyncSessionStatus](#syncsessionstatus) (ReadOnly)
 
 ## SyncActivityStatus
 ### Properties
@@ -192,7 +192,7 @@
 
 ## SyncSessionStatus
 ### Properties
-* **filesNotSyncingErrors**: ServerEndpointFilesNotSyncingError[] (ReadOnly)
+* **filesNotSyncingErrors**: [ServerEndpointFilesNotSyncingError](#serverendpointfilesnotsyncingerror)[] (ReadOnly)
 * **lastSyncPerItemErrorCount**: int (ReadOnly)
 * **lastSyncResult**: int (ReadOnly)
 * **lastSyncSuccessTimestamp**: string (ReadOnly)

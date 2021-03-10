@@ -6,12 +6,12 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ApiManagementServiceIdentity
+* **identity**: [ApiManagementServiceIdentity](#apimanagementserviceidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApiManagementServiceProperties (Required)
-* **sku**: ApiManagementServiceSkuProperties (Required)
-* **tags**: ApimResourceTags
+* **properties**: [ApiManagementServiceProperties](#apimanagementserviceproperties) (Required)
+* **sku**: [ApiManagementServiceSkuProperties](#apimanagementserviceskuproperties) (Required)
+* **tags**: [ApimResourceTags](#apimresourcetags)
 * **type**: 'Microsoft.ApiManagement/service' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis@2019-12-01
@@ -21,9 +21,9 @@
 * **format**: 'openapi-link' | 'swagger-link-json' | 'wadl-link-json' | 'wsdl-link+xml' (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApiCreateOrUpdateProperties (WriteOnly)
+* **properties**: [ApiCreateOrUpdateProperties](#apicreateorupdateproperties) (WriteOnly)
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant)
-* **value**: ApiExportResultValue (ReadOnly)
+* **value**: [ApiExportResultValue](#apiexportresultvalue) (ReadOnly)
 
 ## Resource Microsoft.ApiManagement/service/apis/diagnostics@2019-12-01
 * **Valid Scope(s)**: ResourceGroup
@@ -31,7 +31,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DiagnosticContractProperties
+* **properties**: [DiagnosticContractProperties](#diagnosticcontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/apis/diagnostics' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis/issues@2019-12-01
@@ -40,7 +40,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IssueContractProperties
+* **properties**: [IssueContractProperties](#issuecontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/apis/issues' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis/issues/attachments@2019-12-01
@@ -49,7 +49,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IssueAttachmentContractProperties
+* **properties**: [IssueAttachmentContractProperties](#issueattachmentcontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/apis/issues/attachments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis/issues/comments@2019-12-01
@@ -58,7 +58,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IssueCommentContractProperties
+* **properties**: [IssueCommentContractProperties](#issuecommentcontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/apis/issues/comments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis/operations@2019-12-01
@@ -67,7 +67,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: OperationContractProperties
+* **properties**: [OperationContractProperties](#operationcontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/apis/operations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis/operations/policies@2019-12-01
@@ -76,7 +76,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'policy' (Required, DeployTimeConstant)
-* **properties**: PolicyContractProperties
+* **properties**: [PolicyContractProperties](#policycontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/apis/operations/policies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis/operations/tags@2019-12-01
@@ -85,7 +85,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TagContractProperties (ReadOnly)
+* **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/service/apis/operations/tags' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis/policies@2019-12-01
@@ -94,7 +94,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'policy' (Required, DeployTimeConstant)
-* **properties**: PolicyContractProperties
+* **properties**: [PolicyContractProperties](#policycontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/apis/policies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis/releases@2019-12-01
@@ -103,7 +103,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApiReleaseContractProperties
+* **properties**: [ApiReleaseContractProperties](#apireleasecontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/apis/releases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis/schemas@2019-12-01
@@ -112,7 +112,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SchemaContractProperties
+* **properties**: [SchemaContractProperties](#schemacontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/apis/schemas' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis/tagDescriptions@2019-12-01
@@ -121,7 +121,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TagDescriptionBaseProperties
+* **properties**: [TagDescriptionBaseProperties](#tagdescriptionbaseproperties)
 * **type**: 'Microsoft.ApiManagement/service/apis/tagDescriptions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis/tags@2019-12-01
@@ -130,7 +130,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TagContractProperties (ReadOnly)
+* **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/service/apis/tags' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apiVersionSets@2019-12-01
@@ -139,7 +139,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApiVersionSetContractProperties
+* **properties**: [ApiVersionSetContractProperties](#apiversionsetcontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/apiVersionSets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/authorizationServers@2019-12-01
@@ -148,7 +148,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AuthorizationServerContractProperties
+* **properties**: [AuthorizationServerContractProperties](#authorizationservercontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/authorizationServers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/backends@2019-12-01
@@ -157,7 +157,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BackendContractProperties
+* **properties**: [BackendContractProperties](#backendcontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/backends' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/caches@2019-12-01
@@ -166,7 +166,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CacheContractProperties
+* **properties**: [CacheContractProperties](#cachecontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/caches' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/certificates@2019-12-01
@@ -175,7 +175,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CertificateCreateOrUpdateProperties
+* **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties)
 * **type**: 'Microsoft.ApiManagement/service/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/contentTypes@2019-12-01
@@ -184,7 +184,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ContentTypeContractProperties (ReadOnly)
+* **properties**: [ContentTypeContractProperties](#contenttypecontractproperties) (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/service/contentTypes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/contentTypes/contentItems@2019-12-01
@@ -193,7 +193,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ContentItemContractProperties (ReadOnly)
+* **properties**: [ContentItemContractProperties](#contentitemcontractproperties) (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/service/contentTypes/contentItems' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/diagnostics@2019-12-01
@@ -202,7 +202,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DiagnosticContractProperties
+* **properties**: [DiagnosticContractProperties](#diagnosticcontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/diagnostics' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/gateways@2019-12-01
@@ -211,7 +211,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GatewayContractProperties
+* **properties**: [GatewayContractProperties](#gatewaycontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/gateways' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/gateways/apis@2019-12-01
@@ -220,7 +220,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AssociationContractProperties
+* **properties**: [AssociationContractProperties](#associationcontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/gateways/apis' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/gateways/hostnameConfigurations@2019-12-01
@@ -229,7 +229,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GatewayHostnameConfigurationContractProperties
+* **properties**: [GatewayHostnameConfigurationContractProperties](#gatewayhostnameconfigurationcontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/gateways/hostnameConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/groups@2019-12-01
@@ -238,7 +238,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GroupCreateParametersProperties
+* **properties**: [GroupCreateParametersProperties](#groupcreateparametersproperties)
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/groups/users@2019-12-01
@@ -255,7 +255,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter' (Required, DeployTimeConstant)
-* **properties**: IdentityProviderCreateContractProperties
+* **properties**: [IdentityProviderCreateContractProperties](#identityprovidercreatecontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/identityProviders' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/loggers@2019-12-01
@@ -264,7 +264,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LoggerContractProperties
+* **properties**: [LoggerContractProperties](#loggercontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/loggers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/namedValues@2019-12-01
@@ -273,7 +273,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: NamedValueCreateContractProperties
+* **properties**: [NamedValueCreateContractProperties](#namedvaluecreatecontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/namedValues' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/notifications@2019-12-01
@@ -282,7 +282,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'AccountClosedPublisher' | 'BCC' | 'NewApplicationNotificationMessage' | 'NewIssuePublisherNotificationMessage' | 'PurchasePublisherNotificationMessage' | 'QuotaLimitApproachingPublisherNotificationMessage' | 'RequestPublisherNotificationMessage' (Required, DeployTimeConstant)
-* **properties**: NotificationContractProperties (ReadOnly)
+* **properties**: [NotificationContractProperties](#notificationcontractproperties) (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/service/notifications' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/notifications/recipientEmails@2019-12-01
@@ -307,7 +307,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: OpenidConnectProviderContractProperties
+* **properties**: [OpenidConnectProviderContractProperties](#openidconnectprovidercontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/openidConnectProviders' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/policies@2019-12-01
@@ -316,7 +316,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'policy' (Required, DeployTimeConstant)
-* **properties**: PolicyContractProperties
+* **properties**: [PolicyContractProperties](#policycontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/policies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/products@2019-12-01
@@ -325,7 +325,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProductContractProperties
+* **properties**: [ProductContractProperties](#productcontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/products/apis@2019-12-01
@@ -350,7 +350,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'policy' (Required, DeployTimeConstant)
-* **properties**: PolicyContractProperties
+* **properties**: [PolicyContractProperties](#policycontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/products/policies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/products/tags@2019-12-01
@@ -359,7 +359,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TagContractProperties (ReadOnly)
+* **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/service/products/tags' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/subscriptions@2019-12-01
@@ -368,7 +368,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SubscriptionCreateParameterProperties
+* **properties**: [SubscriptionCreateParameterProperties](#subscriptioncreateparameterproperties)
 * **type**: 'Microsoft.ApiManagement/service/subscriptions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/tags@2019-12-01
@@ -377,7 +377,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TagContractProperties
+* **properties**: [TagContractProperties](#tagcontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/tags' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/templates@2019-12-01
@@ -386,7 +386,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'accountClosedDeveloper' | 'applicationApprovedNotificationMessage' | 'confirmSignUpIdentityDefault' | 'emailChangeIdentityDefault' | 'inviteUserNotificationMessage' | 'newCommentNotificationMessage' | 'newDeveloperNotificationMessage' | 'newIssueNotificationMessage' | 'passwordResetByAdminNotificationMessage' | 'passwordResetIdentityDefault' | 'purchaseDeveloperNotificationMessage' | 'quotaLimitApproachingDeveloperNotificationMessage' | 'rejectDeveloperNotificationMessage' | 'requestDeveloperNotificationMessage' (Required, DeployTimeConstant)
-* **properties**: EmailTemplateUpdateParameterProperties
+* **properties**: [EmailTemplateUpdateParameterProperties](#emailtemplateupdateparameterproperties)
 * **type**: 'Microsoft.ApiManagement/service/templates' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/users@2019-12-01
@@ -395,7 +395,7 @@
 * **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: UserCreateParameterProperties
+* **properties**: [UserCreateParameterProperties](#usercreateparameterproperties)
 * **type**: 'Microsoft.ApiManagement/service/users' (ReadOnly, DeployTimeConstant)
 
 ## ApiManagementServiceIdentity
@@ -403,12 +403,12 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' (Required)
-* **userAssignedIdentities**: ApiManagementServiceIdentityUserAssignedIdentities
+* **userAssignedIdentities**: [ApiManagementServiceIdentityUserAssignedIdentities](#apimanagementserviceidentityuserassignedidentities)
 
 ## ApiManagementServiceIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: UserIdentityProperties
+* **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
 
 ## UserIdentityProperties
 ### Properties
@@ -417,17 +417,17 @@
 
 ## ApiManagementServiceProperties
 ### Properties
-* **additionalLocations**: AdditionalLocation[]
-* **apiVersionConstraint**: ApiVersionConstraint
-* **certificates**: CertificateConfiguration[]
+* **additionalLocations**: [AdditionalLocation](#additionallocation)[]
+* **apiVersionConstraint**: [ApiVersionConstraint](#apiversionconstraint)
+* **certificates**: [CertificateConfiguration](#certificateconfiguration)[]
 * **createdAtUtc**: string (ReadOnly)
-* **customProperties**: ApiManagementServiceBasePropertiesCustomProperties
+* **customProperties**: [ApiManagementServiceBasePropertiesCustomProperties](#apimanagementservicebasepropertiescustomproperties)
 * **developerPortalUrl**: string (ReadOnly)
 * **disableGateway**: bool
 * **enableClientCertificate**: bool
 * **gatewayRegionalUrl**: string (ReadOnly)
 * **gatewayUrl**: string (ReadOnly)
-* **hostnameConfigurations**: HostnameConfiguration[]
+* **hostnameConfigurations**: [HostnameConfiguration](#hostnameconfiguration)[]
 * **managementApiUrl**: string (ReadOnly)
 * **notificationSenderEmail**: string
 * **portalUrl**: string (ReadOnly)
@@ -438,7 +438,7 @@
 * **publisherName**: string (Required)
 * **scmUrl**: string (ReadOnly)
 * **targetProvisioningState**: string (ReadOnly)
-* **virtualNetworkConfiguration**: VirtualNetworkConfiguration
+* **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration)
 * **virtualNetworkType**: 'External' | 'Internal' | 'None'
 
 ## AdditionalLocation
@@ -448,8 +448,8 @@
 * **location**: string (Required)
 * **privateIPAddresses**: string[] (ReadOnly)
 * **publicIPAddresses**: string[] (ReadOnly)
-* **sku**: ApiManagementServiceSkuProperties (Required)
-* **virtualNetworkConfiguration**: VirtualNetworkConfiguration
+* **sku**: [ApiManagementServiceSkuProperties](#apimanagementserviceskuproperties) (Required)
+* **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration)
 
 ## ApiManagementServiceSkuProperties
 ### Properties
@@ -468,7 +468,7 @@
 
 ## CertificateConfiguration
 ### Properties
-* **certificate**: CertificateInformation
+* **certificate**: [CertificateInformation](#certificateinformation)
 * **certificatePassword**: string
 * **encodedCertificate**: string
 * **storeName**: 'CertificateAuthority' | 'Root' (Required)
@@ -486,7 +486,7 @@
 
 ## HostnameConfiguration
 ### Properties
-* **certificate**: CertificateInformation
+* **certificate**: [CertificateInformation](#certificateinformation)
 * **certificatePassword**: string
 * **defaultSslBinding**: bool
 * **encodedCertificate**: string
@@ -507,9 +507,9 @@
 * **apiType**: 'http' | 'soap' (WriteOnly)
 * **apiVersion**: string (WriteOnly)
 * **apiVersionDescription**: string (WriteOnly)
-* **apiVersionSet**: ApiVersionSetContractDetails (WriteOnly)
+* **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails) (WriteOnly)
 * **apiVersionSetId**: string (WriteOnly)
-* **authenticationSettings**: AuthenticationSettingsContract (WriteOnly)
+* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (WriteOnly)
 * **description**: string (WriteOnly)
 * **displayName**: string (WriteOnly)
 * **format**: 'openapi' | 'openapi+json' | 'openapi+json-link' | 'openapi-link' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' (WriteOnly)
@@ -519,11 +519,11 @@
 * **protocols**: 'http' | 'https'[] (WriteOnly)
 * **serviceUrl**: string (WriteOnly)
 * **sourceApiId**: string (WriteOnly)
-* **subscriptionKeyParameterNames**: SubscriptionKeyParameterNamesContract (WriteOnly)
+* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (WriteOnly)
 * **subscriptionRequired**: bool (WriteOnly)
 * **type**: 'http' | 'soap' (WriteOnly)
 * **value**: string (WriteOnly)
-* **wsdlSelector**: ApiCreateOrUpdatePropertiesWsdlSelector (WriteOnly)
+* **wsdlSelector**: [ApiCreateOrUpdatePropertiesWsdlSelector](#apicreateorupdatepropertieswsdlselector) (WriteOnly)
 
 ## ApiVersionSetContractDetails
 ### Properties
@@ -536,8 +536,8 @@
 
 ## AuthenticationSettingsContract
 ### Properties
-* **oAuth2**: OAuth2AuthenticationSettingsContract (WriteOnly)
-* **openid**: OpenIdAuthenticationSettingsContract (WriteOnly)
+* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract) (WriteOnly)
+* **openid**: [OpenIdAuthenticationSettingsContract](#openidauthenticationsettingscontract) (WriteOnly)
 
 ## OAuth2AuthenticationSettingsContract
 ### Properties
@@ -566,22 +566,22 @@
 ## DiagnosticContractProperties
 ### Properties
 * **alwaysLog**: 'allErrors'
-* **backend**: PipelineDiagnosticSettings
-* **frontend**: PipelineDiagnosticSettings
+* **backend**: [PipelineDiagnosticSettings](#pipelinediagnosticsettings)
+* **frontend**: [PipelineDiagnosticSettings](#pipelinediagnosticsettings)
 * **httpCorrelationProtocol**: 'Legacy' | 'None' | 'W3C'
 * **logClientIp**: bool
 * **loggerId**: string (Required)
-* **sampling**: SamplingSettings
+* **sampling**: [SamplingSettings](#samplingsettings)
 * **verbosity**: 'error' | 'information' | 'verbose'
 
 ## PipelineDiagnosticSettings
 ### Properties
-* **request**: HttpMessageDiagnostic
-* **response**: HttpMessageDiagnostic
+* **request**: [HttpMessageDiagnostic](#httpmessagediagnostic)
+* **response**: [HttpMessageDiagnostic](#httpmessagediagnostic)
 
 ## HttpMessageDiagnostic
 ### Properties
-* **body**: BodyDiagnosticSettings
+* **body**: [BodyDiagnosticSettings](#bodydiagnosticsettings)
 * **headers**: string[]
 
 ## BodyDiagnosticSettings
@@ -620,17 +620,17 @@
 * **displayName**: string (Required)
 * **method**: string (Required)
 * **policies**: string
-* **request**: RequestContract
-* **responses**: ResponseContract[]
-* **templateParameters**: ParameterContract[]
+* **request**: [RequestContract](#requestcontract)
+* **responses**: [ResponseContract](#responsecontract)[]
+* **templateParameters**: [ParameterContract](#parametercontract)[]
 * **urlTemplate**: string (Required)
 
 ## RequestContract
 ### Properties
 * **description**: string
-* **headers**: ParameterContract[]
-* **queryParameters**: ParameterContract[]
-* **representations**: RepresentationContract[]
+* **headers**: [ParameterContract](#parametercontract)[]
+* **queryParameters**: [ParameterContract](#parametercontract)[]
+* **representations**: [RepresentationContract](#representationcontract)[]
 
 ## ParameterContract
 ### Properties
@@ -644,7 +644,7 @@
 ## RepresentationContract
 ### Properties
 * **contentType**: string (Required)
-* **formParameters**: ParameterContract[]
+* **formParameters**: [ParameterContract](#parametercontract)[]
 * **sample**: string
 * **schemaId**: string
 * **typeName**: string
@@ -652,8 +652,8 @@
 ## ResponseContract
 ### Properties
 * **description**: string
-* **headers**: ParameterContract[]
-* **representations**: RepresentationContract[]
+* **headers**: [ParameterContract](#parametercontract)[]
+* **representations**: [RepresentationContract](#representationcontract)[]
 * **statusCode**: int (Required)
 
 ## PolicyContractProperties
@@ -675,7 +675,7 @@
 ## SchemaContractProperties
 ### Properties
 * **contentType**: string (Required)
-* **document**: SchemaDocumentProperties
+* **document**: [SchemaDocumentProperties](#schemadocumentproperties)
 
 ## SchemaDocumentProperties
 ### Properties
@@ -714,7 +714,7 @@
 * **resourceOwnerPassword**: string
 * **resourceOwnerUsername**: string
 * **supportState**: bool
-* **tokenBodyParameters**: TokenBodyParameterContract[]
+* **tokenBodyParameters**: [TokenBodyParameterContract](#tokenbodyparametercontract)[]
 * **tokenEndpoint**: string
 
 ## TokenBodyParameterContract
@@ -724,22 +724,22 @@
 
 ## BackendContractProperties
 ### Properties
-* **credentials**: BackendCredentialsContract
+* **credentials**: [BackendCredentialsContract](#backendcredentialscontract)
 * **description**: string
-* **properties**: BackendProperties
+* **properties**: [BackendProperties](#backendproperties)
 * **protocol**: 'http' | 'soap' (Required)
-* **proxy**: BackendProxyContract
+* **proxy**: [BackendProxyContract](#backendproxycontract)
 * **resourceId**: string
 * **title**: string
-* **tls**: BackendTlsProperties
+* **tls**: [BackendTlsProperties](#backendtlsproperties)
 * **url**: string (Required)
 
 ## BackendCredentialsContract
 ### Properties
-* **authorization**: BackendAuthorizationHeaderCredentials
+* **authorization**: [BackendAuthorizationHeaderCredentials](#backendauthorizationheadercredentials)
 * **certificate**: string[]
-* **header**: BackendCredentialsContractHeader
-* **query**: BackendCredentialsContractQuery
+* **header**: [BackendCredentialsContractHeader](#backendcredentialscontractheader)
+* **query**: [BackendCredentialsContractQuery](#backendcredentialscontractquery)
 
 ## BackendAuthorizationHeaderCredentials
 ### Properties
@@ -758,7 +758,7 @@
 
 ## BackendProperties
 ### Properties
-* **serviceFabricCluster**: BackendServiceFabricClusterProperties
+* **serviceFabricCluster**: [BackendServiceFabricClusterProperties](#backendservicefabricclusterproperties)
 
 ## BackendServiceFabricClusterProperties
 ### Properties
@@ -766,7 +766,7 @@
 * **managementEndpoints**: string[] (Required)
 * **maxPartitionResolutionRetries**: int
 * **serverCertificateThumbprints**: string[]
-* **serverX509Names**: X509CertificateName[]
+* **serverX509Names**: [X509CertificateName](#x509certificatename)[]
 
 ## X509CertificateName
 ### Properties
@@ -814,7 +814,7 @@
 ## GatewayContractProperties
 ### Properties
 * **description**: string
-* **locationData**: ResourceLocationDataContract
+* **locationData**: [ResourceLocationDataContract](#resourcelocationdatacontract)
 
 ## ResourceLocationDataContract
 ### Properties
@@ -856,7 +856,7 @@
 
 ## LoggerContractProperties
 ### Properties
-* **credentials**: LoggerContractPropertiesCredentials (Required)
+* **credentials**: [LoggerContractPropertiesCredentials](#loggercontractpropertiescredentials) (Required)
 * **description**: string
 * **isBuffered**: bool
 * **loggerType**: 'applicationInsights' | 'azureEventHub' (Required)
@@ -877,7 +877,7 @@
 ## NotificationContractProperties
 ### Properties
 * **description**: string (ReadOnly)
-* **recipients**: RecipientsContractProperties (ReadOnly)
+* **recipients**: [RecipientsContractProperties](#recipientscontractproperties) (ReadOnly)
 * **title**: string (ReadOnly)
 
 ## RecipientsContractProperties
@@ -924,7 +924,7 @@
 * **body**: string
 * **description**: string
 * **isDefault**: bool (ReadOnly)
-* **parameters**: EmailTemplateParametersContractProperties[]
+* **parameters**: [EmailTemplateParametersContractProperties](#emailtemplateparameterscontractproperties)[]
 * **subject**: string
 * **title**: string
 
@@ -940,8 +940,8 @@
 * **confirmation**: 'invite' | 'signup' (WriteOnly)
 * **email**: string (Required)
 * **firstName**: string (Required)
-* **groups**: GroupContractProperties[] (ReadOnly)
-* **identities**: UserIdentityContract[]
+* **groups**: [GroupContractProperties](#groupcontractproperties)[] (ReadOnly)
+* **identities**: [UserIdentityContract](#useridentitycontract)[]
 * **lastName**: string (Required)
 * **note**: string
 * **password**: string (WriteOnly)

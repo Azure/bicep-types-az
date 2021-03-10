@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MixedRealityAccountProperties
-* **tags**: TrackedResourceTags
+* **properties**: [MixedRealityAccountProperties](#mixedrealityaccountproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.MixedReality/spatialAnchorsAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Identity

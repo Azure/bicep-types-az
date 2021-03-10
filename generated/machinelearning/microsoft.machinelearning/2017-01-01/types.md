@@ -7,61 +7,61 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WebServiceProperties (Required)
-* **tags**: ResourceTags
+* **properties**: [WebServiceProperties](#webserviceproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.MachineLearning/webServices' (ReadOnly, DeployTimeConstant)
 
 ## WebServiceProperties
 * **Discriminator**: packageType
 
 ### Base Properties
-* **assets**: WebServicePropertiesAssets
-* **commitmentPlan**: CommitmentPlan
+* **assets**: [WebServicePropertiesAssets](#webservicepropertiesassets)
+* **commitmentPlan**: [CommitmentPlan](#commitmentplan)
 * **createdOn**: string (ReadOnly)
 * **description**: string
-* **diagnostics**: DiagnosticsConfiguration
-* **exampleRequest**: ExampleRequest
+* **diagnostics**: [DiagnosticsConfiguration](#diagnosticsconfiguration)
+* **exampleRequest**: [ExampleRequest](#examplerequest)
 * **exposeSampleData**: bool
-* **input**: ServiceInputOutputSpecification
-* **keys**: WebServiceKeys
-* **machineLearningWorkspace**: MachineLearningWorkspace
+* **input**: [ServiceInputOutputSpecification](#serviceinputoutputspecification)
+* **keys**: [WebServiceKeys](#webservicekeys)
+* **machineLearningWorkspace**: [MachineLearningWorkspace](#machinelearningworkspace)
 * **modifiedOn**: string (ReadOnly)
-* **output**: ServiceInputOutputSpecification
-* **parameters**: WebServicePropertiesParameters
+* **output**: [ServiceInputOutputSpecification](#serviceinputoutputspecification)
+* **parameters**: [WebServicePropertiesParameters](#webservicepropertiesparameters)
 * **payloadsInBlobStorage**: bool
-* **payloadsLocation**: BlobLocation
+* **payloadsLocation**: [BlobLocation](#bloblocation)
 * **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' (ReadOnly)
 * **readOnly**: bool
-* **realtimeConfiguration**: RealtimeConfiguration
-* **storageAccount**: StorageAccount
+* **realtimeConfiguration**: [RealtimeConfiguration](#realtimeconfiguration)
+* **storageAccount**: [StorageAccount](#storageaccount)
 * **swaggerLocation**: string (ReadOnly)
 * **title**: string
 ### WebServicePropertiesForGraph
 #### Properties
-* **package**: GraphPackage
+* **package**: [GraphPackage](#graphpackage)
 * **packageType**: 'Graph' (Required)
 
 
 ## WebServicePropertiesAssets
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: AssetItem
+* **Additional Properties Type**: [AssetItem](#assetitem)
 
 ## AssetItem
 ### Properties
 * **id**: string
-* **inputPorts**: AssetItemInputPorts
-* **locationInfo**: BlobLocation (Required)
-* **metadata**: AssetItemMetadata
+* **inputPorts**: [AssetItemInputPorts](#assetiteminputports)
+* **locationInfo**: [BlobLocation](#bloblocation) (Required)
+* **metadata**: [AssetItemMetadata](#assetitemmetadata)
 * **name**: string (Required)
-* **outputPorts**: AssetItemOutputPorts
-* **parameters**: ModuleAssetParameter[]
+* **outputPorts**: [AssetItemOutputPorts](#assetitemoutputports)
+* **parameters**: [ModuleAssetParameter](#moduleassetparameter)[]
 * **type**: 'Module' | 'Resource' (Required)
 
 ## AssetItemInputPorts
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: InputPort
+* **Additional Properties Type**: [InputPort](#inputport)
 
 ## InputPort
 ### Properties
@@ -80,7 +80,7 @@
 ## AssetItemOutputPorts
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: OutputPort
+* **Additional Properties Type**: [OutputPort](#outputport)
 
 ## OutputPort
 ### Properties
@@ -88,19 +88,19 @@
 
 ## ModuleAssetParameter
 ### Properties
-* **modeValuesInfo**: ModuleAssetParameterModeValuesInfo
+* **modeValuesInfo**: [ModuleAssetParameterModeValuesInfo](#moduleassetparametermodevaluesinfo)
 * **name**: string
 * **parameterType**: string
 
 ## ModuleAssetParameterModeValuesInfo
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ModeValueInfo
+* **Additional Properties Type**: [ModeValueInfo](#modevalueinfo)
 
 ## ModeValueInfo
 ### Properties
 * **interfaceString**: string
-* **parameters**: ModuleAssetParameter[]
+* **parameters**: [ModuleAssetParameter](#moduleassetparameter)[]
 
 ## CommitmentPlan
 ### Properties
@@ -113,8 +113,8 @@
 
 ## ExampleRequest
 ### Properties
-* **globalParameters**: ExampleRequestGlobalParameters
-* **inputs**: ExampleRequestInputs
+* **globalParameters**: [ExampleRequestGlobalParameters](#examplerequestglobalparameters)
+* **inputs**: [ExampleRequestInputs](#examplerequestinputs)
 
 ## ExampleRequestGlobalParameters
 ### Properties
@@ -129,27 +129,27 @@
 ## ServiceInputOutputSpecification
 ### Properties
 * **description**: string
-* **properties**: ServiceInputOutputSpecificationProperties (Required)
+* **properties**: [ServiceInputOutputSpecificationProperties](#serviceinputoutputspecificationproperties) (Required)
 * **title**: string
 * **type**: string (Required)
 
 ## ServiceInputOutputSpecificationProperties
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: TableSpecification
+* **Additional Properties Type**: [TableSpecification](#tablespecification)
 
 ## TableSpecification
 ### Properties
 * **description**: string
 * **format**: string
-* **properties**: TableSpecificationProperties
+* **properties**: [TableSpecificationProperties](#tablespecificationproperties)
 * **title**: string
 * **type**: string (Required)
 
 ## TableSpecificationProperties
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ColumnSpecification
+* **Additional Properties Type**: [ColumnSpecification](#columnspecification)
 
 ## ColumnSpecification
 ### Properties
@@ -171,7 +171,7 @@
 ## WebServicePropertiesParameters
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: WebServiceParameter
+* **Additional Properties Type**: [WebServiceParameter](#webserviceparameter)
 
 ## WebServiceParameter
 ### Properties
@@ -189,14 +189,14 @@
 
 ## WebServicePropertiesForGraph
 ### Properties
-* **package**: GraphPackage
+* **package**: [GraphPackage](#graphpackage)
 * **packageType**: 'Graph' (Required)
 
 ## GraphPackage
 ### Properties
-* **edges**: GraphEdge[]
-* **graphParameters**: GraphPackageGraphParameters
-* **nodes**: GraphPackageNodes
+* **edges**: [GraphEdge](#graphedge)[]
+* **graphParameters**: [GraphPackageGraphParameters](#graphpackagegraphparameters)
+* **nodes**: [GraphPackageNodes](#graphpackagenodes)
 
 ## GraphEdge
 ### Properties
@@ -208,12 +208,12 @@
 ## GraphPackageGraphParameters
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: GraphParameter
+* **Additional Properties Type**: [GraphParameter](#graphparameter)
 
 ## GraphParameter
 ### Properties
 * **description**: string
-* **links**: GraphParameterLink[] (Required)
+* **links**: [GraphParameterLink](#graphparameterlink)[] (Required)
 * **type**: 'Boolean' | 'ColumnPicker' | 'Credential' | 'DataGatewayName' | 'Double' | 'Enumerated' | 'Float' | 'Int' | 'Mode' | 'ParameterRange' | 'Script' | 'String' (Required)
 
 ## GraphParameterLink
@@ -224,19 +224,19 @@
 ## GraphPackageNodes
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: GraphNode
+* **Additional Properties Type**: [GraphNode](#graphnode)
 
 ## GraphNode
 ### Properties
 * **assetId**: string
 * **inputId**: string
 * **outputId**: string
-* **parameters**: GraphNodeParameters
+* **parameters**: [GraphNodeParameters](#graphnodeparameters)
 
 ## GraphNodeParameters
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: WebServiceParameter
+* **Additional Properties Type**: [WebServiceParameter](#webserviceparameter)
 
 ## ResourceTags
 ### Properties

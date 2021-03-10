@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2020-04-06-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: RemoteRenderingAccountIdentity
+* **identity**: [RemoteRenderingAccountIdentity](#remoterenderingaccountidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MixedRealityAccountProperties
-* **tags**: TrackedResourceTags
+* **properties**: [MixedRealityAccountProperties](#mixedrealityaccountproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.MixedReality/remoteRenderingAccounts' (ReadOnly, DeployTimeConstant)
 
 ## RemoteRenderingAccountIdentity

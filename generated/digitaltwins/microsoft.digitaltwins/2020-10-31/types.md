@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DigitalTwinsProperties
-* **tags**: DigitalTwinsResourceTags
+* **properties**: [DigitalTwinsProperties](#digitaltwinsproperties)
+* **tags**: [DigitalTwinsResourceTags](#digitaltwinsresourcetags)
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DigitalTwins/digitalTwinsInstances/endpoints@2020-10-31
@@ -17,7 +17,7 @@
 * **apiVersion**: '2020-10-31' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DigitalTwinsEndpointResourceProperties (Required)
+* **properties**: [DigitalTwinsEndpointResourceProperties](#digitaltwinsendpointresourceproperties) (Required)
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/endpoints' (ReadOnly, DeployTimeConstant)
 
 ## DigitalTwinsProperties

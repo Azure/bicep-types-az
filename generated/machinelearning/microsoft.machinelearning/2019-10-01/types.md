@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceProperties
-* **sku**: Sku
-* **tags**: ResourceTags
+* **properties**: [WorkspaceProperties](#workspaceproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.MachineLearning/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## WorkspaceProperties

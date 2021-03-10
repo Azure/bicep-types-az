@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DomainServiceProperties
-* **tags**: ResourceTags
+* **properties**: [DomainServiceProperties](#domainserviceproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.AAD/domainServices' (ReadOnly, DeployTimeConstant)
 
 ## DomainServiceProperties
@@ -17,13 +17,13 @@
 * **deploymentId**: string (ReadOnly)
 * **domainControllerIpAddress**: string[] (ReadOnly)
 * **domainName**: string
-* **domainSecuritySettings**: DomainSecuritySettings
+* **domainSecuritySettings**: [DomainSecuritySettings](#domainsecuritysettings)
 * **filteredSync**: 'Disabled' | 'Enabled'
-* **healthAlerts**: HealthAlert[] (ReadOnly)
+* **healthAlerts**: [HealthAlert](#healthalert)[] (ReadOnly)
 * **healthLastEvaluated**: string (ReadOnly)
-* **healthMonitors**: HealthMonitor[] (ReadOnly)
-* **ldapsSettings**: LdapsSettings
-* **notificationSettings**: NotificationSettings
+* **healthMonitors**: [HealthMonitor](#healthmonitor)[] (ReadOnly)
+* **ldapsSettings**: [LdapsSettings](#ldapssettings)
+* **notificationSettings**: [NotificationSettings](#notificationsettings)
 * **provisioningState**: string (ReadOnly)
 * **serviceStatus**: string (ReadOnly)
 * **subnetId**: string

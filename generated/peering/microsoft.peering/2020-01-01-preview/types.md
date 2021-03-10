@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PeerAsnProperties
+* **properties**: [PeerAsnProperties](#peerasnproperties)
 * **type**: 'Microsoft.Peering/peerAsns' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Peering/peerings@2020-01-01-preview
@@ -17,9 +17,9 @@
 * **kind**: 'Direct' | 'Exchange' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PeeringProperties
-* **sku**: PeeringSku (Required)
-* **tags**: PeeringTags
+* **properties**: [PeeringProperties](#peeringproperties)
+* **sku**: [PeeringSku](#peeringsku) (Required)
+* **tags**: [PeeringTags](#peeringtags)
 * **type**: 'Microsoft.Peering/peerings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Peering/peerings/registeredAsns@2020-01-01-preview
@@ -28,7 +28,7 @@
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PeeringRegisteredAsnProperties
+* **properties**: [PeeringRegisteredAsnProperties](#peeringregisteredasnproperties)
 * **type**: 'Microsoft.Peering/peerings/registeredAsns' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Peering/peerings/registeredPrefixes@2020-01-01-preview
@@ -37,7 +37,7 @@
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PeeringRegisteredPrefixProperties
+* **properties**: [PeeringRegisteredPrefixProperties](#peeringregisteredprefixproperties)
 * **type**: 'Microsoft.Peering/peerings/registeredPrefixes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Peering/peeringServices@2020-01-01-preview
@@ -47,9 +47,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PeeringServiceProperties
-* **sku**: PeeringServiceSku
-* **tags**: PeeringServiceTags
+* **properties**: [PeeringServiceProperties](#peeringserviceproperties)
+* **sku**: [PeeringServiceSku](#peeringservicesku)
+* **tags**: [PeeringServiceTags](#peeringservicetags)
 * **type**: 'Microsoft.Peering/peeringServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Peering/peeringServices/prefixes@2020-01-01-preview
@@ -58,14 +58,14 @@
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PeeringServicePrefixProperties
+* **properties**: [PeeringServicePrefixProperties](#peeringserviceprefixproperties)
 * **type**: 'Microsoft.Peering/peeringServices/prefixes' (ReadOnly, DeployTimeConstant)
 
 ## PeerAsnProperties
 ### Properties
 * **errorMessage**: string (ReadOnly)
 * **peerAsn**: int
-* **peerContactDetail**: ContactDetail[]
+* **peerContactDetail**: [ContactDetail](#contactdetail)[]
 * **peerName**: string
 * **validationState**: 'Approved' | 'Failed' | 'None' | 'Pending'
 
@@ -77,22 +77,22 @@
 
 ## PeeringProperties
 ### Properties
-* **direct**: PeeringPropertiesDirect
-* **exchange**: PeeringPropertiesExchange
+* **direct**: [PeeringPropertiesDirect](#peeringpropertiesdirect)
+* **exchange**: [PeeringPropertiesExchange](#peeringpropertiesexchange)
 * **peeringLocation**: string
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## PeeringPropertiesDirect
 ### Properties
-* **connections**: DirectConnection[]
+* **connections**: [DirectConnection](#directconnection)[]
 * **directPeeringType**: 'Cdn' | 'Edge' | 'Internal' | 'Ix' | 'IxRs' | 'Transit'
-* **peerAsn**: SubResource
+* **peerAsn**: [SubResource](#subresource)
 * **useForPeeringService**: bool (ReadOnly)
 
 ## DirectConnection
 ### Properties
 * **bandwidthInMbps**: int
-* **bgpSession**: BgpSession
+* **bgpSession**: [BgpSession](#bgpsession)
 * **connectionIdentifier**: string
 * **connectionState**: 'Active' | 'Approved' | 'None' | 'PendingApproval' | 'ProvisioningCompleted' | 'ProvisioningFailed' | 'ProvisioningStarted' | 'Validating' (ReadOnly)
 * **errorMessage**: string (ReadOnly)
@@ -121,12 +121,12 @@
 
 ## PeeringPropertiesExchange
 ### Properties
-* **connections**: ExchangeConnection[]
-* **peerAsn**: SubResource
+* **connections**: [ExchangeConnection](#exchangeconnection)[]
+* **peerAsn**: [SubResource](#subresource)
 
 ## ExchangeConnection
 ### Properties
-* **bgpSession**: BgpSession
+* **bgpSession**: [BgpSession](#bgpsession)
 * **connectionIdentifier**: string
 * **connectionState**: 'Active' | 'Approved' | 'None' | 'PendingApproval' | 'ProvisioningCompleted' | 'ProvisioningFailed' | 'ProvisioningStarted' | 'Validating' (ReadOnly)
 * **errorMessage**: string (ReadOnly)
@@ -176,7 +176,7 @@
 ## PeeringServicePrefixProperties
 ### Properties
 * **errorMessage**: string (ReadOnly)
-* **events**: PeeringServicePrefixEvent[] (ReadOnly)
+* **events**: [PeeringServicePrefixEvent](#peeringserviceprefixevent)[] (ReadOnly)
 * **learnedType**: 'None' | 'ViaServiceProvider' | 'ViaSession' (ReadOnly)
 * **peeringServicePrefixKey**: string
 * **prefix**: string

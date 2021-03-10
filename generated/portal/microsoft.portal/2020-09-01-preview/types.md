@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DashboardProperties
-* **tags**: DashboardTags
+* **properties**: [DashboardProperties](#dashboardproperties)
+* **tags**: [DashboardTags](#dashboardtags)
 * **type**: 'Microsoft.Portal/dashboards' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Portal/tenantConfigurations@2020-09-01-preview
@@ -17,19 +17,19 @@
 * **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' (Required, DeployTimeConstant)
-* **properties**: ConfigurationProperties
+* **properties**: [ConfigurationProperties](#configurationproperties)
 * **type**: 'Microsoft.Portal/tenantConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## DashboardProperties
 ### Properties
-* **lenses**: DashboardLens[]
-* **metadata**: DashboardPropertiesMetadata
+* **lenses**: [DashboardLens](#dashboardlens)[]
+* **metadata**: [DashboardPropertiesMetadata](#dashboardpropertiesmetadata)
 
 ## DashboardLens
 ### Properties
-* **metadata**: DashboardLensMetadata
+* **metadata**: [DashboardLensMetadata](#dashboardlensmetadata)
 * **order**: int (Required)
-* **parts**: DashboardParts[] (Required)
+* **parts**: [DashboardParts](#dashboardparts)[] (Required)
 
 ## DashboardLensMetadata
 ### Properties
@@ -38,8 +38,8 @@
 
 ## DashboardParts
 ### Properties
-* **metadata**: DashboardPartMetadata
-* **position**: DashboardPartsPosition (Required)
+* **metadata**: [DashboardPartMetadata](#dashboardpartmetadata)
+* **position**: [DashboardPartsPosition](#dashboardpartsposition) (Required)
 
 ## DashboardPartMetadata
 * **Discriminator**: type
@@ -48,23 +48,23 @@
 ### MarkdownPartMetadata
 #### Properties
 * **inputs**: any[]
-* **settings**: MarkdownPartMetadataSettings
+* **settings**: [MarkdownPartMetadataSettings](#markdownpartmetadatasettings)
 * **type**: 'Extension/HubsExtension/PartType/MarkdownPart' (Required)
 
 
 ## MarkdownPartMetadata
 ### Properties
 * **inputs**: any[]
-* **settings**: MarkdownPartMetadataSettings
+* **settings**: [MarkdownPartMetadataSettings](#markdownpartmetadatasettings)
 * **type**: 'Extension/HubsExtension/PartType/MarkdownPart' (Required)
 
 ## MarkdownPartMetadataSettings
 ### Properties
-* **content**: MarkdownPartMetadataSettingsContent
+* **content**: [MarkdownPartMetadataSettingsContent](#markdownpartmetadatasettingscontent)
 
 ## MarkdownPartMetadataSettingsContent
 ### Properties
-* **settings**: MarkdownPartMetadataSettingsContentSettings
+* **settings**: [MarkdownPartMetadataSettingsContentSettings](#markdownpartmetadatasettingscontentsettings)
 
 ## MarkdownPartMetadataSettingsContentSettings
 ### Properties
@@ -77,7 +77,7 @@
 ## DashboardPartsPosition
 ### Properties
 * **colSpan**: int (Required)
-* **metadata**: DashboardPartsPositionMetadata
+* **metadata**: [DashboardPartsPositionMetadata](#dashboardpartspositionmetadata)
 * **rowSpan**: int (Required)
 * **x**: int (Required)
 * **y**: int (Required)

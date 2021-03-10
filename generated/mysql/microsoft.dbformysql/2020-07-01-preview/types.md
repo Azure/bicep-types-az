@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerProperties
-* **sku**: Sku
-* **tags**: TrackedResourceTags
+* **properties**: [ServerProperties](#serverproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DBForMySql/flexibleServers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMySql/flexibleServers/databases@2020-07-01-preview
@@ -19,7 +19,7 @@
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
+* **properties**: [DatabaseProperties](#databaseproperties)
 * **type**: 'Microsoft.DBForMySql/flexibleServers/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMySql/flexibleServers/firewallRules@2020-07-01-preview
@@ -28,7 +28,7 @@
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: FirewallRuleProperties (Required)
+* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required)
 * **type**: 'Microsoft.DBForMySql/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMySql/flexibleServers/keys@2020-07-01-preview
@@ -38,7 +38,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerKeyProperties
+* **properties**: [ServerKeyProperties](#serverkeyproperties)
 * **type**: 'Microsoft.DBForMySql/flexibleServers/keys' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -54,13 +54,13 @@
 * **availabilityZone**: string
 * **byokEnforcement**: string (ReadOnly)
 * **createMode**: 'Default' | 'PointInTimeRestore' | 'Replica'
-* **delegatedSubnetArguments**: DelegatedSubnetArguments
+* **delegatedSubnetArguments**: [DelegatedSubnetArguments](#delegatedsubnetarguments)
 * **earliestRestoreDate**: string (ReadOnly)
 * **fullyQualifiedDomainName**: string (ReadOnly)
 * **haEnabled**: 'Disabled' | 'Enabled'
 * **haState**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' (ReadOnly)
 * **infrastructureEncryption**: 'Disabled' | 'Enabled'
-* **maintenanceWindow**: MaintenanceWindow
+* **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly)
 * **replicaCapacity**: int (ReadOnly)
 * **replicationRole**: string
@@ -69,8 +69,8 @@
 * **sslEnforcement**: 'Disabled' | 'Enabled'
 * **standbyAvailabilityZone**: string (ReadOnly)
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly)
-* **storageProfile**: StorageProfile
-* **tags**: ServerPropertiesTags
+* **storageProfile**: [StorageProfile](#storageprofile)
+* **tags**: [ServerPropertiesTags](#serverpropertiestags)
 * **version**: '5.7'
 
 ## DelegatedSubnetArguments

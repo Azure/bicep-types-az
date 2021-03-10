@@ -6,13 +6,13 @@
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectorSettingProperties
+* **properties**: [ConnectorSettingProperties](#connectorsettingproperties)
 * **type**: 'Microsoft.Security/connectors' (ReadOnly, DeployTimeConstant)
 
 ## ConnectorSettingProperties
 ### Properties
-* **authenticationDetails**: AuthenticationDetailsProperties
-* **hybridComputeSettings**: HybridComputeSettingsProperties
+* **authenticationDetails**: [AuthenticationDetailsProperties](#authenticationdetailsproperties)
+* **hybridComputeSettings**: [HybridComputeSettingsProperties](#hybridcomputesettingsproperties)
 
 ## AuthenticationDetailsProperties
 * **Discriminator**: authenticationType
@@ -83,10 +83,10 @@
 ### Properties
 * **autoProvision**: 'Off' | 'On' (Required)
 * **hybridComputeProvisioningState**: 'Expired' | 'Invalid' | 'Valid' (ReadOnly)
-* **proxyServer**: ProxyServerProperties
+* **proxyServer**: [ProxyServerProperties](#proxyserverproperties)
 * **region**: string
 * **resourceGroupName**: string
-* **servicePrincipal**: ServicePrincipalProperties
+* **servicePrincipal**: [ServicePrincipalProperties](#serviceprincipalproperties)
 
 ## ProxyServerProperties
 ### Properties

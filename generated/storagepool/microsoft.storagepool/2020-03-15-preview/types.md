@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DiskPoolCreateProperties (Required)
-* **systemData**: SystemMetadata (ReadOnly)
-* **tags**: DiskPoolCreateTags
+* **properties**: [DiskPoolCreateProperties](#diskpoolcreateproperties) (Required)
+* **systemData**: [SystemMetadata](#systemmetadata) (ReadOnly)
+* **tags**: [DiskPoolCreateTags](#diskpoolcreatetags)
 * **type**: 'Microsoft.StoragePool/diskPools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StoragePool/diskPools/iscsiTargets@2020-03-15-preview
@@ -18,14 +18,14 @@
 * **apiVersion**: '2020-03-15-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IscsiTargetCreateProperties (Required)
+* **properties**: [IscsiTargetCreateProperties](#iscsitargetcreateproperties) (Required)
 * **type**: 'Microsoft.StoragePool/diskPools/iscsiTargets' (ReadOnly, DeployTimeConstant)
 
 ## DiskPoolCreateProperties
 ### Properties
 * **additionalCapabilities**: string[]
 * **availabilityZones**: string[] (Required)
-* **disks**: Disk[]
+* **disks**: [Disk](#disk)[]
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' (ReadOnly)
 * **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' (ReadOnly)
 * **subnetId**: string (Required)
@@ -54,20 +54,20 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' (ReadOnly)
 * **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' (ReadOnly)
 * **targetIqn**: string
-* **tpgs**: TargetPortalGroupCreate[] (Required)
+* **tpgs**: [TargetPortalGroupCreate](#targetportalgroupcreate)[] (Required)
 
 ## TargetPortalGroupCreate
 ### Properties
-* **acls**: Acl[] (Required)
-* **attributes**: Attributes (Required)
+* **acls**: [Acl](#acl)[] (Required)
+* **attributes**: [Attributes](#attributes) (Required)
 * **endpoints**: string[] (ReadOnly)
-* **luns**: IscsiLun[] (Required)
+* **luns**: [IscsiLun](#iscsilun)[] (Required)
 * **port**: int (ReadOnly)
 * **tag**: int (ReadOnly)
 
 ## Acl
 ### Properties
-* **credentials**: IscsiTargetCredentials
+* **credentials**: [IscsiTargetCredentials](#iscsitargetcredentials)
 * **initiatorIqn**: string (Required)
 * **mappedLuns**: string[] (Required)
 

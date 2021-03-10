@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SerialPortProperties
+* **properties**: [SerialPortProperties](#serialportproperties)
 * **type**: 'Microsoft.SerialConsole/serialPorts' (ReadOnly, DeployTimeConstant)
 
 ## SerialPortProperties

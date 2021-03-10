@@ -7,24 +7,24 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ActionGroup
-* **tags**: ResourceTags
+* **properties**: [ActionGroup](#actiongroup)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'microsoft.insights/actionGroups' (ReadOnly, DeployTimeConstant)
 
 ## ActionGroup
 ### Properties
-* **armRoleReceivers**: ArmRoleReceiver[]
-* **automationRunbookReceivers**: AutomationRunbookReceiver[]
-* **azureAppPushReceivers**: AzureAppPushReceiver[]
-* **azureFunctionReceivers**: AzureFunctionReceiver[]
-* **emailReceivers**: EmailReceiver[]
+* **armRoleReceivers**: [ArmRoleReceiver](#armrolereceiver)[]
+* **automationRunbookReceivers**: [AutomationRunbookReceiver](#automationrunbookreceiver)[]
+* **azureAppPushReceivers**: [AzureAppPushReceiver](#azureapppushreceiver)[]
+* **azureFunctionReceivers**: [AzureFunctionReceiver](#azurefunctionreceiver)[]
+* **emailReceivers**: [EmailReceiver](#emailreceiver)[]
 * **enabled**: bool (Required)
 * **groupShortName**: string (Required)
-* **itsmReceivers**: ItsmReceiver[]
-* **logicAppReceivers**: LogicAppReceiver[]
-* **smsReceivers**: SmsReceiver[]
-* **voiceReceivers**: VoiceReceiver[]
-* **webhookReceivers**: WebhookReceiver[]
+* **itsmReceivers**: [ItsmReceiver](#itsmreceiver)[]
+* **logicAppReceivers**: [LogicAppReceiver](#logicappreceiver)[]
+* **smsReceivers**: [SmsReceiver](#smsreceiver)[]
+* **voiceReceivers**: [VoiceReceiver](#voicereceiver)[]
+* **webhookReceivers**: [WebhookReceiver](#webhookreceiver)[]
 
 ## ArmRoleReceiver
 ### Properties

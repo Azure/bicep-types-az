@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' (Required, DeployTimeConstant)
-* **properties**: DatadogAgreementProperties
+* **properties**: [DatadogAgreementProperties](#datadogagreementproperties)
 * **type**: 'Microsoft.Datadog/agreements' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Datadog/monitors@2020-02-01-preview
@@ -14,12 +14,12 @@
 ### Properties
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: IdentityProperties
+* **identity**: [IdentityProperties](#identityproperties)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MonitorProperties
-* **sku**: ResourceSku
-* **tags**: DatadogMonitorResourceTags
+* **properties**: [MonitorProperties](#monitorproperties)
+* **sku**: [ResourceSku](#resourcesku)
+* **tags**: [DatadogMonitorResourceTags](#datadogmonitorresourcetags)
 * **type**: 'Microsoft.Datadog/monitors' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Datadog/monitors/singleSignOnConfigurations@2020-02-01-preview
@@ -28,7 +28,7 @@
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DatadogSingleSignOnProperties
+* **properties**: [DatadogSingleSignOnProperties](#datadogsinglesignonproperties)
 * **type**: 'Microsoft.Datadog/monitors/singleSignOnConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Datadog/monitors/tagRules@2020-02-01-preview
@@ -37,7 +37,7 @@
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MonitoringTagRulesProperties
+* **properties**: [MonitoringTagRulesProperties](#monitoringtagrulesproperties)
 * **type**: 'Microsoft.Datadog/monitors/tagRules' (ReadOnly, DeployTimeConstant)
 
 ## DatadogAgreementProperties
@@ -59,13 +59,13 @@
 
 ## MonitorProperties
 ### Properties
-* **datadogOrganizationProperties**: DatadogOrganizationProperties
+* **datadogOrganizationProperties**: [DatadogOrganizationProperties](#datadogorganizationproperties)
 * **liftrResourceCategory**: 'MonitorLogs' | 'Unknown' (ReadOnly)
 * **liftrResourcePreference**: int (ReadOnly)
 * **marketplaceSubscriptionStatus**: 'Active' | 'Suspended' (ReadOnly)
 * **monitoringStatus**: 'Disabled' | 'Enabled' (ReadOnly)
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating'
-* **userInfo**: UserInfo
+* **userInfo**: [UserInfo](#userinfo)
 
 ## DatadogOrganizationProperties
 ### Properties
@@ -98,12 +98,12 @@
 
 ## MonitoringTagRulesProperties
 ### Properties
-* **logRules**: LogRules
-* **metricRules**: MetricRules
+* **logRules**: [LogRules](#logrules)
+* **metricRules**: [MetricRules](#metricrules)
 
 ## LogRules
 ### Properties
-* **filteringTags**: FilteringTag[]
+* **filteringTags**: [FilteringTag](#filteringtag)[]
 * **sendAadLogs**: bool
 * **sendResourceLogs**: bool
 * **sendSubscriptionLogs**: bool
@@ -116,5 +116,5 @@
 
 ## MetricRules
 ### Properties
-* **filteringTags**: FilteringTag[]
+* **filteringTags**: [FilteringTag](#filteringtag)[]
 

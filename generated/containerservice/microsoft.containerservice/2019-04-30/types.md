@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **plan**: PurchasePlan
-* **properties**: OpenShiftManagedClusterProperties
-* **tags**: ResourceTags
+* **plan**: [PurchasePlan](#purchaseplan)
+* **properties**: [OpenShiftManagedClusterProperties](#openshiftmanagedclusterproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerService/openShiftManagedClusters' (ReadOnly, DeployTimeConstant)
 
 ## PurchasePlan
@@ -21,16 +21,16 @@
 
 ## OpenShiftManagedClusterProperties
 ### Properties
-* **agentPoolProfiles**: OpenShiftManagedClusterAgentPoolProfile[]
-* **authProfile**: OpenShiftManagedClusterAuthProfile
+* **agentPoolProfiles**: [OpenShiftManagedClusterAgentPoolProfile](#openshiftmanagedclusteragentpoolprofile)[]
+* **authProfile**: [OpenShiftManagedClusterAuthProfile](#openshiftmanagedclusterauthprofile)
 * **clusterVersion**: string (ReadOnly)
 * **fqdn**: string (ReadOnly)
-* **masterPoolProfile**: OpenShiftManagedClusterMasterPoolProfile
-* **networkProfile**: NetworkProfile
+* **masterPoolProfile**: [OpenShiftManagedClusterMasterPoolProfile](#openshiftmanagedclustermasterpoolprofile)
+* **networkProfile**: [NetworkProfile](#networkprofile)
 * **openShiftVersion**: string (Required)
 * **provisioningState**: string (ReadOnly)
 * **publicHostname**: string (ReadOnly)
-* **routerProfiles**: OpenShiftRouterProfile[]
+* **routerProfiles**: [OpenShiftRouterProfile](#openshiftrouterprofile)[]
 
 ## OpenShiftManagedClusterAgentPoolProfile
 ### Properties
@@ -43,12 +43,12 @@
 
 ## OpenShiftManagedClusterAuthProfile
 ### Properties
-* **identityProviders**: OpenShiftManagedClusterIdentityProvider[]
+* **identityProviders**: [OpenShiftManagedClusterIdentityProvider](#openshiftmanagedclusteridentityprovider)[]
 
 ## OpenShiftManagedClusterIdentityProvider
 ### Properties
 * **name**: string
-* **provider**: OpenShiftManagedClusterBaseIdentityProvider
+* **provider**: [OpenShiftManagedClusterBaseIdentityProvider](#openshiftmanagedclusterbaseidentityprovider)
 
 ## OpenShiftManagedClusterBaseIdentityProvider
 * **Discriminator**: kind

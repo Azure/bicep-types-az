@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagerProperties
-* **tags**: ResourceTags
+* **properties**: [ManagerProperties](#managerproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.StorSimple/managers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/accessControlRecords@2016-10-01
@@ -18,7 +18,7 @@
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AccessControlRecordProperties (Required)
+* **properties**: [AccessControlRecordProperties](#accesscontrolrecordproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/accessControlRecords' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/certificates@2016-10-01
@@ -28,7 +28,7 @@
 * **contractVersion**: 'InvalidVersion' | 'V2011_09' | 'V2012_02' | 'V2012_05' | 'V2012_12' | 'V2013_04' | 'V2013_10' | 'V2013_11' | 'V2014_04' | 'V2014_06' | 'V2014_07' | 'V2014_09' | 'V2014_10' | 'V2014_12' | 'V2015_01' | 'V2015_02' | 'V2015_04' | 'V2015_05' | 'V2015_06' | 'V2015_07' | 'V2015_08' | 'V2015_10' | 'V2015_12' | 'V2016_01' | 'V2016_02' | 'V2016_04' | 'V2016_05' | 'V2016_07' | 'V2016_08' (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RawCertificateData (Required)
+* **properties**: [RawCertificateData](#rawcertificatedata) (Required)
 * **type**: 'Microsoft.StorSimple/managers/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/devices/alertSettings@2016-10-01
@@ -37,7 +37,7 @@
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AlertSettingsProperties (Required)
+* **properties**: [AlertSettingsProperties](#alertsettingsproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/alertSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/devices/backupScheduleGroups@2016-10-01
@@ -46,7 +46,7 @@
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BackupScheduleGroupProperties (Required)
+* **properties**: [BackupScheduleGroupProperties](#backupschedulegroupproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/backupScheduleGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/devices/chapSettings@2016-10-01
@@ -55,7 +55,7 @@
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ChapProperties (Required)
+* **properties**: [ChapProperties](#chapproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/chapSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/devices/fileservers@2016-10-01
@@ -64,7 +64,7 @@
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: FileServerProperties (Required)
+* **properties**: [FileServerProperties](#fileserverproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/fileservers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/devices/fileservers/shares@2016-10-01
@@ -73,7 +73,7 @@
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: FileShareProperties (Required)
+* **properties**: [FileShareProperties](#fileshareproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/fileservers/shares' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/devices/iscsiservers@2016-10-01
@@ -82,7 +82,7 @@
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IscsiServerProperties (Required)
+* **properties**: [IscsiServerProperties](#iscsiserverproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/iscsiservers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/devices/iscsiservers/disks@2016-10-01
@@ -91,7 +91,7 @@
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IscsiDiskProperties (Required)
+* **properties**: [IscsiDiskProperties](#iscsidiskproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/iscsiservers/disks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/extendedInformation@2016-10-01
@@ -101,7 +101,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagerExtendedInfoProperties (Required)
+* **properties**: [ManagerExtendedInfoProperties](#managerextendedinfoproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/extendedInformation' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/storageAccountCredentials@2016-10-01
@@ -110,7 +110,7 @@
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageAccountCredentialProperties (Required)
+* **properties**: [StorageAccountCredentialProperties](#storageaccountcredentialproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/storageAccountCredentials' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/storageDomains@2016-10-01
@@ -119,14 +119,14 @@
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageDomainProperties (Required)
+* **properties**: [StorageDomainProperties](#storagedomainproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/storageDomains' (ReadOnly, DeployTimeConstant)
 
 ## ManagerProperties
 ### Properties
-* **cisIntrinsicSettings**: ManagerIntrinsicSettings
+* **cisIntrinsicSettings**: [ManagerIntrinsicSettings](#managerintrinsicsettings)
 * **provisioningState**: string (ReadOnly)
-* **sku**: ManagerSku
+* **sku**: [ManagerSku](#managersku)
 
 ## ManagerIntrinsicSettings
 ### Properties
@@ -159,7 +159,7 @@
 
 ## BackupScheduleGroupProperties
 ### Properties
-* **startTime**: Time (Required)
+* **startTime**: [Time](#time) (Required)
 
 ## Time
 ### Properties
@@ -168,7 +168,7 @@
 
 ## ChapProperties
 ### Properties
-* **password**: AsymmetricEncryptedSecret (Required)
+* **password**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret) (Required)
 
 ## AsymmetricEncryptedSecret
 ### Properties
@@ -224,7 +224,7 @@
 
 ## StorageAccountCredentialProperties
 ### Properties
-* **accessKey**: AsymmetricEncryptedSecret
+* **accessKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret)
 * **cloudType**: 'Azure' | 'HP' | 'OpenStack' | 'S3' | 'S3_RRS' (Required)
 * **enableSSL**: 'Disabled' | 'Enabled' (Required)
 * **endPoint**: string (Required)
@@ -233,7 +233,7 @@
 
 ## StorageDomainProperties
 ### Properties
-* **encryptionKey**: AsymmetricEncryptedSecret
+* **encryptionKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret)
 * **encryptionStatus**: 'Disabled' | 'Enabled' (Required)
 * **storageAccountCredentialIds**: string[] (Required)
 

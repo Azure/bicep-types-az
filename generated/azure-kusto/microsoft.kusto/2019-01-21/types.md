@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterProperties
-* **sku**: AzureSku (Required)
-* **tags**: TrackedResourceTags
+* **properties**: [ClusterProperties](#clusterproperties)
+* **sku**: [AzureSku](#azuresku) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Kusto/clusters/databases@2019-01-21
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
+* **properties**: [DatabaseProperties](#databaseproperties)
 * **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Kusto/clusters/databases/dataConnections@2019-01-21
@@ -35,12 +35,12 @@
 ### EventGridDataConnection
 #### Properties
 * **kind**: 'EventGrid' (Required)
-* **properties**: EventGridConnectionProperties
+* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties)
 
 ### EventHubDataConnection
 #### Properties
 * **kind**: 'EventHub' (Required)
-* **properties**: EventHubConnectionProperties
+* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties)
 
 
 ## ClusterProperties
@@ -48,7 +48,7 @@
 * **dataIngestionUri**: string (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly)
 * **state**: 'Creating' | 'Deleted' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unavailable' | 'Updating' (ReadOnly)
-* **trustedExternalTenants**: TrustedExternalTenant[]
+* **trustedExternalTenants**: [TrustedExternalTenant](#trustedexternaltenant)[]
 * **uri**: string (ReadOnly)
 
 ## TrustedExternalTenant
@@ -71,7 +71,7 @@
 * **hotCachePeriod**: string
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly)
 * **softDeletePeriod**: string
-* **statistics**: DatabaseStatistics (ReadOnly)
+* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly)
 
 ## DatabaseStatistics
 ### Properties
@@ -80,7 +80,7 @@
 ## EventGridDataConnection
 ### Properties
 * **kind**: 'EventGrid' (Required)
-* **properties**: EventGridConnectionProperties
+* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties)
 
 ## EventGridConnectionProperties
 ### Properties
@@ -94,7 +94,7 @@
 ## EventHubDataConnection
 ### Properties
 * **kind**: 'EventHub' (Required)
-* **properties**: EventHubConnectionProperties
+* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties)
 
 ## EventHubConnectionProperties
 ### Properties

@@ -5,13 +5,13 @@
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string
 * **managedBy**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationDefinitionProperties (Required)
-* **sku**: Sku
-* **tags**: ResourceTags
+* **properties**: [ApplicationDefinitionProperties](#applicationdefinitionproperties) (Required)
+* **sku**: [Sku](#sku)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Solutions/applicationDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Solutions/applications@2018-06-01
@@ -19,15 +19,15 @@
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **kind**: string (Required)
 * **location**: string
 * **managedBy**: string
 * **name**: string (Required, DeployTimeConstant)
-* **plan**: Plan
-* **properties**: ApplicationProperties (Required)
-* **sku**: Sku
-* **tags**: ResourceTags
+* **plan**: [Plan](#plan)
+* **properties**: [ApplicationProperties](#applicationproperties) (Required)
+* **sku**: [Sku](#sku)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Solutions/applications' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -38,8 +38,8 @@
 
 ## ApplicationDefinitionProperties
 ### Properties
-* **artifacts**: ApplicationArtifact[]
-* **authorizations**: ApplicationProviderAuthorization[] (Required)
+* **artifacts**: [ApplicationArtifact](#applicationartifact)[]
+* **authorizations**: [ApplicationProviderAuthorization](#applicationproviderauthorization)[] (Required)
 * **createUiDefinition**: any
 * **description**: string
 * **displayName**: string

@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DigitalTwinsProperties
-* **sku**: DigitalTwinsSkuInfo
-* **tags**: DigitalTwinsResourceTags
+* **properties**: [DigitalTwinsProperties](#digitaltwinsproperties)
+* **sku**: [DigitalTwinsSkuInfo](#digitaltwinsskuinfo)
+* **tags**: [DigitalTwinsResourceTags](#digitaltwinsresourcetags)
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DigitalTwins/digitalTwinsInstances/endpoints@2020-03-01-preview
@@ -18,7 +18,7 @@
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DigitalTwinsEndpointResourceProperties
+* **properties**: [DigitalTwinsEndpointResourceProperties](#digitaltwinsendpointresourceproperties)
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/endpoints' (ReadOnly, DeployTimeConstant)
 
 ## DigitalTwinsProperties
@@ -43,7 +43,7 @@
 ### Base Properties
 * **createdTime**: string (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly)
-* **tags**: DigitalTwinsEndpointResourcePropertiesTags
+* **tags**: [DigitalTwinsEndpointResourcePropertiesTags](#digitaltwinsendpointresourcepropertiestags)
 ### EventGrid
 #### Properties
 * **accessKey1**: string (Required)

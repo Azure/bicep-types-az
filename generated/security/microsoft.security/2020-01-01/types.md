@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityAssessmentMetadataProperties
+* **properties**: [SecurityAssessmentMetadataProperties](#securityassessmentmetadataproperties)
 * **type**: 'Microsoft.Security/assessmentMetadata' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/assessments@2020-01-01
@@ -15,7 +15,7 @@
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityAssessmentProperties
+* **properties**: [SecurityAssessmentProperties](#securityassessmentproperties)
 * **type**: 'Microsoft.Security/assessments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/locations/applicationWhitelistings@2020-01-01
@@ -25,7 +25,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AdaptiveApplicationControlGroupData (Required)
+* **properties**: [AdaptiveApplicationControlGroupData](#adaptiveapplicationcontrolgroupdata) (Required)
 * **type**: 'Microsoft.Security/locations/applicationWhitelistings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/locations/jitNetworkAccessPolicies@2020-01-01
@@ -36,7 +36,7 @@
 * **kind**: string
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: JitNetworkAccessPolicyProperties (Required)
+* **properties**: [JitNetworkAccessPolicyProperties](#jitnetworkaccesspolicyproperties) (Required)
 * **type**: 'Microsoft.Security/locations/jitNetworkAccessPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/serverVulnerabilityAssessments@2020-01-01
@@ -45,7 +45,7 @@
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' (Required, DeployTimeConstant)
-* **properties**: ServerVulnerabilityAssessmentProperties (ReadOnly)
+* **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties) (ReadOnly)
 * **type**: 'Microsoft.Security/serverVulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
 
 ## SecurityAssessmentMetadataProperties
@@ -55,7 +55,7 @@
 * **description**: string
 * **displayName**: string (Required)
 * **implementationEffort**: 'High' | 'Low' | 'Moderate'
-* **partnerData**: SecurityAssessmentMetadataPartnerData
+* **partnerData**: [SecurityAssessmentMetadataPartnerData](#securityassessmentmetadatapartnerdata)
 * **policyDefinitionId**: string (ReadOnly)
 * **preview**: bool
 * **remediationDescription**: string
@@ -71,13 +71,13 @@
 
 ## SecurityAssessmentProperties
 ### Properties
-* **additionalData**: SecurityAssessmentPropertiesAdditionalData
+* **additionalData**: [SecurityAssessmentPropertiesAdditionalData](#securityassessmentpropertiesadditionaldata)
 * **displayName**: string (ReadOnly)
-* **links**: AssessmentLinks (ReadOnly)
-* **metadata**: SecurityAssessmentMetadataProperties
-* **partnersData**: SecurityAssessmentPartnerData
-* **resourceDetails**: ResourceDetails (Required)
-* **status**: AssessmentStatus (Required)
+* **links**: [AssessmentLinks](#assessmentlinks) (ReadOnly)
+* **metadata**: [SecurityAssessmentMetadataProperties](#securityassessmentmetadataproperties)
+* **partnersData**: [SecurityAssessmentPartnerData](#securityassessmentpartnerdata)
+* **resourceDetails**: [ResourceDetails](#resourcedetails) (Required)
+* **status**: [AssessmentStatus](#assessmentstatus) (Required)
 
 ## SecurityAssessmentPropertiesAdditionalData
 ### Properties
@@ -130,12 +130,12 @@
 ### Properties
 * **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (ReadOnly)
 * **enforcementMode**: 'Audit' | 'Enforce' | 'None'
-* **issues**: AdaptiveApplicationControlIssueSummary[] (ReadOnly)
-* **pathRecommendations**: PathRecommendation[]
-* **protectionMode**: ProtectionMode
+* **issues**: [AdaptiveApplicationControlIssueSummary](#adaptiveapplicationcontrolissuesummary)[] (ReadOnly)
+* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[]
+* **protectionMode**: [ProtectionMode](#protectionmode)
 * **recommendationStatus**: 'NoStatus' | 'NotAvailable' | 'NotRecommended' | 'Recommended' (ReadOnly)
 * **sourceSystem**: 'Azure_AppLocker' | 'Azure_AuditD' | 'NonAzure_AppLocker' | 'NonAzure_AuditD' | 'None' (ReadOnly)
-* **vmRecommendations**: VmRecommendation[]
+* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[]
 
 ## AdaptiveApplicationControlIssueSummary
 ### Properties
@@ -149,9 +149,9 @@
 * **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured'
 * **fileType**: 'Dll' | 'Exe' | 'Executable' | 'Msi' | 'Script' | 'Unknown'
 * **path**: string
-* **publisherInfo**: PublisherInfo
+* **publisherInfo**: [PublisherInfo](#publisherinfo)
 * **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature'
-* **usernames**: UserRecommendation[]
+* **usernames**: [UserRecommendation](#userrecommendation)[]
 * **userSids**: string[]
 
 ## PublisherInfo
@@ -183,20 +183,20 @@
 ## JitNetworkAccessPolicyProperties
 ### Properties
 * **provisioningState**: string (ReadOnly)
-* **requests**: JitNetworkAccessRequest[]
-* **virtualMachines**: JitNetworkAccessPolicyVirtualMachine[] (Required)
+* **requests**: [JitNetworkAccessRequest](#jitnetworkaccessrequest)[]
+* **virtualMachines**: [JitNetworkAccessPolicyVirtualMachine](#jitnetworkaccesspolicyvirtualmachine)[] (Required)
 
 ## JitNetworkAccessRequest
 ### Properties
 * **justification**: string
 * **requestor**: string (Required)
 * **startTimeUtc**: string (Required)
-* **virtualMachines**: JitNetworkAccessRequestVirtualMachine[] (Required)
+* **virtualMachines**: [JitNetworkAccessRequestVirtualMachine](#jitnetworkaccessrequestvirtualmachine)[] (Required)
 
 ## JitNetworkAccessRequestVirtualMachine
 ### Properties
 * **id**: string (Required)
-* **ports**: JitNetworkAccessRequestPort[] (Required)
+* **ports**: [JitNetworkAccessRequestPort](#jitnetworkaccessrequestport)[] (Required)
 
 ## JitNetworkAccessRequestPort
 ### Properties
@@ -211,7 +211,7 @@
 ## JitNetworkAccessPolicyVirtualMachine
 ### Properties
 * **id**: string (Required)
-* **ports**: JitNetworkAccessPortRule[] (Required)
+* **ports**: [JitNetworkAccessPortRule](#jitnetworkaccessportrule)[] (Required)
 * **publicIpAddress**: string
 
 ## JitNetworkAccessPortRule

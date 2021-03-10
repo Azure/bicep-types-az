@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ConnectedClusterIdentity (Required)
+* **identity**: [ConnectedClusterIdentity](#connectedclusteridentity) (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectedClusterProperties (Required)
-* **tags**: TrackedResourceTags
+* **properties**: [ConnectedClusterProperties](#connectedclusterproperties) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Kubernetes/connectedClusters' (ReadOnly, DeployTimeConstant)
 
 ## ConnectedClusterIdentity
@@ -20,7 +20,7 @@
 
 ## ConnectedClusterProperties
 ### Properties
-* **aadProfile**: ConnectedClusterAADProfile (Required)
+* **aadProfile**: [ConnectedClusterAADProfile](#connectedclusteraadprofile) (Required)
 * **agentPublicKeyCertificate**: string (Required)
 * **agentVersion**: string (ReadOnly)
 * **connectivityStatus**: 'Connected' | 'Connecting' | 'Expired' | 'Offline'

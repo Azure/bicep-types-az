@@ -7,21 +7,21 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ContainerServiceProperties
-* **tags**: ResourceTags
+* **properties**: [ContainerServiceProperties](#containerserviceproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerService/containerServices' (ReadOnly, DeployTimeConstant)
 
 ## ContainerServiceProperties
 ### Properties
-* **agentPoolProfiles**: ContainerServiceAgentPoolProfile[]
-* **customProfile**: ContainerServiceCustomProfile
-* **diagnosticsProfile**: ContainerServiceDiagnosticsProfile
-* **linuxProfile**: ContainerServiceLinuxProfile (Required)
-* **masterProfile**: ContainerServiceMasterProfile (Required)
-* **orchestratorProfile**: ContainerServiceOrchestratorProfile (Required)
+* **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[]
+* **customProfile**: [ContainerServiceCustomProfile](#containerservicecustomprofile)
+* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile)
+* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile) (Required)
+* **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required)
+* **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile) (Required)
 * **provisioningState**: string (ReadOnly)
-* **servicePrincipalProfile**: ContainerServicePrincipalProfile
-* **windowsProfile**: ContainerServiceWindowsProfile
+* **servicePrincipalProfile**: [ContainerServicePrincipalProfile](#containerserviceprincipalprofile)
+* **windowsProfile**: [ContainerServiceWindowsProfile](#containerservicewindowsprofile)
 
 ## ContainerServiceAgentPoolProfile
 ### Properties
@@ -42,7 +42,7 @@
 
 ## ContainerServiceDiagnosticsProfile
 ### Properties
-* **vmDiagnostics**: ContainerServiceVMDiagnostics (Required)
+* **vmDiagnostics**: [ContainerServiceVMDiagnostics](#containerservicevmdiagnostics) (Required)
 
 ## ContainerServiceVMDiagnostics
 ### Properties
@@ -52,11 +52,11 @@
 ## ContainerServiceLinuxProfile
 ### Properties
 * **adminUsername**: string (Required)
-* **ssh**: ContainerServiceSshConfiguration (Required)
+* **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required)
 
 ## ContainerServiceSshConfiguration
 ### Properties
-* **publicKeys**: ContainerServiceSshPublicKey[] (Required)
+* **publicKeys**: [ContainerServiceSshPublicKey](#containerservicesshpublickey)[] (Required)
 
 ## ContainerServiceSshPublicKey
 ### Properties
@@ -81,7 +81,7 @@
 ## ContainerServicePrincipalProfile
 ### Properties
 * **clientId**: string (Required)
-* **keyVaultSecretRef**: KeyVaultSecretRef
+* **keyVaultSecretRef**: [KeyVaultSecretRef](#keyvaultsecretref)
 * **secret**: string
 
 ## KeyVaultSecretRef

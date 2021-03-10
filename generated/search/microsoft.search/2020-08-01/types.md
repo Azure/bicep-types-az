@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SearchServiceProperties
-* **sku**: Sku
-* **tags**: TrackedResourceTags
+* **properties**: [SearchServiceProperties](#searchserviceproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Search/searchServices/privateEndpointConnections@2020-08-01
@@ -19,7 +19,7 @@
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: 'Microsoft.Search/searchServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Search/searchServices/sharedPrivateLinkResources@2020-08-01
@@ -28,7 +28,7 @@
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SharedPrivateLinkResourceProperties
+* **properties**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties)
 * **type**: 'Microsoft.Search/searchServices/sharedPrivateLinkResources' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -40,19 +40,19 @@
 ## SearchServiceProperties
 ### Properties
 * **hostingMode**: 'default' | 'highDensity'
-* **networkRuleSet**: NetworkRuleSet
+* **networkRuleSet**: [NetworkRuleSet](#networkruleset)
 * **partitionCount**: int
-* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **provisioningState**: 'failed' | 'provisioning' | 'succeeded' (ReadOnly)
 * **publicNetworkAccess**: 'disabled' | 'enabled'
 * **replicaCount**: int
-* **sharedPrivateLinkResources**: SharedPrivateLinkResource[] (ReadOnly)
+* **sharedPrivateLinkResources**: [SharedPrivateLinkResource](#sharedprivatelinkresource)[] (ReadOnly)
 * **status**: 'degraded' | 'deleting' | 'disabled' | 'error' | 'provisioning' | 'running' (ReadOnly)
 * **statusDetails**: string (ReadOnly)
 
 ## NetworkRuleSet
 ### Properties
-* **ipRules**: IpRule[]
+* **ipRules**: [IpRule](#iprule)[]
 
 ## IpRule
 ### Properties
@@ -62,13 +62,13 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpointConnectionPropertiesPrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionState
+* **privateEndpoint**: [PrivateEndpointConnectionPropertiesPrivateEndpoint](#privateendpointconnectionpropertiesprivateendpoint)
+* **privateLinkServiceConnectionState**: [PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionState](#privateendpointconnectionpropertiesprivatelinkserviceconnectionstate)
 
 ## PrivateEndpointConnectionPropertiesPrivateEndpoint
 ### Properties
@@ -84,7 +84,7 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: SharedPrivateLinkResourceProperties
+* **properties**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties)
 * **type**: string (ReadOnly)
 
 ## SharedPrivateLinkResourceProperties

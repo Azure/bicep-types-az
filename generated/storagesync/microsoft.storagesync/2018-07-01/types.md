@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: any
-* **tags**: StorageSyncServiceCreateParametersTags
+* **tags**: [StorageSyncServiceCreateParametersTags](#storagesyncservicecreateparameterstags)
 * **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorageSync/storageSyncServices/registeredServers@2018-07-01
@@ -17,7 +17,7 @@
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RegisteredServerCreateParametersProperties
+* **properties**: [RegisteredServerCreateParametersProperties](#registeredservercreateparametersproperties)
 * **type**: 'Microsoft.StorageSync/storageSyncServices/registeredServers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups@2018-07-01
@@ -35,7 +35,7 @@
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CloudEndpointCreateParametersProperties
+* **properties**: [CloudEndpointCreateParametersProperties](#cloudendpointcreateparametersproperties)
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints@2018-07-01
@@ -44,7 +44,7 @@
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerEndpointCreateParametersProperties
+* **properties**: [ServerEndpointCreateParametersProperties](#serverendpointcreateparametersproperties)
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## StorageSyncServiceCreateParametersTags

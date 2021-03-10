@@ -7,14 +7,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AnalysisServicesServerProperties
-* **sku**: ResourceSku (Required)
-* **tags**: ResourceTags
+* **properties**: [AnalysisServicesServerProperties](#analysisservicesserverproperties)
+* **sku**: [ResourceSku](#resourcesku) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.AnalysisServices/servers' (ReadOnly, DeployTimeConstant)
 
 ## AnalysisServicesServerProperties
 ### Properties
-* **asAdministrators**: ServerAdministrators
+* **asAdministrators**: [ServerAdministrators](#serveradministrators)
 * **backupBlobContainerUri**: string
 * **managedMode**: int
 * **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly)

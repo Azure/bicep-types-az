@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2020-02-14-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerProperties
-* **sku**: Sku
-* **tags**: TrackedResourceTags
+* **properties**: [ServerProperties](#serverproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DBForPostgreSql/flexibleServers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForPostgreSql/flexibleServers/firewallRules@2020-02-14-preview
@@ -19,7 +19,7 @@
 * **apiVersion**: '2020-02-14-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: FirewallRuleProperties (Required)
+* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required)
 * **type**: 'Microsoft.DBForPostgreSql/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -35,19 +35,19 @@
 * **availabilityZone**: string
 * **byokEnforcement**: string (ReadOnly)
 * **createMode**: 'Default' | 'PointInTimeRestore'
-* **delegatedSubnetArguments**: ServerPropertiesDelegatedSubnetArguments
+* **delegatedSubnetArguments**: [ServerPropertiesDelegatedSubnetArguments](#serverpropertiesdelegatedsubnetarguments)
 * **displayName**: string
 * **fullyQualifiedDomainName**: string (ReadOnly)
 * **haEnabled**: 'Disabled' | 'Enabled'
 * **haState**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' (ReadOnly)
-* **maintenanceWindow**: MaintenanceWindow
+* **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow)
 * **pointInTimeUTC**: string
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly)
 * **sourceServerName**: string
 * **standbyAvailabilityZone**: string (ReadOnly)
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly)
-* **storageProfile**: StorageProfile
-* **tags**: ServerPropertiesTags
+* **storageProfile**: [StorageProfile](#storageprofile)
+* **tags**: [ServerPropertiesTags](#serverpropertiestags)
 * **version**: '11' | '12'
 
 ## ServerPropertiesDelegatedSubnetArguments

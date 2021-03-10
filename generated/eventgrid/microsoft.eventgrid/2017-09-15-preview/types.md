@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-09-15-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EventSubscriptionProperties
+* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties)
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/topics@2017-09-15-preview
@@ -16,14 +16,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TopicProperties
-* **tags**: TrackedResourceTags
+* **properties**: [TopicProperties](#topicproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
 ## EventSubscriptionProperties
 ### Properties
-* **destination**: EventSubscriptionDestination
-* **filter**: EventSubscriptionFilter
+* **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination)
+* **filter**: [EventSubscriptionFilter](#eventsubscriptionfilter)
 * **labels**: string[]
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **topic**: string (ReadOnly)
@@ -35,18 +35,18 @@
 ### EventHubEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'EventHub' (Required)
-* **properties**: EventHubEventSubscriptionDestinationProperties
+* **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties)
 
 ### WebHookEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'WebHook' (Required)
-* **properties**: WebHookEventSubscriptionDestinationProperties
+* **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties)
 
 
 ## EventHubEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'EventHub' (Required)
-* **properties**: EventHubEventSubscriptionDestinationProperties
+* **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties)
 
 ## EventHubEventSubscriptionDestinationProperties
 ### Properties
@@ -55,7 +55,7 @@
 ## WebHookEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'WebHook' (Required)
-* **properties**: WebHookEventSubscriptionDestinationProperties
+* **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties)
 
 ## WebHookEventSubscriptionDestinationProperties
 ### Properties

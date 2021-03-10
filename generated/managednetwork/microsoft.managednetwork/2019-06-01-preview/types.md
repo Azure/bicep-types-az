@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedNetworkProperties
-* **tags**: TrackedResourceTags
+* **properties**: [ManagedNetworkProperties](#managednetworkproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.ManagedNetwork/managedNetworks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ManagedNetwork/managedNetworks/managedNetworkGroups@2019-06-01-preview
@@ -19,7 +19,7 @@
 * **kind**: 'Connectivity'
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedNetworkGroupProperties
+* **properties**: [ManagedNetworkGroupProperties](#managednetworkgroupproperties)
 * **type**: 'Microsoft.ManagedNetwork/managedNetworks/managedNetworkGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ManagedNetwork/managedNetworks/managedNetworkPeeringPolicies@2019-06-01-preview
@@ -29,7 +29,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedNetworkPeeringPolicyProperties
+* **properties**: [ManagedNetworkPeeringPolicyProperties](#managednetworkpeeringpolicyproperties)
 * **type**: 'Microsoft.ManagedNetwork/managedNetworks/managedNetworkPeeringPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ManagedNetwork/scopeAssignments@2019-06-01-preview
@@ -39,20 +39,20 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ScopeAssignmentProperties
+* **properties**: [ScopeAssignmentProperties](#scopeassignmentproperties)
 * **type**: 'Microsoft.ManagedNetwork/scopeAssignments' (ReadOnly, DeployTimeConstant)
 
 ## ManagedNetworkProperties
 ### Properties
-* **connectivity**: ConnectivityCollection (ReadOnly)
+* **connectivity**: [ConnectivityCollection](#connectivitycollection) (ReadOnly)
 * **etag**: string (ReadOnly)
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **scope**: Scope
+* **scope**: [Scope](#scope)
 
 ## ConnectivityCollection
 ### Properties
-* **groups**: ManagedNetworkGroup[] (ReadOnly)
-* **peerings**: ManagedNetworkPeeringPolicy[] (ReadOnly)
+* **groups**: [ManagedNetworkGroup](#managednetworkgroup)[] (ReadOnly)
+* **peerings**: [ManagedNetworkPeeringPolicy](#managednetworkpeeringpolicy)[] (ReadOnly)
 
 ## ManagedNetworkGroup
 ### Properties
@@ -60,17 +60,17 @@
 * **kind**: 'Connectivity'
 * **location**: string
 * **name**: string (ReadOnly)
-* **properties**: ManagedNetworkGroupProperties
+* **properties**: [ManagedNetworkGroupProperties](#managednetworkgroupproperties)
 * **type**: string (ReadOnly)
 
 ## ManagedNetworkGroupProperties
 ### Properties
 * **etag**: string (ReadOnly)
-* **managementGroups**: ResourceId[]
+* **managementGroups**: [ResourceId](#resourceid)[]
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **subnets**: ResourceId[]
-* **subscriptions**: ResourceId[]
-* **virtualNetworks**: ResourceId[]
+* **subnets**: [ResourceId](#resourceid)[]
+* **subscriptions**: [ResourceId](#resourceid)[]
+* **virtualNetworks**: [ResourceId](#resourceid)[]
 
 ## ResourceId
 ### Properties
@@ -81,24 +81,24 @@
 * **id**: string (ReadOnly)
 * **location**: string
 * **name**: string (ReadOnly)
-* **properties**: ManagedNetworkPeeringPolicyProperties
+* **properties**: [ManagedNetworkPeeringPolicyProperties](#managednetworkpeeringpolicyproperties)
 * **type**: string (ReadOnly)
 
 ## ManagedNetworkPeeringPolicyProperties
 ### Properties
 * **etag**: string (ReadOnly)
-* **hub**: ResourceId
-* **mesh**: ResourceId[]
+* **hub**: [ResourceId](#resourceid)
+* **mesh**: [ResourceId](#resourceid)[]
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **spokes**: ResourceId[]
+* **spokes**: [ResourceId](#resourceid)[]
 * **type**: 'HubAndSpokeTopology' | 'MeshTopology' (Required)
 
 ## Scope
 ### Properties
-* **managementGroups**: ResourceId[]
-* **subnets**: ResourceId[]
-* **subscriptions**: ResourceId[]
-* **virtualNetworks**: ResourceId[]
+* **managementGroups**: [ResourceId](#resourceid)[]
+* **subnets**: [ResourceId](#resourceid)[]
+* **subscriptions**: [ResourceId](#resourceid)[]
+* **virtualNetworks**: [ResourceId](#resourceid)[]
 
 ## TrackedResourceTags
 ### Properties

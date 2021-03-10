@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2020-08-15-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: MachineIdentity
+* **identity**: [MachineIdentity](#machineidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MachineProperties
-* **tags**: TrackedResourceTags
+* **properties**: [MachineProperties](#machineproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HybridCompute/machines/extensions@2020-08-15-preview
@@ -19,8 +19,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MachineExtensionProperties
-* **tags**: TrackedResourceTags
+* **properties**: [MachineExtensionProperties](#machineextensionproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HybridCompute/privateLinkScopes@2020-08-15-preview
@@ -30,8 +30,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: HybridComputePrivateLinkScopeProperties
-* **tags**: PrivateLinkScopesResourceTags
+* **properties**: [HybridComputePrivateLinkScopeProperties](#hybridcomputeprivatelinkscopeproperties)
+* **tags**: [PrivateLinkScopesResourceTags](#privatelinkscopesresourcetags)
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections@2020-08-15-preview
@@ -40,7 +40,7 @@
 * **apiVersion**: '2020-08-15-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HybridCompute/privateLinkScopes/scopedResources@2020-08-15-preview
@@ -49,7 +49,7 @@
 * **apiVersion**: '2020-08-15-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ScopedResourceProperties
+* **properties**: [ScopedResourceProperties](#scopedresourceproperties)
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes/scopedResources' (ReadOnly, DeployTimeConstant)
 
 ## MachineIdentity
@@ -66,13 +66,13 @@
 * **displayName**: string (ReadOnly)
 * **dnsFqdn**: string (ReadOnly)
 * **domainName**: string (ReadOnly)
-* **errorDetails**: ErrorDetail[] (ReadOnly)
-* **extensions**: MachineExtensionInstanceView[]
+* **errorDetails**: [ErrorDetail](#errordetail)[] (ReadOnly)
+* **extensions**: [MachineExtensionInstanceView](#machineextensioninstanceview)[]
 * **lastStatusChange**: string (ReadOnly)
-* **locationData**: LocationData
+* **locationData**: [LocationData](#locationdata)
 * **machineFqdn**: string (ReadOnly)
 * **osName**: string (ReadOnly)
-* **osProfile**: MachinePropertiesOsProfile
+* **osProfile**: [MachinePropertiesOsProfile](#machinepropertiesosprofile)
 * **osSku**: string (ReadOnly)
 * **osVersion**: string (ReadOnly)
 * **privateLinkScopedResources**: string[] (ReadOnly)
@@ -84,14 +84,14 @@
 ## ErrorDetail
 ### Properties
 * **code**: string (Required)
-* **details**: ErrorDetail[]
+* **details**: [ErrorDetail](#errordetail)[]
 * **message**: string (Required)
 * **target**: string
 
 ## MachineExtensionInstanceView
 ### Properties
 * **name**: string
-* **status**: MachineExtensionInstanceViewStatus
+* **status**: [MachineExtensionInstanceViewStatus](#machineextensioninstanceviewstatus)
 * **type**: string
 * **typeHandlerVersion**: string
 
@@ -123,7 +123,7 @@
 ### Properties
 * **autoUpgradeMinorVersion**: bool
 * **forceUpdateTag**: string
-* **instanceView**: MachineExtensionPropertiesInstanceView
+* **instanceView**: [MachineExtensionPropertiesInstanceView](#machineextensionpropertiesinstanceview)
 * **protectedSettings**: any
 * **provisioningState**: string (ReadOnly)
 * **publisher**: string
@@ -134,7 +134,7 @@
 ## MachineExtensionPropertiesInstanceView
 ### Properties
 * **name**: string
-* **status**: MachineExtensionInstanceViewStatus
+* **status**: [MachineExtensionInstanceViewStatus](#machineextensioninstanceviewstatus)
 * **type**: string
 * **typeHandlerVersion**: string
 
@@ -145,7 +145,7 @@
 
 ## HybridComputePrivateLinkScopeProperties
 ### Properties
-* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 
@@ -153,13 +153,13 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpointProperty
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionStateProperty
+* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty)
 * **provisioningState**: string (ReadOnly)
 
 ## PrivateEndpointProperty

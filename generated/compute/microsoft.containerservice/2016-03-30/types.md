@@ -7,19 +7,19 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ContainerServiceProperties
-* **tags**: ResourceTags
+* **properties**: [ContainerServiceProperties](#containerserviceproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerService/containerServices' (ReadOnly, DeployTimeConstant)
 
 ## ContainerServiceProperties
 ### Properties
-* **agentPoolProfiles**: ContainerServiceAgentPoolProfile[] (Required)
-* **diagnosticsProfile**: ContainerServiceDiagnosticsProfile
-* **linuxProfile**: ContainerServiceLinuxProfile (Required)
-* **masterProfile**: ContainerServiceMasterProfile (Required)
-* **orchestratorProfile**: ContainerServiceOrchestratorProfile
+* **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[] (Required)
+* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile)
+* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile) (Required)
+* **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required)
+* **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile)
 * **provisioningState**: string (ReadOnly)
-* **windowsProfile**: ContainerServiceWindowsProfile
+* **windowsProfile**: [ContainerServiceWindowsProfile](#containerservicewindowsprofile)
 
 ## ContainerServiceAgentPoolProfile
 ### Properties
@@ -31,7 +31,7 @@
 
 ## ContainerServiceDiagnosticsProfile
 ### Properties
-* **vmDiagnostics**: ContainerServiceVMDiagnostics (Required)
+* **vmDiagnostics**: [ContainerServiceVMDiagnostics](#containerservicevmdiagnostics) (Required)
 
 ## ContainerServiceVMDiagnostics
 ### Properties
@@ -41,11 +41,11 @@
 ## ContainerServiceLinuxProfile
 ### Properties
 * **adminUsername**: string (Required)
-* **ssh**: ContainerServiceSshConfiguration (Required)
+* **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required)
 
 ## ContainerServiceSshConfiguration
 ### Properties
-* **publicKeys**: ContainerServiceSshPublicKey[] (Required)
+* **publicKeys**: [ContainerServiceSshPublicKey](#containerservicesshpublickey)[] (Required)
 
 ## ContainerServiceSshPublicKey
 ### Properties

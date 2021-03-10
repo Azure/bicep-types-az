@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' (Required, DeployTimeConstant)
-* **properties**: ConfluentAgreementProperties
+* **properties**: [ConfluentAgreementProperties](#confluentagreementproperties)
 * **type**: 'Microsoft.Confluent/agreements' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Confluent/organizations@2020-03-01
@@ -16,8 +16,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: OrganizationResourceProperties
-* **tags**: OrganizationResourceTags
+* **properties**: [OrganizationResourceProperties](#organizationresourceproperties)
+* **tags**: [OrganizationResourceTags](#organizationresourcetags)
 * **type**: 'Microsoft.Confluent/organizations' (ReadOnly, DeployTimeConstant)
 
 ## ConfluentAgreementProperties
@@ -34,11 +34,11 @@
 ## OrganizationResourceProperties
 ### Properties
 * **createdTime**: string (ReadOnly)
-* **offerDetail**: OrganizationResourcePropertiesOfferDetail
+* **offerDetail**: [OrganizationResourcePropertiesOfferDetail](#organizationresourcepropertiesofferdetail)
 * **organizationId**: string (ReadOnly)
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly)
 * **ssoUrl**: string (ReadOnly)
-* **userDetail**: OrganizationResourcePropertiesUserDetail
+* **userDetail**: [OrganizationResourcePropertiesUserDetail](#organizationresourcepropertiesuserdetail)
 
 ## OrganizationResourcePropertiesOfferDetail
 ### Properties

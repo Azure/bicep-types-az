@@ -6,11 +6,11 @@
 * **apiVersion**: '2015-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ClusterIdentity
+* **identity**: [ClusterIdentity](#clusteridentity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterCreateProperties
-* **tags**: ClusterCreateParametersExtendedTags
+* **properties**: [ClusterCreateProperties](#clustercreateproperties)
+* **tags**: [ClusterCreateParametersExtendedTags](#clustercreateparametersextendedtags)
 * **type**: 'Microsoft.HDInsight/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HDInsight/clusters/applications@2015-03-01-preview
@@ -20,8 +20,8 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationProperties
-* **tags**: ApplicationTags
+* **properties**: [ApplicationProperties](#applicationproperties)
+* **tags**: [ApplicationTags](#applicationtags)
 * **type**: 'Microsoft.HDInsight/clusters/applications' (ReadOnly, DeployTimeConstant)
 
 ## ClusterIdentity
@@ -29,12 +29,12 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: ClusterIdentityUserAssignedIdentities
+* **userAssignedIdentities**: [ClusterIdentityUserAssignedIdentities](#clusteridentityuserassignedidentities)
 
 ## ClusterIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ComponentsC51Ht8SchemasClusteridentityPropertiesUserassignedidentitiesAdditionalproperties
+* **Additional Properties Type**: [ComponentsC51Ht8SchemasClusteridentityPropertiesUserassignedidentitiesAdditionalproperties](#componentsc51ht8schemasclusteridentitypropertiesuserassignedidentitiesadditionalproperties)
 
 ## ComponentsC51Ht8SchemasClusteridentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
@@ -43,30 +43,30 @@
 
 ## ClusterCreateProperties
 ### Properties
-* **clusterDefinition**: ClusterDefinition
+* **clusterDefinition**: [ClusterDefinition](#clusterdefinition)
 * **clusterId**: string (ReadOnly)
 * **clusterState**: string (ReadOnly)
 * **clusterVersion**: string
-* **computeProfile**: ComputeProfile
-* **connectivityEndpoints**: ConnectivityEndpoint[] (ReadOnly)
+* **computeProfile**: [ComputeProfile](#computeprofile)
+* **connectivityEndpoints**: [ConnectivityEndpoint](#connectivityendpoint)[] (ReadOnly)
 * **createdDate**: string (ReadOnly)
-* **diskEncryptionProperties**: DiskEncryptionProperties
-* **encryptionInTransitProperties**: EncryptionInTransitProperties
-* **errors**: Errors[] (ReadOnly)
-* **kafkaRestProperties**: KafkaRestProperties
+* **diskEncryptionProperties**: [DiskEncryptionProperties](#diskencryptionproperties)
+* **encryptionInTransitProperties**: [EncryptionInTransitProperties](#encryptionintransitproperties)
+* **errors**: [Errors](#errors)[] (ReadOnly)
+* **kafkaRestProperties**: [KafkaRestProperties](#kafkarestproperties)
 * **minSupportedTlsVersion**: string
-* **networkProperties**: NetworkProperties
+* **networkProperties**: [NetworkProperties](#networkproperties)
 * **osType**: 'Linux' | 'Windows'
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly)
-* **quotaInfo**: QuotaInfo (ReadOnly)
-* **securityProfile**: SecurityProfile
-* **storageProfile**: StorageProfile (WriteOnly)
+* **quotaInfo**: [QuotaInfo](#quotainfo) (ReadOnly)
+* **securityProfile**: [SecurityProfile](#securityprofile)
+* **storageProfile**: [StorageProfile](#storageprofile) (WriteOnly)
 * **tier**: 'Premium' | 'Standard'
 
 ## ClusterDefinition
 ### Properties
 * **blueprint**: string
-* **componentVersion**: ClusterDefinitionComponentVersion
+* **componentVersion**: [ClusterDefinitionComponentVersion](#clusterdefinitioncomponentversion)
 * **configurations**: any
 * **kind**: string
 
@@ -77,24 +77,24 @@
 
 ## ComputeProfile
 ### Properties
-* **roles**: Role[]
+* **roles**: [Role](#role)[]
 
 ## Role
 ### Properties
-* **autoscale**: Autoscale
-* **dataDisksGroups**: DataDisksGroups[]
-* **hardwareProfile**: HardwareProfile
+* **autoscale**: [Autoscale](#autoscale)
+* **dataDisksGroups**: [DataDisksGroups](#datadisksgroups)[]
+* **hardwareProfile**: [HardwareProfile](#hardwareprofile)
 * **minInstanceCount**: int
 * **name**: string
-* **osProfile**: OsProfile
-* **scriptActions**: ScriptAction[]
+* **osProfile**: [OsProfile](#osprofile)
+* **scriptActions**: [ScriptAction](#scriptaction)[]
 * **targetInstanceCount**: int
-* **virtualNetworkProfile**: VirtualNetworkProfile
+* **virtualNetworkProfile**: [VirtualNetworkProfile](#virtualnetworkprofile)
 
 ## Autoscale
 ### Properties
-* **capacity**: AutoscaleCapacity
-* **recurrence**: AutoscaleRecurrence
+* **capacity**: [AutoscaleCapacity](#autoscalecapacity)
+* **recurrence**: [AutoscaleRecurrence](#autoscalerecurrence)
 
 ## AutoscaleCapacity
 ### Properties
@@ -103,13 +103,13 @@
 
 ## AutoscaleRecurrence
 ### Properties
-* **schedule**: AutoscaleSchedule[]
+* **schedule**: [AutoscaleSchedule](#autoscaleschedule)[]
 * **timeZone**: string
 
 ## AutoscaleSchedule
 ### Properties
 * **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]
-* **timeAndCapacity**: AutoscaleTimeAndCapacity
+* **timeAndCapacity**: [AutoscaleTimeAndCapacity](#autoscaletimeandcapacity)
 
 ## AutoscaleTimeAndCapacity
 ### Properties
@@ -129,17 +129,17 @@
 
 ## OsProfile
 ### Properties
-* **linuxOperatingSystemProfile**: LinuxOperatingSystemProfile
+* **linuxOperatingSystemProfile**: [LinuxOperatingSystemProfile](#linuxoperatingsystemprofile)
 
 ## LinuxOperatingSystemProfile
 ### Properties
 * **password**: string
-* **sshProfile**: SshProfile
+* **sshProfile**: [SshProfile](#sshprofile)
 * **username**: string
 
 ## SshProfile
 ### Properties
-* **publicKeys**: SshPublicKey[]
+* **publicKeys**: [SshPublicKey](#sshpublickey)[]
 
 ## SshPublicKey
 ### Properties
@@ -183,7 +183,7 @@
 
 ## KafkaRestProperties
 ### Properties
-* **clientGroupInfo**: ClientGroupInfo
+* **clientGroupInfo**: [ClientGroupInfo](#clientgroupinfo)
 
 ## ClientGroupInfo
 ### Properties
@@ -213,7 +213,7 @@
 
 ## StorageProfile
 ### Properties
-* **storageaccounts**: StorageAccount[] (WriteOnly)
+* **storageaccounts**: [StorageAccount](#storageaccount)[] (WriteOnly)
 
 ## StorageAccount
 ### Properties
@@ -234,15 +234,15 @@
 ### Properties
 * **applicationState**: string (ReadOnly)
 * **applicationType**: string
-* **computeProfile**: ComputeProfile
+* **computeProfile**: [ComputeProfile](#computeprofile)
 * **createdDate**: string (ReadOnly)
-* **errors**: Errors[]
-* **httpsEndpoints**: ApplicationGetHttpsEndpoint[]
-* **installScriptActions**: RuntimeScriptAction[]
+* **errors**: [Errors](#errors)[]
+* **httpsEndpoints**: [ApplicationGetHttpsEndpoint](#applicationgethttpsendpoint)[]
+* **installScriptActions**: [RuntimeScriptAction](#runtimescriptaction)[]
 * **marketplaceIdentifier**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
-* **sshEndpoints**: ApplicationGetEndpoint[]
-* **uninstallScriptActions**: RuntimeScriptAction[]
+* **sshEndpoints**: [ApplicationGetEndpoint](#applicationgetendpoint)[]
+* **uninstallScriptActions**: [RuntimeScriptAction](#runtimescriptaction)[]
 
 ## ApplicationGetHttpsEndpoint
 ### Properties

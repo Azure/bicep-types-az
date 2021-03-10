@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProtectedItem
-* **tags**: ResourceTags
+* **properties**: [ProtectedItem](#protecteditem)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.RecoveryServices/vaults/backupPolicies@2016-06-01
@@ -20,8 +20,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProtectionPolicy
-* **tags**: ResourceTags
+* **properties**: [ProtectionPolicy](#protectionpolicy)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies' (ReadOnly, DeployTimeConstant)
 
 ## ProtectedItem
@@ -36,7 +36,7 @@
 ### MabFileFolderProtectedItem
 #### Properties
 * **computerName**: string
-* **extendedInfo**: MabFileFolderProtectedItemExtendedInfo
+* **extendedInfo**: [MabFileFolderProtectedItemExtendedInfo](#mabfilefolderprotecteditemextendedinfo)
 * **friendlyName**: string
 * **isScheduledForDeferredDelete**: bool
 * **lastBackupStatus**: string
@@ -53,7 +53,7 @@
 
 ### AzureSqlProtectedItem
 #### Properties
-* **extendedInfo**: AzureSqlProtectedItemExtendedInfo
+* **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo)
 * **protectedItemDataId**: string
 * **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required)
 * **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
@@ -62,7 +62,7 @@
 ## MabFileFolderProtectedItem
 ### Properties
 * **computerName**: string
-* **extendedInfo**: MabFileFolderProtectedItemExtendedInfo
+* **extendedInfo**: [MabFileFolderProtectedItemExtendedInfo](#mabfilefolderprotecteditemextendedinfo)
 * **friendlyName**: string
 * **isScheduledForDeferredDelete**: bool
 * **lastBackupStatus**: string
@@ -85,7 +85,7 @@
 
 ## AzureSqlProtectedItem
 ### Properties
-* **extendedInfo**: AzureSqlProtectedItemExtendedInfo
+* **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo)
 * **protectedItemDataId**: string
 * **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required)
 * **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
@@ -109,26 +109,26 @@
 ### AzureIaaSVMProtectionPolicy
 #### Properties
 * **backupManagementType**: 'AzureIaasVM' (Required)
-* **retentionPolicy**: RetentionPolicy
-* **schedulePolicy**: SchedulePolicy
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
+* **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 
 ### AzureSqlProtectionPolicy
 #### Properties
 * **backupManagementType**: 'AzureSql' (Required)
-* **retentionPolicy**: RetentionPolicy
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 
 ### MabProtectionPolicy
 #### Properties
 * **backupManagementType**: 'MAB' (Required)
-* **retentionPolicy**: RetentionPolicy
-* **schedulePolicy**: SchedulePolicy
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
+* **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 
 
 ## AzureIaaSVMProtectionPolicy
 ### Properties
 * **backupManagementType**: 'AzureIaasVM' (Required)
-* **retentionPolicy**: RetentionPolicy
-* **schedulePolicy**: SchedulePolicy
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
+* **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 
 ## RetentionPolicy
 * **Discriminator**: retentionPolicyType
@@ -136,29 +136,29 @@
 ### Base Properties
 ### LongTermRetentionPolicy
 #### Properties
-* **dailySchedule**: DailyRetentionSchedule
-* **monthlySchedule**: MonthlyRetentionSchedule
+* **dailySchedule**: [DailyRetentionSchedule](#dailyretentionschedule)
+* **monthlySchedule**: [MonthlyRetentionSchedule](#monthlyretentionschedule)
 * **retentionPolicyType**: 'LongTermRetentionPolicy' (Required)
-* **weeklySchedule**: WeeklyRetentionSchedule
-* **yearlySchedule**: YearlyRetentionSchedule
+* **weeklySchedule**: [WeeklyRetentionSchedule](#weeklyretentionschedule)
+* **yearlySchedule**: [YearlyRetentionSchedule](#yearlyretentionschedule)
 
 ### SimpleRetentionPolicy
 #### Properties
-* **retentionDuration**: RetentionDuration
+* **retentionDuration**: [RetentionDuration](#retentionduration)
 * **retentionPolicyType**: 'SimpleRetentionPolicy' (Required)
 
 
 ## LongTermRetentionPolicy
 ### Properties
-* **dailySchedule**: DailyRetentionSchedule
-* **monthlySchedule**: MonthlyRetentionSchedule
+* **dailySchedule**: [DailyRetentionSchedule](#dailyretentionschedule)
+* **monthlySchedule**: [MonthlyRetentionSchedule](#monthlyretentionschedule)
 * **retentionPolicyType**: 'LongTermRetentionPolicy' (Required)
-* **weeklySchedule**: WeeklyRetentionSchedule
-* **yearlySchedule**: YearlyRetentionSchedule
+* **weeklySchedule**: [WeeklyRetentionSchedule](#weeklyretentionschedule)
+* **yearlySchedule**: [YearlyRetentionSchedule](#yearlyretentionschedule)
 
 ## DailyRetentionSchedule
 ### Properties
-* **retentionDuration**: RetentionDuration
+* **retentionDuration**: [RetentionDuration](#retentionduration)
 * **retentionTimes**: string[]
 
 ## RetentionDuration
@@ -168,15 +168,15 @@
 
 ## MonthlyRetentionSchedule
 ### Properties
-* **retentionDuration**: RetentionDuration
-* **retentionScheduleDaily**: DailyRetentionFormat
+* **retentionDuration**: [RetentionDuration](#retentionduration)
+* **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat)
 * **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly'
-* **retentionScheduleWeekly**: WeeklyRetentionFormat
+* **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat)
 * **retentionTimes**: string[]
 
 ## DailyRetentionFormat
 ### Properties
-* **daysOfTheMonth**: Day[]
+* **daysOfTheMonth**: [Day](#day)[]
 
 ## Day
 ### Properties
@@ -191,21 +191,21 @@
 ## WeeklyRetentionSchedule
 ### Properties
 * **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]
-* **retentionDuration**: RetentionDuration
+* **retentionDuration**: [RetentionDuration](#retentionduration)
 * **retentionTimes**: string[]
 
 ## YearlyRetentionSchedule
 ### Properties
 * **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'Invalid' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]
-* **retentionDuration**: RetentionDuration
-* **retentionScheduleDaily**: DailyRetentionFormat
+* **retentionDuration**: [RetentionDuration](#retentionduration)
+* **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat)
 * **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly'
-* **retentionScheduleWeekly**: WeeklyRetentionFormat
+* **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat)
 * **retentionTimes**: string[]
 
 ## SimpleRetentionPolicy
 ### Properties
-* **retentionDuration**: RetentionDuration
+* **retentionDuration**: [RetentionDuration](#retentionduration)
 * **retentionPolicyType**: 'SimpleRetentionPolicy' (Required)
 
 ## SchedulePolicy
@@ -240,13 +240,13 @@
 ## AzureSqlProtectionPolicy
 ### Properties
 * **backupManagementType**: 'AzureSql' (Required)
-* **retentionPolicy**: RetentionPolicy
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 
 ## MabProtectionPolicy
 ### Properties
 * **backupManagementType**: 'MAB' (Required)
-* **retentionPolicy**: RetentionPolicy
-* **schedulePolicy**: SchedulePolicy
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
+* **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 
 ## ResourceTags
 ### Properties

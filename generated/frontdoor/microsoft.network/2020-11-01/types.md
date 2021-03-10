@@ -8,31 +8,31 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WebApplicationFirewallPolicyProperties
-* **sku**: Sku
-* **tags**: ResourceTags
+* **properties**: [WebApplicationFirewallPolicyProperties](#webapplicationfirewallpolicyproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/FrontDoorWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant)
 
 ## WebApplicationFirewallPolicyProperties
 ### Properties
-* **customRules**: CustomRuleList
-* **frontendEndpointLinks**: FrontendEndpointLink[] (ReadOnly)
-* **managedRules**: ManagedRuleSetList
-* **policySettings**: PolicySettings
+* **customRules**: [CustomRuleList](#customrulelist)
+* **frontendEndpointLinks**: [FrontendEndpointLink](#frontendendpointlink)[] (ReadOnly)
+* **managedRules**: [ManagedRuleSetList](#managedrulesetlist)
+* **policySettings**: [PolicySettings](#policysettings)
 * **provisioningState**: string (ReadOnly)
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly)
-* **routingRuleLinks**: RoutingRuleLink[] (ReadOnly)
-* **securityPolicyLinks**: SecurityPolicyLink[] (ReadOnly)
+* **routingRuleLinks**: [RoutingRuleLink](#routingrulelink)[] (ReadOnly)
+* **securityPolicyLinks**: [SecurityPolicyLink](#securitypolicylink)[] (ReadOnly)
 
 ## CustomRuleList
 ### Properties
-* **rules**: CustomRule[]
+* **rules**: [CustomRule](#customrule)[]
 
 ## CustomRule
 ### Properties
 * **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' (Required)
 * **enabledState**: 'Disabled' | 'Enabled'
-* **matchConditions**: MatchCondition[] (Required)
+* **matchConditions**: [MatchCondition](#matchcondition)[] (Required)
 * **name**: string
 * **priority**: int (Required)
 * **rateLimitDurationInMinutes**: int
@@ -54,12 +54,12 @@
 
 ## ManagedRuleSetList
 ### Properties
-* **managedRuleSets**: ManagedRuleSet[]
+* **managedRuleSets**: [ManagedRuleSet](#managedruleset)[]
 
 ## ManagedRuleSet
 ### Properties
-* **exclusions**: ManagedRuleExclusion[]
-* **ruleGroupOverrides**: ManagedRuleGroupOverride[]
+* **exclusions**: [ManagedRuleExclusion](#managedruleexclusion)[]
+* **ruleGroupOverrides**: [ManagedRuleGroupOverride](#managedrulegroupoverride)[]
 * **ruleSetAction**: 'Block' | 'Log' | 'Redirect'
 * **ruleSetType**: string (Required)
 * **ruleSetVersion**: string (Required)
@@ -72,15 +72,15 @@
 
 ## ManagedRuleGroupOverride
 ### Properties
-* **exclusions**: ManagedRuleExclusion[]
+* **exclusions**: [ManagedRuleExclusion](#managedruleexclusion)[]
 * **ruleGroupName**: string (Required)
-* **rules**: ManagedRuleOverride[]
+* **rules**: [ManagedRuleOverride](#managedruleoverride)[]
 
 ## ManagedRuleOverride
 ### Properties
 * **action**: 'Allow' | 'Block' | 'Log' | 'Redirect'
 * **enabledState**: 'Disabled' | 'Enabled'
-* **exclusions**: ManagedRuleExclusion[]
+* **exclusions**: [ManagedRuleExclusion](#managedruleexclusion)[]
 * **ruleId**: string (Required)
 
 ## PolicySettings

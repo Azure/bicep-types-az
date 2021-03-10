@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagerProperties
-* **tags**: ResourceTags
+* **properties**: [ManagerProperties](#managerproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.StorSimple/managers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/accessControlRecords@2017-06-01
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AccessControlRecordProperties (Required)
+* **properties**: [AccessControlRecordProperties](#accesscontrolrecordproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/accessControlRecords' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/bandwidthSettings@2017-06-01
@@ -29,7 +29,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BandwidthRateSettingProperties (Required)
+* **properties**: [BandwidthRateSettingProperties](#bandwidthratesettingproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/bandwidthSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/devices/alertSettings@2017-06-01
@@ -39,7 +39,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AlertNotificationProperties (Required)
+* **properties**: [AlertNotificationProperties](#alertnotificationproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/alertSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/devices/backupPolicies@2017-06-01
@@ -49,7 +49,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BackupPolicyProperties (Required)
+* **properties**: [BackupPolicyProperties](#backuppolicyproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/backupPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/devices/backupPolicies/schedules@2017-06-01
@@ -59,7 +59,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BackupScheduleProperties (Required)
+* **properties**: [BackupScheduleProperties](#backupscheduleproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/backupPolicies/schedules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/devices/timeSettings@2017-06-01
@@ -69,7 +69,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TimeSettingsProperties (Required)
+* **properties**: [TimeSettingsProperties](#timesettingsproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/timeSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/devices/volumeContainers@2017-06-01
@@ -79,7 +79,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VolumeContainerProperties (Required)
+* **properties**: [VolumeContainerProperties](#volumecontainerproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/volumeContainers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/devices/volumeContainers/volumes@2017-06-01
@@ -89,7 +89,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VolumeProperties (Required)
+* **properties**: [VolumeProperties](#volumeproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/volumeContainers/volumes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/extendedInformation@2017-06-01
@@ -100,7 +100,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagerExtendedInfoProperties
+* **properties**: [ManagerExtendedInfoProperties](#managerextendedinfoproperties)
 * **type**: 'Microsoft.StorSimple/managers/extendedInformation' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/storageAccountCredentials@2017-06-01
@@ -110,14 +110,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'Series8000'
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageAccountCredentialProperties (Required)
+* **properties**: [StorageAccountCredentialProperties](#storageaccountcredentialproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/storageAccountCredentials' (ReadOnly, DeployTimeConstant)
 
 ## ManagerProperties
 ### Properties
-* **cisIntrinsicSettings**: ManagerIntrinsicSettings
+* **cisIntrinsicSettings**: [ManagerIntrinsicSettings](#managerintrinsicsettings)
 * **provisioningState**: string
-* **sku**: ManagerSku
+* **sku**: [ManagerSku](#managersku)
 
 ## ManagerIntrinsicSettings
 ### Properties
@@ -139,15 +139,15 @@
 
 ## BandwidthRateSettingProperties
 ### Properties
-* **schedules**: BandwidthSchedule[] (Required)
+* **schedules**: [BandwidthSchedule](#bandwidthschedule)[] (Required)
 * **volumeCount**: int (ReadOnly)
 
 ## BandwidthSchedule
 ### Properties
 * **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[] (Required)
 * **rateInMbps**: int (Required)
-* **start**: Time (Required)
-* **stop**: Time (Required)
+* **start**: [Time](#time) (Required)
+* **stop**: [Time](#time) (Required)
 
 ## Time
 ### Properties
@@ -177,7 +177,7 @@
 * **backupType**: 'CloudSnapshot' | 'LocalSnapshot' (Required)
 * **lastSuccessfulRun**: string (ReadOnly)
 * **retentionCount**: int (Required)
-* **scheduleRecurrence**: ScheduleRecurrence (Required)
+* **scheduleRecurrence**: [ScheduleRecurrence](#schedulerecurrence) (Required)
 * **scheduleStatus**: 'Disabled' | 'Enabled' (Required)
 * **startTime**: string (Required)
 
@@ -197,7 +197,7 @@
 ### Properties
 * **bandWidthRateInMbps**: int
 * **bandwidthSettingId**: string
-* **encryptionKey**: AsymmetricEncryptedSecret
+* **encryptionKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret)
 * **encryptionStatus**: 'Disabled' | 'Enabled' (ReadOnly)
 * **ownerShipStatus**: 'NotOwned' | 'Owned' (ReadOnly)
 * **storageAccountCredentialId**: string (Required)
@@ -233,7 +233,7 @@
 
 ## StorageAccountCredentialProperties
 ### Properties
-* **accessKey**: AsymmetricEncryptedSecret
+* **accessKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret)
 * **endPoint**: string (Required)
 * **sslStatus**: 'Disabled' | 'Enabled' (Required)
 * **volumesCount**: int (ReadOnly)

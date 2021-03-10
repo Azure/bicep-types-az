@@ -8,24 +8,24 @@
 * **kind**: 'multistep' | 'ping'
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WebTestProperties
-* **tags**: WebtestsResourceTags
+* **properties**: [WebTestProperties](#webtestproperties)
+* **tags**: [WebtestsResourceTags](#webtestsresourcetags)
 * **type**: 'Microsoft.Insights/webtests' (ReadOnly, DeployTimeConstant)
 
 ## WebTestProperties
 ### Properties
-* **Configuration**: WebTestPropertiesConfiguration
-* **ContentValidation**: WebTestPropertiesContentValidation
+* **Configuration**: [WebTestPropertiesConfiguration](#webtestpropertiesconfiguration)
+* **ContentValidation**: [WebTestPropertiesContentValidation](#webtestpropertiescontentvalidation)
 * **Description**: string
 * **Enabled**: bool
 * **ExpectedHttpStatusCode**: int
 * **Frequency**: int
 * **IgnoreHttpsStatusCode**: bool
 * **Kind**: 'basic' | 'multistep' | 'ping' | 'standard' (Required)
-* **Locations**: WebTestGeolocation[] (Required)
+* **Locations**: [WebTestGeolocation](#webtestgeolocation)[] (Required)
 * **Name**: string (Required)
 * **provisioningState**: string (ReadOnly)
-* **Request**: WebTestPropertiesRequest
+* **Request**: [WebTestPropertiesRequest](#webtestpropertiesrequest)
 * **RetryEnabled**: bool
 * **SSLCertRemainingLifetimeCheck**: int
 * **SSLCheck**: bool
@@ -49,7 +49,7 @@
 ## WebTestPropertiesRequest
 ### Properties
 * **FollowRedirects**: bool
-* **Headers**: HeaderField[]
+* **Headers**: [HeaderField](#headerfield)[]
 * **HttpVerb**: string
 * **ParseDependentRequests**: bool
 * **RequestBody**: string

@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ArtifactSourceProperties
-* **tags**: TrackedResourceTags
+* **properties**: [ArtifactSourceProperties](#artifactsourceproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DeploymentManager/artifactSources' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DeploymentManager/rollouts@2019-11-01-preview
@@ -16,11 +16,11 @@
 ### Properties
 * **apiVersion**: '2019-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity (Required)
+* **identity**: [Identity](#identity) (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RolloutRequestProperties (Required)
-* **tags**: TrackedResourceTags
+* **properties**: [RolloutRequestProperties](#rolloutrequestproperties) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DeploymentManager/rollouts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DeploymentManager/serviceTopologies@2019-11-01-preview
@@ -30,8 +30,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServiceTopologyResourceProperties (Required)
-* **tags**: TrackedResourceTags
+* **properties**: [ServiceTopologyResourceProperties](#servicetopologyresourceproperties) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DeploymentManager/serviceTopologies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DeploymentManager/serviceTopologies/services@2019-11-01-preview
@@ -41,8 +41,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServiceResourceProperties (Required)
-* **tags**: TrackedResourceTags
+* **properties**: [ServiceResourceProperties](#serviceresourceproperties) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DeploymentManager/serviceTopologies/services' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DeploymentManager/serviceTopologies/services/serviceUnits@2019-11-01-preview
@@ -52,8 +52,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServiceUnitResourceProperties (Required)
-* **tags**: TrackedResourceTags
+* **properties**: [ServiceUnitResourceProperties](#serviceunitresourceproperties) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DeploymentManager/serviceTopologies/services/serviceUnits' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DeploymentManager/steps@2019-11-01-preview
@@ -63,14 +63,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: StepProperties (Required)
-* **tags**: TrackedResourceTags
+* **properties**: [StepProperties](#stepproperties) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DeploymentManager/steps' (ReadOnly, DeployTimeConstant)
 
 ## ArtifactSourceProperties
 ### Properties
 * **artifactRoot**: string
-* **authentication**: Authentication (Required)
+* **authentication**: [Authentication](#authentication) (Required)
 * **sourceType**: string (Required)
 
 ## Authentication
@@ -79,13 +79,13 @@
 ### Base Properties
 ### SasAuthentication
 #### Properties
-* **properties**: SasProperties
+* **properties**: [SasProperties](#sasproperties)
 * **type**: 'Sas' (Required)
 
 
 ## SasAuthentication
 ### Properties
-* **properties**: SasProperties
+* **properties**: [SasProperties](#sasproperties)
 * **type**: 'Sas' (Required)
 
 ## SasProperties
@@ -106,17 +106,17 @@
 ### Properties
 * **artifactSourceId**: string
 * **buildVersion**: string (Required)
-* **operationInfo**: RolloutOperationInfo (ReadOnly)
-* **services**: Service[] (ReadOnly)
+* **operationInfo**: [RolloutOperationInfo](#rolloutoperationinfo) (ReadOnly)
+* **services**: [Service](#service)[] (ReadOnly)
 * **status**: string (ReadOnly)
-* **stepGroups**: StepGroup[] (Required)
+* **stepGroups**: [StepGroup](#stepgroup)[] (Required)
 * **targetServiceTopologyId**: string (Required)
 * **totalRetryAttempts**: int (ReadOnly)
 
 ## RolloutOperationInfo
 ### Properties
 * **endTime**: string (ReadOnly)
-* **error**: CloudErrorBody (ReadOnly)
+* **error**: [CloudErrorBody](#clouderrorbody) (ReadOnly)
 * **retryAttempt**: int (ReadOnly)
 * **skipSucceededOnRetry**: bool (ReadOnly)
 * **startTime**: string (ReadOnly)
@@ -124,23 +124,23 @@
 ## CloudErrorBody
 ### Properties
 * **code**: string (ReadOnly)
-* **details**: CloudErrorBody[] (ReadOnly)
+* **details**: [CloudErrorBody](#clouderrorbody)[] (ReadOnly)
 * **message**: string (ReadOnly)
 * **target**: string (ReadOnly)
 
 ## Service
 ### Properties
 * **name**: string (ReadOnly)
-* **serviceUnits**: ServiceUnit[] (ReadOnly)
+* **serviceUnits**: [ServiceUnit](#serviceunit)[] (ReadOnly)
 * **targetLocation**: string (ReadOnly)
 * **targetSubscriptionId**: string (ReadOnly)
 
 ## ServiceUnit
 ### Properties
-* **artifacts**: ServiceUnitArtifacts (ReadOnly)
+* **artifacts**: [ServiceUnitArtifacts](#serviceunitartifacts) (ReadOnly)
 * **deploymentMode**: 'Complete' | 'Incremental' (ReadOnly)
 * **name**: string (ReadOnly)
-* **steps**: RolloutStep[] (ReadOnly)
+* **steps**: [RolloutStep](#rolloutstep)[] (ReadOnly)
 * **targetResourceGroup**: string (ReadOnly)
 
 ## ServiceUnitArtifacts
@@ -152,10 +152,10 @@
 
 ## RolloutStep
 ### Properties
-* **messages**: Message[] (ReadOnly)
+* **messages**: [Message](#message)[] (ReadOnly)
 * **name**: string (ReadOnly)
-* **operationInfo**: StepOperationInfo (ReadOnly)
-* **resourceOperations**: ResourceOperation[] (ReadOnly)
+* **operationInfo**: [StepOperationInfo](#stepoperationinfo) (ReadOnly)
+* **resourceOperations**: [ResourceOperation](#resourceoperation)[] (ReadOnly)
 * **status**: string (ReadOnly)
 * **stepGroup**: string (ReadOnly)
 
@@ -169,7 +169,7 @@
 * **correlationId**: string (ReadOnly)
 * **deploymentName**: string (ReadOnly)
 * **endTime**: string (ReadOnly)
-* **error**: CloudErrorBody (ReadOnly)
+* **error**: [CloudErrorBody](#clouderrorbody) (ReadOnly)
 * **lastUpdatedTime**: string (ReadOnly)
 * **startTime**: string (ReadOnly)
 
@@ -187,8 +187,8 @@
 * **dependsOnStepGroups**: string[]
 * **deploymentTargetId**: string (Required)
 * **name**: string (Required)
-* **postDeploymentSteps**: PrePostStep[]
-* **preDeploymentSteps**: PrePostStep[]
+* **postDeploymentSteps**: [PrePostStep](#prepoststep)[]
+* **preDeploymentSteps**: [PrePostStep](#prepoststep)[]
 
 ## PrePostStep
 ### Properties
@@ -220,7 +220,7 @@
 
 ## ServiceUnitResourceProperties
 ### Properties
-* **artifacts**: ServiceUnitArtifacts
+* **artifacts**: [ServiceUnitArtifacts](#serviceunitartifacts)
 * **deploymentMode**: 'Complete' | 'Incremental' (Required)
 * **targetResourceGroup**: string (Required)
 
@@ -235,18 +235,18 @@
 ### Base Properties
 ### HealthCheckStepProperties
 #### Properties
-* **attributes**: HealthCheckStepAttributes (Required)
+* **attributes**: [HealthCheckStepAttributes](#healthcheckstepattributes) (Required)
 * **stepType**: 'HealthCheck' (Required)
 
 ### WaitStepProperties
 #### Properties
-* **attributes**: WaitStepAttributes (Required)
+* **attributes**: [WaitStepAttributes](#waitstepattributes) (Required)
 * **stepType**: 'Wait' (Required)
 
 
 ## HealthCheckStepProperties
 ### Properties
-* **attributes**: HealthCheckStepAttributes (Required)
+* **attributes**: [HealthCheckStepAttributes](#healthcheckstepattributes) (Required)
 * **stepType**: 'HealthCheck' (Required)
 
 ## HealthCheckStepAttributes
@@ -258,28 +258,28 @@
 * **waitDuration**: string
 ### RestHealthCheckStepAttributes
 #### Properties
-* **properties**: RestParameters
+* **properties**: [RestParameters](#restparameters)
 * **type**: 'REST' (Required)
 
 
 ## RestHealthCheckStepAttributes
 ### Properties
-* **properties**: RestParameters
+* **properties**: [RestParameters](#restparameters)
 * **type**: 'REST' (Required)
 
 ## RestParameters
 ### Properties
-* **healthChecks**: RestHealthCheck[] (Required)
+* **healthChecks**: [RestHealthCheck](#resthealthcheck)[] (Required)
 
 ## RestHealthCheck
 ### Properties
 * **name**: string (Required)
-* **request**: RestRequest (Required)
-* **response**: RestResponse
+* **request**: [RestRequest](#restrequest) (Required)
+* **response**: [RestResponse](#restresponse)
 
 ## RestRequest
 ### Properties
-* **authentication**: RestRequestAuthentication (Required)
+* **authentication**: [RestRequestAuthentication](#restrequestauthentication) (Required)
 * **method**: 'GET' | 'POST' (Required)
 * **uri**: string (Required)
 
@@ -312,7 +312,7 @@
 
 ## RestResponse
 ### Properties
-* **regex**: RestResponseRegex
+* **regex**: [RestResponseRegex](#restresponseregex)
 * **successStatusCodes**: string[]
 
 ## RestResponseRegex
@@ -322,7 +322,7 @@
 
 ## WaitStepProperties
 ### Properties
-* **attributes**: WaitStepAttributes (Required)
+* **attributes**: [WaitStepAttributes](#waitstepattributes) (Required)
 * **stepType**: 'Wait' (Required)
 
 ## WaitStepAttributes

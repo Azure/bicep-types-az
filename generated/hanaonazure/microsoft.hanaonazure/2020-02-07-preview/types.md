@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SapMonitorProperties
-* **tags**: TrackedResourceTags
+* **properties**: [SapMonitorProperties](#sapmonitorproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.HanaOnAzure/sapMonitors' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HanaOnAzure/sapMonitors/providerInstances@2020-02-07-preview
@@ -17,7 +17,7 @@
 * **apiVersion**: '2020-02-07-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProviderInstanceProperties
+* **properties**: [ProviderInstanceProperties](#providerinstanceproperties)
 * **type**: 'Microsoft.HanaOnAzure/sapMonitors/providerInstances' (ReadOnly, DeployTimeConstant)
 
 ## SapMonitorProperties

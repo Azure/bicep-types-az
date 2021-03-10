@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ManagedClusterIdentity
+* **identity**: [ManagedClusterIdentity](#managedclusteridentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedClusterProperties
-* **tags**: ResourceTags
+* **properties**: [ManagedClusterProperties](#managedclusterproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerService/managedClusters/agentPools@2019-08-01
@@ -18,7 +18,7 @@
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedClusterAgentPoolProfileProperties
+* **properties**: [ManagedClusterAgentPoolProfileProperties](#managedclusteragentpoolprofileproperties)
 * **type**: 'Microsoft.ContainerService/managedClusters/agentPools' (ReadOnly, DeployTimeConstant)
 
 ## ManagedClusterIdentity
@@ -29,22 +29,22 @@
 
 ## ManagedClusterProperties
 ### Properties
-* **aadProfile**: ManagedClusterAADProfile
-* **addonProfiles**: ManagedClusterPropertiesAddonProfiles
-* **agentPoolProfiles**: ManagedClusterAgentPoolProfile[]
-* **apiServerAccessProfile**: ManagedClusterAPIServerAccessProfile
+* **aadProfile**: [ManagedClusterAADProfile](#managedclusteraadprofile)
+* **addonProfiles**: [ManagedClusterPropertiesAddonProfiles](#managedclusterpropertiesaddonprofiles)
+* **agentPoolProfiles**: [ManagedClusterAgentPoolProfile](#managedclusteragentpoolprofile)[]
+* **apiServerAccessProfile**: [ManagedClusterAPIServerAccessProfile](#managedclusterapiserveraccessprofile)
 * **dnsPrefix**: string
 * **enablePodSecurityPolicy**: bool
 * **enableRBAC**: bool
 * **fqdn**: string (ReadOnly)
 * **kubernetesVersion**: string
-* **linuxProfile**: ContainerServiceLinuxProfile
+* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile)
 * **maxAgentPools**: int (ReadOnly)
-* **networkProfile**: ContainerServiceNetworkProfile
+* **networkProfile**: [ContainerServiceNetworkProfile](#containerservicenetworkprofile)
 * **nodeResourceGroup**: string
 * **provisioningState**: string (ReadOnly)
-* **servicePrincipalProfile**: ManagedClusterServicePrincipalProfile
-* **windowsProfile**: ManagedClusterWindowsProfile
+* **servicePrincipalProfile**: [ManagedClusterServicePrincipalProfile](#managedclusterserviceprincipalprofile)
+* **windowsProfile**: [ManagedClusterWindowsProfile](#managedclusterwindowsprofile)
 
 ## ManagedClusterAADProfile
 ### Properties
@@ -56,11 +56,11 @@
 ## ManagedClusterPropertiesAddonProfiles
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ManagedClusterAddonProfile
+* **Additional Properties Type**: [ManagedClusterAddonProfile](#managedclusteraddonprofile)
 
 ## ManagedClusterAddonProfile
 ### Properties
-* **config**: ManagedClusterAddonProfileConfig
+* **config**: [ManagedClusterAddonProfileConfig](#managedclusteraddonprofileconfig)
 * **enabled**: bool (Required)
 
 ## ManagedClusterAddonProfileConfig
@@ -97,11 +97,11 @@
 ## ContainerServiceLinuxProfile
 ### Properties
 * **adminUsername**: string (Required)
-* **ssh**: ContainerServiceSshConfiguration (Required)
+* **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required)
 
 ## ContainerServiceSshConfiguration
 ### Properties
-* **publicKeys**: ContainerServiceSshPublicKey[] (Required)
+* **publicKeys**: [ContainerServiceSshPublicKey](#containerservicesshpublickey)[] (Required)
 
 ## ContainerServiceSshPublicKey
 ### Properties
@@ -111,7 +111,7 @@
 ### Properties
 * **dnsServiceIP**: string
 * **dockerBridgeCidr**: string
-* **loadBalancerProfile**: ManagedClusterLoadBalancerProfile
+* **loadBalancerProfile**: [ManagedClusterLoadBalancerProfile](#managedclusterloadbalancerprofile)
 * **loadBalancerSku**: 'basic' | 'standard'
 * **networkPlugin**: 'azure' | 'kubenet'
 * **networkPolicy**: 'azure' | 'calico'
@@ -120,10 +120,10 @@
 
 ## ManagedClusterLoadBalancerProfile
 ### Properties
-* **effectiveOutboundIPs**: ResourceReference[]
-* **managedOutboundIPs**: ManagedClusterLoadBalancerProfileManagedOutboundIPs
-* **outboundIPPrefixes**: ManagedClusterLoadBalancerProfileOutboundIPPrefixes
-* **outboundIPs**: ManagedClusterLoadBalancerProfileOutboundIPs
+* **effectiveOutboundIPs**: [ResourceReference](#resourcereference)[]
+* **managedOutboundIPs**: [ManagedClusterLoadBalancerProfileManagedOutboundIPs](#managedclusterloadbalancerprofilemanagedoutboundips)
+* **outboundIPPrefixes**: [ManagedClusterLoadBalancerProfileOutboundIPPrefixes](#managedclusterloadbalancerprofileoutboundipprefixes)
+* **outboundIPs**: [ManagedClusterLoadBalancerProfileOutboundIPs](#managedclusterloadbalancerprofileoutboundips)
 
 ## ResourceReference
 ### Properties
@@ -135,11 +135,11 @@
 
 ## ManagedClusterLoadBalancerProfileOutboundIPPrefixes
 ### Properties
-* **publicIPPrefixes**: ResourceReference[]
+* **publicIPPrefixes**: [ResourceReference](#resourcereference)[]
 
 ## ManagedClusterLoadBalancerProfileOutboundIPs
 ### Properties
-* **publicIPs**: ResourceReference[]
+* **publicIPs**: [ResourceReference](#resourcereference)[]
 
 ## ManagedClusterServicePrincipalProfile
 ### Properties

@@ -7,23 +7,23 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AnalysisServicesServerProperties
-* **sku**: ResourceSku (Required)
-* **tags**: ResourceTags
+* **properties**: [AnalysisServicesServerProperties](#analysisservicesserverproperties)
+* **sku**: [ResourceSku](#resourcesku) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.AnalysisServices/servers' (ReadOnly, DeployTimeConstant)
 
 ## AnalysisServicesServerProperties
 ### Properties
-* **asAdministrators**: ServerAdministrators
+* **asAdministrators**: [ServerAdministrators](#serveradministrators)
 * **backupBlobContainerUri**: string
-* **gatewayDetails**: GatewayDetails
-* **ipV4FirewallSettings**: IPv4FirewallSettings
+* **gatewayDetails**: [GatewayDetails](#gatewaydetails)
+* **ipV4FirewallSettings**: [IPv4FirewallSettings](#ipv4firewallsettings)
 * **managedMode**: int
 * **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly)
 * **querypoolConnectionMode**: 'All' | 'ReadOnly'
 * **serverFullName**: string (ReadOnly)
 * **serverMonitorMode**: int
-* **sku**: ResourceSku
+* **sku**: [ResourceSku](#resourcesku)
 * **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly)
 
 ## ServerAdministrators
@@ -39,7 +39,7 @@
 ## IPv4FirewallSettings
 ### Properties
 * **enablePowerBIService**: bool
-* **firewallRules**: IPv4FirewallRule[]
+* **firewallRules**: [IPv4FirewallRule](#ipv4firewallrule)[]
 
 ## IPv4FirewallRule
 ### Properties

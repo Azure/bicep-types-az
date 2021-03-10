@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: FrontDoorProperties
-* **tags**: ResourceTags
+* **properties**: [FrontDoorProperties](#frontdoorproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/frontDoors' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/frontDoors/rulesEngines@2020-04-01
@@ -17,7 +17,7 @@
 * **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RulesEngineProperties
+* **properties**: [RulesEngineProperties](#rulesengineproperties)
 * **type**: 'Microsoft.Network/frontDoors/rulesEngines' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/FrontDoorWebApplicationFirewallPolicies@2020-04-01
@@ -28,38 +28,38 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WebApplicationFirewallPolicyProperties
-* **tags**: ResourceTags
+* **properties**: [WebApplicationFirewallPolicyProperties](#webapplicationfirewallpolicyproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/FrontDoorWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant)
 
 ## FrontDoorProperties
 ### Properties
-* **backendPools**: BackendPool[]
-* **backendPoolsSettings**: BackendPoolsSettings
+* **backendPools**: [BackendPool](#backendpool)[]
+* **backendPoolsSettings**: [BackendPoolsSettings](#backendpoolssettings)
 * **cname**: string (ReadOnly)
 * **enabledState**: 'Disabled' | 'Enabled'
 * **friendlyName**: string
 * **frontdoorId**: string (ReadOnly)
-* **frontendEndpoints**: FrontendEndpoint[]
-* **healthProbeSettings**: HealthProbeSettingsModel[]
-* **loadBalancingSettings**: LoadBalancingSettingsModel[]
+* **frontendEndpoints**: [FrontendEndpoint](#frontendendpoint)[]
+* **healthProbeSettings**: [HealthProbeSettingsModel](#healthprobesettingsmodel)[]
+* **loadBalancingSettings**: [LoadBalancingSettingsModel](#loadbalancingsettingsmodel)[]
 * **provisioningState**: string (ReadOnly)
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly)
-* **routingRules**: RoutingRule[]
-* **rulesEngines**: RulesEngine[] (ReadOnly)
+* **routingRules**: [RoutingRule](#routingrule)[]
+* **rulesEngines**: [RulesEngine](#rulesengine)[] (ReadOnly)
 
 ## BackendPool
 ### Properties
 * **id**: string
 * **name**: string
-* **properties**: BackendPoolProperties
+* **properties**: [BackendPoolProperties](#backendpoolproperties)
 * **type**: string (ReadOnly)
 
 ## BackendPoolProperties
 ### Properties
-* **backends**: Backend[]
-* **healthProbeSettings**: SubResource
-* **loadBalancingSettings**: SubResource
+* **backends**: [Backend](#backend)[]
+* **healthProbeSettings**: [SubResource](#subresource)
+* **loadBalancingSettings**: [SubResource](#subresource)
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly)
 
 ## Backend
@@ -88,25 +88,25 @@
 ### Properties
 * **id**: string
 * **name**: string
-* **properties**: FrontendEndpointProperties
+* **properties**: [FrontendEndpointProperties](#frontendendpointproperties)
 * **type**: string (ReadOnly)
 
 ## FrontendEndpointProperties
 ### Properties
-* **customHttpsConfiguration**: CustomHttpsConfiguration (ReadOnly)
+* **customHttpsConfiguration**: [CustomHttpsConfiguration](#customhttpsconfiguration) (ReadOnly)
 * **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly)
 * **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly)
 * **hostName**: string
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly)
 * **sessionAffinityEnabledState**: 'Disabled' | 'Enabled'
 * **sessionAffinityTtlSeconds**: int
-* **webApplicationFirewallPolicyLink**: FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLink
+* **webApplicationFirewallPolicyLink**: [FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLink](#frontendendpointupdateparameterswebapplicationfirewallpolicylink)
 
 ## CustomHttpsConfiguration
 ### Properties
 * **certificateSource**: 'AzureKeyVault' | 'FrontDoor' (Required)
-* **frontDoorCertificateSourceParameters**: FrontDoorCertificateSourceParameters
-* **keyVaultCertificateSourceParameters**: KeyVaultCertificateSourceParameters
+* **frontDoorCertificateSourceParameters**: [FrontDoorCertificateSourceParameters](#frontdoorcertificatesourceparameters)
+* **keyVaultCertificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters)
 * **minimumTlsVersion**: '1.0' | '1.2' (Required)
 * **protocolType**: 'ServerNameIndication' (Required)
 
@@ -118,7 +118,7 @@
 ### Properties
 * **secretName**: string
 * **secretVersion**: string
-* **vault**: KeyVaultCertificateSourceParametersVault
+* **vault**: [KeyVaultCertificateSourceParametersVault](#keyvaultcertificatesourceparametersvault)
 
 ## KeyVaultCertificateSourceParametersVault
 ### Properties
@@ -132,7 +132,7 @@
 ### Properties
 * **id**: string
 * **name**: string
-* **properties**: HealthProbeSettingsProperties
+* **properties**: [HealthProbeSettingsProperties](#healthprobesettingsproperties)
 * **type**: string (ReadOnly)
 
 ## HealthProbeSettingsProperties
@@ -148,7 +148,7 @@
 ### Properties
 * **id**: string
 * **name**: string
-* **properties**: LoadBalancingSettingsProperties
+* **properties**: [LoadBalancingSettingsProperties](#loadbalancingsettingsproperties)
 * **type**: string (ReadOnly)
 
 ## LoadBalancingSettingsProperties
@@ -162,19 +162,19 @@
 ### Properties
 * **id**: string
 * **name**: string
-* **properties**: RoutingRuleProperties
+* **properties**: [RoutingRuleProperties](#routingruleproperties)
 * **type**: string (ReadOnly)
 
 ## RoutingRuleProperties
 ### Properties
 * **acceptedProtocols**: 'Http' | 'Https'[]
 * **enabledState**: 'Disabled' | 'Enabled'
-* **frontendEndpoints**: SubResource[]
+* **frontendEndpoints**: [SubResource](#subresource)[]
 * **patternsToMatch**: string[]
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly)
-* **routeConfiguration**: RouteConfiguration
-* **rulesEngine**: SubResource
-* **webApplicationFirewallPolicyLink**: RoutingRuleUpdateParametersWebApplicationFirewallPolicyLink
+* **routeConfiguration**: [RouteConfiguration](#routeconfiguration)
+* **rulesEngine**: [SubResource](#subresource)
+* **webApplicationFirewallPolicyLink**: [RoutingRuleUpdateParametersWebApplicationFirewallPolicyLink](#routingruleupdateparameterswebapplicationfirewallpolicylink)
 
 ## RouteConfiguration
 * **Discriminator**: @odata.type
@@ -183,8 +183,8 @@
 ### ForwardingConfiguration
 #### Properties
 * **@odata.type**: '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration' (Required)
-* **backendPool**: SubResource
-* **cacheConfiguration**: CacheConfiguration
+* **backendPool**: [SubResource](#subresource)
+* **cacheConfiguration**: [CacheConfiguration](#cacheconfiguration)
 * **customForwardingPath**: string
 * **forwardingProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest'
 
@@ -202,8 +202,8 @@
 ## ForwardingConfiguration
 ### Properties
 * **@odata.type**: '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration' (Required)
-* **backendPool**: SubResource
-* **cacheConfiguration**: CacheConfiguration
+* **backendPool**: [SubResource](#subresource)
+* **cacheConfiguration**: [CacheConfiguration](#cacheconfiguration)
 * **customForwardingPath**: string
 * **forwardingProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest'
 
@@ -232,27 +232,27 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: RulesEngineProperties
+* **properties**: [RulesEngineProperties](#rulesengineproperties)
 * **type**: string (ReadOnly)
 
 ## RulesEngineProperties
 ### Properties
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly)
-* **rules**: RulesEngineRule[]
+* **rules**: [RulesEngineRule](#rulesenginerule)[]
 
 ## RulesEngineRule
 ### Properties
-* **action**: RulesEngineAction (Required)
-* **matchConditions**: RulesEngineMatchCondition[]
+* **action**: [RulesEngineAction](#rulesengineaction) (Required)
+* **matchConditions**: [RulesEngineMatchCondition](#rulesenginematchcondition)[]
 * **matchProcessingBehavior**: 'Continue' | 'Stop'
 * **name**: string (Required)
 * **priority**: int (Required)
 
 ## RulesEngineAction
 ### Properties
-* **requestHeaderActions**: HeaderAction[]
-* **responseHeaderActions**: HeaderAction[]
-* **routeConfigurationOverride**: RouteConfiguration
+* **requestHeaderActions**: [HeaderAction](#headeraction)[]
+* **responseHeaderActions**: [HeaderAction](#headeraction)[]
+* **routeConfigurationOverride**: [RouteConfiguration](#routeconfiguration)
 
 ## HeaderAction
 ### Properties
@@ -276,23 +276,23 @@
 
 ## WebApplicationFirewallPolicyProperties
 ### Properties
-* **customRules**: CustomRuleList
-* **frontendEndpointLinks**: FrontendEndpointLink[] (ReadOnly)
-* **managedRules**: ManagedRuleSetList
-* **policySettings**: PolicySettings
+* **customRules**: [CustomRuleList](#customrulelist)
+* **frontendEndpointLinks**: [FrontendEndpointLink](#frontendendpointlink)[] (ReadOnly)
+* **managedRules**: [ManagedRuleSetList](#managedrulesetlist)
+* **policySettings**: [PolicySettings](#policysettings)
 * **provisioningState**: string (ReadOnly)
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly)
-* **routingRuleLinks**: RoutingRuleLink[] (ReadOnly)
+* **routingRuleLinks**: [RoutingRuleLink](#routingrulelink)[] (ReadOnly)
 
 ## CustomRuleList
 ### Properties
-* **rules**: CustomRule[]
+* **rules**: [CustomRule](#customrule)[]
 
 ## CustomRule
 ### Properties
 * **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' (Required)
 * **enabledState**: 'Disabled' | 'Enabled'
-* **matchConditions**: MatchCondition[] (Required)
+* **matchConditions**: [MatchCondition](#matchcondition)[] (Required)
 * **name**: string
 * **priority**: int (Required)
 * **rateLimitDurationInMinutes**: int
@@ -314,12 +314,12 @@
 
 ## ManagedRuleSetList
 ### Properties
-* **managedRuleSets**: ManagedRuleSet[]
+* **managedRuleSets**: [ManagedRuleSet](#managedruleset)[]
 
 ## ManagedRuleSet
 ### Properties
-* **exclusions**: ManagedRuleExclusion[]
-* **ruleGroupOverrides**: ManagedRuleGroupOverride[]
+* **exclusions**: [ManagedRuleExclusion](#managedruleexclusion)[]
+* **ruleGroupOverrides**: [ManagedRuleGroupOverride](#managedrulegroupoverride)[]
 * **ruleSetType**: string (Required)
 * **ruleSetVersion**: string (Required)
 
@@ -331,15 +331,15 @@
 
 ## ManagedRuleGroupOverride
 ### Properties
-* **exclusions**: ManagedRuleExclusion[]
+* **exclusions**: [ManagedRuleExclusion](#managedruleexclusion)[]
 * **ruleGroupName**: string (Required)
-* **rules**: ManagedRuleOverride[]
+* **rules**: [ManagedRuleOverride](#managedruleoverride)[]
 
 ## ManagedRuleOverride
 ### Properties
 * **action**: 'Allow' | 'Block' | 'Log' | 'Redirect'
 * **enabledState**: 'Disabled' | 'Enabled'
-* **exclusions**: ManagedRuleExclusion[]
+* **exclusions**: [ManagedRuleExclusion](#managedruleexclusion)[]
 * **ruleId**: string (Required)
 
 ## PolicySettings

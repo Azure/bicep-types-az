@@ -7,16 +7,16 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SignalRCreateOrUpdateProperties
-* **sku**: ResourceSku
-* **tags**: SignalRUpdateParametersTags
+* **properties**: [SignalRCreateOrUpdateProperties](#signalrcreateorupdateproperties)
+* **sku**: [ResourceSku](#resourcesku)
+* **tags**: [SignalRUpdateParametersTags](#signalrupdateparameterstags)
 * **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant)
 
 ## SignalRCreateOrUpdateProperties
 ### Properties
-* **cors**: SignalRCorsSettings
+* **cors**: [SignalRCorsSettings](#signalrcorssettings)
 * **externalIP**: string (ReadOnly)
-* **features**: SignalRFeature[]
+* **features**: [SignalRFeature](#signalrfeature)[]
 * **hostName**: string (ReadOnly)
 * **hostNamePrefix**: string
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
@@ -31,7 +31,7 @@
 ## SignalRFeature
 ### Properties
 * **flag**: 'EnableConnectivityLogs' | 'ServiceMode' (Required)
-* **properties**: SignalRFeatureProperties
+* **properties**: [SignalRFeatureProperties](#signalrfeatureproperties)
 * **value**: string (Required)
 
 ## SignalRFeatureProperties

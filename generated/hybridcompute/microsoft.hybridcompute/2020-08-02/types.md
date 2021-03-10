@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2020-08-02' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: MachineIdentity
+* **identity**: [MachineIdentity](#machineidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MachineProperties
-* **tags**: TrackedResourceTags
+* **properties**: [MachineProperties](#machineproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HybridCompute/machines/extensions@2020-08-02
@@ -19,8 +19,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MachineExtensionProperties
-* **tags**: TrackedResourceTags
+* **properties**: [MachineExtensionProperties](#machineextensionproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant)
 
 ## MachineIdentity
@@ -37,13 +37,13 @@
 * **displayName**: string (ReadOnly)
 * **dnsFqdn**: string (ReadOnly)
 * **domainName**: string (ReadOnly)
-* **errorDetails**: ErrorDetail[] (ReadOnly)
-* **extensions**: MachineExtensionInstanceView[] (ReadOnly)
+* **errorDetails**: [ErrorDetail](#errordetail)[] (ReadOnly)
+* **extensions**: [MachineExtensionInstanceView](#machineextensioninstanceview)[] (ReadOnly)
 * **lastStatusChange**: string (ReadOnly)
-* **locationData**: LocationData
+* **locationData**: [LocationData](#locationdata)
 * **machineFqdn**: string (ReadOnly)
 * **osName**: string (ReadOnly)
-* **osProfile**: MachinePropertiesOsProfile
+* **osProfile**: [MachinePropertiesOsProfile](#machinepropertiesosprofile)
 * **osSku**: string (ReadOnly)
 * **osVersion**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
@@ -54,14 +54,14 @@
 ## ErrorDetail
 ### Properties
 * **code**: string (Required)
-* **details**: ErrorDetail[]
+* **details**: [ErrorDetail](#errordetail)[]
 * **message**: string (Required)
 * **target**: string
 
 ## MachineExtensionInstanceView
 ### Properties
 * **name**: string (ReadOnly)
-* **status**: MachineExtensionInstanceViewStatus
+* **status**: [MachineExtensionInstanceViewStatus](#machineextensioninstanceviewstatus)
 * **type**: string (ReadOnly)
 * **typeHandlerVersion**: string (ReadOnly)
 
@@ -93,7 +93,7 @@
 ### Properties
 * **autoUpgradeMinorVersion**: bool
 * **forceUpdateTag**: string
-* **instanceView**: MachineExtensionPropertiesInstanceView
+* **instanceView**: [MachineExtensionPropertiesInstanceView](#machineextensionpropertiesinstanceview)
 * **protectedSettings**: any
 * **provisioningState**: string (ReadOnly)
 * **publisher**: string
@@ -104,7 +104,7 @@
 ## MachineExtensionPropertiesInstanceView
 ### Properties
 * **name**: string (ReadOnly)
-* **status**: MachineExtensionInstanceViewStatus
+* **status**: [MachineExtensionInstanceViewStatus](#machineextensioninstanceviewstatus)
 * **type**: string (ReadOnly)
 * **typeHandlerVersion**: string (ReadOnly)
 

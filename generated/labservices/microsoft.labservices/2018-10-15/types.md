@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LabAccountProperties
-* **tags**: ResourceTags
+* **properties**: [LabAccountProperties](#labaccountproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.LabServices/labaccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.LabServices/labaccounts/galleryimages@2018-10-15
@@ -18,8 +18,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GalleryImageProperties
-* **tags**: ResourceTags
+* **properties**: [GalleryImageProperties](#galleryimageproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.LabServices/labaccounts/galleryimages' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.LabServices/labaccounts/labs@2018-10-15
@@ -29,8 +29,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LabProperties
-* **tags**: ResourceTags
+* **properties**: [LabProperties](#labproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.LabServices/labaccounts/labs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.LabServices/labaccounts/labs/environmentsettings@2018-10-15
@@ -40,8 +40,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EnvironmentSettingProperties
-* **tags**: ResourceTags
+* **properties**: [EnvironmentSettingProperties](#environmentsettingproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.LabServices/labaccounts/labs/environmentsettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.LabServices/labaccounts/labs/environmentsettings/environments@2018-10-15
@@ -51,8 +51,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EnvironmentProperties
-* **tags**: ResourceTags
+* **properties**: [EnvironmentProperties](#environmentproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.LabServices/labaccounts/labs/environmentsettings/environments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.LabServices/labaccounts/labs/users@2018-10-15
@@ -62,16 +62,16 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: UserProperties
-* **tags**: ResourceTags
+* **properties**: [UserProperties](#userproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.LabServices/labaccounts/labs/users' (ReadOnly, DeployTimeConstant)
 
 ## LabAccountProperties
 ### Properties
 * **enabledRegionSelection**: bool
-* **latestOperationResult**: LatestOperationResult (ReadOnly)
+* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly)
 * **provisioningState**: string
-* **sizeConfiguration**: SizeConfigurationProperties (ReadOnly)
+* **sizeConfiguration**: [SizeConfigurationProperties](#sizeconfigurationproperties) (ReadOnly)
 * **uniqueIdentifier**: string
 
 ## LatestOperationResult
@@ -85,7 +85,7 @@
 
 ## SizeConfigurationProperties
 ### Properties
-* **environmentSizes**: EnvironmentSize[]
+* **environmentSizes**: [EnvironmentSize](#environmentsize)[]
 
 ## EnvironmentSize
 ### Properties
@@ -93,7 +93,7 @@
 * **minMemory**: int (ReadOnly)
 * **minNumberOfCores**: int (ReadOnly)
 * **name**: 'Basic' | 'Performance' | 'Standard'
-* **vmSizes**: SizeInfo[]
+* **vmSizes**: [SizeInfo](#sizeinfo)[]
 
 ## SizeInfo
 ### Properties
@@ -113,11 +113,11 @@
 * **createdDate**: string (ReadOnly)
 * **description**: string (ReadOnly)
 * **icon**: string (ReadOnly)
-* **imageReference**: GalleryImageReference (ReadOnly)
+* **imageReference**: [GalleryImageReference](#galleryimagereference) (ReadOnly)
 * **isEnabled**: bool
 * **isOverride**: bool
 * **isPlanAuthorized**: bool
-* **latestOperationResult**: LatestOperationResult (ReadOnly)
+* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly)
 * **planId**: string (ReadOnly)
 * **provisioningState**: string
 * **uniqueIdentifier**: string
@@ -141,7 +141,7 @@
 * **createdByUserPrincipalName**: string (ReadOnly)
 * **createdDate**: string (ReadOnly)
 * **invitationCode**: string (ReadOnly)
-* **latestOperationResult**: LatestOperationResult (ReadOnly)
+* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly)
 * **maxUsersInLab**: int
 * **provisioningState**: string
 * **uniqueIdentifier**: string
@@ -160,10 +160,10 @@
 * **description**: string
 * **lastChanged**: string (ReadOnly)
 * **lastPublished**: string (ReadOnly)
-* **latestOperationResult**: LatestOperationResult (ReadOnly)
+* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly)
 * **provisioningState**: string
 * **publishingState**: 'Draft' | 'PublishFailed' | 'Published' | 'Publishing' | 'Scaling' (ReadOnly)
-* **resourceSettings**: ResourceSettings (Required)
+* **resourceSettings**: [ResourceSettings](#resourcesettings) (Required)
 * **title**: string
 * **uniqueIdentifier**: string
 
@@ -173,7 +173,7 @@
 * **galleryImageResourceId**: string
 * **id**: string (ReadOnly)
 * **imageName**: string (ReadOnly)
-* **referenceVm**: ReferenceVm (Required)
+* **referenceVm**: [ReferenceVm](#referencevm) (Required)
 * **size**: 'Basic' | 'Performance' | 'Standard'
 
 ## ReferenceVm
@@ -181,7 +181,7 @@
 * **password**: string
 * **userName**: string (Required)
 * **vmResourceId**: string (ReadOnly)
-* **vmStateDetails**: VmStateDetails (ReadOnly)
+* **vmStateDetails**: [VmStateDetails](#vmstatedetails) (ReadOnly)
 
 ## VmStateDetails
 ### Properties
@@ -202,11 +202,11 @@
 * **claimedByUserPrincipalId**: string (ReadOnly)
 * **isClaimed**: bool (ReadOnly)
 * **lastKnownPowerState**: string (ReadOnly)
-* **latestOperationResult**: LatestOperationResult (ReadOnly)
-* **networkInterface**: NetworkInterface (ReadOnly)
+* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly)
+* **networkInterface**: [NetworkInterface](#networkinterface) (ReadOnly)
 * **passwordLastReset**: string (ReadOnly)
 * **provisioningState**: string
-* **resourceSets**: ResourceSet
+* **resourceSets**: [ResourceSet](#resourceset)
 * **totalUsage**: string (ReadOnly)
 * **uniqueIdentifier**: string
 
@@ -232,7 +232,7 @@
 * **email**: string (ReadOnly)
 * **familyName**: string (ReadOnly)
 * **givenName**: string (ReadOnly)
-* **latestOperationResult**: LatestOperationResult (ReadOnly)
+* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly)
 * **provisioningState**: string
 * **tenantId**: string (ReadOnly)
 * **totalUsage**: string (ReadOnly)

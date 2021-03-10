@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ResourceIdentity
+* **identity**: [ResourceIdentity](#resourceidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerPropertiesForCreate (Required)
-* **sku**: Sku
-* **tags**: ServerForCreateTags
+* **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required)
+* **sku**: [Sku](#sku)
+* **tags**: [ServerForCreateTags](#serverforcreatetags)
 * **type**: 'Microsoft.DBForMySQL/servers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMySQL/servers/administrators@2017-12-01
@@ -19,7 +19,7 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerAdministratorProperties
+* **properties**: [ServerAdministratorProperties](#serveradministratorproperties)
 * **type**: 'Microsoft.DBForMySQL/servers/administrators' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMySQL/servers/configurations@2017-12-01
@@ -28,7 +28,7 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationProperties
+* **properties**: [ConfigurationProperties](#configurationproperties)
 * **type**: 'Microsoft.DBForMySQL/servers/configurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMySQL/servers/databases@2017-12-01
@@ -37,7 +37,7 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
+* **properties**: [DatabaseProperties](#databaseproperties)
 * **type**: 'Microsoft.DBForMySQL/servers/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMySQL/servers/firewallRules@2017-12-01
@@ -46,7 +46,7 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: FirewallRuleProperties (Required)
+* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required)
 * **type**: 'Microsoft.DBForMySQL/servers/firewallRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBforMySQL/servers/securityAlertPolicies@2017-12-01
@@ -55,7 +55,7 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'Default' (Required, DeployTimeConstant)
-* **properties**: SecurityAlertPolicyProperties
+* **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties)
 * **type**: 'Microsoft.DBforMySQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMySQL/servers/virtualNetworkRules@2017-12-01
@@ -64,7 +64,7 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkRuleProperties
+* **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties)
 * **type**: 'Microsoft.DBForMySQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
 
 ## ResourceIdentity
@@ -84,12 +84,12 @@
 * **infrastructureEncryption**: 'Disabled' | 'Enabled'
 * **masterServerId**: string (ReadOnly)
 * **minimalTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2' | 'TLSEnforcementDisabled'
-* **privateEndpointConnections**: ServerPrivateEndpointConnection[] (ReadOnly)
+* **privateEndpointConnections**: [ServerPrivateEndpointConnection](#serverprivateendpointconnection)[] (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 * **replicaCapacity**: int (ReadOnly)
 * **replicationRole**: string (ReadOnly)
 * **sslEnforcement**: 'Disabled' | 'Enabled'
-* **storageProfile**: StorageProfile
+* **storageProfile**: [StorageProfile](#storageprofile)
 * **userVisibleState**: 'Disabled' | 'Dropping' | 'Inaccessible' | 'Ready' (ReadOnly)
 * **version**: '5.6' | '5.7' | '8.0'
 ### ServerPropertiesForDefaultCreate
@@ -118,12 +118,12 @@
 ## ServerPrivateEndpointConnection
 ### Properties
 * **id**: string (ReadOnly)
-* **properties**: ServerPrivateEndpointConnectionProperties (ReadOnly)
+* **properties**: [ServerPrivateEndpointConnectionProperties](#serverprivateendpointconnectionproperties) (ReadOnly)
 
 ## ServerPrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpointProperty (ReadOnly)
-* **privateLinkServiceConnectionState**: ServerPrivateLinkServiceConnectionStateProperty (ReadOnly)
+* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty) (ReadOnly)
+* **privateLinkServiceConnectionState**: [ServerPrivateLinkServiceConnectionStateProperty](#serverprivatelinkserviceconnectionstateproperty) (ReadOnly)
 * **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' (ReadOnly)
 
 ## PrivateEndpointProperty

@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: DigitalTwinsIdentity
+* **identity**: [DigitalTwinsIdentity](#digitaltwinsidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DigitalTwinsProperties
-* **tags**: DigitalTwinsResourceTags
+* **properties**: [DigitalTwinsProperties](#digitaltwinsproperties)
+* **tags**: [DigitalTwinsResourceTags](#digitaltwinsresourcetags)
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DigitalTwins/digitalTwinsInstances/endpoints@2020-12-01
@@ -18,7 +18,7 @@
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DigitalTwinsEndpointResourceProperties (Required)
+* **properties**: [DigitalTwinsEndpointResourceProperties](#digitaltwinsendpointresourceproperties) (Required)
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/endpoints' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DigitalTwins/digitalTwinsInstances/privateEndpointConnections@2020-12-01
@@ -27,7 +27,7 @@
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties (Required)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required)
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## DigitalTwinsIdentity
@@ -41,7 +41,7 @@
 * **createdTime**: string (ReadOnly)
 * **hostName**: string (ReadOnly)
 * **lastUpdatedTime**: string (ReadOnly)
-* **privateEndpointConnections**: PrivateEndpointConnection[]
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]
 * **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Updating' | 'Warning' (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 
@@ -49,14 +49,14 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties (Required)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **groupIds**: string[]
-* **privateEndpoint**: ConnectionPropertiesPrivateEndpoint
-* **privateLinkServiceConnectionState**: ConnectionPropertiesPrivateLinkServiceConnectionState
+* **privateEndpoint**: [ConnectionPropertiesPrivateEndpoint](#connectionpropertiesprivateendpoint)
+* **privateLinkServiceConnectionState**: [ConnectionPropertiesPrivateLinkServiceConnectionState](#connectionpropertiesprivatelinkserviceconnectionstate)
 * **provisioningState**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly)
 
 ## ConnectionPropertiesPrivateEndpoint

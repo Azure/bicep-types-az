@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GuestConfigurationAssignmentProperties
+* **properties**: [GuestConfigurationAssignmentProperties](#guestconfigurationassignmentproperties)
 * **type**: 'Microsoft.GuestConfiguration/guestConfigurationAssignments' (ReadOnly, DeployTimeConstant)
 
 ## GuestConfigurationAssignmentProperties
@@ -15,21 +15,21 @@
 * **assignmentHash**: string (ReadOnly)
 * **complianceReason**: string (ReadOnly)
 * **complianceStatus**: 'Compliant' | 'NotCompliant' | 'Pending' (ReadOnly)
-* **guestConfiguration**: GuestConfigurationNavigation
+* **guestConfiguration**: [GuestConfigurationNavigation](#guestconfigurationnavigation)
 * **latestReportId**: string (ReadOnly)
 * **location**: string (ReadOnly)
 * **provisioningState**: 'Succeeded' (ReadOnly)
 
 ## GuestConfigurationNavigation
 ### Properties
-* **configurationParameter**: ConfigurationParameterList
+* **configurationParameter**: [ConfigurationParameterList](#configurationparameterlist)
 * **kind**: 'DSC'
 * **name**: string (ReadOnly)
 * **type**: string (ReadOnly)
 
 ## ConfigurationParameterList
 ### Properties
-* **value**: ConfigurationParameter[]
+* **value**: [ConfigurationParameter](#configurationparameter)[]
 
 ## ConfigurationParameter
 ### Properties

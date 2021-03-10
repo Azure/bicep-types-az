@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DeviceServiceProperties
-* **tags**: TrackedResourceTags
+* **properties**: [DeviceServiceProperties](#deviceserviceproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.WindowsIoT/deviceServices' (ReadOnly, DeployTimeConstant)
 
 ## DeviceServiceProperties

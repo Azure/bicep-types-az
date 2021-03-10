@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GuestConfigurationAssignmentProperties
+* **properties**: [GuestConfigurationAssignmentProperties](#guestconfigurationassignmentproperties)
 * **type**: 'Microsoft.GuestConfiguration/guestConfigurationAssignments' (ReadOnly, DeployTimeConstant)
 
 ## GuestConfigurationAssignmentProperties
@@ -15,17 +15,17 @@
 * **assignmentHash**: string (ReadOnly)
 * **complianceStatus**: 'Compliant' | 'NonCompliant' | 'Pending' (ReadOnly)
 * **context**: string
-* **guestConfiguration**: GuestConfigurationNavigation
+* **guestConfiguration**: [GuestConfigurationNavigation](#guestconfigurationnavigation)
 * **lastComplianceStatusChecked**: string (ReadOnly)
-* **latestAssignmentReport**: AssignmentReport
+* **latestAssignmentReport**: [AssignmentReport](#assignmentreport)
 * **latestReportId**: string (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Created' | 'Failed' | 'Succeeded' (ReadOnly)
 * **targetResourceId**: string (ReadOnly)
 
 ## GuestConfigurationNavigation
 ### Properties
-* **configurationParameter**: ConfigurationParameter[]
-* **configurationSetting**: ConfigurationSetting
+* **configurationParameter**: [ConfigurationParameter](#configurationparameter)[]
+* **configurationSetting**: [ConfigurationSetting](#configurationsetting)
 * **contentHash**: string (ReadOnly)
 * **contentUri**: string (ReadOnly)
 * **kind**: 'DSC'
@@ -48,19 +48,19 @@
 
 ## AssignmentReport
 ### Properties
-* **assignment**: AssignmentInfo
+* **assignment**: [AssignmentInfo](#assignmentinfo)
 * **complianceStatus**: 'Compliant' | 'NonCompliant' | 'Pending' (ReadOnly)
 * **endTime**: string (ReadOnly)
 * **id**: string (ReadOnly)
 * **operationType**: 'Consistency' | 'Initial' (ReadOnly)
 * **reportId**: string (ReadOnly)
-* **resources**: AssignmentReportResource[]
+* **resources**: [AssignmentReportResource](#assignmentreportresource)[]
 * **startTime**: string (ReadOnly)
-* **vm**: VMInfo
+* **vm**: [VMInfo](#vminfo)
 
 ## AssignmentInfo
 ### Properties
-* **configuration**: ConfigurationInfo
+* **configuration**: [ConfigurationInfo](#configurationinfo)
 * **name**: string (ReadOnly)
 
 ## ConfigurationInfo
@@ -72,7 +72,7 @@
 ### Properties
 * **complianceStatus**: 'Compliant' | 'NonCompliant' | 'Pending' (ReadOnly)
 * **properties**: any (ReadOnly)
-* **reasons**: AssignmentReportResourceComplianceReason[]
+* **reasons**: [AssignmentReportResourceComplianceReason](#assignmentreportresourcecompliancereason)[]
 * **resourceId**: string (ReadOnly)
 
 ## AssignmentReportResourceComplianceReason

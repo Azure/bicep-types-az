@@ -7,15 +7,15 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SearchServiceProperties
-* **tags**: SearchServiceCreateOrUpdateParametersTags
+* **properties**: [SearchServiceProperties](#searchserviceproperties)
+* **tags**: [SearchServiceCreateOrUpdateParametersTags](#searchservicecreateorupdateparameterstags)
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant)
 
 ## SearchServiceProperties
 ### Properties
 * **partitionCount**: int
 * **replicaCount**: int
-* **sku**: Sku
+* **sku**: [Sku](#sku)
 
 ## Sku
 ### Properties

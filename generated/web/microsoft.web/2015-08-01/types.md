@@ -8,8 +8,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CertificateProperties
-* **tags**: ResourceTags
+* **properties**: [CertificateProperties](#certificateproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/csrs@2015-08-01
@@ -20,8 +20,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CsrProperties
-* **tags**: ResourceTags
+* **properties**: [CsrProperties](#csrproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/csrs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/hostingEnvironments@2015-08-01
@@ -32,8 +32,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: HostingEnvironmentProperties
-* **tags**: ResourceTags
+* **properties**: [HostingEnvironmentProperties](#hostingenvironmentproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/hostingEnvironments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/hostingEnvironments/multiRolePools@2015-08-01
@@ -44,9 +44,9 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkerPoolProperties
-* **sku**: SkuDescription
-* **tags**: ResourceTags
+* **properties**: [WorkerPoolProperties](#workerpoolproperties)
+* **sku**: [SkuDescription](#skudescription)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/hostingEnvironments/multiRolePools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/hostingEnvironments/workerPools@2015-08-01
@@ -57,9 +57,9 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkerPoolProperties
-* **sku**: SkuDescription
-* **tags**: ResourceTags
+* **properties**: [WorkerPoolProperties](#workerpoolproperties)
+* **sku**: [SkuDescription](#skudescription)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/hostingEnvironments/workerPools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/managedHostingEnvironments@2015-08-01
@@ -70,8 +70,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: HostingEnvironmentProperties
-* **tags**: ResourceTags
+* **properties**: [HostingEnvironmentProperties](#hostingenvironmentproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/managedHostingEnvironments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/publishingUsers@2015-08-01
@@ -82,8 +82,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: 'web' (Required, DeployTimeConstant)
-* **properties**: UserProperties
-* **tags**: ResourceTags
+* **properties**: [UserProperties](#userproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/publishingUsers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/serverfarms@2015-08-01
@@ -94,9 +94,9 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerFarmWithRichSkuProperties
-* **sku**: SkuDescription
-* **tags**: ResourceTags
+* **properties**: [ServerFarmWithRichSkuProperties](#serverfarmwithrichskuproperties)
+* **sku**: [SkuDescription](#skudescription)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/serverfarms' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/serverfarms/virtualNetworkConnections/gateways@2015-08-01
@@ -107,8 +107,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VnetGatewayProperties
-* **tags**: ResourceTags
+* **properties**: [VnetGatewayProperties](#vnetgatewayproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/serverfarms/virtualNetworkConnections/routes@2015-08-01
@@ -119,8 +119,8 @@
 * **kind**: string (WriteOnly)
 * **location**: string (Required, WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VnetRouteProperties (WriteOnly)
-* **tags**: ResourceTags (WriteOnly)
+* **properties**: [VnetRouteProperties](#vnetrouteproperties) (WriteOnly)
+* **tags**: [ResourceTags](#resourcetags) (WriteOnly)
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/routes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites@2015-08-01
@@ -131,8 +131,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SiteProperties
-* **tags**: ResourceTags
+* **properties**: [SiteProperties](#siteproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/backups@2015-08-01
@@ -143,8 +143,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RestoreRequestProperties
-* **tags**: ResourceTags
+* **properties**: [RestoreRequestProperties](#restorerequestproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/backups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/deployments@2015-08-01
@@ -155,8 +155,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DeploymentProperties
-* **tags**: ResourceTags
+* **properties**: [DeploymentProperties](#deploymentproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/deployments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/hostNameBindings@2015-08-01
@@ -167,8 +167,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: HostNameBindingProperties
-* **tags**: ResourceTags
+* **properties**: [HostNameBindingProperties](#hostnamebindingproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/hostNameBindings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/hybridconnection@2015-08-01
@@ -179,8 +179,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RelayServiceConnectionEntityProperties
-* **tags**: ResourceTags
+* **properties**: [RelayServiceConnectionEntityProperties](#relayserviceconnectionentityproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/hybridconnection' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/instances/deployments@2015-08-01
@@ -191,8 +191,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DeploymentProperties
-* **tags**: ResourceTags
+* **properties**: [DeploymentProperties](#deploymentproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/instances/deployments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/premieraddons@2015-08-01
@@ -202,10 +202,10 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **plan**: ArmPlan (WriteOnly)
+* **plan**: [ArmPlan](#armplan) (WriteOnly)
 * **properties**: any (WriteOnly)
-* **sku**: SkuDescription (WriteOnly)
-* **tags**: PremierAddOnRequestTags (WriteOnly)
+* **sku**: [SkuDescription](#skudescription) (WriteOnly)
+* **tags**: [PremierAddOnRequestTags](#premieraddonrequesttags) (WriteOnly)
 * **type**: 'Microsoft.Web/sites/premieraddons' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/slots@2015-08-01
@@ -216,8 +216,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SiteProperties
-* **tags**: ResourceTags
+* **properties**: [SiteProperties](#siteproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/slots' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/slots/backups@2015-08-01
@@ -228,8 +228,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RestoreRequestProperties
-* **tags**: ResourceTags
+* **properties**: [RestoreRequestProperties](#restorerequestproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/slots/backups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/slots/deployments@2015-08-01
@@ -240,8 +240,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DeploymentProperties
-* **tags**: ResourceTags
+* **properties**: [DeploymentProperties](#deploymentproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/slots/deployments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/slots/hostNameBindings@2015-08-01
@@ -252,8 +252,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: HostNameBindingProperties
-* **tags**: ResourceTags
+* **properties**: [HostNameBindingProperties](#hostnamebindingproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/slots/hostNameBindings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/slots/hybridconnection@2015-08-01
@@ -264,8 +264,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RelayServiceConnectionEntityProperties
-* **tags**: ResourceTags
+* **properties**: [RelayServiceConnectionEntityProperties](#relayserviceconnectionentityproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/slots/hybridconnection' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/slots/instances/deployments@2015-08-01
@@ -276,8 +276,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DeploymentProperties
-* **tags**: ResourceTags
+* **properties**: [DeploymentProperties](#deploymentproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/slots/instances/deployments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/slots/premieraddons@2015-08-01
@@ -287,10 +287,10 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **plan**: ArmPlan (WriteOnly)
+* **plan**: [ArmPlan](#armplan) (WriteOnly)
 * **properties**: any (WriteOnly)
-* **sku**: SkuDescription (WriteOnly)
-* **tags**: PremierAddOnRequestTags (WriteOnly)
+* **sku**: [SkuDescription](#skudescription) (WriteOnly)
+* **tags**: [PremierAddOnRequestTags](#premieraddonrequesttags) (WriteOnly)
 * **type**: 'Microsoft.Web/sites/slots/premieraddons' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/slots/sourcecontrols@2015-08-01
@@ -301,8 +301,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SiteSourceControlProperties
-* **tags**: ResourceTags
+* **properties**: [SiteSourceControlProperties](#sitesourcecontrolproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/slots/sourcecontrols' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/slots/virtualNetworkConnections@2015-08-01
@@ -313,8 +313,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VnetInfoProperties
-* **tags**: ResourceTags
+* **properties**: [VnetInfoProperties](#vnetinfoproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/slots/virtualNetworkConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/slots/virtualNetworkConnections/gateways@2015-08-01
@@ -325,8 +325,8 @@
 * **kind**: string (WriteOnly)
 * **location**: string (Required, WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VnetGatewayProperties (WriteOnly)
-* **tags**: ResourceTags (WriteOnly)
+* **properties**: [VnetGatewayProperties](#vnetgatewayproperties) (WriteOnly)
+* **tags**: [ResourceTags](#resourcetags) (WriteOnly)
 * **type**: 'Microsoft.Web/sites/slots/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/sourcecontrols@2015-08-01
@@ -337,8 +337,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SiteSourceControlProperties
-* **tags**: ResourceTags
+* **properties**: [SiteSourceControlProperties](#sitesourcecontrolproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/sourcecontrols' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/virtualNetworkConnections@2015-08-01
@@ -349,8 +349,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VnetInfoProperties
-* **tags**: ResourceTags
+* **properties**: [VnetInfoProperties](#vnetinfoproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/virtualNetworkConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sites/virtualNetworkConnections/gateways@2015-08-01
@@ -361,8 +361,8 @@
 * **kind**: string (WriteOnly)
 * **location**: string (Required, WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VnetGatewayProperties (WriteOnly)
-* **tags**: ResourceTags (WriteOnly)
+* **properties**: [VnetGatewayProperties](#vnetgatewayproperties) (WriteOnly)
+* **tags**: [ResourceTags](#resourcetags) (WriteOnly)
 * **type**: 'Microsoft.Web/sites/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sourcecontrols@2015-08-01
@@ -373,8 +373,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SourceControlProperties
-* **tags**: ResourceTags
+* **properties**: [SourceControlProperties](#sourcecontrolproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sourcecontrols' (ReadOnly, DeployTimeConstant)
 
 ## CertificateProperties
@@ -382,7 +382,7 @@
 * **cerBlob**: string
 * **expirationDate**: string
 * **friendlyName**: string
-* **hostingEnvironmentProfile**: HostingEnvironmentProfile
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile)
 * **hostNames**: string[]
 * **issueDate**: string
 * **issuer**: string
@@ -426,11 +426,11 @@
 * **allowedMultiSizes**: string
 * **allowedWorkerSizes**: string
 * **apiManagementAccountId**: string
-* **clusterSettings**: NameValuePair[]
+* **clusterSettings**: [NameValuePair](#namevaluepair)[]
 * **databaseEdition**: string
 * **databaseServiceObjective**: string
 * **dnsSuffix**: string
-* **environmentCapacities**: StampCapacity[]
+* **environmentCapacities**: [StampCapacity](#stampcapacity)[]
 * **environmentIsHealthy**: bool
 * **environmentStatus**: string
 * **internalLoadBalancingMode**: 'None' | 'Publishing' | 'Web'
@@ -442,19 +442,19 @@
 * **multiRoleCount**: int
 * **multiSize**: string
 * **name**: string
-* **networkAccessControlList**: NetworkAccessControlEntry[]
+* **networkAccessControlList**: [NetworkAccessControlEntry](#networkaccesscontrolentry)[]
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded'
 * **resourceGroup**: string
 * **status**: 'Deleting' | 'Preparing' | 'Ready' | 'Scaling' (Required)
 * **subscriptionId**: string
 * **suspended**: bool
 * **upgradeDomains**: int
-* **vipMappings**: VirtualIPMapping[]
-* **virtualNetwork**: VirtualNetworkProfile
+* **vipMappings**: [VirtualIPMapping](#virtualipmapping)[]
+* **virtualNetwork**: [VirtualNetworkProfile](#virtualnetworkprofile)
 * **vnetName**: string
 * **vnetResourceGroupName**: string
 * **vnetSubnetName**: string
-* **workerPools**: WorkerPool[]
+* **workerPools**: [WorkerPool](#workerpool)[]
 
 ## NameValuePair
 ### Properties
@@ -501,9 +501,9 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string
-* **properties**: WorkerPoolProperties
-* **sku**: SkuDescription
-* **tags**: ResourceTags
+* **properties**: [WorkerPoolProperties](#workerpoolproperties)
+* **sku**: [SkuDescription](#skudescription)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string
 
 ## WorkerPoolProperties
@@ -563,7 +563,7 @@
 ### Properties
 * **adminSiteName**: string
 * **geoRegion**: string (ReadOnly)
-* **hostingEnvironmentProfile**: HostingEnvironmentProfile
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile)
 * **maximumNumberOfWorkers**: int
 * **name**: string
 * **numberOfSites**: int (ReadOnly)
@@ -606,16 +606,16 @@
 * **availabilityState**: 'DisasterRecoveryMode' | 'Limited' | 'Normal' (Required, ReadOnly)
 * **clientAffinityEnabled**: bool
 * **clientCertEnabled**: bool
-* **cloningInfo**: CloningInfo
+* **cloningInfo**: [CloningInfo](#cloninginfo)
 * **containerSize**: int
 * **defaultHostName**: string (ReadOnly)
 * **enabled**: bool
 * **enabledHostNames**: string[] (ReadOnly)
 * **gatewaySiteName**: string
-* **hostingEnvironmentProfile**: HostingEnvironmentProfile
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile)
 * **hostNames**: string[] (ReadOnly)
 * **hostNamesDisabled**: bool
-* **hostNameSslStates**: HostNameSslState[]
+* **hostNameSslStates**: [HostNameSslState](#hostnamesslstate)[]
 * **isDefaultContainer**: bool (ReadOnly)
 * **lastModifiedTimeUtc**: string (ReadOnly)
 * **maxNumberOfWorkers**: int
@@ -627,7 +627,7 @@
 * **resourceGroup**: string (ReadOnly)
 * **scmSiteAlsoStopped**: bool
 * **serverFarmId**: string
-* **siteConfig**: SiteConfig
+* **siteConfig**: [SiteConfig](#siteconfig)
 * **state**: string (ReadOnly)
 * **targetSwapSlot**: string (ReadOnly)
 * **trafficManagerHostNames**: string[] (ReadOnly)
@@ -635,7 +635,7 @@
 
 ## CloningInfo
 ### Properties
-* **appSettingsOverrides**: CloningInfoAppSettingsOverrides
+* **appSettingsOverrides**: [CloningInfoAppSettingsOverrides](#cloninginfoappsettingsoverrides)
 * **cloneCustomHostNames**: bool
 * **cloneSourceControl**: bool
 * **configureLoadBalancing**: bool
@@ -665,37 +665,37 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string
-* **properties**: SiteConfigProperties
-* **tags**: ResourceTags
+* **properties**: [SiteConfigProperties](#siteconfigproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string
 
 ## SiteConfigProperties
 ### Properties
 * **alwaysOn**: bool
-* **apiDefinition**: ApiDefinitionInfo
+* **apiDefinition**: [ApiDefinitionInfo](#apidefinitioninfo)
 * **appCommandLine**: string
-* **appSettings**: NameValuePair[]
+* **appSettings**: [NameValuePair](#namevaluepair)[]
 * **autoHealEnabled**: bool
-* **autoHealRules**: AutoHealRules
+* **autoHealRules**: [AutoHealRules](#autohealrules)
 * **autoSwapSlotName**: string
-* **connectionStrings**: ConnStringInfo[]
-* **cors**: CorsSettings
+* **connectionStrings**: [ConnStringInfo](#connstringinfo)[]
+* **cors**: [CorsSettings](#corssettings)
 * **defaultDocuments**: string[]
 * **detailedErrorLoggingEnabled**: bool
 * **documentRoot**: string
-* **experiments**: Experiments
-* **handlerMappings**: HandlerMapping[]
+* **experiments**: [Experiments](#experiments)
+* **handlerMappings**: [HandlerMapping](#handlermapping)[]
 * **httpLoggingEnabled**: bool
-* **ipSecurityRestrictions**: IpSecurityRestriction[]
+* **ipSecurityRestrictions**: [IpSecurityRestriction](#ipsecurityrestriction)[]
 * **javaContainer**: string
 * **javaContainerVersion**: string
 * **javaVersion**: string
-* **limits**: SiteLimits
+* **limits**: [SiteLimits](#sitelimits)
 * **loadBalancing**: 'LeastRequests' | 'LeastResponseTime' | 'RequestHash' | 'WeightedRoundRobin' | 'WeightedTotalTraffic'
 * **localMySqlEnabled**: bool
 * **logsDirectorySizeLimit**: int
 * **managedPipelineMode**: 'Classic' | 'Integrated'
-* **metadata**: NameValuePair[]
+* **metadata**: [NameValuePair](#namevaluepair)[]
 * **netFrameworkVersion**: string
 * **nodeVersion**: string
 * **numberOfWorkers**: int
@@ -710,7 +710,7 @@
 * **scmType**: string
 * **tracingOptions**: string
 * **use32BitWorkerProcess**: bool
-* **virtualApplications**: VirtualApplication[]
+* **virtualApplications**: [VirtualApplication](#virtualapplication)[]
 * **vnetName**: string
 * **webSocketsEnabled**: bool
 
@@ -720,13 +720,13 @@
 
 ## AutoHealRules
 ### Properties
-* **actions**: AutoHealActions
-* **triggers**: AutoHealTriggers
+* **actions**: [AutoHealActions](#autohealactions)
+* **triggers**: [AutoHealTriggers](#autohealtriggers)
 
 ## AutoHealActions
 ### Properties
 * **actionType**: 'CustomAction' | 'LogEvent' | 'Recycle' (Required)
-* **customAction**: AutoHealCustomAction
+* **customAction**: [AutoHealCustomAction](#autohealcustomaction)
 * **minProcessExecutionTime**: string
 
 ## AutoHealCustomAction
@@ -737,9 +737,9 @@
 ## AutoHealTriggers
 ### Properties
 * **privateBytesInKB**: int
-* **requests**: RequestsBasedTrigger
-* **slowRequests**: SlowRequestsBasedTrigger
-* **statusCodes**: StatusCodesBasedTrigger[]
+* **requests**: [RequestsBasedTrigger](#requestsbasedtrigger)
+* **slowRequests**: [SlowRequestsBasedTrigger](#slowrequestsbasedtrigger)
+* **statusCodes**: [StatusCodesBasedTrigger](#statuscodesbasedtrigger)[]
 
 ## RequestsBasedTrigger
 ### Properties
@@ -772,7 +772,7 @@
 
 ## Experiments
 ### Properties
-* **rampUpRules**: RampUpRule[]
+* **rampUpRules**: [RampUpRule](#rampuprule)[]
 
 ## RampUpRule
 ### Properties
@@ -806,7 +806,7 @@
 ### Properties
 * **physicalPath**: string
 * **preloadEnabled**: bool
-* **virtualDirectories**: VirtualDirectory[]
+* **virtualDirectories**: [VirtualDirectory](#virtualdirectory)[]
 * **virtualPath**: string
 
 ## VirtualDirectory
@@ -828,7 +828,7 @@
 ### Properties
 * **adjustConnectionStrings**: bool
 * **blobName**: string
-* **databases**: DatabaseBackupSetting[]
+* **databases**: [DatabaseBackupSetting](#databasebackupsetting)[]
 * **hostingEnvironment**: string
 * **ignoreConflictingHostNames**: bool
 * **operationType**: 'Clone' | 'Default' | 'Relocation' (Required)
@@ -968,7 +968,7 @@
 * **certThumbprint**: string
 * **dnsServers**: string
 * **resyncRequired**: bool
-* **routes**: VnetRoute[]
+* **routes**: [VnetRoute](#vnetroute)[]
 * **vnetResourceId**: string
 
 ## VnetRoute
@@ -977,8 +977,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string
-* **properties**: VnetRouteProperties
-* **tags**: ResourceTags
+* **properties**: [VnetRouteProperties](#vnetrouteproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string
 
 ## ResourceTags

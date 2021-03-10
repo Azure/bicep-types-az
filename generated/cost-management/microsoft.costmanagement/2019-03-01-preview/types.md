@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectorProperties
+* **properties**: [ConnectorProperties](#connectorproperties)
 * **type**: 'Microsoft.CostManagement/cloudConnectors' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CostManagement/externalSubscriptions@2019-03-01-preview
@@ -24,13 +24,13 @@
 * **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ShowbackRuleProperties
+* **properties**: [ShowbackRuleProperties](#showbackruleproperties)
 * **type**: 'Microsoft.CostManagement/showbackRules' (ReadOnly, DeployTimeConstant)
 
 ## ConnectorProperties
 ### Properties
 * **billingModel**: 'autoUpgrade' | 'expired' | 'premium' | 'trial'
-* **collectionInfo**: ConnectorCollectionInfo (ReadOnly)
+* **collectionInfo**: [ConnectorCollectionInfo](#connectorcollectioninfo) (ReadOnly)
 * **createdOn**: string (ReadOnly)
 * **credentialsKey**: string
 * **credentialsSecret**: string
@@ -47,7 +47,7 @@
 
 ## ConnectorCollectionInfo
 ### Properties
-* **error**: ConnectorCollectionErrorInfo
+* **error**: [ConnectorCollectionErrorInfo](#connectorcollectionerrorinfo)
 * **lastChecked**: string (ReadOnly)
 * **lastUpdated**: string (ReadOnly)
 * **sourceLastUpdated**: string (ReadOnly)
@@ -67,30 +67,30 @@
 * **deprecationTime**: string (ReadOnly)
 * **description**: string
 * **modificationTime**: string (ReadOnly)
-* **scopes**: Scope[]
+* **scopes**: [Scope](#scope)[]
 * **status**: 'Active' | 'NotActive'
 * **version**: int (ReadOnly)
 ### CostAllocationDetailsKind
 #### Properties
-* **details**: CostAllocationDetails
+* **details**: [CostAllocationDetails](#costallocationdetails)
 * **ruleType**: 'CostAllocation' (Required)
 
 ### CustomPriceDetailsKind
 #### Properties
-* **details**: CustomPriceDetails
+* **details**: [CustomPriceDetails](#custompricedetails)
 * **ruleType**: 'CustomPrice' (Required)
 
 
 ## Scope
 ### Properties
-* **childScope**: Scope
+* **childScope**: [Scope](#scope)
 * **id**: string
 * **name**: string
 * **type**: string
 
 ## CostAllocationDetailsKind
 ### Properties
-* **details**: CostAllocationDetails
+* **details**: [CostAllocationDetails](#costallocationdetails)
 * **ruleType**: 'CostAllocation' (Required)
 
 ## CostAllocationDetails
@@ -99,13 +99,13 @@
 
 ## CustomPriceDetailsKind
 ### Properties
-* **details**: CustomPriceDetails
+* **details**: [CustomPriceDetails](#custompricedetails)
 * **ruleType**: 'CustomPrice' (Required)
 
 ## CustomPriceDetails
 ### Properties
 * **benefits**: 'AHUB' | 'All' | 'None' | 'Reservations' | 'Sum'[]
-* **markups**: Markup[]
+* **markups**: [Markup](#markup)[]
 * **pricesheet**: string
 
 ## Markup

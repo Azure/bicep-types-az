@@ -8,8 +8,8 @@
 * **kind**: 'shared' | 'user'
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkbookProperties
-* **tags**: ResourceTags
+* **properties**: [WorkbookProperties](#workbookproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'microsoft.insights/workbooks' (ReadOnly, DeployTimeConstant)
 
 ## WorkbookProperties

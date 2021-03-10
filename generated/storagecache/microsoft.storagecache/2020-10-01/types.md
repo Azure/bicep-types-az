@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: CacheIdentity
+* **identity**: [CacheIdentity](#cacheidentity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CacheProperties
-* **sku**: CacheSku
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [CacheProperties](#cacheproperties)
+* **sku**: [CacheSku](#cachesku)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **tags**: any
 * **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant)
 
@@ -21,8 +21,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageTargetProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [StorageTargetProperties](#storagetargetproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant)
 
 ## CacheIdentity
@@ -34,25 +34,25 @@
 ## CacheProperties
 ### Properties
 * **cacheSizeGB**: int
-* **directoryServicesSettings**: CacheDirectorySettings
-* **encryptionSettings**: CacheEncryptionSettings
-* **health**: CacheHealth (ReadOnly)
+* **directoryServicesSettings**: [CacheDirectorySettings](#cachedirectorysettings)
+* **encryptionSettings**: [CacheEncryptionSettings](#cacheencryptionsettings)
+* **health**: [CacheHealth](#cachehealth) (ReadOnly)
 * **mountAddresses**: string[] (ReadOnly)
-* **networkSettings**: CacheNetworkSettings
+* **networkSettings**: [CacheNetworkSettings](#cachenetworksettings)
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
-* **securitySettings**: CacheSecuritySettings
+* **securitySettings**: [CacheSecuritySettings](#cachesecuritysettings)
 * **subnet**: string
-* **upgradeStatus**: CacheUpgradeStatus
+* **upgradeStatus**: [CacheUpgradeStatus](#cacheupgradestatus)
 
 ## CacheDirectorySettings
 ### Properties
-* **activeDirectory**: CacheActiveDirectorySettings
-* **usernameDownload**: CacheUsernameDownloadSettings
+* **activeDirectory**: [CacheActiveDirectorySettings](#cacheactivedirectorysettings)
+* **usernameDownload**: [CacheUsernameDownloadSettings](#cacheusernamedownloadsettings)
 
 ## CacheActiveDirectorySettings
 ### Properties
 * **cacheNetBiosName**: string (Required)
-* **credentials**: CacheActiveDirectorySettingsCredentials
+* **credentials**: [CacheActiveDirectorySettingsCredentials](#cacheactivedirectorysettingscredentials)
 * **domainJoined**: 'Error' | 'No' | 'Yes' (ReadOnly)
 * **domainName**: string (Required)
 * **domainNetBiosName**: string (Required)
@@ -68,7 +68,7 @@
 ### Properties
 * **autoDownloadCertificate**: bool
 * **caCertificateURI**: string
-* **credentials**: CacheUsernameDownloadSettingsCredentials
+* **credentials**: [CacheUsernameDownloadSettingsCredentials](#cacheusernamedownloadsettingscredentials)
 * **encryptLdapConnection**: bool
 * **extendedGroups**: bool
 * **groupFileURI**: string
@@ -86,12 +86,12 @@
 
 ## CacheEncryptionSettings
 ### Properties
-* **keyEncryptionKey**: KeyVaultKeyReference
+* **keyEncryptionKey**: [KeyVaultKeyReference](#keyvaultkeyreference)
 
 ## KeyVaultKeyReference
 ### Properties
 * **keyUrl**: string (Required)
-* **sourceVault**: KeyVaultKeyReferenceSourceVault (Required)
+* **sourceVault**: [KeyVaultKeyReferenceSourceVault](#keyvaultkeyreferencesourcevault) (Required)
 
 ## KeyVaultKeyReferenceSourceVault
 ### Properties
@@ -109,11 +109,11 @@
 
 ## CacheSecuritySettings
 ### Properties
-* **accessPolicies**: NfsAccessPolicy[]
+* **accessPolicies**: [NfsAccessPolicy](#nfsaccesspolicy)[]
 
 ## NfsAccessPolicy
 ### Properties
-* **accessRules**: NfsAccessRule[] (Required)
+* **accessRules**: [NfsAccessRule](#nfsaccessrule)[] (Required)
 * **name**: string (Required)
 
 ## NfsAccessRule
@@ -152,11 +152,11 @@
 * **Discriminator**: targetType
 
 ### Base Properties
-* **clfs**: ClfsTarget
-* **junctions**: NamespaceJunction[]
-* **nfs3**: Nfs3Target
+* **clfs**: [ClfsTarget](#clfstarget)
+* **junctions**: [NamespaceJunction](#namespacejunction)[]
+* **nfs3**: [Nfs3Target](#nfs3target)
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
-* **unknown**: UnknownTarget
+* **unknown**: [UnknownTarget](#unknowntarget)
 ### ClfsTargetProperties
 #### Properties
 * **targetType**: 'clfs' (Required)
@@ -188,7 +188,7 @@
 
 ## UnknownTarget
 ### Properties
-* **unknownMap**: UnknownProperties
+* **unknownMap**: [UnknownProperties](#unknownproperties)
 
 ## UnknownProperties
 ### Properties

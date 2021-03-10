@@ -11,7 +11,7 @@
 * **resourceGroup**: string
 * **resourceName**: string
 * **subscriptionId**: string
-* **tags**: PrivateLinkPolicyTags
+* **tags**: [PrivateLinkPolicyTags](#privatelinkpolicytags)
 * **tenants**: string[]
 * **type**: 'microsoft.aadiam/privateLinkForAzureAd' (ReadOnly, DeployTimeConstant)
 

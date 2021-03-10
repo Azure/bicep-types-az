@@ -7,19 +7,19 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedClusterProperties
-* **tags**: ResourceTags
+* **properties**: [ManagedClusterProperties](#managedclusterproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant)
 
 ## ManagedClusterProperties
 ### Properties
-* **agentPoolProfiles**: ContainerServiceAgentPoolProfile[]
+* **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[]
 * **dnsPrefix**: string
 * **fqdn**: string (ReadOnly)
 * **kubernetesVersion**: string
-* **linuxProfile**: ContainerServiceLinuxProfile
+* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile)
 * **provisioningState**: string (ReadOnly)
-* **servicePrincipalProfile**: ContainerServicePrincipalProfile
+* **servicePrincipalProfile**: [ContainerServicePrincipalProfile](#containerserviceprincipalprofile)
 
 ## ContainerServiceAgentPoolProfile
 ### Properties
@@ -37,11 +37,11 @@
 ## ContainerServiceLinuxProfile
 ### Properties
 * **adminUsername**: string (Required)
-* **ssh**: ContainerServiceSshConfiguration (Required)
+* **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required)
 
 ## ContainerServiceSshConfiguration
 ### Properties
-* **publicKeys**: ContainerServiceSshPublicKey[] (Required)
+* **publicKeys**: [ContainerServiceSshPublicKey](#containerservicesshpublickey)[] (Required)
 
 ## ContainerServiceSshPublicKey
 ### Properties
@@ -50,7 +50,7 @@
 ## ContainerServicePrincipalProfile
 ### Properties
 * **clientId**: string (Required)
-* **keyVaultSecretRef**: KeyVaultSecretRef
+* **keyVaultSecretRef**: [KeyVaultSecretRef](#keyvaultsecretref)
 * **secret**: string
 
 ## KeyVaultSecretRef

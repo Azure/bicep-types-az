@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateStoreProperties
+* **properties**: [PrivateStoreProperties](#privatestoreproperties)
 * **type**: 'Microsoft.Marketplace/privateStores' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Marketplace/privateStores/offers@2020-01-01
@@ -15,7 +15,7 @@
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: OfferProperties
+* **properties**: [OfferProperties](#offerproperties)
 * **type**: 'Microsoft.Marketplace/privateStores/offers' (ReadOnly, DeployTimeConstant)
 
 ## PrivateStoreProperties
@@ -35,10 +35,10 @@
 ### Properties
 * **createdAt**: string (ReadOnly)
 * **eTag**: string
-* **iconFileUris**: OfferPropertiesIconFileUris
+* **iconFileUris**: [OfferPropertiesIconFileUris](#offerpropertiesiconfileuris)
 * **modifiedAt**: string (ReadOnly)
 * **offerDisplayName**: string (ReadOnly)
-* **plans**: Plan[]
+* **plans**: [Plan](#plan)[]
 * **privateStoreId**: string (ReadOnly)
 * **publisherDisplayName**: string (ReadOnly)
 * **specificPlanIdsLimitation**: string[]

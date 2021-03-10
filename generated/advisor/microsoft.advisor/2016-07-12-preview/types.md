@@ -8,7 +8,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **suppressionId**: string
-* **tags**: ResourceTags
+* **tags**: [ResourceTags](#resourcetags)
 * **ttl**: string
 * **type**: 'Microsoft.Advisor/recommendations/suppressions' (ReadOnly, DeployTimeConstant)
 

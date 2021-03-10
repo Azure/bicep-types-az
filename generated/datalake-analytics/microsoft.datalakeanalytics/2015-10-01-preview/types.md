@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateDataLakeAnalyticsAccountProperties (Required)
-* **tags**: CreateDataLakeAnalyticsAccountParametersTags
+* **properties**: [CreateDataLakeAnalyticsAccountProperties](#createdatalakeanalyticsaccountproperties) (Required)
+* **tags**: [CreateDataLakeAnalyticsAccountParametersTags](#createdatalakeanalyticsaccountparameterstags)
 * **type**: 'Microsoft.DataLakeAnalytics/accounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataLakeAnalytics/accounts/computePolicies@2015-10-01-preview
@@ -17,7 +17,7 @@
 * **apiVersion**: '2015-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateOrUpdateComputePolicyProperties (Required)
+* **properties**: [CreateOrUpdateComputePolicyProperties](#createorupdatecomputepolicyproperties) (Required)
 * **type**: 'Microsoft.DataLakeAnalytics/accounts/computePolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataLakeAnalytics/accounts/DataLakeStoreAccounts@2015-10-01-preview
@@ -26,7 +26,7 @@
 * **apiVersion**: '2015-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AddDataLakeStoreProperties
+* **properties**: [AddDataLakeStoreProperties](#adddatalakestoreproperties)
 * **type**: 'Microsoft.DataLakeAnalytics/accounts/DataLakeStoreAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataLakeAnalytics/accounts/firewallRules@2015-10-01-preview
@@ -35,7 +35,7 @@
 * **apiVersion**: '2015-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateOrUpdateFirewallRuleProperties (Required)
+* **properties**: [CreateOrUpdateFirewallRuleProperties](#createorupdatefirewallruleproperties) (Required)
 * **type**: 'Microsoft.DataLakeAnalytics/accounts/firewallRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataLakeAnalytics/accounts/StorageAccounts@2015-10-01-preview
@@ -44,23 +44,23 @@
 * **apiVersion**: '2015-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageAccountProperties (Required)
+* **properties**: [StorageAccountProperties](#storageaccountproperties) (Required)
 * **type**: 'Microsoft.DataLakeAnalytics/accounts/StorageAccounts' (ReadOnly, DeployTimeConstant)
 
 ## CreateDataLakeAnalyticsAccountProperties
 ### Properties
 * **accountId**: string (ReadOnly)
-* **computePolicies**: CreateComputePolicyWithAccountParameters[]
+* **computePolicies**: [CreateComputePolicyWithAccountParameters](#createcomputepolicywithaccountparameters)[]
 * **creationTime**: string (ReadOnly)
 * **currentTier**: 'Commitment_100000AUHours' | 'Commitment_10000AUHours' | 'Commitment_1000AUHours' | 'Commitment_100AUHours' | 'Commitment_500000AUHours' | 'Commitment_50000AUHours' | 'Commitment_5000AUHours' | 'Commitment_500AUHours' | 'Consumption' (ReadOnly)
-* **dataLakeStoreAccounts**: AddDataLakeStoreWithAccountParameters[] (Required)
+* **dataLakeStoreAccounts**: [AddDataLakeStoreWithAccountParameters](#adddatalakestorewithaccountparameters)[] (Required)
 * **debugDataAccessLevel**: 'All' | 'Customer' | 'None' (ReadOnly)
 * **defaultDataLakeStoreAccount**: string (Required)
 * **endpoint**: string (ReadOnly)
 * **firewallAllowAzureIps**: 'Disabled' | 'Enabled'
-* **firewallRules**: CreateFirewallRuleWithAccountParameters[]
+* **firewallRules**: [CreateFirewallRuleWithAccountParameters](#createfirewallrulewithaccountparameters)[]
 * **firewallState**: 'Disabled' | 'Enabled'
-* **hiveMetastores**: HiveMetastore[] (ReadOnly)
+* **hiveMetastores**: [HiveMetastore](#hivemetastore)[] (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **maxDegreeOfParallelism**: int
 * **maxDegreeOfParallelismPerJob**: int
@@ -70,16 +70,16 @@
 * **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Patching' | 'Resuming' | 'Running' | 'Succeeded' | 'Suspending' (ReadOnly)
 * **queryStoreRetention**: int
 * **state**: 'active' | 'suspended' (ReadOnly)
-* **storageAccounts**: AddStorageAccountWithAccountParameters[]
+* **storageAccounts**: [AddStorageAccountWithAccountParameters](#addstorageaccountwithaccountparameters)[]
 * **systemMaxDegreeOfParallelism**: int (ReadOnly)
 * **systemMaxJobCount**: int (ReadOnly)
-* **virtualNetworkRules**: VirtualNetworkRule[] (ReadOnly)
+* **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[] (ReadOnly)
 
 ## CreateComputePolicyWithAccountParameters
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (Required)
-* **properties**: CreateOrUpdateComputePolicyProperties (Required)
+* **properties**: [CreateOrUpdateComputePolicyProperties](#createorupdatecomputepolicyproperties) (Required)
 * **type**: string (ReadOnly)
 
 ## CreateOrUpdateComputePolicyProperties
@@ -93,7 +93,7 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (Required)
-* **properties**: AddDataLakeStoreProperties
+* **properties**: [AddDataLakeStoreProperties](#adddatalakestoreproperties)
 * **type**: string (ReadOnly)
 
 ## AddDataLakeStoreProperties
@@ -104,7 +104,7 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (Required)
-* **properties**: CreateOrUpdateFirewallRuleProperties (Required)
+* **properties**: [CreateOrUpdateFirewallRuleProperties](#createorupdatefirewallruleproperties) (Required)
 * **type**: string (ReadOnly)
 
 ## CreateOrUpdateFirewallRuleProperties
@@ -116,7 +116,7 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: HiveMetastoreProperties (ReadOnly)
+* **properties**: [HiveMetastoreProperties](#hivemetastoreproperties) (ReadOnly)
 * **type**: string (ReadOnly)
 
 ## HiveMetastoreProperties
@@ -132,7 +132,7 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (Required)
-* **properties**: StorageAccountProperties (Required)
+* **properties**: [StorageAccountProperties](#storageaccountproperties) (Required)
 * **type**: string (ReadOnly)
 
 ## StorageAccountProperties
@@ -144,7 +144,7 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: VirtualNetworkRuleProperties (ReadOnly)
+* **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties) (ReadOnly)
 * **type**: string (ReadOnly)
 
 ## VirtualNetworkRuleProperties

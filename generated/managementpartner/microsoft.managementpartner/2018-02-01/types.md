@@ -7,7 +7,7 @@
 * **etag**: int (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PartnerProperties (ReadOnly)
+* **properties**: [PartnerProperties](#partnerproperties) (ReadOnly)
 * **type**: 'Microsoft.ManagementPartner/partners' (ReadOnly, DeployTimeConstant)
 
 ## PartnerProperties

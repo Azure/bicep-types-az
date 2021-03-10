@@ -9,15 +9,15 @@
 * **kind**: string (ReadOnly)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ScheduledQueryRuleProperties (Required)
-* **tags**: TrackedResourceTags
+* **properties**: [ScheduledQueryRuleProperties](#scheduledqueryruleproperties) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Insights/scheduledQueryRules' (ReadOnly, DeployTimeConstant)
 
 ## ScheduledQueryRuleProperties
 ### Properties
-* **actions**: Action[]
+* **actions**: [Action](#action)[]
 * **createdWithApiVersion**: string (ReadOnly)
-* **criteria**: ScheduledQueryRuleCriteria
+* **criteria**: [ScheduledQueryRuleCriteria](#scheduledqueryrulecriteria)
 * **description**: string
 * **displayName**: string
 * **enabled**: bool
@@ -33,7 +33,7 @@
 ## Action
 ### Properties
 * **actionGroupId**: string
-* **webHookProperties**: ActionWebHookProperties
+* **webHookProperties**: [ActionWebHookProperties](#actionwebhookproperties)
 
 ## ActionWebHookProperties
 ### Properties
@@ -42,12 +42,12 @@
 
 ## ScheduledQueryRuleCriteria
 ### Properties
-* **allOf**: Condition[]
+* **allOf**: [Condition](#condition)[]
 
 ## Condition
 ### Properties
-* **dimensions**: Dimension[]
-* **failingPeriods**: ConditionFailingPeriods
+* **dimensions**: [Dimension](#dimension)[]
+* **failingPeriods**: [ConditionFailingPeriods](#conditionfailingperiods)
 * **metricMeasureColumn**: string
 * **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required)
 * **query**: string

@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DiskAccessProperties
-* **tags**: ResourceTags
+* **properties**: [DiskAccessProperties](#diskaccessproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/diskAccesses' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Compute/diskAccesses/privateEndpointConnections@2020-09-30
@@ -17,7 +17,7 @@
 * **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: 'Microsoft.Compute/diskAccesses/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Compute/diskEncryptionSets@2020-09-30
@@ -25,26 +25,26 @@
 ### Properties
 * **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: EncryptionSetIdentity
+* **identity**: [EncryptionSetIdentity](#encryptionsetidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EncryptionSetProperties
-* **tags**: ResourceTags
+* **properties**: [EncryptionSetProperties](#encryptionsetproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/diskEncryptionSets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Compute/disks@2020-09-30
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
-* **extendedLocation**: ExtendedLocation
+* **extendedLocation**: [ExtendedLocation](#extendedlocation)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **managedBy**: string (ReadOnly)
 * **managedByExtended**: string[] (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DiskProperties
-* **sku**: DiskSku
-* **tags**: ResourceTags
+* **properties**: [DiskProperties](#diskproperties)
+* **sku**: [DiskSku](#disksku)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/disks' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
 
@@ -55,8 +55,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GalleryProperties
-* **tags**: ResourceTags
+* **properties**: [GalleryProperties](#galleryproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/galleries' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Compute/galleries/applications@2020-09-30
@@ -66,8 +66,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GalleryApplicationProperties
-* **tags**: ResourceTags
+* **properties**: [GalleryApplicationProperties](#galleryapplicationproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/galleries/applications' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Compute/galleries/applications/versions@2020-09-30
@@ -77,8 +77,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GalleryApplicationVersionProperties
-* **tags**: ResourceTags
+* **properties**: [GalleryApplicationVersionProperties](#galleryapplicationversionproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/galleries/applications/versions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Compute/galleries/images@2020-09-30
@@ -88,8 +88,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GalleryImageProperties
-* **tags**: ResourceTags
+* **properties**: [GalleryImageProperties](#galleryimageproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/galleries/images' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Compute/galleries/images/versions@2020-09-30
@@ -99,27 +99,27 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GalleryImageVersionProperties
-* **tags**: ResourceTags
+* **properties**: [GalleryImageVersionProperties](#galleryimageversionproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/galleries/images/versions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Compute/snapshots@2020-09-30
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-09-30' (ReadOnly, DeployTimeConstant)
-* **extendedLocation**: ExtendedLocation
+* **extendedLocation**: [ExtendedLocation](#extendedlocation)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **managedBy**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SnapshotProperties
-* **sku**: SnapshotSku
-* **tags**: ResourceTags
+* **properties**: [SnapshotProperties](#snapshotproperties)
+* **sku**: [SnapshotSku](#snapshotsku)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant)
 
 ## DiskAccessProperties
 ### Properties
-* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **timeCreated**: string (ReadOnly)
 
@@ -127,13 +127,13 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
 
 ## PrivateEndpoint
@@ -159,15 +159,15 @@
 
 ## EncryptionSetProperties
 ### Properties
-* **activeKey**: KeyForDiskEncryptionSet
+* **activeKey**: [KeyForDiskEncryptionSet](#keyfordiskencryptionset)
 * **encryptionType**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys'
-* **previousKeys**: KeyForDiskEncryptionSet[] (ReadOnly)
+* **previousKeys**: [KeyForDiskEncryptionSet](#keyfordiskencryptionset)[] (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 
 ## KeyForDiskEncryptionSet
 ### Properties
 * **keyUrl**: string (Required)
-* **sourceVault**: SourceVault
+* **sourceVault**: [SourceVault](#sourcevault)
 
 ## SourceVault
 ### Properties
@@ -186,7 +186,7 @@
 ## DiskProperties
 ### Properties
 * **burstingEnabled**: bool
-* **creationData**: CreationData (Required)
+* **creationData**: [CreationData](#creationdata) (Required)
 * **diskAccessId**: string
 * **diskIOPSReadOnly**: int
 * **diskIOPSReadWrite**: int
@@ -195,15 +195,15 @@
 * **diskSizeBytes**: int (ReadOnly)
 * **diskSizeGB**: int
 * **diskState**: 'ActiveSAS' | 'ActiveUpload' | 'Attached' | 'ReadyToUpload' | 'Reserved' | 'Unattached' (ReadOnly)
-* **encryption**: Encryption
-* **encryptionSettingsCollection**: EncryptionSettingsCollection
+* **encryption**: [Encryption](#encryption)
+* **encryptionSettingsCollection**: [EncryptionSettingsCollection](#encryptionsettingscollection)
 * **hyperVGeneration**: 'V1' | 'V2'
 * **maxShares**: int
 * **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll'
 * **osType**: 'Linux' | 'Windows'
 * **provisioningState**: string (ReadOnly)
-* **purchasePlan**: PurchasePlan
-* **shareInfo**: ShareInfoElement[] (ReadOnly)
+* **purchasePlan**: [PurchasePlan](#purchaseplan)
+* **shareInfo**: [ShareInfoElement](#shareinfoelement)[] (ReadOnly)
 * **tier**: string
 * **timeCreated**: string (ReadOnly)
 * **uniqueId**: string (ReadOnly)
@@ -211,8 +211,8 @@
 ## CreationData
 ### Properties
 * **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Import' | 'Restore' | 'Upload' (Required)
-* **galleryImageReference**: ImageDiskReference
-* **imageReference**: ImageDiskReference
+* **galleryImageReference**: [ImageDiskReference](#imagediskreference)
+* **imageReference**: [ImageDiskReference](#imagediskreference)
 * **logicalSectorSize**: int
 * **sourceResourceId**: string
 * **sourceUniqueId**: string (ReadOnly)
@@ -233,23 +233,23 @@
 ## EncryptionSettingsCollection
 ### Properties
 * **enabled**: bool (Required)
-* **encryptionSettings**: EncryptionSettingsElement[]
+* **encryptionSettings**: [EncryptionSettingsElement](#encryptionsettingselement)[]
 * **encryptionSettingsVersion**: string
 
 ## EncryptionSettingsElement
 ### Properties
-* **diskEncryptionKey**: KeyVaultAndSecretReference
-* **keyEncryptionKey**: KeyVaultAndKeyReference
+* **diskEncryptionKey**: [KeyVaultAndSecretReference](#keyvaultandsecretreference)
+* **keyEncryptionKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference)
 
 ## KeyVaultAndSecretReference
 ### Properties
 * **secretUrl**: string (Required)
-* **sourceVault**: SourceVault (Required)
+* **sourceVault**: [SourceVault](#sourcevault) (Required)
 
 ## KeyVaultAndKeyReference
 ### Properties
 * **keyUrl**: string (Required)
-* **sourceVault**: SourceVault (Required)
+* **sourceVault**: [SourceVault](#sourcevault) (Required)
 
 ## PurchasePlan
 ### Properties
@@ -275,9 +275,9 @@
 ## GalleryProperties
 ### Properties
 * **description**: string
-* **identifier**: GalleryIdentifier
+* **identifier**: [GalleryIdentifier](#galleryidentifier)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly)
-* **sharingProfile**: SharingProfile
+* **sharingProfile**: [SharingProfile](#sharingprofile)
 
 ## GalleryIdentifier
 ### Properties
@@ -285,7 +285,7 @@
 
 ## SharingProfile
 ### Properties
-* **groups**: SharingProfileGroup[] (ReadOnly)
+* **groups**: [SharingProfileGroup](#sharingprofilegroup)[] (ReadOnly)
 * **permissions**: 'Groups' | 'Private'
 
 ## SharingProfileGroup
@@ -315,20 +315,20 @@
 ## GalleryApplicationVersionProperties
 ### Properties
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly)
-* **publishingProfile**: GalleryApplicationVersionPublishingProfile (Required)
-* **replicationStatus**: ReplicationStatus (ReadOnly)
+* **publishingProfile**: [GalleryApplicationVersionPublishingProfile](#galleryapplicationversionpublishingprofile) (Required)
+* **replicationStatus**: [ReplicationStatus](#replicationstatus) (ReadOnly)
 
 ## GalleryApplicationVersionPublishingProfile
 ### Properties
 * **enableHealthCheck**: bool
 * **endOfLifeDate**: string
 * **excludeFromLatest**: bool
-* **manageActions**: UserArtifactManage
+* **manageActions**: [UserArtifactManage](#userartifactmanage)
 * **publishedDate**: string (ReadOnly)
 * **replicaCount**: int
-* **source**: UserArtifactSource (Required)
+* **source**: [UserArtifactSource](#userartifactsource) (Required)
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS'
-* **targetRegions**: TargetRegion[]
+* **targetRegions**: [TargetRegion](#targetregion)[]
 
 ## UserArtifactManage
 ### Properties
@@ -343,15 +343,15 @@
 
 ## TargetRegion
 ### Properties
-* **encryption**: EncryptionImages
+* **encryption**: [EncryptionImages](#encryptionimages)
 * **name**: string (Required)
 * **regionalReplicaCount**: int
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS'
 
 ## EncryptionImages
 ### Properties
-* **dataDiskImages**: DataDiskImageEncryption[]
-* **osDiskImage**: OSDiskImageEncryption
+* **dataDiskImages**: [DataDiskImageEncryption](#datadiskimageencryption)[]
+* **osDiskImage**: [OSDiskImageEncryption](#osdiskimageencryption)
 
 ## DataDiskImageEncryption
 ### Properties
@@ -365,7 +365,7 @@
 ## ReplicationStatus
 ### Properties
 * **aggregatedState**: 'Completed' | 'Failed' | 'InProgress' | 'Unknown' (ReadOnly)
-* **summary**: RegionalReplicationStatus[] (ReadOnly)
+* **summary**: [RegionalReplicationStatus](#regionalreplicationstatus)[] (ReadOnly)
 
 ## RegionalReplicationStatus
 ### Properties
@@ -382,18 +382,18 @@
 ## GalleryImageProperties
 ### Properties
 * **description**: string
-* **disallowed**: Disallowed
+* **disallowed**: [Disallowed](#disallowed)
 * **endOfLifeDate**: string
 * **eula**: string
-* **features**: GalleryImageFeature[]
+* **features**: [GalleryImageFeature](#galleryimagefeature)[]
 * **hyperVGeneration**: 'V1' | 'V2'
-* **identifier**: GalleryImageIdentifier (Required)
+* **identifier**: [GalleryImageIdentifier](#galleryimageidentifier) (Required)
 * **osState**: 'Generalized' | 'Specialized' (Required)
 * **osType**: 'Linux' | 'Windows' (Required)
 * **privacyStatementUri**: string
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly)
-* **purchasePlan**: ImagePurchasePlan
-* **recommended**: RecommendedMachineConfiguration
+* **purchasePlan**: [ImagePurchasePlan](#imagepurchaseplan)
+* **recommended**: [RecommendedMachineConfiguration](#recommendedmachineconfiguration)
 * **releaseNoteUri**: string
 
 ## Disallowed
@@ -419,8 +419,8 @@
 
 ## RecommendedMachineConfiguration
 ### Properties
-* **memory**: ResourceRange
-* **vCPUs**: ResourceRange
+* **memory**: [ResourceRange](#resourcerange)
+* **vCPUs**: [ResourceRange](#resourcerange)
 
 ## ResourceRange
 ### Properties
@@ -435,9 +435,9 @@
 ## GalleryImageVersionProperties
 ### Properties
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly)
-* **publishingProfile**: GalleryImageVersionPublishingProfile
-* **replicationStatus**: ReplicationStatus (ReadOnly)
-* **storageProfile**: GalleryImageVersionStorageProfile (Required)
+* **publishingProfile**: [GalleryImageVersionPublishingProfile](#galleryimageversionpublishingprofile)
+* **replicationStatus**: [ReplicationStatus](#replicationstatus) (ReadOnly)
+* **storageProfile**: [GalleryImageVersionStorageProfile](#galleryimageversionstorageprofile) (Required)
 
 ## GalleryImageVersionPublishingProfile
 ### Properties
@@ -446,20 +446,20 @@
 * **publishedDate**: string (ReadOnly)
 * **replicaCount**: int
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS'
-* **targetRegions**: TargetRegion[]
+* **targetRegions**: [TargetRegion](#targetregion)[]
 
 ## GalleryImageVersionStorageProfile
 ### Properties
-* **dataDiskImages**: GalleryDataDiskImage[]
-* **osDiskImage**: GalleryOSDiskImage
-* **source**: GalleryArtifactVersionSource
+* **dataDiskImages**: [GalleryDataDiskImage](#gallerydatadiskimage)[]
+* **osDiskImage**: [GalleryOSDiskImage](#galleryosdiskimage)
+* **source**: [GalleryArtifactVersionSource](#galleryartifactversionsource)
 
 ## GalleryDataDiskImage
 ### Properties
 * **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **lun**: int (Required)
 * **sizeInGB**: int (ReadOnly)
-* **source**: GalleryArtifactVersionSource
+* **source**: [GalleryArtifactVersionSource](#galleryartifactversionsource)
 
 ## GalleryArtifactVersionSource
 ### Properties
@@ -470,7 +470,7 @@
 ### Properties
 * **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite'
 * **sizeInGB**: int (ReadOnly)
-* **source**: GalleryArtifactVersionSource
+* **source**: [GalleryArtifactVersionSource](#galleryartifactversionsource)
 
 ## ResourceTags
 ### Properties
@@ -479,19 +479,19 @@
 
 ## SnapshotProperties
 ### Properties
-* **creationData**: CreationData (Required)
+* **creationData**: [CreationData](#creationdata) (Required)
 * **diskAccessId**: string
 * **diskSizeBytes**: int (ReadOnly)
 * **diskSizeGB**: int
 * **diskState**: 'ActiveSAS' | 'ActiveUpload' | 'Attached' | 'ReadyToUpload' | 'Reserved' | 'Unattached' (ReadOnly)
-* **encryption**: Encryption
-* **encryptionSettingsCollection**: EncryptionSettingsCollection
+* **encryption**: [Encryption](#encryption)
+* **encryptionSettingsCollection**: [EncryptionSettingsCollection](#encryptionsettingscollection)
 * **hyperVGeneration**: 'V1' | 'V2'
 * **incremental**: bool
 * **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll'
 * **osType**: 'Linux' | 'Windows'
 * **provisioningState**: string (ReadOnly)
-* **purchasePlan**: PurchasePlan
+* **purchasePlan**: [PurchasePlan](#purchaseplan)
 * **timeCreated**: string (ReadOnly)
 * **uniqueId**: string (ReadOnly)
 

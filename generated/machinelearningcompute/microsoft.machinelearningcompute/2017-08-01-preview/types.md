@@ -7,23 +7,23 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: OperationalizationClusterProperties
-* **tags**: ResourceTags
+* **properties**: [OperationalizationClusterProperties](#operationalizationclusterproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.MachineLearningCompute/operationalizationClusters' (ReadOnly, DeployTimeConstant)
 
 ## OperationalizationClusterProperties
 ### Properties
-* **appInsights**: AppInsightsProperties
+* **appInsights**: [AppInsightsProperties](#appinsightsproperties)
 * **clusterType**: 'ACS' | 'Local' (Required)
-* **containerRegistry**: ContainerRegistryProperties
-* **containerService**: AcsClusterProperties
+* **containerRegistry**: [ContainerRegistryProperties](#containerregistryproperties)
+* **containerService**: [AcsClusterProperties](#acsclusterproperties)
 * **createdOn**: string (ReadOnly)
 * **description**: string
-* **globalServiceConfiguration**: GlobalServiceConfiguration
+* **globalServiceConfiguration**: [GlobalServiceConfiguration](#globalserviceconfiguration)
 * **modifiedOn**: string (ReadOnly)
-* **provisioningErrors**: ErrorResponseWrapper[] (ReadOnly)
+* **provisioningErrors**: [ErrorResponseWrapper](#errorresponsewrapper)[] (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
-* **storageAccount**: StorageAccountProperties
+* **storageAccount**: [StorageAccountProperties](#storageaccountproperties)
 
 ## AppInsightsProperties
 ### Properties
@@ -39,13 +39,13 @@
 * **agentVmSize**: 'Standard_A0' | 'Standard_A1' | 'Standard_A10' | 'Standard_A11' | 'Standard_A2' | 'Standard_A3' | 'Standard_A4' | 'Standard_A5' | 'Standard_A6' | 'Standard_A7' | 'Standard_A8' | 'Standard_A9' | 'Standard_D1' | 'Standard_D11' | 'Standard_D11_v2' | 'Standard_D12' | 'Standard_D12_v2' | 'Standard_D13' | 'Standard_D13_v2' | 'Standard_D14' | 'Standard_D14_v2' | 'Standard_D1_v2' | 'Standard_D2' | 'Standard_D2_v2' | 'Standard_D3' | 'Standard_D3_v2' | 'Standard_D4' | 'Standard_D4_v2' | 'Standard_D5_v2' | 'Standard_DS1' | 'Standard_DS11' | 'Standard_DS12' | 'Standard_DS13' | 'Standard_DS14' | 'Standard_DS2' | 'Standard_DS3' | 'Standard_DS4' | 'Standard_G1' | 'Standard_G2' | 'Standard_G3' | 'Standard_G4' | 'Standard_G5' | 'Standard_GS1' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS5'
 * **clusterFqdn**: string (ReadOnly)
 * **masterCount**: int
-* **orchestratorProperties**: KubernetesClusterProperties
+* **orchestratorProperties**: [KubernetesClusterProperties](#kubernetesclusterproperties)
 * **orchestratorType**: 'Kubernetes' | 'None' (Required)
-* **systemServices**: SystemService[]
+* **systemServices**: [SystemService](#systemservice)[]
 
 ## KubernetesClusterProperties
 ### Properties
-* **servicePrincipal**: ServicePrincipalProperties
+* **servicePrincipal**: [ServicePrincipalProperties](#serviceprincipalproperties)
 
 ## ServicePrincipalProperties
 ### Properties
@@ -60,10 +60,10 @@
 
 ## GlobalServiceConfiguration
 ### Properties
-* **autoScale**: AutoScaleConfiguration
+* **autoScale**: [AutoScaleConfiguration](#autoscaleconfiguration)
 * **etag**: string
-* **serviceAuth**: ServiceAuthConfiguration
-* **ssl**: SslConfiguration
+* **serviceAuth**: [ServiceAuthConfiguration](#serviceauthconfiguration)
+* **ssl**: [SslConfiguration](#sslconfiguration)
 
 ## AutoScaleConfiguration
 ### Properties
@@ -87,12 +87,12 @@
 
 ## ErrorResponseWrapper
 ### Properties
-* **error**: ErrorResponse
+* **error**: [ErrorResponse](#errorresponse)
 
 ## ErrorResponse
 ### Properties
 * **code**: string (Required)
-* **details**: ErrorDetail[]
+* **details**: [ErrorDetail](#errordetail)[]
 * **message**: string (Required)
 
 ## ErrorDetail

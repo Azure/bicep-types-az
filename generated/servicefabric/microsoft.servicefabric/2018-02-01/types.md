@@ -7,32 +7,32 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterProperties
-* **tags**: ResourceTags
+* **properties**: [ClusterProperties](#clusterproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ServiceFabric/clusters' (ReadOnly, DeployTimeConstant)
 
 ## ClusterProperties
 ### Properties
 * **addOnFeatures**: 'BackupRestoreService' | 'DnsService' | 'RepairManager' | 'ResourceMonitorService'[]
-* **availableClusterVersions**: ClusterVersionDetails[] (ReadOnly)
-* **azureActiveDirectory**: AzureActiveDirectory
-* **certificate**: CertificateDescription
-* **certificateCommonNames**: ServerCertificateCommonNames
-* **clientCertificateCommonNames**: ClientCertificateCommonName[]
-* **clientCertificateThumbprints**: ClientCertificateThumbprint[]
+* **availableClusterVersions**: [ClusterVersionDetails](#clusterversiondetails)[] (ReadOnly)
+* **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory)
+* **certificate**: [CertificateDescription](#certificatedescription)
+* **certificateCommonNames**: [ServerCertificateCommonNames](#servercertificatecommonnames)
+* **clientCertificateCommonNames**: [ClientCertificateCommonName](#clientcertificatecommonname)[]
+* **clientCertificateThumbprints**: [ClientCertificateThumbprint](#clientcertificatethumbprint)[]
 * **clusterCodeVersion**: string
 * **clusterEndpoint**: string (ReadOnly)
 * **clusterId**: string (ReadOnly)
 * **clusterState**: 'AutoScale' | 'BaselineUpgrade' | 'Deploying' | 'EnforcingClusterVersion' | 'Ready' | 'UpdatingInfrastructure' | 'UpdatingUserCertificate' | 'UpdatingUserConfiguration' | 'UpgradeServiceUnreachable' | 'WaitingForNodes' (ReadOnly)
-* **diagnosticsStorageAccountConfig**: DiagnosticsStorageAccountConfig
-* **fabricSettings**: SettingsSectionDescription[]
+* **diagnosticsStorageAccountConfig**: [DiagnosticsStorageAccountConfig](#diagnosticsstorageaccountconfig)
+* **fabricSettings**: [SettingsSectionDescription](#settingssectiondescription)[]
 * **managementEndpoint**: string (Required)
-* **nodeTypes**: NodeTypeDescription[] (Required)
+* **nodeTypes**: [NodeTypeDescription](#nodetypedescription)[] (Required)
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **reliabilityLevel**: 'Bronze' | 'Gold' | 'None' | 'Platinum' | 'Silver'
-* **reverseProxyCertificate**: CertificateDescription
-* **reverseProxyCertificateCommonNames**: ServerCertificateCommonNames
-* **upgradeDescription**: ClusterUpgradePolicy
+* **reverseProxyCertificate**: [CertificateDescription](#certificatedescription)
+* **reverseProxyCertificateCommonNames**: [ServerCertificateCommonNames](#servercertificatecommonnames)
+* **upgradeDescription**: [ClusterUpgradePolicy](#clusterupgradepolicy)
 * **upgradeMode**: 'Automatic' | 'Manual'
 * **vmImage**: string
 
@@ -56,7 +56,7 @@
 
 ## ServerCertificateCommonNames
 ### Properties
-* **commonNames**: ServerCertificateCommonName[]
+* **commonNames**: [ServerCertificateCommonName](#servercertificatecommonname)[]
 * **x509StoreName**: 'AddressBook' | 'AuthRoot' | 'CertificateAuthority' | 'Disallowed' | 'My' | 'Root' | 'TrustedPeople' | 'TrustedPublisher'
 
 ## ServerCertificateCommonName
@@ -86,7 +86,7 @@
 ## SettingsSectionDescription
 ### Properties
 * **name**: string (Required)
-* **parameters**: SettingsParameterDescription[] (Required)
+* **parameters**: [SettingsParameterDescription](#settingsparameterdescription)[] (Required)
 
 ## SettingsParameterDescription
 ### Properties
@@ -95,15 +95,15 @@
 
 ## NodeTypeDescription
 ### Properties
-* **applicationPorts**: EndpointRangeDescription
-* **capacities**: NodeTypeDescriptionCapacities
+* **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription)
+* **capacities**: [NodeTypeDescriptionCapacities](#nodetypedescriptioncapacities)
 * **clientConnectionEndpointPort**: int (Required)
 * **durabilityLevel**: 'Bronze' | 'Gold' | 'Silver'
-* **ephemeralPorts**: EndpointRangeDescription
+* **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription)
 * **httpGatewayEndpointPort**: int (Required)
 * **isPrimary**: bool (Required)
 * **name**: string (Required)
-* **placementProperties**: NodeTypeDescriptionPlacementProperties
+* **placementProperties**: [NodeTypeDescriptionPlacementProperties](#nodetypedescriptionplacementproperties)
 * **reverseProxyEndpointPort**: int
 * **vmInstanceCount**: int (Required)
 
@@ -124,19 +124,19 @@
 
 ## ClusterUpgradePolicy
 ### Properties
-* **deltaHealthPolicy**: ClusterUpgradeDeltaHealthPolicy
+* **deltaHealthPolicy**: [ClusterUpgradeDeltaHealthPolicy](#clusterupgradedeltahealthpolicy)
 * **forceRestart**: bool
 * **healthCheckRetryTimeout**: string (Required)
 * **healthCheckStableDuration**: string (Required)
 * **healthCheckWaitDuration**: string (Required)
-* **healthPolicy**: ClusterHealthPolicy (Required)
+* **healthPolicy**: [ClusterHealthPolicy](#clusterhealthpolicy) (Required)
 * **upgradeDomainTimeout**: string (Required)
 * **upgradeReplicaSetCheckTimeout**: string (Required)
 * **upgradeTimeout**: string (Required)
 
 ## ClusterUpgradeDeltaHealthPolicy
 ### Properties
-* **applicationDeltaHealthPolicies**: ApplicationDeltaHealthPolicyMap
+* **applicationDeltaHealthPolicies**: [ApplicationDeltaHealthPolicyMap](#applicationdeltahealthpolicymap)
 * **maxPercentDeltaUnhealthyApplications**: int (Required)
 * **maxPercentDeltaUnhealthyNodes**: int (Required)
 * **maxPercentUpgradeDomainDeltaUnhealthyNodes**: int (Required)
@@ -144,12 +144,12 @@
 ## ApplicationDeltaHealthPolicyMap
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ApplicationDeltaHealthPolicy
+* **Additional Properties Type**: [ApplicationDeltaHealthPolicy](#applicationdeltahealthpolicy)
 
 ## ApplicationDeltaHealthPolicy
 ### Properties
-* **defaultServiceTypeDeltaHealthPolicy**: ServiceTypeDeltaHealthPolicy
-* **serviceTypeDeltaHealthPolicies**: ServiceTypeDeltaHealthPolicyMap
+* **defaultServiceTypeDeltaHealthPolicy**: [ServiceTypeDeltaHealthPolicy](#servicetypedeltahealthpolicy)
+* **serviceTypeDeltaHealthPolicies**: [ServiceTypeDeltaHealthPolicyMap](#servicetypedeltahealthpolicymap)
 
 ## ServiceTypeDeltaHealthPolicy
 ### Properties
@@ -158,23 +158,23 @@
 ## ServiceTypeDeltaHealthPolicyMap
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ServiceTypeDeltaHealthPolicy
+* **Additional Properties Type**: [ServiceTypeDeltaHealthPolicy](#servicetypedeltahealthpolicy)
 
 ## ClusterHealthPolicy
 ### Properties
-* **applicationHealthPolicies**: ApplicationHealthPolicyMap
+* **applicationHealthPolicies**: [ApplicationHealthPolicyMap](#applicationhealthpolicymap)
 * **maxPercentUnhealthyApplications**: int
 * **maxPercentUnhealthyNodes**: int
 
 ## ApplicationHealthPolicyMap
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ApplicationHealthPolicy
+* **Additional Properties Type**: [ApplicationHealthPolicy](#applicationhealthpolicy)
 
 ## ApplicationHealthPolicy
 ### Properties
-* **defaultServiceTypeHealthPolicy**: ServiceTypeHealthPolicy
-* **serviceTypeHealthPolicies**: ServiceTypeHealthPolicyMap
+* **defaultServiceTypeHealthPolicy**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy)
+* **serviceTypeHealthPolicies**: [ServiceTypeHealthPolicyMap](#servicetypehealthpolicymap)
 
 ## ServiceTypeHealthPolicy
 ### Properties
@@ -183,7 +183,7 @@
 ## ServiceTypeHealthPolicyMap
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ServiceTypeHealthPolicy
+* **Additional Properties Type**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy)
 
 ## ResourceTags
 ### Properties

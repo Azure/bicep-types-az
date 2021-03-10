@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'Advanced' | 'Essential' | 'Standard' (Required, DeployTimeConstant)
-* **properties**: CanonicalSupportPlanProperties (ReadOnly)
+* **properties**: [CanonicalSupportPlanProperties](#canonicalsupportplanproperties) (ReadOnly)
 * **type**: 'Microsoft.Addons/supportProviders/supportPlanTypes' (ReadOnly, DeployTimeConstant)
 
 ## CanonicalSupportPlanProperties

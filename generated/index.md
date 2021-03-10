@@ -550,6 +550,50 @@
 ### microsoft.authorization/accessreviewschedulesettings
 * [2018-05-01-preview](authorization/microsoft.authorization/2018-05-01-preview/types.md#resource-microsoftauthorizationaccessreviewschedulesettings2018-05-01-preview)
 
+### microsoft.authorization/locks
+* [2015-01-01](resources/microsoft.authorization/2015-01-01/types.md#resource-microsoftauthorizationlocks2015-01-01)
+* [2016-09-01](resources/microsoft.authorization/2016-09-01/types.md#resource-microsoftauthorizationlocks2016-09-01)
+
+### microsoft.authorization/policyassignments
+* [2015-10-01-preview](resources/microsoft.authorization/2015-10-01-preview/types.md#resource-microsoftauthorizationpolicyassignments2015-10-01-preview)
+* [2015-11-01](resources/microsoft.authorization/2015-11-01/types.md#resource-microsoftauthorizationpolicyassignments2015-11-01)
+* [2016-04-01](resources/microsoft.authorization/2016-04-01/types.md#resource-microsoftauthorizationpolicyassignments2016-04-01)
+* [2016-12-01](resources/microsoft.authorization/2016-12-01/types.md#resource-microsoftauthorizationpolicyassignments2016-12-01)
+* [2017-06-01-preview](resources/microsoft.authorization/2017-06-01-preview/types.md#resource-microsoftauthorizationpolicyassignments2017-06-01-preview)
+* [2018-03-01](resources/microsoft.authorization/2018-03-01/types.md#resource-microsoftauthorizationpolicyassignments2018-03-01)
+* [2018-05-01](resources/microsoft.authorization/2018-05-01/types.md#resource-microsoftauthorizationpolicyassignments2018-05-01)
+* [2019-01-01](resources/microsoft.authorization/2019-01-01/types.md#resource-microsoftauthorizationpolicyassignments2019-01-01)
+* [2019-06-01](resources/microsoft.authorization/2019-06-01/types.md#resource-microsoftauthorizationpolicyassignments2019-06-01)
+* [2019-09-01](resources/microsoft.authorization/2019-09-01/types.md#resource-microsoftauthorizationpolicyassignments2019-09-01)
+* [2020-03-01](resources/microsoft.authorization/2020-03-01/types.md#resource-microsoftauthorizationpolicyassignments2020-03-01)
+* [2020-09-01](resources/microsoft.authorization/2020-09-01/types.md#resource-microsoftauthorizationpolicyassignments2020-09-01)
+
+### microsoft.authorization/policydefinitions
+* [2015-10-01-preview](resources/microsoft.authorization/2015-10-01-preview/types.md#resource-microsoftauthorizationpolicydefinitions2015-10-01-preview)
+* [2015-11-01](resources/microsoft.authorization/2015-11-01/types.md#resource-microsoftauthorizationpolicydefinitions2015-11-01)
+* [2016-04-01](resources/microsoft.authorization/2016-04-01/types.md#resource-microsoftauthorizationpolicydefinitions2016-04-01)
+* [2016-12-01](resources/microsoft.authorization/2016-12-01/types.md#resource-microsoftauthorizationpolicydefinitions2016-12-01)
+* [2018-03-01](resources/microsoft.authorization/2018-03-01/types.md#resource-microsoftauthorizationpolicydefinitions2018-03-01)
+* [2018-05-01](resources/microsoft.authorization/2018-05-01/types.md#resource-microsoftauthorizationpolicydefinitions2018-05-01)
+* [2019-01-01](resources/microsoft.authorization/2019-01-01/types.md#resource-microsoftauthorizationpolicydefinitions2019-01-01)
+* [2019-06-01](resources/microsoft.authorization/2019-06-01/types.md#resource-microsoftauthorizationpolicydefinitions2019-06-01)
+* [2019-09-01](resources/microsoft.authorization/2019-09-01/types.md#resource-microsoftauthorizationpolicydefinitions2019-09-01)
+* [2020-03-01](resources/microsoft.authorization/2020-03-01/types.md#resource-microsoftauthorizationpolicydefinitions2020-03-01)
+* [2020-09-01](resources/microsoft.authorization/2020-09-01/types.md#resource-microsoftauthorizationpolicydefinitions2020-09-01)
+
+### microsoft.authorization/policyexemptions
+* [2020-07-01-preview](resources/microsoft.authorization/2020-07-01-preview/types.md#resource-microsoftauthorizationpolicyexemptions2020-07-01-preview)
+
+### microsoft.authorization/policysetdefinitions
+* [2017-06-01-preview](resources/microsoft.authorization/2017-06-01-preview/types.md#resource-microsoftauthorizationpolicysetdefinitions2017-06-01-preview)
+* [2018-03-01](resources/microsoft.authorization/2018-03-01/types.md#resource-microsoftauthorizationpolicysetdefinitions2018-03-01)
+* [2018-05-01](resources/microsoft.authorization/2018-05-01/types.md#resource-microsoftauthorizationpolicysetdefinitions2018-05-01)
+* [2019-01-01](resources/microsoft.authorization/2019-01-01/types.md#resource-microsoftauthorizationpolicysetdefinitions2019-01-01)
+* [2019-06-01](resources/microsoft.authorization/2019-06-01/types.md#resource-microsoftauthorizationpolicysetdefinitions2019-06-01)
+* [2019-09-01](resources/microsoft.authorization/2019-09-01/types.md#resource-microsoftauthorizationpolicysetdefinitions2019-09-01)
+* [2020-03-01](resources/microsoft.authorization/2020-03-01/types.md#resource-microsoftauthorizationpolicysetdefinitions2020-03-01)
+* [2020-09-01](resources/microsoft.authorization/2020-09-01/types.md#resource-microsoftauthorizationpolicysetdefinitions2020-09-01)
+
 ### microsoft.authorization/roleassignments
 * [2015-07-01](authorization/microsoft.authorization/2015-07-01/types.md#resource-microsoftauthorizationroleassignments2015-07-01)
 * [2017-10-01-preview](authorization/microsoft.authorization/2017-10-01-preview/types.md#resource-microsoftauthorizationroleassignments2017-10-01-preview)
@@ -3110,10 +3154,15 @@
 * [2015-02-01-preview](logic/microsoft.logic/2015-02-01-preview/types.md#resource-microsoftlogicworkflowsaccesskeys2015-02-01-preview)
 
 ## microsoft.machinelearning
+### microsoft.machinelearning/commitmentplans
+* [2016-05-01-preview](machinelearning/microsoft.machinelearning/2016-05-01-preview/types.md#resource-microsoftmachinelearningcommitmentplans2016-05-01-preview)
+
 ### microsoft.machinelearning/webservices
+* [2016-05-01-preview](machinelearning/microsoft.machinelearning/2016-05-01-preview/types.md#resource-microsoftmachinelearningwebservices2016-05-01-preview)
 * [2017-01-01](machinelearning/microsoft.machinelearning/2017-01-01/types.md#resource-microsoftmachinelearningwebservices2017-01-01)
 
 ### microsoft.machinelearning/workspaces
+* [2016-04-01](machinelearning/microsoft.machinelearning/2016-04-01/types.md#resource-microsoftmachinelearningworkspaces2016-04-01)
 * [2019-10-01](machinelearning/microsoft.machinelearning/2019-10-01/types.md#resource-microsoftmachinelearningworkspaces2019-10-01)
 
 ## microsoft.machinelearningcompute
@@ -4650,6 +4699,59 @@
 ## microsoft.resourcegraph
 ### microsoft.resourcegraph/queries
 * [2018-09-01-preview](resourcegraph/microsoft.resourcegraph/2018-09-01-preview/types.md#resource-microsoftresourcegraphqueries2018-09-01-preview)
+
+## microsoft.resources
+### microsoft.resources/deployments
+* [2015-11-01](resources/microsoft.resources/2015-11-01/types.md#resource-microsoftresourcesdeployments2015-11-01)
+* [2016-02-01](resources/microsoft.resources/2016-02-01/types.md#resource-microsoftresourcesdeployments2016-02-01)
+* [2016-07-01](resources/microsoft.resources/2016-07-01/types.md#resource-microsoftresourcesdeployments2016-07-01)
+* [2016-09-01](resources/microsoft.resources/2016-09-01/types.md#resource-microsoftresourcesdeployments2016-09-01)
+* [2017-05-10](resources/microsoft.resources/2017-05-10/types.md#resource-microsoftresourcesdeployments2017-05-10)
+* [2018-02-01](resources/microsoft.resources/2018-02-01/types.md#resource-microsoftresourcesdeployments2018-02-01)
+* [2018-05-01](resources/microsoft.resources/2018-05-01/types.md#resource-microsoftresourcesdeployments2018-05-01)
+* [2019-03-01](resources/microsoft.resources/2019-03-01/types.md#resource-microsoftresourcesdeployments2019-03-01)
+* [2019-05-01](resources/microsoft.resources/2019-05-01/types.md#resource-microsoftresourcesdeployments2019-05-01)
+* [2019-05-10](resources/microsoft.resources/2019-05-10/types.md#resource-microsoftresourcesdeployments2019-05-10)
+* [2019-07-01](resources/microsoft.resources/2019-07-01/types.md#resource-microsoftresourcesdeployments2019-07-01)
+* [2019-08-01](resources/microsoft.resources/2019-08-01/types.md#resource-microsoftresourcesdeployments2019-08-01)
+* [2019-10-01](resources/microsoft.resources/2019-10-01/types.md#resource-microsoftresourcesdeployments2019-10-01)
+* [2020-06-01](resources/microsoft.resources/2020-06-01/types.md#resource-microsoftresourcesdeployments2020-06-01)
+* [2020-08-01](resources/microsoft.resources/2020-08-01/types.md#resource-microsoftresourcesdeployments2020-08-01)
+* [2020-10-01](resources/microsoft.resources/2020-10-01/types.md#resource-microsoftresourcesdeployments2020-10-01)
+
+### microsoft.resources/deploymentscripts
+* [2019-10-01-preview](resources/microsoft.resources/2019-10-01-preview/types.md#resource-microsoftresourcesdeploymentscripts2019-10-01-preview)
+* [2020-10-01](resources/microsoft.resources/2020-10-01/types.md#resource-microsoftresourcesdeploymentscripts2020-10-01)
+
+### microsoft.resources/resourcegroups
+* [2015-11-01](resources/microsoft.resources/2015-11-01/types.md#resource-microsoftresourcesresourcegroups2015-11-01)
+* [2016-02-01](resources/microsoft.resources/2016-02-01/types.md#resource-microsoftresourcesresourcegroups2016-02-01)
+* [2016-07-01](resources/microsoft.resources/2016-07-01/types.md#resource-microsoftresourcesresourcegroups2016-07-01)
+* [2016-09-01](resources/microsoft.resources/2016-09-01/types.md#resource-microsoftresourcesresourcegroups2016-09-01)
+* [2017-05-10](resources/microsoft.resources/2017-05-10/types.md#resource-microsoftresourcesresourcegroups2017-05-10)
+* [2018-02-01](resources/microsoft.resources/2018-02-01/types.md#resource-microsoftresourcesresourcegroups2018-02-01)
+* [2018-05-01](resources/microsoft.resources/2018-05-01/types.md#resource-microsoftresourcesresourcegroups2018-05-01)
+* [2019-03-01](resources/microsoft.resources/2019-03-01/types.md#resource-microsoftresourcesresourcegroups2019-03-01)
+* [2019-05-01](resources/microsoft.resources/2019-05-01/types.md#resource-microsoftresourcesresourcegroups2019-05-01)
+* [2019-05-10](resources/microsoft.resources/2019-05-10/types.md#resource-microsoftresourcesresourcegroups2019-05-10)
+* [2019-07-01](resources/microsoft.resources/2019-07-01/types.md#resource-microsoftresourcesresourcegroups2019-07-01)
+* [2019-08-01](resources/microsoft.resources/2019-08-01/types.md#resource-microsoftresourcesresourcegroups2019-08-01)
+* [2019-10-01](resources/microsoft.resources/2019-10-01/types.md#resource-microsoftresourcesresourcegroups2019-10-01)
+* [2020-06-01](resources/microsoft.resources/2020-06-01/types.md#resource-microsoftresourcesresourcegroups2020-06-01)
+* [2020-08-01](resources/microsoft.resources/2020-08-01/types.md#resource-microsoftresourcesresourcegroups2020-08-01)
+* [2020-10-01](resources/microsoft.resources/2020-10-01/types.md#resource-microsoftresourcesresourcegroups2020-10-01)
+
+### microsoft.resources/tags
+* [2019-10-01](resources/microsoft.resources/2019-10-01/types.md#resource-microsoftresourcestags2019-10-01)
+* [2020-06-01](resources/microsoft.resources/2020-06-01/types.md#resource-microsoftresourcestags2020-06-01)
+* [2020-08-01](resources/microsoft.resources/2020-08-01/types.md#resource-microsoftresourcestags2020-08-01)
+* [2020-10-01](resources/microsoft.resources/2020-10-01/types.md#resource-microsoftresourcestags2020-10-01)
+
+### microsoft.resources/templatespecs
+* [2019-06-01-preview](resources/microsoft.resources/2019-06-01-preview/types.md#resource-microsoftresourcestemplatespecs2019-06-01-preview)
+
+### microsoft.resources/templatespecs/versions
+* [2019-06-01-preview](resources/microsoft.resources/2019-06-01-preview/types.md#resource-microsoftresourcestemplatespecsversions2019-06-01-preview)
 
 ## microsoft.scheduler
 ### microsoft.scheduler/jobcollections

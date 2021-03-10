@@ -6,7 +6,7 @@
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SupportTicketDetailsProperties
+* **properties**: [SupportTicketDetailsProperties](#supportticketdetailsproperties)
 * **type**: 'Microsoft.Support/supportTickets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Support/supportTickets/communications@2019-05-01-preview
@@ -15,12 +15,12 @@
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CommunicationDetailsProperties
+* **properties**: [CommunicationDetailsProperties](#communicationdetailsproperties)
 * **type**: 'Microsoft.Support/supportTickets/communications' (ReadOnly, DeployTimeConstant)
 
 ## SupportTicketDetailsProperties
 ### Properties
-* **contactDetails**: ContactProfile (Required)
+* **contactDetails**: [ContactProfile](#contactprofile) (Required)
 * **createdDate**: string (ReadOnly)
 * **description**: string (Required)
 * **enrollmentId**: string (ReadOnly)
@@ -29,17 +29,17 @@
 * **problemClassificationId**: string (Required)
 * **problemStartTime**: string
 * **productionOutage**: bool (ReadOnly)
-* **quotaTicketDetails**: QuotaTicketDetails
+* **quotaTicketDetails**: [QuotaTicketDetails](#quotaticketdetails)
 * **require24X7Response**: bool
 * **serviceDisplayName**: string (ReadOnly)
 * **serviceId**: string (Required)
-* **serviceLevelAgreement**: ServiceLevelAgreement
+* **serviceLevelAgreement**: [ServiceLevelAgreement](#servicelevelagreement)
 * **severity**: 'critical' | 'minimal' | 'moderate' (Required)
 * **status**: string (ReadOnly)
-* **supportEngineer**: SupportEngineer
+* **supportEngineer**: [SupportEngineer](#supportengineer)
 * **supportPlanType**: string (ReadOnly)
 * **supportTicketId**: string
-* **technicalTicketDetails**: TechnicalTicketDetails
+* **technicalTicketDetails**: [TechnicalTicketDetails](#technicalticketdetails)
 * **title**: string (Required)
 
 ## ContactProfile
@@ -56,7 +56,7 @@
 
 ## QuotaTicketDetails
 ### Properties
-* **quotaChangeRequests**: QuotaChangeRequest[]
+* **quotaChangeRequests**: [QuotaChangeRequest](#quotachangerequest)[]
 * **quotaChangeRequestSubType**: string
 * **quotaChangeRequestVersion**: string
 

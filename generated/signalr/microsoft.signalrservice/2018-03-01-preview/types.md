@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SignalRCreateOrUpdateProperties
-* **sku**: ResourceSku
-* **tags**: SignalRUpdateParametersTags
+* **properties**: [SignalRCreateOrUpdateProperties](#signalrcreateorupdateproperties)
+* **sku**: [ResourceSku](#resourcesku)
+* **tags**: [SignalRUpdateParametersTags](#signalrupdateparameterstags)
 * **type**: 'Microsoft.SignalRService/SignalR' (ReadOnly, DeployTimeConstant)
 
 ## SignalRCreateOrUpdateProperties
