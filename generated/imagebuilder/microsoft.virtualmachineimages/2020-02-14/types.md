@@ -5,22 +5,22 @@
 ### Properties
 * **apiVersion**: '2020-02-14' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ImageTemplateIdentity (Required)
+* **identity**: [ImageTemplateIdentity](#imagetemplateidentity) (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ImageTemplateProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ImageTemplateProperties](#imagetemplateproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.VirtualMachineImages/imageTemplates' (ReadOnly, DeployTimeConstant)
 
 ## ImageTemplateIdentity
 ### Properties
 * **type**: 'None' | 'UserAssigned'
-* **userAssignedIdentities**: Dictionary<string,Schemas22UserAssignedIdentitiesValue>
+* **userAssignedIdentities**: [Dictionary<string,Schemas22UserAssignedIdentitiesValue>](#dictionarystringschemas22userassignedidentitiesvalue)
 
 ## Dictionary<string,Schemas22UserAssignedIdentitiesValue>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: schemas:22_userAssignedIdentitiesValue
+* **Additional Properties Type**: [schemas:22_userAssignedIdentitiesValue](#schemas22userassignedidentitiesvalue)
 
 ## schemas:22_userAssignedIdentitiesValue
 ### Properties
@@ -30,13 +30,13 @@
 ## ImageTemplateProperties
 ### Properties
 * **buildTimeoutInMinutes**: int
-* **customize**: ImageTemplateCustomizer[]
-* **distribute**: ImageTemplateDistributor[] (Required)
-* **lastRunStatus**: ImageTemplateLastRunStatus (ReadOnly)
-* **provisioningError**: ProvisioningError (ReadOnly)
+* **customize**: [ImageTemplateCustomizer](#imagetemplatecustomizer)[]
+* **distribute**: [ImageTemplateDistributor](#imagetemplatedistributor)[] (Required)
+* **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly)
+* **provisioningError**: [ProvisioningError](#provisioningerror) (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **source**: ImageTemplateSource (Required)
-* **vmProfile**: ImageTemplateVmProfile
+* **source**: [ImageTemplateSource](#imagetemplatesource) (Required)
+* **vmProfile**: [ImageTemplateVmProfile](#imagetemplatevmprofile)
 
 ## ImageTemplateCustomizer
 * **Discriminator**: type
@@ -122,7 +122,7 @@
 ## ImageTemplateDistributor
 * **Discriminator**: type
 ### Base Properties
-* **artifactTags**: Dictionary<string,String>
+* **artifactTags**: [Dictionary<string,String>](#dictionarystringstring)
 * **runOutputName**: string (Required)
 ### ManagedImage
 #### Properties
@@ -188,7 +188,7 @@
 ### PlatformImage
 #### Properties
 * **offer**: string
-* **planInfo**: PlatformImagePurchasePlan
+* **planInfo**: [PlatformImagePurchasePlan](#platformimagepurchaseplan)
 * **publisher**: string
 * **sku**: string
 * **type**: 'PlatformImage' (Required)
@@ -203,7 +203,7 @@
 ## PlatformImage
 ### Properties
 * **offer**: string
-* **planInfo**: PlatformImagePurchasePlan
+* **planInfo**: [PlatformImagePurchasePlan](#platformimagepurchaseplan)
 * **publisher**: string
 * **sku**: string
 * **type**: 'PlatformImage' (Required)
@@ -224,7 +224,7 @@
 ### Properties
 * **osDiskSizeGB**: int
 * **vmSize**: string
-* **vnetConfig**: VirtualNetworkConfig
+* **vnetConfig**: [VirtualNetworkConfig](#virtualnetworkconfig)
 
 ## VirtualNetworkConfig
 ### Properties

@@ -7,15 +7,15 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkbookTemplateProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [WorkbookTemplateProperties](#workbooktemplateproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'microsoft.insights/workbooktemplates' (ReadOnly, DeployTimeConstant)
 
 ## WorkbookTemplateProperties
 ### Properties
 * **author**: string
-* **galleries**: WorkbookTemplateGallery[] (Required)
-* **localized**: Dictionary<string,IList<WorkbookTemplateLocalizedGallery>>
+* **galleries**: [WorkbookTemplateGallery](#workbooktemplategallery)[] (Required)
+* **localized**: [Dictionary<string,IList<WorkbookTemplateLocalizedGallery>>](#dictionarystringilistworkbooktemplatelocalizedgallery)
 * **priority**: int
 * **templateData**: any (Required)
 
@@ -30,11 +30,11 @@
 ## Dictionary<string,IList<WorkbookTemplateLocalizedGallery>>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: WorkbookTemplateLocalizedGallery[]
+* **Additional Properties Type**: [WorkbookTemplateLocalizedGallery](#workbooktemplatelocalizedgallery)[]
 
 ## WorkbookTemplateLocalizedGallery
 ### Properties
-* **galleries**: WorkbookTemplateGallery[]
+* **galleries**: [WorkbookTemplateGallery](#workbooktemplategallery)[]
 * **templateData**: any
 
 ## Dictionary<string,String>

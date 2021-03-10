@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyAssignmentProperties
-* **sku**: PolicySku
+* **properties**: [PolicyAssignmentProperties](#policyassignmentproperties)
+* **sku**: [PolicySku](#policysku)
 * **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Authorization/policyDefinitions@2019-01-01
@@ -18,7 +18,7 @@
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyDefinitionProperties
+* **properties**: [PolicyDefinitionProperties](#policydefinitionproperties)
 * **type**: 'Microsoft.Authorization/policyDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Authorization/policySetDefinitions@2019-01-01
@@ -27,7 +27,7 @@
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicySetDefinitionProperties
+* **properties**: [PolicySetDefinitionProperties](#policysetdefinitionproperties)
 * **type**: 'Microsoft.Authorization/policySetDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -67,7 +67,7 @@
 * **displayName**: string
 * **metadata**: any
 * **parameters**: any
-* **policyDefinitions**: PolicyDefinitionReference[] (Required)
+* **policyDefinitions**: [PolicyDefinitionReference](#policydefinitionreference)[] (Required)
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified'
 
 ## PolicyDefinitionReference

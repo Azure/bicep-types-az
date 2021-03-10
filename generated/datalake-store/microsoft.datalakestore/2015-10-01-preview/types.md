@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2015-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: EncryptionIdentity
+* **identity**: [EncryptionIdentity](#encryptionidentity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DataLakeStoreAccountProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [DataLakeStoreAccountProperties](#datalakestoreaccountproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DataLakeStore/accounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataLakeStore/accounts/firewallRules@2015-10-01-preview
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: FirewallRuleProperties
+* **properties**: [FirewallRuleProperties](#firewallruleproperties)
 * **type**: 'Microsoft.DataLakeStore/accounts/firewallRules' (ReadOnly, DeployTimeConstant)
 
 ## EncryptionIdentity
@@ -32,7 +32,7 @@
 ### Properties
 * **creationTime**: string (ReadOnly)
 * **defaultGroup**: string
-* **encryptionConfig**: EncryptionConfig
+* **encryptionConfig**: [EncryptionConfig](#encryptionconfig)
 * **encryptionProvisioningState**: 'Creating' | 'Succeeded' (ReadOnly)
 * **encryptionState**: 'Disabled' | 'Enabled'
 * **endpoint**: string
@@ -42,7 +42,7 @@
 
 ## EncryptionConfig
 ### Properties
-* **keyVaultMetaInfo**: KeyVaultMetaInfo
+* **keyVaultMetaInfo**: [KeyVaultMetaInfo](#keyvaultmetainfo)
 * **type**: 'ServiceManaged' | 'UserManaged'
 
 ## KeyVaultMetaInfo

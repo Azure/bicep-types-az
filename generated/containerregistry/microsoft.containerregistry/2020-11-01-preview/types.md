@@ -5,13 +5,13 @@
 ### Properties
 * **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: IdentityProperties
+* **identity**: [IdentityProperties](#identityproperties)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RegistryProperties
-* **sku**: Sku (Required)
-* **systemData**: SystemData (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [RegistryProperties](#registryproperties)
+* **sku**: [Sku](#sku) (Required)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ContainerRegistry/registries' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerRegistry/registries/connectedRegistries@2020-11-01-preview
@@ -20,8 +20,8 @@
 * **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectedRegistryProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [ConnectedRegistryProperties](#connectedregistryproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.ContainerRegistry/registries/connectedRegistries' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerRegistry/registries/exportPipelines@2020-11-01-preview
@@ -29,11 +29,11 @@
 ### Properties
 * **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: IdentityProperties
+* **identity**: [IdentityProperties](#identityproperties)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ExportPipelineProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [ExportPipelineProperties](#exportpipelineproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.ContainerRegistry/registries/exportPipelines' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerRegistry/registries/importPipelines@2020-11-01-preview
@@ -41,11 +41,11 @@
 ### Properties
 * **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: IdentityProperties
+* **identity**: [IdentityProperties](#identityproperties)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ImportPipelineProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [ImportPipelineProperties](#importpipelineproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.ContainerRegistry/registries/importPipelines' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerRegistry/registries/pipelineRuns@2020-11-01-preview
@@ -54,8 +54,8 @@
 * **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PipelineRunProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [PipelineRunProperties](#pipelinerunproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.ContainerRegistry/registries/pipelineRuns' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerRegistry/registries/privateEndpointConnections@2020-11-01-preview
@@ -64,8 +64,8 @@
 * **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.ContainerRegistry/registries/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerRegistry/registries/replications@2020-11-01-preview
@@ -75,9 +75,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ReplicationProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [ReplicationProperties](#replicationproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ContainerRegistry/registries/replications' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerRegistry/registries/scopeMaps@2020-11-01-preview
@@ -86,8 +86,8 @@
 * **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ScopeMapProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [ScopeMapProperties](#scopemapproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.ContainerRegistry/registries/scopeMaps' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerRegistry/registries/tokens@2020-11-01-preview
@@ -96,8 +96,8 @@
 * **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TokenProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [TokenProperties](#tokenproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.ContainerRegistry/registries/tokens' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerRegistry/registries/webhooks@2020-11-01-preview
@@ -107,9 +107,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WebhookPropertiesCreateParameters
-* **systemData**: SystemData (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [WebhookPropertiesCreateParameters](#webhookpropertiescreateparameters)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ContainerRegistry/registries/webhooks' (ReadOnly, DeployTimeConstant)
 
 ## IdentityProperties
@@ -117,12 +117,12 @@
 * **principalId**: string
 * **tenantId**: string
 * **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: Dictionary<string,UserIdentityProperties>
+* **userAssignedIdentities**: [Dictionary<string,UserIdentityProperties>](#dictionarystringuseridentityproperties)
 
 ## Dictionary<string,UserIdentityProperties>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: UserIdentityProperties
+* **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
 
 ## UserIdentityProperties
 ### Properties
@@ -135,21 +135,21 @@
 * **creationDate**: string (ReadOnly)
 * **dataEndpointEnabled**: bool
 * **dataEndpointHostNames**: string[] (ReadOnly)
-* **encryption**: EncryptionProperty
+* **encryption**: [EncryptionProperty](#encryptionproperty)
 * **loginServer**: string (ReadOnly)
 * **networkRuleBypassOptions**: 'AzureServices' | 'None'
-* **networkRuleSet**: NetworkRuleSet
-* **policies**: Policies
-* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **networkRuleSet**: [NetworkRuleSet](#networkruleset)
+* **policies**: [Policies](#policies)
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
-* **status**: Status (ReadOnly)
-* **storageAccount**: StorageAccountProperties
+* **status**: [Status](#status) (ReadOnly)
+* **storageAccount**: [StorageAccountProperties](#storageaccountproperties)
 * **zoneRedundancy**: 'Disabled' | 'Enabled'
 
 ## EncryptionProperty
 ### Properties
-* **keyVaultProperties**: KeyVaultProperties
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
 * **status**: 'disabled' | 'enabled'
 
 ## KeyVaultProperties
@@ -163,8 +163,8 @@
 ## NetworkRuleSet
 ### Properties
 * **defaultAction**: 'Allow' | 'Deny' (Required)
-* **ipRules**: IPRule[]
-* **virtualNetworkRules**: VirtualNetworkRule[]
+* **ipRules**: [IPRule](#iprule)[]
+* **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]
 
 ## IPRule
 ### Properties
@@ -178,9 +178,9 @@
 
 ## Policies
 ### Properties
-* **quarantinePolicy**: QuarantinePolicy
-* **retentionPolicy**: RetentionPolicy
-* **trustPolicy**: TrustPolicy
+* **quarantinePolicy**: [QuarantinePolicy](#quarantinepolicy)
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
+* **trustPolicy**: [TrustPolicy](#trustpolicy)
 
 ## QuarantinePolicy
 ### Properties
@@ -201,14 +201,14 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## PrivateEndpoint
@@ -252,16 +252,16 @@
 
 ## ConnectedRegistryProperties
 ### Properties
-* **activation**: ActivationProperties (ReadOnly)
+* **activation**: [ActivationProperties](#activationproperties) (ReadOnly)
 * **clientTokenIds**: string[]
 * **connectionState**: 'Offline' | 'Online' | 'Syncing' | 'Unhealthy' (ReadOnly)
 * **lastActivityTime**: string (ReadOnly)
-* **logging**: LoggingProperties
-* **loginServer**: LoginServerProperties
+* **logging**: [LoggingProperties](#loggingproperties)
+* **loginServer**: [LoginServerProperties](#loginserverproperties)
 * **mode**: 'Mirror' | 'Registry' (Required)
-* **parent**: ParentProperties (Required)
+* **parent**: [ParentProperties](#parentproperties) (Required)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **statusDetails**: StatusDetailProperties[] (ReadOnly)
+* **statusDetails**: [StatusDetailProperties](#statusdetailproperties)[] (ReadOnly)
 * **version**: string (ReadOnly)
 
 ## ActivationProperties
@@ -276,11 +276,11 @@
 ## LoginServerProperties
 ### Properties
 * **host**: string (ReadOnly)
-* **tls**: TlsProperties (ReadOnly)
+* **tls**: [TlsProperties](#tlsproperties) (ReadOnly)
 
 ## TlsProperties
 ### Properties
-* **certificate**: TlsCertificateProperties (ReadOnly)
+* **certificate**: [TlsCertificateProperties](#tlscertificateproperties) (ReadOnly)
 * **status**: 'Disabled' | 'Enabled' (ReadOnly)
 
 ## TlsCertificateProperties
@@ -291,7 +291,7 @@
 ## ParentProperties
 ### Properties
 * **id**: string
-* **syncProperties**: SyncProperties (Required)
+* **syncProperties**: [SyncProperties](#syncproperties) (Required)
 
 ## SyncProperties
 ### Properties
@@ -314,7 +314,7 @@
 ### Properties
 * **options**: 'ContinueOnErrors' | 'DeleteSourceBlobOnSuccess' | 'OverwriteBlobs' | 'OverwriteTags'[]
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **target**: ExportPipelineTargetProperties (Required)
+* **target**: [ExportPipelineTargetProperties](#exportpipelinetargetproperties) (Required)
 
 ## ExportPipelineTargetProperties
 ### Properties
@@ -326,8 +326,8 @@
 ### Properties
 * **options**: 'ContinueOnErrors' | 'DeleteSourceBlobOnSuccess' | 'OverwriteBlobs' | 'OverwriteTags'[]
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **source**: ImportPipelineSourceProperties (Required)
-* **trigger**: PipelineTriggerProperties
+* **source**: [ImportPipelineSourceProperties](#importpipelinesourceproperties) (Required)
+* **trigger**: [PipelineTriggerProperties](#pipelinetriggerproperties)
 
 ## ImportPipelineSourceProperties
 ### Properties
@@ -337,7 +337,7 @@
 
 ## PipelineTriggerProperties
 ### Properties
-* **sourceTrigger**: PipelineSourceTriggerProperties
+* **sourceTrigger**: [PipelineSourceTriggerProperties](#pipelinesourcetriggerproperties)
 
 ## PipelineSourceTriggerProperties
 ### Properties
@@ -347,16 +347,16 @@
 ### Properties
 * **forceUpdateTag**: string
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **request**: PipelineRunRequest
-* **response**: PipelineRunResponse (ReadOnly)
+* **request**: [PipelineRunRequest](#pipelinerunrequest)
+* **response**: [PipelineRunResponse](#pipelinerunresponse) (ReadOnly)
 
 ## PipelineRunRequest
 ### Properties
 * **artifacts**: string[]
 * **catalogDigest**: string
 * **pipelineResourceId**: string
-* **source**: PipelineRunSourceProperties
-* **target**: PipelineRunTargetProperties
+* **source**: [PipelineRunSourceProperties](#pipelinerunsourceproperties)
+* **target**: [PipelineRunTargetProperties](#pipelineruntargetproperties)
 
 ## PipelineRunSourceProperties
 ### Properties
@@ -374,12 +374,12 @@
 * **finishTime**: string
 * **importedArtifacts**: string[]
 * **pipelineRunErrorMessage**: string
-* **progress**: ProgressProperties
-* **source**: ImportPipelineSourceProperties
+* **progress**: [ProgressProperties](#progressproperties)
+* **source**: [ImportPipelineSourceProperties](#importpipelinesourceproperties)
 * **startTime**: string
 * **status**: string
-* **target**: ExportPipelineTargetProperties
-* **trigger**: PipelineTriggerDescriptor
+* **target**: [ExportPipelineTargetProperties](#exportpipelinetargetproperties)
+* **trigger**: [PipelineTriggerDescriptor](#pipelinetriggerdescriptor)
 
 ## ProgressProperties
 ### Properties
@@ -387,7 +387,7 @@
 
 ## PipelineTriggerDescriptor
 ### Properties
-* **sourceTrigger**: PipelineSourceTriggerDescriptor
+* **sourceTrigger**: [PipelineSourceTriggerDescriptor](#pipelinesourcetriggerdescriptor)
 
 ## PipelineSourceTriggerDescriptor
 ### Properties
@@ -397,7 +397,7 @@
 ### Properties
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **regionEndpointEnabled**: bool
-* **status**: Status (ReadOnly)
+* **status**: [Status](#status) (ReadOnly)
 * **zoneRedundancy**: 'Disabled' | 'Enabled'
 
 ## Dictionary<string,String>
@@ -416,15 +416,15 @@
 ## TokenProperties
 ### Properties
 * **creationDate**: string (ReadOnly)
-* **credentials**: TokenCredentialsProperties
+* **credentials**: [TokenCredentialsProperties](#tokencredentialsproperties)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **scopeMapId**: string
 * **status**: 'disabled' | 'enabled'
 
 ## TokenCredentialsProperties
 ### Properties
-* **certificates**: TokenCertificate[]
-* **passwords**: TokenPassword[]
+* **certificates**: [TokenCertificate](#tokencertificate)[]
+* **passwords**: [TokenPassword](#tokenpassword)[]
 
 ## TokenCertificate
 ### Properties
@@ -443,7 +443,7 @@
 ## WebhookPropertiesCreateParameters
 ### Properties
 * **actions**: 'chart_delete' | 'chart_push' | 'delete' | 'push' | 'quarantine'[] (Required)
-* **customHeaders**: Dictionary<string,String> (WriteOnly)
+* **customHeaders**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **scope**: string
 * **serviceUri**: string (Required, WriteOnly)

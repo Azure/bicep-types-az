@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-06-15-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EventSubscriptionProperties
+* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties)
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/topics@2017-06-15-preview
@@ -16,14 +16,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TopicProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [TopicProperties](#topicproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
 ## EventSubscriptionProperties
 ### Properties
-* **destination**: EventSubscriptionDestination
-* **filter**: EventSubscriptionFilter
+* **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination)
+* **filter**: [EventSubscriptionFilter](#eventsubscriptionfilter)
 * **labels**: string[]
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **topic**: string (ReadOnly)
@@ -31,7 +31,7 @@
 ## EventSubscriptionDestination
 ### Properties
 * **endpointType**: 'WebHook'
-* **properties**: EventSubscriptionDestinationProperties
+* **properties**: [EventSubscriptionDestinationProperties](#eventsubscriptiondestinationproperties)
 
 ## EventSubscriptionDestinationProperties
 ### Properties

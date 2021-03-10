@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: UserAssignedIdentityProperties (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [UserAssignedIdentityProperties](#userassignedidentityproperties) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ManagedIdentity/userAssignedIdentities' (ReadOnly, DeployTimeConstant)
 
 ## UserAssignedIdentityProperties

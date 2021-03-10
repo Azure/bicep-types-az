@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProjectProperties
+* **properties**: [ProjectProperties](#projectproperties)
 * **tags**: any
 * **type**: 'Microsoft.Migrate/assessmentProjects' (ReadOnly, DeployTimeConstant)
 
@@ -19,7 +19,7 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GroupProperties (Required)
+* **properties**: [GroupProperties](#groupproperties) (Required)
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Migrate/assessmentProjects/groups/assessments@2019-10-01
@@ -29,7 +29,7 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AssessmentProperties (Required)
+* **properties**: [AssessmentProperties](#assessmentproperties) (Required)
 * **type**: 'Microsoft.Migrate/assessmentProjects/groups/assessments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Migrate/assessmentProjects/hypervcollectors@2019-10-01
@@ -39,7 +39,7 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CollectorProperties
+* **properties**: [CollectorProperties](#collectorproperties)
 * **type**: 'Microsoft.Migrate/assessmentProjects/hypervcollectors' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Migrate/assessmentProjects/vmwarecollectors@2019-10-01
@@ -49,7 +49,7 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CollectorProperties
+* **properties**: [CollectorProperties](#collectorproperties)
 * **type**: 'Microsoft.Migrate/assessmentProjects/vmwarecollectors' (ReadOnly, DeployTimeConstant)
 
 ## ProjectProperties
@@ -107,7 +107,7 @@
 * **status**: 'Completed' | 'Created' | 'Invalid' | 'OutDated' | 'OutOfSync' | 'Running' | 'Updated' (ReadOnly)
 * **timeRange**: 'Custom' | 'Day' | 'Month' | 'Week' (Required)
 * **updatedTimestamp**: string (ReadOnly)
-* **vmUptime**: VmUptime (Required)
+* **vmUptime**: [VmUptime](#vmuptime) (Required)
 
 ## VmUptime
 ### Properties
@@ -116,7 +116,7 @@
 
 ## CollectorProperties
 ### Properties
-* **agentProperties**: CollectorAgentProperties
+* **agentProperties**: [CollectorAgentProperties](#collectoragentproperties)
 * **createdTimestamp**: string (ReadOnly)
 * **discoverySiteId**: string
 * **updatedTimestamp**: string (ReadOnly)
@@ -125,7 +125,7 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **lastHeartbeatUtc**: string (ReadOnly)
-* **spnDetails**: CollectorBodyAgentSpnProperties
+* **spnDetails**: [CollectorBodyAgentSpnProperties](#collectorbodyagentspnproperties)
 * **version**: string (ReadOnly)
 
 ## CollectorBodyAgentSpnProperties

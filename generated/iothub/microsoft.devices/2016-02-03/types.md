@@ -8,11 +8,11 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IotHubProperties
+* **properties**: [IotHubProperties](#iothubproperties)
 * **resourcegroup**: string (Required)
-* **sku**: IotHubSkuInfo (Required)
+* **sku**: [IotHubSkuInfo](#iothubskuinfo) (Required)
 * **subscriptionid**: string (Required)
-* **tags**: Dictionary<string,String>
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Devices/IotHubs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups@2016-02-03
@@ -21,23 +21,23 @@
 * **apiVersion**: '2016-02-03' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **tags**: Dictionary<string,String> (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
 * **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant)
 
 ## IotHubProperties
 ### Properties
-* **authorizationPolicies**: SharedAccessSignatureAuthorizationRule[]
-* **cloudToDevice**: CloudToDeviceProperties
+* **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[]
+* **cloudToDevice**: [CloudToDeviceProperties](#cloudtodeviceproperties)
 * **comments**: string
 * **enableFileUploadNotifications**: bool
-* **eventHubEndpoints**: Dictionary<string,EventHubProperties>
+* **eventHubEndpoints**: [Dictionary<string,EventHubProperties>](#dictionarystringeventhubproperties)
 * **features**: 'DeviceManagement' | 'None'
 * **hostName**: string (ReadOnly)
-* **ipFilterRules**: IpFilterRule[]
-* **messagingEndpoints**: Dictionary<string,MessagingEndpointProperties>
-* **operationsMonitoringProperties**: OperationsMonitoringProperties
+* **ipFilterRules**: [IpFilterRule](#ipfilterrule)[]
+* **messagingEndpoints**: [Dictionary<string,MessagingEndpointProperties>](#dictionarystringmessagingendpointproperties)
+* **operationsMonitoringProperties**: [OperationsMonitoringProperties](#operationsmonitoringproperties)
 * **provisioningState**: string (ReadOnly)
-* **storageEndpoints**: Dictionary<string,StorageEndpointProperties>
+* **storageEndpoints**: [Dictionary<string,StorageEndpointProperties>](#dictionarystringstorageendpointproperties)
 
 ## SharedAccessSignatureAuthorizationRule
 ### Properties
@@ -49,7 +49,7 @@
 ## CloudToDeviceProperties
 ### Properties
 * **defaultTtlAsIso8601**: string
-* **feedback**: FeedbackProperties
+* **feedback**: [FeedbackProperties](#feedbackproperties)
 * **maxDeliveryCount**: int
 
 ## FeedbackProperties
@@ -61,7 +61,7 @@
 ## Dictionary<string,EventHubProperties>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: EventHubProperties
+* **Additional Properties Type**: [EventHubProperties](#eventhubproperties)
 
 ## EventHubProperties
 ### Properties
@@ -80,7 +80,7 @@
 ## Dictionary<string,MessagingEndpointProperties>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: MessagingEndpointProperties
+* **Additional Properties Type**: [MessagingEndpointProperties](#messagingendpointproperties)
 
 ## MessagingEndpointProperties
 ### Properties
@@ -90,7 +90,7 @@
 
 ## OperationsMonitoringProperties
 ### Properties
-* **events**: Dictionary<string,OperationMonitoringLevel>
+* **events**: [Dictionary<string,OperationMonitoringLevel>](#dictionarystringoperationmonitoringlevel)
 
 ## Dictionary<string,OperationMonitoringLevel>
 ### Properties
@@ -100,7 +100,7 @@
 ## Dictionary<string,StorageEndpointProperties>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: StorageEndpointProperties
+* **Additional Properties Type**: [StorageEndpointProperties](#storageendpointproperties)
 
 ## StorageEndpointProperties
 ### Properties

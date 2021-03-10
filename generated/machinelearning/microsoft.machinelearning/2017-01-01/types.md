@@ -7,60 +7,60 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WebServiceProperties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [WebServiceProperties](#webserviceproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.MachineLearning/webServices' (ReadOnly, DeployTimeConstant)
 
 ## WebServiceProperties
 * **Discriminator**: packageType
 ### Base Properties
-* **assets**: Dictionary<string,AssetItem>
-* **commitmentPlan**: CommitmentPlan
+* **assets**: [Dictionary<string,AssetItem>](#dictionarystringassetitem)
+* **commitmentPlan**: [CommitmentPlan](#commitmentplan)
 * **createdOn**: string (ReadOnly)
 * **description**: string
-* **diagnostics**: DiagnosticsConfiguration
-* **exampleRequest**: ExampleRequest
+* **diagnostics**: [DiagnosticsConfiguration](#diagnosticsconfiguration)
+* **exampleRequest**: [ExampleRequest](#examplerequest)
 * **exposeSampleData**: bool
-* **input**: ServiceInputOutputSpecification
-* **keys**: WebServiceKeys
-* **machineLearningWorkspace**: MachineLearningWorkspace
+* **input**: [ServiceInputOutputSpecification](#serviceinputoutputspecification)
+* **keys**: [WebServiceKeys](#webservicekeys)
+* **machineLearningWorkspace**: [MachineLearningWorkspace](#machinelearningworkspace)
 * **modifiedOn**: string (ReadOnly)
-* **output**: ServiceInputOutputSpecification
-* **parameters**: Dictionary<string,WebServiceParameter>
+* **output**: [ServiceInputOutputSpecification](#serviceinputoutputspecification)
+* **parameters**: [Dictionary<string,WebServiceParameter>](#dictionarystringwebserviceparameter)
 * **payloadsInBlobStorage**: bool
-* **payloadsLocation**: BlobLocation
+* **payloadsLocation**: [BlobLocation](#bloblocation)
 * **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' (ReadOnly)
 * **readOnly**: bool
-* **realtimeConfiguration**: RealtimeConfiguration
-* **storageAccount**: StorageAccount
+* **realtimeConfiguration**: [RealtimeConfiguration](#realtimeconfiguration)
+* **storageAccount**: [StorageAccount](#storageaccount)
 * **swaggerLocation**: string (ReadOnly)
 * **title**: string
 ### Graph
 #### Properties
-* **package**: GraphPackage
+* **package**: [GraphPackage](#graphpackage)
 * **packageType**: 'Graph' (Required)
 
 
 ## Dictionary<string,AssetItem>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: AssetItem
+* **Additional Properties Type**: [AssetItem](#assetitem)
 
 ## AssetItem
 ### Properties
 * **id**: string
-* **inputPorts**: Dictionary<string,InputPort>
-* **locationInfo**: BlobLocation (Required)
-* **metadata**: Dictionary<string,String>
+* **inputPorts**: [Dictionary<string,InputPort>](#dictionarystringinputport)
+* **locationInfo**: [BlobLocation](#bloblocation) (Required)
+* **metadata**: [Dictionary<string,String>](#dictionarystringstring)
 * **name**: string (Required)
-* **outputPorts**: Dictionary<string,OutputPort>
-* **parameters**: ModuleAssetParameter[]
+* **outputPorts**: [Dictionary<string,OutputPort>](#dictionarystringoutputport)
+* **parameters**: [ModuleAssetParameter](#moduleassetparameter)[]
 * **type**: 'Module' | 'Resource' (Required)
 
 ## Dictionary<string,InputPort>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: InputPort
+* **Additional Properties Type**: [InputPort](#inputport)
 
 ## InputPort
 ### Properties
@@ -79,7 +79,7 @@
 ## Dictionary<string,OutputPort>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: OutputPort
+* **Additional Properties Type**: [OutputPort](#outputport)
 
 ## OutputPort
 ### Properties
@@ -87,19 +87,19 @@
 
 ## ModuleAssetParameter
 ### Properties
-* **modeValuesInfo**: Dictionary<string,ModeValueInfo>
+* **modeValuesInfo**: [Dictionary<string,ModeValueInfo>](#dictionarystringmodevalueinfo)
 * **name**: string
 * **parameterType**: string
 
 ## Dictionary<string,ModeValueInfo>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ModeValueInfo
+* **Additional Properties Type**: [ModeValueInfo](#modevalueinfo)
 
 ## ModeValueInfo
 ### Properties
 * **interfaceString**: string
-* **parameters**: ModuleAssetParameter[]
+* **parameters**: [ModuleAssetParameter](#moduleassetparameter)[]
 
 ## CommitmentPlan
 ### Properties
@@ -112,8 +112,8 @@
 
 ## ExampleRequest
 ### Properties
-* **globalParameters**: Dictionary<string,Object>
-* **inputs**: Dictionary<string,IList<IList<Object>>>
+* **globalParameters**: [Dictionary<string,Object>](#dictionarystringobject)
+* **inputs**: [Dictionary<string,IList<IList<Object>>>](#dictionarystringilistilistobject)
 
 ## Dictionary<string,Object>
 ### Properties
@@ -128,27 +128,27 @@
 ## ServiceInputOutputSpecification
 ### Properties
 * **description**: string
-* **properties**: Dictionary<string,TableSpecification> (Required)
+* **properties**: [Dictionary<string,TableSpecification>](#dictionarystringtablespecification) (Required)
 * **title**: string
 * **type**: string (Required)
 
 ## Dictionary<string,TableSpecification>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: TableSpecification
+* **Additional Properties Type**: [TableSpecification](#tablespecification)
 
 ## TableSpecification
 ### Properties
 * **description**: string
 * **format**: string
-* **properties**: Dictionary<string,ColumnSpecification>
+* **properties**: [Dictionary<string,ColumnSpecification>](#dictionarystringcolumnspecification)
 * **title**: string
 * **type**: string (Required)
 
 ## Dictionary<string,ColumnSpecification>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ColumnSpecification
+* **Additional Properties Type**: [ColumnSpecification](#columnspecification)
 
 ## ColumnSpecification
 ### Properties
@@ -170,7 +170,7 @@
 ## Dictionary<string,WebServiceParameter>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: WebServiceParameter
+* **Additional Properties Type**: [WebServiceParameter](#webserviceparameter)
 
 ## WebServiceParameter
 ### Properties
@@ -188,14 +188,14 @@
 
 ## Graph
 ### Properties
-* **package**: GraphPackage
+* **package**: [GraphPackage](#graphpackage)
 * **packageType**: 'Graph' (Required)
 
 ## GraphPackage
 ### Properties
-* **edges**: GraphEdge[]
-* **graphParameters**: Dictionary<string,GraphParameter>
-* **nodes**: Dictionary<string,GraphNode>
+* **edges**: [GraphEdge](#graphedge)[]
+* **graphParameters**: [Dictionary<string,GraphParameter>](#dictionarystringgraphparameter)
+* **nodes**: [Dictionary<string,GraphNode>](#dictionarystringgraphnode)
 
 ## GraphEdge
 ### Properties
@@ -207,12 +207,12 @@
 ## Dictionary<string,GraphParameter>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: GraphParameter
+* **Additional Properties Type**: [GraphParameter](#graphparameter)
 
 ## GraphParameter
 ### Properties
 * **description**: string
-* **links**: GraphParameterLink[] (Required)
+* **links**: [GraphParameterLink](#graphparameterlink)[] (Required)
 * **type**: 'Boolean' | 'ColumnPicker' | 'Credential' | 'DataGatewayName' | 'Double' | 'Enumerated' | 'Float' | 'Int' | 'Mode' | 'ParameterRange' | 'Script' | 'String' (Required)
 
 ## GraphParameterLink
@@ -223,19 +223,19 @@
 ## Dictionary<string,GraphNode>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: GraphNode
+* **Additional Properties Type**: [GraphNode](#graphnode)
 
 ## GraphNode
 ### Properties
 * **assetId**: string
 * **inputId**: string
 * **outputId**: string
-* **parameters**: Dictionary<string,WebServiceParameter>
+* **parameters**: [Dictionary<string,WebServiceParameter>](#dictionarystringwebserviceparameter)
 
 ## Dictionary<string,WebServiceParameter>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: WebServiceParameter
+* **Additional Properties Type**: [WebServiceParameter](#webserviceparameter)
 
 ## Dictionary<string,String>
 ### Properties

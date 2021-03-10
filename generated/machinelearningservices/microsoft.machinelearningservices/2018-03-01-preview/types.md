@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [WorkspaceProperties](#workspaceproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.MachineLearningServices/workspaces/computes@2018-03-01-preview
@@ -17,11 +17,11 @@
 ### Properties
 * **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: Compute
-* **tags**: Dictionary<string,String>
+* **properties**: [Compute](#compute)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -56,18 +56,18 @@
 * **createdOn**: string (ReadOnly)
 * **description**: string
 * **modifiedOn**: string (ReadOnly)
-* **provisioningErrors**: MachineLearningServiceError[] (ReadOnly)
+* **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
 * **resourceId**: string
 ### AKS
 #### Properties
 * **computeType**: 'AKS' (Required)
-* **properties**: schemas:15_properties
+* **properties**: [schemas:15_properties](#schemas15properties)
 
 ### BatchAI
 #### Properties
 * **computeType**: 'BatchAI' (Required)
-* **properties**: schemas:16_properties
+* **properties**: [schemas:16_properties](#schemas16properties)
 
 ### DataFactory
 #### Properties
@@ -76,22 +76,22 @@
 ### HDInsight
 #### Properties
 * **computeType**: 'HDInsight' (Required)
-* **properties**: schemas:17_properties
+* **properties**: [schemas:17_properties](#schemas17properties)
 
 ### VirtualMachine
 #### Properties
 * **computeType**: 'VirtualMachine' (Required)
-* **properties**: schemas:17_properties
+* **properties**: [schemas:17_properties](#schemas17properties)
 
 
 ## MachineLearningServiceError
 ### Properties
-* **error**: ErrorResponse
+* **error**: [ErrorResponse](#errorresponse)
 
 ## ErrorResponse
 ### Properties
 * **code**: string (Required)
-* **details**: ErrorDetail[]
+* **details**: [ErrorDetail](#errordetail)[]
 * **message**: string (Required)
 
 ## ErrorDetail
@@ -102,15 +102,15 @@
 ## AKS
 ### Properties
 * **computeType**: 'AKS' (Required)
-* **properties**: schemas:15_properties
+* **properties**: [schemas:15_properties](#schemas15properties)
 
 ## schemas:15_properties
 ### Properties
 * **agentCount**: int
 * **agentVMSize**: string
 * **clusterFqdn**: string
-* **sslConfiguration**: SslConfiguration
-* **systemServices**: SystemService[]
+* **sslConfiguration**: [SslConfiguration](#sslconfiguration)
+* **systemServices**: [SystemService](#systemservice)[]
 
 ## SslConfiguration
 ### Properties
@@ -128,11 +128,11 @@
 ## BatchAI
 ### Properties
 * **computeType**: 'BatchAI' (Required)
-* **properties**: schemas:16_properties
+* **properties**: [schemas:16_properties](#schemas16properties)
 
 ## schemas:16_properties
 ### Properties
-* **scaleSettings**: ScaleSettings
+* **scaleSettings**: [ScaleSettings](#scalesettings)
 * **vmPriority**: string
 * **vmSize**: string
 
@@ -149,12 +149,12 @@
 ## HDInsight
 ### Properties
 * **computeType**: 'HDInsight' (Required)
-* **properties**: schemas:17_properties
+* **properties**: [schemas:17_properties](#schemas17properties)
 
 ## schemas:17_properties
 ### Properties
 * **address**: string
-* **administratorAccount**: VirtualMachineSshCredentials
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials)
 * **sshPort**: int
 * **virtualMachineSize**: string
 
@@ -168,7 +168,7 @@
 ## VirtualMachine
 ### Properties
 * **computeType**: 'VirtualMachine' (Required)
-* **properties**: schemas:17_properties
+* **properties**: [schemas:17_properties](#schemas17properties)
 
 ## Dictionary<string,String>
 ### Properties

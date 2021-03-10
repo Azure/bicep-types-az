@@ -7,35 +7,35 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:13_properties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [schemas:13_properties](#schemas13properties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant)
 
 ## schemas:13_properties
 ### Properties
-* **containers**: Container[] (Required)
-* **imageRegistryCredentials**: ImageRegistryCredential[]
-* **instanceView**: schemas:13_properties_instanceView (ReadOnly)
-* **ipAddress**: IpAddress
+* **containers**: [Container](#container)[] (Required)
+* **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]
+* **instanceView**: [schemas:13_properties_instanceView](#schemas13propertiesinstanceview) (ReadOnly)
+* **ipAddress**: [IpAddress](#ipaddress)
 * **osType**: 'Linux' | 'Windows' (Required)
 * **provisioningState**: string (ReadOnly)
 * **restartPolicy**: 'Always' | 'Never' | 'OnFailure'
-* **volumes**: Volume[]
+* **volumes**: [Volume](#volume)[]
 
 ## Container
 ### Properties
 * **name**: string (Required)
-* **properties**: ContainerProperties (Required)
+* **properties**: [ContainerProperties](#containerproperties) (Required)
 
 ## ContainerProperties
 ### Properties
 * **command**: string[]
-* **environmentVariables**: EnvironmentVariable[]
+* **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]
 * **image**: string (Required)
-* **instanceView**: schemas:1_instanceView (ReadOnly)
-* **ports**: ContainerPort[]
-* **resources**: ResourceRequirements (Required)
-* **volumeMounts**: VolumeMount[]
+* **instanceView**: [schemas:1_instanceView](#schemas1instanceview) (ReadOnly)
+* **ports**: [ContainerPort](#containerport)[]
+* **resources**: [ResourceRequirements](#resourcerequirements) (Required)
+* **volumeMounts**: [VolumeMount](#volumemount)[]
 
 ## EnvironmentVariable
 ### Properties
@@ -44,9 +44,9 @@
 
 ## schemas:1_instanceView
 ### Properties
-* **currentState**: ContainerState (ReadOnly)
-* **events**: Event[] (ReadOnly)
-* **previousState**: ContainerState (ReadOnly)
+* **currentState**: [ContainerState](#containerstate) (ReadOnly)
+* **events**: [Event](#event)[] (ReadOnly)
+* **previousState**: [ContainerState](#containerstate) (ReadOnly)
 * **restartCount**: int (ReadOnly)
 
 ## ContainerState
@@ -73,8 +73,8 @@
 
 ## ResourceRequirements
 ### Properties
-* **limits**: ResourceLimits
-* **requests**: ResourceRequests (Required)
+* **limits**: [ResourceLimits](#resourcelimits)
+* **requests**: [ResourceRequests](#resourcerequests) (Required)
 
 ## ResourceLimits
 ### Properties
@@ -100,13 +100,13 @@
 
 ## schemas:13_properties_instanceView
 ### Properties
-* **events**: Event[] (ReadOnly)
+* **events**: [Event](#event)[] (ReadOnly)
 * **state**: string (ReadOnly)
 
 ## IpAddress
 ### Properties
 * **ip**: string
-* **ports**: Port[] (Required)
+* **ports**: [Port](#port)[] (Required)
 * **type**: string (Required)
 
 ## Port
@@ -116,11 +116,11 @@
 
 ## Volume
 ### Properties
-* **azureFile**: AzureFileVolume
+* **azureFile**: [AzureFileVolume](#azurefilevolume)
 * **emptyDir**: any
-* **gitRepo**: GitRepoVolume
+* **gitRepo**: [GitRepoVolume](#gitrepovolume)
 * **name**: string (Required)
-* **secret**: Dictionary<string,String>
+* **secret**: [Dictionary<string,String>](#dictionarystringstring)
 
 ## AzureFileVolume
 ### Properties

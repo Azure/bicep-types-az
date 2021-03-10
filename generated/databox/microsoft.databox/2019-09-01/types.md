@@ -7,18 +7,18 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: JobProperties (Required)
-* **sku**: Sku (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [JobProperties](#jobproperties) (Required)
+* **sku**: [Sku](#sku) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DataBox/jobs' (ReadOnly, DeployTimeConstant)
 
 ## JobProperties
 ### Properties
 * **cancellationReason**: string (ReadOnly)
-* **deliveryInfo**: JobDeliveryInfo
+* **deliveryInfo**: [JobDeliveryInfo](#jobdeliveryinfo)
 * **deliveryType**: 'NonScheduled' | 'Scheduled'
-* **details**: JobDetails
-* **error**: Error (ReadOnly)
+* **details**: [JobDetails](#jobdetails)
+* **error**: [Error](#error) (ReadOnly)
 * **isCancellable**: bool (ReadOnly)
 * **isCancellableWithoutFee**: bool (ReadOnly)
 * **isDeletable**: bool (ReadOnly)
@@ -34,17 +34,17 @@
 * **Discriminator**: jobDetailsType
 ### Base Properties
 * **chainOfCustodySasKey**: string (ReadOnly)
-* **contactDetails**: ContactDetails (Required)
-* **copyLogDetails**: CopyLogDetails[] (ReadOnly)
-* **deliveryPackage**: PackageShippingDetails (ReadOnly)
-* **destinationAccountDetails**: DestinationAccountDetails[] (Required)
-* **errorDetails**: JobErrorDetails[] (ReadOnly)
+* **contactDetails**: [ContactDetails](#contactdetails) (Required)
+* **copyLogDetails**: [CopyLogDetails](#copylogdetails)[] (ReadOnly)
+* **deliveryPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly)
+* **destinationAccountDetails**: [DestinationAccountDetails](#destinationaccountdetails)[] (Required)
+* **errorDetails**: [JobErrorDetails](#joberrordetails)[] (ReadOnly)
 * **expectedDataSizeInTerabytes**: int
-* **jobStages**: JobStages[] (ReadOnly)
-* **preferences**: Preferences
-* **returnPackage**: PackageShippingDetails (ReadOnly)
+* **jobStages**: [JobStages](#jobstages)[] (ReadOnly)
+* **preferences**: [Preferences](#preferences)
+* **returnPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly)
 * **reverseShipmentLabelSasKey**: string (ReadOnly)
-* **shippingAddress**: ShippingAddress (Required)
+* **shippingAddress**: [ShippingAddress](#shippingaddress) (Required)
 ### DataBox
 #### Properties
 * **accountName**: string (ReadOnly)
@@ -73,7 +73,7 @@
 * **contactName**: string (Required)
 * **emailList**: string[] (Required)
 * **mobile**: string
-* **notificationPreference**: NotificationPreference[]
+* **notificationPreference**: [NotificationPreference](#notificationpreference)[]
 * **phone**: string (Required)
 * **phoneExtension**: string
 
@@ -174,7 +174,7 @@
 ## JobStages
 ### Properties
 * **displayName**: string (ReadOnly)
-* **errorDetails**: JobErrorDetails[] (ReadOnly)
+* **errorDetails**: [JobErrorDetails](#joberrordetails)[] (ReadOnly)
 * **jobStageDetails**: any (ReadOnly)
 * **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' (ReadOnly)
 * **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' | 'SucceededWithErrors' (ReadOnly)
@@ -183,7 +183,7 @@
 ## Preferences
 ### Properties
 * **preferredDataCenterRegion**: string[]
-* **transportPreferences**: TransportPreferences
+* **transportPreferences**: [TransportPreferences](#transportpreferences)
 
 ## TransportPreferences
 ### Properties

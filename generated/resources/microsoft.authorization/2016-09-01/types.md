@@ -6,14 +6,14 @@
 * **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagementLockProperties (Required)
+* **properties**: [ManagementLockProperties](#managementlockproperties) (Required)
 * **type**: 'Microsoft.Authorization/locks' (ReadOnly, DeployTimeConstant)
 
 ## ManagementLockProperties
 ### Properties
 * **level**: 'CanNotDelete' | 'NotSpecified' | 'ReadOnly' (Required)
 * **notes**: string
-* **owners**: ManagementLockOwner[]
+* **owners**: [ManagementLockOwner](#managementlockowner)[]
 
 ## ManagementLockOwner
 ### Properties

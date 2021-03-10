@@ -8,18 +8,18 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **sku**: Sku (Required)
-* **tags**: Dictionary<string,String>
+* **sku**: [Sku](#sku) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.TimeSeriesInsights/environments' (ReadOnly, DeployTimeConstant)
 ### LongTerm
 #### Properties
 * **kind**: 'LongTerm' (Required)
-* **properties**: LongTermEnvironmentCreationProperties (Required)
+* **properties**: [LongTermEnvironmentCreationProperties](#longtermenvironmentcreationproperties) (Required)
 
 ### Standard
 #### Properties
 * **kind**: 'Standard' (Required)
-* **properties**: StandardEnvironmentCreationProperties (Required)
+* **properties**: [StandardEnvironmentCreationProperties](#standardenvironmentcreationproperties) (Required)
 
 
 ## Resource Microsoft.TimeSeriesInsights/environments/accessPolicies@2018-08-15-preview
@@ -28,7 +28,7 @@
 * **apiVersion**: '2018-08-15-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AccessPolicyResourceProperties (Required)
+* **properties**: [AccessPolicyResourceProperties](#accesspolicyresourceproperties) (Required)
 * **type**: 'Microsoft.TimeSeriesInsights/environments/accessPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.TimeSeriesInsights/environments/eventSources@2018-08-15-preview
@@ -37,20 +37,20 @@
 ### Base Properties
 * **apiVersion**: '2018-08-15-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **localTimestamp**: LocalTimestamp (WriteOnly)
+* **localTimestamp**: [LocalTimestamp](#localtimestamp) (WriteOnly)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **tags**: Dictionary<string,String>
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.TimeSeriesInsights/environments/eventSources' (ReadOnly, DeployTimeConstant)
 ### Microsoft.EventHub
 #### Properties
 * **kind**: 'Microsoft.EventHub' (Required)
-* **properties**: EventHubEventSourceCreationProperties (Required)
+* **properties**: [EventHubEventSourceCreationProperties](#eventhubeventsourcecreationproperties) (Required)
 
 ### Microsoft.IoTHub
 #### Properties
 * **kind**: 'Microsoft.IoTHub' (Required)
-* **properties**: IoTHubEventSourceCreationProperties (Required)
+* **properties**: [IoTHubEventSourceCreationProperties](#iothubeventsourcecreationproperties) (Required)
 
 
 ## Resource Microsoft.TimeSeriesInsights/environments/referenceDataSets@2018-08-15-preview
@@ -60,8 +60,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ReferenceDataSetCreationProperties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [ReferenceDataSetCreationProperties](#referencedatasetcreationproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.TimeSeriesInsights/environments/referenceDataSets' (ReadOnly, DeployTimeConstant)
 
 ## Sku
@@ -77,7 +77,7 @@
 ## LongTerm
 ### Properties
 * **kind**: 'LongTerm' (Required)
-* **properties**: LongTermEnvironmentCreationProperties (Required)
+* **properties**: [LongTermEnvironmentCreationProperties](#longtermenvironmentcreationproperties) (Required)
 
 ## LongTermEnvironmentCreationProperties
 ### Properties
@@ -85,20 +85,20 @@
 * **dataAccessFqdn**: string (ReadOnly)
 * **dataAccessId**: string (ReadOnly)
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **status**: EnvironmentStatus (ReadOnly)
-* **storageConfiguration**: LongTermStorageConfigurationInput (Required)
-* **timeSeriesIdProperties**: TimeSeriesIdProperty[] (Required)
-* **warmStoreConfiguration**: WarmStoreConfigurationProperties
+* **status**: [EnvironmentStatus](#environmentstatus) (ReadOnly)
+* **storageConfiguration**: [LongTermStorageConfigurationInput](#longtermstorageconfigurationinput) (Required)
+* **timeSeriesIdProperties**: [TimeSeriesIdProperty](#timeseriesidproperty)[] (Required)
+* **warmStoreConfiguration**: [WarmStoreConfigurationProperties](#warmstoreconfigurationproperties)
 
 ## EnvironmentStatus
 ### Properties
-* **ingress**: IngressEnvironmentStatus (ReadOnly)
-* **warmStorage**: WarmStorageEnvironmentStatus (ReadOnly)
+* **ingress**: [IngressEnvironmentStatus](#ingressenvironmentstatus) (ReadOnly)
+* **warmStorage**: [WarmStorageEnvironmentStatus](#warmstorageenvironmentstatus) (ReadOnly)
 
 ## IngressEnvironmentStatus
 ### Properties
 * **state**: 'Disabled' | 'Paused' | 'Ready' | 'Running' | 'Unknown' (ReadOnly)
-* **stateDetails**: EnvironmentStateDetails (ReadOnly)
+* **stateDetails**: [EnvironmentStateDetails](#environmentstatedetails) (ReadOnly)
 
 ## EnvironmentStateDetails
 ### Properties
@@ -107,12 +107,12 @@
 
 ## WarmStorageEnvironmentStatus
 ### Properties
-* **propertiesUsage**: WarmStoragePropertiesUsage (ReadOnly)
+* **propertiesUsage**: [WarmStoragePropertiesUsage](#warmstoragepropertiesusage) (ReadOnly)
 
 ## WarmStoragePropertiesUsage
 ### Properties
 * **state**: 'Error' | 'Ok' | 'Unknown' (ReadOnly)
-* **stateDetails**: WarmStoragePropertiesUsageStateDetails (ReadOnly)
+* **stateDetails**: [WarmStoragePropertiesUsageStateDetails](#warmstoragepropertiesusagestatedetails) (ReadOnly)
 
 ## WarmStoragePropertiesUsageStateDetails
 ### Properties
@@ -136,7 +136,7 @@
 ## Standard
 ### Properties
 * **kind**: 'Standard' (Required)
-* **properties**: StandardEnvironmentCreationProperties (Required)
+* **properties**: [StandardEnvironmentCreationProperties](#standardenvironmentcreationproperties) (Required)
 
 ## StandardEnvironmentCreationProperties
 ### Properties
@@ -144,9 +144,9 @@
 * **dataAccessFqdn**: string (ReadOnly)
 * **dataAccessId**: string (ReadOnly)
 * **dataRetentionTime**: string (Required)
-* **partitionKeyProperties**: TimeSeriesIdProperty[]
+* **partitionKeyProperties**: [TimeSeriesIdProperty](#timeseriesidproperty)[]
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **status**: EnvironmentStatus (ReadOnly)
+* **status**: [EnvironmentStatus](#environmentstatus) (ReadOnly)
 * **storageLimitExceededBehavior**: 'PauseIngress' | 'PurgeOldData'
 
 ## AccessPolicyResourceProperties
@@ -158,7 +158,7 @@
 ## LocalTimestamp
 ### Properties
 * **format**: 'Embedded' (WriteOnly)
-* **timeZoneOffset**: schemas:54_timeZoneOffset (WriteOnly)
+* **timeZoneOffset**: [schemas:54_timeZoneOffset](#schemas54timezoneoffset) (WriteOnly)
 
 ## schemas:54_timeZoneOffset
 ### Properties
@@ -172,7 +172,7 @@
 ## Microsoft.EventHub
 ### Properties
 * **kind**: 'Microsoft.EventHub' (Required)
-* **properties**: EventHubEventSourceCreationProperties (Required)
+* **properties**: [EventHubEventSourceCreationProperties](#eventhubeventsourcecreationproperties) (Required)
 
 ## EventHubEventSourceCreationProperties
 ### Properties
@@ -189,7 +189,7 @@
 ## Microsoft.IoTHub
 ### Properties
 * **kind**: 'Microsoft.IoTHub' (Required)
-* **properties**: IoTHubEventSourceCreationProperties (Required)
+* **properties**: [IoTHubEventSourceCreationProperties](#iothubeventsourcecreationproperties) (Required)
 
 ## IoTHubEventSourceCreationProperties
 ### Properties
@@ -206,7 +206,7 @@
 ### Properties
 * **creationTime**: string (ReadOnly)
 * **dataStringComparisonBehavior**: 'Ordinal' | 'OrdinalIgnoreCase'
-* **keyProperties**: ReferenceDataSetKeyProperty[] (Required)
+* **keyProperties**: [ReferenceDataSetKeyProperty](#referencedatasetkeyproperty)[] (Required)
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## ReferenceDataSetKeyProperty

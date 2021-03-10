@@ -8,9 +8,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IotHubProperties
-* **sku**: IotHubSkuInfo (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [IotHubProperties](#iothubproperties)
+* **sku**: [IotHubSkuInfo](#iothubskuinfo) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Devices/IotHubs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Devices/IotHubs/certificates@2018-04-01
@@ -21,7 +21,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CertificateProperties (ReadOnly)
+* **properties**: [CertificateProperties](#certificateproperties) (ReadOnly)
 * **type**: 'Microsoft.Devices/IotHubs/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups@2018-04-01
@@ -31,25 +31,25 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: Dictionary<string,String> (ReadOnly)
+* **properties**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
 * **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant)
 
 ## IotHubProperties
 ### Properties
-* **authorizationPolicies**: SharedAccessSignatureAuthorizationRule[]
-* **cloudToDevice**: CloudToDeviceProperties
+* **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[]
+* **cloudToDevice**: [CloudToDeviceProperties](#cloudtodeviceproperties)
 * **comments**: string
 * **enableFileUploadNotifications**: bool
-* **eventHubEndpoints**: Dictionary<string,EventHubProperties>
+* **eventHubEndpoints**: [Dictionary<string,EventHubProperties>](#dictionarystringeventhubproperties)
 * **features**: 'DeviceManagement' | 'None'
 * **hostName**: string (ReadOnly)
-* **ipFilterRules**: IpFilterRule[]
-* **messagingEndpoints**: Dictionary<string,MessagingEndpointProperties>
-* **operationsMonitoringProperties**: OperationsMonitoringProperties
+* **ipFilterRules**: [IpFilterRule](#ipfilterrule)[]
+* **messagingEndpoints**: [Dictionary<string,MessagingEndpointProperties>](#dictionarystringmessagingendpointproperties)
+* **operationsMonitoringProperties**: [OperationsMonitoringProperties](#operationsmonitoringproperties)
 * **provisioningState**: string (ReadOnly)
-* **routing**: RoutingProperties
+* **routing**: [RoutingProperties](#routingproperties)
 * **state**: string (ReadOnly)
-* **storageEndpoints**: Dictionary<string,StorageEndpointProperties>
+* **storageEndpoints**: [Dictionary<string,StorageEndpointProperties>](#dictionarystringstorageendpointproperties)
 
 ## SharedAccessSignatureAuthorizationRule
 ### Properties
@@ -61,7 +61,7 @@
 ## CloudToDeviceProperties
 ### Properties
 * **defaultTtlAsIso8601**: string
-* **feedback**: FeedbackProperties
+* **feedback**: [FeedbackProperties](#feedbackproperties)
 * **maxDeliveryCount**: int
 
 ## FeedbackProperties
@@ -73,7 +73,7 @@
 ## Dictionary<string,EventHubProperties>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: EventHubProperties
+* **Additional Properties Type**: [EventHubProperties](#eventhubproperties)
 
 ## EventHubProperties
 ### Properties
@@ -92,7 +92,7 @@
 ## Dictionary<string,MessagingEndpointProperties>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: MessagingEndpointProperties
+* **Additional Properties Type**: [MessagingEndpointProperties](#messagingendpointproperties)
 
 ## MessagingEndpointProperties
 ### Properties
@@ -102,7 +102,7 @@
 
 ## OperationsMonitoringProperties
 ### Properties
-* **events**: Dictionary<string,OperationMonitoringLevel>
+* **events**: [Dictionary<string,OperationMonitoringLevel>](#dictionarystringoperationmonitoringlevel)
 
 ## Dictionary<string,OperationMonitoringLevel>
 ### Properties
@@ -111,16 +111,16 @@
 
 ## RoutingProperties
 ### Properties
-* **endpoints**: RoutingEndpoints
-* **fallbackRoute**: FallbackRouteProperties
-* **routes**: RouteProperties[]
+* **endpoints**: [RoutingEndpoints](#routingendpoints)
+* **fallbackRoute**: [FallbackRouteProperties](#fallbackrouteproperties)
+* **routes**: [RouteProperties](#routeproperties)[]
 
 ## RoutingEndpoints
 ### Properties
-* **eventHubs**: RoutingEventHubProperties[]
-* **serviceBusQueues**: RoutingServiceBusQueueEndpointProperties[]
-* **serviceBusTopics**: RoutingServiceBusTopicEndpointProperties[]
-* **storageContainers**: RoutingStorageContainerProperties[]
+* **eventHubs**: [RoutingEventHubProperties](#routingeventhubproperties)[]
+* **serviceBusQueues**: [RoutingServiceBusQueueEndpointProperties](#routingservicebusqueueendpointproperties)[]
+* **serviceBusTopics**: [RoutingServiceBusTopicEndpointProperties](#routingservicebustopicendpointproperties)[]
+* **storageContainers**: [RoutingStorageContainerProperties](#routingstoragecontainerproperties)[]
 
 ## RoutingEventHubProperties
 ### Properties
@@ -174,7 +174,7 @@
 ## Dictionary<string,StorageEndpointProperties>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: StorageEndpointProperties
+* **Additional Properties Type**: [StorageEndpointProperties](#storageendpointproperties)
 
 ## StorageEndpointProperties
 ### Properties

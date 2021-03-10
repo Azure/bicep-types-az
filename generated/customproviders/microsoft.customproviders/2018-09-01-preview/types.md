@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:8_properties
+* **properties**: [schemas:8_properties](#schemas8properties)
 * **type**: 'Microsoft.CustomProviders/associations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CustomProviders/resourceProviders@2018-09-01-preview
@@ -16,8 +16,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:5_properties
-* **tags**: Dictionary<string,String>
+* **properties**: [schemas:5_properties](#schemas5properties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.CustomProviders/resourceProviders' (ReadOnly, DeployTimeConstant)
 
 ## schemas:8_properties
@@ -27,10 +27,10 @@
 
 ## schemas:5_properties
 ### Properties
-* **actions**: CustomRPActionRouteDefinition[]
+* **actions**: [CustomRPActionRouteDefinition](#customrpactionroutedefinition)[]
 * **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly)
-* **resourceTypes**: CustomRPResourceTypeRouteDefinition[]
-* **validations**: CustomRPValidations[]
+* **resourceTypes**: [CustomRPResourceTypeRouteDefinition](#customrpresourcetyperoutedefinition)[]
+* **validations**: [CustomRPValidations](#customrpvalidations)[]
 
 ## CustomRPActionRouteDefinition
 ### Properties

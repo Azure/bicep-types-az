@@ -7,7 +7,7 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ExportProperties
+* **properties**: [ExportProperties](#exportproperties)
 * **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CostManagement/views@2019-11-01
@@ -17,35 +17,35 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ViewProperties
+* **properties**: [ViewProperties](#viewproperties)
 * **type**: 'Microsoft.CostManagement/views' (ReadOnly, DeployTimeConstant)
 
 ## ExportProperties
 ### Properties
-* **definition**: ExportDefinition (Required)
-* **deliveryInfo**: ExportDeliveryInfo (Required)
+* **definition**: [ExportDefinition](#exportdefinition) (Required)
+* **deliveryInfo**: [ExportDeliveryInfo](#exportdeliveryinfo) (Required)
 * **format**: 'Csv'
-* **schedule**: ExportSchedule
+* **schedule**: [ExportSchedule](#exportschedule)
 
 ## ExportDefinition
 ### Properties
-* **dataSet**: QueryDataset
+* **dataSet**: [QueryDataset](#querydataset)
 * **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'WeekToDate' (Required)
-* **timePeriod**: QueryTimePeriod
+* **timePeriod**: [QueryTimePeriod](#querytimeperiod)
 * **type**: 'ActualCost' | 'AmortizedCost' | 'Usage' (Required)
 
 ## QueryDataset
 ### Properties
-* **aggregation**: Dictionary<string,QueryAggregation>
-* **configuration**: QueryDatasetConfiguration
-* **filter**: QueryFilter
+* **aggregation**: [Dictionary<string,QueryAggregation>](#dictionarystringqueryaggregation)
+* **configuration**: [QueryDatasetConfiguration](#querydatasetconfiguration)
+* **filter**: [QueryFilter](#queryfilter)
 * **granularity**: 'Daily'
-* **grouping**: QueryGrouping[]
+* **grouping**: [QueryGrouping](#querygrouping)[]
 
 ## Dictionary<string,QueryAggregation>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: QueryAggregation
+* **Additional Properties Type**: [QueryAggregation](#queryaggregation)
 
 ## QueryAggregation
 ### Properties
@@ -58,10 +58,10 @@
 
 ## QueryFilter
 ### Properties
-* **and**: QueryFilter[]
-* **dimensions**: QueryComparisonExpression
-* **or**: QueryFilter[]
-* **tags**: QueryComparisonExpression
+* **and**: [QueryFilter](#queryfilter)[]
+* **dimensions**: [QueryComparisonExpression](#querycomparisonexpression)
+* **or**: [QueryFilter](#queryfilter)[]
+* **tags**: [QueryComparisonExpression](#querycomparisonexpression)
 
 ## QueryComparisonExpression
 ### Properties
@@ -81,7 +81,7 @@
 
 ## ExportDeliveryInfo
 ### Properties
-* **destination**: ExportDeliveryDestination (Required)
+* **destination**: [ExportDeliveryDestination](#exportdeliverydestination) (Required)
 
 ## ExportDeliveryDestination
 ### Properties
@@ -92,7 +92,7 @@
 ## ExportSchedule
 ### Properties
 * **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' (Required)
-* **recurrencePeriod**: ExportRecurrencePeriod
+* **recurrencePeriod**: [ExportRecurrencePeriod](#exportrecurrenceperiod)
 * **status**: 'Active' | 'Inactive'
 
 ## ExportRecurrencePeriod
@@ -108,11 +108,11 @@
 * **currency**: string (ReadOnly)
 * **dateRange**: string (ReadOnly)
 * **displayName**: string
-* **kpis**: KpiProperties[]
+* **kpis**: [KpiProperties](#kpiproperties)[]
 * **metric**: 'ActualCost' | 'AHUB' | 'AmortizedCost'
 * **modifiedOn**: string (ReadOnly)
-* **pivots**: PivotProperties[]
-* **query**: ReportConfigDefinition
+* **pivots**: [PivotProperties](#pivotproperties)[]
+* **query**: [ReportConfigDefinition](#reportconfigdefinition)
 * **scope**: string
 
 ## KpiProperties
@@ -128,25 +128,25 @@
 
 ## ReportConfigDefinition
 ### Properties
-* **dataSet**: ReportConfigDataset
+* **dataSet**: [ReportConfigDataset](#reportconfigdataset)
 * **includeMonetaryCommitment**: bool (ReadOnly)
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required)
-* **timePeriod**: ReportConfigTimePeriod
+* **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod)
 * **type**: string (Required)
 
 ## ReportConfigDataset
 ### Properties
-* **aggregation**: Dictionary<string,ReportConfigAggregation>
-* **configuration**: ReportConfigDatasetConfiguration
-* **filter**: ReportConfigFilter
+* **aggregation**: [Dictionary<string,ReportConfigAggregation>](#dictionarystringreportconfigaggregation)
+* **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration)
+* **filter**: [ReportConfigFilter](#reportconfigfilter)
 * **granularity**: 'Daily' | 'Monthly'
-* **grouping**: ReportConfigGrouping[]
-* **sorting**: ReportConfigSorting[]
+* **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[]
+* **sorting**: [ReportConfigSorting](#reportconfigsorting)[]
 
 ## Dictionary<string,ReportConfigAggregation>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ReportConfigAggregation
+* **Additional Properties Type**: [ReportConfigAggregation](#reportconfigaggregation)
 
 ## ReportConfigAggregation
 ### Properties
@@ -159,11 +159,11 @@
 
 ## ReportConfigFilter
 ### Properties
-* **and**: ReportConfigFilter[]
-* **dimensions**: ReportConfigComparisonExpression
-* **or**: ReportConfigFilter[]
-* **tagKey**: ReportConfigComparisonExpression
-* **tags**: ReportConfigComparisonExpression
+* **and**: [ReportConfigFilter](#reportconfigfilter)[]
+* **dimensions**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression)
+* **or**: [ReportConfigFilter](#reportconfigfilter)[]
+* **tagKey**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression)
+* **tags**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression)
 
 ## ReportConfigComparisonExpression
 ### Properties

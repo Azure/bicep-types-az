@@ -7,15 +7,15 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AlertRule (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [AlertRule](#alertrule) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Insights/alertrules' (ReadOnly, DeployTimeConstant)
 
 ## AlertRule
 ### Properties
-* **action**: RuleAction
-* **actions**: RuleAction[]
-* **condition**: RuleCondition (Required)
+* **action**: [RuleAction](#ruleaction)
+* **actions**: [RuleAction](#ruleaction)[]
+* **condition**: [RuleCondition](#rulecondition) (Required)
 * **description**: string
 * **isEnabled**: bool (Required)
 * **lastUpdatedTime**: string (ReadOnly)
@@ -34,7 +34,7 @@
 ### Microsoft.Azure.Management.Insights.Models.RuleWebhookAction
 #### Properties
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleWebhookAction' (Required)
-* **properties**: Dictionary<string,String>
+* **properties**: [Dictionary<string,String>](#dictionarystringstring)
 * **serviceUri**: string
 
 
@@ -47,7 +47,7 @@
 ## Microsoft.Azure.Management.Insights.Models.RuleWebhookAction
 ### Properties
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleWebhookAction' (Required)
-* **properties**: Dictionary<string,String>
+* **properties**: [Dictionary<string,String>](#dictionarystringstring)
 * **serviceUri**: string
 
 ## Dictionary<string,String>
@@ -58,7 +58,7 @@
 ## RuleCondition
 * **Discriminator**: odata.type
 ### Base Properties
-* **dataSource**: RuleDataSource
+* **dataSource**: [RuleDataSource](#ruledatasource)
 ### Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition
 #### Properties
 * **failedLocationCount**: int (Required)
@@ -67,7 +67,7 @@
 
 ### Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition
 #### Properties
-* **aggregation**: ManagementEventAggregationCondition
+* **aggregation**: [ManagementEventAggregationCondition](#managementeventaggregationcondition)
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition' (Required)
 
 ### Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition
@@ -88,7 +88,7 @@
 * **resourceUri**: string
 ### Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource
 #### Properties
-* **claims**: RuleManagementEventClaimsDataSource
+* **claims**: [RuleManagementEventClaimsDataSource](#rulemanagementeventclaimsdatasource)
 * **eventName**: string
 * **eventSource**: string
 * **level**: string
@@ -107,7 +107,7 @@
 
 ## Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource
 ### Properties
-* **claims**: RuleManagementEventClaimsDataSource
+* **claims**: [RuleManagementEventClaimsDataSource](#rulemanagementeventclaimsdatasource)
 * **eventName**: string
 * **eventSource**: string
 * **level**: string
@@ -135,7 +135,7 @@
 
 ## Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition
 ### Properties
-* **aggregation**: ManagementEventAggregationCondition
+* **aggregation**: [ManagementEventAggregationCondition](#managementeventaggregationcondition)
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition' (Required)
 
 ## ManagementEventAggregationCondition

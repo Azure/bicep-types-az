@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProfileProperties
-* **sku**: Sku (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [ProfileProperties](#profileproperties)
+* **sku**: [Sku](#sku) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Cdn/profiles/endpoints@2017-10-12
@@ -19,8 +19,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EndpointProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [EndpointProperties](#endpointproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2017-10-12
@@ -29,7 +29,7 @@
 * **apiVersion**: '2017-10-12' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CustomDomainPropertiesParameters
+* **properties**: [CustomDomainPropertiesParameters](#customdomainpropertiesparameters)
 * **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant)
 
 ## ProfileProperties
@@ -49,8 +49,8 @@
 ## EndpointProperties
 ### Properties
 * **contentTypesToCompress**: string[]
-* **deliveryPolicy**: schemas:10_deliveryPolicy
-* **geoFilters**: GeoFilter[]
+* **deliveryPolicy**: [schemas:10_deliveryPolicy](#schemas10deliverypolicy)
+* **geoFilters**: [GeoFilter](#geofilter)[]
 * **hostName**: string (ReadOnly)
 * **isCompressionEnabled**: bool
 * **isHttpAllowed**: bool
@@ -58,7 +58,7 @@
 * **optimizationType**: 'DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming'
 * **originHostHeader**: string
 * **originPath**: string
-* **origins**: DeepCreatedOrigin[] (Required)
+* **origins**: [DeepCreatedOrigin](#deepcreatedorigin)[] (Required)
 * **probePath**: string
 * **provisioningState**: string (ReadOnly)
 * **queryStringCachingBehavior**: 'BypassCaching' | 'IgnoreQueryString' | 'NotSet' | 'UseQueryString'
@@ -67,12 +67,12 @@
 ## schemas:10_deliveryPolicy
 ### Properties
 * **description**: string
-* **rules**: DeliveryRule[] (Required)
+* **rules**: [DeliveryRule](#deliveryrule)[] (Required)
 
 ## DeliveryRule
 ### Properties
-* **actions**: DeliveryRuleAction[] (Required)
-* **conditions**: DeliveryRuleCondition[]
+* **actions**: [DeliveryRuleAction](#deliveryruleaction)[] (Required)
+* **conditions**: [DeliveryRuleCondition](#deliveryrulecondition)[]
 * **order**: int (Required)
 
 ## DeliveryRuleAction
@@ -81,13 +81,13 @@
 ### CacheExpiration
 #### Properties
 * **name**: 'CacheExpiration' (Required)
-* **parameters**: CacheExpirationActionParameters (Required)
+* **parameters**: [CacheExpirationActionParameters](#cacheexpirationactionparameters) (Required)
 
 
 ## CacheExpiration
 ### Properties
 * **name**: 'CacheExpiration' (Required)
-* **parameters**: CacheExpirationActionParameters (Required)
+* **parameters**: [CacheExpirationActionParameters](#cacheexpirationactionparameters) (Required)
 
 ## CacheExpirationActionParameters
 ### Properties
@@ -102,18 +102,18 @@
 ### UrlFileExtension
 #### Properties
 * **name**: 'UrlFileExtension' (Required)
-* **parameters**: UrlFileExtensionConditionParameters (Required)
+* **parameters**: [UrlFileExtensionConditionParameters](#urlfileextensionconditionparameters) (Required)
 
 ### UrlPath
 #### Properties
 * **name**: 'UrlPath' (Required)
-* **parameters**: UrlPathConditionParameters (Required)
+* **parameters**: [UrlPathConditionParameters](#urlpathconditionparameters) (Required)
 
 
 ## UrlFileExtension
 ### Properties
 * **name**: 'UrlFileExtension' (Required)
-* **parameters**: UrlFileExtensionConditionParameters (Required)
+* **parameters**: [UrlFileExtensionConditionParameters](#urlfileextensionconditionparameters) (Required)
 
 ## UrlFileExtensionConditionParameters
 ### Properties
@@ -123,7 +123,7 @@
 ## UrlPath
 ### Properties
 * **name**: 'UrlPath' (Required)
-* **parameters**: UrlPathConditionParameters (Required)
+* **parameters**: [UrlPathConditionParameters](#urlpathconditionparameters) (Required)
 
 ## UrlPathConditionParameters
 ### Properties
@@ -140,7 +140,7 @@
 ## DeepCreatedOrigin
 ### Properties
 * **name**: string (Required)
-* **properties**: DeepCreatedOriginProperties
+* **properties**: [DeepCreatedOriginProperties](#deepcreatedoriginproperties)
 
 ## DeepCreatedOriginProperties
 ### Properties

@@ -6,8 +6,8 @@
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyExemptionProperties (Required)
-* **systemData**: systemData (ReadOnly)
+* **properties**: [PolicyExemptionProperties](#policyexemptionproperties) (Required)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Authorization/policyExemptions' (ReadOnly, DeployTimeConstant)
 
 ## PolicyExemptionProperties

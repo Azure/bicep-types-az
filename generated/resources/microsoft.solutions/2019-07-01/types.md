@@ -8,9 +8,9 @@
 * **location**: string
 * **managedBy**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationDefinitionProperties (Required)
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [ApplicationDefinitionProperties](#applicationdefinitionproperties) (Required)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Solutions/applicationDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Solutions/applications@2019-07-01
@@ -18,15 +18,15 @@
 ### Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **kind**: string (Required)
 * **location**: string
 * **managedBy**: string
 * **name**: string (Required, DeployTimeConstant)
-* **plan**: Plan
-* **properties**: ApplicationProperties (Required)
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **plan**: [Plan](#plan)
+* **properties**: [ApplicationProperties](#applicationproperties) (Required)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Solutions/applications' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Solutions/jitRequests@2019-07-01
@@ -36,26 +36,26 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: JitRequestProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [JitRequestProperties](#jitrequestproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Solutions/jitRequests' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationDefinitionProperties
 ### Properties
-* **artifacts**: ApplicationDefinitionArtifact[]
-* **authorizations**: ApplicationAuthorization[]
+* **artifacts**: [ApplicationDefinitionArtifact](#applicationdefinitionartifact)[]
+* **authorizations**: [ApplicationAuthorization](#applicationauthorization)[]
 * **createUiDefinition**: any
-* **deploymentPolicy**: ApplicationDeploymentPolicy
+* **deploymentPolicy**: [ApplicationDeploymentPolicy](#applicationdeploymentpolicy)
 * **description**: string
 * **displayName**: string
 * **isEnabled**: bool
-* **lockingPolicy**: ApplicationPackageLockingPolicyDefinition
+* **lockingPolicy**: [ApplicationPackageLockingPolicyDefinition](#applicationpackagelockingpolicydefinition)
 * **lockLevel**: 'CanNotDelete' | 'None' | 'ReadOnly' (Required)
 * **mainTemplate**: any
-* **managementPolicy**: ApplicationManagementPolicy
-* **notificationPolicy**: ApplicationNotificationPolicy
+* **managementPolicy**: [ApplicationManagementPolicy](#applicationmanagementpolicy)
+* **notificationPolicy**: [ApplicationNotificationPolicy](#applicationnotificationpolicy)
 * **packageFileUri**: string
-* **policies**: ApplicationPolicy[]
+* **policies**: [ApplicationPolicy](#applicationpolicy)[]
 
 ## ApplicationDefinitionArtifact
 ### Properties
@@ -82,7 +82,7 @@
 
 ## ApplicationNotificationPolicy
 ### Properties
-* **notificationEndpoints**: ApplicationNotificationEndpoint[] (Required)
+* **notificationEndpoints**: [ApplicationNotificationEndpoint](#applicationnotificationendpoint)[] (Required)
 
 ## ApplicationNotificationEndpoint
 ### Properties
@@ -113,12 +113,12 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: Dictionary<string,UserAssignedResourceIdentity>
+* **userAssignedIdentities**: [Dictionary<string,UserAssignedResourceIdentity>](#dictionarystringuserassignedresourceidentity)
 
 ## Dictionary<string,UserAssignedResourceIdentity>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: userAssignedResourceIdentity
+* **Additional Properties Type**: [userAssignedResourceIdentity](#userassignedresourceidentity)
 
 ## userAssignedResourceIdentity
 ### Properties
@@ -136,20 +136,20 @@
 ## ApplicationProperties
 ### Properties
 * **applicationDefinitionId**: string
-* **artifacts**: ApplicationArtifact[] (ReadOnly)
-* **authorizations**: ApplicationAuthorization[] (ReadOnly)
-* **billingDetails**: ApplicationBillingDetailsDefinition (ReadOnly)
-* **createdBy**: ApplicationClientDetails (ReadOnly)
-* **customerSupport**: ApplicationPackageContact (ReadOnly)
-* **jitAccessPolicy**: ApplicationJitAccessPolicy
+* **artifacts**: [ApplicationArtifact](#applicationartifact)[] (ReadOnly)
+* **authorizations**: [ApplicationAuthorization](#applicationauthorization)[] (ReadOnly)
+* **billingDetails**: [ApplicationBillingDetailsDefinition](#applicationbillingdetailsdefinition) (ReadOnly)
+* **createdBy**: [ApplicationClientDetails](#applicationclientdetails) (ReadOnly)
+* **customerSupport**: [ApplicationPackageContact](#applicationpackagecontact) (ReadOnly)
+* **jitAccessPolicy**: [ApplicationJitAccessPolicy](#applicationjitaccesspolicy)
 * **managedResourceGroupId**: string
 * **managementMode**: 'Managed' | 'NotSpecified' | 'Unmanaged' (ReadOnly)
 * **outputs**: any (ReadOnly)
 * **parameters**: any
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly)
 * **publisherTenantId**: string (ReadOnly)
-* **supportUrls**: ApplicationPackageSupportUrls (ReadOnly)
-* **updatedBy**: ApplicationClientDetails (ReadOnly)
+* **supportUrls**: [ApplicationPackageSupportUrls](#applicationpackagesupporturls) (ReadOnly)
+* **updatedBy**: [ApplicationClientDetails](#applicationclientdetails) (ReadOnly)
 
 ## ApplicationArtifact
 ### Properties
@@ -177,7 +177,7 @@
 ### Properties
 * **jitAccessEnabled**: bool (Required)
 * **jitApprovalMode**: 'AutoApprove' | 'ManualApprove' | 'NotSpecified'
-* **jitApprovers**: JitApproverDefinition[]
+* **jitApprovers**: [JitApproverDefinition](#jitapproverdefinition)[]
 * **maximumJitAccessDuration**: string
 
 ## JitApproverDefinition
@@ -199,13 +199,13 @@
 ## JitRequestProperties
 ### Properties
 * **applicationResourceId**: string (Required)
-* **createdBy**: ApplicationClientDetails (ReadOnly)
-* **jitAuthorizationPolicies**: JitAuthorizationPolicies[] (Required)
+* **createdBy**: [ApplicationClientDetails](#applicationclientdetails) (ReadOnly)
+* **jitAuthorizationPolicies**: [JitAuthorizationPolicies](#jitauthorizationpolicies)[] (Required)
 * **jitRequestState**: 'Approved' | 'Canceled' | 'Denied' | 'Expired' | 'Failed' | 'NotSpecified' | 'Pending' | 'Timeout' (ReadOnly)
-* **jitSchedulingPolicy**: JitSchedulingPolicy (Required)
+* **jitSchedulingPolicy**: [JitSchedulingPolicy](#jitschedulingpolicy) (Required)
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly)
 * **publisherTenantId**: string (ReadOnly)
-* **updatedBy**: ApplicationClientDetails (ReadOnly)
+* **updatedBy**: [ApplicationClientDetails](#applicationclientdetails) (ReadOnly)
 
 ## JitAuthorizationPolicies
 ### Properties

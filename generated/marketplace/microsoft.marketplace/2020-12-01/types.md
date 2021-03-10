@@ -6,8 +6,8 @@
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AdminRequestApprovalProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [AdminRequestApprovalProperties](#adminrequestapprovalproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Marketplace/privateStores/adminRequestApprovals' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Marketplace/privateStores/requestApprovals@2020-12-01
@@ -16,8 +16,8 @@
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RequestApprovalProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [RequestApprovalProperties](#requestapprovalproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Marketplace/privateStores/requestApprovals' (ReadOnly, DeployTimeConstant)
 
 ## AdminRequestApprovalProperties
@@ -28,14 +28,14 @@
 * **comment**: string
 * **displayName**: string (ReadOnly)
 * **offerId**: string
-* **plans**: PlanRequesterDetails[] (ReadOnly)
+* **plans**: [PlanRequesterDetails](#planrequesterdetails)[] (ReadOnly)
 * **publisherId**: string
 
 ## PlanRequesterDetails
 ### Properties
 * **planDisplayName**: string (ReadOnly)
 * **planId**: string (ReadOnly)
-* **requesters**: UserRequestDetails[] (ReadOnly)
+* **requesters**: [UserRequestDetails](#userrequestdetails)[] (ReadOnly)
 
 ## UserRequestDetails
 ### Properties
@@ -58,7 +58,7 @@
 * **messageCode**: int
 * **offerDisplayName**: string (ReadOnly)
 * **offerId**: string
-* **plansDetails**: planDetails[]
+* **plansDetails**: [planDetails](#plandetails)[]
 * **publisherId**: string
 
 ## planDetails

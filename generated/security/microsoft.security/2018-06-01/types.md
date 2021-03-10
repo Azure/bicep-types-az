@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PricingProperties
+* **properties**: [PricingProperties](#pricingproperties)
 * **type**: 'Microsoft.Security/pricings' (ReadOnly, DeployTimeConstant)
 
 ## PricingProperties

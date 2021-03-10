@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-04-19' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SuppressionProperties
+* **properties**: [SuppressionProperties](#suppressionproperties)
 * **type**: 'Microsoft.Advisor/recommendations/suppressions' (ReadOnly, DeployTimeConstant)
 
 ## SuppressionProperties

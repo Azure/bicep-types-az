@@ -6,14 +6,14 @@
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RemediationProperties
+* **properties**: [RemediationProperties](#remediationproperties)
 * **type**: 'Microsoft.PolicyInsights/remediations' (ReadOnly, DeployTimeConstant)
 
 ## RemediationProperties
 ### Properties
 * **createdOn**: string (ReadOnly)
-* **deploymentStatus**: RemediationDeploymentSummary (ReadOnly)
-* **filters**: RemediationFilters
+* **deploymentStatus**: [RemediationDeploymentSummary](#remediationdeploymentsummary) (ReadOnly)
+* **filters**: [RemediationFilters](#remediationfilters)
 * **lastUpdatedOn**: string (ReadOnly)
 * **policyAssignmentId**: string
 * **policyDefinitionReferenceId**: string

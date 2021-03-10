@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SBNamespaceProperties
-* **sku**: SBSku
-* **tags**: Dictionary<string,String>
+* **properties**: [SBNamespaceProperties](#sbnamespaceproperties)
+* **sku**: [SBSku](#sbsku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ServiceBus/namespaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceBus/namespaces/AuthorizationRules@2017-04-01
@@ -18,7 +18,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:1_properties
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **type**: 'Microsoft.ServiceBus/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2017-04-01
@@ -27,7 +27,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:14_properties
+* **properties**: [schemas:14_properties](#schemas14properties)
 * **type**: 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceBus/namespaces/migrationConfigurations@2017-04-01
@@ -36,7 +36,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:21_properties
+* **properties**: [schemas:21_properties](#schemas21properties)
 * **type**: 'Microsoft.ServiceBus/namespaces/migrationConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceBus/namespaces/networkRuleSets@2017-04-01
@@ -45,7 +45,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:32_properties
+* **properties**: [schemas:32_properties](#schemas32properties)
 * **type**: 'Microsoft.ServiceBus/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceBus/namespaces/queues@2017-04-01
@@ -54,7 +54,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SBQueueProperties
+* **properties**: [SBQueueProperties](#sbqueueproperties)
 * **type**: 'Microsoft.ServiceBus/namespaces/queues' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceBus/namespaces/queues/authorizationRules@2017-04-01
@@ -63,7 +63,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:1_properties
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **type**: 'Microsoft.ServiceBus/namespaces/queues/authorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceBus/namespaces/topics@2017-04-01
@@ -72,7 +72,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SBTopicProperties
+* **properties**: [SBTopicProperties](#sbtopicproperties)
 * **type**: 'Microsoft.ServiceBus/namespaces/topics' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceBus/namespaces/topics/authorizationRules@2017-04-01
@@ -81,7 +81,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:1_properties
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/authorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceBus/namespaces/topics/subscriptions@2017-04-01
@@ -90,7 +90,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SBSubscriptionProperties
+* **properties**: [SBSubscriptionProperties](#sbsubscriptionproperties)
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceBus/namespaces/topics/subscriptions/rules@2017-04-01
@@ -99,7 +99,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: Ruleproperties
+* **properties**: [Ruleproperties](#ruleproperties)
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions/rules' (ReadOnly, DeployTimeConstant)
 
 ## SBNamespaceProperties
@@ -144,8 +144,8 @@
 ## schemas:32_properties
 ### Properties
 * **defaultAction**: 'Allow' | 'Deny'
-* **ipRules**: NWRuleSetIpRules[]
-* **virtualNetworkRules**: NWRuleSetVirtualNetworkRules[]
+* **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]
+* **virtualNetworkRules**: [NWRuleSetVirtualNetworkRules](#nwrulesetvirtualnetworkrules)[]
 
 ## NWRuleSetIpRules
 ### Properties
@@ -155,7 +155,7 @@
 ## NWRuleSetVirtualNetworkRules
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool
-* **subnet**: Subnet
+* **subnet**: [Subnet](#subnet)
 
 ## Subnet
 ### Properties
@@ -165,7 +165,7 @@
 ### Properties
 * **accessedAt**: string (ReadOnly)
 * **autoDeleteOnIdle**: string
-* **countDetails**: MessageCountDetails (ReadOnly)
+* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly)
 * **createdAt**: string (ReadOnly)
 * **deadLetteringOnMessageExpiration**: bool
 * **defaultMessageTimeToLive**: string
@@ -197,7 +197,7 @@
 ### Properties
 * **accessedAt**: string (ReadOnly)
 * **autoDeleteOnIdle**: string
-* **countDetails**: MessageCountDetails (ReadOnly)
+* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly)
 * **createdAt**: string (ReadOnly)
 * **defaultMessageTimeToLive**: string
 * **duplicateDetectionHistoryTimeWindow**: string
@@ -216,7 +216,7 @@
 ### Properties
 * **accessedAt**: string (ReadOnly)
 * **autoDeleteOnIdle**: string
-* **countDetails**: MessageCountDetails (ReadOnly)
+* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly)
 * **createdAt**: string (ReadOnly)
 * **deadLetteringOnFilterEvaluationExceptions**: bool
 * **deadLetteringOnMessageExpiration**: bool
@@ -234,10 +234,10 @@
 
 ## Ruleproperties
 ### Properties
-* **action**: Action
-* **correlationFilter**: CorrelationFilter
+* **action**: [Action](#action)
+* **correlationFilter**: [CorrelationFilter](#correlationfilter)
 * **filterType**: 'CorrelationFilter' | 'SqlFilter'
-* **sqlFilter**: SqlFilter
+* **sqlFilter**: [SqlFilter](#sqlfilter)
 
 ## Action
 ### Properties
@@ -251,7 +251,7 @@
 * **correlationId**: string
 * **label**: string
 * **messageId**: string
-* **properties**: Dictionary<string,String>
+* **properties**: [Dictionary<string,String>](#dictionarystringstring)
 * **replyTo**: string
 * **replyToSessionId**: string
 * **requiresPreprocessing**: bool

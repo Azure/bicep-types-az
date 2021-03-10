@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MigrateProjectProperties
-* **tags**: schemas:57_tags
+* **properties**: [MigrateProjectProperties](#migrateprojectproperties)
+* **tags**: [schemas:57_tags](#schemas57tags)
 * **type**: 'Microsoft.Migrate/migrateProjects' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Migrate/migrateProjects/solutions@2018-09-01-preview
@@ -19,7 +19,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SolutionProperties
+* **properties**: [SolutionProperties](#solutionproperties)
 * **type**: 'Microsoft.Migrate/migrateProjects/solutions' (ReadOnly, DeployTimeConstant)
 
 ## MigrateProjectProperties
@@ -28,17 +28,17 @@
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded'
 * **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started' (ReadOnly)
 * **registeredTools**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DatabaseMigrationService' | 'DataMigrationAssistant' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration_Replication' | 'ServerMigration' | 'Turbonomic' | 'Zerto'[]
-* **summary**: Dictionary<string,ProjectSummary> (ReadOnly)
+* **summary**: [Dictionary<string,ProjectSummary>](#dictionarystringprojectsummary) (ReadOnly)
 
 ## Dictionary<string,ProjectSummary>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ProjectSummary
+* **Additional Properties Type**: [ProjectSummary](#projectsummary)
 
 ## ProjectSummary
 * **Discriminator**: instanceType
 ### Base Properties
-* **extendedSummary**: Dictionary<string,String>
+* **extendedSummary**: [Dictionary<string,String>](#dictionarystringstring)
 * **lastSummaryRefreshedTime**: string
 * **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started'
 ### Databases
@@ -80,17 +80,17 @@
 ## SolutionProperties
 ### Properties
 * **cleanupState**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Started'
-* **details**: SolutionDetails
+* **details**: [SolutionDetails](#solutiondetails)
 * **goal**: 'Databases' | 'Servers'
 * **purpose**: 'Assessment' | 'Discovery' | 'Migration'
 * **status**: 'Active' | 'Inactive'
-* **summary**: SolutionSummary
+* **summary**: [SolutionSummary](#solutionsummary)
 * **tool**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DatabaseMigrationService' | 'DataMigrationAssistant' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration_Replication' | 'ServerMigration' | 'Turbonomic' | 'Zerto'
 
 ## SolutionDetails
 ### Properties
 * **assessmentCount**: int
-* **extendedDetails**: Dictionary<string,String>
+* **extendedDetails**: [Dictionary<string,String>](#dictionarystringstring)
 * **groupCount**: int
 
 ## Dictionary<string,String>

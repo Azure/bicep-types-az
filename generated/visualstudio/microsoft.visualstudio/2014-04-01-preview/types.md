@@ -9,8 +9,8 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **operationType**: any (WriteOnly)
-* **properties**: Dictionary<string,String>
-* **tags**: Dictionary<string,String>
+* **properties**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'microsoft.visualstudio/account' (ReadOnly, DeployTimeConstant)
 
 ## Resource microsoft.visualstudio/account/extension@2014-04-01-preview
@@ -20,9 +20,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **plan**: ExtensionResourcePlan
-* **properties**: Dictionary<string,String>
-* **tags**: Dictionary<string,String>
+* **plan**: [ExtensionResourcePlan](#extensionresourceplan)
+* **properties**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'microsoft.visualstudio/account/extension' (ReadOnly, DeployTimeConstant)
 
 ## Resource microsoft.visualstudio/account/project@2014-04-01-preview
@@ -32,8 +32,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: Dictionary<string,String>
-* **tags**: Dictionary<string,String>
+* **properties**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'microsoft.visualstudio/account/project' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>

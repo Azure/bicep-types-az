@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: InstanceFailoverGroupProperties
+* **properties**: [InstanceFailoverGroupProperties](#instancefailovergroupproperties)
 * **type**: 'Microsoft.Sql/locations/instanceFailoverGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments@2017-10-01-preview
@@ -15,7 +15,7 @@
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseVulnerabilityAssessmentProperties
+* **properties**: [DatabaseVulnerabilityAssessmentProperties](#databasevulnerabilityassessmentproperties)
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines@2017-10-01-preview
@@ -24,7 +24,7 @@
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' | 'master' (Required, DeployTimeConstant)
-* **properties**: DatabaseVulnerabilityAssessmentRuleBaselineProperties
+* **properties**: [DatabaseVulnerabilityAssessmentRuleBaselineProperties](#databasevulnerabilityassessmentrulebaselineproperties)
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/managedInstances/encryptionProtector@2017-10-01-preview
@@ -34,7 +34,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedInstanceEncryptionProtectorProperties
+* **properties**: [ManagedInstanceEncryptionProtectorProperties](#managedinstanceencryptionprotectorproperties)
 * **type**: 'Microsoft.Sql/managedInstances/encryptionProtector' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/managedInstances/keys@2017-10-01-preview
@@ -44,7 +44,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedInstanceKeyProperties
+* **properties**: [ManagedInstanceKeyProperties](#managedinstancekeyproperties)
 * **type**: 'Microsoft.Sql/managedInstances/keys' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases@2017-10-01-preview
@@ -56,9 +56,9 @@
 * **location**: string (Required)
 * **managedBy**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [DatabaseProperties](#databaseproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies@2017-10-01-preview
@@ -67,7 +67,7 @@
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BackupShortTermRetentionPolicyProperties
+* **properties**: [BackupShortTermRetentionPolicyProperties](#backupshorttermretentionpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/elasticPools@2017-10-01-preview
@@ -78,17 +78,17 @@
 * **kind**: string (ReadOnly)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ElasticPoolProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [ElasticPoolProperties](#elasticpoolproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Sql/servers/elasticPools' (ReadOnly, DeployTimeConstant)
 
 ## InstanceFailoverGroupProperties
 ### Properties
-* **managedInstancePairs**: ManagedInstancePairInfo[] (Required)
-* **partnerRegions**: PartnerRegionInfo[] (Required)
-* **readOnlyEndpoint**: InstanceFailoverGroupReadOnlyEndpoint
-* **readWriteEndpoint**: InstanceFailoverGroupReadWriteEndpoint (Required)
+* **managedInstancePairs**: [ManagedInstancePairInfo](#managedinstancepairinfo)[] (Required)
+* **partnerRegions**: [PartnerRegionInfo](#partnerregioninfo)[] (Required)
+* **readOnlyEndpoint**: [InstanceFailoverGroupReadOnlyEndpoint](#instancefailovergroupreadonlyendpoint)
+* **readWriteEndpoint**: [InstanceFailoverGroupReadWriteEndpoint](#instancefailovergroupreadwriteendpoint) (Required)
 * **replicationRole**: 'Primary' | 'Secondary' (ReadOnly)
 * **replicationState**: string (ReadOnly)
 
@@ -113,7 +113,7 @@
 
 ## DatabaseVulnerabilityAssessmentProperties
 ### Properties
-* **recurringScans**: VulnerabilityAssessmentRecurringScansProperties
+* **recurringScans**: [VulnerabilityAssessmentRecurringScansProperties](#vulnerabilityassessmentrecurringscansproperties)
 * **storageAccountAccessKey**: string
 * **storageContainerPath**: string
 * **storageContainerSasKey**: string
@@ -126,7 +126,7 @@
 
 ## DatabaseVulnerabilityAssessmentRuleBaselineProperties
 ### Properties
-* **baselineResults**: DatabaseVulnerabilityAssessmentRuleBaselineItem[] (Required)
+* **baselineResults**: [DatabaseVulnerabilityAssessmentRuleBaselineItem](#databasevulnerabilityassessmentrulebaselineitem)[] (Required)
 
 ## DatabaseVulnerabilityAssessmentRuleBaselineItem
 ### Properties
@@ -154,7 +154,7 @@
 * **createMode**: 'Copy' | 'Default' | 'OnlineSecondary' | 'PointInTimeRestore' | 'Recovery' | 'Restore' | 'RestoreExternalBackup' | 'RestoreExternalBackupSecondary' | 'RestoreLongTermRetentionBackup' | 'Secondary'
 * **creationDate**: string (ReadOnly)
 * **currentServiceObjectiveName**: string (ReadOnly)
-* **currentSku**: Sku (ReadOnly)
+* **currentSku**: [Sku](#sku) (ReadOnly)
 * **databaseId**: string (ReadOnly)
 * **defaultSecondaryLocation**: string (ReadOnly)
 * **earliestRestoreDate**: string (ReadOnly)
@@ -202,7 +202,7 @@
 * **creationDate**: string (ReadOnly)
 * **licenseType**: 'BasePrice' | 'LicenseIncluded'
 * **maxSizeBytes**: int
-* **perDatabaseSettings**: ElasticPoolPerDatabaseSettings
+* **perDatabaseSettings**: [ElasticPoolPerDatabaseSettings](#elasticpoolperdatabasesettings)
 * **state**: 'Creating' | 'Disabled' | 'Ready' (ReadOnly)
 * **zoneRedundant**: bool
 

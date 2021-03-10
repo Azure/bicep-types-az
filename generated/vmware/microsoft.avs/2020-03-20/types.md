@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateCloudProperties (Required)
-* **sku**: Sku (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [PrivateCloudProperties](#privatecloudproperties) (Required)
+* **sku**: [Sku](#sku) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.AVS/privateClouds' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.AVS/privateClouds/authorizations@2020-03-20
@@ -18,7 +18,7 @@
 * **apiVersion**: '2020-03-20' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ExpressRouteAuthorizationProperties (ReadOnly)
+* **properties**: [ExpressRouteAuthorizationProperties](#expressrouteauthorizationproperties) (ReadOnly)
 * **type**: 'Microsoft.AVS/privateClouds/authorizations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.AVS/privateClouds/clusters@2020-03-20
@@ -27,8 +27,8 @@
 * **apiVersion**: '2020-03-20' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterProperties (Required)
-* **sku**: Sku (Required)
+* **properties**: [ClusterProperties](#clusterproperties) (Required)
+* **sku**: [Sku](#sku) (Required)
 * **type**: 'Microsoft.AVS/privateClouds/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.AVS/privateClouds/hcxEnterpriseSites@2020-03-20
@@ -37,16 +37,16 @@
 * **apiVersion**: '2020-03-20' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: HcxEnterpriseSiteProperties (ReadOnly)
+* **properties**: [HcxEnterpriseSiteProperties](#hcxenterprisesiteproperties) (ReadOnly)
 * **type**: 'Microsoft.AVS/privateClouds/hcxEnterpriseSites' (ReadOnly, DeployTimeConstant)
 
 ## PrivateCloudProperties
 ### Properties
-* **circuit**: Circuit
-* **endpoints**: Endpoints (ReadOnly)
-* **identitySources**: IdentitySource[]
+* **circuit**: [Circuit](#circuit)
+* **endpoints**: [Endpoints](#endpoints) (ReadOnly)
+* **identitySources**: [IdentitySource](#identitysource)[]
 * **internet**: 'Disabled' | 'Enabled'
-* **managementCluster**: ManagementCluster
+* **managementCluster**: [ManagementCluster](#managementcluster)
 * **managementNetwork**: string (ReadOnly)
 * **networkBlock**: string (Required)
 * **nsxtCertificateThumbprint**: string (ReadOnly)

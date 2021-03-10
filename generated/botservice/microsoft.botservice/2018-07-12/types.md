@@ -9,9 +9,9 @@
 * **kind**: 'bot' | 'designer' | 'function' | 'sdk'
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BotProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [BotProperties](#botproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.BotService/botServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.BotService/botServices/channels@2018-07-12
@@ -23,9 +23,9 @@
 * **kind**: 'bot' | 'designer' | 'function' | 'sdk'
 * **location**: string
 * **name**: 'DirectLineChannel' | 'EmailChannel' | 'FacebookChannel' | 'KikChannel' | 'MsTeamsChannel' | 'SkypeChannel' | 'SlackChannel' | 'SmsChannel' | 'TelegramChannel' | 'WebChatChannel' (Required, DeployTimeConstant)
-* **properties**: Channel
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [Channel](#channel)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.BotService/botServices/channels' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.BotService/botServices/Connections@2018-07-12
@@ -37,9 +37,9 @@
 * **kind**: 'bot' | 'designer' | 'function' | 'sdk'
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectionSettingProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [ConnectionSettingProperties](#connectionsettingproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.BotService/botServices/Connections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.BotService/enterpriseChannels@2018-07-12
@@ -51,9 +51,9 @@
 * **kind**: 'bot' | 'designer' | 'function' | 'sdk'
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EnterpriseChannelProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [EnterpriseChannelProperties](#enterprisechannelproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.BotService/enterpriseChannels' (ReadOnly, DeployTimeConstant)
 
 ## BotProperties
@@ -88,62 +88,62 @@
 ### DirectLineChannel
 #### Properties
 * **channelName**: 'DirectLineChannel' (Required)
-* **properties**: DirectLineChannelProperties
+* **properties**: [DirectLineChannelProperties](#directlinechannelproperties)
 
 ### EmailChannel
 #### Properties
 * **channelName**: 'EmailChannel' (Required)
-* **properties**: EmailChannelProperties
+* **properties**: [EmailChannelProperties](#emailchannelproperties)
 
 ### FacebookChannel
 #### Properties
 * **channelName**: 'FacebookChannel' (Required)
-* **properties**: FacebookChannelProperties
+* **properties**: [FacebookChannelProperties](#facebookchannelproperties)
 
 ### KikChannel
 #### Properties
 * **channelName**: 'KikChannel' (Required)
-* **properties**: KikChannelProperties
+* **properties**: [KikChannelProperties](#kikchannelproperties)
 
 ### MsTeamsChannel
 #### Properties
 * **channelName**: 'MsTeamsChannel' (Required)
-* **properties**: MsTeamsChannelProperties
+* **properties**: [MsTeamsChannelProperties](#msteamschannelproperties)
 
 ### SkypeChannel
 #### Properties
 * **channelName**: 'SkypeChannel' (Required)
-* **properties**: SkypeChannelProperties
+* **properties**: [SkypeChannelProperties](#skypechannelproperties)
 
 ### SlackChannel
 #### Properties
 * **channelName**: 'SlackChannel' (Required)
-* **properties**: SlackChannelProperties
+* **properties**: [SlackChannelProperties](#slackchannelproperties)
 
 ### SmsChannel
 #### Properties
 * **channelName**: 'SmsChannel' (Required)
-* **properties**: SmsChannelProperties
+* **properties**: [SmsChannelProperties](#smschannelproperties)
 
 ### TelegramChannel
 #### Properties
 * **channelName**: 'TelegramChannel' (Required)
-* **properties**: TelegramChannelProperties
+* **properties**: [TelegramChannelProperties](#telegramchannelproperties)
 
 ### WebChatChannel
 #### Properties
 * **channelName**: 'WebChatChannel' (Required)
-* **properties**: WebChatChannelProperties
+* **properties**: [WebChatChannelProperties](#webchatchannelproperties)
 
 
 ## DirectLineChannel
 ### Properties
 * **channelName**: 'DirectLineChannel' (Required)
-* **properties**: DirectLineChannelProperties
+* **properties**: [DirectLineChannelProperties](#directlinechannelproperties)
 
 ## DirectLineChannelProperties
 ### Properties
-* **sites**: DirectLineSite[]
+* **sites**: [DirectLineSite](#directlinesite)[]
 
 ## DirectLineSite
 ### Properties
@@ -160,7 +160,7 @@
 ## EmailChannel
 ### Properties
 * **channelName**: 'EmailChannel' (Required)
-* **properties**: EmailChannelProperties
+* **properties**: [EmailChannelProperties](#emailchannelproperties)
 
 ## EmailChannelProperties
 ### Properties
@@ -171,7 +171,7 @@
 ## FacebookChannel
 ### Properties
 * **channelName**: 'FacebookChannel' (Required)
-* **properties**: FacebookChannelProperties
+* **properties**: [FacebookChannelProperties](#facebookchannelproperties)
 
 ## FacebookChannelProperties
 ### Properties
@@ -179,7 +179,7 @@
 * **appSecret**: string (Required)
 * **callbackUrl**: string (ReadOnly)
 * **isEnabled**: bool (Required)
-* **pages**: FacebookPage[]
+* **pages**: [FacebookPage](#facebookpage)[]
 * **verifyToken**: string (ReadOnly)
 
 ## FacebookPage
@@ -190,7 +190,7 @@
 ## KikChannel
 ### Properties
 * **channelName**: 'KikChannel' (Required)
-* **properties**: KikChannelProperties
+* **properties**: [KikChannelProperties](#kikchannelproperties)
 
 ## KikChannelProperties
 ### Properties
@@ -202,7 +202,7 @@
 ## MsTeamsChannel
 ### Properties
 * **channelName**: 'MsTeamsChannel' (Required)
-* **properties**: MsTeamsChannelProperties
+* **properties**: [MsTeamsChannelProperties](#msteamschannelproperties)
 
 ## MsTeamsChannelProperties
 ### Properties
@@ -213,7 +213,7 @@
 ## SkypeChannel
 ### Properties
 * **channelName**: 'SkypeChannel' (Required)
-* **properties**: SkypeChannelProperties
+* **properties**: [SkypeChannelProperties](#skypechannelproperties)
 
 ## SkypeChannelProperties
 ### Properties
@@ -230,7 +230,7 @@
 ## SlackChannel
 ### Properties
 * **channelName**: 'SlackChannel' (Required)
-* **properties**: SlackChannelProperties
+* **properties**: [SlackChannelProperties](#slackchannelproperties)
 
 ## SlackChannelProperties
 ### Properties
@@ -247,7 +247,7 @@
 ## SmsChannel
 ### Properties
 * **channelName**: 'SmsChannel' (Required)
-* **properties**: SmsChannelProperties
+* **properties**: [SmsChannelProperties](#smschannelproperties)
 
 ## SmsChannelProperties
 ### Properties
@@ -260,7 +260,7 @@
 ## TelegramChannel
 ### Properties
 * **channelName**: 'TelegramChannel' (Required)
-* **properties**: TelegramChannelProperties
+* **properties**: [TelegramChannelProperties](#telegramchannelproperties)
 
 ## TelegramChannelProperties
 ### Properties
@@ -271,11 +271,11 @@
 ## WebChatChannel
 ### Properties
 * **channelName**: 'WebChatChannel' (Required)
-* **properties**: WebChatChannelProperties
+* **properties**: [WebChatChannelProperties](#webchatchannelproperties)
 
 ## WebChatChannelProperties
 ### Properties
-* **sites**: WebChatSite[]
+* **sites**: [WebChatSite](#webchatsite)[]
 * **webChatEmbedCode**: string (ReadOnly)
 
 ## WebChatSite
@@ -296,7 +296,7 @@
 ### Properties
 * **clientId**: string
 * **clientSecret**: string
-* **parameters**: ConnectionSettingParameter[]
+* **parameters**: [ConnectionSettingParameter](#connectionsettingparameter)[]
 * **scopes**: string
 * **serviceProviderDisplayName**: string
 * **serviceProviderId**: string
@@ -314,7 +314,7 @@
 
 ## EnterpriseChannelProperties
 ### Properties
-* **nodes**: EnterpriseChannelNode[] (Required)
+* **nodes**: [EnterpriseChannelNode](#enterprisechannelnode)[] (Required)
 * **state**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'Started' | 'StartFailed' | 'Starting' | 'StopFailed' | 'Stopped' | 'Stopping'
 
 ## EnterpriseChannelNode

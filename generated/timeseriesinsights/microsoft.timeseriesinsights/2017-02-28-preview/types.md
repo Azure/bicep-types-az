@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EnvironmentCreationProperties (Required)
-* **sku**: Sku (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [EnvironmentCreationProperties](#environmentcreationproperties) (Required)
+* **sku**: [Sku](#sku) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.TimeSeriesInsights/environments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.TimeSeriesInsights/environments/accessPolicies@2017-02-28-preview
@@ -18,7 +18,7 @@
 * **apiVersion**: '2017-02-28-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AccessPolicyResourceProperties (Required)
+* **properties**: [AccessPolicyResourceProperties](#accesspolicyresourceproperties) (Required)
 * **type**: 'Microsoft.TimeSeriesInsights/environments/accessPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.TimeSeriesInsights/environments/eventSources@2017-02-28-preview
@@ -29,22 +29,22 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **tags**: Dictionary<string,String>
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.TimeSeriesInsights/environments/eventSources' (ReadOnly, DeployTimeConstant)
 ### Microsoft.EventHub
 #### Properties
 * **kind**: 'Microsoft.EventHub' (Required)
-* **properties**: EventHubEventSourceCreationProperties (Required)
+* **properties**: [EventHubEventSourceCreationProperties](#eventhubeventsourcecreationproperties) (Required)
 
 ### Microsoft.IotHub
 #### Properties
 * **kind**: 'Microsoft.IotHub' (Required)
-* **properties**: IoTHubEventSourceResourceProperties (ReadOnly)
+* **properties**: [IoTHubEventSourceResourceProperties](#iothubeventsourceresourceproperties) (ReadOnly)
 
 ### Microsoft.IoTHub
 #### Properties
 * **kind**: 'Microsoft.IoTHub' (Required)
-* **properties**: IoTHubEventSourceCreationProperties (Required, WriteOnly)
+* **properties**: [IoTHubEventSourceCreationProperties](#iothubeventsourcecreationproperties) (Required, WriteOnly)
 
 
 ## Resource Microsoft.TimeSeriesInsights/environments/referenceDataSets@2017-02-28-preview
@@ -54,8 +54,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ReferenceDataSetCreationProperties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [ReferenceDataSetCreationProperties](#referencedatasetcreationproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.TimeSeriesInsights/environments/referenceDataSets' (ReadOnly, DeployTimeConstant)
 
 ## EnvironmentCreationProperties
@@ -91,7 +91,7 @@
 ## Microsoft.EventHub
 ### Properties
 * **kind**: 'Microsoft.EventHub' (Required)
-* **properties**: EventHubEventSourceCreationProperties (Required)
+* **properties**: [EventHubEventSourceCreationProperties](#eventhubeventsourcecreationproperties) (Required)
 
 ## EventHubEventSourceCreationProperties
 ### Properties
@@ -108,7 +108,7 @@
 ## Microsoft.IotHub
 ### Properties
 * **kind**: 'Microsoft.IotHub' (Required)
-* **properties**: IoTHubEventSourceResourceProperties (ReadOnly)
+* **properties**: [IoTHubEventSourceResourceProperties](#iothubeventsourceresourceproperties) (ReadOnly)
 
 ## IoTHubEventSourceResourceProperties
 ### Properties
@@ -123,7 +123,7 @@
 ## Microsoft.IoTHub
 ### Properties
 * **kind**: 'Microsoft.IoTHub' (Required)
-* **properties**: IoTHubEventSourceCreationProperties (Required, WriteOnly)
+* **properties**: [IoTHubEventSourceCreationProperties](#iothubeventsourcecreationproperties) (Required, WriteOnly)
 
 ## IoTHubEventSourceCreationProperties
 ### Properties
@@ -139,7 +139,7 @@
 ## ReferenceDataSetCreationProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
-* **keyProperties**: ReferenceDataSetKeyProperty[] (Required)
+* **keyProperties**: [ReferenceDataSetKeyProperty](#referencedatasetkeyproperty)[] (Required)
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## ReferenceDataSetKeyProperty

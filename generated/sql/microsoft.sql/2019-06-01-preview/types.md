@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedDatabaseProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ManagedDatabaseProperties](#manageddatabaseproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers@2019-06-01-preview
@@ -16,12 +16,12 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ResourceIdentity
+* **identity**: [ResourceIdentity](#resourceidentity)
 * **kind**: string (ReadOnly)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ServerProperties](#serverproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/administrators@2019-06-01-preview
@@ -30,7 +30,7 @@
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AdministratorProperties
+* **properties**: [AdministratorProperties](#administratorproperties)
 * **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases@2019-06-01-preview
@@ -42,9 +42,9 @@
 * **location**: string (Required)
 * **managedBy**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [DatabaseProperties](#databaseproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/syncGroups@2019-06-01-preview
@@ -53,7 +53,7 @@
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SyncGroupProperties
+* **properties**: [SyncGroupProperties](#syncgroupproperties)
 * **type**: 'Microsoft.Sql/servers/databases/syncGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/syncGroups/syncMembers@2019-06-01-preview
@@ -62,7 +62,7 @@
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SyncMemberProperties
+* **properties**: [SyncMemberProperties](#syncmemberproperties)
 * **type**: 'Microsoft.Sql/servers/databases/syncGroups/syncMembers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/workloadGroups@2019-06-01-preview
@@ -71,7 +71,7 @@
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkloadGroupProperties
+* **properties**: [WorkloadGroupProperties](#workloadgroupproperties)
 * **type**: 'Microsoft.Sql/servers/databases/workloadGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers@2019-06-01-preview
@@ -80,7 +80,7 @@
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkloadClassifierProperties
+* **properties**: [WorkloadClassifierProperties](#workloadclassifierproperties)
 * **type**: 'Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers' (ReadOnly, DeployTimeConstant)
 
 ## ManagedDatabaseProperties
@@ -118,7 +118,7 @@
 * **administratorLoginPassword**: string
 * **fullyQualifiedDomainName**: string (ReadOnly)
 * **minimalTlsVersion**: string
-* **privateEndpointConnections**: ServerPrivateEndpointConnection[] (ReadOnly)
+* **privateEndpointConnections**: [ServerPrivateEndpointConnection](#serverprivateendpointconnection)[] (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 * **state**: string (ReadOnly)
 * **version**: string
@@ -126,12 +126,12 @@
 ## ServerPrivateEndpointConnection
 ### Properties
 * **id**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpointProperty
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionStateProperty
+* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty)
 * **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' (ReadOnly)
 
 ## PrivateEndpointProperty
@@ -165,7 +165,7 @@
 * **createMode**: 'Copy' | 'Default' | 'OnlineSecondary' | 'PointInTimeRestore' | 'Recovery' | 'Restore' | 'RestoreExternalBackup' | 'RestoreExternalBackupSecondary' | 'RestoreLongTermRetentionBackup' | 'Secondary'
 * **creationDate**: string (ReadOnly)
 * **currentServiceObjectiveName**: string (ReadOnly)
-* **currentSku**: Sku (ReadOnly)
+* **currentSku**: [Sku](#sku) (ReadOnly)
 * **databaseId**: string (ReadOnly)
 * **defaultSecondaryLocation**: string (ReadOnly)
 * **earliestRestoreDate**: string (ReadOnly)
@@ -213,7 +213,7 @@
 * **interval**: int
 * **lastSyncTime**: string (ReadOnly)
 * **privateEndpointName**: string (ReadOnly)
-* **schema**: SyncGroupSchema
+* **schema**: [SyncGroupSchema](#syncgroupschema)
 * **syncDatabaseId**: string
 * **syncState**: 'Error' | 'Good' | 'NotReady' | 'Progressing' | 'Warning' (ReadOnly)
 * **usePrivateLinkConnection**: bool
@@ -221,11 +221,11 @@
 ## SyncGroupSchema
 ### Properties
 * **masterSyncMemberName**: string
-* **tables**: SyncGroupSchemaTable[]
+* **tables**: [SyncGroupSchemaTable](#syncgroupschematable)[]
 
 ## SyncGroupSchemaTable
 ### Properties
-* **columns**: SyncGroupSchemaTableColumn[]
+* **columns**: [SyncGroupSchemaTableColumn](#syncgroupschematablecolumn)[]
 * **quotedName**: string
 
 ## SyncGroupSchemaTableColumn

@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: accountProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [accountProperties](#accountproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2020-03-01
@@ -18,8 +18,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: poolProperties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [poolProperties](#poolproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-03-01
@@ -29,8 +29,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: volumeProperties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [volumeProperties](#volumeproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2020-03-01
@@ -40,12 +40,12 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: snapshotProperties
+* **properties**: [snapshotProperties](#snapshotproperties)
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
 
 ## accountProperties
 ### Properties
-* **activeDirectories**: activeDirectory[]
+* **activeDirectories**: [activeDirectory](#activedirectory)[]
 * **provisioningState**: string (ReadOnly)
 
 ## activeDirectory
@@ -82,11 +82,11 @@
 ### Properties
 * **baremetalTenantId**: string (ReadOnly)
 * **creationToken**: string (Required)
-* **dataProtection**: schemas:21_dataProtection
-* **exportPolicy**: schemas:21_exportPolicy
+* **dataProtection**: [schemas:21_dataProtection](#schemas21dataprotection)
+* **exportPolicy**: [schemas:21_exportPolicy](#schemas21exportpolicy)
 * **fileSystemId**: string (ReadOnly)
 * **isRestoring**: bool
-* **mountTargets**: mountTargetProperties[]
+* **mountTargets**: [mountTargetProperties](#mounttargetproperties)[]
 * **protocolTypes**: string[]
 * **provisioningState**: string (ReadOnly)
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra'
@@ -98,8 +98,8 @@
 
 ## schemas:21_dataProtection
 ### Properties
-* **replication**: replicationObject
-* **snapshot**: volumeSnapshotProperties
+* **replication**: [replicationObject](#replicationobject)
+* **snapshot**: [volumeSnapshotProperties](#volumesnapshotproperties)
 
 ## replicationObject
 ### Properties
@@ -115,7 +115,7 @@
 
 ## schemas:21_exportPolicy
 ### Properties
-* **rules**: exportPolicyRule[]
+* **rules**: [exportPolicyRule](#exportpolicyrule)[]
 
 ## exportPolicyRule
 ### Properties

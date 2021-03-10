@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2019-11-04-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: schemas:2_identity
+* **identity**: [schemas:2_identity](#schemas2identity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceResourceProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [WorkspaceResourceProperties](#workspaceresourceproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Quantum/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## schemas:2_identity
@@ -21,7 +21,7 @@
 ## WorkspaceResourceProperties
 ### Properties
 * **endpointUri**: string (ReadOnly)
-* **providers**: Provider[]
+* **providers**: [Provider](#provider)[]
 * **provisioningState**: 'Failed' | 'ProviderDeleting' | 'ProviderLaunching' | 'ProviderProvisioning' | 'ProviderUpdating' | 'Succeeded' (ReadOnly)
 * **storageAccount**: string
 * **usable**: 'No' | 'Partial' | 'Yes' (ReadOnly)

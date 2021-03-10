@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerKeyProperties
+* **properties**: [ServerKeyProperties](#serverkeyproperties)
 * **type**: 'Microsoft.DBforPostgreSQL/servers/keys' (ReadOnly, DeployTimeConstant)
 
 ## ServerKeyProperties

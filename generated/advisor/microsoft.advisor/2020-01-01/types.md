@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigDataProperties
+* **properties**: [ConfigDataProperties](#configdataproperties)
 * **type**: 'Microsoft.Advisor/configurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Advisor/recommendations/suppressions@2020-01-01
@@ -15,12 +15,12 @@
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SuppressionProperties
+* **properties**: [SuppressionProperties](#suppressionproperties)
 * **type**: 'Microsoft.Advisor/recommendations/suppressions' (ReadOnly, DeployTimeConstant)
 
 ## ConfigDataProperties
 ### Properties
-* **digests**: DigestConfig[]
+* **digests**: [DigestConfig](#digestconfig)[]
 * **exclude**: bool
 * **lowCpuThreshold**: '10' | '15' | '20' | '5'
 

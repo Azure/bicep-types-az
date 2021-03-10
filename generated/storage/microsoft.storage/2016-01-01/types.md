@@ -8,22 +8,22 @@
 * **kind**: 'BlobStorage' | 'Storage' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageAccountPropertiesCreateParameters
-* **sku**: Sku (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters)
+* **sku**: [Sku](#sku) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant)
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
 * **accessTier**: 'Cool' | 'Hot'
 * **creationTime**: string (ReadOnly)
-* **customDomain**: CustomDomain
-* **encryption**: Encryption
+* **customDomain**: [CustomDomain](#customdomain)
+* **encryption**: [Encryption](#encryption)
 * **lastGeoFailoverTime**: string (ReadOnly)
-* **primaryEndpoints**: Endpoints (ReadOnly)
+* **primaryEndpoints**: [Endpoints](#endpoints) (ReadOnly)
 * **primaryLocation**: string (ReadOnly)
 * **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly)
-* **secondaryEndpoints**: Endpoints (ReadOnly)
+* **secondaryEndpoints**: [Endpoints](#endpoints) (ReadOnly)
 * **secondaryLocation**: string (ReadOnly)
 * **statusOfPrimary**: 'Available' | 'Unavailable' (ReadOnly)
 * **statusOfSecondary**: 'Available' | 'Unavailable' (ReadOnly)
@@ -36,11 +36,11 @@
 ## Encryption
 ### Properties
 * **keySource**: string (Required)
-* **services**: EncryptionServices
+* **services**: [EncryptionServices](#encryptionservices)
 
 ## EncryptionServices
 ### Properties
-* **blob**: EncryptionService
+* **blob**: [EncryptionService](#encryptionservice)
 
 ## EncryptionService
 ### Properties

@@ -8,8 +8,8 @@
 * **kind**: string (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationInsightsComponentProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ApplicationInsightsComponentProperties](#applicationinsightscomponentproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Insights/components' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Insights/components/ProactiveDetectionConfigs@2018-05-01-preview
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationInsightsComponentProactiveDetectionConfigurationProperties
+* **properties**: [ApplicationInsightsComponentProactiveDetectionConfigurationProperties](#applicationinsightscomponentproactivedetectionconfigurationproperties)
 * **type**: 'Microsoft.Insights/components/ProactiveDetectionConfigs' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationInsightsComponentProperties
@@ -36,7 +36,7 @@
 * **ImmediatePurgeDataOn30Days**: bool
 * **IngestionMode**: 'ApplicationInsights' | 'ApplicationInsightsWithDiagnosticSettings' | 'LogAnalytics'
 * **InstrumentationKey**: string (ReadOnly)
-* **PrivateLinkScopedResources**: PrivateLinkScopedResource[] (ReadOnly)
+* **PrivateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled'
 * **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled'
@@ -61,7 +61,7 @@
 * **Enabled**: bool
 * **LastUpdatedTime**: string (ReadOnly)
 * **Name**: string (ReadOnly)
-* **RuleDefinitions**: schemas:13_RuleDefinitions
+* **RuleDefinitions**: [schemas:13_RuleDefinitions](#schemas13ruledefinitions)
 * **SendEmailsToSubscriptionOwners**: bool
 
 ## schemas:13_RuleDefinitions

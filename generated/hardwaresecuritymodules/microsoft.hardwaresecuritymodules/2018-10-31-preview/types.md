@@ -7,23 +7,23 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DedicatedHsmProperties (Required)
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [DedicatedHsmProperties](#dedicatedhsmproperties) (Required)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.HardwareSecurityModules/dedicatedHSMs' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
 
 ## DedicatedHsmProperties
 ### Properties
-* **networkProfile**: NetworkProfile
+* **networkProfile**: [NetworkProfile](#networkprofile)
 * **provisioningState**: 'Allocating' | 'CheckingQuota' | 'Connecting' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly)
 * **stampId**: string
 * **statusMessage**: string (ReadOnly)
 
 ## NetworkProfile
 ### Properties
-* **networkInterfaces**: NetworkInterface[]
-* **subnet**: ApiEntityReference
+* **networkInterfaces**: [NetworkInterface](#networkinterface)[]
+* **subnet**: [ApiEntityReference](#apientityreference)
 
 ## NetworkInterface
 ### Properties

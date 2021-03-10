@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterProperties
-* **sku**: sku
-* **tags**: Dictionary<string,String>
+* **properties**: [ClusterProperties](#clusterproperties)
+* **sku**: [sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces/dataExports@2019-08-01-preview
@@ -19,7 +19,7 @@
 * **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DataExportProperties
+* **properties**: [DataExportProperties](#dataexportproperties)
 * **type**: 'Microsoft.OperationalInsights/workspaces/dataExports' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces/linkedServices@2019-08-01-preview
@@ -28,7 +28,7 @@
 * **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LinkedServiceProperties (Required)
+* **properties**: [LinkedServiceProperties](#linkedserviceproperties) (Required)
 * **type**: 'Microsoft.OperationalInsights/workspaces/linkedServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces/linkedStorageAccounts@2019-08-01-preview
@@ -37,7 +37,7 @@
 * **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'AzureWatson' | 'CustomLogs' (Required, DeployTimeConstant)
-* **properties**: LinkedStorageAccountsProperties (Required)
+* **properties**: [LinkedStorageAccountsProperties](#linkedstorageaccountsproperties) (Required)
 * **type**: 'Microsoft.OperationalInsights/workspaces/linkedStorageAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -49,7 +49,7 @@
 ## ClusterProperties
 ### Properties
 * **clusterId**: string (ReadOnly)
-* **keyVaultProperties**: keyVaultProperties
+* **keyVaultProperties**: [keyVaultProperties](#keyvaultproperties)
 * **nextLink**: string
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' (ReadOnly)
 
@@ -73,14 +73,14 @@
 ### Properties
 * **createdDate**: string
 * **dataExportId**: string
-* **destination**: Destination
+* **destination**: [Destination](#destination)
 * **enable**: bool
 * **lastModifiedDate**: string
 * **tableNames**: string[] (Required)
 
 ## Destination
 ### Properties
-* **metaData**: DestinationMetaData
+* **metaData**: [DestinationMetaData](#destinationmetadata)
 * **resourceId**: string (Required)
 * **type**: 'EventHub' | 'StorageAccount' (ReadOnly)
 

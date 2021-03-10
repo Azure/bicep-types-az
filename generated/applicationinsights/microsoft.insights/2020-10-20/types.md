@@ -4,28 +4,28 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-20' (ReadOnly, DeployTimeConstant)
-* **etag**: Dictionary<string,String>
+* **etag**: [Dictionary<string,String>](#dictionarystringstring)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ManagedIdentity
+* **identity**: [ManagedIdentity](#managedidentity)
 * **kind**: 'shared' | 'user'
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MyWorkbookProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [MyWorkbookProperties](#myworkbookproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Insights/myWorkbooks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Insights/workbooks@2020-10-20
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-20' (ReadOnly, DeployTimeConstant)
-* **etag**: Dictionary<string,String>
+* **etag**: [Dictionary<string,String>](#dictionarystringstring)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ManagedIdentity
+* **identity**: [ManagedIdentity](#managedidentity)
 * **kind**: 'shared' | 'user'
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkbookProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [WorkbookProperties](#workbookproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Insights/workbooks' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
@@ -36,7 +36,7 @@
 ## ManagedIdentity
 ### Properties
 * **type**: 'None' | 'UserAssigned'
-* **userAssignedIdentities**: UserAssignedIdentities
+* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities)
 
 ## UserAssignedIdentities
 ### Properties

@@ -6,11 +6,11 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AutomationAccountCreateOrUpdateProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [AutomationAccountCreateOrUpdateProperties](#automationaccountcreateorupdateproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Automation/automationAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/certificates@2020-01-13-preview
@@ -19,7 +19,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CertificateCreateOrUpdateProperties (Required)
+* **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties) (Required)
 * **type**: 'Microsoft.Automation/automationAccounts/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/compilationjobs@2020-01-13-preview
@@ -29,8 +29,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DscCompilationJobCreateProperties (Required)
-* **tags**: Dictionary<string,String> (WriteOnly)
+* **properties**: [DscCompilationJobCreateProperties](#dsccompilationjobcreateproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
 * **type**: 'Microsoft.Automation/automationAccounts/compilationjobs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/connections@2020-01-13-preview
@@ -39,7 +39,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectionCreateOrUpdateProperties (Required)
+* **properties**: [ConnectionCreateOrUpdateProperties](#connectioncreateorupdateproperties) (Required)
 * **type**: 'Microsoft.Automation/automationAccounts/connections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/connectionTypes@2020-01-13-preview
@@ -48,7 +48,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectionTypeCreateOrUpdateProperties (Required)
+* **properties**: [ConnectionTypeCreateOrUpdateProperties](#connectiontypecreateorupdateproperties) (Required)
 * **type**: 'Microsoft.Automation/automationAccounts/connectionTypes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/credentials@2020-01-13-preview
@@ -57,7 +57,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CredentialCreateOrUpdateProperties (Required)
+* **properties**: [CredentialCreateOrUpdateProperties](#credentialcreateorupdateproperties) (Required)
 * **type**: 'Microsoft.Automation/automationAccounts/credentials' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/jobSchedules@2020-01-13-preview
@@ -66,7 +66,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: JobScheduleCreateProperties (Required)
+* **properties**: [JobScheduleCreateProperties](#jobschedulecreateproperties) (Required)
 * **type**: 'Microsoft.Automation/automationAccounts/jobSchedules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/modules@2020-01-13-preview
@@ -77,8 +77,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ModuleCreateOrUpdateProperties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [ModuleCreateOrUpdateProperties](#modulecreateorupdateproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Automation/automationAccounts/modules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/nodeConfigurations@2020-01-13-preview
@@ -87,8 +87,8 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DscNodeConfigurationCreateOrUpdateParametersProperties
-* **tags**: Dictionary<string,String> (WriteOnly)
+* **properties**: [DscNodeConfigurationCreateOrUpdateParametersProperties](#dscnodeconfigurationcreateorupdateparametersproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
 * **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/privateEndpointConnections@2020-01-13-preview
@@ -97,7 +97,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: 'Microsoft.Automation/automationAccounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/python2Packages@2020-01-13-preview
@@ -108,8 +108,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PythonPackageCreateProperties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [PythonPackageCreateProperties](#pythonpackagecreateproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Automation/automationAccounts/python2Packages' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/schedules@2020-01-13-preview
@@ -118,7 +118,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ScheduleCreateOrUpdateProperties (Required)
+* **properties**: [ScheduleCreateOrUpdateProperties](#schedulecreateorupdateproperties) (Required)
 * **type**: 'Microsoft.Automation/automationAccounts/schedules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/sourceControls@2020-01-13-preview
@@ -127,7 +127,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SourceControlCreateOrUpdateProperties (Required)
+* **properties**: [SourceControlCreateOrUpdateProperties](#sourcecontrolcreateorupdateproperties) (Required)
 * **type**: 'Microsoft.Automation/automationAccounts/sourceControls' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs@2020-01-13-preview
@@ -136,7 +136,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SourceControlSyncJobCreateProperties (Required)
+* **properties**: [SourceControlSyncJobCreateProperties](#sourcecontrolsyncjobcreateproperties) (Required)
 * **type**: 'Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/variables@2020-01-13-preview
@@ -145,7 +145,7 @@
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VariableCreateOrUpdateProperties (Required)
+* **properties**: [VariableCreateOrUpdateProperties](#variablecreateorupdateproperties) (Required)
 * **type**: 'Microsoft.Automation/automationAccounts/variables' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/watchers@2020-01-13-preview
@@ -156,8 +156,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WatcherProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [WatcherProperties](#watcherproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Automation/automationAccounts/watchers' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -170,18 +170,18 @@
 ### Properties
 * **creationTime**: string (ReadOnly)
 * **description**: string (ReadOnly)
-* **encryption**: EncryptionProperties
+* **encryption**: [EncryptionProperties](#encryptionproperties)
 * **lastModifiedBy**: string (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
-* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **publicNetworkAccess**: bool (ReadOnly)
-* **sku**: Sku
+* **sku**: [Sku](#sku)
 * **state**: 'Ok' | 'Suspended' | 'Unavailable' (ReadOnly)
 
 ## EncryptionProperties
 ### Properties
 * **keySource**: 'Microsoft.Automation' | 'Microsoft.Keyvault'
-* **keyVaultProperties**: KeyVaultProperties
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
 
 ## KeyVaultProperties
 ### Properties
@@ -193,13 +193,13 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpointProperty
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionStateProperty
+* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty)
 
 ## PrivateEndpointProperty
 ### Properties
@@ -234,7 +234,7 @@
 
 ## DscCompilationJobCreateProperties
 ### Properties
-* **configuration**: DscConfigurationAssociationProperty (Required)
+* **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required)
 * **creationTime**: string (ReadOnly)
 * **endTime**: string (ReadOnly)
 * **exception**: string (ReadOnly)
@@ -242,7 +242,7 @@
 * **jobId**: string (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **lastStatusModifiedTime**: string (ReadOnly)
-* **parameters**: Dictionary<string,String>
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
 * **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly)
 * **runOn**: string (ReadOnly)
 * **startedBy**: string (ReadOnly)
@@ -266,10 +266,10 @@
 
 ## ConnectionCreateOrUpdateProperties
 ### Properties
-* **connectionType**: ConnectionTypeAssociationProperty (Required)
+* **connectionType**: [ConnectionTypeAssociationProperty](#connectiontypeassociationproperty) (Required)
 * **creationTime**: string (ReadOnly)
 * **description**: string
-* **fieldDefinitionValues**: Dictionary<string,String>
+* **fieldDefinitionValues**: [Dictionary<string,String>](#dictionarystringstring)
 * **lastModifiedTime**: string (ReadOnly)
 
 ## ConnectionTypeAssociationProperty
@@ -285,14 +285,14 @@
 ### Properties
 * **creationTime**: string (ReadOnly)
 * **description**: string (ReadOnly)
-* **fieldDefinitions**: Dictionary<string,FieldDefinition> (Required)
+* **fieldDefinitions**: [Dictionary<string,FieldDefinition>](#dictionarystringfielddefinition) (Required)
 * **isGlobal**: bool
 * **lastModifiedTime**: string (ReadOnly)
 
 ## Dictionary<string,FieldDefinition>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: FieldDefinition
+* **Additional Properties Type**: [FieldDefinition](#fielddefinition)
 
 ## FieldDefinition
 ### Properties
@@ -311,10 +311,10 @@
 ## JobScheduleCreateProperties
 ### Properties
 * **jobScheduleId**: string (ReadOnly)
-* **parameters**: Dictionary<string,String>
-* **runbook**: RunbookAssociationProperty (Required)
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **runbook**: [RunbookAssociationProperty](#runbookassociationproperty) (Required)
 * **runOn**: string
-* **schedule**: ScheduleAssociationProperty (Required)
+* **schedule**: [ScheduleAssociationProperty](#scheduleassociationproperty) (Required)
 
 ## Dictionary<string,String>
 ### Properties
@@ -332,10 +332,10 @@
 ## ModuleCreateOrUpdateProperties
 ### Properties
 * **activityCount**: int (ReadOnly)
-* **contentLink**: ContentLink (Required)
+* **contentLink**: [ContentLink](#contentlink) (Required)
 * **creationTime**: string (ReadOnly)
 * **description**: string (ReadOnly)
-* **error**: ModuleErrorInfo (ReadOnly)
+* **error**: [ModuleErrorInfo](#moduleerrorinfo) (ReadOnly)
 * **isComposite**: bool (ReadOnly)
 * **isGlobal**: bool (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
@@ -345,7 +345,7 @@
 
 ## ContentLink
 ### Properties
-* **contentHash**: ContentHash
+* **contentHash**: [ContentHash](#contenthash)
 * **uri**: string
 * **version**: string
 
@@ -366,16 +366,16 @@
 
 ## DscNodeConfigurationCreateOrUpdateParametersProperties
 ### Properties
-* **configuration**: DscConfigurationAssociationProperty (Required)
+* **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required)
 * **creationTime**: string (ReadOnly)
 * **incrementNodeConfigurationBuild**: bool
 * **lastModifiedTime**: string (ReadOnly)
 * **nodeCount**: int (ReadOnly)
-* **source**: ContentSource (Required)
+* **source**: [ContentSource](#contentsource) (Required)
 
 ## ContentSource
 ### Properties
-* **hash**: ContentHash (WriteOnly)
+* **hash**: [ContentHash](#contenthash) (WriteOnly)
 * **type**: 'embeddedContent' | 'uri' (WriteOnly)
 * **value**: string (WriteOnly)
 * **version**: string (WriteOnly)
@@ -388,10 +388,10 @@
 ## PythonPackageCreateProperties
 ### Properties
 * **activityCount**: int (ReadOnly)
-* **contentLink**: ContentLink (Required)
+* **contentLink**: [ContentLink](#contentlink) (Required)
 * **creationTime**: string (ReadOnly)
 * **description**: string (ReadOnly)
-* **error**: ModuleErrorInfo (ReadOnly)
+* **error**: [ModuleErrorInfo](#moduleerrorinfo) (ReadOnly)
 * **isComposite**: bool (ReadOnly)
 * **isGlobal**: bool (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
@@ -406,7 +406,7 @@
 
 ## ScheduleCreateOrUpdateProperties
 ### Properties
-* **advancedSchedule**: AdvancedSchedule
+* **advancedSchedule**: [AdvancedSchedule](#advancedschedule)
 * **creationTime**: string (ReadOnly)
 * **description**: string
 * **expiryTime**: string
@@ -424,7 +424,7 @@
 ## AdvancedSchedule
 ### Properties
 * **monthDays**: int[]
-* **monthlyOccurrences**: AdvancedScheduleMonthlyOccurrence[]
+* **monthlyOccurrences**: [AdvancedScheduleMonthlyOccurrence](#advancedschedulemonthlyoccurrence)[]
 * **weekDays**: string[]
 
 ## AdvancedScheduleMonthlyOccurrence
@@ -442,7 +442,7 @@
 * **lastModifiedTime**: string (ReadOnly)
 * **publishRunbook**: bool
 * **repoUrl**: string
-* **securityToken**: SourceControlSecurityTokenProperties (WriteOnly)
+* **securityToken**: [SourceControlSecurityTokenProperties](#sourcecontrolsecuritytokenproperties) (WriteOnly)
 * **sourceType**: 'GitHub' | 'VsoGit' | 'VsoTfvc'
 
 ## SourceControlSecurityTokenProperties
@@ -478,7 +478,7 @@
 * **lastModifiedBy**: string (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **scriptName**: string
-* **scriptParameters**: Dictionary<string,String>
+* **scriptParameters**: [Dictionary<string,String>](#dictionarystringstring)
 * **scriptRunOn**: string
 * **status**: string (ReadOnly)
 

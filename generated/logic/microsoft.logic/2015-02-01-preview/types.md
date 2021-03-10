@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkflowProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [WorkflowProperties](#workflowproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Logic/workflows' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/workflows/accessKeys@2015-02-01-preview
@@ -17,7 +17,7 @@
 * **apiVersion**: '2015-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkflowAccessKeyProperties
+* **properties**: [WorkflowAccessKeyProperties](#workflowaccesskeyproperties)
 * **type**: 'Microsoft.Logic/workflows/accessKeys' (ReadOnly, DeployTimeConstant)
 
 ## WorkflowProperties
@@ -26,17 +26,17 @@
 * **changedTime**: string (ReadOnly)
 * **createdTime**: string (ReadOnly)
 * **definition**: any
-* **definitionLink**: ContentLink
-* **parameters**: Dictionary<string,WorkflowParameter>
-* **parametersLink**: ContentLink
+* **definitionLink**: [ContentLink](#contentlink)
+* **parameters**: [Dictionary<string,WorkflowParameter>](#dictionarystringworkflowparameter)
+* **parametersLink**: [ContentLink](#contentlink)
 * **provisioningState**: 'Moving' | 'NotSpecified' | 'Succeeded' (ReadOnly)
-* **sku**: Sku
+* **sku**: [Sku](#sku)
 * **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended'
 * **version**: string (ReadOnly)
 
 ## ContentLink
 ### Properties
-* **contentHash**: ContentHash
+* **contentHash**: [ContentHash](#contenthash)
 * **contentSize**: int
 * **contentVersion**: string
 * **metadata**: any
@@ -50,7 +50,7 @@
 ## Dictionary<string,WorkflowParameter>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: WorkflowParameter
+* **Additional Properties Type**: [WorkflowParameter](#workflowparameter)
 
 ## WorkflowParameter
 ### Properties
@@ -61,7 +61,7 @@
 ## Sku
 ### Properties
 * **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard'
-* **plan**: ResourceReference
+* **plan**: [ResourceReference](#resourcereference)
 
 ## ResourceReference
 ### Properties

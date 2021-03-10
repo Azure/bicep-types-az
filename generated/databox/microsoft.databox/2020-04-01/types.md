@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ResourceIdentity
+* **identity**: [ResourceIdentity](#resourceidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: JobProperties (Required)
-* **sku**: Sku (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [JobProperties](#jobproperties) (Required)
+* **sku**: [Sku](#sku) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DataBox/jobs' (ReadOnly, DeployTimeConstant)
 
 ## ResourceIdentity
@@ -22,10 +22,10 @@
 ## JobProperties
 ### Properties
 * **cancellationReason**: string (ReadOnly)
-* **deliveryInfo**: JobDeliveryInfo
+* **deliveryInfo**: [JobDeliveryInfo](#jobdeliveryinfo)
 * **deliveryType**: 'NonScheduled' | 'Scheduled'
-* **details**: JobDetails
-* **error**: CloudError (ReadOnly)
+* **details**: [JobDetails](#jobdetails)
+* **error**: [CloudError](#clouderror) (ReadOnly)
 * **isCancellable**: bool (ReadOnly)
 * **isCancellableWithoutFee**: bool (ReadOnly)
 * **isDeletable**: bool (ReadOnly)
@@ -43,18 +43,18 @@
 * **Discriminator**: jobDetailsType
 ### Base Properties
 * **chainOfCustodySasKey**: string (ReadOnly)
-* **contactDetails**: ContactDetails (Required)
-* **copyLogDetails**: CopyLogDetails[] (ReadOnly)
-* **dataExportDetails**: DataExportDetails[]
-* **dataImportDetails**: DataImportDetails[]
-* **deliveryPackage**: PackageShippingDetails (ReadOnly)
+* **contactDetails**: [ContactDetails](#contactdetails) (Required)
+* **copyLogDetails**: [CopyLogDetails](#copylogdetails)[] (ReadOnly)
+* **dataExportDetails**: [DataExportDetails](#dataexportdetails)[]
+* **dataImportDetails**: [DataImportDetails](#dataimportdetails)[]
+* **deliveryPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly)
 * **expectedDataSizeInTerabytes**: int
-* **jobStages**: JobStages[] (ReadOnly)
-* **keyEncryptionKey**: KeyEncryptionKey (ReadOnly)
-* **preferences**: Preferences
-* **returnPackage**: PackageShippingDetails (ReadOnly)
+* **jobStages**: [JobStages](#jobstages)[] (ReadOnly)
+* **keyEncryptionKey**: [KeyEncryptionKey](#keyencryptionkey) (ReadOnly)
+* **preferences**: [Preferences](#preferences)
+* **returnPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly)
 * **reverseShipmentLabelSasKey**: string (ReadOnly)
-* **shippingAddress**: ShippingAddress
+* **shippingAddress**: [ShippingAddress](#shippingaddress)
 ### DataBox
 #### Properties
 * **accountName**: string (ReadOnly)
@@ -85,7 +85,7 @@
 * **contactName**: string (Required)
 * **emailList**: string[] (Required)
 * **mobile**: string
-* **notificationPreference**: NotificationPreference[]
+* **notificationPreference**: [NotificationPreference](#notificationpreference)[]
 * **phone**: string (Required)
 * **phoneExtension**: string
 
@@ -148,9 +148,9 @@
 
 ## DataExportDetails
 ### Properties
-* **accountDetails**: DataAccountDetails (Required)
+* **accountDetails**: [DataAccountDetails](#dataaccountdetails) (Required)
 * **logCollectionLevel**: 'Error' | 'Verbose'
-* **transferConfiguration**: TransferConfiguration (Required)
+* **transferConfiguration**: [TransferConfiguration](#transferconfiguration) (Required)
 
 ## DataAccountDetails
 * **Discriminator**: dataAccountType
@@ -181,13 +181,13 @@
 
 ## TransferConfiguration
 ### Properties
-* **transferAllDetails**: schemas:85_transferAllDetails
+* **transferAllDetails**: [schemas:85_transferAllDetails](#schemas85transferalldetails)
 * **transferConfigurationType**: 'TransferAll' | 'TransferUsingFilter' (Required)
-* **transferFilterDetails**: schemas:85_transferFilterDetails
+* **transferFilterDetails**: [schemas:85_transferFilterDetails](#schemas85transferfilterdetails)
 
 ## schemas:85_transferAllDetails
 ### Properties
-* **include**: TransferAllDetails
+* **include**: [TransferAllDetails](#transferalldetails)
 
 ## TransferAllDetails
 ### Properties
@@ -197,14 +197,14 @@
 
 ## schemas:85_transferFilterDetails
 ### Properties
-* **include**: TransferFilterDetails
+* **include**: [TransferFilterDetails](#transferfilterdetails)
 
 ## TransferFilterDetails
 ### Properties
-* **azureFileFilterDetails**: AzureFileFilterDetails
-* **blobFilterDetails**: BlobFilterDetails
+* **azureFileFilterDetails**: [AzureFileFilterDetails](#azurefilefilterdetails)
+* **blobFilterDetails**: [BlobFilterDetails](#blobfilterdetails)
 * **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (Required)
-* **filterFileDetails**: FilterFileDetails[]
+* **filterFileDetails**: [FilterFileDetails](#filterfiledetails)[]
 
 ## AzureFileFilterDetails
 ### Properties
@@ -225,7 +225,7 @@
 
 ## DataImportDetails
 ### Properties
-* **accountDetails**: DataAccountDetails (Required)
+* **accountDetails**: [DataAccountDetails](#dataaccountdetails) (Required)
 
 ## PackageShippingDetails
 ### Properties
@@ -250,7 +250,7 @@
 ## Preferences
 ### Properties
 * **preferredDataCenterRegion**: string[]
-* **transportPreferences**: TransportPreferences
+* **transportPreferences**: [TransportPreferences](#transportpreferences)
 
 ## TransportPreferences
 ### Properties
@@ -271,9 +271,9 @@
 
 ## CloudError
 ### Properties
-* **additionalInfo**: AdditionalErrorInfo[] (ReadOnly)
+* **additionalInfo**: [AdditionalErrorInfo](#additionalerrorinfo)[] (ReadOnly)
 * **code**: string
-* **details**: CloudError[] (ReadOnly)
+* **details**: [CloudError](#clouderror)[] (ReadOnly)
 * **message**: string
 * **target**: string
 

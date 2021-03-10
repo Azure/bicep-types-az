@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CloudServiceProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [CloudServiceProperties](#cloudserviceproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Compute/cloudServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Compute/cloudServices/updateDomains@2020-10-01-preview
@@ -23,31 +23,31 @@
 ### Properties
 * **configuration**: string
 * **configurationUrl**: string
-* **extensionProfile**: CloudServiceExtensionProfile
-* **networkProfile**: CloudServiceNetworkProfile
-* **osProfile**: CloudServiceOsProfile
+* **extensionProfile**: [CloudServiceExtensionProfile](#cloudserviceextensionprofile)
+* **networkProfile**: [CloudServiceNetworkProfile](#cloudservicenetworkprofile)
+* **osProfile**: [CloudServiceOsProfile](#cloudserviceosprofile)
 * **packageUrl**: string
 * **provisioningState**: string (ReadOnly)
-* **roleProfile**: CloudServiceRoleProfile
+* **roleProfile**: [CloudServiceRoleProfile](#cloudserviceroleprofile)
 * **startCloudService**: bool
 * **uniqueId**: string (ReadOnly)
 * **upgradeMode**: 'Auto' | 'Manual' | 'Simultaneous'
 
 ## CloudServiceExtensionProfile
 ### Properties
-* **extensions**: Extension[]
+* **extensions**: [Extension](#extension)[]
 
 ## Extension
 ### Properties
 * **name**: string
-* **properties**: CloudServiceExtensionProperties
+* **properties**: [CloudServiceExtensionProperties](#cloudserviceextensionproperties)
 
 ## CloudServiceExtensionProperties
 ### Properties
 * **autoUpgradeMinorVersion**: bool
 * **forceUpdateTag**: string
 * **protectedSettings**: string
-* **protectedSettingsFromKeyVault**: CloudServiceVaultAndSecretReference
+* **protectedSettingsFromKeyVault**: [CloudServiceVaultAndSecretReference](#cloudservicevaultandsecretreference)
 * **provisioningState**: string (ReadOnly)
 * **publisher**: string
 * **rolesAppliedTo**: string[]
@@ -58,7 +58,7 @@
 ## CloudServiceVaultAndSecretReference
 ### Properties
 * **secretUrl**: string
-* **sourceVault**: SubResource
+* **sourceVault**: [SubResource](#subresource)
 
 ## SubResource
 ### Properties
@@ -66,37 +66,37 @@
 
 ## CloudServiceNetworkProfile
 ### Properties
-* **loadBalancerConfigurations**: LoadBalancerConfiguration[]
-* **swappableCloudService**: SubResource
+* **loadBalancerConfigurations**: [LoadBalancerConfiguration](#loadbalancerconfiguration)[]
+* **swappableCloudService**: [SubResource](#subresource)
 
 ## LoadBalancerConfiguration
 ### Properties
 * **name**: string
-* **properties**: LoadBalancerConfigurationProperties
+* **properties**: [LoadBalancerConfigurationProperties](#loadbalancerconfigurationproperties)
 
 ## LoadBalancerConfigurationProperties
 ### Properties
-* **frontendIPConfigurations**: LoadBalancerFrontendIPConfiguration[]
+* **frontendIPConfigurations**: [LoadBalancerFrontendIPConfiguration](#loadbalancerfrontendipconfiguration)[]
 
 ## LoadBalancerFrontendIPConfiguration
 ### Properties
 * **name**: string
-* **properties**: LoadBalancerFrontendIPConfigurationProperties
+* **properties**: [LoadBalancerFrontendIPConfigurationProperties](#loadbalancerfrontendipconfigurationproperties)
 
 ## LoadBalancerFrontendIPConfigurationProperties
 ### Properties
 * **privateIPAddress**: string
-* **publicIPAddress**: SubResource
-* **subnet**: SubResource
+* **publicIPAddress**: [SubResource](#subresource)
+* **subnet**: [SubResource](#subresource)
 
 ## CloudServiceOsProfile
 ### Properties
-* **secrets**: CloudServiceVaultSecretGroup[]
+* **secrets**: [CloudServiceVaultSecretGroup](#cloudservicevaultsecretgroup)[]
 
 ## CloudServiceVaultSecretGroup
 ### Properties
-* **sourceVault**: SubResource
-* **vaultCertificates**: CloudServiceVaultCertificate[]
+* **sourceVault**: [SubResource](#subresource)
+* **vaultCertificates**: [CloudServiceVaultCertificate](#cloudservicevaultcertificate)[]
 
 ## CloudServiceVaultCertificate
 ### Properties
@@ -104,12 +104,12 @@
 
 ## CloudServiceRoleProfile
 ### Properties
-* **roles**: CloudServiceRoleProfileProperties[]
+* **roles**: [CloudServiceRoleProfileProperties](#cloudserviceroleprofileproperties)[]
 
 ## CloudServiceRoleProfileProperties
 ### Properties
 * **name**: string
-* **sku**: CloudServiceRoleSku
+* **sku**: [CloudServiceRoleSku](#cloudservicerolesku)
 
 ## CloudServiceRoleSku
 ### Properties

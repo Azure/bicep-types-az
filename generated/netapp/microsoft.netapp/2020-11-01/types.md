@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: accountProperties
-* **systemData**: systemData (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [accountProperties](#accountproperties)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/backupPolicies@2020-11-01
@@ -19,8 +19,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: backupPolicyProperties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [backupPolicyProperties](#backuppolicyproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.NetApp/netAppAccounts/backupPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2020-11-01
@@ -30,8 +30,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: poolProperties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [poolProperties](#poolproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-11-01
@@ -41,8 +41,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: volumeProperties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [volumeProperties](#volumeproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups@2020-11-01
@@ -52,7 +52,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: backupProperties (Required)
+* **properties**: [backupProperties](#backupproperties) (Required)
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2020-11-01
@@ -62,7 +62,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: snapshotProperties
+* **properties**: [snapshotProperties](#snapshotproperties)
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/snapshotPolicies@2020-11-01
@@ -72,14 +72,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: snapshotPolicyProperties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [snapshotPolicyProperties](#snapshotpolicyproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.NetApp/netAppAccounts/snapshotPolicies' (ReadOnly, DeployTimeConstant)
 
 ## accountProperties
 ### Properties
-* **activeDirectories**: activeDirectory[]
-* **encryption**: accountEncryption
+* **activeDirectories**: [activeDirectory](#activedirectory)[]
+* **encryption**: [accountEncryption](#accountencryption)
 * **provisioningState**: string (ReadOnly)
 
 ## activeDirectory
@@ -128,7 +128,7 @@
 * **monthlyBackupsToKeep**: int
 * **name**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
-* **volumeBackups**: volumeBackups[]
+* **volumeBackups**: [volumeBackups](#volumebackups)[]
 * **volumesAssigned**: int
 * **weeklyBackupsToKeep**: int
 * **yearlyBackupsToKeep**: int
@@ -164,13 +164,13 @@
 * **backupId**: string
 * **baremetalTenantId**: string (ReadOnly)
 * **creationToken**: string (Required)
-* **dataProtection**: schemas:23_dataProtection
+* **dataProtection**: [schemas:23_dataProtection](#schemas23dataprotection)
 * **encryptionKeySource**: string
-* **exportPolicy**: schemas:23_exportPolicy
+* **exportPolicy**: [schemas:23_exportPolicy](#schemas23exportpolicy)
 * **fileSystemId**: string (ReadOnly)
 * **isRestoring**: bool
 * **kerberosEnabled**: bool
-* **mountTargets**: mountTargetProperties[] (ReadOnly)
+* **mountTargets**: [mountTargetProperties](#mounttargetproperties)[] (ReadOnly)
 * **protocolTypes**: string[]
 * **provisioningState**: string (ReadOnly)
 * **securityStyle**: 'ntfs' | 'unix'
@@ -186,9 +186,9 @@
 
 ## schemas:23_dataProtection
 ### Properties
-* **backup**: volumeBackupProperties
-* **replication**: replicationObject
-* **snapshot**: volumeSnapshotProperties
+* **backup**: [volumeBackupProperties](#volumebackupproperties)
+* **replication**: [replicationObject](#replicationobject)
+* **snapshot**: [volumeSnapshotProperties](#volumesnapshotproperties)
 
 ## volumeBackupProperties
 ### Properties
@@ -211,7 +211,7 @@
 
 ## schemas:23_exportPolicy
 ### Properties
-* **rules**: exportPolicyRule[]
+* **rules**: [exportPolicyRule](#exportpolicyrule)[]
 
 ## exportPolicyRule
 ### Properties
@@ -260,13 +260,13 @@
 
 ## snapshotPolicyProperties
 ### Properties
-* **dailySchedule**: dailySchedule
+* **dailySchedule**: [dailySchedule](#dailyschedule)
 * **enabled**: bool
-* **hourlySchedule**: hourlySchedule
-* **monthlySchedule**: monthlySchedule
+* **hourlySchedule**: [hourlySchedule](#hourlyschedule)
+* **monthlySchedule**: [monthlySchedule](#monthlyschedule)
 * **name**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
-* **weeklySchedule**: weeklySchedule
+* **weeklySchedule**: [weeklySchedule](#weeklyschedule)
 
 ## dailySchedule
 ### Properties

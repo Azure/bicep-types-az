@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: accountProperties (Required)
+* **properties**: [accountProperties](#accountproperties) (Required)
 * **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
 
@@ -18,7 +18,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: poolProperties (Required)
+* **properties**: [poolProperties](#poolproperties) (Required)
 * **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
 
@@ -29,7 +29,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: volumeProperties (Required)
+* **properties**: [volumeProperties](#volumeproperties) (Required)
 * **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant)
 
@@ -40,13 +40,13 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: snapshotProperties (Required)
+* **properties**: [snapshotProperties](#snapshotproperties) (Required)
 * **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
 
 ## accountProperties
 ### Properties
-* **activeDirectories**: activeDirectory[]
+* **activeDirectories**: [activeDirectory](#activedirectory)[]
 * **provisioningState**: string (ReadOnly)
 
 ## activeDirectory
@@ -70,7 +70,7 @@
 ## volumeProperties
 ### Properties
 * **creationToken**: string (Required)
-* **exportPolicy**: schemas:19_exportPolicy
+* **exportPolicy**: [schemas:19_exportPolicy](#schemas19exportpolicy)
 * **fileSystemId**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' (Required)
@@ -79,7 +79,7 @@
 
 ## schemas:19_exportPolicy
 ### Properties
-* **rules**: exportPolicyRule[]
+* **rules**: [exportPolicyRule](#exportpolicyrule)[]
 
 ## exportPolicyRule
 ### Properties

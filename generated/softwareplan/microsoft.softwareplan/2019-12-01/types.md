@@ -7,8 +7,8 @@
 * **etag**: int (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: HybridUseBenefitProperties
-* **sku**: Sku (Required)
+* **properties**: [HybridUseBenefitProperties](#hybridusebenefitproperties)
+* **sku**: [Sku](#sku) (Required)
 * **type**: 'Microsoft.SoftwarePlan/hybridUseBenefits' (ReadOnly, DeployTimeConstant)
 
 ## HybridUseBenefitProperties
