@@ -6,7 +6,7 @@
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AlertsSuppressionRuleProperties
+* **properties**: [AlertsSuppressionRuleProperties](#alertssuppressionruleproperties)
 * **type**: 'Microsoft.Security/alertsSuppressionRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/assessmentMetadata@2019-01-01-preview
@@ -15,7 +15,7 @@
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityAssessmentMetadataProperties
+* **properties**: [SecurityAssessmentMetadataProperties](#securityassessmentmetadataproperties)
 * **type**: 'Microsoft.Security/assessmentMetadata' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/assessments@2019-01-01-preview
@@ -24,7 +24,7 @@
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityAssessmentProperties
+* **properties**: [SecurityAssessmentProperties](#securityassessmentproperties)
 * **type**: 'Microsoft.Security/assessments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/automations@2019-01-01-preview
@@ -36,8 +36,8 @@
 * **kind**: string
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AutomationProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [AutomationProperties](#automationproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Security/automations' (ReadOnly, DeployTimeConstant)
 
 ## AlertsSuppressionRuleProperties
@@ -48,11 +48,11 @@
 * **lastModifiedUtc**: string (ReadOnly)
 * **reason**: string (Required)
 * **state**: 'Disabled' | 'Enabled' | 'Expired' (Required)
-* **suppressionAlertsScope**: SuppressionAlertsScope
+* **suppressionAlertsScope**: [SuppressionAlertsScope](#suppressionalertsscope)
 
 ## SuppressionAlertsScope
 ### Properties
-* **allOf**: ScopeElement[] (Required)
+* **allOf**: [ScopeElement](#scopeelement)[] (Required)
 
 ## ScopeElement
 ### Properties
@@ -76,11 +76,11 @@
 
 ## SecurityAssessmentProperties
 ### Properties
-* **additionalData**: Dictionary<string,String>
+* **additionalData**: [Dictionary<string,String>](#dictionarystringstring)
 * **displayName**: string (ReadOnly)
-* **links**: AssessmentLinks
-* **resourceDetails**: ResourceDetails (Required)
-* **status**: AssessmentStatus (Required)
+* **links**: [AssessmentLinks](#assessmentlinks)
+* **resourceDetails**: [ResourceDetails](#resourcedetails) (Required)
+* **status**: [AssessmentStatus](#assessmentstatus) (Required)
 
 ## Dictionary<string,String>
 ### Properties
@@ -129,11 +129,11 @@
 
 ## AutomationProperties
 ### Properties
-* **actions**: AutomationAction[]
+* **actions**: [AutomationAction](#automationaction)[]
 * **description**: string
 * **isEnabled**: bool
-* **scopes**: AutomationScope[]
-* **sources**: AutomationSource[]
+* **scopes**: [AutomationScope](#automationscope)[]
+* **sources**: [AutomationSource](#automationsource)[]
 
 ## AutomationAction
 * **Discriminator**: actionType
@@ -183,11 +183,11 @@
 ## AutomationSource
 ### Properties
 * **eventSource**: 'Alerts' | 'Assessments' | 'RegulatoryComplianceAssessment' | 'RegulatoryComplianceAssessmentSnapshot' | 'SecureScoreControls' | 'SecureScoreControlsSnapshot' | 'SecureScores' | 'SecureScoresSnapshot' | 'SubAssessments'
-* **ruleSets**: AutomationRuleSet[]
+* **ruleSets**: [AutomationRuleSet](#automationruleset)[]
 
 ## AutomationRuleSet
 ### Properties
-* **rules**: AutomationTriggeringRule[]
+* **rules**: [AutomationTriggeringRule](#automationtriggeringrule)[]
 
 ## AutomationTriggeringRule
 ### Properties

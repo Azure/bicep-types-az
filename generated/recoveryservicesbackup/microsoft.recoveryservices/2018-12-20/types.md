@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BackupResourceConfig
-* **tags**: Dictionary<string,String>
+* **properties**: [BackupResourceConfig](#backupresourceconfig)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupstorageconfig' (ReadOnly, DeployTimeConstant)
 
 ## BackupResourceConfig

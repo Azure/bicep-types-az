@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MediaGraphProperties
+* **properties**: [MediaGraphProperties](#mediagraphproperties)
 * **type**: 'Microsoft.Media/mediaServices/mediaGraphs' (ReadOnly, DeployTimeConstant)
 
 ## MediaGraphProperties
@@ -14,8 +14,8 @@
 * **created**: string (ReadOnly)
 * **description**: string
 * **lastModified**: string (ReadOnly)
-* **sinks**: MediaGraphSink[] (Required)
-* **sources**: MediaGraphSource[] (Required)
+* **sinks**: [MediaGraphSink](#mediagraphsink)[] (Required)
+* **sources**: [MediaGraphSource](#mediagraphsource)[] (Required)
 * **state**: 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
 
 ## MediaGraphSink
@@ -41,20 +41,20 @@
 ### #Microsoft.Media.MediaGraphRtspSource
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required)
-* **endpoint**: MediaGraphEndpoint (Required)
+* **endpoint**: [MediaGraphEndpoint](#mediagraphendpoint) (Required)
 * **transport**: 'Http' | 'Tcp' (Required)
 
 
 ## #Microsoft.Media.MediaGraphRtspSource
 ### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required)
-* **endpoint**: MediaGraphEndpoint (Required)
+* **endpoint**: [MediaGraphEndpoint](#mediagraphendpoint) (Required)
 * **transport**: 'Http' | 'Tcp' (Required)
 
 ## MediaGraphEndpoint
 * **Discriminator**: @odata.type
 ### Base Properties
-* **credentials**: MediaGraphCredentials
+* **credentials**: [MediaGraphCredentials](#mediagraphcredentials)
 * **url**: string (Required)
 ### #Microsoft.Media.MediaGraphClearEndpoint
 #### Properties
@@ -63,8 +63,8 @@
 ### #Microsoft.Media.MediaGraphTlsEndpoint
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphTlsEndpoint' (Required)
-* **trustedCertificates**: MediaGraphCertificateSource
-* **validationOptions**: MediaGraphTlsValidationOptions
+* **trustedCertificates**: [MediaGraphCertificateSource](#mediagraphcertificatesource)
+* **validationOptions**: [MediaGraphTlsValidationOptions](#mediagraphtlsvalidationoptions)
 
 
 ## MediaGraphCredentials
@@ -90,8 +90,8 @@
 ## #Microsoft.Media.MediaGraphTlsEndpoint
 ### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphTlsEndpoint' (Required)
-* **trustedCertificates**: MediaGraphCertificateSource
-* **validationOptions**: MediaGraphTlsValidationOptions
+* **trustedCertificates**: [MediaGraphCertificateSource](#mediagraphcertificatesource)
+* **validationOptions**: [MediaGraphTlsValidationOptions](#mediagraphtlsvalidationoptions)
 
 ## MediaGraphCertificateSource
 * **Discriminator**: @odata.type

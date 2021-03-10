@@ -5,13 +5,13 @@
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **kind**: 'BlobStorage' | 'BlockBlobStorage' | 'FileStorage' | 'Storage' | 'StorageV2' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageAccountPropertiesCreateParameters
-* **sku**: Sku (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters)
+* **sku**: [Sku](#sku) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/blobServices@2019-06-01
@@ -20,8 +20,8 @@
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:90_properties
-* **sku**: Sku (ReadOnly)
+* **properties**: [schemas:90_properties](#schemas90properties)
+* **sku**: [Sku](#sku) (ReadOnly)
 * **type**: 'Microsoft.Storage/storageAccounts/blobServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/blobServices/containers@2019-06-01
@@ -31,7 +31,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ContainerProperties
+* **properties**: [ContainerProperties](#containerproperties)
 * **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies@2019-06-01
@@ -41,7 +41,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ImmutabilityPolicyProperty (Required)
+* **properties**: [ImmutabilityPolicyProperty](#immutabilitypolicyproperty) (Required)
 * **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/encryptionScopes@2019-06-01
@@ -50,7 +50,7 @@
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EncryptionScopeProperties
+* **properties**: [EncryptionScopeProperties](#encryptionscopeproperties)
 * **type**: 'Microsoft.Storage/storageAccounts/encryptionScopes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/fileServices@2019-06-01
@@ -59,8 +59,8 @@
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:98_properties
-* **sku**: Sku (ReadOnly)
+* **properties**: [schemas:98_properties](#schemas98properties)
+* **sku**: [Sku](#sku) (ReadOnly)
 * **type**: 'Microsoft.Storage/storageAccounts/fileServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/fileServices/shares@2019-06-01
@@ -70,7 +70,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: FileShareProperties
+* **properties**: [FileShareProperties](#fileshareproperties)
 * **type**: 'Microsoft.Storage/storageAccounts/fileServices/shares' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/inventoryPolicies@2019-06-01
@@ -79,8 +79,8 @@
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BlobInventoryPolicyProperties
-* **systemData**: systemData
+* **properties**: [BlobInventoryPolicyProperties](#blobinventorypolicyproperties)
+* **systemData**: [systemData](#systemdata)
 * **type**: 'Microsoft.Storage/storageAccounts/inventoryPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/managementPolicies@2019-06-01
@@ -89,7 +89,7 @@
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagementPolicyProperties
+* **properties**: [ManagementPolicyProperties](#managementpolicyproperties)
 * **type**: 'Microsoft.Storage/storageAccounts/managementPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/objectReplicationPolicies@2019-06-01
@@ -98,7 +98,7 @@
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ObjectReplicationPolicyProperties
+* **properties**: [ObjectReplicationPolicyProperties](#objectreplicationpolicyproperties)
 * **type**: 'Microsoft.Storage/storageAccounts/objectReplicationPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/privateEndpointConnections@2019-06-01
@@ -107,7 +107,7 @@
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: 'Microsoft.Storage/storageAccounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/queueServices@2019-06-01
@@ -116,7 +116,7 @@
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:107_properties
+* **properties**: [schemas:107_properties](#schemas107properties)
 * **type**: 'Microsoft.Storage/storageAccounts/queueServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/queueServices/queues@2019-06-01
@@ -125,7 +125,7 @@
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: QueueProperties
+* **properties**: [QueueProperties](#queueproperties)
 * **type**: 'Microsoft.Storage/storageAccounts/queueServices/queues' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/tableServices@2019-06-01
@@ -134,7 +134,7 @@
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:114_properties
+* **properties**: [schemas:114_properties](#schemas114properties)
 * **type**: 'Microsoft.Storage/storageAccounts/tableServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/tableServices/tables@2019-06-01
@@ -143,7 +143,7 @@
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TableProperties (ReadOnly)
+* **properties**: [TableProperties](#tableproperties) (ReadOnly)
 * **type**: 'Microsoft.Storage/storageAccounts/tableServices/tables' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -157,24 +157,24 @@
 * **accessTier**: 'Cool' | 'Hot'
 * **allowBlobPublicAccess**: bool
 * **allowSharedKeyAccess**: bool
-* **azureFilesIdentityBasedAuthentication**: AzureFilesIdentityBasedAuthentication
-* **blobRestoreStatus**: BlobRestoreStatus (ReadOnly)
+* **azureFilesIdentityBasedAuthentication**: [AzureFilesIdentityBasedAuthentication](#azurefilesidentitybasedauthentication)
+* **blobRestoreStatus**: [BlobRestoreStatus](#blobrestorestatus) (ReadOnly)
 * **creationTime**: string (ReadOnly)
-* **customDomain**: CustomDomain
-* **encryption**: Encryption
+* **customDomain**: [CustomDomain](#customdomain)
+* **encryption**: [Encryption](#encryption)
 * **failoverInProgress**: bool (ReadOnly)
-* **geoReplicationStats**: GeoReplicationStats (ReadOnly)
+* **geoReplicationStats**: [GeoReplicationStats](#georeplicationstats) (ReadOnly)
 * **isHnsEnabled**: bool
 * **largeFileSharesState**: 'Disabled' | 'Enabled'
 * **lastGeoFailoverTime**: string (ReadOnly)
 * **minimumTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2'
-* **networkAcls**: NetworkRuleSet
-* **primaryEndpoints**: Endpoints (ReadOnly)
+* **networkAcls**: [NetworkRuleSet](#networkruleset)
+* **primaryEndpoints**: [Endpoints](#endpoints) (ReadOnly)
 * **primaryLocation**: string (ReadOnly)
-* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly)
-* **routingPreference**: RoutingPreference
-* **secondaryEndpoints**: Endpoints (ReadOnly)
+* **routingPreference**: [RoutingPreference](#routingpreference)
+* **secondaryEndpoints**: [Endpoints](#endpoints) (ReadOnly)
 * **secondaryLocation**: string (ReadOnly)
 * **statusOfPrimary**: 'available' | 'unavailable' (ReadOnly)
 * **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly)
@@ -182,7 +182,7 @@
 
 ## AzureFilesIdentityBasedAuthentication
 ### Properties
-* **activeDirectoryProperties**: ActiveDirectoryProperties
+* **activeDirectoryProperties**: [ActiveDirectoryProperties](#activedirectoryproperties)
 * **directoryServiceOptions**: 'AADDS' | 'AD' | 'None' (Required)
 
 ## ActiveDirectoryProperties
@@ -197,13 +197,13 @@
 ## BlobRestoreStatus
 ### Properties
 * **failureReason**: string (ReadOnly)
-* **parameters**: BlobRestoreParameters (ReadOnly)
+* **parameters**: [BlobRestoreParameters](#blobrestoreparameters) (ReadOnly)
 * **restoreId**: string (ReadOnly)
 * **status**: 'Complete' | 'Failed' | 'InProgress' (ReadOnly)
 
 ## BlobRestoreParameters
 ### Properties
-* **blobRanges**: BlobRestoreRange[] (ReadOnly)
+* **blobRanges**: [BlobRestoreRange](#blobrestorerange)[] (ReadOnly)
 * **timeToRestore**: string (ReadOnly)
 
 ## BlobRestoreRange
@@ -219,9 +219,9 @@
 ## Encryption
 ### Properties
 * **keySource**: 'Microsoft.Keyvault' | 'Microsoft.Storage' (Required)
-* **keyvaultproperties**: KeyVaultProperties
+* **keyvaultproperties**: [KeyVaultProperties](#keyvaultproperties)
 * **requireInfrastructureEncryption**: bool
-* **services**: EncryptionServices
+* **services**: [EncryptionServices](#encryptionservices)
 
 ## KeyVaultProperties
 ### Properties
@@ -233,10 +233,10 @@
 
 ## EncryptionServices
 ### Properties
-* **blob**: EncryptionService
-* **file**: EncryptionService
-* **queue**: EncryptionService
-* **table**: EncryptionService
+* **blob**: [EncryptionService](#encryptionservice)
+* **file**: [EncryptionService](#encryptionservice)
+* **queue**: [EncryptionService](#encryptionservice)
+* **table**: [EncryptionService](#encryptionservice)
 
 ## EncryptionService
 ### Properties
@@ -254,8 +254,8 @@
 ### Properties
 * **bypass**: 'AzureServices' | 'Logging' | 'Metrics' | 'None'
 * **defaultAction**: 'Allow' | 'Deny' (Required)
-* **ipRules**: IPRule[]
-* **virtualNetworkRules**: VirtualNetworkRule[]
+* **ipRules**: [IPRule](#iprule)[]
+* **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]
 
 ## IPRule
 ### Properties
@@ -273,8 +273,8 @@
 * **blob**: string (ReadOnly)
 * **dfs**: string (ReadOnly)
 * **file**: string (ReadOnly)
-* **internetEndpoints**: StorageAccountInternetEndpoints (ReadOnly)
-* **microsoftEndpoints**: StorageAccountMicrosoftEndpoints (ReadOnly)
+* **internetEndpoints**: [StorageAccountInternetEndpoints](#storageaccountinternetendpoints) (ReadOnly)
+* **microsoftEndpoints**: [StorageAccountMicrosoftEndpoints](#storageaccountmicrosoftendpoints) (ReadOnly)
 * **queue**: string (ReadOnly)
 * **table**: string (ReadOnly)
 * **web**: string (ReadOnly)
@@ -299,13 +299,13 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpoint (ReadOnly)
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (ReadOnly)
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
 
 ## PrivateEndpoint
@@ -337,14 +337,14 @@
 ## schemas:90_properties
 ### Properties
 * **automaticSnapshotPolicyEnabled**: bool
-* **changeFeed**: ChangeFeed
-* **containerDeleteRetentionPolicy**: DeleteRetentionPolicy
-* **cors**: CorsRules
+* **changeFeed**: [ChangeFeed](#changefeed)
+* **containerDeleteRetentionPolicy**: [DeleteRetentionPolicy](#deleteretentionpolicy)
+* **cors**: [CorsRules](#corsrules)
 * **defaultServiceVersion**: string
-* **deleteRetentionPolicy**: DeleteRetentionPolicy
+* **deleteRetentionPolicy**: [DeleteRetentionPolicy](#deleteretentionpolicy)
 * **isVersioningEnabled**: bool
-* **lastAccessTimeTrackingPolicy**: LastAccessTimeTrackingPolicy
-* **restorePolicy**: RestorePolicyProperties
+* **lastAccessTimeTrackingPolicy**: [LastAccessTimeTrackingPolicy](#lastaccesstimetrackingpolicy)
+* **restorePolicy**: [RestorePolicyProperties](#restorepolicyproperties)
 
 ## ChangeFeed
 ### Properties
@@ -358,7 +358,7 @@
 
 ## CorsRules
 ### Properties
-* **corsRules**: CorsRule[]
+* **corsRules**: [CorsRule](#corsrule)[]
 
 ## CorsRule
 ### Properties
@@ -390,13 +390,13 @@
 * **denyEncryptionScopeOverride**: bool
 * **hasImmutabilityPolicy**: bool (ReadOnly)
 * **hasLegalHold**: bool (ReadOnly)
-* **immutabilityPolicy**: ImmutabilityPolicyProperties (ReadOnly)
+* **immutabilityPolicy**: [ImmutabilityPolicyProperties](#immutabilitypolicyproperties) (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **leaseDuration**: 'Fixed' | 'Infinite' (ReadOnly)
 * **leaseState**: 'Available' | 'Breaking' | 'Broken' | 'Expired' | 'Leased' (ReadOnly)
 * **leaseStatus**: 'Locked' | 'Unlocked' (ReadOnly)
-* **legalHold**: LegalHoldProperties (ReadOnly)
-* **metadata**: Dictionary<string,String>
+* **legalHold**: [LegalHoldProperties](#legalholdproperties) (ReadOnly)
+* **metadata**: [Dictionary<string,String>](#dictionarystringstring)
 * **publicAccess**: 'Blob' | 'Container' | 'None'
 * **remainingRetentionDays**: int (ReadOnly)
 * **version**: string (ReadOnly)
@@ -404,8 +404,8 @@
 ## ImmutabilityPolicyProperties
 ### Properties
 * **etag**: string (ReadOnly)
-* **properties**: ImmutabilityPolicyProperty
-* **updateHistory**: UpdateHistoryProperty[] (ReadOnly)
+* **properties**: [ImmutabilityPolicyProperty](#immutabilitypolicyproperty)
+* **updateHistory**: [UpdateHistoryProperty](#updatehistoryproperty)[] (ReadOnly)
 
 ## ImmutabilityPolicyProperty
 ### Properties
@@ -425,7 +425,7 @@
 ## LegalHoldProperties
 ### Properties
 * **hasLegalHold**: bool (ReadOnly)
-* **tags**: TagProperty[]
+* **tags**: [TagProperty](#tagproperty)[]
 
 ## TagProperty
 ### Properties
@@ -443,7 +443,7 @@
 ## EncryptionScopeProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
-* **keyVaultProperties**: EncryptionScopeKeyVaultProperties
+* **keyVaultProperties**: [EncryptionScopeKeyVaultProperties](#encryptionscopekeyvaultproperties)
 * **lastModifiedTime**: string (ReadOnly)
 * **source**: 'Microsoft.KeyVault' | 'Microsoft.Storage'
 * **state**: 'Disabled' | 'Enabled'
@@ -454,8 +454,8 @@
 
 ## schemas:98_properties
 ### Properties
-* **cors**: CorsRules
-* **shareDeleteRetentionPolicy**: DeleteRetentionPolicy
+* **cors**: [CorsRules](#corsrules)
+* **shareDeleteRetentionPolicy**: [DeleteRetentionPolicy](#deleteretentionpolicy)
 
 ## FileShareProperties
 ### Properties
@@ -466,7 +466,7 @@
 * **deletedTime**: string (ReadOnly)
 * **enabledProtocols**: 'NFS' | 'SMB'
 * **lastModifiedTime**: string (ReadOnly)
-* **metadata**: Dictionary<string,String>
+* **metadata**: [Dictionary<string,String>](#dictionarystringstring)
 * **remainingRetentionDays**: int (ReadOnly)
 * **rootSquash**: 'AllSquash' | 'NoRootSquash' | 'RootSquash'
 * **shareQuota**: int
@@ -481,24 +481,24 @@
 ## BlobInventoryPolicyProperties
 ### Properties
 * **lastModifiedTime**: string (ReadOnly)
-* **policy**: BlobInventoryPolicySchema (Required)
+* **policy**: [BlobInventoryPolicySchema](#blobinventorypolicyschema) (Required)
 
 ## BlobInventoryPolicySchema
 ### Properties
 * **destination**: string (Required)
 * **enabled**: bool (Required)
-* **rules**: BlobInventoryPolicyRule[] (Required)
+* **rules**: [BlobInventoryPolicyRule](#blobinventorypolicyrule)[] (Required)
 * **type**: string (Required)
 
 ## BlobInventoryPolicyRule
 ### Properties
-* **definition**: BlobInventoryPolicyDefinition (Required)
+* **definition**: [BlobInventoryPolicyDefinition](#blobinventorypolicydefinition) (Required)
 * **enabled**: bool (Required)
 * **name**: string (Required)
 
 ## BlobInventoryPolicyDefinition
 ### Properties
-* **filters**: BlobInventoryPolicyFilter (Required)
+* **filters**: [BlobInventoryPolicyFilter](#blobinventorypolicyfilter) (Required)
 
 ## BlobInventoryPolicyFilter
 ### Properties
@@ -519,36 +519,36 @@
 ## ManagementPolicyProperties
 ### Properties
 * **lastModifiedTime**: string (ReadOnly)
-* **policy**: ManagementPolicySchema (Required)
+* **policy**: [ManagementPolicySchema](#managementpolicyschema) (Required)
 
 ## ManagementPolicySchema
 ### Properties
-* **rules**: ManagementPolicyRule[] (Required)
+* **rules**: [ManagementPolicyRule](#managementpolicyrule)[] (Required)
 
 ## ManagementPolicyRule
 ### Properties
-* **definition**: ManagementPolicyDefinition (Required)
+* **definition**: [ManagementPolicyDefinition](#managementpolicydefinition) (Required)
 * **enabled**: bool
 * **name**: string (Required)
 * **type**: string (Required)
 
 ## ManagementPolicyDefinition
 ### Properties
-* **actions**: ManagementPolicyAction (Required)
-* **filters**: ManagementPolicyFilter
+* **actions**: [ManagementPolicyAction](#managementpolicyaction) (Required)
+* **filters**: [ManagementPolicyFilter](#managementpolicyfilter)
 
 ## ManagementPolicyAction
 ### Properties
-* **baseBlob**: ManagementPolicyBaseBlob
-* **snapshot**: ManagementPolicySnapShot
-* **version**: ManagementPolicyVersion
+* **baseBlob**: [ManagementPolicyBaseBlob](#managementpolicybaseblob)
+* **snapshot**: [ManagementPolicySnapShot](#managementpolicysnapshot)
+* **version**: [ManagementPolicyVersion](#managementpolicyversion)
 
 ## ManagementPolicyBaseBlob
 ### Properties
-* **delete**: DateAfterModification
+* **delete**: [DateAfterModification](#dateaftermodification)
 * **enableAutoTierToHotFromCool**: bool
-* **tierToArchive**: DateAfterModification
-* **tierToCool**: DateAfterModification
+* **tierToArchive**: [DateAfterModification](#dateaftermodification)
+* **tierToCool**: [DateAfterModification](#dateaftermodification)
 
 ## DateAfterModification
 ### Properties
@@ -557,9 +557,9 @@
 
 ## ManagementPolicySnapShot
 ### Properties
-* **delete**: DateAfterCreation
-* **tierToArchive**: DateAfterCreation
-* **tierToCool**: DateAfterCreation
+* **delete**: [DateAfterCreation](#dateaftercreation)
+* **tierToArchive**: [DateAfterCreation](#dateaftercreation)
+* **tierToCool**: [DateAfterCreation](#dateaftercreation)
 
 ## DateAfterCreation
 ### Properties
@@ -567,13 +567,13 @@
 
 ## ManagementPolicyVersion
 ### Properties
-* **delete**: DateAfterCreation
-* **tierToArchive**: DateAfterCreation
-* **tierToCool**: DateAfterCreation
+* **delete**: [DateAfterCreation](#dateaftercreation)
+* **tierToArchive**: [DateAfterCreation](#dateaftercreation)
+* **tierToCool**: [DateAfterCreation](#dateaftercreation)
 
 ## ManagementPolicyFilter
 ### Properties
-* **blobIndexMatch**: TagFilter[]
+* **blobIndexMatch**: [TagFilter](#tagfilter)[]
 * **blobTypes**: string[] (Required)
 * **prefixMatch**: string[]
 
@@ -588,13 +588,13 @@
 * **destinationAccount**: string (Required)
 * **enabledTime**: string (ReadOnly)
 * **policyId**: string (ReadOnly)
-* **rules**: ObjectReplicationPolicyRule[]
+* **rules**: [ObjectReplicationPolicyRule](#objectreplicationpolicyrule)[]
 * **sourceAccount**: string (Required)
 
 ## ObjectReplicationPolicyRule
 ### Properties
 * **destinationContainer**: string (Required)
-* **filters**: ObjectReplicationPolicyFilter
+* **filters**: [ObjectReplicationPolicyFilter](#objectreplicationpolicyfilter)
 * **ruleId**: string
 * **sourceContainer**: string (Required)
 
@@ -605,12 +605,12 @@
 
 ## schemas:107_properties
 ### Properties
-* **cors**: CorsRules
+* **cors**: [CorsRules](#corsrules)
 
 ## QueueProperties
 ### Properties
 * **approximateMessageCount**: int (ReadOnly)
-* **metadata**: Dictionary<string,String>
+* **metadata**: [Dictionary<string,String>](#dictionarystringstring)
 
 ## Dictionary<string,String>
 ### Properties
@@ -619,7 +619,7 @@
 
 ## schemas:114_properties
 ### Properties
-* **cors**: CorsRules
+* **cors**: [CorsRules](#corsrules)
 
 ## TableProperties
 ### Properties

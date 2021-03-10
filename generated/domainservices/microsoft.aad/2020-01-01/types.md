@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DomainServiceProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [DomainServiceProperties](#domainserviceproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.AAD/domainServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Aad/domainServices/ouContainer@2020-01-01
@@ -22,9 +22,9 @@
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **password**: string (WriteOnly)
-* **properties**: OuContainerProperties (ReadOnly)
+* **properties**: [OuContainerProperties](#oucontainerproperties) (ReadOnly)
 * **spn**: string (WriteOnly)
-* **tags**: Dictionary<string,String> (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
 * **type**: 'Microsoft.Aad/domainServices/ouContainer' (ReadOnly, DeployTimeConstant)
 
 ## DomainServiceProperties
@@ -32,14 +32,14 @@
 * **deploymentId**: string (ReadOnly)
 * **domainConfigurationType**: string
 * **domainName**: string
-* **domainSecuritySettings**: DomainSecuritySettings
+* **domainSecuritySettings**: [DomainSecuritySettings](#domainsecuritysettings)
 * **filteredSync**: 'Disabled' | 'Enabled'
-* **ldapsSettings**: LdapsSettings
-* **migrationProperties**: MigrationProperties (ReadOnly)
-* **notificationSettings**: NotificationSettings
+* **ldapsSettings**: [LdapsSettings](#ldapssettings)
+* **migrationProperties**: [MigrationProperties](#migrationproperties) (ReadOnly)
+* **notificationSettings**: [NotificationSettings](#notificationsettings)
 * **provisioningState**: string (ReadOnly)
-* **replicaSets**: ReplicaSet[]
-* **resourceForestSettings**: ResourceForestSettings
+* **replicaSets**: [ReplicaSet](#replicaset)[]
+* **resourceForestSettings**: [ResourceForestSettings](#resourceforestsettings)
 * **sku**: string
 * **syncOwner**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
@@ -65,7 +65,7 @@
 
 ## MigrationProperties
 ### Properties
-* **migrationProgress**: MigrationProgress (ReadOnly)
+* **migrationProgress**: [MigrationProgress](#migrationprogress) (ReadOnly)
 * **oldSubnetId**: string (ReadOnly)
 * **oldVnetSiteId**: string (ReadOnly)
 
@@ -84,9 +84,9 @@
 ### Properties
 * **domainControllerIpAddress**: string[] (ReadOnly)
 * **externalAccessIpAddress**: string (ReadOnly)
-* **healthAlerts**: HealthAlert[] (ReadOnly)
+* **healthAlerts**: [HealthAlert](#healthalert)[] (ReadOnly)
 * **healthLastEvaluated**: string (ReadOnly)
-* **healthMonitors**: HealthMonitor[] (ReadOnly)
+* **healthMonitors**: [HealthMonitor](#healthmonitor)[] (ReadOnly)
 * **location**: string
 * **replicaSetId**: string (ReadOnly)
 * **serviceStatus**: string (ReadOnly)
@@ -112,7 +112,7 @@
 ## ResourceForestSettings
 ### Properties
 * **resourceForest**: string
-* **settings**: ForestTrust[]
+* **settings**: [ForestTrust](#foresttrust)[]
 
 ## ForestTrust
 ### Properties
@@ -129,7 +129,7 @@
 
 ## OuContainerProperties
 ### Properties
-* **accounts**: ContainerAccount[] (ReadOnly)
+* **accounts**: [ContainerAccount](#containeraccount)[] (ReadOnly)
 * **containerId**: string (ReadOnly)
 * **deploymentId**: string (ReadOnly)
 * **distinguishedName**: string (ReadOnly)

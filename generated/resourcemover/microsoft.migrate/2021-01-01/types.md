@@ -6,11 +6,11 @@
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MoveCollectionProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [MoveCollectionProperties](#movecollectionproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Migrate/moveCollections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Migrate/moveCollections/moveResources@2021-01-01
@@ -19,7 +19,7 @@
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MoveResourceProperties
+* **properties**: [MoveResourceProperties](#moveresourceproperties)
 * **type**: 'Microsoft.Migrate/moveCollections/moveResources' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -30,19 +30,19 @@
 
 ## MoveCollectionProperties
 ### Properties
-* **errors**: schemas:18_errors (ReadOnly)
+* **errors**: [schemas:18_errors](#schemas18errors) (ReadOnly)
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating'
 * **sourceRegion**: string (Required)
 * **targetRegion**: string (Required)
 
 ## schemas:18_errors
 ### Properties
-* **properties**: MoveResourceErrorBody
+* **properties**: [MoveResourceErrorBody](#moveresourceerrorbody)
 
 ## MoveResourceErrorBody
 ### Properties
 * **code**: string (ReadOnly)
-* **details**: MoveResourceErrorBody[] (ReadOnly)
+* **details**: [MoveResourceErrorBody](#moveresourceerrorbody)[] (ReadOnly)
 * **message**: string (ReadOnly)
 * **target**: string (ReadOnly)
 
@@ -53,25 +53,25 @@
 
 ## MoveResourceProperties
 ### Properties
-* **dependsOn**: MoveResourceDependency[] (ReadOnly)
-* **dependsOnOverrides**: MoveResourceDependencyOverride[]
-* **errors**: schemas:14_errors (ReadOnly)
+* **dependsOn**: [MoveResourceDependency](#moveresourcedependency)[] (ReadOnly)
+* **dependsOnOverrides**: [MoveResourceDependencyOverride](#moveresourcedependencyoverride)[]
+* **errors**: [schemas:14_errors](#schemas14errors) (ReadOnly)
 * **existingTargetId**: string
 * **isResolveRequired**: bool (ReadOnly)
-* **moveStatus**: schemas:14_moveStatus (ReadOnly)
+* **moveStatus**: [schemas:14_moveStatus](#schemas14movestatus) (ReadOnly)
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating'
-* **resourceSettings**: ResourceSettings
+* **resourceSettings**: [ResourceSettings](#resourcesettings)
 * **sourceId**: string (Required)
-* **sourceResourceSettings**: ResourceSettings (ReadOnly)
+* **sourceResourceSettings**: [ResourceSettings](#resourcesettings) (ReadOnly)
 * **targetId**: string (ReadOnly)
 
 ## MoveResourceDependency
 ### Properties
-* **automaticResolution**: AutomaticResolutionProperties
+* **automaticResolution**: [AutomaticResolutionProperties](#automaticresolutionproperties)
 * **dependencyType**: 'RequiredForMove' | 'RequiredForPrepare'
 * **id**: string
 * **isOptional**: string
-* **manualResolution**: ManualResolutionProperties
+* **manualResolution**: [ManualResolutionProperties](#manualresolutionproperties)
 * **resolutionStatus**: string
 * **resolutionType**: 'Automatic' | 'Manual'
 
@@ -90,17 +90,17 @@
 
 ## schemas:14_errors
 ### Properties
-* **properties**: MoveResourceErrorBody
+* **properties**: [MoveResourceErrorBody](#moveresourceerrorbody)
 
 ## schemas:14_moveStatus
 ### Properties
-* **errors**: MoveResourceError
-* **jobStatus**: JobStatus
+* **errors**: [MoveResourceError](#moveresourceerror)
+* **jobStatus**: [JobStatus](#jobstatus)
 * **moveState**: 'AssignmentPending' | 'CommitFailed' | 'CommitInProgress' | 'CommitPending' | 'Committed' | 'DeleteSourcePending' | 'DiscardFailed' | 'DiscardInProgress' | 'MoveFailed' | 'MoveInProgress' | 'MovePending' | 'PrepareFailed' | 'PrepareInProgress' | 'PreparePending' | 'ResourceMoveCompleted'
 
 ## MoveResourceError
 ### Properties
-* **properties**: MoveResourceErrorBody
+* **properties**: [MoveResourceErrorBody](#moveresourceerrorbody)
 
 ## JobStatus
 ### Properties
@@ -134,8 +134,8 @@
 
 ### Microsoft.Network/loadBalancers
 #### Properties
-* **backendAddressPools**: LBBackendAddressPoolResourceSettings[]
-* **frontendIPConfigurations**: LBFrontendIPConfigurationResourceSettings[]
+* **backendAddressPools**: [LBBackendAddressPoolResourceSettings](#lbbackendaddresspoolresourcesettings)[]
+* **frontendIPConfigurations**: [LBFrontendIPConfigurationResourceSettings](#lbfrontendipconfigurationresourcesettings)[]
 * **resourceType**: 'Microsoft.Network/loadBalancers' (Required)
 * **sku**: string
 * **zones**: string
@@ -143,13 +143,13 @@
 ### Microsoft.Network/networkInterfaces
 #### Properties
 * **enableAcceleratedNetworking**: bool
-* **ipConfigurations**: NicIpConfigurationResourceSettings[]
+* **ipConfigurations**: [NicIpConfigurationResourceSettings](#nicipconfigurationresourcesettings)[]
 * **resourceType**: 'Microsoft.Network/networkInterfaces' (Required)
 
 ### Microsoft.Network/networkSecurityGroups
 #### Properties
 * **resourceType**: 'Microsoft.Network/networkSecurityGroups' (Required)
-* **securityRules**: NsgSecurityRule[]
+* **securityRules**: [NsgSecurityRule](#nsgsecurityrule)[]
 
 ### Microsoft.Network/publicIPAddresses
 #### Properties
@@ -166,7 +166,7 @@
 * **dnsServers**: string[]
 * **enableDdosProtection**: bool
 * **resourceType**: 'Microsoft.Network/virtualNetworks' (Required)
-* **subnets**: SubnetResourceSettings[]
+* **subnets**: [SubnetResourceSettings](#subnetresourcesettings)[]
 
 ### Microsoft.Sql/servers
 #### Properties
@@ -210,8 +210,8 @@
 
 ## Microsoft.Network/loadBalancers
 ### Properties
-* **backendAddressPools**: LBBackendAddressPoolResourceSettings[]
-* **frontendIPConfigurations**: LBFrontendIPConfigurationResourceSettings[]
+* **backendAddressPools**: [LBBackendAddressPoolResourceSettings](#lbbackendaddresspoolresourcesettings)[]
+* **frontendIPConfigurations**: [LBFrontendIPConfigurationResourceSettings](#lbfrontendipconfigurationresourcesettings)[]
 * **resourceType**: 'Microsoft.Network/loadBalancers' (Required)
 * **sku**: string
 * **zones**: string
@@ -225,7 +225,7 @@
 * **name**: string
 * **privateIpAddress**: string
 * **privateIpAllocationMethod**: string
-* **subnet**: SubnetReference
+* **subnet**: [SubnetReference](#subnetreference)
 * **zones**: string
 
 ## SubnetReference
@@ -236,19 +236,19 @@
 ## Microsoft.Network/networkInterfaces
 ### Properties
 * **enableAcceleratedNetworking**: bool
-* **ipConfigurations**: NicIpConfigurationResourceSettings[]
+* **ipConfigurations**: [NicIpConfigurationResourceSettings](#nicipconfigurationresourcesettings)[]
 * **resourceType**: 'Microsoft.Network/networkInterfaces' (Required)
 
 ## NicIpConfigurationResourceSettings
 ### Properties
-* **loadBalancerBackendAddressPools**: LoadBalancerBackendAddressPoolReference[]
-* **loadBalancerNatRules**: LoadBalancerNatRuleReference[]
+* **loadBalancerBackendAddressPools**: [LoadBalancerBackendAddressPoolReference](#loadbalancerbackendaddresspoolreference)[]
+* **loadBalancerNatRules**: [LoadBalancerNatRuleReference](#loadbalancernatrulereference)[]
 * **name**: string
 * **primary**: bool
 * **privateIpAddress**: string
 * **privateIpAllocationMethod**: string
-* **publicIp**: PublicIpReference
-* **subnet**: SubnetReference
+* **publicIp**: [PublicIpReference](#publicipreference)
+* **subnet**: [SubnetReference](#subnetreference)
 
 ## LoadBalancerBackendAddressPoolReference
 ### Properties
@@ -267,7 +267,7 @@
 ## Microsoft.Network/networkSecurityGroups
 ### Properties
 * **resourceType**: 'Microsoft.Network/networkSecurityGroups' (Required)
-* **securityRules**: NsgSecurityRule[]
+* **securityRules**: [NsgSecurityRule](#nsgsecurityrule)[]
 
 ## NsgSecurityRule
 ### Properties
@@ -297,13 +297,13 @@
 * **dnsServers**: string[]
 * **enableDdosProtection**: bool
 * **resourceType**: 'Microsoft.Network/virtualNetworks' (Required)
-* **subnets**: SubnetResourceSettings[]
+* **subnets**: [SubnetResourceSettings](#subnetresourcesettings)[]
 
 ## SubnetResourceSettings
 ### Properties
 * **addressPrefix**: string
 * **name**: string
-* **networkSecurityGroup**: NsgReference
+* **networkSecurityGroup**: [NsgReference](#nsgreference)
 
 ## NsgReference
 ### Properties

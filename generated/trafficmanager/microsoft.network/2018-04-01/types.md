@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProfileProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ProfileProperties](#profileproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/trafficmanagerprofiles' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/trafficManagerUserMetricsKeys@2018-04-01
@@ -17,15 +17,15 @@
 * **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' (Required, DeployTimeConstant)
-* **properties**: UserMetricsProperties (ReadOnly)
+* **properties**: [UserMetricsProperties](#usermetricsproperties) (ReadOnly)
 * **type**: 'Microsoft.Network/trafficManagerUserMetricsKeys' (ReadOnly, DeployTimeConstant)
 
 ## ProfileProperties
 ### Properties
-* **dnsConfig**: DnsConfig
-* **endpoints**: Endpoint[]
+* **dnsConfig**: [DnsConfig](#dnsconfig)
+* **endpoints**: [Endpoint](#endpoint)[]
 * **maxReturn**: int
-* **monitorConfig**: MonitorConfig
+* **monitorConfig**: [MonitorConfig](#monitorconfig)
 * **profileStatus**: 'Disabled' | 'Enabled'
 * **trafficRoutingMethod**: 'Geographic' | 'MultiValue' | 'Performance' | 'Priority' | 'Subnet' | 'Weighted'
 * **trafficViewEnrollmentStatus**: 'Disabled' | 'Enabled'
@@ -40,19 +40,19 @@
 ### Properties
 * **id**: string
 * **name**: string
-* **properties**: EndpointProperties
+* **properties**: [EndpointProperties](#endpointproperties)
 * **type**: string
 
 ## EndpointProperties
 ### Properties
-* **customHeaders**: schemas:1_customHeadersItem[]
+* **customHeaders**: [schemas:1_customHeadersItem](#schemas1customheadersitem)[]
 * **endpointLocation**: string
 * **endpointMonitorStatus**: 'CheckingEndpoint' | 'Degraded' | 'Disabled' | 'Inactive' | 'Online' | 'Stopped'
 * **endpointStatus**: 'Disabled' | 'Enabled'
 * **geoMapping**: string[]
 * **minChildEndpoints**: int
 * **priority**: int
-* **subnets**: schemas:1_subnetsItem[]
+* **subnets**: [schemas:1_subnetsItem](#schemas1subnetsitem)[]
 * **target**: string
 * **targetResourceId**: string
 * **weight**: int
@@ -70,8 +70,8 @@
 
 ## MonitorConfig
 ### Properties
-* **customHeaders**: schemas:1_customHeadersItem[]
-* **expectedStatusCodeRanges**: schemas:11_expectedStatusCodeRangesItem[]
+* **customHeaders**: [schemas:1_customHeadersItem](#schemas1customheadersitem)[]
+* **expectedStatusCodeRanges**: [schemas:11_expectedStatusCodeRangesItem](#schemas11expectedstatuscoderangesitem)[]
 * **intervalInSeconds**: int
 * **path**: string
 * **port**: int

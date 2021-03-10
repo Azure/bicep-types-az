@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DscCompilationJobCreateProperties (Required)
-* **tags**: Dictionary<string,String> (WriteOnly)
+* **properties**: [DscCompilationJobCreateProperties](#dsccompilationjobcreateproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
 * **type**: 'Microsoft.Automation/automationAccounts/compilationjobs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/nodeConfigurations@2018-01-15
@@ -17,13 +17,13 @@
 * **apiVersion**: '2018-01-15' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DscNodeConfigurationCreateOrUpdateParametersProperties
-* **tags**: Dictionary<string,String> (WriteOnly)
+* **properties**: [DscNodeConfigurationCreateOrUpdateParametersProperties](#dscnodeconfigurationcreateorupdateparametersproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
 * **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## DscCompilationJobCreateProperties
 ### Properties
-* **configuration**: DscConfigurationAssociationProperty (Required)
+* **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required)
 * **creationTime**: string (ReadOnly)
 * **endTime**: string (ReadOnly)
 * **exception**: string (ReadOnly)
@@ -31,7 +31,7 @@
 * **jobId**: string (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **lastStatusModifiedTime**: string (ReadOnly)
-* **parameters**: Dictionary<string,String>
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
 * **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly)
 * **runOn**: string (ReadOnly)
 * **startedBy**: string (ReadOnly)
@@ -55,16 +55,16 @@
 
 ## DscNodeConfigurationCreateOrUpdateParametersProperties
 ### Properties
-* **configuration**: DscConfigurationAssociationProperty (Required)
+* **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required)
 * **creationTime**: string (ReadOnly)
 * **incrementNodeConfigurationBuild**: bool
 * **lastModifiedTime**: string (ReadOnly)
 * **nodeCount**: int (ReadOnly)
-* **source**: ContentSource (Required)
+* **source**: [ContentSource](#contentsource) (Required)
 
 ## ContentSource
 ### Properties
-* **hash**: ContentHash (WriteOnly)
+* **hash**: [ContentHash](#contenthash) (WriteOnly)
 * **type**: 'embeddedContent' | 'uri' (WriteOnly)
 * **value**: string (WriteOnly)
 * **version**: string (WriteOnly)

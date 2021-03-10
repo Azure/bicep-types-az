@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyAssignmentProperties
+* **properties**: [PolicyAssignmentProperties](#policyassignmentproperties)
 * **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Authorization/policyDefinitions@2020-09-01
@@ -17,7 +17,7 @@
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyDefinitionProperties
+* **properties**: [PolicyDefinitionProperties](#policydefinitionproperties)
 * **type**: 'Microsoft.Authorization/policyDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Authorization/policySetDefinitions@2020-09-01
@@ -26,7 +26,7 @@
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicySetDefinitionProperties
+* **properties**: [PolicySetDefinitionProperties](#policysetdefinitionproperties)
 * **type**: 'Microsoft.Authorization/policySetDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -41,9 +41,9 @@
 * **displayName**: string
 * **enforcementMode**: 'Default' | 'DoNotEnforce'
 * **metadata**: any
-* **nonComplianceMessages**: NonComplianceMessage[]
+* **nonComplianceMessages**: [NonComplianceMessage](#noncompliancemessage)[]
 * **notScopes**: string[]
-* **parameters**: Dictionary<string,ParameterValuesValue>
+* **parameters**: [Dictionary<string,ParameterValuesValue>](#dictionarystringparametervaluesvalue)
 * **policyDefinitionId**: string
 * **scope**: string (ReadOnly)
 
@@ -55,7 +55,7 @@
 ## Dictionary<string,ParameterValuesValue>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ParameterValuesValue
+* **Additional Properties Type**: [ParameterValuesValue](#parametervaluesvalue)
 
 ## ParameterValuesValue
 ### Properties
@@ -67,20 +67,20 @@
 * **displayName**: string
 * **metadata**: any
 * **mode**: string
-* **parameters**: Dictionary<string,ParameterDefinitionsValue>
+* **parameters**: [Dictionary<string,ParameterDefinitionsValue>](#dictionarystringparameterdefinitionsvalue)
 * **policyRule**: any
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static'
 
 ## Dictionary<string,ParameterDefinitionsValue>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ParameterDefinitionsValue
+* **Additional Properties Type**: [ParameterDefinitionsValue](#parameterdefinitionsvalue)
 
 ## ParameterDefinitionsValue
 ### Properties
 * **allowedValues**: any[]
 * **defaultValue**: any
-* **metadata**: schemas:18_metadata
+* **metadata**: [schemas:18_metadata](#schemas18metadata)
 * **type**: 'Array' | 'Boolean' | 'DateTime' | 'Float' | 'Integer' | 'Object' | 'String'
 
 ## schemas:18_metadata
@@ -97,15 +97,15 @@
 * **description**: string
 * **displayName**: string
 * **metadata**: any
-* **parameters**: Dictionary<string,ParameterDefinitionsValue>
-* **policyDefinitionGroups**: PolicyDefinitionGroup[]
-* **policyDefinitions**: PolicyDefinitionReference[] (Required)
+* **parameters**: [Dictionary<string,ParameterDefinitionsValue>](#dictionarystringparameterdefinitionsvalue)
+* **policyDefinitionGroups**: [PolicyDefinitionGroup](#policydefinitiongroup)[]
+* **policyDefinitions**: [PolicyDefinitionReference](#policydefinitionreference)[] (Required)
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static'
 
 ## Dictionary<string,ParameterDefinitionsValue>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ParameterDefinitionsValue
+* **Additional Properties Type**: [ParameterDefinitionsValue](#parameterdefinitionsvalue)
 
 ## PolicyDefinitionGroup
 ### Properties
@@ -118,12 +118,12 @@
 ## PolicyDefinitionReference
 ### Properties
 * **groupNames**: string[]
-* **parameters**: Dictionary<string,ParameterValuesValue>
+* **parameters**: [Dictionary<string,ParameterValuesValue>](#dictionarystringparametervaluesvalue)
 * **policyDefinitionId**: string (Required)
 * **policyDefinitionReferenceId**: string
 
 ## Dictionary<string,ParameterValuesValue>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ParameterValuesValue
+* **Additional Properties Type**: [ParameterValuesValue](#parametervaluesvalue)
 

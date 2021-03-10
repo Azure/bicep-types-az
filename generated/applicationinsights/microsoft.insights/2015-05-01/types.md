@@ -8,8 +8,8 @@
 * **kind**: string (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationInsightsComponentProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ApplicationInsightsComponentProperties](#applicationinsightscomponentproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Insights/components' (ReadOnly, DeployTimeConstant)
 
 ## Resource microsoft.insights/components/analyticsItems@2015-05-01
@@ -19,7 +19,7 @@
 * **Content**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **Properties**: ApplicationInsightsComponentAnalyticsItemProperties
+* **Properties**: [ApplicationInsightsComponentAnalyticsItemProperties](#applicationinsightscomponentanalyticsitemproperties)
 * **Scope**: 'shared' | 'user'
 * **TimeCreated**: string (ReadOnly)
 * **TimeModified**: string (ReadOnly)
@@ -81,7 +81,7 @@
 * **Content**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **Properties**: ApplicationInsightsComponentAnalyticsItemProperties
+* **Properties**: [ApplicationInsightsComponentAnalyticsItemProperties](#applicationinsightscomponentanalyticsitemproperties)
 * **Scope**: 'shared' | 'user'
 * **TimeCreated**: string (ReadOnly)
 * **TimeModified**: string (ReadOnly)
@@ -97,7 +97,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **LastUpdatedTime**: string
 * **name**: string (Required, DeployTimeConstant)
-* **RuleDefinitions**: schemas:20_RuleDefinitions
+* **RuleDefinitions**: [schemas:20_RuleDefinitions](#schemas20ruledefinitions)
 * **SendEmailsToSubscriptionOwners**: bool
 * **type**: 'Microsoft.Insights/components/ProactiveDetectionConfigs' (ReadOnly, DeployTimeConstant)
 
@@ -109,8 +109,8 @@
 * **kind**: 'shared' | 'user'
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MyWorkbookProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [MyWorkbookProperties](#myworkbookproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Insights/myWorkbooks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Insights/webtests@2015-05-01
@@ -121,8 +121,8 @@
 * **kind**: 'multistep' | 'ping'
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WebTestProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [WebTestProperties](#webtestproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Insights/webtests' (ReadOnly, DeployTimeConstant)
 
 ## Resource microsoft.insights/workbooks@2015-05-01
@@ -133,8 +133,8 @@
 * **kind**: 'shared' | 'user'
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkbookProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [WorkbookProperties](#workbookproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'microsoft.insights/workbooks' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationInsightsComponentProperties
@@ -151,7 +151,7 @@
 * **ImmediatePurgeDataOn30Days**: bool
 * **IngestionMode**: 'ApplicationInsights' | 'ApplicationInsightsWithDiagnosticSettings' | 'LogAnalytics'
 * **InstrumentationKey**: string (ReadOnly)
-* **PrivateLinkScopedResources**: PrivateLinkScopedResource[] (ReadOnly)
+* **PrivateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **Request_Source**: 'rest'
 * **RetentionInDays**: int
@@ -201,12 +201,12 @@
 
 ## WebTestProperties
 ### Properties
-* **Configuration**: schemas:43_Configuration
+* **Configuration**: [schemas:43_Configuration](#schemas43configuration)
 * **Description**: string
 * **Enabled**: bool
 * **Frequency**: int
 * **Kind**: 'multistep' | 'ping' (Required)
-* **Locations**: WebTestGeolocation[] (Required)
+* **Locations**: [WebTestGeolocation](#webtestgeolocation)[] (Required)
 * **Name**: string (Required)
 * **provisioningState**: string (ReadOnly)
 * **RetryEnabled**: bool

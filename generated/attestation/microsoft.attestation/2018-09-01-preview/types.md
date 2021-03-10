@@ -7,21 +7,21 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AttestationServiceCreationSpecificParams (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [AttestationServiceCreationSpecificParams](#attestationservicecreationspecificparams) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Attestation/attestationProviders' (ReadOnly, DeployTimeConstant)
 
 ## AttestationServiceCreationSpecificParams
 ### Properties
 * **attestationPolicy**: string (WriteOnly)
 * **attestUri**: string (ReadOnly)
-* **policySigningCertificates**: JSONWebKeySet (WriteOnly)
+* **policySigningCertificates**: [JSONWebKeySet](#jsonwebkeyset) (WriteOnly)
 * **status**: 'Error' | 'NotReady' | 'Ready' (ReadOnly)
 * **trustModel**: string (ReadOnly)
 
 ## JSONWebKeySet
 ### Properties
-* **keys**: JSONWebKey[] (WriteOnly)
+* **keys**: [JSONWebKey](#jsonwebkey)[] (WriteOnly)
 
 ## JSONWebKey
 ### Properties

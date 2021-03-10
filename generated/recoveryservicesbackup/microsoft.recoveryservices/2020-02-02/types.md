@@ -8,14 +8,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnection
-* **tags**: Dictionary<string,String>
+* **properties**: [PrivateEndpointConnection](#privateendpointconnection)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.RecoveryServices/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## PrivateEndpointConnection
 ### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate)
 * **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded'
 
 ## PrivateEndpoint

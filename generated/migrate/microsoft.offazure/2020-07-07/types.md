@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SiteProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [SiteProperties](#siteproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.OffAzure/HyperVSites' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OffAzure/HyperVSites/clusters@2020-07-07
@@ -18,7 +18,7 @@
 * **apiVersion**: '2020-07-07' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: HyperVClusterProperties
+* **properties**: [HyperVClusterProperties](#hypervclusterproperties)
 * **type**: 'Microsoft.OffAzure/HyperVSites/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OffAzure/HyperVSites/hosts@2020-07-07
@@ -27,7 +27,7 @@
 * **apiVersion**: '2020-07-07' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: HyperVHostProperties
+* **properties**: [HyperVHostProperties](#hypervhostproperties)
 * **type**: 'Microsoft.OffAzure/HyperVSites/hosts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OffAzure/MasterSites@2020-07-07
@@ -38,7 +38,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MasterSiteProperties
+* **properties**: [MasterSiteProperties](#mastersiteproperties)
 * **type**: 'Microsoft.OffAzure/MasterSites' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OffAzure/VMwareSites@2020-07-07
@@ -49,8 +49,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SiteProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [SiteProperties](#siteproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.OffAzure/VMwareSites' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OffAzure/VMwareSites/vCenters@2020-07-07
@@ -59,16 +59,16 @@
 * **apiVersion**: '2020-07-07' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VCenterProperties
+* **properties**: [VCenterProperties](#vcenterproperties)
 * **type**: 'Microsoft.OffAzure/VMwareSites/vCenters' (ReadOnly, DeployTimeConstant)
 
 ## SiteProperties
 ### Properties
-* **agentDetails**: SiteAgentProperties
+* **agentDetails**: [SiteAgentProperties](#siteagentproperties)
 * **applianceName**: string
 * **discoverySolutionId**: string
 * **serviceEndpoint**: string (ReadOnly)
-* **servicePrincipalIdentityDetails**: SiteSpnProperties
+* **servicePrincipalIdentityDetails**: [SiteSpnProperties](#sitespnproperties)
 
 ## SiteAgentProperties
 ### Properties
@@ -95,7 +95,7 @@
 ## HyperVClusterProperties
 ### Properties
 * **createdTimestamp**: string (ReadOnly)
-* **errors**: HealthErrorDetails[] (ReadOnly)
+* **errors**: [HealthErrorDetails](#healtherrordetails)[] (ReadOnly)
 * **fqdn**: string
 * **functionalLevel**: int (ReadOnly)
 * **hostFqdnList**: string[]
@@ -108,7 +108,7 @@
 * **code**: string (ReadOnly)
 * **id**: int (ReadOnly)
 * **message**: string (ReadOnly)
-* **messageParameters**: Dictionary<string,String> (ReadOnly)
+* **messageParameters**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
 * **possibleCauses**: string (ReadOnly)
 * **recommendedAction**: string (ReadOnly)
 * **severity**: string (ReadOnly)
@@ -123,7 +123,7 @@
 ## HyperVHostProperties
 ### Properties
 * **createdTimestamp**: string (ReadOnly)
-* **errors**: HealthErrorDetails[] (ReadOnly)
+* **errors**: [HealthErrorDetails](#healtherrordetails)[] (ReadOnly)
 * **fqdn**: string
 * **runAsAccountId**: string
 * **updatedTimestamp**: string (ReadOnly)
@@ -143,7 +143,7 @@
 ## VCenterProperties
 ### Properties
 * **createdTimestamp**: string (ReadOnly)
-* **errors**: HealthErrorDetails[] (ReadOnly)
+* **errors**: [HealthErrorDetails](#healtherrordetails)[] (ReadOnly)
 * **fqdn**: string
 * **instanceUuid**: string (ReadOnly)
 * **perfStatisticsLevel**: string (ReadOnly)

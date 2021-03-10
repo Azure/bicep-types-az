@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:2_properties
-* **sku**: ClusterSku
-* **tags**: Dictionary<string,String>
+* **properties**: [schemas:2_properties](#schemas2properties)
+* **sku**: [ClusterSku](#clustersku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.EventHub/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces@2018-01-01-preview
@@ -17,12 +17,12 @@
 ### Properties
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:10_properties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [schemas:10_properties](#schemas10properties)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.EventHub/namespaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/authorizationRules@2018-01-01-preview
@@ -31,7 +31,7 @@
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:31_properties
+* **properties**: [schemas:31_properties](#schemas31properties)
 * **type**: 'Microsoft.EventHub/namespaces/authorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2018-01-01-preview
@@ -40,7 +40,7 @@
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:42_properties
+* **properties**: [schemas:42_properties](#schemas42properties)
 * **type**: 'Microsoft.EventHub/namespaces/disasterRecoveryConfigs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/eventhubs@2018-01-01-preview
@@ -49,7 +49,7 @@
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:47_properties
+* **properties**: [schemas:47_properties](#schemas47properties)
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2018-01-01-preview
@@ -58,7 +58,7 @@
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:31_properties
+* **properties**: [schemas:31_properties](#schemas31properties)
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/authorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/eventhubs/consumergroups@2018-01-01-preview
@@ -67,7 +67,7 @@
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:37_properties
+* **properties**: [schemas:37_properties](#schemas37properties)
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/ipfilterrules@2018-01-01-preview
@@ -76,7 +76,7 @@
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:7_properties
+* **properties**: [schemas:7_properties](#schemas7properties)
 * **type**: 'Microsoft.EventHub/namespaces/ipfilterrules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/networkRuleSets@2018-01-01-preview
@@ -85,7 +85,7 @@
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:29_properties
+* **properties**: [schemas:29_properties](#schemas29properties)
 * **type**: 'Microsoft.EventHub/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/privateEndpointConnections@2018-01-01-preview
@@ -94,7 +94,7 @@
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: 'Microsoft.EventHub/namespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/virtualnetworkrules@2018-01-01-preview
@@ -103,7 +103,7 @@
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:24_properties
+* **properties**: [schemas:24_properties](#schemas24properties)
 * **type**: 'Microsoft.EventHub/namespaces/virtualnetworkrules' (ReadOnly, DeployTimeConstant)
 
 ## schemas:2_properties
@@ -133,7 +133,7 @@
 ### Properties
 * **clusterArmId**: string
 * **createdAt**: string (ReadOnly)
-* **encryption**: Encryption
+* **encryption**: [Encryption](#encryption)
 * **isAutoInflateEnabled**: bool
 * **kafkaEnabled**: bool
 * **maximumThroughputUnits**: int
@@ -146,7 +146,7 @@
 ## Encryption
 ### Properties
 * **keySource**: 'Microsoft.KeyVault'
-* **keyVaultProperties**: KeyVaultProperties[]
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)[]
 
 ## KeyVaultProperties
 ### Properties
@@ -179,7 +179,7 @@
 
 ## schemas:47_properties
 ### Properties
-* **captureDescription**: CaptureDescription
+* **captureDescription**: [CaptureDescription](#capturedescription)
 * **createdAt**: string (ReadOnly)
 * **messageRetentionInDays**: int
 * **partitionCount**: int
@@ -189,7 +189,7 @@
 
 ## CaptureDescription
 ### Properties
-* **destination**: Destination
+* **destination**: [Destination](#destination)
 * **enabled**: bool
 * **encoding**: 'Avro' | 'AvroDeflate'
 * **intervalInSeconds**: int
@@ -199,7 +199,7 @@
 ## Destination
 ### Properties
 * **name**: string
-* **properties**: schemas:49_properties
+* **properties**: [schemas:49_properties](#schemas49properties)
 
 ## schemas:49_properties
 ### Properties
@@ -222,9 +222,9 @@
 ## schemas:29_properties
 ### Properties
 * **defaultAction**: 'Allow' | 'Deny'
-* **ipRules**: NWRuleSetIpRules[]
+* **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]
 * **trustedServiceAccessEnabled**: bool
-* **virtualNetworkRules**: NWRuleSetVirtualNetworkRules[]
+* **virtualNetworkRules**: [NWRuleSetVirtualNetworkRules](#nwrulesetvirtualnetworkrules)[]
 
 ## NWRuleSetIpRules
 ### Properties
@@ -234,7 +234,7 @@
 ## NWRuleSetVirtualNetworkRules
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool
-* **subnet**: Subnet
+* **subnet**: [Subnet](#subnet)
 
 ## Subnet
 ### Properties
@@ -242,8 +242,8 @@
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: ConnectionState
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
+* **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
 
 ## PrivateEndpoint

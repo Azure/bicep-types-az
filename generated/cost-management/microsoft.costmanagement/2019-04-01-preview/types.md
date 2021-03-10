@@ -7,7 +7,7 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BudgetProperties
+* **properties**: [BudgetProperties](#budgetproperties)
 * **type**: 'Microsoft.CostManagement/budgets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CostManagement/views@2019-04-01-preview
@@ -17,18 +17,18 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ViewProperties
+* **properties**: [ViewProperties](#viewproperties)
 * **type**: 'Microsoft.CostManagement/views' (ReadOnly, DeployTimeConstant)
 
 ## BudgetProperties
 ### Properties
 * **amount**: int (Required)
 * **category**: 'Cost' | 'Usage' (Required)
-* **currentSpend**: CurrentSpend (ReadOnly)
-* **filter**: ReportConfigFilter
-* **notifications**: Dictionary<string,Notification>
+* **currentSpend**: [CurrentSpend](#currentspend) (ReadOnly)
+* **filter**: [ReportConfigFilter](#reportconfigfilter)
+* **notifications**: [Dictionary<string,Notification>](#dictionarystringnotification)
 * **timeGrain**: 'Annually' | 'Monthly' | 'Quarterly' (Required)
-* **timePeriod**: BudgetTimePeriod (Required)
+* **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required)
 
 ## CurrentSpend
 ### Properties
@@ -37,11 +37,11 @@
 
 ## ReportConfigFilter
 ### Properties
-* **and**: ReportConfigFilter[]
-* **dimension**: ReportConfigComparisonExpression
-* **not**: ReportConfigFilter
-* **or**: ReportConfigFilter[]
-* **tag**: ReportConfigComparisonExpression
+* **and**: [ReportConfigFilter](#reportconfigfilter)[]
+* **dimension**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression)
+* **not**: [ReportConfigFilter](#reportconfigfilter)
+* **or**: [ReportConfigFilter](#reportconfigfilter)[]
+* **tag**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression)
 
 ## ReportConfigComparisonExpression
 ### Properties
@@ -52,7 +52,7 @@
 ## Dictionary<string,Notification>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: Notification
+* **Additional Properties Type**: [Notification](#notification)
 
 ## Notification
 ### Properties
@@ -74,11 +74,11 @@
 * **chart**: 'Area' | 'GroupedColumn' | 'Line' | 'StackedColumn' | 'Table'
 * **createdOn**: string (ReadOnly)
 * **displayName**: string
-* **kpis**: KpiProperties[]
+* **kpis**: [KpiProperties](#kpiproperties)[]
 * **metric**: 'ActualCost' | 'AHUB' | 'AmortizedCost'
 * **modifiedOn**: string (ReadOnly)
-* **pivots**: PivotProperties[]
-* **query**: ReportConfigDefinition
+* **pivots**: [PivotProperties](#pivotproperties)[]
+* **query**: [ReportConfigDefinition](#reportconfigdefinition)
 * **scope**: string
 
 ## KpiProperties
@@ -94,24 +94,24 @@
 
 ## ReportConfigDefinition
 ### Properties
-* **dataset**: ReportConfigDataset
+* **dataset**: [ReportConfigDataset](#reportconfigdataset)
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required)
-* **timePeriod**: ReportConfigTimePeriod
+* **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod)
 * **type**: string (Required)
 
 ## ReportConfigDataset
 ### Properties
-* **aggregation**: Dictionary<string,ReportConfigAggregation>
-* **configuration**: ReportConfigDatasetConfiguration
-* **filter**: ReportConfigFilter
+* **aggregation**: [Dictionary<string,ReportConfigAggregation>](#dictionarystringreportconfigaggregation)
+* **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration)
+* **filter**: [ReportConfigFilter](#reportconfigfilter)
 * **granularity**: 'Daily' | 'Monthly'
-* **grouping**: ReportConfigGrouping[]
-* **sorting**: ReportConfigSorting[]
+* **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[]
+* **sorting**: [ReportConfigSorting](#reportconfigsorting)[]
 
 ## Dictionary<string,ReportConfigAggregation>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ReportConfigAggregation
+* **Additional Properties Type**: [ReportConfigAggregation](#reportconfigaggregation)
 
 ## ReportConfigAggregation
 ### Properties

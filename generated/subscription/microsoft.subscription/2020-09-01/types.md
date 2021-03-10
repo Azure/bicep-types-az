@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PutAliasRequestProperties (Required)
+* **properties**: [PutAliasRequestProperties](#putaliasrequestproperties) (Required)
 * **type**: 'Microsoft.Subscription/aliases' (ReadOnly, DeployTimeConstant)
 
 ## PutAliasRequestProperties

@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ResourceIdentity
+* **identity**: [ResourceIdentity](#resourceidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerPropertiesForCreate (Required)
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DBForPostgreSQL/servers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForPostgreSQL/servers/administrators@2017-12-01
@@ -19,7 +19,7 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerAdministratorProperties
+* **properties**: [ServerAdministratorProperties](#serveradministratorproperties)
 * **type**: 'Microsoft.DBForPostgreSQL/servers/administrators' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForPostgreSQL/servers/configurations@2017-12-01
@@ -28,7 +28,7 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationProperties
+* **properties**: [ConfigurationProperties](#configurationproperties)
 * **type**: 'Microsoft.DBForPostgreSQL/servers/configurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForPostgreSQL/servers/databases@2017-12-01
@@ -37,7 +37,7 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
+* **properties**: [DatabaseProperties](#databaseproperties)
 * **type**: 'Microsoft.DBForPostgreSQL/servers/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForPostgreSQL/servers/firewallRules@2017-12-01
@@ -46,7 +46,7 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: FirewallRuleProperties (Required)
+* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required)
 * **type**: 'Microsoft.DBForPostgreSQL/servers/firewallRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBforPostgreSQL/servers/securityAlertPolicies@2017-12-01
@@ -55,7 +55,7 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityAlertPolicyProperties
+* **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties)
 * **type**: 'Microsoft.DBforPostgreSQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForPostgreSQL/servers/virtualNetworkRules@2017-12-01
@@ -64,7 +64,7 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkRuleProperties
+* **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties)
 * **type**: 'Microsoft.DBForPostgreSQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
 
 ## ResourceIdentity
@@ -83,12 +83,12 @@
 * **infrastructureEncryption**: 'Disabled' | 'Enabled'
 * **masterServerId**: string (ReadOnly)
 * **minimalTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2' | 'TLSEnforcementDisabled'
-* **privateEndpointConnections**: ServerPrivateEndpointConnection[] (ReadOnly)
+* **privateEndpointConnections**: [ServerPrivateEndpointConnection](#serverprivateendpointconnection)[] (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 * **replicaCapacity**: int (ReadOnly)
 * **replicationRole**: string (ReadOnly)
 * **sslEnforcement**: 'Disabled' | 'Enabled'
-* **storageProfile**: StorageProfile
+* **storageProfile**: [StorageProfile](#storageprofile)
 * **userVisibleState**: 'Disabled' | 'Dropping' | 'Inaccessible' | 'Ready' (ReadOnly)
 * **version**: '10.0' | '10.2' | '10' | '11' | '9.5' | '9.6'
 ### Default
@@ -117,12 +117,12 @@
 ## ServerPrivateEndpointConnection
 ### Properties
 * **id**: string (ReadOnly)
-* **properties**: ServerPrivateEndpointConnectionProperties (ReadOnly)
+* **properties**: [ServerPrivateEndpointConnectionProperties](#serverprivateendpointconnectionproperties) (ReadOnly)
 
 ## ServerPrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpointProperty (ReadOnly)
-* **privateLinkServiceConnectionState**: ServerPrivateLinkServiceConnectionStateProperty (ReadOnly)
+* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty) (ReadOnly)
+* **privateLinkServiceConnectionState**: [ServerPrivateLinkServiceConnectionStateProperty](#serverprivatelinkserviceconnectionstateproperty) (ReadOnly)
 * **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' (ReadOnly)
 
 ## PrivateEndpointProperty

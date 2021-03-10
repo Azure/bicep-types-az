@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CommunicationServiceProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [CommunicationServiceProperties](#communicationserviceproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Communication/communicationServices' (ReadOnly, DeployTimeConstant)
 
 ## CommunicationServiceProperties

@@ -7,22 +7,22 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: HanaInstanceProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [HanaInstanceProperties](#hanainstanceproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.HanaOnAzure/hanaInstances' (ReadOnly, DeployTimeConstant)
 
 ## HanaInstanceProperties
 ### Properties
 * **hanaInstanceId**: string
-* **hardwareProfile**: HardwareProfile
+* **hardwareProfile**: [HardwareProfile](#hardwareprofile)
 * **hwRevision**: string
-* **networkProfile**: NetworkProfile
-* **osProfile**: OSProfile
+* **networkProfile**: [NetworkProfile](#networkprofile)
+* **osProfile**: [OSProfile](#osprofile)
 * **partnerNodeId**: string
 * **powerState**: 'restarting' | 'started' | 'starting' | 'stopped' | 'stopping' | 'unknown'
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating'
 * **proximityPlacementGroup**: string
-* **storageProfile**: StorageProfile
+* **storageProfile**: [StorageProfile](#storageprofile)
 
 ## HardwareProfile
 ### Properties
@@ -32,7 +32,7 @@
 ## NetworkProfile
 ### Properties
 * **circuitId**: string
-* **networkInterfaces**: IpAddress[]
+* **networkInterfaces**: [IpAddress](#ipaddress)[]
 
 ## IpAddress
 ### Properties
@@ -48,7 +48,7 @@
 ## StorageProfile
 ### Properties
 * **nfsIpAddress**: string
-* **osDisks**: Disk[]
+* **osDisks**: [Disk](#disk)[]
 
 ## Disk
 ### Properties

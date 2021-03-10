@@ -6,11 +6,11 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
 * **eTag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: FactoryIdentity
+* **identity**: [FactoryIdentity](#factoryidentity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: FactoryProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [FactoryProperties](#factoryproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DataFactory/factories' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataFactory/factories/dataflows@2018-06-01
@@ -20,7 +20,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DataFlow (Required)
+* **properties**: [DataFlow](#dataflow) (Required)
 * **type**: 'Microsoft.DataFactory/factories/dataflows' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataFactory/factories/datasets@2018-06-01
@@ -30,7 +30,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: Dataset (Required)
+* **properties**: [Dataset](#dataset) (Required)
 * **type**: 'Microsoft.DataFactory/factories/datasets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataFactory/factories/integrationRuntimes@2018-06-01
@@ -40,7 +40,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IntegrationRuntime (Required)
+* **properties**: [IntegrationRuntime](#integrationruntime) (Required)
 * **type**: 'Microsoft.DataFactory/factories/integrationRuntimes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataFactory/factories/linkedservices@2018-06-01
@@ -50,7 +50,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LinkedService (Required)
+* **properties**: [LinkedService](#linkedservice) (Required)
 * **type**: 'Microsoft.DataFactory/factories/linkedservices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataFactory/factories/managedVirtualNetworks@2018-06-01
@@ -60,7 +60,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedVirtualNetwork (Required)
+* **properties**: [ManagedVirtualNetwork](#managedvirtualnetwork) (Required)
 * **type**: 'Microsoft.DataFactory/factories/managedVirtualNetworks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints@2018-06-01
@@ -70,7 +70,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedPrivateEndpoint (Required)
+* **properties**: [ManagedPrivateEndpoint](#managedprivateendpoint) (Required)
 * **type**: 'Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataFactory/factories/pipelines@2018-06-01
@@ -80,7 +80,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: Pipeline (Required)
+* **properties**: [Pipeline](#pipeline) (Required)
 * **type**: 'Microsoft.DataFactory/factories/pipelines' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataFactory/factories/triggers@2018-06-01
@@ -90,7 +90,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: Trigger (Required)
+* **properties**: [Trigger](#trigger) (Required)
 * **type**: 'Microsoft.DataFactory/factories/triggers' (ReadOnly, DeployTimeConstant)
 
 ## FactoryIdentity
@@ -98,7 +98,7 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: string (Required)
-* **userAssignedIdentities**: Dictionary<string,Object>
+* **userAssignedIdentities**: [Dictionary<string,Object>](#dictionarystringobject)
 
 ## Dictionary<string,Object>
 ### Properties
@@ -108,16 +108,16 @@
 ## FactoryProperties
 ### Properties
 * **createTime**: string (ReadOnly)
-* **encryption**: EncryptionConfiguration
-* **globalParameters**: Dictionary<string,GlobalParameterSpecification>
+* **encryption**: [EncryptionConfiguration](#encryptionconfiguration)
+* **globalParameters**: [Dictionary<string,GlobalParameterSpecification>](#dictionarystringglobalparameterspecification)
 * **provisioningState**: string (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
-* **repoConfiguration**: FactoryRepoConfiguration
+* **repoConfiguration**: [FactoryRepoConfiguration](#factoryrepoconfiguration)
 * **version**: string (ReadOnly)
 
 ## EncryptionConfiguration
 ### Properties
-* **identity**: CMKIdentityDefinition
+* **identity**: [CMKIdentityDefinition](#cmkidentitydefinition)
 * **keyName**: string (Required)
 * **keyVersion**: string
 * **vaultBaseUrl**: string (Required)
@@ -129,7 +129,7 @@
 ## Dictionary<string,GlobalParameterSpecification>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: GlobalParameterSpecification
+* **Additional Properties Type**: [GlobalParameterSpecification](#globalparameterspecification)
 
 ## GlobalParameterSpecification
 ### Properties
@@ -177,11 +177,11 @@
 ### Base Properties
 * **annotations**: any[]
 * **description**: string
-* **folder**: schemas:107_folder
+* **folder**: [schemas:107_folder](#schemas107folder)
 ### MappingDataFlow
 #### Properties
 * **type**: 'MappingDataFlow' (Required)
-* **typeProperties**: MappingDataFlowTypeProperties
+* **typeProperties**: [MappingDataFlowTypeProperties](#mappingdataflowtypeproperties)
 
 
 ## schemas:107_folder
@@ -191,26 +191,26 @@
 ## MappingDataFlow
 ### Properties
 * **type**: 'MappingDataFlow' (Required)
-* **typeProperties**: MappingDataFlowTypeProperties
+* **typeProperties**: [MappingDataFlowTypeProperties](#mappingdataflowtypeproperties)
 
 ## MappingDataFlowTypeProperties
 ### Properties
 * **script**: string
-* **sinks**: DataFlowSink[]
-* **sources**: DataFlowSource[]
-* **transformations**: Transformation[]
+* **sinks**: [DataFlowSink](#dataflowsink)[]
+* **sources**: [DataFlowSource](#dataflowsource)[]
+* **transformations**: [Transformation](#transformation)[]
 
 ## DataFlowSink
 ### Properties
-* **dataset**: DatasetReference
+* **dataset**: [DatasetReference](#datasetreference)
 * **description**: string
-* **linkedService**: LinkedServiceReference
+* **linkedService**: [LinkedServiceReference](#linkedservicereference)
 * **name**: string (Required)
-* **schemaLinkedService**: LinkedServiceReference
+* **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference)
 
 ## DatasetReference
 ### Properties
-* **parameters**: Dictionary<string,Object>
+* **parameters**: [Dictionary<string,Object>](#dictionarystringobject)
 * **referenceName**: string (Required)
 * **type**: string (Required)
 
@@ -221,7 +221,7 @@
 
 ## LinkedServiceReference
 ### Properties
-* **parameters**: Dictionary<string,Object>
+* **parameters**: [Dictionary<string,Object>](#dictionarystringobject)
 * **referenceName**: string (Required)
 * **type**: string (Required)
 
@@ -232,11 +232,11 @@
 
 ## DataFlowSource
 ### Properties
-* **dataset**: DatasetReference
+* **dataset**: [DatasetReference](#datasetreference)
 * **description**: string
-* **linkedService**: LinkedServiceReference
+* **linkedService**: [LinkedServiceReference](#linkedservicereference)
 * **name**: string (Required)
-* **schemaLinkedService**: LinkedServiceReference
+* **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference)
 
 ## Transformation
 ### Properties
@@ -248,130 +248,130 @@
 ### Base Properties
 * **annotations**: any[]
 * **description**: string
-* **folder**: schemas:113_folder
-* **linkedServiceName**: LinkedServiceReference (Required)
-* **parameters**: Dictionary<string,ParameterSpecification>
+* **folder**: [schemas:113_folder](#schemas113folder)
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required)
+* **parameters**: [Dictionary<string,ParameterSpecification>](#dictionarystringparameterspecification)
 * **schema**: any
 * **structure**: any
 ### AmazonMWSObject
 #### Properties
 * **type**: 'AmazonMWSObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### AmazonRedshiftTable
 #### Properties
 * **type**: 'AmazonRedshiftTable' (Required)
-* **typeProperties**: AmazonRedshiftTableDatasetTypeProperties
+* **typeProperties**: [AmazonRedshiftTableDatasetTypeProperties](#amazonredshifttabledatasettypeproperties)
 
 ### AmazonS3Object
 #### Properties
 * **type**: 'AmazonS3Object' (Required)
-* **typeProperties**: AmazonS3DatasetTypeProperties (Required)
+* **typeProperties**: [AmazonS3DatasetTypeProperties](#amazons3datasettypeproperties) (Required)
 
 ### Avro
 #### Properties
 * **type**: 'Avro' (Required)
-* **typeProperties**: AvroDatasetTypeProperties
+* **typeProperties**: [AvroDatasetTypeProperties](#avrodatasettypeproperties)
 
 ### AzureBlob
 #### Properties
 * **type**: 'AzureBlob' (Required)
-* **typeProperties**: AzureBlobDatasetTypeProperties
+* **typeProperties**: [AzureBlobDatasetTypeProperties](#azureblobdatasettypeproperties)
 
 ### AzureBlobFSFile
 #### Properties
 * **type**: 'AzureBlobFSFile' (Required)
-* **typeProperties**: AzureBlobFSDatasetTypeProperties
+* **typeProperties**: [AzureBlobFSDatasetTypeProperties](#azureblobfsdatasettypeproperties)
 
 ### AzureDatabricksDeltaLakeDataset
 #### Properties
 * **type**: 'AzureDatabricksDeltaLakeDataset' (Required)
-* **typeProperties**: AzureDatabricksDeltaLakeDatasetTypeProperties
+* **typeProperties**: [AzureDatabricksDeltaLakeDatasetTypeProperties](#azuredatabricksdeltalakedatasettypeproperties)
 
 ### AzureDataExplorerTable
 #### Properties
 * **type**: 'AzureDataExplorerTable' (Required)
-* **typeProperties**: AzureDataExplorerDatasetTypeProperties (Required)
+* **typeProperties**: [AzureDataExplorerDatasetTypeProperties](#azuredataexplorerdatasettypeproperties) (Required)
 
 ### AzureDataLakeStoreFile
 #### Properties
 * **type**: 'AzureDataLakeStoreFile' (Required)
-* **typeProperties**: AzureDataLakeStoreDatasetTypeProperties
+* **typeProperties**: [AzureDataLakeStoreDatasetTypeProperties](#azuredatalakestoredatasettypeproperties)
 
 ### AzureMariaDBTable
 #### Properties
 * **type**: 'AzureMariaDBTable' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### AzureMySqlTable
 #### Properties
 * **type**: 'AzureMySqlTable' (Required)
-* **typeProperties**: AzureMySqlTableDatasetTypeProperties (Required)
+* **typeProperties**: [AzureMySqlTableDatasetTypeProperties](#azuremysqltabledatasettypeproperties) (Required)
 
 ### AzurePostgreSqlTable
 #### Properties
 * **type**: 'AzurePostgreSqlTable' (Required)
-* **typeProperties**: AzurePostgreSqlTableDatasetTypeProperties
+* **typeProperties**: [AzurePostgreSqlTableDatasetTypeProperties](#azurepostgresqltabledatasettypeproperties)
 
 ### AzureSearchIndex
 #### Properties
 * **type**: 'AzureSearchIndex' (Required)
-* **typeProperties**: AzureSearchIndexDatasetTypeProperties (Required)
+* **typeProperties**: [AzureSearchIndexDatasetTypeProperties](#azuresearchindexdatasettypeproperties) (Required)
 
 ### AzureSqlDWTable
 #### Properties
 * **type**: 'AzureSqlDWTable' (Required)
-* **typeProperties**: AzureSqlDWTableDatasetTypeProperties
+* **typeProperties**: [AzureSqlDWTableDatasetTypeProperties](#azuresqldwtabledatasettypeproperties)
 
 ### AzureSqlMITable
 #### Properties
 * **type**: 'AzureSqlMITable' (Required)
-* **typeProperties**: AzureSqlMITableDatasetTypeProperties
+* **typeProperties**: [AzureSqlMITableDatasetTypeProperties](#azuresqlmitabledatasettypeproperties)
 
 ### AzureSqlTable
 #### Properties
 * **type**: 'AzureSqlTable' (Required)
-* **typeProperties**: AzureSqlTableDatasetTypeProperties
+* **typeProperties**: [AzureSqlTableDatasetTypeProperties](#azuresqltabledatasettypeproperties)
 
 ### AzureTable
 #### Properties
 * **type**: 'AzureTable' (Required)
-* **typeProperties**: AzureTableDatasetTypeProperties (Required)
+* **typeProperties**: [AzureTableDatasetTypeProperties](#azuretabledatasettypeproperties) (Required)
 
 ### Binary
 #### Properties
 * **type**: 'Binary' (Required)
-* **typeProperties**: BinaryDatasetTypeProperties
+* **typeProperties**: [BinaryDatasetTypeProperties](#binarydatasettypeproperties)
 
 ### CassandraTable
 #### Properties
 * **type**: 'CassandraTable' (Required)
-* **typeProperties**: CassandraTableDatasetTypeProperties
+* **typeProperties**: [CassandraTableDatasetTypeProperties](#cassandratabledatasettypeproperties)
 
 ### CommonDataServiceForAppsEntity
 #### Properties
 * **type**: 'CommonDataServiceForAppsEntity' (Required)
-* **typeProperties**: CommonDataServiceForAppsEntityDatasetTypeProperties
+* **typeProperties**: [CommonDataServiceForAppsEntityDatasetTypeProperties](#commondataserviceforappsentitydatasettypeproperties)
 
 ### ConcurObject
 #### Properties
 * **type**: 'ConcurObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### CosmosDbMongoDbApiCollection
 #### Properties
 * **type**: 'CosmosDbMongoDbApiCollection' (Required)
-* **typeProperties**: CosmosDbMongoDbApiCollectionDatasetTypeProperties (Required)
+* **typeProperties**: [CosmosDbMongoDbApiCollectionDatasetTypeProperties](#cosmosdbmongodbapicollectiondatasettypeproperties) (Required)
 
 ### CosmosDbSqlApiCollection
 #### Properties
 * **type**: 'CosmosDbSqlApiCollection' (Required)
-* **typeProperties**: CosmosDbSqlApiCollectionDatasetTypeProperties (Required)
+* **typeProperties**: [CosmosDbSqlApiCollectionDatasetTypeProperties](#cosmosdbsqlapicollectiondatasettypeproperties) (Required)
 
 ### CouchbaseTable
 #### Properties
 * **type**: 'CouchbaseTable' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### CustomDataset
 #### Properties
@@ -381,242 +381,242 @@
 ### Db2Table
 #### Properties
 * **type**: 'Db2Table' (Required)
-* **typeProperties**: Db2TableDatasetTypeProperties
+* **typeProperties**: [Db2TableDatasetTypeProperties](#db2tabledatasettypeproperties)
 
 ### DelimitedText
 #### Properties
 * **type**: 'DelimitedText' (Required)
-* **typeProperties**: DelimitedTextDatasetTypeProperties
+* **typeProperties**: [DelimitedTextDatasetTypeProperties](#delimitedtextdatasettypeproperties)
 
 ### DocumentDbCollection
 #### Properties
 * **type**: 'DocumentDbCollection' (Required)
-* **typeProperties**: DocumentDbCollectionDatasetTypeProperties (Required)
+* **typeProperties**: [DocumentDbCollectionDatasetTypeProperties](#documentdbcollectiondatasettypeproperties) (Required)
 
 ### DrillTable
 #### Properties
 * **type**: 'DrillTable' (Required)
-* **typeProperties**: DrillDatasetTypeProperties
+* **typeProperties**: [DrillDatasetTypeProperties](#drilldatasettypeproperties)
 
 ### DynamicsAXResource
 #### Properties
 * **type**: 'DynamicsAXResource' (Required)
-* **typeProperties**: DynamicsAXResourceDatasetTypeProperties (Required)
+* **typeProperties**: [DynamicsAXResourceDatasetTypeProperties](#dynamicsaxresourcedatasettypeproperties) (Required)
 
 ### DynamicsCrmEntity
 #### Properties
 * **type**: 'DynamicsCrmEntity' (Required)
-* **typeProperties**: DynamicsCrmEntityDatasetTypeProperties
+* **typeProperties**: [DynamicsCrmEntityDatasetTypeProperties](#dynamicscrmentitydatasettypeproperties)
 
 ### DynamicsEntity
 #### Properties
 * **type**: 'DynamicsEntity' (Required)
-* **typeProperties**: DynamicsEntityDatasetTypeProperties
+* **typeProperties**: [DynamicsEntityDatasetTypeProperties](#dynamicsentitydatasettypeproperties)
 
 ### EloquaObject
 #### Properties
 * **type**: 'EloquaObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### Excel
 #### Properties
 * **type**: 'Excel' (Required)
-* **typeProperties**: ExcelDatasetTypeProperties
+* **typeProperties**: [ExcelDatasetTypeProperties](#exceldatasettypeproperties)
 
 ### FileShare
 #### Properties
 * **type**: 'FileShare' (Required)
-* **typeProperties**: FileShareDatasetTypeProperties
+* **typeProperties**: [FileShareDatasetTypeProperties](#filesharedatasettypeproperties)
 
 ### GoogleAdWordsObject
 #### Properties
 * **type**: 'GoogleAdWordsObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### GoogleBigQueryObject
 #### Properties
 * **type**: 'GoogleBigQueryObject' (Required)
-* **typeProperties**: GoogleBigQueryDatasetTypeProperties
+* **typeProperties**: [GoogleBigQueryDatasetTypeProperties](#googlebigquerydatasettypeproperties)
 
 ### GreenplumTable
 #### Properties
 * **type**: 'GreenplumTable' (Required)
-* **typeProperties**: GreenplumDatasetTypeProperties
+* **typeProperties**: [GreenplumDatasetTypeProperties](#greenplumdatasettypeproperties)
 
 ### HBaseObject
 #### Properties
 * **type**: 'HBaseObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### HiveObject
 #### Properties
 * **type**: 'HiveObject' (Required)
-* **typeProperties**: HiveDatasetTypeProperties
+* **typeProperties**: [HiveDatasetTypeProperties](#hivedatasettypeproperties)
 
 ### HttpFile
 #### Properties
 * **type**: 'HttpFile' (Required)
-* **typeProperties**: HttpDatasetTypeProperties
+* **typeProperties**: [HttpDatasetTypeProperties](#httpdatasettypeproperties)
 
 ### HubspotObject
 #### Properties
 * **type**: 'HubspotObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### ImpalaObject
 #### Properties
 * **type**: 'ImpalaObject' (Required)
-* **typeProperties**: ImpalaDatasetTypeProperties
+* **typeProperties**: [ImpalaDatasetTypeProperties](#impaladatasettypeproperties)
 
 ### InformixTable
 #### Properties
 * **type**: 'InformixTable' (Required)
-* **typeProperties**: InformixTableDatasetTypeProperties
+* **typeProperties**: [InformixTableDatasetTypeProperties](#informixtabledatasettypeproperties)
 
 ### JiraObject
 #### Properties
 * **type**: 'JiraObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### Json
 #### Properties
 * **type**: 'Json' (Required)
-* **typeProperties**: JsonDatasetTypeProperties
+* **typeProperties**: [JsonDatasetTypeProperties](#jsondatasettypeproperties)
 
 ### MagentoObject
 #### Properties
 * **type**: 'MagentoObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### MariaDBTable
 #### Properties
 * **type**: 'MariaDBTable' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### MarketoObject
 #### Properties
 * **type**: 'MarketoObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### MicrosoftAccessTable
 #### Properties
 * **type**: 'MicrosoftAccessTable' (Required)
-* **typeProperties**: MicrosoftAccessTableDatasetTypeProperties
+* **typeProperties**: [MicrosoftAccessTableDatasetTypeProperties](#microsoftaccesstabledatasettypeproperties)
 
 ### MongoDbAtlasCollection
 #### Properties
 * **type**: 'MongoDbAtlasCollection' (Required)
-* **typeProperties**: MongoDbAtlasCollectionDatasetTypeProperties (Required)
+* **typeProperties**: [MongoDbAtlasCollectionDatasetTypeProperties](#mongodbatlascollectiondatasettypeproperties) (Required)
 
 ### MongoDbCollection
 #### Properties
 * **type**: 'MongoDbCollection' (Required)
-* **typeProperties**: MongoDbCollectionDatasetTypeProperties (Required)
+* **typeProperties**: [MongoDbCollectionDatasetTypeProperties](#mongodbcollectiondatasettypeproperties) (Required)
 
 ### MongoDbV2Collection
 #### Properties
 * **type**: 'MongoDbV2Collection' (Required)
-* **typeProperties**: MongoDbV2CollectionDatasetTypeProperties (Required)
+* **typeProperties**: [MongoDbV2CollectionDatasetTypeProperties](#mongodbv2collectiondatasettypeproperties) (Required)
 
 ### MySqlTable
 #### Properties
 * **type**: 'MySqlTable' (Required)
-* **typeProperties**: MySqlTableDatasetTypeProperties
+* **typeProperties**: [MySqlTableDatasetTypeProperties](#mysqltabledatasettypeproperties)
 
 ### NetezzaTable
 #### Properties
 * **type**: 'NetezzaTable' (Required)
-* **typeProperties**: NetezzaTableDatasetTypeProperties
+* **typeProperties**: [NetezzaTableDatasetTypeProperties](#netezzatabledatasettypeproperties)
 
 ### ODataResource
 #### Properties
 * **type**: 'ODataResource' (Required)
-* **typeProperties**: ODataResourceDatasetTypeProperties
+* **typeProperties**: [ODataResourceDatasetTypeProperties](#odataresourcedatasettypeproperties)
 
 ### OdbcTable
 #### Properties
 * **type**: 'OdbcTable' (Required)
-* **typeProperties**: OdbcTableDatasetTypeProperties
+* **typeProperties**: [OdbcTableDatasetTypeProperties](#odbctabledatasettypeproperties)
 
 ### Office365Table
 #### Properties
 * **type**: 'Office365Table' (Required)
-* **typeProperties**: Office365DatasetTypeProperties (Required)
+* **typeProperties**: [Office365DatasetTypeProperties](#office365datasettypeproperties) (Required)
 
 ### OracleServiceCloudObject
 #### Properties
 * **type**: 'OracleServiceCloudObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### OracleTable
 #### Properties
 * **type**: 'OracleTable' (Required)
-* **typeProperties**: OracleTableDatasetTypeProperties
+* **typeProperties**: [OracleTableDatasetTypeProperties](#oracletabledatasettypeproperties)
 
 ### Orc
 #### Properties
 * **type**: 'Orc' (Required)
-* **typeProperties**: OrcDatasetTypeProperties
+* **typeProperties**: [OrcDatasetTypeProperties](#orcdatasettypeproperties)
 
 ### Parquet
 #### Properties
 * **type**: 'Parquet' (Required)
-* **typeProperties**: ParquetDatasetTypeProperties
+* **typeProperties**: [ParquetDatasetTypeProperties](#parquetdatasettypeproperties)
 
 ### PaypalObject
 #### Properties
 * **type**: 'PaypalObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### PhoenixObject
 #### Properties
 * **type**: 'PhoenixObject' (Required)
-* **typeProperties**: PhoenixDatasetTypeProperties
+* **typeProperties**: [PhoenixDatasetTypeProperties](#phoenixdatasettypeproperties)
 
 ### PostgreSqlTable
 #### Properties
 * **type**: 'PostgreSqlTable' (Required)
-* **typeProperties**: PostgreSqlTableDatasetTypeProperties
+* **typeProperties**: [PostgreSqlTableDatasetTypeProperties](#postgresqltabledatasettypeproperties)
 
 ### PrestoObject
 #### Properties
 * **type**: 'PrestoObject' (Required)
-* **typeProperties**: PrestoDatasetTypeProperties
+* **typeProperties**: [PrestoDatasetTypeProperties](#prestodatasettypeproperties)
 
 ### QuickBooksObject
 #### Properties
 * **type**: 'QuickBooksObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### RelationalTable
 #### Properties
 * **type**: 'RelationalTable' (Required)
-* **typeProperties**: RelationalTableDatasetTypeProperties
+* **typeProperties**: [RelationalTableDatasetTypeProperties](#relationaltabledatasettypeproperties)
 
 ### ResponsysObject
 #### Properties
 * **type**: 'ResponsysObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### RestResource
 #### Properties
 * **type**: 'RestResource' (Required)
-* **typeProperties**: RestResourceDatasetTypeProperties
+* **typeProperties**: [RestResourceDatasetTypeProperties](#restresourcedatasettypeproperties)
 
 ### SalesforceMarketingCloudObject
 #### Properties
 * **type**: 'SalesforceMarketingCloudObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### SalesforceObject
 #### Properties
 * **type**: 'SalesforceObject' (Required)
-* **typeProperties**: SalesforceObjectDatasetTypeProperties
+* **typeProperties**: [SalesforceObjectDatasetTypeProperties](#salesforceobjectdatasettypeproperties)
 
 ### SalesforceServiceCloudObject
 #### Properties
 * **type**: 'SalesforceServiceCloudObject' (Required)
-* **typeProperties**: SalesforceServiceCloudObjectDatasetTypeProperties
+* **typeProperties**: [SalesforceServiceCloudObjectDatasetTypeProperties](#salesforceservicecloudobjectdatasettypeproperties)
 
 ### SapBwCube
 #### Properties
@@ -625,97 +625,97 @@
 ### SapCloudForCustomerResource
 #### Properties
 * **type**: 'SapCloudForCustomerResource' (Required)
-* **typeProperties**: SapCloudForCustomerResourceDatasetTypeProperties (Required)
+* **typeProperties**: [SapCloudForCustomerResourceDatasetTypeProperties](#sapcloudforcustomerresourcedatasettypeproperties) (Required)
 
 ### SapEccResource
 #### Properties
 * **type**: 'SapEccResource' (Required)
-* **typeProperties**: SapEccResourceDatasetTypeProperties (Required)
+* **typeProperties**: [SapEccResourceDatasetTypeProperties](#sapeccresourcedatasettypeproperties) (Required)
 
 ### SapHanaTable
 #### Properties
 * **type**: 'SapHanaTable' (Required)
-* **typeProperties**: SapHanaTableDatasetTypeProperties
+* **typeProperties**: [SapHanaTableDatasetTypeProperties](#saphanatabledatasettypeproperties)
 
 ### SapOpenHubTable
 #### Properties
 * **type**: 'SapOpenHubTable' (Required)
-* **typeProperties**: SapOpenHubTableDatasetTypeProperties (Required)
+* **typeProperties**: [SapOpenHubTableDatasetTypeProperties](#sapopenhubtabledatasettypeproperties) (Required)
 
 ### SapTableResource
 #### Properties
 * **type**: 'SapTableResource' (Required)
-* **typeProperties**: SapTableResourceDatasetTypeProperties (Required)
+* **typeProperties**: [SapTableResourceDatasetTypeProperties](#saptableresourcedatasettypeproperties) (Required)
 
 ### ServiceNowObject
 #### Properties
 * **type**: 'ServiceNowObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### SharePointOnlineListResource
 #### Properties
 * **type**: 'SharePointOnlineListResource' (Required)
-* **typeProperties**: SharePointOnlineListDatasetTypeProperties
+* **typeProperties**: [SharePointOnlineListDatasetTypeProperties](#sharepointonlinelistdatasettypeproperties)
 
 ### ShopifyObject
 #### Properties
 * **type**: 'ShopifyObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### SnowflakeTable
 #### Properties
 * **type**: 'SnowflakeTable' (Required)
-* **typeProperties**: SnowflakeDatasetTypeProperties (Required)
+* **typeProperties**: [SnowflakeDatasetTypeProperties](#snowflakedatasettypeproperties) (Required)
 
 ### SparkObject
 #### Properties
 * **type**: 'SparkObject' (Required)
-* **typeProperties**: SparkDatasetTypeProperties
+* **typeProperties**: [SparkDatasetTypeProperties](#sparkdatasettypeproperties)
 
 ### SqlServerTable
 #### Properties
 * **type**: 'SqlServerTable' (Required)
-* **typeProperties**: SqlServerTableDatasetTypeProperties
+* **typeProperties**: [SqlServerTableDatasetTypeProperties](#sqlservertabledatasettypeproperties)
 
 ### SquareObject
 #### Properties
 * **type**: 'SquareObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### SybaseTable
 #### Properties
 * **type**: 'SybaseTable' (Required)
-* **typeProperties**: SybaseTableDatasetTypeProperties
+* **typeProperties**: [SybaseTableDatasetTypeProperties](#sybasetabledatasettypeproperties)
 
 ### TeradataTable
 #### Properties
 * **type**: 'TeradataTable' (Required)
-* **typeProperties**: TeradataTableDatasetTypeProperties
+* **typeProperties**: [TeradataTableDatasetTypeProperties](#teradatatabledatasettypeproperties)
 
 ### VerticaTable
 #### Properties
 * **type**: 'VerticaTable' (Required)
-* **typeProperties**: VerticaDatasetTypeProperties
+* **typeProperties**: [VerticaDatasetTypeProperties](#verticadatasettypeproperties)
 
 ### WebTable
 #### Properties
 * **type**: 'WebTable' (Required)
-* **typeProperties**: WebTableDatasetTypeProperties (Required)
+* **typeProperties**: [WebTableDatasetTypeProperties](#webtabledatasettypeproperties) (Required)
 
 ### XeroObject
 #### Properties
 * **type**: 'XeroObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ### Xml
 #### Properties
 * **type**: 'Xml' (Required)
-* **typeProperties**: XmlDatasetTypeProperties
+* **typeProperties**: [XmlDatasetTypeProperties](#xmldatasettypeproperties)
 
 ### ZohoObject
 #### Properties
 * **type**: 'ZohoObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 
 ## schemas:113_folder
@@ -725,7 +725,7 @@
 ## Dictionary<string,ParameterSpecification>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ParameterSpecification
+* **Additional Properties Type**: [ParameterSpecification](#parameterspecification)
 
 ## ParameterSpecification
 ### Properties
@@ -735,7 +735,7 @@
 ## AmazonMWSObject
 ### Properties
 * **type**: 'AmazonMWSObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## GenericDatasetTypeProperties
 ### Properties
@@ -744,7 +744,7 @@
 ## AmazonRedshiftTable
 ### Properties
 * **type**: 'AmazonRedshiftTable' (Required)
-* **typeProperties**: AmazonRedshiftTableDatasetTypeProperties
+* **typeProperties**: [AmazonRedshiftTableDatasetTypeProperties](#amazonredshifttabledatasettypeproperties)
 
 ## AmazonRedshiftTableDatasetTypeProperties
 ### Properties
@@ -755,13 +755,13 @@
 ## AmazonS3Object
 ### Properties
 * **type**: 'AmazonS3Object' (Required)
-* **typeProperties**: AmazonS3DatasetTypeProperties (Required)
+* **typeProperties**: [AmazonS3DatasetTypeProperties](#amazons3datasettypeproperties) (Required)
 
 ## AmazonS3DatasetTypeProperties
 ### Properties
 * **bucketName**: any (Required)
-* **compression**: DatasetCompression
-* **format**: DatasetStorageFormat
+* **compression**: [DatasetCompression](#datasetcompression)
+* **format**: [DatasetStorageFormat](#datasetstorageformat)
 * **key**: any
 * **modifiedDatetimeEnd**: any
 * **modifiedDatetimeStart**: any
@@ -905,13 +905,13 @@
 ## Avro
 ### Properties
 * **type**: 'Avro' (Required)
-* **typeProperties**: AvroDatasetTypeProperties
+* **typeProperties**: [AvroDatasetTypeProperties](#avrodatasettypeproperties)
 
 ## AvroDatasetTypeProperties
 ### Properties
 * **avroCompressionCodec**: 'bzip2' | 'deflate' | 'none' | 'snappy' | 'xz'
 * **avroCompressionLevel**: int
-* **location**: DatasetLocation (Required)
+* **location**: [DatasetLocation](#datasetlocation) (Required)
 
 ## DatasetLocation
 * **Discriminator**: type
@@ -1024,14 +1024,14 @@
 ## AzureBlob
 ### Properties
 * **type**: 'AzureBlob' (Required)
-* **typeProperties**: AzureBlobDatasetTypeProperties
+* **typeProperties**: [AzureBlobDatasetTypeProperties](#azureblobdatasettypeproperties)
 
 ## AzureBlobDatasetTypeProperties
 ### Properties
-* **compression**: DatasetCompression
+* **compression**: [DatasetCompression](#datasetcompression)
 * **fileName**: any
 * **folderPath**: any
-* **format**: DatasetStorageFormat
+* **format**: [DatasetStorageFormat](#datasetstorageformat)
 * **modifiedDatetimeEnd**: any
 * **modifiedDatetimeStart**: any
 * **tableRootLocation**: any
@@ -1039,19 +1039,19 @@
 ## AzureBlobFSFile
 ### Properties
 * **type**: 'AzureBlobFSFile' (Required)
-* **typeProperties**: AzureBlobFSDatasetTypeProperties
+* **typeProperties**: [AzureBlobFSDatasetTypeProperties](#azureblobfsdatasettypeproperties)
 
 ## AzureBlobFSDatasetTypeProperties
 ### Properties
-* **compression**: DatasetCompression
+* **compression**: [DatasetCompression](#datasetcompression)
 * **fileName**: any
 * **folderPath**: any
-* **format**: DatasetStorageFormat
+* **format**: [DatasetStorageFormat](#datasetstorageformat)
 
 ## AzureDatabricksDeltaLakeDataset
 ### Properties
 * **type**: 'AzureDatabricksDeltaLakeDataset' (Required)
-* **typeProperties**: AzureDatabricksDeltaLakeDatasetTypeProperties
+* **typeProperties**: [AzureDatabricksDeltaLakeDatasetTypeProperties](#azuredatabricksdeltalakedatasettypeproperties)
 
 ## AzureDatabricksDeltaLakeDatasetTypeProperties
 ### Properties
@@ -1061,7 +1061,7 @@
 ## AzureDataExplorerTable
 ### Properties
 * **type**: 'AzureDataExplorerTable' (Required)
-* **typeProperties**: AzureDataExplorerDatasetTypeProperties (Required)
+* **typeProperties**: [AzureDataExplorerDatasetTypeProperties](#azuredataexplorerdatasettypeproperties) (Required)
 
 ## AzureDataExplorerDatasetTypeProperties
 ### Properties
@@ -1070,24 +1070,24 @@
 ## AzureDataLakeStoreFile
 ### Properties
 * **type**: 'AzureDataLakeStoreFile' (Required)
-* **typeProperties**: AzureDataLakeStoreDatasetTypeProperties
+* **typeProperties**: [AzureDataLakeStoreDatasetTypeProperties](#azuredatalakestoredatasettypeproperties)
 
 ## AzureDataLakeStoreDatasetTypeProperties
 ### Properties
-* **compression**: DatasetCompression
+* **compression**: [DatasetCompression](#datasetcompression)
 * **fileName**: any
 * **folderPath**: any
-* **format**: DatasetStorageFormat
+* **format**: [DatasetStorageFormat](#datasetstorageformat)
 
 ## AzureMariaDBTable
 ### Properties
 * **type**: 'AzureMariaDBTable' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## AzureMySqlTable
 ### Properties
 * **type**: 'AzureMySqlTable' (Required)
-* **typeProperties**: AzureMySqlTableDatasetTypeProperties (Required)
+* **typeProperties**: [AzureMySqlTableDatasetTypeProperties](#azuremysqltabledatasettypeproperties) (Required)
 
 ## AzureMySqlTableDatasetTypeProperties
 ### Properties
@@ -1097,7 +1097,7 @@
 ## AzurePostgreSqlTable
 ### Properties
 * **type**: 'AzurePostgreSqlTable' (Required)
-* **typeProperties**: AzurePostgreSqlTableDatasetTypeProperties
+* **typeProperties**: [AzurePostgreSqlTableDatasetTypeProperties](#azurepostgresqltabledatasettypeproperties)
 
 ## AzurePostgreSqlTableDatasetTypeProperties
 ### Properties
@@ -1108,7 +1108,7 @@
 ## AzureSearchIndex
 ### Properties
 * **type**: 'AzureSearchIndex' (Required)
-* **typeProperties**: AzureSearchIndexDatasetTypeProperties (Required)
+* **typeProperties**: [AzureSearchIndexDatasetTypeProperties](#azuresearchindexdatasettypeproperties) (Required)
 
 ## AzureSearchIndexDatasetTypeProperties
 ### Properties
@@ -1117,7 +1117,7 @@
 ## AzureSqlDWTable
 ### Properties
 * **type**: 'AzureSqlDWTable' (Required)
-* **typeProperties**: AzureSqlDWTableDatasetTypeProperties
+* **typeProperties**: [AzureSqlDWTableDatasetTypeProperties](#azuresqldwtabledatasettypeproperties)
 
 ## AzureSqlDWTableDatasetTypeProperties
 ### Properties
@@ -1128,7 +1128,7 @@
 ## AzureSqlMITable
 ### Properties
 * **type**: 'AzureSqlMITable' (Required)
-* **typeProperties**: AzureSqlMITableDatasetTypeProperties
+* **typeProperties**: [AzureSqlMITableDatasetTypeProperties](#azuresqlmitabledatasettypeproperties)
 
 ## AzureSqlMITableDatasetTypeProperties
 ### Properties
@@ -1139,7 +1139,7 @@
 ## AzureSqlTable
 ### Properties
 * **type**: 'AzureSqlTable' (Required)
-* **typeProperties**: AzureSqlTableDatasetTypeProperties
+* **typeProperties**: [AzureSqlTableDatasetTypeProperties](#azuresqltabledatasettypeproperties)
 
 ## AzureSqlTableDatasetTypeProperties
 ### Properties
@@ -1150,7 +1150,7 @@
 ## AzureTable
 ### Properties
 * **type**: 'AzureTable' (Required)
-* **typeProperties**: AzureTableDatasetTypeProperties (Required)
+* **typeProperties**: [AzureTableDatasetTypeProperties](#azuretabledatasettypeproperties) (Required)
 
 ## AzureTableDatasetTypeProperties
 ### Properties
@@ -1159,17 +1159,17 @@
 ## Binary
 ### Properties
 * **type**: 'Binary' (Required)
-* **typeProperties**: BinaryDatasetTypeProperties
+* **typeProperties**: [BinaryDatasetTypeProperties](#binarydatasettypeproperties)
 
 ## BinaryDatasetTypeProperties
 ### Properties
-* **compression**: DatasetCompression
-* **location**: DatasetLocation (Required)
+* **compression**: [DatasetCompression](#datasetcompression)
+* **location**: [DatasetLocation](#datasetlocation) (Required)
 
 ## CassandraTable
 ### Properties
 * **type**: 'CassandraTable' (Required)
-* **typeProperties**: CassandraTableDatasetTypeProperties
+* **typeProperties**: [CassandraTableDatasetTypeProperties](#cassandratabledatasettypeproperties)
 
 ## CassandraTableDatasetTypeProperties
 ### Properties
@@ -1179,7 +1179,7 @@
 ## CommonDataServiceForAppsEntity
 ### Properties
 * **type**: 'CommonDataServiceForAppsEntity' (Required)
-* **typeProperties**: CommonDataServiceForAppsEntityDatasetTypeProperties
+* **typeProperties**: [CommonDataServiceForAppsEntityDatasetTypeProperties](#commondataserviceforappsentitydatasettypeproperties)
 
 ## CommonDataServiceForAppsEntityDatasetTypeProperties
 ### Properties
@@ -1188,12 +1188,12 @@
 ## ConcurObject
 ### Properties
 * **type**: 'ConcurObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## CosmosDbMongoDbApiCollection
 ### Properties
 * **type**: 'CosmosDbMongoDbApiCollection' (Required)
-* **typeProperties**: CosmosDbMongoDbApiCollectionDatasetTypeProperties (Required)
+* **typeProperties**: [CosmosDbMongoDbApiCollectionDatasetTypeProperties](#cosmosdbmongodbapicollectiondatasettypeproperties) (Required)
 
 ## CosmosDbMongoDbApiCollectionDatasetTypeProperties
 ### Properties
@@ -1202,7 +1202,7 @@
 ## CosmosDbSqlApiCollection
 ### Properties
 * **type**: 'CosmosDbSqlApiCollection' (Required)
-* **typeProperties**: CosmosDbSqlApiCollectionDatasetTypeProperties (Required)
+* **typeProperties**: [CosmosDbSqlApiCollectionDatasetTypeProperties](#cosmosdbsqlapicollectiondatasettypeproperties) (Required)
 
 ## CosmosDbSqlApiCollectionDatasetTypeProperties
 ### Properties
@@ -1211,7 +1211,7 @@
 ## CouchbaseTable
 ### Properties
 * **type**: 'CouchbaseTable' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## CustomDataset
 ### Properties
@@ -1221,7 +1221,7 @@
 ## Db2Table
 ### Properties
 * **type**: 'Db2Table' (Required)
-* **typeProperties**: Db2TableDatasetTypeProperties
+* **typeProperties**: [Db2TableDatasetTypeProperties](#db2tabledatasettypeproperties)
 
 ## Db2TableDatasetTypeProperties
 ### Properties
@@ -1232,7 +1232,7 @@
 ## DelimitedText
 ### Properties
 * **type**: 'DelimitedText' (Required)
-* **typeProperties**: DelimitedTextDatasetTypeProperties
+* **typeProperties**: [DelimitedTextDatasetTypeProperties](#delimitedtextdatasettypeproperties)
 
 ## DelimitedTextDatasetTypeProperties
 ### Properties
@@ -1242,7 +1242,7 @@
 * **encodingName**: any
 * **escapeChar**: any
 * **firstRowAsHeader**: any
-* **location**: DatasetLocation (Required)
+* **location**: [DatasetLocation](#datasetlocation) (Required)
 * **nullValue**: any
 * **quoteChar**: any
 * **rowDelimiter**: any
@@ -1250,7 +1250,7 @@
 ## DocumentDbCollection
 ### Properties
 * **type**: 'DocumentDbCollection' (Required)
-* **typeProperties**: DocumentDbCollectionDatasetTypeProperties (Required)
+* **typeProperties**: [DocumentDbCollectionDatasetTypeProperties](#documentdbcollectiondatasettypeproperties) (Required)
 
 ## DocumentDbCollectionDatasetTypeProperties
 ### Properties
@@ -1259,7 +1259,7 @@
 ## DrillTable
 ### Properties
 * **type**: 'DrillTable' (Required)
-* **typeProperties**: DrillDatasetTypeProperties
+* **typeProperties**: [DrillDatasetTypeProperties](#drilldatasettypeproperties)
 
 ## DrillDatasetTypeProperties
 ### Properties
@@ -1270,7 +1270,7 @@
 ## DynamicsAXResource
 ### Properties
 * **type**: 'DynamicsAXResource' (Required)
-* **typeProperties**: DynamicsAXResourceDatasetTypeProperties (Required)
+* **typeProperties**: [DynamicsAXResourceDatasetTypeProperties](#dynamicsaxresourcedatasettypeproperties) (Required)
 
 ## DynamicsAXResourceDatasetTypeProperties
 ### Properties
@@ -1279,7 +1279,7 @@
 ## DynamicsCrmEntity
 ### Properties
 * **type**: 'DynamicsCrmEntity' (Required)
-* **typeProperties**: DynamicsCrmEntityDatasetTypeProperties
+* **typeProperties**: [DynamicsCrmEntityDatasetTypeProperties](#dynamicscrmentitydatasettypeproperties)
 
 ## DynamicsCrmEntityDatasetTypeProperties
 ### Properties
@@ -1288,7 +1288,7 @@
 ## DynamicsEntity
 ### Properties
 * **type**: 'DynamicsEntity' (Required)
-* **typeProperties**: DynamicsEntityDatasetTypeProperties
+* **typeProperties**: [DynamicsEntityDatasetTypeProperties](#dynamicsentitydatasettypeproperties)
 
 ## DynamicsEntityDatasetTypeProperties
 ### Properties
@@ -1297,18 +1297,18 @@
 ## EloquaObject
 ### Properties
 * **type**: 'EloquaObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## Excel
 ### Properties
 * **type**: 'Excel' (Required)
-* **typeProperties**: ExcelDatasetTypeProperties
+* **typeProperties**: [ExcelDatasetTypeProperties](#exceldatasettypeproperties)
 
 ## ExcelDatasetTypeProperties
 ### Properties
-* **compression**: DatasetCompression
+* **compression**: [DatasetCompression](#datasetcompression)
 * **firstRowAsHeader**: any
-* **location**: DatasetLocation (Required)
+* **location**: [DatasetLocation](#datasetlocation) (Required)
 * **nullValue**: any
 * **range**: any
 * **sheetName**: any (Required)
@@ -1316,27 +1316,27 @@
 ## FileShare
 ### Properties
 * **type**: 'FileShare' (Required)
-* **typeProperties**: FileShareDatasetTypeProperties
+* **typeProperties**: [FileShareDatasetTypeProperties](#filesharedatasettypeproperties)
 
 ## FileShareDatasetTypeProperties
 ### Properties
-* **compression**: DatasetCompression
+* **compression**: [DatasetCompression](#datasetcompression)
 * **fileFilter**: any
 * **fileName**: any
 * **folderPath**: any
-* **format**: DatasetStorageFormat
+* **format**: [DatasetStorageFormat](#datasetstorageformat)
 * **modifiedDatetimeEnd**: any
 * **modifiedDatetimeStart**: any
 
 ## GoogleAdWordsObject
 ### Properties
 * **type**: 'GoogleAdWordsObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## GoogleBigQueryObject
 ### Properties
 * **type**: 'GoogleBigQueryObject' (Required)
-* **typeProperties**: GoogleBigQueryDatasetTypeProperties
+* **typeProperties**: [GoogleBigQueryDatasetTypeProperties](#googlebigquerydatasettypeproperties)
 
 ## GoogleBigQueryDatasetTypeProperties
 ### Properties
@@ -1347,7 +1347,7 @@
 ## GreenplumTable
 ### Properties
 * **type**: 'GreenplumTable' (Required)
-* **typeProperties**: GreenplumDatasetTypeProperties
+* **typeProperties**: [GreenplumDatasetTypeProperties](#greenplumdatasettypeproperties)
 
 ## GreenplumDatasetTypeProperties
 ### Properties
@@ -1358,12 +1358,12 @@
 ## HBaseObject
 ### Properties
 * **type**: 'HBaseObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## HiveObject
 ### Properties
 * **type**: 'HiveObject' (Required)
-* **typeProperties**: HiveDatasetTypeProperties
+* **typeProperties**: [HiveDatasetTypeProperties](#hivedatasettypeproperties)
 
 ## HiveDatasetTypeProperties
 ### Properties
@@ -1374,13 +1374,13 @@
 ## HttpFile
 ### Properties
 * **type**: 'HttpFile' (Required)
-* **typeProperties**: HttpDatasetTypeProperties
+* **typeProperties**: [HttpDatasetTypeProperties](#httpdatasettypeproperties)
 
 ## HttpDatasetTypeProperties
 ### Properties
 * **additionalHeaders**: any
-* **compression**: DatasetCompression
-* **format**: DatasetStorageFormat
+* **compression**: [DatasetCompression](#datasetcompression)
+* **format**: [DatasetStorageFormat](#datasetstorageformat)
 * **relativeUrl**: any
 * **requestBody**: any
 * **requestMethod**: any
@@ -1388,12 +1388,12 @@
 ## HubspotObject
 ### Properties
 * **type**: 'HubspotObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## ImpalaObject
 ### Properties
 * **type**: 'ImpalaObject' (Required)
-* **typeProperties**: ImpalaDatasetTypeProperties
+* **typeProperties**: [ImpalaDatasetTypeProperties](#impaladatasettypeproperties)
 
 ## ImpalaDatasetTypeProperties
 ### Properties
@@ -1404,7 +1404,7 @@
 ## InformixTable
 ### Properties
 * **type**: 'InformixTable' (Required)
-* **typeProperties**: InformixTableDatasetTypeProperties
+* **typeProperties**: [InformixTableDatasetTypeProperties](#informixtabledatasettypeproperties)
 
 ## InformixTableDatasetTypeProperties
 ### Properties
@@ -1413,38 +1413,38 @@
 ## JiraObject
 ### Properties
 * **type**: 'JiraObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## Json
 ### Properties
 * **type**: 'Json' (Required)
-* **typeProperties**: JsonDatasetTypeProperties
+* **typeProperties**: [JsonDatasetTypeProperties](#jsondatasettypeproperties)
 
 ## JsonDatasetTypeProperties
 ### Properties
-* **compression**: DatasetCompression
+* **compression**: [DatasetCompression](#datasetcompression)
 * **encodingName**: any
-* **location**: DatasetLocation (Required)
+* **location**: [DatasetLocation](#datasetlocation) (Required)
 
 ## MagentoObject
 ### Properties
 * **type**: 'MagentoObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## MariaDBTable
 ### Properties
 * **type**: 'MariaDBTable' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## MarketoObject
 ### Properties
 * **type**: 'MarketoObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## MicrosoftAccessTable
 ### Properties
 * **type**: 'MicrosoftAccessTable' (Required)
-* **typeProperties**: MicrosoftAccessTableDatasetTypeProperties
+* **typeProperties**: [MicrosoftAccessTableDatasetTypeProperties](#microsoftaccesstabledatasettypeproperties)
 
 ## MicrosoftAccessTableDatasetTypeProperties
 ### Properties
@@ -1453,7 +1453,7 @@
 ## MongoDbAtlasCollection
 ### Properties
 * **type**: 'MongoDbAtlasCollection' (Required)
-* **typeProperties**: MongoDbAtlasCollectionDatasetTypeProperties (Required)
+* **typeProperties**: [MongoDbAtlasCollectionDatasetTypeProperties](#mongodbatlascollectiondatasettypeproperties) (Required)
 
 ## MongoDbAtlasCollectionDatasetTypeProperties
 ### Properties
@@ -1462,7 +1462,7 @@
 ## MongoDbCollection
 ### Properties
 * **type**: 'MongoDbCollection' (Required)
-* **typeProperties**: MongoDbCollectionDatasetTypeProperties (Required)
+* **typeProperties**: [MongoDbCollectionDatasetTypeProperties](#mongodbcollectiondatasettypeproperties) (Required)
 
 ## MongoDbCollectionDatasetTypeProperties
 ### Properties
@@ -1471,7 +1471,7 @@
 ## MongoDbV2Collection
 ### Properties
 * **type**: 'MongoDbV2Collection' (Required)
-* **typeProperties**: MongoDbV2CollectionDatasetTypeProperties (Required)
+* **typeProperties**: [MongoDbV2CollectionDatasetTypeProperties](#mongodbv2collectiondatasettypeproperties) (Required)
 
 ## MongoDbV2CollectionDatasetTypeProperties
 ### Properties
@@ -1480,7 +1480,7 @@
 ## MySqlTable
 ### Properties
 * **type**: 'MySqlTable' (Required)
-* **typeProperties**: MySqlTableDatasetTypeProperties
+* **typeProperties**: [MySqlTableDatasetTypeProperties](#mysqltabledatasettypeproperties)
 
 ## MySqlTableDatasetTypeProperties
 ### Properties
@@ -1489,7 +1489,7 @@
 ## NetezzaTable
 ### Properties
 * **type**: 'NetezzaTable' (Required)
-* **typeProperties**: NetezzaTableDatasetTypeProperties
+* **typeProperties**: [NetezzaTableDatasetTypeProperties](#netezzatabledatasettypeproperties)
 
 ## NetezzaTableDatasetTypeProperties
 ### Properties
@@ -1500,7 +1500,7 @@
 ## ODataResource
 ### Properties
 * **type**: 'ODataResource' (Required)
-* **typeProperties**: ODataResourceDatasetTypeProperties
+* **typeProperties**: [ODataResourceDatasetTypeProperties](#odataresourcedatasettypeproperties)
 
 ## ODataResourceDatasetTypeProperties
 ### Properties
@@ -1509,7 +1509,7 @@
 ## OdbcTable
 ### Properties
 * **type**: 'OdbcTable' (Required)
-* **typeProperties**: OdbcTableDatasetTypeProperties
+* **typeProperties**: [OdbcTableDatasetTypeProperties](#odbctabledatasettypeproperties)
 
 ## OdbcTableDatasetTypeProperties
 ### Properties
@@ -1518,7 +1518,7 @@
 ## Office365Table
 ### Properties
 * **type**: 'Office365Table' (Required)
-* **typeProperties**: Office365DatasetTypeProperties (Required)
+* **typeProperties**: [Office365DatasetTypeProperties](#office365datasettypeproperties) (Required)
 
 ## Office365DatasetTypeProperties
 ### Properties
@@ -1528,12 +1528,12 @@
 ## OracleServiceCloudObject
 ### Properties
 * **type**: 'OracleServiceCloudObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## OracleTable
 ### Properties
 * **type**: 'OracleTable' (Required)
-* **typeProperties**: OracleTableDatasetTypeProperties
+* **typeProperties**: [OracleTableDatasetTypeProperties](#oracletabledatasettypeproperties)
 
 ## OracleTableDatasetTypeProperties
 ### Properties
@@ -1544,32 +1544,32 @@
 ## Orc
 ### Properties
 * **type**: 'Orc' (Required)
-* **typeProperties**: OrcDatasetTypeProperties
+* **typeProperties**: [OrcDatasetTypeProperties](#orcdatasettypeproperties)
 
 ## OrcDatasetTypeProperties
 ### Properties
-* **location**: DatasetLocation (Required)
+* **location**: [DatasetLocation](#datasetlocation) (Required)
 * **orcCompressionCodec**: 'lzo' | 'none' | 'snappy' | 'zlib'
 
 ## Parquet
 ### Properties
 * **type**: 'Parquet' (Required)
-* **typeProperties**: ParquetDatasetTypeProperties
+* **typeProperties**: [ParquetDatasetTypeProperties](#parquetdatasettypeproperties)
 
 ## ParquetDatasetTypeProperties
 ### Properties
 * **compressionCodec**: any
-* **location**: DatasetLocation (Required)
+* **location**: [DatasetLocation](#datasetlocation) (Required)
 
 ## PaypalObject
 ### Properties
 * **type**: 'PaypalObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## PhoenixObject
 ### Properties
 * **type**: 'PhoenixObject' (Required)
-* **typeProperties**: PhoenixDatasetTypeProperties
+* **typeProperties**: [PhoenixDatasetTypeProperties](#phoenixdatasettypeproperties)
 
 ## PhoenixDatasetTypeProperties
 ### Properties
@@ -1580,7 +1580,7 @@
 ## PostgreSqlTable
 ### Properties
 * **type**: 'PostgreSqlTable' (Required)
-* **typeProperties**: PostgreSqlTableDatasetTypeProperties
+* **typeProperties**: [PostgreSqlTableDatasetTypeProperties](#postgresqltabledatasettypeproperties)
 
 ## PostgreSqlTableDatasetTypeProperties
 ### Properties
@@ -1591,7 +1591,7 @@
 ## PrestoObject
 ### Properties
 * **type**: 'PrestoObject' (Required)
-* **typeProperties**: PrestoDatasetTypeProperties
+* **typeProperties**: [PrestoDatasetTypeProperties](#prestodatasettypeproperties)
 
 ## PrestoDatasetTypeProperties
 ### Properties
@@ -1602,12 +1602,12 @@
 ## QuickBooksObject
 ### Properties
 * **type**: 'QuickBooksObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## RelationalTable
 ### Properties
 * **type**: 'RelationalTable' (Required)
-* **typeProperties**: RelationalTableDatasetTypeProperties
+* **typeProperties**: [RelationalTableDatasetTypeProperties](#relationaltabledatasettypeproperties)
 
 ## RelationalTableDatasetTypeProperties
 ### Properties
@@ -1616,12 +1616,12 @@
 ## ResponsysObject
 ### Properties
 * **type**: 'ResponsysObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## RestResource
 ### Properties
 * **type**: 'RestResource' (Required)
-* **typeProperties**: RestResourceDatasetTypeProperties
+* **typeProperties**: [RestResourceDatasetTypeProperties](#restresourcedatasettypeproperties)
 
 ## RestResourceDatasetTypeProperties
 ### Properties
@@ -1634,12 +1634,12 @@
 ## SalesforceMarketingCloudObject
 ### Properties
 * **type**: 'SalesforceMarketingCloudObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## SalesforceObject
 ### Properties
 * **type**: 'SalesforceObject' (Required)
-* **typeProperties**: SalesforceObjectDatasetTypeProperties
+* **typeProperties**: [SalesforceObjectDatasetTypeProperties](#salesforceobjectdatasettypeproperties)
 
 ## SalesforceObjectDatasetTypeProperties
 ### Properties
@@ -1648,7 +1648,7 @@
 ## SalesforceServiceCloudObject
 ### Properties
 * **type**: 'SalesforceServiceCloudObject' (Required)
-* **typeProperties**: SalesforceServiceCloudObjectDatasetTypeProperties
+* **typeProperties**: [SalesforceServiceCloudObjectDatasetTypeProperties](#salesforceservicecloudobjectdatasettypeproperties)
 
 ## SalesforceServiceCloudObjectDatasetTypeProperties
 ### Properties
@@ -1661,7 +1661,7 @@
 ## SapCloudForCustomerResource
 ### Properties
 * **type**: 'SapCloudForCustomerResource' (Required)
-* **typeProperties**: SapCloudForCustomerResourceDatasetTypeProperties (Required)
+* **typeProperties**: [SapCloudForCustomerResourceDatasetTypeProperties](#sapcloudforcustomerresourcedatasettypeproperties) (Required)
 
 ## SapCloudForCustomerResourceDatasetTypeProperties
 ### Properties
@@ -1670,7 +1670,7 @@
 ## SapEccResource
 ### Properties
 * **type**: 'SapEccResource' (Required)
-* **typeProperties**: SapEccResourceDatasetTypeProperties (Required)
+* **typeProperties**: [SapEccResourceDatasetTypeProperties](#sapeccresourcedatasettypeproperties) (Required)
 
 ## SapEccResourceDatasetTypeProperties
 ### Properties
@@ -1679,7 +1679,7 @@
 ## SapHanaTable
 ### Properties
 * **type**: 'SapHanaTable' (Required)
-* **typeProperties**: SapHanaTableDatasetTypeProperties
+* **typeProperties**: [SapHanaTableDatasetTypeProperties](#saphanatabledatasettypeproperties)
 
 ## SapHanaTableDatasetTypeProperties
 ### Properties
@@ -1689,7 +1689,7 @@
 ## SapOpenHubTable
 ### Properties
 * **type**: 'SapOpenHubTable' (Required)
-* **typeProperties**: SapOpenHubTableDatasetTypeProperties (Required)
+* **typeProperties**: [SapOpenHubTableDatasetTypeProperties](#sapopenhubtabledatasettypeproperties) (Required)
 
 ## SapOpenHubTableDatasetTypeProperties
 ### Properties
@@ -1700,7 +1700,7 @@
 ## SapTableResource
 ### Properties
 * **type**: 'SapTableResource' (Required)
-* **typeProperties**: SapTableResourceDatasetTypeProperties (Required)
+* **typeProperties**: [SapTableResourceDatasetTypeProperties](#saptableresourcedatasettypeproperties) (Required)
 
 ## SapTableResourceDatasetTypeProperties
 ### Properties
@@ -1709,12 +1709,12 @@
 ## ServiceNowObject
 ### Properties
 * **type**: 'ServiceNowObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## SharePointOnlineListResource
 ### Properties
 * **type**: 'SharePointOnlineListResource' (Required)
-* **typeProperties**: SharePointOnlineListDatasetTypeProperties
+* **typeProperties**: [SharePointOnlineListDatasetTypeProperties](#sharepointonlinelistdatasettypeproperties)
 
 ## SharePointOnlineListDatasetTypeProperties
 ### Properties
@@ -1723,12 +1723,12 @@
 ## ShopifyObject
 ### Properties
 * **type**: 'ShopifyObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## SnowflakeTable
 ### Properties
 * **type**: 'SnowflakeTable' (Required)
-* **typeProperties**: SnowflakeDatasetTypeProperties (Required)
+* **typeProperties**: [SnowflakeDatasetTypeProperties](#snowflakedatasettypeproperties) (Required)
 
 ## SnowflakeDatasetTypeProperties
 ### Properties
@@ -1738,7 +1738,7 @@
 ## SparkObject
 ### Properties
 * **type**: 'SparkObject' (Required)
-* **typeProperties**: SparkDatasetTypeProperties
+* **typeProperties**: [SparkDatasetTypeProperties](#sparkdatasettypeproperties)
 
 ## SparkDatasetTypeProperties
 ### Properties
@@ -1749,7 +1749,7 @@
 ## SqlServerTable
 ### Properties
 * **type**: 'SqlServerTable' (Required)
-* **typeProperties**: SqlServerTableDatasetTypeProperties
+* **typeProperties**: [SqlServerTableDatasetTypeProperties](#sqlservertabledatasettypeproperties)
 
 ## SqlServerTableDatasetTypeProperties
 ### Properties
@@ -1760,12 +1760,12 @@
 ## SquareObject
 ### Properties
 * **type**: 'SquareObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## SybaseTable
 ### Properties
 * **type**: 'SybaseTable' (Required)
-* **typeProperties**: SybaseTableDatasetTypeProperties
+* **typeProperties**: [SybaseTableDatasetTypeProperties](#sybasetabledatasettypeproperties)
 
 ## SybaseTableDatasetTypeProperties
 ### Properties
@@ -1774,7 +1774,7 @@
 ## TeradataTable
 ### Properties
 * **type**: 'TeradataTable' (Required)
-* **typeProperties**: TeradataTableDatasetTypeProperties
+* **typeProperties**: [TeradataTableDatasetTypeProperties](#teradatatabledatasettypeproperties)
 
 ## TeradataTableDatasetTypeProperties
 ### Properties
@@ -1784,7 +1784,7 @@
 ## VerticaTable
 ### Properties
 * **type**: 'VerticaTable' (Required)
-* **typeProperties**: VerticaDatasetTypeProperties
+* **typeProperties**: [VerticaDatasetTypeProperties](#verticadatasettypeproperties)
 
 ## VerticaDatasetTypeProperties
 ### Properties
@@ -1795,7 +1795,7 @@
 ## WebTable
 ### Properties
 * **type**: 'WebTable' (Required)
-* **typeProperties**: WebTableDatasetTypeProperties (Required)
+* **typeProperties**: [WebTableDatasetTypeProperties](#webtabledatasettypeproperties) (Required)
 
 ## WebTableDatasetTypeProperties
 ### Properties
@@ -1805,24 +1805,24 @@
 ## XeroObject
 ### Properties
 * **type**: 'XeroObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## Xml
 ### Properties
 * **type**: 'Xml' (Required)
-* **typeProperties**: XmlDatasetTypeProperties
+* **typeProperties**: [XmlDatasetTypeProperties](#xmldatasettypeproperties)
 
 ## XmlDatasetTypeProperties
 ### Properties
-* **compression**: DatasetCompression
+* **compression**: [DatasetCompression](#datasetcompression)
 * **encodingName**: any
-* **location**: DatasetLocation (Required)
+* **location**: [DatasetLocation](#datasetlocation) (Required)
 * **nullValue**: any
 
 ## ZohoObject
 ### Properties
 * **type**: 'ZohoObject' (Required)
-* **typeProperties**: GenericDatasetTypeProperties
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties)
 
 ## IntegrationRuntime
 * **Discriminator**: type
@@ -1830,23 +1830,23 @@
 * **description**: string
 ### Managed
 #### Properties
-* **managedVirtualNetwork**: ManagedVirtualNetworkReference
+* **managedVirtualNetwork**: [ManagedVirtualNetworkReference](#managedvirtualnetworkreference)
 * **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
 * **type**: 'Managed' (Required)
-* **typeProperties**: ManagedIntegrationRuntimeTypeProperties (Required)
+* **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required)
 
 ### SelfHosted
 #### Properties
 * **type**: 'SelfHosted' (Required)
-* **typeProperties**: SelfHostedIntegrationRuntimeTypeProperties
+* **typeProperties**: [SelfHostedIntegrationRuntimeTypeProperties](#selfhostedintegrationruntimetypeproperties)
 
 
 ## Managed
 ### Properties
-* **managedVirtualNetwork**: ManagedVirtualNetworkReference
+* **managedVirtualNetwork**: [ManagedVirtualNetworkReference](#managedvirtualnetworkreference)
 * **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
 * **type**: 'Managed' (Required)
-* **typeProperties**: ManagedIntegrationRuntimeTypeProperties (Required)
+* **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required)
 
 ## ManagedVirtualNetworkReference
 ### Properties
@@ -1855,17 +1855,17 @@
 
 ## ManagedIntegrationRuntimeTypeProperties
 ### Properties
-* **computeProperties**: IntegrationRuntimeComputeProperties
-* **ssisProperties**: IntegrationRuntimeSsisProperties
+* **computeProperties**: [IntegrationRuntimeComputeProperties](#integrationruntimecomputeproperties)
+* **ssisProperties**: [IntegrationRuntimeSsisProperties](#integrationruntimessisproperties)
 
 ## IntegrationRuntimeComputeProperties
 ### Properties
-* **dataFlowProperties**: IntegrationRuntimeDataFlowProperties
+* **dataFlowProperties**: [IntegrationRuntimeDataFlowProperties](#integrationruntimedataflowproperties)
 * **location**: string
 * **maxParallelExecutionsPerNode**: int
 * **nodeSize**: string
 * **numberOfNodes**: int
-* **vNetProperties**: IntegrationRuntimeVNetProperties
+* **vNetProperties**: [IntegrationRuntimeVNetProperties](#integrationruntimevnetproperties)
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -1887,19 +1887,19 @@
 
 ## IntegrationRuntimeSsisProperties
 ### Properties
-* **catalogInfo**: IntegrationRuntimeSsisCatalogInfo
-* **customSetupScriptProperties**: IntegrationRuntimeCustomSetupScriptProperties
-* **dataProxyProperties**: IntegrationRuntimeDataProxyProperties
+* **catalogInfo**: [IntegrationRuntimeSsisCatalogInfo](#integrationruntimessiscataloginfo)
+* **customSetupScriptProperties**: [IntegrationRuntimeCustomSetupScriptProperties](#integrationruntimecustomsetupscriptproperties)
+* **dataProxyProperties**: [IntegrationRuntimeDataProxyProperties](#integrationruntimedataproxyproperties)
 * **edition**: 'Enterprise' | 'Standard'
-* **expressCustomSetupProperties**: CustomSetupBase[]
+* **expressCustomSetupProperties**: [CustomSetupBase](#customsetupbase)[]
 * **licenseType**: 'BasePrice' | 'LicenseIncluded'
-* **packageStores**: PackageStore[]
+* **packageStores**: [PackageStore](#packagestore)[]
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## IntegrationRuntimeSsisCatalogInfo
 ### Properties
-* **catalogAdminPassword**: SecureString
+* **catalogAdminPassword**: [SecureString](#securestring)
 * **catalogAdminUserName**: string
 * **catalogPricingTier**: 'Basic' | 'Premium' | 'PremiumRS' | 'Standard'
 * **catalogServerEndpoint**: string
@@ -1915,13 +1915,13 @@
 ## IntegrationRuntimeCustomSetupScriptProperties
 ### Properties
 * **blobContainerUri**: string
-* **sasToken**: SecureString
+* **sasToken**: [SecureString](#securestring)
 
 ## IntegrationRuntimeDataProxyProperties
 ### Properties
-* **connectVia**: EntityReference
+* **connectVia**: [EntityReference](#entityreference)
 * **path**: string
-* **stagingLinkedService**: EntityReference
+* **stagingLinkedService**: [EntityReference](#entityreference)
 
 ## EntityReference
 ### Properties
@@ -1934,28 +1934,28 @@
 ### AzPowerShellSetup
 #### Properties
 * **type**: 'AzPowerShellSetup' (Required)
-* **typeProperties**: AzPowerShellSetupTypeProperties (Required)
+* **typeProperties**: [AzPowerShellSetupTypeProperties](#azpowershellsetuptypeproperties) (Required)
 
 ### CmdkeySetup
 #### Properties
 * **type**: 'CmdkeySetup' (Required)
-* **typeProperties**: CmdkeySetupTypeProperties (Required)
+* **typeProperties**: [CmdkeySetupTypeProperties](#cmdkeysetuptypeproperties) (Required)
 
 ### ComponentSetup
 #### Properties
 * **type**: 'ComponentSetup' (Required)
-* **typeProperties**: LicensedComponentSetupTypeProperties (Required)
+* **typeProperties**: [LicensedComponentSetupTypeProperties](#licensedcomponentsetuptypeproperties) (Required)
 
 ### EnvironmentVariableSetup
 #### Properties
 * **type**: 'EnvironmentVariableSetup' (Required)
-* **typeProperties**: EnvironmentVariableSetupTypeProperties (Required)
+* **typeProperties**: [EnvironmentVariableSetupTypeProperties](#environmentvariablesetuptypeproperties) (Required)
 
 
 ## AzPowerShellSetup
 ### Properties
 * **type**: 'AzPowerShellSetup' (Required)
-* **typeProperties**: AzPowerShellSetupTypeProperties (Required)
+* **typeProperties**: [AzPowerShellSetupTypeProperties](#azpowershellsetuptypeproperties) (Required)
 
 ## AzPowerShellSetupTypeProperties
 ### Properties
@@ -1964,11 +1964,11 @@
 ## CmdkeySetup
 ### Properties
 * **type**: 'CmdkeySetup' (Required)
-* **typeProperties**: CmdkeySetupTypeProperties (Required)
+* **typeProperties**: [CmdkeySetupTypeProperties](#cmdkeysetuptypeproperties) (Required)
 
 ## CmdkeySetupTypeProperties
 ### Properties
-* **password**: SecretBase (Required)
+* **password**: [SecretBase](#secretbase) (Required)
 * **targetName**: any (Required)
 * **userName**: any (Required)
 
@@ -1979,7 +1979,7 @@
 #### Properties
 * **secretName**: any (Required)
 * **secretVersion**: any
-* **store**: LinkedServiceReference (Required)
+* **store**: [LinkedServiceReference](#linkedservicereference) (Required)
 * **type**: 'AzureKeyVaultSecret' (Required)
 
 ### SecureString
@@ -1992,23 +1992,23 @@
 ### Properties
 * **secretName**: any (Required)
 * **secretVersion**: any
-* **store**: LinkedServiceReference (Required)
+* **store**: [LinkedServiceReference](#linkedservicereference) (Required)
 * **type**: 'AzureKeyVaultSecret' (Required)
 
 ## ComponentSetup
 ### Properties
 * **type**: 'ComponentSetup' (Required)
-* **typeProperties**: LicensedComponentSetupTypeProperties (Required)
+* **typeProperties**: [LicensedComponentSetupTypeProperties](#licensedcomponentsetuptypeproperties) (Required)
 
 ## LicensedComponentSetupTypeProperties
 ### Properties
 * **componentName**: string (Required)
-* **licenseKey**: SecretBase
+* **licenseKey**: [SecretBase](#secretbase)
 
 ## EnvironmentVariableSetup
 ### Properties
 * **type**: 'EnvironmentVariableSetup' (Required)
-* **typeProperties**: EnvironmentVariableSetupTypeProperties (Required)
+* **typeProperties**: [EnvironmentVariableSetupTypeProperties](#environmentvariablesetuptypeproperties) (Required)
 
 ## EnvironmentVariableSetupTypeProperties
 ### Properties
@@ -2018,16 +2018,16 @@
 ## PackageStore
 ### Properties
 * **name**: string (Required)
-* **packageStoreLinkedService**: EntityReference (Required)
+* **packageStoreLinkedService**: [EntityReference](#entityreference) (Required)
 
 ## SelfHosted
 ### Properties
 * **type**: 'SelfHosted' (Required)
-* **typeProperties**: SelfHostedIntegrationRuntimeTypeProperties
+* **typeProperties**: [SelfHostedIntegrationRuntimeTypeProperties](#selfhostedintegrationruntimetypeproperties)
 
 ## SelfHostedIntegrationRuntimeTypeProperties
 ### Properties
-* **linkedInfo**: LinkedIntegrationRuntimeType
+* **linkedInfo**: [LinkedIntegrationRuntimeType](#linkedintegrationruntimetype)
 
 ## LinkedIntegrationRuntimeType
 * **Discriminator**: authorizationType
@@ -2035,7 +2035,7 @@
 ### Key
 #### Properties
 * **authorizationType**: 'Key' (Required)
-* **key**: SecureString (Required)
+* **key**: [SecureString](#securestring) (Required)
 
 ### RBAC
 #### Properties
@@ -2046,7 +2046,7 @@
 ## Key
 ### Properties
 * **authorizationType**: 'Key' (Required)
-* **key**: SecureString (Required)
+* **key**: [SecureString](#securestring) (Required)
 
 ## RBAC
 ### Properties
@@ -2057,163 +2057,163 @@
 * **Discriminator**: type
 ### Base Properties
 * **annotations**: any[]
-* **connectVia**: IntegrationRuntimeReference
+* **connectVia**: [IntegrationRuntimeReference](#integrationruntimereference)
 * **description**: string
-* **parameters**: Dictionary<string,ParameterSpecification>
+* **parameters**: [Dictionary<string,ParameterSpecification>](#dictionarystringparameterspecification)
 ### AmazonMWS
 #### Properties
 * **type**: 'AmazonMWS' (Required)
-* **typeProperties**: AmazonMWSLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AmazonMWSLinkedServiceTypeProperties](#amazonmwslinkedservicetypeproperties) (Required)
 
 ### AmazonRedshift
 #### Properties
 * **type**: 'AmazonRedshift' (Required)
-* **typeProperties**: AmazonRedshiftLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AmazonRedshiftLinkedServiceTypeProperties](#amazonredshiftlinkedservicetypeproperties) (Required)
 
 ### AmazonS3
 #### Properties
 * **type**: 'AmazonS3' (Required)
-* **typeProperties**: AmazonS3LinkedServiceTypeProperties (Required)
+* **typeProperties**: [AmazonS3LinkedServiceTypeProperties](#amazons3linkedservicetypeproperties) (Required)
 
 ### AzureBatch
 #### Properties
 * **type**: 'AzureBatch' (Required)
-* **typeProperties**: AzureBatchLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureBatchLinkedServiceTypeProperties](#azurebatchlinkedservicetypeproperties) (Required)
 
 ### AzureBlobFS
 #### Properties
 * **type**: 'AzureBlobFS' (Required)
-* **typeProperties**: AzureBlobFSLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureBlobFSLinkedServiceTypeProperties](#azureblobfslinkedservicetypeproperties) (Required)
 
 ### AzureBlobStorage
 #### Properties
 * **type**: 'AzureBlobStorage' (Required)
-* **typeProperties**: AzureBlobStorageLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureBlobStorageLinkedServiceTypeProperties](#azureblobstoragelinkedservicetypeproperties) (Required)
 
 ### AzureDatabricks
 #### Properties
 * **type**: 'AzureDatabricks' (Required)
-* **typeProperties**: AzureDatabricksLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureDatabricksLinkedServiceTypeProperties](#azuredatabrickslinkedservicetypeproperties) (Required)
 
 ### AzureDatabricksDeltaLake
 #### Properties
 * **type**: 'AzureDatabricksDeltaLake' (Required)
-* **typeProperties**: AzureDatabricksDetltaLakeLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureDatabricksDetltaLakeLinkedServiceTypeProperties](#azuredatabricksdetltalakelinkedservicetypeproperties) (Required)
 
 ### AzureDataExplorer
 #### Properties
 * **type**: 'AzureDataExplorer' (Required)
-* **typeProperties**: AzureDataExplorerLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureDataExplorerLinkedServiceTypeProperties](#azuredataexplorerlinkedservicetypeproperties) (Required)
 
 ### AzureDataLakeAnalytics
 #### Properties
 * **type**: 'AzureDataLakeAnalytics' (Required)
-* **typeProperties**: AzureDataLakeAnalyticsLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureDataLakeAnalyticsLinkedServiceTypeProperties](#azuredatalakeanalyticslinkedservicetypeproperties) (Required)
 
 ### AzureDataLakeStore
 #### Properties
 * **type**: 'AzureDataLakeStore' (Required)
-* **typeProperties**: AzureDataLakeStoreLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureDataLakeStoreLinkedServiceTypeProperties](#azuredatalakestorelinkedservicetypeproperties) (Required)
 
 ### AzureFileStorage
 #### Properties
 * **type**: 'AzureFileStorage' (Required)
-* **typeProperties**: AzureFileStorageLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureFileStorageLinkedServiceTypeProperties](#azurefilestoragelinkedservicetypeproperties) (Required)
 
 ### AzureFunction
 #### Properties
 * **type**: 'AzureFunction' (Required)
-* **typeProperties**: AzureFunctionLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureFunctionLinkedServiceTypeProperties](#azurefunctionlinkedservicetypeproperties) (Required)
 
 ### AzureKeyVault
 #### Properties
 * **type**: 'AzureKeyVault' (Required)
-* **typeProperties**: AzureKeyVaultLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureKeyVaultLinkedServiceTypeProperties](#azurekeyvaultlinkedservicetypeproperties) (Required)
 
 ### AzureMariaDB
 #### Properties
 * **type**: 'AzureMariaDB' (Required)
-* **typeProperties**: AzureMariaDBLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureMariaDBLinkedServiceTypeProperties](#azuremariadblinkedservicetypeproperties) (Required)
 
 ### AzureML
 #### Properties
 * **type**: 'AzureML' (Required)
-* **typeProperties**: AzureMLLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureMLLinkedServiceTypeProperties](#azuremllinkedservicetypeproperties) (Required)
 
 ### AzureMLService
 #### Properties
 * **type**: 'AzureMLService' (Required)
-* **typeProperties**: AzureMLServiceLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureMLServiceLinkedServiceTypeProperties](#azuremlservicelinkedservicetypeproperties) (Required)
 
 ### AzureMySql
 #### Properties
 * **type**: 'AzureMySql' (Required)
-* **typeProperties**: AzureMySqlLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureMySqlLinkedServiceTypeProperties](#azuremysqllinkedservicetypeproperties) (Required)
 
 ### AzurePostgreSql
 #### Properties
 * **type**: 'AzurePostgreSql' (Required)
-* **typeProperties**: AzurePostgreSqlLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzurePostgreSqlLinkedServiceTypeProperties](#azurepostgresqllinkedservicetypeproperties) (Required)
 
 ### AzureSearch
 #### Properties
 * **type**: 'AzureSearch' (Required)
-* **typeProperties**: AzureSearchLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureSearchLinkedServiceTypeProperties](#azuresearchlinkedservicetypeproperties) (Required)
 
 ### AzureSqlDatabase
 #### Properties
 * **type**: 'AzureSqlDatabase' (Required)
-* **typeProperties**: AzureSqlDatabaseLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureSqlDatabaseLinkedServiceTypeProperties](#azuresqldatabaselinkedservicetypeproperties) (Required)
 
 ### AzureSqlDW
 #### Properties
 * **type**: 'AzureSqlDW' (Required)
-* **typeProperties**: AzureSqlDWLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureSqlDWLinkedServiceTypeProperties](#azuresqldwlinkedservicetypeproperties) (Required)
 
 ### AzureSqlMI
 #### Properties
 * **type**: 'AzureSqlMI' (Required)
-* **typeProperties**: AzureSqlMILinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureSqlMILinkedServiceTypeProperties](#azuresqlmilinkedservicetypeproperties) (Required)
 
 ### AzureStorage
 #### Properties
 * **type**: 'AzureStorage' (Required)
-* **typeProperties**: AzureStorageLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureStorageLinkedServiceTypeProperties](#azurestoragelinkedservicetypeproperties) (Required)
 
 ### AzureTableStorage
 #### Properties
 * **type**: 'AzureTableStorage' (Required)
-* **typeProperties**: AzureStorageLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureStorageLinkedServiceTypeProperties](#azurestoragelinkedservicetypeproperties) (Required)
 
 ### Cassandra
 #### Properties
 * **type**: 'Cassandra' (Required)
-* **typeProperties**: CassandraLinkedServiceTypeProperties (Required)
+* **typeProperties**: [CassandraLinkedServiceTypeProperties](#cassandralinkedservicetypeproperties) (Required)
 
 ### CommonDataServiceForApps
 #### Properties
 * **type**: 'CommonDataServiceForApps' (Required)
-* **typeProperties**: CommonDataServiceForAppsLinkedServiceTypeProperties (Required)
+* **typeProperties**: [CommonDataServiceForAppsLinkedServiceTypeProperties](#commondataserviceforappslinkedservicetypeproperties) (Required)
 
 ### Concur
 #### Properties
 * **type**: 'Concur' (Required)
-* **typeProperties**: ConcurLinkedServiceTypeProperties (Required)
+* **typeProperties**: [ConcurLinkedServiceTypeProperties](#concurlinkedservicetypeproperties) (Required)
 
 ### CosmosDb
 #### Properties
 * **type**: 'CosmosDb' (Required)
-* **typeProperties**: CosmosDbLinkedServiceTypeProperties (Required)
+* **typeProperties**: [CosmosDbLinkedServiceTypeProperties](#cosmosdblinkedservicetypeproperties) (Required)
 
 ### CosmosDbMongoDbApi
 #### Properties
 * **type**: 'CosmosDbMongoDbApi' (Required)
-* **typeProperties**: CosmosDbMongoDbApiLinkedServiceTypeProperties (Required)
+* **typeProperties**: [CosmosDbMongoDbApiLinkedServiceTypeProperties](#cosmosdbmongodbapilinkedservicetypeproperties) (Required)
 
 ### Couchbase
 #### Properties
 * **type**: 'Couchbase' (Required)
-* **typeProperties**: CouchbaseLinkedServiceTypeProperties (Required)
+* **typeProperties**: [CouchbaseLinkedServiceTypeProperties](#couchbaselinkedservicetypeproperties) (Required)
 
 ### CustomDataSource
 #### Properties
@@ -2223,337 +2223,337 @@
 ### Db2
 #### Properties
 * **type**: 'Db2' (Required)
-* **typeProperties**: Db2LinkedServiceTypeProperties (Required)
+* **typeProperties**: [Db2LinkedServiceTypeProperties](#db2linkedservicetypeproperties) (Required)
 
 ### Drill
 #### Properties
 * **type**: 'Drill' (Required)
-* **typeProperties**: DrillLinkedServiceTypeProperties (Required)
+* **typeProperties**: [DrillLinkedServiceTypeProperties](#drilllinkedservicetypeproperties) (Required)
 
 ### Dynamics
 #### Properties
 * **type**: 'Dynamics' (Required)
-* **typeProperties**: DynamicsLinkedServiceTypeProperties (Required)
+* **typeProperties**: [DynamicsLinkedServiceTypeProperties](#dynamicslinkedservicetypeproperties) (Required)
 
 ### DynamicsAX
 #### Properties
 * **type**: 'DynamicsAX' (Required)
-* **typeProperties**: DynamicsAXLinkedServiceTypeProperties (Required)
+* **typeProperties**: [DynamicsAXLinkedServiceTypeProperties](#dynamicsaxlinkedservicetypeproperties) (Required)
 
 ### DynamicsCrm
 #### Properties
 * **type**: 'DynamicsCrm' (Required)
-* **typeProperties**: DynamicsCrmLinkedServiceTypeProperties (Required)
+* **typeProperties**: [DynamicsCrmLinkedServiceTypeProperties](#dynamicscrmlinkedservicetypeproperties) (Required)
 
 ### Eloqua
 #### Properties
 * **type**: 'Eloqua' (Required)
-* **typeProperties**: EloquaLinkedServiceTypeProperties (Required)
+* **typeProperties**: [EloquaLinkedServiceTypeProperties](#eloqualinkedservicetypeproperties) (Required)
 
 ### FileServer
 #### Properties
 * **type**: 'FileServer' (Required)
-* **typeProperties**: FileServerLinkedServiceTypeProperties (Required)
+* **typeProperties**: [FileServerLinkedServiceTypeProperties](#fileserverlinkedservicetypeproperties) (Required)
 
 ### FtpServer
 #### Properties
 * **type**: 'FtpServer' (Required)
-* **typeProperties**: FtpServerLinkedServiceTypeProperties (Required)
+* **typeProperties**: [FtpServerLinkedServiceTypeProperties](#ftpserverlinkedservicetypeproperties) (Required)
 
 ### GoogleAdWords
 #### Properties
 * **type**: 'GoogleAdWords' (Required)
-* **typeProperties**: GoogleAdWordsLinkedServiceTypeProperties (Required)
+* **typeProperties**: [GoogleAdWordsLinkedServiceTypeProperties](#googleadwordslinkedservicetypeproperties) (Required)
 
 ### GoogleBigQuery
 #### Properties
 * **type**: 'GoogleBigQuery' (Required)
-* **typeProperties**: GoogleBigQueryLinkedServiceTypeProperties (Required)
+* **typeProperties**: [GoogleBigQueryLinkedServiceTypeProperties](#googlebigquerylinkedservicetypeproperties) (Required)
 
 ### GoogleCloudStorage
 #### Properties
 * **type**: 'GoogleCloudStorage' (Required)
-* **typeProperties**: GoogleCloudStorageLinkedServiceTypeProperties (Required)
+* **typeProperties**: [GoogleCloudStorageLinkedServiceTypeProperties](#googlecloudstoragelinkedservicetypeproperties) (Required)
 
 ### Greenplum
 #### Properties
 * **type**: 'Greenplum' (Required)
-* **typeProperties**: GreenplumLinkedServiceTypeProperties (Required)
+* **typeProperties**: [GreenplumLinkedServiceTypeProperties](#greenplumlinkedservicetypeproperties) (Required)
 
 ### HBase
 #### Properties
 * **type**: 'HBase' (Required)
-* **typeProperties**: HBaseLinkedServiceTypeProperties (Required)
+* **typeProperties**: [HBaseLinkedServiceTypeProperties](#hbaselinkedservicetypeproperties) (Required)
 
 ### Hdfs
 #### Properties
 * **type**: 'Hdfs' (Required)
-* **typeProperties**: HdfsLinkedServiceTypeProperties (Required)
+* **typeProperties**: [HdfsLinkedServiceTypeProperties](#hdfslinkedservicetypeproperties) (Required)
 
 ### HDInsight
 #### Properties
 * **type**: 'HDInsight' (Required)
-* **typeProperties**: HDInsightLinkedServiceTypeProperties (Required)
+* **typeProperties**: [HDInsightLinkedServiceTypeProperties](#hdinsightlinkedservicetypeproperties) (Required)
 
 ### HDInsightOnDemand
 #### Properties
 * **type**: 'HDInsightOnDemand' (Required)
-* **typeProperties**: HDInsightOnDemandLinkedServiceTypeProperties (Required)
+* **typeProperties**: [HDInsightOnDemandLinkedServiceTypeProperties](#hdinsightondemandlinkedservicetypeproperties) (Required)
 
 ### Hive
 #### Properties
 * **type**: 'Hive' (Required)
-* **typeProperties**: HiveLinkedServiceTypeProperties (Required)
+* **typeProperties**: [HiveLinkedServiceTypeProperties](#hivelinkedservicetypeproperties) (Required)
 
 ### HttpServer
 #### Properties
 * **type**: 'HttpServer' (Required)
-* **typeProperties**: HttpLinkedServiceTypeProperties (Required)
+* **typeProperties**: [HttpLinkedServiceTypeProperties](#httplinkedservicetypeproperties) (Required)
 
 ### Hubspot
 #### Properties
 * **type**: 'Hubspot' (Required)
-* **typeProperties**: HubspotLinkedServiceTypeProperties (Required)
+* **typeProperties**: [HubspotLinkedServiceTypeProperties](#hubspotlinkedservicetypeproperties) (Required)
 
 ### Impala
 #### Properties
 * **type**: 'Impala' (Required)
-* **typeProperties**: ImpalaLinkedServiceTypeProperties (Required)
+* **typeProperties**: [ImpalaLinkedServiceTypeProperties](#impalalinkedservicetypeproperties) (Required)
 
 ### Informix
 #### Properties
 * **type**: 'Informix' (Required)
-* **typeProperties**: InformixLinkedServiceTypeProperties (Required)
+* **typeProperties**: [InformixLinkedServiceTypeProperties](#informixlinkedservicetypeproperties) (Required)
 
 ### Jira
 #### Properties
 * **type**: 'Jira' (Required)
-* **typeProperties**: JiraLinkedServiceTypeProperties (Required)
+* **typeProperties**: [JiraLinkedServiceTypeProperties](#jiralinkedservicetypeproperties) (Required)
 
 ### Magento
 #### Properties
 * **type**: 'Magento' (Required)
-* **typeProperties**: MagentoLinkedServiceTypeProperties (Required)
+* **typeProperties**: [MagentoLinkedServiceTypeProperties](#magentolinkedservicetypeproperties) (Required)
 
 ### MariaDB
 #### Properties
 * **type**: 'MariaDB' (Required)
-* **typeProperties**: MariaDBLinkedServiceTypeProperties (Required)
+* **typeProperties**: [MariaDBLinkedServiceTypeProperties](#mariadblinkedservicetypeproperties) (Required)
 
 ### Marketo
 #### Properties
 * **type**: 'Marketo' (Required)
-* **typeProperties**: MarketoLinkedServiceTypeProperties (Required)
+* **typeProperties**: [MarketoLinkedServiceTypeProperties](#marketolinkedservicetypeproperties) (Required)
 
 ### MicrosoftAccess
 #### Properties
 * **type**: 'MicrosoftAccess' (Required)
-* **typeProperties**: MicrosoftAccessLinkedServiceTypeProperties (Required)
+* **typeProperties**: [MicrosoftAccessLinkedServiceTypeProperties](#microsoftaccesslinkedservicetypeproperties) (Required)
 
 ### MongoDb
 #### Properties
 * **type**: 'MongoDb' (Required)
-* **typeProperties**: MongoDbLinkedServiceTypeProperties (Required)
+* **typeProperties**: [MongoDbLinkedServiceTypeProperties](#mongodblinkedservicetypeproperties) (Required)
 
 ### MongoDbAtlas
 #### Properties
 * **type**: 'MongoDbAtlas' (Required)
-* **typeProperties**: MongoDbAtlasLinkedServiceTypeProperties (Required)
+* **typeProperties**: [MongoDbAtlasLinkedServiceTypeProperties](#mongodbatlaslinkedservicetypeproperties) (Required)
 
 ### MongoDbV2
 #### Properties
 * **type**: 'MongoDbV2' (Required)
-* **typeProperties**: MongoDbV2LinkedServiceTypeProperties (Required)
+* **typeProperties**: [MongoDbV2LinkedServiceTypeProperties](#mongodbv2linkedservicetypeproperties) (Required)
 
 ### MySql
 #### Properties
 * **type**: 'MySql' (Required)
-* **typeProperties**: MySqlLinkedServiceTypeProperties (Required)
+* **typeProperties**: [MySqlLinkedServiceTypeProperties](#mysqllinkedservicetypeproperties) (Required)
 
 ### Netezza
 #### Properties
 * **type**: 'Netezza' (Required)
-* **typeProperties**: NetezzaLinkedServiceTypeProperties (Required)
+* **typeProperties**: [NetezzaLinkedServiceTypeProperties](#netezzalinkedservicetypeproperties) (Required)
 
 ### OData
 #### Properties
 * **type**: 'OData' (Required)
-* **typeProperties**: ODataLinkedServiceTypeProperties (Required)
+* **typeProperties**: [ODataLinkedServiceTypeProperties](#odatalinkedservicetypeproperties) (Required)
 
 ### Odbc
 #### Properties
 * **type**: 'Odbc' (Required)
-* **typeProperties**: OdbcLinkedServiceTypeProperties (Required)
+* **typeProperties**: [OdbcLinkedServiceTypeProperties](#odbclinkedservicetypeproperties) (Required)
 
 ### Office365
 #### Properties
 * **type**: 'Office365' (Required)
-* **typeProperties**: Office365LinkedServiceTypeProperties (Required)
+* **typeProperties**: [Office365LinkedServiceTypeProperties](#office365linkedservicetypeproperties) (Required)
 
 ### Oracle
 #### Properties
 * **type**: 'Oracle' (Required)
-* **typeProperties**: OracleLinkedServiceTypeProperties (Required)
+* **typeProperties**: [OracleLinkedServiceTypeProperties](#oraclelinkedservicetypeproperties) (Required)
 
 ### OracleServiceCloud
 #### Properties
 * **type**: 'OracleServiceCloud' (Required)
-* **typeProperties**: OracleServiceCloudLinkedServiceTypeProperties (Required)
+* **typeProperties**: [OracleServiceCloudLinkedServiceTypeProperties](#oracleservicecloudlinkedservicetypeproperties) (Required)
 
 ### Paypal
 #### Properties
 * **type**: 'Paypal' (Required)
-* **typeProperties**: PaypalLinkedServiceTypeProperties (Required)
+* **typeProperties**: [PaypalLinkedServiceTypeProperties](#paypallinkedservicetypeproperties) (Required)
 
 ### Phoenix
 #### Properties
 * **type**: 'Phoenix' (Required)
-* **typeProperties**: PhoenixLinkedServiceTypeProperties (Required)
+* **typeProperties**: [PhoenixLinkedServiceTypeProperties](#phoenixlinkedservicetypeproperties) (Required)
 
 ### PostgreSql
 #### Properties
 * **type**: 'PostgreSql' (Required)
-* **typeProperties**: PostgreSqlLinkedServiceTypeProperties (Required)
+* **typeProperties**: [PostgreSqlLinkedServiceTypeProperties](#postgresqllinkedservicetypeproperties) (Required)
 
 ### Presto
 #### Properties
 * **type**: 'Presto' (Required)
-* **typeProperties**: PrestoLinkedServiceTypeProperties (Required)
+* **typeProperties**: [PrestoLinkedServiceTypeProperties](#prestolinkedservicetypeproperties) (Required)
 
 ### QuickBooks
 #### Properties
 * **type**: 'QuickBooks' (Required)
-* **typeProperties**: QuickBooksLinkedServiceTypeProperties (Required)
+* **typeProperties**: [QuickBooksLinkedServiceTypeProperties](#quickbookslinkedservicetypeproperties) (Required)
 
 ### Responsys
 #### Properties
 * **type**: 'Responsys' (Required)
-* **typeProperties**: ResponsysLinkedServiceTypeProperties (Required)
+* **typeProperties**: [ResponsysLinkedServiceTypeProperties](#responsyslinkedservicetypeproperties) (Required)
 
 ### RestService
 #### Properties
 * **type**: 'RestService' (Required)
-* **typeProperties**: RestServiceLinkedServiceTypeProperties (Required)
+* **typeProperties**: [RestServiceLinkedServiceTypeProperties](#restservicelinkedservicetypeproperties) (Required)
 
 ### Salesforce
 #### Properties
 * **type**: 'Salesforce' (Required)
-* **typeProperties**: SalesforceLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SalesforceLinkedServiceTypeProperties](#salesforcelinkedservicetypeproperties) (Required)
 
 ### SalesforceMarketingCloud
 #### Properties
 * **type**: 'SalesforceMarketingCloud' (Required)
-* **typeProperties**: SalesforceMarketingCloudLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SalesforceMarketingCloudLinkedServiceTypeProperties](#salesforcemarketingcloudlinkedservicetypeproperties) (Required)
 
 ### SalesforceServiceCloud
 #### Properties
 * **type**: 'SalesforceServiceCloud' (Required)
-* **typeProperties**: SalesforceServiceCloudLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SalesforceServiceCloudLinkedServiceTypeProperties](#salesforceservicecloudlinkedservicetypeproperties) (Required)
 
 ### SapBW
 #### Properties
 * **type**: 'SapBW' (Required)
-* **typeProperties**: SapBWLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SapBWLinkedServiceTypeProperties](#sapbwlinkedservicetypeproperties) (Required)
 
 ### SapCloudForCustomer
 #### Properties
 * **type**: 'SapCloudForCustomer' (Required)
-* **typeProperties**: SapCloudForCustomerLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SapCloudForCustomerLinkedServiceTypeProperties](#sapcloudforcustomerlinkedservicetypeproperties) (Required)
 
 ### SapEcc
 #### Properties
 * **type**: 'SapEcc' (Required)
-* **typeProperties**: SapEccLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SapEccLinkedServiceTypeProperties](#sapecclinkedservicetypeproperties) (Required)
 
 ### SapHana
 #### Properties
 * **type**: 'SapHana' (Required)
-* **typeProperties**: SapHanaLinkedServiceProperties (Required)
+* **typeProperties**: [SapHanaLinkedServiceProperties](#saphanalinkedserviceproperties) (Required)
 
 ### SapOpenHub
 #### Properties
 * **type**: 'SapOpenHub' (Required)
-* **typeProperties**: SapOpenHubLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SapOpenHubLinkedServiceTypeProperties](#sapopenhublinkedservicetypeproperties) (Required)
 
 ### SapTable
 #### Properties
 * **type**: 'SapTable' (Required)
-* **typeProperties**: SapTableLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SapTableLinkedServiceTypeProperties](#saptablelinkedservicetypeproperties) (Required)
 
 ### ServiceNow
 #### Properties
 * **type**: 'ServiceNow' (Required)
-* **typeProperties**: ServiceNowLinkedServiceTypeProperties (Required)
+* **typeProperties**: [ServiceNowLinkedServiceTypeProperties](#servicenowlinkedservicetypeproperties) (Required)
 
 ### Sftp
 #### Properties
 * **type**: 'Sftp' (Required)
-* **typeProperties**: SftpServerLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SftpServerLinkedServiceTypeProperties](#sftpserverlinkedservicetypeproperties) (Required)
 
 ### SharePointOnlineList
 #### Properties
 * **type**: 'SharePointOnlineList' (Required)
-* **typeProperties**: SharePointOnlineListLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SharePointOnlineListLinkedServiceTypeProperties](#sharepointonlinelistlinkedservicetypeproperties) (Required)
 
 ### Shopify
 #### Properties
 * **type**: 'Shopify' (Required)
-* **typeProperties**: ShopifyLinkedServiceTypeProperties (Required)
+* **typeProperties**: [ShopifyLinkedServiceTypeProperties](#shopifylinkedservicetypeproperties) (Required)
 
 ### Snowflake
 #### Properties
 * **type**: 'Snowflake' (Required)
-* **typeProperties**: SnowflakeLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SnowflakeLinkedServiceTypeProperties](#snowflakelinkedservicetypeproperties) (Required)
 
 ### Spark
 #### Properties
 * **type**: 'Spark' (Required)
-* **typeProperties**: SparkLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SparkLinkedServiceTypeProperties](#sparklinkedservicetypeproperties) (Required)
 
 ### SqlServer
 #### Properties
 * **type**: 'SqlServer' (Required)
-* **typeProperties**: SqlServerLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SqlServerLinkedServiceTypeProperties](#sqlserverlinkedservicetypeproperties) (Required)
 
 ### Square
 #### Properties
 * **type**: 'Square' (Required)
-* **typeProperties**: SquareLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SquareLinkedServiceTypeProperties](#squarelinkedservicetypeproperties) (Required)
 
 ### Sybase
 #### Properties
 * **type**: 'Sybase' (Required)
-* **typeProperties**: SybaseLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SybaseLinkedServiceTypeProperties](#sybaselinkedservicetypeproperties) (Required)
 
 ### Teradata
 #### Properties
 * **type**: 'Teradata' (Required)
-* **typeProperties**: TeradataLinkedServiceTypeProperties (Required)
+* **typeProperties**: [TeradataLinkedServiceTypeProperties](#teradatalinkedservicetypeproperties) (Required)
 
 ### Vertica
 #### Properties
 * **type**: 'Vertica' (Required)
-* **typeProperties**: VerticaLinkedServiceTypeProperties (Required)
+* **typeProperties**: [VerticaLinkedServiceTypeProperties](#verticalinkedservicetypeproperties) (Required)
 
 ### Web
 #### Properties
 * **type**: 'Web' (Required)
-* **typeProperties**: WebLinkedServiceTypeProperties (Required)
+* **typeProperties**: [WebLinkedServiceTypeProperties](#weblinkedservicetypeproperties) (Required)
 
 ### Xero
 #### Properties
 * **type**: 'Xero' (Required)
-* **typeProperties**: XeroLinkedServiceTypeProperties (Required)
+* **typeProperties**: [XeroLinkedServiceTypeProperties](#xerolinkedservicetypeproperties) (Required)
 
 ### Zoho
 #### Properties
 * **type**: 'Zoho' (Required)
-* **typeProperties**: ZohoLinkedServiceTypeProperties (Required)
+* **typeProperties**: [ZohoLinkedServiceTypeProperties](#zoholinkedservicetypeproperties) (Required)
 
 
 ## IntegrationRuntimeReference
 ### Properties
-* **parameters**: Dictionary<string,Object>
+* **parameters**: [Dictionary<string,Object>](#dictionarystringobject)
 * **referenceName**: string (Required)
 * **type**: string (Required)
 
@@ -2565,12 +2565,12 @@
 ## Dictionary<string,ParameterSpecification>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ParameterSpecification
+* **Additional Properties Type**: [ParameterSpecification](#parameterspecification)
 
 ## AmazonMWS
 ### Properties
 * **type**: 'AmazonMWS' (Required)
-* **typeProperties**: AmazonMWSLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AmazonMWSLinkedServiceTypeProperties](#amazonmwslinkedservicetypeproperties) (Required)
 
 ## AmazonMWSLinkedServiceTypeProperties
 ### Properties
@@ -2578,8 +2578,8 @@
 * **encryptedCredential**: any
 * **endpoint**: any (Required)
 * **marketplaceID**: any (Required)
-* **mwsAuthToken**: SecretBase
-* **secretKey**: SecretBase
+* **mwsAuthToken**: [SecretBase](#secretbase)
+* **secretKey**: [SecretBase](#secretbase)
 * **sellerID**: any (Required)
 * **useEncryptedEndpoints**: any
 * **useHostVerification**: any
@@ -2588,13 +2588,13 @@
 ## AmazonRedshift
 ### Properties
 * **type**: 'AmazonRedshift' (Required)
-* **typeProperties**: AmazonRedshiftLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AmazonRedshiftLinkedServiceTypeProperties](#amazonredshiftlinkedservicetypeproperties) (Required)
 
 ## AmazonRedshiftLinkedServiceTypeProperties
 ### Properties
 * **database**: any (Required)
 * **encryptedCredential**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **port**: any
 * **server**: any (Required)
 * **username**: any
@@ -2602,35 +2602,35 @@
 ## AmazonS3
 ### Properties
 * **type**: 'AmazonS3' (Required)
-* **typeProperties**: AmazonS3LinkedServiceTypeProperties (Required)
+* **typeProperties**: [AmazonS3LinkedServiceTypeProperties](#amazons3linkedservicetypeproperties) (Required)
 
 ## AmazonS3LinkedServiceTypeProperties
 ### Properties
 * **accessKeyId**: any
 * **authenticationType**: any
 * **encryptedCredential**: any
-* **secretAccessKey**: SecretBase
+* **secretAccessKey**: [SecretBase](#secretbase)
 * **serviceUrl**: any
-* **sessionToken**: SecretBase
+* **sessionToken**: [SecretBase](#secretbase)
 
 ## AzureBatch
 ### Properties
 * **type**: 'AzureBatch' (Required)
-* **typeProperties**: AzureBatchLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureBatchLinkedServiceTypeProperties](#azurebatchlinkedservicetypeproperties) (Required)
 
 ## AzureBatchLinkedServiceTypeProperties
 ### Properties
-* **accessKey**: SecretBase
+* **accessKey**: [SecretBase](#secretbase)
 * **accountName**: any (Required)
 * **batchUri**: any (Required)
 * **encryptedCredential**: any
-* **linkedServiceName**: LinkedServiceReference (Required)
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required)
 * **poolName**: any (Required)
 
 ## AzureBlobFS
 ### Properties
 * **type**: 'AzureBlobFS' (Required)
-* **typeProperties**: AzureBlobFSLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureBlobFSLinkedServiceTypeProperties](#azureblobfslinkedservicetypeproperties) (Required)
 
 ## AzureBlobFSLinkedServiceTypeProperties
 ### Properties
@@ -2638,50 +2638,50 @@
 * **azureCloudType**: any
 * **encryptedCredential**: any
 * **servicePrincipalId**: any
-* **servicePrincipalKey**: SecretBase
+* **servicePrincipalKey**: [SecretBase](#secretbase)
 * **tenant**: any
 * **url**: any (Required)
 
 ## AzureBlobStorage
 ### Properties
 * **type**: 'AzureBlobStorage' (Required)
-* **typeProperties**: AzureBlobStorageLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureBlobStorageLinkedServiceTypeProperties](#azureblobstoragelinkedservicetypeproperties) (Required)
 
 ## AzureBlobStorageLinkedServiceTypeProperties
 ### Properties
-* **accountKey**: AzureKeyVaultSecret
+* **accountKey**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 * **azureCloudType**: any
 * **connectionString**: any
 * **encryptedCredential**: string
-* **sasToken**: AzureKeyVaultSecret
+* **sasToken**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 * **sasUri**: any
 * **serviceEndpoint**: string
 * **servicePrincipalId**: any
-* **servicePrincipalKey**: SecretBase
+* **servicePrincipalKey**: [SecretBase](#secretbase)
 * **tenant**: any
 
 ## AzureDatabricks
 ### Properties
 * **type**: 'AzureDatabricks' (Required)
-* **typeProperties**: AzureDatabricksLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureDatabricksLinkedServiceTypeProperties](#azuredatabrickslinkedservicetypeproperties) (Required)
 
 ## AzureDatabricksLinkedServiceTypeProperties
 ### Properties
-* **accessToken**: SecretBase
+* **accessToken**: [SecretBase](#secretbase)
 * **authentication**: any
 * **domain**: any (Required)
 * **encryptedCredential**: any
 * **existingClusterId**: any
 * **instancePoolId**: any
-* **newClusterCustomTags**: Dictionary<string,Object>
+* **newClusterCustomTags**: [Dictionary<string,Object>](#dictionarystringobject)
 * **newClusterDriverNodeType**: any
 * **newClusterEnableElasticDisk**: any
 * **newClusterInitScripts**: any
 * **newClusterLogDestination**: any
 * **newClusterNodeType**: any
 * **newClusterNumOfWorker**: any
-* **newClusterSparkConf**: Dictionary<string,Object>
-* **newClusterSparkEnvVars**: Dictionary<string,Object>
+* **newClusterSparkConf**: [Dictionary<string,Object>](#dictionarystringobject)
+* **newClusterSparkEnvVars**: [Dictionary<string,Object>](#dictionarystringobject)
 * **newClusterVersion**: any
 * **policyId**: any
 * **workspaceResourceId**: any
@@ -2704,11 +2704,11 @@
 ## AzureDatabricksDeltaLake
 ### Properties
 * **type**: 'AzureDatabricksDeltaLake' (Required)
-* **typeProperties**: AzureDatabricksDetltaLakeLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureDatabricksDetltaLakeLinkedServiceTypeProperties](#azuredatabricksdetltalakelinkedservicetypeproperties) (Required)
 
 ## AzureDatabricksDetltaLakeLinkedServiceTypeProperties
 ### Properties
-* **accessToken**: SecretBase
+* **accessToken**: [SecretBase](#secretbase)
 * **clusterId**: any
 * **domain**: any (Required)
 * **encryptedCredential**: any
@@ -2716,20 +2716,20 @@
 ## AzureDataExplorer
 ### Properties
 * **type**: 'AzureDataExplorer' (Required)
-* **typeProperties**: AzureDataExplorerLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureDataExplorerLinkedServiceTypeProperties](#azuredataexplorerlinkedservicetypeproperties) (Required)
 
 ## AzureDataExplorerLinkedServiceTypeProperties
 ### Properties
 * **database**: any (Required)
 * **endpoint**: any (Required)
 * **servicePrincipalId**: any (Required)
-* **servicePrincipalKey**: SecretBase (Required)
+* **servicePrincipalKey**: [SecretBase](#secretbase) (Required)
 * **tenant**: any (Required)
 
 ## AzureDataLakeAnalytics
 ### Properties
 * **type**: 'AzureDataLakeAnalytics' (Required)
-* **typeProperties**: AzureDataLakeAnalyticsLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureDataLakeAnalyticsLinkedServiceTypeProperties](#azuredatalakeanalyticslinkedservicetypeproperties) (Required)
 
 ## AzureDataLakeAnalyticsLinkedServiceTypeProperties
 ### Properties
@@ -2738,14 +2738,14 @@
 * **encryptedCredential**: any
 * **resourceGroupName**: any
 * **servicePrincipalId**: any
-* **servicePrincipalKey**: SecretBase
+* **servicePrincipalKey**: [SecretBase](#secretbase)
 * **subscriptionId**: any
 * **tenant**: any (Required)
 
 ## AzureDataLakeStore
 ### Properties
 * **type**: 'AzureDataLakeStore' (Required)
-* **typeProperties**: AzureDataLakeStoreLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureDataLakeStoreLinkedServiceTypeProperties](#azuredatalakestorelinkedservicetypeproperties) (Required)
 
 ## AzureDataLakeStoreLinkedServiceTypeProperties
 ### Properties
@@ -2755,24 +2755,24 @@
 * **encryptedCredential**: any
 * **resourceGroupName**: any
 * **servicePrincipalId**: any
-* **servicePrincipalKey**: SecretBase
+* **servicePrincipalKey**: [SecretBase](#secretbase)
 * **subscriptionId**: any
 * **tenant**: any
 
 ## AzureFileStorage
 ### Properties
 * **type**: 'AzureFileStorage' (Required)
-* **typeProperties**: AzureFileStorageLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureFileStorageLinkedServiceTypeProperties](#azurefilestoragelinkedservicetypeproperties) (Required)
 
 ## AzureFileStorageLinkedServiceTypeProperties
 ### Properties
-* **accountKey**: AzureKeyVaultSecret
+* **accountKey**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 * **connectionString**: any
 * **encryptedCredential**: any
 * **fileShare**: any
 * **host**: any
-* **password**: SecretBase
-* **sasToken**: AzureKeyVaultSecret
+* **password**: [SecretBase](#secretbase)
+* **sasToken**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 * **sasUri**: any
 * **snapshot**: any
 * **userId**: any
@@ -2780,18 +2780,18 @@
 ## AzureFunction
 ### Properties
 * **type**: 'AzureFunction' (Required)
-* **typeProperties**: AzureFunctionLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureFunctionLinkedServiceTypeProperties](#azurefunctionlinkedservicetypeproperties) (Required)
 
 ## AzureFunctionLinkedServiceTypeProperties
 ### Properties
 * **encryptedCredential**: any
 * **functionAppUrl**: any (Required)
-* **functionKey**: SecretBase
+* **functionKey**: [SecretBase](#secretbase)
 
 ## AzureKeyVault
 ### Properties
 * **type**: 'AzureKeyVault' (Required)
-* **typeProperties**: AzureKeyVaultLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureKeyVaultLinkedServiceTypeProperties](#azurekeyvaultlinkedservicetypeproperties) (Required)
 
 ## AzureKeyVaultLinkedServiceTypeProperties
 ### Properties
@@ -2800,33 +2800,33 @@
 ## AzureMariaDB
 ### Properties
 * **type**: 'AzureMariaDB' (Required)
-* **typeProperties**: AzureMariaDBLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureMariaDBLinkedServiceTypeProperties](#azuremariadblinkedservicetypeproperties) (Required)
 
 ## AzureMariaDBLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any
 * **encryptedCredential**: any
-* **pwd**: AzureKeyVaultSecret
+* **pwd**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 
 ## AzureML
 ### Properties
 * **type**: 'AzureML' (Required)
-* **typeProperties**: AzureMLLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureMLLinkedServiceTypeProperties](#azuremllinkedservicetypeproperties) (Required)
 
 ## AzureMLLinkedServiceTypeProperties
 ### Properties
-* **apiKey**: SecretBase (Required)
+* **apiKey**: [SecretBase](#secretbase) (Required)
 * **encryptedCredential**: any
 * **mlEndpoint**: any (Required)
 * **servicePrincipalId**: any
-* **servicePrincipalKey**: SecretBase
+* **servicePrincipalKey**: [SecretBase](#secretbase)
 * **tenant**: any
 * **updateResourceEndpoint**: any
 
 ## AzureMLService
 ### Properties
 * **type**: 'AzureMLService' (Required)
-* **typeProperties**: AzureMLServiceLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureMLServiceLinkedServiceTypeProperties](#azuremlservicelinkedservicetypeproperties) (Required)
 
 ## AzureMLServiceLinkedServiceTypeProperties
 ### Properties
@@ -2834,124 +2834,124 @@
 * **mlWorkspaceName**: any (Required)
 * **resourceGroupName**: any (Required)
 * **servicePrincipalId**: any
-* **servicePrincipalKey**: SecretBase
+* **servicePrincipalKey**: [SecretBase](#secretbase)
 * **subscriptionId**: any (Required)
 * **tenant**: any
 
 ## AzureMySql
 ### Properties
 * **type**: 'AzureMySql' (Required)
-* **typeProperties**: AzureMySqlLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureMySqlLinkedServiceTypeProperties](#azuremysqllinkedservicetypeproperties) (Required)
 
 ## AzureMySqlLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any (Required)
 * **encryptedCredential**: any
-* **password**: AzureKeyVaultSecret
+* **password**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 
 ## AzurePostgreSql
 ### Properties
 * **type**: 'AzurePostgreSql' (Required)
-* **typeProperties**: AzurePostgreSqlLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzurePostgreSqlLinkedServiceTypeProperties](#azurepostgresqllinkedservicetypeproperties) (Required)
 
 ## AzurePostgreSqlLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any
 * **encryptedCredential**: any
-* **password**: AzureKeyVaultSecret
+* **password**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 
 ## AzureSearch
 ### Properties
 * **type**: 'AzureSearch' (Required)
-* **typeProperties**: AzureSearchLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureSearchLinkedServiceTypeProperties](#azuresearchlinkedservicetypeproperties) (Required)
 
 ## AzureSearchLinkedServiceTypeProperties
 ### Properties
 * **encryptedCredential**: any
-* **key**: SecretBase
+* **key**: [SecretBase](#secretbase)
 * **url**: any (Required)
 
 ## AzureSqlDatabase
 ### Properties
 * **type**: 'AzureSqlDatabase' (Required)
-* **typeProperties**: AzureSqlDatabaseLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureSqlDatabaseLinkedServiceTypeProperties](#azuresqldatabaselinkedservicetypeproperties) (Required)
 
 ## AzureSqlDatabaseLinkedServiceTypeProperties
 ### Properties
 * **azureCloudType**: any
 * **connectionString**: any (Required)
 * **encryptedCredential**: any
-* **password**: AzureKeyVaultSecret
+* **password**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 * **servicePrincipalId**: any
-* **servicePrincipalKey**: SecretBase
+* **servicePrincipalKey**: [SecretBase](#secretbase)
 * **tenant**: any
 
 ## AzureSqlDW
 ### Properties
 * **type**: 'AzureSqlDW' (Required)
-* **typeProperties**: AzureSqlDWLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureSqlDWLinkedServiceTypeProperties](#azuresqldwlinkedservicetypeproperties) (Required)
 
 ## AzureSqlDWLinkedServiceTypeProperties
 ### Properties
 * **azureCloudType**: any
 * **connectionString**: any (Required)
 * **encryptedCredential**: any
-* **password**: AzureKeyVaultSecret
+* **password**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 * **servicePrincipalId**: any
-* **servicePrincipalKey**: SecretBase
+* **servicePrincipalKey**: [SecretBase](#secretbase)
 * **tenant**: any
 
 ## AzureSqlMI
 ### Properties
 * **type**: 'AzureSqlMI' (Required)
-* **typeProperties**: AzureSqlMILinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureSqlMILinkedServiceTypeProperties](#azuresqlmilinkedservicetypeproperties) (Required)
 
 ## AzureSqlMILinkedServiceTypeProperties
 ### Properties
 * **azureCloudType**: any
 * **connectionString**: any (Required)
 * **encryptedCredential**: any
-* **password**: AzureKeyVaultSecret
+* **password**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 * **servicePrincipalId**: any
-* **servicePrincipalKey**: SecretBase
+* **servicePrincipalKey**: [SecretBase](#secretbase)
 * **tenant**: any
 
 ## AzureStorage
 ### Properties
 * **type**: 'AzureStorage' (Required)
-* **typeProperties**: AzureStorageLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureStorageLinkedServiceTypeProperties](#azurestoragelinkedservicetypeproperties) (Required)
 
 ## AzureStorageLinkedServiceTypeProperties
 ### Properties
-* **accountKey**: AzureKeyVaultSecret
+* **accountKey**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 * **connectionString**: any
 * **encryptedCredential**: string
-* **sasToken**: AzureKeyVaultSecret
+* **sasToken**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 * **sasUri**: any
 
 ## AzureTableStorage
 ### Properties
 * **type**: 'AzureTableStorage' (Required)
-* **typeProperties**: AzureStorageLinkedServiceTypeProperties (Required)
+* **typeProperties**: [AzureStorageLinkedServiceTypeProperties](#azurestoragelinkedservicetypeproperties) (Required)
 
 ## Cassandra
 ### Properties
 * **type**: 'Cassandra' (Required)
-* **typeProperties**: CassandraLinkedServiceTypeProperties (Required)
+* **typeProperties**: [CassandraLinkedServiceTypeProperties](#cassandralinkedservicetypeproperties) (Required)
 
 ## CassandraLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: any
 * **encryptedCredential**: any
 * **host**: any (Required)
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **port**: any
 * **username**: any
 
 ## CommonDataServiceForApps
 ### Properties
 * **type**: 'CommonDataServiceForApps' (Required)
-* **typeProperties**: CommonDataServiceForAppsLinkedServiceTypeProperties (Required)
+* **typeProperties**: [CommonDataServiceForAppsLinkedServiceTypeProperties](#commondataserviceforappslinkedservicetypeproperties) (Required)
 
 ## CommonDataServiceForAppsLinkedServiceTypeProperties
 ### Properties
@@ -2960,9 +2960,9 @@
 * **encryptedCredential**: any
 * **hostName**: any
 * **organizationName**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **port**: any
-* **servicePrincipalCredential**: SecretBase
+* **servicePrincipalCredential**: [SecretBase](#secretbase)
 * **servicePrincipalCredentialType**: any
 * **servicePrincipalId**: any
 * **serviceUri**: any
@@ -2971,14 +2971,14 @@
 ## Concur
 ### Properties
 * **type**: 'Concur' (Required)
-* **typeProperties**: ConcurLinkedServiceTypeProperties (Required)
+* **typeProperties**: [ConcurLinkedServiceTypeProperties](#concurlinkedservicetypeproperties) (Required)
 
 ## ConcurLinkedServiceTypeProperties
 ### Properties
 * **clientId**: any (Required)
 * **connectionProperties**: any
 * **encryptedCredential**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **useEncryptedEndpoints**: any
 * **useHostVerification**: any
 * **usePeerVerification**: any
@@ -2987,12 +2987,12 @@
 ## CosmosDb
 ### Properties
 * **type**: 'CosmosDb' (Required)
-* **typeProperties**: CosmosDbLinkedServiceTypeProperties (Required)
+* **typeProperties**: [CosmosDbLinkedServiceTypeProperties](#cosmosdblinkedservicetypeproperties) (Required)
 
 ## CosmosDbLinkedServiceTypeProperties
 ### Properties
 * **accountEndpoint**: any
-* **accountKey**: SecretBase
+* **accountKey**: [SecretBase](#secretbase)
 * **connectionString**: any
 * **database**: any
 * **encryptedCredential**: any
@@ -3000,7 +3000,7 @@
 ## CosmosDbMongoDbApi
 ### Properties
 * **type**: 'CosmosDbMongoDbApi' (Required)
-* **typeProperties**: CosmosDbMongoDbApiLinkedServiceTypeProperties (Required)
+* **typeProperties**: [CosmosDbMongoDbApiLinkedServiceTypeProperties](#cosmosdbmongodbapilinkedservicetypeproperties) (Required)
 
 ## CosmosDbMongoDbApiLinkedServiceTypeProperties
 ### Properties
@@ -3010,12 +3010,12 @@
 ## Couchbase
 ### Properties
 * **type**: 'Couchbase' (Required)
-* **typeProperties**: CouchbaseLinkedServiceTypeProperties (Required)
+* **typeProperties**: [CouchbaseLinkedServiceTypeProperties](#couchbaselinkedservicetypeproperties) (Required)
 
 ## CouchbaseLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any
-* **credString**: AzureKeyVaultSecret
+* **credString**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 * **encryptedCredential**: any
 
 ## CustomDataSource
@@ -3026,7 +3026,7 @@
 ## Db2
 ### Properties
 * **type**: 'Db2' (Required)
-* **typeProperties**: Db2LinkedServiceTypeProperties (Required)
+* **typeProperties**: [Db2LinkedServiceTypeProperties](#db2linkedservicetypeproperties) (Required)
 
 ## Db2LinkedServiceTypeProperties
 ### Properties
@@ -3036,25 +3036,25 @@
 * **database**: any
 * **encryptedCredential**: any
 * **packageCollection**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **server**: any
 * **username**: any
 
 ## Drill
 ### Properties
 * **type**: 'Drill' (Required)
-* **typeProperties**: DrillLinkedServiceTypeProperties (Required)
+* **typeProperties**: [DrillLinkedServiceTypeProperties](#drilllinkedservicetypeproperties) (Required)
 
 ## DrillLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any
 * **encryptedCredential**: any
-* **pwd**: AzureKeyVaultSecret
+* **pwd**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 
 ## Dynamics
 ### Properties
 * **type**: 'Dynamics' (Required)
-* **typeProperties**: DynamicsLinkedServiceTypeProperties (Required)
+* **typeProperties**: [DynamicsLinkedServiceTypeProperties](#dynamicslinkedservicetypeproperties) (Required)
 
 ## DynamicsLinkedServiceTypeProperties
 ### Properties
@@ -3063,9 +3063,9 @@
 * **encryptedCredential**: any
 * **hostName**: any
 * **organizationName**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **port**: any
-* **servicePrincipalCredential**: SecretBase
+* **servicePrincipalCredential**: [SecretBase](#secretbase)
 * **servicePrincipalCredentialType**: any
 * **servicePrincipalId**: any
 * **serviceUri**: any
@@ -3074,21 +3074,21 @@
 ## DynamicsAX
 ### Properties
 * **type**: 'DynamicsAX' (Required)
-* **typeProperties**: DynamicsAXLinkedServiceTypeProperties (Required)
+* **typeProperties**: [DynamicsAXLinkedServiceTypeProperties](#dynamicsaxlinkedservicetypeproperties) (Required)
 
 ## DynamicsAXLinkedServiceTypeProperties
 ### Properties
 * **aadResourceId**: any (Required)
 * **encryptedCredential**: any
 * **servicePrincipalId**: any (Required)
-* **servicePrincipalKey**: SecretBase (Required)
+* **servicePrincipalKey**: [SecretBase](#secretbase) (Required)
 * **tenant**: any (Required)
 * **url**: any (Required)
 
 ## DynamicsCrm
 ### Properties
 * **type**: 'DynamicsCrm' (Required)
-* **typeProperties**: DynamicsCrmLinkedServiceTypeProperties (Required)
+* **typeProperties**: [DynamicsCrmLinkedServiceTypeProperties](#dynamicscrmlinkedservicetypeproperties) (Required)
 
 ## DynamicsCrmLinkedServiceTypeProperties
 ### Properties
@@ -3097,9 +3097,9 @@
 * **encryptedCredential**: any
 * **hostName**: any
 * **organizationName**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **port**: any
-* **servicePrincipalCredential**: SecretBase
+* **servicePrincipalCredential**: [SecretBase](#secretbase)
 * **servicePrincipalCredentialType**: any
 * **servicePrincipalId**: any
 * **serviceUri**: any
@@ -3108,13 +3108,13 @@
 ## Eloqua
 ### Properties
 * **type**: 'Eloqua' (Required)
-* **typeProperties**: EloquaLinkedServiceTypeProperties (Required)
+* **typeProperties**: [EloquaLinkedServiceTypeProperties](#eloqualinkedservicetypeproperties) (Required)
 
 ## EloquaLinkedServiceTypeProperties
 ### Properties
 * **encryptedCredential**: any
 * **endpoint**: any (Required)
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **useEncryptedEndpoints**: any
 * **useHostVerification**: any
 * **usePeerVerification**: any
@@ -3123,19 +3123,19 @@
 ## FileServer
 ### Properties
 * **type**: 'FileServer' (Required)
-* **typeProperties**: FileServerLinkedServiceTypeProperties (Required)
+* **typeProperties**: [FileServerLinkedServiceTypeProperties](#fileserverlinkedservicetypeproperties) (Required)
 
 ## FileServerLinkedServiceTypeProperties
 ### Properties
 * **encryptedCredential**: any
 * **host**: any (Required)
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **userId**: any
 
 ## FtpServer
 ### Properties
 * **type**: 'FtpServer' (Required)
-* **typeProperties**: FtpServerLinkedServiceTypeProperties (Required)
+* **typeProperties**: [FtpServerLinkedServiceTypeProperties](#ftpserverlinkedservicetypeproperties) (Required)
 
 ## FtpServerLinkedServiceTypeProperties
 ### Properties
@@ -3144,45 +3144,45 @@
 * **enableSsl**: any
 * **encryptedCredential**: any
 * **host**: any (Required)
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **port**: any
 * **userName**: any
 
 ## GoogleAdWords
 ### Properties
 * **type**: 'GoogleAdWords' (Required)
-* **typeProperties**: GoogleAdWordsLinkedServiceTypeProperties (Required)
+* **typeProperties**: [GoogleAdWordsLinkedServiceTypeProperties](#googleadwordslinkedservicetypeproperties) (Required)
 
 ## GoogleAdWordsLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' (Required)
 * **clientCustomerID**: any (Required)
 * **clientId**: any
-* **clientSecret**: SecretBase
-* **developerToken**: SecretBase (Required)
+* **clientSecret**: [SecretBase](#secretbase)
+* **developerToken**: [SecretBase](#secretbase) (Required)
 * **email**: any
 * **encryptedCredential**: any
 * **keyFilePath**: any
-* **refreshToken**: SecretBase
+* **refreshToken**: [SecretBase](#secretbase)
 * **trustedCertPath**: any
 * **useSystemTrustStore**: any
 
 ## GoogleBigQuery
 ### Properties
 * **type**: 'GoogleBigQuery' (Required)
-* **typeProperties**: GoogleBigQueryLinkedServiceTypeProperties (Required)
+* **typeProperties**: [GoogleBigQueryLinkedServiceTypeProperties](#googlebigquerylinkedservicetypeproperties) (Required)
 
 ## GoogleBigQueryLinkedServiceTypeProperties
 ### Properties
 * **additionalProjects**: any
 * **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' (Required)
 * **clientId**: any
-* **clientSecret**: SecretBase
+* **clientSecret**: [SecretBase](#secretbase)
 * **email**: any
 * **encryptedCredential**: any
 * **keyFilePath**: any
 * **project**: any (Required)
-* **refreshToken**: SecretBase
+* **refreshToken**: [SecretBase](#secretbase)
 * **requestGoogleDriveScope**: any
 * **trustedCertPath**: any
 * **useSystemTrustStore**: any
@@ -3190,30 +3190,30 @@
 ## GoogleCloudStorage
 ### Properties
 * **type**: 'GoogleCloudStorage' (Required)
-* **typeProperties**: GoogleCloudStorageLinkedServiceTypeProperties (Required)
+* **typeProperties**: [GoogleCloudStorageLinkedServiceTypeProperties](#googlecloudstoragelinkedservicetypeproperties) (Required)
 
 ## GoogleCloudStorageLinkedServiceTypeProperties
 ### Properties
 * **accessKeyId**: any
 * **encryptedCredential**: any
-* **secretAccessKey**: SecretBase
+* **secretAccessKey**: [SecretBase](#secretbase)
 * **serviceUrl**: any
 
 ## Greenplum
 ### Properties
 * **type**: 'Greenplum' (Required)
-* **typeProperties**: GreenplumLinkedServiceTypeProperties (Required)
+* **typeProperties**: [GreenplumLinkedServiceTypeProperties](#greenplumlinkedservicetypeproperties) (Required)
 
 ## GreenplumLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any
 * **encryptedCredential**: any
-* **pwd**: AzureKeyVaultSecret
+* **pwd**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 
 ## HBase
 ### Properties
 * **type**: 'HBase' (Required)
-* **typeProperties**: HBaseLinkedServiceTypeProperties (Required)
+* **typeProperties**: [HBaseLinkedServiceTypeProperties](#hbaselinkedservicetypeproperties) (Required)
 
 ## HBaseLinkedServiceTypeProperties
 ### Properties
@@ -3224,7 +3224,7 @@
 * **encryptedCredential**: any
 * **host**: any (Required)
 * **httpPath**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **port**: any
 * **trustedCertPath**: any
 * **username**: any
@@ -3232,45 +3232,45 @@
 ## Hdfs
 ### Properties
 * **type**: 'Hdfs' (Required)
-* **typeProperties**: HdfsLinkedServiceTypeProperties (Required)
+* **typeProperties**: [HdfsLinkedServiceTypeProperties](#hdfslinkedservicetypeproperties) (Required)
 
 ## HdfsLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: any
 * **encryptedCredential**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **url**: any (Required)
 * **userName**: any
 
 ## HDInsight
 ### Properties
 * **type**: 'HDInsight' (Required)
-* **typeProperties**: HDInsightLinkedServiceTypeProperties (Required)
+* **typeProperties**: [HDInsightLinkedServiceTypeProperties](#hdinsightlinkedservicetypeproperties) (Required)
 
 ## HDInsightLinkedServiceTypeProperties
 ### Properties
 * **clusterUri**: any (Required)
 * **encryptedCredential**: any
 * **fileSystem**: any
-* **hcatalogLinkedServiceName**: LinkedServiceReference
+* **hcatalogLinkedServiceName**: [LinkedServiceReference](#linkedservicereference)
 * **isEspEnabled**: any
-* **linkedServiceName**: LinkedServiceReference
-* **password**: SecretBase
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference)
+* **password**: [SecretBase](#secretbase)
 * **userName**: any
 
 ## HDInsightOnDemand
 ### Properties
 * **type**: 'HDInsightOnDemand' (Required)
-* **typeProperties**: HDInsightOnDemandLinkedServiceTypeProperties (Required)
+* **typeProperties**: [HDInsightOnDemandLinkedServiceTypeProperties](#hdinsightondemandlinkedservicetypeproperties) (Required)
 
 ## HDInsightOnDemandLinkedServiceTypeProperties
 ### Properties
-* **additionalLinkedServiceNames**: LinkedServiceReference[]
+* **additionalLinkedServiceNames**: [LinkedServiceReference](#linkedservicereference)[]
 * **clusterNamePrefix**: any
-* **clusterPassword**: SecretBase
+* **clusterPassword**: [SecretBase](#secretbase)
 * **clusterResourceGroup**: any (Required)
 * **clusterSize**: any (Required)
-* **clusterSshPassword**: SecretBase
+* **clusterSshPassword**: [SecretBase](#secretbase)
 * **clusterSshUserName**: any
 * **clusterType**: any
 * **clusterUserName**: any
@@ -3278,17 +3278,17 @@
 * **dataNodeSize**: any
 * **encryptedCredential**: any
 * **hBaseConfiguration**: any
-* **hcatalogLinkedServiceName**: LinkedServiceReference
+* **hcatalogLinkedServiceName**: [LinkedServiceReference](#linkedservicereference)
 * **hdfsConfiguration**: any
 * **headNodeSize**: any
 * **hiveConfiguration**: any
 * **hostSubscriptionId**: any (Required)
-* **linkedServiceName**: LinkedServiceReference (Required)
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required)
 * **mapReduceConfiguration**: any
 * **oozieConfiguration**: any
-* **scriptActions**: ScriptAction[]
+* **scriptActions**: [ScriptAction](#scriptaction)[]
 * **servicePrincipalId**: any
-* **servicePrincipalKey**: SecretBase
+* **servicePrincipalKey**: [SecretBase](#secretbase)
 * **sparkVersion**: any
 * **stormConfiguration**: any
 * **subnetName**: any
@@ -3309,7 +3309,7 @@
 ## Hive
 ### Properties
 * **type**: 'Hive' (Required)
-* **typeProperties**: HiveLinkedServiceTypeProperties (Required)
+* **typeProperties**: [HiveLinkedServiceTypeProperties](#hivelinkedservicetypeproperties) (Required)
 
 ## HiveLinkedServiceTypeProperties
 ### Properties
@@ -3320,7 +3320,7 @@
 * **encryptedCredential**: any
 * **host**: any (Required)
 * **httpPath**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **port**: any
 * **serverType**: 'HiveServer1' | 'HiveServer2' | 'HiveThriftServer'
 * **serviceDiscoveryMode**: any
@@ -3334,7 +3334,7 @@
 ## HttpServer
 ### Properties
 * **type**: 'HttpServer' (Required)
-* **typeProperties**: HttpLinkedServiceTypeProperties (Required)
+* **typeProperties**: [HttpLinkedServiceTypeProperties](#httplinkedservicetypeproperties) (Required)
 
 ## HttpLinkedServiceTypeProperties
 ### Properties
@@ -3343,22 +3343,22 @@
 * **embeddedCertData**: any
 * **enableServerCertificateValidation**: any
 * **encryptedCredential**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **url**: any (Required)
 * **userName**: any
 
 ## Hubspot
 ### Properties
 * **type**: 'Hubspot' (Required)
-* **typeProperties**: HubspotLinkedServiceTypeProperties (Required)
+* **typeProperties**: [HubspotLinkedServiceTypeProperties](#hubspotlinkedservicetypeproperties) (Required)
 
 ## HubspotLinkedServiceTypeProperties
 ### Properties
-* **accessToken**: SecretBase
+* **accessToken**: [SecretBase](#secretbase)
 * **clientId**: any (Required)
-* **clientSecret**: SecretBase
+* **clientSecret**: [SecretBase](#secretbase)
 * **encryptedCredential**: any
-* **refreshToken**: SecretBase
+* **refreshToken**: [SecretBase](#secretbase)
 * **useEncryptedEndpoints**: any
 * **useHostVerification**: any
 * **usePeerVerification**: any
@@ -3366,7 +3366,7 @@
 ## Impala
 ### Properties
 * **type**: 'Impala' (Required)
-* **typeProperties**: ImpalaLinkedServiceTypeProperties (Required)
+* **typeProperties**: [ImpalaLinkedServiceTypeProperties](#impalalinkedservicetypeproperties) (Required)
 
 ## ImpalaLinkedServiceTypeProperties
 ### Properties
@@ -3376,7 +3376,7 @@
 * **enableSsl**: any
 * **encryptedCredential**: any
 * **host**: any (Required)
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **port**: any
 * **trustedCertPath**: any
 * **username**: any
@@ -3385,27 +3385,27 @@
 ## Informix
 ### Properties
 * **type**: 'Informix' (Required)
-* **typeProperties**: InformixLinkedServiceTypeProperties (Required)
+* **typeProperties**: [InformixLinkedServiceTypeProperties](#informixlinkedservicetypeproperties) (Required)
 
 ## InformixLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: any
 * **connectionString**: any (Required)
-* **credential**: SecretBase
+* **credential**: [SecretBase](#secretbase)
 * **encryptedCredential**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **userName**: any
 
 ## Jira
 ### Properties
 * **type**: 'Jira' (Required)
-* **typeProperties**: JiraLinkedServiceTypeProperties (Required)
+* **typeProperties**: [JiraLinkedServiceTypeProperties](#jiralinkedservicetypeproperties) (Required)
 
 ## JiraLinkedServiceTypeProperties
 ### Properties
 * **encryptedCredential**: any
 * **host**: any (Required)
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **port**: any
 * **useEncryptedEndpoints**: any
 * **useHostVerification**: any
@@ -3415,11 +3415,11 @@
 ## Magento
 ### Properties
 * **type**: 'Magento' (Required)
-* **typeProperties**: MagentoLinkedServiceTypeProperties (Required)
+* **typeProperties**: [MagentoLinkedServiceTypeProperties](#magentolinkedservicetypeproperties) (Required)
 
 ## MagentoLinkedServiceTypeProperties
 ### Properties
-* **accessToken**: SecretBase
+* **accessToken**: [SecretBase](#secretbase)
 * **encryptedCredential**: any
 * **host**: any (Required)
 * **useEncryptedEndpoints**: any
@@ -3429,23 +3429,23 @@
 ## MariaDB
 ### Properties
 * **type**: 'MariaDB' (Required)
-* **typeProperties**: MariaDBLinkedServiceTypeProperties (Required)
+* **typeProperties**: [MariaDBLinkedServiceTypeProperties](#mariadblinkedservicetypeproperties) (Required)
 
 ## MariaDBLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any
 * **encryptedCredential**: any
-* **pwd**: AzureKeyVaultSecret
+* **pwd**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 
 ## Marketo
 ### Properties
 * **type**: 'Marketo' (Required)
-* **typeProperties**: MarketoLinkedServiceTypeProperties (Required)
+* **typeProperties**: [MarketoLinkedServiceTypeProperties](#marketolinkedservicetypeproperties) (Required)
 
 ## MarketoLinkedServiceTypeProperties
 ### Properties
 * **clientId**: any (Required)
-* **clientSecret**: SecretBase
+* **clientSecret**: [SecretBase](#secretbase)
 * **encryptedCredential**: any
 * **endpoint**: any (Required)
 * **useEncryptedEndpoints**: any
@@ -3455,21 +3455,21 @@
 ## MicrosoftAccess
 ### Properties
 * **type**: 'MicrosoftAccess' (Required)
-* **typeProperties**: MicrosoftAccessLinkedServiceTypeProperties (Required)
+* **typeProperties**: [MicrosoftAccessLinkedServiceTypeProperties](#microsoftaccesslinkedservicetypeproperties) (Required)
 
 ## MicrosoftAccessLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: any
 * **connectionString**: any (Required)
-* **credential**: SecretBase
+* **credential**: [SecretBase](#secretbase)
 * **encryptedCredential**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **userName**: any
 
 ## MongoDb
 ### Properties
 * **type**: 'MongoDb' (Required)
-* **typeProperties**: MongoDbLinkedServiceTypeProperties (Required)
+* **typeProperties**: [MongoDbLinkedServiceTypeProperties](#mongodblinkedservicetypeproperties) (Required)
 
 ## MongoDbLinkedServiceTypeProperties
 ### Properties
@@ -3479,7 +3479,7 @@
 * **databaseName**: any (Required)
 * **enableSsl**: any
 * **encryptedCredential**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **port**: any
 * **server**: any (Required)
 * **username**: any
@@ -3487,7 +3487,7 @@
 ## MongoDbAtlas
 ### Properties
 * **type**: 'MongoDbAtlas' (Required)
-* **typeProperties**: MongoDbAtlasLinkedServiceTypeProperties (Required)
+* **typeProperties**: [MongoDbAtlasLinkedServiceTypeProperties](#mongodbatlaslinkedservicetypeproperties) (Required)
 
 ## MongoDbAtlasLinkedServiceTypeProperties
 ### Properties
@@ -3497,7 +3497,7 @@
 ## MongoDbV2
 ### Properties
 * **type**: 'MongoDbV2' (Required)
-* **typeProperties**: MongoDbV2LinkedServiceTypeProperties (Required)
+* **typeProperties**: [MongoDbV2LinkedServiceTypeProperties](#mongodbv2linkedservicetypeproperties) (Required)
 
 ## MongoDbV2LinkedServiceTypeProperties
 ### Properties
@@ -3507,29 +3507,29 @@
 ## MySql
 ### Properties
 * **type**: 'MySql' (Required)
-* **typeProperties**: MySqlLinkedServiceTypeProperties (Required)
+* **typeProperties**: [MySqlLinkedServiceTypeProperties](#mysqllinkedservicetypeproperties) (Required)
 
 ## MySqlLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any (Required)
 * **encryptedCredential**: any
-* **password**: AzureKeyVaultSecret
+* **password**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 
 ## Netezza
 ### Properties
 * **type**: 'Netezza' (Required)
-* **typeProperties**: NetezzaLinkedServiceTypeProperties (Required)
+* **typeProperties**: [NetezzaLinkedServiceTypeProperties](#netezzalinkedservicetypeproperties) (Required)
 
 ## NetezzaLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any
 * **encryptedCredential**: any
-* **pwd**: AzureKeyVaultSecret
+* **pwd**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 
 ## OData
 ### Properties
 * **type**: 'OData' (Required)
-* **typeProperties**: ODataLinkedServiceTypeProperties (Required)
+* **typeProperties**: [ODataLinkedServiceTypeProperties](#odatalinkedservicetypeproperties) (Required)
 
 ## ODataLinkedServiceTypeProperties
 ### Properties
@@ -3538,11 +3538,11 @@
 * **authenticationType**: 'AadServicePrincipal' | 'Anonymous' | 'Basic' | 'ManagedServiceIdentity' | 'Windows'
 * **azureCloudType**: any
 * **encryptedCredential**: any
-* **password**: SecretBase
-* **servicePrincipalEmbeddedCert**: SecretBase
-* **servicePrincipalEmbeddedCertPassword**: SecretBase
+* **password**: [SecretBase](#secretbase)
+* **servicePrincipalEmbeddedCert**: [SecretBase](#secretbase)
+* **servicePrincipalEmbeddedCertPassword**: [SecretBase](#secretbase)
 * **servicePrincipalId**: any
-* **servicePrincipalKey**: SecretBase
+* **servicePrincipalKey**: [SecretBase](#secretbase)
 * **tenant**: any
 * **url**: any (Required)
 * **userName**: any
@@ -3550,51 +3550,51 @@
 ## Odbc
 ### Properties
 * **type**: 'Odbc' (Required)
-* **typeProperties**: OdbcLinkedServiceTypeProperties (Required)
+* **typeProperties**: [OdbcLinkedServiceTypeProperties](#odbclinkedservicetypeproperties) (Required)
 
 ## OdbcLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: any
 * **connectionString**: any (Required)
-* **credential**: SecretBase
+* **credential**: [SecretBase](#secretbase)
 * **encryptedCredential**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **userName**: any
 
 ## Office365
 ### Properties
 * **type**: 'Office365' (Required)
-* **typeProperties**: Office365LinkedServiceTypeProperties (Required)
+* **typeProperties**: [Office365LinkedServiceTypeProperties](#office365linkedservicetypeproperties) (Required)
 
 ## Office365LinkedServiceTypeProperties
 ### Properties
 * **encryptedCredential**: any
 * **office365TenantId**: any (Required)
 * **servicePrincipalId**: any (Required)
-* **servicePrincipalKey**: SecretBase (Required)
+* **servicePrincipalKey**: [SecretBase](#secretbase) (Required)
 * **servicePrincipalTenantId**: any (Required)
 
 ## Oracle
 ### Properties
 * **type**: 'Oracle' (Required)
-* **typeProperties**: OracleLinkedServiceTypeProperties (Required)
+* **typeProperties**: [OracleLinkedServiceTypeProperties](#oraclelinkedservicetypeproperties) (Required)
 
 ## OracleLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any (Required)
 * **encryptedCredential**: any
-* **password**: AzureKeyVaultSecret
+* **password**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 
 ## OracleServiceCloud
 ### Properties
 * **type**: 'OracleServiceCloud' (Required)
-* **typeProperties**: OracleServiceCloudLinkedServiceTypeProperties (Required)
+* **typeProperties**: [OracleServiceCloudLinkedServiceTypeProperties](#oracleservicecloudlinkedservicetypeproperties) (Required)
 
 ## OracleServiceCloudLinkedServiceTypeProperties
 ### Properties
 * **encryptedCredential**: any
 * **host**: any (Required)
-* **password**: SecretBase (Required)
+* **password**: [SecretBase](#secretbase) (Required)
 * **useEncryptedEndpoints**: any
 * **useHostVerification**: any
 * **usePeerVerification**: any
@@ -3603,12 +3603,12 @@
 ## Paypal
 ### Properties
 * **type**: 'Paypal' (Required)
-* **typeProperties**: PaypalLinkedServiceTypeProperties (Required)
+* **typeProperties**: [PaypalLinkedServiceTypeProperties](#paypallinkedservicetypeproperties) (Required)
 
 ## PaypalLinkedServiceTypeProperties
 ### Properties
 * **clientId**: any (Required)
-* **clientSecret**: SecretBase
+* **clientSecret**: [SecretBase](#secretbase)
 * **encryptedCredential**: any
 * **host**: any (Required)
 * **useEncryptedEndpoints**: any
@@ -3618,7 +3618,7 @@
 ## Phoenix
 ### Properties
 * **type**: 'Phoenix' (Required)
-* **typeProperties**: PhoenixLinkedServiceTypeProperties (Required)
+* **typeProperties**: [PhoenixLinkedServiceTypeProperties](#phoenixlinkedservicetypeproperties) (Required)
 
 ## PhoenixLinkedServiceTypeProperties
 ### Properties
@@ -3629,7 +3629,7 @@
 * **encryptedCredential**: any
 * **host**: any (Required)
 * **httpPath**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **port**: any
 * **trustedCertPath**: any
 * **username**: any
@@ -3638,18 +3638,18 @@
 ## PostgreSql
 ### Properties
 * **type**: 'PostgreSql' (Required)
-* **typeProperties**: PostgreSqlLinkedServiceTypeProperties (Required)
+* **typeProperties**: [PostgreSqlLinkedServiceTypeProperties](#postgresqllinkedservicetypeproperties) (Required)
 
 ## PostgreSqlLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any (Required)
 * **encryptedCredential**: any
-* **password**: AzureKeyVaultSecret
+* **password**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 
 ## Presto
 ### Properties
 * **type**: 'Presto' (Required)
-* **typeProperties**: PrestoLinkedServiceTypeProperties (Required)
+* **typeProperties**: [PrestoLinkedServiceTypeProperties](#prestolinkedservicetypeproperties) (Required)
 
 ## PrestoLinkedServiceTypeProperties
 ### Properties
@@ -3660,7 +3660,7 @@
 * **enableSsl**: any
 * **encryptedCredential**: any
 * **host**: any (Required)
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **port**: any
 * **serverVersion**: any (Required)
 * **timeZoneID**: any
@@ -3671,16 +3671,16 @@
 ## QuickBooks
 ### Properties
 * **type**: 'QuickBooks' (Required)
-* **typeProperties**: QuickBooksLinkedServiceTypeProperties (Required)
+* **typeProperties**: [QuickBooksLinkedServiceTypeProperties](#quickbookslinkedservicetypeproperties) (Required)
 
 ## QuickBooksLinkedServiceTypeProperties
 ### Properties
-* **accessToken**: SecretBase
-* **accessTokenSecret**: SecretBase
+* **accessToken**: [SecretBase](#secretbase)
+* **accessTokenSecret**: [SecretBase](#secretbase)
 * **companyId**: any
 * **connectionProperties**: any
 * **consumerKey**: any
-* **consumerSecret**: SecretBase
+* **consumerSecret**: [SecretBase](#secretbase)
 * **encryptedCredential**: any
 * **endpoint**: any
 * **useEncryptedEndpoints**: any
@@ -3688,12 +3688,12 @@
 ## Responsys
 ### Properties
 * **type**: 'Responsys' (Required)
-* **typeProperties**: ResponsysLinkedServiceTypeProperties (Required)
+* **typeProperties**: [ResponsysLinkedServiceTypeProperties](#responsyslinkedservicetypeproperties) (Required)
 
 ## ResponsysLinkedServiceTypeProperties
 ### Properties
 * **clientId**: any (Required)
-* **clientSecret**: SecretBase
+* **clientSecret**: [SecretBase](#secretbase)
 * **encryptedCredential**: any
 * **endpoint**: any (Required)
 * **useEncryptedEndpoints**: any
@@ -3703,7 +3703,7 @@
 ## RestService
 ### Properties
 * **type**: 'RestService' (Required)
-* **typeProperties**: RestServiceLinkedServiceTypeProperties (Required)
+* **typeProperties**: [RestServiceLinkedServiceTypeProperties](#restservicelinkedservicetypeproperties) (Required)
 
 ## RestServiceLinkedServiceTypeProperties
 ### Properties
@@ -3712,9 +3712,9 @@
 * **azureCloudType**: any
 * **enableServerCertificateValidation**: any
 * **encryptedCredential**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **servicePrincipalId**: any
-* **servicePrincipalKey**: SecretBase
+* **servicePrincipalKey**: [SecretBase](#secretbase)
 * **tenant**: any
 * **url**: any (Required)
 * **userName**: any
@@ -3722,26 +3722,26 @@
 ## Salesforce
 ### Properties
 * **type**: 'Salesforce' (Required)
-* **typeProperties**: SalesforceLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SalesforceLinkedServiceTypeProperties](#salesforcelinkedservicetypeproperties) (Required)
 
 ## SalesforceLinkedServiceTypeProperties
 ### Properties
 * **apiVersion**: any
 * **encryptedCredential**: any
 * **environmentUrl**: any
-* **password**: SecretBase
-* **securityToken**: SecretBase
+* **password**: [SecretBase](#secretbase)
+* **securityToken**: [SecretBase](#secretbase)
 * **username**: any
 
 ## SalesforceMarketingCloud
 ### Properties
 * **type**: 'SalesforceMarketingCloud' (Required)
-* **typeProperties**: SalesforceMarketingCloudLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SalesforceMarketingCloudLinkedServiceTypeProperties](#salesforcemarketingcloudlinkedservicetypeproperties) (Required)
 
 ## SalesforceMarketingCloudLinkedServiceTypeProperties
 ### Properties
 * **clientId**: any
-* **clientSecret**: SecretBase
+* **clientSecret**: [SecretBase](#secretbase)
 * **connectionProperties**: any
 * **encryptedCredential**: any
 * **useEncryptedEndpoints**: any
@@ -3751,7 +3751,7 @@
 ## SalesforceServiceCloud
 ### Properties
 * **type**: 'SalesforceServiceCloud' (Required)
-* **typeProperties**: SalesforceServiceCloudLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SalesforceServiceCloudLinkedServiceTypeProperties](#salesforceservicecloudlinkedservicetypeproperties) (Required)
 
 ## SalesforceServiceCloudLinkedServiceTypeProperties
 ### Properties
@@ -3759,20 +3759,20 @@
 * **encryptedCredential**: any
 * **environmentUrl**: any
 * **extendedProperties**: any
-* **password**: SecretBase
-* **securityToken**: SecretBase
+* **password**: [SecretBase](#secretbase)
+* **securityToken**: [SecretBase](#secretbase)
 * **username**: any
 
 ## SapBW
 ### Properties
 * **type**: 'SapBW' (Required)
-* **typeProperties**: SapBWLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SapBWLinkedServiceTypeProperties](#sapbwlinkedservicetypeproperties) (Required)
 
 ## SapBWLinkedServiceTypeProperties
 ### Properties
 * **clientId**: any (Required)
 * **encryptedCredential**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **server**: any (Required)
 * **systemNumber**: any (Required)
 * **userName**: any
@@ -3780,45 +3780,45 @@
 ## SapCloudForCustomer
 ### Properties
 * **type**: 'SapCloudForCustomer' (Required)
-* **typeProperties**: SapCloudForCustomerLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SapCloudForCustomerLinkedServiceTypeProperties](#sapcloudforcustomerlinkedservicetypeproperties) (Required)
 
 ## SapCloudForCustomerLinkedServiceTypeProperties
 ### Properties
 * **encryptedCredential**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **url**: any (Required)
 * **username**: any
 
 ## SapEcc
 ### Properties
 * **type**: 'SapEcc' (Required)
-* **typeProperties**: SapEccLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SapEccLinkedServiceTypeProperties](#sapecclinkedservicetypeproperties) (Required)
 
 ## SapEccLinkedServiceTypeProperties
 ### Properties
 * **encryptedCredential**: string
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **url**: string (Required)
 * **username**: string
 
 ## SapHana
 ### Properties
 * **type**: 'SapHana' (Required)
-* **typeProperties**: SapHanaLinkedServiceProperties (Required)
+* **typeProperties**: [SapHanaLinkedServiceProperties](#saphanalinkedserviceproperties) (Required)
 
 ## SapHanaLinkedServiceProperties
 ### Properties
 * **authenticationType**: 'Basic' | 'Windows'
 * **connectionString**: any
 * **encryptedCredential**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **server**: any
 * **userName**: any
 
 ## SapOpenHub
 ### Properties
 * **type**: 'SapOpenHub' (Required)
-* **typeProperties**: SapOpenHubLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SapOpenHubLinkedServiceTypeProperties](#sapopenhublinkedservicetypeproperties) (Required)
 
 ## SapOpenHubLinkedServiceTypeProperties
 ### Properties
@@ -3828,7 +3828,7 @@
 * **logonGroup**: any
 * **messageServer**: any
 * **messageServerService**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **server**: any
 * **systemId**: any
 * **systemNumber**: any
@@ -3837,7 +3837,7 @@
 ## SapTable
 ### Properties
 * **type**: 'SapTable' (Required)
-* **typeProperties**: SapTableLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SapTableLinkedServiceTypeProperties](#saptablelinkedservicetypeproperties) (Required)
 
 ## SapTableLinkedServiceTypeProperties
 ### Properties
@@ -3847,7 +3847,7 @@
 * **logonGroup**: any
 * **messageServer**: any
 * **messageServerService**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **server**: any
 * **sncLibraryPath**: any
 * **sncMode**: any
@@ -3861,16 +3861,16 @@
 ## ServiceNow
 ### Properties
 * **type**: 'ServiceNow' (Required)
-* **typeProperties**: ServiceNowLinkedServiceTypeProperties (Required)
+* **typeProperties**: [ServiceNowLinkedServiceTypeProperties](#servicenowlinkedservicetypeproperties) (Required)
 
 ## ServiceNowLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'Basic' | 'OAuth2' (Required)
 * **clientId**: any
-* **clientSecret**: SecretBase
+* **clientSecret**: [SecretBase](#secretbase)
 * **encryptedCredential**: any
 * **endpoint**: any (Required)
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **useEncryptedEndpoints**: any
 * **useHostVerification**: any
 * **usePeerVerification**: any
@@ -3879,7 +3879,7 @@
 ## Sftp
 ### Properties
 * **type**: 'Sftp' (Required)
-* **typeProperties**: SftpServerLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SftpServerLinkedServiceTypeProperties](#sftpserverlinkedservicetypeproperties) (Required)
 
 ## SftpServerLinkedServiceTypeProperties
 ### Properties
@@ -3887,10 +3887,10 @@
 * **encryptedCredential**: any
 * **host**: any (Required)
 * **hostKeyFingerprint**: any
-* **passPhrase**: SecretBase
-* **password**: SecretBase
+* **passPhrase**: [SecretBase](#secretbase)
+* **password**: [SecretBase](#secretbase)
 * **port**: any
-* **privateKeyContent**: SecretBase
+* **privateKeyContent**: [SecretBase](#secretbase)
 * **privateKeyPath**: any
 * **skipHostKeyValidation**: any
 * **userName**: any
@@ -3898,24 +3898,24 @@
 ## SharePointOnlineList
 ### Properties
 * **type**: 'SharePointOnlineList' (Required)
-* **typeProperties**: SharePointOnlineListLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SharePointOnlineListLinkedServiceTypeProperties](#sharepointonlinelistlinkedservicetypeproperties) (Required)
 
 ## SharePointOnlineListLinkedServiceTypeProperties
 ### Properties
 * **encryptedCredential**: any
 * **servicePrincipalId**: any (Required)
-* **servicePrincipalKey**: SecretBase (Required)
+* **servicePrincipalKey**: [SecretBase](#secretbase) (Required)
 * **siteUrl**: any (Required)
 * **tenantId**: any (Required)
 
 ## Shopify
 ### Properties
 * **type**: 'Shopify' (Required)
-* **typeProperties**: ShopifyLinkedServiceTypeProperties (Required)
+* **typeProperties**: [ShopifyLinkedServiceTypeProperties](#shopifylinkedservicetypeproperties) (Required)
 
 ## ShopifyLinkedServiceTypeProperties
 ### Properties
-* **accessToken**: SecretBase
+* **accessToken**: [SecretBase](#secretbase)
 * **encryptedCredential**: any
 * **host**: any (Required)
 * **useEncryptedEndpoints**: any
@@ -3925,18 +3925,18 @@
 ## Snowflake
 ### Properties
 * **type**: 'Snowflake' (Required)
-* **typeProperties**: SnowflakeLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SnowflakeLinkedServiceTypeProperties](#snowflakelinkedservicetypeproperties) (Required)
 
 ## SnowflakeLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any (Required)
 * **encryptedCredential**: any
-* **password**: AzureKeyVaultSecret
+* **password**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 
 ## Spark
 ### Properties
 * **type**: 'Spark' (Required)
-* **typeProperties**: SparkLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SparkLinkedServiceTypeProperties](#sparklinkedservicetypeproperties) (Required)
 
 ## SparkLinkedServiceTypeProperties
 ### Properties
@@ -3947,7 +3947,7 @@
 * **encryptedCredential**: any
 * **host**: any (Required)
 * **httpPath**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **port**: any (Required)
 * **serverType**: 'SharkServer' | 'SharkServer2' | 'SparkThriftServer'
 * **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL'
@@ -3958,24 +3958,24 @@
 ## SqlServer
 ### Properties
 * **type**: 'SqlServer' (Required)
-* **typeProperties**: SqlServerLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SqlServerLinkedServiceTypeProperties](#sqlserverlinkedservicetypeproperties) (Required)
 
 ## SqlServerLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any (Required)
 * **encryptedCredential**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **userName**: any
 
 ## Square
 ### Properties
 * **type**: 'Square' (Required)
-* **typeProperties**: SquareLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SquareLinkedServiceTypeProperties](#squarelinkedservicetypeproperties) (Required)
 
 ## SquareLinkedServiceTypeProperties
 ### Properties
 * **clientId**: any
-* **clientSecret**: SecretBase
+* **clientSecret**: [SecretBase](#secretbase)
 * **connectionProperties**: any
 * **encryptedCredential**: any
 * **host**: any
@@ -3987,14 +3987,14 @@
 ## Sybase
 ### Properties
 * **type**: 'Sybase' (Required)
-* **typeProperties**: SybaseLinkedServiceTypeProperties (Required)
+* **typeProperties**: [SybaseLinkedServiceTypeProperties](#sybaselinkedservicetypeproperties) (Required)
 
 ## SybaseLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'Basic' | 'Windows'
 * **database**: any (Required)
 * **encryptedCredential**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **schema**: any
 * **server**: any (Required)
 * **username**: any
@@ -4002,32 +4002,32 @@
 ## Teradata
 ### Properties
 * **type**: 'Teradata' (Required)
-* **typeProperties**: TeradataLinkedServiceTypeProperties (Required)
+* **typeProperties**: [TeradataLinkedServiceTypeProperties](#teradatalinkedservicetypeproperties) (Required)
 
 ## TeradataLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'Basic' | 'Windows'
 * **connectionString**: any
 * **encryptedCredential**: any
-* **password**: SecretBase
+* **password**: [SecretBase](#secretbase)
 * **server**: any
 * **username**: any
 
 ## Vertica
 ### Properties
 * **type**: 'Vertica' (Required)
-* **typeProperties**: VerticaLinkedServiceTypeProperties (Required)
+* **typeProperties**: [VerticaLinkedServiceTypeProperties](#verticalinkedservicetypeproperties) (Required)
 
 ## VerticaLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any
 * **encryptedCredential**: any
-* **pwd**: AzureKeyVaultSecret
+* **pwd**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
 
 ## Web
 ### Properties
 * **type**: 'Web' (Required)
-* **typeProperties**: WebLinkedServiceTypeProperties (Required)
+* **typeProperties**: [WebLinkedServiceTypeProperties](#weblinkedservicetypeproperties) (Required)
 
 ## WebLinkedServiceTypeProperties
 * **Discriminator**: authenticationType
@@ -4040,14 +4040,14 @@
 ### Basic
 #### Properties
 * **authenticationType**: 'Basic' (Required)
-* **password**: SecretBase (Required)
+* **password**: [SecretBase](#secretbase) (Required)
 * **username**: any (Required)
 
 ### ClientCertificate
 #### Properties
 * **authenticationType**: 'ClientCertificate' (Required)
-* **password**: SecretBase (Required)
-* **pfx**: SecretBase (Required)
+* **password**: [SecretBase](#secretbase) (Required)
+* **pfx**: [SecretBase](#secretbase) (Required)
 
 
 ## Anonymous
@@ -4057,27 +4057,27 @@
 ## Basic
 ### Properties
 * **authenticationType**: 'Basic' (Required)
-* **password**: SecretBase (Required)
+* **password**: [SecretBase](#secretbase) (Required)
 * **username**: any (Required)
 
 ## ClientCertificate
 ### Properties
 * **authenticationType**: 'ClientCertificate' (Required)
-* **password**: SecretBase (Required)
-* **pfx**: SecretBase (Required)
+* **password**: [SecretBase](#secretbase) (Required)
+* **pfx**: [SecretBase](#secretbase) (Required)
 
 ## Xero
 ### Properties
 * **type**: 'Xero' (Required)
-* **typeProperties**: XeroLinkedServiceTypeProperties (Required)
+* **typeProperties**: [XeroLinkedServiceTypeProperties](#xerolinkedservicetypeproperties) (Required)
 
 ## XeroLinkedServiceTypeProperties
 ### Properties
 * **connectionProperties**: any
-* **consumerKey**: SecretBase
+* **consumerKey**: [SecretBase](#secretbase)
 * **encryptedCredential**: any
 * **host**: any
-* **privateKey**: SecretBase
+* **privateKey**: [SecretBase](#secretbase)
 * **useEncryptedEndpoints**: any
 * **useHostVerification**: any
 * **usePeerVerification**: any
@@ -4085,11 +4085,11 @@
 ## Zoho
 ### Properties
 * **type**: 'Zoho' (Required)
-* **typeProperties**: ZohoLinkedServiceTypeProperties (Required)
+* **typeProperties**: [ZohoLinkedServiceTypeProperties](#zoholinkedservicetypeproperties) (Required)
 
 ## ZohoLinkedServiceTypeProperties
 ### Properties
-* **accessToken**: SecretBase
+* **accessToken**: [SecretBase](#secretbase)
 * **connectionProperties**: any
 * **encryptedCredential**: any
 * **endpoint**: any
@@ -4106,7 +4106,7 @@
 
 ## ManagedPrivateEndpoint
 ### Properties
-* **connectionState**: ConnectionStateProperties
+* **connectionState**: [ConnectionStateProperties](#connectionstateproperties)
 * **fqdns**: string[]
 * **groupId**: string
 * **isReserved**: bool (ReadOnly)
@@ -4123,30 +4123,30 @@
 
 ## Pipeline
 ### Properties
-* **activities**: Activity[]
+* **activities**: [Activity](#activity)[]
 * **annotations**: any[]
 * **concurrency**: int
 * **description**: string
-* **folder**: schemas:562_folder
-* **parameters**: Dictionary<string,ParameterSpecification>
-* **runDimensions**: Dictionary<string,Object>
-* **variables**: Dictionary<string,VariableSpecification>
+* **folder**: [schemas:562_folder](#schemas562folder)
+* **parameters**: [Dictionary<string,ParameterSpecification>](#dictionarystringparameterspecification)
+* **runDimensions**: [Dictionary<string,Object>](#dictionarystringobject)
+* **variables**: [Dictionary<string,VariableSpecification>](#dictionarystringvariablespecification)
 
 ## Activity
 * **Discriminator**: type
 ### Base Properties
-* **dependsOn**: ActivityDependency[]
+* **dependsOn**: [ActivityDependency](#activitydependency)[]
 * **description**: string
 * **name**: string (Required)
-* **userProperties**: UserProperty[]
+* **userProperties**: [UserProperty](#userproperty)[]
 ### Container
 #### Properties
 * **type**: 'Container' (Required)
 
 ### Execution
 #### Properties
-* **linkedServiceName**: LinkedServiceReference
-* **policy**: ActivityPolicy
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference)
+* **policy**: [ActivityPolicy](#activitypolicy)
 * **type**: 'Execution' (Required)
 
 
@@ -4168,8 +4168,8 @@
 
 ## Execution
 ### Properties
-* **linkedServiceName**: LinkedServiceReference
-* **policy**: ActivityPolicy
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference)
+* **policy**: [ActivityPolicy](#activitypolicy)
 * **type**: 'Execution' (Required)
 
 ## ActivityPolicy
@@ -4189,7 +4189,7 @@
 ## Dictionary<string,ParameterSpecification>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ParameterSpecification
+* **Additional Properties Type**: [ParameterSpecification](#parameterspecification)
 
 ## Dictionary<string,Object>
 ### Properties
@@ -4199,7 +4199,7 @@
 ## Dictionary<string,VariableSpecification>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: VariableSpecification
+* **Additional Properties Type**: [VariableSpecification](#variablespecification)
 
 ## VariableSpecification
 ### Properties
@@ -4214,37 +4214,37 @@
 * **runtimeState**: 'Disabled' | 'Started' | 'Stopped' (ReadOnly)
 ### ChainingTrigger
 #### Properties
-* **pipeline**: TriggerPipelineReference (Required)
+* **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required)
 * **type**: 'ChainingTrigger' (Required)
-* **typeProperties**: schemas:885_typeProperties (Required)
+* **typeProperties**: [schemas:885_typeProperties](#schemas885typeproperties) (Required)
 
 ### MultiplePipelineTrigger
 #### Properties
-* **pipelines**: TriggerPipelineReference[]
+* **pipelines**: [TriggerPipelineReference](#triggerpipelinereference)[]
 * **type**: 'MultiplePipelineTrigger' (Required)
 
 ### RerunTumblingWindowTrigger
 #### Properties
 * **type**: 'RerunTumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:884_typeProperties (Required)
+* **typeProperties**: [schemas:884_typeProperties](#schemas884typeproperties) (Required)
 
 ### TumblingWindowTrigger
 #### Properties
-* **pipeline**: TriggerPipelineReference (Required)
+* **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required)
 * **type**: 'TumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:876_typeProperties (Required)
+* **typeProperties**: [schemas:876_typeProperties](#schemas876typeproperties) (Required)
 
 
 ## ChainingTrigger
 ### Properties
-* **pipeline**: TriggerPipelineReference (Required)
+* **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required)
 * **type**: 'ChainingTrigger' (Required)
-* **typeProperties**: schemas:885_typeProperties (Required)
+* **typeProperties**: [schemas:885_typeProperties](#schemas885typeproperties) (Required)
 
 ## TriggerPipelineReference
 ### Properties
-* **parameters**: Dictionary<string,Object>
-* **pipelineReference**: PipelineReference
+* **parameters**: [Dictionary<string,Object>](#dictionarystringobject)
+* **pipelineReference**: [PipelineReference](#pipelinereference)
 
 ## Dictionary<string,Object>
 ### Properties
@@ -4259,18 +4259,18 @@
 
 ## schemas:885_typeProperties
 ### Properties
-* **dependsOn**: PipelineReference[] (Required)
+* **dependsOn**: [PipelineReference](#pipelinereference)[] (Required)
 * **runDimension**: string (Required)
 
 ## MultiplePipelineTrigger
 ### Properties
-* **pipelines**: TriggerPipelineReference[]
+* **pipelines**: [TriggerPipelineReference](#triggerpipelinereference)[]
 * **type**: 'MultiplePipelineTrigger' (Required)
 
 ## RerunTumblingWindowTrigger
 ### Properties
 * **type**: 'RerunTumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:884_typeProperties (Required)
+* **typeProperties**: [schemas:884_typeProperties](#schemas884typeproperties) (Required)
 
 ## schemas:884_typeProperties
 ### Properties
@@ -4281,19 +4281,19 @@
 
 ## TumblingWindowTrigger
 ### Properties
-* **pipeline**: TriggerPipelineReference (Required)
+* **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required)
 * **type**: 'TumblingWindowTrigger' (Required)
-* **typeProperties**: schemas:876_typeProperties (Required)
+* **typeProperties**: [schemas:876_typeProperties](#schemas876typeproperties) (Required)
 
 ## schemas:876_typeProperties
 ### Properties
 * **delay**: any
-* **dependsOn**: DependencyReference[]
+* **dependsOn**: [DependencyReference](#dependencyreference)[]
 * **endTime**: string
 * **frequency**: 'Hour' | 'Minute' | 'Month' (Required)
 * **interval**: int (Required)
 * **maxConcurrency**: int (Required)
-* **retryPolicy**: RetryPolicy
+* **retryPolicy**: [RetryPolicy](#retrypolicy)
 * **startTime**: string (Required)
 
 ## DependencyReference
@@ -4307,7 +4307,7 @@
 
 ### TriggerDependencyReference
 #### Properties
-* **referenceTrigger**: TriggerReference (Required)
+* **referenceTrigger**: [TriggerReference](#triggerreference) (Required)
 * **type**: 'TriggerDependencyReference' (Required)
 
 
@@ -4319,7 +4319,7 @@
 
 ## TriggerDependencyReference
 ### Properties
-* **referenceTrigger**: TriggerReference (Required)
+* **referenceTrigger**: [TriggerReference](#triggerreference) (Required)
 * **type**: 'TriggerDependencyReference' (Required)
 
 ## TriggerReference

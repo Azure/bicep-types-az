@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DeploymentProperties (Required)
+* **properties**: [DeploymentProperties](#deploymentproperties) (Required)
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Resources/resourceGroups@2018-02-01
@@ -17,24 +17,24 @@
 * **location**: string (Required)
 * **managedBy**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ResourceGroupProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ResourceGroupProperties](#resourcegroupproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Resources/resourceGroups' (ReadOnly, DeployTimeConstant)
 
 ## DeploymentProperties
 ### Properties
 * **correlationId**: string (ReadOnly)
-* **debugSetting**: DebugSetting
-* **dependencies**: Dependency[] (ReadOnly)
+* **debugSetting**: [DebugSetting](#debugsetting)
+* **dependencies**: [Dependency](#dependency)[] (ReadOnly)
 * **mode**: 'Complete' | 'Incremental' (Required)
-* **onErrorDeployment**: OnErrorDeployment
+* **onErrorDeployment**: [OnErrorDeployment](#onerrordeployment)
 * **outputs**: any (ReadOnly)
 * **parameters**: any
-* **parametersLink**: ParametersLink
-* **providers**: Provider[] (ReadOnly)
+* **parametersLink**: [ParametersLink](#parameterslink)
+* **providers**: [Provider](#provider)[] (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **template**: any
-* **templateLink**: TemplateLink
+* **templateLink**: [TemplateLink](#templatelink)
 * **timestamp**: string (ReadOnly)
 
 ## DebugSetting
@@ -43,7 +43,7 @@
 
 ## Dependency
 ### Properties
-* **dependsOn**: BasicDependency[] (ReadOnly)
+* **dependsOn**: [BasicDependency](#basicdependency)[] (ReadOnly)
 * **id**: string (ReadOnly)
 * **resourceName**: string (ReadOnly)
 * **resourceType**: string (ReadOnly)
@@ -70,20 +70,20 @@
 * **id**: string (ReadOnly)
 * **namespace**: string (ReadOnly)
 * **registrationState**: string (ReadOnly)
-* **resourceTypes**: ProviderResourceType[] (ReadOnly)
+* **resourceTypes**: [ProviderResourceType](#providerresourcetype)[] (ReadOnly)
 
 ## ProviderResourceType
 ### Properties
-* **aliases**: AliasType[] (ReadOnly)
+* **aliases**: [AliasType](#aliastype)[] (ReadOnly)
 * **apiVersions**: string[] (ReadOnly)
 * **locations**: string[] (ReadOnly)
-* **properties**: Dictionary<string,String> (ReadOnly)
+* **properties**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
 * **resourceType**: string (ReadOnly)
 
 ## AliasType
 ### Properties
 * **name**: string (ReadOnly)
-* **paths**: AliasPathType[] (ReadOnly)
+* **paths**: [AliasPathType](#aliaspathtype)[] (ReadOnly)
 
 ## AliasPathType
 ### Properties

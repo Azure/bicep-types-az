@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DeviceServiceProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [DeviceServiceProperties](#deviceserviceproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.WindowsIoT/deviceServices' (ReadOnly, DeployTimeConstant)
 
 ## DeviceServiceProperties

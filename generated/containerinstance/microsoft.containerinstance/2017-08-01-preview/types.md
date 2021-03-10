@@ -7,35 +7,35 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:10_properties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [schemas:10_properties](#schemas10properties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant)
 
 ## schemas:10_properties
 ### Properties
-* **containers**: Container[] (Required)
-* **imageRegistryCredentials**: ImageRegistryCredential[]
-* **ipAddress**: IpAddress
+* **containers**: [Container](#container)[] (Required)
+* **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]
+* **ipAddress**: [IpAddress](#ipaddress)
 * **osType**: 'Linux' | 'Windows' (Required)
 * **provisioningState**: string (ReadOnly)
 * **restartPolicy**: 'always'
 * **state**: string (ReadOnly)
-* **volumes**: Volume[]
+* **volumes**: [Volume](#volume)[]
 
 ## Container
 ### Properties
 * **name**: string (Required)
-* **properties**: ContainerProperties (Required)
+* **properties**: [ContainerProperties](#containerproperties) (Required)
 
 ## ContainerProperties
 ### Properties
 * **command**: string[]
-* **environmentVariables**: EnvironmentVariable[]
+* **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]
 * **image**: string (Required)
-* **instanceView**: schemas:1_instanceView (ReadOnly)
-* **ports**: ContainerPort[]
-* **resources**: ResourceRequirements (Required)
-* **volumeMounts**: VolumeMount[]
+* **instanceView**: [schemas:1_instanceView](#schemas1instanceview) (ReadOnly)
+* **ports**: [ContainerPort](#containerport)[]
+* **resources**: [ResourceRequirements](#resourcerequirements) (Required)
+* **volumeMounts**: [VolumeMount](#volumemount)[]
 
 ## EnvironmentVariable
 ### Properties
@@ -44,9 +44,9 @@
 
 ## schemas:1_instanceView
 ### Properties
-* **currentState**: ContainerState
-* **events**: ContainerEvent[]
-* **previousState**: ContainerState
+* **currentState**: [ContainerState](#containerstate)
+* **events**: [ContainerEvent](#containerevent)[]
+* **previousState**: [ContainerState](#containerstate)
 * **restartCount**: int
 
 ## ContainerState
@@ -71,8 +71,8 @@
 
 ## ResourceRequirements
 ### Properties
-* **limits**: ResourceLimits
-* **requests**: ResourceRequests (Required)
+* **limits**: [ResourceLimits](#resourcelimits)
+* **requests**: [ResourceRequests](#resourcerequests) (Required)
 
 ## ResourceLimits
 ### Properties
@@ -99,7 +99,7 @@
 ## IpAddress
 ### Properties
 * **ip**: string
-* **ports**: Port[] (Required)
+* **ports**: [Port](#port)[] (Required)
 * **type**: string (Required)
 
 ## Port
@@ -109,7 +109,7 @@
 
 ## Volume
 ### Properties
-* **azureFile**: AzureFileVolume (Required)
+* **azureFile**: [AzureFileVolume](#azurefilevolume) (Required)
 * **name**: string (Required)
 
 ## AzureFileVolume

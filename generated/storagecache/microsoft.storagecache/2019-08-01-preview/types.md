@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:4_properties
-* **sku**: schemas:4_sku
+* **properties**: [schemas:4_properties](#schemas4properties)
+* **sku**: [schemas:4_sku](#schemas4sku)
 * **tags**: any
 * **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant)
 
@@ -18,17 +18,17 @@
 * **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:18_properties
+* **properties**: [schemas:18_properties](#schemas18properties)
 * **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant)
 
 ## schemas:4_properties
 ### Properties
 * **cacheSizeGB**: int
-* **health**: CacheHealth (ReadOnly)
+* **health**: [CacheHealth](#cachehealth) (ReadOnly)
 * **mountAddresses**: string[] (ReadOnly)
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
 * **subnet**: string
-* **upgradeStatus**: CacheUpgradeStatus
+* **upgradeStatus**: [CacheUpgradeStatus](#cacheupgradestatus)
 
 ## CacheHealth
 ### Properties
@@ -49,12 +49,12 @@
 
 ## schemas:18_properties
 ### Properties
-* **clfs**: clfs
-* **junctions**: NamespaceJunction[]
-* **nfs3**: nfs3
+* **clfs**: [clfs](#clfs)
+* **junctions**: [NamespaceJunction](#namespacejunction)[]
+* **nfs3**: [nfs3](#nfs3)
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
 * **targetType**: 'clfs' | 'nfs3' | 'unknown'
-* **unknown**: unknown
+* **unknown**: [unknown](#unknown)
 
 ## clfs
 ### Properties
@@ -73,7 +73,7 @@
 
 ## unknown
 ### Properties
-* **unknownMap**: Dictionary<string,String>
+* **unknownMap**: [Dictionary<string,String>](#dictionarystringstring)
 
 ## Dictionary<string,String>
 ### Properties

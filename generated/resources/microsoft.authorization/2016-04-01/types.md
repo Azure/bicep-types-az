@@ -6,7 +6,7 @@
 * **apiVersion**: '2016-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyAssignmentProperties
+* **properties**: [PolicyAssignmentProperties](#policyassignmentproperties)
 * **type**: 'Microsoft.Authorization/policyassignments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Authorization/policydefinitions@2016-04-01
@@ -15,7 +15,7 @@
 * **apiVersion**: '2016-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyDefinitionProperties
+* **properties**: [PolicyDefinitionProperties](#policydefinitionproperties)
 * **type**: 'Microsoft.Authorization/policydefinitions' (ReadOnly, DeployTimeConstant)
 
 ## PolicyAssignmentProperties

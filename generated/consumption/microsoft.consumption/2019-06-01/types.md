@@ -7,18 +7,18 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BudgetProperties
+* **properties**: [BudgetProperties](#budgetproperties)
 * **type**: 'Microsoft.Consumption/budgets' (ReadOnly, DeployTimeConstant)
 
 ## BudgetProperties
 ### Properties
 * **amount**: int (Required)
 * **category**: 'Cost' | 'Usage' (Required)
-* **currentSpend**: CurrentSpend (ReadOnly)
-* **filters**: Filters
-* **notifications**: Dictionary<string,Notification>
+* **currentSpend**: [CurrentSpend](#currentspend) (ReadOnly)
+* **filters**: [Filters](#filters)
+* **notifications**: [Dictionary<string,Notification>](#dictionarystringnotification)
 * **timeGrain**: 'Annually' | 'BillingAnnual' | 'BillingMonth' | 'BillingQuarter' | 'Monthly' | 'Quarterly' (Required)
-* **timePeriod**: BudgetTimePeriod (Required)
+* **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required)
 
 ## CurrentSpend
 ### Properties
@@ -30,7 +30,7 @@
 * **meters**: string[]
 * **resourceGroups**: string[]
 * **resources**: string[]
-* **tags**: Dictionary<string,IList<String>>
+* **tags**: [Dictionary<string,IList<String>>](#dictionarystringiliststring)
 
 ## Dictionary<string,IList<String>>
 ### Properties
@@ -40,7 +40,7 @@
 ## Dictionary<string,Notification>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: Notification
+* **Additional Properties Type**: [Notification](#notification)
 
 ## Notification
 ### Properties

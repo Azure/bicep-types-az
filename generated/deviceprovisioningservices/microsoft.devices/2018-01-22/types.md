@@ -8,9 +8,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IotDpsPropertiesDescription (Required)
-* **sku**: IotDpsSkuInfo (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [IotDpsPropertiesDescription](#iotdpspropertiesdescription) (Required)
+* **sku**: [IotDpsSkuInfo](#iotdpsskuinfo) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Devices/provisioningServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Devices/provisioningServices/certificates@2018-01-22
@@ -21,16 +21,16 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CertificateProperties (ReadOnly)
+* **properties**: [CertificateProperties](#certificateproperties) (ReadOnly)
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant)
 
 ## IotDpsPropertiesDescription
 ### Properties
 * **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static'
-* **authorizationPolicies**: SharedAccessSignatureAuthorizationRule_AccessRightsDescription_[]
+* **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule_AccessRightsDescription_](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[]
 * **deviceProvisioningHostName**: string (ReadOnly)
 * **idScope**: string (ReadOnly)
-* **iotHubs**: IotHubDefinitionDescription[]
+* **iotHubs**: [IotHubDefinitionDescription](#iothubdefinitiondescription)[]
 * **provisioningState**: string
 * **serviceOperationsHostName**: string (ReadOnly)
 * **state**: 'Activating' | 'ActivationFailed' | 'Active' | 'Deleted' | 'Deleting' | 'DeletionFailed' | 'FailingOver' | 'FailoverFailed' | 'Resuming' | 'Suspended' | 'Suspending' | 'Transitioning'

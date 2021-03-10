@@ -9,9 +9,9 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DataMigrationServiceProperties
-* **sku**: ServiceSku
-* **tags**: Dictionary<string,String>
+* **properties**: [DataMigrationServiceProperties](#datamigrationserviceproperties)
+* **sku**: [ServiceSku](#servicesku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DataMigration/services' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataMigration/services/projects@2017-11-15-preview
@@ -21,8 +21,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProjectProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ProjectProperties](#projectproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DataMigration/services/projects' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataMigration/services/projects/tasks@2017-11-15-preview
@@ -32,7 +32,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProjectTaskProperties
+* **properties**: [ProjectTaskProperties](#projecttaskproperties)
 * **type**: 'Microsoft.DataMigration/services/projects/tasks' (ReadOnly, DeployTimeConstant)
 
 ## DataMigrationServiceProperties
@@ -57,11 +57,11 @@
 ## ProjectProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
-* **databasesInfo**: DatabaseInfo[]
+* **databasesInfo**: [DatabaseInfo](#databaseinfo)[]
 * **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly)
-* **sourceConnectionInfo**: ConnectionInfo
+* **sourceConnectionInfo**: [ConnectionInfo](#connectioninfo)
 * **sourcePlatform**: 'SQL' | 'Unknown' (Required)
-* **targetConnectionInfo**: ConnectionInfo
+* **targetConnectionInfo**: [ConnectionInfo](#connectioninfo)
 * **targetPlatform**: 'SQLDB' | 'Unknown' (Required)
 
 ## DatabaseInfo
@@ -104,49 +104,49 @@
 ## ProjectTaskProperties
 * **Discriminator**: taskType
 ### Base Properties
-* **errors**: ODataError[] (ReadOnly)
+* **errors**: [ODataError](#odataerror)[] (ReadOnly)
 * **state**: 'Canceled' | 'Failed' | 'FailedInputValidation' | 'Faulted' | 'Queued' | 'Running' | 'Succeeded' | 'Unknown' (ReadOnly)
 ### ConnectToSource.SqlServer
 #### Properties
-* **input**: ConnectToSourceSqlServerTaskInput
-* **output**: ConnectToSourceSqlServerTaskOutput[] (ReadOnly)
+* **input**: [ConnectToSourceSqlServerTaskInput](#connecttosourcesqlservertaskinput)
+* **output**: [ConnectToSourceSqlServerTaskOutput](#connecttosourcesqlservertaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToSource.SqlServer' (Required)
 
 ### ConnectToTarget.SqlDb
 #### Properties
-* **input**: ConnectToTargetSqlDbTaskInput
-* **output**: ConnectToTargetSqlDbTaskOutput[] (ReadOnly)
+* **input**: [ConnectToTargetSqlDbTaskInput](#connecttotargetsqldbtaskinput)
+* **output**: [ConnectToTargetSqlDbTaskOutput](#connecttotargetsqldbtaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToTarget.SqlDb' (Required)
 
 ### GetUserTables.Sql
 #### Properties
-* **input**: GetUserTablesSqlTaskInput
-* **output**: GetUserTablesSqlTaskOutput[] (ReadOnly)
+* **input**: [GetUserTablesSqlTaskInput](#getusertablessqltaskinput)
+* **output**: [GetUserTablesSqlTaskOutput](#getusertablessqltaskoutput)[] (ReadOnly)
 * **taskType**: 'GetUserTables.Sql' (Required)
 
 ### Migrate.SqlServer.SqlDb
 #### Properties
-* **input**: MigrateSqlServerSqlDbTaskInput
-* **output**: MigrateSqlServerSqlDbTaskOutput[] (ReadOnly)
+* **input**: [MigrateSqlServerSqlDbTaskInput](#migratesqlserversqldbtaskinput)
+* **output**: [MigrateSqlServerSqlDbTaskOutput](#migratesqlserversqldbtaskoutput)[] (ReadOnly)
 * **taskType**: 'Migrate.SqlServer.SqlDb' (Required)
 
 
 ## ODataError
 ### Properties
 * **code**: string
-* **details**: ODataError[]
+* **details**: [ODataError](#odataerror)[]
 * **message**: string
 
 ## ConnectToSource.SqlServer
 ### Properties
-* **input**: ConnectToSourceSqlServerTaskInput
-* **output**: ConnectToSourceSqlServerTaskOutput[] (ReadOnly)
+* **input**: [ConnectToSourceSqlServerTaskInput](#connecttosourcesqlservertaskinput)
+* **output**: [ConnectToSourceSqlServerTaskOutput](#connecttosourcesqlservertaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToSource.SqlServer' (Required)
 
 ## ConnectToSourceSqlServerTaskInput
 ### Properties
 * **checkPermissionsGroup**: 'Default' | 'MigrationFromSqlServerToAzureDB'
-* **sourceConnectionInfo**: SqlConnectionInfo (Required)
+* **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
 
 ## ConnectToSourceSqlServerTaskOutput
 * **Discriminator**: resultType
@@ -155,7 +155,7 @@
 ### DatabaseLevelOutput
 #### Properties
 * **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly)
-* **databaseFiles**: DatabaseFileInfo[] (ReadOnly)
+* **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly)
 * **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly)
 * **name**: string (ReadOnly)
 * **resultType**: 'DatabaseLevelOutput' (Required)
@@ -163,17 +163,17 @@
 
 ### TaskLevelOutput
 #### Properties
-* **databases**: Dictionary<string,String> (ReadOnly)
+* **databases**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
 * **resultType**: 'TaskLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly)
 * **sourceServerVersion**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 
 ## DatabaseLevelOutput
 ### Properties
 * **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly)
-* **databaseFiles**: DatabaseFileInfo[] (ReadOnly)
+* **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly)
 * **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly)
 * **name**: string (ReadOnly)
 * **resultType**: 'DatabaseLevelOutput' (Required)
@@ -191,11 +191,11 @@
 
 ## TaskLevelOutput
 ### Properties
-* **databases**: Dictionary<string,String> (ReadOnly)
+* **databases**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
 * **resultType**: 'TaskLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly)
 * **sourceServerVersion**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## Dictionary<string,String>
 ### Properties
@@ -212,17 +212,17 @@
 
 ## ConnectToTarget.SqlDb
 ### Properties
-* **input**: ConnectToTargetSqlDbTaskInput
-* **output**: ConnectToTargetSqlDbTaskOutput[] (ReadOnly)
+* **input**: [ConnectToTargetSqlDbTaskInput](#connecttotargetsqldbtaskinput)
+* **output**: [ConnectToTargetSqlDbTaskOutput](#connecttotargetsqldbtaskoutput)[] (ReadOnly)
 * **taskType**: 'ConnectToTarget.SqlDb' (Required)
 
 ## ConnectToTargetSqlDbTaskInput
 ### Properties
-* **targetConnectionInfo**: SqlConnectionInfo (Required)
+* **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
 
 ## ConnectToTargetSqlDbTaskOutput
 ### Properties
-* **databases**: Dictionary<string,String> (ReadOnly)
+* **databases**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
 * **id**: string (ReadOnly)
 * **targetServerBrandVersion**: string (ReadOnly)
 * **targetServerVersion**: string (ReadOnly)
@@ -234,25 +234,25 @@
 
 ## GetUserTables.Sql
 ### Properties
-* **input**: GetUserTablesSqlTaskInput
-* **output**: GetUserTablesSqlTaskOutput[] (ReadOnly)
+* **input**: [GetUserTablesSqlTaskInput](#getusertablessqltaskinput)
+* **output**: [GetUserTablesSqlTaskOutput](#getusertablessqltaskoutput)[] (ReadOnly)
 * **taskType**: 'GetUserTables.Sql' (Required)
 
 ## GetUserTablesSqlTaskInput
 ### Properties
-* **connectionInfo**: SqlConnectionInfo (Required)
+* **connectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
 * **selectedDatabases**: string[] (Required)
 
 ## GetUserTablesSqlTaskOutput
 ### Properties
-* **databasesToTables**: Dictionary<string,IList<DatabaseTable>> (ReadOnly)
+* **databasesToTables**: [Dictionary<string,IList<DatabaseTable>>](#dictionarystringilistdatabasetable) (ReadOnly)
 * **id**: string (ReadOnly)
-* **validationErrors**: ReportableException[] (ReadOnly)
+* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly)
 
 ## Dictionary<string,IList<DatabaseTable>>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: DatabaseTable[]
+* **Additional Properties Type**: [DatabaseTable](#databasetable)[]
 
 ## DatabaseTable
 ### Properties
@@ -261,22 +261,22 @@
 
 ## Migrate.SqlServer.SqlDb
 ### Properties
-* **input**: MigrateSqlServerSqlDbTaskInput
-* **output**: MigrateSqlServerSqlDbTaskOutput[] (ReadOnly)
+* **input**: [MigrateSqlServerSqlDbTaskInput](#migratesqlserversqldbtaskinput)
+* **output**: [MigrateSqlServerSqlDbTaskOutput](#migratesqlserversqldbtaskoutput)[] (ReadOnly)
 * **taskType**: 'Migrate.SqlServer.SqlDb' (Required)
 
 ## MigrateSqlServerSqlDbTaskInput
 ### Properties
-* **selectedDatabases**: MigrateSqlServerSqlDbDatabaseInput[] (Required)
-* **sourceConnectionInfo**: SqlConnectionInfo (Required)
-* **targetConnectionInfo**: SqlConnectionInfo (Required)
-* **validationOptions**: MigrationValidationOptions
+* **selectedDatabases**: [MigrateSqlServerSqlDbDatabaseInput](#migratesqlserversqldbdatabaseinput)[] (Required)
+* **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
+* **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required)
+* **validationOptions**: [MigrationValidationOptions](#migrationvalidationoptions)
 
 ## MigrateSqlServerSqlDbDatabaseInput
 ### Properties
 * **makeSourceDbReadOnly**: bool
 * **name**: string
-* **tableMap**: Dictionary<string,String>
+* **tableMap**: [Dictionary<string,String>](#dictionarystringstring)
 * **targetDatabaseName**: string
 
 ## Dictionary<string,String>
@@ -297,7 +297,7 @@
 ### DatabaseLevelOutput
 #### Properties
 * **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly)
-* **databaseFiles**: DatabaseFileInfo[] (ReadOnly)
+* **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly)
 * **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly)
 * **name**: string (ReadOnly)
 * **resultType**: 'DatabaseLevelOutput' (Required)
@@ -305,18 +305,18 @@
 
 ### ErrorOutput
 #### Properties
-* **error**: ReportableException (ReadOnly)
+* **error**: [ReportableException](#reportableexception) (ReadOnly)
 * **resultType**: 'ErrorOutput' (Required)
 
 ### MigrationLevelOutput
 #### Properties
-* **databases**: Dictionary<string,String> (ReadOnly)
-* **databaseSummary**: Dictionary<string,DatabaseSummaryResult> (ReadOnly)
+* **databases**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
+* **databaseSummary**: [Dictionary<string,DatabaseSummaryResult>](#dictionarystringdatabasesummaryresult) (ReadOnly)
 * **durationInSeconds**: int (ReadOnly)
 * **endedOn**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **message**: string (ReadOnly)
-* **migrationReportResult**: MigrationReportResult
+* **migrationReportResult**: [MigrationReportResult](#migrationreportresult)
 * **resultType**: 'MigrationLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly)
 * **sourceServerVersion**: string (ReadOnly)
@@ -342,18 +342,18 @@
 
 ## ErrorOutput
 ### Properties
-* **error**: ReportableException (ReadOnly)
+* **error**: [ReportableException](#reportableexception) (ReadOnly)
 * **resultType**: 'ErrorOutput' (Required)
 
 ## MigrationLevelOutput
 ### Properties
-* **databases**: Dictionary<string,String> (ReadOnly)
-* **databaseSummary**: Dictionary<string,DatabaseSummaryResult> (ReadOnly)
+* **databases**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
+* **databaseSummary**: [Dictionary<string,DatabaseSummaryResult>](#dictionarystringdatabasesummaryresult) (ReadOnly)
 * **durationInSeconds**: int (ReadOnly)
 * **endedOn**: string (ReadOnly)
-* **exceptionsAndWarnings**: ReportableException[] (ReadOnly)
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly)
 * **message**: string (ReadOnly)
-* **migrationReportResult**: MigrationReportResult
+* **migrationReportResult**: [MigrationReportResult](#migrationreportresult)
 * **resultType**: 'MigrationLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly)
 * **sourceServerVersion**: string (ReadOnly)
@@ -371,7 +371,7 @@
 ## Dictionary<string,DatabaseSummaryResult>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: DatabaseSummaryResult
+* **Additional Properties Type**: [DatabaseSummaryResult](#databasesummaryresult)
 
 ## DatabaseSummaryResult
 ### Properties

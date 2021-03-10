@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2015-08-19' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SearchServiceProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [SearchServiceProperties](#searchserviceproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant)
 
 ## Identity

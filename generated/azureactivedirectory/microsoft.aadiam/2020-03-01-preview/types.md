@@ -11,7 +11,7 @@
 * **resourceGroup**: string
 * **resourceName**: string
 * **subscriptionId**: string
-* **tags**: Dictionary<string,String>
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **tenants**: string[]
 * **type**: 'microsoft.aadiam/privateLinkForAzureAd' (ReadOnly, DeployTimeConstant)
 

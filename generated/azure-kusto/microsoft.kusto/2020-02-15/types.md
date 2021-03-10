@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2020-02-15' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterProperties
-* **sku**: AzureSku (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [ClusterProperties](#clusterproperties)
+* **sku**: [AzureSku](#azuresku) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
 
@@ -21,7 +21,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AttachedDatabaseConfigurationProperties
+* **properties**: [AttachedDatabaseConfigurationProperties](#attacheddatabaseconfigurationproperties)
 * **type**: 'Microsoft.Kusto/clusters/attachedDatabaseConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Kusto/clusters/databases@2020-02-15
@@ -36,12 +36,12 @@
 ### ReadOnlyFollowing
 #### Properties
 * **kind**: 'ReadOnlyFollowing' (Required)
-* **properties**: ReadOnlyFollowingDatabaseProperties
+* **properties**: [ReadOnlyFollowingDatabaseProperties](#readonlyfollowingdatabaseproperties)
 
 ### ReadWrite
 #### Properties
 * **kind**: 'ReadWrite' (Required)
-* **properties**: ReadWriteDatabaseProperties
+* **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties)
 
 
 ## Resource Microsoft.Kusto/clusters/databases/dataConnections@2020-02-15
@@ -56,17 +56,17 @@
 ### EventGrid
 #### Properties
 * **kind**: 'EventGrid' (Required)
-* **properties**: EventGridConnectionProperties
+* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties)
 
 ### EventHub
 #### Properties
 * **kind**: 'EventHub' (Required)
-* **properties**: EventHubConnectionProperties
+* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties)
 
 ### IotHub
 #### Properties
 * **kind**: 'IotHub' (Required)
-* **properties**: IotHubConnectionProperties
+* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties)
 
 
 ## Resource Microsoft.Kusto/clusters/databases/principalAssignments@2020-02-15
@@ -75,7 +75,7 @@
 * **apiVersion**: '2020-02-15' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabasePrincipalProperties
+* **properties**: [DatabasePrincipalProperties](#databaseprincipalproperties)
 * **type**: 'Microsoft.Kusto/clusters/databases/principalAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Kusto/clusters/principalAssignments@2020-02-15
@@ -84,7 +84,7 @@
 * **apiVersion**: '2020-02-15' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterPrincipalProperties
+* **properties**: [ClusterPrincipalProperties](#clusterprincipalproperties)
 * **type**: 'Microsoft.Kusto/clusters/principalAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -92,12 +92,12 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned' (Required)
-* **userAssignedIdentities**: Dictionary<string,Schemas62UserAssignedIdentitiesValue>
+* **userAssignedIdentities**: [Dictionary<string,Schemas62UserAssignedIdentitiesValue>](#dictionarystringschemas62userassignedidentitiesvalue)
 
 ## Dictionary<string,Schemas62UserAssignedIdentitiesValue>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: schemas:62_userAssignedIdentitiesValue
+* **Additional Properties Type**: [schemas:62_userAssignedIdentitiesValue](#schemas62userassignedidentitiesvalue)
 
 ## schemas:62_userAssignedIdentitiesValue
 ### Properties
@@ -110,15 +110,15 @@
 * **enableDiskEncryption**: bool
 * **enablePurge**: bool
 * **enableStreamingIngest**: bool
-* **keyVaultProperties**: KeyVaultProperties
-* **languageExtensions**: LanguageExtensionsList
-* **optimizedAutoscale**: OptimizedAutoscale
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
+* **languageExtensions**: [LanguageExtensionsList](#languageextensionslist)
+* **optimizedAutoscale**: [OptimizedAutoscale](#optimizedautoscale)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
 * **state**: 'Creating' | 'Deleted' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unavailable' | 'Updating' (ReadOnly)
 * **stateReason**: string (ReadOnly)
-* **trustedExternalTenants**: TrustedExternalTenant[]
+* **trustedExternalTenants**: [TrustedExternalTenant](#trustedexternaltenant)[]
 * **uri**: string (ReadOnly)
-* **virtualNetworkConfiguration**: VirtualNetworkConfiguration
+* **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration)
 
 ## KeyVaultProperties
 ### Properties
@@ -128,7 +128,7 @@
 
 ## LanguageExtensionsList
 ### Properties
-* **value**: LanguageExtension[]
+* **value**: [LanguageExtension](#languageextension)[]
 
 ## LanguageExtension
 ### Properties
@@ -173,7 +173,7 @@
 ## ReadOnlyFollowing
 ### Properties
 * **kind**: 'ReadOnlyFollowing' (Required)
-* **properties**: ReadOnlyFollowingDatabaseProperties
+* **properties**: [ReadOnlyFollowingDatabaseProperties](#readonlyfollowingdatabaseproperties)
 
 ## ReadOnlyFollowingDatabaseProperties
 ### Properties
@@ -183,7 +183,7 @@
 * **principalsModificationKind**: 'None' | 'Replace' | 'Union' (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
 * **softDeletePeriod**: string (ReadOnly)
-* **statistics**: DatabaseStatistics
+* **statistics**: [DatabaseStatistics](#databasestatistics)
 
 ## DatabaseStatistics
 ### Properties
@@ -192,7 +192,7 @@
 ## ReadWrite
 ### Properties
 * **kind**: 'ReadWrite' (Required)
-* **properties**: ReadWriteDatabaseProperties
+* **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties)
 
 ## ReadWriteDatabaseProperties
 ### Properties
@@ -200,12 +200,12 @@
 * **isFollowed**: bool (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
 * **softDeletePeriod**: string
-* **statistics**: DatabaseStatistics
+* **statistics**: [DatabaseStatistics](#databasestatistics)
 
 ## EventGrid
 ### Properties
 * **kind**: 'EventGrid' (Required)
-* **properties**: EventGridConnectionProperties
+* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties)
 
 ## EventGridConnectionProperties
 ### Properties
@@ -219,7 +219,7 @@
 ## EventHub
 ### Properties
 * **kind**: 'EventHub' (Required)
-* **properties**: EventHubConnectionProperties
+* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties)
 
 ## EventHubConnectionProperties
 ### Properties
@@ -234,7 +234,7 @@
 ## IotHub
 ### Properties
 * **kind**: 'IotHub' (Required)
-* **properties**: IotHubConnectionProperties
+* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties)
 
 ## IotHubConnectionProperties
 ### Properties

@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ActionGroup
-* **tags**: Dictionary<string,String>
+* **properties**: [ActionGroup](#actiongroup)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'microsoft.insights/actionGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Insights/metricAlerts@2018-03-01
@@ -18,23 +18,23 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MetricAlertProperties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [MetricAlertProperties](#metricalertproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Insights/metricAlerts' (ReadOnly, DeployTimeConstant)
 
 ## ActionGroup
 ### Properties
-* **automationRunbookReceivers**: AutomationRunbookReceiver[]
-* **azureAppPushReceivers**: AzureAppPushReceiver[]
-* **azureFunctionReceivers**: AzureFunctionReceiver[]
-* **emailReceivers**: EmailReceiver[]
+* **automationRunbookReceivers**: [AutomationRunbookReceiver](#automationrunbookreceiver)[]
+* **azureAppPushReceivers**: [AzureAppPushReceiver](#azureapppushreceiver)[]
+* **azureFunctionReceivers**: [AzureFunctionReceiver](#azurefunctionreceiver)[]
+* **emailReceivers**: [EmailReceiver](#emailreceiver)[]
 * **enabled**: bool (Required)
 * **groupShortName**: string (Required)
-* **itsmReceivers**: ItsmReceiver[]
-* **logicAppReceivers**: LogicAppReceiver[]
-* **smsReceivers**: SmsReceiver[]
-* **voiceReceivers**: VoiceReceiver[]
-* **webhookReceivers**: WebhookReceiver[]
+* **itsmReceivers**: [ItsmReceiver](#itsmreceiver)[]
+* **logicAppReceivers**: [LogicAppReceiver](#logicappreceiver)[]
+* **smsReceivers**: [SmsReceiver](#smsreceiver)[]
+* **voiceReceivers**: [VoiceReceiver](#voicereceiver)[]
+* **webhookReceivers**: [WebhookReceiver](#webhookreceiver)[]
 
 ## AutomationRunbookReceiver
 ### Properties
@@ -102,9 +102,9 @@
 
 ## MetricAlertProperties
 ### Properties
-* **actions**: MetricAlertAction[]
+* **actions**: [MetricAlertAction](#metricalertaction)[]
 * **autoMitigate**: bool
-* **criteria**: MetricAlertCriteria (Required)
+* **criteria**: [MetricAlertCriteria](#metricalertcriteria) (Required)
 * **description**: string
 * **enabled**: bool (Required)
 * **evaluationFrequency**: string (Required)
@@ -119,7 +119,7 @@
 ## MetricAlertAction
 ### Properties
 * **actionGroupId**: string
-* **webHookProperties**: Dictionary<string,String>
+* **webHookProperties**: [Dictionary<string,String>](#dictionarystringstring)
 
 ## Dictionary<string,String>
 ### Properties
@@ -131,12 +131,12 @@
 ### Base Properties
 ### Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria
 #### Properties
-* **allOf**: MultiMetricCriteria[]
+* **allOf**: [MultiMetricCriteria](#multimetriccriteria)[]
 * **odata.type**: 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria' (Required)
 
 ### Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria
 #### Properties
-* **allOf**: StaticThresholdCriterion[]
+* **allOf**: [StaticThresholdCriterion](#staticthresholdcriterion)[]
 * **odata.type**: 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria' (Required)
 
 ### Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria
@@ -149,13 +149,13 @@
 
 ## Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria
 ### Properties
-* **allOf**: MultiMetricCriteria[]
+* **allOf**: [MultiMetricCriteria](#multimetriccriteria)[]
 * **odata.type**: 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria' (Required)
 
 ## MultiMetricCriteria
 * **Discriminator**: criterionType
 ### Base Properties
-* **dimensions**: MetricDimension[]
+* **dimensions**: [MetricDimension](#metricdimension)[]
 * **metricName**: string (Required)
 * **metricNamespace**: string
 * **name**: string (Required)
@@ -165,14 +165,14 @@
 #### Properties
 * **alertSensitivity**: 'High' | 'Low' | 'Medium' (Required)
 * **criterionType**: 'DynamicThresholdCriterion' (Required)
-* **failingPeriods**: DynamicThresholdFailingPeriods (Required)
+* **failingPeriods**: [DynamicThresholdFailingPeriods](#dynamicthresholdfailingperiods) (Required)
 * **ignoreDataBefore**: string
 * **operator**: 'GreaterOrLessThan' | 'GreaterThan' | 'LessThan' (Required)
 
 ### StaticThresholdCriterion
 #### Properties
 * **criterionType**: 'StaticThresholdCriterion' (Required)
-* **dimensions**: MetricDimension[]
+* **dimensions**: [MetricDimension](#metricdimension)[]
 * **metricName**: string (Required)
 * **metricNamespace**: string
 * **name**: string (Required)
@@ -194,7 +194,7 @@
 ### Properties
 * **alertSensitivity**: 'High' | 'Low' | 'Medium' (Required)
 * **criterionType**: 'DynamicThresholdCriterion' (Required)
-* **failingPeriods**: DynamicThresholdFailingPeriods (Required)
+* **failingPeriods**: [DynamicThresholdFailingPeriods](#dynamicthresholdfailingperiods) (Required)
 * **ignoreDataBefore**: string
 * **operator**: 'GreaterOrLessThan' | 'GreaterThan' | 'LessThan' (Required)
 
@@ -206,7 +206,7 @@
 ## StaticThresholdCriterion
 ### Properties
 * **criterionType**: 'StaticThresholdCriterion' (Required)
-* **dimensions**: MetricDimension[]
+* **dimensions**: [MetricDimension](#metricdimension)[]
 * **metricName**: string (Required)
 * **metricNamespace**: string
 * **name**: string (Required)
@@ -219,7 +219,7 @@
 
 ## Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria
 ### Properties
-* **allOf**: StaticThresholdCriterion[]
+* **allOf**: [StaticThresholdCriterion](#staticthresholdcriterion)[]
 * **odata.type**: 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria' (Required)
 
 ## Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria

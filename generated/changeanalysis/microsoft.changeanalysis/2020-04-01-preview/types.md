@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ResourceIdentity
+* **identity**: [ResourceIdentity](#resourceidentity)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationProfileResourceProperties
-* **systemData**: SystemData
+* **properties**: [ConfigurationProfileResourceProperties](#configurationprofileresourceproperties)
+* **systemData**: [SystemData](#systemdata)
 * **type**: 'Microsoft.ChangeAnalysis/profile' (ReadOnly, DeployTimeConstant)
 
 ## ResourceIdentity
@@ -19,12 +19,12 @@
 
 ## ConfigurationProfileResourceProperties
 ### Properties
-* **notifications**: NotificationSettings
+* **notifications**: [NotificationSettings](#notificationsettings)
 
 ## NotificationSettings
 ### Properties
 * **activationState**: 'Disabled' | 'Enabled' | 'None'
-* **azureMonitorWorkspaceProperties**: AzureMonitorWorkspaceProperties
+* **azureMonitorWorkspaceProperties**: [AzureMonitorWorkspaceProperties](#azuremonitorworkspaceproperties)
 
 ## AzureMonitorWorkspaceProperties
 ### Properties

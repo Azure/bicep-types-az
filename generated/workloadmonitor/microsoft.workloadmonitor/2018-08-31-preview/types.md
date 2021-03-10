@@ -7,7 +7,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: NotificationSettingProperties (ReadOnly)
+* **properties**: [NotificationSettingProperties](#notificationsettingproperties) (ReadOnly)
 * **type**: 'Microsoft.WorkloadMonitor/notificationSettings' (ReadOnly, DeployTimeConstant)
 
 ## NotificationSettingProperties

@@ -8,18 +8,18 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ADCCatalogProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ADCCatalogProperties](#adccatalogproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DataCatalog/catalogs' (ReadOnly, DeployTimeConstant)
 
 ## ADCCatalogProperties
 ### Properties
-* **admins**: Principals[]
+* **admins**: [Principals](#principals)[]
 * **enableAutomaticUnitAdjustment**: bool
 * **sku**: 'Free' | 'Standard'
 * **successfullyProvisioned**: bool
 * **units**: int
-* **users**: Principals[]
+* **users**: [Principals](#principals)[]
 
 ## Principals
 ### Properties

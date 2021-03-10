@@ -8,28 +8,28 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WebApplicationFirewallPolicyProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [WebApplicationFirewallPolicyProperties](#webapplicationfirewallpolicyproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/FrontDoorWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant)
 
 ## WebApplicationFirewallPolicyProperties
 ### Properties
-* **customRules**: CustomRuleList
-* **frontendEndpointLinks**: FrontendEndpointLink[] (ReadOnly)
-* **managedRules**: ManagedRuleSetList
-* **policySettings**: PolicySettings
+* **customRules**: [CustomRuleList](#customrulelist)
+* **frontendEndpointLinks**: [FrontendEndpointLink](#frontendendpointlink)[] (ReadOnly)
+* **managedRules**: [ManagedRuleSetList](#managedrulesetlist)
+* **policySettings**: [PolicySettings](#policysettings)
 * **provisioningState**: string (ReadOnly)
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly)
 
 ## CustomRuleList
 ### Properties
-* **rules**: CustomRule[]
+* **rules**: [CustomRule](#customrule)[]
 
 ## CustomRule
 ### Properties
 * **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' (Required)
 * **enabledState**: 'Disabled' | 'Enabled'
-* **matchConditions**: MatchCondition[] (Required)
+* **matchConditions**: [MatchCondition](#matchcondition)[] (Required)
 * **name**: string
 * **priority**: int (Required)
 * **rateLimitDurationInMinutes**: int
@@ -51,18 +51,18 @@
 
 ## ManagedRuleSetList
 ### Properties
-* **managedRuleSets**: ManagedRuleSet[]
+* **managedRuleSets**: [ManagedRuleSet](#managedruleset)[]
 
 ## ManagedRuleSet
 ### Properties
-* **ruleGroupOverrides**: ManagedRuleGroupOverride[]
+* **ruleGroupOverrides**: [ManagedRuleGroupOverride](#managedrulegroupoverride)[]
 * **ruleSetType**: string (Required)
 * **ruleSetVersion**: string (Required)
 
 ## ManagedRuleGroupOverride
 ### Properties
 * **ruleGroupName**: string (Required)
-* **rules**: ManagedRuleOverride[]
+* **rules**: [ManagedRuleOverride](#managedruleoverride)[]
 
 ## ManagedRuleOverride
 ### Properties

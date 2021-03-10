@@ -5,13 +5,13 @@
 ### Properties
 * **apiVersion**: '2016-09-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string
 * **managedBy**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplianceDefinitionProperties (Required)
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [ApplianceDefinitionProperties](#appliancedefinitionproperties) (Required)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Solutions/applianceDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Solutions/appliances@2016-09-01-preview
@@ -19,15 +19,15 @@
 ### Properties
 * **apiVersion**: '2016-09-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **kind**: string
 * **location**: string
 * **managedBy**: string
 * **name**: string (Required, DeployTimeConstant)
-* **plan**: Plan
-* **properties**: ApplianceProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **plan**: [Plan](#plan)
+* **properties**: [ApplianceProperties](#applianceproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Solutions/appliances' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -38,8 +38,8 @@
 
 ## ApplianceDefinitionProperties
 ### Properties
-* **artifacts**: ApplianceArtifact[]
-* **authorizations**: ApplianceProviderAuthorization[] (Required)
+* **artifacts**: [ApplianceArtifact](#applianceartifact)[]
+* **authorizations**: [ApplianceProviderAuthorization](#applianceproviderauthorization)[] (Required)
 * **description**: string
 * **displayName**: string
 * **lockLevel**: 'CanNotDelete' | 'None' | 'ReadOnly' (Required)

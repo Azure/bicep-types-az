@@ -6,33 +6,33 @@
 ### Base Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ManagedServiceIdentity (Required)
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity) (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **systemData**: systemData (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Resources/deploymentScripts' (ReadOnly, DeployTimeConstant)
 ### AzureCLI
 #### Properties
 * **kind**: 'AzureCLI' (Required)
-* **properties**: AzureCliScriptProperties (Required)
+* **properties**: [AzureCliScriptProperties](#azurecliscriptproperties) (Required)
 
 ### AzurePowerShell
 #### Properties
 * **kind**: 'AzurePowerShell' (Required)
-* **properties**: AzurePowerShellScriptProperties (Required)
+* **properties**: [AzurePowerShellScriptProperties](#azurepowershellscriptproperties) (Required)
 
 
 ## ManagedServiceIdentity
 ### Properties
 * **tenantId**: string
 * **type**: 'UserAssigned'
-* **userAssignedIdentities**: Dictionary<string,UserAssignedIdentity>
+* **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity)
 
 ## Dictionary<string,UserAssignedIdentity>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: UserAssignedIdentity
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
 
 ## UserAssignedIdentity
 ### Properties
@@ -56,23 +56,23 @@
 ## AzureCLI
 ### Properties
 * **kind**: 'AzureCLI' (Required)
-* **properties**: AzureCliScriptProperties (Required)
+* **properties**: [AzureCliScriptProperties](#azurecliscriptproperties) (Required)
 
 ## AzureCliScriptProperties
 ### Properties
 * **arguments**: string
 * **azCliVersion**: string (Required)
 * **cleanupPreference**: 'Always' | 'OnExpiration' | 'OnSuccess'
-* **containerSettings**: ContainerConfiguration
-* **environmentVariables**: EnvironmentVariable[]
+* **containerSettings**: [ContainerConfiguration](#containerconfiguration)
+* **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]
 * **forceUpdateTag**: string
-* **outputs**: Dictionary<string,Object> (ReadOnly)
+* **outputs**: [Dictionary<string,Object>](#dictionarystringobject) (ReadOnly)
 * **primaryScriptUri**: string
 * **provisioningState**: 'Canceled' | 'Creating' | 'Failed' | 'ProvisioningResources' | 'Running' | 'Succeeded' (ReadOnly)
 * **retentionInterval**: string (Required)
 * **scriptContent**: string
-* **status**: ScriptStatus (ReadOnly)
-* **storageAccountSettings**: StorageAccountConfiguration
+* **status**: [ScriptStatus](#scriptstatus) (ReadOnly)
+* **storageAccountSettings**: [StorageAccountConfiguration](#storageaccountconfiguration)
 * **supportingScriptUris**: string[]
 * **timeout**: string
 
@@ -95,16 +95,16 @@
 ### Properties
 * **containerInstanceId**: string (ReadOnly)
 * **endTime**: string (ReadOnly)
-* **error**: ErrorResponse
+* **error**: [ErrorResponse](#errorresponse)
 * **expirationTime**: string (ReadOnly)
 * **startTime**: string (ReadOnly)
 * **storageAccountId**: string (ReadOnly)
 
 ## ErrorResponse
 ### Properties
-* **additionalInfo**: ErrorAdditionalInfo[] (ReadOnly)
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly)
 * **code**: string (ReadOnly)
-* **details**: ErrorResponse[] (ReadOnly)
+* **details**: [ErrorResponse](#errorresponse)[] (ReadOnly)
 * **message**: string (ReadOnly)
 * **target**: string (ReadOnly)
 
@@ -121,23 +121,23 @@
 ## AzurePowerShell
 ### Properties
 * **kind**: 'AzurePowerShell' (Required)
-* **properties**: AzurePowerShellScriptProperties (Required)
+* **properties**: [AzurePowerShellScriptProperties](#azurepowershellscriptproperties) (Required)
 
 ## AzurePowerShellScriptProperties
 ### Properties
 * **arguments**: string
 * **azPowerShellVersion**: string (Required)
 * **cleanupPreference**: 'Always' | 'OnExpiration' | 'OnSuccess'
-* **containerSettings**: ContainerConfiguration
-* **environmentVariables**: EnvironmentVariable[]
+* **containerSettings**: [ContainerConfiguration](#containerconfiguration)
+* **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]
 * **forceUpdateTag**: string
-* **outputs**: Dictionary<string,Object> (ReadOnly)
+* **outputs**: [Dictionary<string,Object>](#dictionarystringobject) (ReadOnly)
 * **primaryScriptUri**: string
 * **provisioningState**: 'Canceled' | 'Creating' | 'Failed' | 'ProvisioningResources' | 'Running' | 'Succeeded' (ReadOnly)
 * **retentionInterval**: string (Required)
 * **scriptContent**: string
-* **status**: ScriptStatus (ReadOnly)
-* **storageAccountSettings**: StorageAccountConfiguration
+* **status**: [ScriptStatus](#scriptstatus) (ReadOnly)
+* **storageAccountSettings**: [StorageAccountConfiguration](#storageaccountconfiguration)
 * **supportingScriptUris**: string[]
 * **timeout**: string
 

@@ -6,16 +6,16 @@
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:13_properties
-* **systemData**: SystemData
+* **properties**: [schemas:13_properties](#schemas13properties)
+* **systemData**: [SystemData](#systemdata)
 * **type**: 'Microsoft.KubernetesConfiguration/sourceControlConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## schemas:13_properties
 ### Properties
-* **complianceStatus**: ComplianceStatus (ReadOnly)
-* **configurationProtectedSettings**: Dictionary<string,String>
+* **complianceStatus**: [ComplianceStatus](#compliancestatus) (ReadOnly)
+* **configurationProtectedSettings**: [Dictionary<string,String>](#dictionarystringstring)
 * **enableHelmOperator**: bool
-* **helmOperatorProperties**: HelmOperatorProperties
+* **helmOperatorProperties**: [HelmOperatorProperties](#helmoperatorproperties)
 * **operatorInstanceName**: string
 * **operatorNamespace**: string
 * **operatorParams**: string

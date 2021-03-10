@@ -9,15 +9,15 @@
 * **kind**: string (ReadOnly)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ScheduledQueryRuleProperties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [ScheduledQueryRuleProperties](#scheduledqueryruleproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Insights/scheduledQueryRules' (ReadOnly, DeployTimeConstant)
 
 ## ScheduledQueryRuleProperties
 ### Properties
-* **actions**: Action[]
+* **actions**: [Action](#action)[]
 * **createdWithApiVersion**: string (ReadOnly)
-* **criteria**: ScheduledQueryRuleCriteria
+* **criteria**: [ScheduledQueryRuleCriteria](#scheduledqueryrulecriteria)
 * **description**: string
 * **displayName**: string
 * **enabled**: bool
@@ -33,7 +33,7 @@
 ## Action
 ### Properties
 * **actionGroupId**: string
-* **webHookProperties**: Dictionary<string,String>
+* **webHookProperties**: [Dictionary<string,String>](#dictionarystringstring)
 
 ## Dictionary<string,String>
 ### Properties
@@ -42,12 +42,12 @@
 
 ## ScheduledQueryRuleCriteria
 ### Properties
-* **allOf**: Condition[]
+* **allOf**: [Condition](#condition)[]
 
 ## Condition
 ### Properties
-* **dimensions**: Dimension[]
-* **failingPeriods**: schemas:6_failingPeriods
+* **dimensions**: [Dimension](#dimension)[]
+* **failingPeriods**: [schemas:6_failingPeriods](#schemas6failingperiods)
 * **metricMeasureColumn**: string
 * **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required)
 * **query**: string

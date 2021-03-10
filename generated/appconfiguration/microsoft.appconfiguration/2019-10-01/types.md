@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ResourceIdentity
+* **identity**: [ResourceIdentity](#resourceidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationStoreProperties
-* **sku**: Sku (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [ConfigurationStoreProperties](#configurationstoreproperties)
+* **sku**: [Sku](#sku) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.AppConfiguration/configurationStores' (ReadOnly, DeployTimeConstant)
 
 ## ResourceIdentity
@@ -18,12 +18,12 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: Dictionary<string,UserIdentity>
+* **userAssignedIdentities**: [Dictionary<string,UserIdentity>](#dictionarystringuseridentity)
 
 ## Dictionary<string,UserIdentity>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: UserIdentity
+* **Additional Properties Type**: [UserIdentity](#useridentity)
 
 ## UserIdentity
 ### Properties

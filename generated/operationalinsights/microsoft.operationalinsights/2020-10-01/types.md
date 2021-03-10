@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterProperties
-* **sku**: ClusterSku
-* **tags**: Dictionary<string,String>
+* **properties**: [ClusterProperties](#clusterproperties)
+* **sku**: [ClusterSku](#clustersku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces@2020-10-01
@@ -21,8 +21,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [WorkspaceProperties](#workspaceproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -30,12 +30,12 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required)
-* **userAssignedIdentities**: Dictionary<string,UserIdentityProperties>
+* **userAssignedIdentities**: [Dictionary<string,UserIdentityProperties>](#dictionarystringuseridentityproperties)
 
 ## Dictionary<string,UserIdentityProperties>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: UserIdentityProperties
+* **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
 
 ## UserIdentityProperties
 ### Properties
@@ -44,14 +44,14 @@
 
 ## ClusterProperties
 ### Properties
-* **associatedWorkspaces**: AssociatedWorkspace[]
+* **associatedWorkspaces**: [AssociatedWorkspace](#associatedworkspace)[]
 * **billingType**: 'Cluster' | 'Workspaces'
-* **capacityReservationProperties**: CapacityReservationProperties
+* **capacityReservationProperties**: [CapacityReservationProperties](#capacityreservationproperties)
 * **clusterId**: string (ReadOnly)
 * **createdDate**: string (ReadOnly)
 * **isAvailabilityZonesEnabled**: bool
 * **isDoubleEncryptionEnabled**: bool
-* **keyVaultProperties**: keyVaultProperties
+* **keyVaultProperties**: [keyVaultProperties](#keyvaultproperties)
 * **lastModifiedDate**: string (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' (ReadOnly)
 
@@ -89,13 +89,13 @@
 ### Properties
 * **customerId**: string (ReadOnly)
 * **forceCmkForQuery**: bool
-* **privateLinkScopedResources**: PrivateLinkScopedResource[] (ReadOnly)
+* **privateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating'
 * **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled'
 * **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled'
 * **retentionInDays**: int
-* **sku**: WorkspaceSku
-* **workspaceCapping**: WorkspaceCapping
+* **sku**: [WorkspaceSku](#workspacesku)
+* **workspaceCapping**: [WorkspaceCapping](#workspacecapping)
 
 ## PrivateLinkScopedResource
 ### Properties

@@ -7,7 +7,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:1_properties (Required)
+* **properties**: [schemas:1_properties](#schemas1properties) (Required)
 * **type**: 'Microsoft.Insights/dataCollectionRuleAssociations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Insights/dataCollectionRules@2019-11-01-preview
@@ -18,8 +18,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:1_properties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [schemas:1_properties](#schemas1properties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Insights/dataCollectionRules' (ReadOnly, DeployTimeConstant)
 
 ## schemas:1_properties

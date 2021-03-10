@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2019-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ResourceIdentity
+* **identity**: [ResourceIdentity](#resourceidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationStoreProperties
-* **sku**: Sku (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [ConfigurationStoreProperties](#configurationstoreproperties)
+* **sku**: [Sku](#sku) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.AppConfiguration/configurationStores' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.AppConfiguration/configurationStores/privateEndpointConnections@2019-11-01-preview
@@ -19,7 +19,7 @@
 * **apiVersion**: '2019-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: 'Microsoft.AppConfiguration/configurationStores/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## ResourceIdentity
@@ -27,12 +27,12 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: Dictionary<string,UserIdentity>
+* **userAssignedIdentities**: [Dictionary<string,UserIdentity>](#dictionarystringuseridentity)
 
 ## Dictionary<string,UserIdentity>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: UserIdentity
+* **Additional Properties Type**: [UserIdentity](#useridentity)
 
 ## UserIdentity
 ### Properties
@@ -42,15 +42,15 @@
 ## ConfigurationStoreProperties
 ### Properties
 * **creationDate**: string (ReadOnly)
-* **encryption**: EncryptionProperties
+* **encryption**: [EncryptionProperties](#encryptionproperties)
 * **endpoint**: string (ReadOnly)
-* **privateEndpointConnections**: PrivateEndpointConnectionReference[] (ReadOnly)
+* **privateEndpointConnections**: [PrivateEndpointConnectionReference](#privateendpointconnectionreference)[] (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 
 ## EncryptionProperties
 ### Properties
-* **keyVaultProperties**: KeyVaultProperties
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
 
 ## KeyVaultProperties
 ### Properties
@@ -61,13 +61,13 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## PrivateEndpoint

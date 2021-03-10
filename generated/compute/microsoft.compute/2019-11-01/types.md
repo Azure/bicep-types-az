@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: EncryptionSetIdentity
+* **identity**: [EncryptionSetIdentity](#encryptionsetidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EncryptionSetProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [EncryptionSetProperties](#encryptionsetproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Compute/diskEncryptionSets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Compute/disks@2019-11-01
@@ -21,9 +21,9 @@
 * **managedBy**: string (ReadOnly)
 * **managedByExtended**: string[] (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DiskProperties
-* **sku**: DiskSku
-* **tags**: Dictionary<string,String>
+* **properties**: [DiskProperties](#diskproperties)
+* **sku**: [DiskSku](#disksku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Compute/disks' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
 
@@ -35,9 +35,9 @@
 * **location**: string (Required)
 * **managedBy**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SnapshotProperties
-* **sku**: SnapshotSku
-* **tags**: Dictionary<string,String>
+* **properties**: [SnapshotProperties](#snapshotproperties)
+* **sku**: [SnapshotSku](#snapshotsku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant)
 
 ## EncryptionSetIdentity
@@ -48,14 +48,14 @@
 
 ## EncryptionSetProperties
 ### Properties
-* **activeKey**: KeyVaultAndKeyReference
-* **previousKeys**: KeyVaultAndKeyReference[] (ReadOnly)
+* **activeKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference)
+* **previousKeys**: [KeyVaultAndKeyReference](#keyvaultandkeyreference)[] (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 
 ## KeyVaultAndKeyReference
 ### Properties
 * **keyUrl**: string (Required)
-* **sourceVault**: SourceVault (Required)
+* **sourceVault**: [SourceVault](#sourcevault) (Required)
 
 ## SourceVault
 ### Properties
@@ -68,7 +68,7 @@
 
 ## DiskProperties
 ### Properties
-* **creationData**: CreationData (Required)
+* **creationData**: [CreationData](#creationdata) (Required)
 * **diskIOPSReadOnly**: int
 * **diskIOPSReadWrite**: int
 * **diskMBpsReadOnly**: int
@@ -76,21 +76,21 @@
 * **diskSizeBytes**: int (ReadOnly)
 * **diskSizeGB**: int
 * **diskState**: 'ActiveSAS' | 'ActiveUpload' | 'Attached' | 'ReadyToUpload' | 'Reserved' | 'Unattached' (ReadOnly)
-* **encryption**: Encryption
-* **encryptionSettingsCollection**: EncryptionSettingsCollection
+* **encryption**: [Encryption](#encryption)
+* **encryptionSettingsCollection**: [EncryptionSettingsCollection](#encryptionsettingscollection)
 * **hyperVGeneration**: 'V1' | 'V2'
 * **maxShares**: int
 * **osType**: 'Linux' | 'Windows'
 * **provisioningState**: string (ReadOnly)
-* **shareInfo**: ShareInfoElement[] (ReadOnly)
+* **shareInfo**: [ShareInfoElement](#shareinfoelement)[] (ReadOnly)
 * **timeCreated**: string (ReadOnly)
 * **uniqueId**: string (ReadOnly)
 
 ## CreationData
 ### Properties
 * **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Import' | 'Restore' | 'Upload' (Required)
-* **galleryImageReference**: ImageDiskReference
-* **imageReference**: ImageDiskReference
+* **galleryImageReference**: [ImageDiskReference](#imagediskreference)
+* **imageReference**: [ImageDiskReference](#imagediskreference)
 * **sourceResourceId**: string
 * **sourceUniqueId**: string (ReadOnly)
 * **sourceUri**: string
@@ -110,18 +110,18 @@
 ## EncryptionSettingsCollection
 ### Properties
 * **enabled**: bool (Required)
-* **encryptionSettings**: EncryptionSettingsElement[]
+* **encryptionSettings**: [EncryptionSettingsElement](#encryptionsettingselement)[]
 * **encryptionSettingsVersion**: string
 
 ## EncryptionSettingsElement
 ### Properties
-* **diskEncryptionKey**: KeyVaultAndSecretReference
-* **keyEncryptionKey**: KeyVaultAndKeyReference
+* **diskEncryptionKey**: [KeyVaultAndSecretReference](#keyvaultandsecretreference)
+* **keyEncryptionKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference)
 
 ## KeyVaultAndSecretReference
 ### Properties
 * **secretUrl**: string (Required)
-* **sourceVault**: SourceVault (Required)
+* **sourceVault**: [SourceVault](#sourcevault) (Required)
 
 ## ShareInfoElement
 ### Properties
@@ -139,11 +139,11 @@
 
 ## SnapshotProperties
 ### Properties
-* **creationData**: CreationData (Required)
+* **creationData**: [CreationData](#creationdata) (Required)
 * **diskSizeBytes**: int (ReadOnly)
 * **diskSizeGB**: int
-* **encryption**: Encryption
-* **encryptionSettingsCollection**: EncryptionSettingsCollection
+* **encryption**: [Encryption](#encryption)
+* **encryptionSettingsCollection**: [EncryptionSettingsCollection](#encryptionsettingscollection)
 * **hyperVGeneration**: 'V1' | 'V2'
 * **incremental**: bool
 * **osType**: 'Linux' | 'Windows'

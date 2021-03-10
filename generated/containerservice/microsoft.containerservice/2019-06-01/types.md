@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ManagedClusterIdentity
+* **identity**: [ManagedClusterIdentity](#managedclusteridentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedClusterProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ManagedClusterProperties](#managedclusterproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerService/managedClusters/agentPools@2019-06-01
@@ -18,7 +18,7 @@
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedClusterAgentPoolProfileProperties
+* **properties**: [ManagedClusterAgentPoolProfileProperties](#managedclusteragentpoolprofileproperties)
 * **type**: 'Microsoft.ContainerService/managedClusters/agentPools' (ReadOnly, DeployTimeConstant)
 
 ## ManagedClusterIdentity
@@ -29,22 +29,22 @@
 
 ## ManagedClusterProperties
 ### Properties
-* **aadProfile**: ManagedClusterAADProfile
-* **addonProfiles**: Dictionary<string,ManagedClusterAddonProfile>
-* **agentPoolProfiles**: ManagedClusterAgentPoolProfile[]
+* **aadProfile**: [ManagedClusterAADProfile](#managedclusteraadprofile)
+* **addonProfiles**: [Dictionary<string,ManagedClusterAddonProfile>](#dictionarystringmanagedclusteraddonprofile)
+* **agentPoolProfiles**: [ManagedClusterAgentPoolProfile](#managedclusteragentpoolprofile)[]
 * **apiServerAuthorizedIPRanges**: string[]
 * **dnsPrefix**: string
 * **enablePodSecurityPolicy**: bool
 * **enableRBAC**: bool
 * **fqdn**: string (ReadOnly)
 * **kubernetesVersion**: string
-* **linuxProfile**: ContainerServiceLinuxProfile
+* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile)
 * **maxAgentPools**: int (ReadOnly)
-* **networkProfile**: ContainerServiceNetworkProfile
+* **networkProfile**: [ContainerServiceNetworkProfile](#containerservicenetworkprofile)
 * **nodeResourceGroup**: string
 * **provisioningState**: string (ReadOnly)
-* **servicePrincipalProfile**: ManagedClusterServicePrincipalProfile
-* **windowsProfile**: ManagedClusterWindowsProfile
+* **servicePrincipalProfile**: [ManagedClusterServicePrincipalProfile](#managedclusterserviceprincipalprofile)
+* **windowsProfile**: [ManagedClusterWindowsProfile](#managedclusterwindowsprofile)
 
 ## ManagedClusterAADProfile
 ### Properties
@@ -56,11 +56,11 @@
 ## Dictionary<string,ManagedClusterAddonProfile>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ManagedClusterAddonProfile
+* **Additional Properties Type**: [ManagedClusterAddonProfile](#managedclusteraddonprofile)
 
 ## ManagedClusterAddonProfile
 ### Properties
-* **config**: Dictionary<string,String>
+* **config**: [Dictionary<string,String>](#dictionarystringstring)
 * **enabled**: bool (Required)
 
 ## Dictionary<string,String>
@@ -92,11 +92,11 @@
 ## ContainerServiceLinuxProfile
 ### Properties
 * **adminUsername**: string (Required)
-* **ssh**: ContainerServiceSshConfiguration (Required)
+* **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required)
 
 ## ContainerServiceSshConfiguration
 ### Properties
-* **publicKeys**: ContainerServiceSshPublicKey[] (Required)
+* **publicKeys**: [ContainerServiceSshPublicKey](#containerservicesshpublickey)[] (Required)
 
 ## ContainerServiceSshPublicKey
 ### Properties

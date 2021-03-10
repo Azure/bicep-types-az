@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ControllerProperties (Required)
-* **sku**: Sku (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [ControllerProperties](#controllerproperties) (Required)
+* **sku**: [Sku](#sku) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DevSpaces/controllers' (ReadOnly, DeployTimeConstant)
 
 ## ControllerProperties

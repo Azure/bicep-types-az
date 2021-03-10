@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.HybridData/dataManagers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HybridData/dataManagers/dataServices/jobDefinitions@2019-06-01
@@ -18,7 +18,7 @@
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: JobDefinitionProperties (Required)
+* **properties**: [JobDefinitionProperties](#jobdefinitionproperties) (Required)
 * **type**: 'Microsoft.HybridData/dataManagers/dataServices/jobDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HybridData/dataManagers/dataStores@2019-06-01
@@ -27,7 +27,7 @@
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DataStoreProperties (Required)
+* **properties**: [DataStoreProperties](#datastoreproperties) (Required)
 * **type**: 'Microsoft.HybridData/dataManagers/dataStores' (ReadOnly, DeployTimeConstant)
 
 ## Sku
@@ -42,13 +42,13 @@
 
 ## JobDefinitionProperties
 ### Properties
-* **customerSecrets**: CustomerSecret[]
+* **customerSecrets**: [CustomerSecret](#customersecret)[]
 * **dataServiceInput**: any
 * **dataSinkId**: string (Required)
 * **dataSourceId**: string (Required)
 * **lastModifiedTime**: string
 * **runLocation**: 'australiaeast' | 'australiasoutheast' | 'brazilsouth' | 'canadacentral' | 'canadaeast' | 'centralindia' | 'centralus' | 'eastasia' | 'eastus' | 'eastus2' | 'japaneast' | 'japanwest' | 'koreacentral' | 'koreasouth' | 'none' | 'northcentralus' | 'northeurope' | 'southcentralus' | 'southeastasia' | 'southindia' | 'uksouth' | 'ukwest' | 'westcentralus' | 'westeurope' | 'westindia' | 'westus' | 'westus2'
-* **schedules**: Schedule[]
+* **schedules**: [Schedule](#schedule)[]
 * **state**: 'Disabled' | 'Enabled' | 'Supported' (Required)
 * **userConfirmation**: 'NotRequired' | 'Required'
 
@@ -65,7 +65,7 @@
 
 ## DataStoreProperties
 ### Properties
-* **customerSecrets**: CustomerSecret[]
+* **customerSecrets**: [CustomerSecret](#customersecret)[]
 * **dataStoreTypeId**: string (Required)
 * **extendedProperties**: any
 * **repositoryId**: string

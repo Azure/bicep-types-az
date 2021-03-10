@@ -7,10 +7,10 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: HealthBotProperties
-* **sku**: Sku
-* **systemData**: SystemData (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [HealthBotProperties](#healthbotproperties)
+* **sku**: [Sku](#sku)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.HealthBot/healthBots' (ReadOnly, DeployTimeConstant)
 
 ## HealthBotProperties

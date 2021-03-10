@@ -6,7 +6,7 @@
 * **apiVersion**: '2019-10-11-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: NotebookResourceEntity
+* **properties**: [NotebookResourceEntity](#notebookresourceentity)
 * **type**: 'Microsoft.Notebooks/notebookProxies' (ReadOnly, DeployTimeConstant)
 
 ## NotebookResourceEntity

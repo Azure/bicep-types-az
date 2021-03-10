@@ -8,8 +8,8 @@
 * **kind**: string
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConnectorProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ConnectorProperties](#connectorproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.CostManagement/connectors' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CostManagement/reports@2018-08-01-preview
@@ -18,13 +18,13 @@
 * **apiVersion**: '2018-08-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ReportProperties
-* **tags**: Dictionary<string,String> (ReadOnly)
+* **properties**: [ReportProperties](#reportproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
 * **type**: 'Microsoft.CostManagement/reports' (ReadOnly, DeployTimeConstant)
 
 ## ConnectorProperties
 ### Properties
-* **collection**: ConnectorCollectionInfo (ReadOnly)
+* **collection**: [ConnectorCollectionInfo](#connectorcollectioninfo) (ReadOnly)
 * **createdOn**: string (ReadOnly)
 * **credentialsKey**: string
 * **credentialsSecret**: string
@@ -36,7 +36,7 @@
 
 ## ConnectorCollectionInfo
 ### Properties
-* **error**: ConnectorCollectionErrorInfo
+* **error**: [ConnectorCollectionErrorInfo](#connectorcollectionerrorinfo)
 * **lastRun**: string (ReadOnly)
 * **lastUpdated**: string (ReadOnly)
 * **sourceLastUpdated**: string (ReadOnly)
@@ -54,30 +54,30 @@
 
 ## ReportProperties
 ### Properties
-* **definition**: ReportDefinition (Required)
-* **deliveryInfo**: ReportDeliveryInfo (Required)
+* **definition**: [ReportDefinition](#reportdefinition) (Required)
+* **deliveryInfo**: [ReportDeliveryInfo](#reportdeliveryinfo) (Required)
 * **format**: 'Csv'
-* **schedule**: ReportSchedule
+* **schedule**: [ReportSchedule](#reportschedule)
 
 ## ReportDefinition
 ### Properties
-* **dataset**: ReportDataset
+* **dataset**: [ReportDataset](#reportdataset)
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' (Required)
-* **timePeriod**: ReportTimePeriod
+* **timePeriod**: [ReportTimePeriod](#reporttimeperiod)
 * **type**: string (Required)
 
 ## ReportDataset
 ### Properties
-* **aggregation**: Dictionary<string,ReportAggregation>
-* **configuration**: ReportDatasetConfiguration
-* **filter**: ReportFilter
+* **aggregation**: [Dictionary<string,ReportAggregation>](#dictionarystringreportaggregation)
+* **configuration**: [ReportDatasetConfiguration](#reportdatasetconfiguration)
+* **filter**: [ReportFilter](#reportfilter)
 * **granularity**: 'Daily' | 'Hourly'
-* **grouping**: ReportGrouping[]
+* **grouping**: [ReportGrouping](#reportgrouping)[]
 
 ## Dictionary<string,ReportAggregation>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ReportAggregation
+* **Additional Properties Type**: [ReportAggregation](#reportaggregation)
 
 ## ReportAggregation
 ### Properties
@@ -90,11 +90,11 @@
 
 ## ReportFilter
 ### Properties
-* **and**: ReportFilter[]
-* **dimension**: ReportComparisonExpression
-* **not**: ReportFilter
-* **or**: ReportFilter[]
-* **tag**: ReportComparisonExpression
+* **and**: [ReportFilter](#reportfilter)[]
+* **dimension**: [ReportComparisonExpression](#reportcomparisonexpression)
+* **not**: [ReportFilter](#reportfilter)
+* **or**: [ReportFilter](#reportfilter)[]
+* **tag**: [ReportComparisonExpression](#reportcomparisonexpression)
 
 ## ReportComparisonExpression
 ### Properties
@@ -114,7 +114,7 @@
 
 ## ReportDeliveryInfo
 ### Properties
-* **destination**: ReportDeliveryDestination (Required)
+* **destination**: [ReportDeliveryDestination](#reportdeliverydestination) (Required)
 
 ## ReportDeliveryDestination
 ### Properties
@@ -125,7 +125,7 @@
 ## ReportSchedule
 ### Properties
 * **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' (Required)
-* **recurrencePeriod**: ReportRecurrencePeriod
+* **recurrencePeriod**: [ReportRecurrencePeriod](#reportrecurrenceperiod)
 * **status**: 'Active' | 'Inactive'
 
 ## ReportRecurrencePeriod

@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AgentPoolProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [AgentPoolProperties](#agentpoolproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ContainerRegistry/registries/agentPools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerRegistry/registries/taskRuns@2019-06-01-preview
@@ -17,11 +17,11 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: IdentityProperties
+* **identity**: [IdentityProperties](#identityproperties)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TaskRunProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [TaskRunProperties](#taskrunproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.ContainerRegistry/registries/taskRuns' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerRegistry/registries/tasks@2019-06-01-preview
@@ -29,12 +29,12 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: IdentityProperties
+* **identity**: [IdentityProperties](#identityproperties)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TaskProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [TaskProperties](#taskproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant)
 
 ## AgentPoolProperties
@@ -64,12 +64,12 @@
 * **principalId**: string
 * **tenantId**: string
 * **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: Dictionary<string,UserIdentityProperties>
+* **userAssignedIdentities**: [Dictionary<string,UserIdentityProperties>](#dictionarystringuseridentityproperties)
 
 ## Dictionary<string,UserIdentityProperties>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: UserIdentityProperties
+* **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
 
 ## UserIdentityProperties
 ### Properties
@@ -80,8 +80,8 @@
 ### Properties
 * **forceUpdateTag**: string
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **runRequest**: RunRequest
-* **runResult**: Run (ReadOnly)
+* **runRequest**: [RunRequest](#runrequest)
+* **runResult**: [Run](#run) (ReadOnly)
 
 ## RunRequest
 * **Discriminator**: type
@@ -91,14 +91,14 @@
 * **logTemplate**: string
 ### DockerBuildRequest
 #### Properties
-* **agentConfiguration**: AgentProperties
-* **arguments**: Argument[]
-* **credentials**: Credentials
+* **agentConfiguration**: [AgentProperties](#agentproperties)
+* **arguments**: [Argument](#argument)[]
+* **credentials**: [Credentials](#credentials)
 * **dockerFilePath**: string (Required)
 * **imageNames**: string[]
 * **isPushEnabled**: bool
 * **noCache**: bool
-* **platform**: PlatformProperties (Required)
+* **platform**: [PlatformProperties](#platformproperties) (Required)
 * **sourceLocation**: string
 * **target**: string
 * **timeout**: int
@@ -106,45 +106,45 @@
 
 ### EncodedTaskRunRequest
 #### Properties
-* **agentConfiguration**: AgentProperties
-* **credentials**: Credentials
+* **agentConfiguration**: [AgentProperties](#agentproperties)
+* **credentials**: [Credentials](#credentials)
 * **encodedTaskContent**: string (Required)
 * **encodedValuesContent**: string
-* **platform**: PlatformProperties (Required)
+* **platform**: [PlatformProperties](#platformproperties) (Required)
 * **sourceLocation**: string
 * **timeout**: int
 * **type**: 'EncodedTaskRunRequest' (Required)
-* **values**: SetValue[]
+* **values**: [SetValue](#setvalue)[]
 
 ### FileTaskRunRequest
 #### Properties
-* **agentConfiguration**: AgentProperties
-* **credentials**: Credentials
-* **platform**: PlatformProperties (Required)
+* **agentConfiguration**: [AgentProperties](#agentproperties)
+* **credentials**: [Credentials](#credentials)
+* **platform**: [PlatformProperties](#platformproperties) (Required)
 * **sourceLocation**: string
 * **taskFilePath**: string (Required)
 * **timeout**: int
 * **type**: 'FileTaskRunRequest' (Required)
-* **values**: SetValue[]
+* **values**: [SetValue](#setvalue)[]
 * **valuesFilePath**: string
 
 ### TaskRunRequest
 #### Properties
-* **overrideTaskStepProperties**: OverrideTaskStepProperties
+* **overrideTaskStepProperties**: [OverrideTaskStepProperties](#overridetaskstepproperties)
 * **taskId**: string (Required)
 * **type**: 'TaskRunRequest' (Required)
 
 
 ## DockerBuildRequest
 ### Properties
-* **agentConfiguration**: AgentProperties
-* **arguments**: Argument[]
-* **credentials**: Credentials
+* **agentConfiguration**: [AgentProperties](#agentproperties)
+* **arguments**: [Argument](#argument)[]
+* **credentials**: [Credentials](#credentials)
 * **dockerFilePath**: string (Required)
 * **imageNames**: string[]
 * **isPushEnabled**: bool
 * **noCache**: bool
-* **platform**: PlatformProperties (Required)
+* **platform**: [PlatformProperties](#platformproperties) (Required)
 * **sourceLocation**: string
 * **target**: string
 * **timeout**: int
@@ -162,19 +162,19 @@
 
 ## Credentials
 ### Properties
-* **customRegistries**: Dictionary<string,CustomRegistryCredentials>
-* **sourceRegistry**: SourceRegistryCredentials
+* **customRegistries**: [Dictionary<string,CustomRegistryCredentials>](#dictionarystringcustomregistrycredentials)
+* **sourceRegistry**: [SourceRegistryCredentials](#sourceregistrycredentials)
 
 ## Dictionary<string,CustomRegistryCredentials>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: CustomRegistryCredentials
+* **Additional Properties Type**: [CustomRegistryCredentials](#customregistrycredentials)
 
 ## CustomRegistryCredentials
 ### Properties
 * **identity**: string
-* **password**: SecretObject
-* **userName**: SecretObject
+* **password**: [SecretObject](#secretobject)
+* **userName**: [SecretObject](#secretobject)
 
 ## SecretObject
 ### Properties
@@ -193,15 +193,15 @@
 
 ## EncodedTaskRunRequest
 ### Properties
-* **agentConfiguration**: AgentProperties
-* **credentials**: Credentials
+* **agentConfiguration**: [AgentProperties](#agentproperties)
+* **credentials**: [Credentials](#credentials)
 * **encodedTaskContent**: string (Required)
 * **encodedValuesContent**: string
-* **platform**: PlatformProperties (Required)
+* **platform**: [PlatformProperties](#platformproperties) (Required)
 * **sourceLocation**: string
 * **timeout**: int
 * **type**: 'EncodedTaskRunRequest' (Required)
-* **values**: SetValue[]
+* **values**: [SetValue](#setvalue)[]
 
 ## SetValue
 ### Properties
@@ -211,68 +211,68 @@
 
 ## FileTaskRunRequest
 ### Properties
-* **agentConfiguration**: AgentProperties
-* **credentials**: Credentials
-* **platform**: PlatformProperties (Required)
+* **agentConfiguration**: [AgentProperties](#agentproperties)
+* **credentials**: [Credentials](#credentials)
+* **platform**: [PlatformProperties](#platformproperties) (Required)
 * **sourceLocation**: string
 * **taskFilePath**: string (Required)
 * **timeout**: int
 * **type**: 'FileTaskRunRequest' (Required)
-* **values**: SetValue[]
+* **values**: [SetValue](#setvalue)[]
 * **valuesFilePath**: string
 
 ## TaskRunRequest
 ### Properties
-* **overrideTaskStepProperties**: OverrideTaskStepProperties
+* **overrideTaskStepProperties**: [OverrideTaskStepProperties](#overridetaskstepproperties)
 * **taskId**: string (Required)
 * **type**: 'TaskRunRequest' (Required)
 
 ## OverrideTaskStepProperties
 ### Properties
-* **arguments**: Argument[]
+* **arguments**: [Argument](#argument)[]
 * **contextPath**: string
 * **file**: string
 * **target**: string
 * **updateTriggerToken**: string
-* **values**: SetValue[]
+* **values**: [SetValue](#setvalue)[]
 
 ## Run
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: RunProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [RunProperties](#runproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: string (ReadOnly)
 
 ## RunProperties
 ### Properties
-* **agentConfiguration**: AgentProperties
+* **agentConfiguration**: [AgentProperties](#agentproperties)
 * **agentPoolName**: string
 * **createTime**: string
 * **customRegistries**: string[]
 * **finishTime**: string
-* **imageUpdateTrigger**: ImageUpdateTrigger
+* **imageUpdateTrigger**: [ImageUpdateTrigger](#imageupdatetrigger)
 * **isArchiveEnabled**: bool
 * **lastUpdatedTime**: string
-* **logArtifact**: ImageDescriptor (ReadOnly)
-* **outputImages**: ImageDescriptor[]
-* **platform**: PlatformProperties
+* **logArtifact**: [ImageDescriptor](#imagedescriptor) (ReadOnly)
+* **outputImages**: [ImageDescriptor](#imagedescriptor)[]
+* **platform**: [PlatformProperties](#platformproperties)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
 * **runErrorMessage**: string (ReadOnly)
 * **runId**: string
 * **runType**: 'AutoBuild' | 'AutoRun' | 'QuickBuild' | 'QuickRun'
 * **sourceRegistryAuth**: string
-* **sourceTrigger**: SourceTriggerDescriptor
+* **sourceTrigger**: [SourceTriggerDescriptor](#sourcetriggerdescriptor)
 * **startTime**: string
 * **status**: 'Canceled' | 'Error' | 'Failed' | 'Queued' | 'Running' | 'Started' | 'Succeeded' | 'Timeout'
 * **task**: string
-* **timerTrigger**: TimerTriggerDescriptor
+* **timerTrigger**: [TimerTriggerDescriptor](#timertriggerdescriptor)
 * **updateTriggerToken**: string
 
 ## ImageUpdateTrigger
 ### Properties
 * **id**: string
-* **images**: ImageDescriptor[]
+* **images**: [ImageDescriptor](#imagedescriptor)[]
 * **timestamp**: string
 
 ## ImageDescriptor
@@ -299,28 +299,28 @@
 
 ## TaskProperties
 ### Properties
-* **agentConfiguration**: AgentProperties
+* **agentConfiguration**: [AgentProperties](#agentproperties)
 * **agentPoolName**: string
 * **creationDate**: string (ReadOnly)
-* **credentials**: Credentials
+* **credentials**: [Credentials](#credentials)
 * **isSystemTask**: bool
 * **logTemplate**: string
-* **platform**: PlatformProperties
+* **platform**: [PlatformProperties](#platformproperties)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **status**: 'Disabled' | 'Enabled'
-* **step**: TaskStepProperties
+* **step**: [TaskStepProperties](#taskstepproperties)
 * **timeout**: int
-* **trigger**: TriggerProperties
+* **trigger**: [TriggerProperties](#triggerproperties)
 
 ## TaskStepProperties
 * **Discriminator**: type
 ### Base Properties
-* **baseImageDependencies**: BaseImageDependency[] (ReadOnly)
+* **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly)
 * **contextAccessToken**: string
 * **contextPath**: string
 ### Docker
 #### Properties
-* **arguments**: Argument[]
+* **arguments**: [Argument](#argument)[]
 * **dockerFilePath**: string (Required)
 * **imageNames**: string[]
 * **isPushEnabled**: bool
@@ -333,13 +333,13 @@
 * **encodedTaskContent**: string (Required)
 * **encodedValuesContent**: string
 * **type**: 'EncodedTask' (Required)
-* **values**: SetValue[]
+* **values**: [SetValue](#setvalue)[]
 
 ### FileTask
 #### Properties
 * **taskFilePath**: string (Required)
 * **type**: 'FileTask' (Required)
-* **values**: SetValue[]
+* **values**: [SetValue](#setvalue)[]
 * **valuesFilePath**: string
 
 
@@ -353,7 +353,7 @@
 
 ## Docker
 ### Properties
-* **arguments**: Argument[]
+* **arguments**: [Argument](#argument)[]
 * **dockerFilePath**: string (Required)
 * **imageNames**: string[]
 * **isPushEnabled**: bool
@@ -366,20 +366,20 @@
 * **encodedTaskContent**: string (Required)
 * **encodedValuesContent**: string
 * **type**: 'EncodedTask' (Required)
-* **values**: SetValue[]
+* **values**: [SetValue](#setvalue)[]
 
 ## FileTask
 ### Properties
 * **taskFilePath**: string (Required)
 * **type**: 'FileTask' (Required)
-* **values**: SetValue[]
+* **values**: [SetValue](#setvalue)[]
 * **valuesFilePath**: string
 
 ## TriggerProperties
 ### Properties
-* **baseImageTrigger**: BaseImageTrigger
-* **sourceTriggers**: SourceTrigger[]
-* **timerTriggers**: TimerTrigger[]
+* **baseImageTrigger**: [BaseImageTrigger](#baseimagetrigger)
+* **sourceTriggers**: [SourceTrigger](#sourcetrigger)[]
+* **timerTriggers**: [TimerTrigger](#timertrigger)[]
 
 ## BaseImageTrigger
 ### Properties
@@ -392,7 +392,7 @@
 ## SourceTrigger
 ### Properties
 * **name**: string (Required)
-* **sourceRepository**: SourceProperties (Required)
+* **sourceRepository**: [SourceProperties](#sourceproperties) (Required)
 * **sourceTriggerEvents**: 'commit' | 'pullrequest'[] (Required)
 * **status**: 'Disabled' | 'Enabled'
 
@@ -400,7 +400,7 @@
 ### Properties
 * **branch**: string
 * **repositoryUrl**: string (Required)
-* **sourceControlAuthProperties**: AuthInfo
+* **sourceControlAuthProperties**: [AuthInfo](#authinfo)
 * **sourceControlType**: 'Github' | 'VisualStudioTeamService' (Required)
 
 ## AuthInfo

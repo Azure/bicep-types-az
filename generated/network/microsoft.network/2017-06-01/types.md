@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationGatewayPropertiesFormat
-* **tags**: Dictionary<string,String>
+* **properties**: [ApplicationGatewayPropertiesFormat](#applicationgatewaypropertiesformat)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/applicationGateways' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/connections@2017-06-01
@@ -20,8 +20,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkGatewayConnectionPropertiesFormat (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [VirtualNetworkGatewayConnectionPropertiesFormat](#virtualnetworkgatewayconnectionpropertiesformat) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/connections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/expressRouteCircuits@2017-06-01
@@ -32,9 +32,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ExpressRouteCircuitPropertiesFormat
-* **sku**: ExpressRouteCircuitSku
-* **tags**: Dictionary<string,String>
+* **properties**: [ExpressRouteCircuitPropertiesFormat](#expressroutecircuitpropertiesformat)
+* **sku**: [ExpressRouteCircuitSku](#expressroutecircuitsku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/expressRouteCircuits' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/expressRouteCircuits/authorizations@2017-06-01
@@ -44,7 +44,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AuthorizationPropertiesFormat
+* **properties**: [AuthorizationPropertiesFormat](#authorizationpropertiesformat)
 * **type**: 'Microsoft.Network/expressRouteCircuits/authorizations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/expressRouteCircuits/peerings@2017-06-01
@@ -54,7 +54,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ExpressRouteCircuitPeeringPropertiesFormat
+* **properties**: [ExpressRouteCircuitPeeringPropertiesFormat](#expressroutecircuitpeeringpropertiesformat)
 * **type**: 'Microsoft.Network/expressRouteCircuits/peerings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/loadBalancers@2017-06-01
@@ -65,8 +65,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LoadBalancerPropertiesFormat
-* **tags**: Dictionary<string,String>
+* **properties**: [LoadBalancerPropertiesFormat](#loadbalancerpropertiesformat)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/loadBalancers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/loadBalancers/inboundNatRules@2017-06-01
@@ -76,7 +76,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: InboundNatRulePropertiesFormat
+* **properties**: [InboundNatRulePropertiesFormat](#inboundnatrulepropertiesformat)
 * **type**: 'Microsoft.Network/loadBalancers/inboundNatRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/localNetworkGateways@2017-06-01
@@ -87,8 +87,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LocalNetworkGatewayPropertiesFormat (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [LocalNetworkGatewayPropertiesFormat](#localnetworkgatewaypropertiesformat) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/localNetworkGateways' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/networkInterfaces@2017-06-01
@@ -99,8 +99,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: NetworkInterfacePropertiesFormat
-* **tags**: Dictionary<string,String>
+* **properties**: [NetworkInterfacePropertiesFormat](#networkinterfacepropertiesformat)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/networkInterfaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/networkSecurityGroups@2017-06-01
@@ -111,8 +111,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: NetworkSecurityGroupPropertiesFormat
-* **tags**: Dictionary<string,String>
+* **properties**: [NetworkSecurityGroupPropertiesFormat](#networksecuritygrouppropertiesformat)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/networkSecurityGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/networkSecurityGroups/securityRules@2017-06-01
@@ -122,7 +122,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityRulePropertiesFormat
+* **properties**: [SecurityRulePropertiesFormat](#securityrulepropertiesformat)
 * **type**: 'Microsoft.Network/networkSecurityGroups/securityRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/networkWatchers@2017-06-01
@@ -133,8 +133,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: NetworkWatcherPropertiesFormat
-* **tags**: Dictionary<string,String>
+* **properties**: [NetworkWatcherPropertiesFormat](#networkwatcherpropertiesformat)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/networkWatchers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/networkWatchers/packetCaptures@2017-06-01
@@ -144,7 +144,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PacketCaptureParameters (Required)
+* **properties**: [PacketCaptureParameters](#packetcaptureparameters) (Required)
 * **type**: 'Microsoft.Network/networkWatchers/packetCaptures' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/publicIPAddresses@2017-06-01
@@ -155,8 +155,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PublicIPAddressPropertiesFormat
-* **tags**: Dictionary<string,String>
+* **properties**: [PublicIPAddressPropertiesFormat](#publicipaddresspropertiesformat)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/publicIPAddresses' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
 
@@ -168,8 +168,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RouteFilterPropertiesFormat
-* **tags**: Dictionary<string,String>
+* **properties**: [RouteFilterPropertiesFormat](#routefilterpropertiesformat)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/routeFilters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/routeFilters/routeFilterRules@2017-06-01
@@ -180,8 +180,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RouteFilterRulePropertiesFormat
-* **tags**: Dictionary<string,String>
+* **properties**: [RouteFilterRulePropertiesFormat](#routefilterrulepropertiesformat)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/routeFilters/routeFilterRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/routeTables@2017-06-01
@@ -192,8 +192,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RouteTablePropertiesFormat
-* **tags**: Dictionary<string,String>
+* **properties**: [RouteTablePropertiesFormat](#routetablepropertiesformat)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/routeTables' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/routeTables/routes@2017-06-01
@@ -203,7 +203,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RoutePropertiesFormat
+* **properties**: [RoutePropertiesFormat](#routepropertiesformat)
 * **type**: 'Microsoft.Network/routeTables/routes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/virtualNetworkGateways@2017-06-01
@@ -214,8 +214,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkGatewayPropertiesFormat (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [VirtualNetworkGatewayPropertiesFormat](#virtualnetworkgatewaypropertiesformat) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/virtualNetworkGateways' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/virtualNetworks@2017-06-01
@@ -226,8 +226,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkPropertiesFormat
-* **tags**: Dictionary<string,String>
+* **properties**: [VirtualNetworkPropertiesFormat](#virtualnetworkpropertiesformat)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/virtualNetworks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/virtualNetworks/subnets@2017-06-01
@@ -237,7 +237,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SubnetPropertiesFormat
+* **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat)
 * **type**: 'Microsoft.Network/virtualNetworks/subnets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2017-06-01
@@ -247,36 +247,36 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkPeeringPropertiesFormat
+* **properties**: [VirtualNetworkPeeringPropertiesFormat](#virtualnetworkpeeringpropertiesformat)
 * **type**: 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationGatewayPropertiesFormat
 ### Properties
-* **authenticationCertificates**: ApplicationGatewayAuthenticationCertificate[]
-* **backendAddressPools**: ApplicationGatewayBackendAddressPool[]
-* **backendHttpSettingsCollection**: ApplicationGatewayBackendHttpSettings[]
-* **frontendIPConfigurations**: ApplicationGatewayFrontendIPConfiguration[]
-* **frontendPorts**: ApplicationGatewayFrontendPort[]
-* **gatewayIPConfigurations**: ApplicationGatewayIPConfiguration[]
-* **httpListeners**: ApplicationGatewayHttpListener[]
+* **authenticationCertificates**: [ApplicationGatewayAuthenticationCertificate](#applicationgatewayauthenticationcertificate)[]
+* **backendAddressPools**: [ApplicationGatewayBackendAddressPool](#applicationgatewaybackendaddresspool)[]
+* **backendHttpSettingsCollection**: [ApplicationGatewayBackendHttpSettings](#applicationgatewaybackendhttpsettings)[]
+* **frontendIPConfigurations**: [ApplicationGatewayFrontendIPConfiguration](#applicationgatewayfrontendipconfiguration)[]
+* **frontendPorts**: [ApplicationGatewayFrontendPort](#applicationgatewayfrontendport)[]
+* **gatewayIPConfigurations**: [ApplicationGatewayIPConfiguration](#applicationgatewayipconfiguration)[]
+* **httpListeners**: [ApplicationGatewayHttpListener](#applicationgatewayhttplistener)[]
 * **operationalState**: 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
-* **probes**: ApplicationGatewayProbe[]
+* **probes**: [ApplicationGatewayProbe](#applicationgatewayprobe)[]
 * **provisioningState**: string
-* **redirectConfigurations**: ApplicationGatewayRedirectConfiguration[]
-* **requestRoutingRules**: ApplicationGatewayRequestRoutingRule[]
+* **redirectConfigurations**: [ApplicationGatewayRedirectConfiguration](#applicationgatewayredirectconfiguration)[]
+* **requestRoutingRules**: [ApplicationGatewayRequestRoutingRule](#applicationgatewayrequestroutingrule)[]
 * **resourceGuid**: string
-* **sku**: ApplicationGatewaySku
-* **sslCertificates**: ApplicationGatewaySslCertificate[]
-* **sslPolicy**: ApplicationGatewaySslPolicy
-* **urlPathMaps**: ApplicationGatewayUrlPathMap[]
-* **webApplicationFirewallConfiguration**: ApplicationGatewayWebApplicationFirewallConfiguration
+* **sku**: [ApplicationGatewaySku](#applicationgatewaysku)
+* **sslCertificates**: [ApplicationGatewaySslCertificate](#applicationgatewaysslcertificate)[]
+* **sslPolicy**: [ApplicationGatewaySslPolicy](#applicationgatewaysslpolicy)
+* **urlPathMaps**: [ApplicationGatewayUrlPathMap](#applicationgatewayurlpathmap)[]
+* **webApplicationFirewallConfiguration**: [ApplicationGatewayWebApplicationFirewallConfiguration](#applicationgatewaywebapplicationfirewallconfiguration)
 
 ## ApplicationGatewayAuthenticationCertificate
 ### Properties
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: ApplicationGatewayAuthenticationCertificatePropertiesFormat
+* **properties**: [ApplicationGatewayAuthenticationCertificatePropertiesFormat](#applicationgatewayauthenticationcertificatepropertiesformat)
 * **type**: string
 
 ## ApplicationGatewayAuthenticationCertificatePropertiesFormat
@@ -289,13 +289,13 @@
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: ApplicationGatewayBackendAddressPoolPropertiesFormat
+* **properties**: [ApplicationGatewayBackendAddressPoolPropertiesFormat](#applicationgatewaybackendaddresspoolpropertiesformat)
 * **type**: string
 
 ## ApplicationGatewayBackendAddressPoolPropertiesFormat
 ### Properties
-* **backendAddresses**: ApplicationGatewayBackendAddress[]
-* **backendIPConfigurations**: NetworkInterfaceIPConfiguration[]
+* **backendAddresses**: [ApplicationGatewayBackendAddress](#applicationgatewaybackendaddress)[]
+* **backendIPConfigurations**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration)[]
 * **provisioningState**: string
 
 ## ApplicationGatewayBackendAddress
@@ -308,33 +308,33 @@
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: NetworkInterfaceIPConfigurationPropertiesFormat
+* **properties**: [NetworkInterfaceIPConfigurationPropertiesFormat](#networkinterfaceipconfigurationpropertiesformat)
 
 ## NetworkInterfaceIPConfigurationPropertiesFormat
 ### Properties
-* **applicationGatewayBackendAddressPools**: ApplicationGatewayBackendAddressPool[]
-* **loadBalancerBackendAddressPools**: BackendAddressPool[]
-* **loadBalancerInboundNatRules**: InboundNatRule[]
+* **applicationGatewayBackendAddressPools**: [ApplicationGatewayBackendAddressPool](#applicationgatewaybackendaddresspool)[]
+* **loadBalancerBackendAddressPools**: [BackendAddressPool](#backendaddresspool)[]
+* **loadBalancerInboundNatRules**: [InboundNatRule](#inboundnatrule)[]
 * **primary**: bool
 * **privateIPAddress**: string
 * **privateIPAddressVersion**: 'IPv4' | 'IPv6'
 * **privateIPAllocationMethod**: 'Dynamic' | 'Static'
 * **provisioningState**: string
-* **publicIPAddress**: PublicIPAddress
-* **subnet**: Subnet
+* **publicIPAddress**: [PublicIPAddress](#publicipaddress)
+* **subnet**: [Subnet](#subnet)
 
 ## BackendAddressPool
 ### Properties
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: BackendAddressPoolPropertiesFormat
+* **properties**: [BackendAddressPoolPropertiesFormat](#backendaddresspoolpropertiesformat)
 
 ## BackendAddressPoolPropertiesFormat
 ### Properties
-* **backendIPConfigurations**: NetworkInterfaceIPConfiguration[] (ReadOnly)
-* **loadBalancingRules**: SubResource[] (ReadOnly)
-* **outboundNatRule**: SubResource (ReadOnly)
+* **backendIPConfigurations**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration)[] (ReadOnly)
+* **loadBalancingRules**: [SubResource](#subresource)[] (ReadOnly)
+* **outboundNatRule**: [SubResource](#subresource) (ReadOnly)
 * **provisioningState**: string
 
 ## SubResource
@@ -346,14 +346,14 @@
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: InboundNatRulePropertiesFormat
+* **properties**: [InboundNatRulePropertiesFormat](#inboundnatrulepropertiesformat)
 
 ## InboundNatRulePropertiesFormat
 ### Properties
-* **backendIPConfiguration**: NetworkInterfaceIPConfiguration (ReadOnly)
+* **backendIPConfiguration**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration) (ReadOnly)
 * **backendPort**: int
 * **enableFloatingIP**: bool
-* **frontendIPConfiguration**: SubResource
+* **frontendIPConfiguration**: [SubResource](#subresource)
 * **frontendPort**: int
 * **idleTimeoutInMinutes**: int
 * **protocol**: 'Tcp' | 'Udp'
@@ -365,17 +365,17 @@
 * **id**: string
 * **location**: string
 * **name**: string (ReadOnly)
-* **properties**: PublicIPAddressPropertiesFormat
-* **tags**: Dictionary<string,String>
+* **properties**: [PublicIPAddressPropertiesFormat](#publicipaddresspropertiesformat)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: string (ReadOnly)
 * **zones**: string[]
 
 ## PublicIPAddressPropertiesFormat
 ### Properties
-* **dnsSettings**: PublicIPAddressDnsSettings
+* **dnsSettings**: [PublicIPAddressDnsSettings](#publicipaddressdnssettings)
 * **idleTimeoutInMinutes**: int
 * **ipAddress**: string
-* **ipConfiguration**: IPConfiguration (ReadOnly)
+* **ipConfiguration**: [IPConfiguration](#ipconfiguration) (ReadOnly)
 * **provisioningState**: string
 * **publicIPAddressVersion**: 'IPv4' | 'IPv6'
 * **publicIPAllocationMethod**: 'Dynamic' | 'Static'
@@ -392,32 +392,32 @@
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: IPConfigurationPropertiesFormat
+* **properties**: [IPConfigurationPropertiesFormat](#ipconfigurationpropertiesformat)
 
 ## IPConfigurationPropertiesFormat
 ### Properties
 * **privateIPAddress**: string
 * **privateIPAllocationMethod**: 'Dynamic' | 'Static'
 * **provisioningState**: string
-* **publicIPAddress**: PublicIPAddress
-* **subnet**: Subnet
+* **publicIPAddress**: [PublicIPAddress](#publicipaddress)
+* **subnet**: [Subnet](#subnet)
 
 ## Subnet
 ### Properties
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: SubnetPropertiesFormat
+* **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat)
 
 ## SubnetPropertiesFormat
 ### Properties
 * **addressPrefix**: string
-* **ipConfigurations**: IPConfiguration[] (ReadOnly)
-* **networkSecurityGroup**: NetworkSecurityGroup
+* **ipConfigurations**: [IPConfiguration](#ipconfiguration)[] (ReadOnly)
+* **networkSecurityGroup**: [NetworkSecurityGroup](#networksecuritygroup)
 * **provisioningState**: string
-* **resourceNavigationLinks**: ResourceNavigationLink[]
-* **routeTable**: RouteTable
-* **serviceEndpoints**: ServiceEndpointPropertiesFormat[]
+* **resourceNavigationLinks**: [ResourceNavigationLink](#resourcenavigationlink)[]
+* **routeTable**: [RouteTable](#routetable)
+* **serviceEndpoints**: [ServiceEndpointPropertiesFormat](#serviceendpointpropertiesformat)[]
 
 ## NetworkSecurityGroup
 ### Properties
@@ -425,25 +425,25 @@
 * **id**: string
 * **location**: string
 * **name**: string (ReadOnly)
-* **properties**: NetworkSecurityGroupPropertiesFormat
-* **tags**: Dictionary<string,String>
+* **properties**: [NetworkSecurityGroupPropertiesFormat](#networksecuritygrouppropertiesformat)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: string (ReadOnly)
 
 ## NetworkSecurityGroupPropertiesFormat
 ### Properties
-* **defaultSecurityRules**: SecurityRule[]
-* **networkInterfaces**: NetworkInterface[] (ReadOnly)
+* **defaultSecurityRules**: [SecurityRule](#securityrule)[]
+* **networkInterfaces**: [NetworkInterface](#networkinterface)[] (ReadOnly)
 * **provisioningState**: string
 * **resourceGuid**: string
-* **securityRules**: SecurityRule[]
-* **subnets**: Subnet[] (ReadOnly)
+* **securityRules**: [SecurityRule](#securityrule)[]
+* **subnets**: [Subnet](#subnet)[] (ReadOnly)
 
 ## SecurityRule
 ### Properties
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: SecurityRulePropertiesFormat
+* **properties**: [SecurityRulePropertiesFormat](#securityrulepropertiesformat)
 
 ## SecurityRulePropertiesFormat
 ### Properties
@@ -468,22 +468,22 @@
 * **id**: string
 * **location**: string
 * **name**: string (ReadOnly)
-* **properties**: NetworkInterfacePropertiesFormat
-* **tags**: Dictionary<string,String>
+* **properties**: [NetworkInterfacePropertiesFormat](#networkinterfacepropertiesformat)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: string (ReadOnly)
 
 ## NetworkInterfacePropertiesFormat
 ### Properties
-* **dnsSettings**: NetworkInterfaceDnsSettings
+* **dnsSettings**: [NetworkInterfaceDnsSettings](#networkinterfacednssettings)
 * **enableAcceleratedNetworking**: bool
 * **enableIPForwarding**: bool
-* **ipConfigurations**: NetworkInterfaceIPConfiguration[]
+* **ipConfigurations**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration)[]
 * **macAddress**: string
-* **networkSecurityGroup**: NetworkSecurityGroup
+* **networkSecurityGroup**: [NetworkSecurityGroup](#networksecuritygroup)
 * **primary**: bool
 * **provisioningState**: string
 * **resourceGuid**: string
-* **virtualMachine**: SubResource
+* **virtualMachine**: [SubResource](#subresource)
 
 ## NetworkInterfaceDnsSettings
 ### Properties
@@ -508,7 +508,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string
 * **name**: string
-* **properties**: ResourceNavigationLinkFormat
+* **properties**: [ResourceNavigationLinkFormat](#resourcenavigationlinkformat)
 
 ## ResourceNavigationLinkFormat
 ### Properties
@@ -522,22 +522,22 @@
 * **id**: string
 * **location**: string
 * **name**: string (ReadOnly)
-* **properties**: RouteTablePropertiesFormat
-* **tags**: Dictionary<string,String>
+* **properties**: [RouteTablePropertiesFormat](#routetablepropertiesformat)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: string (ReadOnly)
 
 ## RouteTablePropertiesFormat
 ### Properties
 * **provisioningState**: string
-* **routes**: Route[]
-* **subnets**: Subnet[] (ReadOnly)
+* **routes**: [Route](#route)[]
+* **subnets**: [Subnet](#subnet)[] (ReadOnly)
 
 ## Route
 ### Properties
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: RoutePropertiesFormat
+* **properties**: [RoutePropertiesFormat](#routepropertiesformat)
 
 ## RoutePropertiesFormat
 ### Properties
@@ -567,20 +567,20 @@
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: ApplicationGatewayBackendHttpSettingsPropertiesFormat
+* **properties**: [ApplicationGatewayBackendHttpSettingsPropertiesFormat](#applicationgatewaybackendhttpsettingspropertiesformat)
 * **type**: string
 
 ## ApplicationGatewayBackendHttpSettingsPropertiesFormat
 ### Properties
 * **affinityCookieName**: string
-* **authenticationCertificates**: SubResource[]
-* **connectionDraining**: ApplicationGatewayConnectionDraining
+* **authenticationCertificates**: [SubResource](#subresource)[]
+* **connectionDraining**: [ApplicationGatewayConnectionDraining](#applicationgatewayconnectiondraining)
 * **cookieBasedAffinity**: 'Disabled' | 'Enabled'
 * **hostName**: string
 * **path**: string
 * **pickHostNameFromBackendAddress**: bool
 * **port**: int
-* **probe**: SubResource
+* **probe**: [SubResource](#subresource)
 * **probeEnabled**: bool
 * **protocol**: 'Http' | 'Https'
 * **provisioningState**: string
@@ -596,7 +596,7 @@
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: ApplicationGatewayFrontendIPConfigurationPropertiesFormat
+* **properties**: [ApplicationGatewayFrontendIPConfigurationPropertiesFormat](#applicationgatewayfrontendipconfigurationpropertiesformat)
 * **type**: string
 
 ## ApplicationGatewayFrontendIPConfigurationPropertiesFormat
@@ -604,15 +604,15 @@
 * **privateIPAddress**: string
 * **privateIPAllocationMethod**: 'Dynamic' | 'Static'
 * **provisioningState**: string
-* **publicIPAddress**: SubResource
-* **subnet**: SubResource
+* **publicIPAddress**: [SubResource](#subresource)
+* **subnet**: [SubResource](#subresource)
 
 ## ApplicationGatewayFrontendPort
 ### Properties
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: ApplicationGatewayFrontendPortPropertiesFormat
+* **properties**: [ApplicationGatewayFrontendPortPropertiesFormat](#applicationgatewayfrontendportpropertiesformat)
 * **type**: string
 
 ## ApplicationGatewayFrontendPortPropertiesFormat
@@ -625,45 +625,45 @@
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: ApplicationGatewayIPConfigurationPropertiesFormat
+* **properties**: [ApplicationGatewayIPConfigurationPropertiesFormat](#applicationgatewayipconfigurationpropertiesformat)
 * **type**: string
 
 ## ApplicationGatewayIPConfigurationPropertiesFormat
 ### Properties
 * **provisioningState**: string
-* **subnet**: SubResource
+* **subnet**: [SubResource](#subresource)
 
 ## ApplicationGatewayHttpListener
 ### Properties
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: ApplicationGatewayHttpListenerPropertiesFormat
+* **properties**: [ApplicationGatewayHttpListenerPropertiesFormat](#applicationgatewayhttplistenerpropertiesformat)
 * **type**: string
 
 ## ApplicationGatewayHttpListenerPropertiesFormat
 ### Properties
-* **frontendIPConfiguration**: SubResource
-* **frontendPort**: SubResource
+* **frontendIPConfiguration**: [SubResource](#subresource)
+* **frontendPort**: [SubResource](#subresource)
 * **hostName**: string
 * **protocol**: 'Http' | 'Https'
 * **provisioningState**: string
 * **requireServerNameIndication**: bool
-* **sslCertificate**: SubResource
+* **sslCertificate**: [SubResource](#subresource)
 
 ## ApplicationGatewayProbe
 ### Properties
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: ApplicationGatewayProbePropertiesFormat
+* **properties**: [ApplicationGatewayProbePropertiesFormat](#applicationgatewayprobepropertiesformat)
 * **type**: string
 
 ## ApplicationGatewayProbePropertiesFormat
 ### Properties
 * **host**: string
 * **interval**: int
-* **match**: ApplicationGatewayProbeHealthResponseMatch
+* **match**: [ApplicationGatewayProbeHealthResponseMatch](#applicationgatewayprobehealthresponsematch)
 * **minServers**: int
 * **path**: string
 * **pickHostNameFromBackendHttpSettings**: bool
@@ -682,37 +682,37 @@
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: ApplicationGatewayRedirectConfigurationPropertiesFormat
+* **properties**: [ApplicationGatewayRedirectConfigurationPropertiesFormat](#applicationgatewayredirectconfigurationpropertiesformat)
 * **type**: string
 
 ## ApplicationGatewayRedirectConfigurationPropertiesFormat
 ### Properties
 * **includePath**: bool
 * **includeQueryString**: bool
-* **pathRules**: SubResource[]
+* **pathRules**: [SubResource](#subresource)[]
 * **redirectType**: 'Found' | 'Permanent' | 'SeeOther' | 'Temporary'
-* **requestRoutingRules**: SubResource[]
-* **targetListener**: SubResource
+* **requestRoutingRules**: [SubResource](#subresource)[]
+* **targetListener**: [SubResource](#subresource)
 * **targetUrl**: string
-* **urlPathMaps**: SubResource[]
+* **urlPathMaps**: [SubResource](#subresource)[]
 
 ## ApplicationGatewayRequestRoutingRule
 ### Properties
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: ApplicationGatewayRequestRoutingRulePropertiesFormat
+* **properties**: [ApplicationGatewayRequestRoutingRulePropertiesFormat](#applicationgatewayrequestroutingrulepropertiesformat)
 * **type**: string
 
 ## ApplicationGatewayRequestRoutingRulePropertiesFormat
 ### Properties
-* **backendAddressPool**: SubResource
-* **backendHttpSettings**: SubResource
-* **httpListener**: SubResource
+* **backendAddressPool**: [SubResource](#subresource)
+* **backendHttpSettings**: [SubResource](#subresource)
+* **httpListener**: [SubResource](#subresource)
 * **provisioningState**: string
-* **redirectConfiguration**: SubResource
+* **redirectConfiguration**: [SubResource](#subresource)
 * **ruleType**: 'Basic' | 'PathBasedRouting'
-* **urlPathMap**: SubResource
+* **urlPathMap**: [SubResource](#subresource)
 
 ## ApplicationGatewaySku
 ### Properties
@@ -725,7 +725,7 @@
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: ApplicationGatewaySslCertificatePropertiesFormat
+* **properties**: [ApplicationGatewaySslCertificatePropertiesFormat](#applicationgatewaysslcertificatepropertiesformat)
 * **type**: string
 
 ## ApplicationGatewaySslCertificatePropertiesFormat
@@ -748,15 +748,15 @@
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: ApplicationGatewayUrlPathMapPropertiesFormat
+* **properties**: [ApplicationGatewayUrlPathMapPropertiesFormat](#applicationgatewayurlpathmappropertiesformat)
 * **type**: string
 
 ## ApplicationGatewayUrlPathMapPropertiesFormat
 ### Properties
-* **defaultBackendAddressPool**: SubResource
-* **defaultBackendHttpSettings**: SubResource
-* **defaultRedirectConfiguration**: SubResource
-* **pathRules**: ApplicationGatewayPathRule[]
+* **defaultBackendAddressPool**: [SubResource](#subresource)
+* **defaultBackendHttpSettings**: [SubResource](#subresource)
+* **defaultRedirectConfiguration**: [SubResource](#subresource)
+* **pathRules**: [ApplicationGatewayPathRule](#applicationgatewaypathrule)[]
 * **provisioningState**: string
 
 ## ApplicationGatewayPathRule
@@ -764,20 +764,20 @@
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: ApplicationGatewayPathRulePropertiesFormat
+* **properties**: [ApplicationGatewayPathRulePropertiesFormat](#applicationgatewaypathrulepropertiesformat)
 * **type**: string
 
 ## ApplicationGatewayPathRulePropertiesFormat
 ### Properties
-* **backendAddressPool**: SubResource
-* **backendHttpSettings**: SubResource
+* **backendAddressPool**: [SubResource](#subresource)
+* **backendHttpSettings**: [SubResource](#subresource)
 * **paths**: string[]
 * **provisioningState**: string
-* **redirectConfiguration**: SubResource
+* **redirectConfiguration**: [SubResource](#subresource)
 
 ## ApplicationGatewayWebApplicationFirewallConfiguration
 ### Properties
-* **disabledRuleGroups**: ApplicationGatewayFirewallDisabledRuleGroup[]
+* **disabledRuleGroups**: [ApplicationGatewayFirewallDisabledRuleGroup](#applicationgatewayfirewalldisabledrulegroup)[]
 * **enabled**: bool (Required)
 * **firewallMode**: 'Detection' | 'Prevention' (Required)
 * **ruleSetType**: string (Required)
@@ -801,17 +801,17 @@
 * **egressBytesTransferred**: int (ReadOnly)
 * **enableBgp**: bool
 * **ingressBytesTransferred**: int (ReadOnly)
-* **ipsecPolicies**: IpsecPolicy[]
-* **localNetworkGateway2**: LocalNetworkGateway
-* **peer**: SubResource
+* **ipsecPolicies**: [IpsecPolicy](#ipsecpolicy)[]
+* **localNetworkGateway2**: [LocalNetworkGateway](#localnetworkgateway)
+* **peer**: [SubResource](#subresource)
 * **provisioningState**: string (ReadOnly)
 * **resourceGuid**: string
 * **routingWeight**: int
 * **sharedKey**: string
-* **tunnelConnectionStatus**: TunnelConnectionHealth[] (ReadOnly)
+* **tunnelConnectionStatus**: [TunnelConnectionHealth](#tunnelconnectionhealth)[] (ReadOnly)
 * **usePolicyBasedTrafficSelectors**: bool
-* **virtualNetworkGateway1**: VirtualNetworkGateway (Required)
-* **virtualNetworkGateway2**: VirtualNetworkGateway
+* **virtualNetworkGateway1**: [VirtualNetworkGateway](#virtualnetworkgateway) (Required)
+* **virtualNetworkGateway2**: [VirtualNetworkGateway](#virtualnetworkgateway)
 
 ## IpsecPolicy
 ### Properties
@@ -830,15 +830,15 @@
 * **id**: string
 * **location**: string
 * **name**: string (ReadOnly)
-* **properties**: LocalNetworkGatewayPropertiesFormat (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [LocalNetworkGatewayPropertiesFormat](#localnetworkgatewaypropertiesformat) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: string (ReadOnly)
 
 ## LocalNetworkGatewayPropertiesFormat
 ### Properties
-* **bgpSettings**: BgpSettings
+* **bgpSettings**: [BgpSettings](#bgpsettings)
 * **gatewayIpAddress**: string
-* **localNetworkAddressSpace**: AddressSpace
+* **localNetworkAddressSpace**: [AddressSpace](#addressspace)
 * **provisioningState**: string (ReadOnly)
 * **resourceGuid**: string
 
@@ -871,22 +871,22 @@
 * **id**: string
 * **location**: string
 * **name**: string (ReadOnly)
-* **properties**: VirtualNetworkGatewayPropertiesFormat (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [VirtualNetworkGatewayPropertiesFormat](#virtualnetworkgatewaypropertiesformat) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: string (ReadOnly)
 
 ## VirtualNetworkGatewayPropertiesFormat
 ### Properties
 * **activeActive**: bool
-* **bgpSettings**: BgpSettings
+* **bgpSettings**: [BgpSettings](#bgpsettings)
 * **enableBgp**: bool
-* **gatewayDefaultSite**: SubResource
+* **gatewayDefaultSite**: [SubResource](#subresource)
 * **gatewayType**: 'ExpressRoute' | 'Vpn'
-* **ipConfigurations**: VirtualNetworkGatewayIPConfiguration[]
+* **ipConfigurations**: [VirtualNetworkGatewayIPConfiguration](#virtualnetworkgatewayipconfiguration)[]
 * **provisioningState**: string (ReadOnly)
 * **resourceGuid**: string
-* **sku**: VirtualNetworkGatewaySku
-* **vpnClientConfiguration**: VpnClientConfiguration
+* **sku**: [VirtualNetworkGatewaySku](#virtualnetworkgatewaysku)
+* **vpnClientConfiguration**: [VpnClientConfiguration](#vpnclientconfiguration)
 * **vpnType**: 'PolicyBased' | 'RouteBased'
 
 ## VirtualNetworkGatewayIPConfiguration
@@ -894,14 +894,14 @@
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: VirtualNetworkGatewayIPConfigurationPropertiesFormat
+* **properties**: [VirtualNetworkGatewayIPConfigurationPropertiesFormat](#virtualnetworkgatewayipconfigurationpropertiesformat)
 
 ## VirtualNetworkGatewayIPConfigurationPropertiesFormat
 ### Properties
 * **privateIPAllocationMethod**: 'Dynamic' | 'Static'
 * **provisioningState**: string (ReadOnly)
-* **publicIPAddress**: SubResource
-* **subnet**: SubResource
+* **publicIPAddress**: [SubResource](#subresource)
+* **subnet**: [SubResource](#subresource)
 
 ## VirtualNetworkGatewaySku
 ### Properties
@@ -913,17 +913,17 @@
 ### Properties
 * **radiusServerAddress**: string
 * **radiusServerSecret**: string
-* **vpnClientAddressPool**: AddressSpace
+* **vpnClientAddressPool**: [AddressSpace](#addressspace)
 * **vpnClientProtocols**: 'IkeV2' | 'SSTP'[]
-* **vpnClientRevokedCertificates**: VpnClientRevokedCertificate[]
-* **vpnClientRootCertificates**: VpnClientRootCertificate[]
+* **vpnClientRevokedCertificates**: [VpnClientRevokedCertificate](#vpnclientrevokedcertificate)[]
+* **vpnClientRootCertificates**: [VpnClientRootCertificate](#vpnclientrootcertificate)[]
 
 ## VpnClientRevokedCertificate
 ### Properties
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: VpnClientRevokedCertificatePropertiesFormat
+* **properties**: [VpnClientRevokedCertificatePropertiesFormat](#vpnclientrevokedcertificatepropertiesformat)
 
 ## VpnClientRevokedCertificatePropertiesFormat
 ### Properties
@@ -935,7 +935,7 @@
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: VpnClientRootCertificatePropertiesFormat (Required)
+* **properties**: [VpnClientRootCertificatePropertiesFormat](#vpnclientrootcertificatepropertiesformat) (Required)
 
 ## VpnClientRootCertificatePropertiesFormat
 ### Properties
@@ -955,14 +955,14 @@
 ## ExpressRouteCircuitPropertiesFormat
 ### Properties
 * **allowClassicOperations**: bool
-* **authorizations**: ExpressRouteCircuitAuthorization[]
+* **authorizations**: [ExpressRouteCircuitAuthorization](#expressroutecircuitauthorization)[]
 * **circuitProvisioningState**: string
 * **gatewayManagerEtag**: string
-* **peerings**: ExpressRouteCircuitPeering[]
+* **peerings**: [ExpressRouteCircuitPeering](#expressroutecircuitpeering)[]
 * **provisioningState**: string
 * **serviceKey**: string
 * **serviceProviderNotes**: string
-* **serviceProviderProperties**: ExpressRouteCircuitServiceProviderProperties
+* **serviceProviderProperties**: [ExpressRouteCircuitServiceProviderProperties](#expressroutecircuitserviceproviderproperties)
 * **serviceProviderProvisioningState**: 'Deprovisioning' | 'NotProvisioned' | 'Provisioned' | 'Provisioning'
 
 ## ExpressRouteCircuitAuthorization
@@ -970,7 +970,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string
 * **name**: string
-* **properties**: AuthorizationPropertiesFormat
+* **properties**: [AuthorizationPropertiesFormat](#authorizationpropertiesformat)
 
 ## AuthorizationPropertiesFormat
 ### Properties
@@ -983,33 +983,33 @@
 * **etag**: string (ReadOnly)
 * **id**: string
 * **name**: string
-* **properties**: ExpressRouteCircuitPeeringPropertiesFormat
+* **properties**: [ExpressRouteCircuitPeeringPropertiesFormat](#expressroutecircuitpeeringpropertiesformat)
 
 ## ExpressRouteCircuitPeeringPropertiesFormat
 ### Properties
 * **azureASN**: int
 * **gatewayManagerEtag**: string
-* **ipv6PeeringConfig**: Ipv6ExpressRouteCircuitPeeringConfig
+* **ipv6PeeringConfig**: [Ipv6ExpressRouteCircuitPeeringConfig](#ipv6expressroutecircuitpeeringconfig)
 * **lastModifiedBy**: string
-* **microsoftPeeringConfig**: ExpressRouteCircuitPeeringConfig
+* **microsoftPeeringConfig**: [ExpressRouteCircuitPeeringConfig](#expressroutecircuitpeeringconfig)
 * **peerASN**: int
 * **peeringType**: 'AzurePrivatePeering' | 'AzurePublicPeering' | 'MicrosoftPeering'
 * **primaryAzurePort**: string
 * **primaryPeerAddressPrefix**: string
 * **provisioningState**: string
-* **routeFilter**: RouteFilter
+* **routeFilter**: [RouteFilter](#routefilter)
 * **secondaryAzurePort**: string
 * **secondaryPeerAddressPrefix**: string
 * **sharedKey**: string
 * **state**: 'Disabled' | 'Enabled'
-* **stats**: ExpressRouteCircuitStats
+* **stats**: [ExpressRouteCircuitStats](#expressroutecircuitstats)
 * **vlanId**: int
 
 ## Ipv6ExpressRouteCircuitPeeringConfig
 ### Properties
-* **microsoftPeeringConfig**: ExpressRouteCircuitPeeringConfig
+* **microsoftPeeringConfig**: [ExpressRouteCircuitPeeringConfig](#expressroutecircuitpeeringconfig)
 * **primaryPeerAddressPrefix**: string
-* **routeFilter**: RouteFilter
+* **routeFilter**: [RouteFilter](#routefilter)
 * **secondaryPeerAddressPrefix**: string
 * **state**: 'Disabled' | 'Enabled'
 
@@ -1028,15 +1028,15 @@
 * **id**: string
 * **location**: string
 * **name**: string (ReadOnly)
-* **properties**: RouteFilterPropertiesFormat
-* **tags**: Dictionary<string,String>
+* **properties**: [RouteFilterPropertiesFormat](#routefilterpropertiesformat)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: string (ReadOnly)
 
 ## RouteFilterPropertiesFormat
 ### Properties
-* **peerings**: ExpressRouteCircuitPeering[]
+* **peerings**: [ExpressRouteCircuitPeering](#expressroutecircuitpeering)[]
 * **provisioningState**: string (ReadOnly)
-* **rules**: RouteFilterRule[]
+* **rules**: [RouteFilterRule](#routefilterrule)[]
 
 ## RouteFilterRule
 ### Properties
@@ -1044,8 +1044,8 @@
 * **id**: string
 * **location**: string
 * **name**: string
-* **properties**: RouteFilterRulePropertiesFormat
-* **tags**: Dictionary<string,String>
+* **properties**: [RouteFilterRulePropertiesFormat](#routefilterrulepropertiesformat)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 
 ## RouteFilterRulePropertiesFormat
 ### Properties
@@ -1090,13 +1090,13 @@
 
 ## LoadBalancerPropertiesFormat
 ### Properties
-* **backendAddressPools**: BackendAddressPool[]
-* **frontendIPConfigurations**: FrontendIPConfiguration[]
-* **inboundNatPools**: InboundNatPool[]
-* **inboundNatRules**: InboundNatRule[]
-* **loadBalancingRules**: LoadBalancingRule[]
-* **outboundNatRules**: OutboundNatRule[]
-* **probes**: Probe[]
+* **backendAddressPools**: [BackendAddressPool](#backendaddresspool)[]
+* **frontendIPConfigurations**: [FrontendIPConfiguration](#frontendipconfiguration)[]
+* **inboundNatPools**: [InboundNatPool](#inboundnatpool)[]
+* **inboundNatRules**: [InboundNatRule](#inboundnatrule)[]
+* **loadBalancingRules**: [LoadBalancingRule](#loadbalancingrule)[]
+* **outboundNatRules**: [OutboundNatRule](#outboundnatrule)[]
+* **probes**: [Probe](#probe)[]
 * **provisioningState**: string
 * **resourceGuid**: string
 
@@ -1105,32 +1105,32 @@
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: FrontendIPConfigurationPropertiesFormat
+* **properties**: [FrontendIPConfigurationPropertiesFormat](#frontendipconfigurationpropertiesformat)
 * **zones**: string[]
 
 ## FrontendIPConfigurationPropertiesFormat
 ### Properties
-* **inboundNatPools**: SubResource[] (ReadOnly)
-* **inboundNatRules**: SubResource[] (ReadOnly)
-* **loadBalancingRules**: SubResource[] (ReadOnly)
-* **outboundNatRules**: SubResource[] (ReadOnly)
+* **inboundNatPools**: [SubResource](#subresource)[] (ReadOnly)
+* **inboundNatRules**: [SubResource](#subresource)[] (ReadOnly)
+* **loadBalancingRules**: [SubResource](#subresource)[] (ReadOnly)
+* **outboundNatRules**: [SubResource](#subresource)[] (ReadOnly)
 * **privateIPAddress**: string
 * **privateIPAllocationMethod**: 'Dynamic' | 'Static'
 * **provisioningState**: string
-* **publicIPAddress**: PublicIPAddress
-* **subnet**: Subnet
+* **publicIPAddress**: [PublicIPAddress](#publicipaddress)
+* **subnet**: [Subnet](#subnet)
 
 ## InboundNatPool
 ### Properties
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: InboundNatPoolPropertiesFormat
+* **properties**: [InboundNatPoolPropertiesFormat](#inboundnatpoolpropertiesformat)
 
 ## InboundNatPoolPropertiesFormat
 ### Properties
 * **backendPort**: int (Required)
-* **frontendIPConfiguration**: SubResource
+* **frontendIPConfiguration**: [SubResource](#subresource)
 * **frontendPortRangeEnd**: int (Required)
 * **frontendPortRangeStart**: int (Required)
 * **protocol**: 'Tcp' | 'Udp' (Required)
@@ -1141,18 +1141,18 @@
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: LoadBalancingRulePropertiesFormat
+* **properties**: [LoadBalancingRulePropertiesFormat](#loadbalancingrulepropertiesformat)
 
 ## LoadBalancingRulePropertiesFormat
 ### Properties
-* **backendAddressPool**: SubResource
+* **backendAddressPool**: [SubResource](#subresource)
 * **backendPort**: int
 * **enableFloatingIP**: bool
-* **frontendIPConfiguration**: SubResource
+* **frontendIPConfiguration**: [SubResource](#subresource)
 * **frontendPort**: int (Required)
 * **idleTimeoutInMinutes**: int
 * **loadDistribution**: 'Default' | 'SourceIP' | 'SourceIPProtocol'
-* **probe**: SubResource
+* **probe**: [SubResource](#subresource)
 * **protocol**: 'Tcp' | 'Udp' (Required)
 * **provisioningState**: string
 
@@ -1161,13 +1161,13 @@
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: OutboundNatRulePropertiesFormat
+* **properties**: [OutboundNatRulePropertiesFormat](#outboundnatrulepropertiesformat)
 
 ## OutboundNatRulePropertiesFormat
 ### Properties
 * **allocatedOutboundPorts**: int
-* **backendAddressPool**: SubResource (Required)
-* **frontendIPConfigurations**: SubResource[]
+* **backendAddressPool**: [SubResource](#subresource) (Required)
+* **frontendIPConfigurations**: [SubResource](#subresource)[]
 * **provisioningState**: string
 
 ## Probe
@@ -1175,12 +1175,12 @@
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: ProbePropertiesFormat
+* **properties**: [ProbePropertiesFormat](#probepropertiesformat)
 
 ## ProbePropertiesFormat
 ### Properties
 * **intervalInSeconds**: int
-* **loadBalancingRules**: SubResource[] (ReadOnly)
+* **loadBalancingRules**: [SubResource](#subresource)[] (ReadOnly)
 * **numberOfProbes**: int
 * **port**: int (Required)
 * **protocol**: 'Http' | 'Tcp' (Required)
@@ -1219,9 +1219,9 @@
 ## PacketCaptureParameters
 ### Properties
 * **bytesToCapturePerPacket**: int
-* **filters**: PacketCaptureFilter[]
+* **filters**: [PacketCaptureFilter](#packetcapturefilter)[]
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **storageLocation**: PacketCaptureStorageLocation (Required)
+* **storageLocation**: [PacketCaptureStorageLocation](#packetcapturestoragelocation) (Required)
 * **target**: string (Required)
 * **timeLimitInSeconds**: int
 * **totalBytesPerSession**: int
@@ -1267,12 +1267,12 @@
 
 ## VirtualNetworkPropertiesFormat
 ### Properties
-* **addressSpace**: AddressSpace
-* **dhcpOptions**: DhcpOptions
+* **addressSpace**: [AddressSpace](#addressspace)
+* **dhcpOptions**: [DhcpOptions](#dhcpoptions)
 * **provisioningState**: string
 * **resourceGuid**: string
-* **subnets**: Subnet[]
-* **virtualNetworkPeerings**: VirtualNetworkPeering[]
+* **subnets**: [Subnet](#subnet)[]
+* **virtualNetworkPeerings**: [VirtualNetworkPeering](#virtualnetworkpeering)[]
 
 ## DhcpOptions
 ### Properties
@@ -1283,7 +1283,7 @@
 * **etag**: string
 * **id**: string
 * **name**: string
-* **properties**: VirtualNetworkPeeringPropertiesFormat
+* **properties**: [VirtualNetworkPeeringPropertiesFormat](#virtualnetworkpeeringpropertiesformat)
 
 ## VirtualNetworkPeeringPropertiesFormat
 ### Properties
@@ -1292,7 +1292,7 @@
 * **allowVirtualNetworkAccess**: bool
 * **peeringState**: 'Connected' | 'Disconnected' | 'Initiated'
 * **provisioningState**: string
-* **remoteVirtualNetwork**: SubResource
+* **remoteVirtualNetwork**: [SubResource](#subresource)
 * **useRemoteGateways**: bool
 
 ## Dictionary<string,String>

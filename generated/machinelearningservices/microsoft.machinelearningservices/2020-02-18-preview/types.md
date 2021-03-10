@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2020-02-18-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [WorkspaceProperties](#workspaceproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.MachineLearningServices/workspaces/computes@2020-02-18-preview
@@ -18,12 +18,12 @@
 ### Properties
 * **apiVersion**: '2020-02-18-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: Compute
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [Compute](#compute)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.MachineLearningServices/workspaces/privateEndpointConnections@2020-02-18-preview
@@ -31,12 +31,12 @@
 ### Properties
 * **apiVersion**: '2020-02-18-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -52,7 +52,7 @@
 * **creationTime**: string (ReadOnly)
 * **description**: string
 * **discoveryUrl**: string
-* **encryption**: EncryptionProperty
+* **encryption**: [EncryptionProperty](#encryptionproperty)
 * **friendlyName**: string
 * **hbiWorkspace**: bool
 * **keyVault**: string
@@ -63,7 +63,7 @@
 
 ## EncryptionProperty
 ### Properties
-* **keyVaultProperties**: KeyVaultProperties (Required)
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required)
 * **status**: 'Disabled' | 'Enabled' (Required)
 
 ## KeyVaultProperties
@@ -90,28 +90,28 @@
 * **description**: string
 * **isAttachedCompute**: bool (ReadOnly)
 * **modifiedOn**: string (ReadOnly)
-* **provisioningErrors**: MachineLearningServiceError[] (ReadOnly)
+* **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
 * **resourceId**: string
 ### AKS
 #### Properties
 * **computeType**: 'AKS' (Required)
-* **properties**: schemas:30_properties
+* **properties**: [schemas:30_properties](#schemas30properties)
 
 ### AmlCompute
 #### Properties
 * **computeType**: 'AmlCompute' (Required)
-* **properties**: schemas:31_properties
+* **properties**: [schemas:31_properties](#schemas31properties)
 
 ### ComputeInstance
 #### Properties
 * **computeType**: 'ComputeInstance' (Required)
-* **properties**: schemas:32_properties
+* **properties**: [schemas:32_properties](#schemas32properties)
 
 ### Databricks
 #### Properties
 * **computeType**: 'Databricks' (Required)
-* **properties**: schemas:33_properties
+* **properties**: [schemas:33_properties](#schemas33properties)
 
 ### DataFactory
 #### Properties
@@ -120,27 +120,27 @@
 ### DataLakeAnalytics
 #### Properties
 * **computeType**: 'DataLakeAnalytics' (Required)
-* **properties**: schemas:33_properties
+* **properties**: [schemas:33_properties](#schemas33properties)
 
 ### HDInsight
 #### Properties
 * **computeType**: 'HDInsight' (Required)
-* **properties**: schemas:33_properties
+* **properties**: [schemas:33_properties](#schemas33properties)
 
 ### VirtualMachine
 #### Properties
 * **computeType**: 'VirtualMachine' (Required)
-* **properties**: schemas:33_properties
+* **properties**: [schemas:33_properties](#schemas33properties)
 
 
 ## MachineLearningServiceError
 ### Properties
-* **error**: ErrorResponse (ReadOnly)
+* **error**: [ErrorResponse](#errorresponse) (ReadOnly)
 
 ## ErrorResponse
 ### Properties
 * **code**: string (ReadOnly)
-* **details**: ErrorDetail[] (ReadOnly)
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly)
 * **message**: string (ReadOnly)
 
 ## ErrorDetail
@@ -151,16 +151,16 @@
 ## AKS
 ### Properties
 * **computeType**: 'AKS' (Required)
-* **properties**: schemas:30_properties
+* **properties**: [schemas:30_properties](#schemas30properties)
 
 ## schemas:30_properties
 ### Properties
 * **agentCount**: int
 * **agentVMSize**: string
-* **aksNetworkingConfiguration**: AksNetworkingConfiguration
+* **aksNetworkingConfiguration**: [AksNetworkingConfiguration](#aksnetworkingconfiguration)
 * **clusterFqdn**: string
-* **sslConfiguration**: SslConfiguration
-* **systemServices**: SystemService[] (ReadOnly)
+* **sslConfiguration**: [SslConfiguration](#sslconfiguration)
+* **systemServices**: [SystemService](#systemservice)[] (ReadOnly)
 
 ## AksNetworkingConfiguration
 ### Properties
@@ -185,22 +185,22 @@
 ## AmlCompute
 ### Properties
 * **computeType**: 'AmlCompute' (Required)
-* **properties**: schemas:31_properties
+* **properties**: [schemas:31_properties](#schemas31properties)
 
 ## schemas:31_properties
 ### Properties
 * **allocationState**: 'Resizing' | 'Steady' (ReadOnly)
 * **allocationStateTransitionTime**: string (ReadOnly)
 * **currentNodeCount**: int (ReadOnly)
-* **errors**: MachineLearningServiceError[] (ReadOnly)
-* **nodeStateCounts**: NodeStateCounts (ReadOnly)
+* **errors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly)
+* **nodeStateCounts**: [NodeStateCounts](#nodestatecounts) (ReadOnly)
 * **osType**: 'Linux' | 'Windows'
 * **remoteLoginPortPublicAccess**: 'Disabled' | 'Enabled' | 'NotSpecified'
-* **scaleSettings**: ScaleSettings
-* **subnet**: ResourceId
+* **scaleSettings**: [ScaleSettings](#scalesettings)
+* **subnet**: [ResourceId](#resourceid)
 * **targetNodeCount**: int (ReadOnly)
-* **userAccountCredentials**: UserAccountCredentials
-* **virtualMachineImage**: ResourceId
+* **userAccountCredentials**: [UserAccountCredentials](#useraccountcredentials)
+* **virtualMachineImage**: [ResourceId](#resourceid)
 * **vmPriority**: 'Dedicated' | 'LowPriority'
 * **vmSize**: string
 
@@ -232,20 +232,20 @@
 ## ComputeInstance
 ### Properties
 * **computeType**: 'ComputeInstance' (Required)
-* **properties**: schemas:32_properties
+* **properties**: [schemas:32_properties](#schemas32properties)
 
 ## schemas:32_properties
 ### Properties
-* **applications**: ComputeInstanceApplication[] (ReadOnly)
+* **applications**: [ComputeInstanceApplication](#computeinstanceapplication)[] (ReadOnly)
 * **applicationSharingPolicy**: 'Personal' | 'Shared'
 * **computeInstanceAuthorizationType**: 'personal'
-* **connectivityEndpoints**: ComputeInstanceConnectivityEndpoints (ReadOnly)
-* **createdBy**: ComputeInstanceCreatedBy (ReadOnly)
-* **errors**: MachineLearningServiceError[] (ReadOnly)
-* **personalComputeInstanceSettings**: PersonalComputeInstanceSettings
-* **sshSettings**: ComputeInstanceSshSettings
+* **connectivityEndpoints**: [ComputeInstanceConnectivityEndpoints](#computeinstanceconnectivityendpoints) (ReadOnly)
+* **createdBy**: [ComputeInstanceCreatedBy](#computeinstancecreatedby) (ReadOnly)
+* **errors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly)
+* **personalComputeInstanceSettings**: [PersonalComputeInstanceSettings](#personalcomputeinstancesettings)
+* **sshSettings**: [ComputeInstanceSshSettings](#computeinstancesshsettings)
 * **state**: 'CreateFailed' | 'Creating' | 'Deleting' | 'JobRunning' | 'RestartFailed' | 'Restarting' | 'Running' | 'SettingUp' | 'StartFailed' | 'Starting' | 'StopFailed' | 'Stopped' | 'Stopping' | 'Unknown' | 'Unusable' | 'UserSettingUp' (ReadOnly)
-* **subnet**: ResourceId
+* **subnet**: [ResourceId](#resourceid)
 * **vmSize**: string
 
 ## ComputeInstanceApplication
@@ -266,7 +266,7 @@
 
 ## PersonalComputeInstanceSettings
 ### Properties
-* **assignedUser**: AssignedUser
+* **assignedUser**: [AssignedUser](#assigneduser)
 
 ## AssignedUser
 ### Properties
@@ -283,12 +283,12 @@
 ## Databricks
 ### Properties
 * **computeType**: 'Databricks' (Required)
-* **properties**: schemas:33_properties
+* **properties**: [schemas:33_properties](#schemas33properties)
 
 ## schemas:33_properties
 ### Properties
 * **address**: string
-* **administratorAccount**: VirtualMachineSshCredentials
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials)
 * **sshPort**: int
 * **virtualMachineSize**: string
 
@@ -306,17 +306,17 @@
 ## DataLakeAnalytics
 ### Properties
 * **computeType**: 'DataLakeAnalytics' (Required)
-* **properties**: schemas:33_properties
+* **properties**: [schemas:33_properties](#schemas33properties)
 
 ## HDInsight
 ### Properties
 * **computeType**: 'HDInsight' (Required)
-* **properties**: schemas:33_properties
+* **properties**: [schemas:33_properties](#schemas33properties)
 
 ## VirtualMachine
 ### Properties
 * **computeType**: 'VirtualMachine' (Required)
-* **properties**: schemas:33_properties
+* **properties**: [schemas:33_properties](#schemas33properties)
 
 ## Dictionary<string,String>
 ### Properties
@@ -325,8 +325,8 @@
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded'
 
 ## PrivateEndpoint

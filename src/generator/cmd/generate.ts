@@ -1,12 +1,14 @@
 import os from 'os';
 import path from 'path';
 import { createWriteStream, existsSync } from 'fs';
-import { readdir, stat, rmdir, mkdir, rm } from 'fs/promises';
+import { readdir, stat, rmdir, mkdir, rm, writeFile, readFile } from 'fs/promises';
 import { series } from 'async';
 import { spawn } from 'child_process';
 import chalk from 'chalk';
 import stripAnsi from 'strip-ansi';
 import yargs from 'yargs';
+import { groupBy, keys, orderBy, sortBy, Dictionary } from 'lodash';
+import { TypeBaseKind } from '../types';
 
 interface ILogger {
   out: (data: string) => void;
@@ -20,7 +22,6 @@ const defaultLogger: ILogger = {
 
 const extensionDir = path.resolve(`${__dirname}/../`);
 const autorestDll = path.resolve(`${extensionDir}/src/Bicep.TypeGen.Autorest/bin/net5.0/Bicep.TypeGen.Autorest.dll`);
-const indexBuilderDll = path.resolve(`${extensionDir}/src/Bicep.TypeGen.Index/bin/net5.0/Bicep.TypeGen.Index.dll`);
 const autorestBinary = os.platform() === 'win32' ? 'autorest.cmd' : 'autorest';
 const defaultOutDir = path.resolve(`${extensionDir}/../../generated`);
 
@@ -42,10 +43,6 @@ executeSynchronous(async () => {
 
   if (!existsSync(autorestDll)) {
     throw `Unable to find ${autorestDll}. Did you forget to run dotnet build?`;
-  }
-
-  if (!existsSync(indexBuilderDll)) {
-    throw `Unable to find ${indexBuilderDll}. Did you forget to run dotnet build?`;
   }
 
   // find all readme paths in the azure-rest-api-specs repo
@@ -77,11 +74,7 @@ executeSynchronous(async () => {
   }
 
   // build the type index
-  await executeCmd(
-    defaultLogger,
-    __dirname,
-    'dotnet',
-    [indexBuilderDll, outputBaseDir]);
+  await buildTypeIndex(defaultLogger, outputBaseDir);
 });
 
 async function generateSchema(logger: ILogger, readme: string, outputBaseDir: string, verbose: boolean, waitForDebugger: boolean) {
@@ -217,4 +210,88 @@ async function getLogger(logFilePath: string): Promise<ILogger> {
       logFileStream.write(stripAnsi(data));
     },
   };
+}
+
+async function buildTypeIndex(logger: ILogger, baseDir: string) {
+  const indexContent = await buildIndex(logger, baseDir);
+
+  await writeFile(
+    `${baseDir}/index.json`,
+    JSON.stringify(indexContent, null, 0));
+
+  await writeFile(
+    `${baseDir}/index.md`,
+    generateIndexMarkdown(indexContent));
+}
+
+interface TypeIndex {
+  Types: Dictionary<TypeIndexEntry>;
+}
+
+interface TypeIndexEntry {
+  RelativePath: string;
+  Index: number;
+}
+
+function generateIndexMarkdown(index: TypeIndex) {
+  let markdown = '# Bicep Types\n';
+
+  const byProvider = groupBy(keys(index.Types), x => x.split('/')[0].toLowerCase());
+  for (const namespace of sortBy(keys(byProvider), x => x.toLowerCase())) {
+    markdown += `## ${namespace}\n`;
+
+    const byResourceType = groupBy(byProvider[namespace], x => x.split('@')[0].toLowerCase());
+    for (const resourceType of sortBy(keys(byResourceType), x => x.toLowerCase())) {
+      markdown += `### ${resourceType}\n`;
+
+      for (const typeString of sortBy(byResourceType[resourceType], x => x.toLowerCase())) {
+        const version = typeString.split('@')[1];
+        const jsonPath = index.Types[typeString].RelativePath;
+        const anchor = `resource-${typeString.replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`
+
+        markdown += `* [${version}](${path.dirname(jsonPath)}/types.md#${anchor})\n`;
+      }
+
+      markdown += '\n';
+    }
+  }
+
+  return markdown;
+}
+
+async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> {
+  const typeFiles = await findRecursive(baseDir, filePath => {
+    return path.basename(filePath) === 'types.json';
+  });
+  
+  const resourceTypes = new Set<string>();
+  const typeDictionary: Dictionary<TypeIndexEntry> = {};
+
+  // Use a consistent sort order so that file system differences don't generate changes
+  for (const typeFilePath of orderBy(typeFiles, f => f.toLowerCase(), 'asc')) {
+    const content = await readFile(typeFilePath);
+
+    const types = JSON.parse(content.toString()) as any[];
+    for (const type of types) {
+      const resource = type[TypeBaseKind.ResourceType];
+      if (!resource) {
+        continue;
+      }
+
+      if (resourceTypes.has(resource.Name.toLowerCase())) {
+        logger.out(`WARNING: Found duplicate type \"${resource.Name}\"\n`);
+        continue;
+      }
+      resourceTypes.add(resource.Name.toLowerCase());
+
+      typeDictionary[resource.Name] = {
+        RelativePath: path.relative(baseDir, typeFilePath),
+        Index: types.indexOf(type),
+      };
+    }
+  }
+
+  return {
+    Types: typeDictionary,
+  }
 }

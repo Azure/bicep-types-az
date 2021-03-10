@@ -6,7 +6,7 @@
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' (Required, DeployTimeConstant)
-* **properties**: DefenderSettingsProperties
+* **properties**: [DefenderSettingsProperties](#defendersettingsproperties)
 * **type**: 'Microsoft.IoTSecurity/defenderSettings' (ReadOnly, DeployTimeConstant)
 
 ## DefenderSettingsProperties

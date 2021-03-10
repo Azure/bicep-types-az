@@ -7,45 +7,45 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PipelineProperties (Required)
-* **systemData**: systemData (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [PipelineProperties](#pipelineproperties) (Required)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DevOps/pipelines' (ReadOnly, DeployTimeConstant)
 
 ## PipelineProperties
 * **Discriminator**: pipelineType
 ### Base Properties
-* **bootstrapConfiguration**: BootstrapConfiguration (Required)
+* **bootstrapConfiguration**: [BootstrapConfiguration](#bootstrapconfiguration) (Required)
 * **pipelineId**: int (ReadOnly)
 ### azurePipeline
 #### Properties
-* **organization**: OrganizationReference (Required)
+* **organization**: [OrganizationReference](#organizationreference) (Required)
 * **pipelineType**: 'azurePipeline' (Required)
-* **project**: ProjectReference (Required)
+* **project**: [ProjectReference](#projectreference) (Required)
 
 ### githubWorkflow
 #### Properties
 * **pipelineType**: 'githubWorkflow' (Required)
-* **repository**: CodeRepository (Required)
+* **repository**: [CodeRepository](#coderepository) (Required)
 
 
 ## BootstrapConfiguration
 ### Properties
-* **sourceRepository**: CodeRepository
-* **template**: PipelineTemplate (Required)
+* **sourceRepository**: [CodeRepository](#coderepository)
+* **template**: [PipelineTemplate](#pipelinetemplate) (Required)
 
 ## CodeRepository
 ### Properties
-* **authorization**: Authorization
+* **authorization**: [Authorization](#authorization)
 * **defaultBranch**: string (Required)
 * **id**: string (Required)
-* **properties**: Dictionary<string,String>
+* **properties**: [Dictionary<string,String>](#dictionarystringstring)
 * **repositoryType**: 'gitHub' | 'vstsGit' (Required)
 
 ## Authorization
 ### Properties
 * **authorizationType**: string (Required)
-* **parameters**: Dictionary<string,String>
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
 
 ## Dictionary<string,String>
 ### Properties
@@ -60,7 +60,7 @@
 ## PipelineTemplate
 ### Properties
 * **id**: string (Required)
-* **parameters**: Dictionary<string,String>
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
 
 ## Dictionary<string,String>
 ### Properties
@@ -69,9 +69,9 @@
 
 ## azurePipeline
 ### Properties
-* **organization**: OrganizationReference (Required)
+* **organization**: [OrganizationReference](#organizationreference) (Required)
 * **pipelineType**: 'azurePipeline' (Required)
-* **project**: ProjectReference (Required)
+* **project**: [ProjectReference](#projectreference) (Required)
 
 ## OrganizationReference
 ### Properties
@@ -86,7 +86,7 @@
 ## githubWorkflow
 ### Properties
 * **pipelineType**: 'githubWorkflow' (Required)
-* **repository**: CodeRepository (Required)
+* **repository**: [CodeRepository](#coderepository) (Required)
 
 ## systemData
 ### Properties

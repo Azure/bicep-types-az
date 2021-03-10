@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BatchAccountCreateProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [BatchAccountCreateProperties](#batchaccountcreateproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Batch/batchAccounts/applications@2017-05-01
@@ -20,7 +20,7 @@
 * **displayName**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **packages**: ApplicationPackage[] (ReadOnly)
+* **packages**: [ApplicationPackage](#applicationpackage)[] (ReadOnly)
 * **type**: 'Microsoft.Batch/batchAccounts/applications' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Batch/batchAccounts/applications/versions@2017-05-01
@@ -41,9 +41,9 @@
 ### Properties
 * **accountEndpoint**: string (ReadOnly)
 * **activeJobAndJobScheduleQuota**: int (ReadOnly)
-* **autoStorage**: AutoStorageBaseProperties
+* **autoStorage**: [AutoStorageBaseProperties](#autostoragebaseproperties)
 * **dedicatedCoreQuota**: int (ReadOnly)
-* **keyVaultReference**: KeyVaultReference
+* **keyVaultReference**: [KeyVaultReference](#keyvaultreference)
 * **lowPriorityCoreQuota**: int (ReadOnly)
 * **poolAllocationMode**: 'BatchService' | 'UserSubscription'
 * **poolQuota**: int (ReadOnly)

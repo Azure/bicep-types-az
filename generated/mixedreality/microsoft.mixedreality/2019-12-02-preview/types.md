@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2019-12-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MixedRealityAccountProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [MixedRealityAccountProperties](#mixedrealityaccountproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.MixedReality/remoteRenderingAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.MixedReality/spatialAnchorsAccounts@2019-12-02-preview
@@ -17,11 +17,11 @@
 ### Properties
 * **apiVersion**: '2019-12-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MixedRealityAccountProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [MixedRealityAccountProperties](#mixedrealityaccountproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.MixedReality/spatialAnchorsAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Identity

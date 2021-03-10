@@ -7,24 +7,24 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedClusterProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ManagedClusterProperties](#managedclusterproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant)
 
 ## ManagedClusterProperties
 ### Properties
-* **aadProfile**: ManagedClusterAADProfile
-* **addonProfiles**: Dictionary<string,ManagedClusterAddonProfile>
-* **agentPoolProfiles**: ManagedClusterAgentPoolProfile[]
+* **aadProfile**: [ManagedClusterAADProfile](#managedclusteraadprofile)
+* **addonProfiles**: [Dictionary<string,ManagedClusterAddonProfile>](#dictionarystringmanagedclusteraddonprofile)
+* **agentPoolProfiles**: [ManagedClusterAgentPoolProfile](#managedclusteragentpoolprofile)[]
 * **dnsPrefix**: string
 * **enableRBAC**: bool
 * **fqdn**: string (ReadOnly)
 * **kubernetesVersion**: string
-* **linuxProfile**: ContainerServiceLinuxProfile
-* **networkProfile**: ContainerServiceNetworkProfile
+* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile)
+* **networkProfile**: [ContainerServiceNetworkProfile](#containerservicenetworkprofile)
 * **nodeResourceGroup**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
-* **servicePrincipalProfile**: ManagedClusterServicePrincipalProfile
+* **servicePrincipalProfile**: [ManagedClusterServicePrincipalProfile](#managedclusterserviceprincipalprofile)
 
 ## ManagedClusterAADProfile
 ### Properties
@@ -36,11 +36,11 @@
 ## Dictionary<string,ManagedClusterAddonProfile>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ManagedClusterAddonProfile
+* **Additional Properties Type**: [ManagedClusterAddonProfile](#managedclusteraddonprofile)
 
 ## ManagedClusterAddonProfile
 ### Properties
-* **config**: Dictionary<string,String>
+* **config**: [Dictionary<string,String>](#dictionarystringstring)
 * **enabled**: bool (Required)
 
 ## Dictionary<string,String>
@@ -65,11 +65,11 @@
 ## ContainerServiceLinuxProfile
 ### Properties
 * **adminUsername**: string (Required)
-* **ssh**: ContainerServiceSshConfiguration (Required)
+* **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required)
 
 ## ContainerServiceSshConfiguration
 ### Properties
-* **publicKeys**: ContainerServiceSshPublicKey[] (Required)
+* **publicKeys**: [ContainerServiceSshPublicKey](#containerservicesshpublickey)[] (Required)
 
 ## ContainerServiceSshPublicKey
 ### Properties

@@ -3,15 +3,15 @@
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles@2019-10-01-preview
 * **Valid Scope(s)**: Tenant
 ### Properties
-* **address**: AddressDetails (WriteOnly)
+* **address**: [AddressDetails](#addressdetails) (WriteOnly)
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **displayName**: string (WriteOnly)
-* **enabledAzurePlans**: AzurePlan[] (WriteOnly)
+* **enabledAzurePlans**: [AzurePlan](#azureplan)[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **invoiceEmailOptIn**: bool (WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **poNumber**: string (WriteOnly)
-* **properties**: BillingProfileProperties (ReadOnly)
+* **properties**: [BillingProfileProperties](#billingprofileproperties) (ReadOnly)
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles/instructions@2019-10-01-preview
@@ -20,7 +20,7 @@
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: InstructionProperties
+* **properties**: [InstructionProperties](#instructionproperties)
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/instructions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections@2019-10-01-preview
@@ -30,7 +30,7 @@
 * **displayName**: string (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: InvoiceSectionProperties (ReadOnly)
+* **properties**: [InvoiceSectionProperties](#invoicesectionproperties) (ReadOnly)
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles/policies@2019-10-01-preview
@@ -39,7 +39,7 @@
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyProperties
+* **properties**: [PolicyProperties](#policyproperties)
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/policies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Billing/billingAccounts/billingRoleAssignments@2019-10-01-preview
@@ -48,7 +48,7 @@
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BillingRoleAssignmentProperties
+* **properties**: [BillingRoleAssignmentProperties](#billingroleassignmentproperties)
 * **type**: 'Microsoft.Billing/billingAccounts/billingRoleAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Billing/billingAccounts/customers/policies@2019-10-01-preview
@@ -57,7 +57,7 @@
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CustomerPolicyProperties
+* **properties**: [CustomerPolicyProperties](#customerpolicyproperties)
 * **type**: 'Microsoft.Billing/billingAccounts/customers/policies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Billing/billingAccounts/departments/billingRoleAssignments@2019-10-01-preview
@@ -66,7 +66,7 @@
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BillingRoleAssignmentProperties
+* **properties**: [BillingRoleAssignmentProperties](#billingroleassignmentproperties)
 * **type**: 'Microsoft.Billing/billingAccounts/departments/billingRoleAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleAssignments@2019-10-01-preview
@@ -75,7 +75,7 @@
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BillingRoleAssignmentProperties
+* **properties**: [BillingRoleAssignmentProperties](#billingroleassignmentproperties)
 * **type**: 'Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleAssignments' (ReadOnly, DeployTimeConstant)
 
 ## AddressDetails
@@ -98,15 +98,15 @@
 
 ## BillingProfileProperties
 ### Properties
-* **address**: AddressDetails (ReadOnly)
+* **address**: [AddressDetails](#addressdetails) (ReadOnly)
 * **billingRelationshipType**: 'CSPPartner' | 'Direct' | 'IndirectCustomer' | 'IndirectPartner' (ReadOnly)
 * **currency**: string (ReadOnly)
 * **displayName**: string (ReadOnly)
-* **enabledAzurePlans**: AzurePlan[] (ReadOnly)
-* **indirectRelationshipInfo**: IndirectRelationshipInfo (ReadOnly)
+* **enabledAzurePlans**: [AzurePlan](#azureplan)[] (ReadOnly)
+* **indirectRelationshipInfo**: [IndirectRelationshipInfo](#indirectrelationshipinfo) (ReadOnly)
 * **invoiceDay**: int (ReadOnly)
 * **invoiceEmailOptIn**: bool (ReadOnly)
-* **invoiceSections**: InvoiceSection[] (ReadOnly)
+* **invoiceSections**: [InvoiceSection](#invoicesection)[] (ReadOnly)
 * **poNumber**: string (ReadOnly)
 * **spendingLimit**: 'Off' | 'On' (ReadOnly)
 * **status**: any (ReadOnly)
@@ -123,7 +123,7 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: InvoiceSectionProperties (ReadOnly)
+* **properties**: [InvoiceSectionProperties](#invoicesectionproperties) (ReadOnly)
 * **type**: string (ReadOnly)
 
 ## InvoiceSectionProperties

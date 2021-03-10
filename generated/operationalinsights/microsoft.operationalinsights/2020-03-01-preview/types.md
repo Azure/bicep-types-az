@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterProperties
-* **sku**: ClusterSku
-* **tags**: Dictionary<string,String>
+* **properties**: [ClusterProperties](#clusterproperties)
+* **sku**: [ClusterSku](#clustersku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces@2020-03-01-preview
@@ -21,8 +21,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [WorkspaceProperties](#workspaceproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces/dataExports@2020-03-01-preview
@@ -31,7 +31,7 @@
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DataExportProperties
+* **properties**: [DataExportProperties](#dataexportproperties)
 * **type**: 'Microsoft.OperationalInsights/workspaces/dataExports' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces/dataSources@2020-03-01-preview
@@ -43,7 +43,7 @@
 * **kind**: 'ApplicationInsights' | 'AzureActivityLog' | 'AzureAuditLog' | 'ChangeTrackingContentLocation' | 'ChangeTrackingCustomPath' | 'ChangeTrackingDataTypeConfiguration' | 'ChangeTrackingDefaultRegistry' | 'ChangeTrackingLinuxPath' | 'ChangeTrackingPath' | 'ChangeTrackingRegistry' | 'ChangeTrackingServices' | 'CustomLog' | 'CustomLogCollection' | 'DnsAnalytics' | 'GenericDataSource' | 'IISLogs' | 'ImportComputerGroup' | 'Itsm' | 'LinuxChangeTrackingPath' | 'LinuxPerformanceCollection' | 'LinuxPerformanceObject' | 'LinuxSyslog' | 'LinuxSyslogCollection' | 'NetworkMonitoring' | 'Office365' | 'SecurityCenterSecurityWindowsBaselineConfiguration' | 'SecurityEventCollectionConfiguration' | 'SecurityInsightsSecurityEventCollectionConfiguration' | 'SecurityWindowsBaselineConfiguration' | 'SqlDataClassification' | 'WindowsEvent' | 'WindowsPerformanceCounter' | 'WindowsTelemetry' (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: any (Required)
-* **tags**: Dictionary<string,String>
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.OperationalInsights/workspaces/dataSources' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces/linkedServices@2020-03-01-preview
@@ -52,8 +52,8 @@
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LinkedServiceProperties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [LinkedServiceProperties](#linkedserviceproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.OperationalInsights/workspaces/linkedServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces/linkedStorageAccounts@2020-03-01-preview
@@ -62,7 +62,7 @@
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'Alerts' | 'AzureWatson' | 'CustomLogs' | 'Ingestion' | 'Query' (Required, DeployTimeConstant)
-* **properties**: LinkedStorageAccountsProperties (Required)
+* **properties**: [LinkedStorageAccountsProperties](#linkedstorageaccountsproperties) (Required)
 * **type**: 'Microsoft.OperationalInsights/workspaces/linkedStorageAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces/savedSearches@2020-03-01-preview
@@ -72,7 +72,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SavedSearchProperties (Required)
+* **properties**: [SavedSearchProperties](#savedsearchproperties) (Required)
 * **type**: 'Microsoft.OperationalInsights/workspaces/savedSearches' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces/storageInsightConfigs@2020-03-01-preview
@@ -82,8 +82,8 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageInsightProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [StorageInsightProperties](#storageinsightproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.OperationalInsights/workspaces/storageInsightConfigs' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -95,7 +95,7 @@
 ## ClusterProperties
 ### Properties
 * **clusterId**: string (ReadOnly)
-* **keyVaultProperties**: keyVaultProperties
+* **keyVaultProperties**: [keyVaultProperties](#keyvaultproperties)
 * **nextLink**: string
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' (ReadOnly)
 
@@ -118,13 +118,13 @@
 ## WorkspaceProperties
 ### Properties
 * **customerId**: string (ReadOnly)
-* **privateLinkScopedResources**: PrivateLinkScopedResource[] (ReadOnly)
+* **privateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating'
 * **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled'
 * **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled'
 * **retentionInDays**: int
-* **sku**: WorkspaceSku
-* **workspaceCapping**: WorkspaceCapping
+* **sku**: [WorkspaceSku](#workspacesku)
+* **workspaceCapping**: [WorkspaceCapping](#workspacecapping)
 
 ## PrivateLinkScopedResource
 ### Properties
@@ -153,14 +153,14 @@
 ### Properties
 * **createdDate**: string
 * **dataExportId**: string
-* **destination**: Destination
+* **destination**: [Destination](#destination)
 * **enable**: bool
 * **lastModifiedDate**: string
 * **tableNames**: string[] (Required)
 
 ## Destination
 ### Properties
-* **metaData**: DestinationMetaData
+* **metaData**: [DestinationMetaData](#destinationmetadata)
 * **resourceId**: string (Required)
 * **type**: 'EventHub' | 'StorageAccount' (ReadOnly)
 
@@ -196,7 +196,7 @@
 * **functionAlias**: string
 * **functionParameters**: string
 * **query**: string (Required)
-* **tags**: Tag[]
+* **tags**: [Tag](#tag)[]
 * **version**: int
 
 ## Tag
@@ -207,8 +207,8 @@
 ## StorageInsightProperties
 ### Properties
 * **containers**: string[]
-* **status**: StorageInsightStatus (ReadOnly)
-* **storageAccount**: StorageAccount (Required)
+* **status**: [StorageInsightStatus](#storageinsightstatus) (ReadOnly)
+* **storageAccount**: [StorageAccount](#storageaccount) (Required)
 * **tables**: string[]
 
 ## StorageInsightStatus

@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProjectProperties
+* **properties**: [ProjectProperties](#projectproperties)
 * **tags**: any
 * **type**: 'Microsoft.Migrate/projects' (ReadOnly, DeployTimeConstant)
 
@@ -19,7 +19,7 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GroupProperties (Required)
+* **properties**: [GroupProperties](#groupproperties) (Required)
 * **type**: 'Microsoft.Migrate/projects/groups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Migrate/projects/groups/assessments@2018-02-02
@@ -29,7 +29,7 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AssessmentProperties (Required)
+* **properties**: [AssessmentProperties](#assessmentproperties) (Required)
 * **type**: 'Microsoft.Migrate/projects/groups/assessments' (ReadOnly, DeployTimeConstant)
 
 ## ProjectProperties

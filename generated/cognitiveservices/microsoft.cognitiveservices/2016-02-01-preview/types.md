@@ -10,8 +10,8 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: any (Required)
-* **sku**: Sku (Required)
-* **tags**: Dictionary<string,String>
+* **sku**: [Sku](#sku) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.CognitiveServices/accounts' (ReadOnly, DeployTimeConstant)
 
 ## Sku

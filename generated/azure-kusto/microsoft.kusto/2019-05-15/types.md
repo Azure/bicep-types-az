@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterProperties
-* **sku**: AzureSku (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [ClusterProperties](#clusterproperties)
+* **sku**: [AzureSku](#azuresku) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
 
@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
+* **properties**: [DatabaseProperties](#databaseproperties)
 * **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Kusto/clusters/databases/dataConnections@2019-05-15
@@ -35,17 +35,17 @@
 ### EventGrid
 #### Properties
 * **kind**: 'EventGrid' (Required)
-* **properties**: EventGridConnectionProperties
+* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties)
 
 ### EventHub
 #### Properties
 * **kind**: 'EventHub' (Required)
-* **properties**: EventHubConnectionProperties
+* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties)
 
 ### IotHub
 #### Properties
 * **kind**: 'IotHub' (Required)
-* **properties**: IotHubConnectionProperties
+* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties)
 
 
 ## ClusterProperties
@@ -53,12 +53,12 @@
 * **dataIngestionUri**: string (ReadOnly)
 * **enableDiskEncryption**: bool
 * **enableStreamingIngest**: bool
-* **optimizedAutoscale**: OptimizedAutoscale
+* **optimizedAutoscale**: [OptimizedAutoscale](#optimizedautoscale)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
 * **state**: 'Creating' | 'Deleted' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unavailable' | 'Updating' (ReadOnly)
-* **trustedExternalTenants**: TrustedExternalTenant[]
+* **trustedExternalTenants**: [TrustedExternalTenant](#trustedexternaltenant)[]
 * **uri**: string (ReadOnly)
-* **virtualNetworkConfiguration**: VirtualNetworkConfiguration
+* **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration)
 
 ## OptimizedAutoscale
 ### Properties
@@ -93,7 +93,7 @@
 * **hotCachePeriod**: string
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
 * **softDeletePeriod**: string
-* **statistics**: DatabaseStatistics
+* **statistics**: [DatabaseStatistics](#databasestatistics)
 
 ## DatabaseStatistics
 ### Properties
@@ -102,7 +102,7 @@
 ## EventGrid
 ### Properties
 * **kind**: 'EventGrid' (Required)
-* **properties**: EventGridConnectionProperties
+* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties)
 
 ## EventGridConnectionProperties
 ### Properties
@@ -116,7 +116,7 @@
 ## EventHub
 ### Properties
 * **kind**: 'EventHub' (Required)
-* **properties**: EventHubConnectionProperties
+* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties)
 
 ## EventHubConnectionProperties
 ### Properties
@@ -130,7 +130,7 @@
 ## IotHub
 ### Properties
 * **kind**: 'IotHub' (Required)
-* **properties**: IotHubConnectionProperties
+* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties)
 
 ## IotHubConnectionProperties
 ### Properties

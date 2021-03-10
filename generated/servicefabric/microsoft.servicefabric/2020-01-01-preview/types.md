@@ -8,9 +8,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagedClusterProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [ManagedClusterProperties](#managedclusterproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ServiceFabric/managedClusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabric/managedClusters/nodeTypes@2020-01-01-preview
@@ -19,8 +19,8 @@
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: NodeTypeProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [NodeTypeProperties](#nodetypeproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant)
 
 ## ManagedClusterProperties
@@ -28,18 +28,18 @@
 * **addonFeatures**: 'BackupRestoreService' | 'DnsService' | 'ResourceMonitorService'[]
 * **adminPassword**: string
 * **adminUserName**: string (Required)
-* **azureActiveDirectory**: AzureActiveDirectory
+* **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory)
 * **clientConnectionPort**: int
-* **clients**: ClientCertificate[]
+* **clients**: [ClientCertificate](#clientcertificate)[]
 * **clusterCertificateThumbprint**: string (ReadOnly)
 * **clusterCodeVersion**: string
 * **clusterId**: string (ReadOnly)
 * **clusterState**: 'AutoScale' | 'BaselineUpgrade' | 'Deploying' | 'EnforcingClusterVersion' | 'Ready' | 'UpdatingInfrastructure' | 'UpdatingUserCertificate' | 'UpdatingUserConfiguration' | 'UpgradeServiceUnreachable' | 'WaitingForNodes' (ReadOnly)
 * **dnsName**: string (Required)
-* **fabricSettings**: SettingsSectionDescription[]
+* **fabricSettings**: [SettingsSectionDescription](#settingssectiondescription)[]
 * **fqdn**: string (ReadOnly)
 * **httpGatewayConnectionPort**: int
-* **loadBalancingRules**: LoadBalancingRule[]
+* **loadBalancingRules**: [LoadBalancingRule](#loadbalancingrule)[]
 * **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## AzureActiveDirectory
@@ -58,7 +58,7 @@
 ## SettingsSectionDescription
 ### Properties
 * **name**: string (Required)
-* **parameters**: SettingsParameterDescription[] (Required)
+* **parameters**: [SettingsParameterDescription](#settingsparameterdescription)[] (Required)
 
 ## SettingsParameterDescription
 ### Properties
@@ -84,20 +84,20 @@
 
 ## NodeTypeProperties
 ### Properties
-* **applicationPorts**: EndpointRangeDescription
-* **capacities**: Dictionary<string,String>
+* **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription)
+* **capacities**: [Dictionary<string,String>](#dictionarystringstring)
 * **dataDiskSizeGB**: int (Required)
-* **ephemeralPorts**: EndpointRangeDescription
+* **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription)
 * **isPrimary**: bool (Required)
-* **placementProperties**: Dictionary<string,String>
+* **placementProperties**: [Dictionary<string,String>](#dictionarystringstring)
 * **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly)
-* **vmExtensions**: VMSSExtension[]
+* **vmExtensions**: [VMSSExtension](#vmssextension)[]
 * **vmImageOffer**: string
 * **vmImagePublisher**: string
 * **vmImageSku**: string
 * **vmImageVersion**: string
 * **vmInstanceCount**: int (Required)
-* **vmSecrets**: VaultSecretGroup[]
+* **vmSecrets**: [VaultSecretGroup](#vaultsecretgroup)[]
 * **vmSize**: string
 
 ## EndpointRangeDescription
@@ -118,7 +118,7 @@
 ## VMSSExtension
 ### Properties
 * **name**: string (Required)
-* **properties**: VMSSExtensionProperties (Required)
+* **properties**: [VMSSExtensionProperties](#vmssextensionproperties) (Required)
 
 ## VMSSExtensionProperties
 ### Properties
@@ -134,8 +134,8 @@
 
 ## VaultSecretGroup
 ### Properties
-* **sourceVault**: SubResource (Required)
-* **vaultCertificates**: VaultCertificate[] (Required)
+* **sourceVault**: [SubResource](#subresource) (Required)
+* **vaultCertificates**: [VaultCertificate](#vaultcertificate)[] (Required)
 
 ## SubResource
 ### Properties

@@ -3,7 +3,7 @@ Executing: autorest --use=/home/runner/work/bicep-types-az/bicep-types-az/src/ge
 AutoRest code generation utility [cli version: 3.1.2; node: v14.16.0, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.1.1)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.1.2)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
 Processing batch task - {"tag":"schema-azuredata-2020-09-08-preview"} .
@@ -20,4 +20,4 @@ Processing batch task - {"tag":"schema-azuredata-2019-07-24-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
 WARNING: Resource type Microsoft.AzureData/postgresInstances under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureData/postgresInstances/{postgresInstanceName}' has no body defined.
-[15.33 s] Generation Complete
+[16.15 s] Generation Complete

@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateZoneProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [PrivateZoneProperties](#privatezoneproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/privateDnsZones' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/privateDnsZones/A@2018-09-01
@@ -19,7 +19,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
+* **properties**: [RecordSetProperties](#recordsetproperties)
 * **type**: 'Microsoft.Network/privateDnsZones/A' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/privateDnsZones/AAAA@2018-09-01
@@ -29,7 +29,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
+* **properties**: [RecordSetProperties](#recordsetproperties)
 * **type**: 'Microsoft.Network/privateDnsZones/AAAA' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/privateDnsZones/CNAME@2018-09-01
@@ -39,7 +39,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
+* **properties**: [RecordSetProperties](#recordsetproperties)
 * **type**: 'Microsoft.Network/privateDnsZones/CNAME' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/privateDnsZones/MX@2018-09-01
@@ -49,7 +49,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
+* **properties**: [RecordSetProperties](#recordsetproperties)
 * **type**: 'Microsoft.Network/privateDnsZones/MX' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/privateDnsZones/PTR@2018-09-01
@@ -59,7 +59,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
+* **properties**: [RecordSetProperties](#recordsetproperties)
 * **type**: 'Microsoft.Network/privateDnsZones/PTR' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/privateDnsZones/SOA@2018-09-01
@@ -69,7 +69,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
+* **properties**: [RecordSetProperties](#recordsetproperties)
 * **type**: 'Microsoft.Network/privateDnsZones/SOA' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/privateDnsZones/SRV@2018-09-01
@@ -79,7 +79,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
+* **properties**: [RecordSetProperties](#recordsetproperties)
 * **type**: 'Microsoft.Network/privateDnsZones/SRV' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/privateDnsZones/TXT@2018-09-01
@@ -89,7 +89,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RecordSetProperties
+* **properties**: [RecordSetProperties](#recordsetproperties)
 * **type**: 'Microsoft.Network/privateDnsZones/TXT' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/privateDnsZones/virtualNetworkLinks@2018-09-01
@@ -100,8 +100,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkLinkProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [VirtualNetworkLinkProperties](#virtualnetworklinkproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/privateDnsZones/virtualNetworkLinks' (ReadOnly, DeployTimeConstant)
 
 ## PrivateZoneProperties
@@ -121,18 +121,18 @@
 
 ## RecordSetProperties
 ### Properties
-* **aaaaRecords**: AaaaRecord[]
-* **aRecords**: ARecord[]
-* **cnameRecord**: CnameRecord
+* **aaaaRecords**: [AaaaRecord](#aaaarecord)[]
+* **aRecords**: [ARecord](#arecord)[]
+* **cnameRecord**: [CnameRecord](#cnamerecord)
 * **fqdn**: string (ReadOnly)
 * **isAutoRegistered**: bool (ReadOnly)
-* **metadata**: Dictionary<string,String>
-* **mxRecords**: MxRecord[]
-* **ptrRecords**: PtrRecord[]
-* **soaRecord**: SoaRecord
-* **srvRecords**: SrvRecord[]
+* **metadata**: [Dictionary<string,String>](#dictionarystringstring)
+* **mxRecords**: [MxRecord](#mxrecord)[]
+* **ptrRecords**: [PtrRecord](#ptrrecord)[]
+* **soaRecord**: [SoaRecord](#soarecord)
+* **srvRecords**: [SrvRecord](#srvrecord)[]
 * **ttl**: int
-* **txtRecords**: TxtRecord[]
+* **txtRecords**: [TxtRecord](#txtrecord)[]
 
 ## AaaaRecord
 ### Properties
@@ -185,7 +185,7 @@
 ### Properties
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **registrationEnabled**: bool
-* **virtualNetwork**: SubResource
+* **virtualNetwork**: [SubResource](#subresource)
 * **virtualNetworkLinkState**: 'Completed' | 'InProgress' (ReadOnly)
 
 ## SubResource

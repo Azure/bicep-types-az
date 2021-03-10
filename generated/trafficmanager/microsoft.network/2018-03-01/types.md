@@ -7,15 +7,15 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProfileProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ProfileProperties](#profileproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Network/trafficmanagerprofiles' (ReadOnly, DeployTimeConstant)
 
 ## ProfileProperties
 ### Properties
-* **dnsConfig**: DnsConfig
-* **endpoints**: Endpoint[]
-* **monitorConfig**: MonitorConfig
+* **dnsConfig**: [DnsConfig](#dnsconfig)
+* **endpoints**: [Endpoint](#endpoint)[]
+* **monitorConfig**: [MonitorConfig](#monitorconfig)
 * **profileStatus**: 'Disabled' | 'Enabled'
 * **trafficRoutingMethod**: 'Geographic' | 'Performance' | 'Priority' | 'Weighted'
 * **trafficViewEnrollmentStatus**: 'Disabled' | 'Enabled'
@@ -30,12 +30,12 @@
 ### Properties
 * **id**: string
 * **name**: string
-* **properties**: EndpointProperties
+* **properties**: [EndpointProperties](#endpointproperties)
 * **type**: string
 
 ## EndpointProperties
 ### Properties
-* **customHeaders**: schemas:1_customHeadersItem[]
+* **customHeaders**: [schemas:1_customHeadersItem](#schemas1customheadersitem)[]
 * **endpointLocation**: string
 * **endpointMonitorStatus**: 'CheckingEndpoint' | 'Degraded' | 'Disabled' | 'Inactive' | 'Online' | 'Stopped'
 * **endpointStatus**: 'Disabled' | 'Enabled'
@@ -53,8 +53,8 @@
 
 ## MonitorConfig
 ### Properties
-* **customHeaders**: schemas:1_customHeadersItem[]
-* **expectedStatusCodeRanges**: schemas:10_expectedStatusCodeRangesItem[]
+* **customHeaders**: [schemas:1_customHeadersItem](#schemas1customheadersitem)[]
+* **expectedStatusCodeRanges**: [schemas:10_expectedStatusCodeRangesItem](#schemas10expectedstatuscoderangesitem)[]
 * **intervalInSeconds**: int
 * **path**: string
 * **port**: int

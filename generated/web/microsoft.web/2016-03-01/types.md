@@ -8,8 +8,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:0_properties
-* **tags**: Dictionary<string,String>
+* **properties**: [schemas:0_properties](#schemas0properties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Web/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/publishingUsers@2016-03-01
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **name**: 'web' (Required, DeployTimeConstant)
-* **properties**: schemas:67_properties
+* **properties**: [schemas:67_properties](#schemas67properties)
 * **type**: 'Microsoft.Web/publishingUsers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/sourcecontrols@2016-03-01
@@ -29,7 +29,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:124_properties
+* **properties**: [schemas:124_properties](#schemas124properties)
 * **type**: 'Microsoft.Web/sourcecontrols' (ReadOnly, DeployTimeConstant)
 
 ## schemas:0_properties
@@ -38,7 +38,7 @@
 * **expirationDate**: string (ReadOnly)
 * **friendlyName**: string (ReadOnly)
 * **geoRegion**: string (ReadOnly)
-* **hostingEnvironmentProfile**: HostingEnvironmentProfile (ReadOnly)
+* **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile) (ReadOnly)
 * **hostNames**: string[]
 * **issueDate**: string (ReadOnly)
 * **issuer**: string (ReadOnly)

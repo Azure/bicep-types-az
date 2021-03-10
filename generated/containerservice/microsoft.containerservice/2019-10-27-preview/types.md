@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **plan**: PurchasePlan
-* **properties**: OpenShiftManagedClusterProperties
-* **tags**: Dictionary<string,String>
+* **plan**: [PurchasePlan](#purchaseplan)
+* **properties**: [OpenShiftManagedClusterProperties](#openshiftmanagedclusterproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ContainerService/openShiftManagedClusters' (ReadOnly, DeployTimeConstant)
 
 ## PurchasePlan
@@ -21,18 +21,18 @@
 
 ## OpenShiftManagedClusterProperties
 ### Properties
-* **agentPoolProfiles**: OpenShiftManagedClusterAgentPoolProfile[]
-* **authProfile**: OpenShiftManagedClusterAuthProfile
+* **agentPoolProfiles**: [OpenShiftManagedClusterAgentPoolProfile](#openshiftmanagedclusteragentpoolprofile)[]
+* **authProfile**: [OpenShiftManagedClusterAuthProfile](#openshiftmanagedclusterauthprofile)
 * **clusterVersion**: string (ReadOnly)
 * **fqdn**: string (ReadOnly)
-* **masterPoolProfile**: OpenShiftManagedClusterMasterPoolProfile
-* **monitorProfile**: OpenShiftManagedClusterMonitorProfile
-* **networkProfile**: NetworkProfile
+* **masterPoolProfile**: [OpenShiftManagedClusterMasterPoolProfile](#openshiftmanagedclustermasterpoolprofile)
+* **monitorProfile**: [OpenShiftManagedClusterMonitorProfile](#openshiftmanagedclustermonitorprofile)
+* **networkProfile**: [NetworkProfile](#networkprofile)
 * **openShiftVersion**: string (Required)
 * **provisioningState**: string (ReadOnly)
 * **publicHostname**: string (ReadOnly)
 * **refreshCluster**: bool
-* **routerProfiles**: OpenShiftRouterProfile[]
+* **routerProfiles**: [OpenShiftRouterProfile](#openshiftrouterprofile)[]
 
 ## OpenShiftManagedClusterAgentPoolProfile
 ### Properties
@@ -45,12 +45,12 @@
 
 ## OpenShiftManagedClusterAuthProfile
 ### Properties
-* **identityProviders**: OpenShiftManagedClusterIdentityProvider[]
+* **identityProviders**: [OpenShiftManagedClusterIdentityProvider](#openshiftmanagedclusteridentityprovider)[]
 
 ## OpenShiftManagedClusterIdentityProvider
 ### Properties
 * **name**: string
-* **provider**: OpenShiftManagedClusterBaseIdentityProvider
+* **provider**: [OpenShiftManagedClusterBaseIdentityProvider](#openshiftmanagedclusterbaseidentityprovider)
 
 ## OpenShiftManagedClusterBaseIdentityProvider
 * **Discriminator**: kind
@@ -74,7 +74,7 @@
 
 ## OpenShiftManagedClusterMasterPoolProfile
 ### Properties
-* **apiProperties**: OpenShiftAPIProperties
+* **apiProperties**: [OpenShiftAPIProperties](#openshiftapiproperties)
 * **count**: int (Required)
 * **subnetCidr**: string
 * **vmSize**: 'Standard_D16s_v3' | 'Standard_D2s_v3' | 'Standard_D32s_v3' | 'Standard_D4s_v3' | 'Standard_D64s_v3' | 'Standard_D8s_v3' | 'Standard_DS12_v2' | 'Standard_DS13_v2' | 'Standard_DS14_v2' | 'Standard_DS15_v2' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_E16s_v3' | 'Standard_E20s_v3' | 'Standard_E32s_v3' | 'Standard_E4s_v3' | 'Standard_E64s_v3' | 'Standard_E8s_v3' | 'Standard_F16s_v2' | 'Standard_F16s' | 'Standard_F32s_v2' | 'Standard_F64s_v2' | 'Standard_F72s_v2' | 'Standard_F8s_v2' | 'Standard_F8s' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS5' | 'Standard_L16s' | 'Standard_L32s' | 'Standard_L4s' | 'Standard_L8s' (Required)

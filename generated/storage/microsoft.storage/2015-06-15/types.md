@@ -7,20 +7,20 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageAccountPropertiesCreateParameters
-* **tags**: Dictionary<string,String>
+* **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant)
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
 * **accountType**: 'Premium_LRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_ZRS' (Required)
 * **creationTime**: string (ReadOnly)
-* **customDomain**: CustomDomain (ReadOnly)
+* **customDomain**: [CustomDomain](#customdomain) (ReadOnly)
 * **lastGeoFailoverTime**: string (ReadOnly)
-* **primaryEndpoints**: Endpoints (ReadOnly)
+* **primaryEndpoints**: [Endpoints](#endpoints) (ReadOnly)
 * **primaryLocation**: string (ReadOnly)
 * **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly)
-* **secondaryEndpoints**: Endpoints (ReadOnly)
+* **secondaryEndpoints**: [Endpoints](#endpoints) (ReadOnly)
 * **secondaryLocation**: string (ReadOnly)
 * **statusOfPrimary**: 'Available' | 'Unavailable' (ReadOnly)
 * **statusOfSecondary**: 'Available' | 'Unavailable' (ReadOnly)

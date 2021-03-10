@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ResourceIdentity (ReadOnly)
+* **identity**: [ResourceIdentity](#resourceidentity) (ReadOnly)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServerPropertiesForCreate (Required)
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DBForMariaDB/servers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMariaDB/servers/configurations@2018-06-01-preview
@@ -19,7 +19,7 @@
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationProperties
+* **properties**: [ConfigurationProperties](#configurationproperties)
 * **type**: 'Microsoft.DBForMariaDB/servers/configurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMariaDB/servers/databases@2018-06-01-preview
@@ -28,7 +28,7 @@
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DatabaseProperties
+* **properties**: [DatabaseProperties](#databaseproperties)
 * **type**: 'Microsoft.DBForMariaDB/servers/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMariaDB/servers/firewallRules@2018-06-01-preview
@@ -37,7 +37,7 @@
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: FirewallRuleProperties (Required)
+* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required)
 * **type**: 'Microsoft.DBForMariaDB/servers/firewallRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMariaDB/servers/securityAlertPolicies@2018-06-01-preview
@@ -46,7 +46,7 @@
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityAlertPolicyProperties
+* **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties)
 * **type**: 'Microsoft.DBForMariaDB/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMariaDB/servers/virtualNetworkRules@2018-06-01-preview
@@ -55,7 +55,7 @@
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: VirtualNetworkRuleProperties
+* **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties)
 * **type**: 'Microsoft.DBForMariaDB/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
 
 ## ResourceIdentity
@@ -74,7 +74,7 @@
 * **replicaCapacity**: int (ReadOnly)
 * **replicationRole**: string (ReadOnly)
 * **sslEnforcement**: 'Disabled' | 'Enabled'
-* **storageProfile**: StorageProfile
+* **storageProfile**: [StorageProfile](#storageprofile)
 * **userVisibleState**: 'Disabled' | 'Dropping' | 'Ready' (ReadOnly)
 * **version**: '5.6' | '5.7'
 ### Default

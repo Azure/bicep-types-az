@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BillingProfileProperties
+* **properties**: [BillingProfileProperties](#billingprofileproperties)
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles/policies@2018-11-01-preview
@@ -15,7 +15,7 @@
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PolicyProperties
+* **properties**: [PolicyProperties](#policyproperties)
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/policies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Billing/billingAccounts/invoiceSections@2018-11-01-preview
@@ -24,7 +24,7 @@
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: InvoiceSectionProperties
+* **properties**: [InvoiceSectionProperties](#invoicesectionproperties)
 * **type**: 'Microsoft.Billing/billingAccounts/invoiceSections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Billing/billingAccounts/lineOfCredit@2018-11-01-preview
@@ -33,18 +33,18 @@
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LineOfCreditProperties
+* **properties**: [LineOfCreditProperties](#lineofcreditproperties)
 * **type**: 'Microsoft.Billing/billingAccounts/lineOfCredit' (ReadOnly, DeployTimeConstant)
 
 ## BillingProfileProperties
 ### Properties
-* **address**: Address
+* **address**: [Address](#address)
 * **currency**: string (ReadOnly)
 * **displayName**: string
-* **enabledAzureSKUs**: EnabledAzureSKUs[]
+* **enabledAzureSKUs**: [EnabledAzureSKUs](#enabledazureskus)[]
 * **invoiceDay**: int (ReadOnly)
 * **invoiceEmailOptIn**: bool (ReadOnly)
-* **invoiceSections**: InvoiceSection[]
+* **invoiceSections**: [InvoiceSection](#invoicesection)[]
 * **isClassic**: bool (ReadOnly)
 * **poNumber**: string
 
@@ -70,19 +70,19 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: InvoiceSectionProperties
+* **properties**: [InvoiceSectionProperties](#invoicesectionproperties)
 * **type**: string (ReadOnly)
 
 ## InvoiceSectionProperties
 ### Properties
-* **billingProfiles**: BillingProfile[]
+* **billingProfiles**: [BillingProfile](#billingprofile)[]
 * **displayName**: string
 
 ## BillingProfile
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: BillingProfileProperties
+* **properties**: [BillingProfileProperties](#billingprofileproperties)
 * **type**: string (ReadOnly)
 
 ## PolicyProperties
@@ -93,9 +93,9 @@
 
 ## LineOfCreditProperties
 ### Properties
-* **creditLimit**: Amount
+* **creditLimit**: [Amount](#amount)
 * **reason**: string (ReadOnly)
-* **remainingBalance**: Amount (ReadOnly)
+* **remainingBalance**: [Amount](#amount) (ReadOnly)
 * **status**: 'Approved' | 'Rejected'
 
 ## Amount
