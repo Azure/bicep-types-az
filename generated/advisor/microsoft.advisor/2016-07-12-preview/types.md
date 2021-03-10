@@ -8,7 +8,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **suppressionId**: string
-* **tags**: Dictionary<string,String>
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **ttl**: string
 * **type**: 'Microsoft.Advisor/recommendations/suppressions' (ReadOnly, DeployTimeConstant)
 

@@ -6,13 +6,13 @@
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:12_properties
+* **properties**: [schemas:12_properties](#schemas12properties)
 * **type**: 'Microsoft.EventHub/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant)
 
 ## schemas:12_properties
 ### Properties
 * **defaultAction**: 'Allow' | 'Deny'
-* **ipRules**: NWRuleSetIpRules[]
+* **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]
 
 ## NWRuleSetIpRules
 ### Properties

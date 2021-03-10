@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: accountProperties
+* **properties**: [accountProperties](#accountproperties)
 * **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
 
@@ -18,7 +18,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: poolProperties (Required)
+* **properties**: [poolProperties](#poolproperties) (Required)
 * **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
 
@@ -29,7 +29,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: volumeProperties (Required)
+* **properties**: [volumeProperties](#volumeproperties) (Required)
 * **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant)
 
@@ -40,13 +40,13 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: snapshotProperties
+* **properties**: [snapshotProperties](#snapshotproperties)
 * **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
 
 ## accountProperties
 ### Properties
-* **activeDirectories**: activeDirectory[]
+* **activeDirectories**: [activeDirectory](#activedirectory)[]
 * **provisioningState**: string (ReadOnly)
 
 ## activeDirectory
@@ -71,9 +71,9 @@
 ### Properties
 * **baremetalTenantId**: string (ReadOnly)
 * **creationToken**: string (Required)
-* **exportPolicy**: schemas:21_exportPolicy
+* **exportPolicy**: [schemas:21_exportPolicy](#schemas21exportpolicy)
 * **fileSystemId**: string (ReadOnly)
-* **mountTargets**: mountTargetProperties[]
+* **mountTargets**: [mountTargetProperties](#mounttargetproperties)[]
 * **protocolTypes**: string[]
 * **provisioningState**: string (ReadOnly)
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra'
@@ -83,7 +83,7 @@
 
 ## schemas:21_exportPolicy
 ### Properties
-* **rules**: exportPolicyRule[]
+* **rules**: [exportPolicyRule](#exportpolicyrule)[]
 
 ## exportPolicyRule
 ### Properties

@@ -6,14 +6,14 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DiagnosticSettings
+* **properties**: [DiagnosticSettings](#diagnosticsettings)
 * **type**: 'microsoft.aadiam/diagnosticSettings' (ReadOnly, DeployTimeConstant)
 
 ## DiagnosticSettings
 ### Properties
 * **eventHubAuthorizationRuleId**: string
 * **eventHubName**: string
-* **logs**: LogSettings[]
+* **logs**: [LogSettings](#logsettings)[]
 * **serviceBusRuleId**: string
 * **storageAccountId**: string
 * **workspaceId**: string
@@ -22,7 +22,7 @@
 ### Properties
 * **category**: 'AuditLogs' | 'SignInLogs'
 * **enabled**: bool (Required)
-* **retentionPolicy**: RetentionPolicy
+* **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 
 ## RetentionPolicy
 ### Properties

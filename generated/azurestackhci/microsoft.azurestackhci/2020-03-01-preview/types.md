@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ClusterProperties](#clusterproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.AzureStackHCI/clusters' (ReadOnly, DeployTimeConstant)
 
 ## ClusterProperties
@@ -21,7 +21,7 @@
 * **lastSyncTimestamp**: string (ReadOnly)
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly)
 * **registrationTimestamp**: string (ReadOnly)
-* **reportedProperties**: ClusterReportedProperties
+* **reportedProperties**: [ClusterReportedProperties](#clusterreportedproperties)
 * **status**: 'ConnectedRecently' | 'Disconnected' | 'Error' | 'NotConnectedRecently' | 'NotYetRegistered' (ReadOnly)
 * **trialDaysRemaining**: int (ReadOnly)
 
@@ -31,7 +31,7 @@
 * **clusterName**: string (ReadOnly)
 * **clusterVersion**: string (ReadOnly)
 * **lastUpdated**: string (ReadOnly)
-* **nodes**: ClusterNode[] (ReadOnly)
+* **nodes**: [ClusterNode](#clusternode)[] (ReadOnly)
 
 ## ClusterNode
 ### Properties

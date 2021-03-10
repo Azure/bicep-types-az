@@ -7,34 +7,34 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PipelineProperties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [PipelineProperties](#pipelineproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DevOps/pipelines' (ReadOnly, DeployTimeConstant)
 
 ## PipelineProperties
 ### Properties
-* **bootstrapConfiguration**: BootstrapConfiguration (Required)
-* **organization**: OrganizationReference (Required)
+* **bootstrapConfiguration**: [BootstrapConfiguration](#bootstrapconfiguration) (Required)
+* **organization**: [OrganizationReference](#organizationreference) (Required)
 * **pipelineId**: int (ReadOnly)
-* **project**: ProjectReference (Required)
+* **project**: [ProjectReference](#projectreference) (Required)
 
 ## BootstrapConfiguration
 ### Properties
-* **repository**: CodeRepository
-* **template**: PipelineTemplate (Required)
+* **repository**: [CodeRepository](#coderepository)
+* **template**: [PipelineTemplate](#pipelinetemplate) (Required)
 
 ## CodeRepository
 ### Properties
-* **authorization**: Authorization
+* **authorization**: [Authorization](#authorization)
 * **defaultBranch**: string (Required)
 * **id**: string (Required)
-* **properties**: Dictionary<string,String>
+* **properties**: [Dictionary<string,String>](#dictionarystringstring)
 * **repositoryType**: 'gitHub' | 'vstsGit' (Required)
 
 ## Authorization
 ### Properties
 * **authorizationType**: string (Required)
-* **parameters**: Dictionary<string,String>
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
 
 ## Dictionary<string,String>
 ### Properties
@@ -49,7 +49,7 @@
 ## PipelineTemplate
 ### Properties
 * **id**: string (Required)
-* **parameters**: Dictionary<string,String>
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
 
 ## Dictionary<string,String>
 ### Properties

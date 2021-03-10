@@ -7,7 +7,7 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SavedSearchProperties (Required)
+* **properties**: [SavedSearchProperties](#savedsearchproperties) (Required)
 * **type**: 'Microsoft.OperationalInsights/workspaces/savedSearches' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces/storageInsightConfigs@2015-03-20
@@ -17,8 +17,8 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: StorageInsightProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [StorageInsightProperties](#storageinsightproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.OperationalInsights/workspaces/storageInsightConfigs' (ReadOnly, DeployTimeConstant)
 
 ## SavedSearchProperties
@@ -26,7 +26,7 @@
 * **category**: string (Required)
 * **displayName**: string (Required)
 * **query**: string (Required)
-* **tags**: Tag[]
+* **tags**: [Tag](#tag)[]
 * **version**: int
 
 ## Tag
@@ -37,8 +37,8 @@
 ## StorageInsightProperties
 ### Properties
 * **containers**: string[]
-* **status**: StorageInsightStatus (ReadOnly)
-* **storageAccount**: StorageAccount (Required)
+* **status**: [StorageInsightStatus](#storageinsightstatus) (ReadOnly)
+* **storageAccount**: [StorageAccount](#storageaccount) (Required)
 * **tables**: string[]
 
 ## StorageInsightStatus

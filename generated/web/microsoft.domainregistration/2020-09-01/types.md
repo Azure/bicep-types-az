@@ -8,9 +8,9 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:2_properties
-* **systemData**: systemData
-* **tags**: Dictionary<string,String>
+* **properties**: [schemas:2_properties](#schemas2properties)
+* **systemData**: [systemData](#systemdata)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers@2020-09-01
@@ -20,26 +20,26 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:6_properties
-* **systemData**: systemData
+* **properties**: [schemas:6_properties](#schemas6properties)
+* **systemData**: [systemData](#systemdata)
 * **type**: 'Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant)
 
 ## schemas:2_properties
 ### Properties
 * **authCode**: string
 * **autoRenew**: bool
-* **consent**: DomainPurchaseConsent (Required)
-* **contactAdmin**: Contact (Required)
-* **contactBilling**: Contact (Required)
-* **contactRegistrant**: Contact (Required)
-* **contactTech**: Contact (Required)
+* **consent**: [DomainPurchaseConsent](#domainpurchaseconsent) (Required)
+* **contactAdmin**: [Contact](#contact) (Required)
+* **contactBilling**: [Contact](#contact) (Required)
+* **contactRegistrant**: [Contact](#contact) (Required)
+* **contactTech**: [Contact](#contact) (Required)
 * **createdTime**: string (ReadOnly)
 * **dnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns'
 * **dnsZoneId**: string
 * **domainNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive'[] (ReadOnly)
 * **expirationTime**: string (ReadOnly)
 * **lastRenewedTime**: string (ReadOnly)
-* **managedHostNames**: HostName[] (ReadOnly)
+* **managedHostNames**: [HostName](#hostname)[] (ReadOnly)
 * **nameServers**: string[] (ReadOnly)
 * **privacy**: bool
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly)
@@ -55,7 +55,7 @@
 
 ## Contact
 ### Properties
-* **addressMailing**: Address
+* **addressMailing**: [Address](#address)
 * **email**: string (Required)
 * **fax**: string
 * **jobTitle**: string

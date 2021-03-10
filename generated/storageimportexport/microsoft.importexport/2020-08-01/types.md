@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: IdentityDetails (ReadOnly)
+* **identity**: [IdentityDetails](#identitydetails) (ReadOnly)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: JobDetails
-* **systemData**: systemData (ReadOnly)
+* **properties**: [JobDetails](#jobdetails)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
 * **tags**: any
 * **type**: 'Microsoft.ImportExport/jobs' (ReadOnly, DeployTimeConstant)
 
@@ -23,20 +23,20 @@
 ### Properties
 * **backupDriveManifest**: bool
 * **cancelRequested**: bool
-* **deliveryPackage**: DeliveryPackageInformation
+* **deliveryPackage**: [DeliveryPackageInformation](#deliverypackageinformation)
 * **diagnosticsPath**: string
-* **driveList**: DriveStatus[]
-* **encryptionKey**: EncryptionKeyDetails
-* **export**: Export
+* **driveList**: [DriveStatus](#drivestatus)[]
+* **encryptionKey**: [EncryptionKeyDetails](#encryptionkeydetails)
+* **export**: [Export](#export)
 * **incompleteBlobListUri**: string
 * **jobType**: string
 * **logLevel**: string
 * **percentComplete**: int
 * **provisioningState**: string
-* **returnAddress**: ReturnAddress
-* **returnPackage**: PackageInformation
-* **returnShipping**: ReturnShipping
-* **shippingInformation**: ShippingInformation
+* **returnAddress**: [ReturnAddress](#returnaddress)
+* **returnPackage**: [PackageInformation](#packageinformation)
+* **returnShipping**: [ReturnShipping](#returnshipping)
+* **shippingInformation**: [ShippingInformation](#shippinginformation)
 * **state**: string
 * **storageAccountId**: string
 
@@ -70,7 +70,7 @@
 
 ## Export
 ### Properties
-* **blobList**: schemas:16_blobList
+* **blobList**: [schemas:16_blobList](#schemas16bloblist)
 * **blobListBlobPath**: string
 
 ## schemas:16_blobList

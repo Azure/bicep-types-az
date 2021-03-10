@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AdvancedThreatProtectionProperties
+* **properties**: [AdvancedThreatProtectionProperties](#advancedthreatprotectionproperties)
 * **type**: 'Microsoft.Security/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/autoProvisioningSettings@2017-08-01-preview
@@ -15,7 +15,7 @@
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AutoProvisioningSettingProperties
+* **properties**: [AutoProvisioningSettingProperties](#autoprovisioningsettingproperties)
 * **type**: 'Microsoft.Security/autoProvisioningSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/deviceSecurityGroups@2017-08-01-preview
@@ -24,7 +24,7 @@
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DeviceSecurityGroupProperties
+* **properties**: [DeviceSecurityGroupProperties](#devicesecuritygroupproperties)
 * **type**: 'Microsoft.Security/deviceSecurityGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/informationProtectionPolicies@2017-08-01-preview
@@ -33,7 +33,7 @@
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'custom' | 'effective' (Required, DeployTimeConstant)
-* **properties**: InformationProtectionPolicyProperties
+* **properties**: [InformationProtectionPolicyProperties](#informationprotectionpolicyproperties)
 * **type**: 'Microsoft.Security/informationProtectionPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/iotSecuritySolutions@2017-08-01-preview
@@ -43,8 +43,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IoTSecuritySolutionProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [IoTSecuritySolutionProperties](#iotsecuritysolutionproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Security/iotSecuritySolutions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/pricings@2017-08-01-preview
@@ -53,7 +53,7 @@
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PricingProperties
+* **properties**: [PricingProperties](#pricingproperties)
 * **type**: 'Microsoft.Security/pricings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/securityContacts@2017-08-01-preview
@@ -62,7 +62,7 @@
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: SecurityContactProperties
+* **properties**: [SecurityContactProperties](#securitycontactproperties)
 * **type**: 'Microsoft.Security/securityContacts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/settings@2017-08-01-preview
@@ -76,7 +76,7 @@
 ### DataExportSetting
 #### Properties
 * **kind**: 'DataExportSetting' (Required)
-* **properties**: DataExportSettingProperties
+* **properties**: [DataExportSettingProperties](#dataexportsettingproperties)
 
 
 ## Resource Microsoft.Security/workspaceSettings@2017-08-01-preview
@@ -85,7 +85,7 @@
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceSettingProperties
+* **properties**: [WorkspaceSettingProperties](#workspacesettingproperties)
 * **type**: 'Microsoft.Security/workspaceSettings' (ReadOnly, DeployTimeConstant)
 
 ## AdvancedThreatProtectionProperties
@@ -98,10 +98,10 @@
 
 ## DeviceSecurityGroupProperties
 ### Properties
-* **allowlistRules**: AllowlistCustomAlertRule[]
-* **denylistRules**: DenylistCustomAlertRule[]
-* **thresholdRules**: ThresholdCustomAlertRule[]
-* **timeWindowRules**: TimeWindowCustomAlertRule[]
+* **allowlistRules**: [AllowlistCustomAlertRule](#allowlistcustomalertrule)[]
+* **denylistRules**: [DenylistCustomAlertRule](#denylistcustomalertrule)[]
+* **thresholdRules**: [ThresholdCustomAlertRule](#thresholdcustomalertrule)[]
+* **timeWindowRules**: [TimeWindowCustomAlertRule](#timewindowcustomalertrule)[]
 
 ## AllowlistCustomAlertRule
 ### Properties
@@ -138,15 +138,15 @@
 
 ## InformationProtectionPolicyProperties
 ### Properties
-* **informationTypes**: Dictionary<string,InformationType>
-* **labels**: Dictionary<string,SensitivityLabel>
+* **informationTypes**: [Dictionary<string,InformationType>](#dictionarystringinformationtype)
+* **labels**: [Dictionary<string,SensitivityLabel>](#dictionarystringsensitivitylabel)
 * **lastModifiedUtc**: string (ReadOnly)
 * **version**: string (ReadOnly)
 
 ## Dictionary<string,InformationType>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: InformationType
+* **Additional Properties Type**: [InformationType](#informationtype)
 
 ## InformationType
 ### Properties
@@ -154,7 +154,7 @@
 * **description**: string
 * **displayName**: string
 * **enabled**: bool
-* **keywords**: InformationProtectionKeyword[]
+* **keywords**: [InformationProtectionKeyword](#informationprotectionkeyword)[]
 * **order**: int
 * **recommendedLabelId**: string
 
@@ -168,7 +168,7 @@
 ## Dictionary<string,SensitivityLabel>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: SensitivityLabel
+* **Additional Properties Type**: [SensitivityLabel](#sensitivitylabel)
 
 ## SensitivityLabel
 ### Properties
@@ -185,9 +185,9 @@
 * **displayName**: string (Required)
 * **export**: 'RawEvents'[]
 * **iotHubs**: string[] (Required)
-* **recommendationsConfiguration**: RecommendationConfigurationProperties[]
+* **recommendationsConfiguration**: [RecommendationConfigurationProperties](#recommendationconfigurationproperties)[]
 * **status**: 'Disabled' | 'Enabled'
-* **userDefinedResources**: UserDefinedResourcesProperties
+* **userDefinedResources**: [UserDefinedResourcesProperties](#userdefinedresourcesproperties)
 * **workspace**: string (Required)
 
 ## RecommendationConfigurationProperties
@@ -220,7 +220,7 @@
 ## DataExportSetting
 ### Properties
 * **kind**: 'DataExportSetting' (Required)
-* **properties**: DataExportSettingProperties
+* **properties**: [DataExportSettingProperties](#dataexportsettingproperties)
 
 ## DataExportSettingProperties
 ### Properties

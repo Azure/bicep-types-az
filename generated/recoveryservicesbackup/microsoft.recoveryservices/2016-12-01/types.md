@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProtectionContainer
-* **tags**: Dictionary<string,String>
+* **properties**: [ProtectionContainer](#protectioncontainer)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.RecoveryServices/vaults/backupstorageconfig@2016-12-01
@@ -20,8 +20,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BackupResourceConfig
-* **tags**: Dictionary<string,String>
+* **properties**: [BackupResourceConfig](#backupresourceconfig)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupstorageconfig' (ReadOnly, DeployTimeConstant)
 
 ## ProtectionContainer
@@ -38,7 +38,7 @@
 ### AzureWorkloadContainer
 #### Properties
 * **containerType**: 'AzureWorkloadContainer' (Required)
-* **extendedInfo**: AzureWorkloadContainerExtendedInfo
+* **extendedInfo**: [AzureWorkloadContainerExtendedInfo](#azureworkloadcontainerextendedinfo)
 * **lastUpdatedTime**: string
 * **operationType**: 'Invalid' | 'Register' | 'Reregister'
 * **sourceResourceId**: string
@@ -51,7 +51,7 @@
 * **containerType**: 'DPMContainer' (Required)
 * **dpmAgentVersion**: string
 * **dpmServers**: string[]
-* **extendedInfo**: DPMContainerExtendedInfo
+* **extendedInfo**: [DPMContainerExtendedInfo](#dpmcontainerextendedinfo)
 * **protectedItemCount**: int
 * **protectionStatus**: string
 * **upgradeAvailable**: bool
@@ -59,7 +59,7 @@
 ### GenericContainer
 #### Properties
 * **containerType**: 'GenericContainer' (Required)
-* **extendedInformation**: GenericContainerExtendedInfo
+* **extendedInformation**: [GenericContainerExtendedInfo](#genericcontainerextendedinfo)
 * **fabricName**: string
 
 ### IaaSVMContainer
@@ -84,8 +84,8 @@
 * **containerHealthState**: string
 * **containerId**: int
 * **containerType**: 'Windows' (Required)
-* **extendedInfo**: MabContainerExtendedInfo
-* **mabContainerHealthDetails**: MABContainerHealthDetails[]
+* **extendedInfo**: [MabContainerExtendedInfo](#mabcontainerextendedinfo)
+* **mabContainerHealthDetails**: [MABContainerHealthDetails](#mabcontainerhealthdetails)[]
 * **protectedItemCount**: int
 
 
@@ -96,7 +96,7 @@
 ## AzureWorkloadContainer
 ### Properties
 * **containerType**: 'AzureWorkloadContainer' (Required)
-* **extendedInfo**: AzureWorkloadContainerExtendedInfo
+* **extendedInfo**: [AzureWorkloadContainerExtendedInfo](#azureworkloadcontainerextendedinfo)
 * **lastUpdatedTime**: string
 * **operationType**: 'Invalid' | 'Register' | 'Reregister'
 * **sourceResourceId**: string
@@ -105,13 +105,13 @@
 ## AzureWorkloadContainerExtendedInfo
 ### Properties
 * **hostServerName**: string
-* **inquiryInfo**: InquiryInfo
-* **nodesList**: DistributedNodesInfo[]
+* **inquiryInfo**: [InquiryInfo](#inquiryinfo)
+* **nodesList**: [DistributedNodesInfo](#distributednodesinfo)[]
 
 ## InquiryInfo
 ### Properties
-* **errorDetail**: ErrorDetail
-* **inquiryDetails**: WorkloadInquiryDetails[]
+* **errorDetail**: [ErrorDetail](#errordetail)
+* **inquiryDetails**: [WorkloadInquiryDetails](#workloadinquirydetails)[]
 * **status**: string
 
 ## ErrorDetail
@@ -122,19 +122,19 @@
 
 ## WorkloadInquiryDetails
 ### Properties
-* **inquiryValidation**: InquiryValidation
+* **inquiryValidation**: [InquiryValidation](#inquiryvalidation)
 * **itemCount**: int
 * **type**: string
 
 ## InquiryValidation
 ### Properties
 * **additionalDetail**: string (ReadOnly)
-* **errorDetail**: ErrorDetail
+* **errorDetail**: [ErrorDetail](#errordetail)
 * **status**: string
 
 ## DistributedNodesInfo
 ### Properties
-* **errorDetail**: ErrorDetail
+* **errorDetail**: [ErrorDetail](#errordetail)
 * **nodeName**: string
 * **status**: string
 
@@ -145,7 +145,7 @@
 * **containerType**: 'DPMContainer' (Required)
 * **dpmAgentVersion**: string
 * **dpmServers**: string[]
-* **extendedInfo**: DPMContainerExtendedInfo
+* **extendedInfo**: [DPMContainerExtendedInfo](#dpmcontainerextendedinfo)
 * **protectedItemCount**: int
 * **protectionStatus**: string
 * **upgradeAvailable**: bool
@@ -157,14 +157,14 @@
 ## GenericContainer
 ### Properties
 * **containerType**: 'GenericContainer' (Required)
-* **extendedInformation**: GenericContainerExtendedInfo
+* **extendedInformation**: [GenericContainerExtendedInfo](#genericcontainerextendedinfo)
 * **fabricName**: string
 
 ## GenericContainerExtendedInfo
 ### Properties
-* **containerIdentityInfo**: ContainerIdentityInfo
+* **containerIdentityInfo**: [ContainerIdentityInfo](#containeridentityinfo)
 * **rawCertData**: string
-* **serviceEndpoints**: Dictionary<string,String>
+* **serviceEndpoints**: [Dictionary<string,String>](#dictionarystringstring)
 
 ## ContainerIdentityInfo
 ### Properties
@@ -200,8 +200,8 @@
 * **containerHealthState**: string
 * **containerId**: int
 * **containerType**: 'Windows' (Required)
-* **extendedInfo**: MabContainerExtendedInfo
-* **mabContainerHealthDetails**: MABContainerHealthDetails[]
+* **extendedInfo**: [MabContainerExtendedInfo](#mabcontainerextendedinfo)
+* **mabContainerHealthDetails**: [MABContainerHealthDetails](#mabcontainerhealthdetails)[]
 * **protectedItemCount**: int
 
 ## MabContainerExtendedInfo

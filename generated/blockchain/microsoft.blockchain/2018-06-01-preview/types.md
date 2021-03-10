@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BlockchainMemberProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [BlockchainMemberProperties](#blockchainmemberproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Blockchain/blockchainMembers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Blockchain/blockchainMembers/transactionNodes@2018-06-01-preview
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TransactionNodeProperties
+* **properties**: [TransactionNodeProperties](#transactionnodeproperties)
 * **type**: 'Microsoft.Blockchain/blockchainMembers/transactionNodes' (ReadOnly, DeployTimeConstant)
 
 ## BlockchainMemberProperties
@@ -30,14 +30,14 @@
 * **consortiumMemberDisplayName**: string
 * **consortiumRole**: string
 * **dns**: string (ReadOnly)
-* **firewallRules**: FirewallRule[]
+* **firewallRules**: [FirewallRule](#firewallrule)[]
 * **password**: string
 * **protocol**: 'Corda' | 'NotSpecified' | 'Parity' | 'Quorum'
 * **provisioningState**: 'Deleting' | 'Failed' | 'NotSpecified' | 'Stale' | 'Succeeded' | 'Updating' (ReadOnly)
 * **publicKey**: string (ReadOnly)
 * **rootContractAddress**: string (ReadOnly)
 * **userName**: string (ReadOnly)
-* **validatorNodesSku**: BlockchainMemberNodesSku
+* **validatorNodesSku**: [BlockchainMemberNodesSku](#blockchainmembernodessku)
 
 ## FirewallRule
 ### Properties
@@ -62,7 +62,7 @@
 ## TransactionNodeProperties
 ### Properties
 * **dns**: string (ReadOnly)
-* **firewallRules**: FirewallRule[]
+* **firewallRules**: [FirewallRule](#firewallrule)[]
 * **password**: string
 * **provisioningState**: 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly)
 * **publicKey**: string (ReadOnly)

@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2020-04-06-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: schemas:0_identity
+* **identity**: [schemas:0_identity](#schemas0identity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MixedRealityAccountProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [MixedRealityAccountProperties](#mixedrealityaccountproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.MixedReality/remoteRenderingAccounts' (ReadOnly, DeployTimeConstant)
 
 ## schemas:0_identity

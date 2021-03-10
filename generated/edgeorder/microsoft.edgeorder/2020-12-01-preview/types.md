@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AddressProperties (Required)
-* **systemData**: systemData (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [AddressProperties](#addressproperties) (Required)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.EdgeOrder/addresses' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EdgeOrder/orderCollections@2020-12-01-preview
@@ -19,9 +19,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: OrderCollectionProperties (Required)
-* **systemData**: systemData (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [OrderCollectionProperties](#ordercollectionproperties) (Required)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.EdgeOrder/orderCollections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EdgeOrder/orders@2020-12-01-preview
@@ -31,15 +31,15 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: OrderProperties (Required)
-* **systemData**: systemData (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [OrderProperties](#orderproperties) (Required)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.EdgeOrder/orders' (ReadOnly, DeployTimeConstant)
 
 ## AddressProperties
 ### Properties
-* **contactDetails**: ContactDetails (Required)
-* **shippingAddress**: ShippingAddress
+* **contactDetails**: [ContactDetails](#contactdetails) (Required)
+* **shippingAddress**: [ShippingAddress](#shippingaddress)
 
 ## ContactDetails
 ### Properties
@@ -86,33 +86,33 @@
 
 ## OrderProperties
 ### Properties
-* **addressDetails**: AddressDetails (Required)
+* **addressDetails**: [AddressDetails](#addressdetails) (Required)
 * **orderCollectionId**: string (ReadOnly)
-* **orderDetails**: OrderDetails (Required)
+* **orderDetails**: [OrderDetails](#orderdetails) (Required)
 * **startTime**: string (ReadOnly)
 
 ## AddressDetails
 ### Properties
-* **returnAddress**: AddressProperties (ReadOnly)
-* **shippingAddress**: AddressProperties (Required)
+* **returnAddress**: [AddressProperties](#addressproperties) (ReadOnly)
+* **shippingAddress**: [AddressProperties](#addressproperties) (Required)
 
 ## OrderDetails
 ### Properties
 * **cancellationReason**: string (ReadOnly)
 * **cancellationStatus**: 'Cancellable' | 'CancellableWithFee' | 'NotCancellable' (ReadOnly)
-* **currentStatus**: OrderStatusDetails (ReadOnly)
+* **currentStatus**: [OrderStatusDetails](#orderstatusdetails) (ReadOnly)
 * **deletionStatus**: 'Allowed' | 'NotAllowed' (ReadOnly)
-* **error**: CloudError (ReadOnly)
-* **forwardShippingDetails**: ShippingDetails (ReadOnly)
+* **error**: [CloudError](#clouderror) (ReadOnly)
+* **forwardShippingDetails**: [ShippingDetails](#shippingdetails) (ReadOnly)
 * **managementRpDetails**: any (ReadOnly)
 * **notificationEmailList**: string[]
-* **orderStatusHistory**: OrderStatusDetails[] (ReadOnly)
+* **orderStatusHistory**: [OrderStatusDetails](#orderstatusdetails)[] (ReadOnly)
 * **orderType**: 'Purchase' | 'Rental' (Required)
-* **preferences**: Preferences
-* **productDetails**: ProductDetails (Required)
+* **preferences**: [Preferences](#preferences)
+* **productDetails**: [ProductDetails](#productdetails) (Required)
 * **returnReason**: string (ReadOnly)
 * **returnStatus**: 'NotReturnable' | 'Returnable' | 'ReturnableWithFee' (ReadOnly)
-* **reverseShippingDetails**: ShippingDetails (ReadOnly)
+* **reverseShippingDetails**: [ShippingDetails](#shippingdetails) (ReadOnly)
 
 ## OrderStatusDetails
 ### Properties
@@ -121,9 +121,9 @@
 
 ## CloudError
 ### Properties
-* **additionalInfo**: AdditionalErrorInfo[] (ReadOnly)
+* **additionalInfo**: [AdditionalErrorInfo](#additionalerrorinfo)[] (ReadOnly)
 * **code**: string
-* **details**: CloudError[] (ReadOnly)
+* **details**: [CloudError](#clouderror)[] (ReadOnly)
 * **message**: string
 * **target**: string
 
@@ -141,8 +141,8 @@
 
 ## Preferences
 ### Properties
-* **notificationPreferences**: NotificationPreference[]
-* **transportPreferences**: TransportPreferences
+* **notificationPreferences**: [NotificationPreference](#notificationpreference)[]
+* **transportPreferences**: [TransportPreferences](#transportpreferences)
 
 ## NotificationPreference
 ### Properties
@@ -156,8 +156,8 @@
 ## ProductDetails
 ### Properties
 * **count**: int
-* **deviceDetails**: DeviceDetails[] (ReadOnly)
-* **hierarchyInformation**: HierarchyInformation (Required)
+* **deviceDetails**: [DeviceDetails](#devicedetails)[] (ReadOnly)
+* **hierarchyInformation**: [HierarchyInformation](#hierarchyinformation) (Required)
 
 ## DeviceDetails
 ### Properties

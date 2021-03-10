@@ -6,7 +6,7 @@
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CreateManagementGroupProperties
+* **properties**: [CreateManagementGroupProperties](#createmanagementgroupproperties)
 * **type**: 'Microsoft.Management/managementGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Management/managementGroups/subscriptions@2019-11-01
@@ -19,16 +19,16 @@
 
 ## CreateManagementGroupProperties
 ### Properties
-* **children**: CreateManagementGroupChildInfo[] (ReadOnly)
-* **details**: CreateManagementGroupDetails
+* **children**: [CreateManagementGroupChildInfo](#createmanagementgroupchildinfo)[] (ReadOnly)
+* **details**: [CreateManagementGroupDetails](#createmanagementgroupdetails)
 * **displayName**: string
-* **path**: ManagementGroupPathElement[] (ReadOnly)
+* **path**: [ManagementGroupPathElement](#managementgrouppathelement)[] (ReadOnly)
 * **roles**: string[] (ReadOnly)
 * **tenantId**: string (ReadOnly)
 
 ## CreateManagementGroupChildInfo
 ### Properties
-* **children**: CreateManagementGroupChildInfo[] (ReadOnly)
+* **children**: [CreateManagementGroupChildInfo](#createmanagementgroupchildinfo)[] (ReadOnly)
 * **displayName**: string (ReadOnly)
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
@@ -37,7 +37,7 @@
 
 ## CreateManagementGroupDetails
 ### Properties
-* **parent**: CreateParentGroupInfo
+* **parent**: [CreateParentGroupInfo](#createparentgroupinfo)
 * **updatedBy**: string (ReadOnly)
 * **updatedTime**: string (ReadOnly)
 * **version**: int (ReadOnly)

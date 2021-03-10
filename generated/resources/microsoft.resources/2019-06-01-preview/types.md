@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TemplateSpecProperties
-* **systemData**: systemData (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [TemplateSpecProperties](#templatespecproperties)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Resources/templateSpecs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Resources/templateSpecs/versions@2019-06-01-preview
@@ -19,21 +19,21 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TemplateSpecVersionProperties (Required)
-* **systemData**: systemData (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [TemplateSpecVersionProperties](#templatespecversionproperties) (Required)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Resources/templateSpecs/versions' (ReadOnly, DeployTimeConstant)
 
 ## TemplateSpecProperties
 ### Properties
 * **description**: string
 * **displayName**: string
-* **versions**: Dictionary<string,TemplateSpecVersionInfo> (ReadOnly)
+* **versions**: [Dictionary<string,TemplateSpecVersionInfo>](#dictionarystringtemplatespecversioninfo) (ReadOnly)
 
 ## Dictionary<string,TemplateSpecVersionInfo>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: TemplateSpecVersionInfo
+* **Additional Properties Type**: [TemplateSpecVersionInfo](#templatespecversioninfo)
 
 ## TemplateSpecVersionInfo
 ### Properties
@@ -57,7 +57,7 @@
 
 ## TemplateSpecVersionProperties
 ### Properties
-* **artifacts**: TemplateSpecArtifact[]
+* **artifacts**: [TemplateSpecArtifact](#templatespecartifact)[]
 * **description**: string
 * **template**: any
 

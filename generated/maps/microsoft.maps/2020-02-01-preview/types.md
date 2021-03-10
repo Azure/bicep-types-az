@@ -7,10 +7,10 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MapsAccountProperties (ReadOnly)
-* **sku**: Sku (Required)
-* **systemData**: systemData (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [MapsAccountProperties](#mapsaccountproperties) (ReadOnly)
+* **sku**: [Sku](#sku) (Required)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Maps/accounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Maps/accounts/creators@2020-02-01-preview
@@ -20,8 +20,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CreatorProperties (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [CreatorProperties](#creatorproperties) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Maps/accounts/creators' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Maps/accounts/privateAtlases@2020-02-01-preview
@@ -31,8 +31,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateAtlasProperties (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [PrivateAtlasProperties](#privateatlasproperties) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Maps/accounts/privateAtlases' (ReadOnly, DeployTimeConstant)
 
 ## MapsAccountProperties

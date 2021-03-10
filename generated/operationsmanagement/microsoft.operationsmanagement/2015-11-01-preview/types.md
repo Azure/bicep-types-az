@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagementAssociationProperties
+* **properties**: [ManagementAssociationProperties](#managementassociationproperties)
 * **type**: 'Microsoft.OperationsManagement/ManagementAssociations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationsManagement/ManagementConfigurations@2015-11-01-preview
@@ -17,7 +17,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagementConfigurationProperties
+* **properties**: [ManagementConfigurationProperties](#managementconfigurationproperties)
 * **type**: 'Microsoft.OperationsManagement/ManagementConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationsManagement/solutions@2015-11-01-preview
@@ -27,9 +27,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **plan**: SolutionPlan
-* **properties**: SolutionProperties
-* **tags**: Dictionary<string,String>
+* **plan**: [SolutionPlan](#solutionplan)
+* **properties**: [SolutionProperties](#solutionproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.OperationsManagement/solutions' (ReadOnly, DeployTimeConstant)
 
 ## ManagementAssociationProperties
@@ -39,7 +39,7 @@
 ## ManagementConfigurationProperties
 ### Properties
 * **applicationId**: string
-* **parameters**: ArmTemplateParameter[] (Required)
+* **parameters**: [ArmTemplateParameter](#armtemplateparameter)[] (Required)
 * **parentResourceType**: string (Required)
 * **provisioningState**: string (ReadOnly)
 * **template**: any (Required)

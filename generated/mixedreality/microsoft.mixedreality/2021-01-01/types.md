@@ -5,15 +5,15 @@
 ### Properties
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
-* **kind**: Sku
+* **identity**: [Identity](#identity)
+* **kind**: [Sku](#sku)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **plan**: Identity
-* **properties**: MixedRealityAccountProperties
-* **sku**: Sku
-* **systemData**: systemData
-* **tags**: Dictionary<string,String>
+* **plan**: [Identity](#identity)
+* **properties**: [MixedRealityAccountProperties](#mixedrealityaccountproperties)
+* **sku**: [Sku](#sku)
+* **systemData**: [systemData](#systemdata)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.MixedReality/remoteRenderingAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.MixedReality/spatialAnchorsAccounts@2021-01-01
@@ -21,15 +21,15 @@
 ### Properties
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
-* **kind**: Sku
+* **identity**: [Identity](#identity)
+* **kind**: [Sku](#sku)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **plan**: Identity
-* **properties**: MixedRealityAccountProperties
-* **sku**: Sku
-* **systemData**: systemData
-* **tags**: Dictionary<string,String>
+* **plan**: [Identity](#identity)
+* **properties**: [MixedRealityAccountProperties](#mixedrealityaccountproperties)
+* **sku**: [Sku](#sku)
+* **systemData**: [systemData](#systemdata)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.MixedReality/spatialAnchorsAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Identity

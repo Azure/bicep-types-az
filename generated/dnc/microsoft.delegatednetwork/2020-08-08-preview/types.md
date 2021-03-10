@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DelegatedControllerProperties (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [DelegatedControllerProperties](#delegatedcontrollerproperties) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DelegatedNetwork/controller' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DelegatedNetwork/delegatedSubnets@2020-08-08-preview
@@ -18,8 +18,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DelegatedSubnetProperties (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [DelegatedSubnetProperties](#delegatedsubnetproperties) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DelegatedNetwork/delegatedSubnets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DelegatedNetwork/orchestrators@2020-08-08-preview
@@ -27,12 +27,12 @@
 ### Properties
 * **apiVersion**: '2020-08-08-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: OrchestratorIdentity
+* **identity**: [OrchestratorIdentity](#orchestratoridentity)
 * **kind**: string (Required)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: OrchestratorResourceProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [OrchestratorResourceProperties](#orchestratorresourceproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DelegatedNetwork/orchestrators' (ReadOnly, DeployTimeConstant)
 
 ## DelegatedControllerProperties
@@ -50,10 +50,10 @@
 
 ## DelegatedSubnetProperties
 ### Properties
-* **controllerDetails**: controllerDetails
+* **controllerDetails**: [controllerDetails](#controllerdetails)
 * **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly)
 * **resourceGuid**: string (ReadOnly)
-* **subnetDetails**: subnetDetails
+* **subnetDetails**: [subnetDetails](#subnetdetails)
 
 ## controllerDetails
 ### Properties
@@ -78,7 +78,7 @@
 ### Properties
 * **apiServerEndpoint**: string
 * **clusterRootCA**: string
-* **controllerDetails**: ControllerDetails (Required)
+* **controllerDetails**: [ControllerDetails](#controllerdetails) (Required)
 * **orchestratorAppId**: string
 * **orchestratorTenantId**: string
 * **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly)

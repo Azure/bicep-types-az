@@ -8,23 +8,23 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:1_properties
-* **tags**: Dictionary<string,String>
+* **properties**: [schemas:1_properties](#schemas1properties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Web/connections' (ReadOnly, DeployTimeConstant)
 
 ## schemas:1_properties
 ### Properties
 * **apiDefinitionUrl**: string
-* **backendService**: BackendServiceDefinition
+* **backendService**: [BackendServiceDefinition](#backendservicedefinition)
 * **capabilities**: string[]
 * **changedTime**: string
-* **connectionParameters**: Dictionary<string,ConnectionParameter>
+* **connectionParameters**: [Dictionary<string,ConnectionParameter>](#dictionarystringconnectionparameter)
 * **createdTime**: string
-* **generalInformation**: GeneralApiInformation
+* **generalInformation**: [GeneralApiInformation](#generalapiinformation)
 * **metadata**: any
 * **name**: string
 * **path**: string
-* **policies**: ApiPolicies
+* **policies**: [ApiPolicies](#apipolicies)
 * **protocols**: string[]
 * **runtimeUrls**: string[]
 
@@ -34,8 +34,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string
-* **properties**: schemas:1_properties
-* **tags**: Dictionary<string,String>
+* **properties**: [schemas:1_properties](#schemas1properties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: string
 
 ## Dictionary<string,String>
@@ -46,12 +46,12 @@
 ## Dictionary<string,ConnectionParameter>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ConnectionParameter
+* **Additional Properties Type**: [ConnectionParameter](#connectionparameter)
 
 ## ConnectionParameter
 ### Properties
 * **defaultValue**: any
-* **oAuthSettings**: ApiOAuthSettings
+* **oAuthSettings**: [ApiOAuthSettings](#apioauthsettings)
 * **type**: 'array' | 'bool' | 'connection' | 'int' | 'oauthSetting' | 'object' | 'secureobject' | 'securestring' | 'string'
 * **uiDefinition**: any
 
@@ -59,7 +59,7 @@
 ### Properties
 * **clientId**: string
 * **clientSecret**: string
-* **customParameters**: Dictionary<string,ApiOAuthSettingsParameter>
+* **customParameters**: [Dictionary<string,ApiOAuthSettingsParameter>](#dictionarystringapioauthsettingsparameter)
 * **identityProvider**: string
 * **properties**: any
 * **redirectUrl**: string
@@ -68,7 +68,7 @@
 ## Dictionary<string,ApiOAuthSettingsParameter>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ApiOAuthSettingsParameter
+* **Additional Properties Type**: [ApiOAuthSettingsParameter](#apioauthsettingsparameter)
 
 ## ApiOAuthSettingsParameter
 ### Properties
@@ -82,8 +82,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string
-* **properties**: schemas:1_properties
-* **tags**: Dictionary<string,String>
+* **properties**: [schemas:1_properties](#schemas1properties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: string
 
 ## Dictionary<string,String>
@@ -97,8 +97,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string
-* **properties**: schemas:1_properties
-* **tags**: Dictionary<string,String>
+* **properties**: [schemas:1_properties](#schemas1properties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: string
 
 ## Dictionary<string,String>

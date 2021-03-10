@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RelayNamespaceProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [RelayNamespaceProperties](#relaynamespaceproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Relay/namespaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Relay/namespaces/privateEndpointConnections@2018-01-01-preview
@@ -19,8 +19,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Relay/namespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## RelayNamespaceProperties
@@ -43,8 +43,8 @@
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate)
 * **provisioningState**: 'Creating' | 'Deleting' | 'DeletingByProxy' | 'Succeeded' | 'Unknown' | 'Updating' | 'UpdatingByProxy'
 
 ## PrivateEndpoint

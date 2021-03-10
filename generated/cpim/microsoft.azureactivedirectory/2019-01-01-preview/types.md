@@ -7,15 +7,15 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:11_properties (Required)
-* **sku**: B2CResourceSKU (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [schemas:11_properties](#schemas11properties) (Required)
+* **sku**: [B2CResourceSKU](#b2cresourcesku) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.AzureActiveDirectory/b2cDirectories' (ReadOnly, DeployTimeConstant)
 
 ## schemas:11_properties
 ### Properties
-* **billingConfig**: schemas:3_billingConfig (ReadOnly)
-* **createTenantProperties**: CreateTenantProperties (WriteOnly)
+* **billingConfig**: [schemas:3_billingConfig](#schemas3billingconfig) (ReadOnly)
+* **createTenantProperties**: [CreateTenantProperties](#createtenantproperties) (WriteOnly)
 * **tenantId**: string (ReadOnly)
 
 ## schemas:3_billingConfig

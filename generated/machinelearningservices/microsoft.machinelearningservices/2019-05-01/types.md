@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: WorkspaceProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [WorkspaceProperties](#workspaceproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.MachineLearningServices/workspaces/computes@2019-05-01
@@ -17,11 +17,11 @@
 ### Properties
 * **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: Identity
+* **identity**: [Identity](#identity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: Compute
-* **tags**: Dictionary<string,String>
+* **properties**: [Compute](#compute)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -56,23 +56,23 @@
 * **description**: string
 * **isAttachedCompute**: bool (ReadOnly)
 * **modifiedOn**: string (ReadOnly)
-* **provisioningErrors**: MachineLearningServiceError[] (ReadOnly)
+* **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
 * **resourceId**: string
 ### AKS
 #### Properties
 * **computeType**: 'AKS' (Required)
-* **properties**: schemas:21_properties
+* **properties**: [schemas:21_properties](#schemas21properties)
 
 ### AmlCompute
 #### Properties
 * **computeType**: 'AmlCompute' (Required)
-* **properties**: schemas:22_properties
+* **properties**: [schemas:22_properties](#schemas22properties)
 
 ### Databricks
 #### Properties
 * **computeType**: 'Databricks' (Required)
-* **properties**: schemas:23_properties
+* **properties**: [schemas:23_properties](#schemas23properties)
 
 ### DataFactory
 #### Properties
@@ -81,27 +81,27 @@
 ### DataLakeAnalytics
 #### Properties
 * **computeType**: 'DataLakeAnalytics' (Required)
-* **properties**: schemas:23_properties
+* **properties**: [schemas:23_properties](#schemas23properties)
 
 ### HDInsight
 #### Properties
 * **computeType**: 'HDInsight' (Required)
-* **properties**: schemas:23_properties
+* **properties**: [schemas:23_properties](#schemas23properties)
 
 ### VirtualMachine
 #### Properties
 * **computeType**: 'VirtualMachine' (Required)
-* **properties**: schemas:23_properties
+* **properties**: [schemas:23_properties](#schemas23properties)
 
 
 ## MachineLearningServiceError
 ### Properties
-* **error**: ErrorResponse (ReadOnly)
+* **error**: [ErrorResponse](#errorresponse) (ReadOnly)
 
 ## ErrorResponse
 ### Properties
 * **code**: string (ReadOnly)
-* **details**: ErrorDetail[] (ReadOnly)
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly)
 * **message**: string (ReadOnly)
 
 ## ErrorDetail
@@ -112,16 +112,16 @@
 ## AKS
 ### Properties
 * **computeType**: 'AKS' (Required)
-* **properties**: schemas:21_properties
+* **properties**: [schemas:21_properties](#schemas21properties)
 
 ## schemas:21_properties
 ### Properties
 * **agentCount**: int
 * **agentVMSize**: string
-* **aksNetworkingConfiguration**: AksNetworkingConfiguration
+* **aksNetworkingConfiguration**: [AksNetworkingConfiguration](#aksnetworkingconfiguration)
 * **clusterFqdn**: string
-* **sslConfiguration**: SslConfiguration
-* **systemServices**: SystemService[] (ReadOnly)
+* **sslConfiguration**: [SslConfiguration](#sslconfiguration)
+* **systemServices**: [SystemService](#systemservice)[] (ReadOnly)
 
 ## AksNetworkingConfiguration
 ### Properties
@@ -146,19 +146,19 @@
 ## AmlCompute
 ### Properties
 * **computeType**: 'AmlCompute' (Required)
-* **properties**: schemas:22_properties
+* **properties**: [schemas:22_properties](#schemas22properties)
 
 ## schemas:22_properties
 ### Properties
 * **allocationState**: 'Resizing' | 'Steady' (ReadOnly)
 * **allocationStateTransitionTime**: string (ReadOnly)
 * **currentNodeCount**: int (ReadOnly)
-* **errors**: MachineLearningServiceError[] (ReadOnly)
-* **nodeStateCounts**: NodeStateCounts (ReadOnly)
-* **scaleSettings**: ScaleSettings
-* **subnet**: ResourceId
+* **errors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly)
+* **nodeStateCounts**: [NodeStateCounts](#nodestatecounts) (ReadOnly)
+* **scaleSettings**: [ScaleSettings](#scalesettings)
+* **subnet**: [ResourceId](#resourceid)
 * **targetNodeCount**: int (ReadOnly)
-* **userAccountCredentials**: UserAccountCredentials
+* **userAccountCredentials**: [UserAccountCredentials](#useraccountcredentials)
 * **vmPriority**: 'Dedicated' | 'LowPriority'
 * **vmSize**: string
 
@@ -190,12 +190,12 @@
 ## Databricks
 ### Properties
 * **computeType**: 'Databricks' (Required)
-* **properties**: schemas:23_properties
+* **properties**: [schemas:23_properties](#schemas23properties)
 
 ## schemas:23_properties
 ### Properties
 * **address**: string
-* **administratorAccount**: VirtualMachineSshCredentials
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials)
 * **sshPort**: int
 * **virtualMachineSize**: string
 
@@ -213,17 +213,17 @@
 ## DataLakeAnalytics
 ### Properties
 * **computeType**: 'DataLakeAnalytics' (Required)
-* **properties**: schemas:23_properties
+* **properties**: [schemas:23_properties](#schemas23properties)
 
 ## HDInsight
 ### Properties
 * **computeType**: 'HDInsight' (Required)
-* **properties**: schemas:23_properties
+* **properties**: [schemas:23_properties](#schemas23properties)
 
 ## VirtualMachine
 ### Properties
 * **computeType**: 'VirtualMachine' (Required)
-* **properties**: schemas:23_properties
+* **properties**: [schemas:23_properties](#schemas23properties)
 
 ## Dictionary<string,String>
 ### Properties

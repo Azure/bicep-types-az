@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MapsAccountProperties (ReadOnly)
-* **sku**: Sku (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [MapsAccountProperties](#mapsaccountproperties) (ReadOnly)
+* **sku**: [Sku](#sku) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Maps/accounts' (ReadOnly, DeployTimeConstant)
 
 ## MapsAccountProperties

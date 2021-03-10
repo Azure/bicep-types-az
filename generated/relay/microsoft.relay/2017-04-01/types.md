@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RelayNamespaceProperties
-* **sku**: Sku
-* **tags**: Dictionary<string,String>
+* **properties**: [RelayNamespaceProperties](#relaynamespaceproperties)
+* **sku**: [Sku](#sku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Relay/namespaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Relay/namespaces/authorizationRules@2017-04-01
@@ -18,7 +18,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:13_properties (Required)
+* **properties**: [schemas:13_properties](#schemas13properties) (Required)
 * **type**: 'Microsoft.Relay/namespaces/authorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Relay/namespaces/hybridConnections@2017-04-01
@@ -27,7 +27,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:4_properties
+* **properties**: [schemas:4_properties](#schemas4properties)
 * **type**: 'Microsoft.Relay/namespaces/hybridConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Relay/namespaces/hybridConnections/authorizationRules@2017-04-01
@@ -36,7 +36,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:13_properties (Required)
+* **properties**: [schemas:13_properties](#schemas13properties) (Required)
 * **type**: 'Microsoft.Relay/namespaces/hybridConnections/authorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Relay/namespaces/wcfRelays@2017-04-01
@@ -45,7 +45,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:6_properties
+* **properties**: [schemas:6_properties](#schemas6properties)
 * **type**: 'Microsoft.Relay/namespaces/wcfRelays' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Relay/namespaces/wcfRelays/authorizationRules@2017-04-01
@@ -54,7 +54,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:13_properties (Required)
+* **properties**: [schemas:13_properties](#schemas13properties) (Required)
 * **type**: 'Microsoft.Relay/namespaces/wcfRelays/authorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## RelayNamespaceProperties

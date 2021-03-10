@@ -7,25 +7,25 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DashboardProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [DashboardProperties](#dashboardproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Portal/dashboards' (ReadOnly, DeployTimeConstant)
 
 ## DashboardProperties
 ### Properties
-* **lenses**: Dictionary<string,DashboardLens>
-* **metadata**: Dictionary<string,Object>
+* **lenses**: [Dictionary<string,DashboardLens>](#dictionarystringdashboardlens)
+* **metadata**: [Dictionary<string,Object>](#dictionarystringobject)
 
 ## Dictionary<string,DashboardLens>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: DashboardLens
+* **Additional Properties Type**: [DashboardLens](#dashboardlens)
 
 ## DashboardLens
 ### Properties
-* **metadata**: Dictionary<string,Object>
+* **metadata**: [Dictionary<string,Object>](#dictionarystringobject)
 * **order**: int (Required)
-* **parts**: Dictionary<string,DashboardParts> (Required)
+* **parts**: [Dictionary<string,DashboardParts>](#dictionarystringdashboardparts) (Required)
 
 ## Dictionary<string,Object>
 ### Properties
@@ -35,12 +35,12 @@
 ## Dictionary<string,DashboardParts>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: DashboardParts
+* **Additional Properties Type**: [DashboardParts](#dashboardparts)
 
 ## DashboardParts
 ### Properties
-* **metadata**: Dictionary<string,Object>
-* **position**: schemas:1_position (Required)
+* **metadata**: [Dictionary<string,Object>](#dictionarystringobject)
+* **position**: [schemas:1_position](#schemas1position) (Required)
 
 ## Dictionary<string,Object>
 ### Properties
@@ -50,7 +50,7 @@
 ## schemas:1_position
 ### Properties
 * **colSpan**: int (Required)
-* **metadata**: Dictionary<string,Object>
+* **metadata**: [Dictionary<string,Object>](#dictionarystringobject)
 * **rowSpan**: int (Required)
 * **x**: int (Required)
 * **y**: int (Required)

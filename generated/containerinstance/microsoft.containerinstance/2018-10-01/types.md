@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ContainerGroupIdentity
+* **identity**: [ContainerGroupIdentity](#containergroupidentity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:18_userAssignedIdentitiesValue (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [schemas:18_userAssignedIdentitiesValue](#schemas18userassignedidentitiesvalue) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant)
 
 ## ContainerGroupIdentity
@@ -17,12 +17,12 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: Dictionary<string,Schemas18UserAssignedIdentitiesValue>
+* **userAssignedIdentities**: [Dictionary<string,Schemas18UserAssignedIdentitiesValue>](#dictionarystringschemas18userassignedidentitiesvalue)
 
 ## Dictionary<string,Schemas18UserAssignedIdentitiesValue>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: schemas:18_userAssignedIdentitiesValue
+* **Additional Properties Type**: [schemas:18_userAssignedIdentitiesValue](#schemas18userassignedidentitiesvalue)
 
 ## schemas:18_userAssignedIdentitiesValue
 ### Properties

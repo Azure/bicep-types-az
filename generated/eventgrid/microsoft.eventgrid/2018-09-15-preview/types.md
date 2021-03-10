@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DomainProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [DomainProperties](#domainproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/eventSubscriptions@2018-09-15-preview
@@ -17,7 +17,7 @@
 * **apiVersion**: '2018-09-15-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EventSubscriptionProperties
+* **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties)
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/topics@2018-09-15-preview
@@ -27,15 +27,15 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: TopicProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [TopicProperties](#topicproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
 ## DomainProperties
 ### Properties
 * **endpoint**: string (ReadOnly)
 * **inputSchema**: 'CloudEventV01Schema' | 'CustomEventSchema' | 'EventGridSchema'
-* **inputSchemaMapping**: InputSchemaMapping
+* **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## InputSchemaMapping
@@ -44,22 +44,22 @@
 ### Json
 #### Properties
 * **inputSchemaMappingType**: 'Json' (Required)
-* **properties**: JsonInputSchemaMappingProperties
+* **properties**: [JsonInputSchemaMappingProperties](#jsoninputschemamappingproperties)
 
 
 ## Json
 ### Properties
 * **inputSchemaMappingType**: 'Json' (Required)
-* **properties**: JsonInputSchemaMappingProperties
+* **properties**: [JsonInputSchemaMappingProperties](#jsoninputschemamappingproperties)
 
 ## JsonInputSchemaMappingProperties
 ### Properties
-* **dataVersion**: JsonFieldWithDefault
-* **eventTime**: JsonField
-* **eventType**: JsonFieldWithDefault
-* **id**: JsonField
-* **subject**: JsonFieldWithDefault
-* **topic**: JsonField
+* **dataVersion**: [JsonFieldWithDefault](#jsonfieldwithdefault)
+* **eventTime**: [JsonField](#jsonfield)
+* **eventType**: [JsonFieldWithDefault](#jsonfieldwithdefault)
+* **id**: [JsonField](#jsonfield)
+* **subject**: [JsonFieldWithDefault](#jsonfieldwithdefault)
+* **topic**: [JsonField](#jsonfield)
 
 ## JsonFieldWithDefault
 ### Properties
@@ -77,14 +77,14 @@
 
 ## EventSubscriptionProperties
 ### Properties
-* **deadLetterDestination**: DeadLetterDestination
-* **destination**: EventSubscriptionDestination
+* **deadLetterDestination**: [DeadLetterDestination](#deadletterdestination)
+* **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination)
 * **eventDeliverySchema**: 'CloudEventV01Schema' | 'CustomInputSchema' | 'EventGridSchema'
 * **expirationTimeUtc**: string
-* **filter**: EventSubscriptionFilter
+* **filter**: [EventSubscriptionFilter](#eventsubscriptionfilter)
 * **labels**: string[]
 * **provisioningState**: 'AwaitingManualAction' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **retryPolicy**: RetryPolicy
+* **retryPolicy**: [RetryPolicy](#retrypolicy)
 * **topic**: string (ReadOnly)
 
 ## DeadLetterDestination
@@ -93,13 +93,13 @@
 ### StorageBlob
 #### Properties
 * **endpointType**: 'StorageBlob' (Required)
-* **properties**: StorageBlobDeadLetterDestinationProperties
+* **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties)
 
 
 ## StorageBlob
 ### Properties
 * **endpointType**: 'StorageBlob' (Required)
-* **properties**: StorageBlobDeadLetterDestinationProperties
+* **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties)
 
 ## StorageBlobDeadLetterDestinationProperties
 ### Properties
@@ -112,28 +112,28 @@
 ### EventHub
 #### Properties
 * **endpointType**: 'EventHub' (Required)
-* **properties**: EventHubEventSubscriptionDestinationProperties
+* **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties)
 
 ### HybridConnection
 #### Properties
 * **endpointType**: 'HybridConnection' (Required)
-* **properties**: HybridConnectionEventSubscriptionDestinationProperties
+* **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties)
 
 ### StorageQueue
 #### Properties
 * **endpointType**: 'StorageQueue' (Required)
-* **properties**: StorageQueueEventSubscriptionDestinationProperties
+* **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties)
 
 ### WebHook
 #### Properties
 * **endpointType**: 'WebHook' (Required)
-* **properties**: WebHookEventSubscriptionDestinationProperties
+* **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties)
 
 
 ## EventHub
 ### Properties
 * **endpointType**: 'EventHub' (Required)
-* **properties**: EventHubEventSubscriptionDestinationProperties
+* **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties)
 
 ## EventHubEventSubscriptionDestinationProperties
 ### Properties
@@ -142,7 +142,7 @@
 ## HybridConnection
 ### Properties
 * **endpointType**: 'HybridConnection' (Required)
-* **properties**: HybridConnectionEventSubscriptionDestinationProperties
+* **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties)
 
 ## HybridConnectionEventSubscriptionDestinationProperties
 ### Properties
@@ -151,7 +151,7 @@
 ## StorageQueue
 ### Properties
 * **endpointType**: 'StorageQueue' (Required)
-* **properties**: StorageQueueEventSubscriptionDestinationProperties
+* **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties)
 
 ## StorageQueueEventSubscriptionDestinationProperties
 ### Properties
@@ -161,7 +161,7 @@
 ## WebHook
 ### Properties
 * **endpointType**: 'WebHook' (Required)
-* **properties**: WebHookEventSubscriptionDestinationProperties
+* **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties)
 
 ## WebHookEventSubscriptionDestinationProperties
 ### Properties
@@ -170,7 +170,7 @@
 
 ## EventSubscriptionFilter
 ### Properties
-* **advancedFilters**: AdvancedFilter[]
+* **advancedFilters**: [AdvancedFilter](#advancedfilter)[]
 * **includedEventTypes**: string[]
 * **isSubjectCaseSensitive**: bool
 * **subjectBeginsWith**: string
@@ -310,7 +310,7 @@
 ### Properties
 * **endpoint**: string (ReadOnly)
 * **inputSchema**: 'CloudEventV01Schema' | 'CustomEventSchema' | 'EventGridSchema'
-* **inputSchemaMapping**: InputSchemaMapping
+* **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## Dictionary<string,String>

@@ -15,7 +15,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ConfigurationAssignmentProperties
+* **properties**: [ConfigurationAssignmentProperties](#configurationassignmentproperties)
 * **type**: 'Microsoft.Maintenance/configurationAssignments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Maintenance/maintenanceConfigurations@2018-06-01-preview
@@ -25,8 +25,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: MaintenanceConfigurationProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [MaintenanceConfigurationProperties](#maintenanceconfigurationproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Maintenance/maintenanceConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## ConfigurationAssignmentProperties
@@ -36,7 +36,7 @@
 
 ## MaintenanceConfigurationProperties
 ### Properties
-* **extensionProperties**: Dictionary<string,String>
+* **extensionProperties**: [Dictionary<string,String>](#dictionarystringstring)
 * **maintenanceScope**: 'All' | 'Host' | 'InResource' | 'Resource'
 * **namespace**: string
 

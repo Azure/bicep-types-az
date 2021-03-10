@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ProfileProperties
-* **sku**: Sku (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [ProfileProperties](#profileproperties)
+* **sku**: [Sku](#sku) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Cdn/profiles/endpoints@2019-04-15
@@ -19,8 +19,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: EndpointProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [EndpointProperties](#endpointproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2019-04-15
@@ -29,7 +29,7 @@
 * **apiVersion**: '2019-04-15' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CustomDomainPropertiesParameters
+* **properties**: [CustomDomainPropertiesParameters](#customdomainpropertiesparameters)
 * **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant)
 
 ## ProfileProperties
@@ -49,8 +49,8 @@
 ## EndpointProperties
 ### Properties
 * **contentTypesToCompress**: string[]
-* **deliveryPolicy**: schemas:10_deliveryPolicy
-* **geoFilters**: GeoFilter[]
+* **deliveryPolicy**: [schemas:10_deliveryPolicy](#schemas10deliverypolicy)
+* **geoFilters**: [GeoFilter](#geofilter)[]
 * **hostName**: string (ReadOnly)
 * **isCompressionEnabled**: bool
 * **isHttpAllowed**: bool
@@ -58,7 +58,7 @@
 * **optimizationType**: 'DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming'
 * **originHostHeader**: string
 * **originPath**: string
-* **origins**: DeepCreatedOrigin[] (Required)
+* **origins**: [DeepCreatedOrigin](#deepcreatedorigin)[] (Required)
 * **probePath**: string
 * **provisioningState**: string (ReadOnly)
 * **queryStringCachingBehavior**: 'BypassCaching' | 'IgnoreQueryString' | 'NotSet' | 'UseQueryString'
@@ -67,12 +67,12 @@
 ## schemas:10_deliveryPolicy
 ### Properties
 * **description**: string
-* **rules**: DeliveryRule[] (Required)
+* **rules**: [DeliveryRule](#deliveryrule)[] (Required)
 
 ## DeliveryRule
 ### Properties
-* **actions**: DeliveryRuleAction[] (Required)
-* **conditions**: DeliveryRuleCondition[]
+* **actions**: [DeliveryRuleAction](#deliveryruleaction)[] (Required)
+* **conditions**: [DeliveryRuleCondition](#deliveryrulecondition)[]
 * **name**: string
 * **order**: int (Required)
 
@@ -82,38 +82,38 @@
 ### CacheExpiration
 #### Properties
 * **name**: 'CacheExpiration' (Required)
-* **parameters**: CacheExpirationActionParameters (Required)
+* **parameters**: [CacheExpirationActionParameters](#cacheexpirationactionparameters) (Required)
 
 ### CacheKeyQueryString
 #### Properties
 * **name**: 'CacheKeyQueryString' (Required)
-* **parameters**: CacheKeyQueryStringActionParameters (Required)
+* **parameters**: [CacheKeyQueryStringActionParameters](#cachekeyquerystringactionparameters) (Required)
 
 ### ModifyRequestHeader
 #### Properties
 * **name**: 'ModifyRequestHeader' (Required)
-* **parameters**: HeaderActionParameters (Required)
+* **parameters**: [HeaderActionParameters](#headeractionparameters) (Required)
 
 ### ModifyResponseHeader
 #### Properties
 * **name**: 'ModifyResponseHeader' (Required)
-* **parameters**: HeaderActionParameters (Required)
+* **parameters**: [HeaderActionParameters](#headeractionparameters) (Required)
 
 ### UrlRedirect
 #### Properties
 * **name**: 'UrlRedirect' (Required)
-* **parameters**: UrlRedirectActionParameters (Required)
+* **parameters**: [UrlRedirectActionParameters](#urlredirectactionparameters) (Required)
 
 ### UrlRewrite
 #### Properties
 * **name**: 'UrlRewrite' (Required)
-* **parameters**: UrlRewriteActionParameters (Required)
+* **parameters**: [UrlRewriteActionParameters](#urlrewriteactionparameters) (Required)
 
 
 ## CacheExpiration
 ### Properties
 * **name**: 'CacheExpiration' (Required)
-* **parameters**: CacheExpirationActionParameters (Required)
+* **parameters**: [CacheExpirationActionParameters](#cacheexpirationactionparameters) (Required)
 
 ## CacheExpirationActionParameters
 ### Properties
@@ -125,7 +125,7 @@
 ## CacheKeyQueryString
 ### Properties
 * **name**: 'CacheKeyQueryString' (Required)
-* **parameters**: CacheKeyQueryStringActionParameters (Required)
+* **parameters**: [CacheKeyQueryStringActionParameters](#cachekeyquerystringactionparameters) (Required)
 
 ## CacheKeyQueryStringActionParameters
 ### Properties
@@ -136,7 +136,7 @@
 ## ModifyRequestHeader
 ### Properties
 * **name**: 'ModifyRequestHeader' (Required)
-* **parameters**: HeaderActionParameters (Required)
+* **parameters**: [HeaderActionParameters](#headeractionparameters) (Required)
 
 ## HeaderActionParameters
 ### Properties
@@ -148,12 +148,12 @@
 ## ModifyResponseHeader
 ### Properties
 * **name**: 'ModifyResponseHeader' (Required)
-* **parameters**: HeaderActionParameters (Required)
+* **parameters**: [HeaderActionParameters](#headeractionparameters) (Required)
 
 ## UrlRedirect
 ### Properties
 * **name**: 'UrlRedirect' (Required)
-* **parameters**: UrlRedirectActionParameters (Required)
+* **parameters**: [UrlRedirectActionParameters](#urlredirectactionparameters) (Required)
 
 ## UrlRedirectActionParameters
 ### Properties
@@ -168,7 +168,7 @@
 ## UrlRewrite
 ### Properties
 * **name**: 'UrlRewrite' (Required)
-* **parameters**: UrlRewriteActionParameters (Required)
+* **parameters**: [UrlRewriteActionParameters](#urlrewriteactionparameters) (Required)
 
 ## UrlRewriteActionParameters
 ### Properties
@@ -183,78 +183,78 @@
 ### Cookies
 #### Properties
 * **name**: 'Cookies' (Required)
-* **parameters**: CookiesMatchConditionParameters (Required)
+* **parameters**: [CookiesMatchConditionParameters](#cookiesmatchconditionparameters) (Required)
 
 ### HttpVersion
 #### Properties
 * **name**: 'HttpVersion' (Required)
-* **parameters**: HttpVersionMatchConditionParameters (Required)
+* **parameters**: [HttpVersionMatchConditionParameters](#httpversionmatchconditionparameters) (Required)
 
 ### IsDevice
 #### Properties
 * **name**: 'IsDevice' (Required)
-* **parameters**: IsDeviceMatchConditionParameters (Required)
+* **parameters**: [IsDeviceMatchConditionParameters](#isdevicematchconditionparameters) (Required)
 
 ### PostArgs
 #### Properties
 * **name**: 'PostArgs' (Required)
-* **parameters**: PostArgsMatchConditionParameters (Required)
+* **parameters**: [PostArgsMatchConditionParameters](#postargsmatchconditionparameters) (Required)
 
 ### QueryString
 #### Properties
 * **name**: 'QueryString' (Required)
-* **parameters**: QueryStringMatchConditionParameters (Required)
+* **parameters**: [QueryStringMatchConditionParameters](#querystringmatchconditionparameters) (Required)
 
 ### RemoteAddress
 #### Properties
 * **name**: 'RemoteAddress' (Required)
-* **parameters**: RemoteAddressMatchConditionParameters (Required)
+* **parameters**: [RemoteAddressMatchConditionParameters](#remoteaddressmatchconditionparameters) (Required)
 
 ### RequestBody
 #### Properties
 * **name**: 'RequestBody' (Required)
-* **parameters**: RequestBodyMatchConditionParameters (Required)
+* **parameters**: [RequestBodyMatchConditionParameters](#requestbodymatchconditionparameters) (Required)
 
 ### RequestHeader
 #### Properties
 * **name**: 'RequestHeader' (Required)
-* **parameters**: RequestHeaderMatchConditionParameters (Required)
+* **parameters**: [RequestHeaderMatchConditionParameters](#requestheadermatchconditionparameters) (Required)
 
 ### RequestMethod
 #### Properties
 * **name**: 'RequestMethod' (Required)
-* **parameters**: RequestMethodMatchConditionParameters (Required)
+* **parameters**: [RequestMethodMatchConditionParameters](#requestmethodmatchconditionparameters) (Required)
 
 ### RequestScheme
 #### Properties
 * **name**: 'RequestScheme' (Required)
-* **parameters**: RequestSchemeMatchConditionParameters (Required)
+* **parameters**: [RequestSchemeMatchConditionParameters](#requestschemematchconditionparameters) (Required)
 
 ### RequestUri
 #### Properties
 * **name**: 'RequestUri' (Required)
-* **parameters**: RequestUriMatchConditionParameters (Required)
+* **parameters**: [RequestUriMatchConditionParameters](#requesturimatchconditionparameters) (Required)
 
 ### UrlFileExtension
 #### Properties
 * **name**: 'UrlFileExtension' (Required)
-* **parameters**: UrlFileExtensionMatchConditionParameters (Required)
+* **parameters**: [UrlFileExtensionMatchConditionParameters](#urlfileextensionmatchconditionparameters) (Required)
 
 ### UrlFileName
 #### Properties
 * **name**: 'UrlFileName' (Required)
-* **parameters**: UrlFileNameMatchConditionParameters (Required)
+* **parameters**: [UrlFileNameMatchConditionParameters](#urlfilenamematchconditionparameters) (Required)
 
 ### UrlPath
 #### Properties
 * **name**: 'UrlPath' (Required)
-* **parameters**: UrlPathMatchConditionParameters (Required)
+* **parameters**: [UrlPathMatchConditionParameters](#urlpathmatchconditionparameters) (Required)
 
 
 ## Cookies
 ### Properties
 * **name**: 'Cookies' (Required)
-* **parameters**: CookiesMatchConditionParameters (Required)
+* **parameters**: [CookiesMatchConditionParameters](#cookiesmatchconditionparameters) (Required)
 
 ## CookiesMatchConditionParameters
 ### Properties
@@ -268,7 +268,7 @@
 ## HttpVersion
 ### Properties
 * **name**: 'HttpVersion' (Required)
-* **parameters**: HttpVersionMatchConditionParameters (Required)
+* **parameters**: [HttpVersionMatchConditionParameters](#httpversionmatchconditionparameters) (Required)
 
 ## HttpVersionMatchConditionParameters
 ### Properties
@@ -280,7 +280,7 @@
 ## IsDevice
 ### Properties
 * **name**: 'IsDevice' (Required)
-* **parameters**: IsDeviceMatchConditionParameters (Required)
+* **parameters**: [IsDeviceMatchConditionParameters](#isdevicematchconditionparameters) (Required)
 
 ## IsDeviceMatchConditionParameters
 ### Properties
@@ -293,7 +293,7 @@
 ## PostArgs
 ### Properties
 * **name**: 'PostArgs' (Required)
-* **parameters**: PostArgsMatchConditionParameters (Required)
+* **parameters**: [PostArgsMatchConditionParameters](#postargsmatchconditionparameters) (Required)
 
 ## PostArgsMatchConditionParameters
 ### Properties
@@ -307,7 +307,7 @@
 ## QueryString
 ### Properties
 * **name**: 'QueryString' (Required)
-* **parameters**: QueryStringMatchConditionParameters (Required)
+* **parameters**: [QueryStringMatchConditionParameters](#querystringmatchconditionparameters) (Required)
 
 ## QueryStringMatchConditionParameters
 ### Properties
@@ -320,7 +320,7 @@
 ## RemoteAddress
 ### Properties
 * **name**: 'RemoteAddress' (Required)
-* **parameters**: RemoteAddressMatchConditionParameters (Required)
+* **parameters**: [RemoteAddressMatchConditionParameters](#remoteaddressmatchconditionparameters) (Required)
 
 ## RemoteAddressMatchConditionParameters
 ### Properties
@@ -333,7 +333,7 @@
 ## RequestBody
 ### Properties
 * **name**: 'RequestBody' (Required)
-* **parameters**: RequestBodyMatchConditionParameters (Required)
+* **parameters**: [RequestBodyMatchConditionParameters](#requestbodymatchconditionparameters) (Required)
 
 ## RequestBodyMatchConditionParameters
 ### Properties
@@ -346,7 +346,7 @@
 ## RequestHeader
 ### Properties
 * **name**: 'RequestHeader' (Required)
-* **parameters**: RequestHeaderMatchConditionParameters (Required)
+* **parameters**: [RequestHeaderMatchConditionParameters](#requestheadermatchconditionparameters) (Required)
 
 ## RequestHeaderMatchConditionParameters
 ### Properties
@@ -360,7 +360,7 @@
 ## RequestMethod
 ### Properties
 * **name**: 'RequestMethod' (Required)
-* **parameters**: RequestMethodMatchConditionParameters (Required)
+* **parameters**: [RequestMethodMatchConditionParameters](#requestmethodmatchconditionparameters) (Required)
 
 ## RequestMethodMatchConditionParameters
 ### Properties
@@ -372,7 +372,7 @@
 ## RequestScheme
 ### Properties
 * **name**: 'RequestScheme' (Required)
-* **parameters**: RequestSchemeMatchConditionParameters (Required)
+* **parameters**: [RequestSchemeMatchConditionParameters](#requestschemematchconditionparameters) (Required)
 
 ## RequestSchemeMatchConditionParameters
 ### Properties
@@ -384,7 +384,7 @@
 ## RequestUri
 ### Properties
 * **name**: 'RequestUri' (Required)
-* **parameters**: RequestUriMatchConditionParameters (Required)
+* **parameters**: [RequestUriMatchConditionParameters](#requesturimatchconditionparameters) (Required)
 
 ## RequestUriMatchConditionParameters
 ### Properties
@@ -397,7 +397,7 @@
 ## UrlFileExtension
 ### Properties
 * **name**: 'UrlFileExtension' (Required)
-* **parameters**: UrlFileExtensionMatchConditionParameters (Required)
+* **parameters**: [UrlFileExtensionMatchConditionParameters](#urlfileextensionmatchconditionparameters) (Required)
 
 ## UrlFileExtensionMatchConditionParameters
 ### Properties
@@ -410,7 +410,7 @@
 ## UrlFileName
 ### Properties
 * **name**: 'UrlFileName' (Required)
-* **parameters**: UrlFileNameMatchConditionParameters (Required)
+* **parameters**: [UrlFileNameMatchConditionParameters](#urlfilenamematchconditionparameters) (Required)
 
 ## UrlFileNameMatchConditionParameters
 ### Properties
@@ -423,7 +423,7 @@
 ## UrlPath
 ### Properties
 * **name**: 'UrlPath' (Required)
-* **parameters**: UrlPathMatchConditionParameters (Required)
+* **parameters**: [UrlPathMatchConditionParameters](#urlpathmatchconditionparameters) (Required)
 
 ## UrlPathMatchConditionParameters
 ### Properties
@@ -442,7 +442,7 @@
 ## DeepCreatedOrigin
 ### Properties
 * **name**: string (Required)
-* **properties**: DeepCreatedOriginProperties
+* **properties**: [DeepCreatedOriginProperties](#deepcreatedoriginproperties)
 
 ## DeepCreatedOriginProperties
 ### Properties
@@ -457,7 +457,7 @@
 
 ## CustomDomainPropertiesParameters
 ### Properties
-* **customHttpsParameters**: CustomDomainHttpsParameters (ReadOnly)
+* **customHttpsParameters**: [CustomDomainHttpsParameters](#customdomainhttpsparameters) (ReadOnly)
 * **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly)
 * **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly)
 * **hostName**: string (Required)
@@ -473,18 +473,18 @@
 ### AzureKeyVault
 #### Properties
 * **certificateSource**: 'AzureKeyVault' (Required)
-* **certificateSourceParameters**: KeyVaultCertificateSourceParameters (ReadOnly)
+* **certificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters) (ReadOnly)
 
 ### Cdn
 #### Properties
 * **certificateSource**: 'Cdn' (Required)
-* **certificateSourceParameters**: CdnCertificateSourceParameters (ReadOnly)
+* **certificateSourceParameters**: [CdnCertificateSourceParameters](#cdncertificatesourceparameters) (ReadOnly)
 
 
 ## AzureKeyVault
 ### Properties
 * **certificateSource**: 'AzureKeyVault' (Required)
-* **certificateSourceParameters**: KeyVaultCertificateSourceParameters (ReadOnly)
+* **certificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters) (ReadOnly)
 
 ## KeyVaultCertificateSourceParameters
 ### Properties
@@ -500,7 +500,7 @@
 ## Cdn
 ### Properties
 * **certificateSource**: 'Cdn' (Required)
-* **certificateSourceParameters**: CdnCertificateSourceParameters (ReadOnly)
+* **certificateSourceParameters**: [CdnCertificateSourceParameters](#cdncertificatesourceparameters) (ReadOnly)
 
 ## CdnCertificateSourceParameters
 ### Properties

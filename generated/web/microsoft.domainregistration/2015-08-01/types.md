@@ -8,8 +8,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:1_properties
-* **tags**: Dictionary<string,String>
+* **properties**: [schemas:1_properties](#schemas1properties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant)
 
 ## schemas:1_properties

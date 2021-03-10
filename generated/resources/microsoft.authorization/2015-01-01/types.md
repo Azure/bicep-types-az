@@ -6,7 +6,7 @@
 * **apiVersion**: '2015-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ManagementLockProperties
+* **properties**: [ManagementLockProperties](#managementlockproperties)
 * **type**: 'Microsoft.Authorization/locks' (ReadOnly, DeployTimeConstant)
 
 ## ManagementLockProperties

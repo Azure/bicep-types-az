@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ClusterProperties](#clusterproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ServiceFabric/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabric/clusters/applications@2020-03-01
@@ -18,11 +18,11 @@
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ManagedIdentity
+* **identity**: [ManagedIdentity](#managedidentity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationResourceProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ApplicationResourceProperties](#applicationresourceproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ServiceFabric/clusters/applications' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabric/clusters/applications/services@2020-03-01
@@ -33,8 +33,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServiceResourceProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ServiceResourceProperties](#serviceresourceproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ServiceFabric/clusters/applications/services' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabric/clusters/applicationTypes@2020-03-01
@@ -45,8 +45,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationTypeResourceProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ApplicationTypeResourceProperties](#applicationtyperesourceproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabric/clusters/applicationTypes/versions@2020-03-01
@@ -57,34 +57,34 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationTypeVersionResourceProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [ApplicationTypeVersionResourceProperties](#applicationtypeversionresourceproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant)
 
 ## ClusterProperties
 ### Properties
 * **addOnFeatures**: 'BackupRestoreService' | 'DnsService' | 'RepairManager' | 'ResourceMonitorService'[]
-* **applicationTypeVersionsCleanupPolicy**: ApplicationTypeVersionsCleanupPolicy
-* **availableClusterVersions**: ClusterVersionDetails[] (ReadOnly)
-* **azureActiveDirectory**: AzureActiveDirectory
-* **certificate**: CertificateDescription
-* **certificateCommonNames**: ServerCertificateCommonNames
-* **clientCertificateCommonNames**: ClientCertificateCommonName[]
-* **clientCertificateThumbprints**: ClientCertificateThumbprint[]
+* **applicationTypeVersionsCleanupPolicy**: [ApplicationTypeVersionsCleanupPolicy](#applicationtypeversionscleanuppolicy)
+* **availableClusterVersions**: [ClusterVersionDetails](#clusterversiondetails)[] (ReadOnly)
+* **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory)
+* **certificate**: [CertificateDescription](#certificatedescription)
+* **certificateCommonNames**: [ServerCertificateCommonNames](#servercertificatecommonnames)
+* **clientCertificateCommonNames**: [ClientCertificateCommonName](#clientcertificatecommonname)[]
+* **clientCertificateThumbprints**: [ClientCertificateThumbprint](#clientcertificatethumbprint)[]
 * **clusterCodeVersion**: string
 * **clusterEndpoint**: string (ReadOnly)
 * **clusterId**: string (ReadOnly)
 * **clusterState**: 'AutoScale' | 'BaselineUpgrade' | 'Deploying' | 'EnforcingClusterVersion' | 'Ready' | 'UpdatingInfrastructure' | 'UpdatingUserCertificate' | 'UpdatingUserConfiguration' | 'UpgradeServiceUnreachable' | 'WaitingForNodes' (ReadOnly)
-* **diagnosticsStorageAccountConfig**: DiagnosticsStorageAccountConfig
+* **diagnosticsStorageAccountConfig**: [DiagnosticsStorageAccountConfig](#diagnosticsstorageaccountconfig)
 * **eventStoreServiceEnabled**: bool
-* **fabricSettings**: SettingsSectionDescription[]
+* **fabricSettings**: [SettingsSectionDescription](#settingssectiondescription)[]
 * **managementEndpoint**: string (Required)
-* **nodeTypes**: NodeTypeDescription[] (Required)
+* **nodeTypes**: [NodeTypeDescription](#nodetypedescription)[] (Required)
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **reliabilityLevel**: 'Bronze' | 'Gold' | 'None' | 'Platinum' | 'Silver'
-* **reverseProxyCertificate**: CertificateDescription
-* **reverseProxyCertificateCommonNames**: ServerCertificateCommonNames
-* **upgradeDescription**: ClusterUpgradePolicy
+* **reverseProxyCertificate**: [CertificateDescription](#certificatedescription)
+* **reverseProxyCertificateCommonNames**: [ServerCertificateCommonNames](#servercertificatecommonnames)
+* **upgradeDescription**: [ClusterUpgradePolicy](#clusterupgradepolicy)
 * **upgradeMode**: 'Automatic' | 'Manual'
 * **vmImage**: string
 
@@ -112,7 +112,7 @@
 
 ## ServerCertificateCommonNames
 ### Properties
-* **commonNames**: ServerCertificateCommonName[]
+* **commonNames**: [ServerCertificateCommonName](#servercertificatecommonname)[]
 * **x509StoreName**: 'AddressBook' | 'AuthRoot' | 'CertificateAuthority' | 'Disallowed' | 'My' | 'Root' | 'TrustedPeople' | 'TrustedPublisher'
 
 ## ServerCertificateCommonName
@@ -143,7 +143,7 @@
 ## SettingsSectionDescription
 ### Properties
 * **name**: string (Required)
-* **parameters**: SettingsParameterDescription[] (Required)
+* **parameters**: [SettingsParameterDescription](#settingsparameterdescription)[] (Required)
 
 ## SettingsParameterDescription
 ### Properties
@@ -152,15 +152,15 @@
 
 ## NodeTypeDescription
 ### Properties
-* **applicationPorts**: EndpointRangeDescription
-* **capacities**: Dictionary<string,String>
+* **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription)
+* **capacities**: [Dictionary<string,String>](#dictionarystringstring)
 * **clientConnectionEndpointPort**: int (Required)
 * **durabilityLevel**: 'Bronze' | 'Gold' | 'Silver'
-* **ephemeralPorts**: EndpointRangeDescription
+* **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription)
 * **httpGatewayEndpointPort**: int (Required)
 * **isPrimary**: bool (Required)
 * **name**: string (Required)
-* **placementProperties**: Dictionary<string,String>
+* **placementProperties**: [Dictionary<string,String>](#dictionarystringstring)
 * **reverseProxyEndpointPort**: int
 * **vmInstanceCount**: int (Required)
 
@@ -181,19 +181,19 @@
 
 ## ClusterUpgradePolicy
 ### Properties
-* **deltaHealthPolicy**: ClusterUpgradeDeltaHealthPolicy
+* **deltaHealthPolicy**: [ClusterUpgradeDeltaHealthPolicy](#clusterupgradedeltahealthpolicy)
 * **forceRestart**: bool
 * **healthCheckRetryTimeout**: string (Required)
 * **healthCheckStableDuration**: string (Required)
 * **healthCheckWaitDuration**: string (Required)
-* **healthPolicy**: ClusterHealthPolicy (Required)
+* **healthPolicy**: [ClusterHealthPolicy](#clusterhealthpolicy) (Required)
 * **upgradeDomainTimeout**: string (Required)
 * **upgradeReplicaSetCheckTimeout**: string (Required)
 * **upgradeTimeout**: string (Required)
 
 ## ClusterUpgradeDeltaHealthPolicy
 ### Properties
-* **applicationDeltaHealthPolicies**: Dictionary<string,ApplicationDeltaHealthPolicy>
+* **applicationDeltaHealthPolicies**: [Dictionary<string,ApplicationDeltaHealthPolicy>](#dictionarystringapplicationdeltahealthpolicy)
 * **maxPercentDeltaUnhealthyApplications**: int (Required)
 * **maxPercentDeltaUnhealthyNodes**: int (Required)
 * **maxPercentUpgradeDomainDeltaUnhealthyNodes**: int (Required)
@@ -201,12 +201,12 @@
 ## Dictionary<string,ApplicationDeltaHealthPolicy>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ApplicationDeltaHealthPolicy
+* **Additional Properties Type**: [ApplicationDeltaHealthPolicy](#applicationdeltahealthpolicy)
 
 ## ApplicationDeltaHealthPolicy
 ### Properties
-* **defaultServiceTypeDeltaHealthPolicy**: ServiceTypeDeltaHealthPolicy
-* **serviceTypeDeltaHealthPolicies**: Dictionary<string,ServiceTypeDeltaHealthPolicy>
+* **defaultServiceTypeDeltaHealthPolicy**: [ServiceTypeDeltaHealthPolicy](#servicetypedeltahealthpolicy)
+* **serviceTypeDeltaHealthPolicies**: [Dictionary<string,ServiceTypeDeltaHealthPolicy>](#dictionarystringservicetypedeltahealthpolicy)
 
 ## ServiceTypeDeltaHealthPolicy
 ### Properties
@@ -215,23 +215,23 @@
 ## Dictionary<string,ServiceTypeDeltaHealthPolicy>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ServiceTypeDeltaHealthPolicy
+* **Additional Properties Type**: [ServiceTypeDeltaHealthPolicy](#servicetypedeltahealthpolicy)
 
 ## ClusterHealthPolicy
 ### Properties
-* **applicationHealthPolicies**: Dictionary<string,ApplicationHealthPolicy>
+* **applicationHealthPolicies**: [Dictionary<string,ApplicationHealthPolicy>](#dictionarystringapplicationhealthpolicy)
 * **maxPercentUnhealthyApplications**: int
 * **maxPercentUnhealthyNodes**: int
 
 ## Dictionary<string,ApplicationHealthPolicy>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ApplicationHealthPolicy
+* **Additional Properties Type**: [ApplicationHealthPolicy](#applicationhealthpolicy)
 
 ## ApplicationHealthPolicy
 ### Properties
-* **defaultServiceTypeHealthPolicy**: ServiceTypeHealthPolicy
-* **serviceTypeHealthPolicies**: Dictionary<string,ServiceTypeHealthPolicy>
+* **defaultServiceTypeHealthPolicy**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy)
+* **serviceTypeHealthPolicies**: [Dictionary<string,ServiceTypeHealthPolicy>](#dictionarystringservicetypehealthpolicy)
 
 ## ServiceTypeHealthPolicy
 ### Properties
@@ -240,7 +240,7 @@
 ## Dictionary<string,ServiceTypeHealthPolicy>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ServiceTypeHealthPolicy
+* **Additional Properties Type**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy)
 
 ## Dictionary<string,String>
 ### Properties
@@ -252,12 +252,12 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: Dictionary<string,UserAssignedIdentity>
+* **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity)
 
 ## Dictionary<string,UserAssignedIdentity>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: UserAssignedIdentity
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
 
 ## UserAssignedIdentity
 ### Properties
@@ -266,16 +266,16 @@
 
 ## ApplicationResourceProperties
 ### Properties
-* **managedIdentities**: ApplicationUserAssignedIdentity[]
+* **managedIdentities**: [ApplicationUserAssignedIdentity](#applicationuserassignedidentity)[]
 * **maximumNodes**: int
-* **metrics**: ApplicationMetricDescription[]
+* **metrics**: [ApplicationMetricDescription](#applicationmetricdescription)[]
 * **minimumNodes**: int
-* **parameters**: Dictionary<string,String>
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
 * **provisioningState**: string (ReadOnly)
 * **removeApplicationCapacity**: bool
 * **typeName**: string
 * **typeVersion**: string
-* **upgradePolicy**: ApplicationUpgradePolicy
+* **upgradePolicy**: [ApplicationUpgradePolicy](#applicationupgradepolicy)
 
 ## ApplicationUserAssignedIdentity
 ### Properties
@@ -296,18 +296,18 @@
 
 ## ApplicationUpgradePolicy
 ### Properties
-* **applicationHealthPolicy**: ArmApplicationHealthPolicy
+* **applicationHealthPolicy**: [ArmApplicationHealthPolicy](#armapplicationhealthpolicy)
 * **forceRestart**: bool
-* **rollingUpgradeMonitoringPolicy**: ArmRollingUpgradeMonitoringPolicy
+* **rollingUpgradeMonitoringPolicy**: [ArmRollingUpgradeMonitoringPolicy](#armrollingupgrademonitoringpolicy)
 * **upgradeMode**: 'Invalid' | 'Monitored' | 'UnmonitoredAuto' | 'UnmonitoredManual'
 * **upgradeReplicaSetCheckTimeout**: string
 
 ## ArmApplicationHealthPolicy
 ### Properties
 * **considerWarningAsError**: bool
-* **defaultServiceTypeHealthPolicy**: ArmServiceTypeHealthPolicy
+* **defaultServiceTypeHealthPolicy**: [ArmServiceTypeHealthPolicy](#armservicetypehealthpolicy)
 * **maxPercentUnhealthyDeployedApplications**: int
-* **serviceTypeHealthPolicyMap**: Dictionary<string,ArmServiceTypeHealthPolicy>
+* **serviceTypeHealthPolicyMap**: [Dictionary<string,ArmServiceTypeHealthPolicy>](#dictionarystringarmservicetypehealthpolicy)
 
 ## ArmServiceTypeHealthPolicy
 ### Properties
@@ -318,7 +318,7 @@
 ## Dictionary<string,ArmServiceTypeHealthPolicy>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: ArmServiceTypeHealthPolicy
+* **Additional Properties Type**: [ArmServiceTypeHealthPolicy](#armservicetypehealthpolicy)
 
 ## ArmRollingUpgradeMonitoringPolicy
 ### Properties
@@ -337,15 +337,15 @@
 ## ServiceResourceProperties
 * **Discriminator**: serviceKind
 ### Base Properties
-* **correlationScheme**: ServiceCorrelationDescription[]
+* **correlationScheme**: [ServiceCorrelationDescription](#servicecorrelationdescription)[]
 * **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero'
-* **partitionDescription**: PartitionSchemeDescription
+* **partitionDescription**: [PartitionSchemeDescription](#partitionschemedescription)
 * **placementConstraints**: string
 * **provisioningState**: string (ReadOnly)
 * **serviceDnsName**: string
-* **serviceLoadMetrics**: ServiceLoadMetricDescription[]
+* **serviceLoadMetrics**: [ServiceLoadMetricDescription](#serviceloadmetricdescription)[]
 * **servicePackageActivationMode**: 'ExclusiveProcess' | 'SharedProcess'
-* **servicePlacementPolicies**: ServicePlacementPolicyDescription[]
+* **servicePlacementPolicies**: [ServicePlacementPolicyDescription](#serviceplacementpolicydescription)[]
 * **serviceTypeName**: string
 ### Stateful
 #### Properties
@@ -452,7 +452,7 @@
 ## ApplicationTypeVersionResourceProperties
 ### Properties
 * **appPackageUrl**: string (Required)
-* **defaultParameterList**: Dictionary<string,String> (ReadOnly)
+* **defaultParameterList**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 
 ## Dictionary<string,String>

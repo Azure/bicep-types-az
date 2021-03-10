@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' (Required, DeployTimeConstant)
-* **properties**: IotDefenderSettingsProperties
+* **properties**: [IotDefenderSettingsProperties](#iotdefendersettingsproperties)
 * **type**: 'Microsoft.Security/iotDefenderSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/iotSensors@2020-08-06-preview
@@ -15,7 +15,7 @@
 * **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: IotSensorProperties
+* **properties**: [IotSensorProperties](#iotsensorproperties)
 * **type**: 'Microsoft.Security/iotSensors' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/iotSites@2020-08-06-preview
@@ -24,7 +24,7 @@
 * **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: 'default' (Required, DeployTimeConstant)
-* **properties**: IotSiteProperties
+* **properties**: [IotSiteProperties](#iotsiteproperties)
 * **type**: 'Microsoft.Security/iotSites' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/onPremiseIotSensors@2020-08-06-preview
@@ -57,7 +57,7 @@
 ## IotSiteProperties
 ### Properties
 * **displayName**: string (Required)
-* **tags**: Dictionary<string,String>
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 
 ## Dictionary<string,String>
 ### Properties

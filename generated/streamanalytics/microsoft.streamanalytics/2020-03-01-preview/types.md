@@ -8,9 +8,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ClusterProperties
-* **sku**: ClusterSku
-* **tags**: Dictionary<string,String>
+* **properties**: [ClusterProperties](#clusterproperties)
+* **sku**: [ClusterSku](#clustersku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.StreamAnalytics/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StreamAnalytics/clusters/privateEndpoints@2020-03-01-preview
@@ -20,7 +20,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointProperties
+* **properties**: [PrivateEndpointProperties](#privateendpointproperties)
 * **type**: 'Microsoft.StreamAnalytics/clusters/privateEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## ClusterProperties
@@ -44,16 +44,16 @@
 ## PrivateEndpointProperties
 ### Properties
 * **createdDate**: string (ReadOnly)
-* **manualPrivateLinkServiceConnections**: PrivateLinkServiceConnection[]
+* **manualPrivateLinkServiceConnections**: [PrivateLinkServiceConnection](#privatelinkserviceconnection)[]
 
 ## PrivateLinkServiceConnection
 ### Properties
-* **properties**: PrivateLinkServiceConnectionProperties
+* **properties**: [PrivateLinkServiceConnectionProperties](#privatelinkserviceconnectionproperties)
 
 ## PrivateLinkServiceConnectionProperties
 ### Properties
 * **groupIds**: string[]
-* **privateLinkServiceConnectionState**: PrivateLinkConnectionState
+* **privateLinkServiceConnectionState**: [PrivateLinkConnectionState](#privatelinkconnectionstate)
 * **privateLinkServiceId**: string
 * **requestMessage**: string
 

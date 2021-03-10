@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: schemas:7_identity
+* **identity**: [schemas:7_identity](#schemas7identity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:7_properties
-* **tags**: Dictionary<string,String>
+* **properties**: [schemas:7_properties](#schemas7properties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HybridCompute/machines/extensions@2019-12-12
@@ -19,8 +19,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: schemas:13_properties
-* **tags**: Dictionary<string,String>
+* **properties**: [schemas:13_properties](#schemas13properties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant)
 
 ## schemas:7_identity
@@ -34,13 +34,13 @@
 * **agentVersion**: string (ReadOnly)
 * **clientPublicKey**: string
 * **displayName**: string (ReadOnly)
-* **errorDetails**: ErrorDetail[] (ReadOnly)
-* **extensions**: MachineExtensionInstanceView[]
+* **errorDetails**: [ErrorDetail](#errordetail)[] (ReadOnly)
+* **extensions**: [MachineExtensionInstanceView](#machineextensioninstanceview)[]
 * **lastStatusChange**: string (ReadOnly)
-* **locationData**: locationData
+* **locationData**: [locationData](#locationdata)
 * **machineFqdn**: string (ReadOnly)
 * **osName**: string (ReadOnly)
-* **osProfile**: schemas:4_osProfile
+* **osProfile**: [schemas:4_osProfile](#schemas4osprofile)
 * **osVersion**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **status**: 'Connected' | 'Disconnected' | 'Error' (ReadOnly)
@@ -49,14 +49,14 @@
 ## ErrorDetail
 ### Properties
 * **code**: string (Required)
-* **details**: ErrorDetail[]
+* **details**: [ErrorDetail](#errordetail)[]
 * **message**: string (Required)
 * **target**: string
 
 ## MachineExtensionInstanceView
 ### Properties
 * **name**: string
-* **status**: schemas:17_status
+* **status**: [schemas:17_status](#schemas17status)
 * **type**: string
 * **typeHandlerVersion**: string
 
@@ -88,7 +88,7 @@
 ### Properties
 * **autoUpgradeMinorVersion**: bool
 * **forceUpdateTag**: string
-* **instanceView**: schemas:15_instanceView
+* **instanceView**: [schemas:15_instanceView](#schemas15instanceview)
 * **protectedSettings**: any
 * **provisioningState**: string (ReadOnly)
 * **publisher**: string
@@ -99,7 +99,7 @@
 ## schemas:15_instanceView
 ### Properties
 * **name**: string
-* **status**: schemas:17_status
+* **status**: [schemas:17_status](#schemas17status)
 * **type**: string
 * **typeHandlerVersion**: string
 

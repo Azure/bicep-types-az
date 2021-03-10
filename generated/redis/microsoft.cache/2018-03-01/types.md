@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RedisCreateProperties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [RedisCreateProperties](#rediscreateproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Cache/Redis' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
 
@@ -18,7 +18,7 @@
 * **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RedisFirewallRuleProperties (Required)
+* **properties**: [RedisFirewallRuleProperties](#redisfirewallruleproperties) (Required)
 * **type**: 'Microsoft.Cache/Redis/firewallRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Cache/Redis/linkedServers@2018-03-01
@@ -27,7 +27,7 @@
 * **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RedisLinkedServerCreateProperties (Required)
+* **properties**: [RedisLinkedServerCreateProperties](#redislinkedservercreateproperties) (Required)
 * **type**: 'Microsoft.Cache/Redis/linkedServers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Cache/Redis/patchSchedules@2018-03-01
@@ -36,26 +36,26 @@
 * **apiVersion**: '2018-03-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ScheduleEntries (Required)
+* **properties**: [ScheduleEntries](#scheduleentries) (Required)
 * **type**: 'Microsoft.Cache/Redis/patchSchedules' (ReadOnly, DeployTimeConstant)
 
 ## RedisCreateProperties
 ### Properties
-* **accessKeys**: RedisAccessKeys (ReadOnly)
+* **accessKeys**: [RedisAccessKeys](#redisaccesskeys) (ReadOnly)
 * **enableNonSslPort**: bool
 * **hostName**: string (ReadOnly)
-* **linkedServers**: RedisLinkedServer[] (ReadOnly)
+* **linkedServers**: [RedisLinkedServer](#redislinkedserver)[] (ReadOnly)
 * **minimumTlsVersion**: '1.0' | '1.1' | '1.2'
 * **port**: int (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Disabled' | 'Failed' | 'Linking' | 'Provisioning' | 'RecoveringScaleFailure' | 'Scaling' | 'Succeeded' | 'Unlinking' | 'Unprovisioning' | 'Updating' (ReadOnly)
-* **redisConfiguration**: Dictionary<string,String>
+* **redisConfiguration**: [Dictionary<string,String>](#dictionarystringstring)
 * **redisVersion**: string (ReadOnly)
 * **shardCount**: int
-* **sku**: Sku (Required)
+* **sku**: [Sku](#sku) (Required)
 * **sslPort**: int (ReadOnly)
 * **staticIP**: string
 * **subnetId**: string
-* **tenantSettings**: Dictionary<string,String>
+* **tenantSettings**: [Dictionary<string,String>](#dictionarystringstring)
 
 ## RedisAccessKeys
 ### Properties
@@ -101,7 +101,7 @@
 
 ## ScheduleEntries
 ### Properties
-* **scheduleEntries**: ScheduleEntry[] (Required)
+* **scheduleEntries**: [ScheduleEntry](#scheduleentry)[] (Required)
 
 ## ScheduleEntry
 ### Properties

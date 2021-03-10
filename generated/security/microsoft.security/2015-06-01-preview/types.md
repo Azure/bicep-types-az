@@ -8,11 +8,11 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **pathRecommendations**: PathRecommendation[] (WriteOnly)
-* **properties**: AppWhitelistingGroupData (ReadOnly)
-* **protectionMode**: ProtectionMode (WriteOnly)
+* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[] (WriteOnly)
+* **properties**: [AppWhitelistingGroupData](#appwhitelistinggroupdata) (ReadOnly)
+* **protectionMode**: [ProtectionMode](#protectionmode) (WriteOnly)
 * **type**: 'Microsoft.Security/locations/applicationWhitelistings' (ReadOnly, DeployTimeConstant)
-* **vmRecommendations**: VmRecommendation[] (WriteOnly)
+* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[] (WriteOnly)
 
 ## Resource Microsoft.Security/locations/jitNetworkAccessPolicies@2015-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -22,7 +22,7 @@
 * **kind**: string
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: JitNetworkAccessPolicyProperties (Required)
+* **properties**: [JitNetworkAccessPolicyProperties](#jitnetworkaccesspolicyproperties) (Required)
 * **type**: 'Microsoft.Security/locations/jitNetworkAccessPolicies' (ReadOnly, DeployTimeConstant)
 
 ## PathRecommendation
@@ -32,9 +32,9 @@
 * **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (WriteOnly)
 * **fileType**: 'Dll' | 'Exe' | 'Executable' | 'Msi' | 'Script' | 'Unknown' (WriteOnly)
 * **path**: string (WriteOnly)
-* **publisherInfo**: PublisherInfo (WriteOnly)
+* **publisherInfo**: [PublisherInfo](#publisherinfo) (WriteOnly)
 * **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature' (WriteOnly)
-* **usernames**: UserRecommendation[] (WriteOnly)
+* **usernames**: [UserRecommendation](#userrecommendation)[] (WriteOnly)
 * **userSids**: string[] (WriteOnly)
 
 ## PublisherInfo
@@ -53,12 +53,12 @@
 ### Properties
 * **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (ReadOnly)
 * **enforcementMode**: 'Audit' | 'Enforce' | 'None' (ReadOnly)
-* **issues**: AppWhitelistingIssueSummary[] (ReadOnly)
-* **pathRecommendations**: PathRecommendation[] (ReadOnly)
-* **protectionMode**: ProtectionMode (ReadOnly)
+* **issues**: [AppWhitelistingIssueSummary](#appwhitelistingissuesummary)[] (ReadOnly)
+* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[] (ReadOnly)
+* **protectionMode**: [ProtectionMode](#protectionmode) (ReadOnly)
 * **recommendationStatus**: 'NoStatus' | 'NotAvailable' | 'NotRecommended' | 'Recommended' (ReadOnly)
 * **sourceSystem**: 'Azure_AppLocker' | 'Azure_AuditD' | 'NonAzure_AppLocker' | 'NonAzure_AuditD' | 'None' (ReadOnly)
-* **vmRecommendations**: VmRecommendation[] (ReadOnly)
+* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[] (ReadOnly)
 
 ## AppWhitelistingIssueSummary
 ### Properties
@@ -82,20 +82,20 @@
 ## JitNetworkAccessPolicyProperties
 ### Properties
 * **provisioningState**: string (ReadOnly)
-* **requests**: JitNetworkAccessRequest[]
-* **virtualMachines**: JitNetworkAccessPolicyVirtualMachine[] (Required)
+* **requests**: [JitNetworkAccessRequest](#jitnetworkaccessrequest)[]
+* **virtualMachines**: [JitNetworkAccessPolicyVirtualMachine](#jitnetworkaccesspolicyvirtualmachine)[] (Required)
 
 ## JitNetworkAccessRequest
 ### Properties
 * **justification**: string
 * **requestor**: string (Required)
 * **startTimeUtc**: string (Required)
-* **virtualMachines**: JitNetworkAccessRequestVirtualMachine[] (Required)
+* **virtualMachines**: [JitNetworkAccessRequestVirtualMachine](#jitnetworkaccessrequestvirtualmachine)[] (Required)
 
 ## JitNetworkAccessRequestVirtualMachine
 ### Properties
 * **id**: string (Required)
-* **ports**: JitNetworkAccessRequestPort[] (Required)
+* **ports**: [JitNetworkAccessRequestPort](#jitnetworkaccessrequestport)[] (Required)
 
 ## JitNetworkAccessRequestPort
 ### Properties
@@ -110,7 +110,7 @@
 ## JitNetworkAccessPolicyVirtualMachine
 ### Properties
 * **id**: string (Required)
-* **ports**: JitNetworkAccessPortRule[] (Required)
+* **ports**: [JitNetworkAccessPortRule](#jitnetworkaccessportrule)[] (Required)
 * **publicIpAddress**: string
 
 ## JitNetworkAccessPortRule

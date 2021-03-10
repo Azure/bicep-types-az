@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RoleAssignmentProperties
+* **properties**: [RoleAssignmentProperties](#roleassignmentproperties)
 * **type**: 'Microsoft.Authorization/roleAssignments' (ReadOnly, DeployTimeConstant)
 
 ## RoleAssignmentProperties

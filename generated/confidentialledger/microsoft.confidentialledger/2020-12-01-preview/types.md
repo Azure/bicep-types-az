@@ -7,14 +7,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LedgerProperties
-* **systemData**: systemData (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [LedgerProperties](#ledgerproperties)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.ConfidentialLedger/ledgers' (ReadOnly, DeployTimeConstant)
 
 ## LedgerProperties
 ### Properties
-* **certUsers**: ConfidentialLedgerCertUser[]
+* **certUsers**: [ConfidentialLedgerCertUser](#confidentialledgercertuser)[]
 * **identityServiceUri**: string (ReadOnly)
 * **ledgerInternalNamespace**: string (ReadOnly)
 * **ledgerName**: string (ReadOnly)

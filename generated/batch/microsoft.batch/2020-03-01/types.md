@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BatchAccountCreateProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [BatchAccountCreateProperties](#batchaccountcreateproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Batch/batchAccounts/applications@2020-03-01
@@ -18,7 +18,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationProperties
+* **properties**: [ApplicationProperties](#applicationproperties)
 * **type**: 'Microsoft.Batch/batchAccounts/applications' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Batch/batchAccounts/applications/versions@2020-03-01
@@ -28,7 +28,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ApplicationPackageProperties
+* **properties**: [ApplicationPackageProperties](#applicationpackageproperties)
 * **type**: 'Microsoft.Batch/batchAccounts/applications/versions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Batch/batchAccounts/certificates@2020-03-01
@@ -38,7 +38,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: CertificateCreateOrUpdateProperties
+* **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties)
 * **type**: 'Microsoft.Batch/batchAccounts/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Batch/batchAccounts/pools@2020-03-01
@@ -48,23 +48,23 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PoolProperties
+* **properties**: [PoolProperties](#poolproperties)
 * **type**: 'Microsoft.Batch/batchAccounts/pools' (ReadOnly, DeployTimeConstant)
 
 ## BatchAccountCreateProperties
 ### Properties
 * **accountEndpoint**: string (ReadOnly)
 * **activeJobAndJobScheduleQuota**: int (ReadOnly)
-* **autoStorage**: AutoStorageBaseProperties
+* **autoStorage**: [AutoStorageBaseProperties](#autostoragebaseproperties)
 * **dedicatedCoreQuota**: int (ReadOnly)
-* **dedicatedCoreQuotaPerVMFamily**: VirtualMachineFamilyCoreQuota[] (ReadOnly)
+* **dedicatedCoreQuotaPerVMFamily**: [VirtualMachineFamilyCoreQuota](#virtualmachinefamilycorequota)[] (ReadOnly)
 * **dedicatedCoreQuotaPerVMFamilyEnforced**: bool (ReadOnly)
-* **encryption**: EncryptionProperties
-* **keyVaultReference**: KeyVaultReference
+* **encryption**: [EncryptionProperties](#encryptionproperties)
+* **keyVaultReference**: [KeyVaultReference](#keyvaultreference)
 * **lowPriorityCoreQuota**: int (ReadOnly)
 * **poolAllocationMode**: 'BatchService' | 'UserSubscription'
 * **poolQuota**: int (ReadOnly)
-* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 
@@ -81,7 +81,7 @@
 ## EncryptionProperties
 ### Properties
 * **keySource**: 'Microsoft.Batch' | 'Microsoft.KeyVault'
-* **keyVaultProperties**: KeyVaultProperties
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
 
 ## KeyVaultProperties
 ### Properties
@@ -97,13 +97,13 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpoint (ReadOnly)
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (ReadOnly)
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly)
 * **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## PrivateEndpoint
@@ -138,7 +138,7 @@
 ## CertificateCreateOrUpdateProperties
 ### Properties
 * **data**: string (Required, WriteOnly)
-* **deleteCertificateError**: DeleteCertificateError (ReadOnly)
+* **deleteCertificateError**: [DeleteCertificateError](#deletecertificateerror) (ReadOnly)
 * **format**: 'Cer' | 'Pfx'
 * **password**: string (WriteOnly)
 * **previousProvisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
@@ -152,7 +152,7 @@
 ## DeleteCertificateError
 ### Properties
 * **code**: string (ReadOnly)
-* **details**: DeleteCertificateError[] (ReadOnly)
+* **details**: [DeleteCertificateError](#deletecertificateerror)[] (ReadOnly)
 * **message**: string (ReadOnly)
 * **target**: string (ReadOnly)
 
@@ -161,27 +161,27 @@
 * **allocationState**: 'Resizing' | 'Steady' | 'Stopping' (ReadOnly)
 * **allocationStateTransitionTime**: string (ReadOnly)
 * **applicationLicenses**: string[]
-* **applicationPackages**: ApplicationPackageReference[]
-* **autoScaleRun**: AutoScaleRun (ReadOnly)
-* **certificates**: CertificateReference[]
+* **applicationPackages**: [ApplicationPackageReference](#applicationpackagereference)[]
+* **autoScaleRun**: [AutoScaleRun](#autoscalerun) (ReadOnly)
+* **certificates**: [CertificateReference](#certificatereference)[]
 * **creationTime**: string (ReadOnly)
 * **currentDedicatedNodes**: int (ReadOnly)
 * **currentLowPriorityNodes**: int (ReadOnly)
-* **deploymentConfiguration**: DeploymentConfiguration
+* **deploymentConfiguration**: [DeploymentConfiguration](#deploymentconfiguration)
 * **displayName**: string
 * **interNodeCommunication**: 'Disabled' | 'Enabled'
 * **lastModified**: string (ReadOnly)
 * **maxTasksPerNode**: int
-* **metadata**: MetadataItem[]
-* **mountConfiguration**: MountConfiguration[]
-* **networkConfiguration**: NetworkConfiguration
+* **metadata**: [MetadataItem](#metadataitem)[]
+* **mountConfiguration**: [MountConfiguration](#mountconfiguration)[]
+* **networkConfiguration**: [NetworkConfiguration](#networkconfiguration)
 * **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly)
 * **provisioningStateTransitionTime**: string (ReadOnly)
-* **resizeOperationStatus**: ResizeOperationStatus (ReadOnly)
-* **scaleSettings**: ScaleSettings
-* **startTask**: StartTask
-* **taskSchedulingPolicy**: TaskSchedulingPolicy
-* **userAccounts**: UserAccount[]
+* **resizeOperationStatus**: [ResizeOperationStatus](#resizeoperationstatus) (ReadOnly)
+* **scaleSettings**: [ScaleSettings](#scalesettings)
+* **startTask**: [StartTask](#starttask)
+* **taskSchedulingPolicy**: [TaskSchedulingPolicy](#taskschedulingpolicy)
+* **userAccounts**: [UserAccount](#useraccount)[]
 * **vmSize**: string
 
 ## ApplicationPackageReference
@@ -191,14 +191,14 @@
 
 ## AutoScaleRun
 ### Properties
-* **error**: AutoScaleRunError
+* **error**: [AutoScaleRunError](#autoscalerunerror)
 * **evaluationTime**: string (Required)
 * **results**: string
 
 ## AutoScaleRunError
 ### Properties
 * **code**: string (Required)
-* **details**: AutoScaleRunError[]
+* **details**: [AutoScaleRunError](#autoscalerunerror)[]
 * **message**: string (Required)
 
 ## CertificateReference
@@ -210,8 +210,8 @@
 
 ## DeploymentConfiguration
 ### Properties
-* **cloudServiceConfiguration**: CloudServiceConfiguration
-* **virtualMachineConfiguration**: VirtualMachineConfiguration
+* **cloudServiceConfiguration**: [CloudServiceConfiguration](#cloudserviceconfiguration)
+* **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration)
 
 ## CloudServiceConfiguration
 ### Properties
@@ -220,18 +220,18 @@
 
 ## VirtualMachineConfiguration
 ### Properties
-* **containerConfiguration**: ContainerConfiguration
-* **dataDisks**: DataDisk[]
-* **diskEncryptionConfiguration**: DiskEncryptionConfiguration
-* **imageReference**: ImageReference (Required)
+* **containerConfiguration**: [ContainerConfiguration](#containerconfiguration)
+* **dataDisks**: [DataDisk](#datadisk)[]
+* **diskEncryptionConfiguration**: [DiskEncryptionConfiguration](#diskencryptionconfiguration)
+* **imageReference**: [ImageReference](#imagereference) (Required)
 * **licenseType**: string
 * **nodeAgentSkuId**: string (Required)
-* **windowsConfiguration**: WindowsConfiguration
+* **windowsConfiguration**: [WindowsConfiguration](#windowsconfiguration)
 
 ## ContainerConfiguration
 ### Properties
 * **containerImageNames**: string[]
-* **containerRegistries**: ContainerRegistry[]
+* **containerRegistries**: [ContainerRegistry](#containerregistry)[]
 * **type**: string (Required)
 
 ## ContainerRegistry
@@ -270,10 +270,10 @@
 
 ## MountConfiguration
 ### Properties
-* **azureBlobFileSystemConfiguration**: AzureBlobFileSystemConfiguration
-* **azureFileShareConfiguration**: AzureFileShareConfiguration
-* **cifsMountConfiguration**: CIFSMountConfiguration
-* **nfsMountConfiguration**: NFSMountConfiguration
+* **azureBlobFileSystemConfiguration**: [AzureBlobFileSystemConfiguration](#azureblobfilesystemconfiguration)
+* **azureFileShareConfiguration**: [AzureFileShareConfiguration](#azurefileshareconfiguration)
+* **cifsMountConfiguration**: [CIFSMountConfiguration](#cifsmountconfiguration)
+* **nfsMountConfiguration**: [NFSMountConfiguration](#nfsmountconfiguration)
 
 ## AzureBlobFileSystemConfiguration
 ### Properties
@@ -308,13 +308,13 @@
 
 ## NetworkConfiguration
 ### Properties
-* **endpointConfiguration**: PoolEndpointConfiguration
-* **publicIPAddressConfiguration**: PublicIPAddressConfiguration
+* **endpointConfiguration**: [PoolEndpointConfiguration](#poolendpointconfiguration)
+* **publicIPAddressConfiguration**: [PublicIPAddressConfiguration](#publicipaddressconfiguration)
 * **subnetId**: string
 
 ## PoolEndpointConfiguration
 ### Properties
-* **inboundNatPools**: InboundNatPool[] (Required)
+* **inboundNatPools**: [InboundNatPool](#inboundnatpool)[] (Required)
 
 ## InboundNatPool
 ### Properties
@@ -322,7 +322,7 @@
 * **frontendPortRangeEnd**: int (Required)
 * **frontendPortRangeStart**: int (Required)
 * **name**: string (Required)
-* **networkSecurityGroupRules**: NetworkSecurityGroupRule[]
+* **networkSecurityGroupRules**: [NetworkSecurityGroupRule](#networksecuritygrouprule)[]
 * **protocol**: 'TCP' | 'UDP' (Required)
 
 ## NetworkSecurityGroupRule
@@ -339,7 +339,7 @@
 
 ## ResizeOperationStatus
 ### Properties
-* **errors**: ResizeError[]
+* **errors**: [ResizeError](#resizeerror)[]
 * **nodeDeallocationOption**: 'Requeue' | 'RetainedData' | 'TaskCompletion' | 'Terminate'
 * **resizeTimeout**: string
 * **startTime**: string
@@ -349,13 +349,13 @@
 ## ResizeError
 ### Properties
 * **code**: string (Required)
-* **details**: ResizeError[]
+* **details**: [ResizeError](#resizeerror)[]
 * **message**: string (Required)
 
 ## ScaleSettings
 ### Properties
-* **autoScale**: AutoScaleSettings
-* **fixedScale**: FixedScaleSettings
+* **autoScale**: [AutoScaleSettings](#autoscalesettings)
+* **fixedScale**: [FixedScaleSettings](#fixedscalesettings)
 
 ## AutoScaleSettings
 ### Properties
@@ -372,18 +372,18 @@
 ## StartTask
 ### Properties
 * **commandLine**: string
-* **containerSettings**: TaskContainerSettings
-* **environmentSettings**: EnvironmentSetting[]
+* **containerSettings**: [TaskContainerSettings](#taskcontainersettings)
+* **environmentSettings**: [EnvironmentSetting](#environmentsetting)[]
 * **maxTaskRetryCount**: int
-* **resourceFiles**: ResourceFile[]
-* **userIdentity**: UserIdentity
+* **resourceFiles**: [ResourceFile](#resourcefile)[]
+* **userIdentity**: [UserIdentity](#useridentity)
 * **waitForSuccess**: bool
 
 ## TaskContainerSettings
 ### Properties
 * **containerRunOptions**: string
 * **imageName**: string (Required)
-* **registry**: ContainerRegistry
+* **registry**: [ContainerRegistry](#containerregistry)
 * **workingDirectory**: 'ContainerImageDefault' | 'TaskWorkingDirectory'
 
 ## EnvironmentSetting
@@ -402,7 +402,7 @@
 
 ## UserIdentity
 ### Properties
-* **autoUser**: AutoUserSpecification
+* **autoUser**: [AutoUserSpecification](#autouserspecification)
 * **userName**: string
 
 ## AutoUserSpecification
@@ -417,10 +417,10 @@
 ## UserAccount
 ### Properties
 * **elevationLevel**: 'Admin' | 'NonAdmin'
-* **linuxUserConfiguration**: LinuxUserConfiguration
+* **linuxUserConfiguration**: [LinuxUserConfiguration](#linuxuserconfiguration)
 * **name**: string (Required)
 * **password**: string (Required)
-* **windowsUserConfiguration**: WindowsUserConfiguration
+* **windowsUserConfiguration**: [WindowsUserConfiguration](#windowsuserconfiguration)
 
 ## LinuxUserConfiguration
 ### Properties

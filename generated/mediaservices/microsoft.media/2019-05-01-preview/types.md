@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LiveEventProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [LiveEventProperties](#liveeventproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Media/mediaservices/liveEvents' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaservices/liveEvents/liveOutputs@2019-05-01-preview
@@ -17,7 +17,7 @@
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: LiveOutputProperties
+* **properties**: [LiveOutputProperties](#liveoutputproperties)
 * **type**: 'Microsoft.Media/mediaservices/liveEvents/liveOutputs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaservices/streamingEndpoints@2019-05-01-preview
@@ -27,23 +27,23 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: StreamingEndpointProperties
-* **tags**: Dictionary<string,String>
+* **properties**: [StreamingEndpointProperties](#streamingendpointproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Media/mediaservices/streamingEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## LiveEventProperties
 ### Properties
 * **created**: string (ReadOnly)
-* **crossSiteAccessPolicies**: CrossSiteAccessPolicies
+* **crossSiteAccessPolicies**: [CrossSiteAccessPolicies](#crosssiteaccesspolicies)
 * **description**: string
-* **encoding**: LiveEventEncoding
-* **input**: LiveEventInput (Required)
+* **encoding**: [LiveEventEncoding](#liveeventencoding)
+* **input**: [LiveEventInput](#liveeventinput) (Required)
 * **lastModified**: string (ReadOnly)
-* **preview**: LiveEventPreview
+* **preview**: [LiveEventPreview](#liveeventpreview)
 * **provisioningState**: string (ReadOnly)
 * **resourceState**: 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
 * **streamOptions**: 'Default' | 'LowLatency'[]
-* **transcriptions**: LiveEventTranscription[]
+* **transcriptions**: [LiveEventTranscription](#liveeventtranscription)[]
 * **vanityUrl**: bool
 
 ## CrossSiteAccessPolicies
@@ -58,19 +58,19 @@
 
 ## LiveEventInput
 ### Properties
-* **accessControl**: LiveEventInputAccessControl
+* **accessControl**: [LiveEventInputAccessControl](#liveeventinputaccesscontrol)
 * **accessToken**: string
-* **endpoints**: LiveEventEndpoint[]
+* **endpoints**: [LiveEventEndpoint](#liveeventendpoint)[]
 * **keyFrameIntervalDuration**: string
 * **streamingProtocol**: 'FragmentedMP4' | 'RTMP' (Required)
 
 ## LiveEventInputAccessControl
 ### Properties
-* **ip**: IPAccessControl
+* **ip**: [IPAccessControl](#ipaccesscontrol)
 
 ## IPAccessControl
 ### Properties
-* **allow**: IPRange[]
+* **allow**: [IPRange](#iprange)[]
 
 ## IPRange
 ### Properties
@@ -85,21 +85,21 @@
 
 ## LiveEventPreview
 ### Properties
-* **accessControl**: LiveEventPreviewAccessControl
+* **accessControl**: [LiveEventPreviewAccessControl](#liveeventpreviewaccesscontrol)
 * **alternativeMediaId**: string
-* **endpoints**: LiveEventEndpoint[]
+* **endpoints**: [LiveEventEndpoint](#liveeventendpoint)[]
 * **previewLocator**: string
 * **streamingPolicyName**: string
 
 ## LiveEventPreviewAccessControl
 ### Properties
-* **ip**: IPAccessControl
+* **ip**: [IPAccessControl](#ipaccesscontrol)
 
 ## LiveEventTranscription
 ### Properties
-* **inputTrackSelection**: LiveEventInputTrackSelection[]
+* **inputTrackSelection**: [LiveEventInputTrackSelection](#liveeventinputtrackselection)[]
 * **language**: string
-* **outputTranscriptionTrack**: LiveEventOutputTranscriptionTrack
+* **outputTranscriptionTrack**: [LiveEventOutputTranscriptionTrack](#liveeventoutputtranscriptiontrack)
 
 ## LiveEventInputTrackSelection
 ### Properties
@@ -122,7 +122,7 @@
 * **assetName**: string (Required)
 * **created**: string (ReadOnly)
 * **description**: string
-* **hls**: Hls
+* **hls**: [Hls](#hls)
 * **lastModified**: string (ReadOnly)
 * **manifestName**: string
 * **outputSnapTime**: int
@@ -135,13 +135,13 @@
 
 ## StreamingEndpointProperties
 ### Properties
-* **accessControl**: StreamingEndpointAccessControl
+* **accessControl**: [StreamingEndpointAccessControl](#streamingendpointaccesscontrol)
 * **availabilitySetName**: string
 * **cdnEnabled**: bool
 * **cdnProfile**: string
 * **cdnProvider**: string
 * **created**: string (ReadOnly)
-* **crossSiteAccessPolicies**: CrossSiteAccessPolicies
+* **crossSiteAccessPolicies**: [CrossSiteAccessPolicies](#crosssiteaccesspolicies)
 * **customHostNames**: string[]
 * **description**: string
 * **freeTrialEndTime**: string (ReadOnly)
@@ -154,12 +154,12 @@
 
 ## StreamingEndpointAccessControl
 ### Properties
-* **akamai**: AkamaiAccessControl
-* **ip**: IPAccessControl
+* **akamai**: [AkamaiAccessControl](#akamaiaccesscontrol)
+* **ip**: [IPAccessControl](#ipaccesscontrol)
 
 ## AkamaiAccessControl
 ### Properties
-* **akamaiSignatureHeaderAuthenticationKeyList**: AkamaiSignatureHeaderAuthenticationKey[]
+* **akamaiSignatureHeaderAuthenticationKeyList**: [AkamaiSignatureHeaderAuthenticationKey](#akamaisignatureheaderauthenticationkey)[]
 
 ## AkamaiSignatureHeaderAuthenticationKey
 ### Properties

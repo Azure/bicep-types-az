@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GuestDiagnosticSettings (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [GuestDiagnosticSettings](#guestdiagnosticsettings) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'microsoft.insights/guestDiagnosticSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource microsoft.insights/guestDiagnosticSettingsAssociation@2018-06-01-preview
@@ -18,27 +18,27 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: GuestDiagnosticSettingsAssociation (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [GuestDiagnosticSettingsAssociation](#guestdiagnosticsettingsassociation) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'microsoft.insights/guestDiagnosticSettingsAssociation' (ReadOnly, DeployTimeConstant)
 
 ## GuestDiagnosticSettings
 ### Properties
-* **dataSources**: DataSource[]
+* **dataSources**: [DataSource](#datasource)[]
 * **osType**: 'Linux' | 'Windows'
 * **proxySetting**: string
 
 ## DataSource
 ### Properties
-* **configuration**: DataSourceConfiguration (Required)
+* **configuration**: [DataSourceConfiguration](#datasourceconfiguration) (Required)
 * **kind**: 'ETWProviders' | 'PerformanceCounter' | 'WindowsEventLogs' (Required)
-* **sinks**: SinkConfiguration[] (Required)
+* **sinks**: [SinkConfiguration](#sinkconfiguration)[] (Required)
 
 ## DataSourceConfiguration
 ### Properties
-* **eventLogs**: EventLogConfiguration[]
-* **perfCounters**: PerformanceCounterConfiguration[]
-* **providers**: EtwProviderConfiguration[]
+* **eventLogs**: [EventLogConfiguration](#eventlogconfiguration)[]
+* **perfCounters**: [PerformanceCounterConfiguration](#performancecounterconfiguration)[]
+* **providers**: [EtwProviderConfiguration](#etwproviderconfiguration)[]
 
 ## EventLogConfiguration
 ### Properties
@@ -53,7 +53,7 @@
 
 ## EtwProviderConfiguration
 ### Properties
-* **events**: EtwEventConfiguration[] (Required)
+* **events**: [EtwEventConfiguration](#etweventconfiguration)[] (Required)
 * **id**: string (Required)
 
 ## EtwEventConfiguration

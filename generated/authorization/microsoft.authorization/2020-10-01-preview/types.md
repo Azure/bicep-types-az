@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RoleAssignmentScheduleRequestProperties
+* **properties**: [RoleAssignmentScheduleRequestProperties](#roleassignmentschedulerequestproperties)
 * **type**: 'Microsoft.Authorization/roleAssignmentScheduleRequests' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Authorization/roleEligibilityScheduleRequests@2020-10-01-preview
@@ -15,7 +15,7 @@
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RoleEligibilityScheduleRequestProperties
+* **properties**: [RoleEligibilityScheduleRequestProperties](#roleeligibilityschedulerequestproperties)
 * **type**: 'Microsoft.Authorization/roleEligibilityScheduleRequests' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Authorization/roleManagementPolicies@2020-10-01-preview
@@ -24,7 +24,7 @@
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RoleManagementPolicyProperties
+* **properties**: [RoleManagementPolicyProperties](#rolemanagementpolicyproperties)
 * **type**: 'Microsoft.Authorization/roleManagementPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Authorization/roleManagementPolicyAssignments@2020-10-01-preview
@@ -33,7 +33,7 @@
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RoleManagementPolicyAssignmentProperties
+* **properties**: [RoleManagementPolicyAssignmentProperties](#rolemanagementpolicyassignmentproperties)
 * **type**: 'Microsoft.Authorization/roleManagementPolicyAssignments' (ReadOnly, DeployTimeConstant)
 
 ## RoleAssignmentScheduleRequestProperties
@@ -49,16 +49,16 @@
 * **requestorId**: string (ReadOnly)
 * **requestType**: 'AdminAssign' | 'AdminExtend' | 'AdminRemove' | 'AdminRenew' | 'AdminUpdate' | 'SelfActivate' | 'SelfDeactivate' | 'SelfExtend' | 'SelfRenew' (Required)
 * **roleDefinitionId**: string (Required)
-* **scheduleInfo**: schemas:13_scheduleInfo
+* **scheduleInfo**: [schemas:13_scheduleInfo](#schemas13scheduleinfo)
 * **scope**: string (ReadOnly)
 * **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' (ReadOnly)
 * **targetRoleAssignmentScheduleId**: string
 * **targetRoleAssignmentScheduleInstanceId**: string
-* **ticketInfo**: schemas:13_ticketInfo
+* **ticketInfo**: [schemas:13_ticketInfo](#schemas13ticketinfo)
 
 ## schemas:13_scheduleInfo
 ### Properties
-* **expiration**: schemas:13_scheduleInfo_expiration
+* **expiration**: [schemas:13_scheduleInfo_expiration](#schemas13scheduleinfoexpiration)
 * **startDateTime**: string
 
 ## schemas:13_scheduleInfo_expiration
@@ -84,16 +84,16 @@
 * **requestorId**: string (ReadOnly)
 * **requestType**: 'AdminAssign' | 'AdminExtend' | 'AdminRemove' | 'AdminRenew' | 'AdminUpdate' | 'SelfActivate' | 'SelfDeactivate' | 'SelfExtend' | 'SelfRenew' (Required)
 * **roleDefinitionId**: string (Required)
-* **scheduleInfo**: schemas:31_scheduleInfo
+* **scheduleInfo**: [schemas:31_scheduleInfo](#schemas31scheduleinfo)
 * **scope**: string (ReadOnly)
 * **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' (ReadOnly)
 * **targetRoleEligibilityScheduleId**: string
 * **targetRoleEligibilityScheduleInstanceId**: string
-* **ticketInfo**: schemas:31_ticketInfo
+* **ticketInfo**: [schemas:31_ticketInfo](#schemas31ticketinfo)
 
 ## schemas:31_scheduleInfo
 ### Properties
-* **expiration**: schemas:31_scheduleInfo_expiration
+* **expiration**: [schemas:31_scheduleInfo_expiration](#schemas31scheduleinfoexpiration)
 * **startDateTime**: string
 
 ## schemas:31_scheduleInfo_expiration
@@ -111,21 +111,21 @@
 ### Properties
 * **description**: string
 * **displayName**: string
-* **effectiveRules**: RoleManagementPolicyRule[] (ReadOnly)
+* **effectiveRules**: [RoleManagementPolicyRule](#rolemanagementpolicyrule)[] (ReadOnly)
 * **isOrganizationDefault**: bool
 * **lastUpdatedDateTime**: string (ReadOnly)
-* **rules**: RoleManagementPolicyRule[]
+* **rules**: [RoleManagementPolicyRule](#rolemanagementpolicyrule)[]
 * **scope**: string
 
 ## RoleManagementPolicyRule
 * **Discriminator**: ruleType
 ### Base Properties
 * **id**: string
-* **target**: RoleManagementPolicyRuleTarget
+* **target**: [RoleManagementPolicyRuleTarget](#rolemanagementpolicyruletarget)
 ### RoleManagementPolicyApprovalRule
 #### Properties
 * **ruleType**: 'RoleManagementPolicyApprovalRule' (Required)
-* **setting**: ApprovalSettings
+* **setting**: [ApprovalSettings](#approvalsettings)
 
 ### RoleManagementPolicyAuthenticationContextRule
 #### Properties
@@ -165,12 +165,12 @@
 ## RoleManagementPolicyApprovalRule
 ### Properties
 * **ruleType**: 'RoleManagementPolicyApprovalRule' (Required)
-* **setting**: ApprovalSettings
+* **setting**: [ApprovalSettings](#approvalsettings)
 
 ## ApprovalSettings
 ### Properties
 * **approvalMode**: 'NoApproval' | 'Parallel' | 'Serial' | 'SingleStage'
-* **approvalStages**: ApprovalStage[]
+* **approvalStages**: [ApprovalStage](#approvalstage)[]
 * **isApprovalRequired**: bool
 * **isApprovalRequiredForExtension**: bool
 * **isRequestorJustificationRequired**: bool
@@ -178,11 +178,11 @@
 ## ApprovalStage
 ### Properties
 * **approvalStageTimeOutInDays**: int
-* **escalationApprovers**: UserSet[]
+* **escalationApprovers**: [UserSet](#userset)[]
 * **escalationTimeInMinutes**: int
 * **isApproverJustificationRequired**: bool
 * **isEscalationEnabled**: bool
-* **primaryApprovers**: UserSet[]
+* **primaryApprovers**: [UserSet](#userset)[]
 
 ## UserSet
 * **Discriminator**: userType

@@ -7,18 +7,18 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BudgetProperties
+* **properties**: [BudgetProperties](#budgetproperties)
 * **type**: 'Microsoft.Consumption/budgets' (ReadOnly, DeployTimeConstant)
 
 ## BudgetProperties
 ### Properties
 * **amount**: int (Required)
 * **category**: string (Required)
-* **currentSpend**: CurrentSpend (ReadOnly)
-* **filter**: BudgetFilter
-* **notifications**: Dictionary<string,Notification>
+* **currentSpend**: [CurrentSpend](#currentspend) (ReadOnly)
+* **filter**: [BudgetFilter](#budgetfilter)
+* **notifications**: [Dictionary<string,Notification>](#dictionarystringnotification)
 * **timeGrain**: 'Annually' | 'BillingAnnual' | 'BillingMonth' | 'BillingQuarter' | 'Monthly' | 'Quarterly' (Required)
-* **timePeriod**: BudgetTimePeriod (Required)
+* **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required)
 
 ## CurrentSpend
 ### Properties
@@ -27,15 +27,15 @@
 
 ## BudgetFilter
 ### Properties
-* **and**: BudgetFilterProperties[]
-* **dimensions**: BudgetComparisonExpression
-* **not**: BudgetFilterProperties
-* **tags**: BudgetComparisonExpression
+* **and**: [BudgetFilterProperties](#budgetfilterproperties)[]
+* **dimensions**: [BudgetComparisonExpression](#budgetcomparisonexpression)
+* **not**: [BudgetFilterProperties](#budgetfilterproperties)
+* **tags**: [BudgetComparisonExpression](#budgetcomparisonexpression)
 
 ## BudgetFilterProperties
 ### Properties
-* **dimensions**: BudgetComparisonExpression
-* **tags**: BudgetComparisonExpression
+* **dimensions**: [BudgetComparisonExpression](#budgetcomparisonexpression)
+* **tags**: [BudgetComparisonExpression](#budgetcomparisonexpression)
 
 ## BudgetComparisonExpression
 ### Properties
@@ -46,7 +46,7 @@
 ## Dictionary<string,Notification>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: Notification
+* **Additional Properties Type**: [Notification](#notification)
 
 ## Notification
 ### Properties

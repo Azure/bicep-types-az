@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AttestationServiceCreationSpecificParams (Required)
-* **systemData**: systemData (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [AttestationServiceCreationSpecificParams](#attestationservicecreationspecificparams) (Required)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Attestation/attestationProviders' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Attestation/attestationProviders/privateEndpointConnections@2020-10-01
@@ -18,20 +18,20 @@
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: 'Microsoft.Attestation/attestationProviders/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## AttestationServiceCreationSpecificParams
 ### Properties
 * **attestUri**: string (ReadOnly)
-* **policySigningCertificates**: JSONWebKeySet (WriteOnly)
-* **privateEndpointConnections**: PrivateEndpointConnection[] (ReadOnly)
+* **policySigningCertificates**: [JSONWebKeySet](#jsonwebkeyset) (WriteOnly)
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **status**: 'Error' | 'NotReady' | 'Ready' (ReadOnly)
 * **trustModel**: string (ReadOnly)
 
 ## JSONWebKeySet
 ### Properties
-* **keys**: JSONWebKey[] (WriteOnly)
+* **keys**: [JSONWebKey](#jsonwebkey)[] (WriteOnly)
 
 ## JSONWebKey
 ### Properties
@@ -57,13 +57,13 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties (ReadOnly)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpoint (ReadOnly)
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (ReadOnly)
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
 
 ## PrivateEndpoint

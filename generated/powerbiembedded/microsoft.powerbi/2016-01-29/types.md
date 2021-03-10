@@ -8,8 +8,8 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: any (ReadOnly)
-* **sku**: AzureSku
-* **tags**: Dictionary<string,String>
+* **sku**: [AzureSku](#azuresku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.PowerBI/workspaceCollections' (ReadOnly, DeployTimeConstant)
 
 ## AzureSku

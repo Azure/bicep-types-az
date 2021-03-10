@@ -3,7 +3,7 @@ Executing: autorest --use=/home/runner/work/bicep-types-az/bicep-types-az/src/ge
 AutoRest code generation utility [cli version: 3.1.2; node: v14.16.0, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.1.1)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.1.2)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
 Processing batch task - {"tag":"schema-insights-2020-10-20"} .
@@ -76,4 +76,4 @@ INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/Annotations': Found mismatch betwen type segments (2) and name segments (1)
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/currentbillingfeatures': Found mismatch betwen type segments (2) and name segments (1)
-[54.68 s] Generation Complete
+[54.61 s] Generation Complete

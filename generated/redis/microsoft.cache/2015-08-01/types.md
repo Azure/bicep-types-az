@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RedisProperties (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [RedisProperties](#redisproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Cache/Redis' (ReadOnly, DeployTimeConstant)
 
 ## RedisProperties
@@ -17,14 +17,14 @@
 * **hostName**: string (ReadOnly)
 * **port**: int (ReadOnly)
 * **provisioningState**: string (ReadOnly)
-* **redisConfiguration**: Dictionary<string,String>
+* **redisConfiguration**: [Dictionary<string,String>](#dictionarystringstring)
 * **redisVersion**: string
 * **shardCount**: int
-* **sku**: Sku (Required)
+* **sku**: [Sku](#sku) (Required)
 * **sslPort**: int (ReadOnly)
 * **staticIP**: string
 * **subnet**: string
-* **tenantSettings**: Dictionary<string,String>
+* **tenantSettings**: [Dictionary<string,String>](#dictionarystringstring)
 * **virtualNetwork**: string
 
 ## Dictionary<string,String>

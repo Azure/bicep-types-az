@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AzureADMetricsPropertiesFormat
-* **tags**: Dictionary<string,String>
+* **properties**: [AzureADMetricsPropertiesFormat](#azureadmetricspropertiesformat)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'microsoft.aadiam/azureADMetrics' (ReadOnly, DeployTimeConstant)
 
 ## AzureADMetricsPropertiesFormat

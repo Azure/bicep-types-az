@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AppProperties
-* **sku**: AppSkuInfo (Required)
-* **tags**: Dictionary<string,String>
+* **properties**: [AppProperties](#appproperties)
+* **sku**: [AppSkuInfo](#appskuinfo) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.IoTCentral/iotApps' (ReadOnly, DeployTimeConstant)
 
 ## AppProperties

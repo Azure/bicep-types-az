@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AccountProperties
-* **systemData**: systemData (ReadOnly)
-* **tags**: Dictionary<string,String>
+* **properties**: [AccountProperties](#accountproperties)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.AutonomousDevelopmentPlatform/accounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.AutonomousDevelopmentPlatform/accounts/dataPools@2020-07-01-preview
@@ -18,7 +18,7 @@
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: DataPoolProperties
+* **properties**: [DataPoolProperties](#datapoolproperties)
 * **type**: 'Microsoft.AutonomousDevelopmentPlatform/accounts/dataPools' (ReadOnly, DeployTimeConstant)
 
 ## AccountProperties
@@ -43,9 +43,9 @@
 ## DataPoolProperties
 ### Properties
 * **dataPoolId**: string (ReadOnly)
-* **locations**: DataPoolLocation[]
+* **locations**: [DataPoolLocation](#datapoollocation)[]
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly)
-* **systemData**: systemData (ReadOnly)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
 
 ## DataPoolLocation
 ### Properties

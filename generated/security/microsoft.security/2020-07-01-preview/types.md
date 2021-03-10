@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **latestScan**: bool (WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: RuleResultsProperties (ReadOnly)
+* **properties**: [RuleResultsProperties](#ruleresultsproperties) (ReadOnly)
 * **results**: string[][] (WriteOnly)
 * **type**: 'Microsoft.Security/sqlVulnerabilityAssessments/baselineRules' (ReadOnly, DeployTimeConstant)
 
