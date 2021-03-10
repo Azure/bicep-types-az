@@ -28,9 +28,7 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
   }
 
   function generateAnchorLink(name: string) {
-    // TODO use this implementation once changes have been reviewed
-    // return `[${name}](#${name.replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()})`;
-    return name;
+    return `[${name}](#${name.replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()})`;
   }
 
   function writeTypeProperty(types: TypeBase[], name: string, property: ObjectProperty) {
