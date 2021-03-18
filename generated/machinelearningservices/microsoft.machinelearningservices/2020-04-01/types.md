@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WorkspaceProperties](#workspaceproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.MachineLearningServices/workspaces/computes@2020-04-01
@@ -23,7 +23,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [Compute](#compute)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.MachineLearningServices/workspaces/privateEndpointConnections@2020-04-01
@@ -36,22 +36,22 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned' (Required)
-* **userAssignedIdentities**: [Dictionary<string,Schemas24UserAssignedIdentitiesValue>](#dictionarystringschemas24userassignedidentitiesvalue)
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' (Required)
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities)
 
-## Dictionary<string,Schemas24UserAssignedIdentitiesValue>
+## IdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
+* **Additional Properties Type**: [ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties](#componentssgqdofschemasidentitypropertiesuserassignedidentitiesadditionalproperties)
 
-## schemas:24_userAssignedIdentitiesValue
+## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
 * **clientId**: string (ReadOnly)
 * **principalId**: string (ReadOnly)
@@ -108,14 +108,14 @@
 * **name**: string (ReadOnly)
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
 
 ## PrivateEndpoint
 ### Properties
@@ -132,7 +132,7 @@
 * **name**: string
 * **tier**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -149,13 +149,14 @@
 * **requestMessage**: string
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Compute
 * **Discriminator**: computeType
+
 ### Base Properties
 * **computeLocation**: string
 * **createdOn**: string (ReadOnly)
@@ -168,17 +169,17 @@
 ### AKS
 #### Properties
 * **computeType**: 'AKS' (Required)
-* **properties**: [schemas:33_properties](#schemas33properties)
+* **properties**: [AKSProperties](#aksproperties)
 
 ### AmlCompute
 #### Properties
 * **computeType**: 'AmlCompute' (Required)
-* **properties**: [schemas:34_properties](#schemas34properties)
+* **properties**: [AmlComputeProperties](#amlcomputeproperties)
 
 ### Databricks
 #### Properties
 * **computeType**: 'Databricks' (Required)
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
+* **properties**: [DatabricksProperties](#databricksproperties)
 
 ### DataFactory
 #### Properties
@@ -187,17 +188,17 @@
 ### DataLakeAnalytics
 #### Properties
 * **computeType**: 'DataLakeAnalytics' (Required)
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
+* **properties**: [DataLakeAnalyticsProperties](#datalakeanalyticsproperties)
 
 ### HDInsight
 #### Properties
 * **computeType**: 'HDInsight' (Required)
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
+* **properties**: [HDInsightProperties](#hdinsightproperties)
 
 ### VirtualMachine
 #### Properties
 * **computeType**: 'VirtualMachine' (Required)
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
 
 ## MachineLearningServiceError
@@ -218,9 +219,9 @@
 ## AKS
 ### Properties
 * **computeType**: 'AKS' (Required)
-* **properties**: [schemas:33_properties](#schemas33properties)
+* **properties**: [AKSProperties](#aksproperties)
 
-## schemas:33_properties
+## AKSProperties
 ### Properties
 * **agentCount**: int
 * **agentVMSize**: string
@@ -255,9 +256,9 @@
 ## AmlCompute
 ### Properties
 * **computeType**: 'AmlCompute' (Required)
-* **properties**: [schemas:34_properties](#schemas34properties)
+* **properties**: [AmlComputeProperties](#amlcomputeproperties)
 
-## schemas:34_properties
+## AmlComputeProperties
 ### Properties
 * **allocationState**: 'Resizing' | 'Steady' (ReadOnly)
 * **allocationStateTransitionTime**: string (ReadOnly)
@@ -300,7 +301,11 @@
 ## Databricks
 ### Properties
 * **computeType**: 'Databricks' (Required)
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
+* **properties**: [DatabricksProperties](#databricksproperties)
+
+## DatabricksProperties
+### Properties
+* **databricksAccessToken**: string
 
 ## DataFactory
 ### Properties
@@ -309,24 +314,48 @@
 ## DataLakeAnalytics
 ### Properties
 * **computeType**: 'DataLakeAnalytics' (Required)
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
+* **properties**: [DataLakeAnalyticsProperties](#datalakeanalyticsproperties)
+
+## DataLakeAnalyticsProperties
+### Properties
+* **dataLakeStoreAccountName**: string
 
 ## HDInsight
 ### Properties
 * **computeType**: 'HDInsight' (Required)
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
+* **properties**: [HDInsightProperties](#hdinsightproperties)
+
+## HDInsightProperties
+### Properties
+* **address**: string
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials)
+* **sshPort**: int
+
+## VirtualMachineSshCredentials
+### Properties
+* **password**: string
+* **privateKeyData**: string
+* **publicKeyData**: string
+* **username**: string
 
 ## VirtualMachine
 ### Properties
 * **computeType**: 'VirtualMachine' (Required)
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
-## Dictionary<string,String>
+## VirtualMachineProperties
+### Properties
+* **address**: string
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials)
+* **sshPort**: int
+* **virtualMachineSize**: string
+
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

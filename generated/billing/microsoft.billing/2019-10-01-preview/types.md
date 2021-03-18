@@ -109,7 +109,7 @@
 * **invoiceSections**: [InvoiceSection](#invoicesection)[] (ReadOnly)
 * **poNumber**: string (ReadOnly)
 * **spendingLimit**: 'Off' | 'On' (ReadOnly)
-* **status**: any (ReadOnly)
+* **status**: 'Active' | 'Disabled' | 'Warned' (ReadOnly)
 * **statusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' (ReadOnly)
 * **targetClouds**: 'USGov' | 'USNat' | 'USSec'[] (ReadOnly)
 

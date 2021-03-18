@@ -6,13 +6,13 @@
 * **apiVersion**: '2021-01-11' (ReadOnly, DeployTimeConstant)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [schemas:13_identity](#schemas13identity)
-* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required)
+* **identity**: [ServicesResourceIdentity](#servicesresourceidentity)
+* **kind**: 'fhir' | 'fhir-R4' | 'fhir-Stu3' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ServicesProperties](#servicesproperties)
-* **systemData**: [systemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [ServicesResourceTags](#servicesresourcetags)
 * **type**: 'Microsoft.HealthcareApis/services' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HealthcareApis/services/privateEndpointConnections@2021-01-11
@@ -22,10 +22,10 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.HealthcareApis/services/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
-## schemas:13_identity
+## ServicesResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
@@ -85,7 +85,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
 
 ## PrivateEndpoint
 ### Properties
@@ -97,7 +97,7 @@
 * **description**: string
 * **status**: 'Approved' | 'Pending' | 'Rejected'
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string
 * **createdBy**: string
@@ -106,7 +106,7 @@
 * **lastModifiedBy**: string
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
-## Dictionary<string,String>
+## ServicesResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

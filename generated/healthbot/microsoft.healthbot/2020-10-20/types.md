@@ -10,7 +10,7 @@
 * **properties**: [HealthBotProperties](#healthbotproperties)
 * **sku**: [Sku](#sku)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.HealthBot/healthBots' (ReadOnly, DeployTimeConstant)
 
 ## HealthBotProperties
@@ -35,7 +35,7 @@
 * **lastModifiedBy**: string
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

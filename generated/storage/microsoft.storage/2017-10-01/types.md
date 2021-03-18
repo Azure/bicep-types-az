@@ -11,14 +11,14 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters)
 * **sku**: [Sku](#sku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [StorageAccountCreateParametersTags](#storageaccountcreateparameterstags)
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: string (Required)
+* **type**: 'SystemAssigned' (Required)
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
@@ -112,7 +112,7 @@
 * **type**: string (ReadOnly)
 * **values**: string[] (ReadOnly)
 
-## Dictionary<string,String>
+## StorageAccountCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

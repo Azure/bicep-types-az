@@ -20,32 +20,34 @@
 
 ## MediaGraphSink
 * **Discriminator**: @odata.type
+
 ### Base Properties
 * **inputs**: string[] (Required)
 * **name**: string (Required)
-### #Microsoft.Media.MediaGraphAssetSink
+### MediaGraphAssetSink
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphAssetSink' (Required)
 * **assetName**: string (Required)
 
 
-## #Microsoft.Media.MediaGraphAssetSink
+## MediaGraphAssetSink
 ### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphAssetSink' (Required)
 * **assetName**: string (Required)
 
 ## MediaGraphSource
 * **Discriminator**: @odata.type
+
 ### Base Properties
 * **name**: string (Required)
-### #Microsoft.Media.MediaGraphRtspSource
+### MediaGraphRtspSource
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required)
 * **endpoint**: [MediaGraphEndpoint](#mediagraphendpoint) (Required)
 * **transport**: 'Http' | 'Tcp' (Required)
 
 
-## #Microsoft.Media.MediaGraphRtspSource
+## MediaGraphRtspSource
 ### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required)
 * **endpoint**: [MediaGraphEndpoint](#mediagraphendpoint) (Required)
@@ -53,14 +55,15 @@
 
 ## MediaGraphEndpoint
 * **Discriminator**: @odata.type
+
 ### Base Properties
 * **credentials**: [MediaGraphCredentials](#mediagraphcredentials)
 * **url**: string (Required)
-### #Microsoft.Media.MediaGraphClearEndpoint
+### MediaGraphClearEndpoint
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphClearEndpoint' (Required)
 
-### #Microsoft.Media.MediaGraphTlsEndpoint
+### MediaGraphTlsEndpoint
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphTlsEndpoint' (Required)
 * **trustedCertificates**: [MediaGraphCertificateSource](#mediagraphcertificatesource)
@@ -69,25 +72,26 @@
 
 ## MediaGraphCredentials
 * **Discriminator**: @odata.type
+
 ### Base Properties
-### #Microsoft.Media.MediaGraphUsernamePasswordCredentials
+### MediaGraphUsernamePasswordCredentials
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphUsernamePasswordCredentials' (Required)
 * **password**: string (Required)
 * **username**: string (Required)
 
 
-## #Microsoft.Media.MediaGraphUsernamePasswordCredentials
+## MediaGraphUsernamePasswordCredentials
 ### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphUsernamePasswordCredentials' (Required)
 * **password**: string (Required)
 * **username**: string (Required)
 
-## #Microsoft.Media.MediaGraphClearEndpoint
+## MediaGraphClearEndpoint
 ### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphClearEndpoint' (Required)
 
-## #Microsoft.Media.MediaGraphTlsEndpoint
+## MediaGraphTlsEndpoint
 ### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphTlsEndpoint' (Required)
 * **trustedCertificates**: [MediaGraphCertificateSource](#mediagraphcertificatesource)
@@ -95,14 +99,15 @@
 
 ## MediaGraphCertificateSource
 * **Discriminator**: @odata.type
+
 ### Base Properties
-### #Microsoft.Media.MediaGraphPemCertificateList
+### MediaGraphPemCertificateList
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphPemCertificateList' (Required)
 * **certificates**: string[] (Required)
 
 
-## #Microsoft.Media.MediaGraphPemCertificateList
+## MediaGraphPemCertificateList
 ### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphPemCertificateList' (Required)
 * **certificates**: string[] (Required)

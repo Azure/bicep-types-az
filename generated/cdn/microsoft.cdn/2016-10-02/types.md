@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ProfileProperties](#profileproperties)
 * **sku**: [Sku](#sku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Cdn/profiles/endpoints@2016-10-02
@@ -20,7 +20,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [EndpointProperties](#endpointproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2016-10-02
@@ -31,7 +31,7 @@
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [CustomDomainPropertiesParameters](#customdomainpropertiesparameters)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly)
 * **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant)
 
 ## ProfileProperties
@@ -43,7 +43,7 @@
 ### Properties
 * **name**: 'Custom_Verizon' | 'Premium_Verizon' | 'Standard_Akamai' | 'Standard_ChinaCdn' | 'Standard_Verizon'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -81,7 +81,7 @@
 * **httpPort**: int
 * **httpsPort**: int
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -94,7 +94,7 @@
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly)
 * **validationData**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

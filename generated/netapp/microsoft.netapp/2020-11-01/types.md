@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [accountProperties](#accountproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [AccountProperties](#accountproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/backupPolicies@2020-11-01
@@ -19,8 +19,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [backupPolicyProperties](#backuppolicyproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [BackupPolicyProperties](#backuppolicyproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.NetApp/netAppAccounts/backupPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2020-11-01
@@ -30,8 +30,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [poolProperties](#poolproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [PoolProperties](#poolproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-11-01
@@ -41,8 +41,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [volumeProperties](#volumeproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [VolumeProperties](#volumeproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups@2020-11-01
@@ -52,7 +52,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [backupProperties](#backupproperties) (Required)
+* **properties**: [BackupProperties](#backupproperties) (Required)
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2020-11-01
@@ -62,7 +62,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [snapshotProperties](#snapshotproperties)
+* **properties**: [SnapshotProperties](#snapshotproperties)
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NetApp/netAppAccounts/snapshotPolicies@2020-11-01
@@ -72,17 +72,17 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [snapshotPolicyProperties](#snapshotpolicyproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [SnapshotPolicyProperties](#snapshotpolicyproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.NetApp/netAppAccounts/snapshotPolicies' (ReadOnly, DeployTimeConstant)
 
-## accountProperties
+## AccountProperties
 ### Properties
-* **activeDirectories**: [activeDirectory](#activedirectory)[]
-* **encryption**: [accountEncryption](#accountencryption)
+* **activeDirectories**: [ActiveDirectory](#activedirectory)[]
+* **encryption**: [AccountEncryption](#accountencryption)
 * **provisioningState**: string (ReadOnly)
 
-## activeDirectory
+## ActiveDirectory
 ### Properties
 * **activeDirectoryId**: string
 * **adName**: string
@@ -103,11 +103,11 @@
 * **statusDetails**: string (ReadOnly)
 * **username**: string
 
-## accountEncryption
+## AccountEncryption
 ### Properties
 * **keySource**: 'Microsoft.NetApp'
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string
 * **createdBy**: string
@@ -116,35 +116,35 @@
 * **lastModifiedBy**: string
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## backupPolicyProperties
+## BackupPolicyProperties
 ### Properties
 * **dailyBackupsToKeep**: int
 * **enabled**: bool
 * **monthlyBackupsToKeep**: int
 * **name**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
-* **volumeBackups**: [volumeBackups](#volumebackups)[]
+* **volumeBackups**: [VolumeBackups](#volumebackups)[]
 * **volumesAssigned**: int
 * **weeklyBackupsToKeep**: int
 * **yearlyBackupsToKeep**: int
 
-## volumeBackups
+## VolumeBackups
 ### Properties
 * **backupsCount**: int
 * **policyEnabled**: bool
 * **volumeName**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## poolProperties
+## PoolProperties
 ### Properties
 * **poolId**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
@@ -154,23 +154,23 @@
 * **totalThroughputMibps**: int (ReadOnly)
 * **utilizedThroughputMibps**: int (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## volumeProperties
+## VolumeProperties
 ### Properties
 * **backupId**: string
 * **baremetalTenantId**: string (ReadOnly)
 * **creationToken**: string (Required)
-* **dataProtection**: [schemas:23_dataProtection](#schemas23dataprotection)
+* **dataProtection**: [VolumePropertiesDataProtection](#volumepropertiesdataprotection)
 * **encryptionKeySource**: string
-* **exportPolicy**: [schemas:23_exportPolicy](#schemas23exportpolicy)
+* **exportPolicy**: [VolumePropertiesExportPolicy](#volumepropertiesexportpolicy)
 * **fileSystemId**: string (ReadOnly)
 * **isRestoring**: bool
 * **kerberosEnabled**: bool
-* **mountTargets**: [mountTargetProperties](#mounttargetproperties)[] (ReadOnly)
+* **mountTargets**: [MountTargetProperties](#mounttargetproperties)[] (ReadOnly)
 * **protocolTypes**: string[]
 * **provisioningState**: string (ReadOnly)
 * **securityStyle**: 'ntfs' | 'unix'
@@ -184,20 +184,20 @@
 * **usageThreshold**: int (Required)
 * **volumeType**: string
 
-## schemas:23_dataProtection
+## VolumePropertiesDataProtection
 ### Properties
-* **backup**: [volumeBackupProperties](#volumebackupproperties)
-* **replication**: [replicationObject](#replicationobject)
-* **snapshot**: [volumeSnapshotProperties](#volumesnapshotproperties)
+* **backup**: [VolumeBackupProperties](#volumebackupproperties)
+* **replication**: [ReplicationObject](#replicationobject)
+* **snapshot**: [VolumeSnapshotProperties](#volumesnapshotproperties)
 
-## volumeBackupProperties
+## VolumeBackupProperties
 ### Properties
 * **backupEnabled**: bool
 * **backupPolicyId**: string
 * **policyEnforced**: bool
 * **vaultId**: string
 
-## replicationObject
+## ReplicationObject
 ### Properties
 * **endpointType**: 'dst' | 'src'
 * **remoteVolumeRegion**: string
@@ -205,15 +205,15 @@
 * **replicationId**: string
 * **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' (Required)
 
-## volumeSnapshotProperties
+## VolumeSnapshotProperties
 ### Properties
 * **snapshotPolicyId**: string
 
-## schemas:23_exportPolicy
+## VolumePropertiesExportPolicy
 ### Properties
-* **rules**: [exportPolicyRule](#exportpolicyrule)[]
+* **rules**: [ExportPolicyRule](#exportpolicyrule)[]
 
-## exportPolicyRule
+## ExportPolicyRule
 ### Properties
 * **allowedClients**: string
 * **cifs**: bool
@@ -230,19 +230,19 @@
 * **unixReadOnly**: bool
 * **unixReadWrite**: bool
 
-## mountTargetProperties
+## MountTargetProperties
 ### Properties
 * **fileSystemId**: string (Required)
 * **ipAddress**: string (ReadOnly)
 * **mountTargetId**: string (ReadOnly)
 * **smbServerFqdn**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## backupProperties
+## BackupProperties
 ### Properties
 * **backupId**: string (ReadOnly)
 * **backupType**: string (ReadOnly)
@@ -252,36 +252,36 @@
 * **provisioningState**: string (ReadOnly)
 * **size**: int (ReadOnly)
 
-## snapshotProperties
+## SnapshotProperties
 ### Properties
 * **created**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **snapshotId**: string (ReadOnly)
 
-## snapshotPolicyProperties
+## SnapshotPolicyProperties
 ### Properties
-* **dailySchedule**: [dailySchedule](#dailyschedule)
+* **dailySchedule**: [DailySchedule](#dailyschedule)
 * **enabled**: bool
-* **hourlySchedule**: [hourlySchedule](#hourlyschedule)
-* **monthlySchedule**: [monthlySchedule](#monthlyschedule)
+* **hourlySchedule**: [HourlySchedule](#hourlyschedule)
+* **monthlySchedule**: [MonthlySchedule](#monthlyschedule)
 * **name**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
-* **weeklySchedule**: [weeklySchedule](#weeklyschedule)
+* **weeklySchedule**: [WeeklySchedule](#weeklyschedule)
 
-## dailySchedule
+## DailySchedule
 ### Properties
 * **hour**: int
 * **minute**: int
 * **snapshotsToKeep**: int
 * **usedBytes**: int
 
-## hourlySchedule
+## HourlySchedule
 ### Properties
 * **minute**: int
 * **snapshotsToKeep**: int
 * **usedBytes**: int
 
-## monthlySchedule
+## MonthlySchedule
 ### Properties
 * **daysOfMonth**: string
 * **hour**: int
@@ -289,7 +289,7 @@
 * **snapshotsToKeep**: int
 * **usedBytes**: int
 
-## weeklySchedule
+## WeeklySchedule
 ### Properties
 * **day**: string
 * **hour**: int
@@ -297,7 +297,7 @@
 * **snapshotsToKeep**: int
 * **usedBytes**: int
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

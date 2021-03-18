@@ -8,7 +8,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AlertRuleProperties](#alertruleproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [AzureResourceTags](#azureresourcetags)
 * **type**: 'Microsoft.Insights/activityLogAlerts' (ReadOnly, DeployTimeConstant)
 
 ## AlertRuleProperties
@@ -26,9 +26,9 @@
 ## ActionGroup
 ### Properties
 * **actionGroupId**: string (Required)
-* **webhookProperties**: [Dictionary<string,String>](#dictionarystringstring)
+* **webhookProperties**: [ActionGroupWebhookProperties](#actiongroupwebhookproperties)
 
-## Dictionary<string,String>
+## ActionGroupWebhookProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -50,7 +50,7 @@
 * **equals**: string
 * **field**: string
 
-## Dictionary<string,String>
+## AzureResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

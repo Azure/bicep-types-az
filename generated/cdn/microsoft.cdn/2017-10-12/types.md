@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ProfileProperties](#profileproperties)
 * **sku**: [Sku](#sku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Cdn/profiles/endpoints@2017-10-12
@@ -20,7 +20,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [EndpointProperties](#endpointproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2017-10-12
@@ -41,7 +41,7 @@
 ### Properties
 * **name**: 'Custom_Verizon' | 'Premium_ChinaCdn' | 'Premium_Verizon' | 'Standard_Akamai' | 'Standard_ChinaCdn' | 'Standard_Microsoft' | 'Standard_Verizon'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -49,7 +49,7 @@
 ## EndpointProperties
 ### Properties
 * **contentTypesToCompress**: string[]
-* **deliveryPolicy**: [schemas:10_deliveryPolicy](#schemas10deliverypolicy)
+* **deliveryPolicy**: [EndpointPropertiesUpdateParametersDeliveryPolicy](#endpointpropertiesupdateparametersdeliverypolicy)
 * **geoFilters**: [GeoFilter](#geofilter)[]
 * **hostName**: string (ReadOnly)
 * **isCompressionEnabled**: bool
@@ -64,7 +64,7 @@
 * **queryStringCachingBehavior**: 'BypassCaching' | 'IgnoreQueryString' | 'NotSet' | 'UseQueryString'
 * **resourceState**: 'Creating' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
 
-## schemas:10_deliveryPolicy
+## EndpointPropertiesUpdateParametersDeliveryPolicy
 ### Properties
 * **description**: string
 * **rules**: [DeliveryRule](#deliveryrule)[] (Required)
@@ -77,57 +77,59 @@
 
 ## DeliveryRuleAction
 * **Discriminator**: name
+
 ### Base Properties
-### CacheExpiration
+### DeliveryRuleCacheExpirationAction
 #### Properties
 * **name**: 'CacheExpiration' (Required)
 * **parameters**: [CacheExpirationActionParameters](#cacheexpirationactionparameters) (Required)
 
 
-## CacheExpiration
+## DeliveryRuleCacheExpirationAction
 ### Properties
 * **name**: 'CacheExpiration' (Required)
 * **parameters**: [CacheExpirationActionParameters](#cacheexpirationactionparameters) (Required)
 
 ## CacheExpirationActionParameters
 ### Properties
-* **@odata.type**: string (Required)
+* **@odata.type**: 'Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters' (Required)
 * **cacheBehavior**: 'BypassCache' | 'Override' | 'SetIfMissing' (Required)
 * **cacheDuration**: string
-* **cacheType**: string (Required)
+* **cacheType**: 'All' (Required)
 
 ## DeliveryRuleCondition
 * **Discriminator**: name
+
 ### Base Properties
-### UrlFileExtension
+### DeliveryRuleUrlFileExtensionCondition
 #### Properties
 * **name**: 'UrlFileExtension' (Required)
 * **parameters**: [UrlFileExtensionConditionParameters](#urlfileextensionconditionparameters) (Required)
 
-### UrlPath
+### DeliveryRuleUrlPathCondition
 #### Properties
 * **name**: 'UrlPath' (Required)
 * **parameters**: [UrlPathConditionParameters](#urlpathconditionparameters) (Required)
 
 
-## UrlFileExtension
+## DeliveryRuleUrlFileExtensionCondition
 ### Properties
 * **name**: 'UrlFileExtension' (Required)
 * **parameters**: [UrlFileExtensionConditionParameters](#urlfileextensionconditionparameters) (Required)
 
 ## UrlFileExtensionConditionParameters
 ### Properties
-* **@odata.type**: string (Required)
+* **@odata.type**: 'Microsoft.Azure.Cdn.Models.DeliveryRuleUrlFileExtensionConditionParameters' (Required)
 * **extensions**: string[] (Required)
 
-## UrlPath
+## DeliveryRuleUrlPathCondition
 ### Properties
 * **name**: 'UrlPath' (Required)
 * **parameters**: [UrlPathConditionParameters](#urlpathconditionparameters) (Required)
 
 ## UrlPathConditionParameters
 ### Properties
-* **@odata.type**: string (Required)
+* **@odata.type**: 'Microsoft.Azure.Cdn.Models.DeliveryRuleUrlPathConditionParameters' (Required)
 * **matchType**: 'Literal' | 'Wildcard' (Required)
 * **path**: string (Required)
 
@@ -148,7 +150,7 @@
 * **httpPort**: int
 * **httpsPort**: int
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

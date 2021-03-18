@@ -8,11 +8,12 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ActionRuleProperties](#actionruleproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ManagedResourceTags](#managedresourcetags)
 * **type**: 'Microsoft.AlertsManagement/actionRules' (ReadOnly, DeployTimeConstant)
 
 ## ActionRuleProperties
 * **Discriminator**: type
+
 ### Base Properties
 * **conditions**: [Conditions](#conditions)
 * **createdAt**: string (ReadOnly)
@@ -84,7 +85,7 @@
 * **startDate**: string
 * **startTime**: string
 
-## Dictionary<string,String>
+## ManagedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

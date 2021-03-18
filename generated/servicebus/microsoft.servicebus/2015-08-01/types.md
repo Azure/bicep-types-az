@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NamespaceProperties](#namespaceproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [NamespaceCreateOrUpdateParametersTags](#namespacecreateorupdateparameterstags)
 * **type**: 'Microsoft.ServiceBus/namespaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceBus/namespaces/AuthorizationRules@2015-08-01
@@ -88,7 +88,7 @@
 * **name**: 'Basic' | 'Premium' | 'Standard'
 * **tier**: 'Basic' | 'Premium' | 'Standard' (Required)
 
-## Dictionary<string,String>
+## NamespaceCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

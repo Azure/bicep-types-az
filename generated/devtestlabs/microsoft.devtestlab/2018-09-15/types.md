@@ -8,7 +8,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [LabProperties](#labproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/artifactsources@2018-09-15
@@ -19,7 +19,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ArtifactSourceProperties](#artifactsourceproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/artifactsources' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/costs@2018-09-15
@@ -30,7 +30,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [LabCostProperties](#labcostproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/costs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/customimages@2018-09-15
@@ -41,7 +41,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [CustomImageProperties](#customimageproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/customimages' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/formulas@2018-09-15
@@ -52,7 +52,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [FormulaProperties](#formulaproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/formulas' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/notificationchannels@2018-09-15
@@ -63,7 +63,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NotificationChannelProperties](#notificationchannelproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/notificationchannels' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/policysets/policies@2018-09-15
@@ -74,7 +74,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PolicyProperties](#policyproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/policysets/policies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/schedules@2018-09-15
@@ -85,7 +85,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/schedules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/servicerunners@2018-09-15
@@ -96,7 +96,7 @@
 * **identity**: [IdentityProperties](#identityproperties)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/servicerunners' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/users@2018-09-15
@@ -107,7 +107,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [UserProperties](#userproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/users' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/users/disks@2018-09-15
@@ -118,7 +118,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DiskProperties](#diskproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/users/disks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/users/environments@2018-09-15
@@ -129,7 +129,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [EnvironmentProperties](#environmentproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/users/environments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/users/secrets@2018-09-15
@@ -140,7 +140,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SecretProperties](#secretproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/users/secrets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/users/servicefabrics@2018-09-15
@@ -151,7 +151,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ServiceFabricProperties](#servicefabricproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/users/servicefabrics' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/users/servicefabrics/schedules@2018-09-15
@@ -162,7 +162,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/users/servicefabrics/schedules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/virtualmachines@2018-09-15
@@ -173,7 +173,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [LabVirtualMachineProperties](#labvirtualmachineproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/virtualmachines' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/virtualmachines/schedules@2018-09-15
@@ -184,7 +184,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/virtualmachines/schedules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/virtualnetworks@2018-09-15
@@ -195,7 +195,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VirtualNetworkProperties](#virtualnetworkproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/virtualnetworks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/schedules@2018-09-15
@@ -206,7 +206,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/schedules' (ReadOnly, DeployTimeConstant)
 
 ## LabProperties
@@ -217,7 +217,7 @@
 * **defaultPremiumStorageAccount**: string (ReadOnly)
 * **defaultStorageAccount**: string (ReadOnly)
 * **environmentPermission**: 'Contributor' | 'Reader'
-* **extendedProperties**: [Dictionary<string,String>](#dictionarystringstring)
+* **extendedProperties**: [LabPropertiesExtendedProperties](#labpropertiesextendedproperties)
 * **labStorageType**: 'Premium' | 'Standard' | 'StandardSSD'
 * **loadBalancerId**: string (ReadOnly)
 * **mandatoryArtifactsResourceIdsLinux**: string[]
@@ -242,7 +242,7 @@
 * **title**: string
 * **uniqueIdentifier**: string (ReadOnly)
 
-## Dictionary<string,String>
+## LabPropertiesExtendedProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -252,7 +252,7 @@
 * **enabled**: 'Disabled' | 'Enabled'
 * **markdown**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -271,7 +271,7 @@
 * **uniqueIdentifier**: string (ReadOnly)
 * **uri**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -332,7 +332,7 @@
 ### Properties
 * **thresholdValue**: int
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -383,7 +383,7 @@
 ### Properties
 * **windowsOsState**: 'NonSysprepped' | 'SysprepApplied' | 'SysprepRequested'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -404,7 +404,7 @@
 * **location**: string
 * **name**: string
 * **properties**: [LabVirtualMachineCreationParameterProperties](#labvirtualmachinecreationparameterproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [LabVirtualMachineCreationParameterTags](#labvirtualmachinecreationparametertags)
 
 ## LabVirtualMachineCreationParameterProperties
 ### Properties
@@ -513,7 +513,7 @@
 * **location**: string
 * **name**: string
 * **properties**: [ScheduleCreationParameterProperties](#schedulecreationparameterproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ScheduleCreationParameterTags](#schedulecreationparametertags)
 
 ## ScheduleCreationParameterProperties
 ### Properties
@@ -547,12 +547,12 @@
 * **time**: string
 * **weekdays**: string[]
 
-## Dictionary<string,String>
+## ScheduleCreationParameterTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## LabVirtualMachineCreationParameterTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -561,7 +561,7 @@
 ### Properties
 * **labVmId**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -581,7 +581,7 @@
 ### Properties
 * **eventName**: 'AutoShutdown' | 'Cost'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -598,7 +598,7 @@
 * **threshold**: string
 * **uniqueIdentifier**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -617,7 +617,7 @@
 * **uniqueIdentifier**: string (ReadOnly)
 * **weeklyRecurrence**: [WeekDetails](#weekdetails)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -629,7 +629,7 @@
 * **tenantId**: string
 * **type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -655,7 +655,7 @@
 * **keyVaultId**: string
 * **keyVaultUri**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -673,7 +673,7 @@
 * **provisioningState**: string (ReadOnly)
 * **uniqueIdentifier**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -697,7 +697,7 @@
 * **name**: string
 * **value**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -708,7 +708,7 @@
 * **uniqueIdentifier**: string (ReadOnly)
 * **value**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -727,7 +727,7 @@
 * **location**: string
 * **name**: string (ReadOnly)
 * **properties**: [ApplicableScheduleProperties](#applicablescheduleproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
 ## ApplicableScheduleProperties
@@ -741,25 +741,25 @@
 * **location**: string
 * **name**: string (ReadOnly)
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -825,12 +825,12 @@
 * **displayStatus**: string
 * **message**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -875,12 +875,12 @@
 * **backendPort**: int
 * **transportProtocol**: 'Tcp' | 'Udp'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

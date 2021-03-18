@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DataBoxEdgeDeviceProperties](#databoxedgedeviceproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [DataBoxEdgeDeviceTags](#databoxedgedevicetags)
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules@2020-05-01-preview
@@ -34,12 +34,13 @@
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles@2020-05-01-preview
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
+
 ### Base Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles' (ReadOnly, DeployTimeConstant)
-### IOT
+### IoTRole
 #### Properties
 * **kind**: 'IOT' (Required)
 * **properties**: [IoTRoleProperties](#iotroleproperties)
@@ -84,17 +85,18 @@
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers@2020-05-01-preview
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
+
 ### Base Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers' (ReadOnly, DeployTimeConstant)
-### FileEvent
+### FileEventTrigger
 #### Properties
 * **kind**: 'FileEvent' (Required)
 * **properties**: [FileTriggerProperties](#filetriggerproperties) (Required)
 
-### PeriodicTimerEvent
+### PeriodicTimerEventTrigger
 #### Properties
 * **kind**: 'PeriodicTimerEvent' (Required)
 * **properties**: [PeriodicTimerProperties](#periodictimerproperties) (Required)
@@ -128,10 +130,10 @@
 
 ## Sku
 ### Properties
-* **name**: 'Edge' | 'Gateway' | 'GPU' | 'TCA_Large' | 'TCA_Small' | 'TDC' | 'TEA_1Node_Heater' | 'TEA_1Node_UPS_Heater' | 'TEA_1Node_UPS' | 'TEA_1Node' | 'TEA_4Node_Heater' | 'TEA_4Node_UPS_Heater' | 'TMA'
+* **name**: 'Edge' | 'GPU' | 'Gateway' | 'TCA_Large' | 'TCA_Small' | 'TDC' | 'TEA_1Node' | 'TEA_1Node_Heater' | 'TEA_1Node_UPS' | 'TEA_1Node_UPS_Heater' | 'TEA_4Node_Heater' | 'TEA_4Node_UPS_Heater' | 'TMA'
 * **tier**: 'Standard'
 
-## Dictionary<string,String>
+## DataBoxEdgeDeviceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -162,12 +164,12 @@
 
 ## OrderStatus
 ### Properties
-* **additionalOrderDetails**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
+* **additionalOrderDetails**: [OrderStatusAdditionalOrderDetails](#orderstatusadditionalorderdetails) (ReadOnly)
 * **comments**: string
 * **status**: 'Arriving' | 'AwaitingFulfilment' | 'AwaitingPreparation' | 'AwaitingReturnShipment' | 'AwaitingShipment' | 'CollectedAtMicrosoft' | 'Declined' | 'Delivered' | 'LostDevice' | 'ReplacementRequested' | 'ReturnInitiated' | 'Shipped' | 'ShippedBack' | 'Untracked' (Required)
 * **updateDateTime**: string (ReadOnly)
 
-## Dictionary<string,String>
+## OrderStatusAdditionalOrderDetails
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -189,7 +191,7 @@
 * **postalCode**: string (Required)
 * **state**: string (Required)
 
-## IOT
+## IoTRole
 ### Properties
 * **kind**: 'IOT' (Required)
 * **properties**: [IoTRoleProperties](#iotroleproperties)
@@ -255,7 +257,7 @@
 * **monitoringStatus**: 'Disabled' | 'Enabled' (Required)
 * **refreshDetails**: [RefreshDetails](#refreshdetails)
 * **shareMappings**: [MountPointMap](#mountpointmap)[] (ReadOnly)
-* **shareStatus**: 'NeedsAttention' | 'Offline' | 'OK' | 'Unknown' | 'Updating' (Required)
+* **shareStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating' (Required)
 * **userAccessRights**: [UserAccessRight](#useraccessright)[]
 
 ## AzureContainerInfo
@@ -299,16 +301,16 @@
 * **dataPolicy**: 'Cloud' | 'Local'
 * **description**: string
 * **storageAccountCredentialId**: string
-* **storageAccountStatus**: 'NeedsAttention' | 'Offline' | 'OK' | 'Unknown' | 'Updating'
+* **storageAccountStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating'
 
 ## ContainerProperties
 ### Properties
-* **containerStatus**: 'NeedsAttention' | 'Offline' | 'OK' | 'Unknown' | 'Updating' (ReadOnly)
+* **containerStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating' (ReadOnly)
 * **createdDateTime**: string (ReadOnly)
 * **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' (Required)
 * **refreshDetails**: [RefreshDetails](#refreshdetails) (ReadOnly)
 
-## FileEvent
+## FileEventTrigger
 ### Properties
 * **kind**: 'FileEvent' (Required)
 * **properties**: [FileTriggerProperties](#filetriggerproperties) (Required)
@@ -327,7 +329,7 @@
 ### Properties
 * **shareId**: string (Required)
 
-## PeriodicTimerEvent
+## PeriodicTimerEventTrigger
 ### Properties
 * **kind**: 'PeriodicTimerEvent' (Required)
 * **properties**: [PeriodicTimerProperties](#periodictimerproperties) (Required)

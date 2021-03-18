@@ -18,7 +18,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [StorageInsightProperties](#storageinsightproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ProxyResourceTags](#proxyresourcetags)
 * **type**: 'Microsoft.OperationalInsights/workspaces/storageInsightConfigs' (ReadOnly, DeployTimeConstant)
 
 ## SavedSearchProperties
@@ -51,7 +51,7 @@
 * **id**: string (Required)
 * **key**: string (Required)
 
-## Dictionary<string,String>
+## ProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

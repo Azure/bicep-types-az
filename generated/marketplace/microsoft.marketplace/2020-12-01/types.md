@@ -58,10 +58,10 @@
 * **messageCode**: int
 * **offerDisplayName**: string (ReadOnly)
 * **offerId**: string
-* **plansDetails**: [planDetails](#plandetails)[]
+* **plansDetails**: [PlanDetails](#plandetails)[]
 * **publisherId**: string
 
-## planDetails
+## PlanDetails
 ### Properties
 * **justification**: string
 * **planId**: string

@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DataBoxEdgeDeviceProperties](#databoxedgedeviceproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [DataBoxEdgeDeviceTags](#databoxedgedevicetags)
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules@2019-07-01
@@ -34,12 +34,13 @@
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles@2019-07-01
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
+
 ### Base Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles' (ReadOnly, DeployTimeConstant)
-### IOT
+### IoTRole
 #### Properties
 * **kind**: 'IOT' (Required)
 * **properties**: [IoTRoleProperties](#iotroleproperties)
@@ -66,17 +67,18 @@
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers@2019-07-01
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
+
 ### Base Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers' (ReadOnly, DeployTimeConstant)
-### FileEvent
+### FileEventTrigger
 #### Properties
 * **kind**: 'FileEvent' (Required)
 * **properties**: [FileTriggerProperties](#filetriggerproperties) (Required)
 
-### PeriodicTimerEvent
+### PeriodicTimerEventTrigger
 #### Properties
 * **kind**: 'PeriodicTimerEvent' (Required)
 * **properties**: [PeriodicTimerProperties](#periodictimerproperties) (Required)
@@ -113,7 +115,7 @@
 * **name**: 'Edge' | 'Gateway'
 * **tier**: 'Standard'
 
-## Dictionary<string,String>
+## DataBoxEdgeDeviceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -165,7 +167,7 @@
 * **postalCode**: string (Required)
 * **state**: string (Required)
 
-## IOT
+## IoTRole
 ### Properties
 * **kind**: 'IOT' (Required)
 * **properties**: [IoTRoleProperties](#iotroleproperties)
@@ -216,7 +218,7 @@
 * **monitoringStatus**: 'Disabled' | 'Enabled' (Required)
 * **refreshDetails**: [RefreshDetails](#refreshdetails)
 * **shareMappings**: [MountPointMap](#mountpointmap)[] (ReadOnly)
-* **shareStatus**: 'NeedsAttention' | 'Offline' | 'OK' | 'Unknown' | 'Updating' (Required)
+* **shareStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating' (Required)
 * **userAccessRights**: [UserAccessRight](#useraccessright)[]
 
 ## AzureContainerInfo
@@ -253,7 +255,7 @@
 * **storageAccountId**: string
 * **userName**: string
 
-## FileEvent
+## FileEventTrigger
 ### Properties
 * **kind**: 'FileEvent' (Required)
 * **properties**: [FileTriggerProperties](#filetriggerproperties) (Required)
@@ -272,7 +274,7 @@
 ### Properties
 * **shareId**: string (Required)
 
-## PeriodicTimerEvent
+## PeriodicTimerEventTrigger
 ### Properties
 * **kind**: 'PeriodicTimerEvent' (Required)
 * **properties**: [PeriodicTimerProperties](#periodictimerproperties) (Required)

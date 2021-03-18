@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ServerForCreateTags](#serverforcreatetags)
 * **type**: 'Microsoft.DBForMariaDB/servers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMariaDB/servers/configurations@2018-06-01
@@ -53,7 +53,7 @@
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'Default' (Required, DeployTimeConstant)
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties)
 * **type**: 'Microsoft.DBforMariaDB/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -68,6 +68,7 @@
 
 ## ServerPropertiesForCreate
 * **Discriminator**: createMode
+
 ### Base Properties
 * **administratorLogin**: string (ReadOnly)
 * **earliestRestoreDate**: string (ReadOnly)
@@ -81,24 +82,24 @@
 * **storageProfile**: [StorageProfile](#storageprofile)
 * **userVisibleState**: 'Disabled' | 'Dropping' | 'Ready' (ReadOnly)
 * **version**: '5.6' | '5.7'
-### Default
+### ServerPropertiesForDefaultCreate
 #### Properties
 * **administratorLogin**: string (Required, WriteOnly)
 * **administratorLoginPassword**: string (Required, WriteOnly)
 * **createMode**: 'Default' (Required)
 
-### GeoRestore
+### ServerPropertiesForGeoRestore
 #### Properties
 * **createMode**: 'GeoRestore' (Required)
 * **sourceServerId**: string (Required, WriteOnly)
 
-### PointInTimeRestore
+### ServerPropertiesForRestore
 #### Properties
 * **createMode**: 'PointInTimeRestore' (Required)
 * **restorePointInTime**: string (Required, WriteOnly)
 * **sourceServerId**: string (Required, WriteOnly)
 
-### Replica
+### ServerPropertiesForReplica
 #### Properties
 * **createMode**: 'Replica' (Required)
 * **sourceServerId**: string (Required, WriteOnly)
@@ -132,24 +133,24 @@
 * **storageAutogrow**: 'Disabled' | 'Enabled'
 * **storageMB**: int
 
-## Default
+## ServerPropertiesForDefaultCreate
 ### Properties
 * **administratorLogin**: string (Required, WriteOnly)
 * **administratorLoginPassword**: string (Required, WriteOnly)
 * **createMode**: 'Default' (Required)
 
-## GeoRestore
+## ServerPropertiesForGeoRestore
 ### Properties
 * **createMode**: 'GeoRestore' (Required)
 * **sourceServerId**: string (Required, WriteOnly)
 
-## PointInTimeRestore
+## ServerPropertiesForRestore
 ### Properties
 * **createMode**: 'PointInTimeRestore' (Required)
 * **restorePointInTime**: string (Required, WriteOnly)
 * **sourceServerId**: string (Required, WriteOnly)
 
-## Replica
+## ServerPropertiesForReplica
 ### Properties
 * **createMode**: 'Replica' (Required)
 * **sourceServerId**: string (Required, WriteOnly)
@@ -162,7 +163,7 @@
 * **size**: string
 * **tier**: 'Basic' | 'GeneralPurpose' | 'MemoryOptimized'
 
-## Dictionary<string,String>
+## ServerForCreateTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -211,6 +212,6 @@
 ## VirtualNetworkRuleProperties
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool
-* **state**: 'Deleting' | 'Initializing' | 'InProgress' | 'Ready' | 'Unknown' (ReadOnly)
+* **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly)
 * **virtualNetworkSubnetId**: string (Required)
 

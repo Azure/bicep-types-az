@@ -11,7 +11,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [BotProperties](#botproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.BotService/botServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.BotService/botServices/channels@2018-07-12
@@ -25,7 +25,7 @@
 * **name**: 'DirectLineChannel' | 'EmailChannel' | 'FacebookChannel' | 'KikChannel' | 'MsTeamsChannel' | 'SkypeChannel' | 'SlackChannel' | 'SmsChannel' | 'TelegramChannel' | 'WebChatChannel' (Required, DeployTimeConstant)
 * **properties**: [Channel](#channel)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.BotService/botServices/channels' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.BotService/botServices/Connections@2018-07-12
@@ -39,7 +39,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ConnectionSettingProperties](#connectionsettingproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.BotService/botServices/Connections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.BotService/enterpriseChannels@2018-07-12
@@ -53,7 +53,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [EnterpriseChannelProperties](#enterprisechannelproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.BotService/enterpriseChannels' (ReadOnly, DeployTimeConstant)
 
 ## BotProperties
@@ -77,13 +77,14 @@
 * **name**: 'F0' | 'S1' (Required)
 * **tier**: 'Free' | 'Standard' (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Channel
 * **Discriminator**: channelName
+
 ### Base Properties
 ### DirectLineChannel
 #### Properties
@@ -287,7 +288,7 @@
 * **siteId**: string (ReadOnly)
 * **siteName**: string (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -307,7 +308,7 @@
 * **key**: string
 * **value**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -315,7 +316,7 @@
 ## EnterpriseChannelProperties
 ### Properties
 * **nodes**: [EnterpriseChannelNode](#enterprisechannelnode)[] (Required)
-* **state**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'Started' | 'StartFailed' | 'Starting' | 'StopFailed' | 'Stopped' | 'Stopping'
+* **state**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'StartFailed' | 'Started' | 'Starting' | 'StopFailed' | 'Stopped' | 'Stopping'
 
 ## EnterpriseChannelNode
 ### Properties
@@ -323,9 +324,9 @@
 * **azureSku**: string (Required)
 * **id**: string (ReadOnly)
 * **name**: string (Required)
-* **state**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'Started' | 'StartFailed' | 'Starting' | 'StopFailed' | 'Stopped' | 'Stopping'
+* **state**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'StartFailed' | 'Started' | 'Starting' | 'StopFailed' | 'Stopped' | 'Stopping'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -8,17 +8,66 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:1_properties](#schemas1properties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [DomainProperties](#domainproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant)
 
-## schemas:1_properties
+## DomainProperties
 ### Properties
-* **keyVaultId**: string
-* **keyVaultSecretName**: string
-* **provisioningState**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder'
+* **autoRenew**: bool
+* **consent**: [DomainPurchaseConsent](#domainpurchaseconsent)
+* **contactAdmin**: [Contact](#contact)
+* **contactBilling**: [Contact](#contact)
+* **contactRegistrant**: [Contact](#contact)
+* **contactTech**: [Contact](#contact)
+* **createdTime**: string
+* **domainNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive'[]
+* **expirationTime**: string
+* **lastRenewedTime**: string
+* **managedHostNames**: [HostName](#hostname)[]
+* **nameServers**: string[]
+* **privacy**: bool
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded'
+* **readyForDnsRecordManagement**: bool
+* **registrationStatus**: 'Active' | 'Awaiting' | 'Cancelled' | 'Confiscated' | 'Disabled' | 'Excluded' | 'Expired' | 'Failed' | 'Held' | 'JsonConverterFailed' | 'Locked' | 'Parked' | 'Pending' | 'Reserved' | 'Reverted' | 'Suspended' | 'Transferred' | 'Unknown' | 'Unlocked' | 'Unparked' | 'Updated'
 
-## Dictionary<string,String>
+## DomainPurchaseConsent
+### Properties
+* **agreedAt**: string
+* **agreedBy**: string
+* **agreementKeys**: string[]
+
+## Contact
+### Properties
+* **addressMailing**: [Address](#address)
+* **email**: string
+* **fax**: string
+* **jobTitle**: string
+* **nameFirst**: string
+* **nameLast**: string
+* **nameMiddle**: string
+* **organization**: string
+* **phone**: string
+
+## Address
+### Properties
+* **address1**: string
+* **address2**: string
+* **city**: string
+* **country**: string
+* **postalCode**: string
+* **state**: string
+
+## HostName
+### Properties
+* **azureResourceName**: string
+* **azureResourceType**: 'TrafficManager' | 'Website'
+* **customHostNameDnsRecordType**: 'A' | 'CName'
+* **hostNameType**: 'Managed' | 'Verified'
+* **name**: string
+* **siteNames**: string[]
+
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

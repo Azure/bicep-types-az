@@ -9,7 +9,7 @@
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PythonPackageCreateProperties](#pythonpackagecreateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [PythonPackageCreateParametersTags](#pythonpackagecreateparameterstags)
 * **type**: 'Microsoft.Automation/automationAccounts/python2Packages' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/runbooks@2018-06-30
@@ -21,7 +21,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [RunbookCreateOrUpdateProperties](#runbookcreateorupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [RunbookCreateOrUpdateParametersTags](#runbookcreateorupdateparameterstags)
 * **type**: 'Microsoft.Automation/automationAccounts/runbooks' (ReadOnly, DeployTimeConstant)
 
 ## PythonPackageCreateProperties
@@ -54,7 +54,7 @@
 * **code**: string (ReadOnly)
 * **message**: string (ReadOnly)
 
-## Dictionary<string,String>
+## PythonPackageCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -71,7 +71,7 @@
 * **logProgress**: bool
 * **logVerbose**: bool
 * **outputTypes**: string[] (ReadOnly)
-* **parameters**: [Dictionary<string,RunbookParameter>](#dictionarystringrunbookparameter) (ReadOnly)
+* **parameters**: [RunbookPropertiesParameters](#runbookpropertiesparameters) (ReadOnly)
 * **provisioningState**: 'Succeeded' (ReadOnly)
 * **publishContentLink**: [ContentLink](#contentlink)
 * **runbookType**: 'Graph' | 'GraphPowerShell' | 'GraphPowerShellWorkflow' | 'PowerShell' | 'PowerShellWorkflow' | 'Script' (Required)
@@ -84,9 +84,9 @@
 * **inEdit**: bool
 * **lastModifiedTime**: string
 * **outputTypes**: string[]
-* **parameters**: [Dictionary<string,RunbookParameter>](#dictionarystringrunbookparameter)
+* **parameters**: [RunbookDraftParameters](#runbookdraftparameters)
 
-## Dictionary<string,RunbookParameter>
+## RunbookDraftParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [RunbookParameter](#runbookparameter)
@@ -98,12 +98,12 @@
 * **position**: int
 * **type**: string
 
-## Dictionary<string,RunbookParameter>
+## RunbookPropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [RunbookParameter](#runbookparameter)
 
-## Dictionary<string,String>
+## RunbookCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

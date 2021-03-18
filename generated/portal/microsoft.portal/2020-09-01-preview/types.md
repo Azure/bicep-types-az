@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DashboardProperties](#dashboardproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [DashboardTags](#dashboardtags)
 * **type**: 'Microsoft.Portal/dashboards' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Portal/tenantConfigurations@2020-09-01-preview
@@ -16,22 +16,22 @@
 ### Properties
 * **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ConfigurationProperties](#configurationproperties)
 * **type**: 'Microsoft.Portal/tenantConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## DashboardProperties
 ### Properties
 * **lenses**: [DashboardLens](#dashboardlens)[]
-* **metadata**: [Dictionary<string,Object>](#dictionarystringobject)
+* **metadata**: [DashboardPropertiesMetadata](#dashboardpropertiesmetadata)
 
 ## DashboardLens
 ### Properties
-* **metadata**: [Dictionary<string,Object>](#dictionarystringobject)
+* **metadata**: [DashboardLensMetadata](#dashboardlensmetadata)
 * **order**: int (Required)
 * **parts**: [DashboardParts](#dashboardparts)[] (Required)
 
-## Dictionary<string,Object>
+## DashboardLensMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -39,33 +39,34 @@
 ## DashboardParts
 ### Properties
 * **metadata**: [DashboardPartMetadata](#dashboardpartmetadata)
-* **position**: [schemas:1_position](#schemas1position) (Required)
+* **position**: [DashboardPartsPosition](#dashboardpartsposition) (Required)
 
 ## DashboardPartMetadata
 * **Discriminator**: type
+
 ### Base Properties
-### Extension/HubsExtension/PartType/MarkdownPart
+### MarkdownPartMetadata
 #### Properties
 * **inputs**: any[]
-* **settings**: [schemas:3_settings](#schemas3settings)
+* **settings**: [MarkdownPartMetadataSettings](#markdownpartmetadatasettings)
 * **type**: 'Extension/HubsExtension/PartType/MarkdownPart' (Required)
 
 
-## Extension/HubsExtension/PartType/MarkdownPart
+## MarkdownPartMetadata
 ### Properties
 * **inputs**: any[]
-* **settings**: [schemas:3_settings](#schemas3settings)
+* **settings**: [MarkdownPartMetadataSettings](#markdownpartmetadatasettings)
 * **type**: 'Extension/HubsExtension/PartType/MarkdownPart' (Required)
 
-## schemas:3_settings
+## MarkdownPartMetadataSettings
 ### Properties
-* **content**: [schemas:3_settings_content](#schemas3settingscontent)
+* **content**: [MarkdownPartMetadataSettingsContent](#markdownpartmetadatasettingscontent)
 
-## schemas:3_settings_content
+## MarkdownPartMetadataSettingsContent
 ### Properties
-* **settings**: [schemas:3_settings_content_settings](#schemas3settingscontentsettings)
+* **settings**: [MarkdownPartMetadataSettingsContentSettings](#markdownpartmetadatasettingscontentsettings)
 
-## schemas:3_settings_content_settings
+## MarkdownPartMetadataSettingsContentSettings
 ### Properties
 * **content**: string
 * **markdownSource**: int
@@ -73,25 +74,25 @@
 * **subtitle**: string
 * **title**: string
 
-## schemas:1_position
+## DashboardPartsPosition
 ### Properties
 * **colSpan**: int (Required)
-* **metadata**: [Dictionary<string,Object>](#dictionarystringobject)
+* **metadata**: [DashboardPartsPositionMetadata](#dashboardpartspositionmetadata)
 * **rowSpan**: int (Required)
 * **x**: int (Required)
 * **y**: int (Required)
 
-## Dictionary<string,Object>
+## DashboardPartsPositionMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## Dictionary<string,Object>
+## DashboardPropertiesMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## Dictionary<string,String>
+## DashboardTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

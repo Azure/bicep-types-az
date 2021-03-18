@@ -8,7 +8,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [JobCollectionProperties](#jobcollectionproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [JobCollectionDefinitionTags](#jobcollectiondefinitiontags)
 * **type**: 'Microsoft.Scheduler/jobCollections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Scheduler/jobCollections/jobs@2016-03-01
@@ -41,7 +41,7 @@
 ### Properties
 * **name**: 'Free' | 'P10Premium' | 'P20Premium' | 'Standard'
 
-## Dictionary<string,String>
+## JobCollectionDefinitionTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -84,14 +84,15 @@
 ### Properties
 * **authentication**: [HttpAuthentication](#httpauthentication)
 * **body**: string
-* **headers**: [Dictionary<string,String>](#dictionarystringstring)
+* **headers**: [HttpRequestHeaders](#httprequestheaders)
 * **method**: string
 * **uri**: string
 
 ## HttpAuthentication
 * **Discriminator**: type
+
 ### Base Properties
-### ActiveDirectoryOAuth
+### OAuthAuthentication
 #### Properties
 * **audience**: string
 * **clientId**: string
@@ -99,13 +100,13 @@
 * **tenant**: string
 * **type**: 'ActiveDirectoryOAuth' (Required)
 
-### Basic
+### BasicAuthentication
 #### Properties
 * **password**: string
 * **type**: 'Basic' (Required)
 * **username**: string
 
-### ClientCertificate
+### ClientCertAuthentication
 #### Properties
 * **certificateExpirationDate**: string
 * **certificateSubjectName**: string
@@ -115,7 +116,7 @@
 * **type**: 'ClientCertificate' (Required)
 
 
-## ActiveDirectoryOAuth
+## OAuthAuthentication
 ### Properties
 * **audience**: string
 * **clientId**: string
@@ -123,13 +124,13 @@
 * **tenant**: string
 * **type**: 'ActiveDirectoryOAuth' (Required)
 
-## Basic
+## BasicAuthentication
 ### Properties
 * **password**: string
 * **type**: 'Basic' (Required)
 * **username**: string
 
-## ClientCertificate
+## ClientCertAuthentication
 ### Properties
 * **certificateExpirationDate**: string
 * **certificateSubjectName**: string
@@ -138,7 +139,7 @@
 * **pfx**: string
 * **type**: 'ClientCertificate' (Required)
 
-## Dictionary<string,String>
+## HttpRequestHeaders
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -153,7 +154,7 @@
 ### Properties
 * **authentication**: [ServiceBusAuthentication](#servicebusauthentication)
 * **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties)
-* **customMessageProperties**: [Dictionary<string,String>](#dictionarystringstring)
+* **customMessageProperties**: [ServiceBusMessageCustomMessageProperties](#servicebusmessagecustommessageproperties)
 * **message**: string
 * **namespace**: string
 * **queueName**: string
@@ -181,7 +182,7 @@
 * **to**: string
 * **viaPartitionKey**: string
 
-## Dictionary<string,String>
+## ServiceBusMessageCustomMessageProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -190,13 +191,13 @@
 ### Properties
 * **authentication**: [ServiceBusAuthentication](#servicebusauthentication)
 * **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties)
-* **customMessageProperties**: [Dictionary<string,String>](#dictionarystringstring)
+* **customMessageProperties**: [ServiceBusMessageCustomMessageProperties](#servicebusmessagecustommessageproperties)
 * **message**: string
 * **namespace**: string
 * **topicPath**: string
 * **transportType**: 'AMQP' | 'NetMessaging' | 'NotSpecified'
 
-## Dictionary<string,String>
+## ServiceBusMessageCustomMessageProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

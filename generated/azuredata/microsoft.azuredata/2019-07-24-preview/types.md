@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DataControllerProperties](#datacontrollerproperties) (Required)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.AzureData/dataControllers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.AzureData/postgresInstances@2019-07-24-preview
@@ -21,7 +21,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PostgresInstanceProperties](#postgresinstanceproperties) (ReadOnly)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly)
 * **type**: 'Microsoft.AzureData/postgresInstances' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.AzureData/sqlManagedInstances@2019-07-24-preview
@@ -33,7 +33,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SqlManagedInstanceProperties](#sqlmanagedinstanceproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.AzureData/sqlManagedInstances' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.AzureData/sqlServerInstances@2019-07-24-preview
@@ -45,7 +45,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SqlServerInstanceProperties](#sqlserverinstanceproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.AzureData/sqlServerInstances' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.AzureData/sqlServerRegistrations@2019-07-24-preview
@@ -57,7 +57,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SqlServerRegistrationProperties](#sqlserverregistrationproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.AzureData/sqlServerRegistrations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.AzureData/sqlServerRegistrations/sqlServers@2019-07-24-preview
@@ -88,7 +88,7 @@
 * **lastModifiedBy**: string
 * **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -97,7 +97,7 @@
 ### Properties
 * **hybridDataManagerId**: string (ReadOnly)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -111,7 +111,7 @@
 * **startTime**: string
 * **vCore**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -126,7 +126,7 @@
 * **vCore**: string (Required)
 * **version**: string (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -137,7 +137,7 @@
 * **resourceGroup**: string
 * **subscriptionId**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

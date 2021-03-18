@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VaultProperties](#vaultproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [VaultCreateOrUpdateParametersTags](#vaultcreateorupdateparameterstags)
 * **type**: 'Microsoft.KeyVault/vaults' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.KeyVault/vaults/accessPolicies@2018-02-14-preview
@@ -29,7 +29,7 @@
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SecretProperties](#secretproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [SecretCreateOrUpdateParametersTags](#secretcreateorupdateparameterstags)
 * **type**: 'Microsoft.KeyVault/vaults/secrets' (ReadOnly, DeployTimeConstant)
 
 ## VaultProperties
@@ -77,10 +77,10 @@
 
 ## Sku
 ### Properties
-* **family**: string (Required)
+* **family**: 'A' (Required)
 * **name**: 'premium' | 'standard' (Required)
 
-## Dictionary<string,String>
+## VaultCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -105,7 +105,7 @@
 * **nbf**: int
 * **updated**: int (ReadOnly)
 
-## Dictionary<string,String>
+## SecretCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

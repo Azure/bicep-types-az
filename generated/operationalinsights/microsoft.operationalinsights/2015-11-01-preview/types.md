@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WorkspaceProperties](#workspaceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces/dataSources@2015-11-01-preview
@@ -21,7 +21,7 @@
 * **kind**: 'AzureActivityLog' | 'ChangeTrackingCustomRegistry' | 'ChangeTrackingDefaultPath' | 'ChangeTrackingDefaultRegistry' | 'ChangeTrackingPath' | 'CustomLog' | 'CustomLogCollection' | 'GenericDataSource' | 'IISLogs' | 'LinuxPerformanceCollection' | 'LinuxPerformanceObject' | 'LinuxSyslog' | 'LinuxSyslogCollection' | 'WindowsEvent' | 'WindowsPerformanceCounter' (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: any (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ProxyResourceTags](#proxyresourcetags)
 * **type**: 'Microsoft.OperationalInsights/workspaces/dataSources' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces/linkedServices@2015-11-01-preview
@@ -46,12 +46,12 @@
 ### Properties
 * **name**: 'CapacityReservation' | 'Free' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

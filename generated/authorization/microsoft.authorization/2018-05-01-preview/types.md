@@ -16,7 +16,7 @@
 * **reviewersType**: 'Assigned' | 'Managers' | 'Self' (ReadOnly, WriteOnly)
 * **scope**: [AccessReviewScope](#accessreviewscope) (ReadOnly, WriteOnly)
 * **settings**: [AccessReviewScheduleSettings](#accessreviewschedulesettings) (WriteOnly)
-* **status**: 'Applied' | 'Applying' | 'AutoReviewed' | 'AutoReviewing' | 'Completed' | 'Completing' | 'Initializing' | 'InProgress' | 'NotStarted' | 'Scheduled' | 'Starting' (ReadOnly, WriteOnly)
+* **status**: 'Applied' | 'Applying' | 'AutoReviewed' | 'AutoReviewing' | 'Completed' | 'Completing' | 'InProgress' | 'Initializing' | 'NotStarted' | 'Scheduled' | 'Starting' (ReadOnly, WriteOnly)
 * **type**: 'Microsoft.Authorization/accessReviewScheduleDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Authorization/accessReviewScheduleSettings@2018-05-01-preview
@@ -55,7 +55,7 @@
 ### Properties
 * **endDateTime**: string (WriteOnly)
 * **startDateTime**: string (WriteOnly)
-* **status**: 'Applied' | 'Applying' | 'AutoReviewed' | 'AutoReviewing' | 'Completed' | 'Completing' | 'Initializing' | 'InProgress' | 'NotStarted' | 'Scheduled' | 'Starting' (ReadOnly, WriteOnly)
+* **status**: 'Applied' | 'Applying' | 'AutoReviewed' | 'AutoReviewing' | 'Completed' | 'Completing' | 'InProgress' | 'Initializing' | 'NotStarted' | 'Scheduled' | 'Starting' (ReadOnly, WriteOnly)
 
 ## AccessReviewScheduleDefinitionProperties
 ### Properties
@@ -68,7 +68,7 @@
 * **reviewersType**: 'Assigned' | 'Managers' | 'Self' (ReadOnly)
 * **scope**: [AccessReviewScope](#accessreviewscope) (ReadOnly)
 * **settings**: [AccessReviewScheduleSettings](#accessreviewschedulesettings) (ReadOnly)
-* **status**: 'Applied' | 'Applying' | 'AutoReviewed' | 'AutoReviewing' | 'Completed' | 'Completing' | 'Initializing' | 'InProgress' | 'NotStarted' | 'Scheduled' | 'Starting' (ReadOnly)
+* **status**: 'Applied' | 'Applying' | 'AutoReviewed' | 'AutoReviewing' | 'Completed' | 'Completing' | 'InProgress' | 'Initializing' | 'NotStarted' | 'Scheduled' | 'Starting' (ReadOnly)
 
 ## AccessReviewReviewer
 ### Properties

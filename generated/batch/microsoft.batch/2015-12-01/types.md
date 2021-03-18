@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [BatchAccountBaseProperties](#batchaccountbaseproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [BatchAccountCreateParametersTags](#batchaccountcreateparameterstags)
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Batch/batchAccounts/applications@2015-12-01
@@ -51,7 +51,7 @@
 * **lastKeySync**: string (ReadOnly)
 * **storageAccountId**: string (Required)
 
-## Dictionary<string,String>
+## BatchAccountCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

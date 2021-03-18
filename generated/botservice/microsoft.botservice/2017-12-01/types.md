@@ -11,7 +11,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [BotProperties](#botproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.BotService/botServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.BotService/botServices/channels@2017-12-01
@@ -25,7 +25,7 @@
 * **name**: 'DirectLineChannel' | 'EmailChannel' | 'FacebookChannel' | 'KikChannel' | 'MsTeamsChannel' | 'SkypeChannel' | 'SlackChannel' | 'SmsChannel' | 'TelegramChannel' | 'WebChatChannel' (Required, DeployTimeConstant)
 * **properties**: [Channel](#channel)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.BotService/botServices/channels' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.BotService/botServices/Connections@2017-12-01
@@ -39,7 +39,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ConnectionSettingProperties](#connectionsettingproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.BotService/botServices/Connections' (ReadOnly, DeployTimeConstant)
 
 ## BotProperties
@@ -63,13 +63,14 @@
 * **name**: 'F0' | 'S1' (Required)
 * **tier**: 'Free' | 'Standard' (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Channel
 * **Discriminator**: channelName
+
 ### Base Properties
 ### DirectLineChannel
 #### Properties
@@ -274,7 +275,7 @@
 * **siteId**: string (ReadOnly)
 * **siteName**: string (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -294,7 +295,7 @@
 * **key**: string
 * **value**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

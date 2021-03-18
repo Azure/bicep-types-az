@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [BackupResourceVaultConfig](#backupresourcevaultconfig)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupconfig' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2019-06-15
@@ -21,7 +21,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ProtectedItem](#protecteditem)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.RecoveryServices/vaults/backupPolicies@2019-06-15
@@ -33,7 +33,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ProtectionPolicy](#protectionpolicy)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies' (ReadOnly, DeployTimeConstant)
 
 ## BackupResourceVaultConfig
@@ -44,15 +44,16 @@
 * **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant'
 * **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## ProtectedItem
 * **Discriminator**: protectedItemType
+
 ### Base Properties
-* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DefaultBackup' | 'DPM' | 'Invalid' | 'MAB'
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB'
 * **backupSetName**: string
 * **containerName**: string
 * **createMode**: 'Default' | 'Invalid' | 'Recover'
@@ -64,50 +65,29 @@
 * **lastRecoveryPoint**: string
 * **policyId**: string
 * **sourceResourceId**: string
-* **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM'
-### AzureFileShareProtectedItem
+* **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM'
+### AzureFileshareProtectedItem
 #### Properties
 * **extendedInfo**: [AzureFileshareProtectedItemExtendedInfo](#azurefileshareprotecteditemextendedinfo)
 * **friendlyName**: string
-* **kpisHealths**: [Dictionary<string,KPIResourceHealthDetails>](#dictionarystringkpiresourcehealthdetails)
+* **kpisHealths**: [AzureFileshareProtectedItemKpisHealths](#azurefileshareprotecteditemkpishealths)
 * **lastBackupStatus**: string
 * **lastBackupTime**: string
 * **protectedItemType**: 'AzureFileShareProtectedItem' (Required)
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
 * **protectionStatus**: string
 
-### AzureIaaSVMProtectedItem
+### AzureVmWorkloadSAPAseDatabaseProtectedItem
 #### Properties
-* **extendedInfo**: [AzureIaaSVMProtectedItemExtendedInfo](#azureiaasvmprotecteditemextendedinfo)
-* **extendedProperties**: [ExtendedProperties](#extendedproperties)
-* **friendlyName**: string
-* **healthDetails**: [AzureIaaSVMHealthDetails](#azureiaasvmhealthdetails)[]
-* **healthStatus**: 'ActionRequired' | 'ActionSuggested' | 'Invalid' | 'Passed'
-* **kpisHealths**: [Dictionary<string,KPIResourceHealthDetails>](#dictionarystringkpiresourcehealthdetails)
-* **lastBackupStatus**: string
-* **lastBackupTime**: string
-* **protectedItemDataId**: string
-* **protectedItemType**: 'AzureIaaSVMProtectedItem' (Required)
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
-* **protectionStatus**: string
-* **virtualMachineId**: string
+* **protectedItemType**: 'AzureVmWorkloadSAPAseDatabase' (Required)
 
-### AzureVmWorkloadProtectedItem
+### AzureVmWorkloadSAPHanaDatabaseProtectedItem
 #### Properties
-* **extendedInfo**: [AzureVmWorkloadProtectedItemExtendedInfo](#azurevmworkloadprotecteditemextendedinfo)
-* **friendlyName**: string
-* **kpisHealths**: [Dictionary<string,KPIResourceHealthDetails>](#dictionarystringkpiresourcehealthdetails)
-* **lastBackupErrorDetail**: [ErrorDetail](#errordetail)
-* **lastBackupStatus**: 'Healthy' | 'Invalid' | 'IRPending' | 'Unhealthy'
-* **lastBackupTime**: string
-* **parentName**: string
-* **parentType**: string
-* **protectedItemDataSourceId**: string
-* **protectedItemHealthStatus**: 'Healthy' | 'Invalid' | 'IRPending' | 'NotReachable' | 'Unhealthy'
-* **protectedItemType**: 'AzureVmWorkloadProtectedItem' (Required)
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
-* **protectionStatus**: string
-* **serverName**: string
+* **protectedItemType**: 'AzureVmWorkloadSAPHanaDatabase' (Required)
+
+### AzureVmWorkloadSQLDatabaseProtectedItem
+#### Properties
+* **protectedItemType**: 'AzureVmWorkloadSQLDatabase' (Required)
 
 ### DPMProtectedItem
 #### Properties
@@ -115,7 +95,7 @@
 * **extendedInfo**: [DPMProtectedItemExtendedInfo](#dpmprotecteditemextendedinfo)
 * **friendlyName**: string
 * **protectedItemType**: 'DPMProtectedItem' (Required)
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
 
 ### GenericProtectedItem
 #### Properties
@@ -124,8 +104,8 @@
 * **policyState**: string
 * **protectedItemId**: int
 * **protectedItemType**: 'GenericProtectedItem' (Required)
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
-* **sourceAssociations**: [Dictionary<string,String>](#dictionarystringstring)
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
+* **sourceAssociations**: [GenericProtectedItemSourceAssociations](#genericprotecteditemsourceassociations)
 
 ### MabFileFolderProtectedItem
 #### Properties
@@ -138,23 +118,31 @@
 * **protectedItemType**: 'MabFileFolderProtectedItem' (Required)
 * **protectionState**: string
 
-### Microsoft.Sql/servers/databases
+### AzureIaaSClassicComputeVMProtectedItem
+#### Properties
+* **protectedItemType**: 'Microsoft.ClassicCompute/virtualMachines' (Required)
+
+### AzureIaaSComputeVMProtectedItem
+#### Properties
+* **protectedItemType**: 'Microsoft.Compute/virtualMachines' (Required)
+
+### AzureSqlProtectedItem
 #### Properties
 * **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo)
 * **protectedItemDataId**: string
 * **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required)
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
 
 
-## AzureFileShareProtectedItem
+## AzureFileshareProtectedItem
 ### Properties
 * **extendedInfo**: [AzureFileshareProtectedItemExtendedInfo](#azurefileshareprotecteditemextendedinfo)
 * **friendlyName**: string
-* **kpisHealths**: [Dictionary<string,KPIResourceHealthDetails>](#dictionarystringkpiresourcehealthdetails)
+* **kpisHealths**: [AzureFileshareProtectedItemKpisHealths](#azurefileshareprotecteditemkpishealths)
 * **lastBackupStatus**: string
 * **lastBackupTime**: string
 * **protectedItemType**: 'AzureFileShareProtectedItem' (Required)
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
 * **protectionStatus**: string
 
 ## AzureFileshareProtectedItemExtendedInfo
@@ -165,7 +153,7 @@
 * **resourceState**: string (ReadOnly)
 * **resourceStateSyncTime**: string (ReadOnly)
 
-## Dictionary<string,KPIResourceHealthDetails>
+## AzureFileshareProtectedItemKpisHealths
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [KPIResourceHealthDetails](#kpiresourcehealthdetails)
@@ -182,82 +170,17 @@
 * **recommendations**: string[] (ReadOnly)
 * **title**: string (ReadOnly)
 
-## AzureIaaSVMProtectedItem
+## AzureVmWorkloadSAPAseDatabaseProtectedItem
 ### Properties
-* **extendedInfo**: [AzureIaaSVMProtectedItemExtendedInfo](#azureiaasvmprotecteditemextendedinfo)
-* **extendedProperties**: [ExtendedProperties](#extendedproperties)
-* **friendlyName**: string
-* **healthDetails**: [AzureIaaSVMHealthDetails](#azureiaasvmhealthdetails)[]
-* **healthStatus**: 'ActionRequired' | 'ActionSuggested' | 'Invalid' | 'Passed'
-* **kpisHealths**: [Dictionary<string,KPIResourceHealthDetails>](#dictionarystringkpiresourcehealthdetails)
-* **lastBackupStatus**: string
-* **lastBackupTime**: string
-* **protectedItemDataId**: string
-* **protectedItemType**: 'AzureIaaSVMProtectedItem' (Required)
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
-* **protectionStatus**: string
-* **virtualMachineId**: string
+* **protectedItemType**: 'AzureVmWorkloadSAPAseDatabase' (Required)
 
-## AzureIaaSVMProtectedItemExtendedInfo
+## AzureVmWorkloadSAPHanaDatabaseProtectedItem
 ### Properties
-* **oldestRecoveryPoint**: string
-* **policyInconsistent**: bool
-* **recoveryPointCount**: int
+* **protectedItemType**: 'AzureVmWorkloadSAPHanaDatabase' (Required)
 
-## ExtendedProperties
+## AzureVmWorkloadSQLDatabaseProtectedItem
 ### Properties
-* **diskExclusionProperties**: [DiskExclusionProperties](#diskexclusionproperties)
-
-## DiskExclusionProperties
-### Properties
-* **diskLunList**: int[]
-* **isInclusionList**: bool
-
-## AzureIaaSVMHealthDetails
-### Properties
-* **code**: int (ReadOnly)
-* **message**: string (ReadOnly)
-* **recommendations**: string[] (ReadOnly)
-* **title**: string (ReadOnly)
-
-## Dictionary<string,KPIResourceHealthDetails>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [KPIResourceHealthDetails](#kpiresourcehealthdetails)
-
-## AzureVmWorkloadProtectedItem
-### Properties
-* **extendedInfo**: [AzureVmWorkloadProtectedItemExtendedInfo](#azurevmworkloadprotecteditemextendedinfo)
-* **friendlyName**: string
-* **kpisHealths**: [Dictionary<string,KPIResourceHealthDetails>](#dictionarystringkpiresourcehealthdetails)
-* **lastBackupErrorDetail**: [ErrorDetail](#errordetail)
-* **lastBackupStatus**: 'Healthy' | 'Invalid' | 'IRPending' | 'Unhealthy'
-* **lastBackupTime**: string
-* **parentName**: string
-* **parentType**: string
-* **protectedItemDataSourceId**: string
-* **protectedItemHealthStatus**: 'Healthy' | 'Invalid' | 'IRPending' | 'NotReachable' | 'Unhealthy'
-* **protectedItemType**: 'AzureVmWorkloadProtectedItem' (Required)
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
-* **protectionStatus**: string
-* **serverName**: string
-
-## AzureVmWorkloadProtectedItemExtendedInfo
-### Properties
-* **oldestRecoveryPoint**: string
-* **policyState**: string
-* **recoveryPointCount**: int
-
-## Dictionary<string,KPIResourceHealthDetails>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [KPIResourceHealthDetails](#kpiresourcehealthdetails)
-
-## ErrorDetail
-### Properties
-* **code**: string (ReadOnly)
-* **message**: string (ReadOnly)
-* **recommendations**: string[] (ReadOnly)
+* **protectedItemType**: 'AzureVmWorkloadSQLDatabase' (Required)
 
 ## DPMProtectedItem
 ### Properties
@@ -265,7 +188,7 @@
 * **extendedInfo**: [DPMProtectedItemExtendedInfo](#dpmprotecteditemextendedinfo)
 * **friendlyName**: string
 * **protectedItemType**: 'DPMProtectedItem' (Required)
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
 
 ## DPMProtectedItemExtendedInfo
 ### Properties
@@ -278,13 +201,13 @@
 * **onPremiseLatestRecoveryPoint**: string
 * **onPremiseOldestRecoveryPoint**: string
 * **onPremiseRecoveryPointCount**: int
-* **protectableObjectLoadPath**: [Dictionary<string,String>](#dictionarystringstring)
+* **protectableObjectLoadPath**: [DPMProtectedItemExtendedInfoProtectableObjectLoadPath](#dpmprotecteditemextendedinfoprotectableobjectloadpath)
 * **protected**: bool
 * **protectionGroupName**: string
 * **recoveryPointCount**: int
 * **totalDiskStorageSizeInBytes**: string
 
-## Dictionary<string,String>
+## DPMProtectedItemExtendedInfoProtectableObjectLoadPath
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -296,10 +219,10 @@
 * **policyState**: string
 * **protectedItemId**: int
 * **protectedItemType**: 'GenericProtectedItem' (Required)
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
-* **sourceAssociations**: [Dictionary<string,String>](#dictionarystringstring)
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
+* **sourceAssociations**: [GenericProtectedItemSourceAssociations](#genericprotecteditemsourceassociations)
 
-## Dictionary<string,String>
+## GenericProtectedItemSourceAssociations
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -321,12 +244,20 @@
 * **oldestRecoveryPoint**: string
 * **recoveryPointCount**: int
 
-## Microsoft.Sql/servers/databases
+## AzureIaaSClassicComputeVMProtectedItem
+### Properties
+* **protectedItemType**: 'Microsoft.ClassicCompute/virtualMachines' (Required)
+
+## AzureIaaSComputeVMProtectedItem
+### Properties
+* **protectedItemType**: 'Microsoft.Compute/virtualMachines' (Required)
+
+## AzureSqlProtectedItem
 ### Properties
 * **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo)
 * **protectedItemDataId**: string
 * **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required)
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
 
 ## AzureSqlProtectedItemExtendedInfo
 ### Properties
@@ -334,16 +265,17 @@
 * **policyState**: string
 * **recoveryPointCount**: int
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## ProtectionPolicy
 * **Discriminator**: backupManagementType
+
 ### Base Properties
 * **protectedItemsCount**: int
-### AzureIaasVM
+### AzureIaaSVMProtectionPolicy
 #### Properties
 * **backupManagementType**: 'AzureIaasVM' (Required)
 * **instantRPDetails**: [InstantRPAdditionalDetails](#instantrpadditionaldetails)
@@ -352,26 +284,26 @@
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 * **timeZone**: string
 
-### AzureSql
+### AzureSqlProtectionPolicy
 #### Properties
 * **backupManagementType**: 'AzureSql' (Required)
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 
-### AzureStorage
+### AzureFileShareProtectionPolicy
 #### Properties
 * **backupManagementType**: 'AzureStorage' (Required)
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 * **timeZone**: string
-* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM'
+* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM'
 
-### AzureWorkload
+### AzureVmWorkloadProtectionPolicy
 #### Properties
 * **backupManagementType**: 'AzureWorkload' (Required)
 * **makePolicyConsistent**: bool
 * **settings**: [Settings](#settings)
 * **subProtectionPolicy**: [SubProtectionPolicy](#subprotectionpolicy)[]
-* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM'
+* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM'
 
 ### GenericProtectionPolicy
 #### Properties
@@ -380,14 +312,14 @@
 * **subProtectionPolicy**: [SubProtectionPolicy](#subprotectionpolicy)[]
 * **timeZone**: string
 
-### MAB
+### MabProtectionPolicy
 #### Properties
 * **backupManagementType**: 'MAB' (Required)
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 
 
-## AzureIaasVM
+## AzureIaaSVMProtectionPolicy
 ### Properties
 * **backupManagementType**: 'AzureIaasVM' (Required)
 * **instantRPDetails**: [InstantRPAdditionalDetails](#instantrpadditionaldetails)
@@ -403,6 +335,7 @@
 
 ## RetentionPolicy
 * **Discriminator**: retentionPolicyType
+
 ### Base Properties
 ### LongTermRetentionPolicy
 #### Properties
@@ -480,6 +413,7 @@
 
 ## SchedulePolicy
 * **Discriminator**: schedulePolicyType
+
 ### Base Properties
 ### LogSchedulePolicy
 #### Properties
@@ -516,26 +450,26 @@
 * **scheduleRunTimes**: string[]
 * **scheduleWeeklyFrequency**: int
 
-## AzureSql
+## AzureSqlProtectionPolicy
 ### Properties
 * **backupManagementType**: 'AzureSql' (Required)
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 
-## AzureStorage
+## AzureFileShareProtectionPolicy
 ### Properties
 * **backupManagementType**: 'AzureStorage' (Required)
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 * **timeZone**: string
-* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM'
+* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM'
 
-## AzureWorkload
+## AzureVmWorkloadProtectionPolicy
 ### Properties
 * **backupManagementType**: 'AzureWorkload' (Required)
 * **makePolicyConsistent**: bool
 * **settings**: [Settings](#settings)
 * **subProtectionPolicy**: [SubProtectionPolicy](#subprotectionpolicy)[]
-* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM'
+* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM'
 
 ## Settings
 ### Properties
@@ -556,13 +490,13 @@
 * **subProtectionPolicy**: [SubProtectionPolicy](#subprotectionpolicy)[]
 * **timeZone**: string
 
-## MAB
+## MabProtectionPolicy
 ### Properties
 * **backupManagementType**: 'MAB' (Required)
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

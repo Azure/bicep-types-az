@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DatabaseAccountCreateUpdateProperties](#databaseaccountcreateupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces@2020-04-01
@@ -20,7 +20,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [CassandraKeyspaceCreateUpdateProperties](#cassandrakeyspacecreateupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables@2020-04-01
@@ -31,7 +31,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [CassandraTableCreateUpdateProperties](#cassandratablecreateupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2020-04-01
@@ -42,7 +42,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2020-04-01
@@ -53,7 +53,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases@2020-04-01
@@ -64,7 +64,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [GremlinDatabaseCreateUpdateProperties](#gremlindatabasecreateupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2020-04-01
@@ -75,7 +75,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [GremlinGraphCreateUpdateProperties](#gremlingraphcreateupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2020-04-01
@@ -86,7 +86,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2020-04-01
@@ -97,7 +97,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2020-04-01
@@ -108,7 +108,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [MongoDBDatabaseCreateUpdateProperties](#mongodbdatabasecreateupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2020-04-01
@@ -119,7 +119,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [MongoDBCollectionCreateUpdateProperties](#mongodbcollectioncreateupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2020-04-01
@@ -130,7 +130,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2020-04-01
@@ -141,7 +141,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2020-04-01
@@ -149,7 +149,7 @@
 ### Properties
 * **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [NotebookWorkspaceProperties](#notebookworkspaceproperties) (ReadOnly)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces' (ReadOnly, DeployTimeConstant)
 
@@ -161,7 +161,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SqlDatabaseCreateUpdateProperties](#sqldatabasecreateupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2020-04-01
@@ -172,7 +172,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SqlContainerCreateUpdateProperties](#sqlcontainercreateupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures@2020-04-01
@@ -183,7 +183,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SqlStoredProcedureCreateUpdateProperties](#sqlstoredprocedurecreateupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2020-04-01
@@ -194,7 +194,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers@2020-04-01
@@ -205,7 +205,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SqlTriggerCreateUpdateProperties](#sqltriggercreateupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions@2020-04-01
@@ -216,7 +216,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SqlUserDefinedFunctionCreateUpdateProperties](#sqluserdefinedfunctioncreateupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2020-04-01
@@ -227,7 +227,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/tables@2020-04-01
@@ -238,7 +238,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [TableCreateUpdateProperties](#tablecreateupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/tables' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2020-04-01
@@ -249,7 +249,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings' (ReadOnly, DeployTimeConstant)
 
 ## DatabaseAccountCreateUpdateProperties
@@ -259,7 +259,7 @@
 * **connectorOffer**: 'Small'
 * **consistencyPolicy**: [ConsistencyPolicy](#consistencypolicy)
 * **cors**: [CorsPolicy](#corspolicy)[]
-* **databaseAccountOfferType**: string (Required)
+* **databaseAccountOfferType**: 'Standard' (Required)
 * **disableKeyBasedMetadataWriteAccess**: bool
 * **documentEndpoint**: string (ReadOnly)
 * **enableAnalyticalStorage**: bool
@@ -274,7 +274,7 @@
 * **locations**: [Location](#location)[] (Required)
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **provisioningState**: string (ReadOnly)
-* **publicNetworkAccess**: 'Disabled' | 'Enabled'
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly)
 * **readLocations**: [Location](#location)[] (ReadOnly)
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]
 * **writeLocations**: [Location](#location)[] (ReadOnly)
@@ -318,7 +318,7 @@
 * **id**: string (ReadOnly)
 * **isZoneRedundant**: bool
 * **locationName**: string
-* **provisioningState**: string
+* **provisioningState**: string (ReadOnly)
 
 ## PrivateEndpointConnection
 ### Properties
@@ -346,7 +346,7 @@
 * **id**: string
 * **ignoreMissingVNetServiceEndpoint**: bool
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -358,29 +358,21 @@
 
 ## CreateUpdateOptions
 ### Properties
-* **_colls**: string (ReadOnly)
-* **_etag**: string (ReadOnly)
-* **_rid**: string (ReadOnly)
-* **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
-* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings) (WriteOnly)
-* **id**: string (ReadOnly)
-* **throughput**: int (WriteOnly)
+* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings)
+* **throughput**: int
 
 ## AutoscaleSettings
 ### Properties
-* **maxThroughput**: int (WriteOnly)
+* **maxThroughput**: int
 
 ## CassandraKeyspaceResource
 ### Properties
-* **_colls**: string (ReadOnly)
 * **_etag**: string (ReadOnly)
 * **_rid**: string (ReadOnly)
 * **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
 * **id**: string (Required)
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -392,37 +384,35 @@
 
 ## CassandraTableResource
 ### Properties
-* **_colls**: string (ReadOnly)
 * **_etag**: string (ReadOnly)
 * **_rid**: string (ReadOnly)
 * **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
-* **analyticalStorageTtl**: int (WriteOnly)
-* **defaultTtl**: int (WriteOnly)
+* **analyticalStorageTtl**: int
+* **defaultTtl**: int
 * **id**: string (Required)
-* **schema**: [CassandraSchema](#cassandraschema) (WriteOnly)
+* **schema**: [CassandraSchema](#cassandraschema)
 
 ## CassandraSchema
 ### Properties
-* **clusterKeys**: [ClusterKey](#clusterkey)[] (WriteOnly)
-* **columns**: [Column](#column)[] (WriteOnly)
-* **partitionKeys**: [CassandraPartitionKey](#cassandrapartitionkey)[] (WriteOnly)
+* **clusterKeys**: [ClusterKey](#clusterkey)[]
+* **columns**: [Column](#column)[]
+* **partitionKeys**: [CassandraPartitionKey](#cassandrapartitionkey)[]
 
 ## ClusterKey
 ### Properties
-* **name**: string (WriteOnly)
-* **orderBy**: string (WriteOnly)
+* **name**: string
+* **orderBy**: string
 
 ## Column
 ### Properties
-* **name**: string (WriteOnly)
-* **type**: string (WriteOnly)
+* **name**: string
+* **type**: string
 
 ## CassandraPartitionKey
 ### Properties
-* **name**: string (WriteOnly)
+* **name**: string
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -433,38 +423,35 @@
 
 ## ThroughputSettingsResource
 ### Properties
-* **_colls**: string (ReadOnly)
 * **_etag**: string (ReadOnly)
 * **_rid**: string (ReadOnly)
 * **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
-* **autoscaleSettings**: [AutoscaleSettingsResource](#autoscalesettingsresource) (WriteOnly)
-* **id**: string (ReadOnly)
-* **minimumThroughput**: string (ReadOnly, WriteOnly)
-* **offerReplacePending**: string (ReadOnly, WriteOnly)
-* **throughput**: int (WriteOnly)
+* **autoscaleSettings**: [AutoscaleSettingsResource](#autoscalesettingsresource)
+* **minimumThroughput**: string (ReadOnly)
+* **offerReplacePending**: string (ReadOnly)
+* **throughput**: int
 
 ## AutoscaleSettingsResource
 ### Properties
-* **autoUpgradePolicy**: [AutoUpgradePolicyResource](#autoupgradepolicyresource) (WriteOnly)
-* **maxThroughput**: int (Required, WriteOnly)
-* **targetMaxThroughput**: int (ReadOnly, WriteOnly)
+* **autoUpgradePolicy**: [AutoUpgradePolicyResource](#autoupgradepolicyresource)
+* **maxThroughput**: int (Required)
+* **targetMaxThroughput**: int (ReadOnly)
 
 ## AutoUpgradePolicyResource
 ### Properties
-* **throughputPolicy**: [ThroughputPolicyResource](#throughputpolicyresource) (WriteOnly)
+* **throughputPolicy**: [ThroughputPolicyResource](#throughputpolicyresource)
 
 ## ThroughputPolicyResource
 ### Properties
-* **incrementPercent**: int (WriteOnly)
-* **isEnabled**: bool (WriteOnly)
+* **incrementPercent**: int
+* **isEnabled**: bool
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -476,14 +463,12 @@
 
 ## GremlinDatabaseResource
 ### Properties
-* **_colls**: string (ReadOnly)
 * **_etag**: string (ReadOnly)
 * **_rid**: string (ReadOnly)
 * **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
 * **id**: string (Required)
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -495,83 +480,81 @@
 
 ## GremlinGraphResource
 ### Properties
-* **_colls**: string (ReadOnly)
 * **_etag**: string (ReadOnly)
 * **_rid**: string (ReadOnly)
 * **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
-* **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy) (WriteOnly)
-* **defaultTtl**: int (WriteOnly)
+* **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy)
+* **defaultTtl**: int
 * **id**: string (Required)
-* **indexingPolicy**: [IndexingPolicy](#indexingpolicy) (WriteOnly)
-* **partitionKey**: [ContainerPartitionKey](#containerpartitionkey) (WriteOnly)
-* **uniqueKeyPolicy**: [UniqueKeyPolicy](#uniquekeypolicy) (WriteOnly)
+* **indexingPolicy**: [IndexingPolicy](#indexingpolicy)
+* **partitionKey**: [ContainerPartitionKey](#containerpartitionkey)
+* **uniqueKeyPolicy**: [UniqueKeyPolicy](#uniquekeypolicy)
 
 ## ConflictResolutionPolicy
 ### Properties
-* **conflictResolutionPath**: string (WriteOnly)
-* **conflictResolutionProcedure**: string (WriteOnly)
-* **mode**: 'Custom' | 'LastWriterWins' (WriteOnly)
+* **conflictResolutionPath**: string
+* **conflictResolutionProcedure**: string
+* **mode**: 'Custom' | 'LastWriterWins'
 
 ## IndexingPolicy
 ### Properties
-* **automatic**: bool (WriteOnly)
-* **compositeIndexes**: [CompositePath](#compositepath)[][] (WriteOnly)
-* **excludedPaths**: [ExcludedPath](#excludedpath)[] (WriteOnly)
-* **includedPaths**: [IncludedPath](#includedpath)[] (WriteOnly)
-* **indexingMode**: 'Consistent' | 'Lazy' | 'None' (WriteOnly)
-* **spatialIndexes**: [SpatialSpec](#spatialspec)[] (WriteOnly)
+* **automatic**: bool
+* **compositeIndexes**: [CompositePath](#compositepath)[][]
+* **excludedPaths**: [ExcludedPath](#excludedpath)[]
+* **includedPaths**: [IncludedPath](#includedpath)[]
+* **indexingMode**: 'Consistent' | 'Lazy' | 'None'
+* **spatialIndexes**: [SpatialSpec](#spatialspec)[]
 
 ## CompositePath
 ### Properties
-* **order**: 'Ascending' | 'Descending' (WriteOnly)
-* **path**: string (WriteOnly)
+* **order**: 'Ascending' | 'Descending'
+* **path**: string
 
 ## ExcludedPath
 ### Properties
-* **path**: string (WriteOnly)
+* **path**: string
 
 ## IncludedPath
 ### Properties
-* **indexes**: [Indexes](#indexes)[] (WriteOnly)
-* **path**: string (WriteOnly)
+* **indexes**: [Indexes](#indexes)[]
+* **path**: string
 
 ## Indexes
 ### Properties
-* **dataType**: 'LineString' | 'MultiPolygon' | 'Number' | 'Point' | 'Polygon' | 'String' (WriteOnly)
-* **kind**: 'Hash' | 'Range' | 'Spatial' (WriteOnly)
-* **precision**: int (WriteOnly)
+* **dataType**: 'LineString' | 'MultiPolygon' | 'Number' | 'Point' | 'Polygon' | 'String'
+* **kind**: 'Hash' | 'Range' | 'Spatial'
+* **precision**: int
 
 ## SpatialSpec
 ### Properties
-* **path**: string (WriteOnly)
-* **types**: 'LineString' | 'MultiPolygon' | 'Point' | 'Polygon'[] (WriteOnly)
+* **path**: string
+* **types**: 'LineString' | 'MultiPolygon' | 'Point' | 'Polygon'[]
 
 ## ContainerPartitionKey
 ### Properties
-* **kind**: 'Hash' | 'Range' (WriteOnly)
-* **paths**: string[] (WriteOnly)
-* **version**: int (WriteOnly)
+* **kind**: 'Hash' | 'Range'
+* **paths**: string[]
+* **version**: int
 
 ## UniqueKeyPolicy
 ### Properties
-* **uniqueKeys**: [UniqueKey](#uniquekey)[] (WriteOnly)
+* **uniqueKeys**: [UniqueKey](#uniquekey)[]
 
 ## UniqueKey
 ### Properties
-* **paths**: string[] (WriteOnly)
+* **paths**: string[]
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -583,14 +566,12 @@
 
 ## MongoDBDatabaseResource
 ### Properties
-* **_colls**: string (ReadOnly)
 * **_etag**: string (ReadOnly)
 * **_rid**: string (ReadOnly)
 * **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
 * **id**: string (Required)
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -602,46 +583,44 @@
 
 ## MongoDBCollectionResource
 ### Properties
-* **_colls**: string (ReadOnly)
 * **_etag**: string (ReadOnly)
 * **_rid**: string (ReadOnly)
 * **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
-* **analyticalStorageTtl**: int (WriteOnly)
+* **analyticalStorageTtl**: int
 * **id**: string (Required)
-* **indexes**: [MongoIndex](#mongoindex)[] (WriteOnly)
-* **shardKey**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
+* **indexes**: [MongoIndex](#mongoindex)[]
+* **shardKey**: [ShardKeys](#shardkeys)
 
 ## MongoIndex
 ### Properties
-* **key**: [MongoIndexKeys](#mongoindexkeys) (WriteOnly)
-* **options**: [MongoIndexOptions](#mongoindexoptions) (WriteOnly)
+* **key**: [MongoIndexKeys](#mongoindexkeys)
+* **options**: [MongoIndexOptions](#mongoindexoptions)
 
 ## MongoIndexKeys
 ### Properties
-* **keys**: string[] (WriteOnly)
+* **keys**: string[]
 
 ## MongoIndexOptions
 ### Properties
-* **expireAfterSeconds**: int (WriteOnly)
-* **unique**: bool (WriteOnly)
+* **expireAfterSeconds**: int
+* **unique**: bool
 
-## Dictionary<string,String>
+## ShardKeys
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -665,7 +644,7 @@
 * **_users**: string (ReadOnly)
 * **id**: string (Required)
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -677,20 +656,18 @@
 
 ## SqlContainerResource
 ### Properties
-* **_colls**: string (ReadOnly)
 * **_etag**: string (ReadOnly)
 * **_rid**: string (ReadOnly)
 * **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
-* **analyticalStorageTtl**: int (WriteOnly)
-* **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy) (WriteOnly)
-* **defaultTtl**: int (WriteOnly)
+* **analyticalStorageTtl**: int
+* **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy)
+* **defaultTtl**: int
 * **id**: string (Required)
-* **indexingPolicy**: [IndexingPolicy](#indexingpolicy) (WriteOnly)
-* **partitionKey**: [ContainerPartitionKey](#containerpartitionkey) (WriteOnly)
-* **uniqueKeyPolicy**: [UniqueKeyPolicy](#uniquekeypolicy) (WriteOnly)
+* **indexingPolicy**: [IndexingPolicy](#indexingpolicy)
+* **partitionKey**: [ContainerPartitionKey](#containerpartitionkey)
+* **uniqueKeyPolicy**: [UniqueKeyPolicy](#uniquekeypolicy)
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -702,20 +679,18 @@
 
 ## SqlStoredProcedureResource
 ### Properties
-* **_colls**: string (ReadOnly)
 * **_etag**: string (ReadOnly)
 * **_rid**: string (ReadOnly)
 * **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
-* **body**: string (WriteOnly)
+* **body**: string
 * **id**: string (Required)
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -727,17 +702,15 @@
 
 ## SqlTriggerResource
 ### Properties
-* **_colls**: string (ReadOnly)
 * **_etag**: string (ReadOnly)
 * **_rid**: string (ReadOnly)
 * **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
-* **body**: string (WriteOnly)
+* **body**: string
 * **id**: string (Required)
-* **triggerOperation**: 'All' | 'Create' | 'Delete' | 'Replace' | 'Update' (WriteOnly)
-* **triggerType**: 'Post' | 'Pre' (WriteOnly)
+* **triggerOperation**: 'All' | 'Create' | 'Delete' | 'Replace' | 'Update'
+* **triggerType**: 'Post' | 'Pre'
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -749,20 +722,18 @@
 
 ## SqlUserDefinedFunctionResource
 ### Properties
-* **_colls**: string (ReadOnly)
 * **_etag**: string (ReadOnly)
 * **_rid**: string (ReadOnly)
 * **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
-* **body**: string (WriteOnly)
+* **body**: string
 * **id**: string (Required)
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -774,19 +745,17 @@
 
 ## TableResource
 ### Properties
-* **_colls**: string (ReadOnly)
 * **_etag**: string (ReadOnly)
 * **_rid**: string (ReadOnly)
 * **_ts**: any (ReadOnly)
-* **_users**: string (ReadOnly)
 * **id**: string (Required)
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -11,7 +11,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApplicationDefinitionProperties](#applicationdefinitionproperties) (Required)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Solutions/applicationDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Solutions/applications@2017-09-01
@@ -27,7 +27,7 @@
 * **plan**: [Plan](#plan)
 * **properties**: [ApplicationProperties](#applicationproperties) (Required)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Solutions/applications' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -68,7 +68,7 @@
 * **size**: string
 * **tier**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -90,7 +90,7 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly)
 * **uiDefinitionUri**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: 'service' (Required, DeployTimeConstant)
 * **properties**: [ServiceDiagnosticSettings](#servicediagnosticsettings)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'microsoft.insights/diagnosticSettings' (ReadOnly, DeployTimeConstant)
 
 ## ServiceDiagnosticSettings
@@ -36,7 +36,7 @@
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 * **timeGrain**: string (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

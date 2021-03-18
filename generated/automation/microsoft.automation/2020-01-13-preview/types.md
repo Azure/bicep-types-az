@@ -10,7 +10,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AutomationAccountCreateOrUpdateProperties](#automationaccountcreateorupdateproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [AutomationAccountCreateOrUpdateParametersTags](#automationaccountcreateorupdateparameterstags)
 * **type**: 'Microsoft.Automation/automationAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/certificates@2020-01-13-preview
@@ -30,7 +30,7 @@
 * **location**: string (WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DscCompilationJobCreateProperties](#dsccompilationjobcreateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
+* **tags**: [DscCompilationJobCreateParametersTags](#dsccompilationjobcreateparameterstags) (WriteOnly)
 * **type**: 'Microsoft.Automation/automationAccounts/compilationjobs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/connections@2020-01-13-preview
@@ -78,7 +78,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ModuleCreateOrUpdateProperties](#modulecreateorupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ModuleCreateOrUpdateParametersTags](#modulecreateorupdateparameterstags)
 * **type**: 'Microsoft.Automation/automationAccounts/modules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/nodeConfigurations@2020-01-13-preview
@@ -88,7 +88,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DscNodeConfigurationCreateOrUpdateParametersProperties](#dscnodeconfigurationcreateorupdateparametersproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
+* **tags**: [DscNodeConfigurationCreateOrUpdateParametersTags](#dscnodeconfigurationcreateorupdateparameterstags) (WriteOnly)
 * **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/privateEndpointConnections@2020-01-13-preview
@@ -109,7 +109,7 @@
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PythonPackageCreateProperties](#pythonpackagecreateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [PythonPackageCreateParametersTags](#pythonpackagecreateparameterstags)
 * **type**: 'Microsoft.Automation/automationAccounts/python2Packages' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/schedules@2020-01-13-preview
@@ -157,7 +157,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WatcherProperties](#watcherproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [WatcherTags](#watchertags)
 * **type**: 'Microsoft.Automation/automationAccounts/watchers' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -217,7 +217,7 @@
 * **family**: string
 * **name**: 'Basic' | 'Free' (Required)
 
-## Dictionary<string,String>
+## AutomationAccountCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -242,7 +242,7 @@
 * **jobId**: string (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **lastStatusModifiedTime**: string (ReadOnly)
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **parameters**: [DscCompilationJobCreatePropertiesParameters](#dsccompilationjobcreatepropertiesparameters)
 * **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly)
 * **runOn**: string (ReadOnly)
 * **startedBy**: string (ReadOnly)
@@ -254,12 +254,12 @@
 ### Properties
 * **name**: string
 
-## Dictionary<string,String>
+## DscCompilationJobCreatePropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## DscCompilationJobCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -269,14 +269,14 @@
 * **connectionType**: [ConnectionTypeAssociationProperty](#connectiontypeassociationproperty) (Required)
 * **creationTime**: string (ReadOnly)
 * **description**: string
-* **fieldDefinitionValues**: [Dictionary<string,String>](#dictionarystringstring)
+* **fieldDefinitionValues**: [ConnectionCreateOrUpdatePropertiesFieldDefinitionValues](#connectioncreateorupdatepropertiesfielddefinitionvalues)
 * **lastModifiedTime**: string (ReadOnly)
 
 ## ConnectionTypeAssociationProperty
 ### Properties
 * **name**: string
 
-## Dictionary<string,String>
+## ConnectionCreateOrUpdatePropertiesFieldDefinitionValues
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -285,11 +285,11 @@
 ### Properties
 * **creationTime**: string (ReadOnly)
 * **description**: string (ReadOnly)
-* **fieldDefinitions**: [Dictionary<string,FieldDefinition>](#dictionarystringfielddefinition) (Required)
+* **fieldDefinitions**: [ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions](#connectiontypecreateorupdatepropertiesfielddefinitions) (Required)
 * **isGlobal**: bool
 * **lastModifiedTime**: string (ReadOnly)
 
-## Dictionary<string,FieldDefinition>
+## ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [FieldDefinition](#fielddefinition)
@@ -311,12 +311,12 @@
 ## JobScheduleCreateProperties
 ### Properties
 * **jobScheduleId**: string (ReadOnly)
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **parameters**: [JobScheduleCreatePropertiesParameters](#jobschedulecreatepropertiesparameters)
 * **runbook**: [RunbookAssociationProperty](#runbookassociationproperty) (Required)
 * **runOn**: string
 * **schedule**: [ScheduleAssociationProperty](#scheduleassociationproperty) (Required)
 
-## Dictionary<string,String>
+## JobScheduleCreatePropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -359,7 +359,7 @@
 * **code**: string (ReadOnly)
 * **message**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ModuleCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -380,7 +380,7 @@
 * **value**: string (WriteOnly)
 * **version**: string (WriteOnly)
 
-## Dictionary<string,String>
+## DscNodeConfigurationCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -399,7 +399,7 @@
 * **sizeInBytes**: int (ReadOnly)
 * **version**: string (ReadOnly)
 
-## Dictionary<string,String>
+## PythonPackageCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -478,16 +478,16 @@
 * **lastModifiedBy**: string (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **scriptName**: string
-* **scriptParameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **scriptParameters**: [WatcherPropertiesScriptParameters](#watcherpropertiesscriptparameters)
 * **scriptRunOn**: string
 * **status**: string (ReadOnly)
 
-## Dictionary<string,String>
+## WatcherPropertiesScriptParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## WatcherTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

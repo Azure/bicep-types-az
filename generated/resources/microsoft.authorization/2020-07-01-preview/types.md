@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PolicyExemptionProperties](#policyexemptionproperties) (Required)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Authorization/policyExemptions' (ReadOnly, DeployTimeConstant)
 
 ## PolicyExemptionProperties
@@ -20,7 +20,7 @@
 * **policyAssignmentId**: string (Required)
 * **policyDefinitionReferenceIds**: string[]
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string
 * **createdBy**: string

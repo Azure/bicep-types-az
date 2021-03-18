@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SearchServiceProperties](#searchserviceproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -32,7 +32,7 @@
 ### Properties
 * **name**: 'basic' | 'free' | 'standard' | 'standard2' | 'standard3' | 'storage_optimized_l1' | 'storage_optimized_l2'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

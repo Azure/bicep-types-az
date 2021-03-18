@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ClusterBaseProperties](#clusterbaseproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ClusterCreateParametersTags](#clustercreateparameterstags)
 * **type**: 'Microsoft.BatchAI/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.BatchAI/fileServers@2017-09-01-preview
@@ -19,7 +19,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [FileServerBaseProperties](#fileserverbaseproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [FileServerCreateParametersTags](#fileservercreateparameterstags)
 * **type**: 'Microsoft.BatchAI/fileServers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.BatchAI/jobs@2017-09-01-preview
@@ -30,7 +30,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [JobBaseProperties](#jobbaseproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [JobCreateParametersTags](#jobcreateparameterstags)
 * **type**: 'Microsoft.BatchAI/jobs' (ReadOnly, DeployTimeConstant)
 
 ## ClusterBaseProperties
@@ -170,7 +170,7 @@
 * **sku**: string (Required)
 * **version**: string
 
-## Dictionary<string,String>
+## ClusterCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -205,7 +205,7 @@
 * **publicIPsToAllow**: string[]
 * **userAccountSettings**: [UserAccountSettings](#useraccountsettings) (Required)
 
-## Dictionary<string,String>
+## FileServerCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -217,12 +217,12 @@
 * **chainerSettings**: [ChainerSettings](#chainersettings)
 * **cluster**: [ResourceId](#resourceid) (Required)
 * **cntkSettings**: [CNTKsettings](#cntksettings)
-* **constraints**: [schemas:27_constraints](#schemas27constraints)
+* **constraints**: [JobBasePropertiesConstraints](#jobbasepropertiesconstraints)
 * **containerSettings**: [ContainerSettings](#containersettings)
 * **creationTime**: string (ReadOnly)
 * **customToolkitSettings**: [CustomToolkitSettings](#customtoolkitsettings)
 * **environmentVariables**: [EnvironmentSetting](#environmentsetting)[]
-* **executionInfo**: [schemas:29_executionInfo](#schemas29executioninfo) (ReadOnly)
+* **executionInfo**: [JobPropertiesExecutionInfo](#jobpropertiesexecutioninfo) (ReadOnly)
 * **executionState**: 'failed' | 'queued' | 'running' | 'succeeded' | 'terminating' (ReadOnly)
 * **executionStateTransitionTime**: string (ReadOnly)
 * **experimentName**: string
@@ -267,7 +267,7 @@
 * **pythonInterpreterPath**: string
 * **pythonScriptFilePath**: string
 
-## schemas:27_constraints
+## JobBasePropertiesConstraints
 ### Properties
 * **maxWallClockTime**: string
 
@@ -291,7 +291,7 @@
 ### Properties
 * **commandLine**: string
 
-## schemas:29_executionInfo
+## JobPropertiesExecutionInfo
 ### Properties
 * **endTime**: string (ReadOnly)
 * **errors**: [BatchAIError](#batchaierror)[] (ReadOnly)
@@ -325,7 +325,7 @@
 * **workerCommandLineArgs**: string
 * **workerCount**: int
 
-## Dictionary<string,String>
+## JobCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -8,9 +8,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **operationType**: any (WriteOnly)
-* **properties**: [Dictionary<string,String>](#dictionarystringstring)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **operationType**: 'create' | 'link' | 'unknown' | 'update' (WriteOnly)
+* **properties**: [AccountResourceRequestProperties](#accountresourcerequestproperties)
+* **tags**: [AccountResourceRequestTags](#accountresourcerequesttags)
 * **type**: 'microsoft.visualstudio/account' (ReadOnly, DeployTimeConstant)
 
 ## Resource microsoft.visualstudio/account/extension@2014-04-01-preview
@@ -21,8 +21,8 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **plan**: [ExtensionResourcePlan](#extensionresourceplan)
-* **properties**: [Dictionary<string,String>](#dictionarystringstring)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [ExtensionResourceRequestProperties](#extensionresourcerequestproperties)
+* **tags**: [ExtensionResourceRequestTags](#extensionresourcerequesttags)
 * **type**: 'microsoft.visualstudio/account/extension' (ReadOnly, DeployTimeConstant)
 
 ## Resource microsoft.visualstudio/account/project@2014-04-01-preview
@@ -32,16 +32,16 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [Dictionary<string,String>](#dictionarystringstring)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [ProjectResourceProperties](#projectresourceproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'microsoft.visualstudio/account/project' (ReadOnly, DeployTimeConstant)
 
-## Dictionary<string,String>
+## AccountResourceRequestProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## AccountResourceRequestTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -54,22 +54,22 @@
 * **publisher**: string
 * **version**: string
 
-## Dictionary<string,String>
+## ExtensionResourceRequestProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ExtensionResourceRequestTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ProjectResourceProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

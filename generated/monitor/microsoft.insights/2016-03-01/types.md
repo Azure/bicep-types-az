@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AlertRule](#alertrule) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Insights/alertrules' (ReadOnly, DeployTimeConstant)
 
 ## Resource microsoft.insights/logprofiles@2016-03-01
@@ -19,7 +19,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [LogProfileProperties](#logprofileproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'microsoft.insights/logprofiles' (ReadOnly, DeployTimeConstant)
 
 ## AlertRule
@@ -35,53 +35,55 @@
 
 ## RuleAction
 * **Discriminator**: odata.type
+
 ### Base Properties
-### Microsoft.Azure.Management.Insights.Models.RuleEmailAction
+### RuleEmailAction
 #### Properties
 * **customEmails**: string[]
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleEmailAction' (Required)
 * **sendToServiceOwners**: bool
 
-### Microsoft.Azure.Management.Insights.Models.RuleWebhookAction
+### RuleWebhookAction
 #### Properties
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleWebhookAction' (Required)
-* **properties**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [RuleWebhookActionProperties](#rulewebhookactionproperties)
 * **serviceUri**: string
 
 
-## Microsoft.Azure.Management.Insights.Models.RuleEmailAction
+## RuleEmailAction
 ### Properties
 * **customEmails**: string[]
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleEmailAction' (Required)
 * **sendToServiceOwners**: bool
 
-## Microsoft.Azure.Management.Insights.Models.RuleWebhookAction
+## RuleWebhookAction
 ### Properties
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleWebhookAction' (Required)
-* **properties**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [RuleWebhookActionProperties](#rulewebhookactionproperties)
 * **serviceUri**: string
 
-## Dictionary<string,String>
+## RuleWebhookActionProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## RuleCondition
 * **Discriminator**: odata.type
+
 ### Base Properties
 * **dataSource**: [RuleDataSource](#ruledatasource)
-### Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition
+### LocationThresholdRuleCondition
 #### Properties
 * **failedLocationCount**: int (Required)
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition' (Required)
 * **windowSize**: string
 
-### Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition
+### ManagementEventRuleCondition
 #### Properties
 * **aggregation**: [ManagementEventAggregationCondition](#managementeventaggregationcondition)
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition' (Required)
 
-### Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition
+### ThresholdRuleCondition
 #### Properties
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition' (Required)
 * **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required)
@@ -92,12 +94,13 @@
 
 ## RuleDataSource
 * **Discriminator**: odata.type
+
 ### Base Properties
 * **legacyResourceId**: string
 * **metricNamespace**: string
 * **resourceLocation**: string
 * **resourceUri**: string
-### Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource
+### RuleManagementEventDataSource
 #### Properties
 * **claims**: [RuleManagementEventClaimsDataSource](#rulemanagementeventclaimsdatasource)
 * **eventName**: string
@@ -110,13 +113,13 @@
 * **status**: string
 * **subStatus**: string
 
-### Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource
+### RuleMetricDataSource
 #### Properties
 * **metricName**: string
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource' (Required)
 
 
-## Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource
+## RuleManagementEventDataSource
 ### Properties
 * **claims**: [RuleManagementEventClaimsDataSource](#rulemanagementeventclaimsdatasource)
 * **eventName**: string
@@ -133,18 +136,18 @@
 ### Properties
 * **emailAddress**: string
 
-## Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource
+## RuleMetricDataSource
 ### Properties
 * **metricName**: string
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource' (Required)
 
-## Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition
+## LocationThresholdRuleCondition
 ### Properties
 * **failedLocationCount**: int (Required)
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition' (Required)
 * **windowSize**: string
 
-## Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition
+## ManagementEventRuleCondition
 ### Properties
 * **aggregation**: [ManagementEventAggregationCondition](#managementeventaggregationcondition)
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition' (Required)
@@ -155,7 +158,7 @@
 * **threshold**: int
 * **windowSize**: string
 
-## Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition
+## ThresholdRuleCondition
 ### Properties
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition' (Required)
 * **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required)
@@ -163,7 +166,7 @@
 * **timeAggregation**: 'Average' | 'Last' | 'Maximum' | 'Minimum' | 'Total'
 * **windowSize**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -181,7 +184,7 @@
 * **days**: int (Required)
 * **enabled**: bool (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

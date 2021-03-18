@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApplicationInsightsComponentProperties](#applicationinsightscomponentproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ComponentsResourceTags](#componentsresourcetags)
 * **type**: 'Microsoft.Insights/components' (ReadOnly, DeployTimeConstant)
 
 ## Resource microsoft.insights/components/analyticsItems@2015-05-01
@@ -18,12 +18,15 @@
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
 * **Content**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **Id**: string
 * **name**: string (Required, DeployTimeConstant)
+* **Name**: string
 * **Properties**: [ApplicationInsightsComponentAnalyticsItemProperties](#applicationinsightscomponentanalyticsitemproperties)
 * **Scope**: 'shared' | 'user'
 * **TimeCreated**: string (ReadOnly)
 * **TimeModified**: string (ReadOnly)
 * **type**: 'microsoft.insights/components/analyticsItems' (ReadOnly, DeployTimeConstant)
+* **Type**: 'folder' | 'function' | 'query' | 'recent'
 * **Version**: string (ReadOnly)
 
 ## Resource Microsoft.Insights/components/exportconfiguration@2015-05-01
@@ -67,6 +70,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **IsGeneratedFromTemplate**: bool
 * **name**: string (Required, DeployTimeConstant)
+* **Name**: string
 * **SourceType**: string
 * **Tags**: string[]
 * **TimeModified**: string (ReadOnly)
@@ -80,26 +84,16 @@
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
 * **Content**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **Id**: string
 * **name**: string (Required, DeployTimeConstant)
+* **Name**: string
 * **Properties**: [ApplicationInsightsComponentAnalyticsItemProperties](#applicationinsightscomponentanalyticsitemproperties)
 * **Scope**: 'shared' | 'user'
 * **TimeCreated**: string (ReadOnly)
 * **TimeModified**: string (ReadOnly)
 * **type**: 'microsoft.insights/components/myanalyticsItems' (ReadOnly, DeployTimeConstant)
+* **Type**: 'folder' | 'function' | 'query' | 'recent'
 * **Version**: string (ReadOnly)
-
-## Resource Microsoft.Insights/components/ProactiveDetectionConfigs@2015-05-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
-* **CustomEmails**: string[]
-* **Enabled**: bool
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **LastUpdatedTime**: string
-* **name**: string (Required, DeployTimeConstant)
-* **RuleDefinitions**: [schemas:20_RuleDefinitions](#schemas20ruledefinitions)
-* **SendEmailsToSubscriptionOwners**: bool
-* **type**: 'Microsoft.Insights/components/ProactiveDetectionConfigs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Insights/myWorkbooks@2015-05-01
 * **Valid Scope(s)**: ResourceGroup
@@ -110,7 +104,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [MyWorkbookProperties](#myworkbookproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [MyWorkbookResourceTags](#myworkbookresourcetags)
 * **type**: 'Microsoft.Insights/myWorkbooks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Insights/webtests@2015-05-01
@@ -122,7 +116,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WebTestProperties](#webtestproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [WebtestsResourceTags](#webtestsresourcetags)
 * **type**: 'Microsoft.Insights/webtests' (ReadOnly, DeployTimeConstant)
 
 ## Resource microsoft.insights/workbooks@2015-05-01
@@ -134,7 +128,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WorkbookProperties](#workbookproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [WorkbookResourceTags](#workbookresourcetags)
 * **type**: 'microsoft.insights/workbooks' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationInsightsComponentProperties
@@ -163,7 +157,7 @@
 * **ResourceId**: string
 * **ScopeId**: string
 
-## Dictionary<string,String>
+## ComponentsResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -171,17 +165,6 @@
 ## ApplicationInsightsComponentAnalyticsItemProperties
 ### Properties
 * **functionAlias**: string
-
-## schemas:20_RuleDefinitions
-### Properties
-* **Description**: string
-* **DisplayName**: string
-* **HelpUrl**: string
-* **IsEnabledByDefault**: bool
-* **IsHidden**: bool
-* **IsInPreview**: bool
-* **Name**: string
-* **SupportsEmailNotifications**: bool
 
 ## MyWorkbookProperties
 ### Properties
@@ -194,14 +177,14 @@
 * **userId**: string (ReadOnly)
 * **version**: string
 
-## Dictionary<string,String>
+## MyWorkbookResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## WebTestProperties
 ### Properties
-* **Configuration**: [schemas:43_Configuration](#schemas43configuration)
+* **Configuration**: [WebTestPropertiesConfiguration](#webtestpropertiesconfiguration)
 * **Description**: string
 * **Enabled**: bool
 * **Frequency**: int
@@ -213,7 +196,7 @@
 * **SyntheticMonitorId**: string (Required)
 * **Timeout**: int
 
-## schemas:43_Configuration
+## WebTestPropertiesConfiguration
 ### Properties
 * **WebTest**: string
 
@@ -221,7 +204,7 @@
 ### Properties
 * **Id**: string
 
-## Dictionary<string,String>
+## WebtestsResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -239,7 +222,7 @@
 * **version**: string
 * **workbookId**: string (Required)
 
-## Dictionary<string,String>
+## WorkbookResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -9,15 +9,15 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: any (ReadOnly)
 * **sku**: [AzureSku](#azuresku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [CreateWorkspaceCollectionRequestTags](#createworkspacecollectionrequesttags)
 * **type**: 'Microsoft.PowerBI/workspaceCollections' (ReadOnly, DeployTimeConstant)
 
 ## AzureSku
 ### Properties
-* **name**: string (Required)
-* **tier**: string (Required)
+* **name**: 'S1' (Required)
+* **tier**: 'Standard' (Required)
 
-## Dictionary<string,String>
+## CreateWorkspaceCollectionRequestTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

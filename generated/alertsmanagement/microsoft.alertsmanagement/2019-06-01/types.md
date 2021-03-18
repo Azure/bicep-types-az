@@ -8,7 +8,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AlertRuleProperties](#alertruleproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [AzureResourceTags](#azureresourcetags)
 * **type**: 'microsoft.alertsManagement/smartDetectorAlertRules' (ReadOnly, DeployTimeConstant)
 
 ## AlertRuleProperties
@@ -34,10 +34,10 @@
 * **id**: string (Required)
 * **imagePaths**: string[]
 * **name**: string
-* **parameters**: [Dictionary<string,Object>](#dictionarystringobject)
+* **parameters**: [DetectorParameters](#detectorparameters)
 * **supportedResourceTypes**: string[]
 
-## Dictionary<string,Object>
+## DetectorParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -46,7 +46,7 @@
 ### Properties
 * **duration**: string
 
-## Dictionary<string,String>
+## AzureResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

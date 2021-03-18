@@ -15,7 +15,7 @@
 * **apiVersion**: '2017-05-15-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [softwareUpdateConfigurationProperties](#softwareupdateconfigurationproperties) (Required)
+* **properties**: [SoftwareUpdateConfigurationProperties](#softwareupdateconfigurationproperties) (Required)
 * **type**: 'Microsoft.Automation/automationAccounts/softwareUpdateConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/sourceControls@2017-05-15-preview
@@ -44,7 +44,7 @@
 * **jobId**: string (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **lastStatusModifiedTime**: string (ReadOnly)
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **parameters**: [JobCreatePropertiesParameters](#jobcreatepropertiesparameters)
 * **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly)
 * **runbook**: [RunbookAssociationProperty](#runbookassociationproperty)
 * **runOn**: string
@@ -53,7 +53,7 @@
 * **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly)
 * **statusDetails**: string (ReadOnly)
 
-## Dictionary<string,String>
+## JobCreatePropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -62,7 +62,7 @@
 ### Properties
 * **name**: string
 
-## softwareUpdateConfigurationProperties
+## SoftwareUpdateConfigurationProperties
 ### Properties
 * **createdBy**: string (ReadOnly)
 * **creationTime**: string (ReadOnly)
@@ -71,8 +71,8 @@
 * **lastModifiedTime**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **scheduleInfo**: [ScheduleProperties](#scheduleproperties) (Required)
-* **tasks**: [softwareUpdateConfigurationTasks](#softwareupdateconfigurationtasks)
-* **updateConfiguration**: [updateConfiguration](#updateconfiguration) (Required)
+* **tasks**: [SoftwareUpdateConfigurationTasks](#softwareupdateconfigurationtasks)
+* **updateConfiguration**: [UpdateConfiguration](#updateconfiguration) (Required)
 
 ## ErrorResponse
 ### Properties
@@ -107,22 +107,22 @@
 * **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'
 * **occurrence**: int
 
-## softwareUpdateConfigurationTasks
+## SoftwareUpdateConfigurationTasks
 ### Properties
-* **postTask**: [taskProperties](#taskproperties)
-* **preTask**: [taskProperties](#taskproperties)
+* **postTask**: [TaskProperties](#taskproperties)
+* **preTask**: [TaskProperties](#taskproperties)
 
-## taskProperties
+## TaskProperties
 ### Properties
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **parameters**: [TaskPropertiesParameters](#taskpropertiesparameters)
 * **source**: string
 
-## Dictionary<string,String>
+## TaskPropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## updateConfiguration
+## UpdateConfiguration
 ### Properties
 * **azureVirtualMachines**: string[]
 * **duration**: string
@@ -153,9 +153,9 @@
 ## TagSettingsProperties
 ### Properties
 * **filterOperator**: 'All' | 'Any'
-* **tags**: [Dictionary<string,IList<String>>](#dictionarystringiliststring)
+* **tags**: [TagSettingsPropertiesTags](#tagsettingspropertiestags)
 
-## Dictionary<string,IList<String>>
+## TagSettingsPropertiesTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]

@@ -17,7 +17,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ResourceGroupProperties](#resourcegroupproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceGroupTags](#resourcegrouptags)
 * **type**: 'Microsoft.Resources/resourceGroups' (ReadOnly, DeployTimeConstant)
 
 ## DeploymentProperties
@@ -63,10 +63,10 @@
 ### Properties
 * **apiVersions**: string[] (ReadOnly)
 * **locations**: string[] (ReadOnly)
-* **properties**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
+* **properties**: [ProviderResourceTypeProperties](#providerresourcetypeproperties) (ReadOnly)
 * **resourceType**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ProviderResourceTypeProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -80,7 +80,7 @@
 ### Properties
 * **provisioningState**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceGroupTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WorkbookProperties](#workbookproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'microsoft.insights/workbooks' (ReadOnly, DeployTimeConstant)
 
 ## WorkbookProperties
@@ -23,7 +23,7 @@
 * **userId**: string (ReadOnly)
 * **version**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PrivateCloudProperties](#privatecloudproperties)
 * **sku**: [Sku](#sku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.AVS/privateClouds' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.AVS/privateClouds/addons@2020-07-17-preview
@@ -166,7 +166,7 @@
 ### Properties
 * **name**: string (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -205,29 +205,30 @@
 
 ## WorkloadNetworkDhcpEntity
 * **Discriminator**: dhcpType
+
 ### Base Properties
 * **displayName**: string
 * **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **revision**: int
 * **segments**: string[] (ReadOnly)
-### RELAY
+### WorkloadNetworkDhcpRelay
 #### Properties
 * **dhcpType**: 'RELAY' (Required)
 * **serverAddresses**: string[]
 
-### SERVER
+### WorkloadNetworkDhcpServer
 #### Properties
 * **dhcpType**: 'SERVER' (Required)
 * **leaseTime**: int
 * **serverAddress**: string
 
 
-## RELAY
+## WorkloadNetworkDhcpRelay
 ### Properties
 * **dhcpType**: 'RELAY' (Required)
 * **serverAddresses**: string[]
 
-## SERVER
+## WorkloadNetworkDhcpServer
 ### Properties
 * **dhcpType**: 'SERVER' (Required)
 * **leaseTime**: int

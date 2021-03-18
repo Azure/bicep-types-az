@@ -8,7 +8,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SearchServiceProperties](#searchserviceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [SearchServiceCreateOrUpdateParametersTags](#searchservicecreateorupdateparameterstags)
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant)
 
 ## SearchServiceProperties
@@ -21,7 +21,7 @@
 ### Properties
 * **name**: 'free' | 'standard' | 'standard2'
 
-## Dictionary<string,String>
+## SearchServiceCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

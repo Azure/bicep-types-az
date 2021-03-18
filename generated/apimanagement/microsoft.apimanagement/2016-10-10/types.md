@@ -10,21 +10,24 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApiManagementServiceProperties](#apimanagementserviceproperties) (Required)
 * **sku**: [ApiManagementServiceSkuProperties](#apimanagementserviceskuproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ApiManagement/service' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis@2016-10-10
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
-* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract)
-* **description**: string
+* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (WriteOnly)
+* **content**: any (ReadOnly)
+* **description**: string (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **path**: string (Required)
-* **protocols**: 'Http' | 'Https'[] (Required)
-* **serviceUrl**: string (Required)
-* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract)
+* **path**: string (Required, WriteOnly)
+* **protocols**: 'Http' | 'Https'[] (Required, WriteOnly)
+* **requestId**: string (ReadOnly)
+* **serviceUrl**: string (Required, WriteOnly)
+* **statusCode**: 'Accepted' | 'Conflict' | 'Continue' | 'Created' | 'NotFound' | 'OK' (ReadOnly)
+* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (WriteOnly)
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis/operations@2016-10-10
@@ -70,14 +73,16 @@
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
 * **certificate**: string[]
 * **description**: string
-* **header**: [Dictionary<string,IList<String>>](#dictionarystringiliststring)
+* **header**: [BackendCredentialsContractHeader](#backendcredentialscontractheader)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
+* **parameter**: string (Required)
 * **password**: string
 * **properties**: [BackendProperties](#backendproperties)
 * **protocol**: 'http' | 'soap' (Required)
-* **query**: [Dictionary<string,IList<String>>](#dictionarystringiliststring)
+* **query**: [BackendCredentialsContractQuery](#backendcredentialscontractquery)
 * **resourceId**: string
+* **scheme**: string (Required)
 * **title**: string
 * **type**: 'Microsoft.ApiManagement/service/backends' (ReadOnly, DeployTimeConstant)
 * **url**: string (Required)
@@ -130,7 +135,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
-* **credentials**: [Dictionary<string,String>](#dictionarystringstring) (Required)
+* **credentials**: [LoggerCreateParametersCredentials](#loggercreateparameterscredentials) (Required)
 * **description**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **isBuffered**: bool
@@ -238,7 +243,7 @@
 * **additionalLocations**: [AdditionalRegion](#additionalregion)[]
 * **addresserEmail**: string
 * **createdAtUtc**: string (ReadOnly)
-* **customProperties**: [Dictionary<string,String>](#dictionarystringstring)
+* **customProperties**: [ApiManagementServicePropertiesCustomProperties](#apimanagementservicepropertiescustomproperties)
 * **hostnameConfigurations**: [HostnameConfiguration](#hostnameconfiguration)[]
 * **managementApiUrl**: string (ReadOnly)
 * **portalUrl**: string (ReadOnly)
@@ -267,7 +272,7 @@
 * **subnetResourceId**: string
 * **vnetid**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ApiManagementServicePropertiesCustomProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -289,24 +294,24 @@
 * **capacity**: int
 * **name**: 'Developer' | 'Premium' | 'Standard' (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## AuthenticationSettingsContract
 ### Properties
-* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract)
+* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract) (WriteOnly)
 
 ## OAuth2AuthenticationSettingsContract
 ### Properties
-* **authorizationServerId**: string
-* **scope**: string
+* **authorizationServerId**: string (WriteOnly)
+* **scope**: string (WriteOnly)
 
 ## SubscriptionKeyParameterNamesContract
 ### Properties
-* **header**: string
-* **query**: string
+* **header**: string (WriteOnly)
+* **query**: string (WriteOnly)
 
 ## RequestContract
 ### Properties
@@ -340,7 +345,7 @@
 * **name**: string (Required)
 * **value**: string (Required)
 
-## Dictionary<string,IList<String>>
+## BackendCredentialsContractHeader
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
@@ -350,12 +355,12 @@
 * **skipCertificateChainValidation**: bool
 * **skipCertificateNameValidation**: bool
 
-## Dictionary<string,IList<String>>
+## BackendCredentialsContractQuery
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
 
-## Dictionary<string,String>
+## LoggerCreateParametersCredentials
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

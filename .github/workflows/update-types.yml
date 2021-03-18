@@ -13,21 +13,10 @@ jobs:
     name: Update Types
     runs-on: ubuntu-latest
 
-    env:
-      # don't print dotnet logo
-      DOTNET_NOLOGO: true
-
-      # disable telemetry (reduces dotnet tool output in logs)
-      DOTNET_CLI_TELEMETRY_OPTOUT: true
-
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
-          submodules: true
-
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1.7.2
 
       - name: Clone azure-rest-api-specs
         uses: actions/checkout@v2
@@ -36,11 +25,16 @@ jobs:
           path: workflow-temp/azure-rest-api-specs
           ref: ${{ github.event.inputs.api_specs_ref }}
       
-      - name: Build generator
-        run: dotnet build --configuration release
+      - name: Install autorest.bicep npm packages
+        run: npm ci
+        working-directory: src/autorest.bicep
+      
+      - name: Build autorest.bicep
+        run: npm run build
+        working-directory: src/autorest.bicep
       
       - name: Install generator npm packages
-        run: npm install
+        run: npm ci
         working-directory: src/generator
       
       - name: Run generator

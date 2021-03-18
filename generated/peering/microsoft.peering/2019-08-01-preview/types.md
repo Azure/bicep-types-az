@@ -19,7 +19,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PeeringProperties](#peeringproperties)
 * **sku**: [PeeringSku](#peeringsku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [PeeringTags](#peeringtags)
 * **type**: 'Microsoft.Peering/peerings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Peering/peeringServices@2019-08-01-preview
@@ -30,7 +30,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PeeringServiceProperties](#peeringserviceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [PeeringServiceTags](#peeringservicetags)
 * **type**: 'Microsoft.Peering/peeringServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Peering/peeringServices/prefixes@2019-08-01-preview
@@ -116,7 +116,7 @@
 * **size**: 'Free' | 'Metered' | 'Unlimited'
 * **tier**: 'Basic' | 'Premium'
 
-## Dictionary<string,String>
+## PeeringTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -127,7 +127,7 @@
 * **peeringServiceProvider**: string
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
-## Dictionary<string,String>
+## PeeringServiceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

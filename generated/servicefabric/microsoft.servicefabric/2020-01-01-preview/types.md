@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ManagedClusterProperties](#managedclusterproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ServiceFabric/managedClusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabric/managedClusters/nodeTypes@2020-01-01-preview
@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NodeTypeProperties](#nodetypeproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ManagedProxyResourceTags](#managedproxyresourcetags)
 * **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant)
 
 ## ManagedClusterProperties
@@ -77,7 +77,7 @@
 ### Properties
 * **name**: 'Basic' | 'Standard' (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -85,13 +85,13 @@
 ## NodeTypeProperties
 ### Properties
 * **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription)
-* **capacities**: [Dictionary<string,String>](#dictionarystringstring)
+* **capacities**: [NodeTypePropertiesCapacities](#nodetypepropertiescapacities)
 * **dataDiskSizeGB**: int (Required)
 * **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription)
 * **isPrimary**: bool (Required)
-* **placementProperties**: [Dictionary<string,String>](#dictionarystringstring)
+* **placementProperties**: [NodeTypePropertiesPlacementProperties](#nodetypepropertiesplacementproperties)
 * **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly)
-* **vmExtensions**: [VMSSExtension](#vmssextension)[]
+* **vmExtensions**: [VmssExtension](#vmssextension)[]
 * **vmImageOffer**: string
 * **vmImagePublisher**: string
 * **vmImageSku**: string
@@ -105,22 +105,22 @@
 * **endPort**: int (Required)
 * **startPort**: int (Required)
 
-## Dictionary<string,String>
+## NodeTypePropertiesCapacities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## NodeTypePropertiesPlacementProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## VMSSExtension
+## VmssExtension
 ### Properties
 * **name**: string (Required)
-* **properties**: [VMSSExtensionProperties](#vmssextensionproperties) (Required)
+* **properties**: [VmssExtensionProperties](#vmssextensionproperties) (Required)
 
-## VMSSExtensionProperties
+## VmssExtensionProperties
 ### Properties
 * **autoUpgradeMinorVersion**: bool
 * **forceUpdateTag**: string
@@ -146,7 +146,7 @@
 * **certificateStore**: string (Required)
 * **certificateUrl**: string (Required)
 
-## Dictionary<string,String>
+## ManagedProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

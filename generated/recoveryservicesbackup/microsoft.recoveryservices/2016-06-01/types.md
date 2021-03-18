@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ProtectedItem](#protecteditem)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.RecoveryServices/vaults/backupPolicies@2016-06-01
@@ -21,28 +21,18 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ProtectionPolicy](#protectionpolicy)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies' (ReadOnly, DeployTimeConstant)
 
 ## ProtectedItem
 * **Discriminator**: protectedItemType
+
 ### Base Properties
 * **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'DPM' | 'Invalid' | 'MAB'
 * **lastRecoveryPoint**: string
 * **policyId**: string
 * **sourceResourceId**: string
-* **workloadType**: 'AzureSqlDb' | 'DPMUnknown' | 'Exchange' | 'FileFolder' | 'Invalid' | 'Sharepoint' | 'SQLDB' | 'VM'
-### AzureIaaSVMProtectedItem
-#### Properties
-* **extendedInfo**: [AzureIaaSVMProtectedItemExtendedInfo](#azureiaasvmprotecteditemextendedinfo)
-* **friendlyName**: string
-* **lastBackupStatus**: string
-* **lastBackupTime**: string
-* **protectedItemType**: 'AzureIaaSVMProtectedItem' (Required)
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
-* **protectionStatus**: string
-* **virtualMachineId**: string
-
+* **workloadType**: 'AzureSqlDb' | 'DPMUnknown' | 'Exchange' | 'FileFolder' | 'Invalid' | 'SQLDB' | 'Sharepoint' | 'VM'
 ### MabFileFolderProtectedItem
 #### Properties
 * **computerName**: string
@@ -53,30 +43,21 @@
 * **protectedItemType**: 'MabFileFolderProtectedItem' (Required)
 * **protectionState**: string
 
-### Microsoft.Sql/servers/databases
+### AzureIaaSClassicComputeVMProtectedItem
+#### Properties
+* **protectedItemType**: 'Microsoft.ClassicCompute/virtualMachines' (Required)
+
+### AzureIaaSComputeVMProtectedItem
+#### Properties
+* **protectedItemType**: 'Microsoft.Compute/virtualMachines' (Required)
+
+### AzureSqlProtectedItem
 #### Properties
 * **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo)
 * **protectedItemDataId**: string
 * **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required)
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
 
-
-## AzureIaaSVMProtectedItem
-### Properties
-* **extendedInfo**: [AzureIaaSVMProtectedItemExtendedInfo](#azureiaasvmprotecteditemextendedinfo)
-* **friendlyName**: string
-* **lastBackupStatus**: string
-* **lastBackupTime**: string
-* **protectedItemType**: 'AzureIaaSVMProtectedItem' (Required)
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
-* **protectionStatus**: string
-* **virtualMachineId**: string
-
-## AzureIaaSVMProtectedItemExtendedInfo
-### Properties
-* **oldestRecoveryPoint**: string
-* **policyInconsistent**: bool
-* **recoveryPointCount**: int
 
 ## MabFileFolderProtectedItem
 ### Properties
@@ -94,12 +75,20 @@
 * **oldestRecoveryPoint**: string
 * **recoveryPointCount**: int
 
-## Microsoft.Sql/servers/databases
+## AzureIaaSClassicComputeVMProtectedItem
+### Properties
+* **protectedItemType**: 'Microsoft.ClassicCompute/virtualMachines' (Required)
+
+## AzureIaaSComputeVMProtectedItem
+### Properties
+* **protectedItemType**: 'Microsoft.Compute/virtualMachines' (Required)
+
+## AzureSqlProtectedItem
 ### Properties
 * **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo)
 * **protectedItemDataId**: string
 * **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required)
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped'
 
 ## AzureSqlProtectedItemExtendedInfo
 ### Properties
@@ -107,34 +96,35 @@
 * **policyState**: string
 * **recoveryPointCount**: int
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## ProtectionPolicy
 * **Discriminator**: backupManagementType
+
 ### Base Properties
 * **protectedItemsCount**: int
-### AzureIaasVM
+### AzureIaaSVMProtectionPolicy
 #### Properties
 * **backupManagementType**: 'AzureIaasVM' (Required)
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 
-### AzureSql
+### AzureSqlProtectionPolicy
 #### Properties
 * **backupManagementType**: 'AzureSql' (Required)
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 
-### MAB
+### MabProtectionPolicy
 #### Properties
 * **backupManagementType**: 'MAB' (Required)
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 
 
-## AzureIaasVM
+## AzureIaaSVMProtectionPolicy
 ### Properties
 * **backupManagementType**: 'AzureIaasVM' (Required)
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
@@ -142,6 +132,7 @@
 
 ## RetentionPolicy
 * **Discriminator**: retentionPolicyType
+
 ### Base Properties
 ### LongTermRetentionPolicy
 #### Properties
@@ -219,6 +210,7 @@
 
 ## SchedulePolicy
 * **Discriminator**: schedulePolicyType
+
 ### Base Properties
 ### LongTermSchedulePolicy
 #### Properties
@@ -245,18 +237,18 @@
 * **scheduleRunTimes**: string[]
 * **scheduleWeeklyFrequency**: int
 
-## AzureSql
+## AzureSqlProtectionPolicy
 ### Properties
 * **backupManagementType**: 'AzureSql' (Required)
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 
-## MAB
+## MabProtectionPolicy
 ### Properties
 * **backupManagementType**: 'MAB' (Required)
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy)
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

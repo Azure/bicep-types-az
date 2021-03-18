@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ProfilePropertiesCreateParameters](#profilepropertiescreateparameters)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ProfileCreateParametersTags](#profilecreateparameterstags)
 * **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Cdn/profiles/endpoints@2015-06-01
@@ -19,7 +19,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [EndpointPropertiesCreateParameters](#endpointpropertiescreateparameters)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [EndpointCreateParametersTags](#endpointcreateparameterstags)
 * **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2015-06-01
@@ -50,7 +50,7 @@
 ### Properties
 * **name**: 'Premium' | 'Standard'
 
-## Dictionary<string,String>
+## ProfileCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -80,7 +80,7 @@
 * **httpPort**: int
 * **httpsPort**: int
 
-## Dictionary<string,String>
+## EndpointCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

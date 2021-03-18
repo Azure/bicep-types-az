@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [MachineProperties](#machineproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -27,7 +27,7 @@
 * **lastStatusChange**: string (ReadOnly)
 * **machineFqdn**: string (ReadOnly)
 * **osName**: string (ReadOnly)
-* **osProfile**: [OSProfile](#osprofile)
+* **osProfile**: [OSProfile](#osprofile) (ReadOnly)
 * **osVersion**: string (ReadOnly)
 * **physicalLocation**: string
 * **provisioningState**: string (ReadOnly)
@@ -45,7 +45,7 @@
 ### Properties
 * **computerName**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

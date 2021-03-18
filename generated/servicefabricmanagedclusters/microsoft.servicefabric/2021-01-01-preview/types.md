@@ -10,8 +10,8 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ManagedClusterProperties](#managedclusterproperties)
 * **sku**: [Sku](#sku)
-* **systemData**: [SystemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ServiceFabric/managedClusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabric/managedclusters/applications@2021-01-01-preview
@@ -23,8 +23,8 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApplicationResourceProperties](#applicationresourceproperties)
-* **systemData**: [SystemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [ProxyResourceTags](#proxyresourcetags)
 * **type**: 'Microsoft.ServiceFabric/managedclusters/applications' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabric/managedclusters/applications/services@2021-01-01-preview
@@ -35,8 +35,8 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ServiceResourceProperties](#serviceresourceproperties)
-* **systemData**: [SystemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [ProxyResourceTags](#proxyresourcetags)
 * **type**: 'Microsoft.ServiceFabric/managedclusters/applications/services' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabric/managedclusters/applicationTypes@2021-01-01-preview
@@ -47,8 +47,8 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApplicationTypeResourceProperties](#applicationtyperesourceproperties)
-* **systemData**: [SystemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [ProxyResourceTags](#proxyresourcetags)
 * **type**: 'Microsoft.ServiceFabric/managedclusters/applicationTypes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabric/managedclusters/applicationTypes/versions@2021-01-01-preview
@@ -59,8 +59,8 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApplicationTypeVersionResourceProperties](#applicationtypeversionresourceproperties)
-* **systemData**: [SystemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [ProxyResourceTags](#proxyresourcetags)
 * **type**: 'Microsoft.ServiceFabric/managedclusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabric/managedClusters/nodeTypes@2021-01-01-preview
@@ -70,8 +70,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NodeTypeProperties](#nodetypeproperties)
-* **systemData**: [SystemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [ManagedProxyResourceTags](#managedproxyresourcetags)
 * **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant)
 
 ## ManagedClusterProperties
@@ -159,7 +159,7 @@
 * **lastModifiedBy**: string
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -168,10 +168,10 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity)
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
+* **userAssignedIdentities**: [UserAssignedIdentityMap](#userassignedidentitymap)
 
-## Dictionary<string,UserAssignedIdentity>
+## UserAssignedIdentityMap
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
@@ -184,7 +184,7 @@
 ## ApplicationResourceProperties
 ### Properties
 * **managedIdentities**: [ApplicationUserAssignedIdentity](#applicationuserassignedidentity)[]
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **parameters**: [ApplicationParameterList](#applicationparameterlist)
 * **provisioningState**: string (ReadOnly)
 * **upgradePolicy**: [ApplicationUpgradePolicy](#applicationupgradepolicy)
 * **version**: string
@@ -194,7 +194,7 @@
 * **name**: string (Required)
 * **principalId**: string (Required)
 
-## Dictionary<string,String>
+## ApplicationParameterList
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -214,7 +214,7 @@
 * **considerWarningAsError**: bool (Required)
 * **defaultServiceTypeHealthPolicy**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy)
 * **maxPercentUnhealthyDeployedApplications**: int (Required)
-* **serviceTypeHealthPolicyMap**: [Dictionary<string,ServiceTypeHealthPolicy>](#dictionarystringservicetypehealthpolicy)
+* **serviceTypeHealthPolicyMap**: [ServiceTypeHealthPolicyMap](#servicetypehealthpolicymap)
 
 ## ServiceTypeHealthPolicy
 ### Properties
@@ -222,7 +222,7 @@
 * **maxPercentUnhealthyReplicasPerPartition**: int (Required)
 * **maxPercentUnhealthyServices**: int (Required)
 
-## Dictionary<string,ServiceTypeHealthPolicy>
+## ServiceTypeHealthPolicyMap
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy)
@@ -236,13 +236,14 @@
 * **upgradeDomainTimeout**: string (Required)
 * **upgradeTimeout**: string (Required)
 
-## Dictionary<string,String>
+## ProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## ServiceResourceProperties
 * **Discriminator**: serviceKind
+
 ### Base Properties
 * **correlationScheme**: [ServiceCorrelation](#servicecorrelation)[]
 * **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero'
@@ -255,7 +256,7 @@
 * **servicePackageActivationMode**: 'ExclusiveProcess' | 'SharedProcess'
 * **servicePlacementPolicies**: [ServicePlacementPolicy](#serviceplacementpolicy)[]
 * **serviceTypeName**: string (Required)
-### Stateful
+### StatefulServiceProperties
 #### Properties
 * **dropSourceReplicaOnMove**: bool
 * **hasPersistedState**: bool
@@ -267,7 +268,7 @@
 * **standByReplicaKeepDuration**: string
 * **targetReplicaSetSize**: int
 
-### Stateless
+### StatelessServiceProperties
 #### Properties
 * **instanceCloseDelayDuration**: string
 * **instanceCount**: int (Required)
@@ -283,17 +284,18 @@
 
 ## Partition
 * **Discriminator**: partitionScheme
+
 ### Base Properties
-### Named
+### NamedPartitionScheme
 #### Properties
 * **names**: string[] (Required)
 * **partitionScheme**: 'Named' (Required)
 
-### Singleton
+### SingletonPartitionScheme
 #### Properties
 * **partitionScheme**: 'Singleton' (Required)
 
-### UniformInt64Range
+### UniformInt64RangePartitionScheme
 #### Properties
 * **count**: int (Required)
 * **highKey**: int (Required)
@@ -301,16 +303,16 @@
 * **partitionScheme**: 'UniformInt64Range' (Required)
 
 
-## Named
+## NamedPartitionScheme
 ### Properties
 * **names**: string[] (Required)
 * **partitionScheme**: 'Named' (Required)
 
-## Singleton
+## SingletonPartitionScheme
 ### Properties
 * **partitionScheme**: 'Singleton' (Required)
 
-## UniformInt64Range
+## UniformInt64RangePartitionScheme
 ### Properties
 * **count**: int (Required)
 * **highKey**: int (Required)
@@ -324,15 +326,16 @@
 
 ## ScalingMechanism
 * **Discriminator**: kind
+
 ### Base Properties
-### AddRemoveIncrementalNamedPartition
+### AddRemoveIncrementalNamedPartitionScalingMechanism
 #### Properties
 * **kind**: 'AddRemoveIncrementalNamedPartition' (Required)
 * **maxPartitionCount**: int (Required)
 * **minPartitionCount**: int (Required)
 * **scaleIncrement**: int (Required)
 
-### ScalePartitionInstanceCount
+### PartitionInstanceCountScaleMechanism
 #### Properties
 * **kind**: 'ScalePartitionInstanceCount' (Required)
 * **maxInstanceCount**: int (Required)
@@ -340,14 +343,14 @@
 * **scaleIncrement**: int (Required)
 
 
-## AddRemoveIncrementalNamedPartition
+## AddRemoveIncrementalNamedPartitionScalingMechanism
 ### Properties
 * **kind**: 'AddRemoveIncrementalNamedPartition' (Required)
 * **maxPartitionCount**: int (Required)
 * **minPartitionCount**: int (Required)
 * **scaleIncrement**: int (Required)
 
-## ScalePartitionInstanceCount
+## PartitionInstanceCountScaleMechanism
 ### Properties
 * **kind**: 'ScalePartitionInstanceCount' (Required)
 * **maxInstanceCount**: int (Required)
@@ -356,8 +359,9 @@
 
 ## ScalingTrigger
 * **Discriminator**: kind
+
 ### Base Properties
-### AveragePartitionLoadTrigger
+### AveragePartitionLoadScalingTrigger
 #### Properties
 * **kind**: 'AveragePartitionLoadTrigger' (Required)
 * **lowerLoadThreshold**: int (Required)
@@ -365,7 +369,7 @@
 * **scaleInterval**: string (Required)
 * **upperLoadThreshold**: int (Required)
 
-### AverageServiceLoadTrigger
+### AverageServiceLoadScalingTrigger
 #### Properties
 * **kind**: 'AverageServiceLoadTrigger' (Required)
 * **lowerLoadThreshold**: int (Required)
@@ -374,7 +378,7 @@
 * **upperLoadThreshold**: int (Required)
 
 
-## AveragePartitionLoadTrigger
+## AveragePartitionLoadScalingTrigger
 ### Properties
 * **kind**: 'AveragePartitionLoadTrigger' (Required)
 * **lowerLoadThreshold**: int (Required)
@@ -382,7 +386,7 @@
 * **scaleInterval**: string (Required)
 * **upperLoadThreshold**: int (Required)
 
-## AverageServiceLoadTrigger
+## AverageServiceLoadScalingTrigger
 ### Properties
 * **kind**: 'AverageServiceLoadTrigger' (Required)
 * **lowerLoadThreshold**: int (Required)
@@ -400,57 +404,58 @@
 
 ## ServicePlacementPolicy
 * **Discriminator**: type
+
 ### Base Properties
-### InvalidDomain
+### ServicePlacementInvalidDomainPolicy
 #### Properties
 * **domainName**: string (Required)
 * **type**: 'InvalidDomain' (Required)
 
-### NonPartiallyPlaceService
+### ServicePlacementNonPartiallyPlaceServicePolicy
 #### Properties
 * **type**: 'NonPartiallyPlaceService' (Required)
 
-### PreferredPrimaryDomain
+### ServicePlacementPreferPrimaryDomainPolicy
 #### Properties
 * **domainName**: string (Required)
 * **type**: 'PreferredPrimaryDomain' (Required)
 
-### RequiredDomain
+### ServicePlacementRequiredDomainPolicy
 #### Properties
 * **domainName**: string (Required)
 * **type**: 'RequiredDomain' (Required)
 
-### RequiredDomainDistribution
+### ServicePlacementRequireDomainDistributionPolicy
 #### Properties
 * **domainName**: string (Required)
 * **type**: 'RequiredDomainDistribution' (Required)
 
 
-## InvalidDomain
+## ServicePlacementInvalidDomainPolicy
 ### Properties
 * **domainName**: string (Required)
 * **type**: 'InvalidDomain' (Required)
 
-## NonPartiallyPlaceService
+## ServicePlacementNonPartiallyPlaceServicePolicy
 ### Properties
 * **type**: 'NonPartiallyPlaceService' (Required)
 
-## PreferredPrimaryDomain
+## ServicePlacementPreferPrimaryDomainPolicy
 ### Properties
 * **domainName**: string (Required)
 * **type**: 'PreferredPrimaryDomain' (Required)
 
-## RequiredDomain
+## ServicePlacementRequiredDomainPolicy
 ### Properties
 * **domainName**: string (Required)
 * **type**: 'RequiredDomain' (Required)
 
-## RequiredDomainDistribution
+## ServicePlacementRequireDomainDistributionPolicy
 ### Properties
 * **domainName**: string (Required)
 * **type**: 'RequiredDomainDistribution' (Required)
 
-## Stateful
+## StatefulServiceProperties
 ### Properties
 * **dropSourceReplicaOnMove**: bool
 * **hasPersistedState**: bool
@@ -462,7 +467,7 @@
 * **standByReplicaKeepDuration**: string
 * **targetReplicaSetSize**: int
 
-## Stateless
+## StatelessServiceProperties
 ### Properties
 * **instanceCloseDelayDuration**: string
 * **instanceCount**: int (Required)
@@ -470,7 +475,7 @@
 * **minInstancePercentage**: int
 * **serviceKind**: 'Stateless' (Required)
 
-## Dictionary<string,String>
+## ProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -479,7 +484,7 @@
 ### Properties
 * **provisioningState**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -489,7 +494,7 @@
 * **appPackageUrl**: string (Required)
 * **provisioningState**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -497,13 +502,13 @@
 ## NodeTypeProperties
 ### Properties
 * **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription)
-* **capacities**: [Dictionary<string,String>](#dictionarystringstring)
+* **capacities**: [NodeTypePropertiesCapacities](#nodetypepropertiescapacities)
 * **dataDiskSizeGB**: int (Required)
 * **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription)
 * **isPrimary**: bool (Required)
-* **placementProperties**: [Dictionary<string,String>](#dictionarystringstring)
+* **placementProperties**: [NodeTypePropertiesPlacementProperties](#nodetypepropertiesplacementproperties)
 * **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly)
-* **vmExtensions**: [VMSSExtension](#vmssextension)[]
+* **vmExtensions**: [VmssExtension](#vmssextension)[]
 * **vmImageOffer**: string
 * **vmImagePublisher**: string
 * **vmImageSku**: string
@@ -518,22 +523,22 @@
 * **endPort**: int (Required)
 * **startPort**: int (Required)
 
-## Dictionary<string,String>
+## NodeTypePropertiesCapacities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## NodeTypePropertiesPlacementProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## VMSSExtension
+## VmssExtension
 ### Properties
 * **name**: string (Required)
-* **properties**: [VMSSExtensionProperties](#vmssextensionproperties) (Required)
+* **properties**: [VmssExtensionProperties](#vmssextensionproperties) (Required)
 
-## VMSSExtensionProperties
+## VmssExtensionProperties
 ### Properties
 * **autoUpgradeMinorVersion**: bool
 * **forceUpdateTag**: string
@@ -563,7 +568,7 @@
 * **certificateStore**: string (Required)
 * **certificateUrl**: string (Required)
 
-## Dictionary<string,String>
+## ManagedProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

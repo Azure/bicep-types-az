@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SignalRProperties](#signalrproperties)
 * **sku**: [ResourceSku](#resourcesku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SignalRService/signalR/privateEndpointConnections@2020-05-01
@@ -44,10 +44,10 @@
 ## SignalRFeature
 ### Properties
 * **flag**: 'EnableConnectivityLogs' | 'EnableMessagingLogs' | 'ServiceMode' (Required)
-* **properties**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [SignalRFeatureProperties](#signalrfeatureproperties)
 * **value**: string (Required)
 
-## Dictionary<string,String>
+## SignalRFeatureProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -111,7 +111,7 @@
 * **size**: string (ReadOnly)
 * **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

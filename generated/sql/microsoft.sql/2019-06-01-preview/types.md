@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ManagedDatabaseProperties](#manageddatabaseproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers@2019-06-01-preview
@@ -21,7 +21,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ServerProperties](#serverproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/administrators@2019-06-01-preview
@@ -29,7 +29,7 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'ActiveDirectory' (Required, DeployTimeConstant)
 * **properties**: [AdministratorProperties](#administratorproperties)
 * **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant)
 
@@ -44,7 +44,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DatabaseProperties](#databaseproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/syncGroups@2019-06-01-preview
@@ -101,7 +101,7 @@
 * **storageContainerSasToken**: string
 * **storageContainerUri**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -144,14 +144,14 @@
 * **description**: string (Required)
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## AdministratorProperties
 ### Properties
-* **administratorType**: string (Required)
+* **administratorType**: 'ActiveDirectory' (Required)
 * **azureADOnlyAuthentication**: bool (ReadOnly)
 * **login**: string (Required)
 * **sid**: string (Required)
@@ -200,7 +200,7 @@
 * **size**: string
 * **tier**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -245,7 +245,7 @@
 * **syncAgentId**: string
 * **syncDirection**: 'Bidirectional' | 'OneWayHubToMember' | 'OneWayMemberToHub'
 * **syncMemberAzureDatabaseResourceId**: string
-* **syncState**: 'DeProvisioned' | 'DeProvisionFailed' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'Provisioned' | 'ProvisionFailed' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' (ReadOnly)
+* **syncState**: 'DeProvisionFailed' | 'DeProvisioned' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'ProvisionFailed' | 'Provisioned' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' (ReadOnly)
 * **usePrivateLinkConnection**: bool
 * **userName**: string
 

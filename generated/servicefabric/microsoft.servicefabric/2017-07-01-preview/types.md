@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ClusterProperties](#clusterproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ServiceFabric/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabric/clusters/applications@2017-07-01-preview
@@ -124,14 +124,14 @@
 ## NodeTypeDescription
 ### Properties
 * **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription)
-* **capacities**: [Dictionary<string,String>](#dictionarystringstring)
+* **capacities**: [NodeTypeDescriptionCapacities](#nodetypedescriptioncapacities)
 * **clientConnectionEndpointPort**: int (Required)
 * **durabilityLevel**: 'Bronze' | 'Gold' | 'Silver'
 * **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription)
 * **httpGatewayEndpointPort**: int (Required)
 * **isPrimary**: bool (Required)
 * **name**: string (Required)
-* **placementProperties**: [Dictionary<string,String>](#dictionarystringstring)
+* **placementProperties**: [NodeTypeDescriptionPlacementProperties](#nodetypedescriptionplacementproperties)
 * **reverseProxyEndpointPort**: int
 * **vmInstanceCount**: int (Required)
 
@@ -140,12 +140,12 @@
 * **endPort**: int (Required)
 * **startPort**: int (Required)
 
-## Dictionary<string,String>
+## NodeTypeDescriptionCapacities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## NodeTypeDescriptionPlacementProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -173,7 +173,7 @@
 * **maxPercentUnhealthyApplications**: int
 * **maxPercentUnhealthyNodes**: int
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -183,7 +183,7 @@
 * **maximumNodes**: int
 * **metrics**: [ApplicationMetricDescription](#applicationmetricdescription)[]
 * **minimumNodes**: int
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **parameters**: [ApplicationParameterList](#applicationparameterlist)
 * **provisioningState**: string (ReadOnly)
 * **removeApplicationCapacity**: bool
 * **typeName**: string
@@ -197,7 +197,7 @@
 * **ReservationCapacity**: int
 * **TotalApplicationCapacity**: int
 
-## Dictionary<string,String>
+## ApplicationParameterList
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -214,7 +214,7 @@
 * **ConsiderWarningAsError**: bool
 * **DefaultServiceTypeHealthPolicy**: [ArmServiceTypeHealthPolicy](#armservicetypehealthpolicy)
 * **MaxPercentUnhealthyDeployedApplications**: int
-* **ServiceTypeHealthPolicyMap**: [Dictionary<string,ArmServiceTypeHealthPolicy>](#dictionarystringarmservicetypehealthpolicy)
+* **ServiceTypeHealthPolicyMap**: [ArmServiceTypeHealthPolicyMap](#armservicetypehealthpolicymap)
 
 ## ArmServiceTypeHealthPolicy
 ### Properties
@@ -222,7 +222,7 @@
 * **maxPercentUnhealthyReplicasPerPartition**: int
 * **maxPercentUnhealthyServices**: int
 
-## Dictionary<string,ArmServiceTypeHealthPolicy>
+## ArmServiceTypeHealthPolicyMap
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ArmServiceTypeHealthPolicy](#armservicetypehealthpolicy)
@@ -238,6 +238,7 @@
 
 ## ServiceResourceProperties
 * **Discriminator**: serviceKind
+
 ### Base Properties
 * **correlationScheme**: [ServiceCorrelationDescription](#servicecorrelationdescription)[]
 * **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero'
@@ -247,7 +248,7 @@
 * **serviceLoadMetrics**: [ServiceLoadMetricDescription](#serviceloadmetricdescription)[]
 * **servicePlacementPolicies**: [ServicePlacementPolicyDescription](#serviceplacementpolicydescription)[]
 * **serviceTypeName**: string
-### Stateful
+### StatefulServiceProperties
 #### Properties
 * **hasPersistedState**: bool
 * **minReplicaSetSize**: int
@@ -257,7 +258,7 @@
 * **standByReplicaKeepDuration**: string
 * **targetReplicaSetSize**: int
 
-### Stateless
+### StatelessServiceProperties
 #### Properties
 * **instanceCount**: int
 * **serviceKind**: 'Stateless' (Required)
@@ -270,18 +271,19 @@
 
 ## PartitionSchemeDescription
 * **Discriminator**: PartitionScheme
+
 ### Base Properties
-### Named
+### NamedPartitionSchemeDescription
 #### Properties
 * **Count**: int (Required)
 * **Names**: string[] (Required)
 * **PartitionScheme**: 'Named' (Required)
 
-### Singleton
+### SingletonPartitionSchemeDescription
 #### Properties
 * **PartitionScheme**: 'Singleton' (Required)
 
-### UniformInt64Range
+### UniformInt64RangePartitionSchemeDescription
 #### Properties
 * **Count**: int (Required)
 * **HighKey**: string (Required)
@@ -289,17 +291,17 @@
 * **PartitionScheme**: 'UniformInt64Range' (Required)
 
 
-## Named
+## NamedPartitionSchemeDescription
 ### Properties
 * **Count**: int (Required)
 * **Names**: string[] (Required)
 * **PartitionScheme**: 'Named' (Required)
 
-## Singleton
+## SingletonPartitionSchemeDescription
 ### Properties
 * **PartitionScheme**: 'Singleton' (Required)
 
-## UniformInt64Range
+## UniformInt64RangePartitionSchemeDescription
 ### Properties
 * **Count**: int (Required)
 * **HighKey**: string (Required)
@@ -316,9 +318,10 @@
 
 ## ServicePlacementPolicyDescription
 * **Discriminator**: Type
+
 ### Base Properties
 
-## Stateful
+## StatefulServiceProperties
 ### Properties
 * **hasPersistedState**: bool
 * **minReplicaSetSize**: int
@@ -328,7 +331,7 @@
 * **standByReplicaKeepDuration**: string
 * **targetReplicaSetSize**: int
 
-## Stateless
+## StatelessServiceProperties
 ### Properties
 * **instanceCount**: int
 * **serviceKind**: 'Stateless' (Required)
@@ -340,10 +343,10 @@
 ## ApplicationTypeVersionResourceProperties
 ### Properties
 * **appPackageUrl**: string (Required)
-* **defaultParameterList**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
+* **defaultParameterList**: [ApplicationTypeParameterList](#applicationtypeparameterlist) (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ApplicationTypeParameterList
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

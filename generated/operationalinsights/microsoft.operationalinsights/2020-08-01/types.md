@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ClusterProperties](#clusterproperties)
 * **sku**: [ClusterSku](#clustersku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces@2020-08-01
@@ -22,7 +22,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WorkspaceProperties](#workspaceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces/dataExports@2020-08-01
@@ -43,7 +43,7 @@
 * **kind**: 'ApplicationInsights' | 'AzureActivityLog' | 'AzureAuditLog' | 'ChangeTrackingContentLocation' | 'ChangeTrackingCustomPath' | 'ChangeTrackingDataTypeConfiguration' | 'ChangeTrackingDefaultRegistry' | 'ChangeTrackingLinuxPath' | 'ChangeTrackingPath' | 'ChangeTrackingRegistry' | 'ChangeTrackingServices' | 'CustomLog' | 'CustomLogCollection' | 'DnsAnalytics' | 'GenericDataSource' | 'IISLogs' | 'ImportComputerGroup' | 'Itsm' | 'LinuxChangeTrackingPath' | 'LinuxPerformanceCollection' | 'LinuxPerformanceObject' | 'LinuxSyslog' | 'LinuxSyslogCollection' | 'NetworkMonitoring' | 'Office365' | 'SecurityCenterSecurityWindowsBaselineConfiguration' | 'SecurityEventCollectionConfiguration' | 'SecurityInsightsSecurityEventCollectionConfiguration' | 'SecurityWindowsBaselineConfiguration' | 'SqlDataClassification' | 'WindowsEvent' | 'WindowsPerformanceCounter' | 'WindowsTelemetry' (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: any (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [DataSourceTags](#datasourcetags)
 * **type**: 'Microsoft.OperationalInsights/workspaces/dataSources' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces/linkedServices@2020-08-01
@@ -53,7 +53,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [LinkedServiceProperties](#linkedserviceproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [LinkedServiceTags](#linkedservicetags)
 * **type**: 'Microsoft.OperationalInsights/workspaces/linkedServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces/linkedStorageAccounts@2020-08-01
@@ -83,7 +83,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [StorageInsightProperties](#storageinsightproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [StorageInsightTags](#storageinsighttags)
 * **type**: 'Microsoft.OperationalInsights/workspaces/storageInsightConfigs' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -95,11 +95,11 @@
 ## ClusterProperties
 ### Properties
 * **clusterId**: string (ReadOnly)
-* **keyVaultProperties**: [keyVaultProperties](#keyvaultproperties)
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
 * **nextLink**: string
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' (ReadOnly)
 
-## keyVaultProperties
+## KeyVaultProperties
 ### Properties
 * **keyName**: string
 * **keyVaultUri**: string
@@ -110,7 +110,7 @@
 * **capacity**: int
 * **name**: 'CapacityReservation'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -144,7 +144,7 @@
 * **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' (ReadOnly)
 * **quotaNextResetTime**: string (ReadOnly)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -168,7 +168,7 @@
 ### Properties
 * **eventHubName**: string
 
-## Dictionary<string,String>
+## DataSourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -179,7 +179,7 @@
 * **resourceId**: string
 * **writeAccessResourceId**: string
 
-## Dictionary<string,String>
+## LinkedServiceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -221,7 +221,7 @@
 * **id**: string (Required)
 * **key**: string (Required)
 
-## Dictionary<string,String>
+## StorageInsightTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AzureMonitorPrivateLinkScopeProperties](#azuremonitorprivatelinkscopeproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [PrivateLinkScopesResourceTags](#privatelinkscopesresourcetags)
 * **type**: 'microsoft.insights/privateLinkScopes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Insights/privateLinkScopes/privateEndpointConnections@2019-10-17-preview
@@ -57,7 +57,7 @@
 * **description**: string (Required)
 * **status**: string (Required)
 
-## Dictionary<string,String>
+## PrivateLinkScopesResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

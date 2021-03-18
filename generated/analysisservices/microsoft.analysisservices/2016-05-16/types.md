@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AnalysisServicesServerProperties](#analysisservicesserverproperties)
 * **sku**: [ResourceSku](#resourcesku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.AnalysisServices/servers' (ReadOnly, DeployTimeConstant)
 
 ## AnalysisServicesServerProperties
@@ -32,7 +32,7 @@
 * **name**: string (Required)
 * **tier**: 'Basic' | 'Development' | 'Standard'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

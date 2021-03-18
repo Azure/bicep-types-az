@@ -3,20 +3,21 @@
 ## Resource Microsoft.TimeSeriesInsights/environments@2020-05-15
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
+
 ### Base Properties
 * **apiVersion**: '2020-05-15' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **sku**: [Sku](#sku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [CreateOrUpdateTrackedResourcePropertiesTags](#createorupdatetrackedresourcepropertiestags)
 * **type**: 'Microsoft.TimeSeriesInsights/environments' (ReadOnly, DeployTimeConstant)
-### Gen1
+### Gen1EnvironmentCreateOrUpdateParameters
 #### Properties
 * **kind**: 'Gen1' (Required)
 * **properties**: [Gen1EnvironmentCreationProperties](#gen1environmentcreationproperties) (Required)
 
-### Gen2
+### Gen2EnvironmentCreateOrUpdateParameters
 #### Properties
 * **kind**: 'Gen2' (Required)
 * **properties**: [Gen2EnvironmentCreationProperties](#gen2environmentcreationproperties) (Required)
@@ -34,20 +35,21 @@
 ## Resource Microsoft.TimeSeriesInsights/environments/eventSources@2020-05-15
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
+
 ### Base Properties
 * **apiVersion**: '2020-05-15' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **localTimestamp**: [LocalTimestamp](#localtimestamp) (WriteOnly)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [CreateOrUpdateTrackedResourcePropertiesTags](#createorupdatetrackedresourcepropertiestags)
 * **type**: 'Microsoft.TimeSeriesInsights/environments/eventSources' (ReadOnly, DeployTimeConstant)
-### Microsoft.EventHub
+### EventHubEventSourceCreateOrUpdateParameters
 #### Properties
 * **kind**: 'Microsoft.EventHub' (Required)
 * **properties**: [EventHubEventSourceCreationProperties](#eventhubeventsourcecreationproperties) (Required)
 
-### Microsoft.IoTHub
+### IoTHubEventSourceCreateOrUpdateParameters
 #### Properties
 * **kind**: 'Microsoft.IoTHub' (Required)
 * **properties**: [IoTHubEventSourceCreationProperties](#iothubeventsourcecreationproperties) (Required)
@@ -61,7 +63,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ReferenceDataSetCreationProperties](#referencedatasetcreationproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [CreateOrUpdateTrackedResourcePropertiesTags](#createorupdatetrackedresourcepropertiestags)
 * **type**: 'Microsoft.TimeSeriesInsights/environments/referenceDataSets' (ReadOnly, DeployTimeConstant)
 
 ## Sku
@@ -69,22 +71,24 @@
 * **capacity**: int (Required)
 * **name**: 'L1' | 'P1' | 'S1' | 'S2' (Required)
 
-## Dictionary<string,String>
+## CreateOrUpdateTrackedResourcePropertiesTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Gen1
+## Gen1EnvironmentCreateOrUpdateParameters
 ### Properties
 * **kind**: 'Gen1' (Required)
 * **properties**: [Gen1EnvironmentCreationProperties](#gen1environmentcreationproperties) (Required)
 
 ## Gen1EnvironmentCreationProperties
 ### Properties
+* **creationTime**: string (ReadOnly)
 * **dataAccessFqdn**: string (ReadOnly)
 * **dataAccessId**: string (ReadOnly)
 * **dataRetentionTime**: string (Required)
 * **partitionKeyProperties**: [TimeSeriesIdProperty](#timeseriesidproperty)[]
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **status**: [EnvironmentStatus](#environmentstatus) (ReadOnly)
 * **storageLimitExceededBehavior**: 'PauseIngress' | 'PurgeOldData'
 
@@ -122,7 +126,7 @@
 * **currentCount**: int (ReadOnly)
 * **maxCount**: int (ReadOnly)
 
-## Gen2
+## Gen2EnvironmentCreateOrUpdateParameters
 ### Properties
 * **kind**: 'Gen2' (Required)
 * **properties**: [Gen2EnvironmentCreationProperties](#gen2environmentcreationproperties) (Required)
@@ -156,18 +160,18 @@
 ## LocalTimestamp
 ### Properties
 * **format**: 'Embedded' (WriteOnly)
-* **timeZoneOffset**: [schemas:54_timeZoneOffset](#schemas54timezoneoffset) (WriteOnly)
+* **timeZoneOffset**: [LocalTimestampTimeZoneOffset](#localtimestamptimezoneoffset) (WriteOnly)
 
-## schemas:54_timeZoneOffset
+## LocalTimestampTimeZoneOffset
 ### Properties
 * **propertyName**: string (WriteOnly)
 
-## Dictionary<string,String>
+## CreateOrUpdateTrackedResourcePropertiesTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.EventHub
+## EventHubEventSourceCreateOrUpdateParameters
 ### Properties
 * **kind**: 'Microsoft.EventHub' (Required)
 * **properties**: [EventHubEventSourceCreationProperties](#eventhubeventsourcecreationproperties) (Required)
@@ -179,12 +183,12 @@
 * **eventHubName**: string (Required)
 * **eventSourceResourceId**: string (Required)
 * **keyName**: string (Required)
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **serviceBusNamespace**: string (Required)
 * **sharedAccessKey**: string (Required, WriteOnly)
 * **timestampPropertyName**: string
 
-## Microsoft.IoTHub
+## IoTHubEventSourceCreateOrUpdateParameters
 ### Properties
 * **kind**: 'Microsoft.IoTHub' (Required)
 * **properties**: [IoTHubEventSourceCreationProperties](#iothubeventsourcecreationproperties) (Required)
@@ -196,7 +200,7 @@
 * **eventSourceResourceId**: string (Required)
 * **iotHubName**: string (Required)
 * **keyName**: string (Required)
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **sharedAccessKey**: string (Required, WriteOnly)
 * **timestampPropertyName**: string
 
@@ -212,7 +216,7 @@
 * **name**: string
 * **type**: 'Bool' | 'DateTime' | 'Double' | 'String'
 
-## Dictionary<string,String>
+## CreateOrUpdateTrackedResourcePropertiesTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

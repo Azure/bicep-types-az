@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [CloudServiceProperties](#cloudserviceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [CloudServiceTags](#cloudservicetags)
 * **type**: 'Microsoft.Compute/cloudServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Compute/cloudServices/updateDomains@2020-10-01-preview
@@ -117,7 +117,7 @@
 * **name**: string
 * **tier**: string
 
-## Dictionary<string,String>
+## CloudServiceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

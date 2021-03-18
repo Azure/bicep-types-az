@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ClusterProperties](#clusterproperties)
 * **sku**: [AzureSku](#azuresku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
 
@@ -26,23 +26,24 @@
 ## Resource Microsoft.Kusto/clusters/databases/dataConnections@2019-05-15
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
+
 ### Base Properties
 * **apiVersion**: '2019-05-15' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **type**: 'Microsoft.Kusto/clusters/databases/dataConnections' (ReadOnly, DeployTimeConstant)
-### EventGrid
+### EventGridDataConnection
 #### Properties
 * **kind**: 'EventGrid' (Required)
 * **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties)
 
-### EventHub
+### EventHubDataConnection
 #### Properties
 * **kind**: 'EventHub' (Required)
 * **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties)
 
-### IotHub
+### IotHubDataConnection
 #### Properties
 * **kind**: 'IotHub' (Required)
 * **properties**: [IotHubConnectionProperties](#iothubconnectionproperties)
@@ -83,7 +84,7 @@
 * **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_L16s' | 'Standard_L4s' | 'Standard_L8s' (Required)
 * **tier**: 'Basic' | 'Standard' (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -93,13 +94,13 @@
 * **hotCachePeriod**: string
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
 * **softDeletePeriod**: string
-* **statistics**: [DatabaseStatistics](#databasestatistics)
+* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly)
 
 ## DatabaseStatistics
 ### Properties
 * **size**: int
 
-## EventGrid
+## EventGridDataConnection
 ### Properties
 * **kind**: 'EventGrid' (Required)
 * **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties)
@@ -113,7 +114,7 @@
 * **storageAccountResourceId**: string (Required)
 * **tableName**: string (Required)
 
-## EventHub
+## EventHubDataConnection
 ### Properties
 * **kind**: 'EventHub' (Required)
 * **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties)
@@ -127,7 +128,7 @@
 * **mappingRuleName**: string
 * **tableName**: string
 
-## IotHub
+## IotHubDataConnection
 ### Properties
 * **kind**: 'IotHub' (Required)
 * **properties**: [IotHubConnectionProperties](#iothubconnectionproperties)

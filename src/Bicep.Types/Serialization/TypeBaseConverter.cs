@@ -16,6 +16,7 @@ namespace Azure.Bicep.Types.Serialization
             serializerOptions = new JsonSerializerOptions
             {
                 IgnoreNullValues = true,
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
             };
             serializerOptions.Converters.Add(new TypeReferenceConverter(factory));
         }

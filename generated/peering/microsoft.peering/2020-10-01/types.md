@@ -19,7 +19,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PeeringProperties](#peeringproperties)
 * **sku**: [PeeringSku](#peeringsku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [PeeringTags](#peeringtags)
 * **type**: 'Microsoft.Peering/peerings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Peering/peerings/registeredAsns@2020-10-01
@@ -49,7 +49,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PeeringServiceProperties](#peeringserviceproperties)
 * **sku**: [PeeringServiceSku](#peeringservicesku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [PeeringServiceTags](#peeringservicetags)
 * **type**: 'Microsoft.Peering/peeringServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Peering/peeringServices/prefixes@2020-10-01
@@ -140,7 +140,7 @@
 * **size**: 'Free' | 'Metered' | 'Unlimited'
 * **tier**: 'Basic' | 'Premium'
 
-## Dictionary<string,String>
+## PeeringTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -169,7 +169,7 @@
 ### Properties
 * **name**: string
 
-## Dictionary<string,String>
+## PeeringServiceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

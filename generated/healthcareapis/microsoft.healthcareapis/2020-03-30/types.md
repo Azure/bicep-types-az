@@ -6,12 +6,12 @@
 * **apiVersion**: '2020-03-30' (ReadOnly, DeployTimeConstant)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [schemas:12_identity](#schemas12identity)
-* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required)
+* **identity**: [ServicesResourceIdentity](#servicesresourceidentity)
+* **kind**: 'fhir' | 'fhir-R4' | 'fhir-Stu3' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ServicesProperties](#servicesproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ServicesResourceTags](#servicesresourcetags)
 * **type**: 'Microsoft.HealthcareApis/services' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HealthcareApis/services/privateEndpointConnections@2020-03-30
@@ -23,7 +23,7 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: 'Microsoft.HealthcareApis/services/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
-## schemas:12_identity
+## ServicesResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
@@ -78,7 +78,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
 
 ## PrivateEndpoint
 ### Properties
@@ -90,7 +90,7 @@
 * **description**: string
 * **status**: 'Approved' | 'Pending' | 'Rejected'
 
-## Dictionary<string,String>
+## ServicesResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

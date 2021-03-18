@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DiskAccessProperties](#diskaccessproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/diskAccesses' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Compute/diskEncryptionSets@2020-05-01
@@ -20,7 +20,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [EncryptionSetProperties](#encryptionsetproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/diskEncryptionSets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Compute/disks@2020-05-01
@@ -34,7 +34,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DiskProperties](#diskproperties)
 * **sku**: [DiskSku](#disksku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/disks' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
 
@@ -48,7 +48,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SnapshotProperties](#snapshotproperties)
 * **sku**: [SnapshotSku](#snapshotsku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant)
 
 ## DiskAccessProperties
@@ -68,7 +68,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
 
 ## PrivateEndpoint
 ### Properties
@@ -80,7 +80,7 @@
 * **description**: string
 * **status**: 'Approved' | 'Pending' | 'Rejected'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -107,7 +107,7 @@
 ### Properties
 * **id**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -177,10 +177,10 @@
 
 ## DiskSku
 ### Properties
-* **name**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'UltraSSD_LRS'
+* **name**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | 'UltraSSD_LRS'
 * **tier**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -206,7 +206,7 @@
 * **name**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS'
 * **tier**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

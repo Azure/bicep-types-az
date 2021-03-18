@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [CreateDataLakeAnalyticsAccountProperties](#createdatalakeanalyticsaccountproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [CreateDataLakeAnalyticsAccountParametersTags](#createdatalakeanalyticsaccountparameterstags)
 * **type**: 'Microsoft.DataLakeAnalytics/accounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataLakeAnalytics/accounts/computePolicies@2015-10-01-preview
@@ -152,7 +152,7 @@
 * **subnetId**: string (ReadOnly)
 * **virtualNetworkRuleState**: 'Active' | 'Failed' | 'NetworkSourceDeleted' (ReadOnly)
 
-## Dictionary<string,String>
+## CreateDataLakeAnalyticsAccountParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

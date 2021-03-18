@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WorkspaceProperties](#workspaceproperties) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [WorkspaceCreateParametersTags](#workspacecreateparameterstags)
 * **type**: 'Microsoft.BatchAI/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.BatchAI/workspaces/clusters@2018-05-01
@@ -53,7 +53,7 @@
 * **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly)
 * **provisioningStateTransitionTime**: string (ReadOnly)
 
-## Dictionary<string,String>
+## WorkspaceCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -227,13 +227,13 @@
 * **chainerSettings**: [ChainerSettings](#chainersettings)
 * **cluster**: [ResourceId](#resourceid) (Required)
 * **cntkSettings**: [CNTKsettings](#cntksettings)
-* **constraints**: [schemas:31_constraints](#schemas31constraints)
+* **constraints**: [JobBasePropertiesConstraints](#jobbasepropertiesconstraints)
 * **containerSettings**: [ContainerSettings](#containersettings)
 * **creationTime**: string (ReadOnly)
 * **customMpiSettings**: [CustomMpiSettings](#custommpisettings)
 * **customToolkitSettings**: [CustomToolkitSettings](#customtoolkitsettings)
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]
-* **executionInfo**: [schemas:33_executionInfo](#schemas33executioninfo) (ReadOnly)
+* **executionInfo**: [JobPropertiesExecutionInfo](#jobpropertiesexecutioninfo) (ReadOnly)
 * **executionState**: 'failed' | 'queued' | 'running' | 'succeeded' | 'terminating' (ReadOnly)
 * **executionStateTransitionTime**: string (ReadOnly)
 * **horovodSettings**: [HorovodSettings](#horovodsettings)
@@ -282,7 +282,7 @@
 * **pythonInterpreterPath**: string
 * **pythonScriptFilePath**: string
 
-## schemas:31_constraints
+## JobBasePropertiesConstraints
 ### Properties
 * **maxWallClockTime**: string
 
@@ -312,7 +312,7 @@
 ### Properties
 * **commandLine**: string
 
-## schemas:33_executionInfo
+## JobPropertiesExecutionInfo
 ### Properties
 * **endTime**: string (ReadOnly)
 * **errors**: [BatchAIError](#batchaierror)[] (ReadOnly)

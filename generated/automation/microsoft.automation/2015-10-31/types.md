@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AutomationAccountCreateOrUpdateProperties](#automationaccountcreateorupdateproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [AutomationAccountCreateOrUpdateParametersTags](#automationaccountcreateorupdateparameterstags)
 * **type**: 'Microsoft.Automation/automationAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/certificates@2015-10-31
@@ -29,7 +29,7 @@
 * **location**: string (WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DscCompilationJobCreateProperties](#dsccompilationjobcreateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
+* **tags**: [DscCompilationJobCreateParametersTags](#dsccompilationjobcreateparameterstags) (WriteOnly)
 * **type**: 'Microsoft.Automation/automationAccounts/compilationjobs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/configurations@2015-10-31
@@ -38,10 +38,10 @@
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
+* **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [DscConfigurationCreateOrUpdateProperties](#dscconfigurationcreateorupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [DscConfigurationProperties](#dscconfigurationproperties) (ReadOnly)
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly)
 * **type**: 'Microsoft.Automation/automationAccounts/configurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/connections@2015-10-31
@@ -98,7 +98,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ModuleCreateOrUpdateProperties](#modulecreateorupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ModuleCreateOrUpdateParametersTags](#modulecreateorupdateparameterstags)
 * **type**: 'Microsoft.Automation/automationAccounts/modules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/nodeConfigurations@2015-10-31
@@ -123,7 +123,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [RunbookCreateOrUpdateProperties](#runbookcreateorupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [RunbookCreateOrUpdateParametersTags](#runbookcreateorupdateparameterstags)
 * **type**: 'Microsoft.Automation/automationAccounts/runbooks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/schedules@2015-10-31
@@ -153,7 +153,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WatcherProperties](#watcherproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Automation/automationAccounts/watchers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/webhooks@2015-10-31
@@ -180,7 +180,7 @@
 * **family**: string
 * **name**: 'Basic' | 'Free' (Required)
 
-## Dictionary<string,String>
+## AutomationAccountCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -205,7 +205,7 @@
 * **jobId**: string (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **lastStatusModifiedTime**: string (ReadOnly)
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **parameters**: [DscCompilationJobCreatePropertiesParameters](#dsccompilationjobcreatepropertiesparameters)
 * **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly)
 * **runOn**: string (ReadOnly)
 * **startedBy**: string (ReadOnly)
@@ -217,55 +217,54 @@
 ### Properties
 * **name**: string
 
-## Dictionary<string,String>
+## DscCompilationJobCreatePropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## DscCompilationJobCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## DscConfigurationCreateOrUpdateProperties
+## DscConfigurationProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
-* **description**: string
+* **description**: string (ReadOnly)
 * **jobCount**: int (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
-* **logProgress**: bool (WriteOnly)
-* **logVerbose**: bool
+* **logVerbose**: bool (ReadOnly)
 * **nodeConfigurationCount**: int (ReadOnly)
-* **parameters**: [Dictionary<string,DscConfigurationParameter>](#dictionarystringdscconfigurationparameter)
+* **parameters**: [DscConfigurationPropertiesParameters](#dscconfigurationpropertiesparameters) (ReadOnly)
 * **provisioningState**: 'Succeeded' (ReadOnly)
-* **source**: [ContentSource](#contentsource) (Required)
+* **source**: [ContentSource](#contentsource) (ReadOnly)
 * **state**: 'Edit' | 'New' | 'Published' (ReadOnly)
 
-## Dictionary<string,DscConfigurationParameter>
+## DscConfigurationPropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [DscConfigurationParameter](#dscconfigurationparameter)
 
 ## DscConfigurationParameter
 ### Properties
-* **defaultValue**: string
-* **isMandatory**: bool
-* **position**: int
-* **type**: string
+* **defaultValue**: string (ReadOnly)
+* **isMandatory**: bool (ReadOnly)
+* **position**: int (ReadOnly)
+* **type**: string (ReadOnly)
 
 ## ContentSource
 ### Properties
-* **hash**: [ContentHash](#contenthash)
-* **type**: 'embeddedContent' | 'uri'
-* **value**: string
-* **version**: string
+* **hash**: [ContentHash](#contenthash) (ReadOnly)
+* **type**: 'embeddedContent' | 'uri' (ReadOnly)
+* **value**: string (ReadOnly)
+* **version**: string (ReadOnly)
 
 ## ContentHash
 ### Properties
-* **algorithm**: string (Required)
-* **value**: string (Required)
+* **algorithm**: string (ReadOnly)
+* **value**: string (ReadOnly)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -275,14 +274,14 @@
 * **connectionType**: [ConnectionTypeAssociationProperty](#connectiontypeassociationproperty) (Required)
 * **creationTime**: string (ReadOnly)
 * **description**: string
-* **fieldDefinitionValues**: [Dictionary<string,String>](#dictionarystringstring)
+* **fieldDefinitionValues**: [ConnectionCreateOrUpdatePropertiesFieldDefinitionValues](#connectioncreateorupdatepropertiesfielddefinitionvalues)
 * **lastModifiedTime**: string (ReadOnly)
 
 ## ConnectionTypeAssociationProperty
 ### Properties
 * **name**: string
 
-## Dictionary<string,String>
+## ConnectionCreateOrUpdatePropertiesFieldDefinitionValues
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -291,11 +290,11 @@
 ### Properties
 * **creationTime**: string (ReadOnly)
 * **description**: string (ReadOnly)
-* **fieldDefinitions**: [Dictionary<string,FieldDefinition>](#dictionarystringfielddefinition) (Required)
+* **fieldDefinitions**: [ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions](#connectiontypecreateorupdatepropertiesfielddefinitions) (Required)
 * **isGlobal**: bool
 * **lastModifiedTime**: string (ReadOnly)
 
-## Dictionary<string,FieldDefinition>
+## ConnectionTypeCreateOrUpdatePropertiesFieldDefinitions
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [FieldDefinition](#fielddefinition)
@@ -323,7 +322,7 @@
 * **jobScheduleId**: string (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **lastStatusModifiedTime**: string (ReadOnly)
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **parameters**: [JobCreatePropertiesParameters](#jobcreatepropertiesparameters)
 * **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly)
 * **runbook**: [RunbookAssociationProperty](#runbookassociationproperty) (Required)
 * **runOn**: string
@@ -333,7 +332,7 @@
 * **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly)
 * **statusDetails**: string (ReadOnly)
 
-## Dictionary<string,String>
+## JobCreatePropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -349,12 +348,12 @@
 ## JobScheduleCreateProperties
 ### Properties
 * **jobScheduleId**: string (ReadOnly)
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **parameters**: [JobScheduleCreatePropertiesParameters](#jobschedulecreatepropertiesparameters)
 * **runbook**: [RunbookAssociationProperty](#runbookassociationproperty) (Required)
 * **runOn**: string
 * **schedule**: [ScheduleAssociationProperty](#scheduleassociationproperty) (Required)
 
-## Dictionary<string,String>
+## JobScheduleCreatePropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -384,7 +383,7 @@
 * **code**: string (ReadOnly)
 * **message**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ModuleCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -401,7 +400,7 @@
 * **logProgress**: bool
 * **logVerbose**: bool
 * **outputTypes**: string[] (ReadOnly)
-* **parameters**: [Dictionary<string,RunbookParameter>](#dictionarystringrunbookparameter) (ReadOnly)
+* **parameters**: [RunbookPropertiesParameters](#runbookpropertiesparameters) (ReadOnly)
 * **provisioningState**: 'Succeeded' (ReadOnly)
 * **publishContentLink**: [ContentLink](#contentlink)
 * **runbookType**: 'Graph' | 'GraphPowerShell' | 'GraphPowerShellWorkflow' | 'PowerShell' | 'PowerShellWorkflow' | 'Script' (Required)
@@ -414,9 +413,9 @@
 * **inEdit**: bool
 * **lastModifiedTime**: string
 * **outputTypes**: string[]
-* **parameters**: [Dictionary<string,RunbookParameter>](#dictionarystringrunbookparameter)
+* **parameters**: [RunbookDraftParameters](#runbookdraftparameters)
 
-## Dictionary<string,RunbookParameter>
+## RunbookDraftParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [RunbookParameter](#runbookparameter)
@@ -428,12 +427,12 @@
 * **position**: int
 * **type**: string
 
-## Dictionary<string,RunbookParameter>
+## RunbookPropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [RunbookParameter](#runbookparameter)
 
-## Dictionary<string,String>
+## RunbookCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -482,16 +481,16 @@
 * **lastModifiedBy**: string (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **scriptName**: string
-* **scriptParameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **scriptParameters**: [WatcherPropertiesScriptParameters](#watcherpropertiesscriptparameters)
 * **scriptRunOn**: string
 * **status**: string (ReadOnly)
 
-## Dictionary<string,String>
+## WatcherPropertiesScriptParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -505,12 +504,12 @@
 * **lastInvokedTime**: string (ReadOnly)
 * **lastModifiedBy**: string (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **parameters**: [WebhookCreateOrUpdatePropertiesParameters](#webhookcreateorupdatepropertiesparameters)
 * **runbook**: [RunbookAssociationProperty](#runbookassociationproperty)
 * **runOn**: string
 * **uri**: string
 
-## Dictionary<string,String>
+## WebhookCreateOrUpdatePropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

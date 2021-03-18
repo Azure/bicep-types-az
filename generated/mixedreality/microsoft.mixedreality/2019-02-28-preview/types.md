@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SpatialAnchorsAccountProperties](#spatialanchorsaccountproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.MixedReality/spatialAnchorsAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -23,7 +23,7 @@
 * **accountDomain**: string (ReadOnly)
 * **accountId**: string (ReadOnly)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters)
 * **sku**: [Sku](#sku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [StorageAccountCreateParametersTags](#storageaccountcreateparameterstags)
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant)
 
 ## StorageAccountPropertiesCreateParameters
@@ -36,7 +36,7 @@
 
 ## Encryption
 ### Properties
-* **keySource**: string (Required)
+* **keySource**: 'Microsoft.Storage' (Required)
 * **services**: [EncryptionServices](#encryptionservices)
 
 ## EncryptionServices
@@ -63,7 +63,7 @@
 * **name**: 'Premium_LRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_ZRS' (Required)
 * **tier**: 'Premium' | 'Standard' (ReadOnly)
 
-## Dictionary<string,String>
+## StorageAccountCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

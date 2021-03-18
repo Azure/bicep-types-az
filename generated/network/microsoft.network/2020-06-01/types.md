@@ -10,7 +10,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApplicationGatewayPropertiesFormat](#applicationgatewaypropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/applicationGateways' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
 
@@ -33,7 +33,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WebApplicationFirewallPolicyPropertiesFormat](#webapplicationfirewallpolicypropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/applicationSecurityGroups@2020-06-01
@@ -45,7 +45,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApplicationSecurityGroupPropertiesFormat](#applicationsecuritygrouppropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/applicationSecurityGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/azureFirewalls@2020-06-01
@@ -57,7 +57,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AzureFirewallPropertiesFormat](#azurefirewallpropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/azureFirewalls' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
 
@@ -70,7 +70,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [BastionHostPropertiesFormat](#bastionhostpropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/bastionHosts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/connections@2020-06-01
@@ -82,7 +82,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VirtualNetworkGatewayConnectionPropertiesFormat](#virtualnetworkgatewayconnectionpropertiesformat) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/connections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/customIpPrefixes@2020-06-01
@@ -94,7 +94,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [CustomIpPrefixPropertiesFormat](#customipprefixpropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/customIpPrefixes' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
 
@@ -107,7 +107,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DdosCustomPolicyPropertiesFormat](#ddoscustompolicypropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/ddosCustomPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/ddosProtectionPlans@2020-06-01
@@ -119,7 +119,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DdosProtectionPlanPropertiesFormat](#ddosprotectionplanpropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [DdosProtectionPlanTags](#ddosprotectionplantags)
 * **type**: 'Microsoft.Network/ddosProtectionPlans' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/dscpConfigurations@2020-06-01
@@ -131,7 +131,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DscpConfigurationPropertiesFormat](#dscpconfigurationpropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/dscpConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/expressRouteCircuits@2020-06-01
@@ -144,7 +144,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ExpressRouteCircuitPropertiesFormat](#expressroutecircuitpropertiesformat)
 * **sku**: [ExpressRouteCircuitSku](#expressroutecircuitsku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/expressRouteCircuits' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/expressRouteCircuits/authorizations@2020-06-01
@@ -186,7 +186,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ExpressRouteCrossConnectionProperties](#expressroutecrossconnectionproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/expressRouteCrossConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/expressRouteCrossConnections/peerings@2020-06-01
@@ -208,7 +208,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ExpressRouteGatewayProperties](#expressroutegatewayproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/expressRouteGateways' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/expressRouteGateways/expressRouteConnections@2020-06-01
@@ -230,7 +230,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ExpressRoutePortPropertiesFormat](#expressrouteportpropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/ExpressRoutePorts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/firewallPolicies@2020-06-01
@@ -242,7 +242,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [FirewallPolicyPropertiesFormat](#firewallpolicypropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/firewallPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/firewallPolicies/ruleCollectionGroups@2020-06-01
@@ -264,7 +264,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [IpAllocationPropertiesFormat](#ipallocationpropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/IpAllocations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/ipGroups@2020-06-01
@@ -276,7 +276,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [IpGroupPropertiesFormat](#ipgrouppropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/ipGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/loadBalancers@2020-06-01
@@ -289,7 +289,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [LoadBalancerPropertiesFormat](#loadbalancerpropertiesformat)
 * **sku**: [LoadBalancerSku](#loadbalancersku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/loadBalancers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/loadBalancers/backendAddressPools@2020-06-01
@@ -321,7 +321,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [LocalNetworkGatewayPropertiesFormat](#localnetworkgatewaypropertiesformat) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/localNetworkGateways' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/natGateways@2020-06-01
@@ -334,7 +334,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NatGatewayPropertiesFormat](#natgatewaypropertiesformat)
 * **sku**: [NatGatewaySku](#natgatewaysku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/natGateways' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
 
@@ -347,7 +347,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NetworkInterfacePropertiesFormat](#networkinterfacepropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/networkInterfaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/networkInterfaces/tapConfigurations@2020-06-01
@@ -369,7 +369,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NetworkProfilePropertiesFormat](#networkprofilepropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/networkProfiles' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/networkSecurityGroups@2020-06-01
@@ -381,7 +381,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NetworkSecurityGroupPropertiesFormat](#networksecuritygrouppropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/networkSecurityGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/networkSecurityGroups/securityRules@2020-06-01
@@ -404,7 +404,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NetworkVirtualAppliancePropertiesFormat](#networkvirtualappliancepropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/networkVirtualAppliances' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/networkVirtualAppliances/inboundSecurityRules@2020-06-01
@@ -436,7 +436,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NetworkWatcherPropertiesFormat](#networkwatcherpropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/networkWatchers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/networkWatchers/connectionMonitors@2020-06-01
@@ -448,7 +448,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ConnectionMonitorParameters](#connectionmonitorparameters) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ConnectionMonitorTags](#connectionmonitortags)
 * **type**: 'Microsoft.Network/networkWatchers/connectionMonitors' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/networkWatchers/flowLogs@2020-06-01
@@ -460,7 +460,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [FlowLogPropertiesFormat](#flowlogpropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/networkWatchers/flowLogs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/networkWatchers/packetCaptures@2020-06-01
@@ -482,7 +482,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [P2SVpnGatewayProperties](#p2svpngatewayproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/p2svpnGateways' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/privateEndpoints@2020-06-01
@@ -494,7 +494,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PrivateEndpointProperties](#privateendpointproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/privateEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/privateEndpoints/privateDnsZoneGroups@2020-06-01
@@ -516,7 +516,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PrivateLinkServiceProperties](#privatelinkserviceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/privateLinkServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/privateLinkServices/privateEndpointConnections@2020-06-01
@@ -539,7 +539,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PublicIPAddressPropertiesFormat](#publicipaddresspropertiesformat)
 * **sku**: [PublicIPAddressSku](#publicipaddresssku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/publicIPAddresses' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
 
@@ -553,7 +553,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PublicIPPrefixPropertiesFormat](#publicipprefixpropertiesformat)
 * **sku**: [PublicIPPrefixSku](#publicipprefixsku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/publicIPPrefixes' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
 
@@ -566,7 +566,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [RouteFilterPropertiesFormat](#routefilterpropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/routeFilters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/routeFilters/routeFilterRules@2020-06-01
@@ -589,7 +589,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [RouteTablePropertiesFormat](#routetablepropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/routeTables' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/routeTables/routes@2020-06-01
@@ -611,7 +611,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SecurityPartnerProviderPropertiesFormat](#securitypartnerproviderpropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/securityPartnerProviders' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/serviceEndpointPolicies@2020-06-01
@@ -623,7 +623,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ServiceEndpointPolicyPropertiesFormat](#serviceendpointpolicypropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/serviceEndpointPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/serviceEndpointPolicies/serviceEndpointPolicyDefinitions@2020-06-01
@@ -645,7 +645,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VirtualHubProperties](#virtualhubproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/virtualHubs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/virtualHubs/bgpConnections@2020-06-01
@@ -707,7 +707,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VirtualNetworkGatewayPropertiesFormat](#virtualnetworkgatewaypropertiesformat) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/virtualNetworkGateways' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/virtualNetworks@2020-06-01
@@ -719,7 +719,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VirtualNetworkPropertiesFormat](#virtualnetworkpropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/virtualNetworks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/virtualNetworks/subnets@2020-06-01
@@ -751,7 +751,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VirtualNetworkTapPropertiesFormat](#virtualnetworktappropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/virtualNetworkTaps' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/virtualRouters@2020-06-01
@@ -763,7 +763,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VirtualRouterPropertiesFormat](#virtualrouterpropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/virtualRouters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/virtualRouters/peerings@2020-06-01
@@ -776,18 +776,6 @@
 * **properties**: [VirtualRouterPeeringProperties](#virtualrouterpeeringproperties)
 * **type**: 'Microsoft.Network/virtualRouters/peerings' (ReadOnly, DeployTimeConstant)
 
-## Resource Microsoft.Network/virtualWans@2020-06-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [VirtualWanProperties](#virtualwanproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Network/virtualWans' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.Network/vpnGateways@2020-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -797,7 +785,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VpnGatewayProperties](#vpngatewayproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/vpnGateways' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/vpnGateways/vpnConnections@2020-06-01
@@ -819,7 +807,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VpnServerConfigurationProperties](#vpnserverconfigurationproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/vpnServerConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/vpnSites@2020-06-01
@@ -831,22 +819,22 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VpnSiteProperties](#vpnsiteproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/vpnSites' (ReadOnly, DeployTimeConstant)
 
 ## ManagedServiceIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: [Dictionary<string,Schemas282UserAssignedIdentitiesValue>](#dictionarystringschemas282userassignedidentitiesvalue)
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
+* **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities)
 
-## Dictionary<string,Schemas282UserAssignedIdentitiesValue>
+## ManagedServiceIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [schemas:282_userAssignedIdentitiesValue](#schemas282userassignedidentitiesvalue)
+* **Additional Properties Type**: [Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties](#components1jq1t4ischemasmanagedserviceidentitypropertiesuserassignedidentitiesadditionalproperties)
 
-## schemas:282_userAssignedIdentitiesValue
+## Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
 * **clientId**: string (ReadOnly)
 * **principalId**: string (ReadOnly)
@@ -951,7 +939,7 @@
 * **location**: string
 * **name**: string (ReadOnly)
 * **properties**: [ApplicationSecurityGroupPropertiesFormat](#applicationsecuritygrouppropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
 ## ApplicationSecurityGroupPropertiesFormat
@@ -959,7 +947,7 @@
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **resourceGuid**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1030,7 +1018,7 @@
 * **name**: string (ReadOnly)
 * **properties**: [PublicIPAddressPropertiesFormat](#publicipaddresspropertiesformat)
 * **sku**: [PublicIPAddressSku](#publicipaddresssku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 * **zones**: string[]
 
@@ -1136,7 +1124,7 @@
 * **location**: string
 * **name**: string (ReadOnly)
 * **properties**: [NetworkSecurityGroupPropertiesFormat](#networksecuritygrouppropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
 ## NetworkSecurityGroupPropertiesFormat
@@ -1182,7 +1170,7 @@
 * **location**: string
 * **name**: string (ReadOnly)
 * **properties**: [FlowLogPropertiesFormat](#flowlogpropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
 ## FlowLogPropertiesFormat
@@ -1218,7 +1206,7 @@
 * **days**: int
 * **enabled**: bool
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1230,7 +1218,7 @@
 * **location**: string
 * **name**: string (ReadOnly)
 * **properties**: [NetworkInterfacePropertiesFormat](#networkinterfacepropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
 ## NetworkInterfacePropertiesFormat
@@ -1265,7 +1253,7 @@
 * **location**: string
 * **name**: string (ReadOnly)
 * **properties**: [PrivateEndpointProperties](#privateendpointproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointProperties
@@ -1304,7 +1292,7 @@
 * **description**: string
 * **status**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1329,7 +1317,7 @@
 * **location**: string
 * **name**: string (ReadOnly)
 * **properties**: [VirtualNetworkTapPropertiesFormat](#virtualnetworktappropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
 ## VirtualNetworkTapPropertiesFormat
@@ -1364,17 +1352,17 @@
 * **publicIPPrefix**: [SubResource](#subresource)
 * **subnet**: [Subnet](#subnet)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1400,7 +1388,7 @@
 * **location**: string
 * **name**: string (ReadOnly)
 * **properties**: [RouteTablePropertiesFormat](#routetablepropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
 ## RouteTablePropertiesFormat
@@ -1424,7 +1412,7 @@
 * **nextHopType**: 'Internet' | 'None' | 'VirtualAppliance' | 'VirtualNetworkGateway' | 'VnetLocal' (Required)
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1452,7 +1440,7 @@
 * **location**: string
 * **name**: string (ReadOnly)
 * **properties**: [ServiceEndpointPolicyPropertiesFormat](#serviceendpointpolicypropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
 ## ServiceEndpointPolicyPropertiesFormat
@@ -1476,7 +1464,7 @@
 * **service**: string
 * **serviceResources**: string[]
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1496,7 +1484,7 @@
 ### Properties
 * **name**: 'Basic' | 'Standard'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1758,7 +1746,7 @@
 ### Properties
 * **capacity**: int
 * **name**: 'Standard_Large' | 'Standard_Medium' | 'Standard_Small' | 'Standard_v2' | 'WAF_Large' | 'WAF_Medium' | 'WAF_v2'
-* **tier**: 'Standard_v2' | 'Standard' | 'WAF_v2' | 'WAF'
+* **tier**: 'Standard' | 'Standard_v2' | 'WAF' | 'WAF_v2'
 
 ## ApplicationGatewaySslCertificate
 ### Properties
@@ -1889,7 +1877,7 @@
 * **selector**: string (Required)
 * **selectorMatchOperator**: string (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1913,11 +1901,11 @@
 * **location**: string
 * **name**: string (ReadOnly)
 * **properties**: [ApplicationGatewayPropertiesFormat](#applicationgatewaypropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 * **zones**: string[]
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1979,19 +1967,19 @@
 * **requestBodyCheck**: bool
 * **state**: 'Disabled' | 'Enabled'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## AzureFirewallPropertiesFormat
 ### Properties
-* **additionalProperties**: [Dictionary<string,String>](#dictionarystringstring)
+* **additionalProperties**: [AzureFirewallAdditionalProperties](#azurefirewalladditionalproperties)
 * **applicationRuleCollections**: [AzureFirewallApplicationRuleCollection](#azurefirewallapplicationrulecollection)[]
 * **firewallPolicy**: [SubResource](#subresource)
 * **hubIPAddresses**: [HubIPAddresses](#hubipaddresses)
@@ -2005,7 +1993,7 @@
 * **threatIntelMode**: 'Alert' | 'Deny' | 'Off'
 * **virtualHub**: [SubResource](#subresource)
 
-## Dictionary<string,String>
+## AzureFirewallAdditionalProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2139,7 +2127,7 @@
 * **name**: 'AZFW_Hub' | 'AZFW_VNet'
 * **tier**: 'Premium' | 'Standard'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2165,7 +2153,7 @@
 * **publicIPAddress**: [SubResource](#subresource) (Required)
 * **subnet**: [SubResource](#subresource) (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2175,7 +2163,7 @@
 * **authorizationKey**: string
 * **connectionProtocol**: 'IKEv1' | 'IKEv2'
 * **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown' (ReadOnly)
-* **connectionType**: 'ExpressRoute' | 'IPsec' | 'Vnet2Vnet' | 'VPNClient' (Required)
+* **connectionType**: 'ExpressRoute' | 'IPsec' | 'VPNClient' | 'Vnet2Vnet' (Required)
 * **dpdTimeoutSeconds**: int
 * **egressBytesTransferred**: int (ReadOnly)
 * **enableBgp**: bool
@@ -2213,7 +2201,7 @@
 * **location**: string
 * **name**: string (ReadOnly)
 * **properties**: [LocalNetworkGatewayPropertiesFormat](#localnetworkgatewaypropertiesformat) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
 ## LocalNetworkGatewayPropertiesFormat
@@ -2243,7 +2231,7 @@
 ### Properties
 * **addressPrefixes**: string[]
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2268,7 +2256,7 @@
 * **location**: string
 * **name**: string (ReadOnly)
 * **properties**: [VirtualNetworkGatewayPropertiesFormat](#virtualnetworkgatewaypropertiesformat) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
 ## VirtualNetworkGatewayPropertiesFormat
@@ -2355,12 +2343,12 @@
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **publicCertData**: string (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2373,7 +2361,7 @@
 * **publicIpPrefixes**: [SubResource](#subresource)[] (ReadOnly)
 * **resourceGuid**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2392,7 +2380,7 @@
 * **triggerRateOverride**: string
 * **triggerSensitivityOverride**: 'Default' | 'High' | 'Low' | 'Relaxed'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2403,7 +2391,7 @@
 * **resourceGuid**: string (ReadOnly)
 * **virtualNetworks**: [SubResource](#subresource)[] (ReadOnly)
 
-## Dictionary<string,String>
+## DdosProtectionPlanTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2431,7 +2419,7 @@
 * **end**: int
 * **start**: int
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2510,7 +2498,7 @@
 ### Properties
 * **addressPrefix**: string
 * **authorizationKey**: string
-* **circuitConnectionStatus**: 'Connected' | 'Connecting' | 'Disconnected'
+* **circuitConnectionStatus**: 'Connected' | 'Connecting' | 'Disconnected' (ReadOnly)
 * **expressRouteCircuitPeering**: [SubResource](#subresource)
 * **ipv6CircuitConnectionConfig**: [Ipv6CircuitConnectionConfig](#ipv6circuitconnectionconfig)
 * **peerExpressRouteCircuitPeering**: [SubResource](#subresource)
@@ -2554,7 +2542,7 @@
 ### Properties
 * **addressPrefix**: string
 * **authResourceGuid**: string
-* **circuitConnectionStatus**: 'Connected' | 'Connecting' | 'Disconnected'
+* **circuitConnectionStatus**: 'Connected' | 'Connecting' | 'Disconnected' (ReadOnly)
 * **connectionName**: string
 * **expressRouteCircuitPeering**: [SubResource](#subresource)
 * **peerExpressRouteCircuitPeering**: [SubResource](#subresource)
@@ -2579,7 +2567,7 @@
 * **name**: string
 * **tier**: 'Basic' | 'Local' | 'Premium' | 'Standard'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2626,23 +2614,23 @@
 * **state**: 'Disabled' | 'Enabled'
 * **vlanId**: int
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## ExpressRouteGatewayProperties
 ### Properties
-* **autoScaleConfiguration**: [schemas:692_autoScaleConfiguration](#schemas692autoscaleconfiguration)
+* **autoScaleConfiguration**: [ExpressRouteGatewayPropertiesAutoScaleConfiguration](#expressroutegatewaypropertiesautoscaleconfiguration)
 * **expressRouteConnections**: [ExpressRouteConnection](#expressrouteconnection)[] (ReadOnly)
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **virtualHub**: [VirtualHubId](#virtualhubid) (Required)
 
-## schemas:692_autoScaleConfiguration
+## ExpressRouteGatewayPropertiesAutoScaleConfiguration
 ### Properties
-* **bounds**: [schemas:692_autoScaleConfiguration_bounds](#schemas692autoscaleconfigurationbounds)
+* **bounds**: [ExpressRouteGatewayPropertiesAutoScaleConfigurationBounds](#expressroutegatewaypropertiesautoscaleconfigurationbounds)
 
-## schemas:692_autoScaleConfiguration_bounds
+## ExpressRouteGatewayPropertiesAutoScaleConfigurationBounds
 ### Properties
 * **max**: int
 * **min**: int
@@ -2691,7 +2679,7 @@
 ### Properties
 * **id**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2735,7 +2723,7 @@
 * **cknSecretIdentifier**: string
 * **sciState**: 'Disabled' | 'Enabled'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2762,7 +2750,7 @@
 * **fqdns**: string[]
 * **ipAddresses**: string[]
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2775,6 +2763,7 @@
 
 ## FirewallPolicyRuleCollection
 * **Discriminator**: ruleCollectionType
+
 ### Base Properties
 * **name**: string
 * **priority**: int
@@ -2803,6 +2792,7 @@
 
 ## FirewallPolicyRule
 * **Discriminator**: ruleType
+
 ### Base Properties
 * **description**: string
 * **name**: string
@@ -2888,7 +2878,7 @@
 
 ## IpAllocationPropertiesFormat
 ### Properties
-* **allocationTags**: [Dictionary<string,String>](#dictionarystringstring)
+* **allocationTags**: [IpAllocationPropertiesFormatAllocationTags](#ipallocationpropertiesformatallocationtags)
 * **ipamAllocationId**: string
 * **prefix**: string
 * **prefixLength**: int
@@ -2897,12 +2887,12 @@
 * **type**: 'Hypernet' | 'Undefined'
 * **virtualNetwork**: [SubResource](#subresource) (ReadOnly)
 
-## Dictionary<string,String>
+## IpAllocationPropertiesFormatAllocationTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2913,7 +2903,7 @@
 * **ipAddresses**: string[]
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3013,12 +3003,12 @@
 ### Properties
 * **name**: 'Basic' | 'Standard'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3036,12 +3026,12 @@
 ### Properties
 * **name**: 'Standard'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3097,12 +3087,12 @@
 ### Properties
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3133,7 +3123,7 @@
 * **privateIpAddress**: string (ReadOnly)
 * **publicIpAddress**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3169,7 +3159,7 @@
 ### Properties
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3256,10 +3246,10 @@
 * **path**: string
 * **port**: int
 * **preferHTTPS**: bool
-* **requestHeaders**: [HTTPHeader](#httpheader)[]
+* **requestHeaders**: [HttpHeader](#httpheader)[]
 * **validStatusCodeRanges**: string[]
 
-## HTTPHeader
+## HttpHeader
 ### Properties
 * **name**: string
 * **value**: string
@@ -3287,12 +3277,12 @@
 * **sources**: string[] (Required)
 * **testConfigurations**: string[] (Required)
 
-## Dictionary<string,String>
+## ConnectionMonitorTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3352,12 +3342,12 @@
 * **totalIngressBytesTransferred**: int (ReadOnly)
 * **vpnClientConnectionsCount**: int
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3389,7 +3379,7 @@
 ## PrivateLinkServiceProperties
 ### Properties
 * **alias**: string (ReadOnly)
-* **autoApproval**: [schemas:462_autoApproval](#schemas462autoapproval)
+* **autoApproval**: [PrivateLinkServicePropertiesAutoApproval](#privatelinkservicepropertiesautoapproval)
 * **enableProxyProtocol**: bool
 * **fqdns**: string[]
 * **ipConfigurations**: [PrivateLinkServiceIpConfiguration](#privatelinkserviceipconfiguration)[]
@@ -3397,9 +3387,9 @@
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[] (ReadOnly)
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **visibility**: [schemas:462_visibility](#schemas462visibility)
+* **visibility**: [PrivateLinkServicePropertiesVisibility](#privatelinkservicepropertiesvisibility)
 
-## schemas:462_autoApproval
+## PrivateLinkServicePropertiesAutoApproval
 ### Properties
 * **subscriptions**: string[]
 
@@ -3435,16 +3425,16 @@
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate)
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
-## schemas:462_visibility
+## PrivateLinkServicePropertiesVisibility
 ### Properties
 * **subscriptions**: string[]
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3469,7 +3459,7 @@
 ### Properties
 * **name**: 'Standard'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3494,14 +3484,14 @@
 * **access**: 'Allow' | 'Deny' (Required)
 * **communities**: string[] (Required)
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **routeFilterRuleType**: string (Required)
+* **routeFilterRuleType**: 'Community' (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3513,12 +3503,12 @@
 * **securityProviderName**: 'Checkpoint' | 'IBoss' | 'ZScaler'
 * **virtualHub**: [SubResource](#subresource)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3534,7 +3524,7 @@
 * **p2SVpnGateway**: [SubResource](#subresource)
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **routeTable**: [VirtualHubRouteTable](#virtualhubroutetable)
-* **routingState**: 'Failed' | 'None' | 'Provisioned' | 'Provisioning'
+* **routingState**: 'Failed' | 'None' | 'Provisioned' | 'Provisioning' (ReadOnly)
 * **securityPartnerProvider**: [SubResource](#subresource)
 * **securityProviderName**: string
 * **sku**: string
@@ -3573,7 +3563,7 @@
 * **nextHops**: string[]
 * **nextHopType**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3618,7 +3608,7 @@
 * **publicIPAddress**: [PublicIPAddress](#publicipaddress)
 * **subnet**: [Subnet](#subnet)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3665,12 +3655,12 @@
 * **remoteVirtualNetwork**: [SubResource](#subresource)
 * **useRemoteGateways**: bool
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3684,7 +3674,7 @@
 * **virtualRouterAsn**: int
 * **virtualRouterIps**: string[]
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3694,22 +3684,6 @@
 * **peerAsn**: int
 * **peerIp**: string
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-
-## VirtualWanProperties
-### Properties
-* **allowBranchToBranchTraffic**: bool
-* **allowVnetToVnetTraffic**: bool
-* **disableVpnEncryption**: bool
-* **office365LocalBreakoutCategory**: 'All' | 'None' | 'Optimize' | 'OptimizeAndAllow'
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **type**: string
-* **virtualHubs**: [SubResource](#subresource)[] (ReadOnly)
-* **vpnSites**: [SubResource](#subresource)[] (ReadOnly)
-
-## Dictionary<string,String>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## VpnGatewayProperties
 ### Properties
@@ -3730,7 +3704,7 @@
 ## VpnConnectionProperties
 ### Properties
 * **connectionBandwidth**: int
-* **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown'
+* **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown' (ReadOnly)
 * **dpdTimeoutSeconds**: int
 * **egressBytesTransferred**: int (ReadOnly)
 * **enableBgp**: bool
@@ -3759,7 +3733,7 @@
 ## VpnSiteLinkConnectionProperties
 ### Properties
 * **connectionBandwidth**: int
-* **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown'
+* **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown' (ReadOnly)
 * **egressBytesTransferred**: int (ReadOnly)
 * **enableBgp**: bool
 * **enableRateLimiting**: bool
@@ -3779,7 +3753,7 @@
 * **privateIpAddress**: string
 * **publicIpAddress**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3815,10 +3789,10 @@
 * **location**: string
 * **name**: string (ReadOnly)
 * **properties**: [P2SVpnGatewayProperties](#p2svpngatewayproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3843,7 +3817,7 @@
 * **name**: string
 * **publicCertData**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3903,7 +3877,7 @@
 * **linkProviderName**: string
 * **linkSpeedInMbps**: int
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

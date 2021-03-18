@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ZoneProperties](#zoneproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Network/dnszones' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/dnszones/A@2015-05-04-preview
@@ -108,7 +108,7 @@
 * **maxNumberOfRecordsPerRecordSet**: int (ReadOnly)
 * **numberOfRecordSets**: int
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

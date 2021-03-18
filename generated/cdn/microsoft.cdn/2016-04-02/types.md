@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ProfileProperties](#profileproperties) (ReadOnly)
 * **sku**: [Sku](#sku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ProfileCreateParametersTags](#profilecreateparameterstags)
 * **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Cdn/profiles/endpoints@2016-04-02
@@ -20,7 +20,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [EndpointPropertiesCreateParameters](#endpointpropertiescreateparameters)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [EndpointCreateParametersTags](#endpointcreateparameterstags)
 * **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2016-04-02
@@ -50,7 +50,7 @@
 ### Properties
 * **name**: 'Custom_Verizon' | 'Premium_Verizon' | 'Standard_Akamai' | 'Standard_Verizon'
 
-## Dictionary<string,String>
+## ProfileCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -80,7 +80,7 @@
 * **httpPort**: int
 * **httpsPort**: int
 
-## Dictionary<string,String>
+## EndpointCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

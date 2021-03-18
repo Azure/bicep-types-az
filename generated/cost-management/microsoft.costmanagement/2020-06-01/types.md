@@ -11,7 +11,7 @@
 * **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CostManagement/views@2020-06-01
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
 * **eTag**: string
@@ -115,7 +115,7 @@
 * **createdOn**: string (ReadOnly)
 * **displayName**: string
 * **kpis**: [KpiProperties](#kpiproperties)[]
-* **metric**: 'ActualCost' | 'AHUB' | 'AmortizedCost'
+* **metric**: 'AHUB' | 'ActualCost' | 'AmortizedCost'
 * **modifiedOn**: string (ReadOnly)
 * **pivots**: [PivotProperties](#pivotproperties)[]
 * **query**: [ReportConfigDefinition](#reportconfigdefinition)
@@ -137,25 +137,25 @@
 * **dataset**: [ReportConfigDataset](#reportconfigdataset)
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required)
 * **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod)
-* **type**: string (Required)
+* **type**: 'Usage' (Required)
 
 ## ReportConfigDataset
 ### Properties
-* **aggregation**: [Dictionary<string,ReportConfigAggregation>](#dictionarystringreportconfigaggregation)
+* **aggregation**: [ReportConfigDatasetAggregation](#reportconfigdatasetaggregation)
 * **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration)
 * **filter**: [ReportConfigFilter](#reportconfigfilter)
 * **granularity**: 'Daily' | 'Monthly'
 * **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[]
 * **sorting**: [ReportConfigSorting](#reportconfigsorting)[]
 
-## Dictionary<string,ReportConfigAggregation>
+## ReportConfigDatasetAggregation
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ReportConfigAggregation](#reportconfigaggregation)
 
 ## ReportConfigAggregation
 ### Properties
-* **function**: string (Required)
+* **function**: 'Sum' (Required)
 * **name**: string (Required)
 
 ## ReportConfigDatasetConfiguration

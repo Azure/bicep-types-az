@@ -8,7 +8,7 @@
 * **identity**: [AccountIdentity](#accountidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Automanage/accounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automanage/configurationProfileAssignments@2020-06-30-preview
@@ -28,7 +28,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ConfigurationProfilePreferenceProperties](#configurationprofilepreferenceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Automanage/configurationProfilePreferences' (ReadOnly, DeployTimeConstant)
 
 ## AccountIdentity
@@ -37,7 +37,7 @@
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -76,7 +76,7 @@
 * **schedulePolicy**: string
 * **timeZone**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

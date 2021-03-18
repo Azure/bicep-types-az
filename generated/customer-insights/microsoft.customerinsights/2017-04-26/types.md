@@ -8,7 +8,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [HubPropertiesFormat](#hubpropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.CustomerInsights/hubs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CustomerInsights/hubs/authorizationPolicies@2017-04-26
@@ -133,7 +133,7 @@
 * **minUnits**: int
 * **skuName**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -149,7 +149,7 @@
 ### Properties
 * **connectorId**: int (ReadOnly)
 * **connectorName**: string
-* **connectorProperties**: [Dictionary<string,Object>](#dictionarystringobject) (Required)
+* **connectorProperties**: [ConnectorProperties](#connectorproperties) (Required)
 * **connectorType**: 'AzureBlob' | 'CRM' | 'ExchangeOnline' | 'None' | 'Outbound' | 'Salesforce' (Required)
 * **created**: string (ReadOnly)
 * **description**: string
@@ -159,7 +159,7 @@
 * **state**: 'Created' | 'Creating' | 'Deleting' | 'Expiring' | 'Failed' | 'Ready' (ReadOnly)
 * **tenantId**: string (ReadOnly)
 
-## Dictionary<string,Object>
+## ConnectorProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -213,7 +213,7 @@
 * **acceptLanguage**: string
 * **arraySeparator**: string
 * **columnDelimiter**: string
-* **formatType**: string (Required)
+* **formatType**: 'TextFormat' (Required)
 * **quoteCharacter**: string
 * **quoteEscapeCharacter**: string
 
@@ -227,11 +227,11 @@
 ## InteractionTypeDefinition
 ### Properties
 * **apiEntitySetName**: string
-* **attributes**: [Dictionary<string,IList<String>>](#dictionarystringiliststring)
+* **attributes**: [MetadataDefinitionBaseAttributes](#metadatadefinitionbaseattributes)
 * **dataSourcePrecedenceRules**: [DataSourcePrecedence](#datasourceprecedence)[] (ReadOnly)
 * **defaultDataSource**: [DataSource](#datasource)
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
+* **description**: [MetadataDefinitionBaseDescription](#metadatadefinitionbasedescription)
+* **displayName**: [MetadataDefinitionBaseDisplayName](#metadatadefinitionbasedisplayname)
 * **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship'
 * **fields**: [PropertyDefinition](#propertydefinition)[]
 * **idPropertyNames**: string[]
@@ -239,7 +239,7 @@
 * **isActivity**: bool
 * **largeImage**: string
 * **lastChangedUtc**: string (ReadOnly)
-* **localizedAttributes**: [Dictionary<string,Dictionary<string,String>>](#dictionarystringdictionarystringstring)
+* **localizedAttributes**: [MetadataDefinitionBaseLocalizedAttributes](#metadatadefinitionbaselocalizedattributes)
 * **mediumImage**: string
 * **participantProfiles**: [Participant](#participant)[]
 * **primaryParticipantProfilePropertyName**: string
@@ -250,7 +250,7 @@
 * **timestampFieldName**: string
 * **typeName**: string
 
-## Dictionary<string,IList<String>>
+## MetadataDefinitionBaseAttributes
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
@@ -268,12 +268,12 @@
 * **name**: string (ReadOnly)
 * **status**: 'Active' | 'Deleted' | 'None' (ReadOnly)
 
-## Dictionary<string,String>
+## MetadataDefinitionBaseDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## MetadataDefinitionBaseDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -299,39 +299,39 @@
 
 ## ProfileEnumValidValuesFormat
 ### Properties
-* **localizedValueNames**: [Dictionary<string,String>](#dictionarystringstring)
+* **localizedValueNames**: [ProfileEnumValidValuesFormatLocalizedValueNames](#profileenumvalidvaluesformatlocalizedvaluenames)
 * **value**: int
 
-## Dictionary<string,String>
+## ProfileEnumValidValuesFormatLocalizedValueNames
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,Dictionary<string,String>>
+## MetadataDefinitionBaseLocalizedAttributes
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [Dictionary<string,String>](#dictionarystringstring)
+* **Additional Properties Type**: [DictionaryOfString](#dictionaryofstring)
 
-## Dictionary<string,String>
+## DictionaryOfString
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Participant
 ### Properties
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
+* **description**: [ParticipantDescription](#participantdescription)
+* **displayName**: [ParticipantDisplayName](#participantdisplayname)
 * **participantName**: string (Required)
 * **participantPropertyReferences**: [ParticipantPropertyReference](#participantpropertyreference)[] (Required)
 * **profileTypeName**: string (Required)
 * **role**: string
 
-## Dictionary<string,String>
+## ParticipantDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ParticipantDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -346,8 +346,8 @@
 * **aliases**: [KpiAlias](#kpialias)[]
 * **calculationWindow**: 'Day' | 'Hour' | 'Lifetime' | 'Month' | 'Week' (Required)
 * **calculationWindowFieldName**: string
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
+* **description**: [KpiDefinitionDescription](#kpidefinitiondescription)
+* **displayName**: [KpiDefinitionDisplayName](#kpidefinitiondisplayname)
 * **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required)
 * **entityTypeName**: string (Required)
 * **expression**: string (Required)
@@ -368,12 +368,12 @@
 * **aliasName**: string (Required)
 * **expression**: string (Required)
 
-## Dictionary<string,String>
+## KpiDefinitionDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## KpiDefinitionDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -385,11 +385,11 @@
 
 ## KpiGroupByMetadata
 ### Properties
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
+* **displayName**: [KpiGroupByMetadataDisplayName](#kpigroupbymetadatadisplayname)
 * **fieldName**: string
 * **fieldType**: string
 
-## Dictionary<string,String>
+## KpiGroupByMetadataDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -406,8 +406,8 @@
 
 ## LinkDefinition
 ### Properties
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
+* **description**: [LinkDefinitionDescription](#linkdefinitiondescription)
+* **displayName**: [LinkDefinitionDisplayName](#linkdefinitiondisplayname)
 * **linkName**: string (ReadOnly)
 * **mappings**: [TypePropertiesMapping](#typepropertiesmapping)[]
 * **operationType**: 'Delete' | 'Upsert'
@@ -420,12 +420,12 @@
 * **targetEntityTypeName**: string (Required)
 * **tenantId**: string (ReadOnly)
 
-## Dictionary<string,String>
+## LinkDefinitionDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## LinkDefinitionDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -439,13 +439,13 @@
 ## Prediction
 ### Properties
 * **autoAnalyze**: bool (Required)
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
-* **grades**: [schemas:86_gradesItem](#schemas86gradesitem)[]
+* **description**: [PredictionDescription](#predictiondescription)
+* **displayName**: [PredictionDisplayName](#predictiondisplayname)
+* **grades**: [PredictionGradesItem](#predictiongradesitem)[]
 * **involvedInteractionTypes**: string[]
 * **involvedKpiTypes**: string[]
 * **involvedRelationships**: string[]
-* **mappings**: [schemas:86_mappings](#schemas86mappings) (Required)
+* **mappings**: [PredictionMappings](#predictionmappings) (Required)
 * **negativeOutcomeExpression**: string (Required)
 * **positiveOutcomeExpression**: string (Required)
 * **predictionName**: string
@@ -453,38 +453,38 @@
 * **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
 * **scopeExpression**: string (Required)
 * **scoreLabel**: string (Required)
-* **systemGeneratedEntities**: [schemas:86_systemGeneratedEntities](#schemas86systemgeneratedentities) (ReadOnly)
+* **systemGeneratedEntities**: [PredictionSystemGeneratedEntities](#predictionsystemgeneratedentities) (ReadOnly)
 * **tenantId**: string (ReadOnly)
 
-## Dictionary<string,String>
+## PredictionDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## PredictionDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:86_gradesItem
+## PredictionGradesItem
 ### Properties
 * **gradeName**: string
 * **maxScoreThreshold**: int
 * **minScoreThreshold**: int
 
-## schemas:86_mappings
+## PredictionMappings
 ### Properties
 * **grade**: string (Required)
 * **reason**: string (Required)
 * **score**: string (Required)
 
-## schemas:86_systemGeneratedEntities
+## PredictionSystemGeneratedEntities
 ### Properties
 * **generatedInteractionTypes**: string[]
-* **generatedKpis**: [Dictionary<string,String>](#dictionarystringstring)
+* **generatedKpis**: [PredictionSystemGeneratedEntitiesGeneratedKpis](#predictionsystemgeneratedentitiesgeneratedkpis)
 * **generatedLinks**: string[]
 
-## Dictionary<string,String>
+## PredictionSystemGeneratedEntitiesGeneratedKpis
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -492,15 +492,15 @@
 ## ProfileTypeDefinition
 ### Properties
 * **apiEntitySetName**: string
-* **attributes**: [Dictionary<string,IList<String>>](#dictionarystringiliststring)
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
+* **attributes**: [MetadataDefinitionBaseAttributes](#metadatadefinitionbaseattributes)
+* **description**: [MetadataDefinitionBaseDescription](#metadatadefinitionbasedescription)
+* **displayName**: [MetadataDefinitionBaseDisplayName](#metadatadefinitionbasedisplayname)
 * **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship'
 * **fields**: [PropertyDefinition](#propertydefinition)[]
 * **instancesCount**: int
 * **largeImage**: string
 * **lastChangedUtc**: string (ReadOnly)
-* **localizedAttributes**: [Dictionary<string,Dictionary<string,String>>](#dictionarystringdictionarystringstring)
+* **localizedAttributes**: [MetadataDefinitionBaseLocalizedAttributes](#metadatadefinitionbaselocalizedattributes)
 * **mediumImage**: string
 * **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
 * **schemaItemTypeLink**: string
@@ -510,52 +510,52 @@
 * **timestampFieldName**: string
 * **typeName**: string
 
-## Dictionary<string,IList<String>>
+## MetadataDefinitionBaseAttributes
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
 
-## Dictionary<string,String>
+## MetadataDefinitionBaseDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## MetadataDefinitionBaseDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,Dictionary<string,String>>
+## MetadataDefinitionBaseLocalizedAttributes
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [Dictionary<string,String>](#dictionarystringstring)
+* **Additional Properties Type**: [DictionaryOfString](#dictionaryofstring)
 
-## Dictionary<string,String>
+## DictionaryOfString
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## StrongId
 ### Properties
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
+* **description**: [StrongIdDescription](#strongiddescription)
+* **displayName**: [StrongIdDisplayName](#strongiddisplayname)
 * **keyPropertyNames**: string[] (Required)
 * **strongIdName**: string (Required)
 
-## Dictionary<string,String>
+## StrongIdDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## StrongIdDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## RelationshipLinkDefinition
 ### Properties
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
+* **description**: [RelationshipLinkDefinitionDescription](#relationshiplinkdefinitiondescription)
+* **displayName**: [RelationshipLinkDefinitionDisplayName](#relationshiplinkdefinitiondisplayname)
 * **interactionType**: string (Required)
 * **linkName**: string (ReadOnly)
 * **mappings**: [RelationshipLinkFieldMapping](#relationshiplinkfieldmapping)[]
@@ -566,12 +566,12 @@
 * **relationshipName**: string (Required)
 * **tenantId**: string (ReadOnly)
 
-## Dictionary<string,String>
+## RelationshipLinkDefinitionDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## RelationshipLinkDefinitionDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -590,8 +590,8 @@
 ## RelationshipDefinition
 ### Properties
 * **cardinality**: 'ManyToMany' | 'OneToMany' | 'OneToOne'
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
+* **description**: [RelationshipDefinitionDescription](#relationshipdefinitiondescription)
+* **displayName**: [RelationshipDefinitionDisplayName](#relationshipdefinitiondisplayname)
 * **expiryDateTimeUtc**: string
 * **fields**: [PropertyDefinition](#propertydefinition)[]
 * **lookupMappings**: [RelationshipTypeMapping](#relationshiptypemapping)[]
@@ -602,12 +602,12 @@
 * **relationshipName**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 
-## Dictionary<string,String>
+## RelationshipDefinitionDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## RelationshipDefinitionDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -626,8 +626,8 @@
 * **assignmentName**: string (ReadOnly)
 * **conflationPolicies**: [ResourceSetDescription](#resourcesetdescription)
 * **connectors**: [ResourceSetDescription](#resourcesetdescription)
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
+* **description**: [RoleAssignmentDescription](#roleassignmentdescription)
+* **displayName**: [RoleAssignmentDisplayName](#roleassignmentdisplayname)
 * **interactions**: [ResourceSetDescription](#resourcesetdescription)
 * **kpis**: [ResourceSetDescription](#resourcesetdescription)
 * **links**: [ResourceSetDescription](#resourcesetdescription)
@@ -649,12 +649,12 @@
 * **elements**: string[]
 * **exceptions**: string[]
 
-## Dictionary<string,String>
+## RoleAssignmentDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## RoleAssignmentDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -662,10 +662,10 @@
 ## AssignmentPrincipal
 ### Properties
 * **principalId**: string (Required)
-* **principalMetadata**: [Dictionary<string,String>](#dictionarystringstring)
+* **principalMetadata**: [AssignmentPrincipalMetadata](#assignmentprincipalmetadata)
 * **principalType**: string (Required)
 
-## Dictionary<string,String>
+## AssignmentPrincipalMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -675,12 +675,12 @@
 * **changed**: string (ReadOnly)
 * **created**: string (ReadOnly)
 * **definition**: string (Required)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
+* **displayName**: [ViewDisplayName](#viewdisplayname)
 * **tenantId**: string (ReadOnly)
 * **userId**: string
 * **viewName**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ViewDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

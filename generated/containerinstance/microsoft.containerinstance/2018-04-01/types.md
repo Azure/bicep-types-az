@@ -7,15 +7,15 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:13_properties](#schemas13properties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [ContainerGroupProperties](#containergroupproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant)
 
-## schemas:13_properties
+## ContainerGroupProperties
 ### Properties
 * **containers**: [Container](#container)[] (Required)
 * **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]
-* **instanceView**: [schemas:13_properties_instanceView](#schemas13propertiesinstanceview) (ReadOnly)
+* **instanceView**: [ContainerGroupPropertiesInstanceView](#containergrouppropertiesinstanceview) (ReadOnly)
 * **ipAddress**: [IpAddress](#ipaddress)
 * **osType**: 'Linux' | 'Windows' (Required)
 * **provisioningState**: string (ReadOnly)
@@ -32,7 +32,7 @@
 * **command**: string[]
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]
 * **image**: string (Required)
-* **instanceView**: [schemas:1_instanceView](#schemas1instanceview) (ReadOnly)
+* **instanceView**: [ContainerPropertiesInstanceView](#containerpropertiesinstanceview) (ReadOnly)
 * **ports**: [ContainerPort](#containerport)[]
 * **resources**: [ResourceRequirements](#resourcerequirements) (Required)
 * **volumeMounts**: [VolumeMount](#volumemount)[]
@@ -42,7 +42,7 @@
 * **name**: string (Required)
 * **value**: string (Required)
 
-## schemas:1_instanceView
+## ContainerPropertiesInstanceView
 ### Properties
 * **currentState**: [ContainerState](#containerstate) (ReadOnly)
 * **events**: [Event](#event)[] (ReadOnly)
@@ -98,7 +98,7 @@
 * **server**: string (Required)
 * **username**: string (Required)
 
-## schemas:13_properties_instanceView
+## ContainerGroupPropertiesInstanceView
 ### Properties
 * **events**: [Event](#event)[] (ReadOnly)
 * **state**: string (ReadOnly)
@@ -109,7 +109,7 @@
 * **fqdn**: string (ReadOnly)
 * **ip**: string
 * **ports**: [Port](#port)[] (Required)
-* **type**: string (Required)
+* **type**: 'Public' (Required)
 
 ## Port
 ### Properties
@@ -122,7 +122,7 @@
 * **emptyDir**: any
 * **gitRepo**: [GitRepoVolume](#gitrepovolume)
 * **name**: string (Required)
-* **secret**: [Dictionary<string,String>](#dictionarystringstring)
+* **secret**: [SecretVolume](#secretvolume)
 
 ## AzureFileVolume
 ### Properties
@@ -137,12 +137,12 @@
 * **repository**: string (Required)
 * **revision**: string
 
-## Dictionary<string,String>
+## SecretVolume
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

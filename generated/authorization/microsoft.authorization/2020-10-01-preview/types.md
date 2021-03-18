@@ -49,25 +49,25 @@
 * **requestorId**: string (ReadOnly)
 * **requestType**: 'AdminAssign' | 'AdminExtend' | 'AdminRemove' | 'AdminRenew' | 'AdminUpdate' | 'SelfActivate' | 'SelfDeactivate' | 'SelfExtend' | 'SelfRenew' (Required)
 * **roleDefinitionId**: string (Required)
-* **scheduleInfo**: [schemas:13_scheduleInfo](#schemas13scheduleinfo)
+* **scheduleInfo**: [RoleAssignmentScheduleRequestPropertiesScheduleInfo](#roleassignmentschedulerequestpropertiesscheduleinfo)
 * **scope**: string (ReadOnly)
 * **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' (ReadOnly)
 * **targetRoleAssignmentScheduleId**: string
 * **targetRoleAssignmentScheduleInstanceId**: string
-* **ticketInfo**: [schemas:13_ticketInfo](#schemas13ticketinfo)
+* **ticketInfo**: [RoleAssignmentScheduleRequestPropertiesTicketInfo](#roleassignmentschedulerequestpropertiesticketinfo)
 
-## schemas:13_scheduleInfo
+## RoleAssignmentScheduleRequestPropertiesScheduleInfo
 ### Properties
-* **expiration**: [schemas:13_scheduleInfo_expiration](#schemas13scheduleinfoexpiration)
+* **expiration**: [RoleAssignmentScheduleRequestPropertiesScheduleInfoExpiration](#roleassignmentschedulerequestpropertiesscheduleinfoexpiration)
 * **startDateTime**: string
 
-## schemas:13_scheduleInfo_expiration
+## RoleAssignmentScheduleRequestPropertiesScheduleInfoExpiration
 ### Properties
 * **duration**: string
 * **endDateTime**: string
 * **type**: 'AfterDateTime' | 'AfterDuration' | 'NoExpiration'
 
-## schemas:13_ticketInfo
+## RoleAssignmentScheduleRequestPropertiesTicketInfo
 ### Properties
 * **ticketNumber**: string
 * **ticketSystem**: string
@@ -84,25 +84,25 @@
 * **requestorId**: string (ReadOnly)
 * **requestType**: 'AdminAssign' | 'AdminExtend' | 'AdminRemove' | 'AdminRenew' | 'AdminUpdate' | 'SelfActivate' | 'SelfDeactivate' | 'SelfExtend' | 'SelfRenew' (Required)
 * **roleDefinitionId**: string (Required)
-* **scheduleInfo**: [schemas:31_scheduleInfo](#schemas31scheduleinfo)
+* **scheduleInfo**: [RoleEligibilityScheduleRequestPropertiesScheduleInfo](#roleeligibilityschedulerequestpropertiesscheduleinfo)
 * **scope**: string (ReadOnly)
 * **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' (ReadOnly)
 * **targetRoleEligibilityScheduleId**: string
 * **targetRoleEligibilityScheduleInstanceId**: string
-* **ticketInfo**: [schemas:31_ticketInfo](#schemas31ticketinfo)
+* **ticketInfo**: [RoleEligibilityScheduleRequestPropertiesTicketInfo](#roleeligibilityschedulerequestpropertiesticketinfo)
 
-## schemas:31_scheduleInfo
+## RoleEligibilityScheduleRequestPropertiesScheduleInfo
 ### Properties
-* **expiration**: [schemas:31_scheduleInfo_expiration](#schemas31scheduleinfoexpiration)
+* **expiration**: [RoleEligibilityScheduleRequestPropertiesScheduleInfoExpiration](#roleeligibilityschedulerequestpropertiesscheduleinfoexpiration)
 * **startDateTime**: string
 
-## schemas:31_scheduleInfo_expiration
+## RoleEligibilityScheduleRequestPropertiesScheduleInfoExpiration
 ### Properties
 * **duration**: string
 * **endDateTime**: string
 * **type**: 'AfterDateTime' | 'AfterDuration' | 'NoExpiration'
 
-## schemas:31_ticketInfo
+## RoleEligibilityScheduleRequestPropertiesTicketInfo
 ### Properties
 * **ticketNumber**: string
 * **ticketSystem**: string
@@ -119,6 +119,7 @@
 
 ## RoleManagementPolicyRule
 * **Discriminator**: ruleType
+
 ### Base Properties
 * **id**: string
 * **target**: [RoleManagementPolicyRuleTarget](#rolemanagementpolicyruletarget)
@@ -186,6 +187,7 @@
 
 ## UserSet
 * **Discriminator**: userType
+
 ### Base Properties
 * **isBackup**: bool
 ### SingleUser

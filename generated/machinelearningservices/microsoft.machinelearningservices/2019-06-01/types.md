@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WorkspaceProperties](#workspaceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.MachineLearningServices/workspaces/computes@2019-06-01
@@ -21,7 +21,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [Compute](#compute)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -43,13 +43,14 @@
 * **storageAccount**: string
 * **workspaceId**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Compute
 * **Discriminator**: computeType
+
 ### Base Properties
 * **computeLocation**: string
 * **createdOn**: string (ReadOnly)
@@ -62,17 +63,17 @@
 ### AKS
 #### Properties
 * **computeType**: 'AKS' (Required)
-* **properties**: [schemas:28_properties](#schemas28properties)
+* **properties**: [AKSProperties](#aksproperties)
 
 ### AmlCompute
 #### Properties
 * **computeType**: 'AmlCompute' (Required)
-* **properties**: [schemas:29_properties](#schemas29properties)
+* **properties**: [AmlComputeProperties](#amlcomputeproperties)
 
 ### Databricks
 #### Properties
 * **computeType**: 'Databricks' (Required)
-* **properties**: [schemas:30_properties](#schemas30properties)
+* **properties**: [DatabricksProperties](#databricksproperties)
 
 ### DataFactory
 #### Properties
@@ -81,17 +82,17 @@
 ### DataLakeAnalytics
 #### Properties
 * **computeType**: 'DataLakeAnalytics' (Required)
-* **properties**: [schemas:30_properties](#schemas30properties)
+* **properties**: [DataLakeAnalyticsProperties](#datalakeanalyticsproperties)
 
 ### HDInsight
 #### Properties
 * **computeType**: 'HDInsight' (Required)
-* **properties**: [schemas:30_properties](#schemas30properties)
+* **properties**: [HDInsightProperties](#hdinsightproperties)
 
 ### VirtualMachine
 #### Properties
 * **computeType**: 'VirtualMachine' (Required)
-* **properties**: [schemas:30_properties](#schemas30properties)
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
 
 ## MachineLearningServiceError
@@ -112,9 +113,9 @@
 ## AKS
 ### Properties
 * **computeType**: 'AKS' (Required)
-* **properties**: [schemas:28_properties](#schemas28properties)
+* **properties**: [AKSProperties](#aksproperties)
 
-## schemas:28_properties
+## AKSProperties
 ### Properties
 * **agentCount**: int
 * **agentVMSize**: string
@@ -146,9 +147,9 @@
 ## AmlCompute
 ### Properties
 * **computeType**: 'AmlCompute' (Required)
-* **properties**: [schemas:29_properties](#schemas29properties)
+* **properties**: [AmlComputeProperties](#amlcomputeproperties)
 
-## schemas:29_properties
+## AmlComputeProperties
 ### Properties
 * **allocationState**: 'Resizing' | 'Steady' (ReadOnly)
 * **allocationStateTransitionTime**: string (ReadOnly)
@@ -191,21 +192,11 @@
 ## Databricks
 ### Properties
 * **computeType**: 'Databricks' (Required)
-* **properties**: [schemas:30_properties](#schemas30properties)
+* **properties**: [DatabricksProperties](#databricksproperties)
 
-## schemas:30_properties
+## DatabricksProperties
 ### Properties
-* **address**: string
-* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials)
-* **sshPort**: int
-* **virtualMachineSize**: string
-
-## VirtualMachineSshCredentials
-### Properties
-* **password**: string
-* **privateKeyData**: string
-* **publicKeyData**: string
-* **username**: string
+* **databricksAccessToken**: string
 
 ## DataFactory
 ### Properties
@@ -214,19 +205,43 @@
 ## DataLakeAnalytics
 ### Properties
 * **computeType**: 'DataLakeAnalytics' (Required)
-* **properties**: [schemas:30_properties](#schemas30properties)
+* **properties**: [DataLakeAnalyticsProperties](#datalakeanalyticsproperties)
+
+## DataLakeAnalyticsProperties
+### Properties
+* **dataLakeStoreAccountName**: string
 
 ## HDInsight
 ### Properties
 * **computeType**: 'HDInsight' (Required)
-* **properties**: [schemas:30_properties](#schemas30properties)
+* **properties**: [HDInsightProperties](#hdinsightproperties)
+
+## HDInsightProperties
+### Properties
+* **address**: string
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials)
+* **sshPort**: int
+
+## VirtualMachineSshCredentials
+### Properties
+* **password**: string
+* **privateKeyData**: string
+* **publicKeyData**: string
+* **username**: string
 
 ## VirtualMachine
 ### Properties
 * **computeType**: 'VirtualMachine' (Required)
-* **properties**: [schemas:30_properties](#schemas30properties)
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
-## Dictionary<string,String>
+## VirtualMachineProperties
+### Properties
+* **address**: string
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials)
+* **sshPort**: int
+* **virtualMachineSize**: string
+
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ManagedInstanceProperties](#managedinstanceproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/managedInstances' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers@2015-05-01-preview
@@ -23,7 +23,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ServerProperties](#serverproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/auditingSettings@2015-05-01-preview
@@ -32,7 +32,7 @@
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [DatabaseBlobAuditingPolicyProperties](#databaseblobauditingpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/databases/auditingSettings' (ReadOnly, DeployTimeConstant)
 
@@ -61,7 +61,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'current' (Required, DeployTimeConstant)
 * **properties**: [EncryptionProtectorProperties](#encryptionprotectorproperties)
 * **type**: 'Microsoft.Sql/servers/encryptionProtector' (ReadOnly, DeployTimeConstant)
 
@@ -73,7 +73,7 @@
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [FailoverGroupProperties](#failovergroupproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [FailoverGroupTags](#failovergrouptags)
 * **type**: 'Microsoft.Sql/servers/failoverGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/firewallRules@2015-05-01-preview
@@ -151,7 +151,7 @@
 * **size**: string
 * **tier**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -164,7 +164,7 @@
 * **state**: string (ReadOnly)
 * **version**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -217,7 +217,7 @@
 * **sqlServerDatabaseId**: string
 * **syncAgentId**: string
 * **syncDirection**: 'Bidirectional' | 'OneWayHubToMember' | 'OneWayMemberToHub'
-* **syncState**: 'DeProvisioned' | 'DeProvisionFailed' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'Provisioned' | 'ProvisionFailed' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' (ReadOnly)
+* **syncState**: 'DeProvisionFailed' | 'DeProvisioned' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'ProvisionFailed' | 'Provisioned' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' (ReadOnly)
 * **userName**: string
 
 ## EncryptionProtectorProperties
@@ -252,7 +252,7 @@
 * **failoverPolicy**: 'Automatic' | 'Manual' (Required)
 * **failoverWithDataLossGracePeriodMinutes**: int
 
-## Dictionary<string,String>
+## FailoverGroupTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -283,6 +283,6 @@
 ## VirtualNetworkRuleProperties
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool
-* **state**: 'Deleting' | 'Initializing' | 'InProgress' | 'Ready' | 'Unknown' (ReadOnly)
+* **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly)
 * **virtualNetworkSubnetId**: string (Required)
 

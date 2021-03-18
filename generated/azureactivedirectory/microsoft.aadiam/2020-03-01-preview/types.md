@@ -11,11 +11,11 @@
 * **resourceGroup**: string
 * **resourceName**: string
 * **subscriptionId**: string
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [PrivateLinkPolicyTags](#privatelinkpolicytags)
 * **tenants**: string[]
 * **type**: 'microsoft.aadiam/privateLinkForAzureAd' (ReadOnly, DeployTimeConstant)
 
-## Dictionary<string,String>
+## PrivateLinkPolicyTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

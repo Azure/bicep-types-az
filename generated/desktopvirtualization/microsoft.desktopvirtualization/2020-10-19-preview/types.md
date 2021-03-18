@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApplicationGroupProperties](#applicationgroupproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DesktopVirtualization/applicationGroups/applications@2020-10-19-preview
@@ -28,7 +28,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [HostPoolProperties](#hostpoolproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DesktopVirtualization/hostPools/msixPackages@2020-10-19-preview
@@ -37,7 +37,7 @@
 * **apiVersion**: '2020-10-19-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [MSIXPackageProperties](#msixpackageproperties) (Required)
+* **properties**: [MsixPackageProperties](#msixpackageproperties) (Required)
 * **type**: 'Microsoft.DesktopVirtualization/hostPools/msixPackages' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DesktopVirtualization/workspaces@2020-10-19-preview
@@ -48,7 +48,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WorkspaceProperties](#workspaceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationGroupProperties
@@ -59,7 +59,7 @@
 * **hostPoolArmPath**: string (Required)
 * **workspaceArmPath**: string (ReadOnly)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -72,7 +72,7 @@
 * **description**: string
 * **filePath**: string
 * **friendlyName**: string
-* **iconContent**: array (ReadOnly)
+* **iconContent**: any (ReadOnly)
 * **iconHash**: string (ReadOnly)
 * **iconIndex**: int
 * **iconPath**: string
@@ -107,12 +107,12 @@
 * **registrationTokenOperation**: 'Delete' | 'None' | 'Update'
 * **token**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## MSIXPackageProperties
+## MsixPackageProperties
 ### Properties
 * **displayName**: string
 * **imagePath**: string
@@ -133,8 +133,8 @@
 * **description**: string
 * **friendlyName**: string
 * **iconImageName**: string
-* **rawIcon**: array
-* **rawPng**: array
+* **rawIcon**: any
+* **rawPng**: any
 
 ## MsixPackageDependencies
 ### Properties
@@ -148,7 +148,7 @@
 * **description**: string
 * **friendlyName**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

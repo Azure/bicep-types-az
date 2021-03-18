@@ -7,11 +7,11 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:0_properties](#schemas0properties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [MultipleActivationKeyProperties](#multipleactivationkeyproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.WindowsESU/multipleActivationKeys' (ReadOnly, DeployTimeConstant)
 
-## schemas:0_properties
+## MultipleActivationKeyProperties
 ### Properties
 * **agreementNumber**: string
 * **expirationDate**: string (ReadOnly)
@@ -22,7 +22,7 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly)
 * **supportType**: 'PremiumAssurance' | 'SupplementalServicing'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

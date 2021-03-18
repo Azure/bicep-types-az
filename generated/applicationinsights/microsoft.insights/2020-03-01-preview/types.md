@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'ServiceProfiler' (Required, DeployTimeConstant)
 * **properties**: [LinkedStorageAccountsProperties](#linkedstorageaccountsproperties)
 * **type**: 'microsoft.insights/components/linkedStorageAccounts' (ReadOnly, DeployTimeConstant)
 

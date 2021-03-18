@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [RegistryPropertiesCreateParameters](#registrypropertiescreateparameters)
 * **sku**: [Sku](#sku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [RegistryCreateParametersTags](#registrycreateparameterstags)
 * **type**: 'Microsoft.ContainerRegistry/registries' (ReadOnly, DeployTimeConstant)
 
 ## RegistryPropertiesCreateParameters
@@ -30,7 +30,7 @@
 * **name**: string (Required)
 * **tier**: 'Basic' (ReadOnly)
 
-## Dictionary<string,String>
+## RegistryCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DomainServiceProperties](#domainserviceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.AAD/domainServices' (ReadOnly, DeployTimeConstant)
 
 ## DomainServiceProperties
@@ -69,7 +69,7 @@
 * **notifyDcAdmins**: 'Disabled' | 'Enabled'
 * **notifyGlobalAdmins**: 'Disabled' | 'Enabled'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

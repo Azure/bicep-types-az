@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [InstancePoolProperties](#instancepoolproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/instancePools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/managedInstances@2018-06-01-preview
@@ -22,7 +22,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ManagedInstanceProperties](#managedinstanceproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/managedInstances' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/managedInstances/databases@2018-06-01-preview
@@ -33,7 +33,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ManagedDatabaseProperties](#manageddatabaseproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies@2018-06-01-preview
@@ -41,7 +41,7 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [BaseLongTermRetentionPolicyProperties](#baselongtermretentionpolicyproperties)
 * **type**: 'Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -50,7 +50,7 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'current' (Required, DeployTimeConstant)
 * **properties**: [SensitivityLabelProperties](#sensitivitylabelproperties)
 * **type**: 'Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant)
 
@@ -59,7 +59,7 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ManagedInstanceVulnerabilityAssessmentProperties](#managedinstancevulnerabilityassessmentproperties)
 * **type**: 'Microsoft.Sql/managedInstances/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
 
@@ -68,7 +68,7 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'ActiveDirectory' (Required, DeployTimeConstant)
 * **properties**: [AdministratorProperties](#administratorproperties)
 * **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant)
 
@@ -77,7 +77,7 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -95,7 +95,7 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties)
 * **type**: 'Microsoft.Sql/servers/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
 
@@ -113,7 +113,7 @@
 * **size**: string
 * **tier**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -147,7 +147,7 @@
 * **timezoneId**: string
 * **vCores**: int
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -170,7 +170,7 @@
 * **storageContainerSasToken**: string
 * **storageContainerUri**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -206,7 +206,7 @@
 
 ## AdministratorProperties
 ### Properties
-* **administratorType**: string (Required)
+* **administratorType**: 'ActiveDirectory' (Required)
 * **login**: string (Required)
 * **sid**: string (Required)
 * **tenantId**: string

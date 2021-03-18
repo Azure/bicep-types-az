@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [RedisCreateProperties](#rediscreateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [RedisCreateParametersTags](#rediscreateparameterstags)
 * **type**: 'Microsoft.Cache/redis' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
 
@@ -35,7 +35,7 @@
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ScheduleEntries](#scheduleentries) (Required)
 * **type**: 'Microsoft.Cache/redis/patchSchedules' (ReadOnly, DeployTimeConstant)
 
@@ -60,7 +60,7 @@
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Disabled' | 'Failed' | 'Linking' | 'Provisioning' | 'RecoveringScaleFailure' | 'Scaling' | 'Succeeded' | 'Unlinking' | 'Unprovisioning' | 'Updating' (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
-* **redisConfiguration**: [Dictionary<string,String>](#dictionarystringstring)
+* **redisConfiguration**: [RedisCommonPropertiesRedisConfiguration](#rediscommonpropertiesredisconfiguration)
 * **redisVersion**: string (ReadOnly)
 * **replicasPerMaster**: int
 * **shardCount**: int
@@ -68,7 +68,7 @@
 * **sslPort**: int (ReadOnly)
 * **staticIP**: string
 * **subnetId**: string
-* **tenantSettings**: [Dictionary<string,String>](#dictionarystringstring)
+* **tenantSettings**: [RedisCommonPropertiesTenantSettings](#rediscommonpropertiestenantsettings)
 
 ## RedisAccessKeys
 ### Properties
@@ -110,7 +110,7 @@
 * **description**: string (ReadOnly)
 * **status**: 'Approved' | 'Pending' | 'Rejected' (ReadOnly)
 
-## Dictionary<string,String>
+## RedisCommonPropertiesRedisConfiguration
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -121,12 +121,12 @@
 * **family**: 'C' | 'P' (Required)
 * **name**: 'Basic' | 'Premium' | 'Standard' (Required)
 
-## Dictionary<string,String>
+## RedisCommonPropertiesTenantSettings
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## RedisCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

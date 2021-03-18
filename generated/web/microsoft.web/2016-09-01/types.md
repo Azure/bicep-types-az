@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AppServiceEnvironment](#appserviceenvironment)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/hostingEnvironments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/hostingEnvironments/multiRolePools@2016-09-01
@@ -42,9 +42,9 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:20_properties](#schemas20properties)
+* **properties**: [AppServicePlanProperties](#appserviceplanproperties)
 * **sku**: [SkuDescription](#skudescription)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/serverfarms' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/serverfarms/virtualNetworkConnections/gateways@2016-09-01
@@ -54,7 +54,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:87_properties](#schemas87properties)
+* **properties**: [VnetGatewayProperties](#vnetgatewayproperties)
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Web/serverfarms/virtualNetworkConnections/routes@2016-09-01
@@ -62,9 +62,9 @@
 ### Properties
 * **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
+* **kind**: string (WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:89_properties](#schemas89properties)
+* **properties**: [VnetRouteProperties](#vnetrouteproperties) (WriteOnly)
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/routes' (ReadOnly, DeployTimeConstant)
 
 ## AppServiceEnvironment
@@ -153,7 +153,7 @@
 * **workerSize**: string
 * **workerSizeId**: int
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -182,7 +182,7 @@
 * **minimum**: int
 * **scaleType**: string
 
-## schemas:20_properties
+## AppServicePlanProperties
 ### Properties
 * **adminSiteName**: string
 * **geoRegion**: string (ReadOnly)
@@ -208,20 +208,20 @@
 * **name**: string (ReadOnly)
 * **type**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:87_properties
+## VnetGatewayProperties
 ### Properties
 * **vnetName**: string
 * **vpnPackageUri**: string (Required)
 
-## schemas:89_properties
+## VnetRouteProperties
 ### Properties
-* **endAddress**: string
-* **name**: string
-* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC'
-* **startAddress**: string
+* **endAddress**: string (WriteOnly)
+* **name**: string (WriteOnly)
+* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC' (WriteOnly)
+* **startAddress**: string (WriteOnly)
 

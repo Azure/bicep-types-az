@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [MachineProperties](#machineproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HybridCompute/machines/extensions@2019-08-02-preview
@@ -21,7 +21,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [MachineExtensionProperties](#machineextensionproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -40,7 +40,7 @@
 * **lastStatusChange**: string (ReadOnly)
 * **machineFqdn**: string (ReadOnly)
 * **osName**: string
-* **osProfile**: [OSProfile](#osprofile)
+* **osProfile**: [OSProfile](#osprofile) (ReadOnly)
 * **osVersion**: string
 * **physicalLocation**: string
 * **provisioningState**: string (ReadOnly)
@@ -57,11 +57,11 @@
 ## MachineExtensionInstanceView
 ### Properties
 * **name**: string
-* **status**: [schemas:20_status](#schemas20status)
+* **status**: [MachineExtensionInstanceViewStatus](#machineextensioninstanceviewstatus)
 * **type**: string
 * **typeHandlerVersion**: string
 
-## schemas:20_status
+## MachineExtensionInstanceViewStatus
 ### Properties
 * **code**: string
 * **displayStatus**: string
@@ -73,7 +73,7 @@
 ### Properties
 * **computerName**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -90,7 +90,7 @@
 * **type**: string
 * **typeHandlerVersion**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

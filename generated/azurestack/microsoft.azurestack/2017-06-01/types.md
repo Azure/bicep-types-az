@@ -6,10 +6,10 @@
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
+* **location**: 'global' (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [RegistrationParameterProperties](#registrationparameterproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly)
 * **type**: 'Microsoft.AzureStack/registrations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.AzureStack/registrations/customerSubscriptions@2017-06-01
@@ -29,7 +29,7 @@
 * **objectId**: string (ReadOnly)
 * **registrationToken**: string (Required, WriteOnly)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

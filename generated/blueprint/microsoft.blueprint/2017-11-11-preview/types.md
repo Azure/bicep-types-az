@@ -23,22 +23,23 @@
 ## Resource Microsoft.Blueprint/blueprints/artifacts@2017-11-11-preview
 * **Valid Scope(s)**: ManagementGroup
 * **Discriminator**: kind
+
 ### Base Properties
 * **apiVersion**: '2017-11-11-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **type**: 'Microsoft.Blueprint/blueprints/artifacts' (ReadOnly, DeployTimeConstant)
-### policyAssignment
+### PolicyAssignmentArtifact
 #### Properties
 * **kind**: 'policyAssignment' (Required)
 * **properties**: [PolicyAssignmentArtifactProperties](#policyassignmentartifactproperties) (Required)
 
-### roleAssignment
+### RoleAssignmentArtifact
 #### Properties
 * **kind**: 'roleAssignment' (Required)
 * **properties**: [RoleAssignmentArtifactProperties](#roleassignmentartifactproperties) (Required)
 
-### template
+### TemplateArtifact
 #### Properties
 * **kind**: 'template' (Required)
 * **properties**: [TemplateArtifactProperties](#templateartifactproperties) (Required)
@@ -65,16 +66,16 @@
 * **description**: string
 * **displayName**: string
 * **locks**: [AssignmentLockSettings](#assignmentlocksettings)
-* **parameters**: [Dictionary<string,ParameterValueBase>](#dictionarystringparametervaluebase) (Required)
+* **parameters**: [ParameterValueCollection](#parametervaluecollection) (Required)
 * **provisioningState**: 'canceled' | 'cancelling' | 'creating' | 'deleting' | 'deploying' | 'failed' | 'locking' | 'succeeded' | 'validating' | 'waiting' (ReadOnly)
-* **resourceGroups**: [Dictionary<string,ResourceGroupValue>](#dictionarystringresourcegroupvalue) (Required)
+* **resourceGroups**: [ResourceGroupValueCollection](#resourcegroupvaluecollection) (Required)
 * **status**: [AssignmentStatus](#assignmentstatus) (ReadOnly)
 
 ## AssignmentLockSettings
 ### Properties
 * **mode**: 'AllResources' | 'None'
 
-## Dictionary<string,ParameterValueBase>
+## ParameterValueCollection
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterValueBase](#parametervaluebase)
@@ -83,7 +84,7 @@
 ### Properties
 * **description**: string
 
-## Dictionary<string,ResourceGroupValue>
+## ResourceGroupValueCollection
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ResourceGroupValue](#resourcegroupvalue)
@@ -103,13 +104,13 @@
 * **description**: string
 * **displayName**: string
 * **layout**: any
-* **parameters**: [Dictionary<string,ParameterDefinition>](#dictionarystringparameterdefinition)
-* **resourceGroups**: [Dictionary<string,ResourceGroupDefinition>](#dictionarystringresourcegroupdefinition)
+* **parameters**: [ParameterDefinitionCollection](#parameterdefinitioncollection)
+* **resourceGroups**: [ResourceGroupDefinitionCollection](#resourcegroupdefinitioncollection)
 * **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly)
 * **targetScope**: 'managementGroup' | 'subscription'
 * **versions**: any
 
-## Dictionary<string,ParameterDefinition>
+## ParameterDefinitionCollection
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterDefinition](#parameterdefinition)
@@ -127,7 +128,7 @@
 * **displayName**: string
 * **strongType**: string
 
-## Dictionary<string,ResourceGroupDefinition>
+## ResourceGroupDefinitionCollection
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ResourceGroupDefinition](#resourcegroupdefinition)
@@ -144,7 +145,7 @@
 * **lastModified**: string (ReadOnly)
 * **timeCreated**: string (ReadOnly)
 
-## policyAssignment
+## PolicyAssignmentArtifact
 ### Properties
 * **kind**: 'policyAssignment' (Required)
 * **properties**: [PolicyAssignmentArtifactProperties](#policyassignmentartifactproperties) (Required)
@@ -154,16 +155,16 @@
 * **dependsOn**: string[]
 * **description**: string
 * **displayName**: string
-* **parameters**: [Dictionary<string,ParameterValueBase>](#dictionarystringparametervaluebase) (Required)
+* **parameters**: [ParameterValueCollection](#parametervaluecollection) (Required)
 * **policyDefinitionId**: string (Required)
 * **resourceGroup**: string
 
-## Dictionary<string,ParameterValueBase>
+## ParameterValueCollection
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterValueBase](#parametervaluebase)
 
-## roleAssignment
+## RoleAssignmentArtifact
 ### Properties
 * **kind**: 'roleAssignment' (Required)
 * **properties**: [RoleAssignmentArtifactProperties](#roleassignmentartifactproperties) (Required)
@@ -177,7 +178,7 @@
 * **resourceGroup**: string
 * **roleDefinitionId**: string (Required)
 
-## template
+## TemplateArtifact
 ### Properties
 * **kind**: 'template' (Required)
 * **properties**: [TemplateArtifactProperties](#templateartifactproperties) (Required)
@@ -187,11 +188,11 @@
 * **dependsOn**: string[]
 * **description**: string
 * **displayName**: string
-* **parameters**: [Dictionary<string,ParameterValueBase>](#dictionarystringparametervaluebase) (Required)
+* **parameters**: [ParameterValueCollection](#parametervaluecollection) (Required)
 * **resourceGroup**: string
 * **template**: any (Required)
 
-## Dictionary<string,ParameterValueBase>
+## ParameterValueCollection
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterValueBase](#parametervaluebase)
@@ -202,17 +203,17 @@
 * **changeNotes**: string (ReadOnly)
 * **description**: string (ReadOnly)
 * **displayName**: string (ReadOnly)
-* **parameters**: [Dictionary<string,ParameterDefinition>](#dictionarystringparameterdefinition) (ReadOnly)
-* **resourceGroups**: [Dictionary<string,ResourceGroupDefinition>](#dictionarystringresourcegroupdefinition) (ReadOnly)
+* **parameters**: [ParameterDefinitionCollection](#parameterdefinitioncollection) (ReadOnly)
+* **resourceGroups**: [ResourceGroupDefinitionCollection](#resourcegroupdefinitioncollection) (ReadOnly)
 * **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly)
 * **targetScope**: 'managementGroup' | 'subscription' (ReadOnly)
 
-## Dictionary<string,ParameterDefinition>
+## ParameterDefinitionCollection
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterDefinition](#parameterdefinition)
 
-## Dictionary<string,ResourceGroupDefinition>
+## ResourceGroupDefinitionCollection
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ResourceGroupDefinition](#resourcegroupdefinition)

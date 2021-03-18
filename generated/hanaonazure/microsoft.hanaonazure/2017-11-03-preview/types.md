@@ -8,7 +8,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [HanaInstanceProperties](#hanainstanceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.HanaOnAzure/hanaInstances' (ReadOnly, DeployTimeConstant)
 
 ## HanaInstanceProperties
@@ -56,7 +56,7 @@
 * **lun**: int (ReadOnly)
 * **name**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

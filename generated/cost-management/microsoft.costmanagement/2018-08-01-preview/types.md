@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ConnectorProperties](#connectorproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ConnectorDefinitionTags](#connectordefinitiontags)
 * **type**: 'Microsoft.CostManagement/connectors' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CostManagement/reports@2018-08-01-preview
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ReportProperties](#reportproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly)
 * **type**: 'Microsoft.CostManagement/reports' (ReadOnly, DeployTimeConstant)
 
 ## ConnectorProperties
@@ -47,7 +47,7 @@
 * **errorMessage**: string (ReadOnly)
 * **errorStartTime**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ConnectorDefinitionTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -64,24 +64,24 @@
 * **dataset**: [ReportDataset](#reportdataset)
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' (Required)
 * **timePeriod**: [ReportTimePeriod](#reporttimeperiod)
-* **type**: string (Required)
+* **type**: 'Usage' (Required)
 
 ## ReportDataset
 ### Properties
-* **aggregation**: [Dictionary<string,ReportAggregation>](#dictionarystringreportaggregation)
+* **aggregation**: [ReportDatasetAggregation](#reportdatasetaggregation)
 * **configuration**: [ReportDatasetConfiguration](#reportdatasetconfiguration)
 * **filter**: [ReportFilter](#reportfilter)
 * **granularity**: 'Daily' | 'Hourly'
 * **grouping**: [ReportGrouping](#reportgrouping)[]
 
-## Dictionary<string,ReportAggregation>
+## ReportDatasetAggregation
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ReportAggregation](#reportaggregation)
 
 ## ReportAggregation
 ### Properties
-* **function**: string (Required)
+* **function**: 'Sum' (Required)
 * **name**: string (Required)
 
 ## ReportDatasetConfiguration
@@ -99,7 +99,7 @@
 ## ReportComparisonExpression
 ### Properties
 * **name**: string (Required)
-* **operator**: string (Required)
+* **operator**: 'In' (Required)
 * **values**: string[] (Required)
 
 ## ReportGrouping
@@ -133,7 +133,7 @@
 * **from**: string (Required)
 * **to**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

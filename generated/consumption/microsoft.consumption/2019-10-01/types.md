@@ -13,10 +13,10 @@
 ## BudgetProperties
 ### Properties
 * **amount**: int (Required)
-* **category**: string (Required)
+* **category**: 'Cost' (Required)
 * **currentSpend**: [CurrentSpend](#currentspend) (ReadOnly)
 * **filter**: [BudgetFilter](#budgetfilter)
-* **notifications**: [Dictionary<string,Notification>](#dictionarystringnotification)
+* **notifications**: [BudgetPropertiesNotifications](#budgetpropertiesnotifications)
 * **timeGrain**: 'Annually' | 'BillingAnnual' | 'BillingMonth' | 'BillingQuarter' | 'Monthly' | 'Quarterly' (Required)
 * **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required)
 
@@ -40,10 +40,10 @@
 ## BudgetComparisonExpression
 ### Properties
 * **name**: string (Required)
-* **operator**: string (Required)
+* **operator**: 'In' (Required)
 * **values**: string[] (Required)
 
-## Dictionary<string,Notification>
+## BudgetPropertiesNotifications
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [Notification](#notification)

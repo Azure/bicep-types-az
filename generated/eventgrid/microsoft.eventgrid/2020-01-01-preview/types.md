@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DomainProperties](#domainproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/domains/topics@2020-01-01-preview
@@ -37,7 +37,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [TopicProperties](#topicproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
 ## DomainProperties
@@ -50,14 +50,15 @@
 
 ## InputSchemaMapping
 * **Discriminator**: inputSchemaMappingType
+
 ### Base Properties
-### Json
+### JsonInputSchemaMapping
 #### Properties
 * **inputSchemaMappingType**: 'Json' (Required)
 * **properties**: [JsonInputSchemaMappingProperties](#jsoninputschemamappingproperties)
 
 
-## Json
+## JsonInputSchemaMapping
 ### Properties
 * **inputSchemaMappingType**: 'Json' (Required)
 * **properties**: [JsonInputSchemaMappingProperties](#jsoninputschemamappingproperties)
@@ -80,7 +81,7 @@
 ### Properties
 * **sourceField**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -103,14 +104,15 @@
 
 ## DeadLetterDestination
 * **Discriminator**: endpointType
+
 ### Base Properties
-### StorageBlob
+### StorageBlobDeadLetterDestination
 #### Properties
 * **endpointType**: 'StorageBlob' (Required)
 * **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties)
 
 
-## StorageBlob
+## StorageBlobDeadLetterDestination
 ### Properties
 * **endpointType**: 'StorageBlob' (Required)
 * **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties)
@@ -122,44 +124,45 @@
 
 ## EventSubscriptionDestination
 * **Discriminator**: endpointType
+
 ### Base Properties
-### AzureFunction
+### AzureFunctionEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'AzureFunction' (Required)
 * **properties**: [AzureFunctionEventSubscriptionDestinationProperties](#azurefunctioneventsubscriptiondestinationproperties)
 
-### EventHub
+### EventHubEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'EventHub' (Required)
 * **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties)
 
-### HybridConnection
+### HybridConnectionEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'HybridConnection' (Required)
 * **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties)
 
-### ServiceBusQueue
+### ServiceBusQueueEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'ServiceBusQueue' (Required)
 * **properties**: [ServiceBusQueueEventSubscriptionDestinationProperties](#servicebusqueueeventsubscriptiondestinationproperties)
 
-### ServiceBusTopic
+### ServiceBusTopicEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'ServiceBusTopic' (Required)
 * **properties**: [ServiceBusTopicEventSubscriptionDestinationProperties](#servicebustopiceventsubscriptiondestinationproperties)
 
-### StorageQueue
+### StorageQueueEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'StorageQueue' (Required)
 * **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties)
 
-### WebHook
+### WebHookEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'WebHook' (Required)
 * **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties)
 
 
-## AzureFunction
+## AzureFunctionEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'AzureFunction' (Required)
 * **properties**: [AzureFunctionEventSubscriptionDestinationProperties](#azurefunctioneventsubscriptiondestinationproperties)
@@ -170,7 +173,7 @@
 * **preferredBatchSizeInKilobytes**: int
 * **resourceId**: string
 
-## EventHub
+## EventHubEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'EventHub' (Required)
 * **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties)
@@ -179,7 +182,7 @@
 ### Properties
 * **resourceId**: string
 
-## HybridConnection
+## HybridConnectionEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'HybridConnection' (Required)
 * **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties)
@@ -188,7 +191,7 @@
 ### Properties
 * **resourceId**: string
 
-## ServiceBusQueue
+## ServiceBusQueueEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'ServiceBusQueue' (Required)
 * **properties**: [ServiceBusQueueEventSubscriptionDestinationProperties](#servicebusqueueeventsubscriptiondestinationproperties)
@@ -197,7 +200,7 @@
 ### Properties
 * **resourceId**: string
 
-## ServiceBusTopic
+## ServiceBusTopicEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'ServiceBusTopic' (Required)
 * **properties**: [ServiceBusTopicEventSubscriptionDestinationProperties](#servicebustopiceventsubscriptiondestinationproperties)
@@ -206,7 +209,7 @@
 ### Properties
 * **resourceId**: string
 
-## StorageQueue
+## StorageQueueEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'StorageQueue' (Required)
 * **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties)
@@ -216,7 +219,7 @@
 * **queueName**: string
 * **resourceId**: string
 
-## WebHook
+## WebHookEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'WebHook' (Required)
 * **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties)
@@ -240,125 +243,126 @@
 
 ## AdvancedFilter
 * **Discriminator**: operatorType
+
 ### Base Properties
 * **key**: string
-### BoolEquals
+### BoolEqualsAdvancedFilter
 #### Properties
 * **operatorType**: 'BoolEquals' (Required)
 * **value**: bool
 
-### NumberGreaterThan
+### NumberGreaterThanAdvancedFilter
 #### Properties
 * **operatorType**: 'NumberGreaterThan' (Required)
 * **value**: int
 
-### NumberGreaterThanOrEquals
+### NumberGreaterThanOrEqualsAdvancedFilter
 #### Properties
 * **operatorType**: 'NumberGreaterThanOrEquals' (Required)
 * **value**: int
 
-### NumberIn
+### NumberInAdvancedFilter
 #### Properties
 * **operatorType**: 'NumberIn' (Required)
 * **values**: int[]
 
-### NumberLessThan
+### NumberLessThanAdvancedFilter
 #### Properties
 * **operatorType**: 'NumberLessThan' (Required)
 * **value**: int
 
-### NumberLessThanOrEquals
+### NumberLessThanOrEqualsAdvancedFilter
 #### Properties
 * **operatorType**: 'NumberLessThanOrEquals' (Required)
 * **value**: int
 
-### NumberNotIn
+### NumberNotInAdvancedFilter
 #### Properties
 * **operatorType**: 'NumberNotIn' (Required)
 * **values**: int[]
 
-### StringBeginsWith
+### StringBeginsWithAdvancedFilter
 #### Properties
 * **operatorType**: 'StringBeginsWith' (Required)
 * **values**: string[]
 
-### StringContains
+### StringContainsAdvancedFilter
 #### Properties
 * **operatorType**: 'StringContains' (Required)
 * **values**: string[]
 
-### StringEndsWith
+### StringEndsWithAdvancedFilter
 #### Properties
 * **operatorType**: 'StringEndsWith' (Required)
 * **values**: string[]
 
-### StringIn
+### StringInAdvancedFilter
 #### Properties
 * **operatorType**: 'StringIn' (Required)
 * **values**: string[]
 
-### StringNotIn
+### StringNotInAdvancedFilter
 #### Properties
 * **operatorType**: 'StringNotIn' (Required)
 * **values**: string[]
 
 
-## BoolEquals
+## BoolEqualsAdvancedFilter
 ### Properties
 * **operatorType**: 'BoolEquals' (Required)
 * **value**: bool
 
-## NumberGreaterThan
+## NumberGreaterThanAdvancedFilter
 ### Properties
 * **operatorType**: 'NumberGreaterThan' (Required)
 * **value**: int
 
-## NumberGreaterThanOrEquals
+## NumberGreaterThanOrEqualsAdvancedFilter
 ### Properties
 * **operatorType**: 'NumberGreaterThanOrEquals' (Required)
 * **value**: int
 
-## NumberIn
+## NumberInAdvancedFilter
 ### Properties
 * **operatorType**: 'NumberIn' (Required)
 * **values**: int[]
 
-## NumberLessThan
+## NumberLessThanAdvancedFilter
 ### Properties
 * **operatorType**: 'NumberLessThan' (Required)
 * **value**: int
 
-## NumberLessThanOrEquals
+## NumberLessThanOrEqualsAdvancedFilter
 ### Properties
 * **operatorType**: 'NumberLessThanOrEquals' (Required)
 * **value**: int
 
-## NumberNotIn
+## NumberNotInAdvancedFilter
 ### Properties
 * **operatorType**: 'NumberNotIn' (Required)
 * **values**: int[]
 
-## StringBeginsWith
+## StringBeginsWithAdvancedFilter
 ### Properties
 * **operatorType**: 'StringBeginsWith' (Required)
 * **values**: string[]
 
-## StringContains
+## StringContainsAdvancedFilter
 ### Properties
 * **operatorType**: 'StringContains' (Required)
 * **values**: string[]
 
-## StringEndsWith
+## StringEndsWithAdvancedFilter
 ### Properties
 * **operatorType**: 'StringEndsWith' (Required)
 * **values**: string[]
 
-## StringIn
+## StringInAdvancedFilter
 ### Properties
 * **operatorType**: 'StringIn' (Required)
 * **values**: string[]
 
-## StringNotIn
+## StringNotInAdvancedFilter
 ### Properties
 * **operatorType**: 'StringNotIn' (Required)
 * **values**: string[]
@@ -376,7 +380,7 @@
 * **metricResourceId**: string (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

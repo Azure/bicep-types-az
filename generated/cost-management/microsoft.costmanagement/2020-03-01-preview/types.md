@@ -31,7 +31,7 @@
 ## TargetCostAllocationResource
 ### Properties
 * **name**: string (Required)
-* **policyType**: string (Required)
+* **policyType**: 'FixedProportion' (Required)
 * **resourceType**: 'Dimension' | 'Tag' (Required)
 * **values**: [CostAllocationProportion](#costallocationproportion)[] (Required)
 

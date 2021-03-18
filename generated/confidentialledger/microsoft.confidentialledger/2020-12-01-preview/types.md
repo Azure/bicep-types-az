@@ -8,8 +8,8 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [LedgerProperties](#ledgerproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.ConfidentialLedger/ledgers' (ReadOnly, DeployTimeConstant)
 
 ## LedgerProperties
@@ -27,7 +27,7 @@
 ### Properties
 * **cert**: string
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string
 * **createdBy**: string
@@ -36,7 +36,7 @@
 * **lastModifiedBy**: string
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

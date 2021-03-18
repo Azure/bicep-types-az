@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [RedisCreateProperties](#rediscreateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Cache/Redis' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Cache/Redis/firewallRules@2017-02-01
@@ -47,14 +47,14 @@
 * **linkedServers**: [RedisLinkedServerList](#redislinkedserverlist) (ReadOnly)
 * **port**: int (ReadOnly)
 * **provisioningState**: string (ReadOnly)
-* **redisConfiguration**: [Dictionary<string,String>](#dictionarystringstring)
+* **redisConfiguration**: [RedisPropertiesRedisConfiguration](#redispropertiesredisconfiguration)
 * **redisVersion**: string (ReadOnly)
 * **shardCount**: int
 * **sku**: [Sku](#sku) (Required)
 * **sslPort**: int (ReadOnly)
 * **staticIP**: string
 * **subnetId**: string
-* **tenantSettings**: [Dictionary<string,String>](#dictionarystringstring)
+* **tenantSettings**: [RedisPropertiesTenantSettings](#redispropertiestenantsettings)
 
 ## RedisAccessKeys
 ### Properties
@@ -69,7 +69,7 @@
 ### Properties
 * **id**: string (ReadOnly)
 
-## Dictionary<string,String>
+## RedisPropertiesRedisConfiguration
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -80,12 +80,12 @@
 * **family**: 'C' | 'P' (Required)
 * **name**: 'Basic' | 'Premium' | 'Standard' (Required)
 
-## Dictionary<string,String>
+## RedisPropertiesTenantSettings
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

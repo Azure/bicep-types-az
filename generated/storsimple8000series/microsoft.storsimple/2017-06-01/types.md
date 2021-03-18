@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ManagerProperties](#managerproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.StorSimple/managers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/accessControlRecords@2017-06-01
@@ -125,9 +125,9 @@
 
 ## ManagerSku
 ### Properties
-* **name**: string (Required)
+* **name**: 'Standard' (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -164,7 +164,7 @@
 
 ## BackupPolicyProperties
 ### Properties
-* **backupPolicyCreationType**: 'BySaaS' | 'BySSM' (ReadOnly)
+* **backupPolicyCreationType**: 'BySSM' | 'BySaaS' (ReadOnly)
 * **lastBackupTime**: string (ReadOnly)
 * **nextBackupTime**: string (ReadOnly)
 * **scheduledBackupStatus**: 'Disabled' | 'Enabled' (ReadOnly)

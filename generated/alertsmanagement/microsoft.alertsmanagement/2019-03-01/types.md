@@ -32,10 +32,10 @@
 * **id**: string (Required)
 * **imagePaths**: string[]
 * **name**: string
-* **parameters**: [Dictionary<string,Object>](#dictionarystringobject)
+* **parameters**: [DetectorParameters](#detectorparameters)
 * **supportedResourceTypes**: string[]
 
-## Dictionary<string,Object>
+## DetectorParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any

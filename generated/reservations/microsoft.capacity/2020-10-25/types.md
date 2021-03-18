@@ -16,7 +16,7 @@
 * **name**: [ResourceName](#resourcename)
 * **properties**: any
 * **quotaPeriod**: string (ReadOnly)
-* **resourceType**: any
+* **resourceType**: 'dedicated' | 'lowPriority' | 'serviceSpecific' | 'shared' | 'standard'
 * **unit**: string
 
 ## ResourceName

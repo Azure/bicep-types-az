@@ -14,7 +14,7 @@
 ### Properties
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [DatabaseVulnerabilityAssessmentProperties](#databasevulnerabilityassessmentproperties)
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
 
@@ -33,7 +33,7 @@
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'current' (Required, DeployTimeConstant)
 * **properties**: [ManagedInstanceEncryptionProtectorProperties](#managedinstanceencryptionprotectorproperties)
 * **type**: 'Microsoft.Sql/managedInstances/encryptionProtector' (ReadOnly, DeployTimeConstant)
 
@@ -58,7 +58,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DatabaseProperties](#databaseproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies@2017-10-01-preview
@@ -66,7 +66,7 @@
 ### Properties
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [BackupShortTermRetentionPolicyProperties](#backupshorttermretentionpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -80,7 +80,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ElasticPoolProperties](#elasticpoolproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/servers/elasticPools' (ReadOnly, DeployTimeConstant)
 
 ## InstanceFailoverGroupProperties
@@ -188,7 +188,7 @@
 * **size**: string
 * **tier**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -211,7 +211,7 @@
 * **maxCapacity**: int
 * **minCapacity**: int
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

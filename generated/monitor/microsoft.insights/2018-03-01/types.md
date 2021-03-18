@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ActionGroup](#actiongroup)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'microsoft.insights/actionGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Insights/metricAlerts@2018-03-01
@@ -19,7 +19,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [MetricAlertProperties](#metricalertproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Insights/metricAlerts' (ReadOnly, DeployTimeConstant)
 
 ## ActionGroup
@@ -95,7 +95,7 @@
 * **name**: string (Required)
 * **serviceUri**: string (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -119,27 +119,28 @@
 ## MetricAlertAction
 ### Properties
 * **actionGroupId**: string
-* **webHookProperties**: [Dictionary<string,String>](#dictionarystringstring)
+* **webHookProperties**: [MetricAlertActionWebHookProperties](#metricalertactionwebhookproperties)
 
-## Dictionary<string,String>
+## MetricAlertActionWebHookProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## MetricAlertCriteria
 * **Discriminator**: odata.type
+
 ### Base Properties
-### Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria
+### MetricAlertMultipleResourceMultipleMetricCriteria
 #### Properties
 * **allOf**: [MultiMetricCriteria](#multimetriccriteria)[]
 * **odata.type**: 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria' (Required)
 
-### Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria
+### MetricAlertSingleResourceMultipleMetricCriteria
 #### Properties
-* **allOf**: [StaticThresholdCriterion](#staticthresholdcriterion)[]
+* **allOf**: [MetricCriteria](#metriccriteria)[]
 * **odata.type**: 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria' (Required)
 
-### Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria
+### WebtestLocationAvailabilityCriteria
 #### Properties
 * **componentId**: string (Required)
 * **failedLocationCount**: int (Required)
@@ -147,13 +148,14 @@
 * **webTestId**: string (Required)
 
 
-## Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria
+## MetricAlertMultipleResourceMultipleMetricCriteria
 ### Properties
 * **allOf**: [MultiMetricCriteria](#multimetriccriteria)[]
 * **odata.type**: 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria' (Required)
 
 ## MultiMetricCriteria
 * **Discriminator**: criterionType
+
 ### Base Properties
 * **dimensions**: [MetricDimension](#metricdimension)[]
 * **metricName**: string (Required)
@@ -161,7 +163,7 @@
 * **name**: string (Required)
 * **skipMetricValidation**: bool
 * **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required)
-### DynamicThresholdCriterion
+### DynamicMetricCriteria
 #### Properties
 * **alertSensitivity**: 'High' | 'Low' | 'Medium' (Required)
 * **criterionType**: 'DynamicThresholdCriterion' (Required)
@@ -169,19 +171,11 @@
 * **ignoreDataBefore**: string
 * **operator**: 'GreaterOrLessThan' | 'GreaterThan' | 'LessThan' (Required)
 
-### StaticThresholdCriterion
+### MetricCriteria
 #### Properties
 * **criterionType**: 'StaticThresholdCriterion' (Required)
-* **dimensions**: [MetricDimension](#metricdimension)[]
-* **metricName**: string (Required)
-* **metricNamespace**: string
-* **name**: string (Required)
 * **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'NotEquals' (Required)
-* **skipMetricValidation**: bool
 * **threshold**: int (Required)
-* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required)
-#### Additional Properties
-* **Additional Properties Type**: any
 
 
 ## MetricDimension
@@ -190,7 +184,7 @@
 * **operator**: string (Required)
 * **values**: string[] (Required)
 
-## DynamicThresholdCriterion
+## DynamicMetricCriteria
 ### Properties
 * **alertSensitivity**: 'High' | 'Low' | 'Medium' (Required)
 * **criterionType**: 'DynamicThresholdCriterion' (Required)
@@ -203,33 +197,25 @@
 * **minFailingPeriodsToAlert**: int (Required)
 * **numberOfEvaluationPeriods**: int (Required)
 
-## StaticThresholdCriterion
+## MetricCriteria
 ### Properties
 * **criterionType**: 'StaticThresholdCriterion' (Required)
-* **dimensions**: [MetricDimension](#metricdimension)[]
-* **metricName**: string (Required)
-* **metricNamespace**: string
-* **name**: string (Required)
 * **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'NotEquals' (Required)
-* **skipMetricValidation**: bool
 * **threshold**: int (Required)
-* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required)
-### Additional Properties
-* **Additional Properties Type**: any
 
-## Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria
+## MetricAlertSingleResourceMultipleMetricCriteria
 ### Properties
-* **allOf**: [StaticThresholdCriterion](#staticthresholdcriterion)[]
+* **allOf**: [MetricCriteria](#metriccriteria)[]
 * **odata.type**: 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria' (Required)
 
-## Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria
+## WebtestLocationAvailabilityCriteria
 ### Properties
 * **componentId**: string (Required)
 * **failedLocationCount**: int (Required)
 * **odata.type**: 'Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria' (Required)
 * **webTestId**: string (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

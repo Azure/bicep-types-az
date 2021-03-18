@@ -7,18 +7,18 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:11_properties](#schemas11properties) (Required)
+* **properties**: [CreateTenantRequestBodyProperties](#createtenantrequestbodyproperties) (Required)
 * **sku**: [B2CResourceSKU](#b2cresourcesku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [CreateTenantRequestBodyTags](#createtenantrequestbodytags)
 * **type**: 'Microsoft.AzureActiveDirectory/b2cDirectories' (ReadOnly, DeployTimeConstant)
 
-## schemas:11_properties
+## CreateTenantRequestBodyProperties
 ### Properties
-* **billingConfig**: [schemas:3_billingConfig](#schemas3billingconfig) (ReadOnly)
+* **billingConfig**: [B2CTenantResourcePropertiesBillingConfig](#b2ctenantresourcepropertiesbillingconfig) (ReadOnly)
 * **createTenantProperties**: [CreateTenantProperties](#createtenantproperties) (WriteOnly)
 * **tenantId**: string (ReadOnly)
 
-## schemas:3_billingConfig
+## B2CTenantResourcePropertiesBillingConfig
 ### Properties
 * **billingType**: 'Auths' | 'MAU' (ReadOnly)
 * **effectiveStartDateUtc**: string (ReadOnly)
@@ -33,7 +33,7 @@
 * **name**: 'PremiumP1' | 'PremiumP2' | 'Standard'
 * **tier**: 'A0'
 
-## Dictionary<string,String>
+## CreateTenantRequestBodyTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

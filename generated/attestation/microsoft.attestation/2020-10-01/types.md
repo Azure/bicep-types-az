@@ -8,8 +8,8 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AttestationServiceCreationSpecificParams](#attestationservicecreationspecificparams) (Required)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [AttestationServiceCreationParamsTags](#attestationservicecreationparamstags)
 * **type**: 'Microsoft.Attestation/attestationProviders' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Attestation/attestationProviders/privateEndpointConnections@2020-10-01
@@ -24,16 +24,16 @@
 ## AttestationServiceCreationSpecificParams
 ### Properties
 * **attestUri**: string (ReadOnly)
-* **policySigningCertificates**: [JSONWebKeySet](#jsonwebkeyset) (WriteOnly)
+* **policySigningCertificates**: [JsonWebKeySet](#jsonwebkeyset) (WriteOnly)
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **status**: 'Error' | 'NotReady' | 'Ready' (ReadOnly)
 * **trustModel**: string (ReadOnly)
 
-## JSONWebKeySet
+## JsonWebKeySet
 ### Properties
-* **keys**: [JSONWebKey](#jsonwebkey)[] (WriteOnly)
+* **keys**: [JsonWebKey](#jsonwebkey)[] (WriteOnly)
 
-## JSONWebKey
+## JsonWebKey
 ### Properties
 * **alg**: string (WriteOnly)
 * **crv**: string (WriteOnly)
@@ -76,7 +76,7 @@
 * **description**: string (ReadOnly)
 * **status**: 'Approved' | 'Pending' | 'Rejected' (ReadOnly)
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string (ReadOnly)
 * **createdBy**: string (ReadOnly)
@@ -85,7 +85,7 @@
 * **lastModifiedBy**: string (ReadOnly)
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly)
 
-## Dictionary<string,String>
+## AttestationServiceCreationParamsTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

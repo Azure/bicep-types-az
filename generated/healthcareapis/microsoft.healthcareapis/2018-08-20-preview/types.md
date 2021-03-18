@@ -6,15 +6,15 @@
 * **apiVersion**: '2018-08-20-preview' (ReadOnly, DeployTimeConstant)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [schemas:11_identity](#schemas11identity)
-* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required)
+* **identity**: [ResourceIdentity](#resourceidentity)
+* **kind**: 'fhir' | 'fhir-R4' | 'fhir-Stu3' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ServicesProperties](#servicesproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.HealthcareApis/services' (ReadOnly, DeployTimeConstant)
 
-## schemas:11_identity
+## ResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
@@ -50,7 +50,7 @@
 ### Properties
 * **offerThroughput**: int
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

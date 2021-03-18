@@ -8,7 +8,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [MediaServiceProperties](#mediaserviceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Media/mediaservices' (ReadOnly, DeployTimeConstant)
 
 ## MediaServiceProperties
@@ -26,7 +26,7 @@
 * **id**: string (Required)
 * **isPrimary**: bool (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

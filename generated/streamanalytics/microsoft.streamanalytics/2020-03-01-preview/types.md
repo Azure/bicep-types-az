@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ClusterProperties](#clusterproperties)
 * **sku**: [ClusterSku](#clustersku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.StreamAnalytics/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StreamAnalytics/clusters/privateEndpoints@2020-03-01-preview
@@ -29,14 +29,14 @@
 * **capacityAssigned**: int (ReadOnly)
 * **clusterId**: string (ReadOnly)
 * **createdDate**: string (ReadOnly)
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded'
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly)
 
 ## ClusterSku
 ### Properties
 * **capacity**: int
 * **name**: 'Default'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

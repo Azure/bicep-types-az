@@ -8,9 +8,9 @@
 * **identity**: [CacheIdentity](#cacheidentity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:7_properties](#schemas7properties)
-* **sku**: [schemas:7_sku](#schemas7sku)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **properties**: [CacheProperties](#cacheproperties)
+* **sku**: [CacheSku](#cachesku)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **tags**: any
 * **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant)
 
@@ -22,7 +22,7 @@
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [StorageTargetProperties](#storagetargetproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant)
 
 ## CacheIdentity
@@ -31,7 +31,7 @@
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned'
 
-## schemas:7_properties
+## CacheProperties
 ### Properties
 * **cacheSizeGB**: int
 * **directoryServicesSettings**: [CacheDirectorySettings](#cachedirectorysettings)
@@ -52,14 +52,14 @@
 ## CacheActiveDirectorySettings
 ### Properties
 * **cacheNetBiosName**: string (Required)
-* **credentials**: [schemas:13_credentials](#schemas13credentials)
+* **credentials**: [CacheActiveDirectorySettingsCredentials](#cacheactivedirectorysettingscredentials)
 * **domainJoined**: 'Error' | 'No' | 'Yes' (ReadOnly)
 * **domainName**: string (Required)
 * **domainNetBiosName**: string (Required)
 * **primaryDnsIpAddress**: string (Required)
 * **secondaryDnsIpAddress**: string
 
-## schemas:13_credentials
+## CacheActiveDirectorySettingsCredentials
 ### Properties
 * **password**: string (Required)
 * **username**: string (Required)
@@ -68,7 +68,7 @@
 ### Properties
 * **autoDownloadCertificate**: bool
 * **caCertificateURI**: string
-* **credentials**: [schemas:14_credentials](#schemas14credentials)
+* **credentials**: [CacheUsernameDownloadSettingsCredentials](#cacheusernamedownloadsettingscredentials)
 * **encryptLdapConnection**: bool
 * **extendedGroups**: bool
 * **groupFileURI**: string
@@ -79,7 +79,7 @@
 * **usernameDownloaded**: 'Error' | 'No' | 'Yes' (ReadOnly)
 * **usernameSource**: 'AD' | 'File' | 'LDAP' | 'None'
 
-## schemas:14_credentials
+## CacheUsernameDownloadSettingsCredentials
 ### Properties
 * **bindDn**: string
 * **bindPassword**: string
@@ -91,9 +91,9 @@
 ## KeyVaultKeyReference
 ### Properties
 * **keyUrl**: string (Required)
-* **sourceVault**: [schemas:17_sourceVault](#schemas17sourcevault) (Required)
+* **sourceVault**: [KeyVaultKeyReferenceSourceVault](#keyvaultkeyreferencesourcevault) (Required)
 
-## schemas:17_sourceVault
+## KeyVaultKeyReferenceSourceVault
 ### Properties
 * **id**: string
 
@@ -135,11 +135,11 @@
 * **lastFirmwareUpdate**: string (ReadOnly)
 * **pendingFirmwareVersion**: string (ReadOnly)
 
-## schemas:7_sku
+## CacheSku
 ### Properties
 * **name**: string
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string
 * **createdBy**: string
@@ -150,21 +150,22 @@
 
 ## StorageTargetProperties
 * **Discriminator**: targetType
+
 ### Base Properties
 * **clfs**: [ClfsTarget](#clfstarget)
 * **junctions**: [NamespaceJunction](#namespacejunction)[]
 * **nfs3**: [Nfs3Target](#nfs3target)
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
 * **unknown**: [UnknownTarget](#unknowntarget)
-### clfs
+### ClfsTargetProperties
 #### Properties
 * **targetType**: 'clfs' (Required)
 
-### nfs3
+### Nfs3TargetProperties
 #### Properties
 * **targetType**: 'nfs3' (Required)
 
-### unknown
+### UnknownTargetProperties
 #### Properties
 * **targetType**: 'unknown' (Required)
 
@@ -187,22 +188,22 @@
 
 ## UnknownTarget
 ### Properties
-* **unknownMap**: [Dictionary<string,String>](#dictionarystringstring)
+* **unknownMap**: [UnknownProperties](#unknownproperties)
 
-## Dictionary<string,String>
+## UnknownProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## clfs
+## ClfsTargetProperties
 ### Properties
 * **targetType**: 'clfs' (Required)
 
-## nfs3
+## Nfs3TargetProperties
 ### Properties
 * **targetType**: 'nfs3' (Required)
 
-## unknown
+## UnknownTargetProperties
 ### Properties
 * **targetType**: 'unknown' (Required)
 

@@ -1,7 +1,7 @@
 # Microsoft.PolicyInsights @ 2018-07-01-preview
 
 ## Resource Microsoft.PolicyInsights/remediations@2018-07-01-preview
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)

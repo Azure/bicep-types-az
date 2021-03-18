@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AccountProperties](#accountproperties)
 * **sku**: [AccountSku](#accountsku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Purview/accounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Purview/accounts/privateEndpointConnections@2020-12-01-preview
@@ -34,9 +34,9 @@
 * **createdAt**: string (ReadOnly)
 * **createdBy**: string (ReadOnly)
 * **createdByObjectId**: string (ReadOnly)
-* **endpoints**: [schemas:3_endpoints](#schemas3endpoints) (ReadOnly)
+* **endpoints**: [AccountPropertiesEndpoints](#accountpropertiesendpoints) (ReadOnly)
 * **friendlyName**: string (ReadOnly)
-* **managedResources**: [schemas:3_managedResources](#schemas3managedresources) (ReadOnly)
+* **managedResources**: [AccountPropertiesManagedResources](#accountpropertiesmanagedresources) (ReadOnly)
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'SoftDeleted' | 'SoftDeleting' | 'Succeeded' | 'Unknown' (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'NotSpecified'
@@ -45,13 +45,13 @@
 ### Properties
 * **awsExternalId**: string (ReadOnly)
 
-## schemas:3_endpoints
+## AccountPropertiesEndpoints
 ### Properties
 * **catalog**: string (ReadOnly)
 * **guardian**: string (ReadOnly)
 * **scan**: string (ReadOnly)
 
-## schemas:3_managedResources
+## AccountPropertiesManagedResources
 ### Properties
 * **eventHubNamespace**: string (ReadOnly)
 * **resourceGroup**: string (ReadOnly)
@@ -85,7 +85,7 @@
 * **capacity**: int
 * **name**: 'Standard'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

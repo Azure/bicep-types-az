@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ConfigDataProperties](#configdataproperties)
 * **type**: 'Microsoft.Advisor/configurations' (ReadOnly, DeployTimeConstant)
 

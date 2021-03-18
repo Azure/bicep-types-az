@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ExportProperties](#exportproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly)
 * **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant)
 
 ## ExportProperties
@@ -22,25 +22,25 @@
 * **dataset**: [QueryDataset](#querydataset)
 * **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'TheLastWeek' | 'TheLastYear' | 'WeekToDate' | 'YearToDate' (Required)
 * **timePeriod**: [QueryTimePeriod](#querytimeperiod)
-* **type**: string (Required)
+* **type**: 'Usage' (Required)
 
 ## QueryDataset
 ### Properties
-* **aggregation**: [Dictionary<string,QueryAggregation>](#dictionarystringqueryaggregation)
+* **aggregation**: [QueryDatasetAggregation](#querydatasetaggregation)
 * **configuration**: [QueryDatasetConfiguration](#querydatasetconfiguration)
 * **filter**: [QueryFilter](#queryfilter)
 * **granularity**: 'Daily' | 'Hourly'
 * **grouping**: [QueryGrouping](#querygrouping)[]
 * **sorting**: [QuerySortingConfiguration](#querysortingconfiguration)[]
 
-## Dictionary<string,QueryAggregation>
+## QueryDatasetAggregation
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [QueryAggregation](#queryaggregation)
 
 ## QueryAggregation
 ### Properties
-* **function**: string (Required)
+* **function**: 'Sum' (Required)
 * **name**: string (Required)
 
 ## QueryDatasetConfiguration
@@ -58,7 +58,7 @@
 ## QueryComparisonExpression
 ### Properties
 * **name**: string (Required)
-* **operator**: string (Required)
+* **operator**: 'In' (Required)
 * **values**: string[] (Required)
 
 ## QueryGrouping
@@ -97,7 +97,7 @@
 * **from**: string (Required)
 * **to**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

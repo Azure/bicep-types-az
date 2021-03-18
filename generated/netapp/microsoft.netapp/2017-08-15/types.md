@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [accountProperties](#accountproperties) (Required)
+* **properties**: [AccountProperties](#accountproperties) (Required)
 * **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
 
@@ -18,7 +18,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [poolProperties](#poolproperties) (Required)
+* **properties**: [PoolProperties](#poolproperties) (Required)
 * **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
 
@@ -29,7 +29,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [volumeProperties](#volumeproperties) (Required)
+* **properties**: [VolumeProperties](#volumeproperties) (Required)
 * **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant)
 
@@ -40,16 +40,16 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [snapshotProperties](#snapshotproperties) (Required)
+* **properties**: [SnapshotProperties](#snapshotproperties) (Required)
 * **tags**: any
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
 
-## accountProperties
+## AccountProperties
 ### Properties
-* **activeDirectories**: [activeDirectory](#activedirectory)[]
+* **activeDirectories**: [ActiveDirectory](#activedirectory)[]
 * **provisioningState**: string (ReadOnly)
 
-## activeDirectory
+## ActiveDirectory
 ### Properties
 * **activeDirectoryId**: string
 * **dNS**: string
@@ -60,28 +60,28 @@
 * **status**: string
 * **username**: string
 
-## poolProperties
+## PoolProperties
 ### Properties
 * **poolId**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra'
 * **size**: int
 
-## volumeProperties
+## VolumeProperties
 ### Properties
 * **creationToken**: string (Required)
-* **exportPolicy**: [schemas:19_exportPolicy](#schemas19exportpolicy)
+* **exportPolicy**: [VolumePropertiesExportPolicy](#volumepropertiesexportpolicy)
 * **fileSystemId**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' (Required)
 * **subnetId**: string
 * **usageThreshold**: int
 
-## schemas:19_exportPolicy
+## VolumePropertiesExportPolicy
 ### Properties
-* **rules**: [exportPolicyRule](#exportpolicyrule)[]
+* **rules**: [ExportPolicyRule](#exportpolicyrule)[]
 
-## exportPolicyRule
+## ExportPolicyRule
 ### Properties
 * **allowedClients**: string
 * **cifs**: bool
@@ -91,7 +91,7 @@
 * **unixReadOnly**: bool
 * **unixReadWrite**: bool
 
-## snapshotProperties
+## SnapshotProperties
 ### Properties
 * **creationDate**: string (ReadOnly)
 * **fileSystemId**: string (Required)

@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NamespaceProperties](#namespaceproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.NotificationHubs/namespaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NotificationHubs/namespaces/AuthorizationRules@2016-03-01
@@ -21,7 +21,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.NotificationHubs/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NotificationHubs/namespaces/notificationHubs@2016-03-01
@@ -33,7 +33,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NotificationHubProperties](#notificationhubproperties) (Required)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2016-03-01
@@ -45,7 +45,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant)
 
 ## NamespaceProperties
@@ -70,7 +70,7 @@
 * **size**: string
 * **tier**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -79,7 +79,7 @@
 ### Properties
 * **rights**: 'Listen' | 'Manage' | 'Send'[]
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -156,12 +156,12 @@
 * **secretKey**: string
 * **windowsLiveEndpoint**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

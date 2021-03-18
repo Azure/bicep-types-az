@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **sku**: [SKU](#sku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.EngagementFabric/Accounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EngagementFabric/Accounts/Channels@2018-09-01-preview
@@ -25,7 +25,7 @@
 * **name**: string (Required)
 * **tier**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -34,9 +34,9 @@
 ### Properties
 * **channelFunctions**: string[]
 * **channelType**: string (Required)
-* **credentials**: [Dictionary<string,String>](#dictionarystringstring)
+* **credentials**: [ChannelPropertiesCredentials](#channelpropertiescredentials)
 
-## Dictionary<string,String>
+## ChannelPropertiesCredentials
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

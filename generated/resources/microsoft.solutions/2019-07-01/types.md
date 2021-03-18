@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApplicationDefinitionProperties](#applicationdefinitionproperties) (Required)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Solutions/applicationDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Solutions/applications@2019-07-01
@@ -26,7 +26,7 @@
 * **plan**: [Plan](#plan)
 * **properties**: [ApplicationProperties](#applicationproperties) (Required)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Solutions/applications' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Solutions/jitRequests@2019-07-01
@@ -37,7 +37,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [JitRequestProperties](#jitrequestproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Solutions/jitRequests' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationDefinitionProperties
@@ -103,7 +103,7 @@
 * **size**: string
 * **tier**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -112,15 +112,15 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: [Dictionary<string,UserAssignedResourceIdentity>](#dictionarystringuserassignedresourceidentity)
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities)
 
-## Dictionary<string,UserAssignedResourceIdentity>
+## IdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [userAssignedResourceIdentity](#userassignedresourceidentity)
+* **Additional Properties Type**: [UserAssignedResourceIdentity](#userassignedresourceidentity)
 
-## userAssignedResourceIdentity
+## UserAssignedResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
@@ -191,7 +191,7 @@
 * **governmentCloud**: string
 * **publicAzure**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -216,9 +216,9 @@
 ### Properties
 * **duration**: string (Required)
 * **startTime**: string (Required)
-* **type**: 'NotSpecified' | 'Once' | 'Recurring' (Required)
+* **type**: 'NotSpecified' | 'Once' | 'Recurring' (Required, ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

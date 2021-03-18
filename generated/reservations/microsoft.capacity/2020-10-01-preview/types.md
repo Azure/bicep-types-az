@@ -28,8 +28,8 @@
 * **renew**: bool (WriteOnly)
 * **requestDateTime**: string (ReadOnly)
 * **reservations**: [ReservationResponse](#reservationresponse)[] (ReadOnly)
-* **reservedResourceProperties**: [schemas:39_reservedResourceProperties](#schemas39reservedresourceproperties) (WriteOnly)
-* **reservedResourceType**: 'AppService' | 'AzureDataExplorer' | 'BlockBlob' | 'CosmosDb' | 'Databricks' | 'DedicatedHost' | 'ManagedDisk' | 'MariaDb' | 'MySql' | 'PostgreSql' | 'RedHat' | 'RedHatOsa' | 'RedisCache' | 'SapHana' | 'SqlAzureHybridBenefit' | 'SqlDatabases' | 'SqlDataWarehouse' | 'SuseLinux' | 'VirtualMachines' | 'VMwareCloudSimple' (WriteOnly)
+* **reservedResourceProperties**: [PurchaseRequestPropertiesReservedResourceProperties](#purchaserequestpropertiesreservedresourceproperties) (WriteOnly)
+* **reservedResourceType**: 'AppService' | 'AzureDataExplorer' | 'BlockBlob' | 'CosmosDb' | 'Databricks' | 'DedicatedHost' | 'ManagedDisk' | 'MariaDb' | 'MySql' | 'PostgreSql' | 'RedHat' | 'RedHatOsa' | 'RedisCache' | 'SapHana' | 'SqlAzureHybridBenefit' | 'SqlDataWarehouse' | 'SqlDatabases' | 'SuseLinux' | 'VMwareCloudSimple' | 'VirtualMachines' (WriteOnly)
 * **term**: 'P1Y' | 'P3Y'
 
 ## ReservationOrderBillingPlanInformation
@@ -88,7 +88,7 @@
 * **renewDestination**: string (ReadOnly)
 * **renewProperties**: [RenewPropertiesResponse](#renewpropertiesresponse) (ReadOnly)
 * **renewSource**: string (ReadOnly)
-* **reservedResourceType**: 'AppService' | 'AzureDataExplorer' | 'BlockBlob' | 'CosmosDb' | 'Databricks' | 'DedicatedHost' | 'ManagedDisk' | 'MariaDb' | 'MySql' | 'PostgreSql' | 'RedHat' | 'RedHatOsa' | 'RedisCache' | 'SapHana' | 'SqlAzureHybridBenefit' | 'SqlDatabases' | 'SqlDataWarehouse' | 'SuseLinux' | 'VirtualMachines' | 'VMwareCloudSimple' (ReadOnly)
+* **reservedResourceType**: 'AppService' | 'AzureDataExplorer' | 'BlockBlob' | 'CosmosDb' | 'Databricks' | 'DedicatedHost' | 'ManagedDisk' | 'MariaDb' | 'MySql' | 'PostgreSql' | 'RedHat' | 'RedHatOsa' | 'RedisCache' | 'SapHana' | 'SqlAzureHybridBenefit' | 'SqlDataWarehouse' | 'SqlDatabases' | 'SuseLinux' | 'VMwareCloudSimple' | 'VirtualMachines' (ReadOnly)
 * **skuDescription**: string (ReadOnly)
 * **splitProperties**: [ReservationSplitProperties](#reservationsplitproperties) (ReadOnly)
 * **term**: 'P1Y' | 'P3Y' (ReadOnly)
@@ -100,16 +100,16 @@
 
 ## RenewPropertiesResponse
 ### Properties
-* **billingCurrencyTotal**: [schemas:33_billingCurrencyTotal](#schemas33billingcurrencytotal) (ReadOnly)
-* **pricingCurrencyTotal**: [schemas:33_pricingCurrencyTotal](#schemas33pricingcurrencytotal) (ReadOnly)
+* **billingCurrencyTotal**: [RenewPropertiesResponseBillingCurrencyTotal](#renewpropertiesresponsebillingcurrencytotal) (ReadOnly)
+* **pricingCurrencyTotal**: [RenewPropertiesResponsePricingCurrencyTotal](#renewpropertiesresponsepricingcurrencytotal) (ReadOnly)
 * **purchaseProperties**: [PurchaseRequest](#purchaserequest) (ReadOnly)
 
-## schemas:33_billingCurrencyTotal
+## RenewPropertiesResponseBillingCurrencyTotal
 ### Properties
 * **amount**: int (ReadOnly)
 * **currencyCode**: string (ReadOnly)
 
-## schemas:33_pricingCurrencyTotal
+## RenewPropertiesResponsePricingCurrencyTotal
 ### Properties
 * **amount**: int (ReadOnly)
 * **currencyCode**: string (ReadOnly)
@@ -129,7 +129,7 @@
 * **splitDestinations**: string[] (ReadOnly)
 * **splitSource**: string (ReadOnly)
 
-## schemas:39_reservedResourceProperties
+## PurchaseRequestPropertiesReservedResourceProperties
 ### Properties
 * **instanceFlexibility**: 'Off' | 'On' (WriteOnly)
 

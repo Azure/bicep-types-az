@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ClusterProperties](#clusterproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ServiceFabric/clusters' (ReadOnly, DeployTimeConstant)
 
 ## ClusterProperties
@@ -96,14 +96,14 @@
 ## NodeTypeDescription
 ### Properties
 * **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription)
-* **capacities**: [Dictionary<string,String>](#dictionarystringstring)
+* **capacities**: [NodeTypeDescriptionCapacities](#nodetypedescriptioncapacities)
 * **clientConnectionEndpointPort**: int (Required)
 * **durabilityLevel**: 'Bronze' | 'Gold' | 'Silver'
 * **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription)
 * **httpGatewayEndpointPort**: int (Required)
 * **isPrimary**: bool (Required)
 * **name**: string (Required)
-* **placementProperties**: [Dictionary<string,String>](#dictionarystringstring)
+* **placementProperties**: [NodeTypeDescriptionPlacementProperties](#nodetypedescriptionplacementproperties)
 * **reverseProxyEndpointPort**: int
 * **vmInstanceCount**: int (Required)
 
@@ -112,12 +112,12 @@
 * **endPort**: int (Required)
 * **startPort**: int (Required)
 
-## Dictionary<string,String>
+## NodeTypeDescriptionCapacities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## NodeTypeDescriptionPlacementProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -136,12 +136,12 @@
 
 ## ClusterUpgradeDeltaHealthPolicy
 ### Properties
-* **applicationDeltaHealthPolicies**: [Dictionary<string,ApplicationDeltaHealthPolicy>](#dictionarystringapplicationdeltahealthpolicy)
+* **applicationDeltaHealthPolicies**: [ApplicationDeltaHealthPolicyMap](#applicationdeltahealthpolicymap)
 * **maxPercentDeltaUnhealthyApplications**: int (Required)
 * **maxPercentDeltaUnhealthyNodes**: int (Required)
 * **maxPercentUpgradeDomainDeltaUnhealthyNodes**: int (Required)
 
-## Dictionary<string,ApplicationDeltaHealthPolicy>
+## ApplicationDeltaHealthPolicyMap
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ApplicationDeltaHealthPolicy](#applicationdeltahealthpolicy)
@@ -149,24 +149,24 @@
 ## ApplicationDeltaHealthPolicy
 ### Properties
 * **defaultServiceTypeDeltaHealthPolicy**: [ServiceTypeDeltaHealthPolicy](#servicetypedeltahealthpolicy)
-* **serviceTypeDeltaHealthPolicies**: [Dictionary<string,ServiceTypeDeltaHealthPolicy>](#dictionarystringservicetypedeltahealthpolicy)
+* **serviceTypeDeltaHealthPolicies**: [ServiceTypeDeltaHealthPolicyMap](#servicetypedeltahealthpolicymap)
 
 ## ServiceTypeDeltaHealthPolicy
 ### Properties
 * **maxPercentDeltaUnhealthyServices**: int
 
-## Dictionary<string,ServiceTypeDeltaHealthPolicy>
+## ServiceTypeDeltaHealthPolicyMap
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ServiceTypeDeltaHealthPolicy](#servicetypedeltahealthpolicy)
 
 ## ClusterHealthPolicy
 ### Properties
-* **applicationHealthPolicies**: [Dictionary<string,ApplicationHealthPolicy>](#dictionarystringapplicationhealthpolicy)
+* **applicationHealthPolicies**: [ApplicationHealthPolicyMap](#applicationhealthpolicymap)
 * **maxPercentUnhealthyApplications**: int
 * **maxPercentUnhealthyNodes**: int
 
-## Dictionary<string,ApplicationHealthPolicy>
+## ApplicationHealthPolicyMap
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ApplicationHealthPolicy](#applicationhealthpolicy)
@@ -174,18 +174,18 @@
 ## ApplicationHealthPolicy
 ### Properties
 * **defaultServiceTypeHealthPolicy**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy)
-* **serviceTypeHealthPolicies**: [Dictionary<string,ServiceTypeHealthPolicy>](#dictionarystringservicetypehealthpolicy)
+* **serviceTypeHealthPolicies**: [ServiceTypeHealthPolicyMap](#servicetypehealthpolicymap)
 
 ## ServiceTypeHealthPolicy
 ### Properties
 * **maxPercentUnhealthyServices**: int
 
-## Dictionary<string,ServiceTypeHealthPolicy>
+## ServiceTypeHealthPolicyMap
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

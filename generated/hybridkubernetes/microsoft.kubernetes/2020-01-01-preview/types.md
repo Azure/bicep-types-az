@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ConnectedClusterProperties](#connectedclusterproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Kubernetes/connectedClusters' (ReadOnly, DeployTimeConstant)
 
 ## ConnectedClusterIdentity
@@ -40,7 +40,7 @@
 * **serverAppId**: string (Required)
 * **tenantId**: string (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

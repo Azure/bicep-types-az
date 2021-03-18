@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [BuildTaskProperties](#buildtaskproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerRegistry/registries/buildTasks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerRegistry/registries/buildTasks/steps@2018-02-01-preview
@@ -50,16 +50,17 @@
 * **token**: string (Required)
 * **tokenType**: 'OAuth' | 'PAT'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## BuildStepProperties
 * **Discriminator**: type
+
 ### Base Properties
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-### Docker
+### DockerBuildStep
 #### Properties
 * **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly)
 * **baseImageTrigger**: 'All' | 'None' | 'Runtime'
@@ -73,7 +74,7 @@
 * **type**: 'Docker' (Required)
 
 
-## Docker
+## DockerBuildStep
 ### Properties
 * **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly)
 * **baseImageTrigger**: 'All' | 'None' | 'Runtime'
@@ -98,6 +99,6 @@
 ### Properties
 * **isSecret**: bool
 * **name**: string (Required)
-* **type**: string (Required)
+* **type**: 'DockerBuildArgument' (Required)
 * **value**: string (Required)
 

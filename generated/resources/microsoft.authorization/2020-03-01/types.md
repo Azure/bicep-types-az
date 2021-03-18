@@ -43,11 +43,11 @@
 * **enforcementMode**: 'Default' | 'DoNotEnforce'
 * **metadata**: any
 * **notScopes**: string[]
-* **parameters**: [Dictionary<string,ParameterValuesValue>](#dictionarystringparametervaluesvalue)
+* **parameters**: [ParameterValues](#parametervalues)
 * **policyDefinitionId**: string
 * **scope**: string
 
-## Dictionary<string,ParameterValuesValue>
+## ParameterValues
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterValuesValue](#parametervaluesvalue)
@@ -67,11 +67,11 @@
 * **displayName**: string
 * **metadata**: any
 * **mode**: string
-* **parameters**: [Dictionary<string,ParameterDefinitionsValue>](#dictionarystringparameterdefinitionsvalue)
+* **parameters**: [ParameterDefinitions](#parameterdefinitions)
 * **policyRule**: any
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static'
 
-## Dictionary<string,ParameterDefinitionsValue>
+## ParameterDefinitions
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterDefinitionsValue](#parameterdefinitionsvalue)
@@ -80,27 +80,25 @@
 ### Properties
 * **allowedValues**: any[]
 * **defaultValue**: any
-* **metadata**: [schemas:10_metadata](#schemas10metadata)
+* **metadata**: [ParameterDefinitionsValueMetadata](#parameterdefinitionsvaluemetadata)
 * **type**: 'Array' | 'Boolean' | 'DateTime' | 'Float' | 'Integer' | 'Object' | 'String'
 
-## schemas:10_metadata
+## ParameterDefinitionsValueMetadata
 ### Properties
 * **description**: string
 * **displayName**: string
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## PolicySetDefinitionProperties
 ### Properties
 * **description**: string
 * **displayName**: string
 * **metadata**: any
-* **parameters**: [Dictionary<string,ParameterDefinitionsValue>](#dictionarystringparameterdefinitionsvalue)
+* **parameters**: [ParameterDefinitions](#parameterdefinitions)
 * **policyDefinitionGroups**: [PolicyDefinitionGroup](#policydefinitiongroup)[]
 * **policyDefinitions**: [PolicyDefinitionReference](#policydefinitionreference)[] (Required)
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static'
 
-## Dictionary<string,ParameterDefinitionsValue>
+## ParameterDefinitions
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterDefinitionsValue](#parameterdefinitionsvalue)
@@ -116,11 +114,11 @@
 ## PolicyDefinitionReference
 ### Properties
 * **groupNames**: string[]
-* **parameters**: [Dictionary<string,ParameterValuesValue>](#dictionarystringparametervaluesvalue)
+* **parameters**: [ParameterValues](#parametervalues)
 * **policyDefinitionId**: string (Required)
 * **policyDefinitionReferenceId**: string
 
-## Dictionary<string,ParameterValuesValue>
+## ParameterValues
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterValuesValue](#parametervaluesvalue)

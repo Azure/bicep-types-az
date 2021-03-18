@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [MigrateProjectProperties](#migrateprojectproperties)
-* **tags**: [schemas:57_tags](#schemas57tags)
+* **tags**: [MigrateProjectTags](#migrateprojecttags)
 * **type**: 'Microsoft.Migrate/migrateProjects' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Migrate/migrateProjects/solutions@2018-09-01-preview
@@ -27,25 +27,26 @@
 * **lastSummaryRefreshedTime**: string (ReadOnly)
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded'
 * **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started' (ReadOnly)
-* **registeredTools**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DatabaseMigrationService' | 'DataMigrationAssistant' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration_Replication' | 'ServerMigration' | 'Turbonomic' | 'Zerto'[]
-* **summary**: [Dictionary<string,ProjectSummary>](#dictionarystringprojectsummary) (ReadOnly)
+* **registeredTools**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration' | 'ServerMigration_Replication' | 'Turbonomic' | 'Zerto'[]
+* **summary**: [MigrateProjectPropertiesSummary](#migrateprojectpropertiessummary) (ReadOnly)
 
-## Dictionary<string,ProjectSummary>
+## MigrateProjectPropertiesSummary
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ProjectSummary](#projectsummary)
 
 ## ProjectSummary
 * **Discriminator**: instanceType
+
 ### Base Properties
-* **extendedSummary**: [Dictionary<string,String>](#dictionarystringstring)
+* **extendedSummary**: [ProjectSummaryExtendedSummary](#projectsummaryextendedsummary)
 * **lastSummaryRefreshedTime**: string
 * **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started'
-### Databases
+### DatabaseProjectSummary
 #### Properties
 * **instanceType**: 'Databases' (Required)
 
-### Servers
+### ServersProjectSummary
 #### Properties
 * **assessedCount**: int
 * **discoveredCount**: int
@@ -55,16 +56,16 @@
 * **testMigratedCount**: int
 
 
-## Dictionary<string,String>
+## ProjectSummaryExtendedSummary
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Databases
+## DatabaseProjectSummary
 ### Properties
 * **instanceType**: 'Databases' (Required)
 
-## Servers
+## ServersProjectSummary
 ### Properties
 * **assessedCount**: int
 * **discoveredCount**: int
@@ -73,7 +74,7 @@
 * **replicatingCount**: int
 * **testMigratedCount**: int
 
-## schemas:57_tags
+## MigrateProjectTags
 ### Properties
 * **additionalProperties**: string
 
@@ -85,27 +86,31 @@
 * **purpose**: 'Assessment' | 'Discovery' | 'Migration'
 * **status**: 'Active' | 'Inactive'
 * **summary**: [SolutionSummary](#solutionsummary)
-* **tool**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DatabaseMigrationService' | 'DataMigrationAssistant' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration_Replication' | 'ServerMigration' | 'Turbonomic' | 'Zerto'
+* **tool**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration' | 'ServerMigration_Replication' | 'Turbonomic' | 'Zerto'
 
 ## SolutionDetails
 ### Properties
 * **assessmentCount**: int
-* **extendedDetails**: [Dictionary<string,String>](#dictionarystringstring)
+* **extendedDetails**: [SolutionDetailsExtendedDetails](#solutiondetailsextendeddetails)
 * **groupCount**: int
 
-## Dictionary<string,String>
+## SolutionDetailsExtendedDetails
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## SolutionSummary
 * **Discriminator**: instanceType
-### Base Properties
-### Databases
-#### Properties
-* **instanceType**: 'Databases' (Required)
 
-### Servers
+### Base Properties
+### DatabasesSolutionSummary
+#### Properties
+* **databaseInstancesAssessedCount**: int
+* **databasesAssessedCount**: int
+* **instanceType**: 'Databases' (Required)
+* **migrationReadyCount**: int
+
+### ServersSolutionSummary
 #### Properties
 * **assessedCount**: int
 * **discoveredCount**: int
@@ -114,4 +119,20 @@
 * **replicatingCount**: int
 * **testMigratedCount**: int
 
+
+## DatabasesSolutionSummary
+### Properties
+* **databaseInstancesAssessedCount**: int
+* **databasesAssessedCount**: int
+* **instanceType**: 'Databases' (Required)
+* **migrationReadyCount**: int
+
+## ServersSolutionSummary
+### Properties
+* **assessedCount**: int
+* **discoveredCount**: int
+* **instanceType**: 'Servers' (Required)
+* **migratedCount**: int
+* **replicatingCount**: int
+* **testMigratedCount**: int
 

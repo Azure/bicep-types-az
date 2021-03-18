@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [schemas:7_identity](#schemas7identity)
+* **identity**: [MachineIdentity](#machineidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:7_properties](#schemas7properties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [MachineProperties](#machineproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HybridCompute/machines/extensions@2019-12-12
@@ -19,17 +19,17 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:13_properties](#schemas13properties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [MachineExtensionProperties](#machineextensionproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant)
 
-## schemas:7_identity
+## MachineIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'SystemAssigned'
 
-## schemas:7_properties
+## MachineProperties
 ### Properties
 * **agentVersion**: string (ReadOnly)
 * **clientPublicKey**: string
@@ -37,10 +37,10 @@
 * **errorDetails**: [ErrorDetail](#errordetail)[] (ReadOnly)
 * **extensions**: [MachineExtensionInstanceView](#machineextensioninstanceview)[]
 * **lastStatusChange**: string (ReadOnly)
-* **locationData**: [locationData](#locationdata)
+* **locationData**: [LocationData](#locationdata)
 * **machineFqdn**: string (ReadOnly)
 * **osName**: string (ReadOnly)
-* **osProfile**: [schemas:4_osProfile](#schemas4osprofile)
+* **osProfile**: [MachinePropertiesOsProfile](#machinepropertiesosprofile)
 * **osVersion**: string (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **status**: 'Connected' | 'Disconnected' | 'Error' (ReadOnly)
@@ -56,11 +56,11 @@
 ## MachineExtensionInstanceView
 ### Properties
 * **name**: string
-* **status**: [schemas:17_status](#schemas17status)
+* **status**: [MachineExtensionInstanceViewStatus](#machineextensioninstanceviewstatus)
 * **type**: string
 * **typeHandlerVersion**: string
 
-## schemas:17_status
+## MachineExtensionInstanceViewStatus
 ### Properties
 * **code**: string
 * **displayStatus**: string
@@ -68,27 +68,27 @@
 * **message**: string
 * **time**: string
 
-## locationData
+## LocationData
 ### Properties
 * **city**: string
 * **countryOrRegion**: string
 * **district**: string
 * **name**: string (Required)
 
-## schemas:4_osProfile
+## MachinePropertiesOsProfile
 ### Properties
 * **computerName**: string (ReadOnly)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:13_properties
+## MachineExtensionProperties
 ### Properties
 * **autoUpgradeMinorVersion**: bool
 * **forceUpdateTag**: string
-* **instanceView**: [schemas:15_instanceView](#schemas15instanceview)
+* **instanceView**: [MachineExtensionPropertiesInstanceView](#machineextensionpropertiesinstanceview)
 * **protectedSettings**: any
 * **provisioningState**: string (ReadOnly)
 * **publisher**: string
@@ -96,14 +96,14 @@
 * **type**: string
 * **typeHandlerVersion**: string
 
-## schemas:15_instanceView
+## MachineExtensionPropertiesInstanceView
 ### Properties
 * **name**: string
-* **status**: [schemas:17_status](#schemas17status)
+* **status**: [MachineExtensionInstanceViewStatus](#machineextensioninstanceviewstatus)
 * **type**: string
 * **typeHandlerVersion**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

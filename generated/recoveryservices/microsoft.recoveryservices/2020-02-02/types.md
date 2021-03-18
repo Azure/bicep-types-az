@@ -11,7 +11,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VaultProperties](#vaultproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.RecoveryServices/vaults/certificates@2020-02-02
@@ -37,10 +37,10 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned' (Required)
-* **userAssignedIdentities**: [Dictionary<string,UserIdentity>](#dictionarystringuseridentity)
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' (Required)
+* **userAssignedIdentities**: [IdentityDataUserAssignedIdentities](#identitydatauserassignedidentities)
 
-## Dictionary<string,UserIdentity>
+## IdentityDataUserAssignedIdentities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserIdentity](#useridentity)
@@ -52,14 +52,14 @@
 
 ## VaultProperties
 ### Properties
-* **encryption**: [schemas:28_encryption](#schemas28encryption)
+* **encryption**: [VaultPropertiesEncryption](#vaultpropertiesencryption)
 * **privateEndpointConnections**: [PrivateEndpointConnectionVaultProperties](#privateendpointconnectionvaultproperties)[] (ReadOnly)
 * **privateEndpointStateForBackup**: 'Enabled' | 'None' (ReadOnly)
 * **privateEndpointStateForSiteRecovery**: 'Enabled' | 'None' (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 * **upgradeDetails**: [UpgradeDetails](#upgradedetails)
 
-## schemas:28_encryption
+## VaultPropertiesEncryption
 ### Properties
 * **infrastructureEncryption**: 'Disabled' | 'Enabled'
 * **kekIdentity**: [CmkKekIdentity](#cmkkekidentity)
@@ -77,12 +77,12 @@
 ## PrivateEndpointConnectionVaultProperties
 ### Properties
 * **id**: string (ReadOnly)
-* **properties**: [PrivateEndpointConnection](#privateendpointconnection)
+* **properties**: [PrivateEndpointConnection](#privateendpointconnection) (ReadOnly)
 
 ## PrivateEndpointConnection
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate)
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly)
 * **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' (ReadOnly)
 
 ## PrivateEndpoint
@@ -111,15 +111,15 @@
 ### Properties
 * **name**: 'RS0' | 'Standard' (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## RawCertificateData
 ### Properties
-* **authType**: 'AAD' | 'AccessControlService' | 'ACS' | 'AzureActiveDirectory' | 'Invalid'
-* **certificate**: array
+* **authType**: 'AAD' | 'ACS' | 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid'
+* **certificate**: any
 
 ## VaultExtendedInfo
 ### Properties

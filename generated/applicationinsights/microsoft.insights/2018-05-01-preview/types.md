@@ -9,18 +9,8 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApplicationInsightsComponentProperties](#applicationinsightscomponentproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ComponentsResourceTags](#componentsresourcetags)
 * **type**: 'Microsoft.Insights/components' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.Insights/components/ProactiveDetectionConfigs@2018-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-05-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ApplicationInsightsComponentProactiveDetectionConfigurationProperties](#applicationinsightscomponentproactivedetectionconfigurationproperties)
-* **type**: 'Microsoft.Insights/components/ProactiveDetectionConfigs' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationInsightsComponentProperties
 ### Properties
@@ -50,28 +40,8 @@
 * **ResourceId**: string
 * **ScopeId**: string
 
-## Dictionary<string,String>
+## ComponentsResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ApplicationInsightsComponentProactiveDetectionConfigurationProperties
-### Properties
-* **CustomEmails**: string[]
-* **Enabled**: bool
-* **LastUpdatedTime**: string (ReadOnly)
-* **Name**: string (ReadOnly)
-* **RuleDefinitions**: [schemas:13_RuleDefinitions](#schemas13ruledefinitions)
-* **SendEmailsToSubscriptionOwners**: bool
-
-## schemas:13_RuleDefinitions
-### Properties
-* **Description**: string
-* **DisplayName**: string
-* **HelpUrl**: string
-* **IsEnabledByDefault**: bool
-* **IsHidden**: bool
-* **IsInPreview**: bool
-* **Name**: string
-* **SupportsEmailNotifications**: bool
 

@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DedicatedCloudNodeProperties](#dedicatedcloudnodeproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.VMwareCloudSimple/dedicatedCloudNodes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.VMwareCloudSimple/dedicatedCloudServices@2019-04-01
@@ -20,7 +20,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DedicatedCloudServiceProperties](#dedicatedcloudserviceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.VMwareCloudSimple/dedicatedCloudServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.VMwareCloudSimple/virtualMachines@2019-04-01
@@ -31,7 +31,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VirtualMachineProperties](#virtualmachineproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.VMwareCloudSimple/virtualMachines' (ReadOnly, DeployTimeConstant)
 
 ## DedicatedCloudNodeProperties
@@ -64,7 +64,7 @@
 * **name**: string (Required)
 * **tier**: string
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -76,7 +76,7 @@
 * **nodes**: int (ReadOnly)
 * **serviceURL**: string (ReadOnly)
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -131,7 +131,7 @@
 
 ## VirtualNic
 ### Properties
-* **customization**: [GuestOSNICCustomization](#guestosniccustomization)
+* **customization**: [GuestOsnicCustomization](#guestosniccustomization)
 * **ipAddresses**: string[]
 * **macAddress**: string
 * **network**: [VirtualNetwork](#virtualnetwork) (Required)
@@ -140,7 +140,7 @@
 * **virtualNicId**: string
 * **virtualNicName**: string (ReadOnly)
 
-## GuestOSNICCustomization
+## GuestOsnicCustomization
 ### Properties
 * **allocation**: 'dynamic' | 'static'
 * **dnsServers**: string[]
@@ -176,7 +176,7 @@
 ### Properties
 * **fullName**: string (ReadOnly)
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

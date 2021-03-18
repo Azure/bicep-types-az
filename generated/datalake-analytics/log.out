@@ -1,21 +1,601 @@
 
-Executing: autorest --use=/home/runner/work/bicep-types-az/bicep-types-az/src/generator --azureresourceschema --output-folder=/home/runner/work/bicep-types-az/bicep-types-az/generated/datalake-analytics --multiapi /home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datalake-analytics/resource-manager/readme.md
+Executing: autorest --use=/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep --azureresourceschema --output-folder=/home/runner/work/bicep-types-az/bicep-types-az/generated/datalake-analytics --multiapi --title=none /home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datalake-analytics/resource-manager/readme.md
 AutoRest code generation utility [cli version: 3.1.2; node: v14.16.0, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.1.2)
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.1.3)
+INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 Processing batch task - {"tag":"schema-datalakeanalytics-2016-11-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccount' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccountBasic' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccountPropertiesBasic' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccountListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeStoreAccountInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeStoreAccountInformationProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeStoreAccountInformationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccountInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccountInformationProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccountInformationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageContainer' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageContainerProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageContainerListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SasTokenInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SasTokenInformationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComputePolicy' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComputePolicyProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComputePolicyListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'FirewallRule' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'FirewallRuleProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'FirewallRuleListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VirtualNetworkRule' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VirtualNetworkRuleProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VirtualNetworkRuleListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HiveMetastore' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HiveMetastoreProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HiveMetastoreListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationDisplay' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaMetricAvailabilitiesSpecification' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaMetricSpecification' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaLogSpecification' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaServiceSpecification' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaPropertyInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CapabilityInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NameAvailabilityInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateDataLakeAnalyticsAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateDataLakeAnalyticsAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateDataLakeAnalyticsAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateDataLakeAnalyticsAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddDataLakeStoreParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddDataLakeStoreWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddDataLakeStoreProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateDataLakeStoreWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateDataLakeStoreProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddStorageAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddStorageAccountWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddStorageAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateStorageAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateStorageAccountWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateStorageAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateOrUpdateComputePolicyParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateComputePolicyWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateOrUpdateComputePolicyProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateComputePolicyParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateComputePolicyWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateComputePolicyProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateOrUpdateFirewallRuleParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateFirewallRuleWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateOrUpdateFirewallRuleProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateFirewallRuleParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateFirewallRuleWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateFirewallRuleProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CheckNameAvailabilityParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorDetail' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorAdditionalInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+INFORMATION: Autorest.AzureResourceSchema took 20ms
 Processing batch task - {"tag":"schema-datalakeanalytics-2015-10-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccount' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccountBasic' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccountPropertiesBasic' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccountListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeStoreAccountInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeStoreAccountInfoProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeStoreAccountInformationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccountInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccountInformationProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccountInformationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageContainer' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageContainerProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageContainerListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SasTokenInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SasTokenInformationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComputePolicy' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComputePolicyProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComputePolicyListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'FirewallRule' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'FirewallRuleProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'FirewallRuleListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VirtualNetworkRule' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VirtualNetworkRuleProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VirtualNetworkRuleListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HiveMetastore' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HiveMetastoreProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HiveMetastoreListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationDisplay' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaMetricAvailabilitiesSpecification' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaMetricSpecification' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaLogSpecification' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaServiceSpecification' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaPropertyInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CapabilityInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NameAvailabilityInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateDataLakeAnalyticsAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateDataLakeAnalyticsAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateDataLakeAnalyticsAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateDataLakeAnalyticsAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddDataLakeStoreParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddDataLakeStoreWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddDataLakeStoreProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateDataLakeStoreWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateDataLakeStoreProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddStorageAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddStorageAccountWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateStorageAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateStorageAccountWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateStorageAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateOrUpdateComputePolicyParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateComputePolicyWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateOrUpdateComputePolicyProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateComputePolicyParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateComputePolicyWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateComputePolicyProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateOrUpdateFirewallRuleParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateFirewallRuleWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateOrUpdateFirewallRuleProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateFirewallRuleParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateFirewallRuleWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateFirewallRuleProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CheckNameAvailabilityParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorDetail' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorAdditionalInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+INFORMATION: Autorest.AzureResourceSchema took 3ms
 Processing batch task - {"tag":"schema-datalakeanalytics-2016-11-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccount' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccountBasic' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccountPropertiesBasic' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccountListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeStoreAccountInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeStoreAccountInformationProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeStoreAccountInformationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccountInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccountInformationProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccountInformationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageContainer' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageContainerProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageContainerListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SasTokenInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SasTokenInformationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComputePolicy' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComputePolicyProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComputePolicyListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'FirewallRule' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'FirewallRuleProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'FirewallRuleListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VirtualNetworkRule' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VirtualNetworkRuleProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VirtualNetworkRuleListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HiveMetastore' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HiveMetastoreProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HiveMetastoreListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationDisplay' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaMetricAvailabilitiesSpecification' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaMetricSpecification' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaLogSpecification' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaServiceSpecification' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaPropertyInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CapabilityInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NameAvailabilityInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateDataLakeAnalyticsAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateDataLakeAnalyticsAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateDataLakeAnalyticsAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateDataLakeAnalyticsAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddDataLakeStoreParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddDataLakeStoreWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddDataLakeStoreProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateDataLakeStoreWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateDataLakeStoreProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddStorageAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddStorageAccountWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddStorageAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateStorageAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateStorageAccountWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateStorageAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateOrUpdateComputePolicyParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateComputePolicyWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateOrUpdateComputePolicyProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateComputePolicyParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateComputePolicyWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateComputePolicyProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateOrUpdateFirewallRuleParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateFirewallRuleWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateOrUpdateFirewallRuleProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateFirewallRuleParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateFirewallRuleWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateFirewallRuleProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CheckNameAvailabilityParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorDetail' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorAdditionalInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-datalakeanalytics-2015-10-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
-[20.7 s] Generation Complete
+INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccount' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccountBasic' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccountPropertiesBasic' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeAnalyticsAccountListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeStoreAccountInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeStoreAccountInfoProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataLakeStoreAccountInformationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccountInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccountInformationProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccountInformationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageContainer' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageContainerProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageContainerListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SasTokenInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SasTokenInformationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComputePolicy' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComputePolicyProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComputePolicyListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'FirewallRule' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'FirewallRuleProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'FirewallRuleListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VirtualNetworkRule' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VirtualNetworkRuleProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VirtualNetworkRuleListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HiveMetastore' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HiveMetastoreProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HiveMetastoreListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationDisplay' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaMetricAvailabilitiesSpecification' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaMetricSpecification' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaLogSpecification' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaServiceSpecification' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationMetaPropertyInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CapabilityInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NameAvailabilityInformation' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateDataLakeAnalyticsAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateDataLakeAnalyticsAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateDataLakeAnalyticsAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateDataLakeAnalyticsAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddDataLakeStoreParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddDataLakeStoreWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddDataLakeStoreProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateDataLakeStoreWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateDataLakeStoreProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddStorageAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AddStorageAccountWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateStorageAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateStorageAccountWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateStorageAccountProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateOrUpdateComputePolicyParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateComputePolicyWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateOrUpdateComputePolicyProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateComputePolicyParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateComputePolicyWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateComputePolicyProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateOrUpdateFirewallRuleParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateFirewallRuleWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CreateOrUpdateFirewallRuleProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateFirewallRuleParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateFirewallRuleWithAccountParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateFirewallRuleProperties' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CheckNameAvailabilityParameters' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorDetail' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorAdditionalInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+INFORMATION: Autorest.AzureResourceSchema took 3ms
+[20.8 s] Generation Complete

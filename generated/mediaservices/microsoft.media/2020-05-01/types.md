@@ -9,8 +9,8 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [MediaServiceProperties](#mediaserviceproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Media/mediaservices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/accountFilters@2020-05-01
@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [MediaFilterProperties](#mediafilterproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/accountFilters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/assets@2020-05-01
@@ -30,7 +30,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AssetProperties](#assetproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/assets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/assets/assetFilters@2020-05-01
@@ -40,7 +40,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [MediaFilterProperties](#mediafilterproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/assets/assetFilters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/contentKeyPolicies@2020-05-01
@@ -50,7 +50,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ContentKeyPolicyProperties](#contentkeypolicyproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/contentKeyPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaservices/liveEvents@2020-05-01
@@ -61,8 +61,8 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [LiveEventProperties](#liveeventproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Media/mediaservices/liveEvents' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaservices/liveEvents/liveOutputs@2020-05-01
@@ -91,8 +91,8 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [StreamingEndpointProperties](#streamingendpointproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Media/mediaservices/streamingEndpoints' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/streamingLocators@2020-05-01
@@ -102,7 +102,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [StreamingLocatorProperties](#streaminglocatorproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/streamingLocators' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/streamingPolicies@2020-05-01
@@ -112,7 +112,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [StreamingPolicyProperties](#streamingpolicyproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/streamingPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/transforms@2020-05-01
@@ -122,7 +122,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [TransformProperties](#transformproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/transforms' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Media/mediaServices/transforms/jobs@2020-05-01
@@ -132,7 +132,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [JobProperties](#jobproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Media/mediaServices/transforms/jobs' (ReadOnly, DeployTimeConstant)
 
 ## MediaServiceIdentity
@@ -163,7 +163,7 @@
 * **id**: string
 * **type**: 'Primary' | 'Secondary' (Required)
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string
 * **createdBy**: string
@@ -172,7 +172,7 @@
 * **lastModifiedBy**: string
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -234,45 +234,46 @@
 
 ## ContentKeyPolicyConfiguration
 * **Discriminator**: @odata.type
+
 ### Base Properties
-### #Microsoft.Media.ContentKeyPolicyClearKeyConfiguration
+### ContentKeyPolicyClearKeyConfiguration
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration' (Required)
 
-### #Microsoft.Media.ContentKeyPolicyFairPlayConfiguration
+### ContentKeyPolicyFairPlayConfiguration
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration' (Required)
-* **ask**: array (Required)
+* **ask**: any (Required)
 * **fairPlayPfx**: string (Required)
 * **fairPlayPfxPassword**: string (Required)
 * **offlineRentalConfiguration**: [ContentKeyPolicyFairPlayOfflineRentalConfiguration](#contentkeypolicyfairplayofflinerentalconfiguration)
 * **rentalAndLeaseKeyType**: 'DualExpiry' | 'PersistentLimited' | 'PersistentUnlimited' | 'Undefined' | 'Unknown' (Required)
 * **rentalDuration**: int (Required)
 
-### #Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration
+### ContentKeyPolicyPlayReadyConfiguration
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration' (Required)
 * **licenses**: [ContentKeyPolicyPlayReadyLicense](#contentkeypolicyplayreadylicense)[] (Required)
 * **responseCustomData**: string
 
-### #Microsoft.Media.ContentKeyPolicyUnknownConfiguration
+### ContentKeyPolicyUnknownConfiguration
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyUnknownConfiguration' (Required)
 
-### #Microsoft.Media.ContentKeyPolicyWidevineConfiguration
+### ContentKeyPolicyWidevineConfiguration
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration' (Required)
 * **widevineTemplate**: string (Required)
 
 
-## #Microsoft.Media.ContentKeyPolicyClearKeyConfiguration
+## ContentKeyPolicyClearKeyConfiguration
 ### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration' (Required)
 
-## #Microsoft.Media.ContentKeyPolicyFairPlayConfiguration
+## ContentKeyPolicyFairPlayConfiguration
 ### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration' (Required)
-* **ask**: array (Required)
+* **ask**: any (Required)
 * **fairPlayPfx**: string (Required)
 * **fairPlayPfxPassword**: string (Required)
 * **offlineRentalConfiguration**: [ContentKeyPolicyFairPlayOfflineRentalConfiguration](#contentkeypolicyfairplayofflinerentalconfiguration)
@@ -284,7 +285,7 @@
 * **playbackDurationSeconds**: int (Required)
 * **storageDurationSeconds**: int (Required)
 
-## #Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration
+## ContentKeyPolicyPlayReadyConfiguration
 ### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration' (Required)
 * **licenses**: [ContentKeyPolicyPlayReadyLicense](#contentkeypolicyplayreadylicense)[] (Required)
@@ -305,22 +306,23 @@
 
 ## ContentKeyPolicyPlayReadyContentKeyLocation
 * **Discriminator**: @odata.type
+
 ### Base Properties
-### #Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader
+### ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader' (Required)
 
-### #Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier
+### ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier' (Required)
 * **keyId**: string (Required)
 
 
-## #Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader
+## ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader
 ### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader' (Required)
 
-## #Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier
+## ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier
 ### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier' (Required)
 * **keyId**: string (Required)
@@ -346,23 +348,24 @@
 * **bestEffort**: bool (Required)
 * **configurationData**: int (Required)
 
-## #Microsoft.Media.ContentKeyPolicyUnknownConfiguration
+## ContentKeyPolicyUnknownConfiguration
 ### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyUnknownConfiguration' (Required)
 
-## #Microsoft.Media.ContentKeyPolicyWidevineConfiguration
+## ContentKeyPolicyWidevineConfiguration
 ### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration' (Required)
 * **widevineTemplate**: string (Required)
 
 ## ContentKeyPolicyRestriction
 * **Discriminator**: @odata.type
+
 ### Base Properties
-### #Microsoft.Media.ContentKeyPolicyOpenRestriction
+### ContentKeyPolicyOpenRestriction
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyOpenRestriction' (Required)
 
-### #Microsoft.Media.ContentKeyPolicyTokenRestriction
+### ContentKeyPolicyTokenRestriction
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyTokenRestriction' (Required)
 * **alternateVerificationKeys**: [ContentKeyPolicyRestrictionTokenKey](#contentkeypolicyrestrictiontokenkey)[]
@@ -373,16 +376,16 @@
 * **requiredClaims**: [ContentKeyPolicyTokenClaim](#contentkeypolicytokenclaim)[]
 * **restrictionTokenType**: 'Jwt' | 'Swt' | 'Unknown' (Required)
 
-### #Microsoft.Media.ContentKeyPolicyUnknownRestriction
+### ContentKeyPolicyUnknownRestriction
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyUnknownRestriction' (Required)
 
 
-## #Microsoft.Media.ContentKeyPolicyOpenRestriction
+## ContentKeyPolicyOpenRestriction
 ### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyOpenRestriction' (Required)
 
-## #Microsoft.Media.ContentKeyPolicyTokenRestriction
+## ContentKeyPolicyTokenRestriction
 ### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyTokenRestriction' (Required)
 * **alternateVerificationKeys**: [ContentKeyPolicyRestrictionTokenKey](#contentkeypolicyrestrictiontokenkey)[]
@@ -395,46 +398,47 @@
 
 ## ContentKeyPolicyRestrictionTokenKey
 * **Discriminator**: @odata.type
+
 ### Base Properties
-### #Microsoft.Media.ContentKeyPolicyRsaTokenKey
+### ContentKeyPolicyRsaTokenKey
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyRsaTokenKey' (Required)
-* **exponent**: array (Required)
-* **modulus**: array (Required)
+* **exponent**: any (Required)
+* **modulus**: any (Required)
 
-### #Microsoft.Media.ContentKeyPolicySymmetricTokenKey
+### ContentKeyPolicySymmetricTokenKey
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey' (Required)
-* **keyValue**: array (Required)
+* **keyValue**: any (Required)
 
-### #Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey
+### ContentKeyPolicyX509CertificateTokenKey
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey' (Required)
-* **rawBody**: array (Required)
+* **rawBody**: any (Required)
 
 
-## #Microsoft.Media.ContentKeyPolicyRsaTokenKey
+## ContentKeyPolicyRsaTokenKey
 ### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyRsaTokenKey' (Required)
-* **exponent**: array (Required)
-* **modulus**: array (Required)
+* **exponent**: any (Required)
+* **modulus**: any (Required)
 
-## #Microsoft.Media.ContentKeyPolicySymmetricTokenKey
+## ContentKeyPolicySymmetricTokenKey
 ### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey' (Required)
-* **keyValue**: array (Required)
+* **keyValue**: any (Required)
 
-## #Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey
+## ContentKeyPolicyX509CertificateTokenKey
 ### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey' (Required)
-* **rawBody**: array (Required)
+* **rawBody**: any (Required)
 
 ## ContentKeyPolicyTokenClaim
 ### Properties
 * **claimType**: string
 * **claimValue**: string
 
-## #Microsoft.Media.ContentKeyPolicyUnknownRestriction
+## ContentKeyPolicyUnknownRestriction
 ### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyUnknownRestriction' (Required)
 
@@ -521,7 +525,7 @@
 ### Properties
 * **trackName**: string (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -547,7 +551,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
 
 ## PrivateEndpoint
 ### Properties
@@ -593,7 +597,7 @@
 * **expiration**: string
 * **identifier**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -727,66 +731,53 @@
 
 ## Preset
 * **Discriminator**: @odata.type
-### Base Properties
-### #Microsoft.Media.AudioAnalyzerPreset
-#### Properties
-* **@odata.type**: '#Microsoft.Media.AudioAnalyzerPreset' (Required)
-* **audioLanguage**: string
-* **experimentalOptions**: [Dictionary<string,String>](#dictionarystringstring)
-* **mode**: 'Basic' | 'Standard'
 
-### #Microsoft.Media.BuiltInStandardEncoderPreset
+### Base Properties
+### BuiltInStandardEncoderPreset
 #### Properties
 * **@odata.type**: '#Microsoft.Media.BuiltInStandardEncoderPreset' (Required)
 * **presetName**: 'AACGoodQualityAudio' | 'AdaptiveStreaming' | 'ContentAwareEncoding' | 'ContentAwareEncodingExperimental' | 'CopyAllBitrateNonInterleaved' | 'H264MultipleBitrate1080p' | 'H264MultipleBitrate720p' | 'H264MultipleBitrateSD' | 'H264SingleBitrate1080p' | 'H264SingleBitrate720p' | 'H264SingleBitrateSD' | 'H265AdaptiveStreaming' | 'H265ContentAwareEncoding' | 'H265SingleBitrate1080p' | 'H265SingleBitrate4K' | 'H265SingleBitrate720p' (Required)
 
-### #Microsoft.Media.FaceDetectorPreset
+### FaceDetectorPreset
 #### Properties
 * **@odata.type**: '#Microsoft.Media.FaceDetectorPreset' (Required)
 * **blurType**: 'Black' | 'Box' | 'High' | 'Low' | 'Med'
-* **experimentalOptions**: [Dictionary<string,String>](#dictionarystringstring)
+* **experimentalOptions**: [FaceDetectorPresetExperimentalOptions](#facedetectorpresetexperimentaloptions)
 * **mode**: 'Analyze' | 'Combined' | 'Redact'
 * **resolution**: 'SourceResolution' | 'StandardDefinition'
 
-### #Microsoft.Media.StandardEncoderPreset
+### StandardEncoderPreset
 #### Properties
 * **@odata.type**: '#Microsoft.Media.StandardEncoderPreset' (Required)
 * **codecs**: [Codec](#codec)[] (Required)
 * **filters**: [Filters](#filters)
 * **formats**: [Format](#format)[] (Required)
 
+### VideoAnalyzerPreset
+#### Properties
+* **@odata.type**: '#Microsoft.Media.VideoAnalyzerPreset' (Required)
+* **insightsToExtract**: 'AllInsights' | 'AudioInsightsOnly' | 'VideoInsightsOnly'
 
-## #Microsoft.Media.AudioAnalyzerPreset
-### Properties
-* **@odata.type**: '#Microsoft.Media.AudioAnalyzerPreset' (Required)
-* **audioLanguage**: string
-* **experimentalOptions**: [Dictionary<string,String>](#dictionarystringstring)
-* **mode**: 'Basic' | 'Standard'
 
-## Dictionary<string,String>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## #Microsoft.Media.BuiltInStandardEncoderPreset
+## BuiltInStandardEncoderPreset
 ### Properties
 * **@odata.type**: '#Microsoft.Media.BuiltInStandardEncoderPreset' (Required)
 * **presetName**: 'AACGoodQualityAudio' | 'AdaptiveStreaming' | 'ContentAwareEncoding' | 'ContentAwareEncodingExperimental' | 'CopyAllBitrateNonInterleaved' | 'H264MultipleBitrate1080p' | 'H264MultipleBitrate720p' | 'H264MultipleBitrateSD' | 'H264SingleBitrate1080p' | 'H264SingleBitrate720p' | 'H264SingleBitrateSD' | 'H265AdaptiveStreaming' | 'H265ContentAwareEncoding' | 'H265SingleBitrate1080p' | 'H265SingleBitrate4K' | 'H265SingleBitrate720p' (Required)
 
-## #Microsoft.Media.FaceDetectorPreset
+## FaceDetectorPreset
 ### Properties
 * **@odata.type**: '#Microsoft.Media.FaceDetectorPreset' (Required)
 * **blurType**: 'Black' | 'Box' | 'High' | 'Low' | 'Med'
-* **experimentalOptions**: [Dictionary<string,String>](#dictionarystringstring)
+* **experimentalOptions**: [FaceDetectorPresetExperimentalOptions](#facedetectorpresetexperimentaloptions)
 * **mode**: 'Analyze' | 'Combined' | 'Redact'
 * **resolution**: 'SourceResolution' | 'StandardDefinition'
 
-## Dictionary<string,String>
+## FaceDetectorPresetExperimentalOptions
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## #Microsoft.Media.StandardEncoderPreset
+## StandardEncoderPreset
 ### Properties
 * **@odata.type**: '#Microsoft.Media.StandardEncoderPreset' (Required)
 * **codecs**: [Codec](#codec)[] (Required)
@@ -795,52 +786,135 @@
 
 ## Codec
 * **Discriminator**: @odata.type
+
 ### Base Properties
 * **label**: string
-### #Microsoft.Media.Audio
+### AacAudio
 #### Properties
-* **@odata.type**: '#Microsoft.Media.Audio' (Required)
-* **bitrate**: int
-* **channels**: int
-* **samplingRate**: int
+* **@odata.type**: '#Microsoft.Media.AacAudio' (Required)
+* **profile**: 'AacLc' | 'HeAacV1' | 'HeAacV2'
 
-### #Microsoft.Media.CopyAudio
+### CopyAudio
 #### Properties
 * **@odata.type**: '#Microsoft.Media.CopyAudio' (Required)
 
-### #Microsoft.Media.CopyVideo
+### CopyVideo
 #### Properties
 * **@odata.type**: '#Microsoft.Media.CopyVideo' (Required)
 
-### #Microsoft.Media.Video
+### H264Video
 #### Properties
-* **@odata.type**: '#Microsoft.Media.Video' (Required)
-* **keyFrameInterval**: string
-* **stretchMode**: 'AutoFit' | 'AutoSize' | 'None'
-* **syncMode**: 'Auto' | 'Cfr' | 'Passthrough' | 'Vfr'
+* **@odata.type**: '#Microsoft.Media.H264Video' (Required)
+* **complexity**: 'Balanced' | 'Quality' | 'Speed'
+* **layers**: [H264Layer](#h264layer)[]
+* **sceneChangeDetection**: bool
+
+### H265Video
+#### Properties
+* **@odata.type**: '#Microsoft.Media.H265Video' (Required)
+* **complexity**: 'Balanced' | 'Quality' | 'Speed'
+* **layers**: [H265Layer](#h265layer)[]
+* **sceneChangeDetection**: bool
+
+### JpgImage
+#### Properties
+* **@odata.type**: '#Microsoft.Media.JpgImage' (Required)
+* **layers**: [JpgLayer](#jpglayer)[]
+* **spriteColumn**: int
+
+### PngImage
+#### Properties
+* **@odata.type**: '#Microsoft.Media.PngImage' (Required)
+* **layers**: [PngLayer](#pnglayer)[]
 
 
-## #Microsoft.Media.Audio
+## AacAudio
 ### Properties
-* **@odata.type**: '#Microsoft.Media.Audio' (Required)
-* **bitrate**: int
-* **channels**: int
-* **samplingRate**: int
+* **@odata.type**: '#Microsoft.Media.AacAudio' (Required)
+* **profile**: 'AacLc' | 'HeAacV1' | 'HeAacV2'
 
-## #Microsoft.Media.CopyAudio
+## CopyAudio
 ### Properties
 * **@odata.type**: '#Microsoft.Media.CopyAudio' (Required)
 
-## #Microsoft.Media.CopyVideo
+## CopyVideo
 ### Properties
 * **@odata.type**: '#Microsoft.Media.CopyVideo' (Required)
 
-## #Microsoft.Media.Video
+## H264Video
 ### Properties
-* **@odata.type**: '#Microsoft.Media.Video' (Required)
-* **keyFrameInterval**: string
-* **stretchMode**: 'AutoFit' | 'AutoSize' | 'None'
-* **syncMode**: 'Auto' | 'Cfr' | 'Passthrough' | 'Vfr'
+* **@odata.type**: '#Microsoft.Media.H264Video' (Required)
+* **complexity**: 'Balanced' | 'Quality' | 'Speed'
+* **layers**: [H264Layer](#h264layer)[]
+* **sceneChangeDetection**: bool
+
+## H264Layer
+### Properties
+* **@odata.type**: string (Required)
+* **adaptiveBFrame**: bool
+* **bFrames**: int
+* **bitrate**: int (Required)
+* **bufferWindow**: string
+* **entropyMode**: 'Cabac' | 'Cavlc'
+* **frameRate**: string
+* **height**: string
+* **label**: string
+* **level**: string
+* **maxBitrate**: int
+* **profile**: 'Auto' | 'Baseline' | 'High' | 'High422' | 'High444' | 'Main'
+* **referenceFrames**: int
+* **slices**: int
+* **width**: string
+
+## H265Video
+### Properties
+* **@odata.type**: '#Microsoft.Media.H265Video' (Required)
+* **complexity**: 'Balanced' | 'Quality' | 'Speed'
+* **layers**: [H265Layer](#h265layer)[]
+* **sceneChangeDetection**: bool
+
+## H265Layer
+### Properties
+* **@odata.type**: string (Required)
+* **adaptiveBFrame**: bool
+* **bFrames**: int
+* **bitrate**: int (Required)
+* **bufferWindow**: string
+* **frameRate**: string
+* **height**: string
+* **label**: string
+* **level**: string
+* **maxBitrate**: int
+* **profile**: 'Auto' | 'Main'
+* **referenceFrames**: int
+* **slices**: int
+* **width**: string
+
+## JpgImage
+### Properties
+* **@odata.type**: '#Microsoft.Media.JpgImage' (Required)
+* **layers**: [JpgLayer](#jpglayer)[]
+* **spriteColumn**: int
+
+## JpgLayer
+### Properties
+* **@odata.type**: string (Required)
+* **height**: string
+* **label**: string
+* **quality**: int
+* **width**: string
+
+## PngImage
+### Properties
+* **@odata.type**: '#Microsoft.Media.PngImage' (Required)
+* **layers**: [PngLayer](#pnglayer)[]
+
+## PngLayer
+### Properties
+* **@odata.type**: string (Required)
+* **height**: string
+* **label**: string
+* **width**: string
 
 ## Filters
 ### Properties
@@ -863,6 +937,7 @@
 
 ## Overlay
 * **Discriminator**: @odata.type
+
 ### Base Properties
 * **audioGainLevel**: int
 * **end**: string
@@ -870,11 +945,11 @@
 * **fadeOutDuration**: string
 * **inputLabel**: string (Required)
 * **start**: string
-### #Microsoft.Media.AudioOverlay
+### AudioOverlay
 #### Properties
 * **@odata.type**: '#Microsoft.Media.AudioOverlay' (Required)
 
-### #Microsoft.Media.VideoOverlay
+### VideoOverlay
 #### Properties
 * **@odata.type**: '#Microsoft.Media.VideoOverlay' (Required)
 * **cropRectangle**: [Rectangle](#rectangle)
@@ -882,11 +957,11 @@
 * **position**: [Rectangle](#rectangle)
 
 
-## #Microsoft.Media.AudioOverlay
+## AudioOverlay
 ### Properties
 * **@odata.type**: '#Microsoft.Media.AudioOverlay' (Required)
 
-## #Microsoft.Media.VideoOverlay
+## VideoOverlay
 ### Properties
 * **@odata.type**: '#Microsoft.Media.VideoOverlay' (Required)
 * **cropRectangle**: [Rectangle](#rectangle)
@@ -895,34 +970,50 @@
 
 ## Format
 * **Discriminator**: @odata.type
+
 ### Base Properties
 * **filenamePattern**: string (Required)
-### #Microsoft.Media.ImageFormat
+### JpgFormat
 #### Properties
-* **@odata.type**: '#Microsoft.Media.ImageFormat' (Required)
+* **@odata.type**: '#Microsoft.Media.JpgFormat' (Required)
 
-### #Microsoft.Media.MultiBitrateFormat
+### Mp4Format
 #### Properties
-* **@odata.type**: '#Microsoft.Media.MultiBitrateFormat' (Required)
-* **outputFiles**: [OutputFile](#outputfile)[]
+* **@odata.type**: '#Microsoft.Media.Mp4Format' (Required)
+
+### PngFormat
+#### Properties
+* **@odata.type**: '#Microsoft.Media.PngFormat' (Required)
+
+### TransportStreamFormat
+#### Properties
+* **@odata.type**: '#Microsoft.Media.TransportStreamFormat' (Required)
 
 
-## #Microsoft.Media.ImageFormat
+## JpgFormat
 ### Properties
-* **@odata.type**: '#Microsoft.Media.ImageFormat' (Required)
+* **@odata.type**: '#Microsoft.Media.JpgFormat' (Required)
 
-## #Microsoft.Media.MultiBitrateFormat
+## Mp4Format
 ### Properties
-* **@odata.type**: '#Microsoft.Media.MultiBitrateFormat' (Required)
-* **outputFiles**: [OutputFile](#outputfile)[]
+* **@odata.type**: '#Microsoft.Media.Mp4Format' (Required)
 
-## OutputFile
+## PngFormat
 ### Properties
-* **labels**: string[] (Required)
+* **@odata.type**: '#Microsoft.Media.PngFormat' (Required)
+
+## TransportStreamFormat
+### Properties
+* **@odata.type**: '#Microsoft.Media.TransportStreamFormat' (Required)
+
+## VideoAnalyzerPreset
+### Properties
+* **@odata.type**: '#Microsoft.Media.VideoAnalyzerPreset' (Required)
+* **insightsToExtract**: 'AllInsights' | 'AudioInsightsOnly' | 'VideoInsightsOnly'
 
 ## JobProperties
 ### Properties
-* **correlationData**: [Dictionary<string,String>](#dictionarystringstring)
+* **correlationData**: [JobPropertiesCorrelationData](#jobpropertiescorrelationdata)
 * **created**: string (ReadOnly)
 * **description**: string
 * **endTime**: string (ReadOnly)
@@ -933,80 +1024,115 @@
 * **startTime**: string (ReadOnly)
 * **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' (ReadOnly)
 
-## Dictionary<string,String>
+## JobPropertiesCorrelationData
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## JobInput
 * **Discriminator**: @odata.type
-### Base Properties
-### #Microsoft.Media.JobInputClip
-#### Properties
-* **@odata.type**: '#Microsoft.Media.JobInputClip' (Required)
-* **end**: [ClipTime](#cliptime)
-* **files**: string[]
-* **inputDefinitions**: [InputDefinition](#inputdefinition)[]
-* **label**: string
-* **start**: [ClipTime](#cliptime)
 
-### #Microsoft.Media.JobInputs
+### Base Properties
+### JobInputAsset
+#### Properties
+* **@odata.type**: '#Microsoft.Media.JobInputAsset' (Required)
+* **assetName**: string (Required)
+
+### JobInputHttp
+#### Properties
+* **@odata.type**: '#Microsoft.Media.JobInputHttp' (Required)
+* **baseUri**: string
+
+### JobInputs
 #### Properties
 * **@odata.type**: '#Microsoft.Media.JobInputs' (Required)
 * **inputs**: [JobInput](#jobinput)[]
 
-### #Microsoft.Media.JobInputSequence
+### JobInputSequence
 #### Properties
 * **@odata.type**: '#Microsoft.Media.JobInputSequence' (Required)
-* **inputs**: [#Microsoft.Media.JobInputClip](#microsoftmediajobinputclip)[]
+* **inputs**: [JobInputClip](#jobinputclip)[]
 
 
-## #Microsoft.Media.JobInputClip
+## JobInputAsset
 ### Properties
-* **@odata.type**: '#Microsoft.Media.JobInputClip' (Required)
+* **@odata.type**: '#Microsoft.Media.JobInputAsset' (Required)
+* **assetName**: string (Required)
+
+## JobInputHttp
+### Properties
+* **@odata.type**: '#Microsoft.Media.JobInputHttp' (Required)
+* **baseUri**: string
+
+## JobInputs
+### Properties
+* **@odata.type**: '#Microsoft.Media.JobInputs' (Required)
+* **inputs**: [JobInput](#jobinput)[]
+
+## JobInputSequence
+### Properties
+* **@odata.type**: '#Microsoft.Media.JobInputSequence' (Required)
+* **inputs**: [JobInputClip](#jobinputclip)[]
+
+## JobInputClip
+* **Discriminator**: @odata.type
+
+### Base Properties
 * **end**: [ClipTime](#cliptime)
 * **files**: string[]
 * **inputDefinitions**: [InputDefinition](#inputdefinition)[]
 * **label**: string
 * **start**: [ClipTime](#cliptime)
+### JobInputAsset
+#### Properties
+* **@odata.type**: '#Microsoft.Media.JobInputAsset' (Required)
+* **assetName**: string (Required)
+
+### JobInputHttp
+#### Properties
+* **@odata.type**: '#Microsoft.Media.JobInputHttp' (Required)
+* **baseUri**: string
+
 
 ## ClipTime
 * **Discriminator**: @odata.type
+
 ### Base Properties
-### #Microsoft.Media.AbsoluteClipTime
+### AbsoluteClipTime
 #### Properties
 * **@odata.type**: '#Microsoft.Media.AbsoluteClipTime' (Required)
 * **time**: string (Required)
 
-### #Microsoft.Media.UtcClipTime
+### UtcClipTime
 #### Properties
 * **@odata.type**: '#Microsoft.Media.UtcClipTime' (Required)
 * **time**: string (Required)
 
 
-## #Microsoft.Media.AbsoluteClipTime
+## AbsoluteClipTime
 ### Properties
 * **@odata.type**: '#Microsoft.Media.AbsoluteClipTime' (Required)
 * **time**: string (Required)
 
-## #Microsoft.Media.UtcClipTime
+## UtcClipTime
 ### Properties
 * **@odata.type**: '#Microsoft.Media.UtcClipTime' (Required)
 * **time**: string (Required)
 
 ## InputDefinition
 * **Discriminator**: @odata.type
+
 ### Base Properties
 * **includedTracks**: [TrackDescriptor](#trackdescriptor)[]
-### #Microsoft.Media.FromAllInputFile
+### FromAllInputFile
 #### Properties
 * **@odata.type**: '#Microsoft.Media.FromAllInputFile' (Required)
 
-### #Microsoft.Media.FromEachInputFile
+### FromEachInputFile
 #### Properties
 * **@odata.type**: '#Microsoft.Media.FromEachInputFile' (Required)
 
-### #Microsoft.Media.InputFile
+### InputFile
 #### Properties
 * **@odata.type**: '#Microsoft.Media.InputFile' (Required)
 * **filename**: string
@@ -1014,51 +1140,73 @@
 
 ## TrackDescriptor
 * **Discriminator**: @odata.type
+
 ### Base Properties
-### #Microsoft.Media.AudioTrackDescriptor
+### SelectAudioTrackByAttribute
 #### Properties
-* **@odata.type**: '#Microsoft.Media.AudioTrackDescriptor' (Required)
-* **channelMapping**: 'BackLeft' | 'BackRight' | 'Center' | 'FrontLeft' | 'FrontRight' | 'LowFrequencyEffects' | 'StereoLeft' | 'StereoRight'
+* **@odata.type**: '#Microsoft.Media.SelectAudioTrackByAttribute' (Required)
+* **attribute**: 'Bitrate' | 'Language' (Required)
+* **filter**: 'All' | 'Bottom' | 'Top' | 'ValueEquals' (Required)
+* **filterValue**: string
 
-### #Microsoft.Media.VideoTrackDescriptor
+### SelectAudioTrackById
 #### Properties
-* **@odata.type**: '#Microsoft.Media.VideoTrackDescriptor' (Required)
+* **@odata.type**: '#Microsoft.Media.SelectAudioTrackById' (Required)
+* **trackId**: int (Required)
+
+### SelectVideoTrackByAttribute
+#### Properties
+* **@odata.type**: '#Microsoft.Media.SelectVideoTrackByAttribute' (Required)
+* **attribute**: 'Bitrate' | 'Language' (Required)
+* **filter**: 'All' | 'Bottom' | 'Top' | 'ValueEquals' (Required)
+* **filterValue**: string
+
+### SelectVideoTrackById
+#### Properties
+* **@odata.type**: '#Microsoft.Media.SelectVideoTrackById' (Required)
+* **trackId**: int (Required)
 
 
-## #Microsoft.Media.AudioTrackDescriptor
+## SelectAudioTrackByAttribute
 ### Properties
-* **@odata.type**: '#Microsoft.Media.AudioTrackDescriptor' (Required)
-* **channelMapping**: 'BackLeft' | 'BackRight' | 'Center' | 'FrontLeft' | 'FrontRight' | 'LowFrequencyEffects' | 'StereoLeft' | 'StereoRight'
+* **@odata.type**: '#Microsoft.Media.SelectAudioTrackByAttribute' (Required)
+* **attribute**: 'Bitrate' | 'Language' (Required)
+* **filter**: 'All' | 'Bottom' | 'Top' | 'ValueEquals' (Required)
+* **filterValue**: string
 
-## #Microsoft.Media.VideoTrackDescriptor
+## SelectAudioTrackById
 ### Properties
-* **@odata.type**: '#Microsoft.Media.VideoTrackDescriptor' (Required)
+* **@odata.type**: '#Microsoft.Media.SelectAudioTrackById' (Required)
+* **trackId**: int (Required)
 
-## #Microsoft.Media.FromAllInputFile
+## SelectVideoTrackByAttribute
+### Properties
+* **@odata.type**: '#Microsoft.Media.SelectVideoTrackByAttribute' (Required)
+* **attribute**: 'Bitrate' | 'Language' (Required)
+* **filter**: 'All' | 'Bottom' | 'Top' | 'ValueEquals' (Required)
+* **filterValue**: string
+
+## SelectVideoTrackById
+### Properties
+* **@odata.type**: '#Microsoft.Media.SelectVideoTrackById' (Required)
+* **trackId**: int (Required)
+
+## FromAllInputFile
 ### Properties
 * **@odata.type**: '#Microsoft.Media.FromAllInputFile' (Required)
 
-## #Microsoft.Media.FromEachInputFile
+## FromEachInputFile
 ### Properties
 * **@odata.type**: '#Microsoft.Media.FromEachInputFile' (Required)
 
-## #Microsoft.Media.InputFile
+## InputFile
 ### Properties
 * **@odata.type**: '#Microsoft.Media.InputFile' (Required)
 * **filename**: string
 
-## #Microsoft.Media.JobInputs
-### Properties
-* **@odata.type**: '#Microsoft.Media.JobInputs' (Required)
-* **inputs**: [JobInput](#jobinput)[]
-
-## #Microsoft.Media.JobInputSequence
-### Properties
-* **@odata.type**: '#Microsoft.Media.JobInputSequence' (Required)
-* **inputs**: [#Microsoft.Media.JobInputClip](#microsoftmediajobinputclip)[]
-
 ## JobOutput
 * **Discriminator**: @odata.type
+
 ### Base Properties
 * **endTime**: string (ReadOnly)
 * **error**: [JobError](#joberror) (ReadOnly)
@@ -1066,7 +1214,7 @@
 * **progress**: int (ReadOnly)
 * **startTime**: string (ReadOnly)
 * **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' (ReadOnly)
-### #Microsoft.Media.JobOutputAsset
+### JobOutputAsset
 #### Properties
 * **@odata.type**: '#Microsoft.Media.JobOutputAsset' (Required)
 * **assetName**: string (Required)
@@ -1085,7 +1233,7 @@
 * **code**: string (ReadOnly)
 * **message**: string (ReadOnly)
 
-## #Microsoft.Media.JobOutputAsset
+## JobOutputAsset
 ### Properties
 * **@odata.type**: '#Microsoft.Media.JobOutputAsset' (Required)
 * **assetName**: string (Required)

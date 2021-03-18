@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [StorageSyncServiceCreateParametersProperties](#storagesyncservicecreateparametersproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [StorageSyncServiceCreateParametersTags](#storagesyncservicecreateparameterstags)
 * **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorageSync/storageSyncServices/privateEndpointConnections@2020-09-01
@@ -89,7 +89,7 @@
 * **description**: string (ReadOnly)
 * **status**: 'Approved' | 'Pending' | 'Rejected' (ReadOnly)
 
-## Dictionary<string,String>
+## StorageSyncServiceCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

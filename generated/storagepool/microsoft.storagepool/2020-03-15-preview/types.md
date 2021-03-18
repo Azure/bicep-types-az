@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DiskPoolCreateProperties](#diskpoolcreateproperties) (Required)
 * **systemData**: [SystemMetadata](#systemmetadata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [DiskPoolCreateTags](#diskpoolcreatetags)
 * **type**: 'Microsoft.StoragePool/diskPools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StoragePool/diskPools/iscsiTargets@2020-03-15-preview
@@ -44,7 +44,7 @@
 * **lastModifiedBy**: string (ReadOnly)
 * **lastModifiedByType**: string (ReadOnly)
 
-## Dictionary<string,String>
+## DiskPoolCreateTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

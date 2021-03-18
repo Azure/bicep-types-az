@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ActionGroup](#actiongroup)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'microsoft.insights/actionGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource microsoft.insights/activityLogAlerts@2017-04-01
@@ -19,7 +19,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ActivityLogAlert](#activitylogalert)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'microsoft.insights/activityLogAlerts' (ReadOnly, DeployTimeConstant)
 
 ## ActionGroup
@@ -73,7 +73,7 @@
 * **name**: string (Required)
 * **serviceUri**: string (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -93,9 +93,9 @@
 ## ActivityLogAlertActionGroup
 ### Properties
 * **actionGroupId**: string (Required)
-* **webhookProperties**: [Dictionary<string,String>](#dictionarystringstring)
+* **webhookProperties**: [ActivityLogAlertActionGroupWebhookProperties](#activitylogalertactiongroupwebhookproperties)
 
-## Dictionary<string,String>
+## ActivityLogAlertActionGroupWebhookProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -109,7 +109,7 @@
 * **equals**: string (Required)
 * **field**: string (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

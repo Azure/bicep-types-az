@@ -10,7 +10,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApplicationInsightsComponentProperties](#applicationinsightscomponentproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ComponentsResourceTags](#componentsresourcetags)
 * **type**: 'Microsoft.Insights/components' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationInsightsComponentProperties
@@ -44,7 +44,7 @@
 * **ResourceId**: string
 * **ScopeId**: string
 
-## Dictionary<string,String>
+## ComponentsResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

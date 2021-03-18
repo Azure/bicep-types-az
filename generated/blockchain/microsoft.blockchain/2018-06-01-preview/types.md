@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [BlockchainMemberProperties](#blockchainmemberproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Blockchain/blockchainMembers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Blockchain/blockchainMembers/transactionNodes@2018-06-01-preview
@@ -54,7 +54,7 @@
 * **name**: string
 * **tier**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

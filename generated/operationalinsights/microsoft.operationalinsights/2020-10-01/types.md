@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ClusterProperties](#clusterproperties)
 * **sku**: [ClusterSku](#clustersku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces@2020-10-01
@@ -22,7 +22,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WorkspaceProperties](#workspaceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -30,9 +30,9 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required)
-* **userAssignedIdentities**: [Dictionary<string,UserIdentityProperties>](#dictionarystringuseridentityproperties)
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities)
 
-## Dictionary<string,UserIdentityProperties>
+## IdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
@@ -51,7 +51,7 @@
 * **createdDate**: string (ReadOnly)
 * **isAvailabilityZonesEnabled**: bool
 * **isDoubleEncryptionEnabled**: bool
-* **keyVaultProperties**: [keyVaultProperties](#keyvaultproperties)
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
 * **lastModifiedDate**: string (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' (ReadOnly)
 
@@ -68,7 +68,7 @@
 * **maxCapacity**: int (ReadOnly)
 * **minCapacity**: int (ReadOnly)
 
-## keyVaultProperties
+## KeyVaultProperties
 ### Properties
 * **keyName**: string
 * **keyRsaSize**: int
@@ -80,7 +80,7 @@
 * **capacity**: int
 * **name**: 'CapacityReservation'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -115,7 +115,7 @@
 * **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' (ReadOnly)
 * **quotaNextResetTime**: string (ReadOnly)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

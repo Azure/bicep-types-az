@@ -1,13 +1,13 @@
 # Microsoft.PolicyInsights @ 2021-01-01
 
 ## Resource Microsoft.PolicyInsights/attestations@2021-01-01
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AttestationProperties](#attestationproperties) (Required)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.PolicyInsights/attestations' (ReadOnly, DeployTimeConstant)
 
 ## AttestationProperties
@@ -27,7 +27,7 @@
 * **description**: string
 * **sourceUri**: string
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string
 * **createdBy**: string

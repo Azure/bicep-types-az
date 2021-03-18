@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DataControllerProperties](#datacontrollerproperties) (Required)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.AzureData/dataControllers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.AzureData/postgresInstances@2020-09-08-preview
@@ -21,7 +21,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PostgresInstanceProperties](#postgresinstanceproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.AzureData/postgresInstances' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.AzureData/sqlManagedInstances@2020-09-08-preview
@@ -33,7 +33,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SqlManagedInstanceProperties](#sqlmanagedinstanceproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.AzureData/sqlManagedInstances' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.AzureData/sqlServerInstances@2020-09-08-preview
@@ -45,7 +45,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SqlServerInstanceProperties](#sqlserverinstanceproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.AzureData/sqlServerInstances' (ReadOnly, DeployTimeConstant)
 
 ## DataControllerProperties
@@ -69,7 +69,7 @@
 * **lastModifiedBy**: string
 * **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -81,7 +81,7 @@
 * **k8sRaw**: any
 * **lastUploadedDate**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -97,7 +97,7 @@
 * **startTime**: string
 * **vCore**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -112,7 +112,7 @@
 * **vCore**: string (Required)
 * **version**: string (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

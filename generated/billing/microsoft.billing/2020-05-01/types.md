@@ -106,12 +106,12 @@
 ## InvoiceSectionProperties
 ### Properties
 * **displayName**: string
-* **labels**: [Dictionary<string,String>](#dictionarystringstring)
+* **labels**: [InvoiceSectionPropertiesLabels](#invoicesectionpropertieslabels)
 * **state**: 'Active' | 'Restricted' (ReadOnly)
 * **systemId**: string (ReadOnly)
 * **targetCloud**: 'USGov' | 'USNat' | 'USSec' (ReadOnly)
 
-## Dictionary<string,String>
+## InvoiceSectionPropertiesLabels
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

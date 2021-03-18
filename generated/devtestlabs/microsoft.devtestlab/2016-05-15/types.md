@@ -8,7 +8,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [LabProperties](#labproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/artifactsources@2016-05-15
@@ -19,7 +19,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ArtifactSourceProperties](#artifactsourceproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/artifactsources' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/costs@2016-05-15
@@ -30,7 +30,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [LabCostProperties](#labcostproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/costs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/customimages@2016-05-15
@@ -41,7 +41,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [CustomImageProperties](#customimageproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/customimages' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/formulas@2016-05-15
@@ -52,7 +52,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [FormulaProperties](#formulaproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/formulas' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/notificationchannels@2016-05-15
@@ -63,7 +63,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NotificationChannelProperties](#notificationchannelproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/notificationchannels' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/policysets/policies@2016-05-15
@@ -74,7 +74,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PolicyProperties](#policyproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/policysets/policies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/schedules@2016-05-15
@@ -85,7 +85,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/schedules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/servicerunners@2016-05-15
@@ -96,7 +96,7 @@
 * **identity**: [IdentityProperties](#identityproperties)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/servicerunners' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/users@2016-05-15
@@ -107,7 +107,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [UserProperties](#userproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/users' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/users/disks@2016-05-15
@@ -118,7 +118,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DiskProperties](#diskproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/users/disks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/users/environments@2016-05-15
@@ -129,7 +129,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [EnvironmentProperties](#environmentproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/users/environments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/users/secrets@2016-05-15
@@ -140,7 +140,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SecretProperties](#secretproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/users/secrets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/virtualmachines@2016-05-15
@@ -151,7 +151,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [LabVirtualMachineProperties](#labvirtualmachineproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/virtualmachines' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/virtualmachines/schedules@2016-05-15
@@ -162,7 +162,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/virtualmachines/schedules' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/labs/virtualnetworks@2016-05-15
@@ -173,7 +173,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VirtualNetworkProperties](#virtualnetworkproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/labs/virtualnetworks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DevTestLab/schedules@2016-05-15
@@ -184,7 +184,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevTestLab/schedules' (ReadOnly, DeployTimeConstant)
 
 ## LabProperties
@@ -200,7 +200,7 @@
 * **uniqueIdentifier**: string
 * **vaultName**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -219,7 +219,7 @@
 * **uniqueIdentifier**: string
 * **uri**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -280,7 +280,7 @@
 ### Properties
 * **thresholdValue**: int
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -316,7 +316,7 @@
 ### Properties
 * **windowsOsState**: 'NonSysprepped' | 'SysprepApplied' | 'SysprepRequested'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -337,7 +337,7 @@
 * **location**: string
 * **name**: string
 * **properties**: [LabVirtualMachineCreationParameterProperties](#labvirtualmachinecreationparameterproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [LabVirtualMachineCreationParameterTags](#labvirtualmachinecreationparametertags)
 
 ## LabVirtualMachineCreationParameterProperties
 ### Properties
@@ -379,7 +379,7 @@
 * **location**: string
 * **name**: string (ReadOnly)
 * **properties**: [ApplicableScheduleProperties](#applicablescheduleproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
 ## ApplicableScheduleProperties
@@ -393,7 +393,7 @@
 * **location**: string
 * **name**: string (ReadOnly)
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
 ## ScheduleProperties
@@ -429,12 +429,12 @@
 * **time**: string
 * **weekdays**: string[]
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -516,7 +516,7 @@
 * **frontendPort**: int
 * **transportProtocol**: 'Tcp' | 'Udp'
 
-## Dictionary<string,String>
+## LabVirtualMachineCreationParameterTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -525,7 +525,7 @@
 ### Properties
 * **labVmId**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -543,7 +543,7 @@
 ### Properties
 * **eventName**: 'AutoShutdown' | 'Cost'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -560,12 +560,12 @@
 * **threshold**: string
 * **uniqueIdentifier**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -577,7 +577,7 @@
 * **tenantId**: string
 * **type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -603,7 +603,7 @@
 * **keyVaultId**: string
 * **keyVaultUri**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -621,7 +621,7 @@
 * **provisioningState**: string
 * **uniqueIdentifier**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -645,7 +645,7 @@
 * **name**: string
 * **value**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -656,7 +656,7 @@
 * **uniqueIdentifier**: string
 * **value**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -695,12 +695,12 @@
 * **userName**: string
 * **virtualMachineCreationSource**: 'FromCustomImage' | 'FromGalleryImage'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -745,12 +745,12 @@
 * **backendPort**: int
 * **transportProtocol**: 'Tcp' | 'Udp'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

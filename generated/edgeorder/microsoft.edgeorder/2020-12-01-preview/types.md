@@ -8,8 +8,8 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AddressProperties](#addressproperties) (Required)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.EdgeOrder/addresses' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EdgeOrder/orderCollections@2020-12-01-preview
@@ -20,8 +20,8 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [OrderCollectionProperties](#ordercollectionproperties) (Required)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.EdgeOrder/orderCollections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EdgeOrder/orders@2020-12-01-preview
@@ -32,8 +32,8 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [OrderProperties](#orderproperties) (Required)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.EdgeOrder/orders' (ReadOnly, DeployTimeConstant)
 
 ## AddressProperties
@@ -61,7 +61,7 @@
 * **streetAddress3**: string
 * **zipExtendedCode**: string
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string
 * **createdBy**: string
@@ -70,7 +70,7 @@
 * **lastModifiedBy**: string
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -79,7 +79,7 @@
 ### Properties
 * **orderIds**: string[] (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -171,7 +171,7 @@
 * **productLineName**: string
 * **productName**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

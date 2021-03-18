@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [HealthAlertProperties](#healthalertproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.AlertsManagement/resourceHealthAlertRules' (ReadOnly, DeployTimeConstant)
 
 ## HealthAlertProperties
@@ -23,9 +23,9 @@
 ## HealthAlertAction
 ### Properties
 * **actionGroupId**: string
-* **webHookProperties**: [Dictionary<string,String>](#dictionarystringstring)
+* **webHookProperties**: [HealthAlertActionWebHookProperties](#healthalertactionwebhookproperties)
 
-## Dictionary<string,String>
+## HealthAlertActionWebHookProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -36,8 +36,9 @@
 
 ## HealthAlertCriterion
 * **Discriminator**: namespace
+
 ### Base Properties
-### GuestVmHealth
+### VmGuestHealthAlertCriterion
 #### Properties
 * **healthStates**: [HealthState](#healthstate)[] (Required)
 * **monitorNames**: string[]
@@ -45,7 +46,7 @@
 * **namespace**: 'GuestVmHealth' (Required)
 
 
-## GuestVmHealth
+## VmGuestHealthAlertCriterion
 ### Properties
 * **healthStates**: [HealthState](#healthstate)[] (Required)
 * **monitorNames**: string[]
@@ -57,7 +58,7 @@
 * **healthStateName**: 'Critical' | 'Warning' (Required)
 * **severity**: int (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

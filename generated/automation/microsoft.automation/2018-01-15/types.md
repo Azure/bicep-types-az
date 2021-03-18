@@ -8,7 +8,7 @@
 * **location**: string (WriteOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DscCompilationJobCreateProperties](#dsccompilationjobcreateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
+* **tags**: [DscCompilationJobCreateParametersTags](#dsccompilationjobcreateparameterstags) (WriteOnly)
 * **type**: 'Microsoft.Automation/automationAccounts/compilationjobs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Automation/automationAccounts/nodeConfigurations@2018-01-15
@@ -18,7 +18,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DscNodeConfigurationCreateOrUpdateParametersProperties](#dscnodeconfigurationcreateorupdateparametersproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
+* **tags**: [DscNodeConfigurationCreateOrUpdateParametersTags](#dscnodeconfigurationcreateorupdateparameterstags) (WriteOnly)
 * **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## DscCompilationJobCreateProperties
@@ -31,7 +31,7 @@
 * **jobId**: string (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **lastStatusModifiedTime**: string (ReadOnly)
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **parameters**: [DscCompilationJobCreatePropertiesParameters](#dsccompilationjobcreatepropertiesparameters)
 * **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly)
 * **runOn**: string (ReadOnly)
 * **startedBy**: string (ReadOnly)
@@ -43,12 +43,12 @@
 ### Properties
 * **name**: string
 
-## Dictionary<string,String>
+## DscCompilationJobCreatePropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## DscCompilationJobCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -74,7 +74,7 @@
 * **algorithm**: string (Required, WriteOnly)
 * **value**: string (Required, WriteOnly)
 
-## Dictionary<string,String>
+## DscNodeConfigurationCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

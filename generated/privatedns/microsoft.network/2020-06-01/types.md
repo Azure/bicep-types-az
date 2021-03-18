@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PrivateZoneProperties](#privatezoneproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Network/privateDnsZones' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/privateDnsZones/A@2020-06-01
@@ -101,7 +101,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VirtualNetworkLinkProperties](#virtualnetworklinkproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Network/privateDnsZones/virtualNetworkLinks' (ReadOnly, DeployTimeConstant)
 
 ## PrivateZoneProperties
@@ -115,7 +115,7 @@
 * **numberOfVirtualNetworkLinksWithRegistration**: int (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -127,7 +127,7 @@
 * **cnameRecord**: [CnameRecord](#cnamerecord)
 * **fqdn**: string (ReadOnly)
 * **isAutoRegistered**: bool (ReadOnly)
-* **metadata**: [Dictionary<string,String>](#dictionarystringstring)
+* **metadata**: [RecordSetPropertiesMetadata](#recordsetpropertiesmetadata)
 * **mxRecords**: [MxRecord](#mxrecord)[]
 * **ptrRecords**: [PtrRecord](#ptrrecord)[]
 * **soaRecord**: [SoaRecord](#soarecord)
@@ -147,7 +147,7 @@
 ### Properties
 * **cname**: string
 
-## Dictionary<string,String>
+## RecordSetPropertiesMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -193,7 +193,7 @@
 ### Properties
 * **id**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

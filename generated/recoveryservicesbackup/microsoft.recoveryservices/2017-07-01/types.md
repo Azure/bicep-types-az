@@ -9,37 +9,40 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ProtectionIntent](#protectionintent)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/backupProtectionIntent' (ReadOnly, DeployTimeConstant)
 
 ## ProtectionIntent
 * **Discriminator**: protectionIntentItemType
+
 ### Base Properties
-* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DefaultBackup' | 'DPM' | 'Invalid' | 'MAB'
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB'
 * **itemId**: string
 * **policyId**: string
 * **protectionState**: 'Invalid' | 'NotProtected' | 'Protected' | 'Protecting' | 'ProtectionFailed'
 * **sourceResourceId**: string
-### AzureResourceItem
+### AzureResourceProtectionIntent
 #### Properties
 * **friendlyName**: string
 * **protectionIntentItemType**: 'AzureResourceItem' (Required)
 
-### RecoveryServiceVaultItem
+### AzureWorkloadSQLAutoProtectionIntent
 #### Properties
-* **protectionIntentItemType**: 'RecoveryServiceVaultItem' (Required)
+* **protectionIntentItemType**: 'AzureWorkloadSQLAutoProtectionIntent' (Required)
+* **workloadItemType**: 'Invalid' | 'SAPAseDatabase' | 'SAPAseSystem' | 'SAPHanaDatabase' | 'SAPHanaSystem' | 'SQLDataBase' | 'SQLInstance'
 
 
-## AzureResourceItem
+## AzureResourceProtectionIntent
 ### Properties
 * **friendlyName**: string
 * **protectionIntentItemType**: 'AzureResourceItem' (Required)
 
-## RecoveryServiceVaultItem
+## AzureWorkloadSQLAutoProtectionIntent
 ### Properties
-* **protectionIntentItemType**: 'RecoveryServiceVaultItem' (Required)
+* **protectionIntentItemType**: 'AzureWorkloadSQLAutoProtectionIntent' (Required)
+* **workloadItemType**: 'Invalid' | 'SAPAseDatabase' | 'SAPAseSystem' | 'SAPHanaDatabase' | 'SAPHanaSystem' | 'SQLDataBase' | 'SQLInstance'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

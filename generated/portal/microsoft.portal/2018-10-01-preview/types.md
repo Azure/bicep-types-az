@@ -8,64 +8,64 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DashboardProperties](#dashboardproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [DashboardTags](#dashboardtags)
 * **type**: 'Microsoft.Portal/dashboards' (ReadOnly, DeployTimeConstant)
 
 ## DashboardProperties
 ### Properties
-* **lenses**: [Dictionary<string,DashboardLens>](#dictionarystringdashboardlens)
-* **metadata**: [Dictionary<string,Object>](#dictionarystringobject)
+* **lenses**: [DashboardPropertiesLenses](#dashboardpropertieslenses)
+* **metadata**: [DashboardPropertiesMetadata](#dashboardpropertiesmetadata)
 
-## Dictionary<string,DashboardLens>
+## DashboardPropertiesLenses
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [DashboardLens](#dashboardlens)
 
 ## DashboardLens
 ### Properties
-* **metadata**: [Dictionary<string,Object>](#dictionarystringobject)
+* **metadata**: [DashboardLensMetadata](#dashboardlensmetadata)
 * **order**: int (Required)
-* **parts**: [Dictionary<string,DashboardParts>](#dictionarystringdashboardparts) (Required)
+* **parts**: [DashboardLensParts](#dashboardlensparts) (Required)
 
-## Dictionary<string,Object>
+## DashboardLensMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## Dictionary<string,DashboardParts>
+## DashboardLensParts
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [DashboardParts](#dashboardparts)
 
 ## DashboardParts
 ### Properties
-* **metadata**: [Dictionary<string,Object>](#dictionarystringobject)
-* **position**: [schemas:1_position](#schemas1position) (Required)
+* **metadata**: [DashboardPartsMetadata](#dashboardpartsmetadata)
+* **position**: [DashboardPartsPosition](#dashboardpartsposition) (Required)
 
-## Dictionary<string,Object>
+## DashboardPartsMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## schemas:1_position
+## DashboardPartsPosition
 ### Properties
 * **colSpan**: int (Required)
-* **metadata**: [Dictionary<string,Object>](#dictionarystringobject)
+* **metadata**: [DashboardPartsPositionMetadata](#dashboardpartspositionmetadata)
 * **rowSpan**: int (Required)
 * **x**: int (Required)
 * **y**: int (Required)
 
-## Dictionary<string,Object>
+## DashboardPartsPositionMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## Dictionary<string,Object>
+## DashboardPropertiesMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## Dictionary<string,String>
+## DashboardTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

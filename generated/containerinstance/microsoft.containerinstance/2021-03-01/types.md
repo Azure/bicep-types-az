@@ -8,28 +8,28 @@
 * **identity**: [ContainerGroupIdentity](#containergroupidentity)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:17_properties](#schemas17properties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [ContainerGroupProperties](#containergroupproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant)
 
 ## ContainerGroupIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: [Dictionary<string,Schemas18UserAssignedIdentitiesValue>](#dictionarystringschemas18userassignedidentitiesvalue)
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
+* **userAssignedIdentities**: [ContainerGroupIdentityUserAssignedIdentities](#containergroupidentityuserassignedidentities)
 
-## Dictionary<string,Schemas18UserAssignedIdentitiesValue>
+## ContainerGroupIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [schemas:18_userAssignedIdentitiesValue](#schemas18userassignedidentitiesvalue)
+* **Additional Properties Type**: [Components10Wh5UdSchemasContainergroupidentityPropertiesUserassignedidentitiesAdditionalproperties](#components10wh5udschemascontainergroupidentitypropertiesuserassignedidentitiesadditionalproperties)
 
-## schemas:18_userAssignedIdentitiesValue
+## Components10Wh5UdSchemasContainergroupidentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
 * **clientId**: string (ReadOnly)
 * **principalId**: string (ReadOnly)
 
-## schemas:17_properties
+## ContainerGroupProperties
 ### Properties
 * **containers**: [Container](#container)[] (Required)
 * **diagnostics**: [ContainerGroupDiagnostics](#containergroupdiagnostics)
@@ -37,7 +37,7 @@
 * **encryptionProperties**: [EncryptionProperties](#encryptionproperties)
 * **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]
 * **initContainers**: [InitContainerDefinition](#initcontainerdefinition)[]
-* **instanceView**: [schemas:17_properties_instanceView](#schemas17propertiesinstanceview) (ReadOnly)
+* **instanceView**: [ContainerGroupPropertiesInstanceView](#containergrouppropertiesinstanceview) (ReadOnly)
 * **ipAddress**: [IpAddress](#ipaddress)
 * **networkProfile**: [ContainerGroupNetworkProfile](#containergroupnetworkprofile)
 * **osType**: 'Linux' | 'Windows' (Required)
@@ -56,7 +56,7 @@
 * **command**: string[]
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]
 * **image**: string (Required)
-* **instanceView**: [schemas:1_instanceView](#schemas1instanceview) (ReadOnly)
+* **instanceView**: [ContainerPropertiesInstanceView](#containerpropertiesinstanceview) (ReadOnly)
 * **livenessProbe**: [ContainerProbe](#containerprobe)
 * **ports**: [ContainerPort](#containerport)[]
 * **readinessProbe**: [ContainerProbe](#containerprobe)
@@ -69,7 +69,7 @@
 * **secureValue**: string
 * **value**: string
 
-## schemas:1_instanceView
+## ContainerPropertiesInstanceView
 ### Properties
 * **currentState**: [ContainerState](#containerstate) (ReadOnly)
 * **events**: [Event](#event)[] (ReadOnly)
@@ -159,17 +159,17 @@
 ## LogAnalytics
 ### Properties
 * **logType**: 'ContainerInsights' | 'ContainerInstanceLogs'
-* **metadata**: [Dictionary<string,String>](#dictionarystringstring)
+* **metadata**: [LogAnalyticsMetadata](#loganalyticsmetadata)
 * **workspaceId**: string (Required)
 * **workspaceKey**: string (Required)
-* **workspaceResourceId**: [Dictionary<string,String>](#dictionarystringstring)
+* **workspaceResourceId**: [LogAnalyticsWorkspaceResourceId](#loganalyticsworkspaceresourceid)
 
-## Dictionary<string,String>
+## LogAnalyticsMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## LogAnalyticsWorkspaceResourceId
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -202,17 +202,17 @@
 * **command**: string[]
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]
 * **image**: string
-* **instanceView**: [schemas:46_instanceView](#schemas46instanceview) (ReadOnly)
+* **instanceView**: [InitContainerPropertiesDefinitionInstanceView](#initcontainerpropertiesdefinitioninstanceview) (ReadOnly)
 * **volumeMounts**: [VolumeMount](#volumemount)[]
 
-## schemas:46_instanceView
+## InitContainerPropertiesDefinitionInstanceView
 ### Properties
 * **currentState**: [ContainerState](#containerstate) (ReadOnly)
 * **events**: [Event](#event)[] (ReadOnly)
 * **previousState**: [ContainerState](#containerstate) (ReadOnly)
 * **restartCount**: int (ReadOnly)
 
-## schemas:17_properties_instanceView
+## ContainerGroupPropertiesInstanceView
 ### Properties
 * **events**: [Event](#event)[] (ReadOnly)
 * **state**: string (ReadOnly)
@@ -240,7 +240,7 @@
 * **emptyDir**: any
 * **gitRepo**: [GitRepoVolume](#gitrepovolume)
 * **name**: string (Required)
-* **secret**: [Dictionary<string,String>](#dictionarystringstring)
+* **secret**: [SecretVolume](#secretvolume)
 
 ## AzureFileVolume
 ### Properties
@@ -255,12 +255,12 @@
 * **repository**: string (Required)
 * **revision**: string
 
-## Dictionary<string,String>
+## SecretVolume
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

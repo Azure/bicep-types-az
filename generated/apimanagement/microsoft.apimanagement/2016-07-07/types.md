@@ -10,21 +10,24 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApiManagementServiceProperties](#apimanagementserviceproperties)
 * **sku**: [ApiManagementServiceSkuProperties](#apimanagementserviceskuproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ApiManagementServiceBaseParametersTags](#apimanagementservicebaseparameterstags)
 * **type**: 'Microsoft.ApiManagement/service' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis@2016-07-07
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant)
-* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract)
-* **description**: string
+* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (WriteOnly)
+* **content**: any (ReadOnly)
+* **description**: string (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **path**: string (Required)
-* **protocols**: 'Http' | 'Https'[] (Required)
-* **serviceUrl**: string (Required)
-* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract)
+* **path**: string (Required, WriteOnly)
+* **protocols**: 'Http' | 'Https'[] (Required, WriteOnly)
+* **requestId**: string (ReadOnly)
+* **serviceUrl**: string (Required, WriteOnly)
+* **statusCode**: 'Accepted' | 'Conflict' | 'Continue' | 'Created' | 'NotFound' | 'OK' (ReadOnly)
+* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (WriteOnly)
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/apis/operations@2016-07-07
@@ -121,7 +124,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant)
-* **credentials**: [Dictionary<string,String>](#dictionarystringstring) (Required)
+* **credentials**: [LoggerCreateParametersCredentials](#loggercreateparameterscredentials) (Required)
 * **description**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **isBuffered**: bool
@@ -221,7 +224,7 @@
 * **additionalLocations**: [AdditionalRegion](#additionalregion)[]
 * **addresserEmail**: string
 * **createdAtUtc**: string (ReadOnly)
-* **customProperties**: [Dictionary<string,String>](#dictionarystringstring)
+* **customProperties**: [ApiManagementServicePropertiesCustomProperties](#apimanagementservicepropertiescustomproperties)
 * **hostnameConfigurations**: [HostnameConfiguration](#hostnameconfiguration)[]
 * **managementApiUrl**: string (ReadOnly)
 * **portalUrl**: string (ReadOnly)
@@ -250,7 +253,7 @@
 * **subnetResourceId**: string
 * **vnetid**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ApiManagementServicePropertiesCustomProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -272,24 +275,24 @@
 * **capacity**: int
 * **name**: 'Developer' | 'Premium' | 'Standard' (Required)
 
-## Dictionary<string,String>
+## ApiManagementServiceBaseParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## AuthenticationSettingsContract
 ### Properties
-* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract)
+* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract) (WriteOnly)
 
 ## OAuth2AuthenticationSettingsContract
 ### Properties
-* **authorizationServerId**: string
-* **scope**: string
+* **authorizationServerId**: string (WriteOnly)
+* **scope**: string (WriteOnly)
 
 ## SubscriptionKeyParameterNamesContract
 ### Properties
-* **header**: string
-* **query**: string
+* **header**: string (WriteOnly)
+* **query**: string (WriteOnly)
 
 ## RequestContract
 ### Properties
@@ -323,7 +326,7 @@
 * **name**: string (Required)
 * **value**: string (Required)
 
-## Dictionary<string,String>
+## LoggerCreateParametersCredentials
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

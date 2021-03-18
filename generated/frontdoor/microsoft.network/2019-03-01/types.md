@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WebApplicationFirewallPolicyProperties](#webapplicationfirewallpolicyproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/FrontDoorWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant)
 
 ## WebApplicationFirewallPolicyProperties
@@ -78,7 +78,7 @@
 * **mode**: 'Detection' | 'Prevention'
 * **redirectUrl**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

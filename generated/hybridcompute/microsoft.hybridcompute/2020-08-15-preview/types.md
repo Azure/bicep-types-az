@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2020-08-15-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [schemas:6_identity](#schemas6identity)
+* **identity**: [MachineIdentity](#machineidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:6_properties](#schemas6properties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [MachineProperties](#machineproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HybridCompute/machines/extensions@2020-08-15-preview
@@ -19,8 +19,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:13_properties](#schemas13properties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [MachineExtensionProperties](#machineextensionproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HybridCompute/privateLinkScopes@2020-08-15-preview
@@ -31,7 +31,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [HybridComputePrivateLinkScopeProperties](#hybridcomputeprivatelinkscopeproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [PrivateLinkScopesResourceTags](#privatelinkscopesresourcetags)
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections@2020-08-15-preview
@@ -52,13 +52,13 @@
 * **properties**: [ScopedResourceProperties](#scopedresourceproperties)
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes/scopedResources' (ReadOnly, DeployTimeConstant)
 
-## schemas:6_identity
+## MachineIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: string
 
-## schemas:6_properties
+## MachineProperties
 ### Properties
 * **adFqdn**: string (ReadOnly)
 * **agentVersion**: string (ReadOnly)
@@ -69,10 +69,10 @@
 * **errorDetails**: [ErrorDetail](#errordetail)[] (ReadOnly)
 * **extensions**: [MachineExtensionInstanceView](#machineextensioninstanceview)[]
 * **lastStatusChange**: string (ReadOnly)
-* **locationData**: [locationData](#locationdata)
+* **locationData**: [LocationData](#locationdata)
 * **machineFqdn**: string (ReadOnly)
 * **osName**: string (ReadOnly)
-* **osProfile**: [schemas:4_osProfile](#schemas4osprofile)
+* **osProfile**: [MachinePropertiesOsProfile](#machinepropertiesosprofile)
 * **osSku**: string (ReadOnly)
 * **osVersion**: string (ReadOnly)
 * **privateLinkScopedResources**: string[] (ReadOnly)
@@ -91,11 +91,11 @@
 ## MachineExtensionInstanceView
 ### Properties
 * **name**: string
-* **status**: [schemas:17_status](#schemas17status)
+* **status**: [MachineExtensionInstanceViewStatus](#machineextensioninstanceviewstatus)
 * **type**: string
 * **typeHandlerVersion**: string
 
-## schemas:17_status
+## MachineExtensionInstanceViewStatus
 ### Properties
 * **code**: string
 * **displayStatus**: string
@@ -103,27 +103,27 @@
 * **message**: string
 * **time**: string
 
-## locationData
+## LocationData
 ### Properties
 * **city**: string
 * **countryOrRegion**: string
 * **district**: string
 * **name**: string (Required)
 
-## schemas:4_osProfile
+## MachinePropertiesOsProfile
 ### Properties
 * **computerName**: string (ReadOnly)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:13_properties
+## MachineExtensionProperties
 ### Properties
 * **autoUpgradeMinorVersion**: bool
 * **forceUpdateTag**: string
-* **instanceView**: [schemas:15_instanceView](#schemas15instanceview)
+* **instanceView**: [MachineExtensionPropertiesInstanceView](#machineextensionpropertiesinstanceview)
 * **protectedSettings**: any
 * **provisioningState**: string (ReadOnly)
 * **publisher**: string
@@ -131,14 +131,14 @@
 * **type**: string
 * **typeHandlerVersion**: string
 
-## schemas:15_instanceView
+## MachineExtensionPropertiesInstanceView
 ### Properties
 * **name**: string
-* **status**: [schemas:17_status](#schemas17status)
+* **status**: [MachineExtensionInstanceViewStatus](#machineextensioninstanceviewstatus)
 * **type**: string
 * **typeHandlerVersion**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -172,7 +172,7 @@
 * **description**: string (Required)
 * **status**: string (Required)
 
-## Dictionary<string,String>
+## PrivateLinkScopesResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

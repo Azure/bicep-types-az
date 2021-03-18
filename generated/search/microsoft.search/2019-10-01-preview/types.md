@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SearchServiceProperties](#searchserviceproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Search/searchServices/privateEndpointConnections@2019-10-01-preview
@@ -57,14 +57,14 @@
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [schemas:9_privateEndpoint](#schemas9privateendpoint)
-* **privateLinkServiceConnectionState**: [schemas:9_privateLinkServiceConnectionState](#schemas9privatelinkserviceconnectionstate)
+* **privateEndpoint**: [PrivateEndpointConnectionPropertiesPrivateEndpoint](#privateendpointconnectionpropertiesprivateendpoint)
+* **privateLinkServiceConnectionState**: [PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionState](#privateendpointconnectionpropertiesprivatelinkserviceconnectionstate)
 
-## schemas:9_privateEndpoint
+## PrivateEndpointConnectionPropertiesPrivateEndpoint
 ### Properties
 * **id**: string
 
-## schemas:9_privateLinkServiceConnectionState
+## PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionState
 ### Properties
 * **actionsRequired**: string
 * **description**: string
@@ -74,7 +74,7 @@
 ### Properties
 * **name**: 'basic' | 'free' | 'standard' | 'standard2' | 'standard3' | 'storage_optimized_l1' | 'storage_optimized_l2'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

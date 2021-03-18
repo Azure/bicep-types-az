@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ClusterProperties](#clusterproperties)
 * **sku**: [AzureSku](#azuresku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Kusto/clusters/databases@2018-09-07-preview
@@ -22,7 +22,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DatabaseProperties](#databaseproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Kusto/clusters/databases/eventhubconnections@2018-09-07-preview
@@ -51,9 +51,9 @@
 ### Properties
 * **capacity**: int
 * **name**: 'D13_v2' | 'D14_v2' | 'KC16' | 'KC8' | 'KS16' | 'KS8' | 'L16' | 'L8' (Required)
-* **tier**: string (Required)
+* **tier**: 'Standard' (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -63,13 +63,13 @@
 * **hotCachePeriodInDays**: int
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly)
 * **softDeletePeriodInDays**: int (Required)
-* **statistics**: [DatabaseStatistics](#databasestatistics)
+* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly)
 
 ## DatabaseStatistics
 ### Properties
 * **size**: int
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

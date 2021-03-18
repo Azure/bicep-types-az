@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AutoscaleSetting](#autoscalesetting) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'microsoft.insights/autoscalesettings' (ReadOnly, DeployTimeConstant)
 
 ## AutoscaleSetting
@@ -22,7 +22,7 @@
 ## AutoscaleNotification
 ### Properties
 * **email**: [EmailNotification](#emailnotification)
-* **operation**: string (Required)
+* **operation**: 'Scale' (Required)
 * **webhooks**: [WebhookNotification](#webhooknotification)[]
 
 ## EmailNotification
@@ -33,10 +33,10 @@
 
 ## WebhookNotification
 ### Properties
-* **properties**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [WebhookNotificationProperties](#webhooknotificationproperties)
 * **serviceUri**: string
 
-## Dictionary<string,String>
+## WebhookNotificationProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -104,7 +104,7 @@
 * **type**: 'ChangeCount' | 'ExactCount' | 'PercentChangeCount' (Required)
 * **value**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

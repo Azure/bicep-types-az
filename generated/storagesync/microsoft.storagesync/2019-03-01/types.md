@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: any
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [StorageSyncServiceCreateParametersTags](#storagesyncservicecreateparameterstags)
 * **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorageSync/storageSyncServices/registeredServers@2019-03-01
@@ -47,7 +47,7 @@
 * **properties**: [ServerEndpointCreateParametersProperties](#serverendpointcreateparametersproperties)
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant)
 
-## Dictionary<string,String>
+## StorageSyncServiceCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApplicationResourceProperties](#applicationresourceproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.ServiceFabricMesh/applications' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabricMesh/gateways@2018-09-01-preview
@@ -19,7 +19,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [GatewayResourceProperties](#gatewayresourceproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.ServiceFabricMesh/gateways' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabricMesh/networks@2018-09-01-preview
@@ -30,7 +30,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NetworkResourceProperties](#networkresourceproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.ServiceFabricMesh/networks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabricMesh/secrets@2018-09-01-preview
@@ -41,7 +41,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SecretResourceProperties](#secretresourceproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.ServiceFabricMesh/secrets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabricMesh/secrets/values@2018-09-01-preview
@@ -52,7 +52,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SecretValueResourceProperties](#secretvalueresourceproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.ServiceFabricMesh/secrets/values' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabricMesh/volumes@2018-09-01-preview
@@ -63,7 +63,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VolumeResourceProperties](#volumeresourceproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.ServiceFabricMesh/volumes' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationResourceProperties
@@ -87,10 +87,11 @@
 
 ## DiagnosticsSinkProperties
 * **Discriminator**: kind
+
 ### Base Properties
 * **description**: string
 * **name**: string
-### AzureInternalMonitoringPipeline
+### AzureInternalMonitoringPipelineSinkDescription
 #### Properties
 * **accountName**: string
 * **autoKeyConfigUrl**: string
@@ -100,7 +101,7 @@
 * **namespace**: string
 
 
-## AzureInternalMonitoringPipeline
+## AzureInternalMonitoringPipelineSinkDescription
 ### Properties
 * **accountName**: string
 * **autoKeyConfigUrl**: string
@@ -139,8 +140,9 @@
 
 ## AutoScalingMechanism
 * **Discriminator**: kind
+
 ### Base Properties
-### AddRemoveReplica
+### AddRemoveReplicaScalingMechanism
 #### Properties
 * **kind**: 'AddRemoveReplica' (Required)
 * **maxCount**: int (Required)
@@ -148,7 +150,7 @@
 * **scaleIncrement**: int (Required)
 
 
-## AddRemoveReplica
+## AddRemoveReplicaScalingMechanism
 ### Properties
 * **kind**: 'AddRemoveReplica' (Required)
 * **maxCount**: int (Required)
@@ -157,8 +159,9 @@
 
 ## AutoScalingTrigger
 * **Discriminator**: kind
+
 ### Base Properties
-### AverageLoad
+### AverageLoadScalingTrigger
 #### Properties
 * **kind**: 'AverageLoad' (Required)
 * **lowerLoadThreshold**: int (Required)
@@ -167,7 +170,7 @@
 * **upperLoadThreshold**: int (Required)
 
 
-## AverageLoad
+## AverageLoadScalingTrigger
 ### Properties
 * **kind**: 'AverageLoad' (Required)
 * **lowerLoadThreshold**: int (Required)
@@ -177,14 +180,15 @@
 
 ## AutoScalingMetric
 * **Discriminator**: kind
+
 ### Base Properties
-### Resource
+### AutoScalingResourceMetric
 #### Properties
 * **kind**: 'Resource' (Required)
 * **name**: 'cpu' | 'memoryInGB' (Required)
 
 
-## Resource
+## AutoScalingResourceMetric
 ### Properties
 * **kind**: 'Resource' (Required)
 * **name**: 'cpu' | 'memoryInGB' (Required)
@@ -297,15 +301,16 @@
 
 ## ApplicationScopedVolumeCreationParameters
 * **Discriminator**: kind
+
 ### Base Properties
 * **description**: string
-### ServiceFabricVolumeDisk
+### ApplicationScopedVolumeCreationParametersServiceFabricVolumeDisk
 #### Properties
 * **kind**: 'ServiceFabricVolumeDisk' (Required)
 * **sizeDisk**: 'Large' | 'Medium' | 'Small' (Required)
 
 
-## ServiceFabricVolumeDisk
+## ApplicationScopedVolumeCreationParametersServiceFabricVolumeDisk
 ### Properties
 * **kind**: 'ServiceFabricVolumeDisk' (Required)
 * **sizeDisk**: 'Large' | 'Medium' | 'Small' (Required)
@@ -319,7 +324,7 @@
 ### Properties
 * **name**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -373,7 +378,7 @@
 ## HttpRouteMatchPath
 ### Properties
 * **rewrite**: string
-* **type**: string (Required)
+* **type**: 'prefix' (Required)
 * **value**: string (Required)
 
 ## TcpConfig
@@ -382,32 +387,54 @@
 * **name**: string (Required)
 * **port**: int (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## NetworkResourceProperties
-### Properties
+* **Discriminator**: kind
+
+### Base Properties
 * **description**: string
 * **provisioningState**: string (ReadOnly)
 * **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly)
 * **statusDetails**: string (ReadOnly)
+### LocalNetworkResourceProperties
+#### Properties
+* **kind**: 'Local' (Required)
+* **networkAddressPrefix**: string
 
-## Dictionary<string,String>
+
+## LocalNetworkResourceProperties
+### Properties
+* **kind**: 'Local' (Required)
+* **networkAddressPrefix**: string
+
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## SecretResourceProperties
-### Properties
+* **Discriminator**: kind
+
+### Base Properties
 * **contentType**: string
 * **description**: string
 * **provisioningState**: string (ReadOnly)
 * **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly)
 * **statusDetails**: string (ReadOnly)
+### InlinedValueSecretResourceProperties
+#### Properties
+* **kind**: 'inlinedValue' (Required)
 
-## Dictionary<string,String>
+
+## InlinedValueSecretResourceProperties
+### Properties
+* **kind**: 'inlinedValue' (Required)
+
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -417,7 +444,7 @@
 * **provisioningState**: string (ReadOnly)
 * **value**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -426,7 +453,7 @@
 ### Properties
 * **azureFileParameters**: [VolumeProviderParametersAzureFile](#volumeproviderparametersazurefile)
 * **description**: string
-* **provider**: string (Required)
+* **provider**: 'SFAzureFile' (Required)
 * **provisioningState**: string (ReadOnly)
 * **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly)
 * **statusDetails**: string (ReadOnly)
@@ -437,7 +464,7 @@
 * **accountName**: string (Required)
 * **shareName**: string (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

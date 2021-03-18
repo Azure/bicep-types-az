@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [IoTSpacesProperties](#iotspacesproperties)
 * **sku**: [IoTSpacesSkuInfo](#iotspacesskuinfo) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.IoTSpaces/Graph' (ReadOnly, DeployTimeConstant)
 
 ## IoTSpacesProperties
@@ -30,7 +30,7 @@
 ### Properties
 * **name**: 'F1' | 'S1' | 'S2' | 'S3' (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

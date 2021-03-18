@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [BatchAccountCreateProperties](#batchaccountcreateproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [BatchAccountCreateParametersTags](#batchaccountcreateparameterstags)
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Batch/batchAccounts/applications@2020-09-01
@@ -123,7 +123,7 @@
 * **description**: string (ReadOnly)
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly)
 
-## Dictionary<string,String>
+## BatchAccountCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -239,7 +239,7 @@
 ### Properties
 * **containerImageNames**: string[]
 * **containerRegistries**: [ContainerRegistry](#containerregistry)[]
-* **type**: string (Required)
+* **type**: 'DockerCompatible' (Required)
 
 ## ContainerRegistry
 ### Properties
@@ -279,7 +279,7 @@
 ### Properties
 * **azureBlobFileSystemConfiguration**: [AzureBlobFileSystemConfiguration](#azureblobfilesystemconfiguration)
 * **azureFileShareConfiguration**: [AzureFileShareConfiguration](#azurefileshareconfiguration)
-* **cifsMountConfiguration**: [CIFSMountConfiguration](#cifsmountconfiguration)
+* **cifsMountConfiguration**: [CifsMountConfiguration](#cifsmountconfiguration)
 * **nfsMountConfiguration**: [NFSMountConfiguration](#nfsmountconfiguration)
 
 ## AzureBlobFileSystemConfiguration
@@ -299,7 +299,7 @@
 * **mountOptions**: string
 * **relativeMountPath**: string (Required)
 
-## CIFSMountConfiguration
+## CifsMountConfiguration
 ### Properties
 * **mountOptions**: string
 * **password**: string (Required)

@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:5_properties](#schemas5properties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [ArtifactSourceProperties](#artifactsourceproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DeploymentManager/artifactSources' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DeploymentManager/rollouts@2019-11-01-preview
@@ -20,7 +20,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [RolloutRequestProperties](#rolloutrequestproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DeploymentManager/rollouts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DeploymentManager/serviceTopologies@2019-11-01-preview
@@ -30,8 +30,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:13_properties](#schemas13properties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [ServiceTopologyResourceProperties](#servicetopologyresourceproperties) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DeploymentManager/serviceTopologies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DeploymentManager/serviceTopologies/services@2019-11-01-preview
@@ -41,8 +41,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:15_properties](#schemas15properties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [ServiceResourceProperties](#serviceresourceproperties) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DeploymentManager/serviceTopologies/services' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DeploymentManager/serviceTopologies/services/serviceUnits@2019-11-01-preview
@@ -52,8 +52,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:18_properties](#schemas18properties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [ServiceUnitResourceProperties](#serviceunitresourceproperties) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DeploymentManager/serviceTopologies/services/serviceUnits' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DeploymentManager/steps@2019-11-01-preview
@@ -64,10 +64,10 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [StepProperties](#stepproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DeploymentManager/steps' (ReadOnly, DeployTimeConstant)
 
-## schemas:5_properties
+## ArtifactSourceProperties
 ### Properties
 * **artifactRoot**: string
 * **authentication**: [Authentication](#authentication) (Required)
@@ -75,14 +75,15 @@
 
 ## Authentication
 * **Discriminator**: type
+
 ### Base Properties
-### Sas
+### SasAuthentication
 #### Properties
 * **properties**: [SasProperties](#sasproperties)
 * **type**: 'Sas' (Required)
 
 
-## Sas
+## SasAuthentication
 ### Properties
 * **properties**: [SasProperties](#sasproperties)
 * **type**: 'Sas' (Required)
@@ -91,7 +92,7 @@
 ### Properties
 * **sasUri**: string (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -193,73 +194,75 @@
 ### Properties
 * **stepId**: string (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:13_properties
+## ServiceTopologyResourceProperties
 ### Properties
 * **artifactSourceId**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:15_properties
+## ServiceResourceProperties
 ### Properties
 * **targetLocation**: string (Required)
 * **targetSubscriptionId**: string (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:18_properties
+## ServiceUnitResourceProperties
 ### Properties
 * **artifacts**: [ServiceUnitArtifacts](#serviceunitartifacts)
 * **deploymentMode**: 'Complete' | 'Incremental' (Required)
 * **targetResourceGroup**: string (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## StepProperties
 * **Discriminator**: stepType
+
 ### Base Properties
-### HealthCheck
+### HealthCheckStepProperties
 #### Properties
 * **attributes**: [HealthCheckStepAttributes](#healthcheckstepattributes) (Required)
 * **stepType**: 'HealthCheck' (Required)
 
-### Wait
+### WaitStepProperties
 #### Properties
 * **attributes**: [WaitStepAttributes](#waitstepattributes) (Required)
 * **stepType**: 'Wait' (Required)
 
 
-## HealthCheck
+## HealthCheckStepProperties
 ### Properties
 * **attributes**: [HealthCheckStepAttributes](#healthcheckstepattributes) (Required)
 * **stepType**: 'HealthCheck' (Required)
 
 ## HealthCheckStepAttributes
 * **Discriminator**: type
+
 ### Base Properties
 * **healthyStateDuration**: string (Required)
 * **maxElasticDuration**: string
 * **waitDuration**: string
-### REST
+### RestHealthCheckStepAttributes
 #### Properties
 * **properties**: [RestParameters](#restparameters)
 * **type**: 'REST' (Required)
 
 
-## REST
+## RestHealthCheckStepAttributes
 ### Properties
 * **properties**: [RestParameters](#restparameters)
 * **type**: 'REST' (Required)
@@ -282,41 +285,42 @@
 
 ## RestRequestAuthentication
 * **Discriminator**: type
+
 ### Base Properties
-### ApiKey
+### ApiKeyAuthentication
 #### Properties
 * **in**: 'Header' | 'Query' (Required)
 * **name**: string (Required)
 * **type**: 'ApiKey' (Required)
 * **value**: string (Required)
 
-### RolloutIdentity
+### RolloutIdentityAuthentication
 #### Properties
 * **type**: 'RolloutIdentity' (Required)
 
 
-## ApiKey
+## ApiKeyAuthentication
 ### Properties
 * **in**: 'Header' | 'Query' (Required)
 * **name**: string (Required)
 * **type**: 'ApiKey' (Required)
 * **value**: string (Required)
 
-## RolloutIdentity
+## RolloutIdentityAuthentication
 ### Properties
 * **type**: 'RolloutIdentity' (Required)
 
 ## RestResponse
 ### Properties
-* **regex**: [schemas:42_regex](#schemas42regex)
+* **regex**: [RestResponseRegex](#restresponseregex)
 * **successStatusCodes**: string[]
 
-## schemas:42_regex
+## RestResponseRegex
 ### Properties
 * **matches**: string[]
 * **matchQuantifier**: 'All' | 'Any'
 
-## Wait
+## WaitStepProperties
 ### Properties
 * **attributes**: [WaitStepAttributes](#waitstepattributes) (Required)
 * **stepType**: 'Wait' (Required)
@@ -325,7 +329,7 @@
 ### Properties
 * **duration**: string (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

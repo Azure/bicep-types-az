@@ -8,7 +8,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [LabAccountProperties](#labaccountproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.LabServices/labaccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.LabServices/labaccounts/galleryimages@2018-10-15
@@ -19,7 +19,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [GalleryImageProperties](#galleryimageproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.LabServices/labaccounts/galleryimages' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.LabServices/labaccounts/labs@2018-10-15
@@ -30,7 +30,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [LabProperties](#labproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.LabServices/labaccounts/labs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.LabServices/labaccounts/labs/environmentsettings@2018-10-15
@@ -41,7 +41,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [EnvironmentSettingProperties](#environmentsettingproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.LabServices/labaccounts/labs/environmentsettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.LabServices/labaccounts/labs/environmentsettings/environments@2018-10-15
@@ -52,7 +52,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [EnvironmentProperties](#environmentproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.LabServices/labaccounts/labs/environmentsettings/environments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.LabServices/labaccounts/labs/users@2018-10-15
@@ -63,7 +63,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [UserProperties](#userproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.LabServices/labaccounts/labs/users' (ReadOnly, DeployTimeConstant)
 
 ## LabAccountProperties
@@ -102,7 +102,7 @@
 * **numberOfCores**: int
 * **price**: int
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -130,7 +130,7 @@
 * **sku**: string
 * **version**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -149,7 +149,7 @@
 * **userAccessMode**: 'Open' | 'Restricted'
 * **userQuota**: int (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -162,7 +162,7 @@
 * **lastPublished**: string (ReadOnly)
 * **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly)
 * **provisioningState**: string
-* **publishingState**: 'Draft' | 'Published' | 'PublishFailed' | 'Publishing' | 'Scaling' (ReadOnly)
+* **publishingState**: 'Draft' | 'PublishFailed' | 'Published' | 'Publishing' | 'Scaling' (ReadOnly)
 * **resourceSettings**: [ResourceSettings](#resourcesettings) (Required)
 * **title**: string
 * **uniqueIdentifier**: string
@@ -190,7 +190,7 @@
 * **rdpAuthority**: string (ReadOnly)
 * **sshAuthority**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -222,7 +222,7 @@
 * **resourceSettingId**: string
 * **vmResourceId**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -238,7 +238,7 @@
 * **totalUsage**: string (ReadOnly)
 * **uniqueIdentifier**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

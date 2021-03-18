@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [StorageAccountCreateParametersTags](#storageaccountcreateparameterstags)
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant)
 
 ## StorageAccountPropertiesCreateParameters
@@ -37,7 +37,7 @@
 * **queue**: string (ReadOnly)
 * **table**: string (ReadOnly)
 
-## Dictionary<string,String>
+## StorageAccountCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

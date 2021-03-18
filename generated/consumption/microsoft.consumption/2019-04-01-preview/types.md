@@ -16,7 +16,7 @@
 * **category**: 'Cost' | 'Usage' (Required)
 * **currentSpend**: [CurrentSpend](#currentspend) (ReadOnly)
 * **filters**: [Filters](#filters)
-* **notifications**: [Dictionary<string,Notification>](#dictionarystringnotification)
+* **notifications**: [BudgetPropertiesNotifications](#budgetpropertiesnotifications)
 * **timeGrain**: 'Annually' | 'Monthly' | 'Quarterly' (Required)
 * **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required)
 
@@ -30,14 +30,14 @@
 * **meters**: string[]
 * **resourceGroups**: string[]
 * **resources**: string[]
-* **tags**: [Dictionary<string,IList<String>>](#dictionarystringiliststring)
+* **tags**: [FiltersTags](#filterstags)
 
-## Dictionary<string,IList<String>>
+## FiltersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
 
-## Dictionary<string,Notification>
+## BudgetPropertiesNotifications
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [Notification](#notification)

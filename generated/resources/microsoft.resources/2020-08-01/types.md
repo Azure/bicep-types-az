@@ -1,14 +1,14 @@
 # Microsoft.Resources @ 2020-08-01
 
 ## Resource Microsoft.Resources/deployments@2020-08-01
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DeploymentProperties](#deploymentproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [DeploymentTags](#deploymenttags)
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Resources/resourceGroups@2020-08-01
@@ -20,7 +20,7 @@
 * **managedBy**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ResourceGroupProperties](#resourcegroupproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceGroupTags](#resourcegrouptags)
 * **type**: 'Microsoft.Resources/resourceGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Resources/tags@2020-08-01
@@ -115,7 +115,7 @@
 * **defaultApiVersion**: string (ReadOnly)
 * **locationMappings**: [ProviderExtendedLocation](#providerextendedlocation)[] (ReadOnly)
 * **locations**: string[] (ReadOnly)
-* **properties**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
+* **properties**: [ProviderResourceTypeProperties](#providerresourcetypeproperties) (ReadOnly)
 * **resourceType**: string (ReadOnly)
 
 ## Alias
@@ -156,7 +156,7 @@
 * **location**: string (ReadOnly)
 * **type**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ProviderResourceTypeProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -168,7 +168,7 @@
 * **relativePath**: string
 * **uri**: string
 
-## Dictionary<string,String>
+## DeploymentTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -177,16 +177,16 @@
 ### Properties
 * **provisioningState**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceGroupTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Tags
 ### Properties
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [IotDpsPropertiesDescription](#iotdpspropertiesdescription) (Required)
 * **sku**: [IotDpsSkuInfo](#iotdpsskuinfo) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Devices/provisioningServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Devices/provisioningServices/certificates@2017-11-15
@@ -27,7 +27,7 @@
 ## IotDpsPropertiesDescription
 ### Properties
 * **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static'
-* **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule_AccessRightsDescription_](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[]
+* **authorizationPolicies**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[]
 * **deviceProvisioningHostName**: string (ReadOnly)
 * **idScope**: string (ReadOnly)
 * **iotHubs**: [IotHubDefinitionDescription](#iothubdefinitiondescription)[]
@@ -35,7 +35,7 @@
 * **serviceOperationsHostName**: string (ReadOnly)
 * **state**: 'Activating' | 'ActivationFailed' | 'Active' | 'Deleted' | 'Deleting' | 'DeletionFailed' | 'FailingOver' | 'FailoverFailed' | 'Resuming' | 'Suspended' | 'Suspending' | 'Transitioning'
 
-## SharedAccessSignatureAuthorizationRule_AccessRightsDescription_
+## SharedAccessSignatureAuthorizationRuleAccessRightsDescription
 ### Properties
 * **keyName**: string (Required)
 * **primaryKey**: string
@@ -56,7 +56,7 @@
 * **name**: 'S1'
 * **tier**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ZoneProperties](#zoneproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Network/dnsZones' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/dnsZones/A@2017-09-01
@@ -120,7 +120,7 @@
 * **numberOfRecordSets**: int (ReadOnly)
 * **zoneType**: 'Private' | 'Public'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -132,7 +132,7 @@
 * **caaRecords**: [CaaRecord](#caarecord)[]
 * **CNAMERecord**: [CnameRecord](#cnamerecord)
 * **fqdn**: string (ReadOnly)
-* **metadata**: [Dictionary<string,String>](#dictionarystringstring)
+* **metadata**: [RecordSetPropertiesMetadata](#recordsetpropertiesmetadata)
 * **MXRecords**: [MxRecord](#mxrecord)[]
 * **NSRecords**: [NsRecord](#nsrecord)[]
 * **PTRRecords**: [PtrRecord](#ptrrecord)[]
@@ -159,7 +159,7 @@
 ### Properties
 * **cname**: string
 
-## Dictionary<string,String>
+## RecordSetPropertiesMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

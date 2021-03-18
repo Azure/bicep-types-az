@@ -9,13 +9,13 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WebTestProperties](#webtestproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [WebtestsResourceTags](#webtestsresourcetags)
 * **type**: 'Microsoft.Insights/webtests' (ReadOnly, DeployTimeConstant)
 
 ## WebTestProperties
 ### Properties
-* **Configuration**: [schemas:4_Configuration](#schemas4configuration)
-* **ContentValidation**: [schemas:4_ContentValidation](#schemas4contentvalidation)
+* **Configuration**: [WebTestPropertiesConfiguration](#webtestpropertiesconfiguration)
+* **ContentValidation**: [WebTestPropertiesContentValidation](#webtestpropertiescontentvalidation)
 * **Description**: string
 * **Enabled**: bool
 * **ExpectedHttpStatusCode**: int
@@ -25,18 +25,18 @@
 * **Locations**: [WebTestGeolocation](#webtestgeolocation)[] (Required)
 * **Name**: string (Required)
 * **provisioningState**: string (ReadOnly)
-* **Request**: [schemas:4_Request](#schemas4request)
+* **Request**: [WebTestPropertiesRequest](#webtestpropertiesrequest)
 * **RetryEnabled**: bool
 * **SSLCertRemainingLifetimeCheck**: int
 * **SSLCheck**: bool
 * **SyntheticMonitorId**: string (Required)
 * **Timeout**: int
 
-## schemas:4_Configuration
+## WebTestPropertiesConfiguration
 ### Properties
 * **WebTest**: string
 
-## schemas:4_ContentValidation
+## WebTestPropertiesContentValidation
 ### Properties
 * **ContentMatch**: string
 * **IgnoreCase**: bool
@@ -46,7 +46,7 @@
 ### Properties
 * **Id**: string
 
-## schemas:4_Request
+## WebTestPropertiesRequest
 ### Properties
 * **FollowRedirects**: bool
 * **Headers**: [HeaderField](#headerfield)[]
@@ -60,7 +60,7 @@
 * **key**: string
 * **value**: string
 
-## Dictionary<string,String>
+## WebtestsResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

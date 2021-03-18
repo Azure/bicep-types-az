@@ -5,13 +5,14 @@
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'current' (Required, DeployTimeConstant)
 * **properties**: [AdvancedThreatProtectionProperties](#advancedthreatprotectionproperties)
 * **type**: 'Microsoft.Security/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Security/settings@2019-01-01
 * **Valid Scope(s)**: Subscription
 * **Discriminator**: kind
+
 ### Base Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)

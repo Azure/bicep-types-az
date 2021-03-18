@@ -13,6 +13,6 @@
 ## ServerKeyProperties
 ### Properties
 * **creationDate**: string (ReadOnly)
-* **serverKeyType**: string (Required)
+* **serverKeyType**: 'AzureKeyVault' (Required)
 * **uri**: string
 

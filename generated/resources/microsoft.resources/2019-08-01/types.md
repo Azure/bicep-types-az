@@ -1,7 +1,7 @@
 # Microsoft.Resources @ 2019-08-01
 
 ## Resource Microsoft.Resources/deployments@2019-08-01
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
@@ -19,7 +19,7 @@
 * **managedBy**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ResourceGroupProperties](#resourcegroupproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceGroupTags](#resourcegrouptags)
 * **type**: 'Microsoft.Resources/resourceGroups' (ReadOnly, DeployTimeConstant)
 
 ## DeploymentProperties
@@ -81,7 +81,7 @@
 * **apiVersions**: string[] (ReadOnly)
 * **capabilities**: string (ReadOnly)
 * **locations**: string[] (ReadOnly)
-* **properties**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
+* **properties**: [ProviderResourceTypeProperties](#providerresourcetypeproperties) (ReadOnly)
 * **resourceType**: string (ReadOnly)
 
 ## AliasType
@@ -94,7 +94,7 @@
 * **apiVersions**: string[] (ReadOnly)
 * **path**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ProviderResourceTypeProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -108,7 +108,7 @@
 ### Properties
 * **provisioningState**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceGroupTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

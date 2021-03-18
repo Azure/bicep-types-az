@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ControllerProperties](#controllerproperties) (Required)
 * **sku**: [Sku](#sku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DevSpaces/controllers' (ReadOnly, DeployTimeConstant)
 
 ## ControllerProperties
@@ -23,10 +23,10 @@
 
 ## Sku
 ### Properties
-* **name**: string (Required)
+* **name**: 'S1' (Required)
 * **tier**: 'Standard'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

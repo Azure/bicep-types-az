@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DigitalTwinsProperties](#digitaltwinsproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [DigitalTwinsResourceTags](#digitaltwinsresourcetags)
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DigitalTwins/digitalTwinsInstances/endpoints@2020-10-31
@@ -27,13 +27,14 @@
 * **lastUpdatedTime**: string (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Warning' (ReadOnly)
 
-## Dictionary<string,String>
+## DigitalTwinsResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## DigitalTwinsEndpointResourceProperties
 * **Discriminator**: endpointType
+
 ### Base Properties
 * **createdTime**: string (ReadOnly)
 * **deadLetterSecret**: string

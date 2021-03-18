@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: any
 * **sku**: [IntegrationAccountSku](#integrationaccountsku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [IntegrationAccountResourceTags](#integrationaccountresourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/agreements@2015-08-01-preview
@@ -20,7 +20,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [IntegrationAccountAgreementProperties](#integrationaccountagreementproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [IntegrationAccountResourceTags](#integrationaccountresourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/agreements' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/certificates@2015-08-01-preview
@@ -31,7 +31,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [IntegrationAccountCertificateProperties](#integrationaccountcertificateproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [IntegrationAccountResourceTags](#integrationaccountresourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/maps@2015-08-01-preview
@@ -42,7 +42,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [IntegrationAccountMapProperties](#integrationaccountmapproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [IntegrationAccountResourceTags](#integrationaccountresourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/maps' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/partners@2015-08-01-preview
@@ -53,7 +53,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [IntegrationAccountPartnerProperties](#integrationaccountpartnerproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [IntegrationAccountResourceTags](#integrationaccountresourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/partners' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/schemas@2015-08-01-preview
@@ -64,14 +64,14 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [IntegrationAccountSchemaProperties](#integrationaccountschemaproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [IntegrationAccountResourceTags](#integrationaccountresourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/schemas' (ReadOnly, DeployTimeConstant)
 
 ## IntegrationAccountSku
 ### Properties
 * **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard'
 
-## Dictionary<string,String>
+## IntegrationAccountResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -522,7 +522,7 @@
 * **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified'
 * **targetNamespace**: string
 
-## Dictionary<string,String>
+## IntegrationAccountResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -538,16 +538,16 @@
 ## KeyVaultKeyReference
 ### Properties
 * **keyName**: string
-* **keyVault**: [schemas:87_keyVault](#schemas87keyvault)
+* **keyVault**: [KeyVaultKeyReferenceKeyVault](#keyvaultkeyreferencekeyvault)
 * **keyVersion**: string
 
-## schemas:87_keyVault
+## KeyVaultKeyReferenceKeyVault
 ### Properties
 * **id**: string
 * **name**: string (ReadOnly)
 * **type**: string (ReadOnly)
 
-## Dictionary<string,String>
+## IntegrationAccountResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -575,7 +575,7 @@
 * **algorithm**: string
 * **value**: string
 
-## Dictionary<string,String>
+## IntegrationAccountResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -596,7 +596,7 @@
 ### Properties
 * **businessIdentities**: [BusinessIdentity](#businessidentity)[]
 
-## Dictionary<string,String>
+## IntegrationAccountResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -612,7 +612,7 @@
 * **schemaType**: 'NotSpecified' | 'Xml'
 * **targetNamespace**: string
 
-## Dictionary<string,String>
+## IntegrationAccountResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

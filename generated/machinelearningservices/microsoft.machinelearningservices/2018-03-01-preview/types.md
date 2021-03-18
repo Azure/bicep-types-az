@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WorkspaceProperties](#workspaceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.MachineLearningServices/workspaces/computes@2018-03-01-preview
@@ -21,7 +21,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [Compute](#compute)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -44,13 +44,14 @@
 * **storageAccount**: string
 * **workspaceId**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Compute
 * **Discriminator**: computeType
+
 ### Base Properties
 * **computeLocation**: string
 * **createdOn**: string (ReadOnly)
@@ -62,12 +63,12 @@
 ### AKS
 #### Properties
 * **computeType**: 'AKS' (Required)
-* **properties**: [schemas:15_properties](#schemas15properties)
+* **properties**: [AKSProperties](#aksproperties)
 
 ### BatchAI
 #### Properties
 * **computeType**: 'BatchAI' (Required)
-* **properties**: [schemas:16_properties](#schemas16properties)
+* **properties**: [BatchAIProperties](#batchaiproperties)
 
 ### DataFactory
 #### Properties
@@ -76,12 +77,12 @@
 ### HDInsight
 #### Properties
 * **computeType**: 'HDInsight' (Required)
-* **properties**: [schemas:17_properties](#schemas17properties)
+* **properties**: [HDInsightProperties](#hdinsightproperties)
 
 ### VirtualMachine
 #### Properties
 * **computeType**: 'VirtualMachine' (Required)
-* **properties**: [schemas:17_properties](#schemas17properties)
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
 
 ## MachineLearningServiceError
@@ -102,9 +103,9 @@
 ## AKS
 ### Properties
 * **computeType**: 'AKS' (Required)
-* **properties**: [schemas:15_properties](#schemas15properties)
+* **properties**: [AKSProperties](#aksproperties)
 
-## schemas:15_properties
+## AKSProperties
 ### Properties
 * **agentCount**: int
 * **agentVMSize**: string
@@ -128,9 +129,9 @@
 ## BatchAI
 ### Properties
 * **computeType**: 'BatchAI' (Required)
-* **properties**: [schemas:16_properties](#schemas16properties)
+* **properties**: [BatchAIProperties](#batchaiproperties)
 
-## schemas:16_properties
+## BatchAIProperties
 ### Properties
 * **scaleSettings**: [ScaleSettings](#scalesettings)
 * **vmPriority**: string
@@ -149,14 +150,13 @@
 ## HDInsight
 ### Properties
 * **computeType**: 'HDInsight' (Required)
-* **properties**: [schemas:17_properties](#schemas17properties)
+* **properties**: [HDInsightProperties](#hdinsightproperties)
 
-## schemas:17_properties
+## HDInsightProperties
 ### Properties
 * **address**: string
 * **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials)
 * **sshPort**: int
-* **virtualMachineSize**: string
 
 ## VirtualMachineSshCredentials
 ### Properties
@@ -168,9 +168,16 @@
 ## VirtualMachine
 ### Properties
 * **computeType**: 'VirtualMachine' (Required)
-* **properties**: [schemas:17_properties](#schemas17properties)
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
-## Dictionary<string,String>
+## VirtualMachineProperties
+### Properties
+* **address**: string
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials)
+* **sshPort**: int
+* **virtualMachineSize**: string
+
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

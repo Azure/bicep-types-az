@@ -10,7 +10,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [LogSearchRule](#logsearchrule) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'microsoft.insights/scheduledQueryRules' (ReadOnly, DeployTimeConstant)
 
 ## LogSearchRule
@@ -28,8 +28,9 @@
 
 ## Action
 * **Discriminator**: odata.type
+
 ### Base Properties
-### Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction
+### AlertingAction
 #### Properties
 * **aznsAction**: [AzNsActionGroup](#aznsactiongroup)
 * **odata.type**: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction' (Required)
@@ -37,13 +38,13 @@
 * **throttlingInMin**: int
 * **trigger**: [TriggerCondition](#triggercondition) (Required)
 
-### Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction
+### LogToMetricAction
 #### Properties
 * **criteria**: [Criteria](#criteria)[] (Required)
 * **odata.type**: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction' (Required)
 
 
-## Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction
+## AlertingAction
 ### Properties
 * **aznsAction**: [AzNsActionGroup](#aznsactiongroup)
 * **odata.type**: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction' (Required)
@@ -70,7 +71,7 @@
 * **threshold**: int
 * **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual'
 
-## Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction
+## LogToMetricAction
 ### Properties
 * **criteria**: [Criteria](#criteria)[] (Required)
 * **odata.type**: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction' (Required)
@@ -83,7 +84,7 @@
 ## Dimension
 ### Properties
 * **name**: string (Required)
-* **operator**: string (Required)
+* **operator**: 'Include' (Required)
 * **values**: string[] (Required)
 
 ## Schedule
@@ -98,7 +99,7 @@
 * **query**: string
 * **queryType**: 'ResultCount'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: any
 * **sku**: [IntegrationAccountSku](#integrationaccountsku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/agreements@2016-06-01
@@ -20,7 +20,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [IntegrationAccountAgreementProperties](#integrationaccountagreementproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/agreements' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/assemblies@2016-06-01
@@ -31,7 +31,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AssemblyProperties](#assemblyproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/assemblies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/batchConfigurations@2016-06-01
@@ -42,7 +42,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [BatchConfigurationProperties](#batchconfigurationproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/batchConfigurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/certificates@2016-06-01
@@ -53,7 +53,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [IntegrationAccountCertificateProperties](#integrationaccountcertificateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/certificates' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/maps@2016-06-01
@@ -64,7 +64,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [IntegrationAccountMapProperties](#integrationaccountmapproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/maps' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/partners@2016-06-01
@@ -75,7 +75,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [IntegrationAccountPartnerProperties](#integrationaccountpartnerproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/partners' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/rosettanetprocessconfigurations@2016-06-01
@@ -86,7 +86,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [IntegrationAccountRosettaNetProcessConfigurationProperties](#integrationaccountrosettanetprocessconfigurationproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/rosettanetprocessconfigurations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/schemas@2016-06-01
@@ -97,7 +97,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [IntegrationAccountSchemaProperties](#integrationaccountschemaproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/schemas' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/integrationAccounts/sessions@2016-06-01
@@ -108,7 +108,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [IntegrationAccountSessionProperties](#integrationaccountsessionproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/integrationAccounts/sessions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/workflows@2016-06-01
@@ -119,14 +119,14 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WorkflowProperties](#workflowproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/workflows' (ReadOnly, DeployTimeConstant)
 
 ## IntegrationAccountSku
 ### Properties
 * **name**: 'Free' | 'NotSpecified' | 'Standard' (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -579,7 +579,7 @@
 * **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required)
 * **targetNamespace**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -610,7 +610,7 @@
 * **algorithm**: string
 * **value**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -651,7 +651,7 @@
 * **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'
 * **occurrence**: int
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -667,16 +667,16 @@
 ## KeyVaultKeyReference
 ### Properties
 * **keyName**: string (Required)
-* **keyVault**: [schemas:150_keyVault](#schemas150keyvault) (Required)
+* **keyVault**: [KeyVaultKeyReferenceKeyVault](#keyvaultkeyreferencekeyvault) (Required)
 * **keyVersion**: string
 
-## schemas:150_keyVault
+## KeyVaultKeyReferenceKeyVault
 ### Properties
 * **id**: string
 * **name**: string (ReadOnly)
 * **type**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -690,13 +690,13 @@
 * **createdTime**: string (ReadOnly)
 * **mapType**: 'NotSpecified' | 'Xslt' (Required)
 * **metadata**: any
-* **parametersSchema**: [schemas:63_parametersSchema](#schemas63parametersschema)
+* **parametersSchema**: [IntegrationAccountMapPropertiesParametersSchema](#integrationaccountmappropertiesparametersschema)
 
-## schemas:63_parametersSchema
+## IntegrationAccountMapPropertiesParametersSchema
 ### Properties
 * **ref**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -717,7 +717,7 @@
 ### Properties
 * **businessIdentities**: [BusinessIdentity](#businessidentity)[]
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -729,7 +729,7 @@
 * **createdTime**: string (ReadOnly)
 * **description**: string
 * **initiatorRoleSettings**: [RosettaNetPipRoleSettings](#rosettanetpiprolesettings) (Required)
-* **metadata**: [Dictionary<string,String>](#dictionarystringstring)
+* **metadata**: [IntegrationAccountRosettaNetProcessConfigurationPropertiesMetadata](#integrationaccountrosettanetprocessconfigurationpropertiesmetadata)
 * **processCode**: string (Required)
 * **processName**: string (Required)
 * **processVersion**: string (Required)
@@ -739,7 +739,7 @@
 ### Properties
 * **acknowledgmentOfReceiptSettings**: [RosettaNetPipAcknowledgmentOfReceiptSettings](#rosettanetpipacknowledgmentofreceiptsettings) (Required)
 * **activityBehavior**: [RosettaNetPipActivityBehavior](#rosettanetpipactivitybehavior) (Required)
-* **activityType**: 'BusinessTransaction' | 'InformationDistribution' | 'Notification' | 'NotSpecified' | 'QueryResponse' | 'RequestConfirm' | 'RequestResponse' (Required)
+* **activityType**: 'BusinessTransaction' | 'InformationDistribution' | 'NotSpecified' | 'Notification' | 'QueryResponse' | 'RequestConfirm' | 'RequestResponse' (Required)
 
 ## RosettaNetPipAcknowledgmentOfReceiptSettings
 ### Properties
@@ -773,12 +773,12 @@
 * **name**: string (Required)
 * **version**: string (Required)
 
-## Dictionary<string,String>
+## IntegrationAccountRosettaNetProcessConfigurationPropertiesMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -796,7 +796,7 @@
 * **schemaType**: 'NotSpecified' | 'Xml' (Required)
 * **targetNamespace**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -807,7 +807,7 @@
 * **content**: any
 * **createdTime**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -819,7 +819,7 @@
 * **createdTime**: string (ReadOnly)
 * **definition**: any
 * **integrationAccount**: [ResourceReference](#resourcereference)
-* **parameters**: [Dictionary<string,WorkflowParameter>](#dictionarystringworkflowparameter)
+* **parameters**: [WorkflowPropertiesParameters](#workflowpropertiesparameters)
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'NotSpecified' | 'Ready' | 'Registered' | 'Registering' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' (ReadOnly)
 * **sku**: [Sku](#sku)
 * **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended'
@@ -831,7 +831,7 @@
 * **name**: string (ReadOnly)
 * **type**: string (ReadOnly)
 
-## Dictionary<string,WorkflowParameter>
+## WorkflowPropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [WorkflowParameter](#workflowparameter)
@@ -848,7 +848,7 @@
 * **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard' (Required)
 * **plan**: [ResourceReference](#resourcereference)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

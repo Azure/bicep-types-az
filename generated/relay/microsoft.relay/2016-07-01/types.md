@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [RelayNamespaceProperties](#relaynamespaceproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Relay/namespaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Relay/namespaces/AuthorizationRules@2016-07-01
@@ -67,10 +67,10 @@
 
 ## Sku
 ### Properties
-* **name**: string (Required)
-* **tier**: string (Required)
+* **name**: 'Standard' (Required)
+* **tier**: 'Standard' (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -1,16 +1,5 @@
 # Microsoft.Compute @ 2016-03-30
 
-## Resource Microsoft.Compute/availabilitySets@2016-03-30
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [AvailabilitySetProperties](#availabilitysetproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Compute/availabilitySets' (ReadOnly, DeployTimeConstant)
-
 ## Resource Microsoft.Compute/virtualMachines@2016-03-30
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -22,7 +11,7 @@
 * **plan**: [Plan](#plan)
 * **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 * **resources**: [VirtualMachineExtension](#virtualmachineextension)[] (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/virtualMachines' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Compute/virtualMachines/extensions@2016-03-30
@@ -33,45 +22,8 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VirtualMachineExtensionProperties](#virtualmachineextensionproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/virtualMachines/extensions' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.Compute/virtualMachineScaleSets@2016-03-30
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [VirtualMachineScaleSetIdentity](#virtualmachinescalesetidentity)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [VirtualMachineScaleSetProperties](#virtualmachinescalesetproperties)
-* **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Compute/virtualMachineScaleSets' (ReadOnly, DeployTimeConstant)
-
-## AvailabilitySetProperties
-### Properties
-* **platformFaultDomainCount**: int
-* **platformUpdateDomainCount**: int
-* **statuses**: [InstanceViewStatus](#instanceviewstatus)[] (ReadOnly)
-* **virtualMachines**: [SubResource](#subresource)[]
-
-## InstanceViewStatus
-### Properties
-* **code**: string
-* **displayStatus**: string
-* **level**: 'Error' | 'Info' | 'Warning'
-* **message**: string
-* **time**: string
-
-## SubResource
-### Properties
-* **id**: string
-
-## Dictionary<string,String>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## VirtualMachineIdentity
 ### Properties
@@ -99,6 +51,10 @@
 * **storageProfile**: [StorageProfile](#storageprofile)
 * **vmId**: string (ReadOnly)
 
+## SubResource
+### Properties
+* **id**: string
+
 ## DiagnosticsProfile
 ### Properties
 * **bootDiagnostics**: [BootDiagnostics](#bootdiagnostics)
@@ -110,7 +66,7 @@
 
 ## HardwareProfile
 ### Properties
-* **vmSize**: 'Basic_A0' | 'Basic_A1' | 'Basic_A2' | 'Basic_A3' | 'Basic_A4' | 'Standard_A0' | 'Standard_A1' | 'Standard_A10' | 'Standard_A11' | 'Standard_A2' | 'Standard_A3' | 'Standard_A4' | 'Standard_A5' | 'Standard_A6' | 'Standard_A7' | 'Standard_A8' | 'Standard_A9' | 'Standard_D1_v2' | 'Standard_D1' | 'Standard_D11_v2' | 'Standard_D11' | 'Standard_D12_v2' | 'Standard_D12' | 'Standard_D13_v2' | 'Standard_D13' | 'Standard_D14_v2' | 'Standard_D14' | 'Standard_D15_v2' | 'Standard_D2_v2' | 'Standard_D2' | 'Standard_D3_v2' | 'Standard_D3' | 'Standard_D4_v2' | 'Standard_D4' | 'Standard_D5_v2' | 'Standard_DS1_v2' | 'Standard_DS1' | 'Standard_DS11_v2' | 'Standard_DS11' | 'Standard_DS12_v2' | 'Standard_DS12' | 'Standard_DS13_v2' | 'Standard_DS13' | 'Standard_DS14_v2' | 'Standard_DS14' | 'Standard_DS15_v2' | 'Standard_DS2_v2' | 'Standard_DS2' | 'Standard_DS3_v2' | 'Standard_DS3' | 'Standard_DS4_v2' | 'Standard_DS4' | 'Standard_DS5_v2' | 'Standard_G1' | 'Standard_G2' | 'Standard_G3' | 'Standard_G4' | 'Standard_G5' | 'Standard_GS1' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS5'
+* **vmSize**: 'Basic_A0' | 'Basic_A1' | 'Basic_A2' | 'Basic_A3' | 'Basic_A4' | 'Standard_A0' | 'Standard_A1' | 'Standard_A10' | 'Standard_A11' | 'Standard_A2' | 'Standard_A3' | 'Standard_A4' | 'Standard_A5' | 'Standard_A6' | 'Standard_A7' | 'Standard_A8' | 'Standard_A9' | 'Standard_D1' | 'Standard_D11' | 'Standard_D11_v2' | 'Standard_D12' | 'Standard_D12_v2' | 'Standard_D13' | 'Standard_D13_v2' | 'Standard_D14' | 'Standard_D14_v2' | 'Standard_D15_v2' | 'Standard_D1_v2' | 'Standard_D2' | 'Standard_D2_v2' | 'Standard_D3' | 'Standard_D3_v2' | 'Standard_D4' | 'Standard_D4_v2' | 'Standard_D5_v2' | 'Standard_DS1' | 'Standard_DS11' | 'Standard_DS11_v2' | 'Standard_DS12' | 'Standard_DS12_v2' | 'Standard_DS13' | 'Standard_DS13_v2' | 'Standard_DS14' | 'Standard_DS14_v2' | 'Standard_DS15_v2' | 'Standard_DS1_v2' | 'Standard_DS2' | 'Standard_DS2_v2' | 'Standard_DS3' | 'Standard_DS3_v2' | 'Standard_DS4' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_G1' | 'Standard_G2' | 'Standard_G3' | 'Standard_G4' | 'Standard_G5' | 'Standard_GS1' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS5'
 
 ## VirtualMachineInstanceView
 ### Properties
@@ -132,6 +88,14 @@
 ### Properties
 * **name**: string
 * **statuses**: [InstanceViewStatus](#instanceviewstatus)[]
+
+## InstanceViewStatus
+### Properties
+* **code**: string
+* **displayStatus**: string
+* **level**: 'Error' | 'Info' | 'Warning'
+* **message**: string
+* **time**: string
 
 ## VirtualMachineExtensionInstanceView
 ### Properties
@@ -284,7 +248,7 @@
 * **location**: string (Required)
 * **name**: string (ReadOnly)
 * **properties**: [VirtualMachineExtensionProperties](#virtualmachineextensionproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: string (ReadOnly)
 
 ## VirtualMachineExtensionProperties
@@ -299,128 +263,17 @@
 * **type**: string
 * **typeHandlerVersion**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## VirtualMachineScaleSetIdentity
-### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'SystemAssigned'
-
-## VirtualMachineScaleSetProperties
-### Properties
-* **overProvision**: bool
-* **provisioningState**: string (ReadOnly)
-* **upgradePolicy**: [UpgradePolicy](#upgradepolicy)
-* **virtualMachineProfile**: [VirtualMachineScaleSetVMProfile](#virtualmachinescalesetvmprofile)
-
-## UpgradePolicy
-### Properties
-* **mode**: 'Automatic' | 'Manual'
-
-## VirtualMachineScaleSetVMProfile
-### Properties
-* **extensionProfile**: [VirtualMachineScaleSetExtensionProfile](#virtualmachinescalesetextensionprofile)
-* **networkProfile**: [VirtualMachineScaleSetNetworkProfile](#virtualmachinescalesetnetworkprofile)
-* **osProfile**: [VirtualMachineScaleSetOSProfile](#virtualmachinescalesetosprofile)
-* **storageProfile**: [VirtualMachineScaleSetStorageProfile](#virtualmachinescalesetstorageprofile)
-
-## VirtualMachineScaleSetExtensionProfile
-### Properties
-* **extensions**: [VirtualMachineScaleSetExtension](#virtualmachinescalesetextension)[]
-
-## VirtualMachineScaleSetExtension
-### Properties
-* **id**: string
-* **name**: string
-* **properties**: [VirtualMachineScaleSetExtensionProperties](#virtualmachinescalesetextensionproperties)
-
-## VirtualMachineScaleSetExtensionProperties
-### Properties
-* **autoUpgradeMinorVersion**: bool
-* **protectedSettings**: any
-* **provisioningState**: string (ReadOnly)
-* **publisher**: string
-* **settings**: any
-* **type**: string
-* **typeHandlerVersion**: string
-
-## VirtualMachineScaleSetNetworkProfile
-### Properties
-* **networkInterfaceConfigurations**: [VirtualMachineScaleSetNetworkConfiguration](#virtualmachinescalesetnetworkconfiguration)[]
-
-## VirtualMachineScaleSetNetworkConfiguration
-### Properties
-* **id**: string
-* **name**: string (Required)
-* **properties**: [VirtualMachineScaleSetNetworkConfigurationProperties](#virtualmachinescalesetnetworkconfigurationproperties)
-
-## VirtualMachineScaleSetNetworkConfigurationProperties
-### Properties
-* **ipConfigurations**: [VirtualMachineScaleSetIPConfiguration](#virtualmachinescalesetipconfiguration)[] (Required)
-* **primary**: bool
-
-## VirtualMachineScaleSetIPConfiguration
-### Properties
-* **id**: string
-* **name**: string (Required)
-* **properties**: [VirtualMachineScaleSetIPConfigurationProperties](#virtualmachinescalesetipconfigurationproperties)
-
-## VirtualMachineScaleSetIPConfigurationProperties
-### Properties
-* **applicationGatewayBackendAddressPools**: [SubResource](#subresource)[]
-* **loadBalancerBackendAddressPools**: [SubResource](#subresource)[]
-* **loadBalancerInboundNatPools**: [SubResource](#subresource)[]
-* **subnet**: [ApiEntityReference](#apientityreference) (Required)
-
-## ApiEntityReference
-### Properties
-* **id**: string
-
-## VirtualMachineScaleSetOSProfile
-### Properties
-* **adminPassword**: string
-* **adminUsername**: string
-* **computerNamePrefix**: string
-* **customData**: string
-* **linuxConfiguration**: [LinuxConfiguration](#linuxconfiguration)
-* **secrets**: [VaultSecretGroup](#vaultsecretgroup)[]
-* **windowsConfiguration**: [WindowsConfiguration](#windowsconfiguration)
-
-## VirtualMachineScaleSetStorageProfile
-### Properties
-* **imageReference**: [ImageReference](#imagereference)
-* **osDisk**: [VirtualMachineScaleSetOSDisk](#virtualmachinescalesetosdisk)
-
-## VirtualMachineScaleSetOSDisk
-### Properties
-* **caching**: 'None' | 'ReadOnly' | 'ReadWrite'
-* **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required)
-* **image**: [VirtualHardDisk](#virtualharddisk)
-* **name**: string (Required)
-* **osType**: 'Linux' | 'Windows'
-* **vhdContainers**: string[]
-
-## Sku
-### Properties
-* **capacity**: int
-* **name**: string
-* **tier**: string
-
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

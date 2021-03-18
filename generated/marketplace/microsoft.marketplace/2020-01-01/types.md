@@ -35,7 +35,7 @@
 ### Properties
 * **createdAt**: string (ReadOnly)
 * **eTag**: string
-* **iconFileUris**: [Dictionary<string,String>](#dictionarystringstring)
+* **iconFileUris**: [OfferPropertiesIconFileUris](#offerpropertiesiconfileuris)
 * **modifiedAt**: string (ReadOnly)
 * **offerDisplayName**: string (ReadOnly)
 * **plans**: [Plan](#plan)[]
@@ -45,7 +45,7 @@
 * **uniqueOfferId**: string (ReadOnly)
 * **updateSuppressedDueIdempotence**: bool
 
-## Dictionary<string,String>
+## OfferPropertiesIconFileUris
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

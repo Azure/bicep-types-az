@@ -11,7 +11,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VaultProperties](#vaultproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.RecoveryServices/vaults/certificates@2016-06-01
@@ -50,12 +50,12 @@
 ## PrivateEndpointConnectionVaultProperties
 ### Properties
 * **id**: string (ReadOnly)
-* **properties**: [PrivateEndpointConnection](#privateendpointconnection)
+* **properties**: [PrivateEndpointConnection](#privateendpointconnection) (ReadOnly)
 
 ## PrivateEndpointConnection
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate)
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly)
 * **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' (ReadOnly)
 
 ## PrivateEndpoint
@@ -84,15 +84,15 @@
 ### Properties
 * **name**: 'RS0' | 'Standard' (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## RawCertificateData
 ### Properties
-* **authType**: 'AAD' | 'AccessControlService' | 'ACS' | 'AzureActiveDirectory' | 'Invalid'
-* **certificate**: array
+* **authType**: 'AAD' | 'ACS' | 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid'
+* **certificate**: any
 
 ## VaultExtendedInfo
 ### Properties

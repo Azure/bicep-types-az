@@ -19,7 +19,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [MonitorProperties](#monitorproperties)
 * **sku**: [ResourceSku](#resourcesku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [DatadogMonitorResourceTags](#datadogmonitorresourcetags)
 * **type**: 'Microsoft.Datadog/monitors' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Datadog/monitors/singleSignOnConfigurations@2020-02-01-preview
@@ -60,10 +60,10 @@
 ## MonitorProperties
 ### Properties
 * **datadogOrganizationProperties**: [DatadogOrganizationProperties](#datadogorganizationproperties)
-* **liftrResourceCategory**: 'MonitorLogs' | 'Unknown'
+* **liftrResourceCategory**: 'MonitorLogs' | 'Unknown' (ReadOnly)
 * **liftrResourcePreference**: int (ReadOnly)
-* **marketplaceSubscriptionStatus**: 'Active' | 'Suspended'
-* **monitoringStatus**: 'Disabled' | 'Enabled'
+* **marketplaceSubscriptionStatus**: 'Active' | 'Suspended' (ReadOnly)
+* **monitoringStatus**: 'Disabled' | 'Enabled' (ReadOnly)
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating'
 * **userInfo**: [UserInfo](#userinfo)
 
@@ -85,7 +85,7 @@
 ### Properties
 * **name**: string (Required)
 
-## Dictionary<string,String>
+## DatadogMonitorResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

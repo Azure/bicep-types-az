@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DedicatedCapacityProperties](#dedicatedcapacityproperties)
 * **sku**: [ResourceSku](#resourcesku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.PowerBIDedicated/capacities' (ReadOnly, DeployTimeConstant)
 
 ## DedicatedCapacityProperties
@@ -27,7 +27,7 @@
 * **name**: string (Required)
 * **tier**: 'PBIE_Azure'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

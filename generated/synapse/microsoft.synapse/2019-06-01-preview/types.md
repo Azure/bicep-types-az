@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PrivateLinkHubProperties](#privatelinkhubproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Synapse/privateLinkHubs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Synapse/workspaces@2019-06-01-preview
@@ -20,7 +20,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WorkspaceProperties](#workspaceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Synapse/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Synapse/workspaces/administrators@2019-06-01-preview
@@ -37,7 +37,7 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ServerBlobAuditingPolicyProperties](#serverblobauditingpolicyproperties)
 * **type**: 'Microsoft.Synapse/workspaces/auditingSettings' (ReadOnly, DeployTimeConstant)
 
@@ -49,7 +49,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [BigDataPoolResourceProperties](#bigdatapoolresourceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Synapse/workspaces/bigDataPools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Synapse/workspaces/extendedAuditingSettings@2019-06-01-preview
@@ -57,7 +57,7 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ExtendedServerBlobAuditingPolicyProperties](#extendedserverblobauditingpolicyproperties)
 * **type**: 'Microsoft.Synapse/workspaces/extendedAuditingSettings' (ReadOnly, DeployTimeConstant)
 
@@ -95,7 +95,7 @@
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:129_properties](#schemas129properties)
+* **properties**: [ManagedIdentitySqlControlSettingsModelProperties](#managedidentitysqlcontrolsettingsmodelproperties)
 * **type**: 'Microsoft.Synapse/workspaces/managedIdentitySqlControlSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Synapse/workspaces/privateEndpointConnections@2019-06-01-preview
@@ -112,7 +112,7 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'Default' (Required, DeployTimeConstant)
 * **properties**: [ServerSecurityAlertPolicyProperties](#serversecurityalertpolicyproperties)
 * **type**: 'Microsoft.Synapse/workspaces/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -134,7 +134,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SqlPoolResourceProperties](#sqlpoolresourceproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/auditingSettings@2019-06-01-preview
@@ -143,7 +143,7 @@
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [SqlPoolBlobAuditingPolicyProperties](#sqlpoolblobauditingpolicyproperties)
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/auditingSettings' (ReadOnly, DeployTimeConstant)
 
@@ -155,7 +155,7 @@
 * **kind**: string (ReadOnly)
 * **location**: string (ReadOnly)
 * **managedBy**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'Default' (Required, DeployTimeConstant)
 * **properties**: [DataMaskingPolicyProperties](#datamaskingpolicyproperties)
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -175,7 +175,7 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ExtendedSqlPoolBlobAuditingPolicyProperties](#extendedsqlpoolblobauditingpolicyproperties)
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/extendedAuditingSettings' (ReadOnly, DeployTimeConstant)
 
@@ -186,7 +186,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'Default' (Required, DeployTimeConstant)
 * **properties**: [GeoBackupPolicyProperties](#geobackuppolicyproperties) (Required)
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/geoBackupPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -205,7 +205,7 @@
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:28_properties](#schemas28properties)
+* **properties**: [MetadataSyncConfigProperties](#metadatasyncconfigproperties)
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/metadataSync' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels@2019-06-01-preview
@@ -214,7 +214,7 @@
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **managedBy**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'current' (Required, DeployTimeConstant)
 * **properties**: [SensitivityLabelProperties](#sensitivitylabelproperties)
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant)
 
@@ -223,7 +223,7 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties)
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -233,7 +233,7 @@
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'current' (Required, DeployTimeConstant)
 * **properties**: [TransparentDataEncryptionProperties](#transparentdataencryptionproperties)
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/transparentDataEncryption' (ReadOnly, DeployTimeConstant)
 
@@ -242,7 +242,7 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [SqlPoolVulnerabilityAssessmentProperties](#sqlpoolvulnerabilityassessmentproperties)
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
 
@@ -278,7 +278,7 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties)
 * **type**: 'Microsoft.Synapse/workspaces/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
 
@@ -308,7 +308,7 @@
 * **description**: string
 * **status**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -322,10 +322,10 @@
 ## WorkspaceProperties
 ### Properties
 * **adlaResourceId**: string (ReadOnly)
-* **connectivityEndpoints**: [Dictionary<string,String>](#dictionarystringstring)
+* **connectivityEndpoints**: [WorkspacePropertiesConnectivityEndpoints](#workspacepropertiesconnectivityendpoints)
 * **defaultDataLakeStorage**: [DataLakeStorageAccountDetails](#datalakestorageaccountdetails)
 * **encryption**: [EncryptionDetails](#encryptiondetails)
-* **extraProperties**: [Dictionary<string,Object>](#dictionarystringobject) (ReadOnly)
+* **extraProperties**: [WorkspacePropertiesExtraProperties](#workspacepropertiesextraproperties) (ReadOnly)
 * **managedResourceGroupName**: string
 * **managedVirtualNetwork**: string
 * **managedVirtualNetworkSettings**: [ManagedVirtualNetworkSettings](#managedvirtualnetworksettings)
@@ -338,7 +338,7 @@
 * **workspaceRepositoryConfiguration**: [WorkspaceRepositoryConfiguration](#workspacerepositoryconfiguration)
 * **workspaceUID**: string (ReadOnly)
 
-## Dictionary<string,String>
+## WorkspacePropertiesConnectivityEndpoints
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -363,7 +363,7 @@
 * **keyVaultUrl**: string
 * **name**: string
 
-## Dictionary<string,Object>
+## WorkspacePropertiesExtraProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -401,7 +401,7 @@
 * **tenantId**: string
 * **type**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -476,7 +476,7 @@
 * **filename**: string
 * **time**: string (ReadOnly)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -502,21 +502,22 @@
 
 ## IntegrationRuntime
 * **Discriminator**: type
+
 ### Base Properties
 * **description**: string
-### Managed
+### ManagedIntegrationRuntime
 #### Properties
 * **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
 * **type**: 'Managed' (Required)
 * **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required)
 
-### SelfHosted
+### SelfHostedIntegrationRuntime
 #### Properties
 * **type**: 'SelfHosted' (Required)
 * **typeProperties**: [SelfHostedIntegrationRuntimeTypeProperties](#selfhostedintegrationruntimetypeproperties)
 
 
-## Managed
+## ManagedIntegrationRuntime
 ### Properties
 * **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
 * **type**: 'Managed' (Required)
@@ -535,24 +536,18 @@
 * **nodeSize**: string
 * **numberOfNodes**: int
 * **vNetProperties**: [IntegrationRuntimeVNetProperties](#integrationruntimevnetproperties)
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## IntegrationRuntimeDataFlowProperties
 ### Properties
 * **computeType**: 'ComputeOptimized' | 'General' | 'MemoryOptimized'
 * **coreCount**: int
 * **timeToLive**: int
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## IntegrationRuntimeVNetProperties
 ### Properties
 * **publicIPs**: string[]
 * **subnet**: string
 * **vNetId**: string
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## IntegrationRuntimeSsisProperties
 ### Properties
@@ -562,8 +557,6 @@
 * **edition**: 'Enterprise' | 'Standard'
 * **expressCustomSetupProperties**: [CustomSetupBase](#customsetupbase)[]
 * **licenseType**: 'BasePrice' | 'LicenseIncluded'
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## IntegrationRuntimeSsisCatalogInfo
 ### Properties
@@ -571,8 +564,6 @@
 * **catalogAdminUserName**: string
 * **catalogPricingTier**: 'Basic' | 'Premium' | 'PremiumRS' | 'Standard'
 * **catalogServerEndpoint**: string
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## SecureString
 ### Properties
@@ -597,6 +588,7 @@
 
 ## CustomSetupBase
 * **Discriminator**: type
+
 ### Base Properties
 ### CmdkeySetup
 #### Properties
@@ -627,6 +619,7 @@
 
 ## SecretBase
 * **Discriminator**: type
+
 ### Base Properties
 ### SecureString
 #### Properties
@@ -654,7 +647,7 @@
 * **variableName**: string (Required)
 * **variableValue**: string (Required)
 
-## SelfHosted
+## SelfHostedIntegrationRuntime
 ### Properties
 * **type**: 'SelfHosted' (Required)
 * **typeProperties**: [SelfHostedIntegrationRuntimeTypeProperties](#selfhostedintegrationruntimetypeproperties)
@@ -665,24 +658,25 @@
 
 ## LinkedIntegrationRuntimeType
 * **Discriminator**: authorizationType
+
 ### Base Properties
-### Key
+### LinkedIntegrationRuntimeKeyAuthorization
 #### Properties
 * **authorizationType**: 'Key' (Required)
 * **key**: [SecureString](#securestring) (Required)
 
-### RBAC
+### LinkedIntegrationRuntimeRbacAuthorization
 #### Properties
 * **authorizationType**: 'RBAC' (Required)
 * **resourceId**: string (Required)
 
 
-## Key
+## LinkedIntegrationRuntimeKeyAuthorization
 ### Properties
 * **authorizationType**: 'Key' (Required)
 * **key**: [SecureString](#securestring) (Required)
 
-## RBAC
+## LinkedIntegrationRuntimeRbacAuthorization
 ### Properties
 * **authorizationType**: 'RBAC' (Required)
 * **resourceId**: string (Required)
@@ -692,11 +686,11 @@
 * **isActiveCMK**: bool
 * **keyVaultUrl**: string
 
-## schemas:129_properties
+## ManagedIdentitySqlControlSettingsModelProperties
 ### Properties
-* **grantSqlControlToManagedIdentity**: [schemas:129_properties_grantSqlControlToManagedIdentity](#schemas129propertiesgrantsqlcontroltomanagedidentity)
+* **grantSqlControlToManagedIdentity**: [ManagedIdentitySqlControlSettingsModelPropertiesGrantSqlControlToManagedIdentity](#managedidentitysqlcontrolsettingsmodelpropertiesgrantsqlcontroltomanagedidentity)
 
-## schemas:129_properties_grantSqlControlToManagedIdentity
+## ManagedIdentitySqlControlSettingsModelPropertiesGrantSqlControlToManagedIdentity
 ### Properties
 * **actualState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Unknown' (ReadOnly)
 * **desiredState**: 'Disabled' | 'Enabled'
@@ -730,7 +724,7 @@
 * **name**: string
 * **tier**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -796,7 +790,7 @@
 * **duration**: string
 * **startTime**: string
 
-## schemas:28_properties
+## MetadataSyncConfigProperties
 ### Properties
 * **enabled**: bool
 * **syncIntervalInMinutes**: int

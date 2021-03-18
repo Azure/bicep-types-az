@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WorkspaceProperties](#workspaceproperties) (Required)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Databricks/workspaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Databricks/workspaces/virtualNetworkPeerings@2018-04-01
@@ -25,7 +25,7 @@
 ### Properties
 * **authorizations**: [WorkspaceProviderAuthorization](#workspaceproviderauthorization)[]
 * **createdBy**: [CreatedBy](#createdby)
-* **createdDateTime**: string
+* **createdDateTime**: string (ReadOnly)
 * **managedResourceGroupId**: string (Required)
 * **parameters**: [WorkspaceCustomParameters](#workspacecustomparameters)
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly)
@@ -59,17 +59,17 @@
 
 ## WorkspaceCustomStringParameter
 ### Properties
-* **type**: 'Bool' | 'Object' | 'String'
+* **type**: 'Bool' | 'Object' | 'String' (ReadOnly)
 * **value**: string (Required)
 
 ## WorkspaceCustomBooleanParameter
 ### Properties
-* **type**: 'Bool' | 'Object' | 'String'
+* **type**: 'Bool' | 'Object' | 'String' (ReadOnly)
 * **value**: bool (Required)
 
 ## WorkspaceEncryptionParameter
 ### Properties
-* **type**: 'Bool' | 'Object' | 'String'
+* **type**: 'Bool' | 'Object' | 'String' (ReadOnly)
 * **value**: [Encryption](#encryption)
 
 ## Encryption
@@ -90,7 +90,7 @@
 * **name**: string (Required)
 * **tier**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -101,18 +101,22 @@
 * **allowGatewayTransit**: bool
 * **allowVirtualNetworkAccess**: bool
 * **databricksAddressSpace**: [AddressSpace](#addressspace)
-* **databricksVirtualNetwork**: [schemas:27_databricksVirtualNetwork](#schemas27databricksvirtualnetwork)
+* **databricksVirtualNetwork**: [VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetwork](#virtualnetworkpeeringpropertiesformatdatabricksvirtualnetwork)
 * **peeringState**: 'Connected' | 'Disconnected' | 'Initiated' (ReadOnly)
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **remoteAddressSpace**: [AddressSpace](#addressspace)
-* **remoteVirtualNetwork**: [schemas:27_databricksVirtualNetwork](#schemas27databricksvirtualnetwork) (Required)
+* **remoteVirtualNetwork**: [VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetwork](#virtualnetworkpeeringpropertiesformatremotevirtualnetwork) (Required)
 * **useRemoteGateways**: bool
 
 ## AddressSpace
 ### Properties
 * **addressPrefixes**: string[]
 
-## schemas:27_databricksVirtualNetwork
+## VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetwork
+### Properties
+* **id**: string
+
+## VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetwork
 ### Properties
 * **id**: string
 

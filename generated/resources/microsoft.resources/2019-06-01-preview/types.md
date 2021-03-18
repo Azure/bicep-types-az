@@ -8,8 +8,8 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [TemplateSpecProperties](#templatespecproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [TemplateSpecTags](#templatespectags)
 * **type**: 'Microsoft.Resources/templateSpecs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Resources/templateSpecs/versions@2019-06-01-preview
@@ -20,17 +20,17 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [TemplateSpecVersionProperties](#templatespecversionproperties) (Required)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [TemplateSpecVersionTags](#templatespecversiontags)
 * **type**: 'Microsoft.Resources/templateSpecs/versions' (ReadOnly, DeployTimeConstant)
 
 ## TemplateSpecProperties
 ### Properties
 * **description**: string
 * **displayName**: string
-* **versions**: [Dictionary<string,TemplateSpecVersionInfo>](#dictionarystringtemplatespecversioninfo) (ReadOnly)
+* **versions**: [TemplateSpecPropertiesVersions](#templatespecpropertiesversions) (ReadOnly)
 
-## Dictionary<string,TemplateSpecVersionInfo>
+## TemplateSpecPropertiesVersions
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [TemplateSpecVersionInfo](#templatespecversioninfo)
@@ -41,7 +41,7 @@
 * **timeCreated**: string (ReadOnly)
 * **timeModified**: string (ReadOnly)
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string
 * **createdBy**: string
@@ -50,7 +50,7 @@
 * **lastModifiedBy**: string
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
-## Dictionary<string,String>
+## TemplateSpecTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -63,20 +63,21 @@
 
 ## TemplateSpecArtifact
 * **Discriminator**: kind
+
 ### Base Properties
 * **path**: string (Required)
-### template
+### TemplateSpecTemplateArtifact
 #### Properties
 * **kind**: 'template' (Required)
 * **template**: any (Required)
 
 
-## template
+## TemplateSpecTemplateArtifact
 ### Properties
 * **kind**: 'template' (Required)
 * **template**: any (Required)
 
-## Dictionary<string,String>
+## TemplateSpecVersionTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

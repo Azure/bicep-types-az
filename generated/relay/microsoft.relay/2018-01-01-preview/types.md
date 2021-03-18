@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [RelayNamespaceProperties](#relaynamespaceproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Relay/namespaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Relay/namespaces/privateEndpointConnections@2018-01-01-preview
@@ -20,7 +20,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Relay/namespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## RelayNamespaceProperties
@@ -33,10 +33,10 @@
 
 ## Sku
 ### Properties
-* **name**: string (Required)
+* **name**: 'Standard' (Required)
 * **tier**: 'Standard'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -45,7 +45,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate)
-* **provisioningState**: 'Creating' | 'Deleting' | 'DeletingByProxy' | 'Succeeded' | 'Unknown' | 'Updating' | 'UpdatingByProxy'
+* **provisioningState**: 'Creating' | 'Deleting' | 'DeletingByProxy' | 'Succeeded' | 'Unknown' | 'Updating' | 'UpdatingByProxy' (ReadOnly)
 
 ## PrivateEndpoint
 ### Properties
@@ -57,7 +57,7 @@
 * **description**: string
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

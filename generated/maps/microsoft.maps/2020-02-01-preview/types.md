@@ -9,8 +9,8 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [MapsAccountProperties](#mapsaccountproperties) (ReadOnly)
 * **sku**: [Sku](#sku) (Required)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [MapsAccountCreateParametersTags](#mapsaccountcreateparameterstags)
 * **type**: 'Microsoft.Maps/accounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Maps/accounts/creators@2020-02-01-preview
@@ -21,7 +21,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [CreatorProperties](#creatorproperties) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [CreatorCreateParametersTags](#creatorcreateparameterstags)
 * **type**: 'Microsoft.Maps/accounts/creators' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Maps/accounts/privateAtlases@2020-02-01-preview
@@ -32,7 +32,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PrivateAtlasProperties](#privateatlasproperties) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [PrivateAtlasCreateParametersTags](#privateatlascreateparameterstags)
 * **type**: 'Microsoft.Maps/accounts/privateAtlases' (ReadOnly, DeployTimeConstant)
 
 ## MapsAccountProperties
@@ -44,7 +44,7 @@
 * **name**: string (Required)
 * **tier**: string (ReadOnly)
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string (ReadOnly)
 * **createdBy**: string (ReadOnly)
@@ -53,7 +53,7 @@
 * **lastModifiedBy**: string (ReadOnly)
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly)
 
-## Dictionary<string,String>
+## MapsAccountCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -62,7 +62,7 @@
 ### Properties
 * **provisioningState**: string (ReadOnly)
 
-## Dictionary<string,String>
+## CreatorCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -71,7 +71,7 @@
 ### Properties
 * **provisioningState**: string (ReadOnly)
 
-## Dictionary<string,String>
+## PrivateAtlasCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

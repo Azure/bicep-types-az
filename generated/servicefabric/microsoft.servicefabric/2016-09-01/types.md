@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ClusterProperties](#clusterproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ServiceFabric/clusters' (ReadOnly, DeployTimeConstant)
 
 ## ClusterProperties
@@ -83,14 +83,14 @@
 ## NodeTypeDescription
 ### Properties
 * **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription)
-* **capacities**: [Dictionary<string,String>](#dictionarystringstring)
+* **capacities**: [NodeTypeDescriptionCapacities](#nodetypedescriptioncapacities)
 * **clientConnectionEndpointPort**: int (Required)
 * **durabilityLevel**: 'Bronze' | 'Gold' | 'Silver'
 * **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription)
 * **httpGatewayEndpointPort**: int (Required)
 * **isPrimary**: bool (Required)
 * **name**: string (Required)
-* **placementProperties**: [Dictionary<string,String>](#dictionarystringstring)
+* **placementProperties**: [NodeTypeDescriptionPlacementProperties](#nodetypedescriptionplacementproperties)
 * **reverseProxyEndpointPort**: int
 * **vmInstanceCount**: int (Required)
 
@@ -99,12 +99,12 @@
 * **endPort**: int (Required)
 * **startPort**: int (Required)
 
-## Dictionary<string,String>
+## NodeTypeDescriptionCapacities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## NodeTypeDescriptionPlacementProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -133,7 +133,7 @@
 * **maxPercentUnhealthyApplications**: int
 * **maxPercentUnhealthyNodes**: int
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

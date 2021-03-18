@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ServerProperties](#serverproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/administrators@2014-04-01
@@ -17,7 +17,7 @@
 ### Properties
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'activeDirectory' (Required, DeployTimeConstant)
 * **properties**: [ServerAdministratorProperties](#serveradministratorproperties)
 * **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant)
 
@@ -39,7 +39,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ServerTableAuditingPolicyProperties](#servertableauditingpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/auditingPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -61,7 +61,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ServerConnectionPolicyProperties](#serverconnectionpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/connectionPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -74,7 +74,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DatabaseProperties](#databaseproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/advisors@2014-04-01
@@ -95,7 +95,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [DatabaseTableAuditingPolicyProperties](#databasetableauditingpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/databases/auditingPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -106,7 +106,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [DatabaseConnectionPolicyProperties](#databaseconnectionpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/databases/connectionPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -117,7 +117,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'Default' (Required, DeployTimeConstant)
 * **properties**: [DataMaskingPolicyProperties](#datamaskingpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -137,8 +137,8 @@
 ### Properties
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ImportExtensionProperties](#importextensionproperties)
+* **name**: 'import' (Required, DeployTimeConstant)
+* **properties**: [ImportExtensionProperties](#importextensionproperties) (WriteOnly)
 * **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/geoBackupPolicies@2014-04-01
@@ -148,7 +148,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'Default' (Required, DeployTimeConstant)
 * **properties**: [GeoBackupPolicyProperties](#geobackuppolicyproperties) (Required)
 * **type**: 'Microsoft.Sql/servers/databases/geoBackupPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -159,7 +159,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [DatabaseSecurityAlertPolicyProperties](#databasesecurityalertpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -169,7 +169,7 @@
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'current' (Required, DeployTimeConstant)
 * **properties**: [TransparentDataEncryptionProperties](#transparentdataencryptionproperties)
 * **type**: 'Microsoft.Sql/servers/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant)
 
@@ -192,7 +192,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ElasticPoolProperties](#elasticpoolproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/servers/elasticPools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/firewallRules@2014-04-01
@@ -216,14 +216,14 @@
 * **state**: 'Disabled' | 'Ready' (ReadOnly)
 * **version**: '12.0' | '2.0'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## ServerAdministratorProperties
 ### Properties
-* **administratorType**: string (Required)
+* **administratorType**: 'ActiveDirectory' (Required)
 * **login**: string (Required)
 * **sid**: string (Required)
 * **tenantId**: string (Required)
@@ -363,7 +363,7 @@
 ### Properties
 * **status**: 'Disabled' | 'Enabled'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -417,13 +417,13 @@
 
 ## ImportExtensionProperties
 ### Properties
-* **administratorLogin**: string (Required)
-* **administratorLoginPassword**: string (Required)
-* **authenticationType**: 'ADPassword' | 'SQL'
-* **operationMode**: string (Required)
-* **storageKey**: string (Required)
-* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required)
-* **storageUri**: string (Required)
+* **administratorLogin**: string (Required, WriteOnly)
+* **administratorLoginPassword**: string (Required, WriteOnly)
+* **authenticationType**: 'ADPassword' | 'SQL' (WriteOnly)
+* **operationMode**: 'Import' (Required, WriteOnly)
+* **storageKey**: string (Required, WriteOnly)
+* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly)
+* **storageUri**: string (Required, WriteOnly)
 
 ## GeoBackupPolicyProperties
 ### Properties
@@ -462,7 +462,7 @@
 * **storageMB**: int
 * **zoneRedundant**: bool
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

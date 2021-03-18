@@ -7,11 +7,11 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:10_properties](#schemas10properties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [ContainerGroupProperties](#containergroupproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant)
 
-## schemas:10_properties
+## ContainerGroupProperties
 ### Properties
 * **containers**: [Container](#container)[] (Required)
 * **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]
@@ -32,7 +32,7 @@
 * **command**: string[]
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]
 * **image**: string (Required)
-* **instanceView**: [schemas:1_instanceView](#schemas1instanceview) (ReadOnly)
+* **instanceView**: [ContainerPropertiesInstanceView](#containerpropertiesinstanceview) (ReadOnly)
 * **ports**: [ContainerPort](#containerport)[]
 * **resources**: [ResourceRequirements](#resourcerequirements) (Required)
 * **volumeMounts**: [VolumeMount](#volumemount)[]
@@ -42,7 +42,7 @@
 * **name**: string (Required)
 * **value**: string (Required)
 
-## schemas:1_instanceView
+## ContainerPropertiesInstanceView
 ### Properties
 * **currentState**: [ContainerState](#containerstate)
 * **events**: [ContainerEvent](#containerevent)[]
@@ -100,7 +100,7 @@
 ### Properties
 * **ip**: string
 * **ports**: [Port](#port)[] (Required)
-* **type**: string (Required)
+* **type**: 'Public' (Required)
 
 ## Port
 ### Properties
@@ -119,7 +119,7 @@
 * **storageAccountKey**: string
 * **storageAccountName**: string (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

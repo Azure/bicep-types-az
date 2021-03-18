@@ -8,9 +8,9 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:2_properties](#schemas2properties)
-* **systemData**: [systemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [AppServiceCertificateOrderProperties](#appservicecertificateorderproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.CertificateRegistration/certificateOrders' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CertificateRegistration/certificateOrders/certificates@2020-09-01
@@ -22,15 +22,15 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AppServiceCertificate](#appservicecertificate)
-* **systemData**: [systemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.CertificateRegistration/certificateOrders/certificates' (ReadOnly, DeployTimeConstant)
 
-## schemas:2_properties
+## AppServiceCertificateOrderProperties
 ### Properties
 * **appServiceCertificateNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive'[] (ReadOnly)
 * **autoRenew**: bool
-* **certificates**: [Dictionary<string,AppServiceCertificate>](#dictionarystringappservicecertificate)
+* **certificates**: [AppServiceCertificateOrderPropertiesCertificates](#appservicecertificateorderpropertiescertificates)
 * **csr**: string
 * **distinguishedName**: string
 * **domainVerificationToken**: string (ReadOnly)
@@ -45,10 +45,10 @@
 * **root**: [CertificateDetails](#certificatedetails) (ReadOnly)
 * **serialNumber**: string (ReadOnly)
 * **signedCertificate**: [CertificateDetails](#certificatedetails) (ReadOnly)
-* **status**: 'Canceled' | 'Denied' | 'Expired' | 'Issued' | 'NotSubmitted' | 'Pendingissuance' | 'PendingRekey' | 'Pendingrevocation' | 'Revoked' | 'Unused' (ReadOnly)
+* **status**: 'Canceled' | 'Denied' | 'Expired' | 'Issued' | 'NotSubmitted' | 'PendingRekey' | 'Pendingissuance' | 'Pendingrevocation' | 'Revoked' | 'Unused' (ReadOnly)
 * **validityInYears**: int
 
-## Dictionary<string,AppServiceCertificate>
+## AppServiceCertificateOrderPropertiesCertificates
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [AppServiceCertificate](#appservicecertificate)
@@ -71,7 +71,7 @@
 * **thumbprint**: string (ReadOnly)
 * **version**: int (ReadOnly)
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string
 * **createdBy**: string
@@ -80,12 +80,12 @@
 * **lastModifiedBy**: string
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

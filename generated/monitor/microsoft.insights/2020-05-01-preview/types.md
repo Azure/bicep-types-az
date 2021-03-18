@@ -10,7 +10,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ScheduledQueryRuleProperties](#scheduledqueryruleproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Insights/scheduledQueryRules' (ReadOnly, DeployTimeConstant)
 
 ## ScheduledQueryRuleProperties
@@ -33,9 +33,9 @@
 ## Action
 ### Properties
 * **actionGroupId**: string
-* **webHookProperties**: [Dictionary<string,String>](#dictionarystringstring)
+* **webHookProperties**: [ActionWebHookProperties](#actionwebhookproperties)
 
-## Dictionary<string,String>
+## ActionWebHookProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -47,7 +47,7 @@
 ## Condition
 ### Properties
 * **dimensions**: [Dimension](#dimension)[]
-* **failingPeriods**: [schemas:6_failingPeriods](#schemas6failingperiods)
+* **failingPeriods**: [ConditionFailingPeriods](#conditionfailingperiods)
 * **metricMeasureColumn**: string
 * **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required)
 * **query**: string
@@ -61,12 +61,12 @@
 * **operator**: 'Exclude' | 'Include' (Required)
 * **values**: string[] (Required)
 
-## schemas:6_failingPeriods
+## ConditionFailingPeriods
 ### Properties
 * **minFailingPeriodsToAlert**: int
 * **numberOfEvaluationPeriods**: int
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

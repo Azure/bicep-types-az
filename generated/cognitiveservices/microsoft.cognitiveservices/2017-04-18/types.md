@@ -12,7 +12,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [CognitiveServicesAccountProperties](#cognitiveservicesaccountproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [CognitiveServicesAccountTags](#cognitiveservicesaccounttags)
 * **type**: 'Microsoft.CognitiveServices/accounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CognitiveServices/accounts/privateEndpointConnections@2017-04-18
@@ -29,9 +29,9 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity)
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities)
 
-## Dictionary<string,UserAssignedIdentity>
+## IdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
@@ -131,7 +131,7 @@
 * **name**: string (Required)
 * **tier**: 'Enterprise' | 'Free' | 'Premium' | 'Standard' (ReadOnly)
 
-## Dictionary<string,String>
+## CognitiveServicesAccountTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DigitalTwinsProperties](#digitaltwinsproperties)
 * **sku**: [DigitalTwinsSkuInfo](#digitaltwinsskuinfo)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [DigitalTwinsResourceTags](#digitaltwinsresourcetags)
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DigitalTwins/digitalTwinsInstances/endpoints@2020-03-01-preview
@@ -30,19 +30,20 @@
 
 ## DigitalTwinsSkuInfo
 ### Properties
-* **name**: string (Required)
+* **name**: 'F1' (Required)
 
-## Dictionary<string,String>
+## DigitalTwinsResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## DigitalTwinsEndpointResourceProperties
 * **Discriminator**: endpointType
+
 ### Base Properties
 * **createdTime**: string (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [DigitalTwinsEndpointResourcePropertiesTags](#digitaltwinsendpointresourcepropertiestags)
 ### EventGrid
 #### Properties
 * **accessKey1**: string (Required)
@@ -63,7 +64,7 @@
 * **secondaryConnectionString**: string (Required)
 
 
-## Dictionary<string,String>
+## DigitalTwinsEndpointResourcePropertiesTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

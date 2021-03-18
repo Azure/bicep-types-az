@@ -29,7 +29,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **plan**: [SolutionPlan](#solutionplan)
 * **properties**: [SolutionProperties](#solutionproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [SolutionTags](#solutiontags)
 * **type**: 'Microsoft.OperationsManagement/solutions' (ReadOnly, DeployTimeConstant)
 
 ## ManagementAssociationProperties
@@ -63,7 +63,7 @@
 * **referencedResources**: string[]
 * **workspaceResourceId**: string (Required)
 
-## Dictionary<string,String>
+## SolutionTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -11,7 +11,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [IotHubProperties](#iothubproperties)
 * **sku**: [IotHubSkuInfo](#iothubskuinfo) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Devices/IotHubs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Devices/IotHubs/certificates@2020-07-10-preview
@@ -48,9 +48,9 @@
 * **identityType**: string
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **userAssignedIdentities**: [Dictionary<string,ArmUserIdentity>](#dictionarystringarmuseridentity)
+* **userAssignedIdentities**: [ArmIdentityUserAssignedIdentities](#armidentityuserassignedidentities)
 
-## Dictionary<string,ArmUserIdentity>
+## ArmIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ArmUserIdentity](#armuseridentity)
@@ -65,28 +65,28 @@
 * **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[]
 * **cloudToDevice**: [CloudToDeviceProperties](#cloudtodeviceproperties)
 * **comments**: string
-* **deviceStreams**: [schemas:8_deviceStreams](#schemas8devicestreams)
+* **deviceStreams**: [IotHubPropertiesDeviceStreams](#iothubpropertiesdevicestreams)
 * **enableFileUploadNotifications**: bool
 * **encryption**: [EncryptionPropertiesDescription](#encryptionpropertiesdescription)
-* **eventHubEndpoints**: [Dictionary<string,EventHubProperties>](#dictionarystringeventhubproperties)
+* **eventHubEndpoints**: [IotHubPropertiesEventHubEndpoints](#iothubpropertieseventhubendpoints)
 * **features**: 'DeviceManagement' | 'None'
 * **hostName**: string (ReadOnly)
 * **ipFilterRules**: [IpFilterRule](#ipfilterrule)[]
 * **locations**: [IotHubLocationDescription](#iothublocationdescription)[] (ReadOnly)
-* **messagingEndpoints**: [Dictionary<string,MessagingEndpointProperties>](#dictionarystringmessagingendpointproperties)
+* **messagingEndpoints**: [IotHubPropertiesMessagingEndpoints](#iothubpropertiesmessagingendpoints)
 * **minTlsVersion**: string
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]
 * **provisioningState**: string (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 * **routing**: [RoutingProperties](#routingproperties)
 * **state**: string (ReadOnly)
-* **storageEndpoints**: [Dictionary<string,StorageEndpointProperties>](#dictionarystringstorageendpointproperties)
+* **storageEndpoints**: [IotHubPropertiesStorageEndpoints](#iothubpropertiesstorageendpoints)
 
 ## SharedAccessSignatureAuthorizationRule
 ### Properties
 * **keyName**: string (Required)
 * **primaryKey**: string
-* **rights**: 'DeviceConnect' | 'RegistryRead, DeviceConnect' | 'RegistryRead, RegistryWrite, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect' | 'RegistryRead, RegistryWrite' | 'RegistryRead, ServiceConnect, DeviceConnect' | 'RegistryRead, ServiceConnect' | 'RegistryRead' | 'RegistryWrite, DeviceConnect' | 'RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryWrite, ServiceConnect' | 'RegistryWrite' | 'ServiceConnect, DeviceConnect' | 'ServiceConnect' (Required)
+* **rights**: 'DeviceConnect' | 'RegistryRead' | 'RegistryRead, DeviceConnect' | 'RegistryRead, RegistryWrite' | 'RegistryRead, RegistryWrite, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryRead, ServiceConnect' | 'RegistryRead, ServiceConnect, DeviceConnect' | 'RegistryWrite' | 'RegistryWrite, DeviceConnect' | 'RegistryWrite, ServiceConnect' | 'RegistryWrite, ServiceConnect, DeviceConnect' | 'ServiceConnect' | 'ServiceConnect, DeviceConnect' (Required)
 * **secondaryKey**: string
 
 ## CloudToDeviceProperties
@@ -101,7 +101,7 @@
 * **maxDeliveryCount**: int
 * **ttlAsIso8601**: string
 
-## schemas:8_deviceStreams
+## IotHubPropertiesDeviceStreams
 ### Properties
 * **streamingEndpoints**: string[]
 
@@ -119,7 +119,7 @@
 ### Properties
 * **userAssignedIdentity**: string
 
-## Dictionary<string,EventHubProperties>
+## IotHubPropertiesEventHubEndpoints
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [EventHubProperties](#eventhubproperties)
@@ -143,7 +143,7 @@
 * **location**: string
 * **role**: 'primary' | 'secondary'
 
-## Dictionary<string,MessagingEndpointProperties>
+## IotHubPropertiesMessagingEndpoints
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [MessagingEndpointProperties](#messagingendpointproperties)
@@ -250,7 +250,7 @@
 * **endpointNames**: string[] (Required)
 * **isEnabled**: bool (Required)
 * **name**: string
-* **source**: string (Required)
+* **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'DigitalTwinChangeEvents' | 'Invalid' | 'TwinChangeEvents' (Required)
 
 ## RouteProperties
 ### Properties
@@ -260,7 +260,7 @@
 * **name**: string (Required)
 * **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'DigitalTwinChangeEvents' | 'Invalid' | 'TwinChangeEvents' (Required)
 
-## Dictionary<string,StorageEndpointProperties>
+## IotHubPropertiesStorageEndpoints
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [StorageEndpointProperties](#storageendpointproperties)
@@ -278,7 +278,7 @@
 * **name**: 'B1' | 'B2' | 'B3' | 'F1' | 'S1' | 'S2' | 'S3' (Required)
 * **tier**: 'Basic' | 'Free' | 'Standard' (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

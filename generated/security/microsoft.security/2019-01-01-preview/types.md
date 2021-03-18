@@ -37,7 +37,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AutomationProperties](#automationproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 * **type**: 'Microsoft.Security/automations' (ReadOnly, DeployTimeConstant)
 
 ## AlertsSuppressionRuleProperties
@@ -57,12 +57,10 @@
 ## ScopeElement
 ### Properties
 * **field**: string
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## SecurityAssessmentMetadataProperties
 ### Properties
-* **assessmentType**: 'BuiltIn' | 'CustomerManaged' | 'CustomPolicy' (Required)
+* **assessmentType**: 'BuiltIn' | 'CustomPolicy' | 'CustomerManaged' (Required)
 * **category**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking'[]
 * **description**: string
 * **displayName**: string (Required)
@@ -76,13 +74,13 @@
 
 ## SecurityAssessmentProperties
 ### Properties
-* **additionalData**: [Dictionary<string,String>](#dictionarystringstring)
+* **additionalData**: [SecurityAssessmentPropertiesAdditionalData](#securityassessmentpropertiesadditionaldata)
 * **displayName**: string (ReadOnly)
-* **links**: [AssessmentLinks](#assessmentlinks)
+* **links**: [AssessmentLinks](#assessmentlinks) (ReadOnly)
 * **resourceDetails**: [ResourceDetails](#resourcedetails) (Required)
 * **status**: [AssessmentStatus](#assessmentstatus) (Required)
 
-## Dictionary<string,String>
+## SecurityAssessmentPropertiesAdditionalData
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -93,33 +91,30 @@
 
 ## ResourceDetails
 * **Discriminator**: source
+
 ### Base Properties
-### Azure
+### AzureResourceDetails
 #### Properties
 * **id**: string (ReadOnly)
 * **source**: 'Azure' (Required)
 
-### OnPremise
+### OnPremiseSqlResourceDetails
 #### Properties
-* **machineName**: string (Required)
-* **source**: 'OnPremise' (Required)
-* **sourceComputerId**: string (Required)
-* **vmuuid**: string (Required)
-* **workspaceId**: string (Required)
+* **databaseName**: string (Required)
+* **serverName**: string (Required)
+* **source**: 'OnPremiseSql' (Required)
 
 
-## Azure
+## AzureResourceDetails
 ### Properties
 * **id**: string (ReadOnly)
 * **source**: 'Azure' (Required)
 
-## OnPremise
+## OnPremiseSqlResourceDetails
 ### Properties
-* **machineName**: string (Required)
-* **source**: 'OnPremise' (Required)
-* **sourceComputerId**: string (Required)
-* **vmuuid**: string (Required)
-* **workspaceId**: string (Required)
+* **databaseName**: string (Required)
+* **serverName**: string (Required)
+* **source**: 'OnPremiseSql' (Required)
 
 ## AssessmentStatus
 ### Properties
@@ -137,40 +132,41 @@
 
 ## AutomationAction
 * **Discriminator**: actionType
+
 ### Base Properties
-### EventHub
+### AutomationActionEventHub
 #### Properties
 * **actionType**: 'EventHub' (Required)
 * **connectionString**: string
 * **eventHubResourceId**: string
 * **sasPolicyName**: string (ReadOnly)
 
-### LogicApp
+### AutomationActionLogicApp
 #### Properties
 * **actionType**: 'LogicApp' (Required)
 * **logicAppResourceId**: string
 * **uri**: string
 
-### Workspace
+### AutomationActionWorkspace
 #### Properties
 * **actionType**: 'Workspace' (Required)
 * **workspaceResourceId**: string
 
 
-## EventHub
+## AutomationActionEventHub
 ### Properties
 * **actionType**: 'EventHub' (Required)
 * **connectionString**: string
 * **eventHubResourceId**: string
 * **sasPolicyName**: string (ReadOnly)
 
-## LogicApp
+## AutomationActionLogicApp
 ### Properties
 * **actionType**: 'LogicApp' (Required)
 * **logicAppResourceId**: string
 * **uri**: string
 
-## Workspace
+## AutomationActionWorkspace
 ### Properties
 * **actionType**: 'Workspace' (Required)
 * **workspaceResourceId**: string
@@ -196,7 +192,7 @@
 * **propertyJPath**: string
 * **propertyType**: 'Boolean' | 'Integer' | 'Number' | 'String'
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

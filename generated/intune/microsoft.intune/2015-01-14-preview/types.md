@@ -8,7 +8,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AndroidMAMPolicyProperties](#androidmampolicyproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Intune/locations/androidPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Intune/locations/androidPolicies/apps@2015-01-14-preview
@@ -36,8 +36,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [iOSMAMPolicyProperties](#iosmampolicyproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [IOsmamPolicyProperties](#iosmampolicyproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Intune/locations/iosPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Intune/locations/iosPolicies/apps@2015-01-14-preview
@@ -81,7 +81,7 @@
 * **pinNumRetry**: int
 * **screenCapture**: 'allow' | 'block'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -90,7 +90,7 @@
 ### Properties
 * **url**: string (Required)
 
-## iOSMAMPolicyProperties
+## IOsmamPolicyProperties
 ### Properties
 * **accessRecheckOfflineTimeout**: string
 * **accessRecheckOnlineTimeout**: string
@@ -113,7 +113,7 @@
 * **pinNumRetry**: int
 * **touchId**: 'disable' | 'enable'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ClusterResourceProperties](#clusterresourceproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.AppPlatform/Spring' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.AppPlatform/Spring/apps@2020-11-01-preview
@@ -81,7 +81,7 @@
 ## ClusterResourceProperties
 ### Properties
 * **networkProfile**: [NetworkProfile](#networkprofile)
-* **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Moved' | 'MoveFailed' | 'Moving' | 'Succeeded' | 'Updating' (ReadOnly)
+* **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MoveFailed' | 'Moved' | 'Moving' | 'Succeeded' | 'Updating' (ReadOnly)
 * **serviceId**: string (ReadOnly)
 * **version**: int (ReadOnly)
 
@@ -89,13 +89,13 @@
 ### Properties
 * **appNetworkResourceGroup**: string
 * **appSubnetId**: string
-* **outboundIPs**: [schemas:13_outboundIPs](#schemas13outboundips) (ReadOnly)
+* **outboundIPs**: [NetworkProfileOutboundIPs](#networkprofileoutboundips) (ReadOnly)
 * **requiredTraffics**: [RequiredTraffic](#requiredtraffic)[] (ReadOnly)
 * **serviceCidr**: string
 * **serviceRuntimeNetworkResourceGroup**: string
 * **serviceRuntimeSubnetId**: string
 
-## schemas:13_outboundIPs
+## NetworkProfileOutboundIPs
 ### Properties
 * **publicIPs**: string[] (ReadOnly)
 
@@ -113,7 +113,7 @@
 * **name**: string
 * **tier**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -122,7 +122,7 @@
 ### Properties
 * **principalId**: string
 * **tenantId**: string
-* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned'
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned'
 
 ## AppResourceProperties
 ### Properties
@@ -150,7 +150,7 @@
 
 ## BindingResourceProperties
 ### Properties
-* **bindingParameters**: [Dictionary<string,Object>](#dictionarystringobject)
+* **bindingParameters**: [BindingResourcePropertiesBindingParameters](#bindingresourcepropertiesbindingparameters)
 * **createdAt**: string (ReadOnly)
 * **generatedProperties**: string (ReadOnly)
 * **key**: string
@@ -159,7 +159,7 @@
 * **resourceType**: string (ReadOnly)
 * **updatedAt**: string (ReadOnly)
 
-## Dictionary<string,Object>
+## BindingResourcePropertiesBindingParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -178,13 +178,13 @@
 ## DeploymentSettings
 ### Properties
 * **cpu**: int
-* **environmentVariables**: [Dictionary<string,String>](#dictionarystringstring)
+* **environmentVariables**: [DeploymentSettingsEnvironmentVariables](#deploymentsettingsenvironmentvariables)
 * **jvmOptions**: string
 * **memoryInGB**: int
 * **netCoreMainEntryPath**: string
 * **runtimeVersion**: 'Java_11' | 'Java_8' | 'NetCore_31'
 
-## Dictionary<string,String>
+## DeploymentSettingsEnvironmentVariables
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -267,14 +267,14 @@
 
 ## MonitoringSettingProperties
 ### Properties
-* **appInsightsAgentVersions**: [applicationInsightsAgentVersions](#applicationinsightsagentversions)
+* **appInsightsAgentVersions**: [ApplicationInsightsAgentVersions](#applicationinsightsagentversions)
 * **appInsightsInstrumentationKey**: string
 * **appInsightsSamplingRate**: int
 * **error**: [Error](#error)
 * **provisioningState**: 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' (ReadOnly)
 * **traceEnabled**: bool
 
-## applicationInsightsAgentVersions
+## ApplicationInsightsAgentVersions
 ### Properties
 * **java**: string (ReadOnly)
 

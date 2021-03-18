@@ -12,8 +12,8 @@
 * **plan**: [Identity](#identity)
 * **properties**: [MixedRealityAccountProperties](#mixedrealityaccountproperties)
 * **sku**: [Sku](#sku)
-* **systemData**: [systemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.MixedReality/remoteRenderingAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.MixedReality/spatialAnchorsAccounts@2021-01-01
@@ -28,8 +28,8 @@
 * **plan**: [Identity](#identity)
 * **properties**: [MixedRealityAccountProperties](#mixedrealityaccountproperties)
 * **sku**: [Sku](#sku)
-* **systemData**: [systemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.MixedReality/spatialAnchorsAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -52,7 +52,7 @@
 * **accountId**: string (ReadOnly)
 * **storageAccountName**: string
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string
 * **createdBy**: string
@@ -61,12 +61,12 @@
 * **lastModifiedBy**: string
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [TaskProperties](#taskproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant)
 
 ## TaskProperties
@@ -29,10 +29,10 @@
 
 ## Credentials
 ### Properties
-* **customRegistries**: [Dictionary<string,CustomRegistryCredentials>](#dictionarystringcustomregistrycredentials)
+* **customRegistries**: [CredentialsCustomRegistries](#credentialscustomregistries)
 * **sourceRegistry**: [SourceRegistryCredentials](#sourceregistrycredentials)
 
-## Dictionary<string,CustomRegistryCredentials>
+## CredentialsCustomRegistries
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [CustomRegistryCredentials](#customregistrycredentials)
@@ -59,11 +59,12 @@
 
 ## TaskStepProperties
 * **Discriminator**: type
+
 ### Base Properties
 * **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly)
 * **contextAccessToken**: string
 * **contextPath**: string
-### Docker
+### DockerBuildStep
 #### Properties
 * **arguments**: [Argument](#argument)[]
 * **dockerFilePath**: string (Required)
@@ -73,14 +74,14 @@
 * **target**: string
 * **type**: 'Docker' (Required)
 
-### EncodedTask
+### EncodedTaskStep
 #### Properties
 * **encodedTaskContent**: string (Required)
 * **encodedValuesContent**: string
 * **type**: 'EncodedTask' (Required)
 * **values**: [SetValue](#setvalue)[]
 
-### FileTask
+### FileTaskStep
 #### Properties
 * **taskFilePath**: string (Required)
 * **type**: 'FileTask' (Required)
@@ -96,7 +97,7 @@
 * **tag**: string
 * **type**: 'BuildTime' | 'RunTime'
 
-## Docker
+## DockerBuildStep
 ### Properties
 * **arguments**: [Argument](#argument)[]
 * **dockerFilePath**: string (Required)
@@ -112,7 +113,7 @@
 * **name**: string (Required)
 * **value**: string (Required)
 
-## EncodedTask
+## EncodedTaskStep
 ### Properties
 * **encodedTaskContent**: string (Required)
 * **encodedValuesContent**: string
@@ -125,7 +126,7 @@
 * **name**: string (Required)
 * **value**: string (Required)
 
-## FileTask
+## FileTaskStep
 ### Properties
 * **taskFilePath**: string (Required)
 * **type**: 'FileTask' (Required)
@@ -165,7 +166,7 @@
 * **token**: string (Required)
 * **tokenType**: 'OAuth' | 'PAT' (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:8_properties](#schemas8properties)
+* **properties**: [AssociationProperties](#associationproperties)
 * **type**: 'Microsoft.CustomProviders/associations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CustomProviders/resourceProviders@2018-09-01-preview
@@ -16,16 +16,16 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:5_properties](#schemas5properties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [CustomRPManifestProperties](#customrpmanifestproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.CustomProviders/resourceProviders' (ReadOnly, DeployTimeConstant)
 
-## schemas:8_properties
+## AssociationProperties
 ### Properties
 * **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly)
 * **targetResourceId**: string
 
-## schemas:5_properties
+## CustomRPManifestProperties
 ### Properties
 * **actions**: [CustomRPActionRouteDefinition](#customrpactionroutedefinition)[]
 * **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly)
@@ -42,14 +42,14 @@
 ### Properties
 * **endpoint**: string (Required)
 * **name**: string (Required)
-* **routingType**: 'Proxy,Cache' | 'Proxy'
+* **routingType**: 'Proxy' | 'Proxy,Cache'
 
 ## CustomRPValidations
 ### Properties
 * **specification**: string (Required)
 * **validationType**: 'Swagger'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

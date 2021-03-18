@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ServerProperties](#serverproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DBForPostgreSql/flexibleServers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForPostgreSql/flexibleServers/firewallRules@2020-02-14-preview
@@ -35,7 +35,7 @@
 * **availabilityZone**: string
 * **byokEnforcement**: string (ReadOnly)
 * **createMode**: 'Default' | 'PointInTimeRestore'
-* **delegatedSubnetArguments**: [schemas:11_delegatedSubnetArguments](#schemas11delegatedsubnetarguments)
+* **delegatedSubnetArguments**: [ServerPropertiesDelegatedSubnetArguments](#serverpropertiesdelegatedsubnetarguments)
 * **displayName**: string
 * **fullyQualifiedDomainName**: string (ReadOnly)
 * **haEnabled**: 'Disabled' | 'Enabled'
@@ -47,10 +47,10 @@
 * **standbyAvailabilityZone**: string (ReadOnly)
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly)
 * **storageProfile**: [StorageProfile](#storageprofile)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ServerPropertiesTags](#serverpropertiestags)
 * **version**: '11' | '12'
 
-## schemas:11_delegatedSubnetArguments
+## ServerPropertiesDelegatedSubnetArguments
 ### Properties
 * **subnetArmResourceId**: string
 
@@ -66,7 +66,7 @@
 * **backupRetentionDays**: int
 * **storageMB**: int
 
-## Dictionary<string,String>
+## ServerPropertiesTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -76,7 +76,7 @@
 * **name**: string (Required)
 * **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

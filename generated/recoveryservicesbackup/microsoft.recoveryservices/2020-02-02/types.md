@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PrivateEndpointConnection](#privateendpointconnection)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## PrivateEndpointConnection
@@ -28,7 +28,7 @@
 * **description**: string
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

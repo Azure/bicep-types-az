@@ -1,34 +1,35 @@
 # Microsoft.Resources @ 2020-10-01
 
 ## Resource Microsoft.Resources/deployments@2020-10-01
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DeploymentProperties](#deploymentproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [DeploymentTags](#deploymenttags)
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Resources/deploymentScripts@2020-10-01
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
+
 ### Base Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [DeploymentScriptTags](#deploymentscripttags)
 * **type**: 'Microsoft.Resources/deploymentScripts' (ReadOnly, DeployTimeConstant)
-### AzureCLI
+### AzureCliScript
 #### Properties
 * **kind**: 'AzureCLI' (Required)
 * **properties**: [AzureCliScriptProperties](#azurecliscriptproperties) (Required)
 
-### AzurePowerShell
+### AzurePowerShellScript
 #### Properties
 * **kind**: 'AzurePowerShell' (Required)
 * **properties**: [AzurePowerShellScriptProperties](#azurepowershellscriptproperties) (Required)
@@ -43,7 +44,7 @@
 * **managedBy**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ResourceGroupProperties](#resourcegroupproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceGroupTags](#resourcegrouptags)
 * **type**: 'Microsoft.Resources/resourceGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Resources/tags@2020-10-01
@@ -143,7 +144,7 @@
 * **defaultApiVersion**: string (ReadOnly)
 * **locationMappings**: [ProviderExtendedLocation](#providerextendedlocation)[] (ReadOnly)
 * **locations**: string[] (ReadOnly)
-* **properties**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
+* **properties**: [ProviderResourceTypeProperties](#providerresourcetypeproperties) (ReadOnly)
 * **resourceType**: string (ReadOnly)
 
 ## Alias
@@ -184,7 +185,7 @@
 * **location**: string (ReadOnly)
 * **type**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ProviderResourceTypeProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -197,7 +198,7 @@
 * **relativePath**: string
 * **uri**: string
 
-## Dictionary<string,String>
+## DeploymentTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -205,9 +206,9 @@
 ## ManagedServiceIdentity
 ### Properties
 * **type**: 'UserAssigned'
-* **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity)
+* **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities)
 
-## Dictionary<string,UserAssignedIdentity>
+## ManagedServiceIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
@@ -217,7 +218,7 @@
 * **clientId**: string (ReadOnly)
 * **principalId**: string (ReadOnly)
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string
 * **createdBy**: string
@@ -226,12 +227,12 @@
 * **lastModifiedBy**: string
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
-## Dictionary<string,String>
+## DeploymentScriptTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## AzureCLI
+## AzureCliScript
 ### Properties
 * **kind**: 'AzureCLI' (Required)
 * **properties**: [AzureCliScriptProperties](#azurecliscriptproperties) (Required)
@@ -244,7 +245,7 @@
 * **containerSettings**: [ContainerConfiguration](#containerconfiguration)
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]
 * **forceUpdateTag**: string
-* **outputs**: [Dictionary<string,Object>](#dictionarystringobject) (ReadOnly)
+* **outputs**: [DeploymentScriptPropertiesBaseOutputs](#deploymentscriptpropertiesbaseoutputs) (ReadOnly)
 * **primaryScriptUri**: string
 * **provisioningState**: 'Canceled' | 'Creating' | 'Failed' | 'ProvisioningResources' | 'Running' | 'Succeeded' (ReadOnly)
 * **retentionInterval**: string (Required)
@@ -264,7 +265,7 @@
 * **secureValue**: string
 * **value**: string
 
-## Dictionary<string,Object>
+## DeploymentScriptPropertiesBaseOutputs
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -283,7 +284,7 @@
 * **storageAccountKey**: string
 * **storageAccountName**: string
 
-## AzurePowerShell
+## AzurePowerShellScript
 ### Properties
 * **kind**: 'AzurePowerShell' (Required)
 * **properties**: [AzurePowerShellScriptProperties](#azurepowershellscriptproperties) (Required)
@@ -296,7 +297,7 @@
 * **containerSettings**: [ContainerConfiguration](#containerconfiguration)
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]
 * **forceUpdateTag**: string
-* **outputs**: [Dictionary<string,Object>](#dictionarystringobject) (ReadOnly)
+* **outputs**: [DeploymentScriptPropertiesBaseOutputs](#deploymentscriptpropertiesbaseoutputs) (ReadOnly)
 * **primaryScriptUri**: string
 * **provisioningState**: 'Canceled' | 'Creating' | 'Failed' | 'ProvisioningResources' | 'Running' | 'Succeeded' (ReadOnly)
 * **retentionInterval**: string (Required)
@@ -306,7 +307,7 @@
 * **supportingScriptUris**: string[]
 * **timeout**: string
 
-## Dictionary<string,Object>
+## DeploymentScriptPropertiesBaseOutputs
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -315,16 +316,16 @@
 ### Properties
 * **provisioningState**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceGroupTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Tags
 ### Properties
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [Tags](#tags)
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

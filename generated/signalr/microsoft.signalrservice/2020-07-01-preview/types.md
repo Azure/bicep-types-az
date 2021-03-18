@@ -11,7 +11,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SignalRProperties](#signalrproperties)
 * **sku**: [ResourceSku](#resourcesku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SignalRService/signalR/privateEndpointConnections@2020-07-01-preview
@@ -28,9 +28,9 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentityProperty>](#dictionarystringuserassignedidentityproperty)
+* **userAssignedIdentities**: [ManagedIdentityUserAssignedIdentities](#managedidentityuserassignedidentities)
 
-## Dictionary<string,UserAssignedIdentityProperty>
+## ManagedIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentityProperty](#userassignedidentityproperty)
@@ -62,10 +62,10 @@
 ## SignalRFeature
 ### Properties
 * **flag**: 'EnableConnectivityLogs' | 'EnableMessagingLogs' | 'ServiceMode' (Required)
-* **properties**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [SignalRFeatureProperties](#signalrfeatureproperties)
 * **value**: string (Required)
 
-## Dictionary<string,String>
+## SignalRFeatureProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -143,7 +143,7 @@
 * **size**: string (ReadOnly)
 * **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard'
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

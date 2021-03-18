@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ImageTemplateProperties](#imagetemplateproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.VirtualMachineImages/imageTemplates' (ReadOnly, DeployTimeConstant)
 
 ## ImageTemplateProperties
@@ -22,49 +22,51 @@
 
 ## ImageTemplateCustomizer
 * **Discriminator**: type
+
 ### Base Properties
 * **name**: string
-### shell
+### ImageTemplateShellCustomizer
 #### Properties
 * **script**: string
 * **type**: 'shell' (Required)
 
 
-## shell
+## ImageTemplateShellCustomizer
 ### Properties
 * **script**: string
 * **type**: 'shell' (Required)
 
 ## ImageTemplateDistributor
 * **Discriminator**: type
+
 ### Base Properties
-* **artifactTags**: [Dictionary<string,String>](#dictionarystringstring)
+* **artifactTags**: [ImageTemplateDistributorArtifactTags](#imagetemplatedistributorartifacttags)
 * **runOutputName**: string (Required)
-### managedImage
+### ImageTemplateManagedImageDistributor
 #### Properties
 * **imageId**: string (Required)
 * **location**: string (Required)
 * **type**: 'managedImage' (Required)
 
-### sharedImage
+### ImageTemplateSharedImageDistributor
 #### Properties
 * **galleryImageId**: string (Required)
 * **replicationRegions**: string[] (Required)
 * **type**: 'sharedImage' (Required)
 
 
-## Dictionary<string,String>
+## ImageTemplateDistributorArtifactTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## managedImage
+## ImageTemplateManagedImageDistributor
 ### Properties
 * **imageId**: string (Required)
 * **location**: string (Required)
 * **type**: 'managedImage' (Required)
 
-## sharedImage
+## ImageTemplateSharedImageDistributor
 ### Properties
 * **galleryImageId**: string (Required)
 * **replicationRegions**: string[] (Required)
@@ -85,14 +87,15 @@
 
 ## ImageTemplateSource
 * **Discriminator**: type
+
 ### Base Properties
-### ISO
+### ImageTemplateIsoSource
 #### Properties
 * **sha256Checksum**: string (Required)
 * **sourceURI**: string (Required)
 * **type**: 'ISO' (Required)
 
-### PlatformImage
+### ImageTemplatePlatformImageSource
 #### Properties
 * **offer**: string
 * **publisher**: string
@@ -101,13 +104,13 @@
 * **version**: string
 
 
-## ISO
+## ImageTemplateIsoSource
 ### Properties
 * **sha256Checksum**: string (Required)
 * **sourceURI**: string (Required)
 * **type**: 'ISO' (Required)
 
-## PlatformImage
+## ImageTemplatePlatformImageSource
 ### Properties
 * **offer**: string
 * **publisher**: string
@@ -115,7 +118,7 @@
 * **type**: 'PlatformImage' (Required)
 * **version**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

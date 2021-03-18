@@ -1,7 +1,7 @@
 # Microsoft.Authorization @ 2016-09-01
 
 ## Resource Microsoft.Authorization/locks@2016-09-01
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)

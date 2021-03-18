@@ -7,16 +7,16 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:16_properties](#schemas16properties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [ContainerGroupProperties](#containergroupproperties) (Required)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant)
 
-## schemas:16_properties
+## ContainerGroupProperties
 ### Properties
 * **containers**: [Container](#container)[] (Required)
 * **diagnostics**: [ContainerGroupDiagnostics](#containergroupdiagnostics)
 * **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]
-* **instanceView**: [schemas:16_properties_instanceView](#schemas16propertiesinstanceview) (ReadOnly)
+* **instanceView**: [ContainerGroupPropertiesInstanceView](#containergrouppropertiesinstanceview) (ReadOnly)
 * **ipAddress**: [IpAddress](#ipaddress)
 * **networkProfile**: [ContainerGroupNetworkProfile](#containergroupnetworkprofile)
 * **osType**: 'Linux' | 'Windows' (Required)
@@ -34,7 +34,7 @@
 * **command**: string[]
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]
 * **image**: string (Required)
-* **instanceView**: [schemas:1_instanceView](#schemas1instanceview) (ReadOnly)
+* **instanceView**: [ContainerPropertiesInstanceView](#containerpropertiesinstanceview) (ReadOnly)
 * **livenessProbe**: [ContainerProbe](#containerprobe)
 * **ports**: [ContainerPort](#containerport)[]
 * **readinessProbe**: [ContainerProbe](#containerprobe)
@@ -47,7 +47,7 @@
 * **secureValue**: string
 * **value**: string
 
-## schemas:1_instanceView
+## ContainerPropertiesInstanceView
 ### Properties
 * **currentState**: [ContainerState](#containerstate) (ReadOnly)
 * **events**: [Event](#event)[] (ReadOnly)
@@ -124,11 +124,11 @@
 ## LogAnalytics
 ### Properties
 * **logType**: 'ContainerInsights' | 'ContainerInstanceLogs'
-* **metadata**: [Dictionary<string,String>](#dictionarystringstring)
+* **metadata**: [LogAnalyticsMetadata](#loganalyticsmetadata)
 * **workspaceId**: string (Required)
 * **workspaceKey**: string (Required)
 
-## Dictionary<string,String>
+## LogAnalyticsMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -139,7 +139,7 @@
 * **server**: string (Required)
 * **username**: string (Required)
 
-## schemas:16_properties_instanceView
+## ContainerGroupPropertiesInstanceView
 ### Properties
 * **events**: [Event](#event)[] (ReadOnly)
 * **state**: string (ReadOnly)
@@ -167,7 +167,7 @@
 * **emptyDir**: any
 * **gitRepo**: [GitRepoVolume](#gitrepovolume)
 * **name**: string (Required)
-* **secret**: [Dictionary<string,String>](#dictionarystringstring)
+* **secret**: [SecretVolume](#secretvolume)
 
 ## AzureFileVolume
 ### Properties
@@ -182,12 +182,12 @@
 * **repository**: string (Required)
 * **revision**: string
 
-## Dictionary<string,String>
+## SecretVolume
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

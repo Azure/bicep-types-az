@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:4_properties](#schemas4properties)
-* **sku**: [schemas:4_sku](#schemas4sku)
+* **properties**: [CacheProperties](#cacheproperties)
+* **sku**: [CacheSku](#cachesku)
 * **tags**: any
 * **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant)
 
@@ -18,10 +18,10 @@
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:18_properties](#schemas18properties)
+* **properties**: [StorageTargetProperties](#storagetargetproperties)
 * **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant)
 
-## schemas:4_properties
+## CacheProperties
 ### Properties
 * **cacheSizeGB**: int
 * **health**: [CacheHealth](#cachehealth) (ReadOnly)
@@ -43,20 +43,20 @@
 * **lastFirmwareUpdate**: string (ReadOnly)
 * **pendingFirmwareVersion**: string (ReadOnly)
 
-## schemas:4_sku
+## CacheSku
 ### Properties
 * **name**: string
 
-## schemas:18_properties
+## StorageTargetProperties
 ### Properties
-* **clfs**: [clfs](#clfs)
+* **clfs**: [ClfsTarget](#clfstarget)
 * **junctions**: [NamespaceJunction](#namespacejunction)[]
-* **nfs3**: [nfs3](#nfs3)
+* **nfs3**: [Nfs3Target](#nfs3target)
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
 * **targetType**: 'clfs' | 'nfs3' | 'unknown'
-* **unknown**: [unknown](#unknown)
+* **unknown**: [UnknownTarget](#unknowntarget)
 
-## clfs
+## ClfsTarget
 ### Properties
 * **target**: string
 
@@ -66,16 +66,16 @@
 * **nfsExport**: string
 * **targetPath**: string
 
-## nfs3
+## Nfs3Target
 ### Properties
 * **target**: string
 * **usageModel**: string
 
-## unknown
+## UnknownTarget
 ### Properties
-* **unknownMap**: [Dictionary<string,String>](#dictionarystringstring)
+* **unknownMap**: [UnknownProperties](#unknownproperties)
 
-## Dictionary<string,String>
+## UnknownProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

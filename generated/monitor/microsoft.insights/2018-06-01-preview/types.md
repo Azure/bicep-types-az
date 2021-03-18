@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [GuestDiagnosticSettings](#guestdiagnosticsettings) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'microsoft.insights/guestDiagnosticSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource microsoft.insights/guestDiagnosticSettingsAssociation@2018-06-01-preview
@@ -19,7 +19,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [GuestDiagnosticSettingsAssociation](#guestdiagnosticsettingsassociation) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'microsoft.insights/guestDiagnosticSettingsAssociation' (ReadOnly, DeployTimeConstant)
 
 ## GuestDiagnosticSettings
@@ -66,7 +66,7 @@
 ### Properties
 * **kind**: 'ApplicationInsights' | 'EventHub' | 'LogAnalytics' (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -75,7 +75,7 @@
 ### Properties
 * **guestDiagnosticSettingsName**: string (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

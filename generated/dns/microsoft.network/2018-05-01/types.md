@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ZoneProperties](#zoneproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Network/dnsZones' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Network/dnsZones/A@2018-05-01
@@ -126,7 +126,7 @@
 ### Properties
 * **id**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -138,7 +138,7 @@
 * **caaRecords**: [CaaRecord](#caarecord)[]
 * **CNAMERecord**: [CnameRecord](#cnamerecord)
 * **fqdn**: string (ReadOnly)
-* **metadata**: [Dictionary<string,String>](#dictionarystringstring)
+* **metadata**: [RecordSetPropertiesMetadata](#recordsetpropertiesmetadata)
 * **MXRecords**: [MxRecord](#mxrecord)[]
 * **NSRecords**: [NsRecord](#nsrecord)[]
 * **provisioningState**: string (ReadOnly)
@@ -167,7 +167,7 @@
 ### Properties
 * **cname**: string
 
-## Dictionary<string,String>
+## RecordSetPropertiesMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

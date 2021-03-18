@@ -22,15 +22,15 @@
 ## RegistrationAssignmentProperties
 ### Properties
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly)
-* **registrationDefinition**: [schemas:4_registrationDefinition](#schemas4registrationdefinition) (ReadOnly)
+* **registrationDefinition**: [RegistrationAssignmentPropertiesRegistrationDefinition](#registrationassignmentpropertiesregistrationdefinition) (ReadOnly)
 * **registrationDefinitionId**: string (Required)
 
-## schemas:4_registrationDefinition
+## RegistrationAssignmentPropertiesRegistrationDefinition
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
 * **plan**: [Plan](#plan)
-* **properties**: [schemas:4_registrationDefinition_properties](#schemas4registrationdefinitionproperties)
+* **properties**: [RegistrationAssignmentPropertiesRegistrationDefinitionProperties](#registrationassignmentpropertiesregistrationdefinitionproperties)
 * **type**: string (ReadOnly)
 
 ## Plan
@@ -40,7 +40,7 @@
 * **publisher**: string (Required)
 * **version**: string (Required)
 
-## schemas:4_registrationDefinition_properties
+## RegistrationAssignmentPropertiesRegistrationDefinitionProperties
 ### Properties
 * **authorizations**: [Authorization](#authorization)[]
 * **description**: string

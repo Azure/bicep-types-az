@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SignalRCreateOrUpdateProperties](#signalrcreateorupdateproperties)
 * **sku**: [ResourceSku](#resourcesku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [SignalRUpdateParametersTags](#signalrupdateparameterstags)
 * **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant)
 
 ## SignalRCreateOrUpdateProperties
@@ -31,10 +31,10 @@
 ## SignalRFeature
 ### Properties
 * **flag**: 'EnableConnectivityLogs' | 'ServiceMode' (Required)
-* **properties**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [SignalRFeatureProperties](#signalrfeatureproperties)
 * **value**: string (Required)
 
-## Dictionary<string,String>
+## SignalRFeatureProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -47,7 +47,7 @@
 * **size**: string
 * **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard'
 
-## Dictionary<string,String>
+## SignalRUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

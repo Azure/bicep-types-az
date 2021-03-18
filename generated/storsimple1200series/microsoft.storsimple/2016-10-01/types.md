@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ManagerProperties](#managerproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.StorSimple/managers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/accessControlRecords@2016-10-01
@@ -82,7 +82,7 @@
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [ISCSIServerProperties](#iscsiserverproperties) (Required)
+* **properties**: [IscsiServerProperties](#iscsiserverproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/iscsiservers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/devices/iscsiservers/disks@2016-10-01
@@ -91,7 +91,7 @@
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [ISCSIDiskProperties](#iscsidiskproperties) (Required)
+* **properties**: [IscsiDiskProperties](#iscsidiskproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/iscsiservers/disks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StorSimple/managers/extendedInformation@2016-10-01
@@ -134,9 +134,9 @@
 
 ## ManagerSku
 ### Properties
-* **name**: string (Required)
+* **name**: 'Standard' (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -194,7 +194,7 @@
 * **shareStatus**: 'Offline' | 'Online' (Required)
 * **usedCapacityInBytes**: int (ReadOnly)
 
-## ISCSIServerProperties
+## IscsiServerProperties
 ### Properties
 * **backupScheduleGroupId**: string (Required)
 * **chapId**: string
@@ -202,7 +202,7 @@
 * **reverseChapId**: string
 * **storageDomainId**: string (Required)
 
-## ISCSIDiskProperties
+## IscsiDiskProperties
 ### Properties
 * **accessControlRecords**: string[] (Required)
 * **dataPolicy**: 'Cloud' | 'Invalid' | 'Local' | 'Tiered' (Required)
@@ -225,7 +225,7 @@
 ## StorageAccountCredentialProperties
 ### Properties
 * **accessKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret)
-* **cloudType**: 'Azure' | 'HP' | 'OpenStack' | 'S3_RRS' | 'S3' (Required)
+* **cloudType**: 'Azure' | 'HP' | 'OpenStack' | 'S3' | 'S3_RRS' (Required)
 * **enableSSL**: 'Disabled' | 'Enabled' (Required)
 * **endPoint**: string (Required)
 * **location**: string

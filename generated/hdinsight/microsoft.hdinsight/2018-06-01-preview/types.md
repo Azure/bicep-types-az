@@ -10,7 +10,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ClusterCreateProperties](#clustercreateproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ClusterCreateParametersExtendedTags](#clustercreateparametersextendedtags)
 * **type**: 'Microsoft.HDInsight/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HDInsight/clusters/applications@2018-06-01-preview
@@ -21,22 +21,22 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApplicationProperties](#applicationproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ApplicationTags](#applicationtags)
 * **type**: 'Microsoft.HDInsight/clusters/applications' (ReadOnly, DeployTimeConstant)
 
 ## ClusterIdentity
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: [Dictionary<string,Schemas38UserAssignedIdentitiesValue>](#dictionarystringschemas38userassignedidentitiesvalue)
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
+* **userAssignedIdentities**: [ClusterIdentityUserAssignedIdentities](#clusteridentityuserassignedidentities)
 
-## Dictionary<string,Schemas38UserAssignedIdentitiesValue>
+## ClusterIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [schemas:38_userAssignedIdentitiesValue](#schemas38userassignedidentitiesvalue)
+* **Additional Properties Type**: [ComponentsC51Ht8SchemasClusteridentityPropertiesUserassignedidentitiesAdditionalproperties](#componentsc51ht8schemasclusteridentitypropertiesuserassignedidentitiesadditionalproperties)
 
-## schemas:38_userAssignedIdentitiesValue
+## ComponentsC51Ht8SchemasClusteridentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
 * **clientId**: string (ReadOnly)
 * **principalId**: string (ReadOnly)
@@ -70,11 +70,11 @@
 ## ClusterDefinition
 ### Properties
 * **blueprint**: string
-* **componentVersion**: [Dictionary<string,String>](#dictionarystringstring)
+* **componentVersion**: [ClusterDefinitionComponentVersion](#clusterdefinitioncomponentversion)
 * **configurations**: any
 * **kind**: string
 
-## Dictionary<string,String>
+## ClusterDefinitionComponentVersion
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -177,7 +177,7 @@
 
 ## DiskEncryptionProperties
 ### Properties
-* **encryptionAlgorithm**: 'RSA-OAEP-256' | 'RSA-OAEP' | 'RSA1_5'
+* **encryptionAlgorithm**: 'RSA-OAEP' | 'RSA-OAEP-256' | 'RSA1_5'
 * **encryptionAtHost**: bool
 * **keyName**: string
 * **keyVersion**: string
@@ -244,7 +244,7 @@
 * **resourceId**: string
 * **saskey**: string
 
-## Dictionary<string,String>
+## ClusterCreateParametersExtendedTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -288,7 +288,7 @@
 * **privateIPAddress**: string
 * **publicPort**: int
 
-## Dictionary<string,String>
+## ApplicationTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

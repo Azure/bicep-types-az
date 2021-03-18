@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [BatchAccountCreateProperties](#batchaccountcreateproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [BatchAccountCreateParametersTags](#batchaccountcreateparameterstags)
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Batch/batchAccounts/applications@2021-01-01
@@ -58,14 +58,14 @@
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
 * **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required)
-* **userAssignedIdentities**: [Dictionary<string,Schemas7UserAssignedIdentitiesValue>](#dictionarystringschemas7userassignedidentitiesvalue)
+* **userAssignedIdentities**: [BatchAccountIdentityUserAssignedIdentities](#batchaccountidentityuserassignedidentities)
 
-## Dictionary<string,Schemas7UserAssignedIdentitiesValue>
+## BatchAccountIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [schemas:7_userAssignedIdentitiesValue](#schemas7userassignedidentitiesvalue)
+* **Additional Properties Type**: [Components19E4Rl9SchemasBatchaccountidentityPropertiesUserassignedidentitiesAdditionalproperties](#components19e4rl9schemasbatchaccountidentitypropertiesuserassignedidentitiesadditionalproperties)
 
-## schemas:7_userAssignedIdentitiesValue
+## Components19E4Rl9SchemasBatchaccountidentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
 * **clientId**: string (ReadOnly)
 * **principalId**: string (ReadOnly)
@@ -135,7 +135,7 @@
 * **description**: string (ReadOnly)
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly)
 
-## Dictionary<string,String>
+## BatchAccountCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -178,12 +178,17 @@
 ## BatchPoolIdentity
 ### Properties
 * **type**: 'None' | 'UserAssigned' (Required)
-* **userAssignedIdentities**: [Dictionary<string,Schemas7UserAssignedIdentitiesValue>](#dictionarystringschemas7userassignedidentitiesvalue)
+* **userAssignedIdentities**: [BatchPoolIdentityUserAssignedIdentities](#batchpoolidentityuserassignedidentities)
 
-## Dictionary<string,Schemas7UserAssignedIdentitiesValue>
+## BatchPoolIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [schemas:7_userAssignedIdentitiesValue](#schemas7userassignedidentitiesvalue)
+* **Additional Properties Type**: [Components81XseeSchemasBatchpoolidentityPropertiesUserassignedidentitiesAdditionalproperties](#components81xseeschemasbatchpoolidentitypropertiesuserassignedidentitiesadditionalproperties)
+
+## Components81XseeSchemasBatchpoolidentityPropertiesUserassignedidentitiesAdditionalproperties
+### Properties
+* **clientId**: string (ReadOnly)
+* **principalId**: string (ReadOnly)
 
 ## PoolProperties
 ### Properties
@@ -263,7 +268,7 @@
 ### Properties
 * **containerImageNames**: string[]
 * **containerRegistries**: [ContainerRegistry](#containerregistry)[]
-* **type**: string (Required)
+* **type**: 'DockerCompatible' (Required)
 
 ## ContainerRegistry
 ### Properties
@@ -318,7 +323,7 @@
 ### Properties
 * **azureBlobFileSystemConfiguration**: [AzureBlobFileSystemConfiguration](#azureblobfilesystemconfiguration)
 * **azureFileShareConfiguration**: [AzureFileShareConfiguration](#azurefileshareconfiguration)
-* **cifsMountConfiguration**: [CIFSMountConfiguration](#cifsmountconfiguration)
+* **cifsMountConfiguration**: [CifsMountConfiguration](#cifsmountconfiguration)
 * **nfsMountConfiguration**: [NFSMountConfiguration](#nfsmountconfiguration)
 
 ## AzureBlobFileSystemConfiguration
@@ -338,7 +343,7 @@
 * **mountOptions**: string
 * **relativeMountPath**: string (Required)
 
-## CIFSMountConfiguration
+## CifsMountConfiguration
 ### Properties
 * **mountOptions**: string
 * **password**: string (Required)

@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DiskProperties](#diskproperties)
 * **sku**: [DiskSku](#disksku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/disks' (ReadOnly, DeployTimeConstant)
 * **zones**: string[]
 
@@ -24,7 +24,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SnapshotProperties](#snapshotproperties)
 * **sku**: [SnapshotSku](#snapshotsku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant)
 
 ## DiskProperties
@@ -79,10 +79,10 @@
 
 ## DiskSku
 ### Properties
-* **name**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'UltraSSD_LRS'
+* **name**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | 'UltraSSD_LRS'
 * **tier**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -102,7 +102,7 @@
 * **name**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS'
 * **tier**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

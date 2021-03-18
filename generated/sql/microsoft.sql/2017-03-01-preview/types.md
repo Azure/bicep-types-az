@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'ActiveDirectory' (Required, DeployTimeConstant)
 * **properties**: [ManagedInstanceAdministratorProperties](#managedinstanceadministratorproperties)
 * **type**: 'Microsoft.Sql/managedInstances/administrators' (ReadOnly, DeployTimeConstant)
 
@@ -17,7 +17,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ManagedDatabaseProperties](#manageddatabaseproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies@2017-03-01-preview
@@ -25,7 +25,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ManagedBackupShortTermRetentionPolicyProperties](#managedbackupshorttermretentionpolicyproperties)
 * **type**: 'Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -34,7 +34,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties)
 * **type**: 'Microsoft.Sql/managedInstances/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -43,7 +43,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ManagedBackupShortTermRetentionPolicyProperties](#managedbackupshorttermretentionpolicyproperties)
 * **type**: 'Microsoft.Sql/managedInstances/restorableDroppedDatabases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -52,7 +52,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'Default' (Required, DeployTimeConstant)
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties)
 * **type**: 'Microsoft.Sql/managedInstances/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -61,7 +61,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ServerBlobAuditingPolicyProperties](#serverblobauditingpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/auditingSettings' (ReadOnly, DeployTimeConstant)
 
@@ -75,7 +75,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DatabaseProperties](#databaseproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/auditingSettings@2017-03-01-preview
@@ -84,7 +84,7 @@
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [DatabaseBlobAuditingPolicyProperties](#databaseblobauditingpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/databases/auditingSettings' (ReadOnly, DeployTimeConstant)
 
@@ -93,7 +93,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [LongTermRetentionPolicyProperties](#longtermretentionpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -102,7 +102,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ExtendedDatabaseBlobAuditingPolicyProperties](#extendeddatabaseblobauditingpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/databases/extendedAuditingSettings' (ReadOnly, DeployTimeConstant)
 
@@ -111,7 +111,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'current' (Required, DeployTimeConstant)
 * **properties**: [SensitivityLabelProperties](#sensitivitylabelproperties)
 * **type**: 'Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant)
 
@@ -120,7 +120,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [DatabaseVulnerabilityAssessmentProperties](#databasevulnerabilityassessmentproperties)
 * **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
 
@@ -147,7 +147,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ExtendedServerBlobAuditingPolicyProperties](#extendedserverblobauditingpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/extendedAuditingSettings' (ReadOnly, DeployTimeConstant)
 
@@ -160,7 +160,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [JobAgentProperties](#jobagentproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/servers/jobAgents' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/jobAgents/credentials@2017-03-01-preview
@@ -213,13 +213,13 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'Default' (Required, DeployTimeConstant)
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
 ## ManagedInstanceAdministratorProperties
 ### Properties
-* **administratorType**: string (Required)
+* **administratorType**: 'ActiveDirectory' (Required)
 * **login**: string (Required)
 * **sid**: string (Required)
 * **tenantId**: string
@@ -242,7 +242,7 @@
 * **storageContainerSasToken**: string
 * **storageContainerUri**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -305,7 +305,7 @@
 * **size**: string
 * **tier**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -394,7 +394,7 @@
 * **databaseId**: string (Required)
 * **state**: 'Creating' | 'Deleting' | 'Disabled' | 'Ready' | 'Updating' (ReadOnly)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

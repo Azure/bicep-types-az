@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [InstancePoolProperties](#instancepoolproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/instancePools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/locations/instanceFailoverGroups@2020-02-02-preview
@@ -40,7 +40,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ManagedInstanceProperties](#managedinstanceproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/managedInstances' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/managedInstances/administrators@2020-02-02-preview
@@ -48,7 +48,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'ActiveDirectory' (Required, DeployTimeConstant)
 * **properties**: [ManagedInstanceAdministratorProperties](#managedinstanceadministratorproperties)
 * **type**: 'Microsoft.Sql/managedInstances/administrators' (ReadOnly, DeployTimeConstant)
 
@@ -57,7 +57,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'Default' (Required, DeployTimeConstant)
 * **properties**: [ManagedInstanceAzureADOnlyAuthProperties](#managedinstanceazureadonlyauthproperties)
 * **type**: 'Microsoft.Sql/managedInstances/azureADOnlyAuthentications' (ReadOnly, DeployTimeConstant)
 
@@ -69,7 +69,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ManagedDatabaseProperties](#manageddatabaseproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies@2020-02-02-preview
@@ -77,7 +77,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [BaseLongTermRetentionPolicyProperties](#baselongtermretentionpolicyproperties)
 * **type**: 'Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -86,7 +86,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ManagedBackupShortTermRetentionPolicyProperties](#managedbackupshorttermretentionpolicyproperties)
 * **type**: 'Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -96,7 +96,7 @@
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **managedBy**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'current' (Required, DeployTimeConstant)
 * **properties**: [SensitivityLabelProperties](#sensitivitylabelproperties)
 * **type**: 'Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant)
 
@@ -105,7 +105,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties)
 * **type**: 'Microsoft.Sql/managedInstances/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -114,7 +114,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'current' (Required, DeployTimeConstant)
 * **properties**: [ManagedTransparentDataEncryptionProperties](#managedtransparentdataencryptionproperties)
 * **type**: 'Microsoft.Sql/managedInstances/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant)
 
@@ -123,7 +123,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [DatabaseVulnerabilityAssessmentProperties](#databasevulnerabilityassessmentproperties)
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
 
@@ -142,7 +142,7 @@
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'current' (Required, DeployTimeConstant)
 * **properties**: [ManagedInstanceEncryptionProtectorProperties](#managedinstanceencryptionprotectorproperties)
 * **type**: 'Microsoft.Sql/managedInstances/encryptionProtector' (ReadOnly, DeployTimeConstant)
 
@@ -170,7 +170,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ManagedBackupShortTermRetentionPolicyProperties](#managedbackupshorttermretentionpolicyproperties)
 * **type**: 'Microsoft.Sql/managedInstances/restorableDroppedDatabases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -179,7 +179,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'Default' (Required, DeployTimeConstant)
 * **properties**: [SecurityAlertsPolicyProperties](#securityalertspolicyproperties)
 * **type**: 'Microsoft.Sql/managedInstances/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -197,7 +197,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ManagedInstanceVulnerabilityAssessmentProperties](#managedinstancevulnerabilityassessmentproperties)
 * **type**: 'Microsoft.Sql/managedInstances/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
 
@@ -211,7 +211,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ServerProperties](#serverproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/administrators@2020-02-02-preview
@@ -219,7 +219,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'ActiveDirectory' (Required, DeployTimeConstant)
 * **properties**: [AdministratorProperties](#administratorproperties)
 * **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant)
 
@@ -228,7 +228,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ServerBlobAuditingPolicyProperties](#serverblobauditingpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/auditingSettings' (ReadOnly, DeployTimeConstant)
 
@@ -237,7 +237,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'Default' (Required, DeployTimeConstant)
 * **properties**: [AzureADOnlyAuthProperties](#azureadonlyauthproperties)
 * **type**: 'Microsoft.Sql/servers/azureADOnlyAuthentications' (ReadOnly, DeployTimeConstant)
 
@@ -252,7 +252,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DatabaseProperties](#databaseproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/auditingSettings@2020-02-02-preview
@@ -261,7 +261,7 @@
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [DatabaseBlobAuditingPolicyProperties](#databaseblobauditingpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/databases/auditingSettings' (ReadOnly, DeployTimeConstant)
 
@@ -270,7 +270,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [BaseLongTermRetentionPolicyProperties](#baselongtermretentionpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -279,7 +279,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [BackupShortTermRetentionPolicyProperties](#backupshorttermretentionpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -288,7 +288,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ExtendedDatabaseBlobAuditingPolicyProperties](#extendeddatabaseblobauditingpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/databases/extendedAuditingSettings' (ReadOnly, DeployTimeConstant)
 
@@ -307,7 +307,7 @@
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **managedBy**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'current' (Required, DeployTimeConstant)
 * **properties**: [SensitivityLabelProperties](#sensitivitylabelproperties)
 * **type**: 'Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant)
 
@@ -316,7 +316,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [SecurityAlertsPolicyProperties](#securityalertspolicyproperties)
 * **type**: 'Microsoft.Sql/servers/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -344,7 +344,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'current' (Required, DeployTimeConstant)
 * **properties**: [TransparentDataEncryptionProperties](#transparentdataencryptionproperties)
 * **type**: 'Microsoft.Sql/servers/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant)
 
@@ -353,7 +353,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [DatabaseVulnerabilityAssessmentProperties](#databasevulnerabilityassessmentproperties)
 * **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
 
@@ -391,7 +391,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ServerDevOpsAuditSettingsProperties](#serverdevopsauditsettingsproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Sql/servers/devOpsAuditingSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/dnsAliases@2020-02-02-preview
@@ -413,7 +413,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ElasticPoolProperties](#elasticpoolproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/servers/elasticPools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/encryptionProtector@2020-02-02-preview
@@ -423,7 +423,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string (ReadOnly)
 * **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'current' (Required, DeployTimeConstant)
 * **properties**: [EncryptionProtectorProperties](#encryptionprotectorproperties)
 * **type**: 'Microsoft.Sql/servers/encryptionProtector' (ReadOnly, DeployTimeConstant)
 
@@ -432,7 +432,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ExtendedServerBlobAuditingPolicyProperties](#extendedserverblobauditingpolicyproperties)
 * **type**: 'Microsoft.Sql/servers/extendedAuditingSettings' (ReadOnly, DeployTimeConstant)
 
@@ -444,7 +444,7 @@
 * **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [FailoverGroupProperties](#failovergroupproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [FailoverGroupTags](#failovergrouptags)
 * **type**: 'Microsoft.Sql/servers/failoverGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/firewallRules@2020-02-02-preview
@@ -465,7 +465,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [JobAgentProperties](#jobagentproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.Sql/servers/jobAgents' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/jobAgents/credentials@2020-02-02-preview
@@ -538,7 +538,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'Default' (Required, DeployTimeConstant)
 * **properties**: [SecurityAlertsPolicyProperties](#securityalertspolicyproperties)
 * **type**: 'Microsoft.Sql/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -565,7 +565,7 @@
 ### Properties
 * **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties)
 * **type**: 'Microsoft.Sql/servers/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
 
@@ -583,7 +583,7 @@
 * **size**: string
 * **tier**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -679,14 +679,14 @@
 * **description**: string (Required)
 * **status**: string (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## ManagedInstanceAdministratorProperties
 ### Properties
-* **administratorType**: string (Required)
+* **administratorType**: 'ActiveDirectory' (Required)
 * **login**: string (Required)
 * **sid**: string (Required)
 * **tenantId**: string
@@ -715,7 +715,7 @@
 * **storageContainerSasToken**: string
 * **storageContainerUri**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -841,14 +841,14 @@
 * **description**: string (Required)
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## AdministratorProperties
 ### Properties
-* **administratorType**: string (Required)
+* **administratorType**: 'ActiveDirectory' (Required)
 * **azureADOnlyAuthentication**: bool (ReadOnly)
 * **login**: string (Required)
 * **sid**: string (Required)
@@ -906,7 +906,7 @@
 * **storageAccountType**: 'GRS' | 'LRS' | 'ZRS'
 * **zoneRedundant**: bool
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -992,7 +992,7 @@
 * **syncAgentId**: string
 * **syncDirection**: 'Bidirectional' | 'OneWayHubToMember' | 'OneWayMemberToHub'
 * **syncMemberAzureDatabaseResourceId**: string
-* **syncState**: 'DeProvisioned' | 'DeProvisionFailed' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'Provisioned' | 'ProvisionFailed' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' (ReadOnly)
+* **syncState**: 'DeProvisionFailed' | 'DeProvisioned' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'ProvisionFailed' | 'Provisioned' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' (ReadOnly)
 * **usePrivateLinkConnection**: bool
 * **userName**: string
 
@@ -1026,7 +1026,7 @@
 * **storageAccountSubscriptionId**: string
 * **storageEndpoint**: string
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string (ReadOnly)
 * **createdBy**: string (ReadOnly)
@@ -1053,7 +1053,7 @@
 * **maxCapacity**: int
 * **minCapacity**: int
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1104,7 +1104,7 @@
 * **failoverPolicy**: 'Automatic' | 'Manual' (Required)
 * **failoverWithDataLossGracePeriodMinutes**: int
 
-## Dictionary<string,String>
+## FailoverGroupTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1119,7 +1119,7 @@
 * **databaseId**: string (Required)
 * **state**: 'Creating' | 'Deleting' | 'Disabled' | 'Ready' | 'Updating' (ReadOnly)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1234,7 +1234,7 @@
 ## VirtualNetworkRuleProperties
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool
-* **state**: 'Deleting' | 'Failed' | 'Initializing' | 'InProgress' | 'Ready' | 'Unknown' (ReadOnly)
+* **state**: 'Deleting' | 'Failed' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly)
 * **virtualNetworkSubnetId**: string (Required)
 
 ## ServerVulnerabilityAssessmentProperties

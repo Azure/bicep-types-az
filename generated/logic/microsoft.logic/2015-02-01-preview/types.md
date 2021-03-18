@@ -8,7 +8,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WorkflowProperties](#workflowproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Logic/workflows' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Logic/workflows/accessKeys@2015-02-01-preview
@@ -27,7 +27,7 @@
 * **createdTime**: string (ReadOnly)
 * **definition**: any
 * **definitionLink**: [ContentLink](#contentlink)
-* **parameters**: [Dictionary<string,WorkflowParameter>](#dictionarystringworkflowparameter)
+* **parameters**: [WorkflowPropertiesParameters](#workflowpropertiesparameters)
 * **parametersLink**: [ContentLink](#contentlink)
 * **provisioningState**: 'Moving' | 'NotSpecified' | 'Succeeded' (ReadOnly)
 * **sku**: [Sku](#sku)
@@ -47,7 +47,7 @@
 * **algorithm**: string
 * **value**: string
 
-## Dictionary<string,WorkflowParameter>
+## WorkflowPropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [WorkflowParameter](#workflowparameter)
@@ -69,7 +69,7 @@
 * **name**: string (ReadOnly)
 * **type**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -11,7 +11,7 @@
 * **type**: 'Microsoft.CostManagement/budgets' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.CostManagement/views@2019-04-01-preview
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-04-01-preview' (ReadOnly, DeployTimeConstant)
 * **eTag**: string
@@ -26,7 +26,7 @@
 * **category**: 'Cost' | 'Usage' (Required)
 * **currentSpend**: [CurrentSpend](#currentspend) (ReadOnly)
 * **filter**: [ReportConfigFilter](#reportconfigfilter)
-* **notifications**: [Dictionary<string,Notification>](#dictionarystringnotification)
+* **notifications**: [BudgetPropertiesNotifications](#budgetpropertiesnotifications)
 * **timeGrain**: 'Annually' | 'Monthly' | 'Quarterly' (Required)
 * **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required)
 
@@ -49,7 +49,7 @@
 * **operator**: 'Contains' | 'In' (Required)
 * **values**: string[] (Required)
 
-## Dictionary<string,Notification>
+## BudgetPropertiesNotifications
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [Notification](#notification)
@@ -75,7 +75,7 @@
 * **createdOn**: string (ReadOnly)
 * **displayName**: string
 * **kpis**: [KpiProperties](#kpiproperties)[]
-* **metric**: 'ActualCost' | 'AHUB' | 'AmortizedCost'
+* **metric**: 'AHUB' | 'ActualCost' | 'AmortizedCost'
 * **modifiedOn**: string (ReadOnly)
 * **pivots**: [PivotProperties](#pivotproperties)[]
 * **query**: [ReportConfigDefinition](#reportconfigdefinition)
@@ -97,25 +97,25 @@
 * **dataset**: [ReportConfigDataset](#reportconfigdataset)
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required)
 * **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod)
-* **type**: string (Required)
+* **type**: 'Usage' (Required)
 
 ## ReportConfigDataset
 ### Properties
-* **aggregation**: [Dictionary<string,ReportConfigAggregation>](#dictionarystringreportconfigaggregation)
+* **aggregation**: [ReportConfigDatasetAggregation](#reportconfigdatasetaggregation)
 * **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration)
 * **filter**: [ReportConfigFilter](#reportconfigfilter)
 * **granularity**: 'Daily' | 'Monthly'
 * **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[]
 * **sorting**: [ReportConfigSorting](#reportconfigsorting)[]
 
-## Dictionary<string,ReportConfigAggregation>
+## ReportConfigDatasetAggregation
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ReportConfigAggregation](#reportconfigaggregation)
 
 ## ReportConfigAggregation
 ### Properties
-* **function**: string (Required)
+* **function**: 'Sum' (Required)
 * **name**: string (Required)
 
 ## ReportConfigDatasetConfiguration

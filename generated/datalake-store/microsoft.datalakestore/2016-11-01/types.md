@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [CreateDataLakeStoreAccountProperties](#createdatalakestoreaccountproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [CreateDataLakeStoreAccountParametersTags](#createdatalakestoreaccountparameterstags)
 * **type**: 'Microsoft.DataLakeStore/accounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataLakeStore/accounts/firewallRules@2016-11-01
@@ -43,7 +43,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: string (Required)
+* **type**: 'SystemAssigned' (Required)
 
 ## CreateDataLakeStoreAccountProperties
 ### Properties
@@ -111,7 +111,7 @@
 ### Properties
 * **subnetId**: string (Required)
 
-## Dictionary<string,String>
+## CreateDataLakeStoreAccountParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

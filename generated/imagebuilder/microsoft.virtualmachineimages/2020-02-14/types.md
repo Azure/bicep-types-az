@@ -9,20 +9,20 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ImageTemplateProperties](#imagetemplateproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.VirtualMachineImages/imageTemplates' (ReadOnly, DeployTimeConstant)
 
 ## ImageTemplateIdentity
 ### Properties
 * **type**: 'None' | 'UserAssigned'
-* **userAssignedIdentities**: [Dictionary<string,Schemas22UserAssignedIdentitiesValue>](#dictionarystringschemas22userassignedidentitiesvalue)
+* **userAssignedIdentities**: [ImageTemplateIdentityUserAssignedIdentities](#imagetemplateidentityuserassignedidentities)
 
-## Dictionary<string,Schemas22UserAssignedIdentitiesValue>
+## ImageTemplateIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [schemas:22_userAssignedIdentitiesValue](#schemas22userassignedidentitiesvalue)
+* **Additional Properties Type**: [ComponentsVrq145SchemasImagetemplateidentityPropertiesUserassignedidentitiesAdditionalproperties](#componentsvrq145schemasimagetemplateidentitypropertiesuserassignedidentitiesadditionalproperties)
 
-## schemas:22_userAssignedIdentitiesValue
+## ComponentsVrq145SchemasImagetemplateidentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
 * **clientId**: string (ReadOnly)
 * **principalId**: string (ReadOnly)
@@ -40,16 +40,17 @@
 
 ## ImageTemplateCustomizer
 * **Discriminator**: type
+
 ### Base Properties
 * **name**: string
-### File
+### ImageTemplateFileCustomizer
 #### Properties
 * **destination**: string
 * **sha256Checksum**: string
 * **sourceUri**: string
 * **type**: 'File' (Required)
 
-### PowerShell
+### ImageTemplatePowerShellCustomizer
 #### Properties
 * **inline**: string[]
 * **runAsSystem**: bool
@@ -59,21 +60,21 @@
 * **type**: 'PowerShell' (Required)
 * **validExitCodes**: int[]
 
-### Shell
+### ImageTemplateShellCustomizer
 #### Properties
 * **inline**: string[]
 * **scriptUri**: string
 * **sha256Checksum**: string
 * **type**: 'Shell' (Required)
 
-### WindowsRestart
+### ImageTemplateRestartCustomizer
 #### Properties
 * **restartCheckCommand**: string
 * **restartCommand**: string
 * **restartTimeout**: string
 * **type**: 'WindowsRestart' (Required)
 
-### WindowsUpdate
+### ImageTemplateWindowsUpdateCustomizer
 #### Properties
 * **filters**: string[]
 * **searchCriteria**: string
@@ -81,14 +82,14 @@
 * **updateLimit**: int
 
 
-## File
+## ImageTemplateFileCustomizer
 ### Properties
 * **destination**: string
 * **sha256Checksum**: string
 * **sourceUri**: string
 * **type**: 'File' (Required)
 
-## PowerShell
+## ImageTemplatePowerShellCustomizer
 ### Properties
 * **inline**: string[]
 * **runAsSystem**: bool
@@ -98,21 +99,21 @@
 * **type**: 'PowerShell' (Required)
 * **validExitCodes**: int[]
 
-## Shell
+## ImageTemplateShellCustomizer
 ### Properties
 * **inline**: string[]
 * **scriptUri**: string
 * **sha256Checksum**: string
 * **type**: 'Shell' (Required)
 
-## WindowsRestart
+## ImageTemplateRestartCustomizer
 ### Properties
 * **restartCheckCommand**: string
 * **restartCommand**: string
 * **restartTimeout**: string
 * **type**: 'WindowsRestart' (Required)
 
-## WindowsUpdate
+## ImageTemplateWindowsUpdateCustomizer
 ### Properties
 * **filters**: string[]
 * **searchCriteria**: string
@@ -121,15 +122,17 @@
 
 ## ImageTemplateDistributor
 * **Discriminator**: type
+
 ### Base Properties
-* **artifactTags**: [Dictionary<string,String>](#dictionarystringstring)
+* **artifactTags**: [ImageTemplateDistributorArtifactTags](#imagetemplatedistributorartifacttags)
 * **runOutputName**: string (Required)
-### ManagedImage
+### ImageTemplateManagedImageDistributor
 #### Properties
 * **imageId**: string (Required)
+* **location**: string (Required)
 * **type**: 'ManagedImage' (Required)
 
-### SharedImage
+### ImageTemplateSharedImageDistributor
 #### Properties
 * **excludeFromLatest**: bool
 * **galleryImageId**: string (Required)
@@ -137,22 +140,23 @@
 * **storageAccountType**: 'Standard_LRS' | 'Standard_ZRS'
 * **type**: 'SharedImage' (Required)
 
-### VHD
+### ImageTemplateVhdDistributor
 #### Properties
 * **type**: 'VHD' (Required)
 
 
-## Dictionary<string,String>
+## ImageTemplateDistributorArtifactTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ManagedImage
+## ImageTemplateManagedImageDistributor
 ### Properties
 * **imageId**: string (Required)
+* **location**: string (Required)
 * **type**: 'ManagedImage' (Required)
 
-## SharedImage
+## ImageTemplateSharedImageDistributor
 ### Properties
 * **excludeFromLatest**: bool
 * **galleryImageId**: string (Required)
@@ -160,7 +164,7 @@
 * **storageAccountType**: 'Standard_LRS' | 'Standard_ZRS'
 * **type**: 'SharedImage' (Required)
 
-## VHD
+## ImageTemplateVhdDistributor
 ### Properties
 * **type**: 'VHD' (Required)
 
@@ -179,13 +183,14 @@
 
 ## ImageTemplateSource
 * **Discriminator**: type
+
 ### Base Properties
-### ManagedImage
+### ImageTemplateManagedImageSource
 #### Properties
 * **imageId**: string (Required)
 * **type**: 'ManagedImage' (Required)
 
-### PlatformImage
+### ImageTemplatePlatformImageSource
 #### Properties
 * **offer**: string
 * **planInfo**: [PlatformImagePurchasePlan](#platformimagepurchaseplan)
@@ -194,13 +199,18 @@
 * **type**: 'PlatformImage' (Required)
 * **version**: string
 
-### SharedImageVersion
+### ImageTemplateSharedImageVersionSource
 #### Properties
 * **imageVersionId**: string (Required)
 * **type**: 'SharedImageVersion' (Required)
 
 
-## PlatformImage
+## ImageTemplateManagedImageSource
+### Properties
+* **imageId**: string (Required)
+* **type**: 'ManagedImage' (Required)
+
+## ImageTemplatePlatformImageSource
 ### Properties
 * **offer**: string
 * **planInfo**: [PlatformImagePurchasePlan](#platformimagepurchaseplan)
@@ -215,7 +225,7 @@
 * **planProduct**: string (Required)
 * **planPublisher**: string (Required)
 
-## SharedImageVersion
+## ImageTemplateSharedImageVersionSource
 ### Properties
 * **imageVersionId**: string (Required)
 * **type**: 'SharedImageVersion' (Required)
@@ -230,7 +240,7 @@
 ### Properties
 * **subnetId**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

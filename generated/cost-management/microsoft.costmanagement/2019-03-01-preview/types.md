@@ -61,6 +61,7 @@
 
 ## ShowbackRuleProperties
 * **Discriminator**: ruleType
+
 ### Base Properties
 * **creationTime**: string (ReadOnly)
 * **deprecationTime**: string (ReadOnly)
@@ -69,12 +70,12 @@
 * **scopes**: [Scope](#scope)[]
 * **status**: 'Active' | 'NotActive'
 * **version**: int (ReadOnly)
-### CostAllocation
+### CostAllocationDetailsKind
 #### Properties
 * **details**: [CostAllocationDetails](#costallocationdetails)
 * **ruleType**: 'CostAllocation' (Required)
 
-### CustomPrice
+### CustomPriceDetailsKind
 #### Properties
 * **details**: [CustomPriceDetails](#custompricedetails)
 * **ruleType**: 'CustomPrice' (Required)
@@ -87,7 +88,7 @@
 * **name**: string
 * **type**: string
 
-## CostAllocation
+## CostAllocationDetailsKind
 ### Properties
 * **details**: [CostAllocationDetails](#costallocationdetails)
 * **ruleType**: 'CostAllocation' (Required)
@@ -96,14 +97,14 @@
 ### Properties
 * **policy**: 'Evenly' | 'Fixed' | 'Proportional'
 
-## CustomPrice
+## CustomPriceDetailsKind
 ### Properties
 * **details**: [CustomPriceDetails](#custompricedetails)
 * **ruleType**: 'CustomPrice' (Required)
 
 ## CustomPriceDetails
 ### Properties
-* **benefits**: 'AHUB' | 'All' | 'None' | 'Reservations'[]
+* **benefits**: 'AHUB' | 'All' | 'None' | 'Reservations' | 'Sum'[]
 * **markups**: [Markup](#markup)[]
 * **pricesheet**: string
 

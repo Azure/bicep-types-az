@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ServerProperties](#serverproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DBForMySql/flexibleServers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DBForMySql/flexibleServers/databases@2020-07-01-preview
@@ -70,7 +70,7 @@
 * **standbyAvailabilityZone**: string (ReadOnly)
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly)
 * **storageProfile**: [StorageProfile](#storageprofile)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ServerPropertiesTags](#serverpropertiestags)
 * **version**: '5.7'
 
 ## DelegatedSubnetArguments
@@ -91,7 +91,7 @@
 * **storageIops**: int
 * **storageMB**: int
 
-## Dictionary<string,String>
+## ServerPropertiesTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -101,7 +101,7 @@
 * **name**: string (Required)
 * **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -119,6 +119,6 @@
 ## ServerKeyProperties
 ### Properties
 * **creationDate**: string (ReadOnly)
-* **serverKeyType**: string (Required)
+* **serverKeyType**: 'AzureKeyVault' (Required)
 * **uri**: string
 

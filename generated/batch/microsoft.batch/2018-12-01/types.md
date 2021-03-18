@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [BatchAccountCreateProperties](#batchaccountcreateproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [BatchAccountCreateParametersTags](#batchaccountcreateparameterstags)
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Batch/batchAccounts/applications@2018-12-01
@@ -73,7 +73,7 @@
 * **id**: string (Required)
 * **url**: string (Required)
 
-## Dictionary<string,String>
+## BatchAccountCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -187,7 +187,7 @@
 ### Properties
 * **containerImageNames**: string[]
 * **containerRegistries**: [ContainerRegistry](#containerregistry)[]
-* **type**: string (Required)
+* **type**: 'DockerCompatible' (Required)
 
 ## ContainerRegistry
 ### Properties

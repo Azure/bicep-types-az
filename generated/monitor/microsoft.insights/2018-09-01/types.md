@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ActionGroup](#actiongroup)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'microsoft.insights/actionGroups' (ReadOnly, DeployTimeConstant)
 
 ## ActionGroup
@@ -90,7 +90,7 @@
 * **name**: string (Required)
 * **serviceUri**: string (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

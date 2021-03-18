@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.HybridData/dataManagers' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HybridData/dataManagers/dataServices/jobDefinitions@2016-06-01
@@ -35,7 +35,7 @@
 * **name**: string
 * **tier**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -54,7 +54,7 @@
 
 ## CustomerSecret
 ### Properties
-* **algorithm**: 'None' | 'PlainText' | 'RSA_OAEP' | 'RSA1_5' (Required)
+* **algorithm**: 'None' | 'PlainText' | 'RSA1_5' | 'RSA_OAEP' (Required)
 * **keyIdentifier**: string (Required)
 * **keyValue**: string (Required)
 

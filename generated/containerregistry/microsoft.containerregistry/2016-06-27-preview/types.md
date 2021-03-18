@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [RegistryProperties](#registryproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerRegistry/registries' (ReadOnly, DeployTimeConstant)
 
 ## RegistryProperties
@@ -23,7 +23,7 @@
 * **accessKey**: string (Required)
 * **name**: string (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

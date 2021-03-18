@@ -44,13 +44,13 @@
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties) (ReadOnly)
 * **type**: 'Microsoft.Security/serverVulnerabilityAssessments' (ReadOnly, DeployTimeConstant)
 
 ## SecurityAssessmentMetadataProperties
 ### Properties
-* **assessmentType**: 'BuiltIn' | 'CustomerManaged' | 'CustomPolicy' | 'VerifiedPartner' (Required)
+* **assessmentType**: 'BuiltIn' | 'CustomPolicy' | 'CustomerManaged' | 'VerifiedPartner' (Required)
 * **category**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking'[]
 * **description**: string
 * **displayName**: string (Required)
@@ -71,15 +71,15 @@
 
 ## SecurityAssessmentProperties
 ### Properties
-* **additionalData**: [Dictionary<string,String>](#dictionarystringstring)
+* **additionalData**: [SecurityAssessmentPropertiesAdditionalData](#securityassessmentpropertiesadditionaldata)
 * **displayName**: string (ReadOnly)
-* **links**: [AssessmentLinks](#assessmentlinks)
+* **links**: [AssessmentLinks](#assessmentlinks) (ReadOnly)
 * **metadata**: [SecurityAssessmentMetadataProperties](#securityassessmentmetadataproperties)
 * **partnersData**: [SecurityAssessmentPartnerData](#securityassessmentpartnerdata)
 * **resourceDetails**: [ResourceDetails](#resourcedetails) (Required)
 * **status**: [AssessmentStatus](#assessmentstatus) (Required)
 
-## Dictionary<string,String>
+## SecurityAssessmentPropertiesAdditionalData
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -95,33 +95,30 @@
 
 ## ResourceDetails
 * **Discriminator**: source
+
 ### Base Properties
-### Azure
+### AzureResourceDetails
 #### Properties
 * **id**: string (ReadOnly)
 * **source**: 'Azure' (Required)
 
-### OnPremise
+### OnPremiseSqlResourceDetails
 #### Properties
-* **machineName**: string (Required)
-* **source**: 'OnPremise' (Required)
-* **sourceComputerId**: string (Required)
-* **vmuuid**: string (Required)
-* **workspaceId**: string (Required)
+* **databaseName**: string (Required)
+* **serverName**: string (Required)
+* **source**: 'OnPremiseSql' (Required)
 
 
-## Azure
+## AzureResourceDetails
 ### Properties
 * **id**: string (ReadOnly)
 * **source**: 'Azure' (Required)
 
-## OnPremise
+## OnPremiseSqlResourceDetails
 ### Properties
-* **machineName**: string (Required)
-* **source**: 'OnPremise' (Required)
-* **sourceComputerId**: string (Required)
-* **vmuuid**: string (Required)
-* **workspaceId**: string (Required)
+* **databaseName**: string (Required)
+* **serverName**: string (Required)
+* **source**: 'OnPremiseSql' (Required)
 
 ## AssessmentStatus
 ### Properties

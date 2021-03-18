@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SignalRCreateOrUpdateProperties](#signalrcreateorupdateproperties)
 * **sku**: [ResourceSku](#resourcesku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [SignalRUpdateParametersTags](#signalrupdateparameterstags)
 * **type**: 'Microsoft.SignalRService/SignalR' (ReadOnly, DeployTimeConstant)
 
 ## SignalRCreateOrUpdateProperties
@@ -30,7 +30,7 @@
 * **size**: string
 * **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard'
 
-## Dictionary<string,String>
+## SignalRUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

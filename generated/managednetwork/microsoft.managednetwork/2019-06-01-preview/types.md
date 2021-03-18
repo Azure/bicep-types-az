@@ -8,7 +8,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ManagedNetworkProperties](#managednetworkproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.ManagedNetwork/managedNetworks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ManagedNetwork/managedNetworks/managedNetworkGroups@2019-06-01-preview
@@ -100,7 +100,7 @@
 * **subscriptions**: [ResourceId](#resourceid)[]
 * **virtualNetworks**: [ResourceId](#resourceid)[]
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

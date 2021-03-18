@@ -11,7 +11,7 @@
 * **properties**: [RegistryProperties](#registryproperties)
 * **sku**: [Sku](#sku) (Required)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerRegistry/registries' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerRegistry/registries/exportPipelines@2019-12-01-preview
@@ -67,7 +67,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ReplicationProperties](#replicationproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ContainerRegistry/registries/replications' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ContainerRegistry/registries/webhooks@2019-12-01-preview
@@ -79,17 +79,17 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WebhookPropertiesCreateParameters](#webhookpropertiescreateparameters)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [WebhookCreateParametersTags](#webhookcreateparameterstags)
 * **type**: 'Microsoft.ContainerRegistry/registries/webhooks' (ReadOnly, DeployTimeConstant)
 
 ## IdentityProperties
 ### Properties
 * **principalId**: string
 * **tenantId**: string
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: [Dictionary<string,UserIdentityProperties>](#dictionarystringuseridentityproperties)
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
+* **userAssignedIdentities**: [IdentityPropertiesUserAssignedIdentities](#identitypropertiesuserassignedidentities)
 
-## Dictionary<string,UserIdentityProperties>
+## IdentityPropertiesUserAssignedIdentities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
@@ -214,7 +214,7 @@
 * **name**: 'Basic' | 'Classic' | 'Premium' | 'Standard' (Required)
 * **tier**: 'Basic' | 'Classic' | 'Premium' | 'Standard' (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -308,7 +308,7 @@
 * **regionEndpointEnabled**: bool
 * **status**: [Status](#status) (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -316,18 +316,18 @@
 ## WebhookPropertiesCreateParameters
 ### Properties
 * **actions**: 'chart_delete' | 'chart_push' | 'delete' | 'push' | 'quarantine'[] (Required)
-* **customHeaders**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
+* **customHeaders**: [WebhookPropertiesCreateParametersCustomHeaders](#webhookpropertiescreateparameterscustomheaders) (WriteOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **scope**: string
 * **serviceUri**: string (Required, WriteOnly)
 * **status**: 'disabled' | 'enabled'
 
-## Dictionary<string,String>
+## WebhookPropertiesCreateParametersCustomHeaders
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## WebhookCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

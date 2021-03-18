@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DeviceServiceProperties](#deviceserviceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.WindowsIoT/deviceServices' (ReadOnly, DeployTimeConstant)
 
 ## DeviceServiceProperties
@@ -20,7 +20,7 @@
 * **quantity**: int
 * **startDate**: string (ReadOnly)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

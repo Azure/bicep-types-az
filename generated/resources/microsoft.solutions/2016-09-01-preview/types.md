@@ -11,7 +11,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApplianceDefinitionProperties](#appliancedefinitionproperties) (Required)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Solutions/applianceDefinitions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Solutions/appliances@2016-09-01-preview
@@ -27,7 +27,7 @@
 * **plan**: [Plan](#plan)
 * **properties**: [ApplianceProperties](#applianceproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Solutions/appliances' (ReadOnly, DeployTimeConstant)
 
 ## Identity
@@ -65,7 +65,7 @@
 * **size**: string
 * **tier**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -87,7 +87,7 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly)
 * **uiDefinitionUri**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

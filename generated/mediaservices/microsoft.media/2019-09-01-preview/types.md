@@ -20,32 +20,34 @@
 
 ## MediaGraphSink
 * **Discriminator**: @odata.type
+
 ### Base Properties
 * **inputs**: string[] (Required)
 * **name**: string (Required)
-### #Microsoft.Media.MediaGraphAssetSink
+### MediaGraphAssetSink
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphAssetSink' (Required)
 * **assetName**: string (Required)
 
 
-## #Microsoft.Media.MediaGraphAssetSink
+## MediaGraphAssetSink
 ### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphAssetSink' (Required)
 * **assetName**: string (Required)
 
 ## MediaGraphSource
 * **Discriminator**: @odata.type
+
 ### Base Properties
 * **name**: string (Required)
-### #Microsoft.Media.MediaGraphRtspSource
+### MediaGraphRtspSource
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required)
 * **credentials**: [MediaGraphUserCredentials](#mediagraphusercredentials)
 * **rtspUrl**: string (Required)
 
 
-## #Microsoft.Media.MediaGraphRtspSource
+## MediaGraphRtspSource
 ### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required)
 * **credentials**: [MediaGraphUserCredentials](#mediagraphusercredentials)

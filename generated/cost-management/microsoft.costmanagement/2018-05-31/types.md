@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ReportConfigProperties](#reportconfigproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly)
 * **type**: 'Microsoft.CostManagement/reportconfigs' (ReadOnly, DeployTimeConstant)
 
 ## ReportConfigProperties
@@ -22,24 +22,24 @@
 * **dataset**: [ReportConfigDataset](#reportconfigdataset)
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required)
 * **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod)
-* **type**: string (Required)
+* **type**: 'Usage' (Required)
 
 ## ReportConfigDataset
 ### Properties
-* **aggregation**: [Dictionary<string,ReportConfigAggregation>](#dictionarystringreportconfigaggregation)
+* **aggregation**: [ReportConfigDatasetAggregation](#reportconfigdatasetaggregation)
 * **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration)
 * **filter**: [ReportConfigFilter](#reportconfigfilter)
 * **granularity**: 'Daily'
 * **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[]
 
-## Dictionary<string,ReportConfigAggregation>
+## ReportConfigDatasetAggregation
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ReportConfigAggregation](#reportconfigaggregation)
 
 ## ReportConfigAggregation
 ### Properties
-* **function**: string (Required)
+* **function**: 'Sum' (Required)
 * **name**: string (Required)
 
 ## ReportConfigDatasetConfiguration
@@ -57,7 +57,7 @@
 ## ReportConfigComparisonExpression
 ### Properties
 * **name**: string (Required)
-* **operator**: string (Required)
+* **operator**: 'In' (Required)
 * **values**: string[] (Required)
 
 ## ReportConfigGrouping
@@ -91,7 +91,7 @@
 * **from**: string (Required)
 * **to**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

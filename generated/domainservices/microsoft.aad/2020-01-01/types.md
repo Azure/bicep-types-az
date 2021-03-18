@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DomainServiceProperties](#domainserviceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.AAD/domainServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Aad/domainServices/ouContainer@2020-01-01
@@ -24,7 +24,7 @@
 * **password**: string (WriteOnly)
 * **properties**: [OuContainerProperties](#oucontainerproperties) (ReadOnly)
 * **spn**: string (WriteOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly)
 * **type**: 'Microsoft.Aad/domainServices/ouContainer' (ReadOnly, DeployTimeConstant)
 
 ## DomainServiceProperties
@@ -122,7 +122,7 @@
 * **trustedDomainFqdn**: string
 * **trustPassword**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -144,7 +144,7 @@
 * **password**: string (ReadOnly)
 * **spn**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

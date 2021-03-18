@@ -8,7 +8,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PipelineProperties](#pipelineproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DevOps/pipelines' (ReadOnly, DeployTimeConstant)
 
 ## PipelineProperties
@@ -28,20 +28,20 @@
 * **authorization**: [Authorization](#authorization)
 * **defaultBranch**: string (Required)
 * **id**: string (Required)
-* **properties**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [CodeRepositoryProperties](#coderepositoryproperties)
 * **repositoryType**: 'gitHub' | 'vstsGit' (Required)
 
 ## Authorization
 ### Properties
-* **authorizationType**: string (Required)
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **authorizationType**: 'personalAccessToken' (Required)
+* **parameters**: [AuthorizationParameters](#authorizationparameters)
 
-## Dictionary<string,String>
+## AuthorizationParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## CodeRepositoryProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -49,9 +49,9 @@
 ## PipelineTemplate
 ### Properties
 * **id**: string (Required)
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **parameters**: [PipelineTemplateParameters](#pipelinetemplateparameters)
 
-## Dictionary<string,String>
+## PipelineTemplateParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -66,7 +66,7 @@
 * **id**: string (ReadOnly)
 * **name**: string (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

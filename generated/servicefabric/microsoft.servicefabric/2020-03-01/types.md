@@ -9,7 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ClusterProperties](#clusterproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.ServiceFabric/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabric/clusters/applications@2020-03-01
@@ -22,7 +22,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApplicationResourceProperties](#applicationresourceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ProxyResourceTags](#proxyresourcetags)
 * **type**: 'Microsoft.ServiceFabric/clusters/applications' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabric/clusters/applications/services@2020-03-01
@@ -34,7 +34,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ServiceResourceProperties](#serviceresourceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ProxyResourceTags](#proxyresourcetags)
 * **type**: 'Microsoft.ServiceFabric/clusters/applications/services' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabric/clusters/applicationTypes@2020-03-01
@@ -46,7 +46,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApplicationTypeResourceProperties](#applicationtyperesourceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ProxyResourceTags](#proxyresourcetags)
 * **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabric/clusters/applicationTypes/versions@2020-03-01
@@ -58,7 +58,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApplicationTypeVersionResourceProperties](#applicationtypeversionresourceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ProxyResourceTags](#proxyresourcetags)
 * **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant)
 
 ## ClusterProperties
@@ -153,14 +153,14 @@
 ## NodeTypeDescription
 ### Properties
 * **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription)
-* **capacities**: [Dictionary<string,String>](#dictionarystringstring)
+* **capacities**: [NodeTypeDescriptionCapacities](#nodetypedescriptioncapacities)
 * **clientConnectionEndpointPort**: int (Required)
 * **durabilityLevel**: 'Bronze' | 'Gold' | 'Silver'
 * **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription)
 * **httpGatewayEndpointPort**: int (Required)
 * **isPrimary**: bool (Required)
 * **name**: string (Required)
-* **placementProperties**: [Dictionary<string,String>](#dictionarystringstring)
+* **placementProperties**: [NodeTypeDescriptionPlacementProperties](#nodetypedescriptionplacementproperties)
 * **reverseProxyEndpointPort**: int
 * **vmInstanceCount**: int (Required)
 
@@ -169,12 +169,12 @@
 * **endPort**: int (Required)
 * **startPort**: int (Required)
 
-## Dictionary<string,String>
+## NodeTypeDescriptionCapacities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## NodeTypeDescriptionPlacementProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -193,12 +193,12 @@
 
 ## ClusterUpgradeDeltaHealthPolicy
 ### Properties
-* **applicationDeltaHealthPolicies**: [Dictionary<string,ApplicationDeltaHealthPolicy>](#dictionarystringapplicationdeltahealthpolicy)
+* **applicationDeltaHealthPolicies**: [ApplicationDeltaHealthPolicyMap](#applicationdeltahealthpolicymap)
 * **maxPercentDeltaUnhealthyApplications**: int (Required)
 * **maxPercentDeltaUnhealthyNodes**: int (Required)
 * **maxPercentUpgradeDomainDeltaUnhealthyNodes**: int (Required)
 
-## Dictionary<string,ApplicationDeltaHealthPolicy>
+## ApplicationDeltaHealthPolicyMap
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ApplicationDeltaHealthPolicy](#applicationdeltahealthpolicy)
@@ -206,24 +206,24 @@
 ## ApplicationDeltaHealthPolicy
 ### Properties
 * **defaultServiceTypeDeltaHealthPolicy**: [ServiceTypeDeltaHealthPolicy](#servicetypedeltahealthpolicy)
-* **serviceTypeDeltaHealthPolicies**: [Dictionary<string,ServiceTypeDeltaHealthPolicy>](#dictionarystringservicetypedeltahealthpolicy)
+* **serviceTypeDeltaHealthPolicies**: [ServiceTypeDeltaHealthPolicyMap](#servicetypedeltahealthpolicymap)
 
 ## ServiceTypeDeltaHealthPolicy
 ### Properties
 * **maxPercentDeltaUnhealthyServices**: int
 
-## Dictionary<string,ServiceTypeDeltaHealthPolicy>
+## ServiceTypeDeltaHealthPolicyMap
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ServiceTypeDeltaHealthPolicy](#servicetypedeltahealthpolicy)
 
 ## ClusterHealthPolicy
 ### Properties
-* **applicationHealthPolicies**: [Dictionary<string,ApplicationHealthPolicy>](#dictionarystringapplicationhealthpolicy)
+* **applicationHealthPolicies**: [ApplicationHealthPolicyMap](#applicationhealthpolicymap)
 * **maxPercentUnhealthyApplications**: int
 * **maxPercentUnhealthyNodes**: int
 
-## Dictionary<string,ApplicationHealthPolicy>
+## ApplicationHealthPolicyMap
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ApplicationHealthPolicy](#applicationhealthpolicy)
@@ -231,18 +231,18 @@
 ## ApplicationHealthPolicy
 ### Properties
 * **defaultServiceTypeHealthPolicy**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy)
-* **serviceTypeHealthPolicies**: [Dictionary<string,ServiceTypeHealthPolicy>](#dictionarystringservicetypehealthpolicy)
+* **serviceTypeHealthPolicies**: [ServiceTypeHealthPolicyMap](#servicetypehealthpolicymap)
 
 ## ServiceTypeHealthPolicy
 ### Properties
 * **maxPercentUnhealthyServices**: int
 
-## Dictionary<string,ServiceTypeHealthPolicy>
+## ServiceTypeHealthPolicyMap
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -251,10 +251,10 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity)
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
+* **userAssignedIdentities**: [UserAssignedIdentityMap](#userassignedidentitymap)
 
-## Dictionary<string,UserAssignedIdentity>
+## UserAssignedIdentityMap
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
@@ -270,7 +270,7 @@
 * **maximumNodes**: int
 * **metrics**: [ApplicationMetricDescription](#applicationmetricdescription)[]
 * **minimumNodes**: int
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **parameters**: [ApplicationParameterList](#applicationparameterlist)
 * **provisioningState**: string (ReadOnly)
 * **removeApplicationCapacity**: bool
 * **typeName**: string
@@ -289,7 +289,7 @@
 * **reservationCapacity**: int
 * **totalApplicationCapacity**: int
 
-## Dictionary<string,String>
+## ApplicationParameterList
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -307,7 +307,7 @@
 * **considerWarningAsError**: bool
 * **defaultServiceTypeHealthPolicy**: [ArmServiceTypeHealthPolicy](#armservicetypehealthpolicy)
 * **maxPercentUnhealthyDeployedApplications**: int
-* **serviceTypeHealthPolicyMap**: [Dictionary<string,ArmServiceTypeHealthPolicy>](#dictionarystringarmservicetypehealthpolicy)
+* **serviceTypeHealthPolicyMap**: [ArmServiceTypeHealthPolicyMap](#armservicetypehealthpolicymap)
 
 ## ArmServiceTypeHealthPolicy
 ### Properties
@@ -315,7 +315,7 @@
 * **maxPercentUnhealthyReplicasPerPartition**: int
 * **maxPercentUnhealthyServices**: int
 
-## Dictionary<string,ArmServiceTypeHealthPolicy>
+## ArmServiceTypeHealthPolicyMap
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ArmServiceTypeHealthPolicy](#armservicetypehealthpolicy)
@@ -329,13 +329,14 @@
 * **upgradeDomainTimeout**: string
 * **upgradeTimeout**: string
 
-## Dictionary<string,String>
+## ProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## ServiceResourceProperties
 * **Discriminator**: serviceKind
+
 ### Base Properties
 * **correlationScheme**: [ServiceCorrelationDescription](#servicecorrelationdescription)[]
 * **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero'
@@ -347,7 +348,7 @@
 * **servicePackageActivationMode**: 'ExclusiveProcess' | 'SharedProcess'
 * **servicePlacementPolicies**: [ServicePlacementPolicyDescription](#serviceplacementpolicydescription)[]
 * **serviceTypeName**: string
-### Stateful
+### StatefulServiceProperties
 #### Properties
 * **hasPersistedState**: bool
 * **minReplicaSetSize**: int
@@ -357,7 +358,7 @@
 * **standByReplicaKeepDuration**: string
 * **targetReplicaSetSize**: int
 
-### Stateless
+### StatelessServiceProperties
 #### Properties
 * **instanceCloseDelayDuration**: string
 * **instanceCount**: int
@@ -371,18 +372,19 @@
 
 ## PartitionSchemeDescription
 * **Discriminator**: partitionScheme
+
 ### Base Properties
-### Named
+### NamedPartitionSchemeDescription
 #### Properties
 * **count**: int (Required)
 * **names**: string[] (Required)
 * **partitionScheme**: 'Named' (Required)
 
-### Singleton
+### SingletonPartitionSchemeDescription
 #### Properties
 * **partitionScheme**: 'Singleton' (Required)
 
-### UniformInt64Range
+### UniformInt64RangePartitionSchemeDescription
 #### Properties
 * **count**: int (Required)
 * **highKey**: string (Required)
@@ -390,17 +392,17 @@
 * **partitionScheme**: 'UniformInt64Range' (Required)
 
 
-## Named
+## NamedPartitionSchemeDescription
 ### Properties
 * **count**: int (Required)
 * **names**: string[] (Required)
 * **partitionScheme**: 'Named' (Required)
 
-## Singleton
+## SingletonPartitionSchemeDescription
 ### Properties
 * **partitionScheme**: 'Singleton' (Required)
 
-## UniformInt64Range
+## UniformInt64RangePartitionSchemeDescription
 ### Properties
 * **count**: int (Required)
 * **highKey**: string (Required)
@@ -417,9 +419,10 @@
 
 ## ServicePlacementPolicyDescription
 * **Discriminator**: type
+
 ### Base Properties
 
-## Stateful
+## StatefulServiceProperties
 ### Properties
 * **hasPersistedState**: bool
 * **minReplicaSetSize**: int
@@ -429,13 +432,13 @@
 * **standByReplicaKeepDuration**: string
 * **targetReplicaSetSize**: int
 
-## Stateless
+## StatelessServiceProperties
 ### Properties
 * **instanceCloseDelayDuration**: string
 * **instanceCount**: int
 * **serviceKind**: 'Stateless' (Required)
 
-## Dictionary<string,String>
+## ProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -444,7 +447,7 @@
 ### Properties
 * **provisioningState**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -452,15 +455,15 @@
 ## ApplicationTypeVersionResourceProperties
 ### Properties
 * **appPackageUrl**: string (Required)
-* **defaultParameterList**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
+* **defaultParameterList**: [ApplicationTypeParameterList](#applicationtypeparameterlist) (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ApplicationTypeParameterList
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -17,7 +17,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [TopicProperties](#topicproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
 ## EventSubscriptionProperties
@@ -32,14 +32,15 @@
 
 ## DeadLetterDestination
 * **Discriminator**: endpointType
+
 ### Base Properties
-### StorageBlob
+### StorageBlobDeadLetterDestination
 #### Properties
 * **endpointType**: 'StorageBlob' (Required)
 * **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties)
 
 
-## StorageBlob
+## StorageBlobDeadLetterDestination
 ### Properties
 * **endpointType**: 'StorageBlob' (Required)
 * **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties)
@@ -51,29 +52,30 @@
 
 ## EventSubscriptionDestination
 * **Discriminator**: endpointType
+
 ### Base Properties
-### EventHub
+### EventHubEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'EventHub' (Required)
 * **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties)
 
-### HybridConnection
+### HybridConnectionEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'HybridConnection' (Required)
 * **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties)
 
-### StorageQueue
+### StorageQueueEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'StorageQueue' (Required)
 * **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties)
 
-### WebHook
+### WebHookEventSubscriptionDestination
 #### Properties
 * **endpointType**: 'WebHook' (Required)
 * **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties)
 
 
-## EventHub
+## EventHubEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'EventHub' (Required)
 * **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties)
@@ -82,7 +84,7 @@
 ### Properties
 * **resourceId**: string
 
-## HybridConnection
+## HybridConnectionEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'HybridConnection' (Required)
 * **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties)
@@ -91,7 +93,7 @@
 ### Properties
 * **resourceId**: string
 
-## StorageQueue
+## StorageQueueEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'StorageQueue' (Required)
 * **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties)
@@ -101,7 +103,7 @@
 * **queueName**: string
 * **resourceId**: string
 
-## WebHook
+## WebHookEventSubscriptionDestination
 ### Properties
 * **endpointType**: 'WebHook' (Required)
 * **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties)
@@ -128,7 +130,7 @@
 * **endpoint**: string (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

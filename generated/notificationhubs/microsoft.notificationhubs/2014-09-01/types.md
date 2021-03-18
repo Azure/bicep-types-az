@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NamespaceProperties](#namespaceproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [NamespaceCreateOrUpdateParametersTags](#namespacecreateorupdateparameterstags)
 * **type**: 'Microsoft.NotificationHubs/namespaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NotificationHubs/namespaces/AuthorizationRules@2014-09-01
@@ -29,7 +29,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NotificationHubProperties](#notificationhubproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [NotificationHubCreateOrUpdateParametersTags](#notificationhubcreateorupdateparameterstags)
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2014-09-01
@@ -56,7 +56,7 @@
 * **status**: string
 * **subscriptionId**: string
 
-## Dictionary<string,String>
+## NamespaceCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -145,7 +145,7 @@
 * **secretKey**: string
 * **windowsLiveEndpoint**: string
 
-## Dictionary<string,String>
+## NotificationHubCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

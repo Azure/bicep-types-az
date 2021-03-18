@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SiteProperties](#siteproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [HyperVSiteTags](#hypervsitetags)
 * **type**: 'Microsoft.OffAzure/HyperVSites' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OffAzure/HyperVSites/clusters@2020-07-07
@@ -50,7 +50,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SiteProperties](#siteproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [VMwareSiteTags](#vmwaresitetags)
 * **type**: 'Microsoft.OffAzure/VMwareSites' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OffAzure/VMwareSites/vCenters@2020-07-07
@@ -87,7 +87,7 @@
 * **rawCertData**: string
 * **tenantId**: string
 
-## Dictionary<string,String>
+## HyperVSiteTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -108,14 +108,14 @@
 * **code**: string (ReadOnly)
 * **id**: int (ReadOnly)
 * **message**: string (ReadOnly)
-* **messageParameters**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
+* **messageParameters**: [HealthErrorDetailsMessageParameters](#healtherrordetailsmessageparameters) (ReadOnly)
 * **possibleCauses**: string (ReadOnly)
 * **recommendedAction**: string (ReadOnly)
 * **severity**: string (ReadOnly)
 * **source**: string (ReadOnly)
 * **summaryMessage**: string (ReadOnly)
 
-## Dictionary<string,String>
+## HealthErrorDetailsMessageParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -135,7 +135,7 @@
 * **publicNetworkAccess**: string
 * **sites**: string[]
 
-## Dictionary<string,String>
+## VMwareSiteTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

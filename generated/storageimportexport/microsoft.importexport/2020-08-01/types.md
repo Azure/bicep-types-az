@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [JobDetails](#jobdetails)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **tags**: any
 * **type**: 'Microsoft.ImportExport/jobs' (ReadOnly, DeployTimeConstant)
 
@@ -70,10 +70,10 @@
 
 ## Export
 ### Properties
-* **blobList**: [schemas:16_blobList](#schemas16bloblist)
+* **blobList**: [ExportBlobList](#exportbloblist)
 * **blobListBlobPath**: string
 
-## schemas:16_blobList
+## ExportBlobList
 ### Properties
 * **blobPath**: string[]
 * **blobPathPrefix**: string[]
@@ -114,7 +114,7 @@
 * **streetAddress1**: string
 * **streetAddress2**: string
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string (ReadOnly)
 * **createdBy**: string (ReadOnly)

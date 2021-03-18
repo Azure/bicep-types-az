@@ -57,9 +57,9 @@
 ## IotSiteProperties
 ### Properties
 * **displayName**: string (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [IotSitePropertiesTags](#iotsitepropertiestags)
 
-## Dictionary<string,String>
+## IotSitePropertiesTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

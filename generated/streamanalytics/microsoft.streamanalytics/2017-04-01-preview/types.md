@@ -9,7 +9,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [StreamingJobProperties](#streamingjobproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.StreamAnalytics/streamingjobs' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.StreamAnalytics/streamingjobs/functions@2017-04-01-preview
@@ -105,14 +105,15 @@
 
 ## FunctionProperties
 * **Discriminator**: type
+
 ### Base Properties
 * **etag**: string (ReadOnly)
 * **properties**: [FunctionConfiguration](#functionconfiguration)
-### Aggregate
+### AggregateFunctionProperties
 #### Properties
 * **type**: 'Aggregate' (Required)
 
-### Scalar
+### ScalarFunctionProperties
 #### Properties
 * **type**: 'Scalar' (Required)
 
@@ -125,29 +126,30 @@
 
 ## FunctionBinding
 * **Discriminator**: type
+
 ### Base Properties
-### Microsoft.MachineLearning/WebService
+### AzureMachineLearningStudioFunctionBinding
 #### Properties
 * **properties**: [AzureMachineLearningStudioFunctionBindingProperties](#azuremachinelearningstudiofunctionbindingproperties)
 * **type**: 'Microsoft.MachineLearning/WebService' (Required)
 
-### Microsoft.MachineLearningServices
+### AzureMachineLearningServiceFunctionBinding
 #### Properties
 * **properties**: [AzureMachineLearningServiceFunctionBindingProperties](#azuremachinelearningservicefunctionbindingproperties)
 * **type**: 'Microsoft.MachineLearningServices' (Required)
 
-### Microsoft.StreamAnalytics/CLRUdf
+### CSharpFunctionBinding
 #### Properties
 * **properties**: [CSharpFunctionBindingProperties](#csharpfunctionbindingproperties)
 * **type**: 'Microsoft.StreamAnalytics/CLRUdf' (Required)
 
-### Microsoft.StreamAnalytics/JavascriptUdf
+### JavaScriptFunctionBinding
 #### Properties
 * **properties**: [JavaScriptFunctionBindingProperties](#javascriptfunctionbindingproperties)
 * **type**: 'Microsoft.StreamAnalytics/JavascriptUdf' (Required)
 
 
-## Microsoft.MachineLearning/WebService
+## AzureMachineLearningStudioFunctionBinding
 ### Properties
 * **properties**: [AzureMachineLearningStudioFunctionBindingProperties](#azuremachinelearningstudiofunctionbindingproperties)
 * **type**: 'Microsoft.MachineLearning/WebService' (Required)
@@ -176,7 +178,7 @@
 * **dataType**: string
 * **name**: string
 
-## Microsoft.MachineLearningServices
+## AzureMachineLearningServiceFunctionBinding
 ### Properties
 * **properties**: [AzureMachineLearningServiceFunctionBindingProperties](#azuremachinelearningservicefunctionbindingproperties)
 * **type**: 'Microsoft.MachineLearningServices' (Required)
@@ -202,7 +204,7 @@
 * **mapTo**: int
 * **name**: string
 
-## Microsoft.StreamAnalytics/CLRUdf
+## CSharpFunctionBinding
 ### Properties
 * **properties**: [CSharpFunctionBindingProperties](#csharpfunctionbindingproperties)
 * **type**: 'Microsoft.StreamAnalytics/CLRUdf' (Required)
@@ -214,7 +216,7 @@
 * **method**: string
 * **script**: string
 
-## Microsoft.StreamAnalytics/JavascriptUdf
+## JavaScriptFunctionBinding
 ### Properties
 * **properties**: [JavaScriptFunctionBindingProperties](#javascriptfunctionbindingproperties)
 * **type**: 'Microsoft.StreamAnalytics/JavascriptUdf' (Required)
@@ -232,11 +234,11 @@
 ### Properties
 * **dataType**: string
 
-## Aggregate
+## AggregateFunctionProperties
 ### Properties
 * **type**: 'Aggregate' (Required)
 
-## Scalar
+## ScalarFunctionProperties
 ### Properties
 * **type**: 'Scalar' (Required)
 
@@ -249,18 +251,19 @@
 
 ## InputProperties
 * **Discriminator**: type
+
 ### Base Properties
 * **compression**: [Compression](#compression)
 * **diagnostics**: [Diagnostics](#diagnostics) (ReadOnly)
 * **etag**: string (ReadOnly)
 * **partitionKey**: string
 * **serialization**: [Serialization](#serialization)
-### Reference
+### ReferenceInputProperties
 #### Properties
 * **datasource**: [ReferenceInputDataSource](#referenceinputdatasource)
 * **type**: 'Reference' (Required)
 
-### Stream
+### StreamInputProperties
 #### Properties
 * **datasource**: [StreamInputDataSource](#streaminputdatasource)
 * **type**: 'Stream' (Required)
@@ -282,39 +285,40 @@
 
 ## Serialization
 * **Discriminator**: type
+
 ### Base Properties
-### Avro
+### AvroSerialization
 #### Properties
 * **properties**: any
 * **type**: 'Avro' (Required)
 
-### Csv
+### CsvSerialization
 #### Properties
 * **properties**: [CsvSerializationProperties](#csvserializationproperties)
 * **type**: 'Csv' (Required)
 
-### CustomClr
+### CustomClrSerialization
 #### Properties
 * **properties**: [CustomClrSerializationProperties](#customclrserializationproperties)
 * **type**: 'CustomClr' (Required)
 
-### Json
+### JsonSerialization
 #### Properties
 * **properties**: [JsonSerializationProperties](#jsonserializationproperties)
 * **type**: 'Json' (Required)
 
-### Parquet
+### ParquetSerialization
 #### Properties
 * **properties**: any
 * **type**: 'Parquet' (Required)
 
 
-## Avro
+## AvroSerialization
 ### Properties
 * **properties**: any
 * **type**: 'Avro' (Required)
 
-## Csv
+## CsvSerialization
 ### Properties
 * **properties**: [CsvSerializationProperties](#csvserializationproperties)
 * **type**: 'Csv' (Required)
@@ -324,7 +328,7 @@
 * **encoding**: 'UTF8'
 * **fieldDelimiter**: string
 
-## CustomClr
+## CustomClrSerialization
 ### Properties
 * **properties**: [CustomClrSerializationProperties](#customclrserializationproperties)
 * **type**: 'CustomClr' (Required)
@@ -334,7 +338,7 @@
 * **serializationClassName**: string
 * **serializationDllPath**: string
 
-## Json
+## JsonSerialization
 ### Properties
 * **properties**: [JsonSerializationProperties](#jsonserializationproperties)
 * **type**: 'Json' (Required)
@@ -344,31 +348,32 @@
 * **encoding**: 'UTF8'
 * **format**: 'Array' | 'LineSeparated'
 
-## Parquet
+## ParquetSerialization
 ### Properties
 * **properties**: any
 * **type**: 'Parquet' (Required)
 
-## Reference
+## ReferenceInputProperties
 ### Properties
 * **datasource**: [ReferenceInputDataSource](#referenceinputdatasource)
 * **type**: 'Reference' (Required)
 
 ## ReferenceInputDataSource
 * **Discriminator**: type
+
 ### Base Properties
-### Microsoft.Sql/Server/Database
+### AzureSqlReferenceInputDataSource
 #### Properties
 * **properties**: [AzureSqlReferenceInputDataSourceProperties](#azuresqlreferenceinputdatasourceproperties)
 * **type**: 'Microsoft.Sql/Server/Database' (Required)
 
-### Microsoft.Storage/Blob
+### BlobReferenceInputDataSource
 #### Properties
-* **properties**: [BlobStreamInputDataSourceProperties](#blobstreaminputdatasourceproperties)
+* **properties**: [BlobReferenceInputDataSourceProperties](#blobreferenceinputdatasourceproperties)
 * **type**: 'Microsoft.Storage/Blob' (Required)
 
 
-## Microsoft.Sql/Server/Database
+## AzureSqlReferenceInputDataSource
 ### Properties
 * **properties**: [AzureSqlReferenceInputDataSourceProperties](#azuresqlreferenceinputdatasourceproperties)
 * **type**: 'Microsoft.Sql/Server/Database' (Required)
@@ -385,50 +390,50 @@
 * **table**: string
 * **user**: string
 
-## Microsoft.Storage/Blob
+## BlobReferenceInputDataSource
 ### Properties
-* **properties**: [BlobStreamInputDataSourceProperties](#blobstreaminputdatasourceproperties)
+* **properties**: [BlobReferenceInputDataSourceProperties](#blobreferenceinputdatasourceproperties)
 * **type**: 'Microsoft.Storage/Blob' (Required)
 
-## BlobStreamInputDataSourceProperties
+## BlobReferenceInputDataSourceProperties
 ### Properties
 * **container**: string
 * **dateFormat**: string
 * **pathPattern**: string
-* **sourcePartitionCount**: int
 * **storageAccounts**: [StorageAccount](#storageaccount)[]
 * **timeFormat**: string
 
-## Stream
+## StreamInputProperties
 ### Properties
 * **datasource**: [StreamInputDataSource](#streaminputdatasource)
 * **type**: 'Stream' (Required)
 
 ## StreamInputDataSource
 * **Discriminator**: type
+
 ### Base Properties
-### Microsoft.Devices/IotHubs
+### IoTHubStreamInputDataSource
 #### Properties
 * **properties**: [IoTHubStreamInputDataSourceProperties](#iothubstreaminputdatasourceproperties)
 * **type**: 'Microsoft.Devices/IotHubs' (Required)
 
-### Microsoft.EventHub/EventHub
+### EventHubV2StreamInputDataSource
 #### Properties
 * **properties**: [EventHubStreamInputDataSourceProperties](#eventhubstreaminputdatasourceproperties)
 * **type**: 'Microsoft.EventHub/EventHub' (Required)
 
-### Microsoft.ServiceBus/EventHub
+### EventHubStreamInputDataSource
 #### Properties
 * **properties**: [EventHubStreamInputDataSourceProperties](#eventhubstreaminputdatasourceproperties)
 * **type**: 'Microsoft.ServiceBus/EventHub' (Required)
 
-### Microsoft.Storage/Blob
+### BlobStreamInputDataSource
 #### Properties
 * **properties**: [BlobStreamInputDataSourceProperties](#blobstreaminputdatasourceproperties)
 * **type**: 'Microsoft.Storage/Blob' (Required)
 
 
-## Microsoft.Devices/IotHubs
+## IoTHubStreamInputDataSource
 ### Properties
 * **properties**: [IoTHubStreamInputDataSourceProperties](#iothubstreaminputdatasourceproperties)
 * **type**: 'Microsoft.Devices/IotHubs' (Required)
@@ -441,7 +446,7 @@
 * **sharedAccessPolicyKey**: string
 * **sharedAccessPolicyName**: string
 
-## Microsoft.EventHub/EventHub
+## EventHubV2StreamInputDataSource
 ### Properties
 * **properties**: [EventHubStreamInputDataSourceProperties](#eventhubstreaminputdatasourceproperties)
 * **type**: 'Microsoft.EventHub/EventHub' (Required)
@@ -455,10 +460,24 @@
 * **sharedAccessPolicyKey**: string
 * **sharedAccessPolicyName**: string
 
-## Microsoft.ServiceBus/EventHub
+## EventHubStreamInputDataSource
 ### Properties
 * **properties**: [EventHubStreamInputDataSourceProperties](#eventhubstreaminputdatasourceproperties)
 * **type**: 'Microsoft.ServiceBus/EventHub' (Required)
+
+## BlobStreamInputDataSource
+### Properties
+* **properties**: [BlobStreamInputDataSourceProperties](#blobstreaminputdatasourceproperties)
+* **type**: 'Microsoft.Storage/Blob' (Required)
+
+## BlobStreamInputDataSourceProperties
+### Properties
+* **container**: string
+* **dateFormat**: string
+* **pathPattern**: string
+* **sourcePartitionCount**: int
+* **storageAccounts**: [StorageAccount](#storageaccount)[]
+* **timeFormat**: string
 
 ## JobStorageAccount
 ### Properties
@@ -484,69 +503,70 @@
 
 ## OutputDataSource
 * **Discriminator**: type
+
 ### Base Properties
-### Microsoft.AzureFunction
+### AzureFunctionOutputDataSource
 #### Properties
 * **properties**: [AzureFunctionOutputDataSourceProperties](#azurefunctionoutputdatasourceproperties)
 * **type**: 'Microsoft.AzureFunction' (Required)
 
-### Microsoft.DataLake/Accounts
+### AzureDataLakeStoreOutputDataSource
 #### Properties
 * **properties**: [AzureDataLakeStoreOutputDataSourceProperties](#azuredatalakestoreoutputdatasourceproperties)
 * **type**: 'Microsoft.DataLake/Accounts' (Required)
 
-### Microsoft.EventHub/EventHub
+### EventHubV2OutputDataSource
 #### Properties
-* **properties**: [EventHubStreamInputDataSourceProperties](#eventhubstreaminputdatasourceproperties)
+* **properties**: [EventHubOutputDataSourceProperties](#eventhuboutputdatasourceproperties)
 * **type**: 'Microsoft.EventHub/EventHub' (Required)
 
-### Microsoft.ServiceBus/EventHub
+### EventHubOutputDataSource
 #### Properties
-* **properties**: [EventHubStreamInputDataSourceProperties](#eventhubstreaminputdatasourceproperties)
+* **properties**: [EventHubOutputDataSourceProperties](#eventhuboutputdatasourceproperties)
 * **type**: 'Microsoft.ServiceBus/EventHub' (Required)
 
-### Microsoft.ServiceBus/Queue
+### ServiceBusQueueOutputDataSource
 #### Properties
 * **properties**: [ServiceBusQueueOutputDataSourceProperties](#servicebusqueueoutputdatasourceproperties)
 * **type**: 'Microsoft.ServiceBus/Queue' (Required)
 
-### Microsoft.ServiceBus/Topic
+### ServiceBusTopicOutputDataSource
 #### Properties
 * **properties**: [ServiceBusTopicOutputDataSourceProperties](#servicebustopicoutputdatasourceproperties)
 * **type**: 'Microsoft.ServiceBus/Topic' (Required)
 
-### Microsoft.Sql/Server/Database
+### AzureSqlDatabaseOutputDataSource
 #### Properties
-* **properties**: [AzureSqlReferenceInputDataSourceProperties](#azuresqlreferenceinputdatasourceproperties)
+* **properties**: [AzureSqlDatabaseOutputDataSourceProperties](#azuresqldatabaseoutputdatasourceproperties)
 * **type**: 'Microsoft.Sql/Server/Database' (Required)
 
-### Microsoft.Sql/Server/DataWarehouse
+### AzureSynapseOutputDataSource
 #### Properties
 * **properties**: [AzureSynapseOutputDataSourceProperties](#azuresynapseoutputdatasourceproperties)
 * **type**: 'Microsoft.Sql/Server/DataWarehouse' (Required)
 
-### Microsoft.Storage/Blob
+### BlobOutputDataSource
 #### Properties
-* **properties**: [BlobStreamInputDataSourceProperties](#blobstreaminputdatasourceproperties)
+* **properties**: [BlobOutputDataSourceProperties](#bloboutputdatasourceproperties)
 * **type**: 'Microsoft.Storage/Blob' (Required)
 
-### Microsoft.Storage/DocumentDB
+### DocumentDbOutputDataSource
 #### Properties
 * **properties**: [DocumentDbOutputDataSourceProperties](#documentdboutputdatasourceproperties)
 * **type**: 'Microsoft.Storage/DocumentDB' (Required)
 
-### Microsoft.Storage/Table
+### AzureTableOutputDataSource
 #### Properties
 * **properties**: [AzureTableOutputDataSourceProperties](#azuretableoutputdatasourceproperties)
 * **type**: 'Microsoft.Storage/Table' (Required)
 
-### PowerBI
+### PowerBIOutputDataSource
 #### Properties
 * **properties**: [PowerBIOutputDataSourceProperties](#powerbioutputdatasourceproperties)
 * **type**: 'PowerBI' (Required)
 
 
-## Microsoft.AzureFunction
+## AzureFunctionOutputDataSource
 ### Properties
 * **properties**: [AzureFunctionOutputDataSourceProperties](#azurefunctionoutputdatasourceproperties)
 * **type**: 'Microsoft.AzureFunction' (Required)
@@ -559,7 +579,7 @@
 * **maxBatchCount**: int
 * **maxBatchSize**: int
 
-## Microsoft.DataLake/Accounts
+## AzureDataLakeStoreOutputDataSource
 ### Properties
 * **properties**: [AzureDataLakeStoreOutputDataSourceProperties](#azuredatalakestoreoutputdatasourceproperties)
 * **type**: 'Microsoft.DataLake/Accounts' (Required)
@@ -576,7 +596,27 @@
 * **tokenUserDisplayName**: string
 * **tokenUserPrincipalName**: string
 
-## Microsoft.ServiceBus/Queue
+## EventHubV2OutputDataSource
+### Properties
+* **properties**: [EventHubOutputDataSourceProperties](#eventhuboutputdatasourceproperties)
+* **type**: 'Microsoft.EventHub/EventHub' (Required)
+
+## EventHubOutputDataSourceProperties
+### Properties
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken'
+* **eventHubName**: string
+* **partitionKey**: string
+* **propertyColumns**: string[]
+* **serviceBusNamespace**: string
+* **sharedAccessPolicyKey**: string
+* **sharedAccessPolicyName**: string
+
+## EventHubOutputDataSource
+### Properties
+* **properties**: [EventHubOutputDataSourceProperties](#eventhuboutputdatasourceproperties)
+* **type**: 'Microsoft.ServiceBus/EventHub' (Required)
+
+## ServiceBusQueueOutputDataSource
 ### Properties
 * **properties**: [ServiceBusQueueOutputDataSourceProperties](#servicebusqueueoutputdatasourceproperties)
 * **type**: 'Microsoft.ServiceBus/Queue' (Required)
@@ -589,14 +629,14 @@
 * **serviceBusNamespace**: string
 * **sharedAccessPolicyKey**: string
 * **sharedAccessPolicyName**: string
-* **systemPropertyColumns**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemPropertyColumns**: [ServiceBusQueueOutputDataSourcePropertiesSystemPropertyColumns](#servicebusqueueoutputdatasourcepropertiessystempropertycolumns)
 
-## Dictionary<string,String>
+## ServiceBusQueueOutputDataSourcePropertiesSystemPropertyColumns
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.ServiceBus/Topic
+## ServiceBusTopicOutputDataSource
 ### Properties
 * **properties**: [ServiceBusTopicOutputDataSourceProperties](#servicebustopicoutputdatasourceproperties)
 * **type**: 'Microsoft.ServiceBus/Topic' (Required)
@@ -608,15 +648,31 @@
 * **serviceBusNamespace**: string
 * **sharedAccessPolicyKey**: string
 * **sharedAccessPolicyName**: string
-* **systemPropertyColumns**: [Dictionary<string,String>](#dictionarystringstring)
+* **systemPropertyColumns**: [ServiceBusTopicOutputDataSourcePropertiesSystemPropertyColumns](#servicebustopicoutputdatasourcepropertiessystempropertycolumns)
 * **topicName**: string
 
-## Dictionary<string,String>
+## ServiceBusTopicOutputDataSourcePropertiesSystemPropertyColumns
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Sql/Server/DataWarehouse
+## AzureSqlDatabaseOutputDataSource
+### Properties
+* **properties**: [AzureSqlDatabaseOutputDataSourceProperties](#azuresqldatabaseoutputdatasourceproperties)
+* **type**: 'Microsoft.Sql/Server/Database' (Required)
+
+## AzureSqlDatabaseOutputDataSourceProperties
+### Properties
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken'
+* **database**: string
+* **maxBatchCount**: int
+* **maxWriterCount**: int
+* **password**: string
+* **server**: string
+* **table**: string
+* **user**: string
+
+## AzureSynapseOutputDataSource
 ### Properties
 * **properties**: [AzureSynapseOutputDataSourceProperties](#azuresynapseoutputdatasourceproperties)
 * **type**: 'Microsoft.Sql/Server/DataWarehouse' (Required)
@@ -629,7 +685,21 @@
 * **table**: string
 * **user**: string
 
-## Microsoft.Storage/DocumentDB
+## BlobOutputDataSource
+### Properties
+* **properties**: [BlobOutputDataSourceProperties](#bloboutputdatasourceproperties)
+* **type**: 'Microsoft.Storage/Blob' (Required)
+
+## BlobOutputDataSourceProperties
+### Properties
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken'
+* **container**: string
+* **dateFormat**: string
+* **pathPattern**: string
+* **storageAccounts**: [StorageAccount](#storageaccount)[]
+* **timeFormat**: string
+
+## DocumentDbOutputDataSource
 ### Properties
 * **properties**: [DocumentDbOutputDataSourceProperties](#documentdboutputdatasourceproperties)
 * **type**: 'Microsoft.Storage/DocumentDB' (Required)
@@ -643,7 +713,7 @@
 * **documentId**: string
 * **partitionKey**: string
 
-## Microsoft.Storage/Table
+## AzureTableOutputDataSource
 ### Properties
 * **properties**: [AzureTableOutputDataSourceProperties](#azuretableoutputdatasourceproperties)
 * **type**: 'Microsoft.Storage/Table' (Required)
@@ -658,7 +728,7 @@
 * **rowKey**: string
 * **table**: string
 
-## PowerBI
+## PowerBIOutputDataSource
 ### Properties
 * **properties**: [PowerBIOutputDataSourceProperties](#powerbioutputdatasourceproperties)
 * **type**: 'PowerBI' (Required)
@@ -691,7 +761,7 @@
 * **query**: string
 * **streamingUnits**: int
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

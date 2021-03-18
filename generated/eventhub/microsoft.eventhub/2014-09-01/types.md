@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NamespaceProperties](#namespaceproperties)
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [NamespaceCreateOrUpdateParametersTags](#namespacecreateorupdateparameterstags)
 * **type**: 'Microsoft.EventHub/namespaces' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventHub/namespaces/AuthorizationRules@2014-09-01
@@ -68,7 +68,7 @@
 * **name**: 'Basic' | 'Standard'
 * **tier**: 'Basic' | 'Premium' | 'Standard' (Required)
 
-## Dictionary<string,String>
+## NamespaceCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

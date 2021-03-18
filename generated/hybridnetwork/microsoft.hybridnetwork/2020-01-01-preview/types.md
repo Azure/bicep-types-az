@@ -8,7 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DevicePropertiesFormat](#devicepropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.HybridNetwork/devices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HybridNetwork/locations/vendors/networkFunctions@2020-01-01-preview
@@ -29,7 +29,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NetworkFunctionPropertiesFormat](#networkfunctionpropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.HybridNetwork/networkFunctions' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.HybridNetwork/vendors@2020-01-01-preview
@@ -60,6 +60,7 @@
 
 ## DevicePropertiesFormat
 * **Discriminator**: deviceType
+
 ### Base Properties
 * **azureStackEdge**: [SubResource](#subresource)
 * **networkFunctions**: [SubResource](#subresource)[] (ReadOnly)
@@ -70,7 +71,7 @@
 ### Properties
 * **id**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -142,15 +143,15 @@
 ## NetworkFunctionUserConfiguration
 ### Properties
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[]
-* **osProfile**: [schemas:17_osProfile](#schemas17osprofile)
+* **osProfile**: [NetworkFunctionUserConfigurationOsProfile](#networkfunctionuserconfigurationosprofile)
 * **roleName**: string
 * **userDataParameters**: any
 
-## schemas:17_osProfile
+## NetworkFunctionUserConfigurationOsProfile
 ### Properties
 * **customData**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -184,7 +185,7 @@
 * **storageProfile**: [StorageProfile](#storageprofile)
 * **userDataParameters**: any
 * **userDataTemplate**: any
-* **virtualMachineSize**: 'Standard_D1_v2' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D2_v2' | 'Standard_D3_v2' | 'Standard_D4_v2' | 'Standard_D5_v2' | 'Standard_DS1_v2' | 'Standard_DS11_v2' | 'Standard_DS12_v2' | 'Standard_DS13_v2' | 'Standard_DS2_v2' | 'Standard_DS3_v2' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_F1' | 'Standard_F16' | 'Standard_F16s' | 'Standard_F1s' | 'Standard_F2' | 'Standard_F2s' | 'Standard_F4' | 'Standard_F4s' | 'Standard_F8' | 'Standard_F8s' | 'Unknown'
+* **virtualMachineSize**: 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D1_v2' | 'Standard_D2_v2' | 'Standard_D3_v2' | 'Standard_D4_v2' | 'Standard_D5_v2' | 'Standard_DS11_v2' | 'Standard_DS12_v2' | 'Standard_DS13_v2' | 'Standard_DS1_v2' | 'Standard_DS2_v2' | 'Standard_DS3_v2' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_F1' | 'Standard_F16' | 'Standard_F16s' | 'Standard_F1s' | 'Standard_F2' | 'Standard_F2s' | 'Standard_F4' | 'Standard_F4s' | 'Standard_F8' | 'Standard_F8s' | 'Unknown'
 
 ## CustomProfile
 ### Properties

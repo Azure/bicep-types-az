@@ -9,8 +9,8 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ClusterProperties](#clusterproperties)
-* **sku**: [sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **sku**: [Sku](#sku)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.OperationalInsights/workspaces/dataExports@2019-08-01-preview
@@ -49,22 +49,22 @@
 ## ClusterProperties
 ### Properties
 * **clusterId**: string (ReadOnly)
-* **keyVaultProperties**: [keyVaultProperties](#keyvaultproperties)
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
 * **nextLink**: string
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' (ReadOnly)
 
-## keyVaultProperties
+## KeyVaultProperties
 ### Properties
 * **keyName**: string
 * **keyVaultUri**: string
 * **keyVersion**: string
 
-## sku
+## Sku
 ### Properties
 * **capacity**: int
 * **name**: 'CapacityReservation'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

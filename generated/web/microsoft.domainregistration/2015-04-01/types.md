@@ -8,8 +8,8 @@
 * **kind**: string
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:2_properties](#schemas2properties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **properties**: [DomainProperties](#domainproperties)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers@2015-04-01
@@ -19,10 +19,10 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:6_properties](#schemas6properties)
+* **properties**: [DomainOwnershipIdentifierProperties](#domainownershipidentifierproperties)
 * **type**: 'Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant)
 
-## schemas:2_properties
+## DomainProperties
 ### Properties
 * **authCode**: string
 * **autoRenew**: bool
@@ -81,12 +81,12 @@
 * **name**: string
 * **siteNames**: string[]
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:6_properties
+## DomainOwnershipIdentifierProperties
 ### Properties
 * **ownershipId**: string
 

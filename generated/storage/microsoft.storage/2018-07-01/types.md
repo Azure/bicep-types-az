@@ -11,17 +11,8 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters)
 * **sku**: [Sku](#sku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [StorageAccountCreateParametersTags](#storageaccountcreateparameterstags)
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant)
-
-## Resource Microsoft.Storage/storageAccounts/blobServices@2018-07-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:51_properties](#schemas51properties)
-* **type**: 'Microsoft.Storage/storageAccounts/blobServices' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Storage/storageAccounts/blobServices/containers@2018-07-01
 * **Valid Scope(s)**: ResourceGroup
@@ -39,7 +30,7 @@
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ImmutabilityPolicyProperty](#immutabilitypolicyproperty) (Required)
 * **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies' (ReadOnly, DeployTimeConstant)
 
@@ -47,7 +38,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: string (Required)
+* **type**: 'SystemAssigned' (Required)
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
@@ -153,33 +144,10 @@
 * **type**: string (ReadOnly)
 * **values**: string[] (ReadOnly)
 
-## Dictionary<string,String>
+## StorageAccountCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## schemas:51_properties
-### Properties
-* **cors**: [CorsRules](#corsrules)
-* **defaultServiceVersion**: string
-* **deleteRetentionPolicy**: [DeleteRetentionPolicy](#deleteretentionpolicy)
-
-## CorsRules
-### Properties
-* **corsRules**: [CorsRule](#corsrule)[]
-
-## CorsRule
-### Properties
-* **allowedHeaders**: string[] (Required)
-* **allowedMethods**: 'DELETE' | 'GET' | 'HEAD' | 'MERGE' | 'OPTIONS' | 'POST' | 'PUT'[] (Required)
-* **allowedOrigins**: string[] (Required)
-* **exposedHeaders**: string[] (Required)
-* **maxAgeInSeconds**: int (Required)
-
-## DeleteRetentionPolicy
-### Properties
-* **days**: int
-* **enabled**: bool
 
 ## ContainerProperties
 ### Properties
@@ -191,7 +159,7 @@
 * **leaseState**: 'Available' | 'Breaking' | 'Broken' | 'Expired' | 'Leased' (ReadOnly)
 * **leaseStatus**: 'Locked' | 'Unlocked' (ReadOnly)
 * **legalHold**: [LegalHoldProperties](#legalholdproperties) (ReadOnly)
-* **metadata**: [Dictionary<string,String>](#dictionarystringstring)
+* **metadata**: [ContainerPropertiesMetadata](#containerpropertiesmetadata)
 * **publicAccess**: 'Blob' | 'Container' | 'None'
 
 ## ImmutabilityPolicyProperties
@@ -227,7 +195,7 @@
 * **timestamp**: string (ReadOnly)
 * **upn**: string (ReadOnly)
 
-## Dictionary<string,String>
+## ContainerPropertiesMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

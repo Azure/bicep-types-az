@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [AppProperties](#appproperties)
 * **sku**: [AppSkuInfo](#appskuinfo) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.IoTCentral/iotApps' (ReadOnly, DeployTimeConstant)
 
 ## AppProperties
@@ -23,7 +23,7 @@
 ### Properties
 * **name**: 'F1' | 'S1' | 'ST0' | 'ST1' | 'ST2' (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

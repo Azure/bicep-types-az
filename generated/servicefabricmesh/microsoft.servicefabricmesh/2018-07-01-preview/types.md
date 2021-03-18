@@ -8,7 +8,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ApplicationResourceProperties](#applicationresourceproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.ServiceFabricMesh/applications' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabricMesh/networks@2018-07-01-preview
@@ -19,7 +19,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [NetworkResourceProperties](#networkresourceproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.ServiceFabricMesh/networks' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ServiceFabricMesh/volumes@2018-07-01-preview
@@ -30,7 +30,7 @@
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [VolumeResourceProperties](#volumeresourceproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.ServiceFabricMesh/volumes' (ReadOnly, DeployTimeConstant)
 
 ## ApplicationResourceProperties
@@ -54,10 +54,11 @@
 
 ## DiagnosticsSinkProperties
 * **Discriminator**: kind
+
 ### Base Properties
 * **description**: string
 * **name**: string
-### AzureInternalMonitoringPipeline
+### AzureInternalMonitoringPipelineSinkDescription
 #### Properties
 * **accountName**: string
 * **autoKeyConfigUrl**: string
@@ -67,7 +68,7 @@
 * **namespace**: string
 
 
-## AzureInternalMonitoringPipeline
+## AzureInternalMonitoringPipelineSinkDescription
 ### Properties
 * **accountName**: string
 * **autoKeyConfigUrl**: string
@@ -190,7 +191,7 @@
 ### Properties
 * **name**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -216,7 +217,7 @@
 * **publicPort**: int
 * **serviceName**: string
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -225,7 +226,7 @@
 ### Properties
 * **azureFileParameters**: [VolumeProviderParametersAzureFile](#volumeproviderparametersazurefile)
 * **description**: string
-* **provider**: string (Required)
+* **provider**: 'SFAzureFile' (Required)
 * **provisioningState**: string (ReadOnly)
 
 ## VolumeProviderParametersAzureFile
@@ -234,7 +235,7 @@
 * **accountName**: string (Required)
 * **shareName**: string (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PrivateCloudProperties](#privatecloudproperties) (Required)
 * **sku**: [Sku](#sku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.AVS/privateClouds' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.AVS/privateClouds/authorizations@2020-03-20
@@ -88,13 +88,13 @@
 * **clusterId**: int (ReadOnly)
 * **clusterSize**: int
 * **hosts**: string[] (ReadOnly)
-* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
+* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## Sku
 ### Properties
 * **name**: string (Required)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -110,7 +110,7 @@
 * **clusterId**: int (ReadOnly)
 * **clusterSize**: int
 * **hosts**: string[] (ReadOnly)
-* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
+* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## HcxEnterpriseSiteProperties
 ### Properties
