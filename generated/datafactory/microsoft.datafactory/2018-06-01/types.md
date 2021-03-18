@@ -97,7 +97,7 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: string (Required)
+* **type**: 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned' (Required)
 * **userAssignedIdentities**: [Dictionary<string,Object>](#dictionarystringobject)
 
 ## Dictionary<string,Object>
@@ -918,6 +918,12 @@
 ### Base Properties
 * **fileName**: any
 * **folderPath**: any
+### AmazonS3CompatibleLocation
+#### Properties
+* **bucketName**: any
+* **type**: 'AmazonS3CompatibleLocation' (Required)
+* **version**: any
+
 ### AmazonS3Location
 #### Properties
 * **bucketName**: any
@@ -965,10 +971,22 @@
 * **relativeUrl**: any
 * **type**: 'HttpServerLocation' (Required)
 
+### OracleCloudStorageLocation
+#### Properties
+* **bucketName**: any
+* **type**: 'OracleCloudStorageLocation' (Required)
+* **version**: any
+
 ### SftpLocation
 #### Properties
 * **type**: 'SftpLocation' (Required)
 
+
+## AmazonS3CompatibleLocation
+### Properties
+* **bucketName**: any
+* **type**: 'AmazonS3CompatibleLocation' (Required)
+* **version**: any
 
 ## AmazonS3Location
 ### Properties
@@ -1016,6 +1034,12 @@
 ### Properties
 * **relativeUrl**: any
 * **type**: 'HttpServerLocation' (Required)
+
+## OracleCloudStorageLocation
+### Properties
+* **bucketName**: any
+* **type**: 'OracleCloudStorageLocation' (Required)
+* **version**: any
 
 ## SftpLocation
 ### Properties
@@ -2075,6 +2099,11 @@
 * **type**: 'AmazonS3' (Required)
 * **typeProperties**: [AmazonS3LinkedServiceTypeProperties](#amazons3linkedservicetypeproperties) (Required)
 
+### AmazonS3Compatible
+#### Properties
+* **type**: 'AmazonS3Compatible' (Required)
+* **typeProperties**: [AmazonS3CompatibleLinkedServiceTypeProperties](#amazons3compatiblelinkedservicetypeproperties) (Required)
+
 ### AzureBatch
 #### Properties
 * **type**: 'AzureBatch' (Required)
@@ -2395,6 +2424,11 @@
 * **type**: 'Oracle' (Required)
 * **typeProperties**: [OracleLinkedServiceTypeProperties](#oraclelinkedservicetypeproperties) (Required)
 
+### OracleCloudStorage
+#### Properties
+* **type**: 'OracleCloudStorage' (Required)
+* **typeProperties**: [OracleCloudStorageLinkedServiceTypeProperties](#oraclecloudstoragelinkedservicetypeproperties) (Required)
+
 ### OracleServiceCloud
 #### Properties
 * **type**: 'OracleServiceCloud' (Required)
@@ -2613,6 +2647,19 @@
 * **serviceUrl**: any
 * **sessionToken**: [SecretBase](#secretbase)
 
+## AmazonS3Compatible
+### Properties
+* **type**: 'AmazonS3Compatible' (Required)
+* **typeProperties**: [AmazonS3CompatibleLinkedServiceTypeProperties](#amazons3compatiblelinkedservicetypeproperties) (Required)
+
+## AmazonS3CompatibleLinkedServiceTypeProperties
+### Properties
+* **accessKeyId**: any
+* **encryptedCredential**: any
+* **forcePathStyle**: any
+* **secretAccessKey**: [SecretBase](#secretbase)
+* **serviceUrl**: any
+
 ## AzureBatch
 ### Properties
 * **type**: 'AzureBatch' (Required)
@@ -2650,6 +2697,7 @@
 ## AzureBlobStorageLinkedServiceTypeProperties
 ### Properties
 * **accountKey**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
+* **accountKind**: string
 * **azureCloudType**: any
 * **connectionString**: any
 * **encryptedCredential**: string
@@ -2722,9 +2770,9 @@
 ### Properties
 * **database**: any (Required)
 * **endpoint**: any (Required)
-* **servicePrincipalId**: any (Required)
-* **servicePrincipalKey**: [SecretBase](#secretbase) (Required)
-* **tenant**: any (Required)
+* **servicePrincipalId**: any
+* **servicePrincipalKey**: [SecretBase](#secretbase)
+* **tenant**: any
 
 ## AzureDataLakeAnalytics
 ### Properties
@@ -2993,9 +3041,15 @@
 ### Properties
 * **accountEndpoint**: any
 * **accountKey**: [SecretBase](#secretbase)
+* **azureCloudType**: any
+* **connectionMode**: 'Direct' | 'Gateway'
 * **connectionString**: any
 * **database**: any
 * **encryptedCredential**: any
+* **servicePrincipalCredential**: [SecretBase](#secretbase)
+* **servicePrincipalCredentialType**: 'ServicePrincipalCert' | 'ServicePrincipalKey'
+* **servicePrincipalId**: any
+* **tenant**: any
 
 ## CosmosDbMongoDbApi
 ### Properties
@@ -3339,6 +3393,7 @@
 ## HttpLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'Anonymous' | 'Basic' | 'ClientCertificate' | 'Digest' | 'Windows'
+* **authHeaders**: any
 * **certThumbprint**: any
 * **embeddedCertData**: any
 * **enableServerCertificateValidation**: any
@@ -3536,6 +3591,7 @@
 * **aadResourceId**: any
 * **aadServicePrincipalCredentialType**: 'ServicePrincipalCert' | 'ServicePrincipalKey'
 * **authenticationType**: 'AadServicePrincipal' | 'Anonymous' | 'Basic' | 'ManagedServiceIdentity' | 'Windows'
+* **authHeaders**: any
 * **azureCloudType**: any
 * **encryptedCredential**: any
 * **password**: [SecretBase](#secretbase)
@@ -3584,6 +3640,18 @@
 * **connectionString**: any (Required)
 * **encryptedCredential**: any
 * **password**: [AzureKeyVaultSecret](#azurekeyvaultsecret)
+
+## OracleCloudStorage
+### Properties
+* **type**: 'OracleCloudStorage' (Required)
+* **typeProperties**: [OracleCloudStorageLinkedServiceTypeProperties](#oraclecloudstoragelinkedservicetypeproperties) (Required)
+
+## OracleCloudStorageLinkedServiceTypeProperties
+### Properties
+* **accessKeyId**: any
+* **encryptedCredential**: any
+* **secretAccessKey**: [SecretBase](#secretbase)
+* **serviceUrl**: any
 
 ## OracleServiceCloud
 ### Properties
@@ -3709,6 +3777,7 @@
 ### Properties
 * **aadResourceId**: any
 * **authenticationType**: 'AadServicePrincipal' | 'Anonymous' | 'Basic' | 'ManagedServiceIdentity' (Required)
+* **authHeaders**: any
 * **azureCloudType**: any
 * **enableServerCertificateValidation**: any
 * **encryptedCredential**: any
@@ -3883,7 +3952,7 @@
 
 ## SftpServerLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Basic' | 'SshPublicKey'
+* **authenticationType**: 'Basic' | 'MultiFactor' | 'SshPublicKey'
 * **encryptedCredential**: any
 * **host**: any (Required)
 * **hostKeyFingerprint**: any
@@ -4127,8 +4196,9 @@
 * **annotations**: any[]
 * **concurrency**: int
 * **description**: string
-* **folder**: [schemas:562_folder](#schemas562folder)
+* **folder**: [schemas:568_folder](#schemas568folder)
 * **parameters**: [Dictionary<string,ParameterSpecification>](#dictionarystringparameterspecification)
+* **policy**: [PipelinePolicy](#pipelinepolicy)
 * **runDimensions**: [Dictionary<string,Object>](#dictionarystringobject)
 * **variables**: [Dictionary<string,VariableSpecification>](#dictionarystringvariablespecification)
 
@@ -4182,7 +4252,7 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## schemas:562_folder
+## schemas:568_folder
 ### Properties
 * **name**: string
 
@@ -4190,6 +4260,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterSpecification](#parameterspecification)
+
+## PipelinePolicy
+### Properties
+* **elapsedTimeMetric**: [PipelineElapsedTimeMetricPolicy](#pipelineelapsedtimemetricpolicy)
+
+## PipelineElapsedTimeMetricPolicy
+### Properties
+* **duration**: any
 
 ## Dictionary<string,Object>
 ### Properties
@@ -4216,7 +4294,7 @@
 #### Properties
 * **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required)
 * **type**: 'ChainingTrigger' (Required)
-* **typeProperties**: [schemas:885_typeProperties](#schemas885typeproperties) (Required)
+* **typeProperties**: [schemas:895_typeProperties](#schemas895typeproperties) (Required)
 
 ### MultiplePipelineTrigger
 #### Properties
@@ -4226,20 +4304,20 @@
 ### RerunTumblingWindowTrigger
 #### Properties
 * **type**: 'RerunTumblingWindowTrigger' (Required)
-* **typeProperties**: [schemas:884_typeProperties](#schemas884typeproperties) (Required)
+* **typeProperties**: [schemas:894_typeProperties](#schemas894typeproperties) (Required)
 
 ### TumblingWindowTrigger
 #### Properties
 * **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required)
 * **type**: 'TumblingWindowTrigger' (Required)
-* **typeProperties**: [schemas:876_typeProperties](#schemas876typeproperties) (Required)
+* **typeProperties**: [schemas:886_typeProperties](#schemas886typeproperties) (Required)
 
 
 ## ChainingTrigger
 ### Properties
 * **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required)
 * **type**: 'ChainingTrigger' (Required)
-* **typeProperties**: [schemas:885_typeProperties](#schemas885typeproperties) (Required)
+* **typeProperties**: [schemas:895_typeProperties](#schemas895typeproperties) (Required)
 
 ## TriggerPipelineReference
 ### Properties
@@ -4257,7 +4335,7 @@
 * **referenceName**: string (Required)
 * **type**: string (Required)
 
-## schemas:885_typeProperties
+## schemas:895_typeProperties
 ### Properties
 * **dependsOn**: [PipelineReference](#pipelinereference)[] (Required)
 * **runDimension**: string (Required)
@@ -4270,9 +4348,9 @@
 ## RerunTumblingWindowTrigger
 ### Properties
 * **type**: 'RerunTumblingWindowTrigger' (Required)
-* **typeProperties**: [schemas:884_typeProperties](#schemas884typeproperties) (Required)
+* **typeProperties**: [schemas:894_typeProperties](#schemas894typeproperties) (Required)
 
-## schemas:884_typeProperties
+## schemas:894_typeProperties
 ### Properties
 * **parentTrigger**: any (Required)
 * **requestedEndTime**: string (Required)
@@ -4283,9 +4361,9 @@
 ### Properties
 * **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required)
 * **type**: 'TumblingWindowTrigger' (Required)
-* **typeProperties**: [schemas:876_typeProperties](#schemas876typeproperties) (Required)
+* **typeProperties**: [schemas:886_typeProperties](#schemas886typeproperties) (Required)
 
-## schemas:876_typeProperties
+## schemas:886_typeProperties
 ### Properties
 * **delay**: any
 * **dependsOn**: [DependencyReference](#dependencyreference)[]

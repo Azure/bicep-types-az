@@ -266,7 +266,7 @@
 * **folderPath**: string
 * **provisioningState**: string (ReadOnly)
 * **securityToken**: string
-* **sourceType**: 'GitHub' | 'VsoGit'
+* **sourceType**: 'GitHub' | 'StorageAccount' | 'VsoGit'
 * **status**: 'Disabled' | 'Enabled'
 * **uniqueIdentifier**: string (ReadOnly)
 * **uri**: string
@@ -390,7 +390,7 @@
 
 ## FormulaProperties
 ### Properties
-* **author**: string
+* **author**: string (ReadOnly)
 * **creationDate**: string (ReadOnly)
 * **description**: string
 * **formulaContent**: [LabVirtualMachineCreationParameter](#labvirtualmachinecreationparameter)
@@ -409,27 +409,20 @@
 ## LabVirtualMachineCreationParameterProperties
 ### Properties
 * **allowClaim**: bool
-* **artifactDeploymentStatus**: [ArtifactDeploymentStatusProperties](#artifactdeploymentstatusproperties)
 * **artifacts**: [ArtifactInstallProperties](#artifactinstallproperties)[]
 * **bulkCreationParameters**: [BulkCreationParameters](#bulkcreationparameters)
-* **computeId**: string
-* **createdByUser**: string
-* **createdByUserId**: string
 * **createdDate**: string
 * **customImageId**: string
 * **dataDiskParameters**: [DataDiskProperties](#datadiskproperties)[]
 * **disallowPublicIpAddress**: bool
 * **environmentId**: string
 * **expirationDate**: string
-* **fqdn**: string
 * **galleryImageReference**: [GalleryImageReference](#galleryimagereference)
 * **isAuthenticationWithSshKey**: bool
 * **labSubnetName**: string
 * **labVirtualNetworkId**: string
-* **lastKnownPowerState**: string
 * **networkInterface**: [NetworkInterfaceProperties](#networkinterfaceproperties)
 * **notes**: string
-* **osType**: string
 * **ownerObjectId**: string
 * **ownerUserPrincipalName**: string
 * **password**: string
@@ -439,13 +432,6 @@
 * **sshKey**: string
 * **storageType**: string
 * **userName**: string
-* **virtualMachineCreationSource**: 'FromCustomImage' | 'FromGalleryImage' | 'FromSharedGalleryImage'
-
-## ArtifactDeploymentStatusProperties
-### Properties
-* **artifactsApplied**: int
-* **deploymentStatus**: string
-* **totalArtifacts**: int
 
 ## ArtifactInstallProperties
 ### Properties
@@ -627,7 +613,7 @@
 * **clientSecretUrl**: string
 * **principalId**: string
 * **tenantId**: string
-* **type**: string
+* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned'
 
 ## Dictionary<string,String>
 ### Properties
@@ -671,6 +657,7 @@
 * **leasedByLabVmId**: string
 * **managedDiskId**: string
 * **provisioningState**: string (ReadOnly)
+* **storageAccountId**: string
 * **uniqueIdentifier**: string (ReadOnly)
 
 ## Dictionary<string,String>
@@ -768,27 +755,27 @@
 ### Properties
 * **allowClaim**: bool
 * **applicableSchedule**: [ApplicableSchedule](#applicableschedule) (ReadOnly)
-* **artifactDeploymentStatus**: [ArtifactDeploymentStatusProperties](#artifactdeploymentstatusproperties)
+* **artifactDeploymentStatus**: [ArtifactDeploymentStatusProperties](#artifactdeploymentstatusproperties) (ReadOnly)
 * **artifacts**: [ArtifactInstallProperties](#artifactinstallproperties)[]
-* **computeId**: string
+* **computeId**: string (ReadOnly)
 * **computeVm**: [ComputeVmProperties](#computevmproperties) (ReadOnly)
-* **createdByUser**: string
-* **createdByUserId**: string
+* **createdByUser**: string (ReadOnly)
+* **createdByUserId**: string (ReadOnly)
 * **createdDate**: string
 * **customImageId**: string
 * **dataDiskParameters**: [DataDiskProperties](#datadiskproperties)[]
 * **disallowPublicIpAddress**: bool
 * **environmentId**: string
 * **expirationDate**: string
-* **fqdn**: string
+* **fqdn**: string (ReadOnly)
 * **galleryImageReference**: [GalleryImageReference](#galleryimagereference)
 * **isAuthenticationWithSshKey**: bool
 * **labSubnetName**: string
 * **labVirtualNetworkId**: string
-* **lastKnownPowerState**: string
+* **lastKnownPowerState**: string (ReadOnly)
 * **networkInterface**: [NetworkInterfaceProperties](#networkinterfaceproperties)
 * **notes**: string
-* **osType**: string
+* **osType**: string (ReadOnly)
 * **ownerObjectId**: string
 * **ownerUserPrincipalName**: string
 * **password**: string
@@ -800,7 +787,13 @@
 * **storageType**: string
 * **uniqueIdentifier**: string (ReadOnly)
 * **userName**: string
-* **virtualMachineCreationSource**: 'FromCustomImage' | 'FromGalleryImage' | 'FromSharedGalleryImage'
+* **virtualMachineCreationSource**: 'FromCustomImage' | 'FromGalleryImage' | 'FromSharedGalleryImage' (ReadOnly)
+
+## ArtifactDeploymentStatusProperties
+### Properties
+* **artifactsApplied**: int
+* **deploymentStatus**: string
+* **totalArtifacts**: int
 
 ## ComputeVmProperties
 ### Properties

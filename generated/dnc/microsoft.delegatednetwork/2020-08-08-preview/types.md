@@ -78,15 +78,11 @@
 ### Properties
 * **apiServerEndpoint**: string
 * **clusterRootCA**: string
-* **controllerDetails**: [ControllerDetails](#controllerdetails) (Required)
+* **controllerDetails**: [controllerDetails](#controllerdetails) (Required)
 * **orchestratorAppId**: string
 * **orchestratorTenantId**: string
 * **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly)
 * **resourceGuid**: string (ReadOnly)
-
-## ControllerDetails
-### Properties
-* **id**: string
 
 ## Dictionary<string,String>
 ### Properties

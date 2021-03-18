@@ -4,10 +4,16 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
+* **identity**: [schemas:71_identity](#schemas71identity)
+* **kind**: string
+* **location**: string
+* **managedBy**: string
 * **name**: string (Required, DeployTimeConstant)
+* **plan**: [schemas:71_identity](#schemas71identity)
 * **properties**: [ApplicationGroupProperties](#applicationgroupproperties) (Required)
+* **sku**: [schemas:71_identity](#schemas71identity)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups' (ReadOnly, DeployTimeConstant)
 
@@ -24,10 +30,16 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
+* **identity**: [schemas:71_identity](#schemas71identity)
+* **kind**: string
+* **location**: string
+* **managedBy**: string
 * **name**: string (Required, DeployTimeConstant)
+* **plan**: [schemas:71_identity](#schemas71identity)
 * **properties**: [HostPoolProperties](#hostpoolproperties) (Required)
+* **sku**: [schemas:71_identity](#schemas71identity)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant)
 
@@ -44,10 +56,16 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
+* **identity**: [schemas:71_identity](#schemas71identity)
+* **kind**: string
+* **location**: string
+* **managedBy**: string
 * **name**: string (Required, DeployTimeConstant)
+* **plan**: [schemas:71_identity](#schemas71identity)
 * **properties**: [ScalingPlanProperties](#scalingplanproperties)
+* **sku**: [schemas:71_identity](#schemas71identity)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DesktopVirtualization/scalingPlans' (ReadOnly, DeployTimeConstant)
 
@@ -55,20 +73,40 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
+* **identity**: [schemas:71_identity](#schemas71identity)
+* **kind**: string
+* **location**: string
+* **managedBy**: string
 * **name**: string (Required, DeployTimeConstant)
+* **plan**: [schemas:71_identity](#schemas71identity)
 * **properties**: [WorkspaceProperties](#workspaceproperties)
+* **sku**: [schemas:71_identity](#schemas71identity)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant)
+
+## schemas:71_identity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'SystemAssigned'
 
 ## ApplicationGroupProperties
 ### Properties
 * **applicationGroupType**: 'Desktop' | 'RemoteApp' (Required)
+* **cloudPcResource**: bool (ReadOnly)
 * **description**: string
 * **friendlyName**: string
 * **hostPoolArmPath**: string (Required)
+* **migrationRequest**: [MigrationRequestProperties](#migrationrequestproperties)
+* **objectId**: string (ReadOnly)
 * **workspaceArmPath**: string (ReadOnly)
+
+## MigrationRequestProperties
+### Properties
+* **migrationPath**: string
+* **operation**: 'Complete' | 'Hide' | 'Revoke' | 'Start' | 'Unhide'
 
 ## Dictionary<string,String>
 ### Properties
@@ -89,17 +127,21 @@
 * **iconPath**: string
 * **msixPackageApplicationId**: string
 * **msixPackageFamilyName**: string
+* **objectId**: string (ReadOnly)
 * **showInPortal**: bool
 
 ## HostPoolProperties
 ### Properties
 * **applicationGroupReferences**: string[] (ReadOnly)
+* **cloudPcResource**: bool (ReadOnly)
 * **customRdpProperty**: string
 * **description**: string
 * **friendlyName**: string
-* **hostPoolType**: 'Personal' | 'Pooled' (Required)
+* **hostPoolType**: 'BYODesktop' | 'Personal' | 'Pooled' (Required)
 * **loadBalancerType**: 'BreadthFirst' | 'DepthFirst' | 'Persistent' (Required)
 * **maxSessionLimit**: int
+* **migrationRequest**: [MigrationRequestProperties](#migrationrequestproperties)
+* **objectId**: string (ReadOnly)
 * **personalDesktopAssignmentType**: 'Automatic' | 'Direct'
 * **preferredAppGroupType**: 'Desktop' | 'None' | 'RailApplications' (Required)
 * **registrationInfo**: [RegistrationInfo](#registrationinfo)
@@ -107,7 +149,6 @@
 * **ssoadfsAuthority**: string
 * **ssoClientId**: string
 * **ssoClientSecretKeyVaultPath**: string
-* **ssoContext**: string
 * **ssoSecretType**: 'Certificate' | 'CertificateInKeyVault' | 'SharedKey' | 'SharedKeyInKeyVault'
 * **startVMOnConnect**: bool
 * **validationEnvironment**: bool
@@ -160,7 +201,9 @@
 * **exclusionTag**: string
 * **friendlyName**: string
 * **hostPoolReferences**: [ScalingHostPoolReference](#scalinghostpoolreference)[]
-* **hostPoolType**: 'Personal' | 'Pooled'
+* **hostPoolType**: 'BYODesktop' | 'Personal' | 'Pooled'
+* **objectId**: string (ReadOnly)
+* **ring**: int
 * **schedules**: [ScalingSchedule](#scalingschedule)[]
 * **timeZone**: string
 
@@ -182,12 +225,12 @@
 * **rampDownLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst'
 * **rampDownMinimumHostsPct**: int
 * **rampDownNotificationMessage**: string
-* **rampDownNotificationMinutes**: int
 * **rampDownStartTime**: string
 * **rampDownStopHostsWhen**: 'ZeroActiveSessions' | 'ZeroSessions'
-* **rampUpAlgorithm**: 'BreadthFirst' | 'DepthFirst'
+* **rampDownWaitTimeMinutes**: int
 * **rampUpCapacityThresholdPct**: int
-* **rampUpMinimumHostPct**: int
+* **rampUpLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst'
+* **rampUpMinimumHostsPct**: int
 * **rampUpStartTime**: string
 
 ## Dictionary<string,String>
@@ -198,8 +241,10 @@
 ## WorkspaceProperties
 ### Properties
 * **applicationGroupReferences**: string[]
+* **cloudPcResource**: bool (ReadOnly)
 * **description**: string
 * **friendlyName**: string
+* **objectId**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Properties

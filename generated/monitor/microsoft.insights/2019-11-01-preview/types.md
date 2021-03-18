@@ -7,7 +7,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:1_properties](#schemas1properties) (Required)
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **type**: 'Microsoft.Insights/dataCollectionRuleAssociations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Insights/dataCollectionRules@2019-11-01-preview
@@ -16,15 +16,16 @@
 * **apiVersion**: '2019-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'Linux' | 'Windows'
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:1_properties](#schemas1properties) (Required)
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Insights/dataCollectionRules' (ReadOnly, DeployTimeConstant)
 
 ## schemas:1_properties
 ### Properties
-* **dataCollectionRuleId**: string (Required)
+* **dataCollectionRuleId**: string
 * **description**: string
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 

@@ -181,6 +181,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SecurityAlertsPolicyProperties](#securityalertspolicyproperties)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Sql/managedInstances/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/managedInstances/sqlAgent@2020-08-01-preview
@@ -333,6 +334,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SecurityAlertsPolicyProperties](#securityalertspolicyproperties)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Sql/servers/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/databases/syncGroups@2020-08-01-preview
@@ -555,6 +557,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SecurityAlertsPolicyProperties](#securityalertspolicyproperties)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Sql/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Sql/servers/syncAgents@2020-08-01-preview
@@ -812,7 +815,22 @@
 ## SecurityAlertsPolicyProperties
 ### Properties
 * **creationTime**: string (ReadOnly)
+* **disabledAlerts**: string[]
+* **emailAccountAdmins**: bool
+* **emailAddresses**: string[]
+* **retentionDays**: int
 * **state**: 'Disabled' | 'Enabled' (Required)
+* **storageAccountAccessKey**: string
+* **storageEndpoint**: string
+
+## systemData
+### Properties
+* **createdAt**: string (ReadOnly)
+* **createdBy**: string (ReadOnly)
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly)
+* **lastModifiedAt**: string (ReadOnly)
+* **lastModifiedBy**: string (ReadOnly)
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly)
 
 ## SqlAgentConfigurationProperties
 ### Properties
@@ -1044,15 +1062,6 @@
 * **storageAccountAccessKey**: string
 * **storageAccountSubscriptionId**: string
 * **storageEndpoint**: string
-
-## systemData
-### Properties
-* **createdAt**: string (ReadOnly)
-* **createdBy**: string (ReadOnly)
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly)
-* **lastModifiedAt**: string (ReadOnly)
-* **lastModifiedBy**: string (ReadOnly)
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly)
 
 ## ServerDnsAliasProperties
 ### Properties

@@ -43,7 +43,9 @@
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow)
 * **pointInTimeUTC**: string
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly)
+* **sourceResourceGroupName**: string
 * **sourceServerName**: string
+* **sourceSubscriptionId**: string
 * **standbyAvailabilityZone**: string (ReadOnly)
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly)
 * **storageProfile**: [StorageProfile](#storageprofile)

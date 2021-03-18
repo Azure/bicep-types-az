@@ -90,6 +90,7 @@
 * **appNetworkResourceGroup**: string
 * **appSubnetId**: string
 * **outboundIPs**: [schemas:12_outboundIPs](#schemas12outboundips) (ReadOnly)
+* **requiredTraffics**: [RequiredTraffic](#requiredtraffic)[] (ReadOnly)
 * **serviceCidr**: string
 * **serviceRuntimeNetworkResourceGroup**: string
 * **serviceRuntimeSubnetId**: string
@@ -97,6 +98,14 @@
 ## schemas:12_outboundIPs
 ### Properties
 * **publicIPs**: string[] (ReadOnly)
+
+## RequiredTraffic
+### Properties
+* **direction**: 'Inbound' | 'Outbound' (ReadOnly)
+* **fqdns**: string[] (ReadOnly)
+* **ips**: string[] (ReadOnly)
+* **port**: int (ReadOnly)
+* **protocol**: string (ReadOnly)
 
 ## Sku
 ### Properties
