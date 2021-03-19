@@ -4,9 +4,12 @@ on:
   workflow_dispatch:
     inputs:
       api_specs_ref:
-        description: 'git ref or full SHA for https://github.com/Azure/azure-rest-api-specs'
+        description: 'Git ref or full SHA for https://github.com/Azure/azure-rest-api-specs.'
         required: true
         default: 'master'
+      single_path:
+        description: 'The path to generate types for (e.g. "compute", or "keyvault"). Leave blank to generate all types.'
+        required: false
 
 jobs:
   update-types:
@@ -42,15 +45,21 @@ jobs:
       - name: Install generator npm packages
         run: npm install
         working-directory: src/generator
+
+      - name: Run generator (single path)
+        if: ${{ github.event.inputs.single_path }}
+        run: npm run generate -- --specs-dir ../../workflow-temp/azure-rest-api-specs --single-path ${{ github.event.inputs.single_path }}
+        working-directory: src/generator
       
-      - name: Run generator
+      - name: Run generator (all paths)
+        if: ${{ !github.event.inputs.single_path }}
         run: npm run generate -- --specs-dir ../../workflow-temp/azure-rest-api-specs
         working-directory: src/generator
 
       - id: get_swagger_gh_uri
         name: Get GitHub URI for azure-rest-api-specs
         run: |
-          git_sha=`git rev-parse --short HEAD`
+          git_sha=`git rev-parse HEAD`
           echo "::set-output name=gh_uri::https://github.com/Azure/azure-rest-api-specs/tree/$git_sha"
         working-directory: workflow-temp/azure-rest-api-specs
 
@@ -58,7 +67,7 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           commit-message: |
-            Update Generated Types
+            Update Generated Types ${{ github.event.inputs.single_path && format('(single path: {0})', github.event.inputs.single_path) || '' }}
             
             Generate types for ${{ steps.get_swagger_gh_uri.outputs.gh_uri }}
           committer: GitHub <noreply@github.com>
@@ -67,7 +76,8 @@ jobs:
           branch: autogenerate
           branch-suffix: short-commit-hash
           delete-branch: true
-          title: Update Generated Types
+          title: |
+            Update Generated Types ${{ github.event.inputs.single_path && format('(single path: {0})', github.event.inputs.single_path) || '' }}
           body: Generate types for ${{ steps.get_swagger_gh_uri.outputs.gh_uri }}
           labels: autogenerate
           draft: false
