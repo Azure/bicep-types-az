@@ -65,7 +65,6 @@
 * **enablePurgeProtection**: bool
 * **enableRbacAuthorization**: bool
 * **enableSoftDelete**: bool
-* **hsmPoolResourceId**: string (ReadOnly)
 * **networkAcls**: [NetworkRuleSet](#networkruleset)
 * **privateEndpointConnections**: [PrivateEndpointConnectionItem](#privateendpointconnectionitem)[] (ReadOnly)
 * **provisioningState**: 'RegisteringDns' | 'Succeeded'
@@ -106,7 +105,6 @@
 
 ## PrivateEndpointConnectionItem
 ### Properties
-* **etag**: string
 * **id**: string
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 
@@ -144,8 +142,8 @@
 ### Properties
 * **attributes**: [KeyAttributes](#keyattributes)
 * **curveName**: 'P-256' | 'P-256K' | 'P-384' | 'P-521'
-* **keyOps**: 'decrypt' | 'encrypt' | 'import' | 'sign' | 'unwrapKey' | 'verify' | 'wrapKey'[] (ReadOnly)
-* **keySize**: int (ReadOnly)
+* **keyOps**: 'decrypt' | 'encrypt' | 'import' | 'sign' | 'unwrapKey' | 'verify' | 'wrapKey'[]
+* **keySize**: int
 * **keyUri**: string (ReadOnly)
 * **keyUriWithVersion**: string (ReadOnly)
 * **kty**: 'EC-HSM' | 'EC' | 'RSA-HSM' | 'RSA'
