@@ -10,6 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [JobProperties](#jobproperties) (Required)
 * **sku**: [Sku](#sku) (Required)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DataBox/jobs' (ReadOnly, DeployTimeConstant)
 
@@ -192,11 +193,11 @@
 
 ## TransferConfiguration
 ### Properties
-* **transferAllDetails**: [schemas:87_transferAllDetails](#schemas87transferalldetails)
+* **transferAllDetails**: [schemas:88_transferAllDetails](#schemas88transferalldetails)
 * **transferConfigurationType**: 'TransferAll' | 'TransferUsingFilter' (Required)
-* **transferFilterDetails**: [schemas:87_transferFilterDetails](#schemas87transferfilterdetails)
+* **transferFilterDetails**: [schemas:88_transferFilterDetails](#schemas88transferfilterdetails)
 
-## schemas:87_transferAllDetails
+## schemas:88_transferAllDetails
 ### Properties
 * **include**: [TransferAllDetails](#transferalldetails)
 
@@ -206,7 +207,7 @@
 * **transferAllBlobs**: bool
 * **transferAllFiles**: bool
 
-## schemas:87_transferFilterDetails
+## schemas:88_transferFilterDetails
 ### Properties
 * **include**: [TransferFilterDetails](#transferfilterdetails)
 
@@ -313,6 +314,15 @@
 * **displayName**: string
 * **family**: string
 * **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required)
+
+## systemData
+### Properties
+* **createdAt**: string (ReadOnly)
+* **createdBy**: string (ReadOnly)
+* **createdByType**: string (ReadOnly)
+* **lastModifiedAt**: string (ReadOnly)
+* **lastModifiedBy**: string (ReadOnly)
+* **lastModifiedByType**: string (ReadOnly)
 
 ## Dictionary<string,String>
 ### Properties

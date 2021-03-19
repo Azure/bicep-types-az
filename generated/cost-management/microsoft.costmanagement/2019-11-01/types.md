@@ -10,6 +10,16 @@
 * **properties**: [ExportProperties](#exportproperties)
 * **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.CostManagement/settings@2019-11-01
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string (ReadOnly)
+* **name**: string (Required, DeployTimeConstant)
+* **properties**: [SettingsProperties](#settingsproperties)
+* **type**: 'Microsoft.CostManagement/settings' (ReadOnly, DeployTimeConstant)
+
 ## Resource Microsoft.CostManagement/views@2019-11-01
 * **Valid Scope(s)**: Unknown
 ### Properties
@@ -100,6 +110,10 @@
 * **from**: string (Required)
 * **to**: string
 
+## SettingsProperties
+### Properties
+* **scope**: string
+
 ## ViewProperties
 ### Properties
 * **accumulated**: 'false' | 'true'
@@ -164,6 +178,7 @@
 * **or**: [ReportConfigFilter](#reportconfigfilter)[]
 * **tagKey**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression)
 * **tags**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression)
+* **tagValue**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression)
 
 ## ReportConfigComparisonExpression
 ### Properties

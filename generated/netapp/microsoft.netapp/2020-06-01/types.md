@@ -150,7 +150,7 @@
 * **fileSystemId**: string (ReadOnly)
 * **isRestoring**: bool
 * **kerberosEnabled**: bool
-* **mountTargets**: [mountTargetProperties](#mounttargetproperties)[]
+* **mountTargets**: [mountTargetProperties](#mounttargetproperties)[] (ReadOnly)
 * **protocolTypes**: string[]
 * **provisioningState**: string (ReadOnly)
 * **securityStyle**: 'ntfs' | 'unix'

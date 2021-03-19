@@ -219,7 +219,7 @@
 * **apiVersion**: '2020-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:288_properties](#schemas288properties)
+* **properties**: [schemas:298_properties](#schemas298properties)
 * **type**: 'Microsoft.ApiManagement/service/gateways/apis' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/gateways/certificateAuthorities@2020-06-01-preview
@@ -552,7 +552,7 @@
 * **subscriptionRequired**: bool
 * **type**: 'http' | 'soap'
 * **value**: string (WriteOnly)
-* **wsdlSelector**: [schemas:51_wsdlSelector](#schemas51wsdlselector) (WriteOnly)
+* **wsdlSelector**: [schemas:61_wsdlSelector](#schemas61wsdlselector) (WriteOnly)
 
 ## ApiVersionSetContractDetails
 ### Properties
@@ -583,7 +583,7 @@
 * **header**: string
 * **query**: string
 
-## schemas:51_wsdlSelector
+## schemas:61_wsdlSelector
 ### Properties
 * **wsdlEndpointName**: string (WriteOnly)
 * **wsdlServiceName**: string (WriteOnly)
@@ -876,7 +876,7 @@
 * **district**: string
 * **name**: string (Required)
 
-## schemas:288_properties
+## schemas:298_properties
 ### Properties
 * **provisioningState**: 'created'
 
@@ -1007,7 +1007,6 @@
 ## AccessInformationCreateParameterProperties
 ### Properties
 * **enabled**: bool
-* **id**: string (ReadOnly)
 * **primaryKey**: string (WriteOnly)
 * **principalId**: string
 * **secondaryKey**: string (WriteOnly)

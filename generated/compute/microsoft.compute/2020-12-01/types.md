@@ -285,7 +285,7 @@
 * **lun**: int (Required)
 * **managedDisk**: [SubResource](#subresource)
 * **snapshot**: [SubResource](#subresource)
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'UltraSSD_LRS'
+* **storageAccountType**: 'Premium_LRS' | 'Premium_ZRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'UltraSSD_LRS'
 
 ## DiskEncryptionSetParameters
 ### Properties
@@ -301,7 +301,7 @@
 * **osState**: 'Generalized' | 'Specialized' (Required)
 * **osType**: 'Linux' | 'Windows' (Required)
 * **snapshot**: [SubResource](#subresource)
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'UltraSSD_LRS'
+* **storageAccountType**: 'Premium_LRS' | 'Premium_ZRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'UltraSSD_LRS'
 
 ## Dictionary<string,String>
 ### Properties
@@ -661,7 +661,7 @@
 ### Properties
 * **diskEncryptionSet**: [DiskEncryptionSetParameters](#diskencryptionsetparameters)
 * **id**: string
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'UltraSSD_LRS'
+* **storageAccountType**: 'Premium_LRS' | 'Premium_ZRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'UltraSSD_LRS'
 
 ## ImageReference
 ### Properties
@@ -975,7 +975,7 @@
 ## VirtualMachineScaleSetManagedDiskParameters
 ### Properties
 * **diskEncryptionSet**: [DiskEncryptionSetParameters](#diskencryptionsetparameters)
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'UltraSSD_LRS'
+* **storageAccountType**: 'Premium_LRS' | 'Premium_ZRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'UltraSSD_LRS'
 
 ## VirtualMachineScaleSetOSDisk
 ### Properties

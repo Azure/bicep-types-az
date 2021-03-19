@@ -8,6 +8,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [ClusterProperties](#clusterproperties)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.AzureStackHCI/clusters' (ReadOnly, DeployTimeConstant)
 
@@ -44,6 +45,15 @@
 * **osName**: string (ReadOnly)
 * **osVersion**: string (ReadOnly)
 * **serialNumber**: string (ReadOnly)
+
+## systemData
+### Properties
+* **createdAt**: string
+* **createdBy**: string
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+* **lastModifiedAt**: string
+* **lastModifiedBy**: string
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
 ## Dictionary<string,String>
 ### Properties

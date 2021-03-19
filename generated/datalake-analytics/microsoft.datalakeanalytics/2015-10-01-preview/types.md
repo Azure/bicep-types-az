@@ -68,6 +68,7 @@
 * **minPriorityPerJob**: int
 * **newTier**: 'Commitment_100000AUHours' | 'Commitment_10000AUHours' | 'Commitment_1000AUHours' | 'Commitment_100AUHours' | 'Commitment_500000AUHours' | 'Commitment_50000AUHours' | 'Commitment_5000AUHours' | 'Commitment_500AUHours' | 'Consumption'
 * **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Patching' | 'Resuming' | 'Running' | 'Succeeded' | 'Suspending' (ReadOnly)
+* **publicDataLakeStoreAccounts**: [DataLakeStoreAccountInformation](#datalakestoreaccountinformation)[] (ReadOnly)
 * **queryStoreRetention**: int
 * **state**: 'active' | 'suspended' (ReadOnly)
 * **storageAccounts**: [AddStorageAccountWithAccountParameters](#addstorageaccountwithaccountparameters)[]
@@ -127,6 +128,17 @@
 * **runtimeVersion**: string (ReadOnly)
 * **serverUri**: string (ReadOnly)
 * **userName**: string (ReadOnly)
+
+## DataLakeStoreAccountInformation
+### Properties
+* **id**: string (ReadOnly)
+* **name**: string (ReadOnly)
+* **properties**: [DataLakeStoreAccountInfoProperties](#datalakestoreaccountinfoproperties) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## DataLakeStoreAccountInfoProperties
+### Properties
+* **suffix**: string (ReadOnly)
 
 ## AddStorageAccountWithAccountParameters
 ### Properties

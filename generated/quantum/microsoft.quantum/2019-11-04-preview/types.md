@@ -9,6 +9,7 @@
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [WorkspaceResourceProperties](#workspaceresourceproperties)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Quantum/workspaces' (ReadOnly, DeployTimeConstant)
 
@@ -34,6 +35,15 @@
 * **providerSku**: string
 * **provisioningState**: 'Deleted' | 'Deleting' | 'Failed' | 'Launching' | 'Succeeded' | 'Updating'
 * **resourceUsageId**: string
+
+## systemData
+### Properties
+* **createdAt**: string
+* **createdBy**: string
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+* **lastModifiedAt**: string
+* **lastModifiedBy**: string
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
 ## Dictionary<string,String>
 ### Properties

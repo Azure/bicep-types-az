@@ -145,7 +145,7 @@
 * **fileSystemId**: string (ReadOnly)
 * **isRestoring**: bool
 * **kerberosEnabled**: bool
-* **mountTargets**: [mountTargetProperties](#mounttargetproperties)[]
+* **mountTargets**: [mountTargetProperties](#mounttargetproperties)[] (ReadOnly)
 * **protocolTypes**: string[]
 * **provisioningState**: string (ReadOnly)
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra'

@@ -95,7 +95,7 @@
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:129_properties](#schemas129properties)
+* **properties**: [schemas:130_properties](#schemas130properties)
 * **type**: 'Microsoft.Synapse/workspaces/managedIdentitySqlControlSettings' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Synapse/workspaces/privateEndpointConnections@2019-06-01-preview
@@ -205,7 +205,7 @@
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:28_properties](#schemas28properties)
+* **properties**: [schemas:29_properties](#schemas29properties)
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/metadataSync' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels@2019-06-01-preview
@@ -431,10 +431,11 @@
 * **autoScale**: [AutoScaleProperties](#autoscaleproperties)
 * **cacheSize**: int
 * **creationDate**: string
-* **customLibraries**: [LibraryResourceProperties](#libraryresourceproperties)[]
+* **customLibraries**: [LibraryInfo](#libraryinfo)[]
 * **defaultSparkLogFolder**: string
 * **dynamicExecutorAllocation**: [DynamicExecutorAllocation](#dynamicexecutorallocation)
 * **isComputeIsolationEnabled**: bool
+* **lastSucceededTimestamp**: string (ReadOnly)
 * **libraryRequirements**: [LibraryRequirements](#libraryrequirements)
 * **nodeCount**: int
 * **nodeSize**: 'Large' | 'Medium' | 'None' | 'Small' | 'XLarge' | 'XXLarge' | 'XXXLarge'
@@ -456,14 +457,14 @@
 * **maxNodeCount**: int
 * **minNodeCount**: int
 
-## LibraryResourceProperties
+## LibraryInfo
 ### Properties
-* **containerName**: string (ReadOnly)
+* **containerName**: string
 * **creatorId**: string (ReadOnly)
-* **name**: string (ReadOnly)
-* **path**: string (ReadOnly)
+* **name**: string
+* **path**: string
 * **provisioningStatus**: string (ReadOnly)
-* **type**: string (ReadOnly)
+* **type**: string
 * **uploadedTimestamp**: string (ReadOnly)
 
 ## DynamicExecutorAllocation
@@ -506,6 +507,7 @@
 * **description**: string
 ### Managed
 #### Properties
+* **managedVirtualNetwork**: [ManagedVirtualNetworkReference](#managedvirtualnetworkreference)
 * **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
 * **type**: 'Managed' (Required)
 * **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required)
@@ -518,9 +520,15 @@
 
 ## Managed
 ### Properties
+* **managedVirtualNetwork**: [ManagedVirtualNetworkReference](#managedvirtualnetworkreference)
 * **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
 * **type**: 'Managed' (Required)
 * **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required)
+
+## ManagedVirtualNetworkReference
+### Properties
+* **referenceName**: string (Required)
+* **type**: string (Required)
 
 ## ManagedIntegrationRuntimeTypeProperties
 ### Properties
@@ -692,11 +700,11 @@
 * **isActiveCMK**: bool
 * **keyVaultUrl**: string
 
-## schemas:129_properties
+## schemas:130_properties
 ### Properties
-* **grantSqlControlToManagedIdentity**: [schemas:129_properties_grantSqlControlToManagedIdentity](#schemas129propertiesgrantsqlcontroltomanagedidentity)
+* **grantSqlControlToManagedIdentity**: [schemas:130_properties_grantSqlControlToManagedIdentity](#schemas130propertiesgrantsqlcontroltomanagedidentity)
 
-## schemas:129_properties_grantSqlControlToManagedIdentity
+## schemas:130_properties_grantSqlControlToManagedIdentity
 ### Properties
 * **actualState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Unknown' (ReadOnly)
 * **desiredState**: 'Disabled' | 'Enabled'
@@ -796,7 +804,7 @@
 * **duration**: string
 * **startTime**: string
 
-## schemas:28_properties
+## schemas:29_properties
 ### Properties
 * **enabled**: bool
 * **syncIntervalInMinutes**: int

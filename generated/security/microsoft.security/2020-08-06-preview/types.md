@@ -39,6 +39,7 @@
 ## IotDefenderSettingsProperties
 ### Properties
 * **deviceQuota**: int (Required)
+* **onboardingKind**: 'Default' | 'MigratedToAzure' (Required)
 * **sentinelWorkspaceResourceIds**: string[] (Required)
 
 ## IotSensorProperties
@@ -48,6 +49,7 @@
 * **dynamicLearning**: bool (ReadOnly)
 * **learningMode**: bool (ReadOnly)
 * **sensorStatus**: 'Disconnected' | 'Ok' | 'Unavailable' (ReadOnly)
+* **sensorType**: 'Enterprise' | 'Ot'
 * **sensorVersion**: string (ReadOnly)
 * **tiAutomaticUpdates**: bool
 * **tiStatus**: 'Failed' | 'InProgress' | 'Ok' | 'UpdateAvailable' (ReadOnly)

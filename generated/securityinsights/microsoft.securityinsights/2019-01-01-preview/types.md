@@ -139,6 +139,16 @@
 * **kind**: 'MicrosoftDefenderAdvancedThreatProtection' (Required)
 * **properties**: [MDATPDataConnectorProperties](#mdatpdataconnectorproperties)
 
+### MicrosoftThreatIntelligence
+#### Properties
+* **kind**: 'MicrosoftThreatIntelligence' (Required)
+* **properties**: [MSTIDataConnectorProperties](#mstidataconnectorproperties)
+
+### MicrosoftThreatProtection
+#### Properties
+* **kind**: 'MicrosoftThreatProtection' (Required)
+* **properties**: [MTPDataConnectorProperties](#mtpdataconnectorproperties)
+
 ### Office365
 #### Properties
 * **kind**: 'Office365' (Required)
@@ -208,6 +218,11 @@
 #### Properties
 * **kind**: 'EyesOn' (Required)
 * **properties**: [EyesOnSettingsProperties](#eyesonsettingsproperties)
+
+### IPSyncer
+#### Properties
+* **kind**: 'IPSyncer' (Required)
+* **properties**: [IPSyncerSettingsProperties](#ipsyncersettingsproperties)
 
 ### Ueba
 #### Properties
@@ -351,8 +366,8 @@
 
 ## ActionRequestProperties
 ### Properties
-* **logicAppResourceId**: string
-* **triggerUri**: string (WriteOnly)
+* **logicAppResourceId**: string (Required)
+* **triggerUri**: string (Required, WriteOnly)
 * **workflowId**: string (ReadOnly)
 
 ## BookmarkProperties
@@ -457,9 +472,9 @@
 
 ## AwsCloudTrailDataConnectorDataTypes
 ### Properties
-* **logs**: [schemas:37_logs](#schemas37logs)
+* **logs**: [schemas:47_logs](#schemas47logs)
 
-## schemas:37_logs
+## schemas:47_logs
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -475,9 +490,9 @@
 
 ## AlertsDataTypeOfDataConnector
 ### Properties
-* **alerts**: [schemas:34_alerts](#schemas34alerts)
+* **alerts**: [schemas:44_alerts](#schemas44alerts)
 
-## schemas:34_alerts
+## schemas:44_alerts
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -513,9 +528,9 @@
 
 ## Dynamics365DataConnectorDataTypes
 ### Properties
-* **dynamics365CdsActivities**: [schemas:82_dynamics365CdsActivities](#schemas82dynamics365cdsactivities)
+* **dynamics365CdsActivities**: [schemas:92_dynamics365CdsActivities](#schemas92dynamics365cdsactivities)
 
-## schemas:82_dynamics365CdsActivities
+## schemas:92_dynamics365CdsActivities
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -531,10 +546,10 @@
 
 ## MCASDataConnectorDataTypes
 ### Properties
-* **alerts**: [schemas:34_alerts](#schemas34alerts)
-* **discoveryLogs**: [schemas:155_discoveryLogs](#schemas155discoverylogs)
+* **alerts**: [schemas:44_alerts](#schemas44alerts)
+* **discoveryLogs**: [schemas:166_discoveryLogs](#schemas166discoverylogs)
 
-## schemas:155_discoveryLogs
+## schemas:166_discoveryLogs
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -548,6 +563,44 @@
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector)
 * **tenantId**: string
 
+## MicrosoftThreatIntelligence
+### Properties
+* **kind**: 'MicrosoftThreatIntelligence' (Required)
+* **properties**: [MSTIDataConnectorProperties](#mstidataconnectorproperties)
+
+## MSTIDataConnectorProperties
+### Properties
+* **dataTypes**: [MSTIDataConnectorDataTypes](#mstidataconnectordatatypes)
+* **tenantId**: string
+
+## MSTIDataConnectorDataTypes
+### Properties
+* **bingSafetyPhishingURL**: [schemas:12_bingSafetyPhishingURL](#schemas12bingsafetyphishingurl)
+* **microsoftEmergingThreatFeed**: [schemas:12_bingSafetyPhishingURL](#schemas12bingsafetyphishingurl)
+
+## schemas:12_bingSafetyPhishingURL
+### Properties
+* **lookbackPeriod**: string
+* **state**: 'Disabled' | 'Enabled'
+
+## MicrosoftThreatProtection
+### Properties
+* **kind**: 'MicrosoftThreatProtection' (Required)
+* **properties**: [MTPDataConnectorProperties](#mtpdataconnectorproperties)
+
+## MTPDataConnectorProperties
+### Properties
+* **dataTypes**: [MTPDataConnectorDataTypes](#mtpdataconnectordatatypes)
+* **tenantId**: string
+
+## MTPDataConnectorDataTypes
+### Properties
+* **incidents**: [schemas:17_incidents](#schemas17incidents)
+
+## schemas:17_incidents
+### Properties
+* **state**: 'Disabled' | 'Enabled'
+
 ## Office365
 ### Properties
 * **kind**: 'Office365' (Required)
@@ -560,19 +613,19 @@
 
 ## OfficeDataConnectorDataTypes
 ### Properties
-* **exchange**: [schemas:177_exchange](#schemas177exchange)
-* **sharePoint**: [schemas:177_sharePoint](#schemas177sharepoint)
-* **teams**: [schemas:177_teams](#schemas177teams)
+* **exchange**: [schemas:188_exchange](#schemas188exchange)
+* **sharePoint**: [schemas:188_sharePoint](#schemas188sharepoint)
+* **teams**: [schemas:188_teams](#schemas188teams)
 
-## schemas:177_exchange
+## schemas:188_exchange
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
-## schemas:177_sharePoint
+## schemas:188_sharePoint
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
-## schemas:177_teams
+## schemas:188_teams
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -597,6 +650,8 @@
 * **dataTypes**: [TiTaxiiDataConnectorDataTypes](#titaxiidataconnectordatatypes)
 * **friendlyName**: string
 * **password**: string
+* **pollingFrequency**: 'OnceADay' | 'OnceAMinute' | 'OnceAnHour'
+* **taxiiLookbackPeriod**: string
 * **taxiiServer**: string
 * **tenantId**: string
 * **userName**: string
@@ -604,9 +659,9 @@
 
 ## TiTaxiiDataConnectorDataTypes
 ### Properties
-* **taxiiClient**: [schemas:213_taxiiClient](#schemas213taxiiclient)
+* **taxiiClient**: [schemas:224_taxiiClient](#schemas224taxiiclient)
 
-## schemas:213_taxiiClient
+## schemas:224_taxiiClient
 ### Properties
 * **state**: 'Disabled' | 'Enabled'
 
@@ -684,6 +739,15 @@
 ### Properties
 * **isEnabled**: bool (ReadOnly)
 
+## IPSyncer
+### Properties
+* **kind**: 'IPSyncer' (Required)
+* **properties**: [IPSyncerSettingsProperties](#ipsyncersettingsproperties)
+
+## IPSyncerSettingsProperties
+### Properties
+* **isEnabled**: bool (ReadOnly)
+
 ## Ueba
 ### Properties
 * **kind**: 'Ueba' (Required)
@@ -699,11 +763,13 @@
 * **confidence**: int (WriteOnly)
 * **created**: string (WriteOnly)
 * **createdByRef**: string (WriteOnly)
+* **defanged**: bool (WriteOnly)
 * **description**: string (WriteOnly)
 * **displayName**: string (WriteOnly)
 * **extensions**: [Dictionary<string,Object>](#dictionarystringobject) (WriteOnly)
 * **externalId**: string (WriteOnly)
-* **externalReferences**: string[] (WriteOnly)
+* **externalLastUpdatedTimeUtc**: string (WriteOnly)
+* **externalReferences**: [ThreatIntelligenceExternalReference](#threatintelligenceexternalreference)[] (WriteOnly)
 * **friendlyName**: string (ReadOnly, WriteOnly)
 * **granularMarkings**: [ThreatIntelligenceGranularMarkingModel](#threatintelligencegranularmarkingmodel)[] (WriteOnly)
 * **indicatorTypes**: string[] (WriteOnly)
@@ -712,9 +778,11 @@
 * **language**: string (WriteOnly)
 * **lastUpdatedTimeUtc**: string (WriteOnly)
 * **modified**: string (WriteOnly)
+* **objectMarkingRefs**: string[] (WriteOnly)
 * **parsedPattern**: [ThreatIntelligenceParsedPattern](#threatintelligenceparsedpattern)[] (WriteOnly)
 * **pattern**: string (WriteOnly)
 * **patternType**: string (WriteOnly)
+* **patternVersion**: string (WriteOnly)
 * **revoked**: bool (WriteOnly)
 * **source**: string (WriteOnly)
 * **threatIntelligenceTags**: string[] (WriteOnly)
@@ -731,6 +799,19 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## ThreatIntelligenceExternalReference
+### Properties
+* **description**: string (WriteOnly)
+* **externalId**: string (WriteOnly)
+* **hashes**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
+* **sourceName**: string (WriteOnly)
+* **url**: string (WriteOnly)
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ThreatIntelligenceGranularMarkingModel
 ### Properties

@@ -164,7 +164,21 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned'
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
+* **userAssignedIdentities**: [Dictionary<string,Schemas35Properties>](#dictionarystringschemas35properties)
+
+## Dictionary<string,Schemas35Properties>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [schemas:35_properties](#schemas35properties)
+
+## schemas:35_properties
+### Properties
+* **nodeConfiguration**: [DscNodeConfigurationAssociationProperty](#dscnodeconfigurationassociationproperty)
+
+## DscNodeConfigurationAssociationProperty
+### Properties
+* **name**: string
 
 ## AutomationAccountCreateOrUpdateProperties
 ### Properties
@@ -174,14 +188,19 @@
 * **lastModifiedBy**: string (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
-* **publicNetworkAccess**: bool (ReadOnly)
+* **publicNetworkAccess**: bool
 * **sku**: [Sku](#sku)
 * **state**: 'Ok' | 'Suspended' | 'Unavailable' (ReadOnly)
 
 ## EncryptionProperties
 ### Properties
+* **identity**: [schemas:95_identity](#schemas95identity)
 * **keySource**: 'Microsoft.Automation' | 'Microsoft.Keyvault'
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
+
+## schemas:95_identity
+### Properties
+* **userAssignedIdentity**: any
 
 ## KeyVaultProperties
 ### Properties

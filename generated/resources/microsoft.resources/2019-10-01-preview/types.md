@@ -25,7 +25,7 @@
 
 ## ManagedServiceIdentity
 ### Properties
-* **tenantId**: string
+* **tenantId**: string (ReadOnly)
 * **type**: 'UserAssigned'
 * **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity)
 

@@ -10,6 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DomainProperties](#domainproperties)
 * **sku**: [ResourceSku](#resourcesku)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant)
 
@@ -29,6 +30,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [DomainTopicProperties](#domaintopicproperties) (ReadOnly)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.EventGrid/domains/topics' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.EventGrid/eventSubscriptions@2020-10-15-preview
@@ -120,6 +122,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [TopicProperties](#topicproperties)
 * **sku**: [ResourceSku](#resourcesku)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant)
 
@@ -156,7 +159,7 @@
 * **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema'
 * **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping)
 * **metricResourceId**: string (ReadOnly)
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 
@@ -224,6 +227,15 @@
 ## ResourceSku
 ### Properties
 * **name**: 'Basic' | 'Premium'
+
+## systemData
+### Properties
+* **createdAt**: string
+* **createdBy**: string
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+* **lastModifiedAt**: string
+* **lastModifiedBy**: string
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
 ## Dictionary<string,String>
 ### Properties
@@ -638,15 +650,6 @@
 * **eventTimeToLiveInMinutes**: int
 * **maxDeliveryAttempts**: int
 
-## systemData
-### Properties
-* **createdAt**: string
-* **createdBy**: string
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
-* **lastModifiedAt**: string
-* **lastModifiedBy**: string
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
-
 ## PartnerNamespaceProperties
 ### Properties
 * **endpoint**: string (ReadOnly)
@@ -728,7 +731,7 @@
 * **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema'
 * **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping)
 * **metricResourceId**: string (ReadOnly)
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 

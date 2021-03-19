@@ -6,9 +6,10 @@
 * **apiVersion**: '2020-10-30-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: [EnterprisePolicyIdentity](#enterprisepolicyidentity)
-* **location**: string (ReadOnly)
+* **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [Properties](#properties)
+* **systemData**: [systemData](#systemdata)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.PowerPlatform/enterprisePolicies' (ReadOnly, DeployTimeConstant)
 
@@ -17,9 +18,9 @@
 ### Properties
 * **apiVersion**: '2020-10-30-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
+* **systemData**: [systemData](#systemdata)
 * **type**: 'Microsoft.PowerPlatform/enterprisePolicies/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.PowerPlatform/enterprisePolicies/subnets@2020-10-30-preview
@@ -27,9 +28,9 @@
 ### Properties
 * **apiVersion**: '2020-10-30-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [SubnetProperties](#subnetproperties) (ReadOnly)
+* **systemData**: [systemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.PowerPlatform/enterprisePolicies/subnets' (ReadOnly, DeployTimeConstant)
 
 ## EnterprisePolicyIdentity
@@ -40,11 +41,10 @@
 
 ## Properties
 ### Properties
-* **encryption**: [schemas:1_encryption](#schemas1encryption)
-* **lockbox**: [schemas:1_lockbox](#schemas1lockbox)
-* **systemData**: [systemData](#systemdata)
+* **encryption**: [schemas:2_encryption](#schemas2encryption)
+* **lockbox**: [schemas:2_lockbox](#schemas2lockbox)
 
-## schemas:1_encryption
+## schemas:2_encryption
 ### Properties
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
 
@@ -59,7 +59,7 @@
 * **name**: string
 * **version**: string
 
-## schemas:1_lockbox
+## schemas:2_lockbox
 ### Properties
 * **status**: 'Disabled' | 'Enabled' | 'NotConfigured'
 
@@ -97,7 +97,6 @@
 ### Properties
 * **status**: 'Disabled' | 'Enabled' | 'NotConfigured' (ReadOnly)
 * **subnet**: [SubnetEndpointProperty](#subnetendpointproperty) (ReadOnly)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
 * **vnetid**: string (ReadOnly)
 
 ## SubnetEndpointProperty

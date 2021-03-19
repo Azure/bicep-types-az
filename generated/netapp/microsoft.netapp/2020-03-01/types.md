@@ -86,7 +86,7 @@
 * **exportPolicy**: [schemas:21_exportPolicy](#schemas21exportpolicy)
 * **fileSystemId**: string (ReadOnly)
 * **isRestoring**: bool
-* **mountTargets**: [mountTargetProperties](#mounttargetproperties)[]
+* **mountTargets**: [mountTargetProperties](#mounttargetproperties)[] (ReadOnly)
 * **protocolTypes**: string[]
 * **provisioningState**: string (ReadOnly)
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra'

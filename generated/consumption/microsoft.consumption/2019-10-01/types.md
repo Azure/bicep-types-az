@@ -16,6 +16,7 @@
 * **category**: string (Required)
 * **currentSpend**: [CurrentSpend](#currentspend) (ReadOnly)
 * **filter**: [BudgetFilter](#budgetfilter)
+* **forecastSpend**: [ForecastSpend](#forecastspend) (ReadOnly)
 * **notifications**: [Dictionary<string,Notification>](#dictionarystringnotification)
 * **timeGrain**: 'Annually' | 'BillingAnnual' | 'BillingMonth' | 'BillingQuarter' | 'Monthly' | 'Quarterly' (Required)
 * **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required)
@@ -42,6 +43,11 @@
 * **name**: string (Required)
 * **operator**: string (Required)
 * **values**: string[] (Required)
+
+## ForecastSpend
+### Properties
+* **amount**: int (ReadOnly)
+* **unit**: string (ReadOnly)
 
 ## Dictionary<string,Notification>
 ### Properties
