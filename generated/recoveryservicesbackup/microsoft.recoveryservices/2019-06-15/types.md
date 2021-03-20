@@ -7,7 +7,7 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'vaultconfig' (Required, DeployTimeConstant)
 * **properties**: [BackupResourceVaultConfig](#backupresourcevaultconfig)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupconfig' (ReadOnly, DeployTimeConstant)

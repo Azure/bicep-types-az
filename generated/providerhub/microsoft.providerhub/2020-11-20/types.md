@@ -43,7 +43,7 @@
 * **contents**: [OperationsDefinition](#operationsdefinition)[] (Required, WriteOnly)
 * **error**: [schemas:10_error](#schemas10error) (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **type**: 'Microsoft.ProviderHub/providerRegistrations/operations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations@2020-11-20

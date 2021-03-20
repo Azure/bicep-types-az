@@ -38,7 +38,7 @@
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'Series8000'
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [AlertNotificationProperties](#alertnotificationproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/alertSettings' (ReadOnly, DeployTimeConstant)
 
@@ -68,7 +68,7 @@
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'Series8000'
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [TimeSettingsProperties](#timesettingsproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/timeSettings' (ReadOnly, DeployTimeConstant)
 
@@ -99,7 +99,7 @@
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: 'Series8000'
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'vaultExtendedInfo' (Required, DeployTimeConstant)
 * **properties**: [ManagerExtendedInfoProperties](#managerextendedinfoproperties)
 * **type**: 'Microsoft.StorSimple/managers/extendedInformation' (ReadOnly, DeployTimeConstant)
 

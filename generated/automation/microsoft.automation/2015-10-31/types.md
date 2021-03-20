@@ -126,6 +126,36 @@
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.Automation/automationAccounts/runbooks' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Automation/automationAccounts/runbooks/draft@2015-10-31
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: name
+### Base Properties
+### Microsoft.Automation/automationAccounts/runbooks/draft
+#### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'content' (Required, DeployTimeConstant)
+* **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Automation/automationAccounts/runbooks/draft
+#### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **creationTime**: string (ReadOnly)
+* **endTime**: string (ReadOnly)
+* **exception**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **lastModifiedTime**: string (ReadOnly)
+* **lastStatusModifiedTime**: string (ReadOnly)
+* **logActivityTrace**: int (ReadOnly)
+* **name**: 'testJob' (Required, DeployTimeConstant)
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **runOn**: string
+* **startTime**: string (ReadOnly)
+* **status**: string (ReadOnly)
+* **statusDetails**: string (ReadOnly)
+* **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant)
+
+
 ## Resource Microsoft.Automation/automationAccounts/schedules@2015-10-31
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -432,6 +462,36 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [RunbookParameter](#runbookparameter)
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Automation/automationAccounts/runbooks/draft
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'content' (Required, DeployTimeConstant)
+* **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Automation/automationAccounts/runbooks/draft
+### Properties
+* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant)
+* **creationTime**: string (ReadOnly)
+* **endTime**: string (ReadOnly)
+* **exception**: string (ReadOnly)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **lastModifiedTime**: string (ReadOnly)
+* **lastStatusModifiedTime**: string (ReadOnly)
+* **logActivityTrace**: int (ReadOnly)
+* **name**: 'testJob' (Required, DeployTimeConstant)
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
+* **runOn**: string
+* **startTime**: string (ReadOnly)
+* **status**: string (ReadOnly)
+* **statusDetails**: string (ReadOnly)
+* **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant)
 
 ## Dictionary<string,String>
 ### Properties
