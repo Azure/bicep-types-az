@@ -7,4 +7,4 @@ https://aka.ms/autorest
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
 WARNING: Skipping path '/subscriptions/{subscriptionId}': Unable to locate '/providers/' segment
-[4.78 s] Generation Complete
+[4.05 s] Generation Complete

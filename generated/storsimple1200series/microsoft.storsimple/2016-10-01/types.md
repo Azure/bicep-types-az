@@ -36,7 +36,7 @@
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [AlertSettingsProperties](#alertsettingsproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/devices/alertSettings' (ReadOnly, DeployTimeConstant)
 
@@ -100,7 +100,7 @@
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'vaultExtendedInfo' (Required, DeployTimeConstant)
 * **properties**: [ManagerExtendedInfoProperties](#managerextendedinfoproperties) (Required)
 * **type**: 'Microsoft.StorSimple/managers/extendedInformation' (ReadOnly, DeployTimeConstant)
 

@@ -214,7 +214,7 @@
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'policy' (Required, DeployTimeConstant)
 * **type**: 'Microsoft.ApiManagement/service/tenant' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.ApiManagement/service/users@2016-10-10

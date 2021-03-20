@@ -14,7 +14,7 @@
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [CreateOrUpdateSettingsProperties](#createorupdatesettingsproperties)
 * **type**: 'Microsoft.Management/managementGroups/settings' (ReadOnly, DeployTimeConstant)
 

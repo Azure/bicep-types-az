@@ -270,6 +270,35 @@
 * **properties**: [PolicyContractProperties](#policycontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/policies' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.ApiManagement/service/portalsettings@2018-01-01
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: name
+### Base Properties
+### Microsoft.ApiManagement/service/portalsettings
+#### Properties
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'delegation' (Required, DeployTimeConstant)
+* **properties**: [PortalDelegationSettingsProperties](#portaldelegationsettingsproperties)
+* **type**: 'Microsoft.ApiManagement/service/portalsettings' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.ApiManagement/service/portalsettings
+#### Properties
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'signin' (Required, DeployTimeConstant)
+* **properties**: [PortalSigninSettingProperties](#portalsigninsettingproperties)
+* **type**: 'Microsoft.ApiManagement/service/portalsettings' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.ApiManagement/service/portalsettings
+#### Properties
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'signup' (Required, DeployTimeConstant)
+* **properties**: [PortalSignupSettingsProperties](#portalsignupsettingsproperties)
+* **type**: 'Microsoft.ApiManagement/service/portalsettings' (ReadOnly, DeployTimeConstant)
+
+
 ## Resource Microsoft.ApiManagement/service/products@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -747,6 +776,60 @@
 * **description**: string
 * **displayName**: string (Required)
 * **metadataEndpoint**: string (Required)
+
+## Microsoft.ApiManagement/service/portalsettings
+### Properties
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'delegation' (Required, DeployTimeConstant)
+* **properties**: [PortalDelegationSettingsProperties](#portaldelegationsettingsproperties)
+* **type**: 'Microsoft.ApiManagement/service/portalsettings' (ReadOnly, DeployTimeConstant)
+
+## PortalDelegationSettingsProperties
+### Properties
+* **subscriptions**: [SubscriptionsDelegationSettingsProperties](#subscriptionsdelegationsettingsproperties)
+* **url**: string
+* **userRegistration**: [RegistrationDelegationSettingsProperties](#registrationdelegationsettingsproperties)
+* **validationKey**: string
+
+## SubscriptionsDelegationSettingsProperties
+### Properties
+* **enabled**: bool
+
+## RegistrationDelegationSettingsProperties
+### Properties
+* **enabled**: bool
+
+## Microsoft.ApiManagement/service/portalsettings
+### Properties
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'signin' (Required, DeployTimeConstant)
+* **properties**: [PortalSigninSettingProperties](#portalsigninsettingproperties)
+* **type**: 'Microsoft.ApiManagement/service/portalsettings' (ReadOnly, DeployTimeConstant)
+
+## PortalSigninSettingProperties
+### Properties
+* **enabled**: bool
+
+## Microsoft.ApiManagement/service/portalsettings
+### Properties
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **name**: 'signup' (Required, DeployTimeConstant)
+* **properties**: [PortalSignupSettingsProperties](#portalsignupsettingsproperties)
+* **type**: 'Microsoft.ApiManagement/service/portalsettings' (ReadOnly, DeployTimeConstant)
+
+## PortalSignupSettingsProperties
+### Properties
+* **enabled**: bool
+* **termsOfService**: [TermsOfServiceProperties](#termsofserviceproperties)
+
+## TermsOfServiceProperties
+### Properties
+* **consentRequired**: bool
+* **enabled**: bool
+* **text**: string
 
 ## ProductContractProperties
 ### Properties

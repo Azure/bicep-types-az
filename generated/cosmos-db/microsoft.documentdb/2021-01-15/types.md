@@ -41,7 +41,7 @@
 * **apiVersion**: '2021-01-15' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings' (ReadOnly, DeployTimeConstant)
@@ -52,7 +52,7 @@
 * **apiVersion**: '2021-01-15' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings' (ReadOnly, DeployTimeConstant)
@@ -85,7 +85,7 @@
 * **apiVersion**: '2021-01-15' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings' (ReadOnly, DeployTimeConstant)
@@ -96,7 +96,7 @@
 * **apiVersion**: '2021-01-15' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
@@ -129,7 +129,7 @@
 * **apiVersion**: '2021-01-15' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings' (ReadOnly, DeployTimeConstant)
@@ -140,7 +140,7 @@
 * **apiVersion**: '2021-01-15' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
@@ -202,7 +202,7 @@
 * **apiVersion**: '2021-01-15' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings' (ReadOnly, DeployTimeConstant)
@@ -235,7 +235,7 @@
 * **apiVersion**: '2021-01-15' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
@@ -257,7 +257,7 @@
 * **apiVersion**: '2021-01-15' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings' (ReadOnly, DeployTimeConstant)
