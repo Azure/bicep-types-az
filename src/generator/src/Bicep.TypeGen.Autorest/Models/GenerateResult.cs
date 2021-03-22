@@ -8,7 +8,5 @@ namespace Azure.Bicep.TypeGen.Autorest.Models
     public record GenerateResult(
         string ProviderNamespace,
         string ApiVersion,
-        TypeFactory TypeFactory,
-        IReadOnlyList<ResourceDescriptor> ResourceDescriptors
-    );
+        TypeFactory TypeFactory);
 }

@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'current' (Required, DeployTimeConstant)
 * **properties**: [PricingPlanProperties](#pricingplanproperties)
 * **type**: 'microsoft.insights/components/pricingPlans' (ReadOnly, DeployTimeConstant)
 

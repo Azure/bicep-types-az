@@ -30,7 +30,7 @@
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'vaultExtendedInfo' (Required, DeployTimeConstant)
 * **properties**: [VaultExtendedInfo](#vaultextendedinfo)
 * **type**: 'Microsoft.RecoveryServices/vaults/extendedInformation' (ReadOnly, DeployTimeConstant)
 

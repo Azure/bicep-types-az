@@ -9,9 +9,9 @@ INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.
 Processing batch task - {"tag":"schema-powerplatform-2020-10-30-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
-WARNING: Resource type Microsoft.PowerPlatform/enterprisePolicies/subnets under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PowerPlatform/enterprisePolicies/{enterprisePolicyName}/subnets/{subnetName}' has no body defined.
+INFORMATION: Resource type Microsoft.PowerPlatform/enterprisePolicies/subnets under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PowerPlatform/enterprisePolicies/{enterprisePolicyName}/subnets/{subnetName}' has no body defined.
 Processing batch task - {"tag":"schema-powerplatform-2020-10-30-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
-WARNING: Resource type Microsoft.PowerPlatform/enterprisePolicies/subnets under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PowerPlatform/enterprisePolicies/{enterprisePolicyName}/subnets/{subnetName}' has no body defined.
-[9.85 s] Generation Complete
+INFORMATION: Resource type Microsoft.PowerPlatform/enterprisePolicies/subnets under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PowerPlatform/enterprisePolicies/{enterprisePolicyName}/subnets/{subnetName}' has no body defined.
+[8.91 s] Generation Complete

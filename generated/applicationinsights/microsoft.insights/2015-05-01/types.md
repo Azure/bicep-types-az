@@ -18,7 +18,7 @@
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
 * **Content**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'item' (Required, DeployTimeConstant)
 * **Properties**: [ApplicationInsightsComponentAnalyticsItemProperties](#applicationinsightscomponentanalyticsitemproperties)
 * **Scope**: 'shared' | 'user'
 * **TimeCreated**: string (ReadOnly)
@@ -80,7 +80,7 @@
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant)
 * **Content**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'item' (Required, DeployTimeConstant)
 * **Properties**: [ApplicationInsightsComponentAnalyticsItemProperties](#applicationinsightscomponentanalyticsitemproperties)
 * **Scope**: 'shared' | 'user'
 * **TimeCreated**: string (ReadOnly)

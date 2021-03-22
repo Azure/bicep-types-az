@@ -292,4 +292,4 @@ Processing batch task - {"tag":"schema-network-2015-05-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch betwen type segments (2) and name segments (1)
-[4611.67 s] Generation Complete
+[4062.59 s] Generation Complete

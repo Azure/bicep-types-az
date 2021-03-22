@@ -414,6 +414,16 @@
 * [2020-06-01-preview](apimanagement/microsoft.apimanagement/2020-06-01-preview/types.md#resource-microsoftapimanagementserviceportalrevisions2020-06-01-preview)
 * [2020-12-01](apimanagement/microsoft.apimanagement/2020-12-01/types.md#resource-microsoftapimanagementserviceportalrevisions2020-12-01)
 
+### microsoft.apimanagement/service/portalsettings
+* [2017-03-01](apimanagement/microsoft.apimanagement/2017-03-01/types.md#resource-microsoftapimanagementserviceportalsettings2017-03-01)
+* [2018-01-01](apimanagement/microsoft.apimanagement/2018-01-01/types.md#resource-microsoftapimanagementserviceportalsettings2018-01-01)
+* [2018-06-01-preview](apimanagement/microsoft.apimanagement/2018-06-01-preview/types.md#resource-microsoftapimanagementserviceportalsettings2018-06-01-preview)
+* [2019-01-01](apimanagement/microsoft.apimanagement/2019-01-01/types.md#resource-microsoftapimanagementserviceportalsettings2019-01-01)
+* [2019-12-01](apimanagement/microsoft.apimanagement/2019-12-01/types.md#resource-microsoftapimanagementserviceportalsettings2019-12-01)
+* [2019-12-01-preview](apimanagement/microsoft.apimanagement/2019-12-01-preview/types.md#resource-microsoftapimanagementserviceportalsettings2019-12-01-preview)
+* [2020-06-01-preview](apimanagement/microsoft.apimanagement/2020-06-01-preview/types.md#resource-microsoftapimanagementserviceportalsettings2020-06-01-preview)
+* [2020-12-01](apimanagement/microsoft.apimanagement/2020-12-01/types.md#resource-microsoftapimanagementserviceportalsettings2020-12-01)
+
 ### microsoft.apimanagement/service/products
 * [2016-07-07](apimanagement/microsoft.apimanagement/2016-07-07/types.md#resource-microsoftapimanagementserviceproducts2016-07-07)
 * [2016-10-10](apimanagement/microsoft.apimanagement/2016-10-10/types.md#resource-microsoftapimanagementserviceproducts2016-10-10)
@@ -753,6 +763,11 @@
 * [2015-10-31](automation/microsoft.automation/2015-10-31/types.md#resource-microsoftautomationautomationaccountsrunbooks2015-10-31)
 * [2018-06-30](automation/microsoft.automation/2018-06-30/types.md#resource-microsoftautomationautomationaccountsrunbooks2018-06-30)
 * [2019-06-01](automation/microsoft.automation/2019-06-01/types.md#resource-microsoftautomationautomationaccountsrunbooks2019-06-01)
+
+### microsoft.automation/automationaccounts/runbooks/draft
+* [2015-10-31](automation/microsoft.automation/2015-10-31/types.md#resource-microsoftautomationautomationaccountsrunbooksdraft2015-10-31)
+* [2018-06-30](automation/microsoft.automation/2018-06-30/types.md#resource-microsoftautomationautomationaccountsrunbooksdraft2018-06-30)
+* [2019-06-01](automation/microsoft.automation/2019-06-01/types.md#resource-microsoftautomationautomationaccountsrunbooksdraft2019-06-01)
 
 ### microsoft.automation/automationaccounts/schedules
 * [2015-10-31](automation/microsoft.automation/2015-10-31/types.md#resource-microsoftautomationautomationaccountsschedules2015-10-31)
@@ -7411,6 +7426,22 @@
 * [2015-08-01](web/microsoft.web/2015-08-01/types.md#resource-microsoftwebsitesbackups2015-08-01)
 * [2016-08-01](web/microsoft.web/2016-08-01/types.md#resource-microsoftwebsitesbackups2016-08-01)
 
+### microsoft.web/sites/basicpublishingcredentialspolicies
+* [2019-08-01](web/microsoft.web/2019-08-01/types.md#resource-microsoftwebsitesbasicpublishingcredentialspolicies2019-08-01)
+* [2020-06-01](web/microsoft.web/2020-06-01/types.md#resource-microsoftwebsitesbasicpublishingcredentialspolicies2020-06-01)
+* [2020-09-01](web/microsoft.web/2020-09-01/types.md#resource-microsoftwebsitesbasicpublishingcredentialspolicies2020-09-01)
+* [2020-10-01](web/microsoft.web/2020-10-01/types.md#resource-microsoftwebsitesbasicpublishingcredentialspolicies2020-10-01)
+
+### microsoft.web/sites/config
+* [2015-08-01](web/microsoft.web/2015-08-01/types.md#resource-microsoftwebsitesconfig2015-08-01)
+* [2016-08-01](web/microsoft.web/2016-08-01/types.md#resource-microsoftwebsitesconfig2016-08-01)
+* [2018-02-01](web/microsoft.web/2018-02-01/types.md#resource-microsoftwebsitesconfig2018-02-01)
+* [2018-11-01](web/microsoft.web/2018-11-01/types.md#resource-microsoftwebsitesconfig2018-11-01)
+* [2019-08-01](web/microsoft.web/2019-08-01/types.md#resource-microsoftwebsitesconfig2019-08-01)
+* [2020-06-01](web/microsoft.web/2020-06-01/types.md#resource-microsoftwebsitesconfig2020-06-01)
+* [2020-09-01](web/microsoft.web/2020-09-01/types.md#resource-microsoftwebsitesconfig2020-09-01)
+* [2020-10-01](web/microsoft.web/2020-10-01/types.md#resource-microsoftwebsitesconfig2020-10-01)
+
 ### microsoft.web/sites/deployments
 * [2015-08-01](web/microsoft.web/2015-08-01/types.md#resource-microsoftwebsitesdeployments2015-08-01)
 * [2016-08-01](web/microsoft.web/2016-08-01/types.md#resource-microsoftwebsitesdeployments2016-08-01)
@@ -7559,6 +7590,16 @@
 ### microsoft.web/sites/slots/backups
 * [2015-08-01](web/microsoft.web/2015-08-01/types.md#resource-microsoftwebsitesslotsbackups2015-08-01)
 * [2016-08-01](web/microsoft.web/2016-08-01/types.md#resource-microsoftwebsitesslotsbackups2016-08-01)
+
+### microsoft.web/sites/slots/config
+* [2015-08-01](web/microsoft.web/2015-08-01/types.md#resource-microsoftwebsitesslotsconfig2015-08-01)
+* [2016-08-01](web/microsoft.web/2016-08-01/types.md#resource-microsoftwebsitesslotsconfig2016-08-01)
+* [2018-02-01](web/microsoft.web/2018-02-01/types.md#resource-microsoftwebsitesslotsconfig2018-02-01)
+* [2018-11-01](web/microsoft.web/2018-11-01/types.md#resource-microsoftwebsitesslotsconfig2018-11-01)
+* [2019-08-01](web/microsoft.web/2019-08-01/types.md#resource-microsoftwebsitesslotsconfig2019-08-01)
+* [2020-06-01](web/microsoft.web/2020-06-01/types.md#resource-microsoftwebsitesslotsconfig2020-06-01)
+* [2020-09-01](web/microsoft.web/2020-09-01/types.md#resource-microsoftwebsitesslotsconfig2020-09-01)
+* [2020-10-01](web/microsoft.web/2020-10-01/types.md#resource-microsoftwebsitesslotsconfig2020-10-01)
 
 ### microsoft.web/sites/slots/deployments
 * [2015-08-01](web/microsoft.web/2015-08-01/types.md#resource-microsoftwebsitesslotsdeployments2015-08-01)

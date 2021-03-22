@@ -9,8 +9,5 @@ namespace Azure.Bicep.TypeGen.Autorest.Models
         ResourceDescriptor Descriptor,
         Method DeclaringMethod,
         Method? GetMethod
-    )
-    {
-        public ResourceType? Type { get; set; }
-    }
+    );
 }

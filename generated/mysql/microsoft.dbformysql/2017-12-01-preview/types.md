@@ -18,7 +18,7 @@
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'activeDirectory' (Required, DeployTimeConstant)
 * **properties**: [ServerAdministratorProperties](#serveradministratorproperties)
 * **type**: 'Microsoft.DBForMySQL/servers/administrators' (ReadOnly, DeployTimeConstant)
 

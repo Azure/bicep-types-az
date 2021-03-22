@@ -97,6 +97,108 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
             return definitionsByName.Values.ToList();
         }
 
+        private TypeBase? ProcessResourceBody(string fullyQualifiedType, ResourceDefinition resource)
+        {
+            var (success, failureReason, resourceName) = ParseNameSchema(resource, definition);
+            if (!success)
+            {
+                CodeModelProcessor.LogWarning($"Skipping resource type {fullyQualifiedType} under path '{resource.DeclaringMethod.Url}': {failureReason}");
+                return null;
+            }
+
+            var descriptor = resource.Descriptor;
+
+            var putBody = resource.DeclaringMethod.Body?.ModelType as CompositeType;
+            var getBody = (resource.GetMethod?.Responses.GetValueOrDefault(HttpStatusCode.OK)?.Body as CompositeType) ?? 
+                (resource.GetMethod?.DefaultResponse?.Body as CompositeType) ??
+                putBody;
+
+            var resourceProperties = GetStandardizedResourceProperties(resource.Descriptor, resourceName!);
+            TypeBase bodyType;
+            if (putBody is not null)
+            {
+                bodyType = CreateObject(descriptor.FullyQualifiedType, putBody, resourceProperties);
+            }
+            else
+            {
+                CodeModelProcessor.LogMessage($"Resource type {fullyQualifiedType} under path '{resource.DeclaringMethod.Url}' has no body defined.");
+                bodyType = factory.Create(() => new ObjectType(descriptor.FullyQualifiedType, resourceProperties, null));
+            }
+
+            foreach (var (propertyName, putProperty, getProperty) in GetCompositeTypeProperties(putBody, getBody, true))
+            {
+                if (resourceProperties.ContainsKey(propertyName))
+                {
+                    continue;
+                }
+
+                var propertyDefinition = ParseType(putProperty?.ModelType, getProperty?.ModelType);
+                if (propertyDefinition != null)
+                {
+                    var flags = ParsePropertyFlags(putProperty, getProperty);
+                    resourceProperties[propertyName] = CreateObjectProperty(propertyDefinition, flags);
+                }
+            }
+
+            if (bodyType is DiscriminatedObjectType discriminatedObjectType)
+            {
+                HandlePolymorphicType(discriminatedObjectType, putBody, getBody);
+            }
+
+            return bodyType;
+        }
+
+        private (ResourceDescriptor descriptor, TypeBase bodyType)? ProcessResource(string fullyQualifiedType, IReadOnlyList<ResourceDefinition> resources)
+        {
+            if (resources.Count > 1)
+            {
+                foreach (var resource in resources)
+                {
+                    if (resource.Descriptor.ConstantName is null)
+                    {
+                        CodeModelProcessor.LogWarning($"Skipping resource type {fullyQualifiedType} under path '{resources[0].DeclaringMethod.Url}': Found multiple definitions for the same type");
+                        return null;
+                    }
+                }
+
+                var definitionByConstantName = resources.ToDictionary(x => x.Descriptor.ConstantName!);
+                var polymorphicBodies = new Dictionary<string, ITypeReference>();
+                foreach (var resource in resources)
+                {
+                    // NOTE: pass info to skip processing id, type, apiVersion as we want those in the base properties
+                    // Also need to set name to literal type, not generic string
+                    var bodyType = ProcessResourceBody(fullyQualifiedType, resource);
+                    if (bodyType is null)
+                    {
+                        return null;
+                    }
+
+                    polymorphicBodies[resource.Descriptor.ConstantName!] = factory.GetReference(bodyType);
+                }
+
+                var discriminatedBodyType = factory.Create(() => new DiscriminatedObjectType(
+                    name: fullyQualifiedType,
+                    discriminator: "name",
+                    baseProperties: new Dictionary<string, ObjectProperty>(),
+                    elements: polymorphicBodies));
+
+                var descriptor = resources.First().Descriptor with { ConstantName = null };
+
+                return (descriptor, discriminatedBodyType);
+            }
+            else
+            {
+                var resource = resources.Single();
+                var bodyType = ProcessResourceBody(fullyQualifiedType, resource);
+                if (bodyType is null)
+                {
+                    return null;
+                }
+
+                return (resource.Descriptor, bodyType);
+            }
+        }
+
         private GenerateResult Process()
         {
             var definitionsByDescriptor = definition.ResourceDefinitions
@@ -105,71 +207,19 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
 
             foreach (var (fullyQualifiedType, definitions) in definitionsByDescriptor)
             {
-                if (definitions.Count > 1)
+                if (ProcessResource(fullyQualifiedType, definitions) is not {} output)
                 {
-                    CodeModelProcessor.LogWarning($"Skipping resource type {fullyQualifiedType} under path '{definitions[0].DeclaringMethod.Url}': Found multiple definitions for the same type");
                     continue;
                 }
 
-                var resource = definitions.Single();
-                var descriptor = resource.Descriptor;
-
-                var putBody = resource.DeclaringMethod.Body?.ModelType as CompositeType;
-                var getBody = (resource.GetMethod?.Responses.GetValueOrDefault(HttpStatusCode.OK)?.Body as CompositeType) ?? 
-                    (resource.GetMethod?.DefaultResponse?.Body as CompositeType) ??
-                    putBody;
-
-                var (success, failureReason, resourceName) = ParseNameSchema(resource, definition);
-                if (!success)
-                {
-                    CodeModelProcessor.LogWarning($"Skipping resource type {fullyQualifiedType} under path '{resource.DeclaringMethod.Url}': {failureReason}");
-                    continue;
-                }
-
-                var resourceProperties = GetStandardizedResourceProperties(resource.Descriptor, resourceName!);
-                TypeBase resourceDefinition;
-                if (putBody != null)
-                {
-                    resourceDefinition = CreateObject(descriptor.FullyQualifiedType, putBody, resourceProperties);
-                }
-                else
-                {
-                    CodeModelProcessor.LogWarning($"Resource type {fullyQualifiedType} under path '{resource.DeclaringMethod.Url}' has no body defined.");
-                    resourceDefinition = factory.Create(() => new ObjectType(descriptor.FullyQualifiedType, resourceProperties, null));
-                }
-
-                resource.Type = factory.Create(() => new ResourceType(
-                    $"{descriptor.FullyQualifiedType}@{descriptor.ApiVersion}",
-                    descriptor.ScopeType,
-                    factory.GetReference(resourceDefinition)
+                factory.Create(() => new ResourceType(
+                    $"{output.descriptor.FullyQualifiedType}@{output.descriptor.ApiVersion}",
+                    output.descriptor.ScopeType,
+                    factory.GetReference(output.bodyType)
                 ));
-
-                foreach (var (propertyName, putProperty, getProperty) in GetCompositeTypeProperties(putBody, getBody, true))
-                {
-                    if (resourceProperties.ContainsKey(propertyName))
-                    {
-                        continue;
-                    }
-
-                    var propertyDefinition = ParseType(putProperty?.ModelType, getProperty?.ModelType);
-                    if (propertyDefinition != null)
-                    {
-                        var flags = ParsePropertyFlags(putProperty, getProperty);
-                        resourceProperties[propertyName] = CreateObjectProperty(propertyDefinition, flags);
-                    }
-                }
-
-                if (resourceDefinition is DiscriminatedObjectType discriminatedObjectType)
-                {
-                    HandlePolymorphicType(discriminatedObjectType, putBody, getBody);
-                }
             }
 
-            return new GenerateResult(
-                definition.Namespace,
-                definition.ApiVersion,
-                factory,
-                definition.ResourceDefinitions.Select(x => x.Descriptor).ToList());
+            return new GenerateResult(definition.Namespace, definition.ApiVersion, factory);
         }
 
         private (bool success, string failureReason, TypeBase? name) ParseNameSchema(ResourceDefinition resource, ProviderDefinition providerDefinition)
@@ -204,7 +254,8 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
             }
 
             // Resource name is a constant
-            return (true, string.Empty, CreateConstantResourceName(resource.Descriptor, resNameParam));
+            var constantNameType = factory.Create(() => new StringLiteralType(resNameParam));
+            return (true, string.Empty, constantNameType);
         }
 
         private ObjectPropertyFlags ParsePropertyFlags(Property? putProperty, Property? getProperty)
@@ -462,16 +513,6 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                     Debug.Assert(false, "Unrecognized known property type: " + combinedType.KnownPrimaryType);
                     return builtInTypes[BuiltInTypeKind.Any];
             }
-        }
-
-        private TypeBase CreateConstantResourceName(ResourceDescriptor descriptor, string nameValue)
-        {
-            if (descriptor.IsRootType)
-            {
-                return factory.Create(() => new StringLiteralType(nameValue));
-            }
-
-            return builtInTypes[BuiltInTypeKind.String];
         }
 
         private TypeBase ParseSequenceType(SequenceType? putType, SequenceType? getType)
