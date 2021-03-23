@@ -18,7 +18,7 @@
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'activeDirectory' (Required, DeployTimeConstant)
 * **properties**: [ServerAdministratorProperties](#serveradministratorproperties)
 * **type**: 'Microsoft.DBForPostgreSQL/servers/administrators' (ReadOnly, DeployTimeConstant)
 

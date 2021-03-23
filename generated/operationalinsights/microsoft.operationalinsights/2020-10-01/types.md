@@ -87,8 +87,11 @@
 
 ## WorkspaceProperties
 ### Properties
+* **createdDate**: string (ReadOnly)
 * **customerId**: string (ReadOnly)
+* **features**: [WorkspaceFeatures](#workspacefeatures)
 * **forceCmkForQuery**: bool
+* **modifiedDate**: string (ReadOnly)
 * **privateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating'
 * **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled'
@@ -96,6 +99,11 @@
 * **retentionInDays**: int
 * **sku**: [WorkspaceSku](#workspacesku)
 * **workspaceCapping**: [WorkspaceCapping](#workspacecapping)
+
+## WorkspaceFeatures
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## PrivateLinkScopedResource
 ### Properties

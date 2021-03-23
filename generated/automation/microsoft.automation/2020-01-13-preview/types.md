@@ -164,7 +164,18 @@
 ### Properties
 * **principalId**: string (ReadOnly)
 * **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned'
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned'
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities)
+
+## IdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties](#componentssgqdofschemasidentitypropertiesuserassignedidentitiesadditionalproperties)
+
+## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
+### Properties
+* **clientId**: string (ReadOnly)
+* **principalId**: string (ReadOnly)
 
 ## AutomationAccountCreateOrUpdateProperties
 ### Properties
@@ -174,14 +185,19 @@
 * **lastModifiedBy**: string (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
-* **publicNetworkAccess**: bool (ReadOnly)
+* **publicNetworkAccess**: bool
 * **sku**: [Sku](#sku)
 * **state**: 'Ok' | 'Suspended' | 'Unavailable' (ReadOnly)
 
 ## EncryptionProperties
 ### Properties
+* **identity**: [EncryptionPropertiesIdentity](#encryptionpropertiesidentity)
 * **keySource**: 'Microsoft.Automation' | 'Microsoft.Keyvault'
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
+
+## EncryptionPropertiesIdentity
+### Properties
+* **userAssignedIdentity**: any
 
 ## KeyVaultProperties
 ### Properties

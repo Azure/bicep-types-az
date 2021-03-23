@@ -15,6 +15,7 @@
 ## DedicatedCapacityProperties
 ### Properties
 * **administration**: [DedicatedCapacityAdministrators](#dedicatedcapacityadministrators)
+* **mode**: string (ReadOnly)
 * **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly)
 * **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly)
 

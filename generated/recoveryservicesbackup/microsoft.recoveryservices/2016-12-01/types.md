@@ -19,7 +19,7 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'vaultstorageconfig' (Required, DeployTimeConstant)
 * **properties**: [BackupResourceConfig](#backupresourceconfig)
 * **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupstorageconfig' (ReadOnly, DeployTimeConstant)

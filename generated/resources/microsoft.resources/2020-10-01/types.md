@@ -205,6 +205,7 @@
 
 ## ManagedServiceIdentity
 ### Properties
+* **tenantId**: string (ReadOnly)
 * **type**: 'UserAssigned'
 * **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities)
 

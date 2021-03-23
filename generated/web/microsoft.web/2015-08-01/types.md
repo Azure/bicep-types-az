@@ -43,7 +43,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [WorkerPoolProperties](#workerpoolproperties)
 * **sku**: [SkuDescription](#skudescription)
 * **tags**: [ResourceTags](#resourcetags)
@@ -142,10 +142,125 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'discover' (Required, DeployTimeConstant)
 * **properties**: [RestoreRequestProperties](#restorerequestproperties)
 * **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/backups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/config@2015-08-01
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: name
+
+### Base Properties
+### Microsoft.Web/sites/config
+#### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'appsettings' (Required, DeployTimeConstant)
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/config
+#### Properties
+* **aadClientId**: string
+* **additionalLoginParams**: string[]
+* **allowedAudiences**: string[]
+* **allowedExternalRedirectUrls**: string[]
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **clientId**: string
+* **clientSecret**: string
+* **defaultProvider**: 'AzureActiveDirectory' | 'Facebook' | 'Google' | 'MicrosoftAccount' | 'Twitter'
+* **enabled**: bool
+* **facebookAppId**: string
+* **facebookAppSecret**: string
+* **facebookOAuthScopes**: string[]
+* **googleClientId**: string
+* **googleClientSecret**: string
+* **googleOAuthScopes**: string[]
+* **httpApiPrefixPath**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **issuer**: string
+* **microsoftAccountClientId**: string
+* **microsoftAccountClientSecret**: string
+* **microsoftAccountOAuthScopes**: string[]
+* **name**: 'authsettings' (Required, DeployTimeConstant)
+* **openIdIssuer**: string
+* **tokenRefreshExtensionHours**: int
+* **tokenStoreEnabled**: bool
+* **twitterConsumerKey**: string
+* **twitterConsumerSecret**: string
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage'
+
+### Microsoft.Web/sites/config
+#### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'backup' (Required, DeployTimeConstant)
+* **properties**: [BackupRequestProperties](#backuprequestproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/config
+#### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'connectionstrings' (Required, DeployTimeConstant)
+* **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/config
+#### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'logs' (Required, DeployTimeConstant)
+* **properties**: [SiteLogsConfigProperties](#sitelogsconfigproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/config
+#### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'metadata' (Required, DeployTimeConstant)
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/config
+#### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'slotConfigNames' (Required, DeployTimeConstant)
+* **properties**: [SlotConfigNamesResourceProperties](#slotconfignamesresourceproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/config
+#### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'web' (Required, DeployTimeConstant)
+* **properties**: [SiteConfigProperties](#siteconfigproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
 
 ## Resource Microsoft.Web/sites/deployments@2015-08-01
 * **Valid Scope(s)**: ResourceGroup
@@ -227,10 +342,114 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'discover' (Required, DeployTimeConstant)
 * **properties**: [RestoreRequestProperties](#restorerequestproperties)
 * **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/slots/backups' (ReadOnly, DeployTimeConstant)
+
+## Resource Microsoft.Web/sites/slots/config@2015-08-01
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: name
+
+### Base Properties
+### Microsoft.Web/sites/slots/config
+#### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'appsettings' (Required, DeployTimeConstant)
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/slots/config
+#### Properties
+* **aadClientId**: string
+* **additionalLoginParams**: string[]
+* **allowedAudiences**: string[]
+* **allowedExternalRedirectUrls**: string[]
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **clientId**: string
+* **clientSecret**: string
+* **defaultProvider**: 'AzureActiveDirectory' | 'Facebook' | 'Google' | 'MicrosoftAccount' | 'Twitter'
+* **enabled**: bool
+* **facebookAppId**: string
+* **facebookAppSecret**: string
+* **facebookOAuthScopes**: string[]
+* **googleClientId**: string
+* **googleClientSecret**: string
+* **googleOAuthScopes**: string[]
+* **httpApiPrefixPath**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **issuer**: string
+* **microsoftAccountClientId**: string
+* **microsoftAccountClientSecret**: string
+* **microsoftAccountOAuthScopes**: string[]
+* **name**: 'authsettings' (Required, DeployTimeConstant)
+* **openIdIssuer**: string
+* **tokenRefreshExtensionHours**: int
+* **tokenStoreEnabled**: bool
+* **twitterConsumerKey**: string
+* **twitterConsumerSecret**: string
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage'
+
+### Microsoft.Web/sites/slots/config
+#### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'backup' (Required, DeployTimeConstant)
+* **properties**: [BackupRequestProperties](#backuprequestproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/slots/config
+#### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'connectionstrings' (Required, DeployTimeConstant)
+* **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/slots/config
+#### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'logs' (Required, DeployTimeConstant)
+* **properties**: [SiteLogsConfigProperties](#sitelogsconfigproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/slots/config
+#### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'metadata' (Required, DeployTimeConstant)
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/slots/config
+#### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'web' (Required, DeployTimeConstant)
+* **properties**: [SiteConfigProperties](#siteconfigproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
 
 ## Resource Microsoft.Web/sites/slots/deployments@2015-08-01
 * **Valid Scope(s)**: ResourceGroup
@@ -300,7 +519,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'web' (Required, DeployTimeConstant)
 * **properties**: [SiteSourceControlProperties](#sitesourcecontrolproperties)
 * **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/slots/sourcecontrols' (ReadOnly, DeployTimeConstant)
@@ -336,7 +555,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
 * **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'web' (Required, DeployTimeConstant)
 * **properties**: [SiteSourceControlProperties](#sitesourcecontrolproperties)
 * **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/sourcecontrols' (ReadOnly, DeployTimeConstant)
@@ -848,6 +1067,242 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.Web/sites/config
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'appsettings' (Required, DeployTimeConstant)
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## StringDictionaryProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/config
+### Properties
+* **aadClientId**: string
+* **additionalLoginParams**: string[]
+* **allowedAudiences**: string[]
+* **allowedExternalRedirectUrls**: string[]
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **clientId**: string
+* **clientSecret**: string
+* **defaultProvider**: 'AzureActiveDirectory' | 'Facebook' | 'Google' | 'MicrosoftAccount' | 'Twitter'
+* **enabled**: bool
+* **facebookAppId**: string
+* **facebookAppSecret**: string
+* **facebookOAuthScopes**: string[]
+* **googleClientId**: string
+* **googleClientSecret**: string
+* **googleOAuthScopes**: string[]
+* **httpApiPrefixPath**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **issuer**: string
+* **microsoftAccountClientId**: string
+* **microsoftAccountClientSecret**: string
+* **microsoftAccountOAuthScopes**: string[]
+* **name**: 'authsettings' (Required, DeployTimeConstant)
+* **openIdIssuer**: string
+* **tokenRefreshExtensionHours**: int
+* **tokenStoreEnabled**: bool
+* **twitterConsumerKey**: string
+* **twitterConsumerSecret**: string
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage'
+
+## Microsoft.Web/sites/config
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'backup' (Required, DeployTimeConstant)
+* **properties**: [BackupRequestProperties](#backuprequestproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## BackupRequestProperties
+### Properties
+* **backupSchedule**: [BackupSchedule](#backupschedule)
+* **databases**: [DatabaseBackupSetting](#databasebackupsetting)[]
+* **enabled**: bool
+* **name**: string
+* **storageAccountUrl**: string
+* **type**: 'Clone' | 'Default' | 'Relocation' (Required)
+
+## BackupSchedule
+### Properties
+* **frequencyInterval**: int
+* **frequencyUnit**: 'Day' | 'Hour' (Required)
+* **keepAtLeastOneBackup**: bool
+* **lastExecutionTime**: string
+* **retentionPeriodInDays**: int
+* **startTime**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/config
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'connectionstrings' (Required, DeployTimeConstant)
+* **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## ConnectionStringDictionaryProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ConnStringValueTypePair](#connstringvaluetypepair)
+
+## ConnStringValueTypePair
+### Properties
+* **type**: 'Custom' | 'MySql' | 'SQLAzure' | 'SQLServer' (Required)
+* **value**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/config
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'logs' (Required, DeployTimeConstant)
+* **properties**: [SiteLogsConfigProperties](#sitelogsconfigproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## SiteLogsConfigProperties
+### Properties
+* **applicationLogs**: [ApplicationLogsConfig](#applicationlogsconfig)
+* **detailedErrorMessages**: [EnabledConfig](#enabledconfig)
+* **failedRequestsTracing**: [EnabledConfig](#enabledconfig)
+* **httpLogs**: [HttpLogsConfig](#httplogsconfig)
+
+## ApplicationLogsConfig
+### Properties
+* **azureBlobStorage**: [AzureBlobStorageApplicationLogsConfig](#azureblobstorageapplicationlogsconfig)
+* **azureTableStorage**: [AzureTableStorageApplicationLogsConfig](#azuretablestorageapplicationlogsconfig)
+* **fileSystem**: [FileSystemApplicationLogsConfig](#filesystemapplicationlogsconfig)
+
+## AzureBlobStorageApplicationLogsConfig
+### Properties
+* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning'
+* **retentionInDays**: int
+* **sasUrl**: string
+
+## AzureTableStorageApplicationLogsConfig
+### Properties
+* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning'
+* **sasUrl**: string
+
+## FileSystemApplicationLogsConfig
+### Properties
+* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning'
+
+## EnabledConfig
+### Properties
+* **enabled**: bool
+
+## HttpLogsConfig
+### Properties
+* **azureBlobStorage**: [AzureBlobStorageHttpLogsConfig](#azureblobstoragehttplogsconfig)
+* **fileSystem**: [FileSystemHttpLogsConfig](#filesystemhttplogsconfig)
+
+## AzureBlobStorageHttpLogsConfig
+### Properties
+* **enabled**: bool
+* **retentionInDays**: int
+* **sasUrl**: string
+
+## FileSystemHttpLogsConfig
+### Properties
+* **enabled**: bool
+* **retentionInDays**: int
+* **retentionInMb**: int
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/config
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'metadata' (Required, DeployTimeConstant)
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## StringDictionaryProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/config
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'slotConfigNames' (Required, DeployTimeConstant)
+* **properties**: [SlotConfigNamesResourceProperties](#slotconfignamesresourceproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## SlotConfigNamesResourceProperties
+### Properties
+* **appSettingNames**: string[]
+* **connectionStringNames**: string[]
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/config
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'web' (Required, DeployTimeConstant)
+* **properties**: [SiteConfigProperties](#siteconfigproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## DeploymentProperties
 ### Properties
 * **active**: bool
@@ -918,6 +1373,149 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/slots/config
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'appsettings' (Required, DeployTimeConstant)
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## StringDictionaryProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/slots/config
+### Properties
+* **aadClientId**: string
+* **additionalLoginParams**: string[]
+* **allowedAudiences**: string[]
+* **allowedExternalRedirectUrls**: string[]
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **clientId**: string
+* **clientSecret**: string
+* **defaultProvider**: 'AzureActiveDirectory' | 'Facebook' | 'Google' | 'MicrosoftAccount' | 'Twitter'
+* **enabled**: bool
+* **facebookAppId**: string
+* **facebookAppSecret**: string
+* **facebookOAuthScopes**: string[]
+* **googleClientId**: string
+* **googleClientSecret**: string
+* **googleOAuthScopes**: string[]
+* **httpApiPrefixPath**: string
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **issuer**: string
+* **microsoftAccountClientId**: string
+* **microsoftAccountClientSecret**: string
+* **microsoftAccountOAuthScopes**: string[]
+* **name**: 'authsettings' (Required, DeployTimeConstant)
+* **openIdIssuer**: string
+* **tokenRefreshExtensionHours**: int
+* **tokenStoreEnabled**: bool
+* **twitterConsumerKey**: string
+* **twitterConsumerSecret**: string
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage'
+
+## Microsoft.Web/sites/slots/config
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'backup' (Required, DeployTimeConstant)
+* **properties**: [BackupRequestProperties](#backuprequestproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/slots/config
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'connectionstrings' (Required, DeployTimeConstant)
+* **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## ConnectionStringDictionaryProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ConnStringValueTypePair](#connstringvaluetypepair)
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/slots/config
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'logs' (Required, DeployTimeConstant)
+* **properties**: [SiteLogsConfigProperties](#sitelogsconfigproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/slots/config
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'metadata' (Required, DeployTimeConstant)
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## StringDictionaryProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/slots/config
+### Properties
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **location**: string (Required)
+* **name**: 'web' (Required, DeployTimeConstant)
+* **properties**: [SiteConfigProperties](#siteconfigproperties)
+* **tags**: [ResourceTags](#resourcetags)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
 
 ## ResourceTags
 ### Properties

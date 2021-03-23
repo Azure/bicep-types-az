@@ -7,7 +7,7 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'vaultconfig' (Required, DeployTimeConstant)
 * **properties**: [BackupResourceVaultConfig](#backupresourcevaultconfig)
 * **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupconfig' (ReadOnly, DeployTimeConstant)
@@ -19,7 +19,7 @@
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'backupResourceEncryptionConfig' (Required, DeployTimeConstant)
 * **properties**: [BackupResourceEncryptionConfig](#backupresourceencryptionconfig)
 * **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.RecoveryServices/vaults/backupEncryptionConfigs' (ReadOnly, DeployTimeConstant)

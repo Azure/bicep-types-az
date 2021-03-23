@@ -81,7 +81,7 @@
 * **sslEnforcement**: 'Disabled' | 'Enabled'
 * **storageProfile**: [StorageProfile](#storageprofile)
 * **userVisibleState**: 'Disabled' | 'Dropping' | 'Ready' (ReadOnly)
-* **version**: '5.6' | '5.7'
+* **version**: '10.2' | '10.3'
 ### ServerPropertiesForDefaultCreate
 #### Properties
 * **administratorLogin**: string (Required, WriteOnly)

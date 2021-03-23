@@ -6,12 +6,13 @@
 * **apiVersion**: '2021-01-11' (ReadOnly, DeployTimeConstant)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ServicesResourceIdentity
+* **identity**: [ServicesResourceIdentity](#servicesresourceidentity)
+* **kind**: 'fhir' | 'fhir-R4' | 'fhir-Stu3' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServicesProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: ServicesResourceTags
+* **properties**: [ServicesProperties](#servicesproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [ServicesResourceTags](#servicesresourcetags)
 * **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload/privateEndpointConnections@2021-01-11
@@ -20,8 +21,8 @@
 * **apiVersion**: '2021-01-11' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter@2021-01-11
@@ -30,12 +31,13 @@
 * **apiVersion**: '2021-01-11' (ReadOnly, DeployTimeConstant)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ServicesResourceIdentity
+* **identity**: [ServicesResourceIdentity](#servicesresourceidentity)
+* **kind**: 'fhir' | 'fhir-R4' | 'fhir-Stu3' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServicesProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: ServicesResourceTags
+* **properties**: [ServicesProperties](#servicesproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [ServicesResourceTags](#servicesresourcetags)
 * **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateEndpointConnections@2021-01-11
@@ -44,8 +46,8 @@
 * **apiVersion**: '2021-01-11' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter@2021-01-11
@@ -54,12 +56,13 @@
 * **apiVersion**: '2021-01-11' (ReadOnly, DeployTimeConstant)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ServicesResourceIdentity
+* **identity**: [ServicesResourceIdentity](#servicesresourceidentity)
+* **kind**: 'fhir' | 'fhir-R4' | 'fhir-Stu3' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServicesProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: ServicesResourceTags
+* **properties**: [ServicesProperties](#servicesproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [ServicesResourceTags](#servicesresourcetags)
 * **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateEndpointConnections@2021-01-11
@@ -68,8 +71,8 @@
 * **apiVersion**: '2021-01-11' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI@2021-01-11
@@ -78,12 +81,13 @@
 * **apiVersion**: '2021-01-11' (ReadOnly, DeployTimeConstant)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ServicesResourceIdentity
+* **identity**: [ServicesResourceIdentity](#servicesresourceidentity)
+* **kind**: 'fhir' | 'fhir-R4' | 'fhir-Stu3' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServicesProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: ServicesResourceTags
+* **properties**: [ServicesProperties](#servicesproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [ServicesResourceTags](#servicesresourcetags)
 * **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateEndpointConnections@2021-01-11
@@ -92,8 +96,8 @@
 * **apiVersion**: '2021-01-11' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell@2021-01-11
@@ -102,12 +106,13 @@
 * **apiVersion**: '2021-01-11' (ReadOnly, DeployTimeConstant)
 * **etag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: ServicesResourceIdentity
+* **identity**: [ServicesResourceIdentity](#servicesresourceidentity)
+* **kind**: 'fhir' | 'fhir-R4' | 'fhir-Stu3' (Required)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: ServicesProperties
-* **systemData**: SystemData (ReadOnly)
-* **tags**: ServicesResourceTags
+* **properties**: [ServicesProperties](#servicesproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [ServicesResourceTags](#servicesresourcetags)
 * **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell/privateEndpointConnections@2021-01-11
@@ -116,8 +121,8 @@
 * **apiVersion**: '2021-01-11' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: PrivateEndpointConnectionProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
 
 ## ServicesResourceIdentity
@@ -128,12 +133,12 @@
 
 ## ServicesProperties
 ### Properties
-* **accessPolicies**: ServiceAccessPolicyEntry[]
-* **authenticationConfiguration**: ServiceAuthenticationConfigurationInfo
-* **corsConfiguration**: ServiceCorsConfigurationInfo
-* **cosmosDbConfiguration**: ServiceCosmosDbConfigurationInfo
-* **exportConfiguration**: ServiceExportConfigurationInfo
-* **privateEndpointConnections**: PrivateEndpointConnection[]
+* **accessPolicies**: [ServiceAccessPolicyEntry](#serviceaccesspolicyentry)[]
+* **authenticationConfiguration**: [ServiceAuthenticationConfigurationInfo](#serviceauthenticationconfigurationinfo)
+* **corsConfiguration**: [ServiceCorsConfigurationInfo](#servicecorsconfigurationinfo)
+* **cosmosDbConfiguration**: [ServiceCosmosDbConfigurationInfo](#servicecosmosdbconfigurationinfo)
+* **exportConfiguration**: [ServiceExportConfigurationInfo](#serviceexportconfigurationinfo)
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Succeeded' | 'Updating' | 'Verifying' (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 
@@ -168,14 +173,14 @@
 ### Properties
 * **id**: string (ReadOnly)
 * **name**: string (ReadOnly)
-* **properties**: PrivateEndpointConnectionProperties
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: string (ReadOnly)
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: PrivateEndpoint
-* **privateLinkServiceConnectionState**: PrivateLinkServiceConnectionState (Required)
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
 
 ## PrivateEndpoint

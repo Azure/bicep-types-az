@@ -7,7 +7,7 @@
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [DataCollectionRuleAssociationProxyOnlyResourceProperties](#datacollectionruleassociationproxyonlyresourceproperties) (Required)
+* **properties**: [DataCollectionRuleAssociationProxyOnlyResourceProperties](#datacollectionruleassociationproxyonlyresourceproperties)
 * **type**: 'Microsoft.Insights/dataCollectionRuleAssociations' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.Insights/dataCollectionRules@2019-11-01-preview
@@ -16,30 +16,32 @@
 * **apiVersion**: '2019-11-01-preview' (ReadOnly, DeployTimeConstant)
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: 'Linux' | 'Windows'
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: [DataCollectionRuleResourceProperties](#datacollectionruleresourceproperties) (Required)
+* **properties**: [DataCollectionRuleResourceProperties](#datacollectionruleresourceproperties)
 * **tags**: [DataCollectionRuleResourceTags](#datacollectionruleresourcetags)
 * **type**: 'Microsoft.Insights/dataCollectionRules' (ReadOnly, DeployTimeConstant)
 
 ## DataCollectionRuleAssociationProxyOnlyResourceProperties
 ### Properties
-* **dataCollectionRuleId**: string (Required)
+* **dataCollectionRuleId**: string
 * **description**: string
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## DataCollectionRuleResourceProperties
 ### Properties
-* **dataFlows**: [DataFlow](#dataflow)[] (Required)
+* **dataFlows**: [DataFlow](#dataflow)[]
 * **dataSources**: [DataCollectionRuleDataSources](#datacollectionruledatasources)
 * **description**: string
-* **destinations**: [DataCollectionRuleDestinations](#datacollectionruledestinations) (Required)
+* **destinations**: [DataCollectionRuleDestinations](#datacollectionruledestinations)
+* **immutableId**: string (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 
 ## DataFlow
 ### Properties
-* **destinations**: string[] (Required)
-* **streams**: 'Microsoft-AntiMalwareStatus' | 'Microsoft-Auditd' | 'Microsoft-CISCOASA' | 'Microsoft-CommonSecurityLog' | 'Microsoft-ComputerGroup' | 'Microsoft-Event' | 'Microsoft-FirewallLog' | 'Microsoft-HealthStateChange' | 'Microsoft-Heartbeat' | 'Microsoft-InsightsMetrics' | 'Microsoft-OperationLog' | 'Microsoft-Perf' | 'Microsoft-ProcessInvestigator' | 'Microsoft-ProtectionStatus' | 'Microsoft-RomeDetectionEvent' | 'Microsoft-SecurityBaseline' | 'Microsoft-SecurityBaselineSummary' | 'Microsoft-SecurityEvent' | 'Microsoft-Syslog' | 'Microsoft-WindowsEvent'[] (Required)
+* **destinations**: string[]
+* **streams**: 'Microsoft-Event' | 'Microsoft-InsightsMetrics' | 'Microsoft-Perf' | 'Microsoft-Syslog' | 'Microsoft-WindowsEvent'[]
 
 ## DataCollectionRuleDataSources
 ### Properties
@@ -52,30 +54,29 @@
 ### Properties
 * **extensionName**: string (Required)
 * **extensionSettings**: any
-* **name**: string (Required)
-* **streams**: 'Microsoft-AntiMalwareStatus' | 'Microsoft-Auditd' | 'Microsoft-CISCOASA' | 'Microsoft-CommonSecurityLog' | 'Microsoft-ComputerGroup' | 'Microsoft-Event' | 'Microsoft-FirewallLog' | 'Microsoft-HealthStateChange' | 'Microsoft-Heartbeat' | 'Microsoft-InsightsMetrics' | 'Microsoft-OperationLog' | 'Microsoft-Perf' | 'Microsoft-ProcessInvestigator' | 'Microsoft-ProtectionStatus' | 'Microsoft-RomeDetectionEvent' | 'Microsoft-SecurityBaseline' | 'Microsoft-SecurityBaselineSummary' | 'Microsoft-SecurityEvent' | 'Microsoft-Syslog' | 'Microsoft-WindowsEvent'[] (Required)
+* **inputDataSources**: string[]
+* **name**: string
+* **streams**: 'Microsoft-Event' | 'Microsoft-InsightsMetrics' | 'Microsoft-Perf' | 'Microsoft-Syslog' | 'Microsoft-WindowsEvent'[]
 
 ## PerfCounterDataSource
 ### Properties
-* **counterSpecifiers**: string[] (Required)
-* **name**: string (Required)
-* **samplingFrequencyInSeconds**: int (Required)
-* **scheduledTransferPeriod**: 'PT15M' | 'PT1M' | 'PT30M' | 'PT5M' | 'PT60M' (Required)
-* **streams**: 'Microsoft-InsightsMetrics' | 'Microsoft-Perf'[] (Required)
+* **counterSpecifiers**: string[]
+* **name**: string
+* **samplingFrequencyInSeconds**: int
+* **streams**: 'Microsoft-InsightsMetrics' | 'Microsoft-Perf'[]
 
 ## SyslogDataSource
 ### Properties
-* **facilityNames**: 'UUCP' | 'auth' | 'authpriv' | 'cron' | 'daemon' | 'kern' | 'local0' | 'local1' | 'local2' | 'local3' | 'local4' | 'local5' | 'local6' | 'local7' | 'lpr' | 'mail' | 'mark' | 'news' | 'syslog' | 'user'[] (Required)
-* **logLevels**: 'Alert' | 'Critical' | 'Debug' | 'Emergency' | 'Error' | 'Info' | 'Notice' | 'Warning'[]
-* **name**: string (Required)
-* **streams**: 'Microsoft-Syslog'[] (Required)
+* **facilityNames**: '*' | 'auth' | 'authpriv' | 'cron' | 'daemon' | 'kern' | 'local0' | 'local1' | 'local2' | 'local3' | 'local4' | 'local5' | 'local6' | 'local7' | 'lpr' | 'mail' | 'mark' | 'news' | 'syslog' | 'user' | 'uucp'[]
+* **logLevels**: '*' | 'Alert' | 'Critical' | 'Debug' | 'Emergency' | 'Error' | 'Info' | 'Notice' | 'Warning'[]
+* **name**: string
+* **streams**: 'Microsoft-Syslog'[]
 
 ## WindowsEventLogDataSource
 ### Properties
-* **name**: string (Required)
-* **scheduledTransferPeriod**: 'PT15M' | 'PT1M' | 'PT30M' | 'PT5M' | 'PT60M' (Required)
-* **streams**: 'Microsoft-Event' | 'Microsoft-WindowsEvent'[] (Required)
-* **xPathQueries**: string[] (Required)
+* **name**: string
+* **streams**: 'Microsoft-Event' | 'Microsoft-WindowsEvent'[]
+* **xPathQueries**: string[]
 
 ## DataCollectionRuleDestinations
 ### Properties
@@ -84,12 +85,13 @@
 
 ## DestinationsSpecAzureMonitorMetrics
 ### Properties
-* **name**: string (Required)
+* **name**: string
 
 ## LogAnalyticsDestination
 ### Properties
-* **name**: string (Required)
-* **workspaceResourceId**: string (Required)
+* **name**: string
+* **workspaceId**: string (ReadOnly)
+* **workspaceResourceId**: string
 
 ## DataCollectionRuleResourceTags
 ### Properties

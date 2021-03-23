@@ -1,9 +1,9 @@
 
 Executing: autorest --use=/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep --azureresourceschema --output-folder=/home/runner/work/bicep-types-az/bicep-types-az/generated/synapse --multiapi --title=none /home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/readme.md
-AutoRest code generation utility [cli version: 3.1.2; node: v14.16.0, max-memory: 2048 MB]
+AutoRest code generation utility [cli version: 3.1.3; node: v14.16.0, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.1.3)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.2.1)
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
 Processing batch task - {"tag":"schema-synapse-2020-12-01"} .
@@ -108,7 +108,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'PrivateEndpointConnectionForPr
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named PrivateEndpointConnectionForPrivateLinkHubBasic -- properties.id.description: "identifier" => <none>,properties.id.readOnly: true => <none>,properties.id.$ref: undefined => "#/components/schemas/schemas:1191",properties.properties.description: "Properties of private endpoint connection for private link hub" => <none>,properties.properties.x-ms-client-flatten: true => <none> 
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named PrivateEndpointConnectionForPrivateLinkHubBasic -- properties.id.$ref: undefined => "#/components/schemas/schemas:1206",properties.id.description: "identifier" => <none>,properties.id.readOnly: true => <none>,properties.properties.description: "Properties of private endpoint connection for private link hub" => <none>,properties.properties.x-ms-client-flatten: true => <none> 
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'ReplicationLink' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ReplicationLink
 
@@ -198,6 +198,8 @@ WARNING (PreCheck/SchemaMissingType): The schema 'IntegrationRuntimeResource' wi
 
 WARNING (PreCheck/SchemaMissingType): The schema 'IntegrationRuntimeStatusResponse' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedVirtualNetworkReference' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
 WARNING (PreCheck/SchemaMissingType): The schema 'ServerUsage' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ServerUsageListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
@@ -220,11 +222,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'PrivateEndpointConnectionForPr
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named CloudError -- properties.error.$ref: undefined => "#/components/schemas/schemas:803" 
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named CloudError -- properties.error.$ref: undefined => "#/components/schemas/schemas:812" 
 
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named CloudErrorBody -- properties.details.$ref: undefined => "#/components/schemas/schemas:807" 
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named CloudErrorBody -- properties.details.$ref: undefined => "#/components/schemas/schemas:816" 
 
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named PrivateEndpointConnectionForPrivateLinkHubBasic -- properties.id.description: "identifier" => <none>,properties.id.readOnly: true => <none>,properties.id.$ref: undefined => "#/components/schemas/schemas:1097",properties.properties.description: "Properties of private endpoint connection for private link hub" => <none>,properties.properties.x-ms-client-flatten: true => <none> 
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named PrivateEndpointConnectionForPrivateLinkHubBasic -- properties.id.$ref: undefined => "#/components/schemas/schemas:1109",properties.id.description: "identifier" => <none>,properties.id.readOnly: true => <none>,properties.properties.description: "Properties of private endpoint connection for private link hub" => <none>,properties.properties.x-ms-client-flatten: true => <none> 
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'ReplicationLink' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ReplicationLink
 
@@ -235,7 +237,7 @@ WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'PrivateEndpointC
 WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'CloudError' -> 'CloudErrorAutoGenerated'
 
 WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'CloudErrorBody' -> 'CloudErrorBodyAutoGenerated'
-INFORMATION: Autorest.AzureResourceSchema took 23ms
+INFORMATION: Autorest.AzureResourceSchema took 20ms
 Processing batch task - {"tag":"schema-synapse-2020-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -338,14 +340,14 @@ WARNING (PreCheck/SchemaMissingType): The schema 'PrivateEndpointConnectionForPr
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named PrivateEndpointConnectionForPrivateLinkHubBasic -- properties.id.description: "identifier" => <none>,properties.id.readOnly: true => <none>,properties.id.$ref: undefined => "#/components/schemas/schemas:1191",properties.properties.description: "Properties of private endpoint connection for private link hub" => <none>,properties.properties.x-ms-client-flatten: true => <none> 
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named PrivateEndpointConnectionForPrivateLinkHubBasic -- properties.id.$ref: undefined => "#/components/schemas/schemas:1206",properties.id.description: "identifier" => <none>,properties.id.readOnly: true => <none>,properties.properties.description: "Properties of private endpoint connection for private link hub" => <none>,properties.properties.x-ms-client-flatten: true => <none> 
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'ReplicationLink' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ReplicationLink
 
 WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'SecurityAlertPolicyName' -> 'SecurityAlertPolicyNameAutoGenerated'
 
 WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'PrivateEndpointConnectionForPrivateLinkHubBasic' -> 'PrivateEndpointConnectionForPrivateLinkHubBasicAutoGenerated'
-INFORMATION: Autorest.AzureResourceSchema took 22ms
+INFORMATION: Autorest.AzureResourceSchema took 25ms
 Processing batch task - {"tag":"schema-synapse-2020-04-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -359,7 +361,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefin
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorAdditionalInfo' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: Autorest.AzureResourceSchema took 2ms
+INFORMATION: Autorest.AzureResourceSchema took 4ms
 Processing batch task - {"tag":"schema-synapse-2019-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/azureresourceschema' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.16.2->4.16.2)
@@ -428,6 +430,8 @@ WARNING (PreCheck/SchemaMissingType): The schema 'IntegrationRuntimeResource' wi
 
 WARNING (PreCheck/SchemaMissingType): The schema 'IntegrationRuntimeStatusResponse' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedVirtualNetworkReference' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
+
 WARNING (PreCheck/SchemaMissingType): The schema 'ServerUsage' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ServerUsageListResult' with an undefined type and decalared properties is a bit ambigious. This has been auto-corrected to 'type:object'
@@ -450,11 +454,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'PrivateEndpointConnectionForPr
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named CloudError -- properties.error.$ref: undefined => "#/components/schemas/schemas:803" 
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named CloudError -- properties.error.$ref: undefined => "#/components/schemas/schemas:812" 
 
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named CloudErrorBody -- properties.details.$ref: undefined => "#/components/schemas/schemas:807" 
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named CloudErrorBody -- properties.details.$ref: undefined => "#/components/schemas/schemas:816" 
 
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named PrivateEndpointConnectionForPrivateLinkHubBasic -- properties.id.description: "identifier" => <none>,properties.id.readOnly: true => <none>,properties.id.$ref: undefined => "#/components/schemas/schemas:1097",properties.properties.description: "Properties of private endpoint connection for private link hub" => <none>,properties.properties.x-ms-client-flatten: true => <none> 
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named PrivateEndpointConnectionForPrivateLinkHubBasic -- properties.id.$ref: undefined => "#/components/schemas/schemas:1109",properties.id.description: "identifier" => <none>,properties.id.readOnly: true => <none>,properties.properties.description: "Properties of private endpoint connection for private link hub" => <none>,properties.properties.x-ms-client-flatten: true => <none> 
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'ReplicationLink' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ReplicationLink
 
@@ -465,5 +469,5 @@ WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'PrivateEndpointC
 WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'CloudError' -> 'CloudErrorAutoGenerated'
 
 WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'CloudErrorBody' -> 'CloudErrorBodyAutoGenerated'
-INFORMATION: Autorest.AzureResourceSchema took 20ms
-[111.9 s] Generation Complete
+INFORMATION: Autorest.AzureResourceSchema took 28ms
+[114.27 s] Generation Complete

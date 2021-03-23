@@ -49,7 +49,7 @@
 * **dataExportDetails**: [DataExportDetails](#dataexportdetails)[]
 * **dataImportDetails**: [DataImportDetails](#dataimportdetails)[]
 * **deliveryPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly)
-* **expectedDataSizeInTerabytes**: int
+* **expectedDataSizeInTeraBytes**: int
 * **jobStages**: [JobStages](#jobstages)[] (ReadOnly)
 * **keyEncryptionKey**: [KeyEncryptionKey](#keyencryptionkey) (ReadOnly)
 * **preferences**: [Preferences](#preferences)

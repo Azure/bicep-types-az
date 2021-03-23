@@ -14,7 +14,8 @@
 
 ## LedgerProperties
 ### Properties
-* **certUsers**: [ConfidentialLedgerCertUser](#confidentialledgercertuser)[]
+* **aadBasedSecurityPrincipals**: [AADBasedSecurityPrincipal](#aadbasedsecurityprincipal)[]
+* **certBasedSecurityPrincipals**: [CertBasedSecurityPrincipal](#certbasedsecurityprincipal)[]
 * **identityServiceUri**: string (ReadOnly)
 * **ledgerInternalNamespace**: string (ReadOnly)
 * **ledgerName**: string (ReadOnly)
@@ -23,9 +24,16 @@
 * **ledgerUri**: string (ReadOnly)
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
 
-## ConfidentialLedgerCertUser
+## AADBasedSecurityPrincipal
+### Properties
+* **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader'
+* **principalId**: string
+* **tenantId**: string
+
+## CertBasedSecurityPrincipal
 ### Properties
 * **cert**: string
+* **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader'
 
 ## SystemData
 ### Properties

@@ -132,6 +132,7 @@
 ## RegistryProperties
 ### Properties
 * **adminUserEnabled**: bool
+* **anonymousPullEnabled**: bool
 * **creationDate**: string (ReadOnly)
 * **dataEndpointEnabled**: bool
 * **dataEndpointHostNames**: string[] (ReadOnly)
@@ -144,7 +145,6 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
 * **status**: [Status](#status) (ReadOnly)
-* **storageAccount**: [StorageAccountProperties](#storageaccountproperties)
 * **zoneRedundancy**: 'Disabled' | 'Enabled'
 
 ## EncryptionProperty
@@ -235,10 +235,6 @@
 * **displayStatus**: string (ReadOnly)
 * **message**: string (ReadOnly)
 * **timestamp**: string (ReadOnly)
-
-## StorageAccountProperties
-### Properties
-* **id**: string (Required)
 
 ## Sku
 ### Properties

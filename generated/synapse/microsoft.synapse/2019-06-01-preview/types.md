@@ -28,7 +28,7 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'activeDirectory' (Required, DeployTimeConstant)
 * **properties**: [AadAdminProperties](#aadadminproperties)
 * **type**: 'Microsoft.Synapse/workspaces/administrators' (ReadOnly, DeployTimeConstant)
 
@@ -94,7 +94,7 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ManagedIdentitySqlControlSettingsModelProperties](#managedidentitysqlcontrolsettingsmodelproperties)
 * **type**: 'Microsoft.Synapse/workspaces/managedIdentitySqlControlSettings' (ReadOnly, DeployTimeConstant)
 
@@ -121,7 +121,7 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'activeDirectory' (Required, DeployTimeConstant)
 * **properties**: [AadAdminProperties](#aadadminproperties)
 * **type**: 'Microsoft.Synapse/workspaces/sqlAdministrators' (ReadOnly, DeployTimeConstant)
 
@@ -195,7 +195,7 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'current' (Required, DeployTimeConstant)
 * **properties**: [MaintenanceWindowsProperties](#maintenancewindowsproperties)
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/maintenancewindows' (ReadOnly, DeployTimeConstant)
 
@@ -204,7 +204,7 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'config' (Required, DeployTimeConstant)
 * **properties**: [MetadataSyncConfigProperties](#metadatasyncconfigproperties)
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/metadataSync' (ReadOnly, DeployTimeConstant)
 
@@ -431,10 +431,11 @@
 * **autoScale**: [AutoScaleProperties](#autoscaleproperties)
 * **cacheSize**: int
 * **creationDate**: string
-* **customLibraries**: [LibraryResourceProperties](#libraryresourceproperties)[]
+* **customLibraries**: [LibraryInfo](#libraryinfo)[]
 * **defaultSparkLogFolder**: string
 * **dynamicExecutorAllocation**: [DynamicExecutorAllocation](#dynamicexecutorallocation)
 * **isComputeIsolationEnabled**: bool
+* **lastSucceededTimestamp**: string (ReadOnly)
 * **libraryRequirements**: [LibraryRequirements](#libraryrequirements)
 * **nodeCount**: int
 * **nodeSize**: 'Large' | 'Medium' | 'None' | 'Small' | 'XLarge' | 'XXLarge' | 'XXXLarge'
@@ -456,14 +457,14 @@
 * **maxNodeCount**: int
 * **minNodeCount**: int
 
-## LibraryResourceProperties
+## LibraryInfo
 ### Properties
-* **containerName**: string (ReadOnly)
+* **containerName**: string
 * **creatorId**: string (ReadOnly)
-* **name**: string (ReadOnly)
-* **path**: string (ReadOnly)
+* **name**: string
+* **path**: string
 * **provisioningStatus**: string (ReadOnly)
-* **type**: string (ReadOnly)
+* **type**: string
 * **uploadedTimestamp**: string (ReadOnly)
 
 ## DynamicExecutorAllocation
@@ -507,6 +508,7 @@
 * **description**: string
 ### ManagedIntegrationRuntime
 #### Properties
+* **managedVirtualNetwork**: [ManagedVirtualNetworkReference](#managedvirtualnetworkreference)
 * **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
 * **type**: 'Managed' (Required)
 * **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required)
@@ -519,9 +521,15 @@
 
 ## ManagedIntegrationRuntime
 ### Properties
+* **managedVirtualNetwork**: [ManagedVirtualNetworkReference](#managedvirtualnetworkreference)
 * **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly)
 * **type**: 'Managed' (Required)
 * **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required)
+
+## ManagedVirtualNetworkReference
+### Properties
+* **referenceName**: string (Required)
+* **type**: 'ManagedVirtualNetworkReference' (Required)
 
 ## ManagedIntegrationRuntimeTypeProperties
 ### Properties

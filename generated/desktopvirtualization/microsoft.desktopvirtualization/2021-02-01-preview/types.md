@@ -4,11 +4,17 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
+* **identity**: [ResourceModelWithAllowedPropertySetIdentity](#resourcemodelwithallowedpropertysetidentity)
+* **kind**: string
+* **location**: string
+* **managedBy**: string
 * **name**: string (Required, DeployTimeConstant)
+* **plan**: [ResourceModelWithAllowedPropertySetPlan](#resourcemodelwithallowedpropertysetplan)
 * **properties**: [ApplicationGroupProperties](#applicationgroupproperties) (Required)
-* **tags**: [TrackedResourceTags](#trackedresourcetags)
+* **sku**: [ResourceModelWithAllowedPropertySetSku](#resourcemodelwithallowedpropertysetsku)
+* **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags)
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DesktopVirtualization/applicationGroups/applications@2021-02-01-preview
@@ -24,11 +30,17 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
+* **identity**: [ResourceModelWithAllowedPropertySetIdentity](#resourcemodelwithallowedpropertysetidentity)
+* **kind**: string
+* **location**: string
+* **managedBy**: string
 * **name**: string (Required, DeployTimeConstant)
+* **plan**: [ResourceModelWithAllowedPropertySetPlan](#resourcemodelwithallowedpropertysetplan)
 * **properties**: [HostPoolProperties](#hostpoolproperties) (Required)
-* **tags**: [TrackedResourceTags](#trackedresourcetags)
+* **sku**: [ResourceModelWithAllowedPropertySetSku](#resourcemodelwithallowedpropertysetsku)
+* **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags)
 * **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DesktopVirtualization/hostPools/msixPackages@2021-02-01-preview
@@ -44,33 +56,75 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
+* **identity**: [ResourceModelWithAllowedPropertySetIdentity](#resourcemodelwithallowedpropertysetidentity)
+* **kind**: string
+* **location**: string
+* **managedBy**: string
 * **name**: string (Required, DeployTimeConstant)
+* **plan**: [ResourceModelWithAllowedPropertySetPlan](#resourcemodelwithallowedpropertysetplan)
 * **properties**: [ScalingPlanProperties](#scalingplanproperties)
-* **tags**: [TrackedResourceTags](#trackedresourcetags)
+* **sku**: [ResourceModelWithAllowedPropertySetSku](#resourcemodelwithallowedpropertysetsku)
+* **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags)
 * **type**: 'Microsoft.DesktopVirtualization/scalingPlans' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DesktopVirtualization/workspaces@2021-02-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
+* **identity**: [ResourceModelWithAllowedPropertySetIdentity](#resourcemodelwithallowedpropertysetidentity)
+* **kind**: string
+* **location**: string
+* **managedBy**: string
 * **name**: string (Required, DeployTimeConstant)
+* **plan**: [ResourceModelWithAllowedPropertySetPlan](#resourcemodelwithallowedpropertysetplan)
 * **properties**: [WorkspaceProperties](#workspaceproperties)
-* **tags**: [TrackedResourceTags](#trackedresourcetags)
+* **sku**: [ResourceModelWithAllowedPropertySetSku](#resourcemodelwithallowedpropertysetsku)
+* **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags)
 * **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant)
+
+## ResourceModelWithAllowedPropertySetIdentity
+### Properties
+* **principalId**: string (ReadOnly)
+* **tenantId**: string (ReadOnly)
+* **type**: 'SystemAssigned'
+
+## ResourceModelWithAllowedPropertySetPlan
+### Properties
+* **name**: string (Required)
+* **product**: string (Required)
+* **promotionCode**: string
+* **publisher**: string (Required)
+* **version**: string
 
 ## ApplicationGroupProperties
 ### Properties
 * **applicationGroupType**: 'Desktop' | 'RemoteApp' (Required)
+* **cloudPcResource**: bool (ReadOnly)
 * **description**: string
 * **friendlyName**: string
 * **hostPoolArmPath**: string (Required)
+* **migrationRequest**: [MigrationRequestProperties](#migrationrequestproperties)
+* **objectId**: string (ReadOnly)
 * **workspaceArmPath**: string (ReadOnly)
 
-## TrackedResourceTags
+## MigrationRequestProperties
+### Properties
+* **migrationPath**: string
+* **operation**: 'Complete' | 'Hide' | 'Revoke' | 'Start' | 'Unhide'
+
+## ResourceModelWithAllowedPropertySetSku
+### Properties
+* **capacity**: int
+* **family**: string
+* **name**: string (Required)
+* **size**: string
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard'
+
+## ResourceModelWithAllowedPropertySetTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -89,17 +143,21 @@
 * **iconPath**: string
 * **msixPackageApplicationId**: string
 * **msixPackageFamilyName**: string
+* **objectId**: string (ReadOnly)
 * **showInPortal**: bool
 
 ## HostPoolProperties
 ### Properties
 * **applicationGroupReferences**: string[] (ReadOnly)
+* **cloudPcResource**: bool (ReadOnly)
 * **customRdpProperty**: string
 * **description**: string
 * **friendlyName**: string
-* **hostPoolType**: 'Personal' | 'Pooled' (Required)
+* **hostPoolType**: 'BYODesktop' | 'Personal' | 'Pooled' (Required)
 * **loadBalancerType**: 'BreadthFirst' | 'DepthFirst' | 'Persistent' (Required)
 * **maxSessionLimit**: int
+* **migrationRequest**: [MigrationRequestProperties](#migrationrequestproperties)
+* **objectId**: string (ReadOnly)
 * **personalDesktopAssignmentType**: 'Automatic' | 'Direct'
 * **preferredAppGroupType**: 'Desktop' | 'None' | 'RailApplications' (Required)
 * **registrationInfo**: [RegistrationInfo](#registrationinfo)
@@ -107,7 +165,6 @@
 * **ssoadfsAuthority**: string
 * **ssoClientId**: string
 * **ssoClientSecretKeyVaultPath**: string
-* **ssoContext**: string
 * **ssoSecretType**: 'Certificate' | 'CertificateInKeyVault' | 'SharedKey' | 'SharedKeyInKeyVault'
 * **startVMOnConnect**: bool
 * **validationEnvironment**: bool
@@ -119,7 +176,7 @@
 * **registrationTokenOperation**: 'Delete' | 'None' | 'Update'
 * **token**: string
 
-## TrackedResourceTags
+## ResourceModelWithAllowedPropertySetTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -160,7 +217,9 @@
 * **exclusionTag**: string
 * **friendlyName**: string
 * **hostPoolReferences**: [ScalingHostPoolReference](#scalinghostpoolreference)[]
-* **hostPoolType**: 'Personal' | 'Pooled'
+* **hostPoolType**: 'BYODesktop' | 'Personal' | 'Pooled'
+* **objectId**: string (ReadOnly)
+* **ring**: int
 * **schedules**: [ScalingSchedule](#scalingschedule)[]
 * **timeZone**: string
 
@@ -182,15 +241,15 @@
 * **rampDownLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst'
 * **rampDownMinimumHostsPct**: int
 * **rampDownNotificationMessage**: string
-* **rampDownNotificationMinutes**: int
 * **rampDownStartTime**: string
 * **rampDownStopHostsWhen**: 'ZeroActiveSessions' | 'ZeroSessions'
-* **rampUpAlgorithm**: 'BreadthFirst' | 'DepthFirst'
+* **rampDownWaitTimeMinutes**: int
 * **rampUpCapacityThresholdPct**: int
-* **rampUpMinimumHostPct**: int
+* **rampUpLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst'
+* **rampUpMinimumHostsPct**: int
 * **rampUpStartTime**: string
 
-## TrackedResourceTags
+## ResourceModelWithAllowedPropertySetTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -198,10 +257,12 @@
 ## WorkspaceProperties
 ### Properties
 * **applicationGroupReferences**: string[]
+* **cloudPcResource**: bool (ReadOnly)
 * **description**: string
 * **friendlyName**: string
+* **objectId**: string (ReadOnly)
 
-## TrackedResourceTags
+## ResourceModelWithAllowedPropertySetTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

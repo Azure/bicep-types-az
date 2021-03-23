@@ -62,18 +62,21 @@
 * **datadogOrganizationProperties**: [DatadogOrganizationProperties](#datadogorganizationproperties)
 * **liftrResourceCategory**: 'MonitorLogs' | 'Unknown' (ReadOnly)
 * **liftrResourcePreference**: int (ReadOnly)
-* **marketplaceSubscriptionStatus**: 'Active' | 'Suspended' (ReadOnly)
-* **monitoringStatus**: 'Disabled' | 'Enabled' (ReadOnly)
+* **marketplaceSubscriptionStatus**: 'Active' | 'Provisioning' | 'Suspended' | 'Unsubscribed' (ReadOnly)
+* **monitoringStatus**: 'Disabled' | 'Enabled'
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating'
 * **userInfo**: [UserInfo](#userinfo)
 
 ## DatadogOrganizationProperties
 ### Properties
+* **apiKey**: string
+* **applicationKey**: string
 * **enterpriseAppId**: string
 * **id**: string (ReadOnly)
 * **linkingAuthCode**: string
 * **linkingClientId**: string
 * **name**: string (ReadOnly)
+* **redirectUri**: string
 
 ## UserInfo
 ### Properties
@@ -93,6 +96,7 @@
 ## DatadogSingleSignOnProperties
 ### Properties
 * **enterpriseAppId**: string
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating'
 * **singleSignOnState**: 'Disable' | 'Enable' | 'Existing' | 'Initial'
 * **singleSignOnUrl**: string (ReadOnly)
 
@@ -100,6 +104,7 @@
 ### Properties
 * **logRules**: [LogRules](#logrules)
 * **metricRules**: [MetricRules](#metricrules)
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating'
 
 ## LogRules
 ### Properties

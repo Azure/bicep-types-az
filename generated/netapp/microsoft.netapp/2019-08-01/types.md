@@ -91,6 +91,7 @@
 * **snapshotId**: string
 * **subnetId**: string (Required)
 * **usageThreshold**: int (Required)
+* **usedBytes**: int (ReadOnly)
 * **volumeType**: string
 
 ## VolumePropertiesDataProtection

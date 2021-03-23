@@ -6,12 +6,12 @@
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **eTag**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: DppIdentityDetails
+* **identity**: [DppIdentityDetails](#dppidentitydetails)
 * **location**: string
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BackupVault
-* **systemData**: SystemData (ReadOnly)
-* **tags**: DppTrackedResourceTags
+* **properties**: [BackupVault](#backupvault)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **tags**: [DppTrackedResourceTags](#dpptrackedresourcetags)
 * **type**: 'Microsoft.DataProtection/backupVaults' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataProtection/backupVaults/backupInstances@2021-02-01-preview
@@ -20,8 +20,8 @@
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BackupInstance
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [BackupInstance](#backupinstance)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.DataProtection/backupVaults/backupInstances' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DataProtection/backupVaults/backupPolicies@2021-02-01-preview
@@ -30,8 +30,8 @@
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: BaseBackupPolicy
-* **systemData**: SystemData (ReadOnly)
+* **properties**: [BaseBackupPolicy](#basebackuppolicy)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.DataProtection/backupVaults/backupPolicies' (ReadOnly, DeployTimeConstant)
 
 ## DppIdentityDetails
@@ -43,11 +43,11 @@
 ## BackupVault
 ### Properties
 * **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
-* **storageSettings**: StorageSetting[]
+* **storageSettings**: [StorageSetting](#storagesetting)[]
 
 ## StorageSetting
 ### Properties
-* **dataStoreType**: 'ArchiveStore' | 'SnapshotStore' | 'VaultStore'
+* **datastoreType**: 'ArchiveStore' | 'SnapshotStore' | 'VaultStore'
 * **type**: 'GeoRedundant' | 'LocallyRedundant'
 
 ## SystemData
@@ -66,11 +66,14 @@
 
 ## BackupInstance
 ### Properties
-* **dataSourceInfo**: Datasource (Required)
-* **dataSourceSetInfo**: DatasourceSet
-* **objectType**: string
-* **policyInfo**: PolicyInfo (Required)
-* **protectionStatus**: ProtectionStatusDetails (ReadOnly)
+* **currentProtectionState**: 'BackupSchedulesSuspended' | 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'Invalid' | 'NotProtected' | 'ProtectionConfigured' | 'ProtectionError' | 'ProtectionStopped' | 'RetentionSchedulesSuspended' | 'SoftDeleted' | 'SoftDeleting' | 'UpdatingProtection' (ReadOnly)
+* **dataSourceInfo**: [Datasource](#datasource) (Required)
+* **dataSourceSetInfo**: [DatasourceSet](#datasourceset)
+* **friendlyName**: string (Required)
+* **objectType**: string (Required)
+* **policyInfo**: [PolicyInfo](#policyinfo) (Required)
+* **protectionErrorDetails**: [UserFacingError](#userfacingerror) (ReadOnly)
+* **protectionStatus**: [ProtectionStatusDetails](#protectionstatusdetails) (ReadOnly)
 * **provisioningState**: string (ReadOnly)
 
 ## Datasource
@@ -96,12 +99,12 @@
 ## PolicyInfo
 ### Properties
 * **policyId**: string (Required)
-* **policyParameters**: PolicyParameters
+* **policyParameters**: [PolicyParameters](#policyparameters)
 * **policyVersion**: string (ReadOnly)
 
 ## PolicyParameters
 ### Properties
-* **dataStoreParametersList**: DataStoreParameters[]
+* **dataStoreParametersList**: [DataStoreParameters](#datastoreparameters)[]
 
 ## DataStoreParameters
 * **Discriminator**: objectType
@@ -119,32 +122,38 @@
 * **objectType**: 'AzureOperationalStoreParameters' (Required)
 * **resourceGroupId**: string
 
-## ProtectionStatusDetails
-### Properties
-* **errorDetails**: UserFacingError
-* **status**: 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'ProtectionConfigured' | 'ProtectionStopped' | 'SoftDeleted' | 'SoftDeleting'
-
 ## UserFacingError
 ### Properties
 * **code**: string
-* **details**: UserFacingError[]
-* **innerError**: InnerError
+* **details**: [UserFacingError](#userfacingerror)[]
+* **innerError**: [InnerError](#innererror)
 * **isRetryable**: bool
 * **isUserError**: bool
 * **message**: string
+* **properties**: [UserFacingErrorProperties](#userfacingerrorproperties)
 * **recommendedAction**: string[]
 * **target**: string
 
 ## InnerError
 ### Properties
-* **additionalInfo**: InnerErrorAdditionalInfo
+* **additionalInfo**: [InnerErrorAdditionalInfo](#innererroradditionalinfo)
 * **code**: string
-* **embeddedInnerError**: InnerError
+* **embeddedInnerError**: [InnerError](#innererror)
 
 ## InnerErrorAdditionalInfo
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UserFacingErrorProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ProtectionStatusDetails
+### Properties
+* **errorDetails**: [UserFacingError](#userfacingerror)
+* **status**: 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'ProtectionConfigured' | 'ProtectionStopped' | 'SoftDeleted' | 'SoftDeleting'
 
 ## BaseBackupPolicy
 * **Discriminator**: objectType
@@ -154,13 +163,13 @@
 ### BackupPolicy
 #### Properties
 * **objectType**: 'BackupPolicy' (Required)
-* **policyRules**: BasePolicyRule[] (Required)
+* **policyRules**: [BasePolicyRule](#basepolicyrule)[] (Required)
 
 
 ## BackupPolicy
 ### Properties
 * **objectType**: 'BackupPolicy' (Required)
-* **policyRules**: BasePolicyRule[] (Required)
+* **policyRules**: [BasePolicyRule](#basepolicyrule)[] (Required)
 
 ## BasePolicyRule
 * **Discriminator**: objectType
@@ -169,24 +178,24 @@
 * **name**: string (Required)
 ### AzureBackupRule
 #### Properties
-* **backupParameters**: BackupParameters
-* **dataStore**: DataStoreInfoBase (Required)
+* **backupParameters**: [BackupParameters](#backupparameters)
+* **dataStore**: [DataStoreInfoBase](#datastoreinfobase) (Required)
 * **objectType**: 'AzureBackupRule' (Required)
-* **trigger**: TriggerContext (Required)
+* **trigger**: [TriggerContext](#triggercontext) (Required)
 
 ### AzureRetentionRule
 #### Properties
 * **isDefault**: bool
-* **lifecycles**: SourceLifeCycle[] (Required)
+* **lifecycles**: [SourceLifeCycle](#sourcelifecycle)[] (Required)
 * **objectType**: 'AzureRetentionRule' (Required)
 
 
 ## AzureBackupRule
 ### Properties
-* **backupParameters**: BackupParameters
-* **dataStore**: DataStoreInfoBase (Required)
+* **backupParameters**: [BackupParameters](#backupparameters)
+* **dataStore**: [DataStoreInfoBase](#datastoreinfobase) (Required)
 * **objectType**: 'AzureBackupRule' (Required)
-* **trigger**: TriggerContext (Required)
+* **trigger**: [TriggerContext](#triggercontext) (Required)
 
 ## BackupParameters
 * **Discriminator**: objectType
@@ -215,23 +224,23 @@
 ### AdhocBasedTriggerContext
 #### Properties
 * **objectType**: 'AdhocBasedTriggerContext' (Required)
-* **taggingCriteria**: AdhocBasedTaggingCriteria (Required)
+* **taggingCriteria**: [AdhocBasedTaggingCriteria](#adhocbasedtaggingcriteria) (Required)
 
 ### ScheduleBasedTriggerContext
 #### Properties
 * **objectType**: 'ScheduleBasedTriggerContext' (Required)
-* **schedule**: BackupSchedule (Required)
-* **taggingCriteria**: TaggingCriteria[] (Required)
+* **schedule**: [BackupSchedule](#backupschedule) (Required)
+* **taggingCriteria**: [TaggingCriteria](#taggingcriteria)[] (Required)
 
 
 ## AdhocBasedTriggerContext
 ### Properties
 * **objectType**: 'AdhocBasedTriggerContext' (Required)
-* **taggingCriteria**: AdhocBasedTaggingCriteria (Required)
+* **taggingCriteria**: [AdhocBasedTaggingCriteria](#adhocbasedtaggingcriteria) (Required)
 
 ## AdhocBasedTaggingCriteria
 ### Properties
-* **tagInfo**: RetentionTag
+* **tagInfo**: [RetentionTag](#retentiontag)
 
 ## RetentionTag
 ### Properties
@@ -242,8 +251,8 @@
 ## ScheduleBasedTriggerContext
 ### Properties
 * **objectType**: 'ScheduleBasedTriggerContext' (Required)
-* **schedule**: BackupSchedule (Required)
-* **taggingCriteria**: TaggingCriteria[] (Required)
+* **schedule**: [BackupSchedule](#backupschedule) (Required)
+* **taggingCriteria**: [TaggingCriteria](#taggingcriteria)[] (Required)
 
 ## BackupSchedule
 ### Properties
@@ -251,10 +260,10 @@
 
 ## TaggingCriteria
 ### Properties
-* **criteria**: BackupCriteria[]
+* **criteria**: [BackupCriteria](#backupcriteria)[]
 * **isDefault**: bool (Required)
 * **taggingPriority**: int (Required)
-* **tagInfo**: RetentionTag (Required)
+* **tagInfo**: [RetentionTag](#retentiontag) (Required)
 
 ## BackupCriteria
 * **Discriminator**: objectType
@@ -263,7 +272,7 @@
 ### ScheduleBasedBackupCriteria
 #### Properties
 * **absoluteCriteria**: 'AllBackup' | 'FirstOfDay' | 'FirstOfMonth' | 'FirstOfWeek' | 'FirstOfYear'[]
-* **daysOfMonth**: Day[]
+* **daysOfMonth**: [Day](#day)[]
 * **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]
 * **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]
 * **objectType**: 'ScheduleBasedBackupCriteria' (Required)
@@ -274,7 +283,7 @@
 ## ScheduleBasedBackupCriteria
 ### Properties
 * **absoluteCriteria**: 'AllBackup' | 'FirstOfDay' | 'FirstOfMonth' | 'FirstOfWeek' | 'FirstOfYear'[]
-* **daysOfMonth**: Day[]
+* **daysOfMonth**: [Day](#day)[]
 * **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]
 * **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]
 * **objectType**: 'ScheduleBasedBackupCriteria' (Required)
@@ -289,14 +298,14 @@
 ## AzureRetentionRule
 ### Properties
 * **isDefault**: bool
-* **lifecycles**: SourceLifeCycle[] (Required)
+* **lifecycles**: [SourceLifeCycle](#sourcelifecycle)[] (Required)
 * **objectType**: 'AzureRetentionRule' (Required)
 
 ## SourceLifeCycle
 ### Properties
-* **deleteAfter**: DeleteOption (Required)
-* **sourceDataStore**: DataStoreInfoBase (Required)
-* **targetDataStoreCopySettings**: TargetCopySetting[]
+* **deleteAfter**: [DeleteOption](#deleteoption) (Required)
+* **sourceDataStore**: [DataStoreInfoBase](#datastoreinfobase) (Required)
+* **targetDataStoreCopySettings**: [TargetCopySetting](#targetcopysetting)[]
 
 ## DeleteOption
 * **Discriminator**: objectType
@@ -314,8 +323,8 @@
 
 ## TargetCopySetting
 ### Properties
-* **copyAfter**: CopyOption (Required)
-* **dataStore**: DataStoreInfoBase (Required)
+* **copyAfter**: [CopyOption](#copyoption) (Required)
+* **dataStore**: [DataStoreInfoBase](#datastoreinfobase) (Required)
 
 ## CopyOption
 * **Discriminator**: objectType

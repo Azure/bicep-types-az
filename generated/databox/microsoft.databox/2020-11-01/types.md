@@ -10,6 +10,7 @@
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [JobProperties](#jobproperties) (Required)
 * **sku**: [Sku](#sku) (Required)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.DataBox/jobs' (ReadOnly, DeployTimeConstant)
 
@@ -361,6 +362,15 @@
 * **displayName**: string
 * **family**: string
 * **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required)
+
+## SystemData
+### Properties
+* **createdAt**: string (ReadOnly)
+* **createdBy**: string (ReadOnly)
+* **createdByType**: string (ReadOnly)
+* **lastModifiedAt**: string (ReadOnly)
+* **lastModifiedBy**: string (ReadOnly)
+* **lastModifiedByType**: string (ReadOnly)
 
 ## ResourceTags
 ### Properties

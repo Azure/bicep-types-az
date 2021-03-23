@@ -16,7 +16,7 @@
 * **conditionVersion**: string
 * **createdBy**: string (ReadOnly)
 * **createdOn**: string (ReadOnly)
-* **delegatedManagedIdentityResourceId**: string (ReadOnly)
+* **delegatedManagedIdentityResourceId**: string
 * **description**: string
 * **principalId**: string (Required)
 * **principalType**: 'Application' | 'DirectoryObjectOrGroup' | 'DirectoryRoleTemplate' | 'Everyone' | 'ForeignGroup' | 'Group' | 'MSI' | 'ServicePrincipal' | 'Unknown' | 'User'

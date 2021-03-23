@@ -73,7 +73,7 @@
 * **creationToken**: string (Required)
 * **exportPolicy**: [VolumePropertiesExportPolicy](#volumepropertiesexportpolicy)
 * **fileSystemId**: string (ReadOnly)
-* **mountTargets**: [MountTargetProperties](#mounttargetproperties)[]
+* **mountTargets**: [MountTargetProperties](#mounttargetproperties)[] (ReadOnly)
 * **protocolTypes**: string[]
 * **provisioningState**: string (ReadOnly)
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra'

@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: AccountProperties
-* **tags**: TrackedResourceTags
+* **properties**: [AccountProperties](#accountproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DeviceUpdate/accounts' (ReadOnly, DeployTimeConstant)
 
 ## Resource Microsoft.DeviceUpdate/accounts/instances@2020-03-01-preview
@@ -18,8 +18,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **location**: string (Required)
 * **name**: string (Required, DeployTimeConstant)
-* **properties**: InstanceProperties (Required)
-* **tags**: TrackedResourceTags
+* **properties**: [InstanceProperties](#instanceproperties) (Required)
+* **tags**: [TrackedResourceTags](#trackedresourcetags)
 * **type**: 'Microsoft.DeviceUpdate/accounts/instances' (ReadOnly, DeployTimeConstant)
 
 ## AccountProperties
@@ -35,7 +35,7 @@
 ## InstanceProperties
 ### Properties
 * **accountName**: string (ReadOnly)
-* **iotHubs**: IotHubSettings[]
+* **iotHubs**: [IotHubSettings](#iothubsettings)[]
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Failed' | 'Succeeded' (ReadOnly)
 
 ## IotHubSettings

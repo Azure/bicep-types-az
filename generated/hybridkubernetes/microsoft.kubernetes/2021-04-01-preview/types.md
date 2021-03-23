@@ -30,6 +30,7 @@
 * **lastConnectivityTime**: string (ReadOnly)
 * **managedIdentityCertificateExpirationTime**: string (ReadOnly)
 * **offering**: string (ReadOnly)
+* **privateLinkScopeResourceId**: string
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating'
 * **totalCoreCount**: int (ReadOnly)
 * **totalNodeCount**: int (ReadOnly)

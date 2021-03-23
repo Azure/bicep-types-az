@@ -19,7 +19,9 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-18' (ReadOnly, DeployTimeConstant)
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant)
+* **location**: string
 * **name**: string (Required, DeployTimeConstant)
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: 'Microsoft.CognitiveServices/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
@@ -50,10 +52,12 @@
 * **encryption**: [Encryption](#encryption)
 * **endpoint**: string (ReadOnly)
 * **internalId**: string (ReadOnly)
+* **isMigrated**: bool (ReadOnly)
 * **networkAcls**: [NetworkRuleSet](#networkruleset)
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'ResolvingDNS' | 'Succeeded' (ReadOnly)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled'
+* **skuChangeInfo**: [CognitiveServicesAccountSkuChangeInfo](#cognitiveservicesaccountskuchangeinfo) (ReadOnly)
 * **userOwnedStorage**: [UserOwnedStorage](#userownedstorage)[]
 
 ## CognitiveServicesAccountApiProperties
@@ -61,6 +65,8 @@
 * **aadClientId**: string
 * **aadTenantId**: string
 * **eventHubConnectionString**: string
+* **qnaAzureSearchEndpointId**: string
+* **qnaAzureSearchEndpointKey**: string
 * **qnaRuntimeEndpoint**: string
 * **statisticsEnabled**: bool
 * **storageAccountConnectionString**: string
@@ -101,7 +107,9 @@
 
 ## PrivateEndpointConnection
 ### Properties
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly)
+* **location**: string
 * **name**: string (ReadOnly)
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
 * **type**: string (ReadOnly)
@@ -118,9 +126,15 @@
 
 ## PrivateLinkServiceConnectionState
 ### Properties
-* **actionRequired**: string
+* **actionsRequired**: string
 * **description**: string
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
+
+## CognitiveServicesAccountSkuChangeInfo
+### Properties
+* **countOfDowngrades**: int (ReadOnly)
+* **countOfUpgradesAfterDowngrades**: int (ReadOnly)
+* **lastChangeDate**: string (ReadOnly)
 
 ## UserOwnedStorage
 ### Properties

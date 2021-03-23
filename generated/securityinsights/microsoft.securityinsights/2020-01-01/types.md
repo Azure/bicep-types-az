@@ -173,7 +173,7 @@
 ## ActionRequestProperties
 ### Properties
 * **logicAppResourceId**: string (Required)
-* **triggerUri**: string (WriteOnly)
+* **triggerUri**: string (Required, WriteOnly)
 * **workflowId**: string (ReadOnly)
 
 ## BookmarkProperties
@@ -323,6 +323,7 @@
 ### Properties
 * **dataTypes**: [TIDataConnectorDataTypes](#tidataconnectordatatypes)
 * **tenantId**: string
+* **tipLookbackPeriod**: string
 
 ## TIDataConnectorDataTypes
 ### Properties

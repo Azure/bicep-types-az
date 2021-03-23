@@ -201,11 +201,17 @@
 ## KafkaRestProperties
 ### Properties
 * **clientGroupInfo**: [ClientGroupInfo](#clientgroupinfo)
+* **configurationOverride**: [KafkaRestPropertiesConfigurationOverride](#kafkarestpropertiesconfigurationoverride)
 
 ## ClientGroupInfo
 ### Properties
 * **groupId**: string
 * **groupName**: string
+
+## KafkaRestPropertiesConfigurationOverride
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## NetworkProperties
 ### Properties
@@ -268,9 +274,9 @@
 * **accessModes**: string[]
 * **destinationPort**: int
 * **disableGatewayAuth**: bool
-* **location**: string
+* **location**: string (ReadOnly)
 * **privateIPAddress**: string
-* **publicPort**: int
+* **publicPort**: int (ReadOnly)
 * **subDomainSuffix**: string
 
 ## RuntimeScriptAction

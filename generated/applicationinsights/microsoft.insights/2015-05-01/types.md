@@ -19,7 +19,7 @@
 * **Content**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **Id**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'item' (Required, DeployTimeConstant)
 * **Name**: string
 * **Properties**: [ApplicationInsightsComponentAnalyticsItemProperties](#applicationinsightscomponentanalyticsitemproperties)
 * **Scope**: 'shared' | 'user'
@@ -85,7 +85,7 @@
 * **Content**: string
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **Id**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'item' (Required, DeployTimeConstant)
 * **Name**: string
 * **Properties**: [ApplicationInsightsComponentAnalyticsItemProperties](#applicationinsightscomponentanalyticsitemproperties)
 * **Scope**: 'shared' | 'user'

@@ -32,7 +32,7 @@
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [WorkerPool](#workerpool)
 * **sku**: [SkuDescription](#skudescription)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
@@ -111,6 +111,148 @@
 * **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Web/sites/basicPublishingCredentialsPolicies@2020-09-01
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: name
+
+### Base Properties
+### Microsoft.Web/sites/basicPublishingCredentialsPolicies
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'ftp' (Required, DeployTimeConstant)
+* **properties**: [CsmPublishingCredentialsPoliciesEntityProperties](#csmpublishingcredentialspoliciesentityproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/basicPublishingCredentialsPolicies' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/basicPublishingCredentialsPolicies
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'scm' (Required, DeployTimeConstant)
+* **properties**: [CsmPublishingCredentialsPoliciesEntityProperties](#csmpublishingcredentialspoliciesentityproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/basicPublishingCredentialsPolicies' (ReadOnly, DeployTimeConstant)
+
+
+## Resource Microsoft.Web/sites/config@2020-09-01
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: name
+
+### Base Properties
+### Microsoft.Web/sites/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'appsettings' (Required, DeployTimeConstant)
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'authsettings' (Required, DeployTimeConstant)
+* **properties**: [SiteAuthSettingsProperties](#siteauthsettingsproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'authsettingsV2' (Required, DeployTimeConstant)
+* **properties**: [SiteAuthSettingsV2Properties](#siteauthsettingsv2properties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'azurestorageaccounts' (Required, DeployTimeConstant)
+* **properties**: [AzureStoragePropertyDictionaryResourceProperties](#azurestoragepropertydictionaryresourceproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'backup' (Required, DeployTimeConstant)
+* **properties**: [BackupRequestProperties](#backuprequestproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'connectionstrings' (Required, DeployTimeConstant)
+* **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'logs' (Required, DeployTimeConstant)
+* **properties**: [SiteLogsConfigProperties](#sitelogsconfigproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'metadata' (Required, DeployTimeConstant)
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'pushsettings' (Required, DeployTimeConstant)
+* **properties**: [PushSettingsProperties](#pushsettingsproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'slotConfigNames' (Required, DeployTimeConstant)
+* **properties**: [SlotConfigNames](#slotconfignames)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'web' (Required, DeployTimeConstant)
+* **properties**: [SiteConfig](#siteconfig)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+
 ## Resource Microsoft.Web/sites/deployments@2020-09-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -139,7 +281,7 @@
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'MSDeploy' (Required, DeployTimeConstant)
 * **properties**: [MSDeployCore](#msdeploycore)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Web/sites/extensions' (ReadOnly, DeployTimeConstant)
@@ -203,7 +345,7 @@
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'MSDeploy' (Required, DeployTimeConstant)
 * **properties**: [MSDeployCore](#msdeploycore)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Web/sites/instances/extensions' (ReadOnly, DeployTimeConstant)
@@ -214,7 +356,7 @@
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'virtualNetwork' (Required, DeployTimeConstant)
 * **properties**: [SwiftVirtualNetworkProperties](#swiftvirtualnetworkproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Web/sites/networkConfig' (ReadOnly, DeployTimeConstant)
@@ -238,7 +380,7 @@
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'virtualNetworks' (Required, DeployTimeConstant)
 * **properties**: [PrivateAccessProperties](#privateaccessproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Web/sites/privateAccess' (ReadOnly, DeployTimeConstant)
@@ -290,6 +432,112 @@
 * **tags**: [ResourceTags](#resourcetags)
 * **type**: 'Microsoft.Web/sites/slots' (ReadOnly, DeployTimeConstant)
 
+## Resource Microsoft.Web/sites/slots/config@2020-09-01
+* **Valid Scope(s)**: ResourceGroup
+* **Discriminator**: name
+
+### Base Properties
+### Microsoft.Web/sites/slots/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'appsettings' (Required, DeployTimeConstant)
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/slots/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'authsettings' (Required, DeployTimeConstant)
+* **properties**: [SiteAuthSettingsProperties](#siteauthsettingsproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/slots/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'authsettingsV2' (Required, DeployTimeConstant)
+* **properties**: [SiteAuthSettingsV2Properties](#siteauthsettingsv2properties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/slots/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'azurestorageaccounts' (Required, DeployTimeConstant)
+* **properties**: [AzureStoragePropertyDictionaryResourceProperties](#azurestoragepropertydictionaryresourceproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/slots/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'backup' (Required, DeployTimeConstant)
+* **properties**: [BackupRequestProperties](#backuprequestproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/slots/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'connectionstrings' (Required, DeployTimeConstant)
+* **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/slots/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'logs' (Required, DeployTimeConstant)
+* **properties**: [SiteLogsConfigProperties](#sitelogsconfigproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/slots/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'metadata' (Required, DeployTimeConstant)
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/slots/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'pushsettings' (Required, DeployTimeConstant)
+* **properties**: [PushSettingsProperties](#pushsettingsproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+### Microsoft.Web/sites/slots/config
+#### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'web' (Required, DeployTimeConstant)
+* **properties**: [SiteConfig](#siteconfig)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+
 ## Resource Microsoft.Web/sites/slots/deployments@2020-09-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -318,7 +566,7 @@
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'MSDeploy' (Required, DeployTimeConstant)
 * **properties**: [MSDeployCore](#msdeploycore)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Web/sites/slots/extensions' (ReadOnly, DeployTimeConstant)
@@ -382,7 +630,7 @@
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'MSDeploy' (Required, DeployTimeConstant)
 * **properties**: [MSDeployCore](#msdeploycore)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Web/sites/slots/instances/extensions' (ReadOnly, DeployTimeConstant)
@@ -393,7 +641,7 @@
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'virtualNetwork' (Required, DeployTimeConstant)
 * **properties**: [SwiftVirtualNetworkProperties](#swiftvirtualnetworkproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Web/sites/slots/networkConfig' (ReadOnly, DeployTimeConstant)
@@ -417,7 +665,7 @@
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'virtualNetworks' (Required, DeployTimeConstant)
 * **properties**: [PrivateAccessProperties](#privateaccessproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Web/sites/slots/privateAccess' (ReadOnly, DeployTimeConstant)
@@ -450,7 +698,7 @@
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'web' (Required, DeployTimeConstant)
 * **properties**: [SiteSourceControlProperties](#sitesourcecontrolproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Web/sites/slots/sourcecontrols' (ReadOnly, DeployTimeConstant)
@@ -483,7 +731,7 @@
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'web' (Required, DeployTimeConstant)
 * **properties**: [SiteSourceControlProperties](#sitesourcecontrolproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Web/sites/sourcecontrols' (ReadOnly, DeployTimeConstant)
@@ -541,7 +789,7 @@
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'functionappsettings' (Required, DeployTimeConstant)
 * **properties**: [StringDictionaryProperties](#stringdictionaryproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Web/staticSites/builds/config' (ReadOnly, DeployTimeConstant)
@@ -552,7 +800,7 @@
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **kind**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'functionappsettings' (Required, DeployTimeConstant)
 * **properties**: [StringDictionaryProperties](#stringdictionaryproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.Web/staticSites/config' (ReadOnly, DeployTimeConstant)
@@ -1074,6 +1322,778 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## Microsoft.Web/sites/basicPublishingCredentialsPolicies
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'ftp' (Required, DeployTimeConstant)
+* **properties**: [CsmPublishingCredentialsPoliciesEntityProperties](#csmpublishingcredentialspoliciesentityproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/basicPublishingCredentialsPolicies' (ReadOnly, DeployTimeConstant)
+
+## CsmPublishingCredentialsPoliciesEntityProperties
+### Properties
+* **allow**: bool (Required)
+
+## Microsoft.Web/sites/basicPublishingCredentialsPolicies
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'scm' (Required, DeployTimeConstant)
+* **properties**: [CsmPublishingCredentialsPoliciesEntityProperties](#csmpublishingcredentialspoliciesentityproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/basicPublishingCredentialsPolicies' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'appsettings' (Required, DeployTimeConstant)
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## StringDictionaryProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'authsettings' (Required, DeployTimeConstant)
+* **properties**: [SiteAuthSettingsProperties](#siteauthsettingsproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## SiteAuthSettingsProperties
+### Properties
+* **aadClaimsAuthorization**: string
+* **additionalLoginParams**: string[]
+* **allowedAudiences**: string[]
+* **allowedExternalRedirectUrls**: string[]
+* **authFilePath**: string
+* **clientId**: string
+* **clientSecret**: string
+* **clientSecretCertificateThumbprint**: string
+* **clientSecretSettingName**: string
+* **defaultProvider**: 'AzureActiveDirectory' | 'Facebook' | 'Github' | 'Google' | 'MicrosoftAccount' | 'Twitter'
+* **enabled**: bool
+* **facebookAppId**: string
+* **facebookAppSecret**: string
+* **facebookAppSecretSettingName**: string
+* **facebookOAuthScopes**: string[]
+* **gitHubClientId**: string
+* **gitHubClientSecret**: string
+* **gitHubClientSecretSettingName**: string
+* **gitHubOAuthScopes**: string[]
+* **googleClientId**: string
+* **googleClientSecret**: string
+* **googleClientSecretSettingName**: string
+* **googleOAuthScopes**: string[]
+* **isAuthFromFile**: string
+* **issuer**: string
+* **microsoftAccountClientId**: string
+* **microsoftAccountClientSecret**: string
+* **microsoftAccountClientSecretSettingName**: string
+* **microsoftAccountOAuthScopes**: string[]
+* **runtimeVersion**: string
+* **tokenRefreshExtensionHours**: int
+* **tokenStoreEnabled**: bool
+* **twitterConsumerKey**: string
+* **twitterConsumerSecret**: string
+* **twitterConsumerSecretSettingName**: string
+* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage'
+* **validateIssuer**: bool
+
+## Microsoft.Web/sites/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'authsettingsV2' (Required, DeployTimeConstant)
+* **properties**: [SiteAuthSettingsV2Properties](#siteauthsettingsv2properties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## SiteAuthSettingsV2Properties
+### Properties
+* **globalValidation**: [GlobalValidation](#globalvalidation)
+* **httpSettings**: [HttpSettings](#httpsettings)
+* **identityProviders**: [IdentityProviders](#identityproviders)
+* **login**: [Login](#login)
+* **platform**: [AuthPlatform](#authplatform)
+
+## GlobalValidation
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [GlobalValidationProperties](#globalvalidationproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## GlobalValidationProperties
+### Properties
+* **excludedPaths**: string[]
+* **redirectToProvider**: string
+* **requireAuthentication**: bool
+* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage' | 'Return401' | 'Return403'
+
+## HttpSettings
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [HttpSettingsProperties](#httpsettingsproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## HttpSettingsProperties
+### Properties
+* **forwardProxy**: [ForwardProxy](#forwardproxy)
+* **requireHttps**: bool
+* **routes**: [HttpSettingsRoutes](#httpsettingsroutes)
+
+## ForwardProxy
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [ForwardProxyProperties](#forwardproxyproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## ForwardProxyProperties
+### Properties
+* **convention**: 'Custom' | 'NoProxy' | 'Standard'
+* **customHostHeaderName**: string
+* **customProtoHeaderName**: string
+
+## HttpSettingsRoutes
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [HttpSettingsRoutesProperties](#httpsettingsroutesproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## HttpSettingsRoutesProperties
+### Properties
+* **apiPrefix**: string
+
+## IdentityProviders
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [IdentityProvidersProperties](#identityprovidersproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## IdentityProvidersProperties
+### Properties
+* **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory)
+* **customOpenIdConnectProviders**: [IdentityProvidersPropertiesCustomOpenIdConnectProviders](#identityproviderspropertiescustomopenidconnectproviders)
+* **facebook**: [Facebook](#facebook)
+* **gitHub**: [GitHub](#github)
+* **google**: [Google](#google)
+* **twitter**: [Twitter](#twitter)
+
+## AzureActiveDirectory
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [AzureActiveDirectoryProperties](#azureactivedirectoryproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## AzureActiveDirectoryProperties
+### Properties
+* **enabled**: bool
+* **isAutoProvisioned**: bool
+* **login**: [AzureActiveDirectoryLogin](#azureactivedirectorylogin)
+* **registration**: [AzureActiveDirectoryRegistration](#azureactivedirectoryregistration)
+* **validation**: [AzureActiveDirectoryValidation](#azureactivedirectoryvalidation)
+
+## AzureActiveDirectoryLogin
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [AzureActiveDirectoryLoginProperties](#azureactivedirectoryloginproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## AzureActiveDirectoryLoginProperties
+### Properties
+* **disableWWWAuthenticate**: bool
+* **loginParameters**: string[]
+
+## AzureActiveDirectoryRegistration
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [AzureActiveDirectoryRegistrationProperties](#azureactivedirectoryregistrationproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## AzureActiveDirectoryRegistrationProperties
+### Properties
+* **clientId**: string
+* **clientSecretCertificateThumbprint**: string
+* **clientSecretSettingName**: string
+* **openIdIssuer**: string
+
+## AzureActiveDirectoryValidation
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [AzureActiveDirectoryValidationProperties](#azureactivedirectoryvalidationproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## AzureActiveDirectoryValidationProperties
+### Properties
+* **allowedAudiences**: string[]
+* **jwtClaimChecks**: [JwtClaimChecks](#jwtclaimchecks)
+
+## JwtClaimChecks
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [JwtClaimChecksProperties](#jwtclaimchecksproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## JwtClaimChecksProperties
+### Properties
+* **allowedClientApplications**: string[]
+* **allowedGroups**: string[]
+
+## IdentityProvidersPropertiesCustomOpenIdConnectProviders
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [CustomOpenIdConnectProvider](#customopenidconnectprovider)
+
+## CustomOpenIdConnectProvider
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [CustomOpenIdConnectProviderProperties](#customopenidconnectproviderproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## CustomOpenIdConnectProviderProperties
+### Properties
+* **enabled**: bool
+* **login**: [OpenIdConnectLogin](#openidconnectlogin)
+* **registration**: [OpenIdConnectRegistration](#openidconnectregistration)
+
+## OpenIdConnectLogin
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [OpenIdConnectLoginProperties](#openidconnectloginproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## OpenIdConnectLoginProperties
+### Properties
+* **nameClaimType**: string
+* **scopes**: string[]
+
+## OpenIdConnectRegistration
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [OpenIdConnectRegistrationProperties](#openidconnectregistrationproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## OpenIdConnectRegistrationProperties
+### Properties
+* **clientCredential**: [OpenIdConnectClientCredential](#openidconnectclientcredential)
+* **clientId**: string
+* **openIdConnectConfiguration**: [OpenIdConnectConfig](#openidconnectconfig)
+
+## OpenIdConnectClientCredential
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [OpenIdConnectClientCredentialProperties](#openidconnectclientcredentialproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## OpenIdConnectClientCredentialProperties
+### Properties
+* **clientSecretSettingName**: string
+* **method**: 'ClientSecretPost'
+
+## OpenIdConnectConfig
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [OpenIdConnectConfigProperties](#openidconnectconfigproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## OpenIdConnectConfigProperties
+### Properties
+* **authorizationEndpoint**: string
+* **certificationUri**: string
+* **issuer**: string
+* **tokenEndpoint**: string
+* **wellKnownOpenIdConfiguration**: string
+
+## Facebook
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [FacebookProperties](#facebookproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## FacebookProperties
+### Properties
+* **enabled**: bool
+* **graphApiVersion**: string
+* **login**: [LoginScopes](#loginscopes)
+* **registration**: [AppRegistration](#appregistration)
+
+## LoginScopes
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [LoginScopesProperties](#loginscopesproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## LoginScopesProperties
+### Properties
+* **scopes**: string[]
+
+## AppRegistration
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [AppRegistrationProperties](#appregistrationproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## AppRegistrationProperties
+### Properties
+* **appId**: string
+* **appSecretSettingName**: string
+
+## GitHub
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [GitHubProperties](#githubproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## GitHubProperties
+### Properties
+* **enabled**: bool
+* **login**: [LoginScopes](#loginscopes)
+* **registration**: [ClientRegistration](#clientregistration)
+
+## ClientRegistration
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [ClientRegistrationProperties](#clientregistrationproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## ClientRegistrationProperties
+### Properties
+* **clientId**: string
+* **clientSecretSettingName**: string
+
+## Google
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [GoogleProperties](#googleproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## GoogleProperties
+### Properties
+* **enabled**: bool
+* **login**: [LoginScopes](#loginscopes)
+* **registration**: [ClientRegistration](#clientregistration)
+* **validation**: [AllowedAudiencesValidation](#allowedaudiencesvalidation)
+
+## AllowedAudiencesValidation
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [AllowedAudiencesValidationProperties](#allowedaudiencesvalidationproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## AllowedAudiencesValidationProperties
+### Properties
+* **allowedAudiences**: string[]
+
+## Twitter
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [TwitterProperties](#twitterproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## TwitterProperties
+### Properties
+* **enabled**: bool
+* **registration**: [TwitterRegistration](#twitterregistration)
+
+## TwitterRegistration
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [TwitterRegistrationProperties](#twitterregistrationproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## TwitterRegistrationProperties
+### Properties
+* **consumerKey**: string
+* **consumerSecretSettingName**: string
+
+## Login
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [LoginProperties](#loginproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## LoginProperties
+### Properties
+* **allowedExternalRedirectUrls**: string[]
+* **cookieExpiration**: [CookieExpiration](#cookieexpiration)
+* **nonce**: [Nonce](#nonce)
+* **preserveUrlFragmentsForLogins**: bool
+* **routes**: [LoginRoutes](#loginroutes)
+* **tokenStore**: [TokenStore](#tokenstore)
+
+## CookieExpiration
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [CookieExpirationProperties](#cookieexpirationproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## CookieExpirationProperties
+### Properties
+* **convention**: 'FixedTime' | 'IdentityProviderDerived'
+* **timeToExpiration**: string
+
+## Nonce
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [NonceProperties](#nonceproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## NonceProperties
+### Properties
+* **nonceExpirationInterval**: string
+* **validateNonce**: bool
+
+## LoginRoutes
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [LoginRoutesProperties](#loginroutesproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## LoginRoutesProperties
+### Properties
+* **logoutEndpoint**: string
+
+## TokenStore
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [TokenStoreProperties](#tokenstoreproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## TokenStoreProperties
+### Properties
+* **azureBlobStorage**: [BlobStorageTokenStore](#blobstoragetokenstore)
+* **enabled**: bool
+* **fileSystem**: [FileSystemTokenStore](#filesystemtokenstore)
+* **tokenRefreshExtensionHours**: int
+
+## BlobStorageTokenStore
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [BlobStorageTokenStoreProperties](#blobstoragetokenstoreproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## BlobStorageTokenStoreProperties
+### Properties
+* **sasUrlSettingName**: string
+
+## FileSystemTokenStore
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [FileSystemTokenStoreProperties](#filesystemtokenstoreproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## FileSystemTokenStoreProperties
+### Properties
+* **directory**: string
+
+## AuthPlatform
+### Properties
+* **id**: string (ReadOnly)
+* **kind**: string
+* **name**: string (ReadOnly)
+* **properties**: [AuthPlatformProperties](#authplatformproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: string (ReadOnly)
+
+## AuthPlatformProperties
+### Properties
+* **configFilePath**: string
+* **enabled**: bool
+* **runtimeVersion**: string
+
+## Microsoft.Web/sites/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'azurestorageaccounts' (Required, DeployTimeConstant)
+* **properties**: [AzureStoragePropertyDictionaryResourceProperties](#azurestoragepropertydictionaryresourceproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## AzureStoragePropertyDictionaryResourceProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [AzureStorageInfoValue](#azurestorageinfovalue)
+
+## AzureStorageInfoValue
+### Properties
+* **accessKey**: string
+* **accountName**: string
+* **mountPath**: string
+* **shareName**: string
+* **state**: 'InvalidCredentials' | 'InvalidShare' | 'Ok' (ReadOnly)
+* **type**: 'AzureBlob' | 'AzureFiles'
+
+## Microsoft.Web/sites/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'backup' (Required, DeployTimeConstant)
+* **properties**: [BackupRequestProperties](#backuprequestproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## BackupRequestProperties
+### Properties
+* **backupName**: string
+* **backupSchedule**: [BackupSchedule](#backupschedule)
+* **databases**: [DatabaseBackupSetting](#databasebackupsetting)[]
+* **enabled**: bool
+* **storageAccountUrl**: string (Required)
+
+## BackupSchedule
+### Properties
+* **frequencyInterval**: int (Required)
+* **frequencyUnit**: 'Day' | 'Hour' (Required)
+* **keepAtLeastOneBackup**: bool (Required)
+* **lastExecutionTime**: string (ReadOnly)
+* **retentionPeriodInDays**: int (Required)
+* **startTime**: string
+
+## DatabaseBackupSetting
+### Properties
+* **connectionString**: string
+* **connectionStringName**: string
+* **databaseType**: 'LocalMySql' | 'MySql' | 'PostgreSql' | 'SqlAzure' (Required)
+* **name**: string
+
+## Microsoft.Web/sites/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'connectionstrings' (Required, DeployTimeConstant)
+* **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## ConnectionStringDictionaryProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ConnStringValueTypePair](#connstringvaluetypepair)
+
+## ConnStringValueTypePair
+### Properties
+* **type**: 'ApiHub' | 'Custom' | 'DocDb' | 'EventHub' | 'MySql' | 'NotificationHub' | 'PostgreSQL' | 'RedisCache' | 'SQLAzure' | 'SQLServer' | 'ServiceBus' (Required)
+* **value**: string (Required)
+
+## Microsoft.Web/sites/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'logs' (Required, DeployTimeConstant)
+* **properties**: [SiteLogsConfigProperties](#sitelogsconfigproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## SiteLogsConfigProperties
+### Properties
+* **applicationLogs**: [ApplicationLogsConfig](#applicationlogsconfig)
+* **detailedErrorMessages**: [EnabledConfig](#enabledconfig)
+* **failedRequestsTracing**: [EnabledConfig](#enabledconfig)
+* **httpLogs**: [HttpLogsConfig](#httplogsconfig)
+
+## ApplicationLogsConfig
+### Properties
+* **azureBlobStorage**: [AzureBlobStorageApplicationLogsConfig](#azureblobstorageapplicationlogsconfig)
+* **azureTableStorage**: [AzureTableStorageApplicationLogsConfig](#azuretablestorageapplicationlogsconfig)
+* **fileSystem**: [FileSystemApplicationLogsConfig](#filesystemapplicationlogsconfig)
+
+## AzureBlobStorageApplicationLogsConfig
+### Properties
+* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning'
+* **retentionInDays**: int
+* **sasUrl**: string
+
+## AzureTableStorageApplicationLogsConfig
+### Properties
+* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning'
+* **sasUrl**: string (Required)
+
+## FileSystemApplicationLogsConfig
+### Properties
+* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning'
+
+## EnabledConfig
+### Properties
+* **enabled**: bool
+
+## HttpLogsConfig
+### Properties
+* **azureBlobStorage**: [AzureBlobStorageHttpLogsConfig](#azureblobstoragehttplogsconfig)
+* **fileSystem**: [FileSystemHttpLogsConfig](#filesystemhttplogsconfig)
+
+## AzureBlobStorageHttpLogsConfig
+### Properties
+* **enabled**: bool
+* **retentionInDays**: int
+* **sasUrl**: string
+
+## FileSystemHttpLogsConfig
+### Properties
+* **enabled**: bool
+* **retentionInDays**: int
+* **retentionInMb**: int
+
+## Microsoft.Web/sites/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'metadata' (Required, DeployTimeConstant)
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## StringDictionaryProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'pushsettings' (Required, DeployTimeConstant)
+* **properties**: [PushSettingsProperties](#pushsettingsproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'slotConfigNames' (Required, DeployTimeConstant)
+* **properties**: [SlotConfigNames](#slotconfignames)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
+## SlotConfigNames
+### Properties
+* **appSettingNames**: string[]
+* **azureStorageConfigNames**: string[]
+* **connectionStringNames**: string[]
+
+## Microsoft.Web/sites/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'web' (Required, DeployTimeConstant)
+* **properties**: [SiteConfig](#siteconfig)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant)
+
 ## DeploymentProperties
 ### Properties
 * **active**: bool
@@ -1248,6 +2268,126 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Microsoft.Web/sites/slots/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'appsettings' (Required, DeployTimeConstant)
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## StringDictionaryProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/slots/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'authsettings' (Required, DeployTimeConstant)
+* **properties**: [SiteAuthSettingsProperties](#siteauthsettingsproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/slots/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'authsettingsV2' (Required, DeployTimeConstant)
+* **properties**: [SiteAuthSettingsV2Properties](#siteauthsettingsv2properties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/slots/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'azurestorageaccounts' (Required, DeployTimeConstant)
+* **properties**: [AzureStoragePropertyDictionaryResourceProperties](#azurestoragepropertydictionaryresourceproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## AzureStoragePropertyDictionaryResourceProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [AzureStorageInfoValue](#azurestorageinfovalue)
+
+## Microsoft.Web/sites/slots/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'backup' (Required, DeployTimeConstant)
+* **properties**: [BackupRequestProperties](#backuprequestproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/slots/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'connectionstrings' (Required, DeployTimeConstant)
+* **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## ConnectionStringDictionaryProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ConnStringValueTypePair](#connstringvaluetypepair)
+
+## Microsoft.Web/sites/slots/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'logs' (Required, DeployTimeConstant)
+* **properties**: [SiteLogsConfigProperties](#sitelogsconfigproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/slots/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'metadata' (Required, DeployTimeConstant)
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## StringDictionaryProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## Microsoft.Web/sites/slots/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'pushsettings' (Required, DeployTimeConstant)
+* **properties**: [PushSettingsProperties](#pushsettingsproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
+
+## Microsoft.Web/sites/slots/config
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant)
+* **id**: string (ReadOnly, DeployTimeConstant)
+* **kind**: string
+* **name**: 'web' (Required, DeployTimeConstant)
+* **properties**: [SiteConfig](#siteconfig)
+* **systemData**: [SystemData](#systemdata) (ReadOnly)
+* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant)
 
 ## ResourceTags
 ### Properties

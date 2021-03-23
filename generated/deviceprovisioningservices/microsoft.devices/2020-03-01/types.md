@@ -104,6 +104,7 @@
 
 ## CertificateProperties
 ### Properties
+* **certificate**: any (ReadOnly)
 * **created**: string (ReadOnly)
 * **expiry**: string (ReadOnly)
 * **isVerified**: bool (ReadOnly)

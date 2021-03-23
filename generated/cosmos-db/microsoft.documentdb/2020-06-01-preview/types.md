@@ -45,7 +45,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
 * **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings' (ReadOnly, DeployTimeConstant)
@@ -57,7 +57,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
 * **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings' (ReadOnly, DeployTimeConstant)
@@ -93,7 +93,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
 * **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings' (ReadOnly, DeployTimeConstant)
@@ -105,7 +105,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
 * **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
@@ -141,7 +141,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
 * **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings' (ReadOnly, DeployTimeConstant)
@@ -153,7 +153,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
 * **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
@@ -210,7 +210,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
 * **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings' (ReadOnly, DeployTimeConstant)
@@ -246,7 +246,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
 * **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings' (ReadOnly, DeployTimeConstant)
@@ -288,7 +288,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant)
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity)
 * **location**: string
-* **name**: string (Required, DeployTimeConstant)
+* **name**: 'default' (Required, DeployTimeConstant)
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required)
 * **tags**: [Tags](#tags)
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings' (ReadOnly, DeployTimeConstant)
