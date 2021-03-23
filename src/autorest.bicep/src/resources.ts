@@ -85,12 +85,12 @@ function getNormalizedMethodPath(path: string) {
   return path;
 }
 
-export function parseNameSchema<T>(descriptor: ResourceDescriptor, request: HttpRequest, parameters: Parameter[], parseType: (schema: Schema) => T, createConstantName: (descriptor: ResourceDescriptor, name: string) => T) {
+export function parseNameSchema<T>(descriptor: ResourceDescriptor, request: HttpRequest, parameters: Parameter[], parseType: (schema: Schema) => T, createConstantName: (name: string) => T) {
   const path = getNormalizedMethodPath(request.path);
 
   const finalProvidersMatch = path.match(parentScopePrefix)?.last;
   if (!finalProvidersMatch) {
-    return { success: false, failureReason: `Unable to locate "/providers/" segment`, name: null };
+    return { success: false, failureReason: `Unable to locate "/providers/" segment` };
   }
 
   const routingScope = trimScope(path.substr(finalProvidersMatch.length));
@@ -105,7 +105,7 @@ export function parseNameSchema<T>(descriptor: ResourceDescriptor, request: Http
     // look up the type
     var param = parameters.filter(p => p.language.default.name === resNameParam)[0];
     if (!param) {
-      return { success: false, failureReason: `Unable to locate parameter with name '${resNameParam}'`, name: null };
+      return { success: false, failureReason: `Unable to locate parameter with name '${resNameParam}'` };
     }
 
     var nameType = parseType(param.schema);
@@ -114,10 +114,10 @@ export function parseNameSchema<T>(descriptor: ResourceDescriptor, request: Http
   }
 
   if (!/^[a-zA-Z0-9]*$/.test(resNameParam)) {
-    return { success: false, failureReason: `Unable to process non-alphanumeric name '${resNameParam}'`, name: null };
+    return { success: false, failureReason: `Unable to process non-alphanumeric name '${resNameParam}'` };
   }
 
-  return { success: true, failureReason: '', name: createConstantName(descriptor, resNameParam), };
+  return { success: true, failureReason: '', name: createConstantName(resNameParam), };
 }
 
 export function getProviderDefinitions(codeModel: CodeModel, host: Host): ProviderDefinition[] {

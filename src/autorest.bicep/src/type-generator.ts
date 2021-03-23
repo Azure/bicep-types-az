@@ -4,18 +4,113 @@
 import { AnySchema, ArraySchema, ChoiceSchema, ConstantSchema, DictionarySchema, ObjectSchema, PrimitiveSchema, Property, Schema, SchemaType, SealedChoiceSchema, StringSchema } from "@autorest/codemodel";
 import { Channel, Host } from "@autorest/extension-base";
 import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
-import { uniq, keys, keyBy, Dictionary, flatMap } from 'lodash';
-import { getFullyQualifiedType, isRootType, parseNameSchema, ProviderDefinition, ResourceDescriptor } from "./resources";
+import { uniq, keys, keyBy, Dictionary, flatMap, groupBy } from 'lodash';
+import { getFullyQualifiedType, isRootType, parseNameSchema, ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources";
 
 export function generateTypes(host: Host, definition: ProviderDefinition) {
   const factory = new TypeFactory();
   const namedDefinitions: Dictionary<TypeReference> = {};
 
   function logWarning(message: string) {
-    host.Message({
-      Channel: Channel.Warning,
-      Text: message,
-    })
+    host.Message({ Channel: Channel.Warning, Text: message, });
+  }
+
+  function logInfo(message: string) {
+    host.Message({ Channel: Channel.Information, Text: message, });
+  }
+
+  function processResourceBody(fullyQualifiedType: string, definition: ResourceDefinition) {
+    const { descriptor, putRequest, putParameters, putSchema, getSchema, } = definition;
+    const { success, failureReason, name } = parseNameSchema(
+      descriptor,
+      putRequest,
+      putParameters,
+      schema => parseType(schema, schema),
+      (name) => factory.addType(new StringLiteralType(name)));
+
+    if (!success || !name) {
+      logWarning(`Skipping resource type ${fullyQualifiedType} under path '${putRequest.path}': ${failureReason}`);
+      return
+    }
+
+    const resourceProperties = getStandardizedResourceProperties(descriptor, name);
+
+    let resourceDefinition: TypeReference;
+    if (putSchema) {
+      resourceDefinition = createObject(getFullyQualifiedType(descriptor), putSchema, resourceProperties);
+    } else {
+      logInfo(`Resource type ${fullyQualifiedType} under path '${putRequest.path}' has no body defined.`);
+      resourceDefinition = factory.addType(new ObjectType(getFullyQualifiedType(descriptor), resourceProperties));
+    }
+
+    for (const { propertyName, putProperty, getProperty } of getObjectTypeProperties(putSchema, getSchema, true)) {
+      if (resourceProperties[propertyName]) {
+        continue;
+      }
+
+      const propertyDefinition = parseType(putProperty?.schema, getProperty?.schema);
+      if (propertyDefinition) {
+        var flags = parsePropertyFlags(putProperty, getProperty);
+        resourceProperties[propertyName] = new ObjectProperty(propertyDefinition, flags);
+      }
+    }
+
+    if (putSchema?.discriminator || getSchema?.discriminator) {
+      const discriminatedObjectType = factory.lookupType(resourceDefinition) as DiscriminatedObjectType;
+
+      handlePolymorphicType(discriminatedObjectType, putSchema, getSchema);
+    }
+
+    return resourceDefinition;
+  }
+
+  function processResource(fullyQualifiedType: string, definitions: ResourceDefinition[]) {
+    if (definitions.length > 1) {
+      for (const definition of definitions) {
+        if (!definition.descriptor.constantName) {
+          logWarning(`Skipping resource type ${fullyQualifiedType} under path '${definitions[0].putRequest.path}': Found multiple definitions for the same type`);
+          return null;
+        }
+      }
+        
+      const definitionsByConstantName = keyBy(definitions, x => x.descriptor.constantName);
+      const polymorphicBodies: Dictionary<TypeReference> = {};
+      for (const definition of definitions) {
+        const bodyType = processResourceBody(fullyQualifiedType, definition);
+        if (!bodyType || !definition.descriptor.constantName) {
+          return null;
+        }
+        
+        polymorphicBodies[definition.descriptor.constantName] = bodyType;
+      }
+
+      const discriminatedBodyType = factory.addType(new DiscriminatedObjectType(
+        fullyQualifiedType,
+        'name',
+        {},
+        polymorphicBodies));
+
+      const descriptor = {
+        ...definitions[0].descriptor,
+        constantName: undefined,
+      };
+
+      return {
+        descriptor,
+        bodyType: discriminatedBodyType
+      };
+    } else {
+      const definition = definitions[0];
+      const bodyType = processResourceBody(fullyQualifiedType, definition);
+      if (!bodyType) {
+        return null;
+      }
+
+      return {
+        descriptor: definition.descriptor,
+        bodyType: bodyType,
+      };
+    }
   }
 
   function generateTypes() {
@@ -23,67 +118,21 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
 
     for (const fullyQualifiedType in resourcesByType) {
       const definitions = resourcesByType[fullyQualifiedType];
-      if (definitions.length > 1) {
-        logWarning(`Skipping resource type ${fullyQualifiedType} under path '${definitions[0].putRequest.path}': Found multiple definitions for the same type`);
+
+      const output = processResource(fullyQualifiedType, definitions);
+      if (!output) {
         continue;
       }
 
-      const { descriptor, putRequest, putParameters, putSchema, getSchema, } = definitions[0];
-      const { success, failureReason, name } = parseNameSchema(
-        descriptor,
-        putRequest,
-        putParameters,
-        schema => parseType(schema, schema),
-        (descriptor, name) => createConstantResourceName(descriptor, name));
-
-      if (!success || !name) {
-        logWarning(`Skipping resource type ${fullyQualifiedType} under path '${putRequest.path}': ${failureReason}`);
-        continue;
-      }
-
-      const resourceProperties = getStandardizedResourceProperties(descriptor, name);
-
-      let resourceDefinition: TypeReference;
-      if (putSchema) {
-        resourceDefinition = createObject(getFullyQualifiedType(descriptor), putSchema, resourceProperties);
-      } else {
-        logWarning(`Resource type ${fullyQualifiedType} under path '${putRequest.path}' has no body defined.`);
-        resourceDefinition = factory.addType(new ObjectType(getFullyQualifiedType(descriptor), resourceProperties));
-      }
+      const { descriptor, bodyType } = output;
 
       factory.addType(new ResourceType(
         `${getFullyQualifiedType(descriptor)}@${descriptor.apiVersion}`,
         descriptor.scopeType,
-        resourceDefinition));
-
-      for (const { propertyName, putProperty, getProperty } of getObjectTypeProperties(putSchema, getSchema, true)) {
-        if (resourceProperties[propertyName]) {
-          continue;
-        }
-
-        const propertyDefinition = parseType(putProperty?.schema, getProperty?.schema);
-        if (propertyDefinition) {
-          var flags = parsePropertyFlags(putProperty, getProperty);
-          resourceProperties[propertyName] = new ObjectProperty(propertyDefinition, flags);
-        }
-      }
-
-      if (putSchema?.discriminator || getSchema?.discriminator) {
-        const discriminatedObjectType = factory.lookupType(resourceDefinition) as DiscriminatedObjectType;
-
-        handlePolymorphicType(discriminatedObjectType, putSchema, getSchema);
-      }
+        bodyType));
     }
 
     return factory.types;
-  }
-
-  function createConstantResourceName(descriptor: ResourceDescriptor, nameValue: string) {
-    if (isRootType(descriptor)) {
-      return factory.addType(new StringLiteralType(nameValue));
-    }
-
-    return factory.lookupBuiltInType(BuiltInTypeKind.String);
   }
 
   function getStandardizedResourceProperties(descriptor: ResourceDescriptor, resourceName: TypeReference): Dictionary<ObjectProperty> {
