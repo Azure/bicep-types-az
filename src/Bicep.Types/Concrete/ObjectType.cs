@@ -37,14 +37,17 @@ namespace Azure.Bicep.Types.Concrete
 
     public class ObjectProperty
     {
-        public ObjectProperty(ITypeReference type, ObjectPropertyFlags flags)
+        public ObjectProperty(ITypeReference type, ObjectPropertyFlags flags, string? description)
         {
             Type = type;
             Flags = flags;
+            Description = description;
         }
 
         public ITypeReference Type { get; set; }
 
         public ObjectPropertyFlags Flags { get; set; }
+
+        public string? Description { get; }
     }
 }

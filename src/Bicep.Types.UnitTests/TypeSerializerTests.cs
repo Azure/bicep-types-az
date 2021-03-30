@@ -45,8 +45,8 @@ namespace Azure.Bicep.Types.UnitTests
             var typeA = factory.Create(() => new ObjectType("typeA", new Dictionary<string, ObjectProperty>(), null));
             var typeB = factory.Create(() => new ObjectType("typeB", new Dictionary<string, ObjectProperty>(), null));
 
-            typeA.Properties!["typeB"] = new ObjectProperty(factory.GetReference(typeB), ObjectPropertyFlags.None);
-            typeB.Properties!["typeA"] = new ObjectProperty(factory.GetReference(typeA), ObjectPropertyFlags.None);
+            typeA.Properties!["typeB"] = new ObjectProperty(factory.GetReference(typeB), ObjectPropertyFlags.None, "hello!");
+            typeB.Properties!["typeA"] = new ObjectProperty(factory.GetReference(typeA), ObjectPropertyFlags.None, "");
 
             var serialized = TypeSerializer.Serialize(factory.GetTypes());
             var deserialized = TypeSerializer.Deserialize(serialized);
