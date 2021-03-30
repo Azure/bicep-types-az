@@ -3,72 +3,72 @@
 ## Resource Microsoft.Devices/IotHubs@2019-03-22
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-03-22' (ReadOnly, DeployTimeConstant)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [IotHubProperties](#iothubproperties)
-* **sku**: [IotHubSkuInfo](#iothubskuinfo) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Devices/IotHubs' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-03-22' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string: The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [IotHubProperties](#iothubproperties): The properties of an IoT hub.
+* **sku**: [IotHubSkuInfo](#iothubskuinfo) (Required): Information about the SKU of the IoT hub.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **type**: 'Microsoft.Devices/IotHubs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/IotHubs/certificates@2019-03-22
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-03-22' (ReadOnly, DeployTimeConstant)
-* **certificate**: string (WriteOnly)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [CertificateProperties](#certificateproperties) (ReadOnly)
-* **type**: 'Microsoft.Devices/IotHubs/certificates' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-03-22' (ReadOnly, DeployTimeConstant): The resource api version
+* **certificate**: string (WriteOnly): base-64 representation of the X509 leaf certificate .cer file or just .pem file content.
+* **etag**: string (ReadOnly): The entity tag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [CertificateProperties](#certificateproperties) (ReadOnly): The description of an X509 CA Certificate.
+* **type**: 'Microsoft.Devices/IotHubs/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups@2019-03-22
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-03-22' (ReadOnly, DeployTimeConstant)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
-* **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-03-22' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): The etag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): The tags.
+* **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## IotHubProperties
 ### Properties
-* **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[]
-* **cloudToDevice**: [CloudToDeviceProperties](#cloudtodeviceproperties)
-* **comments**: string
-* **enableFileUploadNotifications**: bool
-* **eventHubEndpoints**: [Dictionary<string,EventHubProperties>](#dictionarystringeventhubproperties)
-* **features**: 'DeviceManagement' | 'None'
-* **hostName**: string (ReadOnly)
-* **ipFilterRules**: [IpFilterRule](#ipfilterrule)[]
-* **locations**: [IotHubLocationDescription](#iothublocationdescription)[] (ReadOnly)
-* **messagingEndpoints**: [Dictionary<string,MessagingEndpointProperties>](#dictionarystringmessagingendpointproperties)
-* **provisioningState**: string (ReadOnly)
-* **routing**: [RoutingProperties](#routingproperties)
-* **state**: string (ReadOnly)
-* **storageEndpoints**: [Dictionary<string,StorageEndpointProperties>](#dictionarystringstorageendpointproperties)
+* **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[]: The shared access policies you can use to secure a connection to the IoT hub.
+* **cloudToDevice**: [CloudToDeviceProperties](#cloudtodeviceproperties): The IoT hub cloud-to-device messaging properties.
+* **comments**: string: IoT hub comments.
+* **enableFileUploadNotifications**: bool: If True, file upload notifications are enabled.
+* **eventHubEndpoints**: [Dictionary<string,EventHubProperties>](#dictionarystringeventhubproperties): The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.
+* **features**: 'DeviceManagement' | 'None': The capabilities and features enabled for the IoT hub. Possible values include: 'None', 'DeviceManagement'
+* **hostName**: string (ReadOnly): The name of the host.
+* **ipFilterRules**: [IpFilterRule](#ipfilterrule)[]: The IP filter rules.
+* **locations**: [IotHubLocationDescription](#iothublocationdescription)[] (ReadOnly): Primary and secondary location for iot hub
+* **messagingEndpoints**: [Dictionary<string,MessagingEndpointProperties>](#dictionarystringmessagingendpointproperties): The messaging endpoint properties for the file upload notification queue.
+* **provisioningState**: string (ReadOnly): The provisioning state.
+* **routing**: [RoutingProperties](#routingproperties): The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging
+* **state**: string (ReadOnly): The hub state.
+* **storageEndpoints**: [Dictionary<string,StorageEndpointProperties>](#dictionarystringstorageendpointproperties): The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.
 
 ## SharedAccessSignatureAuthorizationRule
 ### Properties
-* **keyName**: string (Required)
-* **primaryKey**: string
-* **rights**: 'DeviceConnect' | 'RegistryRead, DeviceConnect' | 'RegistryRead, RegistryWrite, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect' | 'RegistryRead, RegistryWrite' | 'RegistryRead, ServiceConnect, DeviceConnect' | 'RegistryRead, ServiceConnect' | 'RegistryRead' | 'RegistryWrite, DeviceConnect' | 'RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryWrite, ServiceConnect' | 'RegistryWrite' | 'ServiceConnect, DeviceConnect' | 'ServiceConnect' (Required)
-* **secondaryKey**: string
+* **keyName**: string (Required): The name of the shared access policy.
+* **primaryKey**: string: The primary key.
+* **rights**: 'DeviceConnect' | 'RegistryRead, DeviceConnect' | 'RegistryRead, RegistryWrite, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect' | 'RegistryRead, RegistryWrite' | 'RegistryRead, ServiceConnect, DeviceConnect' | 'RegistryRead, ServiceConnect' | 'RegistryRead' | 'RegistryWrite, DeviceConnect' | 'RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryWrite, ServiceConnect' | 'RegistryWrite' | 'ServiceConnect, DeviceConnect' | 'ServiceConnect' (Required): The permissions assigned to the shared access policy. Possible values include: 'RegistryRead', 'RegistryWrite', 'ServiceConnect', 'DeviceConnect', 'RegistryRead, RegistryWrite', 'RegistryRead, ServiceConnect', 'RegistryRead, DeviceConnect', 'RegistryWrite, ServiceConnect', 'RegistryWrite, DeviceConnect', 'ServiceConnect, DeviceConnect', 'RegistryRead, RegistryWrite, ServiceConnect', 'RegistryRead, RegistryWrite, DeviceConnect', 'RegistryRead, ServiceConnect, DeviceConnect', 'RegistryWrite, ServiceConnect, DeviceConnect', 'RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect'
+* **secondaryKey**: string: The secondary key.
 
 ## CloudToDeviceProperties
 ### Properties
-* **defaultTtlAsIso8601**: string
-* **feedback**: [FeedbackProperties](#feedbackproperties)
-* **maxDeliveryCount**: int
+* **defaultTtlAsIso8601**: string: The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+* **feedback**: [FeedbackProperties](#feedbackproperties): The properties of the feedback queue for cloud-to-device messages.
+* **maxDeliveryCount**: int: The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
 
 ## FeedbackProperties
 ### Properties
-* **lockDurationAsIso8601**: string
-* **maxDeliveryCount**: int
-* **ttlAsIso8601**: string
+* **lockDurationAsIso8601**: string: The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+* **maxDeliveryCount**: int: The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+* **ttlAsIso8601**: string: The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
 
 ## Dictionary<string,EventHubProperties>
 ### Properties
@@ -77,22 +77,22 @@
 
 ## EventHubProperties
 ### Properties
-* **endpoint**: string (ReadOnly)
-* **partitionCount**: int
-* **partitionIds**: string[] (ReadOnly)
-* **path**: string (ReadOnly)
-* **retentionTimeInDays**: int
+* **endpoint**: string (ReadOnly): The Event Hub-compatible endpoint.
+* **partitionCount**: int: The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
+* **partitionIds**: string[] (ReadOnly): The partition ids in the Event Hub-compatible endpoint.
+* **path**: string (ReadOnly): The Event Hub-compatible name.
+* **retentionTimeInDays**: int: The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
 
 ## IpFilterRule
 ### Properties
-* **action**: 'Accept' | 'Reject' (Required)
-* **filterName**: string (Required)
-* **ipMask**: string (Required)
+* **action**: 'Accept' | 'Reject' (Required): The desired action for requests captured by this rule. Possible values include: 'Accept', 'Reject'
+* **filterName**: string (Required): The name of the IP filter rule.
+* **ipMask**: string (Required): A string that contains the IP address range in CIDR notation for the rule.
 
 ## IotHubLocationDescription
 ### Properties
-* **location**: string
-* **role**: 'primary' | 'secondary'
+* **location**: string: The name of the Azure region
+* **role**: 'primary' | 'secondary': The role of the region, can be either primary or secondary. The primary region is where the IoT hub is currently provisioned. The secondary region is the Azure disaster recovery (DR) paired region and also the region where the IoT hub can failover to. Possible values include: 'primary', 'secondary'
 
 ## Dictionary<string,MessagingEndpointProperties>
 ### Properties
@@ -101,71 +101,71 @@
 
 ## MessagingEndpointProperties
 ### Properties
-* **lockDurationAsIso8601**: string
-* **maxDeliveryCount**: int
-* **ttlAsIso8601**: string
+* **lockDurationAsIso8601**: string: The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
+* **maxDeliveryCount**: int: The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
+* **ttlAsIso8601**: string: The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
 
 ## RoutingProperties
 ### Properties
-* **endpoints**: [RoutingEndpoints](#routingendpoints)
-* **fallbackRoute**: [FallbackRouteProperties](#fallbackrouteproperties)
-* **routes**: [RouteProperties](#routeproperties)[]
+* **endpoints**: [RoutingEndpoints](#routingendpoints): The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.
+* **fallbackRoute**: [FallbackRouteProperties](#fallbackrouteproperties): The properties of the fallback route. IoT Hub uses these properties when it routes messages to the fallback endpoint.
+* **routes**: [RouteProperties](#routeproperties)[]: The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.
 
 ## RoutingEndpoints
 ### Properties
-* **eventHubs**: [RoutingEventHubProperties](#routingeventhubproperties)[]
-* **serviceBusQueues**: [RoutingServiceBusQueueEndpointProperties](#routingservicebusqueueendpointproperties)[]
-* **serviceBusTopics**: [RoutingServiceBusTopicEndpointProperties](#routingservicebustopicendpointproperties)[]
-* **storageContainers**: [RoutingStorageContainerProperties](#routingstoragecontainerproperties)[]
+* **eventHubs**: [RoutingEventHubProperties](#routingeventhubproperties)[]: The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.
+* **serviceBusQueues**: [RoutingServiceBusQueueEndpointProperties](#routingservicebusqueueendpointproperties)[]: The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.
+* **serviceBusTopics**: [RoutingServiceBusTopicEndpointProperties](#routingservicebustopicendpointproperties)[]: The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.
+* **storageContainers**: [RoutingStorageContainerProperties](#routingstoragecontainerproperties)[]: The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.
 
 ## RoutingEventHubProperties
 ### Properties
-* **connectionString**: string (Required)
-* **name**: string (Required)
-* **resourceGroup**: string
-* **subscriptionId**: string
+* **connectionString**: string (Required): The connection string of the event hub endpoint.
+* **name**: string (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
+* **resourceGroup**: string: The name of the resource group of the event hub endpoint.
+* **subscriptionId**: string: The subscription identifier of the event hub endpoint.
 
 ## RoutingServiceBusQueueEndpointProperties
 ### Properties
-* **connectionString**: string (Required)
-* **name**: string (Required)
-* **resourceGroup**: string
-* **subscriptionId**: string
+* **connectionString**: string (Required): The connection string of the service bus queue endpoint.
+* **name**: string (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.
+* **resourceGroup**: string: The name of the resource group of the service bus queue endpoint.
+* **subscriptionId**: string: The subscription identifier of the service bus queue endpoint.
 
 ## RoutingServiceBusTopicEndpointProperties
 ### Properties
-* **connectionString**: string (Required)
-* **name**: string (Required)
-* **resourceGroup**: string
-* **subscriptionId**: string
+* **connectionString**: string (Required): The connection string of the service bus topic endpoint.
+* **name**: string (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.
+* **resourceGroup**: string: The name of the resource group of the service bus topic endpoint.
+* **subscriptionId**: string: The subscription identifier of the service bus topic endpoint.
 
 ## RoutingStorageContainerProperties
 ### Properties
-* **batchFrequencyInSeconds**: int
-* **connectionString**: string (Required)
-* **containerName**: string (Required)
-* **encoding**: 'Avro' | 'AvroDeflate' | 'JSON'
-* **fileNameFormat**: string
-* **maxChunkSizeInBytes**: int
-* **name**: string (Required)
-* **resourceGroup**: string
-* **subscriptionId**: string
+* **batchFrequencyInSeconds**: int: Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.
+* **connectionString**: string (Required): The connection string of the storage account.
+* **containerName**: string (Required): The name of storage container in the storage account.
+* **encoding**: 'Avro' | 'AvroDeflate' | 'JSON': Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'. Possible values include: 'Avro', 'AvroDeflate', 'JSON'
+* **fileNameFormat**: string: File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.
+* **maxChunkSizeInBytes**: int: Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).
+* **name**: string (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
+* **resourceGroup**: string: The name of the resource group of the storage account.
+* **subscriptionId**: string: The subscription identifier of the storage account.
 
 ## FallbackRouteProperties
 ### Properties
-* **condition**: string
-* **endpointNames**: string[] (Required)
-* **isEnabled**: bool (Required)
-* **name**: string
-* **source**: string (Required)
+* **condition**: string: The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
+* **endpointNames**: string[] (Required): The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
+* **isEnabled**: bool (Required): Used to specify whether the fallback route is enabled.
+* **name**: string: The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
+* **source**: string (Required): The source to which the routing rule is to be applied to. For example, DeviceMessages
 
 ## RouteProperties
 ### Properties
-* **condition**: string
-* **endpointNames**: string[] (Required)
-* **isEnabled**: bool (Required)
-* **name**: string (Required)
-* **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'Invalid' | 'TwinChangeEvents' (Required)
+* **condition**: string: The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
+* **endpointNames**: string[] (Required): The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
+* **isEnabled**: bool (Required): Used to specify whether a route is enabled.
+* **name**: string (Required): The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
+* **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'Invalid' | 'TwinChangeEvents' (Required): The source that the routing rule is to be applied to, such as DeviceMessages. Possible values include: 'Invalid', 'DeviceMessages', 'TwinChangeEvents', 'DeviceLifecycleEvents', 'DeviceJobLifecycleEvents'
 
 ## Dictionary<string,StorageEndpointProperties>
 ### Properties
@@ -174,15 +174,15 @@
 
 ## StorageEndpointProperties
 ### Properties
-* **connectionString**: string (Required)
-* **containerName**: string (Required)
-* **sasTtlAsIso8601**: string
+* **connectionString**: string (Required): The connection string for the Azure Storage account to which files are uploaded.
+* **containerName**: string (Required): The name of the root container where you upload files. The container need not exist but should be creatable using the connectionString specified.
+* **sasTtlAsIso8601**: string: The period of time for which the SAS URI generated by IoT Hub for file upload is valid. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options.
 
 ## IotHubSkuInfo
 ### Properties
-* **capacity**: int
-* **name**: 'B1' | 'B2' | 'B3' | 'F1' | 'S1' | 'S2' | 'S3' (Required)
-* **tier**: 'Basic' | 'Free' | 'Standard' (ReadOnly)
+* **capacity**: int: The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
+* **name**: 'B1' | 'B2' | 'B3' | 'F1' | 'S1' | 'S2' | 'S3' (Required): The name of the SKU. Possible values include: 'F1', 'S1', 'S2', 'S3', 'B1', 'B2', 'B3'
+* **tier**: 'Basic' | 'Free' | 'Standard' (ReadOnly): The billing tier for the IoT hub. Possible values include: 'Free', 'Standard', 'Basic'
 
 ## Dictionary<string,String>
 ### Properties
@@ -191,13 +191,13 @@
 
 ## CertificateProperties
 ### Properties
-* **certificate**: string (ReadOnly)
-* **created**: string (ReadOnly)
-* **expiry**: string (ReadOnly)
-* **isVerified**: bool (ReadOnly)
-* **subject**: string (ReadOnly)
-* **thumbprint**: string (ReadOnly)
-* **updated**: string (ReadOnly)
+* **certificate**: string (ReadOnly): The certificate content
+* **created**: string (ReadOnly): The certificate's create date and time.
+* **expiry**: string (ReadOnly): The certificate's expiration date and time.
+* **isVerified**: bool (ReadOnly): Determines whether certificate has been verified.
+* **subject**: string (ReadOnly): The certificate's subject name.
+* **thumbprint**: string (ReadOnly): The certificate's thumbprint.
+* **updated**: string (ReadOnly): The certificate's last update date and time.
 
 ## Dictionary<string,String>
 ### Properties

@@ -3,36 +3,36 @@
 ## Resource Microsoft.GuestConfiguration/guestConfigurationAssignments@2018-01-20-preview
 * **Valid Scope(s)**: Extension
 ### Properties
-* **apiVersion**: '2018-01-20-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [GuestConfigurationAssignmentProperties](#guestconfigurationassignmentproperties)
-* **type**: 'Microsoft.GuestConfiguration/guestConfigurationAssignments' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-01-20-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Region where the VM is located.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [GuestConfigurationAssignmentProperties](#guestconfigurationassignmentproperties): Properties of guest configuration assignment object.
+* **type**: 'Microsoft.GuestConfiguration/guestConfigurationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## GuestConfigurationAssignmentProperties
 ### Properties
-* **assignmentHash**: string (ReadOnly)
-* **complianceReason**: string (ReadOnly)
-* **complianceStatus**: 'Compliant' | 'NotCompliant' | 'Pending' (ReadOnly)
-* **guestConfiguration**: [GuestConfigurationNavigation](#guestconfigurationnavigation)
-* **latestReportId**: string (ReadOnly)
-* **location**: string (ReadOnly)
-* **provisioningState**: 'Succeeded' (ReadOnly)
+* **assignmentHash**: string (ReadOnly): Combined hash of the configuration package and parameters.
+* **complianceReason**: string (ReadOnly): Reason for the complianceStatus for the assigned guest configuration.
+* **complianceStatus**: 'Compliant' | 'NotCompliant' | 'Pending' (ReadOnly): A value indicating compliance status of the virtual machine for the assigned guest configuration. Possible values include: 'Compliant', 'NotCompliant', 'Pending'
+* **guestConfiguration**: [GuestConfigurationNavigation](#guestconfigurationnavigation): Guest configuration is an artifact that encapsulates DSC configuration and its dependencies. The artifact is a zip file containing DSC configuration (as MOF) and dependent resources and other dependencies like modules.
+* **latestReportId**: string (ReadOnly): Id of the latest guest configuration assignment report.
+* **location**: string (ReadOnly): Region where VM is located.
+* **provisioningState**: 'Succeeded' (ReadOnly): The provisioning state, which only appears in the response. Possible values include: 'Succeeded'
 
 ## GuestConfigurationNavigation
 ### Properties
-* **configurationParameter**: [ConfigurationParameterList](#configurationparameterlist)
-* **kind**: 'DSC'
-* **name**: string (ReadOnly)
-* **type**: string (ReadOnly)
+* **configurationParameter**: [ConfigurationParameterList](#configurationparameterlist): Represents the list for configuration parameters.
+* **kind**: 'DSC': Kind of the guest configuration. For example:DSC. Possible values include: 'DSC'
+* **name**: string (ReadOnly): Name of the guest configuration.
+* **type**: string (ReadOnly): Type of the guest configuration.
 
 ## ConfigurationParameterList
 ### Properties
-* **value**: [ConfigurationParameter](#configurationparameter)[]
+* **value**: [ConfigurationParameter](#configurationparameter)[]: Represents the list for configuration parameters.
 
 ## ConfigurationParameter
 ### Properties
-* **name**: string (ReadOnly)
-* **value**: string (ReadOnly)
+* **name**: string (ReadOnly): Name of the configuration parameter.
+* **value**: string (ReadOnly): Value of the configuration parameter.
 

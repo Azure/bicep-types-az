@@ -3,19 +3,19 @@
 ## Resource Microsoft.EventHub/namespaces/networkRuleSets@2018-01-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'default' (Required, DeployTimeConstant)
-* **properties**: [schemas:12_properties](#schemas12properties)
-* **type**: 'Microsoft.EventHub/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:12_properties](#schemas12properties): NetworkRuleSet properties
+* **type**: 'Microsoft.EventHub/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## schemas:12_properties
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny'
-* **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]
+* **defaultAction**: 'Allow' | 'Deny': Default Action for Network Rule Set. Possible values include: 'Allow', 'Deny'
+* **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]: List of IpRules
 
 ## NWRuleSetIpRules
 ### Properties
-* **action**: 'Allow'
-* **ipMask**: string
+* **action**: 'Allow': The IP Filter Action. Possible values include: 'Allow'
+* **ipMask**: string: IP Mask
 

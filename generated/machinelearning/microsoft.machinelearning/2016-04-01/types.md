@@ -3,24 +3,24 @@
 ## Resource Microsoft.MachineLearning/workspaces@2016-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2016-04-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [WorkspaceProperties](#workspaceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.MachineLearning/workspaces' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2016-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkspaceProperties](#workspaceproperties): The properties of a machine learning workspace.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
+* **type**: 'Microsoft.MachineLearning/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## WorkspaceProperties
 ### Properties
-* **creationTime**: string (ReadOnly)
-* **keyVaultIdentifierId**: string
-* **ownerEmail**: string (Required)
-* **studioEndpoint**: string (ReadOnly)
-* **userStorageAccountId**: string (Required)
-* **workspaceId**: string (ReadOnly)
-* **workspaceState**: 'Deleted' | 'Disabled' | 'Enabled' | 'Migrated' | 'Registered' | 'Unregistered' | 'Updated' (ReadOnly)
-* **workspaceType**: 'Anonymous' | 'Free' | 'PaidPremium' | 'PaidStandard' | 'Production' (ReadOnly)
+* **creationTime**: string (ReadOnly): The creation time for this workspace resource.
+* **keyVaultIdentifierId**: string: The key vault identifier used for encrypted workspaces.
+* **ownerEmail**: string (Required): The email id of the owner for this workspace.
+* **studioEndpoint**: string (ReadOnly): The regional endpoint for the machine learning studio service which hosts this workspace.
+* **userStorageAccountId**: string (Required): The fully qualified arm id of the storage account associated with this workspace.
+* **workspaceId**: string (ReadOnly): The immutable id associated with this workspace.
+* **workspaceState**: 'Deleted' | 'Disabled' | 'Enabled' | 'Migrated' | 'Registered' | 'Unregistered' | 'Updated' (ReadOnly): The current state of workspace resource. Possible values include: 'Deleted', 'Enabled', 'Disabled', 'Migrated', 'Updated', 'Registered', 'Unregistered'
+* **workspaceType**: 'Anonymous' | 'Free' | 'PaidPremium' | 'PaidStandard' | 'Production' (ReadOnly): The type of this workspace. Possible values include: 'Production', 'Free', 'Anonymous', 'PaidStandard', 'PaidPremium'
 
 ## Dictionary<string,String>
 ### Properties

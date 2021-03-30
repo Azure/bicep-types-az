@@ -3,111 +3,111 @@
 ## Resource Microsoft.CostManagement/cloudConnectors@2019-03-01-preview
 * **Valid Scope(s)**: Tenant
 ### Properties
-* **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ConnectorProperties](#connectorproperties)
-* **type**: 'Microsoft.CostManagement/cloudConnectors' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string: Connector kind (eg aws)
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ConnectorProperties](#connectorproperties): The properties of a Connector
+* **type**: 'Microsoft.CostManagement/cloudConnectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/externalSubscriptions@2019-03-01-preview
 * **Valid Scope(s)**: ManagementGroup
 ### Properties
-* **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.CostManagement/externalSubscriptions' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.CostManagement/externalSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/showbackRules@2019-03-01-preview
 * **Valid Scope(s)**: Extension
 ### Properties
-* **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ShowbackRuleProperties](#showbackruleproperties)
-* **type**: 'Microsoft.CostManagement/showbackRules' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ShowbackRuleProperties](#showbackruleproperties): The properties of a showback rule.
+* **type**: 'Microsoft.CostManagement/showbackRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ConnectorProperties
 ### Properties
-* **billingModel**: 'autoUpgrade' | 'expired' | 'premium' | 'trial'
-* **collectionInfo**: [ConnectorCollectionInfo](#connectorcollectioninfo) (ReadOnly)
-* **createdOn**: string (ReadOnly)
-* **credentialsKey**: string
-* **credentialsSecret**: string
-* **daysTrialRemaining**: int (ReadOnly)
-* **defaultManagementGroupId**: string
-* **displayName**: string
-* **externalBillingAccountId**: string (ReadOnly)
-* **modifiedOn**: string (ReadOnly)
-* **providerBillingAccountDisplayName**: string (ReadOnly)
-* **providerBillingAccountId**: string (ReadOnly)
-* **reportId**: string
-* **status**: 'active' | 'error' | 'expired' | 'warning' (ReadOnly)
-* **subscriptionId**: string
+* **billingModel**: 'autoUpgrade' | 'expired' | 'premium' | 'trial': Connector billing model. Possible values include: 'trial', 'autoUpgrade', 'premium', 'expired'
+* **collectionInfo**: [ConnectorCollectionInfo](#connectorcollectioninfo) (ReadOnly): Collection and ingestion information
+* **createdOn**: string (ReadOnly): Connector definition creation datetime
+* **credentialsKey**: string: Credentials authentication key (eg AWS ARN)
+* **credentialsSecret**: string: Credentials secret (eg AWS ExternalId)
+* **daysTrialRemaining**: int (ReadOnly): Number of days remaining of trial
+* **defaultManagementGroupId**: string: Default ManagementGroupId
+* **displayName**: string: Connector DisplayName
+* **externalBillingAccountId**: string (ReadOnly): Associated ExternalBillingAccountId
+* **modifiedOn**: string (ReadOnly): Connector last modified datetime
+* **providerBillingAccountDisplayName**: string (ReadOnly): The display name of the providerBillingAccountId as defined on the external provider
+* **providerBillingAccountId**: string (ReadOnly): Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number)
+* **reportId**: string: Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
+* **status**: 'active' | 'error' | 'expired' | 'warning' (ReadOnly): Connector status. Possible values include: 'active', 'error', 'expired', 'warning'
+* **subscriptionId**: string: Billing SubscriptionId
 
 ## ConnectorCollectionInfo
 ### Properties
-* **error**: [ConnectorCollectionErrorInfo](#connectorcollectionerrorinfo)
-* **lastChecked**: string (ReadOnly)
-* **lastUpdated**: string (ReadOnly)
-* **sourceLastUpdated**: string (ReadOnly)
+* **error**: [ConnectorCollectionErrorInfo](#connectorcollectionerrorinfo): Details of any error encountered on last collection attempt
+* **lastChecked**: string (ReadOnly): Last time the data acquisition process initiated connecting to the external provider
+* **lastUpdated**: string (ReadOnly): Last time the external data was updated into Azure
+* **sourceLastUpdated**: string (ReadOnly): Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
 
 ## ConnectorCollectionErrorInfo
 ### Properties
-* **errorCode**: string (ReadOnly)
-* **errorInnerMessage**: string (ReadOnly)
-* **errorMessage**: string (ReadOnly)
-* **errorStartTime**: string (ReadOnly)
+* **errorCode**: string (ReadOnly): Short error code
+* **errorInnerMessage**: string (ReadOnly): External Provider error message
+* **errorMessage**: string (ReadOnly): Detailed error message
+* **errorStartTime**: string (ReadOnly): Time the error started occurring (Last time error occurred in lastChecked)
 
 ## ShowbackRuleProperties
 * **Discriminator**: ruleType
 ### Base Properties
-* **creationTime**: string (ReadOnly)
-* **deprecationTime**: string (ReadOnly)
-* **description**: string
-* **modificationTime**: string (ReadOnly)
-* **scopes**: [Scope](#scope)[]
-* **status**: 'Active' | 'NotActive'
-* **version**: int (ReadOnly)
+* **creationTime**: string (ReadOnly): The time when the showback rule was created.
+* **deprecationTime**: string (ReadOnly): The current time when showback rule was deprecate.
+* **description**: string: Description of a showback rule.
+* **modificationTime**: string (ReadOnly): The current status when showback rule was modified.
+* **scopes**: [Scope](#scope)[]: List of authorized assigned scopes.
+* **status**: 'Active' | 'NotActive': The current status of the showback rule. Possible values include: 'NotActive', 'Active'
+* **version**: int (ReadOnly): The current version of showback rule.
 ### CostAllocation
 #### Properties
-* **details**: [CostAllocationDetails](#costallocationdetails)
-* **ruleType**: 'CostAllocation' (Required)
+* **details**: [CostAllocationDetails](#costallocationdetails): Represents CostAllocation showback rule model
+* **ruleType**: 'CostAllocation' (Required): Represents CostAllocation showback rule model
 
 ### CustomPrice
 #### Properties
-* **details**: [CustomPriceDetails](#custompricedetails)
-* **ruleType**: 'CustomPrice' (Required)
+* **details**: [CustomPriceDetails](#custompricedetails): Represents Custom price showback rule model
+* **ruleType**: 'CustomPrice' (Required): Represents Custom price showback rule model
 
 
 ## Scope
 ### Properties
-* **childScope**: [Scope](#scope)
-* **id**: string
-* **name**: string
-* **type**: string
+* **childScope**: [Scope](#scope): The Scope model definition
+* **id**: string: Scope id
+* **name**: string: Scope name
+* **type**: string: Scope type
 
 ## CostAllocation
 ### Properties
-* **details**: [CostAllocationDetails](#costallocationdetails)
-* **ruleType**: 'CostAllocation' (Required)
+* **details**: [CostAllocationDetails](#costallocationdetails): Represents CostAllocation showback rule model
+* **ruleType**: 'CostAllocation' (Required): Represents CostAllocation showback rule model
 
 ## CostAllocationDetails
 ### Properties
-* **policy**: 'Evenly' | 'Fixed' | 'Proportional'
+* **policy**: 'Evenly' | 'Fixed' | 'Proportional': Cost allocation policy. Possible values include: 'Proportional', 'Evenly', 'Fixed'
 
 ## CustomPrice
 ### Properties
-* **details**: [CustomPriceDetails](#custompricedetails)
-* **ruleType**: 'CustomPrice' (Required)
+* **details**: [CustomPriceDetails](#custompricedetails): Represents Custom price showback rule model
+* **ruleType**: 'CustomPrice' (Required): Represents Custom price showback rule model
 
 ## CustomPriceDetails
 ### Properties
-* **benefits**: 'AHUB' | 'All' | 'None' | 'Reservations'[]
-* **markups**: [Markup](#markup)[]
-* **pricesheet**: string
+* **benefits**: 'AHUB' | 'All' | 'None' | 'Reservations'[]: Array of benefits.
+* **markups**: [Markup](#markup)[]: List of markups.
+* **pricesheet**: string:
 
 ## Markup
 ### Properties
-* **percentage**: string
+* **percentage**: string:
 

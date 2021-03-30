@@ -3,92 +3,92 @@
 ## Resource Microsoft.Databricks/workspaces@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [WorkspaceProperties](#workspaceproperties) (Required)
-* **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Databricks/workspaces' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkspaceProperties](#workspaceproperties) (Required): The workspace properties.
+* **sku**: [Sku](#sku): SKU for the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.Databricks/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Databricks/workspaces/virtualNetworkPeerings@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [VirtualNetworkPeeringPropertiesFormat](#virtualnetworkpeeringpropertiesformat) (Required)
-* **type**: 'Microsoft.Databricks/workspaces/virtualNetworkPeerings' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VirtualNetworkPeeringPropertiesFormat](#virtualnetworkpeeringpropertiesformat) (Required): Properties of the virtual network peering.
+* **type**: 'Microsoft.Databricks/workspaces/virtualNetworkPeerings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## WorkspaceProperties
 ### Properties
-* **authorizations**: [WorkspaceProviderAuthorization](#workspaceproviderauthorization)[]
-* **createdBy**: [CreatedBy](#createdby)
-* **createdDateTime**: string
-* **managedResourceGroupId**: string (Required)
-* **parameters**: [WorkspaceCustomParameters](#workspacecustomparameters)
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly)
-* **storageAccountIdentity**: [ManagedIdentityConfiguration](#managedidentityconfiguration)
-* **uiDefinitionUri**: string
-* **updatedBy**: [CreatedBy](#createdby)
-* **workspaceId**: string (ReadOnly)
-* **workspaceUrl**: string (ReadOnly)
+* **authorizations**: [WorkspaceProviderAuthorization](#workspaceproviderauthorization)[]: The workspace provider authorizations.
+* **createdBy**: [CreatedBy](#createdby): Provides details of the entity that created/updated the workspace.
+* **createdDateTime**: string: The date and time stamp when the workspace was created.
+* **managedResourceGroupId**: string (Required): The managed resource group Id.
+* **parameters**: [WorkspaceCustomParameters](#workspacecustomparameters): Custom Parameters used for Cluster Creation.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The workspace provisioning state. Possible values include: 'Accepted', 'Running', 'Ready', 'Creating', 'Created', 'Deleting', 'Deleted', 'Canceled', 'Failed', 'Succeeded', 'Updating'
+* **storageAccountIdentity**: [ManagedIdentityConfiguration](#managedidentityconfiguration): The Managed Identity details for storage account.
+* **uiDefinitionUri**: string: The blob URI where the UI definition file is located.
+* **updatedBy**: [CreatedBy](#createdby): Provides details of the entity that created/updated the workspace.
+* **workspaceId**: string (ReadOnly): The unique identifier of the databricks workspace in databricks control plane.
+* **workspaceUrl**: string (ReadOnly): The workspace URL which is of the format 'adb-{workspaceId}.{random}.azuredatabricks.net'
 
 ## WorkspaceProviderAuthorization
 ### Properties
-* **principalId**: string (Required)
-* **roleDefinitionId**: string (Required)
+* **principalId**: string (Required): The provider's principal identifier. This is the identity that the provider will use to call ARM to manage the workspace resources.
+* **roleDefinitionId**: string (Required): The provider's role definition identifier. This role will define all the permissions that the provider must have on the workspace's container resource group. This role definition cannot have permission to delete the resource group.
 
 ## CreatedBy
 ### Properties
-* **applicationId**: string (ReadOnly)
-* **oid**: string (ReadOnly)
-* **puid**: string (ReadOnly)
+* **applicationId**: string (ReadOnly): The application ID of the application that initiated the creation of the workspace. For example, Azure Portal.
+* **oid**: string (ReadOnly): The Object ID that created the workspace.
+* **puid**: string (ReadOnly): The Personal Object ID corresponding to the object ID above
 
 ## WorkspaceCustomParameters
 ### Properties
-* **amlWorkspaceId**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter)
-* **customPrivateSubnetName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter)
-* **customPublicSubnetName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter)
-* **customVirtualNetworkId**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter)
-* **enableNoPublicIp**: [WorkspaceCustomBooleanParameter](#workspacecustombooleanparameter)
-* **encryption**: [WorkspaceEncryptionParameter](#workspaceencryptionparameter)
-* **prepareEncryption**: [WorkspaceCustomBooleanParameter](#workspacecustombooleanparameter)
-* **requireInfrastructureEncryption**: [WorkspaceCustomBooleanParameter](#workspacecustombooleanparameter)
+* **amlWorkspaceId**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
+* **customPrivateSubnetName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
+* **customPublicSubnetName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
+* **customVirtualNetworkId**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
+* **enableNoPublicIp**: [WorkspaceCustomBooleanParameter](#workspacecustombooleanparameter): The value which should be used for this field.
+* **encryption**: [WorkspaceEncryptionParameter](#workspaceencryptionparameter): The object that contains details of encryption used on the workspace.
+* **prepareEncryption**: [WorkspaceCustomBooleanParameter](#workspacecustombooleanparameter): The value which should be used for this field.
+* **requireInfrastructureEncryption**: [WorkspaceCustomBooleanParameter](#workspacecustombooleanparameter): The value which should be used for this field.
 
 ## WorkspaceCustomStringParameter
 ### Properties
-* **type**: 'Bool' | 'Object' | 'String'
-* **value**: string (Required)
+* **type**: 'Bool' | 'Object' | 'String': The type of variable that this is. Possible values include: 'Bool', 'Object', 'String'
+* **value**: string (Required): The value which should be used for this field.
 
 ## WorkspaceCustomBooleanParameter
 ### Properties
-* **type**: 'Bool' | 'Object' | 'String'
-* **value**: bool (Required)
+* **type**: 'Bool' | 'Object' | 'String': The type of variable that this is. Possible values include: 'Bool', 'Object', 'String'
+* **value**: bool (Required): The value which should be used for this field.
 
 ## WorkspaceEncryptionParameter
 ### Properties
-* **type**: 'Bool' | 'Object' | 'String'
-* **value**: [Encryption](#encryption)
+* **type**: 'Bool' | 'Object' | 'String': The type of variable that this is. Possible values include: 'Bool', 'Object', 'String'
+* **value**: [Encryption](#encryption): The object that contains details of encryption used on the workspace.
 
 ## Encryption
 ### Properties
-* **KeyName**: string
-* **keySource**: 'Default' | 'Microsoft.Keyvault'
-* **keyvaulturi**: string
-* **keyversion**: string
+* **KeyName**: string: The name of KeyVault key.
+* **keySource**: 'Default' | 'Microsoft.Keyvault': The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault. Possible values include: 'Default', 'Microsoft.Keyvault'
+* **keyvaulturi**: string: The Uri of KeyVault.
+* **keyversion**: string: The version of KeyVault key.
 
 ## ManagedIdentityConfiguration
 ### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: string (ReadOnly)
+* **principalId**: string (ReadOnly): The objectId of the Managed Identity that is linked to the Managed Storage account.
+* **tenantId**: string (ReadOnly): The tenant Id where the Managed Identity is created.
+* **type**: string (ReadOnly): The type of Identity created. It can be either SystemAssigned or UserAssigned.
 
 ## Sku
 ### Properties
-* **name**: string (Required)
-* **tier**: string
+* **name**: string (Required): The SKU name.
+* **tier**: string: The SKU tier.
 
 ## Dictionary<string,String>
 ### Properties
@@ -97,22 +97,22 @@
 
 ## VirtualNetworkPeeringPropertiesFormat
 ### Properties
-* **allowForwardedTraffic**: bool
-* **allowGatewayTransit**: bool
-* **allowVirtualNetworkAccess**: bool
-* **databricksAddressSpace**: [AddressSpace](#addressspace)
-* **databricksVirtualNetwork**: [schemas:27_databricksVirtualNetwork](#schemas27databricksvirtualnetwork)
-* **peeringState**: 'Connected' | 'Disconnected' | 'Initiated' (ReadOnly)
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **remoteAddressSpace**: [AddressSpace](#addressspace)
-* **remoteVirtualNetwork**: [schemas:27_databricksVirtualNetwork](#schemas27databricksvirtualnetwork) (Required)
-* **useRemoteGateways**: bool
+* **allowForwardedTraffic**: bool: Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
+* **allowGatewayTransit**: bool: If gateway links can be used in remote virtual networking to link to this virtual network.
+* **allowVirtualNetworkAccess**: bool: Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
+* **databricksAddressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
+* **databricksVirtualNetwork**: [schemas:27_databricksVirtualNetwork](#schemas27databricksvirtualnetwork):  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
+* **peeringState**: 'Connected' | 'Disconnected' | 'Initiated' (ReadOnly): The status of the virtual network peering. Possible values include: 'Initiated', 'Connected', 'Disconnected'
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the virtual network peering resource. Possible values include: 'Succeeded', 'Updating', 'Deleting', 'Failed'
+* **remoteAddressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
+* **remoteVirtualNetwork**: [schemas:27_databricksVirtualNetwork](#schemas27databricksvirtualnetwork) (Required):  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
+* **useRemoteGateways**: bool: If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
 
 ## AddressSpace
 ### Properties
-* **addressPrefixes**: string[]
+* **addressPrefixes**: string[]: A list of address blocks reserved for this virtual network in CIDR notation.
 
 ## schemas:27_databricksVirtualNetwork
 ### Properties
-* **id**: string
+* **id**: string: The Id of the databricks virtual network.
 

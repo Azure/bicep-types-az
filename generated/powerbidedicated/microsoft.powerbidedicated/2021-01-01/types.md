@@ -3,49 +3,49 @@
 ## Resource Microsoft.PowerBIDedicated/autoScaleVCores@2021-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [AutoScaleVCoreProperties](#autoscalevcoreproperties)
-* **sku**: [AutoScaleVCoreSku](#autoscalevcoresku) (Required)
-* **systemData**: [SystemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.PowerBIDedicated/autoScaleVCores' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Location of the PowerBI Dedicated resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AutoScaleVCoreProperties](#autoscalevcoreproperties): Properties of an auto scale v-core resource.
+* **sku**: [AutoScaleVCoreSku](#autoscalevcoresku) (Required): Represents the SKU name and Azure pricing tier for auto scale v-core resource.
+* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Key-value pairs of additional resource provisioning properties.
+* **type**: 'Microsoft.PowerBIDedicated/autoScaleVCores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.PowerBIDedicated/capacities@2021-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [DedicatedCapacityProperties](#dedicatedcapacityproperties)
-* **sku**: [CapacitySku](#capacitysku) (Required)
-* **systemData**: [SystemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.PowerBIDedicated/capacities' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Location of the PowerBI Dedicated resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DedicatedCapacityProperties](#dedicatedcapacityproperties): Properties of Dedicated Capacity resource.
+* **sku**: [CapacitySku](#capacitysku) (Required): Represents the SKU name and Azure pricing tier for PowerBI Dedicated capacity resource.
+* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Key-value pairs of additional resource provisioning properties.
+* **type**: 'Microsoft.PowerBIDedicated/capacities' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AutoScaleVCoreProperties
 ### Properties
-* **capacityLimit**: int
-* **capacityObjectId**: string
-* **provisioningState**: 'Succeeded' (ReadOnly)
+* **capacityLimit**: int: The maximum capacity of an auto scale v-core resource.
+* **capacityObjectId**: string: The object ID of the capacity resource associated with the auto scale v-core resource.
+* **provisioningState**: 'Succeeded' (ReadOnly): The current deployment state of an auto scale v-core resource. The provisioningState is to indicate states for resource provisioning. Possible values include: 'Succeeded'
 
 ## AutoScaleVCoreSku
 ### Properties
-* **capacity**: int
-* **name**: string (Required)
-* **tier**: 'AutoScale'
+* **capacity**: int: The capacity of an auto scale v-core resource.
+* **name**: string (Required): Name of the SKU level.
+* **tier**: 'AutoScale': The name of the Azure pricing tier to which the SKU applies. Possible values include: 'AutoScale'
 
 ## SystemData
 ### Properties
-* **createdAt**: string
-* **createdBy**: string
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
-* **lastModifiedAt**: string
-* **lastModifiedBy**: string
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+* **createdAt**: string: The timestamp of resource creation (UTC)
+* **createdBy**: string: An identifier for the identity that created the resource
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: An identifier for the identity that last modified the resource
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
 
 ## Dictionary<string,String>
 ### Properties
@@ -54,19 +54,19 @@
 
 ## DedicatedCapacityProperties
 ### Properties
-* **administration**: [DedicatedCapacityAdministrators](#dedicatedcapacityadministrators)
-* **mode**: 'Gen1' | 'Gen2'
-* **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly)
-* **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly)
+* **administration**: [DedicatedCapacityAdministrators](#dedicatedcapacityadministrators): An array of administrator user identities
+* **mode**: 'Gen1' | 'Gen2': The capacity mode. Possible values include: 'Gen1', 'Gen2'
+* **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current deployment state of PowerBI Dedicated resource. The provisioningState is to indicate states for resource provisioning. Possible values include: 'Deleting', 'Succeeded', 'Failed', 'Paused', 'Suspended', 'Provisioning', 'Updating', 'Suspending', 'Pausing', 'Resuming', 'Preparing', 'Scaling'
+* **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current state of PowerBI Dedicated resource. The state is to indicate more states outside of resource provisioning. Possible values include: 'Deleting', 'Succeeded', 'Failed', 'Paused', 'Suspended', 'Provisioning', 'Updating', 'Suspending', 'Pausing', 'Resuming', 'Preparing', 'Scaling'
 
 ## DedicatedCapacityAdministrators
 ### Properties
-* **members**: string[]
+* **members**: string[]: An array of administrator user identities.
 
 ## CapacitySku
 ### Properties
-* **name**: string (Required)
-* **tier**: 'AutoPremiumHost' | 'PBIE_Azure' | 'Premium'
+* **name**: string (Required): Name of the SKU level.
+* **tier**: 'AutoPremiumHost' | 'PBIE_Azure' | 'Premium': The name of the Azure pricing tier to which the SKU applies. Possible values include: 'PBIE_Azure', 'Premium', 'AutoPremiumHost'
 
 ## Dictionary<string,String>
 ### Properties

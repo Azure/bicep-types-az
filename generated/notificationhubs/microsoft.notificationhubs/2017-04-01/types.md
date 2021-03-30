@@ -3,75 +3,75 @@
 ## Resource Microsoft.NotificationHubs/namespaces@2017-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [NamespaceProperties](#namespaceproperties)
-* **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.NotificationHubs/namespaces' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NamespaceProperties](#namespaceproperties): Namespace properties.
+* **sku**: [Sku](#sku): The Sku description for a namespace
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: 'Microsoft.NotificationHubs/namespaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NotificationHubs/namespaces/AuthorizationRules@2017-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required)
-* **sku**: [Sku](#sku) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
-* **type**: 'Microsoft.NotificationHubs/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required): SharedAccessAuthorizationRule properties.
+* **sku**: [Sku](#sku) (ReadOnly): The Sku description for a namespace
+* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Resource tags
+* **type**: 'Microsoft.NotificationHubs/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NotificationHubs/namespaces/notificationHubs@2017-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [NotificationHubProperties](#notificationhubproperties) (Required)
-* **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NotificationHubProperties](#notificationhubproperties) (Required): NotificationHub properties.
+* **sku**: [Sku](#sku): The Sku description for a namespace
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2017-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required)
-* **sku**: [Sku](#sku) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
-* **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required): SharedAccessAuthorizationRule properties.
+* **sku**: [Sku](#sku) (ReadOnly): The Sku description for a namespace
+* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Resource tags
+* **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## NamespaceProperties
 ### Properties
-* **createdAt**: string
-* **critical**: bool
-* **dataCenter**: string
-* **enabled**: bool
-* **metricId**: string (ReadOnly)
-* **name**: string
-* **namespaceType**: 'Messaging' | 'NotificationHub'
-* **provisioningState**: string
-* **region**: string
-* **scaleUnit**: string
-* **serviceBusEndpoint**: string
-* **status**: string
-* **subscriptionId**: string
-* **updatedAt**: string
+* **createdAt**: string: The time the namespace was created.
+* **critical**: bool: Whether or not the namespace is set as Critical.
+* **dataCenter**: string: Data center for the namespace
+* **enabled**: bool: Whether or not the namespace is currently enabled.
+* **metricId**: string (ReadOnly): Identifier for Azure Insights metrics
+* **name**: string: The name of the namespace.
+* **namespaceType**: 'Messaging' | 'NotificationHub': The namespace type. Possible values include: 'Messaging', 'NotificationHub'
+* **provisioningState**: string: Provisioning state of the Namespace.
+* **region**: string: Specifies the targeted region in which the namespace should be created. It can be any of the following values: Australia East, Australia Southeast, Central US, East US, East US 2, West US, North Central US, South Central US, East Asia, Southeast Asia, Brazil South, Japan East, Japan West, North Europe, West Europe
+* **scaleUnit**: string: ScaleUnit where the namespace gets created
+* **serviceBusEndpoint**: string: Endpoint you can use to perform NotificationHub operations.
+* **status**: string: Status of the namespace. It can be any of these values:1 = Created/Active2 = Creating3 = Suspended4 = Deleting
+* **subscriptionId**: string: The Id of the Azure subscription associated with the namespace.
+* **updatedAt**: string: The time the namespace was updated.
 
 ## Sku
 ### Properties
-* **capacity**: int
-* **family**: string
-* **name**: 'Basic' | 'Free' | 'Standard' (Required)
-* **size**: string
-* **tier**: string
+* **capacity**: int: The capacity of the resource
+* **family**: string: The Sku Family
+* **name**: 'Basic' | 'Free' | 'Standard' (Required): Name of the notification hub sku. Possible values include: 'Free', 'Basic', 'Standard'
+* **size**: string: The Sku size
+* **tier**: string: The tier of particular sku
 
 ## Dictionary<string,String>
 ### Properties
@@ -80,15 +80,15 @@
 
 ## SharedAccessAuthorizationRuleProperties
 ### Properties
-* **claimType**: string (ReadOnly)
-* **claimValue**: string (ReadOnly)
-* **createdTime**: string (ReadOnly)
-* **keyName**: string (ReadOnly)
-* **modifiedTime**: string (ReadOnly)
-* **primaryKey**: string (ReadOnly)
-* **revision**: int (ReadOnly)
-* **rights**: 'Listen' | 'Manage' | 'Send'[]
-* **secondaryKey**: string (ReadOnly)
+* **claimType**: string (ReadOnly): A string that describes the claim type
+* **claimValue**: string (ReadOnly): A string that describes the claim value
+* **createdTime**: string (ReadOnly): The created time for this rule
+* **keyName**: string (ReadOnly): A string that describes the authorization rule.
+* **modifiedTime**: string (ReadOnly): The last modified time for this rule
+* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **revision**: int (ReadOnly): The revision number for the rule
+* **rights**: 'Listen' | 'Manage' | 'Send'[]: The rights associated with the rule.
+* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
 
 ## Dictionary<string,String>
 ### Properties
@@ -97,79 +97,79 @@
 
 ## NotificationHubProperties
 ### Properties
-* **admCredential**: [AdmCredential](#admcredential)
-* **apnsCredential**: [ApnsCredential](#apnscredential)
-* **authorizationRules**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties)[]
-* **baiduCredential**: [BaiduCredential](#baiducredential)
-* **gcmCredential**: [GcmCredential](#gcmcredential)
-* **mpnsCredential**: [MpnsCredential](#mpnscredential)
-* **name**: string
-* **registrationTtl**: string
-* **wnsCredential**: [WnsCredential](#wnscredential)
+* **admCredential**: [AdmCredential](#admcredential): Description of a NotificationHub AdmCredential.
+* **apnsCredential**: [ApnsCredential](#apnscredential): Description of a NotificationHub ApnsCredential.
+* **authorizationRules**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties)[]: The AuthorizationRules of the created NotificationHub
+* **baiduCredential**: [BaiduCredential](#baiducredential): Description of a NotificationHub BaiduCredential.
+* **gcmCredential**: [GcmCredential](#gcmcredential): Description of a NotificationHub GcmCredential.
+* **mpnsCredential**: [MpnsCredential](#mpnscredential): Description of a NotificationHub MpnsCredential.
+* **name**: string: The NotificationHub name.
+* **registrationTtl**: string: The RegistrationTtl of the created NotificationHub
+* **wnsCredential**: [WnsCredential](#wnscredential): Description of a NotificationHub WnsCredential.
 
 ## AdmCredential
 ### Properties
-* **properties**: [AdmCredentialProperties](#admcredentialproperties)
+* **properties**: [AdmCredentialProperties](#admcredentialproperties): Description of a NotificationHub AdmCredential.
 
 ## AdmCredentialProperties
 ### Properties
-* **authTokenUrl**: string
-* **clientId**: string
-* **clientSecret**: string
+* **authTokenUrl**: string: The URL of the authorization token.
+* **clientId**: string: The client identifier.
+* **clientSecret**: string: The credential secret access key.
 
 ## ApnsCredential
 ### Properties
-* **properties**: [ApnsCredentialProperties](#apnscredentialproperties)
+* **properties**: [ApnsCredentialProperties](#apnscredentialproperties): Description of a NotificationHub ApnsCredential. Note that there is no explicit switch between Certificate and Token Authentication Modes. The mode is determined based on the properties passed in.
 
 ## ApnsCredentialProperties
 ### Properties
-* **apnsCertificate**: string
-* **appId**: string
-* **appName**: string
-* **certificateKey**: string
-* **endpoint**: string
-* **keyId**: string
-* **thumbprint**: string
-* **token**: string
+* **apnsCertificate**: string: The APNS certificate. Specify if using Certificate Authentication Mode.
+* **appId**: string: The issuer (iss) registered claim key. The value is a 10-character TeamId, obtained from your developer account. Specify if using Token Authentication Mode.
+* **appName**: string: The name of the application or BundleId. Specify if using Token Authentication Mode.
+* **certificateKey**: string: The APNS certificate password if it exists.
+* **endpoint**: string: The APNS endpoint of this credential. If using Certificate Authentication Mode and Sandbox specify 'gateway.sandbox.push.apple.com'. If using Certificate Authentication Mode and Production specify 'gateway.push.apple.com'. If using Token Authentication Mode and Sandbox specify 'https://api.development.push.apple.com:443/3/device'. If using Token Authentication Mode and Production specify 'https://api.push.apple.com:443/3/device'.
+* **keyId**: string: A 10-character key identifier (kid) key, obtained from your developer account. Specify if using Token Authentication Mode.
+* **thumbprint**: string: The APNS certificate thumbprint. Specify if using Certificate Authentication Mode.
+* **token**: string: Provider Authentication Token, obtained through your developer account. Specify if using Token Authentication Mode.
 
 ## BaiduCredential
 ### Properties
-* **properties**: [BaiduCredentialProperties](#baiducredentialproperties)
+* **properties**: [BaiduCredentialProperties](#baiducredentialproperties): Description of a NotificationHub BaiduCredential.
 
 ## BaiduCredentialProperties
 ### Properties
-* **baiduApiKey**: string
-* **baiduEndPoint**: string
-* **baiduSecretKey**: string
+* **baiduApiKey**: string: Baidu Api Key.
+* **baiduEndPoint**: string: Baidu Endpoint.
+* **baiduSecretKey**: string: Baidu Secret Key
 
 ## GcmCredential
 ### Properties
-* **properties**: [GcmCredentialProperties](#gcmcredentialproperties)
+* **properties**: [GcmCredentialProperties](#gcmcredentialproperties): Description of a NotificationHub GcmCredential.
 
 ## GcmCredentialProperties
 ### Properties
-* **gcmEndpoint**: string
-* **googleApiKey**: string
+* **gcmEndpoint**: string: The FCM legacy endpoint. Default value is 'https://fcm.googleapis.com/fcm/send'
+* **googleApiKey**: string: The Google API key.
 
 ## MpnsCredential
 ### Properties
-* **properties**: [MpnsCredentialProperties](#mpnscredentialproperties)
+* **properties**: [MpnsCredentialProperties](#mpnscredentialproperties): Description of a NotificationHub MpnsCredential.
 
 ## MpnsCredentialProperties
 ### Properties
-* **certificateKey**: string
-* **mpnsCertificate**: string
-* **thumbprint**: string
+* **certificateKey**: string: The certificate key for this credential.
+* **mpnsCertificate**: string: The MPNS certificate.
+* **thumbprint**: string: The MPNS certificate Thumbprint
 
 ## WnsCredential
 ### Properties
-* **properties**: [WnsCredentialProperties](#wnscredentialproperties)
+* **properties**: [WnsCredentialProperties](#wnscredentialproperties): Description of a NotificationHub WnsCredential.
 
 ## WnsCredentialProperties
 ### Properties
-* **packageSid**: string
-* **secretKey**: string
-* **windowsLiveEndpoint**: string
+* **packageSid**: string: The package ID for this credential.
+* **secretKey**: string: The secret key.
+* **windowsLiveEndpoint**: string: The Windows Live endpoint.
 
 ## Dictionary<string,String>
 ### Properties

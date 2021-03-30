@@ -3,21 +3,21 @@
 ## Resource Microsoft.SoftwarePlan/hybridUseBenefits@2019-12-01
 * **Valid Scope(s)**: Unknown
 ### Properties
-* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant)
-* **etag**: int (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [HybridUseBenefitProperties](#hybridusebenefitproperties)
-* **sku**: [Sku](#sku) (Required)
-* **type**: 'Microsoft.SoftwarePlan/hybridUseBenefits' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: int (ReadOnly): Indicates the revision of the hybrid use benefit
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [HybridUseBenefitProperties](#hybridusebenefitproperties): Hybrid use benefit properties
+* **sku**: [Sku](#sku) (Required): The SKU to be applied for this resource
+* **type**: 'Microsoft.SoftwarePlan/hybridUseBenefits' (ReadOnly, DeployTimeConstant): The resource type
 
 ## HybridUseBenefitProperties
 ### Properties
-* **createdDate**: string (ReadOnly)
-* **lastUpdatedDate**: string (ReadOnly)
-* **provisioningState**: 'Cancelled' | 'Failed' | 'Succeeded' (ReadOnly)
+* **createdDate**: string (ReadOnly): Created date
+* **lastUpdatedDate**: string (ReadOnly): Last updated date
+* **provisioningState**: 'Cancelled' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Succeeded', 'Cancelled', 'Failed'
 
 ## Sku
 ### Properties
-* **name**: string
+* **name**: string: Name of the SKU to be applied
 

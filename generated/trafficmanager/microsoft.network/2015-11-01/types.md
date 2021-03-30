@@ -3,52 +3,52 @@
 ## Resource Microsoft.Network/trafficmanagerprofiles@2015-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ProfileProperties](#profileproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Network/trafficmanagerprofiles' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProfileProperties](#profileproperties): Class representing the Traffic Manager profile properties.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: 'Microsoft.Network/trafficmanagerprofiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ProfileProperties
 ### Properties
-* **dnsConfig**: [DnsConfig](#dnsconfig)
-* **endpoints**: [Endpoint](#endpoint)[]
-* **monitorConfig**: [MonitorConfig](#monitorconfig)
-* **profileStatus**: string
-* **trafficRoutingMethod**: string
+* **dnsConfig**: [DnsConfig](#dnsconfig): Class containing DNS settings in a Traffic Manager profile.
+* **endpoints**: [Endpoint](#endpoint)[]: Gets or sets the list of endpoints in the Traffic Manager profile.
+* **monitorConfig**: [MonitorConfig](#monitorconfig): Class containing endpoint monitoring settings in a Traffic Manager profile.
+* **profileStatus**: string: Gets or sets the status of the Traffic Manager profile.  Possible values are 'Enabled' and 'Disabled'.
+* **trafficRoutingMethod**: string: Gets or sets the traffic routing method of the Traffic Manager profile.  Possible values are 'Performance', 'Weighted', or 'Priority'.
 
 ## DnsConfig
 ### Properties
-* **fqdn**: string
-* **relativeName**: string
-* **ttl**: int
+* **fqdn**: string: Gets or sets the fully-qualified domain name (FQDN) of the Traffic Manager profile.  This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.
+* **relativeName**: string: Gets or sets the relative DNS name provided by this Traffic Manager profile.  This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.
+* **ttl**: int: Gets or sets the DNS Time-To-Live (TTL), in seconds.  This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.
 
 ## Endpoint
 ### Properties
-* **id**: string
-* **name**: string
-* **properties**: [EndpointProperties](#endpointproperties)
-* **type**: string
+* **id**: string: Gets or sets the ID of the Traffic Manager endpoint.
+* **name**: string: Gets or sets the name of the Traffic Manager endpoint.
+* **properties**: [EndpointProperties](#endpointproperties): Class representing a Traffic Manager endpoint properties.
+* **type**: string: Gets or sets the endpoint type of the Traffic Manager endpoint.
 
 ## EndpointProperties
 ### Properties
-* **endpointLocation**: string
-* **endpointMonitorStatus**: string
-* **endpointStatus**: string
-* **minChildEndpoints**: int
-* **priority**: int
-* **target**: string
-* **targetResourceId**: string
-* **weight**: int
+* **endpointLocation**: string: Specifies the location of the external or nested endpoints when using the ‘Performance’ traffic routing method.
+* **endpointMonitorStatus**: string: Gets or sets the monitoring status of the endpoint.
+* **endpointStatus**: string: Gets or sets the status of the endpoint..  If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.  Possible values are 'Enabled' and 'Disabled'.
+* **minChildEndpoints**: int: Gets or sets the minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
+* **priority**: int: Gets or sets the priority of this endpoint when using the ‘Priority’ traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
+* **target**: string: Gets or sets the fully-qualified DNS name of the endpoint.  Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.
+* **targetResourceId**: string: Gets or sets the Azure Resource URI of the of the endpoint.  Not applicable to endpoints of type 'ExternalEndpoints'.
+* **weight**: int: Gets or sets the weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.
 
 ## MonitorConfig
 ### Properties
-* **path**: string
-* **port**: int
-* **profileMonitorStatus**: string
-* **protocol**: string
+* **path**: string: Gets or sets the path relative to the endpoint domain name used to probe for endpoint health.
+* **port**: int: Gets or sets the TCP port used to probe for endpoint health.
+* **profileMonitorStatus**: string: Gets or sets the profile-level monitoring status of the Traffic Manager profile.
+* **protocol**: string: Gets or sets the protocol (HTTP or HTTPS) used to probe for endpoint health.
 
 ## Dictionary<string,String>
 ### Properties

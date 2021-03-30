@@ -3,121 +3,121 @@
 ## Resource Microsoft.ContainerInstance/containerGroups@2017-08-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:10_properties](#schemas10properties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:10_properties](#schemas10properties) (Required):
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## schemas:10_properties
 ### Properties
-* **containers**: [Container](#container)[] (Required)
-* **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]
-* **ipAddress**: [IpAddress](#ipaddress)
-* **osType**: 'Linux' | 'Windows' (Required)
-* **provisioningState**: string (ReadOnly)
-* **restartPolicy**: 'always'
-* **state**: string (ReadOnly)
-* **volumes**: [Volume](#volume)[]
+* **containers**: [Container](#container)[] (Required): The containers within the container group.
+* **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]: The image registry credentials by which the container group is created from.
+* **ipAddress**: [IpAddress](#ipaddress): IP address for the container group.
+* **osType**: 'Linux' | 'Windows' (Required): The operating system type required by the containers in the container group. Possible values include: 'Windows', 'Linux'
+* **provisioningState**: string (ReadOnly): The provisioning state of the container group. This only appears in the response.
+* **restartPolicy**: 'always': Restart policy for all containers within the container group. Currently the only available option is `always`. Possible values include: 'always'
+* **state**: string (ReadOnly): The current state of the container group. This is only valid for the response.
+* **volumes**: [Volume](#volume)[]: The list of volumes that can be mounted by containers in this container group.
 
 ## Container
 ### Properties
-* **name**: string (Required)
-* **properties**: [ContainerProperties](#containerproperties) (Required)
+* **name**: string (Required): The user-provided name of the container instance.
+* **properties**: [ContainerProperties](#containerproperties) (Required): The container instance properties.
 
 ## ContainerProperties
 ### Properties
-* **command**: string[]
-* **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]
-* **image**: string (Required)
-* **instanceView**: [schemas:1_instanceView](#schemas1instanceview) (ReadOnly)
-* **ports**: [ContainerPort](#containerport)[]
-* **resources**: [ResourceRequirements](#resourcerequirements) (Required)
-* **volumeMounts**: [VolumeMount](#volumemount)[]
+* **command**: string[]: The commands to execute within the container instance in exec form.
+* **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: The environment variables to set in the container instance.
+* **image**: string (Required): The name of the image used to create the container instance.
+* **instanceView**: [schemas:1_instanceView](#schemas1instanceview) (ReadOnly): The instance view of the container instance. Only valid in response.
+* **ports**: [ContainerPort](#containerport)[]: The exposed ports on the container instance.
+* **resources**: [ResourceRequirements](#resourcerequirements) (Required): The resource requirements.
+* **volumeMounts**: [VolumeMount](#volumemount)[]: The volume mounts available to the container instance.
 
 ## EnvironmentVariable
 ### Properties
-* **name**: string (Required)
-* **value**: string (Required)
+* **name**: string (Required): The name of the environment variable.
+* **value**: string (Required): The value of the environment variable.
 
 ## schemas:1_instanceView
 ### Properties
-* **currentState**: [ContainerState](#containerstate)
-* **events**: [ContainerEvent](#containerevent)[]
-* **previousState**: [ContainerState](#containerstate)
-* **restartCount**: int
+* **currentState**: [ContainerState](#containerstate): The container instance state.
+* **events**: [ContainerEvent](#containerevent)[]: The events of the container instance.
+* **previousState**: [ContainerState](#containerstate): The container instance state.
+* **restartCount**: int: The number of times that the container instance has been restarted.
 
 ## ContainerState
 ### Properties
-* **detailStatus**: string
-* **exitCode**: int
-* **finishTime**: string
-* **startTime**: string
-* **state**: string
+* **detailStatus**: string: The human-readable status of the container instance state.
+* **exitCode**: int: The container instance exit codes correspond to those from the `docker run` command.
+* **finishTime**: string: The date-time when the container instance state finished.
+* **startTime**: string: The date-time when the container instance state started.
+* **state**: string: The state of the container instance.
 
 ## ContainerEvent
 ### Properties
-* **count**: int
-* **firstTimestamp**: string
-* **lastTimestamp**: string
-* **message**: string
-* **type**: string
+* **count**: int: The count of the event.
+* **firstTimestamp**: string: The date-time of the earliest logged event.
+* **lastTimestamp**: string: The date-time of the latest logged event.
+* **message**: string: The event message.
+* **type**: string: The event type.
 
 ## ContainerPort
 ### Properties
-* **port**: int (Required)
+* **port**: int (Required): The port number exposed within the container group.
 
 ## ResourceRequirements
 ### Properties
-* **limits**: [ResourceLimits](#resourcelimits)
-* **requests**: [ResourceRequests](#resourcerequests) (Required)
+* **limits**: [ResourceLimits](#resourcelimits): The resource limits.
+* **requests**: [ResourceRequests](#resourcerequests) (Required): The resource requests.
 
 ## ResourceLimits
 ### Properties
-* **cpu**: int
-* **memoryInGB**: int
+* **cpu**: int: The CPU limit of this container instance.
+* **memoryInGB**: int: The memory limit in GB of this container instance.
 
 ## ResourceRequests
 ### Properties
-* **cpu**: int (Required)
-* **memoryInGB**: int (Required)
+* **cpu**: int (Required): The CPU request of this container instance.
+* **memoryInGB**: int (Required): The memory request in GB of this container instance.
 
 ## VolumeMount
 ### Properties
-* **mountPath**: string (Required)
-* **name**: string (Required)
-* **readOnly**: bool
+* **mountPath**: string (Required): The path within the container where the volume should be mounted. Must not contain colon (:).
+* **name**: string (Required): The name of the volume mount.
+* **readOnly**: bool: The flag indicating whether the volume mount is read-only.
 
 ## ImageRegistryCredential
 ### Properties
-* **password**: string
-* **server**: string (Required)
-* **username**: string (Required)
+* **password**: string: The password for the private registry.
+* **server**: string (Required): The Docker image registry server without a protocol such as "http" and "https".
+* **username**: string (Required): The username for the private registry.
 
 ## IpAddress
 ### Properties
-* **ip**: string
-* **ports**: [Port](#port)[] (Required)
-* **type**: string (Required)
+* **ip**: string: The IP exposed to the public internet.
+* **ports**: [Port](#port)[] (Required): The list of ports exposed on the container group.
+* **type**: string (Required): Specifies if the IP is exposed to the public internet.
 
 ## Port
 ### Properties
-* **port**: int (Required)
-* **protocol**: 'TCP' | 'UDP'
+* **port**: int (Required): The port number.
+* **protocol**: 'TCP' | 'UDP': The protocol associated with the port. Possible values include: 'TCP', 'UDP'
 
 ## Volume
 ### Properties
-* **azureFile**: [AzureFileVolume](#azurefilevolume) (Required)
-* **name**: string (Required)
+* **azureFile**: [AzureFileVolume](#azurefilevolume) (Required): The properties of the Azure File volume. Azure File shares are mounted as volumes.
+* **name**: string (Required): The name of the volume.
 
 ## AzureFileVolume
 ### Properties
-* **readOnly**: bool
-* **shareName**: string (Required)
-* **storageAccountKey**: string
-* **storageAccountName**: string (Required)
+* **readOnly**: bool: The flag indicating whether the Azure File shared mounted as a volume is read-only.
+* **shareName**: string (Required): The name of the Azure File share to be mounted as a volume.
+* **storageAccountKey**: string: The storage account access key used to access the Azure File share.
+* **storageAccountName**: string (Required): The name of the storage account that contains the Azure File share.
 
 ## Dictionary<string,String>
 ### Properties

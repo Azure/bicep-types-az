@@ -3,108 +3,108 @@
 ## Resource Microsoft.StorageSync/storageSyncServices@2017-06-05-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [StorageSyncServiceProperties](#storagesyncserviceproperties)
-* **tags**: any
-* **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: The location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [StorageSyncServiceProperties](#storagesyncserviceproperties): Storage Sync Service Properties object.
+* **tags**: any: The tags of the resource.
+* **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/registeredServers@2017-06-05-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [RegisteredServerProperties](#registeredserverproperties)
-* **type**: 'Microsoft.StorageSync/storageSyncServices/registeredServers' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RegisteredServerProperties](#registeredserverproperties): RegisteredServer Properties object.
+* **type**: 'Microsoft.StorageSync/storageSyncServices/registeredServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups@2017-06-05-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [SyncGroupProperties](#syncgroupproperties)
-* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SyncGroupProperties](#syncgroupproperties): SyncGroup Properties object.
+* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2017-06-05-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [CloudEndpointProperties](#cloudendpointproperties)
-* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [CloudEndpointProperties](#cloudendpointproperties): CloudEndpoint Properties object.
+* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints@2017-06-05-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ServerEndpointProperties](#serverendpointproperties)
-* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServerEndpointProperties](#serverendpointproperties): ServerEndpoint Properties object.
+* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## StorageSyncServiceProperties
 ### Properties
-* **storageSyncServiceStatus**: int (ReadOnly)
-* **storageSyncServiceUid**: string (ReadOnly)
+* **storageSyncServiceStatus**: int (ReadOnly): Storage Sync service status.
+* **storageSyncServiceUid**: string (ReadOnly): Storage Sync service Uid
 
 ## RegisteredServerProperties
 ### Properties
-* **agentVersion**: string
-* **clusterId**: string
-* **clusterName**: string
-* **lastHeartBeat**: string
-* **lastWorkflowId**: string
-* **provisioningState**: string
-* **serverCertificate**: string
-* **serverId**: string
-* **serverManagementtErrorCode**: int
-* **serverOSVersion**: string
-* **serverRole**: string
-* **storageSyncServiceUid**: string
+* **agentVersion**: string: Registered Server Agent Version
+* **clusterId**: string: Registered Server clusterId
+* **clusterName**: string: Registered Server clusterName
+* **lastHeartBeat**: string: Registered Server last heart beat
+* **lastWorkflowId**: string: Registered Server lastWorkflowId
+* **provisioningState**: string: Registered Server Provisioning State
+* **serverCertificate**: string: Registered Server Certificate
+* **serverId**: string: Registered Server serverId
+* **serverManagementtErrorCode**: int: Registered Server Management Error Code
+* **serverOSVersion**: string: Registered Server OS Version
+* **serverRole**: string: Registered Server serverRole
+* **storageSyncServiceUid**: string: Registered Server storageSyncServiceUid
 
 ## SyncGroupProperties
 ### Properties
-* **syncGroupStatus**: string (ReadOnly)
-* **uniqueId**: string
+* **syncGroupStatus**: string (ReadOnly): Sync group status
+* **uniqueId**: string: Unique Id
 
 ## CloudEndpointProperties
 ### Properties
-* **backupEnabled**: bool (ReadOnly)
-* **friendlyName**: string
-* **lastWorkflowId**: string
-* **partnershipId**: string
-* **provisioningState**: string
-* **storageAccount**: string
-* **storageAccountKey**: string
-* **storageAccountResourceId**: string
-* **storageAccountShareName**: string
-* **storageAccountTenantId**: string
+* **backupEnabled**: bool (ReadOnly): Backup Enabled
+* **friendlyName**: string: Friendly Name
+* **lastWorkflowId**: string: CloudEndpoint lastWorkflowId
+* **partnershipId**: string: Partnership Id
+* **provisioningState**: string: CloudEndpoint Provisioning State
+* **storageAccount**: string: Storage Account name.
+* **storageAccountKey**: string: Storage Account access key.
+* **storageAccountResourceId**: string: Storage Account Resource Id
+* **storageAccountShareName**: string: Storage Account Share name
+* **storageAccountTenantId**: string: Storage Account Tenant Id
 
 ## ServerEndpointProperties
 ### Properties
-* **byteProgress**: int
-* **byteTotal**: int
-* **cloudTiering**: 'off' | 'on'
-* **currentProgressType**: 'download' | 'initialize' | 'none' | 'recall' | 'upload'
-* **friendlyName**: string
-* **itemDownloadErrorCount**: int
-* **itemProgressCount**: int
-* **itemTotalCount**: int
-* **itemUploadErrorCount**: int
-* **lastSyncSuccess**: string
-* **lastWorkflowId**: string
-* **provisioningState**: string
-* **serverLocalPath**: string
-* **serverResourceId**: string
-* **syncErrorContext**: string
-* **syncErrorDirection**: 'download' | 'initialize' | 'none' | 'recall' | 'upload'
-* **syncErrorState**: string
-* **syncErrorStateTimestamp**: string
-* **totalProgress**: int
-* **volumeFreeSpacePercent**: int
+* **byteProgress**: int: Bytes in progress
+* **byteTotal**: int: Bytes total
+* **cloudTiering**: 'off' | 'on': Cloud Tiering. Possible values include: 'on', 'off'
+* **currentProgressType**: 'download' | 'initialize' | 'none' | 'recall' | 'upload': current progress type. Possible values include: 'none', 'initialize', 'download', 'upload', 'recall'
+* **friendlyName**: string: Friendly Name
+* **itemDownloadErrorCount**: int: Item download error count.
+* **itemProgressCount**: int: Item Progress Count
+* **itemTotalCount**: int: Item Total Count
+* **itemUploadErrorCount**: int: Item Upload Error Count.
+* **lastSyncSuccess**: string: Last Sync Success
+* **lastWorkflowId**: string: ServerEndpoint lastWorkflowId
+* **provisioningState**: string: ServerEndpoint Provisioning State
+* **serverLocalPath**: string: Server folder used for data synchronization
+* **serverResourceId**: string: Arm resource identifier.
+* **syncErrorContext**: string: sync error context.
+* **syncErrorDirection**: 'download' | 'initialize' | 'none' | 'recall' | 'upload': Sync Error Direction. Possible values include: 'none', 'initialize', 'download', 'upload', 'recall'
+* **syncErrorState**: string: Sync Error State
+* **syncErrorStateTimestamp**: string: Sync Error State Timestamp
+* **totalProgress**: int: Total progress
+* **volumeFreeSpacePercent**: int: Level of free space to be maintained by Cloud Tiering if it is enabled.
 

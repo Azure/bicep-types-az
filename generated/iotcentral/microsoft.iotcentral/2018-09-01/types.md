@@ -3,25 +3,25 @@
 ## Resource Microsoft.IoTCentral/iotApps@2018-09-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-09-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [AppProperties](#appproperties)
-* **sku**: [AppSkuInfo](#appskuinfo) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.IoTCentral/iotApps' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-09-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AppProperties](#appproperties): The properties of an IoT Central application.
+* **sku**: [AppSkuInfo](#appskuinfo) (Required): Information about the SKU of the IoT Central application.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **type**: 'Microsoft.IoTCentral/iotApps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AppProperties
 ### Properties
-* **applicationId**: string (ReadOnly)
-* **displayName**: string
-* **subdomain**: string
-* **template**: string
+* **applicationId**: string (ReadOnly): The ID of the application.
+* **displayName**: string: The display name of the application.
+* **subdomain**: string: The subdomain of the application.
+* **template**: string: The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
 
 ## AppSkuInfo
 ### Properties
-* **name**: 'F1' | 'S1' | 'ST0' | 'ST1' | 'ST2' (Required)
+* **name**: 'F1' | 'S1' | 'ST0' | 'ST1' | 'ST2' (Required): The name of the SKU. Possible values include: 'F1', 'S1', 'ST0', 'ST1', 'ST2'
 
 ## Dictionary<string,String>
 ### Properties

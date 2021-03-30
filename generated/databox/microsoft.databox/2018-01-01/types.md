@@ -3,202 +3,202 @@
 ## Resource Microsoft.DataBox/jobs@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [JobProperties](#jobproperties) (Required)
-* **sku**: [Sku](#sku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.DataBox/jobs' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [JobProperties](#jobproperties) (Required): Job Properties
+* **sku**: [Sku](#sku) (Required): The Sku.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
+* **type**: 'Microsoft.DataBox/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## JobProperties
 ### Properties
-* **cancellationReason**: string (ReadOnly)
-* **details**: [JobDetails](#jobdetails)
-* **error**: [Error](#error) (ReadOnly)
-* **isCancellable**: bool (ReadOnly)
-* **isDeletable**: bool (ReadOnly)
-* **isShippingAddressEditable**: bool (ReadOnly)
-* **startTime**: string (ReadOnly)
-* **status**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' (ReadOnly)
+* **cancellationReason**: string (ReadOnly): Reason for cancellation.
+* **details**: [JobDetails](#jobdetails): Job details.
+* **error**: [Error](#error) (ReadOnly): Top level error for the job.
+* **isCancellable**: bool (ReadOnly): Describes whether the job is cancellable or not.
+* **isDeletable**: bool (ReadOnly): Describes whether the job is deletable or not.
+* **isShippingAddressEditable**: bool (ReadOnly): Describes whether the shipping address is editable or not.
+* **startTime**: string (ReadOnly): Time at which the job was started in UTC ISO 8601 format.
+* **status**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' (ReadOnly): Name of the stage which is in progress. Possible values include: 'DeviceOrdered', 'DevicePrepared', 'Dispatched', 'Delivered', 'PickedUp', 'AtAzureDC', 'DataCopy', 'Completed', 'CompletedWithErrors', 'Cancelled', 'Failed_IssueReportedAtCustomer', 'Failed_IssueDetectedAtAzureDC', 'Aborted'
 
 ## JobDetails
 * **Discriminator**: jobDetailsType
 ### Base Properties
-* **chainOfCustodySasKey**: string (ReadOnly)
-* **contactDetails**: [ContactDetails](#contactdetails) (Required)
-* **copyLogDetails**: [CopyLogDetails](#copylogdetails)[] (ReadOnly)
-* **deliveryPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly)
-* **destinationAccountDetails**: [DestinationAccountDetails](#destinationaccountdetails)[] (Required)
-* **errorDetails**: [JobErrorDetails](#joberrordetails)[] (ReadOnly)
-* **expectedDataSizeInTeraBytes**: int
-* **jobStages**: [JobStages](#jobstages)[] (ReadOnly)
-* **preferences**: [Preferences](#preferences)
-* **returnPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly)
-* **reverseShipmentLabelSasKey**: string (ReadOnly)
-* **shippingAddress**: [ShippingAddress](#shippingaddress) (Required)
+* **chainOfCustodySasKey**: string (ReadOnly): Shared access key to download the chain of custody logs
+* **contactDetails**: [ContactDetails](#contactdetails) (Required): Contact Details.
+* **copyLogDetails**: [CopyLogDetails](#copylogdetails)[] (ReadOnly): List of copy log details.
+* **deliveryPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly): Shipping details.
+* **destinationAccountDetails**: [DestinationAccountDetails](#destinationaccountdetails)[] (Required): Destination account details.
+* **errorDetails**: [JobErrorDetails](#joberrordetails)[] (ReadOnly): Error details for failure. This is optional.
+* **expectedDataSizeInTeraBytes**: int: The expected size of the data, which needs to be transferred in this job, in terabytes.
+* **jobStages**: [JobStages](#jobstages)[] (ReadOnly): List of stages that run in the job.
+* **preferences**: [Preferences](#preferences): Preferences related to the order
+* **returnPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly): Shipping details.
+* **reverseShipmentLabelSasKey**: string (ReadOnly): Shared access key to download the return shipment label
+* **shippingAddress**: [ShippingAddress](#shippingaddress) (Required): Shipping address where customer wishes to receive the device.
 ### DataBox
 #### Properties
-* **accountName**: string (ReadOnly)
-* **copyLogDetailsType**: 'DataBox' (Required)
-* **copyLogLink**: string (ReadOnly)
-* **jobDetailsType**: 'DataBox' (Required)
+* **accountName**: string (ReadOnly): Destination account name.
+* **copyLogDetailsType**: 'DataBox' (Required): Copy log details for a storage account of a DataBox job
+* **copyLogLink**: string (ReadOnly): Link for copy logs.
+* **jobDetailsType**: 'DataBox' (Required): DataBox Job Details
 
 ### DataBoxDisk
 #### Properties
-* **copyLogDetailsType**: 'DataBoxDisk' (Required)
-* **diskSerialNumber**: string (ReadOnly)
-* **errorLogLink**: string (ReadOnly)
-* **jobDetailsType**: 'DataBoxDisk' (Required)
-* **verboseLogLink**: string (ReadOnly)
+* **copyLogDetailsType**: 'DataBoxDisk' (Required): Copy Log Details for a disk
+* **diskSerialNumber**: string (ReadOnly): Disk Serial Number.
+* **errorLogLink**: string (ReadOnly): Link for copy error logs.
+* **jobDetailsType**: 'DataBoxDisk' (Required): DataBox Disk Job Details.
+* **verboseLogLink**: string (ReadOnly): Link for copy verbose logs.
 
 ### DataBoxHeavy
 #### Properties
-* **accountName**: string (ReadOnly)
-* **copyLogDetailsType**: 'DataBoxHeavy' (Required)
-* **copyLogLink**: string[] (ReadOnly)
-* **jobDetailsType**: 'DataBoxHeavy' (Required)
+* **accountName**: string (ReadOnly): Destination account name.
+* **copyLogDetailsType**: 'DataBoxHeavy' (Required): Copy log details for a storage account for DataBoxHeavy
+* **copyLogLink**: string[] (ReadOnly): Link for copy logs.
+* **jobDetailsType**: 'DataBoxHeavy' (Required): DataBoxHeavy Device Job Details
 
 
 ## ContactDetails
 ### Properties
-* **contactName**: string (Required)
-* **emailList**: string[] (Required)
-* **mobile**: string
-* **notificationPreference**: [NotificationPreference](#notificationpreference)[]
-* **phone**: string (Required)
-* **phoneExtension**: string
+* **contactName**: string (Required): Contact name of the person.
+* **emailList**: string[] (Required): List of Email-ids to be notified about job progress.
+* **mobile**: string: Mobile number of the contact person.
+* **notificationPreference**: [NotificationPreference](#notificationpreference)[]: Notification preference for a job stage.
+* **phone**: string (Required): Phone number of the contact person.
+* **phoneExtension**: string: Phone extension number of the contact person.
 
 ## NotificationPreference
 ### Properties
-* **sendNotification**: bool (Required)
-* **stageName**: 'AtAzureDC' | 'DataCopy' | 'Delivered' | 'DevicePrepared' | 'Dispatched' | 'PickedUp' (Required)
+* **sendNotification**: bool (Required): Notification is required or not.
+* **stageName**: 'AtAzureDC' | 'DataCopy' | 'Delivered' | 'DevicePrepared' | 'Dispatched' | 'PickedUp' (Required): Name of the stage. Possible values include: 'DevicePrepared', 'Dispatched', 'Delivered', 'PickedUp', 'AtAzureDC', 'DataCopy'
 
 ## CopyLogDetails
 * **Discriminator**: copyLogDetailsType
 ### Base Properties
 ### DataBox
 #### Properties
-* **accountName**: string (ReadOnly)
-* **copyLogDetailsType**: 'DataBox' (Required)
-* **copyLogLink**: string (ReadOnly)
-* **jobDetailsType**: 'DataBox' (Required)
+* **accountName**: string (ReadOnly): Destination account name.
+* **copyLogDetailsType**: 'DataBox' (Required): Copy log details for a storage account of a DataBox job
+* **copyLogLink**: string (ReadOnly): Link for copy logs.
+* **jobDetailsType**: 'DataBox' (Required): DataBox Job Details
 
 ### DataBoxDisk
 #### Properties
-* **copyLogDetailsType**: 'DataBoxDisk' (Required)
-* **diskSerialNumber**: string (ReadOnly)
-* **errorLogLink**: string (ReadOnly)
-* **jobDetailsType**: 'DataBoxDisk' (Required)
-* **verboseLogLink**: string (ReadOnly)
+* **copyLogDetailsType**: 'DataBoxDisk' (Required): Copy Log Details for a disk
+* **diskSerialNumber**: string (ReadOnly): Disk Serial Number.
+* **errorLogLink**: string (ReadOnly): Link for copy error logs.
+* **jobDetailsType**: 'DataBoxDisk' (Required): DataBox Disk Job Details.
+* **verboseLogLink**: string (ReadOnly): Link for copy verbose logs.
 
 ### DataBoxHeavy
 #### Properties
-* **accountName**: string (ReadOnly)
-* **copyLogDetailsType**: 'DataBoxHeavy' (Required)
-* **copyLogLink**: string[] (ReadOnly)
-* **jobDetailsType**: 'DataBoxHeavy' (Required)
+* **accountName**: string (ReadOnly): Destination account name.
+* **copyLogDetailsType**: 'DataBoxHeavy' (Required): Copy log details for a storage account for DataBoxHeavy
+* **copyLogLink**: string[] (ReadOnly): Link for copy logs.
+* **jobDetailsType**: 'DataBoxHeavy' (Required): DataBoxHeavy Device Job Details
 
 
 ## DataBox
 ### Properties
-* **accountName**: string (ReadOnly)
-* **copyLogDetailsType**: 'DataBox' (Required)
-* **copyLogLink**: string (ReadOnly)
-* **jobDetailsType**: 'DataBox' (Required)
+* **accountName**: string (ReadOnly): Destination account name.
+* **copyLogDetailsType**: 'DataBox' (Required): Copy log details for a storage account of a DataBox job
+* **copyLogLink**: string (ReadOnly): Link for copy logs.
+* **jobDetailsType**: 'DataBox' (Required): DataBox Job Details
 
 ## DataBoxDisk
 ### Properties
-* **copyLogDetailsType**: 'DataBoxDisk' (Required)
-* **diskSerialNumber**: string (ReadOnly)
-* **errorLogLink**: string (ReadOnly)
-* **jobDetailsType**: 'DataBoxDisk' (Required)
-* **verboseLogLink**: string (ReadOnly)
+* **copyLogDetailsType**: 'DataBoxDisk' (Required): Copy Log Details for a disk
+* **diskSerialNumber**: string (ReadOnly): Disk Serial Number.
+* **errorLogLink**: string (ReadOnly): Link for copy error logs.
+* **jobDetailsType**: 'DataBoxDisk' (Required): DataBox Disk Job Details.
+* **verboseLogLink**: string (ReadOnly): Link for copy verbose logs.
 
 ## DataBoxHeavy
 ### Properties
-* **accountName**: string (ReadOnly)
-* **copyLogDetailsType**: 'DataBoxHeavy' (Required)
-* **copyLogLink**: string[] (ReadOnly)
-* **jobDetailsType**: 'DataBoxHeavy' (Required)
+* **accountName**: string (ReadOnly): Destination account name.
+* **copyLogDetailsType**: 'DataBoxHeavy' (Required): Copy log details for a storage account for DataBoxHeavy
+* **copyLogLink**: string[] (ReadOnly): Link for copy logs.
+* **jobDetailsType**: 'DataBoxHeavy' (Required): DataBoxHeavy Device Job Details
 
 ## PackageShippingDetails
 ### Properties
-* **carrierName**: string (ReadOnly)
-* **trackingId**: string (ReadOnly)
-* **trackingUrl**: string (ReadOnly)
+* **carrierName**: string (ReadOnly): Name of the carrier.
+* **trackingId**: string (ReadOnly): Tracking Id of shipment.
+* **trackingUrl**: string (ReadOnly): Url where shipment can be tracked.
 
 ## DestinationAccountDetails
 * **Discriminator**: dataDestinationType
 ### Base Properties
-* **accountId**: string
+* **accountId**: string: Arm Id of the destination where the data has to be moved.
 ### ManagedDisk
 #### Properties
-* **dataDestinationType**: 'ManagedDisk' (Required)
-* **resourceGroupId**: string (Required)
-* **stagingStorageAccountId**: string (Required)
+* **dataDestinationType**: 'ManagedDisk' (Required): Details for the destination compute disks.
+* **resourceGroupId**: string (Required): Destination Resource Group Id where the Compute disks should be created.
+* **stagingStorageAccountId**: string (Required): Arm Id of the storage account that can be used to copy the vhd for staging.
 
 ### StorageAccount
 #### Properties
-* **dataDestinationType**: 'StorageAccount' (Required)
-* **storageAccountId**: string (Required)
+* **dataDestinationType**: 'StorageAccount' (Required): Details for the destination storage account.
+* **storageAccountId**: string (Required): Destination Storage Account Arm Id.
 
 
 ## ManagedDisk
 ### Properties
-* **dataDestinationType**: 'ManagedDisk' (Required)
-* **resourceGroupId**: string (Required)
-* **stagingStorageAccountId**: string (Required)
+* **dataDestinationType**: 'ManagedDisk' (Required): Details for the destination compute disks.
+* **resourceGroupId**: string (Required): Destination Resource Group Id where the Compute disks should be created.
+* **stagingStorageAccountId**: string (Required): Arm Id of the storage account that can be used to copy the vhd for staging.
 
 ## StorageAccount
 ### Properties
-* **dataDestinationType**: 'StorageAccount' (Required)
-* **storageAccountId**: string (Required)
+* **dataDestinationType**: 'StorageAccount' (Required): Details for the destination storage account.
+* **storageAccountId**: string (Required): Destination Storage Account Arm Id.
 
 ## JobErrorDetails
 ### Properties
-* **errorCode**: int (ReadOnly)
-* **errorMessage**: string (ReadOnly)
-* **exceptionMessage**: string (ReadOnly)
-* **recommendedAction**: string (ReadOnly)
+* **errorCode**: int (ReadOnly): Code for the error.
+* **errorMessage**: string (ReadOnly): Message for the error.
+* **exceptionMessage**: string (ReadOnly): Contains the non localized exception message
+* **recommendedAction**: string (ReadOnly): Recommended action for the error.
 
 ## JobStages
 ### Properties
-* **displayName**: string (ReadOnly)
-* **errorDetails**: [JobErrorDetails](#joberrordetails)[] (ReadOnly)
-* **jobStageDetails**: any (ReadOnly)
-* **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' (ReadOnly)
-* **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' | 'SucceededWithErrors' (ReadOnly)
-* **stageTime**: string (ReadOnly)
+* **displayName**: string (ReadOnly): Display name of the job stage.
+* **errorDetails**: [JobErrorDetails](#joberrordetails)[] (ReadOnly): Error details for the stage.
+* **jobStageDetails**: any (ReadOnly): Job Stage Details
+* **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' (ReadOnly): Name of the job stage. Possible values include: 'DeviceOrdered', 'DevicePrepared', 'Dispatched', 'Delivered', 'PickedUp', 'AtAzureDC', 'DataCopy', 'Completed', 'CompletedWithErrors', 'Cancelled', 'Failed_IssueReportedAtCustomer', 'Failed_IssueDetectedAtAzureDC', 'Aborted'
+* **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' | 'SucceededWithErrors' (ReadOnly): Status of the job stage. Possible values include: 'None', 'InProgress', 'Succeeded', 'Failed', 'Cancelled', 'Cancelling', 'SucceededWithErrors'
+* **stageTime**: string (ReadOnly): Time for the job stage in UTC ISO 8601 format.
 
 ## Preferences
 ### Properties
-* **preferredDataCenterRegion**: string[]
+* **preferredDataCenterRegion**: string[]:
 
 ## ShippingAddress
 ### Properties
-* **addressType**: 'Commercial' | 'None' | 'Residential'
-* **city**: string
-* **companyName**: string
-* **country**: string (Required)
-* **postalCode**: string (Required)
-* **stateOrProvince**: string
-* **streetAddress1**: string (Required)
-* **streetAddress2**: string
-* **streetAddress3**: string
-* **zipExtendedCode**: string
+* **addressType**: 'Commercial' | 'None' | 'Residential': Type of address. Possible values include: 'None', 'Residential', 'Commercial'
+* **city**: string: Name of the City.
+* **companyName**: string: Name of the company.
+* **country**: string (Required): Name of the Country.
+* **postalCode**: string (Required): Postal code.
+* **stateOrProvince**: string: Name of the State or Province.
+* **streetAddress1**: string (Required): Street Address line 1.
+* **streetAddress2**: string: Street Address line 2.
+* **streetAddress3**: string: Street Address line 3.
+* **zipExtendedCode**: string: Extended Zip Code.
 
 ## Error
 ### Properties
-* **code**: string (ReadOnly)
-* **message**: string (ReadOnly)
+* **code**: string (ReadOnly): Error code that can be used to programmatically identify the error.
+* **message**: string (ReadOnly): Describes the error in detail and provides debugging information.
 
 ## Sku
 ### Properties
-* **displayName**: string
-* **family**: string
-* **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required)
+* **displayName**: string: The display name of the sku.
+* **family**: string: The sku family.
+* **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): The sku name. Possible values include: 'DataBox', 'DataBoxDisk', 'DataBoxHeavy'
 
 ## Dictionary<string,String>
 ### Properties

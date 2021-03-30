@@ -3,17 +3,17 @@
 ## Resource microsoft.aadiam/privateLinkForAzureAd@2020-03-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **allTenants**: bool
-* **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **ownerTenantId**: string
-* **resourceGroup**: string
-* **resourceName**: string
-* **subscriptionId**: string
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **tenants**: string[]
-* **type**: 'microsoft.aadiam/privateLinkForAzureAd' (ReadOnly, DeployTimeConstant)
+* **allTenants**: bool: Flag indicating whether all tenants are allowed
+* **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **ownerTenantId**: string: Guid of the owner tenant
+* **resourceGroup**: string: Name of the resource group
+* **resourceName**: string: Name of the private link policy resource
+* **subscriptionId**: string: Subscription Identifier
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tenants**: string[]: The list of tenantIds.
+* **type**: 'microsoft.aadiam/privateLinkForAzureAd' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Dictionary<string,String>
 ### Properties

@@ -3,17 +3,17 @@
 ## Resource Microsoft.Subscription/aliases@2019-10-01-preview
 * **Valid Scope(s)**: Tenant
 ### Properties
-* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [PutAliasRequestProperties](#putaliasrequestproperties)
-* **type**: 'Microsoft.Subscription/aliases' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PutAliasRequestProperties](#putaliasrequestproperties): Put subscription properties.
+* **type**: 'Microsoft.Subscription/aliases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## PutAliasRequestProperties
 ### Properties
-* **billingScope**: string (Required, WriteOnly)
-* **displayName**: string (Required, WriteOnly)
-* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly)
-* **subscriptionId**: string
-* **workload**: 'DevTest' | 'Production' (Required, WriteOnly)
+* **billingScope**: string (Required, WriteOnly): Determines whether subscription is fieldLed, partnerLed or LegacyEA
+* **displayName**: string (Required, WriteOnly): The friendly name of the subscription.
+* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly): The provisioning state of the resource. Possible values include: 'Accepted', 'Succeeded', 'Failed'
+* **subscriptionId**: string: This parameter can be used to create alias for existing subscription Id
+* **workload**: 'DevTest' | 'Production' (Required, WriteOnly): The workload type of the subscription. It can be either Production or DevTest. Possible values include: 'Production', 'DevTest'
 

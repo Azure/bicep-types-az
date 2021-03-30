@@ -3,174 +3,174 @@
 ## Resource Microsoft.DBForMySQL/servers@2017-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [ResourceIdentity](#resourceidentity) (ReadOnly)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required)
-* **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.DBForMySQL/servers' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [ResourceIdentity](#resourceidentity) (ReadOnly): Azure Active Directory identity configuration for a resource.
+* **location**: string (Required): The location the resource resides in.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required): The properties used to create a new server.
+* **sku**: [Sku](#sku): Billing information related properties of a server.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Application-specific metadata in the form of key-value pairs.
+* **type**: 'Microsoft.DBForMySQL/servers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBForMySQL/servers/administrators@2017-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'activeDirectory' (Required, DeployTimeConstant)
-* **properties**: [ServerAdministratorProperties](#serveradministratorproperties)
-* **type**: 'Microsoft.DBForMySQL/servers/administrators' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'activeDirectory' (Required, DeployTimeConstant): The resource name
+* **properties**: [ServerAdministratorProperties](#serveradministratorproperties): The properties of an server Administrator.
+* **type**: 'Microsoft.DBForMySQL/servers/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBForMySQL/servers/configurations@2017-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ConfigurationProperties](#configurationproperties)
-* **type**: 'Microsoft.DBForMySQL/servers/configurations' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ConfigurationProperties](#configurationproperties): The properties of a configuration.
+* **type**: 'Microsoft.DBForMySQL/servers/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBForMySQL/servers/databases@2017-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [DatabaseProperties](#databaseproperties)
-* **type**: 'Microsoft.DBForMySQL/servers/databases' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DatabaseProperties](#databaseproperties): The properties of a database.
+* **type**: 'Microsoft.DBForMySQL/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBForMySQL/servers/firewallRules@2017-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required)
-* **type**: 'Microsoft.DBForMySQL/servers/firewallRules' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a server firewall rule.
+* **type**: 'Microsoft.DBForMySQL/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBForMySQL/servers/securityAlertPolicies@2017-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties)
-* **type**: 'Microsoft.DBForMySQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Properties of a security alert policy.
+* **type**: 'Microsoft.DBForMySQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBForMySQL/servers/virtualNetworkRules@2017-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties)
-* **type**: 'Microsoft.DBForMySQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Properties of a virtual network rule.
+* **type**: 'Microsoft.DBForMySQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ResourceIdentity
 ### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'SystemAssigned' (ReadOnly)
+* **principalId**: string (ReadOnly): The Azure Active Directory principal id.
+* **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
+* **type**: 'SystemAssigned' (ReadOnly): The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource. Possible values include: 'SystemAssigned'
 
 ## ServerPropertiesForCreate
 * **Discriminator**: createMode
 ### Base Properties
-* **administratorLogin**: string (ReadOnly)
-* **byokEnforcement**: string (ReadOnly)
-* **earliestRestoreDate**: string (ReadOnly)
-* **fullyQualifiedDomainName**: string (ReadOnly)
-* **infrastructureEncryption**: 'Disabled' | 'Enabled' (ReadOnly)
-* **masterServerId**: string (ReadOnly)
-* **minimalTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2' | 'TLSEnforcementDisabled'
-* **privateEndpointConnections**: [ServerPrivateEndpointConnection](#serverprivateendpointconnection)[] (ReadOnly)
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly)
-* **replicaCapacity**: int (ReadOnly)
-* **replicationRole**: string (ReadOnly)
-* **sslEnforcement**: 'Disabled' | 'Enabled'
-* **storageProfile**: [StorageProfile](#storageprofile)
-* **userVisibleState**: 'Disabled' | 'Dropping' | 'Inaccessible' | 'Ready' (ReadOnly)
-* **version**: '5.6' | '5.7' | '8.0'
+* **administratorLogin**: string (ReadOnly): The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
+* **byokEnforcement**: string (ReadOnly): Status showing whether the server data encryption is enabled with customer-managed keys.
+* **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
+* **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
+* **infrastructureEncryption**: 'Disabled' | 'Enabled' (ReadOnly): Status showing whether the server enabled infrastructure encryption. Possible values include: 'Enabled', 'Disabled'
+* **masterServerId**: string (ReadOnly): The master server id of a replica server.
+* **minimalTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2' | 'TLSEnforcementDisabled': Enforce a minimal Tls version for the server. Possible values include: 'TLS1_0', 'TLS1_1', 'TLS1_2', 'TLSEnforcementDisabled'
+* **privateEndpointConnections**: [ServerPrivateEndpointConnection](#serverprivateendpointconnection)[] (ReadOnly): List of private endpoint connections on a server
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly): Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'. Possible values include: 'Enabled', 'Disabled'
+* **replicaCapacity**: int (ReadOnly): The maximum number of replicas that a master server can have.
+* **replicationRole**: string (ReadOnly): The replication role of the server.
+* **sslEnforcement**: 'Disabled' | 'Enabled': Enable ssl enforcement or not when connect to server. Possible values include: 'Enabled', 'Disabled'
+* **storageProfile**: [StorageProfile](#storageprofile): Storage Profile properties of a server
+* **userVisibleState**: 'Disabled' | 'Dropping' | 'Inaccessible' | 'Ready' (ReadOnly): A state of a server that is visible to user. Possible values include: 'Ready', 'Dropping', 'Disabled', 'Inaccessible'
+* **version**: '5.6' | '5.7' | '8.0': Server version. Possible values include: '5.6', '5.7', '8.0'
 ### Default
 #### Properties
-* **administratorLogin**: string (Required, WriteOnly)
-* **administratorLoginPassword**: string (Required, WriteOnly)
-* **createMode**: 'Default' (Required)
+* **administratorLogin**: string (Required, WriteOnly): The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
+* **administratorLoginPassword**: string (Required, WriteOnly): The password of the administrator login.
+* **createMode**: 'Default' (Required): The properties used to create a new server.
 
 ### GeoRestore
 #### Properties
-* **createMode**: 'GeoRestore' (Required)
-* **sourceServerId**: string (Required, WriteOnly)
+* **createMode**: 'GeoRestore' (Required): The properties used to create a new server by restoring to a different region from a geo replicated backup.
+* **sourceServerId**: string (Required, WriteOnly): The source server id to restore from.
 
 ### PointInTimeRestore
 #### Properties
-* **createMode**: 'PointInTimeRestore' (Required)
-* **restorePointInTime**: string (Required, WriteOnly)
-* **sourceServerId**: string (Required, WriteOnly)
+* **createMode**: 'PointInTimeRestore' (Required): The properties used to create a new server by restoring from a backup.
+* **restorePointInTime**: string (Required, WriteOnly): Restore point creation time (ISO8601 format), specifying the time to restore from.
+* **sourceServerId**: string (Required, WriteOnly): The source server id to restore from.
 
 ### Replica
 #### Properties
-* **createMode**: 'Replica' (Required)
-* **sourceServerId**: string (Required, WriteOnly)
+* **createMode**: 'Replica' (Required): The properties to create a new replica.
+* **sourceServerId**: string (Required, WriteOnly): The master server id to create replica from.
 
 
 ## ServerPrivateEndpointConnection
 ### Properties
-* **id**: string (ReadOnly)
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly)
+* **id**: string (ReadOnly): Resource Id of the private endpoint connection.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Properties of a private endpoint connection.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty) (ReadOnly)
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty) (ReadOnly)
-* **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' (ReadOnly)
+* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty) (ReadOnly):
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty) (ReadOnly):
+* **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' (ReadOnly): State of the private endpoint connection. Possible values include: 'Approving', 'Ready', 'Dropping', 'Failed', 'Rejecting'
 
 ## PrivateEndpointProperty
 ### Properties
-* **id**: string (ReadOnly)
+* **id**: string (ReadOnly): Resource id of the private endpoint.
 
 ## PrivateLinkServiceConnectionStateProperty
 ### Properties
-* **actionsRequired**: 'None' (ReadOnly)
-* **description**: string (ReadOnly)
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly)
+* **actionsRequired**: 'None' (ReadOnly): The actions required for private link service connection. Possible values include: 'None'
+* **description**: string (ReadOnly): The private link service connection description.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly): The private link service connection status. Possible values include: 'Approved', 'Pending', 'Rejected', 'Disconnected'
 
 ## StorageProfile
 ### Properties
-* **backupRetentionDays**: int
-* **geoRedundantBackup**: 'Disabled' | 'Enabled'
-* **storageAutogrow**: 'Disabled' | 'Enabled'
-* **storageMB**: int
+* **backupRetentionDays**: int: Backup retention days for the server.
+* **geoRedundantBackup**: 'Disabled' | 'Enabled': Enable Geo-redundant or not for server backup. Possible values include: 'Enabled', 'Disabled'
+* **storageAutogrow**: 'Disabled' | 'Enabled': Enable Storage Auto Grow. Possible values include: 'Enabled', 'Disabled'
+* **storageMB**: int: Max storage allowed for a server.
 
 ## Default
 ### Properties
-* **administratorLogin**: string (Required, WriteOnly)
-* **administratorLoginPassword**: string (Required, WriteOnly)
-* **createMode**: 'Default' (Required)
+* **administratorLogin**: string (Required, WriteOnly): The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
+* **administratorLoginPassword**: string (Required, WriteOnly): The password of the administrator login.
+* **createMode**: 'Default' (Required): The properties used to create a new server.
 
 ## GeoRestore
 ### Properties
-* **createMode**: 'GeoRestore' (Required)
-* **sourceServerId**: string (Required, WriteOnly)
+* **createMode**: 'GeoRestore' (Required): The properties used to create a new server by restoring to a different region from a geo replicated backup.
+* **sourceServerId**: string (Required, WriteOnly): The source server id to restore from.
 
 ## PointInTimeRestore
 ### Properties
-* **createMode**: 'PointInTimeRestore' (Required)
-* **restorePointInTime**: string (Required, WriteOnly)
-* **sourceServerId**: string (Required, WriteOnly)
+* **createMode**: 'PointInTimeRestore' (Required): The properties used to create a new server by restoring from a backup.
+* **restorePointInTime**: string (Required, WriteOnly): Restore point creation time (ISO8601 format), specifying the time to restore from.
+* **sourceServerId**: string (Required, WriteOnly): The source server id to restore from.
 
 ## Replica
 ### Properties
-* **createMode**: 'Replica' (Required)
-* **sourceServerId**: string (Required, WriteOnly)
+* **createMode**: 'Replica' (Required): The properties to create a new replica.
+* **sourceServerId**: string (Required, WriteOnly): The master server id to create replica from.
 
 ## Sku
 ### Properties
-* **capacity**: int
-* **family**: string
-* **name**: string (Required)
-* **size**: string
-* **tier**: 'Basic' | 'GeneralPurpose' | 'MemoryOptimized'
+* **capacity**: int: The scale up/out capacity, representing server's compute units.
+* **family**: string: The family of hardware.
+* **name**: string (Required): The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
+* **size**: string: The size code, to be interpreted by resource as appropriate.
+* **tier**: 'Basic' | 'GeneralPurpose' | 'MemoryOptimized': The tier of the particular SKU, e.g. Basic. Possible values include: 'Basic', 'GeneralPurpose', 'MemoryOptimized'
 
 ## Dictionary<string,String>
 ### Properties
@@ -179,43 +179,43 @@
 
 ## ServerAdministratorProperties
 ### Properties
-* **administratorType**: string (Required)
-* **login**: string (Required)
-* **sid**: string (Required)
-* **tenantId**: string (Required)
+* **administratorType**: string (Required): The type of administrator.
+* **login**: string (Required): The server administrator login account name.
+* **sid**: string (Required): The server administrator Sid (Secure ID).
+* **tenantId**: string (Required): The server Active Directory Administrator tenant id.
 
 ## ConfigurationProperties
 ### Properties
-* **allowedValues**: string (ReadOnly)
-* **dataType**: string (ReadOnly)
-* **defaultValue**: string (ReadOnly)
-* **description**: string (ReadOnly)
-* **source**: string
-* **value**: string
+* **allowedValues**: string (ReadOnly): Allowed values of the configuration.
+* **dataType**: string (ReadOnly): Data type of the configuration.
+* **defaultValue**: string (ReadOnly): Default value of the configuration.
+* **description**: string (ReadOnly): Description of the configuration.
+* **source**: string: Source of the configuration.
+* **value**: string: Value of the configuration.
 
 ## DatabaseProperties
 ### Properties
-* **charset**: string
-* **collation**: string
+* **charset**: string: The charset of the database.
+* **collation**: string: The collation of the database.
 
 ## FirewallRuleProperties
 ### Properties
-* **endIpAddress**: string (Required)
-* **startIpAddress**: string (Required)
+* **endIpAddress**: string (Required): The end IP address of the server firewall rule. Must be IPv4 format.
+* **startIpAddress**: string (Required): The start IP address of the server firewall rule. Must be IPv4 format.
 
 ## SecurityAlertPolicyProperties
 ### Properties
-* **disabledAlerts**: string[]
-* **emailAccountAdmins**: bool
-* **emailAddresses**: string[]
-* **retentionDays**: int
-* **state**: 'Disabled' | 'Enabled' (Required)
-* **storageAccountAccessKey**: string
-* **storageEndpoint**: string
+* **disabledAlerts**: string[]: Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly
+* **emailAccountAdmins**: bool: Specifies that the alert is sent to the account administrators.
+* **emailAddresses**: string[]: Specifies an array of e-mail addresses to which the alert is sent.
+* **retentionDays**: int: Specifies the number of days to keep in the Threat Detection audit logs.
+* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy, whether it is enabled or disabled. Possible values include: 'Enabled', 'Disabled'
+* **storageAccountAccessKey**: string: Specifies the identifier key of the Threat Detection audit storage account.
+* **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
 
 ## VirtualNetworkRuleProperties
 ### Properties
-* **ignoreMissingVnetServiceEndpoint**: bool
-* **state**: 'Deleting' | 'Initializing' | 'InProgress' | 'Ready' | 'Unknown' (ReadOnly)
-* **virtualNetworkSubnetId**: string (Required)
+* **ignoreMissingVnetServiceEndpoint**: bool: Create firewall rule before the virtual network has vnet service endpoint enabled.
+* **state**: 'Deleting' | 'Initializing' | 'InProgress' | 'Ready' | 'Unknown' (ReadOnly): Virtual Network Rule State. Possible values include: 'Initializing', 'InProgress', 'Ready', 'Deleting', 'Unknown'
+* **virtualNetworkSubnetId**: string (Required): The ARM resource id of the virtual network subnet.
 

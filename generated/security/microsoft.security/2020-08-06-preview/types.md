@@ -3,63 +3,63 @@
 ## Resource Microsoft.Security/iotDefenderSettings@2020-08-06-preview
 * **Valid Scope(s)**: Subscription
 ### Properties
-* **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'default' (Required, DeployTimeConstant)
-* **properties**: [IotDefenderSettingsProperties](#iotdefendersettingsproperties)
-* **type**: 'Microsoft.Security/iotDefenderSettings' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [IotDefenderSettingsProperties](#iotdefendersettingsproperties): IoT Defender settings properties
+* **type**: 'Microsoft.Security/iotDefenderSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/iotSensors@2020-08-06-preview
 * **Valid Scope(s)**: Unknown
 ### Properties
-* **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [IotSensorProperties](#iotsensorproperties)
-* **type**: 'Microsoft.Security/iotSensors' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [IotSensorProperties](#iotsensorproperties): IoT sensor properties
+* **type**: 'Microsoft.Security/iotSensors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/iotSites@2020-08-06-preview
 * **Valid Scope(s)**: Unknown
 ### Properties
-* **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'default' (Required, DeployTimeConstant)
-* **properties**: [IotSiteProperties](#iotsiteproperties)
-* **type**: 'Microsoft.Security/iotSites' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [IotSiteProperties](#iotsiteproperties): IoT site properties
+* **type**: 'Microsoft.Security/iotSites' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/onPremiseIotSensors@2020-08-06-preview
 * **Valid Scope(s)**: Subscription
 ### Properties
-* **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: any (ReadOnly)
-* **type**: 'Microsoft.Security/onPremiseIotSensors' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: any (ReadOnly): On-premise IoT sensor properties
+* **type**: 'Microsoft.Security/onPremiseIotSensors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## IotDefenderSettingsProperties
 ### Properties
-* **deviceQuota**: int (Required)
-* **onboardingKind**: 'Default' | 'MigratedToAzure' (Required)
-* **sentinelWorkspaceResourceIds**: string[] (Required)
+* **deviceQuota**: int (Required): Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.
+* **onboardingKind**: 'Default' | 'MigratedToAzure' (Required): The kind of onboarding for the subscription. Possible values include: 'Default', 'MigratedToAzure'
+* **sentinelWorkspaceResourceIds**: string[] (Required): Sentinel Workspace Resource Ids
 
 ## IotSensorProperties
 ### Properties
-* **connectivityTime**: string (ReadOnly)
-* **creationTime**: string (ReadOnly)
-* **dynamicLearning**: bool (ReadOnly)
-* **learningMode**: bool (ReadOnly)
-* **sensorStatus**: 'Disconnected' | 'Ok' | 'Unavailable' (ReadOnly)
-* **sensorType**: 'Enterprise' | 'Ot'
-* **sensorVersion**: string (ReadOnly)
-* **tiAutomaticUpdates**: bool
-* **tiStatus**: 'Failed' | 'InProgress' | 'Ok' | 'UpdateAvailable' (ReadOnly)
-* **tiVersion**: string (ReadOnly)
-* **zone**: string
+* **connectivityTime**: string (ReadOnly): Last connectivity time of the IoT sensor
+* **creationTime**: string (ReadOnly): Creation time of the IoT sensor
+* **dynamicLearning**: bool (ReadOnly): Dynamic mode status of the IoT sensor
+* **learningMode**: bool (ReadOnly): Learning mode status of the IoT sensor
+* **sensorStatus**: 'Disconnected' | 'Ok' | 'Unavailable' (ReadOnly): Status of the IoT sensor. Possible values include: 'Ok', 'Disconnected', 'Unavailable'
+* **sensorType**: 'Enterprise' | 'Ot': Type of sensor. Possible values include: 'Ot', 'Enterprise'
+* **sensorVersion**: string (ReadOnly): Version of the IoT sensor
+* **tiAutomaticUpdates**: bool: TI Automatic mode status of the IoT sensor
+* **tiStatus**: 'Failed' | 'InProgress' | 'Ok' | 'UpdateAvailable' (ReadOnly): TI Status of the IoT sensor. Possible values include: 'Ok', 'Failed', 'InProgress', 'UpdateAvailable'
+* **tiVersion**: string (ReadOnly): TI Version of the IoT sensor
+* **zone**: string: Zone of the IoT sensor
 
 ## IotSiteProperties
 ### Properties
-* **displayName**: string (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **displayName**: string (Required): Display name of the IoT site
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags of the IoT site
 
 ## Dictionary<string,String>
 ### Properties

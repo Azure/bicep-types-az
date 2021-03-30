@@ -3,30 +3,30 @@
 ## Resource Microsoft.RecoveryServices/vaults/privateEndpointConnections@2020-02-02
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-02-02' (ReadOnly, DeployTimeConstant)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [PrivateEndpointConnection](#privateendpointconnection)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.RecoveryServices/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-02-02' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string: Optional ETag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateEndpointConnection](#privateendpointconnection): Private Endpoint Connection Response Properties
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.RecoveryServices/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## PrivateEndpointConnection
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate)
-* **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded'
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint network resource that is linked to the Private Endpoint connection
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Private Link Service Connection State
+* **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded': Gets or sets provisioning state of the private endpoint connection. Possible values include: 'Succeeded', 'Deleting', 'Failed', 'Pending'
 
 ## PrivateEndpoint
 ### Properties
-* **id**: string
+* **id**: string: Gets or sets id
 
 ## PrivateLinkServiceConnectionState
 ### Properties
-* **actionRequired**: string
-* **description**: string
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
+* **actionRequired**: string: Gets or sets actions required
+* **description**: string: Gets or sets description
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Gets or sets the status. Possible values include: 'Pending', 'Approved', 'Rejected', 'Disconnected'
 
 ## Dictionary<string,String>
 ### Properties

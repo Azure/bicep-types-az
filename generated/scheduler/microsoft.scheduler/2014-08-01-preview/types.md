@@ -3,43 +3,43 @@
 ## Resource Microsoft.Scheduler/jobCollections@2014-08-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2014-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [JobCollectionProperties](#jobcollectionproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Scheduler/jobCollections' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2014-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Gets or sets the storage account location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [JobCollectionProperties](#jobcollectionproperties):
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the tags.
+* **type**: 'Microsoft.Scheduler/jobCollections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Scheduler/jobCollections/jobs@2014-08-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2014-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [JobProperties](#jobproperties)
-* **type**: 'Microsoft.Scheduler/jobCollections/jobs' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2014-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [JobProperties](#jobproperties):
+* **type**: 'Microsoft.Scheduler/jobCollections/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## JobCollectionProperties
 ### Properties
-* **quota**: [JobCollectionQuota](#jobcollectionquota)
-* **sku**: [Sku](#sku)
-* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'Suspended'
+* **quota**: [JobCollectionQuota](#jobcollectionquota):
+* **sku**: [Sku](#sku):
+* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'Suspended': Gets or sets the state. Possible values include: 'Enabled', 'Disabled', 'Suspended', 'Deleted'
 
 ## JobCollectionQuota
 ### Properties
-* **maxJobCount**: int
-* **maxJobOccurrence**: int
-* **maxRecurrence**: [JobMaxRecurrence](#jobmaxrecurrence)
+* **maxJobCount**: int: Gets or set the maximum job count.
+* **maxJobOccurrence**: int: Gets or sets the maximum job occurrence.
+* **maxRecurrence**: [JobMaxRecurrence](#jobmaxrecurrence):
 
 ## JobMaxRecurrence
 ### Properties
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week'
-* **interval**: int
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week': Gets or sets the frequency of recurrence (second, minute, hour, day, week, month). Possible values include: 'Minute', 'Hour', 'Day', 'Week', 'Month'
+* **interval**: int: Gets or sets the interval between retries.
 
 ## Sku
 ### Properties
-* **name**: 'Free' | 'Premium' | 'Standard'
+* **name**: 'Free' | 'Premium' | 'Standard': Gets or set the SKU. Possible values include: 'Standard', 'Free', 'Premium'
 
 ## Dictionary<string,String>
 ### Properties
@@ -48,49 +48,49 @@
 
 ## JobProperties
 ### Properties
-* **action**: [JobAction](#jobaction)
-* **recurrence**: [JobRecurrence](#jobrecurrence)
-* **startTime**: string
-* **state**: 'Completed' | 'Disabled' | 'Enabled' | 'Faulted'
-* **status**: [JobStatus](#jobstatus) (ReadOnly)
+* **action**: [JobAction](#jobaction):
+* **recurrence**: [JobRecurrence](#jobrecurrence):
+* **startTime**: string: Gets or sets the job start time.
+* **state**: 'Completed' | 'Disabled' | 'Enabled' | 'Faulted': Gets or set the job state. Possible values include: 'Enabled', 'Disabled', 'Faulted', 'Completed'
+* **status**: [JobStatus](#jobstatus) (ReadOnly):
 
 ## JobAction
 ### Properties
-* **errorAction**: [JobErrorAction](#joberroraction)
-* **queueMessage**: [StorageQueueMessage](#storagequeuemessage)
-* **request**: [HttpRequest](#httprequest)
-* **retryPolicy**: [RetryPolicy](#retrypolicy)
-* **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage)
-* **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage)
-* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue'
+* **errorAction**: [JobErrorAction](#joberroraction):
+* **queueMessage**: [StorageQueueMessage](#storagequeuemessage):
+* **request**: [HttpRequest](#httprequest):
+* **retryPolicy**: [RetryPolicy](#retrypolicy):
+* **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage):
+* **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage):
+* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job action type. Possible values include: 'Http', 'Https', 'StorageQueue', 'ServiceBusQueue', 'ServiceBusTopic'
 
 ## JobErrorAction
 ### Properties
-* **queueMessage**: [StorageQueueMessage](#storagequeuemessage)
-* **request**: [HttpRequest](#httprequest)
-* **retryPolicy**: [RetryPolicy](#retrypolicy)
-* **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage)
-* **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage)
-* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue'
+* **queueMessage**: [StorageQueueMessage](#storagequeuemessage):
+* **request**: [HttpRequest](#httprequest):
+* **retryPolicy**: [RetryPolicy](#retrypolicy):
+* **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage):
+* **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage):
+* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job error action type. Possible values include: 'Http', 'Https', 'StorageQueue', 'ServiceBusQueue', 'ServiceBusTopic'
 
 ## StorageQueueMessage
 ### Properties
-* **message**: string
-* **queueName**: string
-* **sasToken**: string
-* **storageAccount**: string
+* **message**: string: Gets or sets the message.
+* **queueName**: string: Gets or sets the queue name.
+* **sasToken**: string: Gets or sets the SAS key.
+* **storageAccount**: string: Gets or sets the storage account name.
 
 ## HttpRequest
 ### Properties
-* **authentication**: [HttpAuthentication](#httpauthentication)
-* **body**: string
-* **headers**: [Dictionary<string,String>](#dictionarystringstring)
-* **method**: string
-* **uri**: string
+* **authentication**: [HttpAuthentication](#httpauthentication):
+* **body**: string: Gets or sets the request body.
+* **headers**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the headers.
+* **method**: string: Gets or sets the method of the request.
+* **uri**: string: Gets or sets the Uri.
 
 ## HttpAuthentication
 ### Properties
-* **type**: 'ActiveDirectoryOAuth' | 'Basic' | 'ClientCertificate' | 'NotSpecified'
+* **type**: 'ActiveDirectoryOAuth' | 'Basic' | 'ClientCertificate' | 'NotSpecified': Gets or sets the http authentication type. Possible values include: 'NotSpecified', 'ClientCertificate', 'ActiveDirectoryOAuth', 'Basic'
 
 ## Dictionary<string,String>
 ### Properties
@@ -99,41 +99,41 @@
 
 ## RetryPolicy
 ### Properties
-* **retryCount**: int
-* **retryInterval**: string
-* **retryType**: 'Fixed' | 'None'
+* **retryCount**: int: Gets or sets the number of times a retry should be attempted.
+* **retryInterval**: string: Gets or sets the retry interval between retries.
+* **retryType**: 'Fixed' | 'None': Gets or sets the retry strategy to be used. Possible values include: 'None', 'Fixed'
 
 ## ServiceBusQueueMessage
 ### Properties
-* **authentication**: [ServiceBusAuthentication](#servicebusauthentication)
-* **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties)
-* **customMessageProperties**: [Dictionary<string,String>](#dictionarystringstring)
-* **message**: string
-* **namespace**: string
-* **queueName**: string
-* **transportType**: 'AMQP' | 'NetMessaging' | 'NotSpecified'
+* **authentication**: [ServiceBusAuthentication](#servicebusauthentication):
+* **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties):
+* **customMessageProperties**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the custom message properties.
+* **message**: string: Gets or sets the message.
+* **namespace**: string: Gets or sets the namespace.
+* **queueName**: string: Gets or sets the queue name.
+* **transportType**: 'AMQP' | 'NetMessaging' | 'NotSpecified': Gets or sets the transport type. Possible values include: 'NotSpecified', 'NetMessaging', 'AMQP'
 
 ## ServiceBusAuthentication
 ### Properties
-* **sasKey**: string
-* **sasKeyName**: string
-* **type**: 'NotSpecified' | 'SharedAccessKey'
+* **sasKey**: string: Gets or sets the SAS key.
+* **sasKeyName**: string: Gets or sets the SAS key name.
+* **type**: 'NotSpecified' | 'SharedAccessKey': Gets or sets the authentication type. Possible values include: 'NotSpecified', 'SharedAccessKey'
 
 ## ServiceBusBrokeredMessageProperties
 ### Properties
-* **contentType**: string
-* **correlationId**: string
-* **forcePersistence**: bool
-* **label**: string
-* **messageId**: string
-* **partitionKey**: string
-* **replyTo**: string
-* **replyToSessionId**: string
-* **scheduledEnqueueTimeUtc**: string
-* **sessionId**: string
-* **timeToLive**: string
-* **to**: string
-* **viaPartitionKey**: string
+* **contentType**: string: Gets or sets the content type.
+* **correlationId**: string: Gets or sets the correlation id.
+* **forcePersistence**: bool: Gets or sets the force persistence.
+* **label**: string: Gets or sets the label.
+* **messageId**: string: Gets or sets the message id.
+* **partitionKey**: string: Gets or sets the partition key.
+* **replyTo**: string: Gets or sets the reply to.
+* **replyToSessionId**: string: Gets or sets the reply to session id.
+* **scheduledEnqueueTimeUtc**: string: Gets or sets the scheduled enqueue time UTC.
+* **sessionId**: string: Gets or sets the session id.
+* **timeToLive**: string: Gets or sets the time to live.
+* **to**: string: Gets or sets the to.
+* **viaPartitionKey**: string: Gets or sets the via partition key.
 
 ## Dictionary<string,String>
 ### Properties
@@ -142,13 +142,13 @@
 
 ## ServiceBusTopicMessage
 ### Properties
-* **authentication**: [ServiceBusAuthentication](#servicebusauthentication)
-* **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties)
-* **customMessageProperties**: [Dictionary<string,String>](#dictionarystringstring)
-* **message**: string
-* **namespace**: string
-* **topicPath**: string
-* **transportType**: 'AMQP' | 'NetMessaging' | 'NotSpecified'
+* **authentication**: [ServiceBusAuthentication](#servicebusauthentication):
+* **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties):
+* **customMessageProperties**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the custom message properties.
+* **message**: string: Gets or sets the message.
+* **namespace**: string: Gets or sets the namespace.
+* **topicPath**: string: Gets or sets the topic path.
+* **transportType**: 'AMQP' | 'NetMessaging' | 'NotSpecified': Gets or sets the transport type. Possible values include: 'NotSpecified', 'NetMessaging', 'AMQP'
 
 ## Dictionary<string,String>
 ### Properties
@@ -157,30 +157,30 @@
 
 ## JobRecurrence
 ### Properties
-* **count**: int
-* **endTime**: string
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week'
-* **interval**: int
-* **schedule**: [JobRecurrenceSchedule](#jobrecurrenceschedule)
+* **count**: int: Gets or sets the maximum number of times that the job should run.
+* **endTime**: string: Gets or sets the time at which the job will complete.
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week': Gets or sets the frequency of recurrence (second, minute, hour, day, week, month). Possible values include: 'Minute', 'Hour', 'Day', 'Week', 'Month'
+* **interval**: int: Gets or sets the interval between retries.
+* **schedule**: [JobRecurrenceSchedule](#jobrecurrenceschedule):
 
 ## JobRecurrenceSchedule
 ### Properties
-* **hours**: int[]
-* **minutes**: int[]
-* **monthDays**: int[]
-* **monthlyOccurrences**: [JobRecurrenceScheduleMonthlyOccurrence](#jobrecurrenceschedulemonthlyoccurrence)[]
-* **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]
+* **hours**: int[]: Gets or sets the hours of the day that the job should execute at.
+* **minutes**: int[]: Gets or sets the minutes of the hour that the job should execute at.
+* **monthDays**: int[]: Gets or sets the days of the month that the job should execute on. Must be between 1 and 31.
+* **monthlyOccurrences**: [JobRecurrenceScheduleMonthlyOccurrence](#jobrecurrenceschedulemonthlyoccurrence)[]: Gets or sets the occurrences of days within a month.
+* **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: Gets or sets the days of the week that the job should execute on.
 
 ## JobRecurrenceScheduleMonthlyOccurrence
 ### Properties
-* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'
-* **Occurrence**: int
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday. Possible values include: 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'
+* **Occurrence**: int: Gets or sets the occurrence. Must be between -5 and 5.
 
 ## JobStatus
 ### Properties
-* **executionCount**: int (ReadOnly)
-* **failureCount**: int (ReadOnly)
-* **faultedCount**: int (ReadOnly)
-* **lastExecutionTime**: string (ReadOnly)
-* **nextExecutionTime**: string (ReadOnly)
+* **executionCount**: int (ReadOnly): Gets the number of times this job has executed.
+* **failureCount**: int (ReadOnly): Gets the number of times this job has failed.
+* **faultedCount**: int (ReadOnly): Gets the number of faulted occurrences (occurrences that were retried and failed as many times as the retry policy states).
+* **lastExecutionTime**: string (ReadOnly): Gets the time the last occurrence executed in ISO-8601 format.  Could be empty if job has not run yet.
+* **nextExecutionTime**: string (ReadOnly): Gets the time of the next occurrence in ISO-8601 format. Could be empty if the job is completed.
 

@@ -3,136 +3,136 @@
 ## Resource Microsoft.Migrate/assessmentProjects@2019-10-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ProjectProperties](#projectproperties)
-* **tags**: any
-* **type**: 'Microsoft.Migrate/assessmentProjects' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string: For optimistic concurrency control.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Azure location in which project is created.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProjectProperties](#projectproperties): Properties of a project.
+* **tags**: any: Tags provided by Azure Tagging service.
+* **type**: 'Microsoft.Migrate/assessmentProjects' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/groups@2019-10-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [GroupProperties](#groupproperties) (Required)
-* **type**: 'Microsoft.Migrate/assessmentProjects/groups' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string: For optimistic concurrency control.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [GroupProperties](#groupproperties) (Required): Properties of group resource.
+* **type**: 'Microsoft.Migrate/assessmentProjects/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/groups/assessments@2019-10-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [AssessmentProperties](#assessmentproperties) (Required)
-* **type**: 'Microsoft.Migrate/assessmentProjects/groups/assessments' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string: For optimistic concurrency control.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AssessmentProperties](#assessmentproperties) (Required): Properties of an assessment.
+* **type**: 'Microsoft.Migrate/assessmentProjects/groups/assessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/hypervcollectors@2019-10-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [CollectorProperties](#collectorproperties)
-* **type**: 'Microsoft.Migrate/assessmentProjects/hypervcollectors' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string:
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [CollectorProperties](#collectorproperties):
+* **type**: 'Microsoft.Migrate/assessmentProjects/hypervcollectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/assessmentProjects/vmwarecollectors@2019-10-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [CollectorProperties](#collectorproperties)
-* **type**: 'Microsoft.Migrate/assessmentProjects/vmwarecollectors' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string:
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [CollectorProperties](#collectorproperties):
+* **type**: 'Microsoft.Migrate/assessmentProjects/vmwarecollectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ProjectProperties
 ### Properties
-* **assessmentSolutionId**: string
-* **createdTimestamp**: string (ReadOnly)
-* **customerWorkspaceId**: string
-* **customerWorkspaceLocation**: string
-* **lastAssessmentTimestamp**: string (ReadOnly)
-* **numberOfAssessments**: int (ReadOnly)
-* **numberOfGroups**: int (ReadOnly)
-* **numberOfMachines**: int (ReadOnly)
-* **projectStatus**: 'Active' | 'Inactive'
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly)
-* **serviceEndpoint**: string (ReadOnly)
-* **updatedTimestamp**: string (ReadOnly)
+* **assessmentSolutionId**: string: Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.
+* **createdTimestamp**: string (ReadOnly): Time when this project was created. Date-Time represented in ISO-8601 format.
+* **customerWorkspaceId**: string: The ARM id of service map workspace created by customer.
+* **customerWorkspaceLocation**: string: Location of service map workspace created by customer.
+* **lastAssessmentTimestamp**: string (ReadOnly): Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.
+* **numberOfAssessments**: int (ReadOnly): Number of assessments created in the project.
+* **numberOfGroups**: int (ReadOnly): Number of groups created in the project.
+* **numberOfMachines**: int (ReadOnly): Number of machines in the project.
+* **projectStatus**: 'Active' | 'Inactive': Assessment project status. Possible values include: 'Active', 'Inactive'
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the project. Possible values include: 'Accepted', 'Creating', 'Deleting', 'Failed', 'Moving', 'Succeeded'
+* **serviceEndpoint**: string (ReadOnly): Endpoint at which the collector agent can call agent REST API.
+* **updatedTimestamp**: string (ReadOnly): Time when this project was last updated. Date-Time represented in ISO-8601 format.
 
 ## GroupProperties
 ### Properties
-* **areAssessmentsRunning**: bool (ReadOnly)
-* **assessments**: string[] (ReadOnly)
-* **createdTimestamp**: string (ReadOnly)
-* **groupStatus**: 'Completed' | 'Created' | 'Invalid' | 'Running' | 'Updated' (ReadOnly)
-* **machineCount**: int (ReadOnly)
-* **updatedTimestamp**: string (ReadOnly)
+* **areAssessmentsRunning**: bool (ReadOnly): If the assessments are in running state.
+* **assessments**: string[] (ReadOnly): List of References to Assessments created on this group.
+* **createdTimestamp**: string (ReadOnly): Time when this group was created. Date-Time represented in ISO-8601 format.
+* **groupStatus**: 'Completed' | 'Created' | 'Invalid' | 'Running' | 'Updated' (ReadOnly): Whether the group has been created and is valid. Possible values include: 'Created', 'Updated', 'Running', 'Completed', 'Invalid'
+* **machineCount**: int (ReadOnly): Number of machines part of this group.
+* **updatedTimestamp**: string (ReadOnly): Time when this group was last updated. Date-Time represented in ISO-8601 format.
 
 ## AssessmentProperties
 ### Properties
-* **azureDiskType**: 'Premium' | 'Standard' | 'StandardOrPremium' | 'StandardSSD' | 'Unknown' (Required)
-* **azureHybridUseBenefit**: 'No' | 'Unknown' | 'Yes' (Required)
-* **azureLocation**: 'AustraliaEast' | 'AustraliaSoutheast' | 'BrazilSouth' | 'CanadaCentral' | 'CanadaEast' | 'CentralIndia' | 'CentralUs' | 'ChinaEast' | 'ChinaNorth' | 'EastAsia' | 'EastUs' | 'EastUs2' | 'GermanyCentral' | 'GermanyNortheast' | 'JapanEast' | 'JapanWest' | 'KoreaCentral' | 'KoreaSouth' | 'NorthCentralUs' | 'NorthEurope' | 'SouthCentralUs' | 'SoutheastAsia' | 'SouthIndia' | 'UkSouth' | 'UkWest' | 'Unknown' | 'USDoDCentral' | 'USDoDEast' | 'USGovArizona' | 'USGovIowa' | 'USGovTexas' | 'USGovVirginia' | 'WestCentralUs' | 'WestEurope' | 'WestIndia' | 'WestUs' | 'WestUs2' (Required)
-* **azureOfferCode**: 'EA' | 'MSAZR0003P' | 'MSAZR0022P' | 'MSAZR0023P' | 'MSAZR0025P' | 'MSAZR0029P' | 'MSAZR0036P' | 'MSAZR0044P' | 'MSAZR0059P' | 'MSAZR0060P' | 'MSAZR0062P' | 'MSAZR0063P' | 'MSAZR0064P' | 'MSAZR0111P' | 'MSAZR0120P' | 'MSAZR0121P' | 'MSAZR0122P' | 'MSAZR0123P' | 'MSAZR0124P' | 'MSAZR0125P' | 'MSAZR0126P' | 'MSAZR0127P' | 'MSAZR0128P' | 'MSAZR0129P' | 'MSAZR0130P' | 'MSAZR0144P' | 'MSAZR0148P' | 'MSAZR0149P' | 'MSAZRDE0003P' | 'MSAZRDE0044P' | 'MSAZRUSGOV0003P' | 'MSMCAZR0044P' | 'MSMCAZR0059P' | 'MSMCAZR0060P' | 'MSMCAZR0063P' | 'MSMCAZR0120P' | 'MSMCAZR0121P' | 'MSMCAZR0125P' | 'MSMCAZR0128P' | 'Unknown' (Required)
-* **azurePricingTier**: 'Basic' | 'Standard' (Required)
-* **azureStorageRedundancy**: 'GeoRedundant' | 'LocallyRedundant' | 'ReadAccessGeoRedundant' | 'Unknown' | 'ZoneRedundant' (Required)
-* **azureVmFamilies**: 'Av2_series' | 'Basic_A0_A4' | 'D_series' | 'DC_Series' | 'DS_series' | 'DSv2_series' | 'Dsv3_series' | 'Dv2_series' | 'Dv3_series' | 'Esv3_series' | 'Ev3_series' | 'F_series' | 'Fs_series' | 'Fsv2_series' | 'G_series' | 'GS_series' | 'H_series' | 'Ls_series' | 'M_series' | 'Standard_A0_A7' | 'Standard_A8_A11' | 'Unknown'[] (Required)
-* **confidenceRatingInPercentage**: int (ReadOnly)
-* **createdTimestamp**: string (ReadOnly)
-* **currency**: 'ARS' | 'AUD' | 'BRL' | 'CAD' | 'CHF' | 'CNY' | 'DKK' | 'EUR' | 'GBP' | 'HKD' | 'IDR' | 'INR' | 'JPY' | 'KRW' | 'MXN' | 'MYR' | 'NOK' | 'NZD' | 'RUB' | 'SAR' | 'SEK' | 'TRY' | 'TWD' | 'Unknown' | 'USD' | 'ZAR' (Required)
-* **discountPercentage**: int (Required)
-* **eaSubscriptionId**: string (ReadOnly)
-* **monthlyBandwidthCost**: int (ReadOnly)
-* **monthlyComputeCost**: int (ReadOnly)
-* **monthlyPremiumStorageCost**: int (ReadOnly)
-* **monthlyStandardSSDStorageCost**: int (ReadOnly)
-* **monthlyStorageCost**: int (ReadOnly)
-* **numberOfMachines**: int (ReadOnly)
-* **percentile**: 'Percentile50' | 'Percentile90' | 'Percentile95' | 'Percentile99' (Required)
-* **perfDataEndTime**: string (ReadOnly)
-* **perfDataStartTime**: string (ReadOnly)
-* **pricesTimestamp**: string (ReadOnly)
-* **reservedInstance**: 'None' | 'RI1Year' | 'RI3Year' (Required)
-* **scalingFactor**: int (Required)
-* **sizingCriterion**: 'AsOnPremises' | 'PerformanceBased' (Required)
-* **stage**: 'Approved' | 'InProgress' | 'UnderReview' (Required)
-* **status**: 'Completed' | 'Created' | 'Invalid' | 'OutDated' | 'OutOfSync' | 'Running' | 'Updated' (ReadOnly)
-* **timeRange**: 'Custom' | 'Day' | 'Month' | 'Week' (Required)
-* **updatedTimestamp**: string (ReadOnly)
-* **vmUptime**: [VmUptime](#vmuptime) (Required)
+* **azureDiskType**: 'Premium' | 'Standard' | 'StandardOrPremium' | 'StandardSSD' | 'Unknown' (Required): Storage type selected for this disk. Possible values include: 'Unknown', 'Standard', 'Premium', 'StandardSSD', 'StandardOrPremium'
+* **azureHybridUseBenefit**: 'No' | 'Unknown' | 'Yes' (Required): AHUB discount on windows virtual machines. Possible values include: 'Unknown', 'Yes', 'No'
+* **azureLocation**: 'AustraliaEast' | 'AustraliaSoutheast' | 'BrazilSouth' | 'CanadaCentral' | 'CanadaEast' | 'CentralIndia' | 'CentralUs' | 'ChinaEast' | 'ChinaNorth' | 'EastAsia' | 'EastUs' | 'EastUs2' | 'GermanyCentral' | 'GermanyNortheast' | 'JapanEast' | 'JapanWest' | 'KoreaCentral' | 'KoreaSouth' | 'NorthCentralUs' | 'NorthEurope' | 'SouthCentralUs' | 'SoutheastAsia' | 'SouthIndia' | 'UkSouth' | 'UkWest' | 'Unknown' | 'USDoDCentral' | 'USDoDEast' | 'USGovArizona' | 'USGovIowa' | 'USGovTexas' | 'USGovVirginia' | 'WestCentralUs' | 'WestEurope' | 'WestIndia' | 'WestUs' | 'WestUs2' (Required): Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API. Possible values include: 'Unknown', 'EastAsia', 'SoutheastAsia', 'AustraliaEast', 'AustraliaSoutheast', 'BrazilSouth', 'CanadaCentral', 'CanadaEast', 'WestEurope', 'NorthEurope', 'CentralIndia', 'SouthIndia', 'WestIndia', 'JapanEast', 'JapanWest', 'KoreaCentral', 'KoreaSouth', 'UkWest', 'UkSouth', 'NorthCentralUs', 'EastUs', 'WestUs2', 'SouthCentralUs', 'CentralUs', 'EastUs2', 'WestUs', 'WestCentralUs', 'GermanyCentral', 'GermanyNortheast', 'ChinaNorth', 'ChinaEast', 'USGovArizona', 'USGovTexas', 'USGovIowa', 'USGovVirginia', 'USDoDCentral', 'USDoDEast'
+* **azureOfferCode**: 'EA' | 'MSAZR0003P' | 'MSAZR0022P' | 'MSAZR0023P' | 'MSAZR0025P' | 'MSAZR0029P' | 'MSAZR0036P' | 'MSAZR0044P' | 'MSAZR0059P' | 'MSAZR0060P' | 'MSAZR0062P' | 'MSAZR0063P' | 'MSAZR0064P' | 'MSAZR0111P' | 'MSAZR0120P' | 'MSAZR0121P' | 'MSAZR0122P' | 'MSAZR0123P' | 'MSAZR0124P' | 'MSAZR0125P' | 'MSAZR0126P' | 'MSAZR0127P' | 'MSAZR0128P' | 'MSAZR0129P' | 'MSAZR0130P' | 'MSAZR0144P' | 'MSAZR0148P' | 'MSAZR0149P' | 'MSAZRDE0003P' | 'MSAZRDE0044P' | 'MSAZRUSGOV0003P' | 'MSMCAZR0044P' | 'MSMCAZR0059P' | 'MSMCAZR0060P' | 'MSMCAZR0063P' | 'MSMCAZR0120P' | 'MSMCAZR0121P' | 'MSMCAZR0125P' | 'MSMCAZR0128P' | 'Unknown' (Required): Offer code according to which cost estimation is done. Possible values include: 'Unknown', 'MSAZR0003P', 'MSAZR0044P', 'MSAZR0059P', 'MSAZR0060P', 'MSAZR0062P', 'MSAZR0063P', 'MSAZR0064P', 'MSAZR0029P', 'MSAZR0022P', 'MSAZR0023P', 'MSAZR0148P', 'MSAZR0025P', 'MSAZR0036P', 'MSAZR0120P', 'MSAZR0121P', 'MSAZR0122P', 'MSAZR0123P', 'MSAZR0124P', 'MSAZR0125P', 'MSAZR0126P', 'MSAZR0127P', 'MSAZR0128P', 'MSAZR0129P', 'MSAZR0130P', 'MSAZR0111P', 'MSAZR0144P', 'MSAZR0149P', 'MSMCAZR0044P', 'MSMCAZR0059P', 'MSMCAZR0060P', 'MSMCAZR0063P', 'MSMCAZR0120P', 'MSMCAZR0121P', 'MSMCAZR0125P', 'MSMCAZR0128P', 'MSAZRDE0003P', 'MSAZRDE0044P', 'MSAZRUSGOV0003P', 'EA'
+* **azurePricingTier**: 'Basic' | 'Standard' (Required): Pricing tier for Size evaluation. Possible values include: 'Standard', 'Basic'
+* **azureStorageRedundancy**: 'GeoRedundant' | 'LocallyRedundant' | 'ReadAccessGeoRedundant' | 'Unknown' | 'ZoneRedundant' (Required): Storage Redundancy type offered by Azure. Possible values include: 'Unknown', 'LocallyRedundant', 'ZoneRedundant', 'GeoRedundant', 'ReadAccessGeoRedundant'
+* **azureVmFamilies**: 'Av2_series' | 'Basic_A0_A4' | 'D_series' | 'DC_Series' | 'DS_series' | 'DSv2_series' | 'Dsv3_series' | 'Dv2_series' | 'Dv3_series' | 'Esv3_series' | 'Ev3_series' | 'F_series' | 'Fs_series' | 'Fsv2_series' | 'G_series' | 'GS_series' | 'H_series' | 'Ls_series' | 'M_series' | 'Standard_A0_A7' | 'Standard_A8_A11' | 'Unknown'[] (Required): List of azure VM families.
+* **confidenceRatingInPercentage**: int (ReadOnly): Confidence rating percentage for assessment. Can be in the range [0, 100].
+* **createdTimestamp**: string (ReadOnly): Time when this project was created. Date-Time represented in ISO-8601 format.
+* **currency**: 'ARS' | 'AUD' | 'BRL' | 'CAD' | 'CHF' | 'CNY' | 'DKK' | 'EUR' | 'GBP' | 'HKD' | 'IDR' | 'INR' | 'JPY' | 'KRW' | 'MXN' | 'MYR' | 'NOK' | 'NZD' | 'RUB' | 'SAR' | 'SEK' | 'TRY' | 'TWD' | 'Unknown' | 'USD' | 'ZAR' (Required): Currency to report prices in. Possible values include: 'Unknown', 'USD', 'DKK', 'CAD', 'IDR', 'JPY', 'KRW', 'NZD', 'NOK', 'RUB', 'SAR', 'ZAR', 'SEK', 'TRY', 'GBP', 'MXN', 'MYR', 'INR', 'HKD', 'BRL', 'TWD', 'EUR', 'CHF', 'ARS', 'AUD', 'CNY'
+* **discountPercentage**: int (Required): Custom discount percentage to be applied on final costs. Can be in the range [0, 100].
+* **eaSubscriptionId**: string (ReadOnly): Enterprise agreement subscription arm id.
+* **monthlyBandwidthCost**: int (ReadOnly): Monthly network cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
+* **monthlyComputeCost**: int (ReadOnly): Monthly compute cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
+* **monthlyPremiumStorageCost**: int (ReadOnly): Monthly premium storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
+* **monthlyStandardSSDStorageCost**: int (ReadOnly): Monthly standard SSD storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
+* **monthlyStorageCost**: int (ReadOnly): Monthly storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
+* **numberOfMachines**: int (ReadOnly): Number of assessed machines part of this assessment.
+* **percentile**: 'Percentile50' | 'Percentile90' | 'Percentile95' | 'Percentile99' (Required): Percentile of performance data used to recommend Azure size. Possible values include: 'Percentile50', 'Percentile90', 'Percentile95', 'Percentile99'
+* **perfDataEndTime**: string (ReadOnly): End time to consider performance data for assessment
+* **perfDataStartTime**: string (ReadOnly): Start time to consider performance data for assessment
+* **pricesTimestamp**: string (ReadOnly): Time when the Azure Prices were queried. Date-Time represented in ISO-8601 format.
+* **reservedInstance**: 'None' | 'RI1Year' | 'RI3Year' (Required): Azure reserved instance. Possible values include: 'None', 'RI1Year', 'RI3Year'
+* **scalingFactor**: int (Required): Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.
+* **sizingCriterion**: 'AsOnPremises' | 'PerformanceBased' (Required): Assessment sizing criterion. Possible values include: 'PerformanceBased', 'AsOnPremises'
+* **stage**: 'Approved' | 'InProgress' | 'UnderReview' (Required): User configurable setting that describes the status of the assessment. Possible values include: 'InProgress', 'UnderReview', 'Approved'
+* **status**: 'Completed' | 'Created' | 'Invalid' | 'OutDated' | 'OutOfSync' | 'Running' | 'Updated' (ReadOnly): Whether the assessment has been created and is valid. Possible values include: 'Created', 'Updated', 'Running', 'Completed', 'Invalid', 'OutOfSync', 'OutDated'
+* **timeRange**: 'Custom' | 'Day' | 'Month' | 'Week' (Required): Time range of performance data used to recommend a size. Possible values include: 'Day', 'Week', 'Month', 'Custom'
+* **updatedTimestamp**: string (ReadOnly): Time when this project was last updated. Date-Time represented in ISO-8601 format.
+* **vmUptime**: [VmUptime](#vmuptime) (Required):
 
 ## VmUptime
 ### Properties
-* **daysPerMonth**: int
-* **hoursPerDay**: int
+* **daysPerMonth**: int: Number of days in a month for VM uptime.
+* **hoursPerDay**: int: Number of hours per day for VM uptime.
 
 ## CollectorProperties
 ### Properties
-* **agentProperties**: [CollectorAgentProperties](#collectoragentproperties)
-* **createdTimestamp**: string (ReadOnly)
-* **discoverySiteId**: string
-* **updatedTimestamp**: string (ReadOnly)
+* **agentProperties**: [CollectorAgentProperties](#collectoragentproperties):
+* **createdTimestamp**: string (ReadOnly): Time when this collector was created. Date-Time represented in ISO-8601 format.
+* **discoverySiteId**: string: The ARM id of the discovery service site.
+* **updatedTimestamp**: string (ReadOnly): Time when this collector was updated. Date-Time represented in ISO-8601 format.
 
 ## CollectorAgentProperties
 ### Properties
-* **id**: string (ReadOnly)
-* **lastHeartbeatUtc**: string (ReadOnly)
-* **spnDetails**: [CollectorBodyAgentSpnProperties](#collectorbodyagentspnproperties)
-* **version**: string (ReadOnly)
+* **id**: string (ReadOnly):
+* **lastHeartbeatUtc**: string (ReadOnly):
+* **spnDetails**: [CollectorBodyAgentSpnProperties](#collectorbodyagentspnproperties):
+* **version**: string (ReadOnly):
 
 ## CollectorBodyAgentSpnProperties
 ### Properties
-* **applicationId**: string
-* **audience**: string
-* **authority**: string
-* **objectId**: string
-* **tenantId**: string
+* **applicationId**: string: Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+* **audience**: string: Intended audience for the service principal.
+* **authority**: string: AAD Authority URL which was used to request the token for the service principal.
+* **objectId**: string: Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+* **tenantId**: string: Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
 

@@ -3,34 +3,34 @@
 ## Resource Microsoft.OperationalInsights/clusters@2020-10-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [Identity](#identity)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ClusterProperties](#clusterproperties)
-* **sku**: [ClusterSku](#clustersku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [Identity](#identity): Identity for the resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ClusterProperties](#clusterproperties): Cluster properties.
+* **sku**: [ClusterSku](#clustersku): The cluster sku definition.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationalInsights/workspaces@2020-10-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [WorkspaceProperties](#workspaceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string: The ETag of the workspace.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkspaceProperties](#workspaceproperties): Workspace properties.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Identity
 ### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required)
-* **userAssignedIdentities**: [Dictionary<string,UserIdentityProperties>](#dictionarystringuseridentityproperties)
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required): Type of managed service identity. Possible values include: 'SystemAssigned', 'UserAssigned', 'None'
+* **userAssignedIdentities**: [Dictionary<string,UserIdentityProperties>](#dictionarystringuseridentityproperties): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## Dictionary<string,UserIdentityProperties>
 ### Properties
@@ -39,46 +39,46 @@
 
 ## UserIdentityProperties
 ### Properties
-* **clientId**: string (ReadOnly)
-* **principalId**: string (ReadOnly)
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
 
 ## ClusterProperties
 ### Properties
-* **associatedWorkspaces**: [AssociatedWorkspace](#associatedworkspace)[]
-* **billingType**: 'Cluster' | 'Workspaces'
-* **capacityReservationProperties**: [CapacityReservationProperties](#capacityreservationproperties)
-* **clusterId**: string (ReadOnly)
-* **createdDate**: string (ReadOnly)
-* **isAvailabilityZonesEnabled**: bool
-* **isDoubleEncryptionEnabled**: bool
-* **keyVaultProperties**: [keyVaultProperties](#keyvaultproperties)
-* **lastModifiedDate**: string (ReadOnly)
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' (ReadOnly)
+* **associatedWorkspaces**: [AssociatedWorkspace](#associatedworkspace)[]: The list of Log Analytics workspaces associated with the cluster
+* **billingType**: 'Cluster' | 'Workspaces': Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'. Possible values include: 'Cluster', 'Workspaces'
+* **capacityReservationProperties**: [CapacityReservationProperties](#capacityreservationproperties): The Capacity Reservation properties.
+* **clusterId**: string (ReadOnly): The ID associated with the cluster.
+* **createdDate**: string (ReadOnly): The cluster creation time
+* **isAvailabilityZonesEnabled**: bool: Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.
+* **isDoubleEncryptionEnabled**: bool: Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is 'true'
+* **keyVaultProperties**: [keyVaultProperties](#keyvaultproperties): The key vault properties.
+* **lastModifiedDate**: string (ReadOnly): The last time the cluster was updated.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the cluster. Possible values include: 'Creating', 'Succeeded', 'Failed', 'Canceled', 'Deleting', 'ProvisioningAccount', 'Updating'
 
 ## AssociatedWorkspace
 ### Properties
-* **associateDate**: string (ReadOnly)
-* **resourceId**: string (ReadOnly)
-* **workspaceId**: string (ReadOnly)
-* **workspaceName**: string (ReadOnly)
+* **associateDate**: string (ReadOnly): The time of workspace association.
+* **resourceId**: string (ReadOnly): The ResourceId id the assigned workspace.
+* **workspaceId**: string (ReadOnly): The id of the assigned workspace.
+* **workspaceName**: string (ReadOnly): The name id the assigned workspace.
 
 ## CapacityReservationProperties
 ### Properties
-* **lastSkuUpdate**: string (ReadOnly)
-* **maxCapacity**: int (ReadOnly)
-* **minCapacity**: int (ReadOnly)
+* **lastSkuUpdate**: string (ReadOnly): The last time Sku was updated.
+* **maxCapacity**: int (ReadOnly): Maximum CapacityReservation value in GB.
+* **minCapacity**: int (ReadOnly): Minimum CapacityReservation value in GB.
 
 ## keyVaultProperties
 ### Properties
-* **keyName**: string
-* **keyRsaSize**: int
-* **keyVaultUri**: string
-* **keyVersion**: string
+* **keyName**: string: The name of the key associated with the Log Analytics cluster.
+* **keyRsaSize**: int: Selected key minimum required size.
+* **keyVaultUri**: string: The Key Vault uri which holds they key associated with the Log Analytics cluster.
+* **keyVersion**: string: The version of the key associated with the Log Analytics cluster.
 
 ## ClusterSku
 ### Properties
-* **capacity**: int
-* **name**: 'CapacityReservation'
+* **capacity**: int: The capacity value
+* **name**: 'CapacityReservation': The name of the SKU. Possible values include: 'CapacityReservation'
 
 ## Dictionary<string,String>
 ### Properties
@@ -87,18 +87,18 @@
 
 ## WorkspaceProperties
 ### Properties
-* **createdDate**: string (ReadOnly)
-* **customerId**: string (ReadOnly)
-* **features**: [Dictionary<string,Object>](#dictionarystringobject)
-* **forceCmkForQuery**: bool
-* **modifiedDate**: string (ReadOnly)
-* **privateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly)
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating'
-* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled'
-* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled'
-* **retentionInDays**: int
-* **sku**: [WorkspaceSku](#workspacesku)
-* **workspaceCapping**: [WorkspaceCapping](#workspacecapping)
+* **createdDate**: string (ReadOnly): Workspace creation date.
+* **customerId**: string (ReadOnly): This is a read-only property. Represents the ID associated with the workspace.
+* **features**: [Dictionary<string,Object>](#dictionarystringobject): Workspace features.
+* **forceCmkForQuery**: bool: Indicates whether customer managed storage is mandatory for query management.
+* **modifiedDate**: string (ReadOnly): Workspace modification date.
+* **privateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly): List of linked private link scope resources.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating': The provisioning state of the workspace. Possible values include: 'Creating', 'Succeeded', 'Failed', 'Canceled', 'Deleting', 'ProvisioningAccount', 'Updating'
+* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled': The network access type for accessing Log Analytics ingestion. Possible values include: 'Enabled', 'Disabled'
+* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled': The network access type for accessing Log Analytics query. Possible values include: 'Enabled', 'Disabled'
+* **retentionInDays**: int: The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
+* **sku**: [WorkspaceSku](#workspacesku): The SKU (tier) of a workspace.
+* **workspaceCapping**: [WorkspaceCapping](#workspacecapping): The daily volume cap for ingestion.
 
 ## Dictionary<string,Object>
 ### Properties
@@ -107,21 +107,21 @@
 
 ## PrivateLinkScopedResource
 ### Properties
-* **resourceId**: string
-* **scopeId**: string
+* **resourceId**: string: The full resource Id of the private link scope resource.
+* **scopeId**: string: The private link scope unique Identifier.
 
 ## WorkspaceSku
 ### Properties
-* **capacityReservationLevel**: int
-* **lastSkuUpdate**: string (ReadOnly)
-* **maxCapacityReservationLevel**: int (ReadOnly)
-* **name**: 'CapacityReservation' | 'Free' | 'LACluster' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' (Required)
+* **capacityReservationLevel**: int: The capacity reservation level for this workspace, when CapacityReservation sku is selected.
+* **lastSkuUpdate**: string (ReadOnly): The last time when the sku was updated.
+* **maxCapacityReservationLevel**: int (ReadOnly): The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.
+* **name**: 'CapacityReservation' | 'Free' | 'LACluster' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' (Required): The name of the SKU. Possible values include: 'Free', 'Standard', 'Premium', 'PerNode', 'PerGB2018', 'Standalone', 'CapacityReservation', 'LACluster'
 
 ## WorkspaceCapping
 ### Properties
-* **dailyQuotaGb**: int
-* **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' (ReadOnly)
-* **quotaNextResetTime**: string (ReadOnly)
+* **dailyQuotaGb**: int: The workspace daily quota for ingestion.
+* **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' (ReadOnly): The status of data ingestion for this workspace. Possible values include: 'RespectQuota', 'ForceOn', 'ForceOff', 'OverQuota', 'SubscriptionSuspended', 'ApproachingQuota'
+* **quotaNextResetTime**: string (ReadOnly): The time when the quota will be rest.
 
 ## Dictionary<string,String>
 ### Properties

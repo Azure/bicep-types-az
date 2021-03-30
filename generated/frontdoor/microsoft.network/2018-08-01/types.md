@@ -3,161 +3,161 @@
 ## Resource Microsoft.Network/frontDoors@2018-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [FrontDoorProperties](#frontdoorproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Network/frontDoors' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [FrontDoorProperties](#frontdoorproperties): The JSON object that contains the properties required to create an endpoint.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.Network/frontDoors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/FrontDoorWebApplicationFirewallPolicies@2018-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [WebApplicationFirewallPolicyPropertiesFormat](#webapplicationfirewallpolicypropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Network/FrontDoorWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WebApplicationFirewallPolicyPropertiesFormat](#webapplicationfirewallpolicypropertiesformat): Defines web application firewall policy properties
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.Network/FrontDoorWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## FrontDoorProperties
 ### Properties
-* **backendPools**: [BackendPool](#backendpool)[]
-* **cname**: string (ReadOnly)
-* **enabledState**: 'Disabled' | 'Enabled'
-* **friendlyName**: string
-* **frontendEndpoints**: [FrontendEndpoint](#frontendendpoint)[]
-* **healthProbeSettings**: [HealthProbeSettingsModel](#healthprobesettingsmodel)[]
-* **loadBalancingSettings**: [LoadBalancingSettingsModel](#loadbalancingsettingsmodel)[]
-* **provisioningState**: string (ReadOnly)
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
-* **routingRules**: [RoutingRule](#routingrule)[]
+* **backendPools**: [BackendPool](#backendpool)[]: Backend pools available to routing rules.
+* **cname**: string (ReadOnly): The host that each frontendEndpoint must CNAME to.
+* **enabledState**: 'Disabled' | 'Enabled': Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'. Possible values include: 'Enabled', 'Disabled'
+* **friendlyName**: string: A friendly name for the frontDoor
+* **frontendEndpoints**: [FrontendEndpoint](#frontendendpoint)[]: Frontend endpoints available to routing rules.
+* **healthProbeSettings**: [HealthProbeSettingsModel](#healthprobesettingsmodel)[]: Health probe settings associated with this Front Door instance.
+* **loadBalancingSettings**: [LoadBalancingSettingsModel](#loadbalancingsettingsmodel)[]: Load balancing settings associated with this Front Door instance.
+* **provisioningState**: string (ReadOnly): Provisioning state of the Front Door.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status of the Front Door. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
+* **routingRules**: [RoutingRule](#routingrule)[]: Routing rules associated with this Front Door.
 
 ## BackendPool
 ### Properties
-* **id**: string
-* **name**: string
-* **properties**: [BackendPoolProperties](#backendpoolproperties)
-* **type**: string (ReadOnly)
+* **id**: string: Resource ID.
+* **name**: string: Resource name.
+* **properties**: [BackendPoolProperties](#backendpoolproperties): The JSON object that contains the properties required to create a routing rule.
+* **type**: string (ReadOnly): Resource type.
 
 ## BackendPoolProperties
 ### Properties
-* **backends**: [Backend](#backend)[]
-* **healthProbeSettings**: [SubResource](#subresource)
-* **loadBalancingSettings**: [SubResource](#subresource)
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
+* **backends**: [Backend](#backend)[]: The set of backends for this pool
+* **healthProbeSettings**: [SubResource](#subresource): Reference to another subresource.
+* **loadBalancingSettings**: [SubResource](#subresource): Reference to another subresource.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
 
 ## Backend
 ### Properties
-* **address**: string
-* **backendHostHeader**: string
-* **enabledState**: 'Disabled' | 'Enabled'
-* **httpPort**: int
-* **httpsPort**: int
-* **priority**: int
-* **weight**: int
+* **address**: string: Location of the backend (IP address or FQDN)
+* **backendHostHeader**: string: The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
+* **enabledState**: 'Disabled' | 'Enabled': Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'. Possible values include: 'Enabled', 'Disabled'
+* **httpPort**: int: The HTTP TCP port number. Must be between 1 and 65535.
+* **httpsPort**: int: The HTTPS TCP port number. Must be between 1 and 65535.
+* **priority**: int: Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
+* **weight**: int: Weight of this endpoint for load balancing purposes.
 
 ## SubResource
 ### Properties
-* **id**: string
+* **id**: string: Resource ID.
 
 ## FrontendEndpoint
 ### Properties
-* **id**: string
-* **name**: string
-* **properties**: [FrontendEndpointProperties](#frontendendpointproperties)
-* **type**: string (ReadOnly)
+* **id**: string: Resource ID.
+* **name**: string: Resource name.
+* **properties**: [FrontendEndpointProperties](#frontendendpointproperties): The JSON object that contains the properties required to create a frontend endpoint.
+* **type**: string (ReadOnly): Resource type.
 
 ## FrontendEndpointProperties
 ### Properties
-* **customHttpsConfiguration**: [CustomHttpsConfiguration](#customhttpsconfiguration) (ReadOnly)
-* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly)
-* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly)
-* **hostName**: string
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
-* **sessionAffinityEnabledState**: 'Disabled' | 'Enabled'
-* **sessionAffinityTtlSeconds**: int
-* **webApplicationFirewallPolicyLink**: [schemas:28_webApplicationFirewallPolicyLink](#schemas28webapplicationfirewallpolicylink)
+* **customHttpsConfiguration**: [CustomHttpsConfiguration](#customhttpsconfiguration) (ReadOnly): Https settings for a domain
+* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly): Provisioning status of Custom Https of the frontendEndpoint. Possible values include: 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Failed'
+* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. Possible values include: 'SubmittingDomainControlValidationRequest', 'PendingDomainControlValidationREquestApproval', 'DomainControlValidationRequestApproved', 'DomainControlValidationRequestRejected', 'DomainControlValidationRequestTimedOut', 'IssuingCertificate', 'DeployingCertificate', 'CertificateDeployed', 'DeletingCertificate', 'CertificateDeleted'
+* **hostName**: string: The host name of the frontendEndpoint. Must be a domain name.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
+* **sessionAffinityEnabledState**: 'Disabled' | 'Enabled': Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'. Possible values include: 'Enabled', 'Disabled'
+* **sessionAffinityTtlSeconds**: int: UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
+* **webApplicationFirewallPolicyLink**: [schemas:28_webApplicationFirewallPolicyLink](#schemas28webapplicationfirewallpolicylink): Defines the Web Application Firewall policy for each host (if applicable)
 
 ## CustomHttpsConfiguration
 ### Properties
-* **certificateSource**: 'AzureKeyVault' | 'FrontDoor'
-* **frontDoorCertificateSourceParameters**: [FrontDoorCertificateSourceParameters](#frontdoorcertificatesourceparameters)
-* **keyVaultCertificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters)
-* **protocolType**: 'ServerNameIndication'
+* **certificateSource**: 'AzureKeyVault' | 'FrontDoor': Defines the source of the SSL certificate. Possible values include: 'AzureKeyVault', 'FrontDoor'
+* **frontDoorCertificateSourceParameters**: [FrontDoorCertificateSourceParameters](#frontdoorcertificatesourceparameters): Parameters required for enabling SSL with Front Door-managed certificates
+* **keyVaultCertificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters): Parameters required for bring-your-own-certification via Key Vault
+* **protocolType**: 'ServerNameIndication': Defines the TLS extension protocol that is used for secure delivery. Possible values include: 'ServerNameIndication'
 
 ## FrontDoorCertificateSourceParameters
 ### Properties
-* **certificateType**: 'Dedicated'
+* **certificateType**: 'Dedicated': Defines the type of the certificate used for secure connections to a frontendEndpoint. Possible values include: 'Dedicated'
 
 ## KeyVaultCertificateSourceParameters
 ### Properties
-* **secretName**: string
-* **secretVersion**: string
-* **vault**: [schemas:23_vault](#schemas23vault)
+* **secretName**: string: The name of the Key Vault secret representing the full certificate PFX
+* **secretVersion**: string: The version of the Key Vault secret representing the full certificate PFX
+* **vault**: [schemas:23_vault](#schemas23vault): The Key Vault containing the SSL certificate
 
 ## schemas:23_vault
 ### Properties
-* **id**: string
+* **id**: string: Resource ID.
 
 ## schemas:28_webApplicationFirewallPolicyLink
 ### Properties
-* **id**: string
+* **id**: string: Resource ID.
 
 ## HealthProbeSettingsModel
 ### Properties
-* **id**: string
-* **name**: string
-* **properties**: [HealthProbeSettingsProperties](#healthprobesettingsproperties)
-* **type**: string (ReadOnly)
+* **id**: string: Resource ID.
+* **name**: string: Resource name.
+* **properties**: [HealthProbeSettingsProperties](#healthprobesettingsproperties): The JSON object that contains the properties required to create a health probe settings.
+* **type**: string (ReadOnly): Resource type.
 
 ## HealthProbeSettingsProperties
 ### Properties
-* **intervalInSeconds**: int
-* **path**: string
-* **protocol**: 'Http' | 'Https'
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
+* **intervalInSeconds**: int: The number of seconds between health probes.
+* **path**: string: The path to use for the health probe. Default is /
+* **protocol**: 'Http' | 'Https': Protocol scheme to use for this probe. Possible values include: 'Http', 'Https'
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
 
 ## LoadBalancingSettingsModel
 ### Properties
-* **id**: string
-* **name**: string
-* **properties**: [LoadBalancingSettingsProperties](#loadbalancingsettingsproperties)
-* **type**: string (ReadOnly)
+* **id**: string: Resource ID.
+* **name**: string: Resource name.
+* **properties**: [LoadBalancingSettingsProperties](#loadbalancingsettingsproperties): The JSON object that contains the properties required to create load balancing settings
+* **type**: string (ReadOnly): Resource type.
 
 ## LoadBalancingSettingsProperties
 ### Properties
-* **additionalLatencyMilliseconds**: int
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
-* **sampleSize**: int
-* **successfulSamplesRequired**: int
+* **additionalLatencyMilliseconds**: int: The additional latency in milliseconds for probes to fall into the lowest latency bucket
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
+* **sampleSize**: int: The number of samples to consider for load balancing decisions
+* **successfulSamplesRequired**: int: The number of samples within the sample period that must succeed
 
 ## RoutingRule
 ### Properties
-* **id**: string
-* **name**: string
-* **properties**: [RoutingRuleProperties](#routingruleproperties)
-* **type**: string (ReadOnly)
+* **id**: string: Resource ID.
+* **name**: string: Resource name.
+* **properties**: [RoutingRuleProperties](#routingruleproperties): The JSON object that contains the properties required to create a routing rule.
+* **type**: string (ReadOnly): Resource type.
 
 ## RoutingRuleProperties
 ### Properties
-* **acceptedProtocols**: 'Http' | 'Https'[]
-* **backendPool**: [SubResource](#subresource)
-* **cacheConfiguration**: [CacheConfiguration](#cacheconfiguration)
-* **customForwardingPath**: string
-* **enabledState**: 'Disabled' | 'Enabled'
-* **forwardingProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest'
-* **frontendEndpoints**: [SubResource](#subresource)[]
-* **patternsToMatch**: string[]
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
+* **acceptedProtocols**: 'Http' | 'Https'[]: Protocol schemes to match for this rule
+* **backendPool**: [SubResource](#subresource): Reference to another subresource.
+* **cacheConfiguration**: [CacheConfiguration](#cacheconfiguration): Caching settings for a caching-type route. To disable caching, do not provide a cacheConfiguration object.
+* **customForwardingPath**: string: A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
+* **enabledState**: 'Disabled' | 'Enabled': Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'. Possible values include: 'Enabled', 'Disabled'
+* **forwardingProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest': Protocol this rule will use when forwarding traffic to backends. Possible values include: 'HttpOnly', 'HttpsOnly', 'MatchRequest'
+* **frontendEndpoints**: [SubResource](#subresource)[]: Frontend endpoints associated with this rule
+* **patternsToMatch**: string[]: The route patterns of the rule.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
 
 ## CacheConfiguration
 ### Properties
-* **dynamicCompression**: 'Disabled' | 'Enabled'
-* **queryParameterStripDirective**: 'StripAll' | 'StripNone'
+* **dynamicCompression**: 'Disabled' | 'Enabled': Whether to use dynamic compression for cached content. Possible values include: 'Enabled', 'Disabled'
+* **queryParameterStripDirective**: 'StripAll' | 'StripNone': Treatment of URL query terms when forming the cache key. Possible values include: 'StripNone', 'StripAll'
 
 ## Dictionary<string,String>
 ### Properties
@@ -166,65 +166,65 @@
 
 ## WebApplicationFirewallPolicyPropertiesFormat
 ### Properties
-* **customRules**: [CustomRules](#customrules)
-* **managedRules**: [ManagedRuleSets](#managedrulesets)
-* **policySettings**: [policySettings](#policysettings)
-* **provisioningState**: string (ReadOnly)
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly)
+* **customRules**: [CustomRules](#customrules): Defines contents of custom rules
+* **managedRules**: [ManagedRuleSets](#managedrulesets): Defines ManagedRuleSets - array of managedRuleSet
+* **policySettings**: [policySettings](#policysettings): Defines contents of a web application firewall global configuration
+* **provisioningState**: string (ReadOnly): Provisioning state of the WebApplicationFirewallPolicy.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly): Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
 
 ## CustomRules
 ### Properties
-* **rules**: [CustomRule](#customrule)[]
+* **rules**: [CustomRule](#customrule)[]: List of rules
 
 ## CustomRule
 ### Properties
-* **action**: 'Allow' | 'Block' | 'Log' (Required)
-* **etag**: string (ReadOnly)
-* **matchConditions**: [MatchCondition](#matchcondition)[] (Required)
-* **name**: string
-* **priority**: int (Required)
-* **rateLimitDurationInMinutes**: int
-* **rateLimitThreshold**: int
-* **ruleType**: 'MatchRule' | 'RateLimitRule' (Required)
-* **transforms**: 'HtmlEntityDecode' | 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]
+* **action**: 'Allow' | 'Block' | 'Log' (Required): Type of Actions. Possible values include: 'Allow', 'Block', 'Log'
+* **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
+* **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions
+* **name**: string: Gets name of the resource that is unique within a policy. This name can be used to access the resource.
+* **priority**: int (Required): Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value
+* **rateLimitDurationInMinutes**: int: Defines rate limit duration. Default - 1 minute
+* **rateLimitThreshold**: int: Defines rate limit threshold
+* **ruleType**: 'MatchRule' | 'RateLimitRule' (Required): Describes type of rule. Possible values include: 'MatchRule', 'RateLimitRule'
+* **transforms**: 'HtmlEntityDecode' | 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## MatchCondition
 ### Properties
-* **matchValue**: string[] (Required)
-* **matchVariable**: 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestHeader' | 'RequestMethod' | 'RequestUri' (Required)
-* **negateCondition**: bool
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' (Required)
-* **selector**: string
+* **matchValue**: string[] (Required): Match value
+* **matchVariable**: 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestHeader' | 'RequestMethod' | 'RequestUri' (Required): Match Variable. Possible values include: 'RemoteAddr', 'RequestMethod', 'QueryString', 'PostArgs', 'RequestUri', 'RequestHeader', 'RequestBody'
+* **negateCondition**: bool: Describes if this is negate condition or not
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched. Possible values include: 'Any', 'IPMatch', 'GeoMatch', 'Equal', 'Contains', 'LessThan', 'GreaterThan', 'LessThanOrEqual', 'GreaterThanOrEqual', 'BeginsWith', 'EndsWith'
+* **selector**: string: Name of selector in RequestHeader or RequestBody to be matched
 
 ## ManagedRuleSets
 ### Properties
-* **ruleSets**: [Unknown](#unknown)[]
+* **ruleSets**: [Unknown](#unknown)[]: List of rules
 
 ## Unknown
 * **Discriminator**: ruleSetType
 ### Base Properties
-* **priority**: int
-* **version**: int
+* **priority**: int: Describes priority of the rule
+* **version**: int: defines version of the rule set
 ### AzureManagedRuleSet
 #### Properties
-* **ruleGroupOverrides**: [AzureManagedOverrideRuleGroup](#azuremanagedoverriderulegroup)[]
-* **ruleSetType**: 'AzureManagedRuleSet' (Required)
+* **ruleGroupOverrides**: [AzureManagedOverrideRuleGroup](#azuremanagedoverriderulegroup)[]: List of azure managed provider override configuration (optional)
+* **ruleSetType**: 'AzureManagedRuleSet' (Required): Describes azure managed provider.
 
 
 ## AzureManagedRuleSet
 ### Properties
-* **ruleGroupOverrides**: [AzureManagedOverrideRuleGroup](#azuremanagedoverriderulegroup)[]
-* **ruleSetType**: 'AzureManagedRuleSet' (Required)
+* **ruleGroupOverrides**: [AzureManagedOverrideRuleGroup](#azuremanagedoverriderulegroup)[]: List of azure managed provider override configuration (optional)
+* **ruleSetType**: 'AzureManagedRuleSet' (Required): Describes azure managed provider.
 
 ## AzureManagedOverrideRuleGroup
 ### Properties
-* **action**: 'Allow' | 'Block' | 'Log' (Required)
-* **ruleGroupOverride**: 'SqlInjection' | 'XSS' (Required)
+* **action**: 'Allow' | 'Block' | 'Log' (Required): Type of Actions. Possible values include: 'Allow', 'Block', 'Log'
+* **ruleGroupOverride**: 'SqlInjection' | 'XSS' (Required): Describes override rule group. Possible values include: 'SqlInjection', 'XSS'
 
 ## policySettings
 ### Properties
-* **enabledState**: 'Disabled' | 'Enabled'
-* **mode**: 'Detection' | 'Prevention'
+* **enabledState**: 'Disabled' | 'Enabled': describes if the policy is in enabled state or disabled state. Possible values include: 'Disabled', 'Enabled'
+* **mode**: 'Detection' | 'Prevention': Describes if it is in detection mode  or prevention mode at policy level. Possible values include: 'Prevention', 'Detection'
 
 ## Dictionary<string,String>
 ### Properties

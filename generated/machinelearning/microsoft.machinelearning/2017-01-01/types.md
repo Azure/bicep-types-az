@@ -3,42 +3,42 @@
 ## Resource Microsoft.MachineLearning/webServices@2017-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [WebServiceProperties](#webserviceproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.MachineLearning/webServices' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Specifies the location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WebServiceProperties](#webserviceproperties) (Required): The set of properties specific to the Azure ML web service resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
+* **type**: 'Microsoft.MachineLearning/webServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## WebServiceProperties
 * **Discriminator**: packageType
 ### Base Properties
-* **assets**: [Dictionary<string,AssetItem>](#dictionarystringassetitem)
-* **commitmentPlan**: [CommitmentPlan](#commitmentplan)
-* **createdOn**: string (ReadOnly)
-* **description**: string
-* **diagnostics**: [DiagnosticsConfiguration](#diagnosticsconfiguration)
-* **exampleRequest**: [ExampleRequest](#examplerequest)
-* **exposeSampleData**: bool
-* **input**: [ServiceInputOutputSpecification](#serviceinputoutputspecification)
-* **keys**: [WebServiceKeys](#webservicekeys)
-* **machineLearningWorkspace**: [MachineLearningWorkspace](#machinelearningworkspace)
-* **modifiedOn**: string (ReadOnly)
-* **output**: [ServiceInputOutputSpecification](#serviceinputoutputspecification)
-* **parameters**: [Dictionary<string,WebServiceParameter>](#dictionarystringwebserviceparameter)
-* **payloadsInBlobStorage**: bool
-* **payloadsLocation**: [BlobLocation](#bloblocation)
-* **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' (ReadOnly)
-* **readOnly**: bool
-* **realtimeConfiguration**: [RealtimeConfiguration](#realtimeconfiguration)
-* **storageAccount**: [StorageAccount](#storageaccount)
-* **swaggerLocation**: string (ReadOnly)
-* **title**: string
+* **assets**: [Dictionary<string,AssetItem>](#dictionarystringassetitem): Contains user defined properties describing web service assets. Properties are expressed as Key/Value pairs.
+* **commitmentPlan**: [CommitmentPlan](#commitmentplan): Information about the machine learning commitment plan associated with the web service.
+* **createdOn**: string (ReadOnly): Read Only: The date and time when the web service was created.
+* **description**: string: The description of the web service.
+* **diagnostics**: [DiagnosticsConfiguration](#diagnosticsconfiguration): Diagnostics settings for an Azure ML web service.
+* **exampleRequest**: [ExampleRequest](#examplerequest): Sample input data for the service's input(s).
+* **exposeSampleData**: bool: When set to true, sample data is included in the web service's swagger definition. The default value is true.
+* **input**: [ServiceInputOutputSpecification](#serviceinputoutputspecification): The swagger 2.0 schema describing the service's inputs or outputs. See Swagger specification: http://swagger.io/specification/
+* **keys**: [WebServiceKeys](#webservicekeys): Access keys for the web service calls.
+* **machineLearningWorkspace**: [MachineLearningWorkspace](#machinelearningworkspace): Information about the machine learning workspace containing the experiment that is source for the web service.
+* **modifiedOn**: string (ReadOnly): Read Only: The date and time when the web service was last modified.
+* **output**: [ServiceInputOutputSpecification](#serviceinputoutputspecification): The swagger 2.0 schema describing the service's inputs or outputs. See Swagger specification: http://swagger.io/specification/
+* **parameters**: [Dictionary<string,WebServiceParameter>](#dictionarystringwebserviceparameter): The set of global parameters values defined for the web service, given as a global parameter name to default value map. If no default value is specified, the parameter is considered to be required.
+* **payloadsInBlobStorage**: bool: When set to true, indicates that the payload size is larger than 3 MB. Otherwise false. If the payload size exceed 3 MB, the payload is stored in a blob and the PayloadsLocation parameter contains the URI of the blob. Otherwise, this will be set to false and Assets, Input, Output, Package, Parameters, ExampleRequest are inline. The Payload sizes is determined by adding the size of the Assets, Input, Output, Package, Parameters, and the ExampleRequest.
+* **payloadsLocation**: [BlobLocation](#bloblocation): Describes the access location for a blob.
+* **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' (ReadOnly): Read Only: The provision state of the web service. Valid values are Unknown, Provisioning, Succeeded, and Failed. Possible values include: 'Unknown', 'Provisioning', 'Succeeded', 'Failed'
+* **readOnly**: bool: When set to true, indicates that the web service is read-only and can no longer be updated or patched, only removed. Default, is false. Note: Once set to true, you cannot change its value.
+* **realtimeConfiguration**: [RealtimeConfiguration](#realtimeconfiguration): Holds the available configuration options for an Azure ML web service endpoint.
+* **storageAccount**: [StorageAccount](#storageaccount): Access information for a storage account.
+* **swaggerLocation**: string (ReadOnly): Read Only: Contains the URI of the swagger spec associated with this web service.
+* **title**: string: The title of the web service.
 ### Graph
 #### Properties
-* **package**: [GraphPackage](#graphpackage)
-* **packageType**: 'Graph' (Required)
+* **package**: [GraphPackage](#graphpackage): Defines the graph of modules making up the machine learning solution.
+* **packageType**: 'Graph' (Required): Properties specific to a Graph based web service.
 
 
 ## Dictionary<string,AssetItem>
@@ -48,14 +48,14 @@
 
 ## AssetItem
 ### Properties
-* **id**: string
-* **inputPorts**: [Dictionary<string,InputPort>](#dictionarystringinputport)
-* **locationInfo**: [BlobLocation](#bloblocation) (Required)
-* **metadata**: [Dictionary<string,String>](#dictionarystringstring)
-* **name**: string (Required)
-* **outputPorts**: [Dictionary<string,OutputPort>](#dictionarystringoutputport)
-* **parameters**: [ModuleAssetParameter](#moduleassetparameter)[]
-* **type**: 'Module' | 'Resource' (Required)
+* **id**: string: Asset's Id.
+* **inputPorts**: [Dictionary<string,InputPort>](#dictionarystringinputport): Information about the asset's input ports.
+* **locationInfo**: [BlobLocation](#bloblocation) (Required): Describes the access location for a blob.
+* **metadata**: [Dictionary<string,String>](#dictionarystringstring): If the asset is a custom module, this holds the module's metadata.
+* **name**: string (Required): Asset's friendly name.
+* **outputPorts**: [Dictionary<string,OutputPort>](#dictionarystringoutputport): Information about the asset's output ports.
+* **parameters**: [ModuleAssetParameter](#moduleassetparameter)[]: If the asset is a custom module, this holds the module's parameters.
+* **type**: 'Module' | 'Resource' (Required): Asset's type. Possible values include: 'Module', 'Resource'
 
 ## Dictionary<string,InputPort>
 ### Properties
@@ -64,12 +64,12 @@
 
 ## InputPort
 ### Properties
-* **type**: 'Dataset'
+* **type**: 'Dataset': Port data type. Possible values include: 'Dataset'
 
 ## BlobLocation
 ### Properties
-* **credentials**: string
-* **uri**: string (Required)
+* **credentials**: string: Access credentials for the blob, if applicable (e.g. blob specified by storage account connection string + blob URI)
+* **uri**: string (Required): The URI from which the blob is accessible from. For example, aml://abc for system assets or https://xyz for user assets or payload.
 
 ## Dictionary<string,String>
 ### Properties
@@ -83,13 +83,13 @@
 
 ## OutputPort
 ### Properties
-* **type**: 'Dataset'
+* **type**: 'Dataset': Port data type. Possible values include: 'Dataset'
 
 ## ModuleAssetParameter
 ### Properties
-* **modeValuesInfo**: [Dictionary<string,ModeValueInfo>](#dictionarystringmodevalueinfo)
-* **name**: string
-* **parameterType**: string
+* **modeValuesInfo**: [Dictionary<string,ModeValueInfo>](#dictionarystringmodevalueinfo): Definitions for nested interface parameters if this is a complex module parameter.
+* **name**: string: Parameter name.
+* **parameterType**: string: Parameter type.
 
 ## Dictionary<string,ModeValueInfo>
 ### Properties
@@ -98,22 +98,22 @@
 
 ## ModeValueInfo
 ### Properties
-* **interfaceString**: string
-* **parameters**: [ModuleAssetParameter](#moduleassetparameter)[]
+* **interfaceString**: string: The interface string name for the nested parameter.
+* **parameters**: [ModuleAssetParameter](#moduleassetparameter)[]: The definition of the parameter.
 
 ## CommitmentPlan
 ### Properties
-* **id**: string (Required)
+* **id**: string (Required): Specifies the Azure Resource Manager ID of the commitment plan associated with the web service.
 
 ## DiagnosticsConfiguration
 ### Properties
-* **expiry**: string
-* **level**: 'All' | 'Error' | 'None' (Required)
+* **expiry**: string: Specifies the date and time when the logging will cease. If null, diagnostic collection is not time limited.
+* **level**: 'All' | 'Error' | 'None' (Required): Specifies the verbosity of the diagnostic output. Valid values are: None - disables tracing; Error - collects only error (stderr) traces; All - collects all traces (stdout and stderr). Possible values include: 'None', 'Error', 'All'
 
 ## ExampleRequest
 ### Properties
-* **globalParameters**: [Dictionary<string,Object>](#dictionarystringobject)
-* **inputs**: [Dictionary<string,IList<IList<Object>>>](#dictionarystringilistilistobject)
+* **globalParameters**: [Dictionary<string,Object>](#dictionarystringobject): Sample input data for the web service's global parameters
+* **inputs**: [Dictionary<string,IList<IList<Object>>>](#dictionarystringilistilistobject): Sample input data for the web service's input(s) given as an input name to sample input values matrix map.
 
 ## Dictionary<string,Object>
 ### Properties
@@ -127,10 +127,10 @@
 
 ## ServiceInputOutputSpecification
 ### Properties
-* **description**: string
-* **properties**: [Dictionary<string,TableSpecification>](#dictionarystringtablespecification) (Required)
-* **title**: string
-* **type**: string (Required)
+* **description**: string: The description of the Swagger schema.
+* **properties**: [Dictionary<string,TableSpecification>](#dictionarystringtablespecification) (Required): Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.
+* **title**: string: The title of your Swagger schema.
+* **type**: string (Required): The type of the entity described in swagger. Always 'object'.
 
 ## Dictionary<string,TableSpecification>
 ### Properties
@@ -139,11 +139,11 @@
 
 ## TableSpecification
 ### Properties
-* **description**: string
-* **format**: string
-* **properties**: [Dictionary<string,ColumnSpecification>](#dictionarystringcolumnspecification)
-* **title**: string
-* **type**: string (Required)
+* **description**: string: Swagger schema description.
+* **format**: string: The format, if 'type' is not 'object'
+* **properties**: [Dictionary<string,ColumnSpecification>](#dictionarystringcolumnspecification): The set of columns within the data table.
+* **title**: string: Swagger schema title.
+* **type**: string (Required): The type of the entity described in swagger.
 
 ## Dictionary<string,ColumnSpecification>
 ### Properties
@@ -152,20 +152,20 @@
 
 ## ColumnSpecification
 ### Properties
-* **enum**: any[]
-* **format**: 'Byte' | 'Char' | 'Complex128' | 'Complex64' | 'Date-time' | 'Date-timeOffset' | 'Double' | 'Duration' | 'Float' | 'Int16' | 'Int32' | 'Int64' | 'Int8' | 'Uint16' | 'Uint32' | 'Uint64' | 'Uint8'
-* **type**: 'Boolean' | 'Integer' | 'Number' | 'String' (Required)
-* **x-ms-isnullable**: bool
-* **x-ms-isordered**: bool
+* **enum**: any[]: If the data type is categorical, this provides the list of accepted categories.
+* **format**: 'Byte' | 'Char' | 'Complex128' | 'Complex64' | 'Date-time' | 'Date-timeOffset' | 'Double' | 'Duration' | 'Float' | 'Int16' | 'Int32' | 'Int64' | 'Int8' | 'Uint16' | 'Uint32' | 'Uint64' | 'Uint8': Additional format information for the data type. Possible values include: 'Byte', 'Char', 'Complex64', 'Complex128', 'Date-time', 'Date-timeOffset', 'Double', 'Duration', 'Float', 'Int8', 'Int16', 'Int32', 'Int64', 'Uint8', 'Uint16', 'Uint32', 'Uint64'
+* **type**: 'Boolean' | 'Integer' | 'Number' | 'String' (Required): Data type of the column. Possible values include: 'Boolean', 'Integer', 'Number', 'String'
+* **x-ms-isnullable**: bool: Flag indicating if the type supports null values or not.
+* **x-ms-isordered**: bool: Flag indicating whether the categories are treated as an ordered set or not, if this is a categorical column.
 
 ## WebServiceKeys
 ### Properties
-* **primary**: string
-* **secondary**: string
+* **primary**: string: The primary access key.
+* **secondary**: string: The secondary access key.
 
 ## MachineLearningWorkspace
 ### Properties
-* **id**: string (Required)
+* **id**: string (Required): Specifies the workspace ID of the machine learning workspace associated with the web service
 
 ## Dictionary<string,WebServiceParameter>
 ### Properties
@@ -174,35 +174,35 @@
 
 ## WebServiceParameter
 ### Properties
-* **certificateThumbprint**: string
-* **value**: any
+* **certificateThumbprint**: string: If the parameter value in 'value' field is encrypted, the thumbprint of the certificate should be put here.
+* **value**: any: The parameter value
 
 ## RealtimeConfiguration
 ### Properties
-* **maxConcurrentCalls**: int
+* **maxConcurrentCalls**: int: Specifies the maximum concurrent calls that can be made to the web service. Minimum value: 4, Maximum value: 200.
 
 ## StorageAccount
 ### Properties
-* **key**: string
-* **name**: string
+* **key**: string: Specifies the key used to access the storage account.
+* **name**: string: Specifies the name of the storage account.
 
 ## Graph
 ### Properties
-* **package**: [GraphPackage](#graphpackage)
-* **packageType**: 'Graph' (Required)
+* **package**: [GraphPackage](#graphpackage): Defines the graph of modules making up the machine learning solution.
+* **packageType**: 'Graph' (Required): Properties specific to a Graph based web service.
 
 ## GraphPackage
 ### Properties
-* **edges**: [GraphEdge](#graphedge)[]
-* **graphParameters**: [Dictionary<string,GraphParameter>](#dictionarystringgraphparameter)
-* **nodes**: [Dictionary<string,GraphNode>](#dictionarystringgraphnode)
+* **edges**: [GraphEdge](#graphedge)[]: The list of edges making up the graph.
+* **graphParameters**: [Dictionary<string,GraphParameter>](#dictionarystringgraphparameter): The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.
+* **nodes**: [Dictionary<string,GraphNode>](#dictionarystringgraphnode): The set of nodes making up the graph, provided as a nodeId to GraphNode map
 
 ## GraphEdge
 ### Properties
-* **sourceNodeId**: string
-* **sourcePortId**: string
-* **targetNodeId**: string
-* **targetPortId**: string
+* **sourceNodeId**: string: The source graph node's identifier.
+* **sourcePortId**: string: The identifier of the source node's port that the edge connects from.
+* **targetNodeId**: string: The destination graph node's identifier.
+* **targetPortId**: string: The identifier of the destination node's port that the edge connects into.
 
 ## Dictionary<string,GraphParameter>
 ### Properties
@@ -211,14 +211,14 @@
 
 ## GraphParameter
 ### Properties
-* **description**: string
-* **links**: [GraphParameterLink](#graphparameterlink)[] (Required)
-* **type**: 'Boolean' | 'ColumnPicker' | 'Credential' | 'DataGatewayName' | 'Double' | 'Enumerated' | 'Float' | 'Int' | 'Mode' | 'ParameterRange' | 'Script' | 'String' (Required)
+* **description**: string: Description of this graph parameter.
+* **links**: [GraphParameterLink](#graphparameterlink)[] (Required): Association links for this parameter to nodes in the graph.
+* **type**: 'Boolean' | 'ColumnPicker' | 'Credential' | 'DataGatewayName' | 'Double' | 'Enumerated' | 'Float' | 'Int' | 'Mode' | 'ParameterRange' | 'Script' | 'String' (Required): Graph parameter's type. Possible values include: 'String', 'Int', 'Float', 'Enumerated', 'Script', 'Mode', 'Credential', 'Boolean', 'Double', 'ColumnPicker', 'ParameterRange', 'DataGatewayName'
 
 ## GraphParameterLink
 ### Properties
-* **nodeId**: string (Required)
-* **parameterKey**: string (Required)
+* **nodeId**: string (Required): The graph node's identifier
+* **parameterKey**: string (Required): The identifier of the node parameter that the global parameter maps to.
 
 ## Dictionary<string,GraphNode>
 ### Properties
@@ -227,10 +227,10 @@
 
 ## GraphNode
 ### Properties
-* **assetId**: string
-* **inputId**: string
-* **outputId**: string
-* **parameters**: [Dictionary<string,WebServiceParameter>](#dictionarystringwebserviceparameter)
+* **assetId**: string: The id of the asset represented by this node.
+* **inputId**: string: The id of the input element represented by this node.
+* **outputId**: string: The id of the output element represented by this node.
+* **parameters**: [Dictionary<string,WebServiceParameter>](#dictionarystringwebserviceparameter): If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.
 
 ## Dictionary<string,WebServiceParameter>
 ### Properties
