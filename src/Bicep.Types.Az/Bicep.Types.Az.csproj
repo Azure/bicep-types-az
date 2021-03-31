@@ -8,11 +8,36 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="../../generated/**/*.json" LogicalName="$([System.String]::new('%(RecursiveDir)%(Filename)%(Extension)').Replace('\', '/').ToLowerInvariant())" />
+    <EmbeddedResource Include="$(OutDir)/generated_types.zip" LogicalName="generated_types.zip" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="../Bicep.Types/Bicep.Types.csproj" />
   </ItemGroup>
 
+  <UsingTask TaskName="ZipDirectory" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+    <ParameterGroup>
+      <SourceDirectory ParameterType="System.String" Required="true" />
+      <TargetZipFile ParameterType="System.String" Required="true" />
+    </ParameterGroup>
+    <Task>
+      <Using Namespace="System.IO" />
+      <Using Namespace="System.IO.Compression" />
+      <Code Type="Fragment" Language="cs">
+        <![CDATA[
+          Directory.CreateDirectory(Path.GetDirectoryName(TargetZipFile));
+          File.Delete(TargetZipFile);
+          ZipFile.CreateFromDirectory(SourceDirectory, TargetZipFile, CompressionLevel.Optimal, false);
+        ]]>
+      </Code>
+    </Task>
+  </UsingTask>
+
+  <Target Name="ZipTypes" BeforeTargets="Build">
+    <ItemGroup>
+      <TypeFiles Include="../../generated/**/*.json" />
+    </ItemGroup>
+    <Copy SourceFiles="@(TypeFiles)" DestinationFiles="@(TypeFiles->'$(OutDir)/generated_types/%(RecursiveDir)%(Filename)%(Extension)')" />
+    <ZipDirectory SourceDirectory="$(OutDir)/generated_types" TargetZipFile="$(OutDir)/generated_types.zip" />
+  </Target>
 </Project>
