@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="$(OutDir)/generated_types.zip" LogicalName="generated_types.zip" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="../Bicep.Types/Bicep.Types.csproj" />
   </ItemGroup>
 
@@ -33,11 +29,14 @@
     </Task>
   </UsingTask>
 
-  <Target Name="ZipTypes" BeforeTargets="Build">
+  <Target Name="EmbedTypes" BeforeTargets="PrepareForBuild">
     <ItemGroup>
       <TypeFiles Include="../../generated/**/*.json" />
     </ItemGroup>
     <Copy SourceFiles="@(TypeFiles)" DestinationFiles="@(TypeFiles->'$(OutDir)/generated_types/%(RecursiveDir)%(Filename)%(Extension)')" />
     <ZipDirectory SourceDirectory="$(OutDir)/generated_types" TargetZipFile="$(OutDir)/generated_types.zip" />
+    <ItemGroup>
+      <EmbeddedResource Include="$(OutDir)/generated_types.zip" LogicalName="generated_types.zip" />
+    </ItemGroup>
   </Target>
 </Project>
