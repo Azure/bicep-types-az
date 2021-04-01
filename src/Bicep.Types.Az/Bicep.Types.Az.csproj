@@ -34,6 +34,7 @@
   </ItemGroup>
 
   <Target Name="EmbedTypes" BeforeTargets="PrepareForBuild" Inputs="@(TypeFiles)" Outputs="$(OutDir)/generated_types.zip">
+    <RemoveDir Directories="$(OutDir)/generated_types" />
     <Copy SourceFiles="@(TypeFiles)" DestinationFiles="@(TypeFiles->'$(OutDir)/generated_types/%(RecursiveDir)%(Filename)%(Extension)')" />
     <ZipDirectory SourceDirectory="$(OutDir)/generated_types" TargetZipFile="$(OutDir)/generated_types.zip" />
     <ItemGroup>

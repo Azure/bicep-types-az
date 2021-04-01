@@ -41,19 +41,6 @@ namespace Azure.Bicep.Types.Az
             }
         }
 
-        public IEnumerable<TypeBase> LoadTypes(string providerNamespace, string apiVersion)
-        {
-            var streamName = GetTypeContainerResourceName(providerNamespace, apiVersion);
-            var content = GetContentAtPath(streamName);
-
-            if (content is null)
-            {
-                return Enumerable.Empty<TypeBase>();
-            }
-
-            return TypeSerializer.Deserialize(content);
-        }
-
         public ResourceType LoadResourceType(TypeLocation typeLocation)
         {
             var content = GetContentAtPath(typeLocation.RelativePath);
