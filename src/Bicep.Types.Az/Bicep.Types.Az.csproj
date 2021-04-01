@@ -29,10 +29,11 @@
     </Task>
   </UsingTask>
 
-  <Target Name="EmbedTypes" BeforeTargets="PrepareForBuild">
-    <ItemGroup>
-      <TypeFiles Include="../../generated/**/*.json" />
-    </ItemGroup>
+  <ItemGroup>
+    <TypeFiles Include="../../generated/**/*.json" />
+  </ItemGroup>
+
+  <Target Name="EmbedTypes" BeforeTargets="PrepareForBuild" Inputs="@(TypeFiles)" Outputs="$(OutDir)/generated_types.zip">
     <Copy SourceFiles="@(TypeFiles)" DestinationFiles="@(TypeFiles->'$(OutDir)/generated_types/%(RecursiveDir)%(Filename)%(Extension)')" />
     <ZipDirectory SourceDirectory="$(OutDir)/generated_types" TargetZipFile="$(OutDir)/generated_types.zip" />
     <ItemGroup>
