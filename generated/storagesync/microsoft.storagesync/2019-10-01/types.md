@@ -3,49 +3,49 @@
 ## Resource Microsoft.StorageSync/storageSyncServices@2019-10-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: any
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: any:
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
+* **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/registeredServers@2019-10-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [RegisteredServerCreateParametersProperties](#registeredservercreateparametersproperties)
-* **type**: 'Microsoft.StorageSync/storageSyncServices/registeredServers' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RegisteredServerCreateParametersProperties](#registeredservercreateparametersproperties):
+* **type**: 'Microsoft.StorageSync/storageSyncServices/registeredServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups@2019-10-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: any
-* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: any: Sync Group Create Properties object.
+* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2019-10-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [CloudEndpointCreateParametersProperties](#cloudendpointcreateparametersproperties)
-* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [CloudEndpointCreateParametersProperties](#cloudendpointcreateparametersproperties): CloudEndpoint Properties object.
+* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints@2019-10-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ServerEndpointCreateParametersProperties](#serverendpointcreateparametersproperties)
-* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServerEndpointCreateParametersProperties](#serverendpointcreateparametersproperties): ServerEndpoint Properties object.
+* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Dictionary<string,String>
 ### Properties
@@ -54,155 +54,155 @@
 
 ## RegisteredServerCreateParametersProperties
 ### Properties
-* **agentVersion**: string
-* **clusterId**: string
-* **clusterName**: string
-* **discoveryEndpointUri**: string (ReadOnly)
-* **friendlyName**: string
-* **lastHeartBeat**: string
-* **lastOperationName**: string (ReadOnly)
-* **lastWorkflowId**: string (ReadOnly)
-* **managementEndpointUri**: string (ReadOnly)
-* **monitoringConfiguration**: string (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **resourceLocation**: string (ReadOnly)
-* **serverCertificate**: string
-* **serverId**: string
-* **serverManagementErrorCode**: int (ReadOnly)
-* **serverOSVersion**: string
-* **serverRole**: string
-* **serviceLocation**: string (ReadOnly)
-* **storageSyncServiceUid**: string (ReadOnly)
+* **agentVersion**: string: Registered Server Agent Version
+* **clusterId**: string: Registered Server clusterId
+* **clusterName**: string: Registered Server clusterName
+* **discoveryEndpointUri**: string (ReadOnly): Resource discoveryEndpointUri
+* **friendlyName**: string: Friendly Name
+* **lastHeartBeat**: string: Registered Server last heart beat
+* **lastOperationName**: string (ReadOnly): Resource Last Operation Name
+* **lastWorkflowId**: string (ReadOnly): Registered Server lastWorkflowId
+* **managementEndpointUri**: string (ReadOnly): Management Endpoint Uri
+* **monitoringConfiguration**: string (ReadOnly): Monitoring Configuration
+* **provisioningState**: string (ReadOnly): Registered Server Provisioning State
+* **resourceLocation**: string (ReadOnly): Resource Location
+* **serverCertificate**: string: Registered Server Certificate
+* **serverId**: string: Registered Server serverId
+* **serverManagementErrorCode**: int (ReadOnly): Registered Server Management Error Code
+* **serverOSVersion**: string: Registered Server OS Version
+* **serverRole**: string: Registered Server serverRole
+* **serviceLocation**: string (ReadOnly): Service Location
+* **storageSyncServiceUid**: string (ReadOnly): Registered Server storageSyncServiceUid
 
 ## CloudEndpointCreateParametersProperties
 ### Properties
-* **azureFileShareName**: string
-* **backupEnabled**: string (ReadOnly)
-* **friendlyName**: string
-* **lastOperationName**: string (ReadOnly)
-* **lastWorkflowId**: string (ReadOnly)
-* **partnershipId**: string (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **storageAccountResourceId**: string
-* **storageAccountTenantId**: string
+* **azureFileShareName**: string: Azure file share name
+* **backupEnabled**: string (ReadOnly): Backup Enabled
+* **friendlyName**: string: Friendly Name
+* **lastOperationName**: string (ReadOnly): Resource Last Operation Name
+* **lastWorkflowId**: string (ReadOnly): CloudEndpoint lastWorkflowId
+* **partnershipId**: string (ReadOnly): Partnership Id
+* **provisioningState**: string (ReadOnly): CloudEndpoint Provisioning State
+* **storageAccountResourceId**: string: Storage Account Resource Id
+* **storageAccountTenantId**: string: Storage Account Tenant Id
 
 ## ServerEndpointCreateParametersProperties
 ### Properties
-* **cloudTiering**: 'off' | 'on'
-* **cloudTieringStatus**: [ServerEndpointCloudTieringStatus](#serverendpointcloudtieringstatus) (ReadOnly)
-* **friendlyName**: string
-* **lastOperationName**: string (ReadOnly)
-* **lastWorkflowId**: string (ReadOnly)
-* **offlineDataTransfer**: 'off' | 'on'
-* **offlineDataTransferShareName**: string
-* **offlineDataTransferStorageAccountResourceId**: string (ReadOnly)
-* **offlineDataTransferStorageAccountTenantId**: string (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **recallStatus**: [ServerEndpointRecallStatus](#serverendpointrecallstatus) (ReadOnly)
-* **serverLocalPath**: string
-* **serverResourceId**: string
-* **syncStatus**: [ServerEndpointSyncStatus](#serverendpointsyncstatus) (ReadOnly)
-* **tierFilesOlderThanDays**: int
-* **volumeFreeSpacePercent**: int
+* **cloudTiering**: 'off' | 'on': Cloud Tiering. Possible values include: 'on', 'off'
+* **cloudTieringStatus**: [ServerEndpointCloudTieringStatus](#serverendpointcloudtieringstatus) (ReadOnly): Server endpoint cloud tiering status object.
+* **friendlyName**: string: Friendly Name
+* **lastOperationName**: string (ReadOnly): Resource Last Operation Name
+* **lastWorkflowId**: string (ReadOnly): ServerEndpoint lastWorkflowId
+* **offlineDataTransfer**: 'off' | 'on': Offline data transfer. Possible values include: 'on', 'off'
+* **offlineDataTransferShareName**: string: Offline data transfer share name
+* **offlineDataTransferStorageAccountResourceId**: string (ReadOnly): Offline data transfer storage account resource ID
+* **offlineDataTransferStorageAccountTenantId**: string (ReadOnly): Offline data transfer storage account tenant ID
+* **provisioningState**: string (ReadOnly): ServerEndpoint Provisioning State
+* **recallStatus**: [ServerEndpointRecallStatus](#serverendpointrecallstatus) (ReadOnly): Server endpoint recall status object.
+* **serverLocalPath**: string: Server folder used for data synchronization
+* **serverResourceId**: string: Arm resource identifier.
+* **syncStatus**: [ServerEndpointSyncStatus](#serverendpointsyncstatus) (ReadOnly): Server Endpoint sync status
+* **tierFilesOlderThanDays**: int: Tier files older than days.
+* **volumeFreeSpacePercent**: int: Level of free space to be maintained by Cloud Tiering if it is enabled.
 
 ## ServerEndpointCloudTieringStatus
 ### Properties
-* **cachePerformance**: [CloudTieringCachePerformance](#cloudtieringcacheperformance) (ReadOnly)
-* **datePolicyStatus**: [CloudTieringDatePolicyStatus](#cloudtieringdatepolicystatus) (ReadOnly)
-* **filesNotTiering**: [CloudTieringFilesNotTiering](#cloudtieringfilesnottiering) (ReadOnly)
-* **health**: 'Error' | 'Healthy' (ReadOnly)
-* **healthLastUpdatedTimestamp**: string (ReadOnly)
-* **lastCloudTieringResult**: int (ReadOnly)
-* **lastSuccessTimestamp**: string (ReadOnly)
-* **lastUpdatedTimestamp**: string (ReadOnly)
-* **spaceSavings**: [CloudTieringSpaceSavings](#cloudtieringspacesavings) (ReadOnly)
-* **volumeFreeSpacePolicyStatus**: [CloudTieringVolumeFreeSpacePolicyStatus](#cloudtieringvolumefreespacepolicystatus) (ReadOnly)
+* **cachePerformance**: [CloudTieringCachePerformance](#cloudtieringcacheperformance) (ReadOnly): Server endpoint cloud tiering status object.
+* **datePolicyStatus**: [CloudTieringDatePolicyStatus](#cloudtieringdatepolicystatus) (ReadOnly): Status of the date policy
+* **filesNotTiering**: [CloudTieringFilesNotTiering](#cloudtieringfilesnottiering) (ReadOnly): Server endpoint cloud tiering status object.
+* **health**: 'Error' | 'Healthy' (ReadOnly): Cloud tiering health state. Possible values include: 'Healthy', 'Error'
+* **healthLastUpdatedTimestamp**: string (ReadOnly): The last updated timestamp of health state
+* **lastCloudTieringResult**: int (ReadOnly): Last cloud tiering result (HResult)
+* **lastSuccessTimestamp**: string (ReadOnly): Last cloud tiering success timestamp
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
+* **spaceSavings**: [CloudTieringSpaceSavings](#cloudtieringspacesavings) (ReadOnly): Server endpoint cloud tiering status object.
+* **volumeFreeSpacePolicyStatus**: [CloudTieringVolumeFreeSpacePolicyStatus](#cloudtieringvolumefreespacepolicystatus) (ReadOnly): Status of the volume free space policy
 
 ## CloudTieringCachePerformance
 ### Properties
-* **cacheHitBytes**: int (ReadOnly)
-* **cacheHitBytesPercent**: int (ReadOnly)
-* **cacheMissBytes**: int (ReadOnly)
-* **lastUpdatedTimestamp**: string (ReadOnly)
+* **cacheHitBytes**: int (ReadOnly): Count of bytes that were served from the local server
+* **cacheHitBytesPercent**: int (ReadOnly): Percentage of total bytes (hit + miss) that were served from the local server
+* **cacheMissBytes**: int (ReadOnly): Count of bytes that were served from the cloud
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
 
 ## CloudTieringDatePolicyStatus
 ### Properties
-* **lastUpdatedTimestamp**: string (ReadOnly)
-* **tieredFilesMostRecentAccessTimestamp**: string (ReadOnly)
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
+* **tieredFilesMostRecentAccessTimestamp**: string (ReadOnly): Most recent access time of tiered files
 
 ## CloudTieringFilesNotTiering
 ### Properties
-* **errors**: [FilesNotTieringError](#filesnottieringerror)[] (ReadOnly)
-* **lastUpdatedTimestamp**: string (ReadOnly)
-* **totalFileCount**: int (ReadOnly)
+* **errors**: [FilesNotTieringError](#filesnottieringerror)[] (ReadOnly): Array of tiering errors
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
+* **totalFileCount**: int (ReadOnly): Last cloud tiering result (HResult)
 
 ## FilesNotTieringError
 ### Properties
-* **errorCode**: int (ReadOnly)
-* **fileCount**: int (ReadOnly)
+* **errorCode**: int (ReadOnly): Error code (HResult)
+* **fileCount**: int (ReadOnly): Count of files with this error
 
 ## CloudTieringSpaceSavings
 ### Properties
-* **cachedSizeBytes**: int (ReadOnly)
-* **lastUpdatedTimestamp**: string (ReadOnly)
-* **spaceSavingsBytes**: int (ReadOnly)
-* **spaceSavingsPercent**: int (ReadOnly)
-* **totalSizeCloudBytes**: int (ReadOnly)
-* **volumeSizeBytes**: int (ReadOnly)
+* **cachedSizeBytes**: int (ReadOnly): Cached content size on the server
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
+* **spaceSavingsBytes**: int (ReadOnly): Count of bytes saved on the server
+* **spaceSavingsPercent**: int (ReadOnly): Percentage of cached size over total size
+* **totalSizeCloudBytes**: int (ReadOnly): Total size of content in the azure file share
+* **volumeSizeBytes**: int (ReadOnly): Volume size
 
 ## CloudTieringVolumeFreeSpacePolicyStatus
 ### Properties
-* **currentVolumeFreeSpacePercent**: int (ReadOnly)
-* **effectiveVolumeFreeSpacePolicy**: int (ReadOnly)
-* **lastUpdatedTimestamp**: string (ReadOnly)
+* **currentVolumeFreeSpacePercent**: int (ReadOnly): Current volume free space percentage.
+* **effectiveVolumeFreeSpacePolicy**: int (ReadOnly): In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
 
 ## ServerEndpointRecallStatus
 ### Properties
-* **lastUpdatedTimestamp**: string (ReadOnly)
-* **recallErrors**: [ServerEndpointRecallError](#serverendpointrecallerror)[] (ReadOnly)
-* **totalRecallErrorsCount**: int (ReadOnly)
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
+* **recallErrors**: [ServerEndpointRecallError](#serverendpointrecallerror)[] (ReadOnly): Array of recall errors
+* **totalRecallErrorsCount**: int (ReadOnly): Total count of recall errors.
 
 ## ServerEndpointRecallError
 ### Properties
-* **count**: int (ReadOnly)
-* **errorCode**: int (ReadOnly)
+* **count**: int (ReadOnly): Count of occurences of the error
+* **errorCode**: int (ReadOnly): Error code (HResult)
 
 ## ServerEndpointSyncStatus
 ### Properties
-* **combinedHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly)
-* **downloadActivity**: [SyncActivityStatus](#syncactivitystatus) (ReadOnly)
-* **downloadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly)
-* **downloadStatus**: [SyncSessionStatus](#syncsessionstatus) (ReadOnly)
-* **lastUpdatedTimestamp**: string (ReadOnly)
-* **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' (ReadOnly)
-* **syncActivity**: 'Download' | 'Upload' | 'UploadAndDownload' (ReadOnly)
-* **totalPersistentFilesNotSyncingCount**: int (ReadOnly)
-* **uploadActivity**: [SyncActivityStatus](#syncactivitystatus) (ReadOnly)
-* **uploadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly)
-* **uploadStatus**: [SyncSessionStatus](#syncsessionstatus) (ReadOnly)
+* **combinedHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly): Combined Health Status. Possible values include: 'Healthy', 'Error', 'SyncBlockedForRestore', 'SyncBlockedForChangeDetectionPostRestore', 'NoActivity'
+* **downloadActivity**: [SyncActivityStatus](#syncactivitystatus) (ReadOnly): Sync Session status object.
+* **downloadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly): Download Health Status. Possible values include: 'Healthy', 'Error', 'SyncBlockedForRestore', 'SyncBlockedForChangeDetectionPostRestore', 'NoActivity'
+* **downloadStatus**: [SyncSessionStatus](#syncsessionstatus) (ReadOnly): Sync Session status object.
+* **lastUpdatedTimestamp**: string (ReadOnly): Last Updated Timestamp
+* **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' (ReadOnly): Offline Data Transfer State. Possible values include: 'InProgress', 'Stopping', 'NotRunning', 'Complete'
+* **syncActivity**: 'Download' | 'Upload' | 'UploadAndDownload' (ReadOnly): Sync activity. Possible values include: 'Upload', 'Download', 'UploadAndDownload'
+* **totalPersistentFilesNotSyncingCount**: int (ReadOnly): Total count of persistent files not syncing (combined upload + download).
+* **uploadActivity**: [SyncActivityStatus](#syncactivitystatus) (ReadOnly): Sync Session status object.
+* **uploadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly): Upload Health Status. Possible values include: 'Healthy', 'Error', 'SyncBlockedForRestore', 'SyncBlockedForChangeDetectionPostRestore', 'NoActivity'
+* **uploadStatus**: [SyncSessionStatus](#syncsessionstatus) (ReadOnly): Sync Session status object.
 
 ## SyncActivityStatus
 ### Properties
-* **appliedBytes**: int (ReadOnly)
-* **appliedItemCount**: int (ReadOnly)
-* **perItemErrorCount**: int (ReadOnly)
-* **timestamp**: string (ReadOnly)
-* **totalBytes**: int (ReadOnly)
-* **totalItemCount**: int (ReadOnly)
+* **appliedBytes**: int (ReadOnly): Applied bytes
+* **appliedItemCount**: int (ReadOnly): Applied item count.
+* **perItemErrorCount**: int (ReadOnly): Per item error count
+* **timestamp**: string (ReadOnly): Timestamp when properties were updated
+* **totalBytes**: int (ReadOnly): Total bytes (if available)
+* **totalItemCount**: int (ReadOnly): Total item count (if available)
 
 ## SyncSessionStatus
 ### Properties
-* **filesNotSyncingErrors**: [ServerEndpointFilesNotSyncingError](#serverendpointfilesnotsyncingerror)[] (ReadOnly)
-* **lastSyncPerItemErrorCount**: int (ReadOnly)
-* **lastSyncResult**: int (ReadOnly)
-* **lastSyncSuccessTimestamp**: string (ReadOnly)
-* **lastSyncTimestamp**: string (ReadOnly)
-* **persistentFilesNotSyncingCount**: int (ReadOnly)
-* **transientFilesNotSyncingCount**: int (ReadOnly)
+* **filesNotSyncingErrors**: [ServerEndpointFilesNotSyncingError](#serverendpointfilesnotsyncingerror)[] (ReadOnly): Array of per-item errors coming from the last sync session.
+* **lastSyncPerItemErrorCount**: int (ReadOnly): Last sync per item error count.
+* **lastSyncResult**: int (ReadOnly): Last sync result (HResult)
+* **lastSyncSuccessTimestamp**: string (ReadOnly): Last sync success timestamp
+* **lastSyncTimestamp**: string (ReadOnly): Last sync timestamp
+* **persistentFilesNotSyncingCount**: int (ReadOnly): Count of persistent files not syncing.
+* **transientFilesNotSyncingCount**: int (ReadOnly): Count of transient files not syncing.
 
 ## ServerEndpointFilesNotSyncingError
 ### Properties
-* **errorCode**: int (ReadOnly)
-* **persistentCount**: int (ReadOnly)
-* **transientCount**: int (ReadOnly)
+* **errorCode**: int (ReadOnly): Error code (HResult)
+* **persistentCount**: int (ReadOnly): Count of persistent files not syncing with the specified error code
+* **transientCount**: int (ReadOnly): Count of transient files not syncing with the specified error code
 

@@ -3,24 +3,24 @@
 ## Resource Microsoft.Capacity/resourceProviders/locations/serviceLimits@2020-10-25
 * **Valid Scope(s)**: Subscription
 ### Properties
-* **apiVersion**: '2020-10-25' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [QuotaProperties](#quotaproperties)
-* **type**: 'Microsoft.Capacity/resourceProviders/locations/serviceLimits' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-10-25' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [QuotaProperties](#quotaproperties): Quota properties for the resource.
+* **type**: 'Microsoft.Capacity/resourceProviders/locations/serviceLimits' (ReadOnly, DeployTimeConstant): The resource type
 
 ## QuotaProperties
 ### Properties
-* **currentValue**: int (ReadOnly)
-* **limit**: int
-* **name**: [ResourceName](#resourcename)
-* **properties**: any
-* **quotaPeriod**: string (ReadOnly)
-* **resourceType**: any
-* **unit**: string
+* **currentValue**: int (ReadOnly): Current usage value for the resource.
+* **limit**: int: Quota properties.
+* **name**: [ResourceName](#resourcename): Resource name provided by the resource provider. Use this property for quotaRequest parameter.
+* **properties**: any: Additional properties for the specified resource provider.
+* **quotaPeriod**: string (ReadOnly): The time period over which the quota usage values are summarized. For example, P1D (per one day), PT1M (per one minute), and PT1S (per one second). This parameter is optional because, for some resources such as compute, the time period is irrelevant.
+* **resourceType**: any: The name of the resource type.
+* **unit**: string:  The limit units, such as **count** and **bytes**. Use the unit field provided in the response of the GET quota operation.
 
 ## ResourceName
 ### Properties
-* **localizedValue**: string (ReadOnly)
-* **value**: string
+* **localizedValue**: string (ReadOnly): Resource display localized name.
+* **value**: string: Resource name.
 

@@ -3,22 +3,22 @@
 ## Resource Microsoft.AppConfiguration/configurationStores@2019-10-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [ResourceIdentity](#resourceidentity)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ConfigurationStoreProperties](#configurationstoreproperties)
-* **sku**: [Sku](#sku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.AppConfiguration/configurationStores' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [ResourceIdentity](#resourceidentity):
+* **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ConfigurationStoreProperties](#configurationstoreproperties): The properties of a configuration store.
+* **sku**: [Sku](#sku) (Required): Describes a configuration store SKU.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
+* **type**: 'Microsoft.AppConfiguration/configurationStores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ResourceIdentity
 ### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
-* **userAssignedIdentities**: [Dictionary<string,UserIdentity>](#dictionarystringuseridentity)
+* **principalId**: string (ReadOnly): The principal id of the identity. This property will only be provided for a system-assigned identity.
+* **tenantId**: string (ReadOnly): The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities. Possible values include: 'None', 'SystemAssigned', 'UserAssigned', 'SystemAssigned, UserAssigned'
+* **userAssignedIdentities**: [Dictionary<string,UserIdentity>](#dictionarystringuseridentity): The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## Dictionary<string,UserIdentity>
 ### Properties
@@ -27,18 +27,18 @@
 
 ## UserIdentity
 ### Properties
-* **clientId**: string (ReadOnly)
-* **principalId**: string (ReadOnly)
+* **clientId**: string (ReadOnly): The client ID of the user-assigned identity.
+* **principalId**: string (ReadOnly): The principal ID of the user-assigned identity.
 
 ## ConfigurationStoreProperties
 ### Properties
-* **creationDate**: string (ReadOnly)
-* **endpoint**: string (ReadOnly)
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
+* **creationDate**: string (ReadOnly): The creation date of configuration store.
+* **endpoint**: string (ReadOnly): The DNS endpoint where the configuration store API will be available.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the configuration store. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
 
 ## Sku
 ### Properties
-* **name**: string (Required)
+* **name**: string (Required): The SKU name of the configuration store.
 
 ## Dictionary<string,String>
 ### Properties

@@ -3,104 +3,104 @@
 ## Resource Microsoft.Logz/monitors@2020-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [IdentityProperties](#identityproperties)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [MonitorProperties](#monitorproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Logz/monitors' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [IdentityProperties](#identityproperties):
+* **location**: string (Required):
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [MonitorProperties](#monitorproperties): Properties specific to the monitor resource.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring):
+* **type**: 'Microsoft.Logz/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logz/monitors/accounts@2020-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [IdentityProperties](#identityproperties)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [MonitorProperties](#monitorproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Logz/monitors/accounts' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [IdentityProperties](#identityproperties):
+* **location**: string (Required):
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [MonitorProperties](#monitorproperties): Properties specific to the monitor resource.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring):
+* **type**: 'Microsoft.Logz/monitors/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logz/monitors/accounts/tagRules@2020-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [MonitoringTagRulesProperties](#monitoringtagrulesproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
-* **type**: 'Microsoft.Logz/monitors/accounts/tagRules' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [MonitoringTagRulesProperties](#monitoringtagrulesproperties): Definition of the properties for a TagRules resource.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.Logz/monitors/accounts/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logz/monitors/singleSignOnConfigurations@2020-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [LogzSingleSignOnProperties](#logzsinglesignonproperties)
-* **systemData**: [systemData](#systemdata)
-* **type**: 'Microsoft.Logz/monitors/singleSignOnConfigurations' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [LogzSingleSignOnProperties](#logzsinglesignonproperties):
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.Logz/monitors/singleSignOnConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logz/monitors/tagRules@2020-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [MonitoringTagRulesProperties](#monitoringtagrulesproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
-* **type**: 'Microsoft.Logz/monitors/tagRules' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [MonitoringTagRulesProperties](#monitoringtagrulesproperties): Definition of the properties for a TagRules resource.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.Logz/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## IdentityProperties
 ### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'SystemAssigned' | 'UserAssigned'
+* **principalId**: string (ReadOnly): The identity ID.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'SystemAssigned' | 'UserAssigned': Possible values include: 'SystemAssigned', 'UserAssigned'
 
 ## MonitorProperties
 ### Properties
-* **liftrResourceCategory**: 'MonitorLogs' | 'Unknown'
-* **liftrResourcePreference**: int (ReadOnly)
-* **logzOrganizationProperties**: [LogzOrganizationProperties](#logzorganizationproperties)
-* **marketplaceSubscriptionStatus**: 'Active' | 'Suspended'
-* **monitoringStatus**: 'Disabled' | 'Enabled'
-* **planData**: [PlanData](#plandata)
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating'
-* **userInfo**: [UserInfo](#userinfo)
+* **liftrResourceCategory**: 'MonitorLogs' | 'Unknown': Possible values include: 'Unknown', 'MonitorLogs'
+* **liftrResourcePreference**: int (ReadOnly): The priority of the resource.
+* **logzOrganizationProperties**: [LogzOrganizationProperties](#logzorganizationproperties):
+* **marketplaceSubscriptionStatus**: 'Active' | 'Suspended': Possible values include: 'Active', 'Suspended'
+* **monitoringStatus**: 'Disabled' | 'Enabled': Possible values include: 'Enabled', 'Disabled'
+* **planData**: [PlanData](#plandata):
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating': Possible values include: 'Accepted', 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled', 'Deleted', 'NotSpecified'
+* **userInfo**: [UserInfo](#userinfo):
 
 ## LogzOrganizationProperties
 ### Properties
-* **companyName**: string
-* **enterpriseAppId**: string
-* **id**: string (ReadOnly)
+* **companyName**: string: Name of the Logz organization.
+* **enterpriseAppId**: string: The Id of the Enterprise App used for Single sign on.
+* **id**: string (ReadOnly): Id of the Logz organization.
 
 ## PlanData
 ### Properties
-* **billingCycle**: string
-* **effectiveDate**: string
-* **planDetails**: string
-* **usageType**: string
+* **billingCycle**: string: different billing cycles like MONTHLY/WEEKLY. this could be enum
+* **effectiveDate**: string: date when plan was applied
+* **planDetails**: string: plan id as published by Logz
+* **usageType**: string: different usage type like PAYG/COMMITTED. this could be enum
 
 ## UserInfo
 ### Properties
-* **emailAddress**: string
-* **firstName**: string
-* **lastName**: string
-* **phoneNumber**: string
+* **emailAddress**: string: Email of the user used by Logz for contacting them if needed
+* **firstName**: string: First Name of the user
+* **lastName**: string: Last Name of the user
+* **phoneNumber**: string: Phone number of the user used by Logz for contacting them if needed
 
 ## systemData
 ### Properties
-* **createdAt**: string
-* **createdBy**: string
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
-* **lastModifiedAt**: string
-* **lastModifiedBy**: string
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
 
 ## Dictionary<string,String>
 ### Properties
@@ -114,26 +114,26 @@
 
 ## MonitoringTagRulesProperties
 ### Properties
-* **logRules**: [LogRules](#logrules)
-* **systemData**: [systemData](#systemdata)
+* **logRules**: [LogRules](#logrules): Set of rules for sending logs for the Monitor resource.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
 
 ## LogRules
 ### Properties
-* **filteringTags**: [FilteringTag](#filteringtag)[]
-* **sendAadLogs**: bool
-* **sendActivityLogs**: bool
-* **sendSubscriptionLogs**: bool
+* **filteringTags**: [FilteringTag](#filteringtag)[]: List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+* **sendAadLogs**: bool: Flag specifying if AAD logs should be sent for the Monitor resource.
+* **sendActivityLogs**: bool: Flag specifying if activity logs from Azure resources should be sent for the Monitor resource.
+* **sendSubscriptionLogs**: bool: Flag specifying if subscription logs should be sent for the Monitor resource.
 
 ## FilteringTag
 ### Properties
-* **action**: 'Exclude' | 'Include'
-* **name**: string
-* **value**: string
+* **action**: 'Exclude' | 'Include': Possible values include: 'Include', 'Exclude'
+* **name**: string: The name (also known as the key) of the tag.
+* **value**: string: The value of the tag.
 
 ## LogzSingleSignOnProperties
 ### Properties
-* **enterpriseAppId**: string
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating'
-* **singleSignOnState**: 'Disable' | 'Enable' | 'Existing' | 'Initial'
-* **singleSignOnUrl**: string
+* **enterpriseAppId**: string: The Id of the Enterprise App used for Single sign-on.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating': Possible values include: 'Accepted', 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled', 'Deleted', 'NotSpecified'
+* **singleSignOnState**: 'Disable' | 'Enable' | 'Existing' | 'Initial': Possible values include: 'Initial', 'Enable', 'Disable', 'Existing'
+* **singleSignOnUrl**: string: The login URL specific to this Logz Organization.
 

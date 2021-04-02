@@ -3,63 +3,63 @@
 ## Resource Microsoft.NetApp/netAppAccounts@2020-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [accountProperties](#accountproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [accountProperties](#accountproperties): NetApp account properties
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags are a list of key-value pairs that describe the resource
+* **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2020-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [poolProperties](#poolproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [poolProperties](#poolproperties) (Required): Pool properties
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags are a list of key-value pairs that describe the resource
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [volumeProperties](#volumeproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [volumeProperties](#volumeproperties) (Required): Volume properties
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags are a list of key-value pairs that describe the resource
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2020-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [snapshotProperties](#snapshotproperties)
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [snapshotProperties](#snapshotproperties): Snapshot properties
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## accountProperties
 ### Properties
-* **activeDirectories**: [activeDirectory](#activedirectory)[]
-* **provisioningState**: string (ReadOnly)
+* **activeDirectories**: [activeDirectory](#activedirectory)[]: Active Directories
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
 
 ## activeDirectory
 ### Properties
-* **activeDirectoryId**: string
-* **backupOperators**: string[]
-* **dns**: string
-* **domain**: string
-* **organizationalUnit**: string
-* **password**: string
-* **site**: string
-* **smbServerName**: string
-* **status**: string
-* **username**: string
+* **activeDirectoryId**: string: Id of the Active Directory
+* **backupOperators**: string[]: Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier
+* **dns**: string: Comma separated list of DNS server IP addresses (IPv4 only) for the Active Directory domain
+* **domain**: string: Name of the Active Directory domain
+* **organizationalUnit**: string: The Organizational Unit (OU) within the Windows Active Directory
+* **password**: string: Plain text password of Active Directory domain administrator
+* **site**: string: The Active Directory site the service will limit Domain Controller discovery to
+* **smbServerName**: string: NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
+* **status**: string: Status of the Active Directory
+* **username**: string: Username of Active Directory domain administrator
 
 ## Dictionary<string,String>
 ### Properties
@@ -68,10 +68,10 @@
 
 ## poolProperties
 ### Properties
-* **poolId**: string (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' (Required)
-* **size**: int (Required)
+* **poolId**: string (ReadOnly): UUID v4 used to identify the Pool
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
+* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' (Required): The service level of the file system. Possible values include: 'Standard', 'Premium', 'Ultra'
+* **size**: int (Required): Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
 
 ## Dictionary<string,String>
 ### Properties
@@ -80,64 +80,64 @@
 
 ## volumeProperties
 ### Properties
-* **baremetalTenantId**: string (ReadOnly)
-* **creationToken**: string (Required)
-* **dataProtection**: [schemas:21_dataProtection](#schemas21dataprotection)
-* **exportPolicy**: [schemas:21_exportPolicy](#schemas21exportpolicy)
-* **fileSystemId**: string (ReadOnly)
-* **isRestoring**: bool
-* **mountTargets**: [mountTargetProperties](#mounttargetproperties)[] (ReadOnly)
-* **protocolTypes**: string[]
-* **provisioningState**: string (ReadOnly)
-* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra'
-* **snapshotDirectoryVisible**: bool
-* **snapshotId**: string
-* **subnetId**: string (Required)
-* **usageThreshold**: int (Required)
-* **volumeType**: string
+* **baremetalTenantId**: string (ReadOnly): Unique Baremetal Tenant Identifier.
+* **creationToken**: string (Required): A unique file path for the volume. Used when creating mount targets
+* **dataProtection**: [schemas:21_dataProtection](#schemas21dataprotection): DataProtection type volumes include an object containing details of the replication
+* **exportPolicy**: [schemas:21_exportPolicy](#schemas21exportpolicy): Set of export policy rules
+* **fileSystemId**: string (ReadOnly): Unique FileSystem Identifier.
+* **isRestoring**: bool: Restoring
+* **mountTargets**: [mountTargetProperties](#mounttargetproperties)[] (ReadOnly): List of mount targets
+* **protocolTypes**: string[]: Set of protocol types, default NFSv3, CIFS for SMB protocol
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
+* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra': The service level of the file system. Possible values include: 'Standard', 'Premium', 'Ultra'
+* **snapshotDirectoryVisible**: bool: If enabled (true) the volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots (default to true).
+* **snapshotId**: string: UUID v4 or resource identifier used to identify the Snapshot.
+* **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
+* **usageThreshold**: int (Required): Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
+* **volumeType**: string: What type of volume is this
 
 ## schemas:21_dataProtection
 ### Properties
-* **replication**: [replicationObject](#replicationobject)
-* **snapshot**: [volumeSnapshotProperties](#volumesnapshotproperties)
+* **replication**: [replicationObject](#replicationobject): Replication properties
+* **snapshot**: [volumeSnapshotProperties](#volumesnapshotproperties): Volume Snapshot Properties
 
 ## replicationObject
 ### Properties
-* **endpointType**: 'dst' | 'src'
-* **remoteVolumeRegion**: string
-* **remoteVolumeResourceId**: string (Required)
-* **replicationId**: string
-* **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' | 'monthly' | 'weekly' (Required)
+* **endpointType**: 'dst' | 'src': Indicates whether the local volume is the source or destination for the Volume Replication. Possible values include: 'src', 'dst'
+* **remoteVolumeRegion**: string: The remote region for the other end of the Volume Replication.
+* **remoteVolumeResourceId**: string (Required): The resource ID of the remote volume.
+* **replicationId**: string: Id
+* **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' | 'monthly' | 'weekly' (Required): Schedule. Possible values include: '_10minutely', 'hourly', 'daily', 'weekly', 'monthly'
 
 ## volumeSnapshotProperties
 ### Properties
-* **snapshotPolicyId**: string
+* **snapshotPolicyId**: string: Snapshot Policy ResourceId
 
 ## schemas:21_exportPolicy
 ### Properties
-* **rules**: [exportPolicyRule](#exportpolicyrule)[]
+* **rules**: [exportPolicyRule](#exportpolicyrule)[]: Export policy rule
 
 ## exportPolicyRule
 ### Properties
-* **allowedClients**: string
-* **cifs**: bool
-* **nfsv3**: bool
-* **nfsv41**: bool
-* **ruleIndex**: int
-* **unixReadOnly**: bool
-* **unixReadWrite**: bool
+* **allowedClients**: string: Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names
+* **cifs**: bool: Allows CIFS protocol
+* **nfsv3**: bool: Allows NFSv3 protocol. Enable only for NFSv3 type volumes
+* **nfsv41**: bool: Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes
+* **ruleIndex**: int: Order index
+* **unixReadOnly**: bool: Read only access
+* **unixReadWrite**: bool: Read and write access
 
 ## mountTargetProperties
 ### Properties
-* **endIp**: string
-* **fileSystemId**: string (Required)
-* **gateway**: string
-* **ipAddress**: string (ReadOnly)
-* **mountTargetId**: string (ReadOnly)
-* **netmask**: string
-* **smbServerFqdn**: string
-* **startIp**: string
-* **subnet**: string
+* **endIp**: string: The end of IPv4 address range to use when creating a new mount target
+* **fileSystemId**: string (Required): UUID v4 used to identify the MountTarget
+* **gateway**: string: The gateway of the IPv4 address range to use when creating a new mount target
+* **ipAddress**: string (ReadOnly): The mount target's IPv4 address
+* **mountTargetId**: string (ReadOnly): UUID v4 used to identify the MountTarget
+* **netmask**: string: The netmask of the IPv4 address range to use when creating a new mount target
+* **smbServerFqdn**: string: The SMB server's Fully Qualified Domain Name, FQDN
+* **startIp**: string: The start of IPv4 address range to use when creating a new mount target
+* **subnet**: string: The subnet
 
 ## Dictionary<string,String>
 ### Properties
@@ -146,7 +146,7 @@
 
 ## snapshotProperties
 ### Properties
-* **created**: string (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **snapshotId**: string (ReadOnly)
+* **created**: string (ReadOnly): The creation date of the snapshot
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
+* **snapshotId**: string (ReadOnly): UUID v4 used to identify the Snapshot
 

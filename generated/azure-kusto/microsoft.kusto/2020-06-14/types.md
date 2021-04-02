@@ -3,96 +3,96 @@
 ## Resource Microsoft.Kusto/clusters@2020-06-14
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-06-14' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [Identity](#identity)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ClusterProperties](#clusterproperties)
-* **sku**: [AzureSku](#azuresku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant)
-* **zones**: string[]
+* **apiVersion**: '2020-06-14' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [Identity](#identity): Identity for the resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ClusterProperties](#clusterproperties): Class representing the Kusto cluster properties.
+* **sku**: [AzureSku](#azuresku) (Required): Azure SKU definition.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant): The resource type
+* **zones**: string[]: An array represents the availability zones of the cluster.
 
 ## Resource Microsoft.Kusto/clusters/attachedDatabaseConfigurations@2020-06-14
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-06-14' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [AttachedDatabaseConfigurationProperties](#attacheddatabaseconfigurationproperties)
-* **type**: 'Microsoft.Kusto/clusters/attachedDatabaseConfigurations' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-06-14' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AttachedDatabaseConfigurationProperties](#attacheddatabaseconfigurationproperties): Class representing the an attached database configuration properties of kind specific.
+* **type**: 'Microsoft.Kusto/clusters/attachedDatabaseConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Kusto/clusters/databases@2020-06-14
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 ### Base Properties
-* **apiVersion**: '2020-06-14' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-06-14' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant): The resource type
 ### ReadOnlyFollowing
 #### Properties
-* **kind**: 'ReadOnlyFollowing' (Required)
-* **properties**: [ReadOnlyFollowingDatabaseProperties](#readonlyfollowingdatabaseproperties)
+* **kind**: 'ReadOnlyFollowing' (Required): Class representing a read only following database.
+* **properties**: [ReadOnlyFollowingDatabaseProperties](#readonlyfollowingdatabaseproperties): Class representing the Kusto database properties.
 
 ### ReadWrite
 #### Properties
-* **kind**: 'ReadWrite' (Required)
-* **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties)
+* **kind**: 'ReadWrite' (Required): Class representing a read write database.
+* **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties): Class representing the Kusto database properties.
 
 
 ## Resource Microsoft.Kusto/clusters/databases/dataConnections@2020-06-14
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 ### Base Properties
-* **apiVersion**: '2020-06-14' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Kusto/clusters/databases/dataConnections' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-06-14' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.Kusto/clusters/databases/dataConnections' (ReadOnly, DeployTimeConstant): The resource type
 ### EventGrid
 #### Properties
-* **kind**: 'EventGrid' (Required)
-* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties)
+* **kind**: 'EventGrid' (Required): Class representing an Event Grid data connection.
+* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): Class representing the Kusto event grid connection properties.
 
 ### EventHub
 #### Properties
-* **kind**: 'EventHub' (Required)
-* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties)
+* **kind**: 'EventHub' (Required): Class representing an event hub data connection.
+* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): Class representing the Kusto event hub connection properties.
 
 ### IotHub
 #### Properties
-* **kind**: 'IotHub' (Required)
-* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties)
+* **kind**: 'IotHub' (Required): Class representing an iot hub data connection.
+* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): Class representing the Kusto Iot hub connection properties.
 
 
 ## Resource Microsoft.Kusto/clusters/databases/principalAssignments@2020-06-14
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-06-14' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [DatabasePrincipalProperties](#databaseprincipalproperties)
-* **type**: 'Microsoft.Kusto/clusters/databases/principalAssignments' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-06-14' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DatabasePrincipalProperties](#databaseprincipalproperties): A class representing database principal property.
+* **type**: 'Microsoft.Kusto/clusters/databases/principalAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Kusto/clusters/principalAssignments@2020-06-14
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-06-14' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ClusterPrincipalProperties](#clusterprincipalproperties)
-* **type**: 'Microsoft.Kusto/clusters/principalAssignments' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-06-14' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ClusterPrincipalProperties](#clusterprincipalproperties): A class representing cluster principal property.
+* **type**: 'Microsoft.Kusto/clusters/principalAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Identity
 ### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned' (Required)
-* **userAssignedIdentities**: [Dictionary<string,Schemas63UserAssignedIdentitiesValue>](#dictionarystringschemas63userassignedidentitiesvalue)
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'None' | 'SystemAssigned' (Required): The identity type. Possible values include: 'None', 'SystemAssigned'
+* **userAssignedIdentities**: [Dictionary<string,Schemas63UserAssignedIdentitiesValue>](#dictionarystringschemas63userassignedidentitiesvalue): The list of user identities associated with the Kusto cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## Dictionary<string,Schemas63UserAssignedIdentitiesValue>
 ### Properties
@@ -101,62 +101,62 @@
 
 ## schemas:63_userAssignedIdentitiesValue
 ### Properties
-* **clientId**: string (ReadOnly)
-* **principalId**: string (ReadOnly)
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
 
 ## ClusterProperties
 ### Properties
-* **dataIngestionUri**: string (ReadOnly)
-* **enableDiskEncryption**: bool
-* **enableDoubleEncryption**: bool
-* **enablePurge**: bool
-* **enableStreamingIngest**: bool
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
-* **languageExtensions**: [LanguageExtensionsList](#languageextensionslist) (ReadOnly)
-* **optimizedAutoscale**: [OptimizedAutoscale](#optimizedautoscale)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
-* **state**: 'Creating' | 'Deleted' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unavailable' | 'Updating' (ReadOnly)
-* **stateReason**: string (ReadOnly)
-* **trustedExternalTenants**: [TrustedExternalTenant](#trustedexternaltenant)[]
-* **uri**: string (ReadOnly)
-* **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration)
+* **dataIngestionUri**: string (ReadOnly): The cluster data ingestion URI.
+* **enableDiskEncryption**: bool: A boolean value that indicates if the cluster's disks are encrypted.
+* **enableDoubleEncryption**: bool: A boolean value that indicates if double encryption is enabled.
+* **enablePurge**: bool: A boolean value that indicates if the purge operations are enabled.
+* **enableStreamingIngest**: bool: A boolean value that indicates if the streaming ingest is enabled.
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): Properties of the key vault.
+* **languageExtensions**: [LanguageExtensionsList](#languageextensionslist) (ReadOnly): The list of language extension objects.
+* **optimizedAutoscale**: [OptimizedAutoscale](#optimizedautoscale): A class that contains the optimized auto scale definition.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource. Possible values include: 'Running', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Moving'
+* **state**: 'Creating' | 'Deleted' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unavailable' | 'Updating' (ReadOnly): The state of the resource. Possible values include: 'Creating', 'Unavailable', 'Running', 'Deleting', 'Deleted', 'Stopping', 'Stopped', 'Starting', 'Updating'
+* **stateReason**: string (ReadOnly): The reason for the cluster's current state.
+* **trustedExternalTenants**: [TrustedExternalTenant](#trustedexternaltenant)[]: The cluster's external tenants.
+* **uri**: string (ReadOnly): The cluster URI.
+* **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): A class that contains virtual network definition.
 
 ## KeyVaultProperties
 ### Properties
-* **keyName**: string (Required)
-* **keyVaultUri**: string (Required)
-* **keyVersion**: string (Required)
+* **keyName**: string (Required): The name of the key vault key.
+* **keyVaultUri**: string (Required): The Uri of the key vault.
+* **keyVersion**: string (Required): The version of the key vault key.
 
 ## LanguageExtensionsList
 ### Properties
-* **value**: [LanguageExtension](#languageextension)[]
+* **value**: [LanguageExtension](#languageextension)[]: The list of language extensions.
 
 ## LanguageExtension
 ### Properties
-* **languageExtensionName**: 'PYTHON' | 'R'
+* **languageExtensionName**: 'PYTHON' | 'R': The language extension name. Possible values include: 'PYTHON', 'R'
 
 ## OptimizedAutoscale
 ### Properties
-* **isEnabled**: bool (Required)
-* **maximum**: int (Required)
-* **minimum**: int (Required)
-* **version**: int (Required)
+* **isEnabled**: bool (Required): A boolean value that indicate if the optimized autoscale feature is enabled or not.
+* **maximum**: int (Required): Maximum allowed instances count.
+* **minimum**: int (Required): Minimum allowed instances count.
+* **version**: int (Required): The version of the template defined, for instance 1.
 
 ## TrustedExternalTenant
 ### Properties
-* **value**: string
+* **value**: string: GUID representing an external tenant.
 
 ## VirtualNetworkConfiguration
 ### Properties
-* **dataManagementPublicIpId**: string (Required)
-* **enginePublicIpId**: string (Required)
-* **subnetId**: string (Required)
+* **dataManagementPublicIpId**: string (Required): Data management's service public IP address resource id.
+* **enginePublicIpId**: string (Required): Engine service's public IP address resource id.
+* **subnetId**: string (Required): The subnet resource id.
 
 ## AzureSku
 ### Properties
-* **capacity**: int
-* **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Dev(No SLA)_Standard_E2a_v4' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_E16a_v4' | 'Standard_E16as_v4+3TB_PS' | 'Standard_E16as_v4+4TB_PS' | 'Standard_E2a_v4' | 'Standard_E4a_v4' | 'Standard_E8a_v4' | 'Standard_E8as_v4+1TB_PS' | 'Standard_E8as_v4+2TB_PS' | 'Standard_L16s' | 'Standard_L4s' | 'Standard_L8s' (Required)
-* **tier**: 'Basic' | 'Standard' (Required)
+* **capacity**: int: The number of instances of the cluster.
+* **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Dev(No SLA)_Standard_E2a_v4' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_E16a_v4' | 'Standard_E16as_v4+3TB_PS' | 'Standard_E16as_v4+4TB_PS' | 'Standard_E2a_v4' | 'Standard_E4a_v4' | 'Standard_E8a_v4' | 'Standard_E8as_v4+1TB_PS' | 'Standard_E8as_v4+2TB_PS' | 'Standard_L16s' | 'Standard_L4s' | 'Standard_L8s' (Required): SKU name. Possible values include: 'Standard_DS13_v2+1TB_PS', 'Standard_DS13_v2+2TB_PS', 'Standard_DS14_v2+3TB_PS', 'Standard_DS14_v2+4TB_PS', 'Standard_D13_v2', 'Standard_D14_v2', 'Standard_L8s', 'Standard_L16s', 'Standard_D11_v2', 'Standard_D12_v2', 'Standard_L4s', 'Dev(No SLA)_Standard_D11_v2', 'Standard_E2a_v4', 'Standard_E4a_v4', 'Standard_E8a_v4', 'Standard_E16a_v4', 'Standard_E8as_v4+1TB_PS', 'Standard_E8as_v4+2TB_PS', 'Standard_E16as_v4+3TB_PS', 'Standard_E16as_v4+4TB_PS', 'Dev(No SLA)_Standard_E2a_v4'
+* **tier**: 'Basic' | 'Standard' (Required): SKU tier. Possible values include: 'Basic', 'Standard'
 
 ## Dictionary<string,String>
 ### Properties
@@ -165,107 +165,107 @@
 
 ## AttachedDatabaseConfigurationProperties
 ### Properties
-* **attachedDatabaseNames**: string[] (ReadOnly)
-* **clusterResourceId**: string (Required)
-* **databaseName**: string (Required)
-* **defaultPrincipalsModificationKind**: 'None' | 'Replace' | 'Union' (Required)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
+* **attachedDatabaseNames**: string[] (ReadOnly): The list of databases from the clusterResourceId which are currently attached to the cluster.
+* **clusterResourceId**: string (Required): The resource id of the cluster where the databases you would like to attach reside.
+* **databaseName**: string (Required): The name of the database which you would like to attach, use * if you want to follow all current and future databases.
+* **defaultPrincipalsModificationKind**: 'None' | 'Replace' | 'Union' (Required): The default principals modification kind. Possible values include: 'Union', 'Replace', 'None'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource. Possible values include: 'Running', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Moving'
 
 ## ReadOnlyFollowing
 ### Properties
-* **kind**: 'ReadOnlyFollowing' (Required)
-* **properties**: [ReadOnlyFollowingDatabaseProperties](#readonlyfollowingdatabaseproperties)
+* **kind**: 'ReadOnlyFollowing' (Required): Class representing a read only following database.
+* **properties**: [ReadOnlyFollowingDatabaseProperties](#readonlyfollowingdatabaseproperties): Class representing the Kusto database properties.
 
 ## ReadOnlyFollowingDatabaseProperties
 ### Properties
-* **attachedDatabaseConfigurationName**: string (ReadOnly)
-* **hotCachePeriod**: string
-* **leaderClusterResourceId**: string (ReadOnly)
-* **principalsModificationKind**: 'None' | 'Replace' | 'Union' (ReadOnly)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
-* **softDeletePeriod**: string (ReadOnly)
-* **statistics**: [DatabaseStatistics](#databasestatistics)
+* **attachedDatabaseConfigurationName**: string (ReadOnly): The name of the attached database configuration cluster
+* **hotCachePeriod**: string: The time the data should be kept in cache for fast queries in TimeSpan.
+* **leaderClusterResourceId**: string (ReadOnly): The name of the leader cluster
+* **principalsModificationKind**: 'None' | 'Replace' | 'Union' (ReadOnly): The principals modification kind of the database. Possible values include: 'Union', 'Replace', 'None'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource. Possible values include: 'Running', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Moving'
+* **softDeletePeriod**: string (ReadOnly): The time the data should be kept before it stops being accessible to queries in TimeSpan.
+* **statistics**: [DatabaseStatistics](#databasestatistics): A class that contains database statistics information.
 
 ## DatabaseStatistics
 ### Properties
-* **size**: int
+* **size**: int: The database size - the total size of compressed data and index in bytes.
 
 ## ReadWrite
 ### Properties
-* **kind**: 'ReadWrite' (Required)
-* **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties)
+* **kind**: 'ReadWrite' (Required): Class representing a read write database.
+* **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties): Class representing the Kusto database properties.
 
 ## ReadWriteDatabaseProperties
 ### Properties
-* **hotCachePeriod**: string
-* **isFollowed**: bool (ReadOnly)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
-* **softDeletePeriod**: string
-* **statistics**: [DatabaseStatistics](#databasestatistics)
+* **hotCachePeriod**: string: The time the data should be kept in cache for fast queries in TimeSpan.
+* **isFollowed**: bool (ReadOnly): Indicates whether the database is followed.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource. Possible values include: 'Running', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Moving'
+* **softDeletePeriod**: string: The time the data should be kept before it stops being accessible to queries in TimeSpan.
+* **statistics**: [DatabaseStatistics](#databasestatistics): A class that contains database statistics information.
 
 ## EventGrid
 ### Properties
-* **kind**: 'EventGrid' (Required)
-* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties)
+* **kind**: 'EventGrid' (Required): Class representing an Event Grid data connection.
+* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): Class representing the Kusto event grid connection properties.
 
 ## EventGridConnectionProperties
 ### Properties
-* **blobStorageEventType**: 'Microsoft.Storage.BlobCreated' | 'Microsoft.Storage.BlobRenamed'
-* **consumerGroup**: string (Required)
-* **dataFormat**: 'APACHEAVRO' | 'AVRO' | 'CSV' | 'JSON' | 'MULTIJSON' | 'ORC' | 'PARQUET' | 'PSV' | 'RAW' | 'SCSV' | 'SINGLEJSON' | 'SOHSV' | 'TSV' | 'TSVE' | 'TXT' | 'W3CLOGFILE'
-* **eventHubResourceId**: string (Required)
-* **ignoreFirstRecord**: bool
-* **mappingRuleName**: string
-* **storageAccountResourceId**: string (Required)
-* **tableName**: string
+* **blobStorageEventType**: 'Microsoft.Storage.BlobCreated' | 'Microsoft.Storage.BlobRenamed': The name of blob storage event type to process. Possible values include: 'Microsoft.Storage.BlobCreated', 'Microsoft.Storage.BlobRenamed'
+* **consumerGroup**: string (Required): The event hub consumer group.
+* **dataFormat**: 'APACHEAVRO' | 'AVRO' | 'CSV' | 'JSON' | 'MULTIJSON' | 'ORC' | 'PARQUET' | 'PSV' | 'RAW' | 'SCSV' | 'SINGLEJSON' | 'SOHSV' | 'TSV' | 'TSVE' | 'TXT' | 'W3CLOGFILE': The data format of the message. Optionally the data format can be added to each message. Possible values include: 'MULTIJSON', 'JSON', 'CSV', 'TSV', 'SCSV', 'SOHSV', 'PSV', 'TXT', 'RAW', 'SINGLEJSON', 'AVRO', 'TSVE', 'PARQUET', 'ORC', 'APACHEAVRO', 'W3CLOGFILE'
+* **eventHubResourceId**: string (Required): The resource ID where the event grid is configured to send events.
+* **ignoreFirstRecord**: bool: A Boolean value that, if set to true, indicates that ingestion should ignore the first record of every file
+* **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
+* **storageAccountResourceId**: string (Required): The resource ID of the storage account where the data resides.
+* **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
 
 ## EventHub
 ### Properties
-* **kind**: 'EventHub' (Required)
-* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties)
+* **kind**: 'EventHub' (Required): Class representing an event hub data connection.
+* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): Class representing the Kusto event hub connection properties.
 
 ## EventHubConnectionProperties
 ### Properties
-* **compression**: 'GZip' | 'None'
-* **consumerGroup**: string (Required)
-* **dataFormat**: 'APACHEAVRO' | 'AVRO' | 'CSV' | 'JSON' | 'MULTIJSON' | 'ORC' | 'PARQUET' | 'PSV' | 'RAW' | 'SCSV' | 'SINGLEJSON' | 'SOHSV' | 'TSV' | 'TSVE' | 'TXT' | 'W3CLOGFILE'
-* **eventHubResourceId**: string (Required)
-* **eventSystemProperties**: string[]
-* **mappingRuleName**: string
-* **tableName**: string
+* **compression**: 'GZip' | 'None': The event hub messages compression type. Possible values include: 'None', 'GZip'
+* **consumerGroup**: string (Required): The event hub consumer group.
+* **dataFormat**: 'APACHEAVRO' | 'AVRO' | 'CSV' | 'JSON' | 'MULTIJSON' | 'ORC' | 'PARQUET' | 'PSV' | 'RAW' | 'SCSV' | 'SINGLEJSON' | 'SOHSV' | 'TSV' | 'TSVE' | 'TXT' | 'W3CLOGFILE': The data format of the message. Optionally the data format can be added to each message. Possible values include: 'MULTIJSON', 'JSON', 'CSV', 'TSV', 'SCSV', 'SOHSV', 'PSV', 'TXT', 'RAW', 'SINGLEJSON', 'AVRO', 'TSVE', 'PARQUET', 'ORC', 'APACHEAVRO', 'W3CLOGFILE'
+* **eventHubResourceId**: string (Required): The resource ID of the event hub to be used to create a data connection.
+* **eventSystemProperties**: string[]: System properties of the event hub
+* **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
+* **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
 
 ## IotHub
 ### Properties
-* **kind**: 'IotHub' (Required)
-* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties)
+* **kind**: 'IotHub' (Required): Class representing an iot hub data connection.
+* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): Class representing the Kusto Iot hub connection properties.
 
 ## IotHubConnectionProperties
 ### Properties
-* **consumerGroup**: string (Required)
-* **dataFormat**: 'APACHEAVRO' | 'AVRO' | 'CSV' | 'JSON' | 'MULTIJSON' | 'ORC' | 'PARQUET' | 'PSV' | 'RAW' | 'SCSV' | 'SINGLEJSON' | 'SOHSV' | 'TSV' | 'TSVE' | 'TXT' | 'W3CLOGFILE'
-* **eventSystemProperties**: string[]
-* **iotHubResourceId**: string (Required)
-* **mappingRuleName**: string
-* **sharedAccessPolicyName**: string (Required)
-* **tableName**: string
+* **consumerGroup**: string (Required): The iot hub consumer group.
+* **dataFormat**: 'APACHEAVRO' | 'AVRO' | 'CSV' | 'JSON' | 'MULTIJSON' | 'ORC' | 'PARQUET' | 'PSV' | 'RAW' | 'SCSV' | 'SINGLEJSON' | 'SOHSV' | 'TSV' | 'TSVE' | 'TXT' | 'W3CLOGFILE': The data format of the message. Optionally the data format can be added to each message. Possible values include: 'MULTIJSON', 'JSON', 'CSV', 'TSV', 'SCSV', 'SOHSV', 'PSV', 'TXT', 'RAW', 'SINGLEJSON', 'AVRO', 'TSVE', 'PARQUET', 'ORC', 'APACHEAVRO', 'W3CLOGFILE'
+* **eventSystemProperties**: string[]: System properties of the iot hub
+* **iotHubResourceId**: string (Required): The resource ID of the Iot hub to be used to create a data connection.
+* **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
+* **sharedAccessPolicyName**: string (Required): The name of the share access policy
+* **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
 
 ## DatabasePrincipalProperties
 ### Properties
-* **principalId**: string (Required)
-* **principalName**: string (ReadOnly)
-* **principalType**: 'App' | 'Group' | 'User' (Required)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
-* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' (Required)
-* **tenantId**: string
-* **tenantName**: string (ReadOnly)
+* **principalId**: string (Required): The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.
+* **principalName**: string (ReadOnly): The principal name
+* **principalType**: 'App' | 'Group' | 'User' (Required): Principal type. Possible values include: 'App', 'Group', 'User'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource. Possible values include: 'Running', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Moving'
+* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' (Required): Database principal role. Possible values include: 'Admin', 'Ingestor', 'Monitor', 'User', 'UnrestrictedViewers', 'Viewer'
+* **tenantId**: string: The tenant id of the principal
+* **tenantName**: string (ReadOnly): The tenant name of the principal
 
 ## ClusterPrincipalProperties
 ### Properties
-* **principalId**: string (Required)
-* **principalName**: string (ReadOnly)
-* **principalType**: 'App' | 'Group' | 'User' (Required)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly)
-* **role**: 'AllDatabasesAdmin' | 'AllDatabasesViewer' (Required)
-* **tenantId**: string
-* **tenantName**: string (ReadOnly)
+* **principalId**: string (Required): The principal ID assigned to the cluster principal. It can be a user email, application ID, or security group name.
+* **principalName**: string (ReadOnly): The principal name
+* **principalType**: 'App' | 'Group' | 'User' (Required): Principal type. Possible values include: 'App', 'Group', 'User'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource. Possible values include: 'Running', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Moving'
+* **role**: 'AllDatabasesAdmin' | 'AllDatabasesViewer' (Required): Cluster principal role. Possible values include: 'AllDatabasesAdmin', 'AllDatabasesViewer'
+* **tenantId**: string: The tenant id of the principal
+* **tenantName**: string (ReadOnly): The tenant name of the principal
 

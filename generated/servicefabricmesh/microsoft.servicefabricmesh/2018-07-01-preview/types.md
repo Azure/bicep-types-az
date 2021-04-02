@@ -3,192 +3,195 @@
 ## Resource Microsoft.ServiceFabricMesh/applications@2018-07-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ApplicationResourceProperties](#applicationresourceproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.ServiceFabricMesh/applications' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ApplicationResourceProperties](#applicationresourceproperties) (Required): This type describes properties of an application resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.ServiceFabricMesh/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabricMesh/networks@2018-07-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [NetworkResourceProperties](#networkresourceproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.ServiceFabricMesh/networks' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NetworkResourceProperties](#networkresourceproperties) (Required): Describes properties of a network resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.ServiceFabricMesh/networks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabricMesh/volumes@2018-07-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [VolumeResourceProperties](#volumeresourceproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.ServiceFabricMesh/volumes' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VolumeResourceProperties](#volumeresourceproperties) (Required): Describes properties of a volume resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.ServiceFabricMesh/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ApplicationResourceProperties
 ### Properties
-* **debugParams**: string
-* **description**: string
-* **diagnostics**: [DiagnosticsDescription](#diagnosticsdescription)
-* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **serviceNames**: string[] (ReadOnly)
-* **services**: [ServiceResourceDescription](#serviceresourcedescription)[]
-* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Ready' | 'Upgrading' (ReadOnly)
-* **statusDetails**: string (ReadOnly)
-* **unhealthyEvaluation**: string (ReadOnly)
+* **debugParams**: string: Internal use.
+* **description**: string: User readable description of the application.
+* **diagnostics**: [DiagnosticsDescription](#diagnosticsdescription): Describes the diagnostics options available
+* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' (ReadOnly): Describes the health state of an application resource. Possible values include: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'
+* **provisioningState**: string (ReadOnly): State of the resource.
+* **serviceNames**: string[] (ReadOnly): Names of the services in the application.
+* **services**: [ServiceResourceDescription](#serviceresourcedescription)[]: describes the services in the application.
+* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Ready' | 'Upgrading' (ReadOnly): Status of the application resource. Possible values include: 'Invalid', 'Ready', 'Upgrading', 'Creating', 'Deleting', 'Failed'
+* **statusDetails**: string (ReadOnly): Gives additional information about the current status of the application deployment.
+* **unhealthyEvaluation**: string (ReadOnly): When the application's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
 
 ## DiagnosticsDescription
 ### Properties
-* **defaultSinkRefs**: string[]
-* **enabled**: bool
-* **sinks**: [DiagnosticsSinkProperties](#diagnosticssinkproperties)[]
+* **defaultSinkRefs**: string[]: The sinks to be used if diagnostics is enabled. Sink choices can be overridden at the service and code package level.
+* **enabled**: bool: Status of whether or not sinks are enabled.
+* **sinks**: [DiagnosticsSinkProperties](#diagnosticssinkproperties)[]: List of supported sinks that can be referenced.
 
 ## DiagnosticsSinkProperties
 * **Discriminator**: kind
 ### Base Properties
-* **description**: string
-* **name**: string
+* **description**: string: A description of the sink.
+* **name**: string: Name of the sink. This value is referenced by DiagnosticsReferenceDescription
 ### AzureInternalMonitoringPipeline
 #### Properties
-* **accountName**: string
-* **autoKeyConfigUrl**: string
-* **fluentdConfigUrl**: any
-* **kind**: 'AzureInternalMonitoringPipeline' (Required)
-* **maConfigUrl**: string
-* **namespace**: string
+* **accountName**: string: Azure Internal monitoring pipeline account.
+* **autoKeyConfigUrl**: string: Azure Internal monitoring pipeline autokey associated with the certificate.
+* **fluentdConfigUrl**: any: Azure Internal monitoring agent fluentd configuration.
+* **kind**: 'AzureInternalMonitoringPipeline' (Required): Diagnostics settings for Geneva.
+* **maConfigUrl**: string: Azure Internal monitoring agent configuration.
+* **namespace**: string: Azure Internal monitoring pipeline account namespace.
 
 
 ## AzureInternalMonitoringPipeline
 ### Properties
-* **accountName**: string
-* **autoKeyConfigUrl**: string
-* **fluentdConfigUrl**: any
-* **kind**: 'AzureInternalMonitoringPipeline' (Required)
-* **maConfigUrl**: string
-* **namespace**: string
+* **accountName**: string: Azure Internal monitoring pipeline account.
+* **autoKeyConfigUrl**: string: Azure Internal monitoring pipeline autokey associated with the certificate.
+* **fluentdConfigUrl**: any: Azure Internal monitoring agent fluentd configuration.
+* **kind**: 'AzureInternalMonitoringPipeline' (Required): Diagnostics settings for Geneva.
+* **maConfigUrl**: string: Azure Internal monitoring agent configuration.
+* **namespace**: string: Azure Internal monitoring pipeline account namespace.
 
 ## ServiceResourceDescription
 ### Properties
-* **id**: string (ReadOnly)
-* **name**: string
-* **properties**: [ServiceResourceProperties](#serviceresourceproperties) (Required)
-* **type**: string (ReadOnly)
+* **id**: string (ReadOnly): Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string: The name of the resource
+* **properties**: [ServiceResourceProperties](#serviceresourceproperties) (Required): This type describes properties of a service resource.
+* **type**: string (ReadOnly): The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
 
 ## ServiceResourceProperties
 ### Properties
-* **codePackages**: [ContainerCodePackageProperties](#containercodepackageproperties)[] (Required)
-* **description**: string
-* **diagnostics**: [DiagnosticsRef](#diagnosticsref)
-* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning'
-* **networkRefs**: [NetworkRef](#networkref)[]
-* **osType**: 'Linux' | 'Windows' (Required)
-* **replicaCount**: int
-* **status**: 'Active' | 'Creating' | 'Deleting' | 'Failed' | 'Unknown' | 'Upgrading' (ReadOnly)
+* **codePackages**: [ContainerCodePackageProperties](#containercodepackageproperties)[] (Required): Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
+
+* **description**: string: User readable description of the service.
+* **diagnostics**: [DiagnosticsRef](#diagnosticsref): Reference to sinks in DiagnosticsDescription.
+* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning': The health state of a resource such as Application, Service, or Network. Possible values include: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'
+* **networkRefs**: [NetworkRef](#networkref)[]: The names of the private networks that this service needs to be part of.
+* **osType**: 'Linux' | 'Windows' (Required): The Operating system type required by the code in service.
+. Possible values include: 'Linux', 'Windows'
+* **replicaCount**: int: The number of replicas of the service to create. Defaults to 1 if not specified.
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Failed' | 'Unknown' | 'Upgrading' (ReadOnly): Represents the status of the service. Possible values include: 'Unknown', 'Active', 'Upgrading', 'Deleting', 'Creating', 'Failed'
 
 ## ContainerCodePackageProperties
 ### Properties
-* **commands**: string[]
-* **diagnostics**: [DiagnosticsRef](#diagnosticsref)
-* **endpoints**: [EndpointProperties](#endpointproperties)[]
-* **entrypoint**: string
-* **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]
-* **image**: string (Required)
-* **imageRegistryCredential**: [ImageRegistryCredential](#imageregistrycredential)
-* **instanceView**: [ContainerInstanceView](#containerinstanceview) (ReadOnly)
-* **labels**: [ContainerLabel](#containerlabel)[]
-* **name**: string (Required)
-* **resources**: [ResourceRequirements](#resourcerequirements) (Required)
-* **settings**: [Setting](#setting)[]
-* **volumeRefs**: [ContainerVolume](#containervolume)[]
+* **commands**: string[]: Command array to execute within the container in exec form.
+* **diagnostics**: [DiagnosticsRef](#diagnosticsref): Reference to sinks in DiagnosticsDescription.
+* **endpoints**: [EndpointProperties](#endpointproperties)[]: The endpoints exposed by this container.
+* **entrypoint**: string: Override for the default entry point in the container.
+* **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: The environment variables to set in this container
+* **image**: string (Required): The Container image to use.
+* **imageRegistryCredential**: [ImageRegistryCredential](#imageregistrycredential): Image registry credential.
+* **instanceView**: [ContainerInstanceView](#containerinstanceview) (ReadOnly): Runtime information of a container instance.
+* **labels**: [ContainerLabel](#containerlabel)[]: The labels to set in this container.
+* **name**: string (Required): The name of the code package.
+* **resources**: [ResourceRequirements](#resourcerequirements) (Required): This type describes the resource requirements for a container or a service.
+* **settings**: [Setting](#setting)[]: The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".
+* **volumeRefs**: [ContainerVolume](#containervolume)[]: The volumes to be attached to the container.
 
 ## DiagnosticsRef
 ### Properties
-* **enabled**: bool
-* **sinkRefs**: string[]
+* **enabled**: bool: Status of whether or not sinks are enabled.
+* **sinkRefs**: string[]: List of sinks to be used if enabled. References the list of sinks in DiagnosticsDescription.
 
 ## EndpointProperties
 ### Properties
-* **name**: string (Required)
-* **port**: int
+* **name**: string (Required): The name of the endpoint.
+* **port**: int: Port used by the container.
 
 ## EnvironmentVariable
 ### Properties
-* **name**: string
-* **value**: string
+* **name**: string: The name of the environment variable.
+* **value**: string: The value of the environment variable.
 
 ## ImageRegistryCredential
 ### Properties
-* **password**: string
-* **server**: string (Required)
-* **username**: string (Required)
+* **password**: string: The password for the private registry.
+* **server**: string (Required): Docker image registry server, without protocol such as `http` and `https`.
+* **username**: string (Required): The username for the private registry.
 
 ## ContainerInstanceView
 ### Properties
-* **currentState**: [ContainerState](#containerstate)
-* **events**: [ContainerEvent](#containerevent)[]
-* **previousState**: [ContainerState](#containerstate)
-* **restartCount**: int
+* **currentState**: [ContainerState](#containerstate): The container state.
+* **events**: [ContainerEvent](#containerevent)[]: The events of this container instance.
+* **previousState**: [ContainerState](#containerstate): The container state.
+* **restartCount**: int: The number of times the container has been restarted.
 
 ## ContainerState
 ### Properties
-* **detailStatus**: string
-* **exitCode**: string
-* **finishTime**: string
-* **startTime**: string
-* **state**: string
+* **detailStatus**: string: Human-readable status of this state.
+* **exitCode**: string: The container exit code.
+* **finishTime**: string: Date/time when the container state finished.
+* **startTime**: string: Date/time when the container state started.
+* **state**: string: The state of this container
 
 ## ContainerEvent
 ### Properties
-* **count**: int
-* **firstTimestamp**: string
-* **lastTimestamp**: string
-* **message**: string
-* **name**: string
-* **type**: string
+* **count**: int: The count of the event.
+* **firstTimestamp**: string: Date/time of the first event.
+* **lastTimestamp**: string: Date/time of the last event.
+* **message**: string: The event message
+* **name**: string: The name of the container event.
+* **type**: string: The event type.
 
 ## ContainerLabel
 ### Properties
-* **name**: string (Required)
-* **value**: string (Required)
+* **name**: string (Required): The name of the container label.
+* **value**: string (Required): The value of the container label.
 
 ## ResourceRequirements
 ### Properties
-* **limits**: [ResourceLimits](#resourcelimits)
-* **requests**: [ResourceRequests](#resourcerequests) (Required)
+* **limits**: [ResourceLimits](#resourcelimits): This type describes the resource limits for a given container. It describes the most amount of resources a container is allowed to use before being restarted.
+* **requests**: [ResourceRequests](#resourcerequests) (Required): This type describes the requested resources for a given container. It describes the least amount of resources required for the container. A container can consume more than requested resources up to the specified limits before being restarted. Currently, the requested resources are treated as limits.
+
 
 ## ResourceLimits
 ### Properties
-* **cpu**: int
-* **memoryInGB**: int
+* **cpu**: int: CPU limits in cores. At present, only full cores are supported.
+* **memoryInGB**: int: The memory limit in GB.
 
 ## ResourceRequests
 ### Properties
-* **cpu**: int (Required)
-* **memoryInGB**: int (Required)
+* **cpu**: int (Required): Requested number of CPU cores. At present, only full cores are supported.
+* **memoryInGB**: int (Required): The memory request in GB for this container.
 
 ## Setting
 ### Properties
-* **name**: string
-* **value**: string
+* **name**: string: The name of the setting.
+* **value**: string: The value of the setting.
 
 ## ContainerVolume
 ### Properties
-* **destinationPath**: string (Required)
-* **name**: string (Required)
-* **readOnly**: bool
+* **destinationPath**: string (Required): The path within the container at which the volume should be mounted. Only valid path characters are allowed.
+* **name**: string (Required): Name of the volume.
+* **readOnly**: bool: The flag indicating whether the volume is read only. Default is 'false'.
 
 ## NetworkRef
 ### Properties
-* **name**: string
+* **name**: string: Name of the network.
 
 ## Dictionary<string,String>
 ### Properties
@@ -197,24 +200,24 @@
 
 ## NetworkResourceProperties
 ### Properties
-* **addressPrefix**: string (Required)
-* **description**: string
-* **ingressConfig**: [IngressConfig](#ingressconfig)
-* **provisioningState**: string (ReadOnly)
+* **addressPrefix**: string (Required): the address prefix for this network.
+* **description**: string: User readable description of the network.
+* **ingressConfig**: [IngressConfig](#ingressconfig): Describes public connectivity configuration for the network.
+* **provisioningState**: string (ReadOnly): State of the resource.
 
 ## IngressConfig
 ### Properties
-* **layer4**: [Layer4IngressConfig](#layer4ingressconfig)[]
-* **publicIPAddress**: string (ReadOnly)
-* **qosLevel**: 'Bronze'
+* **layer4**: [Layer4IngressConfig](#layer4ingressconfig)[]: Configuration for layer4 public connectivity for this network.
+* **publicIPAddress**: string (ReadOnly): The public IP address for reaching this network.
+* **qosLevel**: 'Bronze': The QoS tier for ingress. Possible values include: 'Bronze'
 
 ## Layer4IngressConfig
 ### Properties
-* **applicationName**: string
-* **endpointName**: string
-* **name**: string
-* **publicPort**: int
-* **serviceName**: string
+* **applicationName**: string: The application name which contains the service to be exposed.
+* **endpointName**: string: The service endpoint that needs to be exposed.
+* **name**: string: Layer4 ingress config name.
+* **publicPort**: int: Specifies the public port at which the service endpoint below needs to be exposed.
+* **serviceName**: string: The service whose endpoint needs to be exposed at the public port.
 
 ## Dictionary<string,String>
 ### Properties
@@ -223,16 +226,16 @@
 
 ## VolumeResourceProperties
 ### Properties
-* **azureFileParameters**: [VolumeProviderParametersAzureFile](#volumeproviderparametersazurefile)
-* **description**: string
-* **provider**: string (Required)
-* **provisioningState**: string (ReadOnly)
+* **azureFileParameters**: [VolumeProviderParametersAzureFile](#volumeproviderparametersazurefile): This type describes a volume provided by an Azure Files file share.
+* **description**: string: User readable description of the volume.
+* **provider**: string (Required): Provider of the volume.
+* **provisioningState**: string (ReadOnly): State of the resource.
 
 ## VolumeProviderParametersAzureFile
 ### Properties
-* **accountKey**: string
-* **accountName**: string (Required)
-* **shareName**: string (Required)
+* **accountKey**: string: Access key of the Azure storage account for the File Share.
+* **accountName**: string (Required): Name of the Azure storage account for the File Share.
+* **shareName**: string (Required): Name of the Azure Files file share that provides storage for the volume.
 
 ## Dictionary<string,String>
 ### Properties

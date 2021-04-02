@@ -3,61 +3,61 @@
 ## Resource Microsoft.DigitalTwins/digitalTwinsInstances@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [DigitalTwinsIdentity](#digitaltwinsidentity)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [DigitalTwinsProperties](#digitaltwinsproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [DigitalTwinsIdentity](#digitaltwinsidentity): The managed identity for the DigitalTwinsInstance.
+* **location**: string (Required): The resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DigitalTwinsProperties](#digitaltwinsproperties): The properties of a DigitalTwinsInstance.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DigitalTwins/digitalTwinsInstances/endpoints@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [DigitalTwinsEndpointResourceProperties](#digitaltwinsendpointresourceproperties) (Required)
-* **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/endpoints' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DigitalTwinsEndpointResourceProperties](#digitaltwinsendpointresourceproperties) (Required): Properties related to Digital Twins Endpoint
+* **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DigitalTwins/digitalTwinsInstances/privateEndpointConnections@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:29_properties](#schemas29properties) (Required)
-* **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:29_properties](#schemas29properties) (Required):
+* **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DigitalTwinsIdentity
 ### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned'
+* **principalId**: string (ReadOnly): The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity
+* **tenantId**: string (ReadOnly): The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity
+* **type**: 'None' | 'SystemAssigned': The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported. Possible values include: 'None', 'SystemAssigned'
 
 ## DigitalTwinsProperties
 ### Properties
-* **createdTime**: string (ReadOnly)
-* **hostName**: string (ReadOnly)
-* **lastUpdatedTime**: string (ReadOnly)
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]
-* **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Updating' | 'Warning' (ReadOnly)
-* **publicNetworkAccess**: 'Disabled' | 'Enabled'
+* **createdTime**: string (ReadOnly): Time when DigitalTwinsInstance was created.
+* **hostName**: string (ReadOnly): Api endpoint to work with DigitalTwinsInstance.
+* **lastUpdatedTime**: string (ReadOnly): Time when DigitalTwinsInstance was updated.
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]:
+* **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Updating' | 'Warning' (ReadOnly): The provisioning state. Possible values include: 'Provisioning', 'Deleting', 'Updating', 'Succeeded', 'Failed', 'Canceled', 'Deleted', 'Warning', 'Suspending', 'Restoring', 'Moving'
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Public network access for the DigitalTwinsInstance. Possible values include: 'Enabled', 'Disabled'
 
 ## PrivateEndpointConnection
 ### Properties
-* **id**: string (ReadOnly)
-* **name**: string (ReadOnly)
-* **properties**: [schemas:29_properties](#schemas29properties) (Required)
-* **type**: string (ReadOnly)
+* **id**: string (ReadOnly): The resource identifier.
+* **name**: string (ReadOnly): The resource name.
+* **properties**: [schemas:29_properties](#schemas29properties) (Required):
+* **type**: string (ReadOnly): The resource type.
 
 ## schemas:29_properties
 ### Properties
-* **groupIds**: string[]
-* **privateEndpoint**: [schemas:29_properties](#schemas29properties)
-* **privateLinkServiceConnectionState**: [schemas:29_properties](#schemas29properties)
-* **provisioningState**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly)
+* **groupIds**: string[]: The list of group ids for the private endpoint connection.
+* **privateEndpoint**: [schemas:29_properties](#schemas29properties):
+* **privateLinkServiceConnectionState**: [schemas:29_properties](#schemas29properties):
+* **provisioningState**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly): The provisioning state. Possible values include: 'Pending', 'Approved', 'Rejected', 'Disconnected'
 
 ## Dictionary<string,String>
 ### Properties
@@ -67,55 +67,55 @@
 ## DigitalTwinsEndpointResourceProperties
 * **Discriminator**: endpointType
 ### Base Properties
-* **authenticationType**: 'IdentityBased' | 'KeyBased'
-* **createdTime**: string (ReadOnly)
-* **deadLetterSecret**: string
-* **deadLetterUri**: string
-* **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Disabled' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Warning' (ReadOnly)
+* **authenticationType**: 'IdentityBased' | 'KeyBased': Specifies the authentication type being used for connecting to the endpoint. Possible values include: 'KeyBased', 'IdentityBased'
+* **createdTime**: string (ReadOnly): Time when the Endpoint was added to DigitalTwinsInstance.
+* **deadLetterSecret**: string: Dead letter storage secret for key-based authentication. Will be obfuscated during read.
+* **deadLetterUri**: string: Dead letter storage URL for identity-based authentication.
+* **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Disabled' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Warning' (ReadOnly): The provisioning state. Possible values include: 'Provisioning', 'Deleting', 'Succeeded', 'Failed', 'Canceled', 'Deleted', 'Warning', 'Suspending', 'Restoring', 'Moving', 'Disabled'
 ### EventGrid
 #### Properties
-* **accessKey1**: string (Required)
-* **accessKey2**: string
-* **endpointType**: 'EventGrid' (Required)
-* **TopicEndpoint**: string (Required)
+* **accessKey1**: string (Required): EventGrid secondary accesskey. Will be obfuscated during read.
+* **accessKey2**: string: EventGrid secondary accesskey. Will be obfuscated during read.
+* **endpointType**: 'EventGrid' (Required): Properties related to EventGrid.
+* **TopicEndpoint**: string (Required): EventGrid Topic Endpoint
 
 ### EventHub
 #### Properties
-* **connectionStringPrimaryKey**: string
-* **connectionStringSecondaryKey**: string
-* **endpointType**: 'EventHub' (Required)
-* **endpointUri**: string
-* **entityPath**: string
+* **connectionStringPrimaryKey**: string: PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+* **connectionStringSecondaryKey**: string: SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+* **endpointType**: 'EventHub' (Required): Properties related to EventHub.
+* **endpointUri**: string: The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
+* **entityPath**: string: The EventHub name in the EventHub namespace for identity-based authentication.
 
 ### ServiceBus
 #### Properties
-* **endpointType**: 'ServiceBus' (Required)
-* **endpointUri**: string
-* **entityPath**: string
-* **primaryConnectionString**: string
-* **secondaryConnectionString**: string
+* **endpointType**: 'ServiceBus' (Required): Properties related to ServiceBus.
+* **endpointUri**: string: The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://
+* **entityPath**: string: The ServiceBus Topic name for identity-based authentication
+* **primaryConnectionString**: string: PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+* **secondaryConnectionString**: string: SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
 
 
 ## EventGrid
 ### Properties
-* **accessKey1**: string (Required)
-* **accessKey2**: string
-* **endpointType**: 'EventGrid' (Required)
-* **TopicEndpoint**: string (Required)
+* **accessKey1**: string (Required): EventGrid secondary accesskey. Will be obfuscated during read.
+* **accessKey2**: string: EventGrid secondary accesskey. Will be obfuscated during read.
+* **endpointType**: 'EventGrid' (Required): Properties related to EventGrid.
+* **TopicEndpoint**: string (Required): EventGrid Topic Endpoint
 
 ## EventHub
 ### Properties
-* **connectionStringPrimaryKey**: string
-* **connectionStringSecondaryKey**: string
-* **endpointType**: 'EventHub' (Required)
-* **endpointUri**: string
-* **entityPath**: string
+* **connectionStringPrimaryKey**: string: PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+* **connectionStringSecondaryKey**: string: SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+* **endpointType**: 'EventHub' (Required): Properties related to EventHub.
+* **endpointUri**: string: The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
+* **entityPath**: string: The EventHub name in the EventHub namespace for identity-based authentication.
 
 ## ServiceBus
 ### Properties
-* **endpointType**: 'ServiceBus' (Required)
-* **endpointUri**: string
-* **entityPath**: string
-* **primaryConnectionString**: string
-* **secondaryConnectionString**: string
+* **endpointType**: 'ServiceBus' (Required): Properties related to ServiceBus.
+* **endpointUri**: string: The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://
+* **entityPath**: string: The ServiceBus Topic name for identity-based authentication
+* **primaryConnectionString**: string: PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+* **secondaryConnectionString**: string: SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
 

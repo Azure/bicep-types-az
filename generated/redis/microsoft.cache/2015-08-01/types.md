@@ -3,29 +3,29 @@
 ## Resource Microsoft.Cache/Redis@2015-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [RedisProperties](#redisproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Cache/Redis' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RedisProperties](#redisproperties) (Required): Parameters supplied to CreateOrUpdate Redis operation.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.Cache/Redis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## RedisProperties
 ### Properties
-* **enableNonSslPort**: bool
-* **hostName**: string (ReadOnly)
-* **port**: int (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **redisConfiguration**: [Dictionary<string,String>](#dictionarystringstring)
-* **redisVersion**: string
-* **shardCount**: int
-* **sku**: [Sku](#sku) (Required)
-* **sslPort**: int (ReadOnly)
-* **staticIP**: string
-* **subnet**: string
-* **tenantSettings**: [Dictionary<string,String>](#dictionarystringstring)
-* **virtualNetwork**: string
+* **enableNonSslPort**: bool: If the value is true, then the non-SLL Redis server port (6379) will be enabled.
+* **hostName**: string (ReadOnly): Redis host name.
+* **port**: int (ReadOnly): Redis non-SSL port.
+* **provisioningState**: string (ReadOnly): Redis instance provisioning status.
+* **redisConfiguration**: [Dictionary<string,String>](#dictionarystringstring): All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value etc.
+* **redisVersion**: string: RedisVersion parameter has been deprecated. As such, it is no longer necessary to provide this parameter and any value specified is ignored.
+* **shardCount**: int: The number of shards to be created on a Premium Cluster Cache.
+* **sku**: [Sku](#sku) (Required): SKU parameters supplied to the create Redis operation.
+* **sslPort**: int (ReadOnly): Redis SSL port.
+* **staticIP**: string: Required when deploying a Redis cache inside an existing Azure Virtual Network.
+* **subnet**: string: Required when deploying a Redis cache inside an existing Azure Virtual Network.
+* **tenantSettings**: [Dictionary<string,String>](#dictionarystringstring): tenantSettings
+* **virtualNetwork**: string: The exact ARM resource ID of the virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.ClassicNetwork/VirtualNetworks/vnet1
 
 ## Dictionary<string,String>
 ### Properties
@@ -34,9 +34,9 @@
 
 ## Sku
 ### Properties
-* **capacity**: int (Required)
-* **family**: 'C' | 'P' (Required)
-* **name**: 'Basic' | 'Premium' | 'Standard' (Required)
+* **capacity**: int (Required): What size of Redis cache to deploy. Valid values: for C family (0, 1, 2, 3, 4, 5, 6), for P family (1, 2, 3, 4).
+* **family**: 'C' | 'P' (Required): Which family to use. Valid values: (C, P). Possible values include: 'C', 'P'
+* **name**: 'Basic' | 'Premium' | 'Standard' (Required): What type of Redis cache to deploy. Valid values: (Basic, Standard, Premium). Possible values include: 'Basic', 'Standard', 'Premium'
 
 ## Dictionary<string,String>
 ### Properties

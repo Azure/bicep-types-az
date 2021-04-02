@@ -3,48 +3,48 @@
 ## Resource Microsoft.Authorization/policyAssignments@2017-06-01-preview
 * **Valid Scope(s)**: Unknown
 ### Properties
-* **apiVersion**: '2017-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [PolicyAssignmentProperties](#policyassignmentproperties)
-* **sku**: [PolicySku](#policysku)
-* **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PolicyAssignmentProperties](#policyassignmentproperties): The policy assignment properties.
+* **sku**: [PolicySku](#policysku): The policy sku.
+* **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/policySetDefinitions@2017-06-01-preview
 * **Valid Scope(s)**: ManagementGroup, Subscription
 ### Properties
-* **apiVersion**: '2017-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [PolicySetDefinitionProperties](#policysetdefinitionproperties)
-* **type**: 'Microsoft.Authorization/policySetDefinitions' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PolicySetDefinitionProperties](#policysetdefinitionproperties): The policy set definition properties.
+* **type**: 'Microsoft.Authorization/policySetDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## PolicyAssignmentProperties
 ### Properties
-* **description**: string
-* **displayName**: string
-* **metadata**: any
-* **notScopes**: string[]
-* **parameters**: any
-* **policyDefinitionId**: string
-* **scope**: string
+* **description**: string: This message will be part of response in case of policy violation.
+* **displayName**: string: The display name of the policy assignment.
+* **metadata**: any: The policy assignment metadata.
+* **notScopes**: string[]: The policy's excluded scopes.
+* **parameters**: any: Required if a parameter is used in policy rule.
+* **policyDefinitionId**: string: The ID of the policy definition.
+* **scope**: string: The scope for the policy assignment.
 
 ## PolicySku
 ### Properties
-* **name**: string (Required)
-* **tier**: string
+* **name**: string (Required): The name of the policy sku. Possible values are A0 and A1.
+* **tier**: string: The policy sku tier. Possible values are Free and Standard.
 
 ## PolicySetDefinitionProperties
 ### Properties
-* **description**: string
-* **displayName**: string
-* **metadata**: any
-* **parameters**: any
-* **policyDefinitions**: [PolicyDefinitionReference](#policydefinitionreference)[] (Required)
-* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified'
+* **description**: string: The policy set definition description.
+* **displayName**: string: The display name of the policy set definition.
+* **metadata**: any: The policy set definition metadata.
+* **parameters**: any: The policy set definition parameters that can be used in policy definition references.
+* **policyDefinitions**: [PolicyDefinitionReference](#policydefinitionreference)[] (Required): An array of policy definition references.
+* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified': The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom. Possible values include: 'NotSpecified', 'BuiltIn', 'Custom'
 
 ## PolicyDefinitionReference
 ### Properties
-* **parameters**: any
-* **policyDefinitionId**: string
+* **parameters**: any: Required if a parameter is used in policy rule.
+* **policyDefinitionId**: string: The ID of the policy definition or policy set definition.
 

@@ -3,93 +3,93 @@
 ## Resource Microsoft.DBForMySql/flexibleServers@2020-07-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [Identity](#identity)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ServerProperties](#serverproperties)
-* **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.DBForMySql/flexibleServers' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [Identity](#identity): Identity for the resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServerProperties](#serverproperties): The properties of a server.
+* **sku**: [Sku](#sku): Billing information related properties of a server.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.DBForMySql/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBForMySql/flexibleServers/databases@2020-07-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [DatabaseProperties](#databaseproperties)
-* **type**: 'Microsoft.DBForMySql/flexibleServers/databases' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DatabaseProperties](#databaseproperties): The properties of a database.
+* **type**: 'Microsoft.DBForMySql/flexibleServers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBForMySql/flexibleServers/firewallRules@2020-07-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required)
-* **type**: 'Microsoft.DBForMySql/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a server firewall rule.
+* **type**: 'Microsoft.DBForMySql/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBForMySql/flexibleServers/keys@2020-07-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ServerKeyProperties](#serverkeyproperties)
-* **type**: 'Microsoft.DBForMySql/flexibleServers/keys' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of encryption protector used to protect the key.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServerKeyProperties](#serverkeyproperties): Properties for a key execution.
+* **type**: 'Microsoft.DBForMySql/flexibleServers/keys' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Identity
 ### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'SystemAssigned'
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'SystemAssigned': The identity type. Possible values include: 'SystemAssigned'
 
 ## ServerProperties
 ### Properties
-* **administratorLogin**: string
-* **administratorLoginPassword**: string
-* **availabilityZone**: string
-* **byokEnforcement**: string (ReadOnly)
-* **createMode**: 'Default' | 'PointInTimeRestore' | 'Replica'
-* **delegatedSubnetArguments**: [DelegatedSubnetArguments](#delegatedsubnetarguments)
-* **earliestRestoreDate**: string (ReadOnly)
-* **fullyQualifiedDomainName**: string (ReadOnly)
-* **haEnabled**: 'Disabled' | 'Enabled'
-* **haState**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' (ReadOnly)
-* **infrastructureEncryption**: 'Disabled' | 'Enabled'
-* **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow)
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly)
-* **replicaCapacity**: int (ReadOnly)
-* **replicationRole**: string
-* **restorePointInTime**: string
-* **sourceServerId**: string
-* **sslEnforcement**: 'Disabled' | 'Enabled'
-* **standbyAvailabilityZone**: string (ReadOnly)
-* **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly)
-* **storageProfile**: [StorageProfile](#storageprofile)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **version**: '5.7'
+* **administratorLogin**: string: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
+* **administratorLoginPassword**: string: The password of the administrator login (required for server creation).
+* **availabilityZone**: string: availability Zone information of the server.
+* **byokEnforcement**: string (ReadOnly): Status showing whether the data encryption is enabled with customer-managed keys.
+* **createMode**: 'Default' | 'PointInTimeRestore' | 'Replica': The mode to create a new MySQL server. Possible values include: 'Default', 'PointInTimeRestore', 'Replica'
+* **delegatedSubnetArguments**: [DelegatedSubnetArguments](#delegatedsubnetarguments): Delegated subnet arguments of a server
+* **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
+* **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
+* **haEnabled**: 'Disabled' | 'Enabled': Enable HA or not for a server. Possible values include: 'Enabled', 'Disabled'
+* **haState**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' (ReadOnly): The state of a HA server. Possible values include: 'NotEnabled', 'CreatingStandby', 'ReplicatingData', 'FailingOver', 'Healthy', 'RemovingStandby'
+* **infrastructureEncryption**: 'Disabled' | 'Enabled': Status showing whether the server enabled infrastructure encryption. Possible values include: 'Enabled', 'Disabled'
+* **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window of a server.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly): Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'. Possible values include: 'Enabled', 'Disabled'
+* **replicaCapacity**: int (ReadOnly): The maximum number of replicas that a primary server can have.
+* **replicationRole**: string: The replication role.
+* **restorePointInTime**: string: Restore point creation time (ISO8601 format), specifying the time to restore from.
+* **sourceServerId**: string: The source MySQL server id.
+* **sslEnforcement**: 'Disabled' | 'Enabled': Enable ssl enforcement or not when connect to server. Possible values include: 'Enabled', 'Disabled'
+* **standbyAvailabilityZone**: string (ReadOnly): availability Zone information of the server.
+* **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly): The state of a server. Possible values include: 'Ready', 'Dropping', 'Disabled', 'Starting', 'Stopping', 'Stopped', 'Updating'
+* **storageProfile**: [StorageProfile](#storageprofile): Storage Profile properties of a server
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Application-specific metadata in the form of key-value pairs.
+* **version**: '5.7': Server version. Possible values include: '5.7'
 
 ## DelegatedSubnetArguments
 ### Properties
-* **subnetArmResourceId**: string
+* **subnetArmResourceId**: string: delegated subnet arm resource id.
 
 ## MaintenanceWindow
 ### Properties
-* **customWindow**: string
-* **dayOfWeek**: int
-* **startHour**: int
-* **startMinute**: int
+* **customWindow**: string: indicates whether custom window is enabled or disabled
+* **dayOfWeek**: int: day of week for maintenance window
+* **startHour**: int: start hour for maintenance window
+* **startMinute**: int: start minute for maintenance window
 
 ## StorageProfile
 ### Properties
-* **backupRetentionDays**: int
-* **storageAutogrow**: 'Disabled' | 'Enabled'
-* **storageIops**: int
-* **storageMB**: int
+* **backupRetentionDays**: int: Backup retention days for the server.
+* **storageAutogrow**: 'Disabled' | 'Enabled': Enable Storage Auto Grow. Possible values include: 'Enabled', 'Disabled'
+* **storageIops**: int: Storage IOPS for a server.
+* **storageMB**: int: Max storage allowed for a server.
 
 ## Dictionary<string,String>
 ### Properties
@@ -98,8 +98,8 @@
 
 ## Sku
 ### Properties
-* **name**: string (Required)
-* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' (Required)
+* **name**: string (Required): The name of the sku, e.g. Standard_D32s_v3.
+* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' (Required): The tier of the particular SKU, e.g. GeneralPurpose. Possible values include: 'Burstable', 'GeneralPurpose', 'MemoryOptimized'
 
 ## Dictionary<string,String>
 ### Properties
@@ -108,17 +108,17 @@
 
 ## DatabaseProperties
 ### Properties
-* **charset**: string
-* **collation**: string
+* **charset**: string: The charset of the database.
+* **collation**: string: The collation of the database.
 
 ## FirewallRuleProperties
 ### Properties
-* **endIpAddress**: string (Required)
-* **startIpAddress**: string (Required)
+* **endIpAddress**: string (Required): The end IP address of the server firewall rule. Must be IPv4 format.
+* **startIpAddress**: string (Required): The start IP address of the server firewall rule. Must be IPv4 format.
 
 ## ServerKeyProperties
 ### Properties
-* **creationDate**: string (ReadOnly)
-* **serverKeyType**: string (Required)
-* **uri**: string
+* **creationDate**: string (ReadOnly): The key creation date.
+* **serverKeyType**: string (Required): The key type like 'AzureKeyVault'.
+* **uri**: string: The URI of the key.
 

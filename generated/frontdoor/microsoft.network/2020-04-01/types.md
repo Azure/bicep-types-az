@@ -3,270 +3,270 @@
 ## Resource Microsoft.Network/frontDoors@2020-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [FrontDoorProperties](#frontdoorproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Network/frontDoors' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [FrontDoorProperties](#frontdoorproperties): The JSON object that contains the properties required to create an endpoint.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.Network/frontDoors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/frontDoors/rulesEngines@2020-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [RulesEngineProperties](#rulesengineproperties)
-* **type**: 'Microsoft.Network/frontDoors/rulesEngines' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RulesEngineProperties](#rulesengineproperties): The JSON object that contains the properties required to create a Rules Engine Configuration.
+* **type**: 'Microsoft.Network/frontDoors/rulesEngines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/FrontDoorWebApplicationFirewallPolicies@2020-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [WebApplicationFirewallPolicyProperties](#webapplicationfirewallpolicyproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Network/FrontDoorWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WebApplicationFirewallPolicyProperties](#webapplicationfirewallpolicyproperties): Defines web application firewall policy properties.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.Network/FrontDoorWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## FrontDoorProperties
 ### Properties
-* **backendPools**: [BackendPool](#backendpool)[]
-* **backendPoolsSettings**: [BackendPoolsSettings](#backendpoolssettings)
-* **cname**: string (ReadOnly)
-* **enabledState**: 'Disabled' | 'Enabled'
-* **friendlyName**: string
-* **frontdoorId**: string (ReadOnly)
-* **frontendEndpoints**: [FrontendEndpoint](#frontendendpoint)[]
-* **healthProbeSettings**: [HealthProbeSettingsModel](#healthprobesettingsmodel)[]
-* **loadBalancingSettings**: [LoadBalancingSettingsModel](#loadbalancingsettingsmodel)[]
-* **provisioningState**: string (ReadOnly)
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
-* **routingRules**: [RoutingRule](#routingrule)[]
-* **rulesEngines**: [RulesEngine](#rulesengine)[] (ReadOnly)
+* **backendPools**: [BackendPool](#backendpool)[]: Backend pools available to routing rules.
+* **backendPoolsSettings**: [BackendPoolsSettings](#backendpoolssettings): Settings that apply to all backend pools.
+* **cname**: string (ReadOnly): The host that each frontendEndpoint must CNAME to.
+* **enabledState**: 'Disabled' | 'Enabled': Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'. Possible values include: 'Enabled', 'Disabled'
+* **friendlyName**: string: A friendly name for the frontDoor
+* **frontdoorId**: string (ReadOnly): The Id of the frontdoor.
+* **frontendEndpoints**: [FrontendEndpoint](#frontendendpoint)[]: Frontend endpoints available to routing rules.
+* **healthProbeSettings**: [HealthProbeSettingsModel](#healthprobesettingsmodel)[]: Health probe settings associated with this Front Door instance.
+* **loadBalancingSettings**: [LoadBalancingSettingsModel](#loadbalancingsettingsmodel)[]: Load balancing settings associated with this Front Door instance.
+* **provisioningState**: string (ReadOnly): Provisioning state of the Front Door.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status of the Front Door. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
+* **routingRules**: [RoutingRule](#routingrule)[]: Routing rules associated with this Front Door.
+* **rulesEngines**: [RulesEngine](#rulesengine)[] (ReadOnly): Rules Engine Configurations available to routing rules.
 
 ## BackendPool
 ### Properties
-* **id**: string
-* **name**: string
-* **properties**: [BackendPoolProperties](#backendpoolproperties)
-* **type**: string (ReadOnly)
+* **id**: string: Resource ID.
+* **name**: string: Resource name.
+* **properties**: [BackendPoolProperties](#backendpoolproperties): The JSON object that contains the properties required to create a Backend Pool.
+* **type**: string (ReadOnly): Resource type.
 
 ## BackendPoolProperties
 ### Properties
-* **backends**: [Backend](#backend)[]
-* **healthProbeSettings**: [SubResource](#subresource)
-* **loadBalancingSettings**: [SubResource](#subresource)
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
+* **backends**: [Backend](#backend)[]: The set of backends for this pool
+* **healthProbeSettings**: [SubResource](#subresource): Reference to another subresource.
+* **loadBalancingSettings**: [SubResource](#subresource): Reference to another subresource.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
 
 ## Backend
 ### Properties
-* **address**: string
-* **backendHostHeader**: string
-* **enabledState**: 'Disabled' | 'Enabled'
-* **httpPort**: int
-* **httpsPort**: int
-* **priority**: int
-* **privateEndpointStatus**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' (ReadOnly)
-* **privateLinkAlias**: string
-* **privateLinkApprovalMessage**: string
-* **weight**: int
+* **address**: string: Location of the backend (IP address or FQDN)
+* **backendHostHeader**: string: The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
+* **enabledState**: 'Disabled' | 'Enabled': Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'. Possible values include: 'Enabled', 'Disabled'
+* **httpPort**: int: The HTTP TCP port number. Must be between 1 and 65535.
+* **httpsPort**: int: The HTTPS TCP port number. Must be between 1 and 65535.
+* **priority**: int: Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
+* **privateEndpointStatus**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' (ReadOnly): The Approval status for the connection to the Private Link. Possible values include: 'Pending', 'Approved', 'Rejected', 'Disconnected', 'Timeout'
+* **privateLinkAlias**: string: The Alias of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
+* **privateLinkApprovalMessage**: string: A custom message to be included in the approval request to connect to the Private Link
+* **weight**: int: Weight of this endpoint for load balancing purposes.
 
 ## SubResource
 ### Properties
-* **id**: string
+* **id**: string: Resource ID.
 
 ## BackendPoolsSettings
 ### Properties
-* **enforceCertificateNameCheck**: 'Disabled' | 'Enabled'
-* **sendRecvTimeoutSeconds**: int
+* **enforceCertificateNameCheck**: 'Disabled' | 'Enabled': Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests. Possible values include: 'Enabled', 'Disabled'
+* **sendRecvTimeoutSeconds**: int: Send and receive timeout on forwarding request to the backend. When timeout is reached, the request fails and returns.
 
 ## FrontendEndpoint
 ### Properties
-* **id**: string
-* **name**: string
-* **properties**: [FrontendEndpointProperties](#frontendendpointproperties)
-* **type**: string (ReadOnly)
+* **id**: string: Resource ID.
+* **name**: string: Resource name.
+* **properties**: [FrontendEndpointProperties](#frontendendpointproperties): The JSON object that contains the properties required to create a frontend endpoint.
+* **type**: string (ReadOnly): Resource type.
 
 ## FrontendEndpointProperties
 ### Properties
-* **customHttpsConfiguration**: [CustomHttpsConfiguration](#customhttpsconfiguration) (ReadOnly)
-* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly)
-* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly)
-* **hostName**: string
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
-* **sessionAffinityEnabledState**: 'Disabled' | 'Enabled'
-* **sessionAffinityTtlSeconds**: int
-* **webApplicationFirewallPolicyLink**: [schemas:60_webApplicationFirewallPolicyLink](#schemas60webapplicationfirewallpolicylink)
+* **customHttpsConfiguration**: [CustomHttpsConfiguration](#customhttpsconfiguration) (ReadOnly): Https settings for a domain
+* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly): Provisioning status of Custom Https of the frontendEndpoint. Possible values include: 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Failed'
+* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. Possible values include: 'SubmittingDomainControlValidationRequest', 'PendingDomainControlValidationREquestApproval', 'DomainControlValidationRequestApproved', 'DomainControlValidationRequestRejected', 'DomainControlValidationRequestTimedOut', 'IssuingCertificate', 'DeployingCertificate', 'CertificateDeployed', 'DeletingCertificate', 'CertificateDeleted'
+* **hostName**: string: The host name of the frontendEndpoint. Must be a domain name.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
+* **sessionAffinityEnabledState**: 'Disabled' | 'Enabled': Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'. Possible values include: 'Enabled', 'Disabled'
+* **sessionAffinityTtlSeconds**: int: UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
+* **webApplicationFirewallPolicyLink**: [schemas:60_webApplicationFirewallPolicyLink](#schemas60webapplicationfirewallpolicylink): Defines the Web Application Firewall policy for each host (if applicable)
 
 ## CustomHttpsConfiguration
 ### Properties
-* **certificateSource**: 'AzureKeyVault' | 'FrontDoor' (Required)
-* **frontDoorCertificateSourceParameters**: [FrontDoorCertificateSourceParameters](#frontdoorcertificatesourceparameters)
-* **keyVaultCertificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters)
-* **minimumTlsVersion**: '1.0' | '1.2' (Required)
-* **protocolType**: string (Required)
+* **certificateSource**: 'AzureKeyVault' | 'FrontDoor' (Required): Defines the source of the SSL certificate. Possible values include: 'AzureKeyVault', 'FrontDoor'
+* **frontDoorCertificateSourceParameters**: [FrontDoorCertificateSourceParameters](#frontdoorcertificatesourceparameters): Parameters required for enabling SSL with Front Door-managed certificates
+* **keyVaultCertificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters): Parameters required for bring-your-own-certification via Key Vault
+* **minimumTlsVersion**: '1.0' | '1.2' (Required): The minimum TLS version required from the clients to establish an SSL handshake with Front Door. Possible values include: '1.0', '1.2'
+* **protocolType**: string (Required): Defines the TLS extension protocol that is used for secure delivery
 
 ## FrontDoorCertificateSourceParameters
 ### Properties
-* **certificateType**: 'Dedicated'
+* **certificateType**: 'Dedicated': Defines the type of the certificate used for secure connections to a frontendEndpoint. Possible values include: 'Dedicated'
 
 ## KeyVaultCertificateSourceParameters
 ### Properties
-* **secretName**: string
-* **secretVersion**: string
-* **vault**: [schemas:55_vault](#schemas55vault)
+* **secretName**: string: The name of the Key Vault secret representing the full certificate PFX
+* **secretVersion**: string: The version of the Key Vault secret representing the full certificate PFX
+* **vault**: [schemas:55_vault](#schemas55vault): The Key Vault containing the SSL certificate
 
 ## schemas:55_vault
 ### Properties
-* **id**: string
+* **id**: string: Resource ID.
 
 ## schemas:60_webApplicationFirewallPolicyLink
 ### Properties
-* **id**: string
+* **id**: string: Resource ID.
 
 ## HealthProbeSettingsModel
 ### Properties
-* **id**: string
-* **name**: string
-* **properties**: [HealthProbeSettingsProperties](#healthprobesettingsproperties)
-* **type**: string (ReadOnly)
+* **id**: string: Resource ID.
+* **name**: string: Resource name.
+* **properties**: [HealthProbeSettingsProperties](#healthprobesettingsproperties): The JSON object that contains the properties required to create a health probe settings.
+* **type**: string (ReadOnly): Resource type.
 
 ## HealthProbeSettingsProperties
 ### Properties
-* **enabledState**: 'Disabled' | 'Enabled'
-* **healthProbeMethod**: 'GET' | 'HEAD'
-* **intervalInSeconds**: int
-* **path**: string
-* **protocol**: 'Http' | 'Https'
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
+* **enabledState**: 'Disabled' | 'Enabled': Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool. Possible values include: 'Enabled', 'Disabled'
+* **healthProbeMethod**: 'GET' | 'HEAD': Configures which HTTP method to use to probe the backends defined under backendPools. Possible values include: 'GET', 'HEAD'
+* **intervalInSeconds**: int: The number of seconds between health probes.
+* **path**: string: The path to use for the health probe. Default is /
+* **protocol**: 'Http' | 'Https': Protocol scheme to use for this probe. Possible values include: 'Http', 'Https'
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
 
 ## LoadBalancingSettingsModel
 ### Properties
-* **id**: string
-* **name**: string
-* **properties**: [LoadBalancingSettingsProperties](#loadbalancingsettingsproperties)
-* **type**: string (ReadOnly)
+* **id**: string: Resource ID.
+* **name**: string: Resource name.
+* **properties**: [LoadBalancingSettingsProperties](#loadbalancingsettingsproperties): The JSON object that contains the properties required to create load balancing settings
+* **type**: string (ReadOnly): Resource type.
 
 ## LoadBalancingSettingsProperties
 ### Properties
-* **additionalLatencyMilliseconds**: int
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
-* **sampleSize**: int
-* **successfulSamplesRequired**: int
+* **additionalLatencyMilliseconds**: int: The additional latency in milliseconds for probes to fall into the lowest latency bucket
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
+* **sampleSize**: int: The number of samples to consider for load balancing decisions
+* **successfulSamplesRequired**: int: The number of samples within the sample period that must succeed
 
 ## RoutingRule
 ### Properties
-* **id**: string
-* **name**: string
-* **properties**: [RoutingRuleProperties](#routingruleproperties)
-* **type**: string (ReadOnly)
+* **id**: string: Resource ID.
+* **name**: string: Resource name.
+* **properties**: [RoutingRuleProperties](#routingruleproperties): The JSON object that contains the properties required to create a routing rule.
+* **type**: string (ReadOnly): Resource type.
 
 ## RoutingRuleProperties
 ### Properties
-* **acceptedProtocols**: 'Http' | 'Https'[]
-* **enabledState**: 'Disabled' | 'Enabled'
-* **frontendEndpoints**: [SubResource](#subresource)[]
-* **patternsToMatch**: string[]
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
-* **routeConfiguration**: [RouteConfiguration](#routeconfiguration)
-* **rulesEngine**: [SubResource](#subresource)
-* **webApplicationFirewallPolicyLink**: [schemas:37_webApplicationFirewallPolicyLink](#schemas37webapplicationfirewallpolicylink)
+* **acceptedProtocols**: 'Http' | 'Https'[]: Protocol schemes to match for this rule
+* **enabledState**: 'Disabled' | 'Enabled': Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'. Possible values include: 'Enabled', 'Disabled'
+* **frontendEndpoints**: [SubResource](#subresource)[]: Frontend endpoints associated with this rule
+* **patternsToMatch**: string[]: The route patterns of the rule.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
+* **routeConfiguration**: [RouteConfiguration](#routeconfiguration): Base class for all types of Route.
+* **rulesEngine**: [SubResource](#subresource): Reference to another subresource.
+* **webApplicationFirewallPolicyLink**: [schemas:37_webApplicationFirewallPolicyLink](#schemas37webapplicationfirewallpolicylink): Defines the Web Application Firewall policy for each routing rule (if applicable)
 
 ## RouteConfiguration
 * **Discriminator**: @odata.type
 ### Base Properties
 ### #Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration
 #### Properties
-* **@odata.type**: '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration' (Required)
-* **backendPool**: [SubResource](#subresource)
-* **cacheConfiguration**: [CacheConfiguration](#cacheconfiguration)
-* **customForwardingPath**: string
-* **forwardingProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest'
+* **@odata.type**: '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration' (Required): Describes Forwarding Route.
+* **backendPool**: [SubResource](#subresource): Reference to another subresource.
+* **cacheConfiguration**: [CacheConfiguration](#cacheconfiguration): Caching settings for a caching-type route. To disable caching, do not provide a cacheConfiguration object.
+* **customForwardingPath**: string: A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
+* **forwardingProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest': Protocol this rule will use when forwarding traffic to backends. Possible values include: 'HttpOnly', 'HttpsOnly', 'MatchRequest'
 
 ### #Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration
 #### Properties
-* **@odata.type**: '#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration' (Required)
-* **customFragment**: string
-* **customHost**: string
-* **customPath**: string
-* **customQueryString**: string
-* **redirectProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest'
-* **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect'
+* **@odata.type**: '#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration' (Required): Describes Redirect Route.
+* **customFragment**: string: Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
+* **customHost**: string: Host to redirect. Leave empty to use the incoming host as the destination host.
+* **customPath**: string: The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
+* **customQueryString**: string: The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.
+* **redirectProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest': The protocol of the destination to where the traffic is redirected. Possible values include: 'HttpOnly', 'HttpsOnly', 'MatchRequest'
+* **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect': The redirect type the rule will use when redirecting traffic. Possible values include: 'Moved', 'Found', 'TemporaryRedirect', 'PermanentRedirect'
 
 
 ## #Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration
 ### Properties
-* **@odata.type**: '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration' (Required)
-* **backendPool**: [SubResource](#subresource)
-* **cacheConfiguration**: [CacheConfiguration](#cacheconfiguration)
-* **customForwardingPath**: string
-* **forwardingProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest'
+* **@odata.type**: '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration' (Required): Describes Forwarding Route.
+* **backendPool**: [SubResource](#subresource): Reference to another subresource.
+* **cacheConfiguration**: [CacheConfiguration](#cacheconfiguration): Caching settings for a caching-type route. To disable caching, do not provide a cacheConfiguration object.
+* **customForwardingPath**: string: A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
+* **forwardingProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest': Protocol this rule will use when forwarding traffic to backends. Possible values include: 'HttpOnly', 'HttpsOnly', 'MatchRequest'
 
 ## CacheConfiguration
 ### Properties
-* **cacheDuration**: string
-* **dynamicCompression**: 'Disabled' | 'Enabled'
-* **queryParameters**: string
-* **queryParameterStripDirective**: 'StripAll' | 'StripAllExcept' | 'StripNone' | 'StripOnly'
+* **cacheDuration**: string: The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year
+* **dynamicCompression**: 'Disabled' | 'Enabled': Whether to use dynamic compression for cached content. Possible values include: 'Enabled', 'Disabled'
+* **queryParameters**: string: query parameters to include or exclude (comma separated).
+* **queryParameterStripDirective**: 'StripAll' | 'StripAllExcept' | 'StripNone' | 'StripOnly': Treatment of URL query terms when forming the cache key. Possible values include: 'StripNone', 'StripAll', 'StripOnly', 'StripAllExcept'
 
 ## #Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration
 ### Properties
-* **@odata.type**: '#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration' (Required)
-* **customFragment**: string
-* **customHost**: string
-* **customPath**: string
-* **customQueryString**: string
-* **redirectProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest'
-* **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect'
+* **@odata.type**: '#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration' (Required): Describes Redirect Route.
+* **customFragment**: string: Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
+* **customHost**: string: Host to redirect. Leave empty to use the incoming host as the destination host.
+* **customPath**: string: The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
+* **customQueryString**: string: The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.
+* **redirectProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest': The protocol of the destination to where the traffic is redirected. Possible values include: 'HttpOnly', 'HttpsOnly', 'MatchRequest'
+* **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect': The redirect type the rule will use when redirecting traffic. Possible values include: 'Moved', 'Found', 'TemporaryRedirect', 'PermanentRedirect'
 
 ## schemas:37_webApplicationFirewallPolicyLink
 ### Properties
-* **id**: string
+* **id**: string: Resource ID.
 
 ## RulesEngine
 ### Properties
-* **id**: string (ReadOnly)
-* **name**: string (ReadOnly)
-* **properties**: [RulesEngineProperties](#rulesengineproperties)
-* **type**: string (ReadOnly)
+* **id**: string (ReadOnly): Resource ID.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [RulesEngineProperties](#rulesengineproperties): The JSON object that contains the properties required to create a Rules Engine Configuration.
+* **type**: string (ReadOnly): Resource type.
 
 ## RulesEngineProperties
 ### Properties
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling'
-* **rules**: [RulesEngineRule](#rulesenginerule)[]
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
+* **rules**: [RulesEngineRule](#rulesenginerule)[]: A list of rules that define a particular Rules Engine Configuration.
 
 ## RulesEngineRule
 ### Properties
-* **action**: [RulesEngineAction](#rulesengineaction) (Required)
-* **matchConditions**: [RulesEngineMatchCondition](#rulesenginematchcondition)[]
-* **matchProcessingBehavior**: 'Continue' | 'Stop'
-* **name**: string (Required)
-* **priority**: int (Required)
+* **action**: [RulesEngineAction](#rulesengineaction) (Required): One or more actions that will execute, modifying the request and/or response.
+* **matchConditions**: [RulesEngineMatchCondition](#rulesenginematchcondition)[]: A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.
+* **matchProcessingBehavior**: 'Continue' | 'Stop': If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue. Possible values include: 'Continue', 'Stop'
+* **name**: string (Required): A name to refer to this specific rule.
+* **priority**: int (Required): A priority assigned to this rule.
 
 ## RulesEngineAction
 ### Properties
-* **requestHeaderActions**: [HeaderAction](#headeraction)[]
-* **responseHeaderActions**: [HeaderAction](#headeraction)[]
-* **routeConfigurationOverride**: [RouteConfiguration](#routeconfiguration)
+* **requestHeaderActions**: [HeaderAction](#headeraction)[]: A list of header actions to apply from the request from AFD to the origin.
+* **responseHeaderActions**: [HeaderAction](#headeraction)[]: A list of header actions to apply from the response from AFD to the client.
+* **routeConfigurationOverride**: [RouteConfiguration](#routeconfiguration): Base class for all types of Route.
 
 ## HeaderAction
 ### Properties
-* **headerActionType**: 'Append' | 'Delete' | 'Overwrite' (Required)
-* **headerName**: string (Required)
-* **value**: string
+* **headerActionType**: 'Append' | 'Delete' | 'Overwrite' (Required): Which type of manipulation to apply to the header. Possible values include: 'Append', 'Delete', 'Overwrite'
+* **headerName**: string (Required): The name of the header this action will apply to.
+* **value**: string: The value to update the given header name with. This value is not used if the actionType is Delete.
 
 ## RulesEngineMatchCondition
 ### Properties
-* **negateCondition**: bool
-* **rulesEngineMatchValue**: string[] (Required)
-* **rulesEngineMatchVariable**: 'IsMobile' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestFilename' | 'RequestFilenameExtension' | 'RequestHeader' | 'RequestMethod' | 'RequestPath' | 'RequestScheme' | 'RequestUri' (Required)
-* **rulesEngineOperator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' (Required)
-* **selector**: string
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]
+* **negateCondition**: bool: Describes if this is negate condition or not
+* **rulesEngineMatchValue**: string[] (Required): Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+* **rulesEngineMatchVariable**: 'IsMobile' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestFilename' | 'RequestFilenameExtension' | 'RequestHeader' | 'RequestMethod' | 'RequestPath' | 'RequestScheme' | 'RequestUri' (Required): Match Variable. Possible values include: 'IsMobile', 'RemoteAddr', 'RequestMethod', 'QueryString', 'PostArgs', 'RequestUri', 'RequestPath', 'RequestFilename', 'RequestFilenameExtension', 'RequestHeader', 'RequestBody', 'RequestScheme'
+* **rulesEngineOperator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to apply to the match condition. Possible values include: 'Any', 'IPMatch', 'GeoMatch', 'Equal', 'Contains', 'LessThan', 'GreaterThan', 'LessThanOrEqual', 'GreaterThanOrEqual', 'BeginsWith', 'EndsWith'
+* **selector**: string: Name of selector in RequestHeader or RequestBody to be matched
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## Dictionary<string,String>
 ### Properties
@@ -275,83 +275,83 @@
 
 ## WebApplicationFirewallPolicyProperties
 ### Properties
-* **customRules**: [CustomRuleList](#customrulelist)
-* **frontendEndpointLinks**: [FrontendEndpointLink](#frontendendpointlink)[] (ReadOnly)
-* **managedRules**: [ManagedRuleSetList](#managedrulesetlist)
-* **policySettings**: [PolicySettings](#policysettings)
-* **provisioningState**: string (ReadOnly)
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly)
-* **routingRuleLinks**: [RoutingRuleLink](#routingrulelink)[] (ReadOnly)
+* **customRules**: [CustomRuleList](#customrulelist): Defines contents of custom rules
+* **frontendEndpointLinks**: [FrontendEndpointLink](#frontendendpointlink)[] (ReadOnly): Describes Frontend Endpoints associated with this Web Application Firewall policy.
+* **managedRules**: [ManagedRuleSetList](#managedrulesetlist): Defines the list of managed rule sets for the policy.
+* **policySettings**: [PolicySettings](#policysettings): Defines top-level WebApplicationFirewallPolicy configuration settings.
+* **provisioningState**: string (ReadOnly): Provisioning state of the policy.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly): Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
+* **routingRuleLinks**: [RoutingRuleLink](#routingrulelink)[] (ReadOnly): Describes Routing Rules associated with this Web Application Firewall policy.
 
 ## CustomRuleList
 ### Properties
-* **rules**: [CustomRule](#customrule)[]
+* **rules**: [CustomRule](#customrule)[]: List of rules
 
 ## CustomRule
 ### Properties
-* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' (Required)
-* **enabledState**: 'Disabled' | 'Enabled'
-* **matchConditions**: [MatchCondition](#matchcondition)[] (Required)
-* **name**: string
-* **priority**: int (Required)
-* **rateLimitDurationInMinutes**: int
-* **rateLimitThreshold**: int
-* **ruleType**: 'MatchRule' | 'RateLimitRule' (Required)
+* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' (Required): Describes what action to be applied when rule matches. Possible values include: 'Allow', 'Block', 'Log', 'Redirect'
+* **enabledState**: 'Disabled' | 'Enabled': Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified. Possible values include: 'Disabled', 'Enabled'
+* **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
+* **name**: string: Describes the name of the rule.
+* **priority**: int (Required): Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
+* **rateLimitDurationInMinutes**: int: Time window for resetting the rate limit count. Default is 1 minute.
+* **rateLimitThreshold**: int: Number of allowed requests per client within the time window.
+* **ruleType**: 'MatchRule' | 'RateLimitRule' (Required): Describes type of rule. Possible values include: 'MatchRule', 'RateLimitRule'
 
 ## MatchCondition
 ### Properties
-* **matchValue**: string[] (Required)
-* **matchVariable**: 'Cookies' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestHeader' | 'RequestMethod' | 'RequestUri' | 'SocketAddr' (Required)
-* **negateCondition**: bool
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required)
-* **selector**: string
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]
+* **matchValue**: string[] (Required): List of possible match values.
+* **matchVariable**: 'Cookies' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestHeader' | 'RequestMethod' | 'RequestUri' | 'SocketAddr' (Required): Request variable to compare with. Possible values include: 'RemoteAddr', 'RequestMethod', 'QueryString', 'PostArgs', 'RequestUri', 'RequestHeader', 'RequestBody', 'Cookies', 'SocketAddr'
+* **negateCondition**: bool: Describes if the result of this condition should be negated.
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Comparison type to use for matching with the variable value. Possible values include: 'Any', 'IPMatch', 'GeoMatch', 'Equal', 'Contains', 'LessThan', 'GreaterThan', 'LessThanOrEqual', 'GreaterThanOrEqual', 'BeginsWith', 'EndsWith', 'RegEx'
+* **selector**: string: Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms.
 
 ## FrontendEndpointLink
 ### Properties
-* **id**: string
+* **id**: string: Resource ID.
 
 ## ManagedRuleSetList
 ### Properties
-* **managedRuleSets**: [ManagedRuleSet](#managedruleset)[]
+* **managedRuleSets**: [ManagedRuleSet](#managedruleset)[]: List of rule sets.
 
 ## ManagedRuleSet
 ### Properties
-* **exclusions**: [ManagedRuleExclusion](#managedruleexclusion)[]
-* **ruleGroupOverrides**: [ManagedRuleGroupOverride](#managedrulegroupoverride)[]
-* **ruleSetType**: string (Required)
-* **ruleSetVersion**: string (Required)
+* **exclusions**: [ManagedRuleExclusion](#managedruleexclusion)[]: Describes the exclusions that are applied to all rules in the set.
+* **ruleGroupOverrides**: [ManagedRuleGroupOverride](#managedrulegroupoverride)[]: Defines the rule group overrides to apply to the rule set.
+* **ruleSetType**: string (Required): Defines the rule set type to use.
+* **ruleSetVersion**: string (Required): Defines the version of the rule set to use.
 
 ## ManagedRuleExclusion
 ### Properties
-* **matchVariable**: 'QueryStringArgNames' | 'RequestBodyPostArgNames' | 'RequestCookieNames' | 'RequestHeaderNames' (Required)
-* **selector**: string (Required)
-* **selectorMatchOperator**: 'Contains' | 'EndsWith' | 'Equals' | 'EqualsAny' | 'StartsWith' (Required)
+* **matchVariable**: 'QueryStringArgNames' | 'RequestBodyPostArgNames' | 'RequestCookieNames' | 'RequestHeaderNames' (Required): The variable type to be excluded. Possible values include: 'RequestHeaderNames', 'RequestCookieNames', 'QueryStringArgNames', 'RequestBodyPostArgNames'
+* **selector**: string (Required): Selector value for which elements in the collection this exclusion applies to.
+* **selectorMatchOperator**: 'Contains' | 'EndsWith' | 'Equals' | 'EqualsAny' | 'StartsWith' (Required): Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to. Possible values include: 'Equals', 'Contains', 'StartsWith', 'EndsWith', 'EqualsAny'
 
 ## ManagedRuleGroupOverride
 ### Properties
-* **exclusions**: [ManagedRuleExclusion](#managedruleexclusion)[]
-* **ruleGroupName**: string (Required)
-* **rules**: [ManagedRuleOverride](#managedruleoverride)[]
+* **exclusions**: [ManagedRuleExclusion](#managedruleexclusion)[]: Describes the exclusions that are applied to all rules in the group.
+* **ruleGroupName**: string (Required): Describes the managed rule group to override.
+* **rules**: [ManagedRuleOverride](#managedruleoverride)[]: List of rules that will be disabled. If none specified, all rules in the group will be disabled.
 
 ## ManagedRuleOverride
 ### Properties
-* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect'
-* **enabledState**: 'Disabled' | 'Enabled'
-* **exclusions**: [ManagedRuleExclusion](#managedruleexclusion)[]
-* **ruleId**: string (Required)
+* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect': Describes the override action to be applied when rule matches. Possible values include: 'Allow', 'Block', 'Log', 'Redirect'
+* **enabledState**: 'Disabled' | 'Enabled': Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified. Possible values include: 'Disabled', 'Enabled'
+* **exclusions**: [ManagedRuleExclusion](#managedruleexclusion)[]: Describes the exclusions that are applied to this specific rule.
+* **ruleId**: string (Required): Identifier for the managed rule.
 
 ## PolicySettings
 ### Properties
-* **customBlockResponseBody**: string
-* **customBlockResponseStatusCode**: int
-* **enabledState**: 'Disabled' | 'Enabled'
-* **mode**: 'Detection' | 'Prevention'
-* **redirectUrl**: string
+* **customBlockResponseBody**: string: If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
+* **customBlockResponseStatusCode**: int: If the action type is block, customer can override the response status code.
+* **enabledState**: 'Disabled' | 'Enabled': Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified. Possible values include: 'Disabled', 'Enabled'
+* **mode**: 'Detection' | 'Prevention': Describes if it is in detection mode or prevention mode at policy level. Possible values include: 'Prevention', 'Detection'
+* **redirectUrl**: string: If action type is redirect, this field represents redirect URL for the client.
 
 ## RoutingRuleLink
 ### Properties
-* **id**: string
+* **id**: string: Resource ID.
 
 ## Dictionary<string,String>
 ### Properties

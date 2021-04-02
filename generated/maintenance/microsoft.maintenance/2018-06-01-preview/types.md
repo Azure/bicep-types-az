@@ -3,42 +3,42 @@
 ## Resource Microsoft.Maintenance/applyUpdates@2018-06-01-preview
 * **Valid Scope(s)**: Extension
 ### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'default' (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Maintenance/applyUpdates' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.Maintenance/applyUpdates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Maintenance/configurationAssignments@2018-06-01-preview
 * **Valid Scope(s)**: Extension
 ### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ConfigurationAssignmentProperties](#configurationassignmentproperties)
-* **type**: 'Microsoft.Maintenance/configurationAssignments' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Location of the resource
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ConfigurationAssignmentProperties](#configurationassignmentproperties): Properties for configuration assignment
+* **type**: 'Microsoft.Maintenance/configurationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Maintenance/maintenanceConfigurations@2018-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [MaintenanceConfigurationProperties](#maintenanceconfigurationproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Maintenance/maintenanceConfigurations' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Gets or sets location of the resource
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [MaintenanceConfigurationProperties](#maintenanceconfigurationproperties): Properties for maintenance configuration
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets tags of the resource
+* **type**: 'Microsoft.Maintenance/maintenanceConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ConfigurationAssignmentProperties
 ### Properties
-* **maintenanceConfigurationId**: string
-* **resourceId**: string
+* **maintenanceConfigurationId**: string: The maintenance configuration Id
+* **resourceId**: string: The unique resourceId
 
 ## MaintenanceConfigurationProperties
 ### Properties
-* **extensionProperties**: [Dictionary<string,String>](#dictionarystringstring)
-* **maintenanceScope**: 'All' | 'Host' | 'InResource' | 'Resource'
-* **namespace**: string
+* **extensionProperties**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets extensionProperties of the maintenanceConfiguration
+* **maintenanceScope**: 'All' | 'Host' | 'InResource' | 'Resource': Gets or sets maintenanceScope of the configuration. Possible values include: 'All', 'Host', 'Resource', 'InResource'
+* **namespace**: string: Gets or sets namespace of the resource
 
 ## Dictionary<string,String>
 ### Properties

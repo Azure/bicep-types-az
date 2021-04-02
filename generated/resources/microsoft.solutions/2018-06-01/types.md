@@ -3,70 +3,70 @@
 ## Resource Microsoft.Solutions/applicationDefinitions@2018-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [Identity](#identity)
-* **location**: string
-* **managedBy**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ApplicationDefinitionProperties](#applicationdefinitionproperties) (Required)
-* **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Solutions/applicationDefinitions' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [Identity](#identity): Identity for the resource.
+* **location**: string: Resource location
+* **managedBy**: string: ID of the resource that manages this resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ApplicationDefinitionProperties](#applicationdefinitionproperties) (Required): The managed application definition properties.
+* **sku**: [Sku](#sku): SKU for the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: 'Microsoft.Solutions/applicationDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Solutions/applications@2018-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [Identity](#identity)
-* **kind**: string (Required)
-* **location**: string
-* **managedBy**: string
-* **name**: string (Required, DeployTimeConstant)
-* **plan**: [Plan](#plan)
-* **properties**: [ApplicationProperties](#applicationproperties) (Required)
-* **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Solutions/applications' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [Identity](#identity): Identity for the resource.
+* **kind**: string (Required): The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
+* **location**: string: Resource location
+* **managedBy**: string: ID of the resource that manages this resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **plan**: [Plan](#plan): Plan for the managed application.
+* **properties**: [ApplicationProperties](#applicationproperties) (Required): The managed application properties.
+* **sku**: [Sku](#sku): SKU for the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: 'Microsoft.Solutions/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Identity
 ### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'SystemAssigned'
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'SystemAssigned': The identity type. Possible values include: 'SystemAssigned'
 
 ## ApplicationDefinitionProperties
 ### Properties
-* **artifacts**: [ApplicationArtifact](#applicationartifact)[]
-* **authorizations**: [ApplicationProviderAuthorization](#applicationproviderauthorization)[] (Required)
-* **createUiDefinition**: any
-* **description**: string
-* **displayName**: string
-* **isEnabled**: string
-* **lockLevel**: 'CanNotDelete' | 'None' | 'ReadOnly' (Required)
-* **mainTemplate**: any
-* **packageFileUri**: string
+* **artifacts**: [ApplicationArtifact](#applicationartifact)[]: The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.
+* **authorizations**: [ApplicationProviderAuthorization](#applicationproviderauthorization)[] (Required): The managed application provider authorizations.
+* **createUiDefinition**: any: The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.
+* **description**: string: The managed application definition description.
+* **displayName**: string: The managed application definition display name.
+* **isEnabled**: string: A value indicating whether the package is enabled or not.
+* **lockLevel**: 'CanNotDelete' | 'None' | 'ReadOnly' (Required): The managed application lock level. Possible values include: 'CanNotDelete', 'ReadOnly', 'None'
+* **mainTemplate**: any: The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.
+* **packageFileUri**: string: The managed application definition package file Uri. Use this element
 
 ## ApplicationArtifact
 ### Properties
-* **name**: string
-* **type**: 'Custom' | 'Template'
-* **uri**: string
+* **name**: string: The managed application artifact name.
+* **type**: 'Custom' | 'Template': The managed application artifact type. Possible values include: 'Template', 'Custom'
+* **uri**: string: The managed application artifact blob uri.
 
 ## ApplicationProviderAuthorization
 ### Properties
-* **principalId**: string (Required)
-* **roleDefinitionId**: string (Required)
+* **principalId**: string (Required): The provider's principal identifier. This is the identity that the provider will use to call ARM to manage the managed application resources.
+* **roleDefinitionId**: string (Required): The provider's role definition identifier. This role will define all the permissions that the provider must have on the managed application's container resource group. This role definition cannot have permission to delete the resource group.
 
 ## Sku
 ### Properties
-* **capacity**: int
-* **family**: string
-* **model**: string
-* **name**: string (Required)
-* **size**: string
-* **tier**: string
+* **capacity**: int: The SKU capacity.
+* **family**: string: The SKU family.
+* **model**: string: The SKU model.
+* **name**: string (Required): The SKU name.
+* **size**: string: The SKU size.
+* **tier**: string: The SKU tier.
 
 ## Dictionary<string,String>
 ### Properties
@@ -75,19 +75,19 @@
 
 ## Plan
 ### Properties
-* **name**: string (Required)
-* **product**: string (Required)
-* **promotionCode**: string
-* **publisher**: string (Required)
-* **version**: string (Required)
+* **name**: string (Required): The plan name.
+* **product**: string (Required): The product code.
+* **promotionCode**: string: The promotion code.
+* **publisher**: string (Required): The publisher ID.
+* **version**: string (Required): The plan's version.
 
 ## ApplicationProperties
 ### Properties
-* **applicationDefinitionId**: string
-* **managedResourceGroupId**: string (Required)
-* **outputs**: any (ReadOnly)
-* **parameters**: any
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly)
+* **applicationDefinitionId**: string: The fully qualified path of managed application definition Id.
+* **managedResourceGroupId**: string (Required): The managed resource group Id.
+* **outputs**: any (ReadOnly): Name and value pairs that define the managed application outputs.
+* **parameters**: any: Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The managed application provisioning state. Possible values include: 'Accepted', 'Running', 'Ready', 'Creating', 'Created', 'Deleting', 'Deleted', 'Canceled', 'Failed', 'Succeeded', 'Updating'
 
 ## Dictionary<string,String>
 ### Properties

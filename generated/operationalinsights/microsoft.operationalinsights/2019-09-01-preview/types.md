@@ -3,30 +3,30 @@
 ## Resource Microsoft.OperationalInsights/queryPacks@2019-09-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [LogAnalyticsQueryPackProperties](#loganalyticsquerypackproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.OperationalInsights/queryPacks' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [LogAnalyticsQueryPackProperties](#loganalyticsquerypackproperties) (Required): Properties that define a Log Analytics QueryPack resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: 'Microsoft.OperationalInsights/queryPacks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationalInsights/queryPacks/queries@2019-09-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [LogAnalyticsQueryPackQueryProperties](#loganalyticsquerypackqueryproperties)
-* **systemData**: [SystemData](#systemdata) (ReadOnly)
-* **type**: 'Microsoft.OperationalInsights/queryPacks/queries' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [LogAnalyticsQueryPackQueryProperties](#loganalyticsquerypackqueryproperties): Properties that define an Log Analytics QueryPack-Query resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
+* **type**: 'Microsoft.OperationalInsights/queryPacks/queries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## LogAnalyticsQueryPackProperties
 ### Properties
-* **provisioningState**: string (ReadOnly)
-* **queryPackId**: string (ReadOnly)
-* **timeCreated**: string (ReadOnly)
-* **timeModified**: string (ReadOnly)
+* **provisioningState**: string (ReadOnly): Current state of this QueryPack: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
+* **queryPackId**: string (ReadOnly): The unique ID of your application. This field cannot be changed.
+* **timeCreated**: string (ReadOnly): Creation Date for the Log Analytics QueryPack, in ISO 8601 format.
+* **timeModified**: string (ReadOnly): Last modified date of the Log Analytics QueryPack, in ISO 8601 format.
 
 ## Dictionary<string,String>
 ### Properties
@@ -35,22 +35,22 @@
 
 ## LogAnalyticsQueryPackQueryProperties
 ### Properties
-* **author**: string (ReadOnly)
-* **body**: string (Required)
-* **description**: string
-* **displayName**: string (Required)
-* **id**: string (ReadOnly)
-* **properties**: any
-* **related**: [schemas:16_related](#schemas16related)
-* **tags**: [Dictionary<string,IList<String>>](#dictionarystringiliststring)
-* **timeCreated**: string (ReadOnly)
-* **timeModified**: string (ReadOnly)
+* **author**: string (ReadOnly): Object Id of user creating the query.
+* **body**: string (Required): Body of the query.
+* **description**: string: Description of the query.
+* **displayName**: string (Required): Unique display name for your query within the Query Pack.
+* **id**: string (ReadOnly): The unique ID of your application. This field cannot be changed.
+* **properties**: any: Additional properties that can be set for the query.
+* **related**: [schemas:16_related](#schemas16related): The related metadata items for the function.
+* **tags**: [Dictionary<string,IList<String>>](#dictionarystringiliststring): Tags associated with the query.
+* **timeCreated**: string (ReadOnly): Creation Date for the Log Analytics Query, in ISO 8601 format.
+* **timeModified**: string (ReadOnly): Last modified date of the Log Analytics Query, in ISO 8601 format.
 
 ## schemas:16_related
 ### Properties
-* **categories**: string[]
-* **resourceTypes**: string[]
-* **solutions**: string[]
+* **categories**: string[]: The related categories for the function.
+* **resourceTypes**: string[]: The related resource types for the function.
+* **solutions**: string[]: The related Log Analytics solutions for the function.
 
 ## Dictionary<string,IList<String>>
 ### Properties
@@ -59,10 +59,10 @@
 
 ## SystemData
 ### Properties
-* **createdAt**: string
-* **createdBy**: string
-* **createdByType**: 'application' | 'key' | 'managedIdentity' | 'user'
-* **lastModifiedAt**: string
-* **lastModifiedBy**: string
-* **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user'
+* **createdAt**: string: The timestamp of resource creation (UTC)
+* **createdBy**: string: An identifier for the identity that created the resource
+* **createdByType**: 'application' | 'key' | 'managedIdentity' | 'user': The type of identity that created the resource. Possible values include: 'user', 'application', 'managedIdentity', 'key'
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: An identifier for the identity that last modified the resource
+* **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user': The type of identity that last modified the resource. Possible values include: 'user', 'application', 'managedIdentity', 'key'
 

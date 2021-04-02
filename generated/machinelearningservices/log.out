@@ -5,103 +5,103 @@ AutoRest code generation utility [cli version: 3.1.3; node: v14.16.0, max-memory
 https://aka.ms/autorest
    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.2.1)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2021-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2020-09-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2020-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2020-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2020-05-15-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2020-05-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2020-04-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.MachineLearningServices/workspaces/{workspaceName}/linkedWorkspaces/{linkName}': Unable to locate '/providers/' segment
 Processing batch task - {"tag":"schema-machinelearningservices-2020-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2020-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2020-02-18-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2020-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2019-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2019-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2019-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2018-11-19"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2018-03-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2021-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2020-09-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2020-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2020-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2020-05-15-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2020-05-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2020-04-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.MachineLearningServices/workspaces/{workspaceName}/linkedWorkspaces/{linkName}': Unable to locate '/providers/' segment
 Processing batch task - {"tag":"schema-machinelearningservices-2020-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2020-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2020-02-18-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2020-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2019-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2019-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2019-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2018-11-19"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 Processing batch task - {"tag":"schema-machinelearningservices-2018-03-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
-[183.82 s] Generation Complete
+INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+[147.19 s] Generation Complete

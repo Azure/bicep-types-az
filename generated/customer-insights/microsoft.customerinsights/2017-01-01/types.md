@@ -3,126 +3,126 @@
 ## Resource Microsoft.CustomerInsights/hubs@2017-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [HubPropertiesFormat](#hubpropertiesformat)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.CustomerInsights/hubs' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [HubPropertiesFormat](#hubpropertiesformat): Properties of hub.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.CustomerInsights/hubs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CustomerInsights/hubs/authorizationPolicies@2017-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [AuthorizationPolicy](#authorizationpolicy)
-* **type**: 'Microsoft.CustomerInsights/hubs/authorizationPolicies' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AuthorizationPolicy](#authorizationpolicy): The authorization policy.
+* **type**: 'Microsoft.CustomerInsights/hubs/authorizationPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CustomerInsights/hubs/connectors@2017-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [Connector](#connector)
-* **type**: 'Microsoft.CustomerInsights/hubs/connectors' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [Connector](#connector): Properties of connector.
+* **type**: 'Microsoft.CustomerInsights/hubs/connectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CustomerInsights/hubs/connectors/mappings@2017-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ConnectorMapping](#connectormapping)
-* **type**: 'Microsoft.CustomerInsights/hubs/connectors/mappings' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ConnectorMapping](#connectormapping): The connector mapping definition.
+* **type**: 'Microsoft.CustomerInsights/hubs/connectors/mappings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CustomerInsights/hubs/interactions@2017-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [InteractionTypeDefinition](#interactiontypedefinition)
-* **type**: 'Microsoft.CustomerInsights/hubs/interactions' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [InteractionTypeDefinition](#interactiontypedefinition): The Interaction Type Definition
+* **type**: 'Microsoft.CustomerInsights/hubs/interactions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CustomerInsights/hubs/kpi@2017-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [KpiDefinition](#kpidefinition)
-* **type**: 'Microsoft.CustomerInsights/hubs/kpi' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [KpiDefinition](#kpidefinition): Defines the KPI Threshold limits.
+* **type**: 'Microsoft.CustomerInsights/hubs/kpi' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CustomerInsights/hubs/links@2017-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [LinkDefinition](#linkdefinition)
-* **type**: 'Microsoft.CustomerInsights/hubs/links' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [LinkDefinition](#linkdefinition): The definition of Link.
+* **type**: 'Microsoft.CustomerInsights/hubs/links' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CustomerInsights/hubs/profiles@2017-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ProfileTypeDefinition](#profiletypedefinition)
-* **type**: 'Microsoft.CustomerInsights/hubs/profiles' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ProfileTypeDefinition](#profiletypedefinition): The profile type definition.
+* **type**: 'Microsoft.CustomerInsights/hubs/profiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CustomerInsights/hubs/relationshipLinks@2017-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [RelationshipLinkDefinition](#relationshiplinkdefinition)
-* **type**: 'Microsoft.CustomerInsights/hubs/relationshipLinks' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RelationshipLinkDefinition](#relationshiplinkdefinition): The definition of relationship link.
+* **type**: 'Microsoft.CustomerInsights/hubs/relationshipLinks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CustomerInsights/hubs/relationships@2017-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [RelationshipDefinition](#relationshipdefinition)
-* **type**: 'Microsoft.CustomerInsights/hubs/relationships' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RelationshipDefinition](#relationshipdefinition): The definition of Relationship.
+* **type**: 'Microsoft.CustomerInsights/hubs/relationships' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CustomerInsights/hubs/roleAssignments@2017-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [RoleAssignment](#roleassignment)
-* **type**: 'Microsoft.CustomerInsights/hubs/roleAssignments' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RoleAssignment](#roleassignment): The Role Assignment definition.
+* **type**: 'Microsoft.CustomerInsights/hubs/roleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CustomerInsights/hubs/views@2017-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [View](#view)
-* **type**: 'Microsoft.CustomerInsights/hubs/views' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [View](#view): The view in Customer 360 web application.
+* **type**: 'Microsoft.CustomerInsights/hubs/views' (ReadOnly, DeployTimeConstant): The resource type
 
 ## HubPropertiesFormat
 ### Properties
-* **apiEndpoint**: string (ReadOnly)
-* **hubBillingInfo**: [HubBillingInfoFormat](#hubbillinginfoformat)
-* **provisioningState**: string (ReadOnly)
-* **tenantFeatures**: int
-* **webEndpoint**: string (ReadOnly)
+* **apiEndpoint**: string (ReadOnly): API endpoint URL of the hub.
+* **hubBillingInfo**: [HubBillingInfoFormat](#hubbillinginfoformat): Hub billing info.
+* **provisioningState**: string (ReadOnly): Provisioning state of the hub.
+* **tenantFeatures**: int: The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
+* **webEndpoint**: string (ReadOnly): Web endpoint URL of the hub.
 
 ## HubBillingInfoFormat
 ### Properties
-* **maxUnits**: int
-* **minUnits**: int
-* **skuName**: string
+* **maxUnits**: int: The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
+* **minUnits**: int: The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
+* **skuName**: string: The sku name.
 
 ## Dictionary<string,String>
 ### Properties
@@ -131,24 +131,24 @@
 
 ## AuthorizationPolicy
 ### Properties
-* **permissions**: 'Manage' | 'Read' | 'Write'[] (Required)
-* **policyName**: string (ReadOnly)
-* **primaryKey**: string
-* **secondaryKey**: string
+* **permissions**: 'Manage' | 'Read' | 'Write'[] (Required): The permissions associated with the policy.
+* **policyName**: string (ReadOnly): Name of the policy.
+* **primaryKey**: string: Primary key associated with the policy.
+* **secondaryKey**: string: Secondary key associated with the policy.
 
 ## Connector
 ### Properties
-* **connectorId**: int (ReadOnly)
-* **connectorName**: string
-* **connectorProperties**: [Dictionary<string,Object>](#dictionarystringobject) (Required)
-* **connectorType**: 'AzureBlob' | 'CRM' | 'ExchangeOnline' | 'None' | 'Outbound' | 'Salesforce' (Required)
-* **created**: string (ReadOnly)
-* **description**: string
-* **displayName**: string
-* **isInternal**: bool
-* **lastModified**: string (ReadOnly)
-* **state**: 'Created' | 'Creating' | 'Deleting' | 'Expiring' | 'Failed' | 'Ready' (ReadOnly)
-* **tenantId**: string (ReadOnly)
+* **connectorId**: int (ReadOnly): ID of the connector.
+* **connectorName**: string: Name of the connector.
+* **connectorProperties**: [Dictionary<string,Object>](#dictionarystringobject) (Required): The connector properties.
+* **connectorType**: 'AzureBlob' | 'CRM' | 'ExchangeOnline' | 'None' | 'Outbound' | 'Salesforce' (Required): Type of connector. Possible values include: 'None', 'CRM', 'AzureBlob', 'Salesforce', 'ExchangeOnline', 'Outbound'
+* **created**: string (ReadOnly): The created time.
+* **description**: string: Description of the connector.
+* **displayName**: string: Display name of the connector.
+* **isInternal**: bool: If this is an internal connector.
+* **lastModified**: string (ReadOnly): The last modified time.
+* **state**: 'Created' | 'Creating' | 'Deleting' | 'Expiring' | 'Failed' | 'Ready' (ReadOnly): State of connector. Possible values include: 'Creating', 'Created', 'Ready', 'Expiring', 'Deleting', 'Failed'
+* **tenantId**: string (ReadOnly): The hub name.
 
 ## Dictionary<string,Object>
 ### Properties
@@ -157,89 +157,89 @@
 
 ## ConnectorMapping
 ### Properties
-* **connectorMappingName**: string (ReadOnly)
-* **connectorName**: string (ReadOnly)
-* **connectorType**: 'AzureBlob' | 'CRM' | 'ExchangeOnline' | 'None' | 'Outbound' | 'Salesforce'
-* **created**: string (ReadOnly)
-* **dataFormatId**: string (ReadOnly)
-* **description**: string
-* **displayName**: string
-* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required)
-* **entityTypeName**: string (Required)
-* **lastModified**: string (ReadOnly)
-* **mappingProperties**: [ConnectorMappingProperties](#connectormappingproperties) (Required)
-* **nextRunTime**: string (ReadOnly)
-* **runId**: string (ReadOnly)
-* **state**: 'Created' | 'Creating' | 'Expiring' | 'Failed' | 'Ready' | 'Running' | 'Stopped' (ReadOnly)
-* **tenantId**: string (ReadOnly)
+* **connectorMappingName**: string (ReadOnly): The connector mapping name
+* **connectorName**: string (ReadOnly): The connector name.
+* **connectorType**: 'AzureBlob' | 'CRM' | 'ExchangeOnline' | 'None' | 'Outbound' | 'Salesforce': Type of connector. Possible values include: 'None', 'CRM', 'AzureBlob', 'Salesforce', 'ExchangeOnline', 'Outbound'
+* **created**: string (ReadOnly): The created time.
+* **dataFormatId**: string (ReadOnly): The DataFormat ID.
+* **description**: string: The description of the connector mapping.
+* **displayName**: string: Display name for the connector mapping.
+* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): Defines which entity type the file should map to. Possible values include: 'None', 'Profile', 'Interaction', 'Relationship'
+* **entityTypeName**: string (Required): The mapping entity name.
+* **lastModified**: string (ReadOnly): The last modified time.
+* **mappingProperties**: [ConnectorMappingProperties](#connectormappingproperties) (Required): The connector mapping properties.
+* **nextRunTime**: string (ReadOnly): The next run time based on customer's settings.
+* **runId**: string (ReadOnly): The RunId.
+* **state**: 'Created' | 'Creating' | 'Expiring' | 'Failed' | 'Ready' | 'Running' | 'Stopped' (ReadOnly): State of connector mapping. Possible values include: 'Creating', 'Created', 'Failed', 'Ready', 'Running', 'Stopped', 'Expiring'
+* **tenantId**: string (ReadOnly): The hub name.
 
 ## ConnectorMappingProperties
 ### Properties
-* **availability**: [ConnectorMappingAvailability](#connectormappingavailability) (Required)
-* **completeOperation**: [ConnectorMappingCompleteOperation](#connectormappingcompleteoperation) (Required)
-* **errorManagement**: [ConnectorMappingErrorManagement](#connectormappingerrormanagement) (Required)
-* **fileFilter**: string
-* **folderPath**: string
-* **format**: [ConnectorMappingFormat](#connectormappingformat) (Required)
-* **hasHeader**: bool
-* **structure**: [ConnectorMappingStructure](#connectormappingstructure)[] (Required)
+* **availability**: [ConnectorMappingAvailability](#connectormappingavailability) (Required): Connector mapping property availability.
+* **completeOperation**: [ConnectorMappingCompleteOperation](#connectormappingcompleteoperation) (Required): The complete operation.
+* **errorManagement**: [ConnectorMappingErrorManagement](#connectormappingerrormanagement) (Required): The error management.
+* **fileFilter**: string: The file filter for the mapping.
+* **folderPath**: string: The folder path for the mapping.
+* **format**: [ConnectorMappingFormat](#connectormappingformat) (Required): Connector mapping property format.
+* **hasHeader**: bool: If the file contains a header or not.
+* **structure**: [ConnectorMappingStructure](#connectormappingstructure)[] (Required): Ingestion mapping information at property level.
 
 ## ConnectorMappingAvailability
 ### Properties
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week'
-* **interval**: int (Required)
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week': The frequency to update. Possible values include: 'Minute', 'Hour', 'Day', 'Week', 'Month'
+* **interval**: int (Required): The interval of the given frequency to use.
 
 ## ConnectorMappingCompleteOperation
 ### Properties
-* **completionOperationType**: 'DeleteFile' | 'DoNothing' | 'MoveFile'
-* **destinationFolder**: string
+* **completionOperationType**: 'DeleteFile' | 'DoNothing' | 'MoveFile': The type of completion operation. Possible values include: 'DoNothing', 'DeleteFile', 'MoveFile'
+* **destinationFolder**: string: The destination folder where files will be moved to once the import is done.
 
 ## ConnectorMappingErrorManagement
 ### Properties
-* **errorLimit**: int
-* **errorManagementType**: 'RejectAndContinue' | 'RejectUntilLimit' | 'StopImport' (Required)
+* **errorLimit**: int: The error limit allowed while importing data.
+* **errorManagementType**: 'RejectAndContinue' | 'RejectUntilLimit' | 'StopImport' (Required): The type of error management to use for the mapping. Possible values include: 'RejectAndContinue', 'StopImport', 'RejectUntilLimit'
 
 ## ConnectorMappingFormat
 ### Properties
-* **acceptLanguage**: string
-* **arraySeparator**: string
-* **columnDelimiter**: string
-* **formatType**: string (Required)
-* **quoteCharacter**: string
-* **quoteEscapeCharacter**: string
+* **acceptLanguage**: string: The oData language.
+* **arraySeparator**: string: Character separating array elements.
+* **columnDelimiter**: string: The character that signifies a break between columns.
+* **formatType**: string (Required): The type mapping format.
+* **quoteCharacter**: string: Quote character, used to indicate enquoted fields.
+* **quoteEscapeCharacter**: string: Escape character for quotes, can be the same as the quoteCharacter.
 
 ## ConnectorMappingStructure
 ### Properties
-* **columnName**: string (Required)
-* **customFormatSpecifier**: string
-* **isEncrypted**: bool
-* **propertyName**: string (Required)
+* **columnName**: string (Required): The column name of the import file.
+* **customFormatSpecifier**: string: Custom format specifier for input parsing.
+* **isEncrypted**: bool: Indicates if the column is encrypted.
+* **propertyName**: string (Required): The property name of the mapping entity.
 
 ## InteractionTypeDefinition
 ### Properties
-* **apiEntitySetName**: string
-* **attributes**: [Dictionary<string,IList<String>>](#dictionarystringiliststring)
-* **dataSourcePrecedenceRules**: [DataSourcePrecedence](#datasourceprecedence)[] (ReadOnly)
-* **defaultDataSource**: [DataSource](#datasource)
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
-* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship'
-* **fields**: [PropertyDefinition](#propertydefinition)[]
-* **idPropertyNames**: string[]
-* **instancesCount**: int
-* **isActivity**: bool
-* **largeImage**: string
-* **lastChangedUtc**: string (ReadOnly)
-* **localizedAttributes**: [Dictionary<string,Dictionary<string,String>>](#dictionarystringdictionarystringstring)
-* **mediumImage**: string
-* **participantProfiles**: [Participant](#participant)[]
-* **primaryParticipantProfilePropertyName**: string
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
-* **schemaItemTypeLink**: string
-* **smallImage**: string
-* **tenantId**: string (ReadOnly)
-* **timestampFieldName**: string
-* **typeName**: string
+* **apiEntitySetName**: string: The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
+* **attributes**: [Dictionary<string,IList<String>>](#dictionarystringiliststring): The attributes for the Type.
+* **dataSourcePrecedenceRules**: [DataSourcePrecedence](#datasourceprecedence)[] (ReadOnly): This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.
+* **defaultDataSource**: [DataSource](#datasource): Data Source is a way for us to know the source of instances. A single type can have data coming in from multiple places. In activities we use this to determine precedence rules.
+* **description**: [Dictionary<string,String>](#dictionarystringstring): Localized descriptions for the property.
+* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display names for the property.
+* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship': Type of entity. Possible values include: 'None', 'Profile', 'Interaction', 'Relationship'
+* **fields**: [PropertyDefinition](#propertydefinition)[]: The properties of the Profile.
+* **idPropertyNames**: string[]: The id property names. Properties which uniquely identify an interaction instance.
+* **instancesCount**: int: The instance count.
+* **isActivity**: bool: An interaction can be tagged as an activity only during create. This enables the interaction to be editable and can enable merging of properties from multiple data sources based on precedence, which is defined at a link level.
+* **largeImage**: string: Large Image associated with the Property or EntityType.
+* **lastChangedUtc**: string (ReadOnly): The last changed time for the type definition.
+* **localizedAttributes**: [Dictionary<string,Dictionary<string,String>>](#dictionarystringdictionarystringstring): Any custom localized attributes for the Type.
+* **mediumImage**: string: Medium Image associated with the Property or EntityType.
+* **participantProfiles**: [Participant](#participant)[]: Profiles that participated in the interaction.
+* **primaryParticipantProfilePropertyName**: string: The primary participant property name for an interaction ,This is used to logically represent the agent of the interaction, Specify the participant name here from ParticipantName.
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Provisioning', 'Succeeded', 'Expiring', 'Deleting', 'HumanIntervention', 'Failed'
+* **schemaItemTypeLink**: string: The schema org link. This helps ACI identify and suggest semantic models.
+* **smallImage**: string: Small Image associated with the Property or EntityType.
+* **tenantId**: string (ReadOnly): The hub name.
+* **timestampFieldName**: string: The timestamp property name. Represents the time when the interaction or profile update happened.
+* **typeName**: string: The name of the entity.
 
 ## Dictionary<string,IList<String>>
 ### Properties
@@ -248,16 +248,16 @@
 
 ## DataSourcePrecedence
 ### Properties
-* **dataSource**: [DataSource](#datasource)
-* **precedence**: int
+* **dataSource**: [DataSource](#datasource): Data Source is a way for us to know the source of instances. A single type can have data coming in from multiple places. In activities we use this to determine precedence rules.
+* **precedence**: int: the precedence value.
 
 ## DataSource
 ### Properties
-* **dataSourceReferenceId**: string (ReadOnly)
-* **dataSourceType**: 'Connector' | 'LinkInteraction' | 'SystemDefault' (ReadOnly)
-* **id**: int (ReadOnly)
-* **name**: string (ReadOnly)
-* **status**: 'Active' | 'Deleted' | 'None' (ReadOnly)
+* **dataSourceReferenceId**: string (ReadOnly): The data source reference id.
+* **dataSourceType**: 'Connector' | 'LinkInteraction' | 'SystemDefault' (ReadOnly): The data source type. Possible values include: 'Connector', 'LinkInteraction', 'SystemDefault'
+* **id**: int (ReadOnly): The data source ID.
+* **name**: string (ReadOnly): The data source name
+* **status**: 'Active' | 'Deleted' | 'None' (ReadOnly): The data source status. Possible values include: 'None', 'Active', 'Deleted'
 
 ## Dictionary<string,String>
 ### Properties
@@ -271,27 +271,27 @@
 
 ## PropertyDefinition
 ### Properties
-* **arrayValueSeparator**: string
-* **dataSourcePrecedenceRules**: [DataSourcePrecedence](#datasourceprecedence)[] (ReadOnly)
-* **enumValidValues**: [ProfileEnumValidValuesFormat](#profileenumvalidvaluesformat)[]
-* **fieldName**: string (Required)
-* **fieldType**: string (Required)
-* **isArray**: bool
-* **isAvailableInGraph**: bool
-* **isEnum**: bool
-* **isFlagEnum**: bool
-* **isImage**: bool
-* **isLocalizedString**: bool
-* **isName**: bool
-* **isRequired**: bool
-* **maxLength**: int
-* **propertyId**: string
-* **schemaItemPropLink**: string
+* **arrayValueSeparator**: string: Array value separator for properties with isArray set.
+* **dataSourcePrecedenceRules**: [DataSourcePrecedence](#datasourceprecedence)[] (ReadOnly): This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.
+* **enumValidValues**: [ProfileEnumValidValuesFormat](#profileenumvalidvaluesformat)[]: Describes valid values for an enum property.
+* **fieldName**: string (Required): Name of the property.
+* **fieldType**: string (Required): Type of the property.
+* **isArray**: bool: Indicates if the property is actually an array of the fieldType above on the data api.
+* **isAvailableInGraph**: bool: Whether property is available in graph or not.
+* **isEnum**: bool: Indicates if the property is an enum.
+* **isFlagEnum**: bool: Indicates if the property is an flag enum.
+* **isImage**: bool: Whether the property is an Image.
+* **isLocalizedString**: bool: Whether the property is a localized string.
+* **isName**: bool: Whether the property is a name or a part of name.
+* **isRequired**: bool: Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.
+* **maxLength**: int: Max length of string. Used only if type is string.
+* **propertyId**: string: The ID associated with the property.
+* **schemaItemPropLink**: string: URL encoded schema.org item prop link for the property.
 
 ## ProfileEnumValidValuesFormat
 ### Properties
-* **localizedValueNames**: [Dictionary<string,String>](#dictionarystringstring)
-* **value**: int
+* **localizedValueNames**: [Dictionary<string,String>](#dictionarystringstring): Localized names of the enum member.
+* **value**: int: The integer value of the enum member.
 
 ## Dictionary<string,String>
 ### Properties
@@ -310,12 +310,12 @@
 
 ## Participant
 ### Properties
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
-* **participantName**: string (Required)
-* **participantPropertyReferences**: [ParticipantPropertyReference](#participantpropertyreference)[] (Required)
-* **profileTypeName**: string (Required)
-* **role**: string
+* **description**: [Dictionary<string,String>](#dictionarystringstring): Localized descriptions.
+* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display name.
+* **participantName**: string (Required): Participant name.
+* **participantPropertyReferences**: [ParticipantPropertyReference](#participantpropertyreference)[] (Required): The property references.
+* **profileTypeName**: string (Required): Profile type name.
+* **role**: string: The role that the participant is playing in the interaction.
 
 ## Dictionary<string,String>
 ### Properties
@@ -329,35 +329,35 @@
 
 ## ParticipantPropertyReference
 ### Properties
-* **interactionPropertyName**: string (Required)
-* **profilePropertyName**: string (Required)
+* **interactionPropertyName**: string (Required): The interaction property that maps to the profile property.
+* **profilePropertyName**: string (Required): The profile property that maps to the interaction property.
 
 ## KpiDefinition
 ### Properties
-* **aliases**: [KpiAlias](#kpialias)[]
-* **calculationWindow**: 'Day' | 'Hour' | 'Lifetime' | 'Month' | 'Week' (Required)
-* **calculationWindowFieldName**: string
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
-* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required)
-* **entityTypeName**: string (Required)
-* **expression**: string (Required)
-* **extracts**: [KpiExtract](#kpiextract)[]
-* **filter**: string
-* **function**: 'Avg' | 'Count' | 'CountDistinct' | 'Last' | 'Max' | 'Min' | 'None' | 'Sum' (Required)
-* **groupBy**: string[]
-* **groupByMetadata**: [KpiGroupByMetadata](#kpigroupbymetadata)[] (ReadOnly)
-* **kpiName**: string (ReadOnly)
-* **participantProfilesMetadata**: [KpiParticipantProfilesMetadata](#kpiparticipantprofilesmetadata)[] (ReadOnly)
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **thresHolds**: [KpiThresholds](#kpithresholds)
-* **unit**: string
+* **aliases**: [KpiAlias](#kpialias)[]: The aliases.
+* **calculationWindow**: 'Day' | 'Hour' | 'Lifetime' | 'Month' | 'Week' (Required): The calculation window. Possible values include: 'Lifetime', 'Hour', 'Day', 'Week', 'Month'
+* **calculationWindowFieldName**: string: Name of calculation window field.
+* **description**: [Dictionary<string,String>](#dictionarystringstring): Localized description for the KPI.
+* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display name for the KPI.
+* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): The mapping entity type. Possible values include: 'None', 'Profile', 'Interaction', 'Relationship'
+* **entityTypeName**: string (Required): The mapping entity name.
+* **expression**: string (Required): The computation expression for the KPI.
+* **extracts**: [KpiExtract](#kpiextract)[]: The KPI extracts.
+* **filter**: string: The filter expression for the KPI.
+* **function**: 'Avg' | 'Count' | 'CountDistinct' | 'Last' | 'Max' | 'Min' | 'None' | 'Sum' (Required): The computation function for the KPI. Possible values include: 'Sum', 'Avg', 'Min', 'Max', 'Last', 'Count', 'None', 'CountDistinct'
+* **groupBy**: string[]: the group by properties for the KPI.
+* **groupByMetadata**: [KpiGroupByMetadata](#kpigroupbymetadata)[] (ReadOnly): The KPI GroupByMetadata.
+* **kpiName**: string (ReadOnly): The KPI name.
+* **participantProfilesMetadata**: [KpiParticipantProfilesMetadata](#kpiparticipantprofilesmetadata)[] (ReadOnly): The participant profiles.
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Provisioning', 'Succeeded', 'Expiring', 'Deleting', 'HumanIntervention', 'Failed'
+* **tenantId**: string (ReadOnly): The hub name.
+* **thresHolds**: [KpiThresholds](#kpithresholds): Defines the KPI Threshold limits.
+* **unit**: string: The unit of measurement for the KPI.
 
 ## KpiAlias
 ### Properties
-* **aliasName**: string (Required)
-* **expression**: string (Required)
+* **aliasName**: string (Required): KPI alias name.
+* **expression**: string (Required): The expression.
 
 ## Dictionary<string,String>
 ### Properties
@@ -371,14 +371,14 @@
 
 ## KpiExtract
 ### Properties
-* **expression**: string (Required)
-* **extractName**: string (Required)
+* **expression**: string (Required): The expression.
+* **extractName**: string (Required): KPI extract name.
 
 ## KpiGroupByMetadata
 ### Properties
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
-* **fieldName**: string
-* **fieldType**: string
+* **displayName**: [Dictionary<string,String>](#dictionarystringstring): The display name.
+* **fieldName**: string: The name of the field.
+* **fieldType**: string: The type of the field.
 
 ## Dictionary<string,String>
 ### Properties
@@ -387,27 +387,27 @@
 
 ## KpiParticipantProfilesMetadata
 ### Properties
-* **typeName**: string (Required)
+* **typeName**: string (Required): Name of the type.
 
 ## KpiThresholds
 ### Properties
-* **increasingKpi**: bool (Required)
-* **lowerLimit**: int (Required)
-* **upperLimit**: int (Required)
+* **increasingKpi**: bool (Required): Whether or not the KPI is an increasing KPI.
+* **lowerLimit**: int (Required): The lower threshold limit.
+* **upperLimit**: int (Required): The upper threshold limit.
 
 ## LinkDefinition
 ### Properties
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
-* **linkName**: string (ReadOnly)
-* **mappings**: [TypePropertiesMapping](#typepropertiesmapping)[]
-* **operationType**: 'Delete' | 'Upsert'
-* **participantPropertyReferences**: [ParticipantPropertyReference](#participantpropertyreference)[] (Required)
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
-* **referenceOnly**: bool
-* **sourceInteractionType**: string (Required)
-* **targetProfileType**: string (Required)
-* **tenantId**: string (ReadOnly)
+* **description**: [Dictionary<string,String>](#dictionarystringstring): Localized descriptions for the Link.
+* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display name for the Link.
+* **linkName**: string (ReadOnly): The link name.
+* **mappings**: [TypePropertiesMapping](#typepropertiesmapping)[]: The set of properties mappings between the source and target Types.
+* **operationType**: 'Delete' | 'Upsert': Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only. Possible values include: 'Upsert', 'Delete'
+* **participantPropertyReferences**: [ParticipantPropertyReference](#participantpropertyreference)[] (Required): The properties that represent the participating profile.
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Provisioning', 'Succeeded', 'Expiring', 'Deleting', 'HumanIntervention', 'Failed'
+* **referenceOnly**: bool: Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
+* **sourceInteractionType**: string (Required): Name of the source Interaction Type.
+* **targetProfileType**: string (Required): Name of the target Profile Type.
+* **tenantId**: string (ReadOnly): The hub name.
 
 ## Dictionary<string,String>
 ### Properties
@@ -421,31 +421,31 @@
 
 ## TypePropertiesMapping
 ### Properties
-* **interactionTypePropertyName**: string (Required)
-* **isProfileTypeId**: bool
-* **linkType**: 'CopyIfNull' | 'UpdateAlways'
-* **profileTypePropertyName**: string (Required)
+* **interactionTypePropertyName**: string (Required):  Property name on the source Interaction Type.
+* **isProfileTypeId**: bool: Flag to indicate whether the Profile Type property is an id on the Profile Type.
+* **linkType**: 'CopyIfNull' | 'UpdateAlways': Link type. Possible values include: 'UpdateAlways', 'CopyIfNull'
+* **profileTypePropertyName**: string (Required): Property name on the target Profile Type.
 
 ## ProfileTypeDefinition
 ### Properties
-* **apiEntitySetName**: string
-* **attributes**: [Dictionary<string,IList<String>>](#dictionarystringiliststring)
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
-* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship'
-* **fields**: [PropertyDefinition](#propertydefinition)[]
-* **instancesCount**: int
-* **largeImage**: string
-* **lastChangedUtc**: string (ReadOnly)
-* **localizedAttributes**: [Dictionary<string,Dictionary<string,String>>](#dictionarystringdictionarystringstring)
-* **mediumImage**: string
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
-* **schemaItemTypeLink**: string
-* **smallImage**: string
-* **strongIds**: [StrongId](#strongid)[]
-* **tenantId**: string (ReadOnly)
-* **timestampFieldName**: string
-* **typeName**: string
+* **apiEntitySetName**: string: The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
+* **attributes**: [Dictionary<string,IList<String>>](#dictionarystringiliststring): The attributes for the Type.
+* **description**: [Dictionary<string,String>](#dictionarystringstring): Localized descriptions for the property.
+* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display names for the property.
+* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship': Type of entity. Possible values include: 'None', 'Profile', 'Interaction', 'Relationship'
+* **fields**: [PropertyDefinition](#propertydefinition)[]: The properties of the Profile.
+* **instancesCount**: int: The instance count.
+* **largeImage**: string: Large Image associated with the Property or EntityType.
+* **lastChangedUtc**: string (ReadOnly): The last changed time for the type definition.
+* **localizedAttributes**: [Dictionary<string,Dictionary<string,String>>](#dictionarystringdictionarystringstring): Any custom localized attributes for the Type.
+* **mediumImage**: string: Medium Image associated with the Property or EntityType.
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Provisioning', 'Succeeded', 'Expiring', 'Deleting', 'HumanIntervention', 'Failed'
+* **schemaItemTypeLink**: string: The schema org link. This helps ACI identify and suggest semantic models.
+* **smallImage**: string: Small Image associated with the Property or EntityType.
+* **strongIds**: [StrongId](#strongid)[]: The strong IDs.
+* **tenantId**: string (ReadOnly): The hub name.
+* **timestampFieldName**: string: The timestamp property name. Represents the time when the interaction or profile update happened.
+* **typeName**: string: The name of the entity.
 
 ## Dictionary<string,IList<String>>
 ### Properties
@@ -474,10 +474,10 @@
 
 ## StrongId
 ### Properties
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
-* **keyPropertyNames**: string[] (Required)
-* **strongIdName**: string (Required)
+* **description**: [Dictionary<string,String>](#dictionarystringstring): Localized descriptions.
+* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display name.
+* **keyPropertyNames**: string[] (Required): The properties which make up the unique ID.
+* **strongIdName**: string (Required): The Name identifying the strong ID.
 
 ## Dictionary<string,String>
 ### Properties
@@ -491,17 +491,17 @@
 
 ## RelationshipLinkDefinition
 ### Properties
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
-* **interactionType**: string (Required)
-* **linkName**: string (ReadOnly)
-* **mappings**: [RelationshipLinkFieldMapping](#relationshiplinkfieldmapping)[]
-* **profilePropertyReferences**: [ParticipantPropertyReference](#participantpropertyreference)[] (Required)
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
-* **relatedProfilePropertyReferences**: [ParticipantPropertyReference](#participantpropertyreference)[] (Required)
-* **relationshipGuidId**: string (ReadOnly)
-* **relationshipName**: string (Required)
-* **tenantId**: string (ReadOnly)
+* **description**: [Dictionary<string,String>](#dictionarystringstring): Localized descriptions for the Relationship Link.
+* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display name for the Relationship Link.
+* **interactionType**: string (Required): The InteractionType associated with the Relationship Link.
+* **linkName**: string (ReadOnly): The name of the Relationship Link.
+* **mappings**: [RelationshipLinkFieldMapping](#relationshiplinkfieldmapping)[]: The mappings between Interaction and Relationship fields.
+* **profilePropertyReferences**: [ParticipantPropertyReference](#participantpropertyreference)[] (Required): The property references for the Profile of the Relationship.
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Provisioning', 'Succeeded', 'Expiring', 'Deleting', 'HumanIntervention', 'Failed'
+* **relatedProfilePropertyReferences**: [ParticipantPropertyReference](#participantpropertyreference)[] (Required): The property references for the Related Profile of the Relationship.
+* **relationshipGuidId**: string (ReadOnly): The relationship guid id.
+* **relationshipName**: string (Required): The Relationship associated with the Link.
+* **tenantId**: string (ReadOnly): The hub name.
 
 ## Dictionary<string,String>
 ### Properties
@@ -515,24 +515,24 @@
 
 ## RelationshipLinkFieldMapping
 ### Properties
-* **interactionFieldName**: string (Required)
-* **linkType**: 'CopyIfNull' | 'UpdateAlways'
-* **relationshipFieldName**: string (Required)
+* **interactionFieldName**: string (Required): The field name on the Interaction Type.
+* **linkType**: 'CopyIfNull' | 'UpdateAlways': Link type. Possible values include: 'UpdateAlways', 'CopyIfNull'
+* **relationshipFieldName**: string (Required): The field name on the Relationship metadata.
 
 ## RelationshipDefinition
 ### Properties
-* **cardinality**: 'ManyToMany' | 'OneToMany' | 'OneToOne'
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
-* **expiryDateTimeUtc**: string
-* **fields**: [PropertyDefinition](#propertydefinition)[]
-* **lookupMappings**: [RelationshipTypeMapping](#relationshiptypemapping)[]
-* **profileType**: string (Required)
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
-* **relatedProfileType**: string (Required)
-* **relationshipGuidId**: string (ReadOnly)
-* **relationshipName**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
+* **cardinality**: 'ManyToMany' | 'OneToMany' | 'OneToOne': The Relationship Cardinality. Possible values include: 'OneToOne', 'OneToMany', 'ManyToMany'
+* **description**: [Dictionary<string,String>](#dictionarystringstring): Localized descriptions for the Relationship.
+* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display name for the Relationship.
+* **expiryDateTimeUtc**: string: The expiry date time in UTC.
+* **fields**: [PropertyDefinition](#propertydefinition)[]: The properties of the Relationship.
+* **lookupMappings**: [RelationshipTypeMapping](#relationshiptypemapping)[]: Optional property to be used to map fields in profile to their strong ids in related profile.
+* **profileType**: string (Required): Profile type.
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Provisioning', 'Succeeded', 'Expiring', 'Deleting', 'HumanIntervention', 'Failed'
+* **relatedProfileType**: string (Required): Related profile being referenced.
+* **relationshipGuidId**: string (ReadOnly): The relationship guid id.
+* **relationshipName**: string (ReadOnly): The Relationship name.
+* **tenantId**: string (ReadOnly): The hub name.
 
 ## Dictionary<string,String>
 ### Properties
@@ -546,40 +546,40 @@
 
 ## RelationshipTypeMapping
 ### Properties
-* **fieldMappings**: [RelationshipTypeFieldMapping](#relationshiptypefieldmapping)[] (Required)
+* **fieldMappings**: [RelationshipTypeFieldMapping](#relationshiptypefieldmapping)[] (Required): Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.
 
 ## RelationshipTypeFieldMapping
 ### Properties
-* **profileFieldName**: string (Required)
-* **relatedProfileKeyProperty**: string (Required)
+* **profileFieldName**: string (Required): Specifies the fieldName in profile.
+* **relatedProfileKeyProperty**: string (Required): Specifies the KeyProperty (from StrongId) of the related profile.
 
 ## RoleAssignment
 ### Properties
-* **assignmentName**: string (ReadOnly)
-* **conflationPolicies**: [ResourceSetDescription](#resourcesetdescription)
-* **connectors**: [ResourceSetDescription](#resourcesetdescription)
-* **description**: [Dictionary<string,String>](#dictionarystringstring)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
-* **interactions**: [ResourceSetDescription](#resourcesetdescription)
-* **kpis**: [ResourceSetDescription](#resourcesetdescription)
-* **links**: [ResourceSetDescription](#resourcesetdescription)
-* **principals**: [AssignmentPrincipal](#assignmentprincipal)[] (Required)
-* **profiles**: [ResourceSetDescription](#resourcesetdescription)
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly)
-* **relationshipLinks**: [ResourceSetDescription](#resourcesetdescription)
-* **relationships**: [ResourceSetDescription](#resourcesetdescription)
-* **role**: 'Admin' | 'DataAdmin' | 'DataReader' | 'ManageAdmin' | 'ManageReader' | 'Reader' (Required)
-* **roleAssignments**: [ResourceSetDescription](#resourcesetdescription)
-* **sasPolicies**: [ResourceSetDescription](#resourcesetdescription)
-* **segments**: [ResourceSetDescription](#resourcesetdescription)
-* **tenantId**: string (ReadOnly)
-* **views**: [ResourceSetDescription](#resourcesetdescription)
-* **widgetTypes**: [ResourceSetDescription](#resourcesetdescription)
+* **assignmentName**: string (ReadOnly): The name of the metadata object.
+* **conflationPolicies**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
+* **connectors**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
+* **description**: [Dictionary<string,String>](#dictionarystringstring): Localized description for the metadata.
+* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display names for the metadata.
+* **interactions**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
+* **kpis**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
+* **links**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
+* **principals**: [AssignmentPrincipal](#assignmentprincipal)[] (Required): The principals being assigned to.
+* **profiles**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Provisioning', 'Succeeded', 'Expiring', 'Deleting', 'HumanIntervention', 'Failed'
+* **relationshipLinks**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
+* **relationships**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
+* **role**: 'Admin' | 'DataAdmin' | 'DataReader' | 'ManageAdmin' | 'ManageReader' | 'Reader' (Required): Type of roles. Possible values include: 'Admin', 'Reader', 'ManageAdmin', 'ManageReader', 'DataAdmin', 'DataReader'
+* **roleAssignments**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
+* **sasPolicies**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
+* **segments**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
+* **tenantId**: string (ReadOnly): The hub name.
+* **views**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
+* **widgetTypes**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
 
 ## ResourceSetDescription
 ### Properties
-* **elements**: string[]
-* **exceptions**: string[]
+* **elements**: string[]: The elements included in the set.
+* **exceptions**: string[]: The elements that are not included in the set, in case elements contains '*' indicating 'all'.
 
 ## Dictionary<string,String>
 ### Properties
@@ -593,9 +593,9 @@
 
 ## AssignmentPrincipal
 ### Properties
-* **principalId**: string (Required)
-* **principalMetadata**: [Dictionary<string,String>](#dictionarystringstring)
-* **principalType**: string (Required)
+* **principalId**: string (Required): The principal id being assigned to.
+* **principalMetadata**: [Dictionary<string,String>](#dictionarystringstring): Other metadata for the principal.
+* **principalType**: string (Required): The Type of the principal ID.
 
 ## Dictionary<string,String>
 ### Properties
@@ -604,13 +604,13 @@
 
 ## View
 ### Properties
-* **changed**: string (ReadOnly)
-* **created**: string (ReadOnly)
-* **definition**: string (Required)
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring)
-* **tenantId**: string (ReadOnly)
-* **userId**: string
-* **viewName**: string (ReadOnly)
+* **changed**: string (ReadOnly): Date time when view was last modified.
+* **created**: string (ReadOnly): Date time when view was created.
+* **definition**: string (Required): View definition.
+* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display name for the view.
+* **tenantId**: string (ReadOnly): the hub name.
+* **userId**: string: the user ID.
+* **viewName**: string (ReadOnly): Name of the view.
 
 ## Dictionary<string,String>
 ### Properties
