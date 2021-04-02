@@ -1,0 +1,271 @@
+# Microsoft.ServiceBus @ 2017-04-01
+
+## Resource Microsoft.ServiceBus/namespaces@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The Geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SBNamespaceProperties](#sbnamespaceproperties): Properties of the namespace.
+* **sku**: [SBSku](#sbsku): SKU of the namespace.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: 'Microsoft.ServiceBus/namespaces' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ServiceBus/namespaces/AuthorizationRules@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:1_properties](#schemas1properties): AuthorizationRule properties.
+* **type**: 'Microsoft.ServiceBus/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:14_properties](#schemas14properties): Properties required to the Create Or Update Alias(Disaster Recovery configurations)
+* **type**: 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ServiceBus/namespaces/migrationConfigurations@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:21_properties](#schemas21properties): Properties required to the Create Migration Configuration
+* **type**: 'Microsoft.ServiceBus/namespaces/migrationConfigurations' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ServiceBus/namespaces/networkRuleSets@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:32_properties](#schemas32properties): NetworkRuleSet properties
+* **type**: 'Microsoft.ServiceBus/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ServiceBus/namespaces/queues@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SBQueueProperties](#sbqueueproperties): The Queue Properties definition.
+* **type**: 'Microsoft.ServiceBus/namespaces/queues' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ServiceBus/namespaces/queues/authorizationRules@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:1_properties](#schemas1properties): AuthorizationRule properties.
+* **type**: 'Microsoft.ServiceBus/namespaces/queues/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ServiceBus/namespaces/topics@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SBTopicProperties](#sbtopicproperties): The Topic Properties definition.
+* **type**: 'Microsoft.ServiceBus/namespaces/topics' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ServiceBus/namespaces/topics/authorizationRules@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:1_properties](#schemas1properties): AuthorizationRule properties.
+* **type**: 'Microsoft.ServiceBus/namespaces/topics/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ServiceBus/namespaces/topics/subscriptions@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SBSubscriptionProperties](#sbsubscriptionproperties): Description of Subscription Resource.
+* **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ServiceBus/namespaces/topics/subscriptions/rules@2017-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [Ruleproperties](#ruleproperties): Description of Rule Resource.
+* **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions/rules' (ReadOnly, DeployTimeConstant): The resource type
+
+## SBNamespaceProperties
+### Properties
+* **createdAt**: string (ReadOnly): The time the namespace was created.
+* **metricId**: string (ReadOnly): Identifier for Azure Insights metrics
+* **provisioningState**: string (ReadOnly): Provisioning state of the namespace.
+* **serviceBusEndpoint**: string (ReadOnly): Endpoint you can use to perform Service Bus operations.
+* **updatedAt**: string (ReadOnly): The time the namespace was updated.
+
+## SBSku
+### Properties
+* **capacity**: int: The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
+* **name**: 'Basic' | 'Premium' | 'Standard' (Required): Name of this SKU.
+* **tier**: 'Basic' | 'Premium' | 'Standard': The billing tier of this particular SKU.
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## schemas:1_properties
+### Properties
+* **rights**: 'Listen' | 'Manage' | 'Send'[] (Required): The rights associated with the rule.
+
+## schemas:14_properties
+### Properties
+* **alternateName**: string: Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
+* **partnerNamespace**: string: ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
+* **pendingReplicationOperationsCount**: int (ReadOnly): Number of entities pending to be replicated.
+* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'.
+* **role**: 'Primary' | 'PrimaryNotReplicating' | 'Secondary' (ReadOnly): role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'.
+
+## schemas:21_properties
+### Properties
+* **migrationState**: string (ReadOnly): State in which Standard to Premium Migration is, possible values : Unknown, Reverting, Completing, Initiating, Syncing, Active
+* **pendingReplicationOperationsCount**: int (ReadOnly): Number of entities pending to be replicated.
+* **postMigrationName**: string (Required): Name to access Standard Namespace after migration
+* **provisioningState**: string (ReadOnly): Provisioning state of Migration Configuration
+* **targetNamespace**: string (Required): Existing premium Namespace ARM Id name which has no entities, will be used for migration
+
+## schemas:32_properties
+### Properties
+* **defaultAction**: 'Allow' | 'Deny': Default Action for Network Rule Set.
+* **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]: List of IpRules
+* **virtualNetworkRules**: [NWRuleSetVirtualNetworkRules](#nwrulesetvirtualnetworkrules)[]: List VirtualNetwork Rules
+
+## NWRuleSetIpRules
+### Properties
+* **action**: 'Allow': The IP Filter Action.
+* **ipMask**: string: IP Mask
+
+## NWRuleSetVirtualNetworkRules
+### Properties
+* **ignoreMissingVnetServiceEndpoint**: bool: Value that indicates whether to ignore missing VNet Service Endpoint
+* **subnet**: [Subnet](#subnet): Properties supplied for Subnet
+
+## Subnet
+### Properties
+* **id**: string (Required): Resource ID of Virtual Network Subnet
+
+## SBQueueProperties
+### Properties
+* **accessedAt**: string (ReadOnly): Last time a message was sent, or the last time there was a receive request to this queue.
+* **autoDeleteOnIdle**: string: ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.
+* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly): Message Count Details.
+* **createdAt**: string (ReadOnly): The exact time the message was created.
+* **deadLetteringOnMessageExpiration**: bool: A value that indicates whether this queue has dead letter support when a message expires.
+* **defaultMessageTimeToLive**: string: ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
+* **duplicateDetectionHistoryTimeWindow**: string: ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
+* **enableBatchedOperations**: bool: Value that indicates whether server-side batched operations are enabled.
+* **enableExpress**: bool: A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.
+* **enablePartitioning**: bool: A value that indicates whether the queue is to be partitioned across multiple message brokers.
+* **forwardDeadLetteredMessagesTo**: string: Queue/Topic name to forward the Dead Letter message
+* **forwardTo**: string: Queue/Topic name to forward the messages
+* **lockDuration**: string: ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.
+* **maxDeliveryCount**: int: The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.
+* **maxSizeInMegabytes**: int: The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.
+* **messageCount**: int (ReadOnly): The number of messages in the queue.
+* **requiresDuplicateDetection**: bool: A value indicating if this queue requires duplicate detection.
+* **requiresSession**: bool: A value that indicates whether the queue supports the concept of sessions.
+* **sizeInBytes**: int (ReadOnly): The size of the queue, in bytes.
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of a messaging entity.
+* **updatedAt**: string (ReadOnly): The exact time the message was updated.
+
+## MessageCountDetails
+### Properties
+* **activeMessageCount**: int (ReadOnly): Number of active messages in the queue, topic, or subscription.
+* **deadLetterMessageCount**: int (ReadOnly): Number of messages that are dead lettered.
+* **scheduledMessageCount**: int (ReadOnly): Number of scheduled messages.
+* **transferDeadLetterMessageCount**: int (ReadOnly): Number of messages transferred into dead letters.
+* **transferMessageCount**: int (ReadOnly): Number of messages transferred to another queue, topic, or subscription.
+
+## SBTopicProperties
+### Properties
+* **accessedAt**: string (ReadOnly): Last time the message was sent, or a request was received, for this topic.
+* **autoDeleteOnIdle**: string: ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
+* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly): Message Count Details.
+* **createdAt**: string (ReadOnly): Exact time the message was created.
+* **defaultMessageTimeToLive**: string: ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
+* **duplicateDetectionHistoryTimeWindow**: string: ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
+* **enableBatchedOperations**: bool: Value that indicates whether server-side batched operations are enabled.
+* **enableExpress**: bool: Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
+* **enablePartitioning**: bool: Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
+* **maxSizeInMegabytes**: int: Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
+* **requiresDuplicateDetection**: bool: Value indicating if this topic requires duplicate detection.
+* **sizeInBytes**: int (ReadOnly): Size of the topic, in bytes.
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of a messaging entity.
+* **subscriptionCount**: int (ReadOnly): Number of subscriptions.
+* **supportOrdering**: bool: Value that indicates whether the topic supports ordering.
+* **updatedAt**: string (ReadOnly): The exact time the message was updated.
+
+## SBSubscriptionProperties
+### Properties
+* **accessedAt**: string (ReadOnly): Last time there was a receive request to this subscription.
+* **autoDeleteOnIdle**: string: ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
+* **countDetails**: [MessageCountDetails](#messagecountdetails) (ReadOnly): Message Count Details.
+* **createdAt**: string (ReadOnly): Exact time the message was created.
+* **deadLetteringOnFilterEvaluationExceptions**: bool: Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.
+* **deadLetteringOnMessageExpiration**: bool: Value that indicates whether a subscription has dead letter support when a message expires.
+* **defaultMessageTimeToLive**: string: ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
+* **duplicateDetectionHistoryTimeWindow**: string: ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
+* **enableBatchedOperations**: bool: Value that indicates whether server-side batched operations are enabled.
+* **forwardDeadLetteredMessagesTo**: string: Queue/Topic name to forward the Dead Letter message
+* **forwardTo**: string: Queue/Topic name to forward the messages
+* **lockDuration**: string: ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.
+* **maxDeliveryCount**: int: Number of maximum deliveries.
+* **messageCount**: int (ReadOnly): Number of messages.
+* **requiresSession**: bool: Value indicating if a subscription supports the concept of sessions.
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of a messaging entity.
+* **updatedAt**: string (ReadOnly): The exact time the message was updated.
+
+## Ruleproperties
+### Properties
+* **action**: [Action](#action): Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
+* **correlationFilter**: [CorrelationFilter](#correlationfilter): Represents the correlation filter expression.
+* **filterType**: 'CorrelationFilter' | 'SqlFilter': Filter type that is evaluated against a BrokeredMessage.
+* **sqlFilter**: [SqlFilter](#sqlfilter): Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
+
+## Action
+### Properties
+* **compatibilityLevel**: int: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
+* **requiresPreprocessing**: bool: Value that indicates whether the rule action requires preprocessing.
+* **sqlExpression**: string: SQL expression. e.g. MyProperty='ABC'
+
+## CorrelationFilter
+### Properties
+* **contentType**: string: Content type of the message.
+* **correlationId**: string: Identifier of the correlation.
+* **label**: string: Application specific label.
+* **messageId**: string: Identifier of the message.
+* **properties**: [Dictionary<string,String>](#dictionarystringstring): dictionary object for custom filters
+* **replyTo**: string: Address of the queue to reply to.
+* **replyToSessionId**: string: Session identifier to reply to.
+* **requiresPreprocessing**: bool: Value that indicates whether the rule action requires preprocessing.
+* **sessionId**: string: Session identifier.
+* **to**: string: Address to send to.
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SqlFilter
+### Properties
+* **compatibilityLevel**: int: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
+* **requiresPreprocessing**: bool: Value that indicates whether the rule action requires preprocessing.
+* **sqlExpression**: string: The SQL expression. e.g. MyProperty='ABC'
+

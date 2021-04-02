@@ -6314,6 +6314,67 @@
 ### microsoft.serialconsole/serialports
 * [2018-05-01](serialconsole/microsoft.serialconsole/2018-05-01/types.md#resource-microsoftserialconsoleserialports2018-05-01)
 
+## microsoft.servicebus
+### microsoft.servicebus/namespaces
+* [2015-08-01](servicebus/microsoft.servicebus/2015-08-01/types.md#resource-microsoftservicebusnamespaces2015-08-01)
+* [2017-04-01](servicebus/microsoft.servicebus/2017-04-01/types.md#resource-microsoftservicebusnamespaces2017-04-01)
+* [2018-01-01-preview](servicebus/microsoft.servicebus/2018-01-01-preview/types.md#resource-microsoftservicebusnamespaces2018-01-01-preview)
+
+### microsoft.servicebus/namespaces/authorizationrules
+* [2015-08-01](servicebus/microsoft.servicebus/2015-08-01/types.md#resource-microsoftservicebusnamespacesauthorizationrules2015-08-01)
+* [2017-04-01](servicebus/microsoft.servicebus/2017-04-01/types.md#resource-microsoftservicebusnamespacesauthorizationrules2017-04-01)
+* [2018-01-01-preview](servicebus/microsoft.servicebus/2018-01-01-preview/types.md#resource-microsoftservicebusnamespacesauthorizationrules2018-01-01-preview)
+
+### microsoft.servicebus/namespaces/disasterrecoveryconfigs
+* [2017-04-01](servicebus/microsoft.servicebus/2017-04-01/types.md#resource-microsoftservicebusnamespacesdisasterrecoveryconfigs2017-04-01)
+* [2018-01-01-preview](servicebus/microsoft.servicebus/2018-01-01-preview/types.md#resource-microsoftservicebusnamespacesdisasterrecoveryconfigs2018-01-01-preview)
+
+### microsoft.servicebus/namespaces/ipfilterrules
+* [2018-01-01-preview](servicebus/microsoft.servicebus/2018-01-01-preview/types.md#resource-microsoftservicebusnamespacesipfilterrules2018-01-01-preview)
+
+### microsoft.servicebus/namespaces/migrationconfigurations
+* [2017-04-01](servicebus/microsoft.servicebus/2017-04-01/types.md#resource-microsoftservicebusnamespacesmigrationconfigurations2017-04-01)
+* [2018-01-01-preview](servicebus/microsoft.servicebus/2018-01-01-preview/types.md#resource-microsoftservicebusnamespacesmigrationconfigurations2018-01-01-preview)
+
+### microsoft.servicebus/namespaces/networkrulesets
+* [2017-04-01](servicebus/microsoft.servicebus/2017-04-01/types.md#resource-microsoftservicebusnamespacesnetworkrulesets2017-04-01)
+* [2018-01-01-preview](servicebus/microsoft.servicebus/2018-01-01-preview/types.md#resource-microsoftservicebusnamespacesnetworkrulesets2018-01-01-preview)
+
+### microsoft.servicebus/namespaces/privateendpointconnections
+* [2018-01-01-preview](servicebus/microsoft.servicebus/2018-01-01-preview/types.md#resource-microsoftservicebusnamespacesprivateendpointconnections2018-01-01-preview)
+
+### microsoft.servicebus/namespaces/queues
+* [2015-08-01](servicebus/microsoft.servicebus/2015-08-01/types.md#resource-microsoftservicebusnamespacesqueues2015-08-01)
+* [2017-04-01](servicebus/microsoft.servicebus/2017-04-01/types.md#resource-microsoftservicebusnamespacesqueues2017-04-01)
+* [2018-01-01-preview](servicebus/microsoft.servicebus/2018-01-01-preview/types.md#resource-microsoftservicebusnamespacesqueues2018-01-01-preview)
+
+### microsoft.servicebus/namespaces/queues/authorizationrules
+* [2015-08-01](servicebus/microsoft.servicebus/2015-08-01/types.md#resource-microsoftservicebusnamespacesqueuesauthorizationrules2015-08-01)
+* [2017-04-01](servicebus/microsoft.servicebus/2017-04-01/types.md#resource-microsoftservicebusnamespacesqueuesauthorizationrules2017-04-01)
+* [2018-01-01-preview](servicebus/microsoft.servicebus/2018-01-01-preview/types.md#resource-microsoftservicebusnamespacesqueuesauthorizationrules2018-01-01-preview)
+
+### microsoft.servicebus/namespaces/topics
+* [2015-08-01](servicebus/microsoft.servicebus/2015-08-01/types.md#resource-microsoftservicebusnamespacestopics2015-08-01)
+* [2017-04-01](servicebus/microsoft.servicebus/2017-04-01/types.md#resource-microsoftservicebusnamespacestopics2017-04-01)
+* [2018-01-01-preview](servicebus/microsoft.servicebus/2018-01-01-preview/types.md#resource-microsoftservicebusnamespacestopics2018-01-01-preview)
+
+### microsoft.servicebus/namespaces/topics/authorizationrules
+* [2015-08-01](servicebus/microsoft.servicebus/2015-08-01/types.md#resource-microsoftservicebusnamespacestopicsauthorizationrules2015-08-01)
+* [2017-04-01](servicebus/microsoft.servicebus/2017-04-01/types.md#resource-microsoftservicebusnamespacestopicsauthorizationrules2017-04-01)
+* [2018-01-01-preview](servicebus/microsoft.servicebus/2018-01-01-preview/types.md#resource-microsoftservicebusnamespacestopicsauthorizationrules2018-01-01-preview)
+
+### microsoft.servicebus/namespaces/topics/subscriptions
+* [2015-08-01](servicebus/microsoft.servicebus/2015-08-01/types.md#resource-microsoftservicebusnamespacestopicssubscriptions2015-08-01)
+* [2017-04-01](servicebus/microsoft.servicebus/2017-04-01/types.md#resource-microsoftservicebusnamespacestopicssubscriptions2017-04-01)
+* [2018-01-01-preview](servicebus/microsoft.servicebus/2018-01-01-preview/types.md#resource-microsoftservicebusnamespacestopicssubscriptions2018-01-01-preview)
+
+### microsoft.servicebus/namespaces/topics/subscriptions/rules
+* [2017-04-01](servicebus/microsoft.servicebus/2017-04-01/types.md#resource-microsoftservicebusnamespacestopicssubscriptionsrules2017-04-01)
+* [2018-01-01-preview](servicebus/microsoft.servicebus/2018-01-01-preview/types.md#resource-microsoftservicebusnamespacestopicssubscriptionsrules2018-01-01-preview)
+
+### microsoft.servicebus/namespaces/virtualnetworkrules
+* [2018-01-01-preview](servicebus/microsoft.servicebus/2018-01-01-preview/types.md#resource-microsoftservicebusnamespacesvirtualnetworkrules2018-01-01-preview)
+
 ## microsoft.servicefabric
 ### microsoft.servicefabric/clusters
 * [2016-09-01](servicefabric/microsoft.servicefabric/2016-09-01/types.md#resource-microsoftservicefabricclusters2016-09-01)
