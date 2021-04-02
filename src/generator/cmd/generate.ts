@@ -55,10 +55,9 @@ executeSynchronous(async () => {
   const tmpOutputPath = `${os.tmpdir()}/_bcp_${new Date().getTime()}`;
   await rmdir(tmpOutputPath, { recursive: true });
 
-  let errorLogger: ILogger | undefined;
-  if (!singlePath) {
-    errorLogger = await getLogger(`${outputBaseDir}/errors.out`);
-  }
+  // this file is deliberately gitignored as it'll be overwritten when using --single-path
+  // it's used to generate the git commit message
+  const summaryLogger = await getLogger(`${outputBaseDir}/summary.log`);
 
   // use consistent sorting to make log changes easier to review
   for (const readmePath of readmePaths.sort(lowerCaseCompare)) {
@@ -81,9 +80,7 @@ executeSynchronous(async () => {
     } catch (e) {
       logErr(logger, e);
 
-      if (errorLogger) {
-        logErr(errorLogger, `Fatal error generating types for ${basePath}`);
-      }
+      logErr(summaryLogger, `Failed to generate types for path '${basePath}'`);
     }
 
     // clean up temp dir
