@@ -1,10 +1,8 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
 using Azure.Bicep.Types.Az.Index;
 using Azure.Bicep.Types.Concrete;
 
@@ -12,12 +10,19 @@ namespace Azure.Bicep.Types.Az
 {
     public class TypeLoader : ITypeLoader
     {
-        private readonly ZipArchive zipArchive;
+        private readonly ZipArchive zipArchive = LoadZipArchive();
 
-        public TypeLoader()
+        private const string typesArchiveName = "generated_types.zip";
+
+        private static ZipArchive LoadZipArchive()
         {
-            var zipArchiveStream = typeof(TypeLoader).Assembly.GetManifestResourceStream("generated_types.zip");
-            this.zipArchive = new ZipArchive(zipArchiveStream);
+            var zipArchiveStream = typeof(TypeLoader).Assembly.GetManifestResourceStream(typesArchiveName);
+            if (zipArchiveStream is null)
+            {
+                throw new InvalidOperationException($"Failed to find embedded manifest file '{typesArchiveName}'");
+            }
+
+            return new ZipArchive(zipArchiveStream);
         }
 
         private const string TypeContainerName = "types.json";
@@ -28,16 +33,19 @@ namespace Azure.Bicep.Types.Az
 
         public string? GetContentAtPath(string? path)
         {
-            if (path is null ||
-                zipArchive.GetEntry(path) is not {} streamEntry)
+            lock (zipArchive)
             {
-                return null;
-            }
+                if (path is null ||
+                    zipArchive.GetEntry(path) is not {} streamEntry)
+                {
+                    return null;
+                }
 
-            using (var fileStream = streamEntry.Open())
-            using (var streamReader = new StreamReader(fileStream))
-            {
-                return streamReader.ReadToEnd();
+                using (var fileStream = streamEntry.Open())
+                using (var streamReader = new StreamReader(fileStream))
+                {
+                    return streamReader.ReadToEnd();
+                }
             }
         }
 
