@@ -26,7 +26,7 @@
 * **attestUri**: string (ReadOnly): Gets the uri of attestation service
 * **policySigningCertificates**: [JSONWebKeySet](#jsonwebkeyset) (WriteOnly):
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections associated with the attestation provider.
-* **status**: 'Error' | 'NotReady' | 'Ready' (ReadOnly): Status of attestation service. Possible values include: 'Ready', 'NotReady', 'Error'
+* **status**: 'Error' | 'NotReady' | 'Ready' (ReadOnly): Status of attestation service.
 * **trustModel**: string (ReadOnly): Trust model for the attestation provider.
 
 ## JSONWebKeySet
@@ -93,7 +93,7 @@ certificate.
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The provisioning state of the private endpoint connection resource. Possible values include: 'Succeeded', 'Creating', 'Deleting', 'Failed'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The provisioning state of the private endpoint connection resource.
 
 ## PrivateEndpoint
 ### Properties
@@ -103,16 +103,16 @@ certificate.
 ### Properties
 * **actionsRequired**: string (ReadOnly): A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string (ReadOnly): The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected' (ReadOnly): Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service. Possible values include: 'Pending', 'Approved', 'Rejected'
+* **status**: 'Approved' | 'Pending' | 'Rejected' (ReadOnly): Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## systemData
 ### Properties
 * **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
 * **createdBy**: string (ReadOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties

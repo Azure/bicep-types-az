@@ -139,19 +139,19 @@
 ### Properties
 * **principalId**: string (ReadOnly): The Principal ID of the identity.
 * **tenantId**: string (ReadOnly): The Tenant ID of the identity.
-* **type**: 'None' | 'SystemAssigned' (Required): The identity type. Possible values include: 'SystemAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned' (Required): The identity type.
 
 ## MediaServiceProperties
 ### Properties
 * **encryption**: [AccountEncryption](#accountencryption):
 * **mediaServiceId**: string (ReadOnly): The Media Services account ID.
 * **storageAccounts**: [StorageAccount](#storageaccount)[]: The storage accounts for this resource.
-* **storageAuthentication**: 'ManagedIdentity' | 'System': Possible values include: 'System', 'ManagedIdentity'
+* **storageAuthentication**: 'ManagedIdentity' | 'System':
 
 ## AccountEncryption
 ### Properties
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties):
-* **type**: 'CustomerKey' | 'SystemKey' (Required): The type of key used to encrypt the Account Key. Possible values include: 'SystemKey', 'CustomerKey'
+* **type**: 'CustomerKey' | 'SystemKey' (Required): The type of key used to encrypt the Account Key.
 
 ## KeyVaultProperties
 ### Properties
@@ -161,16 +161,16 @@
 ## StorageAccount
 ### Properties
 * **id**: string: The ID of the storage account resource. Media Services relies on tables and queues as well as blobs, so the primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage). Blob only storage accounts can be added as secondary storage accounts.
-* **type**: 'Primary' | 'Secondary' (Required): The type of the storage account. Possible values include: 'Primary', 'Secondary'
+* **type**: 'Primary' | 'Secondary' (Required): The type of the storage account.
 
 ## systemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties
@@ -202,8 +202,8 @@
 
 ## FilterTrackPropertyCondition
 ### Properties
-* **operation**: 'Equal' | 'NotEqual' (Required): The track property condition operation. Possible values include: 'Equal', 'NotEqual'
-* **property**: 'Bitrate' | 'FourCC' | 'Language' | 'Name' | 'Type' | 'Unknown' (Required): The track property type. Possible values include: 'Unknown', 'Type', 'Name', 'Language', 'FourCC', 'Bitrate'
+* **operation**: 'Equal' | 'NotEqual' (Required): The track property condition operation.
+* **property**: 'Bitrate' | 'FourCC' | 'Language' | 'Name' | 'Type' | 'Unknown' (Required): The track property type.
 * **value**: string (Required): The track property value.
 
 ## AssetProperties
@@ -215,7 +215,7 @@
 * **description**: string: The Asset description.
 * **lastModified**: string (ReadOnly): The last modified date of the Asset.
 * **storageAccountName**: string: The name of the storage account.
-* **storageEncryptionFormat**: 'MediaStorageClientEncryption' | 'None' (ReadOnly): The Asset encryption format. One of None or MediaStorageEncryption. Possible values include: 'None', 'MediaStorageClientEncryption'
+* **storageEncryptionFormat**: 'MediaStorageClientEncryption' | 'None' (ReadOnly): The Asset encryption format. One of None or MediaStorageEncryption.
 
 ## ContentKeyPolicyProperties
 ### Properties
@@ -246,7 +246,7 @@
 * **fairPlayPfx**: string (Required): The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
 * **fairPlayPfxPassword**: string (Required): The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
 * **offlineRentalConfiguration**: [ContentKeyPolicyFairPlayOfflineRentalConfiguration](#contentkeypolicyfairplayofflinerentalconfiguration):
-* **rentalAndLeaseKeyType**: 'DualExpiry' | 'PersistentLimited' | 'PersistentUnlimited' | 'Undefined' | 'Unknown' (Required): The rental and lease key type. Possible values include: 'Unknown', 'Undefined', 'DualExpiry', 'PersistentUnlimited', 'PersistentLimited'
+* **rentalAndLeaseKeyType**: 'DualExpiry' | 'PersistentLimited' | 'PersistentUnlimited' | 'Undefined' | 'Unknown' (Required): The rental and lease key type.
 * **rentalDuration**: int (Required): The rental duration. Must be greater than or equal to 0.
 
 ### #Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration
@@ -276,7 +276,7 @@
 * **fairPlayPfx**: string (Required): The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
 * **fairPlayPfxPassword**: string (Required): The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
 * **offlineRentalConfiguration**: [ContentKeyPolicyFairPlayOfflineRentalConfiguration](#contentkeypolicyfairplayofflinerentalconfiguration):
-* **rentalAndLeaseKeyType**: 'DualExpiry' | 'PersistentLimited' | 'PersistentUnlimited' | 'Undefined' | 'Unknown' (Required): The rental and lease key type. Possible values include: 'Unknown', 'Undefined', 'DualExpiry', 'PersistentUnlimited', 'PersistentLimited'
+* **rentalAndLeaseKeyType**: 'DualExpiry' | 'PersistentLimited' | 'PersistentUnlimited' | 'Undefined' | 'Unknown' (Required): The rental and lease key type.
 * **rentalDuration**: int (Required): The rental duration. Must be greater than or equal to 0.
 
 ## ContentKeyPolicyFairPlayOfflineRentalConfiguration
@@ -295,10 +295,10 @@
 * **allowTestDevices**: bool (Required): A flag indicating whether test devices can use the license.
 * **beginDate**: string: The begin date of license
 * **contentKeyLocation**: [ContentKeyPolicyPlayReadyContentKeyLocation](#contentkeypolicyplayreadycontentkeylocation) (Required): Base class for content key ID location. A derived class must be used to represent the location.
-* **contentType**: 'UltraVioletDownload' | 'UltraVioletStreaming' | 'Unknown' | 'Unspecified' (Required): The PlayReady content type. Possible values include: 'Unknown', 'Unspecified', 'UltraVioletDownload', 'UltraVioletStreaming'
+* **contentType**: 'UltraVioletDownload' | 'UltraVioletStreaming' | 'Unknown' | 'Unspecified' (Required): The PlayReady content type.
 * **expirationDate**: string: The expiration date of license.
 * **gracePeriod**: string: The grace period of license.
-* **licenseType**: 'NonPersistent' | 'Persistent' | 'Unknown' (Required): The license type. Possible values include: 'Unknown', 'NonPersistent', 'Persistent'
+* **licenseType**: 'NonPersistent' | 'Persistent' | 'Unknown' (Required): The license type.
 * **playRight**: [ContentKeyPolicyPlayReadyPlayRight](#contentkeypolicyplayreadyplayright): Configures the Play Right in the PlayReady license.
 * **relativeBeginDate**: string: The relative begin date of license.
 * **relativeExpirationDate**: string: The relative expiration date of license.
@@ -328,7 +328,7 @@
 ## ContentKeyPolicyPlayReadyPlayRight
 ### Properties
 * **agcAndColorStripeRestriction**: int: Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
-* **allowPassingVideoContentToUnknownOutput**: 'Allowed' | 'AllowedWithVideoConstriction' | 'NotAllowed' | 'Unknown' (Required): Configures Unknown output handling settings of the license. Possible values include: 'Unknown', 'NotAllowed', 'Allowed', 'AllowedWithVideoConstriction'
+* **allowPassingVideoContentToUnknownOutput**: 'Allowed' | 'AllowedWithVideoConstriction' | 'NotAllowed' | 'Unknown' (Required): Configures Unknown output handling settings of the license.
 * **analogVideoOpl**: int: Specifies the output protection level for compressed digital audio.
 * **compressedDigitalAudioOpl**: int: Specifies the output protection level for compressed digital audio.
 * **compressedDigitalVideoOpl**: int: Specifies the output protection level for compressed digital video.
@@ -371,7 +371,7 @@
 * **openIdConnectDiscoveryDocument**: string: The OpenID connect discovery document.
 * **primaryVerificationKey**: [ContentKeyPolicyRestrictionTokenKey](#contentkeypolicyrestrictiontokenkey) (Required): Base class for Content Key Policy key for token validation. A derived class must be used to create a token key.
 * **requiredClaims**: [ContentKeyPolicyTokenClaim](#contentkeypolicytokenclaim)[]: A list of required token claims.
-* **restrictionTokenType**: 'Jwt' | 'Swt' | 'Unknown' (Required): The type of token. Possible values include: 'Unknown', 'Swt', 'Jwt'
+* **restrictionTokenType**: 'Jwt' | 'Swt' | 'Unknown' (Required): The type of token.
 
 ### #Microsoft.Media.ContentKeyPolicyUnknownRestriction
 #### Properties
@@ -391,7 +391,7 @@
 * **openIdConnectDiscoveryDocument**: string: The OpenID connect discovery document.
 * **primaryVerificationKey**: [ContentKeyPolicyRestrictionTokenKey](#contentkeypolicyrestrictiontokenkey) (Required): Base class for Content Key Policy key for token validation. A derived class must be used to create a token key.
 * **requiredClaims**: [ContentKeyPolicyTokenClaim](#contentkeypolicytokenclaim)[]: A list of required token claims.
-* **restrictionTokenType**: 'Jwt' | 'Swt' | 'Unknown' (Required): The type of token. Possible values include: 'Unknown', 'Swt', 'Jwt'
+* **restrictionTokenType**: 'Jwt' | 'Swt' | 'Unknown' (Required): The type of token.
 
 ## ContentKeyPolicyRestrictionTokenKey
 * **Discriminator**: @odata.type
@@ -449,7 +449,7 @@
 * **lastModified**: string (ReadOnly): The last modified time of the live event.
 * **preview**: [LiveEventPreview](#liveeventpreview): Live event preview settings.
 * **provisioningState**: string (ReadOnly): The provisioning state of the live event.
-* **resourceState**: 'Allocating' | 'Deleting' | 'Running' | 'StandBy' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The resource state of the live event. See https://go.microsoft.com/fwlink/?linkid=2139012 for more information. Possible values include: 'Stopped', 'Allocating', 'StandBy', 'Starting', 'Running', 'Stopping', 'Deleting'
+* **resourceState**: 'Allocating' | 'Deleting' | 'Running' | 'StandBy' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The resource state of the live event. See https://go.microsoft.com/fwlink/?linkid=2139012 for more information.
 * **streamOptions**: 'Default' | 'LowLatency'[]: The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.
 * **transcriptions**: [LiveEventTranscription](#liveeventtranscription)[]: Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
 * **useStaticHostname**: bool: Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state
@@ -461,10 +461,10 @@
 
 ## LiveEventEncoding
 ### Properties
-* **encodingType**: 'None' | 'Premium1080p' | 'Standard': Live event type. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created. Possible values include: 'None', 'Standard', 'Premium1080p'
+* **encodingType**: 'None' | 'Premium1080p' | 'Standard': Live event type. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created.
 * **keyFrameInterval**: string: Use an ISO 8601 time value between 0.5 to 20 seconds to specify the output fragment length for the video and audio tracks of an encoding live event. For example, use PT2S to indicate 2 seconds. For the video track it also defines the key frame interval, or the length of a GoP (group of pictures).   If this value is not set for an encoding live event, the fragment duration defaults to 2 seconds. The value cannot be set for pass-through live events.
 * **presetName**: string: The optional encoding preset name, used when encodingType is not None. This value is specified at creation time and cannot be updated. If the encodingType is set to Standard, then the default preset name is ‘Default720p’. Else if the encodingType is set to Premium1080p, the default preset is ‘Default1080p’.
-* **stretchMode**: 'AutoFit' | 'AutoSize' | 'None': Specifies how the input video will be resized to fit the desired output resolution(s). Default is None. Possible values include: 'None', 'AutoSize', 'AutoFit'
+* **stretchMode**: 'AutoFit' | 'AutoSize' | 'None': Specifies how the input video will be resized to fit the desired output resolution(s). Default is None.
 
 ## LiveEventInput
 ### Properties
@@ -472,7 +472,7 @@
 * **accessToken**: string: A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated. If omitted, the service will generate a unique value.
 * **endpoints**: [LiveEventEndpoint](#liveeventendpoint)[]: The input endpoints for the live event.
 * **keyFrameIntervalDuration**: string: ISO 8601 time duration of the key frame interval duration of the input. This value sets the EXT-X-TARGETDURATION property in the HLS output. For example, use PT2S to indicate 2 seconds. Leave the value empty for encoding live events.
-* **streamingProtocol**: 'FragmentedMP4' | 'RTMP' (Required): The input protocol for the live event. This is specified at creation time and cannot be updated. Possible values include: 'FragmentedMP4', 'RTMP'
+* **streamingProtocol**: 'FragmentedMP4' | 'RTMP' (Required): The input protocol for the live event. This is specified at creation time and cannot be updated.
 
 ## LiveEventInputAccessControl
 ### Properties
@@ -537,7 +537,7 @@
 * **manifestName**: string: The manifest file name. If not provided, the service will generate one automatically.
 * **outputSnapTime**: int: The initial timestamp that the live output will start at, any content before this value will not be archived.
 * **provisioningState**: string (ReadOnly): The provisioning state of the live output.
-* **resourceState**: 'Creating' | 'Deleting' | 'Running' (ReadOnly): The resource state of the live output. Possible values include: 'Creating', 'Running', 'Deleting'
+* **resourceState**: 'Creating' | 'Deleting' | 'Running' (ReadOnly): The resource state of the live output.
 
 ## Hls
 ### Properties
@@ -547,7 +547,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource. Possible values include: 'Succeeded', 'Creating', 'Deleting', 'Failed'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource.
 
 ## PrivateEndpoint
 ### Properties
@@ -557,7 +557,7 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service. Possible values include: 'Pending', 'Approved', 'Rejected'
+* **status**: 'Approved' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## StreamingEndpointProperties
 ### Properties
@@ -575,7 +575,7 @@
 * **lastModified**: string (ReadOnly): The exact time the streaming endpoint was last modified.
 * **maxCacheAge**: int: Max cache age
 * **provisioningState**: string (ReadOnly): The provisioning state of the streaming endpoint.
-* **resourceState**: 'Deleting' | 'Running' | 'Scaling' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The resource state of the streaming endpoint. Possible values include: 'Stopped', 'Starting', 'Running', 'Stopping', 'Deleting', 'Scaling'
+* **resourceState**: 'Deleting' | 'Running' | 'Scaling' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The resource state of the streaming endpoint.
 * **scaleUnits**: int (Required): The number of scale units. Use the Scale operation to adjust this value.
 
 ## StreamingEndpointAccessControl
@@ -617,7 +617,7 @@
 * **labelReferenceInStreamingPolicy**: string: Label of Content Key as specified in the Streaming Policy
 * **policyName**: string (ReadOnly): ContentKeyPolicy used by Content Key
 * **tracks**: [TrackSelection](#trackselection)[] (ReadOnly): Tracks which use this Content Key
-* **type**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' (ReadOnly): Encryption type of Content Key. Possible values include: 'CommonEncryptionCenc', 'CommonEncryptionCbcs', 'EnvelopeEncryption'
+* **type**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' (ReadOnly): Encryption type of Content Key.
 * **value**: string: Value of Content Key
 
 ## TrackSelection
@@ -626,8 +626,8 @@
 
 ## TrackPropertyCondition
 ### Properties
-* **operation**: 'Equal' | 'Unknown' (Required): Track property condition operation. Possible values include: 'Unknown', 'Equal'
-* **property**: 'FourCC' | 'Unknown' (Required): Track property type. Possible values include: 'Unknown', 'FourCC'
+* **operation**: 'Equal' | 'Unknown' (Required): Track property condition operation.
+* **property**: 'FourCC' | 'Unknown' (Required): Track property type.
 * **value**: string: Track property value
 
 ## StreamingPolicyProperties
@@ -721,9 +721,9 @@
 
 ## TransformOutput
 ### Properties
-* **onError**: 'ContinueJob' | 'StopProcessingJob': A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'. Possible values include: 'StopProcessingJob', 'ContinueJob'
+* **onError**: 'ContinueJob' | 'StopProcessingJob': A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.
 * **preset**: [Preset](#preset) (Required): Base type for all Presets, which define the recipe or instructions on how the input media files should be processed.
-* **relativePriority**: 'High' | 'Low' | 'Normal': Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal. Possible values include: 'Low', 'Normal', 'High'
+* **relativePriority**: 'High' | 'Low' | 'Normal': Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
 
 ## Preset
 * **Discriminator**: @odata.type
@@ -733,20 +733,20 @@
 * **@odata.type**: '#Microsoft.Media.AudioAnalyzerPreset' (Required): The Audio Analyzer preset applies a pre-defined set of AI-based analysis operations, including speech transcription. Currently, the preset supports processing of content with a single audio track.
 * **audioLanguage**: string: The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463
 * **experimentalOptions**: [Dictionary<string,String>](#dictionarystringstring): Dictionary containing key value pairs for parameters not exposed in the preset itself
-* **mode**: 'Basic' | 'Standard': Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen. Possible values include: 'Standard', 'Basic'
+* **mode**: 'Basic' | 'Standard': Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.
 
 ### #Microsoft.Media.BuiltInStandardEncoderPreset
 #### Properties
 * **@odata.type**: '#Microsoft.Media.BuiltInStandardEncoderPreset' (Required): Describes a built-in preset for encoding the input video with the Standard Encoder.
-* **presetName**: 'AACGoodQualityAudio' | 'AdaptiveStreaming' | 'ContentAwareEncoding' | 'ContentAwareEncodingExperimental' | 'CopyAllBitrateNonInterleaved' | 'H264MultipleBitrate1080p' | 'H264MultipleBitrate720p' | 'H264MultipleBitrateSD' | 'H264SingleBitrate1080p' | 'H264SingleBitrate720p' | 'H264SingleBitrateSD' | 'H265AdaptiveStreaming' | 'H265ContentAwareEncoding' | 'H265SingleBitrate1080p' | 'H265SingleBitrate4K' | 'H265SingleBitrate720p' (Required): The built-in preset to be used for encoding videos. Possible values include: 'H264SingleBitrateSD', 'H264SingleBitrate720p', 'H264SingleBitrate1080p', 'AdaptiveStreaming', 'AACGoodQualityAudio', 'ContentAwareEncodingExperimental', 'ContentAwareEncoding', 'CopyAllBitrateNonInterleaved', 'H264MultipleBitrate1080p', 'H264MultipleBitrate720p', 'H264MultipleBitrateSD', 'H265ContentAwareEncoding', 'H265AdaptiveStreaming', 'H265SingleBitrate720p', 'H265SingleBitrate1080p', 'H265SingleBitrate4K'
+* **presetName**: 'AACGoodQualityAudio' | 'AdaptiveStreaming' | 'ContentAwareEncoding' | 'ContentAwareEncodingExperimental' | 'CopyAllBitrateNonInterleaved' | 'H264MultipleBitrate1080p' | 'H264MultipleBitrate720p' | 'H264MultipleBitrateSD' | 'H264SingleBitrate1080p' | 'H264SingleBitrate720p' | 'H264SingleBitrateSD' | 'H265AdaptiveStreaming' | 'H265ContentAwareEncoding' | 'H265SingleBitrate1080p' | 'H265SingleBitrate4K' | 'H265SingleBitrate720p' (Required): The built-in preset to be used for encoding videos.
 
 ### #Microsoft.Media.FaceDetectorPreset
 #### Properties
 * **@odata.type**: '#Microsoft.Media.FaceDetectorPreset' (Required): Describes all the settings to be used when analyzing a video in order to detect (and optionally redact) all the faces present.
-* **blurType**: 'Black' | 'Box' | 'High' | 'Low' | 'Med': Blur type. Possible values include: 'Box', 'Low', 'Med', 'High', 'Black'
+* **blurType**: 'Black' | 'Box' | 'High' | 'Low' | 'Med': Blur type.
 * **experimentalOptions**: [Dictionary<string,String>](#dictionarystringstring): Dictionary containing key value pairs for parameters not exposed in the preset itself
-* **mode**: 'Analyze' | 'Combined' | 'Redact': This mode provides the ability to choose between the following settings: 1) Analyze - For detection only.This mode generates a metadata JSON file marking appearances of faces throughout the video.Where possible, appearances of the same person are assigned the same ID. 2) Combined - Additionally redacts(blurs) detected faces. 3) Redact - This enables a 2-pass process, allowing for selective redaction of a subset of detected faces.It takes in the metadata file from a prior analyze pass, along with the source video, and a user-selected subset of IDs that require redaction. Possible values include: 'Analyze', 'Redact', 'Combined'
-* **resolution**: 'SourceResolution' | 'StandardDefinition': Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected. Possible values include: 'SourceResolution', 'StandardDefinition'
+* **mode**: 'Analyze' | 'Combined' | 'Redact': This mode provides the ability to choose between the following settings: 1) Analyze - For detection only.This mode generates a metadata JSON file marking appearances of faces throughout the video.Where possible, appearances of the same person are assigned the same ID. 2) Combined - Additionally redacts(blurs) detected faces. 3) Redact - This enables a 2-pass process, allowing for selective redaction of a subset of detected faces.It takes in the metadata file from a prior analyze pass, along with the source video, and a user-selected subset of IDs that require redaction.
+* **resolution**: 'SourceResolution' | 'StandardDefinition': Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.
 
 ### #Microsoft.Media.StandardEncoderPreset
 #### Properties
@@ -761,7 +761,7 @@
 * **@odata.type**: '#Microsoft.Media.AudioAnalyzerPreset' (Required): The Audio Analyzer preset applies a pre-defined set of AI-based analysis operations, including speech transcription. Currently, the preset supports processing of content with a single audio track.
 * **audioLanguage**: string: The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463
 * **experimentalOptions**: [Dictionary<string,String>](#dictionarystringstring): Dictionary containing key value pairs for parameters not exposed in the preset itself
-* **mode**: 'Basic' | 'Standard': Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen. Possible values include: 'Standard', 'Basic'
+* **mode**: 'Basic' | 'Standard': Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.
 
 ## Dictionary<string,String>
 ### Properties
@@ -771,15 +771,15 @@
 ## #Microsoft.Media.BuiltInStandardEncoderPreset
 ### Properties
 * **@odata.type**: '#Microsoft.Media.BuiltInStandardEncoderPreset' (Required): Describes a built-in preset for encoding the input video with the Standard Encoder.
-* **presetName**: 'AACGoodQualityAudio' | 'AdaptiveStreaming' | 'ContentAwareEncoding' | 'ContentAwareEncodingExperimental' | 'CopyAllBitrateNonInterleaved' | 'H264MultipleBitrate1080p' | 'H264MultipleBitrate720p' | 'H264MultipleBitrateSD' | 'H264SingleBitrate1080p' | 'H264SingleBitrate720p' | 'H264SingleBitrateSD' | 'H265AdaptiveStreaming' | 'H265ContentAwareEncoding' | 'H265SingleBitrate1080p' | 'H265SingleBitrate4K' | 'H265SingleBitrate720p' (Required): The built-in preset to be used for encoding videos. Possible values include: 'H264SingleBitrateSD', 'H264SingleBitrate720p', 'H264SingleBitrate1080p', 'AdaptiveStreaming', 'AACGoodQualityAudio', 'ContentAwareEncodingExperimental', 'ContentAwareEncoding', 'CopyAllBitrateNonInterleaved', 'H264MultipleBitrate1080p', 'H264MultipleBitrate720p', 'H264MultipleBitrateSD', 'H265ContentAwareEncoding', 'H265AdaptiveStreaming', 'H265SingleBitrate720p', 'H265SingleBitrate1080p', 'H265SingleBitrate4K'
+* **presetName**: 'AACGoodQualityAudio' | 'AdaptiveStreaming' | 'ContentAwareEncoding' | 'ContentAwareEncodingExperimental' | 'CopyAllBitrateNonInterleaved' | 'H264MultipleBitrate1080p' | 'H264MultipleBitrate720p' | 'H264MultipleBitrateSD' | 'H264SingleBitrate1080p' | 'H264SingleBitrate720p' | 'H264SingleBitrateSD' | 'H265AdaptiveStreaming' | 'H265ContentAwareEncoding' | 'H265SingleBitrate1080p' | 'H265SingleBitrate4K' | 'H265SingleBitrate720p' (Required): The built-in preset to be used for encoding videos.
 
 ## #Microsoft.Media.FaceDetectorPreset
 ### Properties
 * **@odata.type**: '#Microsoft.Media.FaceDetectorPreset' (Required): Describes all the settings to be used when analyzing a video in order to detect (and optionally redact) all the faces present.
-* **blurType**: 'Black' | 'Box' | 'High' | 'Low' | 'Med': Blur type. Possible values include: 'Box', 'Low', 'Med', 'High', 'Black'
+* **blurType**: 'Black' | 'Box' | 'High' | 'Low' | 'Med': Blur type.
 * **experimentalOptions**: [Dictionary<string,String>](#dictionarystringstring): Dictionary containing key value pairs for parameters not exposed in the preset itself
-* **mode**: 'Analyze' | 'Combined' | 'Redact': This mode provides the ability to choose between the following settings: 1) Analyze - For detection only.This mode generates a metadata JSON file marking appearances of faces throughout the video.Where possible, appearances of the same person are assigned the same ID. 2) Combined - Additionally redacts(blurs) detected faces. 3) Redact - This enables a 2-pass process, allowing for selective redaction of a subset of detected faces.It takes in the metadata file from a prior analyze pass, along with the source video, and a user-selected subset of IDs that require redaction. Possible values include: 'Analyze', 'Redact', 'Combined'
-* **resolution**: 'SourceResolution' | 'StandardDefinition': Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected. Possible values include: 'SourceResolution', 'StandardDefinition'
+* **mode**: 'Analyze' | 'Combined' | 'Redact': This mode provides the ability to choose between the following settings: 1) Analyze - For detection only.This mode generates a metadata JSON file marking appearances of faces throughout the video.Where possible, appearances of the same person are assigned the same ID. 2) Combined - Additionally redacts(blurs) detected faces. 3) Redact - This enables a 2-pass process, allowing for selective redaction of a subset of detected faces.It takes in the metadata file from a prior analyze pass, along with the source video, and a user-selected subset of IDs that require redaction.
+* **resolution**: 'SourceResolution' | 'StandardDefinition': Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.
 
 ## Dictionary<string,String>
 ### Properties
@@ -816,8 +816,8 @@
 #### Properties
 * **@odata.type**: '#Microsoft.Media.Video' (Required): Describes the basic properties for encoding the input video.
 * **keyFrameInterval**: string: The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
-* **stretchMode**: 'AutoFit' | 'AutoSize' | 'None': The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize. Possible values include: 'None', 'AutoSize', 'AutoFit'
-* **syncMode**: 'Auto' | 'Cfr' | 'Passthrough' | 'Vfr': The Video Sync Mode. Possible values include: 'Auto', 'Passthrough', 'Cfr', 'Vfr'
+* **stretchMode**: 'AutoFit' | 'AutoSize' | 'None': The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize.
+* **syncMode**: 'Auto' | 'Cfr' | 'Passthrough' | 'Vfr': The Video Sync Mode.
 
 
 ## #Microsoft.Media.Audio
@@ -839,15 +839,15 @@
 ### Properties
 * **@odata.type**: '#Microsoft.Media.Video' (Required): Describes the basic properties for encoding the input video.
 * **keyFrameInterval**: string: The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
-* **stretchMode**: 'AutoFit' | 'AutoSize' | 'None': The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize. Possible values include: 'None', 'AutoSize', 'AutoFit'
-* **syncMode**: 'Auto' | 'Cfr' | 'Passthrough' | 'Vfr': The Video Sync Mode. Possible values include: 'Auto', 'Passthrough', 'Cfr', 'Vfr'
+* **stretchMode**: 'AutoFit' | 'AutoSize' | 'None': The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize.
+* **syncMode**: 'Auto' | 'Cfr' | 'Passthrough' | 'Vfr': The Video Sync Mode.
 
 ## Filters
 ### Properties
 * **crop**: [Rectangle](#rectangle): Describes the properties of a rectangular window applied to the input media before processing it.
 * **deinterlace**: [Deinterlace](#deinterlace): Describes the de-interlacing settings.
 * **overlays**: [Overlay](#overlay)[]: The properties of overlays to be applied to the input video. These could be audio, image or video overlays.
-* **rotation**: 'Auto' | 'None' | 'Rotate0' | 'Rotate180' | 'Rotate270' | 'Rotate90': The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto. Possible values include: 'Auto', 'None', 'Rotate0', 'Rotate90', 'Rotate180', 'Rotate270'
+* **rotation**: 'Auto' | 'None' | 'Rotate0' | 'Rotate180' | 'Rotate270' | 'Rotate90': The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto.
 
 ## Rectangle
 ### Properties
@@ -858,8 +858,8 @@
 
 ## Deinterlace
 ### Properties
-* **mode**: 'AutoPixelAdaptive' | 'Off': The deinterlacing mode. Defaults to AutoPixelAdaptive. Possible values include: 'Off', 'AutoPixelAdaptive'
-* **parity**: 'Auto' | 'BottomFieldFirst' | 'TopFieldFirst': The field parity for de-interlacing, defaults to Auto. Possible values include: 'Auto', 'TopFieldFirst', 'BottomFieldFirst'
+* **mode**: 'AutoPixelAdaptive' | 'Off': The deinterlacing mode. Defaults to AutoPixelAdaptive.
+* **parity**: 'Auto' | 'BottomFieldFirst' | 'TopFieldFirst': The field parity for de-interlacing, defaults to Auto.
 
 ## Overlay
 * **Discriminator**: @odata.type
@@ -929,9 +929,9 @@
 * **input**: [JobInput](#jobinput) (Required): Base class for inputs to a Job.
 * **lastModified**: string (ReadOnly): The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
 * **outputs**: [JobOutput](#joboutput)[] (Required): The outputs for the Job.
-* **priority**: 'High' | 'Low' | 'Normal': Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal. Possible values include: 'Low', 'Normal', 'High'
+* **priority**: 'High' | 'Low' | 'Normal': Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
 * **startTime**: string (ReadOnly): The UTC date and time at which this Job began processing.
-* **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' (ReadOnly): The current state of the job. Possible values include: 'Canceled', 'Canceling', 'Error', 'Finished', 'Processing', 'Queued', 'Scheduled'
+* **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' (ReadOnly): The current state of the job.
 
 ## Dictionary<string,String>
 ### Properties
@@ -1018,7 +1018,7 @@
 ### #Microsoft.Media.AudioTrackDescriptor
 #### Properties
 * **@odata.type**: '#Microsoft.Media.AudioTrackDescriptor' (Required): A TrackSelection to select audio tracks.
-* **channelMapping**: 'BackLeft' | 'BackRight' | 'Center' | 'FrontLeft' | 'FrontRight' | 'LowFrequencyEffects' | 'StereoLeft' | 'StereoRight': Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks. Possible values include: 'FrontLeft', 'FrontRight', 'Center', 'LowFrequencyEffects', 'BackLeft', 'BackRight', 'StereoLeft', 'StereoRight'
+* **channelMapping**: 'BackLeft' | 'BackRight' | 'Center' | 'FrontLeft' | 'FrontRight' | 'LowFrequencyEffects' | 'StereoLeft' | 'StereoRight': Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
 
 ### #Microsoft.Media.VideoTrackDescriptor
 #### Properties
@@ -1028,7 +1028,7 @@
 ## #Microsoft.Media.AudioTrackDescriptor
 ### Properties
 * **@odata.type**: '#Microsoft.Media.AudioTrackDescriptor' (Required): A TrackSelection to select audio tracks.
-* **channelMapping**: 'BackLeft' | 'BackRight' | 'Center' | 'FrontLeft' | 'FrontRight' | 'LowFrequencyEffects' | 'StereoLeft' | 'StereoRight': Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks. Possible values include: 'FrontLeft', 'FrontRight', 'Center', 'LowFrequencyEffects', 'BackLeft', 'BackRight', 'StereoLeft', 'StereoRight'
+* **channelMapping**: 'BackLeft' | 'BackRight' | 'Center' | 'FrontLeft' | 'FrontRight' | 'LowFrequencyEffects' | 'StereoLeft' | 'StereoRight': Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
 
 ## #Microsoft.Media.VideoTrackDescriptor
 ### Properties
@@ -1065,7 +1065,7 @@
 * **label**: string: A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.
 * **progress**: int (ReadOnly): If the JobOutput is in a Processing state, this contains the Job completion percentage. The value is an estimate and not intended to be used to predict Job completion times. To determine if the JobOutput is complete, use the State property.
 * **startTime**: string (ReadOnly): The UTC date and time at which this Job Output began processing.
-* **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' (ReadOnly): Describes the state of the JobOutput. Possible values include: 'Canceled', 'Canceling', 'Error', 'Finished', 'Processing', 'Queued', 'Scheduled'
+* **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' (ReadOnly): Describes the state of the JobOutput.
 ### #Microsoft.Media.JobOutputAsset
 #### Properties
 * **@odata.type**: '#Microsoft.Media.JobOutputAsset' (Required): Represents an Asset used as a JobOutput.
@@ -1074,11 +1074,11 @@
 
 ## JobError
 ### Properties
-* **category**: 'Configuration' | 'Content' | 'Download' | 'Service' | 'Upload' (ReadOnly): Helps with categorization of errors. Possible values include: 'Service', 'Download', 'Upload', 'Configuration', 'Content'
-* **code**: 'ConfigurationUnsupported' | 'ContentMalformed' | 'ContentUnsupported' | 'DownloadNotAccessible' | 'DownloadTransientError' | 'ServiceError' | 'ServiceTransientError' | 'UploadNotAccessible' | 'UploadTransientError' (ReadOnly): Error code describing the error. Possible values include: 'ServiceError', 'ServiceTransientError', 'DownloadNotAccessible', 'DownloadTransientError', 'UploadNotAccessible', 'UploadTransientError', 'ConfigurationUnsupported', 'ContentMalformed', 'ContentUnsupported'
+* **category**: 'Configuration' | 'Content' | 'Download' | 'Service' | 'Upload' (ReadOnly): Helps with categorization of errors.
+* **code**: 'ConfigurationUnsupported' | 'ContentMalformed' | 'ContentUnsupported' | 'DownloadNotAccessible' | 'DownloadTransientError' | 'ServiceError' | 'ServiceTransientError' | 'UploadNotAccessible' | 'UploadTransientError' (ReadOnly): Error code describing the error.
 * **details**: [JobErrorDetail](#joberrordetail)[] (ReadOnly): An array of details about specific errors that led to this reported error.
 * **message**: string (ReadOnly): A human-readable language-dependent representation of the error.
-* **retry**: 'DoNotRetry' | 'MayRetry' (ReadOnly): Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal. Possible values include: 'DoNotRetry', 'MayRetry'
+* **retry**: 'DoNotRetry' | 'MayRetry' (ReadOnly): Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.
 
 ## JobErrorDetail
 ### Properties

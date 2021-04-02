@@ -48,7 +48,7 @@
 * **critical**: bool: Whether or not the namespace is set as Critical.
 * **enabled**: bool: Whether or not the namespace is currently enabled.
 * **name**: string: The name of the namespace.
-* **namespaceType**: 'Messaging' | 'NotificationHub': Gets or sets the namespace type. Possible values include: 'Messaging', 'NotificationHub'
+* **namespaceType**: 'Messaging' | 'NotificationHub': Gets or sets the namespace type.
 * **provisioningState**: string: Gets or sets provisioning state of the Namespace.
 * **region**: string: Specifies the targeted region in which the namespace should be created. It can be any of the following values: Australia East, Australia Southeast, Central US, East US, East US 2, West US, North Central US, South Central US, East Asia, Southeast Asia, Brazil South, Japan East, Japan West, North Europe, West Europe
 * **scaleUnit**: string: ScaleUnit where the namespace gets created

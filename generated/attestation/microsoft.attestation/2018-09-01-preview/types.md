@@ -16,7 +16,7 @@
 * **attestationPolicy**: string (WriteOnly): Name of attestation policy.
 * **attestUri**: string (ReadOnly): Gets the uri of attestation service
 * **policySigningCertificates**: [JSONWebKeySet](#jsonwebkeyset) (WriteOnly):
-* **status**: 'Error' | 'NotReady' | 'Ready' (ReadOnly): Status of attestation service. Possible values include: 'Ready', 'NotReady', 'Error'
+* **status**: 'Error' | 'NotReady' | 'Ready' (ReadOnly): Status of attestation service.
 * **trustModel**: string (ReadOnly): Trust model for the attestation service instance.
 
 ## JSONWebKeySet

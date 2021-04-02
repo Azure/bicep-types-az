@@ -80,8 +80,8 @@
 ## Sku
 ### Properties
 * **capacity**: int: The Event Hubs throughput units, value should be 0 to 20 throughput units.
-* **name**: 'Basic' | 'Standard' (Required): Name of this SKU. Possible values include: 'Basic', 'Standard'
-* **tier**: 'Basic' | 'Standard': The billing tier of this particular SKU. Possible values include: 'Basic', 'Standard'
+* **name**: 'Basic' | 'Standard' (Required): Name of this SKU.
+* **tier**: 'Basic' | 'Standard': The billing tier of this particular SKU.
 
 ## Dictionary<string,String>
 ### Properties
@@ -97,8 +97,8 @@
 * **alternateName**: string: Alternate name specified when alias and namespace names are same.
 * **partnerNamespace**: string: ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
 * **pendingReplicationOperationsCount**: int (ReadOnly): Number of entities pending to be replicated.
-* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'. Possible values include: 'Accepted', 'Succeeded', 'Failed'
-* **role**: 'Primary' | 'PrimaryNotReplicating' | 'Secondary' (ReadOnly): role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'. Possible values include: 'Primary', 'PrimaryNotReplicating', 'Secondary'
+* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'.
+* **role**: 'Primary' | 'PrimaryNotReplicating' | 'Secondary' (ReadOnly): role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'.
 
 ## schemas:15_properties
 ### Properties
@@ -107,14 +107,14 @@
 * **messageRetentionInDays**: int: Number of days to retain the events for this Event Hub, value should be 1 to 7 days
 * **partitionCount**: int: Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
 * **partitionIds**: string[] (ReadOnly): Current number of shards on the Event Hub.
-* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of the Event Hub. Possible values include: 'Active', 'Disabled', 'Restoring', 'SendDisabled', 'ReceiveDisabled', 'Creating', 'Deleting', 'Renaming', 'Unknown'
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of the Event Hub.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.
 
 ## CaptureDescription
 ### Properties
 * **destination**: [Destination](#destination): Capture storage details for capture description
 * **enabled**: bool: A value that indicates whether capture description is enabled.
-* **encoding**: 'Avro' | 'AvroDeflate': Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version. Possible values include: 'Avro', 'AvroDeflate'
+* **encoding**: 'Avro' | 'AvroDeflate': Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version.
 * **intervalInSeconds**: int: The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
 * **sizeLimitInBytes**: int: The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
 * **skipEmptyArchives**: bool: A value that indicates whether to Skip Empty Archives
@@ -138,13 +138,13 @@
 
 ## schemas:25_properties
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny': Default Action for Network Rule Set. Possible values include: 'Allow', 'Deny'
+* **defaultAction**: 'Allow' | 'Deny': Default Action for Network Rule Set.
 * **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]: List of IpRules
 * **virtualNetworkRules**: [NWRuleSetVirtualNetworkRules](#nwrulesetvirtualnetworkrules)[]: List VirtualNetwork Rules
 
 ## NWRuleSetIpRules
 ### Properties
-* **action**: 'Allow': The IP Filter Action. Possible values include: 'Allow'
+* **action**: 'Allow': The IP Filter Action.
 * **ipMask**: string: IP Mask
 
 ## NWRuleSetVirtualNetworkRules

@@ -17,8 +17,8 @@
 * **creationDate**: string (ReadOnly): The creation date of task.
 * **credentials**: [Credentials](#credentials): The parameters that describes a set of credentials that will be used when a run is invoked.
 * **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the run has to happen.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the task. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
-* **status**: 'Disabled' | 'Enabled': The current status of task. Possible values include: 'Disabled', 'Enabled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the task.
+* **status**: 'Disabled' | 'Enabled': The current status of task.
 * **step**: [TaskStepProperties](#taskstepproperties) (Required): Base properties for any task step.
 * **timeout**: int: Run timeout in seconds.
 * **trigger**: [TriggerProperties](#triggerproperties): The properties of a trigger.
@@ -47,7 +47,7 @@ the value of the item will be the registry credentials for accessing the registr
 ## SecretObject
 ### Properties
 * **type**: 'Opaque': The type of the secret object which determines how the value of the secret object has to be
-interpreted. Possible values include: 'Opaque'
+interpreted.
 * **value**: string: The value of the secret. The format of this value will be determined
 based on the type of the secret object. If the type is Opaque, the value will be
 used as is without any modification.
@@ -56,13 +56,13 @@ used as is without any modification.
 ### Properties
 * **loginMode**: 'Default' | 'None': The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
-the source registry during the run. Possible values include: 'None', 'Default'
+the source registry during the run.
 
 ## PlatformProperties
 ### Properties
-* **architecture**: 'amd64' | 'arm' | 'x86': The OS architecture. Possible values include: 'amd64', 'x86', 'arm'
-* **os**: 'Linux' | 'Windows' (Required): The operating system type required for the run. Possible values include: 'Windows', 'Linux'
-* **variant**: 'v6' | 'v7' | 'v8': Variant of the CPU. Possible values include: 'v6', 'v7', 'v8'
+* **architecture**: 'amd64' | 'arm' | 'x86': The OS architecture.
+* **os**: 'Linux' | 'Windows' (Required): The operating system type required for the run.
+* **variant**: 'v6' | 'v7' | 'v8': Variant of the CPU.
 
 ## TaskStepProperties
 * **Discriminator**: type
@@ -101,7 +101,7 @@ the source registry during the run. Possible values include: 'None', 'Default'
 * **registry**: string: The registry login server.
 * **repository**: string: The repository name.
 * **tag**: string: The tag name.
-* **type**: 'BuildTime' | 'RunTime': The type of the base image dependency. Possible values include: 'BuildTime', 'RunTime'
+* **type**: 'BuildTime' | 'RunTime': The type of the base image dependency.
 
 ## Docker
 ### Properties
@@ -146,23 +146,23 @@ the source registry during the run. Possible values include: 'None', 'Default'
 
 ## BaseImageTrigger
 ### Properties
-* **baseImageTriggerType**: 'All' | 'Runtime' (Required): The type of the auto trigger for base image dependency updates. Possible values include: 'All', 'Runtime'
+* **baseImageTriggerType**: 'All' | 'Runtime' (Required): The type of the auto trigger for base image dependency updates.
 * **name**: string (Required): The name of the trigger.
-* **status**: 'Disabled' | 'Enabled': The current status of trigger. Possible values include: 'Disabled', 'Enabled'
+* **status**: 'Disabled' | 'Enabled': The current status of trigger.
 
 ## SourceTrigger
 ### Properties
 * **name**: string (Required): The name of the trigger.
 * **sourceRepository**: [SourceProperties](#sourceproperties) (Required): The properties of the source code repository.
 * **sourceTriggerEvents**: 'commit' | 'pullrequest'[] (Required): The source event corresponding to the trigger.
-* **status**: 'Disabled' | 'Enabled': The current status of trigger. Possible values include: 'Disabled', 'Enabled'
+* **status**: 'Disabled' | 'Enabled': The current status of trigger.
 
 ## SourceProperties
 ### Properties
 * **branch**: string: The branch name of the source code.
 * **repositoryUrl**: string (Required): The full URL to the source code repository
 * **sourceControlAuthProperties**: [AuthInfo](#authinfo): The authorization properties for accessing the source code repository.
-* **sourceControlType**: 'Github' | 'VisualStudioTeamService' (Required): The type of source control service. Possible values include: 'Github', 'VisualStudioTeamService'
+* **sourceControlType**: 'Github' | 'VisualStudioTeamService' (Required): The type of source control service.
 
 ## AuthInfo
 ### Properties
@@ -170,7 +170,7 @@ the source registry during the run. Possible values include: 'None', 'Default'
 * **refreshToken**: string: The refresh token used to refresh the access token.
 * **scope**: string: The scope of the access token.
 * **token**: string (Required): The access token used to access the source control provider.
-* **tokenType**: 'OAuth' | 'PAT' (Required): The type of Auth token. Possible values include: 'PAT', 'OAuth'
+* **tokenType**: 'OAuth' | 'PAT' (Required): The type of Auth token.
 
 ## Dictionary<string,String>
 ### Properties

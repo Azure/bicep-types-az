@@ -29,12 +29,12 @@
 * **capacityAssigned**: int (ReadOnly): Represents the sum of the SUs of all streaming jobs associated with the cluster. If all of the jobs were running, this would be the capacity allocated.
 * **clusterId**: string (ReadOnly): Unique identifier for the cluster.
 * **createdDate**: string (ReadOnly): The date this cluster was created.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded': Possible values include: 'Succeeded', 'Failed', 'Canceled', 'InProgress'
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded':
 
 ## ClusterSku
 ### Properties
 * **capacity**: int: Denotes the number of streaming units the cluster can support. Valid values for this property are multiples of 36 with a minimum value of 36 and maximum value of 216. Required on PUT (CreateOrUpdate) requests.
-* **name**: 'Default': Specifies the SKU name of the cluster. Required on PUT (CreateOrUpdate) requests. Possible values include: 'Default'
+* **name**: 'Default': Specifies the SKU name of the cluster. Required on PUT (CreateOrUpdate) requests.
 
 ## Dictionary<string,String>
 ### Properties

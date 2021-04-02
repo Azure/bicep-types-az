@@ -13,7 +13,7 @@
 ## AttestationProperties
 ### Properties
 * **comments**: string: Comments describing why this attestation was created.
-* **complianceState**: 'Compliant' | 'NonCompliant' | 'Unknown': The compliance state that should be set on the resource. Possible values include: 'Compliant', 'NonCompliant', 'Unknown'
+* **complianceState**: 'Compliant' | 'NonCompliant' | 'Unknown': The compliance state that should be set on the resource.
 * **evidence**: [AttestationEvidence](#attestationevidence)[]: The evidence supporting the compliance state set in this attestation.
 * **expiresOn**: string: The time the compliance state should expire.
 * **lastComplianceStateChangeAt**: string (ReadOnly): The time the compliance state was last changed in this attestation.
@@ -31,8 +31,8 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 

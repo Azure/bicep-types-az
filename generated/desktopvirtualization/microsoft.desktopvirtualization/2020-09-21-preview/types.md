@@ -53,7 +53,7 @@
 
 ## ApplicationGroupProperties
 ### Properties
-* **applicationGroupType**: 'Desktop' | 'RemoteApp' (Required): Resource Type of ApplicationGroup. Possible values include: 'RemoteApp', 'Desktop'
+* **applicationGroupType**: 'Desktop' | 'RemoteApp' (Required): Resource Type of ApplicationGroup.
 * **description**: string: Description of ApplicationGroup.
 * **friendlyName**: string: Friendly name of ApplicationGroup.
 * **hostPoolArmPath**: string (Required): HostPool arm path of ApplicationGroup.
@@ -66,9 +66,9 @@
 
 ## ApplicationProperties
 ### Properties
-* **applicationType**: 'InBuilt' | 'MsixApplication': Resource Type of Application. Possible values include: 'InBuilt', 'MsixApplication'
+* **applicationType**: 'InBuilt' | 'MsixApplication': Resource Type of Application.
 * **commandLineArguments**: string: Command Line Arguments for Application.
-* **commandLineSetting**: 'Allow' | 'DoNotAllow' | 'Require' (Required): Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all. Possible values include: 'DoNotAllow', 'Allow', 'Require'
+* **commandLineSetting**: 'Allow' | 'DoNotAllow' | 'Require' (Required): Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
 * **description**: string: Description of Application.
 * **filePath**: string: Specifies a path for the executable file for the application.
 * **friendlyName**: string: Friendly name of Application.
@@ -86,11 +86,11 @@
 * **customRdpProperty**: string: Custom rdp property of HostPool.
 * **description**: string: Description of HostPool.
 * **friendlyName**: string: Friendly name of HostPool.
-* **hostPoolType**: 'Personal' | 'Pooled' (Required): HostPool type for desktop. Possible values include: 'Personal', 'Pooled'
-* **loadBalancerType**: 'BreadthFirst' | 'DepthFirst' | 'Persistent' (Required): The type of the load balancer. Possible values include: 'BreadthFirst', 'DepthFirst', 'Persistent'
+* **hostPoolType**: 'Personal' | 'Pooled' (Required): HostPool type for desktop.
+* **loadBalancerType**: 'BreadthFirst' | 'DepthFirst' | 'Persistent' (Required): The type of the load balancer.
 * **maxSessionLimit**: int: The max session limit of HostPool.
-* **personalDesktopAssignmentType**: 'Automatic' | 'Direct': PersonalDesktopAssignment type for HostPool. Possible values include: 'Automatic', 'Direct'
-* **preferredAppGroupType**: 'Desktop' | 'None' | 'RailApplications' (Required): The type of preferred application group type, default to Desktop Application Group. Possible values include: 'None', 'Desktop', 'RailApplications'
+* **personalDesktopAssignmentType**: 'Automatic' | 'Direct': PersonalDesktopAssignment type for HostPool.
+* **preferredAppGroupType**: 'Desktop' | 'None' | 'RailApplications' (Required): The type of preferred application group type, default to Desktop Application Group.
 * **registrationInfo**: [RegistrationInfo](#registrationinfo): Represents a RegistrationInfo definition.
 * **ring**: int: The ring number of HostPool.
 * **ssoContext**: string: Path to keyvault containing ssoContext secret.
@@ -100,7 +100,7 @@
 ## RegistrationInfo
 ### Properties
 * **expirationTime**: string: Expiration time of registration token.
-* **registrationTokenOperation**: 'Delete' | 'None' | 'Update': The type of resetting the token. Possible values include: 'Delete', 'None', 'Update'
+* **registrationTokenOperation**: 'Delete' | 'None' | 'Update': The type of resetting the token.
 * **token**: string: The registration token base64 encoded string.
 
 ## Dictionary<string,String>

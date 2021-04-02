@@ -25,8 +25,8 @@
 
 ## ProfileProperties
 ### Properties
-* **enabledState**: 'Disabled' | 'Enabled': The state of the Experiment. Possible values include: 'Enabled', 'Disabled'
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
+* **enabledState**: 'Disabled' | 'Enabled': The state of the Experiment.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status.
 
 ## Dictionary<string,String>
 ### Properties
@@ -36,10 +36,10 @@
 ## ExperimentProperties
 ### Properties
 * **description**: string: The description of the details or intents of the Experiment
-* **enabledState**: 'Disabled' | 'Enabled': The state of the Experiment. Possible values include: 'Enabled', 'Disabled'
+* **enabledState**: 'Disabled' | 'Enabled': The state of the Experiment.
 * **endpointA**: [Endpoint](#endpoint): Defines the endpoint properties
 * **endpointB**: [Endpoint](#endpoint): Defines the endpoint properties
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status.
 * **scriptFileUri**: string (ReadOnly): The uri to the Script used in the Experiment
 * **status**: string (ReadOnly): The description of Experiment status from the server side
 

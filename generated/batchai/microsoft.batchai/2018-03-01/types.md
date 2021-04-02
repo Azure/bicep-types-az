@@ -35,20 +35,20 @@
 
 ## ClusterBaseProperties
 ### Properties
-* **allocationState**: 'resizing' | 'steady' (ReadOnly): Possible values are: steady and resizing. steady state indicates that the cluster is not resizing. There are no changes to the number of compute nodes in the cluster in progress. A cluster enters this state when it is created and when no operations are being performed on the cluster to change the number of compute nodes. resizing state indicates that the cluster is resizing; that is, compute nodes are being added to or removed from the cluster. Possible values include: 'steady', 'resizing'
+* **allocationState**: 'resizing' | 'steady' (ReadOnly): Possible values are: steady and resizing. steady state indicates that the cluster is not resizing. There are no changes to the number of compute nodes in the cluster in progress. A cluster enters this state when it is created and when no operations are being performed on the cluster to change the number of compute nodes. resizing state indicates that the cluster is resizing; that is, compute nodes are being added to or removed from the cluster.
 * **allocationStateTransitionTime**: string (ReadOnly):
 * **creationTime**: string (ReadOnly):
 * **currentNodeCount**: int (ReadOnly):
 * **errors**: [BatchAIError](#batchaierror)[] (ReadOnly): This element contains all the errors encountered by various compute nodes during node setup.
 * **nodeSetup**: [NodeSetup](#nodesetup): Use this to prepare the VM. NOTE: The volumes specified in mountVolumes are mounted first and then the setupTask is run. Therefore the setup task can use local mountPaths in its execution.
 * **nodeStateCounts**: [NodeStateCounts](#nodestatecounts) (ReadOnly): Counts of various compute node states on the cluster.
-* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): Possible value are: creating - Specifies that the cluster is being created. succeeded - Specifies that the cluster has been created successfully. failed - Specifies that the cluster creation has failed. deleting - Specifies that the cluster is being deleted. Possible values include: 'creating', 'succeeded', 'failed', 'deleting'
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): Possible value are: creating - Specifies that the cluster is being created. succeeded - Specifies that the cluster has been created successfully. failed - Specifies that the cluster creation has failed. deleting - Specifies that the cluster is being deleted.
 * **provisioningStateTransitionTime**: string (ReadOnly):
 * **scaleSettings**: [ScaleSettings](#scalesettings): At least one of manual or autoScale settings must be specified. Only one of manual or autoScale settings can be specified. If autoScale settings are specified, the system automatically scales the cluster up and down (within the supplied limits) based on the pending jobs on the cluster.
 * **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
 * **userAccountSettings**: [UserAccountSettings](#useraccountsettings) (Required): Settings for user account that gets created on each on the nodes of a cluster.
 * **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration): Settings for OS image.
-* **vmPriority**: 'dedicated' | 'lowpriority': Default is dedicated. Possible values include: 'dedicated', 'lowpriority'
+* **vmPriority**: 'dedicated' | 'lowpriority': Default is dedicated.
 * **vmSize**: string (Required): All virtual machines in a cluster are the same size. For information about available VM sizes for clusters using images from the Virtual Machines Marketplace (see Sizes for Virtual Machines (Linux) or Sizes for Virtual Machines (Windows). Batch AI service supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
 
 ## BatchAIError
@@ -169,7 +169,7 @@
 
 ## ManualScaleSettings
 ### Properties
-* **nodeDeallocationOption**: 'requeue' | 'terminate' | 'unknown' | 'waitforjobcompletion': The default value is requeue. Possible values include: 'requeue', 'terminate', 'waitforjobcompletion', 'unknown'
+* **nodeDeallocationOption**: 'requeue' | 'terminate' | 'unknown' | 'waitforjobcompletion': The default value is requeue.
 * **targetNodeCount**: int (Required): Default is 0. If autoScaleSettings are not specified, then the Cluster starts with this target.
 
 ## UserAccountSettings
@@ -200,7 +200,7 @@
 * **creationTime**: string (ReadOnly):
 * **dataDisks**: [DataDisks](#datadisks) (Required): Settings for the data disk which would be created for the File Server.
 * **mountSettings**: [MountSettings](#mountsettings) (ReadOnly): Details of the File Server.
-* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' | 'updating' (ReadOnly): Possible values: creating - The File Server is getting created. updating - The File Server creation has been accepted and it is getting updated. deleting - The user has requested that the File Server be deleted, and it is in the process of being deleted. failed - The File Server creation has failed with the specified errorCode. Details about the error code are specified in the message field. succeeded - The File Server creation has succeeded. Possible values include: 'creating', 'updating', 'deleting', 'succeeded', 'failed'
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' | 'updating' (ReadOnly): Possible values: creating - The File Server is getting created. updating - The File Server creation has been accepted and it is getting updated. deleting - The user has requested that the File Server be deleted, and it is in the process of being deleted. failed - The File Server creation has failed with the specified errorCode. Details about the error code are specified in the message field. succeeded - The File Server creation has succeeded.
 * **provisioningStateTransitionTime**: string (ReadOnly):
 * **sshConfiguration**: [SshConfiguration](#sshconfiguration) (Required): SSH configuration settings for the VM
 * **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
@@ -208,16 +208,16 @@
 
 ## DataDisks
 ### Properties
-* **cachingType**: 'none' | 'readonly' | 'readwrite': Possible values include: 'none', 'readonly', 'readwrite'
+* **cachingType**: 'none' | 'readonly' | 'readwrite':
 * **diskCount**: int (Required):
 * **diskSizeInGB**: int (Required):
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' (Required): Possible values include: 'Standard_LRS', 'Premium_LRS'
+* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' (Required):
 
 ## MountSettings
 ### Properties
 * **fileServerInternalIP**: string (ReadOnly):
 * **fileServerPublicIP**: string (ReadOnly):
-* **fileServerType**: 'glusterfs' | 'nfs' (ReadOnly): Possible values include: 'nfs', 'glusterfs'
+* **fileServerType**: 'glusterfs' | 'nfs' (ReadOnly):
 * **mountPoint**: string (ReadOnly):
 
 ## SshConfiguration
@@ -243,7 +243,7 @@
 * **customToolkitSettings**: [CustomToolkitSettings](#customtoolkitsettings): Specifies the settings for a custom tool kit job.
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: Batch AI will setup these additional environment variables for the job.
 * **executionInfo**: [schemas:34_executionInfo](#schemas34executioninfo) (ReadOnly): Contains information about the execution of a job in the Azure Batch service.
-* **executionState**: 'failed' | 'queued' | 'running' | 'succeeded' | 'terminating' (ReadOnly): The current state of the job. Possible values are: queued - The job is queued and able to run. A job enters this state when it is created, or when it is awaiting a retry after a failed run. running - The job is running on a compute cluster. This includes job-level preparation such as downloading resource files or set up container specified on the job - it does not necessarily mean that the job command line has started executing. terminating - The job is terminated by the user, the terminate operation is in progress. succeeded - The job has completed running successfully and exited with exit code 0. failed - The job has finished unsuccessfully (failed with a non-zero exit code) and has exhausted its retry limit. A job is also marked as failed if an error occurred launching the job. Possible values include: 'queued', 'running', 'terminating', 'succeeded', 'failed'
+* **executionState**: 'failed' | 'queued' | 'running' | 'succeeded' | 'terminating' (ReadOnly): The current state of the job. Possible values are: queued - The job is queued and able to run. A job enters this state when it is created, or when it is awaiting a retry after a failed run. running - The job is running on a compute cluster. This includes job-level preparation such as downloading resource files or set up container specified on the job - it does not necessarily mean that the job command line has started executing. terminating - The job is terminated by the user, the terminate operation is in progress. succeeded - The job has completed running successfully and exited with exit code 0. failed - The job has finished unsuccessfully (failed with a non-zero exit code) and has exhausted its retry limit. A job is also marked as failed if an error occurred launching the job.
 * **executionStateTransitionTime**: string (ReadOnly): The time at which the job entered its current execution state.
 * **experimentName**: string: Describe the experiment information of the job
 * **inputDirectories**: [InputDirectory](#inputdirectory)[]:
@@ -253,13 +253,13 @@
 * **nodeCount**: int (Required): The job will be gang scheduled on that many compute nodes
 * **outputDirectories**: [OutputDirectory](#outputdirectory)[]:
 * **priority**: int: Priority associated with the job. Priority values can range from -1000 to 1000, with -1000 being the lowest priority and 1000 being the highest priority. The default value is 0.
-* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): The provisioned state of the Batch AI job. Possible values include: 'creating', 'succeeded', 'failed', 'deleting'
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): The provisioned state of the Batch AI job.
 * **provisioningStateTransitionTime**: string (ReadOnly): The time at which the job entered its current provisioning state.
 * **pyTorchSettings**: [PyTorchSettings](#pytorchsettings): Specifies the settings for pyTorch job.
 * **secrets**: [EnvironmentVariableWithSecretValue](#environmentvariablewithsecretvalue)[]: Batch AI will setup these additional environment variables for the job. Server will never report values of these variables back.
 * **stdOutErrPathPrefix**: string (Required): The path where the Batch AI service will upload stdout and stderror of the job.
 * **tensorFlowSettings**: [TensorFlowSettings](#tensorflowsettings): Specifies the settings for TensorFlow job.
-* **toolType**: 'caffe' | 'caffe2' | 'chainer' | 'cntk' | 'custom' | 'tensorflow' (ReadOnly): Possible values are: cntk, tensorflow, caffe, caffe2, chainer, pytorch, custom. Possible values include: 'cntk', 'tensorflow', 'caffe', 'caffe2', 'chainer', 'custom'
+* **toolType**: 'caffe' | 'caffe2' | 'chainer' | 'cntk' | 'custom' | 'tensorflow' (ReadOnly): Possible values are: cntk, tensorflow, caffe, caffe2, chainer, pytorch, custom.
 
 ## Caffe2Settings
 ### Properties
@@ -337,7 +337,7 @@
 * **id**: string (Required): The path of the output directory will be available as a value of an environment variable with AZ_BATCHAI_OUTPUT_<id> name, where <id> is the value of id attribute.
 * **pathPrefix**: string (Required): NOTE: This is an absolute path to prefix. E.g. $AZ_BATCHAI_MOUNT_ROOT/MyNFS/MyLogs. You can find the full path to the output directory by combining pathPrefix, jobOutputDirectoryPathSegment (reported by get job) and pathSuffix.
 * **pathSuffix**: string: The suffix path where the output directory will be created. E.g. models. You can find the full path to the output directory by combining pathPrefix, jobOutputDirectoryPathSegment (reported by get job) and pathSuffix.
-* **type**: 'custom' | 'logs' | 'model' | 'summary': Default value is Custom. The possible values are Model, Logs, Summary, and Custom. Users can use multiple enums for a single directory. Eg. outPutType='Model,Logs, Summary'. Possible values include: 'model', 'logs', 'summary', 'custom'
+* **type**: 'custom' | 'logs' | 'model' | 'summary': Default value is Custom. The possible values are Model, Logs, Summary, and Custom. Users can use multiple enums for a single directory. Eg. outPutType='Model,Logs, Summary'.
 
 ## PyTorchSettings
 ### Properties

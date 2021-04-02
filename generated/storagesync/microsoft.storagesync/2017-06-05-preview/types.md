@@ -89,8 +89,8 @@
 ### Properties
 * **byteProgress**: int: Bytes in progress
 * **byteTotal**: int: Bytes total
-* **cloudTiering**: 'off' | 'on': Cloud Tiering. Possible values include: 'on', 'off'
-* **currentProgressType**: 'download' | 'initialize' | 'none' | 'recall' | 'upload': current progress type. Possible values include: 'none', 'initialize', 'download', 'upload', 'recall'
+* **cloudTiering**: 'off' | 'on': Cloud Tiering.
+* **currentProgressType**: 'download' | 'initialize' | 'none' | 'recall' | 'upload': current progress type.
 * **friendlyName**: string: Friendly Name
 * **itemDownloadErrorCount**: int: Item download error count.
 * **itemProgressCount**: int: Item Progress Count
@@ -102,7 +102,7 @@
 * **serverLocalPath**: string: Server folder used for data synchronization
 * **serverResourceId**: string: Arm resource identifier.
 * **syncErrorContext**: string: sync error context.
-* **syncErrorDirection**: 'download' | 'initialize' | 'none' | 'recall' | 'upload': Sync Error Direction. Possible values include: 'none', 'initialize', 'download', 'upload', 'recall'
+* **syncErrorDirection**: 'download' | 'initialize' | 'none' | 'recall' | 'upload': Sync Error Direction.
 * **syncErrorState**: string: Sync Error State
 * **syncErrorStateTimestamp**: string: Sync Error State Timestamp
 * **totalProgress**: int: Total progress

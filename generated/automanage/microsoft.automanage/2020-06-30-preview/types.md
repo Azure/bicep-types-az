@@ -35,7 +35,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of Automanage account identity.
 * **tenantId**: string (ReadOnly): The tenant id associated with the Automanage account.
-* **type**: 'None' | 'SystemAssigned': The type of identity used for the Automanage account. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity. Possible values include: 'SystemAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned': The type of identity used for the Automanage account. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
 
 ## Dictionary<string,String>
 ### Properties
@@ -46,14 +46,14 @@
 ### Properties
 * **accountId**: string: The Automanage account ARM Resource URI
 * **compliance**: [ConfigurationProfileAssignmentCompliance](#configurationprofileassignmentcompliance): The compliance status for the configuration profile assignment.
-* **configurationProfile**: 'Azure virtual machine best practices – Dev/Test' | 'Azure virtual machine best practices – Production': A value indicating configuration profile. Possible values include: 'Azure virtual machine best practices – Dev/Test', 'Azure virtual machine best practices – Production'
+* **configurationProfile**: 'Azure virtual machine best practices – Dev/Test' | 'Azure virtual machine best practices – Production': A value indicating configuration profile.
 * **configurationProfilePreferenceId**: string: The configuration profile custom preferences ARM resource URI
-* **provisioningState**: 'Created' | 'Failed' | 'Succeeded' (ReadOnly): The state of onboarding, which only appears in the response. Possible values include: 'Succeeded', 'Failed', 'Created'
+* **provisioningState**: 'Created' | 'Failed' | 'Succeeded' (ReadOnly): The state of onboarding, which only appears in the response.
 * **targetId**: string: The target VM resource URI
 
 ## ConfigurationProfileAssignmentCompliance
 ### Properties
-* **updateStatus**: 'Created' | 'Failed' | 'Succeeded' (ReadOnly): The state of compliance, which only appears in the response. Possible values include: 'Succeeded', 'Failed', 'Created'
+* **updateStatus**: 'Created' | 'Failed' | 'Succeeded' (ReadOnly): The state of compliance, which only appears in the response.
 
 ## ConfigurationProfilePreferenceProperties
 ### Properties
@@ -62,12 +62,12 @@
 
 ## ConfigurationProfilePreferenceAntiMalware
 ### Properties
-* **enableRealTimeProtection**: 'False' | 'True': Enables or disables Real Time Protection. Possible values include: 'True', 'False'
+* **enableRealTimeProtection**: 'False' | 'True': Enables or disables Real Time Protection.
 * **exclusions**: any: Extensions, Paths and Processes that must be excluded from scan
-* **runScheduledScan**: 'False' | 'True': Enables or disables a periodic scan for antimalware. Possible values include: 'True', 'False'
+* **runScheduledScan**: 'False' | 'True': Enables or disables a periodic scan for antimalware.
 * **scanDay**: string: Schedule scan settings day
 * **scanTimeInMinutes**: string: Schedule scan settings time
-* **scanType**: 'Full' | 'Quick': Type of scheduled scan. Possible values include: 'Quick', 'Full'
+* **scanType**: 'Full' | 'Quick': Type of scheduled scan.
 
 ## ConfigurationProfilePreferenceVmBackup
 ### Properties

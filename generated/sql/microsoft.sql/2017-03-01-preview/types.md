@@ -226,9 +226,9 @@
 
 ## ManagedDatabaseProperties
 ### Properties
-* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS': Collation of the metadata catalog. Possible values include: 'DATABASE_DEFAULT', 'SQL_Latin1_General_CP1_CI_AS'
+* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS': Collation of the metadata catalog.
 * **collation**: string: Collation of the managed database.
-* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'RestoreExternalBackup' | 'RestoreLongTermRetentionBackup': Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. Possible values include: 'Default', 'RestoreExternalBackup', 'PointInTimeRestore', 'Recovery', 'RestoreLongTermRetentionBackup'
+* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'RestoreExternalBackup' | 'RestoreLongTermRetentionBackup': Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore.
 * **creationDate**: string (ReadOnly): Creation date of the database.
 * **defaultSecondaryLocation**: string (ReadOnly): Geo paired region.
 * **earliestRestorePoint**: string (ReadOnly): Earliest restore point in time for point in time restore.
@@ -238,7 +238,7 @@
 * **restorableDroppedDatabaseId**: string: The restorable dropped database resource id to restore when creating this database.
 * **restorePointInTime**: string: Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
 * **sourceDatabaseId**: string: The resource identifier of the source database associated with create operation of this database.
-* **status**: 'Creating' | 'Inaccessible' | 'Offline' | 'Online' | 'Restoring' | 'Shutdown' | 'Updating' (ReadOnly): Status of the database. Possible values include: 'Online', 'Offline', 'Shutdown', 'Creating', 'Inaccessible', 'Restoring', 'Updating'
+* **status**: 'Creating' | 'Inaccessible' | 'Offline' | 'Online' | 'Restoring' | 'Shutdown' | 'Updating' (ReadOnly): Status of the database.
 * **storageContainerSasToken**: string: Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.
 * **storageContainerUri**: string: Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.
 
@@ -258,7 +258,7 @@
 * **emailAccountAdmins**: bool: Specifies that the alert is sent to the account administrators.
 * **emailAddresses**: string[]: Specifies an array of e-mail addresses to which the alert is sent.
 * **retentionDays**: int: Specifies the number of days to keep in the Threat Detection audit logs.
-* **state**: 'Disabled' | 'Enabled' | 'New' (Required): Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database. Possible values include: 'New', 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled' | 'New' (Required): Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database.
 * **storageAccountAccessKey**: string: Specifies the identifier key of the Threat Detection audit storage account.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
 
@@ -337,7 +337,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
-* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required. Possible values include: 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
 * **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account.
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
@@ -349,7 +349,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## DatabaseProperties
 ### Properties
-* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS': Collation of the metadata catalog. Possible values include: 'DATABASE_DEFAULT', 'SQL_Latin1_General_CP1_CI_AS'
+* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS': Collation of the metadata catalog.
 * **collation**: string: The collation of the database.
 * **createMode**: 'Copy' | 'Default' | 'OnlineSecondary' | 'PointInTimeRestore' | 'Recovery' | 'Restore' | 'RestoreExternalBackup' | 'RestoreExternalBackupSecondary' | 'RestoreLongTermRetentionBackup' | 'Secondary': Specifies the mode of database creation.
 
@@ -367,7 +367,7 @@ Restore: Creates a database by restoring a backup of a deleted database. sourceD
 
 RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
 
-Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition. Possible values include: 'Default', 'Copy', 'Secondary', 'OnlineSecondary', 'PointInTimeRestore', 'Restore', 'Recovery', 'RestoreExternalBackup', 'RestoreExternalBackupSecondary', 'RestoreLongTermRetentionBackup'
+Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
 * **creationDate**: string (ReadOnly): The creation date of the database (ISO8601 format).
 * **currentServiceObjectiveName**: string (ReadOnly): The current service level objective name of the database.
 * **databaseId**: string (ReadOnly): The ID of the database.
@@ -380,10 +380,10 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **recoveryServicesRecoveryPointId**: string: The resource identifier of the recovery point associated with create operation of this database.
 * **restorableDroppedDatabaseId**: string: The resource identifier of the restorable dropped database associated with create operation of this database.
 * **restorePointInTime**: string: Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
-* **sampleName**: 'AdventureWorksLT' | 'WideWorldImportersFull' | 'WideWorldImportersStd': The name of the sample schema to apply when creating this database. Possible values include: 'AdventureWorksLT', 'WideWorldImportersStd', 'WideWorldImportersFull'
+* **sampleName**: 'AdventureWorksLT' | 'WideWorldImportersFull' | 'WideWorldImportersStd': The name of the sample schema to apply when creating this database.
 * **sourceDatabaseDeletionDate**: string: Specifies the time that the database was deleted.
 * **sourceDatabaseId**: string: The resource identifier of the source database associated with create operation of this database.
-* **status**: 'AutoClosed' | 'Copying' | 'Creating' | 'EmergencyMode' | 'Inaccessible' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Paused' | 'Pausing' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Resuming' | 'Scaling' | 'Shutdown' | 'Standby' | 'Suspect' (ReadOnly): The status of the database. Possible values include: 'Online', 'Restoring', 'RecoveryPending', 'Recovering', 'Suspect', 'Offline', 'Standby', 'Shutdown', 'EmergencyMode', 'AutoClosed', 'Copying', 'Creating', 'Inaccessible', 'OfflineSecondary', 'Pausing', 'Paused', 'Resuming', 'Scaling'
+* **status**: 'AutoClosed' | 'Copying' | 'Creating' | 'EmergencyMode' | 'Inaccessible' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Paused' | 'Pausing' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Resuming' | 'Scaling' | 'Shutdown' | 'Standby' | 'Suspect' (ReadOnly): The status of the database.
 * **zoneRedundant**: bool: Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
 
 ## Sku
@@ -474,7 +474,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
-* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required. Possible values include: 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
 * **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account.
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
@@ -567,7 +567,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
-* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required. Possible values include: 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
 * **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account.
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
@@ -584,7 +584,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **isDisabled**: bool (ReadOnly): Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
 * **labelId**: string: The label ID.
 * **labelName**: string: The label name.
-* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None': Possible values include: 'None', 'Low', 'Medium', 'High', 'Critical'
+* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None':
 
 ## DatabaseVulnerabilityAssessmentProperties
 ### Properties
@@ -687,7 +687,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
-* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required. Possible values include: 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
 * **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account.
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
@@ -700,7 +700,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## JobAgentProperties
 ### Properties
 * **databaseId**: string (Required): Resource ID of the database to store job metadata in.
-* **state**: 'Creating' | 'Deleting' | 'Disabled' | 'Ready' | 'Updating' (ReadOnly): The state of the job agent. Possible values include: 'Creating', 'Ready', 'Updating', 'Deleting', 'Disabled'
+* **state**: 'Creating' | 'Deleting' | 'Disabled' | 'Ready' | 'Updating' (ReadOnly): The state of the job agent.
 
 ## Dictionary<string,String>
 ### Properties
@@ -724,7 +724,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **endTime**: string: Schedule end time.
 * **interval**: string: Value of the schedule's recurring interval, if the schedule type is recurring. ISO8601 duration format.
 * **startTime**: string: Schedule start time.
-* **type**: 'Once' | 'Recurring': Schedule interval type. Possible values include: 'Once', 'Recurring'
+* **type**: 'Once' | 'Recurring': Schedule interval type.
 
 ## JobExecutionProperties
 ### Properties
@@ -735,8 +735,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **jobExecutionId**: string (ReadOnly): The unique identifier of the job execution.
 * **jobVersion**: int (ReadOnly): The job version number.
 * **lastMessage**: string (ReadOnly): The last status or error message.
-* **lifecycle**: 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Skipped' | 'Succeeded' | 'SucceededWithSkipped' | 'TimedOut' | 'WaitingForChildJobExecutions' | 'WaitingForRetry' (ReadOnly): The detailed state of the job execution. Possible values include: 'Created', 'InProgress', 'WaitingForChildJobExecutions', 'WaitingForRetry', 'Succeeded', 'SucceededWithSkipped', 'Failed', 'TimedOut', 'Canceled', 'Skipped'
-* **provisioningState**: 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): The ARM provisioning state of the job execution. Possible values include: 'Created', 'InProgress', 'Succeeded', 'Failed', 'Canceled'
+* **lifecycle**: 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Skipped' | 'Succeeded' | 'SucceededWithSkipped' | 'TimedOut' | 'WaitingForChildJobExecutions' | 'WaitingForRetry' (ReadOnly): The detailed state of the job execution.
+* **provisioningState**: 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): The ARM provisioning state of the job execution.
 * **startTime**: string (ReadOnly): The time that the job execution started.
 * **stepId**: int (ReadOnly): The job step id.
 * **stepName**: string (ReadOnly): The job step name.
@@ -746,7 +746,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **databaseName**: string (ReadOnly): The database name.
 * **serverName**: string (ReadOnly): The server name.
-* **type**: 'SqlDatabase' | 'SqlElasticPool' | 'SqlServer' | 'SqlShardMap' | 'TargetGroup' (ReadOnly): The type of the target. Possible values include: 'TargetGroup', 'SqlDatabase', 'SqlElasticPool', 'SqlShardMap', 'SqlServer'
+* **type**: 'SqlDatabase' | 'SqlElasticPool' | 'SqlServer' | 'SqlShardMap' | 'TargetGroup' (ReadOnly): The type of the target.
 
 ## JobStepProperties
 ### Properties
@@ -759,8 +759,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## JobStepAction
 ### Properties
-* **source**: 'Inline': The source of the action to execute. Possible values include: 'Inline'
-* **type**: 'TSql': Type of action being executed by the job step. Possible values include: 'TSql'
+* **source**: 'Inline': The source of the action to execute.
+* **type**: 'TSql': Type of action being executed by the job step.
 * **value**: string (Required): The action value, for example the text of the T-SQL script to execute.
 
 ## JobStepExecutionOptions
@@ -780,7 +780,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **serverName**: string (Required): The output destination server name.
 * **subscriptionId**: string: The output destination subscription id.
 * **tableName**: string (Required): The output destination table.
-* **type**: 'SqlDatabase': The output destination type. Possible values include: 'SqlDatabase'
+* **type**: 'SqlDatabase': The output destination type.
 
 ## JobTargetGroupProperties
 ### Properties
@@ -790,9 +790,9 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **databaseName**: string: The target database name.
 * **elasticPoolName**: string: The target elastic pool name.
-* **membershipType**: 'Exclude' | 'Include': Whether the target is included or excluded from the group. Possible values include: 'Include', 'Exclude'
+* **membershipType**: 'Exclude' | 'Include': Whether the target is included or excluded from the group.
 * **refreshCredential**: string: The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.
 * **serverName**: string: The target server name.
 * **shardMapName**: string: The target shard map.
-* **type**: 'SqlDatabase' | 'SqlElasticPool' | 'SqlServer' | 'SqlShardMap' | 'TargetGroup' (Required): The target type. Possible values include: 'TargetGroup', 'SqlDatabase', 'SqlElasticPool', 'SqlShardMap', 'SqlServer'
+* **type**: 'SqlDatabase' | 'SqlElasticPool' | 'SqlServer' | 'SqlShardMap' | 'TargetGroup' (Required): The target type.
 

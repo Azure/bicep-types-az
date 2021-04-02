@@ -14,7 +14,7 @@
 * **createdDate**: string (ReadOnly): Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.
 * **description**: string: Description of a cost allocation rule.
 * **details**: [CostAllocationRuleDetails](#costallocationruledetails) (Required): Resource details of the cost allocation rule
-* **status**: 'Active' | 'NotActive' | 'Processing' (Required): Status of the rule. Possible values include: 'NotActive', 'Active', 'Processing'
+* **status**: 'Active' | 'NotActive' | 'Processing' (Required): Status of the rule.
 * **updatedDate**: string (ReadOnly): Time at which the rule was last updated.
 
 ## CostAllocationRuleDetails
@@ -25,14 +25,14 @@
 ## SourceCostAllocationResource
 ### Properties
 * **name**: string (Required): If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
-* **resourceType**: 'Dimension' | 'Tag' (Required): Type of resources contained in this cost allocation rule. Possible values include: 'Dimension', 'Tag'
+* **resourceType**: 'Dimension' | 'Tag' (Required): Type of resources contained in this cost allocation rule.
 * **values**: string[] (Required): Source Resources for cost allocation. This list cannot contain more than 25 values.
 
 ## TargetCostAllocationResource
 ### Properties
 * **name**: string (Required): If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
 * **policyType**: string (Required): Method of cost allocation for the rule
-* **resourceType**: 'Dimension' | 'Tag' (Required): Type of resources contained in this cost allocation rule. Possible values include: 'Dimension', 'Tag'
+* **resourceType**: 'Dimension' | 'Tag' (Required): Type of resources contained in this cost allocation rule.
 * **values**: [CostAllocationProportion](#costallocationproportion)[] (Required): Target resources for cost allocation. This list cannot contain more than 25 values.
 
 ## CostAllocationProportion

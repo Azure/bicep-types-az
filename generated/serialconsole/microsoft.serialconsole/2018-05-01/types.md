@@ -11,5 +11,5 @@
 
 ## SerialPortProperties
 ### Properties
-* **state**: 'disabled' | 'enabled': Specifies whether the port is enabled for a serial console connection. Possible values include: 'enabled', 'disabled'
+* **state**: 'disabled' | 'enabled': Specifies whether the port is enabled for a serial console connection.
 

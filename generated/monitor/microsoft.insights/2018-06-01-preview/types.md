@@ -25,13 +25,13 @@
 ## GuestDiagnosticSettings
 ### Properties
 * **dataSources**: [DataSource](#datasource)[]: the array of data source object which are configured to collect and send data
-* **osType**: 'Linux' | 'Windows': Operating system type for the configuration. Possible values include: 'Windows', 'Linux'
+* **osType**: 'Linux' | 'Windows': Operating system type for the configuration.
 * **proxySetting**: string:
 
 ## DataSource
 ### Properties
 * **configuration**: [DataSourceConfiguration](#datasourceconfiguration) (Required):
-* **kind**: 'ETWProviders' | 'PerformanceCounter' | 'WindowsEventLogs' (Required): Datasource kind. Possible values include: 'PerformanceCounter', 'ETWProviders', 'WindowsEventLogs'
+* **kind**: 'ETWProviders' | 'PerformanceCounter' | 'WindowsEventLogs' (Required): Datasource kind.
 * **sinks**: [SinkConfiguration](#sinkconfiguration)[] (Required):
 
 ## DataSourceConfiguration
@@ -64,7 +64,7 @@
 
 ## SinkConfiguration
 ### Properties
-* **kind**: 'ApplicationInsights' | 'EventHub' | 'LogAnalytics' (Required): Possible values include: 'EventHub', 'ApplicationInsights', 'LogAnalytics'
+* **kind**: 'ApplicationInsights' | 'EventHub' | 'LogAnalytics' (Required):
 
 ## Dictionary<string,String>
 ### Properties

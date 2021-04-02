@@ -16,7 +16,7 @@
 * **lastModified**: string (ReadOnly): Date the Media Graph was last modified
 * **sinks**: [MediaGraphSink](#mediagraphsink)[] (Required): Media Graph sinks
 * **sources**: [MediaGraphSource](#mediagraphsource)[] (Required): Media Graph sources
-* **state**: 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Media Graph state. Possible values include: 'Running', 'Starting', 'Stopped', 'Stopping'
+* **state**: 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Media Graph state.
 
 ## MediaGraphSink
 * **Discriminator**: @odata.type

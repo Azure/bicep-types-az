@@ -50,7 +50,7 @@
 * **displayName**: string: The managed application definition display name.
 * **isEnabled**: bool: A value indicating whether the package is enabled or not.
 * **lockingPolicy**: [ApplicationPackageLockingPolicyDefinition](#applicationpackagelockingpolicydefinition): Managed application locking policy.
-* **lockLevel**: 'CanNotDelete' | 'None' | 'ReadOnly' (Required): The managed application lock level. Possible values include: 'CanNotDelete', 'ReadOnly', 'None'
+* **lockLevel**: 'CanNotDelete' | 'None' | 'ReadOnly' (Required): The managed application lock level.
 * **mainTemplate**: any: The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.
 * **managementPolicy**: [ApplicationManagementPolicy](#applicationmanagementpolicy): Managed application management policy.
 * **notificationPolicy**: [ApplicationNotificationPolicy](#applicationnotificationpolicy): Managed application notification policy.
@@ -59,8 +59,8 @@
 
 ## ApplicationDefinitionArtifact
 ### Properties
-* **name**: 'ApplicationResourceTemplate' | 'CreateUiDefinition' | 'MainTemplateParameters' | 'NotSpecified' (Required): The managed application definition artifact name. Possible values include: 'NotSpecified', 'ApplicationResourceTemplate', 'CreateUiDefinition', 'MainTemplateParameters'
-* **type**: 'Custom' | 'NotSpecified' | 'Template' (Required): The managed application definition artifact type. Possible values include: 'NotSpecified', 'Template', 'Custom'
+* **name**: 'ApplicationResourceTemplate' | 'CreateUiDefinition' | 'MainTemplateParameters' | 'NotSpecified' (Required): The managed application definition artifact name.
+* **type**: 'Custom' | 'NotSpecified' | 'Template' (Required): The managed application definition artifact type.
 * **uri**: string (Required): The managed application definition artifact blob uri.
 
 ## ApplicationAuthorization
@@ -70,7 +70,7 @@
 
 ## ApplicationDeploymentPolicy
 ### Properties
-* **deploymentMode**: 'Complete' | 'Incremental' | 'NotSpecified' (Required): The managed application deployment mode. Possible values include: 'NotSpecified', 'Incremental', 'Complete'
+* **deploymentMode**: 'Complete' | 'Incremental' | 'NotSpecified' (Required): The managed application deployment mode.
 
 ## ApplicationPackageLockingPolicyDefinition
 ### Properties
@@ -78,7 +78,7 @@
 
 ## ApplicationManagementPolicy
 ### Properties
-* **mode**: 'Managed' | 'NotSpecified' | 'Unmanaged': The managed application management mode. Possible values include: 'NotSpecified', 'Unmanaged', 'Managed'
+* **mode**: 'Managed' | 'NotSpecified' | 'Unmanaged': The managed application management mode.
 
 ## ApplicationNotificationPolicy
 ### Properties
@@ -112,7 +112,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The identity type. Possible values include: 'SystemAssigned', 'UserAssigned', 'SystemAssigned, UserAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The identity type.
 * **userAssignedIdentities**: [Dictionary<string,UserAssignedResourceIdentity>](#dictionarystringuserassignedresourceidentity): The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## Dictionary<string,UserAssignedResourceIdentity>
@@ -143,18 +143,18 @@
 * **customerSupport**: [ApplicationPackageContact](#applicationpackagecontact) (ReadOnly): The application package contact information.
 * **jitAccessPolicy**: [ApplicationJitAccessPolicy](#applicationjitaccesspolicy): Managed application Jit access policy.
 * **managedResourceGroupId**: string: The managed resource group Id.
-* **managementMode**: 'Managed' | 'NotSpecified' | 'Unmanaged' (ReadOnly): The managed application management mode. Possible values include: 'NotSpecified', 'Unmanaged', 'Managed'
+* **managementMode**: 'Managed' | 'NotSpecified' | 'Unmanaged' (ReadOnly): The managed application management mode.
 * **outputs**: any (ReadOnly): Name and value pairs that define the managed application outputs.
 * **parameters**: any: Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The managed application provisioning state. Possible values include: 'NotSpecified', 'Accepted', 'Running', 'Ready', 'Creating', 'Created', 'Deleting', 'Deleted', 'Canceled', 'Failed', 'Succeeded', 'Updating'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The managed application provisioning state.
 * **publisherTenantId**: string (ReadOnly): The publisher tenant Id.
 * **supportUrls**: [ApplicationPackageSupportUrls](#applicationpackagesupporturls) (ReadOnly): The appliance package support URLs.
 * **updatedBy**: [ApplicationClientDetails](#applicationclientdetails) (ReadOnly): The application client details to track the entity creating/updating the managed app resource.
 
 ## ApplicationArtifact
 ### Properties
-* **name**: 'Authorizations' | 'CustomRoleDefinition' | 'NotSpecified' | 'ViewDefinition' (Required): The managed application artifact name. Possible values include: 'NotSpecified', 'ViewDefinition', 'Authorizations', 'CustomRoleDefinition'
-* **type**: 'Custom' | 'NotSpecified' | 'Template' (Required): The managed application artifact type. Possible values include: 'NotSpecified', 'Template', 'Custom'
+* **name**: 'Authorizations' | 'CustomRoleDefinition' | 'NotSpecified' | 'ViewDefinition' (Required): The managed application artifact name.
+* **type**: 'Custom' | 'NotSpecified' | 'Template' (Required): The managed application artifact type.
 * **uri**: string (Required): The managed application artifact blob uri.
 
 ## ApplicationBillingDetailsDefinition
@@ -176,7 +176,7 @@
 ## ApplicationJitAccessPolicy
 ### Properties
 * **jitAccessEnabled**: bool (Required): Whether the JIT access is enabled.
-* **jitApprovalMode**: 'AutoApprove' | 'ManualApprove' | 'NotSpecified': JIT approval mode. Possible values include: 'NotSpecified', 'AutoApprove', 'ManualApprove'
+* **jitApprovalMode**: 'AutoApprove' | 'ManualApprove' | 'NotSpecified': JIT approval mode.
 * **jitApprovers**: [JitApproverDefinition](#jitapproverdefinition)[]: The JIT approvers
 * **maximumJitAccessDuration**: string: The maximum duration JIT access is granted. This is an ISO8601 time period value.
 
@@ -184,7 +184,7 @@
 ### Properties
 * **displayName**: string: The approver display name.
 * **id**: string (Required): The approver service principal Id.
-* **type**: 'group' | 'user': The approver type. Possible values include: 'user', 'group'
+* **type**: 'group' | 'user': The approver type.
 
 ## ApplicationPackageSupportUrls
 ### Properties
@@ -201,9 +201,9 @@
 * **applicationResourceId**: string (Required): The parent application id.
 * **createdBy**: [ApplicationClientDetails](#applicationclientdetails) (ReadOnly): The application client details to track the entity creating/updating the managed app resource.
 * **jitAuthorizationPolicies**: [JitAuthorizationPolicies](#jitauthorizationpolicies)[] (Required): The JIT authorization policies.
-* **jitRequestState**: 'Approved' | 'Canceled' | 'Denied' | 'Expired' | 'Failed' | 'NotSpecified' | 'Pending' | 'Timeout' (ReadOnly): The JIT request state. Possible values include: 'NotSpecified', 'Pending', 'Approved', 'Denied', 'Failed', 'Canceled', 'Expired', 'Timeout'
+* **jitRequestState**: 'Approved' | 'Canceled' | 'Denied' | 'Expired' | 'Failed' | 'NotSpecified' | 'Pending' | 'Timeout' (ReadOnly): The JIT request state.
 * **jitSchedulingPolicy**: [JitSchedulingPolicy](#jitschedulingpolicy) (Required): The JIT scheduling policies.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The JIT request provisioning state. Possible values include: 'NotSpecified', 'Accepted', 'Running', 'Ready', 'Creating', 'Created', 'Deleting', 'Deleted', 'Canceled', 'Failed', 'Succeeded', 'Updating'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The JIT request provisioning state.
 * **publisherTenantId**: string (ReadOnly): The publisher tenant id.
 * **updatedBy**: [ApplicationClientDetails](#applicationclientdetails) (ReadOnly): The application client details to track the entity creating/updating the managed app resource.
 
@@ -216,7 +216,7 @@
 ### Properties
 * **duration**: string (Required):
 * **startTime**: string (Required): The start time of the request.
-* **type**: 'NotSpecified' | 'Once' | 'Recurring' (Required): The type of JIT schedule. Possible values include: 'NotSpecified', 'Once', 'Recurring'
+* **type**: 'NotSpecified' | 'Once' | 'Recurring' (Required): The type of JIT schedule.
 
 ## Dictionary<string,String>
 ### Properties

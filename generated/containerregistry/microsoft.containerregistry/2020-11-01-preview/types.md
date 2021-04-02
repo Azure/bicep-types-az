@@ -116,7 +116,7 @@
 ### Properties
 * **principalId**: string: The principal ID of resource identity.
 * **tenantId**: string: The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The identity type. Possible values include: 'SystemAssigned', 'UserAssigned', 'SystemAssigned, UserAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The identity type.
 * **userAssignedIdentities**: [Dictionary<string,UserIdentityProperties>](#dictionarystringuseridentityproperties): The list of user identities associated with the resource. The user identity
 dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
@@ -141,19 +141,19 @@ dictionary key references will be ARM resource ids in the form:
 * **dataEndpointHostNames**: string[] (ReadOnly): List of host names that will serve data when dataEndpointEnabled is true.
 * **encryption**: [EncryptionProperty](#encryptionproperty):
 * **loginServer**: string (ReadOnly): The URL that can be used to log into the container registry.
-* **networkRuleBypassOptions**: 'AzureServices' | 'None': Whether to allow trusted Azure services to access a network restricted registry. Possible values include: 'AzureServices', 'None'
+* **networkRuleBypassOptions**: 'AzureServices' | 'None': Whether to allow trusted Azure services to access a network restricted registry.
 * **networkRuleSet**: [NetworkRuleSet](#networkruleset): The network rule set for a container registry.
 * **policies**: [Policies](#policies): The policies for a container registry.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections for a container registry.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the container registry at the time the operation was called. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public network access is allowed for the container registry. Possible values include: 'Enabled', 'Disabled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the container registry at the time the operation was called.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public network access is allowed for the container registry.
 * **status**: [Status](#status) (ReadOnly): The status of an Azure resource at the time the operation was called.
-* **zoneRedundancy**: 'Disabled' | 'Enabled': Whether or not zone redundancy is enabled for this container registry. Possible values include: 'Enabled', 'Disabled'
+* **zoneRedundancy**: 'Disabled' | 'Enabled': Whether or not zone redundancy is enabled for this container registry.
 
 ## EncryptionProperty
 ### Properties
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties):
-* **status**: 'disabled' | 'enabled': Indicates whether or not the encryption is enabled for container registry. Possible values include: 'enabled', 'disabled'
+* **status**: 'disabled' | 'enabled': Indicates whether or not the encryption is enabled for container registry.
 
 ## KeyVaultProperties
 ### Properties
@@ -165,18 +165,18 @@ dictionary key references will be ARM resource ids in the form:
 
 ## NetworkRuleSet
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny' (Required): The default action of allow or deny when no other rules match. Possible values include: 'Allow', 'Deny'
+* **defaultAction**: 'Allow' | 'Deny' (Required): The default action of allow or deny when no other rules match.
 * **ipRules**: [IPRule](#iprule)[]: The IP ACL rules.
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: The virtual network rules.
 
 ## IPRule
 ### Properties
-* **action**: 'Allow': The action of IP ACL rule. Possible values include: 'Allow'
+* **action**: 'Allow': The action of IP ACL rule.
 * **value**: string (Required): Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
 
 ## VirtualNetworkRule
 ### Properties
-* **action**: 'Allow': The action of virtual network rule. Possible values include: 'Allow'
+* **action**: 'Allow': The action of virtual network rule.
 * **id**: string (Required): Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
 
 ## Policies
@@ -187,18 +187,18 @@ dictionary key references will be ARM resource ids in the form:
 
 ## QuarantinePolicy
 ### Properties
-* **status**: 'disabled' | 'enabled': The value that indicates whether the policy is enabled or not. Possible values include: 'enabled', 'disabled'
+* **status**: 'disabled' | 'enabled': The value that indicates whether the policy is enabled or not.
 
 ## RetentionPolicy
 ### Properties
 * **days**: int: The number of days to retain an untagged manifest after which it gets purged.
 * **lastUpdatedTime**: string (ReadOnly): The timestamp when the policy was last updated.
-* **status**: 'disabled' | 'enabled': The value that indicates whether the policy is enabled or not. Possible values include: 'enabled', 'disabled'
+* **status**: 'disabled' | 'enabled': The value that indicates whether the policy is enabled or not.
 
 ## TrustPolicy
 ### Properties
-* **status**: 'disabled' | 'enabled': The value that indicates whether the policy is enabled or not. Possible values include: 'enabled', 'disabled'
-* **type**: 'Notary': The type of trust policy. Possible values include: 'Notary'
+* **status**: 'disabled' | 'enabled': The value that indicates whether the policy is enabled or not.
+* **type**: 'Notary': The type of trust policy.
 
 ## PrivateEndpointConnection
 ### Properties
@@ -212,7 +212,7 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): The state of a private link service connection.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of private endpoint connection resource. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of private endpoint connection resource.
 
 ## PrivateEndpoint
 ### Properties
@@ -220,18 +220,18 @@ dictionary key references will be ARM resource ids in the form:
 
 ## PrivateLinkServiceConnectionState
 ### Properties
-* **actionsRequired**: 'None' | 'Recreate': A message indicating if changes on the service provider require any updates on the consumer. Possible values include: 'None', 'Recreate'
+* **actionsRequired**: 'None' | 'Recreate': A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The description for connection status. For example if connection is rejected it can indicate reason for rejection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': The private link service connection status. Possible values include: 'Approved', 'Pending', 'Rejected', 'Disconnected'
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': The private link service connection status.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource modification (UTC).
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Status
 ### Properties
@@ -241,8 +241,8 @@ dictionary key references will be ARM resource ids in the form:
 
 ## Sku
 ### Properties
-* **name**: 'Basic' | 'Classic' | 'Premium' | 'Standard' (Required): The SKU name of the container registry. Required for registry creation. Possible values include: 'Classic', 'Basic', 'Standard', 'Premium'
-* **tier**: 'Basic' | 'Classic' | 'Premium' | 'Standard' (ReadOnly): The SKU tier based on the SKU name. Possible values include: 'Classic', 'Basic', 'Standard', 'Premium'
+* **name**: 'Basic' | 'Classic' | 'Premium' | 'Standard' (Required): The SKU name of the container registry. Required for registry creation.
+* **tier**: 'Basic' | 'Classic' | 'Premium' | 'Standard' (ReadOnly): The SKU tier based on the SKU name.
 
 ## Dictionary<string,String>
 ### Properties
@@ -253,24 +253,24 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **activation**: [ActivationProperties](#activationproperties) (ReadOnly): The activation properties of the connected registry.
 * **clientTokenIds**: string[]: The list of the ACR token resource IDs used to authenticate clients to the connected registry.
-* **connectionState**: 'Offline' | 'Online' | 'Syncing' | 'Unhealthy' (ReadOnly): The current connection state of the connected registry. Possible values include: 'Online', 'Offline', 'Syncing', 'Unhealthy'
+* **connectionState**: 'Offline' | 'Online' | 'Syncing' | 'Unhealthy' (ReadOnly): The current connection state of the connected registry.
 * **lastActivityTime**: string (ReadOnly): The last activity time of the connected registry.
 * **logging**: [LoggingProperties](#loggingproperties): The logging properties of the connected registry.
 * **loginServer**: [LoginServerProperties](#loginserverproperties): The login server properties of the connected registry.
-* **mode**: 'Mirror' | 'Registry' (Required): The mode of the connected registry resource that indicates the permissions of the registry. Possible values include: 'Registry', 'Mirror'
+* **mode**: 'Mirror' | 'Registry' (Required): The mode of the connected registry resource that indicates the permissions of the registry.
 * **parent**: [ParentProperties](#parentproperties) (Required): The properties of the connected registry parent.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource.
 * **statusDetails**: [StatusDetailProperties](#statusdetailproperties)[] (ReadOnly): The list of current statuses of the connected registry.
 * **version**: string (ReadOnly): The current version of ACR runtime on the connected registry.
 
 ## ActivationProperties
 ### Properties
-* **status**: 'Active' | 'Inactive' (ReadOnly): The activation status of the connected registry. Possible values include: 'Active', 'Inactive'
+* **status**: 'Active' | 'Inactive' (ReadOnly): The activation status of the connected registry.
 
 ## LoggingProperties
 ### Properties
-* **auditLogStatus**: 'Disabled' | 'Enabled': Indicates whether audit logs are enabled on the connected registry. Possible values include: 'Enabled', 'Disabled'
-* **logLevel**: 'Debug' | 'Error' | 'Information' | 'None' | 'Warning': The verbosity of logs persisted on the connected registry. Possible values include: 'Debug', 'Information', 'Warning', 'Error', 'None'
+* **auditLogStatus**: 'Disabled' | 'Enabled': Indicates whether audit logs are enabled on the connected registry.
+* **logLevel**: 'Debug' | 'Error' | 'Information' | 'None' | 'Warning': The verbosity of logs persisted on the connected registry.
 
 ## LoginServerProperties
 ### Properties
@@ -280,12 +280,12 @@ dictionary key references will be ARM resource ids in the form:
 ## TlsProperties
 ### Properties
 * **certificate**: [TlsCertificateProperties](#tlscertificateproperties) (ReadOnly): The TLS certificate properties of the connected registry login server.
-* **status**: 'Disabled' | 'Enabled' (ReadOnly): Indicates whether HTTPS is enabled for the login server. Possible values include: 'Enabled', 'Disabled'
+* **status**: 'Disabled' | 'Enabled' (ReadOnly): Indicates whether HTTPS is enabled for the login server.
 
 ## TlsCertificateProperties
 ### Properties
 * **location**: string (ReadOnly): Indicates the location of the certificates.
-* **type**: 'LocalDirectory' (ReadOnly): The type of certificate location. Possible values include: 'LocalDirectory'
+* **type**: 'LocalDirectory' (ReadOnly): The type of certificate location.
 
 ## ParentProperties
 ### Properties
@@ -312,7 +312,7 @@ dictionary key references will be ARM resource ids in the form:
 ## ExportPipelineProperties
 ### Properties
 * **options**: 'ContinueOnErrors' | 'DeleteSourceBlobOnSuccess' | 'OverwriteBlobs' | 'OverwriteTags'[]: The list of all options configured for the pipeline.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the pipeline at the time the operation was called. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the pipeline at the time the operation was called.
 * **target**: [ExportPipelineTargetProperties](#exportpipelinetargetproperties) (Required): The properties of the export pipeline target.
 
 ## ExportPipelineTargetProperties
@@ -326,14 +326,14 @@ When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/co
 ## ImportPipelineProperties
 ### Properties
 * **options**: 'ContinueOnErrors' | 'DeleteSourceBlobOnSuccess' | 'OverwriteBlobs' | 'OverwriteTags'[]: The list of all options configured for the pipeline.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the pipeline at the time the operation was called. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the pipeline at the time the operation was called.
 * **source**: [ImportPipelineSourceProperties](#importpipelinesourceproperties) (Required): The properties of the import pipeline source.
 * **trigger**: [PipelineTriggerProperties](#pipelinetriggerproperties):
 
 ## ImportPipelineSourceProperties
 ### Properties
 * **keyVaultUri**: string (Required): They key vault secret uri to obtain the source storage SAS token.
-* **type**: 'AzureStorageBlobContainer': The type of source for the import pipeline. Possible values include: 'AzureStorageBlobContainer'
+* **type**: 'AzureStorageBlobContainer': The type of source for the import pipeline.
 * **uri**: string: The source uri of the import pipeline.
 When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
 When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/containerName"
@@ -344,12 +344,12 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 
 ## PipelineSourceTriggerProperties
 ### Properties
-* **status**: 'Disabled' | 'Enabled' (Required): The current status of the source trigger. Possible values include: 'Enabled', 'Disabled'
+* **status**: 'Disabled' | 'Enabled' (Required): The current status of the source trigger.
 
 ## PipelineRunProperties
 ### Properties
 * **forceUpdateTag**: string: How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of a pipeline run. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of a pipeline run.
 * **request**: [PipelineRunRequest](#pipelinerunrequest): The request properties provided for a pipeline run.
 * **response**: [PipelineRunResponse](#pipelinerunresponse) (ReadOnly): The response properties returned for a pipeline run.
 
@@ -367,12 +367,12 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
 ## PipelineRunSourceProperties
 ### Properties
 * **name**: string: The name of the source.
-* **type**: 'AzureStorageBlob': The type of the source. Possible values include: 'AzureStorageBlob'
+* **type**: 'AzureStorageBlob': The type of the source.
 
 ## PipelineRunTargetProperties
 ### Properties
 * **name**: string: The name of the target.
-* **type**: 'AzureStorageBlob': The type of the target. Possible values include: 'AzureStorageBlob'
+* **type**: 'AzureStorageBlob': The type of the target.
 
 ## PipelineRunResponse
 ### Properties
@@ -401,10 +401,10 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
 
 ## ReplicationProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the replication at the time the operation was called. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the replication at the time the operation was called.
 * **regionEndpointEnabled**: bool: Specifies whether the replication's regional endpoint is enabled. Requests will not be routed to a replication whose regional endpoint is disabled, however its data will continue to be synced with other replications.
 * **status**: [Status](#status) (ReadOnly): The status of an Azure resource at the time the operation was called.
-* **zoneRedundancy**: 'Disabled' | 'Enabled': Whether or not zone redundancy is enabled for this container registry replication. Possible values include: 'Enabled', 'Disabled'
+* **zoneRedundancy**: 'Disabled' | 'Enabled': Whether or not zone redundancy is enabled for this container registry replication.
 
 ## Dictionary<string,String>
 ### Properties
@@ -418,16 +418,16 @@ E.g. repositories/repository-name/content/read,
 repositories/repository-name/metadata/write
 * **creationDate**: string (ReadOnly): The creation date of scope map.
 * **description**: string: The user friendly description of the scope map.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource.
 * **type**: string (ReadOnly): The type of the scope map. E.g. BuildIn scope map.
 
 ## TokenProperties
 ### Properties
 * **creationDate**: string (ReadOnly): The creation date of scope map.
 * **credentials**: [TokenCredentialsProperties](#tokencredentialsproperties): The properties of the credentials that can be used for authenticating the token.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource.
 * **scopeMapId**: string: The resource ID of the scope map to which the token will be associated with.
-* **status**: 'disabled' | 'enabled': The status of the token example enabled or disabled. Possible values include: 'enabled', 'disabled'
+* **status**: 'disabled' | 'enabled': The status of the token example enabled or disabled.
 
 ## TokenCredentialsProperties
 ### Properties
@@ -438,24 +438,24 @@ repositories/repository-name/metadata/write
 ### Properties
 * **encodedPemCertificate**: string: Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
 * **expiry**: string: The expiry datetime of the certificate.
-* **name**: 'certificate1' | 'certificate2': Possible values include: 'certificate1', 'certificate2'
+* **name**: 'certificate1' | 'certificate2':
 * **thumbprint**: string: The thumbprint of the certificate.
 
 ## TokenPassword
 ### Properties
 * **creationTime**: string: The creation datetime of the password.
 * **expiry**: string: The expiry datetime of the password.
-* **name**: 'password1' | 'password2': The password name "password1" or "password2". Possible values include: 'password1', 'password2'
+* **name**: 'password1' | 'password2': The password name "password1" or "password2".
 * **value**: string (ReadOnly): The password value.
 
 ## WebhookPropertiesCreateParameters
 ### Properties
 * **actions**: 'chart_delete' | 'chart_push' | 'delete' | 'push' | 'quarantine'[] (Required): The list of actions that trigger the webhook to post notifications.
 * **customHeaders**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly): Custom headers that will be added to the webhook notifications.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the webhook at the time the operation was called. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the webhook at the time the operation was called.
 * **scope**: string: The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events.
 * **serviceUri**: string (Required, WriteOnly): The service URI for the webhook to post notifications.
-* **status**: 'disabled' | 'enabled': The status of the webhook at the time the operation was called. Possible values include: 'enabled', 'disabled'
+* **status**: 'disabled' | 'enabled': The status of the webhook at the time the operation was called.
 
 ## Dictionary<string,String>
 ### Properties

@@ -14,4 +14,4 @@ Processing batch task - {"tag":"schema-iotsecurity-2021-02-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 INFORMATION: Resource type Microsoft.IoTSecurity/onPremiseSensors under path '/subscriptions/{subscriptionId}/providers/Microsoft.IoTSecurity/onPremiseSensors/{onPremiseSensorName}' has no body defined.
-[7.68 s] Generation Complete
+[11.7 s] Generation Complete

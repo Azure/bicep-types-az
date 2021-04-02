@@ -18,7 +18,7 @@
 * **policyAssignmentId**: string: The resource ID of the policy assignment that should be remediated.
 * **policyDefinitionReferenceId**: string: The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
 * **provisioningState**: string (ReadOnly): The status of the remediation.
-* **resourceDiscoveryMode**: 'ExistingNonCompliant' | 'ReEvaluateCompliance': The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified. Possible values include: 'ExistingNonCompliant', 'ReEvaluateCompliance'
+* **resourceDiscoveryMode**: 'ExistingNonCompliant' | 'ReEvaluateCompliance': The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
 
 ## RemediationDeploymentSummary
 ### Properties

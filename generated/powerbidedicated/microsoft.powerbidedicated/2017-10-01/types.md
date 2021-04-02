@@ -16,8 +16,8 @@
 ### Properties
 * **administration**: [DedicatedCapacityAdministrators](#dedicatedcapacityadministrators): An array of administrator user identities
 * **mode**: string (ReadOnly): The capacity mode.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current deployment state of PowerBI Dedicated resource. The provisioningState is to indicate states for resource provisioning. Possible values include: 'Deleting', 'Succeeded', 'Failed', 'Paused', 'Suspended', 'Provisioning', 'Updating', 'Suspending', 'Pausing', 'Resuming', 'Preparing', 'Scaling'
-* **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current state of PowerBI Dedicated resource. The state is to indicate more states outside of resource provisioning. Possible values include: 'Deleting', 'Succeeded', 'Failed', 'Paused', 'Suspended', 'Provisioning', 'Updating', 'Suspending', 'Pausing', 'Resuming', 'Preparing', 'Scaling'
+* **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current deployment state of PowerBI Dedicated resource. The provisioningState is to indicate states for resource provisioning.
+* **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current state of PowerBI Dedicated resource. The state is to indicate more states outside of resource provisioning.
 
 ## DedicatedCapacityAdministrators
 ### Properties
@@ -26,7 +26,7 @@
 ## ResourceSku
 ### Properties
 * **name**: string (Required): Name of the SKU level.
-* **tier**: 'PBIE_Azure': The name of the Azure pricing tier to which the SKU applies. Possible values include: 'PBIE_Azure'
+* **tier**: 'PBIE_Azure': The name of the Azure pricing tier to which the SKU applies.
 
 ## Dictionary<string,String>
 ### Properties

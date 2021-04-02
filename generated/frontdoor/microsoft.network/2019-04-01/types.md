@@ -16,13 +16,13 @@
 * **backendPools**: [BackendPool](#backendpool)[]: Backend pools available to routing rules.
 * **backendPoolsSettings**: [BackendPoolsSettings](#backendpoolssettings): Settings that apply to all backend pools.
 * **cname**: string (ReadOnly): The host that each frontendEndpoint must CNAME to.
-* **enabledState**: 'Disabled' | 'Enabled': Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'. Possible values include: 'Enabled', 'Disabled'
+* **enabledState**: 'Disabled' | 'Enabled': Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'.
 * **friendlyName**: string: A friendly name for the frontDoor
 * **frontendEndpoints**: [FrontendEndpoint](#frontendendpoint)[]: Frontend endpoints available to routing rules.
 * **healthProbeSettings**: [HealthProbeSettingsModel](#healthprobesettingsmodel)[]: Health probe settings associated with this Front Door instance.
 * **loadBalancingSettings**: [LoadBalancingSettingsModel](#loadbalancingsettingsmodel)[]: Load balancing settings associated with this Front Door instance.
 * **provisioningState**: string (ReadOnly): Provisioning state of the Front Door.
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status of the Front Door. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status of the Front Door.
 * **routingRules**: [RoutingRule](#routingrule)[]: Routing rules associated with this Front Door.
 
 ## BackendPool
@@ -37,13 +37,13 @@
 * **backends**: [Backend](#backend)[]: The set of backends for this pool
 * **healthProbeSettings**: [SubResource](#subresource): Reference to another subresource.
 * **loadBalancingSettings**: [SubResource](#subresource): Reference to another subresource.
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status.
 
 ## Backend
 ### Properties
 * **address**: string: Location of the backend (IP address or FQDN)
 * **backendHostHeader**: string: The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
-* **enabledState**: 'Disabled' | 'Enabled': Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'. Possible values include: 'Enabled', 'Disabled'
+* **enabledState**: 'Disabled' | 'Enabled': Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'.
 * **httpPort**: int: The HTTP TCP port number. Must be between 1 and 65535.
 * **httpsPort**: int: The HTTPS TCP port number. Must be between 1 and 65535.
 * **priority**: int: Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
@@ -55,7 +55,7 @@
 
 ## BackendPoolsSettings
 ### Properties
-* **enforceCertificateNameCheck**: 'Disabled' | 'Enabled': Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests. Possible values include: 'Enabled', 'Disabled'
+* **enforceCertificateNameCheck**: 'Disabled' | 'Enabled': Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.
 
 ## FrontendEndpoint
 ### Properties
@@ -67,24 +67,24 @@
 ## FrontendEndpointProperties
 ### Properties
 * **customHttpsConfiguration**: [CustomHttpsConfiguration](#customhttpsconfiguration) (ReadOnly): Https settings for a domain
-* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly): Provisioning status of Custom Https of the frontendEndpoint. Possible values include: 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Failed'
-* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. Possible values include: 'SubmittingDomainControlValidationRequest', 'PendingDomainControlValidationREquestApproval', 'DomainControlValidationRequestApproved', 'DomainControlValidationRequestRejected', 'DomainControlValidationRequestTimedOut', 'IssuingCertificate', 'DeployingCertificate', 'CertificateDeployed', 'DeletingCertificate', 'CertificateDeleted'
+* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly): Provisioning status of Custom Https of the frontendEndpoint.
+* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
 * **hostName**: string: The host name of the frontendEndpoint. Must be a domain name.
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
-* **sessionAffinityEnabledState**: 'Disabled' | 'Enabled': Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'. Possible values include: 'Enabled', 'Disabled'
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status.
+* **sessionAffinityEnabledState**: 'Disabled' | 'Enabled': Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'.
 * **sessionAffinityTtlSeconds**: int: UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
 * **webApplicationFirewallPolicyLink**: [schemas:31_webApplicationFirewallPolicyLink](#schemas31webapplicationfirewallpolicylink): Defines the Web Application Firewall policy for each host (if applicable)
 
 ## CustomHttpsConfiguration
 ### Properties
-* **certificateSource**: 'AzureKeyVault' | 'FrontDoor': Defines the source of the SSL certificate. Possible values include: 'AzureKeyVault', 'FrontDoor'
+* **certificateSource**: 'AzureKeyVault' | 'FrontDoor': Defines the source of the SSL certificate.
 * **frontDoorCertificateSourceParameters**: [FrontDoorCertificateSourceParameters](#frontdoorcertificatesourceparameters): Parameters required for enabling SSL with Front Door-managed certificates
 * **keyVaultCertificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters): Parameters required for bring-your-own-certification via Key Vault
-* **protocolType**: 'ServerNameIndication': Defines the TLS extension protocol that is used for secure delivery. Possible values include: 'ServerNameIndication'
+* **protocolType**: 'ServerNameIndication': Defines the TLS extension protocol that is used for secure delivery.
 
 ## FrontDoorCertificateSourceParameters
 ### Properties
-* **certificateType**: 'Dedicated': Defines the type of the certificate used for secure connections to a frontendEndpoint. Possible values include: 'Dedicated'
+* **certificateType**: 'Dedicated': Defines the type of the certificate used for secure connections to a frontendEndpoint.
 
 ## KeyVaultCertificateSourceParameters
 ### Properties
@@ -111,8 +111,8 @@
 ### Properties
 * **intervalInSeconds**: int: The number of seconds between health probes.
 * **path**: string: The path to use for the health probe. Default is /
-* **protocol**: 'Http' | 'Https': Protocol scheme to use for this probe. Possible values include: 'Http', 'Https'
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
+* **protocol**: 'Http' | 'Https': Protocol scheme to use for this probe.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status.
 
 ## LoadBalancingSettingsModel
 ### Properties
@@ -124,7 +124,7 @@
 ## LoadBalancingSettingsProperties
 ### Properties
 * **additionalLatencyMilliseconds**: int: The additional latency in milliseconds for probes to fall into the lowest latency bucket
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status.
 * **sampleSize**: int: The number of samples to consider for load balancing decisions
 * **successfulSamplesRequired**: int: The number of samples within the sample period that must succeed
 
@@ -138,10 +138,10 @@
 ## RoutingRuleProperties
 ### Properties
 * **acceptedProtocols**: 'Http' | 'Https'[]: Protocol schemes to match for this rule
-* **enabledState**: 'Disabled' | 'Enabled': Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'. Possible values include: 'Enabled', 'Disabled'
+* **enabledState**: 'Disabled' | 'Enabled': Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'.
 * **frontendEndpoints**: [SubResource](#subresource)[]: Frontend endpoints associated with this rule
 * **patternsToMatch**: string[]: The route patterns of the rule.
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status. Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status.
 * **routeConfiguration**: [RouteConfiguration](#routeconfiguration): Base class for all types of Route.
 
 ## RouteConfiguration
@@ -153,7 +153,7 @@
 * **backendPool**: [SubResource](#subresource): Reference to another subresource.
 * **cacheConfiguration**: [CacheConfiguration](#cacheconfiguration): Caching settings for a caching-type route. To disable caching, do not provide a cacheConfiguration object.
 * **customForwardingPath**: string: A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
-* **forwardingProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest': Protocol this rule will use when forwarding traffic to backends. Possible values include: 'HttpOnly', 'HttpsOnly', 'MatchRequest'
+* **forwardingProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest': Protocol this rule will use when forwarding traffic to backends.
 
 ### #Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration
 #### Properties
@@ -162,8 +162,8 @@
 * **customHost**: string: Host to redirect. Leave empty to use the incoming host as the destination host.
 * **customPath**: string: The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
 * **customQueryString**: string: The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.
-* **redirectProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest': The protocol of the destination to where the traffic is redirected. Possible values include: 'HttpOnly', 'HttpsOnly', 'MatchRequest'
-* **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect': The redirect type the rule will use when redirecting traffic. Possible values include: 'Moved', 'Found', 'TemporaryRedirect', 'PermanentRedirect'
+* **redirectProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest': The protocol of the destination to where the traffic is redirected.
+* **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect': The redirect type the rule will use when redirecting traffic.
 
 
 ## #Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration
@@ -172,12 +172,12 @@
 * **backendPool**: [SubResource](#subresource): Reference to another subresource.
 * **cacheConfiguration**: [CacheConfiguration](#cacheconfiguration): Caching settings for a caching-type route. To disable caching, do not provide a cacheConfiguration object.
 * **customForwardingPath**: string: A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
-* **forwardingProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest': Protocol this rule will use when forwarding traffic to backends. Possible values include: 'HttpOnly', 'HttpsOnly', 'MatchRequest'
+* **forwardingProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest': Protocol this rule will use when forwarding traffic to backends.
 
 ## CacheConfiguration
 ### Properties
-* **dynamicCompression**: 'Disabled' | 'Enabled': Whether to use dynamic compression for cached content. Possible values include: 'Enabled', 'Disabled'
-* **queryParameterStripDirective**: 'StripAll' | 'StripNone': Treatment of URL query terms when forming the cache key. Possible values include: 'StripNone', 'StripAll'
+* **dynamicCompression**: 'Disabled' | 'Enabled': Whether to use dynamic compression for cached content.
+* **queryParameterStripDirective**: 'StripAll' | 'StripNone': Treatment of URL query terms when forming the cache key.
 
 ## #Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration
 ### Properties
@@ -186,8 +186,8 @@
 * **customHost**: string: Host to redirect. Leave empty to use the incoming host as the destination host.
 * **customPath**: string: The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
 * **customQueryString**: string: The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.
-* **redirectProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest': The protocol of the destination to where the traffic is redirected. Possible values include: 'HttpOnly', 'HttpsOnly', 'MatchRequest'
-* **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect': The redirect type the rule will use when redirecting traffic. Possible values include: 'Moved', 'Found', 'TemporaryRedirect', 'PermanentRedirect'
+* **redirectProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest': The protocol of the destination to where the traffic is redirected.
+* **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect': The redirect type the rule will use when redirecting traffic.
 
 ## Dictionary<string,String>
 ### Properties

@@ -31,7 +31,7 @@
 * **comments**: string: Comments.
 * **enableFileUploadNotifications**: bool: If True, file upload notifications are enabled.
 * **eventHubEndpoints**: [Dictionary<string,EventHubProperties>](#dictionarystringeventhubproperties): The Event Hub-compatible endpoint properties. The possible keys to this dictionary are events and operationsMonitoringEvents. Both of these keys have to be present in the dictionary while making create or update calls for the IoT hub.
-* **features**: 'DeviceManagement' | 'None': The capabilities and features enabled for the IoT hub. Possible values include: 'None', 'DeviceManagement'
+* **features**: 'DeviceManagement' | 'None': The capabilities and features enabled for the IoT hub.
 * **hostName**: string (ReadOnly): The name of the host.
 * **ipFilterRules**: [IpFilterRule](#ipfilterrule)[]: The IP filter rules.
 * **messagingEndpoints**: [Dictionary<string,MessagingEndpointProperties>](#dictionarystringmessagingendpointproperties): The messaging endpoint properties for the file upload notification queue.
@@ -43,7 +43,7 @@
 ### Properties
 * **keyName**: string (Required): The name of the shared access policy.
 * **primaryKey**: string: The primary key.
-* **rights**: 'DeviceConnect' | 'RegistryRead, DeviceConnect' | 'RegistryRead, RegistryWrite, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect' | 'RegistryRead, RegistryWrite' | 'RegistryRead, ServiceConnect, DeviceConnect' | 'RegistryRead, ServiceConnect' | 'RegistryRead' | 'RegistryWrite, DeviceConnect' | 'RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryWrite, ServiceConnect' | 'RegistryWrite' | 'ServiceConnect, DeviceConnect' | 'ServiceConnect' (Required): The permissions assigned to the shared access policy. Possible values include: 'RegistryRead', 'RegistryWrite', 'ServiceConnect', 'DeviceConnect', 'RegistryRead, RegistryWrite', 'RegistryRead, ServiceConnect', 'RegistryRead, DeviceConnect', 'RegistryWrite, ServiceConnect', 'RegistryWrite, DeviceConnect', 'ServiceConnect, DeviceConnect', 'RegistryRead, RegistryWrite, ServiceConnect', 'RegistryRead, RegistryWrite, DeviceConnect', 'RegistryRead, ServiceConnect, DeviceConnect', 'RegistryWrite, ServiceConnect, DeviceConnect', 'RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect'
+* **rights**: 'DeviceConnect' | 'RegistryRead, DeviceConnect' | 'RegistryRead, RegistryWrite, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect' | 'RegistryRead, RegistryWrite' | 'RegistryRead, ServiceConnect, DeviceConnect' | 'RegistryRead, ServiceConnect' | 'RegistryRead' | 'RegistryWrite, DeviceConnect' | 'RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryWrite, ServiceConnect' | 'RegistryWrite' | 'ServiceConnect, DeviceConnect' | 'ServiceConnect' (Required): The permissions assigned to the shared access policy.
 * **secondaryKey**: string: The secondary key.
 
 ## CloudToDeviceProperties
@@ -73,7 +73,7 @@
 
 ## IpFilterRule
 ### Properties
-* **action**: 'Accept' | 'Reject' (Required): The desired action for requests captured by this rule. Possible values include: 'Accept', 'Reject'
+* **action**: 'Accept' | 'Reject' (Required): The desired action for requests captured by this rule.
 * **filterName**: string (Required): The name of the IP filter rule.
 * **ipMask**: string (Required): A string that contains the IP address range in CIDR notation for the rule.
 
@@ -111,8 +111,8 @@
 ## IotHubSkuInfo
 ### Properties
 * **capacity**: int (Required): The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
-* **name**: 'F1' | 'S1' | 'S2' | 'S3' (Required): The name of the SKU. Possible values include: 'F1', 'S1', 'S2', 'S3'
-* **tier**: 'Free' | 'Standard' (ReadOnly): The billing tier for the IoT hub. Possible values include: 'Free', 'Standard'
+* **name**: 'F1' | 'S1' | 'S2' | 'S3' (Required): The name of the SKU.
+* **tier**: 'Free' | 'Standard' (ReadOnly): The billing tier for the IoT hub.
 
 ## Dictionary<string,String>
 ### Properties

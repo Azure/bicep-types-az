@@ -34,11 +34,11 @@
 ## ClusterProperties
 ### Properties
 * **hostName**: string (ReadOnly): DNS name of the cluster endpoint
-* **minimumTlsVersion**: '1.0' | '1.1' | '1.2': The minimum TLS version for the cluster to support, e.g. '1.2'. Possible values include: '1.0', '1.1', '1.2'
+* **minimumTlsVersion**: '1.0' | '1.1' | '1.2': The minimum TLS version for the cluster to support, e.g. '1.2'.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections associated with the specified RedisEnterprise cluster
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Current provisioning status of the cluster. Possible values include: 'Succeeded', 'Failed', 'Canceled', 'Creating', 'Updating', 'Deleting'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Current provisioning status of the cluster.
 * **redisVersion**: string (ReadOnly): Version of redis the cluster supports, e.g. '6'
-* **resourceState**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'Disabled' | 'DisableFailed' | 'Disabling' | 'EnableFailed' | 'Enabling' | 'Running' | 'UpdateFailed' | 'Updating' (ReadOnly): Current resource status of the cluster. Possible values include: 'Running', 'Creating', 'CreateFailed', 'Updating', 'UpdateFailed', 'Deleting', 'DeleteFailed', 'Enabling', 'EnableFailed', 'Disabling', 'DisableFailed', 'Disabled'
+* **resourceState**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'Disabled' | 'DisableFailed' | 'Disabling' | 'EnableFailed' | 'Enabling' | 'Running' | 'UpdateFailed' | 'Updating' (ReadOnly): Current resource status of the cluster.
 
 ## PrivateEndpointConnection
 ### Properties
@@ -51,7 +51,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource. Possible values include: 'Succeeded', 'Creating', 'Deleting', 'Failed'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource.
 
 ## PrivateEndpoint
 ### Properties
@@ -61,12 +61,12 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service. Possible values include: 'Pending', 'Approved', 'Rejected'
+* **status**: 'Approved' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## Sku
 ### Properties
 * **capacity**: int: The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.
-* **name**: 'Enterprise_E10' | 'Enterprise_E100' | 'Enterprise_E20' | 'Enterprise_E50' | 'EnterpriseFlash_F1500' | 'EnterpriseFlash_F300' | 'EnterpriseFlash_F700' (Required): The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.). Possible values include: 'Enterprise_E10', 'Enterprise_E20', 'Enterprise_E50', 'Enterprise_E100', 'EnterpriseFlash_F300', 'EnterpriseFlash_F700', 'EnterpriseFlash_F1500'
+* **name**: 'Enterprise_E10' | 'Enterprise_E100' | 'Enterprise_E20' | 'Enterprise_E50' | 'EnterpriseFlash_F1500' | 'EnterpriseFlash_F300' | 'EnterpriseFlash_F700' (Required): The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.).
 
 ## Dictionary<string,String>
 ### Properties
@@ -75,14 +75,14 @@
 
 ## DatabaseProperties
 ### Properties
-* **clientProtocol**: 'Encrypted' | 'Plaintext': Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted. Possible values include: 'Encrypted', 'Plaintext'
-* **clusteringPolicy**: 'EnterpriseCluster' | 'OSSCluster': Clustering policy - default is OSSCluster. Specified at create time. Possible values include: 'EnterpriseCluster', 'OSSCluster'
-* **evictionPolicy**: 'AllKeysLFU' | 'AllKeysLRU' | 'AllKeysRandom' | 'NoEviction' | 'VolatileLFU' | 'VolatileLRU' | 'VolatileRandom' | 'VolatileTTL': Redis eviction policy - default is VolatileLRU. Possible values include: 'AllKeysLFU', 'AllKeysLRU', 'AllKeysRandom', 'VolatileLRU', 'VolatileLFU', 'VolatileTTL', 'VolatileRandom', 'NoEviction'
+* **clientProtocol**: 'Encrypted' | 'Plaintext': Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
+* **clusteringPolicy**: 'EnterpriseCluster' | 'OSSCluster': Clustering policy - default is OSSCluster. Specified at create time.
+* **evictionPolicy**: 'AllKeysLFU' | 'AllKeysLRU' | 'AllKeysRandom' | 'NoEviction' | 'VolatileLFU' | 'VolatileLRU' | 'VolatileRandom' | 'VolatileTTL': Redis eviction policy - default is VolatileLRU.
 * **modules**: [Module](#module)[]: Optional set of redis modules to enable in this database - modules can only be added at creation time.
 * **persistence**: [Persistence](#persistence): Persistence-related configuration for the RedisEnterprise database
 * **port**: int: TCP port of the database endpoint. Specified at create time. Defaults to an available port.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Current provisioning status of the database. Possible values include: 'Succeeded', 'Failed', 'Canceled', 'Creating', 'Updating', 'Deleting'
-* **resourceState**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'Disabled' | 'DisableFailed' | 'Disabling' | 'EnableFailed' | 'Enabling' | 'Running' | 'UpdateFailed' | 'Updating' (ReadOnly): Current resource status of the database. Possible values include: 'Running', 'Creating', 'CreateFailed', 'Updating', 'UpdateFailed', 'Deleting', 'DeleteFailed', 'Enabling', 'EnableFailed', 'Disabling', 'DisableFailed', 'Disabled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Current provisioning status of the database.
+* **resourceState**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'Disabled' | 'DisableFailed' | 'Disabling' | 'EnableFailed' | 'Enabling' | 'Running' | 'UpdateFailed' | 'Updating' (ReadOnly): Current resource status of the database.
 
 ## Module
 ### Properties
@@ -93,7 +93,7 @@
 ## Persistence
 ### Properties
 * **aofEnabled**: bool: Sets whether AOF is enabled.
-* **aofFrequency**: '1s' | 'always': Sets the frequency at which data is written to disk. Possible values include: '1s', 'always'
+* **aofFrequency**: '1s' | 'always': Sets the frequency at which data is written to disk.
 * **rdbEnabled**: bool: Sets whether RDB is enabled.
-* **rdbFrequency**: '12h' | '1h' | '6h': Sets the frequency at which a snapshot of the database is created. Possible values include: '1h', '6h', '12h'
+* **rdbFrequency**: '12h' | '1h' | '6h': Sets the frequency at which a snapshot of the database is created.
 

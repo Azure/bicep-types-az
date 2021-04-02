@@ -77,7 +77,7 @@
 * **osVersion**: string (ReadOnly): The version of Operating System running on the hybrid machine.
 * **privateLinkScopedResources**: string[] (ReadOnly): List of private link scoped resources associated with this machine.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
-* **status**: 'Connected' | 'Disconnected' | 'Error' (ReadOnly): The status of the hybrid machine agent. Possible values include: 'Connected', 'Disconnected', 'Error'
+* **status**: 'Connected' | 'Disconnected' | 'Error' (ReadOnly): The status of the hybrid machine agent.
 * **vmId**: string: Specifies the hybrid machine unique ID.
 * **vmUuid**: string (ReadOnly): Specifies the Arc Machine's unique SMBIOS ID
 
@@ -99,7 +99,7 @@
 ### Properties
 * **code**: string: The status code.
 * **displayStatus**: string: The short localizable label for the status.
-* **level**: 'Error' | 'Info' | 'Warning': The level code. Possible values include: 'Info', 'Warning', 'Error'
+* **level**: 'Error' | 'Info' | 'Warning': The level code.
 * **message**: string: The detailed status message, including for alerts and error messages.
 * **time**: string: The time of the status.
 
@@ -147,7 +147,7 @@
 ### Properties
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections.
 * **provisioningState**: string (ReadOnly): Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints. Possible values include: 'Enabled', 'Disabled'
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
 
 ## PrivateEndpointConnection
 ### Properties

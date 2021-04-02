@@ -54,7 +54,7 @@
 * **critical**: bool: Whether or not the namespace is set as Critical.
 * **enabled**: bool: Whether or not the namespace is currently enabled.
 * **name**: string: The name of the namespace.
-* **namespaceType**: 'Messaging' | 'NotificationHub': The namespace type. Possible values include: 'Messaging', 'NotificationHub'
+* **namespaceType**: 'Messaging' | 'NotificationHub': The namespace type.
 * **provisioningState**: string: Provisioning state of the Namespace.
 * **region**: string: Specifies the targeted region in which the namespace should be created. It can be any of the following values: Australia East, Australia Southeast, Central US, East US, East US 2, West US, North Central US, South Central US, East Asia, Southeast Asia, Brazil South, Japan East, Japan West, North Europe, West Europe
 * **scaleUnit**: string: ScaleUnit where the namespace gets created
@@ -66,7 +66,7 @@
 ### Properties
 * **capacity**: int: The capacity of the resource
 * **family**: string: The Sku Family
-* **name**: 'Basic' | 'Free' | 'Standard' (Required): Name of the notification hub sku. Possible values include: 'Free', 'Basic', 'Standard'
+* **name**: 'Basic' | 'Free' | 'Standard' (Required): Name of the notification hub sku.
 * **size**: string: The Sku size
 * **tier**: string: The tier of particular sku
 

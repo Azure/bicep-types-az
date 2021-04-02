@@ -49,7 +49,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned': The identity type. Possible values include: 'SystemAssigned'
+* **type**: 'SystemAssigned': The identity type.
 
 ## MixedRealityAccountProperties
 ### Properties
@@ -61,10 +61,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties
@@ -75,7 +75,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned': The identity type. Possible values include: 'SystemAssigned'
+* **type**: 'SystemAssigned': The identity type.
 
 ## Sku
 ### Properties
@@ -83,7 +83,7 @@
 * **family**: string: If the service has different generations of hardware, for the same SKU, then that can be captured here.
 * **name**: string (Required): The name of the SKU. Ex - P3. It is typically a letter+number code
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
-* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT. Possible values include: 'Free', 'Basic', 'Standard', 'Premium'
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
 
 ## Dictionary<string,String>
 ### Properties

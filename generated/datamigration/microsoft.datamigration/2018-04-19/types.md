@@ -37,7 +37,7 @@
 
 ## DataMigrationServiceProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Deleting' | 'Deploying' | 'Failed' | 'FailedToStart' | 'FailedToStop' | 'Starting' | 'Stopped' | 'Stopping' | 'Succeeded' (ReadOnly): The resource's provisioning state. Possible values include: 'Accepted', 'Deleting', 'Deploying', 'Stopped', 'Stopping', 'Starting', 'FailedToStart', 'FailedToStop', 'Succeeded', 'Failed'
+* **provisioningState**: 'Accepted' | 'Deleting' | 'Deploying' | 'Failed' | 'FailedToStart' | 'FailedToStop' | 'Starting' | 'Stopped' | 'Stopping' | 'Succeeded' (ReadOnly): The resource's provisioning state.
 * **publicKey**: string: The public key of the service, used to encrypt secrets sent to the service
 * **virtualSubnetId**: string (Required): The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
 
@@ -58,11 +58,11 @@
 ### Properties
 * **creationTime**: string (ReadOnly): UTC Date and time when project was created
 * **databasesInfo**: [DatabaseInfo](#databaseinfo)[]: List of DatabaseInfo
-* **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly): The project's provisioning state. Possible values include: 'Deleting', 'Succeeded'
+* **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly): The project's provisioning state.
 * **sourceConnectionInfo**: [ConnectionInfo](#connectioninfo): Defines the connection properties of a server
-* **sourcePlatform**: 'SQL' | 'Unknown' (Required): Source platform for the project. Possible values include: 'SQL', 'Unknown'
+* **sourcePlatform**: 'SQL' | 'Unknown' (Required): Source platform for the project.
 * **targetConnectionInfo**: [ConnectionInfo](#connectioninfo): Defines the connection properties of a server
-* **targetPlatform**: 'SQLDB' | 'Unknown' (Required): Target platform for the project. Possible values include: 'SQLDB', 'Unknown'
+* **targetPlatform**: 'SQLDB' | 'Unknown' (Required): Target platform for the project.
 
 ## DatabaseInfo
 ### Properties
@@ -100,11 +100,11 @@
 ### SqlConnectionInfo
 #### Properties
 * **additionalSettings**: string: Additional connection settings
-* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': Authentication type to use for connection. Possible values include: 'None', 'WindowsAuthentication', 'SqlAuthentication', 'ActiveDirectoryIntegrated', 'ActiveDirectoryPassword'
+* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': Authentication type to use for connection.
 * **dataSource**: string (Required): Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
 * **encryptConnection**: bool: Whether to encrypt the connection
 * **password**: string: Password credential.
-* **platform**: 'SqlOnPrem': Server platform type for connection. Possible values include: 'SqlOnPrem'
+* **platform**: 'SqlOnPrem': Server platform type for connection.
 * **trustServerCertificate**: bool: Whether to trust the server certificate
 * **type**: 'SqlConnectionInfo' (Required): Information for connecting to SQL database server
 * **userName**: string: User name
@@ -137,11 +137,11 @@
 ## SqlConnectionInfo
 ### Properties
 * **additionalSettings**: string: Additional connection settings
-* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': Authentication type to use for connection. Possible values include: 'None', 'WindowsAuthentication', 'SqlAuthentication', 'ActiveDirectoryIntegrated', 'ActiveDirectoryPassword'
+* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': Authentication type to use for connection.
 * **dataSource**: string (Required): Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
 * **encryptConnection**: bool: Whether to encrypt the connection
 * **password**: string: Password credential.
-* **platform**: 'SqlOnPrem': Server platform type for connection. Possible values include: 'SqlOnPrem'
+* **platform**: 'SqlOnPrem': Server platform type for connection.
 * **trustServerCertificate**: bool: Whether to trust the server certificate
 * **type**: 'SqlConnectionInfo' (Required): Information for connecting to SQL database server
 * **userName**: string: User name
@@ -156,7 +156,7 @@
 ### Base Properties
 * **commands**: [CommandProperties](#commandproperties)[] (ReadOnly): Array of command properties.
 * **errors**: [ODataError](#odataerror)[] (ReadOnly): Array of errors. This is ignored if submitted.
-* **state**: 'Canceled' | 'Failed' | 'FailedInputValidation' | 'Faulted' | 'Queued' | 'Running' | 'Succeeded' | 'Unknown' (ReadOnly): The state of the task. This is ignored if submitted. Possible values include: 'Unknown', 'Queued', 'Running', 'Canceled', 'Succeeded', 'Failed', 'FailedInputValidation', 'Faulted'
+* **state**: 'Canceled' | 'Failed' | 'FailedInputValidation' | 'Faulted' | 'Queued' | 'Running' | 'Succeeded' | 'Unknown' (ReadOnly): The state of the task. This is ignored if submitted.
 ### ConnectToSource.MySql
 #### Properties
 * **input**: [ConnectToSourceMySqlTaskInput](#connecttosourcemysqltaskinput): Input for the task that validates MySQL database connection
@@ -294,7 +294,7 @@
 * **Discriminator**: commandType
 ### Base Properties
 * **errors**: [ODataError](#odataerror)[] (ReadOnly): Array of errors. This is ignored if submitted.
-* **state**: 'Accepted' | 'Failed' | 'Running' | 'Succeeded' | 'Unknown' (ReadOnly): The state of the command. This is ignored if submitted. Possible values include: 'Unknown', 'Accepted', 'Running', 'Succeeded', 'Failed'
+* **state**: 'Accepted' | 'Failed' | 'Running' | 'Succeeded' | 'Unknown' (ReadOnly): The state of the command. This is ignored if submitted.
 ### Migrate.SqlServer.AzureDbSqlMi.Complete
 #### Properties
 * **commandType**: 'Migrate.SqlServer.AzureDbSqlMi.Complete' (Required): Properties for the command that completes online migration for an Azure SQL Database Managed Instance.
@@ -361,9 +361,9 @@
 
 ## ConnectToSourceMySqlTaskInput
 ### Properties
-* **checkPermissionsGroup**: 'Default' | 'MigrationFromMySQLToAzureDBForMySQL' | 'MigrationFromSqlServerToAzureDB' | 'MigrationFromSqlServerToAzureMI': Permission group for validations. Possible values include: 'Default', 'MigrationFromSqlServerToAzureDB', 'MigrationFromSqlServerToAzureMI', 'MigrationFromMySQLToAzureDBForMySQL'
+* **checkPermissionsGroup**: 'Default' | 'MigrationFromMySQLToAzureDBForMySQL' | 'MigrationFromSqlServerToAzureDB' | 'MigrationFromSqlServerToAzureMI': Permission group for validations.
 * **sourceConnectionInfo**: [MySqlConnectionInfo](#mysqlconnectioninfo) (Required): Information for connecting to MySQL server
-* **targetPlatform**: 'AzureDbForMySQL' | 'SqlServer': Target Platform for the migration. Possible values include: 'SqlServer', 'AzureDbForMySQL'
+* **targetPlatform**: 'AzureDbForMySQL' | 'SqlServer': Target Platform for the migration.
 
 ## ConnectToSourceNonSqlTaskOutput
 ### Properties
@@ -408,7 +408,7 @@
 
 ## ConnectToSourceSqlServerTaskInput
 ### Properties
-* **checkPermissionsGroup**: 'Default' | 'MigrationFromMySQLToAzureDBForMySQL' | 'MigrationFromSqlServerToAzureDB' | 'MigrationFromSqlServerToAzureMI': Permission group for validations. Possible values include: 'Default', 'MigrationFromSqlServerToAzureDB', 'MigrationFromSqlServerToAzureMI', 'MigrationFromMySQLToAzureDBForMySQL'
+* **checkPermissionsGroup**: 'Default' | 'MigrationFromMySQLToAzureDBForMySQL' | 'MigrationFromSqlServerToAzureDB' | 'MigrationFromSqlServerToAzureMI': Permission group for validations.
 * **collectAgentJobs**: bool: Flag for whether to collect agent jobs from source server.
 * **collectLogins**: bool: Flag for whether to collect logins from source server.
 * **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Information for connecting to SQL database server
@@ -429,9 +429,9 @@
 
 ### DatabaseLevelOutput
 #### Properties
-* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): SQL Server compatibility level of database. Possible values include: 'CompatLevel80', 'CompatLevel90', 'CompatLevel100', 'CompatLevel110', 'CompatLevel120', 'CompatLevel130', 'CompatLevel140'
+* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): SQL Server compatibility level of database.
 * **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly): The list of database files
-* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database. Possible values include: 'Online', 'Restoring', 'Recovering', 'RecoveryPending', 'Suspect', 'Emergency', 'Offline', 'Copying', 'OfflineSecondary'
+* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database.
 * **name**: string (ReadOnly): Database name
 * **resultType**: 'DatabaseLevelOutput' (Required):
 * **sizeMB**: int (ReadOnly): Size of the file in megabytes
@@ -440,7 +440,7 @@
 #### Properties
 * **defaultDatabase**: string (ReadOnly): The default database for the login.
 * **isEnabled**: bool (ReadOnly): The state of the login.
-* **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): The type of login. Possible values include: 'WindowsUser', 'WindowsGroup', 'SqlLogin', 'Certificate', 'AsymmetricKey', 'ExternalUser', 'ExternalGroup'
+* **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): The type of login.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): Login name.
 * **resultType**: 'LoginLevelOutput' (Required):
@@ -473,9 +473,9 @@
 
 ## DatabaseLevelOutput
 ### Properties
-* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): SQL Server compatibility level of database. Possible values include: 'CompatLevel80', 'CompatLevel90', 'CompatLevel100', 'CompatLevel110', 'CompatLevel120', 'CompatLevel130', 'CompatLevel140'
+* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): SQL Server compatibility level of database.
 * **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly): The list of database files
-* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database. Possible values include: 'Online', 'Restoring', 'Recovering', 'RecoveryPending', 'Suspect', 'Emergency', 'Offline', 'Copying', 'OfflineSecondary'
+* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database.
 * **name**: string (ReadOnly): Database name
 * **resultType**: 'DatabaseLevelOutput' (Required):
 * **sizeMB**: int (ReadOnly): Size of the file in megabytes
@@ -483,7 +483,7 @@
 ## DatabaseFileInfo
 ### Properties
 * **databaseName**: string: Name of the database
-* **fileType**: 'Filestream' | 'Fulltext' | 'Log' | 'NotSupported' | 'Rows': Database file type. Possible values include: 'Rows', 'Log', 'Filestream', 'NotSupported', 'Fulltext'
+* **fileType**: 'Filestream' | 'Fulltext' | 'Log' | 'NotSupported' | 'Rows': Database file type.
 * **id**: string: Unique identifier for database file
 * **logicalName**: string: Logical name of the file
 * **physicalFullName**: string: Operating-system full path of the file
@@ -494,7 +494,7 @@
 ### Properties
 * **defaultDatabase**: string (ReadOnly): The default database for the login.
 * **isEnabled**: bool (ReadOnly): The state of the login.
-* **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): The type of login. Possible values include: 'WindowsUser', 'WindowsGroup', 'SqlLogin', 'Certificate', 'AsymmetricKey', 'ExternalUser', 'ExternalGroup'
+* **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): The type of login.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): Login name.
 * **resultType**: 'LoginLevelOutput' (Required):
@@ -785,9 +785,9 @@
 
 ### DatabaseLevelOutput
 #### Properties
-* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): SQL Server compatibility level of database. Possible values include: 'CompatLevel80', 'CompatLevel90', 'CompatLevel100', 'CompatLevel110', 'CompatLevel120', 'CompatLevel130', 'CompatLevel140'
+* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): SQL Server compatibility level of database.
 * **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly): The list of database files
-* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database. Possible values include: 'Online', 'Restoring', 'Recovering', 'RecoveryPending', 'Suspect', 'Emergency', 'Offline', 'Copying', 'OfflineSecondary'
+* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database.
 * **name**: string (ReadOnly): Database name
 * **resultType**: 'DatabaseLevelOutput' (Required):
 * **sizeMB**: int (ReadOnly): Size of the file in megabytes
@@ -811,8 +811,8 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
-* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration. Possible values include: 'Default', 'Connecting', 'SourceAndTargetSelected', 'SelectLogins', 'Configured', 'Running', 'Error', 'Stopped', 'Completed', 'CompletedWithWarnings'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
+* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration.
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -826,7 +826,7 @@
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
 * **resultType**: 'TableLevelOutput' (Required):
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message
 
 
@@ -861,8 +861,8 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
-* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration. Possible values include: 'Default', 'Connecting', 'SourceAndTargetSelected', 'SelectLogins', 'Configured', 'Running', 'Error', 'Stopped', 'Completed', 'CompletedWithWarnings'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
+* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration.
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -895,7 +895,7 @@
 ### Properties
 * **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly): Migration exceptions and warnings.
 * **name**: string (ReadOnly): Name of server role.
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 
 ## TableLevelOutput
 ### Properties
@@ -907,7 +907,7 @@
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
 * **resultType**: 'TableLevelOutput' (Required):
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message
 
 ## Migrate.PostgreSql.AzureDbForPostgreSql.Sync
@@ -957,9 +957,9 @@
 
 ### DatabaseLevelOutput
 #### Properties
-* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): SQL Server compatibility level of database. Possible values include: 'CompatLevel80', 'CompatLevel90', 'CompatLevel100', 'CompatLevel110', 'CompatLevel120', 'CompatLevel130', 'CompatLevel140'
+* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): SQL Server compatibility level of database.
 * **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly): The list of database files
-* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database. Possible values include: 'Online', 'Restoring', 'Recovering', 'RecoveryPending', 'Suspect', 'Emergency', 'Offline', 'Copying', 'OfflineSecondary'
+* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database.
 * **name**: string (ReadOnly): Database name
 * **resultType**: 'DatabaseLevelOutput' (Required):
 * **sizeMB**: int (ReadOnly): Size of the file in megabytes
@@ -983,8 +983,8 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
-* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration. Possible values include: 'Default', 'Connecting', 'SourceAndTargetSelected', 'SelectLogins', 'Configured', 'Running', 'Error', 'Stopped', 'Completed', 'CompletedWithWarnings'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
+* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration.
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -998,7 +998,7 @@
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
 * **resultType**: 'TableLevelOutput' (Required):
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message
 
 
@@ -1064,9 +1064,9 @@
 
 ### DatabaseLevelOutput
 #### Properties
-* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): SQL Server compatibility level of database. Possible values include: 'CompatLevel80', 'CompatLevel90', 'CompatLevel100', 'CompatLevel110', 'CompatLevel120', 'CompatLevel130', 'CompatLevel140'
+* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): SQL Server compatibility level of database.
 * **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly): The list of database files
-* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database. Possible values include: 'Online', 'Restoring', 'Recovering', 'RecoveryPending', 'Suspect', 'Emergency', 'Offline', 'Copying', 'OfflineSecondary'
+* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database.
 * **name**: string (ReadOnly): Database name
 * **resultType**: 'DatabaseLevelOutput' (Required):
 * **sizeMB**: int (ReadOnly): Size of the file in megabytes
@@ -1090,8 +1090,8 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
-* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration. Possible values include: 'Default', 'Connecting', 'SourceAndTargetSelected', 'SelectLogins', 'Configured', 'Running', 'Error', 'Stopped', 'Completed', 'CompletedWithWarnings'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
+* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration.
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -1105,7 +1105,7 @@
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
 * **resultType**: 'TableLevelOutput' (Required):
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message
 
 
@@ -1119,7 +1119,7 @@
 ### Properties
 * **backupBlobShare**: [BlobShare](#blobshare) (Required): Blob container storage information.
 * **backupFileShare**: [FileShare](#fileshare): File share information with Path, Username, and Password.
-* **backupMode**: 'CreateBackup' | 'ExistingBackup': Backup Mode to specify whether to use existing backup or create new backup. If using existing backups, backup file paths are required to be provided in selectedDatabases. Possible values include: 'CreateBackup', 'ExistingBackup'
+* **backupMode**: 'CreateBackup' | 'ExistingBackup': Backup Mode to specify whether to use existing backup or create new backup. If using existing backups, backup file paths are required to be provided in selectedDatabases.
 * **selectedAgentJobs**: string[]: Agent Jobs to migrate.
 * **selectedDatabases**: [MigrateSqlServerSqlMIDatabaseInput](#migratesqlserversqlmidatabaseinput)[] (Required): Databases to migrate
 * **selectedLogins**: string[]: Logins to migrate.
@@ -1153,9 +1153,9 @@
 
 ### DatabaseLevelOutput
 #### Properties
-* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): SQL Server compatibility level of database. Possible values include: 'CompatLevel80', 'CompatLevel90', 'CompatLevel100', 'CompatLevel110', 'CompatLevel120', 'CompatLevel130', 'CompatLevel140'
+* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): SQL Server compatibility level of database.
 * **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly): The list of database files
-* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database. Possible values include: 'Online', 'Restoring', 'Recovering', 'RecoveryPending', 'Suspect', 'Emergency', 'Offline', 'Copying', 'OfflineSecondary'
+* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database.
 * **name**: string (ReadOnly): Database name
 * **resultType**: 'DatabaseLevelOutput' (Required):
 * **sizeMB**: int (ReadOnly): Size of the file in megabytes
@@ -1169,7 +1169,7 @@
 #### Properties
 * **defaultDatabase**: string (ReadOnly): The default database for the login.
 * **isEnabled**: bool (ReadOnly): The state of the login.
-* **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): The type of login. Possible values include: 'WindowsUser', 'WindowsGroup', 'SqlLogin', 'Certificate', 'AsymmetricKey', 'ExternalUser', 'ExternalGroup'
+* **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): The type of login.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): Login name.
 * **resultType**: 'LoginLevelOutput' (Required):
@@ -1188,8 +1188,8 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
-* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration. Possible values include: 'Default', 'Connecting', 'SourceAndTargetSelected', 'SelectLogins', 'Configured', 'Running', 'Error', 'Stopped', 'Completed', 'CompletedWithWarnings'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
+* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration.
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -1215,9 +1215,9 @@
 * **id**: string (ReadOnly): Result identifier
 ### DatabaseLevelOutput
 #### Properties
-* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): SQL Server compatibility level of database. Possible values include: 'CompatLevel80', 'CompatLevel90', 'CompatLevel100', 'CompatLevel110', 'CompatLevel120', 'CompatLevel130', 'CompatLevel140'
+* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): SQL Server compatibility level of database.
 * **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly): The list of database files
-* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database. Possible values include: 'Online', 'Restoring', 'Recovering', 'RecoveryPending', 'Suspect', 'Emergency', 'Offline', 'Copying', 'OfflineSecondary'
+* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database.
 * **name**: string (ReadOnly): Database name
 * **resultType**: 'DatabaseLevelOutput' (Required):
 * **sizeMB**: int (ReadOnly): Size of the file in megabytes
@@ -1241,8 +1241,8 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
-* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration. Possible values include: 'Default', 'Connecting', 'SourceAndTargetSelected', 'SelectLogins', 'Configured', 'Running', 'Error', 'Stopped', 'Completed', 'CompletedWithWarnings'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
+* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration.
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -1278,9 +1278,9 @@
 * **id**: string (ReadOnly): Result identifier
 ### DatabaseLevelOutput
 #### Properties
-* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): SQL Server compatibility level of database. Possible values include: 'CompatLevel80', 'CompatLevel90', 'CompatLevel100', 'CompatLevel110', 'CompatLevel120', 'CompatLevel130', 'CompatLevel140'
+* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): SQL Server compatibility level of database.
 * **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly): The list of database files
-* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database. Possible values include: 'Online', 'Restoring', 'Recovering', 'RecoveryPending', 'Suspect', 'Emergency', 'Offline', 'Copying', 'OfflineSecondary'
+* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database.
 * **name**: string (ReadOnly): Database name
 * **resultType**: 'DatabaseLevelOutput' (Required):
 * **sizeMB**: int (ReadOnly): Size of the file in megabytes
@@ -1300,7 +1300,7 @@
 * **schemaValidationResult**: [SchemaComparisonValidationResult](#schemacomparisonvalidationresult) (ReadOnly): Results for schema comparison between the source and target
 * **sourceDatabaseName**: string (ReadOnly): Name of the source database
 * **startedOn**: string (ReadOnly): Validation start time
-* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'Initialized' | 'InProgress' | 'NotStarted' | 'Stopped' (ReadOnly): Current status of validation at the database level. Possible values include: 'Default', 'NotStarted', 'Initialized', 'InProgress', 'Completed', 'CompletedWithIssues', 'Failed', 'Stopped'
+* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'Initialized' | 'InProgress' | 'NotStarted' | 'Stopped' (ReadOnly): Current status of validation at the database level.
 * **targetDatabaseName**: string (ReadOnly): Name of the target database
 
 ### MigrationLevelOutput
@@ -1317,8 +1317,8 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
-* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration. Possible values include: 'Default', 'Connecting', 'SourceAndTargetSelected', 'SelectLogins', 'Configured', 'Running', 'Error', 'Stopped', 'Completed', 'CompletedWithWarnings'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
+* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration.
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -1326,7 +1326,7 @@
 #### Properties
 * **migrationId**: string (ReadOnly): Migration Identifier
 * **resultType**: 'MigrationValidationOutput' (Required): Validation result for Sql Server to Azure Sql DB migration.
-* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'Initialized' | 'InProgress' | 'NotStarted' | 'Stopped' (ReadOnly): Current status of validation at the migration level. Status from the database validation result status will be aggregated here. Possible values include: 'Default', 'NotStarted', 'Initialized', 'InProgress', 'Completed', 'CompletedWithIssues', 'Failed', 'Stopped'
+* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'Initialized' | 'InProgress' | 'NotStarted' | 'Stopped' (ReadOnly): Current status of validation at the migration level. Status from the database validation result status will be aggregated here.
 * **summaryResults**: [Dictionary<string,MigrationValidationDatabaseSummaryResult>](#dictionarystringmigrationvalidationdatabasesummaryresult): Validation summary results for each database
 
 ### TableLevelOutput
@@ -1339,7 +1339,7 @@
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
 * **resultType**: 'TableLevelOutput' (Required):
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message
 
 
@@ -1353,7 +1353,7 @@
 * **schemaValidationResult**: [SchemaComparisonValidationResult](#schemacomparisonvalidationresult) (ReadOnly): Results for schema comparison between the source and target
 * **sourceDatabaseName**: string (ReadOnly): Name of the source database
 * **startedOn**: string (ReadOnly): Validation start time
-* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'Initialized' | 'InProgress' | 'NotStarted' | 'Stopped' (ReadOnly): Current status of validation at the database level. Possible values include: 'Default', 'NotStarted', 'Initialized', 'InProgress', 'Completed', 'CompletedWithIssues', 'Failed', 'Stopped'
+* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'Initialized' | 'InProgress' | 'NotStarted' | 'Stopped' (ReadOnly): Current status of validation at the database level.
 * **targetDatabaseName**: string (ReadOnly): Name of the target database
 
 ## DataIntegrityValidationResult
@@ -1368,7 +1368,7 @@
 
 ## ValidationError
 ### Properties
-* **severity**: 'Error' | 'Message' | 'Warning' (ReadOnly): Severity of the error. Possible values include: 'Message', 'Warning', 'Error'
+* **severity**: 'Error' | 'Message' | 'Warning' (ReadOnly): Severity of the error.
 * **text**: string (ReadOnly): Error Text
 
 ## QueryAnalysisValidationResult
@@ -1413,8 +1413,8 @@
 ## SchemaComparisonValidationResultType
 ### Properties
 * **objectName**: string (ReadOnly): Name of the object that has the difference
-* **objectType**: 'Function' | 'StoredProcedures' | 'Table' | 'User' | 'View' (ReadOnly): Type of the object that has the difference. e.g (Table/View/StoredProcedure). Possible values include: 'StoredProcedures', 'Table', 'User', 'View', 'Function'
-* **updateAction**: 'AddedOnTarget' | 'ChangedOnTarget' | 'DeletedOnTarget' (ReadOnly): Update action type with respect to target. Possible values include: 'DeletedOnTarget', 'ChangedOnTarget', 'AddedOnTarget'
+* **objectType**: 'Function' | 'StoredProcedures' | 'Table' | 'User' | 'View' (ReadOnly): Type of the object that has the difference. e.g (Table/View/StoredProcedure).
+* **updateAction**: 'AddedOnTarget' | 'ChangedOnTarget' | 'DeletedOnTarget' (ReadOnly): Update action type with respect to target.
 
 ## Dictionary<string,Long>
 ### Properties
@@ -1430,7 +1430,7 @@
 ### Properties
 * **migrationId**: string (ReadOnly): Migration Identifier
 * **resultType**: 'MigrationValidationOutput' (Required): Validation result for Sql Server to Azure Sql DB migration.
-* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'Initialized' | 'InProgress' | 'NotStarted' | 'Stopped' (ReadOnly): Current status of validation at the migration level. Status from the database validation result status will be aggregated here. Possible values include: 'Default', 'NotStarted', 'Initialized', 'InProgress', 'Completed', 'CompletedWithIssues', 'Failed', 'Stopped'
+* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'Initialized' | 'InProgress' | 'NotStarted' | 'Stopped' (ReadOnly): Current status of validation at the migration level. Status from the database validation result status will be aggregated here.
 * **summaryResults**: [Dictionary<string,MigrationValidationDatabaseSummaryResult>](#dictionarystringmigrationvalidationdatabasesummaryresult): Validation summary results for each database
 
 ## Dictionary<string,MigrationValidationDatabaseSummaryResult>
@@ -1445,7 +1445,7 @@
 * **migrationId**: string (ReadOnly): Migration Identifier
 * **sourceDatabaseName**: string (ReadOnly): Name of the source database
 * **startedOn**: string (ReadOnly): Validation start time
-* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'Initialized' | 'InProgress' | 'NotStarted' | 'Stopped' (ReadOnly): Current status of validation at the database level. Possible values include: 'Default', 'NotStarted', 'Initialized', 'InProgress', 'Completed', 'CompletedWithIssues', 'Failed', 'Stopped'
+* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'Initialized' | 'InProgress' | 'NotStarted' | 'Stopped' (ReadOnly): Current status of validation at the database level.
 * **targetDatabaseName**: string (ReadOnly): Name of the target database
 
 ## ValidateMigrationInput.SqlServer.AzureSqlDbMI
@@ -1458,7 +1458,7 @@
 ### Properties
 * **backupBlobShare**: [BlobShare](#blobshare) (Required): Blob container storage information.
 * **backupFileShare**: [FileShare](#fileshare): File share information with Path, Username, and Password.
-* **backupMode**: 'CreateBackup' | 'ExistingBackup': Backup Mode to specify whether to use existing backup or create new backup. Possible values include: 'CreateBackup', 'ExistingBackup'
+* **backupMode**: 'CreateBackup' | 'ExistingBackup': Backup Mode to specify whether to use existing backup or create new backup.
 * **selectedDatabases**: [MigrateSqlServerSqlMIDatabaseInput](#migratesqlserversqlmidatabaseinput)[] (Required): Databases to migrate
 * **selectedLogins**: string[]: Logins to migrate
 * **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Information for connecting to SQL database server
@@ -1479,7 +1479,7 @@
 ### Properties
 * **backupFiles**: string[] (ReadOnly): The list of backup files for the current database.
 * **backupFinishDate**: string (ReadOnly): Date and time when the backup operation finished.
-* **backupType**: 'Database' | 'DifferentialDatabase' | 'DifferentialFile' | 'DifferentialPartial' | 'File' | 'Partial' | 'TransactionLog' (ReadOnly): Backup Type. Possible values include: 'Database', 'TransactionLog', 'File', 'DifferentialDatabase', 'DifferentialFile', 'Partial', 'DifferentialPartial'
+* **backupType**: 'Database' | 'DifferentialDatabase' | 'DifferentialFile' | 'DifferentialPartial' | 'File' | 'Partial' | 'TransactionLog' (ReadOnly): Backup Type.
 * **databaseName**: string (ReadOnly): Database name.
 * **familyCount**: int (ReadOnly): Number of files in the backup set.
 * **isCompressed**: bool (ReadOnly): Whether the backup set is compressed

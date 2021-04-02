@@ -17,15 +17,15 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned': The identity type. Possible values include: 'SystemAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned': The identity type.
 
 ## WorkspaceResourceProperties
 ### Properties
 * **endpointUri**: string (ReadOnly): The URI of the workspace endpoint.
 * **providers**: [Provider](#provider)[]: List of Providers selected for this Workspace
-* **provisioningState**: 'Failed' | 'ProviderDeleting' | 'ProviderLaunching' | 'ProviderProvisioning' | 'ProviderUpdating' | 'Succeeded' (ReadOnly): Provisioning status field. Possible values include: 'Succeeded', 'ProviderLaunching', 'ProviderUpdating', 'ProviderDeleting', 'ProviderProvisioning', 'Failed'
+* **provisioningState**: 'Failed' | 'ProviderDeleting' | 'ProviderLaunching' | 'ProviderProvisioning' | 'ProviderUpdating' | 'Succeeded' (ReadOnly): Provisioning status field.
 * **storageAccount**: string: ARM Resource Id of the storage account associated with this workspace.
-* **usable**: 'No' | 'Partial' | 'Yes' (ReadOnly): Whether the current workspace is ready to accept Jobs. Possible values include: 'Yes', 'No', 'Partial'
+* **usable**: 'No' | 'Partial' | 'Yes' (ReadOnly): Whether the current workspace is ready to accept Jobs.
 
 ## Provider
 ### Properties
@@ -33,17 +33,17 @@
 * **instanceUri**: string: A Uri identifying the specific instance of this provider.
 * **providerId**: string: Unique id of this provider.
 * **providerSku**: string: The sku associated with pricing information for this provider.
-* **provisioningState**: 'Deleted' | 'Deleting' | 'Failed' | 'Launching' | 'Succeeded' | 'Updating': Provisioning status field. Possible values include: 'Succeeded', 'Launching', 'Updating', 'Deleting', 'Deleted', 'Failed'
+* **provisioningState**: 'Deleted' | 'Deleting' | 'Failed' | 'Launching' | 'Succeeded' | 'Updating': Provisioning status field.
 * **resourceUsageId**: string: Id to track resource usage for the provider.
 
 ## systemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties

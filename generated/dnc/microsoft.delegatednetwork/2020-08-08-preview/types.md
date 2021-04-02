@@ -40,7 +40,7 @@
 * **dncAppId**: string (ReadOnly): dnc application id should be used by customer to authenticate with dnc gateway.
 * **dncEndpoint**: string (ReadOnly): dnc endpoint url that customers can use to connect to
 * **dncTenantId**: string (ReadOnly): tenant id of dnc application id
-* **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The current state of dnc controller resource. Possible values include: 'Deleting', 'Succeeded', 'Failed', 'Provisioning'
+* **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The current state of dnc controller resource.
 * **resourceGuid**: string (ReadOnly): Resource guid.
 
 ## Dictionary<string,String>
@@ -51,7 +51,7 @@
 ## DelegatedSubnetProperties
 ### Properties
 * **controllerDetails**: [controllerDetails](#controllerdetails): controller details
-* **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The current state of dnc delegated subnet resource. Possible values include: 'Deleting', 'Succeeded', 'Failed', 'Provisioning'
+* **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The current state of dnc delegated subnet resource.
 * **resourceGuid**: string (ReadOnly): Resource guid.
 * **subnetDetails**: [subnetDetails](#subnetdetails): Properties of orchestrator
 
@@ -72,7 +72,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the system assigned identity which is used by orchestrator.
 * **tenantId**: string (ReadOnly): The tenant id of the system assigned identity which is used by orchestrator.
-* **type**: 'None' | 'SystemAssigned': The type of identity used for orchestrator cluster. Type 'SystemAssigned' will use an implicitly created identity orchestrator clusters. Possible values include: 'SystemAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned': The type of identity used for orchestrator cluster. Type 'SystemAssigned' will use an implicitly created identity orchestrator clusters.
 
 ## OrchestratorResourceProperties
 ### Properties
@@ -81,7 +81,7 @@
 * **controllerDetails**: [controllerDetails](#controllerdetails) (Required): controller details
 * **orchestratorAppId**: string: AAD ID used with apiserver
 * **orchestratorTenantId**: string: TenantID of server App ID
-* **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The current state of orchestratorInstance resource. Possible values include: 'Deleting', 'Succeeded', 'Failed', 'Provisioning'
+* **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The current state of orchestratorInstance resource.
 * **resourceGuid**: string (ReadOnly): Resource guid.
 
 ## Dictionary<string,String>

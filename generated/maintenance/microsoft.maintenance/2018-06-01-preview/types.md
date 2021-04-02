@@ -37,7 +37,7 @@
 ## MaintenanceConfigurationProperties
 ### Properties
 * **extensionProperties**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets extensionProperties of the maintenanceConfiguration
-* **maintenanceScope**: 'All' | 'Host' | 'InResource' | 'Resource': Gets or sets maintenanceScope of the configuration. Possible values include: 'All', 'Host', 'Resource', 'InResource'
+* **maintenanceScope**: 'All' | 'Host' | 'InResource' | 'Resource': Gets or sets maintenanceScope of the configuration.
 * **namespace**: string: Gets or sets namespace of the resource
 
 ## Dictionary<string,String>

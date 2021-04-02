@@ -21,7 +21,7 @@
 
 ## AppSkuInfo
 ### Properties
-* **name**: 'F1' | 'S1' | 'ST0' | 'ST1' | 'ST2' (Required): The name of the SKU. Possible values include: 'F1', 'S1', 'ST0', 'ST1', 'ST2'
+* **name**: 'F1' | 'S1' | 'ST0' | 'ST1' | 'ST2' (Required): The name of the SKU.
 
 ## Dictionary<string,String>
 ### Properties

@@ -56,7 +56,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the Batch account. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' (Required): The type of identity used for the Batch account. Possible values include: 'SystemAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned' (Required): The type of identity used for the Batch account.
 
 ## BatchAccountCreateProperties
 ### Properties
@@ -69,11 +69,11 @@
 * **encryption**: [EncryptionProperties](#encryptionproperties): Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.
 * **keyVaultReference**: [KeyVaultReference](#keyvaultreference): Identifies the Azure key vault associated with a Batch account.
 * **lowPriorityCoreQuota**: int (ReadOnly): For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
-* **poolAllocationMode**: 'BatchService' | 'UserSubscription': The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService. Possible values include: 'BatchService', 'UserSubscription'
+* **poolAllocationMode**: 'BatchService' | 'UserSubscription': The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.
 * **poolQuota**: int (ReadOnly):
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections associated with the Batch account
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly): The provisioned state of the resource. Possible values include: 'Invalid', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Cancelled'
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': If not specified, the default value is 'enabled'. Possible values include: 'Enabled', 'Disabled'
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': If not specified, the default value is 'enabled'.
 
 ## AutoStorageBaseProperties
 ### Properties
@@ -87,7 +87,7 @@
 
 ## EncryptionProperties
 ### Properties
-* **keySource**: 'Microsoft.Batch' | 'Microsoft.KeyVault': Type of the key source. Possible values include: 'Microsoft.Batch', 'Microsoft.KeyVault'
+* **keySource**: 'Microsoft.Batch' | 'Microsoft.KeyVault': Type of the key source.
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): KeyVault configuration when using an encryption KeySource of Microsoft.KeyVault.
 
 ## KeyVaultProperties
@@ -115,7 +115,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The private endpoint of the private endpoint connection.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): The private link service connection state of the private endpoint connection
-* **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Possible values include: 'Succeeded', 'Updating', 'Failed'
+* **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' (ReadOnly):
 
 ## PrivateEndpoint
 ### Properties
@@ -125,7 +125,7 @@
 ### Properties
 * **actionRequired**: string (ReadOnly):
 * **description**: string (ReadOnly):
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly): Possible values include: 'Approved', 'Pending', 'Rejected', 'Disconnected'
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly):
 
 ## Dictionary<string,String>
 ### Properties
@@ -142,7 +142,7 @@
 ### Properties
 * **format**: string (ReadOnly): The format of the application package, if the package is active.
 * **lastActivationTime**: string (ReadOnly): The time at which the package was last activated, if the package is active.
-* **state**: 'Active' | 'Pending' (ReadOnly): The current state of the application package. Possible values include: 'Pending', 'Active'
+* **state**: 'Active' | 'Pending' (ReadOnly): The current state of the application package.
 * **storageUrl**: string (ReadOnly): The URL for the application package in Azure Storage.
 * **storageUrlExpiry**: string (ReadOnly): The UTC time at which the Azure Storage URL will expire.
 
@@ -150,11 +150,11 @@
 ### Properties
 * **data**: string (Required, WriteOnly): The maximum size is 10KB.
 * **deleteCertificateError**: [DeleteCertificateError](#deletecertificateerror) (ReadOnly): An error response from the Batch service.
-* **format**: 'Cer' | 'Pfx': The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx. Possible values include: 'Pfx', 'Cer'
+* **format**: 'Cer' | 'Pfx': The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
 * **password**: string (WriteOnly): This must not be specified if the certificate format is Cer.
-* **previousProvisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The previous provisioned state of the resource. Possible values include: 'Succeeded', 'Deleting', 'Failed'
+* **previousProvisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The previous provisioned state of the resource.
 * **previousProvisioningStateTransitionTime**: string (ReadOnly):
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): Possible values include: 'Succeeded', 'Deleting', 'Failed'
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly):
 * **provisioningStateTransitionTime**: string (ReadOnly):
 * **publicData**: string (ReadOnly): The public key of the certificate.
 * **thumbprint**: string: This must match the thumbprint from the name.
@@ -169,7 +169,7 @@
 
 ## PoolProperties
 ### Properties
-* **allocationState**: 'Resizing' | 'Steady' | 'Stopping' (ReadOnly): Possible values include: 'Steady', 'Resizing', 'Stopping'
+* **allocationState**: 'Resizing' | 'Steady' | 'Stopping' (ReadOnly):
 * **allocationStateTransitionTime**: string (ReadOnly):
 * **applicationLicenses**: string[]: The list of application licenses must be a subset of available Batch service application licenses. If a license is requested which is not supported, pool creation will fail.
 * **applicationPackages**: [ApplicationPackageReference](#applicationpackagereference)[]: Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.
@@ -180,12 +180,12 @@
 * **currentLowPriorityNodes**: int (ReadOnly):
 * **deploymentConfiguration**: [DeploymentConfiguration](#deploymentconfiguration):
 * **displayName**: string: The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.
-* **interNodeCommunication**: 'Disabled' | 'Enabled': This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'. Possible values include: 'Enabled', 'Disabled'
+* **interNodeCommunication**: 'Disabled' | 'Enabled': This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'.
 * **lastModified**: string (ReadOnly): This is the last time at which the pool level data, such as the targetDedicatedNodes or autoScaleSettings, changed. It does not factor in node-level changes such as a compute node changing state.
 * **metadata**: [MetadataItem](#metadataitem)[]: The Batch service does not assign any meaning to metadata; it is solely for the use of user code.
 * **mountConfiguration**: [MountConfiguration](#mountconfiguration)[]: This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.
 * **networkConfiguration**: [NetworkConfiguration](#networkconfiguration): The network configuration for a pool.
-* **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly): Possible values include: 'Succeeded', 'Deleting'
+* **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly):
 * **provisioningStateTransitionTime**: string (ReadOnly):
 * **resizeOperationStatus**: [ResizeOperationStatus](#resizeoperationstatus) (ReadOnly): Describes either the current operation (if the pool AllocationState is Resizing) or the previously completed operation (if the AllocationState is Steady).
 * **scaleSettings**: [ScaleSettings](#scalesettings): Defines the desired size of the pool. This can either be 'fixedScale' where the requested targetDedicatedNodes is specified, or 'autoScale' which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
@@ -215,7 +215,7 @@
 ## CertificateReference
 ### Properties
 * **id**: string (Required):
-* **storeLocation**: 'CurrentUser' | 'LocalMachine': The default value is currentUser. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory. Possible values include: 'CurrentUser', 'LocalMachine'
+* **storeLocation**: 'CurrentUser' | 'LocalMachine': The default value is currentUser. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
 * **storeName**: string: This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). Common store names include: My, Root, CA, Trust, Disallowed, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, but any custom store name can also be used. The default value is My.
 * **visibility**: 'RemoteUser' | 'StartTask' | 'Task'[]:
 
@@ -263,13 +263,13 @@
  readOnly - The caching mode for the disk is read only.
  readWrite - The caching mode for the disk is read and write.
 
- The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/. Possible values include: 'None', 'ReadOnly', 'ReadWrite'
+ The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
 * **diskSizeGB**: int (Required):
 * **lun**: int (Required): The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS': If omitted, the default is "Standard_LRS". Values are:
 
  Standard_LRS - The data disk should use standard locally redundant storage.
- Premium_LRS - The data disk should use premium locally redundant storage. Possible values include: 'Standard_LRS', 'Premium_LRS'
+ Premium_LRS - The data disk should use premium locally redundant storage.
 
 ## DiskEncryptionConfiguration
 ### Properties
@@ -347,11 +347,11 @@
 * **frontendPortRangeStart**: int (Required): Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved. All ranges within a pool must be distinct and cannot overlap. If any reserved or overlapping values are provided the request fails with HTTP status code 400.
 * **name**: string (Required): The name must be unique within a Batch pool, can contain letters, numbers, underscores, periods, and hyphens. Names must start with a letter or number, must end with a letter, number, or underscore, and cannot exceed 77 characters.  If any invalid values are provided the request fails with HTTP status code 400.
 * **networkSecurityGroupRules**: [NetworkSecurityGroupRule](#networksecuritygrouprule)[]: The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.
-* **protocol**: 'TCP' | 'UDP' (Required): Possible values include: 'TCP', 'UDP'
+* **protocol**: 'TCP' | 'UDP' (Required):
 
 ## NetworkSecurityGroupRule
 ### Properties
-* **access**: 'Allow' | 'Deny' (Required): Possible values include: 'Allow', 'Deny'
+* **access**: 'Allow' | 'Deny' (Required):
 * **priority**: int (Required): Priorities within a pool must be unique and are evaluated in order of priority. The lower the number the higher the priority. For example, rules could be specified with order numbers of 150, 250, and 350. The rule with the order number of 150 takes precedence over the rule that has an order of 250. Allowed priorities are 150 to 4096. If any reserved or duplicate values are provided the request fails with HTTP status code 400.
 * **sourceAddressPrefix**: string (Required): Valid values are a single IP address (i.e. 10.10.10.10), IP subnet (i.e. 192.168.1.0/24), default tag, or * (for all addresses).  If any other values are provided the request fails with HTTP status code 400.
 * **sourcePortRanges**: string[]: Valid values are '*' (for all ports 0 - 65535) or arrays of ports or port ranges (i.e. 100-200). The ports should in the range of 0 to 65535 and the port ranges or ports can't overlap. If any other values are provided the request fails with HTTP status code 400. Default value will be *.
@@ -359,12 +359,12 @@
 ## PublicIPAddressConfiguration
 ### Properties
 * **ipAddressIds**: string[]: The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.
-* **provision**: 'BatchManaged' | 'NoPublicIPAddresses' | 'UserManaged': The default value is BatchManaged. Possible values include: 'BatchManaged', 'UserManaged', 'NoPublicIPAddresses'
+* **provision**: 'BatchManaged' | 'NoPublicIPAddresses' | 'UserManaged': The default value is BatchManaged.
 
 ## ResizeOperationStatus
 ### Properties
 * **errors**: [ResizeError](#resizeerror)[]: This property is set only if an error occurred during the last pool resize, and only when the pool allocationState is Steady.
-* **nodeDeallocationOption**: 'Requeue' | 'RetainedData' | 'TaskCompletion' | 'Terminate': The default value is requeue. Possible values include: 'Requeue', 'Terminate', 'TaskCompletion', 'RetainedData'
+* **nodeDeallocationOption**: 'Requeue' | 'RetainedData' | 'TaskCompletion' | 'Terminate': The default value is requeue.
 * **resizeTimeout**: string: The default value is 15 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
 * **startTime**: string:
 * **targetDedicatedNodes**: int:
@@ -388,7 +388,7 @@
 
 ## FixedScaleSettings
 ### Properties
-* **nodeDeallocationOption**: 'Requeue' | 'RetainedData' | 'TaskCompletion' | 'Terminate': If omitted, the default value is Requeue. Possible values include: 'Requeue', 'Terminate', 'TaskCompletion', 'RetainedData'
+* **nodeDeallocationOption**: 'Requeue' | 'RetainedData' | 'TaskCompletion' | 'Terminate': If omitted, the default value is Requeue.
 * **resizeTimeout**: string: The default value is 15 minutes. Timeout values use ISO 8601 format. For example, use PT10M for 10 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
 * **targetDedicatedNodes**: int: At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
 * **targetLowPriorityNodes**: int: At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
@@ -408,7 +408,7 @@
 * **containerRunOptions**: string: These additional options are supplied as arguments to the "docker create" command, in addition to those controlled by the Batch Service.
 * **imageName**: string (Required): This is the full image reference, as would be specified to "docker pull". If no tag is provided as part of the image name, the tag ":latest" is used as a default.
 * **registry**: [ContainerRegistry](#containerregistry):
-* **workingDirectory**: 'ContainerImageDefault' | 'TaskWorkingDirectory': Possible values include: 'TaskWorkingDirectory', 'ContainerImageDefault'
+* **workingDirectory**: 'ContainerImageDefault' | 'TaskWorkingDirectory':
 
 ## EnvironmentSetting
 ### Properties
@@ -431,16 +431,16 @@
 
 ## AutoUserSpecification
 ### Properties
-* **elevationLevel**: 'Admin' | 'NonAdmin': The default value is nonAdmin. Possible values include: 'NonAdmin', 'Admin'
-* **scope**: 'Pool' | 'Task': The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks. Possible values include: 'Task', 'Pool'
+* **elevationLevel**: 'Admin' | 'NonAdmin': The default value is nonAdmin.
+* **scope**: 'Pool' | 'Task': The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.
 
 ## TaskSchedulingPolicy
 ### Properties
-* **nodeFillType**: 'Pack' | 'Spread' (Required): Possible values include: 'Spread', 'Pack'
+* **nodeFillType**: 'Pack' | 'Spread' (Required):
 
 ## UserAccount
 ### Properties
-* **elevationLevel**: 'Admin' | 'NonAdmin': nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin. Possible values include: 'NonAdmin', 'Admin'
+* **elevationLevel**: 'Admin' | 'NonAdmin': nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.
 * **linuxUserConfiguration**: [LinuxUserConfiguration](#linuxuserconfiguration):
 * **name**: string (Required):
 * **password**: string (Required):
@@ -454,5 +454,5 @@
 
 ## WindowsUserConfiguration
 ### Properties
-* **loginMode**: 'Batch' | 'Interactive': Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode. Possible values include: 'Batch', 'Interactive'
+* **loginMode**: 'Batch' | 'Interactive': Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.
 

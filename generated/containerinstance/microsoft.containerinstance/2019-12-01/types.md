@@ -16,7 +16,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the container group identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id associated with the container group. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group. Possible values include: 'SystemAssigned', 'UserAssigned', 'SystemAssigned, UserAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group.
 * **userAssignedIdentities**: [Dictionary<string,Schemas18UserAssignedIdentitiesValue>](#dictionarystringschemas18userassignedidentitiesvalue): The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## Dictionary<string,Schemas18UserAssignedIdentitiesValue>
@@ -40,14 +40,14 @@
 * **instanceView**: [schemas:17_properties_instanceView](#schemas17propertiesinstanceview) (ReadOnly): The instance view of the container group. Only valid in response.
 * **ipAddress**: [IpAddress](#ipaddress): IP address for the container group.
 * **networkProfile**: [ContainerGroupNetworkProfile](#containergroupnetworkprofile): Container group network profile information.
-* **osType**: 'Linux' | 'Windows' (Required): The operating system type required by the containers in the container group. Possible values include: 'Windows', 'Linux'
+* **osType**: 'Linux' | 'Windows' (Required): The operating system type required by the containers in the container group.
 * **provisioningState**: string (ReadOnly): The provisioning state of the container group. This only appears in the response.
 * **restartPolicy**: 'Always' | 'Never' | 'OnFailure': Restart policy for all containers within the container group.
 - `Always` Always restart
 - `OnFailure` Restart on failure
 - `Never` Never restart
-. Possible values include: 'Always', 'OnFailure', 'Never'
-* **sku**: 'Dedicated' | 'Standard': The SKU for a container group. Possible values include: 'Standard', 'Dedicated'
+.
+* **sku**: 'Dedicated' | 'Standard': The SKU for a container group.
 * **volumes**: [Volume](#volume)[]: The list of volumes that can be mounted by containers in this container group.
 
 ## Container
@@ -115,12 +115,12 @@
 ### Properties
 * **path**: string: The path to probe.
 * **port**: int (Required): The port number to probe.
-* **scheme**: 'http' | 'https': The scheme. Possible values include: 'http', 'https'
+* **scheme**: 'http' | 'https': The scheme.
 
 ## ContainerPort
 ### Properties
 * **port**: int (Required): The port number exposed within the container group.
-* **protocol**: 'TCP' | 'UDP': The protocol associated with the port. Possible values include: 'TCP', 'UDP'
+* **protocol**: 'TCP' | 'UDP': The protocol associated with the port.
 
 ## ResourceRequirements
 ### Properties
@@ -136,7 +136,7 @@
 ## GpuResource
 ### Properties
 * **count**: int (Required): The count of the GPU resource.
-* **sku**: 'K80' | 'P100' | 'V100' (Required): The SKU of the GPU resource. Possible values include: 'K80', 'P100', 'V100'
+* **sku**: 'K80' | 'P100' | 'V100' (Required): The SKU of the GPU resource.
 
 ## ResourceRequests
 ### Properties
@@ -156,7 +156,7 @@
 
 ## LogAnalytics
 ### Properties
-* **logType**: 'ContainerInsights' | 'ContainerInstanceLogs': The log type to be used. Possible values include: 'ContainerInsights', 'ContainerInstanceLogs'
+* **logType**: 'ContainerInsights' | 'ContainerInstanceLogs': The log type to be used.
 * **metadata**: [Dictionary<string,String>](#dictionarystringstring): Metadata for log analytics.
 * **workspaceId**: string (Required): The workspace id for log analytics
 * **workspaceKey**: string (Required): The workspace key for log analytics
@@ -215,12 +215,12 @@
 * **fqdn**: string (ReadOnly): The FQDN for the IP.
 * **ip**: string: The IP exposed to the public internet.
 * **ports**: [Port](#port)[] (Required): The list of ports exposed on the container group.
-* **type**: 'Private' | 'Public' (Required): Specifies if the IP is exposed to the public internet or private VNET. Possible values include: 'Public', 'Private'
+* **type**: 'Private' | 'Public' (Required): Specifies if the IP is exposed to the public internet or private VNET.
 
 ## Port
 ### Properties
 * **port**: int (Required): The port number.
-* **protocol**: 'TCP' | 'UDP': The protocol associated with the port. Possible values include: 'TCP', 'UDP'
+* **protocol**: 'TCP' | 'UDP': The protocol associated with the port.
 
 ## ContainerGroupNetworkProfile
 ### Properties

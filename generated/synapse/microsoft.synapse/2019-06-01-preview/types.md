@@ -317,7 +317,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of the workspace managed identity
 * **tenantId**: string (ReadOnly): The tenant ID of the workspace managed identity
-* **type**: 'None' | 'SystemAssigned': The type of managed identity for the workspace. Possible values include: 'None', 'SystemAssigned'
+* **type**: 'None' | 'SystemAssigned': The type of managed identity for the workspace.
 
 ## WorkspaceProperties
 ### Properties
@@ -488,7 +488,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
-* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required. Possible values include: 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
 * **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account.
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
@@ -511,8 +511,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **lastSucceededTimestamp**: string (ReadOnly): The time when the Big Data pool was updated successfully.
 * **libraryRequirements**: [LibraryRequirements](#libraryrequirements): Library requirements for a Big Data pool powered by Apache Spark
 * **nodeCount**: int: The number of nodes in the Big Data pool.
-* **nodeSize**: 'Large' | 'Medium' | 'None' | 'Small' | 'XLarge' | 'XXLarge' | 'XXXLarge': The level of compute power that each node in the Big Data pool has. Possible values include: 'None', 'Small', 'Medium', 'Large', 'XLarge', 'XXLarge', 'XXXLarge'
-* **nodeSizeFamily**: 'MemoryOptimized' | 'None': The kind of nodes that the Big Data pool provides. Possible values include: 'None', 'MemoryOptimized'
+* **nodeSize**: 'Large' | 'Medium' | 'None' | 'Small' | 'XLarge' | 'XXLarge' | 'XXXLarge': The level of compute power that each node in the Big Data pool has.
+* **nodeSizeFamily**: 'MemoryOptimized' | 'None': The kind of nodes that the Big Data pool provides.
 * **provisioningState**: string: The state of the Big Data pool.
 * **sessionLevelPackagesEnabled**: bool: Whether session level packages enabled.
 * **sparkConfigProperties**: [LibraryRequirements](#libraryrequirements): Library requirements for a Big Data pool powered by Apache Spark
@@ -631,7 +631,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
-* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required. Possible values include: 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
 * **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account.
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
@@ -644,7 +644,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## IpFirewallRuleProperties
 ### Properties
 * **endIpAddress**: string: The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
-* **provisioningState**: 'DeleteError' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): Resource provisioning state. Possible values include: 'Provisioning', 'Succeeded', 'Deleting', 'Failed', 'DeleteError'
+* **provisioningState**: 'DeleteError' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): Resource provisioning state.
 * **startIpAddress**: string: The start IP address of the firewall rule. Must be IPv4 format
 
 ## IntegrationRuntime
@@ -654,7 +654,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Managed
 #### Properties
 * **managedVirtualNetwork**: [ManagedVirtualNetworkReference](#managedvirtualnetworkreference): Managed Virtual Network reference type.
-* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Integration runtime state, only valid for managed dedicated integration runtime. Possible values include: 'Initial', 'Stopped', 'Started', 'Starting', 'Stopping', 'NeedRegistration', 'Online', 'Limited', 'Offline', 'AccessDenied'
+* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Integration runtime state, only valid for managed dedicated integration runtime.
 * **type**: 'Managed' (Required): Managed integration runtime, including managed elastic and managed dedicated integration runtimes.
 * **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required): Managed integration runtime type properties.
 
@@ -667,7 +667,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## Managed
 ### Properties
 * **managedVirtualNetwork**: [ManagedVirtualNetworkReference](#managedvirtualnetworkreference): Managed Virtual Network reference type.
-* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Integration runtime state, only valid for managed dedicated integration runtime. Possible values include: 'Initial', 'Stopped', 'Started', 'Starting', 'Stopping', 'NeedRegistration', 'Online', 'Limited', 'Offline', 'AccessDenied'
+* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Integration runtime state, only valid for managed dedicated integration runtime.
 * **type**: 'Managed' (Required): Managed integration runtime, including managed elastic and managed dedicated integration runtimes.
 * **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required): Managed integration runtime type properties.
 
@@ -694,7 +694,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## IntegrationRuntimeDataFlowProperties
 ### Properties
-* **computeType**: 'ComputeOptimized' | 'General' | 'MemoryOptimized': Compute type of the cluster which will execute data flow job. Possible values include: 'General', 'MemoryOptimized', 'ComputeOptimized'
+* **computeType**: 'ComputeOptimized' | 'General' | 'MemoryOptimized': Compute type of the cluster which will execute data flow job.
 * **coreCount**: int: Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
 * **timeToLive**: int: Time to live (in minutes) setting of the cluster which will execute data flow job.
 ### Additional Properties
@@ -713,9 +713,9 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **catalogInfo**: [IntegrationRuntimeSsisCatalogInfo](#integrationruntimessiscataloginfo): Catalog information for managed dedicated integration runtime.
 * **customSetupScriptProperties**: [IntegrationRuntimeCustomSetupScriptProperties](#integrationruntimecustomsetupscriptproperties): Custom setup script properties for a managed dedicated integration runtime.
 * **dataProxyProperties**: [IntegrationRuntimeDataProxyProperties](#integrationruntimedataproxyproperties): Data proxy properties for a managed dedicated integration runtime.
-* **edition**: 'Enterprise' | 'Standard': The edition for the SSIS Integration Runtime. Possible values include: 'Standard', 'Enterprise'
+* **edition**: 'Enterprise' | 'Standard': The edition for the SSIS Integration Runtime.
 * **expressCustomSetupProperties**: [CustomSetupBase](#customsetupbase)[]: Custom setup without script properties for a SSIS integration runtime.
-* **licenseType**: 'BasePrice' | 'LicenseIncluded': License type for bringing your own license scenario. Possible values include: 'BasePrice', 'LicenseIncluded'
+* **licenseType**: 'BasePrice' | 'LicenseIncluded': License type for bringing your own license scenario.
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -723,7 +723,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **catalogAdminPassword**: [SecureString](#securestring): Azure Synapse secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
 * **catalogAdminUserName**: string: The administrator user name of catalog database.
-* **catalogPricingTier**: 'Basic' | 'Premium' | 'PremiumRS' | 'Standard': The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/. Possible values include: 'Basic', 'Standard', 'Premium', 'PremiumRS'
+* **catalogPricingTier**: 'Basic' | 'Premium' | 'PremiumRS' | 'Standard': The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/.
 * **catalogServerEndpoint**: string: The catalog database server URL.
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -747,7 +747,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## EntityReference
 ### Properties
 * **referenceName**: string: The name of this referenced entity.
-* **type**: 'IntegrationRuntimeReference' | 'LinkedServiceReference': The type of this referenced entity. Possible values include: 'IntegrationRuntimeReference', 'LinkedServiceReference'
+* **type**: 'IntegrationRuntimeReference' | 'LinkedServiceReference': The type of this referenced entity.
 
 ## CustomSetupBase
 * **Discriminator**: type
@@ -852,8 +852,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## schemas:130_properties_grantSqlControlToManagedIdentity
 ### Properties
-* **actualState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Unknown' (ReadOnly): Actual state. Possible values include: 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Unknown'
-* **desiredState**: 'Disabled' | 'Enabled': Desired state. Possible values include: 'Enabled', 'Disabled'
+* **actualState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Unknown' (ReadOnly): Actual state.
+* **desiredState**: 'Disabled' | 'Enabled': Desired state.
 
 ## ServerSecurityAlertPolicyProperties
 ### Properties
@@ -862,7 +862,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **emailAccountAdmins**: bool: Specifies that the alert is sent to the account administrators.
 * **emailAddresses**: string[]: Specifies an array of e-mail addresses to which the alert is sent.
 * **retentionDays**: int: Specifies the number of days to keep in the Threat Detection audit logs.
-* **state**: 'Disabled' | 'Enabled' | 'New' (Required): Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific server. Possible values include: 'New', 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled' | 'New' (Required): Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific server.
 * **storageAccountAccessKey**: string: Specifies the identifier key of the Threat Detection audit storage account.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
 
@@ -962,7 +962,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 
 * **isStorageSecondaryKeyInUse**: bool: Specifies whether storageAccountAccessKey value is the storage's secondary key.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
-* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required. Possible values include: 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
 * **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account. If state is Enabled and storageEndpoint is specified, storageAccountAccessKey is required.
 * **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint is required.
@@ -970,7 +970,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 ## DataMaskingPolicyProperties
 ### Properties
 * **applicationPrincipals**: string (ReadOnly): The list of the application principals. This is a legacy parameter and is no longer used.
-* **dataMaskingState**: 'Disabled' | 'Enabled' (Required): The state of the data masking policy. Possible values include: 'Disabled', 'Enabled'
+* **dataMaskingState**: 'Disabled' | 'Enabled' (Required): The state of the data masking policy.
 * **exemptPrincipals**: string: The list of the exempt principals. Specifies the semicolon-separated list of database users for which the data masking policy does not apply. The specified users receive data results without masking for all of the database queries.
 * **maskingLevel**: string (ReadOnly): The masking level. This is a legacy parameter and is no longer used.
 
@@ -979,12 +979,12 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 * **aliasName**: string: The alias name. This is a legacy parameter and is no longer used.
 * **columnName**: string (Required): The column name on which the data masking rule is applied.
 * **id**: string (ReadOnly): The rule Id.
-* **maskingFunction**: 'CCN' | 'Default' | 'Email' | 'Number' | 'SSN' | 'Text' (Required): The masking function that is used for the data masking rule. Possible values include: 'Default', 'CCN', 'Email', 'Number', 'SSN', 'Text'
+* **maskingFunction**: 'CCN' | 'Default' | 'Email' | 'Number' | 'SSN' | 'Text' (Required): The masking function that is used for the data masking rule.
 * **numberFrom**: string: The numberFrom property of the masking rule. Required if maskingFunction is set to Number, otherwise this parameter will be ignored.
 * **numberTo**: string: The numberTo property of the data masking rule. Required if maskingFunction is set to Number, otherwise this parameter will be ignored.
 * **prefixSize**: string: If maskingFunction is set to Text, the number of characters to show unmasked in the beginning of the string. Otherwise, this parameter will be ignored.
 * **replacementString**: string: If maskingFunction is set to Text, the character to use for masking the unexposed part of the string. Otherwise, this parameter will be ignored.
-* **ruleState**: 'Disabled' | 'Enabled': The rule state. Used to delete a rule. To delete an existing rule, specify the schemaName, tableName, columnName, maskingFunction, and specify ruleState as disabled. However, if the rule doesn't already exist, the rule will be created with ruleState set to enabled, regardless of the provided value of ruleState. Possible values include: 'Disabled', 'Enabled'
+* **ruleState**: 'Disabled' | 'Enabled': The rule state. Used to delete a rule. To delete an existing rule, specify the schemaName, tableName, columnName, maskingFunction, and specify ruleState as disabled. However, if the rule doesn't already exist, the rule will be created with ruleState set to enabled, regardless of the provided value of ruleState.
 * **schemaName**: string (Required): The schema name on which the data masking rule is applied.
 * **suffixSize**: string: If maskingFunction is set to Text, the number of characters to show unmasked at the end of the string. Otherwise, this parameter will be ignored.
 * **tableName**: string (Required): The table name on which the data masking rule is applied.
@@ -1065,7 +1065,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
-* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required. Possible values include: 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
 * **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account.
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
@@ -1077,7 +1077,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## GeoBackupPolicyProperties
 ### Properties
-* **state**: 'Disabled' | 'Enabled' (Required): The state of the geo backup policy. Possible values include: 'Disabled', 'Enabled'
+* **state**: 'Disabled' | 'Enabled' (Required): The state of the geo backup policy.
 * **storageType**: string (ReadOnly): The storage type of the geo backup policy.
 
 ## MaintenanceWindowsProperties
@@ -1086,7 +1086,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## MaintenanceWindowTimeRange
 ### Properties
-* **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of maintenance window. Possible values include: 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
+* **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of maintenance window.
 * **duration**: string: Duration of maintenance window in minutes.
 * **startTime**: string: Start time minutes offset from 12am.
 
@@ -1103,7 +1103,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **isDisabled**: bool (ReadOnly): Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
 * **labelId**: string: The label ID.
 * **labelName**: string: The label name.
-* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None': Possible values include: 'None', 'Low', 'Medium', 'High', 'Critical'
+* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None':
 * **schemaName**: string (ReadOnly): The schema name.
 * **tableName**: string (ReadOnly): The table name.
 
@@ -1114,13 +1114,13 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **emailAccountAdmins**: bool: Specifies that the alert is sent to the account administrators.
 * **emailAddresses**: string[]: Specifies an array of e-mail addresses to which the alert is sent.
 * **retentionDays**: int: Specifies the number of days to keep in the Threat Detection audit logs.
-* **state**: 'Disabled' | 'Enabled' | 'New' (Required): Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific Sql pool. Possible values include: 'New', 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled' | 'New' (Required): Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific Sql pool.
 * **storageAccountAccessKey**: string: Specifies the identifier key of the Threat Detection audit storage account.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
 
 ## TransparentDataEncryptionProperties
 ### Properties
-* **status**: 'Disabled' | 'Enabled': The status of the database transparent data encryption. Possible values include: 'Enabled', 'Disabled'
+* **status**: 'Disabled' | 'Enabled': The status of the database transparent data encryption.
 
 ## SqlPoolVulnerabilityAssessmentProperties
 ### Properties

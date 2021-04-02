@@ -15,7 +15,7 @@
 ## IoTSpacesProperties
 ### Properties
 * **managementApiUrl**: string (ReadOnly): The management Api endpoint.
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The provisioning state. Possible values include: 'Provisioning', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The provisioning state.
 * **storageContainer**: [StorageContainerProperties](#storagecontainerproperties): The properties of the Azure Storage Container for file archive.
 * **webPortalUrl**: string (ReadOnly): The management UI endpoint.
 
@@ -28,7 +28,7 @@
 
 ## IoTSpacesSkuInfo
 ### Properties
-* **name**: 'F1' | 'S1' | 'S2' | 'S3' (Required): The name of the SKU. Possible values include: 'F1', 'S1', 'S2', 'S3'
+* **name**: 'F1' | 'S1' | 'S2' | 'S3' (Required): The name of the SKU.
 
 ## Dictionary<string,String>
 ### Properties

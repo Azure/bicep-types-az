@@ -11,7 +11,7 @@
 
 ## ManagementLockProperties
 ### Properties
-* **level**: 'CanNotDelete' | 'NotSpecified' | 'ReadOnly' (Required): The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it. Possible values include: 'NotSpecified', 'CanNotDelete', 'ReadOnly'
+* **level**: 'CanNotDelete' | 'NotSpecified' | 'ReadOnly' (Required): The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
 * **notes**: string: Notes about the lock. Maximum of 512 characters.
 * **owners**: [ManagementLockOwner](#managementlockowner)[]: The owners of the lock.
 

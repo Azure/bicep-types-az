@@ -38,8 +38,8 @@
 ## ClusterProperties
 ### Properties
 * **dataIngestionUri**: string (ReadOnly): The cluster data ingestion URI.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource. Possible values include: 'Running', 'Creating', 'Deleting', 'Succeeded', 'Failed'
-* **state**: 'Creating' | 'Deleted' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unavailable' (ReadOnly): The state of the resource. Possible values include: 'Creating', 'Unavailable', 'Running', 'Deleting', 'Deleted', 'Stopping', 'Stopped', 'Starting'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
+* **state**: 'Creating' | 'Deleted' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unavailable' (ReadOnly): The state of the resource.
 * **trustedExternalTenants**: [TrustedExternalTenant](#trustedexternaltenant)[]: The cluster's external tenants.
 * **uri**: string (ReadOnly): The cluster URI.
 
@@ -50,7 +50,7 @@
 ## AzureSku
 ### Properties
 * **capacity**: int: SKU capacity.
-* **name**: 'D13_v2' | 'D14_v2' | 'KC16' | 'KC8' | 'KS16' | 'KS8' | 'L16' | 'L8' (Required): SKU name. Possible values include: 'KC8', 'KC16', 'KS8', 'KS16', 'D13_v2', 'D14_v2', 'L8', 'L16'
+* **name**: 'D13_v2' | 'D14_v2' | 'KC16' | 'KC8' | 'KS16' | 'KS8' | 'L16' | 'L8' (Required): SKU name.
 * **tier**: string (Required): SKU tier.
 
 ## Dictionary<string,String>
@@ -61,7 +61,7 @@
 ## DatabaseProperties
 ### Properties
 * **hotCachePeriodInDays**: int: The number of days of data that should be kept in cache for fast queries.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource. Possible values include: 'Running', 'Creating', 'Deleting', 'Succeeded', 'Failed'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **softDeletePeriodInDays**: int (Required): The number of days data should be kept before it stops being accessible to queries.
 * **statistics**: [DatabaseStatistics](#databasestatistics):
 
@@ -77,7 +77,7 @@
 ## EventHubConnectionProperties
 ### Properties
 * **consumerGroup**: string (Required): The event hub consumer group.
-* **dataFormat**: 'CSV' | 'JSON' | 'MULTIJSON': The data format of the message. Optionally the data format can be added to each message. Possible values include: 'MULTIJSON', 'JSON', 'CSV'
+* **dataFormat**: 'CSV' | 'JSON' | 'MULTIJSON': The data format of the message. Optionally the data format can be added to each message.
 * **eventHubResourceId**: string (Required): The resource ID of the event hub to be used to create a data connection.
 * **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.

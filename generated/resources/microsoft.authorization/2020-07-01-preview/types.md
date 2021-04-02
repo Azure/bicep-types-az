@@ -14,7 +14,7 @@
 ### Properties
 * **description**: string: The description of the policy exemption.
 * **displayName**: string: The display name of the policy exemption.
-* **exemptionCategory**: 'Mitigated' | 'Waiver' (Required): The policy exemption category. Possible values are Waiver and Mitigated. Possible values include: 'Waiver', 'Mitigated'
+* **exemptionCategory**: 'Mitigated' | 'Waiver' (Required): The policy exemption category. Possible values are Waiver and Mitigated.
 * **expiresOn**: string: The expiration date and time (in UTC ISO 8601 format yyyy-MM-ddTHH:mm:ssZ) of the policy exemption.
 * **metadata**: any: The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.
 * **policyAssignmentId**: string (Required): The ID of the policy assignment that is being exempted.
@@ -24,8 +24,8 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 

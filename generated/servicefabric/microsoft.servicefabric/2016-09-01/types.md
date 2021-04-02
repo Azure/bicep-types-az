@@ -21,22 +21,22 @@
 * **clusterCodeVersion**: string: The ServiceFabric code version running in your cluster
 * **clusterEndpoint**: string (ReadOnly): The endpoint for the cluster connecting to servicefabric resource provider
 * **clusterId**: string (ReadOnly): The unique identifier for the cluster resource
-* **clusterState**: 'AutoScale' | 'BaselineUpgrade' | 'Deploying' | 'EnforcingClusterVersion' | 'Ready' | 'UpdatingInfrastructure' | 'UpdatingUserCertificate' | 'UpdatingUserConfiguration' | 'UpgradeServiceUnreachable' | 'WaitingForNodes' (ReadOnly): The state for the cluster. Possible values include: 'WaitingForNodes', 'Deploying', 'BaselineUpgrade', 'UpdatingUserConfiguration', 'UpdatingUserCertificate', 'UpdatingInfrastructure', 'EnforcingClusterVersion', 'UpgradeServiceUnreachable', 'AutoScale', 'Ready'
+* **clusterState**: 'AutoScale' | 'BaselineUpgrade' | 'Deploying' | 'EnforcingClusterVersion' | 'Ready' | 'UpdatingInfrastructure' | 'UpdatingUserCertificate' | 'UpdatingUserConfiguration' | 'UpgradeServiceUnreachable' | 'WaitingForNodes' (ReadOnly): The state for the cluster.
 * **diagnosticsStorageAccountConfig**: [DiagnosticsStorageAccountConfig](#diagnosticsstorageaccountconfig): Diagnostics storage account config
 * **fabricSettings**: [SettingsSectionDescription](#settingssectiondescription)[]: List of custom fabric settings to configure the cluster.
 * **managementEndpoint**: string (Required): The http management endpoint of the cluster
 * **nodeTypes**: [NodeTypeDescription](#nodetypedescription)[] (Required): The list of node types that make up the cluster
-* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the cluster resource. Possible values include: 'Updating', 'Succeeded', 'Failed', 'Canceled'
-* **reliabilityLevel**: 'Bronze' | 'Gold' | 'Platinum' | 'Silver': Cluster reliability level indicates replica set size of system service. Possible values include: 'Bronze', 'Silver', 'Gold', 'Platinum'
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the cluster resource.
+* **reliabilityLevel**: 'Bronze' | 'Gold' | 'Platinum' | 'Silver': Cluster reliability level indicates replica set size of system service.
 * **reverseProxyCertificate**: [CertificateDescription](#certificatedescription): Certificate details
 * **upgradeDescription**: [ClusterUpgradePolicy](#clusterupgradepolicy): Cluster upgrade policy
-* **upgradeMode**: 'Automatic' | 'Manual': Cluster upgrade mode indicates if fabric upgrade is initiated automatically by the system or not. Possible values include: 'Automatic', 'Manual'
+* **upgradeMode**: 'Automatic' | 'Manual': Cluster upgrade mode indicates if fabric upgrade is initiated automatically by the system or not.
 * **vmImage**: string: The name of VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.
 
 ## ClusterVersionDetails
 ### Properties
 * **codeVersion**: string: The ServiceFabric runtime version of the cluster
-* **environment**: 'Linux' | 'Windows': Cluster operating system. Possible values include: 'Windows', 'Linux'
+* **environment**: 'Linux' | 'Windows': Cluster operating system.
 * **supportExpiryUtc**: string: The date of expiry of support of the version
 
 ## AzureActiveDirectory
@@ -49,7 +49,7 @@
 ### Properties
 * **thumbprint**: string (Required): Thumbprint of the primary certificate
 * **thumbprintSecondary**: string: Thumbprint of the secondary certificate
-* **x509StoreName**: 'AddressBook' | 'AuthRoot' | 'CertificateAuthority' | 'Disallowed' | 'My' | 'Root' | 'TrustedPeople' | 'TrustedPublisher': The local certificate store location. Possible values include: 'AddressBook', 'AuthRoot', 'CertificateAuthority', 'Disallowed', 'My', 'Root', 'TrustedPeople', 'TrustedPublisher'
+* **x509StoreName**: 'AddressBook' | 'AuthRoot' | 'CertificateAuthority' | 'Disallowed' | 'My' | 'Root' | 'TrustedPeople' | 'TrustedPublisher': The local certificate store location.
 
 ## ClientCertificateCommonName
 ### Properties
@@ -85,7 +85,7 @@
 * **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
 * **capacities**: [Dictionary<string,String>](#dictionarystringstring): The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much of a resource a node has
 * **clientConnectionEndpointPort**: int (Required): The TCP cluster management endpoint port
-* **durabilityLevel**: 'Bronze' | 'Gold' | 'Silver': Node type durability Level. Possible values include: 'Bronze', 'Silver', 'Gold'
+* **durabilityLevel**: 'Bronze' | 'Gold' | 'Silver': Node type durability Level.
 * **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
 * **httpGatewayEndpointPort**: int (Required): The HTTP cluster management endpoint port
 * **isPrimary**: bool (Required): Mark this as the primary node type

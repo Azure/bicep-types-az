@@ -19,7 +19,7 @@
 * **managedRules**: [ManagedRuleSetList](#managedrulesetlist): Defines the list of managed rule sets for the policy.
 * **policySettings**: [PolicySettings](#policysettings): Defines top-level WebApplicationFirewallPolicy configuration settings.
 * **provisioningState**: string (ReadOnly): Provisioning state of the policy.
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly): Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly):
 
 ## CustomRuleList
 ### Properties
@@ -27,21 +27,21 @@
 
 ## CustomRule
 ### Properties
-* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' (Required): Describes what action to be applied when rule matches. Possible values include: 'Allow', 'Block', 'Log', 'Redirect'
-* **enabledState**: 'Disabled' | 'Enabled': Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified. Possible values include: 'Disabled', 'Enabled'
+* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' (Required): Describes what action to be applied when rule matches.
+* **enabledState**: 'Disabled' | 'Enabled': Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
 * **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
 * **name**: string: Describes the name of the rule.
 * **priority**: int (Required): Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
 * **rateLimitDurationInMinutes**: int: Time window for resetting the rate limit count. Default is 1 minute.
 * **rateLimitThreshold**: int: Number of allowed requests per client within the time window.
-* **ruleType**: 'MatchRule' | 'RateLimitRule' (Required): Describes type of rule. Possible values include: 'MatchRule', 'RateLimitRule'
+* **ruleType**: 'MatchRule' | 'RateLimitRule' (Required): Describes type of rule.
 
 ## MatchCondition
 ### Properties
 * **matchValue**: string[] (Required): List of possible match values.
-* **matchVariable**: 'Cookies' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestHeader' | 'RequestMethod' | 'RequestUri' | 'SocketAddr' (Required): Request variable to compare with. Possible values include: 'RemoteAddr', 'RequestMethod', 'QueryString', 'PostArgs', 'RequestUri', 'RequestHeader', 'RequestBody', 'Cookies', 'SocketAddr'
+* **matchVariable**: 'Cookies' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestHeader' | 'RequestMethod' | 'RequestUri' | 'SocketAddr' (Required): Request variable to compare with.
 * **negateCondition**: bool: Describes if the result of this condition should be negated.
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Comparison type to use for matching with the variable value. Possible values include: 'Any', 'IPMatch', 'GeoMatch', 'Equal', 'Contains', 'LessThan', 'GreaterThan', 'LessThanOrEqual', 'GreaterThanOrEqual', 'BeginsWith', 'EndsWith', 'RegEx'
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Comparison type to use for matching with the variable value.
 * **selector**: string: Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
 * **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms.
 
@@ -66,16 +66,16 @@
 
 ## ManagedRuleOverride
 ### Properties
-* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect': Describes the override action to be applied when rule matches. Possible values include: 'Allow', 'Block', 'Log', 'Redirect'
-* **enabledState**: 'Disabled' | 'Enabled': Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified. Possible values include: 'Disabled', 'Enabled'
+* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect': Describes the override action to be applied when rule matches.
+* **enabledState**: 'Disabled' | 'Enabled': Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
 * **ruleId**: string (Required): Identifier for the managed rule.
 
 ## PolicySettings
 ### Properties
 * **customBlockResponseBody**: string: If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
 * **customBlockResponseStatusCode**: int: If the action type is block, customer can override the response status code.
-* **enabledState**: 'Disabled' | 'Enabled': Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified. Possible values include: 'Disabled', 'Enabled'
-* **mode**: 'Detection' | 'Prevention': Describes if it is in detection mode or prevention mode at policy level. Possible values include: 'Prevention', 'Detection'
+* **enabledState**: 'Disabled' | 'Enabled': Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.
+* **mode**: 'Detection' | 'Prevention': Describes if it is in detection mode or prevention mode at policy level.
 * **redirectUrl**: string: If action type is redirect, this field represents redirect URL for the client.
 
 ## Dictionary<string,String>

@@ -18,4 +18,4 @@ INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.
 Processing batch task - {"tag":"schema-attestation-2018-09-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-[8.67 s] Generation Complete
+[14.42 s] Generation Complete

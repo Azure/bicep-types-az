@@ -24,4 +24,4 @@ INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.
 Processing batch task - {"tag":"schema-streamanalytics-2016-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-[32.49 s] Generation Complete
+[37.63 s] Generation Complete

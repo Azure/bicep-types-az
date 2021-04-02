@@ -24,4 +24,4 @@ INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.
 Processing batch task - {"tag":"schema-notificationhubs-2014-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-[15.54 s] Generation Complete
+[22.48 s] Generation Complete

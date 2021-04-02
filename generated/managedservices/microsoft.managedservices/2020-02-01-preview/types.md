@@ -21,7 +21,7 @@
 
 ## RegistrationAssignmentProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Current state of the registration assignment. Possible values include: 'NotSpecified', 'Accepted', 'Running', 'Ready', 'Creating', 'Created', 'Deleting', 'Deleted', 'Canceled', 'Failed', 'Succeeded', 'Updating'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Current state of the registration assignment.
 * **registrationDefinition**: [schemas:4_registrationDefinition](#schemas4registrationdefinition) (ReadOnly): Registration definition inside registration assignment.
 * **registrationDefinitionId**: string (Required): Fully qualified path of the registration definition.
 
@@ -49,7 +49,7 @@
 * **managedByTenantName**: string: Name of the managedBy tenant.
 * **manageeTenantId**: string: Id of the home tenant.
 * **manageeTenantName**: string: Name of the home tenant.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating': Current state of the registration definition. Possible values include: 'NotSpecified', 'Accepted', 'Running', 'Ready', 'Creating', 'Created', 'Deleting', 'Deleted', 'Canceled', 'Failed', 'Succeeded', 'Updating'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating': Current state of the registration definition.
 * **registrationDefinitionName**: string: Name of the registration definition.
 
 ## Authorization
@@ -69,7 +69,7 @@
 ## JustInTimeAccessPolicy
 ### Properties
 * **maximumActivationDuration**: string: Maximum access duration in ISO 8601 format.  The default value is "PT8H".
-* **multiFactorAuthProvider**: 'Azure' | 'None' (Required): MFA provider. Possible values include: 'Azure', 'None'
+* **multiFactorAuthProvider**: 'Azure' | 'None' (Required): MFA provider.
 
 ## RegistrationDefinitionProperties
 ### Properties
@@ -78,6 +78,6 @@
 * **eligibleAuthorizations**: [EligibleAuthorization](#eligibleauthorization)[]: Eligible PIM authorization tuple containing principal id of the user/security group or service principal, id of the built-in role, and just-in-time access policy setting
 * **managedByTenantId**: string (Required): Id of the managedBy tenant.
 * **managedByTenantName**: string (ReadOnly): Name of the managedBy tenant.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Current state of the registration definition. Possible values include: 'NotSpecified', 'Accepted', 'Running', 'Ready', 'Creating', 'Created', 'Deleting', 'Deleted', 'Canceled', 'Failed', 'Succeeded', 'Updating'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Current state of the registration definition.
 * **registrationDefinitionName**: string: Name of the registration definition.
 

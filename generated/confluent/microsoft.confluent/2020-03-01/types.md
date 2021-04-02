@@ -36,7 +36,7 @@
 * **createdTime**: string (ReadOnly): The creation time of the resource.
 * **offerDetail**: [schemas:12_offerDetail](#schemas12offerdetail): Confluent offer detail
 * **organizationId**: string (ReadOnly): Id of the Confluent organization.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly): Provision states for confluent RP. Possible values include: 'Accepted', 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled', 'Deleted', 'NotSpecified'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly): Provision states for confluent RP.
 * **ssoUrl**: string (ReadOnly): SSO url for the Confluent organization.
 * **userDetail**: [schemas:12_userDetail](#schemas12userdetail): Subscriber detail
 
@@ -46,7 +46,7 @@
 * **planId**: string: Offer Plan Id
 * **planName**: string: Offer Plan Name
 * **publisherId**: string: Publisher Id
-* **status**: 'Failed' | 'InProgress' | 'PendingFulfillmentStart' | 'Reinstated' | 'Started' | 'Subscribed' | 'Succeeded' | 'Suspended' | 'Unsubscribed' | 'Updating': SaaS Offer Status. Possible values include: 'Started', 'PendingFulfillmentStart', 'InProgress', 'Subscribed', 'Suspended', 'Reinstated', 'Succeeded', 'Failed', 'Unsubscribed', 'Updating'
+* **status**: 'Failed' | 'InProgress' | 'PendingFulfillmentStart' | 'Reinstated' | 'Started' | 'Subscribed' | 'Succeeded' | 'Suspended' | 'Unsubscribed' | 'Updating': SaaS Offer Status.
 * **termUnit**: string: Offer Plan Term unit
 
 ## schemas:12_userDetail

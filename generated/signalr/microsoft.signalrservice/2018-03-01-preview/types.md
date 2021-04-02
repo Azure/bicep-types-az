@@ -19,7 +19,7 @@ The geo region of a resource never changes after it is created.
 * **hostName**: string (ReadOnly): FQDN of the SignalR service instance. Format: xxx.service.signalr.net
 * **hostNamePrefix**: string: Prefix for the hostName of the SignalR service. Retained for future use.
 The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the resource. Possible values include: 'Unknown', 'Succeeded', 'Failed', 'Canceled', 'Running', 'Creating', 'Updating', 'Deleting', 'Moving'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the resource.
 * **publicPort**: int (ReadOnly): The publicly accessibly port of the SignalR service which is designed for browser/client side usage.
 * **serverPort**: int (ReadOnly): The publicly accessibly port of the SignalR service which is designed for customer server side usage.
 * **version**: string (ReadOnly): Version of the SignalR resource. Probably you need the same or higher version of client SDKs.
@@ -31,7 +31,7 @@ possible for the resource this may be omitted.
 * **family**: string: Optional, string. If the service has different generations of hardware, for the same SKU, then that can be captured here.
 * **name**: string (Required): The name of the SKU. This is typically a letter + number code, such as A0 or P3.  Required (if sku is specified)
 * **size**: string: Optional, string. When the name field is the combination of tier and some other value, this would be the standalone code.
-* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': Optional tier of this particular SKU. `Basic` is deprecated, use `Standard` instead for Basic tier. Possible values include: 'Free', 'Basic', 'Standard', 'Premium'
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': Optional tier of this particular SKU. `Basic` is deprecated, use `Standard` instead for Basic tier.
 
 ## Dictionary<string,String>
 ### Properties

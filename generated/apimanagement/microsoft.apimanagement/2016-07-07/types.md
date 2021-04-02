@@ -149,7 +149,7 @@
 * **description**: string: Product description. May include HTML formatting tags.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **state**: 'NotPublished' | 'Published': whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is NotPublished. Possible values include: 'NotPublished', 'Published'
+* **state**: 'NotPublished' | 'Published': whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is NotPublished.
 * **subscriptionRequired**: bool: Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as "protected" and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as "open" and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it's value is assumed to be true.
 * **subscriptionsLimit**: int: Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of true.
 * **terms**: string: Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
@@ -201,7 +201,7 @@
 * **secondaryKey**: string: Secondary subscription key. If not specified during request key will be generated automatically.
 * **startDate**: string (ReadOnly): Subscription activation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 
-* **state**: 'Active' | 'Cancelled' | 'Expired' | 'Rejected' | 'Submitted' | 'Suspended': Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated. Possible values include: 'Suspended', 'Active', 'Expired', 'Submitted', 'Rejected', 'Cancelled'
+* **state**: 'Active' | 'Cancelled' | 'Expired' | 'Rejected' | 'Submitted' | 'Suspended': Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
 * **stateComment**: string (ReadOnly): Optional subscription comment added by an administrator.
 * **type**: 'Microsoft.ApiManagement/service/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 * **userId**: string (Required): User (user id path) for whom subscription is being created in form /users/{uid}
@@ -220,7 +220,7 @@
 * **password**: string (Required, WriteOnly): User Password.
 * **registrationDate**: string (ReadOnly): Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 
-* **state**: 'Active' | 'Blocked': Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active. Possible values include: 'Active', 'Blocked'
+* **state**: 'Active' | 'Blocked': Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
 * **type**: 'Microsoft.ApiManagement/service/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ApiManagementServiceProperties
@@ -240,12 +240,12 @@
 * **staticIPs**: string[] (ReadOnly): Static IP addresses of the API Management service virtual machines. Available only for Standard and Premium SKU.
 * **targetProvisioningState**: string (ReadOnly): The provisioning state of the API Management service, which is targeted by the long running operation started on the service.
 * **vpnconfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Configuration of a virtual network to which API Management service is deployed.
-* **vpnType**: 'External' | 'Internal' | 'None': The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only. Possible values include: 'None', 'External', 'Internal'
+* **vpnType**: 'External' | 'Internal' | 'None': The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.
 
 ## AdditionalRegion
 ### Properties
 * **location**: string (Required): The location name of the additional region among Azure Data center regions.
-* **skuType**: 'Developer' | 'Premium' | 'Standard' (Required): The SKU type in the location. Possible values include: 'Developer', 'Standard', 'Premium'
+* **skuType**: 'Developer' | 'Premium' | 'Standard' (Required): The SKU type in the location.
 * **skuUnitCount**: int: The SKU Unit count at the location. The maximum SKU Unit count depends on the SkuType. Maximum allowed for Developer SKU is 1, for Standard SKU is 4, and for Premium SKU is 10, at a location.
 * **staticIPs**: string[] (ReadOnly): Static IP addresses of the location's virtual machines.
 * **vpnconfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Configuration of a virtual network to which API Management service is deployed.
@@ -266,7 +266,7 @@
 ### Properties
 * **certificate**: [CertificateInformation](#certificateinformation) (Required): SSL certificate information.
 * **hostname**: string (Required): Hostname.
-* **type**: 'Management' | 'Portal' | 'Proxy' | 'Scm' (Required): Hostname type. Possible values include: 'Proxy', 'Portal', 'Management', 'Scm'
+* **type**: 'Management' | 'Portal' | 'Proxy' | 'Scm' (Required): Hostname type.
 
 ## CertificateInformation
 ### Properties
@@ -277,7 +277,7 @@
 ## ApiManagementServiceSkuProperties
 ### Properties
 * **capacity**: int: Capacity of the SKU (number of deployed units of the SKU). The default value is 1.
-* **name**: 'Developer' | 'Premium' | 'Standard' (Required): Name of the Sku. Possible values include: 'Developer', 'Standard', 'Premium'
+* **name**: 'Developer' | 'Premium' | 'Standard' (Required): Name of the Sku.
 
 ## Dictionary<string,String>
 ### Properties

@@ -38,11 +38,11 @@
 * **debugParams**: string: Internal use.
 * **description**: string: User readable description of the application.
 * **diagnostics**: [DiagnosticsDescription](#diagnosticsdescription): Describes the diagnostics options available
-* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' (ReadOnly): Describes the health state of an application resource. Possible values include: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'
+* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' (ReadOnly): Describes the health state of an application resource.
 * **provisioningState**: string (ReadOnly): State of the resource.
 * **serviceNames**: string[] (ReadOnly): Names of the services in the application.
 * **services**: [ServiceResourceDescription](#serviceresourcedescription)[]: describes the services in the application.
-* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Ready' | 'Upgrading' (ReadOnly): Status of the application resource. Possible values include: 'Invalid', 'Ready', 'Upgrading', 'Creating', 'Deleting', 'Failed'
+* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Ready' | 'Upgrading' (ReadOnly): Status of the application resource.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the application deployment.
 * **unhealthyEvaluation**: string (ReadOnly): When the application's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
 
@@ -89,12 +89,12 @@
 
 * **description**: string: User readable description of the service.
 * **diagnostics**: [DiagnosticsRef](#diagnosticsref): Reference to sinks in DiagnosticsDescription.
-* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning': The health state of a resource such as Application, Service, or Network. Possible values include: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'
+* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning': The health state of a resource such as Application, Service, or Network.
 * **networkRefs**: [NetworkRef](#networkref)[]: The names of the private networks that this service needs to be part of.
 * **osType**: 'Linux' | 'Windows' (Required): The Operating system type required by the code in service.
-. Possible values include: 'Linux', 'Windows'
+.
 * **replicaCount**: int: The number of replicas of the service to create. Defaults to 1 if not specified.
-* **status**: 'Active' | 'Creating' | 'Deleting' | 'Failed' | 'Unknown' | 'Upgrading' (ReadOnly): Represents the status of the service. Possible values include: 'Unknown', 'Active', 'Upgrading', 'Deleting', 'Creating', 'Failed'
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Failed' | 'Unknown' | 'Upgrading' (ReadOnly): Represents the status of the service.
 
 ## ContainerCodePackageProperties
 ### Properties
@@ -209,7 +209,7 @@
 ### Properties
 * **layer4**: [Layer4IngressConfig](#layer4ingressconfig)[]: Configuration for layer4 public connectivity for this network.
 * **publicIPAddress**: string (ReadOnly): The public IP address for reaching this network.
-* **qosLevel**: 'Bronze': The QoS tier for ingress. Possible values include: 'Bronze'
+* **qosLevel**: 'Bronze': The QoS tier for ingress.
 
 ## Layer4IngressConfig
 ### Properties

@@ -102,4 +102,4 @@ INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.
 Processing batch task - {"tag":"schema-netapp-2017-08-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-[103.19 s] Generation Complete
+[154.95 s] Generation Complete

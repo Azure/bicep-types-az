@@ -14,13 +14,13 @@
 ### Properties
 * **definition**: [QueryDefinition](#querydefinition) (Required): The definition of a query.
 * **deliveryInfo**: [ExportDeliveryInfo](#exportdeliveryinfo) (Required): The delivery information associated with a export.
-* **format**: 'Csv': The format of the export being delivered. Possible values include: 'Csv'
+* **format**: 'Csv': The format of the export being delivered.
 * **schedule**: [ExportSchedule](#exportschedule): The schedule associated with a export.
 
 ## QueryDefinition
 ### Properties
 * **dataset**: [QueryDataset](#querydataset): The definition of data present in the query.
-* **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'TheLastWeek' | 'TheLastYear' | 'WeekToDate' | 'YearToDate' (Required): The time frame for pulling data for the query. If custom, then a specific time period must be provided. Possible values include: 'WeekToDate', 'MonthToDate', 'YearToDate', 'TheLastWeek', 'TheLastMonth', 'TheLastYear', 'Custom', 'BillingMonthToDate', 'TheLastBillingMonth'
+* **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'TheLastWeek' | 'TheLastYear' | 'WeekToDate' | 'YearToDate' (Required): The time frame for pulling data for the query. If custom, then a specific time period must be provided.
 * **timePeriod**: [QueryTimePeriod](#querytimeperiod): The start and end date for pulling data for the query.
 * **type**: string (Required): The type of the query.
 
@@ -29,7 +29,7 @@
 * **aggregation**: [Dictionary<string,QueryAggregation>](#dictionarystringqueryaggregation): Dictionary of aggregation expression to use in the query. The key of each item in the dictionary is the alias for the aggregated column. Query can have up to 2 aggregation clauses.
 * **configuration**: [QueryDatasetConfiguration](#querydatasetconfiguration): The configuration of dataset in the query.
 * **filter**: [QueryFilter](#queryfilter): The filter expression to be used in the export.
-* **granularity**: 'Daily' | 'Hourly': The granularity of rows in the query. Possible values include: 'Daily', 'Hourly'
+* **granularity**: 'Daily' | 'Hourly': The granularity of rows in the query.
 * **grouping**: [QueryGrouping](#querygrouping)[]: Array of group by expression to use in the query. Query can have up to 2 group by clauses.
 * **sorting**: [QuerySortingConfiguration](#querysortingconfiguration)[]: Array of sorting by columns in query.
 
@@ -64,12 +64,12 @@
 ## QueryGrouping
 ### Properties
 * **name**: string (Required): The name of the column to group.
-* **type**: 'Dimension' | 'Tag' (Required): Has type of the column to group. Possible values include: 'Tag', 'Dimension'
+* **type**: 'Dimension' | 'Tag' (Required): Has type of the column to group.
 
 ## QuerySortingConfiguration
 ### Properties
 * **name**: string: The name of the column to use in sorting.
-* **querySortingDirection**: 'Ascending' | 'Descending': The sorting direction. Possible values include: 'Ascending', 'Descending'
+* **querySortingDirection**: 'Ascending' | 'Descending': The sorting direction.
 
 ## QueryTimePeriod
 ### Properties
@@ -88,9 +88,9 @@
 
 ## ExportSchedule
 ### Properties
-* **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' (Required): The schedule recurrence. Possible values include: 'Daily', 'Weekly', 'Monthly', 'Annually'
+* **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' (Required): The schedule recurrence.
 * **recurrencePeriod**: [ExportRecurrencePeriod](#exportrecurrenceperiod): The start and end date for recurrence schedule.
-* **status**: 'Active' | 'Inactive': The status of the schedule. Whether active or not. If inactive, the export's scheduled execution is paused. Possible values include: 'Active', 'Inactive'
+* **status**: 'Active' | 'Inactive': The status of the schedule. Whether active or not. If inactive, the export's scheduled execution is paused.
 
 ## ExportRecurrencePeriod
 ### Properties

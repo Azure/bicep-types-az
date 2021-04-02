@@ -64,7 +64,7 @@
 * **isComposite**: bool (ReadOnly): Gets or sets type of module, if its composite or not.
 * **isGlobal**: bool (ReadOnly): Gets or sets the isGlobal flag of the module.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
-* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly): Gets or sets the provisioning state of the module. Possible values include: 'Created', 'Creating', 'StartingImportModuleRunbook', 'RunningImportModuleRunbook', 'ContentRetrieved', 'ContentDownloaded', 'ContentValidated', 'ConnectionTypeImported', 'ContentStored', 'ModuleDataStored', 'ActivitiesStored', 'ModuleImportRunbookComplete', 'Succeeded', 'Failed', 'Cancelled', 'Updating'
+* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly): Gets or sets the provisioning state of the module.
 * **sizeInBytes**: int (ReadOnly): Gets or sets the size in bytes of the module.
 * **version**: string (ReadOnly): Gets or sets the version of the module.
 
@@ -102,10 +102,10 @@
 * **logVerbose**: bool: Gets or sets verbose log option.
 * **outputTypes**: string[] (ReadOnly): Gets or sets the runbook output types.
 * **parameters**: [Dictionary<string,RunbookParameter>](#dictionarystringrunbookparameter) (ReadOnly): Gets or sets the runbook parameters.
-* **provisioningState**: 'Succeeded' (ReadOnly): Gets or sets the provisioning state of the runbook. Possible values include: 'Succeeded'
+* **provisioningState**: 'Succeeded' (ReadOnly): Gets or sets the provisioning state of the runbook.
 * **publishContentLink**: [ContentLink](#contentlink): Definition of the content link.
-* **runbookType**: 'Graph' | 'GraphPowerShell' | 'GraphPowerShellWorkflow' | 'PowerShell' | 'PowerShellWorkflow' | 'Script' (Required): Gets or sets the type of the runbook. Possible values include: 'Script', 'Graph', 'PowerShellWorkflow', 'PowerShell', 'GraphPowerShellWorkflow', 'GraphPowerShell'
-* **state**: 'Edit' | 'New' | 'Published' (ReadOnly): Gets or sets the state of the runbook. Possible values include: 'New', 'Edit', 'Published'
+* **runbookType**: 'Graph' | 'GraphPowerShell' | 'GraphPowerShellWorkflow' | 'PowerShell' | 'PowerShellWorkflow' | 'Script' (Required): Gets or sets the type of the runbook.
+* **state**: 'Edit' | 'New' | 'Published' (ReadOnly): Gets or sets the state of the runbook.
 
 ## RunbookDraft
 ### Properties

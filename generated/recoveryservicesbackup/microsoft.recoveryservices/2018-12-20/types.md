@@ -15,9 +15,9 @@
 ## BackupResourceConfig
 ### Properties
 * **crossRegionRestoreFlag**: bool: Opt in details of Cross Region Restore feature.
-* **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant': Storage type. Possible values include: 'Invalid', 'GeoRedundant', 'LocallyRedundant', 'ZoneRedundant', 'ReadAccessGeoZoneRedundant'
-* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant': Storage type. Possible values include: 'Invalid', 'GeoRedundant', 'LocallyRedundant', 'ZoneRedundant', 'ReadAccessGeoZoneRedundant'
-* **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked': Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked. Possible values include: 'Invalid', 'Locked', 'Unlocked'
+* **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant': Storage type.
+* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant': Storage type.
+* **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked': Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
 
 ## Dictionary<string,String>
 ### Properties

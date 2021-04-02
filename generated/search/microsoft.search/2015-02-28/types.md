@@ -19,7 +19,7 @@
 
 ## Sku
 ### Properties
-* **name**: 'free' | 'standard' | 'standard2': The SKU of the Search service. Possible values include: 'free', 'standard', 'standard2'
+* **name**: 'free' | 'standard' | 'standard2': The SKU of the Search service.
 
 ## Dictionary<string,String>
 ### Properties

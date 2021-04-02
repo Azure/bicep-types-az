@@ -17,10 +17,10 @@
 * **asAdministrators**: [ServerAdministrators](#serveradministrators): An array of administrator user identities
 * **backupBlobContainerUri**: string: The container URI of backup blob.
 * **managedMode**: int: The managed mode of the server (0 = not managed, 1 = managed).
-* **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning. Possible values include: 'Deleting', 'Succeeded', 'Failed', 'Paused', 'Suspended', 'Provisioning', 'Updating', 'Suspending', 'Pausing', 'Resuming', 'Preparing', 'Scaling'
+* **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.
 * **serverFullName**: string (ReadOnly): The full name of the Analysis Services resource.
 * **serverMonitorMode**: int: The server monitor mode for AS server
-* **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning. Possible values include: 'Deleting', 'Succeeded', 'Failed', 'Paused', 'Suspended', 'Provisioning', 'Updating', 'Suspending', 'Pausing', 'Resuming', 'Preparing', 'Scaling'
+* **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
 
 ## ServerAdministrators
 ### Properties
@@ -30,7 +30,7 @@
 ### Properties
 * **capacity**: int: The number of instances in the read only query pool.
 * **name**: string (Required): Name of the SKU level.
-* **tier**: 'Basic' | 'Development' | 'Standard': The name of the Azure pricing tier to which the SKU applies. Possible values include: 'Development', 'Basic', 'Standard'
+* **tier**: 'Basic' | 'Development' | 'Standard': The name of the Azure pricing tier to which the SKU applies.
 
 ## Dictionary<string,String>
 ### Properties

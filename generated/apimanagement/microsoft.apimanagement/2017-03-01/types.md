@@ -412,7 +412,7 @@
 * **staticIps**: string[] (ReadOnly): Static IP addresses of the API Management service virtual machines. Available only for Standard and Premium SKU.
 * **targetProvisioningState**: string (ReadOnly): The provisioning state of the API Management service, which is targeted by the long running operation started on the service.
 * **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Configuration of a virtual network to which API Management service is deployed.
-* **virtualNetworkType**: 'External' | 'Internal' | 'None': The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only. Possible values include: 'None', 'External', 'Internal'
+* **virtualNetworkType**: 'External' | 'Internal' | 'None': The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.
 
 ## AdditionalLocation
 ### Properties
@@ -425,7 +425,7 @@
 ## ApiManagementServiceSkuProperties
 ### Properties
 * **capacity**: int: Capacity of the SKU (number of deployed units of the SKU). The default value is 1.
-* **name**: 'Basic' | 'Developer' | 'Premium' | 'Standard' (Required): Name of the Sku. Possible values include: 'Developer', 'Standard', 'Premium', 'Basic'
+* **name**: 'Basic' | 'Developer' | 'Premium' | 'Standard' (Required): Name of the Sku.
 
 ## VirtualNetworkConfiguration
 ### Properties
@@ -438,7 +438,7 @@
 * **certificate**: [CertificateInformation](#certificateinformation) (ReadOnly): SSL certificate information.
 * **certificatePassword**: string: Certificate Password.
 * **encodedCertificate**: string: Base64 Encoded certificate.
-* **storeName**: 'CertificateAuthority' | 'Root' (Required): The local certificate store location. Only Root and CertificateAuthority are valid locations. Possible values include: 'CertificateAuthority', 'Root'
+* **storeName**: 'CertificateAuthority' | 'Root' (Required): The local certificate store location. Only Root and CertificateAuthority are valid locations.
 
 ## CertificateInformation
 ### Properties
@@ -460,7 +460,7 @@
 * **hostName**: string (Required): Hostname to configure on the Api Management service.
 * **keyVaultId**: string: Url to the KeyVault Secret containing the Ssl Certificate. If absolute Url containing version is provided, auto-update of ssl certificate will not work. This requires Api Management service to be configured with MSI. The secret should be of type *application/x-pkcs12*
 * **negotiateClientCertificate**: bool: Specify true to always negotiate client certificate on the hostname. Default Value is false.
-* **type**: 'Management' | 'Portal' | 'Proxy' | 'Scm' (Required): Hostname type. Possible values include: 'Proxy', 'Portal', 'Management', 'Scm'
+* **type**: 'Management' | 'Portal' | 'Proxy' | 'Scm' (Required): Hostname type.
 
 ## Dictionary<string,String>
 ### Properties
@@ -472,7 +472,7 @@
 * **description**: string: Description of API Version Set.
 * **displayName**: string (Required): Name of API Version Set
 * **versionHeaderName**: string: Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
-* **versioningScheme**: 'Header' | 'Query' | 'Segment' (Required): An value that determines where the API Version identifier will be located in a HTTP request. Possible values include: 'Segment', 'Query', 'Header'
+* **versioningScheme**: 'Header' | 'Query' | 'Segment' (Required): An value that determines where the API Version identifier will be located in a HTTP request.
 * **versionQueryName**: string: Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
 
 ## ApiCreateOrUpdateProperties
@@ -482,7 +482,7 @@
 * **apiVersionSet**: [ApiVersionSetContract](#apiversionsetcontract): Api Version Set Contract details.
 * **apiVersionSetId**: string: A resource identifier for the related ApiVersionSet.
 * **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract): API Authentication Settings.
-* **contentFormat**: 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl-link' | 'wsdl' (WriteOnly): Format of the Content in which the API is getting imported. Possible values include: 'wadl-xml', 'wadl-link-json', 'swagger-json', 'swagger-link-json', 'wsdl', 'wsdl-link'
+* **contentFormat**: 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl-link' | 'wsdl' (WriteOnly): Format of the Content in which the API is getting imported.
 * **contentValue**: string (WriteOnly): Content value when Importing an API.
 * **description**: string: Description of the API. May include HTML formatting tags.
 * **displayName**: string: API name.
@@ -492,7 +492,7 @@
 * **protocols**: 'http' | 'https'[]: Describes on which protocols the operations in this API can be invoked.
 * **serviceUrl**: string: Absolute URL of the backend service implementing this API.
 * **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract): Subscription key parameter names details.
-* **type**: 'http' | 'soap': Type of API. Possible values include: 'http', 'soap'
+* **type**: 'http' | 'soap': Type of API.
 * **wsdlSelector**: [schemas:14_wsdlSelector](#schemas14wsdlselector) (WriteOnly): Criteria to limit import of WSDL to a subset of the document.
 
 ## ApiVersionSetContract
@@ -530,7 +530,7 @@
 * **apiId**: string: A resource identifier for the API the issue was created for.
 * **createdDate**: string: Date and time when the issue was created.
 * **description**: string (Required): Text describing the issue.
-* **state**: 'closed' | 'open' | 'proposed' | 'removed' | 'resolved': Status of the issue. Possible values include: 'proposed', 'open', 'removed', 'resolved', 'closed'
+* **state**: 'closed' | 'open' | 'proposed' | 'removed' | 'resolved': Status of the issue.
 * **title**: string (Required): The issue title.
 * **userId**: string (Required): A resource identifier for the user created the issue.
 
@@ -648,7 +648,7 @@
 * **credentials**: [BackendCredentialsContract](#backendcredentialscontract): Details of the Credentials used to connect to Backend.
 * **description**: string: Backend Description.
 * **properties**: [BackendProperties](#backendproperties): Properties specific to the Backend Type.
-* **protocol**: 'http' | 'soap' (Required): Backend communication protocol. Possible values include: 'http', 'soap'
+* **protocol**: 'http' | 'soap' (Required): Backend communication protocol.
 * **proxy**: [BackendProxyContract](#backendproxycontract): Details of the Backend WebProxy Server to use in the Request to Backend.
 * **resourceId**: string: Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
 * **title**: string: Backend Title.
@@ -720,7 +720,7 @@
 * **description**: string: Group description.
 * **displayName**: string (Required): Group name.
 * **externalId**: string: Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory aad://<tenant>.onmicrosoft.com/groups/<group object id>; otherwise the value is null.
-* **type**: 'custom' | 'external' | 'system': Group type. Possible values include: 'custom', 'system', 'external'
+* **type**: 'custom' | 'external' | 'system': Group type.
 
 ## IdentityProviderContractProperties
 ### Properties
@@ -731,7 +731,7 @@
 * **profileEditingPolicyName**: string: Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.
 * **signinPolicyName**: string: Signin Policy Name. Only applies to AAD B2C Identity Provider.
 * **signupPolicyName**: string: Signup Policy Name. Only applies to AAD B2C Identity Provider.
-* **type**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter': Identity Provider Type identifier. Possible values include: 'facebook', 'google', 'microsoft', 'twitter', 'aad', 'aadB2C'
+* **type**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter': Identity Provider Type identifier.
 
 ## LoggerContractProperties
 ### Properties
@@ -739,7 +739,7 @@
 Instrumentation key for applicationInsights logger.
 * **description**: string: Logger description.
 * **isBuffered**: bool: Whether records are buffered in the logger before publishing. Default is assumed to be true.
-* **loggerType**: 'applicationInsights' | 'azureEventHub' (Required): Logger type. Possible values include: 'azureEventHub', 'applicationInsights'
+* **loggerType**: 'applicationInsights' | 'azureEventHub' (Required): Logger type.
 * **sampling**: [LoggerSamplingContract](#loggersamplingcontract): Sampling settings contract.
 
 ## Dictionary<string,String>
@@ -762,7 +762,7 @@ Instrumentation key for applicationInsights logger.
 * **percentage**: int: Rate of sampling for fixed-rate sampling.
 * **percentageDecreaseTimeout**: string: Duration in ISO8601 format after which it's allowed to lower the sampling rate.
 * **percentageIncreaseTimeout**: string: Duration in ISO8601 format after which it's allowed to increase the sampling rate.
-* **samplingType**: 'adaptive' | 'fixed': Sampling type. Possible values include: 'fixed', 'adaptive'
+* **samplingType**: 'adaptive' | 'fixed': Sampling type.
 
 ## NotificationContractProperties
 ### Properties
@@ -842,7 +842,7 @@ Instrumentation key for applicationInsights logger.
 * **approvalRequired**: bool: whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of true.
 * **description**: string: Product description. May include HTML formatting tags.
 * **displayName**: string (Required): Product name.
-* **state**: 'notPublished' | 'published': whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished. Possible values include: 'notPublished', 'published'
+* **state**: 'notPublished' | 'published': whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished.
 * **subscriptionRequired**: bool: Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as "protected" and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as "open" and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it's value is assumed to be true.
 * **subscriptionsLimit**: int: Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of true.
 * **terms**: string: Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
@@ -870,7 +870,7 @@ Instrumentation key for applicationInsights logger.
 * **secondaryKey**: string: Secondary subscription key. If not specified during request key will be generated automatically.
 * **startDate**: string (ReadOnly): Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 
-* **state**: 'active' | 'cancelled' | 'expired' | 'rejected' | 'submitted' | 'suspended': Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated. Possible values include: 'suspended', 'active', 'expired', 'submitted', 'rejected', 'cancelled'
+* **state**: 'active' | 'cancelled' | 'expired' | 'rejected' | 'submitted' | 'suspended': Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
 * **stateComment**: string (ReadOnly): Optional subscription comment added by an administrator.
 * **userId**: string (Required): User (user id path) for whom subscription is being created in form /users/{uid}
 
@@ -891,7 +891,7 @@ Instrumentation key for applicationInsights logger.
 
 ## UserCreateParameterProperties
 ### Properties
-* **confirmation**: 'invite' | 'signup' (WriteOnly): Determines the type of confirmation e-mail that will be sent to the newly created user. Possible values include: 'signup', 'invite'
+* **confirmation**: 'invite' | 'signup' (WriteOnly): Determines the type of confirmation e-mail that will be sent to the newly created user.
 * **email**: string (Required): Email address. Must not be empty and must be unique within the service instance.
 * **firstName**: string (Required): First name.
 * **groups**: [GroupContract](#groupcontract)[] (ReadOnly): Collection of groups user is part of.
@@ -901,7 +901,7 @@ Instrumentation key for applicationInsights logger.
 * **password**: string (WriteOnly): User Password. If no value is provided, a default password is generated.
 * **registrationDate**: string (ReadOnly): Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 
-* **state**: 'active' | 'blocked' | 'deleted' | 'pending': Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active. Possible values include: 'active', 'blocked', 'pending', 'deleted'
+* **state**: 'active' | 'blocked' | 'deleted' | 'pending': Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
 
 ## GroupContract
 ### Properties
@@ -916,7 +916,7 @@ Instrumentation key for applicationInsights logger.
 * **description**: string (ReadOnly): Group description. Can contain HTML formatting tags.
 * **displayName**: string (ReadOnly): Group name.
 * **externalId**: string (ReadOnly): For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory aad://<tenant>.onmicrosoft.com/groups/<group object id>; otherwise the value is null.
-* **type**: 'custom' | 'external' | 'system' (ReadOnly): Group type. Possible values include: 'custom', 'system', 'external'
+* **type**: 'custom' | 'external' | 'system' (ReadOnly): Group type.
 
 ## UserIdentityContract
 ### Properties

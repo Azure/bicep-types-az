@@ -137,7 +137,7 @@
 ## ServiceUnit
 ### Properties
 * **artifacts**: [ServiceUnitArtifacts](#serviceunitartifacts) (ReadOnly): Defines the artifacts of a service unit.
-* **deploymentMode**: 'Complete' | 'Incremental' (ReadOnly): Describes the type of ARM deployment to be performed on the resource. Possible values include: 'Incremental', 'Complete'
+* **deploymentMode**: 'Complete' | 'Incremental' (ReadOnly): Describes the type of ARM deployment to be performed on the resource.
 * **name**: string (ReadOnly): Name of the service unit.
 * **steps**: [RolloutStep](#rolloutstep)[] (ReadOnly): Detailed step information, if present.
 * **targetResourceGroup**: string (ReadOnly): The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
@@ -220,7 +220,7 @@
 ## schemas:18_properties
 ### Properties
 * **artifacts**: [ServiceUnitArtifacts](#serviceunitartifacts): Defines the artifacts of a service unit.
-* **deploymentMode**: 'Complete' | 'Incremental' (Required): Describes the type of ARM deployment to be performed on the resource. Possible values include: 'Incremental', 'Complete'
+* **deploymentMode**: 'Complete' | 'Incremental' (Required): Describes the type of ARM deployment to be performed on the resource.
 * **targetResourceGroup**: string (Required): The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
 
 ## Dictionary<string,String>
@@ -277,7 +277,7 @@
 ## RestRequest
 ### Properties
 * **authentication**: [RestRequestAuthentication](#restrequestauthentication) (Required): The authentication information required in the REST health check request to the health provider.
-* **method**: 'GET' | 'POST' (Required): The HTTP method to use for the request. Possible values include: 'GET', 'POST'
+* **method**: 'GET' | 'POST' (Required): The HTTP method to use for the request.
 * **uri**: string (Required): The HTTP URI to use for the request.
 
 ## RestRequestAuthentication
@@ -285,7 +285,7 @@
 ### Base Properties
 ### ApiKey
 #### Properties
-* **in**: 'Header' | 'Query' (Required): The location of the authentication key/value pair in the request. Possible values include: 'Query', 'Header'
+* **in**: 'Header' | 'Query' (Required): The location of the authentication key/value pair in the request.
 * **name**: string (Required): The key name of the authentication key/value pair.
 * **type**: 'ApiKey' (Required): ApiKey authentication gives a name and a value that can be included in either the request header or query parameters.
 * **value**: string (Required): The value of the authentication key/value pair.
@@ -297,7 +297,7 @@
 
 ## ApiKey
 ### Properties
-* **in**: 'Header' | 'Query' (Required): The location of the authentication key/value pair in the request. Possible values include: 'Query', 'Header'
+* **in**: 'Header' | 'Query' (Required): The location of the authentication key/value pair in the request.
 * **name**: string (Required): The key name of the authentication key/value pair.
 * **type**: 'ApiKey' (Required): ApiKey authentication gives a name and a value that can be included in either the request header or query parameters.
 * **value**: string (Required): The value of the authentication key/value pair.
@@ -314,7 +314,7 @@
 ## schemas:42_regex
 ### Properties
 * **matches**: string[]: The list of regular expressions.
-* **matchQuantifier**: 'All' | 'Any': Indicates whether any or all of the expressions should match with the response content. Possible values include: 'All', 'Any'
+* **matchQuantifier**: 'All' | 'Any': Indicates whether any or all of the expressions should match with the response content.
 
 ## Wait
 ### Properties

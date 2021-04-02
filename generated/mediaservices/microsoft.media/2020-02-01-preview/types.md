@@ -16,7 +16,7 @@
 * **lastModified**: string (ReadOnly): Date the Media Graph was last modified.
 * **sinks**: [MediaGraphSink](#mediagraphsink)[] (Required): Media Graph sinks.
 * **sources**: [MediaGraphSource](#mediagraphsource)[] (Required): Media Graph sources.
-* **state**: 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Media Graph state which indicates the resource allocation status for running the media graph pipeline. Possible values include: 'Running', 'Starting', 'Stopped', 'Stopping'
+* **state**: 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Media Graph state which indicates the resource allocation status for running the media graph pipeline.
 
 ## MediaGraphSink
 * **Discriminator**: @odata.type
@@ -42,14 +42,14 @@
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required): RTSP source.
 * **endpoint**: [MediaGraphEndpoint](#mediagraphendpoint) (Required): Base class for endpoints.
-* **transport**: 'Http' | 'Tcp' (Required): Underlying RTSP transport. This can be used to enable or disable HTTP tunneling. Possible values include: 'Http', 'Tcp'
+* **transport**: 'Http' | 'Tcp' (Required): Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
 
 
 ## #Microsoft.Media.MediaGraphRtspSource
 ### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required): RTSP source.
 * **endpoint**: [MediaGraphEndpoint](#mediagraphendpoint) (Required): Base class for endpoints.
-* **transport**: 'Http' | 'Tcp' (Required): Underlying RTSP transport. This can be used to enable or disable HTTP tunneling. Possible values include: 'Http', 'Tcp'
+* **transport**: 'Http' | 'Tcp' (Required): Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
 
 ## MediaGraphEndpoint
 * **Discriminator**: @odata.type

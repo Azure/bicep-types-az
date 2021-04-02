@@ -16,7 +16,7 @@
 * **objectId**: string (ReadOnly): This is the object id.
 * **partnerId**: string (ReadOnly): This is the partner id
 * **partnerName**: string (ReadOnly): This is the partner name
-* **state**: 'Active' | 'Deleted' (ReadOnly): This is the partner state. Possible values include: 'Active', 'Deleted'
+* **state**: 'Active' | 'Deleted' (ReadOnly): This is the partner state.
 * **tenantId**: string (ReadOnly): This is the tenant id.
 * **updatedTime**: string (ReadOnly): This is the DateTime when the partner was updated.
 * **version**: int (ReadOnly): This is the version.

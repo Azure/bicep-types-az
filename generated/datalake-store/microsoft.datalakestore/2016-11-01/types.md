@@ -49,27 +49,27 @@
 ### Properties
 * **accountId**: string (ReadOnly): The unique identifier associated with this Data Lake Store account.
 * **creationTime**: string (ReadOnly): The account creation time.
-* **currentTier**: 'Commitment_100TB' | 'Commitment_10TB' | 'Commitment_1PB' | 'Commitment_1TB' | 'Commitment_500TB' | 'Commitment_5PB' | 'Consumption' (ReadOnly): The commitment tier in use for the current month. Possible values include: 'Consumption', 'Commitment_1TB', 'Commitment_10TB', 'Commitment_100TB', 'Commitment_500TB', 'Commitment_1PB', 'Commitment_5PB'
+* **currentTier**: 'Commitment_100TB' | 'Commitment_10TB' | 'Commitment_1PB' | 'Commitment_1TB' | 'Commitment_500TB' | 'Commitment_5PB' | 'Consumption' (ReadOnly): The commitment tier in use for the current month.
 * **defaultGroup**: string: The default owner group for all new folders and files created in the Data Lake Store account.
 * **encryptionConfig**: [EncryptionConfig](#encryptionconfig): The encryption configuration for the account.
-* **encryptionProvisioningState**: 'Creating' | 'Succeeded' (ReadOnly): The current state of encryption provisioning for this Data Lake Store account. Possible values include: 'Creating', 'Succeeded'
-* **encryptionState**: 'Disabled' | 'Enabled': The current state of encryption for this Data Lake Store account. Possible values include: 'Enabled', 'Disabled'
+* **encryptionProvisioningState**: 'Creating' | 'Succeeded' (ReadOnly): The current state of encryption provisioning for this Data Lake Store account.
+* **encryptionState**: 'Disabled' | 'Enabled': The current state of encryption for this Data Lake Store account.
 * **endpoint**: string (ReadOnly): The full CName endpoint for this account.
-* **firewallAllowAzureIps**: 'Disabled' | 'Enabled': The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced. Possible values include: 'Enabled', 'Disabled'
+* **firewallAllowAzureIps**: 'Disabled' | 'Enabled': The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
 * **firewallRules**: [CreateFirewallRuleWithAccountParameters](#createfirewallrulewithaccountparameters)[]: The list of firewall rules associated with this Data Lake Store account.
-* **firewallState**: 'Disabled' | 'Enabled': The current state of the IP address firewall for this Data Lake Store account. Possible values include: 'Enabled', 'Disabled'
+* **firewallState**: 'Disabled' | 'Enabled': The current state of the IP address firewall for this Data Lake Store account.
 * **lastModifiedTime**: string (ReadOnly): The account last modified time.
-* **newTier**: 'Commitment_100TB' | 'Commitment_10TB' | 'Commitment_1PB' | 'Commitment_1TB' | 'Commitment_500TB' | 'Commitment_5PB' | 'Consumption': The commitment tier to use for next month. Possible values include: 'Consumption', 'Commitment_1TB', 'Commitment_10TB', 'Commitment_100TB', 'Commitment_500TB', 'Commitment_1PB', 'Commitment_5PB'
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Patching' | 'Resuming' | 'Running' | 'Succeeded' | 'Suspending' | 'Undeleting' (ReadOnly): The provisioning status of the Data Lake Store account. Possible values include: 'Failed', 'Creating', 'Running', 'Succeeded', 'Patching', 'Suspending', 'Resuming', 'Deleting', 'Deleted', 'Undeleting', 'Canceled'
-* **state**: 'Active' | 'Suspended' (ReadOnly): The state of the Data Lake Store account. Possible values include: 'Active', 'Suspended'
+* **newTier**: 'Commitment_100TB' | 'Commitment_10TB' | 'Commitment_1PB' | 'Commitment_1TB' | 'Commitment_500TB' | 'Commitment_5PB' | 'Consumption': The commitment tier to use for next month.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Patching' | 'Resuming' | 'Running' | 'Succeeded' | 'Suspending' | 'Undeleting' (ReadOnly): The provisioning status of the Data Lake Store account.
+* **state**: 'Active' | 'Suspended' (ReadOnly): The state of the Data Lake Store account.
 * **trustedIdProviders**: [CreateTrustedIdProviderWithAccountParameters](#createtrustedidproviderwithaccountparameters)[]: The list of trusted identity providers associated with this Data Lake Store account.
-* **trustedIdProviderState**: 'Disabled' | 'Enabled': The current state of the trusted identity provider feature for this Data Lake Store account. Possible values include: 'Enabled', 'Disabled'
+* **trustedIdProviderState**: 'Disabled' | 'Enabled': The current state of the trusted identity provider feature for this Data Lake Store account.
 * **virtualNetworkRules**: [CreateVirtualNetworkRuleWithAccountParameters](#createvirtualnetworkrulewithaccountparameters)[]: The list of virtual network rules associated with this Data Lake Store account.
 
 ## EncryptionConfig
 ### Properties
 * **keyVaultMetaInfo**: [KeyVaultMetaInfo](#keyvaultmetainfo): Metadata information used by account encryption.
-* **type**: 'ServiceManaged' | 'UserManaged' (Required): The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'. Possible values include: 'UserManaged', 'ServiceManaged'
+* **type**: 'ServiceManaged' | 'UserManaged' (Required): The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.
 
 ## KeyVaultMetaInfo
 ### Properties

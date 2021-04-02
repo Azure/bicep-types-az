@@ -50,7 +50,7 @@
 ## WorkspaceProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Time when the Workspace was created.
-* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): The provisioned state of the Workspace. Possible values include: 'creating', 'succeeded', 'failed', 'deleting'
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): The provisioned state of the Workspace.
 * **provisioningStateTransitionTime**: string (ReadOnly): The time at which the workspace entered its current provisioning state.
 
 ## Dictionary<string,String>
@@ -60,20 +60,20 @@
 
 ## ClusterBaseProperties
 ### Properties
-* **allocationState**: 'resizing' | 'steady' (ReadOnly): Allocation state of the cluster. Possible values are: steady - Indicates that the cluster is not resizing. There are no changes to the number of compute nodes in the cluster in progress. A cluster enters this state when it is created and when no operations are being performed on the cluster to change the number of compute nodes. resizing - Indicates that the cluster is resizing; that is, compute nodes are being added to or removed from the cluster. Possible values include: 'steady', 'resizing'
+* **allocationState**: 'resizing' | 'steady' (ReadOnly): Allocation state of the cluster. Possible values are: steady - Indicates that the cluster is not resizing. There are no changes to the number of compute nodes in the cluster in progress. A cluster enters this state when it is created and when no operations are being performed on the cluster to change the number of compute nodes. resizing - Indicates that the cluster is resizing; that is, compute nodes are being added to or removed from the cluster.
 * **allocationStateTransitionTime**: string (ReadOnly): The time at which the cluster entered its current allocation state.
 * **creationTime**: string (ReadOnly): The time when the cluster was created.
 * **currentNodeCount**: int (ReadOnly): The number of compute nodes currently assigned to the cluster.
 * **errors**: [BatchAIError](#batchaierror)[] (ReadOnly): Collection of errors encountered by various compute nodes during node setup.
 * **nodeSetup**: [NodeSetup](#nodesetup): Node setup settings.
 * **nodeStateCounts**: [NodeStateCounts](#nodestatecounts) (ReadOnly): Counts of various compute node states on the cluster.
-* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): Provisioning state of the cluster. Possible value are: creating - Specifies that the cluster is being created. succeeded - Specifies that the cluster has been created successfully. failed - Specifies that the cluster creation has failed. deleting - Specifies that the cluster is being deleted. Possible values include: 'creating', 'succeeded', 'failed', 'deleting'
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): Provisioning state of the cluster. Possible value are: creating - Specifies that the cluster is being created. succeeded - Specifies that the cluster has been created successfully. failed - Specifies that the cluster creation has failed. deleting - Specifies that the cluster is being deleted.
 * **provisioningStateTransitionTime**: string (ReadOnly): Time when the provisioning state was changed.
 * **scaleSettings**: [ScaleSettings](#scalesettings): At least one of manual or autoScale settings must be specified. Only one of manual or autoScale settings can be specified. If autoScale settings are specified, the system automatically scales the cluster up and down (within the supplied limits) based on the pending jobs on the cluster.
 * **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
 * **userAccountSettings**: [UserAccountSettings](#useraccountsettings) (Required): Settings for user account that gets created on each on the nodes of a cluster.
 * **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration): VM configuration.
-* **vmPriority**: 'dedicated' | 'lowpriority': VM priority. Allowed values are: dedicated (default) and lowpriority. Possible values include: 'dedicated', 'lowpriority'
+* **vmPriority**: 'dedicated' | 'lowpriority': VM priority. Allowed values are: dedicated (default) and lowpriority.
 * **vmSize**: string (Required): The size of the virtual machines in the cluster. All nodes in a cluster have the same VM size. For information about available VM sizes for clusters using images from the Virtual Machines Marketplace see Sizes for Virtual Machines (Linux). Batch AI service supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
 
 ## BatchAIError
@@ -193,7 +193,7 @@
 
 ## ManualScaleSettings
 ### Properties
-* **nodeDeallocationOption**: 'requeue' | 'terminate' | 'waitforjobcompletion': An action to be performed when the cluster size is decreasing. The default value is requeue. Possible values include: 'requeue', 'terminate', 'waitforjobcompletion'
+* **nodeDeallocationOption**: 'requeue' | 'terminate' | 'waitforjobcompletion': An action to be performed when the cluster size is decreasing. The default value is requeue.
 * **targetNodeCount**: int (Required): The desired number of compute nodes in the Cluster. Default is 0.
 
 ## UserAccountSettings
@@ -217,7 +217,7 @@
 ## ExperimentProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Time when the Experiment was created.
-* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): The provisioned state of the experiment. Possible values include: 'creating', 'succeeded', 'failed', 'deleting'
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): The provisioned state of the experiment.
 * **provisioningStateTransitionTime**: string (ReadOnly): The time at which the experiment entered its current provisioning state.
 
 ## JobBaseProperties
@@ -234,7 +234,7 @@
 * **customToolkitSettings**: [CustomToolkitSettings](#customtoolkitsettings): Custom tool kit job settings.
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: A list of user defined environment variables which will be setup for the job.
 * **executionInfo**: [schemas:33_executionInfo](#schemas33executioninfo) (ReadOnly): Information about the execution of a job.
-* **executionState**: 'failed' | 'queued' | 'running' | 'succeeded' | 'terminating' (ReadOnly): The current state of the job. Possible values are: queued - The job is queued and able to run. A job enters this state when it is created, or when it is awaiting a retry after a failed run. running - The job is running on a compute cluster. This includes job-level preparation such as downloading resource files or set up container specified on the job - it does not necessarily mean that the job command line has started executing. terminating - The job is terminated by the user, the terminate operation is in progress. succeeded - The job has completed running successfully and exited with exit code 0. failed - The job has finished unsuccessfully (failed with a non-zero exit code) and has exhausted its retry limit. A job is also marked as failed if an error occurred launching the job. Possible values include: 'queued', 'running', 'terminating', 'succeeded', 'failed'
+* **executionState**: 'failed' | 'queued' | 'running' | 'succeeded' | 'terminating' (ReadOnly): The current state of the job. Possible values are: queued - The job is queued and able to run. A job enters this state when it is created, or when it is awaiting a retry after a failed run. running - The job is running on a compute cluster. This includes job-level preparation such as downloading resource files or set up container specified on the job - it does not necessarily mean that the job command line has started executing. terminating - The job is terminated by the user, the terminate operation is in progress. succeeded - The job has completed running successfully and exited with exit code 0. failed - The job has finished unsuccessfully (failed with a non-zero exit code) and has exhausted its retry limit. A job is also marked as failed if an error occurred launching the job.
 * **executionStateTransitionTime**: string (ReadOnly): The time at which the job entered its current execution state.
 * **horovodSettings**: [HorovodSettings](#horovodsettings): Specifies the settings for Horovod job.
 * **inputDirectories**: [InputDirectory](#inputdirectory)[]: A list of input directories for the job.
@@ -243,14 +243,14 @@
 * **mountVolumes**: [MountVolumes](#mountvolumes): Details of volumes to mount on the cluster.
 * **nodeCount**: int (Required): Number of compute nodes to run the job on. The job will be gang scheduled on that many compute nodes.
 * **outputDirectories**: [OutputDirectory](#outputdirectory)[]: A list of output directories for the job.
-* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): The provisioned state of the Batch AI job. Possible values include: 'creating', 'succeeded', 'failed', 'deleting'
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): The provisioned state of the Batch AI job.
 * **provisioningStateTransitionTime**: string (ReadOnly): The time at which the job entered its current provisioning state.
 * **pyTorchSettings**: [PyTorchSettings](#pytorchsettings): pyTorch job settings.
-* **schedulingPriority**: 'high' | 'low' | 'normal': Scheduling priority associated with the job. Possible values: low, normal, high. Possible values include: 'low', 'normal', 'high'
+* **schedulingPriority**: 'high' | 'low' | 'normal': Scheduling priority associated with the job. Possible values: low, normal, high.
 * **secrets**: [EnvironmentVariableWithSecretValue](#environmentvariablewithsecretvalue)[]: A list of user defined environment variables with secret values which will be setup for the job. Server will never report values of these variables back.
 * **stdOutErrPathPrefix**: string (Required): The path where the Batch AI service will store stdout, stderror and execution log of the job.
 * **tensorFlowSettings**: [TensorFlowSettings](#tensorflowsettings): TensorFlow job settings.
-* **toolType**: 'caffe' | 'caffe2' | 'chainer' | 'cntk' | 'custom' | 'custommpi' | 'horovod' | 'tensorflow' (ReadOnly): Possible values are: cntk, tensorflow, caffe, caffe2, chainer, pytorch, custom, custommpi, horovod. Possible values include: 'cntk', 'tensorflow', 'caffe', 'caffe2', 'chainer', 'horovod', 'custommpi', 'custom'
+* **toolType**: 'caffe' | 'caffe2' | 'chainer' | 'cntk' | 'custom' | 'custommpi' | 'horovod' | 'tensorflow' (ReadOnly): Possible values are: cntk, tensorflow, caffe, caffe2, chainer, pytorch, custom, custommpi, horovod.
 
 ## Caffe2Settings
 ### Properties
@@ -364,7 +364,7 @@
 * **creationTime**: string (ReadOnly): Time when the FileServer was created.
 * **dataDisks**: [DataDisks](#datadisks) (Required): Data disks settings.
 * **mountSettings**: [MountSettings](#mountsettings) (ReadOnly): File Server mount Information.
-* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' | 'updating' (ReadOnly): Provisioning state of the File Server. Possible values: creating - The File Server is getting created; updating - The File Server creation has been accepted and it is getting updated; deleting - The user has requested that the File Server be deleted, and it is in the process of being deleted; failed - The File Server creation has failed with the specified error code. Details about the error code are specified in the message field; succeeded - The File Server creation has succeeded. Possible values include: 'creating', 'updating', 'deleting', 'succeeded', 'failed'
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' | 'updating' (ReadOnly): Provisioning state of the File Server. Possible values: creating - The File Server is getting created; updating - The File Server creation has been accepted and it is getting updated; deleting - The user has requested that the File Server be deleted, and it is in the process of being deleted; failed - The File Server creation has failed with the specified error code. Details about the error code are specified in the message field; succeeded - The File Server creation has succeeded.
 * **provisioningStateTransitionTime**: string (ReadOnly): Time when the provisioning state was changed.
 * **sshConfiguration**: [SshConfiguration](#sshconfiguration) (Required): SSH configuration.
 * **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
@@ -372,10 +372,10 @@
 
 ## DataDisks
 ### Properties
-* **cachingType**: 'none' | 'readonly' | 'readwrite': Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage. Possible values include: 'none', 'readonly', 'readwrite'
+* **cachingType**: 'none' | 'readonly' | 'readwrite': Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage.
 * **diskCount**: int (Required): Number of data disks attached to the File Server. If multiple disks attached, they will be configured in RAID level 0.
 * **diskSizeInGB**: int (Required): Disk size in GB for the blank data disks.
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' (Required): Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage. Possible values include: 'Standard_LRS', 'Premium_LRS'
+* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' (Required): Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.
 
 ## MountSettings
 ### Properties

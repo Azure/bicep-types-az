@@ -25,7 +25,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **contractVersion**: 'InvalidVersion' | 'V2011_09' | 'V2012_02' | 'V2012_05' | 'V2012_12' | 'V2013_04' | 'V2013_10' | 'V2013_11' | 'V2014_04' | 'V2014_06' | 'V2014_07' | 'V2014_09' | 'V2014_10' | 'V2014_12' | 'V2015_01' | 'V2015_02' | 'V2015_04' | 'V2015_05' | 'V2015_06' | 'V2015_07' | 'V2015_08' | 'V2015_10' | 'V2015_12' | 'V2016_01' | 'V2016_02' | 'V2016_04' | 'V2016_05' | 'V2016_07' | 'V2016_08' (ReadOnly): Gets ContractVersion. Possible values include: 'InvalidVersion', 'V2011_09', 'V2012_02', 'V2012_05', 'V2012_12', 'V2013_04', 'V2013_10', 'V2013_11', 'V2014_04', 'V2014_06', 'V2014_07', 'V2014_09', 'V2014_10', 'V2014_12', 'V2015_01', 'V2015_02', 'V2015_04', 'V2015_05', 'V2015_06', 'V2015_07', 'V2015_08', 'V2015_10', 'V2015_12', 'V2016_01', 'V2016_02', 'V2016_04', 'V2016_05', 'V2016_07', 'V2016_08'
+* **contractVersion**: 'InvalidVersion' | 'V2011_09' | 'V2012_02' | 'V2012_05' | 'V2012_12' | 'V2013_04' | 'V2013_10' | 'V2013_11' | 'V2014_04' | 'V2014_06' | 'V2014_07' | 'V2014_09' | 'V2014_10' | 'V2014_12' | 'V2015_01' | 'V2015_02' | 'V2015_04' | 'V2015_05' | 'V2015_06' | 'V2015_07' | 'V2015_08' | 'V2015_10' | 'V2015_12' | 'V2016_01' | 'V2016_02' | 'V2016_04' | 'V2016_05' | 'V2016_07' | 'V2016_08' (ReadOnly): Gets ContractVersion.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RawCertificateData](#rawcertificatedata) (Required): Raw Certificate Data From IDM
@@ -130,7 +130,7 @@
 
 ## ManagerIntrinsicSettings
 ### Properties
-* **type**: 'GardaV1' | 'HelsinkiV1' (Required): Refers to the type of the StorSimple Manager. Possible values include: 'GardaV1', 'HelsinkiV1'
+* **type**: 'GardaV1' | 'HelsinkiV1' (Required): Refers to the type of the StorSimple Manager.
 
 ## ManagerSku
 ### Properties
@@ -147,15 +147,15 @@
 
 ## RawCertificateData
 ### Properties
-* **authType**: 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid': Specify the Authentication type. Possible values include: 'Invalid', 'AccessControlService', 'AzureActiveDirectory'
+* **authType**: 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid': Specify the Authentication type.
 * **certificate**: string (Required): Gets or sets the base64 encoded certificate raw data string
 
 ## AlertSettingsProperties
 ### Properties
 * **additionalRecipientEmailList**: string[]: List of email addresses (apart from admin/co-admin of subscription) to whom the alert emails need to be sent
 * **alertNotificationCulture**: string (Required): Culture setting to be used while building alert emails. For eg: "en-US"
-* **emailNotification**: 'Disabled' | 'Enabled' (Required): Value indicating whether user/admins will receive emails when an alert condition occurs on the system. Possible values include: 'Enabled', 'Disabled'
-* **notificationToServiceOwners**: 'Disabled' | 'Enabled' (Required): Value indicating whether service owners will receive emails when an alert condition occurs on the system. Applicable only if emailNotification flag is Enabled. Possible values include: 'Enabled', 'Disabled'
+* **emailNotification**: 'Disabled' | 'Enabled' (Required): Value indicating whether user/admins will receive emails when an alert condition occurs on the system.
+* **notificationToServiceOwners**: 'Disabled' | 'Enabled' (Required): Value indicating whether service owners will receive emails when an alert condition occurs on the system. Applicable only if emailNotification flag is Enabled.
 
 ## BackupScheduleGroupProperties
 ### Properties
@@ -172,7 +172,7 @@
 
 ## AsymmetricEncryptedSecret
 ### Properties
-* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' (Required): Algorithm used to encrypt "Value". Possible values include: 'None', 'AES256', 'RSAES_PKCS1_v_1_5'
+* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' (Required): Algorithm used to encrypt "Value".
 * **encryptionCertificateThumbprint**: string: Thumbprint certificate that was used to encrypt "Value"
 * **value**: string (Required): The value of the secret itself. If the secret is in plaintext then EncryptionAlgorithm will be none and EncryptionCertThumbprint will be null.
 
@@ -186,12 +186,12 @@
 ## FileShareProperties
 ### Properties
 * **adminUser**: string (Required): The user/group who will have full permission in this share. Active directory email address. Example: xyz@contoso.com or Contoso\xyz.
-* **dataPolicy**: 'Cloud' | 'Invalid' | 'Local' | 'Tiered' (Required): The data policy. Possible values include: 'Invalid', 'Local', 'Tiered', 'Cloud'
+* **dataPolicy**: 'Cloud' | 'Invalid' | 'Local' | 'Tiered' (Required): The data policy.
 * **description**: string: Description for file share
 * **localUsedCapacityInBytes**: int (ReadOnly): The local used capacity in Bytes.
-* **monitoringStatus**: 'Disabled' | 'Enabled' (Required): The monitoring status. Possible values include: 'Enabled', 'Disabled'
+* **monitoringStatus**: 'Disabled' | 'Enabled' (Required): The monitoring status.
 * **provisionedCapacityInBytes**: int (Required): The total provisioned capacity in Bytes
-* **shareStatus**: 'Offline' | 'Online' (Required): The Share Status. Possible values include: 'Online', 'Offline'
+* **shareStatus**: 'Offline' | 'Online' (Required): The Share Status.
 * **usedCapacityInBytes**: int (ReadOnly): The used capacity in Bytes.
 
 ## ISCSIServerProperties
@@ -205,11 +205,11 @@
 ## ISCSIDiskProperties
 ### Properties
 * **accessControlRecords**: string[] (Required): The access control records.
-* **dataPolicy**: 'Cloud' | 'Invalid' | 'Local' | 'Tiered' (Required): The data policy. Possible values include: 'Invalid', 'Local', 'Tiered', 'Cloud'
+* **dataPolicy**: 'Cloud' | 'Invalid' | 'Local' | 'Tiered' (Required): The data policy.
 * **description**: string: The description.
-* **diskStatus**: 'Offline' | 'Online' (Required): The disk status. Possible values include: 'Online', 'Offline'
+* **diskStatus**: 'Offline' | 'Online' (Required): The disk status.
 * **localUsedCapacityInBytes**: int (ReadOnly): The local used capacity in bytes.
-* **monitoringStatus**: 'Disabled' | 'Enabled' (Required): The monitoring. Possible values include: 'Enabled', 'Disabled'
+* **monitoringStatus**: 'Disabled' | 'Enabled' (Required): The monitoring.
 * **provisionedCapacityInBytes**: int (Required): The provisioned capacity in bytes.
 * **usedCapacityInBytes**: int (ReadOnly): The used capacity in bytes.
 
@@ -225,8 +225,8 @@
 ## StorageAccountCredentialProperties
 ### Properties
 * **accessKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): This class can be used as the Type for any secret entity represented as Password, CertThumbprint, Algorithm. This class is intended to be used when the secret is encrypted with an asymmetric key pair. The encryptionAlgorithm field is mainly for future usage to potentially allow different entities encrypted using different algorithms.
-* **cloudType**: 'Azure' | 'HP' | 'OpenStack' | 'S3_RRS' | 'S3' (Required): The cloud service provider. Possible values include: 'Azure', 'S3', 'S3_RRS', 'OpenStack', 'HP'
-* **enableSSL**: 'Disabled' | 'Enabled' (Required): SSL needs to be enabled or not. Possible values include: 'Enabled', 'Disabled'
+* **cloudType**: 'Azure' | 'HP' | 'OpenStack' | 'S3_RRS' | 'S3' (Required): The cloud service provider.
+* **enableSSL**: 'Disabled' | 'Enabled' (Required): SSL needs to be enabled or not.
 * **endPoint**: string (Required): The storage endpoint
 * **location**: string: The storage account's geo location
 * **login**: string (Required): The storage account login
@@ -234,6 +234,6 @@
 ## StorageDomainProperties
 ### Properties
 * **encryptionKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): This class can be used as the Type for any secret entity represented as Password, CertThumbprint, Algorithm. This class is intended to be used when the secret is encrypted with an asymmetric key pair. The encryptionAlgorithm field is mainly for future usage to potentially allow different entities encrypted using different algorithms.
-* **encryptionStatus**: 'Disabled' | 'Enabled' (Required): The encryption status "Enabled | Disabled". Possible values include: 'Enabled', 'Disabled'
+* **encryptionStatus**: 'Disabled' | 'Enabled' (Required): The encryption status "Enabled | Disabled".
 * **storageAccountCredentialIds**: string[] (Required): The storage account credentials.
 

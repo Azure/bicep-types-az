@@ -41,7 +41,7 @@
 * **lastModified**: string (ReadOnly): The exact time the Live Event was last modified.
 * **preview**: [LiveEventPreview](#liveeventpreview): The Live Event preview.
 * **provisioningState**: string (ReadOnly): The provisioning state of the Live Event.
-* **resourceState**: 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The resource state of the Live Event. Possible values include: 'Stopped', 'Starting', 'Running', 'Stopping', 'Deleting'
+* **resourceState**: 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The resource state of the Live Event.
 * **streamOptions**: 'Default' | 'LowLatency'[]: The options to use for the LiveEvent.  This value is specified at creation time and cannot be updated.
 * **transcriptions**: [LiveEventTranscription](#liveeventtranscription)[]: The Live Event transcription.
 * **vanityUrl**: bool: Specifies whether to use a vanity url with the Live Event.  This value is specified at creation time and cannot be updated.
@@ -53,7 +53,7 @@
 
 ## LiveEventEncoding
 ### Properties
-* **encodingType**: 'Basic' | 'None' | 'Premium1080p' | 'Standard': The encoding type for Live Event.  This value is specified at creation time and cannot be updated. Possible values include: 'None', 'Basic', 'Standard', 'Premium1080p'
+* **encodingType**: 'Basic' | 'None' | 'Premium1080p' | 'Standard': The encoding type for Live Event.  This value is specified at creation time and cannot be updated.
 * **presetName**: string: The encoding preset name.  This value is specified at creation time and cannot be updated.
 
 ## LiveEventInput
@@ -62,7 +62,7 @@
 * **accessToken**: string: A unique identifier for a stream.  This can be specified at creation time but cannot be updated.  If omitted, the service will generate a unique value.
 * **endpoints**: [LiveEventEndpoint](#liveeventendpoint)[]: The input endpoints for the Live Event.
 * **keyFrameIntervalDuration**: string: ISO 8601 timespan duration of the key frame interval duration.
-* **streamingProtocol**: 'FragmentedMP4' | 'RTMP' (Required): The streaming protocol for the Live Event.  This is specified at creation time and cannot be updated. Possible values include: 'FragmentedMP4', 'RTMP'
+* **streamingProtocol**: 'FragmentedMP4' | 'RTMP' (Required): The streaming protocol for the Live Event.  This is specified at creation time and cannot be updated.
 
 ## LiveEventInputAccessControl
 ### Properties
@@ -127,7 +127,7 @@
 * **manifestName**: string: The manifest file name.  If not provided, the service will generate one automatically.
 * **outputSnapTime**: int: The output snapshot time.
 * **provisioningState**: string (ReadOnly): The provisioning state of the Live Output.
-* **resourceState**: 'Creating' | 'Deleting' | 'Running' (ReadOnly): The resource state of the Live Output. Possible values include: 'Creating', 'Running', 'Deleting'
+* **resourceState**: 'Creating' | 'Deleting' | 'Running' (ReadOnly): The resource state of the Live Output.
 
 ## Hls
 ### Properties
@@ -149,7 +149,7 @@
 * **lastModified**: string (ReadOnly): The exact time the StreamingEndpoint was last modified.
 * **maxCacheAge**: int: Max cache age
 * **provisioningState**: string (ReadOnly): The provisioning state of the StreamingEndpoint.
-* **resourceState**: 'Deleting' | 'Running' | 'Scaling' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The resource state of the StreamingEndpoint. Possible values include: 'Stopped', 'Starting', 'Running', 'Stopping', 'Deleting', 'Scaling'
+* **resourceState**: 'Deleting' | 'Running' | 'Scaling' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The resource state of the StreamingEndpoint.
 * **scaleUnits**: int (Required): The number of scale units.  Use the Scale operation to adjust this value.
 
 ## StreamingEndpointAccessControl

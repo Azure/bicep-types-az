@@ -35,7 +35,7 @@
 
 ## IotDpsPropertiesDescription
 ### Properties
-* **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static': Allocation policy to be used by this provisioning service. Possible values include: 'Hashed', 'GeoLatency', 'Static'
+* **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static': Allocation policy to be used by this provisioning service.
 * **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule_AccessRightsDescription_](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[]: List of authorization keys for a provisioning service.
 * **deviceProvisioningHostName**: string (ReadOnly): Device endpoint for this provisioning service.
 * **idScope**: string (ReadOnly): Unique identifier of this provisioning service.
@@ -43,15 +43,15 @@
 * **ipFilterRules**: [IpFilterRule](#ipfilterrule)[]: The IP filter rules.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: Private endpoint connections created on this IotHub
 * **provisioningState**: string: The ARM provisioning state of the provisioning service.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether requests from Public Network are allowed. Possible values include: 'Enabled', 'Disabled'
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether requests from Public Network are allowed.
 * **serviceOperationsHostName**: string (ReadOnly): Service endpoint for provisioning service.
-* **state**: 'Activating' | 'ActivationFailed' | 'Active' | 'Deleted' | 'Deleting' | 'DeletionFailed' | 'FailingOver' | 'FailoverFailed' | 'Resuming' | 'Suspended' | 'Suspending' | 'Transitioning': Current state of the provisioning service. Possible values include: 'Activating', 'Active', 'Deleting', 'Deleted', 'ActivationFailed', 'DeletionFailed', 'Transitioning', 'Suspending', 'Suspended', 'Resuming', 'FailingOver', 'FailoverFailed'
+* **state**: 'Activating' | 'ActivationFailed' | 'Active' | 'Deleted' | 'Deleting' | 'DeletionFailed' | 'FailingOver' | 'FailoverFailed' | 'Resuming' | 'Suspended' | 'Suspending' | 'Transitioning': Current state of the provisioning service.
 
 ## SharedAccessSignatureAuthorizationRule_AccessRightsDescription_
 ### Properties
 * **keyName**: string (Required): Name of the key.
 * **primaryKey**: string: Primary SAS key value.
-* **rights**: 'DeviceConnect' | 'EnrollmentRead' | 'EnrollmentWrite' | 'RegistrationStatusRead' | 'RegistrationStatusWrite' | 'ServiceConfig' (Required): Rights that this key has. Possible values include: 'ServiceConfig', 'EnrollmentRead', 'EnrollmentWrite', 'DeviceConnect', 'RegistrationStatusRead', 'RegistrationStatusWrite'
+* **rights**: 'DeviceConnect' | 'EnrollmentRead' | 'EnrollmentWrite' | 'RegistrationStatusRead' | 'RegistrationStatusWrite' | 'ServiceConfig' (Required): Rights that this key has.
 * **secondaryKey**: string: Secondary SAS key value.
 
 ## IotHubDefinitionDescription
@@ -64,10 +64,10 @@
 
 ## IpFilterRule
 ### Properties
-* **action**: 'Accept' | 'Reject' (Required): The desired action for requests captured by this rule. Possible values include: 'Accept', 'Reject'
+* **action**: 'Accept' | 'Reject' (Required): The desired action for requests captured by this rule.
 * **filterName**: string (Required): The name of the IP filter rule.
 * **ipMask**: string (Required): A string that contains the IP address range in CIDR notation for the rule.
-* **target**: 'all' | 'deviceApi' | 'serviceApi': Target for requests captured by this rule. Possible values include: 'all', 'serviceApi', 'deviceApi'
+* **target**: 'all' | 'deviceApi' | 'serviceApi': Target for requests captured by this rule.
 
 ## PrivateEndpointConnection
 ### Properties
@@ -89,12 +89,12 @@
 ### Properties
 * **actionsRequired**: string: Actions required for a private endpoint connection
 * **description**: string (Required): The description for the current state of a private endpoint connection
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (Required): The status of a private endpoint connection. Possible values include: 'Pending', 'Approved', 'Rejected', 'Disconnected'
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (Required): The status of a private endpoint connection.
 
 ## IotDpsSkuInfo
 ### Properties
 * **capacity**: int: The number of units to provision
-* **name**: 'S1': Sku name. Possible values include: 'S1'
+* **name**: 'S1': Sku name.
 * **tier**: string (ReadOnly): Pricing tier name of the provisioning service.
 
 ## Dictionary<string,String>

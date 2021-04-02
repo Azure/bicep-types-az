@@ -17,7 +17,7 @@
 * **adminUserEnabled**: bool: The value that indicates whether the admin user is enabled.
 * **creationDate**: string (ReadOnly): The creation date of the container registry in ISO8601 format.
 * **loginServer**: string (ReadOnly): The URL that can be used to log into the container registry.
-* **provisioningState**: 'Creating' | 'Succeeded' (ReadOnly): The provisioning state of the container registry at the time the operation was called. Possible values include: 'Creating', 'Succeeded'
+* **provisioningState**: 'Creating' | 'Succeeded' (ReadOnly): The provisioning state of the container registry at the time the operation was called.
 * **storageAccount**: [StorageAccountParameters](#storageaccountparameters) (Required): The parameters of a storage account for a container registry.
 
 ## StorageAccountParameters
@@ -28,7 +28,7 @@
 ## Sku
 ### Properties
 * **name**: string (Required): The SKU name of the container registry. Required for registry creation. Allowed value: Basic.
-* **tier**: 'Basic' (ReadOnly): The SKU tier based on the SKU name. Possible values include: 'Basic'
+* **tier**: 'Basic' (ReadOnly): The SKU tier based on the SKU name.
 
 ## Dictionary<string,String>
 ### Properties

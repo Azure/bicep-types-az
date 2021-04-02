@@ -27,25 +27,25 @@ E.g. repositories/repository-name/content/read,
 repositories/repository-name/metadata/write
 * **creationDate**: string (ReadOnly): The creation date of scope map.
 * **description**: string: The user friendly description of the scope map.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource.
 * **type**: string (ReadOnly): The type of the scope map. E.g. BuildIn scope map.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource modification (UTC).
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## TokenProperties
 ### Properties
 * **creationDate**: string (ReadOnly): The creation date of scope map.
 * **credentials**: [TokenCredentialsProperties](#tokencredentialsproperties): The properties of the credentials that can be used for authenticating the token.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource.
 * **scopeMapId**: string: The resource ID of the scope map to which the token will be associated with.
-* **status**: 'disabled' | 'enabled': The status of the token example enabled or disabled. Possible values include: 'enabled', 'disabled'
+* **status**: 'disabled' | 'enabled': The status of the token example enabled or disabled.
 
 ## TokenCredentialsProperties
 ### Properties
@@ -62,13 +62,13 @@ repositories/repository-name/metadata/write
 ### Properties
 * **encodedPemCertificate**: string: Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
 * **expiry**: string: The expiry datetime of the certificate.
-* **name**: 'certificate1' | 'certificate2': Possible values include: 'certificate1', 'certificate2'
+* **name**: 'certificate1' | 'certificate2':
 * **thumbprint**: string: The thumbprint of the certificate.
 
 ## TokenPassword
 ### Properties
 * **creationTime**: string: The creation datetime of the password.
 * **expiry**: string: The expiry datetime of the password.
-* **name**: 'password1' | 'password2': The password name "password1" or "password2". Possible values include: 'password1', 'password2'
+* **name**: 'password1' | 'password2': The password name "password1" or "password2".
 * **value**: string (ReadOnly): The password value.
 

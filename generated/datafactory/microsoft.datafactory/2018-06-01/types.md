@@ -97,7 +97,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the identity.
 * **tenantId**: string (ReadOnly): The client tenant id of the identity.
-* **type**: 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned' (Required): The identity type. Possible values include: 'SystemAssigned', 'UserAssigned', 'SystemAssigned,UserAssigned'
+* **type**: 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned' (Required): The identity type.
 * **userAssignedIdentities**: [Dictionary<string,Object>](#dictionarystringobject): Definition of all user assigned identities for a factory.
 
 ## Dictionary<string,Object>
@@ -111,7 +111,7 @@
 * **encryption**: [EncryptionConfiguration](#encryptionconfiguration): Definition of CMK for the factory.
 * **globalParameters**: [Dictionary<string,GlobalParameterSpecification>](#dictionarystringglobalparameterspecification): Definition of all parameters for an entity.
 * **provisioningState**: string (ReadOnly): Factory provisioning state, example Succeeded.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public network access is allowed for the data factory. Possible values include: 'Enabled', 'Disabled'
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public network access is allowed for the data factory.
 * **repoConfiguration**: [FactoryRepoConfiguration](#factoryrepoconfiguration): Factory's git repo information.
 * **version**: string (ReadOnly): Version of the factory.
 
@@ -133,7 +133,7 @@
 
 ## GlobalParameterSpecification
 ### Properties
-* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'String' (Required): Global Parameter type. Possible values include: 'Object', 'String', 'Int', 'Float', 'Bool', 'Array'
+* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'String' (Required): Global Parameter type.
 * **value**: any (Required): Value of parameter.
 
 ## FactoryRepoConfiguration
@@ -730,7 +730,7 @@
 ## ParameterSpecification
 ### Properties
 * **defaultValue**: any: Default value of parameter.
-* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'SecureString' | 'String' (Required): Parameter type. Possible values include: 'Object', 'String', 'Int', 'Float', 'Bool', 'Array', 'SecureString'
+* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'SecureString' | 'String' (Required): Parameter type.
 
 ## AmazonMWSObject
 ### Properties
@@ -909,7 +909,7 @@
 
 ## AvroDatasetTypeProperties
 ### Properties
-* **avroCompressionCodec**: 'bzip2' | 'deflate' | 'none' | 'snappy' | 'xz': Possible values include: 'none', 'deflate', 'snappy', 'xz', 'bzip2'
+* **avroCompressionCodec**: 'bzip2' | 'deflate' | 'none' | 'snappy' | 'xz':
 * **avroCompressionLevel**: int:
 * **location**: [DatasetLocation](#datasetlocation) (Required): Dataset location.
 
@@ -1575,7 +1575,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## OrcDatasetTypeProperties
 ### Properties
 * **location**: [DatasetLocation](#datasetlocation) (Required): Dataset location.
-* **orcCompressionCodec**: 'lzo' | 'none' | 'snappy' | 'zlib': Possible values include: 'none', 'zlib', 'snappy', 'lzo'
+* **orcCompressionCodec**: 'lzo' | 'none' | 'snappy' | 'zlib':
 
 ## Parquet
 ### Properties
@@ -1857,7 +1857,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Managed
 #### Properties
 * **managedVirtualNetwork**: [ManagedVirtualNetworkReference](#managedvirtualnetworkreference): Managed Virtual Network reference type.
-* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Integration runtime state, only valid for managed dedicated integration runtime. Possible values include: 'Initial', 'Stopped', 'Started', 'Starting', 'Stopping', 'NeedRegistration', 'Online', 'Limited', 'Offline', 'AccessDenied'
+* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Integration runtime state, only valid for managed dedicated integration runtime.
 * **type**: 'Managed' (Required): Managed integration runtime, including managed elastic and managed dedicated integration runtimes.
 * **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required): Managed integration runtime type properties.
 
@@ -1870,7 +1870,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## Managed
 ### Properties
 * **managedVirtualNetwork**: [ManagedVirtualNetworkReference](#managedvirtualnetworkreference): Managed Virtual Network reference type.
-* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Integration runtime state, only valid for managed dedicated integration runtime. Possible values include: 'Initial', 'Stopped', 'Started', 'Starting', 'Stopping', 'NeedRegistration', 'Online', 'Limited', 'Offline', 'AccessDenied'
+* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Integration runtime state, only valid for managed dedicated integration runtime.
 * **type**: 'Managed' (Required): Managed integration runtime, including managed elastic and managed dedicated integration runtimes.
 * **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required): Managed integration runtime type properties.
 
@@ -1897,7 +1897,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## IntegrationRuntimeDataFlowProperties
 ### Properties
-* **computeType**: 'ComputeOptimized' | 'General' | 'MemoryOptimized': Compute type of the cluster which will execute data flow job. Possible values include: 'General', 'MemoryOptimized', 'ComputeOptimized'
+* **computeType**: 'ComputeOptimized' | 'General' | 'MemoryOptimized': Compute type of the cluster which will execute data flow job.
 * **coreCount**: int: Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
 * **timeToLive**: int: Time to live (in minutes) setting of the cluster which will execute data flow job.
 ### Additional Properties
@@ -1916,9 +1916,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **catalogInfo**: [IntegrationRuntimeSsisCatalogInfo](#integrationruntimessiscataloginfo): Catalog information for managed dedicated integration runtime.
 * **customSetupScriptProperties**: [IntegrationRuntimeCustomSetupScriptProperties](#integrationruntimecustomsetupscriptproperties): Custom setup script properties for a managed dedicated integration runtime.
 * **dataProxyProperties**: [IntegrationRuntimeDataProxyProperties](#integrationruntimedataproxyproperties): Data proxy properties for a managed dedicated integration runtime.
-* **edition**: 'Enterprise' | 'Standard': The edition for the SSIS Integration Runtime. Possible values include: 'Standard', 'Enterprise'
+* **edition**: 'Enterprise' | 'Standard': The edition for the SSIS Integration Runtime.
 * **expressCustomSetupProperties**: [CustomSetupBase](#customsetupbase)[]: Custom setup without script properties for a SSIS integration runtime.
-* **licenseType**: 'BasePrice' | 'LicenseIncluded': License type for bringing your own license scenario. Possible values include: 'BasePrice', 'LicenseIncluded'
+* **licenseType**: 'BasePrice' | 'LicenseIncluded': License type for bringing your own license scenario.
 * **packageStores**: [PackageStore](#packagestore)[]: Package stores for the SSIS Integration Runtime.
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -1927,7 +1927,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **catalogAdminPassword**: [SecureString](#securestring): Azure Data Factory secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
 * **catalogAdminUserName**: string: The administrator user name of catalog database.
-* **catalogPricingTier**: 'Basic' | 'Premium' | 'PremiumRS' | 'Standard': The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/. Possible values include: 'Basic', 'Standard', 'Premium', 'PremiumRS'
+* **catalogPricingTier**: 'Basic' | 'Premium' | 'PremiumRS' | 'Standard': The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/.
 * **catalogServerEndpoint**: string: The catalog database server URL.
 * **dualStandbyPairName**: string: The dual standby pair name of Azure-SSIS Integration Runtimes to support SSISDB failover.
 ### Additional Properties
@@ -1952,7 +1952,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## EntityReference
 ### Properties
 * **referenceName**: string: The name of this referenced entity.
-* **type**: 'IntegrationRuntimeReference' | 'LinkedServiceReference': The type of this referenced entity. Possible values include: 'IntegrationRuntimeReference', 'LinkedServiceReference'
+* **type**: 'IntegrationRuntimeReference' | 'LinkedServiceReference': The type of this referenced entity.
 
 ## CustomSetupBase
 * **Discriminator**: type
@@ -3005,8 +3005,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## CommonDataServiceForAppsLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'AADServicePrincipal' | 'Ifd' | 'Office365' (Required): The authentication type to connect to Common Data Service for Apps server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario. 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string). Possible values include: 'Office365', 'Ifd', 'AADServicePrincipal'
-* **deploymentType**: 'Online' | 'OnPremisesWithIfd' (Required): The deployment type of the Common Data Service for Apps instance. 'Online' for Common Data Service for Apps Online and 'OnPremisesWithIfd' for Common Data Service for Apps on-premises with Ifd. Type: string (or Expression with resultType string). Possible values include: 'Online', 'OnPremisesWithIfd'
+* **authenticationType**: 'AADServicePrincipal' | 'Ifd' | 'Office365' (Required): The authentication type to connect to Common Data Service for Apps server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario. 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
+* **deploymentType**: 'Online' | 'OnPremisesWithIfd' (Required): The deployment type of the Common Data Service for Apps instance. 'Online' for Common Data Service for Apps Online and 'OnPremisesWithIfd' for Common Data Service for Apps on-premises with Ifd. Type: string (or Expression with resultType string).
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **hostName**: any: The host name of the on-premises Common Data Service for Apps server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
 * **organizationName**: any: The organization name of the Common Data Service for Apps instance. The property is required for on-prem and required for online when there are more than one Common Data Service for Apps instances associated with the user. Type: string (or Expression with resultType string).
@@ -3044,12 +3044,12 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **accountEndpoint**: any: The endpoint of the Azure CosmosDB account. Type: string (or Expression with resultType string)
 * **accountKey**: [SecretBase](#secretbase): The base definition of a secret type.
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
-* **connectionMode**: 'Direct' | 'Gateway': The connection mode used to access CosmosDB account. Type: string (or Expression with resultType string). Possible values include: 'Gateway', 'Direct'
+* **connectionMode**: 'Direct' | 'Gateway': The connection mode used to access CosmosDB account. Type: string (or Expression with resultType string).
 * **connectionString**: any: The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **database**: any: The name of the database. Type: string (or Expression with resultType string)
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **servicePrincipalCredential**: [SecretBase](#secretbase): The base definition of a secret type.
-* **servicePrincipalCredentialType**: 'ServicePrincipalCert' | 'ServicePrincipalKey': The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string). Possible values include: 'ServicePrincipalKey', 'ServicePrincipalCert'
+* **servicePrincipalCredentialType**: 'ServicePrincipalCert' | 'ServicePrincipalKey': The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
 * **servicePrincipalId**: any: The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
 * **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 
@@ -3086,7 +3086,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## Db2LinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Basic': AuthenticationType to be used for connection. It is mutually exclusive with connectionString property. Possible values include: 'Basic'
+* **authenticationType**: 'Basic': AuthenticationType to be used for connection. It is mutually exclusive with connectionString property.
 * **certificateCommonName**: any: Certificate Common Name when TLS is enabled. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
 * **connectionString**: any: The connection string. It is mutually exclusive with server, database, authenticationType, userName, packageCollection and certificateCommonName property. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **database**: any: Database name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
@@ -3148,8 +3148,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## DynamicsCrmLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'AADServicePrincipal' | 'Ifd' | 'Office365' (Required): The authentication type to connect to Dynamics CRM server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string). Possible values include: 'Office365', 'Ifd', 'AADServicePrincipal'
-* **deploymentType**: 'Online' | 'OnPremisesWithIfd' (Required): The deployment type of the Dynamics CRM instance. 'Online' for Dynamics CRM Online and 'OnPremisesWithIfd' for Dynamics CRM on-premises with Ifd. Type: string (or Expression with resultType string). Possible values include: 'Online', 'OnPremisesWithIfd'
+* **authenticationType**: 'AADServicePrincipal' | 'Ifd' | 'Office365' (Required): The authentication type to connect to Dynamics CRM server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
+* **deploymentType**: 'Online' | 'OnPremisesWithIfd' (Required): The deployment type of the Dynamics CRM instance. 'Online' for Dynamics CRM Online and 'OnPremisesWithIfd' for Dynamics CRM on-premises with Ifd. Type: string (or Expression with resultType string).
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **hostName**: any: The host name of the on-premises Dynamics CRM server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
 * **organizationName**: any: The organization name of the Dynamics CRM instance. The property is required for on-prem and required for online when there are more than one Dynamics CRM instances associated with the user. Type: string (or Expression with resultType string).
@@ -3195,7 +3195,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## FtpServerLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Anonymous' | 'Basic': The authentication type to be used to connect to the FTP server. Possible values include: 'Basic', 'Anonymous'
+* **authenticationType**: 'Anonymous' | 'Basic': The authentication type to be used to connect to the FTP server.
 * **enableServerCertificateValidation**: any: If true, validate the FTP server SSL certificate when connect over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
 * **enableSsl**: any: If true, connect to the FTP server over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
@@ -3211,7 +3211,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## GoogleAdWordsLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' (Required): The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR. Possible values include: 'ServiceAuthentication', 'UserAuthentication'
+* **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' (Required): The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
 * **clientCustomerID**: any (Required): The Client customer ID of the AdWords account that you want to fetch report data for.
 * **clientId**: any: The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
 * **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
@@ -3231,7 +3231,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## GoogleBigQueryLinkedServiceTypeProperties
 ### Properties
 * **additionalProjects**: any: A comma-separated list of public BigQuery projects to access.
-* **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' (Required): The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR. Possible values include: 'ServiceAuthentication', 'UserAuthentication'
+* **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' (Required): The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
 * **clientId**: any: The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
 * **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
 * **email**: any: The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.
@@ -3275,7 +3275,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **allowHostNameCNMismatch**: any: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
 * **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
-* **authenticationType**: 'Anonymous' | 'Basic' (Required): The authentication mechanism to use to connect to the HBase server. Possible values include: 'Anonymous', 'Basic'
+* **authenticationType**: 'Anonymous' | 'Basic' (Required): The authentication mechanism to use to connect to the HBase server.
 * **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **host**: any (Required): The IP address or host name of the HBase server. (i.e. 192.168.222.160)
@@ -3371,16 +3371,16 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **allowHostNameCNMismatch**: any: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
 * **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
-* **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' (Required): The authentication method used to access the Hive server. Possible values include: 'Anonymous', 'Username', 'UsernameAndPassword', 'WindowsAzureHDInsightService'
+* **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' (Required): The authentication method used to access the Hive server.
 * **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **host**: any (Required): IP address or host name of the Hive server, separated by ';' for multiple hosts (only when serviceDiscoveryMode is enable).
 * **httpPath**: any: The partial URL corresponding to the Hive server.
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
 * **port**: any: The TCP port that the Hive server uses to listen for client connections.
-* **serverType**: 'HiveServer1' | 'HiveServer2' | 'HiveThriftServer': The type of Hive server. Possible values include: 'HiveServer1', 'HiveServer2', 'HiveThriftServer'
+* **serverType**: 'HiveServer1' | 'HiveServer2' | 'HiveThriftServer': The type of Hive server.
 * **serviceDiscoveryMode**: any: true to indicate using the ZooKeeper service, false not.
-* **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL': The transport protocol to use in the Thrift layer. Possible values include: 'Binary', 'SASL', 'HTTP '
+* **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL': The transport protocol to use in the Thrift layer.
 * **trustedCertPath**: any: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
 * **useNativeQuery**: any: Specifies whether the driver uses native HiveQL queries,or converts them into an equivalent form in HiveQL.
 * **username**: any: The user name that you use to access Hive Server.
@@ -3394,7 +3394,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## HttpLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Anonymous' | 'Basic' | 'ClientCertificate' | 'Digest' | 'Windows': The authentication type to be used to connect to the HTTP server. Possible values include: 'Basic', 'Anonymous', 'Digest', 'Windows', 'ClientCertificate'
+* **authenticationType**: 'Anonymous' | 'Basic' | 'ClientCertificate' | 'Digest' | 'Windows': The authentication type to be used to connect to the HTTP server.
 * **authHeaders**: any: The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
 * **certThumbprint**: any: Thumbprint of certificate for ClientCertificate authentication. Only valid for on-premises copy. For on-premises copy with ClientCertificate authentication, either CertThumbprint or EmbeddedCertData/Password should be specified. Type: string (or Expression with resultType string).
 * **embeddedCertData**: any: Base64 encoded certificate data for ClientCertificate authentication. For on-premises copy with ClientCertificate authentication, either CertThumbprint or EmbeddedCertData/Password should be specified. Type: string (or Expression with resultType string).
@@ -3429,7 +3429,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **allowHostNameCNMismatch**: any: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
 * **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
-* **authenticationType**: 'Anonymous' | 'SASLUsername' | 'UsernameAndPassword' (Required): The authentication type to use. Possible values include: 'Anonymous', 'SASLUsername', 'UsernameAndPassword'
+* **authenticationType**: 'Anonymous' | 'SASLUsername' | 'UsernameAndPassword' (Required): The authentication type to use.
 * **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **host**: any (Required): The IP address or host name of the Impala server. (i.e. 192.168.222.160)
@@ -3531,7 +3531,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## MongoDbLinkedServiceTypeProperties
 ### Properties
 * **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false. Type: boolean (or Expression with resultType boolean).
-* **authenticationType**: 'Anonymous' | 'Basic': The authentication type to be used to connect to the MongoDB database. Possible values include: 'Basic', 'Anonymous'
+* **authenticationType**: 'Anonymous' | 'Basic': The authentication type to be used to connect to the MongoDB database.
 * **authSource**: any: Database to verify the username and password. Type: string (or Expression with resultType string).
 * **databaseName**: any (Required): The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).
 * **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false. Type: boolean (or Expression with resultType boolean).
@@ -3591,8 +3591,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## ODataLinkedServiceTypeProperties
 ### Properties
 * **aadResourceId**: any: Specify the resource you are requesting authorization to use Directory. Type: string (or Expression with resultType string).
-* **aadServicePrincipalCredentialType**: 'ServicePrincipalCert' | 'ServicePrincipalKey': Specify the credential type (key or cert) is used for service principal. Possible values include: 'ServicePrincipalKey', 'ServicePrincipalCert'
-* **authenticationType**: 'AadServicePrincipal' | 'Anonymous' | 'Basic' | 'ManagedServiceIdentity' | 'Windows': Type of authentication used to connect to the OData service. Possible values include: 'Basic', 'Anonymous', 'Windows', 'AadServicePrincipal', 'ManagedServiceIdentity'
+* **aadServicePrincipalCredentialType**: 'ServicePrincipalCert' | 'ServicePrincipalKey': Specify the credential type (key or cert) is used for service principal.
+* **authenticationType**: 'AadServicePrincipal' | 'Anonymous' | 'Basic' | 'ManagedServiceIdentity' | 'Windows': Type of authentication used to connect to the OData service.
 * **authHeaders**: any: The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
@@ -3694,7 +3694,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **allowHostNameCNMismatch**: any: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
 * **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
-* **authenticationType**: 'Anonymous' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' (Required): The authentication mechanism used to connect to the Phoenix server. Possible values include: 'Anonymous', 'UsernameAndPassword', 'WindowsAzureHDInsightService'
+* **authenticationType**: 'Anonymous' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' (Required): The authentication mechanism used to connect to the Phoenix server.
 * **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **host**: any (Required): The IP address or host name of the Phoenix server. (i.e. 192.168.222.160)
@@ -3725,7 +3725,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **allowHostNameCNMismatch**: any: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
 * **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
-* **authenticationType**: 'Anonymous' | 'LDAP' (Required): The authentication mechanism used to connect to the Presto server. Possible values include: 'Anonymous', 'LDAP'
+* **authenticationType**: 'Anonymous' | 'LDAP' (Required): The authentication mechanism used to connect to the Presto server.
 * **catalog**: any (Required): The catalog context for all request against the server.
 * **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
@@ -3778,7 +3778,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## RestServiceLinkedServiceTypeProperties
 ### Properties
 * **aadResourceId**: any: The resource you are requesting authorization to use.
-* **authenticationType**: 'AadServicePrincipal' | 'Anonymous' | 'Basic' | 'ManagedServiceIdentity' (Required): Type of authentication used to connect to the REST service. Possible values include: 'Anonymous', 'Basic', 'AadServicePrincipal', 'ManagedServiceIdentity'
+* **authenticationType**: 'AadServicePrincipal' | 'Anonymous' | 'Basic' | 'ManagedServiceIdentity' (Required): Type of authentication used to connect to the REST service.
 * **authHeaders**: any: The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
 * **enableServerCertificateValidation**: any: Whether to validate server side SSL certificate when connecting to the endpoint.The default value is true. Type: boolean (or Expression with resultType boolean).
@@ -3879,7 +3879,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## SapHanaLinkedServiceProperties
 ### Properties
-* **authenticationType**: 'Basic' | 'Windows': The authentication type to be used to connect to the SAP HANA server. Possible values include: 'Basic', 'Windows'
+* **authenticationType**: 'Basic' | 'Windows': The authentication type to be used to connect to the SAP HANA server.
 * **connectionString**: any: SAP HANA ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
@@ -3936,7 +3936,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## ServiceNowLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Basic' | 'OAuth2' (Required): The authentication type to use. Possible values include: 'Basic', 'OAuth2'
+* **authenticationType**: 'Basic' | 'OAuth2' (Required): The authentication type to use.
 * **clientId**: any: The client id for OAuth2 authentication.
 * **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
@@ -3954,7 +3954,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## SftpServerLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Basic' | 'MultiFactor' | 'SshPublicKey': The authentication type to be used to connect to the FTP server. Possible values include: 'Basic', 'SshPublicKey', 'MultiFactor'
+* **authenticationType**: 'Basic' | 'MultiFactor' | 'SshPublicKey': The authentication type to be used to connect to the FTP server.
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **host**: any (Required): The SFTP server host name. Type: string (or Expression with resultType string).
 * **hostKeyFingerprint**: any: The host key finger-print of the SFTP server. When SkipHostKeyValidation is false, HostKeyFingerprint should be specified. Type: string (or Expression with resultType string).
@@ -4013,15 +4013,15 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **allowHostNameCNMismatch**: any: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
 * **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
-* **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' (Required): The authentication method used to access the Spark server. Possible values include: 'Anonymous', 'Username', 'UsernameAndPassword', 'WindowsAzureHDInsightService'
+* **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' (Required): The authentication method used to access the Spark server.
 * **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **host**: any (Required): IP address or host name of the Spark server
 * **httpPath**: any: The partial URL corresponding to the Spark server.
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
 * **port**: any (Required): The TCP port that the Spark server uses to listen for client connections.
-* **serverType**: 'SharkServer' | 'SharkServer2' | 'SparkThriftServer': The type of Spark server. Possible values include: 'SharkServer', 'SharkServer2', 'SparkThriftServer'
-* **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL': The transport protocol to use in the Thrift layer. Possible values include: 'Binary', 'SASL', 'HTTP '
+* **serverType**: 'SharkServer' | 'SharkServer2' | 'SparkThriftServer': The type of Spark server.
+* **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL': The transport protocol to use in the Thrift layer.
 * **trustedCertPath**: any: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
 * **username**: any: The user name that you use to access Spark Server.
 * **useSystemTrustStore**: any: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
@@ -4062,7 +4062,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## SybaseLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Basic' | 'Windows': AuthenticationType to be used for connection. Possible values include: 'Basic', 'Windows'
+* **authenticationType**: 'Basic' | 'Windows': AuthenticationType to be used for connection.
 * **database**: any (Required): Database name for connection. Type: string (or Expression with resultType string).
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
@@ -4077,7 +4077,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## TeradataLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Basic' | 'Windows': AuthenticationType to be used for connection. Possible values include: 'Basic', 'Windows'
+* **authenticationType**: 'Basic' | 'Windows': AuthenticationType to be used for connection.
 * **connectionString**: any: Teradata ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
@@ -4284,14 +4284,14 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## VariableSpecification
 ### Properties
 * **defaultValue**: any: Default value of variable.
-* **type**: 'Array' | 'Bool' | 'String' (Required): Variable type. Possible values include: 'String', 'Bool', 'Array'
+* **type**: 'Array' | 'Bool' | 'String' (Required): Variable type.
 
 ## Trigger
 * **Discriminator**: type
 ### Base Properties
 * **annotations**: any[]: List of tags that can be used for describing the trigger.
 * **description**: string: Trigger description.
-* **runtimeState**: 'Disabled' | 'Started' | 'Stopped' (ReadOnly): Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger. Possible values include: 'Started', 'Stopped', 'Disabled'
+* **runtimeState**: 'Disabled' | 'Started' | 'Stopped' (ReadOnly): Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
 ### ChainingTrigger
 #### Properties
 * **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required): Pipeline that needs to be triggered with the given parameters.
@@ -4370,7 +4370,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **delay**: any: Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **dependsOn**: [DependencyReference](#dependencyreference)[]: Triggers that this trigger depends on. Only tumbling window triggers are supported.
 * **endTime**: string: The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
-* **frequency**: 'Hour' | 'Minute' | 'Month' (Required): The frequency of the time windows. Possible values include: 'Minute', 'Hour', 'Month'
+* **frequency**: 'Hour' | 'Minute' | 'Month' (Required): The frequency of the time windows.
 * **interval**: int (Required): The interval of the time windows. The minimum interval allowed is 15 Minutes.
 * **maxConcurrency**: int (Required): The max number of parallel time windows (ready for execution) for which a new run is triggered.
 * **retryPolicy**: [RetryPolicy](#retrypolicy): Execution policy for an activity.

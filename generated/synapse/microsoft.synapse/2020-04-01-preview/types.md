@@ -37,10 +37,10 @@
 ### Properties
 * **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
 * **createdBy**: string (ReadOnly): A string identifier for the identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource: <User|Application|ManagedIdentity|Key>. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource: <User|Application|ManagedIdentity|Key>.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of last modification (UTC).
 * **lastModifiedBy**: string (ReadOnly): A string identifier for the identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that last modified the resource: <User|Application|ManagedIdentity|Key>. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that last modified the resource: <User|Application|ManagedIdentity|Key>.
 
 ## Dictionary<string,String>
 ### Properties
@@ -52,7 +52,7 @@
 * **currentServiceObjectiveName**: string (ReadOnly): The current service level objective name of the sql pool.
 * **requestedServiceObjectiveName**: string (ReadOnly): The requested service level objective name of the sql pool.
 * **sqlPoolGuid**: string (ReadOnly): The Guid of the sql pool.
-* **status**: 'Creating' | 'Dropping' | 'Error' | 'Inaccessible' | 'Invisible' | 'Offline' | 'Online' | 'Paused' | 'Pausing' | 'Resuming' | 'Scaling' | 'Unknown' (ReadOnly): The status of the sql pool. Possible values include: 'Invisible', 'Online', 'Offline', 'Creating', 'Inaccessible', 'Pausing', 'Paused', 'Resuming', 'Scaling', 'Dropping', 'Error', 'Unknown'
+* **status**: 'Creating' | 'Dropping' | 'Error' | 'Inaccessible' | 'Invisible' | 'Offline' | 'Online' | 'Paused' | 'Pausing' | 'Resuming' | 'Scaling' | 'Unknown' (ReadOnly): The status of the sql pool.
 
 ## Sku
 ### Properties

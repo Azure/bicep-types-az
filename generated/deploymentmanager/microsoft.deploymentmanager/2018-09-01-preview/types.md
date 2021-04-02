@@ -137,7 +137,7 @@
 ## ServiceUnit
 ### Properties
 * **artifacts**: [ServiceUnitArtifacts](#serviceunitartifacts) (ReadOnly): Defines the artifacts of a service unit.
-* **deploymentMode**: 'Complete' | 'Incremental' (ReadOnly): Describes the type of ARM deployment to be performed on the resource. Possible values include: 'Incremental', 'Complete'
+* **deploymentMode**: 'Complete' | 'Incremental' (ReadOnly): Describes the type of ARM deployment to be performed on the resource.
 * **name**: string (ReadOnly): Name of the service unit.
 * **steps**: [RolloutStep](#rolloutstep)[] (ReadOnly): Detailed step information, if present.
 * **targetResourceGroup**: string (ReadOnly): The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
@@ -220,7 +220,7 @@
 ## schemas:18_properties
 ### Properties
 * **artifacts**: [ServiceUnitArtifacts](#serviceunitartifacts): Defines the artifacts of a service unit.
-* **deploymentMode**: 'Complete' | 'Incremental' (Required): Describes the type of ARM deployment to be performed on the resource. Possible values include: 'Incremental', 'Complete'
+* **deploymentMode**: 'Complete' | 'Incremental' (Required): Describes the type of ARM deployment to be performed on the resource.
 * **targetResourceGroup**: string (Required): The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
 
 ## Dictionary<string,String>

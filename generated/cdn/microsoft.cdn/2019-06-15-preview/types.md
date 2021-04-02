@@ -51,9 +51,9 @@
 * **endpointLinks**: [CdnEndpoint](#cdnendpoint)[] (ReadOnly): Describes Azure CDN endpoints associated with this Web Application Firewall policy.
 * **managedRules**: [ManagedRuleSetList](#managedrulesetlist): Defines the list of managed rule sets for the policy.
 * **policySettings**: [policySettings](#policysettings): Defines contents of a web application firewall global configuration
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the WebApplicationFirewallPolicy. Possible values include: 'Creating', 'Succeeded', 'Failed'
+* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the WebApplicationFirewallPolicy.
 * **rateLimitRules**: [RateLimitRuleList](#ratelimitrulelist): Defines contents of rate limit rules
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly): Possible values include: 'Creating', 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Deleting'
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly):
 
 ## CustomRuleList
 ### Properties
@@ -61,8 +61,8 @@
 
 ## CustomRule
 ### Properties
-* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' (Required): Describes what action to be applied when rule matches. Possible values include: 'Allow', 'Block', 'Log', 'Redirect'
-* **enabledState**: 'Disabled' | 'Enabled': Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified. Possible values include: 'Disabled', 'Enabled'
+* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' (Required): Describes what action to be applied when rule matches.
+* **enabledState**: 'Disabled' | 'Enabled': Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
 * **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
 * **name**: string (Required): Defines the name of the custom rule
 * **priority**: int (Required): Defines in what order this rule be evaluated in the overall list of custom rules
@@ -70,9 +70,9 @@
 ## MatchCondition
 ### Properties
 * **matchValue**: string[] (Required): List of possible match values.
-* **matchVariable**: 'Cookies' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestHeader' | 'RequestMethod' | 'RequestUri' | 'SocketAddr' (Required): Match variable to compare against. Possible values include: 'RemoteAddr', 'SocketAddr', 'RequestMethod', 'RequestHeader', 'RequestUri', 'QueryString', 'RequestBody', 'Cookies', 'PostArgs'
+* **matchVariable**: 'Cookies' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestHeader' | 'RequestMethod' | 'RequestUri' | 'SocketAddr' (Required): Match variable to compare against.
 * **negateCondition**: bool: Describes if the result of this condition should be negated.
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched. Possible values include: 'Any', 'IPMatch', 'GeoMatch', 'Equal', 'Contains', 'LessThan', 'GreaterThan', 'LessThanOrEqual', 'GreaterThanOrEqual', 'BeginsWith', 'EndsWith', 'RegEx'
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched.
 * **selector**: string: Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
 * **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms.
 
@@ -98,8 +98,8 @@
 
 ## ManagedRuleOverride
 ### Properties
-* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect': Describes the override action to be applied when rule matches. Possible values include: 'Allow', 'Block', 'Log', 'Redirect'
-* **enabledState**: 'Disabled' | 'Enabled': Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified. Possible values include: 'Disabled', 'Enabled'
+* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect': Describes the override action to be applied when rule matches.
+* **enabledState**: 'Disabled' | 'Enabled': Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
 * **ruleId**: string (Required): Identifier for the managed rule.
 
 ## policySettings
@@ -107,8 +107,8 @@
 * **defaultCustomBlockResponseBody**: string: If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
 * **defaultCustomBlockResponseStatusCode**: int: If the action type is block, this field defines the default customer overridable http response status code.
 * **defaultRedirectUrl**: string: If action type is redirect, this field represents the default redirect URL for the client.
-* **enabledState**: 'Disabled' | 'Enabled': describes if the policy is in enabled state or disabled state. Possible values include: 'Disabled', 'Enabled'
-* **mode**: 'Detection' | 'Prevention': Describes if it is in detection mode or prevention mode at policy level. Possible values include: 'Prevention', 'Detection'
+* **enabledState**: 'Disabled' | 'Enabled': describes if the policy is in enabled state or disabled state.
+* **mode**: 'Detection' | 'Prevention': Describes if it is in detection mode or prevention mode at policy level.
 
 ## RateLimitRuleList
 ### Properties
@@ -116,8 +116,8 @@
 
 ## RateLimitRule
 ### Properties
-* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' (Required): Describes what action to be applied when rule matches. Possible values include: 'Allow', 'Block', 'Log', 'Redirect'
-* **enabledState**: 'Disabled' | 'Enabled': Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified. Possible values include: 'Disabled', 'Enabled'
+* **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' (Required): Describes what action to be applied when rule matches.
+* **enabledState**: 'Disabled' | 'Enabled': Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
 * **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
 * **name**: string (Required): Defines the name of the custom rule
 * **priority**: int (Required): Defines in what order this rule be evaluated in the overall list of custom rules
@@ -126,7 +126,7 @@
 
 ## Sku
 ### Properties
-* **name**: 'Custom_Verizon' | 'Premium_ChinaCdn' | 'Premium_Verizon' | 'Standard_Akamai' | 'Standard_ChinaCdn' | 'Standard_Microsoft' | 'Standard_Verizon': Name of the pricing tier. Possible values include: 'Standard_Verizon', 'Premium_Verizon', 'Custom_Verizon', 'Standard_Akamai', 'Standard_ChinaCdn', 'Standard_Microsoft', 'Premium_ChinaCdn'
+* **name**: 'Custom_Verizon' | 'Premium_ChinaCdn' | 'Premium_Verizon' | 'Standard_Akamai' | 'Standard_ChinaCdn' | 'Standard_Microsoft' | 'Standard_Verizon': Name of the pricing tier.
 
 ## Dictionary<string,String>
 ### Properties
@@ -136,7 +136,7 @@
 ## ProfileProperties
 ### Properties
 * **provisioningState**: string (ReadOnly): Provisioning status of the profile.
-* **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' (ReadOnly): Resource status of the profile. Possible values include: 'Creating', 'Active', 'Deleting', 'Disabled'
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' (ReadOnly): Resource status of the profile.
 
 ## Dictionary<string,String>
 ### Properties
@@ -152,14 +152,14 @@
 * **isCompressionEnabled**: bool: Indicates whether content compression is enabled on CDN. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.
 * **isHttpAllowed**: bool: Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
 * **isHttpsAllowed**: bool: Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
-* **optimizationType**: 'DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming': Specifies what scenario the customer wants this CDN endpoint to optimize for, e.g. Download, Media services. With this information, CDN can apply scenario driven optimization. Possible values include: 'GeneralWebDelivery', 'GeneralMediaStreaming', 'VideoOnDemandMediaStreaming', 'LargeFileDownload', 'DynamicSiteAcceleration'
+* **optimizationType**: 'DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming': Specifies what scenario the customer wants this CDN endpoint to optimize for, e.g. Download, Media services. With this information, CDN can apply scenario driven optimization.
 * **originHostHeader**: string: The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
 * **originPath**: string: A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
 * **origins**: [DeepCreatedOrigin](#deepcreatedorigin)[] (Required): The source of the content being delivered via CDN.
 * **probePath**: string: Path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the origin path.
 * **provisioningState**: string (ReadOnly): Provisioning status of the endpoint.
-* **queryStringCachingBehavior**: 'BypassCaching' | 'IgnoreQueryString' | 'NotSet' | 'UseQueryString': Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL. Possible values include: 'IgnoreQueryString', 'BypassCaching', 'UseQueryString', 'NotSet'
-* **resourceState**: 'Creating' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Resource status of the endpoint. Possible values include: 'Creating', 'Deleting', 'Running', 'Starting', 'Stopped', 'Stopping'
+* **queryStringCachingBehavior**: 'BypassCaching' | 'IgnoreQueryString' | 'NotSet' | 'UseQueryString': Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
+* **resourceState**: 'Creating' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Resource status of the endpoint.
 * **webApplicationFirewallPolicyLink**: [schemas:10_webApplicationFirewallPolicyLink](#schemas10webapplicationfirewallpolicylink): Defines the Web Application Firewall policy for the endpoint (if applicable)
 
 ## schemas:10_deliveryPolicy
@@ -216,7 +216,7 @@
 ## CacheExpirationActionParameters
 ### Properties
 * **@odata.type**: string (Required):
-* **cacheBehavior**: 'BypassCache' | 'Override' | 'SetIfMissing' (Required): Caching behavior for the requests. Possible values include: 'BypassCache', 'Override', 'SetIfMissing'
+* **cacheBehavior**: 'BypassCache' | 'Override' | 'SetIfMissing' (Required): Caching behavior for the requests.
 * **cacheDuration**: string: The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
 * **cacheType**: string (Required): The level at which the content needs to be cached.
 
@@ -229,7 +229,7 @@
 ### Properties
 * **@odata.type**: string (Required):
 * **queryParameters**: string: query parameters to include or exclude (comma separated).
-* **queryStringBehavior**: 'Exclude' | 'ExcludeAll' | 'Include' | 'IncludeAll' (Required): Caching behavior for the requests. Possible values include: 'Include', 'IncludeAll', 'Exclude', 'ExcludeAll'
+* **queryStringBehavior**: 'Exclude' | 'ExcludeAll' | 'Include' | 'IncludeAll' (Required): Caching behavior for the requests.
 
 ## ModifyRequestHeader
 ### Properties
@@ -239,7 +239,7 @@
 ## HeaderActionParameters
 ### Properties
 * **@odata.type**: string (Required):
-* **headerAction**: 'Append' | 'Delete' | 'Overwrite' (Required): Action to perform. Possible values include: 'Append', 'Overwrite', 'Delete'
+* **headerAction**: 'Append' | 'Delete' | 'Overwrite' (Required): Action to perform.
 * **headerName**: string (Required): Name of the header to modify
 * **value**: string: Value for the specified action
 
@@ -260,8 +260,8 @@
 * **customHostname**: string: Host to redirect. Leave empty to use the incoming host as the destination host.
 * **customPath**: string: The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
 * **customQueryString**: string: The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.
-* **destinationProtocol**: 'Http' | 'Https' | 'MatchRequest': Protocol to use for the redirect. The default value is MatchRequest. Possible values include: 'MatchRequest', 'Http', 'Https'
-* **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect' (Required): The redirect type the rule will use when redirecting traffic. Possible values include: 'Moved', 'Found', 'TemporaryRedirect', 'PermanentRedirect'
+* **destinationProtocol**: 'Http' | 'Https' | 'MatchRequest': Protocol to use for the redirect. The default value is MatchRequest.
+* **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect' (Required): The redirect type the rule will use when redirecting traffic.
 
 ## UrlRewrite
 ### Properties
@@ -359,7 +359,7 @@
 * **@odata.type**: string (Required):
 * **matchValues**: string[] (Required): The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched. Possible values include: 'Any', 'Equal', 'Contains', 'BeginsWith', 'EndsWith', 'LessThan', 'LessThanOrEqual', 'GreaterThan', 'GreaterThanOrEqual'
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched.
 * **selector**: string (Required): Name of Cookies to be matched
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
@@ -398,7 +398,7 @@
 * **@odata.type**: string (Required):
 * **matchValues**: string[] (Required): The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched. Possible values include: 'Any', 'Equal', 'Contains', 'BeginsWith', 'EndsWith', 'LessThan', 'LessThanOrEqual', 'GreaterThan', 'GreaterThanOrEqual'
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched.
 * **selector**: string (Required): Name of PostArg to be matched
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
@@ -412,7 +412,7 @@
 * **@odata.type**: string (Required):
 * **matchValues**: string[] (Required): The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched. Possible values include: 'Any', 'Equal', 'Contains', 'BeginsWith', 'EndsWith', 'LessThan', 'LessThanOrEqual', 'GreaterThan', 'GreaterThanOrEqual'
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched.
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
 ## RemoteAddress
@@ -425,7 +425,7 @@
 * **@odata.type**: string (Required):
 * **matchValues**: string[] (Required): Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'GeoMatch' | 'IPMatch' (Required): Describes operator to be matched. Possible values include: 'Any', 'IPMatch', 'GeoMatch'
+* **operator**: 'Any' | 'GeoMatch' | 'IPMatch' (Required): Describes operator to be matched.
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
 ## RequestBody
@@ -438,7 +438,7 @@
 * **@odata.type**: string (Required):
 * **matchValues**: string[] (Required): The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched. Possible values include: 'Any', 'Equal', 'Contains', 'BeginsWith', 'EndsWith', 'LessThan', 'LessThanOrEqual', 'GreaterThan', 'GreaterThanOrEqual'
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched.
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
 ## RequestHeader
@@ -451,7 +451,7 @@
 * **@odata.type**: string (Required):
 * **matchValues**: string[] (Required): The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched. Possible values include: 'Any', 'Equal', 'Contains', 'BeginsWith', 'EndsWith', 'LessThan', 'LessThanOrEqual', 'GreaterThan', 'GreaterThanOrEqual'
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched.
 * **selector**: string (Required): Name of Header to be matched
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
@@ -489,7 +489,7 @@
 * **@odata.type**: string (Required):
 * **matchValues**: string[] (Required): The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched. Possible values include: 'Any', 'Equal', 'Contains', 'BeginsWith', 'EndsWith', 'LessThan', 'LessThanOrEqual', 'GreaterThan', 'GreaterThanOrEqual'
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched.
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
 ## UrlFileExtension
@@ -502,7 +502,7 @@
 * **@odata.type**: string (Required):
 * **matchValues**: string[] (Required): The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched. Possible values include: 'Any', 'Equal', 'Contains', 'BeginsWith', 'EndsWith', 'LessThan', 'LessThanOrEqual', 'GreaterThan', 'GreaterThanOrEqual'
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched.
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
 ## UrlFileName
@@ -515,7 +515,7 @@
 * **@odata.type**: string (Required):
 * **matchValues**: string[] (Required): The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched. Possible values include: 'Any', 'Equal', 'Contains', 'BeginsWith', 'EndsWith', 'LessThan', 'LessThanOrEqual', 'GreaterThan', 'GreaterThanOrEqual'
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched.
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
 ## UrlPath
@@ -528,12 +528,12 @@
 * **@odata.type**: string (Required):
 * **matchValues**: string[] (Required): The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'Wildcard' (Required): Describes operator to be matched. Possible values include: 'Any', 'Equal', 'Contains', 'BeginsWith', 'EndsWith', 'LessThan', 'LessThanOrEqual', 'GreaterThan', 'GreaterThanOrEqual', 'Wildcard'
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'Wildcard' (Required): Describes operator to be matched.
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
 ## GeoFilter
 ### Properties
-* **action**: 'Allow' | 'Block' (Required): Action of the geo filter, i.e. allow or block access. Possible values include: 'Block', 'Allow'
+* **action**: 'Allow' | 'Block' (Required): Action of the geo filter, i.e. allow or block access.
 * **countryCodes**: string[] (Required): Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
 * **relativePath**: string (Required): Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.)
 
@@ -560,18 +560,18 @@
 ## CustomDomainPropertiesParameters
 ### Properties
 * **customHttpsParameters**: [CustomDomainHttpsParameters](#customdomainhttpsparameters) (ReadOnly): The JSON object that contains the properties to secure a custom domain.
-* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly): Provisioning status of Custom Https of the custom domain. Possible values include: 'Enabling', 'Enabled', 'Disabling', 'Disabled', 'Failed'
-* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. Possible values include: 'SubmittingDomainControlValidationRequest', 'PendingDomainControlValidationREquestApproval', 'DomainControlValidationRequestApproved', 'DomainControlValidationRequestRejected', 'DomainControlValidationRequestTimedOut', 'IssuingCertificate', 'DeployingCertificate', 'CertificateDeployed', 'DeletingCertificate', 'CertificateDeleted'
+* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly): Provisioning status of Custom Https of the custom domain.
+* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
 * **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
 * **provisioningState**: string (ReadOnly): Provisioning status of the custom domain.
-* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly): Resource status of the custom domain. Possible values include: 'Creating', 'Active', 'Deleting'
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly): Resource status of the custom domain.
 * **validationData**: string (ReadOnly): Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
 
 ## CustomDomainHttpsParameters
 * **Discriminator**: certificateSource
 ### Base Properties
-* **minimumTlsVersion**: 'None' | 'TLS10' | 'TLS12' (ReadOnly): TLS protocol version that will be used for Https. Possible values include: 'None', 'TLS10', 'TLS12'
-* **protocolType**: 'IPBased' | 'ServerNameIndication' (ReadOnly): Defines the TLS extension protocol that is used for secure delivery. Possible values include: 'ServerNameIndication', 'IPBased'
+* **minimumTlsVersion**: 'None' | 'TLS10' | 'TLS12' (ReadOnly): TLS protocol version that will be used for Https.
+* **protocolType**: 'IPBased' | 'ServerNameIndication' (ReadOnly): Defines the TLS extension protocol that is used for secure delivery.
 ### AzureKeyVault
 #### Properties
 * **certificateSource**: 'AzureKeyVault' (Required): Defines the certificate source parameters using user's keyvault certificate for enabling SSL.
@@ -607,5 +607,5 @@
 ## CdnCertificateSourceParameters
 ### Properties
 * **@odata.type**: string (ReadOnly):
-* **certificateType**: 'Dedicated' | 'Shared' (ReadOnly): Type of certificate used. Possible values include: 'Shared', 'Dedicated'
+* **certificateType**: 'Dedicated' | 'Shared' (ReadOnly): Type of certificate used.
 

@@ -14,16 +14,16 @@
 ### Properties
 * **assignmentHash**: string (ReadOnly): Combined hash of the configuration package and parameters.
 * **complianceReason**: string (ReadOnly): Reason for the complianceStatus for the assigned guest configuration.
-* **complianceStatus**: 'Compliant' | 'NotCompliant' | 'Pending' (ReadOnly): A value indicating compliance status of the virtual machine for the assigned guest configuration. Possible values include: 'Compliant', 'NotCompliant', 'Pending'
+* **complianceStatus**: 'Compliant' | 'NotCompliant' | 'Pending' (ReadOnly): A value indicating compliance status of the virtual machine for the assigned guest configuration.
 * **guestConfiguration**: [GuestConfigurationNavigation](#guestconfigurationnavigation): Guest configuration is an artifact that encapsulates DSC configuration and its dependencies. The artifact is a zip file containing DSC configuration (as MOF) and dependent resources and other dependencies like modules.
 * **latestReportId**: string (ReadOnly): Id of the latest guest configuration assignment report.
 * **location**: string (ReadOnly): Region where VM is located.
-* **provisioningState**: 'Succeeded' (ReadOnly): The provisioning state, which only appears in the response. Possible values include: 'Succeeded'
+* **provisioningState**: 'Succeeded' (ReadOnly): The provisioning state, which only appears in the response.
 
 ## GuestConfigurationNavigation
 ### Properties
 * **configurationParameter**: [ConfigurationParameterList](#configurationparameterlist): Represents the list for configuration parameters.
-* **kind**: 'DSC': Kind of the guest configuration. For example:DSC. Possible values include: 'DSC'
+* **kind**: 'DSC': Kind of the guest configuration. For example:DSC.
 * **name**: string (ReadOnly): Name of the guest configuration.
 * **type**: string (ReadOnly): Type of the guest configuration.
 

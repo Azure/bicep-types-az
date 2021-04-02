@@ -60,17 +60,17 @@
 ### Properties
 * **principalId**: string (ReadOnly): The identity ID.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned' | 'UserAssigned': Possible values include: 'SystemAssigned', 'UserAssigned'
+* **type**: 'SystemAssigned' | 'UserAssigned':
 
 ## MonitorProperties
 ### Properties
-* **liftrResourceCategory**: 'MonitorLogs' | 'Unknown': Possible values include: 'Unknown', 'MonitorLogs'
+* **liftrResourceCategory**: 'MonitorLogs' | 'Unknown':
 * **liftrResourcePreference**: int (ReadOnly): The priority of the resource.
 * **logzOrganizationProperties**: [LogzOrganizationProperties](#logzorganizationproperties):
-* **marketplaceSubscriptionStatus**: 'Active' | 'Suspended': Possible values include: 'Active', 'Suspended'
-* **monitoringStatus**: 'Disabled' | 'Enabled': Possible values include: 'Enabled', 'Disabled'
+* **marketplaceSubscriptionStatus**: 'Active' | 'Suspended':
+* **monitoringStatus**: 'Disabled' | 'Enabled':
 * **planData**: [PlanData](#plandata):
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating': Possible values include: 'Accepted', 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled', 'Deleted', 'NotSpecified'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating':
 * **userInfo**: [UserInfo](#userinfo):
 
 ## LogzOrganizationProperties
@@ -97,10 +97,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties
@@ -126,14 +126,14 @@
 
 ## FilteringTag
 ### Properties
-* **action**: 'Exclude' | 'Include': Possible values include: 'Include', 'Exclude'
+* **action**: 'Exclude' | 'Include':
 * **name**: string: The name (also known as the key) of the tag.
 * **value**: string: The value of the tag.
 
 ## LogzSingleSignOnProperties
 ### Properties
 * **enterpriseAppId**: string: The Id of the Enterprise App used for Single sign-on.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating': Possible values include: 'Accepted', 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled', 'Deleted', 'NotSpecified'
-* **singleSignOnState**: 'Disable' | 'Enable' | 'Existing' | 'Initial': Possible values include: 'Initial', 'Enable', 'Disable', 'Existing'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating':
+* **singleSignOnState**: 'Disable' | 'Enable' | 'Existing' | 'Initial':
 * **singleSignOnUrl**: string: The login URL specific to this Logz Organization.
 

@@ -34,13 +34,13 @@
 * **clusterCertificateThumbprint**: string (ReadOnly): The cluster certificate thumbprint used node to node communication.
 * **clusterCodeVersion**: string: The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
 * **clusterId**: string (ReadOnly): A service generated unique identifier for the cluster resource.
-* **clusterState**: 'AutoScale' | 'BaselineUpgrade' | 'Deploying' | 'EnforcingClusterVersion' | 'Ready' | 'UpdatingInfrastructure' | 'UpdatingUserCertificate' | 'UpdatingUserConfiguration' | 'UpgradeServiceUnreachable' | 'WaitingForNodes' (ReadOnly): The current state of the cluster. Possible values include: 'WaitingForNodes', 'Deploying', 'BaselineUpgrade', 'UpdatingUserConfiguration', 'UpdatingUserCertificate', 'UpdatingInfrastructure', 'EnforcingClusterVersion', 'UpgradeServiceUnreachable', 'AutoScale', 'Ready'
+* **clusterState**: 'AutoScale' | 'BaselineUpgrade' | 'Deploying' | 'EnforcingClusterVersion' | 'Ready' | 'UpdatingInfrastructure' | 'UpdatingUserCertificate' | 'UpdatingUserConfiguration' | 'UpgradeServiceUnreachable' | 'WaitingForNodes' (ReadOnly): The current state of the cluster.
 * **dnsName**: string (Required): The cluster dns name.
 * **fabricSettings**: [SettingsSectionDescription](#settingssectiondescription)[]: The list of custom fabric settings to configure the cluster.
 * **fqdn**: string (ReadOnly): the cluster Fully qualified domain name.
 * **httpGatewayConnectionPort**: int: The port used for http connections to the cluster.
 * **loadBalancingRules**: [LoadBalancingRule](#loadbalancingrule)[]: Describes load balancing rules.
-* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the managed cluster resource. Possible values include: 'None', 'Creating', 'Created', 'Updating', 'Succeeded', 'Failed', 'Canceled', 'Deleting', 'Deleted', 'Other'
+* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the managed cluster resource.
 
 ## AzureActiveDirectory
 ### Properties
@@ -69,13 +69,13 @@
 ### Properties
 * **backendPort**: int (Required): The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
 * **frontendPort**: int (Required): The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
-* **probeProtocol**: 'http' | 'https' | 'tcp' (Required): the reference to the load balancer probe used by the load balancing rule. Possible values include: 'tcp', 'http', 'https'
+* **probeProtocol**: 'http' | 'https' | 'tcp' (Required): the reference to the load balancer probe used by the load balancing rule.
 * **probeRequestPath**: string: The probe request path. Only supported for HTTP/HTTPS probes.
-* **protocol**: 'tcp' | 'udp' (Required): The reference to the transport protocol used by the load balancing rule. Possible values include: 'tcp', 'udp'
+* **protocol**: 'tcp' | 'udp' (Required): The reference to the transport protocol used by the load balancing rule.
 
 ## Sku
 ### Properties
-* **name**: 'Basic' | 'Standard' (Required): Sku Name. Possible values include: 'Basic', 'Standard'
+* **name**: 'Basic' | 'Standard' (Required): Sku Name.
 
 ## Dictionary<string,String>
 ### Properties
@@ -90,7 +90,7 @@
 * **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
 * **isPrimary**: bool (Required): The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
 * **placementProperties**: [Dictionary<string,String>](#dictionarystringstring): The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
-* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the managed cluster resource. Possible values include: 'None', 'Creating', 'Created', 'Updating', 'Succeeded', 'Failed', 'Canceled', 'Deleting', 'Deleted', 'Other'
+* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the managed cluster resource.
 * **vmExtensions**: [VMSSExtension](#vmssextension)[]: Set of extensions that should be installed onto the virtual machines.
 * **vmImageOffer**: string: The offer type of the Azure Virtual Machines Marketplace image. For example, UbuntuServer or WindowsServer.
 * **vmImagePublisher**: string: The publisher of the Azure Virtual Machines Marketplace image. For example, Canonical or MicrosoftWindowsServer.

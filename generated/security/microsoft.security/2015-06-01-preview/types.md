@@ -4,7 +4,7 @@
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2015-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **enforcementMode**: 'Audit' | 'Enforce' | 'None' (WriteOnly): The enforcement mode of the group. Can also be defined per collection type by using ProtectionMode. Possible values include: 'Audit', 'Enforce', 'None'
+* **enforcementMode**: 'Audit' | 'Enforce' | 'None' (WriteOnly): The enforcement mode of the group. Can also be defined per collection type by using ProtectionMode.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Location where the resource is stored
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -27,13 +27,13 @@
 
 ## PathRecommendation
 ### Properties
-* **action**: 'Add' | 'Recommended' | 'Remove' (WriteOnly): Possible values include: 'Recommended', 'Add', 'Remove'
+* **action**: 'Add' | 'Recommended' | 'Remove' (WriteOnly):
 * **common**: bool (WriteOnly): Whether the path is commonly run on the machine
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (WriteOnly): Possible values include: 'Configured', 'NotConfigured', 'InProgress', 'Failed', 'NoStatus'
-* **fileType**: 'Dll' | 'Exe' | 'Executable' | 'Msi' | 'Script' | 'Unknown' (WriteOnly): Possible values include: 'Exe', 'Dll', 'Msi', 'Script', 'Executable', 'Unknown'
+* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (WriteOnly):
+* **fileType**: 'Dll' | 'Exe' | 'Executable' | 'Msi' | 'Script' | 'Unknown' (WriteOnly):
 * **path**: string (WriteOnly): The full path to whitelist
 * **publisherInfo**: [PublisherInfo](#publisherinfo) (WriteOnly): Represents the publisher information of a process/rule
-* **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature' (WriteOnly): Possible values include: 'File', 'FileHash', 'PublisherSignature', 'ProductSignature', 'BinarySignature', 'VersionAndAboveSignature'
+* **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature' (WriteOnly):
 * **usernames**: [UserRecommendation](#userrecommendation)[] (WriteOnly):
 * **userSids**: string[] (WriteOnly):
 
@@ -46,37 +46,37 @@
 
 ## UserRecommendation
 ### Properties
-* **recommendationAction**: 'Add' | 'Recommended' | 'Remove' (WriteOnly): Possible values include: 'Recommended', 'Add', 'Remove'
+* **recommendationAction**: 'Add' | 'Recommended' | 'Remove' (WriteOnly):
 * **username**: string (WriteOnly): Represents a user that is recommended to be allowed for a certain rule
 
 ## AppWhitelistingGroupData
 ### Properties
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (ReadOnly): Possible values include: 'Configured', 'NotConfigured', 'InProgress', 'Failed', 'NoStatus'
-* **enforcementMode**: 'Audit' | 'Enforce' | 'None' (ReadOnly): Possible values include: 'Audit', 'Enforce', 'None'
+* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (ReadOnly):
+* **enforcementMode**: 'Audit' | 'Enforce' | 'None' (ReadOnly):
 * **issues**: [AppWhitelistingIssueSummary](#appwhitelistingissuesummary)[] (ReadOnly):
 * **pathRecommendations**: [PathRecommendation](#pathrecommendation)[] (ReadOnly):
 * **protectionMode**: [ProtectionMode](#protectionmode) (ReadOnly): The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
-* **recommendationStatus**: 'NoStatus' | 'NotAvailable' | 'NotRecommended' | 'Recommended' (ReadOnly): Possible values include: 'Recommended', 'NotRecommended', 'NotAvailable', 'NoStatus'
-* **sourceSystem**: 'Azure_AppLocker' | 'Azure_AuditD' | 'NonAzure_AppLocker' | 'NonAzure_AuditD' | 'None' (ReadOnly): Possible values include: 'Azure_AppLocker', 'Azure_AuditD', 'NonAzure_AppLocker', 'NonAzure_AuditD', 'None'
+* **recommendationStatus**: 'NoStatus' | 'NotAvailable' | 'NotRecommended' | 'Recommended' (ReadOnly):
+* **sourceSystem**: 'Azure_AppLocker' | 'Azure_AuditD' | 'NonAzure_AppLocker' | 'NonAzure_AuditD' | 'None' (ReadOnly):
 * **vmRecommendations**: [VmRecommendation](#vmrecommendation)[] (ReadOnly):
 
 ## AppWhitelistingIssueSummary
 ### Properties
-* **issue**: 'ExecutableViolationsAudited' | 'MsiAndScriptViolationsAudited' | 'MsiAndScriptViolationsBlocked' | 'RulesViolatedManually' | 'ViolationsAudited' | 'ViolationsBlocked' (ReadOnly): Possible values include: 'ViolationsAudited', 'ViolationsBlocked', 'MsiAndScriptViolationsAudited', 'MsiAndScriptViolationsBlocked', 'ExecutableViolationsAudited', 'RulesViolatedManually'
+* **issue**: 'ExecutableViolationsAudited' | 'MsiAndScriptViolationsAudited' | 'MsiAndScriptViolationsBlocked' | 'RulesViolatedManually' | 'ViolationsAudited' | 'ViolationsBlocked' (ReadOnly):
 * **numberOfVms**: int (ReadOnly): The number of machines in the VM/server group that have this alert
 
 ## ProtectionMode
 ### Properties
-* **exe**: 'Audit' | 'Enforce' | 'None' (WriteOnly): Possible values include: 'Audit', 'Enforce', 'None'
-* **executable**: 'Audit' | 'Enforce' | 'None' (WriteOnly): Possible values include: 'Audit', 'Enforce', 'None'
-* **msi**: 'Audit' | 'Enforce' | 'None' (WriteOnly): Possible values include: 'Audit', 'Enforce', 'None'
-* **script**: 'Audit' | 'Enforce' | 'None' (WriteOnly): Possible values include: 'Audit', 'Enforce', 'None'
+* **exe**: 'Audit' | 'Enforce' | 'None' (WriteOnly):
+* **executable**: 'Audit' | 'Enforce' | 'None' (WriteOnly):
+* **msi**: 'Audit' | 'Enforce' | 'None' (WriteOnly):
+* **script**: 'Audit' | 'Enforce' | 'None' (WriteOnly):
 
 ## VmRecommendation
 ### Properties
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (WriteOnly): Possible values include: 'Configured', 'NotConfigured', 'InProgress', 'Failed', 'NoStatus'
-* **enforcementSupport**: 'NotSupported' | 'Supported' | 'Unknown' (WriteOnly): Possible values include: 'Supported', 'NotSupported', 'Unknown'
-* **recommendationAction**: 'Add' | 'Recommended' | 'Remove' (WriteOnly): Possible values include: 'Recommended', 'Add', 'Remove'
+* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (WriteOnly):
+* **enforcementSupport**: 'NotSupported' | 'Supported' | 'Unknown' (WriteOnly):
+* **recommendationAction**: 'Add' | 'Recommended' | 'Remove' (WriteOnly):
 * **resourceId**: string (WriteOnly): The full azure resource id of the machine
 
 ## JitNetworkAccessPolicyProperties
@@ -104,8 +104,8 @@
 * **endTimeUtc**: string (Required): The date & time at which the request ends in UTC
 * **mappedPort**: int: The port which is mapped to this port's `number` in the Azure Firewall, if applicable
 * **number**: int (Required):
-* **status**: 'Initiated' | 'Revoked' (Required): The status of the port. Possible values include: 'Revoked', 'Initiated'
-* **statusReason**: 'Expired' | 'NewerRequestInitiated' | 'UserRequested' (Required): A description of why the `status` has its value. Possible values include: 'Expired', 'UserRequested', 'NewerRequestInitiated'
+* **status**: 'Initiated' | 'Revoked' (Required): The status of the port.
+* **statusReason**: 'Expired' | 'NewerRequestInitiated' | 'UserRequested' (Required): A description of why the `status` has its value.
 
 ## JitNetworkAccessPolicyVirtualMachine
 ### Properties
@@ -119,5 +119,5 @@
 * **allowedSourceAddressPrefixes**: string[]: Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
 * **maxRequestAccessDuration**: string (Required): Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
 * **number**: int (Required):
-* **protocol**: '*' | 'TCP' | 'UDP' (Required): Possible values include: 'TCP', 'UDP', 'All'
+* **protocol**: '*' | 'TCP' | 'UDP' (Required):
 

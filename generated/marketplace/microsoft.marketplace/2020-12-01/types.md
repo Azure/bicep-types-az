@@ -22,7 +22,7 @@
 
 ## AdminRequestApprovalProperties
 ### Properties
-* **adminAction**: 'Approved' | 'Rejected': Gets or sets admin action. Possible values include: 'Approved', 'Rejected'
+* **adminAction**: 'Approved' | 'Rejected': Gets or sets admin action.
 * **administrator**: string: Gets or sets admin details
 * **approvedPlans**: string[]: Gets or sets Approved plans ids, empty in case of rejected
 * **comment**: string: Gets or sets admin comment
@@ -47,10 +47,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC)
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## RequestApprovalProperties
 ### Properties
@@ -66,5 +66,5 @@
 * **justification**: string: Gets or sets user's justification for the plan's request
 * **planId**: string: Gets or sets Plan Id
 * **requestDate**: any (ReadOnly): Gets request date
-* **status**: 'Approved' | 'None' | 'Pending' | 'Rejected' (ReadOnly): Gets the plan status. Possible values include: 'Pending', 'Rejected', 'Approved', 'None'
+* **status**: 'Approved' | 'None' | 'Pending' | 'Rejected' (ReadOnly): Gets the plan status.
 

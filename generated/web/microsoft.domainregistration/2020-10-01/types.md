@@ -38,7 +38,7 @@ directories as per ICANN requirements.
 * **contactTech**: [Contact](#contact) (Required): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois
 directories as per ICANN requirements.
 * **createdTime**: string (ReadOnly): Domain creation timestamp.
-* **dnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns': Current DNS type. Possible values include: 'AzureDns', 'DefaultDomainRegistrarDns'
+* **dnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns': Current DNS type.
 * **dnsZoneId**: string: Azure DNS Zone to use
 * **domainNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive'[] (ReadOnly): Reasons why domain is not renewable.
 * **expirationTime**: string (ReadOnly): Domain expiration timestamp.
@@ -46,11 +46,11 @@ directories as per ICANN requirements.
 * **managedHostNames**: [HostName](#hostname)[] (ReadOnly): All hostnames derived from the domain and assigned to Azure resources.
 * **nameServers**: string[] (ReadOnly): Name servers.
 * **privacy**: bool: <code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Domain provisioning state. Possible values include: 'Succeeded', 'Failed', 'Canceled', 'InProgress', 'Deleting'
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Domain provisioning state.
 * **readyForDnsRecordManagement**: bool (ReadOnly): <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and
  it is hosted on name servers Azure has programmatic access to.
-* **registrationStatus**: 'Active' | 'Awaiting' | 'Cancelled' | 'Confiscated' | 'Disabled' | 'Excluded' | 'Expired' | 'Failed' | 'Held' | 'JsonConverterFailed' | 'Locked' | 'Parked' | 'Pending' | 'Reserved' | 'Reverted' | 'Suspended' | 'Transferred' | 'Unknown' | 'Unlocked' | 'Unparked' | 'Updated' (ReadOnly): Domain registration status. Possible values include: 'Active', 'Awaiting', 'Cancelled', 'Confiscated', 'Disabled', 'Excluded', 'Expired', 'Failed', 'Held', 'Locked', 'Parked', 'Pending', 'Reserved', 'Reverted', 'Suspended', 'Transferred', 'Unknown', 'Unlocked', 'Unparked', 'Updated', 'JsonConverterFailed'
-* **targetDnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns': Target DNS type (would be used for migration). Possible values include: 'AzureDns', 'DefaultDomainRegistrarDns'
+* **registrationStatus**: 'Active' | 'Awaiting' | 'Cancelled' | 'Confiscated' | 'Disabled' | 'Excluded' | 'Expired' | 'Failed' | 'Held' | 'JsonConverterFailed' | 'Locked' | 'Parked' | 'Pending' | 'Reserved' | 'Reverted' | 'Suspended' | 'Transferred' | 'Unknown' | 'Unlocked' | 'Unparked' | 'Updated' (ReadOnly): Domain registration status.
+* **targetDnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns': Target DNS type (would be used for migration).
 
 ## DomainPurchaseConsent
 ### Properties
@@ -82,9 +82,9 @@ directories as per ICANN requirements.
 ## HostName
 ### Properties
 * **azureResourceName**: string: Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.
-* **azureResourceType**: 'TrafficManager' | 'Website': Type of the Azure resource the hostname is assigned to. Possible values include: 'Website', 'TrafficManager'
-* **customHostNameDnsRecordType**: 'A' | 'CName': Type of the DNS record. Possible values include: 'CName', 'A'
-* **hostNameType**: 'Managed' | 'Verified': Type of the hostname. Possible values include: 'Verified', 'Managed'
+* **azureResourceType**: 'TrafficManager' | 'Website': Type of the Azure resource the hostname is assigned to.
+* **customHostNameDnsRecordType**: 'A' | 'CName': Type of the DNS record.
+* **hostNameType**: 'Managed' | 'Verified': Type of the hostname.
 * **name**: string: Name of the hostname.
 * **siteNames**: string[]: List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.
 
@@ -92,10 +92,10 @@ directories as per ICANN requirements.
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties

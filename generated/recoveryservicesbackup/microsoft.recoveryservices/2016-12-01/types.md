@@ -27,7 +27,7 @@
 ## ProtectionContainer
 * **Discriminator**: containerType
 ### Base Properties
-* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DefaultBackup' | 'DPM' | 'Invalid' | 'MAB': Type of backup management for the container. Possible values include: 'Invalid', 'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql', 'AzureStorage', 'AzureWorkload', 'DefaultBackup'
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DefaultBackup' | 'DPM' | 'Invalid' | 'MAB': Type of backup management for the container.
 * **friendlyName**: string: Friendly name of the container.
 * **healthStatus**: string: Status of health of the container.
 * **registrationStatus**: string: Status of registration of the container with the Recovery Services Vault.
@@ -40,9 +40,9 @@
 * **containerType**: 'AzureWorkloadContainer' (Required): Container for the workloads running inside Azure Compute or Classic Compute.
 * **extendedInfo**: [AzureWorkloadContainerExtendedInfo](#azureworkloadcontainerextendedinfo): Extended information of the container.
 * **lastUpdatedTime**: string: Time stamp when this container was updated.
-* **operationType**: 'Invalid' | 'Register' | 'Reregister': Re-Do Operation. Possible values include: 'Invalid', 'Register', 'Reregister'
+* **operationType**: 'Invalid' | 'Register' | 'Reregister': Re-Do Operation.
 * **sourceResourceId**: string: ARM ID of the virtual machine represented by this Azure Workload Container
-* **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM': Workload type for which registration was sent. Possible values include: 'Invalid', 'VM', 'FileFolder', 'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM', 'SystemState', 'Client', 'GenericDataSource', 'SQLDataBase', 'AzureFileShare', 'SAPHanaDatabase', 'SAPAseDatabase'
+* **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM': Workload type for which registration was sent.
 
 ### DPMContainer
 #### Properties
@@ -98,9 +98,9 @@
 * **containerType**: 'AzureWorkloadContainer' (Required): Container for the workloads running inside Azure Compute or Classic Compute.
 * **extendedInfo**: [AzureWorkloadContainerExtendedInfo](#azureworkloadcontainerextendedinfo): Extended information of the container.
 * **lastUpdatedTime**: string: Time stamp when this container was updated.
-* **operationType**: 'Invalid' | 'Register' | 'Reregister': Re-Do Operation. Possible values include: 'Invalid', 'Register', 'Reregister'
+* **operationType**: 'Invalid' | 'Register' | 'Reregister': Re-Do Operation.
 * **sourceResourceId**: string: ARM ID of the virtual machine represented by this Azure Workload Container
-* **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM': Workload type for which registration was sent. Possible values include: 'Invalid', 'VM', 'FileFolder', 'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM', 'SystemState', 'Client', 'GenericDataSource', 'SQLDataBase', 'AzureFileShare', 'SAPHanaDatabase', 'SAPAseDatabase'
+* **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM': Workload type for which registration was sent.
 
 ## AzureWorkloadContainerExtendedInfo
 ### Properties
@@ -210,7 +210,7 @@ Failed | Succeeded
 ## MabContainerExtendedInfo
 ### Properties
 * **backupItems**: string[]: List of backup items associated with this container.
-* **backupItemType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM': Type of backup items associated with this container. Possible values include: 'Invalid', 'VM', 'FileFolder', 'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM', 'SystemState', 'Client', 'GenericDataSource', 'SQLDataBase', 'AzureFileShare', 'SAPHanaDatabase', 'SAPAseDatabase'
+* **backupItemType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM': Type of backup items associated with this container.
 * **lastBackupStatus**: string: Latest backup status of this container.
 * **lastRefreshedAt**: string: Time stamp when this container was refreshed.
 * **policyName**: string: Backup policy associated with this container.
@@ -229,9 +229,9 @@ Failed | Succeeded
 
 ## BackupResourceConfig
 ### Properties
-* **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant': Storage type. Possible values include: 'Invalid', 'GeoRedundant', 'LocallyRedundant'
-* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant': Storage type. Possible values include: 'Invalid', 'GeoRedundant', 'LocallyRedundant'
-* **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked': Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked. Possible values include: 'Invalid', 'Locked', 'Unlocked'
+* **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant': Storage type.
+* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant': Storage type.
+* **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked': Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
 
 ## Dictionary<string,String>
 ### Properties

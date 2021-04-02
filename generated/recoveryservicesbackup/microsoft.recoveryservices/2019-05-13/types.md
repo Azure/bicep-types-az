@@ -27,10 +27,10 @@
 ## ProtectedItem
 * **Discriminator**: protectedItemType
 ### Base Properties
-* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DefaultBackup' | 'DPM' | 'Invalid' | 'MAB': Type of backup management for the backed up item. Possible values include: 'Invalid', 'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql', 'AzureStorage', 'AzureWorkload', 'DefaultBackup'
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DefaultBackup' | 'DPM' | 'Invalid' | 'MAB': Type of backup management for the backed up item.
 * **backupSetName**: string: Name of the backup set the backup item belongs to
 * **containerName**: string: Unique name of container
-* **createMode**: 'Default' | 'Invalid' | 'Recover': Create mode to indicate recovery of existing soft deleted data source or creation of new data source. Possible values include: 'Invalid', 'Default', 'Recover'
+* **createMode**: 'Default' | 'Invalid' | 'Recover': Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
 * **deferredDeleteTimeInUTC**: string: Time for deferred deletion in UTC
 * **deferredDeleteTimeRemaining**: string: Time remaining before the DS marked for deferred delete is permanently deleted
 * **isDeferredDeleteScheduleUpcoming**: bool: Flag to identify whether the deferred deleted DS is to be purged soon
@@ -39,16 +39,16 @@
 * **lastRecoveryPoint**: string: Timestamp when the last (latest) backup copy was created for this backup item.
 * **policyId**: string: ID of the backup policy with which this item is backed up.
 * **sourceResourceId**: string: ARM ID of the resource to be backed up.
-* **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM': Type of workload this item represents. Possible values include: 'Invalid', 'VM', 'FileFolder', 'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM', 'SystemState', 'Client', 'GenericDataSource', 'SQLDataBase', 'AzureFileShare', 'SAPHanaDatabase', 'SAPAseDatabase'
+* **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM': Type of workload this item represents.
 ### AzureFileShareProtectedItem
 #### Properties
 * **extendedInfo**: [AzureFileshareProtectedItemExtendedInfo](#azurefileshareprotecteditemextendedinfo): Additional information about Azure File Share backup item.
 * **friendlyName**: string: Friendly name of the fileshare represented by this backup item.
-* **healthStatus**: 'ActionRequired' | 'ActionSuggested' | 'Invalid' | 'Passed': backups running status for this backup item. Possible values include: 'Passed', 'ActionRequired', 'ActionSuggested', 'Invalid'
+* **healthStatus**: 'ActionRequired' | 'ActionSuggested' | 'Invalid' | 'Passed': backups running status for this backup item.
 * **lastBackupStatus**: string: Last backup operation status. Possible values: Healthy, Unhealthy.
 * **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
 * **protectedItemType**: 'AzureFileShareProtectedItem' (Required): Azure File Share workload-specific backup item.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item. Possible values include: 'Invalid', 'IRPending', 'Protected', 'ProtectionError', 'ProtectionStopped', 'ProtectionPaused'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item.
 * **protectionStatus**: string: Backup status of this backup item.
 
 ### AzureIaaSVMProtectedItem
@@ -57,12 +57,12 @@
 * **extendedProperties**: [ExtendedProperties](#extendedproperties): Extended Properties for Azure IaasVM Backup.
 * **friendlyName**: string: Friendly name of the VM represented by this backup item.
 * **healthDetails**: [AzureIaaSVMHealthDetails](#azureiaasvmhealthdetails)[]: Health details on this backup item.
-* **healthStatus**: 'ActionRequired' | 'ActionSuggested' | 'Invalid' | 'Passed': Health status of protected item. Possible values include: 'Passed', 'ActionRequired', 'ActionSuggested', 'Invalid'
+* **healthStatus**: 'ActionRequired' | 'ActionSuggested' | 'Invalid' | 'Passed': Health status of protected item.
 * **lastBackupStatus**: string: Last backup operation status.
 * **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
 * **protectedItemDataId**: string: Data ID of the protected item.
 * **protectedItemType**: 'AzureIaaSVMProtectedItem' (Required): IaaS VM workload-specific backup item.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item. Possible values include: 'Invalid', 'IRPending', 'Protected', 'ProtectionError', 'ProtectionStopped', 'ProtectionPaused'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item.
 * **protectionStatus**: string: Backup status of this backup item.
 * **virtualMachineId**: string: Fully qualified ARM ID of the virtual machine represented by this item.
 
@@ -71,14 +71,14 @@
 * **extendedInfo**: [AzureVmWorkloadProtectedItemExtendedInfo](#azurevmworkloadprotecteditemextendedinfo): Additional information on Azure Workload for SQL specific backup item.
 * **friendlyName**: string: Friendly name of the DB represented by this backup item.
 * **lastBackupErrorDetail**: [ErrorDetail](#errordetail): Error Detail class which encapsulates Code, Message and Recommendations.
-* **lastBackupStatus**: 'Healthy' | 'Invalid' | 'IRPending' | 'Unhealthy': Last backup operation status. Possible values: Healthy, Unhealthy. Possible values include: 'Invalid', 'Healthy', 'Unhealthy', 'IRPending'
+* **lastBackupStatus**: 'Healthy' | 'Invalid' | 'IRPending' | 'Unhealthy': Last backup operation status. Possible values: Healthy, Unhealthy.
 * **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
 * **parentName**: string: Parent name of the DB such as Instance or Availability Group.
 * **parentType**: string: Parent type of protected item, example: for a DB, standalone server or distributed
 * **protectedItemDataSourceId**: string: Data ID of the protected item.
-* **protectedItemHealthStatus**: 'Healthy' | 'Invalid' | 'IRPending' | 'NotReachable' | 'Unhealthy': Health status of the backup item, evaluated based on last heartbeat received. Possible values include: 'Invalid', 'Healthy', 'Unhealthy', 'NotReachable', 'IRPending'
+* **protectedItemHealthStatus**: 'Healthy' | 'Invalid' | 'IRPending' | 'NotReachable' | 'Unhealthy': Health status of the backup item, evaluated based on last heartbeat received.
 * **protectedItemType**: 'AzureVmWorkloadProtectedItem' (Required): Azure VM workload-specific protected item.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item. Possible values include: 'Invalid', 'IRPending', 'Protected', 'ProtectionError', 'ProtectionStopped', 'ProtectionPaused'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item.
 * **protectionStatus**: string: Backup status of this backup item.
 * **serverName**: string: Host/Cluster Name for instance or AG
 
@@ -88,7 +88,7 @@
 * **extendedInfo**: [DPMProtectedItemExtendedInfo](#dpmprotecteditemextendedinfo): Additional information of DPM Protected item.
 * **friendlyName**: string: Friendly name of the managed item
 * **protectedItemType**: 'DPMProtectedItem' (Required): Additional information on Backup engine specific backup item.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Protection state of the backup engine. Possible values include: 'Invalid', 'IRPending', 'Protected', 'ProtectionError', 'ProtectionStopped', 'ProtectionPaused'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Protection state of the backup engine.
 
 ### GenericProtectedItem
 #### Properties
@@ -97,7 +97,7 @@
 * **policyState**: string: Indicates consistency of policy object and policy applied to this backup item.
 * **protectedItemId**: int: Data Plane Service ID of the protected item.
 * **protectedItemType**: 'GenericProtectedItem' (Required): Base class for backup items.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item. Possible values include: 'Invalid', 'IRPending', 'Protected', 'ProtectionError', 'ProtectionStopped', 'ProtectionPaused'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item.
 * **sourceAssociations**: [Dictionary<string,String>](#dictionarystringstring): Loosely coupled (type, value) associations (example - parent of a protected item)
 
 ### MabFileFolderProtectedItem
@@ -116,18 +116,18 @@
 * **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo): Additional information on Azure Sql specific protected item.
 * **protectedItemDataId**: string: Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.
 * **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required): Azure SQL workload-specific backup item.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of the backed up item. Possible values include: 'Invalid', 'IRPending', 'Protected', 'ProtectionError', 'ProtectionStopped', 'ProtectionPaused'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of the backed up item.
 
 
 ## AzureFileShareProtectedItem
 ### Properties
 * **extendedInfo**: [AzureFileshareProtectedItemExtendedInfo](#azurefileshareprotecteditemextendedinfo): Additional information about Azure File Share backup item.
 * **friendlyName**: string: Friendly name of the fileshare represented by this backup item.
-* **healthStatus**: 'ActionRequired' | 'ActionSuggested' | 'Invalid' | 'Passed': backups running status for this backup item. Possible values include: 'Passed', 'ActionRequired', 'ActionSuggested', 'Invalid'
+* **healthStatus**: 'ActionRequired' | 'ActionSuggested' | 'Invalid' | 'Passed': backups running status for this backup item.
 * **lastBackupStatus**: string: Last backup operation status. Possible values: Healthy, Unhealthy.
 * **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
 * **protectedItemType**: 'AzureFileShareProtectedItem' (Required): Azure File Share workload-specific backup item.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item. Possible values include: 'Invalid', 'IRPending', 'Protected', 'ProtectionError', 'ProtectionStopped', 'ProtectionPaused'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item.
 * **protectionStatus**: string: Backup status of this backup item.
 
 ## AzureFileshareProtectedItemExtendedInfo
@@ -144,12 +144,12 @@
 * **extendedProperties**: [ExtendedProperties](#extendedproperties): Extended Properties for Azure IaasVM Backup.
 * **friendlyName**: string: Friendly name of the VM represented by this backup item.
 * **healthDetails**: [AzureIaaSVMHealthDetails](#azureiaasvmhealthdetails)[]: Health details on this backup item.
-* **healthStatus**: 'ActionRequired' | 'ActionSuggested' | 'Invalid' | 'Passed': Health status of protected item. Possible values include: 'Passed', 'ActionRequired', 'ActionSuggested', 'Invalid'
+* **healthStatus**: 'ActionRequired' | 'ActionSuggested' | 'Invalid' | 'Passed': Health status of protected item.
 * **lastBackupStatus**: string: Last backup operation status.
 * **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
 * **protectedItemDataId**: string: Data ID of the protected item.
 * **protectedItemType**: 'AzureIaaSVMProtectedItem' (Required): IaaS VM workload-specific backup item.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item. Possible values include: 'Invalid', 'IRPending', 'Protected', 'ProtectionError', 'ProtectionStopped', 'ProtectionPaused'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item.
 * **protectionStatus**: string: Backup status of this backup item.
 * **virtualMachineId**: string: Fully qualified ARM ID of the virtual machine represented by this item.
 
@@ -180,14 +180,14 @@
 * **extendedInfo**: [AzureVmWorkloadProtectedItemExtendedInfo](#azurevmworkloadprotecteditemextendedinfo): Additional information on Azure Workload for SQL specific backup item.
 * **friendlyName**: string: Friendly name of the DB represented by this backup item.
 * **lastBackupErrorDetail**: [ErrorDetail](#errordetail): Error Detail class which encapsulates Code, Message and Recommendations.
-* **lastBackupStatus**: 'Healthy' | 'Invalid' | 'IRPending' | 'Unhealthy': Last backup operation status. Possible values: Healthy, Unhealthy. Possible values include: 'Invalid', 'Healthy', 'Unhealthy', 'IRPending'
+* **lastBackupStatus**: 'Healthy' | 'Invalid' | 'IRPending' | 'Unhealthy': Last backup operation status. Possible values: Healthy, Unhealthy.
 * **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
 * **parentName**: string: Parent name of the DB such as Instance or Availability Group.
 * **parentType**: string: Parent type of protected item, example: for a DB, standalone server or distributed
 * **protectedItemDataSourceId**: string: Data ID of the protected item.
-* **protectedItemHealthStatus**: 'Healthy' | 'Invalid' | 'IRPending' | 'NotReachable' | 'Unhealthy': Health status of the backup item, evaluated based on last heartbeat received. Possible values include: 'Invalid', 'Healthy', 'Unhealthy', 'NotReachable', 'IRPending'
+* **protectedItemHealthStatus**: 'Healthy' | 'Invalid' | 'IRPending' | 'NotReachable' | 'Unhealthy': Health status of the backup item, evaluated based on last heartbeat received.
 * **protectedItemType**: 'AzureVmWorkloadProtectedItem' (Required): Azure VM workload-specific protected item.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item. Possible values include: 'Invalid', 'IRPending', 'Protected', 'ProtectionError', 'ProtectionStopped', 'ProtectionPaused'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item.
 * **protectionStatus**: string: Backup status of this backup item.
 * **serverName**: string: Host/Cluster Name for instance or AG
 
@@ -209,7 +209,7 @@
 * **extendedInfo**: [DPMProtectedItemExtendedInfo](#dpmprotecteditemextendedinfo): Additional information of DPM Protected item.
 * **friendlyName**: string: Friendly name of the managed item
 * **protectedItemType**: 'DPMProtectedItem' (Required): Additional information on Backup engine specific backup item.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Protection state of the backup engine. Possible values include: 'Invalid', 'IRPending', 'Protected', 'ProtectionError', 'ProtectionStopped', 'ProtectionPaused'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Protection state of the backup engine.
 
 ## DPMProtectedItemExtendedInfo
 ### Properties
@@ -240,7 +240,7 @@
 * **policyState**: string: Indicates consistency of policy object and policy applied to this backup item.
 * **protectedItemId**: int: Data Plane Service ID of the protected item.
 * **protectedItemType**: 'GenericProtectedItem' (Required): Base class for backup items.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item. Possible values include: 'Invalid', 'IRPending', 'Protected', 'ProtectionError', 'ProtectionStopped', 'ProtectionPaused'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item.
 * **sourceAssociations**: [Dictionary<string,String>](#dictionarystringstring): Loosely coupled (type, value) associations (example - parent of a protected item)
 
 ## Dictionary<string,String>
@@ -270,7 +270,7 @@
 * **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo): Additional information on Azure Sql specific protected item.
 * **protectedItemDataId**: string: Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.
 * **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required): Azure SQL workload-specific backup item.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of the backed up item. Possible values include: 'Invalid', 'IRPending', 'Protected', 'ProtectionError', 'ProtectionStopped', 'ProtectionPaused'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of the backed up item.
 
 ## AzureSqlProtectedItemExtendedInfo
 ### Properties
@@ -306,7 +306,7 @@
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
 * **timeZone**: string: TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
-* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM': Type of workload for the backup management. Possible values include: 'Invalid', 'VM', 'FileFolder', 'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM', 'SystemState', 'Client', 'GenericDataSource', 'SQLDataBase', 'AzureFileShare', 'SAPHanaDatabase', 'SAPAseDatabase'
+* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM': Type of workload for the backup management.
 
 ### AzureWorkload
 #### Properties
@@ -314,7 +314,7 @@
 * **makePolicyConsistent**: bool: Fix the policy inconsistency
 * **settings**: [Settings](#settings): Common settings field for backup management
 * **subProtectionPolicy**: [SubProtectionPolicy](#subprotectionpolicy)[]: List of sub-protection policies which includes schedule and retention
-* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM': Type of workload for the backup management. Possible values include: 'Invalid', 'VM', 'FileFolder', 'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM', 'SystemState', 'Client', 'GenericDataSource', 'SQLDataBase', 'AzureFileShare', 'SAPHanaDatabase', 'SAPAseDatabase'
+* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM': Type of workload for the backup management.
 
 ### GenericProtectionPolicy
 #### Properties
@@ -372,13 +372,13 @@
 ### Properties
 * **count**: int: Count of duration types. Retention duration is obtained by the counting the duration type Count times.
 For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.
-* **durationType**: 'Days' | 'Invalid' | 'Months' | 'Weeks' | 'Years': Retention duration type of retention policy. Possible values include: 'Invalid', 'Days', 'Weeks', 'Months', 'Years'
+* **durationType**: 'Days' | 'Invalid' | 'Months' | 'Weeks' | 'Years': Retention duration type of retention policy.
 
 ## MonthlyRetentionSchedule
 ### Properties
 * **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
 * **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
-* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly': Retention schedule format type for monthly retention policy. Possible values include: 'Invalid', 'Daily', 'Weekly'
+* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly': Retention schedule format type for monthly retention policy.
 * **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
 * **retentionTimes**: string[]: Retention times of retention policy.
 
@@ -407,7 +407,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 * **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'Invalid' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]: List of months of year of yearly retention policy.
 * **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
 * **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
-* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly': Retention schedule format for yearly retention policy. Possible values include: 'Invalid', 'Daily', 'Weekly'
+* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly': Retention schedule format for yearly retention policy.
 * **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
 * **retentionTimes**: string[]: Retention times of retention policy.
 
@@ -432,7 +432,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 #### Properties
 * **schedulePolicyType**: 'SimpleSchedulePolicy' (Required): Simple policy schedule.
 * **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of week this schedule has to be run.
-* **scheduleRunFrequency**: 'Daily' | 'Invalid' | 'Weekly': Frequency of the schedule operation of this policy. Possible values include: 'Invalid', 'Daily', 'Weekly'
+* **scheduleRunFrequency**: 'Daily' | 'Invalid' | 'Weekly': Frequency of the schedule operation of this policy.
 * **scheduleRunTimes**: string[]: List of times of day this schedule has to be run.
 * **scheduleWeeklyFrequency**: int: At every number weeks this schedule has to be run.
 
@@ -450,7 +450,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 ### Properties
 * **schedulePolicyType**: 'SimpleSchedulePolicy' (Required): Simple policy schedule.
 * **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of week this schedule has to be run.
-* **scheduleRunFrequency**: 'Daily' | 'Invalid' | 'Weekly': Frequency of the schedule operation of this policy. Possible values include: 'Invalid', 'Daily', 'Weekly'
+* **scheduleRunFrequency**: 'Daily' | 'Invalid' | 'Weekly': Frequency of the schedule operation of this policy.
 * **scheduleRunTimes**: string[]: List of times of day this schedule has to be run.
 * **scheduleWeeklyFrequency**: int: At every number weeks this schedule has to be run.
 
@@ -465,7 +465,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
 * **timeZone**: string: TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
-* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM': Type of workload for the backup management. Possible values include: 'Invalid', 'VM', 'FileFolder', 'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM', 'SystemState', 'Client', 'GenericDataSource', 'SQLDataBase', 'AzureFileShare', 'SAPHanaDatabase', 'SAPAseDatabase'
+* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM': Type of workload for the backup management.
 
 ## AzureWorkload
 ### Properties
@@ -473,7 +473,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 * **makePolicyConsistent**: bool: Fix the policy inconsistency
 * **settings**: [Settings](#settings): Common settings field for backup management
 * **subProtectionPolicy**: [SubProtectionPolicy](#subprotectionpolicy)[]: List of sub-protection policies which includes schedule and retention
-* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM': Type of workload for the backup management. Possible values include: 'Invalid', 'VM', 'FileFolder', 'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'VMwareVM', 'SystemState', 'Client', 'GenericDataSource', 'SQLDataBase', 'AzureFileShare', 'SAPHanaDatabase', 'SAPAseDatabase'
+* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'Sharepoint' | 'SQLDataBase' | 'SQLDB' | 'SystemState' | 'VM' | 'VMwareVM': Type of workload for the backup management.
 
 ## Settings
 ### Properties
@@ -484,7 +484,7 @@ will be deprecated once clients upgrade to consider this flag.
 
 ## SubProtectionPolicy
 ### Properties
-* **policyType**: 'CopyOnlyFull' | 'Differential' | 'Full' | 'Invalid' | 'Log': Type of backup policy type. Possible values include: 'Invalid', 'Full', 'Differential', 'Log', 'CopyOnlyFull'
+* **policyType**: 'CopyOnlyFull' | 'Differential' | 'Full' | 'Invalid' | 'Log': Type of backup policy type.
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
 

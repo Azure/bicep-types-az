@@ -7,7 +7,7 @@
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [schemas:12_identity](#schemas12identity): Setting indicating whether the service has a managed identity associated with it.
-* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required): The kind of the service. Possible values include: 'fhir', 'fhir-Stu3', 'fhir-R4'
+* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required): The kind of the service.
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServicesProperties](#servicesproperties): The properties of a service instance.
@@ -27,7 +27,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of the resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of the resource.
-* **type**: 'None' | 'SystemAssigned': Type of identity being specified, currently SystemAssigned and None are allowed. Possible values include: 'SystemAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned': Type of identity being specified, currently SystemAssigned and None are allowed.
 
 ## ServicesProperties
 ### Properties
@@ -37,8 +37,8 @@
 * **cosmosDbConfiguration**: [ServiceCosmosDbConfigurationInfo](#servicecosmosdbconfigurationinfo): The settings for the Cosmos DB database backing the service.
 * **exportConfiguration**: [ServiceExportConfigurationInfo](#serviceexportconfigurationinfo): Export operation configuration information
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: The list of private endpoint connections that are set up for this resource.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Succeeded' | 'Updating' | 'Verifying' (ReadOnly): The provisioning state. Possible values include: 'Deleting', 'Succeeded', 'Creating', 'Accepted', 'Verifying', 'Updating', 'Failed', 'Canceled', 'Deprovisioned'
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Control permission for data plane traffic coming from public networks while private endpoint is enabled. Possible values include: 'Enabled', 'Disabled'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Succeeded' | 'Updating' | 'Verifying' (ReadOnly): The provisioning state.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Control permission for data plane traffic coming from public networks while private endpoint is enabled.
 
 ## ServiceAccessPolicyEntry
 ### Properties
@@ -78,7 +78,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource. Possible values include: 'Succeeded', 'Creating', 'Deleting', 'Failed'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource.
 
 ## PrivateEndpoint
 ### Properties
@@ -88,7 +88,7 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service. Possible values include: 'Pending', 'Approved', 'Rejected'
+* **status**: 'Approved' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## Dictionary<string,String>
 ### Properties

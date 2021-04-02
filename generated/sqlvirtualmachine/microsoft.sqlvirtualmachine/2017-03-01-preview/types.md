@@ -34,12 +34,12 @@
 
 ## SqlVirtualMachineGroupProperties
 ### Properties
-* **clusterConfiguration**: 'Domainful' (ReadOnly): Cluster type. Possible values include: 'Domainful'
-* **clusterManagerType**: 'WSFC' (ReadOnly): Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type. Possible values include: 'WSFC'
+* **clusterConfiguration**: 'Domainful' (ReadOnly): Cluster type.
+* **clusterManagerType**: 'WSFC' (ReadOnly): Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.
 * **provisioningState**: string (ReadOnly): Provisioning state to track the async operation status.
-* **scaleType**: 'HA' (ReadOnly): Scale type. Possible values include: 'HA'
+* **scaleType**: 'HA' (ReadOnly): Scale type.
 * **sqlImageOffer**: string: SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
-* **sqlImageSku**: 'Developer' | 'Enterprise': SQL image sku. Possible values include: 'Developer', 'Enterprise'
+* **sqlImageSku**: 'Developer' | 'Enterprise': SQL image sku.
 * **wsfcDomainProfile**: [WsfcDomainProfile](#wsfcdomainprofile): Active Directory account details to operate Windows Server Failover Cluster.
 
 ## WsfcDomainProfile
@@ -83,7 +83,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The Azure Active Directory principal id.
 * **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
-* **type**: 'SystemAssigned': The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource. Possible values include: 'SystemAssigned'
+* **type**: 'SystemAssigned': The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
 
 ## SqlVirtualMachineProperties
 ### Properties
@@ -93,9 +93,9 @@
 * **provisioningState**: string (ReadOnly): Provisioning state to track the async operation status.
 * **serverConfigurationsManagementSettings**: [ServerConfigurationsManagementSettings](#serverconfigurationsmanagementsettings): Set the connectivity, storage and workload settings.
 * **sqlImageOffer**: string: SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.
-* **sqlImageSku**: 'Developer' | 'Enterprise' | 'Express' | 'Standard' | 'Web': SQL Server edition type. Possible values include: 'Developer', 'Express', 'Standard', 'Enterprise', 'Web'
-* **sqlManagement**: 'Full' | 'LightWeight' | 'NoAgent': SQL Server Management type. Possible values include: 'Full', 'LightWeight', 'NoAgent'
-* **sqlServerLicenseType**: 'AHUB' | 'DR' | 'PAYG': SQL Server license type. Possible values include: 'PAYG', 'AHUB', 'DR'
+* **sqlImageSku**: 'Developer' | 'Enterprise' | 'Express' | 'Standard' | 'Web': SQL Server edition type.
+* **sqlManagement**: 'Full' | 'LightWeight' | 'NoAgent': SQL Server Management type.
+* **sqlServerLicenseType**: 'AHUB' | 'DR' | 'PAYG': SQL Server license type.
 * **sqlVirtualMachineGroupResourceId**: string: ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
 * **storageConfigurationSettings**: [StorageConfigurationSettings](#storageconfigurationsettings): Storage Configurations for SQL Data, Log and TempDb.
 * **virtualMachineResourceId**: string: ARM Resource id of underlying virtual machine created from SQL marketplace image.
@@ -103,11 +103,11 @@
 
 ## AutoBackupSettings
 ### Properties
-* **backupScheduleType**: 'Automated' | 'Manual': Backup schedule type. Possible values include: 'Manual', 'Automated'
+* **backupScheduleType**: 'Automated' | 'Manual': Backup schedule type.
 * **backupSystemDbs**: bool: Include or exclude system databases from auto backup.
 * **enable**: bool: Enable or disable autobackup on SQL virtual machine.
 * **enableEncryption**: bool: Enable or disable encryption for backup on SQL virtual machine.
-* **fullBackupFrequency**: 'Daily' | 'Weekly': Frequency of full backups. In both cases, full backups begin during the next scheduled time window. Possible values include: 'Daily', 'Weekly'
+* **fullBackupFrequency**: 'Daily' | 'Weekly': Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
 * **fullBackupStartTime**: int: Start time of a given day during which full backups can take place. 0-23 hours.
 * **fullBackupWindowHours**: int: Duration of the time window of a given day during which full backups can take place. 1-23 hours.
 * **logBackupFrequency**: int: Frequency of log backups. 5-60 minutes.
@@ -118,7 +118,7 @@
 
 ## AutoPatchingSettings
 ### Properties
-* **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of week to apply the patch on. Possible values include: 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'
+* **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of week to apply the patch on.
 * **enable**: bool: Enable or disable autopatching on SQL virtual machine.
 * **maintenanceWindowDuration**: int: Duration of patching.
 * **maintenanceWindowStartingHour**: int: Hour of the day when patching is initiated. Local VM time.
@@ -144,28 +144,28 @@
 
 ## SqlConnectivityUpdateSettings
 ### Properties
-* **connectivityType**: 'LOCAL' | 'PRIVATE' | 'PUBLIC': SQL Server connectivity option. Possible values include: 'LOCAL', 'PRIVATE', 'PUBLIC'
+* **connectivityType**: 'LOCAL' | 'PRIVATE' | 'PUBLIC': SQL Server connectivity option.
 * **port**: int: SQL Server port.
 * **sqlAuthUpdatePassword**: string: SQL Server sysadmin login password.
 * **sqlAuthUpdateUserName**: string: SQL Server sysadmin login to create.
 
 ## SqlStorageUpdateSettings
 ### Properties
-* **diskConfigurationType**: 'ADD' | 'EXTEND' | 'NEW': Disk configuration to apply to SQL Server. Possible values include: 'NEW', 'EXTEND', 'ADD'
+* **diskConfigurationType**: 'ADD' | 'EXTEND' | 'NEW': Disk configuration to apply to SQL Server.
 * **diskCount**: int: Virtual machine disk count.
 * **startingDeviceId**: int: Device id of the first disk to be updated.
 
 ## SqlWorkloadTypeUpdateSettings
 ### Properties
-* **sqlWorkloadType**: 'DW' | 'GENERAL' | 'OLTP': SQL Server workload type. Possible values include: 'GENERAL', 'OLTP', 'DW'
+* **sqlWorkloadType**: 'DW' | 'GENERAL' | 'OLTP': SQL Server workload type.
 
 ## StorageConfigurationSettings
 ### Properties
-* **diskConfigurationType**: 'ADD' | 'EXTEND' | 'NEW': Disk configuration to apply to SQL Server. Possible values include: 'NEW', 'EXTEND', 'ADD'
+* **diskConfigurationType**: 'ADD' | 'EXTEND' | 'NEW': Disk configuration to apply to SQL Server.
 * **sqlDataSettings**: [SQLStorageSettings](#sqlstoragesettings): Set disk storage settings for SQL Server.
 * **sqlLogSettings**: [SQLStorageSettings](#sqlstoragesettings): Set disk storage settings for SQL Server.
 * **sqlTempDbSettings**: [SQLStorageSettings](#sqlstoragesettings): Set disk storage settings for SQL Server.
-* **storageWorkloadType**: 'DW' | 'GENERAL' | 'OLTP': Storage workload type. Possible values include: 'GENERAL', 'OLTP', 'DW'
+* **storageWorkloadType**: 'DW' | 'GENERAL' | 'OLTP': Storage workload type.
 
 ## SQLStorageSettings
 ### Properties

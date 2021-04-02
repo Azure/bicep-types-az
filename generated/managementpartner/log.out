@@ -14,4 +14,4 @@ Processing batch task - {"tag":"schema-managementpartner-2018-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 INFORMATION: Resource type Microsoft.ManagementPartner/partners under path '/providers/Microsoft.ManagementPartner/partners/{partnerId}' has no body defined.
-[5.55 s] Generation Complete
+[7.57 s] Generation Complete

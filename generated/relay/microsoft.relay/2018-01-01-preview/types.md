@@ -27,14 +27,14 @@
 ### Properties
 * **createdAt**: string (ReadOnly): The time the namespace was created.
 * **metricId**: string (ReadOnly): Identifier for Azure Insights metrics.
-* **provisioningState**: 'Created' | 'Deleted' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Possible values include: 'Created', 'Succeeded', 'Deleted', 'Failed', 'Updating', 'Unknown'
+* **provisioningState**: 'Created' | 'Deleted' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly):
 * **serviceBusEndpoint**: string (ReadOnly): Endpoint you can use to perform Service Bus operations.
 * **updatedAt**: string (ReadOnly): The time the namespace was updated.
 
 ## Sku
 ### Properties
 * **name**: string (Required): Name of this SKU.
-* **tier**: 'Standard': The tier of this SKU. Possible values include: 'Standard'
+* **tier**: 'Standard': The tier of this SKU.
 
 ## Dictionary<string,String>
 ### Properties
@@ -45,7 +45,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint object properties.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): An object that represents the approval state of the private link connection.
-* **provisioningState**: 'Creating' | 'Deleting' | 'DeletingByProxy' | 'Succeeded' | 'Unknown' | 'Updating' | 'UpdatingByProxy': Provisioning state of the private endpoint connection. Possible values include: 'Unknown', 'Succeeded', 'Creating', 'Updating', 'UpdatingByProxy', 'Deleting', 'DeletingByProxy'
+* **provisioningState**: 'Creating' | 'Deleting' | 'DeletingByProxy' | 'Succeeded' | 'Unknown' | 'Updating' | 'UpdatingByProxy': Provisioning state of the private endpoint connection.
 
 ## PrivateEndpoint
 ### Properties
@@ -55,7 +55,7 @@
 ### Properties
 * **actionRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval or rejection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner. Possible values include: 'Pending', 'Approved', 'Rejected', 'Disconnected'
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner.
 
 ## Dictionary<string,String>
 ### Properties

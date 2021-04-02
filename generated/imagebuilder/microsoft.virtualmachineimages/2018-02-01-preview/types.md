@@ -17,7 +17,7 @@
 * **distribute**: [ImageTemplateDistributor](#imagetemplatedistributor)[] (Required): The distribution targets where the image output needs to go to.
 * **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly):
 * **provisioningError**: [ProvisioningError](#provisioningerror) (ReadOnly):
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the resource. Possible values include: 'Creating', 'Succeeded', 'Failed', 'Deleting'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the resource.
 * **source**: [ImageTemplateSource](#imagetemplatesource) (Required):
 
 ## ImageTemplateCustomizer
@@ -74,14 +74,14 @@
 ### Properties
 * **endTime**: string: End time of the last run (UTC)
 * **message**: string: Verbose information about the last run state
-* **runState**: 'failed' | 'partiallySucceeded' | 'ready' | 'running' | 'succeeded': State of the last run. Possible values include: 'ready', 'running', 'succeeded', 'partiallySucceeded', 'failed'
-* **runSubState**: 'building' | 'customizing' | 'distributing' | 'queued': Sub state of the last run. Possible values include: 'queued', 'building', 'customizing', 'distributing'
+* **runState**: 'failed' | 'partiallySucceeded' | 'ready' | 'running' | 'succeeded': State of the last run.
+* **runSubState**: 'building' | 'customizing' | 'distributing' | 'queued': Sub state of the last run.
 * **startTime**: string: Start time of the last run (UTC)
 
 ## ProvisioningError
 ### Properties
 * **message**: string: Verbose error message about the provisioning failure
-* **provisioningErrorCode**: 'BadCustomizerType' | 'BadISOSource' | 'BadPIRSource' | 'BadSourceType' | 'NoCustomizerShellScript' | 'Other' | 'ServerError': Error code of the provisioning failure. Possible values include: 'BadSourceType', 'BadPIRSource', 'BadISOSource', 'BadCustomizerType', 'NoCustomizerShellScript', 'ServerError', 'Other'
+* **provisioningErrorCode**: 'BadCustomizerType' | 'BadISOSource' | 'BadPIRSource' | 'BadSourceType' | 'NoCustomizerShellScript' | 'Other' | 'ServerError': Error code of the provisioning failure.
 
 ## ImageTemplateSource
 * **Discriminator**: type

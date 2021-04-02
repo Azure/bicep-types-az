@@ -40,24 +40,24 @@
 * **creationDate**: string (ReadOnly): The creation date of the container registry in ISO8601 format.
 * **loginServer**: string (ReadOnly): The URL that can be used to log into the container registry.
 * **networkRuleSet**: [NetworkRuleSet](#networkruleset): The network rule set for a container registry.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the container registry at the time the operation was called. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the container registry at the time the operation was called.
 * **status**: [Status](#status) (ReadOnly): The status of an Azure resource at the time the operation was called.
 * **storageAccount**: [StorageAccountProperties](#storageaccountproperties): The properties of a storage account for a container registry. Only applicable to Classic SKU.
 
 ## NetworkRuleSet
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny' (Required): The default action of allow or deny when no other rules match. Possible values include: 'Allow', 'Deny'
+* **defaultAction**: 'Allow' | 'Deny' (Required): The default action of allow or deny when no other rules match.
 * **ipRules**: [IPRule](#iprule)[]: The IP ACL rules.
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: The virtual network rules.
 
 ## IPRule
 ### Properties
-* **action**: 'Allow': The action of IP ACL rule. Possible values include: 'Allow'
+* **action**: 'Allow': The action of IP ACL rule.
 * **value**: string (Required): Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
 
 ## VirtualNetworkRule
 ### Properties
-* **action**: 'Allow': The action of virtual network rule. Possible values include: 'Allow'
+* **action**: 'Allow': The action of virtual network rule.
 * **id**: string (Required): Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
 
 ## Status
@@ -72,8 +72,8 @@
 
 ## Sku
 ### Properties
-* **name**: 'Basic' | 'Classic' | 'Premium' | 'Standard' (Required): The SKU name of the container registry. Required for registry creation. Possible values include: 'Classic', 'Basic', 'Standard', 'Premium'
-* **tier**: 'Basic' | 'Classic' | 'Premium' | 'Standard' (ReadOnly): The SKU tier based on the SKU name. Possible values include: 'Classic', 'Basic', 'Standard', 'Premium'
+* **name**: 'Basic' | 'Classic' | 'Premium' | 'Standard' (Required): The SKU name of the container registry. Required for registry creation.
+* **tier**: 'Basic' | 'Classic' | 'Premium' | 'Standard' (ReadOnly): The SKU tier based on the SKU name.
 
 ## Dictionary<string,String>
 ### Properties
@@ -82,7 +82,7 @@
 
 ## ReplicationProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the replication at the time the operation was called. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the replication at the time the operation was called.
 * **status**: [Status](#status) (ReadOnly): The status of an Azure resource at the time the operation was called.
 
 ## Dictionary<string,String>
@@ -94,10 +94,10 @@
 ### Properties
 * **actions**: 'chart_delete' | 'chart_push' | 'delete' | 'push' | 'quarantine'[] (Required): The list of actions that trigger the webhook to post notifications.
 * **customHeaders**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly): Custom headers that will be added to the webhook notifications.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the webhook at the time the operation was called. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the webhook at the time the operation was called.
 * **scope**: string: The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events.
 * **serviceUri**: string (Required, WriteOnly): The service URI for the webhook to post notifications.
-* **status**: 'disabled' | 'enabled': The status of the webhook at the time the operation was called. Possible values include: 'enabled', 'disabled'
+* **status**: 'disabled' | 'enabled': The status of the webhook at the time the operation was called.
 
 ## Dictionary<string,String>
 ### Properties

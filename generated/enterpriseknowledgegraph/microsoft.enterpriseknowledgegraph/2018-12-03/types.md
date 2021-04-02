@@ -16,11 +16,11 @@
 ### Properties
 * **description**: string: The description of the EnterpriseKnowledgeGraph
 * **metadata**: any: Specifies the metadata  of the resource.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The state of EnterpriseKnowledgeGraph provisioning. Possible values include: 'Creating', 'Deleting', 'Failed', 'Succeeded'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The state of EnterpriseKnowledgeGraph provisioning.
 
 ## Sku
 ### Properties
-* **name**: 'F0' | 'S1' (Required): The sku name. Possible values include: 'F0', 'S1'
+* **name**: 'F0' | 'S1' (Required): The sku name.
 
 ## Dictionary<string,String>
 ### Properties

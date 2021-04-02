@@ -48,4 +48,4 @@ Processing batch task - {"tag":"schema-automation-2015-10-31"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 INFORMATION: Resource type Microsoft.Automation/automationAccounts/runbooks/draft under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/runbooks/{runbookName}/draft/content' has no body defined.
-[117.35 s] Generation Complete
+[187.88 s] Generation Complete

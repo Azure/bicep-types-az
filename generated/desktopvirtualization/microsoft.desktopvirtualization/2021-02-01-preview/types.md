@@ -90,11 +90,11 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned': The identity type. Possible values include: 'SystemAssigned'
+* **type**: 'SystemAssigned': The identity type.
 
 ## ApplicationGroupProperties
 ### Properties
-* **applicationGroupType**: 'Desktop' | 'RemoteApp' (Required): Resource Type of ApplicationGroup. Possible values include: 'RemoteApp', 'Desktop'
+* **applicationGroupType**: 'Desktop' | 'RemoteApp' (Required): Resource Type of ApplicationGroup.
 * **cloudPcResource**: bool (ReadOnly): Is cloud pc resource.
 * **description**: string: Description of ApplicationGroup.
 * **friendlyName**: string: Friendly name of ApplicationGroup.
@@ -106,7 +106,7 @@
 ## MigrationRequestProperties
 ### Properties
 * **migrationPath**: string: The path to the legacy object to migrate.
-* **operation**: 'Complete' | 'Hide' | 'Revoke' | 'Start' | 'Unhide': The type of operation for migration. Possible values include: 'Start', 'Revoke', 'Complete', 'Hide', 'Unhide'
+* **operation**: 'Complete' | 'Hide' | 'Revoke' | 'Start' | 'Unhide': The type of operation for migration.
 
 ## Dictionary<string,String>
 ### Properties
@@ -115,9 +115,9 @@
 
 ## ApplicationProperties
 ### Properties
-* **applicationType**: 'InBuilt' | 'MsixApplication': Resource Type of Application. Possible values include: 'InBuilt', 'MsixApplication'
+* **applicationType**: 'InBuilt' | 'MsixApplication': Resource Type of Application.
 * **commandLineArguments**: string: Command Line Arguments for Application.
-* **commandLineSetting**: 'Allow' | 'DoNotAllow' | 'Require' (Required): Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all. Possible values include: 'DoNotAllow', 'Allow', 'Require'
+* **commandLineSetting**: 'Allow' | 'DoNotAllow' | 'Require' (Required): Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
 * **description**: string: Description of Application.
 * **filePath**: string: Specifies a path for the executable file for the application.
 * **friendlyName**: string: Friendly name of Application.
@@ -137,19 +137,19 @@
 * **customRdpProperty**: string: Custom rdp property of HostPool.
 * **description**: string: Description of HostPool.
 * **friendlyName**: string: Friendly name of HostPool.
-* **hostPoolType**: 'BYODesktop' | 'Personal' | 'Pooled' (Required): HostPool type for desktop. Possible values include: 'Personal', 'Pooled', 'BYODesktop'
-* **loadBalancerType**: 'BreadthFirst' | 'DepthFirst' | 'Persistent' (Required): The type of the load balancer. Possible values include: 'BreadthFirst', 'DepthFirst', 'Persistent'
+* **hostPoolType**: 'BYODesktop' | 'Personal' | 'Pooled' (Required): HostPool type for desktop.
+* **loadBalancerType**: 'BreadthFirst' | 'DepthFirst' | 'Persistent' (Required): The type of the load balancer.
 * **maxSessionLimit**: int: The max session limit of HostPool.
 * **migrationRequest**: [MigrationRequestProperties](#migrationrequestproperties): Properties for arm migration.
 * **objectId**: string (ReadOnly): ObjectId of HostPool. (internal use)
-* **personalDesktopAssignmentType**: 'Automatic' | 'Direct': PersonalDesktopAssignment type for HostPool. Possible values include: 'Automatic', 'Direct'
-* **preferredAppGroupType**: 'Desktop' | 'None' | 'RailApplications' (Required): The type of preferred application group type, default to Desktop Application Group. Possible values include: 'None', 'Desktop', 'RailApplications'
+* **personalDesktopAssignmentType**: 'Automatic' | 'Direct': PersonalDesktopAssignment type for HostPool.
+* **preferredAppGroupType**: 'Desktop' | 'None' | 'RailApplications' (Required): The type of preferred application group type, default to Desktop Application Group.
 * **registrationInfo**: [RegistrationInfo](#registrationinfo): Represents a RegistrationInfo definition.
 * **ring**: int: The ring number of HostPool.
 * **ssoadfsAuthority**: string: URL to customer ADFS server for signing WVD SSO certificates.
 * **ssoClientId**: string: ClientId for the registered Relying Party used to issue WVD SSO certificates.
 * **ssoClientSecretKeyVaultPath**: string: Path to Azure KeyVault storing the secret used for communication to ADFS.
-* **ssoSecretType**: 'Certificate' | 'CertificateInKeyVault' | 'SharedKey' | 'SharedKeyInKeyVault': The type of single sign on Secret Type. Possible values include: 'SharedKey', 'Certificate', 'SharedKeyInKeyVault', 'CertificateInKeyVault'
+* **ssoSecretType**: 'Certificate' | 'CertificateInKeyVault' | 'SharedKey' | 'SharedKeyInKeyVault': The type of single sign on Secret Type.
 * **startVMOnConnect**: bool: The flag to turn on/off StartVMOnConnect feature.
 * **validationEnvironment**: bool: Is validation environment.
 * **vmTemplate**: string: VM template for sessionhosts configuration within hostpool.
@@ -157,7 +157,7 @@
 ## RegistrationInfo
 ### Properties
 * **expirationTime**: string: Expiration time of registration token.
-* **registrationTokenOperation**: 'Delete' | 'None' | 'Update': The type of resetting the token. Possible values include: 'Delete', 'None', 'Update'
+* **registrationTokenOperation**: 'Delete' | 'None' | 'Update': The type of resetting the token.
 * **token**: string: The registration token base64 encoded string.
 
 ## Dictionary<string,String>
@@ -201,7 +201,7 @@
 * **exclusionTag**: string: Exclusion tag for scaling plan.
 * **friendlyName**: string: User friendly name of scaling plan.
 * **hostPoolReferences**: [ScalingHostPoolReference](#scalinghostpoolreference)[]: List of ScalingHostPoolReference definitions.
-* **hostPoolType**: 'BYODesktop' | 'Personal' | 'Pooled': HostPool type for desktop. Possible values include: 'Personal', 'Pooled', 'BYODesktop'
+* **hostPoolType**: 'BYODesktop' | 'Personal' | 'Pooled': HostPool type for desktop.
 * **objectId**: string (ReadOnly): ObjectId of scaling plan. (internal use)
 * **ring**: int: The ring number of scaling plan.
 * **schedules**: [ScalingSchedule](#scalingschedule)[]: List of ScalingSchedule definitions.
@@ -216,20 +216,20 @@
 ### Properties
 * **daysOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: Set of days of the week on which this schedule is active.
 * **name**: string: Name of the scaling schedule.
-* **offPeakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for off-peak period. Possible values include: 'BreadthFirst', 'DepthFirst'
+* **offPeakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for off-peak period.
 * **offPeakStartTime**: string: Starting time for off-peak period.
-* **peakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for peak period. Possible values include: 'BreadthFirst', 'DepthFirst'
+* **peakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for peak period.
 * **peakStartTime**: string: Starting time for peak period.
 * **rampDownCapacityThresholdPct**: int: Capacity threshold for ramp down period.
 * **rampDownForceLogoffUsers**: bool: Should users be logged off forcefully from hosts.
-* **rampDownLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for ramp down period. Possible values include: 'BreadthFirst', 'DepthFirst'
+* **rampDownLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for ramp down period.
 * **rampDownMinimumHostsPct**: int: Minimum host percentage for ramp down period.
 * **rampDownNotificationMessage**: string: Notification message for users during ramp down period.
 * **rampDownStartTime**: string: Starting time for ramp down period.
-* **rampDownStopHostsWhen**: 'ZeroActiveSessions' | 'ZeroSessions': Specifies when to stop hosts during ramp down period. Possible values include: 'ZeroSessions', 'ZeroActiveSessions'
+* **rampDownStopHostsWhen**: 'ZeroActiveSessions' | 'ZeroSessions': Specifies when to stop hosts during ramp down period.
 * **rampDownWaitTimeMinutes**: int: Number of minutes to wait to stop hosts during ramp down period.
 * **rampUpCapacityThresholdPct**: int: Capacity threshold for ramp up period.
-* **rampUpLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for ramp up period. Possible values include: 'BreadthFirst', 'DepthFirst'
+* **rampUpLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for ramp up period.
 * **rampUpMinimumHostsPct**: int: Minimum host percentage for ramp up period.
 * **rampUpStartTime**: string: Starting time for ramp up period.
 

@@ -59,14 +59,14 @@
 * **metricId**: string (ReadOnly): Identifier for Azure Insights metrics
 * **provisioningState**: string: Provisioning state of the Namespace.
 * **serviceBusEndpoint**: string: Endpoint you can use to perform Service Bus operations.
-* **status**: 'Activating' | 'Active' | 'Created' | 'Creating' | 'Disabled' | 'Disabling' | 'Enabling' | 'Failed' | 'Removed' | 'Removing' | 'SoftDeleted' | 'SoftDeleting' | 'Unknown': State of the Namespace. Possible values include: 'Unknown', 'Creating', 'Created', 'Activating', 'Enabling', 'Active', 'Disabling', 'Disabled', 'SoftDeleting', 'SoftDeleted', 'Removing', 'Removed', 'Failed'
+* **status**: 'Activating' | 'Active' | 'Created' | 'Creating' | 'Disabled' | 'Disabling' | 'Enabling' | 'Failed' | 'Removed' | 'Removing' | 'SoftDeleted' | 'SoftDeleting' | 'Unknown': State of the Namespace.
 * **updatedAt**: string: The time the Namespace was updated.
 
 ## Sku
 ### Properties
 * **capacity**: int: The Event Hubs throughput units.
-* **name**: 'Basic' | 'Standard': Name of this SKU. Possible values include: 'Basic', 'Standard'
-* **tier**: 'Basic' | 'Premium' | 'Standard' (Required): The billing tier of this particular SKU. Possible values include: 'Basic', 'Standard', 'Premium'
+* **name**: 'Basic' | 'Standard': Name of this SKU.
+* **tier**: 'Basic' | 'Premium' | 'Standard' (Required): The billing tier of this particular SKU.
 
 ## Dictionary<string,String>
 ### Properties
@@ -83,7 +83,7 @@
 * **messageRetentionInDays**: int: Number of days to retain the events for this Event Hub.
 * **partitionCount**: int: Number of partitions created for the Event Hub.
 * **partitionIds**: string[] (ReadOnly): Current number of shards on the Event Hub.
-* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of the Event Hub. Possible values include: 'Active', 'Disabled', 'Restoring', 'SendDisabled', 'ReceiveDisabled', 'Creating', 'Deleting', 'Renaming', 'Unknown'
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of the Event Hub.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.
 
 ## ConsumerGroupProperties

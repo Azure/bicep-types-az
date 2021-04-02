@@ -216,16 +216,16 @@
 * **createdDate**: string (ReadOnly): The creation date of the lab.
 * **defaultPremiumStorageAccount**: string (ReadOnly): The lab's default premium storage account.
 * **defaultStorageAccount**: string (ReadOnly): The lab's default storage account.
-* **environmentPermission**: 'Contributor' | 'Reader': The access rights to be granted to the user when provisioning an environment. Possible values include: 'Reader', 'Contributor'
+* **environmentPermission**: 'Contributor' | 'Reader': The access rights to be granted to the user when provisioning an environment.
 * **extendedProperties**: [Dictionary<string,String>](#dictionarystringstring): Extended properties of the lab used for experimental features
-* **labStorageType**: 'Premium' | 'Standard' | 'StandardSSD': Type of storage used by the lab. It can be either Premium or Standard. Default is Premium. Possible values include: 'Standard', 'Premium', 'StandardSSD'
+* **labStorageType**: 'Premium' | 'Standard' | 'StandardSSD': Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
 * **loadBalancerId**: string (ReadOnly): The load balancer used to for lab VMs that use shared IP address.
 * **mandatoryArtifactsResourceIdsLinux**: string[]: The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
 * **mandatoryArtifactsResourceIdsWindows**: string[]: The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
 * **networkSecurityGroupId**: string (ReadOnly): The Network Security Group attached to the lab VMs Network interfaces to restrict open ports.
 * **premiumDataDisks**: 'Disabled' | 'Enabled': The setting to enable usage of premium data disks.
 When its value is 'Enabled', creation of standard or premium data disks is allowed.
-When its value is 'Disabled', only creation of standard data disks is allowed. Possible values include: 'Disabled', 'Enabled'
+When its value is 'Disabled', only creation of standard data disks is allowed.
 * **premiumDataDiskStorageAccount**: string (ReadOnly): The lab's premium data disk storage account.
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource.
 * **publicIpId**: string (ReadOnly): The public IP address for the lab's load balancer.
@@ -236,7 +236,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 
 ## LabAnnouncementProperties
 ### Properties
-* **enabled**: 'Disabled' | 'Enabled': Is the lab announcement active/enabled at this time?. Possible values include: 'Enabled', 'Disabled'
+* **enabled**: 'Disabled' | 'Enabled': Is the lab announcement active/enabled at this time?.
 * **expirationDate**: string: The time at which the announcement expires (null for never)
 * **expired**: bool: Has this announcement expired?
 * **markdown**: string: The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
@@ -251,7 +251,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 
 ## LabSupportProperties
 ### Properties
-* **enabled**: 'Disabled' | 'Enabled': Is the lab support banner active/enabled at this time?. Possible values include: 'Enabled', 'Disabled'
+* **enabled**: 'Disabled' | 'Enabled': Is the lab support banner active/enabled at this time?.
 * **markdown**: string: The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
 
 ## Dictionary<string,String>
@@ -268,8 +268,8 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 * **folderPath**: string: The folder containing artifacts.
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource.
 * **securityToken**: string: The security token to authenticate to the artifact source.
-* **sourceType**: 'GitHub' | 'StorageAccount' | 'VsoGit': The artifact source's type. Possible values include: 'VsoGit', 'GitHub', 'StorageAccount'
-* **status**: 'Disabled' | 'Enabled': Indicates if the artifact source is enabled (values: Enabled, Disabled). Possible values include: 'Enabled', 'Disabled'
+* **sourceType**: 'GitHub' | 'StorageAccount' | 'VsoGit': The artifact source's type.
+* **status**: 'Disabled' | 'Enabled': Indicates if the artifact source is enabled (values: Enabled, Disabled).
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 * **uri**: string: The artifact source's URI.
 
@@ -294,7 +294,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 ## LabCostDetailsProperties
 ### Properties
 * **cost**: int: The cost component of the cost item.
-* **costType**: 'Projected' | 'Reported' | 'Unavailable': The type of the cost. Possible values include: 'Unavailable', 'Reported', 'Projected'
+* **costType**: 'Projected' | 'Reported' | 'Unavailable': The type of the cost.
 * **date**: string: The date of the cost item.
 
 ## LabCostSummaryProperties
@@ -318,16 +318,16 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 * **costThresholds**: [CostThresholdProperties](#costthresholdproperties)[]: Cost thresholds.
 * **cycleEndDateTime**: string: Reporting cycle end date.
 * **cycleStartDateTime**: string: Reporting cycle start date.
-* **cycleType**: 'CalendarMonth' | 'Custom': Reporting cycle type. Possible values include: 'CalendarMonth', 'Custom'
-* **status**: 'Disabled' | 'Enabled': Target cost status. Possible values include: 'Enabled', 'Disabled'
+* **cycleType**: 'CalendarMonth' | 'Custom': Reporting cycle type.
+* **status**: 'Disabled' | 'Enabled': Target cost status.
 * **target**: int: Lab target cost
 
 ## CostThresholdProperties
 ### Properties
-* **displayOnChart**: 'Disabled' | 'Enabled': Indicates whether this threshold will be displayed on cost charts. Possible values include: 'Enabled', 'Disabled'
+* **displayOnChart**: 'Disabled' | 'Enabled': Indicates whether this threshold will be displayed on cost charts.
 * **notificationSent**: string: Indicates the datetime when notifications were last sent for this threshold.
 * **percentageThreshold**: [PercentageCostThresholdProperties](#percentagecostthresholdproperties): Properties of a percentage cost threshold.
-* **sendNotificationWhenExceeded**: 'Disabled' | 'Enabled': Indicates whether notifications will be sent when this threshold is exceeded. Possible values include: 'Enabled', 'Disabled'
+* **sendNotificationWhenExceeded**: 'Disabled' | 'Enabled': Indicates whether notifications will be sent when this threshold is exceeded.
 * **thresholdId**: string: The ID of the cost threshold item.
 
 ## PercentageCostThresholdProperties
@@ -363,12 +363,12 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 ## DataDiskStorageTypeInfo
 ### Properties
 * **lun**: string: Disk Lun
-* **storageType**: 'Premium' | 'Standard' | 'StandardSSD': Disk Storage Type. Possible values include: 'Standard', 'Premium', 'StandardSSD'
+* **storageType**: 'Premium' | 'Standard' | 'StandardSSD': Disk Storage Type.
 
 ## CustomImagePropertiesCustom
 ### Properties
 * **imageName**: string: The image name.
-* **osType**: 'Linux' | 'None' | 'Windows' (Required): The OS type of the custom image (i.e. Windows, Linux). Possible values include: 'Windows', 'Linux', 'None'
+* **osType**: 'Linux' | 'None' | 'Windows' (Required): The OS type of the custom image (i.e. Windows, Linux).
 * **sysPrep**: bool: Indicates whether sysprep has been run on the VHD.
 
 ## CustomImagePropertiesFromVm
@@ -379,11 +379,11 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 
 ## LinuxOsInfo
 ### Properties
-* **linuxOsState**: 'DeprovisionApplied' | 'DeprovisionRequested' | 'NonDeprovisioned': The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied). Possible values include: 'NonDeprovisioned', 'DeprovisionRequested', 'DeprovisionApplied'
+* **linuxOsState**: 'DeprovisionApplied' | 'DeprovisionRequested' | 'NonDeprovisioned': The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
 
 ## WindowsOsInfo
 ### Properties
-* **windowsOsState**: 'NonSysprepped' | 'SysprepApplied' | 'SysprepRequested': The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied). Possible values include: 'NonSysprepped', 'SysprepRequested', 'SysprepApplied'
+* **windowsOsState**: 'NonSysprepped' | 'SysprepApplied' | 'SysprepRequested': The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
 
 ## Dictionary<string,String>
 ### Properties
@@ -458,13 +458,13 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 ### Properties
 * **attachNewDataDiskOptions**: [AttachNewDataDiskOptions](#attachnewdatadiskoptions): Properties to attach new disk to the Virtual Machine.
 * **existingLabDiskId**: string: Specifies the existing lab disk id to attach to virtual machine.
-* **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite': Caching option for a data disk (i.e. None, ReadOnly, ReadWrite). Possible values include: 'None', 'ReadOnly', 'ReadWrite'
+* **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite': Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).
 
 ## AttachNewDataDiskOptions
 ### Properties
 * **diskName**: string: The name of the disk to be attached.
 * **diskSizeGiB**: int: Size of the disk to be attached in Gibibytes.
-* **diskType**: 'Premium' | 'Standard' | 'StandardSSD': The storage type for the disk (i.e. Standard, Premium). Possible values include: 'Standard', 'Premium', 'StandardSSD'
+* **diskType**: 'Premium' | 'Standard' | 'StandardSSD': The storage type for the disk (i.e. Standard, Premium).
 
 ## GalleryImageReference
 ### Properties
@@ -494,7 +494,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 ### Properties
 * **backendPort**: int: The port to which the external traffic will be redirected.
 * **frontendPort**: int: The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.
-* **transportProtocol**: 'Tcp' | 'Udp': The transport protocol for the endpoint. Possible values include: 'Tcp', 'Udp'
+* **transportProtocol**: 'Tcp' | 'Udp': The transport protocol for the endpoint.
 
 ## ScheduleCreationParameter
 ### Properties
@@ -508,7 +508,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 * **dailyRecurrence**: [DayDetails](#daydetails): Properties of a daily schedule.
 * **hourlyRecurrence**: [HourDetails](#hourdetails): Properties of an hourly schedule.
 * **notificationSettings**: [NotificationSettings](#notificationsettings): Notification settings for a schedule.
-* **status**: 'Disabled' | 'Enabled': The status of the schedule (i.e. Enabled, Disabled). Possible values include: 'Enabled', 'Disabled'
+* **status**: 'Disabled' | 'Enabled': The status of the schedule (i.e. Enabled, Disabled).
 * **targetResourceId**: string: The resource ID to which the schedule belongs
 * **taskType**: string: The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
 * **timeZoneId**: string: The time zone ID (e.g. Pacific Standard time).
@@ -526,7 +526,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 ### Properties
 * **emailRecipient**: string: The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
 * **notificationLocale**: string: The locale to use when sending a notification (fallback for unsupported languages is EN).
-* **status**: 'Disabled' | 'Enabled': If notifications are enabled for this schedule (i.e. Enabled, Disabled). Possible values include: 'Enabled', 'Disabled'
+* **status**: 'Disabled' | 'Enabled': If notifications are enabled for this schedule (i.e. Enabled, Disabled).
 * **timeInMinutes**: int: Time in minutes before event at which notification will be sent.
 * **webhookUrl**: string: The webhook URL to which the notification will be sent.
 
@@ -567,7 +567,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 
 ## Event
 ### Properties
-* **eventName**: 'AutoShutdown' | 'Cost': The event type for which this notification is enabled (i.e. AutoShutdown, Cost). Possible values include: 'AutoShutdown', 'Cost'
+* **eventName**: 'AutoShutdown' | 'Cost': The event type for which this notification is enabled (i.e. AutoShutdown, Cost).
 
 ## Dictionary<string,String>
 ### Properties
@@ -578,11 +578,11 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 ### Properties
 * **createdDate**: string (ReadOnly): The creation date of the policy.
 * **description**: string: The description of the policy.
-* **evaluatorType**: 'AllowedValuesPolicy' | 'MaxValuePolicy': The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy). Possible values include: 'AllowedValuesPolicy', 'MaxValuePolicy'
+* **evaluatorType**: 'AllowedValuesPolicy' | 'MaxValuePolicy': The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).
 * **factData**: string: The fact data of the policy.
-* **factName**: 'EnvironmentTemplate' | 'GalleryImage' | 'LabPremiumVmCount' | 'LabTargetCost' | 'LabVmCount' | 'LabVmSize' | 'ScheduleEditPermission' | 'UserOwnedLabPremiumVmCount' | 'UserOwnedLabVmCount' | 'UserOwnedLabVmCountInSubnet': The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc. Possible values include: 'UserOwnedLabVmCount', 'UserOwnedLabPremiumVmCount', 'LabVmCount', 'LabPremiumVmCount', 'LabVmSize', 'GalleryImage', 'UserOwnedLabVmCountInSubnet', 'LabTargetCost', 'EnvironmentTemplate', 'ScheduleEditPermission'
+* **factName**: 'EnvironmentTemplate' | 'GalleryImage' | 'LabPremiumVmCount' | 'LabTargetCost' | 'LabVmCount' | 'LabVmSize' | 'ScheduleEditPermission' | 'UserOwnedLabPremiumVmCount' | 'UserOwnedLabVmCount' | 'UserOwnedLabVmCountInSubnet': The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource.
-* **status**: 'Disabled' | 'Enabled': The status of the policy. Possible values include: 'Enabled', 'Disabled'
+* **status**: 'Disabled' | 'Enabled': The status of the policy.
 * **threshold**: string: The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 
@@ -598,7 +598,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 * **hourlyRecurrence**: [HourDetails](#hourdetails): Properties of an hourly schedule.
 * **notificationSettings**: [NotificationSettings](#notificationsettings): Notification settings for a schedule.
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource.
-* **status**: 'Disabled' | 'Enabled': The status of the schedule (i.e. Enabled, Disabled). Possible values include: 'Enabled', 'Disabled'
+* **status**: 'Disabled' | 'Enabled': The status of the schedule (i.e. Enabled, Disabled).
 * **targetResourceId**: string: The resource ID to which the schedule belongs
 * **taskType**: string: The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
 * **timeZoneId**: string: The time zone ID (e.g. Pacific Standard time).
@@ -615,7 +615,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 * **clientSecretUrl**: string: The client secret URL of the identity.
 * **principalId**: string: The principal id of resource identity.
 * **tenantId**: string: The tenant identifier of resource.
-* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned': Managed identity. Possible values include: 'None', 'SystemAssigned', 'UserAssigned', 'SystemAssigned,UserAssigned'
+* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned': Managed identity.
 
 ## Dictionary<string,String>
 ### Properties
@@ -653,7 +653,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 * **createdDate**: string (ReadOnly): The creation date of the disk.
 * **diskBlobName**: string: When backed by a blob, the name of the VHD blob without extension.
 * **diskSizeGiB**: int: The size of the disk in Gibibytes.
-* **diskType**: 'Premium' | 'Standard' | 'StandardSSD': The storage type for the disk (i.e. Standard, Premium). Possible values include: 'Standard', 'Premium', 'StandardSSD'
+* **diskType**: 'Premium' | 'Standard' | 'StandardSSD': The storage type for the disk (i.e. Standard, Premium).
 * **diskUri**: string: When backed by a blob, the URI of underlying blob.
 * **hostCaching**: string: The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).
 * **leasedByLabVmId**: string: The resource ID of the VM to which this disk is leased.
@@ -789,7 +789,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 * **storageType**: string: Storage type to use for virtual machine (i.e. Standard, Premium).
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 * **userName**: string: The user name of the virtual machine.
-* **virtualMachineCreationSource**: 'FromCustomImage' | 'FromGalleryImage' | 'FromSharedGalleryImage' (ReadOnly): Tells source of creation of lab virtual machine. Output property only. Possible values include: 'FromCustomImage', 'FromGalleryImage', 'FromSharedGalleryImage'
+* **virtualMachineCreationSource**: 'FromCustomImage' | 'FromGalleryImage' | 'FromSharedGalleryImage' (ReadOnly): Tells source of creation of lab virtual machine. Output property only.
 
 ## ArtifactDeploymentStatusProperties
 ### Properties
@@ -843,7 +843,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 
 ## Subnet
 ### Properties
-* **allowPublicIp**: 'Allow' | 'Default' | 'Deny': The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)). Possible values include: 'Default', 'Deny', 'Allow'
+* **allowPublicIp**: 'Allow' | 'Default' | 'Deny': The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
 * **labSubnetName**: string: The name of the subnet as seen in the lab.
 * **resourceId**: string: The resource ID of the subnet.
 
@@ -857,8 +857,8 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 * **labSubnetName**: string: The name given to the subnet within the lab.
 * **resourceId**: string: The resource ID of the subnet.
 * **sharedPublicIpAddressConfiguration**: [SubnetSharedPublicIpAddressConfiguration](#subnetsharedpublicipaddressconfiguration): Configuration for public IP address sharing.
-* **useInVmCreationPermission**: 'Allow' | 'Default' | 'Deny': Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny). Possible values include: 'Default', 'Deny', 'Allow'
-* **usePublicIpAddressPermission**: 'Allow' | 'Default' | 'Deny': Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny). Possible values include: 'Default', 'Deny', 'Allow'
+* **useInVmCreationPermission**: 'Allow' | 'Default' | 'Deny': Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).
+* **usePublicIpAddressPermission**: 'Allow' | 'Default' | 'Deny': Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).
 * **virtualNetworkPoolName**: string: The virtual network pool associated with this subnet.
 
 ## SubnetSharedPublicIpAddressConfiguration
@@ -868,7 +868,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed. P
 ## Port
 ### Properties
 * **backendPort**: int: Backend port of the target virtual machine.
-* **transportProtocol**: 'Tcp' | 'Udp': Protocol type of the port. Possible values include: 'Tcp', 'Udp'
+* **transportProtocol**: 'Tcp' | 'Udp': Protocol type of the port.
 
 ## Dictionary<string,String>
 ### Properties

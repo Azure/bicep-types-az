@@ -11,6 +11,6 @@
 
 ## ManagementLockProperties
 ### Properties
-* **level**: 'CanNotDelete' | 'NotSpecified' | 'ReadOnly': The lock level of the management lock. Possible values include: 'NotSpecified', 'CanNotDelete', 'ReadOnly'
+* **level**: 'CanNotDelete' | 'NotSpecified' | 'ReadOnly': The lock level of the management lock.
 * **notes**: string: The notes of the management lock.
 

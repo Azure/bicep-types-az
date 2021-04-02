@@ -42,7 +42,7 @@
 * **deviceStreams**: [schemas:8_deviceStreams](#schemas8devicestreams): The device streams properties of iothub.
 * **enableFileUploadNotifications**: bool: If True, file upload notifications are enabled.
 * **eventHubEndpoints**: [Dictionary<string,EventHubProperties>](#dictionarystringeventhubproperties): The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.
-* **features**: 'DeviceManagement' | 'None': The capabilities and features enabled for the IoT hub. Possible values include: 'None', 'DeviceManagement'
+* **features**: 'DeviceManagement' | 'None': The capabilities and features enabled for the IoT hub.
 * **hostName**: string (ReadOnly): The name of the host.
 * **ipFilterRules**: [IpFilterRule](#ipfilterrule)[]: The IP filter rules.
 * **locations**: [IotHubLocationDescription](#iothublocationdescription)[]: Primary and secondary location for iot hub
@@ -56,7 +56,7 @@
 ### Properties
 * **keyName**: string (Required): The name of the shared access policy.
 * **primaryKey**: string: The primary key.
-* **rights**: 'DeviceConnect' | 'RegistryRead, DeviceConnect' | 'RegistryRead, RegistryWrite, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect' | 'RegistryRead, RegistryWrite' | 'RegistryRead, ServiceConnect, DeviceConnect' | 'RegistryRead, ServiceConnect' | 'RegistryRead' | 'RegistryWrite, DeviceConnect' | 'RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryWrite, ServiceConnect' | 'RegistryWrite' | 'ServiceConnect, DeviceConnect' | 'ServiceConnect' (Required): The permissions assigned to the shared access policy. Possible values include: 'RegistryRead', 'RegistryWrite', 'ServiceConnect', 'DeviceConnect', 'RegistryRead, RegistryWrite', 'RegistryRead, ServiceConnect', 'RegistryRead, DeviceConnect', 'RegistryWrite, ServiceConnect', 'RegistryWrite, DeviceConnect', 'ServiceConnect, DeviceConnect', 'RegistryRead, RegistryWrite, ServiceConnect', 'RegistryRead, RegistryWrite, DeviceConnect', 'RegistryRead, ServiceConnect, DeviceConnect', 'RegistryWrite, ServiceConnect, DeviceConnect', 'RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect'
+* **rights**: 'DeviceConnect' | 'RegistryRead, DeviceConnect' | 'RegistryRead, RegistryWrite, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect' | 'RegistryRead, RegistryWrite' | 'RegistryRead, ServiceConnect, DeviceConnect' | 'RegistryRead, ServiceConnect' | 'RegistryRead' | 'RegistryWrite, DeviceConnect' | 'RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryWrite, ServiceConnect' | 'RegistryWrite' | 'ServiceConnect, DeviceConnect' | 'ServiceConnect' (Required): The permissions assigned to the shared access policy.
 * **secondaryKey**: string: The secondary key.
 
 ## CloudToDeviceProperties
@@ -90,14 +90,14 @@
 
 ## IpFilterRule
 ### Properties
-* **action**: 'Accept' | 'Reject' (Required): The desired action for requests captured by this rule. Possible values include: 'Accept', 'Reject'
+* **action**: 'Accept' | 'Reject' (Required): The desired action for requests captured by this rule.
 * **filterName**: string (Required): The name of the IP filter rule.
 * **ipMask**: string (Required): A string that contains the IP address range in CIDR notation for the rule.
 
 ## IotHubLocationDescription
 ### Properties
 * **location**: string: Azure Geo Regions
-* **role**: 'primary' | 'secondary': Specific Role assigned to this location. Possible values include: 'primary', 'secondary'
+* **role**: 'primary' | 'secondary': Specific Role assigned to this location.
 
 ## Dictionary<string,MessagingEndpointProperties>
 ### Properties
@@ -149,7 +149,7 @@
 * **batchFrequencyInSeconds**: int: Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.
 * **connectionString**: string (Required): The connection string of the storage account.
 * **containerName**: string (Required): The name of storage container in the storage account.
-* **encoding**: 'Avro' | 'AvroDeflate' | 'JSON': Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'. Possible values include: 'Avro', 'AvroDeflate', 'JSON'
+* **encoding**: 'Avro' | 'AvroDeflate' | 'JSON': Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.
 * **fileNameFormat**: string: File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.
 * **maxChunkSizeInBytes**: int: Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).
 * **name**: string (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
@@ -170,7 +170,7 @@
 * **endpointNames**: string[] (Required): The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
 * **isEnabled**: bool (Required): Used to specify whether a route is enabled.
 * **name**: string (Required): The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
-* **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'Invalid' | 'TwinChangeEvents' (Required): The source that the routing rule is to be applied to, such as DeviceMessages. Possible values include: 'Invalid', 'DeviceMessages', 'TwinChangeEvents', 'DeviceLifecycleEvents', 'DeviceJobLifecycleEvents'
+* **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'Invalid' | 'TwinChangeEvents' (Required): The source that the routing rule is to be applied to, such as DeviceMessages.
 
 ## Dictionary<string,StorageEndpointProperties>
 ### Properties
@@ -186,8 +186,8 @@
 ## IotHubSkuInfo
 ### Properties
 * **capacity**: int: The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
-* **name**: 'B1' | 'B2' | 'B3' | 'F1' | 'S1' | 'S2' | 'S3' (Required): The name of the SKU. Possible values include: 'F1', 'S1', 'S2', 'S3', 'B1', 'B2', 'B3'
-* **tier**: 'Basic' | 'Free' | 'Standard' (ReadOnly): The billing tier for the IoT hub. Possible values include: 'Free', 'Standard', 'Basic'
+* **name**: 'B1' | 'B2' | 'B3' | 'F1' | 'S1' | 'S2' | 'S3' (Required): The name of the SKU.
+* **tier**: 'Basic' | 'Free' | 'Standard' (ReadOnly): The billing tier for the IoT hub.
 
 ## Dictionary<string,String>
 ### Properties

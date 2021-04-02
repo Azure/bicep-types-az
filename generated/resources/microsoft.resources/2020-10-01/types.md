@@ -63,14 +63,14 @@
 * **duration**: string (ReadOnly): The duration of the template deployment.
 * **error**: [ErrorResponse](#errorresponse) (ReadOnly): Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.)
 * **expressionEvaluationOptions**: [ExpressionEvaluationOptions](#expressionevaluationoptions) (WriteOnly): Specifies whether template expressions are evaluated within the scope of the parent template or nested template.
-* **mode**: 'Complete' | 'Incremental' (Required): The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources. Possible values include: 'Incremental', 'Complete'
+* **mode**: 'Complete' | 'Incremental' (Required): The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.
 * **onErrorDeployment**: [OnErrorDeployment](#onerrordeployment): Deployment on error behavior.
 * **outputResources**: [ResourceReference](#resourcereference)[] (ReadOnly): Array of provisioned resources.
 * **outputs**: any (ReadOnly): Key/value pairs that represent deployment output.
 * **parameters**: any: Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string.
 * **parametersLink**: [ParametersLink](#parameterslink): Entity representing the reference to the deployment parameters.
 * **providers**: [Provider](#provider)[] (ReadOnly): The list of resource providers needed for the deployment.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Denotes the state of provisioning. Possible values include: 'NotSpecified', 'Accepted', 'Running', 'Ready', 'Creating', 'Created', 'Deleting', 'Deleted', 'Canceled', 'Failed', 'Succeeded', 'Updating'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Denotes the state of provisioning.
 * **template**: any (WriteOnly): The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both.
 * **templateHash**: string (ReadOnly): The hash produced for the template.
 * **templateLink**: [TemplateLink](#templatelink): Entity representing the reference to the template.
@@ -109,13 +109,13 @@
 
 ## ExpressionEvaluationOptions
 ### Properties
-* **scope**: 'Inner' | 'NotSpecified' | 'Outer' (WriteOnly): The scope to be used for evaluation of parameters, variables and functions in a nested template. Possible values include: 'NotSpecified', 'Outer', 'Inner'
+* **scope**: 'Inner' | 'NotSpecified' | 'Outer' (WriteOnly): The scope to be used for evaluation of parameters, variables and functions in a nested template.
 
 ## OnErrorDeployment
 ### Properties
 * **deploymentName**: string: The deployment to be used on error case.
 * **provisioningState**: string (ReadOnly): The state of the provisioning for the on error deployment.
-* **type**: 'LastSuccessful' | 'SpecificDeployment': The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment. Possible values include: 'LastSuccessful', 'SpecificDeployment'
+* **type**: 'LastSuccessful' | 'SpecificDeployment': The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
 
 ## ResourceReference
 ### Properties
@@ -153,17 +153,17 @@
 * **defaultPattern**: [AliasPattern](#aliaspattern) (ReadOnly): The type of the pattern for an alias path.
 * **name**: string (ReadOnly): The alias name.
 * **paths**: [AliasPath](#aliaspath)[] (ReadOnly): The paths for an alias.
-* **type**: 'Mask' | 'NotSpecified' | 'PlainText' (ReadOnly): The type of the alias. Possible values include: 'NotSpecified', 'PlainText', 'Mask'
+* **type**: 'Mask' | 'NotSpecified' | 'PlainText' (ReadOnly): The type of the alias.
 
 ## AliasPathMetadata
 ### Properties
-* **attributes**: 'Modifiable' | 'None' (ReadOnly): The attributes of the token that the alias path is referring to. Possible values include: 'None', 'Modifiable'
-* **type**: 'Any' | 'Array' | 'Boolean' | 'Integer' | 'NotSpecified' | 'Number' | 'Object' | 'String' (ReadOnly): The type of the token that the alias path is referring to. Possible values include: 'NotSpecified', 'Any', 'String', 'Object', 'Array', 'Integer', 'Number', 'Boolean'
+* **attributes**: 'Modifiable' | 'None' (ReadOnly): The attributes of the token that the alias path is referring to.
+* **type**: 'Any' | 'Array' | 'Boolean' | 'Integer' | 'NotSpecified' | 'Number' | 'Object' | 'String' (ReadOnly): The type of the token that the alias path is referring to.
 
 ## AliasPattern
 ### Properties
 * **phrase**: string (ReadOnly): The alias pattern phrase.
-* **type**: 'Extract' | 'NotSpecified' (ReadOnly): The type of alias pattern. Possible values include: 'NotSpecified', 'Extract'
+* **type**: 'Extract' | 'NotSpecified' (ReadOnly): The type of alias pattern.
 * **variable**: string (ReadOnly): The alias pattern variable.
 
 ## AliasPath
@@ -205,7 +205,7 @@
 ## ManagedServiceIdentity
 ### Properties
 * **tenantId**: string (ReadOnly): ID of the Azure Active Directory.
-* **type**: 'UserAssigned': Type of the managed identity. Possible values include: 'UserAssigned'
+* **type**: 'UserAssigned': Type of the managed identity.
 * **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity): The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
 
 ## Dictionary<string,UserAssignedIdentity>
@@ -222,10 +222,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties
@@ -241,13 +241,13 @@
 ### Properties
 * **arguments**: string: Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
 * **azCliVersion**: string (Required): Azure CLI module version to be used.
-* **cleanupPreference**: 'Always' | 'OnExpiration' | 'OnSuccess': The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'. Possible values include: 'Always', 'OnSuccess', 'OnExpiration'
+* **cleanupPreference**: 'Always' | 'OnExpiration' | 'OnSuccess': The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
 * **containerSettings**: [ContainerConfiguration](#containerconfiguration): Settings to customize ACI container instance.
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: The environment variables to pass over to the script.
 * **forceUpdateTag**: string: Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
 * **outputs**: [Dictionary<string,Object>](#dictionarystringobject) (ReadOnly): List of script outputs.
 * **primaryScriptUri**: string: Uri for the script. This is the entry point for the external script.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Failed' | 'ProvisioningResources' | 'Running' | 'Succeeded' (ReadOnly): State of the script execution. This only appears in the response. Possible values include: 'Creating', 'ProvisioningResources', 'Running', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Failed' | 'ProvisioningResources' | 'Running' | 'Succeeded' (ReadOnly): State of the script execution. This only appears in the response.
 * **retentionInterval**: string (Required): Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
 * **scriptContent**: string: Script body.
 * **status**: [ScriptStatus](#scriptstatus) (ReadOnly): Generic object modeling results of script execution.
@@ -293,13 +293,13 @@
 ### Properties
 * **arguments**: string: Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
 * **azPowerShellVersion**: string (Required): Azure PowerShell module version to be used.
-* **cleanupPreference**: 'Always' | 'OnExpiration' | 'OnSuccess': The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'. Possible values include: 'Always', 'OnSuccess', 'OnExpiration'
+* **cleanupPreference**: 'Always' | 'OnExpiration' | 'OnSuccess': The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
 * **containerSettings**: [ContainerConfiguration](#containerconfiguration): Settings to customize ACI container instance.
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: The environment variables to pass over to the script.
 * **forceUpdateTag**: string: Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
 * **outputs**: [Dictionary<string,Object>](#dictionarystringobject) (ReadOnly): List of script outputs.
 * **primaryScriptUri**: string: Uri for the script. This is the entry point for the external script.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Failed' | 'ProvisioningResources' | 'Running' | 'Succeeded' (ReadOnly): State of the script execution. This only appears in the response. Possible values include: 'Creating', 'ProvisioningResources', 'Running', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Failed' | 'ProvisioningResources' | 'Running' | 'Succeeded' (ReadOnly): State of the script execution. This only appears in the response.
 * **retentionInterval**: string (Required): Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
 * **scriptContent**: string: Script body.
 * **status**: [ScriptStatus](#scriptstatus) (ReadOnly): Generic object modeling results of script execution.

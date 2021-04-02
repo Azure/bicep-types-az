@@ -57,7 +57,7 @@
 
 ## DataMigrationServiceProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Deleting' | 'Deploying' | 'Failed' | 'FailedToStart' | 'FailedToStop' | 'Starting' | 'Stopped' | 'Stopping' | 'Succeeded' (ReadOnly): The resource's provisioning state. Possible values include: 'Accepted', 'Deleting', 'Deploying', 'Stopped', 'Stopping', 'Starting', 'FailedToStart', 'FailedToStop', 'Succeeded', 'Failed'
+* **provisioningState**: 'Accepted' | 'Deleting' | 'Deploying' | 'Failed' | 'FailedToStart' | 'FailedToStop' | 'Starting' | 'Stopped' | 'Stopping' | 'Succeeded' (ReadOnly): The resource's provisioning state.
 * **publicKey**: string: The public key of the service, used to encrypt secrets sent to the service
 * **virtualNicId**: string: The ID of the Microsoft.Network/networkInterfaces resource which the service have
 * **virtualSubnetId**: string (Required): The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
@@ -79,11 +79,11 @@
 ### Properties
 * **creationTime**: string (ReadOnly): UTC Date and time when project was created
 * **databasesInfo**: [DatabaseInfo](#databaseinfo)[]: List of DatabaseInfo
-* **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly): The project's provisioning state. Possible values include: 'Deleting', 'Succeeded'
+* **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly): The project's provisioning state.
 * **sourceConnectionInfo**: [ConnectionInfo](#connectioninfo): Defines the connection properties of a server
-* **sourcePlatform**: 'MongoDb' | 'MySQL' | 'PostgreSql' | 'SQL' | 'Unknown' (Required): Source platform for the project. Possible values include: 'SQL', 'MySQL', 'PostgreSql', 'MongoDb', 'Unknown'
+* **sourcePlatform**: 'MongoDb' | 'MySQL' | 'PostgreSql' | 'SQL' | 'Unknown' (Required): Source platform for the project.
 * **targetConnectionInfo**: [ConnectionInfo](#connectioninfo): Defines the connection properties of a server
-* **targetPlatform**: 'AzureDbForMySql' | 'AzureDbForPostgreSql' | 'MongoDb' | 'SQLDB' | 'SQLMI' | 'Unknown' (Required): Target platform for the project. Possible values include: 'SQLDB', 'SQLMI', 'AzureDbForMySql', 'AzureDbForPostgreSql', 'MongoDb', 'Unknown'
+* **targetPlatform**: 'AzureDbForMySql' | 'AzureDbForPostgreSql' | 'MongoDb' | 'SQLDB' | 'SQLMI' | 'Unknown' (Required): Target platform for the project.
 
 ## DatabaseInfo
 ### Properties
@@ -137,11 +137,11 @@
 ### SqlConnectionInfo
 #### Properties
 * **additionalSettings**: string: Additional connection settings
-* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': Authentication type to use for connection. Possible values include: 'None', 'WindowsAuthentication', 'SqlAuthentication', 'ActiveDirectoryIntegrated', 'ActiveDirectoryPassword'
+* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': Authentication type to use for connection.
 * **dataSource**: string (Required): Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
 * **encryptConnection**: bool: Whether to encrypt the connection
 * **password**: string: Password credential.
-* **platform**: 'SqlOnPrem': Server platform type for connection. Possible values include: 'SqlOnPrem'
+* **platform**: 'SqlOnPrem': Server platform type for connection.
 * **trustServerCertificate**: bool: Whether to trust the server certificate
 * **type**: 'SqlConnectionInfo' (Required): Information for connecting to SQL database server
 * **userName**: string: User name
@@ -190,11 +190,11 @@
 ## SqlConnectionInfo
 ### Properties
 * **additionalSettings**: string: Additional connection settings
-* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': Authentication type to use for connection. Possible values include: 'None', 'WindowsAuthentication', 'SqlAuthentication', 'ActiveDirectoryIntegrated', 'ActiveDirectoryPassword'
+* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': Authentication type to use for connection.
 * **dataSource**: string (Required): Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
 * **encryptConnection**: bool: Whether to encrypt the connection
 * **password**: string: Password credential.
-* **platform**: 'SqlOnPrem': Server platform type for connection. Possible values include: 'SqlOnPrem'
+* **platform**: 'SqlOnPrem': Server platform type for connection.
 * **trustServerCertificate**: bool: Whether to trust the server certificate
 * **type**: 'SqlConnectionInfo' (Required): Information for connecting to SQL database server
 * **userName**: string: User name
@@ -218,7 +218,7 @@
 * **clientData**: [Dictionary<string,String>](#dictionarystringstring): Key value pairs of client data to attach meta data information to task
 * **commands**: [CommandProperties](#commandproperties)[] (ReadOnly): Array of command properties.
 * **errors**: [ODataError](#odataerror)[] (ReadOnly): Array of errors. This is ignored if submitted.
-* **state**: 'Canceled' | 'Failed' | 'FailedInputValidation' | 'Faulted' | 'Queued' | 'Running' | 'Succeeded' | 'Unknown' (ReadOnly): The state of the task. This is ignored if submitted. Possible values include: 'Unknown', 'Queued', 'Running', 'Canceled', 'Succeeded', 'Failed', 'FailedInputValidation', 'Faulted'
+* **state**: 'Canceled' | 'Failed' | 'FailedInputValidation' | 'Faulted' | 'Queued' | 'Running' | 'Succeeded' | 'Unknown' (ReadOnly): The state of the task. This is ignored if submitted.
 ### Connect.MongoDb
 #### Properties
 * **input**: [MongoDbConnectionInfo](#mongodbconnectioninfo): Describes a connection to a MongoDB data source
@@ -445,7 +445,7 @@
 * **Discriminator**: commandType
 ### Base Properties
 * **errors**: [ODataError](#odataerror)[] (ReadOnly): Array of errors. This is ignored if submitted.
-* **state**: 'Accepted' | 'Failed' | 'Running' | 'Succeeded' | 'Unknown' (ReadOnly): The state of the command. This is ignored if submitted. Possible values include: 'Unknown', 'Accepted', 'Running', 'Succeeded', 'Failed'
+* **state**: 'Accepted' | 'Failed' | 'Running' | 'Succeeded' | 'Unknown' (ReadOnly): The state of the command. This is ignored if submitted.
 ### cancel
 #### Properties
 * **commandType**: 'cancel' (Required): Properties for the command that cancels a migration in whole or in part
@@ -553,7 +553,7 @@
 ### Properties
 * **databases**: [MongoDbDatabaseInfo](#mongodbdatabaseinfo)[] (Required): A list of non-system databases in the cluster
 * **supportsSharding**: bool (Required): Whether the cluster supports sharded collections
-* **type**: 'BlobContainer' | 'CosmosDb' | 'MongoDb' (Required): The type of data source. Possible values include: 'BlobContainer', 'CosmosDb', 'MongoDb'
+* **type**: 'BlobContainer' | 'CosmosDb' | 'MongoDb' (Required): The type of data source.
 * **version**: string (Required): The version of the data source in the form x.y.z (e.g. 3.6.7). Not used if Type is BlobContainer.
 
 ## MongoDbDatabaseInfo
@@ -589,7 +589,7 @@
 ## MongoDbShardKeyField
 ### Properties
 * **name**: string (Required): The name of the field
-* **order**: 'Forward' | 'Hashed' | 'Reverse' (Required): The field ordering. Possible values include: 'Forward', 'Reverse', 'Hashed'
+* **order**: 'Forward' | 'Hashed' | 'Reverse' (Required): The field ordering.
 
 ## ConnectToSource.MySql
 ### Properties
@@ -599,9 +599,9 @@
 
 ## ConnectToSourceMySqlTaskInput
 ### Properties
-* **checkPermissionsGroup**: 'Default' | 'MigrationFromMySQLToAzureDBForMySQL' | 'MigrationFromSqlServerToAzureDB' | 'MigrationFromSqlServerToAzureMI': Permission group for validations. Possible values include: 'Default', 'MigrationFromSqlServerToAzureDB', 'MigrationFromSqlServerToAzureMI', 'MigrationFromMySQLToAzureDBForMySQL'
+* **checkPermissionsGroup**: 'Default' | 'MigrationFromMySQLToAzureDBForMySQL' | 'MigrationFromSqlServerToAzureDB' | 'MigrationFromSqlServerToAzureMI': Permission group for validations.
 * **sourceConnectionInfo**: [MySqlConnectionInfo](#mysqlconnectioninfo) (Required): Information for connecting to MySQL server
-* **targetPlatform**: 'AzureDbForMySQL' | 'SqlServer': Target Platform for the migration. Possible values include: 'SqlServer', 'AzureDbForMySQL'
+* **targetPlatform**: 'AzureDbForMySQL' | 'SqlServer': Target Platform for the migration.
 
 ## ConnectToSourceNonSqlTaskOutput
 ### Properties
@@ -663,7 +663,7 @@
 
 ## ConnectToSourceSqlServerTaskInput
 ### Properties
-* **checkPermissionsGroup**: 'Default' | 'MigrationFromMySQLToAzureDBForMySQL' | 'MigrationFromSqlServerToAzureDB' | 'MigrationFromSqlServerToAzureMI': Permission group for validations. Possible values include: 'Default', 'MigrationFromSqlServerToAzureDB', 'MigrationFromSqlServerToAzureMI', 'MigrationFromMySQLToAzureDBForMySQL'
+* **checkPermissionsGroup**: 'Default' | 'MigrationFromMySQLToAzureDBForMySQL' | 'MigrationFromSqlServerToAzureDB' | 'MigrationFromSqlServerToAzureMI': Permission group for validations.
 * **collectAgentJobs**: bool: Flag for whether to collect agent jobs from source server.
 * **collectDatabases**: bool: Flag for whether to collect databases from source server.
 * **collectLogins**: bool: Flag for whether to collect logins from source server.
@@ -696,15 +696,15 @@
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
 * **resultType**: 'DatabaseLevelOutput' (Required):
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
-* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database. Possible values include: 'NotStarted', 'ValidatingInputs', 'CollectingObjects', 'DownloadingScript', 'GeneratingScript', 'UploadingScript', 'DeployingSchema', 'Completed', 'CompletedWithWarnings', 'Failed'
+* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database.
 
 ### LoginLevelOutput
 #### Properties
 * **defaultDatabase**: string (ReadOnly): The default database for the login.
 * **isEnabled**: bool (ReadOnly): The state of the login.
-* **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): The type of login. Possible values include: 'WindowsUser', 'WindowsGroup', 'SqlLogin', 'Certificate', 'AsymmetricKey', 'ExternalUser', 'ExternalGroup'
+* **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): The type of login.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): Login name.
 * **resultType**: 'LoginLevelOutput' (Required):
@@ -747,15 +747,15 @@
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
 * **resultType**: 'DatabaseLevelOutput' (Required):
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
-* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database. Possible values include: 'NotStarted', 'ValidatingInputs', 'CollectingObjects', 'DownloadingScript', 'GeneratingScript', 'UploadingScript', 'DeployingSchema', 'Completed', 'CompletedWithWarnings', 'Failed'
+* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database.
 
 ## LoginLevelOutput
 ### Properties
 * **defaultDatabase**: string (ReadOnly): The default database for the login.
 * **isEnabled**: bool (ReadOnly): The state of the login.
-* **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): The type of login. Possible values include: 'WindowsUser', 'WindowsGroup', 'SqlLogin', 'Certificate', 'AsymmetricKey', 'ExternalUser', 'ExternalGroup'
+* **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): The type of login.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): Login name.
 * **resultType**: 'LoginLevelOutput' (Required):
@@ -1075,7 +1075,7 @@
 ### Properties
 * **boostRUs**: int: The RU limit on a CosmosDB target that collections will be temporarily increased to (if lower) during the initial copy of a migration, from 10,000 to 1,000,000, or 0 to use the default boost (which is generally the maximum), or null to not boost the RUs. This setting has no effect on non-CosmosDB targets.
 * **databases**: [Dictionary<string,MongoDbDatabaseSettings>](#dictionarystringmongodbdatabasesettings) (Required): The databases on the source cluster to migrate to the target. The keys are the names of the databases.
-* **replication**: 'Continuous' | 'Disabled' | 'OneTime': Describes how changes will be replicated from the source to the target. The default is OneTime. Possible values include: 'Disabled', 'OneTime', 'Continuous'
+* **replication**: 'Continuous' | 'Disabled' | 'OneTime': Describes how changes will be replicated from the source to the target. The default is OneTime.
 * **source**: [MongoDbConnectionInfo](#mongodbconnectioninfo) (Required): Describes a connection to a MongoDB data source
 * **target**: [MongoDbConnectionInfo](#mongodbconnectioninfo) (Required): Describes a connection to a MongoDB data source
 * **throttling**: [MongoDbThrottlingSettings](#mongodbthrottlingsettings): Specifies resource limits for the migration
@@ -1125,7 +1125,7 @@
 * **lastReplayTime**: string: The timestamp of the last oplog event replayed, or null if no oplog event has been replayed yet
 * **name**: string: The name of the progress object. For a collection, this is the unqualified collection name. For a database, this is the database name. For the overall migration, this is null.
 * **qualifiedName**: string: The qualified name of the progress object. For a collection, this is the database-qualified name. For a database, this is the database name. For the overall migration, this is null.
-* **state**: 'Canceled' | 'Complete' | 'Copying' | 'Failed' | 'Finalizing' | 'Initializing' | 'InitialReplay' | 'NotStarted' | 'Replaying' | 'Restarting' | 'ValidatingInput' (Required): Possible values include: 'NotStarted', 'ValidatingInput', 'Initializing', 'Restarting', 'Copying', 'InitialReplay', 'Replaying', 'Finalizing', 'Complete', 'Canceled', 'Failed'
+* **state**: 'Canceled' | 'Complete' | 'Copying' | 'Failed' | 'Finalizing' | 'Initializing' | 'InitialReplay' | 'NotStarted' | 'Replaying' | 'Restarting' | 'ValidatingInput' (Required):
 * **totalBytes**: int (Required): The total number of document bytes on the source at the beginning of the Copying stage, or -1 if the total size was unknown
 * **totalDocuments**: int (Required): The total number of documents on the source at the beginning of the Copying stage, or -1 if the total count was unknown
 ### Collection
@@ -1153,7 +1153,7 @@
 * **code**: string: The non-localized, machine-readable code that describes the error or warning
 * **count**: int: The number of times the error or warning has occurred
 * **message**: string: The localized, human-readable message that describes the error or warning
-* **type**: 'Error' | 'ValidationError' | 'Warning': The type of error or warning. Possible values include: 'Error', 'ValidationError', 'Warning'
+* **type**: 'Error' | 'ValidationError' | 'Warning': The type of error or warning.
 
 ## Collection
 ### Properties
@@ -1240,9 +1240,9 @@
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
 * **resultType**: 'DatabaseLevelOutput' (Required):
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
-* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database. Possible values include: 'NotStarted', 'ValidatingInputs', 'CollectingObjects', 'DownloadingScript', 'GeneratingScript', 'UploadingScript', 'DeployingSchema', 'Completed', 'CompletedWithWarnings', 'Failed'
+* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database.
 
 ### ErrorOutput
 #### Properties
@@ -1256,7 +1256,7 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration.
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -1270,7 +1270,7 @@
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
 * **resultType**: 'TableLevelOutput' (Required):
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message
 
 
@@ -1298,7 +1298,7 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration.
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -1312,7 +1312,7 @@
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
 * **resultType**: 'TableLevelOutput' (Required):
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message
 
 ## Migrate.Oracle.AzureDbForPostgreSql.Sync
@@ -1378,9 +1378,9 @@
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
 * **resultType**: 'DatabaseLevelOutput' (Required):
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
-* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database. Possible values include: 'NotStarted', 'ValidatingInputs', 'CollectingObjects', 'DownloadingScript', 'GeneratingScript', 'UploadingScript', 'DeployingSchema', 'Completed', 'CompletedWithWarnings', 'Failed'
+* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database.
 
 ### ErrorOutput
 #### Properties
@@ -1394,7 +1394,7 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration.
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -1408,7 +1408,7 @@
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
 * **resultType**: 'TableLevelOutput' (Required):
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message
 
 
@@ -1472,9 +1472,9 @@
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
 * **resultType**: 'DatabaseLevelOutput' (Required):
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
-* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database. Possible values include: 'NotStarted', 'ValidatingInputs', 'CollectingObjects', 'DownloadingScript', 'GeneratingScript', 'UploadingScript', 'DeployingSchema', 'Completed', 'CompletedWithWarnings', 'Failed'
+* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database.
 
 ### ErrorOutput
 #### Properties
@@ -1488,7 +1488,7 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration.
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -1502,7 +1502,7 @@
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
 * **resultType**: 'TableLevelOutput' (Required):
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message
 
 
@@ -1576,9 +1576,9 @@
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
 * **resultType**: 'DatabaseLevelOutput' (Required):
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
-* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database. Possible values include: 'NotStarted', 'ValidatingInputs', 'CollectingObjects', 'DownloadingScript', 'GeneratingScript', 'UploadingScript', 'DeployingSchema', 'Completed', 'CompletedWithWarnings', 'Failed'
+* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database.
 
 ### ErrorOutput
 #### Properties
@@ -1592,7 +1592,7 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration.
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -1606,7 +1606,7 @@
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
 * **resultType**: 'TableLevelOutput' (Required):
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message
 
 
@@ -1621,7 +1621,7 @@
 * **aadDomainName**: string: Azure Active Directory domain name in the format of 'contoso.com' for federated Azure AD or 'contoso.onmicrosoft.com' for managed domain, required if and only if Windows logins are selected
 * **backupBlobShare**: [BlobShare](#blobshare) (Required): Blob container storage information.
 * **backupFileShare**: [FileShare](#fileshare): File share information with Path, Username, and Password.
-* **backupMode**: 'CreateBackup' | 'ExistingBackup': Backup Mode to specify whether to use existing backup or create new backup. If using existing backups, backup file paths are required to be provided in selectedDatabases. Possible values include: 'CreateBackup', 'ExistingBackup'
+* **backupMode**: 'CreateBackup' | 'ExistingBackup': Backup Mode to specify whether to use existing backup or create new backup. If using existing backups, backup file paths are required to be provided in selectedDatabases.
 * **selectedAgentJobs**: string[]: Agent Jobs to migrate.
 * **selectedDatabases**: [MigrateSqlServerSqlMIDatabaseInput](#migratesqlserversqlmidatabaseinput)[] (Required): Databases to migrate
 * **selectedLogins**: string[]: Logins to migrate.
@@ -1664,9 +1664,9 @@
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
 * **resultType**: 'DatabaseLevelOutput' (Required):
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
-* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database. Possible values include: 'NotStarted', 'ValidatingInputs', 'CollectingObjects', 'DownloadingScript', 'GeneratingScript', 'UploadingScript', 'DeployingSchema', 'Completed', 'CompletedWithWarnings', 'Failed'
+* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database.
 
 ### ErrorOutput
 #### Properties
@@ -1677,7 +1677,7 @@
 #### Properties
 * **defaultDatabase**: string (ReadOnly): The default database for the login.
 * **isEnabled**: bool (ReadOnly): The state of the login.
-* **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): The type of login. Possible values include: 'WindowsUser', 'WindowsGroup', 'SqlLogin', 'Certificate', 'AsymmetricKey', 'ExternalUser', 'ExternalGroup'
+* **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): The type of login.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): Login name.
 * **resultType**: 'LoginLevelOutput' (Required):
@@ -1689,7 +1689,7 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration.
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -1723,9 +1723,9 @@
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
 * **resultType**: 'DatabaseLevelOutput' (Required):
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
-* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database. Possible values include: 'NotStarted', 'ValidatingInputs', 'CollectingObjects', 'DownloadingScript', 'GeneratingScript', 'UploadingScript', 'DeployingSchema', 'Completed', 'CompletedWithWarnings', 'Failed'
+* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database.
 
 ### ErrorOutput
 #### Properties
@@ -1739,7 +1739,7 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration.
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -1783,9 +1783,9 @@
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
 * **resultType**: 'DatabaseLevelOutput' (Required):
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
-* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database. Possible values include: 'NotStarted', 'ValidatingInputs', 'CollectingObjects', 'DownloadingScript', 'GeneratingScript', 'UploadingScript', 'DeployingSchema', 'Completed', 'CompletedWithWarnings', 'Failed'
+* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database.
 
 ### ErrorOutput
 #### Properties
@@ -1799,7 +1799,7 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration.
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -1813,7 +1813,7 @@
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
 * **resultType**: 'TableLevelOutput' (Required):
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message
 
 
@@ -1831,9 +1831,9 @@
 
 ## SsisMigrationInfo
 ### Properties
-* **environmentOverwriteOption**: 'Ignore' | 'Overwrite': The overwrite option for the SSIS environment migration. Possible values include: 'Ignore', 'Overwrite'
-* **projectOverwriteOption**: 'Ignore' | 'Overwrite': The overwrite option for the SSIS project migration. Possible values include: 'Ignore', 'Overwrite'
-* **ssisStoreType**: 'SsisCatalog': The SSIS store type of source, only SSIS catalog is supported now in DMS. Possible values include: 'SsisCatalog'
+* **environmentOverwriteOption**: 'Ignore' | 'Overwrite': The overwrite option for the SSIS environment migration.
+* **projectOverwriteOption**: 'Ignore' | 'Overwrite': The overwrite option for the SSIS project migration.
+* **ssisStoreType**: 'SsisCatalog': The SSIS store type of source, only SSIS catalog is supported now in DMS.
 
 ## MigrateSsisTaskOutput
 * **Discriminator**: resultType
@@ -1846,7 +1846,7 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration.
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -1858,9 +1858,9 @@
 * **message**: string (ReadOnly): Migration progress message
 * **projectName**: string (ReadOnly): Name of the project
 * **resultType**: 'SsisProjectLevelOutput' (Required):
-* **stage**: 'Completed' | 'Initialize' | 'InProgress' | 'None' (ReadOnly): Stage of SSIS migration. Possible values include: 'None', 'Initialize', 'InProgress', 'Completed'
+* **stage**: 'Completed' | 'Initialize' | 'InProgress' | 'None' (ReadOnly): Stage of SSIS migration.
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 
 
 ## SsisProjectLevelOutput
@@ -1871,9 +1871,9 @@
 * **message**: string (ReadOnly): Migration progress message
 * **projectName**: string (ReadOnly): Name of the project
 * **resultType**: 'SsisProjectLevelOutput' (Required):
-* **stage**: 'Completed' | 'Initialize' | 'InProgress' | 'None' (ReadOnly): Stage of SSIS migration. Possible values include: 'None', 'Initialize', 'InProgress', 'Completed'
+* **stage**: 'Completed' | 'Initialize' | 'InProgress' | 'None' (ReadOnly): Stage of SSIS migration.
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 
 ## MigrateSchemaSqlServerSqlDb
 ### Properties
@@ -1896,7 +1896,7 @@
 ## SchemaMigrationSetting
 ### Properties
 * **fileId**: string: Resource Identifier of a file resource containing the uploaded schema file
-* **schemaOption**: 'ExtractFromSource' | 'None' | 'UseStorageFile': Option on how to migrate the schema. Possible values include: 'None', 'ExtractFromSource', 'UseStorageFile'
+* **schemaOption**: 'ExtractFromSource' | 'None' | 'UseStorageFile': Option on how to migrate the schema.
 
 ## MigrateSchemaSqlServerSqlDbTaskOutput
 * **Discriminator**: resultType
@@ -1912,9 +1912,9 @@
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
 * **resultType**: 'DatabaseLevelOutput' (Required):
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
-* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database. Possible values include: 'NotStarted', 'ValidatingInputs', 'CollectingObjects', 'DownloadingScript', 'GeneratingScript', 'UploadingScript', 'DeployingSchema', 'Completed', 'CompletedWithWarnings', 'Failed'
+* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): State of the schema migration for this database.
 
 ### ErrorOutput
 #### Properties
@@ -1928,7 +1928,7 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration. Possible values include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped', 'Stopped'
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Overall state of the schema migration.
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -2024,7 +2024,7 @@
 ### Properties
 * **backupBlobShare**: [BlobShare](#blobshare) (Required): Blob container storage information.
 * **backupFileShare**: [FileShare](#fileshare): File share information with Path, Username, and Password.
-* **backupMode**: 'CreateBackup' | 'ExistingBackup': Backup Mode to specify whether to use existing backup or create new backup. Possible values include: 'CreateBackup', 'ExistingBackup'
+* **backupMode**: 'CreateBackup' | 'ExistingBackup': Backup Mode to specify whether to use existing backup or create new backup.
 * **selectedDatabases**: [MigrateSqlServerSqlMIDatabaseInput](#migratesqlserversqlmidatabaseinput)[] (Required): Databases to migrate
 * **selectedLogins**: string[]: Logins to migrate
 * **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Information for connecting to SQL database server
@@ -2045,7 +2045,7 @@
 ### Properties
 * **backupFiles**: string[] (ReadOnly): The list of backup files for the current database.
 * **backupFinishDate**: string (ReadOnly): Date and time when the backup operation finished.
-* **backupType**: 'Database' | 'DifferentialDatabase' | 'DifferentialFile' | 'DifferentialPartial' | 'File' | 'Partial' | 'TransactionLog' (ReadOnly): Backup Type. Possible values include: 'Database', 'TransactionLog', 'File', 'DifferentialDatabase', 'DifferentialFile', 'Partial', 'DifferentialPartial'
+* **backupType**: 'Database' | 'DifferentialDatabase' | 'DifferentialFile' | 'DifferentialPartial' | 'File' | 'Partial' | 'TransactionLog' (ReadOnly): Backup Type.
 * **databaseName**: string (ReadOnly): Database name.
 * **familyCount**: int (ReadOnly): Number of files in the backup set.
 * **isCompressed**: bool (ReadOnly): Whether the backup set is compressed

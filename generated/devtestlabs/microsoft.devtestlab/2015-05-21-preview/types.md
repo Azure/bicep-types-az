@@ -94,7 +94,7 @@
 * **createdDate**: string: The creation date of the lab.
 * **defaultStorageAccount**: string: The lab's default storage account.
 * **defaultVirtualNetworkId**: string: The default virtual network identifier of the lab.
-* **labStorageType**: 'Premium' | 'Standard': The type of the lab storage. Possible values include: 'Standard', 'Premium'
+* **labStorageType**: 'Premium' | 'Standard': The type of the lab storage.
 * **provisioningState**: string: The provisioning status of the resource.
 * **storageAccounts**: string[]: The storage accounts of the lab.
 * **vaultName**: string: The name of the key vault of the lab.
@@ -111,8 +111,8 @@
 * **folderPath**: string: The folder path of the artifact source.
 * **provisioningState**: string: The provisioning status of the resource.
 * **securityToken**: string: The security token of the artifact source.
-* **sourceType**: 'GitHub' | 'VsoGit': The type of the artifact source. Possible values include: 'VsoGit', 'GitHub'
-* **status**: 'Disabled' | 'Enabled': The status of the artifact source. Possible values include: 'Enabled', 'Disabled'
+* **sourceType**: 'GitHub' | 'VsoGit': The type of the artifact source.
+* **status**: 'Disabled' | 'Enabled': The status of the artifact source.
 * **uri**: string: The URI of the artifact source.
 
 ## Dictionary<string,String>
@@ -125,7 +125,7 @@
 * **author**: string: The author of the custom image.
 * **creationDate**: string: The creation date of the custom image.
 * **description**: string: The description of the custom image.
-* **osType**: 'Linux' | 'None' | 'Windows': The OS type of the custom image. Possible values include: 'Windows', 'Linux', 'None'
+* **osType**: 'Linux' | 'None' | 'Windows': The OS type of the custom image.
 * **provisioningState**: string: The provisioning status of the resource.
 * **vhd**: [CustomImagePropertiesCustom](#customimagepropertiescustom): Properties for creating a custom image from a VHD.
 * **vm**: [CustomImagePropertiesFromVm](#customimagepropertiesfromvm): Properties for creating a custom image from a virtual machine.
@@ -144,11 +144,11 @@
 
 ## LinuxOsInfo
 ### Properties
-* **linuxOsState**: 'DeprovisionApplied' | 'DeprovisionRequested' | 'NonDeprovisioned': The state of the Linux OS. Possible values include: 'NonDeprovisioned', 'DeprovisionRequested', 'DeprovisionApplied'
+* **linuxOsState**: 'DeprovisionApplied' | 'DeprovisionRequested' | 'NonDeprovisioned': The state of the Linux OS.
 
 ## WindowsOsInfo
 ### Properties
-* **windowsOsState**: 'NonSysprepped' | 'SysprepApplied' | 'SysprepRequested': The state of the Windows OS. Possible values include: 'NonSysprepped', 'SysprepRequested', 'SysprepApplied'
+* **windowsOsState**: 'NonSysprepped' | 'SysprepApplied' | 'SysprepRequested': The state of the Windows OS.
 
 ## Dictionary<string,String>
 ### Properties
@@ -238,11 +238,11 @@
 ## PolicyProperties
 ### Properties
 * **description**: string: The description of the policy.
-* **evaluatorType**: 'AllowedValuesPolicy' | 'MaxValuePolicy': The evaluator type of the policy. Possible values include: 'AllowedValuesPolicy', 'MaxValuePolicy'
+* **evaluatorType**: 'AllowedValuesPolicy' | 'MaxValuePolicy': The evaluator type of the policy.
 * **factData**: string: The fact data of the policy.
-* **factName**: 'GalleryImage' | 'LabVmCount' | 'LabVmSize' | 'UserOwnedLabVmCount' | 'UserOwnedLabVmCountInSubnet': The fact name of the policy. Possible values include: 'UserOwnedLabVmCount', 'LabVmCount', 'LabVmSize', 'GalleryImage', 'UserOwnedLabVmCountInSubnet'
+* **factName**: 'GalleryImage' | 'LabVmCount' | 'LabVmSize' | 'UserOwnedLabVmCount' | 'UserOwnedLabVmCountInSubnet': The fact name of the policy.
 * **provisioningState**: string: The provisioning status of the resource.
-* **status**: 'Disabled' | 'Enabled': The status of the policy. Possible values include: 'Enabled', 'Disabled'
+* **status**: 'Disabled' | 'Enabled': The status of the policy.
 * **threshold**: string: The threshold of the policy.
 
 ## Dictionary<string,String>
@@ -255,8 +255,8 @@
 * **dailyRecurrence**: [DayDetails](#daydetails): Properties of a daily schedule.
 * **hourlyRecurrence**: [HourDetails](#hourdetails): Properties of an hourly schedule.
 * **provisioningState**: string: The provisioning status of the resource.
-* **status**: 'Disabled' | 'Enabled': The status of the schedule. Possible values include: 'Enabled', 'Disabled'
-* **taskType**: 'LabBillingTask' | 'LabVmsShutdownTask' | 'LabVmsStartupTask': The task type of the schedule. Possible values include: 'LabVmsShutdownTask', 'LabVmsStartupTask', 'LabBillingTask'
+* **status**: 'Disabled' | 'Enabled': The status of the schedule.
+* **taskType**: 'LabBillingTask' | 'LabVmsShutdownTask' | 'LabVmsStartupTask': The task type of the schedule.
 * **timeZoneId**: string: The time zone id.
 * **weeklyRecurrence**: [WeekDetails](#weekdetails): Properties of a weekly schedule.
 
@@ -293,7 +293,7 @@
 
 ## Subnet
 ### Properties
-* **allowPublicIp**: 'Allow' | 'Default' | 'Deny': Possible values include: 'Default', 'Deny', 'Allow'
+* **allowPublicIp**: 'Allow' | 'Default' | 'Deny':
 * **labSubnetName**: string:
 * **resourceId**: string:
 
@@ -301,8 +301,8 @@
 ### Properties
 * **labSubnetName**: string: The name given to the subnet within the lab.
 * **resourceId**: string: The resource identifier of the subnet.
-* **useInVmCreationPermission**: 'Allow' | 'Default' | 'Deny': Indicates whether this subnet can be used during virtual machine creation. Possible values include: 'Default', 'Deny', 'Allow'
-* **usePublicIpAddressPermission**: 'Allow' | 'Default' | 'Deny': Indicates whether public IP addresses can be assigned to virtual machines on this subnet. Possible values include: 'Default', 'Deny', 'Allow'
+* **useInVmCreationPermission**: 'Allow' | 'Default' | 'Deny': Indicates whether this subnet can be used during virtual machine creation.
+* **usePublicIpAddressPermission**: 'Allow' | 'Default' | 'Deny': Indicates whether public IP addresses can be assigned to virtual machines on this subnet.
 
 ## Dictionary<string,String>
 ### Properties

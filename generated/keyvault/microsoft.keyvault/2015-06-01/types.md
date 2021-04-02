@@ -38,7 +38,7 @@
 ## Sku
 ### Properties
 * **family**: string (Required): SKU family name
-* **name**: 'premium' | 'standard' (Required): SKU name to specify whether the key vault is a standard vault or a premium vault. Possible values include: 'standard', 'premium'
+* **name**: 'premium' | 'standard' (Required): SKU name to specify whether the key vault is a standard vault or a premium vault.
 
 ## Dictionary<string,String>
 ### Properties

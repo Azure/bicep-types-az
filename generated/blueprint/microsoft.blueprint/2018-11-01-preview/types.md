@@ -57,7 +57,7 @@
 ### Properties
 * **principalId**: string: Azure Active Directory principal ID associated with this Identity.
 * **tenantId**: string: ID of the Azure Active Directory.
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required): Type of the managed identity. Possible values include: 'None', 'SystemAssigned', 'UserAssigned'
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required): Type of the managed identity.
 * **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity): The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
 
 ## Dictionary<string,UserAssignedIdentity>
@@ -77,7 +77,7 @@
 * **displayName**: string: One-liner string explain this resource.
 * **locks**: [AssignmentLockSettings](#assignmentlocksettings): Defines how resources deployed by a blueprint assignment are locked.
 * **parameters**: [Dictionary<string,ParameterValue>](#dictionarystringparametervalue) (Required): Blueprint assignment parameter values.
-* **provisioningState**: 'canceled' | 'cancelling' | 'creating' | 'deleting' | 'deploying' | 'failed' | 'locking' | 'succeeded' | 'validating' | 'waiting' (ReadOnly): State of the blueprint assignment. Possible values include: 'creating', 'validating', 'waiting', 'deploying', 'cancelling', 'locking', 'succeeded', 'failed', 'canceled', 'deleting'
+* **provisioningState**: 'canceled' | 'cancelling' | 'creating' | 'deleting' | 'deploying' | 'failed' | 'locking' | 'succeeded' | 'validating' | 'waiting' (ReadOnly): State of the blueprint assignment.
 * **resourceGroups**: [Dictionary<string,ResourceGroupValue>](#dictionarystringresourcegroupvalue) (Required): Names and locations of resource group placeholders.
 * **scope**: string: The target subscription scope of the blueprint assignment (format: '/subscriptions/{subscriptionId}'). For management group level assignments, the property is required.
 * **status**: [AssignmentStatus](#assignmentstatus) (ReadOnly): The status of a blueprint assignment. This field is readonly.
@@ -86,7 +86,7 @@
 ### Properties
 * **excludedActions**: string[]: List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to 'AllResourcesReadOnly', then the following actions are automatically appended to 'excludedActions': '*/read', 'Microsoft.Network/virtualNetworks/subnets/join/action' and 'Microsoft.Authorization/locks/delete'. If the lock mode is set to 'AllResourcesDoNotDelete', then the following actions are automatically appended to 'excludedActions': 'Microsoft.Authorization/locks/delete'. Duplicate actions will get removed.
 * **excludedPrincipals**: string[]: List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.
-* **mode**: 'AllResourcesDoNotDelete' | 'AllResourcesReadOnly' | 'None': Lock mode. Possible values include: 'None', 'AllResourcesReadOnly', 'AllResourcesDoNotDelete'
+* **mode**: 'AllResourcesDoNotDelete' | 'AllResourcesReadOnly' | 'None': Lock mode.
 
 ## Dictionary<string,ParameterValue>
 ### Properties
@@ -132,7 +132,7 @@
 * **parameters**: [Dictionary<string,ParameterDefinition>](#dictionarystringparameterdefinition): Parameters required by this blueprint definition.
 * **resourceGroups**: [Dictionary<string,ResourceGroupDefinition>](#dictionarystringresourcegroupdefinition): Resource group placeholders defined by this blueprint definition.
 * **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly): The status of the blueprint. This field is readonly.
-* **targetScope**: 'managementGroup' | 'subscription': The scope where this blueprint definition can be assigned. Possible values include: 'subscription', 'managementGroup'
+* **targetScope**: 'managementGroup' | 'subscription': The scope where this blueprint definition can be assigned.
 * **versions**: any: Published versions of this blueprint definition.
 
 ## Dictionary<string,ParameterDefinition>
@@ -145,7 +145,7 @@
 * **allowedValues**: any[]: Array of allowed values for this parameter.
 * **defaultValue**: any: Default Value for this parameter.
 * **metadata**: [ParameterDefinitionMetadata](#parameterdefinitionmetadata): User-friendly properties for this parameter.
-* **type**: 'array' | 'bool' | 'int' | 'object' | 'secureObject' | 'secureString' | 'string' (Required): Allowed data types for Resource Manager template parameters. Possible values include: 'string', 'array', 'bool', 'int', 'object', 'secureObject', 'secureString'
+* **type**: 'array' | 'bool' | 'int' | 'object' | 'secureObject' | 'secureString' | 'string' (Required): Allowed data types for Resource Manager template parameters.
 
 ## ParameterDefinitionMetadata
 ### Properties
@@ -237,7 +237,7 @@
 * **parameters**: [Dictionary<string,ParameterDefinition>](#dictionarystringparameterdefinition): Parameters required by this blueprint definition.
 * **resourceGroups**: [Dictionary<string,ResourceGroupDefinition>](#dictionarystringresourcegroupdefinition): Resource group placeholders defined by this blueprint definition.
 * **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly): The status of the blueprint. This field is readonly.
-* **targetScope**: 'managementGroup' | 'subscription': The scope where this blueprint definition can be assigned. Possible values include: 'subscription', 'managementGroup'
+* **targetScope**: 'managementGroup' | 'subscription': The scope where this blueprint definition can be assigned.
 
 ## Dictionary<string,ParameterDefinition>
 ### Properties

@@ -6,7 +6,7 @@
 * **apiVersion**: '2021-01-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
-* **kind**: 'GlobalDocumentDB' | 'MongoDB' | 'Parse': Indicates the type of database account. This can only be set at database account creation. Possible values include: 'GlobalDocumentDB', 'MongoDB', 'Parse'
+* **kind**: 'GlobalDocumentDB' | 'MongoDB' | 'Parse': Indicates the type of database account. This can only be set at database account creation.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseAccountCreateUpdateProperties](#databaseaccountcreateupdateproperties) (Required): Properties to create and update Azure Cosmos DB database accounts.
@@ -266,7 +266,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the system assigned identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned': The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service. Possible values include: 'SystemAssigned', 'UserAssigned', 'SystemAssigned,UserAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned': The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
 * **userAssignedIdentities**: [Dictionary<string,Schemas131UserAssignedIdentitiesValue>](#dictionarystringschemas131userassignedidentitiesvalue): The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## Dictionary<string,Schemas131UserAssignedIdentitiesValue>
@@ -284,7 +284,7 @@
 * **apiProperties**: [ApiProperties](#apiproperties):
 * **backupPolicy**: [BackupPolicy](#backuppolicy): The object representing the policy for taking backups on an account.
 * **capabilities**: [Capability](#capability)[]: List of Cosmos DB capabilities for the account
-* **connectorOffer**: 'Small': The cassandra connector offer type for the Cosmos DB database C* account. Possible values include: 'Small'
+* **connectorOffer**: 'Small': The cassandra connector offer type for the Cosmos DB database C* account.
 * **consistencyPolicy**: [ConsistencyPolicy](#consistencypolicy): The consistency policy for the Cosmos DB database account.
 * **cors**: [CorsPolicy](#corspolicy)[]: The CORS policy for the Cosmos DB database account.
 * **databaseAccountOfferType**: string (Required): The offer type for the database
@@ -300,18 +300,18 @@
 * **isVirtualNetworkFilterEnabled**: bool: Flag to indicate whether to enable/disable Virtual Network ACL rules.
 * **keyVaultKeyUri**: string: The URI of the key vault
 * **locations**: [Location](#location)[] (Required): An array that contains the georeplication locations enabled for the Cosmos DB account.
-* **networkAclBypass**: 'AzureServices' | 'None': Indicates what services are allowed to bypass firewall checks. Possible values include: 'None', 'AzureServices'
+* **networkAclBypass**: 'AzureServices' | 'None': Indicates what services are allowed to bypass firewall checks.
 * **networkAclBypassResourceIds**: string[]: An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of Private Endpoint Connections configured for the Cosmos DB account.
 * **provisioningState**: string (ReadOnly): The status of the Cosmos DB account at the time the operation was called. The status can be one of following. 'Creating' – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. 'Succeeded' – the Cosmos DB account is active for use. 'Updating' – the Cosmos DB account is being updated. 'Deleting' – the Cosmos DB account is being deleted. 'Failed' – the Cosmos DB account failed creation. 'DeletionFailed' – the Cosmos DB account deletion failed.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether requests from Public Network are allowed. Possible values include: 'Enabled', 'Disabled'
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether requests from Public Network are allowed.
 * **readLocations**: [Location](#location)[] (ReadOnly): An array that contains of the read locations enabled for the Cosmos DB account.
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: List of Virtual Network ACL rules configured for the Cosmos DB account.
 * **writeLocations**: [Location](#location)[] (ReadOnly): An array that contains the write location for the Cosmos DB account.
 
 ## ApiProperties
 ### Properties
-* **serverVersion**: '3.2' | '3.6' | '4.0': Describes the ServerVersion of an a MongoDB account. Possible values include: '3.2', '3.6', '4.0'
+* **serverVersion**: '3.2' | '3.6' | '4.0': Describes the ServerVersion of an a MongoDB account.
 
 ## BackupPolicy
 * **Discriminator**: type
@@ -346,7 +346,7 @@
 
 ## ConsistencyPolicy
 ### Properties
-* **defaultConsistencyLevel**: 'BoundedStaleness' | 'ConsistentPrefix' | 'Eventual' | 'Session' | 'Strong' (Required): The default consistency level and configuration settings of the Cosmos DB account. Possible values include: 'Eventual', 'Session', 'BoundedStaleness', 'Strong', 'ConsistentPrefix'
+* **defaultConsistencyLevel**: 'BoundedStaleness' | 'ConsistentPrefix' | 'Eventual' | 'Session' | 'Strong' (Required): The default consistency level and configuration settings of the Cosmos DB account.
 * **maxIntervalInSeconds**: int: When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
 * **maxStalenessPrefix**: int: When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
 
@@ -551,7 +551,7 @@
 ### Properties
 * **conflictResolutionPath**: string (WriteOnly): The conflict resolution path in the case of LastWriterWins mode.
 * **conflictResolutionProcedure**: string (WriteOnly): The procedure to resolve conflicts in the case of custom mode.
-* **mode**: 'Custom' | 'LastWriterWins' (WriteOnly): Indicates the conflict resolution mode. Possible values include: 'LastWriterWins', 'Custom'
+* **mode**: 'Custom' | 'LastWriterWins' (WriteOnly): Indicates the conflict resolution mode.
 
 ## IndexingPolicy
 ### Properties
@@ -559,12 +559,12 @@
 * **compositeIndexes**: [CompositePath](#compositepath)[][] (WriteOnly): List of composite path list
 * **excludedPaths**: [ExcludedPath](#excludedpath)[] (WriteOnly): List of paths to exclude from indexing
 * **includedPaths**: [IncludedPath](#includedpath)[] (WriteOnly): List of paths to include in the indexing
-* **indexingMode**: 'consistent' | 'lazy' | 'none' (WriteOnly): Indicates the indexing mode. Possible values include: 'consistent', 'lazy', 'none'
+* **indexingMode**: 'consistent' | 'lazy' | 'none' (WriteOnly): Indicates the indexing mode.
 * **spatialIndexes**: [SpatialSpec](#spatialspec)[] (WriteOnly): List of spatial specifics
 
 ## CompositePath
 ### Properties
-* **order**: 'ascending' | 'descending' (WriteOnly): Sort order for composite paths. Possible values include: 'ascending', 'descending'
+* **order**: 'ascending' | 'descending' (WriteOnly): Sort order for composite paths.
 * **path**: string (WriteOnly): The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
 
 ## ExcludedPath
@@ -578,8 +578,8 @@
 
 ## Indexes
 ### Properties
-* **dataType**: 'LineString' | 'MultiPolygon' | 'Number' | 'Point' | 'Polygon' | 'String' (WriteOnly): The datatype for which the indexing behavior is applied to. Possible values include: 'String', 'Number', 'Point', 'Polygon', 'LineString', 'MultiPolygon'
-* **kind**: 'Hash' | 'Range' | 'Spatial' (WriteOnly): Indicates the type of index. Possible values include: 'Hash', 'Range', 'Spatial'
+* **dataType**: 'LineString' | 'MultiPolygon' | 'Number' | 'Point' | 'Polygon' | 'String' (WriteOnly): The datatype for which the indexing behavior is applied to.
+* **kind**: 'Hash' | 'Range' | 'Spatial' (WriteOnly): Indicates the type of index.
 * **precision**: int (WriteOnly): The precision of the index. -1 is maximum precision.
 
 ## SpatialSpec
@@ -589,7 +589,7 @@
 
 ## ContainerPartitionKey
 ### Properties
-* **kind**: 'Hash' | 'MultiHash' | 'Range' (WriteOnly): Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create. Possible values include: 'Hash', 'Range', 'MultiHash'
+* **kind**: 'Hash' | 'MultiHash' | 'Range' (WriteOnly): Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create.
 * **paths**: string[] (WriteOnly): List of paths using which data within the container can be partitioned
 * **systemKey**: bool (ReadOnly, WriteOnly): Indicates if the container is using a system generated partition key
 * **version**: int (WriteOnly): Indicates the version of the partition key definition
@@ -757,8 +757,8 @@
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
 * **id**: string (Required, WriteOnly): Name of the Cosmos DB SQL trigger
 * **principalId**: string (ReadOnly): The principal id of user assigned identity.
-* **triggerOperation**: 'All' | 'Create' | 'Delete' | 'Replace' | 'Update' (WriteOnly): The operation the trigger is associated with. Possible values include: 'All', 'Create', 'Update', 'Delete', 'Replace'
-* **triggerType**: 'Post' | 'Pre' (WriteOnly): Type of the Trigger. Possible values include: 'Pre', 'Post'
+* **triggerOperation**: 'All' | 'Create' | 'Delete' | 'Replace' | 'Update' (WriteOnly): The operation the trigger is associated with.
+* **triggerType**: 'Post' | 'Pre' (WriteOnly): Type of the Trigger.
 
 ## Dictionary<string,String>
 ### Properties

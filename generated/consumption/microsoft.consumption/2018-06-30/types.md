@@ -13,11 +13,11 @@
 ## BudgetProperties
 ### Properties
 * **amount**: int (Required): The total amount of cost to track with the budget
-* **category**: 'Cost' | 'Usage' (Required): The category of the budget, whether the budget tracks cost or usage. Possible values include: 'Cost', 'Usage'
+* **category**: 'Cost' | 'Usage' (Required): The category of the budget, whether the budget tracks cost or usage.
 * **currentSpend**: [CurrentSpend](#currentspend) (ReadOnly): The current amount of cost which is being tracked for a budget.
 * **filters**: [Filters](#filters): May be used to filter budgets by resource group, resource, or meter.
 * **notifications**: [Dictionary<string,Notification>](#dictionarystringnotification): Dictionary of notifications associated with the budget. Budget can have up to five notifications.
-* **timeGrain**: 'Annually' | 'Monthly' | 'Quarterly' (Required): The time covered by a budget. Tracking of the amount will be reset based on the time grain. Possible values include: 'Monthly', 'Quarterly', 'Annually'
+* **timeGrain**: 'Annually' | 'Monthly' | 'Quarterly' (Required): The time covered by a budget. Tracking of the amount will be reset based on the time grain.
 * **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required): The start and end date for a budget.
 
 ## CurrentSpend
@@ -48,7 +48,7 @@
 * **contactGroups**: string[]: Action groups to send the budget notification to when the threshold is exceeded.
 * **contactRoles**: string[]: Contact roles to send the budget notification to when the threshold is exceeded.
 * **enabled**: bool (Required): The notification is enabled or not.
-* **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' (Required): The comparison operator. Possible values include: 'EqualTo', 'GreaterThan', 'GreaterThanOrEqualTo'
+* **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' (Required): The comparison operator.
 * **threshold**: int (Required): Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.
 
 ## BudgetTimePeriod

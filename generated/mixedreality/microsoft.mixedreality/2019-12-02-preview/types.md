@@ -28,7 +28,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned': The identity type. Possible values include: 'SystemAssigned'
+* **type**: 'SystemAssigned': The identity type.
 
 ## MixedRealityAccountProperties
 ### Properties

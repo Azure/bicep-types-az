@@ -37,10 +37,10 @@
 ## MaintenanceConfigurationProperties
 ### Properties
 * **extensionProperties**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets extensionProperties of the maintenanceConfiguration
-* **maintenanceScope**: 'All' | 'Extension' | 'Host' | 'InGuestPatch' | 'InResource' | 'OSImage' | 'Resource' | 'SQLDB' | 'SQLManagedInstance': Gets or sets maintenanceScope of the configuration. Possible values include: 'All', 'Host', 'Resource', 'InResource', 'OSImage', 'Extension', 'InGuestPatch', 'SQLDB', 'SQLManagedInstance'
+* **maintenanceScope**: 'All' | 'Extension' | 'Host' | 'InGuestPatch' | 'InResource' | 'OSImage' | 'Resource' | 'SQLDB' | 'SQLManagedInstance': Gets or sets maintenanceScope of the configuration.
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Definition of a MaintenanceWindow
 * **namespace**: string: Gets or sets namespace of the resource
-* **visibility**: 'Custom' | 'Public': Gets or sets the visibility of the configuration. Possible values include: 'Custom', 'Public'
+* **visibility**: 'Custom' | 'Public': Gets or sets the visibility of the configuration.
 
 ## Dictionary<string,String>
 ### Properties

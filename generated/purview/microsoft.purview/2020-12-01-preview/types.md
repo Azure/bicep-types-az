@@ -26,7 +26,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): Service principal object Id
 * **tenantId**: string (ReadOnly): Tenant Id
-* **type**: 'SystemAssigned': Identity Type. Possible values include: 'SystemAssigned'
+* **type**: 'SystemAssigned': Identity Type.
 
 ## AccountProperties
 ### Properties
@@ -38,8 +38,8 @@
 * **friendlyName**: string (ReadOnly): Gets or sets the friendly name.
 * **managedResources**: [schemas:3_managedResources](#schemas3managedresources) (ReadOnly): Gets the resource identifiers of the managed resources.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Gets the private endpoint connections information.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'SoftDeleted' | 'SoftDeleting' | 'Succeeded' | 'Unknown' (ReadOnly): Gets or sets the state of the provisioning. Possible values include: 'Unknown', 'Creating', 'Moving', 'Deleting', 'SoftDeleting', 'SoftDeleted', 'Failed', 'Succeeded'
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'NotSpecified': Gets or sets the public network access. Possible values include: 'NotSpecified', 'Enabled', 'Disabled'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'SoftDeleted' | 'SoftDeleting' | 'Succeeded' | 'Unknown' (ReadOnly): Gets or sets the state of the provisioning.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'NotSpecified': Gets or sets the public network access.
 
 ## CloudConnectors
 ### Properties
@@ -79,12 +79,12 @@ Configured in AWS to allow use of the role arn used for scanning
 ### Properties
 * **actionsRequired**: string: The required actions.
 * **description**: string: The description.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Unknown': The status. Possible values include: 'Unknown', 'Pending', 'Approved', 'Rejected', 'Disconnected'
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Unknown': The status.
 
 ## AccountSku
 ### Properties
-* **capacity**: int: Gets or sets the sku capacity. Possible values include: 4, 16
-* **name**: 'Standard': Gets or sets the sku name. Possible values include: 'Standard'
+* **capacity**: int: Gets or sets the sku capacity.
+* **name**: 'Standard': Gets or sets the sku name.
 
 ## Dictionary<string,String>
 ### Properties

@@ -91,7 +91,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' (Required): The identity type. Possible values include: 'None', 'SystemAssigned'
+* **type**: 'None' | 'SystemAssigned' (Required): The identity type.
 * **userAssignedIdentities**: [Dictionary<string,Schemas62UserAssignedIdentitiesValue>](#dictionarystringschemas62userassignedidentitiesvalue): The list of user identities associated with the Kusto cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## Dictionary<string,Schemas62UserAssignedIdentitiesValue>
@@ -111,8 +111,8 @@
 * **enableStreamingIngest**: bool: A boolean value that indicates if the streaming ingest is enabled.
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): Properties of the key vault.
 * **optimizedAutoscale**: [OptimizedAutoscale](#optimizedautoscale): A class that contains the optimized auto scale definition.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource. Possible values include: 'Running', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Moving'
-* **state**: 'Creating' | 'Deleted' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unavailable' | 'Updating' (ReadOnly): The state of the resource. Possible values include: 'Creating', 'Unavailable', 'Running', 'Deleting', 'Deleted', 'Stopping', 'Stopped', 'Starting', 'Updating'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
+* **state**: 'Creating' | 'Deleted' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unavailable' | 'Updating' (ReadOnly): The state of the resource.
 * **stateReason**: string (ReadOnly): The reason for the cluster's current state.
 * **trustedExternalTenants**: [TrustedExternalTenant](#trustedexternaltenant)[]: The cluster's external tenants.
 * **uri**: string (ReadOnly): The cluster URI.
@@ -144,8 +144,8 @@
 ## AzureSku
 ### Properties
 * **capacity**: int: The number of instances of the cluster.
-* **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_L16s' | 'Standard_L4s' | 'Standard_L8s' (Required): SKU name. Possible values include: 'Standard_DS13_v2+1TB_PS', 'Standard_DS13_v2+2TB_PS', 'Standard_DS14_v2+3TB_PS', 'Standard_DS14_v2+4TB_PS', 'Standard_D13_v2', 'Standard_D14_v2', 'Standard_L8s', 'Standard_L16s', 'Standard_D11_v2', 'Standard_D12_v2', 'Standard_L4s', 'Dev(No SLA)_Standard_D11_v2'
-* **tier**: 'Basic' | 'Standard' (Required): SKU tier. Possible values include: 'Basic', 'Standard'
+* **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_L16s' | 'Standard_L4s' | 'Standard_L8s' (Required): SKU name.
+* **tier**: 'Basic' | 'Standard' (Required): SKU tier.
 
 ## Dictionary<string,String>
 ### Properties
@@ -157,8 +157,8 @@
 * **attachedDatabaseNames**: string[] (ReadOnly): The list of databases from the clusterResourceId which are currently attached to the cluster.
 * **clusterResourceId**: string (Required): The resource id of the cluster where the databases you would like to attach reside.
 * **databaseName**: string (Required): The name of the database which you would like to attach, use * if you want to follow all current and future databases.
-* **defaultPrincipalsModificationKind**: 'None' | 'Replace' | 'Union' (Required): The default principals modification kind. Possible values include: 'Union', 'Replace', 'None'
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource. Possible values include: 'Running', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Moving'
+* **defaultPrincipalsModificationKind**: 'None' | 'Replace' | 'Union' (Required): The default principals modification kind.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 
 ## ReadOnlyFollowing
 ### Properties
@@ -170,8 +170,8 @@
 * **attachedDatabaseConfigurationName**: string (ReadOnly): The name of the attached database configuration cluster
 * **hotCachePeriod**: string: The time the data should be kept in cache for fast queries in TimeSpan.
 * **leaderClusterResourceId**: string (ReadOnly): The name of the leader cluster
-* **principalsModificationKind**: 'None' | 'Replace' | 'Union' (ReadOnly): The principals modification kind of the database. Possible values include: 'Union', 'Replace', 'None'
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource. Possible values include: 'Running', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Moving'
+* **principalsModificationKind**: 'None' | 'Replace' | 'Union' (ReadOnly): The principals modification kind of the database.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **softDeletePeriod**: string (ReadOnly): The time the data should be kept before it stops being accessible to queries in TimeSpan.
 * **statistics**: [DatabaseStatistics](#databasestatistics): A class that contains database statistics information.
 
@@ -188,7 +188,7 @@
 ### Properties
 * **hotCachePeriod**: string: The time the data should be kept in cache for fast queries in TimeSpan.
 * **isFollowed**: string (ReadOnly): Indicates whether the database is followed.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource. Possible values include: 'Running', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Moving'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **softDeletePeriod**: string: The time the data should be kept before it stops being accessible to queries in TimeSpan.
 * **statistics**: [DatabaseStatistics](#databasestatistics): A class that contains database statistics information.
 
@@ -200,7 +200,7 @@
 ## EventGridConnectionProperties
 ### Properties
 * **consumerGroup**: string (Required): The event hub consumer group.
-* **dataFormat**: 'AVRO' | 'CSV' | 'JSON' | 'MULTIJSON' | 'ORC' | 'PARQUET' | 'PSV' | 'RAW' | 'SCSV' | 'SINGLEJSON' | 'SOHSV' | 'TSV' | 'TSVE' | 'TXT' (Required): The data format of the message. Optionally the data format can be added to each message. Possible values include: 'MULTIJSON', 'JSON', 'CSV', 'TSV', 'SCSV', 'SOHSV', 'PSV', 'TXT', 'RAW', 'SINGLEJSON', 'AVRO', 'TSVE', 'PARQUET', 'ORC'
+* **dataFormat**: 'AVRO' | 'CSV' | 'JSON' | 'MULTIJSON' | 'ORC' | 'PARQUET' | 'PSV' | 'RAW' | 'SCSV' | 'SINGLEJSON' | 'SOHSV' | 'TSV' | 'TSVE' | 'TXT' (Required): The data format of the message. Optionally the data format can be added to each message.
 * **eventHubResourceId**: string (Required): The resource ID where the event grid is configured to send events.
 * **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
 * **storageAccountResourceId**: string (Required): The resource ID of the storage account where the data resides.
@@ -213,9 +213,9 @@
 
 ## EventHubConnectionProperties
 ### Properties
-* **compression**: 'GZip' | 'None': The event hub messages compression type. Possible values include: 'None', 'GZip'
+* **compression**: 'GZip' | 'None': The event hub messages compression type.
 * **consumerGroup**: string (Required): The event hub consumer group.
-* **dataFormat**: 'AVRO' | 'CSV' | 'JSON' | 'MULTIJSON' | 'ORC' | 'PARQUET' | 'PSV' | 'RAW' | 'SCSV' | 'SINGLEJSON' | 'SOHSV' | 'TSV' | 'TSVE' | 'TXT': The data format of the message. Optionally the data format can be added to each message. Possible values include: 'MULTIJSON', 'JSON', 'CSV', 'TSV', 'SCSV', 'SOHSV', 'PSV', 'TXT', 'RAW', 'SINGLEJSON', 'AVRO', 'TSVE', 'PARQUET', 'ORC'
+* **dataFormat**: 'AVRO' | 'CSV' | 'JSON' | 'MULTIJSON' | 'ORC' | 'PARQUET' | 'PSV' | 'RAW' | 'SCSV' | 'SINGLEJSON' | 'SOHSV' | 'TSV' | 'TSVE' | 'TXT': The data format of the message. Optionally the data format can be added to each message.
 * **eventHubResourceId**: string (Required): The resource ID of the event hub to be used to create a data connection.
 * **eventSystemProperties**: string[]: System properties of the event hub
 * **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
@@ -229,7 +229,7 @@
 ## IotHubConnectionProperties
 ### Properties
 * **consumerGroup**: string (Required): The iot hub consumer group.
-* **dataFormat**: 'AVRO' | 'CSV' | 'JSON' | 'MULTIJSON' | 'ORC' | 'PARQUET' | 'PSV' | 'RAW' | 'SCSV' | 'SINGLEJSON' | 'SOHSV' | 'TSV' | 'TSVE' | 'TXT': The data format of the message. Optionally the data format can be added to each message. Possible values include: 'MULTIJSON', 'JSON', 'CSV', 'TSV', 'SCSV', 'SOHSV', 'PSV', 'TXT', 'RAW', 'SINGLEJSON', 'AVRO', 'TSVE', 'PARQUET', 'ORC'
+* **dataFormat**: 'AVRO' | 'CSV' | 'JSON' | 'MULTIJSON' | 'ORC' | 'PARQUET' | 'PSV' | 'RAW' | 'SCSV' | 'SINGLEJSON' | 'SOHSV' | 'TSV' | 'TSVE' | 'TXT': The data format of the message. Optionally the data format can be added to each message.
 * **eventSystemProperties**: string[]: System properties of the iot hub
 * **iotHubResourceId**: string (Required): The resource ID of the Iot hub to be used to create a data connection.
 * **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
@@ -240,9 +240,9 @@
 ### Properties
 * **principalId**: string (Required): The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.
 * **principalName**: string (ReadOnly): The principal name
-* **principalType**: 'App' | 'Group' | 'User' (Required): Principal type. Possible values include: 'App', 'Group', 'User'
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource. Possible values include: 'Running', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Moving'
-* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' (Required): Database principal role. Possible values include: 'Admin', 'Ingestor', 'Monitor', 'User', 'UnrestrictedViewers', 'Viewer'
+* **principalType**: 'App' | 'Group' | 'User' (Required): Principal type.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
+* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' (Required): Database principal role.
 * **tenantId**: string: The tenant id of the principal
 * **tenantName**: string (ReadOnly): The tenant name of the principal
 
@@ -250,9 +250,9 @@
 ### Properties
 * **principalId**: string (Required): The principal ID assigned to the cluster principal. It can be a user email, application ID, or security group name.
 * **principalName**: string (ReadOnly): The principal name
-* **principalType**: 'App' | 'Group' | 'User' (Required): Principal type. Possible values include: 'App', 'Group', 'User'
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource. Possible values include: 'Running', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Moving'
-* **role**: 'AllDatabasesAdmin' | 'AllDatabasesViewer' (Required): Cluster principal role. Possible values include: 'AllDatabasesAdmin', 'AllDatabasesViewer'
+* **principalType**: 'App' | 'Group' | 'User' (Required): Principal type.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
+* **role**: 'AllDatabasesAdmin' | 'AllDatabasesViewer' (Required): Cluster principal role.
 * **tenantId**: string: The tenant id of the principal
 * **tenantName**: string (ReadOnly): The tenant name of the principal
 

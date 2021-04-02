@@ -20,8 +20,8 @@
 * **studioEndpoint**: string (ReadOnly): The regional endpoint for the machine learning studio service which hosts this workspace.
 * **userStorageAccountId**: string (Required): The fully qualified arm id of the storage account associated with this workspace.
 * **workspaceId**: string (ReadOnly): The immutable id associated with this workspace.
-* **workspaceState**: 'Deleted' | 'Disabled' | 'Enabled' | 'Migrated' | 'Registered' | 'Unregistered' | 'Updated' (ReadOnly): The current state of workspace resource. Possible values include: 'Deleted', 'Enabled', 'Disabled', 'Migrated', 'Updated', 'Registered', 'Unregistered'
-* **workspaceType**: 'Anonymous' | 'Free' | 'PaidPremium' | 'PaidStandard' | 'Production' (ReadOnly): The type of this workspace. Possible values include: 'Production', 'Free', 'Anonymous', 'PaidStandard', 'PaidPremium'
+* **workspaceState**: 'Deleted' | 'Disabled' | 'Enabled' | 'Migrated' | 'Registered' | 'Unregistered' | 'Updated' (ReadOnly): The current state of workspace resource.
+* **workspaceType**: 'Anonymous' | 'Free' | 'PaidPremium' | 'PaidStandard' | 'Production' (ReadOnly): The type of this workspace.
 
 ## Sku
 ### Properties

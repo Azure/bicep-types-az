@@ -25,7 +25,7 @@
 ## schemas:0_properties
 ### Properties
 * **hostName**: string (ReadOnly): API host name.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Succeeded', 'Deleted', 'Failed', 'Canceled', 'Accepted', 'Creating'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state.
 
 ## Dictionary<string,String>
 ### Properties
@@ -36,7 +36,7 @@
 ### Properties
 * **accountName**: string (ReadOnly): Parent Device Update Account name which Instance belongs to.
 * **iotHubs**: [IotHubSettings](#iothubsettings)[]: List of IoT Hubs associated with the account.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Succeeded', 'Deleted', 'Failed', 'Canceled', 'Accepted', 'Creating'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state.
 
 ## IotHubSettings
 ### Properties

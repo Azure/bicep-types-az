@@ -661,7 +661,7 @@ This is valid for all deployment slots in an app.
 * **issuer**: string (ReadOnly): Certificate issuer.
 * **keyVaultId**: string: Key Vault Csm resource Id.
 * **keyVaultSecretName**: string: Key Vault secret name.
-* **keyVaultSecretStatus**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'ExternalPrivateKey' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder' (ReadOnly): Status of the Key Vault secret. Possible values include: 'Initialized', 'WaitingOnCertificateOrder', 'Succeeded', 'CertificateOrderFailed', 'OperationNotPermittedOnKeyVault', 'AzureServiceUnauthorizedToAccessKeyVault', 'KeyVaultDoesNotExist', 'KeyVaultSecretDoesNotExist', 'UnknownError', 'ExternalPrivateKey', 'Unknown'
+* **keyVaultSecretStatus**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'ExternalPrivateKey' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder' (ReadOnly): Status of the Key Vault secret.
 * **password**: string (Required): Certificate password.
 * **pfxBlob**: array: Pfx blob.
 * **publicKeyHash**: string (ReadOnly): Public key hash.
@@ -700,7 +700,7 @@ This is valid for all deployment slots in an app.
 * **environmentStatus**: string (ReadOnly): Detailed message about with results of the last check of the App Service Environment.
 * **frontEndScaleFactor**: int: Scale factor for front-ends.
 * **hasLinuxWorkers**: bool: Flag that displays whether an ASE has linux workers or not
-* **internalLoadBalancingMode**: 'None' | 'Publishing' | 'Web': Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values include: 'None', 'Web', 'Publishing'
+* **internalLoadBalancingMode**: 'None' | 'Publishing' | 'Web': Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
 * **ipsslAddressCount**: int: Number of IP SSL addresses reserved for the App Service Environment.
 * **lastAction**: string (ReadOnly): Last deployment action on the App Service Environment.
 * **lastActionResult**: string (ReadOnly): Result of the last deployment action on the App Service Environment.
@@ -710,11 +710,11 @@ This is valid for all deployment slots in an app.
 * **multiSize**: string: Front-end VM size, e.g. "Medium", "Large".
 * **name**: string (Required): Name of the App Service Environment.
 * **networkAccessControlList**: [NetworkAccessControlEntry](#networkaccesscontrolentry)[]: Access control list for controlling traffic to the App Service Environment.
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Provisioning state of the App Service Environment. Possible values include: 'Succeeded', 'Failed', 'Canceled', 'InProgress', 'Deleting'
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Provisioning state of the App Service Environment.
 * **resourceGroup**: string (ReadOnly): Resource group of the App Service Environment.
 * **sslCertKeyVaultId**: string: Key Vault ID for ILB App Service Environment default SSL certificate
 * **sslCertKeyVaultSecretName**: string: Key Vault Secret Name for ILB App Service Environment default SSL certificate
-* **status**: 'Deleting' | 'Preparing' | 'Ready' | 'Scaling' (ReadOnly): Current status of the App Service Environment. Possible values include: 'Preparing', 'Ready', 'Scaling', 'Deleting'
+* **status**: 'Deleting' | 'Preparing' | 'Ready' | 'Scaling' (ReadOnly): Current status of the App Service Environment.
 * **subscriptionId**: string (ReadOnly): Subscription of the App Service Environment.
 * **suspended**: bool: <code>true</code> if the App Service Environment is suspended; otherwise, <code>false</code>. The environment can be suspended, e.g. when the management endpoint is no longer available
  (most likely because NSG blocked the incoming traffic).
@@ -735,7 +735,7 @@ This is valid for all deployment slots in an app.
 ## StampCapacity
 ### Properties
 * **availableCapacity**: int: Available capacity (# of machines, bytes of storage etc...).
-* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared/dedicated workers. Possible values include: 'Shared', 'Dedicated', 'Dynamic'
+* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared/dedicated workers.
 * **excludeFromCapacityAllocation**: bool: If <code>true</code>, it includes basic apps.
 Basic apps are not used for capacity allocation.
 * **isApplicableForAllComputeModes**: bool: <code>true</code> if capacity is applicable for all apps; otherwise, <code>false</code>.
@@ -744,7 +744,7 @@ Basic apps are not used for capacity allocation.
 * **siteMode**: string: Shared or Dedicated.
 * **totalCapacity**: int: Total capacity (# of machines, bytes of storage etc...).
 * **unit**: string: Name of the unit.
-* **workerSize**: 'D1' | 'D2' | 'D3' | 'Default' | 'Large' | 'Medium' | 'Small': Size of the machines. Possible values include: 'Small', 'Medium', 'Large', 'D1', 'D2', 'D3', 'Default'
+* **workerSize**: 'D1' | 'D2' | 'D3' | 'Default' | 'Large' | 'Medium' | 'Small': Size of the machines.
 * **workerSizeId**: int: Size ID of machines:
 0 - Small
 1 - Medium
@@ -752,7 +752,7 @@ Basic apps are not used for capacity allocation.
 
 ## NetworkAccessControlEntry
 ### Properties
-* **action**: 'Deny' | 'Permit': Action object. Possible values include: 'Permit', 'Deny'
+* **action**: 'Deny' | 'Permit': Action object.
 * **description**: string: Description of network access control entry.
 * **order**: int: Order of precedence.
 * **remoteSubnet**: string: Remote subnet.
@@ -773,7 +773,7 @@ Basic apps are not used for capacity allocation.
 
 ## WorkerPool
 ### Properties
-* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared or dedicated app hosting. Possible values include: 'Shared', 'Dedicated', 'Dynamic'
+* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared or dedicated app hosting.
 * **instanceNames**: string[] (ReadOnly): Names of all instances in the worker pool (read only).
 * **workerCount**: int: Number of instances in the worker pool.
 * **workerSize**: string: VM size of the worker pool instances.
@@ -829,11 +829,11 @@ Basic apps are not used for capacity allocation.
 * **numberOfSites**: int (ReadOnly): Number of apps assigned to this App Service plan.
 * **perSiteScaling**: bool: If <code>true</code>, apps assigned to this App Service plan can be scaled independently.
 If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Provisioning state of the App Service Environment. Possible values include: 'Succeeded', 'Failed', 'Canceled', 'InProgress', 'Deleting'
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Provisioning state of the App Service Environment.
 * **reserved**: bool: If Linux app service plan <code>true</code>, <code>false</code> otherwise.
 * **resourceGroup**: string (ReadOnly): Resource group of the App Service plan.
 * **spotExpirationTime**: string: The time when the server farm expires. Valid only if it is a spot server farm.
-* **status**: 'Creating' | 'Pending' | 'Ready' (ReadOnly): App Service plan status. Possible values include: 'Ready', 'Pending', 'Creating'
+* **status**: 'Creating' | 'Pending' | 'Ready' (ReadOnly): App Service plan status.
 * **subscription**: string (ReadOnly): App Service plan subscription.
 * **targetWorkerCount**: int: Scaling worker count.
 * **targetWorkerSizeId**: int: Scaling worker size ID.
@@ -857,14 +857,14 @@ DEFAULT - By default, every app has routes to the local address ranges specified
 INHERITED - Routes inherited from the real Virtual Network routes
 STATIC - Static route set on the app only
 
-These values will be used for syncing an app's routes with those from a Virtual Network. Possible values include: 'DEFAULT', 'INHERITED', 'STATIC'
+These values will be used for syncing an app's routes with those from a Virtual Network.
 * **startAddress**: string: The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
 
 ## ManagedServiceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): Principal Id of managed service identity.
 * **tenantId**: string (ReadOnly): Tenant of managed service identity.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': Type of managed service identity. Possible values include: 'SystemAssigned', 'UserAssigned', 'SystemAssigned, UserAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': Type of managed service identity.
 * **userAssignedIdentities**: [Dictionary<string,Schemas35UserAssignedIdentitiesValue>](#dictionarystringschemas35userassignedidentitiesvalue): The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
 
 ## Dictionary<string,Schemas35UserAssignedIdentitiesValue>
@@ -879,7 +879,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 
 ## schemas:56_properties
 ### Properties
-* **availabilityState**: 'DisasterRecoveryMode' | 'Limited' | 'Normal' (ReadOnly): Management information availability state for the app. Possible values include: 'Normal', 'Limited', 'DisasterRecoveryMode'
+* **availabilityState**: 'DisasterRecoveryMode' | 'Limited' | 'Normal' (ReadOnly): Management information availability state for the app.
 * **clientAffinityEnabled**: bool: <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
 * **clientCertEnabled**: bool: <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.
 * **clientCertExclusionPaths**: string: client certificate authentication comma-separated exclusion paths
@@ -907,7 +907,7 @@ http requests
 This only applies to Functions container.
 * **outboundIpAddresses**: string (ReadOnly): List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from tenants that site can be hosted with current settings. Read-only.
 * **possibleOutboundIpAddresses**: string (ReadOnly): List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from all tenants. Read-only.
-* **redundancyMode**: 'ActiveActive' | 'Failover' | 'GeoRedundant' | 'Manual' | 'None': Site redundancy mode. Possible values include: 'None', 'Manual', 'Failover', 'ActiveActive', 'GeoRedundant'
+* **redundancyMode**: 'ActiveActive' | 'Failover' | 'GeoRedundant' | 'Manual' | 'None': Site redundancy mode.
 * **repositorySiteName**: string (ReadOnly): Name of the repository site.
 * **reserved**: bool: <code>true</code> if reserved; otherwise, <code>false</code>.
 * **resourceGroup**: string (ReadOnly): Name of the resource group the app belongs to. Read-only.
@@ -919,7 +919,7 @@ This only applies to Functions container.
 * **suspendedTill**: string (ReadOnly): App suspended till in case memory-time quota is exceeded.
 * **targetSwapSlot**: string (ReadOnly): Specifies which deployment slot this app will swap into. Read-only.
 * **trafficManagerHostNames**: string[] (ReadOnly): Azure Traffic Manager hostnames associated with the app. Read-only.
-* **usageState**: 'Exceeded' | 'Normal' (ReadOnly): State indicating whether the app has exceeded its quota usage. Read-only. Possible values include: 'Normal', 'Exceeded'
+* **usageState**: 'Exceeded' | 'Normal' (ReadOnly): State indicating whether the app has exceeded its quota usage. Read-only.
 
 ## CloningInfo
 ### Properties
@@ -952,9 +952,9 @@ together to use the same snapshot.
 
 ## HostNameSslState
 ### Properties
-* **hostType**: 'Repository' | 'Standard': Indicates whether the hostname is a standard or repository hostname. Possible values include: 'Standard', 'Repository'
+* **hostType**: 'Repository' | 'Standard': Indicates whether the hostname is a standard or repository hostname.
 * **name**: string: Hostname.
-* **sslState**: 'Disabled' | 'IpBasedEnabled' | 'SniEnabled': SSL type. Possible values include: 'Disabled', 'SniEnabled', 'IpBasedEnabled'
+* **sslState**: 'Disabled' | 'IpBasedEnabled' | 'SniEnabled': SSL type.
 * **thumbprint**: string: SSL certificate thumbprint.
 * **toUpdate**: bool: Set to <code>true</code> to update existing hostname.
 * **virtualIP**: string: Virtual IP address assigned to the hostname if IP based SSL is enabled.
@@ -975,7 +975,7 @@ together to use the same snapshot.
 * **detailedErrorLoggingEnabled**: bool: <code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.
 * **documentRoot**: string: Document root.
 * **experiments**: [Experiments](#experiments): Routing rules in production experiments.
-* **ftpsState**: 'AllAllowed' | 'Disabled' | 'FtpsOnly': State of FTP / FTPS service. Possible values include: 'AllAllowed', 'FtpsOnly', 'Disabled'
+* **ftpsState**: 'AllAllowed' | 'Disabled' | 'FtpsOnly': State of FTP / FTPS service.
 * **handlerMappings**: [HandlerMapping](#handlermapping)[]: Handler mappings.
 * **http20Enabled**: bool: Http20Enabled: configures a web site to allow clients to connect over http2.0
 * **httpLoggingEnabled**: bool: <code>true</code> if HTTP logging is enabled; otherwise, <code>false</code>.
@@ -985,13 +985,13 @@ together to use the same snapshot.
 * **javaVersion**: string: Java version.
 * **limits**: [SiteLimits](#sitelimits): Metric limits set on an app.
 * **linuxFxVersion**: string: Linux App Framework and version
-* **loadBalancing**: 'LeastRequests' | 'LeastResponseTime' | 'RequestHash' | 'WeightedRoundRobin' | 'WeightedTotalTraffic': Site load balancing. Possible values include: 'WeightedRoundRobin', 'LeastRequests', 'LeastResponseTime', 'WeightedTotalTraffic', 'RequestHash'
+* **loadBalancing**: 'LeastRequests' | 'LeastResponseTime' | 'RequestHash' | 'WeightedRoundRobin' | 'WeightedTotalTraffic': Site load balancing.
 * **localMySqlEnabled**: bool: <code>true</code> to enable local MySQL; otherwise, <code>false</code>.
 * **logsDirectorySizeLimit**: int: HTTP logs directory size limit.
 * **machineKey**: [SiteMachineKey](#sitemachinekey) (ReadOnly): MachineKey of an app.
-* **managedPipelineMode**: 'Classic' | 'Integrated': Managed pipeline mode. Possible values include: 'Integrated', 'Classic'
+* **managedPipelineMode**: 'Classic' | 'Integrated': Managed pipeline mode.
 * **managedServiceIdentityId**: int: Managed Service Identity Id
-* **minTlsVersion**: '1.0' | '1.1' | '1.2': MinTlsVersion: configures the minimum version of TLS required for SSL requests. Possible values include: '1.0', '1.1', '1.2'
+* **minTlsVersion**: '1.0' | '1.1' | '1.2': MinTlsVersion: configures the minimum version of TLS required for SSL requests.
 * **netFrameworkVersion**: string: .NET Framework version.
 * **nodeVersion**: string: Version of Node.js.
 * **numberOfWorkers**: int: Number of workers.
@@ -1007,7 +1007,7 @@ together to use the same snapshot.
 This setting only applies to the Consumption Plan
 * **scmIpSecurityRestrictions**: [IpSecurityRestriction](#ipsecurityrestriction)[]: IP security restrictions for scm.
 * **scmIpSecurityRestrictionsUseMain**: bool: IP security restrictions for scm to use main.
-* **scmType**: 'BitbucketGit' | 'BitbucketHg' | 'CodePlexGit' | 'CodePlexHg' | 'Dropbox' | 'ExternalGit' | 'ExternalHg' | 'GitHub' | 'LocalGit' | 'None' | 'OneDrive' | 'Tfs' | 'VSO': SCM type. Possible values include: 'None', 'Dropbox', 'Tfs', 'LocalGit', 'GitHub', 'CodePlexGit', 'CodePlexHg', 'BitbucketGit', 'BitbucketHg', 'ExternalGit', 'ExternalHg', 'OneDrive', 'VSO'
+* **scmType**: 'BitbucketGit' | 'BitbucketHg' | 'CodePlexGit' | 'CodePlexHg' | 'Dropbox' | 'ExternalGit' | 'ExternalHg' | 'GitHub' | 'LocalGit' | 'None' | 'OneDrive' | 'Tfs' | 'VSO': SCM type.
 * **tracingOptions**: string: Tracing options.
 * **use32BitWorkerProcess**: bool: <code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.
 * **virtualApplications**: [VirtualApplication](#virtualapplication)[]: Virtual applications.
@@ -1027,7 +1027,7 @@ This setting only applies to the Consumption Plan
 
 ## AutoHealActions
 ### Properties
-* **actionType**: 'CustomAction' | 'LogEvent' | 'Recycle': Predefined action to be taken. Possible values include: 'Recycle', 'LogEvent', 'CustomAction'
+* **actionType**: 'CustomAction' | 'LogEvent' | 'Recycle': Predefined action to be taken.
 * **customAction**: [AutoHealCustomAction](#autohealcustomaction): Custom action to be executed
 when an auto heal rule is triggered.
 * **minProcessExecutionTime**: string: Minimum time the process must execute
@@ -1075,14 +1075,14 @@ before taking the action
 * **accountName**: string: Name of the storage account.
 * **mountPath**: string: Path to mount the storage within the site's runtime environment.
 * **shareName**: string: Name of the file share (container name, for Blob storage).
-* **state**: 'InvalidCredentials' | 'InvalidShare' | 'Ok' (ReadOnly): State of the storage account. Possible values include: 'Ok', 'InvalidCredentials', 'InvalidShare'
-* **type**: 'AzureBlob' | 'AzureFiles': Type of storage. Possible values include: 'AzureFiles', 'AzureBlob'
+* **state**: 'InvalidCredentials' | 'InvalidShare' | 'Ok' (ReadOnly): State of the storage account.
+* **type**: 'AzureBlob' | 'AzureFiles': Type of storage.
 
 ## ConnStringInfo
 ### Properties
 * **connectionString**: string: Connection string value.
 * **name**: string: Name of connection string.
-* **type**: 'ApiHub' | 'Custom' | 'DocDb' | 'EventHub' | 'MySql' | 'NotificationHub' | 'PostgreSQL' | 'RedisCache' | 'ServiceBus' | 'SQLAzure' | 'SQLServer': Type of database. Possible values include: 'MySql', 'SQLServer', 'SQLAzure', 'Custom', 'NotificationHub', 'ServiceBus', 'EventHub', 'ApiHub', 'DocDb', 'RedisCache', 'PostgreSQL'
+* **type**: 'ApiHub' | 'Custom' | 'DocDb' | 'EventHub' | 'MySql' | 'NotificationHub' | 'PostgreSQL' | 'RedisCache' | 'ServiceBus' | 'SQLAzure' | 'SQLServer': Type of database.
 
 ## CorsSettings
 ### Properties
@@ -1128,7 +1128,7 @@ SubnetMask property must not be specified.
 * **priority**: int: Priority of IP restriction rule.
 * **subnetMask**: string: Subnet mask for the range of IP addresses the restriction is valid for.
 * **subnetTrafficTag**: int: (internal) Subnet traffic tag
-* **tag**: 'Default' | 'XffProxy': Defines what this IP filter will be used for. This is to support IP filtering on proxies. Possible values include: 'Default', 'XffProxy'
+* **tag**: 'Default' | 'XffProxy': Defines what this IP filter will be used for. This is to support IP filtering on proxies.
 * **vnetSubnetResourceId**: string: Virtual network resource id
 * **vnetTrafficTag**: int: (internal) Vnet traffic tag
 
@@ -1231,7 +1231,7 @@ More information on OpenID Connect: http://openid.net/specs/openid-connect-core-
 a replacement for the Client Secret. It is also optional.
 * **defaultProvider**: 'AzureActiveDirectory' | 'Facebook' | 'Google' | 'MicrosoftAccount' | 'Twitter': The default authentication provider to use when multiple providers are configured.
 This setting is only needed if multiple providers are configured and the unauthenticated client
-action is set to "RedirectToLoginPage". Possible values include: 'AzureActiveDirectory', 'Facebook', 'Google', 'MicrosoftAccount', 'Twitter'
+action is set to "RedirectToLoginPage".
 * **enabled**: bool: <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
 * **facebookAppId**: string: The App ID of the Facebook app used for login.
 This setting is required for enabling Facebook Login.
@@ -1276,7 +1276,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **twitterConsumerSecret**: string: The OAuth 1.0a consumer secret of the Twitter application used for sign-in.
 This setting is required for enabling Twitter Sign-In.
 Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
-* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage': The action to take when an unauthenticated client attempts to access the app. Possible values include: 'RedirectToLoginPage', 'AllowAnonymous'
+* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage': The action to take when an unauthenticated client attempts to access the app.
 * **validateIssuer**: bool: Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.
 
 ## Microsoft.Web/sites/config
@@ -1313,7 +1313,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 ## BackupSchedule
 ### Properties
 * **frequencyInterval**: int (Required): How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day)
-* **frequencyUnit**: 'Day' | 'Hour' (Required): The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7). Possible values include: 'Day', 'Hour'
+* **frequencyUnit**: 'Day' | 'Hour' (Required): The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7).
 * **keepAtLeastOneBackup**: bool (Required): True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.
 * **lastExecutionTime**: string (ReadOnly): Last time when this schedule was triggered.
 * **retentionPeriodInDays**: int (Required): After how many days backups should be deleted.
@@ -1324,7 +1324,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **connectionString**: string: Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
 * **connectionStringName**: string: Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
 This is used during restore with overwrite connection strings options.
-* **databaseType**: 'LocalMySql' | 'MySql' | 'PostgreSql' | 'SqlAzure' (Required): Database type (e.g. SqlAzure / MySql). Possible values include: 'SqlAzure', 'MySql', 'LocalMySql', 'PostgreSql'
+* **databaseType**: 'LocalMySql' | 'MySql' | 'PostgreSql' | 'SqlAzure' (Required): Database type (e.g. SqlAzure / MySql).
 * **name**: string:
 
 ## Microsoft.Web/sites/config
@@ -1343,7 +1343,7 @@ This is used during restore with overwrite connection strings options.
 
 ## ConnStringValueTypePair
 ### Properties
-* **type**: 'ApiHub' | 'Custom' | 'DocDb' | 'EventHub' | 'MySql' | 'NotificationHub' | 'PostgreSQL' | 'RedisCache' | 'ServiceBus' | 'SQLAzure' | 'SQLServer' (Required): Type of database. Possible values include: 'MySql', 'SQLServer', 'SQLAzure', 'Custom', 'NotificationHub', 'ServiceBus', 'EventHub', 'ApiHub', 'DocDb', 'RedisCache', 'PostgreSQL'
+* **type**: 'ApiHub' | 'Custom' | 'DocDb' | 'EventHub' | 'MySql' | 'NotificationHub' | 'PostgreSQL' | 'RedisCache' | 'ServiceBus' | 'SQLAzure' | 'SQLServer' (Required): Type of database.
 * **value**: string (Required): Value of pair.
 
 ## Microsoft.Web/sites/config
@@ -1370,7 +1370,7 @@ This is used during restore with overwrite connection strings options.
 
 ## AzureBlobStorageApplicationLogsConfig
 ### Properties
-* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning': Log level. Possible values include: 'Off', 'Verbose', 'Information', 'Warning', 'Error'
+* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning': Log level.
 * **retentionInDays**: int: Retention in days.
 Remove blobs older than X days.
 0 or lower means no retention.
@@ -1378,12 +1378,12 @@ Remove blobs older than X days.
 
 ## AzureTableStorageApplicationLogsConfig
 ### Properties
-* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning': Log level. Possible values include: 'Off', 'Verbose', 'Information', 'Warning', 'Error'
+* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning': Log level.
 * **sasUrl**: string (Required): SAS URL to an Azure table with add/query/delete permissions.
 
 ## FileSystemApplicationLogsConfig
 ### Properties
-* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning': Log level. Possible values include: 'Off', 'Verbose', 'Information', 'Warning', 'Error'
+* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning': Log level.
 
 ## EnabledConfig
 ### Properties
@@ -1487,7 +1487,7 @@ Setting is <code>false</code> by default.
 * **deployer**: string (ReadOnly): Username of deployer
 * **endTime**: string (ReadOnly): End time of deploy operation
 * **packageUri**: string (WriteOnly): Package URI
-* **provisioningState**: 'accepted' | 'canceled' | 'failed' | 'running' | 'succeeded' (ReadOnly): Provisioning state. Possible values include: 'accepted', 'running', 'succeeded', 'failed', 'canceled'
+* **provisioningState**: 'accepted' | 'canceled' | 'failed' | 'running' | 'succeeded' (ReadOnly): Provisioning state.
 * **setParameters**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly): MSDeploy Parameters. Must not be set if SetParametersXmlFileUri is used.
 * **setParametersXmlFileUri**: string (WriteOnly): URI of MSDeploy Parameters file. Must not be set if SetParameters is used.
 * **skipAppData**: bool (WriteOnly): Controls whether the MSDeploy operation skips the App_Data directory.
@@ -1525,12 +1525,12 @@ Setting is <code>false</code> by default.
 ## schemas:184_properties
 ### Properties
 * **azureResourceName**: string: Azure resource name.
-* **azureResourceType**: 'TrafficManager' | 'Website': Azure resource type. Possible values include: 'Website', 'TrafficManager'
-* **customHostNameDnsRecordType**: 'A' | 'CName': Custom DNS record type. Possible values include: 'CName', 'A'
+* **azureResourceType**: 'TrafficManager' | 'Website': Azure resource type.
+* **customHostNameDnsRecordType**: 'A' | 'CName': Custom DNS record type.
 * **domainId**: string: Fully qualified ARM domain resource URI.
-* **hostNameType**: 'Managed' | 'Verified': Hostname type. Possible values include: 'Verified', 'Managed'
+* **hostNameType**: 'Managed' | 'Verified': Hostname type.
 * **siteName**: string: App Service app name.
-* **sslState**: 'Disabled' | 'IpBasedEnabled' | 'SniEnabled': SSL type. Possible values include: 'Disabled', 'SniEnabled', 'IpBasedEnabled'
+* **sslState**: 'Disabled' | 'IpBasedEnabled' | 'SniEnabled': SSL type.
 * **thumbprint**: string: SSL certificate thumbprint
 * **virtualIP**: string (ReadOnly): Virtual IP address assigned to the hostname if IP based SSL is enabled.
 
@@ -1594,7 +1594,7 @@ normally, use the POST /listKeys API instead.
 ## schemas:212_properties
 ### Properties
 * **blob**: array: Public Certificate byte array
-* **publicCertificateLocation**: 'CurrentUserMy' | 'LocalMachineMy' | 'Unknown': Public Certificate Location. Possible values include: 'CurrentUserMy', 'LocalMachineMy', 'Unknown'
+* **publicCertificateLocation**: 'CurrentUserMy' | 'LocalMachineMy' | 'Unknown': Public Certificate Location.
 * **thumbprint**: string (ReadOnly): Certificate Thumbprint
 
 ## schemas:223_properties
@@ -1604,7 +1604,7 @@ normally, use the POST /listKeys API instead.
 * **description**: string (ReadOnly): Detailed description.
 * **download_count**: int (ReadOnly): Count of downloads.
 * **extension_id**: string (ReadOnly): Site extension ID.
-* **extension_type**: 'Gallery' | 'WebRoot' (ReadOnly): Site extension type. Possible values include: 'Gallery', 'WebRoot'
+* **extension_type**: 'Gallery' | 'WebRoot' (ReadOnly): Site extension type.
 * **extension_url**: string (ReadOnly): Extension URL.
 * **feed_url**: string (ReadOnly): Feed URL.
 * **icon_url**: string (ReadOnly): Icon URL.

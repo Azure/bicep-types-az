@@ -14,7 +14,7 @@
 
 ## ImageTemplateIdentity
 ### Properties
-* **type**: 'None' | 'UserAssigned': The type of identity used for the image template. The type 'None' will remove any identities from the image template. Possible values include: 'UserAssigned', 'None'
+* **type**: 'None' | 'UserAssigned': The type of identity used for the image template. The type 'None' will remove any identities from the image template.
 * **userAssignedIdentities**: [Dictionary<string,Schemas22UserAssignedIdentitiesValue>](#dictionarystringschemas22userassignedidentitiesvalue): The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## Dictionary<string,Schemas22UserAssignedIdentitiesValue>
@@ -34,7 +34,7 @@
 * **distribute**: [ImageTemplateDistributor](#imagetemplatedistributor)[] (Required): The distribution targets where the image output needs to go to.
 * **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly): Describes the latest status of running an image template
 * **provisioningError**: [ProvisioningError](#provisioningerror) (ReadOnly): Describes the error happened when create or update an image template
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource. Possible values include: 'Creating', 'Updating', 'Succeeded', 'Failed', 'Deleting'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource.
 * **source**: [ImageTemplateSource](#imagetemplatesource) (Required): Describes a virtual machine image source for building, customizing and distributing
 * **vmProfile**: [ImageTemplateVmProfile](#imagetemplatevmprofile): Describes the virtual machine used to build, customize and capture images
 
@@ -134,7 +134,7 @@
 * **excludeFromLatest**: bool: Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).
 * **galleryImageId**: string (Required): Resource Id of the Shared Image Gallery image
 * **replicationRegions**: string[] (Required): A list of regions that the image will be replicated to
-* **storageAccountType**: 'Standard_LRS' | 'Standard_ZRS': Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS). Possible values include: 'Standard_LRS', 'Standard_ZRS'
+* **storageAccountType**: 'Standard_LRS' | 'Standard_ZRS': Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
 * **type**: 'SharedImage' (Required): Distribute via Shared Image Gallery.
 
 ### VHD
@@ -157,7 +157,7 @@
 * **excludeFromLatest**: bool: Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).
 * **galleryImageId**: string (Required): Resource Id of the Shared Image Gallery image
 * **replicationRegions**: string[] (Required): A list of regions that the image will be replicated to
-* **storageAccountType**: 'Standard_LRS' | 'Standard_ZRS': Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS). Possible values include: 'Standard_LRS', 'Standard_ZRS'
+* **storageAccountType**: 'Standard_LRS' | 'Standard_ZRS': Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
 * **type**: 'SharedImage' (Required): Distribute via Shared Image Gallery.
 
 ## VHD
@@ -168,14 +168,14 @@
 ### Properties
 * **endTime**: string: End time of the last run (UTC)
 * **message**: string: Verbose information about the last run state
-* **runState**: 'Canceled' | 'Canceling' | 'Failed' | 'PartiallySucceeded' | 'Running' | 'Succeeded': State of the last run. Possible values include: 'Running', 'Canceling', 'Succeeded', 'PartiallySucceeded', 'Failed', 'Canceled'
-* **runSubState**: 'Building' | 'Customizing' | 'Distributing' | 'Queued': Sub-state of the last run. Possible values include: 'Queued', 'Building', 'Customizing', 'Distributing'
+* **runState**: 'Canceled' | 'Canceling' | 'Failed' | 'PartiallySucceeded' | 'Running' | 'Succeeded': State of the last run.
+* **runSubState**: 'Building' | 'Customizing' | 'Distributing' | 'Queued': Sub-state of the last run.
 * **startTime**: string: Start time of the last run (UTC)
 
 ## ProvisioningError
 ### Properties
 * **message**: string: Verbose error message about the provisioning failure
-* **provisioningErrorCode**: 'BadCustomizerType' | 'BadDistributeType' | 'BadManagedImageSource' | 'BadPIRSource' | 'BadSharedImageDistribute' | 'BadSharedImageVersionSource' | 'BadSourceType' | 'NoCustomizerScript' | 'Other' | 'ServerError' | 'UnsupportedCustomizerType': Error code of the provisioning failure. Possible values include: 'BadSourceType', 'BadPIRSource', 'BadManagedImageSource', 'BadSharedImageVersionSource', 'BadCustomizerType', 'UnsupportedCustomizerType', 'NoCustomizerScript', 'BadDistributeType', 'BadSharedImageDistribute', 'ServerError', 'Other'
+* **provisioningErrorCode**: 'BadCustomizerType' | 'BadDistributeType' | 'BadManagedImageSource' | 'BadPIRSource' | 'BadSharedImageDistribute' | 'BadSharedImageVersionSource' | 'BadSourceType' | 'NoCustomizerScript' | 'Other' | 'ServerError' | 'UnsupportedCustomizerType': Error code of the provisioning failure.
 
 ## ImageTemplateSource
 * **Discriminator**: type

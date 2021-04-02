@@ -21,7 +21,7 @@
 * **isDeletable**: bool (ReadOnly): Describes whether the job is deletable or not.
 * **isShippingAddressEditable**: bool (ReadOnly): Describes whether the shipping address is editable or not.
 * **startTime**: string (ReadOnly): Time at which the job was started in UTC ISO 8601 format.
-* **status**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' (ReadOnly): Name of the stage which is in progress. Possible values include: 'DeviceOrdered', 'DevicePrepared', 'Dispatched', 'Delivered', 'PickedUp', 'AtAzureDC', 'DataCopy', 'Completed', 'CompletedWithErrors', 'Cancelled', 'Failed_IssueReportedAtCustomer', 'Failed_IssueDetectedAtAzureDC', 'Aborted'
+* **status**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' (ReadOnly): Name of the stage which is in progress.
 
 ## JobDetails
 * **Discriminator**: jobDetailsType
@@ -73,7 +73,7 @@
 ## NotificationPreference
 ### Properties
 * **sendNotification**: bool (Required): Notification is required or not.
-* **stageName**: 'AtAzureDC' | 'DataCopy' | 'Delivered' | 'DevicePrepared' | 'Dispatched' | 'PickedUp' (Required): Name of the stage. Possible values include: 'DevicePrepared', 'Dispatched', 'Delivered', 'PickedUp', 'AtAzureDC', 'DataCopy'
+* **stageName**: 'AtAzureDC' | 'DataCopy' | 'Delivered' | 'DevicePrepared' | 'Dispatched' | 'PickedUp' (Required): Name of the stage.
 
 ## CopyLogDetails
 * **Discriminator**: copyLogDetailsType
@@ -168,8 +168,8 @@
 * **displayName**: string (ReadOnly): Display name of the job stage.
 * **errorDetails**: [JobErrorDetails](#joberrordetails)[] (ReadOnly): Error details for the stage.
 * **jobStageDetails**: any (ReadOnly): Job Stage Details
-* **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' (ReadOnly): Name of the job stage. Possible values include: 'DeviceOrdered', 'DevicePrepared', 'Dispatched', 'Delivered', 'PickedUp', 'AtAzureDC', 'DataCopy', 'Completed', 'CompletedWithErrors', 'Cancelled', 'Failed_IssueReportedAtCustomer', 'Failed_IssueDetectedAtAzureDC', 'Aborted'
-* **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' | 'SucceededWithErrors' (ReadOnly): Status of the job stage. Possible values include: 'None', 'InProgress', 'Succeeded', 'Failed', 'Cancelled', 'Cancelling', 'SucceededWithErrors'
+* **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' (ReadOnly): Name of the job stage.
+* **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' | 'SucceededWithErrors' (ReadOnly): Status of the job stage.
 * **stageTime**: string (ReadOnly): Time for the job stage in UTC ISO 8601 format.
 
 ## Preferences
@@ -178,7 +178,7 @@
 
 ## ShippingAddress
 ### Properties
-* **addressType**: 'Commercial' | 'None' | 'Residential': Type of address. Possible values include: 'None', 'Residential', 'Commercial'
+* **addressType**: 'Commercial' | 'None' | 'Residential': Type of address.
 * **city**: string: Name of the City.
 * **companyName**: string: Name of the company.
 * **country**: string (Required): Name of the Country.
@@ -198,7 +198,7 @@
 ### Properties
 * **displayName**: string: The display name of the sku.
 * **family**: string: The sku family.
-* **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): The sku name. Possible values include: 'DataBox', 'DataBoxDisk', 'DataBoxHeavy'
+* **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): The sku name.
 
 ## Dictionary<string,String>
 ### Properties

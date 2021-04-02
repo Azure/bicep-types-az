@@ -80,4 +80,4 @@ Processing batch task - {"tag":"schema-sql-2014-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 INFORMATION: Resource type Microsoft.Sql/servers/disasterRecoveryConfiguration under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/disasterRecoveryConfiguration/{disasterRecoveryConfigurationName}' has no body defined.
-[935.22 s] Generation Complete
+[1100.01 s] Generation Complete

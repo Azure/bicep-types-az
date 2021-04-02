@@ -26,7 +26,7 @@
 * **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination for an event subscription
 * **filter**: [EventSubscriptionFilter](#eventsubscriptionfilter): Filter for the Event Subscription
 * **labels**: string[]: List of user defined labels.
-* **provisioningState**: 'AwaitingManualAction' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the event subscription. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Canceled', 'Failed', 'AwaitingManualAction'
+* **provisioningState**: 'AwaitingManualAction' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the event subscription.
 * **retryPolicy**: [RetryPolicy](#retrypolicy): Information about the retry policy for an event subscription
 * **topic**: string (ReadOnly): Name of the topic of the event subscription.
 
@@ -131,7 +131,7 @@ Wildcard characters are not supported in this path.
 ## TopicProperties
 ### Properties
 * **endpoint**: string (ReadOnly): Endpoint for the topic.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the topic. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Canceled', 'Failed'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the topic.
 
 ## Dictionary<string,String>
 ### Properties

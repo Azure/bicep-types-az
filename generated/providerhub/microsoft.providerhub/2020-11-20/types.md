@@ -101,17 +101,17 @@
 
 ## schemas:7_properties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure': Possible values include: 'NotSpecified', 'Accepted', 'Running', 'Creating', 'Created', 'Deleting', 'Deleted', 'Canceled', 'Failed', 'Succeeded', 'MovingResources', 'TransientFailure', 'RolloutInProgress'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure':
 * **specification**: [schemas:1_canary](#schemas1canary) (Required):
 * **status**: [schemas:1_canary](#schemas1canary):
 
 ## OperationsDefinition
 ### Properties
-* **actionType**: 'Internal' | 'NotSpecified' (WriteOnly): Possible values include: 'NotSpecified', 'Internal'
+* **actionType**: 'Internal' | 'NotSpecified' (WriteOnly):
 * **display**: [schemas:49_display](#schemas49display) (Required, WriteOnly): Display information of the operation.
 * **isDataAction**: bool (WriteOnly): Indicates whether the operation applies to data-plane.
 * **name**: string (Required, WriteOnly): Name of the operation.
-* **origin**: 'NotSpecified' | 'System' | 'User' (WriteOnly): Possible values include: 'NotSpecified', 'User', 'System'
+* **origin**: 'NotSpecified' | 'System' | 'User' (WriteOnly):
 * **properties**: any (WriteOnly):
 
 ## schemas:49_display
@@ -174,7 +174,7 @@
 ### Properties
 * **extendedLocations**: string[] (WriteOnly):
 * **location**: string (Required, WriteOnly):
-* **type**: 'ArcZone' | 'EdgeZone' | 'NotSpecified' (WriteOnly): Possible values include: 'NotSpecified', 'EdgeZone', 'ArcZone'
+* **type**: 'ArcZone' | 'EdgeZone' | 'NotSpecified' (WriteOnly):
 * **zoneDetails**: [SkuZoneDetail](#skuzonedetail)[] (WriteOnly):
 * **zones**: string[] (WriteOnly):
 

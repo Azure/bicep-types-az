@@ -22,18 +22,18 @@
 ### Properties
 * **capacity**: int: If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
 * **family**: string: If the service has different generations of hardware, for the same SKU, then that can be captured here.
-* **name**: 'C0' | 'F0' | 'S1' (Required): The name of the HealthBot SKU. Possible values include: 'F0', 'S1', 'C0'
+* **name**: 'C0' | 'F0' | 'S1' (Required): The name of the HealthBot SKU.
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
-* **tier**: 'Free' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT. Possible values include: 'Free', 'Standard'
+* **tier**: 'Free' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC)
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties

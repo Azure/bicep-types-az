@@ -30,7 +30,7 @@
 ### Properties
 * **childId**: string (ReadOnly): The fully qualified ID for the child resource (management group or subscription).  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
 * **children**: [ManagementGroupChildInfo](#managementgroupchildinfo)[] (ReadOnly): The list of children.
-* **childType**: 'ManagementGroup' | 'Subscription' (ReadOnly): Possible values include: 'ManagementGroup', 'Subscription'
+* **childType**: 'ManagementGroup' | 'Subscription' (ReadOnly):
 * **displayName**: string (ReadOnly): The friendly name of the child resource.
 
 ## ManagementGroupDetails

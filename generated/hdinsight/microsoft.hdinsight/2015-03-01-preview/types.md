@@ -28,7 +28,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of cluster identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id associated with the cluster. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The type of identity used for the cluster. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. Possible values include: 'SystemAssigned', 'UserAssigned', 'SystemAssigned, UserAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The type of identity used for the cluster. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.
 * **userAssignedIdentities**: [Dictionary<string,Schemas38UserAssignedIdentitiesValue>](#dictionarystringschemas38userassignedidentitiesvalue): The list of user identities associated with the cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## Dictionary<string,Schemas38UserAssignedIdentitiesValue>
@@ -60,12 +60,12 @@
 * **kafkaRestProperties**: [KafkaRestProperties](#kafkarestproperties): The kafka rest proxy configuration which contains AAD security group information.
 * **minSupportedTlsVersion**: string: The minimal supported tls version.
 * **networkProperties**: [NetworkProperties](#networkproperties): The network properties.
-* **osType**: 'Linux' | 'Windows': The type of operating system. Possible values include: 'Windows', 'Linux'
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): The provisioning state, which only appears in the response. Possible values include: 'InProgress', 'Failed', 'Succeeded', 'Canceled', 'Deleting'
+* **osType**: 'Linux' | 'Windows': The type of operating system.
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): The provisioning state, which only appears in the response.
 * **quotaInfo**: [QuotaInfo](#quotainfo) (ReadOnly): The quota properties for the cluster.
 * **securityProfile**: [SecurityProfile](#securityprofile): The security profile which contains Ssh public key for the HDInsight cluster.
 * **storageProfile**: [StorageProfile](#storageprofile): The storage profile.
-* **tier**: 'Premium' | 'Standard': The cluster tier. Possible values include: 'Standard', 'Premium'
+* **tier**: 'Premium' | 'Standard': The cluster tier.
 
 ## ClusterDefinition
 ### Properties
@@ -177,7 +177,7 @@
 
 ## DiskEncryptionProperties
 ### Properties
-* **encryptionAlgorithm**: 'RSA-OAEP-256' | 'RSA-OAEP' | 'RSA1_5': Algorithm identifier for encryption, default RSA-OAEP. Possible values include: 'RSA-OAEP', 'RSA-OAEP-256', 'RSA1_5'
+* **encryptionAlgorithm**: 'RSA-OAEP-256' | 'RSA-OAEP' | 'RSA1_5': Algorithm identifier for encryption, default RSA-OAEP.
 * **encryptionAtHost**: bool: Indicates whether or not resource disk encryption is enabled.
 * **keyName**: string: Key name that is used for enabling disk encryption.
 * **keyVersion**: string: Specific key version that is used for enabling disk encryption.
@@ -215,8 +215,8 @@
 
 ## NetworkProperties
 ### Properties
-* **privateLink**: 'Disabled' | 'Enabled': Indicates whether or not private link is enabled. Possible values include: 'Disabled', 'Enabled'
-* **resourceProviderConnection**: 'Inbound' | 'Outbound': The direction for the resource provider connection. Possible values include: 'Inbound', 'Outbound'
+* **privateLink**: 'Disabled' | 'Enabled': Indicates whether or not private link is enabled.
+* **resourceProviderConnection**: 'Inbound' | 'Outbound': The direction for the resource provider connection.
 
 ## QuotaInfo
 ### Properties
@@ -226,7 +226,7 @@
 ### Properties
 * **aaddsResourceId**: string: The resource ID of the user's Azure Active Directory Domain Service.
 * **clusterUsersGroupDNs**: string[]: Optional. The Distinguished Names for cluster user groups
-* **directoryType**: 'ActiveDirectory': The directory type. Possible values include: 'ActiveDirectory'
+* **directoryType**: 'ActiveDirectory': The directory type.
 * **domain**: string: The organization's active directory domain.
 * **domainUsername**: string: The domain user account that will have admin privileges on the cluster.
 * **domainUserPassword**: string: The domain admin password.

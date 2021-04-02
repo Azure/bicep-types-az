@@ -13,17 +13,17 @@
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
-* **accountType**: 'Premium_LRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_ZRS': Gets or sets the account type. Possible values include: 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS', 'Standard_RAGRS', 'Premium_LRS'
+* **accountType**: 'Premium_LRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_ZRS': Gets or sets the account type.
 * **creationTime**: string (ReadOnly): Gets the creation date and time of the storage account in UTC.
 * **customDomain**: [CustomDomain](#customdomain) (ReadOnly): The custom domain assigned to this storage account. This can be set via Update.
 * **lastGeoFailoverTime**: string (ReadOnly): Gets the timestamp of the most recent instance of a failover to the secondary location. Only the most recent timestamp is retained. This element is not returned if there has never been a failover instance. Only available if the accountType is StandardGRS or StandardRAGRS.
 * **primaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): The URIs that are used to perform a retrieval of a public blob, queue or table object.
 * **primaryLocation**: string (ReadOnly): Gets the location of the primary for the storage account.
-* **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly): Gets the status of the storage account at the time the operation was called. Possible values include: 'Creating', 'ResolvingDNS', 'Succeeded'
+* **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly): Gets the status of the storage account at the time the operation was called.
 * **secondaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): The URIs that are used to perform a retrieval of a public blob, queue or table object.
 * **secondaryLocation**: string (ReadOnly): Gets the location of the geo replicated secondary for the storage account. Only available if the accountType is StandardGRS or StandardRAGRS.
-* **statusOfPrimary**: 'Available' | 'Unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable. Possible values include: 'Available', 'Unavailable'
-* **statusOfSecondary**: 'Available' | 'Unavailable' (ReadOnly): Gets the status indicating whether the secondary location of the storage account is available or unavailable. Only available if the accountType is StandardGRS or StandardRAGRS. Possible values include: 'Available', 'Unavailable'
+* **statusOfPrimary**: 'Available' | 'Unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable.
+* **statusOfSecondary**: 'Available' | 'Unavailable' (ReadOnly): Gets the status indicating whether the secondary location of the storage account is available or unavailable. Only available if the accountType is StandardGRS or StandardRAGRS.
 
 ## CustomDomain
 ### Properties

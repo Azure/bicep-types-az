@@ -47,7 +47,7 @@
 * **osSku**: string (ReadOnly): Specifies the Operating System product SKU.
 * **osVersion**: string (ReadOnly): The version of Operating System running on the hybrid machine.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
-* **status**: 'Connected' | 'Disconnected' | 'Error' (ReadOnly): The status of the hybrid machine agent. Possible values include: 'Connected', 'Disconnected', 'Error'
+* **status**: 'Connected' | 'Disconnected' | 'Error' (ReadOnly): The status of the hybrid machine agent.
 * **vmId**: string: Specifies the hybrid machine unique ID.
 * **vmUuid**: string (ReadOnly): Specifies the Arc Machine's unique SMBIOS ID
 
@@ -69,7 +69,7 @@
 ### Properties
 * **code**: string (ReadOnly): The status code.
 * **displayStatus**: string (ReadOnly): The short localizable label for the status.
-* **level**: 'Error' | 'Info' | 'Warning' (ReadOnly): The level code. Possible values include: 'Info', 'Warning', 'Error'
+* **level**: 'Error' | 'Info' | 'Warning' (ReadOnly): The level code.
 * **message**: string (ReadOnly): The detailed status message, including for alerts and error messages.
 * **time**: string (ReadOnly): The time of the status.
 

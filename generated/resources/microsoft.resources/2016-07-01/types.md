@@ -25,7 +25,7 @@
 * **correlationId**: string (ReadOnly): The correlation ID of the deployment.
 * **debugSetting**: [DebugSetting](#debugsetting):
 * **dependencies**: [Dependency](#dependency)[] (ReadOnly): The list of deployment dependencies.
-* **mode**: 'Complete' | 'Incremental' (Required): The deployment mode. Possible values include: 'Incremental', 'Complete'
+* **mode**: 'Complete' | 'Incremental' (Required): The deployment mode.
 * **outputs**: any (ReadOnly): Key/value pairs that represent deployment output.
 * **parameters**: any: Deployment parameters. It can be a JObject or a well formed JSON string. Use only one of Parameters or ParametersLink.
 * **parametersLink**: [ParametersLink](#parameterslink): Entity representing the reference to the deployment parameters.

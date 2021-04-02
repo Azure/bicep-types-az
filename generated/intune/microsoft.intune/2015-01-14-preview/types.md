@@ -62,24 +62,24 @@
 ### Properties
 * **accessRecheckOfflineTimeout**: string:
 * **accessRecheckOnlineTimeout**: string:
-* **appSharingFromLevel**: 'allApps' | 'none' | 'policyManagedApps': Possible values include: 'none', 'policyManagedApps', 'allApps'
-* **appSharingToLevel**: 'allApps' | 'none' | 'policyManagedApps': Possible values include: 'none', 'policyManagedApps', 'allApps'
-* **authentication**: 'notRequired' | 'required': Possible values include: 'required', 'notRequired'
-* **clipboardSharingLevel**: 'allApps' | 'blocked' | 'policyManagedApps' | 'policyManagedAppsWithPasteIn': Possible values include: 'blocked', 'policyManagedApps', 'policyManagedAppsWithPasteIn', 'allApps'
-* **dataBackup**: 'allow' | 'block': Possible values include: 'allow', 'block'
+* **appSharingFromLevel**: 'allApps' | 'none' | 'policyManagedApps':
+* **appSharingToLevel**: 'allApps' | 'none' | 'policyManagedApps':
+* **authentication**: 'notRequired' | 'required':
+* **clipboardSharingLevel**: 'allApps' | 'blocked' | 'policyManagedApps' | 'policyManagedAppsWithPasteIn':
+* **dataBackup**: 'allow' | 'block':
 * **description**: string:
-* **deviceCompliance**: 'disable' | 'enable': Possible values include: 'enable', 'disable'
-* **fileEncryption**: 'notRequired' | 'required': Possible values include: 'required', 'notRequired'
-* **fileSharingSaveAs**: 'allow' | 'block': Possible values include: 'allow', 'block'
+* **deviceCompliance**: 'disable' | 'enable':
+* **fileEncryption**: 'notRequired' | 'required':
+* **fileSharingSaveAs**: 'allow' | 'block':
 * **friendlyName**: string (Required):
-* **groupStatus**: 'notTargeted' | 'targeted' (ReadOnly): Possible values include: 'notTargeted', 'targeted'
+* **groupStatus**: 'notTargeted' | 'targeted' (ReadOnly):
 * **lastModifiedTime**: string (ReadOnly):
-* **managedBrowser**: 'notRequired' | 'required': Possible values include: 'required', 'notRequired'
+* **managedBrowser**: 'notRequired' | 'required':
 * **numOfApps**: int (ReadOnly):
 * **offlineWipeTimeout**: string:
-* **pin**: 'notRequired' | 'required': Possible values include: 'required', 'notRequired'
+* **pin**: 'notRequired' | 'required':
 * **pinNumRetry**: int:
-* **screenCapture**: 'allow' | 'block': Possible values include: 'allow', 'block'
+* **screenCapture**: 'allow' | 'block':
 
 ## Dictionary<string,String>
 ### Properties
@@ -94,24 +94,24 @@
 ### Properties
 * **accessRecheckOfflineTimeout**: string:
 * **accessRecheckOnlineTimeout**: string:
-* **appSharingFromLevel**: 'allApps' | 'none' | 'policyManagedApps': Possible values include: 'none', 'policyManagedApps', 'allApps'
-* **appSharingToLevel**: 'allApps' | 'none' | 'policyManagedApps': Possible values include: 'none', 'policyManagedApps', 'allApps'
-* **authentication**: 'notRequired' | 'required': Possible values include: 'required', 'notRequired'
-* **clipboardSharingLevel**: 'allApps' | 'blocked' | 'policyManagedApps' | 'policyManagedAppsWithPasteIn': Possible values include: 'blocked', 'policyManagedApps', 'policyManagedAppsWithPasteIn', 'allApps'
-* **dataBackup**: 'allow' | 'block': Possible values include: 'allow', 'block'
+* **appSharingFromLevel**: 'allApps' | 'none' | 'policyManagedApps':
+* **appSharingToLevel**: 'allApps' | 'none' | 'policyManagedApps':
+* **authentication**: 'notRequired' | 'required':
+* **clipboardSharingLevel**: 'allApps' | 'blocked' | 'policyManagedApps' | 'policyManagedAppsWithPasteIn':
+* **dataBackup**: 'allow' | 'block':
 * **description**: string:
-* **deviceCompliance**: 'disable' | 'enable': Possible values include: 'enable', 'disable'
-* **fileEncryptionLevel**: 'afterDeviceRestart' | 'deviceLocked' | 'deviceLockedExceptFilesOpen' | 'useDeviceSettings': Possible values include: 'deviceLocked', 'deviceLockedExceptFilesOpen', 'afterDeviceRestart', 'useDeviceSettings'
-* **fileSharingSaveAs**: 'allow' | 'block': Possible values include: 'allow', 'block'
+* **deviceCompliance**: 'disable' | 'enable':
+* **fileEncryptionLevel**: 'afterDeviceRestart' | 'deviceLocked' | 'deviceLockedExceptFilesOpen' | 'useDeviceSettings':
+* **fileSharingSaveAs**: 'allow' | 'block':
 * **friendlyName**: string (Required):
-* **groupStatus**: 'notTargeted' | 'targeted' (ReadOnly): Possible values include: 'notTargeted', 'targeted'
+* **groupStatus**: 'notTargeted' | 'targeted' (ReadOnly):
 * **lastModifiedTime**: string (ReadOnly):
-* **managedBrowser**: 'notRequired' | 'required': Possible values include: 'required', 'notRequired'
+* **managedBrowser**: 'notRequired' | 'required':
 * **numOfApps**: int (ReadOnly):
 * **offlineWipeTimeout**: string:
-* **pin**: 'notRequired' | 'required': Possible values include: 'required', 'notRequired'
+* **pin**: 'notRequired' | 'required':
 * **pinNumRetry**: int:
-* **touchId**: 'disable' | 'enable': Possible values include: 'enable', 'disable'
+* **touchId**: 'disable' | 'enable':
 
 ## Dictionary<string,String>
 ### Properties

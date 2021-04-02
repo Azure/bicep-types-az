@@ -21,7 +21,7 @@
 
 ## RegistrationAssignmentProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Current state of the registration assignment. Possible values include: 'NotSpecified', 'Accepted', 'Running', 'Ready', 'Creating', 'Created', 'Deleting', 'Deleted', 'Canceled', 'Failed', 'Succeeded', 'Updating'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Current state of the registration assignment.
 * **registrationDefinition**: [schemas:4_registrationDefinition](#schemas4registrationdefinition) (ReadOnly): Registration definition inside registration assignment.
 * **registrationDefinitionId**: string (Required): Fully qualified path of the registration definition.
 
@@ -48,7 +48,7 @@
 * **managedByTenantName**: string: Name of the managedBy tenant.
 * **manageeTenantId**: string: Id of the home tenant.
 * **manageeTenantName**: string: Name of the home tenant.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating': Current state of the registration definition. Possible values include: 'NotSpecified', 'Accepted', 'Running', 'Ready', 'Creating', 'Created', 'Deleting', 'Deleted', 'Canceled', 'Failed', 'Succeeded', 'Updating'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating': Current state of the registration definition.
 * **registrationDefinitionName**: string: Name of the registration definition.
 
 ## Authorization
@@ -64,6 +64,6 @@
 * **description**: string: Description of the registration definition.
 * **managedByTenantId**: string (Required): Id of the managedBy tenant.
 * **managedByTenantName**: string (ReadOnly): Name of the managedBy tenant.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Current state of the registration definition. Possible values include: 'NotSpecified', 'Accepted', 'Running', 'Ready', 'Creating', 'Created', 'Deleting', 'Deleted', 'Canceled', 'Failed', 'Succeeded', 'Updating'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Current state of the registration definition.
 * **registrationDefinitionName**: string: Name of the registration definition.
 

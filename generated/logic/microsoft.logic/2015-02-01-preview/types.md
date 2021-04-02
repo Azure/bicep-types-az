@@ -29,9 +29,9 @@
 * **definitionLink**: [ContentLink](#contentlink):
 * **parameters**: [Dictionary<string,WorkflowParameter>](#dictionarystringworkflowparameter): Gets or sets the parameters.
 * **parametersLink**: [ContentLink](#contentlink):
-* **provisioningState**: 'Moving' | 'NotSpecified' | 'Succeeded' (ReadOnly): Gets the provisioning state. Possible values include: 'NotSpecified', 'Moving', 'Succeeded'
+* **provisioningState**: 'Moving' | 'NotSpecified' | 'Succeeded' (ReadOnly): Gets the provisioning state.
 * **sku**: [Sku](#sku):
-* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended': Gets or sets the state. Possible values include: 'NotSpecified', 'Enabled', 'Disabled', 'Deleted', 'Suspended'
+* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended': Gets or sets the state.
 * **version**: string (ReadOnly): Gets the version.
 
 ## ContentLink
@@ -55,12 +55,12 @@
 ## WorkflowParameter
 ### Properties
 * **metadata**: any:
-* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String': Gets or sets the type. Possible values include: 'NotSpecified', 'String', 'SecureString', 'Int', 'Float', 'Bool', 'Array', 'Object', 'SecureObject'
+* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String': Gets or sets the type.
 * **value**: any:
 
 ## Sku
 ### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard': Gets or sets the name. Possible values include: 'NotSpecified', 'Free', 'Shared', 'Basic', 'Standard', 'Premium'
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard': Gets or sets the name.
 * **plan**: [ResourceReference](#resourcereference):
 
 ## ResourceReference

@@ -15,8 +15,8 @@
 ## PurchaseRequestProperties
 ### Properties
 * **appliedScopes**: string[] (WriteOnly): List of the subscriptions that the benefit will be applied. Do not specify if AppliedScopeType is Shared.
-* **appliedScopeType**: 'Shared' | 'Single' (WriteOnly): Possible values include: 'Single', 'Shared'
-* **billingPlan**: 'Monthly' | 'Upfront': Possible values include: 'Upfront', 'Monthly'
+* **appliedScopeType**: 'Shared' | 'Single' (WriteOnly):
+* **billingPlan**: 'Monthly' | 'Upfront':
 * **billingScopeId**: string (WriteOnly): Subscription that will be charged for purchasing Reservation
 * **createdDateTime**: string (ReadOnly): This is the DateTime when the reservation was created.
 * **displayName**: string: Friendly name of the Reservation
@@ -29,8 +29,8 @@
 * **requestDateTime**: string (ReadOnly): This is the DateTime when the reservation was initially requested for purchase.
 * **reservations**: [ReservationResponse](#reservationresponse)[] (ReadOnly):
 * **reservedResourceProperties**: [schemas:39_reservedResourceProperties](#schemas39reservedresourceproperties) (WriteOnly): Properties specific to each reserved resource type. Not required if not applicable.
-* **reservedResourceType**: 'AppService' | 'AzureDataExplorer' | 'BlockBlob' | 'CosmosDb' | 'Databricks' | 'DedicatedHost' | 'ManagedDisk' | 'MariaDb' | 'MySql' | 'PostgreSql' | 'RedHat' | 'RedHatOsa' | 'RedisCache' | 'SapHana' | 'SqlAzureHybridBenefit' | 'SqlDatabases' | 'SqlDataWarehouse' | 'SuseLinux' | 'VirtualMachines' | 'VMwareCloudSimple' (WriteOnly): Possible values include: 'VirtualMachines', 'SqlDatabases', 'SuseLinux', 'CosmosDb', 'RedHat', 'SqlDataWarehouse', 'VMwareCloudSimple', 'RedHatOsa', 'Databricks', 'AppService', 'ManagedDisk', 'BlockBlob', 'RedisCache', 'AzureDataExplorer', 'MySql', 'MariaDb', 'PostgreSql', 'DedicatedHost', 'SapHana', 'SqlAzureHybridBenefit'
-* **term**: 'P1Y' | 'P3Y': Possible values include: 'P1Y', 'P3Y'
+* **reservedResourceType**: 'AppService' | 'AzureDataExplorer' | 'BlockBlob' | 'CosmosDb' | 'Databricks' | 'DedicatedHost' | 'ManagedDisk' | 'MariaDb' | 'MySql' | 'PostgreSql' | 'RedHat' | 'RedHatOsa' | 'RedisCache' | 'SapHana' | 'SqlAzureHybridBenefit' | 'SqlDatabases' | 'SqlDataWarehouse' | 'SuseLinux' | 'VirtualMachines' | 'VMwareCloudSimple' (WriteOnly):
+* **term**: 'P1Y' | 'P3Y':
 
 ## ReservationOrderBillingPlanInformation
 ### Properties
@@ -52,12 +52,12 @@
 * **extendedStatusInfo**: [ExtendedStatusInfo](#extendedstatusinfo) (ReadOnly):
 * **paymentDate**: string (ReadOnly): Date when the transaction is completed. Is null when it is scheduled.
 * **pricingCurrencyTotal**: [Price](#price) (ReadOnly):
-* **status**: 'Cancelled' | 'Failed' | 'Scheduled' | 'Succeeded' (ReadOnly): Possible values include: 'Succeeded', 'Failed', 'Scheduled', 'Cancelled'
+* **status**: 'Cancelled' | 'Failed' | 'Scheduled' | 'Succeeded' (ReadOnly):
 
 ## ExtendedStatusInfo
 ### Properties
 * **message**: string (ReadOnly): The message giving detailed information about the status code.
-* **statusCode**: 'Active' | 'Expired' | 'Merged' | 'None' | 'PaymentInstrumentError' | 'Pending' | 'PurchaseError' | 'Split' | 'Succeeded' (ReadOnly): Possible values include: 'None', 'Pending', 'Active', 'PurchaseError', 'PaymentInstrumentError', 'Split', 'Merged', 'Expired', 'Succeeded'
+* **statusCode**: 'Active' | 'Expired' | 'Merged' | 'None' | 'PaymentInstrumentError' | 'Pending' | 'PurchaseError' | 'Split' | 'Succeeded' (ReadOnly):
 
 ## ReservationResponse
 ### Properties
@@ -72,14 +72,14 @@
 ## ReservationProperties
 ### Properties
 * **appliedScopes**: string[] (ReadOnly): List of the subscriptions that the benefit will be applied. Do not specify if AppliedScopeType is Shared.
-* **appliedScopeType**: 'Shared' | 'Single' (ReadOnly): Possible values include: 'Single', 'Shared'
-* **billingPlan**: 'Monthly' | 'Upfront' (ReadOnly): Possible values include: 'Upfront', 'Monthly'
+* **appliedScopeType**: 'Shared' | 'Single' (ReadOnly):
+* **billingPlan**: 'Monthly' | 'Upfront' (ReadOnly):
 * **billingScopeId**: string (ReadOnly): Subscription that will be charged for purchasing Reservation
 * **displayName**: string (ReadOnly): Friendly name for user to easily identify the reservation
 * **effectiveDateTime**: string (ReadOnly): DateTime of the Reservation starting when this version is effective from.
 * **expiryDate**: string (ReadOnly): This is the date when the Reservation will expire.
 * **extendedStatusInfo**: [ExtendedStatusInfo](#extendedstatusinfo) (ReadOnly):
-* **instanceFlexibility**: 'Off' | 'On' (ReadOnly): Possible values include: 'On', 'Off'
+* **instanceFlexibility**: 'Off' | 'On' (ReadOnly):
 * **lastUpdatedDateTime**: string (ReadOnly): DateTime of the last time the Reservation was updated.
 * **mergeProperties**: [ReservationMergeProperties](#reservationmergeproperties) (ReadOnly):
 * **provisioningState**: string (ReadOnly): Current state of the reservation.
@@ -88,10 +88,10 @@
 * **renewDestination**: string (ReadOnly): Reservation Id of the reservation which is purchased because of renew. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}.
 * **renewProperties**: [RenewPropertiesResponse](#renewpropertiesresponse) (ReadOnly):
 * **renewSource**: string (ReadOnly): Reservation Id of the reservation from which this reservation is renewed. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}.
-* **reservedResourceType**: 'AppService' | 'AzureDataExplorer' | 'BlockBlob' | 'CosmosDb' | 'Databricks' | 'DedicatedHost' | 'ManagedDisk' | 'MariaDb' | 'MySql' | 'PostgreSql' | 'RedHat' | 'RedHatOsa' | 'RedisCache' | 'SapHana' | 'SqlAzureHybridBenefit' | 'SqlDatabases' | 'SqlDataWarehouse' | 'SuseLinux' | 'VirtualMachines' | 'VMwareCloudSimple' (ReadOnly): Possible values include: 'VirtualMachines', 'SqlDatabases', 'SuseLinux', 'CosmosDb', 'RedHat', 'SqlDataWarehouse', 'VMwareCloudSimple', 'RedHatOsa', 'Databricks', 'AppService', 'ManagedDisk', 'BlockBlob', 'RedisCache', 'AzureDataExplorer', 'MySql', 'MariaDb', 'PostgreSql', 'DedicatedHost', 'SapHana', 'SqlAzureHybridBenefit'
+* **reservedResourceType**: 'AppService' | 'AzureDataExplorer' | 'BlockBlob' | 'CosmosDb' | 'Databricks' | 'DedicatedHost' | 'ManagedDisk' | 'MariaDb' | 'MySql' | 'PostgreSql' | 'RedHat' | 'RedHatOsa' | 'RedisCache' | 'SapHana' | 'SqlAzureHybridBenefit' | 'SqlDatabases' | 'SqlDataWarehouse' | 'SuseLinux' | 'VirtualMachines' | 'VMwareCloudSimple' (ReadOnly):
 * **skuDescription**: string (ReadOnly): Description of the SKU in english.
 * **splitProperties**: [ReservationSplitProperties](#reservationsplitproperties) (ReadOnly):
-* **term**: 'P1Y' | 'P3Y' (ReadOnly): Possible values include: 'P1Y', 'P3Y'
+* **term**: 'P1Y' | 'P3Y' (ReadOnly):
 
 ## ReservationMergeProperties
 ### Properties
@@ -131,5 +131,5 @@
 
 ## schemas:39_reservedResourceProperties
 ### Properties
-* **instanceFlexibility**: 'Off' | 'On' (WriteOnly): Possible values include: 'On', 'Off'
+* **instanceFlexibility**: 'Off' | 'On' (WriteOnly):
 
