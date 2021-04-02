@@ -43,7 +43,7 @@ jobs:
         run: dotnet build --configuration release
       
       - name: Install generator npm packages
-        run: npm install
+        run: npm ci
         working-directory: src/generator
       
       - id: generate
