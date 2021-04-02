@@ -1,7 +1,7 @@
 import os from 'os';
 import path from 'path';
 import { createWriteStream, existsSync } from 'fs';
-import { readdir, stat, rmdir, mkdir, rm, writeFile, readFile } from 'fs/promises';
+import { readdir, stat, rmdir, mkdir, rm, writeFile, readFile, copyFile } from 'fs/promises';
 import { series } from 'async';
 import { spawn } from 'child_process';
 import chalk from 'chalk';
@@ -52,10 +52,18 @@ executeSynchronous(async () => {
     throw `Unable to find rest-api-specs in folder ${inputBaseDir}`;
   }
 
+  const tmpOutputPath = `${os.tmpdir()}/_bcp_${new Date().getTime()}`;
+  await rmdir(tmpOutputPath, { recursive: true });
+
+  let errorLogger: ILogger | undefined;
+  if (!singlePath) {
+    errorLogger = await getLogger(`${outputBaseDir}/errors.out`);
+  }
+
   // use consistent sorting to make log changes easier to review
   for (const readmePath of readmePaths.sort(lowerCaseCompare)) {
     const basePath = path.relative(specsPath, readmePath).split(path.sep)[0].toLowerCase();
-    const outputDir = `${outputBaseDir}/${basePath}`;
+    const outputDir = `${tmpOutputPath}/${basePath}`;
 
     if (singlePath && lowerCaseCompare(singlePath, basePath) !== 0) {
       continue;
@@ -68,9 +76,18 @@ executeSynchronous(async () => {
 
     try {
       await generateSchema(logger, readmePath, outputDir, verbose, waitForDebugger);
+
+      await copyRecursive(outputDir, `${outputBaseDir}/${basePath}`);
     } catch (e) {
       logErr(logger, e);
+
+      if (errorLogger) {
+        logErr(errorLogger, `Fatal error generating types for ${basePath}`);
+      }
     }
+
+    // clean up temp dir
+    await rmdir(outputDir, { recursive: true });
   }
 
   // build the type index
@@ -112,6 +129,15 @@ async function findReadmePaths(specsPath: string) {
       .split(path.sep)
       .some(parent => parent == 'resource-manager');
   });
+}
+
+async function copyRecursive(sourceBasePath: string, destinationBasePath: string): Promise<void> {
+  for (const filePath of await findRecursive(sourceBasePath, _ => true)) {
+    const destinationPath = path.join(destinationBasePath, path.relative(sourceBasePath, filePath));
+
+    await mkdir(path.dirname(destinationPath), { recursive: true });
+    await copyFile(filePath, destinationPath);
+  }
 }
 
 async function findRecursive(basePath: string, filter: (name: string) => boolean): Promise<string[]> {
