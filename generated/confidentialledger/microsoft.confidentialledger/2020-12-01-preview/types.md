@@ -20,29 +20,29 @@
 * **ledgerInternalNamespace**: string (ReadOnly): Internal namespace for the Ledger
 * **ledgerName**: string (ReadOnly): Unique name for the Confidential Ledger.
 * **ledgerStorageAccount**: string: Name of the Blob Storage Account for saving ledger files
-* **ledgerType**: 'Private' | 'Public' | 'Unknown': Type of Confidential Ledger. Possible values include: 'Unknown', 'Public', 'Private'
+* **ledgerType**: 'Private' | 'Public' | 'Unknown': Type of Confidential Ledger.
 * **ledgerUri**: string (ReadOnly): Endpoint for calling Ledger Service.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of Ledger Resource. Possible values include: 'Unknown', 'Succeeded', 'Failed', 'Canceled', 'Creating', 'Deleting', 'Updating'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of Ledger Resource.
 
 ## AADBasedSecurityPrincipal
 ### Properties
-* **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader': Possible values include: 'Reader', 'Contributor', 'Administrator'
+* **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader':
 * **principalId**: string: UUID/GUID based Principal Id of the Security Principal
 * **tenantId**: string: UUID/GUID based Tenant Id of the Security Principal
 
 ## CertBasedSecurityPrincipal
 ### Properties
 * **cert**: string: Base64 encoded public key of the user cert (.pem or .cer)
-* **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader': Possible values include: 'Reader', 'Contributor', 'Administrator'
+* **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader':
 
 ## systemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties

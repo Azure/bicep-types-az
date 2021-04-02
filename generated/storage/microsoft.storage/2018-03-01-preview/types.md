@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): Identity for the resource.
-* **kind**: 'BlobStorage' | 'Storage' | 'StorageV2' (Required): Required. Indicates the type of storage account. Possible values include: 'Storage', 'StorageV2', 'BlobStorage'
+* **kind**: 'BlobStorage' | 'Storage' | 'StorageV2' (Required): Required. Indicates the type of storage account.
 * **location**: string (Required): Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters): The parameters used to create the storage account.
@@ -51,7 +51,7 @@
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
-* **accessTier**: 'Cool' | 'Hot': Required for storage accounts where kind = BlobStorage. The access tier used for billing. Possible values include: 'Hot', 'Cool'
+* **accessTier**: 'Cool' | 'Hot': Required for storage accounts where kind = BlobStorage. The access tier used for billing.
 * **creationTime**: string (ReadOnly): Gets the creation date and time of the storage account in UTC.
 * **customDomain**: [CustomDomain](#customdomain): The custom domain assigned to this storage account. This can be set via Update.
 * **encryption**: [Encryption](#encryption): The encryption settings on the storage account.
@@ -60,11 +60,11 @@
 * **networkAcls**: [NetworkRuleSet](#networkruleset): Network rule set
 * **primaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): The URIs that are used to perform a retrieval of a public blob, queue, table, web or dfs object.
 * **primaryLocation**: string (ReadOnly): Gets the location of the primary data center for the storage account.
-* **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly): Gets the status of the storage account at the time the operation was called. Possible values include: 'Creating', 'ResolvingDNS', 'Succeeded'
+* **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly): Gets the status of the storage account at the time the operation was called.
 * **secondaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): The URIs that are used to perform a retrieval of a public blob, queue, table, web or dfs object.
 * **secondaryLocation**: string (ReadOnly): Gets the location of the geo-replicated secondary for the storage account. Only available if the accountType is Standard_GRS or Standard_RAGRS.
-* **statusOfPrimary**: 'available' | 'unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable. Possible values include: 'available', 'unavailable'
-* **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly): Gets the status indicating whether the secondary location of the storage account is available or unavailable. Only available if the SKU name is Standard_GRS or Standard_RAGRS. Possible values include: 'available', 'unavailable'
+* **statusOfPrimary**: 'available' | 'unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable.
+* **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly): Gets the status indicating whether the secondary location of the storage account is available or unavailable. Only available if the SKU name is Standard_GRS or Standard_RAGRS.
 * **supportsHttpsTrafficOnly**: bool: Allows https traffic only to storage service if sets to true.
 
 ## CustomDomain
@@ -74,7 +74,7 @@
 
 ## Encryption
 ### Properties
-* **keySource**: 'Microsoft.Keyvault' | 'Microsoft.Storage' (Required): The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault. Possible values include: 'Microsoft.Storage', 'Microsoft.Keyvault'
+* **keySource**: 'Microsoft.Keyvault' | 'Microsoft.Storage' (Required): The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault.
 * **keyvaultproperties**: [KeyVaultProperties](#keyvaultproperties): Properties of key vault.
 * **services**: [EncryptionServices](#encryptionservices): A list of services that support encryption.
 
@@ -98,21 +98,21 @@
 
 ## NetworkRuleSet
 ### Properties
-* **bypass**: 'AzureServices' | 'Logging' | 'Metrics' | 'None': Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics. Possible values include: 'None', 'Logging', 'Metrics', 'AzureServices'
-* **defaultAction**: 'Allow' | 'Deny' (Required): Specifies the default action of allow or deny when no other rules match. Possible values include: 'Allow', 'Deny'
+* **bypass**: 'AzureServices' | 'Logging' | 'Metrics' | 'None': Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.
+* **defaultAction**: 'Allow' | 'Deny' (Required): Specifies the default action of allow or deny when no other rules match.
 * **ipRules**: [IPRule](#iprule)[]: Sets the IP ACL rules
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: Sets the virtual network rules
 
 ## IPRule
 ### Properties
-* **action**: 'Allow': The action of IP ACL rule. Possible values include: 'Allow'
+* **action**: 'Allow': The action of IP ACL rule.
 * **value**: string (Required): Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
 
 ## VirtualNetworkRule
 ### Properties
-* **action**: 'Allow': The action of virtual network rule. Possible values include: 'Allow'
+* **action**: 'Allow': The action of virtual network rule.
 * **id**: string (Required): Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
-* **state**: 'deprovisioning' | 'failed' | 'networkSourceDeleted' | 'provisioning' | 'succeeded': Gets the state of virtual network rule. Possible values include: 'provisioning', 'deprovisioning', 'succeeded', 'failed', 'networkSourceDeleted'
+* **state**: 'deprovisioning' | 'failed' | 'networkSourceDeleted' | 'provisioning' | 'succeeded': Gets the state of virtual network rule.
 
 ## Endpoints
 ### Properties
@@ -126,12 +126,12 @@
 ## Sku
 ### Properties
 * **capabilities**: [SKUCapability](#skucapability)[] (ReadOnly): The capability information in the specified sku, including file encryption, network acls, change notification, etc.
-* **kind**: 'BlobStorage' | 'Storage' | 'StorageV2' (ReadOnly): Indicates the type of storage account. Possible values include: 'Storage', 'StorageV2', 'BlobStorage'
+* **kind**: 'BlobStorage' | 'Storage' | 'StorageV2' (ReadOnly): Indicates the type of storage account.
 * **locations**: string[] (ReadOnly): The set of locations that the SKU is available. This will be supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.).
-* **name**: 'Premium_LRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_ZRS' (Required): Gets or sets the sku name. Required for account creation; optional for update. Note that in older versions, sku name was called accountType. Possible values include: 'Standard_LRS', 'Standard_GRS', 'Standard_RAGRS', 'Standard_ZRS', 'Premium_LRS'
+* **name**: 'Premium_LRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_ZRS' (Required): Gets or sets the sku name. Required for account creation; optional for update. Note that in older versions, sku name was called accountType.
 * **resourceType**: string (ReadOnly): The type of the resource, usually it is 'storageAccounts'.
 * **restrictions**: [Restriction](#restriction)[]: The restrictions because of which SKU cannot be used. This is empty if there are no restrictions.
-* **tier**: 'Premium' | 'Standard' (ReadOnly): Gets the sku tier. This is based on the SKU name. Possible values include: 'Standard', 'Premium'
+* **tier**: 'Premium' | 'Standard' (ReadOnly): Gets the sku tier. This is based on the SKU name.
 
 ## SKUCapability
 ### Properties
@@ -140,7 +140,7 @@
 
 ## Restriction
 ### Properties
-* **reasonCode**: 'NotAvailableForSubscription' | 'QuotaId': The reason for the restriction. As of now this can be "QuotaId" or "NotAvailableForSubscription". Quota Id is set when the SKU has requiredQuotas parameter as the subscription does not belong to that quota. The "NotAvailableForSubscription" is related to capacity at DC. Possible values include: 'QuotaId', 'NotAvailableForSubscription'
+* **reasonCode**: 'NotAvailableForSubscription' | 'QuotaId': The reason for the restriction. As of now this can be "QuotaId" or "NotAvailableForSubscription". Quota Id is set when the SKU has requiredQuotas parameter as the subscription does not belong to that quota. The "NotAvailableForSubscription" is related to capacity at DC.
 * **type**: string (ReadOnly): The type of restrictions. As of now only possible value for this is location.
 * **values**: string[] (ReadOnly): The value of restrictions. If the restriction type is set to location. This would be different locations where the SKU is restricted.
 
@@ -155,12 +155,12 @@
 * **hasLegalHold**: bool (ReadOnly): The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.
 * **immutabilityPolicy**: [ImmutabilityPolicyProperties](#immutabilitypolicyproperties) (ReadOnly): The properties of an ImmutabilityPolicy of a blob container.
 * **lastModifiedTime**: string (ReadOnly): Returns the date and time the container was last modified.
-* **leaseDuration**: 'Fixed' | 'Infinite' (ReadOnly): Specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased. Possible values include: 'Infinite', 'Fixed'
-* **leaseState**: 'Available' | 'Breaking' | 'Broken' | 'Expired' | 'Leased' (ReadOnly): Lease state of the container. Possible values include: 'Available', 'Leased', 'Expired', 'Breaking', 'Broken'
-* **leaseStatus**: 'Locked' | 'Unlocked' (ReadOnly): The lease status of the container. Possible values include: 'Locked', 'Unlocked'
+* **leaseDuration**: 'Fixed' | 'Infinite' (ReadOnly): Specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased.
+* **leaseState**: 'Available' | 'Breaking' | 'Broken' | 'Expired' | 'Leased' (ReadOnly): Lease state of the container.
+* **leaseStatus**: 'Locked' | 'Unlocked' (ReadOnly): The lease status of the container.
 * **legalHold**: [LegalHoldProperties](#legalholdproperties) (ReadOnly): The LegalHold property of a blob container.
 * **metadata**: [Dictionary<string,String>](#dictionarystringstring): A name-value pair to associate with the container as metadata.
-* **publicAccess**: 'Blob' | 'Container' | 'None': Specifies whether data in the container may be accessed publicly and the level of access. Possible values include: 'Container', 'Blob', 'None'
+* **publicAccess**: 'Blob' | 'Container' | 'None': Specifies whether data in the container may be accessed publicly and the level of access.
 
 ## ImmutabilityPolicyProperties
 ### Properties
@@ -171,7 +171,7 @@
 ## ImmutabilityPolicyProperty
 ### Properties
 * **immutabilityPeriodSinceCreationInDays**: int (Required): The immutability period for the blobs in the container since the policy creation, in days.
-* **state**: 'Locked' | 'Unlocked' (ReadOnly): The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked. Possible values include: 'Locked', 'Unlocked'
+* **state**: 'Locked' | 'Unlocked' (ReadOnly): The ImmutabilityPolicy state of a blob container,
 
 ## UpdateHistoryProperty
 ### Properties
@@ -179,7 +179,7 @@
 * **objectIdentifier**: string (ReadOnly): Returns the Object ID of the user who updated the ImmutabilityPolicy.
 * **tenantId**: string (ReadOnly): Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.
 * **timestamp**: string (ReadOnly): Returns the date and time the ImmutabilityPolicy was updated.
-* **update**: 'extend' | 'lock' | 'put' (ReadOnly): The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend. Possible values include: 'put', 'lock', 'extend'
+* **update**: 'extend' | 'lock' | 'put' (ReadOnly): The ImmutabilityPolicy update type of a blob container,
 * **upn**: string (ReadOnly): Returns the User Principal Name of the user who updated the ImmutabilityPolicy.
 
 ## LegalHoldProperties

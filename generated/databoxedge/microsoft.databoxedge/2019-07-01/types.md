@@ -95,13 +95,13 @@
 ### Properties
 * **configuredRoleTypes**: 'ASA' | 'Cognitive' | 'Functions' | 'IOT'[] (ReadOnly): Type of compute roles configured.
 * **culture**: string (ReadOnly): The Data Box Edge/Gateway device culture.
-* **dataBoxEdgeDeviceStatus**: 'Disconnected' | 'Maintenance' | 'NeedsAttention' | 'Offline' | 'Online' | 'PartiallyDisconnected' | 'ReadyToSetup': The status of the Data Box Edge/Gateway device. Possible values include: 'ReadyToSetup', 'Online', 'Offline', 'NeedsAttention', 'Disconnected', 'PartiallyDisconnected', 'Maintenance'
+* **dataBoxEdgeDeviceStatus**: 'Disconnected' | 'Maintenance' | 'NeedsAttention' | 'Offline' | 'Online' | 'PartiallyDisconnected' | 'ReadyToSetup': The status of the Data Box Edge/Gateway device.
 * **description**: string: The Description of the Data Box Edge/Gateway device.
 * **deviceHcsVersion**: string (ReadOnly): The device software version number of the device (eg: 1.2.18105.6).
 * **deviceLocalCapacity**: int (ReadOnly): The Data Box Edge/Gateway device local capacity in MB.
 * **deviceModel**: string (ReadOnly): The Data Box Edge/Gateway device model.
 * **deviceSoftwareVersion**: string (ReadOnly): The Data Box Edge/Gateway device software version.
-* **deviceType**: 'DataBoxEdgeDevice' (ReadOnly): The type of the Data Box Edge/Gateway device. Possible values include: 'DataBoxEdgeDevice'
+* **deviceType**: 'DataBoxEdgeDevice' (ReadOnly): The type of the Data Box Edge/Gateway device.
 * **friendlyName**: string: The Data Box Edge/Gateway device name.
 * **modelDescription**: string: The description of the Data Box Edge/Gateway device model.
 * **nodeCount**: int (ReadOnly): The number of nodes in the cluster.
@@ -110,8 +110,8 @@
 
 ## Sku
 ### Properties
-* **name**: 'Edge' | 'Gateway': SKU name. Possible values include: 'Gateway', 'Edge'
-* **tier**: 'Standard': The SKU tier. This is based on the SKU name. Possible values include: 'Standard'
+* **name**: 'Edge' | 'Gateway': SKU name.
+* **tier**: 'Standard': The SKU tier. This is based on the SKU name.
 
 ## Dictionary<string,String>
 ### Properties
@@ -145,7 +145,7 @@
 ## OrderStatus
 ### Properties
 * **comments**: string: Comments related to this status change.
-* **status**: 'Arriving' | 'AwaitingFulfilment' | 'AwaitingPreparation' | 'AwaitingReturnShipment' | 'AwaitingShipment' | 'CollectedAtMicrosoft' | 'Declined' | 'Delivered' | 'LostDevice' | 'ReplacementRequested' | 'ReturnInitiated' | 'Shipped' | 'ShippedBack' | 'Untracked' (Required): Status of the order as per the allowed status types. Possible values include: 'Untracked', 'AwaitingFulfilment', 'AwaitingPreparation', 'AwaitingShipment', 'Shipped', 'Arriving', 'Delivered', 'ReplacementRequested', 'LostDevice', 'Declined', 'ReturnInitiated', 'AwaitingReturnShipment', 'ShippedBack', 'CollectedAtMicrosoft'
+* **status**: 'Arriving' | 'AwaitingFulfilment' | 'AwaitingPreparation' | 'AwaitingReturnShipment' | 'AwaitingShipment' | 'CollectedAtMicrosoft' | 'Declined' | 'Delivered' | 'LostDevice' | 'ReplacementRequested' | 'ReturnInitiated' | 'Shipped' | 'ShippedBack' | 'Untracked' (Required): Status of the order as per the allowed status types.
 * **updateDateTime**: string (ReadOnly): Time of status update.
 
 ## TrackingInfo
@@ -172,10 +172,10 @@
 
 ## IoTRoleProperties
 ### Properties
-* **hostPlatform**: 'Linux' | 'Windows' (Required): Host OS supported by the IoT role. Possible values include: 'Windows', 'Linux'
+* **hostPlatform**: 'Linux' | 'Windows' (Required): Host OS supported by the IoT role.
 * **ioTDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
 * **ioTEdgeDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
-* **roleStatus**: 'Disabled' | 'Enabled' (Required): Role status. Possible values include: 'Enabled', 'Disabled'
+* **roleStatus**: 'Disabled' | 'Enabled' (Required): Role status.
 * **shareMappings**: [MountPointMap](#mountpointmap)[]: Mount points of shares in role(s).
 
 ## IoTDeviceInfo
@@ -195,7 +195,7 @@
 
 ## AsymmetricEncryptedSecret
 ### Properties
-* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' (Required): The algorithm used to encrypt "Value". Possible values include: 'None', 'AES256', 'RSAES_PKCS1_v_1_5'
+* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' (Required): The algorithm used to encrypt "Value".
 * **encryptionCertThumbprint**: string: Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.
 * **value**: string (Required): The value of the secret.
 
@@ -203,31 +203,31 @@
 ### Properties
 * **mountPoint**: string (ReadOnly): Mount point for the share.
 * **roleId**: string (ReadOnly): ID of the role to which share is mounted.
-* **roleType**: 'ASA' | 'Cognitive' | 'Functions' | 'IOT' (ReadOnly): Role type. Possible values include: 'IOT', 'ASA', 'Functions', 'Cognitive'
+* **roleType**: 'ASA' | 'Cognitive' | 'Functions' | 'IOT' (ReadOnly): Role type.
 * **shareId**: string (Required): ID of the share mounted to the role VM.
 
 ## ShareProperties
 ### Properties
-* **accessProtocol**: 'NFS' | 'SMB' (Required): Access protocol to be used by the share. Possible values include: 'SMB', 'NFS'
+* **accessProtocol**: 'NFS' | 'SMB' (Required): Access protocol to be used by the share.
 * **azureContainerInfo**: [AzureContainerInfo](#azurecontainerinfo): Azure container mapping of the endpoint.
 * **clientAccessRights**: [ClientAccessRight](#clientaccessright)[]: List of IP addresses and corresponding access rights on the share(required for NFS protocol).
-* **dataPolicy**: 'Cloud' | 'Local': Data policy of the share. Possible values include: 'Cloud', 'Local'
+* **dataPolicy**: 'Cloud' | 'Local': Data policy of the share.
 * **description**: string: Description for the share.
-* **monitoringStatus**: 'Disabled' | 'Enabled' (Required): Current monitoring status of the share. Possible values include: 'Enabled', 'Disabled'
+* **monitoringStatus**: 'Disabled' | 'Enabled' (Required): Current monitoring status of the share.
 * **refreshDetails**: [RefreshDetails](#refreshdetails): Fields for tracking refresh job on the share.
 * **shareMappings**: [MountPointMap](#mountpointmap)[] (ReadOnly): Share mount point to the role.
-* **shareStatus**: 'NeedsAttention' | 'Offline' | 'OK' | 'Unknown' | 'Updating' (Required): Current status of the share. Possible values include: 'Offline', 'Unknown', 'OK', 'Updating', 'NeedsAttention'
+* **shareStatus**: 'NeedsAttention' | 'Offline' | 'OK' | 'Unknown' | 'Updating' (Required): Current status of the share.
 * **userAccessRights**: [UserAccessRight](#useraccessright)[]: Mapping of users and corresponding access rights on the share (required for SMB protocol).
 
 ## AzureContainerInfo
 ### Properties
 * **containerName**: string (Required): Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).
-* **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' (Required): Storage format used for the file represented by the share. Possible values include: 'BlockBlob', 'PageBlob', 'AzureFile'
+* **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' (Required): Storage format used for the file represented by the share.
 * **storageAccountCredentialId**: string (Required): ID of the storage account credential used to access storage.
 
 ## ClientAccessRight
 ### Properties
-* **accessPermission**: 'NoAccess' | 'ReadOnly' | 'ReadWrite' (Required): Type of access to be allowed for the client. Possible values include: 'NoAccess', 'ReadOnly', 'ReadWrite'
+* **accessPermission**: 'NoAccess' | 'ReadOnly' | 'ReadWrite' (Required): Type of access to be allowed for the client.
 * **client**: string (Required): IP of the client.
 
 ## RefreshDetails
@@ -239,17 +239,17 @@
 
 ## UserAccessRight
 ### Properties
-* **accessType**: 'Change' | 'Custom' | 'Read' (Required): Type of access to be allowed for the user. Possible values include: 'Change', 'Read', 'Custom'
+* **accessType**: 'Change' | 'Custom' | 'Read' (Required): Type of access to be allowed for the user.
 * **userId**: string (Required): User ID (already existing in the device).
 
 ## StorageAccountCredentialProperties
 ### Properties
 * **accountKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
-* **accountType**: 'BlobStorage' | 'GeneralPurposeStorage' (Required): Type of storage accessed on the storage account. Possible values include: 'GeneralPurposeStorage', 'BlobStorage'
+* **accountType**: 'BlobStorage' | 'GeneralPurposeStorage' (Required): Type of storage accessed on the storage account.
 * **alias**: string (Required): Alias for the storage account.
 * **blobDomainName**: string: Blob end point for private clouds.
 * **connectionString**: string: Connection string for the storage account. Use this string if username and account key are not specified.
-* **sslStatus**: 'Disabled' | 'Enabled' (Required): Signifies whether SSL needs to be enabled or not. Possible values include: 'Enabled', 'Disabled'
+* **sslStatus**: 'Disabled' | 'Enabled' (Required): Signifies whether SSL needs to be enabled or not.
 * **storageAccountId**: string: Id of the storage account.
 * **userName**: string: Username for the storage account.
 
@@ -296,6 +296,6 @@
 
 ## ShareAccessRight
 ### Properties
-* **accessType**: 'Change' | 'Custom' | 'Read' (Required): Type of access to be allowed on the share for this user. Possible values include: 'Change', 'Read', 'Custom'
+* **accessType**: 'Change' | 'Custom' | 'Read' (Required): Type of access to be allowed on the share for this user.
 * **shareId**: string (Required): The share ID.
 

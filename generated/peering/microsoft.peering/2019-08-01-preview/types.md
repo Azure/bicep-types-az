@@ -14,7 +14,7 @@
 ### Properties
 * **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'Direct' | 'Exchange' (Required): The kind of the peering. Possible values include: 'Direct', 'Exchange'
+* **kind**: 'Direct' | 'Exchange' (Required): The kind of the peering.
 * **location**: string (Required): The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PeeringProperties](#peeringproperties): The properties that define connectivity to the Microsoft Cloud Edge.
@@ -47,7 +47,7 @@
 * **peerAsn**: int: The Autonomous System Number (ASN) of the peer.
 * **peerContactInfo**: [ContactInfo](#contactinfo): The contact information of the peer.
 * **peerName**: string: The name of the peer.
-* **validationState**: 'Approved' | 'Failed' | 'None' | 'Pending': The validation state of the ASN associated with the peer. Possible values include: 'None', 'Pending', 'Approved', 'Failed'
+* **validationState**: 'Approved' | 'Failed' | 'None' | 'Pending': The validation state of the ASN associated with the peer.
 
 ## ContactInfo
 ### Properties
@@ -59,12 +59,12 @@
 * **direct**: [PeeringPropertiesDirect](#peeringpropertiesdirect): The properties that define a direct peering.
 * **exchange**: [PeeringPropertiesExchange](#peeringpropertiesexchange): The properties that define an exchange peering.
 * **peeringLocation**: string: The location of the peering.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the resource. Possible values include: 'Succeeded', 'Updating', 'Deleting', 'Failed'
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the resource.
 
 ## PeeringPropertiesDirect
 ### Properties
 * **connections**: [DirectConnection](#directconnection)[]: The set of connections that constitute a direct peering.
-* **directPeeringType**: 'Cdn' | 'Edge' | 'Internal' | 'Transit': The type of direct peering. Possible values include: 'Edge', 'Transit', 'Cdn', 'Internal'
+* **directPeeringType**: 'Cdn' | 'Edge' | 'Internal' | 'Transit': The type of direct peering.
 * **peerAsn**: [SubResource](#subresource): The sub resource.
 * **useForPeeringService**: bool: The flag that indicates whether or not the peering is used for peering service.
 
@@ -73,10 +73,10 @@
 * **bandwidthInMbps**: int: The bandwidth of the connection.
 * **bgpSession**: [BgpSession](#bgpsession): The properties that define a BGP session.
 * **connectionIdentifier**: string: The unique identifier (GUID) for the connection.
-* **connectionState**: 'Active' | 'Approved' | 'None' | 'PendingApproval' | 'ProvisioningCompleted' | 'ProvisioningFailed' | 'ProvisioningStarted' | 'Validating' (ReadOnly): The state of the connection. Possible values include: 'None', 'PendingApproval', 'Approved', 'ProvisioningStarted', 'ProvisioningFailed', 'ProvisioningCompleted', 'Validating', 'Active'
+* **connectionState**: 'Active' | 'Approved' | 'None' | 'PendingApproval' | 'ProvisioningCompleted' | 'ProvisioningFailed' | 'ProvisioningStarted' | 'Validating' (ReadOnly): The state of the connection.
 * **peeringDBFacilityId**: int: The PeeringDB.com ID of the facility at which the connection has to be set up.
 * **provisionedBandwidthInMbps**: int: The bandwidth that is actually provisioned.
-* **sessionAddressProvider**: 'Microsoft' | 'Peer': The field indicating if Microsoft provides session ip addresses. Possible values include: 'Microsoft', 'Peer'
+* **sessionAddressProvider**: 'Microsoft' | 'Peer': The field indicating if Microsoft provides session ip addresses.
 * **useForPeeringService**: bool: The flag that indicates whether or not the connection is used for peering service.
 
 ## BgpSession
@@ -90,8 +90,8 @@
 * **peerSessionIPv6Address**: string: The IPv6 session address on peer's end.
 * **sessionPrefixV4**: string: The IPv4 prefix that contains both ends' IPv4 addresses.
 * **sessionPrefixV6**: string: The IPv6 prefix that contains both ends' IPv6 addresses.
-* **sessionStateV4**: 'Active' | 'Connect' | 'Established' | 'Idle' | 'None' | 'OpenConfirm' | 'OpenReceived' | 'OpenSent' | 'PendingAdd' | 'PendingRemove' | 'PendingUpdate' (ReadOnly): The state of the IPv4 session. Possible values include: 'None', 'Idle', 'Connect', 'Active', 'OpenSent', 'OpenConfirm', 'OpenReceived', 'Established', 'PendingAdd', 'PendingUpdate', 'PendingRemove'
-* **sessionStateV6**: 'Active' | 'Connect' | 'Established' | 'Idle' | 'None' | 'OpenConfirm' | 'OpenReceived' | 'OpenSent' | 'PendingAdd' | 'PendingRemove' | 'PendingUpdate' (ReadOnly): The state of the IPv6 session. Possible values include: 'None', 'Idle', 'Connect', 'Active', 'OpenSent', 'OpenConfirm', 'OpenReceived', 'Established', 'PendingAdd', 'PendingUpdate', 'PendingRemove'
+* **sessionStateV4**: 'Active' | 'Connect' | 'Established' | 'Idle' | 'None' | 'OpenConfirm' | 'OpenReceived' | 'OpenSent' | 'PendingAdd' | 'PendingRemove' | 'PendingUpdate' (ReadOnly): The state of the IPv4 session.
+* **sessionStateV6**: 'Active' | 'Connect' | 'Established' | 'Idle' | 'None' | 'OpenConfirm' | 'OpenReceived' | 'OpenSent' | 'PendingAdd' | 'PendingRemove' | 'PendingUpdate' (ReadOnly): The state of the IPv6 session.
 
 ## SubResource
 ### Properties
@@ -106,15 +106,15 @@
 ### Properties
 * **bgpSession**: [BgpSession](#bgpsession): The properties that define a BGP session.
 * **connectionIdentifier**: string: The unique identifier (GUID) for the connection.
-* **connectionState**: 'Active' | 'Approved' | 'None' | 'PendingApproval' | 'ProvisioningCompleted' | 'ProvisioningFailed' | 'ProvisioningStarted' | 'Validating' (ReadOnly): The state of the connection. Possible values include: 'None', 'PendingApproval', 'Approved', 'ProvisioningStarted', 'ProvisioningFailed', 'ProvisioningCompleted', 'Validating', 'Active'
+* **connectionState**: 'Active' | 'Approved' | 'None' | 'PendingApproval' | 'ProvisioningCompleted' | 'ProvisioningFailed' | 'ProvisioningStarted' | 'Validating' (ReadOnly): The state of the connection.
 * **peeringDBFacilityId**: int: The PeeringDB.com ID of the facility at which the connection has to be set up.
 
 ## PeeringSku
 ### Properties
-* **family**: 'Direct' | 'Exchange': The family of the peering SKU. Possible values include: 'Direct', 'Exchange'
-* **name**: 'Basic_Direct_Free' | 'Basic_Exchange_Free' | 'Premium_Direct_Free' | 'Premium_Direct_Metered' | 'Premium_Direct_Unlimited' | 'Premium_Exchange_Metered': The name of the peering SKU. Possible values include: 'Basic_Exchange_Free', 'Basic_Direct_Free', 'Premium_Direct_Free', 'Premium_Exchange_Metered', 'Premium_Direct_Metered', 'Premium_Direct_Unlimited'
-* **size**: 'Free' | 'Metered' | 'Unlimited': The size of the peering SKU. Possible values include: 'Free', 'Metered', 'Unlimited'
-* **tier**: 'Basic' | 'Premium': The tier of the peering SKU. Possible values include: 'Basic', 'Premium'
+* **family**: 'Direct' | 'Exchange': The family of the peering SKU.
+* **name**: 'Basic_Direct_Free' | 'Basic_Exchange_Free' | 'Premium_Direct_Free' | 'Premium_Direct_Metered' | 'Premium_Direct_Unlimited' | 'Premium_Exchange_Metered': The name of the peering SKU.
+* **size**: 'Free' | 'Metered' | 'Unlimited': The size of the peering SKU.
+* **tier**: 'Basic' | 'Premium': The tier of the peering SKU.
 
 ## Dictionary<string,String>
 ### Properties
@@ -125,7 +125,7 @@
 ### Properties
 * **peeringServiceLocation**: string: The PeeringServiceLocation of the Customer.
 * **peeringServiceProvider**: string: The MAPS Provider Name.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the resource. Possible values include: 'Succeeded', 'Updating', 'Deleting', 'Failed'
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the resource.
 
 ## Dictionary<string,String>
 ### Properties
@@ -134,8 +134,8 @@
 
 ## PeeringServicePrefixProperties
 ### Properties
-* **learnedType**: 'None' | 'ViaPartner' | 'ViaSession': The prefix learned type. Possible values include: 'None', 'ViaPartner', 'ViaSession'
+* **learnedType**: 'None' | 'ViaPartner' | 'ViaSession': The prefix learned type.
 * **prefix**: string: Valid route prefix
-* **prefixValidationState**: 'Failed' | 'Invalid' | 'None' | 'Pending' | 'Unknown' | 'Verified': The prefix validation state. Possible values include: 'None', 'Invalid', 'Verified', 'Failed', 'Pending', 'Unknown'
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the resource. Possible values include: 'Succeeded', 'Updating', 'Deleting', 'Failed'
+* **prefixValidationState**: 'Failed' | 'Invalid' | 'None' | 'Pending' | 'Unknown' | 'Verified': The prefix validation state.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the resource.
 

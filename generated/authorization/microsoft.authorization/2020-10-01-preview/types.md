@@ -45,13 +45,13 @@
 * **justification**: string: Justification for the role assignment
 * **linkedRoleEligibilityScheduleId**: string: The linked role eligibility schedule id - to activate an eligibility.
 * **principalId**: string (Required): The principal ID.
-* **principalType**: 'Group' | 'ServicePrincipal' | 'User' (ReadOnly): The principal type of the assigned principal ID. Possible values include: 'User', 'Group', 'ServicePrincipal'
+* **principalType**: 'Group' | 'ServicePrincipal' | 'User' (ReadOnly): The principal type of the assigned principal ID.
 * **requestorId**: string (ReadOnly): Id of the user who created this request
-* **requestType**: 'AdminAssign' | 'AdminExtend' | 'AdminRemove' | 'AdminRenew' | 'AdminUpdate' | 'SelfActivate' | 'SelfDeactivate' | 'SelfExtend' | 'SelfRenew' (Required): The type of the role assignment schedule request. Eg: SelfActivate, AdminAssign etc. Possible values include: 'AdminAssign', 'AdminRemove', 'AdminUpdate', 'AdminExtend', 'AdminRenew', 'SelfActivate', 'SelfDeactivate', 'SelfExtend', 'SelfRenew'
+* **requestType**: 'AdminAssign' | 'AdminExtend' | 'AdminRemove' | 'AdminRenew' | 'AdminUpdate' | 'SelfActivate' | 'SelfDeactivate' | 'SelfExtend' | 'SelfRenew' (Required): The type of the role assignment schedule request. Eg: SelfActivate, AdminAssign etc.
 * **roleDefinitionId**: string (Required): The role definition ID.
 * **scheduleInfo**: [schemas:13_scheduleInfo](#schemas13scheduleinfo): Schedule info of the role assignment schedule
 * **scope**: string (ReadOnly): The role assignment schedule request scope.
-* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' (ReadOnly): The status of the role assignment schedule request. Possible values include: 'Accepted', 'PendingEvaluation', 'Granted', 'Denied', 'PendingProvisioning', 'Provisioned', 'PendingRevocation', 'Revoked', 'Canceled', 'Failed', 'PendingApprovalProvisioning', 'PendingApproval', 'FailedAsResourceIsLocked', 'PendingAdminDecision', 'AdminApproved', 'AdminDenied', 'TimedOut', 'ProvisioningStarted', 'Invalid', 'PendingScheduleCreation', 'ScheduleCreated', 'PendingExternalProvisioning'
+* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' (ReadOnly): The status of the role assignment schedule request.
 * **targetRoleAssignmentScheduleId**: string: The resultant role assignment schedule id or the role assignment schedule id being updated
 * **targetRoleAssignmentScheduleInstanceId**: string: The role assignment schedule instance id being updated
 * **ticketInfo**: [schemas:13_ticketInfo](#schemas13ticketinfo): Ticket Info of the role assignment
@@ -65,7 +65,7 @@
 ### Properties
 * **duration**: string: Duration of the role assignment schedule in TimeSpan.
 * **endDateTime**: string: End DateTime of the role assignment schedule.
-* **type**: 'AfterDateTime' | 'AfterDuration' | 'NoExpiration': Type of the role assignment schedule expiration. Possible values include: 'AfterDuration', 'AfterDateTime', 'NoExpiration'
+* **type**: 'AfterDateTime' | 'AfterDuration' | 'NoExpiration': Type of the role assignment schedule expiration.
 
 ## schemas:13_ticketInfo
 ### Properties
@@ -80,13 +80,13 @@
 * **createdOn**: string (ReadOnly): DateTime when role eligibility schedule request was created
 * **justification**: string: Justification for the role eligibility
 * **principalId**: string (Required): The principal ID.
-* **principalType**: 'Group' | 'ServicePrincipal' | 'User' (ReadOnly): The principal type of the assigned principal ID. Possible values include: 'User', 'Group', 'ServicePrincipal'
+* **principalType**: 'Group' | 'ServicePrincipal' | 'User' (ReadOnly): The principal type of the assigned principal ID.
 * **requestorId**: string (ReadOnly): Id of the user who created this request
-* **requestType**: 'AdminAssign' | 'AdminExtend' | 'AdminRemove' | 'AdminRenew' | 'AdminUpdate' | 'SelfActivate' | 'SelfDeactivate' | 'SelfExtend' | 'SelfRenew' (Required): The type of the role assignment schedule request. Eg: SelfActivate, AdminAssign etc. Possible values include: 'AdminAssign', 'AdminRemove', 'AdminUpdate', 'AdminExtend', 'AdminRenew', 'SelfActivate', 'SelfDeactivate', 'SelfExtend', 'SelfRenew'
+* **requestType**: 'AdminAssign' | 'AdminExtend' | 'AdminRemove' | 'AdminRenew' | 'AdminUpdate' | 'SelfActivate' | 'SelfDeactivate' | 'SelfExtend' | 'SelfRenew' (Required): The type of the role assignment schedule request. Eg: SelfActivate, AdminAssign etc.
 * **roleDefinitionId**: string (Required): The role definition ID.
 * **scheduleInfo**: [schemas:31_scheduleInfo](#schemas31scheduleinfo): Schedule info of the role eligibility schedule
 * **scope**: string (ReadOnly): The role eligibility schedule request scope.
-* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' (ReadOnly): The status of the role eligibility schedule request. Possible values include: 'Accepted', 'PendingEvaluation', 'Granted', 'Denied', 'PendingProvisioning', 'Provisioned', 'PendingRevocation', 'Revoked', 'Canceled', 'Failed', 'PendingApprovalProvisioning', 'PendingApproval', 'FailedAsResourceIsLocked', 'PendingAdminDecision', 'AdminApproved', 'AdminDenied', 'TimedOut', 'ProvisioningStarted', 'Invalid', 'PendingScheduleCreation', 'ScheduleCreated', 'PendingExternalProvisioning'
+* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' (ReadOnly): The status of the role eligibility schedule request.
 * **targetRoleEligibilityScheduleId**: string: The resultant role eligibility schedule id or the role eligibility schedule id being updated
 * **targetRoleEligibilityScheduleInstanceId**: string: The role eligibility schedule instance id being updated
 * **ticketInfo**: [schemas:31_ticketInfo](#schemas31ticketinfo): Ticket Info of the role eligibility
@@ -100,7 +100,7 @@
 ### Properties
 * **duration**: string: Duration of the role eligibility schedule in TimeSpan.
 * **endDateTime**: string: End DateTime of the role eligibility schedule.
-* **type**: 'AfterDateTime' | 'AfterDuration' | 'NoExpiration': Type of the role eligibility schedule expiration. Possible values include: 'AfterDuration', 'AfterDateTime', 'NoExpiration'
+* **type**: 'AfterDateTime' | 'AfterDuration' | 'NoExpiration': Type of the role eligibility schedule expiration.
 
 ## schemas:31_ticketInfo
 ### Properties
@@ -146,10 +146,10 @@
 
 ### RoleManagementPolicyNotificationRule
 #### Properties
-* **notificationLevel**: 'ALL' | 'CRITICAL' | 'NONE': The notification level. Possible values include: 'NONE', 'CRITICAL', 'ALL'
+* **notificationLevel**: 'ALL' | 'CRITICAL' | 'NONE': The notification level.
 * **notificationRecipients**: string[]: The list notification recipients.
-* **notificationType**: 'Email': The type of notification. Possible values include: 'Email'
-* **recipientType**: 'Admin' | 'Approver' | 'Requestor': The recipient type. Possible values include: 'Requestor', 'Approver', 'Admin'
+* **notificationType**: 'Email': The type of notification.
+* **recipientType**: 'Admin' | 'Approver' | 'Requestor': The recipient type.
 * **ruleType**: 'RoleManagementPolicyNotificationRule' (Required): The role management policy rule.
 
 
@@ -169,7 +169,7 @@
 
 ## ApprovalSettings
 ### Properties
-* **approvalMode**: 'NoApproval' | 'Parallel' | 'Serial' | 'SingleStage': The type of rule. Possible values include: 'SingleStage', 'Serial', 'Parallel', 'NoApproval'
+* **approvalMode**: 'NoApproval' | 'Parallel' | 'Serial' | 'SingleStage': The type of rule.
 * **approvalStages**: [ApprovalStage](#approvalstage)[]: The approval stages of the request.
 * **isApprovalRequired**: bool: Determine whether approval is required or not.
 * **isApprovalRequiredForExtension**: bool: Determine whether approval is required for assignment extension.
@@ -220,10 +220,10 @@
 
 ## RoleManagementPolicyNotificationRule
 ### Properties
-* **notificationLevel**: 'ALL' | 'CRITICAL' | 'NONE': The notification level. Possible values include: 'NONE', 'CRITICAL', 'ALL'
+* **notificationLevel**: 'ALL' | 'CRITICAL' | 'NONE': The notification level.
 * **notificationRecipients**: string[]: The list notification recipients.
-* **notificationType**: 'Email': The type of notification. Possible values include: 'Email'
-* **recipientType**: 'Admin' | 'Approver' | 'Requestor': The recipient type. Possible values include: 'Requestor', 'Approver', 'Admin'
+* **notificationType**: 'Email': The type of notification.
+* **recipientType**: 'Admin' | 'Approver' | 'Requestor': The recipient type.
 * **ruleType**: 'RoleManagementPolicyNotificationRule' (Required): The role management policy rule.
 
 ## RoleManagementPolicyAssignmentProperties

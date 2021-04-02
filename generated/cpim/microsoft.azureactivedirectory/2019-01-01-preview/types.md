@@ -20,7 +20,7 @@
 
 ## schemas:3_billingConfig
 ### Properties
-* **billingType**: 'Auths' | 'MAU' (ReadOnly): The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling). Possible values include: 'MAU', 'Auths'
+* **billingType**: 'Auths' | 'MAU' (ReadOnly): The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).
 * **effectiveStartDateUtc**: string (ReadOnly): The data from which the billing type took effect
 
 ## CreateTenantProperties
@@ -30,8 +30,8 @@
 
 ## B2CResourceSKU
 ### Properties
-* **name**: 'PremiumP1' | 'PremiumP2' | 'Standard': The name of the SKU for the tenant. Possible values include: 'Standard', 'PremiumP1', 'PremiumP2'
-* **tier**: 'A0': The tier of the tenant. Possible values include: 'A0'
+* **name**: 'PremiumP1' | 'PremiumP2' | 'Standard': The name of the SKU for the tenant.
+* **tier**: 'A0': The tier of the tenant.
 
 ## Dictionary<string,String>
 ### Properties

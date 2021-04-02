@@ -29,7 +29,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the cache.
 * **tenantId**: string (ReadOnly): The tenant id associated with the cache.
-* **type**: 'None' | 'SystemAssigned': The type of identity used for the cache. Possible values include: 'SystemAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned': The type of identity used for the cache.
 
 ## schemas:7_properties
 ### Properties
@@ -38,7 +38,7 @@
 * **health**: [CacheHealth](#cachehealth) (ReadOnly): An indication of Cache health. Gives more information about health than just that related to provisioning.
 * **mountAddresses**: string[] (ReadOnly): Array of IP addresses that can be used by clients mounting this Cache.
 * **networkSettings**: [CacheNetworkSettings](#cachenetworksettings): Cache network settings.
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property. Possible values include: 'Succeeded', 'Failed', 'Cancelled', 'Creating', 'Deleting', 'Updating'
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property.
 * **securitySettings**: [CacheSecuritySettings](#cachesecuritysettings): Cache security settings.
 * **subnet**: string: A fully qualified URL.
 * **upgradeStatus**: [CacheUpgradeStatus](#cacheupgradestatus): Properties describing the software upgrade state of the Cache.
@@ -58,7 +58,7 @@
 
 ## CacheHealth
 ### Properties
-* **state**: 'Degraded' | 'Down' | 'Flushing' | 'Healthy' | 'Stopped' | 'Stopping' | 'Transitioning' | 'Unknown' | 'Upgrading': List of Cache health states. Possible values include: 'Unknown', 'Healthy', 'Degraded', 'Down', 'Transitioning', 'Stopping', 'Stopped', 'Upgrading', 'Flushing'
+* **state**: 'Degraded' | 'Down' | 'Flushing' | 'Healthy' | 'Stopped' | 'Stopping' | 'Transitioning' | 'Unknown' | 'Upgrading': List of Cache health states.
 * **statusDescription**: string: Describes explanation of state.
 
 ## CacheNetworkSettings
@@ -74,7 +74,7 @@
 ### Properties
 * **currentFirmwareVersion**: string (ReadOnly): Version string of the firmware currently installed on this Cache.
 * **firmwareUpdateDeadline**: string (ReadOnly): Time at which the pending firmware update will automatically be installed on the Cache.
-* **firmwareUpdateStatus**: 'available' | 'unavailable' (ReadOnly): True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation. Possible values include: 'available', 'unavailable'
+* **firmwareUpdateStatus**: 'available' | 'unavailable' (ReadOnly): True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation.
 * **lastFirmwareUpdate**: string (ReadOnly): Time of the last successful firmware update.
 * **pendingFirmwareVersion**: string (ReadOnly): When firmwareUpdateAvailable is true, this field holds the version string for the update.
 
@@ -86,10 +86,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## StorageTargetProperties
 * **Discriminator**: targetType
@@ -97,7 +97,7 @@
 * **clfs**: [ClfsTarget](#clfstarget): Properties pertained to ClfsTarget
 * **junctions**: [NamespaceJunction](#namespacejunction)[]: List of Cache namespace junctions to target for namespace associations.
 * **nfs3**: [Nfs3Target](#nfs3target): Properties pertained to Nfs3Target
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property. Possible values include: 'Succeeded', 'Failed', 'Cancelled', 'Creating', 'Deleting', 'Updating'
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property.
 * **unknown**: [UnknownTarget](#unknowntarget): Properties pertained to UnknownTarget
 ### clfs
 #### Properties

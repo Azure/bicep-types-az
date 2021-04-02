@@ -34,7 +34,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned': The identity type. Possible values include: 'SystemAssigned'
+* **type**: 'SystemAssigned': The identity type.
 
 ## ApplicationDefinitionProperties
 ### Properties
@@ -44,14 +44,14 @@
 * **description**: string: The managed application definition description.
 * **displayName**: string: The managed application definition display name.
 * **isEnabled**: string: A value indicating whether the package is enabled or not.
-* **lockLevel**: 'CanNotDelete' | 'None' | 'ReadOnly' (Required): The managed application lock level. Possible values include: 'CanNotDelete', 'ReadOnly', 'None'
+* **lockLevel**: 'CanNotDelete' | 'None' | 'ReadOnly' (Required): The managed application lock level.
 * **mainTemplate**: any: The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.
 * **packageFileUri**: string: The managed application definition package file Uri. Use this element
 
 ## ApplicationArtifact
 ### Properties
 * **name**: string: The managed application artifact name.
-* **type**: 'Custom' | 'Template': The managed application artifact type. Possible values include: 'Template', 'Custom'
+* **type**: 'Custom' | 'Template': The managed application artifact type.
 * **uri**: string: The managed application artifact blob uri.
 
 ## ApplicationProviderAuthorization
@@ -87,7 +87,7 @@
 * **managedResourceGroupId**: string (Required): The managed resource group Id.
 * **outputs**: any (ReadOnly): Name and value pairs that define the managed application outputs.
 * **parameters**: any: Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The managed application provisioning state. Possible values include: 'Accepted', 'Running', 'Ready', 'Creating', 'Created', 'Deleting', 'Deleted', 'Canceled', 'Failed', 'Succeeded', 'Updating'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The managed application provisioning state.
 
 ## Dictionary<string,String>
 ### Properties

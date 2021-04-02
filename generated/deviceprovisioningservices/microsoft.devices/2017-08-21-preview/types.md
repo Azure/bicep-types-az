@@ -26,20 +26,20 @@
 
 ## IotDpsPropertiesDescription
 ### Properties
-* **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static': Allocation policy to be used by this provisioning service. Possible values include: 'Hashed', 'GeoLatency', 'Static'
+* **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static': Allocation policy to be used by this provisioning service.
 * **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule_AccessRightsDescription_](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[]:
 * **deviceProvisioningHostName**: string (ReadOnly): Device endpoint for this provisioning service.
 * **idScope**: string (ReadOnly): Unique identifier of this provisioning service.
 * **iotHubs**: [IotHubDefinitionDescription](#iothubdefinitiondescription)[]: List of IoT hubs associated with this provisioning service.
 * **provisioningState**: string: The ARM provisioning state of the provisioning service.
 * **serviceOperationsHostName**: string (ReadOnly): Service endpoint for provisioning service.
-* **state**: 'Activating' | 'ActivationFailed' | 'Active' | 'Deleted' | 'Deleting' | 'DeletionFailed' | 'FailingOver' | 'FailoverFailed' | 'Resuming' | 'Suspended' | 'Suspending' | 'Transitioning': Current state of the provisioning service. Possible values include: 'Activating', 'Active', 'Deleting', 'Deleted', 'ActivationFailed', 'DeletionFailed', 'Transitioning', 'Suspending', 'Suspended', 'Resuming', 'FailingOver', 'FailoverFailed'
+* **state**: 'Activating' | 'ActivationFailed' | 'Active' | 'Deleted' | 'Deleting' | 'DeletionFailed' | 'FailingOver' | 'FailoverFailed' | 'Resuming' | 'Suspended' | 'Suspending' | 'Transitioning': Current state of the provisioning service.
 
 ## SharedAccessSignatureAuthorizationRule_AccessRightsDescription_
 ### Properties
 * **keyName**: string (Required): Name of the key.
 * **primaryKey**: string: Primary SAS key value.
-* **rights**: 'DeviceConnect' | 'EnrollmentRead' | 'EnrollmentWrite' | 'RegistrationStatusRead' | 'RegistrationStatusWrite' | 'ServiceConfig' (Required): Rights that this key has. Possible values include: 'ServiceConfig', 'EnrollmentRead', 'EnrollmentWrite', 'DeviceConnect', 'RegistrationStatusRead', 'RegistrationStatusWrite'
+* **rights**: 'DeviceConnect' | 'EnrollmentRead' | 'EnrollmentWrite' | 'RegistrationStatusRead' | 'RegistrationStatusWrite' | 'ServiceConfig' (Required): Rights that this key has.
 * **secondaryKey**: string: Secondary SAS key value.
 
 ## IotHubDefinitionDescription
@@ -53,7 +53,7 @@
 ## IotDpsSkuInfo
 ### Properties
 * **capacity**: int: The number of services of the selected tier allowed in the subscription.
-* **name**: 'S1': Possible values include: 'S1'
+* **name**: 'S1':
 * **tier**: string (ReadOnly): Pricing tier of the provisioning service.
 
 ## Dictionary<string,String>

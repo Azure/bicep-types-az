@@ -74,13 +74,13 @@
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
 * **masterServerId**: string (ReadOnly): The master server id of a replica server.
 * **privateEndpointConnections**: [ServerPrivateEndpointConnection](#serverprivateendpointconnection)[] (ReadOnly): List of private endpoint connections on a server
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'. Possible values include: 'Enabled', 'Disabled'
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'.
 * **replicaCapacity**: int (ReadOnly): The maximum number of replicas that a master server can have.
 * **replicationRole**: string (ReadOnly): The replication role of the server.
-* **sslEnforcement**: 'Disabled' | 'Enabled': Enable ssl enforcement or not when connect to server. Possible values include: 'Enabled', 'Disabled'
+* **sslEnforcement**: 'Disabled' | 'Enabled': Enable ssl enforcement or not when connect to server.
 * **storageProfile**: [StorageProfile](#storageprofile): Storage Profile properties of a server
-* **userVisibleState**: 'Disabled' | 'Dropping' | 'Ready' (ReadOnly): A state of a server that is visible to user. Possible values include: 'Ready', 'Dropping', 'Disabled'
-* **version**: '10.2' | '10.3': Server version. Possible values include: '10.2', '10.3'
+* **userVisibleState**: 'Disabled' | 'Dropping' | 'Ready' (ReadOnly): A state of a server that is visible to user.
+* **version**: '10.2' | '10.3': Server version.
 ### Default
 #### Properties
 * **administratorLogin**: string (Required, WriteOnly): The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
@@ -113,7 +113,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty) (ReadOnly):
 * **privateLinkServiceConnectionState**: [ServerPrivateLinkServiceConnectionStateProperty](#serverprivatelinkserviceconnectionstateproperty) (ReadOnly):
-* **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' (ReadOnly): State of the private endpoint connection. Possible values include: 'Approving', 'Ready', 'Dropping', 'Failed', 'Rejecting'
+* **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' (ReadOnly): State of the private endpoint connection.
 
 ## PrivateEndpointProperty
 ### Properties
@@ -121,15 +121,15 @@
 
 ## ServerPrivateLinkServiceConnectionStateProperty
 ### Properties
-* **actionsRequired**: 'None' (ReadOnly): The actions required for private link service connection. Possible values include: 'None'
+* **actionsRequired**: 'None' (ReadOnly): The actions required for private link service connection.
 * **description**: string (ReadOnly): The private link service connection description.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly): The private link service connection status. Possible values include: 'Approved', 'Pending', 'Rejected', 'Disconnected'
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly): The private link service connection status.
 
 ## StorageProfile
 ### Properties
 * **backupRetentionDays**: int: Backup retention days for the server.
-* **geoRedundantBackup**: 'Disabled' | 'Enabled': Enable Geo-redundant or not for server backup. Possible values include: 'Enabled', 'Disabled'
-* **storageAutogrow**: 'Disabled' | 'Enabled': Enable Storage Auto Grow. Possible values include: 'Enabled', 'Disabled'
+* **geoRedundantBackup**: 'Disabled' | 'Enabled': Enable Geo-redundant or not for server backup.
+* **storageAutogrow**: 'Disabled' | 'Enabled': Enable Storage Auto Grow.
 * **storageMB**: int: Max storage allowed for a server.
 
 ## Default
@@ -160,7 +160,7 @@
 * **family**: string: The family of hardware.
 * **name**: string (Required): The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
 * **size**: string: The size code, to be interpreted by resource as appropriate.
-* **tier**: 'Basic' | 'GeneralPurpose' | 'MemoryOptimized': The tier of the particular SKU, e.g. Basic. Possible values include: 'Basic', 'GeneralPurpose', 'MemoryOptimized'
+* **tier**: 'Basic' | 'GeneralPurpose' | 'MemoryOptimized': The tier of the particular SKU, e.g. Basic.
 
 ## Dictionary<string,String>
 ### Properties
@@ -204,13 +204,13 @@
 * **emailAccountAdmins**: bool: Specifies that the alert is sent to the account administrators.
 * **emailAddresses**: string[]: Specifies an array of e-mail addresses to which the alert is sent.
 * **retentionDays**: int: Specifies the number of days to keep in the Threat Detection audit logs.
-* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy, whether it is enabled or disabled. Possible values include: 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy, whether it is enabled or disabled.
 * **storageAccountAccessKey**: string: Specifies the identifier key of the Threat Detection audit storage account.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
 
 ## VirtualNetworkRuleProperties
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool: Create firewall rule before the virtual network has vnet service endpoint enabled.
-* **state**: 'Deleting' | 'Initializing' | 'InProgress' | 'Ready' | 'Unknown' (ReadOnly): Virtual Network Rule State. Possible values include: 'Initializing', 'InProgress', 'Ready', 'Deleting', 'Unknown'
+* **state**: 'Deleting' | 'Initializing' | 'InProgress' | 'Ready' | 'Unknown' (ReadOnly): Virtual Network Rule State.
 * **virtualNetworkSubnetId**: string (Required): The ARM resource id of the virtual network subnet.
 

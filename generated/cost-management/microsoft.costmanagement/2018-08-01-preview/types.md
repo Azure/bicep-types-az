@@ -32,7 +32,7 @@
 * **modifiedOn**: string (ReadOnly): Connector last modified datetime
 * **providerAccountId**: string (ReadOnly): Connector providerAccountId (determined from credentials)
 * **reportId**: string: Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
-* **status**: 'active' | 'error' | 'suspended': Connector status. Possible values include: 'active', 'error', 'suspended'
+* **status**: 'active' | 'error' | 'suspended': Connector status.
 
 ## ConnectorCollectionInfo
 ### Properties
@@ -56,13 +56,13 @@
 ### Properties
 * **definition**: [ReportDefinition](#reportdefinition) (Required): The definition of a report.
 * **deliveryInfo**: [ReportDeliveryInfo](#reportdeliveryinfo) (Required): The delivery information associated with a report.
-* **format**: 'Csv': The format of the report being delivered. Possible values include: 'Csv'
+* **format**: 'Csv': The format of the report being delivered.
 * **schedule**: [ReportSchedule](#reportschedule): The schedule associated with a report.
 
 ## ReportDefinition
 ### Properties
 * **dataset**: [ReportDataset](#reportdataset): The definition of data present in the report.
-* **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided. Possible values include: 'WeekToDate', 'MonthToDate', 'Custom'
+* **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
 * **timePeriod**: [ReportTimePeriod](#reporttimeperiod): The start and end date for pulling data for the report.
 * **type**: string (Required): The type of the report.
 
@@ -71,7 +71,7 @@
 * **aggregation**: [Dictionary<string,ReportAggregation>](#dictionarystringreportaggregation): Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
 * **configuration**: [ReportDatasetConfiguration](#reportdatasetconfiguration): The configuration of dataset in the report.
 * **filter**: [ReportFilter](#reportfilter): The filter expression to be used in the report.
-* **granularity**: 'Daily' | 'Hourly': The granularity of rows in the report. Possible values include: 'Daily', 'Hourly'
+* **granularity**: 'Daily' | 'Hourly': The granularity of rows in the report.
 * **grouping**: [ReportGrouping](#reportgrouping)[]: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
 
 ## Dictionary<string,ReportAggregation>
@@ -105,7 +105,7 @@
 ## ReportGrouping
 ### Properties
 * **name**: string (Required): The name of the column to group.
-* **type**: 'Dimension' | 'Tag' (Required): Has type of the column to group. Possible values include: 'Tag', 'Dimension'
+* **type**: 'Dimension' | 'Tag' (Required): Has type of the column to group.
 
 ## ReportTimePeriod
 ### Properties
@@ -124,9 +124,9 @@
 
 ## ReportSchedule
 ### Properties
-* **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' (Required): The schedule recurrence. Possible values include: 'Daily', 'Weekly', 'Monthly', 'Annually'
+* **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' (Required): The schedule recurrence.
 * **recurrencePeriod**: [ReportRecurrencePeriod](#reportrecurrenceperiod): The start and end date for recurrence schedule.
-* **status**: 'Active' | 'Inactive': The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused. Possible values include: 'Active', 'Inactive'
+* **status**: 'Active' | 'Inactive': The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
 
 ## ReportRecurrencePeriod
 ### Properties

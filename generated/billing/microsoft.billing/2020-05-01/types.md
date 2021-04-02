@@ -47,7 +47,7 @@
 
 ## BillingProfileProperties
 ### Properties
-* **billingRelationshipType**: 'CSPPartner' | 'Direct' | 'IndirectCustomer' | 'IndirectPartner' (ReadOnly): Identifies which services and purchases are paid by a billing profile. Possible values include: 'Direct', 'IndirectCustomer', 'IndirectPartner', 'CSPPartner'
+* **billingRelationshipType**: 'CSPPartner' | 'Direct' | 'IndirectCustomer' | 'IndirectPartner' (ReadOnly): Identifies which services and purchases are paid by a billing profile.
 * **billTo**: [AddressDetails](#addressdetails): Address details.
 * **currency**: string (ReadOnly): The currency in which the charges for the billing profile are billed.
 * **displayName**: string: The name of the billing profile.
@@ -58,9 +58,9 @@
 * **invoiceEmailOptIn**: bool: Flag controlling whether the invoices for the billing profile are sent through email.
 * **invoiceSections**: [InvoiceSectionsOnExpand](#invoicesectionsonexpand): The invoice sections associated to the billing profile. By default this is not populated, unless it's specified in $expand.
 * **poNumber**: string: The purchase order name that will appear on the invoices generated for the billing profile.
-* **spendingLimit**: 'Off' | 'On' (ReadOnly): The billing profile spending limit. Possible values include: 'Off', 'On'
-* **status**: 'Active' | 'Disabled' | 'Warned' (ReadOnly): The status of the billing profile. Possible values include: 'Active', 'Disabled', 'Warned'
-* **statusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' (ReadOnly): Reason for the specified billing profile status. Possible values include: 'PastDue', 'SpendingLimitReached', 'SpendingLimitExpired'
+* **spendingLimit**: 'Off' | 'On' (ReadOnly): The billing profile spending limit.
+* **status**: 'Active' | 'Disabled' | 'Warned' (ReadOnly): The status of the billing profile.
+* **statusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' (ReadOnly): Reason for the specified billing profile status.
 * **systemId**: string (ReadOnly): The system generated unique identifier for a billing profile.
 * **targetClouds**: 'USGov' | 'USNat' | 'USSec'[] (ReadOnly): Identifies the cloud environments that are associated with a billing profile. This is a system managed optional field and gets updated as the billing profile gets associated with accounts in various clouds.
 
@@ -107,9 +107,9 @@
 ### Properties
 * **displayName**: string: The name of the invoice section.
 * **labels**: [Dictionary<string,String>](#dictionarystringstring): Dictionary of metadata associated with the invoice section.
-* **state**: 'Active' | 'Restricted' (ReadOnly): Identifies the state of an invoice section. Possible values include: 'Active', 'Restricted'
+* **state**: 'Active' | 'Restricted' (ReadOnly): Identifies the state of an invoice section.
 * **systemId**: string (ReadOnly): The system generated unique identifier for an invoice section.
-* **targetCloud**: 'USGov' | 'USNat' | 'USSec' (ReadOnly): Identifies the cloud environments that are associated with an invoice section. This is a system managed optional field and gets updated as the invoice section gets associated with accounts in various clouds. Possible values include: 'USGov', 'USNat', 'USSec'
+* **targetCloud**: 'USGov' | 'USNat' | 'USSec' (ReadOnly): Identifies the cloud environments that are associated with an invoice section. This is a system managed optional field and gets updated as the invoice section gets associated with accounts in various clouds.
 
 ## Dictionary<string,String>
 ### Properties
@@ -125,11 +125,11 @@
 
 ## PolicyProperties
 ### Properties
-* **marketplacePurchases**: 'AllAllowed' | 'NotAllowed' | 'OnlyFreeAllowed': The policy that controls whether Azure marketplace purchases are allowed for a billing profile. Possible values include: 'AllAllowed', 'OnlyFreeAllowed', 'NotAllowed'
-* **reservationPurchases**: 'Allowed' | 'NotAllowed': The policy that controls whether Azure reservation purchases are allowed for a billing profile. Possible values include: 'Allowed', 'NotAllowed'
-* **viewCharges**: 'Allowed' | 'NotAllowed': The policy that controls whether users with Azure RBAC access to a subscription can view its charges. Possible values include: 'Allowed', 'NotAllowed'
+* **marketplacePurchases**: 'AllAllowed' | 'NotAllowed' | 'OnlyFreeAllowed': The policy that controls whether Azure marketplace purchases are allowed for a billing profile.
+* **reservationPurchases**: 'Allowed' | 'NotAllowed': The policy that controls whether Azure reservation purchases are allowed for a billing profile.
+* **viewCharges**: 'Allowed' | 'NotAllowed': The policy that controls whether users with Azure RBAC access to a subscription can view its charges.
 
 ## CustomerPolicyProperties
 ### Properties
-* **viewCharges**: 'Allowed' | 'NotAllowed': The policy that controls whether the users in customer's organization can view charges at pay-as-you-go prices. Possible values include: 'Allowed', 'NotAllowed'
+* **viewCharges**: 'Allowed' | 'NotAllowed': The policy that controls whether the users in customer's organization can view charges at pay-as-you-go prices.
 

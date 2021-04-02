@@ -229,13 +229,13 @@
 * **lastModifiedBy**: string (ReadOnly): Gets or sets the last modified by.
 * **lastModifiedTime**: string (ReadOnly): Gets the last modified time.
 * **sku**: [Sku](#sku): The account SKU.
-* **state**: 'Ok' | 'Suspended' | 'Unavailable' (ReadOnly): Gets status of account. Possible values include: 'Ok', 'Unavailable', 'Suspended'
+* **state**: 'Ok' | 'Suspended' | 'Unavailable' (ReadOnly): Gets status of account.
 
 ## Sku
 ### Properties
 * **capacity**: int: Gets or sets the SKU capacity.
 * **family**: string: Gets or sets the SKU family.
-* **name**: 'Basic' | 'Free' (Required): Gets or sets the SKU name of the account. Possible values include: 'Free', 'Basic'
+* **name**: 'Basic' | 'Free' (Required): Gets or sets the SKU name of the account.
 
 ## Dictionary<string,String>
 ### Properties
@@ -263,11 +263,11 @@
 * **lastModifiedTime**: string (ReadOnly): Gets the last modified time of the job.
 * **lastStatusModifiedTime**: string (ReadOnly): Gets the last status modified time of the job.
 * **parameters**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the parameters of the job.
-* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly): The current provisioning state of the job. Possible values include: 'Failed', 'Succeeded', 'Suspended', 'Processing'
+* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly): The current provisioning state of the job.
 * **runOn**: string (ReadOnly): Gets or sets the runOn which specifies the group name where the job is to be executed.
 * **startedBy**: string (ReadOnly): Gets the compilation job started by.
 * **startTime**: string (ReadOnly): Gets the start time of the job.
-* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly): Gets or sets the status of the job. Possible values include: 'New', 'Activating', 'Running', 'Completed', 'Failed', 'Stopped', 'Blocked', 'Suspended', 'Disconnected', 'Suspending', 'Stopping', 'Resuming', 'Removing'
+* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly): Gets or sets the status of the job.
 * **statusDetails**: string (ReadOnly): Gets or sets the status details of the job.
 
 ## DscConfigurationAssociationProperty
@@ -294,9 +294,9 @@
 * **logVerbose**: bool: Gets or sets verbose log option.
 * **nodeConfigurationCount**: int (ReadOnly): Gets the number of compiled node configurations.
 * **parameters**: [Dictionary<string,DscConfigurationParameter>](#dictionarystringdscconfigurationparameter): Gets or sets the configuration parameters.
-* **provisioningState**: 'Succeeded' (ReadOnly): Gets or sets the provisioning state of the configuration. Possible values include: 'Succeeded'
+* **provisioningState**: 'Succeeded' (ReadOnly): Gets or sets the provisioning state of the configuration.
 * **source**: [ContentSource](#contentsource) (Required): Definition of the content source.
-* **state**: 'Edit' | 'New' | 'Published' (ReadOnly): Gets or sets the state of the configuration. Possible values include: 'New', 'Edit', 'Published'
+* **state**: 'Edit' | 'New' | 'Published' (ReadOnly): Gets or sets the state of the configuration.
 
 ## Dictionary<string,DscConfigurationParameter>
 ### Properties
@@ -313,7 +313,7 @@
 ## ContentSource
 ### Properties
 * **hash**: [ContentHash](#contenthash) (WriteOnly): Definition of the runbook property type.
-* **type**: 'embeddedContent' | 'uri' (WriteOnly): Gets or sets the content source type. Possible values include: 'embeddedContent', 'uri'
+* **type**: 'embeddedContent' | 'uri' (WriteOnly): Gets or sets the content source type.
 * **value**: string (WriteOnly): Gets or sets the value of the content. This is based on the content source type.
 * **version**: string (WriteOnly): Gets or sets the version of the content.
 
@@ -380,12 +380,12 @@
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time of the job.
 * **lastStatusModifiedTime**: string (ReadOnly): Gets or sets the last status modified time of the job.
 * **parameters**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the parameters of the job.
-* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly): The current provisioning state of the job. Possible values include: 'Failed', 'Succeeded', 'Suspended', 'Processing'
+* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly): The current provisioning state of the job.
 * **runbook**: [RunbookAssociationProperty](#runbookassociationproperty): The runbook property associated with the entity.
 * **runOn**: string: Gets or sets the runOn which specifies the group name where the job is to be executed.
 * **startedBy**: string (ReadOnly): Gets or sets the job started by.
 * **startTime**: string (ReadOnly): Gets or sets the start time of the job.
-* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly): Gets or sets the status of the job. Possible values include: 'New', 'Activating', 'Running', 'Completed', 'Failed', 'Stopped', 'Blocked', 'Suspended', 'Disconnected', 'Suspending', 'Stopping', 'Resuming', 'Removing'
+* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly): Gets or sets the status of the job.
 * **statusDetails**: string (ReadOnly): Gets or sets the status details of the job.
 
 ## Dictionary<string,String>
@@ -424,7 +424,7 @@
 * **isComposite**: bool (ReadOnly): Gets or sets type of module, if its composite or not.
 * **isGlobal**: bool (ReadOnly): Gets or sets the isGlobal flag of the module.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
-* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly): Gets or sets the provisioning state of the module. Possible values include: 'Created', 'Creating', 'StartingImportModuleRunbook', 'RunningImportModuleRunbook', 'ContentRetrieved', 'ContentDownloaded', 'ContentValidated', 'ConnectionTypeImported', 'ContentStored', 'ModuleDataStored', 'ActivitiesStored', 'ModuleImportRunbookComplete', 'Succeeded', 'Failed', 'Cancelled', 'Updating'
+* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly): Gets or sets the provisioning state of the module.
 * **sizeInBytes**: int (ReadOnly): Gets or sets the size in bytes of the module.
 * **version**: string (ReadOnly): Gets or sets the version of the module.
 
@@ -468,7 +468,7 @@
 * **isComposite**: bool (ReadOnly): Gets or sets type of module, if its composite or not.
 * **isGlobal**: bool (ReadOnly): Gets or sets the isGlobal flag of the module.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
-* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly): Gets or sets the provisioning state of the module. Possible values include: 'Created', 'Creating', 'StartingImportModuleRunbook', 'RunningImportModuleRunbook', 'ContentRetrieved', 'ContentDownloaded', 'ContentValidated', 'ConnectionTypeImported', 'ContentStored', 'ModuleDataStored', 'ActivitiesStored', 'ModuleImportRunbookComplete', 'Succeeded', 'Failed', 'Cancelled', 'Updating'
+* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly): Gets or sets the provisioning state of the module.
 * **sizeInBytes**: int (ReadOnly): Gets or sets the size in bytes of the module.
 * **version**: string (ReadOnly): Gets or sets the version of the module.
 
@@ -490,10 +490,10 @@
 * **logVerbose**: bool: Gets or sets verbose log option.
 * **outputTypes**: string[] (ReadOnly): Gets or sets the runbook output types.
 * **parameters**: [Dictionary<string,RunbookParameter>](#dictionarystringrunbookparameter) (ReadOnly): Gets or sets the runbook parameters.
-* **provisioningState**: 'Succeeded' (ReadOnly): Gets or sets the provisioning state of the runbook. Possible values include: 'Succeeded'
+* **provisioningState**: 'Succeeded' (ReadOnly): Gets or sets the provisioning state of the runbook.
 * **publishContentLink**: [ContentLink](#contentlink): Definition of the content link.
-* **runbookType**: 'Graph' | 'GraphPowerShell' | 'GraphPowerShellWorkflow' | 'PowerShell' | 'PowerShellWorkflow' | 'Script' (Required): Gets or sets the type of the runbook. Possible values include: 'Script', 'Graph', 'PowerShellWorkflow', 'PowerShell', 'GraphPowerShellWorkflow', 'GraphPowerShell'
-* **state**: 'Edit' | 'New' | 'Published' (ReadOnly): Gets or sets the state of the runbook. Possible values include: 'New', 'Edit', 'Published'
+* **runbookType**: 'Graph' | 'GraphPowerShell' | 'GraphPowerShellWorkflow' | 'PowerShell' | 'PowerShellWorkflow' | 'Script' (Required): Gets or sets the type of the runbook.
+* **state**: 'Edit' | 'New' | 'Published' (ReadOnly): Gets or sets the state of the runbook.
 
 ## RunbookDraft
 ### Properties
@@ -563,7 +563,7 @@
 * **description**: string: Gets or sets the description of the schedule.
 * **expiryTime**: string: Gets or sets the end time of the schedule.
 * **expiryTimeOffsetMinutes**: int (ReadOnly): Gets or sets the expiry time's offset in minutes.
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'OneTime' | 'Week' (Required): Gets or sets the frequency of the schedule. Possible values include: 'OneTime', 'Day', 'Hour', 'Week', 'Month', 'Minute'
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'OneTime' | 'Week' (Required): Gets or sets the frequency of the schedule.
 * **interval**: any: Gets or sets the interval of the schedule.
 * **isEnabled**: bool (ReadOnly): Gets or sets a value indicating whether this schedule is enabled.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
@@ -581,7 +581,7 @@
 
 ## AdvancedScheduleMonthlyOccurrence
 ### Properties
-* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday. Possible values include: 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
 * **occurrence**: int: Occurrence of the week within the month. Must be between 1 and 5
 
 ## softwareUpdateConfigurationProperties
@@ -608,7 +608,7 @@
 * **description**: string: Gets or sets the description.
 * **expiryTime**: string: Gets or sets the end time of the schedule.
 * **expiryTimeOffsetMinutes**: int: Gets or sets the expiry time's offset in minutes.
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'OneTime' | 'Week': Gets or sets the frequency of the schedule. Possible values include: 'OneTime', 'Day', 'Hour', 'Week', 'Month', 'Minute'
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'OneTime' | 'Week': Gets or sets the frequency of the schedule.
 * **interval**: int: Gets or sets the interval of the schedule.
 * **isEnabled**: bool: Gets or sets a value indicating whether this schedule is enabled.
 * **lastModifiedTime**: string: Gets or sets the last modified time.
@@ -639,14 +639,14 @@
 * **duration**: string: Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
 * **linux**: [LinuxProperties](#linuxproperties): Linux specific update configuration.
 * **nonAzureComputerNames**: string[]: List of names of non-azure machines targeted by the software update configuration.
-* **operatingSystem**: 'Linux' | 'Windows' (Required): operating system of target machines. Possible values include: 'Windows', 'Linux'
+* **operatingSystem**: 'Linux' | 'Windows' (Required): operating system of target machines.
 * **targets**: [TargetProperties](#targetproperties): Group specific to the update configuration.
 * **windows**: [WindowsProperties](#windowsproperties): Windows specific update configuration.
 
 ## LinuxProperties
 ### Properties
 * **excludedPackageNameMasks**: string[]: packages excluded from the software update configuration.
-* **includedPackageClassifications**: 'Critical' | 'Other' | 'Security' | 'Unclassified': Update classifications included in the software update configuration. Possible values include: 'Unclassified', 'Critical', 'Security', 'Other'
+* **includedPackageClassifications**: 'Critical' | 'Other' | 'Security' | 'Unclassified': Update classifications included in the software update configuration.
 * **includedPackageNameMasks**: string[]: packages included from the software update configuration.
 * **rebootSetting**: string: Reboot setting for the software update configuration.
 
@@ -663,7 +663,7 @@
 
 ## TagSettingsProperties
 ### Properties
-* **filterOperator**: 'All' | 'Any': Filter VMs by Any or All specified tags. Possible values include: 'All', 'Any'
+* **filterOperator**: 'All' | 'Any': Filter VMs by Any or All specified tags.
 * **tags**: [Dictionary<string,IList<String>>](#dictionarystringiliststring): Dictionary of tags with its list of values.
 
 ## Dictionary<string,IList<String>>
@@ -680,7 +680,7 @@
 ### Properties
 * **excludedKbNumbers**: string[]: KB numbers excluded from the software update configuration.
 * **includedKbNumbers**: string[]: KB numbers included from the software update configuration.
-* **includedUpdateClassifications**: 'Critical' | 'Definition' | 'FeaturePack' | 'Security' | 'ServicePack' | 'Tools' | 'Unclassified' | 'UpdateRollup' | 'Updates': Update classification included in the software update configuration. A comma separated string with required values. Possible values include: 'Unclassified', 'Critical', 'Security', 'UpdateRollup', 'FeaturePack', 'ServicePack', 'Definition', 'Tools', 'Updates'
+* **includedUpdateClassifications**: 'Critical' | 'Definition' | 'FeaturePack' | 'Security' | 'ServicePack' | 'Tools' | 'Unclassified' | 'UpdateRollup' | 'Updates': Update classification included in the software update configuration. A comma separated string with required values.
 * **rebootSetting**: string: Reboot setting for the software update configuration.
 
 ## SourceControlCreateOrUpdateProperties
@@ -694,13 +694,13 @@
 * **publishRunbook**: bool: The auto publish of the source control. Default is true.
 * **repoUrl**: string: The repo url of the source control.
 * **securityToken**: [SourceControlSecurityTokenProperties](#sourcecontrolsecuritytokenproperties) (WriteOnly):
-* **sourceType**: 'GitHub' | 'VsoGit' | 'VsoTfvc': The source type. Must be one of VsoGit, VsoTfvc, GitHub, case sensitive. Possible values include: 'VsoGit', 'VsoTfvc', 'GitHub'
+* **sourceType**: 'GitHub' | 'VsoGit' | 'VsoTfvc': The source type. Must be one of VsoGit, VsoTfvc, GitHub, case sensitive.
 
 ## SourceControlSecurityTokenProperties
 ### Properties
 * **accessToken**: string (WriteOnly): The access token.
 * **refreshToken**: string (WriteOnly): The refresh token.
-* **tokenType**: 'Oauth' | 'PersonalAccessToken' (WriteOnly): The token type. Must be either PersonalAccessToken or Oauth. Possible values include: 'PersonalAccessToken', 'Oauth'
+* **tokenType**: 'Oauth' | 'PersonalAccessToken' (WriteOnly): The token type. Must be either PersonalAccessToken or Oauth.
 
 ## SourceControlSyncJobCreateProperties
 ### Properties
@@ -708,10 +708,10 @@
 * **creationTime**: string (ReadOnly): The creation time of the job.
 * **endTime**: string (ReadOnly): The end time of the job.
 * **exception**: string (ReadOnly): The exceptions that occurred while running the sync job.
-* **provisioningState**: 'Completed' | 'Failed' | 'Running' (ReadOnly): The provisioning state of the job. Possible values include: 'Completed', 'Failed', 'Running'
+* **provisioningState**: 'Completed' | 'Failed' | 'Running' (ReadOnly): The provisioning state of the job.
 * **sourceControlSyncJobId**: string (ReadOnly): The source control sync job id.
 * **startTime**: string (ReadOnly): The start time of the job.
-* **syncType**: 'FullSync' | 'PartialSync' (ReadOnly): The sync type. Possible values include: 'PartialSync', 'FullSync'
+* **syncType**: 'FullSync' | 'PartialSync' (ReadOnly): The sync type.
 
 ## VariableCreateOrUpdateProperties
 ### Properties

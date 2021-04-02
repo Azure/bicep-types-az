@@ -18,13 +18,13 @@
 * **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]: The image registry credentials by which the container group is created from.
 * **instanceView**: [schemas:16_properties_instanceView](#schemas16propertiesinstanceview) (ReadOnly): The instance view of the container group. Only valid in response.
 * **ipAddress**: [IpAddress](#ipaddress): IP address for the container group.
-* **osType**: 'Linux' | 'Windows' (Required): The operating system type required by the containers in the container group. Possible values include: 'Windows', 'Linux'
+* **osType**: 'Linux' | 'Windows' (Required): The operating system type required by the containers in the container group.
 * **provisioningState**: string (ReadOnly): The provisioning state of the container group. This only appears in the response.
 * **restartPolicy**: 'Always' | 'Never' | 'OnFailure': Restart policy for all containers within the container group.
 - `Always` Always restart
 - `OnFailure` Restart on failure
 - `Never` Never restart
-. Possible values include: 'Always', 'OnFailure', 'Never'
+.
 * **volumes**: [Volume](#volume)[]: The list of volumes that can be mounted by containers in this container group.
 
 ## Container
@@ -92,12 +92,12 @@
 ### Properties
 * **path**: string: The path to probe.
 * **port**: int (Required): The port number to probe.
-* **scheme**: 'http' | 'https': The scheme. Possible values include: 'http', 'https'
+* **scheme**: 'http' | 'https': The scheme.
 
 ## ContainerPort
 ### Properties
 * **port**: int (Required): The port number exposed within the container group.
-* **protocol**: 'TCP' | 'UDP': The protocol associated with the port. Possible values include: 'TCP', 'UDP'
+* **protocol**: 'TCP' | 'UDP': The protocol associated with the port.
 
 ## ResourceRequirements
 ### Properties
@@ -151,7 +151,7 @@
 ## Port
 ### Properties
 * **port**: int (Required): The port number.
-* **protocol**: 'TCP' | 'UDP': The protocol associated with the port. Possible values include: 'TCP', 'UDP'
+* **protocol**: 'TCP' | 'UDP': The protocol associated with the port.
 
 ## Volume
 ### Properties

@@ -29,7 +29,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required): Type of managed service identity. Possible values include: 'SystemAssigned', 'UserAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required): Type of managed service identity.
 * **userAssignedIdentities**: [Dictionary<string,UserIdentityProperties>](#dictionarystringuseridentityproperties): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## Dictionary<string,UserIdentityProperties>
@@ -45,7 +45,7 @@
 ## ClusterProperties
 ### Properties
 * **associatedWorkspaces**: [AssociatedWorkspace](#associatedworkspace)[]: The list of Log Analytics workspaces associated with the cluster
-* **billingType**: 'Cluster' | 'Workspaces': Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'. Possible values include: 'Cluster', 'Workspaces'
+* **billingType**: 'Cluster' | 'Workspaces': Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'.
 * **capacityReservationProperties**: [CapacityReservationProperties](#capacityreservationproperties): The Capacity Reservation properties.
 * **clusterId**: string (ReadOnly): The ID associated with the cluster.
 * **createdDate**: string (ReadOnly): The cluster creation time
@@ -53,7 +53,7 @@
 * **isDoubleEncryptionEnabled**: bool: Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is 'true'
 * **keyVaultProperties**: [keyVaultProperties](#keyvaultproperties): The key vault properties.
 * **lastModifiedDate**: string (ReadOnly): The last time the cluster was updated.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the cluster. Possible values include: 'Creating', 'Succeeded', 'Failed', 'Canceled', 'Deleting', 'ProvisioningAccount', 'Updating'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the cluster.
 
 ## AssociatedWorkspace
 ### Properties
@@ -78,7 +78,7 @@
 ## ClusterSku
 ### Properties
 * **capacity**: int: The capacity value
-* **name**: 'CapacityReservation': The name of the SKU. Possible values include: 'CapacityReservation'
+* **name**: 'CapacityReservation': The name of the SKU.
 
 ## Dictionary<string,String>
 ### Properties
@@ -93,9 +93,9 @@
 * **forceCmkForQuery**: bool: Indicates whether customer managed storage is mandatory for query management.
 * **modifiedDate**: string (ReadOnly): Workspace modification date.
 * **privateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly): List of linked private link scope resources.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating': The provisioning state of the workspace. Possible values include: 'Creating', 'Succeeded', 'Failed', 'Canceled', 'Deleting', 'ProvisioningAccount', 'Updating'
-* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled': The network access type for accessing Log Analytics ingestion. Possible values include: 'Enabled', 'Disabled'
-* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled': The network access type for accessing Log Analytics query. Possible values include: 'Enabled', 'Disabled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating': The provisioning state of the workspace.
+* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled': The network access type for accessing Log Analytics ingestion.
+* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled': The network access type for accessing Log Analytics query.
 * **retentionInDays**: int: The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
 * **sku**: [WorkspaceSku](#workspacesku): The SKU (tier) of a workspace.
 * **workspaceCapping**: [WorkspaceCapping](#workspacecapping): The daily volume cap for ingestion.
@@ -115,12 +115,12 @@
 * **capacityReservationLevel**: int: The capacity reservation level for this workspace, when CapacityReservation sku is selected.
 * **lastSkuUpdate**: string (ReadOnly): The last time when the sku was updated.
 * **maxCapacityReservationLevel**: int (ReadOnly): The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.
-* **name**: 'CapacityReservation' | 'Free' | 'LACluster' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' (Required): The name of the SKU. Possible values include: 'Free', 'Standard', 'Premium', 'PerNode', 'PerGB2018', 'Standalone', 'CapacityReservation', 'LACluster'
+* **name**: 'CapacityReservation' | 'Free' | 'LACluster' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' (Required): The name of the SKU.
 
 ## WorkspaceCapping
 ### Properties
 * **dailyQuotaGb**: int: The workspace daily quota for ingestion.
-* **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' (ReadOnly): The status of data ingestion for this workspace. Possible values include: 'RespectQuota', 'ForceOn', 'ForceOff', 'OverQuota', 'SubscriptionSuspended', 'ApproachingQuota'
+* **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' (ReadOnly): The status of data ingestion for this workspace.
 * **quotaNextResetTime**: string (ReadOnly): The time when the quota will be rest.
 
 ## Dictionary<string,String>

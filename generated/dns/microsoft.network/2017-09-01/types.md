@@ -118,7 +118,7 @@
 * **maxNumberOfRecordsPerRecordSet**: int (ReadOnly): The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
 * **nameServers**: string[] (ReadOnly): The name servers for this DNS zone. This is a read-only property and any attempt to set this value will be ignored.
 * **numberOfRecordSets**: int (ReadOnly): The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
-* **zoneType**: 'Private' | 'Public': The type of this DNS zone (Public or Private). Possible values include: 'Public', 'Private'
+* **zoneType**: 'Private' | 'Public': The type of this DNS zone (Public or Private).
 
 ## Dictionary<string,String>
 ### Properties

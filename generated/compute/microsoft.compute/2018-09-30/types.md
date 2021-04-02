@@ -33,16 +33,16 @@
 * **diskIOPSReadWrite**: int: The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.
 * **diskMBpsReadWrite**: int: The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
 * **diskSizeGB**: int: If creationData.createOption is Empty, this field is mandatory and it indicates the size of the VHD to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
-* **diskState**: 'ActiveSAS' | 'ActiveUpload' | 'Attached' | 'ReadyToUpload' | 'Reserved' | 'Unattached' (ReadOnly): The state of the disk. Possible values include: 'Unattached', 'Attached', 'Reserved', 'ActiveSAS', 'ReadyToUpload', 'ActiveUpload'
+* **diskState**: 'ActiveSAS' | 'ActiveUpload' | 'Attached' | 'ReadyToUpload' | 'Reserved' | 'Unattached' (ReadOnly): The state of the disk.
 * **encryptionSettingsCollection**: [EncryptionSettingsCollection](#encryptionsettingscollection): Encryption settings for disk or snapshot
-* **hyperVGeneration**: 'V1' | 'V2': The hypervisor generation of the Virtual Machine. Applicable to OS disks only. Possible values include: 'V1', 'V2'
-* **osType**: 'Linux' | 'Windows': The Operating System type. Possible values include: 'Windows', 'Linux'
+* **hyperVGeneration**: 'V1' | 'V2': The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+* **osType**: 'Linux' | 'Windows': The Operating System type.
 * **provisioningState**: string (ReadOnly): The disk provisioning state.
 * **timeCreated**: string (ReadOnly): The time when the disk was created.
 
 ## CreationData
 ### Properties
-* **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Import' | 'Restore' | 'Upload' (Required): This enumerates the possible sources of a disk's creation. Possible values include: 'Empty', 'Attach', 'FromImage', 'Import', 'Copy', 'Restore', 'Upload'
+* **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Import' | 'Restore' | 'Upload' (Required): This enumerates the possible sources of a disk's creation.
 * **imageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
 * **sourceResourceId**: string: If createOption is Copy, this is the ARM id of the source snapshot or disk.
 * **sourceUri**: string: If createOption is Import, this is the URI of a blob to be imported into a managed disk.
@@ -79,7 +79,7 @@
 
 ## DiskSku
 ### Properties
-* **name**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'UltraSSD_LRS': The sku name. Possible values include: 'Standard_LRS', 'Premium_LRS', 'StandardSSD_LRS', 'UltraSSD_LRS'
+* **name**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'UltraSSD_LRS': The sku name.
 * **tier**: string (ReadOnly): The sku tier.
 
 ## Dictionary<string,String>
@@ -92,14 +92,14 @@
 * **creationData**: [CreationData](#creationdata) (Required): Data used when creating a disk.
 * **diskSizeGB**: int: If creationData.createOption is Empty, this field is mandatory and it indicates the size of the VHD to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
 * **encryptionSettingsCollection**: [EncryptionSettingsCollection](#encryptionsettingscollection): Encryption settings for disk or snapshot
-* **hyperVGeneration**: 'V1' | 'V2': The hypervisor generation of the Virtual Machine. Applicable to OS disks only. Possible values include: 'V1', 'V2'
-* **osType**: 'Linux' | 'Windows': The Operating System type. Possible values include: 'Windows', 'Linux'
+* **hyperVGeneration**: 'V1' | 'V2': The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+* **osType**: 'Linux' | 'Windows': The Operating System type.
 * **provisioningState**: string (ReadOnly): The disk provisioning state.
 * **timeCreated**: string (ReadOnly): The time when the disk was created.
 
 ## SnapshotSku
 ### Properties
-* **name**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS': The sku name. Possible values include: 'Standard_LRS', 'Premium_LRS', 'Standard_ZRS'
+* **name**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS': The sku name.
 * **tier**: string (ReadOnly): The sku tier.
 
 ## Dictionary<string,String>

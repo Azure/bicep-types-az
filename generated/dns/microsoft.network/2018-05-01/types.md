@@ -120,7 +120,7 @@
 * **numberOfRecordSets**: int (ReadOnly): The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
 * **registrationVirtualNetworks**: [SubResource](#subresource)[]: A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
 * **resolutionVirtualNetworks**: [SubResource](#subresource)[]: A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
-* **zoneType**: 'Private' | 'Public': The type of this DNS zone (Public or Private). Possible values include: 'Public', 'Private'
+* **zoneType**: 'Private' | 'Public': The type of this DNS zone (Public or Private).
 
 ## SubResource
 ### Properties

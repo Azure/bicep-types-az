@@ -16,7 +16,7 @@
 ### Properties
 * **admins**: [Principals](#principals)[]: Azure data catalog admin list.
 * **enableAutomaticUnitAdjustment**: bool: Automatic unit adjustment enabled or not.
-* **sku**: 'Free' | 'Standard': Azure data catalog SKU. Possible values include: 'Free', 'Standard'
+* **sku**: 'Free' | 'Standard': Azure data catalog SKU.
 * **successfullyProvisioned**: bool: Azure data catalog provision status.
 * **units**: int: Azure data catalog units.
 * **users**: [Principals](#principals)[]: Azure data catalog user list.

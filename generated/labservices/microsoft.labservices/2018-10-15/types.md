@@ -92,7 +92,7 @@
 * **maxPrice**: int (ReadOnly): The pay-as-you-go dollar price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost. This is the maximum price of all prices within this tier.
 * **minMemory**: int (ReadOnly): The amount of memory available (in GB). This is the minimum amount of memory within this tier.
 * **minNumberOfCores**: int (ReadOnly): The number of cores a VM of this size has. This is the minimum number of cores within this tier.
-* **name**: 'Basic' | 'Performance' | 'Standard': The size category. Possible values include: 'Basic', 'Standard', 'Performance'
+* **name**: 'Basic' | 'Performance' | 'Standard': The size category.
 * **vmSizes**: [SizeInfo](#sizeinfo)[]: Represents a set of compute sizes that can serve this given size type
 
 ## SizeInfo
@@ -146,7 +146,7 @@
 * **provisioningState**: string: The provisioning status of the resource.
 * **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
 * **usageQuota**: string: Maximum duration a user can use an environment for in the lab.
-* **userAccessMode**: 'Open' | 'Restricted': Lab user access mode (open to all vs. restricted to those listed on the lab). Possible values include: 'Restricted', 'Open'
+* **userAccessMode**: 'Open' | 'Restricted': Lab user access mode (open to all vs. restricted to those listed on the lab).
 * **userQuota**: int (ReadOnly): Maximum value MaxUsersInLab can be set to, as specified by the service
 
 ## Dictionary<string,String>
@@ -156,13 +156,13 @@
 
 ## EnvironmentSettingProperties
 ### Properties
-* **configurationState**: 'Completed' | 'NotApplicable': Describes the user's progress in configuring their environment setting. Possible values include: 'NotApplicable', 'Completed'
+* **configurationState**: 'Completed' | 'NotApplicable': Describes the user's progress in configuring their environment setting.
 * **description**: string: Describes the environment and its resource settings
 * **lastChanged**: string (ReadOnly): Time when the template VM was last changed.
 * **lastPublished**: string (ReadOnly): Time when the template VM was last sent for publishing.
 * **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): Details of the status of an operation.
 * **provisioningState**: string: The provisioning status of the resource.
-* **publishingState**: 'Draft' | 'Published' | 'PublishFailed' | 'Publishing' | 'Scaling' (ReadOnly): Describes the readiness of this environment setting. Possible values include: 'Draft', 'Publishing', 'Published', 'PublishFailed', 'Scaling'
+* **publishingState**: 'Draft' | 'Published' | 'PublishFailed' | 'Publishing' | 'Scaling' (ReadOnly): Describes the readiness of this environment setting.
 * **resourceSettings**: [ResourceSettings](#resourcesettings) (Required): Represents resource specific settings
 * **title**: string: Brief title describing the environment and its resource settings
 * **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
@@ -174,7 +174,7 @@
 * **id**: string (ReadOnly): The unique id of the resource setting
 * **imageName**: string (ReadOnly): The name of the image used to created the environment setting
 * **referenceVm**: [ReferenceVm](#referencevm) (Required): Details of a Reference Vm
-* **size**: 'Basic' | 'Performance' | 'Standard': The size of the virtual machine. Possible values include: 'Basic', 'Standard', 'Performance'
+* **size**: 'Basic' | 'Performance' | 'Standard': The size of the virtual machine.
 
 ## ReferenceVm
 ### Properties

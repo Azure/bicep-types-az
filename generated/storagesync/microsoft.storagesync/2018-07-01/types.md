@@ -88,7 +88,7 @@
 
 ## ServerEndpointCreateParametersProperties
 ### Properties
-* **cloudTiering**: 'off' | 'on': Cloud Tiering. Possible values include: 'on', 'off'
+* **cloudTiering**: 'off' | 'on': Cloud Tiering.
 * **friendlyName**: string: Friendly Name
 * **lastOperationName**: string (ReadOnly): Resource Last Operation Name
 * **lastWorkflowId**: string (ReadOnly): ServerEndpoint lastWorkflowId

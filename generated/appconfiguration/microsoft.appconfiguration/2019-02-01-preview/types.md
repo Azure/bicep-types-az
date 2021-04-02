@@ -15,7 +15,7 @@
 ### Properties
 * **creationDate**: string (ReadOnly): The creation date of configuration store.
 * **endpoint**: string (ReadOnly): The DNS endpoint where the configuration store API will be available.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the configuration store. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the configuration store.
 
 ## Dictionary<string,String>
 ### Properties

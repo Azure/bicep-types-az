@@ -17,20 +17,20 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of connected cluster identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id associated with the connected cluster. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' (Required): The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster. Possible values include: 'None', 'SystemAssigned'
+* **type**: 'None' | 'SystemAssigned' (Required): The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster.
 
 ## ConnectedClusterProperties
 ### Properties
 * **agentPublicKeyCertificate**: string (Required): Base64 encoded public certificate used by the agent to do the initial handshake to the backend services in Azure.
 * **agentVersion**: string (ReadOnly): Version of the agent running on the connected cluster resource
-* **connectivityStatus**: 'Connected' | 'Connecting' | 'Expired' | 'Offline' (ReadOnly): Represents the connectivity status of the connected cluster. Possible values include: 'Connecting', 'Connected', 'Offline', 'Expired'
+* **connectivityStatus**: 'Connected' | 'Connecting' | 'Expired' | 'Offline' (ReadOnly): Represents the connectivity status of the connected cluster.
 * **distribution**: string: The Kubernetes distribution running on this connected cluster.
 * **infrastructure**: string: The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.
 * **kubernetesVersion**: string (ReadOnly): The Kubernetes version of the connected cluster resource
 * **lastConnectivityTime**: string (ReadOnly): Time representing the last instance when heart beat was received from the cluster
 * **managedIdentityCertificateExpirationTime**: string (ReadOnly): Expiration time of the managed identity certificate
 * **offering**: string (ReadOnly): Connected cluster offering
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating': Provisioning state of the connected cluster resource. Possible values include: 'Succeeded', 'Failed', 'Canceled', 'Provisioning', 'Updating', 'Deleting', 'Accepted'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating': Provisioning state of the connected cluster resource.
 * **totalCoreCount**: int (ReadOnly): Number of CPU cores present in the connected cluster resource
 * **totalNodeCount**: int (ReadOnly): Number of nodes present in the connected cluster resource
 
@@ -38,10 +38,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource modification (UTC).
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties

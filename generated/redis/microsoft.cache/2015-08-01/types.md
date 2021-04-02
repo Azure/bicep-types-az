@@ -35,8 +35,8 @@
 ## Sku
 ### Properties
 * **capacity**: int (Required): What size of Redis cache to deploy. Valid values: for C family (0, 1, 2, 3, 4, 5, 6), for P family (1, 2, 3, 4).
-* **family**: 'C' | 'P' (Required): Which family to use. Valid values: (C, P). Possible values include: 'C', 'P'
-* **name**: 'Basic' | 'Premium' | 'Standard' (Required): What type of Redis cache to deploy. Valid values: (Basic, Standard, Premium). Possible values include: 'Basic', 'Standard', 'Premium'
+* **family**: 'C' | 'P' (Required): Which family to use. Valid values: (C, P).
+* **name**: 'Basic' | 'Premium' | 'Standard' (Required): What type of Redis cache to deploy. Valid values: (Basic, Standard, Premium).
 
 ## Dictionary<string,String>
 ### Properties

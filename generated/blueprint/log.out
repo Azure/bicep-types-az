@@ -20,4 +20,4 @@ Processing batch task - {"tag":"schema-blueprint-2017-11-11-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 INFORMATION: Resource type Microsoft.Blueprint/blueprints/versions under path '/providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Blueprint/blueprints/{blueprintName}/versions/{versionId}' has no body defined.
-[13.53 s] Generation Complete
+[21.1 s] Generation Complete

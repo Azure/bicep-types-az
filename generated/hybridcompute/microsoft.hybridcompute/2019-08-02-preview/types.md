@@ -44,7 +44,7 @@
 * **osVersion**: string: The version of Operating System running on the hybrid machine.
 * **physicalLocation**: string: Resource's Physical Location
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
-* **status**: 'Connected' | 'Disconnected' | 'Error' (ReadOnly): The status of the hybrid machine agent. Possible values include: 'Connected', 'Disconnected', 'Error'
+* **status**: 'Connected' | 'Disconnected' | 'Error' (ReadOnly): The status of the hybrid machine agent.
 * **vmId**: string (ReadOnly): Specifies the hybrid machine unique ID.
 
 ## ErrorDetail
@@ -65,7 +65,7 @@
 ### Properties
 * **code**: string: The status code.
 * **displayStatus**: string: The short localizable label for the status.
-* **level**: 'Error' | 'Info' | 'Warning': The level code. Possible values include: 'Info', 'Warning', 'Error'
+* **level**: 'Error' | 'Info' | 'Warning': The level code.
 * **message**: string: The detailed status message, including for alerts and error messages.
 * **time**: string: The time of the status.
 

@@ -34,7 +34,7 @@ This is a write-only property and is not returned in GET calls.
 * **startCloudService**: bool: (Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
 If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.
 * **uniqueId**: string (ReadOnly): The unique identifier for the cloud service.
-* **upgradeMode**: 'Auto' | 'Manual' | 'Simultaneous': Possible values include: 'Auto', 'Manual', 'Simultaneous'
+* **upgradeMode**: 'Auto' | 'Manual' | 'Simultaneous':
 
 ## CloudServiceExtensionProfile
 ### Properties

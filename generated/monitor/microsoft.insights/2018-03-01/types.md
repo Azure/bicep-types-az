@@ -61,7 +61,7 @@
 ### Properties
 * **emailAddress**: string (Required): The email address of this receiver.
 * **name**: string (Required): The name of the email receiver. Names must be unique across all receivers within an action group.
-* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The receiver status of the e-mail. Possible values include: 'NotSpecified', 'Enabled', 'Disabled'
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The receiver status of the e-mail.
 
 ## ItsmReceiver
 ### Properties
@@ -82,7 +82,7 @@
 * **countryCode**: string (Required): The country code of the SMS receiver.
 * **name**: string (Required): The name of the SMS receiver. Names must be unique across all receivers within an action group.
 * **phoneNumber**: string (Required): The phone number of the SMS receiver.
-* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The status of the receiver. Possible values include: 'NotSpecified', 'Enabled', 'Disabled'
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The status of the receiver.
 
 ## VoiceReceiver
 ### Properties
@@ -160,14 +160,14 @@
 * **metricNamespace**: string: Namespace of the metric.
 * **name**: string (Required): Name of the criteria.
 * **skipMetricValidation**: bool: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
-* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required): the criteria time aggregation types. Possible values include: 'Average', 'Count', 'Minimum', 'Maximum', 'Total'
+* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required): the criteria time aggregation types.
 ### DynamicThresholdCriterion
 #### Properties
-* **alertSensitivity**: 'High' | 'Low' | 'Medium' (Required): The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern. Possible values include: 'Low', 'Medium', 'High'
+* **alertSensitivity**: 'High' | 'Low' | 'Medium' (Required): The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
 * **criterionType**: 'DynamicThresholdCriterion' (Required): Criterion for dynamic threshold.
 * **failingPeriods**: [DynamicThresholdFailingPeriods](#dynamicthresholdfailingperiods) (Required): The minimum number of violations required within the selected lookback time window required to raise an alert.
 * **ignoreDataBefore**: string: Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)
-* **operator**: 'GreaterOrLessThan' | 'GreaterThan' | 'LessThan' (Required): The operator used to compare the metric value against the threshold. Possible values include: 'GreaterThan', 'LessThan', 'GreaterOrLessThan'
+* **operator**: 'GreaterOrLessThan' | 'GreaterThan' | 'LessThan' (Required): The operator used to compare the metric value against the threshold.
 
 ### StaticThresholdCriterion
 #### Properties
@@ -176,10 +176,10 @@
 * **metricName**: string (Required): Name of the metric.
 * **metricNamespace**: string: Namespace of the metric.
 * **name**: string (Required): Name of the criteria.
-* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'NotEquals' (Required): the criteria operator. Possible values include: 'Equals', 'NotEquals', 'GreaterThan', 'GreaterThanOrEqual', 'LessThan', 'LessThanOrEqual'
+* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'NotEquals' (Required): the criteria operator.
 * **skipMetricValidation**: bool: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
 * **threshold**: int (Required): the criteria threshold value that activates the alert.
-* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required): the criteria time aggregation types. Possible values include: 'Average', 'Count', 'Minimum', 'Maximum', 'Total'
+* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required): the criteria time aggregation types.
 #### Additional Properties
 * **Additional Properties Type**: any
 
@@ -192,11 +192,11 @@
 
 ## DynamicThresholdCriterion
 ### Properties
-* **alertSensitivity**: 'High' | 'Low' | 'Medium' (Required): The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern. Possible values include: 'Low', 'Medium', 'High'
+* **alertSensitivity**: 'High' | 'Low' | 'Medium' (Required): The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
 * **criterionType**: 'DynamicThresholdCriterion' (Required): Criterion for dynamic threshold.
 * **failingPeriods**: [DynamicThresholdFailingPeriods](#dynamicthresholdfailingperiods) (Required): The minimum number of violations required within the selected lookback time window required to raise an alert.
 * **ignoreDataBefore**: string: Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)
-* **operator**: 'GreaterOrLessThan' | 'GreaterThan' | 'LessThan' (Required): The operator used to compare the metric value against the threshold. Possible values include: 'GreaterThan', 'LessThan', 'GreaterOrLessThan'
+* **operator**: 'GreaterOrLessThan' | 'GreaterThan' | 'LessThan' (Required): The operator used to compare the metric value against the threshold.
 
 ## DynamicThresholdFailingPeriods
 ### Properties
@@ -210,10 +210,10 @@
 * **metricName**: string (Required): Name of the metric.
 * **metricNamespace**: string: Namespace of the metric.
 * **name**: string (Required): Name of the criteria.
-* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'NotEquals' (Required): the criteria operator. Possible values include: 'Equals', 'NotEquals', 'GreaterThan', 'GreaterThanOrEqual', 'LessThan', 'LessThanOrEqual'
+* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'NotEquals' (Required): the criteria operator.
 * **skipMetricValidation**: bool: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
 * **threshold**: int (Required): the criteria threshold value that activates the alert.
-* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required): the criteria time aggregation types. Possible values include: 'Average', 'Count', 'Minimum', 'Maximum', 'Total'
+* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required): the criteria time aggregation types.
 ### Additional Properties
 * **Additional Properties Type**: any
 

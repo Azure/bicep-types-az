@@ -41,7 +41,7 @@
 * **displayName**: string (ReadOnly): The friendly name of the child resource.
 * **id**: string (ReadOnly): The fully qualified ID for the child resource (management group or subscription).  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
 * **name**: string (ReadOnly): The name of the child entity.
-* **type**: '/subscriptions' | 'Microsoft.Management/managementGroups' (ReadOnly): The fully qualified resource type which includes provider namespace (e.g. Microsoft.Management/managementGroups). Possible values include: 'Microsoft.Management/managementGroups', '/subscriptions'
+* **type**: '/subscriptions' | 'Microsoft.Management/managementGroups' (ReadOnly): The fully qualified resource type which includes provider namespace (e.g. Microsoft.Management/managementGroups).
 
 ## CreateManagementGroupDetails
 ### Properties

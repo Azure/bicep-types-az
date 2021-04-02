@@ -15,10 +15,10 @@
 ## ProtectionIntent
 * **Discriminator**: protectionIntentItemType
 ### Base Properties
-* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DefaultBackup' | 'DPM' | 'Invalid' | 'MAB': Type of backup management for the backed up item. Possible values include: 'Invalid', 'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql', 'AzureStorage', 'AzureWorkload', 'DefaultBackup'
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DefaultBackup' | 'DPM' | 'Invalid' | 'MAB': Type of backup management for the backed up item.
 * **itemId**: string: ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
 * **policyId**: string: ID of the backup policy with which this item is backed up.
-* **protectionState**: 'Invalid' | 'NotProtected' | 'Protected' | 'Protecting' | 'ProtectionFailed': Backup state of this backup item. Possible values include: 'Invalid', 'NotProtected', 'Protecting', 'Protected', 'ProtectionFailed'
+* **protectionState**: 'Invalid' | 'NotProtected' | 'Protected' | 'Protecting' | 'ProtectionFailed': Backup state of this backup item.
 * **sourceResourceId**: string: ARM ID of the resource to be backed up.
 ### AzureResourceItem
 #### Properties

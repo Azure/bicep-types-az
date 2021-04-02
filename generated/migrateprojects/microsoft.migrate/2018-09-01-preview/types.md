@@ -25,8 +25,8 @@
 ## MigrateProjectProperties
 ### Properties
 * **lastSummaryRefreshedTime**: string (ReadOnly): Gets the last time the project summary was refreshed.
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded': Provisioning state of the migrate project. Possible values include: 'Accepted', 'Creating', 'Deleting', 'Failed', 'Moving', 'Succeeded'
-* **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started' (ReadOnly): Gets the refresh summary state. Possible values include: 'Started', 'InProgress', 'Completed', 'Failed'
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded': Provisioning state of the migrate project.
+* **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started' (ReadOnly): Gets the refresh summary state.
 * **registeredTools**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DatabaseMigrationService' | 'DataMigrationAssistant' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration_Replication' | 'ServerMigration' | 'Turbonomic' | 'Zerto'[]: Gets or sets the list of tools registered with the migrate project.
 * **summary**: [Dictionary<string,ProjectSummary>](#dictionarystringprojectsummary) (ReadOnly): Gets the summary of the migrate project.
 
@@ -40,7 +40,7 @@
 ### Base Properties
 * **extendedSummary**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the extended summary.
 * **lastSummaryRefreshedTime**: string: Gets or sets the time when summary was last refreshed.
-* **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started': Gets or sets the state of refresh summary. Possible values include: 'Started', 'InProgress', 'Completed', 'Failed'
+* **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started': Gets or sets the state of refresh summary.
 ### Databases
 #### Properties
 * **instanceType**: 'Databases' (Required): Class representing the databases solution summary.
@@ -79,13 +79,13 @@
 
 ## SolutionProperties
 ### Properties
-* **cleanupState**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Started': Gets or sets the cleanup state of the solution. Possible values include: 'None', 'Started', 'InProgress', 'Completed', 'Failed'
+* **cleanupState**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Started': Gets or sets the cleanup state of the solution.
 * **details**: [SolutionDetails](#solutiondetails): Class representing the details of the solution.
-* **goal**: 'Databases' | 'Servers': Gets or sets the goal of the solution. Possible values include: 'Servers', 'Databases'
-* **purpose**: 'Assessment' | 'Discovery' | 'Migration': Gets or sets the purpose of the solution. Possible values include: 'Discovery', 'Assessment', 'Migration'
-* **status**: 'Active' | 'Inactive': Gets or sets the current status of the solution. Possible values include: 'Inactive', 'Active'
+* **goal**: 'Databases' | 'Servers': Gets or sets the goal of the solution.
+* **purpose**: 'Assessment' | 'Discovery' | 'Migration': Gets or sets the purpose of the solution.
+* **status**: 'Active' | 'Inactive': Gets or sets the current status of the solution.
 * **summary**: [SolutionSummary](#solutionsummary): The solution summary class.
-* **tool**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DatabaseMigrationService' | 'DataMigrationAssistant' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration_Replication' | 'ServerMigration' | 'Turbonomic' | 'Zerto': Gets or sets the tool being used in the solution. Possible values include: 'ServerDiscovery', 'ServerAssessment', 'ServerMigration', 'Cloudamize', 'Turbonomic', 'Zerto', 'CorentTech', 'ServerAssessmentV1', 'ServerMigration_Replication', 'Carbonite', 'DataMigrationAssistant', 'DatabaseMigrationService'
+* **tool**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DatabaseMigrationService' | 'DataMigrationAssistant' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration_Replication' | 'ServerMigration' | 'Turbonomic' | 'Zerto': Gets or sets the tool being used in the solution.
 
 ## SolutionDetails
 ### Properties

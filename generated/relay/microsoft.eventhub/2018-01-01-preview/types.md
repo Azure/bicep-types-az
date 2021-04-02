@@ -11,11 +11,11 @@
 
 ## schemas:12_properties
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny': Default Action for Network Rule Set. Possible values include: 'Allow', 'Deny'
+* **defaultAction**: 'Allow' | 'Deny': Default Action for Network Rule Set.
 * **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]: List of IpRules
 
 ## NWRuleSetIpRules
 ### Properties
-* **action**: 'Allow': The IP Filter Action. Possible values include: 'Allow'
+* **action**: 'Allow': The IP Filter Action.
 * **ipMask**: string: IP Mask
 

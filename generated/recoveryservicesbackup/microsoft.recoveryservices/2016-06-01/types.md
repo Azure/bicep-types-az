@@ -27,11 +27,11 @@
 ## ProtectedItem
 * **Discriminator**: protectedItemType
 ### Base Properties
-* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'DPM' | 'Invalid' | 'MAB': The backup management type associated with the backup item. Possible values include: 'Invalid', 'AzureIaasVM', 'MAB', 'DPM', 'AzureBackupServer', 'AzureSql'
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'DPM' | 'Invalid' | 'MAB': The backup management type associated with the backup item.
 * **lastRecoveryPoint**: string: The timestamp when the most recent backup copy was created for this backup item.
 * **policyId**: string: The ID of the backup policy associated with this backup item.
 * **sourceResourceId**: string: The ID of the resource to be backed up.
-* **workloadType**: 'AzureSqlDb' | 'DPMUnknown' | 'Exchange' | 'FileFolder' | 'Invalid' | 'Sharepoint' | 'SQLDB' | 'VM': The workload type for this item. Possible values include: 'Invalid', 'VM', 'FileFolder', 'AzureSqlDb', 'SQLDB', 'Exchange', 'Sharepoint', 'DPMUnknown'
+* **workloadType**: 'AzureSqlDb' | 'DPMUnknown' | 'Exchange' | 'FileFolder' | 'Invalid' | 'Sharepoint' | 'SQLDB' | 'VM': The workload type for this item.
 ### AzureIaaSVMProtectedItem
 #### Properties
 * **extendedInfo**: [AzureIaaSVMProtectedItemExtendedInfo](#azureiaasvmprotecteditemextendedinfo): Additional information for the Azure VM (also known as IaaS VM)-specific backup item.
@@ -39,7 +39,7 @@
 * **lastBackupStatus**: string: The last backup operation status. The possible values are: Healthy or Unhealthy.
 * **lastBackupTime**: string: The timestamp of the last backup operation for this backup item.
 * **protectedItemType**: 'AzureIaaSVMProtectedItem' (Required): This Azure VM workload-specific (also known as IaaS VM workload-specific) backup item has been backed up.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of this backup item. Possible values include: 'Invalid', 'IRPending', 'Protected', 'ProtectionError', 'ProtectionStopped', 'ProtectionPaused'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of this backup item.
 * **protectionStatus**: string: The backup status of this backup item.
 * **virtualMachineId**: string: The fully qualified Resource Manager ID of the virtual machine represented by this item.
 
@@ -58,7 +58,7 @@
 * **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo): Additional information for the Azure SQL specific backup item.
 * **protectedItemDataId**: string: The internal ID of a backup item. The internal ID is used by the Azure SQL Backup engine to contact Recovery Services.
 * **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required): This is an Azure SQL workload-specific backup item.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of the backup item. Possible values include: 'Invalid', 'IRPending', 'Protected', 'ProtectionError', 'ProtectionStopped', 'ProtectionPaused'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of the backup item.
 
 
 ## AzureIaaSVMProtectedItem
@@ -68,7 +68,7 @@
 * **lastBackupStatus**: string: The last backup operation status. The possible values are: Healthy or Unhealthy.
 * **lastBackupTime**: string: The timestamp of the last backup operation for this backup item.
 * **protectedItemType**: 'AzureIaaSVMProtectedItem' (Required): This Azure VM workload-specific (also known as IaaS VM workload-specific) backup item has been backed up.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of this backup item. Possible values include: 'Invalid', 'IRPending', 'Protected', 'ProtectionError', 'ProtectionStopped', 'ProtectionPaused'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of this backup item.
 * **protectionStatus**: string: The backup status of this backup item.
 * **virtualMachineId**: string: The fully qualified Resource Manager ID of the virtual machine represented by this item.
 
@@ -99,7 +99,7 @@
 * **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo): Additional information for the Azure SQL specific backup item.
 * **protectedItemDataId**: string: The internal ID of a backup item. The internal ID is used by the Azure SQL Backup engine to contact Recovery Services.
 * **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required): This is an Azure SQL workload-specific backup item.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of the backup item. Possible values include: 'Invalid', 'IRPending', 'Protected', 'ProtectionError', 'ProtectionStopped', 'ProtectionPaused'
+* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of the backup item.
 
 ## AzureSqlProtectedItemExtendedInfo
 ### Properties
@@ -174,13 +174,13 @@
 ### Properties
 * **count**: int: Count of the duration types. Retention duration is determined by the combining the Count times and durationType.
    For example, if Count = 3 and durationType = Weeks, then the retention duration is three weeks.
-* **durationType**: 'Days' | 'Invalid' | 'Months' | 'Weeks' | 'Years': The retention duration type of the retention policy. Possible values include: 'Invalid', 'Days', 'Weeks', 'Months', 'Years'
+* **durationType**: 'Days' | 'Invalid' | 'Months' | 'Weeks' | 'Years': The retention duration type of the retention policy.
 
 ## MonthlyRetentionSchedule
 ### Properties
 * **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
 * **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
-* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly': Retention schedule format type for monthly retention policy. Possible values include: 'Invalid', 'Daily', 'Weekly'
+* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly': Retention schedule format type for monthly retention policy.
 * **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
 * **retentionTimes**: string[]: Retention times of the retention policy.
 
@@ -209,7 +209,7 @@
 * **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'Invalid' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]: List of the months of year for the yearly retention policy.
 * **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
 * **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
-* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly': Retention schedule format for the yearly retention policy. Possible values include: 'Invalid', 'Daily', 'Weekly'
+* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly': Retention schedule format for the yearly retention policy.
 * **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
 * **retentionTimes**: string[]: Retention times for the retention policy.
 
@@ -229,7 +229,7 @@
 #### Properties
 * **schedulePolicyType**: 'SimpleSchedulePolicy' (Required): Simple policy schedule.
 * **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: This list is the days of the week when the schedule runs.
-* **scheduleRunFrequency**: 'Daily' | 'Invalid' | 'Weekly': Defines the frequency interval (daily or weekly) for the schedule policy. Possible values include: 'Invalid', 'Daily', 'Weekly'
+* **scheduleRunFrequency**: 'Daily' | 'Invalid' | 'Weekly': Defines the frequency interval (daily or weekly) for the schedule policy.
 * **scheduleRunTimes**: string[]: List of times, during a day, when the schedule runs.
 * **scheduleWeeklyFrequency**: int: The number of times per week the schedule runs.
 
@@ -242,7 +242,7 @@
 ### Properties
 * **schedulePolicyType**: 'SimpleSchedulePolicy' (Required): Simple policy schedule.
 * **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: This list is the days of the week when the schedule runs.
-* **scheduleRunFrequency**: 'Daily' | 'Invalid' | 'Weekly': Defines the frequency interval (daily or weekly) for the schedule policy. Possible values include: 'Invalid', 'Daily', 'Weekly'
+* **scheduleRunFrequency**: 'Daily' | 'Invalid' | 'Weekly': Defines the frequency interval (daily or weekly) for the schedule policy.
 * **scheduleRunTimes**: string[]: List of times, during a day, when the schedule runs.
 * **scheduleWeeklyFrequency**: int: The number of times per week the schedule runs.
 

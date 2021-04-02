@@ -16,7 +16,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint network resource that is linked to the Private Endpoint connection
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Private Link Service Connection State
-* **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded': Gets or sets provisioning state of the private endpoint connection. Possible values include: 'Succeeded', 'Deleting', 'Failed', 'Pending'
+* **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded': Gets or sets provisioning state of the private endpoint connection.
 
 ## PrivateEndpoint
 ### Properties
@@ -26,7 +26,7 @@
 ### Properties
 * **actionRequired**: string: Gets or sets actions required
 * **description**: string: Gets or sets description
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Gets or sets the status. Possible values include: 'Pending', 'Approved', 'Rejected', 'Disconnected'
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Gets or sets the status.
 
 ## Dictionary<string,String>
 ### Properties

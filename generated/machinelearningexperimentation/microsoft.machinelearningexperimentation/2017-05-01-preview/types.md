@@ -41,7 +41,7 @@
 * **discoveryUri**: string (ReadOnly): The uri for this machine learning team account.
 * **friendlyName**: string: The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
 * **keyVaultId**: string (Required): The fully qualified arm id of the user key vault.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current deployment state of team account resource. The provisioningState is to indicate states for resource provisioning. Possible values include: 'Creating', 'Succeeded', 'Updating', 'Deleting', 'Failed'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current deployment state of team account resource. The provisioningState is to indicate states for resource provisioning.
 * **seats**: string: The no of users/seats who can access this team account. This property defines the charge on the team account.
 * **storageAccount**: [StorageAccountProperties](#storageaccountproperties) (Required): The properties of a storage account for a machine learning team account.
 * **vsoAccountId**: string (Required): The fully qualified arm id of the vso account to be used for this team account.
@@ -62,7 +62,7 @@
 * **creationDate**: string (ReadOnly): The creation date of the machine learning workspace in ISO8601 format.
 * **description**: string: The description of this workspace.
 * **friendlyName**: string (Required): The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current deployment state of team account workspace resource. The provisioningState is to indicate states for resource provisioning. Possible values include: 'Creating', 'Succeeded', 'Updating', 'Deleting', 'Failed'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current deployment state of team account workspace resource. The provisioningState is to indicate states for resource provisioning.
 * **workspaceId**: string (ReadOnly): The immutable id of this workspace.
 
 ## Dictionary<string,String>
@@ -78,7 +78,7 @@
 * **friendlyName**: string (Required): The friendly name for this project.
 * **gitrepo**: string: The reference to git repo for this project.
 * **projectId**: string (ReadOnly): The immutable id of this project.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current deployment state of project resource. The provisioningState is to indicate states for resource provisioning. Possible values include: 'Creating', 'Succeeded', 'Updating', 'Deleting', 'Failed'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current deployment state of project resource. The provisioningState is to indicate states for resource provisioning.
 * **workspaceId**: string (ReadOnly): The immutable id of the workspace which contains this project.
 
 ## Dictionary<string,String>

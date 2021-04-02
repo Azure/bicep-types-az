@@ -34,7 +34,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned': The identity type. Possible values include: 'SystemAssigned'
+* **type**: 'SystemAssigned': The identity type.
 
 ## ApplianceDefinitionProperties
 ### Properties
@@ -42,13 +42,13 @@
 * **authorizations**: [ApplianceProviderAuthorization](#applianceproviderauthorization)[] (Required): The appliance provider authorizations.
 * **description**: string: The appliance definition description.
 * **displayName**: string: The appliance definition display name.
-* **lockLevel**: 'CanNotDelete' | 'None' | 'ReadOnly' (Required): The appliance lock level. Possible values include: 'CanNotDelete', 'ReadOnly', 'None'
+* **lockLevel**: 'CanNotDelete' | 'None' | 'ReadOnly' (Required): The appliance lock level.
 * **packageFileUri**: string (Required): The appliance definition package file Uri.
 
 ## ApplianceArtifact
 ### Properties
 * **name**: string: The appliance artifact name.
-* **type**: 'Custom' | 'Template': The appliance artifact type. Possible values include: 'Template', 'Custom'
+* **type**: 'Custom' | 'Template': The appliance artifact type.
 * **uri**: string: The appliance artifact blob uri.
 
 ## ApplianceProviderAuthorization
@@ -84,7 +84,7 @@
 * **managedResourceGroupId**: string (Required): The managed resource group Id.
 * **outputs**: any (ReadOnly): Name and value pairs that define the appliance outputs.
 * **parameters**: any: Name and value pairs that define the appliance parameters. It can be a JObject or a well formed JSON string.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The appliance provisioning state. Possible values include: 'Accepted', 'Running', 'Ready', 'Creating', 'Created', 'Deleting', 'Deleted', 'Canceled', 'Failed', 'Succeeded', 'Updating'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The appliance provisioning state.
 * **uiDefinitionUri**: string: The blob URI where the UI definition file is located.
 
 ## Dictionary<string,String>

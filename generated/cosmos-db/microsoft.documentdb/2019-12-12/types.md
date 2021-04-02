@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'GlobalDocumentDB' | 'MongoDB' | 'Parse': Indicates the type of database account. This can only be set at database account creation. Possible values include: 'GlobalDocumentDB', 'MongoDB', 'Parse'
+* **kind**: 'GlobalDocumentDB' | 'MongoDB' | 'Parse': Indicates the type of database account. This can only be set at database account creation.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseAccountCreateUpdateProperties](#databaseaccountcreateupdateproperties) (Required): Properties to create and update Azure Cosmos DB database accounts.
@@ -255,7 +255,7 @@
 ## DatabaseAccountCreateUpdateProperties
 ### Properties
 * **capabilities**: [Capability](#capability)[]: List of Cosmos DB capabilities for the account
-* **connectorOffer**: 'Small': The cassandra connector offer type for the Cosmos DB database C* account. Possible values include: 'Small'
+* **connectorOffer**: 'Small': The cassandra connector offer type for the Cosmos DB database C* account.
 * **consistencyPolicy**: [ConsistencyPolicy](#consistencypolicy): The consistency policy for the Cosmos DB database account.
 * **databaseAccountOfferType**: string (Required): The offer type for the database
 * **disableKeyBasedMetadataWriteAccess**: bool: Disable write operations on metadata resources (databases, containers, throughput) via account keys
@@ -279,7 +279,7 @@
 
 ## ConsistencyPolicy
 ### Properties
-* **defaultConsistencyLevel**: 'BoundedStaleness' | 'ConsistentPrefix' | 'Eventual' | 'Session' | 'Strong' (Required): The default consistency level and configuration settings of the Cosmos DB account. Possible values include: 'Eventual', 'Session', 'BoundedStaleness', 'Strong', 'ConsistentPrefix'
+* **defaultConsistencyLevel**: 'BoundedStaleness' | 'ConsistentPrefix' | 'Eventual' | 'Session' | 'Strong' (Required): The default consistency level and configuration settings of the Cosmos DB account.
 * **maxIntervalInSeconds**: int: When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
 * **maxStalenessPrefix**: int: When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
 
@@ -458,7 +458,7 @@
 ### Properties
 * **conflictResolutionPath**: string (WriteOnly): The conflict resolution path in the case of LastWriterWins mode.
 * **conflictResolutionProcedure**: string (WriteOnly): The procedure to resolve conflicts in the case of custom mode.
-* **mode**: 'Custom' | 'LastWriterWins' (WriteOnly): Indicates the conflict resolution mode. Possible values include: 'LastWriterWins', 'Custom'
+* **mode**: 'Custom' | 'LastWriterWins' (WriteOnly): Indicates the conflict resolution mode.
 
 ## IndexingPolicy
 ### Properties
@@ -466,12 +466,12 @@
 * **compositeIndexes**: [CompositePath](#compositepath)[][] (WriteOnly): List of composite path list
 * **excludedPaths**: [ExcludedPath](#excludedpath)[] (WriteOnly): List of paths to exclude from indexing
 * **includedPaths**: [IncludedPath](#includedpath)[] (WriteOnly): List of paths to include in the indexing
-* **indexingMode**: 'Consistent' | 'Lazy' | 'None' (WriteOnly): Indicates the indexing mode. Possible values include: 'Consistent', 'Lazy', 'None'
+* **indexingMode**: 'Consistent' | 'Lazy' | 'None' (WriteOnly): Indicates the indexing mode.
 * **spatialIndexes**: [SpatialSpec](#spatialspec)[] (WriteOnly): List of spatial specifics
 
 ## CompositePath
 ### Properties
-* **order**: 'Ascending' | 'Descending' (WriteOnly): Sort order for composite paths. Possible values include: 'Ascending', 'Descending'
+* **order**: 'Ascending' | 'Descending' (WriteOnly): Sort order for composite paths.
 * **path**: string (WriteOnly): The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
 
 ## ExcludedPath
@@ -485,8 +485,8 @@
 
 ## Indexes
 ### Properties
-* **dataType**: 'LineString' | 'MultiPolygon' | 'Number' | 'Point' | 'Polygon' | 'String' (WriteOnly): The datatype for which the indexing behavior is applied to. Possible values include: 'String', 'Number', 'Point', 'Polygon', 'LineString', 'MultiPolygon'
-* **kind**: 'Hash' | 'Range' | 'Spatial' (WriteOnly): Indicates the type of index. Possible values include: 'Hash', 'Range', 'Spatial'
+* **dataType**: 'LineString' | 'MultiPolygon' | 'Number' | 'Point' | 'Polygon' | 'String' (WriteOnly): The datatype for which the indexing behavior is applied to.
+* **kind**: 'Hash' | 'Range' | 'Spatial' (WriteOnly): Indicates the type of index.
 * **precision**: int (WriteOnly): The precision of the index. -1 is maximum precision.
 
 ## SpatialSpec
@@ -496,7 +496,7 @@
 
 ## ContainerPartitionKey
 ### Properties
-* **kind**: 'Hash' | 'Range' (WriteOnly): Indicates the kind of algorithm used for partitioning. Possible values include: 'Hash', 'Range'
+* **kind**: 'Hash' | 'Range' (WriteOnly): Indicates the kind of algorithm used for partitioning.
 * **paths**: string[] (WriteOnly): List of paths using which data within the container can be partitioned
 * **version**: int (WriteOnly): Indicates the version of the partition key definition
 
@@ -679,8 +679,8 @@
 * **_users**: string (ReadOnly): A system generated property that specifies the addressable path of the users resource.
 * **body**: string (WriteOnly): Body of the Trigger
 * **id**: string (Required): Name of the Cosmos DB SQL trigger
-* **triggerOperation**: 'All' | 'Create' | 'Delete' | 'Replace' | 'Update' (WriteOnly): The operation the trigger is associated with. Possible values include: 'All', 'Create', 'Update', 'Delete', 'Replace'
-* **triggerType**: 'Post' | 'Pre' (WriteOnly): Type of the Trigger. Possible values include: 'Pre', 'Post'
+* **triggerOperation**: 'All' | 'Create' | 'Delete' | 'Replace' | 'Update' (WriteOnly): The operation the trigger is associated with.
+* **triggerType**: 'Post' | 'Pre' (WriteOnly): Type of the Trigger.
 
 ## Dictionary<string,String>
 ### Properties

@@ -53,7 +53,7 @@
 ### Properties
 * **defaultValue**: any:
 * **oAuthSettings**: [ApiOAuthSettings](#apioauthsettings): OAuth settings for the connection provider
-* **type**: 'array' | 'bool' | 'connection' | 'int' | 'oauthSetting' | 'object' | 'secureobject' | 'securestring' | 'string': Type of the parameter. Possible values include: 'string', 'securestring', 'secureobject', 'int', 'bool', 'object', 'array', 'oauthSetting', 'connection'
+* **type**: 'array' | 'bool' | 'connection' | 'int' | 'oauthSetting' | 'object' | 'secureobject' | 'securestring' | 'string': Type of the parameter.
 * **uiDefinition**: any:
 
 ## ApiOAuthSettings

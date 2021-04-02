@@ -6,7 +6,7 @@
 * **apiVersion**: '2016-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Entity Tag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'Academic' | 'Bing.Autosuggest' | 'Bing.Search' | 'Bing.Speech' | 'Bing.SpellCheck' | 'ComputerVision' | 'ContentModerator' | 'Emotion' | 'Face' | 'LUIS' | 'Recommendations' | 'SpeakerRecognition' | 'Speech' | 'SpeechTranslation' | 'TextAnalytics' | 'TextTranslation' | 'WebLM' (Required): Required. Indicates the type of cognitive service account. Possible values include: 'Academic', 'Bing.Autosuggest', 'Bing.Search', 'Bing.Speech', 'Bing.SpellCheck', 'ComputerVision', 'ContentModerator', 'Emotion', 'Face', 'LUIS', 'Recommendations', 'SpeakerRecognition', 'Speech', 'SpeechTranslation', 'TextAnalytics', 'TextTranslation', 'WebLM'
+* **kind**: 'Academic' | 'Bing.Autosuggest' | 'Bing.Search' | 'Bing.Speech' | 'Bing.SpellCheck' | 'ComputerVision' | 'ContentModerator' | 'Emotion' | 'Face' | 'LUIS' | 'Recommendations' | 'SpeakerRecognition' | 'Speech' | 'SpeechTranslation' | 'TextAnalytics' | 'TextTranslation' | 'WebLM' (Required): Required. Indicates the type of cognitive service account.
 * **location**: string (Required): Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update the request will succeed.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: any (Required): required empty properties object. Must be an empty object, and must exist in the request.
@@ -16,8 +16,8 @@
 
 ## Sku
 ### Properties
-* **name**: 'F0' | 'P0' | 'P1' | 'P2' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4' | 'S5' | 'S6' (Required): Gets or sets the sku name. Required for account creation, optional for update. Possible values include: 'F0', 'P0', 'P1', 'P2', 'S0', 'S1', 'S2', 'S3', 'S4', 'S5', 'S6'
-* **tier**: 'Free' | 'Premium' | 'Standard' (ReadOnly): Gets the sku tier. This is based on the SKU name. Possible values include: 'Free', 'Standard', 'Premium'
+* **name**: 'F0' | 'P0' | 'P1' | 'P2' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4' | 'S5' | 'S6' (Required): Gets or sets the sku name. Required for account creation, optional for update.
+* **tier**: 'Free' | 'Premium' | 'Standard' (ReadOnly): Gets the sku tier. This is based on the SKU name.
 
 ## Dictionary<string,String>
 ### Properties

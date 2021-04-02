@@ -25,22 +25,22 @@
 * **alias**: string (Required): The alternative updatable name for a build task.
 * **creationDate**: string (ReadOnly): The creation date of build task.
 * **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the build has to happen.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the build task. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the build task.
 * **sourceRepository**: [SourceRepositoryProperties](#sourcerepositoryproperties) (Required): The properties of the source code repository.
-* **status**: 'Disabled' | 'Enabled': The current status of build task. Possible values include: 'Disabled', 'Enabled'
+* **status**: 'Disabled' | 'Enabled': The current status of build task.
 * **timeout**: int: Build timeout in seconds.
 
 ## PlatformProperties
 ### Properties
 * **cpu**: int: The CPU configuration in terms of number of cores required for the build.
-* **osType**: 'Linux' | 'Windows' (Required): The operating system type required for the build. Possible values include: 'Windows', 'Linux'
+* **osType**: 'Linux' | 'Windows' (Required): The operating system type required for the build.
 
 ## SourceRepositoryProperties
 ### Properties
 * **isCommitTriggerEnabled**: bool: The value of this property indicates whether the source control commit trigger is enabled or not.
 * **repositoryUrl**: string (Required): The full URL to the source code repository
 * **sourceControlAuthProperties**: [SourceControlAuthInfo](#sourcecontrolauthinfo): The authorization properties for accessing the source code repository.
-* **sourceControlType**: 'Github' | 'VisualStudioTeamService' (Required): The type of source control service. Possible values include: 'Github', 'VisualStudioTeamService'
+* **sourceControlType**: 'Github' | 'VisualStudioTeamService' (Required): The type of source control service.
 
 ## SourceControlAuthInfo
 ### Properties
@@ -48,7 +48,7 @@
 * **refreshToken**: string: The refresh token used to refresh the access token.
 * **scope**: string: The scope of the access token.
 * **token**: string (Required): The access token used to access the source control provider.
-* **tokenType**: 'OAuth' | 'PAT': The type of Auth token. Possible values include: 'PAT', 'OAuth'
+* **tokenType**: 'OAuth' | 'PAT': The type of Auth token.
 
 ## Dictionary<string,String>
 ### Properties
@@ -58,11 +58,11 @@
 ## BuildStepProperties
 * **Discriminator**: type
 ### Base Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the build step. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the build step.
 ### Docker
 #### Properties
 * **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly): List of base image dependencies for a step.
-* **baseImageTrigger**: 'All' | 'None' | 'Runtime': The type of the auto trigger for base image dependency updates. Possible values include: 'All', 'Runtime', 'None'
+* **baseImageTrigger**: 'All' | 'None' | 'Runtime': The type of the auto trigger for base image dependency updates.
 * **branch**: string: The repository branch name.
 * **buildArguments**: [BuildArgument](#buildargument)[]: The custom arguments for building this build step.
 * **contextPath**: string: The relative context path for a docker build in the source.
@@ -76,7 +76,7 @@
 ## Docker
 ### Properties
 * **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly): List of base image dependencies for a step.
-* **baseImageTrigger**: 'All' | 'None' | 'Runtime': The type of the auto trigger for base image dependency updates. Possible values include: 'All', 'Runtime', 'None'
+* **baseImageTrigger**: 'All' | 'None' | 'Runtime': The type of the auto trigger for base image dependency updates.
 * **branch**: string: The repository branch name.
 * **buildArguments**: [BuildArgument](#buildargument)[]: The custom arguments for building this build step.
 * **contextPath**: string: The relative context path for a docker build in the source.
@@ -92,7 +92,7 @@
 * **registry**: string: The registry login server.
 * **repository**: string: The repository name.
 * **tag**: string: The tag name.
-* **type**: 'BuildTime' | 'RunTime': The type of the base image dependency. Possible values include: 'BuildTime', 'RunTime'
+* **type**: 'BuildTime' | 'RunTime': The type of the base image dependency.
 
 ## BuildArgument
 ### Properties

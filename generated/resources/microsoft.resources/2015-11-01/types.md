@@ -24,7 +24,7 @@
 ### Properties
 * **correlationId**: string (ReadOnly): Gets or sets the correlation ID of the deployment.
 * **dependencies**: [Dependency](#dependency)[] (ReadOnly): Gets the list of deployment dependencies.
-* **mode**: 'Complete' | 'Incremental': Gets or sets the deployment mode. Possible values include: 'Incremental', 'Complete'
+* **mode**: 'Complete' | 'Incremental': Gets or sets the deployment mode.
 * **outputs**: any (ReadOnly): Gets or sets key/value pairs that represent deployment output.
 * **parameters**: any: Deployment parameters. Use only one of Parameters or ParametersLink.
 * **parametersLink**: [ParametersLink](#parameterslink): Entity representing the reference to the deployment parameters.

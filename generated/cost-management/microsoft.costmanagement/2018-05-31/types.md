@@ -14,13 +14,13 @@
 ### Properties
 * **definition**: [ReportConfigDefinition](#reportconfigdefinition) (Required): The definition of a report config.
 * **deliveryInfo**: [ReportConfigDeliveryInfo](#reportconfigdeliveryinfo) (Required): The delivery information associated with a report config.
-* **format**: 'Csv': The format of the report being delivered. Possible values include: 'Csv'
+* **format**: 'Csv': The format of the report being delivered.
 * **schedule**: [ReportConfigSchedule](#reportconfigschedule): The schedule associated with a report config.
 
 ## ReportConfigDefinition
 ### Properties
 * **dataset**: [ReportConfigDataset](#reportconfigdataset): The definition of data present in the report.
-* **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided. Possible values include: 'WeekToDate', 'MonthToDate', 'YearToDate', 'Custom'
+* **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
 * **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod): The start and end date for pulling data for the report.
 * **type**: string (Required): The type of the report.
 
@@ -29,7 +29,7 @@
 * **aggregation**: [Dictionary<string,ReportConfigAggregation>](#dictionarystringreportconfigaggregation): Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
 * **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration): The configuration of dataset in the report.
 * **filter**: [ReportConfigFilter](#reportconfigfilter): The filter expression to be used in the report.
-* **granularity**: 'Daily': The granularity of rows in the report. Possible values include: 'Daily'
+* **granularity**: 'Daily': The granularity of rows in the report.
 * **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[]: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
 
 ## Dictionary<string,ReportConfigAggregation>
@@ -62,7 +62,7 @@
 
 ## ReportConfigGrouping
 ### Properties
-* **columnType**: 'Dimension' | 'Tag' (Required): Has type of the column to group. Possible values include: 'Tag', 'Dimension'
+* **columnType**: 'Dimension' | 'Tag' (Required): Has type of the column to group.
 * **name**: string (Required): The name of the column to group.
 
 ## ReportConfigTimePeriod
@@ -82,9 +82,9 @@
 
 ## ReportConfigSchedule
 ### Properties
-* **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' (Required): The schedule recurrence. Possible values include: 'Daily', 'Weekly', 'Monthly', 'Annually'
+* **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' (Required): The schedule recurrence.
 * **recurrencePeriod**: [ReportConfigRecurrencePeriod](#reportconfigrecurrenceperiod) (Required): The start and end date for recurrence schedule.
-* **status**: 'Active' | 'Inactive': The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused. Possible values include: 'Active', 'Inactive'
+* **status**: 'Active' | 'Inactive': The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
 
 ## ReportConfigRecurrencePeriod
 ### Properties

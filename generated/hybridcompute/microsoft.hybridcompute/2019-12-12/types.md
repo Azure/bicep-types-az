@@ -27,7 +27,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned': The identity type. Possible values include: 'SystemAssigned'
+* **type**: 'SystemAssigned': The identity type.
 
 ## schemas:7_properties
 ### Properties
@@ -43,7 +43,7 @@
 * **osProfile**: [schemas:4_osProfile](#schemas4osprofile): Specifies the operating system settings for the hybrid machine.
 * **osVersion**: string (ReadOnly): The version of Operating System running on the hybrid machine.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
-* **status**: 'Connected' | 'Disconnected' | 'Error' (ReadOnly): The status of the hybrid machine agent. Possible values include: 'Connected', 'Disconnected', 'Error'
+* **status**: 'Connected' | 'Disconnected' | 'Error' (ReadOnly): The status of the hybrid machine agent.
 * **vmId**: string: Specifies the hybrid machine unique ID.
 
 ## ErrorDetail
@@ -64,7 +64,7 @@
 ### Properties
 * **code**: string: The status code.
 * **displayStatus**: string: The short localizable label for the status.
-* **level**: 'Error' | 'Info' | 'Warning': The level code. Possible values include: 'Info', 'Warning', 'Error'
+* **level**: 'Error' | 'Info' | 'Warning': The level code.
 * **message**: string: The detailed status message, including for alerts and error messages.
 * **time**: string: The time of the status.
 

@@ -61,8 +61,8 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC)
 * **createdBy**: string: An identifier for the identity that created the resource
-* **createdByType**: 'application' | 'key' | 'managedIdentity' | 'user': The type of identity that created the resource. Possible values include: 'user', 'application', 'managedIdentity', 'key'
+* **createdByType**: 'application' | 'key' | 'managedIdentity' | 'user': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: An identifier for the identity that last modified the resource
-* **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user': The type of identity that last modified the resource. Possible values include: 'user', 'application', 'managedIdentity', 'key'
+* **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user': The type of identity that last modified the resource.
 

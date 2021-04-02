@@ -94,7 +94,7 @@
 
 ## AutoProvisioningSettingProperties
 ### Properties
-* **autoProvision**: 'Off' | 'On' (Required): Describes what kind of security agent provisioning action to take. Possible values include: 'On', 'Off'
+* **autoProvision**: 'Off' | 'On' (Required): Describes what kind of security agent provisioning action to take.
 
 ## DeviceSecurityGroupProperties
 ### Properties
@@ -109,7 +109,7 @@
 * **description**: string (ReadOnly): The description of the custom alert.
 * **displayName**: string (ReadOnly): The display name of the custom alert.
 * **isEnabled**: bool (Required): Status of the custom alert.
-* **valueType**: 'IpCidr' | 'String' (ReadOnly): The value type of the items in the list. Possible values include: 'IpCidr', 'String'
+* **valueType**: 'IpCidr' | 'String' (ReadOnly): The value type of the items in the list.
 
 ## DenylistCustomAlertRule
 ### Properties
@@ -117,7 +117,7 @@
 * **description**: string (ReadOnly): The description of the custom alert.
 * **displayName**: string (ReadOnly): The display name of the custom alert.
 * **isEnabled**: bool (Required): Status of the custom alert.
-* **valueType**: 'IpCidr' | 'String' (ReadOnly): The value type of the items in the list. Possible values include: 'IpCidr', 'String'
+* **valueType**: 'IpCidr' | 'String' (ReadOnly): The value type of the items in the list.
 
 ## ThresholdCustomAlertRule
 ### Properties
@@ -176,7 +176,7 @@
 * **displayName**: string: The name of the sensitivity label.
 * **enabled**: bool: Indicates whether the label is enabled or not.
 * **order**: int: The order of the sensitivity label.
-* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None': The rank of the sensitivity label. Possible values include: 'None', 'Low', 'Medium', 'High', 'Critical'
+* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None': The rank of the sensitivity label.
 
 ## IoTSecuritySolutionProperties
 ### Properties
@@ -186,15 +186,15 @@
 * **export**: 'RawEvents'[]: List of additional export to workspace data options
 * **iotHubs**: string[] (Required): IoT Hub resource IDs
 * **recommendationsConfiguration**: [RecommendationConfigurationProperties](#recommendationconfigurationproperties)[]: List of recommendation configuration
-* **status**: 'Disabled' | 'Enabled': Security solution status. Possible values include: 'Enabled', 'Disabled'
+* **status**: 'Disabled' | 'Enabled': Security solution status.
 * **userDefinedResources**: [UserDefinedResourcesProperties](#userdefinedresourcesproperties): Properties of the solution's user defined resources.
 * **workspace**: string (Required): Workspace resource ID
 
 ## RecommendationConfigurationProperties
 ### Properties
 * **name**: string (ReadOnly):
-* **recommendationType**: 'IoT_ACRAuthentication' | 'IoT_AgentSendsUnutilizedMessages' | 'IoT_Baseline' | 'IoT_EdgeHubMemOptimize' | 'IoT_EdgeLoggingOptions' | 'IoT_InconsistentModuleSettings' | 'IoT_InstallAgent' | 'IoT_IPFilter_DenyAll' | 'IoT_IPFilter_PermissiveRule' | 'IoT_OpenPorts' | 'IoT_PermissiveFirewallPolicy' | 'IoT_PermissiveInputFirewallRules' | 'IoT_PermissiveOutputFirewallRules' | 'IoT_PrivilegedDockerOptions' | 'IoT_SharedCredentials' | 'IoT_VulnerableTLSCipherSuite' (Required): The recommendation type. Possible values include: 'IoT_ACRAuthentication', 'IoT_AgentSendsUnutilizedMessages', 'IoT_Baseline', 'IoT_EdgeHubMemOptimize', 'IoT_EdgeLoggingOptions', 'IoT_InconsistentModuleSettings', 'IoT_InstallAgent', 'IoT_IPFilter_DenyAll', 'IoT_IPFilter_PermissiveRule', 'IoT_OpenPorts', 'IoT_PermissiveFirewallPolicy', 'IoT_PermissiveInputFirewallRules', 'IoT_PermissiveOutputFirewallRules', 'IoT_PrivilegedDockerOptions', 'IoT_SharedCredentials', 'IoT_VulnerableTLSCipherSuite'
-* **status**: 'Disabled' | 'Enabled' (Required): Recommendation status. The recommendation is not generated when the status is disabled. Possible values include: 'Disabled', 'Enabled'
+* **recommendationType**: 'IoT_ACRAuthentication' | 'IoT_AgentSendsUnutilizedMessages' | 'IoT_Baseline' | 'IoT_EdgeHubMemOptimize' | 'IoT_EdgeLoggingOptions' | 'IoT_InconsistentModuleSettings' | 'IoT_InstallAgent' | 'IoT_IPFilter_DenyAll' | 'IoT_IPFilter_PermissiveRule' | 'IoT_OpenPorts' | 'IoT_PermissiveFirewallPolicy' | 'IoT_PermissiveInputFirewallRules' | 'IoT_PermissiveOutputFirewallRules' | 'IoT_PrivilegedDockerOptions' | 'IoT_SharedCredentials' | 'IoT_VulnerableTLSCipherSuite' (Required): The recommendation type.
+* **status**: 'Disabled' | 'Enabled' (Required): Recommendation status. The recommendation is not generated when the status is disabled.
 
 ## UserDefinedResourcesProperties
 ### Properties
@@ -208,12 +208,12 @@
 
 ## PricingProperties
 ### Properties
-* **pricingTier**: 'Free' | 'Standard' (Required): Pricing tier type. Possible values include: 'Free', 'Standard'
+* **pricingTier**: 'Free' | 'Standard' (Required): Pricing tier type.
 
 ## SecurityContactProperties
 ### Properties
-* **alertNotifications**: 'Off' | 'On' (Required): Whether to send security alerts notifications to the security contact. Possible values include: 'On', 'Off'
-* **alertsToAdmins**: 'Off' | 'On' (Required): Whether to send security alerts notifications to subscription admins. Possible values include: 'On', 'Off'
+* **alertNotifications**: 'Off' | 'On' (Required): Whether to send security alerts notifications to the security contact.
+* **alertsToAdmins**: 'Off' | 'On' (Required): Whether to send security alerts notifications to subscription admins.
 * **email**: string (Required): The email of this security contact
 * **phone**: string: The phone number of this security contact
 

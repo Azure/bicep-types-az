@@ -22,7 +22,7 @@
 ### Properties
 * **digests**: [DigestConfig](#digestconfig)[]: Advisor digest configuration. Valid only for subscriptions
 * **exclude**: bool: Exclude the resource from Advisor evaluations. Valid values: False (default) or True.
-* **lowCpuThreshold**: '10' | '15' | '20' | '5': Minimum percentage threshold for Advisor low CPU utilization evaluation. Valid only for subscriptions. Valid values: 5 (default), 10, 15 or 20. Possible values include: '5', '10', '15', '20'
+* **lowCpuThreshold**: '10' | '15' | '20' | '5': Minimum percentage threshold for Advisor low CPU utilization evaluation. Valid only for subscriptions. Valid values: 5 (default), 10, 15 or 20.
 
 ## DigestConfig
 ### Properties
@@ -31,7 +31,7 @@
 * **frequency**: int: Frequency that digest will be triggered, in days. Value must be between 7 and 30 days inclusive.
 * **language**: string: Language for digest content body. Value must be ISO 639-1 code for one of Azure portal supported languages. Otherwise, it will be converted into one. Default value is English (en).
 * **name**: string: Name of digest configuration. Value is case-insensitive and must be unique within a subscription.
-* **state**: 'Active' | 'Disabled': State of digest configuration. Possible values include: 'Active', 'Disabled'
+* **state**: 'Active' | 'Disabled': State of digest configuration.
 
 ## SuppressionProperties
 ### Properties

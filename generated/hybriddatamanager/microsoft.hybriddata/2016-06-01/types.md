@@ -50,14 +50,14 @@ region is specified on update the request will succeed.
 * **dataSinkId**: string (Required): Data Sink Id associated to the job definition.
 * **dataSourceId**: string (Required): Data Source Id associated to the job definition.
 * **lastModifiedTime**: string: Last modified time of the job definition.
-* **runLocation**: 'australiaeast' | 'australiasoutheast' | 'brazilsouth' | 'canadacentral' | 'canadaeast' | 'centralindia' | 'centralus' | 'eastasia' | 'eastus' | 'eastus2' | 'japaneast' | 'japanwest' | 'koreacentral' | 'koreasouth' | 'none' | 'northcentralus' | 'northeurope' | 'southcentralus' | 'southeastasia' | 'southindia' | 'uksouth' | 'ukwest' | 'westcentralus' | 'westeurope' | 'westindia' | 'westus' | 'westus2': This is the preferred geo location for the job to run. Possible values include: 'none', 'australiaeast', 'australiasoutheast', 'brazilsouth', 'canadacentral', 'canadaeast', 'centralindia', 'centralus', 'eastasia', 'eastus', 'eastus2', 'japaneast', 'japanwest', 'koreacentral', 'koreasouth', 'southeastasia', 'southcentralus', 'southindia', 'northcentralus', 'northeurope', 'uksouth', 'ukwest', 'westcentralus', 'westeurope', 'westindia', 'westus', 'westus2'
+* **runLocation**: 'australiaeast' | 'australiasoutheast' | 'brazilsouth' | 'canadacentral' | 'canadaeast' | 'centralindia' | 'centralus' | 'eastasia' | 'eastus' | 'eastus2' | 'japaneast' | 'japanwest' | 'koreacentral' | 'koreasouth' | 'none' | 'northcentralus' | 'northeurope' | 'southcentralus' | 'southeastasia' | 'southindia' | 'uksouth' | 'ukwest' | 'westcentralus' | 'westeurope' | 'westindia' | 'westus' | 'westus2': This is the preferred geo location for the job to run.
 * **schedules**: [Schedule](#schedule)[]: Schedule for running the job definition
-* **state**: 'Disabled' | 'Enabled' | 'Supported' (Required): State of the job definition. Possible values include: 'Disabled', 'Enabled', 'Supported'
-* **userConfirmation**: 'NotRequired' | 'Required': Enum to detect if user confirmation is required. If not passed will default to NotRequired. Possible values include: 'NotRequired', 'Required'
+* **state**: 'Disabled' | 'Enabled' | 'Supported' (Required): State of the job definition.
+* **userConfirmation**: 'NotRequired' | 'Required': Enum to detect if user confirmation is required. If not passed will default to NotRequired.
 
 ## CustomerSecret
 ### Properties
-* **algorithm**: 'None' | 'PlainText' | 'RSA_OAEP' | 'RSA1_5' (Required): The encryption algorithm used to encrypt data. Possible values include: 'None', 'RSA1_5', 'RSA_OAEP', 'PlainText'
+* **algorithm**: 'None' | 'PlainText' | 'RSA_OAEP' | 'RSA1_5' (Required): The encryption algorithm used to encrypt data.
 * **keyIdentifier**: string (Required): The identifier to the data service input object which this secret corresponds to.
 * **keyValue**: string (Required): It contains the encrypted customer secret.
 
@@ -72,5 +72,5 @@ region is specified on update the request will succeed.
 * **dataStoreTypeId**: string (Required): The arm id of the data store type.
 * **extendedProperties**: any: A generic json used differently by each data source type.
 * **repositoryId**: string: Arm Id for the manager resource to which the data source is associated. This is optional.
-* **state**: 'Disabled' | 'Enabled' | 'Supported' (Required): State of the data source. Possible values include: 'Disabled', 'Enabled', 'Supported'
+* **state**: 'Disabled' | 'Enabled' | 'Supported' (Required): State of the data source.
 

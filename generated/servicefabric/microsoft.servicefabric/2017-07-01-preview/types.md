@@ -62,22 +62,22 @@
 * **clusterCodeVersion**: string: The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
 * **clusterEndpoint**: string (ReadOnly): The Azure Resource Provider endpoint. A system service in the cluster connects to this  endpoint.
 * **clusterId**: string (ReadOnly): A service generated unique identifier for the cluster resource.
-* **clusterState**: 'AutoScale' | 'BaselineUpgrade' | 'Deploying' | 'EnforcingClusterVersion' | 'Ready' | 'UpdatingInfrastructure' | 'UpdatingUserCertificate' | 'UpdatingUserConfiguration' | 'UpgradeServiceUnreachable' | 'WaitingForNodes': Possible values include: 'WaitingForNodes', 'Deploying', 'BaselineUpgrade', 'UpdatingUserConfiguration', 'UpdatingUserCertificate', 'UpdatingInfrastructure', 'EnforcingClusterVersion', 'UpgradeServiceUnreachable', 'AutoScale', 'Ready'
+* **clusterState**: 'AutoScale' | 'BaselineUpgrade' | 'Deploying' | 'EnforcingClusterVersion' | 'Ready' | 'UpdatingInfrastructure' | 'UpdatingUserCertificate' | 'UpdatingUserConfiguration' | 'UpgradeServiceUnreachable' | 'WaitingForNodes':
 * **diagnosticsStorageAccountConfig**: [DiagnosticsStorageAccountConfig](#diagnosticsstorageaccountconfig): The storage account information for storing Service Fabric diagnostic logs.
 * **fabricSettings**: [SettingsSectionDescription](#settingssectiondescription)[]: The list of custom fabric settings to configure the cluster.
 * **managementEndpoint**: string (Required): The http management endpoint of the cluster.
 * **nodeTypes**: [NodeTypeDescription](#nodetypedescription)[] (Required): The list of node types in the cluster.
-* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the cluster resource. Possible values include: 'Updating', 'Succeeded', 'Failed', 'Canceled'
-* **reliabilityLevel**: 'Bronze' | 'Gold' | 'None' | 'Platinum' | 'Silver': Possible values include: 'None', 'Bronze', 'Silver', 'Gold', 'Platinum'
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the cluster resource.
+* **reliabilityLevel**: 'Bronze' | 'Gold' | 'None' | 'Platinum' | 'Silver':
 * **reverseProxyCertificate**: [CertificateDescription](#certificatedescription): Describes the certificate details.
 * **upgradeDescription**: [ClusterUpgradePolicy](#clusterupgradepolicy): Describes the policy used when upgrading the cluster.
-* **upgradeMode**: 'Automatic' | 'Manual': Possible values include: 'Automatic', 'Manual'
+* **upgradeMode**: 'Automatic' | 'Manual':
 * **vmImage**: string: The VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.
 
 ## ClusterVersionDetails
 ### Properties
 * **codeVersion**: string: The Service Fabric runtime version of the cluster.
-* **environment**: 'Linux' | 'Windows': Indicates if this version is for Windows or Linux operating system. Possible values include: 'Windows', 'Linux'
+* **environment**: 'Linux' | 'Windows': Indicates if this version is for Windows or Linux operating system.
 * **supportExpiryUtc**: string: The date of expiry of support of the version.
 
 ## AzureActiveDirectory
@@ -90,7 +90,7 @@
 ### Properties
 * **thumbprint**: string (Required): Thumbprint of the primary certificate.
 * **thumbprintSecondary**: string: Thumbprint of the secondary certificate.
-* **x509StoreName**: 'AddressBook' | 'AuthRoot' | 'CertificateAuthority' | 'Disallowed' | 'My' | 'Root' | 'TrustedPeople' | 'TrustedPublisher': The local certificate store location. Possible values include: 'AddressBook', 'AuthRoot', 'CertificateAuthority', 'Disallowed', 'My', 'Root', 'TrustedPeople', 'TrustedPublisher'
+* **x509StoreName**: 'AddressBook' | 'AuthRoot' | 'CertificateAuthority' | 'Disallowed' | 'My' | 'Root' | 'TrustedPeople' | 'TrustedPublisher': The local certificate store location.
 
 ## ClientCertificateCommonName
 ### Properties
@@ -126,7 +126,7 @@
 * **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
 * **capacities**: [Dictionary<string,String>](#dictionarystringstring): The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
 * **clientConnectionEndpointPort**: int (Required): The TCP cluster management endpoint port.
-* **durabilityLevel**: 'Bronze' | 'Gold' | 'Silver': Possible values include: 'Bronze', 'Silver', 'Gold'
+* **durabilityLevel**: 'Bronze' | 'Gold' | 'Silver':
 * **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
 * **httpGatewayEndpointPort**: int (Required): The HTTP cluster management endpoint port.
 * **isPrimary**: bool (Required): The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
@@ -258,7 +258,7 @@ If no policy is specified for a service type name, the DefaultServiceTypeHealthP
 
 ## ArmRollingUpgradeMonitoringPolicy
 ### Properties
-* **failureAction**: 'Manual' | 'Rollback': The activation Mode of the service package. Possible values include: 'Rollback', 'Manual'
+* **failureAction**: 'Manual' | 'Rollback': The activation Mode of the service package.
 * **healthCheckRetryTimeout**: string: The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
 * **healthCheckStableDuration**: string: The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
 * **healthCheckWaitDuration**: string: The amount of time to wait after completing an upgrade domain before applying health policies. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
@@ -269,7 +269,7 @@ If no policy is specified for a service type name, the DefaultServiceTypeHealthP
 * **Discriminator**: serviceKind
 ### Base Properties
 * **correlationScheme**: [ServiceCorrelationDescription](#servicecorrelationdescription)[]: A list that describes the correlation of the service with other services.
-* **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero': Specifies the move cost for the service. Possible values include: 'Zero', 'Low', 'Medium', 'High'
+* **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero': Specifies the move cost for the service.
 * **partitionDescription**: [PartitionSchemeDescription](#partitionschemedescription): Describes how the service is partitioned.
 * **placementConstraints**: string: The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response
@@ -294,7 +294,7 @@ If no policy is specified for a service type name, the DefaultServiceTypeHealthP
 
 ## ServiceCorrelationDescription
 ### Properties
-* **Scheme**: 'Affinity' | 'AlignedAffinity' | 'Invalid' | 'NonAlignedAffinity' (Required): The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName. Possible values include: 'Invalid', 'Affinity', 'AlignedAffinity', 'NonAlignedAffinity'
+* **Scheme**: 'Affinity' | 'AlignedAffinity' | 'Invalid' | 'NonAlignedAffinity' (Required): The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
 * **ServiceName**: string (Required): The full name of the service with 'fabric:' URI scheme.
 
 ## PartitionSchemeDescription
@@ -349,7 +349,7 @@ should be split between the partition ‘Count’
 * **Name**: string (Required): The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
 * **PrimaryDefaultLoad**: int: Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
 * **SecondaryDefaultLoad**: int: Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
-* **Weight**: 'High' | 'Low' | 'Medium' | 'Zero': The service load metric relative weight, compared to other metrics configured for this service, as a number. Possible values include: 'Zero', 'Low', 'Medium', 'High'
+* **Weight**: 'High' | 'Low' | 'Medium' | 'Zero': The service load metric relative weight, compared to other metrics configured for this service, as a number.
 
 ## ServicePlacementPolicyDescription
 * **Discriminator**: Type

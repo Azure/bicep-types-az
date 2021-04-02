@@ -34,7 +34,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity
 * **tenantId**: string (ReadOnly): The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity
-* **type**: 'None' | 'SystemAssigned': The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported. Possible values include: 'None', 'SystemAssigned'
+* **type**: 'None' | 'SystemAssigned': The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported.
 
 ## DigitalTwinsProperties
 ### Properties
@@ -42,8 +42,8 @@
 * **hostName**: string (ReadOnly): Api endpoint to work with DigitalTwinsInstance.
 * **lastUpdatedTime**: string (ReadOnly): Time when DigitalTwinsInstance was updated.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]:
-* **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Updating' | 'Warning' (ReadOnly): The provisioning state. Possible values include: 'Provisioning', 'Deleting', 'Updating', 'Succeeded', 'Failed', 'Canceled', 'Deleted', 'Warning', 'Suspending', 'Restoring', 'Moving'
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Public network access for the DigitalTwinsInstance. Possible values include: 'Enabled', 'Disabled'
+* **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Updating' | 'Warning' (ReadOnly): The provisioning state.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Public network access for the DigitalTwinsInstance.
 
 ## PrivateEndpointConnection
 ### Properties
@@ -57,7 +57,7 @@
 * **groupIds**: string[]: The list of group ids for the private endpoint connection.
 * **privateEndpoint**: [schemas:29_properties](#schemas29properties):
 * **privateLinkServiceConnectionState**: [schemas:29_properties](#schemas29properties):
-* **provisioningState**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly): The provisioning state. Possible values include: 'Pending', 'Approved', 'Rejected', 'Disconnected'
+* **provisioningState**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly): The provisioning state.
 
 ## Dictionary<string,String>
 ### Properties
@@ -67,11 +67,11 @@
 ## DigitalTwinsEndpointResourceProperties
 * **Discriminator**: endpointType
 ### Base Properties
-* **authenticationType**: 'IdentityBased' | 'KeyBased': Specifies the authentication type being used for connecting to the endpoint. Possible values include: 'KeyBased', 'IdentityBased'
+* **authenticationType**: 'IdentityBased' | 'KeyBased': Specifies the authentication type being used for connecting to the endpoint.
 * **createdTime**: string (ReadOnly): Time when the Endpoint was added to DigitalTwinsInstance.
 * **deadLetterSecret**: string: Dead letter storage secret for key-based authentication. Will be obfuscated during read.
 * **deadLetterUri**: string: Dead letter storage URL for identity-based authentication.
-* **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Disabled' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Warning' (ReadOnly): The provisioning state. Possible values include: 'Provisioning', 'Deleting', 'Succeeded', 'Failed', 'Canceled', 'Deleted', 'Warning', 'Suspending', 'Restoring', 'Moving', 'Disabled'
+* **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Disabled' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Warning' (ReadOnly): The provisioning state.
 ### EventGrid
 #### Properties
 * **accessKey1**: string (Required): EventGrid secondary accesskey. Will be obfuscated during read.

@@ -47,7 +47,7 @@
 * **expirationDateUtc**: string: Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
 * **lastModifiedUtc**: string (ReadOnly): The last time this rule was modified
 * **reason**: string (Required): The reason for dismissing the alert
-* **state**: 'Disabled' | 'Enabled' | 'Expired' (Required): Possible states of the rule. Possible values include: 'Enabled', 'Disabled', 'Expired'
+* **state**: 'Disabled' | 'Enabled' | 'Expired' (Required): Possible states of the rule.
 * **suppressionAlertsScope**: [SuppressionAlertsScope](#suppressionalertsscope):
 
 ## SuppressionAlertsScope
@@ -62,17 +62,17 @@
 
 ## SecurityAssessmentMetadataProperties
 ### Properties
-* **assessmentType**: 'BuiltIn' | 'CustomerManaged' | 'CustomPolicy' (Required): BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition. Possible values include: 'BuiltIn', 'CustomPolicy', 'CustomerManaged'
+* **assessmentType**: 'BuiltIn' | 'CustomerManaged' | 'CustomPolicy' (Required): BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition.
 * **category**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking'[]:
 * **description**: string: Human readable description of the assessment
 * **displayName**: string (Required): User friendly display name of the assessment
-* **implementationEffort**: 'High' | 'Low' | 'Moderate': The implementation effort required to remediate this assessment. Possible values include: 'Low', 'Moderate', 'High'
+* **implementationEffort**: 'High' | 'Low' | 'Moderate': The implementation effort required to remediate this assessment.
 * **policyDefinitionId**: string (ReadOnly): Azure resource ID of the policy definition that turns this assessment calculation on
 * **preview**: bool: True if this assessment is in preview release status
 * **remediationDescription**: string: Human readable description of what you should do to mitigate this security issue
-* **severity**: 'High' | 'Low' | 'Medium' (Required): The severity level of the assessment. Possible values include: 'Low', 'Medium', 'High'
+* **severity**: 'High' | 'Low' | 'Medium' (Required): The severity level of the assessment.
 * **threats**: 'accountBreach' | 'dataExfiltration' | 'dataSpillage' | 'denialOfService' | 'elevationOfPrivilege' | 'maliciousInsider' | 'missingCoverage' | 'threatResistance'[]:
-* **userImpact**: 'High' | 'Low' | 'Moderate': The user impact of the assessment. Possible values include: 'Low', 'Moderate', 'High'
+* **userImpact**: 'High' | 'Low' | 'Moderate': The user impact of the assessment.
 
 ## SecurityAssessmentProperties
 ### Properties
@@ -124,7 +124,7 @@
 ## AssessmentStatus
 ### Properties
 * **cause**: string: Programmatic code for the cause of the assessment status
-* **code**: 'Healthy' | 'NotApplicable' | 'Unhealthy' (Required): Programmatic code for the status of the assessment. Possible values include: 'Healthy', 'Unhealthy', 'NotApplicable'
+* **code**: 'Healthy' | 'NotApplicable' | 'Unhealthy' (Required): Programmatic code for the status of the assessment.
 * **description**: string: Human readable description of the assessment status
 
 ## AutomationProperties
@@ -182,7 +182,7 @@
 
 ## AutomationSource
 ### Properties
-* **eventSource**: 'Alerts' | 'Assessments' | 'RegulatoryComplianceAssessment' | 'RegulatoryComplianceAssessmentSnapshot' | 'SecureScoreControls' | 'SecureScoreControlsSnapshot' | 'SecureScores' | 'SecureScoresSnapshot' | 'SubAssessments': A valid event source type. Possible values include: 'Assessments', 'SubAssessments', 'Alerts', 'SecureScores', 'SecureScoresSnapshot', 'SecureScoreControls', 'SecureScoreControlsSnapshot', 'RegulatoryComplianceAssessment', 'RegulatoryComplianceAssessmentSnapshot'
+* **eventSource**: 'Alerts' | 'Assessments' | 'RegulatoryComplianceAssessment' | 'RegulatoryComplianceAssessmentSnapshot' | 'SecureScoreControls' | 'SecureScoreControlsSnapshot' | 'SecureScores' | 'SecureScoresSnapshot' | 'SubAssessments': A valid event source type.
 * **ruleSets**: [AutomationRuleSet](#automationruleset)[]: A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').
 
 ## AutomationRuleSet
@@ -192,9 +192,9 @@
 ## AutomationTriggeringRule
 ### Properties
 * **expectedValue**: string: The expected value.
-* **operator**: 'Contains' | 'EndsWith' | 'Equals' | 'GreaterThan' | 'GreaterThanOrEqualTo' | 'LesserThan' | 'LesserThanOrEqualTo' | 'NotEquals' | 'StartsWith': A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType. Possible values include: 'Equals', 'GreaterThan', 'GreaterThanOrEqualTo', 'LesserThan', 'LesserThanOrEqualTo', 'NotEquals', 'Contains', 'StartsWith', 'EndsWith'
+* **operator**: 'Contains' | 'EndsWith' | 'Equals' | 'GreaterThan' | 'GreaterThanOrEqualTo' | 'LesserThan' | 'LesserThanOrEqualTo' | 'NotEquals' | 'StartsWith': A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
 * **propertyJPath**: string: The JPath of the entity model property that should be checked.
-* **propertyType**: 'Boolean' | 'Integer' | 'Number' | 'String': The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]. Possible values include: 'String', 'Integer', 'Number', 'Boolean'
+* **propertyType**: 'Boolean' | 'Integer' | 'Number' | 'String': The data type of the compared operands (string, integer, floating point number or a boolean [true/false]].
 
 ## Dictionary<string,String>
 ### Properties

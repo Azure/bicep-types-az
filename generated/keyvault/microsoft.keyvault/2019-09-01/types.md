@@ -58,16 +58,17 @@
 ## VaultProperties
 ### Properties
 * **accessPolicies**: [AccessPolicyEntry](#accesspolicyentry)[]: An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.
-* **createMode**: 'default' | 'recover': The vault's create mode to indicate whether the vault need to be recovered or not. Possible values include: 'recover', 'default'
+* **createMode**: 'default' | 'recover': The vault's create mode to indicate whether the vault need to be recovered or not.
 * **enabledForDeployment**: bool: Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.
 * **enabledForDiskEncryption**: bool: Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
 * **enabledForTemplateDeployment**: bool: Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.
 * **enablePurgeProtection**: bool: Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.
 * **enableRbacAuthorization**: bool: Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored (warning: this is a preview feature). When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.
 * **enableSoftDelete**: bool: Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.
+* **hsmPoolResourceId**: string (ReadOnly): The resource id of HSM Pool.
 * **networkAcls**: [NetworkRuleSet](#networkruleset): A set of rules governing the network accessibility of a vault.
 * **privateEndpointConnections**: [PrivateEndpointConnectionItem](#privateendpointconnectionitem)[] (ReadOnly): List of private endpoint connections associated with the key vault.
-* **provisioningState**: 'RegisteringDns' | 'Succeeded': Provisioning state of the vault. Possible values include: 'Succeeded', 'RegisteringDns'
+* **provisioningState**: 'RegisteringDns' | 'Succeeded': Provisioning state of the vault.
 * **sku**: [Sku](#sku) (Required): SKU details
 * **softDeleteRetentionInDays**: int: softDelete data retention days. It accepts >=7 and <=90.
 * **tenantId**: string (Required): The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
@@ -89,8 +90,8 @@
 
 ## NetworkRuleSet
 ### Properties
-* **bypass**: 'AzureServices' | 'None': Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'. Possible values include: 'AzureServices', 'None'
-* **defaultAction**: 'Allow' | 'Deny': The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated. Possible values include: 'Allow', 'Deny'
+* **bypass**: 'AzureServices' | 'None': Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.
+* **defaultAction**: 'Allow' | 'Deny': The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
 * **ipRules**: [IPRule](#iprule)[]: The list of IP address rules.
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: The list of virtual network rules.
 
@@ -105,6 +106,7 @@
 
 ## PrivateEndpointConnectionItem
 ### Properties
+* **etag**: string: Modified whenever there is a change in the state of private endpoint connection.
 * **id**: string: Id of private endpoint connection.
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
 
@@ -112,7 +114,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint object properties.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): An object that represents the approval state of the private link connection.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Disconnected' | 'Failed' | 'Succeeded' | 'Updating': Provisioning state of the private endpoint connection. Possible values include: 'Succeeded', 'Creating', 'Updating', 'Deleting', 'Failed', 'Disconnected'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Disconnected' | 'Failed' | 'Succeeded' | 'Updating': Provisioning state of the private endpoint connection.
 
 ## PrivateEndpoint
 ### Properties
@@ -122,12 +124,12 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval or rejection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Indicates whether the connection has been approved, rejected or removed by the key vault owner. Possible values include: 'Pending', 'Approved', 'Rejected', 'Disconnected'
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Indicates whether the connection has been approved, rejected or removed by the key vault owner.
 
 ## Sku
 ### Properties
 * **family**: string (Required): SKU family name
-* **name**: 'premium' | 'standard' (Required): SKU name to specify whether the key vault is a standard vault or a premium vault. Possible values include: 'standard', 'premium'
+* **name**: 'premium' | 'standard' (Required): SKU name to specify whether the key vault is a standard vault or a premium vault.
 
 ## Dictionary<string,String>
 ### Properties
@@ -141,12 +143,12 @@
 ## KeyProperties
 ### Properties
 * **attributes**: [KeyAttributes](#keyattributes): The attributes of the key.
-* **curveName**: 'P-256' | 'P-256K' | 'P-384' | 'P-521': The elliptic curve name. For valid values, see JsonWebKeyCurveName. Possible values include: 'P-256', 'P-384', 'P-521', 'P-256K'
-* **keyOps**: 'decrypt' | 'encrypt' | 'import' | 'sign' | 'unwrapKey' | 'verify' | 'wrapKey'[]:
-* **keySize**: int: The key size in bits. For example: 2048, 3072, or 4096 for RSA.
+* **curveName**: 'P-256' | 'P-256K' | 'P-384' | 'P-521': The elliptic curve name. For valid values, see JsonWebKeyCurveName.
+* **keyOps**: 'decrypt' | 'encrypt' | 'import' | 'sign' | 'unwrapKey' | 'verify' | 'wrapKey'[] (ReadOnly):
+* **keySize**: int (ReadOnly): The key size in bits. For example: 2048, 3072, or 4096 for RSA.
 * **keyUri**: string (ReadOnly): The URI to retrieve the current version of the key.
 * **keyUriWithVersion**: string (ReadOnly): The URI to retrieve the specific version of the key.
-* **kty**: 'EC-HSM' | 'EC' | 'RSA-HSM' | 'RSA': The type of the key. For valid values, see JsonWebKeyType. Possible values include: 'EC', 'EC-HSM', 'RSA', 'RSA-HSM'
+* **kty**: 'EC-HSM' | 'EC' | 'RSA-HSM' | 'RSA': The type of the key. For valid values, see JsonWebKeyType.
 
 ## KeyAttributes
 ### Properties
@@ -154,7 +156,7 @@
 * **enabled**: bool: Determines whether or not the object is enabled.
 * **exp**: int: Expiry date in seconds since 1970-01-01T00:00:00Z.
 * **nbf**: int: Not before date in seconds since 1970-01-01T00:00:00Z.
-* **recoveryLevel**: 'Purgeable' | 'Recoverable' | 'Recoverable+ProtectedSubscription' | 'Recoverable+Purgeable' (ReadOnly): The deletion recovery level currently in effect for the object. If it contains 'Purgeable', then the object can be permanently deleted by a privileged user; otherwise, only the system can purge the object at the end of the retention interval. Possible values include: 'Purgeable', 'Recoverable+Purgeable', 'Recoverable', 'Recoverable+ProtectedSubscription'
+* **recoveryLevel**: 'Purgeable' | 'Recoverable' | 'Recoverable+ProtectedSubscription' | 'Recoverable+Purgeable' (ReadOnly): The deletion recovery level currently in effect for the object. If it contains 'Purgeable', then the object can be permanently deleted by a privileged user; otherwise, only the system can purge the object at the end of the retention interval.
 * **updated**: int (ReadOnly): Last updated time in seconds since 1970-01-01T00:00:00Z.
 
 ## Dictionary<string,String>

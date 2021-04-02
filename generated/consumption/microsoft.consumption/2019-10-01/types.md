@@ -18,7 +18,7 @@
 * **filter**: [BudgetFilter](#budgetfilter): May be used to filter budgets by resource group, resource, or meter.
 * **forecastSpend**: [ForecastSpend](#forecastspend) (ReadOnly): The forecasted cost which is being tracked for a budget.
 * **notifications**: [Dictionary<string,Notification>](#dictionarystringnotification): Dictionary of notifications associated with the budget. Budget can have up to five notifications.
-* **timeGrain**: 'Annually' | 'BillingAnnual' | 'BillingMonth' | 'BillingQuarter' | 'Monthly' | 'Quarterly' (Required): The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers. Possible values include: 'Monthly', 'Quarterly', 'Annually', 'BillingMonth', 'BillingQuarter', 'BillingAnnual'
+* **timeGrain**: 'Annually' | 'BillingAnnual' | 'BillingMonth' | 'BillingQuarter' | 'Monthly' | 'Quarterly' (Required): The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers.
 * **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required): The start and end date for a budget.
 
 ## CurrentSpend
@@ -60,9 +60,9 @@
 * **contactGroups**: string[]: Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.
 * **contactRoles**: string[]: Contact roles to send the budget notification to when the threshold is exceeded.
 * **enabled**: bool (Required): The notification is enabled or not.
-* **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' (Required): The comparison operator. Possible values include: 'EqualTo', 'GreaterThan', 'GreaterThanOrEqualTo'
+* **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' (Required): The comparison operator.
 * **threshold**: int (Required): Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.
-* **thresholdType**: 'Actual': The type of threshold. Possible values include: 'Actual'
+* **thresholdType**: 'Actual': The type of threshold.
 
 ## BudgetTimePeriod
 ### Properties

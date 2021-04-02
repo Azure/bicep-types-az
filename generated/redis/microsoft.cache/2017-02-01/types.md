@@ -77,8 +77,8 @@
 ## Sku
 ### Properties
 * **capacity**: int (Required): The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).
-* **family**: 'C' | 'P' (Required): The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium). Possible values include: 'C', 'P'
-* **name**: 'Basic' | 'Premium' | 'Standard' (Required): The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium). Possible values include: 'Basic', 'Standard', 'Premium'
+* **family**: 'C' | 'P' (Required): The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
+* **name**: 'Basic' | 'Premium' | 'Standard' (Required): The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium).
 
 ## Dictionary<string,String>
 ### Properties
@@ -100,7 +100,7 @@
 * **linkedRedisCacheId**: string (Required): Fully qualified resourceId of the linked redis cache.
 * **linkedRedisCacheLocation**: string (Required): Location of the linked redis cache.
 * **provisioningState**: string (ReadOnly): Terminal state of the link between primary and secondary redis cache.
-* **serverRole**: 'Primary' | 'Secondary' (Required): Role of the linked server. Possible values include: 'Primary', 'Secondary'
+* **serverRole**: 'Primary' | 'Secondary' (Required): Role of the linked server.
 
 ## ScheduleEntries
 ### Properties
@@ -108,7 +108,7 @@
 
 ## ScheduleEntry
 ### Properties
-* **dayOfWeek**: 'Everyday' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | 'Weekend' (Required): Day of the week when a cache can be patched. Possible values include: 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Everyday', 'Weekend'
+* **dayOfWeek**: 'Everyday' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | 'Weekend' (Required): Day of the week when a cache can be patched.
 * **maintenanceWindow**: string: ISO8601 timespan specifying how much time cache patching can take.
 * **startHourUtc**: int (Required): Start hour after which cache patching can start.
 

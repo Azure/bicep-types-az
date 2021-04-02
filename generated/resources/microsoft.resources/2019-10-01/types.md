@@ -39,7 +39,7 @@
 * **dependencies**: [Dependency](#dependency)[] (ReadOnly): The list of deployment dependencies.
 * **duration**: string (ReadOnly): The duration of the template deployment.
 * **error**: [ErrorResponse](#errorresponse) (ReadOnly): Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.)
-* **mode**: 'Complete' | 'Incremental' (Required): The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources. Possible values include: 'Incremental', 'Complete'
+* **mode**: 'Complete' | 'Incremental' (Required): The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.
 * **onErrorDeployment**: [OnErrorDeployment](#onerrordeployment): Deployment on error behavior.
 * **outputResources**: [ResourceReference](#resourcereference)[] (ReadOnly): Array of provisioned resources.
 * **outputs**: any (ReadOnly): Key/value pairs that represent deployment output.
@@ -87,7 +87,7 @@
 ### Properties
 * **deploymentName**: string: The deployment to be used on error case.
 * **provisioningState**: string (ReadOnly): The state of the provisioning for the on error deployment.
-* **type**: 'LastSuccessful' | 'SpecificDeployment': The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment. Possible values include: 'LastSuccessful', 'SpecificDeployment'
+* **type**: 'LastSuccessful' | 'SpecificDeployment': The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
 
 ## ResourceReference
 ### Properties
@@ -121,12 +121,12 @@
 * **defaultPattern**: [AliasPattern](#aliaspattern) (ReadOnly): The type of the pattern for an alias path.
 * **name**: string (ReadOnly): The alias name.
 * **paths**: [AliasPath](#aliaspath)[] (ReadOnly): The paths for an alias.
-* **type**: 'Mask' | 'NotSpecified' | 'PlainText' (ReadOnly): The type of the alias. Possible values include: 'NotSpecified', 'PlainText', 'Mask'
+* **type**: 'Mask' | 'NotSpecified' | 'PlainText' (ReadOnly): The type of the alias.
 
 ## AliasPattern
 ### Properties
 * **phrase**: string (ReadOnly): The alias pattern phrase.
-* **type**: 'Extract' | 'NotSpecified' (ReadOnly): The type of alias pattern. Possible values include: 'NotSpecified', 'Extract'
+* **type**: 'Extract' | 'NotSpecified' (ReadOnly): The type of alias pattern.
 * **variable**: string (ReadOnly): The alias pattern variable.
 
 ## AliasPath

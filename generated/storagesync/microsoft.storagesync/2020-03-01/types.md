@@ -58,7 +58,7 @@
 
 ## StorageSyncServiceCreateParametersProperties
 ### Properties
-* **incomingTrafficPolicy**: 'AllowAllTraffic' | 'AllowVirtualNetworksOnly': Incoming Traffic Policy. Possible values include: 'AllowAllTraffic', 'AllowVirtualNetworksOnly'
+* **incomingTrafficPolicy**: 'AllowAllTraffic' | 'AllowVirtualNetworksOnly': Incoming Traffic Policy.
 * **lastOperationName**: string (ReadOnly): Resource Last Operation Name
 * **lastWorkflowId**: string (ReadOnly): StorageSyncService lastWorkflowId
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connection associated with the specified storage sync service
@@ -77,7 +77,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The provisioning state of the private endpoint connection resource. Possible values include: 'Succeeded', 'Creating', 'Deleting', 'Failed'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The provisioning state of the private endpoint connection resource.
 
 ## PrivateEndpoint
 ### Properties
@@ -87,7 +87,7 @@
 ### Properties
 * **actionsRequired**: string (ReadOnly): A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string (ReadOnly): The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected' (ReadOnly): Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service. Possible values include: 'Pending', 'Approved', 'Rejected'
+* **status**: 'Approved' | 'Pending' | 'Rejected' (ReadOnly): Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## Dictionary<string,String>
 ### Properties
@@ -131,14 +131,14 @@
 
 ## ServerEndpointCreateParametersProperties
 ### Properties
-* **cloudTiering**: 'off' | 'on': Cloud Tiering. Possible values include: 'on', 'off'
+* **cloudTiering**: 'off' | 'on': Cloud Tiering.
 * **cloudTieringStatus**: [ServerEndpointCloudTieringStatus](#serverendpointcloudtieringstatus) (ReadOnly): Server endpoint cloud tiering status object.
 * **friendlyName**: string: Friendly Name
-* **initialDownloadPolicy**: 'AvoidTieredFiles' | 'NamespaceOnly' | 'NamespaceThenModifiedFiles': Policy for how namespace and files are recalled during FastDr. Possible values include: 'NamespaceOnly', 'NamespaceThenModifiedFiles', 'AvoidTieredFiles'
+* **initialDownloadPolicy**: 'AvoidTieredFiles' | 'NamespaceOnly' | 'NamespaceThenModifiedFiles': Policy for how namespace and files are recalled during FastDr.
 * **lastOperationName**: string (ReadOnly): Resource Last Operation Name
 * **lastWorkflowId**: string (ReadOnly): ServerEndpoint lastWorkflowId
-* **localCacheMode**: 'DownloadNewAndModifiedFiles' | 'UpdateLocallyCachedFiles': Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access. Possible values include: 'DownloadNewAndModifiedFiles', 'UpdateLocallyCachedFiles'
-* **offlineDataTransfer**: 'off' | 'on': Offline data transfer. Possible values include: 'on', 'off'
+* **localCacheMode**: 'DownloadNewAndModifiedFiles' | 'UpdateLocallyCachedFiles': Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.
+* **offlineDataTransfer**: 'off' | 'on': Offline data transfer.
 * **offlineDataTransferShareName**: string: Offline data transfer share name
 * **offlineDataTransferStorageAccountResourceId**: string (ReadOnly): Offline data transfer storage account resource ID
 * **offlineDataTransferStorageAccountTenantId**: string (ReadOnly): Offline data transfer storage account tenant ID
@@ -155,7 +155,7 @@
 * **cachePerformance**: [CloudTieringCachePerformance](#cloudtieringcacheperformance) (ReadOnly): Server endpoint cloud tiering status object.
 * **datePolicyStatus**: [CloudTieringDatePolicyStatus](#cloudtieringdatepolicystatus) (ReadOnly): Status of the date policy
 * **filesNotTiering**: [CloudTieringFilesNotTiering](#cloudtieringfilesnottiering) (ReadOnly): Server endpoint cloud tiering status object.
-* **health**: 'Error' | 'Healthy' (ReadOnly): Cloud tiering health state. Possible values include: 'Healthy', 'Error'
+* **health**: 'Error' | 'Healthy' (ReadOnly): Cloud tiering health state.
 * **healthLastUpdatedTimestamp**: string (ReadOnly): The last updated timestamp of health state
 * **lastCloudTieringResult**: int (ReadOnly): Last cloud tiering result (HResult)
 * **lastSuccessTimestamp**: string (ReadOnly): Last cloud tiering success timestamp
@@ -214,16 +214,16 @@
 
 ## ServerEndpointSyncStatus
 ### Properties
-* **combinedHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly): Combined Health Status. Possible values include: 'Healthy', 'Error', 'SyncBlockedForRestore', 'SyncBlockedForChangeDetectionPostRestore', 'NoActivity'
+* **combinedHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly): Combined Health Status.
 * **downloadActivity**: [ServerEndpointSyncActivityStatus](#serverendpointsyncactivitystatus) (ReadOnly): Sync Session status object.
-* **downloadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly): Download Health Status. Possible values include: 'Healthy', 'Error', 'SyncBlockedForRestore', 'SyncBlockedForChangeDetectionPostRestore', 'NoActivity'
+* **downloadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly): Download Health Status.
 * **downloadStatus**: [ServerEndpointSyncSessionStatus](#serverendpointsyncsessionstatus) (ReadOnly): Sync Session status object.
 * **lastUpdatedTimestamp**: string (ReadOnly): Last Updated Timestamp
-* **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' (ReadOnly): Offline Data Transfer State. Possible values include: 'InProgress', 'Stopping', 'NotRunning', 'Complete'
-* **syncActivity**: 'Download' | 'Upload' | 'UploadAndDownload' (ReadOnly): Sync activity. Possible values include: 'Upload', 'Download', 'UploadAndDownload'
+* **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' (ReadOnly): Offline Data Transfer State.
+* **syncActivity**: 'Download' | 'Upload' | 'UploadAndDownload' (ReadOnly): Sync activity.
 * **totalPersistentFilesNotSyncingCount**: int (ReadOnly): Total count of persistent files not syncing (combined upload + download).
 * **uploadActivity**: [ServerEndpointSyncActivityStatus](#serverendpointsyncactivitystatus) (ReadOnly): Sync Session status object.
-* **uploadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly): Upload Health Status. Possible values include: 'Healthy', 'Error', 'SyncBlockedForRestore', 'SyncBlockedForChangeDetectionPostRestore', 'NoActivity'
+* **uploadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly): Upload Health Status.
 * **uploadStatus**: [ServerEndpointSyncSessionStatus](#serverendpointsyncsessionstatus) (ReadOnly): Sync Session status object.
 
 ## ServerEndpointSyncActivityStatus

@@ -14,7 +14,7 @@
 ## OperationalizationClusterProperties
 ### Properties
 * **appInsights**: [AppInsightsProperties](#appinsightsproperties): Properties of App Insights.
-* **clusterType**: 'ACS' | 'Local' (Required): The cluster type. Possible values include: 'ACS', 'Local'
+* **clusterType**: 'ACS' | 'Local' (Required): The cluster type.
 * **containerRegistry**: [ContainerRegistryProperties](#containerregistryproperties): Properties of Azure Container Registry.
 * **containerService**: [AcsClusterProperties](#acsclusterproperties): Information about the container service backing the cluster
 * **createdOn**: string (ReadOnly): The date and time when the cluster was created.
@@ -22,7 +22,7 @@
 * **globalServiceConfiguration**: [GlobalServiceConfiguration](#globalserviceconfiguration): Global configuration for services in the cluster.
 * **modifiedOn**: string (ReadOnly): The date and time when the cluster was last modified.
 * **provisioningErrors**: [ErrorResponseWrapper](#errorresponsewrapper)[] (ReadOnly): List of provisioning errors reported by the resource provider.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed. Possible values include: 'Unknown', 'Updating', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
 * **storageAccount**: [StorageAccountProperties](#storageaccountproperties): Properties of Storage Account.
 
 ## AppInsightsProperties
@@ -36,11 +36,11 @@
 ## AcsClusterProperties
 ### Properties
 * **agentCount**: int: The number of agent nodes in the Container Service. This can be changed to scale the cluster.
-* **agentVmSize**: 'Standard_A0' | 'Standard_A1' | 'Standard_A10' | 'Standard_A11' | 'Standard_A2' | 'Standard_A3' | 'Standard_A4' | 'Standard_A5' | 'Standard_A6' | 'Standard_A7' | 'Standard_A8' | 'Standard_A9' | 'Standard_D1_v2' | 'Standard_D1' | 'Standard_D11_v2' | 'Standard_D11' | 'Standard_D12_v2' | 'Standard_D12' | 'Standard_D13_v2' | 'Standard_D13' | 'Standard_D14_v2' | 'Standard_D14' | 'Standard_D2_v2' | 'Standard_D2' | 'Standard_D3_v2' | 'Standard_D3' | 'Standard_D4_v2' | 'Standard_D4' | 'Standard_D5_v2' | 'Standard_DS1' | 'Standard_DS11' | 'Standard_DS12' | 'Standard_DS13' | 'Standard_DS14' | 'Standard_DS2' | 'Standard_DS3' | 'Standard_DS4' | 'Standard_G1' | 'Standard_G2' | 'Standard_G3' | 'Standard_G4' | 'Standard_G5' | 'Standard_GS1' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS5': The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes. Possible values include: 'Standard_A0', 'Standard_A1', 'Standard_A2', 'Standard_A3', 'Standard_A4', 'Standard_A5', 'Standard_A6', 'Standard_A7', 'Standard_A8', 'Standard_A9', 'Standard_A10', 'Standard_A11', 'Standard_D1', 'Standard_D2', 'Standard_D3', 'Standard_D4', 'Standard_D11', 'Standard_D12', 'Standard_D13', 'Standard_D14', 'Standard_D1_v2', 'Standard_D2_v2', 'Standard_D3_v2', 'Standard_D4_v2', 'Standard_D5_v2', 'Standard_D11_v2', 'Standard_D12_v2', 'Standard_D13_v2', 'Standard_D14_v2', 'Standard_G1', 'Standard_G2', 'Standard_G3', 'Standard_G4', 'Standard_G5', 'Standard_DS1', 'Standard_DS2', 'Standard_DS3', 'Standard_DS4', 'Standard_DS11', 'Standard_DS12', 'Standard_DS13', 'Standard_DS14', 'Standard_GS1', 'Standard_GS2', 'Standard_GS3', 'Standard_GS4', 'Standard_GS5'
+* **agentVmSize**: 'Standard_A0' | 'Standard_A1' | 'Standard_A10' | 'Standard_A11' | 'Standard_A2' | 'Standard_A3' | 'Standard_A4' | 'Standard_A5' | 'Standard_A6' | 'Standard_A7' | 'Standard_A8' | 'Standard_A9' | 'Standard_D1_v2' | 'Standard_D1' | 'Standard_D11_v2' | 'Standard_D11' | 'Standard_D12_v2' | 'Standard_D12' | 'Standard_D13_v2' | 'Standard_D13' | 'Standard_D14_v2' | 'Standard_D14' | 'Standard_D2_v2' | 'Standard_D2' | 'Standard_D3_v2' | 'Standard_D3' | 'Standard_D4_v2' | 'Standard_D4' | 'Standard_D5_v2' | 'Standard_DS1' | 'Standard_DS11' | 'Standard_DS12' | 'Standard_DS13' | 'Standard_DS14' | 'Standard_DS2' | 'Standard_DS3' | 'Standard_DS4' | 'Standard_G1' | 'Standard_G2' | 'Standard_G3' | 'Standard_G4' | 'Standard_G5' | 'Standard_GS1' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS5': The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.
 * **clusterFqdn**: string (ReadOnly): The FQDN of the cluster.
 * **masterCount**: int: The number of master nodes in the container service.
 * **orchestratorProperties**: [Kubernetes](#kubernetes): Kubernetes cluster specific properties
-* **orchestratorType**: 'Kubernetes' | 'None' (Required): Type of orchestrator. It cannot be changed once the cluster is created. Possible values include: 'Kubernetes', 'None'
+* **orchestratorType**: 'Kubernetes' | 'None' (Required): Type of orchestrator. It cannot be changed once the cluster is created.
 * **systemServices**: [SystemService](#systemservice)[]: The system services deployed to the cluster
 
 ## Kubernetes
@@ -55,7 +55,7 @@
 ## SystemService
 ### Properties
 * **publicIpAddress**: string (ReadOnly): The public IP address of the system service
-* **systemServiceType**: 'BatchFrontEnd' | 'None' | 'ScoringFrontEnd' (Required): The system service type. Possible values include: 'None', 'ScoringFrontEnd', 'BatchFrontEnd'
+* **systemServiceType**: 'BatchFrontEnd' | 'None' | 'ScoringFrontEnd' (Required): The system service type.
 * **version**: string (ReadOnly): The state of the system service
 
 ## GlobalServiceConfiguration
@@ -72,7 +72,7 @@
 * **maxReplicas**: int: The maximum number of replicas for each service.
 * **minReplicas**: int: The minimum number of replicas for each service.
 * **refreshPeriodInSeconds**: int: Refresh period in seconds.
-* **status**: 'Disabled' | 'Enabled': If auto-scale is enabled for all services. Each service can turn it off individually. Possible values include: 'Enabled', 'Disabled'
+* **status**: 'Disabled' | 'Enabled': If auto-scale is enabled for all services. Each service can turn it off individually.
 * **targetUtilization**: int: The target utilization.
 
 ## ServiceAuthConfiguration
@@ -85,7 +85,7 @@
 * **cert**: string: The SSL cert data in PEM format.
 * **cname**: string: The CName of the certificate.
 * **key**: string: The SSL key data in PEM format. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
-* **status**: 'Disabled' | 'Enabled': SSL status. Allowed values are Enabled and Disabled. Possible values include: 'Enabled', 'Disabled'
+* **status**: 'Disabled' | 'Enabled': SSL status. Allowed values are Enabled and Disabled.
 
 ## ErrorResponseWrapper
 ### Properties

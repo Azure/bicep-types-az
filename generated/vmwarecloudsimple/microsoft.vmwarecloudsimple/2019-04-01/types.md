@@ -48,7 +48,7 @@
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource
 * **purchaseId**: string (Required): purchase id
 * **skuDescription**: [SkuDescription](#skudescription): The purchase SKU for CloudSimple paid resources
-* **status**: 'unused' | 'used' (ReadOnly): Node status, indicates is private cloud set up on this node or not. Possible values include: 'unused', 'used'
+* **status**: 'unused' | 'used' (ReadOnly): Node status, indicates is private cloud set up on this node or not.
 * **vmwareClusterName**: string (ReadOnly): VMWare Cluster Name
 
 ## SkuDescription
@@ -72,7 +72,7 @@
 ## DedicatedCloudServiceProperties
 ### Properties
 * **gatewaySubnet**: string (Required): gateway Subnet for the account. It will collect the subnet address and always treat it as /28
-* **isAccountOnboarded**: 'notOnBoarded' | 'onBoarded' | 'onBoarding' | 'onBoardingFailed' (ReadOnly): indicates whether account onboarded or not in a given region. Possible values include: 'notOnBoarded', 'onBoarded', 'onBoardingFailed', 'onBoarding'
+* **isAccountOnboarded**: 'notOnBoarded' | 'onBoarded' | 'onBoarding' | 'onBoardingFailed' (ReadOnly): indicates whether account onboarded or not in a given region.
 * **nodes**: int (ReadOnly): total nodes purchased
 * **serviceURL**: string (ReadOnly): link to a service management web portal
 
@@ -91,7 +91,7 @@
 * **exposeToGuestVM**: bool: Expose Guest OS or not
 * **folder**: string (ReadOnly): The path to virtual machine folder in VCenter
 * **guestOS**: string (ReadOnly): The name of Guest OS
-* **guestOSType**: 'linux' | 'other' | 'windows' (ReadOnly): The Guest OS type. Possible values include: 'linux', 'windows', 'other'
+* **guestOSType**: 'linux' | 'other' | 'windows' (ReadOnly): The Guest OS type.
 * **nics**: [VirtualNic](#virtualnic)[]: The list of Virtual NICs
 * **numberOfCores**: int (Required): The number of CPU cores
 * **password**: string: Password for login. Deprecated - use customization property
@@ -99,7 +99,7 @@
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource
 * **publicIP**: string (ReadOnly): The public ip of Virtual Machine
 * **resourcePool**: [ResourcePool](#resourcepool): Resource pool model
-* **status**: 'deallocating' | 'deleting' | 'poweredoff' | 'running' | 'suspended' | 'updating' (ReadOnly): The status of Virtual machine. Possible values include: 'running', 'suspended', 'poweredoff', 'updating', 'deallocating', 'deleting'
+* **status**: 'deallocating' | 'deleting' | 'poweredoff' | 'running' | 'suspended' | 'updating' (ReadOnly): The status of Virtual machine.
 * **templateId**: string: Virtual Machine Template Id
 * **username**: string: Username for login. Deprecated - use customization property
 * **vmId**: string (ReadOnly): The internal id of Virtual Machine in VCenter
@@ -124,7 +124,7 @@
 ## VirtualDisk
 ### Properties
 * **controllerId**: string (Required): Disk's Controller id
-* **independenceMode**: 'independent_nonpersistent' | 'independent_persistent' | 'persistent' (Required): Disk's independence mode type. Possible values include: 'persistent', 'independent_persistent', 'independent_nonpersistent'
+* **independenceMode**: 'independent_nonpersistent' | 'independent_persistent' | 'persistent' (Required): Disk's independence mode type.
 * **totalSize**: int (Required): Disk's total size
 * **virtualDiskId**: string: Disk's id
 * **virtualDiskName**: string (ReadOnly): Disk's display name
@@ -135,14 +135,14 @@
 * **ipAddresses**: string[]: NIC ip address
 * **macAddress**: string: NIC MAC address
 * **network**: [VirtualNetwork](#virtualnetwork) (Required): Virtual network model
-* **nicType**: 'E1000' | 'E1000E' | 'PCNET32' | 'VMXNET' | 'VMXNET2' | 'VMXNET3' (Required): NIC type. Possible values include: 'E1000', 'E1000E', 'PCNET32', 'VMXNET', 'VMXNET2', 'VMXNET3'
+* **nicType**: 'E1000' | 'E1000E' | 'PCNET32' | 'VMXNET' | 'VMXNET2' | 'VMXNET3' (Required): NIC type.
 * **powerOnBoot**: bool: Is NIC powered on/off on boot
 * **virtualNicId**: string: NIC id
 * **virtualNicName**: string (ReadOnly): NIC name
 
 ## GuestOSNICCustomization
 ### Properties
-* **allocation**: 'dynamic' | 'static': IP address allocation method. Possible values include: 'static', 'dynamic'
+* **allocation**: 'dynamic' | 'static': IP address allocation method.
 * **dnsServers**: string[]: List of dns servers to use
 * **gateway**: string[]: Gateway addresses assigned to nic
 * **ipAddress**: string:

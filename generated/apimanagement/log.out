@@ -250,4 +250,4 @@ INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.
 INFORMATION: Resource type Microsoft.ApiManagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 INFORMATION: Resource type Microsoft.ApiManagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
 INFORMATION: Resource type Microsoft.ApiManagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{uid}' has no body defined.
-[580.08 s] Generation Complete
+[902.3 s] Generation Complete

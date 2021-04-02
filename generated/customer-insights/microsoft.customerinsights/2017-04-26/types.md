@@ -150,13 +150,13 @@
 * **connectorId**: int (ReadOnly): ID of the connector.
 * **connectorName**: string: Name of the connector.
 * **connectorProperties**: [Dictionary<string,Object>](#dictionarystringobject) (Required): The connector properties.
-* **connectorType**: 'AzureBlob' | 'CRM' | 'ExchangeOnline' | 'None' | 'Outbound' | 'Salesforce' (Required): Type of connector. Possible values include: 'None', 'CRM', 'AzureBlob', 'Salesforce', 'ExchangeOnline', 'Outbound'
+* **connectorType**: 'AzureBlob' | 'CRM' | 'ExchangeOnline' | 'None' | 'Outbound' | 'Salesforce' (Required): Type of connector.
 * **created**: string (ReadOnly): The created time.
 * **description**: string: Description of the connector.
 * **displayName**: string: Display name of the connector.
 * **isInternal**: bool: If this is an internal connector.
 * **lastModified**: string (ReadOnly): The last modified time.
-* **state**: 'Created' | 'Creating' | 'Deleting' | 'Expiring' | 'Failed' | 'Ready' (ReadOnly): State of connector. Possible values include: 'Creating', 'Created', 'Ready', 'Expiring', 'Deleting', 'Failed'
+* **state**: 'Created' | 'Creating' | 'Deleting' | 'Expiring' | 'Failed' | 'Ready' (ReadOnly): State of connector.
 * **tenantId**: string (ReadOnly): The hub name.
 
 ## Dictionary<string,Object>
@@ -168,18 +168,18 @@
 ### Properties
 * **connectorMappingName**: string (ReadOnly): The connector mapping name
 * **connectorName**: string (ReadOnly): The connector name.
-* **connectorType**: 'AzureBlob' | 'CRM' | 'ExchangeOnline' | 'None' | 'Outbound' | 'Salesforce': Type of connector. Possible values include: 'None', 'CRM', 'AzureBlob', 'Salesforce', 'ExchangeOnline', 'Outbound'
+* **connectorType**: 'AzureBlob' | 'CRM' | 'ExchangeOnline' | 'None' | 'Outbound' | 'Salesforce': Type of connector.
 * **created**: string (ReadOnly): The created time.
 * **dataFormatId**: string (ReadOnly): The DataFormat ID.
 * **description**: string: The description of the connector mapping.
 * **displayName**: string: Display name for the connector mapping.
-* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): Defines which entity type the file should map to. Possible values include: 'None', 'Profile', 'Interaction', 'Relationship'
+* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): Defines which entity type the file should map to.
 * **entityTypeName**: string (Required): The mapping entity name.
 * **lastModified**: string (ReadOnly): The last modified time.
 * **mappingProperties**: [ConnectorMappingProperties](#connectormappingproperties) (Required): The connector mapping properties.
 * **nextRunTime**: string (ReadOnly): The next run time based on customer's settings.
 * **runId**: string (ReadOnly): The RunId.
-* **state**: 'Created' | 'Creating' | 'Expiring' | 'Failed' | 'Ready' | 'Running' | 'Stopped' (ReadOnly): State of connector mapping. Possible values include: 'Creating', 'Created', 'Failed', 'Ready', 'Running', 'Stopped', 'Expiring'
+* **state**: 'Created' | 'Creating' | 'Expiring' | 'Failed' | 'Ready' | 'Running' | 'Stopped' (ReadOnly): State of connector mapping.
 * **tenantId**: string (ReadOnly): The hub name.
 
 ## ConnectorMappingProperties
@@ -195,18 +195,18 @@
 
 ## ConnectorMappingAvailability
 ### Properties
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week': The frequency to update. Possible values include: 'Minute', 'Hour', 'Day', 'Week', 'Month'
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week': The frequency to update.
 * **interval**: int (Required): The interval of the given frequency to use.
 
 ## ConnectorMappingCompleteOperation
 ### Properties
-* **completionOperationType**: 'DeleteFile' | 'DoNothing' | 'MoveFile': The type of completion operation. Possible values include: 'DoNothing', 'DeleteFile', 'MoveFile'
+* **completionOperationType**: 'DeleteFile' | 'DoNothing' | 'MoveFile': The type of completion operation.
 * **destinationFolder**: string: The destination folder where files will be moved to once the import is done.
 
 ## ConnectorMappingErrorManagement
 ### Properties
 * **errorLimit**: int: The error limit allowed while importing data.
-* **errorManagementType**: 'RejectAndContinue' | 'RejectUntilLimit' | 'StopImport' (Required): The type of error management to use for the mapping. Possible values include: 'RejectAndContinue', 'StopImport', 'RejectUntilLimit'
+* **errorManagementType**: 'RejectAndContinue' | 'RejectUntilLimit' | 'StopImport' (Required): The type of error management to use for the mapping.
 
 ## ConnectorMappingFormat
 ### Properties
@@ -232,7 +232,7 @@
 * **defaultDataSource**: [DataSource](#datasource): Data Source is a way for us to know the source of instances. A single type can have data coming in from multiple places. In activities we use this to determine precedence rules.
 * **description**: [Dictionary<string,String>](#dictionarystringstring): Localized descriptions for the property.
 * **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display names for the property.
-* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship': Type of entity. Possible values include: 'None', 'Profile', 'Interaction', 'Relationship'
+* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship': Type of entity.
 * **fields**: [PropertyDefinition](#propertydefinition)[]: The properties of the Profile.
 * **idPropertyNames**: string[]: The id property names. Properties which uniquely identify an interaction instance.
 * **instancesCount**: int: The instance count.
@@ -243,7 +243,7 @@
 * **mediumImage**: string: Medium Image associated with the Property or EntityType.
 * **participantProfiles**: [Participant](#participant)[]: Profiles that participated in the interaction.
 * **primaryParticipantProfilePropertyName**: string: The primary participant property name for an interaction ,This is used to logically represent the agent of the interaction, Specify the participant name here from ParticipantName.
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Provisioning', 'Succeeded', 'Expiring', 'Deleting', 'HumanIntervention', 'Failed'
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
 * **schemaItemTypeLink**: string: The schema org link. This helps ACI identify and suggest semantic models.
 * **smallImage**: string: Small Image associated with the Property or EntityType.
 * **tenantId**: string (ReadOnly): The hub name.
@@ -263,10 +263,10 @@
 ## DataSource
 ### Properties
 * **dataSourceReferenceId**: string (ReadOnly): The data source reference id.
-* **dataSourceType**: 'Connector' | 'LinkInteraction' | 'SystemDefault' (ReadOnly): The data source type. Possible values include: 'Connector', 'LinkInteraction', 'SystemDefault'
+* **dataSourceType**: 'Connector' | 'LinkInteraction' | 'SystemDefault' (ReadOnly): The data source type.
 * **id**: int (ReadOnly): The data source ID.
 * **name**: string (ReadOnly): The data source name
-* **status**: 'Active' | 'Deleted' | 'None' (ReadOnly): The data source status. Possible values include: 'None', 'Active', 'Deleted'
+* **status**: 'Active' | 'Deleted' | 'None' (ReadOnly): The data source status.
 
 ## Dictionary<string,String>
 ### Properties
@@ -344,21 +344,21 @@
 ## KpiDefinition
 ### Properties
 * **aliases**: [KpiAlias](#kpialias)[]: The aliases.
-* **calculationWindow**: 'Day' | 'Hour' | 'Lifetime' | 'Month' | 'Week' (Required): The calculation window. Possible values include: 'Lifetime', 'Hour', 'Day', 'Week', 'Month'
+* **calculationWindow**: 'Day' | 'Hour' | 'Lifetime' | 'Month' | 'Week' (Required): The calculation window.
 * **calculationWindowFieldName**: string: Name of calculation window field.
 * **description**: [Dictionary<string,String>](#dictionarystringstring): Localized description for the KPI.
 * **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display name for the KPI.
-* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): The mapping entity type. Possible values include: 'None', 'Profile', 'Interaction', 'Relationship'
+* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): The mapping entity type.
 * **entityTypeName**: string (Required): The mapping entity name.
 * **expression**: string (Required): The computation expression for the KPI.
 * **extracts**: [KpiExtract](#kpiextract)[]: The KPI extracts.
 * **filter**: string: The filter expression for the KPI.
-* **function**: 'Avg' | 'Count' | 'CountDistinct' | 'Last' | 'Max' | 'Min' | 'None' | 'Sum' (Required): The computation function for the KPI. Possible values include: 'Sum', 'Avg', 'Min', 'Max', 'Last', 'Count', 'None', 'CountDistinct'
+* **function**: 'Avg' | 'Count' | 'CountDistinct' | 'Last' | 'Max' | 'Min' | 'None' | 'Sum' (Required): The computation function for the KPI.
 * **groupBy**: string[]: the group by properties for the KPI.
 * **groupByMetadata**: [KpiGroupByMetadata](#kpigroupbymetadata)[] (ReadOnly): The KPI GroupByMetadata.
 * **kpiName**: string (ReadOnly): The KPI name.
 * **participantProfilesMetadata**: [KpiParticipantProfilesMetadata](#kpiparticipantprofilesmetadata)[] (ReadOnly): The participant profiles.
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Provisioning', 'Succeeded', 'Expiring', 'Deleting', 'HumanIntervention', 'Failed'
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
 * **tenantId**: string (ReadOnly): The hub name.
 * **thresHolds**: [KpiThresholds](#kpithresholds): Defines the KPI Threshold limits.
 * **unit**: string: The unit of measurement for the KPI.
@@ -410,13 +410,13 @@
 * **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display name for the Link.
 * **linkName**: string (ReadOnly): The link name.
 * **mappings**: [TypePropertiesMapping](#typepropertiesmapping)[]: The set of properties mappings between the source and target Types.
-* **operationType**: 'Delete' | 'Upsert': Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only. Possible values include: 'Upsert', 'Delete'
+* **operationType**: 'Delete' | 'Upsert': Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
 * **participantPropertyReferences**: [ParticipantPropertyReference](#participantpropertyreference)[] (Required): The properties that represent the participating profile.
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Provisioning', 'Succeeded', 'Expiring', 'Deleting', 'HumanIntervention', 'Failed'
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
 * **referenceOnly**: bool: Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
-* **sourceEntityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): Type of source entity. Possible values include: 'None', 'Profile', 'Interaction', 'Relationship'
+* **sourceEntityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): Type of source entity.
 * **sourceEntityTypeName**: string (Required): Name of the source Entity Type.
-* **targetEntityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): Type of target entity. Possible values include: 'None', 'Profile', 'Interaction', 'Relationship'
+* **targetEntityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): Type of target entity.
 * **targetEntityTypeName**: string (Required): Name of the target Entity Type.
 * **tenantId**: string (ReadOnly): The hub name.
 
@@ -432,7 +432,7 @@
 
 ## TypePropertiesMapping
 ### Properties
-* **linkType**: 'CopyIfNull' | 'UpdateAlways': Link type. Possible values include: 'UpdateAlways', 'CopyIfNull'
+* **linkType**: 'CopyIfNull' | 'UpdateAlways': Link type.
 * **sourcePropertyName**: string (Required):  Property name on the source Entity Type.
 * **targetPropertyName**: string (Required): Property name on the target Entity Type.
 
@@ -450,7 +450,7 @@
 * **positiveOutcomeExpression**: string (Required): Positive outcome expression.
 * **predictionName**: string: Name of the prediction.
 * **primaryProfileType**: string (Required): Primary profile type.
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Provisioning', 'Succeeded', 'Expiring', 'Deleting', 'HumanIntervention', 'Failed'
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
 * **scopeExpression**: string (Required): Scope expression.
 * **scoreLabel**: string (Required): Score label.
 * **systemGeneratedEntities**: [schemas:86_systemGeneratedEntities](#schemas86systemgeneratedentities) (ReadOnly): System generated entities.
@@ -495,14 +495,14 @@
 * **attributes**: [Dictionary<string,IList<String>>](#dictionarystringiliststring): The attributes for the Type.
 * **description**: [Dictionary<string,String>](#dictionarystringstring): Localized descriptions for the property.
 * **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display names for the property.
-* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship': Type of entity. Possible values include: 'None', 'Profile', 'Interaction', 'Relationship'
+* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship': Type of entity.
 * **fields**: [PropertyDefinition](#propertydefinition)[]: The properties of the Profile.
 * **instancesCount**: int: The instance count.
 * **largeImage**: string: Large Image associated with the Property or EntityType.
 * **lastChangedUtc**: string (ReadOnly): The last changed time for the type definition.
 * **localizedAttributes**: [Dictionary<string,Dictionary<string,String>>](#dictionarystringdictionarystringstring): Any custom localized attributes for the Type.
 * **mediumImage**: string: Medium Image associated with the Property or EntityType.
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Provisioning', 'Succeeded', 'Expiring', 'Deleting', 'HumanIntervention', 'Failed'
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
 * **schemaItemTypeLink**: string: The schema org link. This helps ACI identify and suggest semantic models.
 * **smallImage**: string: Small Image associated with the Property or EntityType.
 * **strongIds**: [StrongId](#strongid)[]: The strong IDs.
@@ -560,7 +560,7 @@
 * **linkName**: string (ReadOnly): The name of the Relationship Link.
 * **mappings**: [RelationshipLinkFieldMapping](#relationshiplinkfieldmapping)[]: The mappings between Interaction and Relationship fields.
 * **profilePropertyReferences**: [ParticipantProfilePropertyReference](#participantprofilepropertyreference)[] (Required): The property references for the Profile of the Relationship.
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Provisioning', 'Succeeded', 'Expiring', 'Deleting', 'HumanIntervention', 'Failed'
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
 * **relatedProfilePropertyReferences**: [ParticipantProfilePropertyReference](#participantprofilepropertyreference)[] (Required): The property references for the Related Profile of the Relationship.
 * **relationshipGuidId**: string (ReadOnly): The relationship guid id.
 * **relationshipName**: string (Required): The Relationship associated with the Link.
@@ -579,7 +579,7 @@
 ## RelationshipLinkFieldMapping
 ### Properties
 * **interactionFieldName**: string (Required): The field name on the Interaction Type.
-* **linkType**: 'CopyIfNull' | 'UpdateAlways': Link type. Possible values include: 'UpdateAlways', 'CopyIfNull'
+* **linkType**: 'CopyIfNull' | 'UpdateAlways': Link type.
 * **relationshipFieldName**: string (Required): The field name on the Relationship metadata.
 
 ## ParticipantProfilePropertyReference
@@ -589,14 +589,14 @@
 
 ## RelationshipDefinition
 ### Properties
-* **cardinality**: 'ManyToMany' | 'OneToMany' | 'OneToOne': The Relationship Cardinality. Possible values include: 'OneToOne', 'OneToMany', 'ManyToMany'
+* **cardinality**: 'ManyToMany' | 'OneToMany' | 'OneToOne': The Relationship Cardinality.
 * **description**: [Dictionary<string,String>](#dictionarystringstring): Localized descriptions for the Relationship.
 * **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display name for the Relationship.
 * **expiryDateTimeUtc**: string: The expiry date time in UTC.
 * **fields**: [PropertyDefinition](#propertydefinition)[]: The properties of the Relationship.
 * **lookupMappings**: [RelationshipTypeMapping](#relationshiptypemapping)[]: Optional property to be used to map fields in profile to their strong ids in related profile.
 * **profileType**: string (Required): Profile type.
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Provisioning', 'Succeeded', 'Expiring', 'Deleting', 'HumanIntervention', 'Failed'
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
 * **relatedProfileType**: string (Required): Related profile being referenced.
 * **relationshipGuidId**: string (ReadOnly): The relationship guid id.
 * **relationshipName**: string (ReadOnly): The Relationship name.
@@ -633,10 +633,10 @@
 * **links**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
 * **principals**: [AssignmentPrincipal](#assignmentprincipal)[] (Required): The principals being assigned to.
 * **profiles**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Provisioning', 'Succeeded', 'Expiring', 'Deleting', 'HumanIntervention', 'Failed'
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
 * **relationshipLinks**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
 * **relationships**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
-* **role**: 'Admin' | 'DataAdmin' | 'DataReader' | 'ManageAdmin' | 'ManageReader' | 'Reader' (Required): Type of roles. Possible values include: 'Admin', 'Reader', 'ManageAdmin', 'ManageReader', 'DataAdmin', 'DataReader'
+* **role**: 'Admin' | 'DataAdmin' | 'DataReader' | 'ManageAdmin' | 'ManageReader' | 'Reader' (Required): Type of roles.
 * **roleAssignments**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
 * **sasPolicies**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
 * **segments**: [ResourceSetDescription](#resourcesetdescription): The resource set description.

@@ -34,13 +34,13 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of the resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of the resource identity.
-* **type**: 'None' | 'SystemAssigned': The identity type. Possible values include: 'SystemAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned': The identity type.
 
 ## PolicyAssignmentProperties
 ### Properties
 * **description**: string: This message will be part of response in case of policy violation.
 * **displayName**: string: The display name of the policy assignment.
-* **enforcementMode**: 'Default' | 'DoNotEnforce': The policy assignment enforcement mode. Possible values are Default and DoNotEnforce. Possible values include: 'Default', 'DoNotEnforce'
+* **enforcementMode**: 'Default' | 'DoNotEnforce': The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
 * **metadata**: any: The policy assignment metadata.
 * **notScopes**: string[]: The policy's excluded scopes.
 * **parameters**: any: Required if a parameter is used in policy rule.
@@ -60,7 +60,7 @@
 * **mode**: string: The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
 * **parameters**: any: Required if a parameter is used in policy rule.
 * **policyRule**: any: The policy rule.
-* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified': The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom. Possible values include: 'NotSpecified', 'BuiltIn', 'Custom'
+* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified': The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom.
 
 ## PolicySetDefinitionProperties
 ### Properties
@@ -69,7 +69,7 @@
 * **metadata**: any: The policy set definition metadata.
 * **parameters**: any: The policy set definition parameters that can be used in policy definition references.
 * **policyDefinitions**: [PolicyDefinitionReference](#policydefinitionreference)[] (Required): An array of policy definition references.
-* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified': The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom. Possible values include: 'NotSpecified', 'BuiltIn', 'Custom'
+* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified': The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom.
 
 ## PolicyDefinitionReference
 ### Properties

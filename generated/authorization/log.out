@@ -94,4 +94,4 @@ WARNING: Skipping path '/{roleAssignmentId}': Unable to locate '/providers/' seg
 Processing batch task - {"tag":"schema-authorization-2015-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-[48.61 s] Generation Complete
+[79.09 s] Generation Complete

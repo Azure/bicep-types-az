@@ -16,9 +16,9 @@
 * **dnsConfig**: [DnsConfig](#dnsconfig): Class containing DNS settings in a Traffic Manager profile.
 * **endpoints**: [Endpoint](#endpoint)[]: The list of endpoints in the Traffic Manager profile.
 * **monitorConfig**: [MonitorConfig](#monitorconfig): Class containing endpoint monitoring settings in a Traffic Manager profile.
-* **profileStatus**: 'Disabled' | 'Enabled': The status of the Traffic Manager profile. Possible values include: 'Enabled', 'Disabled'
-* **trafficRoutingMethod**: 'Geographic' | 'Performance' | 'Priority' | 'Weighted': The traffic routing method of the Traffic Manager profile. Possible values include: 'Performance', 'Priority', 'Weighted', 'Geographic'
-* **trafficViewEnrollmentStatus**: 'Disabled' | 'Enabled': Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile. Possible values include: 'Enabled', 'Disabled'
+* **profileStatus**: 'Disabled' | 'Enabled': The status of the Traffic Manager profile.
+* **trafficRoutingMethod**: 'Geographic' | 'Performance' | 'Priority' | 'Weighted': The traffic routing method of the Traffic Manager profile.
+* **trafficViewEnrollmentStatus**: 'Disabled' | 'Enabled': Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
 
 ## DnsConfig
 ### Properties
@@ -37,8 +37,8 @@
 ### Properties
 * **customHeaders**: [schemas:1_customHeadersItem](#schemas1customheadersitem)[]: List of custom headers.
 * **endpointLocation**: string: Specifies the location of the external or nested endpoints when using the ‘Performance’ traffic routing method.
-* **endpointMonitorStatus**: 'CheckingEndpoint' | 'Degraded' | 'Disabled' | 'Inactive' | 'Online' | 'Stopped': The monitoring status of the endpoint. Possible values include: 'CheckingEndpoint', 'Online', 'Degraded', 'Disabled', 'Inactive', 'Stopped'
-* **endpointStatus**: 'Disabled' | 'Enabled': The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method. Possible values include: 'Enabled', 'Disabled'
+* **endpointMonitorStatus**: 'CheckingEndpoint' | 'Degraded' | 'Disabled' | 'Inactive' | 'Online' | 'Stopped': The monitoring status of the endpoint.
+* **endpointStatus**: 'Disabled' | 'Enabled': The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.
 * **geoMapping**: string[]: The list of countries/regions mapped to this endpoint when using the ‘Geographic’ traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
 * **minChildEndpoints**: int: The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
 * **priority**: int: The priority of this endpoint when using the ‘Priority’ traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
@@ -58,8 +58,8 @@
 * **intervalInSeconds**: int: The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.
 * **path**: string: The path relative to the endpoint domain name used to probe for endpoint health.
 * **port**: int: The TCP port used to probe for endpoint health.
-* **profileMonitorStatus**: 'CheckingEndpoints' | 'Degraded' | 'Disabled' | 'Inactive' | 'Online': The profile-level monitoring status of the Traffic Manager profile. Possible values include: 'CheckingEndpoints', 'Online', 'Degraded', 'Disabled', 'Inactive'
-* **protocol**: 'HTTP' | 'HTTPS' | 'TCP': The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health. Possible values include: 'HTTP', 'HTTPS', 'TCP'
+* **profileMonitorStatus**: 'CheckingEndpoints' | 'Degraded' | 'Disabled' | 'Inactive' | 'Online': The profile-level monitoring status of the Traffic Manager profile.
+* **protocol**: 'HTTP' | 'HTTPS' | 'TCP': The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.
 * **timeoutInSeconds**: int: The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.
 * **toleratedNumberOfFailures**: int: The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.
 

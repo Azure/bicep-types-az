@@ -101,7 +101,7 @@
 
 ## InstancePoolProperties
 ### Properties
-* **licenseType**: 'BasePrice' | 'LicenseIncluded' (Required): The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price). Possible values include: 'LicenseIncluded', 'BasePrice'
+* **licenseType**: 'BasePrice' | 'LicenseIncluded' (Required): The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
 * **subnetId**: string (Required): Resource ID of the subnet to place this instance pool in.
 * **vCores**: int (Required): Count of vCores belonging to this instance pool.
 
@@ -122,7 +122,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The Azure Active Directory principal id.
 * **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource. Possible values include: 'None', 'SystemAssigned', 'UserAssigned'
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
 
 ## ManagedInstanceProperties
 ### Properties
@@ -133,15 +133,15 @@
 * **dnsZonePartner**: string: The resource id of another managed instance whose DNS zone this managed instance will share after creation.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the managed instance.
 * **instancePoolId**: string: The Id of the instance pool this managed server belongs to.
-* **licenseType**: 'BasePrice' | 'LicenseIncluded': The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses). Possible values include: 'LicenseIncluded', 'BasePrice'
+* **licenseType**: 'BasePrice' | 'LicenseIncluded': The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
 * **maintenanceConfigurationId**: string: Specifies maintenance configuration id to apply to this managed instance.
 * **managedInstanceCreateMode**: 'Default' | 'PointInTimeRestore': Specifies the mode of database creation.
 
 Default: Regular instance creation.
 
-Restore: Creates an instance by restoring a set of backups to specific point in time. RestorePointInTime and SourceManagedInstanceId must be specified. Possible values include: 'Default', 'PointInTimeRestore'
+Restore: Creates an instance by restoring a set of backups to specific point in time. RestorePointInTime and SourceManagedInstanceId must be specified.
 * **minimalTlsVersion**: string: Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
-* **proxyOverride**: 'Default' | 'Proxy' | 'Redirect': Connection type used for connecting to the instance. Possible values include: 'Proxy', 'Redirect', 'Default'
+* **proxyOverride**: 'Default' | 'Proxy' | 'Redirect': Connection type used for connecting to the instance.
 * **publicDataEndpointEnabled**: bool: Whether or not the public data endpoint is enabled.
 * **restorePointInTime**: string: Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
 * **sourceManagedInstanceId**: string: The resource identifier of the source managed instance associated with create operation of this instance.
@@ -163,9 +163,9 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 
 ## ManagedDatabaseProperties
 ### Properties
-* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS': Collation of the metadata catalog. Possible values include: 'DATABASE_DEFAULT', 'SQL_Latin1_General_CP1_CI_AS'
+* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS': Collation of the metadata catalog.
 * **collation**: string: Collation of the managed database.
-* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'RestoreExternalBackup' | 'RestoreLongTermRetentionBackup': Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. Possible values include: 'Default', 'RestoreExternalBackup', 'PointInTimeRestore', 'Recovery', 'RestoreLongTermRetentionBackup'
+* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'RestoreExternalBackup' | 'RestoreLongTermRetentionBackup': Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore.
 * **creationDate**: string (ReadOnly): Creation date of the database.
 * **defaultSecondaryLocation**: string (ReadOnly): Geo paired region.
 * **earliestRestorePoint**: string (ReadOnly): Earliest restore point in time for point in time restore.
@@ -175,7 +175,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 * **restorableDroppedDatabaseId**: string: The restorable dropped database resource id to restore when creating this database.
 * **restorePointInTime**: string: Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
 * **sourceDatabaseId**: string: The resource identifier of the source database associated with create operation of this database.
-* **status**: 'Creating' | 'Inaccessible' | 'Offline' | 'Online' | 'Restoring' | 'Shutdown' | 'Updating' (ReadOnly): Status of the database. Possible values include: 'Online', 'Offline', 'Shutdown', 'Creating', 'Inaccessible', 'Restoring', 'Updating'
+* **status**: 'Creating' | 'Inaccessible' | 'Offline' | 'Online' | 'Restoring' | 'Shutdown' | 'Updating' (ReadOnly): Status of the database.
 * **storageContainerSasToken**: string: Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.
 * **storageContainerUri**: string: Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.
 
@@ -198,7 +198,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 * **isDisabled**: bool (ReadOnly): Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
 * **labelId**: string: The label ID.
 * **labelName**: string: The label name.
-* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None': Possible values include: 'None', 'Low', 'Medium', 'High', 'Critical'
+* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None':
 
 ## ManagedInstanceVulnerabilityAssessmentProperties
 ### Properties
@@ -227,7 +227,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 * **emailAccountAdmins**: bool: Specifies that the alert is sent to the account administrators.
 * **emailAddresses**: string[]: Specifies an array of e-mail addresses to which the alert is sent.
 * **retentionDays**: int: Specifies the number of days to keep in the Threat Detection audit logs.
-* **state**: 'Disabled' | 'Enabled' | 'New' (Required): Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database. Possible values include: 'New', 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled' | 'New' (Required): Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database.
 * **storageAccountAccessKey**: string: Specifies the identifier key of the Threat Detection audit storage account.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
 

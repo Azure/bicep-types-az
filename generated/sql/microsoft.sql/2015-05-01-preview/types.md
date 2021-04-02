@@ -118,7 +118,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The Azure Active Directory principal id.
 * **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource. Possible values include: 'None', 'SystemAssigned', 'UserAssigned'
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
 
 ## ManagedInstanceProperties
 ### Properties
@@ -129,15 +129,15 @@
 * **dnsZonePartner**: string: The resource id of another managed instance whose DNS zone this managed instance will share after creation.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the managed instance.
 * **instancePoolId**: string: The Id of the instance pool this managed server belongs to.
-* **licenseType**: 'BasePrice' | 'LicenseIncluded': The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses). Possible values include: 'LicenseIncluded', 'BasePrice'
+* **licenseType**: 'BasePrice' | 'LicenseIncluded': The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
 * **maintenanceConfigurationId**: string: Specifies maintenance configuration id to apply to this managed instance.
 * **managedInstanceCreateMode**: 'Default' | 'PointInTimeRestore': Specifies the mode of database creation.
 
 Default: Regular instance creation.
 
-Restore: Creates an instance by restoring a set of backups to specific point in time. RestorePointInTime and SourceManagedInstanceId must be specified. Possible values include: 'Default', 'PointInTimeRestore'
+Restore: Creates an instance by restoring a set of backups to specific point in time. RestorePointInTime and SourceManagedInstanceId must be specified.
 * **minimalTlsVersion**: string: Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
-* **proxyOverride**: 'Default' | 'Proxy' | 'Redirect': Connection type used for connecting to the instance. Possible values include: 'Proxy', 'Redirect', 'Default'
+* **proxyOverride**: 'Default' | 'Proxy' | 'Redirect': Connection type used for connecting to the instance.
 * **publicDataEndpointEnabled**: bool: Whether or not the public data endpoint is enabled.
 * **restorePointInTime**: string: Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
 * **sourceManagedInstanceId**: string: The resource identifier of the source managed instance associated with create operation of this instance.
@@ -253,7 +253,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
-* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required. Possible values include: 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
 * **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account.
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
@@ -265,14 +265,14 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## SyncGroupProperties
 ### Properties
-* **conflictResolutionPolicy**: 'HubWin' | 'MemberWin': Conflict resolution policy of the sync group. Possible values include: 'HubWin', 'MemberWin'
+* **conflictResolutionPolicy**: 'HubWin' | 'MemberWin': Conflict resolution policy of the sync group.
 * **hubDatabasePassword**: string: Password for the sync group hub database credential.
 * **hubDatabaseUserName**: string: User name for the sync group hub database credential.
 * **interval**: int: Sync interval of the sync group.
 * **lastSyncTime**: string (ReadOnly): Last sync time of the sync group.
 * **schema**: [SyncGroupSchema](#syncgroupschema): Properties of sync group schema.
 * **syncDatabaseId**: string: ARM resource id of the sync database in the sync group.
-* **syncState**: 'Error' | 'Good' | 'NotReady' | 'Progressing' | 'Warning' (ReadOnly): Sync state of the sync group. Possible values include: 'NotReady', 'Error', 'Warning', 'Progressing', 'Good'
+* **syncState**: 'Error' | 'Good' | 'NotReady' | 'Progressing' | 'Warning' (ReadOnly): Sync state of the sync group.
 
 ## SyncGroupSchema
 ### Properties
@@ -293,19 +293,19 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## SyncMemberProperties
 ### Properties
 * **databaseName**: string: Database name of the member database in the sync member.
-* **databaseType**: 'AzureSqlDatabase' | 'SqlServerDatabase': Database type of the sync member. Possible values include: 'AzureSqlDatabase', 'SqlServerDatabase'
+* **databaseType**: 'AzureSqlDatabase' | 'SqlServerDatabase': Database type of the sync member.
 * **password**: string: Password of the member database in the sync member.
 * **serverName**: string: Server name of the member database in the sync member
 * **sqlServerDatabaseId**: string: SQL Server database id of the sync member.
 * **syncAgentId**: string: ARM resource id of the sync agent in the sync member.
-* **syncDirection**: 'Bidirectional' | 'OneWayHubToMember' | 'OneWayMemberToHub': Sync direction of the sync member. Possible values include: 'Bidirectional', 'OneWayMemberToHub', 'OneWayHubToMember'
-* **syncState**: 'DeProvisioned' | 'DeProvisionFailed' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'Provisioned' | 'ProvisionFailed' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' (ReadOnly): Sync state of the sync member. Possible values include: 'SyncInProgress', 'SyncSucceeded', 'SyncFailed', 'DisabledTombstoneCleanup', 'DisabledBackupRestore', 'SyncSucceededWithWarnings', 'SyncCancelling', 'SyncCancelled', 'UnProvisioned', 'Provisioning', 'Provisioned', 'ProvisionFailed', 'DeProvisioning', 'DeProvisioned', 'DeProvisionFailed', 'Reprovisioning', 'ReprovisionFailed', 'UnReprovisioned'
+* **syncDirection**: 'Bidirectional' | 'OneWayHubToMember' | 'OneWayMemberToHub': Sync direction of the sync member.
+* **syncState**: 'DeProvisioned' | 'DeProvisionFailed' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'Provisioned' | 'ProvisionFailed' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' (ReadOnly): Sync state of the sync member.
 * **userName**: string: User name of the member database in the sync member.
 
 ## EncryptionProtectorProperties
 ### Properties
 * **serverKeyName**: string: The name of the server key.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'. Possible values include: 'ServiceManaged', 'AzureKeyVault'
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
 * **subregion**: string (ReadOnly): Subregion of the encryption protector.
 * **thumbprint**: string (ReadOnly): Thumbprint of the server key.
 * **uri**: string (ReadOnly): The URI of the server key.
@@ -316,22 +316,22 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **partnerServers**: [PartnerInfo](#partnerinfo)[] (Required): List of partner server information for the failover group.
 * **readOnlyEndpoint**: [FailoverGroupReadOnlyEndpoint](#failovergroupreadonlyendpoint): Read-only endpoint of the failover group instance.
 * **readWriteEndpoint**: [FailoverGroupReadWriteEndpoint](#failovergroupreadwriteendpoint) (Required): Read-write endpoint of the failover group instance.
-* **replicationRole**: 'Primary' | 'Secondary' (ReadOnly): Local replication role of the failover group instance. Possible values include: 'Primary', 'Secondary'
+* **replicationRole**: 'Primary' | 'Secondary' (ReadOnly): Local replication role of the failover group instance.
 * **replicationState**: string (ReadOnly): Replication state of the failover group instance.
 
 ## PartnerInfo
 ### Properties
 * **id**: string (Required): Resource identifier of the partner server.
 * **location**: string (ReadOnly): Geo location of the partner server.
-* **replicationRole**: 'Primary' | 'Secondary' (ReadOnly): Replication role of the partner server. Possible values include: 'Primary', 'Secondary'
+* **replicationRole**: 'Primary' | 'Secondary' (ReadOnly): Replication role of the partner server.
 
 ## FailoverGroupReadOnlyEndpoint
 ### Properties
-* **failoverPolicy**: 'Disabled' | 'Enabled': Failover policy of the read-only endpoint for the failover group. Possible values include: 'Disabled', 'Enabled'
+* **failoverPolicy**: 'Disabled' | 'Enabled': Failover policy of the read-only endpoint for the failover group.
 
 ## FailoverGroupReadWriteEndpoint
 ### Properties
-* **failoverPolicy**: 'Automatic' | 'Manual' (Required): Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required. Possible values include: 'Manual', 'Automatic'
+* **failoverPolicy**: 'Automatic' | 'Manual' (Required): Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
 * **failoverWithDataLossGracePeriodMinutes**: int: Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
 
 ## Dictionary<string,String>
@@ -347,7 +347,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## ServerKeyProperties
 ### Properties
 * **creationDate**: string: The server key creation date.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required): The server key type like 'ServiceManaged', 'AzureKeyVault'. Possible values include: 'ServiceManaged', 'AzureKeyVault'
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required): The server key type like 'ServiceManaged', 'AzureKeyVault'.
 * **subregion**: string (ReadOnly): Subregion of the server key.
 * **thumbprint**: string: Thumbprint of the server key.
 * **uri**: string: The URI of the server key.
@@ -358,13 +358,13 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **isUpToDate**: bool (ReadOnly): If the sync agent version is up to date.
 * **lastAliveTime**: string (ReadOnly): Last alive time of the sync agent.
 * **name**: string (ReadOnly): Name of the sync agent.
-* **state**: 'NeverConnected' | 'Offline' | 'Online' (ReadOnly): State of the sync agent. Possible values include: 'Online', 'Offline', 'NeverConnected'
+* **state**: 'NeverConnected' | 'Offline' | 'Online' (ReadOnly): State of the sync agent.
 * **syncDatabaseId**: string: ARM resource id of the sync database in the sync agent.
 * **version**: string (ReadOnly): Version of the sync agent.
 
 ## VirtualNetworkRuleProperties
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool: Create firewall rule before the virtual network has vnet service endpoint enabled.
-* **state**: 'Deleting' | 'Initializing' | 'InProgress' | 'Ready' | 'Unknown' (ReadOnly): Virtual Network Rule State. Possible values include: 'Initializing', 'InProgress', 'Ready', 'Deleting', 'Unknown'
+* **state**: 'Deleting' | 'Initializing' | 'InProgress' | 'Ready' | 'Unknown' (ReadOnly): Virtual Network Rule State.
 * **virtualNetworkSubnetId**: string (Required): The ARM resource id of the virtual network subnet.
 

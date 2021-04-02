@@ -7,7 +7,7 @@
 * **etag**: [Dictionary<string,String>](#dictionarystringstring): Resource etag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedIdentity](#managedidentity): Customer Managed Identity
-* **kind**: 'shared' | 'user': The kind of workbook. Choices are user and shared. Possible values include: 'user', 'shared'
+* **kind**: 'shared' | 'user': The kind of workbook. Choices are user and shared.
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MyWorkbookProperties](#myworkbookproperties): Properties that contain a private workbook.
@@ -21,7 +21,7 @@
 * **etag**: [Dictionary<string,String>](#dictionarystringstring): Resource etag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedIdentity](#managedidentity): Customer Managed Identity
-* **kind**: 'shared' | 'user': The kind of workbook. Choices are user and shared. Possible values include: 'user', 'shared'
+* **kind**: 'shared' | 'user': The kind of workbook. Choices are user and shared.
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkbookProperties](#workbookproperties): Properties that contain a workbook.
@@ -35,7 +35,7 @@
 
 ## ManagedIdentity
 ### Properties
-* **type**: 'None' | 'UserAssigned': The identity type. Possible values include: 'UserAssigned', 'None'
+* **type**: 'None' | 'UserAssigned': The identity type.
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): Customer Managed Identity
 
 ## UserAssignedIdentities

@@ -29,7 +29,7 @@
 * **defaultBranch**: string (Required): Default branch used to configure Continuous Integration (CI) in the pipeline.
 * **id**: string (Required): Unique immutable identifier of the code repository.
 * **properties**: [Dictionary<string,String>](#dictionarystringstring): Repository-specific properties.
-* **repositoryType**: 'gitHub' | 'vstsGit' (Required): Type of code repository. Possible values include: 'gitHub', 'vstsGit'
+* **repositoryType**: 'gitHub' | 'vstsGit' (Required): Type of code repository.
 
 ## Authorization
 ### Properties

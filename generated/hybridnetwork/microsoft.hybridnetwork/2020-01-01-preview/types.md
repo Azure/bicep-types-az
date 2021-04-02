@@ -63,8 +63,8 @@
 ### Base Properties
 * **azureStackEdge**: [SubResource](#subresource): Reference to another sub resource.
 * **networkFunctions**: [SubResource](#subresource)[] (ReadOnly): The list of network functions deployed on the device.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The provisioning state of the device resource. Possible values include: 'Unknown', 'Succeeded', 'Accepted', 'Deleting', 'Failed', 'Canceled', 'Deleted'
-* **status**: 'Deleted' | 'NotRegistered' | 'Registered' | 'Unknown' (ReadOnly): The current device status. Possible values include: 'Unknown', 'NotRegistered', 'Registered', 'Deleted'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The provisioning state of the device resource.
+* **status**: 'Deleted' | 'NotRegistered' | 'Registered' | 'Unknown' (ReadOnly): The current device status.
 
 ## SubResource
 ### Properties
@@ -78,10 +78,10 @@
 ## VendorNetworkFunctionPropertiesFormat
 ### Properties
 * **networkFunctionVendorConfigurations**: [NetworkFunctionVendorConfiguration](#networkfunctionvendorconfiguration)[]: An array of network function vendor configurations.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The provisioning state of the vendor network function sub resource. Possible values include: 'Unknown', 'Succeeded', 'Accepted', 'Deleting', 'Failed', 'Canceled', 'Deleted'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The provisioning state of the vendor network function sub resource.
 * **skuName**: string (ReadOnly): The name of the sku.
-* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' (ReadOnly): The sku type. Possible values include: 'Unknown', 'EvolvedPacketCore', 'SDWAN', 'Firewall'
-* **vendorProvisioningState**: 'Deprovisioned' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | 'Unknown' | 'UserDataValidationFailed': The vendor controlled provisioning state of the vendor network function. Possible values include: 'Unknown', 'NotProvisioned', 'Provisioning', 'Provisioned', 'Deprovisioned', 'UserDataValidationFailed'
+* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' (ReadOnly): The sku type.
+* **vendorProvisioningState**: 'Deprovisioned' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | 'Unknown' | 'UserDataValidationFailed': The vendor controlled provisioning state of the vendor network function.
 
 ## NetworkFunctionVendorConfiguration
 ### Properties
@@ -95,15 +95,15 @@
 * **ipConfigurations**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration)[]: A list of IP configurations of the network interface.
 * **macAddress**: string: The MAC address of the network interface.
 * **networkInterfaceName**: string: The name of the network interface.
-* **vmSwitchType**: 'Lan' | 'Management' | 'Unknown' | 'Wan': The type of the VM switch. Possible values include: 'Unknown', 'Management', 'Wan', 'Lan'
+* **vmSwitchType**: 'Lan' | 'Management' | 'Unknown' | 'Wan': The type of the VM switch.
 
 ## NetworkInterfaceIPConfiguration
 ### Properties
 * **dnsServers**: string[]: The list of DNS servers IP addresses.
 * **gateway**: string: The value of the gateway.
 * **ipAddress**: string: The value of the IP address.
-* **ipAllocationMethod**: 'Dynamic' | 'Static' | 'Unknown': IP address allocation method. Possible values include: 'Unknown', 'Static', 'Dynamic'
-* **ipVersion**: 'IPv4' | 'Unknown': IP address version. Possible values include: 'Unknown', 'IPv4'
+* **ipAllocationMethod**: 'Dynamic' | 'Static' | 'Unknown': IP address allocation method.
+* **ipVersion**: 'IPv4' | 'Unknown': IP address version.
 * **subnet**: string: The value of the subnet.
 
 ## OsProfile
@@ -132,12 +132,12 @@
 * **managedApplication**: [SubResource](#subresource) (ReadOnly): Reference to another sub resource.
 * **managedApplicationParameters**: any: The parameters for the managed application.
 * **networkFunctionUserConfigurations**: [NetworkFunctionUserConfiguration](#networkfunctionuserconfiguration)[]: The network function configurations from the user.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The provisioning state of the network function resource. Possible values include: 'Unknown', 'Succeeded', 'Accepted', 'Deleting', 'Failed', 'Canceled', 'Deleted'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The provisioning state of the network function resource.
 * **serviceKey**: string (ReadOnly): The service key for the network function resource.
 * **skuName**: string: The sku name for the network function.
-* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' (ReadOnly): The sku type for the network function. Possible values include: 'Unknown', 'EvolvedPacketCore', 'SDWAN', 'Firewall'
+* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' (ReadOnly): The sku type for the network function.
 * **vendorName**: string: The vendor name for the network function.
-* **vendorProvisioningState**: 'Deprovisioned' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | 'Unknown' | 'UserDataValidationFailed' (ReadOnly): The vendor provisioning state for the network function resource. Possible values include: 'Unknown', 'NotProvisioned', 'Provisioning', 'Provisioned', 'Deprovisioned', 'UserDataValidationFailed'
+* **vendorProvisioningState**: 'Deprovisioned' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | 'Unknown' | 'UserDataValidationFailed' (ReadOnly): The vendor provisioning state for the network function resource.
 
 ## NetworkFunctionUserConfiguration
 ### Properties
@@ -157,18 +157,18 @@
 
 ## VendorPropertiesFormat
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The provisioning state of the vendor resource. Possible values include: 'Unknown', 'Succeeded', 'Accepted', 'Deleting', 'Failed', 'Canceled', 'Deleted'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The provisioning state of the vendor resource.
 * **skus**: [SubResource](#subresource)[] (ReadOnly): A list of IDs of the vendor skus offered by the vendor.
 
 ## VendorSkuPropertiesFormat
 ### Properties
-* **deploymentMode**: 'Azure' | 'PrivateEdgeZone' | 'Unknown': The sku deployment mode. Possible values include: 'Unknown', 'Azure', 'PrivateEdgeZone'
+* **deploymentMode**: 'Azure' | 'PrivateEdgeZone' | 'Unknown': The sku deployment mode.
 * **managedApplicationParameters**: any: The parameters for the managed application.
 * **managedApplicationTemplate**: any: The template for the managed application deployment.
 * **networkFunctionTemplate**: [NetworkFunctionTemplate](#networkfunctiontemplate): The network function template.
 * **preview**: bool: Indicates if the vendor sku is in preview mode.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The provisioning state of the vendor sku sub resource. Possible values include: 'Unknown', 'Succeeded', 'Accepted', 'Deleting', 'Failed', 'Canceled', 'Deleted'
-* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown': The sku type. Possible values include: 'Unknown', 'EvolvedPacketCore', 'SDWAN', 'Firewall'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The provisioning state of the vendor sku sub resource.
+* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown': The sku type.
 
 ## NetworkFunctionTemplate
 ### Properties
@@ -180,11 +180,11 @@
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[]: The network interface configurations.
 * **osProfile**: [OsProfile](#osprofile): Specifies the operating system settings for the role instance.
 * **roleName**: string: The name of the network function role.
-* **roleType**: 'Unknown' | 'VirtualMachine': Role type. Possible values include: 'Unknown', 'VirtualMachine'
+* **roleType**: 'Unknown' | 'VirtualMachine': Role type.
 * **storageProfile**: [StorageProfile](#storageprofile): Specifies the storage settings for the virtual machine disks.
 * **userDataParameters**: any: The user data parameters.
 * **userDataTemplate**: any: The user data template.
-* **virtualMachineSize**: 'Standard_D1_v2' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D2_v2' | 'Standard_D3_v2' | 'Standard_D4_v2' | 'Standard_D5_v2' | 'Standard_DS1_v2' | 'Standard_DS11_v2' | 'Standard_DS12_v2' | 'Standard_DS13_v2' | 'Standard_DS2_v2' | 'Standard_DS3_v2' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_F1' | 'Standard_F16' | 'Standard_F16s' | 'Standard_F1s' | 'Standard_F2' | 'Standard_F2s' | 'Standard_F4' | 'Standard_F4s' | 'Standard_F8' | 'Standard_F8s' | 'Unknown': The size of the virtual machine. Possible values include: 'Unknown', 'Standard_D1_v2', 'Standard_D2_v2', 'Standard_D3_v2', 'Standard_D4_v2', 'Standard_D5_v2', 'Standard_D11_v2', 'Standard_D12_v2', 'Standard_D13_v2', 'Standard_DS1_v2', 'Standard_DS2_v2', 'Standard_DS3_v2', 'Standard_DS4_v2', 'Standard_DS5_v2', 'Standard_DS11_v2', 'Standard_DS12_v2', 'Standard_DS13_v2', 'Standard_F1', 'Standard_F2', 'Standard_F4', 'Standard_F8', 'Standard_F16', 'Standard_F1s', 'Standard_F2s', 'Standard_F4s', 'Standard_F8s', 'Standard_F16s'
+* **virtualMachineSize**: 'Standard_D1_v2' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D2_v2' | 'Standard_D3_v2' | 'Standard_D4_v2' | 'Standard_D5_v2' | 'Standard_DS1_v2' | 'Standard_DS11_v2' | 'Standard_DS12_v2' | 'Standard_DS13_v2' | 'Standard_DS2_v2' | 'Standard_DS3_v2' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_F1' | 'Standard_F16' | 'Standard_F16s' | 'Standard_F1s' | 'Standard_F2' | 'Standard_F2s' | 'Standard_F4' | 'Standard_F4s' | 'Standard_F8' | 'Standard_F8s' | 'Unknown': The size of the virtual machine.
 
 ## CustomProfile
 ### Properties
@@ -198,7 +198,7 @@
 
 ## DataDisk
 ### Properties
-* **createOption**: 'Empty' | 'Unknown': Specifies how the virtual machine should be created. Possible values include: 'Unknown', 'Empty'
+* **createOption**: 'Empty' | 'Unknown': Specifies how the virtual machine should be created.
 * **diskSizeGB**: int: Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.
 * **name**: string: The name of data disk.
 
@@ -214,7 +214,7 @@
 ### Properties
 * **diskSizeGB**: int: Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.
 * **name**: string: The VHD name.
-* **osType**: 'Linux' | 'Unknown' | 'Windows': The OS type. Possible values include: 'Unknown', 'Windows', 'Linux'
+* **osType**: 'Linux' | 'Unknown' | 'Windows': The OS type.
 * **vhd**: [VirtualHardDisk](#virtualharddisk): Describes the uri of a disk.
 
 ## VirtualHardDisk

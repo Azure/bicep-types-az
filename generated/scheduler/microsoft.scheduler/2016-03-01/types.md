@@ -24,7 +24,7 @@
 ### Properties
 * **quota**: [JobCollectionQuota](#jobcollectionquota):
 * **sku**: [Sku](#sku):
-* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'Suspended': Gets or sets the state. Possible values include: 'Enabled', 'Disabled', 'Suspended', 'Deleted'
+* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'Suspended': Gets or sets the state.
 
 ## JobCollectionQuota
 ### Properties
@@ -34,12 +34,12 @@
 
 ## JobMaxRecurrence
 ### Properties
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week': Gets or sets the frequency of recurrence (second, minute, hour, day, week, month). Possible values include: 'Minute', 'Hour', 'Day', 'Week', 'Month'
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week': Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
 * **interval**: int: Gets or sets the interval between retries.
 
 ## Sku
 ### Properties
-* **name**: 'Free' | 'P10Premium' | 'P20Premium' | 'Standard': Gets or set the SKU. Possible values include: 'Standard', 'Free', 'P10Premium', 'P20Premium'
+* **name**: 'Free' | 'P10Premium' | 'P20Premium' | 'Standard': Gets or set the SKU.
 
 ## Dictionary<string,String>
 ### Properties
@@ -51,7 +51,7 @@
 * **action**: [JobAction](#jobaction):
 * **recurrence**: [JobRecurrence](#jobrecurrence):
 * **startTime**: string: Gets or sets the job start time.
-* **state**: 'Completed' | 'Disabled' | 'Enabled' | 'Faulted': Gets or set the job state. Possible values include: 'Enabled', 'Disabled', 'Faulted', 'Completed'
+* **state**: 'Completed' | 'Disabled' | 'Enabled' | 'Faulted': Gets or set the job state.
 * **status**: [JobStatus](#jobstatus) (ReadOnly):
 
 ## JobAction
@@ -62,7 +62,7 @@
 * **retryPolicy**: [RetryPolicy](#retrypolicy):
 * **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage):
 * **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage):
-* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job action type. Possible values include: 'Http', 'Https', 'StorageQueue', 'ServiceBusQueue', 'ServiceBusTopic'
+* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job action type.
 
 ## JobErrorAction
 ### Properties
@@ -71,7 +71,7 @@
 * **retryPolicy**: [RetryPolicy](#retrypolicy):
 * **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage):
 * **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage):
-* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job error action type. Possible values include: 'Http', 'Https', 'StorageQueue', 'ServiceBusQueue', 'ServiceBusTopic'
+* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job error action type.
 
 ## StorageQueueMessage
 ### Properties
@@ -147,7 +147,7 @@
 ### Properties
 * **retryCount**: int: Gets or sets the number of times a retry should be attempted.
 * **retryInterval**: string: Gets or sets the retry interval between retries, specify duration in ISO 8601 format.
-* **retryType**: 'Fixed' | 'None': Gets or sets the retry strategy to be used. Possible values include: 'None', 'Fixed'
+* **retryType**: 'Fixed' | 'None': Gets or sets the retry strategy to be used.
 
 ## ServiceBusQueueMessage
 ### Properties
@@ -157,13 +157,13 @@
 * **message**: string: Gets or sets the message.
 * **namespace**: string: Gets or sets the namespace.
 * **queueName**: string: Gets or sets the queue name.
-* **transportType**: 'AMQP' | 'NetMessaging' | 'NotSpecified': Gets or sets the transport type. Possible values include: 'NotSpecified', 'NetMessaging', 'AMQP'
+* **transportType**: 'AMQP' | 'NetMessaging' | 'NotSpecified': Gets or sets the transport type.
 
 ## ServiceBusAuthentication
 ### Properties
 * **sasKey**: string: Gets or sets the SAS key.
 * **sasKeyName**: string: Gets or sets the SAS key name.
-* **type**: 'NotSpecified' | 'SharedAccessKey': Gets or sets the authentication type. Possible values include: 'NotSpecified', 'SharedAccessKey'
+* **type**: 'NotSpecified' | 'SharedAccessKey': Gets or sets the authentication type.
 
 ## ServiceBusBrokeredMessageProperties
 ### Properties
@@ -194,7 +194,7 @@
 * **message**: string: Gets or sets the message.
 * **namespace**: string: Gets or sets the namespace.
 * **topicPath**: string: Gets or sets the topic path.
-* **transportType**: 'AMQP' | 'NetMessaging' | 'NotSpecified': Gets or sets the transport type. Possible values include: 'NotSpecified', 'NetMessaging', 'AMQP'
+* **transportType**: 'AMQP' | 'NetMessaging' | 'NotSpecified': Gets or sets the transport type.
 
 ## Dictionary<string,String>
 ### Properties
@@ -205,7 +205,7 @@
 ### Properties
 * **count**: int: Gets or sets the maximum number of times that the job should run.
 * **endTime**: string: Gets or sets the time at which the job will complete.
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week': Gets or sets the frequency of recurrence (second, minute, hour, day, week, month). Possible values include: 'Minute', 'Hour', 'Day', 'Week', 'Month'
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week': Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
 * **interval**: int: Gets or sets the interval between retries.
 * **schedule**: [JobRecurrenceSchedule](#jobrecurrenceschedule):
 
@@ -219,7 +219,7 @@
 
 ## JobRecurrenceScheduleMonthlyOccurrence
 ### Properties
-* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday. Possible values include: 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
 * **Occurrence**: int: Gets or sets the occurrence. Must be between -5 and 5.
 
 ## JobStatus

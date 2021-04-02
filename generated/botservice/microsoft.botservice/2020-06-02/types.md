@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-06-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk': Required. Gets or sets the Kind of the resource. Possible values include: 'sdk', 'designer', 'bot', 'function'
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk': Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BotProperties](#botproperties): The parameters to provide for the Bot.
@@ -20,7 +20,7 @@
 * **apiVersion**: '2020-06-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk': Required. Gets or sets the Kind of the resource. Possible values include: 'sdk', 'designer', 'bot', 'function'
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk': Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: 'AlexaChannel' | 'DirectLineChannel' | 'DirectLineSpeechChannel' | 'EmailChannel' | 'FacebookChannel' | 'KikChannel' | 'LineChannel' | 'MsTeamsChannel' | 'SkypeChannel' | 'SlackChannel' | 'SmsChannel' | 'TelegramChannel' | 'WebChatChannel' (Required, DeployTimeConstant): The resource name
 * **properties**: [Channel](#channel): Channel definition
@@ -34,7 +34,7 @@
 * **apiVersion**: '2020-06-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk': Required. Gets or sets the Kind of the resource. Possible values include: 'sdk', 'designer', 'bot', 'function'
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk': Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConnectionSettingProperties](#connectionsettingproperties): Properties for a Connection Setting Item
@@ -62,8 +62,8 @@
 
 ## Sku
 ### Properties
-* **name**: 'F0' | 'S1' (Required): The sku name. Possible values include: 'F0', 'S1'
-* **tier**: 'Free' | 'Standard' (ReadOnly): Gets the sku tier. This is based on the SKU name. Possible values include: 'Free', 'Standard'
+* **name**: 'F0' | 'S1' (Required): The sku name.
+* **tier**: 'Free' | 'Standard' (ReadOnly): Gets the sku tier. This is based on the SKU name.
 
 ## Dictionary<string,String>
 ### Properties

@@ -28,7 +28,7 @@
 * **createdDateTime**: string: The date and time stamp when the workspace was created.
 * **managedResourceGroupId**: string (Required): The managed resource group Id.
 * **parameters**: [WorkspaceCustomParameters](#workspacecustomparameters): Custom Parameters used for Cluster Creation.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The workspace provisioning state. Possible values include: 'Accepted', 'Running', 'Ready', 'Creating', 'Created', 'Deleting', 'Deleted', 'Canceled', 'Failed', 'Succeeded', 'Updating'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The workspace provisioning state.
 * **storageAccountIdentity**: [ManagedIdentityConfiguration](#managedidentityconfiguration): The Managed Identity details for storage account.
 * **uiDefinitionUri**: string: The blob URI where the UI definition file is located.
 * **updatedBy**: [CreatedBy](#createdby): Provides details of the entity that created/updated the workspace.
@@ -59,23 +59,23 @@
 
 ## WorkspaceCustomStringParameter
 ### Properties
-* **type**: 'Bool' | 'Object' | 'String': The type of variable that this is. Possible values include: 'Bool', 'Object', 'String'
+* **type**: 'Bool' | 'Object' | 'String': The type of variable that this is.
 * **value**: string (Required): The value which should be used for this field.
 
 ## WorkspaceCustomBooleanParameter
 ### Properties
-* **type**: 'Bool' | 'Object' | 'String': The type of variable that this is. Possible values include: 'Bool', 'Object', 'String'
+* **type**: 'Bool' | 'Object' | 'String': The type of variable that this is.
 * **value**: bool (Required): The value which should be used for this field.
 
 ## WorkspaceEncryptionParameter
 ### Properties
-* **type**: 'Bool' | 'Object' | 'String': The type of variable that this is. Possible values include: 'Bool', 'Object', 'String'
+* **type**: 'Bool' | 'Object' | 'String': The type of variable that this is.
 * **value**: [Encryption](#encryption): The object that contains details of encryption used on the workspace.
 
 ## Encryption
 ### Properties
 * **KeyName**: string: The name of KeyVault key.
-* **keySource**: 'Default' | 'Microsoft.Keyvault': The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault. Possible values include: 'Default', 'Microsoft.Keyvault'
+* **keySource**: 'Default' | 'Microsoft.Keyvault': The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault.
 * **keyvaulturi**: string: The Uri of KeyVault.
 * **keyversion**: string: The version of KeyVault key.
 
@@ -102,8 +102,8 @@
 * **allowVirtualNetworkAccess**: bool: Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
 * **databricksAddressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
 * **databricksVirtualNetwork**: [schemas:27_databricksVirtualNetwork](#schemas27databricksvirtualnetwork):  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
-* **peeringState**: 'Connected' | 'Disconnected' | 'Initiated' (ReadOnly): The status of the virtual network peering. Possible values include: 'Initiated', 'Connected', 'Disconnected'
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the virtual network peering resource. Possible values include: 'Succeeded', 'Updating', 'Deleting', 'Failed'
+* **peeringState**: 'Connected' | 'Disconnected' | 'Initiated' (ReadOnly): The status of the virtual network peering.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the virtual network peering resource.
 * **remoteAddressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
 * **remoteVirtualNetwork**: [schemas:27_databricksVirtualNetwork](#schemas27databricksvirtualnetwork) (Required):  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
 * **useRemoteGateways**: bool: If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.

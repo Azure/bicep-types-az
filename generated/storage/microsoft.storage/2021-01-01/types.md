@@ -7,7 +7,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The complex type of the extended location.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): Identity for the resource.
-* **kind**: 'BlobStorage' | 'BlockBlobStorage' | 'FileStorage' | 'Storage' | 'StorageV2' (Required): Required. Indicates the type of storage account. Possible values include: 'Storage', 'StorageV2', 'BlobStorage', 'FileStorage', 'BlockBlobStorage'
+* **kind**: 'BlobStorage' | 'BlockBlobStorage' | 'FileStorage' | 'Storage' | 'StorageV2' (Required): Required. Indicates the type of storage account.
 * **location**: string (Required): Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters): The parameters used to create the storage account.
@@ -150,13 +150,13 @@
 ## ExtendedLocation
 ### Properties
 * **name**: string: The name of the extended location.
-* **type**: 'EdgeZone': The type of the extended location. Possible values include: 'EdgeZone'
+* **type**: 'EdgeZone': The type of the extended location.
 
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned' (Required): The identity type. Possible values include: 'None', 'SystemAssigned', 'UserAssigned', 'SystemAssigned,UserAssigned'
+* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned' (Required): The identity type.
 * **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity): Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this storage account. The key is the ARM resource identifier of the identity. Only 1 User Assigned identity is permitted here.
 
 ## Dictionary<string,UserAssignedIdentity>
@@ -171,7 +171,7 @@
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
-* **accessTier**: 'Cool' | 'Hot': Required for storage accounts where kind = BlobStorage. The access tier used for billing. Possible values include: 'Hot', 'Cool'
+* **accessTier**: 'Cool' | 'Hot': Required for storage accounts where kind = BlobStorage. The access tier used for billing.
 * **allowBlobPublicAccess**: bool: Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.
 * **allowSharedKeyAccess**: bool: Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.
 * **azureFilesIdentityBasedAuthentication**: [AzureFilesIdentityBasedAuthentication](#azurefilesidentitybasedauthentication): Settings for Azure Files identity based authentication.
@@ -183,25 +183,25 @@
 * **geoReplicationStats**: [GeoReplicationStats](#georeplicationstats) (ReadOnly): Statistics related to replication for storage account's Blob, Table, Queue and File services. It is only available when geo-redundant replication is enabled for the storage account.
 * **isHnsEnabled**: bool: Account HierarchicalNamespace enabled if sets to true.
 * **isNfsV3Enabled**: bool: NFS 3.0 protocol support enabled if set to true.
-* **largeFileSharesState**: 'Disabled' | 'Enabled': Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled. Possible values include: 'Disabled', 'Enabled'
+* **largeFileSharesState**: 'Disabled' | 'Enabled': Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.
 * **lastGeoFailoverTime**: string (ReadOnly): Gets the timestamp of the most recent instance of a failover to the secondary location. Only the most recent timestamp is retained. This element is not returned if there has never been a failover instance. Only available if the accountType is Standard_GRS or Standard_RAGRS.
-* **minimumTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2': Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property. Possible values include: 'TLS1_0', 'TLS1_1', 'TLS1_2'
+* **minimumTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2': Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.
 * **networkAcls**: [NetworkRuleSet](#networkruleset): Network rule set
 * **primaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): The URIs that are used to perform a retrieval of a public blob, queue, table, web or dfs object.
 * **primaryLocation**: string (ReadOnly): Gets the location of the primary data center for the storage account.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connection associated with the specified storage account
-* **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly): Gets the status of the storage account at the time the operation was called. Possible values include: 'Creating', 'ResolvingDNS', 'Succeeded'
+* **provisioningState**: 'Creating' | 'ResolvingDNS' | 'Succeeded' (ReadOnly): Gets the status of the storage account at the time the operation was called.
 * **routingPreference**: [RoutingPreference](#routingpreference): Routing preference defines the type of network, either microsoft or internet routing to be used to deliver the user data, the default option is microsoft routing
 * **secondaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): The URIs that are used to perform a retrieval of a public blob, queue, table, web or dfs object.
 * **secondaryLocation**: string (ReadOnly): Gets the location of the geo-replicated secondary for the storage account. Only available if the accountType is Standard_GRS or Standard_RAGRS.
-* **statusOfPrimary**: 'available' | 'unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable. Possible values include: 'available', 'unavailable'
-* **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly): Gets the status indicating whether the secondary location of the storage account is available or unavailable. Only available if the SKU name is Standard_GRS or Standard_RAGRS. Possible values include: 'available', 'unavailable'
+* **statusOfPrimary**: 'available' | 'unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable.
+* **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly): Gets the status indicating whether the secondary location of the storage account is available or unavailable. Only available if the SKU name is Standard_GRS or Standard_RAGRS.
 * **supportsHttpsTrafficOnly**: bool: Allows https traffic only to storage service if sets to true. The default value is true since API version 2019-04-01.
 
 ## AzureFilesIdentityBasedAuthentication
 ### Properties
 * **activeDirectoryProperties**: [ActiveDirectoryProperties](#activedirectoryproperties): Settings properties for Active Directory (AD).
-* **directoryServiceOptions**: 'AADDS' | 'AD' | 'None' (Required): Indicates the directory service used. Possible values include: 'None', 'AADDS', 'AD'
+* **directoryServiceOptions**: 'AADDS' | 'AD' | 'None' (Required): Indicates the directory service used.
 
 ## ActiveDirectoryProperties
 ### Properties
@@ -217,7 +217,7 @@
 * **failureReason**: string (ReadOnly): Failure reason when blob restore is failed.
 * **parameters**: [BlobRestoreParameters](#blobrestoreparameters) (ReadOnly): Blob restore parameters
 * **restoreId**: string (ReadOnly): Id for tracking blob restore request.
-* **status**: 'Complete' | 'Failed' | 'InProgress' (ReadOnly): The status of blob restore progress. Possible values are: - InProgress: Indicates that blob restore is ongoing. - Complete: Indicates that blob restore has been completed successfully. - Failed: Indicates that blob restore is failed. Possible values include: 'InProgress', 'Complete', 'Failed'
+* **status**: 'Complete' | 'Failed' | 'InProgress' (ReadOnly): The status of blob restore progress. Possible values are: - InProgress: Indicates that blob restore is ongoing. - Complete: Indicates that blob restore has been completed successfully. - Failed: Indicates that blob restore is failed.
 
 ## BlobRestoreParameters
 ### Properties
@@ -237,7 +237,7 @@
 ## Encryption
 ### Properties
 * **identity**: [EncryptionIdentity](#encryptionidentity): Encryption identity for the storage account.
-* **keySource**: 'Microsoft.Keyvault' | 'Microsoft.Storage' (Required): The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault. Possible values include: 'Microsoft.Storage', 'Microsoft.Keyvault'
+* **keySource**: 'Microsoft.Keyvault' | 'Microsoft.Storage' (Required): The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault.
 * **keyvaultproperties**: [KeyVaultProperties](#keyvaultproperties): Properties of key vault.
 * **requireInfrastructureEncryption**: bool: A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
 * **services**: [EncryptionServices](#encryptionservices): A list of services that support encryption.
@@ -264,26 +264,26 @@
 ## EncryptionService
 ### Properties
 * **enabled**: bool: A boolean indicating whether or not the service encrypts the data as it is stored.
-* **keyType**: 'Account' | 'Service': Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used. Possible values include: 'Service', 'Account'
+* **keyType**: 'Account' | 'Service': Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.
 * **lastEnabledTime**: string (ReadOnly): Gets a rough estimate of the date/time when the encryption was last enabled by the user. Only returned when encryption is enabled. There might be some unencrypted blobs which were written after this time, as it is just a rough estimate.
 
 ## GeoReplicationStats
 ### Properties
 * **canFailover**: bool (ReadOnly): A boolean flag which indicates whether or not account failover is supported for the account.
 * **lastSyncTime**: string (ReadOnly): All primary writes preceding this UTC date/time value are guaranteed to be available for read operations. Primary writes following this point in time may or may not be available for reads. Element may be default value if value of LastSyncTime is not available, this can happen if secondary is offline or we are in bootstrap.
-* **status**: 'Bootstrap' | 'Live' | 'Unavailable' (ReadOnly): The status of the secondary location. Possible values are: - Live: Indicates that the secondary location is active and operational. - Bootstrap: Indicates initial synchronization from the primary location to the secondary location is in progress.This typically occurs when replication is first enabled. - Unavailable: Indicates that the secondary location is temporarily unavailable. Possible values include: 'Live', 'Bootstrap', 'Unavailable'
+* **status**: 'Bootstrap' | 'Live' | 'Unavailable' (ReadOnly): The status of the secondary location. Possible values are: - Live: Indicates that the secondary location is active and operational. - Bootstrap: Indicates initial synchronization from the primary location to the secondary location is in progress.This typically occurs when replication is first enabled. - Unavailable: Indicates that the secondary location is temporarily unavailable.
 
 ## NetworkRuleSet
 ### Properties
-* **bypass**: 'AzureServices' | 'Logging' | 'Metrics' | 'None': Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics. Possible values include: 'None', 'Logging', 'Metrics', 'AzureServices'
-* **defaultAction**: 'Allow' | 'Deny' (Required): Specifies the default action of allow or deny when no other rules match. Possible values include: 'Allow', 'Deny'
+* **bypass**: 'AzureServices' | 'Logging' | 'Metrics' | 'None': Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.
+* **defaultAction**: 'Allow' | 'Deny' (Required): Specifies the default action of allow or deny when no other rules match.
 * **ipRules**: [IPRule](#iprule)[]: Sets the IP ACL rules
 * **resourceAccessRules**: [ResourceAccessRule](#resourceaccessrule)[]: Sets the resource access rules
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: Sets the virtual network rules
 
 ## IPRule
 ### Properties
-* **action**: 'Allow': The action of IP ACL rule. Possible values include: 'Allow'
+* **action**: 'Allow': The action of IP ACL rule.
 * **value**: string (Required): Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
 
 ## ResourceAccessRule
@@ -293,9 +293,9 @@
 
 ## VirtualNetworkRule
 ### Properties
-* **action**: 'Allow': The action of virtual network rule. Possible values include: 'Allow'
+* **action**: 'Allow': The action of virtual network rule.
 * **id**: string (Required): Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
-* **state**: 'deprovisioning' | 'failed' | 'networkSourceDeleted' | 'provisioning' | 'succeeded': Gets the state of virtual network rule. Possible values include: 'provisioning', 'deprovisioning', 'succeeded', 'failed', 'networkSourceDeleted'
+* **state**: 'deprovisioning' | 'failed' | 'networkSourceDeleted' | 'provisioning' | 'succeeded': Gets the state of virtual network rule.
 
 ## Endpoints
 ### Properties
@@ -335,7 +335,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The provisioning state of the private endpoint connection resource. Possible values include: 'Succeeded', 'Creating', 'Deleting', 'Failed'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The provisioning state of the private endpoint connection resource.
 
 ## PrivateEndpoint
 ### Properties
@@ -345,18 +345,18 @@
 ### Properties
 * **actionRequired**: string (ReadOnly): A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string (ReadOnly): The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected' (ReadOnly): Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service. Possible values include: 'Pending', 'Approved', 'Rejected'
+* **status**: 'Approved' | 'Pending' | 'Rejected' (ReadOnly): Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## RoutingPreference
 ### Properties
 * **publishInternetEndpoints**: bool: A boolean flag which indicates whether internet routing storage endpoints are to be published
 * **publishMicrosoftEndpoints**: bool: A boolean flag which indicates whether microsoft routing storage endpoints are to be published
-* **routingChoice**: 'InternetRouting' | 'MicrosoftRouting': Routing Choice defines the kind of network routing opted by the user. Possible values include: 'MicrosoftRouting', 'InternetRouting'
+* **routingChoice**: 'InternetRouting' | 'MicrosoftRouting': Routing Choice defines the kind of network routing opted by the user.
 
 ## Sku
 ### Properties
-* **name**: 'Premium_LRS' | 'Premium_ZRS' | 'Standard_GRS' | 'Standard_GZRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_RAGZRS' | 'Standard_ZRS' (Required): Possible values include: 'Standard_LRS', 'Standard_GRS', 'Standard_RAGRS', 'Standard_ZRS', 'Premium_LRS', 'Premium_ZRS', 'Standard_GZRS', 'Standard_RAGZRS'
-* **tier**: 'Premium' | 'Standard': Possible values include: 'Standard', 'Premium'
+* **name**: 'Premium_LRS' | 'Premium_ZRS' | 'Standard_GRS' | 'Standard_GZRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_RAGZRS' | 'Standard_ZRS' (Required):
+* **tier**: 'Premium' | 'Standard':
 
 ## Dictionary<string,String>
 ### Properties
@@ -401,7 +401,7 @@
 ### Properties
 * **blobType**: string[]: An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only
 * **enable**: bool (Required): When set to true last access time based tracking is enabled.
-* **name**: 'AccessTimeTracking': Name of the policy. The valid value is AccessTimeTracking. This field is currently read only. Possible values include: 'AccessTimeTracking'
+* **name**: 'AccessTimeTracking': Name of the policy. The valid value is AccessTimeTracking. This field is currently read only.
 * **trackingGranularityInDays**: int: The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1
 
 ## RestorePolicyProperties
@@ -421,12 +421,12 @@
 * **hasLegalHold**: bool (ReadOnly): The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.
 * **immutabilityPolicy**: [ImmutabilityPolicyProperties](#immutabilitypolicyproperties) (ReadOnly): The properties of an ImmutabilityPolicy of a blob container.
 * **lastModifiedTime**: string (ReadOnly): Returns the date and time the container was last modified.
-* **leaseDuration**: 'Fixed' | 'Infinite' (ReadOnly): Specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased. Possible values include: 'Infinite', 'Fixed'
-* **leaseState**: 'Available' | 'Breaking' | 'Broken' | 'Expired' | 'Leased' (ReadOnly): Lease state of the container. Possible values include: 'Available', 'Leased', 'Expired', 'Breaking', 'Broken'
-* **leaseStatus**: 'Locked' | 'Unlocked' (ReadOnly): The lease status of the container. Possible values include: 'Locked', 'Unlocked'
+* **leaseDuration**: 'Fixed' | 'Infinite' (ReadOnly): Specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased.
+* **leaseState**: 'Available' | 'Breaking' | 'Broken' | 'Expired' | 'Leased' (ReadOnly): Lease state of the container.
+* **leaseStatus**: 'Locked' | 'Unlocked' (ReadOnly): The lease status of the container.
 * **legalHold**: [LegalHoldProperties](#legalholdproperties) (ReadOnly): The LegalHold property of a blob container.
 * **metadata**: [Dictionary<string,String>](#dictionarystringstring): A name-value pair to associate with the container as metadata.
-* **publicAccess**: 'Blob' | 'Container' | 'None': Specifies whether data in the container may be accessed publicly and the level of access. Possible values include: 'Container', 'Blob', 'None'
+* **publicAccess**: 'Blob' | 'Container' | 'None': Specifies whether data in the container may be accessed publicly and the level of access.
 * **remainingRetentionDays**: int (ReadOnly): Remaining retention days for soft deleted blob container.
 * **version**: string (ReadOnly): The version of the deleted blob container.
 
@@ -440,7 +440,7 @@
 ### Properties
 * **allowProtectedAppendWrites**: bool: This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
 * **immutabilityPeriodSinceCreationInDays**: int: The immutability period for the blobs in the container since the policy creation, in days.
-* **state**: 'Locked' | 'Unlocked' (ReadOnly): The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked. Possible values include: 'Locked', 'Unlocked'
+* **state**: 'Locked' | 'Unlocked' (ReadOnly): The ImmutabilityPolicy state of a blob container,
 
 ## UpdateHistoryProperty
 ### Properties
@@ -448,7 +448,7 @@
 * **objectIdentifier**: string (ReadOnly): Returns the Object ID of the user who updated the ImmutabilityPolicy.
 * **tenantId**: string (ReadOnly): Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.
 * **timestamp**: string (ReadOnly): Returns the date and time the ImmutabilityPolicy was updated.
-* **update**: 'extend' | 'lock' | 'put' (ReadOnly): The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend. Possible values include: 'put', 'lock', 'extend'
+* **update**: 'extend' | 'lock' | 'put' (ReadOnly): The ImmutabilityPolicy update type of a blob container,
 * **upn**: string (ReadOnly): Returns the User Principal Name of the user who updated the ImmutabilityPolicy.
 
 ## LegalHoldProperties
@@ -475,8 +475,8 @@
 * **keyVaultProperties**: [EncryptionScopeKeyVaultProperties](#encryptionscopekeyvaultproperties): The key vault properties for the encryption scope. This is a required field if encryption scope 'source' attribute is set to 'Microsoft.KeyVault'.
 * **lastModifiedTime**: string (ReadOnly): Gets the last modification date and time of the encryption scope in UTC.
 * **requireInfrastructureEncryption**: bool: A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
-* **source**: 'Microsoft.KeyVault' | 'Microsoft.Storage': The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault. Possible values include: 'Microsoft.Storage', 'Microsoft.KeyVault'
-* **state**: 'Disabled' | 'Enabled': The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled. Possible values include: 'Enabled', 'Disabled'
+* **source**: 'Microsoft.KeyVault' | 'Microsoft.Storage': The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.
+* **state**: 'Disabled' | 'Enabled': The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled.
 
 ## EncryptionScopeKeyVaultProperties
 ### Properties
@@ -508,16 +508,16 @@
 
 ## FileShareProperties
 ### Properties
-* **accessTier**: 'Cool' | 'Hot' | 'Premium' | 'TransactionOptimized': Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium. Possible values include: 'TransactionOptimized', 'Hot', 'Cool', 'Premium'
+* **accessTier**: 'Cool' | 'Hot' | 'Premium' | 'TransactionOptimized': Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
 * **accessTierChangeTime**: string (ReadOnly): Indicates the last modification time for share access tier.
 * **accessTierStatus**: string (ReadOnly): Indicates if there is a pending transition for access tier.
 * **deleted**: bool (ReadOnly): Indicates whether the share was deleted.
 * **deletedTime**: string (ReadOnly): The deleted time if the share was deleted.
-* **enabledProtocols**: 'NFS' | 'SMB': The authentication protocol that is used for the file share. Can only be specified when creating a share. Possible values include: 'SMB', 'NFS'
+* **enabledProtocols**: 'NFS' | 'SMB': The authentication protocol that is used for the file share. Can only be specified when creating a share.
 * **lastModifiedTime**: string (ReadOnly): Returns the date and time the share was last modified.
 * **metadata**: [Dictionary<string,String>](#dictionarystringstring): A name-value pair to associate with the share as metadata.
 * **remainingRetentionDays**: int (ReadOnly): Remaining retention days for share that was soft deleted.
-* **rootSquash**: 'AllSquash' | 'NoRootSquash' | 'RootSquash': The property is for NFS share only. The default is NoRootSquash. Possible values include: 'NoRootSquash', 'RootSquash', 'AllSquash'
+* **rootSquash**: 'AllSquash' | 'NoRootSquash' | 'RootSquash': The property is for NFS share only. The default is NoRootSquash.
 * **shareQuota**: int: The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
 * **shareUsageBytes**: int (ReadOnly): The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.
 * **snapshotTime**: string (ReadOnly): Creation time of share snapshot returned in the response of list shares with expand param "snapshots".
@@ -561,10 +561,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## ManagementPolicyProperties
 ### Properties

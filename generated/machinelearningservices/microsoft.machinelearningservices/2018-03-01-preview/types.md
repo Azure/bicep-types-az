@@ -28,7 +28,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned': The identity type. Possible values include: 'SystemAssigned'
+* **type**: 'SystemAssigned': The identity type.
 
 ## WorkspaceProperties
 ### Properties
@@ -40,7 +40,7 @@
 * **discoveryUrl**: string: Url for the discovery service to identify regional endpoints for machine learning experimentation services
 * **friendlyName**: string: The friendly name for this workspace. This name in mutable
 * **keyVault**: string: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning. Possible values include: 'Unknown', 'Updating', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
 * **storageAccount**: string: ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
 * **workspaceId**: string (ReadOnly): The immutable id associated with this workspace.
 
@@ -57,7 +57,7 @@
 * **description**: string: The description of the Machine Learning compute.
 * **modifiedOn**: string (ReadOnly): The date and time when the compute was last modified.
 * **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Errors during provisioning
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed. Possible values include: 'Unknown', 'Updating', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
 * **resourceId**: string: ARM resource id of the compute
 ### AKS
 #### Properties
@@ -117,7 +117,7 @@
 * **cert**: string: Cert data
 * **cname**: string: CNAME of the cert
 * **key**: string: Key data
-* **status**: 'Disabled' | 'Enabled': Enable or disable SSL for scoring. Possible values include: 'Disabled', 'Enabled'
+* **status**: 'Disabled' | 'Enabled': Enable or disable SSL for scoring.
 
 ## SystemService
 ### Properties

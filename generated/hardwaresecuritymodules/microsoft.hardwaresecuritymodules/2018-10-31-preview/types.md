@@ -16,7 +16,7 @@
 ## DedicatedHsmProperties
 ### Properties
 * **networkProfile**: [NetworkProfile](#networkprofile):
-* **provisioningState**: 'Allocating' | 'CheckingQuota' | 'Connecting' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Succeeded', 'Provisioning', 'Allocating', 'Connecting', 'Failed', 'CheckingQuota', 'Deleting'
+* **provisioningState**: 'Allocating' | 'CheckingQuota' | 'Connecting' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
 * **stampId**: string: This field will be used when RP does not support Availability zones.
 * **statusMessage**: string (ReadOnly): Resource Status Message.
 
@@ -36,7 +36,7 @@
 
 ## Sku
 ### Properties
-* **name**: 'SafeNet Luna Network HSM A790': SKU of the dedicated HSM. Possible values include: 'SafeNet Luna Network HSM A790'
+* **name**: 'SafeNet Luna Network HSM A790': SKU of the dedicated HSM.
 
 ## Dictionary<string,String>
 ### Properties

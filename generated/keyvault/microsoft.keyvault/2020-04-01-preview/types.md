@@ -58,12 +58,12 @@
 
 ## ManagedHsmProperties
 ### Properties
-* **createMode**: 'default' | 'recover': The create mode to indicate whether the resource is being created or is being recovered from a deleted resource. Possible values include: 'recover', 'default'
+* **createMode**: 'default' | 'recover': The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.
 * **enablePurgeProtection**: bool: Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.
 * **enableSoftDelete**: bool: Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.
 * **hsmUri**: string (ReadOnly): The URI of the managed hsm pool for performing operations on keys.
 * **initialAdminObjectIds**: string[]: Array of initial administrators object ids for this managed hsm pool.
-* **provisioningState**: 'Activated' | 'Deleting' | 'Failed' | 'Provisioning' | 'Restoring' | 'SecurityDomainRestore' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state. Possible values include: 'Succeeded', 'Provisioning', 'Failed', 'Updating', 'Deleting', 'Activated', 'SecurityDomainRestore', 'Restoring'
+* **provisioningState**: 'Activated' | 'Deleting' | 'Failed' | 'Provisioning' | 'Restoring' | 'SecurityDomainRestore' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state.
 * **softDeleteRetentionInDays**: int: softDelete data retention days. It accepts >=7 and <=90.
 * **statusMessage**: string (ReadOnly): Resource Status Message.
 * **tenantId**: string: The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.
@@ -71,7 +71,7 @@
 ## ManagedHsmSku
 ### Properties
 * **family**: string (Required): SKU Family of the managed HSM Pool
-* **name**: 'Custom_B32' | 'Standard_B1' (Required): SKU of the managed HSM Pool. Possible values include: 'Standard_B1', 'Custom_B32'
+* **name**: 'Custom_B32' | 'Standard_B1' (Required): SKU of the managed HSM Pool.
 
 ## Dictionary<string,String>
 ### Properties
@@ -81,7 +81,7 @@
 ## VaultProperties
 ### Properties
 * **accessPolicies**: [AccessPolicyEntry](#accesspolicyentry)[]: An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.
-* **createMode**: 'default' | 'recover': The vault's create mode to indicate whether the vault need to be recovered or not. Possible values include: 'recover', 'default'
+* **createMode**: 'default' | 'recover': The vault's create mode to indicate whether the vault need to be recovered or not.
 * **enabledForDeployment**: bool: Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.
 * **enabledForDiskEncryption**: bool: Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
 * **enabledForTemplateDeployment**: bool: Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.
@@ -90,7 +90,7 @@
 * **enableSoftDelete**: bool: Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.
 * **networkAcls**: [NetworkRuleSet](#networkruleset): A set of rules governing the network accessibility of a vault.
 * **privateEndpointConnections**: [PrivateEndpointConnectionItem](#privateendpointconnectionitem)[] (ReadOnly): List of private endpoint connections associated with the key vault.
-* **provisioningState**: 'RegisteringDns' | 'Succeeded': Provisioning state of the vault. Possible values include: 'Succeeded', 'RegisteringDns'
+* **provisioningState**: 'RegisteringDns' | 'Succeeded': Provisioning state of the vault.
 * **sku**: [Sku](#sku) (Required): SKU details
 * **softDeleteRetentionInDays**: int: softDelete data retention days. It accepts >=7 and <=90.
 * **tenantId**: string (Required): The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
@@ -112,8 +112,8 @@
 
 ## NetworkRuleSet
 ### Properties
-* **bypass**: 'AzureServices' | 'None': Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'. Possible values include: 'AzureServices', 'None'
-* **defaultAction**: 'Allow' | 'Deny': The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated. Possible values include: 'Allow', 'Deny'
+* **bypass**: 'AzureServices' | 'None': Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.
+* **defaultAction**: 'Allow' | 'Deny': The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
 * **ipRules**: [IPRule](#iprule)[]: The list of IP address rules.
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: The list of virtual network rules.
 
@@ -135,7 +135,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint object properties.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): An object that represents the approval state of the private link connection.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Disconnected' | 'Failed' | 'Succeeded' | 'Updating': Provisioning state of the private endpoint connection. Possible values include: 'Succeeded', 'Creating', 'Updating', 'Deleting', 'Failed', 'Disconnected'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Disconnected' | 'Failed' | 'Succeeded' | 'Updating': Provisioning state of the private endpoint connection.
 
 ## PrivateEndpoint
 ### Properties
@@ -143,14 +143,14 @@
 
 ## PrivateLinkServiceConnectionState
 ### Properties
-* **actionsRequired**: 'None': A message indicating if changes on the service provider require any updates on the consumer. Possible values include: 'None'
+* **actionsRequired**: 'None': A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval or rejection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Indicates whether the connection has been approved, rejected or removed by the key vault owner. Possible values include: 'Pending', 'Approved', 'Rejected', 'Disconnected'
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Indicates whether the connection has been approved, rejected or removed by the key vault owner.
 
 ## Sku
 ### Properties
 * **family**: string (Required): SKU family name
-* **name**: 'premium' | 'standard' (Required): SKU name to specify whether the key vault is a standard vault or a premium vault. Possible values include: 'standard', 'premium'
+* **name**: 'premium' | 'standard' (Required): SKU name to specify whether the key vault is a standard vault or a premium vault.
 
 ## Dictionary<string,String>
 ### Properties

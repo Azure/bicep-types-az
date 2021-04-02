@@ -76,7 +76,7 @@
 * **modifiedOn**: string (ReadOnly): Read Only: The date and time when the web service was last modified.
 * **output**: [ServiceInputOutputSpecification](#serviceinputoutputspecification): The swagger 2.0 schema describing the service's inputs or outputs. See Swagger specification: http://swagger.io/specification/
 * **parameters**: [Dictionary<string,String>](#dictionarystringstring): The set of global parameters values defined for the web service, given as a global parameter name to default value map. If no default value is specified, the parameter is considered to be required.
-* **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' (ReadOnly): Read Only: The provision state of the web service. Valid values are Unknown, Provisioning, Succeeded, and Failed. Possible values include: 'Unknown', 'Provisioning', 'Succeeded', 'Failed'
+* **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' (ReadOnly): Read Only: The provision state of the web service. Valid values are Unknown, Provisioning, Succeeded, and Failed.
 * **readOnly**: bool: When set to true, indicates that the web service is read-only and can no longer be updated or patched, only removed. Default, is false. Note: Once set to true, you cannot change its value.
 * **realtimeConfiguration**: [RealtimeConfiguration](#realtimeconfiguration): Holds the available configuration options for an Azure ML web service endpoint.
 * **storageAccount**: [StorageAccount](#storageaccount): Access information for a storage account.
@@ -102,7 +102,7 @@
 * **name**: string (Required): Asset's friendly name.
 * **outputPorts**: [Dictionary<string,OutputPort>](#dictionarystringoutputport): Information about the asset's output ports.
 * **parameters**: [ModuleAssetParameter](#moduleassetparameter)[]: If the asset is a custom module, this holds the module's parameters.
-* **type**: 'Module' | 'Resource' (Required): Asset's type. Possible values include: 'Module', 'Resource'
+* **type**: 'Module' | 'Resource' (Required): Asset's type.
 
 ## Dictionary<string,InputPort>
 ### Properties
@@ -111,7 +111,7 @@
 
 ## InputPort
 ### Properties
-* **type**: 'Dataset': Port data type. Possible values include: 'Dataset'
+* **type**: 'Dataset': Port data type.
 
 ## AssetLocation
 ### Properties
@@ -130,7 +130,7 @@
 
 ## OutputPort
 ### Properties
-* **type**: 'Dataset': Port data type. Possible values include: 'Dataset'
+* **type**: 'Dataset': Port data type.
 
 ## ModuleAssetParameter
 ### Properties
@@ -155,7 +155,7 @@
 ## DiagnosticsConfiguration
 ### Properties
 * **expiry**: string: Specifies the date and time when the logging will cease. If null, diagnostic collection is not time limited.
-* **level**: 'All' | 'Error' | 'None' (Required): Specifies the verbosity of the diagnostic output. Valid values are: None - disables tracing; Error - collects only error (stderr) traces; All - collects all traces (stdout and stderr). Possible values include: 'None', 'Error', 'All'
+* **level**: 'All' | 'Error' | 'None' (Required): Specifies the verbosity of the diagnostic output. Valid values are: None - disables tracing; Error - collects only error (stderr) traces; All - collects all traces (stdout and stderr).
 
 ## ExampleRequest
 ### Properties
@@ -200,8 +200,8 @@
 ## ColumnSpecification
 ### Properties
 * **enum**: any[]: If the data type is categorical, this provides the list of accepted categories.
-* **format**: 'Byte' | 'Char' | 'Complex128' | 'Complex64' | 'Date-time' | 'Date-timeOffset' | 'Double' | 'Duration' | 'Float' | 'Int16' | 'Int32' | 'Int64' | 'Int8' | 'Uint16' | 'Uint32' | 'Uint64' | 'Uint8': Additional format information for the data type. Possible values include: 'Byte', 'Char', 'Complex64', 'Complex128', 'Date-time', 'Date-timeOffset', 'Double', 'Duration', 'Float', 'Int8', 'Int16', 'Int32', 'Int64', 'Uint8', 'Uint16', 'Uint32', 'Uint64'
-* **type**: 'Boolean' | 'Integer' | 'Number' | 'String' (Required): Data type of the column. Possible values include: 'Boolean', 'Integer', 'Number', 'String'
+* **format**: 'Byte' | 'Char' | 'Complex128' | 'Complex64' | 'Date-time' | 'Date-timeOffset' | 'Double' | 'Duration' | 'Float' | 'Int16' | 'Int32' | 'Int64' | 'Int8' | 'Uint16' | 'Uint32' | 'Uint64' | 'Uint8': Additional format information for the data type.
+* **type**: 'Boolean' | 'Integer' | 'Number' | 'String' (Required): Data type of the column.
 * **x-ms-isnullable**: bool: Flag indicating if the type supports null values or not.
 * **x-ms-isordered**: bool: Flag indicating whether the categories are treated as an ordered set or not, if this is a categorical column.
 
@@ -255,7 +255,7 @@
 ### Properties
 * **description**: string: Description of this graph parameter.
 * **links**: [GraphParameterLink](#graphparameterlink)[] (Required): Association links for this parameter to nodes in the graph.
-* **type**: 'Boolean' | 'ColumnPicker' | 'Credential' | 'DataGatewayName' | 'Double' | 'Enumerated' | 'Float' | 'Int' | 'Mode' | 'ParameterRange' | 'Script' | 'String' (Required): Graph parameter's type. Possible values include: 'String', 'Int', 'Float', 'Enumerated', 'Script', 'Mode', 'Credential', 'Boolean', 'Double', 'ColumnPicker', 'ParameterRange', 'DataGatewayName'
+* **type**: 'Boolean' | 'ColumnPicker' | 'Credential' | 'DataGatewayName' | 'Double' | 'Enumerated' | 'Float' | 'Int' | 'Mode' | 'ParameterRange' | 'Script' | 'String' (Required): Graph parameter's type.
 
 ## GraphParameterLink
 ### Properties

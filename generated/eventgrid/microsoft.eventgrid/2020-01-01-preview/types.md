@@ -43,10 +43,10 @@
 ## DomainProperties
 ### Properties
 * **endpoint**: string (ReadOnly): Endpoint for the domain.
-* **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema': This determines the format that Event Grid should expect for incoming events published to the domain. Possible values include: 'EventGridSchema', 'CustomEventSchema', 'CloudEventSchemaV1_0'
+* **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema': This determines the format that Event Grid should expect for incoming events published to the domain.
 * **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): By default, Event Grid expects events to be in the Event Grid event schema. Specifying an input schema mapping enables publishing to Event Grid using a custom input schema. Currently, the only supported type of InputSchemaMapping is 'JsonInputSchemaMapping'.
 * **metricResourceId**: string (ReadOnly): Metric resource id for the domain.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the domain. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Canceled', 'Failed'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the domain.
 
 ## InputSchemaMapping
 * **Discriminator**: inputSchemaMappingType
@@ -96,17 +96,17 @@ along with a default value to be used, and at least one of these two properties 
 
 ## DomainTopicProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the domain topic. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Canceled', 'Failed'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the domain topic.
 
 ## EventSubscriptionProperties
 ### Properties
 * **deadLetterDestination**: [DeadLetterDestination](#deadletterdestination): Information about the dead letter destination for an event subscription. To configure a deadletter destination, do not directly instantiate an object of this class. Instead, instantiate an object of a derived class. Currently, StorageBlobDeadLetterDestination is the only class that derives from this class.
 * **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination for an event subscription
-* **eventDeliverySchema**: 'CloudEventSchemaV1_0' | 'CustomInputSchema' | 'EventGridSchema': The event delivery schema for the event subscription. Possible values include: 'EventGridSchema', 'CustomInputSchema', 'CloudEventSchemaV1_0'
+* **eventDeliverySchema**: 'CloudEventSchemaV1_0' | 'CustomInputSchema' | 'EventGridSchema': The event delivery schema for the event subscription.
 * **expirationTimeUtc**: string: Expiration time of the event subscription.
 * **filter**: [EventSubscriptionFilter](#eventsubscriptionfilter): Filter for the Event Subscription
 * **labels**: string[]: List of user defined labels.
-* **provisioningState**: 'AwaitingManualAction' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the event subscription. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Canceled', 'Failed', 'AwaitingManualAction'
+* **provisioningState**: 'AwaitingManualAction' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the event subscription.
 * **retryPolicy**: [RetryPolicy](#retrypolicy): Information about the retry policy for an event subscription
 * **topic**: string (ReadOnly): Name of the topic of the event subscription.
 
@@ -384,10 +384,10 @@ Wildcard characters are not supported in this path.
 ## TopicProperties
 ### Properties
 * **endpoint**: string (ReadOnly): Endpoint for the topic.
-* **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema': This determines the format that Event Grid should expect for incoming events published to the topic. Possible values include: 'EventGridSchema', 'CustomEventSchema', 'CloudEventSchemaV1_0'
+* **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema': This determines the format that Event Grid should expect for incoming events published to the topic.
 * **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): By default, Event Grid expects events to be in the Event Grid event schema. Specifying an input schema mapping enables publishing to Event Grid using a custom input schema. Currently, the only supported type of InputSchemaMapping is 'JsonInputSchemaMapping'.
 * **metricResourceId**: string (ReadOnly): Metric resource id for the topic.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the topic. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Canceled', 'Failed'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the topic.
 
 ## Dictionary<string,String>
 ### Properties

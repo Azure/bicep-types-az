@@ -287,7 +287,7 @@
 
 ## DraDetails
 ### Properties
-* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the DRA. Possible values include: 'None', 'Normal', 'Warning', 'Critical'
+* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the DRA.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): The health errors.
 * **id**: string (ReadOnly): The DRA Id.
 * **lastHeartbeatUtc**: string (ReadOnly): The last heartbeat received from the DRA.
@@ -297,7 +297,7 @@
 ## HealthError
 ### Properties
 * **creationTimeUtc**: string (ReadOnly): Error creation time (UTC)
-* **customerResolvability**: 'Allowed' | 'NotAllowed' (ReadOnly): Value indicating whether the health error is customer resolvable. Possible values include: 'Allowed', 'NotAllowed'
+* **customerResolvability**: 'Allowed' | 'NotAllowed' (ReadOnly): Value indicating whether the health error is customer resolvable.
 * **entityId**: string (ReadOnly): ID of the entity.
 * **errorCategory**: string (ReadOnly): Category of error.
 * **errorCode**: string (ReadOnly): Error code.
@@ -332,9 +332,9 @@
 * **availableMemoryInBytes**: int (ReadOnly): The available memory.
 * **availableSpaceInBytes**: int (ReadOnly): The available disk space.
 * **freeSpacePercentage**: int (ReadOnly): The free disk space percentage.
-* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the process server. Possible values include: 'None', 'Normal', 'Warning', 'Critical'
+* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the process server.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): The health errors.
-* **historicHealth**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The historic health of the process server based on the health in last 24 hours. Possible values include: 'None', 'Normal', 'Warning', 'Critical'
+* **historicHealth**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The historic health of the process server based on the health in last 24 hours.
 * **id**: string (ReadOnly): The process server Id.
 * **lastHeartbeatUtc**: string (ReadOnly): The last heartbeat received from the process server.
 * **memoryUsagePercentage**: int (ReadOnly): The memory usage percentage.
@@ -350,7 +350,7 @@
 
 ## PushInstallerDetails
 ### Properties
-* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the push installer. Possible values include: 'None', 'Normal', 'Warning', 'Critical'
+* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the push installer.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): The health errors.
 * **id**: string (ReadOnly): The push installer Id.
 * **lastHeartbeatUtc**: string (ReadOnly): The last heartbeat received from the push installer.
@@ -359,7 +359,7 @@
 
 ## RcmProxyDetails
 ### Properties
-* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the RCM proxy. Possible values include: 'None', 'Normal', 'Warning', 'Critical'
+* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the RCM proxy.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): The health errors.
 * **id**: string (ReadOnly): The RCM proxy Id.
 * **lastHeartbeatUtc**: string (ReadOnly): The last heartbeat received from the RCM proxy.
@@ -368,7 +368,7 @@
 
 ## ReplicationAgentDetails
 ### Properties
-* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the replication agent. Possible values include: 'None', 'Normal', 'Warning', 'Critical'
+* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the replication agent.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): The health errors.
 * **id**: string (ReadOnly): The replication agent Id.
 * **lastHeartbeatUtc**: string (ReadOnly): The last heartbeat received from the replication agent.
@@ -377,7 +377,7 @@
 
 ## ReprotectAgentDetails
 ### Properties
-* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the reprotect agent. Possible values include: 'None', 'Normal', 'Warning', 'Critical'
+* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the reprotect agent.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): The health errors.
 * **id**: string (ReadOnly): The reprotect agent Id.
 * **lastHeartbeatUtc**: string (ReadOnly): The last heartbeat received from the reprotect agent.
@@ -435,7 +435,7 @@
 ## VersionDetails
 ### Properties
 * **expiryDate**: string (ReadOnly): Version expiry date.
-* **status**: 'Deprecated' | 'NotSupported' | 'SecurityUpdateRequired' | 'Supported' | 'UpdateRequired' (ReadOnly): A value indicating whether security update required. Possible values include: 'Supported', 'NotSupported', 'Deprecated', 'UpdateRequired', 'SecurityUpdateRequired'
+* **status**: 'Deprecated' | 'NotSupported' | 'SecurityUpdateRequired' | 'Supported' | 'UpdateRequired' (ReadOnly): A value indicating whether security update required.
 * **version**: string (ReadOnly): The agent version.
 
 ## MasterTargetServer
@@ -484,7 +484,7 @@
 * **cpuLoad**: string (ReadOnly): The percentage of the CPU load.
 * **cpuLoadStatus**: string (ReadOnly): The CPU load status.
 * **friendlyName**: string (ReadOnly): The Process Server's friendly name.
-* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of Process Server. Possible values include: 'None', 'Normal', 'Warning', 'Critical'
+* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of Process Server.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): Health errors.
 * **hostId**: string (ReadOnly): The agent generated Id.
 * **id**: string (ReadOnly): The Process Server Id.
@@ -641,13 +641,13 @@
 * **health**: string (ReadOnly): The consolidated health.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): The list of health errors.
 * **machineName**: string (ReadOnly): The on-premise virtual machine name.
-* **migrationState**: 'DisableMigrationFailed' | 'DisableMigrationInProgress' | 'EnableMigrationFailed' | 'EnableMigrationInProgress' | 'InitialSeedingFailed' | 'InitialSeedingInProgress' | 'MigrationFailed' | 'MigrationInProgress' | 'MigrationSucceeded' | 'None' | 'Replicating' (ReadOnly): The migration status. Possible values include: 'None', 'EnableMigrationInProgress', 'EnableMigrationFailed', 'DisableMigrationInProgress', 'DisableMigrationFailed', 'InitialSeedingInProgress', 'InitialSeedingFailed', 'Replicating', 'MigrationInProgress', 'MigrationSucceeded', 'MigrationFailed'
+* **migrationState**: 'DisableMigrationFailed' | 'DisableMigrationInProgress' | 'EnableMigrationFailed' | 'EnableMigrationInProgress' | 'InitialSeedingFailed' | 'InitialSeedingInProgress' | 'MigrationFailed' | 'MigrationInProgress' | 'MigrationSucceeded' | 'None' | 'Replicating' (ReadOnly): The migration status.
 * **migrationStateDescription**: string (ReadOnly): The migration state description.
 * **policyFriendlyName**: string (ReadOnly): The name of policy governing this item.
 * **policyId**: string (Required): The policy Id.
 * **providerSpecificDetails**: [EnableMigrationProviderSpecificInput](#enablemigrationproviderspecificinput) (Required): Enable migration provider specific input.
 * **recoveryServicesProviderId**: string (ReadOnly): The recovery services provider ARM Id.
-* **testMigrateState**: 'None' | 'TestMigrationCleanupInProgress' | 'TestMigrationFailed' | 'TestMigrationInProgress' | 'TestMigrationSucceeded' (ReadOnly): The test migrate state. Possible values include: 'None', 'TestMigrationInProgress', 'TestMigrationSucceeded', 'TestMigrationFailed', 'TestMigrationCleanupInProgress'
+* **testMigrateState**: 'None' | 'TestMigrationCleanupInProgress' | 'TestMigrationFailed' | 'TestMigrationInProgress' | 'TestMigrationSucceeded' (ReadOnly): The test migrate state.
 * **testMigrateStateDescription**: string (ReadOnly): The test migrate state description.
 
 ## CurrentJobDetails
@@ -665,7 +665,7 @@
 * **disksToInclude**: [VMwareCbtDiskInput](#vmwarecbtdiskinput)[] (Required, WriteOnly): The disks to include list.
 * **instanceType**: 'VMwareCbt' (Required): VMware Cbt specific policy details.
 * **lastRecoveryPointReceived**: string (ReadOnly): The last recovery point received time.
-* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License type. Possible values include: 'NotSpecified', 'NoLicenseType', 'WindowsServer'
+* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License type.
 * **migrationRecoveryPointId**: string (ReadOnly): The recovery point Id to which the VM was migrated.
 * **osType**: string (ReadOnly): The type of the OS on the VM.
 * **protectedDisks**: [VMwareCbtProtectedDiskDetails](#vmwarecbtprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
@@ -688,7 +688,7 @@
 * **disksToInclude**: [VMwareCbtDiskInput](#vmwarecbtdiskinput)[] (Required, WriteOnly): The disks to include list.
 * **instanceType**: 'VMwareCbt' (Required): VMware Cbt specific policy details.
 * **lastRecoveryPointReceived**: string (ReadOnly): The last recovery point received time.
-* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License type. Possible values include: 'NotSpecified', 'NoLicenseType', 'WindowsServer'
+* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License type.
 * **migrationRecoveryPointId**: string (ReadOnly): The recovery point Id to which the VM was migrated.
 * **osType**: string (ReadOnly): The type of the OS on the VM.
 * **protectedDisks**: [VMwareCbtProtectedDiskDetails](#vmwarecbtprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
@@ -707,7 +707,7 @@
 ## VMwareCbtDiskInput
 ### Properties
 * **diskId**: string (Required, WriteOnly): The disk Id.
-* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (WriteOnly): The disk type. Possible values include: 'Standard_LRS', 'Premium_LRS', 'StandardSSD_LRS'
+* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (WriteOnly): The disk type.
 * **isOSDisk**: string (Required, WriteOnly): A value indicating whether the disk is the OS disk.
 * **logStorageAccountId**: string (Required, WriteOnly): The log storage account ARM Id.
 * **logStorageAccountSasSecretName**: string (Required, WriteOnly): The key vault secret name of the log storage account.
@@ -718,7 +718,7 @@
 * **diskId**: string (ReadOnly): The disk id.
 * **diskName**: string (ReadOnly): The disk name.
 * **diskPath**: string (ReadOnly): The disk path.
-* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (ReadOnly): The disk type. Possible values include: 'Standard_LRS', 'Premium_LRS', 'StandardSSD_LRS'
+* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (ReadOnly): The disk type.
 * **isOSDisk**: string (ReadOnly): A value indicating whether the disk is the OS disk.
 * **logStorageAccountId**: string (ReadOnly): The log storage account ARM Id.
 * **logStorageAccountSasSecretName**: string (ReadOnly): The key vault secret name of the log storage account.
@@ -731,10 +731,10 @@
 * **isSelectedForMigration**: string (ReadOnly): A value indicating whether this NIC is selected for migration.
 * **nicId**: string (ReadOnly): The NIC Id.
 * **sourceIPAddress**: string (ReadOnly): The source IP address.
-* **sourceIPAddressType**: 'Dynamic' | 'Static' (ReadOnly): The source IP address type. Possible values include: 'Dynamic', 'Static'
+* **sourceIPAddressType**: 'Dynamic' | 'Static' (ReadOnly): The source IP address type.
 * **sourceNetworkId**: string (ReadOnly): Source network Id.
 * **targetIPAddress**: string (ReadOnly): The target IP address.
-* **targetIPAddressType**: 'Dynamic' | 'Static' (ReadOnly): The target IP address type. Possible values include: 'Dynamic', 'Static'
+* **targetIPAddressType**: 'Dynamic' | 'Static' (ReadOnly): The target IP address type.
 * **targetSubnetName**: string (ReadOnly): Target subnet name.
 
 ## EnableProtectionInputProperties
@@ -915,7 +915,7 @@
 * **diskEncryptionSetId**: string (WriteOnly): The DiskEncryptionSet ARM ID.
 * **diskResized**: string (ReadOnly): A value indicating whether any disk is resized for this VM.
 * **disksToInclude**: [InMageAzureV2DiskInputDetails](#inmageazurev2diskinputdetails)[] (WriteOnly): The disks to include list.
-* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (WriteOnly): The DiskType. Possible values include: 'Standard_LRS', 'Premium_LRS', 'StandardSSD_LRS'
+* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (WriteOnly): The DiskType.
 * **enableRdpOnTargetOption**: string: The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
 * **infrastructureVmId**: string (ReadOnly): The infrastructure VM Id.
 * **instanceType**: 'InMageAzureV2' (Required): InMage Azure v2 specific protection profile details.
@@ -1254,7 +1254,7 @@
 * **diskEncryptionSetId**: string (WriteOnly): The DiskEncryptionSet ARM ID.
 * **diskResized**: string (ReadOnly): A value indicating whether any disk is resized for this VM.
 * **disksToInclude**: [InMageAzureV2DiskInputDetails](#inmageazurev2diskinputdetails)[] (WriteOnly): The disks to include list.
-* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (WriteOnly): The DiskType. Possible values include: 'Standard_LRS', 'Premium_LRS', 'StandardSSD_LRS'
+* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (WriteOnly): The DiskType.
 * **enableRdpOnTargetOption**: string: The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
 * **infrastructureVmId**: string (ReadOnly): The infrastructure VM Id.
 * **instanceType**: 'InMageAzureV2' (Required): InMage Azure v2 specific protection profile details.
@@ -1318,7 +1318,7 @@
 ### Properties
 * **diskEncryptionSetId**: string (WriteOnly): The DiskEncryptionSet ARM ID.
 * **diskId**: string (WriteOnly): The DiskId.
-* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (WriteOnly): The DiskType. Possible values include: 'Standard_LRS', 'Premium_LRS', 'StandardSSD_LRS'
+* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (WriteOnly): The DiskType.
 * **logStorageAccountId**: string (WriteOnly): The LogStorageAccountId.
 
 ## InMageAzureV2ProtectedDiskDetails
@@ -1377,7 +1377,7 @@
 * **disksToInclude**: [VMwareCbtDiskInput](#vmwarecbtdiskinput)[] (Required, WriteOnly): The disks to include list.
 * **instanceType**: 'VMwareCbt' (Required): VMware Cbt specific policy details.
 * **lastRecoveryPointReceived**: string (ReadOnly): The last recovery point received time.
-* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License type. Possible values include: 'NotSpecified', 'NoLicenseType', 'WindowsServer'
+* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License type.
 * **migrationRecoveryPointId**: string (ReadOnly): The recovery point Id to which the VM was migrated.
 * **osType**: string (ReadOnly): The type of the OS on the VM.
 * **protectedDisks**: [VMwareCbtProtectedDiskDetails](#vmwarecbtprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
@@ -1407,7 +1407,7 @@
 * **disksToInclude**: [VMwareCbtDiskInput](#vmwarecbtdiskinput)[] (Required, WriteOnly): The disks to include list.
 * **instanceType**: 'VMwareCbt' (Required): VMware Cbt specific policy details.
 * **lastRecoveryPointReceived**: string (ReadOnly): The last recovery point received time.
-* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License type. Possible values include: 'NotSpecified', 'NoLicenseType', 'WindowsServer'
+* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License type.
 * **migrationRecoveryPointId**: string (ReadOnly): The recovery point Id to which the VM was migrated.
 * **osType**: string (ReadOnly): The type of the OS on the VM.
 * **protectedDisks**: [VMwareCbtProtectedDiskDetails](#vmwarecbtprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
@@ -1625,7 +1625,7 @@
 * **diskEncryptionSetId**: string (WriteOnly): The DiskEncryptionSet ARM ID.
 * **diskResized**: string (ReadOnly): A value indicating whether any disk is resized for this VM.
 * **disksToInclude**: [InMageAzureV2DiskInputDetails](#inmageazurev2diskinputdetails)[] (WriteOnly): The disks to include list.
-* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (WriteOnly): The DiskType. Possible values include: 'Standard_LRS', 'Premium_LRS', 'StandardSSD_LRS'
+* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (WriteOnly): The DiskType.
 * **enableRdpOnTargetOption**: string: The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
 * **infrastructureVmId**: string (ReadOnly): The infrastructure VM Id.
 * **instanceType**: 'InMageAzureV2' (Required): InMage Azure v2 specific protection profile details.
@@ -1718,7 +1718,7 @@
 * **appConsistentFrequencyInMinutes**: int (ReadOnly): The app consistent snapshot frequency in minutes.
 * **crashConsistentFrequencyInMinutes**: int (ReadOnly): The crash consistent snapshot frequency in minutes.
 * **instanceType**: 'RcmAzureMigration' (Required): RCM based Azure migration specific policy details.
-* **multiVmSyncStatus**: 'Disabled' | 'Enabled' (ReadOnly): A value indicating whether multi-VM sync has to be enabled. Possible values include: 'Enabled', 'Disabled'
+* **multiVmSyncStatus**: 'Disabled' | 'Enabled' (ReadOnly): A value indicating whether multi-VM sync has to be enabled.
 * **recoveryPointHistory**: int (ReadOnly): The duration in minutes until which the recovery points need to be stored.
 * **recoveryPointThresholdInMinutes**: int (ReadOnly): The recovery point threshold in minutes.
 
@@ -1728,7 +1728,7 @@
 * **disksToInclude**: [VMwareCbtDiskInput](#vmwarecbtdiskinput)[] (Required, WriteOnly): The disks to include list.
 * **instanceType**: 'VMwareCbt' (Required): VMware Cbt specific policy details.
 * **lastRecoveryPointReceived**: string (ReadOnly): The last recovery point received time.
-* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License type. Possible values include: 'NotSpecified', 'NoLicenseType', 'WindowsServer'
+* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License type.
 * **migrationRecoveryPointId**: string (ReadOnly): The recovery point Id to which the VM was migrated.
 * **osType**: string (ReadOnly): The type of the OS on the VM.
 * **protectedDisks**: [VMwareCbtProtectedDiskDetails](#vmwarecbtprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
@@ -1772,7 +1772,7 @@
 * **appConsistentFrequencyInMinutes**: int (ReadOnly): The app consistent snapshot frequency in minutes.
 * **crashConsistentFrequencyInMinutes**: int (ReadOnly): The crash consistent snapshot frequency in minutes.
 * **instanceType**: 'RcmAzureMigration' (Required): RCM based Azure migration specific policy details.
-* **multiVmSyncStatus**: 'Disabled' | 'Enabled' (ReadOnly): A value indicating whether multi-VM sync has to be enabled. Possible values include: 'Enabled', 'Disabled'
+* **multiVmSyncStatus**: 'Disabled' | 'Enabled' (ReadOnly): A value indicating whether multi-VM sync has to be enabled.
 * **recoveryPointHistory**: int (ReadOnly): The duration in minutes until which the recovery points need to be stored.
 * **recoveryPointThresholdInMinutes**: int (ReadOnly): The recovery point threshold in minutes.
 
@@ -1907,7 +1907,7 @@
 * **diskEncryptionSetId**: string (WriteOnly): The DiskEncryptionSet ARM ID.
 * **diskResized**: string (ReadOnly): A value indicating whether any disk is resized for this VM.
 * **disksToInclude**: [InMageAzureV2DiskInputDetails](#inmageazurev2diskinputdetails)[] (WriteOnly): The disks to include list.
-* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (WriteOnly): The DiskType. Possible values include: 'Standard_LRS', 'Premium_LRS', 'StandardSSD_LRS'
+* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (WriteOnly): The DiskType.
 * **enableRdpOnTargetOption**: string: The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
 * **infrastructureVmId**: string (ReadOnly): The infrastructure VM Id.
 * **instanceType**: 'InMageAzureV2' (Required): InMage Azure v2 specific protection profile details.
@@ -1993,7 +1993,7 @@
 * **disksToInclude**: [VMwareCbtDiskInput](#vmwarecbtdiskinput)[] (Required, WriteOnly): The disks to include list.
 * **instanceType**: 'VMwareCbt' (Required): VMware Cbt specific policy details.
 * **lastRecoveryPointReceived**: string (ReadOnly): The last recovery point received time.
-* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License type. Possible values include: 'NotSpecified', 'NoLicenseType', 'WindowsServer'
+* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License type.
 * **migrationRecoveryPointId**: string (ReadOnly): The recovery point Id to which the VM was migrated.
 * **osType**: string (ReadOnly): The type of the OS on the VM.
 * **protectedDisks**: [VMwareCbtProtectedDiskDetails](#vmwarecbtprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
@@ -2033,7 +2033,7 @@
 * **currentScenario**: [CurrentScenarioDetails](#currentscenariodetails) (ReadOnly): Current scenario details of the protected entity.
 * **currentScenarioStatus**: string (ReadOnly): The recovery plan status.
 * **currentScenarioStatusDescription**: string (ReadOnly): The recovery plan status description.
-* **failoverDeploymentModel**: 'Classic' | 'NotApplicable' | 'ResourceManager': The failover deployment model. Possible values include: 'NotApplicable', 'Classic', 'ResourceManager'
+* **failoverDeploymentModel**: 'Classic' | 'NotApplicable' | 'ResourceManager': The failover deployment model.
 * **friendlyName**: string (ReadOnly): The friendly name.
 * **groups**: [RecoveryPlanGroup](#recoveryplangroup)[] (Required): The recovery plan groups.
 * **lastPlannedFailoverTime**: string (ReadOnly): The start time of the last planned failover.
@@ -2050,7 +2050,7 @@
 ## RecoveryPlanGroup
 ### Properties
 * **endGroupActions**: [RecoveryPlanAction](#recoveryplanaction)[]: The end group actions.
-* **groupType**: 'Boot' | 'Failover' | 'Shutdown' (Required): The group type. Possible values include: 'Shutdown', 'Boot', 'Failover'
+* **groupType**: 'Boot' | 'Failover' | 'Shutdown' (Required): The group type.
 * **replicationProtectedItems**: [RecoveryPlanProtectedItem](#recoveryplanprotecteditem)[]: The list of protected items.
 * **startGroupActions**: [RecoveryPlanAction](#recoveryplanaction)[]: The start group actions.
 
@@ -2066,7 +2066,7 @@
 ### Base Properties
 ### AutomationRunbookActionDetails
 #### Properties
-* **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location. Possible values include: 'Primary', 'Recovery'
+* **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location.
 * **instanceType**: 'AutomationRunbookActionDetails' (Required): Recovery plan Automation runbook action details.
 * **runbookId**: string: The runbook ARM Id.
 * **timeout**: string: The runbook timeout.
@@ -2078,7 +2078,7 @@
 
 ### ScriptActionDetails
 #### Properties
-* **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location. Possible values include: 'Primary', 'Recovery'
+* **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location.
 * **instanceType**: 'ScriptActionDetails' (Required): Recovery plan script action details.
 * **path**: string (Required): The script path.
 * **timeout**: string: The script timeout.
@@ -2086,7 +2086,7 @@
 
 ## AutomationRunbookActionDetails
 ### Properties
-* **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location. Possible values include: 'Primary', 'Recovery'
+* **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location.
 * **instanceType**: 'AutomationRunbookActionDetails' (Required): Recovery plan Automation runbook action details.
 * **runbookId**: string: The runbook ARM Id.
 * **timeout**: string: The runbook timeout.
@@ -2098,7 +2098,7 @@
 
 ## ScriptActionDetails
 ### Properties
-* **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location. Possible values include: 'Primary', 'Recovery'
+* **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location.
 * **instanceType**: 'ScriptActionDetails' (Required): Recovery plan script action details.
 * **path**: string (Required): The script path.
 * **timeout**: string: The script timeout.

@@ -18,9 +18,9 @@
 * **installedServerNumber**: int: Number of activations/servers using the MAK key.
 * **isEligible**: bool: <code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise.
 * **multipleActivationKey**: string (ReadOnly): MAK 5x5 key.
-* **osType**: 'Windows7' | 'WindowsServer2008' | 'WindowsServer2008R2': Type of OS for which the key is requested. Possible values include: 'Windows7', 'WindowsServer2008', 'WindowsServer2008R2'
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): Possible values include: 'Succeeded', 'Failed', 'Canceled', 'Accepted', 'Provisioning'
-* **supportType**: 'PremiumAssurance' | 'SupplementalServicing': Type of support. Possible values include: 'SupplementalServicing', 'PremiumAssurance'
+* **osType**: 'Windows7' | 'WindowsServer2008' | 'WindowsServer2008R2': Type of OS for which the key is requested.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly):
+* **supportType**: 'PremiumAssurance' | 'SupplementalServicing': Type of support.
 
 ## Dictionary<string,String>
 ### Properties

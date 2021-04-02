@@ -26,7 +26,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned': The identity type. Possible values include: 'SystemAssigned'
+* **type**: 'SystemAssigned': The identity type.
 
 ## ServerProperties
 ### Properties
@@ -34,23 +34,23 @@
 * **administratorLoginPassword**: string: The administrator login password (required for server creation).
 * **availabilityZone**: string: availability Zone information of the server.
 * **byokEnforcement**: string (ReadOnly): Status showing whether the data encryption is enabled with customer-managed keys.
-* **createMode**: 'Default' | 'PointInTimeRestore': The mode to create a new PostgreSQL server. Possible values include: 'Default', 'PointInTimeRestore'
+* **createMode**: 'Default' | 'PointInTimeRestore': The mode to create a new PostgreSQL server.
 * **delegatedSubnetArguments**: [schemas:11_delegatedSubnetArguments](#schemas11delegatedsubnetarguments):
 * **displayName**: string: The display name of a server.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
-* **haEnabled**: 'Disabled' | 'Enabled': stand by count value can be either enabled or disabled. Possible values include: 'Enabled', 'Disabled'
-* **haState**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' (ReadOnly): A state of a HA server that is visible to user. Possible values include: 'NotEnabled', 'CreatingStandby', 'ReplicatingData', 'FailingOver', 'Healthy', 'RemovingStandby'
+* **haEnabled**: 'Disabled' | 'Enabled': stand by count value can be either enabled or disabled.
+* **haState**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' (ReadOnly): A state of a HA server that is visible to user.
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window of a server.
 * **pointInTimeUTC**: string: Restore point creation time (ISO8601 format), specifying the time to restore from.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly): public network access is enabled or not. Possible values include: 'Enabled', 'Disabled'
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly): public network access is enabled or not.
 * **sourceResourceGroupName**: string: The resource group name of source serve PostgreSQL server name to restore from.
 * **sourceServerName**: string: The source PostgreSQL server name to restore from.
 * **sourceSubscriptionId**: string: The subscription id of source serve PostgreSQL server name to restore from.
 * **standbyAvailabilityZone**: string (ReadOnly): availability Zone information of the server.
-* **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly): A state of a server that is visible to user. Possible values include: 'Ready', 'Dropping', 'Disabled', 'Starting', 'Stopping', 'Stopped', 'Updating'
+* **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly): A state of a server that is visible to user.
 * **storageProfile**: [StorageProfile](#storageprofile): Storage Profile properties of a server
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Application-specific metadata in the form of key-value pairs.
-* **version**: '11' | '12': PostgreSQL Server version. Possible values include: '12', '11'
+* **version**: '11' | '12': PostgreSQL Server version.
 
 ## schemas:11_delegatedSubnetArguments
 ### Properties
@@ -76,7 +76,7 @@
 ## Sku
 ### Properties
 * **name**: string (Required): The name of the sku, typically, tier + family + cores, e.g. Standard_D4s_v3.
-* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' (Required): The tier of the particular SKU, e.g. Burstable. Possible values include: 'Burstable', 'GeneralPurpose', 'MemoryOptimized'
+* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' (Required): The tier of the particular SKU, e.g. Burstable.
 
 ## Dictionary<string,String>
 ### Properties

@@ -44,14 +44,14 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' (Required): The identity type. Possible values include: 'SystemAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned' (Required): The identity type.
 
 ## ClusterProperties
 ### Properties
 * **clusterId**: string (ReadOnly): The ID associated with the cluster.
 * **keyVaultProperties**: [keyVaultProperties](#keyvaultproperties):
 * **nextLink**: string: The link used to get the next page of recommendations.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' (ReadOnly): The provisioning state of the cluster. Possible values include: 'Creating', 'Succeeded', 'Failed', 'Canceled', 'Deleting', 'ProvisioningAccount'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' (ReadOnly): The provisioning state of the cluster.
 
 ## keyVaultProperties
 ### Properties
@@ -62,7 +62,7 @@
 ## sku
 ### Properties
 * **capacity**: int: The capacity value
-* **name**: 'CapacityReservation': The name of the SKU. Possible values include: 'CapacityReservation'
+* **name**: 'CapacityReservation': The name of the SKU.
 
 ## Dictionary<string,String>
 ### Properties
@@ -82,7 +82,7 @@
 ### Properties
 * **metaData**: [DestinationMetaData](#destinationmetadata): Destination meta data.
 * **resourceId**: string (Required): The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
-* **type**: 'EventHub' | 'StorageAccount' (ReadOnly): The type of the destination resource. Possible values include: 'StorageAccount', 'EventHub'
+* **type**: 'EventHub' | 'StorageAccount' (ReadOnly): The type of the destination resource.
 
 ## DestinationMetaData
 ### Properties
@@ -95,6 +95,6 @@
 
 ## LinkedStorageAccountsProperties
 ### Properties
-* **dataSourceType**: 'AzureWatson' | 'CustomLogs' (ReadOnly): Linked storage accounts type. Possible values include: 'CustomLogs', 'AzureWatson'
+* **dataSourceType**: 'AzureWatson' | 'CustomLogs' (ReadOnly): Linked storage accounts type.
 * **storageAccountIds**: string[]: Linked storage accounts resources ids.
 

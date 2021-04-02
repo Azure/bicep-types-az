@@ -15,7 +15,7 @@
 ### Properties
 * **createdDate**: string (ReadOnly): Created date
 * **lastUpdatedDate**: string (ReadOnly): Last updated date
-* **provisioningState**: 'Cancelled' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Succeeded', 'Cancelled', 'Failed'
+* **provisioningState**: 'Cancelled' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state.
 
 ## Sku
 ### Properties

@@ -63,7 +63,7 @@
 
 ## Recurrence
 ### Properties
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'None' | 'Second' | 'Week' | 'Year' (Required): the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning each week will have the same set of profiles. For example, to set a daily schedule, set **schedule** to every day of the week. The frequency property specifies that the schedule is repeated weekly. Possible values include: 'None', 'Second', 'Minute', 'Hour', 'Day', 'Week', 'Month', 'Year'
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'None' | 'Second' | 'Week' | 'Year' (Required): the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning each week will have the same set of profiles. For example, to set a daily schedule, set **schedule** to every day of the week. The frequency property specifies that the schedule is repeated weekly.
 * **schedule**: [RecurrentSchedule](#recurrentschedule) (Required): The scheduling constraints for when the profile begins.
 
 ## RecurrentSchedule
@@ -84,24 +84,24 @@
 * **metricName**: string (Required): the name of the metric that defines what the rule monitors.
 * **metricNamespace**: string: the namespace of the metric that defines what the rule monitors.
 * **metricResourceUri**: string (Required): the resource identifier of the resource the rule monitors.
-* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'NotEquals' (Required): the operator that is used to compare the metric data and the threshold. Possible values include: 'Equals', 'NotEquals', 'GreaterThan', 'GreaterThanOrEqual', 'LessThan', 'LessThanOrEqual'
-* **statistic**: 'Average' | 'Max' | 'Min' | 'Sum' (Required): the metric statistic type. How the metrics from multiple instances are combined. Possible values include: 'Average', 'Min', 'Max', 'Sum'
+* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'NotEquals' (Required): the operator that is used to compare the metric data and the threshold.
+* **statistic**: 'Average' | 'Max' | 'Min' | 'Sum' (Required): the metric statistic type. How the metrics from multiple instances are combined.
 * **threshold**: int (Required): the threshold of the metric that triggers the scale action.
-* **timeAggregation**: 'Average' | 'Count' | 'Last' | 'Maximum' | 'Minimum' | 'Total' (Required): time aggregation type. How the data that is collected should be combined over time. The default value is Average. Possible values include: 'Average', 'Minimum', 'Maximum', 'Total', 'Count', 'Last'
+* **timeAggregation**: 'Average' | 'Count' | 'Last' | 'Maximum' | 'Minimum' | 'Total' (Required): time aggregation type. How the data that is collected should be combined over time. The default value is Average.
 * **timeGrain**: string (Required): the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.
 * **timeWindow**: string (Required): the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.
 
 ## ScaleRuleMetricDimension
 ### Properties
 * **DimensionName**: string (Required): Name of the dimension.
-* **Operator**: 'Equals' | 'NotEquals' (Required): the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values. Possible values include: 'Equals', 'NotEquals'
+* **Operator**: 'Equals' | 'NotEquals' (Required): the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values.
 * **Values**: string[] (Required): list of dimension values. For example: ["App1","App2"].
 
 ## ScaleAction
 ### Properties
 * **cooldown**: string (Required): the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.
-* **direction**: 'Decrease' | 'Increase' | 'None' (Required): the scale direction. Whether the scaling action increases or decreases the number of instances. Possible values include: 'None', 'Increase', 'Decrease'
-* **type**: 'ChangeCount' | 'ExactCount' | 'PercentChangeCount' (Required): the type of action that should occur when the scale rule fires. Possible values include: 'ChangeCount', 'PercentChangeCount', 'ExactCount'
+* **direction**: 'Decrease' | 'Increase' | 'None' (Required): the scale direction. Whether the scaling action increases or decreases the number of instances.
+* **type**: 'ChangeCount' | 'ExactCount' | 'PercentChangeCount' (Required): the type of action that should occur when the scale rule fires.
 * **value**: string: the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.
 
 ## Dictionary<string,String>

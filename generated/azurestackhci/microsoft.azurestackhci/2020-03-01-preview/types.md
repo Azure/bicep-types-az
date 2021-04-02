@@ -19,10 +19,10 @@
 * **cloudId**: string (ReadOnly): Unique, immutable resource id.
 * **lastBillingTimestamp**: string (ReadOnly): Most recent billing meter timestamp.
 * **lastSyncTimestamp**: string (ReadOnly): Most recent cluster sync timestamp.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state. Possible values include: 'Succeeded', 'Failed', 'Canceled', 'Accepted', 'Provisioning'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
 * **registrationTimestamp**: string (ReadOnly): First cluster sync timestamp.
 * **reportedProperties**: [ClusterReportedProperties](#clusterreportedproperties): Properties reported by cluster agent.
-* **status**: 'ConnectedRecently' | 'Disconnected' | 'Error' | 'NotConnectedRecently' | 'NotYetRegistered' (ReadOnly): Status of the cluster agent. Possible values include: 'NotYetRegistered', 'ConnectedRecently', 'NotConnectedRecently', 'Disconnected', 'Error'
+* **status**: 'ConnectedRecently' | 'Disconnected' | 'Error' | 'NotConnectedRecently' | 'NotYetRegistered' (ReadOnly): Status of the cluster agent.
 * **trialDaysRemaining**: int (ReadOnly): Number of days remaining in the trial period.
 
 ## ClusterReportedProperties

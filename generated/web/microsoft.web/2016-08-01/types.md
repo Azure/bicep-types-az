@@ -498,11 +498,11 @@ This is valid for all deployment slots in an app.
 ### Properties
 * **principalId**: string (ReadOnly): Principal Id of managed service identity.
 * **tenantId**: string (ReadOnly): Tenant of managed service identity.
-* **type**: 'SystemAssigned': Type of managed service identity. Possible values include: 'SystemAssigned'
+* **type**: 'SystemAssigned': Type of managed service identity.
 
 ## schemas:134_properties
 ### Properties
-* **availabilityState**: 'DisasterRecoveryMode' | 'Limited' | 'Normal' (ReadOnly): Management information availability state for the app. Possible values include: 'Normal', 'Limited', 'DisasterRecoveryMode'
+* **availabilityState**: 'DisasterRecoveryMode' | 'Limited' | 'Normal' (ReadOnly): Management information availability state for the app.
 * **clientAffinityEnabled**: bool: <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
 * **clientCertEnabled**: bool: <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.
 * **cloningInfo**: [CloningInfo](#cloninginfo): Information needed for cloning operation.
@@ -537,7 +537,7 @@ This only applies to Functions container.
 * **suspendedTill**: string (ReadOnly): App suspended till in case memory-time quota is exceeded.
 * **targetSwapSlot**: string (ReadOnly): Specifies which deployment slot this app will swap into. Read-only.
 * **trafficManagerHostNames**: string[] (ReadOnly): Azure Traffic Manager hostnames associated with the app. Read-only.
-* **usageState**: 'Exceeded' | 'Normal' (ReadOnly): State indicating whether the app has exceeded its quota usage. Read-only. Possible values include: 'Normal', 'Exceeded'
+* **usageState**: 'Exceeded' | 'Normal' (ReadOnly): State indicating whether the app has exceeded its quota usage. Read-only.
 
 ## CloningInfo
 ### Properties
@@ -571,9 +571,9 @@ together to use the same snapshot.
 
 ## HostNameSslState
 ### Properties
-* **hostType**: 'Repository' | 'Standard': Indicates whether the hostname is a standard or repository hostname. Possible values include: 'Standard', 'Repository'
+* **hostType**: 'Repository' | 'Standard': Indicates whether the hostname is a standard or repository hostname.
 * **name**: string: Hostname.
-* **sslState**: 'Disabled' | 'IpBasedEnabled' | 'SniEnabled': SSL type. Possible values include: 'Disabled', 'SniEnabled', 'IpBasedEnabled'
+* **sslState**: 'Disabled' | 'IpBasedEnabled' | 'SniEnabled': SSL type.
 * **thumbprint**: string: SSL certificate thumbprint.
 * **toUpdate**: bool: Set to <code>true</code> to update existing hostname.
 * **virtualIP**: string: Virtual IP address assigned to the hostname if IP based SSL is enabled.
@@ -602,12 +602,12 @@ together to use the same snapshot.
 * **javaVersion**: string: Java version.
 * **limits**: [SiteLimits](#sitelimits): Metric limits set on an app.
 * **linuxFxVersion**: string: Linux App Framework and version
-* **loadBalancing**: 'LeastRequests' | 'LeastResponseTime' | 'RequestHash' | 'WeightedRoundRobin' | 'WeightedTotalTraffic': Site load balancing. Possible values include: 'WeightedRoundRobin', 'LeastRequests', 'LeastResponseTime', 'WeightedTotalTraffic', 'RequestHash'
+* **loadBalancing**: 'LeastRequests' | 'LeastResponseTime' | 'RequestHash' | 'WeightedRoundRobin' | 'WeightedTotalTraffic': Site load balancing.
 * **localMySqlEnabled**: bool: <code>true</code> to enable local MySQL; otherwise, <code>false</code>.
 * **logsDirectorySizeLimit**: int: HTTP logs directory size limit.
 * **machineKey**: [SiteMachineKey](#sitemachinekey) (ReadOnly): MachineKey of an app.
-* **managedPipelineMode**: 'Classic' | 'Integrated': Managed pipeline mode. Possible values include: 'Integrated', 'Classic'
-* **minTlsVersion**: '1.0' | '1.1' | '1.2': MinTlsVersion: configures the minimum version of TLS required for SSL requests. Possible values include: '1.0', '1.1', '1.2'
+* **managedPipelineMode**: 'Classic' | 'Integrated': Managed pipeline mode.
+* **minTlsVersion**: '1.0' | '1.1' | '1.2': MinTlsVersion: configures the minimum version of TLS required for SSL requests.
 * **netFrameworkVersion**: string: .NET Framework version.
 * **nodeVersion**: string: Version of Node.js.
 * **numberOfWorkers**: int: Number of workers.
@@ -619,7 +619,7 @@ together to use the same snapshot.
 * **remoteDebuggingVersion**: string: Remote debugging version.
 * **requestTracingEnabled**: bool: <code>true</code> if request tracing is enabled; otherwise, <code>false</code>.
 * **requestTracingExpirationTime**: string: Request tracing expiration time.
-* **scmType**: 'BitbucketGit' | 'BitbucketHg' | 'CodePlexGit' | 'CodePlexHg' | 'Dropbox' | 'ExternalGit' | 'ExternalHg' | 'GitHub' | 'LocalGit' | 'None' | 'OneDrive' | 'Tfs' | 'VSO': SCM type. Possible values include: 'None', 'Dropbox', 'Tfs', 'LocalGit', 'GitHub', 'CodePlexGit', 'CodePlexHg', 'BitbucketGit', 'BitbucketHg', 'ExternalGit', 'ExternalHg', 'OneDrive', 'VSO'
+* **scmType**: 'BitbucketGit' | 'BitbucketHg' | 'CodePlexGit' | 'CodePlexHg' | 'Dropbox' | 'ExternalGit' | 'ExternalHg' | 'GitHub' | 'LocalGit' | 'None' | 'OneDrive' | 'Tfs' | 'VSO': SCM type.
 * **tracingOptions**: string: Tracing options.
 * **use32BitWorkerProcess**: bool: <code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.
 * **virtualApplications**: [VirtualApplication](#virtualapplication)[]: Virtual applications.
@@ -642,7 +642,7 @@ together to use the same snapshot.
 
 ## AutoHealActions
 ### Properties
-* **actionType**: 'CustomAction' | 'LogEvent' | 'Recycle': Predefined action to be taken. Possible values include: 'Recycle', 'LogEvent', 'CustomAction'
+* **actionType**: 'CustomAction' | 'LogEvent' | 'Recycle': Predefined action to be taken.
 * **customAction**: [AutoHealCustomAction](#autohealcustomaction): Custom action to be executed
 when an auto heal rule is triggered.
 * **minProcessExecutionTime**: string: Minimum time the process must execute
@@ -683,7 +683,7 @@ before taking the action
 ### Properties
 * **connectionString**: string: Connection string value.
 * **name**: string: Name of connection string.
-* **type**: 'ApiHub' | 'Custom' | 'DocDb' | 'EventHub' | 'MySql' | 'NotificationHub' | 'PostgreSQL' | 'RedisCache' | 'ServiceBus' | 'SQLAzure' | 'SQLServer': Type of database. Possible values include: 'MySql', 'SQLServer', 'SQLAzure', 'Custom', 'NotificationHub', 'ServiceBus', 'EventHub', 'ApiHub', 'DocDb', 'RedisCache', 'PostgreSQL'
+* **type**: 'ApiHub' | 'Custom' | 'DocDb' | 'EventHub' | 'MySql' | 'NotificationHub' | 'PostgreSQL' | 'RedisCache' | 'ServiceBus' | 'SQLAzure' | 'SQLServer': Type of database.
 
 ## CorsSettings
 ### Properties
@@ -807,7 +807,7 @@ This setting is only necessary when RecoverConfiguration is enabled.
 * **ignoreConflictingHostNames**: bool: Changes a logic when restoring an app with custom domains. <code>true</code> to remove custom domains automatically. If <code>false</code>, custom domains are added to
 the app's object when it is being restored, but that might fail due to conflicts during the operation.
 * **ignoreDatabases**: bool: Ignore the databases and only restore the site content
-* **operationType**: 'Clone' | 'Default' | 'Relocation' | 'Snapshot': Operation type. Possible values include: 'Default', 'Clone', 'Relocation', 'Snapshot'
+* **operationType**: 'Clone' | 'Default' | 'Relocation' | 'Snapshot': Operation type.
 * **overwrite**: bool (Required): <code>true</code> if the restore operation can overwrite target app; otherwise, <code>false</code>. <code>true</code> is needed if trying to restore over an existing app.
 * **siteName**: string: Name of an app.
 * **storageAccountUrl**: string (Required): SAS URL to the container.
@@ -817,7 +817,7 @@ the app's object when it is being restored, but that might fail due to conflicts
 * **connectionString**: string: Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
 * **connectionStringName**: string: Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
 This is used during restore with overwrite connection strings options.
-* **databaseType**: 'LocalMySql' | 'MySql' | 'PostgreSql' | 'SqlAzure' (Required): Database type (e.g. SqlAzure / MySql). Possible values include: 'SqlAzure', 'MySql', 'LocalMySql', 'PostgreSql'
+* **databaseType**: 'LocalMySql' | 'MySql' | 'PostgreSql' | 'SqlAzure' (Required): Database type (e.g. SqlAzure / MySql).
 * **name**: string:
 
 ## Microsoft.Web/sites/config
@@ -863,7 +863,7 @@ Otherwise, the OpenID Connect Authorization Code Flow is used to authenticate en
 More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
 * **defaultProvider**: 'AzureActiveDirectory' | 'Facebook' | 'Google' | 'MicrosoftAccount' | 'Twitter': The default authentication provider to use when multiple providers are configured.
 This setting is only needed if multiple providers are configured and the unauthenticated client
-action is set to "RedirectToLoginPage". Possible values include: 'AzureActiveDirectory', 'Facebook', 'Google', 'MicrosoftAccount', 'Twitter'
+action is set to "RedirectToLoginPage".
 * **enabled**: bool: <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
 * **facebookAppId**: string: The App ID of the Facebook app used for login.
 This setting is required for enabling Facebook Login.
@@ -908,7 +908,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **twitterConsumerSecret**: string: The OAuth 1.0a consumer secret of the Twitter application used for sign-in.
 This setting is required for enabling Twitter Sign-In.
 Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
-* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage': The action to take when an unauthenticated client attempts to access the app. Possible values include: 'RedirectToLoginPage', 'AllowAnonymous'
+* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage': The action to take when an unauthenticated client attempts to access the app.
 
 ## Microsoft.Web/sites/config
 ### Properties
@@ -926,12 +926,12 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **enabled**: bool: True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
 * **name**: string (Required): Name of the backup.
 * **storageAccountUrl**: string (Required): SAS URL to the container.
-* **type**: 'Clone' | 'Default' | 'Relocation' | 'Snapshot': Type of the backup. Possible values include: 'Default', 'Clone', 'Relocation', 'Snapshot'
+* **type**: 'Clone' | 'Default' | 'Relocation' | 'Snapshot': Type of the backup.
 
 ## BackupSchedule
 ### Properties
 * **frequencyInterval**: int (Required): How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day)
-* **frequencyUnit**: 'Day' | 'Hour' (Required): The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7). Possible values include: 'Day', 'Hour'
+* **frequencyUnit**: 'Day' | 'Hour' (Required): The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7).
 * **keepAtLeastOneBackup**: bool (Required): True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.
 * **lastExecutionTime**: string (ReadOnly): Last time when this schedule was triggered.
 * **retentionPeriodInDays**: int (Required): After how many days backups should be deleted.
@@ -953,7 +953,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 
 ## ConnStringValueTypePair
 ### Properties
-* **type**: 'ApiHub' | 'Custom' | 'DocDb' | 'EventHub' | 'MySql' | 'NotificationHub' | 'PostgreSQL' | 'RedisCache' | 'ServiceBus' | 'SQLAzure' | 'SQLServer' (Required): Type of database. Possible values include: 'MySql', 'SQLServer', 'SQLAzure', 'Custom', 'NotificationHub', 'ServiceBus', 'EventHub', 'ApiHub', 'DocDb', 'RedisCache', 'PostgreSQL'
+* **type**: 'ApiHub' | 'Custom' | 'DocDb' | 'EventHub' | 'MySql' | 'NotificationHub' | 'PostgreSQL' | 'RedisCache' | 'ServiceBus' | 'SQLAzure' | 'SQLServer' (Required): Type of database.
 * **value**: string (Required): Value of pair.
 
 ## Microsoft.Web/sites/config
@@ -980,7 +980,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 
 ## AzureBlobStorageApplicationLogsConfig
 ### Properties
-* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning': Log level. Possible values include: 'Off', 'Verbose', 'Information', 'Warning', 'Error'
+* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning': Log level.
 * **retentionInDays**: int: Retention in days.
 Remove blobs older than X days.
 0 or lower means no retention.
@@ -988,12 +988,12 @@ Remove blobs older than X days.
 
 ## AzureTableStorageApplicationLogsConfig
 ### Properties
-* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning': Log level. Possible values include: 'Off', 'Verbose', 'Information', 'Warning', 'Error'
+* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning': Log level.
 * **sasUrl**: string (Required): SAS URL to an Azure table with add/query/delete permissions.
 
 ## FileSystemApplicationLogsConfig
 ### Properties
-* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning': Log level. Possible values include: 'Off', 'Verbose', 'Information', 'Warning', 'Error'
+* **level**: 'Error' | 'Information' | 'Off' | 'Verbose' | 'Warning': Log level.
 
 ## EnabledConfig
 ### Properties
@@ -1096,7 +1096,7 @@ Setting is <code>false</code> by default.
 * **deployer**: string (ReadOnly): Username of deployer
 * **endTime**: string (ReadOnly): End time of deploy operation
 * **packageUri**: string (WriteOnly): Package URI
-* **provisioningState**: 'accepted' | 'canceled' | 'failed' | 'running' | 'succeeded' (ReadOnly): Provisioning state. Possible values include: 'accepted', 'running', 'succeeded', 'failed', 'canceled'
+* **provisioningState**: 'accepted' | 'canceled' | 'failed' | 'running' | 'succeeded' (ReadOnly): Provisioning state.
 * **setParameters**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly): MSDeploy Parameters. Must not be set if SetParametersXmlFileUri is used.
 * **setParametersXmlFileUri**: string (WriteOnly): URI of MSDeploy Parameters file. Must not be set if SetParameters is used.
 * **skipAppData**: bool (WriteOnly): Controls whether the MSDeploy operation skips the App_Data directory.
@@ -1131,12 +1131,12 @@ Setting is <code>false</code> by default.
 ## schemas:24_properties
 ### Properties
 * **azureResourceName**: string: Azure resource name.
-* **azureResourceType**: 'TrafficManager' | 'Website': Azure resource type. Possible values include: 'Website', 'TrafficManager'
-* **customHostNameDnsRecordType**: 'A' | 'CName': Custom DNS record type. Possible values include: 'CName', 'A'
+* **azureResourceType**: 'TrafficManager' | 'Website': Azure resource type.
+* **customHostNameDnsRecordType**: 'A' | 'CName': Custom DNS record type.
 * **domainId**: string: Fully qualified ARM domain resource URI.
-* **hostNameType**: 'Managed' | 'Verified': Hostname type. Possible values include: 'Verified', 'Managed'
+* **hostNameType**: 'Managed' | 'Verified': Hostname type.
 * **siteName**: string: App Service app name.
-* **sslState**: 'Disabled' | 'IpBasedEnabled' | 'SniEnabled': SSL type. Possible values include: 'Disabled', 'SniEnabled', 'IpBasedEnabled'
+* **sslState**: 'Disabled' | 'IpBasedEnabled' | 'SniEnabled': SSL type.
 * **thumbprint**: string: SSL certificate thumbprint
 * **virtualIP**: string (ReadOnly): Virtual IP address assigned to the hostname if IP based SSL is enabled.
 
@@ -1186,7 +1186,7 @@ normally, use the POST /listKeys API instead.
 ## schemas:46_properties
 ### Properties
 * **blob**: array: Public Certificate byte array
-* **publicCertificateLocation**: 'CurrentUserMy' | 'LocalMachineMy' | 'Unknown': Public Certificate Location. Possible values include: 'CurrentUserMy', 'LocalMachineMy', 'Unknown'
+* **publicCertificateLocation**: 'CurrentUserMy' | 'LocalMachineMy' | 'Unknown': Public Certificate Location.
 * **thumbprint**: string (ReadOnly): Certificate Thumbprint
 
 ## schemas:58_properties
@@ -1209,7 +1209,7 @@ normally, use the POST /listKeys API instead.
 * **publishedDateTime**: string (ReadOnly): Published timestamp.
 * **summary**: string (ReadOnly): Summary description.
 * **title**: string (ReadOnly): Site extension title.
-* **type**: 'Gallery' | 'WebRoot' (ReadOnly): Site extension type. Possible values include: 'Gallery', 'WebRoot'
+* **type**: 'Gallery' | 'WebRoot' (ReadOnly): Site extension type.
 * **version**: string (ReadOnly): Version information.
 
 ## Dictionary<string,String>
@@ -1344,7 +1344,7 @@ DEFAULT - By default, every app has routes to the local address ranges specified
 INHERITED - Routes inherited from the real Virtual Network routes
 STATIC - Static route set on the app only
 
-These values will be used for syncing an app's routes with those from a Virtual Network. Possible values include: 'DEFAULT', 'INHERITED', 'STATIC'
+These values will be used for syncing an app's routes with those from a Virtual Network.
 * **startAddress**: string: The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
 
 ## schemas:151_properties

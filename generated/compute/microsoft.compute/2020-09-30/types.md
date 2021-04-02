@@ -134,7 +134,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource. Possible values include: 'Succeeded', 'Creating', 'Deleting', 'Failed'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource.
 
 ## PrivateEndpoint
 ### Properties
@@ -144,7 +144,7 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service. Possible values include: 'Pending', 'Approved', 'Rejected'
+* **status**: 'Approved' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## Dictionary<string,String>
 ### Properties
@@ -155,12 +155,12 @@
 ### Properties
 * **principalId**: string (ReadOnly): The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity
 * **tenantId**: string (ReadOnly): The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity
-* **type**: 'None' | 'SystemAssigned': The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys. Possible values include: 'SystemAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned': The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.
 
 ## EncryptionSetProperties
 ### Properties
 * **activeKey**: [KeyForDiskEncryptionSet](#keyfordiskencryptionset): Key Vault Key Url to be used for server side encryption of Managed Disks and Snapshots
-* **encryptionType**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys': Possible values include: 'EncryptionAtRestWithCustomerKey', 'EncryptionAtRestWithPlatformAndCustomerKeys'
+* **encryptionType**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys':
 * **previousKeys**: [KeyForDiskEncryptionSet](#keyfordiskencryptionset)[] (ReadOnly): A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.
 * **provisioningState**: string (ReadOnly): The disk encryption set provisioning state.
 
@@ -181,7 +181,7 @@
 ## ExtendedLocation
 ### Properties
 * **name**: string: The name of the extended location.
-* **type**: 'EdgeZone': The type of the extended location. Possible values include: 'EdgeZone'
+* **type**: 'EdgeZone': The type of the extended location.
 
 ## DiskProperties
 ### Properties
@@ -194,13 +194,13 @@
 * **diskMBpsReadWrite**: int: The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
 * **diskSizeBytes**: int (ReadOnly): The size of the disk in bytes. This field is read only.
 * **diskSizeGB**: int: If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
-* **diskState**: 'ActiveSAS' | 'ActiveUpload' | 'Attached' | 'ReadyToUpload' | 'Reserved' | 'Unattached': The state of the disk. Possible values include: 'Unattached', 'Attached', 'Reserved', 'ActiveSAS', 'ReadyToUpload', 'ActiveUpload'
+* **diskState**: 'ActiveSAS' | 'ActiveUpload' | 'Attached' | 'ReadyToUpload' | 'Reserved' | 'Unattached': The state of the disk.
 * **encryption**: [Encryption](#encryption): Encryption at rest settings for disk or snapshot
 * **encryptionSettingsCollection**: [EncryptionSettingsCollection](#encryptionsettingscollection): Encryption settings for disk or snapshot
-* **hyperVGeneration**: 'V1' | 'V2': The hypervisor generation of the Virtual Machine. Applicable to OS disks only. Possible values include: 'V1', 'V2'
+* **hyperVGeneration**: 'V1' | 'V2': The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
 * **maxShares**: int: The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
-* **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll': Possible values include: 'AllowAll', 'AllowPrivate', 'DenyAll'
-* **osType**: 'Linux' | 'Windows': The Operating System type. Possible values include: 'Windows', 'Linux'
+* **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll':
+* **osType**: 'Linux' | 'Windows': The Operating System type.
 * **provisioningState**: string (ReadOnly): The disk provisioning state.
 * **purchasePlan**: [PurchasePlan](#purchaseplan): Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
 * **shareInfo**: [ShareInfoElement](#shareinfoelement)[] (ReadOnly): Details of the list of all VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
@@ -210,7 +210,7 @@
 
 ## CreationData
 ### Properties
-* **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Import' | 'Restore' | 'Upload' (Required): This enumerates the possible sources of a disk's creation. Possible values include: 'Empty', 'Attach', 'FromImage', 'Import', 'Copy', 'Restore', 'Upload'
+* **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Import' | 'Restore' | 'Upload' (Required): This enumerates the possible sources of a disk's creation.
 * **galleryImageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
 * **imageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
 * **logicalSectorSize**: int: Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.
@@ -228,7 +228,7 @@
 ## Encryption
 ### Properties
 * **diskEncryptionSetId**: string: ResourceId of the disk encryption set to use for enabling encryption at rest.
-* **type**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys' | 'EncryptionAtRestWithPlatformKey': Possible values include: 'EncryptionAtRestWithPlatformKey', 'EncryptionAtRestWithCustomerKey', 'EncryptionAtRestWithPlatformAndCustomerKeys'
+* **type**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys' | 'EncryptionAtRestWithPlatformKey':
 
 ## EncryptionSettingsCollection
 ### Properties
@@ -264,7 +264,7 @@
 
 ## DiskSku
 ### Properties
-* **name**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'UltraSSD_LRS': The sku name. Possible values include: 'Standard_LRS', 'Premium_LRS', 'StandardSSD_LRS', 'UltraSSD_LRS'
+* **name**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'UltraSSD_LRS': The sku name.
 * **tier**: string (ReadOnly): The sku tier.
 
 ## Dictionary<string,String>
@@ -276,7 +276,7 @@
 ### Properties
 * **description**: string: The description of this Shared Image Gallery resource. This property is updatable.
 * **identifier**: [GalleryIdentifier](#galleryidentifier): Describes the gallery unique name.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state, which only appears in the response. Possible values include: 'Creating', 'Updating', 'Failed', 'Succeeded', 'Deleting', 'Migrating'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state, which only appears in the response.
 * **sharingProfile**: [SharingProfile](#sharingprofile): Profile for gallery sharing to subscription or tenant
 
 ## GalleryIdentifier
@@ -286,12 +286,12 @@
 ## SharingProfile
 ### Properties
 * **groups**: [SharingProfileGroup](#sharingprofilegroup)[] (ReadOnly): A list of sharing profile groups.
-* **permissions**: 'Groups' | 'Private': This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**. Possible values include: 'Private', 'Groups'
+* **permissions**: 'Groups' | 'Private': This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**.
 
 ## SharingProfileGroup
 ### Properties
 * **ids**: string[]: A list of subscription/tenant ids the gallery is aimed to be shared to.
-* **type**: 'AADTenants' | 'Subscriptions': This property allows you to specify the type of sharing group. <br><br> Possible values are: <br><br> **Subscriptions** <br><br> **AADTenants**. Possible values include: 'Subscriptions', 'AADTenants'
+* **type**: 'AADTenants' | 'Subscriptions': This property allows you to specify the type of sharing group. <br><br> Possible values are: <br><br> **Subscriptions** <br><br> **AADTenants**.
 
 ## Dictionary<string,String>
 ### Properties
@@ -305,7 +305,7 @@
 * **eula**: string: The Eula agreement for the gallery Application Definition.
 * **privacyStatementUri**: string: The privacy statement uri.
 * **releaseNoteUri**: string: The release note uri.
-* **supportedOSType**: 'Linux' | 'Windows' (Required): This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**. Possible values include: 'Windows', 'Linux'
+* **supportedOSType**: 'Linux' | 'Windows' (Required): This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**.
 
 ## Dictionary<string,String>
 ### Properties
@@ -314,7 +314,7 @@
 
 ## GalleryApplicationVersionProperties
 ### Properties
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state, which only appears in the response. Possible values include: 'Creating', 'Updating', 'Failed', 'Succeeded', 'Deleting', 'Migrating'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state, which only appears in the response.
 * **publishingProfile**: [GalleryApplicationVersionPublishingProfile](#galleryapplicationversionpublishingprofile) (Required): The publishing profile of a gallery image version.
 * **replicationStatus**: [ReplicationStatus](#replicationstatus) (ReadOnly): This is the replication status of the gallery image version.
 
@@ -327,7 +327,7 @@
 * **publishedDate**: string (ReadOnly): The timestamp for when the gallery image version is published.
 * **replicaCount**: int: The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
 * **source**: [UserArtifactSource](#userartifactsource) (Required): The source image from which the Image Version is going to be created.
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS': Specifies the storage account type to be used to store the image. This property is not updatable. Possible values include: 'Standard_LRS', 'Standard_ZRS', 'Premium_LRS'
+* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS': Specifies the storage account type to be used to store the image. This property is not updatable.
 * **targetRegions**: [TargetRegion](#targetregion)[]: The target regions where the Image Version is going to be replicated to. This property is updatable.
 
 ## UserArtifactManage
@@ -346,7 +346,7 @@
 * **encryption**: [EncryptionImages](#encryptionimages): Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.
 * **name**: string (Required): The name of the region.
 * **regionalReplicaCount**: int: The number of replicas of the Image Version to be created per region. This property is updatable.
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS': Specifies the storage account type to be used to store the image. This property is not updatable. Possible values include: 'Standard_LRS', 'Standard_ZRS', 'Premium_LRS'
+* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS': Specifies the storage account type to be used to store the image. This property is not updatable.
 
 ## EncryptionImages
 ### Properties
@@ -364,7 +364,7 @@
 
 ## ReplicationStatus
 ### Properties
-* **aggregatedState**: 'Completed' | 'Failed' | 'InProgress' | 'Unknown' (ReadOnly): This is the aggregated replication status based on all the regional replication status flags. Possible values include: 'Unknown', 'InProgress', 'Completed', 'Failed'
+* **aggregatedState**: 'Completed' | 'Failed' | 'InProgress' | 'Unknown' (ReadOnly): This is the aggregated replication status based on all the regional replication status flags.
 * **summary**: [RegionalReplicationStatus](#regionalreplicationstatus)[] (ReadOnly): This is a summary of replication status for each region.
 
 ## RegionalReplicationStatus
@@ -372,7 +372,7 @@
 * **details**: string (ReadOnly): The details of the replication status.
 * **progress**: int (ReadOnly): It indicates progress of the replication job.
 * **region**: string (ReadOnly): The region to which the gallery image version is being replicated to.
-* **state**: 'Completed' | 'Failed' | 'Replicating' | 'Unknown' (ReadOnly): This is the regional replication state. Possible values include: 'Unknown', 'Replicating', 'Completed', 'Failed'
+* **state**: 'Completed' | 'Failed' | 'Replicating' | 'Unknown' (ReadOnly): This is the regional replication state.
 
 ## Dictionary<string,String>
 ### Properties
@@ -386,12 +386,12 @@
 * **endOfLifeDate**: string: The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable.
 * **eula**: string: The Eula agreement for the gallery image definition.
 * **features**: [GalleryImageFeature](#galleryimagefeature)[]: A list of gallery image features.
-* **hyperVGeneration**: 'V1' | 'V2': The hypervisor generation of the Virtual Machine. Applicable to OS disks only. Possible values include: 'V1', 'V2'
+* **hyperVGeneration**: 'V1' | 'V2': The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
 * **identifier**: [GalleryImageIdentifier](#galleryimageidentifier) (Required): This is the gallery image definition identifier.
-* **osState**: 'Generalized' | 'Specialized' (Required): This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'. Possible values include: 'Generalized', 'Specialized'
-* **osType**: 'Linux' | 'Windows' (Required): This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**. Possible values include: 'Windows', 'Linux'
+* **osState**: 'Generalized' | 'Specialized' (Required): This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.
+* **osType**: 'Linux' | 'Windows' (Required): This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**.
 * **privacyStatementUri**: string: The privacy statement uri.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state, which only appears in the response. Possible values include: 'Creating', 'Updating', 'Failed', 'Succeeded', 'Deleting', 'Migrating'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state, which only appears in the response.
 * **purchasePlan**: [ImagePurchasePlan](#imagepurchaseplan): Describes the gallery image definition purchase plan. This is used by marketplace images.
 * **recommended**: [RecommendedMachineConfiguration](#recommendedmachineconfiguration): The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.
 * **releaseNoteUri**: string: The release note uri.
@@ -434,7 +434,7 @@
 
 ## GalleryImageVersionProperties
 ### Properties
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state, which only appears in the response. Possible values include: 'Creating', 'Updating', 'Failed', 'Succeeded', 'Deleting', 'Migrating'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state, which only appears in the response.
 * **publishingProfile**: [GalleryImageVersionPublishingProfile](#galleryimageversionpublishingprofile): The publishing profile of a gallery image Version.
 * **replicationStatus**: [ReplicationStatus](#replicationstatus) (ReadOnly): This is the replication status of the gallery image version.
 * **storageProfile**: [GalleryImageVersionStorageProfile](#galleryimageversionstorageprofile) (Required): This is the storage profile of a Gallery Image Version.
@@ -445,7 +445,7 @@
 * **excludeFromLatest**: bool: If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.
 * **publishedDate**: string (ReadOnly): The timestamp for when the gallery image version is published.
 * **replicaCount**: int: The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS': Specifies the storage account type to be used to store the image. This property is not updatable. Possible values include: 'Standard_LRS', 'Standard_ZRS', 'Premium_LRS'
+* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS': Specifies the storage account type to be used to store the image. This property is not updatable.
 * **targetRegions**: [TargetRegion](#targetregion)[]: The target regions where the Image Version is going to be replicated to. This property is updatable.
 
 ## GalleryImageVersionStorageProfile
@@ -456,7 +456,7 @@
 
 ## GalleryDataDiskImage
 ### Properties
-* **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite': The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'. Possible values include: 'None', 'ReadOnly', 'ReadWrite'
+* **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite': The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'.
 * **lun**: int (Required): This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
 * **sizeInGB**: int (ReadOnly): This property indicates the size of the VHD to be created.
 * **source**: [GalleryArtifactVersionSource](#galleryartifactversionsource): The gallery artifact version source.
@@ -468,7 +468,7 @@
 
 ## GalleryOSDiskImage
 ### Properties
-* **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite': The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'. Possible values include: 'None', 'ReadOnly', 'ReadWrite'
+* **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite': The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'.
 * **sizeInGB**: int (ReadOnly): This property indicates the size of the VHD to be created.
 * **source**: [GalleryArtifactVersionSource](#galleryartifactversionsource): The gallery artifact version source.
 
@@ -483,13 +483,13 @@
 * **diskAccessId**: string: ARM id of the DiskAccess resource for using private endpoints on disks.
 * **diskSizeBytes**: int (ReadOnly): The size of the disk in bytes. This field is read only.
 * **diskSizeGB**: int: If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
-* **diskState**: 'ActiveSAS' | 'ActiveUpload' | 'Attached' | 'ReadyToUpload' | 'Reserved' | 'Unattached': The state of the snapshot. Possible values include: 'Unattached', 'Attached', 'Reserved', 'ActiveSAS', 'ReadyToUpload', 'ActiveUpload'
+* **diskState**: 'ActiveSAS' | 'ActiveUpload' | 'Attached' | 'ReadyToUpload' | 'Reserved' | 'Unattached': The state of the snapshot.
 * **encryption**: [Encryption](#encryption): Encryption at rest settings for disk or snapshot
 * **encryptionSettingsCollection**: [EncryptionSettingsCollection](#encryptionsettingscollection): Encryption settings for disk or snapshot
-* **hyperVGeneration**: 'V1' | 'V2': The hypervisor generation of the Virtual Machine. Applicable to OS disks only. Possible values include: 'V1', 'V2'
+* **hyperVGeneration**: 'V1' | 'V2': The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
 * **incremental**: bool: Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.
-* **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll': Possible values include: 'AllowAll', 'AllowPrivate', 'DenyAll'
-* **osType**: 'Linux' | 'Windows': The Operating System type. Possible values include: 'Windows', 'Linux'
+* **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll':
+* **osType**: 'Linux' | 'Windows': The Operating System type.
 * **provisioningState**: string (ReadOnly): The disk provisioning state.
 * **purchasePlan**: [PurchasePlan](#purchaseplan): Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
 * **timeCreated**: string (ReadOnly): The time when the snapshot was created.
@@ -497,7 +497,7 @@
 
 ## SnapshotSku
 ### Properties
-* **name**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS': The sku name. Possible values include: 'Standard_LRS', 'Premium_LRS', 'Standard_ZRS'
+* **name**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS': The sku name.
 * **tier**: string (ReadOnly): The sku tier.
 
 ## Dictionary<string,String>

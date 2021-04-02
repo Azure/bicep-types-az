@@ -85,14 +85,14 @@
 * **computeType**: 'Custom' (Required): The Variant properties.
 * **isDefault**: bool (WriteOnly): Is this the default variant.
 * **trafficPercentile**: int (WriteOnly): The amount of traffic variant receives.
-* **type**: 'Control' | 'Treatment' (WriteOnly): The type of the variant. Possible values include: 'Control', 'Treatment'
+* **type**: 'Control' | 'Treatment' (WriteOnly): The type of the variant.
 
 
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned': The identity type. Possible values include: 'SystemAssigned', 'SystemAssigned,UserAssigned', 'UserAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned': The identity type.
 * **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity): dictionary containing all the user assigned identities, with resourceId of the UAI as key.
 
 ## Dictionary<string,UserAssignedIdentity>
@@ -121,7 +121,7 @@
 * **keyVault**: string: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections in the workspace.
 * **privateLinkCount**: int (ReadOnly): Count of private connections in the workspace
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning. Possible values include: 'Unknown', 'Updating', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
 * **serviceProvisionedResourceGroup**: string (ReadOnly): The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
 * **sharedPrivateLinkResources**: [SharedPrivateLinkResource](#sharedprivatelinkresource)[]: The list of shared private link resources in this workspace.
 * **storageAccount**: string: ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
@@ -130,7 +130,7 @@
 ## EncryptionProperty
 ### Properties
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required):
-* **status**: 'Disabled' | 'Enabled' (Required): Indicates whether or not the encryption is enabled for the workspace. Possible values include: 'Enabled', 'Disabled'
+* **status**: 'Disabled' | 'Enabled' (Required): Indicates whether or not the encryption is enabled for the workspace.
 
 ## KeyVaultProperties
 ### Properties
@@ -153,7 +153,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource. Possible values include: 'Succeeded', 'Creating', 'Deleting', 'Failed'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource.
 
 ## PrivateEndpoint
 ### Properties
@@ -163,7 +163,7 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service. Possible values include: 'Pending', 'Approved', 'Rejected', 'Disconnected', 'Timeout'
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## Sku
 ### Properties
@@ -185,7 +185,7 @@
 * **groupId**: string: The private link resource group id.
 * **privateLinkResourceId**: string: The resource id that private link links to.
 * **requestMessage**: string: Request message.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service. Possible values include: 'Pending', 'Approved', 'Rejected', 'Disconnected', 'Timeout'
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## Dictionary<string,String>
 ### Properties
@@ -201,7 +201,7 @@
 * **isAttachedCompute**: bool (ReadOnly): Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
 * **modifiedOn**: string (ReadOnly): The date and time when the compute was last modified.
 * **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Errors during provisioning
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed. Possible values include: 'Unknown', 'Updating', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
 * **resourceId**: string: ARM resource id of the underlying compute
 ### AKS
 #### Properties
@@ -279,7 +279,7 @@
 * **cert**: string: Cert data
 * **cname**: string: CNAME of the cert
 * **key**: string: Key data
-* **status**: 'Disabled' | 'Enabled': Enable or disable ssl for scoring. Possible values include: 'Disabled', 'Enabled'
+* **status**: 'Disabled' | 'Enabled': Enable or disable ssl for scoring.
 
 ## SystemService
 ### Properties
@@ -294,21 +294,21 @@
 
 ## schemas:35_properties
 ### Properties
-* **allocationState**: 'Resizing' | 'Steady' (ReadOnly): Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute. Possible values include: 'Steady', 'Resizing'
+* **allocationState**: 'Resizing' | 'Steady' (ReadOnly): Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
 * **allocationStateTransitionTime**: string (ReadOnly): The time at which the compute entered its current allocation state.
 * **currentNodeCount**: int (ReadOnly): The number of compute nodes currently assigned to the compute.
 * **enableNodePublicIp**: bool: Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
 * **errors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Collection of errors encountered by various compute nodes during node setup.
 * **isolatedNetwork**: bool: Network is isolated or not
 * **nodeStateCounts**: [NodeStateCounts](#nodestatecounts) (ReadOnly): Counts of various compute node states on the amlCompute.
-* **osType**: 'Linux' | 'Windows': Compute OS Type. Possible values include: 'Linux', 'Windows'
-* **remoteLoginPortPublicAccess**: 'Disabled' | 'Enabled' | 'NotSpecified': State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled. Possible values include: 'Enabled', 'Disabled', 'NotSpecified'
+* **osType**: 'Linux' | 'Windows': Compute OS Type.
+* **remoteLoginPortPublicAccess**: 'Disabled' | 'Enabled' | 'NotSpecified': State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
 * **scaleSettings**: [ScaleSettings](#scalesettings): scale settings for AML Compute
 * **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
 * **targetNodeCount**: int (ReadOnly): The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
 * **userAccountCredentials**: [UserAccountCredentials](#useraccountcredentials): Settings for user account that gets created on each on the nodes of a compute.
 * **virtualMachineImage**: [VirtualMachineImage](#virtualmachineimage): Virtual Machine image for Windows AML Compute
-* **vmPriority**: 'Dedicated' | 'LowPriority': Virtual Machine priority. Possible values include: 'Dedicated', 'LowPriority'
+* **vmPriority**: 'Dedicated' | 'LowPriority': Virtual Machine priority.
 * **vmSize**: string: Virtual Machine Size
 
 ## NodeStateCounts
@@ -585,5 +585,5 @@ The path specified gets used to call the user script.
 * **computeType**: 'Custom' (Required): The Variant properties.
 * **isDefault**: bool (WriteOnly): Is this the default variant.
 * **trafficPercentile**: int (WriteOnly): The amount of traffic variant receives.
-* **type**: 'Control' | 'Treatment' (WriteOnly): The type of the variant. Possible values include: 'Control', 'Treatment'
+* **type**: 'Control' | 'Treatment' (WriteOnly): The type of the variant.
 

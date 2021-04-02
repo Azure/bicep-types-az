@@ -88,12 +88,12 @@
 
 ## ServerEndpointCreateParametersProperties
 ### Properties
-* **cloudTiering**: 'off' | 'on': Cloud Tiering. Possible values include: 'on', 'off'
+* **cloudTiering**: 'off' | 'on': Cloud Tiering.
 * **cloudTieringStatus**: [ServerEndpointCloudTieringStatus](#serverendpointcloudtieringstatus) (ReadOnly): Server endpoint cloud tiering status object.
 * **friendlyName**: string: Friendly Name
 * **lastOperationName**: string (ReadOnly): Resource Last Operation Name
 * **lastWorkflowId**: string (ReadOnly): ServerEndpoint lastWorkflowId
-* **offlineDataTransfer**: 'off' | 'on': Offline data transfer. Possible values include: 'on', 'off'
+* **offlineDataTransfer**: 'off' | 'on': Offline data transfer.
 * **offlineDataTransferShareName**: string: Offline data transfer share name
 * **offlineDataTransferStorageAccountResourceId**: string (ReadOnly): Offline data transfer storage account resource ID
 * **offlineDataTransferStorageAccountTenantId**: string (ReadOnly): Offline data transfer storage account tenant ID
@@ -110,7 +110,7 @@
 * **cachePerformance**: [CloudTieringCachePerformance](#cloudtieringcacheperformance) (ReadOnly): Server endpoint cloud tiering status object.
 * **datePolicyStatus**: [CloudTieringDatePolicyStatus](#cloudtieringdatepolicystatus) (ReadOnly): Status of the date policy
 * **filesNotTiering**: [CloudTieringFilesNotTiering](#cloudtieringfilesnottiering) (ReadOnly): Server endpoint cloud tiering status object.
-* **health**: 'Error' | 'Healthy' (ReadOnly): Cloud tiering health state. Possible values include: 'Healthy', 'Error'
+* **health**: 'Error' | 'Healthy' (ReadOnly): Cloud tiering health state.
 * **healthLastUpdatedTimestamp**: string (ReadOnly): The last updated timestamp of health state
 * **lastCloudTieringResult**: int (ReadOnly): Last cloud tiering result (HResult)
 * **lastSuccessTimestamp**: string (ReadOnly): Last cloud tiering success timestamp
@@ -169,16 +169,16 @@
 
 ## ServerEndpointSyncStatus
 ### Properties
-* **combinedHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly): Combined Health Status. Possible values include: 'Healthy', 'Error', 'SyncBlockedForRestore', 'SyncBlockedForChangeDetectionPostRestore', 'NoActivity'
+* **combinedHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly): Combined Health Status.
 * **downloadActivity**: [SyncActivityStatus](#syncactivitystatus) (ReadOnly): Sync Session status object.
-* **downloadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly): Download Health Status. Possible values include: 'Healthy', 'Error', 'SyncBlockedForRestore', 'SyncBlockedForChangeDetectionPostRestore', 'NoActivity'
+* **downloadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly): Download Health Status.
 * **downloadStatus**: [SyncSessionStatus](#syncsessionstatus) (ReadOnly): Sync Session status object.
 * **lastUpdatedTimestamp**: string (ReadOnly): Last Updated Timestamp
-* **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' (ReadOnly): Offline Data Transfer State. Possible values include: 'InProgress', 'Stopping', 'NotRunning', 'Complete'
-* **syncActivity**: 'Download' | 'Upload' | 'UploadAndDownload' (ReadOnly): Sync activity. Possible values include: 'Upload', 'Download', 'UploadAndDownload'
+* **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' (ReadOnly): Offline Data Transfer State.
+* **syncActivity**: 'Download' | 'Upload' | 'UploadAndDownload' (ReadOnly): Sync activity.
 * **totalPersistentFilesNotSyncingCount**: int (ReadOnly): Total count of persistent files not syncing (combined upload + download).
 * **uploadActivity**: [SyncActivityStatus](#syncactivitystatus) (ReadOnly): Sync Session status object.
-* **uploadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly): Upload Health Status. Possible values include: 'Healthy', 'Error', 'SyncBlockedForRestore', 'SyncBlockedForChangeDetectionPostRestore', 'NoActivity'
+* **uploadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' (ReadOnly): Upload Health Status.
 * **uploadStatus**: [SyncSessionStatus](#syncsessionstatus) (ReadOnly): Sync Session status object.
 
 ## SyncActivityStatus

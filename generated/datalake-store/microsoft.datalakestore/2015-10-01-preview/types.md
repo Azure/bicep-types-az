@@ -26,24 +26,24 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal identifier associated with the encryption.
 * **tenantId**: string (ReadOnly): The tenant identifier associated with the encryption.
-* **type**: 'SystemAssigned': The type of encryption being used. Currently the only supported type is 'SystemAssigned'. Possible values include: 'SystemAssigned'
+* **type**: 'SystemAssigned': The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
 
 ## DataLakeStoreAccountProperties
 ### Properties
 * **creationTime**: string (ReadOnly): the account creation time.
 * **defaultGroup**: string: the default owner group for all new folders and files created in the Data Lake Store account.
 * **encryptionConfig**: [EncryptionConfig](#encryptionconfig):
-* **encryptionProvisioningState**: 'Creating' | 'Succeeded' (ReadOnly): The current state of encryption provisioning for this Data Lake store account. Possible values include: 'Creating', 'Succeeded'
-* **encryptionState**: 'Disabled' | 'Enabled': The current state of encryption for this Data Lake store account. Possible values include: 'Enabled', 'Disabled'
+* **encryptionProvisioningState**: 'Creating' | 'Succeeded' (ReadOnly): The current state of encryption provisioning for this Data Lake store account.
+* **encryptionState**: 'Disabled' | 'Enabled': The current state of encryption for this Data Lake store account.
 * **endpoint**: string: the gateway host.
 * **lastModifiedTime**: string (ReadOnly): the account last modified time.
-* **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Patching' | 'Resuming' | 'Running' | 'Succeeded' | 'Suspending' (ReadOnly): the status of the Data Lake Store account while being provisioned. Possible values include: 'Failed', 'Creating', 'Running', 'Succeeded', 'Patching', 'Suspending', 'Resuming', 'Deleting', 'Deleted'
-* **state**: 'active' | 'suspended' (ReadOnly): the status of the Data Lake Store account after provisioning has completed. Possible values include: 'active', 'suspended'
+* **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Patching' | 'Resuming' | 'Running' | 'Succeeded' | 'Suspending' (ReadOnly): the status of the Data Lake Store account while being provisioned.
+* **state**: 'active' | 'suspended' (ReadOnly): the status of the Data Lake Store account after provisioning has completed.
 
 ## EncryptionConfig
 ### Properties
 * **keyVaultMetaInfo**: [KeyVaultMetaInfo](#keyvaultmetainfo):
-* **type**: 'ServiceManaged' | 'UserManaged': The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'. Possible values include: 'UserManaged', 'ServiceManaged'
+* **type**: 'ServiceManaged' | 'UserManaged': The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.
 
 ## KeyVaultMetaInfo
 ### Properties

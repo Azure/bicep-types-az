@@ -253,7 +253,7 @@
 ## VersionDetails
 ### Properties
 * **expiryDate**: string (ReadOnly): Version expiry date.
-* **status**: 'Deprecated' | 'NotSupported' | 'SecurityUpdateRequired' | 'Supported' | 'UpdateRequired' (ReadOnly): A value indicating whether security update required. Possible values include: 'Supported', 'NotSupported', 'Deprecated', 'UpdateRequired', 'SecurityUpdateRequired'
+* **status**: 'Deprecated' | 'NotSupported' | 'SecurityUpdateRequired' | 'Supported' | 'UpdateRequired' (ReadOnly): A value indicating whether security update required.
 * **version**: string (ReadOnly): The agent version.
 
 ## MasterTargetServer
@@ -481,17 +481,17 @@
 * **allowedOperations**: 'DisableMigration' | 'Migrate' | 'StartResync' | 'TestMigrate' | 'TestMigrateCleanup'[] (ReadOnly): The allowed operations on the migration item, based on the current migration state of the item.
 * **currentJob**: [CurrentJobDetails](#currentjobdetails) (ReadOnly): Current job details of the migration item.
 * **eventCorrelationId**: string (ReadOnly): The correlation Id for events associated with this migration item.
-* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The consolidated health. Possible values include: 'None', 'Normal', 'Warning', 'Critical'
+* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The consolidated health.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): The list of health errors.
 * **lastTestMigrationStatus**: string (ReadOnly): The status of the last test migration.
 * **lastTestMigrationTime**: string (ReadOnly): The last test migration time.
 * **machineName**: string (ReadOnly): The on-premise virtual machine name.
-* **migrationState**: 'DisableMigrationFailed' | 'DisableMigrationInProgress' | 'EnableMigrationFailed' | 'EnableMigrationInProgress' | 'InitialSeedingFailed' | 'InitialSeedingInProgress' | 'MigrationFailed' | 'MigrationInProgress' | 'MigrationSucceeded' | 'None' | 'Replicating' (ReadOnly): The migration status. Possible values include: 'None', 'EnableMigrationInProgress', 'EnableMigrationFailed', 'DisableMigrationInProgress', 'DisableMigrationFailed', 'InitialSeedingInProgress', 'InitialSeedingFailed', 'Replicating', 'MigrationInProgress', 'MigrationSucceeded', 'MigrationFailed'
+* **migrationState**: 'DisableMigrationFailed' | 'DisableMigrationInProgress' | 'EnableMigrationFailed' | 'EnableMigrationInProgress' | 'InitialSeedingFailed' | 'InitialSeedingInProgress' | 'MigrationFailed' | 'MigrationInProgress' | 'MigrationSucceeded' | 'None' | 'Replicating' (ReadOnly): The migration status.
 * **migrationStateDescription**: string (ReadOnly): The migration state description.
 * **policyFriendlyName**: string (ReadOnly): The name of policy governing this item.
 * **policyId**: string (Required): The policy Id.
 * **providerSpecificDetails**: [EnableMigrationProviderSpecificInput](#enablemigrationproviderspecificinput) (Required): Enable migration provider specific input.
-* **testMigrateState**: 'None' | 'TestMigrationCleanupInProgress' | 'TestMigrationFailed' | 'TestMigrationInProgress' | 'TestMigrationSucceeded' (ReadOnly): The test migrate state. Possible values include: 'None', 'TestMigrationInProgress', 'TestMigrationSucceeded', 'TestMigrationFailed', 'TestMigrationCleanupInProgress'
+* **testMigrateState**: 'None' | 'TestMigrationCleanupInProgress' | 'TestMigrationFailed' | 'TestMigrationInProgress' | 'TestMigrationSucceeded' (ReadOnly): The test migrate state.
 * **testMigrateStateDescription**: string (ReadOnly): The test migrate state description.
 
 ## CurrentJobDetails
@@ -1345,7 +1345,7 @@
 * **appConsistentFrequencyInMinutes**: int (ReadOnly): The app consistent snapshot frequency in minutes.
 * **crashConsistentFrequencyInMinutes**: int (ReadOnly): The crash consistent snapshot frequency in minutes.
 * **instanceType**: 'RcmAzureMigration' (Required): RCM based Azure migration specific policy details.
-* **multiVmSyncStatus**: 'Disabled' | 'Enabled' (ReadOnly): A value indicating whether multi-VM sync has to be enabled. Possible values include: 'Enabled', 'Disabled'
+* **multiVmSyncStatus**: 'Disabled' | 'Enabled' (ReadOnly): A value indicating whether multi-VM sync has to be enabled.
 * **recoveryPointHistory**: int (ReadOnly): The duration in minutes until which the recovery points need to be stored.
 * **recoveryPointThresholdInMinutes**: int (ReadOnly): The recovery point threshold in minutes.
 
@@ -1381,7 +1381,7 @@
 * **appConsistentFrequencyInMinutes**: int (ReadOnly): The app consistent snapshot frequency in minutes.
 * **crashConsistentFrequencyInMinutes**: int (ReadOnly): The crash consistent snapshot frequency in minutes.
 * **instanceType**: 'RcmAzureMigration' (Required): RCM based Azure migration specific policy details.
-* **multiVmSyncStatus**: 'Disabled' | 'Enabled' (ReadOnly): A value indicating whether multi-VM sync has to be enabled. Possible values include: 'Enabled', 'Disabled'
+* **multiVmSyncStatus**: 'Disabled' | 'Enabled' (ReadOnly): A value indicating whether multi-VM sync has to be enabled.
 * **recoveryPointHistory**: int (ReadOnly): The duration in minutes until which the recovery points need to be stored.
 * **recoveryPointThresholdInMinutes**: int (ReadOnly): The recovery point threshold in minutes.
 
@@ -1574,7 +1574,7 @@
 * **currentScenario**: [CurrentScenarioDetails](#currentscenariodetails) (ReadOnly): Current scenario details of the protected entity.
 * **currentScenarioStatus**: string (ReadOnly): The recovery plan status.
 * **currentScenarioStatusDescription**: string (ReadOnly): The recovery plan status description.
-* **failoverDeploymentModel**: 'Classic' | 'NotApplicable' | 'ResourceManager': The failover deployment model. Possible values include: 'NotApplicable', 'Classic', 'ResourceManager'
+* **failoverDeploymentModel**: 'Classic' | 'NotApplicable' | 'ResourceManager': The failover deployment model.
 * **friendlyName**: string (ReadOnly): The friendly name.
 * **groups**: [RecoveryPlanGroup](#recoveryplangroup)[] (Required): The recovery plan groups.
 * **lastPlannedFailoverTime**: string (ReadOnly): The start time of the last planned failover.
@@ -1589,7 +1589,7 @@
 ## RecoveryPlanGroup
 ### Properties
 * **endGroupActions**: [RecoveryPlanAction](#recoveryplanaction)[]: The end group actions.
-* **groupType**: 'Boot' | 'Failover' | 'Shutdown' (Required): The group type. Possible values include: 'Shutdown', 'Boot', 'Failover'
+* **groupType**: 'Boot' | 'Failover' | 'Shutdown' (Required): The group type.
 * **replicationProtectedItems**: [RecoveryPlanProtectedItem](#recoveryplanprotecteditem)[]: The list of protected items.
 * **startGroupActions**: [RecoveryPlanAction](#recoveryplanaction)[]: The start group actions.
 
@@ -1605,7 +1605,7 @@
 ### Base Properties
 ### AutomationRunbookActionDetails
 #### Properties
-* **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location. Possible values include: 'Primary', 'Recovery'
+* **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location.
 * **instanceType**: 'AutomationRunbookActionDetails' (Required): Recovery plan Automation runbook action details.
 * **runbookId**: string: The runbook ARM Id.
 * **timeout**: string: The runbook timeout.
@@ -1617,7 +1617,7 @@
 
 ### ScriptActionDetails
 #### Properties
-* **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location. Possible values include: 'Primary', 'Recovery'
+* **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location.
 * **instanceType**: 'ScriptActionDetails' (Required): Recovery plan script action details.
 * **path**: string (Required): The script path.
 * **timeout**: string: The script timeout.
@@ -1625,7 +1625,7 @@
 
 ## AutomationRunbookActionDetails
 ### Properties
-* **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location. Possible values include: 'Primary', 'Recovery'
+* **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location.
 * **instanceType**: 'AutomationRunbookActionDetails' (Required): Recovery plan Automation runbook action details.
 * **runbookId**: string: The runbook ARM Id.
 * **timeout**: string: The runbook timeout.
@@ -1637,7 +1637,7 @@
 
 ## ScriptActionDetails
 ### Properties
-* **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location. Possible values include: 'Primary', 'Recovery'
+* **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location.
 * **instanceType**: 'ScriptActionDetails' (Required): Recovery plan script action details.
 * **path**: string (Required): The script path.
 * **timeout**: string: The script timeout.

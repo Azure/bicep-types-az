@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2020-10-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'multistep' | 'ping': The kind of WebTest that this web test watches. Choices are ping and multistep. Possible values include: 'ping', 'multistep'
+* **kind**: 'multistep' | 'ping': The kind of WebTest that this web test watches. Choices are ping and multistep.
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WebTestProperties](#webtestproperties): Metadata describing a web test for an Azure resource.
@@ -21,7 +21,7 @@
 * **ExpectedHttpStatusCode**: int: Validate that the WebTest returns the http status code provided.
 * **Frequency**: int: Interval in seconds between test runs for this WebTest. Default value is 300.
 * **IgnoreHttpsStatusCode**: bool: When set, validation will ignore the status code.
-* **Kind**: 'basic' | 'multistep' | 'ping' | 'standard' (Required): The kind of web test this is, valid choices are ping, multistep, basic, and standard. Possible values include: 'ping', 'multistep', 'basic', 'standard'
+* **Kind**: 'basic' | 'multistep' | 'ping' | 'standard' (Required): The kind of web test this is, valid choices are ping, multistep, basic, and standard.
 * **Locations**: [WebTestGeolocation](#webtestgeolocation)[] (Required): A list of where to physically run the tests from to give global coverage for accessibility of your application.
 * **Name**: string (Required): User defined name if this WebTest.
 * **provisioningState**: string (ReadOnly): Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.

@@ -213,8 +213,8 @@
 * **externalAdministratorLogin**: string (ReadOnly): The display name of the Azure Active Directory object with admin permissions on this server. Legacy parameter, always null. To check for Active Directory admin, query .../servers/{serverName}/administrators
 * **externalAdministratorSid**: string (ReadOnly): The ID of the Active Azure Directory object with admin permissions on this server. Legacy parameter, always null. To check for Active Directory admin, query .../servers/{serverName}/administrators.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
-* **state**: 'Disabled' | 'Ready' (ReadOnly): The state of the server. Possible values include: 'Ready', 'Disabled'
-* **version**: '12.0' | '2.0': The version of the server. Possible values include: '2.0', '12.0'
+* **state**: 'Disabled' | 'Ready' (ReadOnly): The state of the server.
+* **version**: '12.0' | '2.0': The version of the server.
 
 ## Dictionary<string,String>
 ### Properties
@@ -230,8 +230,8 @@
 
 ## AdvisorProperties
 ### Properties
-* **advisorStatus**: 'GA' | 'LimitedPublicPreview' | 'PrivatePreview' | 'PublicPreview' (ReadOnly): Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'. Possible values include: 'GA', 'PublicPreview', 'LimitedPublicPreview', 'PrivatePreview'
-* **autoExecuteValue**: 'Default' | 'Disabled' | 'Enabled' (Required): Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'. Possible values include: 'Enabled', 'Disabled', 'Default'
+* **advisorStatus**: 'GA' | 'LimitedPublicPreview' | 'PrivatePreview' | 'PublicPreview' (ReadOnly): Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'.
+* **autoExecuteValue**: 'Default' | 'Disabled' | 'Enabled' (Required): Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'.
 * **lastChecked**: string (ReadOnly): Gets the time when the current resource was analyzed for recommendations by this advisor.
 * **recommendationsStatus**: string (ReadOnly): Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, 'Ok' (Recommendations available), LowActivity (not enough workload to analyze), 'DbSeemsTuned' (Database is doing well), etc.
 
@@ -256,7 +256,7 @@
 
 ## ServerConnectionPolicyProperties
 ### Properties
-* **connectionType**: 'Default' | 'Proxy' | 'Redirect' (Required): The server connection type. Possible values include: 'Default', 'Proxy', 'Redirect'
+* **connectionType**: 'Default' | 'Proxy' | 'Redirect' (Required): The server connection type.
 
 ## DatabaseProperties
 ### Properties
@@ -278,7 +278,7 @@ Restore: Creates a database by restoring a backup of a deleted database. sourceD
 
 RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
 
-Copy, NonReadableSecondary, OnlineSecondary and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition. Possible values include: 'Copy', 'Default', 'NonReadableSecondary', 'OnlineSecondary', 'PointInTimeRestore', 'Recovery', 'Restore', 'RestoreLongTermRetentionBackup'
+Copy, NonReadableSecondary, OnlineSecondary and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
 * **creationDate**: string (ReadOnly): The creation date of the database (ISO8601 format).
 * **currentServiceObjectiveId**: string (ReadOnly): The current service level objective ID of the database. This is the ID of the service level objective that is currently active.
 * **databaseId**: string (ReadOnly): The ID of the database.
@@ -295,11 +295,11 @@ az sql db list-editions -l <location> -o table
 ```powershell
 Get-AzSqlServerServiceObjective -Location <location>
 ````
-. Possible values include: 'Web', 'Business', 'Basic', 'Standard', 'Premium', 'PremiumRS', 'Free', 'Stretch', 'DataWarehouse', 'System', 'System2', 'GeneralPurpose', 'BusinessCritical', 'Hyperscale'
+.
 * **elasticPoolName**: string: The name of the elastic pool the database is in. If elasticPoolName and requestedServiceObjectiveName are both updated, the value of requestedServiceObjectiveName is ignored. Not supported for DataWarehouse edition.
 * **failoverGroupId**: string (ReadOnly): The resource identifier of the failover group containing this database.
 * **maxSizeBytes**: string: The max size of the database expressed in bytes. If createMode is not Default, this value is ignored. To see possible values, query the capabilities API (/subscriptions/{subscriptionId}/providers/Microsoft.Sql/locations/{locationID}/capabilities) referred to by operationId: "Capabilities_ListByLocation."
-* **readScale**: 'Disabled' | 'Enabled': Conditional. If the database is a geo-secondary, readScale indicates whether read-only connections are allowed to this database or not. Not supported for DataWarehouse edition. Possible values include: 'Enabled', 'Disabled'
+* **readScale**: 'Disabled' | 'Enabled': Conditional. If the database is a geo-secondary, readScale indicates whether read-only connections are allowed to this database or not. Not supported for DataWarehouse edition.
 * **recommendedIndex**: [RecommendedIndex](#recommendedindex)[] (ReadOnly): The recommended indices for this database.
 * **recoveryServicesRecoveryPointResourceId**: string: Conditional. If createMode is RestoreLongTermRetentionBackup, then this value is required. Specifies the resource ID of the recovery point to restore from.
 * **requestedServiceObjectiveId**: string: The configured service level objective ID of the database. This is the service level objective that is in the process of being applied to the database. Once successfully updated, it will match the value of currentServiceObjectiveId property. If requestedServiceObjectiveId and requestedServiceObjectiveName are both updated, the value of requestedServiceObjectiveId overrides the value of requestedServiceObjectiveName.
@@ -316,10 +316,10 @@ az sql db list-editions -l <location> -o table
 ```powershell
 Get-AzSqlServerServiceObjective -Location <location>
 ````
-. Possible values include: 'System', 'System0', 'System1', 'System2', 'System3', 'System4', 'System2L', 'System3L', 'System4L', 'Free', 'Basic', 'S0', 'S1', 'S2', 'S3', 'S4', 'S6', 'S7', 'S9', 'S12', 'P1', 'P2', 'P3', 'P4', 'P6', 'P11', 'P15', 'PRS1', 'PRS2', 'PRS4', 'PRS6', 'DW100', 'DW200', 'DW300', 'DW400', 'DW500', 'DW600', 'DW1000', 'DW1200', 'DW1000c', 'DW1500', 'DW1500c', 'DW2000', 'DW2000c', 'DW3000', 'DW2500c', 'DW3000c', 'DW6000', 'DW5000c', 'DW6000c', 'DW7500c', 'DW10000c', 'DW15000c', 'DW30000c', 'DS100', 'DS200', 'DS300', 'DS400', 'DS500', 'DS600', 'DS1000', 'DS1200', 'DS1500', 'DS2000', 'ElasticPool'
+.
 * **restorePointInTime**: string: Conditional. If createMode is PointInTimeRestore, this value is required. If createMode is Restore, this value is optional. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database. Must be greater than or equal to the source database's earliestRestoreDate value.
-* **sampleName**: 'AdventureWorksLT': Indicates the name of the sample schema to apply when creating this database. If createMode is not Default, this value is ignored. Not supported for DataWarehouse edition. Possible values include: 'AdventureWorksLT'
-* **serviceLevelObjective**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L' (ReadOnly): The current service level objective of the database. Possible values include: 'System', 'System0', 'System1', 'System2', 'System3', 'System4', 'System2L', 'System3L', 'System4L', 'Free', 'Basic', 'S0', 'S1', 'S2', 'S3', 'S4', 'S6', 'S7', 'S9', 'S12', 'P1', 'P2', 'P3', 'P4', 'P6', 'P11', 'P15', 'PRS1', 'PRS2', 'PRS4', 'PRS6', 'DW100', 'DW200', 'DW300', 'DW400', 'DW500', 'DW600', 'DW1000', 'DW1200', 'DW1000c', 'DW1500', 'DW1500c', 'DW2000', 'DW2000c', 'DW3000', 'DW2500c', 'DW3000c', 'DW6000', 'DW5000c', 'DW6000c', 'DW7500c', 'DW10000c', 'DW15000c', 'DW30000c', 'DS100', 'DS200', 'DS300', 'DS400', 'DS500', 'DS600', 'DS1000', 'DS1200', 'DS1500', 'DS2000', 'ElasticPool'
+* **sampleName**: 'AdventureWorksLT': Indicates the name of the sample schema to apply when creating this database. If createMode is not Default, this value is ignored. Not supported for DataWarehouse edition.
+* **serviceLevelObjective**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L' (ReadOnly): The current service level objective of the database.
 * **serviceTierAdvisors**: [ServiceTierAdvisor](#servicetieradvisor)[] (ReadOnly): The list of service tier advisors for this database. Expanded property
 * **sourceDatabaseDeletionDate**: string: Conditional. If createMode is Restore and sourceDatabaseId is the deleted database's original resource id when it existed (as opposed to its current restorable dropped database id), then this value is required. Specifies the time that the database was deleted.
 * **sourceDatabaseId**: string: Conditional. If createMode is Copy, NonReadableSecondary, OnlineSecondary, PointInTimeRestore, Recovery, or Restore, then this value is required. Specifies the resource ID of the source database. If createMode is NonReadableSecondary or OnlineSecondary, the name of the source database must be the same as the new database being created.
@@ -336,17 +336,17 @@ Get-AzSqlServerServiceObjective -Location <location>
 
 ## RecommendedIndexProperties
 ### Properties
-* **action**: 'Create' | 'Drop' | 'Rebuild' (ReadOnly): The proposed index action. You can create a missing index, drop an unused index, or rebuild an existing index to improve its performance. Possible values include: 'Create', 'Drop', 'Rebuild'
+* **action**: 'Create' | 'Drop' | 'Rebuild' (ReadOnly): The proposed index action. You can create a missing index, drop an unused index, or rebuild an existing index to improve its performance.
 * **columns**: string[] (ReadOnly): Columns over which to build index
 * **created**: string (ReadOnly): The UTC datetime showing when this resource was created (ISO8601 format).
 * **estimatedImpact**: [OperationImpact](#operationimpact)[] (ReadOnly): The estimated impact of doing recommended index action.
 * **includedColumns**: string[] (ReadOnly): The list of column names to be included in the index
 * **indexScript**: string (ReadOnly): The full build index script
-* **indexType**: 'CLUSTERED COLUMNSTORE' | 'CLUSTERED' | 'COLUMNSTORE' | 'NONCLUSTERED' (ReadOnly): The type of index (CLUSTERED, NONCLUSTERED, COLUMNSTORE, CLUSTERED COLUMNSTORE). Possible values include: 'CLUSTERED', 'NONCLUSTERED', 'COLUMNSTORE', 'CLUSTERED COLUMNSTORE'
+* **indexType**: 'CLUSTERED COLUMNSTORE' | 'CLUSTERED' | 'COLUMNSTORE' | 'NONCLUSTERED' (ReadOnly): The type of index (CLUSTERED, NONCLUSTERED, COLUMNSTORE, CLUSTERED COLUMNSTORE).
 * **lastModified**: string (ReadOnly): The UTC datetime of when was this resource last changed (ISO8601 format).
 * **reportedImpact**: [OperationImpact](#operationimpact)[] (ReadOnly): The values reported after index action is complete.
 * **schema**: string (ReadOnly): The schema where table to build index over resides
-* **state**: 'Active' | 'Blocked' | 'Executing' | 'Expired' | 'Ignored' | 'Pending Revert' | 'Pending' | 'Reverted' | 'Reverting' | 'Success' | 'Verifying' (ReadOnly): The current recommendation state. Possible values include: 'Active', 'Pending', 'Executing', 'Verifying', 'Pending Revert', 'Reverting', 'Reverted', 'Ignored', 'Expired', 'Blocked', 'Success'
+* **state**: 'Active' | 'Blocked' | 'Executing' | 'Expired' | 'Ignored' | 'Pending Revert' | 'Pending' | 'Reverted' | 'Reverting' | 'Success' | 'Verifying' (ReadOnly): The current recommendation state.
 * **table**: string (ReadOnly): The table on which to build index.
 
 ## OperationImpact
@@ -388,7 +388,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 ## SloUsageMetric
 ### Properties
 * **inRangeTimeRatio**: int (ReadOnly): Gets or sets inRangeTimeRatio for SLO usage metric.
-* **serviceLevelObjective**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L' (ReadOnly): The serviceLevelObjective for SLO usage metric. Possible values include: 'System', 'System0', 'System1', 'System2', 'System3', 'System4', 'System2L', 'System3L', 'System4L', 'Free', 'Basic', 'S0', 'S1', 'S2', 'S3', 'S4', 'S6', 'S7', 'S9', 'S12', 'P1', 'P2', 'P3', 'P4', 'P6', 'P11', 'P15', 'PRS1', 'PRS2', 'PRS4', 'PRS6', 'DW100', 'DW200', 'DW300', 'DW400', 'DW500', 'DW600', 'DW1000', 'DW1200', 'DW1000c', 'DW1500', 'DW1500c', 'DW2000', 'DW2000c', 'DW3000', 'DW2500c', 'DW3000c', 'DW6000', 'DW5000c', 'DW6000c', 'DW7500c', 'DW10000c', 'DW15000c', 'DW30000c', 'DS100', 'DS200', 'DS300', 'DS400', 'DS500', 'DS600', 'DS1000', 'DS1200', 'DS1500', 'DS2000', 'ElasticPool'
+* **serviceLevelObjective**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L' (ReadOnly): The serviceLevelObjective for SLO usage metric.
 * **serviceLevelObjectiveId**: string (ReadOnly): The serviceLevelObjectiveId for SLO usage metric.
 
 ## TransparentDataEncryption
@@ -401,7 +401,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 
 ## TransparentDataEncryptionProperties
 ### Properties
-* **status**: 'Disabled' | 'Enabled': The status of the database transparent data encryption. Possible values include: 'Enabled', 'Disabled'
+* **status**: 'Disabled' | 'Enabled': The status of the database transparent data encryption.
 
 ## Dictionary<string,String>
 ### Properties
@@ -436,7 +436,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 ## DataMaskingPolicyProperties
 ### Properties
 * **applicationPrincipals**: string (ReadOnly): The list of the application principals. This is a legacy parameter and is no longer used.
-* **dataMaskingState**: 'Disabled' | 'Enabled' (Required): The state of the data masking policy. Possible values include: 'Disabled', 'Enabled'
+* **dataMaskingState**: 'Disabled' | 'Enabled' (Required): The state of the data masking policy.
 * **exemptPrincipals**: string: The list of the exempt principals. Specifies the semicolon-separated list of database users for which the data masking policy does not apply. The specified users receive data results without masking for all of the database queries.
 * **maskingLevel**: string (ReadOnly): The masking level. This is a legacy parameter and is no longer used.
 
@@ -445,12 +445,12 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **aliasName**: string: The alias name. This is a legacy parameter and is no longer used.
 * **columnName**: string (Required): The column name on which the data masking rule is applied.
 * **id**: string (ReadOnly): The rule Id.
-* **maskingFunction**: 'CCN' | 'Default' | 'Email' | 'Number' | 'SSN' | 'Text' (Required): The masking function that is used for the data masking rule. Possible values include: 'Default', 'CCN', 'Email', 'Number', 'SSN', 'Text'
+* **maskingFunction**: 'CCN' | 'Default' | 'Email' | 'Number' | 'SSN' | 'Text' (Required): The masking function that is used for the data masking rule.
 * **numberFrom**: string: The numberFrom property of the masking rule. Required if maskingFunction is set to Number, otherwise this parameter will be ignored.
 * **numberTo**: string: The numberTo property of the data masking rule. Required if maskingFunction is set to Number, otherwise this parameter will be ignored.
 * **prefixSize**: string: If maskingFunction is set to Text, the number of characters to show unmasked in the beginning of the string. Otherwise, this parameter will be ignored.
 * **replacementString**: string: If maskingFunction is set to Text, the character to use for masking the unexposed part of the string. Otherwise, this parameter will be ignored.
-* **ruleState**: 'Disabled' | 'Enabled': The rule state. Used to delete a rule. To delete an existing rule, specify the schemaName, tableName, columnName, maskingFunction, and specify ruleState as disabled. However, if the rule doesn't already exist, the rule will be created with ruleState set to enabled, regardless of the provided value of ruleState. Possible values include: 'Disabled', 'Enabled'
+* **ruleState**: 'Disabled' | 'Enabled': The rule state. Used to delete a rule. To delete an existing rule, specify the schemaName, tableName, columnName, maskingFunction, and specify ruleState as disabled. However, if the rule doesn't already exist, the rule will be created with ruleState set to enabled, regardless of the provided value of ruleState.
 * **schemaName**: string (Required): The schema name on which the data masking rule is applied.
 * **suffixSize**: string: If maskingFunction is set to Text, the number of characters to show unmasked at the end of the string. Otherwise, this parameter will be ignored.
 * **tableName**: string (Required): The table name on which the data masking rule is applied.
@@ -459,37 +459,37 @@ Get-AzSqlServerServiceObjective -Location <location>
 ### Properties
 * **administratorLogin**: string (Required): The name of the SQL administrator.
 * **administratorLoginPassword**: string (Required): The password of the SQL administrator.
-* **authenticationType**: 'ADPassword' | 'SQL': The authentication type. Possible values include: 'SQL', 'ADPassword'
+* **authenticationType**: 'ADPassword' | 'SQL': The authentication type.
 * **operationMode**: string (Required): The type of import operation being performed. This is always Import.
 * **storageKey**: string (Required): The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?."
-* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required): The type of the storage key to use. Possible values include: 'StorageAccessKey', 'SharedAccessKey'
+* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required): The type of the storage key to use.
 * **storageUri**: string (Required): The storage uri to use.
 
 ## GeoBackupPolicyProperties
 ### Properties
-* **state**: 'Disabled' | 'Enabled' (Required): The state of the geo backup policy. Possible values include: 'Disabled', 'Enabled'
+* **state**: 'Disabled' | 'Enabled' (Required): The state of the geo backup policy.
 * **storageType**: string (ReadOnly): The storage type of the geo backup policy.
 
 ## DatabaseSecurityAlertPolicyProperties
 ### Properties
 * **disabledAlerts**: string: Specifies the semicolon-separated list of alerts that are disabled, or empty string to disable no alerts. Possible values: Sql_Injection; Sql_Injection_Vulnerability; Access_Anomaly; Data_Exfiltration; Unsafe_Action.
-* **emailAccountAdmins**: 'Disabled' | 'Enabled': Specifies that the alert is sent to the account administrators. Possible values include: 'Enabled', 'Disabled'
+* **emailAccountAdmins**: 'Disabled' | 'Enabled': Specifies that the alert is sent to the account administrators.
 * **emailAddresses**: string: Specifies the semicolon-separated list of e-mail addresses to which the alert is sent.
 * **retentionDays**: int: Specifies the number of days to keep in the Threat Detection audit logs.
-* **state**: 'Disabled' | 'Enabled' | 'New' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint and storageAccountAccessKey are required. Possible values include: 'New', 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled' | 'New' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint and storageAccountAccessKey are required.
 * **storageAccountAccessKey**: string: Specifies the identifier key of the Threat Detection audit storage account. If state is Enabled, storageAccountAccessKey is required.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs. If state is Enabled, storageEndpoint is required.
-* **useServerDefault**: 'Disabled' | 'Enabled': Specifies whether to use the default server policy. Possible values include: 'Enabled', 'Disabled'
+* **useServerDefault**: 'Disabled' | 'Enabled': Specifies whether to use the default server policy.
 
 ## DisasterRecoveryConfigurationProperties
 ### Properties
-* **autoFailover**: 'Off' | 'On' (ReadOnly): Whether or not failover can be done automatically. Possible values include: 'Off', 'On'
-* **failoverPolicy**: 'Automatic' | 'Manual' (ReadOnly): How aggressive the automatic failover should be. Possible values include: 'Manual', 'Automatic'
+* **autoFailover**: 'Off' | 'On' (ReadOnly): Whether or not failover can be done automatically.
+* **failoverPolicy**: 'Automatic' | 'Manual' (ReadOnly): How aggressive the automatic failover should be.
 * **logicalServerName**: string (ReadOnly): Logical name of the server.
 * **partnerLogicalServerName**: string (ReadOnly): Logical name of the partner server.
 * **partnerServerId**: string (ReadOnly): Id of the partner server.
-* **role**: 'None' | 'Primary' | 'Secondary' (ReadOnly): The role of the current server in the disaster recovery configuration. Possible values include: 'None', 'Primary', 'Secondary'
-* **status**: 'Creating' | 'Dropping' | 'FailingOver' | 'Ready' (ReadOnly): The status of the disaster recovery configuration. Possible values include: 'Creating', 'Ready', 'FailingOver', 'Dropping'
+* **role**: 'None' | 'Primary' | 'Secondary' (ReadOnly): The role of the current server in the disaster recovery configuration.
+* **status**: 'Creating' | 'Dropping' | 'FailingOver' | 'Ready' (ReadOnly): The status of the disaster recovery configuration.
 
 ## ElasticPoolProperties
 ### Properties
@@ -497,8 +497,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **databaseDtuMax**: int: The maximum DTU any one database can consume.
 * **databaseDtuMin**: int: The minimum DTU all databases are guaranteed.
 * **dtu**: int: The total shared DTU for the database elastic pool.
-* **edition**: 'Basic' | 'BusinessCritical' | 'GeneralPurpose' | 'Premium' | 'Standard': The edition of the elastic pool. Possible values include: 'Basic', 'Standard', 'Premium', 'GeneralPurpose', 'BusinessCritical'
-* **state**: 'Creating' | 'Disabled' | 'Ready' (ReadOnly): The state of the elastic pool. Possible values include: 'Creating', 'Ready', 'Disabled'
+* **edition**: 'Basic' | 'BusinessCritical' | 'GeneralPurpose' | 'Premium' | 'Standard': The edition of the elastic pool.
+* **state**: 'Creating' | 'Disabled' | 'Ready' (ReadOnly): The state of the elastic pool.
 * **storageMB**: int: Gets storage limit for the database elastic pool in MB.
 * **zoneRedundant**: bool: Whether or not this database elastic pool is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
 

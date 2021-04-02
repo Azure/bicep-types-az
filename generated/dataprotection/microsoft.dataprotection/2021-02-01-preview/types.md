@@ -42,22 +42,22 @@
 
 ## BackupVault
 ### Properties
-* **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the BackupVault resource. Possible values include: 'Failed', 'Provisioning', 'Succeeded', 'Unknown', 'Updating'
+* **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the BackupVault resource.
 * **storageSettings**: [StorageSetting](#storagesetting)[]: Storage Settings
 
 ## StorageSetting
 ### Properties
-* **datastoreType**: 'ArchiveStore' | 'SnapshotStore' | 'VaultStore': Gets or sets the type of the datastore. Possible values include: 'ArchiveStore', 'SnapshotStore', 'VaultStore'
-* **type**: 'GeoRedundant' | 'LocallyRedundant': Gets or sets the type. Possible values include: 'GeoRedundant', 'LocallyRedundant'
+* **datastoreType**: 'ArchiveStore' | 'SnapshotStore' | 'VaultStore': Gets or sets the type of the datastore.
+* **type**: 'GeoRedundant' | 'LocallyRedundant': Gets or sets the type.
 
 ## systemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties
@@ -66,7 +66,7 @@
 
 ## BackupInstance
 ### Properties
-* **currentProtectionState**: 'BackupSchedulesSuspended' | 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'Invalid' | 'NotProtected' | 'ProtectionConfigured' | 'ProtectionError' | 'ProtectionStopped' | 'RetentionSchedulesSuspended' | 'SoftDeleted' | 'SoftDeleting' | 'UpdatingProtection' (ReadOnly): Specifies the current protection state of the resource. Possible values include: 'Invalid', 'NotProtected', 'ConfiguringProtection', 'ProtectionConfigured', 'BackupSchedulesSuspended', 'RetentionSchedulesSuspended', 'ProtectionStopped', 'ProtectionError', 'ConfiguringProtectionFailed', 'SoftDeleting', 'SoftDeleted', 'UpdatingProtection'
+* **currentProtectionState**: 'BackupSchedulesSuspended' | 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'Invalid' | 'NotProtected' | 'ProtectionConfigured' | 'ProtectionError' | 'ProtectionStopped' | 'RetentionSchedulesSuspended' | 'SoftDeleted' | 'SoftDeleting' | 'UpdatingProtection' (ReadOnly): Specifies the current protection state of the resource.
 * **dataSourceInfo**: [Datasource](#datasource) (Required): Datasource to be backed up
 * **dataSourceSetInfo**: [DatasourceSet](#datasourceset): DatasourceSet details of datasource to be backed up
 * **friendlyName**: string (Required): Gets or sets the Backup Instance friendly name.
@@ -109,7 +109,7 @@
 ## DataStoreParameters
 * **Discriminator**: objectType
 ### Base Properties
-* **dataStoreType**: 'ArchiveStore' | 'OperationalStore' | 'VaultStore' (Required): type of datastore; Operational/Vault/Archive. Possible values include: 'OperationalStore', 'VaultStore', 'ArchiveStore'
+* **dataStoreType**: 'ArchiveStore' | 'OperationalStore' | 'VaultStore' (Required): type of datastore; Operational/Vault/Archive.
 ### AzureOperationalStoreParameters
 #### Properties
 * **objectType**: 'AzureOperationalStoreParameters' (Required): Parameters for Operational-Tier DataStore
@@ -152,7 +152,7 @@
 ## ProtectionStatusDetails
 ### Properties
 * **errorDetails**: [UserFacingError](#userfacingerror): Error object used by layers that have access to localized content, and propagate that to user
-* **status**: 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'ProtectionConfigured' | 'ProtectionStopped' | 'SoftDeleted' | 'SoftDeleting': Specifies the protection status of the resource. Possible values include: 'ConfiguringProtection', 'ConfiguringProtectionFailed', 'ProtectionConfigured', 'ProtectionStopped', 'SoftDeleted', 'SoftDeleting'
+* **status**: 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'ProtectionConfigured' | 'ProtectionStopped' | 'SoftDeleted' | 'SoftDeleting': Specifies the protection status of the resource.
 
 ## BaseBackupPolicy
 * **Discriminator**: objectType
@@ -210,7 +210,7 @@
 
 ## DataStoreInfoBase
 ### Properties
-* **dataStoreType**: 'ArchiveStore' | 'OperationalStore' | 'VaultStore' (Required): type of datastore; Operational/Vault/Archive. Possible values include: 'OperationalStore', 'VaultStore', 'ArchiveStore'
+* **dataStoreType**: 'ArchiveStore' | 'OperationalStore' | 'VaultStore' (Required): type of datastore; Operational/Vault/Archive.
 * **objectType**: string (Required): Type of Datasource object, used to initialize the right inherited type
 
 ## TriggerContext

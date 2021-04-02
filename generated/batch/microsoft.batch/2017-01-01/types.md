@@ -31,7 +31,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **lastActivationTime**: string (ReadOnly): The time at which the package was last activated, if the package is active.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **state**: 'active' | 'pending' | 'unmapped' (ReadOnly): The current state of the application package. Possible values include: 'pending', 'active', 'unmapped'
+* **state**: 'active' | 'pending' | 'unmapped' (ReadOnly): The current state of the application package.
 * **storageUrl**: string (ReadOnly): The storage URL at which the application package is stored.
 * **storageUrlExpiry**: string (ReadOnly): The UTC time at which the storage URL will expire.
 * **type**: 'Microsoft.Batch/batchAccounts/applications/versions' (ReadOnly, DeployTimeConstant): The resource type
@@ -44,9 +44,9 @@
 * **autoStorage**: [AutoStorageBaseProperties](#autostoragebaseproperties): The properties related to auto storage account.
 * **coreQuota**: int (ReadOnly):
 * **keyVaultReference**: [KeyVaultReference](#keyvaultreference): Identifies the Azure key vault associated with a Batch account.
-* **poolAllocationMode**: 'BatchService' | 'UserSubscription': The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService. Possible values include: 'BatchService', 'UserSubscription'
+* **poolAllocationMode**: 'BatchService' | 'UserSubscription': The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.
 * **poolQuota**: int (ReadOnly):
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly): The provisioned state of the resource. Possible values include: 'Invalid', 'Creating', 'Deleting', 'Succeeded', 'Failed', 'Cancelled'
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 
 ## AutoStorageBaseProperties
 ### Properties
@@ -68,7 +68,7 @@
 * **format**: string (ReadOnly): The format of the application package, if the package is active.
 * **id**: string (ReadOnly): The ID of the application.
 * **lastActivationTime**: string (ReadOnly): The time at which the package was last activated, if the package is active.
-* **state**: 'active' | 'pending' | 'unmapped' (ReadOnly): The current state of the application package. Possible values include: 'pending', 'active', 'unmapped'
+* **state**: 'active' | 'pending' | 'unmapped' (ReadOnly): The current state of the application package.
 * **storageUrl**: string (ReadOnly): The storage URL at which the application package is stored.
 * **storageUrlExpiry**: string (ReadOnly): The UTC time at which the storage URL will expire.
 * **version**: string (ReadOnly): The version of the application package.

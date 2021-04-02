@@ -23,7 +23,7 @@
 ### Properties
 * **cancellationReason**: string (ReadOnly): Reason for cancellation.
 * **deliveryInfo**: [JobDeliveryInfo](#jobdeliveryinfo): Additional delivery info.
-* **deliveryType**: 'NonScheduled' | 'Scheduled': Delivery type of Job. Possible values include: 'NonScheduled', 'Scheduled'
+* **deliveryType**: 'NonScheduled' | 'Scheduled': Delivery type of Job.
 * **details**: [JobDetails](#jobdetails): Job details.
 * **error**: [CloudError](#clouderror) (ReadOnly): Cloud error.
 * **isCancellable**: bool (ReadOnly): Describes whether the job is cancellable or not.
@@ -32,8 +32,8 @@
 * **isPrepareToShipEnabled**: bool (ReadOnly): Is Prepare To Ship Enabled on this job
 * **isShippingAddressEditable**: bool (ReadOnly): Describes whether the shipping address is editable or not.
 * **startTime**: string (ReadOnly): Time at which the job was started in UTC ISO 8601 format.
-* **status**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' (ReadOnly): Name of the stage which is in progress. Possible values include: 'DeviceOrdered', 'DevicePrepared', 'Dispatched', 'Delivered', 'PickedUp', 'AtAzureDC', 'DataCopy', 'Completed', 'CompletedWithErrors', 'Cancelled', 'Failed_IssueReportedAtCustomer', 'Failed_IssueDetectedAtAzureDC', 'Aborted', 'CompletedWithWarnings', 'ReadyToDispatchFromAzureDC', 'ReadyToReceiveAtAzureDC'
-* **transferType**: 'ExportFromAzure' | 'ImportToAzure' (Required): Type of the data transfer. Possible values include: 'ImportToAzure', 'ExportFromAzure'
+* **status**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' (ReadOnly): Name of the stage which is in progress.
+* **transferType**: 'ExportFromAzure' | 'ImportToAzure' (Required): Type of the data transfer.
 
 ## JobDeliveryInfo
 ### Properties
@@ -92,7 +92,7 @@
 ## NotificationPreference
 ### Properties
 * **sendNotification**: bool (Required): Notification is required or not.
-* **stageName**: 'AtAzureDC' | 'DataCopy' | 'Delivered' | 'DevicePrepared' | 'Dispatched' | 'PickedUp' (Required): Name of the stage. Possible values include: 'DevicePrepared', 'Dispatched', 'Delivered', 'PickedUp', 'AtAzureDC', 'DataCopy'
+* **stageName**: 'AtAzureDC' | 'DataCopy' | 'Delivered' | 'DevicePrepared' | 'Dispatched' | 'PickedUp' (Required): Name of the stage.
 
 ## CopyLogDetails
 * **Discriminator**: copyLogDetailsType
@@ -149,7 +149,7 @@
 ## DataExportDetails
 ### Properties
 * **accountDetails**: [DataAccountDetails](#dataaccountdetails) (Required): Account details of the data to be transferred
-* **logCollectionLevel**: 'Error' | 'Verbose': Level of the logs to be collected. Possible values include: 'Error', 'Verbose'
+* **logCollectionLevel**: 'Error' | 'Verbose': Level of the logs to be collected.
 * **transferConfiguration**: [TransferConfiguration](#transferconfiguration) (Required): Configuration for defining the transfer of data.
 
 ## DataAccountDetails
@@ -182,7 +182,7 @@
 ## TransferConfiguration
 ### Properties
 * **transferAllDetails**: [schemas:85_transferAllDetails](#schemas85transferalldetails): Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll
-* **transferConfigurationType**: 'TransferAll' | 'TransferUsingFilter' (Required): Type of the configuration for transfer. Possible values include: 'TransferAll', 'TransferUsingFilter'
+* **transferConfigurationType**: 'TransferAll' | 'TransferUsingFilter' (Required): Type of the configuration for transfer.
 * **transferFilterDetails**: [schemas:85_transferFilterDetails](#schemas85transferfilterdetails): Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.
 
 ## schemas:85_transferAllDetails
@@ -191,7 +191,7 @@
 
 ## TransferAllDetails
 ### Properties
-* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (Required): Type of the account of data. Possible values include: 'StorageAccount', 'ManagedDisk'
+* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (Required): Type of the account of data.
 * **transferAllBlobs**: bool: To indicate if all Azure blobs have to be transferred
 * **transferAllFiles**: bool: To indicate if all Azure Files have to be transferred
 
@@ -203,7 +203,7 @@
 ### Properties
 * **azureFileFilterDetails**: [AzureFileFilterDetails](#azurefilefilterdetails): Filter details to transfer Azure files
 * **blobFilterDetails**: [BlobFilterDetails](#blobfilterdetails): Filter details to transfer Azure Blobs
-* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (Required): Type of the account of data. Possible values include: 'StorageAccount', 'ManagedDisk'
+* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (Required): Type of the account of data.
 * **filterFileDetails**: [FilterFileDetails](#filterfiledetails)[]: Details of the filter files to be used for data transfer.
 
 ## AzureFileFilterDetails
@@ -221,7 +221,7 @@
 ## FilterFileDetails
 ### Properties
 * **filterFilePath**: string (Required): Path of the file that contains the details of all items to transfer.
-* **filterFileType**: 'AzureBlob' | 'AzureFile' (Required): Type of the filter file. Possible values include: 'AzureBlob', 'AzureFile'
+* **filterFileType**: 'AzureBlob' | 'AzureFile' (Required): Type of the filter file.
 
 ## DataImportDetails
 ### Properties
@@ -237,13 +237,13 @@
 ### Properties
 * **displayName**: string (ReadOnly): Display name of the job stage.
 * **jobStageDetails**: any (ReadOnly): Job Stage Details
-* **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' (ReadOnly): Name of the job stage. Possible values include: 'DeviceOrdered', 'DevicePrepared', 'Dispatched', 'Delivered', 'PickedUp', 'AtAzureDC', 'DataCopy', 'Completed', 'CompletedWithErrors', 'Cancelled', 'Failed_IssueReportedAtCustomer', 'Failed_IssueDetectedAtAzureDC', 'Aborted', 'CompletedWithWarnings', 'ReadyToDispatchFromAzureDC', 'ReadyToReceiveAtAzureDC'
-* **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' | 'SucceededWithErrors' | 'SucceededWithWarnings' | 'WaitingForCustomerAction' (ReadOnly): Status of the job stage. Possible values include: 'None', 'InProgress', 'Succeeded', 'Failed', 'Cancelled', 'Cancelling', 'SucceededWithErrors', 'WaitingForCustomerAction', 'SucceededWithWarnings'
+* **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' (ReadOnly): Name of the job stage.
+* **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' | 'SucceededWithErrors' | 'SucceededWithWarnings' | 'WaitingForCustomerAction' (ReadOnly): Status of the job stage.
 * **stageTime**: string (ReadOnly): Time for the job stage in UTC ISO 8601 format.
 
 ## KeyEncryptionKey
 ### Properties
-* **kekType**: 'CustomerManaged' | 'MicrosoftManaged' (Required): Type of encryption key used for key encryption. Possible values include: 'MicrosoftManaged', 'CustomerManaged'
+* **kekType**: 'CustomerManaged' | 'MicrosoftManaged' (Required): Type of encryption key used for key encryption.
 * **kekUrl**: string: Key encryption key. It is required in case of Customer managed KekType.
 * **kekVaultResourceID**: string: Kek vault resource id. It is required in case of Customer managed KekType.
 
@@ -254,11 +254,11 @@
 
 ## TransportPreferences
 ### Properties
-* **preferredShipmentType**: 'CustomerManaged' | 'MicrosoftManaged' (Required): Indicates Shipment Logistics type that the customer preferred. Possible values include: 'CustomerManaged', 'MicrosoftManaged'
+* **preferredShipmentType**: 'CustomerManaged' | 'MicrosoftManaged' (Required): Indicates Shipment Logistics type that the customer preferred.
 
 ## ShippingAddress
 ### Properties
-* **addressType**: 'Commercial' | 'None' | 'Residential': Type of address. Possible values include: 'None', 'Residential', 'Commercial'
+* **addressType**: 'Commercial' | 'None' | 'Residential': Type of address.
 * **city**: string: Name of the City.
 * **companyName**: string: Name of the company.
 * **country**: string (Required): Name of the Country.
@@ -286,7 +286,7 @@
 ### Properties
 * **displayName**: string: The display name of the sku.
 * **family**: string: The sku family.
-* **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): The sku name. Possible values include: 'DataBox', 'DataBoxDisk', 'DataBoxHeavy'
+* **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): The sku name.
 
 ## Dictionary<string,String>
 ### Properties

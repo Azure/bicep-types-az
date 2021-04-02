@@ -217,12 +217,12 @@
 ### Properties
 * **principalId**: string (ReadOnly): service principal Id
 * **tenantId**: string (ReadOnly): Tenant Id
-* **type**: 'SystemAssigned': Identity Type. Possible values include: 'SystemAssigned'
+* **type**: 'SystemAssigned': Identity Type.
 
 ## AccountProperties
 ### Properties
 * **createdAt**: string (ReadOnly): Time at which the account was created.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account. Possible values include: 'Succeeded', 'Creating', 'Deleting', 'Moving', 'Failed'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account.
 * **userEmail**: string (ReadOnly): Email of the user who created the resource
 * **userName**: string (ReadOnly): Name of the user who created the resource
 
@@ -230,10 +230,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties
@@ -244,8 +244,8 @@
 ### Properties
 * **createdAt**: string (ReadOnly): Time at which the share was created.
 * **description**: string: Share description.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Gets or sets the provisioning state. Possible values include: 'Succeeded', 'Creating', 'Deleting', 'Moving', 'Failed'
-* **shareKind**: 'CopyBased' | 'InPlace': Share kind. Possible values include: 'CopyBased', 'InPlace'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Gets or sets the provisioning state.
+* **shareKind**: 'CopyBased' | 'InPlace': Share kind.
 * **terms**: string: Share terms.
 * **userEmail**: string (ReadOnly): Email of the user who created the resource
 * **userName**: string (ReadOnly): Name of the user who created the resource
@@ -369,7 +369,7 @@
 * **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
 * **kustoClusterResourceId**: string (Required): Resource id of the kusto cluster.
 * **location**: string (ReadOnly): Location of the kusto cluster.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the kusto cluster data set. Possible values include: 'Succeeded', 'Creating', 'Deleting', 'Moving', 'Failed'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the kusto cluster data set.
 
 ## KustoDatabase
 ### Properties
@@ -381,7 +381,7 @@
 * **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
 * **kustoDatabaseResourceId**: string (Required): Resource id of the kusto database.
 * **location**: string (ReadOnly): Location of the kusto cluster.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the kusto database data set. Possible values include: 'Succeeded', 'Creating', 'Deleting', 'Moving', 'Failed'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the kusto database data set.
 
 ## SqlDBTable
 ### Properties
@@ -423,7 +423,7 @@
 ### Properties
 * **expirationDate**: string: The expiration date for the invitation and share subscription.
 * **invitationId**: string (ReadOnly): unique invitation id
-* **invitationStatus**: 'Accepted' | 'Pending' | 'Rejected' | 'Withdrawn' (ReadOnly): The status of the invitation. Possible values include: 'Pending', 'Accepted', 'Rejected', 'Withdrawn'
+* **invitationStatus**: 'Accepted' | 'Pending' | 'Rejected' | 'Withdrawn' (ReadOnly): The status of the invitation.
 * **respondedAt**: string (ReadOnly): The time the recipient responded to the invitation.
 * **sentAt**: string (ReadOnly): Gets the time at which the invitation was sent.
 * **targetActiveDirectoryId**: string: The target Azure AD Id. Can't be combined with email.
@@ -442,8 +442,8 @@ invitations to specific users or applications in an AD tenant.
 ## ScheduledSynchronizationSettingProperties
 ### Properties
 * **createdAt**: string (ReadOnly): Time at which the synchronization setting was created.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Gets or sets the provisioning state. Possible values include: 'Succeeded', 'Creating', 'Deleting', 'Moving', 'Failed'
-* **recurrenceInterval**: 'Day' | 'Hour' (Required): Recurrence Interval. Possible values include: 'Hour', 'Day'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Gets or sets the provisioning state.
+* **recurrenceInterval**: 'Day' | 'Hour' (Required): Recurrence Interval.
 * **synchronizationTime**: string (Required): Synchronization time
 * **userName**: string (ReadOnly): Name of the user who created the synchronization setting.
 
@@ -455,11 +455,11 @@ invitations to specific users or applications in an AD tenant.
 * **providerEmail**: string (ReadOnly): Email of the provider who created the resource
 * **providerName**: string (ReadOnly): Name of the provider who created the resource
 * **providerTenantName**: string (ReadOnly): Tenant name of the provider who created the resource
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the share subscription. Possible values include: 'Succeeded', 'Creating', 'Deleting', 'Moving', 'Failed'
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the share subscription.
 * **shareDescription**: string (ReadOnly): Description of share
-* **shareKind**: 'CopyBased' | 'InPlace' (ReadOnly): Kind of share. Possible values include: 'CopyBased', 'InPlace'
+* **shareKind**: 'CopyBased' | 'InPlace' (ReadOnly): Kind of share.
 * **shareName**: string (ReadOnly): Name of the share
-* **shareSubscriptionStatus**: 'Active' | 'Revoked' | 'Revoking' | 'SourceDeleted' (ReadOnly): Gets the current status of share subscription. Possible values include: 'Active', 'Revoked', 'SourceDeleted', 'Revoking'
+* **shareSubscriptionStatus**: 'Active' | 'Revoked' | 'Revoking' | 'SourceDeleted' (ReadOnly): Gets the current status of share subscription.
 * **shareTerms**: string (ReadOnly): Terms of a share
 * **sourceShareLocation**: string (Required): Source share location.
 * **userEmail**: string (ReadOnly): Email of the user who created the resource

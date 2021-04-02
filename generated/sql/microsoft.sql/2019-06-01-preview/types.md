@@ -85,9 +85,9 @@
 
 ## ManagedDatabaseProperties
 ### Properties
-* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS': Collation of the metadata catalog. Possible values include: 'DATABASE_DEFAULT', 'SQL_Latin1_General_CP1_CI_AS'
+* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS': Collation of the metadata catalog.
 * **collation**: string: Collation of the managed database.
-* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'RestoreExternalBackup' | 'RestoreLongTermRetentionBackup': Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required). Possible values include: 'Default', 'RestoreExternalBackup', 'PointInTimeRestore', 'Recovery', 'RestoreLongTermRetentionBackup'
+* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'RestoreExternalBackup' | 'RestoreLongTermRetentionBackup': Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).
 * **creationDate**: string (ReadOnly): Creation date of the database.
 * **defaultSecondaryLocation**: string (ReadOnly): Geo paired region.
 * **earliestRestorePoint**: string (ReadOnly): Earliest restore point in time for point in time restore.
@@ -97,7 +97,7 @@
 * **restorableDroppedDatabaseId**: string: The restorable dropped database resource id to restore when creating this database.
 * **restorePointInTime**: string: Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
 * **sourceDatabaseId**: string: The resource identifier of the source database associated with create operation of this database.
-* **status**: 'Creating' | 'Inaccessible' | 'Offline' | 'Online' | 'Restoring' | 'Shutdown' | 'Updating' (ReadOnly): Status of the database. Possible values include: 'Online', 'Offline', 'Shutdown', 'Creating', 'Inaccessible', 'Restoring', 'Updating'
+* **status**: 'Creating' | 'Inaccessible' | 'Offline' | 'Online' | 'Restoring' | 'Shutdown' | 'Updating' (ReadOnly): Status of the database.
 * **storageContainerSasToken**: string: Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.
 * **storageContainerUri**: string: Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.
 
@@ -110,7 +110,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The Azure Active Directory principal id.
 * **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource. Possible values include: 'None', 'SystemAssigned', 'UserAssigned'
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
 
 ## ServerProperties
 ### Properties
@@ -119,7 +119,7 @@
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
 * **minimalTlsVersion**: string: Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
 * **privateEndpointConnections**: [ServerPrivateEndpointConnection](#serverprivateendpointconnection)[] (ReadOnly): List of private endpoint connections on a server
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'. Possible values include: 'Enabled', 'Disabled'
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'.
 * **state**: string (ReadOnly): The state of the server.
 * **version**: string: The version of the server.
 
@@ -132,7 +132,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty):
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty):
-* **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' (ReadOnly): State of the private endpoint connection. Possible values include: 'Approving', 'Ready', 'Dropping', 'Failed', 'Rejecting'
+* **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' (ReadOnly): State of the private endpoint connection.
 
 ## PrivateEndpointProperty
 ### Properties
@@ -140,9 +140,9 @@
 
 ## PrivateLinkServiceConnectionStateProperty
 ### Properties
-* **actionsRequired**: 'None' (ReadOnly): The actions required for private link service connection. Possible values include: 'None'
+* **actionsRequired**: 'None' (ReadOnly): The actions required for private link service connection.
 * **description**: string (Required): The private link service connection description.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (Required): The private link service connection status. Possible values include: 'Approved', 'Pending', 'Rejected', 'Disconnected'
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (Required): The private link service connection status.
 
 ## Dictionary<string,String>
 ### Properties
@@ -160,7 +160,7 @@
 ## DatabaseProperties
 ### Properties
 * **autoPauseDelay**: int: Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled
-* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS': Collation of the metadata catalog. Possible values include: 'DATABASE_DEFAULT', 'SQL_Latin1_General_CP1_CI_AS'
+* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS': Collation of the metadata catalog.
 * **collation**: string: The collation of the database.
 * **createMode**: 'Copy' | 'Default' | 'OnlineSecondary' | 'PointInTimeRestore' | 'Recovery' | 'Restore' | 'RestoreExternalBackup' | 'RestoreExternalBackupSecondary' | 'RestoreLongTermRetentionBackup' | 'Secondary': Specifies the mode of database creation.
 
@@ -178,7 +178,7 @@ Restore: Creates a database by restoring a backup of a deleted database. sourceD
 
 RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
 
-Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition. Possible values include: 'Default', 'Copy', 'Secondary', 'PointInTimeRestore', 'Restore', 'Recovery', 'RestoreExternalBackup', 'RestoreExternalBackupSecondary', 'RestoreLongTermRetentionBackup', 'OnlineSecondary'
+Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
 * **creationDate**: string (ReadOnly): The creation date of the database (ISO8601 format).
 * **currentServiceObjectiveName**: string (ReadOnly): The current service level objective name of the database.
 * **currentSku**: [Sku](#sku) (ReadOnly): An ARM Resource SKU.
@@ -187,25 +187,25 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **earliestRestoreDate**: string (ReadOnly): This records the earliest start date and time that restore is available for this database (ISO8601 format).
 * **elasticPoolId**: string: The resource identifier of the elastic pool containing this database.
 * **failoverGroupId**: string (ReadOnly): Failover Group resource identifier that this database belongs to.
-* **licenseType**: 'BasePrice' | 'LicenseIncluded': The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit. Possible values include: 'LicenseIncluded', 'BasePrice'
+* **licenseType**: 'BasePrice' | 'LicenseIncluded': The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.
 * **longTermRetentionBackupResourceId**: string: The resource identifier of the long term retention backup associated with create operation of this database.
 * **maxLogSizeBytes**: int (ReadOnly): The max log size for this database.
 * **maxSizeBytes**: int: The max size of the database expressed in bytes.
 * **minCapacity**: int: Minimal capacity that database will always have allocated, if not paused
 * **pausedDate**: string (ReadOnly): The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.
 * **readReplicaCount**: int: The number of readonly secondary replicas associated with the database.
-* **readScale**: 'Disabled' | 'Enabled': The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region. Possible values include: 'Enabled', 'Disabled'
+* **readScale**: 'Disabled' | 'Enabled': The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.
 * **recoverableDatabaseId**: string: The resource identifier of the recoverable database associated with create operation of this database.
 * **recoveryServicesRecoveryPointId**: string: The resource identifier of the recovery point associated with create operation of this database.
 * **requestedServiceObjectiveName**: string (ReadOnly): The requested service level objective name of the database.
 * **restorableDroppedDatabaseId**: string: The resource identifier of the restorable dropped database associated with create operation of this database.
 * **restorePointInTime**: string: Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
 * **resumedDate**: string (ReadOnly): The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.
-* **sampleName**: 'AdventureWorksLT' | 'WideWorldImportersFull' | 'WideWorldImportersStd': The name of the sample schema to apply when creating this database. Possible values include: 'AdventureWorksLT', 'WideWorldImportersStd', 'WideWorldImportersFull'
+* **sampleName**: 'AdventureWorksLT' | 'WideWorldImportersFull' | 'WideWorldImportersStd': The name of the sample schema to apply when creating this database.
 * **sourceDatabaseDeletionDate**: string: Specifies the time that the database was deleted.
 * **sourceDatabaseId**: string: The resource identifier of the source database associated with create operation of this database.
-* **status**: 'AutoClosed' | 'Copying' | 'Creating' | 'Disabled' | 'EmergencyMode' | 'Inaccessible' | 'Offline' | 'OfflineChangingDwPerformanceTiers' | 'OfflineSecondary' | 'Online' | 'OnlineChangingDwPerformanceTiers' | 'Paused' | 'Pausing' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Resuming' | 'Scaling' | 'Shutdown' | 'Standby' | 'Suspect' (ReadOnly): The status of the database. Possible values include: 'Online', 'Restoring', 'RecoveryPending', 'Recovering', 'Suspect', 'Offline', 'Standby', 'Shutdown', 'EmergencyMode', 'AutoClosed', 'Copying', 'Creating', 'Inaccessible', 'OfflineSecondary', 'Pausing', 'Paused', 'Resuming', 'Scaling', 'OfflineChangingDwPerformanceTiers', 'OnlineChangingDwPerformanceTiers', 'Disabled'
-* **storageAccountType**: 'GRS' | 'LRS' | 'ZRS': The storage account type used to store backups for this database. Possible values include: 'GRS', 'LRS', 'ZRS'
+* **status**: 'AutoClosed' | 'Copying' | 'Creating' | 'Disabled' | 'EmergencyMode' | 'Inaccessible' | 'Offline' | 'OfflineChangingDwPerformanceTiers' | 'OfflineSecondary' | 'Online' | 'OnlineChangingDwPerformanceTiers' | 'Paused' | 'Pausing' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Resuming' | 'Scaling' | 'Shutdown' | 'Standby' | 'Suspect' (ReadOnly): The status of the database.
+* **storageAccountType**: 'GRS' | 'LRS' | 'ZRS': The storage account type used to store backups for this database.
 * **zoneRedundant**: bool: Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
 
 ## Sku
@@ -223,7 +223,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 
 ## SyncGroupProperties
 ### Properties
-* **conflictResolutionPolicy**: 'HubWin' | 'MemberWin': Conflict resolution policy of the sync group. Possible values include: 'HubWin', 'MemberWin'
+* **conflictResolutionPolicy**: 'HubWin' | 'MemberWin': Conflict resolution policy of the sync group.
 * **hubDatabasePassword**: string: Password for the sync group hub database credential.
 * **hubDatabaseUserName**: string: User name for the sync group hub database credential.
 * **interval**: int: Sync interval of the sync group.
@@ -231,7 +231,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **privateEndpointName**: string (ReadOnly): Private endpoint name of the sync group if use private link connection is enabled.
 * **schema**: [SyncGroupSchema](#syncgroupschema): Properties of sync group schema.
 * **syncDatabaseId**: string: ARM resource id of the sync database in the sync group.
-* **syncState**: 'Error' | 'Good' | 'NotReady' | 'Progressing' | 'Warning' (ReadOnly): Sync state of the sync group. Possible values include: 'NotReady', 'Error', 'Warning', 'Progressing', 'Good'
+* **syncState**: 'Error' | 'Good' | 'NotReady' | 'Progressing' | 'Warning' (ReadOnly): Sync state of the sync group.
 * **usePrivateLinkConnection**: bool: If use private link connection is enabled.
 
 ## SyncGroupSchema
@@ -253,15 +253,15 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 ## SyncMemberProperties
 ### Properties
 * **databaseName**: string: Database name of the member database in the sync member.
-* **databaseType**: 'AzureSqlDatabase' | 'SqlServerDatabase': Database type of the sync member. Possible values include: 'AzureSqlDatabase', 'SqlServerDatabase'
+* **databaseType**: 'AzureSqlDatabase' | 'SqlServerDatabase': Database type of the sync member.
 * **password**: string: Password of the member database in the sync member.
 * **privateEndpointName**: string (ReadOnly): Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.
 * **serverName**: string: Server name of the member database in the sync member
 * **sqlServerDatabaseId**: string: SQL Server database id of the sync member.
 * **syncAgentId**: string: ARM resource id of the sync agent in the sync member.
-* **syncDirection**: 'Bidirectional' | 'OneWayHubToMember' | 'OneWayMemberToHub': Sync direction of the sync member. Possible values include: 'Bidirectional', 'OneWayMemberToHub', 'OneWayHubToMember'
+* **syncDirection**: 'Bidirectional' | 'OneWayHubToMember' | 'OneWayMemberToHub': Sync direction of the sync member.
 * **syncMemberAzureDatabaseResourceId**: string: ARM resource id of the sync member logical database, for sync members in Azure.
-* **syncState**: 'DeProvisioned' | 'DeProvisionFailed' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'Provisioned' | 'ProvisionFailed' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' (ReadOnly): Sync state of the sync member. Possible values include: 'SyncInProgress', 'SyncSucceeded', 'SyncFailed', 'DisabledTombstoneCleanup', 'DisabledBackupRestore', 'SyncSucceededWithWarnings', 'SyncCancelling', 'SyncCancelled', 'UnProvisioned', 'Provisioning', 'Provisioned', 'ProvisionFailed', 'DeProvisioning', 'DeProvisioned', 'DeProvisionFailed', 'Reprovisioning', 'ReprovisionFailed', 'UnReprovisioned'
+* **syncState**: 'DeProvisioned' | 'DeProvisionFailed' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'Provisioned' | 'ProvisionFailed' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' (ReadOnly): Sync state of the sync member.
 * **usePrivateLinkConnection**: bool: Whether to use private link connection.
 * **userName**: string: User name of the member database in the sync member.
 

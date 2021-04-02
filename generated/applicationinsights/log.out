@@ -76,4 +76,4 @@ INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/Annotations': Found mismatch betwen type segments (2) and name segments (1)
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/currentbillingfeatures': Found mismatch betwen type segments (2) and name segments (1)
-[44.4 s] Generation Complete
+[72.23 s] Generation Complete

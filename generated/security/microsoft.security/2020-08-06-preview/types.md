@@ -39,7 +39,7 @@
 ## IotDefenderSettingsProperties
 ### Properties
 * **deviceQuota**: int (Required): Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.
-* **onboardingKind**: 'Default' | 'MigratedToAzure' (Required): The kind of onboarding for the subscription. Possible values include: 'Default', 'MigratedToAzure'
+* **onboardingKind**: 'Default' | 'MigratedToAzure' (Required): The kind of onboarding for the subscription.
 * **sentinelWorkspaceResourceIds**: string[] (Required): Sentinel Workspace Resource Ids
 
 ## IotSensorProperties
@@ -48,11 +48,11 @@
 * **creationTime**: string (ReadOnly): Creation time of the IoT sensor
 * **dynamicLearning**: bool (ReadOnly): Dynamic mode status of the IoT sensor
 * **learningMode**: bool (ReadOnly): Learning mode status of the IoT sensor
-* **sensorStatus**: 'Disconnected' | 'Ok' | 'Unavailable' (ReadOnly): Status of the IoT sensor. Possible values include: 'Ok', 'Disconnected', 'Unavailable'
-* **sensorType**: 'Enterprise' | 'Ot': Type of sensor. Possible values include: 'Ot', 'Enterprise'
+* **sensorStatus**: 'Disconnected' | 'Ok' | 'Unavailable' (ReadOnly): Status of the IoT sensor.
+* **sensorType**: 'Enterprise' | 'Ot': Type of sensor.
 * **sensorVersion**: string (ReadOnly): Version of the IoT sensor
 * **tiAutomaticUpdates**: bool: TI Automatic mode status of the IoT sensor
-* **tiStatus**: 'Failed' | 'InProgress' | 'Ok' | 'UpdateAvailable' (ReadOnly): TI Status of the IoT sensor. Possible values include: 'Ok', 'Failed', 'InProgress', 'UpdateAvailable'
+* **tiStatus**: 'Failed' | 'InProgress' | 'Ok' | 'UpdateAvailable' (ReadOnly): TI Status of the IoT sensor.
 * **tiVersion**: string (ReadOnly): TI Version of the IoT sensor
 * **zone**: string: Zone of the IoT sensor
 

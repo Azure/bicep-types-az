@@ -92,7 +92,7 @@
 * **createdAt**: string (ReadOnly): The time the WCFRelay was created.
 * **isDynamic**: bool (ReadOnly): true if the relay is dynamic; otherwise, false.
 * **listenerCount**: int (ReadOnly): The number of listeners for this relay. min : 1 and max:25 supported
-* **relayType**: 'Http' | 'NetTcp': WCFRelay Type. Possible values include: 'NetTcp', 'Http'
+* **relayType**: 'Http' | 'NetTcp': WCFRelay Type.
 * **requiresClientAuthorization**: bool: true if client authorization is needed for this relay; otherwise, false.
 * **requiresTransportSecurity**: bool: true if transport security is needed for this relay; otherwise, false.
 * **updatedAt**: string (ReadOnly): The time the namespace was updated.

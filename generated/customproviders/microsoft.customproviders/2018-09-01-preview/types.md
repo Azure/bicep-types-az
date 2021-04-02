@@ -22,13 +22,13 @@
 
 ## schemas:8_properties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly): The provisioning state of the association. Possible values include: 'Accepted', 'Deleting', 'Running', 'Succeeded', 'Failed'
+* **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly): The provisioning state of the association.
 * **targetResourceId**: string: The REST resource instance of the target resource for this association.
 
 ## schemas:5_properties
 ### Properties
 * **actions**: [CustomRPActionRouteDefinition](#customrpactionroutedefinition)[]: A list of actions that the custom resource provider implements.
-* **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly): The provisioning state of the resource provider. Possible values include: 'Accepted', 'Deleting', 'Running', 'Succeeded', 'Failed'
+* **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly): The provisioning state of the resource provider.
 * **resourceTypes**: [CustomRPResourceTypeRouteDefinition](#customrpresourcetyperoutedefinition)[]: A list of resource types that the custom resource provider implements.
 * **validations**: [CustomRPValidations](#customrpvalidations)[]: A list of validations to run on the custom resource provider's requests.
 
@@ -36,18 +36,18 @@
 ### Properties
 * **endpoint**: string (Required): The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}')
 * **name**: string (Required): The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}')
-* **routingType**: 'Proxy': The routing types that are supported for action requests. Possible values include: 'Proxy'
+* **routingType**: 'Proxy': The routing types that are supported for action requests.
 
 ## CustomRPResourceTypeRouteDefinition
 ### Properties
 * **endpoint**: string (Required): The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}')
 * **name**: string (Required): The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}')
-* **routingType**: 'Proxy,Cache' | 'Proxy': The routing types that are supported for resource requests. Possible values include: 'Proxy', 'Proxy,Cache'
+* **routingType**: 'Proxy,Cache' | 'Proxy': The routing types that are supported for resource requests.
 
 ## CustomRPValidations
 ### Properties
 * **specification**: string (Required): A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.
-* **validationType**: 'Swagger': The type of validation to run against a matching request. Possible values include: 'Swagger'
+* **validationType**: 'Swagger': The type of validation to run against a matching request.
 
 ## Dictionary<string,String>
 ### Properties

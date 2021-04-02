@@ -26,7 +26,7 @@
 * **createdTime**: string (ReadOnly): Time when DigitalTwinsInstance was created.
 * **hostName**: string (ReadOnly): Api endpoint to work with DigitalTwinsInstance.
 * **lastUpdatedTime**: string (ReadOnly): Time when DigitalTwinsInstance was created.
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The provisioning state. Possible values include: 'Provisioning', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The provisioning state.
 
 ## DigitalTwinsSkuInfo
 ### Properties
@@ -41,7 +41,7 @@
 * **Discriminator**: endpointType
 ### Base Properties
 * **createdTime**: string (ReadOnly): Time when the Endpoint was added to DigitalTwinsInstance.
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The provisioning state. Possible values include: 'Provisioning', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The provisioning state.
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 ### EventGrid
 #### Properties

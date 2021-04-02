@@ -69,7 +69,7 @@
 
 ## IntegrationAccountSku
 ### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard': The sku name. Possible values include: 'NotSpecified', 'Free', 'Shared', 'Basic', 'Standard', 'Premium'
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard': The sku name.
 
 ## Dictionary<string,String>
 ### Properties
@@ -78,7 +78,7 @@
 
 ## IntegrationAccountAgreementProperties
 ### Properties
-* **agreementType**: 'AS2' | 'Edifact' | 'NotSpecified' | 'X12': The agreement type. Possible values include: 'NotSpecified', 'AS2', 'X12', 'Edifact'
+* **agreementType**: 'AS2' | 'Edifact' | 'NotSpecified' | 'X12': The agreement type.
 * **changedTime**: string (ReadOnly): The changed time.
 * **content**: [AgreementContent](#agreementcontent):
 * **createdTime**: string (ReadOnly): The created time.
@@ -139,7 +139,7 @@
 ### Properties
 * **dispositionNotificationTo**: string: The disposition notification to header value.
 * **mdnText**: string: The MDN text.
-* **micHashingAlgorithm**: 'None' | 'NotSpecified' | 'SHA2256' | 'SHA2384' | 'SHA2512': The signing or hashing algorithm. Possible values include: 'NotSpecified', 'None', 'SHA2256', 'SHA2384', 'SHA2512'
+* **micHashingAlgorithm**: 'None' | 'NotSpecified' | 'SHA2256' | 'SHA2384' | 'SHA2512': The signing or hashing algorithm.
 * **needMdn**: bool: The value indicating whether to send or request a MDN.
 * **receiptDeliveryUrl**: string: The receipt delivery URL.
 * **sendInboundMdnToMessageBox**: bool: The value indicating whether to send inbound MDN to message box.
@@ -172,7 +172,7 @@
 * **checkCertificateRevocationListOnSend**: bool: The value indicating whether to check for certificate revocation list on send.
 * **checkDuplicateMessage**: bool: The value indicating whether to check for duplicate message.
 * **compressMessage**: bool: The value indicating whether the message has to be compressed.
-* **encryptionAlgorithm**: 'AES128' | 'AES192' | 'AES256' | 'DES3' | 'None' | 'NotSpecified' | 'RC2': The encryption algorithm. Possible values include: 'NotSpecified', 'None', 'DES3', 'RC2', 'AES128', 'AES192', 'AES256'
+* **encryptionAlgorithm**: 'AES128' | 'AES192' | 'AES256' | 'DES3' | 'None' | 'NotSpecified' | 'RC2': The encryption algorithm.
 * **encryptMessage**: bool: The value indicating whether the message has to be encrypted.
 * **interchangeDuplicatesValidityDays**: int: The number of days to look back for duplicate interchange.
 * **overrideMessageProperties**: bool: The value indicating whether to override incoming message properties with those in agreement.
@@ -226,7 +226,7 @@
 ### Properties
 * **componentSeparator**: int: The component separator.
 * **dataElementSeparator**: int: The data element separator.
-* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified': The decimal point indicator. Possible values include: 'NotSpecified', 'Comma', 'Decimal'
+* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified': The decimal point indicator.
 * **messageAssociationAssignedCode**: string: The message association assigned code.
 * **messageId**: string: The message id.
 * **messageRelease**: string: The message release version.
@@ -234,7 +234,7 @@
 * **releaseIndicator**: int: The release indicator.
 * **repetitionSeparator**: int: The repetition separator.
 * **segmentTerminator**: int: The segment terminator.
-* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified': The segment terminator suffix. Possible values include: 'NotSpecified', 'None', 'CR', 'LF', 'CRLF'
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified': The segment terminator suffix.
 * **targetNamespace**: string: The target namespace on which this delimiter settings has to be applied.
 
 ## EdifactEnvelopeOverride
@@ -302,20 +302,20 @@
 ## EdifactFramingSettings
 ### Properties
 * **characterEncoding**: string: The character encoding.
-* **characterSet**: 'KECA' | 'NotSpecified' | 'UNOA' | 'UNOB' | 'UNOC' | 'UNOD' | 'UNOE' | 'UNOF' | 'UNOG' | 'UNOH' | 'UNOI' | 'UNOJ' | 'UNOK' | 'UNOX' | 'UNOY': The EDIFACT frame setting characterSet. Possible values include: 'NotSpecified', 'UNOB', 'UNOA', 'UNOC', 'UNOD', 'UNOE', 'UNOF', 'UNOG', 'UNOH', 'UNOI', 'UNOJ', 'UNOK', 'UNOX', 'UNOY', 'KECA'
+* **characterSet**: 'KECA' | 'NotSpecified' | 'UNOA' | 'UNOB' | 'UNOC' | 'UNOD' | 'UNOE' | 'UNOF' | 'UNOG' | 'UNOH' | 'UNOI' | 'UNOJ' | 'UNOK' | 'UNOX' | 'UNOY': The EDIFACT frame setting characterSet.
 * **componentSeparator**: int: The component separator.
 * **dataElementSeparator**: int: The data element separator.
-* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified': The EDIFACT frame setting decimal indicator. Possible values include: 'NotSpecified', 'Comma', 'Decimal'
+* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified': The EDIFACT frame setting decimal indicator.
 * **protocolVersion**: int: The protocol version.
 * **releaseIndicator**: int: The release indicator.
 * **repetitionSeparator**: int: The repetition separator.
 * **segmentTerminator**: int: The segment terminator.
-* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified': The EDIFACT frame setting segment terminator suffix. Possible values include: 'NotSpecified', 'None', 'CR', 'LF', 'CRLF'
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified': The EDIFACT frame setting segment terminator suffix.
 * **serviceCodeListDirectoryVersion**: string: The service code list directory version.
 
 ## EdifactMessageFilter
 ### Properties
-* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified': The message filter type. Possible values include: 'NotSpecified', 'Include', 'Exclude'
+* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified': The message filter type.
 
 ## EdifactMessageIdentifier
 ### Properties
@@ -344,7 +344,7 @@
 * **allowLeadingAndTrailingSpacesAndZeroes**: bool: The value indicating whether to allow leading and trailing spaces and zeroes.
 * **enforceCharacterSet**: bool: The value indicating whether to validate character Set.
 * **messageId**: string: The message id on which the validation settings has to be applied.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional': The trailing separator policy. Possible values include: 'NotSpecified', 'NotAllowed', 'Optional', 'Mandatory'
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional': The trailing separator policy.
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool: The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateEDITypes**: bool: The value indicating whether to validate EDI types.
 * **validateXSDTypes**: bool: The value indicating whether to validate XSD types.
@@ -356,7 +356,7 @@
 * **checkDuplicateInterchangeControlNumber**: bool: The value indicating whether to check for duplicate interchange control number.
 * **checkDuplicateTransactionSetControlNumber**: bool: The value indicating whether to check for duplicate transaction set control number.
 * **interchangeControlNumberValidityDays**: int: The validity period of interchange control number.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional': The trailing separator policy. Possible values include: 'NotSpecified', 'NotAllowed', 'Optional', 'Mandatory'
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional': The trailing separator policy.
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool: The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateCharacterSet**: bool: The value indicating whether to validate character set in the message.
 * **validateEDITypes**: bool: The value indicating whether to Whether to validate EDI types.
@@ -408,7 +408,7 @@
 
 ## X12EnvelopeOverride
 ### Properties
-* **dateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD': The date format. Possible values include: 'NotSpecified', 'CCYYMMDD', 'YYMMDD'
+* **dateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD': The date format.
 * **functionalIdentifierCode**: string: The functional identifier code.
 * **headerVersion**: string: The header version.
 * **messageId**: string: The message id on which this envelope settings has to be applied.
@@ -417,7 +417,7 @@
 * **responsibleAgencyCode**: int: The responsible agency code.
 * **senderApplicationId**: string: The sender application id.
 * **targetNamespace**: string: The target namespace on which this envelope settings has to be applied.
-* **timeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified': The time format. Possible values include: 'NotSpecified', 'HHMM', 'HHMMSS', 'HHMMSSdd', 'HHMMSSd'
+* **timeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified': The time format.
 
 ## X12EnvelopeSettings
 ### Properties
@@ -428,8 +428,8 @@
 * **groupControlNumberLowerBound**: int: The group control number lower bound.
 * **groupControlNumberUpperBound**: int: The group control number upper bound.
 * **groupHeaderAgencyCode**: string: The group header agency code.
-* **groupHeaderDateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD': The group header date format. Possible values include: 'NotSpecified', 'CCYYMMDD', 'YYMMDD'
-* **groupHeaderTimeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified': The group header time format. Possible values include: 'NotSpecified', 'HHMM', 'HHMMSS', 'HHMMSSdd', 'HHMMSSd'
+* **groupHeaderDateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD': The group header date format.
+* **groupHeaderTimeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified': The group header time format.
 * **groupHeaderVersion**: string: The group header version.
 * **interchangeControlNumberLowerBound**: int: The interchange  control number lower bound.
 * **interchangeControlNumberUpperBound**: int: The interchange  control number upper bound.
@@ -443,22 +443,22 @@
 * **transactionSetControlNumberPrefix**: string: The transaction set control number prefix.
 * **transactionSetControlNumberSuffix**: string: The transaction set control number suffix.
 * **transactionSetControlNumberUpperBound**: int: The transaction set control number upper bound.
-* **usageIndicator**: 'Information' | 'NotSpecified' | 'Production' | 'Test': The usage indicator. Possible values include: 'NotSpecified', 'Test', 'Information', 'Production'
+* **usageIndicator**: 'Information' | 'NotSpecified' | 'Production' | 'Test': The usage indicator.
 * **useControlStandardsIdAsRepetitionCharacter**: bool: The value indicating whether to use control standards id as repetition character.
 
 ## X12FramingSettings
 ### Properties
-* **characterSet**: 'Basic' | 'Extended' | 'NotSpecified' | 'UTF8': The X12 character set. Possible values include: 'NotSpecified', 'Basic', 'Extended', 'UTF8'
+* **characterSet**: 'Basic' | 'Extended' | 'NotSpecified' | 'UTF8': The X12 character set.
 * **componentSeparator**: int: The component separator.
 * **dataElementSeparator**: int: The data element separator.
 * **replaceCharacter**: int: The replacement character.
 * **replaceSeparatorsInPayload**: bool: The value indicating whether to replace separators in payload.
 * **segmentTerminator**: int: The segment terminator.
-* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified': The segment terminator suffix. Possible values include: 'NotSpecified', 'None', 'CR', 'LF', 'CRLF'
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified': The segment terminator suffix.
 
 ## X12MessageFilter
 ### Properties
-* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified': The message filter type. Possible values include: 'NotSpecified', 'Include', 'Exclude'
+* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified': The message filter type.
 
 ## X12MessageIdentifier
 ### Properties
@@ -491,7 +491,7 @@
 ### Properties
 * **allowLeadingAndTrailingSpacesAndZeroes**: bool: The value indicating whether to allow leading and trailing spaces and zeroes.
 * **messageId**: string: The message id on which the validation settings has to be applied.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional': The trailing separator policy. Possible values include: 'NotSpecified', 'NotAllowed', 'Optional', 'Mandatory'
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional': The trailing separator policy.
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool: The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateCharacterSet**: bool: The value indicating whether to validate character Set.
 * **validateEDITypes**: bool: The value indicating whether to validate EDI types.
@@ -504,7 +504,7 @@
 * **checkDuplicateInterchangeControlNumber**: bool: The value indicating whether to check for duplicate interchange control number.
 * **checkDuplicateTransactionSetControlNumber**: bool: The value indicating whether to check for duplicate transaction set control number.
 * **interchangeControlNumberValidityDays**: int: The validity period of interchange control number.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional': The trailing separator policy. Possible values include: 'NotSpecified', 'NotAllowed', 'Optional', 'Mandatory'
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional': The trailing separator policy.
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool: The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateCharacterSet**: bool: The value indicating whether to validate character set in the message.
 * **validateEDITypes**: bool: The value indicating whether to Whether to validate EDI types.
@@ -519,7 +519,7 @@
 * **replaceCharacter**: int: The replacement character.
 * **replaceSeparatorsInPayload**: bool: The value indicating whether to replace separators in payload.
 * **segmentTerminator**: int: The segment terminator.
-* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified': The segment terminator suffix. Possible values include: 'NotSpecified', 'None', 'CR', 'LF', 'CRLF'
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified': The segment terminator suffix.
 * **targetNamespace**: string: The target namespace on which this delimiter settings has to be applied.
 
 ## Dictionary<string,String>
@@ -559,7 +559,7 @@
 * **contentLink**: [IntegrationAccountContentLink](#integrationaccountcontentlink) (ReadOnly):
 * **contentType**: string: The content type.
 * **createdTime**: string (ReadOnly): The created time.
-* **mapType**: 'NotSpecified' | 'Xslt': The map type. Possible values include: 'NotSpecified', 'Xslt'
+* **mapType**: 'NotSpecified' | 'Xslt': The map type.
 * **metadata**: any: The metadata.
 
 ## IntegrationAccountContentLink
@@ -586,7 +586,7 @@
 * **content**: [PartnerContent](#partnercontent):
 * **createdTime**: string (ReadOnly): The created time.
 * **metadata**: any: The metadata.
-* **partnerType**: 'B2B' | 'NotSpecified': The partner type. Possible values include: 'NotSpecified', 'B2B'
+* **partnerType**: 'B2B' | 'NotSpecified': The partner type.
 
 ## PartnerContent
 ### Properties
@@ -609,7 +609,7 @@
 * **contentType**: string: The content type.
 * **createdTime**: string (ReadOnly): The created time.
 * **metadata**: any: The metadata.
-* **schemaType**: 'NotSpecified' | 'Xml': The schema type. Possible values include: 'NotSpecified', 'Xml'
+* **schemaType**: 'NotSpecified' | 'Xml': The schema type.
 * **targetNamespace**: string: The target namespace.
 
 ## Dictionary<string,String>

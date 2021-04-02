@@ -34,13 +34,13 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of the resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of the resource identity.
-* **type**: 'None' | 'SystemAssigned': The identity type. This is the only required field when adding a system assigned identity to a resource. Possible values include: 'SystemAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned': The identity type. This is the only required field when adding a system assigned identity to a resource.
 
 ## PolicyAssignmentProperties
 ### Properties
 * **description**: string: This message will be part of response in case of policy violation.
 * **displayName**: string: The display name of the policy assignment.
-* **enforcementMode**: 'Default' | 'DoNotEnforce': The policy assignment enforcement mode. Possible values are Default and DoNotEnforce. Possible values include: 'Default', 'DoNotEnforce'
+* **enforcementMode**: 'Default' | 'DoNotEnforce': The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
 * **metadata**: any: The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
 * **notScopes**: string[]: The policy's excluded scopes.
 * **parameters**: [Dictionary<string,ParameterValuesValue>](#dictionarystringparametervaluesvalue): The parameter values for the policy rule. The keys are the parameter names.
@@ -69,7 +69,7 @@
 * **mode**: string: The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
 * **parameters**: [Dictionary<string,ParameterDefinitionsValue>](#dictionarystringparameterdefinitionsvalue): The parameter definitions for parameters used in the policy. The keys are the parameter names.
 * **policyRule**: any: The policy rule.
-* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static': The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static. Possible values include: 'NotSpecified', 'BuiltIn', 'Custom', 'Static'
+* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static': The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
 
 ## Dictionary<string,ParameterDefinitionsValue>
 ### Properties
@@ -81,7 +81,7 @@
 * **allowedValues**: any[]: The allowed values for the parameter.
 * **defaultValue**: any: The default value for the parameter if no value is provided.
 * **metadata**: [schemas:10_metadata](#schemas10metadata): General metadata for the parameter.
-* **type**: 'Array' | 'Boolean' | 'DateTime' | 'Float' | 'Integer' | 'Object' | 'String': The data type of the parameter. Possible values include: 'String', 'Array', 'Object', 'Boolean', 'Integer', 'Float', 'DateTime'
+* **type**: 'Array' | 'Boolean' | 'DateTime' | 'Float' | 'Integer' | 'Object' | 'String': The data type of the parameter.
 
 ## schemas:10_metadata
 ### Properties
@@ -98,7 +98,7 @@
 * **parameters**: [Dictionary<string,ParameterDefinitionsValue>](#dictionarystringparameterdefinitionsvalue): The parameter definitions for parameters used in the policy. The keys are the parameter names.
 * **policyDefinitionGroups**: [PolicyDefinitionGroup](#policydefinitiongroup)[]: The metadata describing groups of policy definition references within the policy set definition.
 * **policyDefinitions**: [PolicyDefinitionReference](#policydefinitionreference)[] (Required): An array of policy definition references.
-* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static': The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static. Possible values include: 'NotSpecified', 'BuiltIn', 'Custom', 'Static'
+* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static': The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
 
 ## Dictionary<string,ParameterDefinitionsValue>
 ### Properties

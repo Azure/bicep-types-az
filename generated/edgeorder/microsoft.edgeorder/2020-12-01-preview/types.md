@@ -50,7 +50,7 @@
 
 ## ShippingAddress
 ### Properties
-* **addressType**: 'Commercial' | 'None' | 'Residential': Type of address. Possible values include: 'None', 'Residential', 'Commercial'
+* **addressType**: 'Commercial' | 'None' | 'Residential': Type of address.
 * **city**: string: Name of the City.
 * **companyName**: string: Name of the company.
 * **country**: string (Required): Name of the Country.
@@ -65,10 +65,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties
@@ -99,19 +99,19 @@
 ## OrderDetails
 ### Properties
 * **cancellationReason**: string (ReadOnly): Cancellation reason.
-* **cancellationStatus**: 'Cancellable' | 'CancellableWithFee' | 'NotCancellable' (ReadOnly): Describes whether the order is cancellable or not. Possible values include: 'Cancellable', 'CancellableWithFee', 'NotCancellable'
+* **cancellationStatus**: 'Cancellable' | 'CancellableWithFee' | 'NotCancellable' (ReadOnly): Describes whether the order is cancellable or not.
 * **currentStatus**: [OrderStatusDetails](#orderstatusdetails) (ReadOnly): Order status CurrentStatus
-* **deletionStatus**: 'Allowed' | 'NotAllowed' (ReadOnly): Describes whether the order is deletable or not. Possible values include: 'Allowed', 'NotAllowed'
+* **deletionStatus**: 'Allowed' | 'NotAllowed' (ReadOnly): Describes whether the order is deletable or not.
 * **error**: [CloudError](#clouderror) (ReadOnly):
 * **forwardShippingDetails**: [ShippingDetails](#shippingdetails) (ReadOnly): Package shipping details
 * **managementRpDetails**: any (ReadOnly): Management RP details
 * **notificationEmailList**: string[]: Package Shipping details
 * **orderStatusHistory**: [OrderStatusDetails](#orderstatusdetails)[] (ReadOnly): Order history
-* **orderType**: 'Purchase' | 'Rental' (Required): Order type. Possible values include: 'Purchase', 'Rental'
+* **orderType**: 'Purchase' | 'Rental' (Required): Order type.
 * **preferences**: [Preferences](#preferences): Preferences related to the order
 * **productDetails**: [ProductDetails](#productdetails) (Required): Represents product details
 * **returnReason**: string (ReadOnly): Return reason.
-* **returnStatus**: 'NotReturnable' | 'Returnable' | 'ReturnableWithFee' (ReadOnly): Describes whether the order is returnable or not. Possible values include: 'Returnable', 'ReturnableWithFee', 'NotReturnable'
+* **returnStatus**: 'NotReturnable' | 'Returnable' | 'ReturnableWithFee' (ReadOnly): Describes whether the order is returnable or not.
 * **reverseShippingDetails**: [ShippingDetails](#shippingdetails) (ReadOnly): Package shipping details
 
 ## OrderStatusDetails
@@ -147,11 +147,11 @@
 ## NotificationPreference
 ### Properties
 * **sendNotification**: bool (Required): Notification is required or not.
-* **stageName**: 'AtAzureDC' | 'DataCopy' | 'Delivered' | 'DevicePrepared' | 'Dispatched' | 'PickedUp' (Required): Name of the stage. Possible values include: 'DevicePrepared', 'Dispatched', 'Delivered', 'PickedUp', 'AtAzureDC', 'DataCopy'
+* **stageName**: 'AtAzureDC' | 'DataCopy' | 'Delivered' | 'DevicePrepared' | 'Dispatched' | 'PickedUp' (Required): Name of the stage.
 
 ## TransportPreferences
 ### Properties
-* **preferredShipmentType**: 'CustomerManaged' | 'MicrosoftManaged' (Required): Indicates Shipment Logistics type that the customer preferred. Possible values include: 'CustomerManaged', 'MicrosoftManaged'
+* **preferredShipmentType**: 'CustomerManaged' | 'MicrosoftManaged' (Required): Indicates Shipment Logistics type that the customer preferred.
 
 ## ProductDetails
 ### Properties

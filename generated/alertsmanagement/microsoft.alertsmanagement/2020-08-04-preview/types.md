@@ -54,7 +54,7 @@
 
 ## HealthState
 ### Properties
-* **healthStateName**: 'Critical' | 'Warning' (Required): Health state name. Possible values include: 'Warning', 'Critical'
+* **healthStateName**: 'Critical' | 'Warning' (Required): Health state name.
 * **severity**: int (Required): Severity of alert fired
 
 ## Dictionary<string,String>

@@ -60,4 +60,4 @@ INFORMATION: Resource type Microsoft.Management/managementGroups/subscriptions u
 Processing batch task - {"tag":"schema-management-2017-08-31-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-[28.45 s] Generation Complete
+[43.87 s] Generation Complete

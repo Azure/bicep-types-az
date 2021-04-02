@@ -34,22 +34,22 @@
 ### Properties
 * **definition**: [ExportDefinition](#exportdefinition) (Required): The definition of a query.
 * **deliveryInfo**: [ExportDeliveryInfo](#exportdeliveryinfo) (Required): The delivery information associated with a export.
-* **format**: 'Csv': The format of the export being delivered. Possible values include: 'Csv'
+* **format**: 'Csv': The format of the export being delivered.
 * **schedule**: [ExportSchedule](#exportschedule): The schedule associated with a export.
 
 ## ExportDefinition
 ### Properties
 * **dataSet**: [QueryDataset](#querydataset): The definition of data present in the query.
-* **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'WeekToDate' (Required): The time frame for pulling data for the query. If custom, then a specific time period must be provided. Possible values include: 'MonthToDate', 'BillingMonthToDate', 'TheLastMonth', 'TheLastBillingMonth', 'WeekToDate', 'Custom'
+* **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'WeekToDate' (Required): The time frame for pulling data for the query. If custom, then a specific time period must be provided.
 * **timePeriod**: [QueryTimePeriod](#querytimeperiod): The start and end date for pulling data for the query.
-* **type**: 'ActualCost' | 'AmortizedCost' | 'Usage' (Required): The type of the query. Possible values include: 'Usage', 'ActualCost', 'AmortizedCost'
+* **type**: 'ActualCost' | 'AmortizedCost' | 'Usage' (Required): The type of the query.
 
 ## QueryDataset
 ### Properties
 * **aggregation**: [Dictionary<string,QueryAggregation>](#dictionarystringqueryaggregation): Dictionary of aggregation expression to use in the query. The key of each item in the dictionary is the alias for the aggregated column. Query can have up to 2 aggregation clauses.
 * **configuration**: [QueryDatasetConfiguration](#querydatasetconfiguration): The configuration of dataset in the query.
 * **filter**: [QueryFilter](#queryfilter): The filter expression to be used in the export.
-* **granularity**: 'Daily': The granularity of rows in the query. Possible values include: 'Daily'
+* **granularity**: 'Daily': The granularity of rows in the query.
 * **grouping**: [QueryGrouping](#querygrouping)[]: Array of group by expression to use in the query. Query can have up to 2 group by clauses.
 
 ## Dictionary<string,QueryAggregation>
@@ -82,7 +82,7 @@
 ## QueryGrouping
 ### Properties
 * **name**: string (Required): The name of the column to group.
-* **type**: 'Dimension' | 'Tag' (Required): Has type of the column to group. Possible values include: 'Tag', 'Dimension'
+* **type**: 'Dimension' | 'Tag' (Required): Has type of the column to group.
 
 ## QueryTimePeriod
 ### Properties
@@ -101,9 +101,9 @@
 
 ## ExportSchedule
 ### Properties
-* **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' (Required): The schedule recurrence. Possible values include: 'Daily', 'Weekly', 'Monthly', 'Annually'
+* **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' (Required): The schedule recurrence.
 * **recurrencePeriod**: [ExportRecurrencePeriod](#exportrecurrenceperiod): The start and end date for recurrence schedule.
-* **status**: 'Active' | 'Inactive': The status of the schedule. Whether active or not. If inactive, the export's scheduled execution is paused. Possible values include: 'Active', 'Inactive'
+* **status**: 'Active' | 'Inactive': The status of the schedule. Whether active or not. If inactive, the export's scheduled execution is paused.
 
 ## ExportRecurrencePeriod
 ### Properties
@@ -116,14 +116,14 @@
 
 ## ViewProperties
 ### Properties
-* **accumulated**: 'false' | 'true': Show costs accumulated over time. Possible values include: 'true', 'false'
-* **chart**: 'Area' | 'GroupedColumn' | 'Line' | 'StackedColumn' | 'Table': Chart type of the main view in Cost Analysis. Required. Possible values include: 'Area', 'Line', 'StackedColumn', 'GroupedColumn', 'Table'
+* **accumulated**: 'false' | 'true': Show costs accumulated over time.
+* **chart**: 'Area' | 'GroupedColumn' | 'Line' | 'StackedColumn' | 'Table': Chart type of the main view in Cost Analysis. Required.
 * **createdOn**: string (ReadOnly): Date the user created this view.
 * **currency**: string (ReadOnly): Selected currency.
 * **dateRange**: string (ReadOnly): Selected date range for viewing cost in.
 * **displayName**: string: User input name of the view. Required.
 * **kpis**: [KpiProperties](#kpiproperties)[]: List of KPIs to show in Cost Analysis UI.
-* **metric**: 'ActualCost' | 'AHUB' | 'AmortizedCost': Metric to use when displaying costs. Possible values include: 'ActualCost', 'AmortizedCost', 'AHUB'
+* **metric**: 'ActualCost' | 'AHUB' | 'AmortizedCost': Metric to use when displaying costs.
 * **modifiedOn**: string (ReadOnly): Date when the user last modified this view.
 * **pivots**: [PivotProperties](#pivotproperties)[]: Configuration of 3 sub-views in the Cost Analysis UI.
 * **query**: [ReportConfigDefinition](#reportconfigdefinition): The definition of a report config.
@@ -133,18 +133,18 @@
 ### Properties
 * **enabled**: bool: show the KPI in the UI?
 * **id**: string: ID of resource related to metric (budget).
-* **type**: 'Budget' | 'Forecast': KPI type (Forecast, Budget). Possible values include: 'Forecast', 'Budget'
+* **type**: 'Budget' | 'Forecast': KPI type (Forecast, Budget).
 
 ## PivotProperties
 ### Properties
 * **name**: string: Data field to show in view.
-* **type**: 'Dimension' | 'TagKey': Data type to show in view. Possible values include: 'Dimension', 'TagKey'
+* **type**: 'Dimension' | 'TagKey': Data type to show in view.
 
 ## ReportConfigDefinition
 ### Properties
 * **dataSet**: [ReportConfigDataset](#reportconfigdataset): The definition of data present in the report.
 * **includeMonetaryCommitment**: bool (ReadOnly): Include monetary commitment
-* **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided. Possible values include: 'WeekToDate', 'MonthToDate', 'YearToDate', 'Custom'
+* **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
 * **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod): The start and end date for pulling data for the report.
 * **type**: string (Required): The type of the report. Usage represents actual usage, forecast represents forecasted data and UsageAndForecast represents both usage and forecasted data. Actual usage and forecasted data can be differentiated based on dates.
 
@@ -153,7 +153,7 @@
 * **aggregation**: [Dictionary<string,ReportConfigAggregation>](#dictionarystringreportconfigaggregation): Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
 * **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration): The configuration of dataset in the report.
 * **filter**: [ReportConfigFilter](#reportconfigfilter): The filter expression to be used in the report.
-* **granularity**: 'Daily' | 'Monthly': The granularity of rows in the report. Possible values include: 'Daily', 'Monthly'
+* **granularity**: 'Daily' | 'Monthly': The granularity of rows in the report.
 * **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[]: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
 * **sorting**: [ReportConfigSorting](#reportconfigsorting)[]: Array of order by expression to use in the report.
 
@@ -183,17 +183,17 @@
 ## ReportConfigComparisonExpression
 ### Properties
 * **name**: string (Required): The name of the column to use in comparison.
-* **operator**: 'Contains' | 'In' (Required): The operator to use for comparison. Possible values include: 'In', 'Contains'
+* **operator**: 'Contains' | 'In' (Required): The operator to use for comparison.
 * **values**: string[] (Required): Array of values to use for comparison
 
 ## ReportConfigGrouping
 ### Properties
 * **name**: string (Required): The name of the column to group. This version supports subscription lowest possible grain.
-* **type**: 'Dimension' | 'Tag' (Required): Has type of the column to group. Possible values include: 'Tag', 'Dimension'
+* **type**: 'Dimension' | 'Tag' (Required): Has type of the column to group.
 
 ## ReportConfigSorting
 ### Properties
-* **direction**: 'Ascending' | 'Descending': Direction of sort. Possible values include: 'Ascending', 'Descending'
+* **direction**: 'Ascending' | 'Descending': Direction of sort.
 * **name**: string (Required): The name of the column to sort.
 
 ## ReportConfigTimePeriod

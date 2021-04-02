@@ -30,22 +30,22 @@
 ### Properties
 * **capacityLimit**: int: The maximum capacity of an auto scale v-core resource.
 * **capacityObjectId**: string: The object ID of the capacity resource associated with the auto scale v-core resource.
-* **provisioningState**: 'Succeeded' (ReadOnly): The current deployment state of an auto scale v-core resource. The provisioningState is to indicate states for resource provisioning. Possible values include: 'Succeeded'
+* **provisioningState**: 'Succeeded' (ReadOnly): The current deployment state of an auto scale v-core resource. The provisioningState is to indicate states for resource provisioning.
 
 ## AutoScaleVCoreSku
 ### Properties
 * **capacity**: int: The capacity of an auto scale v-core resource.
 * **name**: string (Required): Name of the SKU level.
-* **tier**: 'AutoScale': The name of the Azure pricing tier to which the SKU applies. Possible values include: 'AutoScale'
+* **tier**: 'AutoScale': The name of the Azure pricing tier to which the SKU applies.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC)
 * **createdBy**: string: An identifier for the identity that created the resource
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: An identifier for the identity that last modified the resource
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties
@@ -55,9 +55,9 @@
 ## DedicatedCapacityProperties
 ### Properties
 * **administration**: [DedicatedCapacityAdministrators](#dedicatedcapacityadministrators): An array of administrator user identities
-* **mode**: 'Gen1' | 'Gen2': The capacity mode. Possible values include: 'Gen1', 'Gen2'
-* **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current deployment state of PowerBI Dedicated resource. The provisioningState is to indicate states for resource provisioning. Possible values include: 'Deleting', 'Succeeded', 'Failed', 'Paused', 'Suspended', 'Provisioning', 'Updating', 'Suspending', 'Pausing', 'Resuming', 'Preparing', 'Scaling'
-* **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current state of PowerBI Dedicated resource. The state is to indicate more states outside of resource provisioning. Possible values include: 'Deleting', 'Succeeded', 'Failed', 'Paused', 'Suspended', 'Provisioning', 'Updating', 'Suspending', 'Pausing', 'Resuming', 'Preparing', 'Scaling'
+* **mode**: 'Gen1' | 'Gen2': The capacity mode.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current deployment state of PowerBI Dedicated resource. The provisioningState is to indicate states for resource provisioning.
+* **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current state of PowerBI Dedicated resource. The state is to indicate more states outside of resource provisioning.
 
 ## DedicatedCapacityAdministrators
 ### Properties
@@ -66,7 +66,7 @@
 ## CapacitySku
 ### Properties
 * **name**: string (Required): Name of the SKU level.
-* **tier**: 'AutoPremiumHost' | 'PBIE_Azure' | 'Premium': The name of the Azure pricing tier to which the SKU applies. Possible values include: 'PBIE_Azure', 'Premium', 'AutoPremiumHost'
+* **tier**: 'AutoPremiumHost' | 'PBIE_Azure' | 'Premium': The name of the Azure pricing tier to which the SKU applies.
 
 ## Dictionary<string,String>
 ### Properties

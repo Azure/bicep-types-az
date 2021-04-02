@@ -104,7 +104,7 @@
 ## StorageAccount
 ### Properties
 * **id**: string: The ID of the storage account resource. Media Services relies on tables and queues as well as blobs, so the primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage). Blob only storage accounts can be added as secondary storage accounts.
-* **type**: 'Primary' | 'Secondary' (Required): The type of the storage account. Possible values include: 'Primary', 'Secondary'
+* **type**: 'Primary' | 'Secondary' (Required): The type of the storage account.
 
 ## Dictionary<string,String>
 ### Properties
@@ -120,7 +120,7 @@
 * **description**: string: The Asset description.
 * **lastModified**: string (ReadOnly): The last modified date of the Asset.
 * **storageAccountName**: string: The name of the storage account.
-* **storageEncryptionFormat**: 'MediaStorageClientEncryption' | 'None' (ReadOnly): The Asset encryption format. One of None or MediaStorageEncryption. Possible values include: 'None', 'MediaStorageClientEncryption'
+* **storageEncryptionFormat**: 'MediaStorageClientEncryption' | 'None' (ReadOnly): The Asset encryption format. One of None or MediaStorageEncryption.
 
 ## ContentKeyPolicyProperties
 ### Properties
@@ -150,7 +150,7 @@
 * **ask**: array (Required): The key that must be used as FairPlay ASk.
 * **fairPlayPfx**: string (Required): The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
 * **fairPlayPfxPassword**: string (Required): The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
-* **rentalAndLeaseKeyType**: 'PersistentLimited' | 'PersistentUnlimited' | 'Undefined' | 'Unknown' (Required): The rental and lease key type. Possible values include: 'Unknown', 'Undefined', 'PersistentUnlimited', 'PersistentLimited'
+* **rentalAndLeaseKeyType**: 'PersistentLimited' | 'PersistentUnlimited' | 'Undefined' | 'Unknown' (Required): The rental and lease key type.
 * **rentalDuration**: int (Required): The rental duration. Must be greater than or equal to 0.
 
 ### #Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration
@@ -179,7 +179,7 @@
 * **ask**: array (Required): The key that must be used as FairPlay ASk.
 * **fairPlayPfx**: string (Required): The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
 * **fairPlayPfxPassword**: string (Required): The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
-* **rentalAndLeaseKeyType**: 'PersistentLimited' | 'PersistentUnlimited' | 'Undefined' | 'Unknown' (Required): The rental and lease key type. Possible values include: 'Unknown', 'Undefined', 'PersistentUnlimited', 'PersistentLimited'
+* **rentalAndLeaseKeyType**: 'PersistentLimited' | 'PersistentUnlimited' | 'Undefined' | 'Unknown' (Required): The rental and lease key type.
 * **rentalDuration**: int (Required): The rental duration. Must be greater than or equal to 0.
 
 ## #Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration
@@ -193,10 +193,10 @@
 * **allowTestDevices**: bool (Required): A flag indicating whether test devices can use the license.
 * **beginDate**: string: The begin date of license
 * **contentKeyLocation**: [ContentKeyPolicyPlayReadyContentKeyLocation](#contentkeypolicyplayreadycontentkeylocation) (Required): Base class for content key ID location. A derived class must be used to represent the location.
-* **contentType**: 'UltraVioletDownload' | 'UltraVioletStreaming' | 'Unknown' | 'Unspecified' (Required): The PlayReady content type. Possible values include: 'Unknown', 'Unspecified', 'UltraVioletDownload', 'UltraVioletStreaming'
+* **contentType**: 'UltraVioletDownload' | 'UltraVioletStreaming' | 'Unknown' | 'Unspecified' (Required): The PlayReady content type.
 * **expirationDate**: string: The expiration date of license.
 * **gracePeriod**: string: The grace period of license.
-* **licenseType**: 'NonPersistent' | 'Persistent' | 'Unknown' (Required): The license type. Possible values include: 'Unknown', 'NonPersistent', 'Persistent'
+* **licenseType**: 'NonPersistent' | 'Persistent' | 'Unknown' (Required): The license type.
 * **playRight**: [ContentKeyPolicyPlayReadyPlayRight](#contentkeypolicyplayreadyplayright): Configures the Play Right in the PlayReady license.
 * **relativeBeginDate**: string: The relative begin date of license.
 * **relativeExpirationDate**: string: The relative expiration date of license.
@@ -226,7 +226,7 @@
 ## ContentKeyPolicyPlayReadyPlayRight
 ### Properties
 * **agcAndColorStripeRestriction**: int: Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
-* **allowPassingVideoContentToUnknownOutput**: 'Allowed' | 'AllowedWithVideoConstriction' | 'NotAllowed' | 'Unknown' (Required): Configures Unknown output handling settings of the license. Possible values include: 'Unknown', 'NotAllowed', 'Allowed', 'AllowedWithVideoConstriction'
+* **allowPassingVideoContentToUnknownOutput**: 'Allowed' | 'AllowedWithVideoConstriction' | 'NotAllowed' | 'Unknown' (Required): Configures Unknown output handling settings of the license.
 * **analogVideoOpl**: int: Specifies the output protection level for compressed digital audio.
 * **compressedDigitalAudioOpl**: int: Specifies the output protection level for compressed digital audio.
 * **compressedDigitalVideoOpl**: int: Specifies the output protection level for compressed digital video.
@@ -269,7 +269,7 @@
 * **openIdConnectDiscoveryDocument**: string: The OpenID connect discovery document.
 * **primaryVerificationKey**: [ContentKeyPolicyRestrictionTokenKey](#contentkeypolicyrestrictiontokenkey) (Required): Base class for Content Key Policy key for token validation. A derived class must be used to create a token key.
 * **requiredClaims**: [ContentKeyPolicyTokenClaim](#contentkeypolicytokenclaim)[]: A list of required token claims.
-* **restrictionTokenType**: 'Jwt' | 'Swt' | 'Unknown' (Required): The type of token. Possible values include: 'Unknown', 'Swt', 'Jwt'
+* **restrictionTokenType**: 'Jwt' | 'Swt' | 'Unknown' (Required): The type of token.
 
 ### #Microsoft.Media.ContentKeyPolicyUnknownRestriction
 #### Properties
@@ -289,7 +289,7 @@
 * **openIdConnectDiscoveryDocument**: string: The OpenID connect discovery document.
 * **primaryVerificationKey**: [ContentKeyPolicyRestrictionTokenKey](#contentkeypolicyrestrictiontokenkey) (Required): Base class for Content Key Policy key for token validation. A derived class must be used to create a token key.
 * **requiredClaims**: [ContentKeyPolicyTokenClaim](#contentkeypolicytokenclaim)[]: A list of required token claims.
-* **restrictionTokenType**: 'Jwt' | 'Swt' | 'Unknown' (Required): The type of token. Possible values include: 'Unknown', 'Swt', 'Jwt'
+* **restrictionTokenType**: 'Jwt' | 'Swt' | 'Unknown' (Required): The type of token.
 
 ## ContentKeyPolicyRestrictionTokenKey
 * **Discriminator**: @odata.type
@@ -346,7 +346,7 @@
 * **lastModified**: string (ReadOnly): The exact time the Live Event was last modified.
 * **preview**: [LiveEventPreview](#liveeventpreview): The Live Event preview.
 * **provisioningState**: string (ReadOnly): The provisioning state of the Live Event.
-* **resourceState**: 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The resource state of the Live Event. Possible values include: 'Stopped', 'Starting', 'Running', 'Stopping', 'Deleting'
+* **resourceState**: 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The resource state of the Live Event.
 * **streamOptions**: 'Default' | 'LowLatency'[]: The stream options.
 * **vanityUrl**: bool: The Live Event vanity URL flag.
 
@@ -357,7 +357,7 @@
 
 ## LiveEventEncoding
 ### Properties
-* **encodingType**: 'Basic' | 'None': The encoding type for Live Event. Possible values include: 'None', 'Basic'
+* **encodingType**: 'Basic' | 'None': The encoding type for Live Event.
 * **presetName**: string: The encoding preset name.
 
 ## LiveEventInput
@@ -365,7 +365,7 @@
 * **accessToken**: string: The access token.
 * **endpoints**: [LiveEventEndpoint](#liveeventendpoint)[]: The input endpoints for the Live Event.
 * **keyFrameIntervalDuration**: string: ISO 8601 timespan duration of the key frame interval duration.
-* **streamingProtocol**: 'FragmentedMP4' | 'RTMP' (Required): The streaming protocol for the Live Event. Possible values include: 'FragmentedMP4', 'RTMP'
+* **streamingProtocol**: 'FragmentedMP4' | 'RTMP' (Required): The streaming protocol for the Live Event.
 
 ## LiveEventEndpoint
 ### Properties
@@ -409,7 +409,7 @@
 * **manifestName**: string: The manifest file name.
 * **outputSnapTime**: int: The output snapshot time.
 * **provisioningState**: string (ReadOnly): The provisioning state of the Live Output.
-* **resourceState**: 'Creating' | 'Deleting' | 'Running' (ReadOnly): The resource state of the Live Output. Possible values include: 'Creating', 'Running', 'Deleting'
+* **resourceState**: 'Creating' | 'Deleting' | 'Running' (ReadOnly): The resource state of the Live Output.
 
 ## Hls
 ### Properties
@@ -431,7 +431,7 @@
 * **lastModified**: string (ReadOnly): The exact time the StreamingEndpoint was last modified.
 * **maxCacheAge**: int: Max cache age
 * **provisioningState**: string (ReadOnly): The provisioning state of the StreamingEndpoint.
-* **resourceState**: 'Deleting' | 'Running' | 'Scaling' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The resource state of the StreamingEndpoint. Possible values include: 'Stopped', 'Starting', 'Running', 'Stopping', 'Deleting', 'Scaling'
+* **resourceState**: 'Deleting' | 'Running' | 'Scaling' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The resource state of the StreamingEndpoint.
 * **scaleUnits**: int: The number of scale units.
 
 ## StreamingEndpointAccessControl
@@ -493,8 +493,8 @@
 
 ## TrackPropertyCondition
 ### Properties
-* **operation**: 'Equal' | 'Unknown' (Required): Track property condition operation. Possible values include: 'Unknown', 'Equal'
-* **property**: 'FourCC' | 'Unknown' (Required): Track property type. Possible values include: 'Unknown', 'FourCC'
+* **operation**: 'Equal' | 'Unknown' (Required): Track property condition operation.
+* **property**: 'FourCC' | 'Unknown' (Required): Track property type.
 * **value**: string: Track property value
 
 ## StreamingPolicyContentKeys
@@ -572,9 +572,9 @@
 
 ## TransformOutput
 ### Properties
-* **onError**: 'ContinueJob' | 'StopProcessingJob': A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The default is stop. Possible values include: 'StopProcessingJob', 'ContinueJob'
+* **onError**: 'ContinueJob' | 'StopProcessingJob': A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The default is stop.
 * **preset**: [Preset](#preset) (Required): Base type for all Presets, which define the recipe or instructions on how the input media files should be processed.
-* **relativePriority**: 'High' | 'Low' | 'Normal': Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal. Possible values include: 'Low', 'Normal', 'High'
+* **relativePriority**: 'High' | 'Low' | 'Normal': Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
 
 ## Preset
 * **Discriminator**: @odata.type
@@ -587,7 +587,7 @@
 ### #Microsoft.Media.BuiltInStandardEncoderPreset
 #### Properties
 * **@odata.type**: '#Microsoft.Media.BuiltInStandardEncoderPreset' (Required): Describes a built-in preset for encoding the input video with the Standard Encoder.
-* **presetName**: 'AACGoodQualityAudio' | 'AdaptiveStreaming' | 'H264MultipleBitrate1080p' | 'H264MultipleBitrate720p' | 'H264MultipleBitrateSD' (Required): The built-in preset to be used for encoding videos. Possible values include: 'AdaptiveStreaming', 'AACGoodQualityAudio', 'H264MultipleBitrate1080p', 'H264MultipleBitrate720p', 'H264MultipleBitrateSD'
+* **presetName**: 'AACGoodQualityAudio' | 'AdaptiveStreaming' | 'H264MultipleBitrate1080p' | 'H264MultipleBitrate720p' | 'H264MultipleBitrateSD' (Required): The built-in preset to be used for encoding videos.
 
 ### #Microsoft.Media.StandardEncoderPreset
 #### Properties
@@ -605,7 +605,7 @@
 ## #Microsoft.Media.BuiltInStandardEncoderPreset
 ### Properties
 * **@odata.type**: '#Microsoft.Media.BuiltInStandardEncoderPreset' (Required): Describes a built-in preset for encoding the input video with the Standard Encoder.
-* **presetName**: 'AACGoodQualityAudio' | 'AdaptiveStreaming' | 'H264MultipleBitrate1080p' | 'H264MultipleBitrate720p' | 'H264MultipleBitrateSD' (Required): The built-in preset to be used for encoding videos. Possible values include: 'AdaptiveStreaming', 'AACGoodQualityAudio', 'H264MultipleBitrate1080p', 'H264MultipleBitrate720p', 'H264MultipleBitrateSD'
+* **presetName**: 'AACGoodQualityAudio' | 'AdaptiveStreaming' | 'H264MultipleBitrate1080p' | 'H264MultipleBitrate720p' | 'H264MultipleBitrateSD' (Required): The built-in preset to be used for encoding videos.
 
 ## #Microsoft.Media.StandardEncoderPreset
 ### Properties
@@ -637,7 +637,7 @@
 #### Properties
 * **@odata.type**: '#Microsoft.Media.Video' (Required): Describes the basic properties for encoding the input video.
 * **keyFrameInterval**: string: The distance between two key frames, thereby defining a group of pictures (GOP). The value should be a non-zero integer in the range [1, 30] seconds, specified in ISO 8601 format. The default is 2 seconds (PT2S).
-* **stretchMode**: 'AutoFit' | 'AutoSize' | 'None': The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize. Possible values include: 'None', 'AutoSize', 'AutoFit'
+* **stretchMode**: 'AutoFit' | 'AutoSize' | 'None': The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize.
 
 
 ## #Microsoft.Media.Audio
@@ -659,14 +659,14 @@
 ### Properties
 * **@odata.type**: '#Microsoft.Media.Video' (Required): Describes the basic properties for encoding the input video.
 * **keyFrameInterval**: string: The distance between two key frames, thereby defining a group of pictures (GOP). The value should be a non-zero integer in the range [1, 30] seconds, specified in ISO 8601 format. The default is 2 seconds (PT2S).
-* **stretchMode**: 'AutoFit' | 'AutoSize' | 'None': The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize. Possible values include: 'None', 'AutoSize', 'AutoFit'
+* **stretchMode**: 'AutoFit' | 'AutoSize' | 'None': The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize.
 
 ## Filters
 ### Properties
 * **crop**: [Rectangle](#rectangle): Describes the properties of a rectangular window applied to the input media before processing it.
 * **deinterlace**: [Deinterlace](#deinterlace): Describes the de-interlacing settings.
 * **overlays**: [Overlay](#overlay)[]: The properties of overlays to be applied to the input video. These could be audio, image or video overlays.
-* **rotation**: 'Auto' | 'None' | 'Rotate0' | 'Rotate180' | 'Rotate270' | 'Rotate90': The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto. Possible values include: 'Auto', 'None', 'Rotate0', 'Rotate90', 'Rotate180', 'Rotate270'
+* **rotation**: 'Auto' | 'None' | 'Rotate0' | 'Rotate180' | 'Rotate270' | 'Rotate90': The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto.
 
 ## Rectangle
 ### Properties
@@ -677,8 +677,8 @@
 
 ## Deinterlace
 ### Properties
-* **mode**: 'AutoPixelAdaptive' | 'Off': The deinterlacing mode. Defaults to AutoPixelAdaptive. Possible values include: 'Off', 'AutoPixelAdaptive'
-* **parity**: 'Auto' | 'BottomFieldFirst' | 'TopFieldFirst': The field parity for de-interlacing, defaults to Auto. Possible values include: 'Auto', 'TopFieldFirst', 'BottomFieldFirst'
+* **mode**: 'AutoPixelAdaptive' | 'Off': The deinterlacing mode. Defaults to AutoPixelAdaptive.
+* **parity**: 'Auto' | 'BottomFieldFirst' | 'TopFieldFirst': The field parity for de-interlacing, defaults to Auto.
 
 ## Overlay
 * **Discriminator**: @odata.type
@@ -746,8 +746,8 @@
 * **input**: [JobInput](#jobinput) (Required): Base class for inputs to a Job.
 * **lastModified**: string (ReadOnly): The UTC date and time when the Job was last updated, in 'YYYY-MM-DDThh:mm:ssZ' format.
 * **outputs**: [JobOutput](#joboutput)[] (Required): The outputs for the Job.
-* **priority**: 'High' | 'Low' | 'Normal': Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal. Possible values include: 'Low', 'Normal', 'High'
-* **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' (ReadOnly): The current state of the job. Possible values include: 'Canceled', 'Canceling', 'Error', 'Finished', 'Processing', 'Queued', 'Scheduled'
+* **priority**: 'High' | 'Low' | 'Normal': Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
+* **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' (ReadOnly): The current state of the job.
 
 ## JobInput
 * **Discriminator**: @odata.type
@@ -779,7 +779,7 @@
 ### Base Properties
 * **error**: [JobError](#joberror) (ReadOnly): Details of JobOutput errors.
 * **progress**: int (ReadOnly): If the JobOutput is in a Processing state, this contains the job completion percentage.  The value is an estimate and not intended to be used to predict job completion times. To determine if the JobOutput is complete, use the State property.
-* **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' (ReadOnly): Describes the state of the JobOutput. Possible values include: 'Canceled', 'Canceling', 'Error', 'Finished', 'Processing', 'Queued', 'Scheduled'
+* **state**: 'Canceled' | 'Canceling' | 'Error' | 'Finished' | 'Processing' | 'Queued' | 'Scheduled' (ReadOnly): Describes the state of the JobOutput.
 ### #Microsoft.Media.JobOutputAsset
 #### Properties
 * **@odata.type**: '#Microsoft.Media.JobOutputAsset' (Required): Represents an Asset used as a JobOutput.
@@ -788,11 +788,11 @@
 
 ## JobError
 ### Properties
-* **category**: 'Configuration' | 'Content' | 'Download' | 'Service' | 'Upload' (ReadOnly): Helps with categorization of errors. Possible values include: 'Service', 'Download', 'Upload', 'Configuration', 'Content'
-* **code**: 'ConfigurationUnsupported' | 'ContentMalformed' | 'ContentUnsupported' | 'DownloadNotAccessible' | 'DownloadTransientError' | 'ServiceError' | 'ServiceTransientError' | 'UploadNotAccessible' | 'UploadTransientError' (ReadOnly): Error code describing the error. Possible values include: 'ServiceError', 'ServiceTransientError', 'DownloadNotAccessible', 'DownloadTransientError', 'UploadNotAccessible', 'UploadTransientError', 'ConfigurationUnsupported', 'ContentMalformed', 'ContentUnsupported'
+* **category**: 'Configuration' | 'Content' | 'Download' | 'Service' | 'Upload' (ReadOnly): Helps with categorization of errors.
+* **code**: 'ConfigurationUnsupported' | 'ContentMalformed' | 'ContentUnsupported' | 'DownloadNotAccessible' | 'DownloadTransientError' | 'ServiceError' | 'ServiceTransientError' | 'UploadNotAccessible' | 'UploadTransientError' (ReadOnly): Error code describing the error.
 * **details**: [JobErrorDetail](#joberrordetail)[] (ReadOnly): An array of details about specific errors that led to this reported error.
 * **message**: string (ReadOnly): A human-readable language-dependent representation of the error.
-* **retry**: 'DoNotRetry' | 'MayRetry' (ReadOnly): Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal. Possible values include: 'DoNotRetry', 'MayRetry'
+* **retry**: 'DoNotRetry' | 'MayRetry' (ReadOnly): Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.
 
 ## JobErrorDetail
 ### Properties

@@ -19,13 +19,13 @@
 * **instanceView**: [schemas:16_properties_instanceView](#schemas16propertiesinstanceview) (ReadOnly): The instance view of the container group. Only valid in response.
 * **ipAddress**: [IpAddress](#ipaddress): IP address for the container group.
 * **networkProfile**: [ContainerGroupNetworkProfile](#containergroupnetworkprofile): Container group network profile information.
-* **osType**: 'Linux' | 'Windows' (Required): The operating system type required by the containers in the container group. Possible values include: 'Windows', 'Linux'
+* **osType**: 'Linux' | 'Windows' (Required): The operating system type required by the containers in the container group.
 * **provisioningState**: string (ReadOnly): The provisioning state of the container group. This only appears in the response.
 * **restartPolicy**: 'Always' | 'Never' | 'OnFailure': Restart policy for all containers within the container group.
 - `Always` Always restart
 - `OnFailure` Restart on failure
 - `Never` Never restart
-. Possible values include: 'Always', 'OnFailure', 'Never'
+.
 * **volumes**: [Volume](#volume)[]: The list of volumes that can be mounted by containers in this container group.
 
 ## Container
@@ -93,12 +93,12 @@
 ### Properties
 * **path**: string: The path to probe.
 * **port**: int (Required): The port number to probe.
-* **scheme**: 'http' | 'https': The scheme. Possible values include: 'http', 'https'
+* **scheme**: 'http' | 'https': The scheme.
 
 ## ContainerPort
 ### Properties
 * **port**: int (Required): The port number exposed within the container group.
-* **protocol**: 'TCP' | 'UDP': The protocol associated with the port. Possible values include: 'TCP', 'UDP'
+* **protocol**: 'TCP' | 'UDP': The protocol associated with the port.
 
 ## ResourceRequirements
 ### Properties
@@ -127,7 +127,7 @@
 
 ## LogAnalytics
 ### Properties
-* **logType**: 'ContainerInsights' | 'ContainerInstanceLogs': The log type to be used. Possible values include: 'ContainerInsights', 'ContainerInstanceLogs'
+* **logType**: 'ContainerInsights' | 'ContainerInstanceLogs': The log type to be used.
 * **metadata**: [Dictionary<string,String>](#dictionarystringstring): Metadata for log analytics.
 * **workspaceId**: string (Required): The workspace id for log analytics
 * **workspaceKey**: string (Required): The workspace key for log analytics
@@ -154,12 +154,12 @@
 * **fqdn**: string (ReadOnly): The FQDN for the IP.
 * **ip**: string: The IP exposed to the public internet.
 * **ports**: [Port](#port)[] (Required): The list of ports exposed on the container group.
-* **type**: 'Private' | 'Public' (Required): Specifies if the IP is exposed to the public internet. Possible values include: 'Public', 'Private'
+* **type**: 'Private' | 'Public' (Required): Specifies if the IP is exposed to the public internet.
 
 ## Port
 ### Properties
 * **port**: int (Required): The port number.
-* **protocol**: 'TCP' | 'UDP': The protocol associated with the port. Possible values include: 'TCP', 'UDP'
+* **protocol**: 'TCP' | 'UDP': The protocol associated with the port.
 
 ## ContainerGroupNetworkProfile
 ### Properties

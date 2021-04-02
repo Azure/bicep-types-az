@@ -83,7 +83,7 @@
 * **environmentIsHealthy**: bool (ReadOnly): True/false indicating whether the App Service Environment is healthy.
 * **environmentStatus**: string (ReadOnly): Detailed message about with results of the last check of the App Service Environment.
 * **frontEndScaleFactor**: int: Scale factor for front-ends.
-* **internalLoadBalancingMode**: 'None' | 'Publishing' | 'Web': Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values include: 'None', 'Web', 'Publishing'
+* **internalLoadBalancingMode**: 'None' | 'Publishing' | 'Web': Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
 * **ipsslAddressCount**: int: Number of IP SSL addresses reserved for the App Service Environment.
 * **lastAction**: string (ReadOnly): Last deployment action on the App Service Environment.
 * **lastActionResult**: string (ReadOnly): Result of the last deployment action on the App Service Environment.
@@ -93,9 +93,9 @@
 * **multiSize**: string: Front-end VM size, e.g. "Medium", "Large".
 * **name**: string (Required): Name of the App Service Environment.
 * **networkAccessControlList**: [NetworkAccessControlEntry](#networkaccesscontrolentry)[]: Access control list for controlling traffic to the App Service Environment.
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Provisioning state of the App Service Environment. Possible values include: 'Succeeded', 'Failed', 'Canceled', 'InProgress', 'Deleting'
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Provisioning state of the App Service Environment.
 * **resourceGroup**: string (ReadOnly): Resource group of the App Service Environment.
-* **status**: 'Deleting' | 'Preparing' | 'Ready' | 'Scaling' (ReadOnly): Current status of the App Service Environment. Possible values include: 'Preparing', 'Ready', 'Scaling', 'Deleting'
+* **status**: 'Deleting' | 'Preparing' | 'Ready' | 'Scaling' (ReadOnly): Current status of the App Service Environment.
 * **subscriptionId**: string (ReadOnly): Subscription of the App Service Environment.
 * **suspended**: bool: <code>true</code> if the App Service Environment is suspended; otherwise, <code>false</code>. The environment can be suspended, e.g. when the management endpoint is no longer available
  (most likely because NSG blocked the incoming traffic).
@@ -116,7 +116,7 @@
 ## StampCapacity
 ### Properties
 * **availableCapacity**: int: Available capacity (# of machines, bytes of storage etc...).
-* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared/dedicated workers. Possible values include: 'Shared', 'Dedicated', 'Dynamic'
+* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared/dedicated workers.
 * **excludeFromCapacityAllocation**: bool: If <code>true</code>, it includes basic apps.
 Basic apps are not used for capacity allocation.
 * **isApplicableForAllComputeModes**: bool: <code>true</code> if capacity is applicable for all apps; otherwise, <code>false</code>.
@@ -124,7 +124,7 @@ Basic apps are not used for capacity allocation.
 * **siteMode**: string: Shared or Dedicated.
 * **totalCapacity**: int: Total capacity (# of machines, bytes of storage etc...).
 * **unit**: string: Name of the unit.
-* **workerSize**: 'D1' | 'D2' | 'D3' | 'Default' | 'Large' | 'Medium' | 'Small': Size of the machines. Possible values include: 'Default', 'Small', 'Medium', 'Large', 'D1', 'D2', 'D3'
+* **workerSize**: 'D1' | 'D2' | 'D3' | 'Default' | 'Large' | 'Medium' | 'Small': Size of the machines.
 * **workerSizeId**: int: Size ID of machines:
 0 - Small
 1 - Medium
@@ -132,7 +132,7 @@ Basic apps are not used for capacity allocation.
 
 ## NetworkAccessControlEntry
 ### Properties
-* **action**: 'Deny' | 'Permit': Action object. Possible values include: 'Permit', 'Deny'
+* **action**: 'Deny' | 'Permit': Action object.
 * **description**: string: Description of network access control entry.
 * **order**: int: Order of precedence.
 * **remoteSubnet**: string: Remote subnet.
@@ -153,7 +153,7 @@ Basic apps are not used for capacity allocation.
 
 ## WorkerPool
 ### Properties
-* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared or dedicated app hosting. Possible values include: 'Shared', 'Dedicated', 'Dynamic'
+* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared or dedicated app hosting.
 * **instanceNames**: string[] (ReadOnly): Names of all instances in the worker pool (read only).
 * **workerCount**: int: Number of instances in the worker pool.
 * **workerSize**: string: VM size of the worker pool instances.
@@ -199,11 +199,11 @@ Basic apps are not used for capacity allocation.
 * **numberOfSites**: int (ReadOnly): Number of apps assigned to this App Service plan.
 * **perSiteScaling**: bool: If <code>true</code>, apps assigned to this App Service plan can be scaled independently.
 If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Provisioning state of the App Service Environment. Possible values include: 'Succeeded', 'Failed', 'Canceled', 'InProgress', 'Deleting'
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Provisioning state of the App Service Environment.
 * **reserved**: bool: If Linux app service plan <code>true</code>, <code>false</code> otherwise.
 * **resourceGroup**: string (ReadOnly): Resource group of the App Service plan.
 * **spotExpirationTime**: string: The time when the server farm expires. Valid only if it is a spot server farm.
-* **status**: 'Creating' | 'Pending' | 'Ready' (ReadOnly): App Service plan status. Possible values include: 'Ready', 'Pending', 'Creating'
+* **status**: 'Creating' | 'Pending' | 'Ready' (ReadOnly): App Service plan status.
 * **subscription**: string (ReadOnly): App Service plan subscription.
 * **targetWorkerCount**: int: Scaling worker count.
 * **targetWorkerSizeId**: int: Scaling worker size ID.
@@ -234,6 +234,6 @@ DEFAULT - By default, every app has routes to the local address ranges specified
 INHERITED - Routes inherited from the real Virtual Network routes
 STATIC - Static route set on the app only
 
-These values will be used for syncing an app's routes with those from a Virtual Network. Possible values include: 'DEFAULT', 'INHERITED', 'STATIC'
+These values will be used for syncing an app's routes with those from a Virtual Network.
 * **startAddress**: string: The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
 

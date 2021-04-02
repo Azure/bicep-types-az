@@ -35,12 +35,12 @@
   - UpgradeServiceUnreachable - Indicates that the system service in the cluster is no longer polling the Resource Provider. Clusters in this state cannot be managed by the Resource Provider.
   - AutoScale - Indicates that the ReliabilityLevel of the cluster is being adjusted.
   - Ready - Indicates that the cluster is in a stable state.
-. Possible values include: 'WaitingForNodes', 'Deploying', 'BaselineUpgrade', 'UpdatingUserConfiguration', 'UpdatingUserCertificate', 'UpdatingInfrastructure', 'EnforcingClusterVersion', 'UpgradeServiceUnreachable', 'AutoScale', 'Ready'
+.
 * **diagnosticsStorageAccountConfig**: [DiagnosticsStorageAccountConfig](#diagnosticsstorageaccountconfig): The storage account information for storing Service Fabric diagnostic logs.
 * **fabricSettings**: [SettingsSectionDescription](#settingssectiondescription)[]: The list of custom fabric settings to configure the cluster.
 * **managementEndpoint**: string (Required): The http management endpoint of the cluster.
 * **nodeTypes**: [NodeTypeDescription](#nodetypedescription)[] (Required): The list of node types in the cluster.
-* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the cluster resource. Possible values include: 'Updating', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the cluster resource.
 * **reliabilityLevel**: 'Bronze' | 'Gold' | 'None' | 'Platinum' | 'Silver': The reliability level sets the replica set size of system services. Learn about [ReliabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
 
   - None - Run the System services with a target replica set count of 1. This should only be used for test clusters.
@@ -48,7 +48,7 @@
   - Silver - Run the System services with a target replica set count of 5.
   - Gold - Run the System services with a target replica set count of 7.
   - Platinum - Run the System services with a target replica set count of 9.
-. Possible values include: 'None', 'Bronze', 'Silver', 'Gold', 'Platinum'
+.
 * **reverseProxyCertificate**: [CertificateDescription](#certificatedescription): Describes the certificate details.
 * **reverseProxyCertificateCommonNames**: [ServerCertificateCommonNames](#servercertificatecommonnames): Describes a list of server certificates referenced by common name that are used to secure the cluster.
 * **upgradeDescription**: [ClusterUpgradePolicy](#clusterupgradepolicy): Describes the policy used when upgrading the cluster.
@@ -56,13 +56,13 @@
 
   - Automatic - The cluster will be automatically upgraded to the latest Service Fabric runtime version as soon as it is available.
   - Manual - The cluster will not be automatically upgraded to the latest Service Fabric runtime version. The cluster is upgraded by setting the **clusterCodeVersion** property in the cluster resource.
-. Possible values include: 'Automatic', 'Manual'
+.
 * **vmImage**: string: The VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.
 
 ## ClusterVersionDetails
 ### Properties
 * **codeVersion**: string: The Service Fabric runtime version of the cluster.
-* **environment**: 'Linux' | 'Windows': Indicates if this version is for Windows or Linux operating system. Possible values include: 'Windows', 'Linux'
+* **environment**: 'Linux' | 'Windows': Indicates if this version is for Windows or Linux operating system.
 * **supportExpiryUtc**: string: The date of expiry of support of the version.
 
 ## AzureActiveDirectory
@@ -75,12 +75,12 @@
 ### Properties
 * **thumbprint**: string (Required): Thumbprint of the primary certificate.
 * **thumbprintSecondary**: string: Thumbprint of the secondary certificate.
-* **x509StoreName**: 'AddressBook' | 'AuthRoot' | 'CertificateAuthority' | 'Disallowed' | 'My' | 'Root' | 'TrustedPeople' | 'TrustedPublisher': The local certificate store location. Possible values include: 'AddressBook', 'AuthRoot', 'CertificateAuthority', 'Disallowed', 'My', 'Root', 'TrustedPeople', 'TrustedPublisher'
+* **x509StoreName**: 'AddressBook' | 'AuthRoot' | 'CertificateAuthority' | 'Disallowed' | 'My' | 'Root' | 'TrustedPeople' | 'TrustedPublisher': The local certificate store location.
 
 ## ServerCertificateCommonNames
 ### Properties
 * **commonNames**: [ServerCertificateCommonName](#servercertificatecommonname)[]: The list of server certificates referenced by common name that are used to secure the cluster.
-* **x509StoreName**: 'AddressBook' | 'AuthRoot' | 'CertificateAuthority' | 'Disallowed' | 'My' | 'Root' | 'TrustedPeople' | 'TrustedPublisher': The local certificate store location. Possible values include: 'AddressBook', 'AuthRoot', 'CertificateAuthority', 'Disallowed', 'My', 'Root', 'TrustedPeople', 'TrustedPublisher'
+* **x509StoreName**: 'AddressBook' | 'AuthRoot' | 'CertificateAuthority' | 'Disallowed' | 'My' | 'Root' | 'TrustedPeople' | 'TrustedPublisher': The local certificate store location.
 
 ## ServerCertificateCommonName
 ### Properties
@@ -126,7 +126,7 @@
   - Bronze - No privileges. This is the default.
   - Silver - The infrastructure jobs can be paused for a duration of 10 minutes per UD.
   - Gold - The infrastructure jobs can be paused for a duration of 2 hours per UD. Gold durability can be enabled only on full node VM SKUs like D15_V2, G5 etc.
-. Possible values include: 'Bronze', 'Silver', 'Gold'
+.
 * **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
 * **httpGatewayEndpointPort**: int (Required): The HTTP cluster management endpoint port.
 * **isPrimary**: bool (Required): The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.

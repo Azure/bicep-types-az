@@ -27,7 +27,7 @@
 * **correlationId**: string (ReadOnly): The correlation ID of the deployment.
 * **debugSetting**: [DebugSetting](#debugsetting):
 * **dependencies**: [Dependency](#dependency)[] (ReadOnly): The list of deployment dependencies.
-* **mode**: 'Complete' | 'Incremental' (Required): The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources. Possible values include: 'Incremental', 'Complete'
+* **mode**: 'Complete' | 'Incremental' (Required): The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.
 * **onErrorDeployment**: [OnErrorDeployment](#onerrordeployment): Deployment on error behavior.
 * **outputs**: any (ReadOnly): Key/value pairs that represent deployment output.
 * **parameters**: any: Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string.
@@ -59,7 +59,7 @@
 ### Properties
 * **deploymentName**: string: The deployment to be used on error case.
 * **provisioningState**: string (ReadOnly): The state of the provisioning for the on error deployment.
-* **type**: 'LastSuccessful' | 'SpecificDeployment': The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment. Possible values include: 'LastSuccessful', 'SpecificDeployment'
+* **type**: 'LastSuccessful' | 'SpecificDeployment': The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
 
 ## ParametersLink
 ### Properties

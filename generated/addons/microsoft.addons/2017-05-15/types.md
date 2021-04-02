@@ -11,5 +11,5 @@
 
 ## CanonicalSupportPlanProperties
 ### Properties
-* **provisioningState**: 'Cancelled' | 'Cancelling' | 'Downgrading' | 'Failed' | 'Purchasing' | 'Succeeded' | 'Upgrading' (ReadOnly): The provisioning state of the resource. Possible values include: 'Succeeded', 'Failed', 'Cancelled', 'Purchasing', 'Downgrading', 'Cancelling', 'Upgrading'
+* **provisioningState**: 'Cancelled' | 'Cancelling' | 'Downgrading' | 'Failed' | 'Purchasing' | 'Succeeded' | 'Upgrading' (ReadOnly): The provisioning state of the resource.
 

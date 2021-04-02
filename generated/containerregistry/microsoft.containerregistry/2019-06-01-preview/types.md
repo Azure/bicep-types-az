@@ -40,8 +40,8 @@
 ## AgentPoolProperties
 ### Properties
 * **count**: int: The count of agent machine
-* **os**: 'Linux' | 'Windows': The OS of agent machine. Possible values include: 'Windows', 'Linux'
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of this agent pool. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **os**: 'Linux' | 'Windows': The OS of agent machine.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of this agent pool.
 * **tier**: string: The Tier of agent machine
 * **virtualNetworkSubnetResourceId**: string: The Virtual Network Subnet Resource Id of the agent machine
 
@@ -49,10 +49,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource modification (UTC).
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties
@@ -63,7 +63,7 @@
 ### Properties
 * **principalId**: string: The principal ID of resource identity.
 * **tenantId**: string: The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The identity type. Possible values include: 'SystemAssigned', 'UserAssigned', 'SystemAssigned, UserAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The identity type.
 * **userAssignedIdentities**: [Dictionary<string,UserIdentityProperties>](#dictionarystringuseridentityproperties): The list of user identities associated with the resource. The user identity
 dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
@@ -82,7 +82,7 @@ dictionary key references will be ARM resource ids in the form:
 ## TaskRunProperties
 ### Properties
 * **forceUpdateTag**: string: How the run should be forced to rerun even if the run request configuration has not changed
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of this task run. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of this task run.
 * **runRequest**: [RunRequest](#runrequest): The request parameters for scheduling a run.
 * **runResult**: [Run](#run) (ReadOnly): Run resource properties
 
@@ -192,7 +192,7 @@ source of authentication used for accessing the registry.
 ## SecretObject
 ### Properties
 * **type**: 'Opaque' | 'Vaultsecret': The type of the secret object which determines how the value of the secret object has to be
-interpreted. Possible values include: 'Opaque', 'Vaultsecret'
+interpreted.
 * **value**: string: The value of the secret. The format of this value will be determined
 based on the type of the secret object. If the type is Opaque, the value will be
 used as is without any modification.
@@ -201,13 +201,13 @@ used as is without any modification.
 ### Properties
 * **loginMode**: 'Default' | 'None': The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
-the source registry during the run. Possible values include: 'None', 'Default'
+the source registry during the run.
 
 ## PlatformProperties
 ### Properties
-* **architecture**: '386' | 'amd64' | 'arm' | 'arm64' | 'x86': The OS architecture. Possible values include: 'amd64', 'x86', '386', 'arm', 'arm64'
-* **os**: 'Linux' | 'Windows' (Required): The operating system type required for the run. Possible values include: 'Windows', 'Linux'
-* **variant**: 'v6' | 'v7' | 'v8': Variant of the CPU. Possible values include: 'v6', 'v7', 'v8'
+* **architecture**: '386' | 'amd64' | 'arm' | 'arm64' | 'x86': The OS architecture.
+* **os**: 'Linux' | 'Windows' (Required): The operating system type required for the run.
+* **variant**: 'v6' | 'v7' | 'v8': Variant of the CPU.
 
 ## EncodedTaskRunRequest
 ### Properties
@@ -278,14 +278,14 @@ executing a build step.
 * **logArtifact**: [ImageDescriptor](#imagedescriptor) (ReadOnly): Properties for a registry image.
 * **outputImages**: [ImageDescriptor](#imagedescriptor)[]: The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.
 * **platform**: [PlatformProperties](#platformproperties): The platform properties against which the run has to happen.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The provisioning state of a run. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The provisioning state of a run.
 * **runErrorMessage**: string (ReadOnly): The error message received from backend systems after the run is scheduled.
 * **runId**: string: The unique identifier for the run.
-* **runType**: 'AutoBuild' | 'AutoRun' | 'QuickBuild' | 'QuickRun': The type of run. Possible values include: 'QuickBuild', 'QuickRun', 'AutoBuild', 'AutoRun'
+* **runType**: 'AutoBuild' | 'AutoRun' | 'QuickBuild' | 'QuickRun': The type of run.
 * **sourceRegistryAuth**: string: The scope of the credentials that were used to login to the source registry during this run.
 * **sourceTrigger**: [SourceTriggerDescriptor](#sourcetriggerdescriptor): The source trigger that caused a run.
 * **startTime**: string: The time the run started.
-* **status**: 'Canceled' | 'Error' | 'Failed' | 'Queued' | 'Running' | 'Started' | 'Succeeded' | 'Timeout': The current status of the run. Possible values include: 'Queued', 'Started', 'Running', 'Succeeded', 'Failed', 'Canceled', 'Error', 'Timeout'
+* **status**: 'Canceled' | 'Error' | 'Failed' | 'Queued' | 'Running' | 'Started' | 'Succeeded' | 'Timeout': The current status of the run.
 * **task**: string: The task against which run was scheduled.
 * **timerTrigger**: [TimerTriggerDescriptor](#timertriggerdescriptor):
 * **updateTriggerToken**: string: The update trigger token passed for the Run.
@@ -327,8 +327,8 @@ executing a build step.
 * **isSystemTask**: bool: The value of this property indicates whether the task resource is system task or not.
 * **logTemplate**: string: The template that describes the repository and tag information for run log artifact.
 * **platform**: [PlatformProperties](#platformproperties): The platform properties against which the run has to happen.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the task. Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled'
-* **status**: 'Disabled' | 'Enabled': The current status of task. Possible values include: 'Disabled', 'Enabled'
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the task.
+* **status**: 'Disabled' | 'Enabled': The current status of task.
 * **step**: [TaskStepProperties](#taskstepproperties): Base properties for any task step.
 * **timeout**: int: Run timeout in seconds.
 * **trigger**: [TriggerProperties](#triggerproperties): The properties of a trigger.
@@ -370,7 +370,7 @@ executing a build step.
 * **registry**: string: The registry login server.
 * **repository**: string: The repository name.
 * **tag**: string: The tag name.
-* **type**: 'BuildTime' | 'RunTime': The type of the base image dependency. Possible values include: 'BuildTime', 'RunTime'
+* **type**: 'BuildTime' | 'RunTime': The type of the base image dependency.
 
 ## Docker
 ### Properties
@@ -404,25 +404,25 @@ executing a build step.
 
 ## BaseImageTrigger
 ### Properties
-* **baseImageTriggerType**: 'All' | 'Runtime' (Required): The type of the auto trigger for base image dependency updates. Possible values include: 'All', 'Runtime'
+* **baseImageTriggerType**: 'All' | 'Runtime' (Required): The type of the auto trigger for base image dependency updates.
 * **name**: string (Required): The name of the trigger.
-* **status**: 'Disabled' | 'Enabled': The current status of trigger. Possible values include: 'Disabled', 'Enabled'
+* **status**: 'Disabled' | 'Enabled': The current status of trigger.
 * **updateTriggerEndpoint**: string: The endpoint URL for receiving update triggers.
-* **updateTriggerPayloadType**: 'Default' | 'Token': Type of Payload body for Base image update triggers. Possible values include: 'Default', 'Token'
+* **updateTriggerPayloadType**: 'Default' | 'Token': Type of Payload body for Base image update triggers.
 
 ## SourceTrigger
 ### Properties
 * **name**: string (Required): The name of the trigger.
 * **sourceRepository**: [SourceProperties](#sourceproperties) (Required): The properties of the source code repository.
 * **sourceTriggerEvents**: 'commit' | 'pullrequest'[] (Required): The source event corresponding to the trigger.
-* **status**: 'Disabled' | 'Enabled': The current status of trigger. Possible values include: 'Disabled', 'Enabled'
+* **status**: 'Disabled' | 'Enabled': The current status of trigger.
 
 ## SourceProperties
 ### Properties
 * **branch**: string: The branch name of the source code.
 * **repositoryUrl**: string (Required): The full URL to the source code repository
 * **sourceControlAuthProperties**: [AuthInfo](#authinfo): The authorization properties for accessing the source code repository.
-* **sourceControlType**: 'Github' | 'VisualStudioTeamService' (Required): The type of source control service. Possible values include: 'Github', 'VisualStudioTeamService'
+* **sourceControlType**: 'Github' | 'VisualStudioTeamService' (Required): The type of source control service.
 
 ## AuthInfo
 ### Properties
@@ -430,13 +430,13 @@ executing a build step.
 * **refreshToken**: string: The refresh token used to refresh the access token.
 * **scope**: string: The scope of the access token.
 * **token**: string (Required): The access token used to access the source control provider.
-* **tokenType**: 'OAuth' | 'PAT' (Required): The type of Auth token. Possible values include: 'PAT', 'OAuth'
+* **tokenType**: 'OAuth' | 'PAT' (Required): The type of Auth token.
 
 ## TimerTrigger
 ### Properties
 * **name**: string (Required): The name of the trigger.
 * **schedule**: string (Required): The CRON expression for the task schedule
-* **status**: 'Disabled' | 'Enabled': The current status of trigger. Possible values include: 'Disabled', 'Enabled'
+* **status**: 'Disabled' | 'Enabled': The current status of trigger.
 
 ## Dictionary<string,String>
 ### Properties

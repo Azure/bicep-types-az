@@ -38,7 +38,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned' (Required): The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities. Possible values include: 'SystemAssigned', 'None', 'UserAssigned', 'SystemAssigned, UserAssigned'
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned' (Required): The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
 * **userAssignedIdentities**: [Dictionary<string,UserIdentity>](#dictionarystringuseridentity): The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## Dictionary<string,UserIdentity>
@@ -55,14 +55,14 @@
 ### Properties
 * **encryption**: [schemas:29_encryption](#schemas29encryption): Customer Managed Key details of the resource.
 * **privateEndpointConnections**: [PrivateEndpointConnectionVaultProperties](#privateendpointconnectionvaultproperties)[] (ReadOnly): List of private endpoint connection.
-* **privateEndpointStateForBackup**: 'Enabled' | 'None' (ReadOnly): Private endpoint state for backup. Possible values include: 'None', 'Enabled'
-* **privateEndpointStateForSiteRecovery**: 'Enabled' | 'None' (ReadOnly): Private endpoint state for site recovery. Possible values include: 'None', 'Enabled'
+* **privateEndpointStateForBackup**: 'Enabled' | 'None' (ReadOnly): Private endpoint state for backup.
+* **privateEndpointStateForSiteRecovery**: 'Enabled' | 'None' (ReadOnly): Private endpoint state for site recovery.
 * **provisioningState**: string (ReadOnly): Provisioning State.
 * **upgradeDetails**: [UpgradeDetails](#upgradedetails): Details for upgrading vault.
 
 ## schemas:29_encryption
 ### Properties
-* **infrastructureEncryption**: 'Disabled' | 'Enabled': Enabling/Disabling the Double Encryption state. Possible values include: 'Enabled', 'Disabled'
+* **infrastructureEncryption**: 'Disabled' | 'Enabled': Enabling/Disabling the Double Encryption state.
 * **kekIdentity**: [CmkKekIdentity](#cmkkekidentity): The details of the identity used for CMK
 * **keyVaultProperties**: [CmkKeyVaultProperties](#cmkkeyvaultproperties): The properties of the Key Vault which hosts CMK
 
@@ -84,7 +84,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint network resource that is linked to the Private Endpoint connection.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Gets or sets private link service connection state.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' (ReadOnly): Gets or sets provisioning state of the private endpoint connection. Possible values include: 'Succeeded', 'Deleting', 'Failed', 'Pending'
+* **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' (ReadOnly): Gets or sets provisioning state of the private endpoint connection.
 
 ## PrivateEndpoint
 ### Properties
@@ -94,7 +94,7 @@
 ### Properties
 * **actionsRequired**: string (ReadOnly): Gets or sets actions required.
 * **description**: string (ReadOnly): Gets or sets description.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly): Gets or sets the status. Possible values include: 'Pending', 'Approved', 'Rejected', 'Disconnected'
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly): Gets or sets the status.
 
 ## UpgradeDetails
 ### Properties
@@ -104,23 +104,23 @@
 * **operationId**: string (ReadOnly): ID of the vault upgrade operation.
 * **previousResourceId**: string (ReadOnly): Resource ID of the vault before the upgrade.
 * **startTimeUtc**: string (ReadOnly): UTC time at which the upgrade operation has started.
-* **status**: 'Failed' | 'InProgress' | 'Unknown' | 'Upgraded' (ReadOnly): Status of the vault upgrade operation. Possible values include: 'Unknown', 'InProgress', 'Upgraded', 'Failed'
-* **triggerType**: 'ForcedUpgrade' | 'UserTriggered' (ReadOnly): The way the vault upgrade was triggered. Possible values include: 'UserTriggered', 'ForcedUpgrade'
+* **status**: 'Failed' | 'InProgress' | 'Unknown' | 'Upgraded' (ReadOnly): Status of the vault upgrade operation.
+* **triggerType**: 'ForcedUpgrade' | 'UserTriggered' (ReadOnly): The way the vault upgrade was triggered.
 * **upgradedResourceId**: string (ReadOnly): Resource ID of the upgraded vault.
 
 ## Sku
 ### Properties
-* **name**: 'RS0' | 'Standard' (Required): The Sku name. Possible values include: 'Standard', 'RS0'
+* **name**: 'RS0' | 'Standard' (Required): The Sku name.
 * **tier**: string: The Sku tier.
 
 ## systemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource. Possible values include: 'User', 'Application', 'ManagedIdentity', 'Key'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties
@@ -129,7 +129,7 @@
 
 ## RawCertificateData
 ### Properties
-* **authType**: 'AAD' | 'AccessControlService' | 'ACS' | 'AzureActiveDirectory' | 'Invalid': Specifies the authentication type. Possible values include: 'Invalid', 'ACS', 'AAD', 'AccessControlService', 'AzureActiveDirectory'
+* **authType**: 'AAD' | 'AccessControlService' | 'ACS' | 'AzureActiveDirectory' | 'Invalid': Specifies the authentication type.
 * **certificate**: array: The base64 encoded certificate raw data string
 
 ## VaultExtendedInfo

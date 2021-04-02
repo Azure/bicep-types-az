@@ -16,9 +16,9 @@
 * **containers**: [Container](#container)[] (Required): The containers within the container group.
 * **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]: The image registry credentials by which the container group is created from.
 * **ipAddress**: [IpAddress](#ipaddress): IP address for the container group.
-* **osType**: 'Linux' | 'Windows' (Required): The operating system type required by the containers in the container group. Possible values include: 'Windows', 'Linux'
+* **osType**: 'Linux' | 'Windows' (Required): The operating system type required by the containers in the container group.
 * **provisioningState**: string (ReadOnly): The provisioning state of the container group. This only appears in the response.
-* **restartPolicy**: 'always': Restart policy for all containers within the container group. Currently the only available option is `always`. Possible values include: 'always'
+* **restartPolicy**: 'always': Restart policy for all containers within the container group. Currently the only available option is `always`.
 * **state**: string (ReadOnly): The current state of the container group. This is only valid for the response.
 * **volumes**: [Volume](#volume)[]: The list of volumes that can be mounted by containers in this container group.
 
@@ -105,7 +105,7 @@
 ## Port
 ### Properties
 * **port**: int (Required): The port number.
-* **protocol**: 'TCP' | 'UDP': The protocol associated with the port. Possible values include: 'TCP', 'UDP'
+* **protocol**: 'TCP' | 'UDP': The protocol associated with the port.
 
 ## Volume
 ### Properties

@@ -164,7 +164,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The identity type. Possible values include: 'SystemAssigned', 'UserAssigned', 'SystemAssigned, UserAssigned', 'None'
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The identity type.
 * **userAssignedIdentities**: [Dictionary<string,Schemas35Properties>](#dictionarystringschemas35properties): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## Dictionary<string,Schemas35Properties>
@@ -190,12 +190,12 @@
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of Automation operations supported by the Automation resource provider.
 * **publicNetworkAccess**: bool: Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
 * **sku**: [Sku](#sku): The account SKU.
-* **state**: 'Ok' | 'Suspended' | 'Unavailable' (ReadOnly): Gets status of account. Possible values include: 'Ok', 'Unavailable', 'Suspended'
+* **state**: 'Ok' | 'Suspended' | 'Unavailable' (ReadOnly): Gets status of account.
 
 ## EncryptionProperties
 ### Properties
 * **identity**: [schemas:95_identity](#schemas95identity): User identity used for CMK.
-* **keySource**: 'Microsoft.Automation' | 'Microsoft.Keyvault': Encryption Key Source. Possible values include: 'Microsoft.Automation', 'Microsoft.Keyvault'
+* **keySource**: 'Microsoft.Automation' | 'Microsoft.Keyvault': Encryption Key Source.
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): Settings concerning key vault encryption for a configuration store.
 
 ## schemas:95_identity
@@ -234,7 +234,7 @@
 ### Properties
 * **capacity**: int: Gets or sets the SKU capacity.
 * **family**: string: Gets or sets the SKU family.
-* **name**: 'Basic' | 'Free' (Required): Gets or sets the SKU name of the account. Possible values include: 'Free', 'Basic'
+* **name**: 'Basic' | 'Free' (Required): Gets or sets the SKU name of the account.
 
 ## Dictionary<string,String>
 ### Properties
@@ -262,11 +262,11 @@
 * **lastModifiedTime**: string (ReadOnly): Gets the last modified time of the job.
 * **lastStatusModifiedTime**: string (ReadOnly): Gets the last status modified time of the job.
 * **parameters**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the parameters of the job.
-* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly): The current provisioning state of the job. Possible values include: 'Failed', 'Succeeded', 'Suspended', 'Processing'
+* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly): The current provisioning state of the job.
 * **runOn**: string (ReadOnly): Gets or sets the runOn which specifies the group name where the job is to be executed.
 * **startedBy**: string (ReadOnly): Gets the compilation job started by.
 * **startTime**: string (ReadOnly): Gets the start time of the job.
-* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly): Gets or sets the status of the job. Possible values include: 'New', 'Activating', 'Running', 'Completed', 'Failed', 'Stopped', 'Blocked', 'Suspended', 'Disconnected', 'Suspending', 'Stopping', 'Resuming', 'Removing'
+* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly): Gets or sets the status of the job.
 * **statusDetails**: string (ReadOnly): Gets or sets the status details of the job.
 
 ## DscConfigurationAssociationProperty
@@ -358,7 +358,7 @@
 * **isComposite**: bool (ReadOnly): Gets or sets type of module, if its composite or not.
 * **isGlobal**: bool (ReadOnly): Gets or sets the isGlobal flag of the module.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
-* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly): Gets or sets the provisioning state of the module. Possible values include: 'Created', 'Creating', 'StartingImportModuleRunbook', 'RunningImportModuleRunbook', 'ContentRetrieved', 'ContentDownloaded', 'ContentValidated', 'ConnectionTypeImported', 'ContentStored', 'ModuleDataStored', 'ActivitiesStored', 'ModuleImportRunbookComplete', 'Succeeded', 'Failed', 'Cancelled', 'Updating'
+* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly): Gets or sets the provisioning state of the module.
 * **sizeInBytes**: int (ReadOnly): Gets or sets the size in bytes of the module.
 * **version**: string (ReadOnly): Gets or sets the version of the module.
 
@@ -395,7 +395,7 @@
 ## ContentSource
 ### Properties
 * **hash**: [ContentHash](#contenthash) (WriteOnly): Definition of the runbook property type.
-* **type**: 'embeddedContent' | 'uri' (WriteOnly): Gets or sets the content source type. Possible values include: 'embeddedContent', 'uri'
+* **type**: 'embeddedContent' | 'uri' (WriteOnly): Gets or sets the content source type.
 * **value**: string (WriteOnly): Gets or sets the value of the content. This is based on the content source type.
 * **version**: string (WriteOnly): Gets or sets the version of the content.
 
@@ -414,7 +414,7 @@
 * **isComposite**: bool (ReadOnly): Gets or sets type of module, if its composite or not.
 * **isGlobal**: bool (ReadOnly): Gets or sets the isGlobal flag of the module.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
-* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly): Gets or sets the provisioning state of the module. Possible values include: 'Created', 'Creating', 'StartingImportModuleRunbook', 'RunningImportModuleRunbook', 'ContentRetrieved', 'ContentDownloaded', 'ContentValidated', 'ConnectionTypeImported', 'ContentStored', 'ModuleDataStored', 'ActivitiesStored', 'ModuleImportRunbookComplete', 'Succeeded', 'Failed', 'Cancelled', 'Updating'
+* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly): Gets or sets the provisioning state of the module.
 * **sizeInBytes**: int (ReadOnly): Gets or sets the size in bytes of the module.
 * **version**: string (ReadOnly): Gets or sets the version of the module.
 
@@ -430,7 +430,7 @@
 * **description**: string: Gets or sets the description of the schedule.
 * **expiryTime**: string: Gets or sets the end time of the schedule.
 * **expiryTimeOffsetMinutes**: int (ReadOnly): Gets or sets the expiry time's offset in minutes.
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'OneTime' | 'Week' (Required): Gets or sets the frequency of the schedule. Possible values include: 'OneTime', 'Day', 'Hour', 'Week', 'Month', 'Minute'
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'OneTime' | 'Week' (Required): Gets or sets the frequency of the schedule.
 * **interval**: any: Gets or sets the interval of the schedule.
 * **isEnabled**: bool (ReadOnly): Gets or sets a value indicating whether this schedule is enabled.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
@@ -448,7 +448,7 @@
 
 ## AdvancedScheduleMonthlyOccurrence
 ### Properties
-* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday. Possible values include: 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
 * **occurrence**: int: Occurrence of the week within the month. Must be between 1 and 5
 
 ## SourceControlCreateOrUpdateProperties
@@ -462,13 +462,13 @@
 * **publishRunbook**: bool: The auto publish of the source control. Default is true.
 * **repoUrl**: string: The repo url of the source control.
 * **securityToken**: [SourceControlSecurityTokenProperties](#sourcecontrolsecuritytokenproperties) (WriteOnly):
-* **sourceType**: 'GitHub' | 'VsoGit' | 'VsoTfvc': The source type. Must be one of VsoGit, VsoTfvc, GitHub, case sensitive. Possible values include: 'VsoGit', 'VsoTfvc', 'GitHub'
+* **sourceType**: 'GitHub' | 'VsoGit' | 'VsoTfvc': The source type. Must be one of VsoGit, VsoTfvc, GitHub, case sensitive.
 
 ## SourceControlSecurityTokenProperties
 ### Properties
 * **accessToken**: string (WriteOnly): The access token.
 * **refreshToken**: string (WriteOnly): The refresh token.
-* **tokenType**: 'Oauth' | 'PersonalAccessToken' (WriteOnly): The token type. Must be either PersonalAccessToken or Oauth. Possible values include: 'PersonalAccessToken', 'Oauth'
+* **tokenType**: 'Oauth' | 'PersonalAccessToken' (WriteOnly): The token type. Must be either PersonalAccessToken or Oauth.
 
 ## SourceControlSyncJobCreateProperties
 ### Properties
@@ -476,10 +476,10 @@
 * **creationTime**: string (ReadOnly): The creation time of the job.
 * **endTime**: string (ReadOnly): The end time of the job.
 * **exception**: string (ReadOnly): The exceptions that occurred while running the sync job.
-* **provisioningState**: 'Completed' | 'Failed' | 'Running' (ReadOnly): The provisioning state of the job. Possible values include: 'Completed', 'Failed', 'Running'
+* **provisioningState**: 'Completed' | 'Failed' | 'Running' (ReadOnly): The provisioning state of the job.
 * **sourceControlSyncJobId**: string (ReadOnly): The source control sync job id.
 * **startTime**: string (ReadOnly): The start time of the job.
-* **syncType**: 'FullSync' | 'PartialSync' (ReadOnly): The sync type. Possible values include: 'PartialSync', 'FullSync'
+* **syncType**: 'FullSync' | 'PartialSync' (ReadOnly): The sync type.
 
 ## VariableCreateOrUpdateProperties
 ### Properties

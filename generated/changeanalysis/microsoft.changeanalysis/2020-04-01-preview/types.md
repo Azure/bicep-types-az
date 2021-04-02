@@ -15,7 +15,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the identity. This property will only be provided for a system-assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.
-* **type**: 'None' | 'SystemAssigned': The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities. Possible values include: 'None', 'SystemAssigned'
+* **type**: 'None' | 'SystemAssigned': The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
 
 ## ConfigurationProfileResourceProperties
 ### Properties
@@ -23,7 +23,7 @@
 
 ## NotificationSettings
 ### Properties
-* **activationState**: 'Disabled' | 'Enabled' | 'None': Possible values include: 'None', 'Enabled', 'Disabled'
+* **activationState**: 'Disabled' | 'Enabled' | 'None':
 * **azureMonitorWorkspaceProperties**: [AzureMonitorWorkspaceProperties](#azuremonitorworkspaceproperties): Configuration properties of an Azure Monitor workspace that receives change notifications.
 
 ## AzureMonitorWorkspaceProperties

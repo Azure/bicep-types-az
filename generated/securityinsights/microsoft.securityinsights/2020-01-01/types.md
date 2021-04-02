@@ -126,7 +126,7 @@
 * **displayName**: string (ReadOnly): The display name for alerts created by this alert rule.
 * **enabled**: bool (Required): Determines whether this alert rule is enabled or disabled.
 * **lastModifiedUtc**: string (ReadOnly): The last time that this alert has been modified.
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (ReadOnly): The severity for alerts created by this alert rule. Possible values include: 'High', 'Medium', 'Low', 'Informational'
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (ReadOnly): The severity for alerts created by this alert rule.
 * **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PrivilegeEscalation'[] (ReadOnly): The tactics of the alert rule
 
 ## MicrosoftSecurityIncidentCreation
@@ -143,7 +143,7 @@
 * **displayNamesFilter**: string[]: the alerts' displayNames on which the cases will be generated
 * **enabled**: bool (Required): Determines whether this alert rule is enabled or disabled.
 * **lastModifiedUtc**: string (ReadOnly): The last time that this alert has been modified.
-* **productFilter**: 'Azure Active Directory Identity Protection' | 'Azure Advanced Threat Protection' | 'Azure Security Center for IoT' | 'Azure Security Center' | 'Microsoft Cloud App Security' (Required): The alerts' productName on which the cases will be generated. Possible values include: 'Microsoft Cloud App Security', 'Azure Security Center', 'Azure Advanced Threat Protection', 'Azure Active Directory Identity Protection', 'Azure Security Center for IoT'
+* **productFilter**: 'Azure Active Directory Identity Protection' | 'Azure Advanced Threat Protection' | 'Azure Security Center for IoT' | 'Azure Security Center' | 'Microsoft Cloud App Security' (Required): The alerts' productName on which the cases will be generated.
 * **severitiesFilter**: 'High' | 'Informational' | 'Low' | 'Medium'[]: the alerts' severities on which the cases will be generated
 
 ## Scheduled
@@ -161,11 +161,11 @@
 * **query**: string: The query that creates alerts for this rule.
 * **queryFrequency**: string: The frequency (in ISO 8601 duration format) for this alert rule to run.
 * **queryPeriod**: string: The period (in ISO 8601 duration format) that this alert rule looks at.
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium': The severity for alerts created by this alert rule. Possible values include: 'High', 'Medium', 'Low', 'Informational'
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium': The severity for alerts created by this alert rule.
 * **suppressionDuration**: string (Required): The suppression (in ISO 8601 duration format) to wait since last time this alert rule been triggered.
 * **suppressionEnabled**: bool (Required): Determines whether the suppression for this alert rule is enabled or disabled.
 * **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PrivilegeEscalation'[]: The tactics of the alert rule
-* **triggerOperator**: 'Equal' | 'GreaterThan' | 'LessThan' | 'NotEqual': The operation against the threshold that triggers alert rule. Possible values include: 'GreaterThan', 'LessThan', 'Equal', 'NotEqual'
+* **triggerOperator**: 'Equal' | 'GreaterThan' | 'LessThan' | 'NotEqual': The operation against the threshold that triggers alert rule.
 * **triggerThreshold**: int: The threshold triggers this alert rule.
 
 ## ActionRequestProperties
@@ -200,7 +200,7 @@
 ### Properties
 * **incidentId**: string: Incident Id
 * **relationName**: string: Relation Name
-* **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium': The severity of the incident. Possible values include: 'Critical', 'High', 'Medium', 'Low', 'Informational'
+* **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium': The severity of the incident.
 * **title**: string: The title of the incident
 
 ## AmazonWebServicesCloudTrail
@@ -219,7 +219,7 @@
 
 ## schemas:25_logs
 ### Properties
-* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not. Possible values include: 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
 ## AzureActiveDirectory
 ### Properties
@@ -237,7 +237,7 @@
 
 ## DataConnectorDataTypeCommon
 ### Properties
-* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not. Possible values include: 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
 ## AzureAdvancedThreatProtection
 ### Properties
@@ -302,15 +302,15 @@
 
 ## schemas:66_exchange
 ### Properties
-* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not. Possible values include: 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
 ## schemas:66_sharePoint
 ### Properties
-* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not. Possible values include: 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
 ## schemas:66_teams
 ### Properties
-* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not. Possible values include: 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
 ## ThreatIntelligence
 ### Properties
@@ -329,14 +329,14 @@
 
 ## schemas:80_indicators
 ### Properties
-* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not. Possible values include: 'Enabled', 'Disabled'
+* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
 ## IncidentProperties
 ### Properties
 * **additionalData**: [IncidentAdditionalData](#incidentadditionaldata) (ReadOnly): Incident additional data property bag.
-* **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined': The reason the incident was closed. Possible values include: 'Undetermined', 'TruePositive', 'BenignPositive', 'FalsePositive'
+* **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined': The reason the incident was closed.
 * **classificationComment**: string: Describes the reason the incident was closed
-* **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected': The classification reason the incident was closed with. Possible values include: 'SuspiciousActivity', 'SuspiciousButExpected', 'IncorrectAlertLogic', 'InaccurateData'
+* **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected': The classification reason the incident was closed with.
 * **createdTimeUtc**: string (ReadOnly): The time the incident was created
 * **description**: string: The description of the incident
 * **firstActivityTimeUtc**: string: The time of the first activity in the incident
@@ -347,8 +347,8 @@
 * **lastModifiedTimeUtc**: string (ReadOnly): The last time the incident was updated
 * **owner**: [IncidentOwnerInfo](#incidentownerinfo): Information on the user an incident is assigned to
 * **relatedAnalyticRuleIds**: string[] (ReadOnly): List of resource ids of Analytic rules related to the incident
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (Required): The severity of the incident. Possible values include: 'High', 'Medium', 'Low', 'Informational'
-* **status**: 'Active' | 'Closed' | 'New' (Required): The status of the incident. Possible values include: 'New', 'Active', 'Closed'
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (Required): The severity of the incident.
+* **status**: 'Active' | 'Closed' | 'New' (Required): The status of the incident.
 * **title**: string (Required): The title of the incident
 
 ## IncidentAdditionalData
@@ -362,7 +362,7 @@
 ## IncidentLabel
 ### Properties
 * **labelName**: string (Required): The name of the label
-* **labelType**: 'System' | 'User' (ReadOnly): The type of the label. Possible values include: 'User', 'System'
+* **labelType**: 'System' | 'User' (ReadOnly): The type of the label.
 
 ## IncidentOwnerInfo
 ### Properties

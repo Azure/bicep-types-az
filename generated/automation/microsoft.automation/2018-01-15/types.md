@@ -32,11 +32,11 @@
 * **lastModifiedTime**: string (ReadOnly): Gets the last modified time of the job.
 * **lastStatusModifiedTime**: string (ReadOnly): Gets the last status modified time of the job.
 * **parameters**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the parameters of the job.
-* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly): The current provisioning state of the job. Possible values include: 'Failed', 'Succeeded', 'Suspended', 'Processing'
+* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly): The current provisioning state of the job.
 * **runOn**: string (ReadOnly): Gets or sets the runOn which specifies the group name where the job is to be executed.
 * **startedBy**: string (ReadOnly): Gets the compilation job started by.
 * **startTime**: string (ReadOnly): Gets the start time of the job.
-* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly): Gets or sets the status of the job. Possible values include: 'New', 'Activating', 'Running', 'Completed', 'Failed', 'Stopped', 'Blocked', 'Suspended', 'Disconnected', 'Suspending', 'Stopping', 'Resuming', 'Removing'
+* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly): Gets or sets the status of the job.
 * **statusDetails**: string (ReadOnly): Gets or sets the status details of the job.
 
 ## DscConfigurationAssociationProperty
@@ -65,7 +65,7 @@
 ## ContentSource
 ### Properties
 * **hash**: [ContentHash](#contenthash) (WriteOnly): Definition of the runbook property type.
-* **type**: 'embeddedContent' | 'uri' (WriteOnly): Gets or sets the content source type. Possible values include: 'embeddedContent', 'uri'
+* **type**: 'embeddedContent' | 'uri' (WriteOnly): Gets or sets the content source type.
 * **value**: string (WriteOnly): Gets or sets the value of the content. This is based on the content source type.
 * **version**: string (WriteOnly): Gets or sets the version of the content.
 

@@ -41,7 +41,7 @@
 * **metadata**: any: The policy set definition metadata.
 * **parameters**: any: The policy set definition parameters that can be used in policy definition references.
 * **policyDefinitions**: [PolicyDefinitionReference](#policydefinitionreference)[] (Required): An array of policy definition references.
-* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified': The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom. Possible values include: 'NotSpecified', 'BuiltIn', 'Custom'
+* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified': The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom.
 
 ## PolicyDefinitionReference
 ### Properties

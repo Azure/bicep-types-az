@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'item' (Required, DeployTimeConstant): The resource name
 * **Properties**: [ApplicationInsightsComponentAnalyticsItemProperties](#applicationinsightscomponentanalyticsitemproperties): A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
-* **Scope**: 'shared' | 'user': Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component. Possible values include: 'shared', 'user'
+* **Scope**: 'shared' | 'user': Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
 * **TimeCreated**: string (ReadOnly): Date and time in UTC when this item was created.
 * **TimeModified**: string (ReadOnly): Date and time in UTC of the last modification that was made to this item.
 * **type**: 'microsoft.insights/components/analyticsItems' (ReadOnly, DeployTimeConstant): The resource type
@@ -63,7 +63,7 @@
 * **Category**: string: Favorite category, as defined by the user at creation time.
 * **Config**: string: Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON
 * **FavoriteId**: string (ReadOnly): Internally assigned unique id of the favorite definition.
-* **FavoriteType**: 'shared' | 'user': Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component. Possible values include: 'shared', 'user'
+* **FavoriteType**: 'shared' | 'user': Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **IsGeneratedFromTemplate**: bool: Flag denoting wether or not this favorite was generated from a template.
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -82,7 +82,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'item' (Required, DeployTimeConstant): The resource name
 * **Properties**: [ApplicationInsightsComponentAnalyticsItemProperties](#applicationinsightscomponentanalyticsitemproperties): A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
-* **Scope**: 'shared' | 'user': Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component. Possible values include: 'shared', 'user'
+* **Scope**: 'shared' | 'user': Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
 * **TimeCreated**: string (ReadOnly): Date and time in UTC when this item was created.
 * **TimeModified**: string (ReadOnly): Date and time in UTC of the last modification that was made to this item.
 * **type**: 'microsoft.insights/components/myanalyticsItems' (ReadOnly, DeployTimeConstant): The resource type
@@ -106,7 +106,7 @@
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'shared' | 'user': The kind of workbook. Choices are user and shared. Possible values include: 'user', 'shared'
+* **kind**: 'shared' | 'user': The kind of workbook. Choices are user and shared.
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MyWorkbookProperties](#myworkbookproperties): Properties that contain a private workbook.
@@ -118,7 +118,7 @@
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'multistep' | 'ping': The kind of web test that this web test watches. Choices are ping and multistep. Possible values include: 'ping', 'multistep'
+* **kind**: 'multistep' | 'ping': The kind of web test that this web test watches. Choices are ping and multistep.
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WebTestProperties](#webtestproperties): Metadata describing a web test for an Azure resource.
@@ -130,7 +130,7 @@
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'shared' | 'user': The kind of workbook. Choices are user and shared. Possible values include: 'user', 'shared'
+* **kind**: 'shared' | 'user': The kind of workbook. Choices are user and shared.
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkbookProperties](#workbookproperties): Properties that contain a workbook.
@@ -140,20 +140,20 @@
 ## ApplicationInsightsComponentProperties
 ### Properties
 * **AppId**: string (ReadOnly): Application Insights Unique ID for your Application.
-* **Application_Type**: 'other' | 'web' (Required): Type of application being monitored. Possible values include: 'web', 'other'
+* **Application_Type**: 'other' | 'web' (Required): Type of application being monitored.
 * **ApplicationId**: string (ReadOnly): The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.
 * **ConnectionString**: string (ReadOnly): Application Insights component connection string.
 * **CreationDate**: string (ReadOnly): Creation Date for the Application Insights component, in ISO 8601 format.
 * **DisableIpMasking**: bool: Disable IP masking.
-* **Flow_Type**: 'Bluefield': Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API. Possible values include: 'Bluefield'
+* **Flow_Type**: 'Bluefield': Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.
 * **HockeyAppId**: string: The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.
 * **HockeyAppToken**: string (ReadOnly): Token used to authenticate communications with between Application Insights and HockeyApp.
 * **ImmediatePurgeDataOn30Days**: bool: Purge data immediately after 30 days.
-* **IngestionMode**: 'ApplicationInsights' | 'ApplicationInsightsWithDiagnosticSettings' | 'LogAnalytics': Indicates the flow of the ingestion. Possible values include: 'ApplicationInsights', 'ApplicationInsightsWithDiagnosticSettings', 'LogAnalytics'
+* **IngestionMode**: 'ApplicationInsights' | 'ApplicationInsightsWithDiagnosticSettings' | 'LogAnalytics': Indicates the flow of the ingestion.
 * **InstrumentationKey**: string (ReadOnly): Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component.
 * **PrivateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly): List of linked private link scope resources.
 * **provisioningState**: string (ReadOnly): Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
-* **Request_Source**: 'rest': Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'. Possible values include: 'rest'
+* **Request_Source**: 'rest': Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.
 * **RetentionInDays**: int: Retention period in days.
 * **SamplingPercentage**: int: Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.
 * **TenantId**: string (ReadOnly): Azure Tenant Id.
@@ -205,7 +205,7 @@
 * **Description**: string: Purpose/user defined descriptive test for this WebTest.
 * **Enabled**: bool: Is the test actively being monitored.
 * **Frequency**: int: Interval in seconds between test runs for this WebTest. Default value is 300.
-* **Kind**: 'multistep' | 'ping' (Required): The kind of web test this is, valid choices are ping and multistep. Possible values include: 'ping', 'multistep'
+* **Kind**: 'multistep' | 'ping' (Required): The kind of web test this is, valid choices are ping and multistep.
 * **Locations**: [WebTestGeolocation](#webtestgeolocation)[] (Required): A list of where to physically run the tests from to give global coverage for accessibility of your application.
 * **Name**: string (Required): User defined name if this WebTest.
 * **provisioningState**: string (ReadOnly): Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
@@ -229,7 +229,7 @@
 ## WorkbookProperties
 ### Properties
 * **category**: string (Required): Workbook category, as defined by the user at creation time.
-* **kind**: 'shared' | 'user' (Required): Enum indicating if this workbook definition is owned by a specific user or is shared between all users with access to the Application Insights component. Possible values include: 'user', 'shared'
+* **kind**: 'shared' | 'user' (Required): Enum indicating if this workbook definition is owned by a specific user or is shared between all users with access to the Application Insights component.
 * **name**: string (Required): The user-defined name of the workbook.
 * **serializedData**: string (Required): Configuration of this particular workbook. Configuration data is a string containing valid JSON
 * **sourceResourceId**: string: Optional resourceId for a source resource.

@@ -29,5 +29,5 @@
 * **description**: string: The policy definition description.
 * **displayName**: string: The display name of the policy definition.
 * **policyRule**: any: The policy rule.
-* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified': The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom. Possible values include: 'NotSpecified', 'BuiltIn', 'Custom'
+* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified': The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom.
 

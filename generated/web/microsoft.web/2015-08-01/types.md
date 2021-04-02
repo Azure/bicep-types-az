@@ -185,7 +185,7 @@
             More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
 * **defaultProvider**: 'AzureActiveDirectory' | 'Facebook' | 'Google' | 'MicrosoftAccount' | 'Twitter': Gets or sets the default authentication provider to use when multiple providers are configured.
             This setting is only needed if multiple providers are configured and the unauthenticated client
-            action is set to "RedirectToLoginPage". Possible values include: 'AzureActiveDirectory', 'Facebook', 'Google', 'MicrosoftAccount', 'Twitter'
+            action is set to "RedirectToLoginPage".
 * **enabled**: bool: Gets or sets a value indicating whether the Authentication / Authorization feature is enabled for the current app.
 * **facebookAppId**: string: Gets or sets the App ID of the Facebook app used for login.
             This setting is required for enabling Facebook Login.
@@ -234,7 +234,7 @@
             This setting is required for enabling Twitter Sign-In.
             Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
-* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage': Gets or sets the action to take when an unauthenticated client attempts to access the app. Possible values include: 'RedirectToLoginPage', 'AllowAnonymous'
+* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage': Gets or sets the action to take when an unauthenticated client attempts to access the app.
 
 ### Microsoft.Web/sites/config
 #### Properties
@@ -426,7 +426,7 @@
             More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
 * **defaultProvider**: 'AzureActiveDirectory' | 'Facebook' | 'Google' | 'MicrosoftAccount' | 'Twitter': Gets or sets the default authentication provider to use when multiple providers are configured.
             This setting is only needed if multiple providers are configured and the unauthenticated client
-            action is set to "RedirectToLoginPage". Possible values include: 'AzureActiveDirectory', 'Facebook', 'Google', 'MicrosoftAccount', 'Twitter'
+            action is set to "RedirectToLoginPage".
 * **enabled**: bool: Gets or sets a value indicating whether the Authentication / Authorization feature is enabled for the current app.
 * **facebookAppId**: string: Gets or sets the App ID of the Facebook app used for login.
             This setting is required for enabling Facebook Login.
@@ -475,7 +475,7 @@
             This setting is required for enabling Twitter Sign-In.
             Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
-* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage': Gets or sets the action to take when an unauthenticated client attempts to access the app. Possible values include: 'RedirectToLoginPage', 'AllowAnonymous'
+* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage': Gets or sets the action to take when an unauthenticated client attempts to access the app.
 
 ### Microsoft.Web/sites/slots/config
 #### Properties
@@ -682,7 +682,7 @@
 ### Properties
 * **keyVaultId**: string: Key Vault Csm resource Id
 * **keyVaultSecretName**: string: Key Vault secret name
-* **provisioningState**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder': Status of the Key Vault secret. Possible values include: 'Initialized', 'WaitingOnCertificateOrder', 'Succeeded', 'CertificateOrderFailed', 'OperationNotPermittedOnKeyVault', 'AzureServiceUnauthorizedToAccessKeyVault', 'KeyVaultDoesNotExist', 'KeyVaultSecretDoesNotExist', 'UnknownError', 'Unknown'
+* **provisioningState**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder': Status of the Key Vault secret.
 
 ## Dictionary<string,String>
 ### Properties
@@ -796,7 +796,7 @@
             More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
 * **defaultProvider**: 'AzureActiveDirectory' | 'Facebook' | 'Google' | 'MicrosoftAccount' | 'Twitter': Gets or sets the default authentication provider to use when multiple providers are configured.
             This setting is only needed if multiple providers are configured and the unauthenticated client
-            action is set to "RedirectToLoginPage". Possible values include: 'AzureActiveDirectory', 'Facebook', 'Google', 'MicrosoftAccount', 'Twitter'
+            action is set to "RedirectToLoginPage".
 * **enabled**: bool: Gets or sets a value indicating whether the Authentication / Authorization feature is enabled for the current app.
 * **facebookAppId**: string: Gets or sets the App ID of the Facebook app used for login.
             This setting is required for enabling Facebook Login.
@@ -845,7 +845,7 @@
             This setting is required for enabling Twitter Sign-In.
             Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
-* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage': Gets or sets the action to take when an unauthenticated client attempts to access the app. Possible values include: 'RedirectToLoginPage', 'AllowAnonymous'
+* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage': Gets or sets the action to take when an unauthenticated client attempts to access the app.
 
 ## Microsoft.Web/sites/config
 ### Properties
@@ -881,7 +881,7 @@
 
 ## ConnStringValueTypePair
 ### Properties
-* **type**: 'Custom' | 'MySql' | 'SQLAzure' | 'SQLServer' (Required): Type of database. Possible values include: 'MySql', 'SQLServer', 'SQLAzure', 'Custom'
+* **type**: 'Custom' | 'MySql' | 'SQLAzure' | 'SQLServer' (Required): Type of database.
 * **value**: string: Value of pair
 
 ## Dictionary<string,String>
@@ -1045,7 +1045,7 @@
             More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
 * **defaultProvider**: 'AzureActiveDirectory' | 'Facebook' | 'Google' | 'MicrosoftAccount' | 'Twitter': Gets or sets the default authentication provider to use when multiple providers are configured.
             This setting is only needed if multiple providers are configured and the unauthenticated client
-            action is set to "RedirectToLoginPage". Possible values include: 'AzureActiveDirectory', 'Facebook', 'Google', 'MicrosoftAccount', 'Twitter'
+            action is set to "RedirectToLoginPage".
 * **enabled**: bool: Gets or sets a value indicating whether the Authentication / Authorization feature is enabled for the current app.
 * **facebookAppId**: string: Gets or sets the App ID of the Facebook app used for login.
             This setting is required for enabling Facebook Login.
@@ -1094,7 +1094,7 @@
             This setting is required for enabling Twitter Sign-In.
             Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
-* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage': Gets or sets the action to take when an unauthenticated client attempts to access the app. Possible values include: 'RedirectToLoginPage', 'AllowAnonymous'
+* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage': Gets or sets the action to take when an unauthenticated client attempts to access the app.
 
 ## Microsoft.Web/sites/slots/config
 ### Properties

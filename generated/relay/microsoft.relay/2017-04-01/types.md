@@ -61,14 +61,14 @@
 ### Properties
 * **createdAt**: string (ReadOnly): The time the namespace was created.
 * **metricId**: string (ReadOnly): Identifier for Azure Insights metrics.
-* **provisioningState**: 'Created' | 'Deleted' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Possible values include: 'Created', 'Succeeded', 'Deleted', 'Failed', 'Updating', 'Unknown'
+* **provisioningState**: 'Created' | 'Deleted' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly):
 * **serviceBusEndpoint**: string (ReadOnly): Endpoint you can use to perform Service Bus operations.
 * **updatedAt**: string (ReadOnly): The time the namespace was updated.
 
 ## Sku
 ### Properties
 * **name**: string (Required): Name of this SKU.
-* **tier**: 'Standard': The tier of this SKU. Possible values include: 'Standard'
+* **tier**: 'Standard': The tier of this SKU.
 
 ## Dictionary<string,String>
 ### Properties
@@ -92,7 +92,7 @@
 * **createdAt**: string (ReadOnly): The time the WCF relay was created.
 * **isDynamic**: bool (ReadOnly): Returns true if the relay is dynamic; otherwise, false.
 * **listenerCount**: int (ReadOnly): The number of listeners for this relay. Note that min :1 and max:25 are supported.
-* **relayType**: 'Http' | 'NetTcp': WCF relay type. Possible values include: 'NetTcp', 'Http'
+* **relayType**: 'Http' | 'NetTcp': WCF relay type.
 * **requiresClientAuthorization**: bool: Returns true if client authorization is needed for this relay; otherwise, false.
 * **requiresTransportSecurity**: bool: Returns true if transport security is needed for this relay; otherwise, false.
 * **updatedAt**: string (ReadOnly): The time the namespace was updated.

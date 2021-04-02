@@ -49,21 +49,21 @@
 
 ## StreamingJobProperties
 ### Properties
-* **compatibilityLevel**: '1.0': Controls certain runtime behaviors of the streaming job. Possible values include: '1.0'
+* **compatibilityLevel**: '1.0': Controls certain runtime behaviors of the streaming job.
 * **createdDate**: string (ReadOnly): Value is an ISO-8601 formatted UTC timestamp indicating when the streaming job was created.
 * **dataLocale**: string: The data locale of the stream analytics job. Value should be the name of a supported .NET Culture from the set https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx. Defaults to 'en-US' if none specified.
 * **etag**: string (ReadOnly): The current entity tag for the streaming job. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
 * **eventsLateArrivalMaxDelayInSeconds**: int: The maximum tolerable delay in seconds where events arriving late could be included.  Supported range is -1 to 1814399 (20.23:59:59 days) and -1 is used to specify wait indefinitely. If the property is absent, it is interpreted to have a value of -1.
 * **eventsOutOfOrderMaxDelayInSeconds**: int: The maximum tolerable delay in seconds where out-of-order events can be adjusted to be back in order.
-* **eventsOutOfOrderPolicy**: 'Adjust' | 'Drop': Indicates the policy to apply to events that arrive out of order in the input event stream. Possible values include: 'Adjust', 'Drop'
+* **eventsOutOfOrderPolicy**: 'Adjust' | 'Drop': Indicates the policy to apply to events that arrive out of order in the input event stream.
 * **functions**: [Function](#function)[]: A list of one or more functions for the streaming job. The name property for each function is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.
 * **inputs**: [Input](#input)[]: A list of one or more inputs to the streaming job. The name property for each input is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual input.
 * **jobId**: string (ReadOnly): A GUID uniquely identifying the streaming job. This GUID is generated upon creation of the streaming job.
 * **jobState**: string (ReadOnly): Describes the state of the streaming job.
 * **lastOutputEventTime**: string (ReadOnly): Value is either an ISO-8601 formatted timestamp indicating the last output event time of the streaming job or null indicating that output has not yet been produced. In case of multiple outputs or multiple streams, this shows the latest value in that set.
-* **outputErrorPolicy**: 'Drop' | 'Stop': Indicates the policy to apply to events that arrive at the output and cannot be written to the external storage due to being malformed (missing column values, column values of wrong type or size). Possible values include: 'Stop', 'Drop'
+* **outputErrorPolicy**: 'Drop' | 'Stop': Indicates the policy to apply to events that arrive at the output and cannot be written to the external storage due to being malformed (missing column values, column values of wrong type or size).
 * **outputs**: [Output](#output)[]: A list of one or more outputs for the streaming job. The name property for each output is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual output.
-* **outputStartMode**: 'CustomTime' | 'JobStartTime' | 'LastOutputEventTime': This property should only be utilized when it is desired that the job be started immediately upon creation. Value may be JobStartTime, CustomTime, or LastOutputEventTime to indicate whether the starting point of the output event stream should start whenever the job is started, start at a custom user time stamp specified via the outputStartTime property, or start from the last event output time. Possible values include: 'JobStartTime', 'CustomTime', 'LastOutputEventTime'
+* **outputStartMode**: 'CustomTime' | 'JobStartTime' | 'LastOutputEventTime': This property should only be utilized when it is desired that the job be started immediately upon creation. Value may be JobStartTime, CustomTime, or LastOutputEventTime to indicate whether the starting point of the output event stream should start whenever the job is started, start at a custom user time stamp specified via the outputStartTime property, or start from the last event output time.
 * **outputStartTime**: string: Value is either an ISO-8601 formatted time stamp that indicates the starting point of the output event stream, or null to indicate that the output event stream will start whenever the streaming job is started. This property must have a value if outputStartMode is set to CustomTime.
 * **provisioningState**: string (ReadOnly): Describes the provisioning status of the streaming job.
 * **sku**: [Sku](#sku): The properties that are associated with a SKU.
@@ -223,7 +223,7 @@
 
 ## CsvSerializationProperties
 ### Properties
-* **encoding**: 'UTF8': Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests. Possible values include: 'UTF8'
+* **encoding**: 'UTF8': Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.
 * **fieldDelimiter**: string: Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.
 
 ## Json
@@ -233,8 +233,8 @@
 
 ## JsonSerializationProperties
 ### Properties
-* **encoding**: 'UTF8': Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests. Possible values include: 'UTF8'
-* **format**: 'Array' | 'LineSeparated': This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null. Possible values include: 'LineSeparated', 'Array'
+* **encoding**: 'UTF8': Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.
+* **format**: 'Array' | 'LineSeparated': This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.
 
 ## Reference
 ### Properties
@@ -483,7 +483,7 @@
 
 ## Sku
 ### Properties
-* **name**: 'Standard': The name of the SKU. Required on PUT (CreateOrReplace) requests. Possible values include: 'Standard'
+* **name**: 'Standard': The name of the SKU. Required on PUT (CreateOrReplace) requests.
 
 ## Transformation
 ### Properties

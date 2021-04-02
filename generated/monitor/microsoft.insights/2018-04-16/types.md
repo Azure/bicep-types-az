@@ -19,10 +19,10 @@
 * **createdWithApiVersion**: string (ReadOnly): The api-version used when creating this alert rule
 * **description**: string: The description of the Log Search rule.
 * **displayName**: string: The display name of the alert rule
-* **enabled**: 'false' | 'true': The flag which indicates whether the Log Search rule is enabled. Value should be true or false. Possible values include: 'true', 'false'
+* **enabled**: 'false' | 'true': The flag which indicates whether the Log Search rule is enabled. Value should be true or false.
 * **isLegacyLogAnalyticsRule**: bool (ReadOnly): True if alert rule is legacy Log Analytic rule
 * **lastUpdatedTime**: string (ReadOnly): Last time the rule was updated in IS08601 format.
-* **provisioningState**: 'Canceled' | 'Deploying' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the scheduled query rule. Possible values include: 'Succeeded', 'Deploying', 'Canceled', 'Failed'
+* **provisioningState**: 'Canceled' | 'Deploying' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the scheduled query rule.
 * **schedule**: [Schedule](#schedule): Defines how often to run the search and the time interval.
 * **source**: [Source](#source) (Required): Specifies the log search query.
 
@@ -33,7 +33,7 @@
 #### Properties
 * **aznsAction**: [AzNsActionGroup](#aznsactiongroup): Azure action group
 * **odata.type**: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction' (Required): Specify action need to be taken when rule type is Alert
-* **severity**: '0' | '1' | '2' | '3' | '4' (Required): Severity of the alert. Possible values include: '0', '1', '2', '3', '4'
+* **severity**: '0' | '1' | '2' | '3' | '4' (Required): Severity of the alert.
 * **throttlingInMin**: int: time (in minutes) for which Alerts should be throttled or suppressed.
 * **trigger**: [TriggerCondition](#triggercondition) (Required): The condition that results in the Log Search rule.
 
@@ -47,7 +47,7 @@
 ### Properties
 * **aznsAction**: [AzNsActionGroup](#aznsactiongroup): Azure action group
 * **odata.type**: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction' (Required): Specify action need to be taken when rule type is Alert
-* **severity**: '0' | '1' | '2' | '3' | '4' (Required): Severity of the alert. Possible values include: '0', '1', '2', '3', '4'
+* **severity**: '0' | '1' | '2' | '3' | '4' (Required): Severity of the alert.
 * **throttlingInMin**: int: time (in minutes) for which Alerts should be throttled or suppressed.
 * **trigger**: [TriggerCondition](#triggercondition) (Required): The condition that results in the Log Search rule.
 
@@ -61,14 +61,14 @@
 ### Properties
 * **metricTrigger**: [LogMetricTrigger](#logmetrictrigger): A log metrics trigger descriptor.
 * **threshold**: int (Required): Result or count threshold based on which rule should be triggered.
-* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Evaluation operation for rule - 'GreaterThan' or 'LessThan. Possible values include: 'GreaterThanOrEqual', 'LessThanOrEqual', 'GreaterThan', 'LessThan', 'Equal'
+* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Evaluation operation for rule - 'GreaterThan' or 'LessThan.
 
 ## LogMetricTrigger
 ### Properties
 * **metricColumn**: string: Evaluation of metric on a particular column
-* **metricTriggerType**: 'Consecutive' | 'Total': Metric Trigger Type - 'Consecutive' or 'Total'. Possible values include: 'Consecutive', 'Total'
+* **metricTriggerType**: 'Consecutive' | 'Total': Metric Trigger Type - 'Consecutive' or 'Total'.
 * **threshold**: int: The threshold of the metric trigger.
-* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'. Possible values include: 'GreaterThanOrEqual', 'LessThanOrEqual', 'GreaterThan', 'LessThan', 'Equal'
+* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.
 
 ## Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction
 ### Properties
@@ -96,7 +96,7 @@
 * **authorizedResources**: string[]: List of  Resource referred into query
 * **dataSourceId**: string (Required): The resource uri over which log search query is to be run.
 * **query**: string: Log search query. Required for action type - AlertingAction
-* **queryType**: 'ResultCount': Set value to 'ResultCount'. Possible values include: 'ResultCount'
+* **queryType**: 'ResultCount': Set value to 'ResultCount'.
 
 ## Dictionary<string,String>
 ### Properties
