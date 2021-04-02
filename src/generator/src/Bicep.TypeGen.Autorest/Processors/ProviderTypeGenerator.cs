@@ -135,7 +135,7 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 var propertyDefinition = ParseType(putProperty?.ModelType, getProperty?.ModelType);
                 if (propertyDefinition != null)
                 {
-                    var description = (putProperty ?? getProperty)?.Documentation.Value;
+                    var description = SanitizeDescription((putProperty ?? getProperty)?.Documentation);
                     var flags = ParsePropertyFlags(putProperty, getProperty);
                     resourceProperties[propertyName] = CreateObjectProperty(propertyDefinition, flags, description);
                 }
@@ -390,7 +390,7 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                     if (propertyDefinition != null)
                     {
                         var flags = ParsePropertyFlags(putProperty, getProperty);
-                        var description = (putProperty ?? getProperty)?.Documentation.Value;
+                        var description = SanitizeDescription((putProperty ?? getProperty)?.Documentation);
                         definitionProperties[propertyName] = CreateObjectProperty(propertyDefinition, flags, description);
                     }
                 }
@@ -455,7 +455,7 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
 
                 if (namedDefinitions[subTypeName] is ObjectType objectType)
                 {
-                    var description = (putSubType ?? getSubType)?.Documentation;
+                    var description = SanitizeDescription((putSubType ?? getSubType)?.Documentation);
 
                     var discriminatorEnum = GetDiscriminatorType(putSubType, getSubType);
                     objectType.Properties[discriminatedObjectType.Discriminator] = new ObjectProperty(
@@ -533,5 +533,21 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
 
         private static T CombineAndThrowIfNull<T>(T? putType, T? getType)
             => putType ?? getType ?? throw new ArgumentNullException($"Unable to find PUT or GET type for {typeof(T)}");
+
+        private static string? SanitizeDescription(string? description)
+        {
+            if (description is null)
+            {
+                return null;
+            }
+
+            var possibleValuesIndex = description.IndexOf("Possible values include: ", StringComparison.OrdinalIgnoreCase);
+            if (possibleValuesIndex > -1)
+            {
+                description = description.Substring(0, possibleValuesIndex).TrimEnd();
+            }
+
+            return description;
+        }
     }
 }
