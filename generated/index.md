@@ -873,6 +873,13 @@
 ### microsoft.azureactivedirectory/guestusages
 * [2020-05-01-preview](cpim/microsoft.azureactivedirectory/2020-05-01-preview/types.md#resource-microsoftazureactivedirectoryguestusages2020-05-01-preview)
 
+## microsoft.azurebridge.admin
+### microsoft.azurebridge.admin/activations
+* [2016-01-01](azsadmin/microsoft.azurebridge.admin/2016-01-01/types.md#resource-microsoftazurebridgeadminactivations2016-01-01)
+
+### microsoft.azurebridge.admin/activations/downloadedproducts
+* [2016-01-01](azsadmin/microsoft.azurebridge.admin/2016-01-01/types.md#resource-microsoftazurebridgeadminactivationsdownloadedproducts2016-01-01)
+
 ## microsoft.azuredata
 ### microsoft.azuredata/sqlserverregistrations
 * [2019-07-24-preview](azuredata/microsoft.azuredata/2019-07-24-preview/types.md#resource-microsoftazuredatasqlserverregistrations2019-07-24-preview)
@@ -897,6 +904,10 @@
 ### microsoft.azurestackhci/clusters
 * [2020-03-01-preview](azurestackhci/microsoft.azurestackhci/2020-03-01-preview/types.md#resource-microsoftazurestackhciclusters2020-03-01-preview)
 * [2020-10-01](azurestackhci/microsoft.azurestackhci/2020-10-01/types.md#resource-microsoftazurestackhciclusters2020-10-01)
+
+## microsoft.backup.admin
+### microsoft.backup.admin/backuplocations
+* [2018-09-01](azsadmin/microsoft.backup.admin/2018-09-01/types.md#resource-microsoftbackupadminbackuplocations2018-09-01)
 
 ## microsoft.batch
 ### microsoft.batch/batchaccounts
@@ -1462,6 +1473,19 @@
 ### microsoft.compute/virtualmachinescalesets/virtualmachines/runcommands
 * [2020-06-01](compute/microsoft.compute/2020-06-01/types.md#resource-microsoftcomputevirtualmachinescalesetsvirtualmachinesruncommands2020-06-01)
 * [2020-12-01](compute/microsoft.compute/2020-12-01/types.md#resource-microsoftcomputevirtualmachinescalesetsvirtualmachinesruncommands2020-12-01)
+
+## microsoft.compute.admin
+### microsoft.compute.admin/locations/artifacttypes/publishers/offers/skus/versions
+* [2015-12-01-preview](azsadmin/microsoft.compute.admin/2015-12-01-preview/types.md#resource-microsoftcomputeadminlocationsartifacttypespublishersoffersskusversions2015-12-01-preview)
+
+### microsoft.compute.admin/locations/artifacttypes/publishers/types/versions
+* [2015-12-01-preview](azsadmin/microsoft.compute.admin/2015-12-01-preview/types.md#resource-microsoftcomputeadminlocationsartifacttypespublisherstypesversions2015-12-01-preview)
+
+### microsoft.compute.admin/locations/diskmigrationjobs
+* [2018-07-30-preview](azsadmin/microsoft.compute.admin/2018-07-30-preview/types.md#resource-microsoftcomputeadminlocationsdiskmigrationjobs2018-07-30-preview)
+
+### microsoft.compute.admin/locations/quotas
+* [2018-02-09](azsadmin/microsoft.compute.admin/2018-02-09/types.md#resource-microsoftcomputeadminlocationsquotas2018-02-09)
 
 ## microsoft.confidentialledger
 ### microsoft.confidentialledger/ledgers
@@ -2154,6 +2178,13 @@
 
 ### microsoft.delegatednetwork/orchestrators
 * [2020-08-08-preview](dnc/microsoft.delegatednetwork/2020-08-08-preview/types.md#resource-microsoftdelegatednetworkorchestrators2020-08-08-preview)
+
+## microsoft.deployment.admin
+### microsoft.deployment.admin/locations/filecontainers
+* [2019-01-01](azsadmin/microsoft.deployment.admin/2019-01-01/types.md#resource-microsoftdeploymentadminlocationsfilecontainers2019-01-01)
+
+### microsoft.deployment.admin/locations/productpackages
+* [2019-01-01](azsadmin/microsoft.deployment.admin/2019-01-01/types.md#resource-microsoftdeploymentadminlocationsproductpackages2019-01-01)
 
 ## microsoft.deploymentmanager
 ### microsoft.deploymentmanager/artifactsources
@@ -2953,6 +2984,10 @@
 ### microsoft.eventhub/namespaces/virtualnetworkrules
 * [2018-01-01-preview](eventhub/microsoft.eventhub/2018-01-01-preview/types.md#resource-microsofteventhubnamespacesvirtualnetworkrules2018-01-01-preview)
 
+## microsoft.fabric.admin
+### microsoft.fabric.admin/fabriclocations/ippools
+* [2016-05-01](azsadmin/microsoft.fabric.admin/2016-05-01/types.md#resource-microsoftfabricadminfabriclocationsippools2016-05-01)
+
 ## microsoft.guestconfiguration
 ### microsoft.guestconfiguration/guestconfigurationassignments
 * [2018-01-20-preview](guestconfiguration/microsoft.guestconfiguration/2018-01-20-preview/types.md#resource-microsoftguestconfigurationguestconfigurationassignments2018-01-20-preview)
@@ -3058,6 +3093,10 @@
 
 ### microsoft.hybridnetwork/vendors/vendorskus/previewsubscriptions
 * [2020-01-01-preview](hybridnetwork/microsoft.hybridnetwork/2020-01-01-preview/types.md#resource-microsofthybridnetworkvendorsvendorskuspreviewsubscriptions2020-01-01-preview)
+
+## microsoft.infrastructureinsights.admin
+### microsoft.infrastructureinsights.admin/regionhealths/alerts
+* [2016-05-01](azsadmin/microsoft.infrastructureinsights.admin/2016-05-01/types.md#resource-microsoftinfrastructureinsightsadminregionhealthsalerts2016-05-01)
 
 ## microsoft.insights
 ### microsoft.insights/actiongroups
@@ -5642,6 +5681,10 @@
 * [2020-07-01](network/microsoft.network/2020-07-01/types.md#resource-microsoftnetworkvpnsites2020-07-01)
 * [2020-08-01](network/microsoft.network/2020-08-01/types.md#resource-microsoftnetworkvpnsites2020-08-01)
 
+## microsoft.network.admin
+### microsoft.network.admin/locations/quotas
+* [2015-06-15](azsadmin/microsoft.network.admin/2015-06-15/types.md#resource-microsoftnetworkadminlocationsquotas2015-06-15)
+
 ## microsoft.notebooks
 ### microsoft.notebooks/notebookproxies
 * [2019-10-11-preview](notebooks/microsoft.notebooks/2019-10-11-preview/types.md#resource-microsoftnotebooksnotebookproxies2019-10-11-preview)
@@ -6961,6 +7004,13 @@
 * [2020-08-01-preview](storage/microsoft.storage/2020-08-01-preview/types.md#resource-microsoftstoragestorageaccountstableservicestables2020-08-01-preview)
 * [2021-01-01](storage/microsoft.storage/2021-01-01/types.md#resource-microsoftstoragestorageaccountstableservicestables2021-01-01)
 
+## microsoft.storage.admin
+### microsoft.storage.admin/locations/quotas
+* [2019-08-08-preview](azsadmin/microsoft.storage.admin/2019-08-08-preview/types.md#resource-microsoftstorageadminlocationsquotas2019-08-08-preview)
+
+### microsoft.storage.admin/storageservices
+* [2019-08-08-preview](azsadmin/microsoft.storage.admin/2019-08-08-preview/types.md#resource-microsoftstorageadminstorageservices2019-08-08-preview)
+
 ## microsoft.storagecache
 ### microsoft.storagecache/caches
 * [2019-08-01-preview](storagecache/microsoft.storagecache/2019-08-01-preview/types.md#resource-microsoftstoragecachecaches2019-08-01-preview)
@@ -7143,6 +7193,28 @@
 
 ### microsoft.subscription/subscriptiondefinitions
 * [2017-11-01-preview](subscription/microsoft.subscription/2017-11-01-preview/types.md#resource-microsoftsubscriptionsubscriptiondefinitions2017-11-01-preview)
+
+## microsoft.subscriptions.admin
+### microsoft.subscriptions.admin/directorytenants
+* [2015-11-01](azsadmin/microsoft.subscriptions.admin/2015-11-01/types.md#resource-microsoftsubscriptionsadmindirectorytenants2015-11-01)
+
+### microsoft.subscriptions.admin/locations
+* [2015-11-01](azsadmin/microsoft.subscriptions.admin/2015-11-01/types.md#resource-microsoftsubscriptionsadminlocations2015-11-01)
+
+### microsoft.subscriptions.admin/offers
+* [2015-11-01](azsadmin/microsoft.subscriptions.admin/2015-11-01/types.md#resource-microsoftsubscriptionsadminoffers2015-11-01)
+
+### microsoft.subscriptions.admin/offers/offerdelegations
+* [2015-11-01](azsadmin/microsoft.subscriptions.admin/2015-11-01/types.md#resource-microsoftsubscriptionsadminoffersofferdelegations2015-11-01)
+
+### microsoft.subscriptions.admin/plans
+* [2015-11-01](azsadmin/microsoft.subscriptions.admin/2015-11-01/types.md#resource-microsoftsubscriptionsadminplans2015-11-01)
+
+### microsoft.subscriptions.admin/subscriptions
+* [2015-11-01](azsadmin/microsoft.subscriptions.admin/2015-11-01/types.md#resource-microsoftsubscriptionsadminsubscriptions2015-11-01)
+
+### microsoft.subscriptions.admin/subscriptions/acquiredplans
+* [2015-11-01](azsadmin/microsoft.subscriptions.admin/2015-11-01/types.md#resource-microsoftsubscriptionsadminsubscriptionsacquiredplans2015-11-01)
 
 ## microsoft.support
 ### microsoft.support/supporttickets
