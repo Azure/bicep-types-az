@@ -8,8 +8,6 @@ namespace Azure.Bicep.Types.Az
 {
     public interface ITypeLoader
     {
-        IEnumerable<TypeBase> LoadTypes(string providerNamespace, string apiVersion);
-
         ResourceType LoadResourceType(TypeLocation location);
 
         TypeIndex GetIndexedTypes();
