@@ -5,6 +5,7 @@
     <EnableNuget>true</EnableNuget>
     <AssemblyName>Azure.Bicep.Types.Az</AssemblyName>
     <RootNamespace>Azure.Bicep.Types.Az</RootNamespace>
+    <Description>Bicep types generated from public Azure OpenAPI specs</Description>
   </PropertyGroup>
 
   <ItemGroup>
