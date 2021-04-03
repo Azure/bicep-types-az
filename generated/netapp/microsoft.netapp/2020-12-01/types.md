@@ -3,119 +3,119 @@
 ## Resource Microsoft.NetApp/netAppAccounts@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [accountProperties](#accountproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [accountProperties](#accountproperties): NetApp account properties
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags are a list of key-value pairs that describe the resource
+* **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/backupPolicies@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [backupPolicyProperties](#backuppolicyproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.NetApp/netAppAccounts/backupPolicies' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [backupPolicyProperties](#backuppolicyproperties) (Required): Backup policy properties
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags are a list of key-value pairs that describe the resource
+* **type**: 'Microsoft.NetApp/netAppAccounts/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [poolProperties](#poolproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [poolProperties](#poolproperties) (Required): Pool properties
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags are a list of key-value pairs that describe the resource
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [volumeProperties](#volumeproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [volumeProperties](#volumeproperties) (Required): Volume properties
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags are a list of key-value pairs that describe the resource
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [backupProperties](#backupproperties) (Required)
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [backupProperties](#backupproperties) (Required): Backup properties
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [snapshotProperties](#snapshotproperties)
-* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [snapshotProperties](#snapshotproperties): Snapshot properties
+* **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/snapshotPolicies@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [snapshotPolicyProperties](#snapshotpolicyproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.NetApp/netAppAccounts/snapshotPolicies' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [snapshotPolicyProperties](#snapshotpolicyproperties) (Required): Snapshot policy properties
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags are a list of key-value pairs that describe the resource
+* **type**: 'Microsoft.NetApp/netAppAccounts/snapshotPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## accountProperties
 ### Properties
-* **activeDirectories**: [activeDirectory](#activedirectory)[]
-* **encryption**: [accountEncryption](#accountencryption)
-* **provisioningState**: string (ReadOnly)
+* **activeDirectories**: [activeDirectory](#activedirectory)[]: Active Directories
+* **encryption**: [accountEncryption](#accountencryption): Encryption settings
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
 
 ## activeDirectory
 ### Properties
-* **activeDirectoryId**: string
-* **adName**: string
-* **aesEncryption**: bool
-* **allowLocalNfsUsersWithLdap**: bool
-* **backupOperators**: string[]
-* **dns**: string
-* **domain**: string
-* **kdcIP**: string
-* **ldapOverTLS**: bool
-* **ldapSigning**: bool
-* **organizationalUnit**: string
-* **password**: string
-* **securityOperators**: string[]
-* **serverRootCACertificate**: string
-* **site**: string
-* **smbServerName**: string
-* **status**: 'Created' | 'Deleted' | 'Error' | 'InUse' | 'Updating' (ReadOnly)
-* **statusDetails**: string (ReadOnly)
-* **username**: string
+* **activeDirectoryId**: string: Id of the Active Directory
+* **adName**: string: Name of the active directory machine. This optional parameter is used only while creating kerberos volume
+* **aesEncryption**: bool: If enabled, AES encryption will be enabled for SMB communication.
+* **allowLocalNfsUsersWithLdap**: bool:  If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.
+* **backupOperators**: string[]: Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier
+* **dns**: string: Comma separated list of DNS server IP addresses (IPv4 only) for the Active Directory domain
+* **domain**: string: Name of the Active Directory domain
+* **kdcIP**: string: kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.
+* **ldapOverTLS**: bool: Specifies whether or not the LDAP traffic needs to be secured via TLS.
+* **ldapSigning**: bool: Specifies whether or not the LDAP traffic needs to be signed.
+* **organizationalUnit**: string: The Organizational Unit (OU) within the Windows Active Directory
+* **password**: string: Plain text password of Active Directory domain administrator, value is masked in the response
+* **securityOperators**: string[]: Domain Users in the Active directory to be given SeSecurityPrivilege privilege (Needed for SMB Continuously available shares for SQL). A list of unique usernames without domain specifier
+* **serverRootCACertificate**: string: When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.
+* **site**: string: The Active Directory site the service will limit Domain Controller discovery to
+* **smbServerName**: string: NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
+* **status**: 'Created' | 'Deleted' | 'Error' | 'InUse' | 'Updating' (ReadOnly): Status of the Active Directory.
+* **statusDetails**: string (ReadOnly): Any details in regards to the Status of the Active Directory
+* **username**: string: Username of Active Directory domain administrator
 
 ## accountEncryption
 ### Properties
-* **keySource**: string
+* **keySource**: string: Encryption Key Source. Possible values are: 'Microsoft.NetApp'.
 
 ## systemData
 ### Properties
-* **createdAt**: string
-* **createdBy**: string
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
-* **lastModifiedAt**: string
-* **lastModifiedBy**: string
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties
@@ -124,21 +124,21 @@
 
 ## backupPolicyProperties
 ### Properties
-* **dailyBackupsToKeep**: int
-* **enabled**: bool
-* **monthlyBackupsToKeep**: int
-* **name**: string (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **volumeBackups**: [volumeBackups](#volumebackups)[]
-* **volumesAssigned**: int
-* **weeklyBackupsToKeep**: int
-* **yearlyBackupsToKeep**: int
+* **dailyBackupsToKeep**: int: Daily backups count to keep
+* **enabled**: bool: The property to decide policy is enabled or not
+* **monthlyBackupsToKeep**: int: Monthly backups count to keep
+* **name**: string (ReadOnly): Name of backup policy
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
+* **volumeBackups**: [volumeBackups](#volumebackups)[]: A list of volumes assigned to this policy
+* **volumesAssigned**: int: Volumes using current backup policy
+* **weeklyBackupsToKeep**: int: Weekly backups count to keep
+* **yearlyBackupsToKeep**: int: Yearly backups count to keep
 
 ## volumeBackups
 ### Properties
-* **backupsCount**: int
-* **policyEnabled**: bool
-* **volumeName**: string
+* **backupsCount**: int: Total count of backups for volume
+* **policyEnabled**: bool: Policy enabled
+* **volumeName**: string: Volume name
 
 ## Dictionary<string,String>
 ### Properties
@@ -147,13 +147,13 @@
 
 ## poolProperties
 ### Properties
-* **poolId**: string (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **qosType**: 'Auto' | 'Manual'
-* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' (Required)
-* **size**: int (Required)
-* **totalThroughputMibps**: int (ReadOnly)
-* **utilizedThroughputMibps**: int (ReadOnly)
+* **poolId**: string (ReadOnly): UUID v4 used to identify the Pool
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
+* **qosType**: 'Auto' | 'Manual': The qos type of the pool.
+* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' (Required): The service level of the file system.
+* **size**: int (Required): Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
+* **totalThroughputMibps**: int (ReadOnly): Total throughput of pool in Mibps
+* **utilizedThroughputMibps**: int (ReadOnly): Utilized throughput of pool in Mibps
 
 ## Dictionary<string,String>
 ### Properties
@@ -162,82 +162,82 @@
 
 ## volumeProperties
 ### Properties
-* **backupId**: string
-* **baremetalTenantId**: string (ReadOnly)
-* **creationToken**: string (Required)
-* **dataProtection**: [schemas:24_dataProtection](#schemas24dataprotection)
-* **encryptionKeySource**: string
-* **exportPolicy**: [schemas:24_exportPolicy](#schemas24exportpolicy)
-* **fileSystemId**: string (ReadOnly)
-* **isRestoring**: bool
-* **kerberosEnabled**: bool
-* **ldapEnabled**: bool
-* **mountTargets**: [mountTargetProperties](#mounttargetproperties)[] (ReadOnly)
-* **protocolTypes**: string[]
-* **provisioningState**: string (ReadOnly)
-* **securityStyle**: 'ntfs' | 'unix'
-* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra'
-* **smbContinuouslyAvailable**: bool
-* **smbEncryption**: bool
-* **snapshotDirectoryVisible**: bool
-* **snapshotId**: string
-* **subnetId**: string (Required)
-* **throughputMibps**: int
-* **usageThreshold**: int (Required)
-* **volumeType**: string
+* **backupId**: string: UUID v4 or resource identifier used to identify the Backup.
+* **baremetalTenantId**: string (ReadOnly): Unique Baremetal Tenant Identifier.
+* **creationToken**: string (Required): A unique file path for the volume. Used when creating mount targets
+* **dataProtection**: [schemas:24_dataProtection](#schemas24dataprotection): DataProtection type volumes include an object containing details of the replication
+* **encryptionKeySource**: string: Encryption Key Source. Possible values are: 'Microsoft.NetApp'
+* **exportPolicy**: [schemas:24_exportPolicy](#schemas24exportpolicy): Set of export policy rules
+* **fileSystemId**: string (ReadOnly): Unique FileSystem Identifier.
+* **isRestoring**: bool: Restoring
+* **kerberosEnabled**: bool: Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later
+* **ldapEnabled**: bool: Specifies whether LDAP is enabled or not for a given NFS volume.
+* **mountTargets**: [mountTargetProperties](#mounttargetproperties)[] (ReadOnly): List of mount targets
+* **protocolTypes**: string[]: Set of protocol types, default NFSv3, CIFS fro SMB protocol
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
+* **securityStyle**: 'ntfs' | 'unix': The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol.
+* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra': The service level of the file system.
+* **smbContinuouslyAvailable**: bool: Enables continuously available share property for smb volume. Only applicable for SMB volume
+* **smbEncryption**: bool: Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol volume. To be used with swagger version 2020-08-01 or later
+* **snapshotDirectoryVisible**: bool: If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).
+* **snapshotId**: string: UUID v4 or resource identifier used to identify the Snapshot.
+* **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
+* **throughputMibps**: int:
+* **usageThreshold**: int (Required): Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
+* **volumeType**: string: What type of volume is this
 
 ## schemas:24_dataProtection
 ### Properties
-* **backup**: [volumeBackupProperties](#volumebackupproperties)
-* **replication**: [replicationObject](#replicationobject)
-* **snapshot**: [volumeSnapshotProperties](#volumesnapshotproperties)
+* **backup**: [volumeBackupProperties](#volumebackupproperties): Volume Backup Properties
+* **replication**: [replicationObject](#replicationobject): Replication properties
+* **snapshot**: [volumeSnapshotProperties](#volumesnapshotproperties): Volume Snapshot Properties
 
 ## volumeBackupProperties
 ### Properties
-* **backupEnabled**: bool
-* **backupPolicyId**: string
-* **policyEnforced**: bool
-* **vaultId**: string
+* **backupEnabled**: bool: Backup Enabled
+* **backupPolicyId**: string: Backup Policy Resource ID
+* **policyEnforced**: bool: Policy Enforced
+* **vaultId**: string: Vault Resource ID
 
 ## replicationObject
 ### Properties
-* **endpointType**: 'dst' | 'src'
-* **remoteVolumeRegion**: string
-* **remoteVolumeResourceId**: string (Required)
-* **replicationId**: string
-* **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' (Required)
+* **endpointType**: 'dst' | 'src': Indicates whether the local volume is the source or destination for the Volume Replication.
+* **remoteVolumeRegion**: string: The remote region for the other end of the Volume Replication.
+* **remoteVolumeResourceId**: string (Required): The resource ID of the remote volume.
+* **replicationId**: string: Id
+* **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' (Required): Schedule.
 
 ## volumeSnapshotProperties
 ### Properties
-* **snapshotPolicyId**: string
+* **snapshotPolicyId**: string: Snapshot Policy ResourceId
 
 ## schemas:24_exportPolicy
 ### Properties
-* **rules**: [exportPolicyRule](#exportpolicyrule)[]
+* **rules**: [exportPolicyRule](#exportpolicyrule)[]: Export policy rule
 
 ## exportPolicyRule
 ### Properties
-* **allowedClients**: string
-* **cifs**: bool
-* **hasRootAccess**: bool
-* **kerberos5iReadOnly**: bool
-* **kerberos5iReadWrite**: bool
-* **kerberos5pReadOnly**: bool
-* **kerberos5pReadWrite**: bool
-* **kerberos5ReadOnly**: bool
-* **kerberos5ReadWrite**: bool
-* **nfsv3**: bool
-* **nfsv41**: bool
-* **ruleIndex**: int
-* **unixReadOnly**: bool
-* **unixReadWrite**: bool
+* **allowedClients**: string: Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names
+* **cifs**: bool: Allows CIFS protocol
+* **hasRootAccess**: bool: Has root access to volume
+* **kerberos5iReadOnly**: bool: Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later
+* **kerberos5iReadWrite**: bool: Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later
+* **kerberos5pReadOnly**: bool: Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later
+* **kerberos5pReadWrite**: bool: Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later
+* **kerberos5ReadOnly**: bool: Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later
+* **kerberos5ReadWrite**: bool: Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later
+* **nfsv3**: bool: Allows NFSv3 protocol. Enable only for NFSv3 type volumes
+* **nfsv41**: bool: Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes
+* **ruleIndex**: int: Order index
+* **unixReadOnly**: bool: Read only access
+* **unixReadWrite**: bool: Read and write access
 
 ## mountTargetProperties
 ### Properties
-* **fileSystemId**: string (Required)
-* **ipAddress**: string (ReadOnly)
-* **mountTargetId**: string (ReadOnly)
-* **smbServerFqdn**: string
+* **fileSystemId**: string (Required): UUID v4 used to identify the MountTarget
+* **ipAddress**: string (ReadOnly): The mount target's IPv4 address
+* **mountTargetId**: string (ReadOnly): UUID v4 used to identify the MountTarget
+* **smbServerFqdn**: string: The SMB server's Fully Qualified Domain Name, FQDN
 
 ## Dictionary<string,String>
 ### Properties
@@ -246,58 +246,58 @@
 
 ## backupProperties
 ### Properties
-* **backupId**: string (ReadOnly)
-* **backupType**: string (ReadOnly)
-* **creationDate**: string (ReadOnly)
-* **failureReason**: string (ReadOnly)
-* **label**: string
-* **provisioningState**: string (ReadOnly)
-* **size**: int (ReadOnly)
-* **volumeName**: string (ReadOnly)
+* **backupId**: string (ReadOnly): UUID v4 used to identify the Backup
+* **backupType**: string (ReadOnly): Type of backup adhoc or scheduled
+* **creationDate**: string (ReadOnly): The creation date of the backup
+* **failureReason**: string (ReadOnly): Failure reason
+* **label**: string: Label for backup
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
+* **size**: int (ReadOnly): Size of backup
+* **volumeName**: string (ReadOnly): Volume name
 
 ## snapshotProperties
 ### Properties
-* **created**: string (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **snapshotId**: string (ReadOnly)
+* **created**: string (ReadOnly): The creation date of the snapshot
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
+* **snapshotId**: string (ReadOnly): UUID v4 used to identify the Snapshot
 
 ## snapshotPolicyProperties
 ### Properties
-* **dailySchedule**: [dailySchedule](#dailyschedule)
-* **enabled**: bool
-* **hourlySchedule**: [hourlySchedule](#hourlyschedule)
-* **monthlySchedule**: [monthlySchedule](#monthlyschedule)
-* **provisioningState**: string (ReadOnly)
-* **weeklySchedule**: [weeklySchedule](#weeklyschedule)
+* **dailySchedule**: [dailySchedule](#dailyschedule): Daily Schedule properties
+* **enabled**: bool: The property to decide policy is enabled or not
+* **hourlySchedule**: [hourlySchedule](#hourlyschedule): Hourly Schedule properties
+* **monthlySchedule**: [monthlySchedule](#monthlyschedule): Monthly Schedule properties
+* **provisioningState**: string (ReadOnly): Azure lifecycle management
+* **weeklySchedule**: [weeklySchedule](#weeklyschedule): Weekly Schedule properties, make a snapshot every week at a specific day or days
 
 ## dailySchedule
 ### Properties
-* **hour**: int
-* **minute**: int
-* **snapshotsToKeep**: int
-* **usedBytes**: int
+* **hour**: int: Indicates which hour in UTC timezone a snapshot should be taken
+* **minute**: int: Indicates which minute snapshot should be taken
+* **snapshotsToKeep**: int: Daily snapshot count to keep
+* **usedBytes**: int: Resource size in bytes, current storage usage for the volume in bytes
 
 ## hourlySchedule
 ### Properties
-* **minute**: int
-* **snapshotsToKeep**: int
-* **usedBytes**: int
+* **minute**: int: Indicates which minute snapshot should be taken
+* **snapshotsToKeep**: int: Hourly snapshot count to keep
+* **usedBytes**: int: Resource size in bytes, current storage usage for the volume in bytes
 
 ## monthlySchedule
 ### Properties
-* **daysOfMonth**: string
-* **hour**: int
-* **minute**: int
-* **snapshotsToKeep**: int
-* **usedBytes**: int
+* **daysOfMonth**: string: Indicates which days of the month snapshot should be taken. A comma delimited string.
+* **hour**: int: Indicates which hour in UTC timezone a snapshot should be taken
+* **minute**: int: Indicates which minute snapshot should be taken
+* **snapshotsToKeep**: int: Monthly snapshot count to keep
+* **usedBytes**: int: Resource size in bytes, current storage usage for the volume in bytes
 
 ## weeklySchedule
 ### Properties
-* **day**: string
-* **hour**: int
-* **minute**: int
-* **snapshotsToKeep**: int
-* **usedBytes**: int
+* **day**: string: Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english
+* **hour**: int: Indicates which hour in UTC timezone a snapshot should be taken
+* **minute**: int: Indicates which minute snapshot should be taken
+* **snapshotsToKeep**: int: Weekly snapshot count to keep
+* **usedBytes**: int: Resource size in bytes, current storage usage for the volume in bytes
 
 ## Dictionary<string,String>
 ### Properties

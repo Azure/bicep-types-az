@@ -3,30 +3,30 @@
 ## Resource Microsoft.Authorization/policyAssignments@2015-11-01
 * **Valid Scope(s)**: Unknown
 ### Properties
-* **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [PolicyAssignmentProperties](#policyassignmentproperties)
-* **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PolicyAssignmentProperties](#policyassignmentproperties): Policy Assignment properties.
+* **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/policydefinitions@2015-11-01
 * **Valid Scope(s)**: Subscription
 ### Properties
-* **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [PolicyDefinitionProperties](#policydefinitionproperties)
-* **type**: 'Microsoft.Authorization/policydefinitions' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PolicyDefinitionProperties](#policydefinitionproperties): Policy definition properties.
+* **type**: 'Microsoft.Authorization/policydefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## PolicyAssignmentProperties
 ### Properties
-* **displayName**: string
-* **policyDefinitionId**: string
-* **scope**: string
+* **displayName**: string: Gets or sets the policy assignment display name.
+* **policyDefinitionId**: string: Gets or sets the policy definition Id.
+* **scope**: string: Gets or sets the policy assignment scope.
 
 ## PolicyDefinitionProperties
 ### Properties
-* **description**: string
-* **displayName**: string
-* **policyRule**: any
+* **description**: string: Gets or sets the policy definition description.
+* **displayName**: string: Gets or sets the policy definition display name.
+* **policyRule**: any: The policy rule json.
 

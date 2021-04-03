@@ -3,86 +3,86 @@
 ## Resource Microsoft.HybridCompute/machines@2020-08-02
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-08-02' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [schemas:6_identity](#schemas6identity)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:6_properties](#schemas6properties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-08-02' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [schemas:6_identity](#schemas6identity):
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:6_properties](#schemas6properties): Hybrid Compute Machine properties
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridCompute/machines/extensions@2020-08-02
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-08-02' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:13_properties](#schemas13properties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-08-02' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:13_properties](#schemas13properties): Describes Machine Extension Properties.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## schemas:6_identity
 ### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: string
+* **principalId**: string (ReadOnly): The identity's principal id.
+* **tenantId**: string (ReadOnly): The identity's tenant id.
+* **type**: string: The identity type.
 
 ## schemas:6_properties
 ### Properties
-* **adFqdn**: string (ReadOnly)
-* **agentVersion**: string (ReadOnly)
-* **clientPublicKey**: string
-* **displayName**: string (ReadOnly)
-* **dnsFqdn**: string (ReadOnly)
-* **domainName**: string (ReadOnly)
-* **errorDetails**: [ErrorDetail](#errordetail)[] (ReadOnly)
-* **extensions**: [MachineExtensionInstanceView](#machineextensioninstanceview)[] (ReadOnly)
-* **lastStatusChange**: string (ReadOnly)
-* **locationData**: [locationData](#locationdata)
-* **machineFqdn**: string (ReadOnly)
-* **osName**: string (ReadOnly)
-* **osProfile**: [schemas:4_osProfile](#schemas4osprofile)
-* **osSku**: string (ReadOnly)
-* **osVersion**: string (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **status**: 'Connected' | 'Disconnected' | 'Error' (ReadOnly)
-* **vmId**: string
-* **vmUuid**: string (ReadOnly)
+* **adFqdn**: string (ReadOnly): Specifies the AD fully qualified display name.
+* **agentVersion**: string (ReadOnly): The hybrid machine agent full version.
+* **clientPublicKey**: string: Public Key that the client provides to be used during initial resource onboarding
+* **displayName**: string (ReadOnly): Specifies the hybrid machine display name.
+* **dnsFqdn**: string (ReadOnly): Specifies the DNS fully qualified display name.
+* **domainName**: string (ReadOnly): Specifies the Windows domain name.
+* **errorDetails**: [ErrorDetail](#errordetail)[] (ReadOnly): Details about the error state.
+* **extensions**: [MachineExtensionInstanceView](#machineextensioninstanceview)[] (ReadOnly): Machine Extensions information
+* **lastStatusChange**: string (ReadOnly): The time of the last status change.
+* **locationData**: [locationData](#locationdata): Metadata pertaining to the geographic location of the resource.
+* **machineFqdn**: string (ReadOnly): Specifies the hybrid machine FQDN.
+* **osName**: string (ReadOnly): The Operating System running on the hybrid machine.
+* **osProfile**: [schemas:4_osProfile](#schemas4osprofile): Specifies the operating system settings for the hybrid machine.
+* **osSku**: string (ReadOnly): Specifies the Operating System product SKU.
+* **osVersion**: string (ReadOnly): The version of Operating System running on the hybrid machine.
+* **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
+* **status**: 'Connected' | 'Disconnected' | 'Error' (ReadOnly): The status of the hybrid machine agent.
+* **vmId**: string: Specifies the hybrid machine unique ID.
+* **vmUuid**: string (ReadOnly): Specifies the Arc Machine's unique SMBIOS ID
 
 ## ErrorDetail
 ### Properties
-* **code**: string (Required)
-* **details**: [ErrorDetail](#errordetail)[]
-* **message**: string (Required)
-* **target**: string
+* **code**: string (Required): The error's code.
+* **details**: [ErrorDetail](#errordetail)[]: Additional error details.
+* **message**: string (Required): A human readable error message.
+* **target**: string: Indicates which property in the request is responsible for the error.
 
 ## MachineExtensionInstanceView
 ### Properties
-* **name**: string (ReadOnly)
-* **status**: [schemas:17_status](#schemas17status)
-* **type**: string (ReadOnly)
-* **typeHandlerVersion**: string (ReadOnly)
+* **name**: string (ReadOnly): The machine extension name.
+* **status**: [schemas:17_status](#schemas17status): Instance view status.
+* **type**: string (ReadOnly): Specifies the type of the extension; an example is "CustomScriptExtension".
+* **typeHandlerVersion**: string (ReadOnly): Specifies the version of the script handler.
 
 ## schemas:17_status
 ### Properties
-* **code**: string (ReadOnly)
-* **displayStatus**: string (ReadOnly)
-* **level**: 'Error' | 'Info' | 'Warning' (ReadOnly)
-* **message**: string (ReadOnly)
-* **time**: string (ReadOnly)
+* **code**: string (ReadOnly): The status code.
+* **displayStatus**: string (ReadOnly): The short localizable label for the status.
+* **level**: 'Error' | 'Info' | 'Warning' (ReadOnly): The level code.
+* **message**: string (ReadOnly): The detailed status message, including for alerts and error messages.
+* **time**: string (ReadOnly): The time of the status.
 
 ## locationData
 ### Properties
-* **city**: string
-* **countryOrRegion**: string
-* **district**: string
-* **name**: string (Required)
+* **city**: string: The city or locality where the resource is located.
+* **countryOrRegion**: string: The country or region where the resource is located
+* **district**: string: The district, state, or province where the resource is located.
+* **name**: string (Required): A canonical name for the geographic or physical location.
 
 ## schemas:4_osProfile
 ### Properties
-* **computerName**: string (ReadOnly)
+* **computerName**: string (ReadOnly): Specifies the host OS name of the hybrid machine.
 
 ## Dictionary<string,String>
 ### Properties
@@ -91,22 +91,22 @@
 
 ## schemas:13_properties
 ### Properties
-* **autoUpgradeMinorVersion**: bool
-* **forceUpdateTag**: string
-* **instanceView**: [schemas:15_instanceView](#schemas15instanceview)
-* **protectedSettings**: any
-* **provisioningState**: string (ReadOnly)
-* **publisher**: string
-* **settings**: any
-* **type**: string
-* **typeHandlerVersion**: string
+* **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+* **forceUpdateTag**: string: How the extension handler should be forced to update even if the extension configuration has not changed.
+* **instanceView**: [schemas:15_instanceView](#schemas15instanceview): The machine extension instance view.
+* **protectedSettings**: any: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+* **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
+* **publisher**: string: The name of the extension handler publisher.
+* **settings**: any: Json formatted public settings for the extension.
+* **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
+* **typeHandlerVersion**: string: Specifies the version of the script handler.
 
 ## schemas:15_instanceView
 ### Properties
-* **name**: string (ReadOnly)
-* **status**: [schemas:17_status](#schemas17status)
-* **type**: string (ReadOnly)
-* **typeHandlerVersion**: string (ReadOnly)
+* **name**: string (ReadOnly): The machine extension name.
+* **status**: [schemas:17_status](#schemas17status): Instance view status.
+* **type**: string (ReadOnly): Specifies the type of the extension; an example is "CustomScriptExtension".
+* **typeHandlerVersion**: string (ReadOnly): Specifies the version of the script handler.
 
 ## Dictionary<string,String>
 ### Properties

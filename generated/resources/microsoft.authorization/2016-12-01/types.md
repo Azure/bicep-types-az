@@ -3,36 +3,36 @@
 ## Resource Microsoft.Authorization/policyAssignments@2016-12-01
 * **Valid Scope(s)**: Unknown
 ### Properties
-* **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [PolicyAssignmentProperties](#policyassignmentproperties)
-* **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PolicyAssignmentProperties](#policyassignmentproperties): The policy assignment properties.
+* **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/policyDefinitions@2016-12-01
 * **Valid Scope(s)**: ManagementGroup, Subscription
 ### Properties
-* **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [PolicyDefinitionProperties](#policydefinitionproperties)
-* **type**: 'Microsoft.Authorization/policyDefinitions' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PolicyDefinitionProperties](#policydefinitionproperties): The policy definition properties.
+* **type**: 'Microsoft.Authorization/policyDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## PolicyAssignmentProperties
 ### Properties
-* **description**: string
-* **displayName**: string
-* **parameters**: any
-* **policyDefinitionId**: string
-* **scope**: string
+* **description**: string: This message will be part of response in case of policy violation.
+* **displayName**: string: The display name of the policy assignment.
+* **parameters**: any: Required if a parameter is used in policy rule.
+* **policyDefinitionId**: string: The ID of the policy definition.
+* **scope**: string: The scope for the policy assignment.
 
 ## PolicyDefinitionProperties
 ### Properties
-* **description**: string
-* **displayName**: string
-* **metadata**: any
-* **mode**: 'All' | 'Indexed' | 'NotSpecified'
-* **parameters**: any
-* **policyRule**: any
-* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified'
+* **description**: string: The policy definition description.
+* **displayName**: string: The display name of the policy definition.
+* **metadata**: any: The policy definition metadata.
+* **mode**: 'All' | 'Indexed' | 'NotSpecified': The policy definition mode. Possible values are NotSpecified, Indexed, and All.
+* **parameters**: any: Required if a parameter is used in policy rule.
+* **policyRule**: any: The policy rule.
+* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified': The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom.
 

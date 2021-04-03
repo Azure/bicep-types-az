@@ -12,34 +12,43 @@
     <ProjectReference Include="../Bicep.Types/Bicep.Types.csproj" />
   </ItemGroup>
 
-  <UsingTask TaskName="ZipDirectory" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+  <ItemGroup>
+    <TypeFiles Include="../../generated/**/*.json">
+      <CompressedFile>$(IntermediateOutputPath)/generated/%(RecursiveDir)%(Filename)%(Extension).deflated</CompressedFile>
+      <LogicalName>$([System.String]::new('%(RecursiveDir)%(Filename)%(Extension).deflated').Replace('\', '/').ToLowerInvariant())</LogicalName>
+    </TypeFiles>
+  </ItemGroup>
+
+  <UsingTask TaskName="CompressType" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
     <ParameterGroup>
-      <SourceDirectory ParameterType="System.String" Required="true" />
-      <TargetZipFile ParameterType="System.String" Required="true" />
+      <SourceFile ParameterType="System.String" Required="true" />
+      <TargetFile ParameterType="System.String" Required="true" />
     </ParameterGroup>
     <Task>
       <Using Namespace="System.IO" />
       <Using Namespace="System.IO.Compression" />
       <Code Type="Fragment" Language="cs">
         <![CDATA[
-          Directory.CreateDirectory(Path.GetDirectoryName(TargetZipFile));
-          File.Delete(TargetZipFile);
-          ZipFile.CreateFromDirectory(SourceDirectory, TargetZipFile, CompressionLevel.Optimal, false);
+          Directory.CreateDirectory(Path.GetDirectoryName(TargetFile));
+
+          using (var inputStream = File.OpenRead(SourceFile))
+          using (var outputStream = File.Create(TargetFile))
+          using (var compressionStream = new DeflateStream(outputStream, CompressionLevel.Optimal))
+          {
+              inputStream.CopyTo(compressionStream);
+          }
         ]]>
       </Code>
     </Task>
   </UsingTask>
 
-  <ItemGroup>
-    <TypeFiles Include="../../generated/**/*.json" />
-  </ItemGroup>
+  <Target Name="CompressTypes" Inputs="@(TypeFiles)" Outputs="%(TypeFiles.CompressedFile)">
+    <CompressType SourceFile="%(TypeFiles.FullPath)" TargetFile="%(TypeFiles.CompressedFile)" />
+  </Target>
 
-  <Target Name="EmbedTypes" BeforeTargets="PrepareForBuild" Inputs="@(TypeFiles)" Outputs="$(OutDir)/generated_types.zip">
-    <RemoveDir Directories="$(OutDir)/generated_types" />
-    <Copy SourceFiles="@(TypeFiles)" DestinationFiles="@(TypeFiles->'$(OutDir)/generated_types/%(RecursiveDir)%(Filename)%(Extension)')" />
-    <ZipDirectory SourceDirectory="$(OutDir)/generated_types" TargetZipFile="$(OutDir)/generated_types.zip" />
+  <Target Name="EmbedTypes" BeforeTargets="BeforeBuild" DependsOnTargets="CompressTypes">
     <ItemGroup>
-      <EmbeddedResource Include="$(OutDir)/generated_types.zip" LogicalName="generated_types.zip" />
+      <EmbeddedResource Include="%(TypeFiles.CompressedFile)" LogicalName="%(LogicalName)" />
     </ItemGroup>
   </Target>
 </Project>

@@ -3,83 +3,88 @@
 ## Resource Microsoft.DomainRegistration/domains@2018-02-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:2_properties](#schemas2properties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string: Kind of resource.
+* **location**: string (Required): Resource Location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:2_properties](#schemas2properties): Domain resource specific properties
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers@2018-02-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:6_properties](#schemas6properties)
-* **type**: 'Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string: Kind of resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:6_properties](#schemas6properties): DomainOwnershipIdentifier resource specific properties
+* **type**: 'Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## schemas:2_properties
 ### Properties
-* **authCode**: string
-* **autoRenew**: bool
-* **consent**: [DomainPurchaseConsent](#domainpurchaseconsent) (Required)
-* **contactAdmin**: [Contact](#contact) (Required)
-* **contactBilling**: [Contact](#contact) (Required)
-* **contactRegistrant**: [Contact](#contact) (Required)
-* **contactTech**: [Contact](#contact) (Required)
-* **createdTime**: string (ReadOnly)
-* **dnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns'
-* **dnsZoneId**: string
-* **domainNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive'[] (ReadOnly)
-* **expirationTime**: string (ReadOnly)
-* **lastRenewedTime**: string (ReadOnly)
-* **managedHostNames**: [HostName](#hostname)[] (ReadOnly)
-* **nameServers**: string[] (ReadOnly)
-* **privacy**: bool
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly)
-* **readyForDnsRecordManagement**: bool (ReadOnly)
-* **registrationStatus**: 'Active' | 'Awaiting' | 'Cancelled' | 'Confiscated' | 'Disabled' | 'Excluded' | 'Expired' | 'Failed' | 'Held' | 'JsonConverterFailed' | 'Locked' | 'Parked' | 'Pending' | 'Reserved' | 'Reverted' | 'Suspended' | 'Transferred' | 'Unknown' | 'Unlocked' | 'Unparked' | 'Updated' (ReadOnly)
-* **targetDnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns'
+* **authCode**: string:
+* **autoRenew**: bool: <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
+* **consent**: [DomainPurchaseConsent](#domainpurchaseconsent) (Required): Domain purchase consent object, representing acceptance of applicable legal agreements.
+* **contactAdmin**: [Contact](#contact) (Required): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois
+directories as per ICANN requirements.
+* **contactBilling**: [Contact](#contact) (Required): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois
+directories as per ICANN requirements.
+* **contactRegistrant**: [Contact](#contact) (Required): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois
+directories as per ICANN requirements.
+* **contactTech**: [Contact](#contact) (Required): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois
+directories as per ICANN requirements.
+* **createdTime**: string (ReadOnly): Domain creation timestamp.
+* **dnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns': Current DNS type.
+* **dnsZoneId**: string: Azure DNS Zone to use
+* **domainNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive'[] (ReadOnly): Reasons why domain is not renewable.
+* **expirationTime**: string (ReadOnly): Domain expiration timestamp.
+* **lastRenewedTime**: string (ReadOnly): Timestamp when the domain was renewed last time.
+* **managedHostNames**: [HostName](#hostname)[] (ReadOnly): All hostnames derived from the domain and assigned to Azure resources.
+* **nameServers**: string[] (ReadOnly): Name servers.
+* **privacy**: bool: <code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Domain provisioning state.
+* **readyForDnsRecordManagement**: bool (ReadOnly): <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and
+ it is hosted on name servers Azure has programmatic access to.
+* **registrationStatus**: 'Active' | 'Awaiting' | 'Cancelled' | 'Confiscated' | 'Disabled' | 'Excluded' | 'Expired' | 'Failed' | 'Held' | 'JsonConverterFailed' | 'Locked' | 'Parked' | 'Pending' | 'Reserved' | 'Reverted' | 'Suspended' | 'Transferred' | 'Unknown' | 'Unlocked' | 'Unparked' | 'Updated' (ReadOnly): Domain registration status.
+* **targetDnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns': Target DNS type (would be used for migration).
 
 ## DomainPurchaseConsent
 ### Properties
-* **agreedAt**: string
-* **agreedBy**: string
-* **agreementKeys**: string[]
+* **agreedAt**: string: Timestamp when the agreements were accepted.
+* **agreedBy**: string: Client IP address.
+* **agreementKeys**: string[]: List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under <code>TopLevelDomain</code> resource.
 
 ## Contact
 ### Properties
-* **addressMailing**: [Address](#address)
-* **email**: string (Required)
-* **fax**: string
-* **jobTitle**: string
-* **nameFirst**: string (Required)
-* **nameLast**: string (Required)
-* **nameMiddle**: string
-* **organization**: string
-* **phone**: string (Required)
+* **addressMailing**: [Address](#address): Address information for domain registration.
+* **email**: string (Required): Email address.
+* **fax**: string: Fax number.
+* **jobTitle**: string: Job title.
+* **nameFirst**: string (Required): First name.
+* **nameLast**: string (Required): Last name.
+* **nameMiddle**: string: Middle name.
+* **organization**: string: Organization contact belongs to.
+* **phone**: string (Required): Phone number.
 
 ## Address
 ### Properties
-* **address1**: string (Required)
-* **address2**: string
-* **city**: string (Required)
-* **country**: string (Required)
-* **postalCode**: string (Required)
-* **state**: string (Required)
+* **address1**: string (Required): First line of an Address.
+* **address2**: string: The second line of the Address. Optional.
+* **city**: string (Required): The city for the address.
+* **country**: string (Required): The country for the address.
+* **postalCode**: string (Required): The postal code for the address.
+* **state**: string (Required): The state or province for the address.
 
 ## HostName
 ### Properties
-* **azureResourceName**: string
-* **azureResourceType**: 'TrafficManager' | 'Website'
-* **customHostNameDnsRecordType**: 'A' | 'CName'
-* **hostNameType**: 'Managed' | 'Verified'
-* **name**: string
-* **siteNames**: string[]
+* **azureResourceName**: string: Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.
+* **azureResourceType**: 'TrafficManager' | 'Website': Type of the Azure resource the hostname is assigned to.
+* **customHostNameDnsRecordType**: 'A' | 'CName': Type of the DNS record.
+* **hostNameType**: 'Managed' | 'Verified': Type of the hostname.
+* **name**: string: Name of the hostname.
+* **siteNames**: string[]: List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.
 
 ## Dictionary<string,String>
 ### Properties
@@ -88,5 +93,5 @@
 
 ## schemas:6_properties
 ### Properties
-* **ownershipId**: string
+* **ownershipId**: string: Ownership Id.
 

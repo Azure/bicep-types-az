@@ -3,46 +3,46 @@
 ## Resource Microsoft.MachineLearningServices/workspaces@2018-03-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [Identity](#identity)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [WorkspaceProperties](#workspaceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [Identity](#identity): Identity for the resource.
+* **location**: string: Specifies the location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkspaceProperties](#workspaceproperties): The properties of a machine learning workspace.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
+* **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/computes@2018-03-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [Identity](#identity)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [Compute](#compute)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [Identity](#identity): Identity for the resource.
+* **location**: string: Specifies the location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [Compute](#compute): Machine Learning compute object.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
+* **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Identity
 ### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'SystemAssigned'
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'SystemAssigned': The identity type.
 
 ## WorkspaceProperties
 ### Properties
-* **applicationInsights**: string
-* **batchaiWorkspace**: string
-* **containerRegistry**: string
-* **creationTime**: string (ReadOnly)
-* **description**: string
-* **discoveryUrl**: string
-* **friendlyName**: string
-* **keyVault**: string
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
-* **storageAccount**: string
-* **workspaceId**: string (ReadOnly)
+* **applicationInsights**: string: ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
+* **batchaiWorkspace**: string: ARM id of the Batch AI workspace associated with this workspace. This cannot be changed once the workspace has been created
+* **containerRegistry**: string: ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
+* **creationTime**: string (ReadOnly): The creation time of the machine learning workspace in ISO8601 format.
+* **description**: string: The description of this workspace.
+* **discoveryUrl**: string: Url for the discovery service to identify regional endpoints for machine learning experimentation services
+* **friendlyName**: string: The friendly name for this workspace. This name in mutable
+* **keyVault**: string: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
+* **storageAccount**: string: ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
+* **workspaceId**: string (ReadOnly): The immutable id associated with this workspace.
 
 ## Dictionary<string,String>
 ### Properties
@@ -52,123 +52,123 @@
 ## Compute
 * **Discriminator**: computeType
 ### Base Properties
-* **computeLocation**: string
-* **createdOn**: string (ReadOnly)
-* **description**: string
-* **modifiedOn**: string (ReadOnly)
-* **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly)
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
-* **resourceId**: string
+* **computeLocation**: string: Location for the underlying compute
+* **createdOn**: string (ReadOnly): The date and time when the compute was created.
+* **description**: string: The description of the Machine Learning compute.
+* **modifiedOn**: string (ReadOnly): The date and time when the compute was last modified.
+* **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Errors during provisioning
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
+* **resourceId**: string: ARM resource id of the compute
 ### AKS
 #### Properties
-* **computeType**: 'AKS' (Required)
-* **properties**: [schemas:15_properties](#schemas15properties)
+* **computeType**: 'AKS' (Required): A Machine Learning compute based on AKS.
+* **properties**: [schemas:15_properties](#schemas15properties): AKS properties
 
 ### BatchAI
 #### Properties
-* **computeType**: 'BatchAI' (Required)
-* **properties**: [schemas:16_properties](#schemas16properties)
+* **computeType**: 'BatchAI' (Required): A Machine Learning compute based on Azure BatchAI.
+* **properties**: [schemas:16_properties](#schemas16properties): BatchAI properties
 
 ### DataFactory
 #### Properties
-* **computeType**: 'DataFactory' (Required)
+* **computeType**: 'DataFactory' (Required): A DataFactory compute.
 
 ### HDInsight
 #### Properties
-* **computeType**: 'HDInsight' (Required)
-* **properties**: [schemas:17_properties](#schemas17properties)
+* **computeType**: 'HDInsight' (Required): A HDInsight compute.
+* **properties**: [schemas:17_properties](#schemas17properties):
 
 ### VirtualMachine
 #### Properties
-* **computeType**: 'VirtualMachine' (Required)
-* **properties**: [schemas:17_properties](#schemas17properties)
+* **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
+* **properties**: [schemas:17_properties](#schemas17properties):
 
 
 ## MachineLearningServiceError
 ### Properties
-* **error**: [ErrorResponse](#errorresponse)
+* **error**: [ErrorResponse](#errorresponse): Error response information.
 
 ## ErrorResponse
 ### Properties
-* **code**: string (Required)
-* **details**: [ErrorDetail](#errordetail)[]
-* **message**: string (Required)
+* **code**: string (Required): Error code.
+* **details**: [ErrorDetail](#errordetail)[]: An array of error detail objects.
+* **message**: string (Required): Error message.
 
 ## ErrorDetail
 ### Properties
-* **code**: string (Required)
-* **message**: string (Required)
+* **code**: string (Required): Error code.
+* **message**: string (Required): Error message.
 
 ## AKS
 ### Properties
-* **computeType**: 'AKS' (Required)
-* **properties**: [schemas:15_properties](#schemas15properties)
+* **computeType**: 'AKS' (Required): A Machine Learning compute based on AKS.
+* **properties**: [schemas:15_properties](#schemas15properties): AKS properties
 
 ## schemas:15_properties
 ### Properties
-* **agentCount**: int
-* **agentVMSize**: string
-* **clusterFqdn**: string
-* **sslConfiguration**: [SslConfiguration](#sslconfiguration)
-* **systemServices**: [SystemService](#systemservice)[]
+* **agentCount**: int: Number of agents
+* **agentVMSize**: string: Agent virtual machine size
+* **clusterFqdn**: string: Cluster full qualified domain name
+* **sslConfiguration**: [SslConfiguration](#sslconfiguration): The SSL configuration for scoring
+* **systemServices**: [SystemService](#systemservice)[]: System services
 
 ## SslConfiguration
 ### Properties
-* **cert**: string
-* **cname**: string
-* **key**: string
-* **status**: 'Disabled' | 'Enabled'
+* **cert**: string: Cert data
+* **cname**: string: CNAME of the cert
+* **key**: string: Key data
+* **status**: 'Disabled' | 'Enabled': Enable or disable SSL for scoring.
 
 ## SystemService
 ### Properties
-* **publicIpAddress**: string (ReadOnly)
-* **systemServiceType**: string (ReadOnly)
-* **version**: string (ReadOnly)
+* **publicIpAddress**: string (ReadOnly): Public IP address
+* **systemServiceType**: string (ReadOnly): The type of this system service.
+* **version**: string (ReadOnly): The version for this type.
 
 ## BatchAI
 ### Properties
-* **computeType**: 'BatchAI' (Required)
-* **properties**: [schemas:16_properties](#schemas16properties)
+* **computeType**: 'BatchAI' (Required): A Machine Learning compute based on Azure BatchAI.
+* **properties**: [schemas:16_properties](#schemas16properties): BatchAI properties
 
 ## schemas:16_properties
 ### Properties
-* **scaleSettings**: [ScaleSettings](#scalesettings)
-* **vmPriority**: string
-* **vmSize**: string
+* **scaleSettings**: [ScaleSettings](#scalesettings): scale settings for BatchAI Compute
+* **vmPriority**: string: Virtual Machine priority
+* **vmSize**: string: Virtual Machine Size
 
 ## ScaleSettings
 ### Properties
-* **autoScaleEnabled**: bool
-* **maxNodeCount**: int
-* **minNodeCount**: int
+* **autoScaleEnabled**: bool: Enable or disable auto scale
+* **maxNodeCount**: int: Max number of nodes to use
+* **minNodeCount**: int: Min number of nodes to use
 
 ## DataFactory
 ### Properties
-* **computeType**: 'DataFactory' (Required)
+* **computeType**: 'DataFactory' (Required): A DataFactory compute.
 
 ## HDInsight
 ### Properties
-* **computeType**: 'HDInsight' (Required)
-* **properties**: [schemas:17_properties](#schemas17properties)
+* **computeType**: 'HDInsight' (Required): A HDInsight compute.
+* **properties**: [schemas:17_properties](#schemas17properties):
 
 ## schemas:17_properties
 ### Properties
-* **address**: string
-* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials)
-* **sshPort**: int
-* **virtualMachineSize**: string
+* **address**: string: Public IP address of the virtual machine.
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
+* **sshPort**: int: Port open for ssh connections.
+* **virtualMachineSize**: string: Virtual Machine size
 
 ## VirtualMachineSshCredentials
 ### Properties
-* **password**: string
-* **privateKeyData**: string
-* **publicKeyData**: string
-* **username**: string
+* **password**: string: Password of admin account
+* **privateKeyData**: string: Private key data
+* **publicKeyData**: string: Public key data
+* **username**: string: Username of admin account
 
 ## VirtualMachine
 ### Properties
-* **computeType**: 'VirtualMachine' (Required)
-* **properties**: [schemas:17_properties](#schemas17properties)
+* **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
+* **properties**: [schemas:17_properties](#schemas17properties):
 
 ## Dictionary<string,String>
 ### Properties
