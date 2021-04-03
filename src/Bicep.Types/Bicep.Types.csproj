@@ -5,6 +5,7 @@
     <EnableNuget>true</EnableNuget>
     <AssemblyName>Azure.Bicep.Types</AssemblyName>
     <RootNamespace>Azure.Bicep.Types</RootNamespace>
+    <Description>Shared contracts for Bicep types</Description>
   </PropertyGroup>
 
   <ItemGroup>
