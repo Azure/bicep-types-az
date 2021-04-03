@@ -45,6 +45,16 @@
 * **properties**: [ActionRequestProperties](#actionrequestproperties): Action property bag.
 * **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.SecurityInsights/automationRules@2019-01-01-preview
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string: Etag of the azure resource
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AutomationRuleProperties](#automationruleproperties): Describes automation rule properties
+* **type**: 'Microsoft.SecurityInsights/automationRules' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.SecurityInsights/bookmarks@2019-01-01-preview
 * **Valid Scope(s)**: Extension
 ### Properties
@@ -370,6 +380,104 @@
 * **triggerUri**: string (Required, WriteOnly): Logic App Callback URL for this specific workflow.
 * **workflowId**: string (ReadOnly): The name of the logic app's workflow.
 
+## AutomationRuleProperties
+### Properties
+* **actions**: [AutomationRuleAction](#automationruleaction)[] (Required): The actions to execute when the automation rule is triggered
+* **createdBy**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
+* **createdTimeUtc**: string (ReadOnly): The time the automation rule was created
+* **displayName**: string (Required): The display name of the automation  rule
+* **lastModifiedBy**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
+* **lastModifiedTimeUtc**: string (ReadOnly): The last time the automation rule was updated
+* **order**: int (Required): The order of execution of the automation rule
+* **triggeringLogic**: [AutomationRuleTriggeringLogic](#automationruletriggeringlogic) (Required): Describes automation rule triggering logic
+
+## AutomationRuleAction
+* **Discriminator**: actionType
+### Base Properties
+* **order**: int (Required): The order of execution of the automation rule action
+### ModifyProperties
+#### Properties
+* **actionConfiguration**: [schemas:50_actionConfiguration](#schemas50actionconfiguration) (Required): The configuration of the modify properties automation rule action
+* **actionType**: 'ModifyProperties' (Required): Describes an automation rule action to modify an object's properties
+
+### RunPlaybook
+#### Properties
+* **actionConfiguration**: [schemas:49_actionConfiguration](#schemas49actionconfiguration) (Required): The configuration of the run playbook automation rule action
+* **actionType**: 'RunPlaybook' (Required): Describes an automation rule action to run a playbook
+
+
+## ModifyProperties
+### Properties
+* **actionConfiguration**: [schemas:50_actionConfiguration](#schemas50actionconfiguration) (Required): The configuration of the modify properties automation rule action
+* **actionType**: 'ModifyProperties' (Required): Describes an automation rule action to modify an object's properties
+
+## schemas:50_actionConfiguration
+### Properties
+* **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined': The reason the incident was closed.
+* **classificationComment**: string: Describes the reason the incident was closed
+* **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected': The classification reason to close the incident with.
+* **labels**: [IncidentLabel](#incidentlabel)[]: List of labels to add to the incident
+* **owner**: [IncidentOwnerInfo](#incidentownerinfo): Information on the user an incident is assigned to
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium': The severity of the incident.
+* **status**: 'Active' | 'Closed' | 'New': The status of the incident.
+
+## IncidentLabel
+### Properties
+* **labelName**: string (Required): The name of the label
+* **labelType**: 'System' | 'User' (ReadOnly): The type of the label.
+
+## IncidentOwnerInfo
+### Properties
+* **assignedTo**: string: The name of the user the incident is assigned to.
+* **email**: string: The email of the user the incident is assigned to.
+* **objectId**: string: The object id of the user the incident is assigned to.
+* **userPrincipalName**: string: The user principal name of the user the incident is assigned to.
+
+## RunPlaybook
+### Properties
+* **actionConfiguration**: [schemas:49_actionConfiguration](#schemas49actionconfiguration) (Required): The configuration of the run playbook automation rule action
+* **actionType**: 'RunPlaybook' (Required): Describes an automation rule action to run a playbook
+
+## schemas:49_actionConfiguration
+### Properties
+* **logicAppResourceId**: string: The resource id of the playbook resource
+* **tenantId**: string: The tenant id of the playbook resource
+
+## ClientInfo
+### Properties
+* **email**: string: The email of the client.
+* **name**: string: The name of the client.
+* **objectId**: string: The object id of the client.
+* **userPrincipalName**: string: The user principal name of the client.
+
+## AutomationRuleTriggeringLogic
+### Properties
+* **conditions**: [AutomationRuleCondition](#automationrulecondition)[]: The conditions to evaluate to determine if the automation rule should be triggered on a given object
+* **expirationTimeUtc**: string: Determines when the automation rule should automatically expire and be disabled.
+* **isEnabled**: bool (Required): Determines whether the automation rule is enabled or disabled.
+* **triggersOn**: string (Required): The type of object the automation rule triggers on
+* **triggersWhen**: string (Required): The type of event the automation rule triggers on
+
+## AutomationRuleCondition
+* **Discriminator**: conditionType
+### Base Properties
+### Property
+#### Properties
+* **conditionProperties**: [schemas:52_conditionProperties](#schemas52conditionproperties) (Required): The configuration of the automation rule condition
+* **conditionType**: 'Property' (Required): Describes an automation rule condition that evaluates a property's value
+
+
+## Property
+### Properties
+* **conditionProperties**: [schemas:52_conditionProperties](#schemas52conditionproperties) (Required): The configuration of the automation rule condition
+* **conditionType**: 'Property' (Required): Describes an automation rule condition that evaluates a property's value
+
+## schemas:52_conditionProperties
+### Properties
+* **operator**: 'Contains' | 'EndsWith' | 'Equals' | 'NotContains' | 'NotEndsWith' | 'NotEquals' | 'NotStartsWith' | 'StartsWith': The operator to use for evaluation the condition.
+* **propertyName**: 'AccountAadTenantId' | 'AccountAadUserId' | 'AccountName' | 'AccountNTDomain' | 'AccountObjectGuid' | 'AccountPUID' | 'AccountSid' | 'AccountUPNSuffix' | 'AzureResourceResourceId' | 'AzureResourceSubscriptionId' | 'CloudApplicationAppId' | 'CloudApplicationAppName' | 'DNSDomainName' | 'FileDirectory' | 'FileHashValue' | 'FileName' | 'HostAzureID' | 'HostName' | 'HostNetBiosName' | 'HostNTDomain' | 'HostOSVersion' | 'IncidentDescription' | 'IncidentProviderName' | 'IncidentRelatedAnalyticRuleIds' | 'IncidentSeverity' | 'IncidentStatus' | 'IncidentTactics' | 'IncidentTitle' | 'IoTDeviceId' | 'IoTDeviceModel' | 'IoTDeviceName' | 'IoTDeviceOperatingSystem' | 'IoTDeviceType' | 'IoTDeviceVendor' | 'IPAddress' | 'MailboxDisplayName' | 'MailboxPrimaryAddress' | 'MailboxUPN' | 'MailMessageDeliveryAction' | 'MailMessageDeliveryLocation' | 'MailMessageP1Sender' | 'MailMessageP2Sender' | 'MailMessageRecipient' | 'MailMessageSenderIP' | 'MailMessageSubject' | 'MalwareCategory' | 'MalwareName' | 'ProcessCommandLine' | 'ProcessId' | 'RegistryKey' | 'RegistryValueData' | 'Url': The property to evaluate.
+* **propertyValues**: string[]: The values to use for evaluating the condition
+
 ## BookmarkProperties
 ### Properties
 * **created**: string: The time the bookmark was created
@@ -472,9 +580,9 @@
 
 ## AwsCloudTrailDataConnectorDataTypes
 ### Properties
-* **logs**: [schemas:47_logs](#schemas47logs): Logs data type.
+* **logs**: [schemas:57_logs](#schemas57logs): Logs data type.
 
-## schemas:47_logs
+## schemas:57_logs
 ### Properties
 * **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
@@ -528,9 +636,9 @@
 
 ## Dynamics365DataConnectorDataTypes
 ### Properties
-* **dynamics365CdsActivities**: [schemas:92_dynamics365CdsActivities](#schemas92dynamics365cdsactivities): Common Data Service data type connection.
+* **dynamics365CdsActivities**: [schemas:102_dynamics365CdsActivities](#schemas102dynamics365cdsactivities): Common Data Service data type connection.
 
-## schemas:92_dynamics365CdsActivities
+## schemas:102_dynamics365CdsActivities
 ### Properties
 * **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
@@ -547,9 +655,9 @@
 ## MCASDataConnectorDataTypes
 ### Properties
 * **alerts**: [schemas:44_alerts](#schemas44alerts): Alerts data type connection.
-* **discoveryLogs**: [schemas:166_discoveryLogs](#schemas166discoverylogs): Discovery log data type connection.
+* **discoveryLogs**: [schemas:180_discoveryLogs](#schemas180discoverylogs): Discovery log data type connection.
 
-## schemas:166_discoveryLogs
+## schemas:180_discoveryLogs
 ### Properties
 * **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
@@ -613,19 +721,19 @@
 
 ## OfficeDataConnectorDataTypes
 ### Properties
-* **exchange**: [schemas:188_exchange](#schemas188exchange): Exchange data type connection.
-* **sharePoint**: [schemas:188_sharePoint](#schemas188sharepoint): SharePoint data type connection.
-* **teams**: [schemas:188_teams](#schemas188teams): Teams data type connection.
+* **exchange**: [schemas:202_exchange](#schemas202exchange): Exchange data type connection.
+* **sharePoint**: [schemas:202_sharePoint](#schemas202sharepoint): SharePoint data type connection.
+* **teams**: [schemas:202_teams](#schemas202teams): Teams data type connection.
 
-## schemas:188_exchange
+## schemas:202_exchange
 ### Properties
 * **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
-## schemas:188_sharePoint
+## schemas:202_sharePoint
 ### Properties
 * **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
-## schemas:188_teams
+## schemas:202_teams
 ### Properties
 * **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
@@ -659,9 +767,9 @@
 
 ## TiTaxiiDataConnectorDataTypes
 ### Properties
-* **taxiiClient**: [schemas:224_taxiiClient](#schemas224taxiiclient): Data type for TAXII connector.
+* **taxiiClient**: [schemas:238_taxiiClient](#schemas238taxiiclient): Data type for TAXII connector.
 
-## schemas:224_taxiiClient
+## schemas:238_taxiiClient
 ### Properties
 * **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
@@ -695,31 +803,12 @@
 * **commentsCount**: int (ReadOnly): The number of comments in the incident
 * **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation'[] (ReadOnly): The tactics associated with incident
 
-## IncidentLabel
-### Properties
-* **labelName**: string (Required): The name of the label
-* **labelType**: 'System' | 'User' (ReadOnly): The type of the label.
-
-## IncidentOwnerInfo
-### Properties
-* **assignedTo**: string: The name of the user the incident is assigned to.
-* **email**: string: The email of the user the incident is assigned to.
-* **objectId**: string: The object id of the user the incident is assigned to.
-* **userPrincipalName**: string: The user principal name of the user the incident is assigned to.
-
 ## IncidentCommentProperties
 ### Properties
 * **author**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
 * **createdTimeUtc**: string (ReadOnly): The time the comment was created
 * **lastModifiedTimeUtc**: string (ReadOnly): The time the comment was updated
 * **message**: string (Required): The comment message
-
-## ClientInfo
-### Properties
-* **email**: string: The email of the client.
-* **name**: string: The name of the client.
-* **objectId**: string: The object id of the client.
-* **userPrincipalName**: string: The user principal name of the client.
 
 ## EntityAnalytics
 ### Properties

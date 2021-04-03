@@ -20,6 +20,7 @@
 * **location**: string (Required): The supported Azure location where the key vault should be created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VaultProperties](#vaultproperties) (Required): Properties of the vault
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of key vault resource.
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags that will be assigned to the key vault.
 * **type**: 'Microsoft.KeyVault/vaults' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -151,6 +152,15 @@
 ### Properties
 * **family**: string (Required): SKU family name
 * **name**: 'premium' | 'standard' (Required): SKU name to specify whether the key vault is a standard vault or a premium vault.
+
+## SystemData
+### Properties
+* **createdAt**: string (ReadOnly): The timestamp of key vault resource creation (UTC).
+* **createdBy**: string (ReadOnly): The identity that created key vault resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created key vault resource.
+* **lastModifiedAt**: string (ReadOnly): The timestamp of key vault resource last modification (UTC).
+* **lastModifiedBy**: string (ReadOnly): The identity that last modified key vault resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that last modified key vault resource.
 
 ## Dictionary<string,String>
 ### Properties

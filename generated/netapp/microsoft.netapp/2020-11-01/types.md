@@ -245,7 +245,7 @@
 ## backupProperties
 ### Properties
 * **backupId**: string (ReadOnly): UUID v4 used to identify the Backup
-* **backupType**: string (ReadOnly): Type of backup adhoc or scheduled
+* **backupType**: 'Manual' | 'Scheduled' (ReadOnly): Type of backup Manual or Scheduled.
 * **creationDate**: string (ReadOnly): The creation date of the backup
 * **failureReason**: string (ReadOnly): Failure reason
 * **label**: string: Label for backup
