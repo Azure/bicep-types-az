@@ -3,49 +3,57 @@
 ## Resource Microsoft.SignalRService/signalR@2020-05-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: 'RawWebSockets' | 'SignalR'
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [SignalRProperties](#signalrproperties)
-* **sku**: [ResourceSku](#resourcesku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: 'RawWebSockets' | 'SignalR': The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR".
+* **location**: string: The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SignalRProperties](#signalrproperties): A class that describes the properties of the SignalR service that should contain more read-only properties than AzSignalR.Models.SignalRCreateOrUpdateProperties
+* **sku**: [ResourceSku](#resourcesku): The billing information of the SignalR resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags of the service which is a list of key value pairs that describe the resource.
+* **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SignalRService/signalR/privateEndpointConnections@2020-05-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
-* **type**: 'Microsoft.SignalRService/signalR/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Private endpoint connection properties
+* **type**: 'Microsoft.SignalRService/signalR/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## SignalRProperties
 ### Properties
-* **cors**: [SignalRCorsSettings](#signalrcorssettings)
-* **externalIP**: string (ReadOnly)
-* **features**: [SignalRFeature](#signalrfeature)[]
-* **hostName**: string (ReadOnly)
-* **hostNamePrefix**: string (ReadOnly)
-* **networkACLs**: [SignalRNetworkACLs](#signalrnetworkacls)
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly)
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
-* **publicPort**: int (ReadOnly)
-* **serverPort**: int (ReadOnly)
-* **upstream**: [ServerlessUpstreamSettings](#serverlessupstreamsettings)
-* **version**: string (ReadOnly)
+* **cors**: [SignalRCorsSettings](#signalrcorssettings): Cross-Origin Resource Sharing (CORS) settings.
+* **externalIP**: string (ReadOnly): The publicly accessible IP of the SignalR service.
+* **features**: [SignalRFeature](#signalrfeature)[]: List of SignalR featureFlags. e.g. ServiceMode.
+
+FeatureFlags that are not included in the parameters for the update operation will not be modified.
+And the response will only include featureFlags that are explicitly set.
+When a featureFlag is not explicitly set, SignalR service will use its globally default value.
+But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
+* **hostName**: string (ReadOnly): FQDN of the SignalR service instance. Format: xxx.service.signalr.net
+* **hostNamePrefix**: string (ReadOnly): Prefix for the hostName of the SignalR service. Retained for future use.
+The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
+* **networkACLs**: [SignalRNetworkACLs](#signalrnetworkacls): Network ACLs for SignalR
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Private endpoint connections to the SignalR resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the resource.
+* **publicPort**: int (ReadOnly): The publicly accessible port of the SignalR service which is designed for browser/client side usage.
+* **serverPort**: int (ReadOnly): The publicly accessible port of the SignalR service which is designed for customer server side usage.
+* **upstream**: [ServerlessUpstreamSettings](#serverlessupstreamsettings): The settings for the Upstream when the Azure SignalR is in server-less mode.
+* **version**: string (ReadOnly): Version of the SignalR resource. Probably you need the same or higher version of client SDKs.
 
 ## SignalRCorsSettings
 ### Properties
-* **allowedOrigins**: string[]
+* **allowedOrigins**: string[]: Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.
 
 ## SignalRFeature
 ### Properties
-* **flag**: 'EnableConnectivityLogs' | 'EnableMessagingLogs' | 'ServiceMode' (Required)
-* **properties**: [Dictionary<string,String>](#dictionarystringstring)
-* **value**: string (Required)
+* **flag**: 'EnableConnectivityLogs' | 'EnableMessagingLogs' | 'ServiceMode' (Required): FeatureFlags is the supported features of Azure SignalR service.
+- ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
+- EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.
+* **properties**: [Dictionary<string,String>](#dictionarystringstring): Optional properties related to this feature.
+* **value**: string (Required): Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
 
 ## Dictionary<string,String>
 ### Properties
@@ -54,62 +62,83 @@
 
 ## SignalRNetworkACLs
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny'
-* **privateEndpoints**: [PrivateEndpointACL](#privateendpointacl)[]
-* **publicNetwork**: [NetworkACL](#networkacl)
+* **defaultAction**: 'Allow' | 'Deny': Default action when no other rule matches.
+* **privateEndpoints**: [PrivateEndpointACL](#privateendpointacl)[]: ACLs for requests from private endpoints
+* **publicNetwork**: [NetworkACL](#networkacl): Network ACL
 
 ## PrivateEndpointACL
 ### Properties
-* **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection'[]
-* **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection'[]
-* **name**: string (Required)
+* **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection'[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection'[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **name**: string (Required): Name of the private endpoint connection
 
 ## NetworkACL
 ### Properties
-* **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection'[]
-* **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection'[]
+* **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection'[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection'[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
 
 ## PrivateEndpointConnection
 ### Properties
-* **id**: string (ReadOnly)
-* **name**: string (ReadOnly)
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
-* **type**: string (ReadOnly)
+* **id**: string (ReadOnly): Fully qualified resource Id for the resource.
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Private endpoint connection properties
+* **type**: string (ReadOnly): The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate)
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Connection state of the private endpoint connection
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the private endpoint connection.
 
 ## PrivateEndpoint
 ### Properties
-* **id**: string
+* **id**: string: Full qualified Id of the private endpoint
 
 ## PrivateLinkServiceConnectionState
 ### Properties
-* **actionsRequired**: string
-* **description**: string
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
+* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
+* **description**: string: The reason for approval/rejection of the connection.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## ServerlessUpstreamSettings
 ### Properties
-* **templates**: [UpstreamTemplate](#upstreamtemplate)[]
+* **templates**: [UpstreamTemplate](#upstreamtemplate)[]: Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.
 
 ## UpstreamTemplate
 ### Properties
-* **categoryPattern**: string
-* **eventPattern**: string
-* **hubPattern**: string
-* **urlTemplate**: string (Required)
+* **categoryPattern**: string: Gets or sets the matching pattern for category names. If not set, it matches any category.
+There are 3 kind of patterns supported:
+    1. "*", it to matches any category name
+    2. Combine multiple categories with ",", for example "connections,messages", it matches category "connections" and "messages"
+    3. The single category name, for example, "connections", it matches the category "connections"
+* **eventPattern**: string: Gets or sets the matching pattern for event names. If not set, it matches any event.
+There are 3 kind of patterns supported:
+    1. "*", it to matches any event name
+    2. Combine multiple events with ",", for example "connect,disconnect", it matches event "connect" and "disconnect"
+    3. The single event name, for example, "connect", it matches "connect"
+* **hubPattern**: string: Gets or sets the matching pattern for hub names. If not set, it matches any hub.
+There are 3 kind of patterns supported:
+    1. "*", it to matches any hub name
+    2. Combine multiple hubs with ",", for example "hub1,hub2", it matches "hub1" and "hub2"
+    3. The single hub name, for example, "hub1", it matches "hub1"
+* **urlTemplate**: string (Required): Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
+For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.
 
 ## ResourceSku
 ### Properties
-* **capacity**: int
-* **family**: string (ReadOnly)
-* **name**: string (Required)
-* **size**: string (ReadOnly)
-* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard'
+* **capacity**: int: Optional, integer. The unit count of SignalR resource. 1 by default.
+
+If present, following values are allowed:
+    Free: 1
+    Standard: 1,2,5,10,20,50,100
+* **family**: string (ReadOnly): Not used. Retained for future use.
+* **name**: string (Required): The name of the SKU. Required.
+
+Allowed values: Standard_S1, Free_F1
+* **size**: string (ReadOnly): Not used. Retained for future use.
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': Optional tier of this particular SKU. 'Standard' or 'Free'.
+
+`Basic` is deprecated, use `Standard` instead.
 
 ## Dictionary<string,String>
 ### Properties

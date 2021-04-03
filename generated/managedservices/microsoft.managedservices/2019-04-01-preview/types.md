@@ -3,67 +3,67 @@
 ## Resource Microsoft.ManagedServices/registrationAssignments@2019-04-01-preview
 * **Valid Scope(s)**: Unknown
 ### Properties
-* **apiVersion**: '2019-04-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [RegistrationAssignmentProperties](#registrationassignmentproperties)
-* **type**: 'Microsoft.ManagedServices/registrationAssignments' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RegistrationAssignmentProperties](#registrationassignmentproperties): Properties of a registration assignment.
+* **type**: 'Microsoft.ManagedServices/registrationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedServices/registrationDefinitions@2019-04-01-preview
 * **Valid Scope(s)**: Unknown
 ### Properties
-* **apiVersion**: '2019-04-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **plan**: [Plan](#plan)
-* **properties**: [RegistrationDefinitionProperties](#registrationdefinitionproperties)
-* **type**: 'Microsoft.ManagedServices/registrationDefinitions' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **plan**: [Plan](#plan): Plan details for the managed services.
+* **properties**: [RegistrationDefinitionProperties](#registrationdefinitionproperties): Properties of a registration definition.
+* **type**: 'Microsoft.ManagedServices/registrationDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## RegistrationAssignmentProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly)
-* **registrationDefinition**: [schemas:4_registrationDefinition](#schemas4registrationdefinition) (ReadOnly)
-* **registrationDefinitionId**: string (Required)
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Current state of the registration assignment.
+* **registrationDefinition**: [schemas:4_registrationDefinition](#schemas4registrationdefinition) (ReadOnly): Registration definition inside registration assignment.
+* **registrationDefinitionId**: string (Required): Fully qualified path of the registration definition.
 
 ## schemas:4_registrationDefinition
 ### Properties
-* **id**: string (ReadOnly)
-* **name**: string (ReadOnly)
-* **plan**: [Plan](#plan)
-* **properties**: [schemas:4_registrationDefinition_properties](#schemas4registrationdefinitionproperties)
-* **type**: string (ReadOnly)
+* **id**: string (ReadOnly): Fully qualified path of the registration definition.
+* **name**: string (ReadOnly): Name of the registration definition.
+* **plan**: [Plan](#plan): Plan details for the managed services.
+* **properties**: [schemas:4_registrationDefinition_properties](#schemas4registrationdefinitionproperties): Properties of registration definition inside registration assignment.
+* **type**: string (ReadOnly): Type of the resource (Microsoft.ManagedServices/registrationDefinitions).
 
 ## Plan
 ### Properties
-* **name**: string (Required)
-* **product**: string (Required)
-* **publisher**: string (Required)
-* **version**: string (Required)
+* **name**: string (Required): The plan name.
+* **product**: string (Required): The product code.
+* **publisher**: string (Required): The publisher ID.
+* **version**: string (Required): The plan's version.
 
 ## schemas:4_registrationDefinition_properties
 ### Properties
-* **authorizations**: [Authorization](#authorization)[]
-* **description**: string
-* **managedByTenantId**: string
-* **managedByTenantName**: string
-* **manageeTenantId**: string
-* **manageeTenantName**: string
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating'
-* **registrationDefinitionName**: string
+* **authorizations**: [Authorization](#authorization)[]: Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+* **description**: string: Description of the registration definition.
+* **managedByTenantId**: string: Id of the managedBy tenant.
+* **managedByTenantName**: string: Name of the managedBy tenant.
+* **manageeTenantId**: string: Id of the home tenant.
+* **manageeTenantName**: string: Name of the home tenant.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating': Current state of the registration definition.
+* **registrationDefinitionName**: string: Name of the registration definition.
 
 ## Authorization
 ### Properties
-* **delegatedRoleDefinitionIds**: string[]
-* **principalId**: string (Required)
-* **principalIdDisplayName**: string
-* **roleDefinitionId**: string (Required)
+* **delegatedRoleDefinitionIds**: string[]: The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.
+* **principalId**: string (Required): Principal Id of the security group/service principal/user that would be assigned permissions to the projected subscription
+* **principalIdDisplayName**: string: Display name of the principal Id.
+* **roleDefinitionId**: string (Required): The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.
 
 ## RegistrationDefinitionProperties
 ### Properties
-* **authorizations**: [Authorization](#authorization)[] (Required)
-* **description**: string
-* **managedByTenantId**: string (Required)
-* **managedByTenantName**: string (ReadOnly)
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly)
-* **registrationDefinitionName**: string
+* **authorizations**: [Authorization](#authorization)[] (Required): Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+* **description**: string: Description of the registration definition.
+* **managedByTenantId**: string (Required): Id of the managedBy tenant.
+* **managedByTenantName**: string (ReadOnly): Name of the managedBy tenant.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Current state of the registration definition.
+* **registrationDefinitionName**: string: Name of the registration definition.
 

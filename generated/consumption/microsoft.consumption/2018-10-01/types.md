@@ -3,34 +3,34 @@
 ## Resource Microsoft.Consumption/budgets@2018-10-01
 * **Valid Scope(s)**: Subscription, ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [BudgetProperties](#budgetproperties)
-* **type**: 'Microsoft.Consumption/budgets' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [BudgetProperties](#budgetproperties): The properties of the budget.
+* **type**: 'Microsoft.Consumption/budgets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## BudgetProperties
 ### Properties
-* **amount**: int (Required)
-* **category**: 'Cost' | 'Usage' (Required)
-* **currentSpend**: [CurrentSpend](#currentspend) (ReadOnly)
-* **filters**: [Filters](#filters)
-* **notifications**: [Dictionary<string,Notification>](#dictionarystringnotification)
-* **timeGrain**: 'Annually' | 'Monthly' | 'Quarterly' (Required)
-* **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required)
+* **amount**: int (Required): The total amount of cost to track with the budget
+* **category**: 'Cost' | 'Usage' (Required): The category of the budget, whether the budget tracks cost or usage.
+* **currentSpend**: [CurrentSpend](#currentspend) (ReadOnly): The current amount of cost which is being tracked for a budget.
+* **filters**: [Filters](#filters): May be used to filter budgets by resource group, resource, or meter.
+* **notifications**: [Dictionary<string,Notification>](#dictionarystringnotification): Dictionary of notifications associated with the budget. Budget can have up to five notifications.
+* **timeGrain**: 'Annually' | 'Monthly' | 'Quarterly' (Required): The time covered by a budget. Tracking of the amount will be reset based on the time grain.
+* **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required): The start and end date for a budget.
 
 ## CurrentSpend
 ### Properties
-* **amount**: int (ReadOnly)
-* **unit**: string (ReadOnly)
+* **amount**: int (ReadOnly): The total amount of cost which is being tracked by the budget.
+* **unit**: string (ReadOnly): The unit of measure for the budget amount.
 
 ## Filters
 ### Properties
-* **meters**: string[]
-* **resourceGroups**: string[]
-* **resources**: string[]
-* **tags**: [Dictionary<string,IList<String>>](#dictionarystringiliststring)
+* **meters**: string[]: The list of filters on meters (GUID), mandatory for budgets of usage category.
+* **resourceGroups**: string[]: The list of filters on resource groups, allowed at subscription level only.
+* **resources**: string[]: The list of filters on resources.
+* **tags**: [Dictionary<string,IList<String>>](#dictionarystringiliststring): The dictionary of filters on tags.
 
 ## Dictionary<string,IList<String>>
 ### Properties
@@ -44,15 +44,15 @@
 
 ## Notification
 ### Properties
-* **contactEmails**: string[] (Required)
-* **contactGroups**: string[]
-* **contactRoles**: string[]
-* **enabled**: bool (Required)
-* **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' (Required)
-* **threshold**: int (Required)
+* **contactEmails**: string[] (Required): Email addresses to send the budget notification to when the threshold is exceeded.
+* **contactGroups**: string[]: Action groups to send the budget notification to when the threshold is exceeded.
+* **contactRoles**: string[]: Contact roles to send the budget notification to when the threshold is exceeded.
+* **enabled**: bool (Required): The notification is enabled or not.
+* **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' (Required): The comparison operator.
+* **threshold**: int (Required): Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.
 
 ## BudgetTimePeriod
 ### Properties
-* **endDate**: string
-* **startDate**: string (Required)
+* **endDate**: string: The end date for the budget. If not provided, we default this to 10 years from the start date.
+* **startDate**: string (Required): The start date for the budget.
 

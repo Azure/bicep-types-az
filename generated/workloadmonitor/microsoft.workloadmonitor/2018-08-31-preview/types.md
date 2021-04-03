@@ -3,14 +3,14 @@
 ## Resource Microsoft.WorkloadMonitor/notificationSettings@2018-08-31-preview
 * **Valid Scope(s)**: Extension
 ### Properties
-* **apiVersion**: '2018-08-31-preview' (ReadOnly, DeployTimeConstant)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [NotificationSettingProperties](#notificationsettingproperties) (ReadOnly)
-* **type**: 'Microsoft.WorkloadMonitor/notificationSettings' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-08-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): For optimistic concurrency control.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NotificationSettingProperties](#notificationsettingproperties) (ReadOnly): Model for properties of a NotificationSetting.
+* **type**: 'Microsoft.WorkloadMonitor/notificationSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## NotificationSettingProperties
 ### Properties
-* **actionGroupResourceIds**: string[] (ReadOnly)
+* **actionGroupResourceIds**: string[] (ReadOnly): List of action group resource ids to be notified
 

@@ -3,45 +3,45 @@
 ## Resource Microsoft.DelegatedNetwork/controller@2020-08-08-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-08-08-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [DelegatedControllerProperties](#delegatedcontrollerproperties) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.DelegatedNetwork/controller' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-08-08-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DelegatedControllerProperties](#delegatedcontrollerproperties) (ReadOnly): Properties of Delegated controller resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **type**: 'Microsoft.DelegatedNetwork/controller' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DelegatedNetwork/delegatedSubnets@2020-08-08-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-08-08-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [DelegatedSubnetProperties](#delegatedsubnetproperties) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.DelegatedNetwork/delegatedSubnets' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-08-08-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DelegatedSubnetProperties](#delegatedsubnetproperties) (ReadOnly): Properties of delegated subnet
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **type**: 'Microsoft.DelegatedNetwork/delegatedSubnets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DelegatedNetwork/orchestrators@2020-08-08-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-08-08-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [OrchestratorIdentity](#orchestratoridentity)
-* **kind**: string (Required)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [OrchestratorResourceProperties](#orchestratorresourceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.DelegatedNetwork/orchestrators' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-08-08-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [OrchestratorIdentity](#orchestratoridentity):
+* **kind**: string (Required): The kind of workbook. Choices are user and shared.
+* **location**: string: Location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [OrchestratorResourceProperties](#orchestratorresourceproperties): Properties of orchestrator
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **type**: 'Microsoft.DelegatedNetwork/orchestrators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DelegatedControllerProperties
 ### Properties
-* **dncAppId**: string (ReadOnly)
-* **dncEndpoint**: string (ReadOnly)
-* **dncTenantId**: string (ReadOnly)
-* **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly)
-* **resourceGuid**: string (ReadOnly)
+* **dncAppId**: string (ReadOnly): dnc application id should be used by customer to authenticate with dnc gateway.
+* **dncEndpoint**: string (ReadOnly): dnc endpoint url that customers can use to connect to
+* **dncTenantId**: string (ReadOnly): tenant id of dnc application id
+* **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The current state of dnc controller resource.
+* **resourceGuid**: string (ReadOnly): Resource guid.
 
 ## Dictionary<string,String>
 ### Properties
@@ -50,18 +50,18 @@
 
 ## DelegatedSubnetProperties
 ### Properties
-* **controllerDetails**: [controllerDetails](#controllerdetails)
-* **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly)
-* **resourceGuid**: string (ReadOnly)
-* **subnetDetails**: [subnetDetails](#subnetdetails)
+* **controllerDetails**: [controllerDetails](#controllerdetails): controller details
+* **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The current state of dnc delegated subnet resource.
+* **resourceGuid**: string (ReadOnly): Resource guid.
+* **subnetDetails**: [subnetDetails](#subnetdetails): Properties of orchestrator
 
 ## controllerDetails
 ### Properties
-* **id**: string
+* **id**: string: controller arm resource id
 
 ## subnetDetails
 ### Properties
-* **id**: string
+* **id**: string: subnet arm resource id
 
 ## Dictionary<string,String>
 ### Properties
@@ -70,19 +70,19 @@
 
 ## OrchestratorIdentity
 ### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned'
+* **principalId**: string (ReadOnly): The principal id of the system assigned identity which is used by orchestrator.
+* **tenantId**: string (ReadOnly): The tenant id of the system assigned identity which is used by orchestrator.
+* **type**: 'None' | 'SystemAssigned': The type of identity used for orchestrator cluster. Type 'SystemAssigned' will use an implicitly created identity orchestrator clusters.
 
 ## OrchestratorResourceProperties
 ### Properties
-* **apiServerEndpoint**: string
-* **clusterRootCA**: string
-* **controllerDetails**: [controllerDetails](#controllerdetails) (Required)
-* **orchestratorAppId**: string
-* **orchestratorTenantId**: string
-* **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly)
-* **resourceGuid**: string (ReadOnly)
+* **apiServerEndpoint**: string: K8s APIServer url
+* **clusterRootCA**: string: RootCA certificate of kubernetes cluster base64 encoded
+* **controllerDetails**: [controllerDetails](#controllerdetails) (Required): controller details
+* **orchestratorAppId**: string: AAD ID used with apiserver
+* **orchestratorTenantId**: string: TenantID of server App ID
+* **provisioningState**: 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The current state of orchestratorInstance resource.
+* **resourceGuid**: string (ReadOnly): Resource guid.
 
 ## Dictionary<string,String>
 ### Properties

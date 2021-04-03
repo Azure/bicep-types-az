@@ -3,38 +3,38 @@
 ## Resource Microsoft.AzureData/sqlServerRegistrations@2019-07-24-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-07-24-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [SqlServerRegistrationProperties](#sqlserverregistrationproperties)
-* **systemData**: [SystemData](#systemdata) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.AzureData/sqlServerRegistrations' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-07-24-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SqlServerRegistrationProperties](#sqlserverregistrationproperties): The SQL server Registration properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.AzureData/sqlServerRegistrations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureData/sqlServerRegistrations/sqlServers@2019-07-24-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-07-24-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [SqlServerProperties](#sqlserverproperties)
-* **type**: 'Microsoft.AzureData/sqlServerRegistrations/sqlServers' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-07-24-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SqlServerProperties](#sqlserverproperties): The SQL server properties.
+* **type**: 'Microsoft.AzureData/sqlServerRegistrations/sqlServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## SqlServerRegistrationProperties
 ### Properties
-* **propertyBag**: string
-* **resourceGroup**: string
-* **subscriptionId**: string
+* **propertyBag**: string: Optional Properties as JSON string
+* **resourceGroup**: string: Resource Group Name
+* **subscriptionId**: string: Subscription Id
 
 ## SystemData
 ### Properties
-* **createdAt**: string
-* **createdBy**: string
-* **createdByType**: 'application' | 'key' | 'managedIdentity' | 'user'
-* **lastModifiedAt**: string
-* **lastModifiedBy**: string
-* **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user'
+* **createdAt**: string: The timestamp of resource creation (UTC)
+* **createdBy**: string: An identifier for the identity that created the resource
+* **createdByType**: 'application' | 'key' | 'managedIdentity' | 'user': The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: An identifier for the identity that last modified the resource
+* **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user': The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties
@@ -43,9 +43,9 @@
 
 ## SqlServerProperties
 ### Properties
-* **cores**: int
-* **edition**: string
-* **propertyBag**: string
-* **registrationID**: string
-* **version**: string
+* **cores**: int: Cores of the Sql Server.
+* **edition**: string: Sql Server Edition.
+* **propertyBag**: string: Sql Server Json Property Bag.
+* **registrationID**: string: ID for Parent Sql Server Registration.
+* **version**: string: Version of the Sql Server.
 

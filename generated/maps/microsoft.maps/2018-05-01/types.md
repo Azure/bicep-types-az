@@ -3,23 +3,23 @@
 ## Resource Microsoft.Maps/accounts@2018-05-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [MapsAccountProperties](#mapsaccountproperties) (ReadOnly)
-* **sku**: [Sku](#sku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Maps/accounts' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [MapsAccountProperties](#mapsaccountproperties) (ReadOnly): Additional Map account properties
+* **sku**: [Sku](#sku) (Required): The SKU of the Maps Account.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
+* **type**: 'Microsoft.Maps/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## MapsAccountProperties
 ### Properties
-* **x-ms-client-id**: string (ReadOnly)
+* **x-ms-client-id**: string (ReadOnly): A unique identifier for the maps account
 
 ## Sku
 ### Properties
-* **name**: string (Required)
-* **tier**: string (ReadOnly)
+* **name**: string (Required): The name of the SKU, in standard format (such as S0).
+* **tier**: string (ReadOnly): Gets the sku tier. This is based on the SKU name.
 
 ## Dictionary<string,String>
 ### Properties

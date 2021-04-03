@@ -3,40 +3,41 @@
 ## Resource Microsoft.Web/connections@2015-08-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2015-08-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [schemas:1_properties](#schemas1properties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Web/connections' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2015-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:1_properties](#schemas1properties):
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: 'Microsoft.Web/connections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## schemas:1_properties
 ### Properties
-* **apiDefinitionUrl**: string
-* **backendService**: [BackendServiceDefinition](#backendservicedefinition)
-* **capabilities**: string[]
-* **changedTime**: string
-* **connectionParameters**: [Dictionary<string,ConnectionParameter>](#dictionarystringconnectionparameter)
-* **createdTime**: string
-* **generalInformation**: [GeneralApiInformation](#generalapiinformation)
-* **metadata**: any
-* **name**: string
-* **path**: string
-* **policies**: [ApiPolicies](#apipolicies)
-* **protocols**: string[]
-* **runtimeUrls**: string[]
+* **apiDefinitionUrl**: string: API definition Url - url where the swagger can be downloaded from
+* **backendService**: [BackendServiceDefinition](#backendservicedefinition): API definitions with backend urls
+* **capabilities**: string[]: Capabilities
+* **changedTime**: string: Timestamp of last connection change.
+* **connectionParameters**: [Dictionary<string,ConnectionParameter>](#dictionarystringconnectionparameter): Connection parameters
+* **createdTime**: string: Timestamp of the connection creation
+* **generalInformation**: [GeneralApiInformation](#generalapiinformation): General API information
+* **metadata**: any:
+* **name**: string: Name of the API
+            the URL path of this API when exposed via APIM
+* **path**: string: the URL path of this API when exposed via APIM
+* **policies**: [ApiPolicies](#apipolicies): API policies
+* **protocols**: string[]: Protocols supported by the front end - http/https
+* **runtimeUrls**: string[]: Read only property returning the runtime endpoints where the API can be called
 
 ## BackendServiceDefinition
 ### Properties
-* **id**: string
-* **kind**: string
-* **location**: string (Required)
-* **name**: string
-* **properties**: [schemas:1_properties](#schemas1properties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: string
+* **id**: string: Resource Id
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
+* **name**: string: Resource Name
+* **properties**: [schemas:1_properties](#schemas1properties):
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: string: Resource type
 
 ## Dictionary<string,String>
 ### Properties
@@ -50,20 +51,20 @@
 
 ## ConnectionParameter
 ### Properties
-* **defaultValue**: any
-* **oAuthSettings**: [ApiOAuthSettings](#apioauthsettings)
-* **type**: 'array' | 'bool' | 'connection' | 'int' | 'oauthSetting' | 'object' | 'secureobject' | 'securestring' | 'string'
-* **uiDefinition**: any
+* **defaultValue**: any:
+* **oAuthSettings**: [ApiOAuthSettings](#apioauthsettings): OAuth settings for the connection provider
+* **type**: 'array' | 'bool' | 'connection' | 'int' | 'oauthSetting' | 'object' | 'secureobject' | 'securestring' | 'string': Type of the parameter.
+* **uiDefinition**: any:
 
 ## ApiOAuthSettings
 ### Properties
-* **clientId**: string
-* **clientSecret**: string
-* **customParameters**: [Dictionary<string,ApiOAuthSettingsParameter>](#dictionarystringapioauthsettingsparameter)
-* **identityProvider**: string
-* **properties**: any
-* **redirectUrl**: string
-* **scopes**: string[]
+* **clientId**: string: Resource provider client id
+* **clientSecret**: string: Client Secret needed for OAuth
+* **customParameters**: [Dictionary<string,ApiOAuthSettingsParameter>](#dictionarystringapioauthsettingsparameter): OAuth parameters key is the name of parameter
+* **identityProvider**: string: Identity provider
+* **properties**: any:
+* **redirectUrl**: string: Url
+* **scopes**: string[]: OAuth scopes
 
 ## Dictionary<string,ApiOAuthSettingsParameter>
 ### Properties
@@ -72,19 +73,19 @@
 
 ## ApiOAuthSettingsParameter
 ### Properties
-* **options**: any
-* **uiDefinition**: any
-* **value**: string
+* **options**: any:
+* **uiDefinition**: any:
+* **value**: string: Value
 
 ## GeneralApiInformation
 ### Properties
-* **id**: string
-* **kind**: string
-* **location**: string (Required)
-* **name**: string
-* **properties**: [schemas:1_properties](#schemas1properties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: string
+* **id**: string: Resource Id
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
+* **name**: string: Resource Name
+* **properties**: [schemas:1_properties](#schemas1properties):
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: string: Resource type
 
 ## Dictionary<string,String>
 ### Properties
@@ -93,13 +94,13 @@
 
 ## ApiPolicies
 ### Properties
-* **id**: string
-* **kind**: string
-* **location**: string (Required)
-* **name**: string
-* **properties**: [schemas:1_properties](#schemas1properties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: string
+* **id**: string: Resource Id
+* **kind**: string: Kind of resource
+* **location**: string (Required): Resource Location
+* **name**: string: Resource Name
+* **properties**: [schemas:1_properties](#schemas1properties):
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: string: Resource type
 
 ## Dictionary<string,String>
 ### Properties

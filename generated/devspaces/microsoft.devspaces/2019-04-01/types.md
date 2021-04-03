@@ -3,28 +3,28 @@
 ## Resource Microsoft.DevSpaces/controllers@2019-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ControllerProperties](#controllerproperties) (Required)
-* **sku**: [Sku](#sku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.DevSpaces/controllers' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Region where the Azure resource is located.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ControllerProperties](#controllerproperties) (Required):
+* **sku**: [Sku](#sku) (Required): Model representing SKU for Azure Dev Spaces Controller.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags for the Azure resource.
+* **type**: 'Microsoft.DevSpaces/controllers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ControllerProperties
 ### Properties
-* **dataPlaneFqdn**: string (ReadOnly)
-* **hostSuffix**: string (ReadOnly)
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly)
-* **targetContainerHostApiServerFqdn**: string (ReadOnly)
-* **targetContainerHostCredentialsBase64**: string (Required)
-* **targetContainerHostResourceId**: string (Required)
+* **dataPlaneFqdn**: string (ReadOnly): DNS name for accessing DataPlane services
+* **hostSuffix**: string (ReadOnly): DNS suffix for public endpoints running in the Azure Dev Spaces Controller.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the Azure Dev Spaces Controller.
+* **targetContainerHostApiServerFqdn**: string (ReadOnly): DNS of the target container host's API server
+* **targetContainerHostCredentialsBase64**: string (Required): Credentials of the target container host (base64).
+* **targetContainerHostResourceId**: string (Required): Resource ID of the target container host
 
 ## Sku
 ### Properties
-* **name**: string (Required)
-* **tier**: 'Standard'
+* **name**: string (Required): The name of the SKU for Azure Dev Spaces Controller.
+* **tier**: 'Standard': The tier of the SKU for Azure Dev Spaces Controller.
 
 ## Dictionary<string,String>
 ### Properties
