@@ -3,68 +3,68 @@
 ## Resource Microsoft.ContainerService/containerServices@2015-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ContainerServiceProperties](#containerserviceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.ContainerService/containerServices' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ContainerServiceProperties](#containerserviceproperties): Properties of container service
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: 'Microsoft.ContainerService/containerServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ContainerServiceProperties
 ### Properties
-* **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[] (Required)
-* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile)
-* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile) (Required)
-* **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required)
-* **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile)
-* **provisioningState**: string (ReadOnly)
-* **windowsProfile**: [ContainerServiceWindowsProfile](#containerservicewindowsprofile)
+* **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[] (Required): Properties of agent pools
+* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile):
+* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile) (Required): Profile for Linux VM
+* **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required): Profile for container service master
+* **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile): Profile for Orchestrator
+* **provisioningState**: string (ReadOnly): Gets the provisioning state, which only appears in the response.
+* **windowsProfile**: [ContainerServiceWindowsProfile](#containerservicewindowsprofile): Profile for Windows jumpbox
 
 ## ContainerServiceAgentPoolProfile
 ### Properties
-* **count**: int
-* **dnsPrefix**: string (Required)
-* **fqdn**: string (ReadOnly)
-* **name**: string (Required)
-* **vmSize**: 'Standard_A0' | 'Standard_A1' | 'Standard_A10' | 'Standard_A11' | 'Standard_A2' | 'Standard_A3' | 'Standard_A4' | 'Standard_A5' | 'Standard_A6' | 'Standard_A7' | 'Standard_A8' | 'Standard_A9' | 'Standard_D1_v2' | 'Standard_D1' | 'Standard_D11_v2' | 'Standard_D11' | 'Standard_D12_v2' | 'Standard_D12' | 'Standard_D13_v2' | 'Standard_D13' | 'Standard_D14_v2' | 'Standard_D14' | 'Standard_D2_v2' | 'Standard_D2' | 'Standard_D3_v2' | 'Standard_D3' | 'Standard_D4_v2' | 'Standard_D4' | 'Standard_D5_v2' | 'Standard_DS1' | 'Standard_DS11' | 'Standard_DS12' | 'Standard_DS13' | 'Standard_DS14' | 'Standard_DS2' | 'Standard_DS3' | 'Standard_DS4' | 'Standard_G1' | 'Standard_G2' | 'Standard_G3' | 'Standard_G4' | 'Standard_G5' | 'Standard_GS1' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS5'
+* **count**: int: No. of agents (VMs) that will host docker containers
+* **dnsPrefix**: string (Required): DNS prefix to be used to create FQDN for this agent pool
+* **fqdn**: string (ReadOnly): FQDN for the agent pool
+* **name**: string (Required): Unique name of the agent pool profile within the context of the subscription and resource group
+* **vmSize**: 'Standard_A0' | 'Standard_A1' | 'Standard_A10' | 'Standard_A11' | 'Standard_A2' | 'Standard_A3' | 'Standard_A4' | 'Standard_A5' | 'Standard_A6' | 'Standard_A7' | 'Standard_A8' | 'Standard_A9' | 'Standard_D1_v2' | 'Standard_D1' | 'Standard_D11_v2' | 'Standard_D11' | 'Standard_D12_v2' | 'Standard_D12' | 'Standard_D13_v2' | 'Standard_D13' | 'Standard_D14_v2' | 'Standard_D14' | 'Standard_D2_v2' | 'Standard_D2' | 'Standard_D3_v2' | 'Standard_D3' | 'Standard_D4_v2' | 'Standard_D4' | 'Standard_D5_v2' | 'Standard_DS1' | 'Standard_DS11' | 'Standard_DS12' | 'Standard_DS13' | 'Standard_DS14' | 'Standard_DS2' | 'Standard_DS3' | 'Standard_DS4' | 'Standard_G1' | 'Standard_G2' | 'Standard_G3' | 'Standard_G4' | 'Standard_G5' | 'Standard_GS1' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS5': Size of agent VMs.
 
 ## ContainerServiceDiagnosticsProfile
 ### Properties
-* **vmDiagnostics**: [ContainerServiceVMDiagnostics](#containerservicevmdiagnostics)
+* **vmDiagnostics**: [ContainerServiceVMDiagnostics](#containerservicevmdiagnostics): Describes VM Diagnostics.
 
 ## ContainerServiceVMDiagnostics
 ### Properties
-* **enabled**: bool
-* **storageUri**: string (ReadOnly)
+* **enabled**: bool: Gets or sets whether VM Diagnostic Agent should be provisioned on the Virtual Machine.
+* **storageUri**: string (ReadOnly): Gets or sets whether VM Diagnostic Agent should be provisioned on the Virtual Machine.
 
 ## ContainerServiceLinuxProfile
 ### Properties
-* **adminUsername**: string (Required)
-* **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required)
+* **adminUsername**: string (Required): The administrator username to use for all Linux VMs
+* **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required): SSH configuration for Linux based VMs running on Azure
 
 ## ContainerServiceSshConfiguration
 ### Properties
-* **publicKeys**: [ContainerServiceSshPublicKey](#containerservicesshpublickey)[]
+* **publicKeys**: [ContainerServiceSshPublicKey](#containerservicesshpublickey)[]: Gets or sets the list of SSH public keys used to authenticate with Linux based VMs
 
 ## ContainerServiceSshPublicKey
 ### Properties
-* **keyData**: string (Required)
+* **keyData**: string (Required): Gets or sets Certificate public key used to authenticate with VM through SSH. The certificate must be in Pem format with or without headers.
 
 ## ContainerServiceMasterProfile
 ### Properties
-* **count**: int
-* **dnsPrefix**: string (Required)
-* **fqdn**: string (ReadOnly)
+* **count**: int: Number of masters (VMs) in the container cluster
+* **dnsPrefix**: string (Required): DNS prefix to be used to create FQDN for master
+* **fqdn**: string (ReadOnly): FQDN for the master
 
 ## ContainerServiceOrchestratorProfile
 ### Properties
-* **orchestratorType**: 'DCOS' | 'Mesos' | 'SwarmPreview'
+* **orchestratorType**: 'DCOS' | 'Mesos' | 'SwarmPreview': Specifies what orchestrator will be used to manage container cluster resources.
 
 ## ContainerServiceWindowsProfile
 ### Properties
-* **adminPassword**: string (Required)
-* **adminUsername**: string (Required)
+* **adminPassword**: string (Required): The administrator password to use for Windows jumpbox
+* **adminUsername**: string (Required): The administrator username to use for Windows jumpbox
 
 ## Dictionary<string,String>
 ### Properties

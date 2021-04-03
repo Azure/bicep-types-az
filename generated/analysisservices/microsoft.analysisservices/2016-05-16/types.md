@@ -3,34 +3,34 @@
 ## Resource Microsoft.AnalysisServices/servers@2016-05-16
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2016-05-16' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [AnalysisServicesServerProperties](#analysisservicesserverproperties)
-* **sku**: [ResourceSku](#resourcesku) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.AnalysisServices/servers' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2016-05-16' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Location of the Analysis Services resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AnalysisServicesServerProperties](#analysisservicesserverproperties): Properties of Analysis Services resource.
+* **sku**: [ResourceSku](#resourcesku) (Required): Represents the SKU name and Azure pricing tier for Analysis Services resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Key-value pairs of additional resource provisioning properties.
+* **type**: 'Microsoft.AnalysisServices/servers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AnalysisServicesServerProperties
 ### Properties
-* **asAdministrators**: [ServerAdministrators](#serveradministrators)
-* **backupBlobContainerUri**: string
-* **managedMode**: int
-* **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly)
-* **serverFullName**: string (ReadOnly)
-* **serverMonitorMode**: int
-* **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly)
+* **asAdministrators**: [ServerAdministrators](#serveradministrators): An array of administrator user identities
+* **backupBlobContainerUri**: string: The container URI of backup blob.
+* **managedMode**: int: The managed mode of the server (0 = not managed, 1 = managed).
+* **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.
+* **serverFullName**: string (ReadOnly): The full name of the Analysis Services resource.
+* **serverMonitorMode**: int: The server monitor mode for AS server
+* **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
 
 ## ServerAdministrators
 ### Properties
-* **members**: string[]
+* **members**: string[]: An array of administrator user identities.
 
 ## ResourceSku
 ### Properties
-* **capacity**: int
-* **name**: string (Required)
-* **tier**: 'Basic' | 'Development' | 'Standard'
+* **capacity**: int: The number of instances in the read only query pool.
+* **name**: string (Required): Name of the SKU level.
+* **tier**: 'Basic' | 'Development' | 'Standard': The name of the Azure pricing tier to which the SKU applies.
 
 ## Dictionary<string,String>
 ### Properties

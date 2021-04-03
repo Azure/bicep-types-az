@@ -3,229 +3,229 @@
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload@2021-03-08
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [schemas:11_identity](#schemas11identity)
-* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ServicesProperties](#servicesproperties)
-* **systemData**: [systemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [schemas:11_identity](#schemas11identity): Setting indicating whether the service has a managed identity associated with it.
+* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required): The kind of the service.
+* **location**: string (Required): The resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServicesProperties](#servicesproperties): The properties of a service instance.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload/privateEndpointConnections@2021-03-08
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
-* **systemData**: [systemData](#systemdata)
-* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter@2021-03-08
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [schemas:11_identity](#schemas11identity)
-* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ServicesProperties](#servicesproperties)
-* **systemData**: [systemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [schemas:11_identity](#schemas11identity): Setting indicating whether the service has a managed identity associated with it.
+* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required): The kind of the service.
+* **location**: string (Required): The resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServicesProperties](#servicesproperties): The properties of a service instance.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateEndpointConnections@2021-03-08
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
-* **systemData**: [systemData](#systemdata)
-* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter@2021-03-08
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [schemas:11_identity](#schemas11identity)
-* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ServicesProperties](#servicesproperties)
-* **systemData**: [systemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [schemas:11_identity](#schemas11identity): Setting indicating whether the service has a managed identity associated with it.
+* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required): The kind of the service.
+* **location**: string (Required): The resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServicesProperties](#servicesproperties): The properties of a service instance.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateEndpointConnections@2021-03-08
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
-* **systemData**: [systemData](#systemdata)
-* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForMIPPolicySync@2021-03-08
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [schemas:11_identity](#schemas11identity)
-* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ServicesProperties](#servicesproperties)
-* **systemData**: [systemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForMIPPolicySync' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [schemas:11_identity](#schemas11identity): Setting indicating whether the service has a managed identity associated with it.
+* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required): The kind of the service.
+* **location**: string (Required): The resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServicesProperties](#servicesproperties): The properties of a service instance.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForMIPPolicySync' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForMIPPolicySync/privateEndpointConnections@2021-03-08
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
-* **systemData**: [systemData](#systemdata)
-* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForMIPPolicySync/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForMIPPolicySync/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI@2021-03-08
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [schemas:11_identity](#schemas11identity)
-* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ServicesProperties](#servicesproperties)
-* **systemData**: [systemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [schemas:11_identity](#schemas11identity): Setting indicating whether the service has a managed identity associated with it.
+* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required): The kind of the service.
+* **location**: string (Required): The resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServicesProperties](#servicesproperties): The properties of a service instance.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateEndpointConnections@2021-03-08
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
-* **systemData**: [systemData](#systemdata)
-* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell@2021-03-08
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **identity**: [schemas:11_identity](#schemas11identity)
-* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ServicesProperties](#servicesproperties)
-* **systemData**: [systemData](#systemdata)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [schemas:11_identity](#schemas11identity): Setting indicating whether the service has a managed identity associated with it.
+* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required): The kind of the service.
+* **location**: string (Required): The resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServicesProperties](#servicesproperties): The properties of a service instance.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell/privateEndpointConnections@2021-03-08
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
-* **systemData**: [systemData](#systemdata)
-* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell/privateEndpointConnections' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## schemas:11_identity
 ### Properties
-* **principalId**: string (ReadOnly)
-* **tenantId**: string (ReadOnly)
-* **type**: 'None' | 'SystemAssigned'
+* **principalId**: string (ReadOnly): The principal ID of the resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of the resource.
+* **type**: 'None' | 'SystemAssigned': Type of identity being specified, currently SystemAssigned and None are allowed.
 
 ## ServicesProperties
 ### Properties
-* **accessPolicies**: [ServiceAccessPolicyEntry](#serviceaccesspolicyentry)[]
-* **authenticationConfiguration**: [ServiceAuthenticationConfigurationInfo](#serviceauthenticationconfigurationinfo)
-* **corsConfiguration**: [ServiceCorsConfigurationInfo](#servicecorsconfigurationinfo)
-* **cosmosDbConfiguration**: [ServiceCosmosDbConfigurationInfo](#servicecosmosdbconfigurationinfo)
-* **exportConfiguration**: [ServiceExportConfigurationInfo](#serviceexportconfigurationinfo)
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Succeeded' | 'Updating' | 'Verifying' (ReadOnly)
-* **publicNetworkAccess**: 'Disabled' | 'Enabled'
+* **accessPolicies**: [ServiceAccessPolicyEntry](#serviceaccesspolicyentry)[]: The access policies of the service instance.
+* **authenticationConfiguration**: [ServiceAuthenticationConfigurationInfo](#serviceauthenticationconfigurationinfo): Authentication configuration information
+* **corsConfiguration**: [ServiceCorsConfigurationInfo](#servicecorsconfigurationinfo): The settings for the CORS configuration of the service instance.
+* **cosmosDbConfiguration**: [ServiceCosmosDbConfigurationInfo](#servicecosmosdbconfigurationinfo): The settings for the Cosmos DB database backing the service.
+* **exportConfiguration**: [ServiceExportConfigurationInfo](#serviceexportconfigurationinfo): Export operation configuration information
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: The list of private endpoint connections that are set up for this resource.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Succeeded' | 'Updating' | 'Verifying' (ReadOnly): The provisioning state.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Control permission for data plane traffic coming from public networks while private endpoint is enabled.
 
 ## ServiceAccessPolicyEntry
 ### Properties
-* **objectId**: string (Required)
+* **objectId**: string (Required): An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.
 
 ## ServiceAuthenticationConfigurationInfo
 ### Properties
-* **audience**: string
-* **authority**: string
-* **smartProxyEnabled**: bool
+* **audience**: string: The audience url for the service
+* **authority**: string: The authority url for the service
+* **smartProxyEnabled**: bool: If the SMART on FHIR proxy is enabled
 
 ## ServiceCorsConfigurationInfo
 ### Properties
-* **allowCredentials**: bool
-* **headers**: string[]
-* **maxAge**: int
-* **methods**: string[]
-* **origins**: string[]
+* **allowCredentials**: bool: If credentials are allowed via CORS.
+* **headers**: string[]: The headers to be allowed via CORS.
+* **maxAge**: int: The max age to be allowed via CORS.
+* **methods**: string[]: The methods to be allowed via CORS.
+* **origins**: string[]: The origins to be allowed via CORS.
 
 ## ServiceCosmosDbConfigurationInfo
 ### Properties
-* **keyVaultKeyUri**: string
-* **offerThroughput**: int
+* **keyVaultKeyUri**: string: The URI of the customer-managed key for the backing database.
+* **offerThroughput**: int: The provisioned throughput for the backing database.
 
 ## ServiceExportConfigurationInfo
 ### Properties
-* **storageAccountName**: string
+* **storageAccountName**: string: The name of the default export storage account.
 
 ## PrivateEndpointConnection
 ### Properties
-* **id**: string (ReadOnly)
-* **name**: string (ReadOnly)
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties)
-* **systemData**: [systemData](#systemdata)
-* **type**: string (ReadOnly)
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint)
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded'
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource.
 
 ## PrivateEndpoint
 ### Properties
-* **id**: string (ReadOnly)
+* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
 
 ## PrivateLinkServiceConnectionState
 ### Properties
-* **actionsRequired**: string
-* **description**: string
-* **status**: 'Approved' | 'Pending' | 'Rejected'
+* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
+* **description**: string: The reason for approval/rejection of the connection.
+* **status**: 'Approved' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## systemData
 ### Properties
-* **createdAt**: string
-* **createdBy**: string
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
-* **lastModifiedAt**: string
-* **lastModifiedBy**: string
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Dictionary<string,String>
 ### Properties

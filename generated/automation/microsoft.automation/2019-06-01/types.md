@@ -3,137 +3,137 @@
 ## Resource Microsoft.Automation/automationAccounts@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [AutomationAccountCreateOrUpdateProperties](#automationaccountcreateorupdateproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Automation/automationAccounts' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Gets or sets the etag of the resource.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Gets or sets the location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AutomationAccountCreateOrUpdateProperties](#automationaccountcreateorupdateproperties): The parameters supplied to the create or update account properties.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the tags attached to the resource.
+* **type**: 'Microsoft.Automation/automationAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/certificates@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties) (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/certificates' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties) (Required): The properties of the create certificate operation.
+* **type**: 'Microsoft.Automation/automationAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/compilationjobs@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (WriteOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [DscCompilationJobCreateProperties](#dsccompilationjobcreateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
-* **type**: 'Microsoft.Automation/automationAccounts/compilationjobs' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (WriteOnly): Gets or sets the location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DscCompilationJobCreateProperties](#dsccompilationjobcreateproperties) (Required): The parameters supplied to the create compilation job operation.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly): Gets or sets the tags attached to the resource.
+* **type**: 'Microsoft.Automation/automationAccounts/compilationjobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/configurations@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [DscConfigurationCreateOrUpdateProperties](#dscconfigurationcreateorupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Automation/automationAccounts/configurations' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Gets or sets the etag of the resource.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Gets or sets the location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DscConfigurationCreateOrUpdateProperties](#dscconfigurationcreateorupdateproperties) (Required): The properties to create or update configuration.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the tags attached to the resource.
+* **type**: 'Microsoft.Automation/automationAccounts/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/connections@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ConnectionCreateOrUpdateProperties](#connectioncreateorupdateproperties) (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/connections' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ConnectionCreateOrUpdateProperties](#connectioncreateorupdateproperties) (Required): The properties of the create connection properties
+* **type**: 'Microsoft.Automation/automationAccounts/connections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/connectionTypes@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ConnectionTypeCreateOrUpdateProperties](#connectiontypecreateorupdateproperties) (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/connectionTypes' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ConnectionTypeCreateOrUpdateProperties](#connectiontypecreateorupdateproperties) (Required): The properties of the create connection type.
+* **type**: 'Microsoft.Automation/automationAccounts/connectionTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/credentials@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [CredentialCreateOrUpdateProperties](#credentialcreateorupdateproperties) (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/credentials' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [CredentialCreateOrUpdateProperties](#credentialcreateorupdateproperties) (Required): The properties of the create credential operation.
+* **type**: 'Microsoft.Automation/automationAccounts/credentials' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/jobs@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [JobCreateProperties](#jobcreateproperties) (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/jobs' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [JobCreateProperties](#jobcreateproperties) (Required):
+* **type**: 'Microsoft.Automation/automationAccounts/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/jobSchedules@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [JobScheduleCreateProperties](#jobschedulecreateproperties) (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/jobSchedules' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [JobScheduleCreateProperties](#jobschedulecreateproperties) (Required): The parameters supplied to the create job schedule operation.
+* **type**: 'Microsoft.Automation/automationAccounts/jobSchedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/modules@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ModuleCreateOrUpdateProperties](#modulecreateorupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Automation/automationAccounts/modules' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Gets or sets the etag of the resource.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Gets or sets the location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ModuleCreateOrUpdateProperties](#modulecreateorupdateproperties) (Required): The parameters supplied to the create or update module properties.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the tags attached to the resource.
+* **type**: 'Microsoft.Automation/automationAccounts/modules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/nodeConfigurations@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [DscNodeConfigurationCreateOrUpdateParametersProperties](#dscnodeconfigurationcreateorupdateparametersproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
-* **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DscNodeConfigurationCreateOrUpdateParametersProperties](#dscnodeconfigurationcreateorupdateparametersproperties): The parameter properties supplied to the create or update node configuration operation.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly): Gets or sets the tags attached to the resource.
+* **type**: 'Microsoft.Automation/automationAccounts/nodeConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/python2Packages@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [PythonPackageCreateProperties](#pythonpackagecreateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Automation/automationAccounts/python2Packages' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Gets or sets the etag of the resource.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The Azure Region where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PythonPackageCreateProperties](#pythonpackagecreateproperties) (Required): The parameters supplied to the create or update module properties.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the tags attached to the resource.
+* **type**: 'Microsoft.Automation/automationAccounts/python2Packages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/runbooks@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **etag**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [RunbookCreateOrUpdateProperties](#runbookcreateorupdateproperties) (Required)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Automation/automationAccounts/runbooks' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Gets or sets the etag of the resource.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Gets or sets the location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RunbookCreateOrUpdateProperties](#runbookcreateorupdateproperties) (Required): The parameters supplied to the create or update runbook properties.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the tags attached to the resource.
+* **type**: 'Microsoft.Automation/automationAccounts/runbooks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/runbooks/draft@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
@@ -141,101 +141,101 @@
 ### Base Properties
 ### Microsoft.Automation/automationAccounts/runbooks/draft
 #### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'content' (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'content' (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Automation/automationAccounts/runbooks/draft
 #### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **creationTime**: string (ReadOnly)
-* **endTime**: string (ReadOnly)
-* **exception**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **lastModifiedTime**: string (ReadOnly)
-* **lastStatusModifiedTime**: string (ReadOnly)
-* **logActivityTrace**: int (ReadOnly)
-* **name**: 'testJob' (Required, DeployTimeConstant)
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
-* **runOn**: string
-* **startTime**: string (ReadOnly)
-* **status**: string (ReadOnly)
-* **statusDetails**: string (ReadOnly)
-* **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **creationTime**: string (ReadOnly): Gets or sets the creation time of the test job.
+* **endTime**: string (ReadOnly): Gets or sets the end time of the test job.
+* **exception**: string (ReadOnly): Gets or sets the exception of the test job.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time of the test job.
+* **lastStatusModifiedTime**: string (ReadOnly): Gets or sets the last status modified time of the test job.
+* **logActivityTrace**: int (ReadOnly): The activity-level tracing options of the runbook.
+* **name**: 'testJob' (Required, DeployTimeConstant): The resource name
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the parameters of the test job.
+* **runOn**: string: Gets or sets the runOn which specifies the group name where the job is to be executed.
+* **startTime**: string (ReadOnly): Gets or sets the start time of the test job.
+* **status**: string (ReadOnly): Gets or sets the status of the test job.
+* **statusDetails**: string (ReadOnly): Gets or sets the status details of the test job.
+* **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant): The resource type
 
 
 ## Resource Microsoft.Automation/automationAccounts/schedules@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ScheduleCreateOrUpdateProperties](#schedulecreateorupdateproperties) (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/schedules' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ScheduleCreateOrUpdateProperties](#schedulecreateorupdateproperties) (Required): The parameters supplied to the create or update schedule operation.
+* **type**: 'Microsoft.Automation/automationAccounts/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/softwareUpdateConfigurations@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [softwareUpdateConfigurationProperties](#softwareupdateconfigurationproperties) (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/softwareUpdateConfigurations' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [softwareUpdateConfigurationProperties](#softwareupdateconfigurationproperties) (Required): Software update configuration properties.
+* **type**: 'Microsoft.Automation/automationAccounts/softwareUpdateConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/sourceControls@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [SourceControlCreateOrUpdateProperties](#sourcecontrolcreateorupdateproperties) (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/sourceControls' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SourceControlCreateOrUpdateProperties](#sourcecontrolcreateorupdateproperties) (Required): The properties of the create source control operation.
+* **type**: 'Microsoft.Automation/automationAccounts/sourceControls' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [SourceControlSyncJobCreateProperties](#sourcecontrolsyncjobcreateproperties) (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SourceControlSyncJobCreateProperties](#sourcecontrolsyncjobcreateproperties) (Required): Definition of create source control sync job properties.
+* **type**: 'Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/variables@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [VariableCreateOrUpdateProperties](#variablecreateorupdateproperties) (Required)
-* **type**: 'Microsoft.Automation/automationAccounts/variables' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VariableCreateOrUpdateProperties](#variablecreateorupdateproperties) (Required): The properties of the create variable operation.
+* **type**: 'Microsoft.Automation/automationAccounts/variables' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/watchers@2019-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [WatcherProperties](#watcherproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.Automation/automationAccounts/watchers' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string: Gets or sets the etag of the resource.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WatcherProperties](#watcherproperties): Definition of the watcher properties
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.Automation/automationAccounts/watchers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AutomationAccountCreateOrUpdateProperties
 ### Properties
-* **creationTime**: string (ReadOnly)
-* **description**: string (ReadOnly)
-* **lastModifiedBy**: string (ReadOnly)
-* **lastModifiedTime**: string (ReadOnly)
-* **sku**: [Sku](#sku)
-* **state**: 'Ok' | 'Suspended' | 'Unavailable' (ReadOnly)
+* **creationTime**: string (ReadOnly): Gets the creation time.
+* **description**: string (ReadOnly): Gets or sets the description.
+* **lastModifiedBy**: string (ReadOnly): Gets or sets the last modified by.
+* **lastModifiedTime**: string (ReadOnly): Gets the last modified time.
+* **sku**: [Sku](#sku): The account SKU.
+* **state**: 'Ok' | 'Suspended' | 'Unavailable' (ReadOnly): Gets status of account.
 
 ## Sku
 ### Properties
-* **capacity**: int
-* **family**: string
-* **name**: 'Basic' | 'Free' (Required)
+* **capacity**: int: Gets or sets the SKU capacity.
+* **family**: string: Gets or sets the SKU family.
+* **name**: 'Basic' | 'Free' (Required): Gets or sets the SKU name of the account.
 
 ## Dictionary<string,String>
 ### Properties
@@ -244,35 +244,35 @@
 
 ## CertificateCreateOrUpdateProperties
 ### Properties
-* **base64Value**: string (Required, WriteOnly)
-* **creationTime**: string (ReadOnly)
-* **description**: string
-* **expiryTime**: string (ReadOnly)
-* **isExportable**: bool
-* **lastModifiedTime**: string (ReadOnly)
-* **thumbprint**: string
+* **base64Value**: string (Required, WriteOnly): Gets or sets the base64 encoded value of the certificate.
+* **creationTime**: string (ReadOnly): Gets the creation time.
+* **description**: string: Gets or sets the description of the certificate.
+* **expiryTime**: string (ReadOnly): Gets the expiry time of the certificate.
+* **isExportable**: bool: Gets or sets the is exportable flag of the certificate.
+* **lastModifiedTime**: string (ReadOnly): Gets the last modified time.
+* **thumbprint**: string: Gets or sets the thumbprint of the certificate.
 
 ## DscCompilationJobCreateProperties
 ### Properties
-* **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required)
-* **creationTime**: string (ReadOnly)
-* **endTime**: string (ReadOnly)
-* **exception**: string (ReadOnly)
-* **incrementNodeConfigurationBuild**: bool (WriteOnly)
-* **jobId**: string (ReadOnly)
-* **lastModifiedTime**: string (ReadOnly)
-* **lastStatusModifiedTime**: string (ReadOnly)
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
-* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly)
-* **runOn**: string (ReadOnly)
-* **startedBy**: string (ReadOnly)
-* **startTime**: string (ReadOnly)
-* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly)
-* **statusDetails**: string (ReadOnly)
+* **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required): The Dsc configuration property associated with the entity.
+* **creationTime**: string (ReadOnly): Gets the creation time of the job.
+* **endTime**: string (ReadOnly): Gets the end time of the job.
+* **exception**: string (ReadOnly): Gets the exception of the job.
+* **incrementNodeConfigurationBuild**: bool (WriteOnly): If a new build version of NodeConfiguration is required.
+* **jobId**: string (ReadOnly): Gets the id of the job.
+* **lastModifiedTime**: string (ReadOnly): Gets the last modified time of the job.
+* **lastStatusModifiedTime**: string (ReadOnly): Gets the last status modified time of the job.
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the parameters of the job.
+* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly): The current provisioning state of the job.
+* **runOn**: string (ReadOnly): Gets or sets the runOn which specifies the group name where the job is to be executed.
+* **startedBy**: string (ReadOnly): Gets the compilation job started by.
+* **startTime**: string (ReadOnly): Gets the start time of the job.
+* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly): Gets or sets the status of the job.
+* **statusDetails**: string (ReadOnly): Gets or sets the status details of the job.
 
 ## DscConfigurationAssociationProperty
 ### Properties
-* **name**: string
+* **name**: string: Gets or sets the name of the Dsc configuration.
 
 ## Dictionary<string,String>
 ### Properties
@@ -286,17 +286,17 @@
 
 ## DscConfigurationCreateOrUpdateProperties
 ### Properties
-* **creationTime**: string (ReadOnly)
-* **description**: string
-* **jobCount**: int (ReadOnly)
-* **lastModifiedTime**: string (ReadOnly)
-* **logProgress**: bool (WriteOnly)
-* **logVerbose**: bool
-* **nodeConfigurationCount**: int (ReadOnly)
-* **parameters**: [Dictionary<string,DscConfigurationParameter>](#dictionarystringdscconfigurationparameter)
-* **provisioningState**: 'Succeeded' (ReadOnly)
-* **source**: [ContentSource](#contentsource) (Required)
-* **state**: 'Edit' | 'New' | 'Published' (ReadOnly)
+* **creationTime**: string (ReadOnly): Gets or sets the creation time.
+* **description**: string: Gets or sets the description of the configuration.
+* **jobCount**: int (ReadOnly): Gets or sets the job count of the configuration.
+* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
+* **logProgress**: bool (WriteOnly): Gets or sets progress log option.
+* **logVerbose**: bool: Gets or sets verbose log option.
+* **nodeConfigurationCount**: int (ReadOnly): Gets the number of compiled node configurations.
+* **parameters**: [Dictionary<string,DscConfigurationParameter>](#dictionarystringdscconfigurationparameter): Gets or sets the configuration parameters.
+* **provisioningState**: 'Succeeded' (ReadOnly): Gets or sets the provisioning state of the configuration.
+* **source**: [ContentSource](#contentsource) (Required): Definition of the content source.
+* **state**: 'Edit' | 'New' | 'Published' (ReadOnly): Gets or sets the state of the configuration.
 
 ## Dictionary<string,DscConfigurationParameter>
 ### Properties
@@ -305,22 +305,22 @@
 
 ## DscConfigurationParameter
 ### Properties
-* **defaultValue**: string
-* **isMandatory**: bool
-* **position**: int
-* **type**: string
+* **defaultValue**: string: Gets or sets the default value of parameter.
+* **isMandatory**: bool: Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
+* **position**: int: Get or sets the position of the parameter.
+* **type**: string: Gets or sets the type of the parameter.
 
 ## ContentSource
 ### Properties
-* **hash**: [ContentHash](#contenthash) (WriteOnly)
-* **type**: 'embeddedContent' | 'uri' (WriteOnly)
-* **value**: string (WriteOnly)
-* **version**: string (WriteOnly)
+* **hash**: [ContentHash](#contenthash) (WriteOnly): Definition of the runbook property type.
+* **type**: 'embeddedContent' | 'uri' (WriteOnly): Gets or sets the content source type.
+* **value**: string (WriteOnly): Gets or sets the value of the content. This is based on the content source type.
+* **version**: string (WriteOnly): Gets or sets the version of the content.
 
 ## ContentHash
 ### Properties
-* **algorithm**: string (Required)
-* **value**: string (Required)
+* **algorithm**: string (Required): Gets or sets the content hash algorithm used to hash the content.
+* **value**: string (Required): Gets or sets expected hash value of the content.
 
 ## Dictionary<string,String>
 ### Properties
@@ -329,15 +329,15 @@
 
 ## ConnectionCreateOrUpdateProperties
 ### Properties
-* **connectionType**: [ConnectionTypeAssociationProperty](#connectiontypeassociationproperty) (Required)
-* **creationTime**: string (ReadOnly)
-* **description**: string
-* **fieldDefinitionValues**: [Dictionary<string,String>](#dictionarystringstring)
-* **lastModifiedTime**: string (ReadOnly)
+* **connectionType**: [ConnectionTypeAssociationProperty](#connectiontypeassociationproperty) (Required): The connection type property associated with the entity.
+* **creationTime**: string (ReadOnly): Gets the creation time.
+* **description**: string: Gets or sets the description of the connection.
+* **fieldDefinitionValues**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the field definition properties of the connection.
+* **lastModifiedTime**: string (ReadOnly): Gets the last modified time.
 
 ## ConnectionTypeAssociationProperty
 ### Properties
-* **name**: string
+* **name**: string: Gets or sets the name of the connection type.
 
 ## Dictionary<string,String>
 ### Properties
@@ -346,11 +346,11 @@
 
 ## ConnectionTypeCreateOrUpdateProperties
 ### Properties
-* **creationTime**: string (ReadOnly)
-* **description**: string (ReadOnly)
-* **fieldDefinitions**: [Dictionary<string,FieldDefinition>](#dictionarystringfielddefinition) (Required)
-* **isGlobal**: bool
-* **lastModifiedTime**: string (ReadOnly)
+* **creationTime**: string (ReadOnly): Gets the creation time.
+* **description**: string (ReadOnly): Gets or sets the description.
+* **fieldDefinitions**: [Dictionary<string,FieldDefinition>](#dictionarystringfielddefinition) (Required): Gets or sets the field definitions of the connection type.
+* **isGlobal**: bool: Gets or sets a Boolean value to indicate if the connection type is global.
+* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
 
 ## Dictionary<string,FieldDefinition>
 ### Properties
@@ -359,34 +359,34 @@
 
 ## FieldDefinition
 ### Properties
-* **isEncrypted**: bool
-* **isOptional**: bool
-* **type**: string (Required)
+* **isEncrypted**: bool: Gets or sets the isEncrypted flag of the connection field definition.
+* **isOptional**: bool: Gets or sets the isOptional flag of the connection field definition.
+* **type**: string (Required): Gets or sets the type of the connection field definition.
 
 ## CredentialCreateOrUpdateProperties
 ### Properties
-* **creationTime**: string (ReadOnly)
-* **description**: string
-* **lastModifiedTime**: string (ReadOnly)
-* **password**: string (Required, WriteOnly)
-* **userName**: string (Required)
+* **creationTime**: string (ReadOnly): Gets the creation time.
+* **description**: string: Gets or sets the description of the credential.
+* **lastModifiedTime**: string (ReadOnly): Gets the last modified time.
+* **password**: string (Required, WriteOnly): Gets or sets the password of the credential.
+* **userName**: string (Required): Gets or sets the user name of the credential.
 
 ## JobCreateProperties
 ### Properties
-* **creationTime**: string (ReadOnly)
-* **endTime**: string (ReadOnly)
-* **exception**: string (ReadOnly)
-* **jobId**: string (ReadOnly)
-* **lastModifiedTime**: string (ReadOnly)
-* **lastStatusModifiedTime**: string (ReadOnly)
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
-* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly)
-* **runbook**: [RunbookAssociationProperty](#runbookassociationproperty)
-* **runOn**: string
-* **startedBy**: string (ReadOnly)
-* **startTime**: string (ReadOnly)
-* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly)
-* **statusDetails**: string (ReadOnly)
+* **creationTime**: string (ReadOnly): Gets or sets the creation time of the job.
+* **endTime**: string (ReadOnly): Gets or sets the end time of the job.
+* **exception**: string (ReadOnly): Gets or sets the exception of the job.
+* **jobId**: string (ReadOnly): Gets or sets the id of the job.
+* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time of the job.
+* **lastStatusModifiedTime**: string (ReadOnly): Gets or sets the last status modified time of the job.
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the parameters of the job.
+* **provisioningState**: 'Failed' | 'Processing' | 'Succeeded' | 'Suspended' (ReadOnly): The current provisioning state of the job.
+* **runbook**: [RunbookAssociationProperty](#runbookassociationproperty): The runbook property associated with the entity.
+* **runOn**: string: Gets or sets the runOn which specifies the group name where the job is to be executed.
+* **startedBy**: string (ReadOnly): Gets or sets the job started by.
+* **startTime**: string (ReadOnly): Gets or sets the start time of the job.
+* **status**: 'Activating' | 'Blocked' | 'Completed' | 'Disconnected' | 'Failed' | 'New' | 'Removing' | 'Resuming' | 'Running' | 'Stopped' | 'Stopping' | 'Suspended' | 'Suspending' (ReadOnly): Gets or sets the status of the job.
+* **statusDetails**: string (ReadOnly): Gets or sets the status details of the job.
 
 ## Dictionary<string,String>
 ### Properties
@@ -395,15 +395,15 @@
 
 ## RunbookAssociationProperty
 ### Properties
-* **name**: string
+* **name**: string: Gets or sets the name of the runbook.
 
 ## JobScheduleCreateProperties
 ### Properties
-* **jobScheduleId**: string (ReadOnly)
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
-* **runbook**: [RunbookAssociationProperty](#runbookassociationproperty) (Required)
-* **runOn**: string
-* **schedule**: [ScheduleAssociationProperty](#scheduleassociationproperty) (Required)
+* **jobScheduleId**: string (ReadOnly): Gets or sets the id of job schedule.
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets a list of job properties.
+* **runbook**: [RunbookAssociationProperty](#runbookassociationproperty) (Required): The runbook property associated with the entity.
+* **runOn**: string: Gets or sets the hybrid worker group that the scheduled job should run on.
+* **schedule**: [ScheduleAssociationProperty](#scheduleassociationproperty) (Required): The schedule property associated with the entity.
 
 ## Dictionary<string,String>
 ### Properties
@@ -412,32 +412,32 @@
 
 ## ScheduleAssociationProperty
 ### Properties
-* **name**: string
+* **name**: string: Gets or sets the name of the Schedule.
 
 ## ModuleCreateOrUpdateProperties
 ### Properties
-* **activityCount**: int (ReadOnly)
-* **contentLink**: [ContentLink](#contentlink) (Required)
-* **creationTime**: string (ReadOnly)
-* **description**: string (ReadOnly)
-* **error**: [ModuleErrorInfo](#moduleerrorinfo) (ReadOnly)
-* **isComposite**: bool (ReadOnly)
-* **isGlobal**: bool (ReadOnly)
-* **lastModifiedTime**: string (ReadOnly)
-* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly)
-* **sizeInBytes**: int (ReadOnly)
-* **version**: string (ReadOnly)
+* **activityCount**: int (ReadOnly): Gets or sets the activity count of the module.
+* **contentLink**: [ContentLink](#contentlink) (Required): Definition of the content link.
+* **creationTime**: string (ReadOnly): Gets or sets the creation time.
+* **description**: string (ReadOnly): Gets or sets the description.
+* **error**: [ModuleErrorInfo](#moduleerrorinfo) (ReadOnly): Definition of the module error info type.
+* **isComposite**: bool (ReadOnly): Gets or sets type of module, if its composite or not.
+* **isGlobal**: bool (ReadOnly): Gets or sets the isGlobal flag of the module.
+* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
+* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly): Gets or sets the provisioning state of the module.
+* **sizeInBytes**: int (ReadOnly): Gets or sets the size in bytes of the module.
+* **version**: string (ReadOnly): Gets or sets the version of the module.
 
 ## ContentLink
 ### Properties
-* **contentHash**: [ContentHash](#contenthash)
-* **uri**: string
-* **version**: string
+* **contentHash**: [ContentHash](#contenthash): Definition of the runbook property type.
+* **uri**: string: Gets or sets the uri of the runbook content.
+* **version**: string: Gets or sets the version of the content.
 
 ## ModuleErrorInfo
 ### Properties
-* **code**: string (ReadOnly)
-* **message**: string (ReadOnly)
+* **code**: string (ReadOnly): Gets or sets the error code.
+* **message**: string (ReadOnly): Gets or sets the error message.
 
 ## Dictionary<string,String>
 ### Properties
@@ -446,12 +446,12 @@
 
 ## DscNodeConfigurationCreateOrUpdateParametersProperties
 ### Properties
-* **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required)
-* **creationTime**: string (ReadOnly)
-* **incrementNodeConfigurationBuild**: bool
-* **lastModifiedTime**: string (ReadOnly)
-* **nodeCount**: int (ReadOnly)
-* **source**: [ContentSource](#contentsource) (Required)
+* **configuration**: [DscConfigurationAssociationProperty](#dscconfigurationassociationproperty) (Required): The Dsc configuration property associated with the entity.
+* **creationTime**: string (ReadOnly): Gets or sets creation time.
+* **incrementNodeConfigurationBuild**: bool: If a new build version of NodeConfiguration is required.
+* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
+* **nodeCount**: int (ReadOnly): Number of nodes with this node configuration assigned
+* **source**: [ContentSource](#contentsource) (Required): Definition of the content source.
 
 ## Dictionary<string,String>
 ### Properties
@@ -460,17 +460,17 @@
 
 ## PythonPackageCreateProperties
 ### Properties
-* **activityCount**: int (ReadOnly)
-* **contentLink**: [ContentLink](#contentlink) (Required)
-* **creationTime**: string (ReadOnly)
-* **description**: string (ReadOnly)
-* **error**: [ModuleErrorInfo](#moduleerrorinfo) (ReadOnly)
-* **isComposite**: bool (ReadOnly)
-* **isGlobal**: bool (ReadOnly)
-* **lastModifiedTime**: string (ReadOnly)
-* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly)
-* **sizeInBytes**: int (ReadOnly)
-* **version**: string (ReadOnly)
+* **activityCount**: int (ReadOnly): Gets or sets the activity count of the module.
+* **contentLink**: [ContentLink](#contentlink) (Required): Definition of the content link.
+* **creationTime**: string (ReadOnly): Gets or sets the creation time.
+* **description**: string (ReadOnly): Gets or sets the description.
+* **error**: [ModuleErrorInfo](#moduleerrorinfo) (ReadOnly): Definition of the module error info type.
+* **isComposite**: bool (ReadOnly): Gets or sets type of module, if its composite or not.
+* **isGlobal**: bool (ReadOnly): Gets or sets the isGlobal flag of the module.
+* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
+* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly): Gets or sets the provisioning state of the module.
+* **sizeInBytes**: int (ReadOnly): Gets or sets the size in bytes of the module.
+* **version**: string (ReadOnly): Gets or sets the version of the module.
 
 ## Dictionary<string,String>
 ### Properties
@@ -479,30 +479,30 @@
 
 ## RunbookCreateOrUpdateProperties
 ### Properties
-* **creationTime**: string (ReadOnly)
-* **description**: string
-* **draft**: [RunbookDraft](#runbookdraft)
-* **jobCount**: int (ReadOnly)
-* **lastModifiedBy**: string (ReadOnly)
-* **lastModifiedTime**: string (ReadOnly)
-* **logActivityTrace**: int
-* **logProgress**: bool
-* **logVerbose**: bool
-* **outputTypes**: string[] (ReadOnly)
-* **parameters**: [Dictionary<string,RunbookParameter>](#dictionarystringrunbookparameter) (ReadOnly)
-* **provisioningState**: 'Succeeded' (ReadOnly)
-* **publishContentLink**: [ContentLink](#contentlink)
-* **runbookType**: 'Graph' | 'GraphPowerShell' | 'GraphPowerShellWorkflow' | 'PowerShell' | 'PowerShellWorkflow' | 'Script' (Required)
-* **state**: 'Edit' | 'New' | 'Published' (ReadOnly)
+* **creationTime**: string (ReadOnly): Gets or sets the creation time.
+* **description**: string: Gets or sets the description of the runbook.
+* **draft**: [RunbookDraft](#runbookdraft):
+* **jobCount**: int (ReadOnly): Gets or sets the job count of the runbook.
+* **lastModifiedBy**: string (ReadOnly): Gets or sets the last modified by.
+* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
+* **logActivityTrace**: int: Gets or sets the activity-level tracing options of the runbook.
+* **logProgress**: bool: Gets or sets progress log option.
+* **logVerbose**: bool: Gets or sets verbose log option.
+* **outputTypes**: string[] (ReadOnly): Gets or sets the runbook output types.
+* **parameters**: [Dictionary<string,RunbookParameter>](#dictionarystringrunbookparameter) (ReadOnly): Gets or sets the runbook parameters.
+* **provisioningState**: 'Succeeded' (ReadOnly): Gets or sets the provisioning state of the runbook.
+* **publishContentLink**: [ContentLink](#contentlink): Definition of the content link.
+* **runbookType**: 'Graph' | 'GraphPowerShell' | 'GraphPowerShellWorkflow' | 'PowerShell' | 'PowerShellWorkflow' | 'Script' (Required): Gets or sets the type of the runbook.
+* **state**: 'Edit' | 'New' | 'Published' (ReadOnly): Gets or sets the state of the runbook.
 
 ## RunbookDraft
 ### Properties
-* **creationTime**: string
-* **draftContentLink**: [ContentLink](#contentlink)
-* **inEdit**: bool
-* **lastModifiedTime**: string
-* **outputTypes**: string[]
-* **parameters**: [Dictionary<string,RunbookParameter>](#dictionarystringrunbookparameter)
+* **creationTime**: string: Gets or sets the creation time of the runbook draft.
+* **draftContentLink**: [ContentLink](#contentlink): Definition of the content link.
+* **inEdit**: bool: Gets or sets whether runbook is in edit mode.
+* **lastModifiedTime**: string: Gets or sets the last modified time of the runbook draft.
+* **outputTypes**: string[]: Gets or sets the runbook output types.
+* **parameters**: [Dictionary<string,RunbookParameter>](#dictionarystringrunbookparameter): Gets or sets the runbook draft parameters.
 
 ## Dictionary<string,RunbookParameter>
 ### Properties
@@ -511,10 +511,10 @@
 
 ## RunbookParameter
 ### Properties
-* **defaultValue**: string
-* **isMandatory**: bool
-* **position**: int
-* **type**: string
+* **defaultValue**: string: Gets or sets the default value of parameter.
+* **isMandatory**: bool: Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
+* **position**: int: Get or sets the position of the parameter.
+* **type**: string: Gets or sets the type of the parameter.
 
 ## Dictionary<string,RunbookParameter>
 ### Properties
@@ -528,28 +528,28 @@
 
 ## Microsoft.Automation/automationAccounts/runbooks/draft
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: 'content' (Required, DeployTimeConstant)
-* **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'content' (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Microsoft.Automation/automationAccounts/runbooks/draft
 ### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant)
-* **creationTime**: string (ReadOnly)
-* **endTime**: string (ReadOnly)
-* **exception**: string (ReadOnly)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **lastModifiedTime**: string (ReadOnly)
-* **lastStatusModifiedTime**: string (ReadOnly)
-* **logActivityTrace**: int (ReadOnly)
-* **name**: 'testJob' (Required, DeployTimeConstant)
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
-* **runOn**: string
-* **startTime**: string (ReadOnly)
-* **status**: string (ReadOnly)
-* **statusDetails**: string (ReadOnly)
-* **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **creationTime**: string (ReadOnly): Gets or sets the creation time of the test job.
+* **endTime**: string (ReadOnly): Gets or sets the end time of the test job.
+* **exception**: string (ReadOnly): Gets or sets the exception of the test job.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time of the test job.
+* **lastStatusModifiedTime**: string (ReadOnly): Gets or sets the last status modified time of the test job.
+* **logActivityTrace**: int (ReadOnly): The activity-level tracing options of the runbook.
+* **name**: 'testJob' (Required, DeployTimeConstant): The resource name
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the parameters of the test job.
+* **runOn**: string: Gets or sets the runOn which specifies the group name where the job is to be executed.
+* **startTime**: string (ReadOnly): Gets or sets the start time of the test job.
+* **status**: string (ReadOnly): Gets or sets the status of the test job.
+* **statusDetails**: string (ReadOnly): Gets or sets the status details of the test job.
+* **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Dictionary<string,String>
 ### Properties
@@ -558,75 +558,75 @@
 
 ## ScheduleCreateOrUpdateProperties
 ### Properties
-* **advancedSchedule**: [AdvancedSchedule](#advancedschedule)
-* **creationTime**: string (ReadOnly)
-* **description**: string
-* **expiryTime**: string
-* **expiryTimeOffsetMinutes**: int (ReadOnly)
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'OneTime' | 'Week' (Required)
-* **interval**: any
-* **isEnabled**: bool (ReadOnly)
-* **lastModifiedTime**: string (ReadOnly)
-* **nextRun**: string (ReadOnly)
-* **nextRunOffsetMinutes**: int (ReadOnly)
-* **startTime**: string (Required)
-* **startTimeOffsetMinutes**: int (ReadOnly)
-* **timeZone**: string
+* **advancedSchedule**: [AdvancedSchedule](#advancedschedule): The properties of the create Advanced Schedule.
+* **creationTime**: string (ReadOnly): Gets or sets the creation time.
+* **description**: string: Gets or sets the description of the schedule.
+* **expiryTime**: string: Gets or sets the end time of the schedule.
+* **expiryTimeOffsetMinutes**: int (ReadOnly): Gets or sets the expiry time's offset in minutes.
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'OneTime' | 'Week' (Required): Gets or sets the frequency of the schedule.
+* **interval**: any: Gets or sets the interval of the schedule.
+* **isEnabled**: bool (ReadOnly): Gets or sets a value indicating whether this schedule is enabled.
+* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
+* **nextRun**: string (ReadOnly): Gets or sets the next run time of the schedule.
+* **nextRunOffsetMinutes**: int (ReadOnly): Gets or sets the next run time's offset in minutes.
+* **startTime**: string (Required): Gets or sets the start time of the schedule.
+* **startTimeOffsetMinutes**: int (ReadOnly): Gets the start time's offset in minutes.
+* **timeZone**: string: Gets or sets the time zone of the schedule.
 
 ## AdvancedSchedule
 ### Properties
-* **monthDays**: int[]
-* **monthlyOccurrences**: [AdvancedScheduleMonthlyOccurrence](#advancedschedulemonthlyoccurrence)[]
-* **weekDays**: string[]
+* **monthDays**: int[]: Days of the month that the job should execute on. Must be between 1 and 31.
+* **monthlyOccurrences**: [AdvancedScheduleMonthlyOccurrence](#advancedschedulemonthlyoccurrence)[]: Occurrences of days within a month.
+* **weekDays**: string[]: Days of the week that the job should execute on.
 
 ## AdvancedScheduleMonthlyOccurrence
 ### Properties
-* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'
-* **occurrence**: int
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+* **occurrence**: int: Occurrence of the week within the month. Must be between 1 and 5
 
 ## softwareUpdateConfigurationProperties
 ### Properties
-* **createdBy**: string (ReadOnly)
-* **creationTime**: string (ReadOnly)
-* **error**: [ErrorResponse](#errorresponse)
-* **lastModifiedBy**: string (ReadOnly)
-* **lastModifiedTime**: string (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **scheduleInfo**: [SUCScheduleProperties](#sucscheduleproperties) (Required)
-* **tasks**: [softwareUpdateConfigurationTasks](#softwareupdateconfigurationtasks)
-* **updateConfiguration**: [updateConfiguration](#updateconfiguration) (Required)
+* **createdBy**: string (ReadOnly): CreatedBy property, which only appears in the response.
+* **creationTime**: string (ReadOnly): Creation time of the resource, which only appears in the response.
+* **error**: [ErrorResponse](#errorresponse): Error response of an operation failure
+* **lastModifiedBy**: string (ReadOnly): LastModifiedBy property, which only appears in the response.
+* **lastModifiedTime**: string (ReadOnly): Last time resource was modified, which only appears in the response.
+* **provisioningState**: string (ReadOnly): Provisioning state for the software update configuration, which only appears in the response.
+* **scheduleInfo**: [SUCScheduleProperties](#sucscheduleproperties) (Required): Definition of schedule parameters.
+* **tasks**: [softwareUpdateConfigurationTasks](#softwareupdateconfigurationtasks): Task properties of the software update configuration.
+* **updateConfiguration**: [updateConfiguration](#updateconfiguration) (Required): Update specific properties of the software update configuration.
 
 ## ErrorResponse
 ### Properties
-* **code**: string
-* **message**: string
+* **code**: string: Error code
+* **message**: string: Error message indicating why the operation failed.
 
 ## SUCScheduleProperties
 ### Properties
-* **advancedSchedule**: [AdvancedSchedule](#advancedschedule)
-* **creationTime**: string
-* **description**: string
-* **expiryTime**: string
-* **expiryTimeOffsetMinutes**: int
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'OneTime' | 'Week'
-* **interval**: int
-* **isEnabled**: bool
-* **lastModifiedTime**: string
-* **nextRun**: string
-* **nextRunOffsetMinutes**: int
-* **startTime**: string
-* **startTimeOffsetMinutes**: int (ReadOnly)
-* **timeZone**: string
+* **advancedSchedule**: [AdvancedSchedule](#advancedschedule): The properties of the create Advanced Schedule.
+* **creationTime**: string: Gets or sets the creation time.
+* **description**: string: Gets or sets the description.
+* **expiryTime**: string: Gets or sets the end time of the schedule.
+* **expiryTimeOffsetMinutes**: int: Gets or sets the expiry time's offset in minutes.
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'OneTime' | 'Week': Gets or sets the frequency of the schedule.
+* **interval**: int: Gets or sets the interval of the schedule.
+* **isEnabled**: bool: Gets or sets a value indicating whether this schedule is enabled.
+* **lastModifiedTime**: string: Gets or sets the last modified time.
+* **nextRun**: string: Gets or sets the next run time of the schedule.
+* **nextRunOffsetMinutes**: int: Gets or sets the next run time's offset in minutes.
+* **startTime**: string: Gets or sets the start time of the schedule.
+* **startTimeOffsetMinutes**: int (ReadOnly): Gets the start time's offset in minutes.
+* **timeZone**: string: Gets or sets the time zone of the schedule.
 
 ## softwareUpdateConfigurationTasks
 ### Properties
-* **postTask**: [taskProperties](#taskproperties)
-* **preTask**: [taskProperties](#taskproperties)
+* **postTask**: [taskProperties](#taskproperties): Task properties of the software update configuration.
+* **preTask**: [taskProperties](#taskproperties): Task properties of the software update configuration.
 
 ## taskProperties
 ### Properties
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring)
-* **source**: string
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the parameters of the task.
+* **source**: string: Gets or sets the name of the runbook.
 
 ## Dictionary<string,String>
 ### Properties
@@ -635,36 +635,36 @@
 
 ## updateConfiguration
 ### Properties
-* **azureVirtualMachines**: string[]
-* **duration**: string
-* **linux**: [LinuxProperties](#linuxproperties)
-* **nonAzureComputerNames**: string[]
-* **operatingSystem**: 'Linux' | 'Windows' (Required)
-* **targets**: [TargetProperties](#targetproperties)
-* **windows**: [WindowsProperties](#windowsproperties)
+* **azureVirtualMachines**: string[]: List of azure resource Ids for azure virtual machines targeted by the software update configuration.
+* **duration**: string: Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
+* **linux**: [LinuxProperties](#linuxproperties): Linux specific update configuration.
+* **nonAzureComputerNames**: string[]: List of names of non-azure machines targeted by the software update configuration.
+* **operatingSystem**: 'Linux' | 'Windows' (Required): operating system of target machines.
+* **targets**: [TargetProperties](#targetproperties): Group specific to the update configuration.
+* **windows**: [WindowsProperties](#windowsproperties): Windows specific update configuration.
 
 ## LinuxProperties
 ### Properties
-* **excludedPackageNameMasks**: string[]
-* **includedPackageClassifications**: 'Critical' | 'Other' | 'Security' | 'Unclassified'
-* **includedPackageNameMasks**: string[]
-* **rebootSetting**: string
+* **excludedPackageNameMasks**: string[]: packages excluded from the software update configuration.
+* **includedPackageClassifications**: 'Critical' | 'Other' | 'Security' | 'Unclassified': Update classifications included in the software update configuration.
+* **includedPackageNameMasks**: string[]: packages included from the software update configuration.
+* **rebootSetting**: string: Reboot setting for the software update configuration.
 
 ## TargetProperties
 ### Properties
-* **azureQueries**: [AzureQueryProperties](#azurequeryproperties)[]
-* **nonAzureQueries**: [NonAzureQueryProperties](#nonazurequeryproperties)[]
+* **azureQueries**: [AzureQueryProperties](#azurequeryproperties)[]: List of Azure queries in the software update configuration.
+* **nonAzureQueries**: [NonAzureQueryProperties](#nonazurequeryproperties)[]: List of non Azure queries in the software update configuration.
 
 ## AzureQueryProperties
 ### Properties
-* **locations**: string[]
-* **scope**: string[]
-* **tagSettings**: [TagSettingsProperties](#tagsettingsproperties)
+* **locations**: string[]: List of locations to scope the query to.
+* **scope**: string[]: List of Subscription or Resource Group ARM Ids.
+* **tagSettings**: [TagSettingsProperties](#tagsettingsproperties): Tag filter information for the VM.
 
 ## TagSettingsProperties
 ### Properties
-* **filterOperator**: 'All' | 'Any'
-* **tags**: [Dictionary<string,IList<String>>](#dictionarystringiliststring)
+* **filterOperator**: 'All' | 'Any': Filter VMs by Any or All specified tags.
+* **tags**: [Dictionary<string,IList<String>>](#dictionarystringiliststring): Dictionary of tags with its list of values.
 
 ## Dictionary<string,IList<String>>
 ### Properties
@@ -673,65 +673,65 @@
 
 ## NonAzureQueryProperties
 ### Properties
-* **functionAlias**: string
-* **workspaceId**: string
+* **functionAlias**: string: Log Analytics Saved Search name.
+* **workspaceId**: string: Workspace Id for Log Analytics in which the saved Search is resided.
 
 ## WindowsProperties
 ### Properties
-* **excludedKbNumbers**: string[]
-* **includedKbNumbers**: string[]
-* **includedUpdateClassifications**: 'Critical' | 'Definition' | 'FeaturePack' | 'Security' | 'ServicePack' | 'Tools' | 'Unclassified' | 'UpdateRollup' | 'Updates'
-* **rebootSetting**: string
+* **excludedKbNumbers**: string[]: KB numbers excluded from the software update configuration.
+* **includedKbNumbers**: string[]: KB numbers included from the software update configuration.
+* **includedUpdateClassifications**: 'Critical' | 'Definition' | 'FeaturePack' | 'Security' | 'ServicePack' | 'Tools' | 'Unclassified' | 'UpdateRollup' | 'Updates': Update classification included in the software update configuration. A comma separated string with required values.
+* **rebootSetting**: string: Reboot setting for the software update configuration.
 
 ## SourceControlCreateOrUpdateProperties
 ### Properties
-* **autoSync**: bool
-* **branch**: string
-* **creationTime**: string (ReadOnly)
-* **description**: string
-* **folderPath**: string
-* **lastModifiedTime**: string (ReadOnly)
-* **publishRunbook**: bool
-* **repoUrl**: string
-* **securityToken**: [SourceControlSecurityTokenProperties](#sourcecontrolsecuritytokenproperties) (WriteOnly)
-* **sourceType**: 'GitHub' | 'VsoGit' | 'VsoTfvc'
+* **autoSync**: bool: The auto async of the source control. Default is false.
+* **branch**: string: The repo branch of the source control. Include branch as empty string for VsoTfvc.
+* **creationTime**: string (ReadOnly): The creation time.
+* **description**: string: The user description of the source control.
+* **folderPath**: string: The folder path of the source control. Path must be relative.
+* **lastModifiedTime**: string (ReadOnly): The last modified time.
+* **publishRunbook**: bool: The auto publish of the source control. Default is true.
+* **repoUrl**: string: The repo url of the source control.
+* **securityToken**: [SourceControlSecurityTokenProperties](#sourcecontrolsecuritytokenproperties) (WriteOnly):
+* **sourceType**: 'GitHub' | 'VsoGit' | 'VsoTfvc': The source type. Must be one of VsoGit, VsoTfvc, GitHub, case sensitive.
 
 ## SourceControlSecurityTokenProperties
 ### Properties
-* **accessToken**: string (WriteOnly)
-* **refreshToken**: string (WriteOnly)
-* **tokenType**: 'Oauth' | 'PersonalAccessToken' (WriteOnly)
+* **accessToken**: string (WriteOnly): The access token.
+* **refreshToken**: string (WriteOnly): The refresh token.
+* **tokenType**: 'Oauth' | 'PersonalAccessToken' (WriteOnly): The token type. Must be either PersonalAccessToken or Oauth.
 
 ## SourceControlSyncJobCreateProperties
 ### Properties
-* **commitId**: string (Required, WriteOnly)
-* **creationTime**: string (ReadOnly)
-* **endTime**: string (ReadOnly)
-* **exception**: string (ReadOnly)
-* **provisioningState**: 'Completed' | 'Failed' | 'Running' (ReadOnly)
-* **sourceControlSyncJobId**: string (ReadOnly)
-* **startTime**: string (ReadOnly)
-* **syncType**: 'FullSync' | 'PartialSync' (ReadOnly)
+* **commitId**: string (Required, WriteOnly): The commit id of the source control sync job. If not syncing to a commitId, enter an empty string.
+* **creationTime**: string (ReadOnly): The creation time of the job.
+* **endTime**: string (ReadOnly): The end time of the job.
+* **exception**: string (ReadOnly): The exceptions that occurred while running the sync job.
+* **provisioningState**: 'Completed' | 'Failed' | 'Running' (ReadOnly): The provisioning state of the job.
+* **sourceControlSyncJobId**: string (ReadOnly): The source control sync job id.
+* **startTime**: string (ReadOnly): The start time of the job.
+* **syncType**: 'FullSync' | 'PartialSync' (ReadOnly): The sync type.
 
 ## VariableCreateOrUpdateProperties
 ### Properties
-* **creationTime**: string (ReadOnly)
-* **description**: string
-* **isEncrypted**: bool
-* **lastModifiedTime**: string (ReadOnly)
-* **value**: string
+* **creationTime**: string (ReadOnly): Gets or sets the creation time.
+* **description**: string: Gets or sets the description of the variable.
+* **isEncrypted**: bool: Gets or sets the encrypted flag of the variable.
+* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
+* **value**: string: Gets or sets the value of the variable.
 
 ## WatcherProperties
 ### Properties
-* **creationTime**: string (ReadOnly)
-* **description**: string
-* **executionFrequencyInSeconds**: int
-* **lastModifiedBy**: string (ReadOnly)
-* **lastModifiedTime**: string (ReadOnly)
-* **scriptName**: string
-* **scriptParameters**: [Dictionary<string,String>](#dictionarystringstring)
-* **scriptRunOn**: string
-* **status**: string (ReadOnly)
+* **creationTime**: string (ReadOnly): Gets or sets the creation time.
+* **description**: string: Gets or sets the description.
+* **executionFrequencyInSeconds**: int: Gets or sets the frequency at which the watcher is invoked.
+* **lastModifiedBy**: string (ReadOnly): Details of the user who last modified the watcher.
+* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
+* **scriptName**: string: Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.
+* **scriptParameters**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the parameters of the script.
+* **scriptRunOn**: string: Gets or sets the name of the hybrid worker group the watcher will run on.
+* **status**: string (ReadOnly): Gets the current status of the watcher.
 
 ## Dictionary<string,String>
 ### Properties

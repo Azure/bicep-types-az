@@ -3,54 +3,54 @@
 ## Resource Microsoft.CostManagement/exports@2019-11-01
 * **Valid Scope(s)**: Unknown
 ### Properties
-* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ExportProperties](#exportproperties)
-* **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ExportProperties](#exportproperties): The properties of the export.
+* **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/settings@2019-11-01
 * **Valid Scope(s)**: Tenant
 ### Properties
-* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **kind**: string (ReadOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [SettingsProperties](#settingsproperties)
-* **type**: 'Microsoft.CostManagement/settings' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Resource kind
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SettingsProperties](#settingsproperties): The properties of the setting.
+* **type**: 'Microsoft.CostManagement/settings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/views@2019-11-01
 * **Valid Scope(s)**: Unknown
 ### Properties
-* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant)
-* **eTag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ViewProperties](#viewproperties)
-* **type**: 'Microsoft.CostManagement/views' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ViewProperties](#viewproperties): The properties of the view.
+* **type**: 'Microsoft.CostManagement/views' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ExportProperties
 ### Properties
-* **definition**: [ExportDefinition](#exportdefinition) (Required)
-* **deliveryInfo**: [ExportDeliveryInfo](#exportdeliveryinfo) (Required)
-* **format**: 'Csv'
-* **schedule**: [ExportSchedule](#exportschedule)
+* **definition**: [ExportDefinition](#exportdefinition) (Required): The definition of a query.
+* **deliveryInfo**: [ExportDeliveryInfo](#exportdeliveryinfo) (Required): The delivery information associated with a export.
+* **format**: 'Csv': The format of the export being delivered.
+* **schedule**: [ExportSchedule](#exportschedule): The schedule associated with a export.
 
 ## ExportDefinition
 ### Properties
-* **dataSet**: [QueryDataset](#querydataset)
-* **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'WeekToDate' (Required)
-* **timePeriod**: [QueryTimePeriod](#querytimeperiod)
-* **type**: 'ActualCost' | 'AmortizedCost' | 'Usage' (Required)
+* **dataSet**: [QueryDataset](#querydataset): The definition of data present in the query.
+* **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'WeekToDate' (Required): The time frame for pulling data for the query. If custom, then a specific time period must be provided.
+* **timePeriod**: [QueryTimePeriod](#querytimeperiod): The start and end date for pulling data for the query.
+* **type**: 'ActualCost' | 'AmortizedCost' | 'Usage' (Required): The type of the query.
 
 ## QueryDataset
 ### Properties
-* **aggregation**: [Dictionary<string,QueryAggregation>](#dictionarystringqueryaggregation)
-* **configuration**: [QueryDatasetConfiguration](#querydatasetconfiguration)
-* **filter**: [QueryFilter](#queryfilter)
-* **granularity**: 'Daily'
-* **grouping**: [QueryGrouping](#querygrouping)[]
+* **aggregation**: [Dictionary<string,QueryAggregation>](#dictionarystringqueryaggregation): Dictionary of aggregation expression to use in the query. The key of each item in the dictionary is the alias for the aggregated column. Query can have up to 2 aggregation clauses.
+* **configuration**: [QueryDatasetConfiguration](#querydatasetconfiguration): The configuration of dataset in the query.
+* **filter**: [QueryFilter](#queryfilter): The filter expression to be used in the export.
+* **granularity**: 'Daily': The granularity of rows in the query.
+* **grouping**: [QueryGrouping](#querygrouping)[]: Array of group by expression to use in the query. Query can have up to 2 group by clauses.
 
 ## Dictionary<string,QueryAggregation>
 ### Properties
@@ -59,103 +59,103 @@
 
 ## QueryAggregation
 ### Properties
-* **function**: string (Required)
-* **name**: string (Required)
+* **function**: string (Required): The name of the aggregation function to use.
+* **name**: string (Required): The name of the column to aggregate.
 
 ## QueryDatasetConfiguration
 ### Properties
-* **columns**: string[]
+* **columns**: string[]: Array of column names to be included in the query. Any valid query column name is allowed. If not provided, then query includes all columns.
 
 ## QueryFilter
 ### Properties
-* **and**: [QueryFilter](#queryfilter)[]
-* **dimensions**: [QueryComparisonExpression](#querycomparisonexpression)
-* **or**: [QueryFilter](#queryfilter)[]
-* **tags**: [QueryComparisonExpression](#querycomparisonexpression)
+* **and**: [QueryFilter](#queryfilter)[]: The logical "AND" expression. Must have at least 2 items.
+* **dimensions**: [QueryComparisonExpression](#querycomparisonexpression): The comparison expression to be used in the query.
+* **or**: [QueryFilter](#queryfilter)[]: The logical "OR" expression. Must have at least 2 items.
+* **tags**: [QueryComparisonExpression](#querycomparisonexpression): The comparison expression to be used in the query.
 
 ## QueryComparisonExpression
 ### Properties
-* **name**: string (Required)
-* **operator**: string (Required)
-* **values**: string[] (Required)
+* **name**: string (Required): The name of the column to use in comparison.
+* **operator**: string (Required): The operator to use for comparison.
+* **values**: string[] (Required): Array of values to use for comparison
 
 ## QueryGrouping
 ### Properties
-* **name**: string (Required)
-* **type**: 'Dimension' | 'Tag' (Required)
+* **name**: string (Required): The name of the column to group.
+* **type**: 'Dimension' | 'Tag' (Required): Has type of the column to group.
 
 ## QueryTimePeriod
 ### Properties
-* **from**: string (Required)
-* **to**: string (Required)
+* **from**: string (Required): The start date to pull data from.
+* **to**: string (Required): The end date to pull data to.
 
 ## ExportDeliveryInfo
 ### Properties
-* **destination**: [ExportDeliveryDestination](#exportdeliverydestination) (Required)
+* **destination**: [ExportDeliveryDestination](#exportdeliverydestination) (Required): The destination information for the delivery of the export. To allow access to a storage account, you must register the account's subscription with the Microsoft.CostManagementExports resource provider. This is required once per subscription. When creating an export in the Azure portal, it is done automatically, however API users need to register the subscription. For more information see https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-supported-services .
 
 ## ExportDeliveryDestination
 ### Properties
-* **container**: string (Required)
-* **resourceId**: string (Required)
-* **rootFolderPath**: string
+* **container**: string (Required): The name of the container where exports will be uploaded.
+* **resourceId**: string (Required): The resource id of the storage account where exports will be delivered.
+* **rootFolderPath**: string: The name of the directory where exports will be uploaded.
 
 ## ExportSchedule
 ### Properties
-* **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' (Required)
-* **recurrencePeriod**: [ExportRecurrencePeriod](#exportrecurrenceperiod)
-* **status**: 'Active' | 'Inactive'
+* **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' (Required): The schedule recurrence.
+* **recurrencePeriod**: [ExportRecurrencePeriod](#exportrecurrenceperiod): The start and end date for recurrence schedule.
+* **status**: 'Active' | 'Inactive': The status of the schedule. Whether active or not. If inactive, the export's scheduled execution is paused.
 
 ## ExportRecurrencePeriod
 ### Properties
-* **from**: string (Required)
-* **to**: string
+* **from**: string (Required): The start date of recurrence.
+* **to**: string: The end date of recurrence.
 
 ## SettingsProperties
 ### Properties
-* **scope**: string
+* **scope**: string: For the myscope setting, sets the default scope the current user will see when they sign into Azure Cost Management in the Azure portal.
 
 ## ViewProperties
 ### Properties
-* **accumulated**: 'false' | 'true'
-* **chart**: 'Area' | 'GroupedColumn' | 'Line' | 'StackedColumn' | 'Table'
-* **createdOn**: string (ReadOnly)
-* **currency**: string (ReadOnly)
-* **dateRange**: string (ReadOnly)
-* **displayName**: string
-* **kpis**: [KpiProperties](#kpiproperties)[]
-* **metric**: 'ActualCost' | 'AHUB' | 'AmortizedCost'
-* **modifiedOn**: string (ReadOnly)
-* **pivots**: [PivotProperties](#pivotproperties)[]
-* **query**: [ReportConfigDefinition](#reportconfigdefinition)
-* **scope**: string
+* **accumulated**: 'false' | 'true': Show costs accumulated over time.
+* **chart**: 'Area' | 'GroupedColumn' | 'Line' | 'StackedColumn' | 'Table': Chart type of the main view in Cost Analysis. Required.
+* **createdOn**: string (ReadOnly): Date the user created this view.
+* **currency**: string (ReadOnly): Selected currency.
+* **dateRange**: string (ReadOnly): Selected date range for viewing cost in.
+* **displayName**: string: User input name of the view. Required.
+* **kpis**: [KpiProperties](#kpiproperties)[]: List of KPIs to show in Cost Analysis UI.
+* **metric**: 'ActualCost' | 'AHUB' | 'AmortizedCost': Metric to use when displaying costs.
+* **modifiedOn**: string (ReadOnly): Date when the user last modified this view.
+* **pivots**: [PivotProperties](#pivotproperties)[]: Configuration of 3 sub-views in the Cost Analysis UI.
+* **query**: [ReportConfigDefinition](#reportconfigdefinition): The definition of a report config.
+* **scope**: string: Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.
 
 ## KpiProperties
 ### Properties
-* **enabled**: bool
-* **id**: string
-* **type**: 'Budget' | 'Forecast'
+* **enabled**: bool: show the KPI in the UI?
+* **id**: string: ID of resource related to metric (budget).
+* **type**: 'Budget' | 'Forecast': KPI type (Forecast, Budget).
 
 ## PivotProperties
 ### Properties
-* **name**: string
-* **type**: 'Dimension' | 'TagKey'
+* **name**: string: Data field to show in view.
+* **type**: 'Dimension' | 'TagKey': Data type to show in view.
 
 ## ReportConfigDefinition
 ### Properties
-* **dataSet**: [ReportConfigDataset](#reportconfigdataset)
-* **includeMonetaryCommitment**: bool (ReadOnly)
-* **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required)
-* **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod)
-* **type**: string (Required)
+* **dataSet**: [ReportConfigDataset](#reportconfigdataset): The definition of data present in the report.
+* **includeMonetaryCommitment**: bool (ReadOnly): Include monetary commitment
+* **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+* **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod): The start and end date for pulling data for the report.
+* **type**: string (Required): The type of the report. Usage represents actual usage, forecast represents forecasted data and UsageAndForecast represents both usage and forecasted data. Actual usage and forecasted data can be differentiated based on dates.
 
 ## ReportConfigDataset
 ### Properties
-* **aggregation**: [Dictionary<string,ReportConfigAggregation>](#dictionarystringreportconfigaggregation)
-* **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration)
-* **filter**: [ReportConfigFilter](#reportconfigfilter)
-* **granularity**: 'Daily' | 'Monthly'
-* **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[]
-* **sorting**: [ReportConfigSorting](#reportconfigsorting)[]
+* **aggregation**: [Dictionary<string,ReportConfigAggregation>](#dictionarystringreportconfigaggregation): Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
+* **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration): The configuration of dataset in the report.
+* **filter**: [ReportConfigFilter](#reportconfigfilter): The filter expression to be used in the report.
+* **granularity**: 'Daily' | 'Monthly': The granularity of rows in the report.
+* **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[]: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
+* **sorting**: [ReportConfigSorting](#reportconfigsorting)[]: Array of order by expression to use in the report.
 
 ## Dictionary<string,ReportConfigAggregation>
 ### Properties
@@ -164,40 +164,40 @@
 
 ## ReportConfigAggregation
 ### Properties
-* **function**: string (Required)
-* **name**: string (Required)
+* **function**: string (Required): The name of the aggregation function to use.
+* **name**: string (Required): The name of the column to aggregate.
 
 ## ReportConfigDatasetConfiguration
 ### Properties
-* **columns**: string[]
+* **columns**: string[]: Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.
 
 ## ReportConfigFilter
 ### Properties
-* **and**: [ReportConfigFilter](#reportconfigfilter)[]
-* **dimensions**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression)
-* **or**: [ReportConfigFilter](#reportconfigfilter)[]
-* **tagKey**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression)
-* **tags**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression)
-* **tagValue**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression)
+* **and**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "AND" expression. Must have at least 2 items.
+* **dimensions**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): The comparison expression to be used in the report.
+* **or**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "OR" expression. Must have at least 2 items.
+* **tagKey**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): The comparison expression to be used in the report.
+* **tags**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): The comparison expression to be used in the report.
+* **tagValue**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): The comparison expression to be used in the report.
 
 ## ReportConfigComparisonExpression
 ### Properties
-* **name**: string (Required)
-* **operator**: 'Contains' | 'In' (Required)
-* **values**: string[] (Required)
+* **name**: string (Required): The name of the column to use in comparison.
+* **operator**: 'Contains' | 'In' (Required): The operator to use for comparison.
+* **values**: string[] (Required): Array of values to use for comparison
 
 ## ReportConfigGrouping
 ### Properties
-* **name**: string (Required)
-* **type**: 'Dimension' | 'Tag' (Required)
+* **name**: string (Required): The name of the column to group. This version supports subscription lowest possible grain.
+* **type**: 'Dimension' | 'Tag' (Required): Has type of the column to group.
 
 ## ReportConfigSorting
 ### Properties
-* **direction**: 'Ascending' | 'Descending'
-* **name**: string (Required)
+* **direction**: 'Ascending' | 'Descending': Direction of sort.
+* **name**: string (Required): The name of the column to sort.
 
 ## ReportConfigTimePeriod
 ### Properties
-* **from**: string (Required)
-* **to**: string (Required)
+* **from**: string (Required): The start date to pull data from.
+* **to**: string (Required): The end date to pull data to.
 

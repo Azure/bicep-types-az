@@ -3,97 +3,97 @@
 ## Resource Microsoft.ContainerService/containerServices@2017-07-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2017-07-01' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (Required)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ContainerServiceProperties](#containerserviceproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.ContainerService/containerServices' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2017-07-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ContainerServiceProperties](#containerserviceproperties): Properties of the container service.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: 'Microsoft.ContainerService/containerServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ContainerServiceProperties
 ### Properties
-* **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[]
-* **customProfile**: [ContainerServiceCustomProfile](#containerservicecustomprofile)
-* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile)
-* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile) (Required)
-* **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required)
-* **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile) (Required)
-* **provisioningState**: string (ReadOnly)
-* **servicePrincipalProfile**: [ContainerServiceServicePrincipalProfile](#containerserviceserviceprincipalprofile)
-* **windowsProfile**: [ContainerServiceWindowsProfile](#containerservicewindowsprofile)
+* **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[]: Properties of the agent pool.
+* **customProfile**: [ContainerServiceCustomProfile](#containerservicecustomprofile): Properties to configure a custom container service cluster.
+* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile): Profile for diagnostics on the container service cluster.
+* **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile) (Required): Profile for Linux VMs in the container service cluster.
+* **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required): Profile for the container service master.
+* **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile) (Required): Profile for the container service orchestrator.
+* **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
+* **servicePrincipalProfile**: [ContainerServiceServicePrincipalProfile](#containerserviceserviceprincipalprofile): Information about a service principal identity for the cluster to use for manipulating Azure APIs. Either secret or keyVaultSecretRef must be specified.
+* **windowsProfile**: [ContainerServiceWindowsProfile](#containerservicewindowsprofile): Profile for Windows VMs in the container service cluster.
 
 ## ContainerServiceAgentPoolProfile
 ### Properties
-* **count**: int
-* **dnsPrefix**: string
-* **fqdn**: string (ReadOnly)
-* **name**: string (Required)
-* **osDiskSizeGB**: int
-* **osType**: 'Linux' | 'Windows'
-* **ports**: int[]
-* **storageProfile**: 'ManagedDisks' | 'StorageAccount'
-* **vmSize**: 'Standard_A1_v2' | 'Standard_A1' | 'Standard_A10' | 'Standard_A11' | 'Standard_A2_v2' | 'Standard_A2' | 'Standard_A2m_v2' | 'Standard_A3' | 'Standard_A4_v2' | 'Standard_A4' | 'Standard_A4m_v2' | 'Standard_A5' | 'Standard_A6' | 'Standard_A7' | 'Standard_A8_v2' | 'Standard_A8' | 'Standard_A8m_v2' | 'Standard_A9' | 'Standard_B2ms' | 'Standard_B2s' | 'Standard_B4ms' | 'Standard_B8ms' | 'Standard_D1_v2' | 'Standard_D1' | 'Standard_D11_v2_Promo' | 'Standard_D11_v2' | 'Standard_D11' | 'Standard_D12_v2_Promo' | 'Standard_D12_v2' | 'Standard_D12' | 'Standard_D13_v2_Promo' | 'Standard_D13_v2' | 'Standard_D13' | 'Standard_D14_v2_Promo' | 'Standard_D14_v2' | 'Standard_D14' | 'Standard_D15_v2' | 'Standard_D16_v3' | 'Standard_D16s_v3' | 'Standard_D2_v2_Promo' | 'Standard_D2_v2' | 'Standard_D2_v3' | 'Standard_D2' | 'Standard_D2s_v3' | 'Standard_D3_v2_Promo' | 'Standard_D3_v2' | 'Standard_D3' | 'Standard_D32_v3' | 'Standard_D32s_v3' | 'Standard_D4_v2_Promo' | 'Standard_D4_v2' | 'Standard_D4_v3' | 'Standard_D4' | 'Standard_D4s_v3' | 'Standard_D5_v2_Promo' | 'Standard_D5_v2' | 'Standard_D64_v3' | 'Standard_D64s_v3' | 'Standard_D8_v3' | 'Standard_D8s_v3' | 'Standard_DS1_v2' | 'Standard_DS1' | 'Standard_DS11_v2_Promo' | 'Standard_DS11_v2' | 'Standard_DS11' | 'Standard_DS12_v2_Promo' | 'Standard_DS12_v2' | 'Standard_DS12' | 'Standard_DS13_v2_Promo' | 'Standard_DS13_v2' | 'Standard_DS13-2_v2' | 'Standard_DS13-4_v2' | 'Standard_DS13' | 'Standard_DS14_v2_Promo' | 'Standard_DS14_v2' | 'Standard_DS14-4_v2' | 'Standard_DS14-8_v2' | 'Standard_DS14' | 'Standard_DS15_v2' | 'Standard_DS2_v2_Promo' | 'Standard_DS2_v2' | 'Standard_DS2' | 'Standard_DS3_v2_Promo' | 'Standard_DS3_v2' | 'Standard_DS3' | 'Standard_DS4_v2_Promo' | 'Standard_DS4_v2' | 'Standard_DS4' | 'Standard_DS5_v2_Promo' | 'Standard_DS5_v2' | 'Standard_E16_v3' | 'Standard_E16s_v3' | 'Standard_E2_v3' | 'Standard_E2s_v3' | 'Standard_E32_v3' | 'Standard_E32-16s_v3' | 'Standard_E32-8s_v3' | 'Standard_E32s_v3' | 'Standard_E4_v3' | 'Standard_E4s_v3' | 'Standard_E64_v3' | 'Standard_E64-16s_v3' | 'Standard_E64-32s_v3' | 'Standard_E64s_v3' | 'Standard_E8_v3' | 'Standard_E8s_v3' | 'Standard_F1' | 'Standard_F16' | 'Standard_F16s_v2' | 'Standard_F16s' | 'Standard_F1s' | 'Standard_F2' | 'Standard_F2s_v2' | 'Standard_F2s' | 'Standard_F32s_v2' | 'Standard_F4' | 'Standard_F4s_v2' | 'Standard_F4s' | 'Standard_F64s_v2' | 'Standard_F72s_v2' | 'Standard_F8' | 'Standard_F8s_v2' | 'Standard_F8s' | 'Standard_G1' | 'Standard_G2' | 'Standard_G3' | 'Standard_G4' | 'Standard_G5' | 'Standard_GS1' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4-4' | 'Standard_GS4-8' | 'Standard_GS4' | 'Standard_GS5-16' | 'Standard_GS5-8' | 'Standard_GS5' | 'Standard_H16' | 'Standard_H16m' | 'Standard_H16mr' | 'Standard_H16r' | 'Standard_H8' | 'Standard_H8m' | 'Standard_L16s' | 'Standard_L32s' | 'Standard_L4s' | 'Standard_L8s' | 'Standard_M128-32ms' | 'Standard_M128-64ms' | 'Standard_M128ms' | 'Standard_M128s' | 'Standard_M64-16ms' | 'Standard_M64-32ms' | 'Standard_M64ms' | 'Standard_M64s' | 'Standard_NC12' | 'Standard_NC12s_v2' | 'Standard_NC12s_v3' | 'Standard_NC24' | 'Standard_NC24r' | 'Standard_NC24rs_v2' | 'Standard_NC24rs_v3' | 'Standard_NC24s_v2' | 'Standard_NC24s_v3' | 'Standard_NC6' | 'Standard_NC6s_v2' | 'Standard_NC6s_v3' | 'Standard_ND12s' | 'Standard_ND24rs' | 'Standard_ND24s' | 'Standard_ND6s' | 'Standard_NV12' | 'Standard_NV24' | 'Standard_NV6' (Required)
-* **vnetSubnetID**: string
+* **count**: int: Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1.
+* **dnsPrefix**: string: DNS prefix to be used to create the FQDN for the agent pool.
+* **fqdn**: string (ReadOnly): FQDN for the agent pool.
+* **name**: string (Required): Unique name of the agent pool profile in the context of the subscription and resource group.
+* **osDiskSizeGB**: int: OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
+* **osType**: 'Linux' | 'Windows': OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+* **ports**: int[]: Ports number array used to expose on this agent pool. The default opened ports are different based on your choice of orchestrator.
+* **storageProfile**: 'ManagedDisks' | 'StorageAccount': Storage profile specifies what kind of storage used. Choose from StorageAccount and ManagedDisks. Leave it empty, we will choose for you based on the orchestrator choice.
+* **vmSize**: 'Standard_A1_v2' | 'Standard_A1' | 'Standard_A10' | 'Standard_A11' | 'Standard_A2_v2' | 'Standard_A2' | 'Standard_A2m_v2' | 'Standard_A3' | 'Standard_A4_v2' | 'Standard_A4' | 'Standard_A4m_v2' | 'Standard_A5' | 'Standard_A6' | 'Standard_A7' | 'Standard_A8_v2' | 'Standard_A8' | 'Standard_A8m_v2' | 'Standard_A9' | 'Standard_B2ms' | 'Standard_B2s' | 'Standard_B4ms' | 'Standard_B8ms' | 'Standard_D1_v2' | 'Standard_D1' | 'Standard_D11_v2_Promo' | 'Standard_D11_v2' | 'Standard_D11' | 'Standard_D12_v2_Promo' | 'Standard_D12_v2' | 'Standard_D12' | 'Standard_D13_v2_Promo' | 'Standard_D13_v2' | 'Standard_D13' | 'Standard_D14_v2_Promo' | 'Standard_D14_v2' | 'Standard_D14' | 'Standard_D15_v2' | 'Standard_D16_v3' | 'Standard_D16s_v3' | 'Standard_D2_v2_Promo' | 'Standard_D2_v2' | 'Standard_D2_v3' | 'Standard_D2' | 'Standard_D2s_v3' | 'Standard_D3_v2_Promo' | 'Standard_D3_v2' | 'Standard_D3' | 'Standard_D32_v3' | 'Standard_D32s_v3' | 'Standard_D4_v2_Promo' | 'Standard_D4_v2' | 'Standard_D4_v3' | 'Standard_D4' | 'Standard_D4s_v3' | 'Standard_D5_v2_Promo' | 'Standard_D5_v2' | 'Standard_D64_v3' | 'Standard_D64s_v3' | 'Standard_D8_v3' | 'Standard_D8s_v3' | 'Standard_DS1_v2' | 'Standard_DS1' | 'Standard_DS11_v2_Promo' | 'Standard_DS11_v2' | 'Standard_DS11' | 'Standard_DS12_v2_Promo' | 'Standard_DS12_v2' | 'Standard_DS12' | 'Standard_DS13_v2_Promo' | 'Standard_DS13_v2' | 'Standard_DS13-2_v2' | 'Standard_DS13-4_v2' | 'Standard_DS13' | 'Standard_DS14_v2_Promo' | 'Standard_DS14_v2' | 'Standard_DS14-4_v2' | 'Standard_DS14-8_v2' | 'Standard_DS14' | 'Standard_DS15_v2' | 'Standard_DS2_v2_Promo' | 'Standard_DS2_v2' | 'Standard_DS2' | 'Standard_DS3_v2_Promo' | 'Standard_DS3_v2' | 'Standard_DS3' | 'Standard_DS4_v2_Promo' | 'Standard_DS4_v2' | 'Standard_DS4' | 'Standard_DS5_v2_Promo' | 'Standard_DS5_v2' | 'Standard_E16_v3' | 'Standard_E16s_v3' | 'Standard_E2_v3' | 'Standard_E2s_v3' | 'Standard_E32_v3' | 'Standard_E32-16s_v3' | 'Standard_E32-8s_v3' | 'Standard_E32s_v3' | 'Standard_E4_v3' | 'Standard_E4s_v3' | 'Standard_E64_v3' | 'Standard_E64-16s_v3' | 'Standard_E64-32s_v3' | 'Standard_E64s_v3' | 'Standard_E8_v3' | 'Standard_E8s_v3' | 'Standard_F1' | 'Standard_F16' | 'Standard_F16s_v2' | 'Standard_F16s' | 'Standard_F1s' | 'Standard_F2' | 'Standard_F2s_v2' | 'Standard_F2s' | 'Standard_F32s_v2' | 'Standard_F4' | 'Standard_F4s_v2' | 'Standard_F4s' | 'Standard_F64s_v2' | 'Standard_F72s_v2' | 'Standard_F8' | 'Standard_F8s_v2' | 'Standard_F8s' | 'Standard_G1' | 'Standard_G2' | 'Standard_G3' | 'Standard_G4' | 'Standard_G5' | 'Standard_GS1' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4-4' | 'Standard_GS4-8' | 'Standard_GS4' | 'Standard_GS5-16' | 'Standard_GS5-8' | 'Standard_GS5' | 'Standard_H16' | 'Standard_H16m' | 'Standard_H16mr' | 'Standard_H16r' | 'Standard_H8' | 'Standard_H8m' | 'Standard_L16s' | 'Standard_L32s' | 'Standard_L4s' | 'Standard_L8s' | 'Standard_M128-32ms' | 'Standard_M128-64ms' | 'Standard_M128ms' | 'Standard_M128s' | 'Standard_M64-16ms' | 'Standard_M64-32ms' | 'Standard_M64ms' | 'Standard_M64s' | 'Standard_NC12' | 'Standard_NC12s_v2' | 'Standard_NC12s_v3' | 'Standard_NC24' | 'Standard_NC24r' | 'Standard_NC24rs_v2' | 'Standard_NC24rs_v3' | 'Standard_NC24s_v2' | 'Standard_NC24s_v3' | 'Standard_NC6' | 'Standard_NC6s_v2' | 'Standard_NC6s_v3' | 'Standard_ND12s' | 'Standard_ND24rs' | 'Standard_ND24s' | 'Standard_ND6s' | 'Standard_NV12' | 'Standard_NV24' | 'Standard_NV6' (Required): Size of agent VMs.
+* **vnetSubnetID**: string: VNet SubnetID specifies the VNet's subnet identifier.
 
 ## ContainerServiceCustomProfile
 ### Properties
-* **orchestrator**: string (Required)
+* **orchestrator**: string (Required): The name of the custom orchestrator to use.
 
 ## ContainerServiceDiagnosticsProfile
 ### Properties
-* **vmDiagnostics**: [ContainerServiceVMDiagnostics](#containerservicevmdiagnostics) (Required)
+* **vmDiagnostics**: [ContainerServiceVMDiagnostics](#containerservicevmdiagnostics) (Required): Profile for diagnostics on the container service VMs.
 
 ## ContainerServiceVMDiagnostics
 ### Properties
-* **enabled**: bool (Required)
-* **storageUri**: string (ReadOnly)
+* **enabled**: bool (Required): Whether the VM diagnostic agent is provisioned on the VM.
+* **storageUri**: string (ReadOnly): The URI of the storage account where diagnostics are stored.
 
 ## ContainerServiceLinuxProfile
 ### Properties
-* **adminUsername**: string (Required)
-* **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required)
+* **adminUsername**: string (Required): The administrator username to use for Linux VMs.
+* **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required): SSH configuration for Linux-based VMs running on Azure.
 
 ## ContainerServiceSshConfiguration
 ### Properties
-* **publicKeys**: [ContainerServiceSshPublicKey](#containerservicesshpublickey)[] (Required)
+* **publicKeys**: [ContainerServiceSshPublicKey](#containerservicesshpublickey)[] (Required): The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.
 
 ## ContainerServiceSshPublicKey
 ### Properties
-* **keyData**: string (Required)
+* **keyData**: string (Required): Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
 
 ## ContainerServiceMasterProfile
 ### Properties
-* **count**: int
-* **dnsPrefix**: string (Required)
-* **firstConsecutiveStaticIP**: string
-* **fqdn**: string (ReadOnly)
-* **osDiskSizeGB**: int
-* **storageProfile**: 'ManagedDisks' | 'StorageAccount'
-* **vmSize**: 'Standard_A1_v2' | 'Standard_A1' | 'Standard_A10' | 'Standard_A11' | 'Standard_A2_v2' | 'Standard_A2' | 'Standard_A2m_v2' | 'Standard_A3' | 'Standard_A4_v2' | 'Standard_A4' | 'Standard_A4m_v2' | 'Standard_A5' | 'Standard_A6' | 'Standard_A7' | 'Standard_A8_v2' | 'Standard_A8' | 'Standard_A8m_v2' | 'Standard_A9' | 'Standard_B2ms' | 'Standard_B2s' | 'Standard_B4ms' | 'Standard_B8ms' | 'Standard_D1_v2' | 'Standard_D1' | 'Standard_D11_v2_Promo' | 'Standard_D11_v2' | 'Standard_D11' | 'Standard_D12_v2_Promo' | 'Standard_D12_v2' | 'Standard_D12' | 'Standard_D13_v2_Promo' | 'Standard_D13_v2' | 'Standard_D13' | 'Standard_D14_v2_Promo' | 'Standard_D14_v2' | 'Standard_D14' | 'Standard_D15_v2' | 'Standard_D16_v3' | 'Standard_D16s_v3' | 'Standard_D2_v2_Promo' | 'Standard_D2_v2' | 'Standard_D2_v3' | 'Standard_D2' | 'Standard_D2s_v3' | 'Standard_D3_v2_Promo' | 'Standard_D3_v2' | 'Standard_D3' | 'Standard_D32_v3' | 'Standard_D32s_v3' | 'Standard_D4_v2_Promo' | 'Standard_D4_v2' | 'Standard_D4_v3' | 'Standard_D4' | 'Standard_D4s_v3' | 'Standard_D5_v2_Promo' | 'Standard_D5_v2' | 'Standard_D64_v3' | 'Standard_D64s_v3' | 'Standard_D8_v3' | 'Standard_D8s_v3' | 'Standard_DS1_v2' | 'Standard_DS1' | 'Standard_DS11_v2_Promo' | 'Standard_DS11_v2' | 'Standard_DS11' | 'Standard_DS12_v2_Promo' | 'Standard_DS12_v2' | 'Standard_DS12' | 'Standard_DS13_v2_Promo' | 'Standard_DS13_v2' | 'Standard_DS13-2_v2' | 'Standard_DS13-4_v2' | 'Standard_DS13' | 'Standard_DS14_v2_Promo' | 'Standard_DS14_v2' | 'Standard_DS14-4_v2' | 'Standard_DS14-8_v2' | 'Standard_DS14' | 'Standard_DS15_v2' | 'Standard_DS2_v2_Promo' | 'Standard_DS2_v2' | 'Standard_DS2' | 'Standard_DS3_v2_Promo' | 'Standard_DS3_v2' | 'Standard_DS3' | 'Standard_DS4_v2_Promo' | 'Standard_DS4_v2' | 'Standard_DS4' | 'Standard_DS5_v2_Promo' | 'Standard_DS5_v2' | 'Standard_E16_v3' | 'Standard_E16s_v3' | 'Standard_E2_v3' | 'Standard_E2s_v3' | 'Standard_E32_v3' | 'Standard_E32-16s_v3' | 'Standard_E32-8s_v3' | 'Standard_E32s_v3' | 'Standard_E4_v3' | 'Standard_E4s_v3' | 'Standard_E64_v3' | 'Standard_E64-16s_v3' | 'Standard_E64-32s_v3' | 'Standard_E64s_v3' | 'Standard_E8_v3' | 'Standard_E8s_v3' | 'Standard_F1' | 'Standard_F16' | 'Standard_F16s_v2' | 'Standard_F16s' | 'Standard_F1s' | 'Standard_F2' | 'Standard_F2s_v2' | 'Standard_F2s' | 'Standard_F32s_v2' | 'Standard_F4' | 'Standard_F4s_v2' | 'Standard_F4s' | 'Standard_F64s_v2' | 'Standard_F72s_v2' | 'Standard_F8' | 'Standard_F8s_v2' | 'Standard_F8s' | 'Standard_G1' | 'Standard_G2' | 'Standard_G3' | 'Standard_G4' | 'Standard_G5' | 'Standard_GS1' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4-4' | 'Standard_GS4-8' | 'Standard_GS4' | 'Standard_GS5-16' | 'Standard_GS5-8' | 'Standard_GS5' | 'Standard_H16' | 'Standard_H16m' | 'Standard_H16mr' | 'Standard_H16r' | 'Standard_H8' | 'Standard_H8m' | 'Standard_L16s' | 'Standard_L32s' | 'Standard_L4s' | 'Standard_L8s' | 'Standard_M128-32ms' | 'Standard_M128-64ms' | 'Standard_M128ms' | 'Standard_M128s' | 'Standard_M64-16ms' | 'Standard_M64-32ms' | 'Standard_M64ms' | 'Standard_M64s' | 'Standard_NC12' | 'Standard_NC12s_v2' | 'Standard_NC12s_v3' | 'Standard_NC24' | 'Standard_NC24r' | 'Standard_NC24rs_v2' | 'Standard_NC24rs_v3' | 'Standard_NC24s_v2' | 'Standard_NC24s_v3' | 'Standard_NC6' | 'Standard_NC6s_v2' | 'Standard_NC6s_v3' | 'Standard_ND12s' | 'Standard_ND24rs' | 'Standard_ND24s' | 'Standard_ND6s' | 'Standard_NV12' | 'Standard_NV24' | 'Standard_NV6' (Required)
-* **vnetSubnetID**: string
+* **count**: int: Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.
+* **dnsPrefix**: string (Required): DNS prefix to be used to create the FQDN for the master pool.
+* **firstConsecutiveStaticIP**: string: FirstConsecutiveStaticIP used to specify the first static ip of masters.
+* **fqdn**: string (ReadOnly): FQDN for the master pool.
+* **osDiskSizeGB**: int: OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
+* **storageProfile**: 'ManagedDisks' | 'StorageAccount': Storage profile specifies what kind of storage used. Choose from StorageAccount and ManagedDisks. Leave it empty, we will choose for you based on the orchestrator choice.
+* **vmSize**: 'Standard_A1_v2' | 'Standard_A1' | 'Standard_A10' | 'Standard_A11' | 'Standard_A2_v2' | 'Standard_A2' | 'Standard_A2m_v2' | 'Standard_A3' | 'Standard_A4_v2' | 'Standard_A4' | 'Standard_A4m_v2' | 'Standard_A5' | 'Standard_A6' | 'Standard_A7' | 'Standard_A8_v2' | 'Standard_A8' | 'Standard_A8m_v2' | 'Standard_A9' | 'Standard_B2ms' | 'Standard_B2s' | 'Standard_B4ms' | 'Standard_B8ms' | 'Standard_D1_v2' | 'Standard_D1' | 'Standard_D11_v2_Promo' | 'Standard_D11_v2' | 'Standard_D11' | 'Standard_D12_v2_Promo' | 'Standard_D12_v2' | 'Standard_D12' | 'Standard_D13_v2_Promo' | 'Standard_D13_v2' | 'Standard_D13' | 'Standard_D14_v2_Promo' | 'Standard_D14_v2' | 'Standard_D14' | 'Standard_D15_v2' | 'Standard_D16_v3' | 'Standard_D16s_v3' | 'Standard_D2_v2_Promo' | 'Standard_D2_v2' | 'Standard_D2_v3' | 'Standard_D2' | 'Standard_D2s_v3' | 'Standard_D3_v2_Promo' | 'Standard_D3_v2' | 'Standard_D3' | 'Standard_D32_v3' | 'Standard_D32s_v3' | 'Standard_D4_v2_Promo' | 'Standard_D4_v2' | 'Standard_D4_v3' | 'Standard_D4' | 'Standard_D4s_v3' | 'Standard_D5_v2_Promo' | 'Standard_D5_v2' | 'Standard_D64_v3' | 'Standard_D64s_v3' | 'Standard_D8_v3' | 'Standard_D8s_v3' | 'Standard_DS1_v2' | 'Standard_DS1' | 'Standard_DS11_v2_Promo' | 'Standard_DS11_v2' | 'Standard_DS11' | 'Standard_DS12_v2_Promo' | 'Standard_DS12_v2' | 'Standard_DS12' | 'Standard_DS13_v2_Promo' | 'Standard_DS13_v2' | 'Standard_DS13-2_v2' | 'Standard_DS13-4_v2' | 'Standard_DS13' | 'Standard_DS14_v2_Promo' | 'Standard_DS14_v2' | 'Standard_DS14-4_v2' | 'Standard_DS14-8_v2' | 'Standard_DS14' | 'Standard_DS15_v2' | 'Standard_DS2_v2_Promo' | 'Standard_DS2_v2' | 'Standard_DS2' | 'Standard_DS3_v2_Promo' | 'Standard_DS3_v2' | 'Standard_DS3' | 'Standard_DS4_v2_Promo' | 'Standard_DS4_v2' | 'Standard_DS4' | 'Standard_DS5_v2_Promo' | 'Standard_DS5_v2' | 'Standard_E16_v3' | 'Standard_E16s_v3' | 'Standard_E2_v3' | 'Standard_E2s_v3' | 'Standard_E32_v3' | 'Standard_E32-16s_v3' | 'Standard_E32-8s_v3' | 'Standard_E32s_v3' | 'Standard_E4_v3' | 'Standard_E4s_v3' | 'Standard_E64_v3' | 'Standard_E64-16s_v3' | 'Standard_E64-32s_v3' | 'Standard_E64s_v3' | 'Standard_E8_v3' | 'Standard_E8s_v3' | 'Standard_F1' | 'Standard_F16' | 'Standard_F16s_v2' | 'Standard_F16s' | 'Standard_F1s' | 'Standard_F2' | 'Standard_F2s_v2' | 'Standard_F2s' | 'Standard_F32s_v2' | 'Standard_F4' | 'Standard_F4s_v2' | 'Standard_F4s' | 'Standard_F64s_v2' | 'Standard_F72s_v2' | 'Standard_F8' | 'Standard_F8s_v2' | 'Standard_F8s' | 'Standard_G1' | 'Standard_G2' | 'Standard_G3' | 'Standard_G4' | 'Standard_G5' | 'Standard_GS1' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4-4' | 'Standard_GS4-8' | 'Standard_GS4' | 'Standard_GS5-16' | 'Standard_GS5-8' | 'Standard_GS5' | 'Standard_H16' | 'Standard_H16m' | 'Standard_H16mr' | 'Standard_H16r' | 'Standard_H8' | 'Standard_H8m' | 'Standard_L16s' | 'Standard_L32s' | 'Standard_L4s' | 'Standard_L8s' | 'Standard_M128-32ms' | 'Standard_M128-64ms' | 'Standard_M128ms' | 'Standard_M128s' | 'Standard_M64-16ms' | 'Standard_M64-32ms' | 'Standard_M64ms' | 'Standard_M64s' | 'Standard_NC12' | 'Standard_NC12s_v2' | 'Standard_NC12s_v3' | 'Standard_NC24' | 'Standard_NC24r' | 'Standard_NC24rs_v2' | 'Standard_NC24rs_v3' | 'Standard_NC24s_v2' | 'Standard_NC24s_v3' | 'Standard_NC6' | 'Standard_NC6s_v2' | 'Standard_NC6s_v3' | 'Standard_ND12s' | 'Standard_ND24rs' | 'Standard_ND24s' | 'Standard_ND6s' | 'Standard_NV12' | 'Standard_NV24' | 'Standard_NV6' (Required): Size of agent VMs.
+* **vnetSubnetID**: string: VNet SubnetID specifies the VNet's subnet identifier.
 
 ## ContainerServiceOrchestratorProfile
 ### Properties
-* **orchestratorType**: 'Custom' | 'DCOS' | 'DockerCE' | 'Kubernetes' | 'Swarm' (Required)
-* **orchestratorVersion**: string
+* **orchestratorType**: 'Custom' | 'DCOS' | 'DockerCE' | 'Kubernetes' | 'Swarm' (Required): The orchestrator to use to manage container service cluster resources. Valid values are Kubernetes, Swarm, DCOS, DockerCE and Custom.
+* **orchestratorVersion**: string: The version of the orchestrator to use. You can specify the major.minor.patch part of the actual version.For example, you can specify version as "1.6.11".
 
 ## ContainerServiceServicePrincipalProfile
 ### Properties
-* **clientId**: string (Required)
-* **keyVaultSecretRef**: [KeyVaultSecretRef](#keyvaultsecretref)
-* **secret**: string
+* **clientId**: string (Required): The ID for the service principal.
+* **keyVaultSecretRef**: [KeyVaultSecretRef](#keyvaultsecretref): Reference to a secret stored in Azure Key Vault.
+* **secret**: string: The secret password associated with the service principal in plain text.
 
 ## KeyVaultSecretRef
 ### Properties
-* **secretName**: string (Required)
-* **vaultID**: string (Required)
-* **version**: string
+* **secretName**: string (Required): The secret name.
+* **vaultID**: string (Required): Key vault identifier.
+* **version**: string: The secret version.
 
 ## ContainerServiceWindowsProfile
 ### Properties
-* **adminPassword**: string (Required)
-* **adminUsername**: string (Required)
+* **adminPassword**: string (Required): The administrator password to use for Windows VMs.
+* **adminUsername**: string (Required): The administrator username to use for Windows VMs.
 
 ## Dictionary<string,String>
 ### Properties

@@ -3,28 +3,28 @@
 ## Resource Microsoft.DataCatalog/catalogs@2016-03-30
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant)
-* **etag**: string
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ADCCatalogProperties](#adccatalogproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.DataCatalog/catalogs' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string: Resource etag
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ADCCatalogProperties](#adccatalogproperties): Properties of the data catalog.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: 'Microsoft.DataCatalog/catalogs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ADCCatalogProperties
 ### Properties
-* **admins**: [Principals](#principals)[]
-* **enableAutomaticUnitAdjustment**: bool
-* **sku**: 'Free' | 'Standard'
-* **successfullyProvisioned**: bool
-* **units**: int
-* **users**: [Principals](#principals)[]
+* **admins**: [Principals](#principals)[]: Azure data catalog admin list.
+* **enableAutomaticUnitAdjustment**: bool: Automatic unit adjustment enabled or not.
+* **sku**: 'Free' | 'Standard': Azure data catalog SKU.
+* **successfullyProvisioned**: bool: Azure data catalog provision status.
+* **units**: int: Azure data catalog units.
+* **users**: [Principals](#principals)[]: Azure data catalog user list.
 
 ## Principals
 ### Properties
-* **objectId**: string
-* **upn**: string
+* **objectId**: string: Object Id for the user
+* **upn**: string: UPN of the user.
 
 ## Dictionary<string,String>
 ### Properties

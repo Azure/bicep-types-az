@@ -3,14 +3,14 @@
 ## Resource Microsoft.DBForPostgreSql/flexibleServers/databases@2020-11-05-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2020-11-05-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [DatabaseProperties](#databaseproperties)
-* **type**: 'Microsoft.DBForPostgreSql/flexibleServers/databases' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2020-11-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DatabaseProperties](#databaseproperties): The properties of a database.
+* **type**: 'Microsoft.DBForPostgreSql/flexibleServers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DatabaseProperties
 ### Properties
-* **charset**: string
-* **collation**: string
+* **charset**: string: The charset of the database.
+* **collation**: string: The collation of the database.
 

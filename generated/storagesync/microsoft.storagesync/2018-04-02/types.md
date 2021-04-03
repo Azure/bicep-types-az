@@ -3,62 +3,62 @@
 ## Resource Microsoft.StorageSync/storageSyncServices@2018-04-02
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-04-02' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [StorageSyncServiceProperties](#storagesyncserviceproperties) (ReadOnly)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-04-02' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [StorageSyncServiceProperties](#storagesyncserviceproperties) (ReadOnly): Storage Sync Service Properties object.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
+* **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/registeredServers@2018-04-02
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-04-02' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (WriteOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [RegisteredServerCreateParametersProperties](#registeredservercreateparametersproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
-* **type**: 'Microsoft.StorageSync/storageSyncServices/registeredServers' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-04-02' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (WriteOnly): Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RegisteredServerCreateParametersProperties](#registeredservercreateparametersproperties): RegisteredServer Properties object.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly): Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
+* **type**: 'Microsoft.StorageSync/storageSyncServices/registeredServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups@2018-04-02
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-04-02' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (WriteOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: any
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
-* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-04-02' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (WriteOnly): Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: any: Sync Group Create Properties object.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly): Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
+* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2018-04-02
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-04-02' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (WriteOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [CloudEndpointCreateParametersProperties](#cloudendpointcreateparametersproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
-* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-04-02' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (WriteOnly): Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [CloudEndpointCreateParametersProperties](#cloudendpointcreateparametersproperties): CloudEndpoint Properties object.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly): Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
+* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints@2018-04-02
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-04-02' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string (WriteOnly)
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ServerEndpointCreateParametersProperties](#serverendpointcreateparametersproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly)
-* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2018-04-02' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (WriteOnly): Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServerEndpointCreateParametersProperties](#serverendpointcreateparametersproperties): ServerEndpoint Properties object.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly): Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
+* **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## StorageSyncServiceProperties
 ### Properties
-* **storageSyncServiceStatus**: int (ReadOnly)
-* **storageSyncServiceUid**: string (ReadOnly)
+* **storageSyncServiceStatus**: int (ReadOnly): Storage Sync service status.
+* **storageSyncServiceUid**: string (ReadOnly): Storage Sync service Uid
 
 ## Dictionary<string,String>
 ### Properties
@@ -67,24 +67,24 @@
 
 ## RegisteredServerCreateParametersProperties
 ### Properties
-* **agentVersion**: string
-* **clusterId**: string
-* **clusterName**: string
-* **discoveryEndpointUri**: string (ReadOnly)
-* **friendlyName**: string
-* **lastHeartBeat**: string
-* **lastOperationName**: string (ReadOnly)
-* **lastWorkflowId**: string (ReadOnly)
-* **managementEndpointUri**: string (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **resourceLocation**: string (ReadOnly)
-* **serverCertificate**: string
-* **serverId**: string
-* **serverManagementtErrorCode**: int (ReadOnly)
-* **serverOSVersion**: string
-* **serverRole**: string
-* **serviceLocation**: string (ReadOnly)
-* **storageSyncServiceUid**: string (ReadOnly)
+* **agentVersion**: string: Registered Server Agent Version
+* **clusterId**: string: Registered Server clusterId
+* **clusterName**: string: Registered Server clusterName
+* **discoveryEndpointUri**: string (ReadOnly): Resource discoveryEndpointUri
+* **friendlyName**: string: Friendly Name
+* **lastHeartBeat**: string: Registered Server last heart beat
+* **lastOperationName**: string (ReadOnly): Resource Last Operation Name
+* **lastWorkflowId**: string (ReadOnly): Registered Server lastWorkflowId
+* **managementEndpointUri**: string (ReadOnly): Management Endpoint Uri
+* **provisioningState**: string (ReadOnly): Registered Server Provisioning State
+* **resourceLocation**: string (ReadOnly): Resource Location
+* **serverCertificate**: string: Registered Server Certificate
+* **serverId**: string: Registered Server serverId
+* **serverManagementtErrorCode**: int (ReadOnly): Registered Server Management Error Code
+* **serverOSVersion**: string: Registered Server OS Version
+* **serverRole**: string: Registered Server serverRole
+* **serviceLocation**: string (ReadOnly): Service Location
+* **storageSyncServiceUid**: string (ReadOnly): Registered Server storageSyncServiceUid
 
 ## Dictionary<string,String>
 ### Properties
@@ -98,15 +98,15 @@
 
 ## CloudEndpointCreateParametersProperties
 ### Properties
-* **backupEnabled**: bool (ReadOnly)
-* **friendlyName**: string (ReadOnly)
-* **lastOperationName**: string (ReadOnly)
-* **lastWorkflowId**: string (ReadOnly)
-* **partnershipId**: string (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **storageAccountResourceId**: string
-* **storageAccountShareName**: string
-* **storageAccountTenantId**: string
+* **backupEnabled**: bool (ReadOnly): Backup Enabled
+* **friendlyName**: string (ReadOnly): Friendly Name
+* **lastOperationName**: string (ReadOnly): Resource Last Operation Name
+* **lastWorkflowId**: string (ReadOnly): CloudEndpoint lastWorkflowId
+* **partnershipId**: string (ReadOnly): Partnership Id
+* **provisioningState**: string (ReadOnly): CloudEndpoint Provisioning State
+* **storageAccountResourceId**: string: Storage Account Resource Id
+* **storageAccountShareName**: string: Storage Account Share name
+* **storageAccountTenantId**: string: Storage Account Tenant Id
 
 ## Dictionary<string,String>
 ### Properties
@@ -115,15 +115,15 @@
 
 ## ServerEndpointCreateParametersProperties
 ### Properties
-* **cloudTiering**: 'off' | 'on'
-* **friendlyName**: string
-* **lastOperationName**: string (ReadOnly)
-* **lastWorkflowId**: string (ReadOnly)
-* **provisioningState**: string (ReadOnly)
-* **serverLocalPath**: string
-* **serverResourceId**: string
-* **syncStatus**: any (ReadOnly)
-* **volumeFreeSpacePercent**: int
+* **cloudTiering**: 'off' | 'on': Cloud Tiering.
+* **friendlyName**: string: Friendly Name
+* **lastOperationName**: string (ReadOnly): Resource Last Operation Name
+* **lastWorkflowId**: string (ReadOnly): ServerEndpoint lastWorkflowId
+* **provisioningState**: string (ReadOnly): ServerEndpoint Provisioning State
+* **serverLocalPath**: string: Server folder used for data synchronization
+* **serverResourceId**: string: Arm resource identifier.
+* **syncStatus**: any (ReadOnly): Sync Health Status
+* **volumeFreeSpacePercent**: int: Level of free space to be maintained by Cloud Tiering if it is enabled.
 
 ## Dictionary<string,String>
 ### Properties

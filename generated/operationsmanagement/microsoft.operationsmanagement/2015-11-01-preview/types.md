@@ -3,65 +3,65 @@
 ## Resource Microsoft.OperationsManagement/ManagementAssociations@2015-11-01-preview
 * **Valid Scope(s)**: Extension
 ### Properties
-* **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ManagementAssociationProperties](#managementassociationproperties)
-* **type**: 'Microsoft.OperationsManagement/ManagementAssociations' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ManagementAssociationProperties](#managementassociationproperties): ManagementAssociation properties supported by the OperationsManagement resource provider.
+* **type**: 'Microsoft.OperationsManagement/ManagementAssociations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationsManagement/ManagementConfigurations@2015-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **properties**: [ManagementConfigurationProperties](#managementconfigurationproperties)
-* **type**: 'Microsoft.OperationsManagement/ManagementConfigurations' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ManagementConfigurationProperties](#managementconfigurationproperties): ManagementConfiguration properties supported by the OperationsManagement resource provider.
+* **type**: 'Microsoft.OperationsManagement/ManagementConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationsManagement/solutions@2015-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant)
-* **id**: string (ReadOnly, DeployTimeConstant)
-* **location**: string
-* **name**: string (Required, DeployTimeConstant)
-* **plan**: [SolutionPlan](#solutionplan)
-* **properties**: [SolutionProperties](#solutionproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
-* **type**: 'Microsoft.OperationsManagement/solutions' (ReadOnly, DeployTimeConstant)
+* **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **plan**: [SolutionPlan](#solutionplan): Plan for solution object supported by the OperationsManagement resource provider.
+* **properties**: [SolutionProperties](#solutionproperties): Solution properties supported by the OperationsManagement resource provider.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: 'Microsoft.OperationsManagement/solutions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ManagementAssociationProperties
 ### Properties
-* **applicationId**: string (Required)
+* **applicationId**: string (Required): The applicationId of the appliance for this association.
 
 ## ManagementConfigurationProperties
 ### Properties
-* **applicationId**: string
-* **parameters**: [ArmTemplateParameter](#armtemplateparameter)[] (Required)
-* **parentResourceType**: string (Required)
-* **provisioningState**: string (ReadOnly)
-* **template**: any (Required)
+* **applicationId**: string: The applicationId of the appliance for this Management.
+* **parameters**: [ArmTemplateParameter](#armtemplateparameter)[] (Required): Parameters to run the ARM template
+* **parentResourceType**: string (Required): The type of the parent resource.
+* **provisioningState**: string (ReadOnly): The provisioning state for the ManagementConfiguration.
+* **template**: any (Required): The Json object containing the ARM template to deploy
 
 ## ArmTemplateParameter
 ### Properties
-* **name**: string
-* **value**: string
+* **name**: string: name of the parameter.
+* **value**: string: value for the parameter. In Jtoken
 
 ## SolutionPlan
 ### Properties
-* **name**: string
-* **product**: string
-* **promotionCode**: string
-* **publisher**: string
+* **name**: string: name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.
+* **product**: string: name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/<solutionType>. This is case sensitive
+* **promotionCode**: string: promotionCode, Not really used now, can you left as empty
+* **publisher**: string: Publisher name. For gallery solution, it is Microsoft.
 
 ## SolutionProperties
 ### Properties
-* **containedResources**: string[]
-* **provisioningState**: string (ReadOnly)
-* **referencedResources**: string[]
-* **workspaceResourceId**: string (Required)
+* **containedResources**: string[]: The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.
+* **provisioningState**: string (ReadOnly): The provisioning state for the solution.
+* **referencedResources**: string[]: The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.
+* **workspaceResourceId**: string (Required): The azure resourceId for the workspace where the solution will be deployed/enabled.
 
 ## Dictionary<string,String>
 ### Properties
