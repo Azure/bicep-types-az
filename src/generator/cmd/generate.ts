@@ -64,6 +64,10 @@ executeSynchronous(async () => {
     const basePath = path.relative(specsPath, readmePath).split(path.sep)[0].toLowerCase();
     const outputDir = `${tmpOutputPath}/${basePath}`;
 
+    if (basePath !== 'cloudshell' && basePath !== 'service-map' && basePath !== 'storageimportexport' && basePath !== 'keyvault') {
+      continue;
+    }
+
     if (singlePath && lowerCaseCompare(singlePath, basePath) !== 0) {
       continue;
     }
