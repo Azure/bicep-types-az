@@ -20,10 +20,11 @@ const defaultLogger: ILogger = {
   err: data => process.stderr.write(data),
 }
 
-const extensionDir = path.resolve(`${__dirname}/../`);
-const autorestDll = path.resolve(`${extensionDir}/src/Bicep.TypeGen.Autorest/bin/net5.0/Bicep.TypeGen.Autorest.dll`);
+const rootDir = `${__dirname}/../../../../`;
+
+const extensionDir = path.resolve(`${rootDir}/src/autorest.bicep/`);
 const autorestBinary = os.platform() === 'win32' ? 'autorest.cmd' : 'autorest';
-const defaultOutDir = path.resolve(`${extensionDir}/../../generated`);
+const defaultOutDir = path.resolve(`${rootDir}/generated`);
 
 const args = yargs
   .strict()
@@ -41,8 +42,8 @@ executeSynchronous(async () => {
   const waitForDebugger = args['wait-for-debugger'];
   const singlePath = args['single-path'];
 
-  if (!existsSync(autorestDll)) {
-    throw `Unable to find ${autorestDll}. Did you forget to run dotnet build?`;
+  if (!existsSync(`${extensionDir}/dist`)) {
+    throw `Unable to find ${extensionDir}/dist. Did you forget to run 'npm run build'?`;
   }
 
   // find all readme paths in the azure-rest-api-specs repo
@@ -57,26 +58,31 @@ executeSynchronous(async () => {
 
   // this file is deliberately gitignored as it'll be overwritten when using --single-path
   // it's used to generate the git commit message
+  await mkdir(outputBaseDir, { recursive: true });
   const summaryLogger = await getLogger(`${outputBaseDir}/summary.log`);
 
   // use consistent sorting to make log changes easier to review
   for (const readmePath of readmePaths.sort(lowerCaseCompare)) {
     const basePath = path.relative(specsPath, readmePath).split(path.sep)[0].toLowerCase();
-    const outputDir = `${tmpOutputPath}/${basePath}`;
+    const tmpOutputDir = `${tmpOutputPath}/${basePath}`;
+    const outputDir = `${outputBaseDir}/${basePath}`;
 
     if (singlePath && lowerCaseCompare(singlePath, basePath) !== 0) {
       continue;
     }
 
-    // remove all previously-generated files
-    await rmdir(outputDir, { recursive: true });
-    await mkdir(outputDir, { recursive: true });
-    const logger = await getLogger(`${outputDir}/log.out`);
+    // prepare temp dir for output
+    await rmdir(tmpOutputDir, { recursive: true });
+    await mkdir(tmpOutputDir, { recursive: true });
+    const logger = await getLogger(`${tmpOutputDir}/log.out`);
 
     try {
-      await generateSchema(logger, readmePath, outputDir, verbose, waitForDebugger);
+      await generateSchema(logger, readmePath, tmpOutputDir, verbose, waitForDebugger);
 
-      await copyRecursive(outputDir, `${outputBaseDir}/${basePath}`);
+      // remove all previously-generated files and copy over results
+      await rmdir(outputDir, { recursive: true });
+      await mkdir(outputDir, { recursive: true });
+      await copyRecursive(tmpOutputDir, outputDir);
     } catch (e) {
       logErr(logger, e);
 
@@ -84,7 +90,7 @@ executeSynchronous(async () => {
     }
 
     // clean up temp dir
-    await rmdir(outputDir, { recursive: true });
+    await rmdir(tmpOutputDir, { recursive: true });
   }
 
   // build the type index
@@ -97,6 +103,7 @@ async function generateSchema(logger: ILogger, readme: string, outputBaseDir: st
     '--azureresourceschema',
     `--output-folder=${outputBaseDir}`,
     `--multiapi`,
+    '--title=none',
     readme,
   ];
 
@@ -109,7 +116,7 @@ async function generateSchema(logger: ILogger, readme: string, outputBaseDir: st
 
   if (waitForDebugger) {
     autoRestParams = autoRestParams.concat([
-      `--azureresourceschema.debugger=true`,
+      `--azureresourceschema.debugger`,
     ]);
   }
 
