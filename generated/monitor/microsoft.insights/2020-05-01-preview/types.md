@@ -4,18 +4,18 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+* **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. 
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduledQueryRuleProperties](#scheduledqueryruleproperties) (Required): scheduled query rule Definition
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Insights/scheduledQueryRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ScheduledQueryRuleProperties
 ### Properties
-* **actions**: [Action](#action)[]:
+* **actions**: [Action](#action)[]: Array of Action
 * **createdWithApiVersion**: string (ReadOnly): The api-version used when creating this alert rule
 * **criteria**: [ScheduledQueryRuleCriteria](#scheduledqueryrulecriteria): The rule criteria that defines the conditions of the scheduled query rule.
 * **description**: string: The description of the scheduled query rule.
@@ -33,9 +33,9 @@
 ## Action
 ### Properties
 * **actionGroupId**: string: Action Group resource Id to invoke when the alert fires.
-* **webHookProperties**: [Dictionary<string,String>](#dictionarystringstring): The properties of a webhook object.
+* **webHookProperties**: [ActionWebHookProperties](#actionwebhookproperties): The properties of a webhook object.
 
-## Dictionary<string,String>
+## ActionWebHookProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -47,26 +47,26 @@
 ## Condition
 ### Properties
 * **dimensions**: [Dimension](#dimension)[]: List of Dimensions conditions
-* **failingPeriods**: [schemas:6_failingPeriods](#schemas6failingperiods): The minimum number of violations required within the selected lookback time window required to raise an alert.
+* **failingPeriods**: [ConditionFailingPeriods](#conditionfailingperiods): The minimum number of violations required within the selected lookback time window required to raise an alert.
 * **metricMeasureColumn**: string: The column containing the metric measure number.
 * **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): The criteria operator.
 * **query**: string: Log query alert
 * **resourceIdColumn**: string: The column containing the resource id. The content of the column must be a uri formatted as resource id
 * **threshold**: int (Required): the criteria threshold value that activates the alert.
-* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required): Aggregation type.
+* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required): Aggregation type
 
 ## Dimension
 ### Properties
 * **name**: string (Required): Name of the dimension
-* **operator**: 'Exclude' | 'Include' (Required): Operator for dimension values.
+* **operator**: 'Exclude' | 'Include' (Required): Operator for dimension values
 * **values**: string[] (Required): List of dimension values
 
-## schemas:6_failingPeriods
+## ConditionFailingPeriods
 ### Properties
 * **minFailingPeriodsToAlert**: int: The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods. Default value is 1
 * **numberOfEvaluationPeriods**: int: The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points. Default value is 1
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

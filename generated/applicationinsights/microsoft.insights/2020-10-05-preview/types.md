@@ -9,13 +9,13 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WebTestProperties](#webtestproperties): Metadata describing a web test for an Azure resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [WebtestsResourceTags](#webtestsresourcetags): Resource tags
 * **type**: 'Microsoft.Insights/webtests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## WebTestProperties
 ### Properties
-* **Configuration**: [schemas:4_Configuration](#schemas4configuration): An XML configuration specification for a WebTest.
-* **ContentValidation**: [schemas:4_ContentValidation](#schemas4contentvalidation): The collection of content validation properties
+* **Configuration**: [WebTestPropertiesConfiguration](#webtestpropertiesconfiguration): An XML configuration specification for a WebTest.
+* **ContentValidation**: [WebTestPropertiesContentValidation](#webtestpropertiescontentvalidation): The collection of content validation properties
 * **Description**: string: User defined description for this WebTest.
 * **Enabled**: bool: Is the test actively being monitored.
 * **ExpectedHttpStatusCode**: int: Validate that the WebTest returns the http status code provided.
@@ -25,18 +25,18 @@
 * **Locations**: [WebTestGeolocation](#webtestgeolocation)[] (Required): A list of where to physically run the tests from to give global coverage for accessibility of your application.
 * **Name**: string (Required): User defined name if this WebTest.
 * **provisioningState**: string (ReadOnly): Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
-* **Request**: [schemas:4_Request](#schemas4request): The collection of request properties
+* **Request**: [WebTestPropertiesRequest](#webtestpropertiesrequest): The collection of request properties
 * **RetryEnabled**: bool: Allow for retries should this WebTest fail.
 * **SSLCertRemainingLifetimeCheck**: int: A number of days to check still remain before the the existing SSL cert expires.
 * **SSLCheck**: bool: Checks to see if the SSL cert is still valid.
 * **SyntheticMonitorId**: string (Required): Unique ID of this WebTest. This is typically the same value as the Name field.
 * **Timeout**: int: Seconds until this WebTest will timeout and fail. Default value is 30.
 
-## schemas:4_Configuration
+## WebTestPropertiesConfiguration
 ### Properties
 * **WebTest**: string: The XML specification of a WebTest to run against an application.
 
-## schemas:4_ContentValidation
+## WebTestPropertiesContentValidation
 ### Properties
 * **ContentMatch**: string: Content to look for in the return of the WebTest.
 * **IgnoreCase**: bool: When set, this value makes the ContentMatch validation case insensitive.
@@ -46,7 +46,7 @@
 ### Properties
 * **Id**: string: Location ID for the WebTest to run from.
 
-## schemas:4_Request
+## WebTestPropertiesRequest
 ### Properties
 * **FollowRedirects**: bool: Follow redirects for this web test.
 * **Headers**: [HeaderField](#headerfield)[]: List of headers and their values to add to the WebTest call.
@@ -60,7 +60,7 @@
 * **key**: string: The name of the header.
 * **value**: string: The value of the header.
 
-## Dictionary<string,String>
+## WebtestsResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

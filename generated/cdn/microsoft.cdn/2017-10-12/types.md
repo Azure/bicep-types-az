@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ProfileProperties](#profileproperties): The JSON object that contains the properties required to create a profile.
 * **sku**: [Sku](#sku) (Required): The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Cdn/profiles/endpoints@2017-10-12
@@ -20,7 +20,7 @@
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EndpointProperties](#endpointproperties): The JSON object that contains the properties required to create an endpoint.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2017-10-12
@@ -41,7 +41,7 @@
 ### Properties
 * **name**: 'Custom_Verizon' | 'Premium_ChinaCdn' | 'Premium_Verizon' | 'Standard_Akamai' | 'Standard_ChinaCdn' | 'Standard_Microsoft' | 'Standard_Verizon': Name of the pricing tier.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -49,13 +49,13 @@
 ## EndpointProperties
 ### Properties
 * **contentTypesToCompress**: string[]: List of content types on which compression applies. The value should be a valid MIME type.
-* **deliveryPolicy**: [schemas:10_deliveryPolicy](#schemas10deliverypolicy): A policy that specifies the delivery rules to be used for an endpoint.
+* **deliveryPolicy**: [EndpointPropertiesUpdateParametersDeliveryPolicy](#endpointpropertiesupdateparametersdeliverypolicy): A policy that specifies the delivery rules to be used for an endpoint.
 * **geoFilters**: [GeoFilter](#geofilter)[]: List of rules defining the user's geo access within a CDN endpoint. Each geo filter defines an access rule to a specified path or content, e.g. block APAC for path /pictures/
 * **hostName**: string (ReadOnly): The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
 * **isCompressionEnabled**: bool: Indicates whether content compression is enabled on CDN. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.
 * **isHttpAllowed**: bool: Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
 * **isHttpsAllowed**: bool: Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
-* **optimizationType**: 'DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming': Specifies what scenario the customer wants this CDN endpoint to optimize for, e.g. Download, Media services. With this information, CDN can apply scenario driven optimization.
+* **optimizationType**: 'DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming': Specifies what scenario the customer wants this CDN endpoint to optimize, e.g. Download, Media services. With this information we can apply scenario driven optimization.
 * **originHostHeader**: string: The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
 * **originPath**: string: A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
 * **origins**: [DeepCreatedOrigin](#deepcreatedorigin)[] (Required): The source of the content being delivered via CDN.
@@ -64,7 +64,7 @@
 * **queryStringCachingBehavior**: 'BypassCaching' | 'IgnoreQueryString' | 'NotSet' | 'UseQueryString': Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
 * **resourceState**: 'Creating' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Resource status of the endpoint.
 
-## schemas:10_deliveryPolicy
+## EndpointPropertiesUpdateParametersDeliveryPolicy
 ### Properties
 * **description**: string: User-friendly description of the policy.
 * **rules**: [DeliveryRule](#deliveryrule)[] (Required): A list of the delivery rules.
@@ -77,58 +77,60 @@
 
 ## DeliveryRuleAction
 * **Discriminator**: name
+
 ### Base Properties
-### CacheExpiration
+### DeliveryRuleCacheExpirationAction
 #### Properties
-* **name**: 'CacheExpiration' (Required): Defines the cache expiration action for the delivery rule.
+* **name**: 'CacheExpiration' (Required): The name of the action for the delivery rule.
 * **parameters**: [CacheExpirationActionParameters](#cacheexpirationactionparameters) (Required): Defines the parameters for the cache expiration action.
 
 
-## CacheExpiration
+## DeliveryRuleCacheExpirationAction
 ### Properties
-* **name**: 'CacheExpiration' (Required): Defines the cache expiration action for the delivery rule.
+* **name**: 'CacheExpiration' (Required): The name of the action for the delivery rule.
 * **parameters**: [CacheExpirationActionParameters](#cacheexpirationactionparameters) (Required): Defines the parameters for the cache expiration action.
 
 ## CacheExpirationActionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: 'Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters' (Required)
 * **cacheBehavior**: 'BypassCache' | 'Override' | 'SetIfMissing' (Required): Caching behavior for the requests that include query strings.
 * **cacheDuration**: string: The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
-* **cacheType**: string (Required): The level at which the content needs to be cached.
+* **cacheType**: 'All' (Required): The level at which the content needs to be cached.
 
 ## DeliveryRuleCondition
 * **Discriminator**: name
+
 ### Base Properties
-### UrlFileExtension
+### DeliveryRuleUrlFileExtensionCondition
 #### Properties
-* **name**: 'UrlFileExtension' (Required): Defines the URL file extension condition for the delivery rule.
+* **name**: 'UrlFileExtension' (Required): The name of the condition for the delivery rule.
 * **parameters**: [UrlFileExtensionConditionParameters](#urlfileextensionconditionparameters) (Required): Defines the parameters for the URL file extension condition.
 
-### UrlPath
+### DeliveryRuleUrlPathCondition
 #### Properties
-* **name**: 'UrlPath' (Required): Defines the URL path condition for the delivery rule.
+* **name**: 'UrlPath' (Required): The name of the condition for the delivery rule.
 * **parameters**: [UrlPathConditionParameters](#urlpathconditionparameters) (Required): Defines the parameters for the URL path condition.
 
 
-## UrlFileExtension
+## DeliveryRuleUrlFileExtensionCondition
 ### Properties
-* **name**: 'UrlFileExtension' (Required): Defines the URL file extension condition for the delivery rule.
+* **name**: 'UrlFileExtension' (Required): The name of the condition for the delivery rule.
 * **parameters**: [UrlFileExtensionConditionParameters](#urlfileextensionconditionparameters) (Required): Defines the parameters for the URL file extension condition.
 
 ## UrlFileExtensionConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: 'Microsoft.Azure.Cdn.Models.DeliveryRuleUrlFileExtensionConditionParameters' (Required)
 * **extensions**: string[] (Required): A list of extensions for the condition of the delivery rule.
 
-## UrlPath
+## DeliveryRuleUrlPathCondition
 ### Properties
-* **name**: 'UrlPath' (Required): Defines the URL path condition for the delivery rule.
+* **name**: 'UrlPath' (Required): The name of the condition for the delivery rule.
 * **parameters**: [UrlPathConditionParameters](#urlpathconditionparameters) (Required): Defines the parameters for the URL path condition.
 
 ## UrlPathConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
-* **matchType**: 'Literal' | 'Wildcard' (Required): The match type for the condition of the delivery rule.
+* **@odata.type**: 'Microsoft.Azure.Cdn.Models.DeliveryRuleUrlPathConditionParameters' (Required)
+* **matchType**: 'Literal' | 'Wildcard' (Required): The match type for the condition of the delivery rule
 * **path**: string (Required): A URL path for the condition of the delivery rule
 
 ## GeoFilter
@@ -148,7 +150,7 @@
 * **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535
 * **httpsPort**: int: The value of the HTTPS port. Must be between 1 and 65535
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

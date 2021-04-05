@@ -7,33 +7,33 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location in which the resource is hosted and data resides. Refer to [this documentation](https://aka.ms/B2CDataResidency) to see valid data residency locations. Please choose one of 'United States', 'Europe', and 'Asia Pacific'.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:11_properties](#schemas11properties) (Required):
+* **properties**: [CreateTenantRequestBodyProperties](#createtenantrequestbodyproperties) (Required): Properties of the Azure AD B2C tenant Azure resource.
 * **sku**: [B2CResourceSKU](#b2cresourcesku) (Required): SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource Tags
+* **tags**: [CreateTenantRequestBodyTags](#createtenantrequestbodytags): Resource Tags
 * **type**: 'Microsoft.AzureActiveDirectory/b2cDirectories' (ReadOnly, DeployTimeConstant): The resource type
 
-## schemas:11_properties
+## CreateTenantRequestBodyProperties
 ### Properties
-* **billingConfig**: [schemas:3_billingConfig](#schemas3billingconfig) (ReadOnly): The billing configuration for the tenant.
-* **createTenantProperties**: [CreateTenantProperties](#createtenantproperties) (WriteOnly): These properties are used to create the Azure AD B2C tenant. These properties are not part of the Azure resource.
+* **billingConfig**: [B2CTenantResourcePropertiesBillingConfig](#b2ctenantresourcepropertiesbillingconfig) (ReadOnly): The billing configuration for the tenant.
+* **createTenantProperties**: [CreateTenantProperties](#createtenantproperties) (WriteOnly)
 * **tenantId**: string (ReadOnly): An identifier of the B2C tenant.
 
-## schemas:3_billingConfig
+## B2CTenantResourcePropertiesBillingConfig
 ### Properties
 * **billingType**: 'Auths' | 'MAU' (ReadOnly): The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).
 * **effectiveStartDateUtc**: string (ReadOnly): The data from which the billing type took effect
 
 ## CreateTenantProperties
 ### Properties
-* **countryCode**: string (WriteOnly): Country code of Azure tenant (e.g. 'US'). Refer to [aka.ms/B2CDataResidency](https://aka.ms/B2CDataResidency) to see valid country codes and corresponding data residency locations. If you do not see a country code in an valid data residency location, choose one from the list.
-* **displayName**: string (WriteOnly): The display name of the B2C tenant.
+* **countryCode**: string (WriteOnly)
+* **displayName**: string (WriteOnly)
 
 ## B2CResourceSKU
 ### Properties
 * **name**: 'PremiumP1' | 'PremiumP2' | 'Standard': The name of the SKU for the tenant.
 * **tier**: 'A0': The tier of the tenant.
 
-## Dictionary<string,String>
+## CreateTenantRequestBodyTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

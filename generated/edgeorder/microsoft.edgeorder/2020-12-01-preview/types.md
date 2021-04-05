@@ -8,8 +8,8 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AddressProperties](#addressproperties) (Required): Address Properties
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.EdgeOrder/addresses' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EdgeOrder/orderCollections@2020-12-01-preview
@@ -20,8 +20,8 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [OrderCollectionProperties](#ordercollectionproperties) (Required): Represents order collection details.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.EdgeOrder/orderCollections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EdgeOrder/orders@2020-12-01-preview
@@ -32,8 +32,8 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [OrderProperties](#orderproperties) (Required): Represents order details.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.EdgeOrder/orders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AddressProperties
@@ -61,16 +61,16 @@
 * **streetAddress3**: string: Street Address line 3.
 * **zipExtendedCode**: string: Extended Zip Code.
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -79,7 +79,7 @@
 ### Properties
 * **orderIds**: string[] (Required): List of order ARM Ids which are part of an order collection.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -102,9 +102,9 @@
 * **cancellationStatus**: 'Cancellable' | 'CancellableWithFee' | 'NotCancellable' (ReadOnly): Describes whether the order is cancellable or not.
 * **currentStatus**: [OrderStatusDetails](#orderstatusdetails) (ReadOnly): Order status CurrentStatus
 * **deletionStatus**: 'Allowed' | 'NotAllowed' (ReadOnly): Describes whether the order is deletable or not.
-* **error**: [CloudError](#clouderror) (ReadOnly):
+* **error**: [CloudError](#clouderror) (ReadOnly)
 * **forwardShippingDetails**: [ShippingDetails](#shippingdetails) (ReadOnly): Package shipping details
-* **managementRpDetails**: any (ReadOnly): Management RP details
+* **managementRpDetails**: any (ReadOnly): Any object
 * **notificationEmailList**: string[]: Package Shipping details
 * **orderStatusHistory**: [OrderStatusDetails](#orderstatusdetails)[] (ReadOnly): Order history
 * **orderType**: 'Purchase' | 'Rental' (Required): Order type.
@@ -121,16 +121,16 @@
 
 ## CloudError
 ### Properties
-* **additionalInfo**: [AdditionalErrorInfo](#additionalerrorinfo)[] (ReadOnly):
-* **code**: string:
-* **details**: [CloudError](#clouderror)[] (ReadOnly):
-* **message**: string:
-* **target**: string:
+* **additionalInfo**: [AdditionalErrorInfo](#additionalerrorinfo)[] (ReadOnly): Array of AdditionalErrorInfo
+* **code**: string
+* **details**: [CloudError](#clouderror)[] (ReadOnly): Array of CloudError
+* **message**: string
+* **target**: string
 
 ## AdditionalErrorInfo
 ### Properties
-* **info**: any:
-* **type**: string:
+* **info**: any: Any object
+* **type**: string
 
 ## ShippingDetails
 ### Properties
@@ -171,7 +171,7 @@
 * **productLineName**: string: Represents product line name that uniquely identifies product line
 * **productName**: string: Represents product name that uniquely identifies product
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -9,7 +9,7 @@
 * **location**: string: The Azure Region where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateZoneProperties](#privatezoneproperties): Represents the properties of the Private DNS zone.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/privateDnsZones' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateDnsZones/A@2018-09-01
@@ -101,7 +101,7 @@
 * **location**: string: The Azure Region where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkLinkProperties](#virtualnetworklinkproperties): Represents the properties of the Private DNS zone.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/privateDnsZones/virtualNetworkLinks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## PrivateZoneProperties
@@ -114,7 +114,7 @@
 * **numberOfVirtualNetworkLinksWithRegistration**: int (ReadOnly): The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -126,7 +126,7 @@
 * **cnameRecord**: [CnameRecord](#cnamerecord): A CNAME record.
 * **fqdn**: string (ReadOnly): Fully qualified domain name of the record set.
 * **isAutoRegistered**: bool (ReadOnly): Is the record set auto-registered in the Private DNS zone through a virtual network link?
-* **metadata**: [Dictionary<string,String>](#dictionarystringstring): The metadata attached to the record set.
+* **metadata**: [RecordSetPropertiesMetadata](#recordsetpropertiesmetadata): The metadata attached to the record set.
 * **mxRecords**: [MxRecord](#mxrecord)[]: The list of MX records in the record set.
 * **ptrRecords**: [PtrRecord](#ptrrecord)[]: The list of PTR records in the record set.
 * **soaRecord**: [SoaRecord](#soarecord): An SOA record.
@@ -146,7 +146,7 @@
 ### Properties
 * **cname**: string: The canonical name for this CNAME record.
 
-## Dictionary<string,String>
+## RecordSetPropertiesMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -192,7 +192,7 @@
 ### Properties
 * **id**: string: Resource ID.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -16,7 +16,7 @@
 * **category**: 'Cost' | 'Usage' (Required): The category of the budget, whether the budget tracks cost or usage.
 * **currentSpend**: [CurrentSpend](#currentspend) (ReadOnly): The current amount of cost which is being tracked for a budget.
 * **filters**: [Filters](#filters): May be used to filter budgets by resource group, resource, or meter.
-* **notifications**: [Dictionary<string,Notification>](#dictionarystringnotification): Dictionary of notifications associated with the budget. Budget can have up to five notifications.
+* **notifications**: [BudgetPropertiesNotifications](#budgetpropertiesnotifications): Dictionary of notifications associated with the budget. Budget can have up to five notifications.
 * **timeGrain**: 'Annually' | 'Monthly' | 'Quarterly' (Required): The time covered by a budget. Tracking of the amount will be reset based on the time grain.
 * **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required): The start and end date for a budget.
 
@@ -27,17 +27,17 @@
 
 ## Filters
 ### Properties
-* **meters**: string[]: The list of filters on meters (GUID), mandatory for budgets of usage category.
+* **meters**: string[]: The list of filters on meters (GUID), mandatory for budgets of usage category. 
 * **resourceGroups**: string[]: The list of filters on resource groups, allowed at subscription level only.
 * **resources**: string[]: The list of filters on resources.
-* **tags**: [Dictionary<string,IList<String>>](#dictionarystringiliststring): The dictionary of filters on tags.
+* **tags**: [FiltersTags](#filterstags): The dictionary of filters on tags.
 
-## Dictionary<string,IList<String>>
+## FiltersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
 
-## Dictionary<string,Notification>
+## BudgetPropertiesNotifications
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [Notification](#notification)

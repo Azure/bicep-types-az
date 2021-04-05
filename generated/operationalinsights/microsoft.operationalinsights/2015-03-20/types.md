@@ -18,12 +18,12 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageInsightProperties](#storageinsightproperties): Storage insight properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ProxyResourceTags](#proxyresourcetags): Resource tags
 * **type**: 'Microsoft.OperationalInsights/workspaces/storageInsightConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## SavedSearchProperties
 ### Properties
-* **category**: string (Required): The category of the saved search. This helps the user to find a saved search faster.
+* **category**: string (Required): The category of the saved search. This helps the user to find a saved search faster. 
 * **displayName**: string (Required): Saved search display name.
 * **query**: string (Required): The query expression for the saved search. Please see https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-search-reference for reference.
 * **tags**: [Tag](#tag)[]: The tags attached to the saved search.
@@ -44,14 +44,14 @@
 ## StorageInsightStatus
 ### Properties
 * **description**: string: Description of the state of the storage insight.
-* **state**: 'ERROR' | 'OK' (Required): The state of the storage insight connection to the workspace.
+* **state**: 'ERROR' | 'OK' (Required): The state of the storage insight connection to the workspace
 
 ## StorageAccount
 ### Properties
 * **id**: string (Required): The Azure Resource Manager ID of the storage account resource.
 * **key**: string (Required): The storage account key.
 
-## Dictionary<string,String>
+## ProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

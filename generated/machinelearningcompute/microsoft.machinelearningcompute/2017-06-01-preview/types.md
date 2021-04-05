@@ -8,13 +8,13 @@
 * **location**: string (Required): Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [OperationalizationClusterProperties](#operationalizationclusterproperties): Properties of an operationalization cluster
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningCompute/operationalizationClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## OperationalizationClusterProperties
 ### Properties
 * **appInsights**: [AppInsightsCredentials](#appinsightscredentials): AppInsights credentials.
-* **clusterType**: string (Required): The cluster type.
+* **clusterType**: 'ACS' (Required): The cluster type.
 * **containerRegistry**: [ContainerRegistryProperties](#containerregistryproperties): Properties of Azure Container Registry.
 * **containerService**: [AcsClusterProperties](#acsclusterproperties) (Required): Information about the container service backing the cluster
 * **createdOn**: string (ReadOnly): The date and time when the cluster was created.
@@ -36,13 +36,13 @@
 ## AcsClusterProperties
 ### Properties
 * **agentCount**: int: The number of agent nodes in the Container Service. This can be changed to scale the cluster.
-* **agentVmSize**: 'Standard_A0' | 'Standard_A1' | 'Standard_A10' | 'Standard_A11' | 'Standard_A2' | 'Standard_A3' | 'Standard_A4' | 'Standard_A5' | 'Standard_A6' | 'Standard_A7' | 'Standard_A8' | 'Standard_A9' | 'Standard_D1_v2' | 'Standard_D1' | 'Standard_D11_v2' | 'Standard_D11' | 'Standard_D12_v2' | 'Standard_D12' | 'Standard_D13_v2' | 'Standard_D13' | 'Standard_D14_v2' | 'Standard_D14' | 'Standard_D2_v2' | 'Standard_D2' | 'Standard_D3_v2' | 'Standard_D3' | 'Standard_D4_v2' | 'Standard_D4' | 'Standard_D5_v2' | 'Standard_DS1' | 'Standard_DS11' | 'Standard_DS12' | 'Standard_DS13' | 'Standard_DS14' | 'Standard_DS2' | 'Standard_DS3' | 'Standard_DS4' | 'Standard_G1' | 'Standard_G2' | 'Standard_G3' | 'Standard_G4' | 'Standard_G5' | 'Standard_GS1' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS5': The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created.
-* **clusterFqdn**: string (ReadOnly): The FQDN of the cluster.
-* **orchestratorProperties**: [Kubernetes](#kubernetes) (Required): Kubernetes cluster specific properties
-* **orchestratorType**: string (Required): Type of orchestrator. It cannot be changed once the cluster is created.
+* **agentVmSize**: 'Standard_A0' | 'Standard_A1' | 'Standard_A10' | 'Standard_A11' | 'Standard_A2' | 'Standard_A3' | 'Standard_A4' | 'Standard_A5' | 'Standard_A6' | 'Standard_A7' | 'Standard_A8' | 'Standard_A9' | 'Standard_D1' | 'Standard_D11' | 'Standard_D11_v2' | 'Standard_D12' | 'Standard_D12_v2' | 'Standard_D13' | 'Standard_D13_v2' | 'Standard_D14' | 'Standard_D14_v2' | 'Standard_D1_v2' | 'Standard_D2' | 'Standard_D2_v2' | 'Standard_D3' | 'Standard_D3_v2' | 'Standard_D4' | 'Standard_D4_v2' | 'Standard_D5_v2' | 'Standard_DS1' | 'Standard_DS11' | 'Standard_DS12' | 'Standard_DS13' | 'Standard_DS14' | 'Standard_DS2' | 'Standard_DS3' | 'Standard_DS4' | 'Standard_G1' | 'Standard_G2' | 'Standard_G3' | 'Standard_G4' | 'Standard_G5' | 'Standard_GS1' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS5': The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created.
+* **clusterFqdn**: string (ReadOnly): The FQDN of the cluster. 
+* **orchestratorProperties**: [KubernetesClusterProperties](#kubernetesclusterproperties) (Required): Kubernetes cluster specific properties
+* **orchestratorType**: 'Kubernetes' (Required): Type of orchestrator. It cannot be changed once the cluster is created.
 * **systemServices**: 'Batch' | 'Scoring'[]: The system services deployed to the cluster
 
-## Kubernetes
+## KubernetesClusterProperties
 ### Properties
 * **servicePrincipal**: [ServicePrincipalProperties](#serviceprincipalproperties) (Required): The Azure service principal used by Kubernetes for configuring load balancers
 
@@ -57,15 +57,13 @@
 * **etag**: string: The configuration ETag for updates.
 * **serviceAuth**: [ServiceAuthConfiguration](#serviceauthconfiguration): Global service auth configuration properties. These are the data-plane authorization keys and are used if a service doesn't define it's own.
 * **ssl**: [SslConfiguration](#sslconfiguration): SSL configuration. If configured data-plane calls to user services will be exposed over SSL only.
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## AutoScaleConfiguration
 ### Properties
 * **maxReplicas**: int: The maximum number of replicas for each service.
 * **minReplicas**: int: The minimum number of replicas for each service.
 * **refreshPeriodInSeconds**: int: Refresh period in seconds.
-* **status**: 'Disabled' | 'Enabled': If auto-scale is enabled for all services. Each service can turn it off individually.
+* **status**: 'Disabled' | 'Enabled': SSL status. Allowed values are Enabled and Disabled.
 * **targetUtilization**: int: The target utilization.
 
 ## ServiceAuthConfiguration
@@ -83,7 +81,7 @@
 ### Properties
 * **resourceId**: string: ARM resource ID of the Azure Storage Account to store CLI specific files. If not provided one will be created. This cannot be changed once the cluster is created.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

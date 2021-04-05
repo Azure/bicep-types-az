@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ProfileProperties](#profileproperties): The JSON object that contains the properties required to create a profile.
 * **sku**: [Sku](#sku) (Required): The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Cdn/profiles/endpoints@2019-12-31
@@ -20,7 +20,7 @@
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EndpointProperties](#endpointproperties): The JSON object that contains the properties required to create an endpoint.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2019-12-31
@@ -59,7 +59,7 @@
 ### Properties
 * **name**: 'Custom_Verizon' | 'Premium_ChinaCdn' | 'Premium_Verizon' | 'Standard_Akamai' | 'Standard_ChinaCdn' | 'Standard_Microsoft' | 'Standard_Verizon': Name of the pricing tier.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -68,13 +68,13 @@
 ### Properties
 * **contentTypesToCompress**: string[]: List of content types on which compression applies. The value should be a valid MIME type.
 * **defaultOriginGroup**: [ResourceReference](#resourcereference): Reference to another resource.
-* **deliveryPolicy**: [schemas:10_deliveryPolicy](#schemas10deliverypolicy): A policy that specifies the delivery rules to be used for an endpoint.
+* **deliveryPolicy**: [EndpointPropertiesUpdateParametersDeliveryPolicy](#endpointpropertiesupdateparametersdeliverypolicy): A policy that specifies the delivery rules to be used for an endpoint.
 * **geoFilters**: [GeoFilter](#geofilter)[]: List of rules defining the user's geo access within a CDN endpoint. Each geo filter defines an access rule to a specified path or content, e.g. block APAC for path /pictures/
 * **hostName**: string (ReadOnly): The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
 * **isCompressionEnabled**: bool: Indicates whether content compression is enabled on CDN. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.
 * **isHttpAllowed**: bool: Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
 * **isHttpsAllowed**: bool: Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
-* **optimizationType**: 'DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming': Specifies what scenario the customer wants this CDN endpoint to optimize for, e.g. Download, Media services. With this information, CDN can apply scenario driven optimization.
+* **optimizationType**: 'DynamicSiteAcceleration' | 'GeneralMediaStreaming' | 'GeneralWebDelivery' | 'LargeFileDownload' | 'VideoOnDemandMediaStreaming': Specifies what scenario the customer wants this CDN endpoint to optimize, e.g. Download, Media services. With this information we can apply scenario driven optimization.
 * **originGroups**: [DeepCreatedOriginGroup](#deepcreatedorigingroup)[]: The origin groups comprising of origins that are used for load balancing the traffic based on availability.
 * **originHostHeader**: string: The host header value sent to the origin with each request. This property at Endpoint can only be set allowed when endpoint uses single origin. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
 * **originPath**: string: A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
@@ -88,7 +88,7 @@
 ### Properties
 * **id**: string: Resource ID.
 
-## schemas:10_deliveryPolicy
+## EndpointPropertiesUpdateParametersDeliveryPolicy
 ### Properties
 * **description**: string: User-friendly description of the policy.
 * **rules**: [DeliveryRule](#deliveryrule)[] (Required): A list of the delivery rules.
@@ -102,374 +102,376 @@
 
 ## DeliveryRuleAction
 * **Discriminator**: name
+
 ### Base Properties
-### CacheExpiration
+### DeliveryRuleCacheExpirationAction
 #### Properties
-* **name**: 'CacheExpiration' (Required): Defines the cache expiration action for the delivery rule.
+* **name**: 'CacheExpiration' (Required): The name of the action for the delivery rule.
 * **parameters**: [CacheExpirationActionParameters](#cacheexpirationactionparameters) (Required): Defines the parameters for the cache expiration action.
 
-### CacheKeyQueryString
+### DeliveryRuleCacheKeyQueryStringAction
 #### Properties
-* **name**: 'CacheKeyQueryString' (Required): Defines the cache-key query string action for the delivery rule.
+* **name**: 'CacheKeyQueryString' (Required): The name of the action for the delivery rule.
 * **parameters**: [CacheKeyQueryStringActionParameters](#cachekeyquerystringactionparameters) (Required): Defines the parameters for the cache-key query string action.
 
-### ModifyRequestHeader
+### DeliveryRuleRequestHeaderAction
 #### Properties
-* **name**: 'ModifyRequestHeader' (Required): Defines the request header action for the delivery rule.
+* **name**: 'ModifyRequestHeader' (Required): The name of the action for the delivery rule.
 * **parameters**: [HeaderActionParameters](#headeractionparameters) (Required): Defines the parameters for the request header action.
 
-### ModifyResponseHeader
+### DeliveryRuleResponseHeaderAction
 #### Properties
-* **name**: 'ModifyResponseHeader' (Required): Defines the response header action for the delivery rule.
+* **name**: 'ModifyResponseHeader' (Required): The name of the action for the delivery rule.
 * **parameters**: [HeaderActionParameters](#headeractionparameters) (Required): Defines the parameters for the request header action.
 
-### OriginGroupOverride
+### OriginGroupOverrideAction
 #### Properties
-* **name**: 'OriginGroupOverride' (Required): Defines the Origin Group override action for the delivery rule.
+* **name**: 'OriginGroupOverride' (Required): The name of the action for the delivery rule.
 * **parameters**: [OriginGroupOverrideActionParameters](#origingroupoverrideactionparameters) (Required): Defines the parameters for the Origin Group override action.
 
-### UrlRedirect
+### UrlRedirectAction
 #### Properties
-* **name**: 'UrlRedirect' (Required): Defines the url redirect action for the delivery rule.
+* **name**: 'UrlRedirect' (Required): The name of the action for the delivery rule.
 * **parameters**: [UrlRedirectActionParameters](#urlredirectactionparameters) (Required): Defines the parameters for the url redirect action.
 
-### UrlRewrite
+### UrlRewriteAction
 #### Properties
-* **name**: 'UrlRewrite' (Required): Defines the url rewrite action for the delivery rule.
+* **name**: 'UrlRewrite' (Required): The name of the action for the delivery rule.
 * **parameters**: [UrlRewriteActionParameters](#urlrewriteactionparameters) (Required): Defines the parameters for the url rewrite action.
 
 
-## CacheExpiration
+## DeliveryRuleCacheExpirationAction
 ### Properties
-* **name**: 'CacheExpiration' (Required): Defines the cache expiration action for the delivery rule.
+* **name**: 'CacheExpiration' (Required): The name of the action for the delivery rule.
 * **parameters**: [CacheExpirationActionParameters](#cacheexpirationactionparameters) (Required): Defines the parameters for the cache expiration action.
 
 ## CacheExpirationActionParameters
 ### Properties
-* **@odata.type**: string (Required):
-* **cacheBehavior**: 'BypassCache' | 'Override' | 'SetIfMissing' (Required): Caching behavior for the requests.
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters' (Required)
+* **cacheBehavior**: 'BypassCache' | 'Override' | 'SetIfMissing' (Required): Caching behavior for the requests
 * **cacheDuration**: string: The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
-* **cacheType**: string (Required): The level at which the content needs to be cached.
+* **cacheType**: 'All' (Required): The level at which the content needs to be cached.
 
-## CacheKeyQueryString
+## DeliveryRuleCacheKeyQueryStringAction
 ### Properties
-* **name**: 'CacheKeyQueryString' (Required): Defines the cache-key query string action for the delivery rule.
+* **name**: 'CacheKeyQueryString' (Required): The name of the action for the delivery rule.
 * **parameters**: [CacheKeyQueryStringActionParameters](#cachekeyquerystringactionparameters) (Required): Defines the parameters for the cache-key query string action.
 
 ## CacheKeyQueryStringActionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheKeyQueryStringBehaviorActionParameters' (Required)
 * **queryParameters**: string: query parameters to include or exclude (comma separated).
-* **queryStringBehavior**: 'Exclude' | 'ExcludeAll' | 'Include' | 'IncludeAll' (Required): Caching behavior for the requests.
+* **queryStringBehavior**: 'Exclude' | 'ExcludeAll' | 'Include' | 'IncludeAll' (Required): Caching behavior for the requests
 
-## ModifyRequestHeader
+## DeliveryRuleRequestHeaderAction
 ### Properties
-* **name**: 'ModifyRequestHeader' (Required): Defines the request header action for the delivery rule.
+* **name**: 'ModifyRequestHeader' (Required): The name of the action for the delivery rule.
 * **parameters**: [HeaderActionParameters](#headeractionparameters) (Required): Defines the parameters for the request header action.
 
 ## HeaderActionParameters
 ### Properties
-* **@odata.type**: string (Required):
-* **headerAction**: 'Append' | 'Delete' | 'Overwrite' (Required): Action to perform.
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters' (Required)
+* **headerAction**: 'Append' | 'Delete' | 'Overwrite' (Required): Action to perform
 * **headerName**: string (Required): Name of the header to modify
 * **value**: string: Value for the specified action
 
-## ModifyResponseHeader
+## DeliveryRuleResponseHeaderAction
 ### Properties
-* **name**: 'ModifyResponseHeader' (Required): Defines the response header action for the delivery rule.
+* **name**: 'ModifyResponseHeader' (Required): The name of the action for the delivery rule.
 * **parameters**: [HeaderActionParameters](#headeractionparameters) (Required): Defines the parameters for the request header action.
 
-## OriginGroupOverride
+## OriginGroupOverrideAction
 ### Properties
-* **name**: 'OriginGroupOverride' (Required): Defines the Origin Group override action for the delivery rule.
+* **name**: 'OriginGroupOverride' (Required): The name of the action for the delivery rule.
 * **parameters**: [OriginGroupOverrideActionParameters](#origingroupoverrideactionparameters) (Required): Defines the parameters for the Origin Group override action.
 
 ## OriginGroupOverrideActionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleOriginGroupOverrideActionParameters' (Required)
 * **originGroup**: [ResourceReference](#resourcereference) (Required): Reference to another resource.
 
-## UrlRedirect
+## UrlRedirectAction
 ### Properties
-* **name**: 'UrlRedirect' (Required): Defines the url redirect action for the delivery rule.
+* **name**: 'UrlRedirect' (Required): The name of the action for the delivery rule.
 * **parameters**: [UrlRedirectActionParameters](#urlredirectactionparameters) (Required): Defines the parameters for the url redirect action.
 
 ## UrlRedirectActionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlRedirectActionParameters' (Required)
 * **customFragment**: string: Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
 * **customHostname**: string: Host to redirect. Leave empty to use the incoming host as the destination host.
 * **customPath**: string: The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
 * **customQueryString**: string: The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.
-* **destinationProtocol**: 'Http' | 'Https' | 'MatchRequest': Protocol to use for the redirect. The default value is MatchRequest.
+* **destinationProtocol**: 'Http' | 'Https' | 'MatchRequest': Protocol to use for the redirect. The default value is MatchRequest
 * **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect' (Required): The redirect type the rule will use when redirecting traffic.
 
-## UrlRewrite
+## UrlRewriteAction
 ### Properties
-* **name**: 'UrlRewrite' (Required): Defines the url rewrite action for the delivery rule.
+* **name**: 'UrlRewrite' (Required): The name of the action for the delivery rule.
 * **parameters**: [UrlRewriteActionParameters](#urlrewriteactionparameters) (Required): Defines the parameters for the url rewrite action.
 
 ## UrlRewriteActionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlRewriteActionParameters' (Required)
 * **destination**: string (Required): Define the relative URL to which the above requests will be rewritten by.
 * **preserveUnmatchedPath**: bool: Whether to preserve unmatched path. Default value is true.
 * **sourcePattern**: string (Required): define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
 
 ## DeliveryRuleCondition
 * **Discriminator**: name
+
 ### Base Properties
-### Cookies
+### DeliveryRuleCookiesCondition
 #### Properties
-* **name**: 'Cookies' (Required): Defines the Cookies condition for the delivery rule.
+* **name**: 'Cookies' (Required): The name of the condition for the delivery rule.
 * **parameters**: [CookiesMatchConditionParameters](#cookiesmatchconditionparameters) (Required): Defines the parameters for Cookies match conditions
 
-### HttpVersion
+### DeliveryRuleHttpVersionCondition
 #### Properties
-* **name**: 'HttpVersion' (Required): Defines the HttpVersion condition for the delivery rule.
+* **name**: 'HttpVersion' (Required): The name of the condition for the delivery rule.
 * **parameters**: [HttpVersionMatchConditionParameters](#httpversionmatchconditionparameters) (Required): Defines the parameters for HttpVersion match conditions
 
-### IsDevice
+### DeliveryRuleIsDeviceCondition
 #### Properties
-* **name**: 'IsDevice' (Required): Defines the IsDevice condition for the delivery rule.
+* **name**: 'IsDevice' (Required): The name of the condition for the delivery rule.
 * **parameters**: [IsDeviceMatchConditionParameters](#isdevicematchconditionparameters) (Required): Defines the parameters for IsDevice match conditions
 
-### PostArgs
+### DeliveryRulePostArgsCondition
 #### Properties
-* **name**: 'PostArgs' (Required): Defines the PostArgs condition for the delivery rule.
+* **name**: 'PostArgs' (Required): The name of the condition for the delivery rule.
 * **parameters**: [PostArgsMatchConditionParameters](#postargsmatchconditionparameters) (Required): Defines the parameters for PostArgs match conditions
 
-### QueryString
+### DeliveryRuleQueryStringCondition
 #### Properties
-* **name**: 'QueryString' (Required): Defines the QueryString condition for the delivery rule.
+* **name**: 'QueryString' (Required): The name of the condition for the delivery rule.
 * **parameters**: [QueryStringMatchConditionParameters](#querystringmatchconditionparameters) (Required): Defines the parameters for QueryString match conditions
 
-### RemoteAddress
+### DeliveryRuleRemoteAddressCondition
 #### Properties
-* **name**: 'RemoteAddress' (Required): Defines the RemoteAddress condition for the delivery rule.
+* **name**: 'RemoteAddress' (Required): The name of the condition for the delivery rule.
 * **parameters**: [RemoteAddressMatchConditionParameters](#remoteaddressmatchconditionparameters) (Required): Defines the parameters for RemoteAddress match conditions
 
-### RequestBody
+### DeliveryRuleRequestBodyCondition
 #### Properties
-* **name**: 'RequestBody' (Required): Defines the RequestBody condition for the delivery rule.
+* **name**: 'RequestBody' (Required): The name of the condition for the delivery rule.
 * **parameters**: [RequestBodyMatchConditionParameters](#requestbodymatchconditionparameters) (Required): Defines the parameters for RequestBody match conditions
 
-### RequestHeader
+### DeliveryRuleRequestHeaderCondition
 #### Properties
-* **name**: 'RequestHeader' (Required): Defines the RequestHeader condition for the delivery rule.
+* **name**: 'RequestHeader' (Required): The name of the condition for the delivery rule.
 * **parameters**: [RequestHeaderMatchConditionParameters](#requestheadermatchconditionparameters) (Required): Defines the parameters for RequestHeader match conditions
 
-### RequestMethod
+### DeliveryRuleRequestMethodCondition
 #### Properties
-* **name**: 'RequestMethod' (Required): Defines the RequestMethod condition for the delivery rule.
+* **name**: 'RequestMethod' (Required): The name of the condition for the delivery rule.
 * **parameters**: [RequestMethodMatchConditionParameters](#requestmethodmatchconditionparameters) (Required): Defines the parameters for RequestMethod match conditions
 
-### RequestScheme
+### DeliveryRuleRequestSchemeCondition
 #### Properties
-* **name**: 'RequestScheme' (Required): Defines the RequestScheme condition for the delivery rule.
-* **parameters**: [RequestSchemeMatchConditionParameters](#requestschemematchconditionparameters) (Required): Defines the parameters for RequestScheme match conditions
+* **name**: 'RequestScheme' (Required): The name of the condition for the delivery rule.
+* **parameters**: [RequestSchemeMatchConditionParameters](#requestschemematchconditionparameters) (Required): Defines the parameters for RequestScheme match conditions 
 
-### RequestUri
+### DeliveryRuleRequestUriCondition
 #### Properties
-* **name**: 'RequestUri' (Required): Defines the RequestUri condition for the delivery rule.
+* **name**: 'RequestUri' (Required): The name of the condition for the delivery rule.
 * **parameters**: [RequestUriMatchConditionParameters](#requesturimatchconditionparameters) (Required): Defines the parameters for RequestUri match conditions
 
-### UrlFileExtension
+### DeliveryRuleUrlFileExtensionCondition
 #### Properties
-* **name**: 'UrlFileExtension' (Required): Defines the UrlFileExtension condition for the delivery rule.
+* **name**: 'UrlFileExtension' (Required): The name of the condition for the delivery rule.
 * **parameters**: [UrlFileExtensionMatchConditionParameters](#urlfileextensionmatchconditionparameters) (Required): Defines the parameters for UrlFileExtension match conditions
 
-### UrlFileName
+### DeliveryRuleUrlFileNameCondition
 #### Properties
-* **name**: 'UrlFileName' (Required): Defines the UrlFileName condition for the delivery rule.
+* **name**: 'UrlFileName' (Required): The name of the condition for the delivery rule.
 * **parameters**: [UrlFileNameMatchConditionParameters](#urlfilenamematchconditionparameters) (Required): Defines the parameters for UrlFilename match conditions
 
-### UrlPath
+### DeliveryRuleUrlPathCondition
 #### Properties
-* **name**: 'UrlPath' (Required): Defines the UrlPath condition for the delivery rule.
+* **name**: 'UrlPath' (Required): The name of the condition for the delivery rule.
 * **parameters**: [UrlPathMatchConditionParameters](#urlpathmatchconditionparameters) (Required): Defines the parameters for UrlPath match conditions
 
 
-## Cookies
+## DeliveryRuleCookiesCondition
 ### Properties
-* **name**: 'Cookies' (Required): Defines the Cookies condition for the delivery rule.
+* **name**: 'Cookies' (Required): The name of the condition for the delivery rule.
 * **parameters**: [CookiesMatchConditionParameters](#cookiesmatchconditionparameters) (Required): Defines the parameters for Cookies match conditions
 
 ## CookiesMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleCookiesConditionParameters' (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched.
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched
 * **selector**: string: Name of Cookies to be matched
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
-## HttpVersion
+## DeliveryRuleHttpVersionCondition
 ### Properties
-* **name**: 'HttpVersion' (Required): Defines the HttpVersion condition for the delivery rule.
+* **name**: 'HttpVersion' (Required): The name of the condition for the delivery rule.
 * **parameters**: [HttpVersionMatchConditionParameters](#httpversionmatchconditionparameters) (Required): Defines the parameters for HttpVersion match conditions
 
 ## HttpVersionMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleHttpVersionConditionParameters' (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: string (Required): Describes operator to be matched
+* **operator**: 'Equal' (Required): Describes operator to be matched
 
-## IsDevice
+## DeliveryRuleIsDeviceCondition
 ### Properties
-* **name**: 'IsDevice' (Required): Defines the IsDevice condition for the delivery rule.
+* **name**: 'IsDevice' (Required): The name of the condition for the delivery rule.
 * **parameters**: [IsDeviceMatchConditionParameters](#isdevicematchconditionparameters) (Required): Defines the parameters for IsDevice match conditions
 
 ## IsDeviceMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleIsDeviceConditionParameters' (Required)
 * **matchValues**: 'Desktop' | 'Mobile'[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: string (Required): Describes operator to be matched
+* **operator**: 'Equal' (Required): Describes operator to be matched
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
-## PostArgs
+## DeliveryRulePostArgsCondition
 ### Properties
-* **name**: 'PostArgs' (Required): Defines the PostArgs condition for the delivery rule.
+* **name**: 'PostArgs' (Required): The name of the condition for the delivery rule.
 * **parameters**: [PostArgsMatchConditionParameters](#postargsmatchconditionparameters) (Required): Defines the parameters for PostArgs match conditions
 
 ## PostArgsMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRulePostArgsConditionParameters' (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched.
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched
 * **selector**: string: Name of PostArg to be matched
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
-## QueryString
+## DeliveryRuleQueryStringCondition
 ### Properties
-* **name**: 'QueryString' (Required): Defines the QueryString condition for the delivery rule.
+* **name**: 'QueryString' (Required): The name of the condition for the delivery rule.
 * **parameters**: [QueryStringMatchConditionParameters](#querystringmatchconditionparameters) (Required): Defines the parameters for QueryString match conditions
 
 ## QueryStringMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleQueryStringConditionParameters' (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched.
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
-## RemoteAddress
+## DeliveryRuleRemoteAddressCondition
 ### Properties
-* **name**: 'RemoteAddress' (Required): Defines the RemoteAddress condition for the delivery rule.
+* **name**: 'RemoteAddress' (Required): The name of the condition for the delivery rule.
 * **parameters**: [RemoteAddressMatchConditionParameters](#remoteaddressmatchconditionparameters) (Required): Defines the parameters for RemoteAddress match conditions
 
 ## RemoteAddressMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters' (Required)
 * **matchValues**: string[]: Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'GeoMatch' | 'IPMatch' (Required): Describes operator to be matched.
+* **operator**: 'Any' | 'GeoMatch' | 'IPMatch' (Required): Describes operator to be matched
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
-## RequestBody
+## DeliveryRuleRequestBodyCondition
 ### Properties
-* **name**: 'RequestBody' (Required): Defines the RequestBody condition for the delivery rule.
+* **name**: 'RequestBody' (Required): The name of the condition for the delivery rule.
 * **parameters**: [RequestBodyMatchConditionParameters](#requestbodymatchconditionparameters) (Required): Defines the parameters for RequestBody match conditions
 
 ## RequestBodyMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestBodyConditionParameters' (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched.
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
-## RequestHeader
+## DeliveryRuleRequestHeaderCondition
 ### Properties
-* **name**: 'RequestHeader' (Required): Defines the RequestHeader condition for the delivery rule.
+* **name**: 'RequestHeader' (Required): The name of the condition for the delivery rule.
 * **parameters**: [RequestHeaderMatchConditionParameters](#requestheadermatchconditionparameters) (Required): Defines the parameters for RequestHeader match conditions
 
 ## RequestHeaderMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestHeaderConditionParameters' (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched.
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched
 * **selector**: string: Name of Header to be matched
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
-## RequestMethod
+## DeliveryRuleRequestMethodCondition
 ### Properties
-* **name**: 'RequestMethod' (Required): Defines the RequestMethod condition for the delivery rule.
+* **name**: 'RequestMethod' (Required): The name of the condition for the delivery rule.
 * **parameters**: [RequestMethodMatchConditionParameters](#requestmethodmatchconditionparameters) (Required): Defines the parameters for RequestMethod match conditions
 
 ## RequestMethodMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestMethodConditionParameters' (Required)
 * **matchValues**: 'DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'POST' | 'PUT' | 'TRACE'[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: string (Required): Describes operator to be matched
+* **operator**: 'Equal' (Required): Describes operator to be matched
 
-## RequestScheme
+## DeliveryRuleRequestSchemeCondition
 ### Properties
-* **name**: 'RequestScheme' (Required): Defines the RequestScheme condition for the delivery rule.
-* **parameters**: [RequestSchemeMatchConditionParameters](#requestschemematchconditionparameters) (Required): Defines the parameters for RequestScheme match conditions
+* **name**: 'RequestScheme' (Required): The name of the condition for the delivery rule.
+* **parameters**: [RequestSchemeMatchConditionParameters](#requestschemematchconditionparameters) (Required): Defines the parameters for RequestScheme match conditions 
 
 ## RequestSchemeMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestSchemeConditionParameters' (Required)
 * **matchValues**: 'HTTP' | 'HTTPS'[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: string (Required): Describes operator to be matched
+* **operator**: 'Equal' (Required): Describes operator to be matched
 
-## RequestUri
+## DeliveryRuleRequestUriCondition
 ### Properties
-* **name**: 'RequestUri' (Required): Defines the RequestUri condition for the delivery rule.
+* **name**: 'RequestUri' (Required): The name of the condition for the delivery rule.
 * **parameters**: [RequestUriMatchConditionParameters](#requesturimatchconditionparameters) (Required): Defines the parameters for RequestUri match conditions
 
 ## RequestUriMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestUriConditionParameters' (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched.
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
-## UrlFileExtension
+## DeliveryRuleUrlFileExtensionCondition
 ### Properties
-* **name**: 'UrlFileExtension' (Required): Defines the UrlFileExtension condition for the delivery rule.
+* **name**: 'UrlFileExtension' (Required): The name of the condition for the delivery rule.
 * **parameters**: [UrlFileExtensionMatchConditionParameters](#urlfileextensionmatchconditionparameters) (Required): Defines the parameters for UrlFileExtension match conditions
 
 ## UrlFileExtensionMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlFileExtensionMatchConditionParameters' (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched.
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
-## UrlFileName
+## DeliveryRuleUrlFileNameCondition
 ### Properties
-* **name**: 'UrlFileName' (Required): Defines the UrlFileName condition for the delivery rule.
+* **name**: 'UrlFileName' (Required): The name of the condition for the delivery rule.
 * **parameters**: [UrlFileNameMatchConditionParameters](#urlfilenamematchconditionparameters) (Required): Defines the parameters for UrlFilename match conditions
 
 ## UrlFileNameMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlFilenameConditionParameters' (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched.
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
-## UrlPath
+## DeliveryRuleUrlPathCondition
 ### Properties
-* **name**: 'UrlPath' (Required): Defines the UrlPath condition for the delivery rule.
+* **name**: 'UrlPath' (Required): The name of the condition for the delivery rule.
 * **parameters**: [UrlPathMatchConditionParameters](#urlpathmatchconditionparameters) (Required): Defines the parameters for UrlPath match conditions
 
 ## UrlPathMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlPathMatchConditionParameters' (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'Wildcard' (Required): Describes operator to be matched.
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'Wildcard' (Required): Describes operator to be matched
 * **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
 
 ## GeoFilter
@@ -500,7 +502,7 @@
 ## ResponseBasedOriginErrorDetectionParameters
 ### Properties
 * **httpErrorRanges**: [HttpErrorRangeParameters](#httperrorrangeparameters)[]: The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.
-* **responseBasedDetectedErrorTypes**: 'None' | 'TcpAndHttpErrors' | 'TcpErrorsOnly': Type of response errors for real user requests for which origin will be deemed unhealthy.
+* **responseBasedDetectedErrorTypes**: 'None' | 'TcpAndHttpErrors' | 'TcpErrorsOnly': Type of response errors for real user requests for which origin will be deemed unhealthy
 * **responseBasedFailoverThresholdPercentage**: int: The percentage of failed requests in the sample where failover should trigger.
 
 ## HttpErrorRangeParameters
@@ -510,7 +512,7 @@
 
 ## DeepCreatedOrigin
 ### Properties
-* **name**: string (Required): Origin name which must be unique within the endpoint.
+* **name**: string (Required): Origin name which must be unique within the endpoint. 
 * **properties**: [DeepCreatedOriginProperties](#deepcreatedoriginproperties): Properties of the origin created on the CDN endpoint.
 
 ## DeepCreatedOriginProperties
@@ -523,7 +525,7 @@
 * **priority**: int: Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.
 * **weight**: int: Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

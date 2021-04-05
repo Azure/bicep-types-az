@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:5_properties](#schemas5properties): The properties that define the artifact source.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **properties**: [ArtifactSourceProperties](#artifactsourceproperties): The properties that define the artifact source.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DeploymentManager/artifactSources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeploymentManager/rollouts@2019-11-01-preview
@@ -19,8 +19,8 @@
 * **identity**: [Identity](#identity) (Required): Identity for the resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RolloutRequestProperties](#rolloutrequestproperties) (Required): The properties for defining a rollout.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **properties**: [RolloutRequestProperties](#rolloutrequestproperties) (Required): The properties that define a rollout.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DeploymentManager/rollouts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeploymentManager/serviceTopologies@2019-11-01-preview
@@ -30,8 +30,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:13_properties](#schemas13properties) (Required): The properties that define the service topology.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **properties**: [ServiceTopologyResourceProperties](#servicetopologyresourceproperties) (Required): The properties that define the service topology.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DeploymentManager/serviceTopologies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeploymentManager/serviceTopologies/services@2019-11-01-preview
@@ -41,8 +41,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:15_properties](#schemas15properties) (Required): The properties that define a service in a service topology.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **properties**: [ServiceResourceProperties](#serviceresourceproperties) (Required): The properties that define a service in a service topology.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DeploymentManager/serviceTopologies/services' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeploymentManager/serviceTopologies/services/serviceUnits@2019-11-01-preview
@@ -52,8 +52,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:18_properties](#schemas18properties) (Required): The properties that define the service unit.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **properties**: [ServiceUnitResourceProperties](#serviceunitresourceproperties) (Required): The properties that define the service unit.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DeploymentManager/serviceTopologies/services/serviceUnits' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeploymentManager/steps@2019-11-01-preview
@@ -64,10 +64,10 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StepProperties](#stepproperties) (Required): The properties of a step resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DeploymentManager/steps' (ReadOnly, DeployTimeConstant): The resource type
 
-## schemas:5_properties
+## ArtifactSourceProperties
 ### Properties
 * **artifactRoot**: string: The path from the location that the 'authentication' property [say, a SAS URI to the blob container] refers to, to the location of the artifacts. This can be used to differentiate different versions of the artifacts. Or, different types of artifacts like binaries or templates. The location referenced by the authentication property concatenated with this optional artifactRoot path forms the artifact source location where the artifacts are expected to be found.
 * **authentication**: [Authentication](#authentication) (Required): Defines the authentication method and properties to access the artifacts.
@@ -75,23 +75,24 @@
 
 ## Authentication
 * **Discriminator**: type
+
 ### Base Properties
-### Sas
+### SasAuthentication
 #### Properties
 * **properties**: [SasProperties](#sasproperties): The properties that define SAS authentication.
-* **type**: 'Sas' (Required): Defines the properties to access the artifacts using an Azure Storage SAS URI.
+* **type**: 'Sas' (Required): The authentication type
 
 
-## Sas
+## SasAuthentication
 ### Properties
 * **properties**: [SasProperties](#sasproperties): The properties that define SAS authentication.
-* **type**: 'Sas' (Required): Defines the properties to access the artifacts using an Azure Storage SAS URI.
+* **type**: 'Sas' (Required): The authentication type
 
 ## SasProperties
 ### Properties
 * **sasUri**: string (Required): The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -193,76 +194,78 @@
 ### Properties
 * **stepId**: string (Required): The resource Id of the step to be run.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:13_properties
+## ServiceTopologyResourceProperties
 ### Properties
 * **artifactSourceId**: string: The resource Id of the artifact source that contains the artifacts that can be referenced in the service units.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:15_properties
+## ServiceResourceProperties
 ### Properties
 * **targetLocation**: string (Required): The Azure location to which the resources in the service belong to or should be deployed to.
 * **targetSubscriptionId**: string (Required): The subscription to which the resources in the service belong to or should be deployed to.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:18_properties
+## ServiceUnitResourceProperties
 ### Properties
 * **artifacts**: [ServiceUnitArtifacts](#serviceunitartifacts): Defines the artifacts of a service unit.
 * **deploymentMode**: 'Complete' | 'Incremental' (Required): Describes the type of ARM deployment to be performed on the resource.
 * **targetResourceGroup**: string (Required): The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## StepProperties
 * **Discriminator**: stepType
+
 ### Base Properties
-### HealthCheck
+### HealthCheckStepProperties
 #### Properties
 * **attributes**: [HealthCheckStepAttributes](#healthcheckstepattributes) (Required): The attributes for the health check step.
-* **stepType**: 'HealthCheck' (Required): Defines the properties of a health check step.
+* **stepType**: 'HealthCheck' (Required): The type of step.
 
-### Wait
+### WaitStepProperties
 #### Properties
 * **attributes**: [WaitStepAttributes](#waitstepattributes) (Required): The parameters for the wait step.
-* **stepType**: 'Wait' (Required): Defines the properties of a Wait step.
+* **stepType**: 'Wait' (Required): The type of step.
 
 
-## HealthCheck
+## HealthCheckStepProperties
 ### Properties
 * **attributes**: [HealthCheckStepAttributes](#healthcheckstepattributes) (Required): The attributes for the health check step.
-* **stepType**: 'HealthCheck' (Required): Defines the properties of a health check step.
+* **stepType**: 'HealthCheck' (Required): The type of step.
 
 ## HealthCheckStepAttributes
 * **Discriminator**: type
+
 ### Base Properties
 * **healthyStateDuration**: string (Required): The duration in ISO 8601 format for which the resource is expected to be continuously healthy. If maxElasticDuration is specified, healthy state duration is enforced after the detection of first healthy signal.
 * **maxElasticDuration**: string: The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn't. Health check starts to enforce healthyStateDuration once resource becomes healthy.
 * **waitDuration**: string: The duration in ISO 8601 format for which health check waits idly without any checks.
-### REST
+### RestHealthCheckStepAttributes
 #### Properties
 * **properties**: [RestParameters](#restparameters): The parameters for the REST health check.
-* **type**: 'REST' (Required): Defines the REST health check step properties.
+* **type**: 'REST' (Required): The type of health check.
 
 
-## REST
+## RestHealthCheckStepAttributes
 ### Properties
 * **properties**: [RestParameters](#restparameters): The parameters for the REST health check.
-* **type**: 'REST' (Required): Defines the REST health check step properties.
+* **type**: 'REST' (Required): The type of health check.
 
 ## RestParameters
 ### Properties
@@ -282,50 +285,51 @@
 
 ## RestRequestAuthentication
 * **Discriminator**: type
+
 ### Base Properties
-### ApiKey
+### ApiKeyAuthentication
 #### Properties
 * **in**: 'Header' | 'Query' (Required): The location of the authentication key/value pair in the request.
 * **name**: string (Required): The key name of the authentication key/value pair.
-* **type**: 'ApiKey' (Required): ApiKey authentication gives a name and a value that can be included in either the request header or query parameters.
+* **type**: 'ApiKey' (Required): The authentication type.
 * **value**: string (Required): The value of the authentication key/value pair.
 
-### RolloutIdentity
+### RolloutIdentityAuthentication
 #### Properties
-* **type**: 'RolloutIdentity' (Required): RolloutIdentity uses the user-assigned managed identity authentication context specified in the Identity property during rollout creation.
+* **type**: 'RolloutIdentity' (Required): The authentication type.
 
 
-## ApiKey
+## ApiKeyAuthentication
 ### Properties
 * **in**: 'Header' | 'Query' (Required): The location of the authentication key/value pair in the request.
 * **name**: string (Required): The key name of the authentication key/value pair.
-* **type**: 'ApiKey' (Required): ApiKey authentication gives a name and a value that can be included in either the request header or query parameters.
+* **type**: 'ApiKey' (Required): The authentication type.
 * **value**: string (Required): The value of the authentication key/value pair.
 
-## RolloutIdentity
+## RolloutIdentityAuthentication
 ### Properties
-* **type**: 'RolloutIdentity' (Required): RolloutIdentity uses the user-assigned managed identity authentication context specified in the Identity property during rollout creation.
+* **type**: 'RolloutIdentity' (Required): The authentication type.
 
 ## RestResponse
 ### Properties
-* **regex**: [schemas:42_regex](#schemas42regex): The regular expressions to match the response content with.
+* **regex**: [RestResponseRegex](#restresponseregex): The regular expressions to match the response content with.
 * **successStatusCodes**: string[]: The HTTP status codes expected in a successful health check response. The response is expected to match one of the given status codes. If no expected status codes are provided, default expected status code is 200 OK.
 
-## schemas:42_regex
+## RestResponseRegex
 ### Properties
 * **matches**: string[]: The list of regular expressions.
 * **matchQuantifier**: 'All' | 'Any': Indicates whether any or all of the expressions should match with the response content.
 
-## Wait
+## WaitStepProperties
 ### Properties
 * **attributes**: [WaitStepAttributes](#waitstepattributes) (Required): The parameters for the wait step.
-* **stepType**: 'Wait' (Required): Defines the properties of a Wait step.
+* **stepType**: 'Wait' (Required): The type of step.
 
 ## WaitStepAttributes
 ### Properties
 * **duration**: string (Required): The duration in ISO 8601 format of how long the wait should be.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

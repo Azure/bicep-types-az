@@ -33,13 +33,13 @@
 * **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: any (ReadOnly): On-premise IoT sensor properties
+* **properties**: any (ReadOnly): Any object
 * **type**: 'Microsoft.Security/onPremiseIotSensors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## IotDefenderSettingsProperties
 ### Properties
 * **deviceQuota**: int (Required): Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.
-* **onboardingKind**: 'Default' | 'MigratedToAzure' (Required): The kind of onboarding for the subscription.
+* **onboardingKind**: 'Default' | 'MigratedToAzure' (Required): The kind of onboarding for the subscription
 * **sentinelWorkspaceResourceIds**: string[] (Required): Sentinel Workspace Resource Ids
 
 ## IotSensorProperties
@@ -48,20 +48,20 @@
 * **creationTime**: string (ReadOnly): Creation time of the IoT sensor
 * **dynamicLearning**: bool (ReadOnly): Dynamic mode status of the IoT sensor
 * **learningMode**: bool (ReadOnly): Learning mode status of the IoT sensor
-* **sensorStatus**: 'Disconnected' | 'Ok' | 'Unavailable' (ReadOnly): Status of the IoT sensor.
-* **sensorType**: 'Enterprise' | 'Ot': Type of sensor.
+* **sensorStatus**: 'Disconnected' | 'Ok' | 'Unavailable' (ReadOnly): Status of the IoT sensor
+* **sensorType**: 'Enterprise' | 'Ot': Type of sensor
 * **sensorVersion**: string (ReadOnly): Version of the IoT sensor
 * **tiAutomaticUpdates**: bool: TI Automatic mode status of the IoT sensor
-* **tiStatus**: 'Failed' | 'InProgress' | 'Ok' | 'UpdateAvailable' (ReadOnly): TI Status of the IoT sensor.
+* **tiStatus**: 'Failed' | 'InProgress' | 'Ok' | 'UpdateAvailable' (ReadOnly): TI Status of the IoT sensor
 * **tiVersion**: string (ReadOnly): TI Version of the IoT sensor
 * **zone**: string: Zone of the IoT sensor
 
 ## IotSiteProperties
 ### Properties
 * **displayName**: string (Required): Display name of the IoT site
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags of the IoT site
+* **tags**: [IotSitePropertiesTags](#iotsitepropertiestags): Tags of the IoT site
 
-## Dictionary<string,String>
+## IotSitePropertiesTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: any:
-* **sku**: [IntegrationAccountSku](#integrationaccountsku):
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **properties**: any: Any object
+* **sku**: [IntegrationAccountSku](#integrationaccountsku)
+* **tags**: [IntegrationAccountResourceTags](#integrationaccountresourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/agreements@2015-08-01-preview
@@ -19,8 +19,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IntegrationAccountAgreementProperties](#integrationaccountagreementproperties):
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **properties**: [IntegrationAccountAgreementProperties](#integrationaccountagreementproperties)
+* **tags**: [IntegrationAccountResourceTags](#integrationaccountresourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/certificates@2015-08-01-preview
@@ -30,8 +30,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IntegrationAccountCertificateProperties](#integrationaccountcertificateproperties):
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **properties**: [IntegrationAccountCertificateProperties](#integrationaccountcertificateproperties)
+* **tags**: [IntegrationAccountResourceTags](#integrationaccountresourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/maps@2015-08-01-preview
@@ -41,8 +41,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IntegrationAccountMapProperties](#integrationaccountmapproperties):
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **properties**: [IntegrationAccountMapProperties](#integrationaccountmapproperties)
+* **tags**: [IntegrationAccountResourceTags](#integrationaccountresourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/maps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/partners@2015-08-01-preview
@@ -52,8 +52,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IntegrationAccountPartnerProperties](#integrationaccountpartnerproperties):
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **properties**: [IntegrationAccountPartnerProperties](#integrationaccountpartnerproperties)
+* **tags**: [IntegrationAccountResourceTags](#integrationaccountresourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/partners' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/schemas@2015-08-01-preview
@@ -63,57 +63,57 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IntegrationAccountSchemaProperties](#integrationaccountschemaproperties):
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **properties**: [IntegrationAccountSchemaProperties](#integrationaccountschemaproperties)
+* **tags**: [IntegrationAccountResourceTags](#integrationaccountresourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## IntegrationAccountSku
 ### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard': The sku name.
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard'
 
-## Dictionary<string,String>
+## IntegrationAccountResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## IntegrationAccountAgreementProperties
 ### Properties
-* **agreementType**: 'AS2' | 'Edifact' | 'NotSpecified' | 'X12': The agreement type.
+* **agreementType**: 'AS2' | 'Edifact' | 'NotSpecified' | 'X12'
 * **changedTime**: string (ReadOnly): The changed time.
-* **content**: [AgreementContent](#agreementcontent):
+* **content**: [AgreementContent](#agreementcontent)
 * **createdTime**: string (ReadOnly): The created time.
-* **guestIdentity**: [BusinessIdentity](#businessidentity):
+* **guestIdentity**: [BusinessIdentity](#businessidentity)
 * **guestPartner**: string: The guest partner.
-* **hostIdentity**: [BusinessIdentity](#businessidentity):
+* **hostIdentity**: [BusinessIdentity](#businessidentity)
 * **hostPartner**: string: The host partner.
-* **metadata**: any: The metadata.
+* **metadata**: any: Any object
 
 ## AgreementContent
 ### Properties
-* **AS2**: [AS2AgreementContent](#as2agreementcontent):
-* **Edifact**: [EdifactAgreementContent](#edifactagreementcontent):
-* **X12**: [X12AgreementContent](#x12agreementcontent):
+* **AS2**: [AS2AgreementContent](#as2agreementcontent)
+* **Edifact**: [EdifactAgreementContent](#edifactagreementcontent)
+* **X12**: [X12AgreementContent](#x12agreementcontent)
 
 ## AS2AgreementContent
 ### Properties
-* **receiveAgreement**: [AS2OneWayAgreement](#as2onewayagreement):
-* **sendAgreement**: [AS2OneWayAgreement](#as2onewayagreement):
+* **receiveAgreement**: [AS2OneWayAgreement](#as2onewayagreement)
+* **sendAgreement**: [AS2OneWayAgreement](#as2onewayagreement)
 
 ## AS2OneWayAgreement
 ### Properties
-* **protocolSettings**: [AS2ProtocolSettings](#as2protocolsettings):
-* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity):
-* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity):
+* **protocolSettings**: [AS2ProtocolSettings](#as2protocolsettings)
+* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity)
+* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity)
 
 ## AS2ProtocolSettings
 ### Properties
-* **acknowledgementConnectionSettings**: [AS2AcknowledgementConnectionSettings](#as2acknowledgementconnectionsettings):
-* **envelopeSettings**: [AS2EnvelopeSettings](#as2envelopesettings):
-* **errorSettings**: [AS2ErrorSettings](#as2errorsettings):
-* **mdnSettings**: [AS2MdnSettings](#as2mdnsettings):
-* **messageConnectionSettings**: [AS2MessageConnectionSettings](#as2messageconnectionsettings):
-* **securitySettings**: [AS2SecuritySettings](#as2securitysettings):
-* **validationSettings**: [AS2ValidationSettings](#as2validationsettings):
+* **acknowledgementConnectionSettings**: [AS2AcknowledgementConnectionSettings](#as2acknowledgementconnectionsettings)
+* **envelopeSettings**: [AS2EnvelopeSettings](#as2envelopesettings)
+* **errorSettings**: [AS2ErrorSettings](#as2errorsettings)
+* **mdnSettings**: [AS2MdnSettings](#as2mdnsettings)
+* **messageConnectionSettings**: [AS2MessageConnectionSettings](#as2messageconnectionsettings)
+* **securitySettings**: [AS2SecuritySettings](#as2securitysettings)
+* **validationSettings**: [AS2ValidationSettings](#as2validationsettings)
 
 ## AS2AcknowledgementConnectionSettings
 ### Properties
@@ -139,7 +139,7 @@
 ### Properties
 * **dispositionNotificationTo**: string: The disposition notification to header value.
 * **mdnText**: string: The MDN text.
-* **micHashingAlgorithm**: 'None' | 'NotSpecified' | 'SHA2256' | 'SHA2384' | 'SHA2512': The signing or hashing algorithm.
+* **micHashingAlgorithm**: 'None' | 'NotSpecified' | 'SHA2256' | 'SHA2384' | 'SHA2512'
 * **needMdn**: bool: The value indicating whether to send or request a MDN.
 * **receiptDeliveryUrl**: string: The receipt delivery URL.
 * **sendInboundMdnToMessageBox**: bool: The value indicating whether to send inbound MDN to message box.
@@ -172,7 +172,7 @@
 * **checkCertificateRevocationListOnSend**: bool: The value indicating whether to check for certificate revocation list on send.
 * **checkDuplicateMessage**: bool: The value indicating whether to check for duplicate message.
 * **compressMessage**: bool: The value indicating whether the message has to be compressed.
-* **encryptionAlgorithm**: 'AES128' | 'AES192' | 'AES256' | 'DES3' | 'None' | 'NotSpecified' | 'RC2': The encryption algorithm.
+* **encryptionAlgorithm**: 'AES128' | 'AES192' | 'AES256' | 'DES3' | 'None' | 'NotSpecified' | 'RC2'
 * **encryptMessage**: bool: The value indicating whether the message has to be encrypted.
 * **interchangeDuplicatesValidityDays**: int: The number of days to look back for duplicate interchange.
 * **overrideMessageProperties**: bool: The value indicating whether to override incoming message properties with those in agreement.
@@ -185,28 +185,28 @@
 
 ## EdifactAgreementContent
 ### Properties
-* **receiveAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement):
-* **sendAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement):
+* **receiveAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement)
+* **sendAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement)
 
 ## EdifactOneWayAgreement
 ### Properties
-* **protocolSettings**: [EdifactProtocolSettings](#edifactprotocolsettings):
-* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity):
-* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity):
+* **protocolSettings**: [EdifactProtocolSettings](#edifactprotocolsettings)
+* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity)
+* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity)
 
 ## EdifactProtocolSettings
 ### Properties
-* **acknowledgementSettings**: [EdifactAcknowledgementSettings](#edifactacknowledgementsettings):
+* **acknowledgementSettings**: [EdifactAcknowledgementSettings](#edifactacknowledgementsettings)
 * **edifactDelimiterOverrides**: [EdifactDelimiterOverride](#edifactdelimiteroverride)[]: The EDIFACT delimiter override settings.
 * **envelopeOverrides**: [EdifactEnvelopeOverride](#edifactenvelopeoverride)[]: The EDIFACT envelope override settings.
-* **envelopeSettings**: [EdifactEnvelopeSettings](#edifactenvelopesettings):
-* **framingSettings**: [EdifactFramingSettings](#edifactframingsettings):
-* **messageFilter**: [EdifactMessageFilter](#edifactmessagefilter):
+* **envelopeSettings**: [EdifactEnvelopeSettings](#edifactenvelopesettings)
+* **framingSettings**: [EdifactFramingSettings](#edifactframingsettings)
+* **messageFilter**: [EdifactMessageFilter](#edifactmessagefilter)
 * **messageFilterList**: [EdifactMessageIdentifier](#edifactmessageidentifier)[]: The EDIFACT message filter list.
-* **processingSettings**: [EdifactProcessingSettings](#edifactprocessingsettings):
+* **processingSettings**: [EdifactProcessingSettings](#edifactprocessingsettings)
 * **schemaReferences**: [EdifactSchemaReference](#edifactschemareference)[]: The EDIFACT schema references.
 * **validationOverrides**: [EdifactValidationOverride](#edifactvalidationoverride)[]: The EDIFACT validation override settings.
-* **validationSettings**: [EdifactValidationSettings](#edifactvalidationsettings):
+* **validationSettings**: [EdifactValidationSettings](#edifactvalidationsettings)
 
 ## EdifactAcknowledgementSettings
 ### Properties
@@ -226,7 +226,7 @@
 ### Properties
 * **componentSeparator**: int: The component separator.
 * **dataElementSeparator**: int: The data element separator.
-* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified': The decimal point indicator.
+* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified'
 * **messageAssociationAssignedCode**: string: The message association assigned code.
 * **messageId**: string: The message id.
 * **messageRelease**: string: The message release version.
@@ -234,7 +234,7 @@
 * **releaseIndicator**: int: The release indicator.
 * **repetitionSeparator**: int: The repetition separator.
 * **segmentTerminator**: int: The segment terminator.
-* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified': The segment terminator suffix.
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified'
 * **targetNamespace**: string: The target namespace on which this delimiter settings has to be applied.
 
 ## EdifactEnvelopeOverride
@@ -302,20 +302,20 @@
 ## EdifactFramingSettings
 ### Properties
 * **characterEncoding**: string: The character encoding.
-* **characterSet**: 'KECA' | 'NotSpecified' | 'UNOA' | 'UNOB' | 'UNOC' | 'UNOD' | 'UNOE' | 'UNOF' | 'UNOG' | 'UNOH' | 'UNOI' | 'UNOJ' | 'UNOK' | 'UNOX' | 'UNOY': The EDIFACT frame setting characterSet.
+* **characterSet**: 'KECA' | 'NotSpecified' | 'UNOA' | 'UNOB' | 'UNOC' | 'UNOD' | 'UNOE' | 'UNOF' | 'UNOG' | 'UNOH' | 'UNOI' | 'UNOJ' | 'UNOK' | 'UNOX' | 'UNOY'
 * **componentSeparator**: int: The component separator.
 * **dataElementSeparator**: int: The data element separator.
-* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified': The EDIFACT frame setting decimal indicator.
+* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified'
 * **protocolVersion**: int: The protocol version.
 * **releaseIndicator**: int: The release indicator.
 * **repetitionSeparator**: int: The repetition separator.
 * **segmentTerminator**: int: The segment terminator.
-* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified': The EDIFACT frame setting segment terminator suffix.
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified'
 * **serviceCodeListDirectoryVersion**: string: The service code list directory version.
 
 ## EdifactMessageFilter
 ### Properties
-* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified': The message filter type.
+* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified'
 
 ## EdifactMessageIdentifier
 ### Properties
@@ -344,7 +344,7 @@
 * **allowLeadingAndTrailingSpacesAndZeroes**: bool: The value indicating whether to allow leading and trailing spaces and zeroes.
 * **enforceCharacterSet**: bool: The value indicating whether to validate character Set.
 * **messageId**: string: The message id on which the validation settings has to be applied.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional': The trailing separator policy.
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional'
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool: The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateEDITypes**: bool: The value indicating whether to validate EDI types.
 * **validateXSDTypes**: bool: The value indicating whether to validate XSD types.
@@ -356,7 +356,7 @@
 * **checkDuplicateInterchangeControlNumber**: bool: The value indicating whether to check for duplicate interchange control number.
 * **checkDuplicateTransactionSetControlNumber**: bool: The value indicating whether to check for duplicate transaction set control number.
 * **interchangeControlNumberValidityDays**: int: The validity period of interchange control number.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional': The trailing separator policy.
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional'
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool: The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateCharacterSet**: bool: The value indicating whether to validate character set in the message.
 * **validateEDITypes**: bool: The value indicating whether to Whether to validate EDI types.
@@ -364,28 +364,28 @@
 
 ## X12AgreementContent
 ### Properties
-* **receiveAgreement**: [X12OneWayAgreement](#x12onewayagreement):
-* **sendAgreement**: [X12OneWayAgreement](#x12onewayagreement):
+* **receiveAgreement**: [X12OneWayAgreement](#x12onewayagreement)
+* **sendAgreement**: [X12OneWayAgreement](#x12onewayagreement)
 
 ## X12OneWayAgreement
 ### Properties
-* **protocolSettings**: [X12ProtocolSettings](#x12protocolsettings):
-* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity):
-* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity):
+* **protocolSettings**: [X12ProtocolSettings](#x12protocolsettings)
+* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity)
+* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity)
 
 ## X12ProtocolSettings
 ### Properties
-* **acknowledgementSettings**: [X12AcknowledgementSettings](#x12acknowledgementsettings):
+* **acknowledgementSettings**: [X12AcknowledgementSettings](#x12acknowledgementsettings)
 * **envelopeOverrides**: [X12EnvelopeOverride](#x12envelopeoverride)[]: The X12 envelope override settings.
-* **envelopeSettings**: [X12EnvelopeSettings](#x12envelopesettings):
-* **framingSettings**: [X12FramingSettings](#x12framingsettings):
-* **messageFilter**: [X12MessageFilter](#x12messagefilter):
+* **envelopeSettings**: [X12EnvelopeSettings](#x12envelopesettings)
+* **framingSettings**: [X12FramingSettings](#x12framingsettings)
+* **messageFilter**: [X12MessageFilter](#x12messagefilter)
 * **messageFilterList**: [X12MessageIdentifier](#x12messageidentifier)[]: The X12 message filter list.
-* **processingSettings**: [X12ProcessingSettings](#x12processingsettings):
+* **processingSettings**: [X12ProcessingSettings](#x12processingsettings)
 * **schemaReferences**: [X12SchemaReference](#x12schemareference)[]: The X12 schema references.
-* **securitySettings**: [X12SecuritySettings](#x12securitysettings):
+* **securitySettings**: [X12SecuritySettings](#x12securitysettings)
 * **validationOverrides**: [X12ValidationOverride](#x12validationoverride)[]: The X12 validation override settings.
-* **validationSettings**: [X12ValidationSettings](#x12validationsettings):
+* **validationSettings**: [X12ValidationSettings](#x12validationsettings)
 * **x12DelimiterOverrides**: [X12DelimiterOverrides](#x12delimiteroverrides)[]: The X12 delimiter override settings.
 
 ## X12AcknowledgementSettings
@@ -408,7 +408,7 @@
 
 ## X12EnvelopeOverride
 ### Properties
-* **dateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD': The date format.
+* **dateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD'
 * **functionalIdentifierCode**: string: The functional identifier code.
 * **headerVersion**: string: The header version.
 * **messageId**: string: The message id on which this envelope settings has to be applied.
@@ -417,7 +417,7 @@
 * **responsibleAgencyCode**: int: The responsible agency code.
 * **senderApplicationId**: string: The sender application id.
 * **targetNamespace**: string: The target namespace on which this envelope settings has to be applied.
-* **timeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified': The time format.
+* **timeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified'
 
 ## X12EnvelopeSettings
 ### Properties
@@ -428,8 +428,8 @@
 * **groupControlNumberLowerBound**: int: The group control number lower bound.
 * **groupControlNumberUpperBound**: int: The group control number upper bound.
 * **groupHeaderAgencyCode**: string: The group header agency code.
-* **groupHeaderDateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD': The group header date format.
-* **groupHeaderTimeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified': The group header time format.
+* **groupHeaderDateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD'
+* **groupHeaderTimeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified'
 * **groupHeaderVersion**: string: The group header version.
 * **interchangeControlNumberLowerBound**: int: The interchange  control number lower bound.
 * **interchangeControlNumberUpperBound**: int: The interchange  control number upper bound.
@@ -443,22 +443,22 @@
 * **transactionSetControlNumberPrefix**: string: The transaction set control number prefix.
 * **transactionSetControlNumberSuffix**: string: The transaction set control number suffix.
 * **transactionSetControlNumberUpperBound**: int: The transaction set control number upper bound.
-* **usageIndicator**: 'Information' | 'NotSpecified' | 'Production' | 'Test': The usage indicator.
+* **usageIndicator**: 'Information' | 'NotSpecified' | 'Production' | 'Test'
 * **useControlStandardsIdAsRepetitionCharacter**: bool: The value indicating whether to use control standards id as repetition character.
 
 ## X12FramingSettings
 ### Properties
-* **characterSet**: 'Basic' | 'Extended' | 'NotSpecified' | 'UTF8': The X12 character set.
+* **characterSet**: 'Basic' | 'Extended' | 'NotSpecified' | 'UTF8'
 * **componentSeparator**: int: The component separator.
 * **dataElementSeparator**: int: The data element separator.
 * **replaceCharacter**: int: The replacement character.
 * **replaceSeparatorsInPayload**: bool: The value indicating whether to replace separators in payload.
 * **segmentTerminator**: int: The segment terminator.
-* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified': The segment terminator suffix.
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified'
 
 ## X12MessageFilter
 ### Properties
-* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified': The message filter type.
+* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified'
 
 ## X12MessageIdentifier
 ### Properties
@@ -491,7 +491,7 @@
 ### Properties
 * **allowLeadingAndTrailingSpacesAndZeroes**: bool: The value indicating whether to allow leading and trailing spaces and zeroes.
 * **messageId**: string: The message id on which the validation settings has to be applied.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional': The trailing separator policy.
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional'
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool: The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateCharacterSet**: bool: The value indicating whether to validate character Set.
 * **validateEDITypes**: bool: The value indicating whether to validate EDI types.
@@ -504,7 +504,7 @@
 * **checkDuplicateInterchangeControlNumber**: bool: The value indicating whether to check for duplicate interchange control number.
 * **checkDuplicateTransactionSetControlNumber**: bool: The value indicating whether to check for duplicate transaction set control number.
 * **interchangeControlNumberValidityDays**: int: The validity period of interchange control number.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional': The trailing separator policy.
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional'
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool: The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateCharacterSet**: bool: The value indicating whether to validate character set in the message.
 * **validateEDITypes**: bool: The value indicating whether to Whether to validate EDI types.
@@ -519,10 +519,10 @@
 * **replaceCharacter**: int: The replacement character.
 * **replaceSeparatorsInPayload**: bool: The value indicating whether to replace separators in payload.
 * **segmentTerminator**: int: The segment terminator.
-* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified': The segment terminator suffix.
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified'
 * **targetNamespace**: string: The target namespace on which this delimiter settings has to be applied.
 
-## Dictionary<string,String>
+## IntegrationAccountResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -531,23 +531,23 @@
 ### Properties
 * **changedTime**: string (ReadOnly): The changed time.
 * **createdTime**: string (ReadOnly): The created time.
-* **key**: [KeyVaultKeyReference](#keyvaultkeyreference):
-* **metadata**: any: The metadata.
+* **key**: [KeyVaultKeyReference](#keyvaultkeyreference)
+* **metadata**: any: Any object
 * **publicCertificate**: string: The public certificate.
 
 ## KeyVaultKeyReference
 ### Properties
 * **keyName**: string: The private key name in key vault.
-* **keyVault**: [schemas:87_keyVault](#schemas87keyvault): The key vault reference.
+* **keyVault**: [KeyVaultKeyReferenceKeyVault](#keyvaultkeyreferencekeyvault): The key vault reference.
 * **keyVersion**: string: The private key version in key vault.
 
-## schemas:87_keyVault
+## KeyVaultKeyReferenceKeyVault
 ### Properties
 * **id**: string: The resource id.
 * **name**: string (ReadOnly): The resource name.
 * **type**: string (ReadOnly): The resource type.
 
-## Dictionary<string,String>
+## IntegrationAccountResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -555,19 +555,19 @@
 ## IntegrationAccountMapProperties
 ### Properties
 * **changedTime**: string (ReadOnly): The changed time.
-* **content**: any: The content.
-* **contentLink**: [IntegrationAccountContentLink](#integrationaccountcontentlink) (ReadOnly):
+* **content**: any: Any object
+* **contentLink**: [IntegrationAccountContentLink](#integrationaccountcontentlink) (ReadOnly)
 * **contentType**: string: The content type.
 * **createdTime**: string (ReadOnly): The created time.
-* **mapType**: 'NotSpecified' | 'Xslt': The map type.
-* **metadata**: any: The metadata.
+* **mapType**: 'NotSpecified' | 'Xslt'
+* **metadata**: any: Any object
 
 ## IntegrationAccountContentLink
 ### Properties
-* **contentHash**: [IntegrationAccountContentHash](#integrationaccountcontenthash):
+* **contentHash**: [IntegrationAccountContentHash](#integrationaccountcontenthash)
 * **contentSize**: int: The content size.
 * **contentVersion**: string: The content version.
-* **metadata**: any: The metadata.
+* **metadata**: any: Any object
 * **uri**: string: The content link URI.
 
 ## IntegrationAccountContentHash
@@ -575,7 +575,7 @@
 * **algorithm**: string: The content hash algorithm.
 * **value**: string: The content hash value.
 
-## Dictionary<string,String>
+## IntegrationAccountResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -583,20 +583,20 @@
 ## IntegrationAccountPartnerProperties
 ### Properties
 * **changedTime**: string (ReadOnly): The changed time.
-* **content**: [PartnerContent](#partnercontent):
+* **content**: [PartnerContent](#partnercontent)
 * **createdTime**: string (ReadOnly): The created time.
-* **metadata**: any: The metadata.
-* **partnerType**: 'B2B' | 'NotSpecified': The partner type.
+* **metadata**: any: Any object
+* **partnerType**: 'B2B' | 'NotSpecified'
 
 ## PartnerContent
 ### Properties
-* **b2b**: [B2BPartnerContent](#b2bpartnercontent):
+* **b2b**: [B2BPartnerContent](#b2bpartnercontent)
 
 ## B2BPartnerContent
 ### Properties
 * **businessIdentities**: [BusinessIdentity](#businessidentity)[]: The list of partner business identities.
 
-## Dictionary<string,String>
+## IntegrationAccountResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -604,15 +604,15 @@
 ## IntegrationAccountSchemaProperties
 ### Properties
 * **changedTime**: string (ReadOnly): The changed time.
-* **content**: any: The content.
-* **contentLink**: [IntegrationAccountContentLink](#integrationaccountcontentlink) (ReadOnly):
+* **content**: any: Any object
+* **contentLink**: [IntegrationAccountContentLink](#integrationaccountcontentlink) (ReadOnly)
 * **contentType**: string: The content type.
 * **createdTime**: string (ReadOnly): The created time.
-* **metadata**: any: The metadata.
-* **schemaType**: 'NotSpecified' | 'Xml': The schema type.
+* **metadata**: any: Any object
+* **schemaType**: 'NotSpecified' | 'Xml'
 * **targetNamespace**: string: The target namespace.
 
-## Dictionary<string,String>
+## IntegrationAccountResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
