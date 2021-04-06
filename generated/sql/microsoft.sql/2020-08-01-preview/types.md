@@ -296,16 +296,10 @@
 ## Resource Microsoft.Sql/servers/databases/extensions@2020-08-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **administratorLogin**: string: Administrator login name.
-* **administratorLoginPassword**: string: Administrator login password.
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **authenticationType**: string: Authentication type.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **operationMode**: string (Required): Operation Mode.
-* **storageKey**: string (Required): Storage key.
-* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required): Storage key type.
-* **storageUri**: string (Required): Storage Uri.
+* **properties**: [DatabaseExtensionsProperties](#databaseextensionsproperties): Contains the database information after successful export.
 * **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/maintenanceWindows@2020-08-01-preview
@@ -834,12 +828,12 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 
 ## systemData
 ### Properties
-* **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
-* **createdBy**: string (ReadOnly): A string identifier for the identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource: <User|Application|ManagedIdentity|Key>.
-* **lastModifiedAt**: string (ReadOnly): The timestamp of last modification (UTC).
-* **lastModifiedBy**: string (ReadOnly): A string identifier for the identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that last modified the resource: <User|Application|ManagedIdentity|Key>.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## SqlAgentConfigurationProperties
 ### Properties
@@ -1230,6 +1224,13 @@ Prerequisites for using managed identity authentication:
 For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
 * **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
+
+## DatabaseExtensionsProperties
+### Properties
+* **operationMode**: string (Required): Operation Mode.
+* **storageKey**: string (Required): Storage key.
+* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required): Storage key type.
+* **storageUri**: string (Required): Storage Uri.
 
 ## MaintenanceWindowsProperties
 ### Properties

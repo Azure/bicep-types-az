@@ -83,6 +83,16 @@
 * **properties**: [Pipeline](#pipeline) (Required): A data factory pipeline.
 * **type**: 'Microsoft.DataFactory/factories/pipelines' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DataFactory/factories/privateEndpointConnections@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Etag identifies change in the resource.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
+* **type**: 'Microsoft.DataFactory/factories/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DataFactory/factories/triggers@2018-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -177,14 +187,14 @@
 ### Base Properties
 * **annotations**: any[]: List of tags that can be used for describing the data flow.
 * **description**: string: The description of the data flow.
-* **folder**: [schemas:107_folder](#schemas107folder): The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+* **folder**: [schemas:117_folder](#schemas117folder): The folder that this data flow is in. If not specified, Data flow will appear at the root level.
 ### MappingDataFlow
 #### Properties
 * **type**: 'MappingDataFlow' (Required): Mapping data flow.
 * **typeProperties**: [MappingDataFlowTypeProperties](#mappingdataflowtypeproperties): Mapping data flow type properties.
 
 
-## schemas:107_folder
+## schemas:117_folder
 ### Properties
 * **name**: string: The name of the folder that this data flow is in.
 
@@ -248,7 +258,7 @@
 ### Base Properties
 * **annotations**: any[]: List of tags that can be used for describing the Dataset.
 * **description**: string: Dataset description.
-* **folder**: [schemas:113_folder](#schemas113folder): The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+* **folder**: [schemas:123_folder](#schemas123folder): The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
 * **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): Linked service reference type.
 * **parameters**: [Dictionary<string,ParameterSpecification>](#dictionarystringparameterspecification): Definition of all parameters for an entity.
 * **schema**: any: Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
@@ -718,7 +728,7 @@
 * **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties): Properties specific to this dataset type.
 
 
-## schemas:113_folder
+## schemas:123_folder
 ### Properties
 * **name**: string: The name of the folder that this Dataset is in.
 
@@ -2928,6 +2938,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## AzureSqlDatabaseLinkedServiceTypeProperties
 ### Properties
+* **alwaysEncryptedSettings**: [SqlAlwaysEncryptedProperties](#sqlalwaysencryptedproperties): Sql always encrypted properties.
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
 * **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
@@ -2935,6 +2946,12 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **servicePrincipalId**: any: The ID of the service principal used to authenticate against Azure SQL Database. Type: string (or Expression with resultType string).
 * **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
 * **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+
+## SqlAlwaysEncryptedProperties
+### Properties
+* **alwaysEncryptedAkvAuthType**: 'ManagedIdentity' | 'ServicePrincipal' (Required): Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
+* **servicePrincipalId**: any: The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
 
 ## AzureSqlDW
 ### Properties
@@ -2958,6 +2975,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## AzureSqlMILinkedServiceTypeProperties
 ### Properties
+* **alwaysEncryptedSettings**: [SqlAlwaysEncryptedProperties](#sqlalwaysencryptedproperties): Sql always encrypted properties.
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
 * **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
@@ -4033,6 +4051,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## SqlServerLinkedServiceTypeProperties
 ### Properties
+* **alwaysEncryptedSettings**: [SqlAlwaysEncryptedProperties](#sqlalwaysencryptedproperties): Sql always encrypted properties.
 * **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
@@ -4198,7 +4217,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **annotations**: any[]: List of tags that can be used for describing the Pipeline.
 * **concurrency**: int: The max number of concurrent runs for the pipeline.
 * **description**: string: The description of the pipeline.
-* **folder**: [schemas:568_folder](#schemas568folder): The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
+* **folder**: [schemas:579_folder](#schemas579folder): The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
 * **parameters**: [Dictionary<string,ParameterSpecification>](#dictionarystringparameterspecification): Definition of all parameters for an entity.
 * **policy**: [PipelinePolicy](#pipelinepolicy): Pipeline Policy.
 * **runDimensions**: [Dictionary<string,Object>](#dictionarystringobject): Dimensions emitted by Pipeline.
@@ -4254,7 +4273,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## schemas:568_folder
+## schemas:579_folder
 ### Properties
 * **name**: string: The name of the folder that this Pipeline is in.
 
@@ -4286,6 +4305,22 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **defaultValue**: any: Default value of variable.
 * **type**: 'Array' | 'Bool' | 'String' (Required): Variable type.
 
+## PrivateLinkConnectionApprovalRequest
+### Properties
+* **privateEndpoint**: [ArmIdWrapper](#armidwrapper) (ReadOnly): A wrapper for an ARM resource id
+* **privateLinkServiceConnectionState**: [PrivateLinkConnectionState](#privatelinkconnectionstate): The state of a private link connection
+* **provisioningState**: string (ReadOnly):
+
+## ArmIdWrapper
+### Properties
+* **id**: string (ReadOnly):
+
+## PrivateLinkConnectionState
+### Properties
+* **actionsRequired**: string: ActionsRequired for a private link connection
+* **description**: string: Description of a private link connection
+* **status**: string: Status of a private link connection
+
 ## Trigger
 * **Discriminator**: type
 ### Base Properties
@@ -4296,7 +4331,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 #### Properties
 * **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required): Pipeline that needs to be triggered with the given parameters.
 * **type**: 'ChainingTrigger' (Required): Trigger that allows the referenced pipeline to depend on other pipeline runs based on runDimension Name/Value pairs. Upstream pipelines should declare the same runDimension Name and their runs should have the values for those runDimensions. The referenced pipeline run would be triggered if the values for the runDimension match for all upstream pipeline runs.
-* **typeProperties**: [schemas:895_typeProperties](#schemas895typeproperties) (Required): Chaining Trigger properties.
+* **typeProperties**: [schemas:906_typeProperties](#schemas906typeproperties) (Required): Chaining Trigger properties.
 
 ### MultiplePipelineTrigger
 #### Properties
@@ -4306,20 +4341,20 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### RerunTumblingWindowTrigger
 #### Properties
 * **type**: 'RerunTumblingWindowTrigger' (Required): Trigger that schedules pipeline reruns for all fixed time interval windows from a requested start time to requested end time.
-* **typeProperties**: [schemas:894_typeProperties](#schemas894typeproperties) (Required): Rerun Trigger properties.
+* **typeProperties**: [schemas:905_typeProperties](#schemas905typeproperties) (Required): Rerun Trigger properties.
 
 ### TumblingWindowTrigger
 #### Properties
 * **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required): Pipeline that needs to be triggered with the given parameters.
 * **type**: 'TumblingWindowTrigger' (Required): Trigger that schedules pipeline runs for all fixed time interval windows from a start time without gaps and also supports backfill scenarios (when start time is in the past).
-* **typeProperties**: [schemas:886_typeProperties](#schemas886typeproperties) (Required): Tumbling Window Trigger properties.
+* **typeProperties**: [schemas:897_typeProperties](#schemas897typeproperties) (Required): Tumbling Window Trigger properties.
 
 
 ## ChainingTrigger
 ### Properties
 * **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required): Pipeline that needs to be triggered with the given parameters.
 * **type**: 'ChainingTrigger' (Required): Trigger that allows the referenced pipeline to depend on other pipeline runs based on runDimension Name/Value pairs. Upstream pipelines should declare the same runDimension Name and their runs should have the values for those runDimensions. The referenced pipeline run would be triggered if the values for the runDimension match for all upstream pipeline runs.
-* **typeProperties**: [schemas:895_typeProperties](#schemas895typeproperties) (Required): Chaining Trigger properties.
+* **typeProperties**: [schemas:906_typeProperties](#schemas906typeproperties) (Required): Chaining Trigger properties.
 
 ## TriggerPipelineReference
 ### Properties
@@ -4337,7 +4372,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **referenceName**: string (Required): Reference pipeline name.
 * **type**: string (Required): Pipeline reference type.
 
-## schemas:895_typeProperties
+## schemas:906_typeProperties
 ### Properties
 * **dependsOn**: [PipelineReference](#pipelinereference)[] (Required): Upstream Pipelines.
 * **runDimension**: string (Required): Run Dimension property that needs to be emitted by upstream pipelines.
@@ -4350,9 +4385,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## RerunTumblingWindowTrigger
 ### Properties
 * **type**: 'RerunTumblingWindowTrigger' (Required): Trigger that schedules pipeline reruns for all fixed time interval windows from a requested start time to requested end time.
-* **typeProperties**: [schemas:894_typeProperties](#schemas894typeproperties) (Required): Rerun Trigger properties.
+* **typeProperties**: [schemas:905_typeProperties](#schemas905typeproperties) (Required): Rerun Trigger properties.
 
-## schemas:894_typeProperties
+## schemas:905_typeProperties
 ### Properties
 * **parentTrigger**: any (Required): The parent trigger reference.
 * **requestedEndTime**: string (Required): The end time for the time period for which restatement is initiated. Only UTC time is currently supported.
@@ -4363,9 +4398,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required): Pipeline that needs to be triggered with the given parameters.
 * **type**: 'TumblingWindowTrigger' (Required): Trigger that schedules pipeline runs for all fixed time interval windows from a start time without gaps and also supports backfill scenarios (when start time is in the past).
-* **typeProperties**: [schemas:886_typeProperties](#schemas886typeproperties) (Required): Tumbling Window Trigger properties.
+* **typeProperties**: [schemas:897_typeProperties](#schemas897typeproperties) (Required): Tumbling Window Trigger properties.
 
-## schemas:886_typeProperties
+## schemas:897_typeProperties
 ### Properties
 * **delay**: any: Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **dependsOn**: [DependencyReference](#dependencyreference)[]: Triggers that this trigger depends on. Only tumbling window triggers are supported.

@@ -173,7 +173,7 @@
 * **kerberosEnabled**: bool: Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later
 * **ldapEnabled**: bool: Specifies whether LDAP is enabled or not for a given NFS volume.
 * **mountTargets**: [mountTargetProperties](#mounttargetproperties)[] (ReadOnly): List of mount targets
-* **protocolTypes**: string[]: Set of protocol types, default NFSv3, CIFS fro SMB protocol
+* **protocolTypes**: string[]: Set of protocol types, default NFSv3, CIFS for SMB protocol
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **securityStyle**: 'ntfs' | 'unix': The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol.
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra': The service level of the file system.
@@ -247,7 +247,7 @@
 ## backupProperties
 ### Properties
 * **backupId**: string (ReadOnly): UUID v4 used to identify the Backup
-* **backupType**: string (ReadOnly): Type of backup adhoc or scheduled
+* **backupType**: 'Manual' | 'Scheduled' (ReadOnly): Type of backup Manual or Scheduled.
 * **creationDate**: string (ReadOnly): The creation date of the backup
 * **failureReason**: string (ReadOnly): Failure reason
 * **label**: string: Label for backup

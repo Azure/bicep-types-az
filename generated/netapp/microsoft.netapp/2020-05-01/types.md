@@ -215,7 +215,7 @@
 
 ## backupProperties
 ### Properties
-* **backupType**: string (ReadOnly): Type of backup adhoc or scheduled
+* **backupType**: 'Manual' | 'Scheduled' (ReadOnly): Type of backup Manual or Scheduled.
 * **creationDate**: string (ReadOnly): The creation date of the backup
 * **label**: string: Label for backup
 * **provisioningState**: string (ReadOnly): Azure lifecycle management

@@ -30,7 +30,7 @@
 
 ## AccountProperties
 ### Properties
-* **cloudConnectors**: [CloudConnectors](#cloudconnectors): Properties for configuring third party cloud connections.
+* **cloudConnectors**: [CloudConnectors](#cloudconnectors):
 * **createdAt**: string (ReadOnly): Gets the time at which the entity was created.
 * **createdBy**: string (ReadOnly): Gets the creator of the entity.
 * **createdByObjectId**: string (ReadOnly): Gets the creators of the entity's object id.
@@ -40,6 +40,7 @@
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Gets the private endpoint connections information.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'SoftDeleted' | 'SoftDeleting' | 'Succeeded' | 'Unknown' (ReadOnly): Gets or sets the state of the provisioning.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'NotSpecified': Gets or sets the public network access.
+* **systemData**: [schemas:3_systemData](#schemas3systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 
 ## CloudConnectors
 ### Properties
@@ -80,6 +81,15 @@ Configured in AWS to allow use of the role arn used for scanning
 * **actionsRequired**: string: The required actions.
 * **description**: string: The description.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Unknown': The status.
+
+## schemas:3_systemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of the last modification the resource (UTC).
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## AccountSku
 ### Properties

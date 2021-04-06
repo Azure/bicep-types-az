@@ -57,6 +57,11 @@
 * **kind**: 'AdlsGen2Folder' (Required): An ADLS Gen2 folder data set mapping.
 * **properties**: [ADLSGen2FolderProperties](#adlsgen2folderproperties) (Required): Properties of the ADLS Gen2 folder data set.
 
+### AdlsGen2StorageAccount
+#### Properties
+* **kind**: 'AdlsGen2StorageAccount' (Required): ADLSGen2 storage account data set mapping.
+* **properties**: [ADLSGen2StorageAccountDataSetProperties](#adlsgen2storageaccountdatasetproperties) (Required): Properties of the ADLSGen2 storage account data set.
+
 ### Blob
 #### Properties
 * **kind**: 'Blob' (Required): A Blob data set mapping.
@@ -66,6 +71,11 @@
 #### Properties
 * **kind**: 'BlobFolder' (Required): A Blob folder data set mapping.
 * **properties**: [BlobFolderProperties](#blobfolderproperties) (Required): Properties of the blob folder data set.
+
+### BlobStorageAccount
+#### Properties
+* **kind**: 'BlobStorageAccount' (Required): A blob storage account data set mapping.
+* **properties**: [BlobStorageAccountDataSetProperties](#blobstorageaccountdatasetproperties) (Required): Properties of the blob storage account data set.
 
 ### Container
 #### Properties
@@ -91,11 +101,6 @@
 #### Properties
 * **kind**: 'SqlDWTable' (Required): A SQL DW Table data set mapping.
 * **properties**: [SqlDWTableProperties](#sqldwtableproperties): Properties of the SQL DW table data set.
-
-### StorageAccount
-#### Properties
-* **kind**: 'StorageAccount' (Required): A storage account data set mapping.
-* **properties**: [StorageAccountDataSetProperties](#storageaccountdatasetproperties) (Required): Properties of the storage account data set.
 
 ### SynapseWorkspaceSqlPoolTable
 #### Properties
@@ -162,6 +167,11 @@
 * **kind**: 'AdlsGen2Folder' (Required): An ADLS Gen2 folder data set mapping.
 * **properties**: [ADLSGen2FolderProperties](#adlsgen2folderproperties) (Required): Properties of the ADLS Gen2 folder data set.
 
+### AdlsGen2StorageAccount
+#### Properties
+* **kind**: 'AdlsGen2StorageAccount' (Required): ADLSGen2 storage account data set mapping.
+* **properties**: [ADLSGen2StorageAccountDataSetProperties](#adlsgen2storageaccountdatasetproperties) (Required): Properties of the ADLSGen2 storage account data set.
+
 ### Blob
 #### Properties
 * **kind**: 'Blob' (Required): A Blob data set mapping.
@@ -171,6 +181,11 @@
 #### Properties
 * **kind**: 'BlobFolder' (Required): A Blob folder data set mapping.
 * **properties**: [BlobFolderProperties](#blobfolderproperties) (Required): Properties of the blob folder data set.
+
+### BlobStorageAccount
+#### Properties
+* **kind**: 'BlobStorageAccount' (Required): A blob storage account data set mapping.
+* **properties**: [BlobStorageAccountDataSetProperties](#blobstorageaccountdatasetproperties) (Required): Properties of the blob storage account data set.
 
 ### Container
 #### Properties
@@ -196,11 +211,6 @@
 #### Properties
 * **kind**: 'SqlDWTable' (Required): A SQL DW Table data set mapping.
 * **properties**: [SqlDWTableProperties](#sqldwtableproperties): Properties of the SQL DW table data set.
-
-### StorageAccount
-#### Properties
-* **kind**: 'StorageAccount' (Required): A storage account data set mapping.
-* **properties**: [StorageAccountDataSetProperties](#storageaccountdatasetproperties) (Required): Properties of the storage account data set.
 
 ### SynapseWorkspaceSqlPoolTable
 #### Properties
@@ -328,6 +338,24 @@
 * **storageAccountName**: string (Required): Storage account name of the source data set
 * **subscriptionId**: string (Required): Subscription id of storage account
 
+## AdlsGen2StorageAccount
+### Properties
+* **kind**: 'AdlsGen2StorageAccount' (Required): ADLSGen2 storage account data set mapping.
+* **properties**: [ADLSGen2StorageAccountDataSetProperties](#adlsgen2storageaccountdatasetproperties) (Required): Properties of the ADLSGen2 storage account data set.
+
+## ADLSGen2StorageAccountDataSetProperties
+### Properties
+* **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
+* **location**: string (ReadOnly): Location of the ADLSGen2 storage account.
+* **paths**: [ADLSGen2StorageAccountPath](#adlsgen2storageaccountpath)[] (Required): A list of ADLSGen2 storage account paths.
+* **storageAccountResourceId**: string (Required): Resource id of the ADLSGen2 storage account.
+
+## ADLSGen2StorageAccountPath
+### Properties
+* **consumerPath**: string: Gets or sets the path on the consumer side where the dataset is to be mapped.
+* **containerName**: string (Required): Gets or sets the container name to share.
+* **providerPath**: string: Gets or sets the path to file/folder within the container.
+
 ## Blob
 ### Properties
 * **kind**: 'Blob' (Required): A Blob data set mapping.
@@ -355,6 +383,24 @@
 * **resourceGroup**: string (Required): Resource group of storage account
 * **storageAccountName**: string (Required): Storage account name of the source data set
 * **subscriptionId**: string (Required): Subscription id of storage account
+
+## BlobStorageAccount
+### Properties
+* **kind**: 'BlobStorageAccount' (Required): A blob storage account data set mapping.
+* **properties**: [BlobStorageAccountDataSetProperties](#blobstorageaccountdatasetproperties) (Required): Properties of the blob storage account data set.
+
+## BlobStorageAccountDataSetProperties
+### Properties
+* **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
+* **location**: string (ReadOnly): Location of the storage account.
+* **paths**: [BlobStorageAccountPath](#blobstorageaccountpath)[] (Required): A list of storage account paths.
+* **storageAccountResourceId**: string (Required): Resource id of the storage account.
+
+## BlobStorageAccountPath
+### Properties
+* **consumerPath**: string: Gets or sets the path on the consumer side where the dataset is to be mapped.
+* **containerName**: string (Required): Gets or sets the container name to share.
+* **providerPath**: string: Gets or sets the path to file/folder within the container.
 
 ## Container
 ### Properties
@@ -418,24 +464,6 @@
 * **schemaName**: string (Required): Schema of the table. Default value is dbo.
 * **sqlServerResourceId**: string (Required): Resource id of SQL server
 * **tableName**: string (Required): SQL DW table name.
-
-## StorageAccount
-### Properties
-* **kind**: 'StorageAccount' (Required): A storage account data set mapping.
-* **properties**: [StorageAccountDataSetProperties](#storageaccountdatasetproperties) (Required): Properties of the storage account data set.
-
-## StorageAccountDataSetProperties
-### Properties
-* **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
-* **location**: string (ReadOnly): Location of the storage account.
-* **paths**: [StorageAccountPath](#storageaccountpath)[] (Required): A list of storage account paths.
-* **storageAccountResourceId**: string (Required): Resource id of the storage account.
-
-## StorageAccountPath
-### Properties
-* **consumerPath**: string: Gets or sets the path on the consumer side where the dataset is to be mapped.
-* **containerName**: string (Required): Gets or sets the container name to share.
-* **providerPath**: string: Gets or sets the path to file/folder within the container.
 
 ## SynapseWorkspaceSqlPoolTable
 ### Properties
