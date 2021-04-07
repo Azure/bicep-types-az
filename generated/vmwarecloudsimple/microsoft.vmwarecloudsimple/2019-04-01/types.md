@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DedicatedCloudNodeProperties](#dedicatedcloudnodeproperties): Properties of dedicated cloud node
 * **sku**: [Sku](#sku): The purchase SKU for CloudSimple paid resources
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags model
+* **tags**: [Tags](#tags): Tags model
 * **type**: 'Microsoft.VMwareCloudSimple/dedicatedCloudNodes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.VMwareCloudSimple/dedicatedCloudServices@2019-04-01
@@ -20,7 +20,7 @@
 * **location**: string (Required): Azure region
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DedicatedCloudServiceProperties](#dedicatedcloudserviceproperties): Properties of dedicated cloud service
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags model
+* **tags**: [Tags](#tags): Tags model
 * **type**: 'Microsoft.VMwareCloudSimple/dedicatedCloudServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.VMwareCloudSimple/virtualMachines@2019-04-01
@@ -31,7 +31,7 @@
 * **location**: string (Required): Azure region
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualMachineProperties](#virtualmachineproperties): Properties of virtual machine
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags model
+* **tags**: [Tags](#tags): Tags model
 * **type**: 'Microsoft.VMwareCloudSimple/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DedicatedCloudNodeProperties
@@ -39,7 +39,7 @@
 * **availabilityZoneId**: string (Required): Availability Zone id, e.g. "az1"
 * **availabilityZoneName**: string (ReadOnly): Availability Zone name, e.g. "Availability Zone 1"
 * **cloudRackName**: string (ReadOnly): VMWare Cloud Rack Name
-* **created**: any (ReadOnly): date time the resource was created
+* **created**: any (ReadOnly): Any object
 * **nodesCount**: int (Required): count of nodes to create
 * **placementGroupId**: string (Required): Placement Group id, e.g. "n1"
 * **placementGroupName**: string (ReadOnly): Placement Name, e.g. "Placement Group 1"
@@ -48,7 +48,7 @@
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource
 * **purchaseId**: string (Required): purchase id
 * **skuDescription**: [SkuDescription](#skudescription): The purchase SKU for CloudSimple paid resources
-* **status**: 'unused' | 'used' (ReadOnly): Node status, indicates is private cloud set up on this node or not.
+* **status**: 'unused' | 'used' (ReadOnly): Node status, indicates is private cloud set up on this node or not
 * **vmwareClusterName**: string (ReadOnly): VMWare Cluster Name
 
 ## SkuDescription
@@ -64,7 +64,7 @@
 * **name**: string (Required): The name of the SKU for VMWare CloudSimple Node
 * **tier**: string: The tier of the SKU
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -72,11 +72,11 @@
 ## DedicatedCloudServiceProperties
 ### Properties
 * **gatewaySubnet**: string (Required): gateway Subnet for the account. It will collect the subnet address and always treat it as /28
-* **isAccountOnboarded**: 'notOnBoarded' | 'onBoarded' | 'onBoarding' | 'onBoardingFailed' (ReadOnly): indicates whether account onboarded or not in a given region.
+* **isAccountOnboarded**: 'notOnBoarded' | 'onBoarded' | 'onBoarding' | 'onBoardingFailed' (ReadOnly): indicates whether account onboarded or not in a given region
 * **nodes**: int (ReadOnly): total nodes purchased
 * **serviceURL**: string (ReadOnly): link to a service management web portal
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -91,7 +91,7 @@
 * **exposeToGuestVM**: bool: Expose Guest OS or not
 * **folder**: string (ReadOnly): The path to virtual machine folder in VCenter
 * **guestOS**: string (ReadOnly): The name of Guest OS
-* **guestOSType**: 'linux' | 'other' | 'windows' (ReadOnly): The Guest OS type.
+* **guestOSType**: 'linux' | 'other' | 'windows' (ReadOnly): The Guest OS type
 * **nics**: [VirtualNic](#virtualnic)[]: The list of Virtual NICs
 * **numberOfCores**: int (Required): The number of CPU cores
 * **password**: string: Password for login. Deprecated - use customization property
@@ -99,7 +99,7 @@
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource
 * **publicIP**: string (ReadOnly): The public ip of Virtual Machine
 * **resourcePool**: [ResourcePool](#resourcepool): Resource pool model
-* **status**: 'deallocating' | 'deleting' | 'poweredoff' | 'running' | 'suspended' | 'updating' (ReadOnly): The status of Virtual machine.
+* **status**: 'deallocating' | 'deleting' | 'poweredoff' | 'running' | 'suspended' | 'updating' (ReadOnly): The status of Virtual machine
 * **templateId**: string: Virtual Machine Template Id
 * **username**: string: Username for login. Deprecated - use customization property
 * **vmId**: string (ReadOnly): The internal id of Virtual Machine in VCenter
@@ -124,31 +124,31 @@
 ## VirtualDisk
 ### Properties
 * **controllerId**: string (Required): Disk's Controller id
-* **independenceMode**: 'independent_nonpersistent' | 'independent_persistent' | 'persistent' (Required): Disk's independence mode type.
+* **independenceMode**: 'independent_nonpersistent' | 'independent_persistent' | 'persistent' (Required): Disk's independence mode type
 * **totalSize**: int (Required): Disk's total size
 * **virtualDiskId**: string: Disk's id
 * **virtualDiskName**: string (ReadOnly): Disk's display name
 
 ## VirtualNic
 ### Properties
-* **customization**: [GuestOSNICCustomization](#guestosniccustomization): Guest OS nic customization
+* **customization**: [GuestOsnicCustomization](#guestosniccustomization): Guest OS nic customization
 * **ipAddresses**: string[]: NIC ip address
 * **macAddress**: string: NIC MAC address
 * **network**: [VirtualNetwork](#virtualnetwork) (Required): Virtual network model
-* **nicType**: 'E1000' | 'E1000E' | 'PCNET32' | 'VMXNET' | 'VMXNET2' | 'VMXNET3' (Required): NIC type.
+* **nicType**: 'E1000' | 'E1000E' | 'PCNET32' | 'VMXNET' | 'VMXNET2' | 'VMXNET3' (Required): NIC type
 * **powerOnBoot**: bool: Is NIC powered on/off on boot
 * **virtualNicId**: string: NIC id
 * **virtualNicName**: string (ReadOnly): NIC name
 
-## GuestOSNICCustomization
+## GuestOsnicCustomization
 ### Properties
-* **allocation**: 'dynamic' | 'static': IP address allocation method.
+* **allocation**: 'dynamic' | 'static': IP address allocation method
 * **dnsServers**: string[]: List of dns servers to use
 * **gateway**: string[]: Gateway addresses assigned to nic
-* **ipAddress**: string:
-* **mask**: string:
-* **primaryWinsServer**: string:
-* **secondaryWinsServer**: string:
+* **ipAddress**: string
+* **mask**: string
+* **primaryWinsServer**: string
+* **secondaryWinsServer**: string
 
 ## VirtualNetwork
 ### Properties
@@ -176,7 +176,7 @@
 ### Properties
 * **fullName**: string (ReadOnly): Hierarchical resource pool name
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

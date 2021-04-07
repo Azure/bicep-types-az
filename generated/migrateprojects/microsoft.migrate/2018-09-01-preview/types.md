@@ -9,7 +9,7 @@
 * **location**: string: Gets or sets the Azure location in which migrate project is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MigrateProjectProperties](#migrateprojectproperties): Class for migrate project properties.
-* **tags**: [schemas:57_tags](#schemas57tags): Gets or sets the tags.
+* **tags**: [MigrateProjectTags](#migrateprojecttags): Gets or sets the tags.
 * **type**: 'Microsoft.Migrate/migrateProjects' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/migrateProjects/solutions@2018-09-01-preview
@@ -27,55 +27,56 @@
 * **lastSummaryRefreshedTime**: string (ReadOnly): Gets the last time the project summary was refreshed.
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded': Provisioning state of the migrate project.
 * **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started' (ReadOnly): Gets the refresh summary state.
-* **registeredTools**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DatabaseMigrationService' | 'DataMigrationAssistant' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration_Replication' | 'ServerMigration' | 'Turbonomic' | 'Zerto'[]: Gets or sets the list of tools registered with the migrate project.
-* **summary**: [Dictionary<string,ProjectSummary>](#dictionarystringprojectsummary) (ReadOnly): Gets the summary of the migrate project.
+* **registeredTools**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration' | 'ServerMigration_Replication' | 'Turbonomic' | 'Zerto'[]: Gets or sets the list of tools registered with the migrate project.
+* **summary**: [MigrateProjectPropertiesSummary](#migrateprojectpropertiessummary) (ReadOnly): Gets the summary of the migrate project.
 
-## Dictionary<string,ProjectSummary>
+## MigrateProjectPropertiesSummary
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ProjectSummary](#projectsummary)
 
 ## ProjectSummary
 * **Discriminator**: instanceType
+
 ### Base Properties
-* **extendedSummary**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the extended summary.
+* **extendedSummary**: [ProjectSummaryExtendedSummary](#projectsummaryextendedsummary): Gets or sets the extended summary.
 * **lastSummaryRefreshedTime**: string: Gets or sets the time when summary was last refreshed.
 * **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started': Gets or sets the state of refresh summary.
-### Databases
+### DatabaseProjectSummary
 #### Properties
-* **instanceType**: 'Databases' (Required): Class representing the databases solution summary.
+* **instanceType**: 'Databases' (Required): Gets the Instance type.
 
-### Servers
+### ServersProjectSummary
 #### Properties
 * **assessedCount**: int: Gets or sets the count of entities assessed.
 * **discoveredCount**: int: Gets or sets the count of entities discovered.
-* **instanceType**: 'Servers' (Required): Class representing the servers solution summary.
+* **instanceType**: 'Servers' (Required): Gets the Instance type.
 * **migratedCount**: int: Gets or sets the count of entities migrated.
 * **replicatingCount**: int: Gets or sets the count of entities being replicated.
 * **testMigratedCount**: int: Gets or sets the count of entities test migrated.
 
 
-## Dictionary<string,String>
+## ProjectSummaryExtendedSummary
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Databases
+## DatabaseProjectSummary
 ### Properties
-* **instanceType**: 'Databases' (Required): Class representing the databases solution summary.
+* **instanceType**: 'Databases' (Required): Gets the Instance type.
 
-## Servers
+## ServersProjectSummary
 ### Properties
 * **assessedCount**: int: Gets or sets the count of entities assessed.
 * **discoveredCount**: int: Gets or sets the count of entities discovered.
-* **instanceType**: 'Servers' (Required): Class representing the servers solution summary.
+* **instanceType**: 'Servers' (Required): Gets the Instance type.
 * **migratedCount**: int: Gets or sets the count of entities migrated.
 * **replicatingCount**: int: Gets or sets the count of entities being replicated.
 * **testMigratedCount**: int: Gets or sets the count of entities test migrated.
 
-## schemas:57_tags
+## MigrateProjectTags
 ### Properties
-* **additionalProperties**: string:
+* **additionalProperties**: string
 
 ## SolutionProperties
 ### Properties
@@ -85,33 +86,53 @@
 * **purpose**: 'Assessment' | 'Discovery' | 'Migration': Gets or sets the purpose of the solution.
 * **status**: 'Active' | 'Inactive': Gets or sets the current status of the solution.
 * **summary**: [SolutionSummary](#solutionsummary): The solution summary class.
-* **tool**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DatabaseMigrationService' | 'DataMigrationAssistant' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration_Replication' | 'ServerMigration' | 'Turbonomic' | 'Zerto': Gets or sets the tool being used in the solution.
+* **tool**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration' | 'ServerMigration_Replication' | 'Turbonomic' | 'Zerto': Gets or sets the tool being used in the solution.
 
 ## SolutionDetails
 ### Properties
 * **assessmentCount**: int: Gets or sets the count of assessments reported by the solution.
-* **extendedDetails**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the extended details reported by the solution.
+* **extendedDetails**: [SolutionDetailsExtendedDetails](#solutiondetailsextendeddetails): Gets or sets the extended details reported by the solution.
 * **groupCount**: int: Gets or sets the count of groups reported by the solution.
 
-## Dictionary<string,String>
+## SolutionDetailsExtendedDetails
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## SolutionSummary
 * **Discriminator**: instanceType
+
 ### Base Properties
-### Databases
+### DatabasesSolutionSummary
 #### Properties
-* **instanceType**: 'Databases' (Required): Class representing the databases solution summary.
+* **databaseInstancesAssessedCount**: int: Gets or sets the count of database instances assessed.
+* **databasesAssessedCount**: int: Gets or sets the count of databases assessed.
+* **instanceType**: 'Databases' (Required): Gets the Instance type.
+* **migrationReadyCount**: int: Gets or sets the count of databases ready for migration.
 
-### Servers
+### ServersSolutionSummary
 #### Properties
-* **assessedCount**: int: Gets or sets the count of entities assessed.
-* **discoveredCount**: int: Gets or sets the count of entities discovered.
-* **instanceType**: 'Servers' (Required): Class representing the servers solution summary.
-* **migratedCount**: int: Gets or sets the count of entities migrated.
-* **replicatingCount**: int: Gets or sets the count of entities being replicated.
-* **testMigratedCount**: int: Gets or sets the count of entities test migrated.
+* **assessedCount**: int: Gets or sets the count of servers assessed.
+* **discoveredCount**: int: Gets or sets the count of servers discovered.
+* **instanceType**: 'Servers' (Required): Gets the Instance type.
+* **migratedCount**: int: Gets or sets the count of servers migrated.
+* **replicatingCount**: int: Gets or sets the count of servers being replicated.
+* **testMigratedCount**: int: Gets or sets the count of servers test migrated.
 
+
+## DatabasesSolutionSummary
+### Properties
+* **databaseInstancesAssessedCount**: int: Gets or sets the count of database instances assessed.
+* **databasesAssessedCount**: int: Gets or sets the count of databases assessed.
+* **instanceType**: 'Databases' (Required): Gets the Instance type.
+* **migrationReadyCount**: int: Gets or sets the count of databases ready for migration.
+
+## ServersSolutionSummary
+### Properties
+* **assessedCount**: int: Gets or sets the count of servers assessed.
+* **discoveredCount**: int: Gets or sets the count of servers discovered.
+* **instanceType**: 'Servers' (Required): Gets the Instance type.
+* **migratedCount**: int: Gets or sets the count of servers migrated.
+* **replicatingCount**: int: Gets or sets the count of servers being replicated.
+* **testMigratedCount**: int: Gets or sets the count of servers test migrated.
 

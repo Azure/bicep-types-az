@@ -10,7 +10,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ActionGroup](#actiongroup): An Azure action group.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [AzureResourceTags](#azureresourcetags): Resource tags
 * **type**: 'microsoft.insights/actionGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ActionGroup
@@ -61,7 +61,7 @@
 ### Properties
 * **emailAddress**: string (Required): The email address of this receiver.
 * **name**: string (Required): The name of the email receiver. Names must be unique across all receivers within an action group.
-* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The receiver status of the e-mail.
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): Indicates the status of the receiver. Receivers that are not Enabled will not receive any communications.
 * **useCommonAlertSchema**: bool (Required): Indicates whether to use common alert schema.
 
 ## ItsmReceiver
@@ -84,7 +84,7 @@
 * **countryCode**: string (Required): The country code of the SMS receiver.
 * **name**: string (Required): The name of the SMS receiver. Names must be unique across all receivers within an action group.
 * **phoneNumber**: string (Required): The phone number of the SMS receiver.
-* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The status of the receiver.
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): Indicates the status of the receiver. Receivers that are not Enabled will not receive any communications.
 
 ## VoiceReceiver
 ### Properties
@@ -102,7 +102,7 @@
 * **useAadAuth**: bool: Indicates whether or not use AAD authentication.
 * **useCommonAlertSchema**: bool (Required): Indicates whether to use common alert schema.
 
-## Dictionary<string,String>
+## AzureResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

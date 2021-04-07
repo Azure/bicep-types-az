@@ -17,7 +17,7 @@
 * **location**: string (Required): Location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TopicProperties](#topicproperties): Properties of the Topic
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags of the resource
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## EventSubscriptionProperties
@@ -30,30 +30,31 @@
 
 ## EventSubscriptionDestination
 * **Discriminator**: endpointType
+
 ### Base Properties
-### EventHub
+### EventHubEventSubscriptionDestination
 #### Properties
-* **endpointType**: 'EventHub' (Required): Information about the event hub destination for an event subscription
+* **endpointType**: 'EventHub' (Required): Type of the endpoint for the event subscription destination
 * **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties): The properties for a event hub destination.
 
-### WebHook
+### WebHookEventSubscriptionDestination
 #### Properties
-* **endpointType**: 'WebHook' (Required): Information about the webhook destination for an event subscription
+* **endpointType**: 'WebHook' (Required): Type of the endpoint for the event subscription destination
 * **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties): Information about the webhook destination properties for an event subscription
 
 
-## EventHub
+## EventHubEventSubscriptionDestination
 ### Properties
-* **endpointType**: 'EventHub' (Required): Information about the event hub destination for an event subscription
+* **endpointType**: 'EventHub' (Required): Type of the endpoint for the event subscription destination
 * **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties): The properties for a event hub destination.
 
 ## EventHubEventSubscriptionDestinationProperties
 ### Properties
 * **resourceId**: string: The Azure Resource Id that represents the endpoint of an Event Hub destination of an event subscription.
 
-## WebHook
+## WebHookEventSubscriptionDestination
 ### Properties
-* **endpointType**: 'WebHook' (Required): Information about the webhook destination for an event subscription
+* **endpointType**: 'WebHook' (Required): Type of the endpoint for the event subscription destination
 * **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties): Information about the webhook destination properties for an event subscription
 
 ## WebHookEventSubscriptionDestinationProperties
@@ -63,12 +64,12 @@
 
 ## EventSubscriptionFilter
 ### Properties
-* **includedEventTypes**: string[]: A list of applicable event types that need to be part of the event subscription.
+* **includedEventTypes**: string[]: A list of applicable event types that need to be part of the event subscription. 
 If it is desired to subscribe to all event types, the string "all" needs to be specified as an element in this list.
-* **isSubjectCaseSensitive**: bool: Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
+* **isSubjectCaseSensitive**: bool: Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter 
 should be compared in a case sensitive manner.
 * **subjectBeginsWith**: string: An optional string to filter events for an event subscription based on a resource path prefix.
-The format of this depends on the publisher of the events.
+The format of this depends on the publisher of the events. 
 Wildcard characters are not supported in this path.
 * **subjectEndsWith**: string: An optional string to filter events for an event subscription based on a resource path suffix.
 Wildcard characters are not supported in this path.
@@ -78,7 +79,7 @@ Wildcard characters are not supported in this path.
 * **endpoint**: string (ReadOnly): Endpoint for the topic.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the topic.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

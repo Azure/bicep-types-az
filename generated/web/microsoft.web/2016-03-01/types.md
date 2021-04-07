@@ -8,8 +8,8 @@
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:0_properties](#schemas0properties): Certificate resource specific properties
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **properties**: [CertificateProperties](#certificateproperties): Certificate resource specific properties
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/publishingUsers@2016-03-01
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:67_properties](#schemas67properties): User resource specific properties
+* **properties**: [UserProperties](#userproperties): User resource specific properties
 * **type**: 'Microsoft.Web/publishingUsers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sourcecontrols@2016-03-01
@@ -29,12 +29,12 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:124_properties](#schemas124properties): SourceControl resource specific properties
+* **properties**: [SourceControlProperties](#sourcecontrolproperties): SourceControl resource specific properties
 * **type**: 'Microsoft.Web/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
 
-## schemas:0_properties
+## CertificateProperties
 ### Properties
-* **cerBlob**: array (ReadOnly): Raw bytes of .cer file
+* **cerBlob**: any (ReadOnly): Raw bytes of .cer file
 * **expirationDate**: string (ReadOnly): Certificate expiration date.
 * **friendlyName**: string (ReadOnly): Friendly name of the certificate.
 * **geoRegion**: string (ReadOnly): Region of the certificate.
@@ -46,7 +46,7 @@
 * **keyVaultSecretName**: string: Key Vault secret name.
 * **keyVaultSecretStatus**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'ExternalPrivateKey' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder' (ReadOnly): Status of the Key Vault secret.
 * **password**: string (Required): Certificate password.
-* **pfxBlob**: array: Pfx blob.
+* **pfxBlob**: any: Pfx blob.
 * **publicKeyHash**: string (ReadOnly): Public key hash.
 * **selfLink**: string (ReadOnly): Self link.
 * **serverFarmId**: string: Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
@@ -61,12 +61,12 @@
 * **name**: string (ReadOnly): Name of the App Service Environment.
 * **type**: string (ReadOnly): Resource type of the App Service Environment.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:67_properties
+## UserProperties
 ### Properties
 * **name**: string: Username
 * **publishingPassword**: string: Password used for publishing.
@@ -74,7 +74,7 @@
 * **publishingPasswordHashSalt**: string: Password hash salt used for publishing.
 * **publishingUserName**: string (Required): Username used for publishing.
 
-## schemas:124_properties
+## SourceControlProperties
 ### Properties
 * **expirationTime**: string: OAuth token expiration.
 * **name**: string: Name or source control type.

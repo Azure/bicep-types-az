@@ -9,7 +9,7 @@
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AppServiceEnvironment](#appserviceenvironment): Description of an App Service Environment.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/hostingEnvironments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/hostingEnvironments/multiRolePools@2016-09-01
@@ -42,9 +42,9 @@
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:20_properties](#schemas20properties): AppServicePlan resource specific properties
+* **properties**: [AppServicePlanProperties](#appserviceplanproperties): AppServicePlan resource specific properties
 * **sku**: [SkuDescription](#skudescription): Description of a SKU for a scalable resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/serverfarms' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/serverfarms/virtualNetworkConnections/gateways@2016-09-01
@@ -54,7 +54,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:87_properties](#schemas87properties): VnetGateway resource specific properties
+* **properties**: [VnetGatewayProperties](#vnetgatewayproperties): VnetGateway resource specific properties
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/serverfarms/virtualNetworkConnections/routes@2016-09-01
@@ -62,9 +62,9 @@
 ### Properties
 * **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
+* **kind**: string (WriteOnly)
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:89_properties](#schemas89properties): VnetRoute resource specific properties
+* **properties**: [VnetRouteProperties](#vnetrouteproperties) (WriteOnly)
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/routes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AppServiceEnvironment
@@ -125,7 +125,7 @@ Basic apps are not used for capacity allocation.
 * **totalCapacity**: int: Total capacity (# of machines, bytes of storage etc...).
 * **unit**: string: Name of the unit.
 * **workerSize**: 'D1' | 'D2' | 'D3' | 'Default' | 'Large' | 'Medium' | 'Small': Size of the machines.
-* **workerSizeId**: int: Size ID of machines:
+* **workerSizeId**: int: Size ID of machines: 
 0 - Small
 1 - Medium
 2 - Large
@@ -153,13 +153,13 @@ Basic apps are not used for capacity allocation.
 
 ## WorkerPool
 ### Properties
-* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared or dedicated app hosting.
+* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared/dedicated workers.
 * **instanceNames**: string[] (ReadOnly): Names of all instances in the worker pool (read only).
 * **workerCount**: int: Number of instances in the worker pool.
 * **workerSize**: string: VM size of the worker pool instances.
 * **workerSizeId**: int: Worker size ID for referencing this worker pool.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -188,7 +188,7 @@ Basic apps are not used for capacity allocation.
 * **minimum**: int: Minimum number of workers for this App Service plan SKU.
 * **scaleType**: string: Available scale configurations for an App Service plan.
 
-## schemas:20_properties
+## AppServicePlanProperties
 ### Properties
 * **adminSiteName**: string: App Service plan administration site.
 * **geoRegion**: string (ReadOnly): Geographical location for the App Service plan.
@@ -215,25 +215,20 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 * **name**: string (ReadOnly): Name of the App Service Environment.
 * **type**: string (ReadOnly): Resource type of the App Service Environment.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:87_properties
+## VnetGatewayProperties
 ### Properties
 * **vnetName**: string: The Virtual Network name.
 * **vpnPackageUri**: string (Required): The URI where the VPN package can be downloaded.
 
-## schemas:89_properties
+## VnetRouteProperties
 ### Properties
-* **endAddress**: string: The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
-* **name**: string: The name of this route. This is only returned by the server and does not need to be set by the client.
-* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC': The type of route this is:
-DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
-INHERITED - Routes inherited from the real Virtual Network routes
-STATIC - Static route set on the app only
-
-These values will be used for syncing an app's routes with those from a Virtual Network.
-* **startAddress**: string: The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
+* **endAddress**: string (WriteOnly)
+* **name**: string (WriteOnly)
+* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC' (WriteOnly)
+* **startAddress**: string (WriteOnly)
 

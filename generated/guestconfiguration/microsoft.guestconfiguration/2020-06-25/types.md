@@ -17,8 +17,8 @@
 * **context**: string: The source which initiated the guest configuration assignment. Ex: Azure Policy
 * **guestConfiguration**: [GuestConfigurationNavigation](#guestconfigurationnavigation): Guest configuration is an artifact that encapsulates DSC configuration and its dependencies. The artifact is a zip file containing DSC configuration (as MOF) and dependent resources and other dependencies like modules.
 * **lastComplianceStatusChecked**: string (ReadOnly): Date and time when last compliance status was checked.
-* **latestAssignmentReport**: [AssignmentReport](#assignmentreport):
-* **latestReportId**: string (ReadOnly): Id of the latest report for the guest configuration assignment.
+* **latestAssignmentReport**: [AssignmentReport](#assignmentreport)
+* **latestReportId**: string (ReadOnly): Id of the latest report for the guest configuration assignment. 
 * **provisioningState**: 'Canceled' | 'Created' | 'Failed' | 'Succeeded' (ReadOnly): The provisioning state, which only appears in the response.
 * **targetResourceId**: string (ReadOnly): VM resource Id.
 
@@ -28,7 +28,7 @@
 * **configurationSetting**: [ConfigurationSetting](#configurationsetting): Configuration setting of LCM (Local Configuration Manager).
 * **contentHash**: string (ReadOnly): Combined hash of the guest configuration package and configuration parameters.
 * **contentUri**: string (ReadOnly): Uri of the storage where guest configuration package is uploaded.
-* **kind**: 'DSC': Kind of the guest configuration. For example:DSC.
+* **kind**: 'DSC': Kind of the guest configuration. For example:DSC
 * **name**: string: Name of the guest configuration.
 * **version**: string: Version of the guest configuration.
 
@@ -39,11 +39,11 @@
 
 ## ConfigurationSetting
 ### Properties
-* **actionAfterReboot**: 'ContinueConfiguration' | 'StopConfiguration': Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration.
-* **allowModuleOverwrite**: 'False' | 'True': If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false.
+* **actionAfterReboot**: 'ContinueConfiguration' | 'StopConfiguration': Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration
+* **allowModuleOverwrite**: bool: If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false
 * **configurationMode**: 'ApplyAndAutoCorrect' | 'ApplyAndMonitor' | 'ApplyOnly': Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.
 * **configurationModeFrequencyMins**: int: How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.
-* **rebootIfNeeded**: 'False' | 'True': Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.
+* **rebootIfNeeded**: bool: Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.
 * **refreshFrequencyMins**: int: The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.
 
 ## AssignmentReport
@@ -52,7 +52,7 @@
 * **complianceStatus**: 'Compliant' | 'NonCompliant' | 'Pending' (ReadOnly): A value indicating compliance status of the machine for the assigned guest configuration.
 * **endTime**: string (ReadOnly): End date and time of the guest configuration assignment compliance status check.
 * **id**: string (ReadOnly): ARM resource id of the report for the guest configuration assignment.
-* **operationType**: 'Consistency' | 'Initial' (ReadOnly): Type of report, Consistency or Initial.
+* **operationType**: 'Consistency' | 'Initial' (ReadOnly): Type of report, Consistency or Initial
 * **reportId**: string (ReadOnly): GUID that identifies the guest configuration assignment report under a subscription, resource group.
 * **resources**: [AssignmentReportResource](#assignmentreportresource)[]: The list of resources for which guest configuration assignment compliance is checked.
 * **startTime**: string (ReadOnly): Start date and time of the guest configuration assignment compliance status check.
@@ -71,7 +71,7 @@
 ## AssignmentReportResource
 ### Properties
 * **complianceStatus**: 'Compliant' | 'NonCompliant' | 'Pending' (ReadOnly): A value indicating compliance status of the machine for the assigned guest configuration.
-* **properties**: any (ReadOnly): Properties of a guest configuration assignment resource.
+* **properties**: any (ReadOnly): Any object
 * **reasons**: [AssignmentReportResourceComplianceReason](#assignmentreportresourcecompliancereason)[]: Compliance reason and reason code for a resource.
 * **resourceId**: string (ReadOnly): Name of the guest configuration assignment resource setting.
 

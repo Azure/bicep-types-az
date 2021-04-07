@@ -7,10 +7,10 @@
 * **etag**: string (ReadOnly): The ETag for the resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ClusterIdentity](#clusteridentity): Identity for the cluster.
-* **location**: string: The location of the cluster.
+* **location**: string: The Azure Region where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterCreateProperties](#clustercreateproperties): The cluster create parameters.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **properties**: [ClusterCreateProperties](#clustercreateproperties): The properties of cluster.
+* **tags**: [ClusterCreateParametersExtendedTags](#clustercreateparametersextendedtags): Resource tags.
 * **type**: 'Microsoft.HDInsight/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HDInsight/clusters/applications@2015-03-01-preview
@@ -21,22 +21,22 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationProperties](#applicationproperties): The HDInsight cluster application GET response.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags for the application.
+* **tags**: [ApplicationTags](#applicationtags): The tags for the application.
 * **type**: 'Microsoft.HDInsight/clusters/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ClusterIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of cluster identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id associated with the cluster. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The type of identity used for the cluster. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.
-* **userAssignedIdentities**: [Dictionary<string,Schemas38UserAssignedIdentitiesValue>](#dictionarystringschemas38userassignedidentitiesvalue): The list of user identities associated with the cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of identity used for the cluster. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.
+* **userAssignedIdentities**: [ClusterIdentityUserAssignedIdentities](#clusteridentityuserassignedidentities): The list of user identities associated with the cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## Dictionary<string,Schemas38UserAssignedIdentitiesValue>
+## ClusterIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [schemas:38_userAssignedIdentitiesValue](#schemas38userassignedidentitiesvalue)
+* **Additional Properties Type**: [ComponentsC51Ht8SchemasClusteridentityPropertiesUserassignedidentitiesAdditionalproperties](#componentsc51ht8schemasclusteridentitypropertiesuserassignedidentitiesadditionalproperties)
 
-## schemas:38_userAssignedIdentitiesValue
+## ComponentsC51Ht8SchemasClusteridentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
 * **principalId**: string (ReadOnly): The principal id of user assigned identity.
@@ -70,11 +70,11 @@
 ## ClusterDefinition
 ### Properties
 * **blueprint**: string: The link to the blueprint.
-* **componentVersion**: [Dictionary<string,String>](#dictionarystringstring): The versions of different services in the cluster.
-* **configurations**: any: The cluster configurations.
+* **componentVersion**: [ClusterDefinitionComponentVersion](#clusterdefinitioncomponentversion): The versions of different services in the cluster.
+* **configurations**: any: Any object
 * **kind**: string: The type of cluster.
 
-## Dictionary<string,String>
+## ClusterDefinitionComponentVersion
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -177,7 +177,7 @@
 
 ## DiskEncryptionProperties
 ### Properties
-* **encryptionAlgorithm**: 'RSA-OAEP-256' | 'RSA-OAEP' | 'RSA1_5': Algorithm identifier for encryption, default RSA-OAEP.
+* **encryptionAlgorithm**: 'RSA-OAEP' | 'RSA-OAEP-256' | 'RSA1_5': Algorithm identifier for encryption, default RSA-OAEP.
 * **encryptionAtHost**: bool: Indicates whether or not resource disk encryption is enabled.
 * **keyName**: string: Key name that is used for enabling disk encryption.
 * **keyVersion**: string: Specific key version that is used for enabling disk encryption.
@@ -201,14 +201,14 @@
 ## KafkaRestProperties
 ### Properties
 * **clientGroupInfo**: [ClientGroupInfo](#clientgroupinfo): The information of AAD security group.
-* **configurationOverride**: [Dictionary<string,String>](#dictionarystringstring): The configurations that need to be overriden.
+* **configurationOverride**: [KafkaRestPropertiesConfigurationOverride](#kafkarestpropertiesconfigurationoverride): The configurations that need to be overriden.
 
 ## ClientGroupInfo
 ### Properties
 * **groupId**: string: The AAD security group id.
 * **groupName**: string: The AAD security group name.
 
-## Dictionary<string,String>
+## KafkaRestPropertiesConfigurationOverride
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -250,7 +250,7 @@
 * **resourceId**: string: The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.
 * **saskey**: string: The shared access signature key.
 
-## Dictionary<string,String>
+## ClusterCreateParametersExtendedTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -294,7 +294,7 @@
 * **privateIPAddress**: string: The private ip address of the endpoint.
 * **publicPort**: int: The public port to connect to.
 
-## Dictionary<string,String>
+## ApplicationTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

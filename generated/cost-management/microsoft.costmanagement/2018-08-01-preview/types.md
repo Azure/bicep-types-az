@@ -9,7 +9,7 @@
 * **location**: string: Connector location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConnectorProperties](#connectorproperties): The properties of a Connector
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ConnectorDefinitionTags](#connectordefinitiontags): Resource tags.
 * **type**: 'Microsoft.CostManagement/connectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/reports@2018-08-01-preview
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ReportProperties](#reportproperties): The properties of the report.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Resource tags.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.CostManagement/reports' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ConnectorProperties
@@ -32,7 +32,7 @@
 * **modifiedOn**: string (ReadOnly): Connector last modified datetime
 * **providerAccountId**: string (ReadOnly): Connector providerAccountId (determined from credentials)
 * **reportId**: string: Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
-* **status**: 'active' | 'error' | 'suspended': Connector status.
+* **status**: 'active' | 'error' | 'suspended': Connector status
 
 ## ConnectorCollectionInfo
 ### Properties
@@ -47,7 +47,7 @@
 * **errorMessage**: string (ReadOnly): Detailed error message
 * **errorStartTime**: string (ReadOnly): Time the error started occurring (Last time error occurred in lastRun)
 
-## Dictionary<string,String>
+## ConnectorDefinitionTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -64,24 +64,24 @@
 * **dataset**: [ReportDataset](#reportdataset): The definition of data present in the report.
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
 * **timePeriod**: [ReportTimePeriod](#reporttimeperiod): The start and end date for pulling data for the report.
-* **type**: string (Required): The type of the report.
+* **type**: 'Usage' (Required): The type of the report.
 
 ## ReportDataset
 ### Properties
-* **aggregation**: [Dictionary<string,ReportAggregation>](#dictionarystringreportaggregation): Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
+* **aggregation**: [ReportDatasetAggregation](#reportdatasetaggregation): Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
 * **configuration**: [ReportDatasetConfiguration](#reportdatasetconfiguration): The configuration of dataset in the report.
 * **filter**: [ReportFilter](#reportfilter): The filter expression to be used in the report.
 * **granularity**: 'Daily' | 'Hourly': The granularity of rows in the report.
 * **grouping**: [ReportGrouping](#reportgrouping)[]: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
 
-## Dictionary<string,ReportAggregation>
+## ReportDatasetAggregation
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ReportAggregation](#reportaggregation)
 
 ## ReportAggregation
 ### Properties
-* **function**: string (Required): The name of the aggregation function to use.
+* **function**: 'Sum' (Required): The name of the aggregation function to use.
 * **name**: string (Required): The name of the column to aggregate.
 
 ## ReportDatasetConfiguration
@@ -99,13 +99,13 @@
 ## ReportComparisonExpression
 ### Properties
 * **name**: string (Required): The name of the column to use in comparison.
-* **operator**: string (Required): The operator to use for comparison.
+* **operator**: 'In' (Required): The operator to use for comparison.
 * **values**: string[] (Required): Array of values to use for comparison
 
 ## ReportGrouping
 ### Properties
 * **name**: string (Required): The name of the column to group.
-* **type**: 'Dimension' | 'Tag' (Required): Has type of the column to group.
+* **type**: 'Dimension' | 'Tag' (Required): The type of the column in the report.
 
 ## ReportTimePeriod
 ### Properties
@@ -133,7 +133,7 @@
 * **from**: string (Required): The start date of recurrence.
 * **to**: string: The end date of recurrence.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

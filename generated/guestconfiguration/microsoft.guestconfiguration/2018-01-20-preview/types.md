@@ -23,9 +23,9 @@
 ## GuestConfigurationNavigation
 ### Properties
 * **configurationParameter**: [ConfigurationParameterList](#configurationparameterlist): Represents the list for configuration parameters.
-* **kind**: 'DSC': Kind of the guest configuration. For example:DSC.
-* **name**: string (ReadOnly): Name of the guest configuration.
-* **type**: string (ReadOnly): Type of the guest configuration.
+* **kind**: 'DSC': Kind of the guest configuration. For example:DSC
+* **name**: string: Name of the guest configuration.
+* **type**: string: Type of the guest configuration.
 
 ## ConfigurationParameterList
 ### Properties

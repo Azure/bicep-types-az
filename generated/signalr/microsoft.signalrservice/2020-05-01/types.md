@@ -5,12 +5,12 @@
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'RawWebSockets' | 'SignalR': The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR".
+* **kind**: 'RawWebSockets' | 'SignalR': The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
 * **location**: string: The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SignalRProperties](#signalrproperties): A class that describes the properties of the SignalR service that should contain more read-only properties than AzSignalR.Models.SignalRCreateOrUpdateProperties
 * **sku**: [ResourceSku](#resourcesku): The billing information of the SignalR resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags of the service which is a list of key value pairs that describe the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the service which is a list of key value pairs that describe the resource.
 * **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SignalRService/signalR/privateEndpointConnections@2020-05-01
@@ -29,8 +29,8 @@
 * **features**: [SignalRFeature](#signalrfeature)[]: List of SignalR featureFlags. e.g. ServiceMode.
 
 FeatureFlags that are not included in the parameters for the update operation will not be modified.
-And the response will only include featureFlags that are explicitly set.
-When a featureFlag is not explicitly set, SignalR service will use its globally default value.
+And the response will only include featureFlags that are explicitly set. 
+When a featureFlag is not explicitly set, SignalR service will use its globally default value. 
 But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
 * **hostName**: string (ReadOnly): FQDN of the SignalR service instance. Format: xxx.service.signalr.net
 * **hostNamePrefix**: string (ReadOnly): Prefix for the hostName of the SignalR service. Retained for future use.
@@ -52,17 +52,17 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
 * **flag**: 'EnableConnectivityLogs' | 'EnableMessagingLogs' | 'ServiceMode' (Required): FeatureFlags is the supported features of Azure SignalR service.
 - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
 - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): Optional properties related to this feature.
+* **properties**: [SignalRFeatureProperties](#signalrfeatureproperties): Optional properties related to this feature.
 * **value**: string (Required): Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
 
-## Dictionary<string,String>
+## SignalRFeatureProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## SignalRNetworkACLs
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny': Default action when no other rule matches.
+* **defaultAction**: 'Allow' | 'Deny': Default action when no other rule matches
 * **privateEndpoints**: [PrivateEndpointACL](#privateendpointacl)[]: ACLs for requests from private endpoints
 * **publicNetwork**: [NetworkACL](#networkacl): Network ACL
 
@@ -88,7 +88,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Connection state of the private endpoint connection
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the private endpoint connection.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the resource.
 
 ## PrivateEndpoint
 ### Properties
@@ -136,11 +136,11 @@ If present, following values are allowed:
 
 Allowed values: Standard_S1, Free_F1
 * **size**: string (ReadOnly): Not used. Retained for future use.
-* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': Optional tier of this particular SKU. 'Standard' or 'Free'.
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': Optional tier of this particular SKU. 'Standard' or 'Free'. 
 
 `Basic` is deprecated, use `Standard` instead.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

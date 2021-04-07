@@ -8,7 +8,7 @@
 * **location**: string (Required): The location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **sku**: [SKU](#sku) (Required): The EngagementFabric SKU
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource
+* **tags**: [TrackedResourceTags](#trackedresourcetags): The tags of the resource
 * **type**: 'Microsoft.EngagementFabric/Accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EngagementFabric/Accounts/Channels@2018-09-01-preview
@@ -25,7 +25,7 @@
 * **name**: string (Required): The name of the SKU
 * **tier**: string: The price tier of the SKU
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -34,9 +34,9 @@
 ### Properties
 * **channelFunctions**: string[]: The functions to be enabled for the channel
 * **channelType**: string (Required): The channel type
-* **credentials**: [Dictionary<string,String>](#dictionarystringstring): The channel credentials
+* **credentials**: [ChannelPropertiesCredentials](#channelpropertiescredentials): The channel credentials
 
-## Dictionary<string,String>
+## ChannelPropertiesCredentials
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

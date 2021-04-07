@@ -106,12 +106,12 @@
 ## InvoiceSectionProperties
 ### Properties
 * **displayName**: string: The name of the invoice section.
-* **labels**: [Dictionary<string,String>](#dictionarystringstring): Dictionary of metadata associated with the invoice section.
+* **labels**: [InvoiceSectionPropertiesLabels](#invoicesectionpropertieslabels): Dictionary of metadata associated with the invoice section.
 * **state**: 'Active' | 'Restricted' (ReadOnly): Identifies the state of an invoice section.
 * **systemId**: string (ReadOnly): The system generated unique identifier for an invoice section.
-* **targetCloud**: 'USGov' | 'USNat' | 'USSec' (ReadOnly): Identifies the cloud environments that are associated with an invoice section. This is a system managed optional field and gets updated as the invoice section gets associated with accounts in various clouds.
+* **targetCloud**: 'USGov' | 'USNat' | 'USSec' (ReadOnly): Possible cloud environments.
 
-## Dictionary<string,String>
+## InvoiceSectionPropertiesLabels
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

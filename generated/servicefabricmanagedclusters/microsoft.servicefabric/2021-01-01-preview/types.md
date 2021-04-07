@@ -10,8 +10,8 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedClusterProperties](#managedclusterproperties): Describes the managed cluster resource properties.
 * **sku**: [Sku](#sku): Service Fabric managed cluster Sku definition
-* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Azure resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [ResourceTags](#resourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabric/managedclusters/applications@2021-01-01-preview
@@ -23,8 +23,8 @@
 * **location**: string: Resource location depends on the parent resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationResourceProperties](#applicationresourceproperties): The application resource properties.
-* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Azure resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [ProxyResourceTags](#proxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedclusters/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabric/managedclusters/applications/services@2021-01-01-preview
@@ -35,8 +35,8 @@
 * **location**: string: Resource location depends on the parent resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServiceResourceProperties](#serviceresourceproperties): The service resource properties.
-* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Azure resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [ProxyResourceTags](#proxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedclusters/applications/services' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabric/managedclusters/applicationTypes@2021-01-01-preview
@@ -47,8 +47,8 @@
 * **location**: string: Resource location depends on the parent resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationTypeResourceProperties](#applicationtyperesourceproperties): The application type name properties
-* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Azure resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [ProxyResourceTags](#proxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedclusters/applicationTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabric/managedclusters/applicationTypes/versions@2021-01-01-preview
@@ -59,8 +59,8 @@
 * **location**: string: Resource location depends on the parent resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationTypeVersionResourceProperties](#applicationtypeversionresourceproperties): The properties of the application type version resource.
-* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Azure resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [ProxyResourceTags](#proxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedclusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabric/managedClusters/nodeTypes@2021-01-01-preview
@@ -70,8 +70,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NodeTypeProperties](#nodetypeproperties): Describes a node type in the cluster, each node type represents sub set of nodes in the cluster.
-* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Azure resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [ManagedProxyResourceTags](#managedproxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ManagedClusterProperties
@@ -88,6 +88,14 @@
 * **clusterCodeVersion**: string: The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
 * **clusterId**: string (ReadOnly): A service generated unique identifier for the cluster resource.
 * **clusterState**: 'BaselineUpgrade' | 'Deploying' | 'Ready' | 'UpgradeFailed' | 'Upgrading' | 'WaitingForNodes' (ReadOnly): The current state of the cluster.
+
+  - WaitingForNodes - Indicates that the cluster resource is created and the resource provider is waiting for Service Fabric VM extension to boot up and report to it.
+  - Deploying - Indicates that the Service Fabric runtime is being installed on the VMs. Cluster resource will be in this state until the cluster boots up and system services are up.
+  - BaselineUpgrade - Indicates that the cluster is upgrading to establishes the cluster version. This upgrade is automatically initiated when the cluster boots up for the first time.
+  - Upgrading - Indicates that the cluster is being upgraded with the user provided configuration.
+  - UpgradeFailed - Indicates that the last upgrade for the cluster has failed.
+  - Ready - Indicates that the cluster is in a stable state.
+
 * **clusterUpgradeCadence**: 'Wave0' | 'Wave1' | 'Wave2': Indicates when new cluster runtime version upgrades will be applied after they are released. By default is Wave0.
 * **dnsName**: string (Required): The cluster dns name.
 * **enableAutoOSUpgrade**: bool: Setting this to true enables automatic OS upgrade for the node types that are created using any platform OS image with version 'latest'. The default value for this setting is false.
@@ -97,7 +105,7 @@
 * **ipv4Address**: string (ReadOnly): The IPv4 address associated with the public load balancer of the cluster.
 * **loadBalancingRules**: [LoadBalancingRule](#loadbalancingrule)[]: Load balancing rules that are applied to the public load balancer of the cluster.
 * **networkSecurityRules**: [NetworkSecurityRule](#networksecurityrule)[]: Custom Network Security Rules that are applied to the virtual network of the cluster.
-* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the managed cluster resource.
+* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the managed resource.
 
 ## ApplicationTypeVersionsCleanupPolicy
 ### Properties
@@ -149,7 +157,7 @@
 
 ## Sku
 ### Properties
-* **name**: 'Basic' | 'Standard' (Required): Sku Name.
+* **name**: 'Basic' | 'Standard' (Required): Sku Name. Basic requires a minimum of 3 nodes and Standard a minimum of 5. Basic only allows 1 node type.
 
 ## SystemData
 ### Properties
@@ -160,7 +168,7 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: string: The type of identity that last modified the resource.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -169,12 +177,12 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the managed identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id of the managed identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned':
-* **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of managed identity for the resource.
+* **userAssignedIdentities**: [UserAssignedIdentityMap](#userassignedidentitymap): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 
-## Dictionary<string,UserAssignedIdentity>
+## UserAssignedIdentityMap
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
@@ -187,7 +195,7 @@
 ## ApplicationResourceProperties
 ### Properties
 * **managedIdentities**: [ApplicationUserAssignedIdentity](#applicationuserassignedidentity)[]: List of user assigned identities for the application, each mapped to a friendly name.
-* **parameters**: [Dictionary<string,String>](#dictionarystringstring): List of application parameters with overridden values from their default values specified in the application manifest.
+* **parameters**: [ApplicationParameterList](#applicationparameterlist): List of application parameters with overridden values from their default values specified in the application manifest.
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response
 * **upgradePolicy**: [ApplicationUpgradePolicy](#applicationupgradepolicy): Describes the policy for a monitored application upgrade.
 * **version**: string: The version of the application type as defined in the application manifest.
@@ -199,7 +207,7 @@ This name must be the full Arm Resource ID for the referenced application type v
 * **name**: string (Required): The friendly name of user assigned identity.
 * **principalId**: string (Required): The principal id of user assigned identity.
 
-## Dictionary<string,String>
+## ApplicationParameterList
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -212,7 +220,7 @@ This name must be the full Arm Resource ID for the referenced application type v
 * **instanceCloseDelayDuration**: int: Duration in seconds, to wait before a stateless instance is closed, to allow the active requests to drain gracefully. This would be effective when the instance is closing during the application/cluster upgrade, only for those instances which have a non-zero delay duration configured in the service description. See InstanceCloseDelayDurationSeconds property in StatelessServiceDescription for details. Note, the default value of InstanceCloseDelayDurationInSeconds is 4294967295, which indicates that the behavior will entirely depend on the delay configured in the stateless service description.
 * **recreateApplication**: bool: Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed.
 * **rollingUpgradeMonitoringPolicy**: [RollingUpgradeMonitoringPolicy](#rollingupgrademonitoringpolicy): The policy used for monitoring the application upgrade
-* **upgradeMode**: 'Monitored' | 'UnmonitoredAuto':
+* **upgradeMode**: 'Monitored' | 'UnmonitoredAuto': The mode used to monitor health during a rolling upgrade. The values are Monitored, and UnmonitoredAuto.
 * **upgradeReplicaSetCheckTimeout**: int: The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).
 
 ## ApplicationHealthPolicy
@@ -225,7 +233,7 @@ The percentage represents the maximum tolerated percentage of deployed applicati
 This is calculated by dividing the number of unhealthy deployed applications over the number of nodes where the application is currently deployed on in the cluster.
 The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
 
-* **serviceTypeHealthPolicyMap**: [Dictionary<string,ServiceTypeHealthPolicy>](#dictionarystringservicetypehealthpolicy): Defines a ServiceTypeHealthPolicy per service type name.
+* **serviceTypeHealthPolicyMap**: [ServiceTypeHealthPolicyMap](#servicetypehealthpolicymap): Defines a ServiceTypeHealthPolicy per service type name.
 
 The entries in the map replace the default service type health policy for each specified service type.
 For example, in an application that contains both a stateless gateway service type and a stateful engine service type, the health policies for the stateless and stateful services can be configured differently.
@@ -258,7 +266,7 @@ This is calculated by dividing the number of unhealthy services of the specific 
 The computation rounds up to tolerate one failure on small numbers of services.
 
 
-## Dictionary<string,ServiceTypeHealthPolicy>
+## ServiceTypeHealthPolicyMap
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy)
@@ -272,64 +280,66 @@ The computation rounds up to tolerate one failure on small numbers of services.
 * **upgradeDomainTimeout**: string (Required): The amount of time each upgrade domain has to complete before FailureAction is executed. Cannot be larger than 12 hours. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
 * **upgradeTimeout**: string (Required): The amount of time the overall upgrade has to complete before FailureAction is executed. Cannot be larger than 12 hours. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
 
-## Dictionary<string,String>
+## ProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## ServiceResourceProperties
 * **Discriminator**: serviceKind
+
 ### Base Properties
 * **correlationScheme**: [ServiceCorrelation](#servicecorrelation)[]: A list that describes the correlation of the service with other services.
-* **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero':
+* **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero': Specifies the move cost for the service.
 * **partitionDescription**: [Partition](#partition) (Required): Describes how the service is partitioned.
 * **placementConstraints**: string: The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response
 * **scalingPolicies**: [ScalingPolicy](#scalingpolicy)[]: Scaling policies for this service.
 * **serviceDnsName**: string: The DNS name of the service. It requires the DNS system service to be enabled in Service Fabric cluster.
 * **serviceLoadMetrics**: [ServiceLoadMetric](#serviceloadmetric)[]: The service load metrics is given as an array of ServiceLoadMetric objects.
-* **servicePackageActivationMode**: 'ExclusiveProcess' | 'SharedProcess': The activation Mode of the service package.
+* **servicePackageActivationMode**: 'ExclusiveProcess' | 'SharedProcess': The activation Mode of the service package
 * **servicePlacementPolicies**: [ServicePlacementPolicy](#serviceplacementpolicy)[]: A list that describes the correlation of the service with other services.
 * **serviceTypeName**: string (Required): The name of the service type
-### Stateful
+### StatefulServiceProperties
 #### Properties
 * **dropSourceReplicaOnMove**: bool: Indicates whether to drop source Secondary replica even if the target replica has not finished build. If desired behavior is to drop it as soon as possible the value of this property is true, if not it is false.
 * **hasPersistedState**: bool: A flag indicating whether this is a persistent service which stores states on the local disk. If it is then the value of this property is true, if not it is false.
 * **minReplicaSetSize**: int: The minimum replica set size as a number.
 * **quorumLossWaitDuration**: string: The maximum duration for which a partition is allowed to be in a state of quorum loss, represented in ISO 8601 format "hh:mm:ss".
 * **replicaRestartWaitDuration**: string: The duration between when a replica goes down and when a new replica is created, represented in ISO 8601 format "hh:mm:ss".
-* **serviceKind**: 'Stateful' (Required): The properties of a stateful service resource.
+* **serviceKind**: 'Stateful' (Required): The kind of service (Stateless or Stateful).
 * **servicePlacementTimeLimit**: string: The duration for which replicas can stay InBuild before reporting that build is stuck, represented in ISO 8601 format "hh:mm:ss".
 * **standByReplicaKeepDuration**: string: The definition on how long StandBy replicas should be maintained before being removed, represented in ISO 8601 format "hh:mm:ss".
 * **targetReplicaSetSize**: int: The target replica set size as a number.
 
-### Stateless
+### StatelessServiceProperties
 #### Properties
 * **instanceCloseDelayDuration**: string: Duration represented in ISO 8601 format "hh:mm:ss", to wait before a stateless instance is closed, to allow the active requests to drain gracefully. This would be effective when the instance is closing during the application/cluster upgrade and disabling node. The endpoint exposed on this instance is removed prior to starting the delay, which prevents new connections to this instance. In addition, clients that have subscribed to service endpoint change events(https://docs.microsoft.com/dotnet/api/system.fabric.fabricclient.servicemanagementclient.registerservicenotificationfilterasync), can do the following upon receiving the endpoint removal notification: - Stop sending new requests to this instance. - Close existing connections after in-flight requests have completed. - Connect to a different instance of the service partition for future requests. Note, the default value of InstanceCloseDelayDuration is 0, which indicates that there won't be any delay or removal of the endpoint prior to closing the instance.
 * **instanceCount**: int (Required): The instance count.
 * **minInstanceCount**: int: MinInstanceCount is the minimum number of instances that must be up to meet the EnsureAvailability safety check during operations like upgrade or deactivate node. The actual number that is used is max( MinInstanceCount, ceil( MinInstancePercentage/100.0 * InstanceCount) ). Note, if InstanceCount is set to -1, during MinInstanceCount computation -1 is first converted into the number of nodes on which the instances are allowed to be placed according to the placement constraints on the service.
 * **minInstancePercentage**: int: MinInstancePercentage is the minimum percentage of InstanceCount that must be up to meet the EnsureAvailability safety check during operations like upgrade or deactivate node. The actual number that is used is max( MinInstanceCount, ceil( MinInstancePercentage/100.0 * InstanceCount) ). Note, if InstanceCount is set to -1, during MinInstancePercentage computation, -1 is first converted into the number of nodes on which the instances are allowed to be placed according to the placement constraints on the service.
-* **serviceKind**: 'Stateless' (Required): The properties of a stateless service resource.
+* **serviceKind**: 'Stateless' (Required): The kind of service (Stateless or Stateful).
 
 
 ## ServiceCorrelation
 ### Properties
-* **scheme**: 'AlignedAffinity' | 'NonAlignedAffinity' (Required): The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
+* **scheme**: 'AlignedAffinity' | 'NonAlignedAffinity' (Required): The service correlation scheme.
 * **serviceName**: string (Required): The full ARM Resource ID describing the service resource
 
 ## Partition
 * **Discriminator**: partitionScheme
+
 ### Base Properties
-### Named
+### NamedPartitionScheme
 #### Properties
 * **names**: string[] (Required): Array for the names of the partitions.
-* **partitionScheme**: 'Named' (Required): Describes the named partition scheme of the service.
+* **partitionScheme**: 'Named' (Required): Specifies how the service is partitioned.
 
-### Singleton
+### SingletonPartitionScheme
 #### Properties
-* **partitionScheme**: 'Singleton' (Required): SingletonPartitionScheme
+* **partitionScheme**: 'Singleton' (Required): Specifies how the service is partitioned.
 
-### UniformInt64Range
+### UniformInt64RangePartitionScheme
 #### Properties
 * **count**: int (Required): The number of partitions.
 * **highKey**: int (Required): The upper bound of the partition key range that
@@ -338,19 +348,19 @@ should be split between the partition ‘Count’
 * **lowKey**: int (Required): The lower bound of the partition key range that
 should be split between the partition ‘Count’
 
-* **partitionScheme**: 'UniformInt64Range' (Required): Describes a partitioning scheme where an integer range is allocated evenly across a number of partitions.
+* **partitionScheme**: 'UniformInt64Range' (Required): Specifies how the service is partitioned.
 
 
-## Named
+## NamedPartitionScheme
 ### Properties
 * **names**: string[] (Required): Array for the names of the partitions.
-* **partitionScheme**: 'Named' (Required): Describes the named partition scheme of the service.
+* **partitionScheme**: 'Named' (Required): Specifies how the service is partitioned.
 
-## Singleton
+## SingletonPartitionScheme
 ### Properties
-* **partitionScheme**: 'Singleton' (Required): SingletonPartitionScheme
+* **partitionScheme**: 'Singleton' (Required): Specifies how the service is partitioned.
 
-## UniformInt64Range
+## UniformInt64RangePartitionScheme
 ### Properties
 * **count**: int (Required): The number of partitions.
 * **highKey**: int (Required): The upper bound of the partition key range that
@@ -359,7 +369,7 @@ should be split between the partition ‘Count’
 * **lowKey**: int (Required): The lower bound of the partition key range that
 should be split between the partition ‘Count’
 
-* **partitionScheme**: 'UniformInt64Range' (Required): Describes a partitioning scheme where an integer range is allocated evenly across a number of partitions.
+* **partitionScheme**: 'UniformInt64Range' (Required): Specifies how the service is partitioned.
 
 ## ScalingPolicy
 ### Properties
@@ -368,67 +378,69 @@ should be split between the partition ‘Count’
 
 ## ScalingMechanism
 * **Discriminator**: kind
+
 ### Base Properties
-### AddRemoveIncrementalNamedPartition
+### AddRemoveIncrementalNamedPartitionScalingMechanism
 #### Properties
-* **kind**: 'AddRemoveIncrementalNamedPartition' (Required): Represents a scaling mechanism for adding or removing named partitions of a stateless service. Partition names are in the format '0','1'...'N-1'.
+* **kind**: 'AddRemoveIncrementalNamedPartition' (Required): Specifies the mechanism associated with this scaling policy.
 * **maxPartitionCount**: int (Required): Maximum number of named partitions of the service.
 * **minPartitionCount**: int (Required): Minimum number of named partitions of the service.
 * **scaleIncrement**: int (Required): The number of instances to add or remove during a scaling operation.
 
-### ScalePartitionInstanceCount
+### PartitionInstanceCountScaleMechanism
 #### Properties
-* **kind**: 'ScalePartitionInstanceCount' (Required): Represents a scaling mechanism for adding or removing instances of stateless service partition.
+* **kind**: 'ScalePartitionInstanceCount' (Required): Specifies the mechanism associated with this scaling policy.
 * **maxInstanceCount**: int (Required): Maximum number of instances of the partition.
 * **minInstanceCount**: int (Required): Minimum number of instances of the partition.
 * **scaleIncrement**: int (Required): The number of instances to add or remove during a scaling operation.
 
 
-## AddRemoveIncrementalNamedPartition
+## AddRemoveIncrementalNamedPartitionScalingMechanism
 ### Properties
-* **kind**: 'AddRemoveIncrementalNamedPartition' (Required): Represents a scaling mechanism for adding or removing named partitions of a stateless service. Partition names are in the format '0','1'...'N-1'.
+* **kind**: 'AddRemoveIncrementalNamedPartition' (Required): Specifies the mechanism associated with this scaling policy.
 * **maxPartitionCount**: int (Required): Maximum number of named partitions of the service.
 * **minPartitionCount**: int (Required): Minimum number of named partitions of the service.
 * **scaleIncrement**: int (Required): The number of instances to add or remove during a scaling operation.
 
-## ScalePartitionInstanceCount
+## PartitionInstanceCountScaleMechanism
 ### Properties
-* **kind**: 'ScalePartitionInstanceCount' (Required): Represents a scaling mechanism for adding or removing instances of stateless service partition.
+* **kind**: 'ScalePartitionInstanceCount' (Required): Specifies the mechanism associated with this scaling policy.
 * **maxInstanceCount**: int (Required): Maximum number of instances of the partition.
 * **minInstanceCount**: int (Required): Minimum number of instances of the partition.
 * **scaleIncrement**: int (Required): The number of instances to add or remove during a scaling operation.
 
 ## ScalingTrigger
 * **Discriminator**: kind
+
 ### Base Properties
-### AveragePartitionLoadTrigger
+### AveragePartitionLoadScalingTrigger
 #### Properties
-* **kind**: 'AveragePartitionLoadTrigger' (Required): Represents a scaling trigger related to an average load of a metric/resource of a partition.
+* **kind**: 'AveragePartitionLoadTrigger' (Required): Specifies the trigger associated with this scaling policy.
 * **lowerLoadThreshold**: int (Required): The lower limit of the load below which a scale in operation should be performed.
 * **metricName**: string (Required): The name of the metric for which usage should be tracked.
 * **scaleInterval**: string (Required): The period in seconds on which a decision is made whether to scale or not. This property should come in ISO 8601 format "hh:mm:ss".
 * **upperLoadThreshold**: int (Required): The upper limit of the load beyond which a scale out operation should be performed.
 
-### AverageServiceLoadTrigger
+### AverageServiceLoadScalingTrigger
 #### Properties
-* **kind**: 'AverageServiceLoadTrigger' (Required): Represents a scaling policy related to an average load of a metric/resource of a service.
+* **kind**: 'AverageServiceLoadTrigger' (Required): Specifies the trigger associated with this scaling policy.
 * **lowerLoadThreshold**: int (Required): The lower limit of the load below which a scale in operation should be performed.
 * **metricName**: string (Required): The name of the metric for which usage should be tracked.
 * **scaleInterval**: string (Required): The period in seconds on which a decision is made whether to scale or not. This property should come in ISO 8601 format "hh:mm:ss".
 * **upperLoadThreshold**: int (Required): The upper limit of the load beyond which a scale out operation should be performed.
 
 
-## AveragePartitionLoadTrigger
+## AveragePartitionLoadScalingTrigger
 ### Properties
-* **kind**: 'AveragePartitionLoadTrigger' (Required): Represents a scaling trigger related to an average load of a metric/resource of a partition.
+* **kind**: 'AveragePartitionLoadTrigger' (Required): Specifies the trigger associated with this scaling policy.
 * **lowerLoadThreshold**: int (Required): The lower limit of the load below which a scale in operation should be performed.
 * **metricName**: string (Required): The name of the metric for which usage should be tracked.
 * **scaleInterval**: string (Required): The period in seconds on which a decision is made whether to scale or not. This property should come in ISO 8601 format "hh:mm:ss".
 * **upperLoadThreshold**: int (Required): The upper limit of the load beyond which a scale out operation should be performed.
 
-## AverageServiceLoadTrigger
+## AverageServiceLoadScalingTrigger
 ### Properties
-* **kind**: 'AverageServiceLoadTrigger' (Required): Represents a scaling policy related to an average load of a metric/resource of a service.
+* **kind**: 'AverageServiceLoadTrigger' (Required): Specifies the trigger associated with this scaling policy.
 * **lowerLoadThreshold**: int (Required): The lower limit of the load below which a scale in operation should be performed.
 * **metricName**: string (Required): The name of the metric for which usage should be tracked.
 * **scaleInterval**: string (Required): The period in seconds on which a decision is made whether to scale or not. This property should come in ISO 8601 format "hh:mm:ss".
@@ -440,115 +452,82 @@ should be split between the partition ‘Count’
 * **name**: string (Required): The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
 * **primaryDefaultLoad**: int: Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
 * **secondaryDefaultLoad**: int: Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
-* **weight**: 'High' | 'Low' | 'Medium' | 'Zero': The service load metric relative weight, compared to other metrics configured for this service, as a number.
+* **weight**: 'High' | 'Low' | 'Medium' | 'Zero': Determines the metric weight relative to the other metrics that are configured for this service. During runtime, if two metrics end up in conflict, the Cluster Resource Manager prefers the metric with the higher weight.
 
 ## ServicePlacementPolicy
 * **Discriminator**: type
+
 ### Base Properties
-### InvalidDomain
+### ServicePlacementInvalidDomainPolicy
 #### Properties
 * **domainName**: string (Required): The name of the domain that should not be used for placement.
-* **type**: 'InvalidDomain' (Required): Describes the policy to be used for placement of a Service Fabric service where a particular fault or upgrade domain should not be used for placement of the instances or replicas of that service.
+* **type**: 'InvalidDomain' (Required): The type of placement policy for a service fabric service. Following are the possible values.
 
-### NonPartiallyPlaceService
+### ServicePlacementNonPartiallyPlaceServicePolicy
 #### Properties
-* **type**: 'NonPartiallyPlaceService' (Required): ServicePlacementNonPartiallyPlaceServicePolicy
+* **type**: 'NonPartiallyPlaceService' (Required): The type of placement policy for a service fabric service. Following are the possible values.
 
-### PreferredPrimaryDomain
-#### Properties
-* **domainName**: string (Required): The name of the domain that should used for placement as per this policy.
-* **type**: 'PreferredPrimaryDomain' (Required): Describes the policy to be used for placement of a Service Fabric service where the service's
-Primary replicas should optimally be placed in a particular domain.
-
-This placement policy is usually used with fault domains in scenarios where the Service Fabric
-cluster is geographically distributed in order to indicate that a service's primary replica should
-be located in a particular fault domain, which in geo-distributed scenarios usually aligns with regional
-or datacenter boundaries. Note that since this is an optimization it is possible that the Primary replica
-may not end up located in this domain due to failures, capacity limits, or other constraints.
-
-
-### RequiredDomain
+### ServicePlacementPreferPrimaryDomainPolicy
 #### Properties
 * **domainName**: string (Required): The name of the domain that should used for placement as per this policy.
-* **type**: 'RequiredDomain' (Required): Describes the policy to be used for placement of a Service Fabric service where the instances or replicas of that service must be placed in a particular domain.
+* **type**: 'PreferredPrimaryDomain' (Required): The type of placement policy for a service fabric service. Following are the possible values.
 
-### RequiredDomainDistribution
+### ServicePlacementRequiredDomainPolicy
 #### Properties
 * **domainName**: string (Required): The name of the domain that should used for placement as per this policy.
-* **type**: 'RequiredDomainDistribution' (Required): Describes the policy to be used for placement of a Service Fabric service where two replicas
-from the same partition should never be placed in the same fault or upgrade domain.
+* **type**: 'RequiredDomain' (Required): The type of placement policy for a service fabric service. Following are the possible values.
 
-While this is not common it can expose the service to an increased risk of concurrent failures
-due to unplanned outages or other cases of subsequent/concurrent failures. As an example, consider
-a case where replicas are deployed across different data center, with one replica per location.
-In the event that one of the datacenters goes offline, normally the replica that was placed in that
-datacenter will be packed into one of the remaining datacenters. If this is not desirable then this
-policy should be set.
+### ServicePlacementRequireDomainDistributionPolicy
+#### Properties
+* **domainName**: string (Required): The name of the domain that should used for placement as per this policy.
+* **type**: 'RequiredDomainDistribution' (Required): The type of placement policy for a service fabric service. Following are the possible values.
 
 
-
-## InvalidDomain
+## ServicePlacementInvalidDomainPolicy
 ### Properties
 * **domainName**: string (Required): The name of the domain that should not be used for placement.
-* **type**: 'InvalidDomain' (Required): Describes the policy to be used for placement of a Service Fabric service where a particular fault or upgrade domain should not be used for placement of the instances or replicas of that service.
+* **type**: 'InvalidDomain' (Required): The type of placement policy for a service fabric service. Following are the possible values.
 
-## NonPartiallyPlaceService
+## ServicePlacementNonPartiallyPlaceServicePolicy
 ### Properties
-* **type**: 'NonPartiallyPlaceService' (Required): ServicePlacementNonPartiallyPlaceServicePolicy
+* **type**: 'NonPartiallyPlaceService' (Required): The type of placement policy for a service fabric service. Following are the possible values.
 
-## PreferredPrimaryDomain
-### Properties
-* **domainName**: string (Required): The name of the domain that should used for placement as per this policy.
-* **type**: 'PreferredPrimaryDomain' (Required): Describes the policy to be used for placement of a Service Fabric service where the service's
-Primary replicas should optimally be placed in a particular domain.
-
-This placement policy is usually used with fault domains in scenarios where the Service Fabric
-cluster is geographically distributed in order to indicate that a service's primary replica should
-be located in a particular fault domain, which in geo-distributed scenarios usually aligns with regional
-or datacenter boundaries. Note that since this is an optimization it is possible that the Primary replica
-may not end up located in this domain due to failures, capacity limits, or other constraints.
-
-
-## RequiredDomain
+## ServicePlacementPreferPrimaryDomainPolicy
 ### Properties
 * **domainName**: string (Required): The name of the domain that should used for placement as per this policy.
-* **type**: 'RequiredDomain' (Required): Describes the policy to be used for placement of a Service Fabric service where the instances or replicas of that service must be placed in a particular domain.
+* **type**: 'PreferredPrimaryDomain' (Required): The type of placement policy for a service fabric service. Following are the possible values.
 
-## RequiredDomainDistribution
+## ServicePlacementRequiredDomainPolicy
 ### Properties
 * **domainName**: string (Required): The name of the domain that should used for placement as per this policy.
-* **type**: 'RequiredDomainDistribution' (Required): Describes the policy to be used for placement of a Service Fabric service where two replicas
-from the same partition should never be placed in the same fault or upgrade domain.
+* **type**: 'RequiredDomain' (Required): The type of placement policy for a service fabric service. Following are the possible values.
 
-While this is not common it can expose the service to an increased risk of concurrent failures
-due to unplanned outages or other cases of subsequent/concurrent failures. As an example, consider
-a case where replicas are deployed across different data center, with one replica per location.
-In the event that one of the datacenters goes offline, normally the replica that was placed in that
-datacenter will be packed into one of the remaining datacenters. If this is not desirable then this
-policy should be set.
+## ServicePlacementRequireDomainDistributionPolicy
+### Properties
+* **domainName**: string (Required): The name of the domain that should used for placement as per this policy.
+* **type**: 'RequiredDomainDistribution' (Required): The type of placement policy for a service fabric service. Following are the possible values.
 
-
-## Stateful
+## StatefulServiceProperties
 ### Properties
 * **dropSourceReplicaOnMove**: bool: Indicates whether to drop source Secondary replica even if the target replica has not finished build. If desired behavior is to drop it as soon as possible the value of this property is true, if not it is false.
 * **hasPersistedState**: bool: A flag indicating whether this is a persistent service which stores states on the local disk. If it is then the value of this property is true, if not it is false.
 * **minReplicaSetSize**: int: The minimum replica set size as a number.
 * **quorumLossWaitDuration**: string: The maximum duration for which a partition is allowed to be in a state of quorum loss, represented in ISO 8601 format "hh:mm:ss".
 * **replicaRestartWaitDuration**: string: The duration between when a replica goes down and when a new replica is created, represented in ISO 8601 format "hh:mm:ss".
-* **serviceKind**: 'Stateful' (Required): The properties of a stateful service resource.
+* **serviceKind**: 'Stateful' (Required): The kind of service (Stateless or Stateful).
 * **servicePlacementTimeLimit**: string: The duration for which replicas can stay InBuild before reporting that build is stuck, represented in ISO 8601 format "hh:mm:ss".
 * **standByReplicaKeepDuration**: string: The definition on how long StandBy replicas should be maintained before being removed, represented in ISO 8601 format "hh:mm:ss".
 * **targetReplicaSetSize**: int: The target replica set size as a number.
 
-## Stateless
+## StatelessServiceProperties
 ### Properties
 * **instanceCloseDelayDuration**: string: Duration represented in ISO 8601 format "hh:mm:ss", to wait before a stateless instance is closed, to allow the active requests to drain gracefully. This would be effective when the instance is closing during the application/cluster upgrade and disabling node. The endpoint exposed on this instance is removed prior to starting the delay, which prevents new connections to this instance. In addition, clients that have subscribed to service endpoint change events(https://docs.microsoft.com/dotnet/api/system.fabric.fabricclient.servicemanagementclient.registerservicenotificationfilterasync), can do the following upon receiving the endpoint removal notification: - Stop sending new requests to this instance. - Close existing connections after in-flight requests have completed. - Connect to a different instance of the service partition for future requests. Note, the default value of InstanceCloseDelayDuration is 0, which indicates that there won't be any delay or removal of the endpoint prior to closing the instance.
 * **instanceCount**: int (Required): The instance count.
 * **minInstanceCount**: int: MinInstanceCount is the minimum number of instances that must be up to meet the EnsureAvailability safety check during operations like upgrade or deactivate node. The actual number that is used is max( MinInstanceCount, ceil( MinInstancePercentage/100.0 * InstanceCount) ). Note, if InstanceCount is set to -1, during MinInstanceCount computation -1 is first converted into the number of nodes on which the instances are allowed to be placed according to the placement constraints on the service.
 * **minInstancePercentage**: int: MinInstancePercentage is the minimum percentage of InstanceCount that must be up to meet the EnsureAvailability safety check during operations like upgrade or deactivate node. The actual number that is used is max( MinInstanceCount, ceil( MinInstancePercentage/100.0 * InstanceCount) ). Note, if InstanceCount is set to -1, during MinInstancePercentage computation, -1 is first converted into the number of nodes on which the instances are allowed to be placed according to the placement constraints on the service.
-* **serviceKind**: 'Stateless' (Required): The properties of a stateless service resource.
+* **serviceKind**: 'Stateless' (Required): The kind of service (Stateless or Stateful).
 
-## Dictionary<string,String>
+## ProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -557,7 +536,7 @@ policy should be set.
 ### Properties
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
 
-## Dictionary<string,String>
+## ProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -567,7 +546,7 @@ policy should be set.
 * **appPackageUrl**: string (Required): The URL to the application package
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response
 
-## Dictionary<string,String>
+## ProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -575,13 +554,13 @@ policy should be set.
 ## NodeTypeProperties
 ### Properties
 * **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
-* **capacities**: [Dictionary<string,String>](#dictionarystringstring): The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
+* **capacities**: [NodeTypePropertiesCapacities](#nodetypepropertiescapacities): The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
 * **dataDiskSizeGB**: int (Required): Disk size for each vm in the node type in GBs.
 * **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
 * **isPrimary**: bool (Required): The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
-* **placementProperties**: [Dictionary<string,String>](#dictionarystringstring): The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
-* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the managed cluster resource.
-* **vmExtensions**: [VMSSExtension](#vmssextension)[]: Set of extensions that should be installed onto the virtual machines.
+* **placementProperties**: [NodeTypePropertiesPlacementProperties](#nodetypepropertiesplacementproperties): The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
+* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the managed resource.
+* **vmExtensions**: [VmssExtension](#vmssextension)[]: Set of extensions that should be installed onto the virtual machines.
 * **vmImageOffer**: string: The offer type of the Azure Virtual Machines Marketplace image. For example, UbuntuServer or WindowsServer.
 * **vmImagePublisher**: string: The publisher of the Azure Virtual Machines Marketplace image. For example, Canonical or MicrosoftWindowsServer.
 * **vmImageSku**: string: The SKU of the Azure Virtual Machines Marketplace image. For example, 14.04.0-LTS or 2012-R2-Datacenter.
@@ -596,30 +575,30 @@ policy should be set.
 * **endPort**: int (Required): End port of a range of ports
 * **startPort**: int (Required): Starting port of a range of ports
 
-## Dictionary<string,String>
+## NodeTypePropertiesCapacities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## NodeTypePropertiesPlacementProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## VMSSExtension
+## VmssExtension
 ### Properties
 * **name**: string (Required): The name of the extension.
-* **properties**: [VMSSExtensionProperties](#vmssextensionproperties) (Required): Describes the properties of a Virtual Machine Scale Set Extension.
+* **properties**: [VmssExtensionProperties](#vmssextensionproperties) (Required): Describes the properties of a Virtual Machine Scale Set Extension.
 
-## VMSSExtensionProperties
+## VmssExtensionProperties
 ### Properties
 * **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
 * **forceUpdateTag**: string: If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.
-* **protectedSettings**: any: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+* **protectedSettings**: any: Any object
 * **provisionAfterExtensions**: string[]: Collection of extension names after which this extension needs to be provisioned.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
 * **publisher**: string (Required): The name of the extension handler publisher.
-* **settings**: any: Json formatted public settings for the extension.
+* **settings**: any: Any object
 * **type**: string (Required): Specifies the type of the extension; an example is "CustomScriptExtension".
 * **typeHandlerVersion**: string (Required): Specifies the version of the script handler.
 
@@ -641,7 +620,7 @@ policy should be set.
 * **certificateStore**: string (Required): For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added. The specified certificate store is implicitly in the LocalMachine account. <br><br>For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name <UppercaseThumbprint>.crt for the X509 certificate file and <UppercaseThumbprint>.prv for private key. Both of these files are .pem formatted.
 * **certificateUrl**: string (Required): This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>  "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}
 
-## Dictionary<string,String>
+## ManagedProxyResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

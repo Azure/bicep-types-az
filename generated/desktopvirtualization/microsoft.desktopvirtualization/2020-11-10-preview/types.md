@@ -8,7 +8,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationGroupProperties](#applicationgroupproperties) (Required): Schema for ApplicationGroup properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/applicationGroups/applications@2020-11-10-preview
@@ -28,7 +28,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [HostPoolProperties](#hostpoolproperties) (Required): Properties of HostPool.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/hostPools/msixPackages@2020-11-10-preview
@@ -37,7 +37,7 @@
 * **apiVersion**: '2020-11-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MSIXPackageProperties](#msixpackageproperties) (Required): Schema for MSIX Package properties.
+* **properties**: [MsixPackageProperties](#msixpackageproperties) (Required): Schema for MSIX Package properties.
 * **type**: 'Microsoft.DesktopVirtualization/hostPools/msixPackages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/scalingPlans@2020-11-10-preview
@@ -48,7 +48,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScalingPlanProperties](#scalingplanproperties): Scaling plan properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/scalingPlans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/workspaces@2020-11-10-preview
@@ -59,7 +59,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceProperties](#workspaceproperties): Schema for Workspace properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ApplicationGroupProperties
@@ -70,7 +70,7 @@
 * **hostPoolArmPath**: string (Required): HostPool arm path of ApplicationGroup.
 * **workspaceArmPath**: string (ReadOnly): Workspace arm path of ApplicationGroup.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -83,7 +83,7 @@
 * **description**: string: Description of Application.
 * **filePath**: string: Specifies a path for the executable file for the application.
 * **friendlyName**: string: Friendly name of Application.
-* **iconContent**: array (ReadOnly): the icon a 64 bit string as a byte array.
+* **iconContent**: any (ReadOnly): the icon a 64 bit string as a byte array.
 * **iconHash**: string (ReadOnly): Hash of the icon.
 * **iconIndex**: int: Index of the icon.
 * **iconPath**: string: Path to icon.
@@ -101,7 +101,7 @@
 * **loadBalancerType**: 'BreadthFirst' | 'DepthFirst' | 'Persistent' (Required): The type of the load balancer.
 * **maxSessionLimit**: int: The max session limit of HostPool.
 * **personalDesktopAssignmentType**: 'Automatic' | 'Direct': PersonalDesktopAssignment type for HostPool.
-* **preferredAppGroupType**: 'Desktop' | 'None' | 'RailApplications' (Required): The type of preferred application group type, default to Desktop Application Group.
+* **preferredAppGroupType**: 'Desktop' | 'None' | 'RailApplications' (Required): The type of preferred application group type, default to Desktop Application Group
 * **registrationInfo**: [RegistrationInfo](#registrationinfo): Represents a RegistrationInfo definition.
 * **ring**: int: The ring number of HostPool.
 * **ssoadfsAuthority**: string: URL to customer ADFS server for signing WVD SSO certificates.
@@ -118,24 +118,24 @@
 * **registrationTokenOperation**: 'Delete' | 'None' | 'Update': The type of resetting the token.
 * **token**: string: The registration token base64 encoded string.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## MSIXPackageProperties
+## MsixPackageProperties
 ### Properties
-* **displayName**: string: User friendly Name to be displayed in the portal.
+* **displayName**: string: User friendly Name to be displayed in the portal. 
 * **imagePath**: string: VHD/CIM image path on Network Share.
-* **isActive**: bool: Make this version of the package the active one across the hostpool.
+* **isActive**: bool: Make this version of the package the active one across the hostpool. 
 * **isRegularRegistration**: bool: Specifies how to register Package in feed.
-* **lastUpdated**: string: Date Package was last updated, found in the appxmanifest.xml.
-* **packageApplications**: [MsixPackageApplications](#msixpackageapplications)[]: List of package applications.
-* **packageDependencies**: [MsixPackageDependencies](#msixpackagedependencies)[]: List of package dependencies.
-* **packageFamilyName**: string: Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
-* **packageName**: string: Package Name from appxmanifest.xml.
-* **packageRelativePath**: string: Relative Path to the package inside the image.
-* **version**: string: Package Version found in the appxmanifest.xml.
+* **lastUpdated**: string: Date Package was last updated, found in the appxmanifest.xml. 
+* **packageApplications**: [MsixPackageApplications](#msixpackageapplications)[]: List of package applications. 
+* **packageDependencies**: [MsixPackageDependencies](#msixpackagedependencies)[]: List of package dependencies. 
+* **packageFamilyName**: string: Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name. 
+* **packageName**: string: Package Name from appxmanifest.xml. 
+* **packageRelativePath**: string: Relative Path to the package inside the image. 
+* **version**: string: Package Version found in the appxmanifest.xml. 
 
 ## MsixPackageApplications
 ### Properties
@@ -144,8 +144,8 @@
 * **description**: string: Description of Package Application.
 * **friendlyName**: string: User friendly name.
 * **iconImageName**: string: User friendly name.
-* **rawIcon**: array: the icon a 64 bit string as a byte array.
-* **rawPng**: array: the icon a 64 bit string as a byte array.
+* **rawIcon**: any: the icon a 64 bit string as a byte array.
+* **rawPng**: any: the icon a 64 bit string as a byte array.
 
 ## MsixPackageDependencies
 ### Properties
@@ -159,7 +159,7 @@
 * **exclusionTag**: string: Exclusion tag for scaling plan.
 * **friendlyName**: string: User friendly name of scaling plan.
 * **hostPoolReferences**: [ScalingHostPoolReference](#scalinghostpoolreference)[]: List of ScalingHostPoolReference definitions.
-* **hostPoolType**: 'Personal' | 'Pooled': HostPool type for scaling plan.
+* **hostPoolType**: 'Personal' | 'Pooled': HostPool type for desktop.
 * **schedules**: [ScalingSchedule](#scalingschedule)[]: List of ScalingSchedule definitions.
 * **timeZone**: string: Timezone of the scaling plan.
 
@@ -172,13 +172,13 @@
 ### Properties
 * **daysOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: Set of days of the week on which this schedule is active.
 * **name**: string: Name of the scaling schedule.
-* **offPeakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for off-peak period.
+* **offPeakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for ramp up period.
 * **offPeakStartTime**: string: Starting time for off-peak period.
-* **peakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for peak period.
+* **peakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for ramp up period.
 * **peakStartTime**: string: Starting time for peak period.
 * **rampDownCapacityThresholdPct**: int: Capacity threshold for ramp down period.
 * **rampDownForceLogoffUsers**: bool: Should users be logged off forcefully from hosts.
-* **rampDownLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for ramp down period.
+* **rampDownLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for ramp up period.
 * **rampDownMinimumHostsPct**: int: Minimum host percentage for ramp down period.
 * **rampDownNotificationMessage**: string: Notification message for users during ramp down period.
 * **rampDownStartTime**: string: Starting time for ramp down period.
@@ -189,7 +189,7 @@
 * **rampUpMinimumHostsPct**: int: Minimum host percentage for ramp up period.
 * **rampUpStartTime**: string: Starting time for ramp up period.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -200,7 +200,7 @@
 * **description**: string: Description of Workspace.
 * **friendlyName**: string: Friendly name of Workspace.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

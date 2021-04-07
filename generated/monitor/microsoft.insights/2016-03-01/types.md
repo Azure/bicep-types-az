@@ -8,7 +8,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AlertRule](#alertrule) (Required): An alert rule.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Insights/alertrules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource microsoft.insights/logprofiles@2016-03-01
@@ -19,7 +19,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LogProfileProperties](#logprofileproperties) (Required): The log profile properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'microsoft.insights/logprofiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AlertRule
@@ -35,94 +35,97 @@
 
 ## RuleAction
 * **Discriminator**: odata.type
+
 ### Base Properties
-### Microsoft.Azure.Management.Insights.Models.RuleEmailAction
+### RuleEmailAction
 #### Properties
 * **customEmails**: string[]: the list of administrator's custom email addresses to notify of the activation of the alert.
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleEmailAction' (Required): Specifies the action to send email when the rule condition is evaluated. The discriminator is always RuleEmailAction in this case.
+* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleEmailAction' (Required): specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
 * **sendToServiceOwners**: bool: Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.
 
-### Microsoft.Azure.Management.Insights.Models.RuleWebhookAction
+### RuleWebhookAction
 #### Properties
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleWebhookAction' (Required): Specifies the action to post to service when the rule condition is evaluated. The discriminator is always RuleWebhookAction in this case.
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
+* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleWebhookAction' (Required): specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
+* **properties**: [RuleWebhookActionProperties](#rulewebhookactionproperties): the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
 * **serviceUri**: string: the service uri to Post the notification when the alert activates or resolves.
 
 
-## Microsoft.Azure.Management.Insights.Models.RuleEmailAction
+## RuleEmailAction
 ### Properties
 * **customEmails**: string[]: the list of administrator's custom email addresses to notify of the activation of the alert.
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleEmailAction' (Required): Specifies the action to send email when the rule condition is evaluated. The discriminator is always RuleEmailAction in this case.
+* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleEmailAction' (Required): specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
 * **sendToServiceOwners**: bool: Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.
 
-## Microsoft.Azure.Management.Insights.Models.RuleWebhookAction
+## RuleWebhookAction
 ### Properties
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleWebhookAction' (Required): Specifies the action to post to service when the rule condition is evaluated. The discriminator is always RuleWebhookAction in this case.
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
+* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleWebhookAction' (Required): specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
+* **properties**: [RuleWebhookActionProperties](#rulewebhookactionproperties): the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
 * **serviceUri**: string: the service uri to Post the notification when the alert activates or resolves.
 
-## Dictionary<string,String>
+## RuleWebhookActionProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## RuleCondition
 * **Discriminator**: odata.type
+
 ### Base Properties
 * **dataSource**: [RuleDataSource](#ruledatasource): The resource from which the rule collects its data.
-### Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition
+### LocationThresholdRuleCondition
 #### Properties
 * **failedLocationCount**: int (Required): the number of locations that must fail to activate the alert.
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition' (Required): A rule condition based on a certain number of locations failing.
+* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition' (Required): specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
 * **windowSize**: string: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
 
-### Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition
+### ManagementEventRuleCondition
 #### Properties
 * **aggregation**: [ManagementEventAggregationCondition](#managementeventaggregationcondition): How the data that is collected should be combined over time.
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition' (Required): A management event rule condition.
+* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition' (Required): specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
 
-### Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition
+### ThresholdRuleCondition
 #### Properties
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition' (Required): A rule condition based on a metric crossing a threshold.
-* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): the operator used to compare the data and the threshold.
+* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition' (Required): specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
+* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Operators allowed in the rule condition.
 * **threshold**: int (Required): the threshold value that activates the alert.
-* **timeAggregation**: 'Average' | 'Last' | 'Maximum' | 'Minimum' | 'Total': the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.
+* **timeAggregation**: 'Average' | 'Last' | 'Maximum' | 'Minimum' | 'Total': Aggregation operators allowed in a rule.
 * **windowSize**: string: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
 
 
 ## RuleDataSource
 * **Discriminator**: odata.type
+
 ### Base Properties
 * **legacyResourceId**: string: the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
 * **metricNamespace**: string: the namespace of the metric.
 * **resourceLocation**: string: the location of the resource.
 * **resourceUri**: string: the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
-### Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource
+### RuleManagementEventDataSource
 #### Properties
 * **claims**: [RuleManagementEventClaimsDataSource](#rulemanagementeventclaimsdatasource): The claims for a rule management event data source.
 * **eventName**: string: the event name.
 * **eventSource**: string: the event source.
 * **level**: string: the level.
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource' (Required): A rule management event data source. The discriminator fields is always RuleManagementEventDataSource in this case.
+* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource' (Required): specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
 * **operationName**: string: The name of the operation that should be checked for. If no name is provided, any operation will match.
 * **resourceGroupName**: string: the resource group name.
 * **resourceProviderName**: string: the resource provider name.
 * **status**: string: The status of the operation that should be checked for. If no status is provided, any status will match.
 * **subStatus**: string: the substatus.
 
-### Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource
+### RuleMetricDataSource
 #### Properties
 * **metricName**: string: the name of the metric that defines what the rule monitors.
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource' (Required): A rule metric data source. The discriminator value is always RuleMetricDataSource in this case.
+* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource' (Required): specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
 
 
-## Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource
+## RuleManagementEventDataSource
 ### Properties
 * **claims**: [RuleManagementEventClaimsDataSource](#rulemanagementeventclaimsdatasource): The claims for a rule management event data source.
 * **eventName**: string: the event name.
 * **eventSource**: string: the event source.
 * **level**: string: the level.
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource' (Required): A rule management event data source. The discriminator fields is always RuleManagementEventDataSource in this case.
+* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource' (Required): specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
 * **operationName**: string: The name of the operation that should be checked for. If no name is provided, any operation will match.
 * **resourceGroupName**: string: the resource group name.
 * **resourceProviderName**: string: the resource provider name.
@@ -133,37 +136,37 @@
 ### Properties
 * **emailAddress**: string: the email address.
 
-## Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource
+## RuleMetricDataSource
 ### Properties
 * **metricName**: string: the name of the metric that defines what the rule monitors.
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource' (Required): A rule metric data source. The discriminator value is always RuleMetricDataSource in this case.
+* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource' (Required): specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
 
-## Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition
+## LocationThresholdRuleCondition
 ### Properties
 * **failedLocationCount**: int (Required): the number of locations that must fail to activate the alert.
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition' (Required): A rule condition based on a certain number of locations failing.
+* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition' (Required): specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
 * **windowSize**: string: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
 
-## Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition
+## ManagementEventRuleCondition
 ### Properties
 * **aggregation**: [ManagementEventAggregationCondition](#managementeventaggregationcondition): How the data that is collected should be combined over time.
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition' (Required): A management event rule condition.
+* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition' (Required): specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
 
 ## ManagementEventAggregationCondition
 ### Properties
-* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': the condition operator.
+* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': Operators allowed in the rule condition.
 * **threshold**: int: The threshold value that activates the alert.
 * **windowSize**: string: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
 
-## Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition
+## ThresholdRuleCondition
 ### Properties
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition' (Required): A rule condition based on a metric crossing a threshold.
-* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): the operator used to compare the data and the threshold.
+* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition' (Required): specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
+* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Operators allowed in the rule condition.
 * **threshold**: int (Required): the threshold value that activates the alert.
-* **timeAggregation**: 'Average' | 'Last' | 'Maximum' | 'Minimum' | 'Total': the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.
+* **timeAggregation**: 'Average' | 'Last' | 'Maximum' | 'Minimum' | 'Total': Aggregation operators allowed in a rule.
 * **windowSize**: string: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -181,7 +184,7 @@
 * **days**: int (Required): the number of days for the retention in days. A value of 0 will retain the events indefinitely.
 * **enabled**: bool (Required): a value indicating whether the retention policy is enabled.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

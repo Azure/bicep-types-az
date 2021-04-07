@@ -8,7 +8,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IdentityProperties](#identityproperties) (ReadOnly): The properties associated with the identity.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ManagedIdentity/userAssignedIdentities' (ReadOnly, DeployTimeConstant): The resource type
 
 ## IdentityProperties
@@ -18,7 +18,7 @@
 * **principalId**: string (ReadOnly): The id of the service principal object associated with the created identity.
 * **tenantId**: string (ReadOnly): The id of the tenant which the identity belongs to.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

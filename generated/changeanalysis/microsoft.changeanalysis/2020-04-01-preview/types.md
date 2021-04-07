@@ -23,7 +23,7 @@
 
 ## NotificationSettings
 ### Properties
-* **activationState**: 'Disabled' | 'Enabled' | 'None':
+* **activationState**: 'Disabled' | 'Enabled' | 'None': The state of notifications feature.
 * **azureMonitorWorkspaceProperties**: [AzureMonitorWorkspaceProperties](#azuremonitorworkspaceproperties): Configuration properties of an Azure Monitor workspace that receives change notifications.
 
 ## AzureMonitorWorkspaceProperties

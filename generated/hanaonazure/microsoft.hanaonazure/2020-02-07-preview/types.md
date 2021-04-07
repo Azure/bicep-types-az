@@ -8,7 +8,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SapMonitorProperties](#sapmonitorproperties): Describes the properties of a SAP monitor.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HanaOnAzure/sapMonitors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HanaOnAzure/sapMonitors/providerInstances@2020-02-07-preview
@@ -28,10 +28,10 @@
 * **logAnalyticsWorkspaceSharedKey**: string: The shared key of the log analytics workspace that is used for monitoring
 * **managedResourceGroupName**: string (ReadOnly): The name of the resource group the SAP Monitor resources get deployed into.
 * **monitorSubnet**: string: The subnet which the SAP monitor will be deployed in
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly): State of provisioning of the HanaInstance.
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly): State of provisioning of the HanaInstance
 * **sapMonitorCollectorVersion**: string (ReadOnly): The version of the payload running in the Collector VM
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -40,6 +40,6 @@
 ### Properties
 * **metadata**: string: A JSON string containing metadata of the provider instance.
 * **properties**: string: A JSON string containing the properties of the provider instance.
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly): State of provisioning of the provider instance.
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly): State of provisioning of the HanaInstance
 * **type**: string: The type of provider instance.
 
