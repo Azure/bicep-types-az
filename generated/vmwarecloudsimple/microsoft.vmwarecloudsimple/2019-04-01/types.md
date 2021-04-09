@@ -145,10 +145,10 @@
 * **allocation**: 'dynamic' | 'static': IP address allocation method.
 * **dnsServers**: string[]: List of dns servers to use
 * **gateway**: string[]: Gateway addresses assigned to nic
-* **ipAddress**: string:
-* **mask**: string:
-* **primaryWinsServer**: string:
-* **secondaryWinsServer**: string:
+* **ipAddress**: string
+* **mask**: string
+* **primaryWinsServer**: string
+* **secondaryWinsServer**: string
 
 ## VirtualNetwork
 ### Properties

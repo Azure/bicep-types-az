@@ -36,7 +36,7 @@
 * **kind**: string: Kind of the resource
 * **location**: string (ReadOnly): Location where the resource is stored
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [JitNetworkAccessPolicyProperties](#jitnetworkaccesspolicyproperties) (Required):
+* **properties**: [JitNetworkAccessPolicyProperties](#jitnetworkaccesspolicyproperties) (Required)
 * **type**: 'Microsoft.Security/locations/jitNetworkAccessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/serverVulnerabilityAssessments@2020-01-01
@@ -51,7 +51,7 @@
 ## SecurityAssessmentMetadataProperties
 ### Properties
 * **assessmentType**: 'BuiltIn' | 'CustomerManaged' | 'CustomPolicy' | 'VerifiedPartner' (Required): BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition.
-* **category**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking'[]:
+* **category**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking'[]
 * **description**: string: Human readable description of the assessment
 * **displayName**: string (Required): User friendly display name of the assessment
 * **implementationEffort**: 'High' | 'Low' | 'Moderate': The implementation effort required to remediate this assessment.
@@ -60,7 +60,7 @@
 * **preview**: bool: True if this assessment is in preview release status
 * **remediationDescription**: string: Human readable description of what you should do to mitigate this security issue
 * **severity**: 'High' | 'Low' | 'Medium' (Required): The severity level of the assessment.
-* **threats**: 'accountBreach' | 'dataExfiltration' | 'dataSpillage' | 'denialOfService' | 'elevationOfPrivilege' | 'maliciousInsider' | 'missingCoverage' | 'threatResistance'[]:
+* **threats**: 'accountBreach' | 'dataExfiltration' | 'dataSpillage' | 'denialOfService' | 'elevationOfPrivilege' | 'maliciousInsider' | 'missingCoverage' | 'threatResistance'[]
 * **userImpact**: 'High' | 'Low' | 'Moderate': The user impact of the assessment.
 
 ## SecurityAssessmentMetadataPartnerData
@@ -131,31 +131,31 @@
 
 ## AdaptiveApplicationControlGroupData
 ### Properties
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (ReadOnly):
-* **enforcementMode**: 'Audit' | 'Enforce' | 'None':
-* **issues**: [AdaptiveApplicationControlIssueSummary](#adaptiveapplicationcontrolissuesummary)[] (ReadOnly):
-* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[]:
+* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (ReadOnly)
+* **enforcementMode**: 'Audit' | 'Enforce' | 'None'
+* **issues**: [AdaptiveApplicationControlIssueSummary](#adaptiveapplicationcontrolissuesummary)[] (ReadOnly)
+* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[]
 * **protectionMode**: [ProtectionMode](#protectionmode): The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
-* **recommendationStatus**: 'NoStatus' | 'NotAvailable' | 'NotRecommended' | 'Recommended' (ReadOnly):
-* **sourceSystem**: 'Azure_AppLocker' | 'Azure_AuditD' | 'NonAzure_AppLocker' | 'NonAzure_AuditD' | 'None' (ReadOnly):
-* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[]:
+* **recommendationStatus**: 'NoStatus' | 'NotAvailable' | 'NotRecommended' | 'Recommended' (ReadOnly)
+* **sourceSystem**: 'Azure_AppLocker' | 'Azure_AuditD' | 'NonAzure_AppLocker' | 'NonAzure_AuditD' | 'None' (ReadOnly)
+* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[]
 
 ## AdaptiveApplicationControlIssueSummary
 ### Properties
-* **issue**: 'ExecutableViolationsAudited' | 'MsiAndScriptViolationsAudited' | 'MsiAndScriptViolationsBlocked' | 'RulesViolatedManually' | 'ViolationsAudited' | 'ViolationsBlocked':
+* **issue**: 'ExecutableViolationsAudited' | 'MsiAndScriptViolationsAudited' | 'MsiAndScriptViolationsBlocked' | 'RulesViolatedManually' | 'ViolationsAudited' | 'ViolationsBlocked'
 * **numberOfVms**: int: The number of machines in the group that have this alert
 
 ## PathRecommendation
 ### Properties
-* **action**: 'Add' | 'Recommended' | 'Remove':
+* **action**: 'Add' | 'Recommended' | 'Remove'
 * **common**: bool: Whether the application is commonly run on the machine
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured':
-* **fileType**: 'Dll' | 'Exe' | 'Executable' | 'Msi' | 'Script' | 'Unknown':
+* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured'
+* **fileType**: 'Dll' | 'Exe' | 'Executable' | 'Msi' | 'Script' | 'Unknown'
 * **path**: string: The full path of the file, or an identifier of the application
 * **publisherInfo**: [PublisherInfo](#publisherinfo): Represents the publisher information of a process/rule
-* **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature':
-* **usernames**: [UserRecommendation](#userrecommendation)[]:
-* **userSids**: string[]:
+* **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature'
+* **usernames**: [UserRecommendation](#userrecommendation)[]
+* **userSids**: string[]
 
 ## PublisherInfo
 ### Properties
@@ -166,27 +166,27 @@
 
 ## UserRecommendation
 ### Properties
-* **recommendationAction**: 'Add' | 'Recommended' | 'Remove':
+* **recommendationAction**: 'Add' | 'Recommended' | 'Remove'
 * **username**: string: Represents a user that is recommended to be allowed for a certain rule
 
 ## ProtectionMode
 ### Properties
-* **exe**: 'Audit' | 'Enforce' | 'None':
-* **executable**: 'Audit' | 'Enforce' | 'None':
-* **msi**: 'Audit' | 'Enforce' | 'None':
-* **script**: 'Audit' | 'Enforce' | 'None':
+* **exe**: 'Audit' | 'Enforce' | 'None'
+* **executable**: 'Audit' | 'Enforce' | 'None'
+* **msi**: 'Audit' | 'Enforce' | 'None'
+* **script**: 'Audit' | 'Enforce' | 'None'
 
 ## VmRecommendation
 ### Properties
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured':
-* **enforcementSupport**: 'NotSupported' | 'Supported' | 'Unknown':
-* **recommendationAction**: 'Add' | 'Recommended' | 'Remove':
+* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured'
+* **enforcementSupport**: 'NotSupported' | 'Supported' | 'Unknown'
+* **recommendationAction**: 'Add' | 'Recommended' | 'Remove'
 * **resourceId**: string: The full resource id of the machine
 
 ## JitNetworkAccessPolicyProperties
 ### Properties
 * **provisioningState**: string (ReadOnly): Gets the provisioning state of the Just-in-Time policy.
-* **requests**: [JitNetworkAccessRequest](#jitnetworkaccessrequest)[]:
+* **requests**: [JitNetworkAccessRequest](#jitnetworkaccessrequest)[]
 * **virtualMachines**: [JitNetworkAccessPolicyVirtualMachine](#jitnetworkaccesspolicyvirtualmachine)[] (Required): Configurations for Microsoft.Compute/virtualMachines resource type.
 
 ## JitNetworkAccessRequest
@@ -194,7 +194,7 @@
 * **justification**: string: The justification for making the initiate request
 * **requestor**: string (Required): The identity of the person who made the request
 * **startTimeUtc**: string (Required): The start time of the request in UTC
-* **virtualMachines**: [JitNetworkAccessRequestVirtualMachine](#jitnetworkaccessrequestvirtualmachine)[] (Required):
+* **virtualMachines**: [JitNetworkAccessRequestVirtualMachine](#jitnetworkaccessrequestvirtualmachine)[] (Required)
 
 ## JitNetworkAccessRequestVirtualMachine
 ### Properties
@@ -207,7 +207,7 @@
 * **allowedSourceAddressPrefixes**: string[]: Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
 * **endTimeUtc**: string (Required): The date & time at which the request ends in UTC
 * **mappedPort**: int: The port which is mapped to this port's `number` in the Azure Firewall, if applicable
-* **number**: int (Required):
+* **number**: int (Required)
 * **status**: 'Initiated' | 'Revoked' (Required): The status of the port.
 * **statusReason**: 'Expired' | 'NewerRequestInitiated' | 'UserRequested' (Required): A description of why the `status` has its value.
 
@@ -222,8 +222,8 @@
 * **allowedSourceAddressPrefix**: string: Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
 * **allowedSourceAddressPrefixes**: string[]: Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
 * **maxRequestAccessDuration**: string (Required): Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
-* **number**: int (Required):
-* **protocol**: '*' | 'TCP' | 'UDP' (Required):
+* **number**: int (Required)
+* **protocol**: '*' | 'TCP' | 'UDP' (Required)
 
 ## ServerVulnerabilityAssessmentProperties
 ### Properties

@@ -15,7 +15,7 @@
 ### Properties
 * **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[] (Required): Properties of the agent pool.
 * **customProfile**: [ContainerServiceCustomProfile](#containerservicecustomprofile): Properties to configure a custom container service cluster.
-* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile):
+* **diagnosticsProfile**: [ContainerServiceDiagnosticsProfile](#containerservicediagnosticsprofile)
 * **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile) (Required): Profile for Linux VMs in the container service cluster.
 * **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required): Profile for the container service master.
 * **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile): Profile for the container service orchestrator.

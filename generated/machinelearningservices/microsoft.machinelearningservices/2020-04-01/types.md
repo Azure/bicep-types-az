@@ -64,12 +64,12 @@
 * **creationTime**: string (ReadOnly): The creation time of the machine learning workspace in ISO8601 format.
 * **description**: string: The description of this workspace.
 * **discoveryUrl**: string: Url for the discovery service to identify regional endpoints for machine learning experimentation services
-* **encryption**: [EncryptionProperty](#encryptionproperty):
+* **encryption**: [EncryptionProperty](#encryptionproperty)
 * **friendlyName**: string: The friendly name for this workspace. This name in mutable
 * **hbiWorkspace**: bool: The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
 * **imageBuildCompute**: string: The compute name for image build
 * **keyVault**: string: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
-* **notebookInfo**: [NotebookResourceInfo](#notebookresourceinfo) (ReadOnly):
+* **notebookInfo**: [NotebookResourceInfo](#notebookresourceinfo) (ReadOnly)
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections in the workspace.
 * **privateLinkCount**: int (ReadOnly): Count of private connections in the workspace
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
@@ -80,7 +80,7 @@
 
 ## EncryptionProperty
 ### Properties
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required):
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required)
 * **status**: 'Disabled' | 'Enabled' (Required): Indicates whether or not the encryption is enabled for the workspace.
 
 ## KeyVaultProperties
@@ -91,14 +91,14 @@
 
 ## NotebookResourceInfo
 ### Properties
-* **fqdn**: string:
-* **notebookPreparationError**: [NotebookPreparationError](#notebookpreparationerror):
+* **fqdn**: string
+* **notebookPreparationError**: [NotebookPreparationError](#notebookpreparationerror)
 * **resourceId**: string: the data plane resourceId that used to initialize notebook component
 
 ## NotebookPreparationError
 ### Properties
-* **errorMessage**: string:
-* **statusCode**: int:
+* **errorMessage**: string
+* **statusCode**: int
 
 ## PrivateEndpointConnection
 ### Properties
@@ -178,7 +178,7 @@
 ### Databricks
 #### Properties
 * **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue):
+* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
 
 ### DataFactory
 #### Properties
@@ -187,17 +187,17 @@
 ### DataLakeAnalytics
 #### Properties
 * **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue):
+* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
 
 ### HDInsight
 #### Properties
 * **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue):
+* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
 
 ### VirtualMachine
 #### Properties
 * **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue):
+* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
 
 
 ## MachineLearningServiceError
@@ -226,7 +226,7 @@
 * **agentVMSize**: string: Agent virtual machine size
 * **aksNetworkingConfiguration**: [AksNetworkingConfiguration](#aksnetworkingconfiguration): Advance configuration for AKS networking
 * **clusterFqdn**: string: Cluster full qualified domain name
-* **clusterPurpose**: 'DenseProd' | 'DevTest' | 'FastProd':
+* **clusterPurpose**: 'DenseProd' | 'DevTest' | 'FastProd'
 * **sslConfiguration**: [SslConfiguration](#sslconfiguration): The ssl configuration for scoring
 * **systemServices**: [SystemService](#systemservice)[] (ReadOnly): System services
 
@@ -300,7 +300,7 @@
 ## Databricks
 ### Properties
 * **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue):
+* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
 
 ## DataFactory
 ### Properties
@@ -309,17 +309,17 @@
 ## DataLakeAnalytics
 ### Properties
 * **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue):
+* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
 
 ## HDInsight
 ### Properties
 * **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue):
+* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
 
 ## VirtualMachine
 ### Properties
 * **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue):
+* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
 
 ## Dictionary<string,String>
 ### Properties

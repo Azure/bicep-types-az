@@ -24,7 +24,7 @@
 ## AttestationServiceCreationSpecificParams
 ### Properties
 * **attestUri**: string (ReadOnly): Gets the uri of attestation service
-* **policySigningCertificates**: [JSONWebKeySet](#jsonwebkeyset) (WriteOnly):
+* **policySigningCertificates**: [JSONWebKeySet](#jsonwebkeyset) (WriteOnly)
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections associated with the attestation provider.
 * **status**: 'Error' | 'NotReady' | 'Ready' (ReadOnly): Status of attestation service.
 * **trustModel**: string (ReadOnly): Trust model for the attestation provider.

@@ -48,7 +48,7 @@
 * **computerName**: string: The name of the computer associated with this backup item.
 * **extendedInfo**: [MabFileFolderProtectedItemExtendedInfo](#mabfilefolderprotecteditemextendedinfo): Additional information for the backup item.
 * **friendlyName**: string: The friendly name of this backup item.
-* **isScheduledForDeferredDelete**: bool:
+* **isScheduledForDeferredDelete**: bool
 * **lastBackupStatus**: string: The status of last backup operation.
 * **protectedItemType**: 'MabFileFolderProtectedItem' (Required): This is a file or folder workload-specific backup item.
 * **protectionState**: string: The states for this property are: Protected, ProtectionStopped, IRPending, or ProtectionError.
@@ -83,7 +83,7 @@
 * **computerName**: string: The name of the computer associated with this backup item.
 * **extendedInfo**: [MabFileFolderProtectedItemExtendedInfo](#mabfilefolderprotecteditemextendedinfo): Additional information for the backup item.
 * **friendlyName**: string: The friendly name of this backup item.
-* **isScheduledForDeferredDelete**: bool:
+* **isScheduledForDeferredDelete**: bool
 * **lastBackupStatus**: string: The status of last backup operation.
 * **protectedItemType**: 'MabFileFolderProtectedItem' (Required): This is a file or folder workload-specific backup item.
 * **protectionState**: string: The states for this property are: Protected, ProtectionStopped, IRPending, or ProtectionError.
@@ -190,8 +190,8 @@
 
 ## Day
 ### Properties
-* **date**: int:
-* **isLast**: bool:
+* **date**: int
+* **isLast**: bool
 
 ## WeeklyRetentionFormat
 ### Properties

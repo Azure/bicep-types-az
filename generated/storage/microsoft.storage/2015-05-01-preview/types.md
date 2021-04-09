@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters):
+* **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 

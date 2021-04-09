@@ -652,7 +652,7 @@ Default: Regular instance creation.
 Restore: Creates an instance by restoring a set of backups to specific point in time. RestorePointInTime and SourceManagedInstanceId must be specified.
 * **minimalTlsVersion**: string: Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
 * **privateEndpointConnections**: [ManagedInstancePecProperty](#managedinstancepecproperty)[] (ReadOnly): List of private endpoint connections on a managed instance.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly):
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
 * **proxyOverride**: 'Default' | 'Proxy' | 'Redirect': Connection type used for connecting to the instance.
 * **publicDataEndpointEnabled**: bool: Whether or not the public data endpoint is enabled.
 * **restorePointInTime**: string: Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
@@ -677,8 +677,8 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 
 ## ManagedInstancePrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [ManagedInstancePrivateEndpointProperty](#managedinstanceprivateendpointproperty):
-* **privateLinkServiceConnectionState**: [ManagedInstancePrivateLinkServiceConnectionStateProperty](#managedinstanceprivatelinkserviceconnectionstateproperty):
+* **privateEndpoint**: [ManagedInstancePrivateEndpointProperty](#managedinstanceprivateendpointproperty)
+* **privateLinkServiceConnectionState**: [ManagedInstancePrivateLinkServiceConnectionStateProperty](#managedinstanceprivatelinkserviceconnectionstateproperty)
 * **provisioningState**: string (ReadOnly): State of the Private Endpoint Connection.
 
 ## ManagedInstancePrivateEndpointProperty
@@ -751,7 +751,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 * **isDisabled**: bool (ReadOnly): Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
 * **labelId**: string: The label ID.
 * **labelName**: string: The label name.
-* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None':
+* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None'
 * **schemaName**: string (ReadOnly): The schema name.
 * **tableName**: string (ReadOnly): The table name.
 
@@ -854,8 +854,8 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty):
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty):
+* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty)
 * **provisioningState**: 'Approving' | 'Dropping' | 'Failed' | 'Ready' | 'Rejecting' (ReadOnly): State of the private endpoint connection.
 
 ## PrivateEndpointProperty
@@ -951,7 +951,6 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 
 For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
-
 * **isDevopsAuditEnabled**: bool: Specifies the state of devops audit. If state is Enabled, devops logs will be sent to Azure Monitor.
 In order to send the events to Azure Monitor, specify 'State' as 'Enabled', 'IsAzureMonitorTargetEnabled' as true and 'IsDevopsAuditEnabled' as true
 
@@ -962,7 +961,6 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 
 For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
-
 * **isStorageSecondaryKeyInUse**: bool: Specifies whether storageAccountAccessKey value is the storage's secondary key.
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
@@ -1107,7 +1105,6 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 
 For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
-
 * **isStorageSecondaryKeyInUse**: bool: Specifies whether storageAccountAccessKey value is the storage's secondary key.
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
@@ -1196,7 +1193,6 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 
 For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
-
 * **isStorageSecondaryKeyInUse**: bool: Specifies whether storageAccountAccessKey value is the storage's secondary key.
 * **predicateExpression**: string: Specifies condition of where clause when creating an audit.
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
@@ -1214,7 +1210,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## MaintenanceWindowsProperties
 ### Properties
-* **timeRanges**: [MaintenanceWindowTimeRange](#maintenancewindowtimerange)[]:
+* **timeRanges**: [MaintenanceWindowTimeRange](#maintenancewindowtimerange)[]
 
 ## MaintenanceWindowTimeRange
 ### Properties
@@ -1302,7 +1298,6 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 
 For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
-
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
 * **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account.
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
@@ -1414,7 +1409,6 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 
 For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
-
 * **isDevopsAuditEnabled**: bool: Specifies the state of devops audit. If state is Enabled, devops logs will be sent to Azure Monitor.
 In order to send the events to Azure Monitor, specify 'State' as 'Enabled', 'IsAzureMonitorTargetEnabled' as true and 'IsDevopsAuditEnabled' as true
 
@@ -1425,7 +1419,6 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 
 For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
-
 * **isStorageSecondaryKeyInUse**: bool: Specifies whether storageAccountAccessKey value is the storage's secondary key.
 * **predicateExpression**: string: Specifies condition of where clause when creating an audit.
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.

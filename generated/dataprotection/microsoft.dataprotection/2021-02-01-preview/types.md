@@ -9,7 +9,7 @@
 * **identity**: [DppIdentityDetails](#dppidentitydetails): Identity details
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupVault](#backupvault): Backup Vault
+* **properties**: [BackupVault](#backupvault) (Required): Backup Vault
 * **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.DataProtection/backupVaults' (ReadOnly, DeployTimeConstant): The resource type
@@ -43,7 +43,7 @@
 ## BackupVault
 ### Properties
 * **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the BackupVault resource.
-* **storageSettings**: [StorageSetting](#storagesetting)[]: Storage Settings
+* **storageSettings**: [StorageSetting](#storagesetting)[] (Required): Storage Settings
 
 ## StorageSetting
 ### Properties
@@ -70,7 +70,7 @@
 * **dataSourceInfo**: [Datasource](#datasource) (Required): Datasource to be backed up
 * **dataSourceSetInfo**: [DatasourceSet](#datasourceset): DatasourceSet details of datasource to be backed up
 * **friendlyName**: string (Required): Gets or sets the Backup Instance friendly name.
-* **objectType**: string (Required):
+* **objectType**: string (Required)
 * **policyInfo**: [PolicyInfo](#policyinfo) (Required): Policy Info in backupInstance
 * **protectionErrorDetails**: [UserFacingError](#userfacingerror) (ReadOnly): Error object used by layers that have access to localized content, and propagate that to user
 * **protectionStatus**: [ProtectionStatusDetails](#protectionstatusdetails) (ReadOnly): Protection status details
@@ -98,9 +98,9 @@
 
 ## PolicyInfo
 ### Properties
-* **policyId**: string (Required):
+* **policyId**: string (Required)
 * **policyParameters**: [PolicyParameters](#policyparameters): Parameters in Policy
-* **policyVersion**: string (ReadOnly):
+* **policyVersion**: string (ReadOnly)
 
 ## PolicyParameters
 ### Properties
@@ -113,13 +113,13 @@
 ### AzureOperationalStoreParameters
 #### Properties
 * **objectType**: 'AzureOperationalStoreParameters' (Required): Parameters for Operational-Tier DataStore
-* **resourceGroupId**: string: Gets or sets the Resource Group Uri.
+* **resourceGroupId**: string: Gets or sets the Snapshot Resource Group Uri.
 
 
 ## AzureOperationalStoreParameters
 ### Properties
 * **objectType**: 'AzureOperationalStoreParameters' (Required): Parameters for Operational-Tier DataStore
-* **resourceGroupId**: string: Gets or sets the Resource Group Uri.
+* **resourceGroupId**: string: Gets or sets the Snapshot Resource Group Uri.
 
 ## UserFacingError
 ### Properties
@@ -128,7 +128,7 @@
 * **innerError**: [InnerError](#innererror): Inner Error
 * **isRetryable**: bool: Whether the operation will be retryable or not
 * **isUserError**: bool: Whether the operation is due to a user error or service error
-* **message**: string:
+* **message**: string
 * **properties**: [Dictionary<string,String>](#dictionarystringstring): Any key value pairs that can be injected inside error object
 * **recommendedAction**: string[]: RecommendedAction � localized.
 * **target**: string: Target of the error.
@@ -172,7 +172,7 @@
 ## BasePolicyRule
 * **Discriminator**: objectType
 ### Base Properties
-* **name**: string (Required):
+* **name**: string (Required)
 ### AzureBackupRule
 #### Properties
 * **backupParameters**: [BackupParameters](#backupparameters): BackupParameters base
@@ -182,8 +182,8 @@
 
 ### AzureRetentionRule
 #### Properties
-* **isDefault**: bool:
-* **lifecycles**: [SourceLifeCycle](#sourcelifecycle)[] (Required):
+* **isDefault**: bool
+* **lifecycles**: [SourceLifeCycle](#sourcelifecycle)[] (Required)
 * **objectType**: 'AzureRetentionRule' (Required): Azure retention rule
 
 
@@ -293,15 +293,15 @@ and should be part of AbsoluteMarker enum
 
 ## AzureRetentionRule
 ### Properties
-* **isDefault**: bool:
-* **lifecycles**: [SourceLifeCycle](#sourcelifecycle)[] (Required):
+* **isDefault**: bool
+* **lifecycles**: [SourceLifeCycle](#sourcelifecycle)[] (Required)
 * **objectType**: 'AzureRetentionRule' (Required): Azure retention rule
 
 ## SourceLifeCycle
 ### Properties
 * **deleteAfter**: [DeleteOption](#deleteoption) (Required): Delete Option
 * **sourceDataStore**: [DataStoreInfoBase](#datastoreinfobase) (Required): DataStoreInfo base
-* **targetDataStoreCopySettings**: [TargetCopySetting](#targetcopysetting)[]:
+* **targetDataStoreCopySettings**: [TargetCopySetting](#targetcopysetting)[]
 
 ## DeleteOption
 * **Discriminator**: objectType

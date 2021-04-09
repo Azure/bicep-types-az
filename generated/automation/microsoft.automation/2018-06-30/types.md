@@ -93,7 +93,7 @@
 ### Properties
 * **creationTime**: string (ReadOnly): Gets or sets the creation time.
 * **description**: string: Gets or sets the description of the runbook.
-* **draft**: [RunbookDraft](#runbookdraft):
+* **draft**: [RunbookDraft](#runbookdraft)
 * **jobCount**: int (ReadOnly): Gets or sets the job count of the runbook.
 * **lastModifiedBy**: string (ReadOnly): Gets or sets the last modified by.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.

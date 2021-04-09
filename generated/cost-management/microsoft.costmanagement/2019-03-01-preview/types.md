@@ -105,9 +105,9 @@
 ### Properties
 * **benefits**: 'AHUB' | 'All' | 'None' | 'Reservations'[]: Array of benefits.
 * **markups**: [Markup](#markup)[]: List of markups.
-* **pricesheet**: string:
+* **pricesheet**: string
 
 ## Markup
 ### Properties
-* **percentage**: string:
+* **percentage**: string
 

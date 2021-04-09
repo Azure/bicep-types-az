@@ -62,16 +62,16 @@
 * **clusterCodeVersion**: string: The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
 * **clusterEndpoint**: string (ReadOnly): The Azure Resource Provider endpoint. A system service in the cluster connects to this  endpoint.
 * **clusterId**: string (ReadOnly): A service generated unique identifier for the cluster resource.
-* **clusterState**: 'AutoScale' | 'BaselineUpgrade' | 'Deploying' | 'EnforcingClusterVersion' | 'Ready' | 'UpdatingInfrastructure' | 'UpdatingUserCertificate' | 'UpdatingUserConfiguration' | 'UpgradeServiceUnreachable' | 'WaitingForNodes':
+* **clusterState**: 'AutoScale' | 'BaselineUpgrade' | 'Deploying' | 'EnforcingClusterVersion' | 'Ready' | 'UpdatingInfrastructure' | 'UpdatingUserCertificate' | 'UpdatingUserConfiguration' | 'UpgradeServiceUnreachable' | 'WaitingForNodes'
 * **diagnosticsStorageAccountConfig**: [DiagnosticsStorageAccountConfig](#diagnosticsstorageaccountconfig): The storage account information for storing Service Fabric diagnostic logs.
 * **fabricSettings**: [SettingsSectionDescription](#settingssectiondescription)[]: The list of custom fabric settings to configure the cluster.
 * **managementEndpoint**: string (Required): The http management endpoint of the cluster.
 * **nodeTypes**: [NodeTypeDescription](#nodetypedescription)[] (Required): The list of node types in the cluster.
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the cluster resource.
-* **reliabilityLevel**: 'Bronze' | 'Gold' | 'None' | 'Platinum' | 'Silver':
+* **reliabilityLevel**: 'Bronze' | 'Gold' | 'None' | 'Platinum' | 'Silver'
 * **reverseProxyCertificate**: [CertificateDescription](#certificatedescription): Describes the certificate details.
 * **upgradeDescription**: [ClusterUpgradePolicy](#clusterupgradepolicy): Describes the policy used when upgrading the cluster.
-* **upgradeMode**: 'Automatic' | 'Manual':
+* **upgradeMode**: 'Automatic' | 'Manual'
 * **vmImage**: string: The VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.
 
 ## ClusterVersionDetails
@@ -126,7 +126,7 @@
 * **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
 * **capacities**: [Dictionary<string,String>](#dictionarystringstring): The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
 * **clientConnectionEndpointPort**: int (Required): The TCP cluster management endpoint port.
-* **durabilityLevel**: 'Bronze' | 'Gold' | 'Silver':
+* **durabilityLevel**: 'Bronze' | 'Gold' | 'Silver'
 * **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
 * **httpGatewayEndpointPort**: int (Required): The HTTP cluster management endpoint port.
 * **isPrimary**: bool (Required): The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
@@ -197,18 +197,15 @@ This is the maximum Load for an instance of this application on a single node. E
 If set to zero, capacity for this metric is unlimited on each node.
 When creating a new application with application capacity defined, the product of MaximumNodes and this value must always be smaller than or equal to TotalApplicationCapacity.
 When updating existing application with application capacity, the product of MaximumNodes and this value must always be smaller than or equal to TotalApplicationCapacity.
-
 * **Name**: string: The name of the metric.
 * **ReservationCapacity**: int: The node reservation capacity for Service Fabric application.
 This is the amount of load which is reserved on nodes which have instances of this application.
 If MinimumNodes is specified, then the product of these values will be the capacity reserved in the cluster for the application.
 If set to zero, no capacity is reserved for this metric.
 When setting application capacity or when updating application capacity; this value must be smaller than or equal to MaximumCapacity for each metric.
-
 * **TotalApplicationCapacity**: int: The total metric capacity for Service Fabric application.
 This is the total metric capacity for this application in the cluster. Service Fabric will try to limit the sum of loads of services within the application to this value.
 When creating a new application with application capacity defined, the product of MaximumNodes and MaximumCapacity must always be smaller than or equal to this value.
-
 
 ## Dictionary<string,String>
 ### Properties
@@ -218,7 +215,6 @@ When creating a new application with application capacity defined, the product o
 ## ApplicationUpgradePolicy
 ### Properties
 * **applicationHealthPolicy**: [ArmApplicationHealthPolicy](#armapplicationhealthpolicy): Defines a health policy used to evaluate the health of an application or one of its children entities.
-
 * **forceRestart**: bool: If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
 * **rollingUpgradeMonitoringPolicy**: [ArmRollingUpgradeMonitoringPolicy](#armrollingupgrademonitoringpolicy): The policy used for monitoring the application upgrade
 * **upgradeReplicaSetCheckTimeout**: string: The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).
@@ -227,12 +223,10 @@ When creating a new application with application capacity defined, the product o
 ### Properties
 * **ConsiderWarningAsError**: bool: Indicates whether warnings are treated with the same severity as errors.
 * **DefaultServiceTypeHealthPolicy**: [ArmServiceTypeHealthPolicy](#armservicetypehealthpolicy): Represents the health policy used to evaluate the health of services belonging to a service type.
-
 * **MaxPercentUnhealthyDeployedApplications**: int: The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.
 The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.
 This is calculated by dividing the number of unhealthy deployed applications over the number of nodes where the application is currently deployed on in the cluster.
 The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
-
 * **ServiceTypeHealthPolicyMap**: [Dictionary<string,ArmServiceTypeHealthPolicy>](#dictionarystringarmservicetypehealthpolicy): Defines a ServiceTypeHealthPolicy per service type name.
 
 The entries in the map replace the default service type health policy for each specified service type.
@@ -241,15 +235,11 @@ With policy per service type, there's more granular control of the health of the
 
 If no policy is specified for a service type name, the DefaultServiceTypeHealthPolicy is used for evaluation.
 
-
 ## ArmServiceTypeHealthPolicy
 ### Properties
 * **maxPercentUnhealthyPartitionsPerService**: int: The maximum percentage of partitions per service allowed to be unhealthy before your application is considered in error.
-
 * **maxPercentUnhealthyReplicasPerPartition**: int: The maximum percentage of replicas per partition allowed to be unhealthy before your application is considered in error.
-
 * **maxPercentUnhealthyServices**: int: The maximum percentage of services allowed to be unhealthy before your application is considered in error.
-
 
 ## Dictionary<string,ArmServiceTypeHealthPolicy>
 ### Properties
@@ -315,10 +305,8 @@ If no policy is specified for a service type name, the DefaultServiceTypeHealthP
 * **Count**: int (Required): The number of partitions.
 * **HighKey**: string (Required): String indicating the upper bound of the partition key range that
 should be split between the partition ‘Count’
-
 * **LowKey**: string (Required): String indicating the lower bound of the partition key range that
 should be split between the partition ‘Count’
-
 * **PartitionScheme**: 'UniformInt64Range' (Required): Describes a partitioning scheme where an integer range is allocated evenly across a number of partitions.
 
 
@@ -337,10 +325,8 @@ should be split between the partition ‘Count’
 * **Count**: int (Required): The number of partitions.
 * **HighKey**: string (Required): String indicating the upper bound of the partition key range that
 should be split between the partition ‘Count’
-
 * **LowKey**: string (Required): String indicating the lower bound of the partition key range that
 should be split between the partition ‘Count’
-
 * **PartitionScheme**: 'UniformInt64Range' (Required): Describes a partitioning scheme where an integer range is allocated evenly across a number of partitions.
 
 ## ServiceLoadMetricDescription

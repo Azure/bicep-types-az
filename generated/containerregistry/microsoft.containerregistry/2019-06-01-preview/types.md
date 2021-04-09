@@ -136,7 +136,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
 ### TaskRunRequest
 #### Properties
-* **overrideTaskStepProperties**: [OverrideTaskStepProperties](#overridetaskstepproperties):
+* **overrideTaskStepProperties**: [OverrideTaskStepProperties](#overridetaskstepproperties)
 * **taskId**: string (Required): The resource ID of task against which run has to be queued.
 * **type**: 'TaskRunRequest' (Required): The parameters for a task run request.
 
@@ -243,7 +243,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
 ## TaskRunRequest
 ### Properties
-* **overrideTaskStepProperties**: [OverrideTaskStepProperties](#overridetaskstepproperties):
+* **overrideTaskStepProperties**: [OverrideTaskStepProperties](#overridetaskstepproperties)
 * **taskId**: string (Required): The resource ID of task against which run has to be queued.
 * **type**: 'TaskRunRequest' (Required): The parameters for a task run request.
 
@@ -287,7 +287,7 @@ executing a build step.
 * **startTime**: string: The time the run started.
 * **status**: 'Canceled' | 'Error' | 'Failed' | 'Queued' | 'Running' | 'Started' | 'Succeeded' | 'Timeout': The current status of the run.
 * **task**: string: The task against which run was scheduled.
-* **timerTrigger**: [TimerTriggerDescriptor](#timertriggerdescriptor):
+* **timerTrigger**: [TimerTriggerDescriptor](#timertriggerdescriptor)
 * **updateTriggerToken**: string: The update trigger token passed for the Run.
 
 ## ImageUpdateTrigger

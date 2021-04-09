@@ -76,12 +76,12 @@
 ### HDInsight
 #### Properties
 * **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:17_properties](#schemas17properties):
+* **properties**: [schemas:17_properties](#schemas17properties)
 
 ### VirtualMachine
 #### Properties
 * **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:17_properties](#schemas17properties):
+* **properties**: [schemas:17_properties](#schemas17properties)
 
 
 ## MachineLearningServiceError
@@ -149,7 +149,7 @@
 ## HDInsight
 ### Properties
 * **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:17_properties](#schemas17properties):
+* **properties**: [schemas:17_properties](#schemas17properties)
 
 ## schemas:17_properties
 ### Properties
@@ -168,7 +168,7 @@
 ## VirtualMachine
 ### Properties
 * **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:17_properties](#schemas17properties):
+* **properties**: [schemas:17_properties](#schemas17properties)
 
 ## Dictionary<string,String>
 ### Properties

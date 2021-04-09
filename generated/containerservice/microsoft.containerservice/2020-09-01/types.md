@@ -9,7 +9,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedClusterProperties](#managedclusterproperties): Properties of the managed cluster.
-* **sku**: [ManagedClusterSKU](#managedclustersku):
+* **sku**: [ManagedClusterSKU](#managedclustersku)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -160,22 +160,22 @@
 
 ## schemas:30_autoScalerProfile
 ### Properties
-* **balance-similar-node-groups**: string:
-* **expander**: 'least-waste' | 'most-pods' | 'random':
-* **max-empty-bulk-delete**: string:
-* **max-graceful-termination-sec**: string:
-* **max-total-unready-percentage**: string:
-* **new-pod-scale-up-delay**: string:
-* **ok-total-unready-count**: string:
-* **scale-down-delay-after-add**: string:
-* **scale-down-delay-after-delete**: string:
-* **scale-down-delay-after-failure**: string:
-* **scale-down-unneeded-time**: string:
-* **scale-down-unready-time**: string:
-* **scale-down-utilization-threshold**: string:
-* **scan-interval**: string:
-* **skip-nodes-with-local-storage**: string:
-* **skip-nodes-with-system-pods**: string:
+* **balance-similar-node-groups**: string
+* **expander**: 'least-waste' | 'most-pods' | 'random'
+* **max-empty-bulk-delete**: string
+* **max-graceful-termination-sec**: string
+* **max-total-unready-percentage**: string
+* **new-pod-scale-up-delay**: string
+* **ok-total-unready-count**: string
+* **scale-down-delay-after-add**: string
+* **scale-down-delay-after-delete**: string
+* **scale-down-delay-after-failure**: string
+* **scale-down-unneeded-time**: string
+* **scale-down-unready-time**: string
+* **scale-down-utilization-threshold**: string
+* **scan-interval**: string
+* **skip-nodes-with-local-storage**: string
+* **skip-nodes-with-system-pods**: string
 
 ## Dictionary<string,Schemas30IdentityProfileValue>
 ### Properties

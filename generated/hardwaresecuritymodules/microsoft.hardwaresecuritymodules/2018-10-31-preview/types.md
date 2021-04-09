@@ -8,14 +8,14 @@
 * **location**: string (Required): The supported Azure location where the dedicated HSM should be created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DedicatedHsmProperties](#dedicatedhsmproperties) (Required): Properties of the dedicated hsm
-* **sku**: [Sku](#sku):
+* **sku**: [Sku](#sku)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.HardwareSecurityModules/dedicatedHSMs' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The Dedicated Hsm zones.
 
 ## DedicatedHsmProperties
 ### Properties
-* **networkProfile**: [NetworkProfile](#networkprofile):
+* **networkProfile**: [NetworkProfile](#networkprofile)
 * **provisioningState**: 'Allocating' | 'CheckingQuota' | 'Connecting' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
 * **stampId**: string: This field will be used when RP does not support Availability zones.
 * **statusMessage**: string (ReadOnly): Resource Status Message.

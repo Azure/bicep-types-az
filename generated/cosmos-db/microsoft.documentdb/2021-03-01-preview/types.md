@@ -1,5 +1,26 @@
 # Microsoft.DocumentDB @ 2021-03-01-preview
 
+## Resource Microsoft.DocumentDB/cassandraClusters@2021-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
+* **location**: string: The location of the resource group to which the resource belongs.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:210_properties](#schemas210properties): Properties of a managed Cassandra cluster.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **type**: 'Microsoft.DocumentDB/cassandraClusters' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DocumentDB/cassandraClusters/dataCenters@2021-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:218_properties](#schemas218properties): Properties of a managed Cassandra data center.
+* **type**: 'Microsoft.DocumentDB/cassandraClusters/dataCenters' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DocumentDB/databaseAccounts@2021-03-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -323,10 +344,50 @@
 * **_users**: string: A system generated property that specifies the addressable path of the users resource.
 * **id**: string (Required): Name of the Cosmos DB SQL database
 
+## schemas:210_properties
+### Properties
+* **authenticationMethod**: 'Cassandra' | 'None': Which authentication method Cassandra should use to authenticate clients. 'None' turns off authentication, so should not be used except in emergencies. 'Cassandra' is the default password based authentication. The default is 'Cassandra'.
+* **cassandraVersion**: string: Which version of Cassandra should this cluster converge to running (e.g., 3.11). When updated, the cluster may take some time to migrate to the new version.
+* **clientCertificates**: [Certificate](#certificate)[]: List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property.
+* **clusterNameOverride**: string: If you need to set the clusterName property in cassandra.yaml to something besides the resource name of the cluster, set the value to use on this property.
+* **delegatedManagementSubnetId**: string: Resource id of a subnet that this cluster's management service should have its network interface attached to. The subnet must be routable to all subnets that will be delegated to data centers. The resource id must be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'
+* **externalGossipCertificates**: [Certificate](#certificate)[]: List of TLS certificates used to authorize gossip from unmanaged data centers. The TLS certificates of all nodes in unmanaged data centers must be verifiable using one of the certificates provided in this property.
+* **externalSeedNodes**: [SeedNode](#seednode)[]: List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.
+* **gossipCertificates**: [Certificate](#certificate)[] (ReadOnly): List of TLS certificates that unmanaged nodes must trust for gossip with managed nodes. All managed nodes will present TLS client certificates that are verifiable using one of the certificates provided in this property.
+* **hoursBetweenBackups**: int: Number of hours to wait between taking a backup of the cluster. To disable backups, set this property to 0.
+* **initialCassandraAdminPassword**: string: Initial password for clients connecting as admin to the cluster. Should be changed after cluster creation. Returns null on GET. This field only applies when the authenticationMethod field is 'Cassandra'.
+* **prometheusEndpoint**: [SeedNode](#seednode)
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
+* **repairEnabled**: bool: Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.
+* **restoreFromBackupId**: string: To create an empty cluster, omit this field or set it to null. To restore a backup into a new cluster, set this field to the resource id of the backup.
+* **seedNodes**: [SeedNode](#seednode)[] (ReadOnly): List of IP addresses of seed nodes in the managed data centers. These should be added to the seed node lists of all unmanaged nodes.
+
+## Certificate
+### Properties
+* **pem**: string: PEM formatted public key.
+
+## SeedNode
+### Properties
+* **ipAddress**: string: IP address of this seed node.
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## schemas:218_properties
+### Properties
+* **base64EncodedCassandraYamlFragment**: string: A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.
+* **dataCenterLocation**: string: The region this data center should be created in.
+* **delegatedSubnetId**: string: Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.
+* **nodeCount**: int: The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating'
+* **seedNodes**: [SeedNode](#seednode)[] (ReadOnly): IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.
+
 ## DatabaseAccountCreateUpdateProperties
 * **Discriminator**: createMode
 ### Base Properties
-* **apiProperties**: [ApiProperties](#apiproperties):
+* **apiProperties**: [ApiProperties](#apiproperties)
 * **backupPolicy**: [BackupPolicy](#backuppolicy): The object representing the policy for taking backups on an account.
 * **capabilities**: [Capability](#capability)[]: List of Cosmos DB capabilities for the account
 * **connectorOffer**: 'Small': The cassandra connector offer type for the Cosmos DB database C* account.
@@ -511,7 +572,7 @@
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
 * **_ts**: int (ReadOnly): A system generated property that denotes the last updated timestamp of the resource.
 * **_users**: string (ReadOnly): A system generated property that specifies the addressable path of the users resource.
-* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings) (WriteOnly):
+* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings) (WriteOnly)
 * **id**: string (ReadOnly): Name of the Cosmos DB SQL database
 * **throughput**: int (WriteOnly): Request Units per second. For example, "throughput": 10000.
 

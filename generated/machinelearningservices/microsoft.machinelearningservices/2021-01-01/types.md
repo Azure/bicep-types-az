@@ -74,7 +74,7 @@
 * **appInsightsEnabled**: bool (WriteOnly): Whether or not Application Insights is enabled.
 * **authEnabled**: bool (WriteOnly): Whether or not authentication is enabled on the service.
 * **cname**: string (WriteOnly): The CName for the service.
-* **computeType**: 'ACI' (Required):
+* **computeType**: 'ACI' (Required)
 * **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): The resource requirements for the container (cpu and memory).
 * **dataCollection**: [schemas:91_dataCollection](#schemas91datacollection) (WriteOnly): Details of the data collection options specified.
 * **dnsNameLabel**: string (WriteOnly): The Dns label for the service.
@@ -117,17 +117,17 @@
 * **containerRegistry**: string: ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
 * **description**: string: The description of this workspace.
 * **discoveryUrl**: string: Url for the discovery service to identify regional endpoints for machine learning experimentation services
-* **encryption**: [EncryptionProperty](#encryptionproperty):
+* **encryption**: [EncryptionProperty](#encryptionproperty)
 * **friendlyName**: string: The friendly name for this workspace. This name in mutable
 * **hbiWorkspace**: bool: The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
 * **imageBuildCompute**: string: The compute name for image build
 * **keyVault**: string: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
-* **notebookInfo**: [NotebookResourceInfo](#notebookresourceinfo) (ReadOnly):
+* **notebookInfo**: [NotebookResourceInfo](#notebookresourceinfo) (ReadOnly)
 * **primaryUserAssignedIdentity**: string: The user assigned identity resource id that represents the workspace identity.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections in the workspace.
 * **privateLinkCount**: int (ReadOnly): Count of private connections in the workspace
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
-* **serviceManagedResourcesSettings**: [ServiceManagedResourcesSettings](#servicemanagedresourcessettings):
+* **serviceManagedResourcesSettings**: [ServiceManagedResourcesSettings](#servicemanagedresourcessettings)
 * **serviceProvisionedResourceGroup**: string (ReadOnly): The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
 * **sharedPrivateLinkResources**: [SharedPrivateLinkResource](#sharedprivatelinkresource)[]: The list of shared private link resources in this workspace.
 * **storageAccount**: string: ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
@@ -136,7 +136,7 @@
 ## EncryptionProperty
 ### Properties
 * **identity**: [IdentityForCmk](#identityforcmk): Identity that will be used to access key vault for encryption at rest
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required):
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required)
 * **status**: 'Disabled' | 'Enabled' (Required): Indicates whether or not the encryption is enabled for the workspace.
 
 ## IdentityForCmk
@@ -151,14 +151,14 @@
 
 ## NotebookResourceInfo
 ### Properties
-* **fqdn**: string:
-* **notebookPreparationError**: [NotebookPreparationError](#notebookpreparationerror):
+* **fqdn**: string
+* **notebookPreparationError**: [NotebookPreparationError](#notebookpreparationerror)
 * **resourceId**: string: the data plane resourceId that used to initialize notebook component
 
 ## NotebookPreparationError
 ### Properties
-* **errorMessage**: string:
-* **statusCode**: int:
+* **errorMessage**: string
+* **statusCode**: int
 
 ## PrivateEndpointConnection
 ### Properties
@@ -210,7 +210,7 @@
 
 ## ServiceManagedResourcesSettings
 ### Properties
-* **cosmosDb**: [CosmosDbSettings](#cosmosdbsettings):
+* **cosmosDb**: [CosmosDbSettings](#cosmosdbsettings)
 
 ## CosmosDbSettings
 ### Properties
@@ -260,7 +260,7 @@
 ### Databricks
 #### Properties
 * **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:38_properties](#schemas38properties):
+* **properties**: [schemas:38_properties](#schemas38properties)
 
 ### DataFactory
 #### Properties
@@ -269,17 +269,17 @@
 ### DataLakeAnalytics
 #### Properties
 * **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:38_properties](#schemas38properties):
+* **properties**: [schemas:38_properties](#schemas38properties)
 
 ### HDInsight
 #### Properties
 * **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:38_properties](#schemas38properties):
+* **properties**: [schemas:38_properties](#schemas38properties)
 
 ### VirtualMachine
 #### Properties
 * **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:38_properties](#schemas38properties):
+* **properties**: [schemas:38_properties](#schemas38properties)
 
 
 ## MachineLearningServiceError
@@ -463,7 +463,7 @@
 ## Databricks
 ### Properties
 * **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:38_properties](#schemas38properties):
+* **properties**: [schemas:38_properties](#schemas38properties)
 
 ## schemas:38_properties
 ### Properties
@@ -486,17 +486,17 @@
 ## DataLakeAnalytics
 ### Properties
 * **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:38_properties](#schemas38properties):
+* **properties**: [schemas:38_properties](#schemas38properties)
 
 ## HDInsight
 ### Properties
 * **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:38_properties](#schemas38properties):
+* **properties**: [schemas:38_properties](#schemas38properties)
 
 ## VirtualMachine
 ### Properties
 * **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:38_properties](#schemas38properties):
+* **properties**: [schemas:38_properties](#schemas38properties)
 
 ## Dictionary<string,String>
 ### Properties
@@ -551,9 +551,9 @@
 
 ## schemas:106_baseImageRegistry
 ### Properties
-* **address**: string (WriteOnly):
-* **password**: string (WriteOnly):
-* **username**: string (WriteOnly):
+* **address**: string (WriteOnly)
+* **password**: string (WriteOnly)
+* **username**: string (WriteOnly)
 
 ## Dictionary<string,String>
 ### Properties
@@ -562,7 +562,7 @@
 
 ## schemas:100_python
 ### Properties
-* **baseCondaEnvironment**: string (WriteOnly):
+* **baseCondaEnvironment**: string (WriteOnly)
 * **condaDependencies**: any (WriteOnly): A JObject containing Conda dependencies.
 * **interpreterPath**: string (WriteOnly): The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
 * **userManagedDependencies**: bool (WriteOnly): True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
@@ -597,9 +597,9 @@ The path specified gets used to call the user script.
 
 ## SparkMavenPackage
 ### Properties
-* **artifact**: string (WriteOnly):
-* **group**: string (WriteOnly):
-* **version**: string (WriteOnly):
+* **artifact**: string (WriteOnly)
+* **group**: string (WriteOnly)
+* **version**: string (WriteOnly)
 
 ## schemas:97_environmentReference
 ### Properties
@@ -683,7 +683,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **appInsightsEnabled**: bool (WriteOnly): Whether or not Application Insights is enabled.
 * **authEnabled**: bool (WriteOnly): Whether or not authentication is enabled on the service.
 * **cname**: string (WriteOnly): The CName for the service.
-* **computeType**: 'ACI' (Required):
+* **computeType**: 'ACI' (Required)
 * **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): The resource requirements for the container (cpu and memory).
 * **dataCollection**: [schemas:91_dataCollection](#schemas91datacollection) (WriteOnly): Details of the data collection options specified.
 * **dnsNameLabel**: string (WriteOnly): The Dns label for the service.

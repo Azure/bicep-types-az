@@ -91,7 +91,7 @@
 
 ## OperationsMonitoringProperties
 ### Properties
-* **events**: [Dictionary<string,OperationMonitoringLevel>](#dictionarystringoperationmonitoringlevel):
+* **events**: [Dictionary<string,OperationMonitoringLevel>](#dictionarystringoperationmonitoringlevel)
 
 ## Dictionary<string,OperationMonitoringLevel>
 ### Properties

@@ -169,10 +169,9 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the managed identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id of the managed identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned':
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned'
 * **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-
 
 ## Dictionary<string,UserAssignedIdentity>
 ### Properties
@@ -193,7 +192,6 @@
 * **version**: string: The version of the application type as defined in the application manifest.
 This name must be the full Arm Resource ID for the referenced application type version.
 
-
 ## ApplicationUserAssignedIdentity
 ### Properties
 * **name**: string (Required): The friendly name of user assigned identity.
@@ -207,24 +205,21 @@ This name must be the full Arm Resource ID for the referenced application type v
 ## ApplicationUpgradePolicy
 ### Properties
 * **applicationHealthPolicy**: [ApplicationHealthPolicy](#applicationhealthpolicy): Defines a health policy used to evaluate the health of an application or one of its children entities.
-
 * **forceRestart**: bool: If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
 * **instanceCloseDelayDuration**: int: Duration in seconds, to wait before a stateless instance is closed, to allow the active requests to drain gracefully. This would be effective when the instance is closing during the application/cluster upgrade, only for those instances which have a non-zero delay duration configured in the service description. See InstanceCloseDelayDurationSeconds property in StatelessServiceDescription for details. Note, the default value of InstanceCloseDelayDurationInSeconds is 4294967295, which indicates that the behavior will entirely depend on the delay configured in the stateless service description.
 * **recreateApplication**: bool: Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed.
 * **rollingUpgradeMonitoringPolicy**: [RollingUpgradeMonitoringPolicy](#rollingupgrademonitoringpolicy): The policy used for monitoring the application upgrade
-* **upgradeMode**: 'Monitored' | 'UnmonitoredAuto':
+* **upgradeMode**: 'Monitored' | 'UnmonitoredAuto'
 * **upgradeReplicaSetCheckTimeout**: int: The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).
 
 ## ApplicationHealthPolicy
 ### Properties
 * **considerWarningAsError**: bool (Required): Indicates whether warnings are treated with the same severity as errors.
 * **defaultServiceTypeHealthPolicy**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy): Represents the health policy used to evaluate the health of services belonging to a service type.
-
 * **maxPercentUnhealthyDeployedApplications**: int (Required): The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.
 The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.
 This is calculated by dividing the number of unhealthy deployed applications over the number of nodes where the application is currently deployed on in the cluster.
 The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
-
 * **serviceTypeHealthPolicyMap**: [Dictionary<string,ServiceTypeHealthPolicy>](#dictionarystringservicetypehealthpolicy): Defines a ServiceTypeHealthPolicy per service type name.
 
 The entries in the map replace the default service type health policy for each specified service type.
@@ -232,7 +227,6 @@ For example, in an application that contains both a stateless gateway service ty
 With policy per service type, there's more granular control of the health of the service.
 
 If no policy is specified for a service type name, the DefaultServiceTypeHealthPolicy is used for evaluation.
-
 
 ## ServiceTypeHealthPolicy
 ### Properties
@@ -242,21 +236,18 @@ The percentage represents the maximum tolerated percentage of partitions that ca
 If the percentage is respected but there is at least one unhealthy partition, the health is evaluated as Warning.
 The percentage is calculated by dividing the number of unhealthy partitions over the total number of partitions in the service.
 The computation rounds up to tolerate one failure on small numbers of partitions.
-
 * **maxPercentUnhealthyReplicasPerPartition**: int (Required): The maximum allowed percentage of unhealthy replicas per partition.
 
 The percentage represents the maximum tolerated percentage of replicas that can be unhealthy before the partition is considered in error.
 If the percentage is respected but there is at least one unhealthy replica, the health is evaluated as Warning.
 The percentage is calculated by dividing the number of unhealthy replicas over the total number of replicas in the partition.
 The computation rounds up to tolerate one failure on small numbers of replicas.
-
 * **maxPercentUnhealthyServices**: int (Required): The maximum allowed percentage of unhealthy services.
 
 The percentage represents the maximum tolerated percentage of services that can be unhealthy before the application is considered in error.
 If the percentage is respected but there is at least one unhealthy service, the health is evaluated as Warning.
 This is calculated by dividing the number of unhealthy services of the specific service type over the total number of services of the specific service type.
 The computation rounds up to tolerate one failure on small numbers of services.
-
 
 ## Dictionary<string,ServiceTypeHealthPolicy>
 ### Properties
@@ -281,7 +272,7 @@ The computation rounds up to tolerate one failure on small numbers of services.
 * **Discriminator**: serviceKind
 ### Base Properties
 * **correlationScheme**: [ServiceCorrelation](#servicecorrelation)[]: A list that describes the correlation of the service with other services.
-* **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero':
+* **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero'
 * **partitionDescription**: [Partition](#partition) (Required): Describes how the service is partitioned.
 * **placementConstraints**: string: The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response
@@ -334,10 +325,8 @@ The computation rounds up to tolerate one failure on small numbers of services.
 * **count**: int (Required): The number of partitions.
 * **highKey**: int (Required): The upper bound of the partition key range that
 should be split between the partition ‘Count’
-
 * **lowKey**: int (Required): The lower bound of the partition key range that
 should be split between the partition ‘Count’
-
 * **partitionScheme**: 'UniformInt64Range' (Required): Describes a partitioning scheme where an integer range is allocated evenly across a number of partitions.
 
 
@@ -355,10 +344,8 @@ should be split between the partition ‘Count’
 * **count**: int (Required): The number of partitions.
 * **highKey**: int (Required): The upper bound of the partition key range that
 should be split between the partition ‘Count’
-
 * **lowKey**: int (Required): The lower bound of the partition key range that
 should be split between the partition ‘Count’
-
 * **partitionScheme**: 'UniformInt64Range' (Required): Describes a partitioning scheme where an integer range is allocated evenly across a number of partitions.
 
 ## ScalingPolicy
@@ -466,7 +453,6 @@ be located in a particular fault domain, which in geo-distributed scenarios usua
 or datacenter boundaries. Note that since this is an optimization it is possible that the Primary replica
 may not end up located in this domain due to failures, capacity limits, or other constraints.
 
-
 ### RequiredDomain
 #### Properties
 * **domainName**: string (Required): The name of the domain that should used for placement as per this policy.
@@ -484,7 +470,6 @@ a case where replicas are deployed across different data center, with one replic
 In the event that one of the datacenters goes offline, normally the replica that was placed in that
 datacenter will be packed into one of the remaining datacenters. If this is not desirable then this
 policy should be set.
-
 
 
 ## InvalidDomain
@@ -508,7 +493,6 @@ be located in a particular fault domain, which in geo-distributed scenarios usua
 or datacenter boundaries. Note that since this is an optimization it is possible that the Primary replica
 may not end up located in this domain due to failures, capacity limits, or other constraints.
 
-
 ## RequiredDomain
 ### Properties
 * **domainName**: string (Required): The name of the domain that should used for placement as per this policy.
@@ -526,7 +510,6 @@ a case where replicas are deployed across different data center, with one replic
 In the event that one of the datacenters goes offline, normally the replica that was placed in that
 datacenter will be packed into one of the remaining datacenters. If this is not desirable then this
 policy should be set.
-
 
 ## Stateful
 ### Properties

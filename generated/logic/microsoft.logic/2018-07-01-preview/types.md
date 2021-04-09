@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: any:
+* **properties**: any
 * **sku**: [IntegrationAccountSku](#integrationaccountsku): The integration account sku.
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts' (ReadOnly, DeployTimeConstant): The resource type
@@ -580,18 +580,18 @@
 * **assemblyPublicKeyToken**: string: The assembly public key token.
 * **assemblyVersion**: string: The assembly version.
 * **changedTime**: string: The artifact changed time.
-* **content**: any:
+* **content**: any
 * **contentLink**: [ContentLink](#contentlink): The content link.
 * **contentType**: string: The content type.
 * **createdTime**: string: The artifact creation time.
-* **metadata**: any:
+* **metadata**: any
 
 ## ContentLink
 ### Properties
 * **contentHash**: [ContentHash](#contenthash): The content hash.
 * **contentSize**: int: The content size.
 * **contentVersion**: string: The content version.
-* **metadata**: any:
+* **metadata**: any
 * **uri**: string: The content link URI.
 
 ## ContentHash
@@ -609,7 +609,7 @@
 * **batchGroupName**: string (Required): The name of the batch group.
 * **changedTime**: string: The artifact changed time.
 * **createdTime**: string: The artifact creation time.
-* **metadata**: any:
+* **metadata**: any
 * **releaseCriteria**: [BatchReleaseCriteria](#batchreleasecriteria) (Required): The batch release criteria.
 
 ## BatchReleaseCriteria
@@ -732,7 +732,7 @@
 ## IntegrationAccountSessionProperties
 ### Properties
 * **changedTime**: string (ReadOnly): The changed time.
-* **content**: any:
+* **content**: any
 * **createdTime**: string (ReadOnly): The created time.
 
 ## Dictionary<string,String>
@@ -745,7 +745,7 @@
 * **accessEndpoint**: string (ReadOnly): Gets the access endpoint.
 * **changedTime**: string (ReadOnly): Gets the changed time.
 * **createdTime**: string (ReadOnly): Gets the created time.
-* **definition**: any:
+* **definition**: any
 * **integrationAccount**: [ResourceReference](#resourcereference): The resource reference.
 * **parameters**: [Dictionary<string,WorkflowParameter>](#dictionarystringworkflowparameter): The parameters.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'NotSpecified' | 'Ready' | 'Registered' | 'Registering' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' (ReadOnly): Gets the provisioning state.
@@ -767,9 +767,9 @@
 ## WorkflowParameter
 ### Properties
 * **description**: string: The description.
-* **metadata**: any:
+* **metadata**: any
 * **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String': The type.
-* **value**: any:
+* **value**: any
 
 ## Sku
 ### Properties

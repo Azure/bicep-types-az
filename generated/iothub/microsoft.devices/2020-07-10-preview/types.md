@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-07-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ArmIdentity](#armidentity):
+* **identity**: [ArmIdentity](#armidentity)
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IotHubProperties](#iothubproperties): The properties of an IoT hub.
@@ -48,7 +48,7 @@
 * **identityType**: string: Identity type. Only allowed values are SystemAssigned and UserAssigned. Comma separated if both for ex: SystemAssigned,UserAssigned
 * **principalId**: string (ReadOnly): Principal Id
 * **tenantId**: string (ReadOnly): Tenant Id
-* **userAssignedIdentities**: [Dictionary<string,ArmUserIdentity>](#dictionarystringarmuseridentity):
+* **userAssignedIdentities**: [Dictionary<string,ArmUserIdentity>](#dictionarystringarmuseridentity)
 
 ## Dictionary<string,ArmUserIdentity>
 ### Properties
@@ -57,8 +57,8 @@
 
 ## ArmUserIdentity
 ### Properties
-* **clientId**: string (ReadOnly):
-* **principalId**: string (ReadOnly):
+* **clientId**: string (ReadOnly)
+* **principalId**: string (ReadOnly)
 
 ## IotHubProperties
 ### Properties

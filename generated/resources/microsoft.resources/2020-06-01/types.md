@@ -124,7 +124,7 @@
 
 ## Alias
 ### Properties
-* **defaultMetadata**: [AliasPathMetadata](#aliaspathmetadata) (ReadOnly):
+* **defaultMetadata**: [AliasPathMetadata](#aliaspathmetadata) (ReadOnly)
 * **defaultPath**: string (ReadOnly): The default path for an alias.
 * **defaultPattern**: [AliasPattern](#aliaspattern) (ReadOnly): The type of the pattern for an alias path.
 * **name**: string (ReadOnly): The alias name.
@@ -145,7 +145,7 @@
 ## AliasPath
 ### Properties
 * **apiVersions**: string[] (ReadOnly): The API versions.
-* **metadata**: [AliasPathMetadata](#aliaspathmetadata) (ReadOnly):
+* **metadata**: [AliasPathMetadata](#aliaspathmetadata) (ReadOnly)
 * **path**: string (ReadOnly): The path of an alias.
 * **pattern**: [AliasPattern](#aliaspattern) (ReadOnly): The type of the pattern for an alias path.
 
@@ -182,7 +182,7 @@
 
 ## Tags
 ### Properties
-* **tags**: [Dictionary<string,String>](#dictionarystringstring):
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 
 ## Dictionary<string,String>
 ### Properties

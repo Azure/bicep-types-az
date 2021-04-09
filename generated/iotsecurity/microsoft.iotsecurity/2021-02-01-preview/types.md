@@ -9,6 +9,16 @@
 * **properties**: [DefenderSettingsProperties](#defendersettingsproperties): IoT Defender settings properties
 * **type**: 'Microsoft.IoTSecurity/defenderSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.IoTSecurity/locations/deviceGroups@2021-02-01-preview
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: any: Device group properties
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.IoTSecurity/locations/deviceGroups' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.IoTSecurity/onPremiseSensors@2021-02-01-preview
 * **Valid Scope(s)**: Subscription
 ### Properties
@@ -60,6 +70,7 @@
 * **dynamicLearning**: bool (ReadOnly): Dynamic mode status of the IoT sensor
 * **learningMode**: bool (ReadOnly): Learning mode status of the IoT sensor
 * **sensorStatus**: 'Disconnected' | 'Ok' | 'Unavailable' (ReadOnly): Status of the IoT sensor.
+* **sensorType**: 'Enterprise' | 'Ot': Type of sensor.
 * **sensorVersion**: string (ReadOnly): Version of the IoT sensor
 * **tiAutomaticUpdates**: bool: TI Automatic mode status of the IoT sensor
 * **tiStatus**: 'Failed' | 'InProgress' | 'Ok' | 'UpdateAvailable' (ReadOnly): TI Status of the IoT sensor.

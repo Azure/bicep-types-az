@@ -27,7 +27,7 @@
 ### Properties
 * **apiVersion**: '2020-08-08-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [OrchestratorIdentity](#orchestratoridentity):
+* **identity**: [OrchestratorIdentity](#orchestratoridentity)
 * **kind**: string (Required): The kind of workbook. Choices are user and shared.
 * **location**: string: Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name

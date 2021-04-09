@@ -161,7 +161,7 @@
 
 ## Tags
 ### Properties
-* **tags**: [Dictionary<string,String>](#dictionarystringstring):
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 
 ## Dictionary<string,String>
 ### Properties

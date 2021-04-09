@@ -332,7 +332,6 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 
 For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
-
 * **isStorageSecondaryKeyInUse**: bool: Specifies whether storageAccountAccessKey value is the storage's secondary key.
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
@@ -469,7 +468,6 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 
 For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
-
 * **isStorageSecondaryKeyInUse**: bool: Specifies whether storageAccountAccessKey value is the storage's secondary key.
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
@@ -561,7 +559,6 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 
 For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
-
 * **isStorageSecondaryKeyInUse**: bool: Specifies whether storageAccountAccessKey value is the storage's secondary key.
 * **predicateExpression**: string: Specifies condition of where clause when creating an audit.
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
@@ -584,7 +581,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **isDisabled**: bool (ReadOnly): Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
 * **labelId**: string: The label ID.
 * **labelName**: string: The label name.
-* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None':
+* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None'
 
 ## DatabaseVulnerabilityAssessmentProperties
 ### Properties
@@ -681,7 +678,6 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 
 For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
-
 * **isStorageSecondaryKeyInUse**: bool: Specifies whether storageAccountAccessKey value is the storage's secondary key.
 * **predicateExpression**: string: Specifies condition of where clause when creating an audit.
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.

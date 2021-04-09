@@ -27,7 +27,7 @@
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:29_properties](#schemas29properties) (Required):
+* **properties**: [schemas:29_properties](#schemas29properties) (Required)
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DigitalTwinsIdentity
@@ -41,7 +41,7 @@
 * **createdTime**: string (ReadOnly): Time when DigitalTwinsInstance was created.
 * **hostName**: string (ReadOnly): Api endpoint to work with DigitalTwinsInstance.
 * **lastUpdatedTime**: string (ReadOnly): Time when DigitalTwinsInstance was updated.
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]:
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]
 * **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Updating' | 'Warning' (ReadOnly): The provisioning state.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled': Public network access for the DigitalTwinsInstance.
 
@@ -49,14 +49,14 @@
 ### Properties
 * **id**: string (ReadOnly): The resource identifier.
 * **name**: string (ReadOnly): The resource name.
-* **properties**: [schemas:29_properties](#schemas29properties) (Required):
+* **properties**: [schemas:29_properties](#schemas29properties) (Required)
 * **type**: string (ReadOnly): The resource type.
 
 ## schemas:29_properties
 ### Properties
 * **groupIds**: string[]: The list of group ids for the private endpoint connection.
-* **privateEndpoint**: [schemas:29_properties](#schemas29properties):
-* **privateLinkServiceConnectionState**: [schemas:29_properties](#schemas29properties):
+* **privateEndpoint**: [schemas:29_properties](#schemas29properties)
+* **privateLinkServiceConnectionState**: [schemas:29_properties](#schemas29properties)
 * **provisioningState**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (ReadOnly): The provisioning state.
 
 ## Dictionary<string,String>

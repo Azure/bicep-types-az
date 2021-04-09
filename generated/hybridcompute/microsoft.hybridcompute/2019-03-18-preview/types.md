@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2019-03-18-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity):
+* **identity**: [Identity](#identity)
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MachineProperties](#machineproperties): Describes the properties of a hybrid machine.

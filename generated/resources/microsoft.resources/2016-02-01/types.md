@@ -23,7 +23,7 @@
 ## DeploymentProperties
 ### Properties
 * **correlationId**: string (ReadOnly): The correlation ID of the deployment.
-* **debugSetting**: [DebugSetting](#debugsetting):
+* **debugSetting**: [DebugSetting](#debugsetting)
 * **dependencies**: [Dependency](#dependency)[] (ReadOnly): The list of deployment dependencies.
 * **mode**: 'Complete' | 'Incremental' (Required): The deployment mode.
 * **outputs**: any (ReadOnly): Key/value pairs that represent deployment output.

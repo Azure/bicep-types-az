@@ -79,7 +79,7 @@
 
 ## schemas:19_exportPolicy
 ### Properties
-* **rules**: [exportPolicyRule](#exportpolicyrule)[]:
+* **rules**: [exportPolicyRule](#exportpolicyrule)[]
 
 ## exportPolicyRule
 ### Properties

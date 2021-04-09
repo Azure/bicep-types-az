@@ -15,7 +15,7 @@
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (ReadOnly): Resource kind
+* **kind**: string (ReadOnly): Resource kind.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SettingsProperties](#settingsproperties): The properties of the setting.
 * **type**: 'Microsoft.CostManagement/settings' (ReadOnly, DeployTimeConstant): The resource type
@@ -112,7 +112,18 @@
 
 ## SettingsProperties
 ### Properties
-* **scope**: string: For the myscope setting, sets the default scope the current user will see when they sign into Azure Cost Management in the Azure portal.
+* **cache**: [schemas:15Item](#schemas15item)[]: Array of scopes with additional details used by Cost Management in the Azure portal.
+* **scope**: string (Required): Sets the default scope the current user will see when they sign into Azure Cost Management in the Azure portal.
+* **startOn**: 'LastUsed' | 'ScopePicker' | 'SpecificScope': Indicates what scope Cost Management in the Azure portal should default to. Allowed values: LastUsed.
+
+## schemas:15Item
+### Properties
+* **channel**: string (Required): Indicates the account type. Allowed values include: EA, PAYG, Modern, Internal, Unknown.
+* **id**: string (Required): Resource ID used by Resource Manager to uniquely identify the scope.
+* **name**: string (Required): Display name for the scope.
+* **parent**: string: Resource ID of the parent scope. For instance, subscription's resource ID for a resource group or a management group resource ID for a subscription.
+* **status**: string: Indicates the status of the scope. Status only applies to subscriptions and billing accounts.
+* **subchannel**: string (Required): Indicates the type of modern account. Allowed values include: Individual, Enterprise, Partner, Indirect, NotApplicable
 
 ## ViewProperties
 ### Properties

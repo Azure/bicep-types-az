@@ -15,7 +15,7 @@
 
 ## ScheduledQueryRuleProperties
 ### Properties
-* **actions**: [Action](#action)[]:
+* **actions**: [Action](#action)[]
 * **createdWithApiVersion**: string (ReadOnly): The api-version used when creating this alert rule
 * **criteria**: [ScheduledQueryRuleCriteria](#scheduledqueryrulecriteria): The rule criteria that defines the conditions of the scheduled query rule.
 * **description**: string: The description of the scheduled query rule.

@@ -198,7 +198,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 * **isDisabled**: bool (ReadOnly): Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
 * **labelId**: string: The label ID.
 * **labelName**: string: The label name.
-* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None':
+* **rank**: 'Critical' | 'High' | 'Low' | 'Medium' | 'None'
 
 ## ManagedInstanceVulnerabilityAssessmentProperties
 ### Properties
@@ -233,8 +233,8 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 
 ## PrivateEndpointConnectionProperties
 ### Properties
-* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty):
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty):
+* **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty)
 * **provisioningState**: string (ReadOnly): State of the private endpoint connection.
 
 ## PrivateEndpointProperty

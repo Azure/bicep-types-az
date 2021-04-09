@@ -75,7 +75,7 @@
 
 ## schemas:57_tags
 ### Properties
-* **additionalProperties**: string:
+* **additionalProperties**: string
 
 ## SolutionProperties
 ### Properties

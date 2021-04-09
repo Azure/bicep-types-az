@@ -677,18 +677,18 @@
 * **assemblyPublicKeyToken**: string: The assembly public key token.
 * **assemblyVersion**: string: The assembly version.
 * **changedTime**: string: The artifact changed time.
-* **content**: any:
+* **content**: any
 * **contentLink**: [ContentLink](#contentlink): The content link.
 * **contentType**: string: The content type.
 * **createdTime**: string: The artifact creation time.
-* **metadata**: any:
+* **metadata**: any
 
 ## ContentLink
 ### Properties
 * **contentHash**: [ContentHash](#contenthash): The content hash.
 * **contentSize**: int: The content size.
 * **contentVersion**: string: The content version.
-* **metadata**: any:
+* **metadata**: any
 * **uri**: string: The content link URI.
 
 ## ContentHash
@@ -706,7 +706,7 @@
 * **batchGroupName**: string (Required): The name of the batch group.
 * **changedTime**: string: The artifact changed time.
 * **createdTime**: string: The artifact creation time.
-* **metadata**: any:
+* **metadata**: any
 * **releaseCriteria**: [BatchReleaseCriteria](#batchreleasecriteria) (Required): The batch release criteria.
 
 ## BatchReleaseCriteria
@@ -829,7 +829,7 @@
 ## IntegrationAccountSessionProperties
 ### Properties
 * **changedTime**: string (ReadOnly): The changed time.
-* **content**: any:
+* **content**: any
 * **createdTime**: string (ReadOnly): The created time.
 
 ## Dictionary<string,String>
@@ -933,7 +933,7 @@
 * **accessEndpoint**: string (ReadOnly): Gets the access endpoint.
 * **changedTime**: string (ReadOnly): Gets the changed time.
 * **createdTime**: string (ReadOnly): Gets the created time.
-* **definition**: any:
+* **definition**: any
 * **endpointsConfiguration**: [FlowEndpointsConfiguration](#flowendpointsconfiguration): The endpoints configuration.
 * **integrationAccount**: [ResourceReference](#resourcereference): The resource reference.
 * **integrationServiceEnvironment**: [ResourceReference](#resourcereference): The resource reference.
@@ -986,9 +986,9 @@
 ## WorkflowParameter
 ### Properties
 * **description**: string: The description.
-* **metadata**: any:
+* **metadata**: any
 * **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String': The type.
-* **value**: any:
+* **value**: any
 
 ## Sku
 ### Properties

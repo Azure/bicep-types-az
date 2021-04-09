@@ -54,7 +54,7 @@
 ## BatchAccountCreateProperties
 ### Properties
 * **accountEndpoint**: string (ReadOnly): The account endpoint used to interact with the Batch service.
-* **activeJobAndJobScheduleQuota**: int (ReadOnly):
+* **activeJobAndJobScheduleQuota**: int (ReadOnly)
 * **autoStorage**: [AutoStorageBaseProperties](#autostoragebaseproperties): The properties related to the auto-storage account.
 * **dedicatedCoreQuota**: int (ReadOnly): For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
 * **dedicatedCoreQuotaPerVMFamily**: [VirtualMachineFamilyCoreQuota](#virtualmachinefamilycorequota)[] (ReadOnly): A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
@@ -62,7 +62,7 @@
 * **keyVaultReference**: [KeyVaultReference](#keyvaultreference): Identifies the Azure key vault associated with a Batch account.
 * **lowPriorityCoreQuota**: int (ReadOnly): For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
 * **poolAllocationMode**: 'BatchService' | 'UserSubscription': The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.
-* **poolQuota**: int (ReadOnly):
+* **poolQuota**: int (ReadOnly)
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 
 ## AutoStorageBaseProperties
@@ -106,9 +106,9 @@
 * **format**: 'Cer' | 'Pfx': The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
 * **password**: string (WriteOnly): This is required if the certificate format is pfx and must be omitted if the certificate format is cer.
 * **previousProvisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The previous provisioned state of the resource.
-* **previousProvisioningStateTransitionTime**: string (ReadOnly):
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly):
-* **provisioningStateTransitionTime**: string (ReadOnly):
+* **previousProvisioningStateTransitionTime**: string (ReadOnly)
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
+* **provisioningStateTransitionTime**: string (ReadOnly)
 * **publicData**: string (ReadOnly): The public key of the certificate.
 * **thumbprint**: string: This must match the thumbprint from the name.
 * **thumbprintAlgorithm**: string: This must match the first portion of the certificate name. Currently required to be 'SHA1'.
@@ -122,16 +122,16 @@
 
 ## PoolProperties
 ### Properties
-* **allocationState**: 'Resizing' | 'Steady' | 'Stopping' (ReadOnly):
-* **allocationStateTransitionTime**: string (ReadOnly):
+* **allocationState**: 'Resizing' | 'Steady' | 'Stopping' (ReadOnly)
+* **allocationStateTransitionTime**: string (ReadOnly)
 * **applicationLicenses**: string[]: The list of application licenses must be a subset of available Batch service application licenses. If a license is requested which is not supported, pool creation will fail.
 * **applicationPackages**: [ApplicationPackageReference](#applicationpackagereference)[]: Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.
-* **autoScaleRun**: [AutoScaleRun](#autoscalerun) (ReadOnly):
+* **autoScaleRun**: [AutoScaleRun](#autoscalerun) (ReadOnly)
 * **certificates**: [CertificateReference](#certificatereference)[]: For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
-* **creationTime**: string (ReadOnly):
-* **currentDedicatedNodes**: int (ReadOnly):
-* **currentLowPriorityNodes**: int (ReadOnly):
-* **deploymentConfiguration**: [DeploymentConfiguration](#deploymentconfiguration):
+* **creationTime**: string (ReadOnly)
+* **currentDedicatedNodes**: int (ReadOnly)
+* **currentLowPriorityNodes**: int (ReadOnly)
+* **deploymentConfiguration**: [DeploymentConfiguration](#deploymentconfiguration)
 * **displayName**: string: The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.
 * **interNodeCommunication**: 'Disabled' | 'Enabled': This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'.
 * **lastModified**: string (ReadOnly): This is the last time at which the pool level data, such as the targetDedicatedNodes or autoScaleSettings, changed. It does not factor in node-level changes such as a compute node changing state.
@@ -139,43 +139,43 @@
 * **metadata**: [MetadataItem](#metadataitem)[]: The Batch service does not assign any meaning to metadata; it is solely for the use of user code.
 * **mountConfiguration**: [MountConfiguration](#mountconfiguration)[]: This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.
 * **networkConfiguration**: [NetworkConfiguration](#networkconfiguration): The network configuration for a pool.
-* **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly):
-* **provisioningStateTransitionTime**: string (ReadOnly):
+* **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly)
+* **provisioningStateTransitionTime**: string (ReadOnly)
 * **resizeOperationStatus**: [ResizeOperationStatus](#resizeoperationstatus) (ReadOnly): Describes either the current operation (if the pool AllocationState is Resizing) or the previously completed operation (if the AllocationState is Steady).
 * **scaleSettings**: [ScaleSettings](#scalesettings): Defines the desired size of the pool. This can either be 'fixedScale' where the requested targetDedicatedNodes is specified, or 'autoScale' which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
 * **startTask**: [StartTask](#starttask): In some cases the start task may be re-run even though the node was not rebooted. Due to this, start tasks should be idempotent and exit gracefully if the setup they're performing has already been done. Special care should be taken to avoid start tasks which create breakaway process or install/launch services from the start task working directory, as this will block Batch from being able to re-run the start task.
-* **taskSchedulingPolicy**: [TaskSchedulingPolicy](#taskschedulingpolicy):
-* **userAccounts**: [UserAccount](#useraccount)[]:
+* **taskSchedulingPolicy**: [TaskSchedulingPolicy](#taskschedulingpolicy)
+* **userAccounts**: [UserAccount](#useraccount)[]
 * **vmSize**: string: For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/). Batch supports all Cloud Services VM sizes except ExtraSmall. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) or Sizes for Virtual Machines (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
 
 ## ApplicationPackageReference
 ### Properties
-* **id**: string (Required):
+* **id**: string (Required)
 * **version**: string: If this is omitted, and no default version is specified for this application, the request fails with the error code InvalidApplicationPackageReferences. If you are calling the REST API directly, the HTTP status code is 409.
 
 ## AutoScaleRun
 ### Properties
-* **error**: [AutoScaleRunError](#autoscalerunerror):
-* **evaluationTime**: string (Required):
+* **error**: [AutoScaleRunError](#autoscalerunerror)
+* **evaluationTime**: string (Required)
 * **results**: string: Each variable value is returned in the form $variable=value, and variables are separated by semicolons.
 
 ## AutoScaleRunError
 ### Properties
 * **code**: string (Required): An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
-* **details**: [AutoScaleRunError](#autoscalerunerror)[]:
+* **details**: [AutoScaleRunError](#autoscalerunerror)[]
 * **message**: string (Required): A message describing the error, intended to be suitable for display in a user interface.
 
 ## CertificateReference
 ### Properties
-* **id**: string (Required):
+* **id**: string (Required)
 * **storeLocation**: 'CurrentUser' | 'LocalMachine': The default value is currentUser. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
 * **storeName**: string: This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). Common store names include: My, Root, CA, Trust, Disallowed, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, but any custom store name can also be used. The default value is My.
-* **visibility**: 'RemoteUser' | 'StartTask' | 'Task'[]:
+* **visibility**: 'RemoteUser' | 'StartTask' | 'Task'[]
 
 ## DeploymentConfiguration
 ### Properties
-* **cloudServiceConfiguration**: [CloudServiceConfiguration](#cloudserviceconfiguration):
-* **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration):
+* **cloudServiceConfiguration**: [CloudServiceConfiguration](#cloudserviceconfiguration)
+* **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration)
 
 ## CloudServiceConfiguration
 ### Properties
@@ -184,28 +184,27 @@
 
 ## VirtualMachineConfiguration
 ### Properties
-* **containerConfiguration**: [ContainerConfiguration](#containerconfiguration):
+* **containerConfiguration**: [ContainerConfiguration](#containerconfiguration)
 * **dataDisks**: [DataDisk](#datadisk)[]: This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.
-* **imageReference**: [ImageReference](#imagereference) (Required):
+* **imageReference**: [ImageReference](#imagereference) (Required)
 * **licenseType**: string: This only applies to images that contain the Windows operating system, and should only be used when you hold valid on-premises licenses for the nodes which will be deployed. If omitted, no on-premises licensing discount is applied. Values are:
 
  Windows_Server - The on-premises license is for Windows Server.
  Windows_Client - The on-premises license is for Windows Client.
-
 * **nodeAgentSkuId**: string (Required): The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation.
-* **windowsConfiguration**: [WindowsConfiguration](#windowsconfiguration):
+* **windowsConfiguration**: [WindowsConfiguration](#windowsconfiguration)
 
 ## ContainerConfiguration
 ### Properties
 * **containerImageNames**: string[]: This is the full image reference, as would be specified to "docker pull". An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
 * **containerRegistries**: [ContainerRegistry](#containerregistry)[]: If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
-* **type**: string (Required):
+* **type**: string (Required)
 
 ## ContainerRegistry
 ### Properties
-* **password**: string (Required):
+* **password**: string (Required)
 * **registryServer**: string: If omitted, the default is "docker.io".
-* **username**: string (Required):
+* **username**: string (Required)
 
 ## DataDisk
 ### Properties
@@ -216,7 +215,7 @@
  readWrite - The caching mode for the disk is read and write.
 
  The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
-* **diskSizeGB**: int (Required):
+* **diskSizeGB**: int (Required)
 * **lun**: int (Required): The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun.
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS': If omitted, the default is "Standard_LRS". Values are:
 
@@ -237,29 +236,29 @@
 
 ## MetadataItem
 ### Properties
-* **name**: string (Required):
-* **value**: string (Required):
+* **name**: string (Required)
+* **value**: string (Required)
 
 ## MountConfiguration
 ### Properties
-* **azureBlobFileSystemConfiguration**: [AzureBlobFileSystemConfiguration](#azureblobfilesystemconfiguration):
-* **azureFileShareConfiguration**: [AzureFileShareConfiguration](#azurefileshareconfiguration):
-* **cifsMountConfiguration**: [CIFSMountConfiguration](#cifsmountconfiguration):
-* **nfsMountConfiguration**: [NFSMountConfiguration](#nfsmountconfiguration):
+* **azureBlobFileSystemConfiguration**: [AzureBlobFileSystemConfiguration](#azureblobfilesystemconfiguration)
+* **azureFileShareConfiguration**: [AzureFileShareConfiguration](#azurefileshareconfiguration)
+* **cifsMountConfiguration**: [CIFSMountConfiguration](#cifsmountconfiguration)
+* **nfsMountConfiguration**: [NFSMountConfiguration](#nfsmountconfiguration)
 
 ## AzureBlobFileSystemConfiguration
 ### Properties
 * **accountKey**: string: This property is mutually exclusive with sasKey and one must be specified.
-* **accountName**: string (Required):
+* **accountName**: string (Required)
 * **blobfuseOptions**: string: These are 'net use' options in Windows and 'mount' options in Linux.
-* **containerName**: string (Required):
+* **containerName**: string (Required)
 * **relativeMountPath**: string (Required): All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
 * **sasKey**: string: This property is mutually exclusive with accountKey and one must be specified.
 
 ## AzureFileShareConfiguration
 ### Properties
-* **accountKey**: string (Required):
-* **accountName**: string (Required):
+* **accountKey**: string (Required)
+* **accountName**: string (Required)
 * **azureFileUrl**: string (Required): This is of the form 'https://{account}.file.core.windows.net/'.
 * **mountOptions**: string: These are 'net use' options in Windows and 'mount' options in Linux.
 * **relativeMountPath**: string (Required): All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
@@ -267,20 +266,20 @@
 ## CIFSMountConfiguration
 ### Properties
 * **mountOptions**: string: These are 'net use' options in Windows and 'mount' options in Linux.
-* **password**: string (Required):
+* **password**: string (Required)
 * **relativeMountPath**: string (Required): All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
-* **source**: string (Required):
-* **username**: string (Required):
+* **source**: string (Required)
+* **username**: string (Required)
 
 ## NFSMountConfiguration
 ### Properties
 * **mountOptions**: string: These are 'net use' options in Windows and 'mount' options in Linux.
 * **relativeMountPath**: string (Required): All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
-* **source**: string (Required):
+* **source**: string (Required)
 
 ## NetworkConfiguration
 ### Properties
-* **endpointConfiguration**: [PoolEndpointConfiguration](#poolendpointconfiguration):
+* **endpointConfiguration**: [PoolEndpointConfiguration](#poolendpointconfiguration)
 * **publicIPs**: string[]: The number of IPs specified here limits the maximum size of the Pool - 50 dedicated nodes or 20 low-priority nodes can be allocated for each public IP. For example, a pool needing 150 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.
 * **subnetId**: string: The virtual network must be in the same region and subscription as the Azure Batch account. The specified subnet should have enough free IP addresses to accommodate the number of nodes in the pool. If the subnet doesn't have enough free IP addresses, the pool will partially allocate compute nodes, and a resize error will occur. The 'MicrosoftAzureBatch' service principal must have the 'Classic Virtual Machine Contributor' Role-Based Access Control (RBAC) role for the specified VNet. The specified subnet must allow communication from the Azure Batch service to be able to schedule tasks on the compute nodes. This can be verified by checking if the specified VNet has any associated Network Security Groups (NSG). If communication to the compute nodes in the specified subnet is denied by an NSG, then the Batch service will set the state of the compute nodes to unusable. For pools created via virtualMachineConfiguration the Batch account must have poolAllocationMode userSubscription in order to use a VNet. If the specified VNet has any associated Network Security Groups (NSG), then a few reserved system ports must be enabled for inbound communication. For pools created with a virtual machine configuration, enable ports 29876 and 29877, as well as port 22 for Linux and port 3389 for Windows. For pools created with a cloud service configuration, enable ports 10100, 20100, and 30100. Also enable outbound connections to Azure Storage on port 443. For more details see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
 
@@ -295,11 +294,11 @@
 * **frontendPortRangeStart**: int (Required): Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved. All ranges within a pool must be distinct and cannot overlap. If any reserved or overlapping values are provided the request fails with HTTP status code 400.
 * **name**: string (Required): The name must be unique within a Batch pool, can contain letters, numbers, underscores, periods, and hyphens. Names must start with a letter or number, must end with a letter, number, or underscore, and cannot exceed 77 characters.  If any invalid values are provided the request fails with HTTP status code 400.
 * **networkSecurityGroupRules**: [NetworkSecurityGroupRule](#networksecuritygrouprule)[]: The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.
-* **protocol**: 'TCP' | 'UDP' (Required):
+* **protocol**: 'TCP' | 'UDP' (Required)
 
 ## NetworkSecurityGroupRule
 ### Properties
-* **access**: 'Allow' | 'Deny' (Required):
+* **access**: 'Allow' | 'Deny' (Required)
 * **priority**: int (Required): Priorities within a pool must be unique and are evaluated in order of priority. The lower the number the higher the priority. For example, rules could be specified with order numbers of 150, 250, and 350. The rule with the order number of 150 takes precedence over the rule that has an order of 250. Allowed priorities are 150 to 3500. If any reserved or duplicate values are provided the request fails with HTTP status code 400.
 * **sourceAddressPrefix**: string (Required): Valid values are a single IP address (i.e. 10.10.10.10), IP subnet (i.e. 192.168.1.0/24), default tag, or * (for all addresses).  If any other values are provided the request fails with HTTP status code 400.
 * **sourcePortRanges**: string[]: Valid values are '*' (for all ports 0 - 65535) or arrays of ports or port ranges (i.e. 100-200). The ports should in the range of 0 to 65535 and the port ranges or ports can't overlap. If any other values are provided the request fails with HTTP status code 400. Default value will be *.
@@ -309,25 +308,25 @@
 * **errors**: [ResizeError](#resizeerror)[]: This property is set only if an error occurred during the last pool resize, and only when the pool allocationState is Steady.
 * **nodeDeallocationOption**: 'Requeue' | 'RetainedData' | 'TaskCompletion' | 'Terminate': The default value is requeue.
 * **resizeTimeout**: string: The default value is 15 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
-* **startTime**: string:
-* **targetDedicatedNodes**: int:
-* **targetLowPriorityNodes**: int:
+* **startTime**: string
+* **targetDedicatedNodes**: int
+* **targetLowPriorityNodes**: int
 
 ## ResizeError
 ### Properties
 * **code**: string (Required): An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
-* **details**: [ResizeError](#resizeerror)[]:
+* **details**: [ResizeError](#resizeerror)[]
 * **message**: string (Required): A message describing the error, intended to be suitable for display in a user interface.
 
 ## ScaleSettings
 ### Properties
-* **autoScale**: [AutoScaleSettings](#autoscalesettings):
-* **fixedScale**: [FixedScaleSettings](#fixedscalesettings):
+* **autoScale**: [AutoScaleSettings](#autoscalesettings)
+* **fixedScale**: [FixedScaleSettings](#fixedscalesettings)
 
 ## AutoScaleSettings
 ### Properties
 * **evaluationInterval**: string: If omitted, the default value is 15 minutes (PT15M).
-* **formula**: string (Required):
+* **formula**: string (Required)
 
 ## FixedScaleSettings
 ### Properties
@@ -339,10 +338,10 @@
 ## StartTask
 ### Properties
 * **commandLine**: string: The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. Required if any other properties of the startTask are specified.
-* **containerSettings**: [TaskContainerSettings](#taskcontainersettings):
-* **environmentSettings**: [EnvironmentSetting](#environmentsetting)[]:
+* **containerSettings**: [TaskContainerSettings](#taskcontainersettings)
+* **environmentSettings**: [EnvironmentSetting](#environmentsetting)[]
 * **maxTaskRetryCount**: int: The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task. If the maximum retry count is -1, the Batch service retries the task without limit.
-* **resourceFiles**: [ResourceFile](#resourcefile)[]:
+* **resourceFiles**: [ResourceFile](#resourcefile)[]
 * **userIdentity**: [UserIdentity](#useridentity): Specify either the userName or autoUser property, but not both.
 * **waitForSuccess**: bool: If true and the start task fails on a compute node, the Batch service retries the start task up to its maximum retry count (maxTaskRetryCount). If the task has still not completed successfully after all retries, then the Batch service marks the compute node unusable, and will not schedule tasks to it. This condition can be detected via the node state and scheduling error detail. If false, the Batch service will not wait for the start task to complete. In this case, other tasks can start executing on the compute node while the start task is still running; and even if the start task fails, new tasks will continue to be scheduled on the node. The default is true.
 
@@ -350,13 +349,13 @@
 ### Properties
 * **containerRunOptions**: string: These additional options are supplied as arguments to the "docker create" command, in addition to those controlled by the Batch Service.
 * **imageName**: string (Required): This is the full image reference, as would be specified to "docker pull". If no tag is provided as part of the image name, the tag ":latest" is used as a default.
-* **registry**: [ContainerRegistry](#containerregistry):
-* **workingDirectory**: 'ContainerImageDefault' | 'TaskWorkingDirectory':
+* **registry**: [ContainerRegistry](#containerregistry)
+* **workingDirectory**: 'ContainerImageDefault' | 'TaskWorkingDirectory'
 
 ## EnvironmentSetting
 ### Properties
-* **name**: string (Required):
-* **value**: string:
+* **name**: string (Required)
+* **value**: string
 
 ## ResourceFile
 ### Properties
@@ -369,7 +368,7 @@
 
 ## UserIdentity
 ### Properties
-* **autoUser**: [AutoUserSpecification](#autouserspecification):
+* **autoUser**: [AutoUserSpecification](#autouserspecification)
 * **userName**: string: The userName and autoUser properties are mutually exclusive; you must specify one but not both.
 
 ## AutoUserSpecification
@@ -379,15 +378,15 @@
 
 ## TaskSchedulingPolicy
 ### Properties
-* **nodeFillType**: 'Pack' | 'Spread' (Required):
+* **nodeFillType**: 'Pack' | 'Spread' (Required)
 
 ## UserAccount
 ### Properties
 * **elevationLevel**: 'Admin' | 'NonAdmin': nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.
-* **linuxUserConfiguration**: [LinuxUserConfiguration](#linuxuserconfiguration):
-* **name**: string (Required):
-* **password**: string (Required):
-* **windowsUserConfiguration**: [WindowsUserConfiguration](#windowsuserconfiguration):
+* **linuxUserConfiguration**: [LinuxUserConfiguration](#linuxuserconfiguration)
+* **name**: string (Required)
+* **password**: string (Required)
+* **windowsUserConfiguration**: [WindowsUserConfiguration](#windowsuserconfiguration)
 
 ## LinuxUserConfiguration
 ### Properties

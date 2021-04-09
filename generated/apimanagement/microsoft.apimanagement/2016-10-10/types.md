@@ -89,7 +89,6 @@
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant): The resource api version
 * **data**: string (Required, WriteOnly): Base 64 encoded certificate using the application/x-pkcs12 representation.
 * **expirationDate**: string (ReadOnly): Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **password**: string (Required, WriteOnly): Password for the Certificate
@@ -196,20 +195,15 @@
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant): The resource api version
 * **createdDate**: string (ReadOnly): Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **endDate**: string (ReadOnly): Date when subscription was cancelled or expired. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **expirationDate**: string (ReadOnly): Subscription expiration date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **notificationDate**: string (ReadOnly): Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **primaryKey**: string: Primary subscription key. If not specified during request key will be generated automatically.
 * **productId**: string (Required): Product (product id path) for which subscription is being created in form /products/{productId}
 * **secondaryKey**: string: Secondary subscription key. If not specified during request key will be generated automatically.
 * **startDate**: string (ReadOnly): Subscription activation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **state**: 'Active' | 'Cancelled' | 'Expired' | 'Rejected' | 'Submitted' | 'Suspended': Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
 * **stateComment**: string (ReadOnly): Optional subscription comment added by an administrator.
 * **type**: 'Microsoft.ApiManagement/service/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
@@ -236,7 +230,6 @@
 * **note**: string: Optional note about a user set by the administrator.
 * **password**: string (Required, WriteOnly): User Password.
 * **registrationDate**: string (ReadOnly): Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **state**: 'Active' | 'Blocked': Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
 * **type**: 'Microsoft.ApiManagement/service/users' (ReadOnly, DeployTimeConstant): The resource type
 

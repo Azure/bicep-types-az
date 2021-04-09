@@ -8,7 +8,7 @@
 * **identity**: [EncryptionIdentity](#encryptionidentity): The encryption identity properties.
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateDataLakeStoreAccountProperties](#createdatalakestoreaccountproperties):
+* **properties**: [CreateDataLakeStoreAccountProperties](#createdatalakestoreaccountproperties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.DataLakeStore/accounts' (ReadOnly, DeployTimeConstant): The resource type
 

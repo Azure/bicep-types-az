@@ -108,7 +108,7 @@ dictionary key references will be ARM resource ids in the form:
 * **creationDate**: string (ReadOnly): The creation date of the container registry in ISO8601 format.
 * **dataEndpointEnabled**: bool: Enable a single data endpoint per region for serving data.
 * **dataEndpointHostNames**: string[] (ReadOnly): List of host names that will serve data when dataEndpointEnabled is true.
-* **encryption**: [EncryptionProperty](#encryptionproperty):
+* **encryption**: [EncryptionProperty](#encryptionproperty)
 * **loginServer**: string (ReadOnly): The URL that can be used to log into the container registry.
 * **networkRuleBypassOptions**: 'AzureServices' | 'None': Whether to allow trusted Azure services to access a network restricted registry.
 * **networkRuleSet**: [NetworkRuleSet](#networkruleset): The network rule set for a container registry.
@@ -120,7 +120,7 @@ dictionary key references will be ARM resource ids in the form:
 
 ## EncryptionProperty
 ### Properties
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties):
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
 * **status**: 'disabled' | 'enabled': Indicates whether or not the encryption is enabled for container registry.
 
 ## KeyVaultProperties
@@ -236,7 +236,7 @@ When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/co
 * **options**: 'ContinueOnErrors' | 'DeleteSourceBlobOnSuccess' | 'OverwriteBlobs' | 'OverwriteTags'[]: The list of all options configured for the pipeline.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the pipeline at the time the operation was called.
 * **source**: [ImportPipelineSourceProperties](#importpipelinesourceproperties) (Required): The properties of the import pipeline source.
-* **trigger**: [PipelineTriggerProperties](#pipelinetriggerproperties):
+* **trigger**: [PipelineTriggerProperties](#pipelinetriggerproperties)
 
 ## ImportPipelineSourceProperties
 ### Properties
@@ -248,7 +248,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 
 ## PipelineTriggerProperties
 ### Properties
-* **sourceTrigger**: [PipelineSourceTriggerProperties](#pipelinesourcetriggerproperties):
+* **sourceTrigger**: [PipelineSourceTriggerProperties](#pipelinesourcetriggerproperties)
 
 ## PipelineSourceTriggerProperties
 ### Properties
@@ -269,8 +269,8 @@ Specify an image by tag ('hello-world:latest').
 Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
 * **catalogDigest**: string: The digest of the tar used to transfer the artifacts.
 * **pipelineResourceId**: string: The resource ID of the pipeline to run.
-* **source**: [PipelineRunSourceProperties](#pipelinerunsourceproperties):
-* **target**: [PipelineRunTargetProperties](#pipelineruntargetproperties):
+* **source**: [PipelineRunSourceProperties](#pipelinerunsourceproperties)
+* **target**: [PipelineRunTargetProperties](#pipelineruntargetproperties)
 
 ## PipelineRunSourceProperties
 ### Properties
@@ -288,12 +288,12 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
 * **finishTime**: string: The time the pipeline run finished.
 * **importedArtifacts**: string[]: The artifacts imported in the pipeline run.
 * **pipelineRunErrorMessage**: string: The detailed error message for the pipeline run in the case of failure.
-* **progress**: [ProgressProperties](#progressproperties):
+* **progress**: [ProgressProperties](#progressproperties)
 * **source**: [ImportPipelineSourceProperties](#importpipelinesourceproperties): The properties of the import pipeline source.
 * **startTime**: string: The time the pipeline run started.
 * **status**: string: The current status of the pipeline run.
 * **target**: [ExportPipelineTargetProperties](#exportpipelinetargetproperties): The properties of the export pipeline target.
-* **trigger**: [PipelineTriggerDescriptor](#pipelinetriggerdescriptor):
+* **trigger**: [PipelineTriggerDescriptor](#pipelinetriggerdescriptor)
 
 ## ProgressProperties
 ### Properties
@@ -301,7 +301,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
 
 ## PipelineTriggerDescriptor
 ### Properties
-* **sourceTrigger**: [PipelineSourceTriggerDescriptor](#pipelinesourcetriggerdescriptor):
+* **sourceTrigger**: [PipelineSourceTriggerDescriptor](#pipelinesourcetriggerdescriptor)
 
 ## PipelineSourceTriggerDescriptor
 ### Properties

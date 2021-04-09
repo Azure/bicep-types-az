@@ -8,7 +8,7 @@
 * **identity**: [EncryptionSetIdentity](#encryptionsetidentity): The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EncryptionSetProperties](#encryptionsetproperties):
+* **properties**: [EncryptionSetProperties](#encryptionsetproperties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Compute/diskEncryptionSets' (ReadOnly, DeployTimeConstant): The resource type
 

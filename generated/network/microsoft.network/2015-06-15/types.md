@@ -44,7 +44,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AuthorizationPropertiesFormat](#authorizationpropertiesformat):
+* **properties**: [AuthorizationPropertiesFormat](#authorizationpropertiesformat)
 * **type**: 'Microsoft.Network/expressRouteCircuits/authorizations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/expressRouteCircuits/peerings@2015-06-15
@@ -54,7 +54,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ExpressRouteCircuitPeeringPropertiesFormat](#expressroutecircuitpeeringpropertiesformat):
+* **properties**: [ExpressRouteCircuitPeeringPropertiesFormat](#expressroutecircuitpeeringpropertiesformat)
 * **type**: 'Microsoft.Network/expressRouteCircuits/peerings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/loadBalancers@2015-06-15
@@ -112,7 +112,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SecurityRulePropertiesFormat](#securityrulepropertiesformat):
+* **properties**: [SecurityRulePropertiesFormat](#securityrulepropertiesformat)
 * **type**: 'Microsoft.Network/networkSecurityGroups/securityRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/publicIPAddresses@2015-06-15
@@ -169,7 +169,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualNetworkPropertiesFormat](#virtualnetworkpropertiesformat):
+* **properties**: [VirtualNetworkPropertiesFormat](#virtualnetworkpropertiesformat)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.Network/virtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -180,7 +180,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat):
+* **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat)
 * **type**: 'Microsoft.Network/virtualnetworks/subnets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ApplicationGatewayPropertiesFormat
@@ -230,9 +230,9 @@
 * **loadBalancerBackendAddressPools**: [BackendAddressPool](#backendaddresspool)[]: The reference of LoadBalancerBackendAddressPool resource.
 * **loadBalancerInboundNatRules**: [InboundNatRule](#inboundnatrule)[]: A list of references of LoadBalancerInboundNatRules.
 * **primary**: bool: Gets whether this is a primary customer address on the network interface.
-* **privateIPAddress**: string:
+* **privateIPAddress**: string
 * **privateIPAllocationMethod**: 'Dynamic' | 'Static': Defines how a private IP address is assigned. Possible values are: 'Static' and 'Dynamic'.
-* **provisioningState**: string:
+* **provisioningState**: string
 * **publicIPAddress**: [PublicIPAddress](#publicipaddress): Public IP address resource.
 * **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
 
@@ -286,7 +286,7 @@
 ### Properties
 * **dnsSettings**: [PublicIPAddressDnsSettings](#publicipaddressdnssettings): Contains FQDN of the DNS record associated with the public IP address
 * **idleTimeoutInMinutes**: int: The idle timeout of the public IP address.
-* **ipAddress**: string:
+* **ipAddress**: string
 * **ipConfiguration**: [IPConfiguration](#ipconfiguration): IPConfiguration
 * **provisioningState**: string: The provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **publicIPAllocationMethod**: 'Dynamic' | 'Static': The public IP allocation method. Possible values are: 'Static' and 'Dynamic'.
@@ -318,7 +318,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource Identifier.
 * **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat):
+* **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat)
 
 ## SubnetPropertiesFormat
 ### Properties
@@ -352,7 +352,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource Identifier.
 * **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [SecurityRulePropertiesFormat](#securityrulepropertiesformat):
+* **properties**: [SecurityRulePropertiesFormat](#securityrulepropertiesformat)
 
 ## SecurityRulePropertiesFormat
 ### Properties
@@ -633,7 +633,7 @@
 
 ## LocalNetworkGatewayPropertiesFormat
 ### Properties
-* **bgpSettings**: [BgpSettings](#bgpsettings):
+* **bgpSettings**: [BgpSettings](#bgpsettings)
 * **gatewayIpAddress**: string: IP address of local network gateway.
 * **localNetworkAddressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
 * **provisioningState**: string: Gets or sets Provisioning state of the LocalNetworkGateway resource Updating/Deleting/Failed
@@ -666,7 +666,7 @@
 
 ## VirtualNetworkGatewayPropertiesFormat
 ### Properties
-* **bgpSettings**: [BgpSettings](#bgpsettings):
+* **bgpSettings**: [BgpSettings](#bgpsettings)
 * **enableBgp**: bool: Whether BGP is enabled for this virtual network gateway or not.
 * **gatewayDefaultSite**: [SubResource](#subresource): Azure resource manager sub resource properties.
 * **gatewayType**: 'ExpressRoute' | 'Vpn': The type of this virtual network gateway. Possible values are: 'Vpn' and 'ExpressRoute'.
@@ -754,7 +754,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource Identifier.
 * **name**: string: Gets name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [AuthorizationPropertiesFormat](#authorizationpropertiesformat):
+* **properties**: [AuthorizationPropertiesFormat](#authorizationpropertiesformat)
 
 ## AuthorizationPropertiesFormat
 ### Properties
@@ -767,7 +767,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource Identifier.
 * **name**: string: Gets name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [ExpressRouteCircuitPeeringPropertiesFormat](#expressroutecircuitpeeringpropertiesformat):
+* **properties**: [ExpressRouteCircuitPeeringPropertiesFormat](#expressroutecircuitpeeringpropertiesformat)
 
 ## ExpressRouteCircuitPeeringPropertiesFormat
 ### Properties
@@ -900,7 +900,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource Identifier.
 * **name**: string: Gets name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [ProbePropertiesFormat](#probepropertiesformat):
+* **properties**: [ProbePropertiesFormat](#probepropertiesformat)
 
 ## ProbePropertiesFormat
 ### Properties

@@ -317,7 +317,7 @@
 ## DatabaseAccountCreateUpdateProperties
 * **Discriminator**: createMode
 ### Base Properties
-* **apiProperties**: [ApiProperties](#apiproperties):
+* **apiProperties**: [ApiProperties](#apiproperties)
 * **backupPolicy**: [BackupPolicy](#backuppolicy): The object representing the policy for taking backups on an account.
 * **capabilities**: [Capability](#capability)[]: List of Cosmos DB capabilities for the account
 * **connectorOffer**: 'Small': The cassandra connector offer type for the Cosmos DB database C* account.
@@ -497,7 +497,7 @@
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
 * **_ts**: any (ReadOnly): A system generated property that denotes the last updated timestamp of the resource.
 * **_users**: string (ReadOnly): A system generated property that specifies the addressable path of the users resource.
-* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings) (WriteOnly):
+* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings) (WriteOnly)
 * **id**: string (ReadOnly): Name of the Cosmos DB SQL database
 * **throughput**: int (WriteOnly): Request Units per second. For example, "throughput": 10000.
 
