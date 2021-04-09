@@ -35,13 +35,13 @@
 * **identity**: [Identity](#identity) (ReadOnly): Identity for the resource.
 * **location**: string (ReadOnly): Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **parameters**: [schemas:56_properties](#schemas56properties) (Required, WriteOnly):
+* **parameters**: [schemas:56_properties](#schemas56properties) (Required, WriteOnly)
 * **properties**: [Dataset](#dataset) (ReadOnly): Machine Learning dataset object.
-* **registration**: [schemas:56_properties](#schemas56properties) (Required, WriteOnly):
+* **registration**: [schemas:56_properties](#schemas56properties) (Required, WriteOnly)
 * **skipValidation**: bool (WriteOnly): Skip validation that ensures data can be loaded from the dataset before registration.
 * **sku**: [Sku](#sku) (ReadOnly): Sku of the resource
 * **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Contains resource tags defined as key/value pairs.
-* **timeSeries**: [schemas:56_properties](#schemas56properties) (WriteOnly):
+* **timeSeries**: [schemas:56_properties](#schemas56properties) (WriteOnly)
 * **type**: 'Microsoft.MachineLearningServices/workspaces/datasets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/datastores@2020-05-01-preview
@@ -131,7 +131,7 @@
 * **appInsightsEnabled**: bool (WriteOnly): Whether or not Application Insights is enabled.
 * **authEnabled**: bool (WriteOnly): Whether or not authentication is enabled on the service.
 * **cname**: string (WriteOnly): The CName for the service.
-* **computeType**: 'ACI' (Required):
+* **computeType**: 'ACI' (Required)
 * **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): The resource requirements for the container (cpu and memory).
 * **dataCollection**: [schemas:108_dataCollection](#schemas108datacollection) (WriteOnly): Details of the data collection options specified.
 * **dnsNameLabel**: string (WriteOnly): The Dns label for the service.
@@ -175,7 +175,7 @@
 * **creationTime**: string (ReadOnly): The creation time of the machine learning workspace in ISO8601 format.
 * **description**: string: The description of this workspace.
 * **discoveryUrl**: string: Url for the discovery service to identify regional endpoints for machine learning experimentation services
-* **encryption**: [EncryptionProperty](#encryptionproperty):
+* **encryption**: [EncryptionProperty](#encryptionproperty)
 * **friendlyName**: string: The friendly name for this workspace. This name in mutable
 * **hbiWorkspace**: bool: The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
 * **imageBuildCompute**: string: The compute name for image build
@@ -190,7 +190,7 @@
 
 ## EncryptionProperty
 ### Properties
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required):
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required)
 * **status**: 'Disabled' | 'Enabled' (Required): Indicates whether or not the encryption is enabled for the workspace.
 
 ## KeyVaultProperties
@@ -277,7 +277,7 @@
 ### Databricks
 #### Properties
 * **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:56_properties](#schemas56properties):
+* **properties**: [schemas:56_properties](#schemas56properties)
 
 ### DataFactory
 #### Properties
@@ -286,17 +286,17 @@
 ### DataLakeAnalytics
 #### Properties
 * **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:56_properties](#schemas56properties):
+* **properties**: [schemas:56_properties](#schemas56properties)
 
 ### HDInsight
 #### Properties
 * **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:56_properties](#schemas56properties):
+* **properties**: [schemas:56_properties](#schemas56properties)
 
 ### VirtualMachine
 #### Properties
 * **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:56_properties](#schemas56properties):
+* **properties**: [schemas:56_properties](#schemas56properties)
 
 
 ## MachineLearningServiceError
@@ -396,7 +396,7 @@
 ## Databricks
 ### Properties
 * **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:56_properties](#schemas56properties):
+* **properties**: [schemas:56_properties](#schemas56properties)
 
 ## schemas:56_properties
 ### Properties
@@ -419,17 +419,17 @@
 ## DataLakeAnalytics
 ### Properties
 * **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:56_properties](#schemas56properties):
+* **properties**: [schemas:56_properties](#schemas56properties)
 
 ## HDInsight
 ### Properties
 * **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:56_properties](#schemas56properties):
+* **properties**: [schemas:56_properties](#schemas56properties)
 
 ## VirtualMachine
 ### Properties
 * **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:56_properties](#schemas56properties):
+* **properties**: [schemas:56_properties](#schemas56properties)
 
 ## Dictionary<string,String>
 ### Properties
@@ -567,7 +567,7 @@
 * **certificate**: string (ReadOnly): The content of the certificate used for authentication.
 * **clientId**: string (ReadOnly): The Client ID/Application ID
 * **clientSecret**: string (ReadOnly): The client secret.
-* **credentialType**: 'None' | 'ServicePrincipal' (ReadOnly):
+* **credentialType**: 'None' | 'ServicePrincipal' (ReadOnly)
 * **isCertAuth**: bool (ReadOnly):  Is it using certificate to authenticate. If false then use client secret.
 * **resourceGroup**: string (ReadOnly): Resource Group.
 * **resourceUri**: string (ReadOnly): The resource the service principal/app has access to.
@@ -583,7 +583,7 @@
 * **certificate**: string (ReadOnly): The content of the certificate used for authentication.
 * **clientId**: string (ReadOnly): The Client ID/Application ID
 * **clientSecret**: string (ReadOnly): The client secret.
-* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' (ReadOnly):
+* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' (ReadOnly)
 * **databaseName**: string (ReadOnly): The Azure SQL database name.
 * **endpoint**: string (ReadOnly): The server host endpoint.
 * **isCertAuth**: bool (ReadOnly):  Is it using certificate to authenticate. If false then use client secret.
@@ -604,7 +604,7 @@
 * **certificate**: string (ReadOnly): The content of the certificate used for authentication.
 * **clientId**: string (ReadOnly): The Client ID/Application ID
 * **clientSecret**: string (ReadOnly): The client secret.
-* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' (ReadOnly):
+* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' (ReadOnly)
 * **databaseName**: string (ReadOnly): The Azure SQL database name.
 * **enableSsl**: bool (ReadOnly): Indicates SSL requirement of Azure Postgresql server.
 * **endpoint**: string (ReadOnly): The server host endpoint.
@@ -626,7 +626,7 @@
 * **certificate**: string (ReadOnly): The content of the certificate used for authentication.
 * **clientId**: string (ReadOnly): The Client ID/Application ID
 * **clientSecret**: string (ReadOnly): The client secret.
-* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' (ReadOnly):
+* **credentialType**: 'None' | 'ServicePrincipal' | 'SqlAuthentication' (ReadOnly)
 * **databaseName**: string (ReadOnly): The Azure SQL database name.
 * **endpoint**: string (ReadOnly): The server host endpoint.
 * **isCertAuth**: bool (ReadOnly):  Is it using certificate to authenticate. If false then use client secret.
@@ -650,7 +650,7 @@
 * **clientCredentials**: [ClientCredentials](#clientcredentials) (ReadOnly): Service principal credential when credential type is "AzureStorageCredentialTypes.ClientCredentials".
 * **containerName**: string (ReadOnly): The storage container name.
 * **credential**: string (ReadOnly): The credential.
-* **credentialType**: 'AccountKey' | 'ClientCredentials' | 'None' | 'Sas' (ReadOnly):
+* **credentialType**: 'AccountKey' | 'ClientCredentials' | 'None' | 'Sas' (ReadOnly)
 * **endpoint**: string (ReadOnly): The host of the container.
 * **isSas**: bool (ReadOnly): Indicate if we are using SAS token or Account Key (Deprecated).
 * **protocol**: string (ReadOnly): The protocol to use. Defaults to https.
@@ -682,7 +682,7 @@
 ### Properties
 * **linkedId**: string (ReadOnly): LinkedId id.
 * **linkedResourceName**: string (ReadOnly): Linked resource name.
-* **origin**: 'Synapse' (ReadOnly):
+* **origin**: 'Synapse' (ReadOnly)
 
 ## Dictionary<string,String>
 ### Properties
@@ -739,9 +739,9 @@
 
 ## schemas:123_baseImageRegistry
 ### Properties
-* **address**: string (WriteOnly):
-* **password**: string (WriteOnly):
-* **username**: string (WriteOnly):
+* **address**: string (WriteOnly)
+* **password**: string (WriteOnly)
+* **username**: string (WriteOnly)
 
 ## Dictionary<string,String>
 ### Properties
@@ -750,7 +750,7 @@
 
 ## schemas:117_python
 ### Properties
-* **baseCondaEnvironment**: string (WriteOnly):
+* **baseCondaEnvironment**: string (WriteOnly)
 * **condaDependencies**: any (WriteOnly): A JObject containing Conda dependencies.
 * **interpreterPath**: string (WriteOnly): The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
 * **userManagedDependencies**: bool (WriteOnly): True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
@@ -785,9 +785,9 @@ The path specified gets used to call the user script.
 
 ## SparkMavenPackage
 ### Properties
-* **artifact**: string (WriteOnly):
-* **group**: string (WriteOnly):
-* **version**: string (WriteOnly):
+* **artifact**: string (WriteOnly)
+* **group**: string (WriteOnly)
+* **version**: string (WriteOnly)
 
 ## schemas:114_environmentReference
 ### Properties
@@ -865,7 +865,7 @@ The path specified gets used to call the user script.
 * **appInsightsEnabled**: bool (WriteOnly): Whether or not Application Insights is enabled.
 * **authEnabled**: bool (WriteOnly): Whether or not authentication is enabled on the service.
 * **cname**: string (WriteOnly): The CName for the service.
-* **computeType**: 'ACI' (Required):
+* **computeType**: 'ACI' (Required)
 * **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): The resource requirements for the container (cpu and memory).
 * **dataCollection**: [schemas:108_dataCollection](#schemas108datacollection) (WriteOnly): Details of the data collection options specified.
 * **dnsNameLabel**: string (WriteOnly): The Dns label for the service.

@@ -153,9 +153,9 @@
 
 ## ManagedIdentityProperties
 ### Properties
-* **principalId**: string:
-* **tenantId**: string:
-* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned':
+* **principalId**: string
+* **tenantId**: string
+* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned'
 
 ## AppResourceProperties
 ### Properties

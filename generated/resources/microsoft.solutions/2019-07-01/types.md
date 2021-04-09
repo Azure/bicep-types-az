@@ -214,7 +214,7 @@
 
 ## JitSchedulingPolicy
 ### Properties
-* **duration**: string (Required):
+* **duration**: string (Required)
 * **startTime**: string (Required): The start time of the request.
 * **type**: 'NotSpecified' | 'Once' | 'Recurring' (Required): The type of JIT schedule.
 

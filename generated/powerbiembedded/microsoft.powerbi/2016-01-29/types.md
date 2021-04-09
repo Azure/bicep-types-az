@@ -8,8 +8,8 @@
 * **location**: string: Azure location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: any (ReadOnly): Properties
-* **sku**: [AzureSku](#azuresku):
-* **tags**: [Dictionary<string,String>](#dictionarystringstring):
+* **sku**: [AzureSku](#azuresku)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.PowerBI/workspaceCollections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AzureSku

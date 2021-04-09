@@ -40,12 +40,12 @@
 ## BatchAccountBaseProperties
 ### Properties
 * **accountEndpoint**: string (ReadOnly): The endpoint used by this account to interact with the Batch services.
-* **activeJobAndJobScheduleQuota**: int (ReadOnly):
+* **activeJobAndJobScheduleQuota**: int (ReadOnly)
 * **autoStorage**: [AutoStorageBaseProperties](#autostoragebaseproperties): The properties related to auto storage account.
-* **coreQuota**: int (ReadOnly):
+* **coreQuota**: int (ReadOnly)
 * **keyVaultReference**: [KeyVaultReference](#keyvaultreference): Identifies the Azure key vault associated with a Batch account.
 * **poolAllocationMode**: 'BatchService' | 'UserSubscription': The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.
-* **poolQuota**: int (ReadOnly):
+* **poolQuota**: int (ReadOnly)
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 
 ## AutoStorageBaseProperties

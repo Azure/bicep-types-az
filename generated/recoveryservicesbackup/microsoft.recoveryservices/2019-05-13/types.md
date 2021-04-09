@@ -161,7 +161,7 @@
 
 ## ExtendedProperties
 ### Properties
-* **diskExclusionProperties**: [DiskExclusionProperties](#diskexclusionproperties):
+* **diskExclusionProperties**: [DiskExclusionProperties](#diskexclusionproperties)
 
 ## DiskExclusionProperties
 ### Properties

@@ -196,24 +196,24 @@
 ## EdgeProfileSubscription
 ### Properties
 * **id**: string: ARM ID of the subscription
-* **properties**: [SubscriptionProperties](#subscriptionproperties):
-* **registrationDate**: string:
+* **properties**: [SubscriptionProperties](#subscriptionproperties)
+* **registrationDate**: string
 * **registrationId**: string: Edge Subscription Registration ID
-* **state**: 'Deleted' | 'Registered' | 'Suspended' | 'Unregistered' | 'Warned':
-* **subscriptionId**: string:
+* **state**: 'Deleted' | 'Registered' | 'Suspended' | 'Unregistered' | 'Warned'
+* **subscriptionId**: string
 
 ## SubscriptionProperties
 ### Properties
-* **locationPlacementId**: string:
-* **quotaId**: string:
-* **registeredFeatures**: [SubscriptionRegisteredFeatures](#subscriptionregisteredfeatures)[]:
-* **serializedDetails**: string:
-* **tenantId**: string:
+* **locationPlacementId**: string
+* **quotaId**: string
+* **registeredFeatures**: [SubscriptionRegisteredFeatures](#subscriptionregisteredfeatures)[]
+* **serializedDetails**: string
+* **tenantId**: string
 
 ## SubscriptionRegisteredFeatures
 ### Properties
-* **name**: string:
-* **state**: string:
+* **name**: string
+* **state**: string
 
 ## ResourceMoveDetails
 ### Properties

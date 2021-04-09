@@ -183,7 +183,7 @@
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ContentTypeContractProperties](#contenttypecontractproperties) (ReadOnly):
+* **properties**: [ContentTypeContractProperties](#contenttypecontractproperties) (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/service/contentTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/contentTypes/contentItems@2020-12-01
@@ -192,7 +192,7 @@
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,Object>](#dictionarystringobject) (ReadOnly):
+* **properties**: [Dictionary<string,Object>](#dictionarystringobject) (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/service/contentTypes/contentItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/diagnostics@2020-12-01
@@ -333,7 +333,7 @@
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PortalRevisionContractProperties](#portalrevisioncontractproperties):
+* **properties**: [PortalRevisionContractProperties](#portalrevisioncontractproperties)
 * **type**: 'Microsoft.ApiManagement/service/portalRevisions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/portalsettings@2020-12-01
@@ -642,7 +642,7 @@ dictionary key references will be ARM resource ids in the form:
 ## HttpMessageDiagnostic
 ### Properties
 * **body**: [BodyDiagnosticSettings](#bodydiagnosticsettings): Body logging settings.
-* **dataMasking**: [DataMasking](#datamasking):
+* **dataMasking**: [DataMasking](#datamasking)
 * **headers**: string[]: Array of HTTP Headers to log.
 
 ## BodyDiagnosticSettings
@@ -868,7 +868,6 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **data**: string (WriteOnly): Base 64 encoded certificate using the application/x-pkcs12 representation.
 * **expirationDate**: string (ReadOnly): Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **keyVault**: [KeyVaultContractCreateProperties](#keyvaultcontractcreateproperties): Create keyVault contract details.
 * **password**: string (WriteOnly): Password for the Certificate
 * **subject**: string (ReadOnly): Subject attribute of the certificate.
@@ -885,7 +884,6 @@ dictionary key references will be ARM resource ids in the form:
 * **code**: string (ReadOnly): Last status code for sync and refresh of secret from key vault.
 * **message**: string (ReadOnly): Details of the error else empty.
 * **timeStampUtc**: string (ReadOnly): Last time secret was accessed. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 
 ## ContentTypeContractProperties
 ### Properties
@@ -1068,20 +1066,15 @@ Instrumentation key for applicationInsights logger.
 ### Properties
 * **allowTracing**: bool: Determines whether tracing can be enabled
 * **createdDate**: string (ReadOnly): Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **displayName**: string (Required): Subscription name.
 * **endDate**: string (ReadOnly): Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **expirationDate**: string (ReadOnly): Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **notificationDate**: string (ReadOnly): Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **ownerId**: string: User (user id path) for whom subscription is being created in form /users/{userId}
 * **primaryKey**: string: Primary subscription key. If not specified during request key will be generated automatically.
 * **scope**: string (Required): Scope like /products/{productId} or /apis or /apis/{apiId}.
 * **secondaryKey**: string: Secondary subscription key. If not specified during request key will be generated automatically.
 * **startDate**: string (ReadOnly): Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **state**: 'active' | 'cancelled' | 'expired' | 'rejected' | 'submitted' | 'suspended': Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
 * **stateComment**: string (ReadOnly): Optional subscription comment added by an administrator when the state is changed to the 'rejected'.
 
@@ -1120,7 +1113,6 @@ Instrumentation key for applicationInsights logger.
 * **note**: string: Optional note about a user set by the administrator.
 * **password**: string (WriteOnly): User Password. If no value is provided, a default password is generated.
 * **registrationDate**: string (ReadOnly): Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **state**: 'active' | 'blocked' | 'deleted' | 'pending': Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
 
 ## GroupContractProperties

@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: 'backupResourceEncryptionConfig' (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupResourceEncryptionConfig](#backupresourceencryptionconfig):
+* **properties**: [BackupResourceEncryptionConfig](#backupresourceencryptionconfig)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupEncryptionConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -88,9 +88,9 @@
 ## BackupResourceEncryptionConfig
 ### Properties
 * **encryptionAtRestType**: 'CustomerManaged' | 'Invalid' | 'MicrosoftManaged': Encryption At Rest Type.
-* **infrastructureEncryptionState**: 'Disabled' | 'Enabled' | 'Invalid':
+* **infrastructureEncryptionState**: 'Disabled' | 'Enabled' | 'Invalid'
 * **keyUri**: string: Key Vault Key URI
-* **lastUpdateStatus**: 'Failed' | 'Invalid' | 'NotEnabled' | 'PartiallyFailed' | 'PartiallySucceeded' | 'Succeeded':
+* **lastUpdateStatus**: 'Failed' | 'Invalid' | 'NotEnabled' | 'PartiallyFailed' | 'PartiallySucceeded' | 'Succeeded'
 * **subscriptionId**: string: Key Vault Subscription Id
 
 ## Dictionary<string,String>
@@ -458,7 +458,7 @@ Failed | Succeeded
 
 ## ExtendedProperties
 ### Properties
-* **diskExclusionProperties**: [DiskExclusionProperties](#diskexclusionproperties):
+* **diskExclusionProperties**: [DiskExclusionProperties](#diskexclusionproperties)
 
 ## DiskExclusionProperties
 ### Properties
@@ -592,7 +592,7 @@ Failed | Succeeded
 ### AzureIaasVM
 #### Properties
 * **backupManagementType**: 'AzureIaasVM' (Required): IaaS VM workload-specific backup policy.
-* **instantRPDetails**: [InstantRPAdditionalDetails](#instantrpadditionaldetails):
+* **instantRPDetails**: [InstantRPAdditionalDetails](#instantrpadditionaldetails)
 * **instantRpRetentionRangeInDays**: int: Instant RP retention policy range in days
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
@@ -636,7 +636,7 @@ Failed | Succeeded
 ## AzureIaasVM
 ### Properties
 * **backupManagementType**: 'AzureIaasVM' (Required): IaaS VM workload-specific backup policy.
-* **instantRPDetails**: [InstantRPAdditionalDetails](#instantrpadditionaldetails):
+* **instantRPDetails**: [InstantRPAdditionalDetails](#instantrpadditionaldetails)
 * **instantRpRetentionRangeInDays**: int: Instant RP retention policy range in days
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
@@ -644,8 +644,8 @@ Failed | Succeeded
 
 ## InstantRPAdditionalDetails
 ### Properties
-* **azureBackupRGNamePrefix**: string:
-* **azureBackupRGNameSuffix**: string:
+* **azureBackupRGNamePrefix**: string
+* **azureBackupRGNameSuffix**: string
 
 ## RetentionPolicy
 * **Discriminator**: retentionPolicyType

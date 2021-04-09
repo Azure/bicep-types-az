@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AzureADMetricsPropertiesFormat](#azureadmetricspropertiesformat):
+* **properties**: [AzureADMetricsPropertiesFormat](#azureadmetricspropertiesformat)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'microsoft.aadiam/azureADMetrics' (ReadOnly, DeployTimeConstant): The resource type
 

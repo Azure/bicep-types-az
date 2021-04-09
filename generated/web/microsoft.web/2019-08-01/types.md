@@ -929,7 +929,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 ## schemas:22_error
 ### Properties
 * **code**: string (ReadOnly): Standardized string to programmatically identify the error.
-* **details**: [schemas:22_error_detailsItem](#schemas22errordetailsitem)[] (ReadOnly):
+* **details**: [schemas:22_error_detailsItem](#schemas22errordetailsitem)[] (ReadOnly)
 * **innererror**: string (ReadOnly): More information to debug error.
 * **message**: string (ReadOnly): Detailed error description and debugging information.
 * **target**: string (ReadOnly): Detailed error description and debugging information.
@@ -1435,7 +1435,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **connectionStringName**: string: Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
 This is used during restore with overwrite connection strings options.
 * **databaseType**: 'LocalMySql' | 'MySql' | 'PostgreSql' | 'SqlAzure' (Required): Database type (e.g. SqlAzure / MySql).
-* **name**: string:
+* **name**: string
 
 ## Microsoft.Web/sites/config
 ### Properties
@@ -1646,13 +1646,13 @@ Setting is <code>false</code> by default.
 
 ## schemas:203_properties
 ### Properties
-* **biztalkUri**: string:
-* **entityConnectionString**: string:
-* **entityName**: string:
-* **hostname**: string:
-* **port**: int:
-* **resourceConnectionString**: string:
-* **resourceType**: string:
+* **biztalkUri**: string
+* **entityConnectionString**: string
+* **entityName**: string
+* **hostname**: string
+* **port**: int
+* **resourceConnectionString**: string
+* **resourceType**: string
 
 ## schemas:30_properties
 ### Properties
@@ -1705,11 +1705,11 @@ normally, use the POST /listKeys API instead.
 ### Properties
 * **privateEndpoint**: [ArmIdWrapper](#armidwrapper) (ReadOnly): A wrapper for an ARM resource id
 * **privateLinkServiceConnectionState**: [PrivateLinkConnectionState](#privatelinkconnectionstate): The state of a private link connection
-* **provisioningState**: string (ReadOnly):
+* **provisioningState**: string (ReadOnly)
 
 ## ArmIdWrapper
 ### Properties
-* **id**: string (ReadOnly):
+* **id**: string (ReadOnly)
 
 ## PrivateLinkConnectionState
 ### Properties
@@ -1743,7 +1743,7 @@ normally, use the POST /listKeys API instead.
 * **provisioningState**: string (ReadOnly): Provisioning state.
 * **published_date_time**: string (ReadOnly): Published timestamp.
 * **summary**: string (ReadOnly): Summary description.
-* **title**: string (ReadOnly):
+* **title**: string (ReadOnly)
 * **version**: string (ReadOnly): Version information.
 
 ## Dictionary<string,String>

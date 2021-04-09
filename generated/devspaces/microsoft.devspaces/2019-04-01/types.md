@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Region where the Azure resource is located.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ControllerProperties](#controllerproperties) (Required):
+* **properties**: [ControllerProperties](#controllerproperties) (Required)
 * **sku**: [Sku](#sku) (Required): Model representing SKU for Azure Dev Spaces Controller.
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags for the Azure resource.
 * **type**: 'Microsoft.DevSpaces/controllers' (ReadOnly, DeployTimeConstant): The resource type

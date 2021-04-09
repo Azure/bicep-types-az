@@ -180,7 +180,7 @@
 * **lastExecutedOn**: string (ReadOnly): UTC Date and time when the AgentJob was last executed.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): AgentJob name
-* **resultType**: 'AgentJobLevelOutput' (Required):
+* **resultType**: 'AgentJobLevelOutput' (Required)
 
 ### DatabaseLevelOutput
 #### Properties
@@ -188,7 +188,7 @@
 * **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly): The list of database files
 * **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database.
 * **name**: string (ReadOnly): Database name
-* **resultType**: 'DatabaseLevelOutput' (Required):
+* **resultType**: 'DatabaseLevelOutput' (Required)
 * **sizeMB**: int (ReadOnly): Size of the file in megabytes
 
 ### LoginLevelOutput
@@ -198,7 +198,7 @@
 * **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): The type of login.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): Login name.
-* **resultType**: 'LoginLevelOutput' (Required):
+* **resultType**: 'LoginLevelOutput' (Required)
 
 ### TaskLevelOutput
 #### Properties
@@ -219,7 +219,7 @@
 * **lastExecutedOn**: string (ReadOnly): UTC Date and time when the AgentJob was last executed.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): AgentJob name
-* **resultType**: 'AgentJobLevelOutput' (Required):
+* **resultType**: 'AgentJobLevelOutput' (Required)
 
 ## MigrationEligibilityInfo
 ### Properties
@@ -232,7 +232,7 @@
 * **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly): The list of database files
 * **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database.
 * **name**: string (ReadOnly): Database name
-* **resultType**: 'DatabaseLevelOutput' (Required):
+* **resultType**: 'DatabaseLevelOutput' (Required)
 * **sizeMB**: int (ReadOnly): Size of the file in megabytes
 
 ## DatabaseFileInfo
@@ -252,7 +252,7 @@
 * **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): The type of login.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): Login name.
-* **resultType**: 'LoginLevelOutput' (Required):
+* **resultType**: 'LoginLevelOutput' (Required)
 
 ## TaskLevelOutput
 ### Properties
@@ -399,7 +399,7 @@
 * **lastExecutedOn**: string (ReadOnly): UTC Date and time when the AgentJob was last executed.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): AgentJob name
-* **resultType**: 'AgentJobLevelOutput' (Required):
+* **resultType**: 'AgentJobLevelOutput' (Required)
 
 ### DatabaseLevelOutput
 #### Properties
@@ -407,13 +407,13 @@
 * **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly): The list of database files
 * **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database.
 * **name**: string (ReadOnly): Database name
-* **resultType**: 'DatabaseLevelOutput' (Required):
+* **resultType**: 'DatabaseLevelOutput' (Required)
 * **sizeMB**: int (ReadOnly): Size of the file in megabytes
 
 ### ErrorOutput
 #### Properties
 * **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required):
+* **resultType**: 'ErrorOutput' (Required)
 
 ### LoginLevelOutput
 #### Properties
@@ -422,7 +422,7 @@
 * **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): The type of login.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): Login name.
-* **resultType**: 'LoginLevelOutput' (Required):
+* **resultType**: 'LoginLevelOutput' (Required)
 
 ### MigrationLevelOutput
 #### Properties
@@ -433,7 +433,7 @@
 * **logins**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Selected logins as a map from name to id
 * **message**: string (ReadOnly): Migration progress message
 * **orphanedUsers**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Map of users to database name of orphaned users.
-* **resultType**: 'MigrationLevelOutput' (Required):
+* **resultType**: 'MigrationLevelOutput' (Required)
 * **serverRoleResults**: [Dictionary<string,StartMigrationScenarioServerRoleResult>](#dictionarystringstartmigrationscenarioserverroleresult) (ReadOnly): Map of server role migration results.
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
@@ -447,7 +447,7 @@
 ## ErrorOutput
 ### Properties
 * **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required):
+* **resultType**: 'ErrorOutput' (Required)
 
 ## MigrationLevelOutput
 ### Properties
@@ -458,7 +458,7 @@
 * **logins**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Selected logins as a map from name to id
 * **message**: string (ReadOnly): Migration progress message
 * **orphanedUsers**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Map of users to database name of orphaned users.
-* **resultType**: 'MigrationLevelOutput' (Required):
+* **resultType**: 'MigrationLevelOutput' (Required)
 * **serverRoleResults**: [Dictionary<string,StartMigrationScenarioServerRoleResult>](#dictionarystringstartmigrationscenarioserverroleresult) (ReadOnly): Map of server role migration results.
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
@@ -540,13 +540,13 @@
 * **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly): The list of database files
 * **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): State of the database.
 * **name**: string (ReadOnly): Database name
-* **resultType**: 'DatabaseLevelOutput' (Required):
+* **resultType**: 'DatabaseLevelOutput' (Required)
 * **sizeMB**: int (ReadOnly): Size of the file in megabytes
 
 ### ErrorOutput
 #### Properties
 * **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required):
+* **resultType**: 'ErrorOutput' (Required)
 
 ### MigrationLevelOutput
 #### Properties
@@ -557,7 +557,7 @@
 * **logins**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Selected logins as a map from name to id
 * **message**: string (ReadOnly): Migration progress message
 * **orphanedUsers**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Map of users to database name of orphaned users.
-* **resultType**: 'MigrationLevelOutput' (Required):
+* **resultType**: 'MigrationLevelOutput' (Required)
 * **serverRoleResults**: [Dictionary<string,StartMigrationScenarioServerRoleResult>](#dictionarystringstartmigrationscenarioserverroleresult) (ReadOnly): Map of server role migration results.
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
@@ -575,7 +575,7 @@
 * **itemsCount**: int (ReadOnly): Number of items
 * **objectName**: string (ReadOnly): Name of the item
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
-* **resultType**: 'TableLevelOutput' (Required):
+* **resultType**: 'TableLevelOutput' (Required)
 * **startedOn**: string (ReadOnly): Migration start time
 * **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message
@@ -589,7 +589,7 @@
 * **itemsCount**: int (ReadOnly): Number of items
 * **objectName**: string (ReadOnly): Name of the item
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
-* **resultType**: 'TableLevelOutput' (Required):
+* **resultType**: 'TableLevelOutput' (Required)
 * **startedOn**: string (ReadOnly): Migration start time
 * **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message

@@ -87,6 +87,7 @@
 ## StorageProfile
 ### Properties
 * **backupRetentionDays**: int: Backup retention days for the server.
+* **fileStorageSkuName**: string (ReadOnly): The sku name of the file storage.
 * **storageAutogrow**: 'Disabled' | 'Enabled': Enable Storage Auto Grow.
 * **storageIops**: int: Storage IOPS for a server.
 * **storageMB**: int: Max storage allowed for a server.

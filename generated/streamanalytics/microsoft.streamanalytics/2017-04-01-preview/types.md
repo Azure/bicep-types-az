@@ -50,9 +50,9 @@
 
 ## Identity
 ### Properties
-* **principalId**: string:
-* **tenantId**: string:
-* **type**: string:
+* **principalId**: string
+* **tenantId**: string
+* **type**: string
 
 ## StreamingJobProperties
 ### Properties
@@ -87,8 +87,8 @@
 
 ## External
 ### Properties
-* **container**: string:
-* **path**: string:
+* **container**: string
+* **path**: string
 * **storageAccount**: [StorageAccount](#storageaccount): The properties that are associated with an Azure Storage account
 
 ## StorageAccount
@@ -107,7 +107,7 @@
 * **Discriminator**: type
 ### Base Properties
 * **etag**: string (ReadOnly): The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
-* **properties**: [FunctionConfiguration](#functionconfiguration):
+* **properties**: [FunctionConfiguration](#functionconfiguration)
 ### Aggregate
 #### Properties
 * **type**: 'Aggregate' (Required): The properties that are associated with an aggregate function.
@@ -120,7 +120,7 @@
 ## FunctionConfiguration
 ### Properties
 * **binding**: [FunctionBinding](#functionbinding): The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
-* **inputs**: [FunctionInput](#functioninput)[]:
+* **inputs**: [FunctionInput](#functioninput)[]
 * **output**: [FunctionOutput](#functionoutput): Describes the output of a function.
 
 ## FunctionBinding
@@ -268,7 +268,7 @@
 
 ## Compression
 ### Properties
-* **type**: string (Required):
+* **type**: string (Required)
 
 ## Diagnostics
 ### Properties
@@ -359,7 +359,7 @@
 ### Base Properties
 ### Microsoft.Sql/Server/Database
 #### Properties
-* **properties**: [AzureSqlReferenceInputDataSourceProperties](#azuresqlreferenceinputdatasourceproperties):
+* **properties**: [AzureSqlReferenceInputDataSourceProperties](#azuresqlreferenceinputdatasourceproperties)
 * **type**: 'Microsoft.Sql/Server/Database' (Required): Describes an Azure SQL database output data source.
 
 ### Microsoft.Storage/Blob
@@ -370,7 +370,7 @@
 
 ## Microsoft.Sql/Server/Database
 ### Properties
-* **properties**: [AzureSqlReferenceInputDataSourceProperties](#azuresqlreferenceinputdatasourceproperties):
+* **properties**: [AzureSqlReferenceInputDataSourceProperties](#azuresqlreferenceinputdatasourceproperties)
 * **type**: 'Microsoft.Sql/Server/Database' (Required): Describes an Azure SQL database output data source.
 
 ## AzureSqlReferenceInputDataSourceProperties
@@ -479,8 +479,8 @@
 * **diagnostics**: [Diagnostics](#diagnostics) (ReadOnly): Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
 * **etag**: string (ReadOnly): The current entity tag for the output. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
 * **serialization**: [Serialization](#serialization): Describes how data from an input is serialized or how data is serialized when written to an output.
-* **sizeWindow**: int:
-* **timeWindow**: string:
+* **sizeWindow**: int
+* **timeWindow**: string
 
 ## OutputDataSource
 * **Discriminator**: type
@@ -517,7 +517,7 @@
 
 ### Microsoft.Sql/Server/Database
 #### Properties
-* **properties**: [AzureSqlReferenceInputDataSourceProperties](#azuresqlreferenceinputdatasourceproperties):
+* **properties**: [AzureSqlReferenceInputDataSourceProperties](#azuresqlreferenceinputdatasourceproperties)
 * **type**: 'Microsoft.Sql/Server/Database' (Required): Describes an Azure SQL database output data source.
 
 ### Microsoft.Sql/Server/DataWarehouse
@@ -589,7 +589,7 @@
 * **serviceBusNamespace**: string: The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyKey**: string: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyName**: string: The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-* **systemPropertyColumns**: [Dictionary<string,String>](#dictionarystringstring):
+* **systemPropertyColumns**: [Dictionary<string,String>](#dictionarystringstring)
 
 ## Dictionary<string,String>
 ### Properties
@@ -608,7 +608,7 @@
 * **serviceBusNamespace**: string: The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyKey**: string: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyName**: string: The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-* **systemPropertyColumns**: [Dictionary<string,String>](#dictionarystringstring):
+* **systemPropertyColumns**: [Dictionary<string,String>](#dictionarystringstring)
 * **topicName**: string: The name of the Service Bus Topic. Required on PUT (CreateOrReplace) requests.
 
 ## Dictionary<string,String>

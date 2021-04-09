@@ -79,7 +79,7 @@
 ### Databricks
 #### Properties
 * **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:32_properties](#schemas32properties):
+* **properties**: [schemas:32_properties](#schemas32properties)
 
 ### DataFactory
 #### Properties
@@ -88,17 +88,17 @@
 ### DataLakeAnalytics
 #### Properties
 * **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:32_properties](#schemas32properties):
+* **properties**: [schemas:32_properties](#schemas32properties)
 
 ### HDInsight
 #### Properties
 * **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:32_properties](#schemas32properties):
+* **properties**: [schemas:32_properties](#schemas32properties)
 
 ### VirtualMachine
 #### Properties
 * **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:32_properties](#schemas32properties):
+* **properties**: [schemas:32_properties](#schemas32properties)
 
 
 ## MachineLearningServiceError
@@ -198,7 +198,7 @@
 ## Databricks
 ### Properties
 * **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:32_properties](#schemas32properties):
+* **properties**: [schemas:32_properties](#schemas32properties)
 
 ## schemas:32_properties
 ### Properties
@@ -221,17 +221,17 @@
 ## DataLakeAnalytics
 ### Properties
 * **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:32_properties](#schemas32properties):
+* **properties**: [schemas:32_properties](#schemas32properties)
 
 ## HDInsight
 ### Properties
 * **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:32_properties](#schemas32properties):
+* **properties**: [schemas:32_properties](#schemas32properties)
 
 ## VirtualMachine
 ### Properties
 * **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:32_properties](#schemas32properties):
+* **properties**: [schemas:32_properties](#schemas32properties)
 
 ## Dictionary<string,String>
 ### Properties

@@ -23,16 +23,6 @@
 * **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.PowerPlatform/enterprisePolicies/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.PowerPlatform/enterprisePolicies/subnets@2020-10-30-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2020-10-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SubnetProperties](#subnetproperties) (ReadOnly): Properties of a subnet.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **type**: 'Microsoft.PowerPlatform/enterprisePolicies/subnets' (ReadOnly, DeployTimeConstant): The resource type
-
 ## EnterprisePolicyIdentity
 ### Properties
 * **systemAssignedIdentityPrincipalId**: string (ReadOnly): The principal id of EnterprisePolicy identity.
@@ -43,16 +33,17 @@
 ### Properties
 * **encryption**: [schemas:2_encryption](#schemas2encryption): The encryption settings for a configuration store.
 * **lockbox**: [schemas:2_lockbox](#schemas2lockbox): Settings concerning lockbox.
+* **networkInjection**: [schemas:2_networkInjection](#schemas2networkinjection): Settings concerning network injection.
 
 ## schemas:2_encryption
 ### Properties
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): Settings concerning key vault encryption for a configuration store.
+* **keyVault**: [KeyVaultProperties](#keyvaultproperties): Settings concerning key vault encryption for a configuration store.
+* **state**: 'Disabled' | 'Enabled' | 'NotConfigured': The state of onboarding, which only appears in the response.
 
 ## KeyVaultProperties
 ### Properties
 * **id**: string: Uri of KeyVault
 * **key**: [keyProperties](#keyproperties): Url and version of the KeyVault Secret
-* **status**: 'Disabled' | 'Enabled' | 'NotConfigured': The state of onboarding, which only appears in the response.
 
 ## keyProperties
 ### Properties
@@ -61,7 +52,24 @@
 
 ## schemas:2_lockbox
 ### Properties
-* **status**: 'Disabled' | 'Enabled' | 'NotConfigured': lockbox configuration.
+* **state**: 'Disabled' | 'Enabled' | 'NotConfigured': lockbox configuration.
+
+## schemas:2_networkInjection
+### Properties
+* **virtualNetworks**: [VirtualNetworkPropertiesList](#virtualnetworkpropertieslist): A list of private link resources
+
+## VirtualNetworkPropertiesList
+### Properties
+* **value**: [VirtualNetworkProperties](#virtualnetworkproperties)[]: Array of virtual networks.
+
+## VirtualNetworkProperties
+### Properties
+* **id**: string: Uri of the virtual network.
+* **subnet**: [SubnetProperties](#subnetproperties): Properties of a subnet.
+
+## SubnetProperties
+### Properties
+* **name**: string: Subnet name.
 
 ## systemData
 ### Properties
@@ -92,14 +100,4 @@
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
-
-## SubnetProperties
-### Properties
-* **status**: 'Disabled' | 'Enabled' | 'NotConfigured' (ReadOnly): Connection State of the subnet.
-* **subnet**: [SubnetEndpointProperty](#subnetendpointproperty) (ReadOnly): Endpoint of the subnet.
-* **vnetid**: string (ReadOnly): The virtual network ID. This is typically a GUID. Expect a null GUID by default.
-
-## SubnetEndpointProperty
-### Properties
-* **id**: string (ReadOnly): Resource id of the subnet.
 

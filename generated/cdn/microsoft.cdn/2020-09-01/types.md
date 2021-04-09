@@ -169,7 +169,7 @@
 * **policySettings**: [policySettings](#policysettings): Defines contents of a web application firewall global configuration
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the WebApplicationFirewallPolicy.
 * **rateLimitRules**: [RateLimitRuleList](#ratelimitrulelist): Defines contents of rate limit rules
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly):
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly)
 
 ## CustomRuleList
 ### Properties
@@ -271,7 +271,7 @@
 
 ## AFDEndpointProperties
 ### Properties
-* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly):
+* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly)
 * **enabledState**: 'Disabled' | 'Enabled': Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'.
 * **hostName**: string (ReadOnly): The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
 * **originResponseTimeoutSeconds**: int: Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
@@ -286,7 +286,7 @@
 ### Properties
 * **compressionSettings**: any: compression settings.
 * **customDomains**: [ResourceReference](#resourcereference)[]: Domains referenced by this endpoint.
-* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly):
+* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly)
 * **enabledState**: 'Disabled' | 'Enabled': Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'.
 * **forwardingProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest': Protocol this rule will use when forwarding traffic to backends.
 * **httpsRedirect**: 'Disabled' | 'Enabled': Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
@@ -306,7 +306,7 @@
 ## AFDDomainProperties
 ### Properties
 * **azureDnsZone**: [ResourceReference](#resourcereference): Reference to another resource.
-* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly):
+* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly)
 * **domainValidationState**: 'Approved' | 'Pending' | 'PendingRevalidation' | 'Submitting' | 'TimedOut' | 'Unknown' (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. DCV stands for DomainControlValidation.
 * **hostName**: string (Required): The host name of the domain. Must be a domain name.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status.
@@ -409,7 +409,7 @@
 
 ## CacheExpirationActionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **cacheBehavior**: 'BypassCache' | 'Override' | 'SetIfMissing' (Required): Caching behavior for the requests.
 * **cacheDuration**: string: The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
 * **cacheType**: string (Required): The level at which the content needs to be cached.
@@ -421,7 +421,7 @@
 
 ## CacheKeyQueryStringActionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **queryParameters**: string: query parameters to include or exclude (comma separated).
 * **queryStringBehavior**: 'Exclude' | 'ExcludeAll' | 'Include' | 'IncludeAll' (Required): Caching behavior for the requests.
 
@@ -432,7 +432,7 @@
 
 ## HeaderActionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **headerAction**: 'Append' | 'Delete' | 'Overwrite' (Required): Action to perform.
 * **headerName**: string (Required): Name of the header to modify
 * **value**: string: Value for the specified action
@@ -449,7 +449,7 @@
 
 ## OriginGroupOverrideActionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **originGroup**: [ResourceReference](#resourcereference) (Required): Reference to another resource.
 
 ## UrlRedirect
@@ -459,7 +459,7 @@
 
 ## UrlRedirectActionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **customFragment**: string: Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
 * **customHostname**: string: Host to redirect. Leave empty to use the incoming host as the destination host.
 * **customPath**: string: The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
@@ -474,7 +474,7 @@
 
 ## UrlRewriteActionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **destination**: string (Required): Define the relative URL to which the above requests will be rewritten by.
 * **preserveUnmatchedPath**: bool: Whether to preserve unmatched path. Default value is true.
 * **sourcePattern**: string (Required): define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
@@ -486,7 +486,7 @@
 
 ## UrlSigningActionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **algorithm**: 'SHA256': Algorithm to use for URL signing.
 * **parameterNameOverride**: [UrlSigningParamIdentifier](#urlsigningparamidentifier)[]: Defines which query string parameters in the url to be considered for expires, key id etc.
 
@@ -576,7 +576,7 @@
 
 ## CookiesMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched.
@@ -590,7 +590,7 @@
 
 ## HttpVersionMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: string (Required): Describes operator to be matched
@@ -602,7 +602,7 @@
 
 ## IsDeviceMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **matchValues**: 'Desktop' | 'Mobile'[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: string (Required): Describes operator to be matched
@@ -615,7 +615,7 @@
 
 ## PostArgsMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched.
@@ -629,7 +629,7 @@
 
 ## QueryStringMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched.
@@ -642,7 +642,7 @@
 
 ## RemoteAddressMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **matchValues**: string[]: Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'GeoMatch' | 'IPMatch' (Required): Describes operator to be matched.
@@ -655,7 +655,7 @@
 
 ## RequestBodyMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched.
@@ -668,7 +668,7 @@
 
 ## RequestHeaderMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched.
@@ -682,7 +682,7 @@
 
 ## RequestMethodMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **matchValues**: 'DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'POST' | 'PUT' | 'TRACE'[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: string (Required): Describes operator to be matched
@@ -694,7 +694,7 @@
 
 ## RequestSchemeMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **matchValues**: 'HTTP' | 'HTTPS'[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: string (Required): Describes operator to be matched
@@ -706,7 +706,7 @@
 
 ## RequestUriMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched.
@@ -719,7 +719,7 @@
 
 ## UrlFileExtensionMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched.
@@ -732,7 +732,7 @@
 
 ## UrlFileNameMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched.
@@ -745,7 +745,7 @@
 
 ## UrlPathMatchConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | 'Wildcard' (Required): Describes operator to be matched.
@@ -814,7 +814,7 @@
 
 ## KeyVaultSigningKeyParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **resourceGroupName**: string (Required): Resource group of the user's Key Vault containing the secret
 * **secretName**: string (Required): The name of secret in Key Vault.
 * **secretVersion**: string (Required): The version(GUID) of secret in Key Vault.
@@ -867,7 +867,7 @@
 
 ## AFDOriginGroupProperties
 ### Properties
-* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly):
+* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly)
 * **healthProbeSettings**: [HealthProbeParameters](#healthprobeparameters): The JSON object that contains the properties to send health probes to origin.
 * **loadBalancingSettings**: [LoadBalancingSettingsParameters](#loadbalancingsettingsparameters): Round-Robin load balancing settings for a backend pool
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status.
@@ -884,7 +884,7 @@
 ## AFDOriginProperties
 ### Properties
 * **azureOrigin**: [ResourceReference](#resourcereference): Reference to another resource.
-* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly):
+* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly)
 * **enabledState**: 'Disabled' | 'Enabled': Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
 * **hostName**: string (Required): The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
 * **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535.
@@ -897,21 +897,21 @@
 
 ## RuleSetProperties
 ### Properties
-* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly):
+* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status.
 
 ## RuleProperties
 ### Properties
 * **actions**: [DeliveryRuleAction](#deliveryruleaction)[] (Required): A list of actions that are executed when all the conditions of a rule are satisfied.
 * **conditions**: [DeliveryRuleCondition](#deliveryrulecondition)[]: A list of conditions that must be matched for the actions to be executed
-* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly):
+* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly)
 * **matchProcessingBehavior**: 'Continue' | 'Stop': If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
 * **order**: int (Required): The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status.
 
 ## SecretProperties
 ### Properties
-* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly):
+* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly)
 * **parameters**: [SecretParameters](#secretparameters): The json object containing secret parameters
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status.
 
@@ -953,7 +953,7 @@
 
 ## SecurityPolicyProperties
 ### Properties
-* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly):
+* **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly)
 * **parameters**: [SecurityPolicyParameters](#securitypolicyparameters): The json object containing security policy parameters
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status.
 

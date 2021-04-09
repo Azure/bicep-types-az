@@ -6,14 +6,14 @@
 * **apiVersion**: '2021-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [schemas:71_identity](#schemas71identity):
+* **identity**: [schemas:71_identity](#schemas71identity)
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string: The geo-location where the resource lives
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **plan**: [schemas:71_identity](#schemas71identity):
+* **plan**: [schemas:71_identity](#schemas71identity)
 * **properties**: [ApplicationGroupProperties](#applicationgroupproperties) (Required): Schema for ApplicationGroup properties.
-* **sku**: [schemas:71_identity](#schemas71identity):
+* **sku**: [schemas:71_identity](#schemas71identity)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -32,14 +32,14 @@
 * **apiVersion**: '2021-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [schemas:71_identity](#schemas71identity):
+* **identity**: [schemas:71_identity](#schemas71identity)
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string: The geo-location where the resource lives
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **plan**: [schemas:71_identity](#schemas71identity):
+* **plan**: [schemas:71_identity](#schemas71identity)
 * **properties**: [HostPoolProperties](#hostpoolproperties) (Required): Properties of HostPool.
-* **sku**: [schemas:71_identity](#schemas71identity):
+* **sku**: [schemas:71_identity](#schemas71identity)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -58,14 +58,14 @@
 * **apiVersion**: '2021-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [schemas:71_identity](#schemas71identity):
+* **identity**: [schemas:71_identity](#schemas71identity)
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string: The geo-location where the resource lives
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **plan**: [schemas:71_identity](#schemas71identity):
+* **plan**: [schemas:71_identity](#schemas71identity)
 * **properties**: [ScalingPlanProperties](#scalingplanproperties): Scaling plan properties.
-* **sku**: [schemas:71_identity](#schemas71identity):
+* **sku**: [schemas:71_identity](#schemas71identity)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/scalingPlans' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -75,14 +75,14 @@
 * **apiVersion**: '2021-01-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [schemas:71_identity](#schemas71identity):
+* **identity**: [schemas:71_identity](#schemas71identity)
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string: The geo-location where the resource lives
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **plan**: [schemas:71_identity](#schemas71identity):
+* **plan**: [schemas:71_identity](#schemas71identity)
 * **properties**: [WorkspaceProperties](#workspaceproperties): Schema for Workspace properties.
-* **sku**: [schemas:71_identity](#schemas71identity):
+* **sku**: [schemas:71_identity](#schemas71identity)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 

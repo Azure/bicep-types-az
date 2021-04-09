@@ -174,7 +174,7 @@
 
 ## Preferences
 ### Properties
-* **preferredDataCenterRegion**: string[]:
+* **preferredDataCenterRegion**: string[]
 
 ## ShippingAddress
 ### Properties

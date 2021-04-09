@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ImageTemplateProperties](#imagetemplateproperties):
+* **properties**: [ImageTemplateProperties](#imagetemplateproperties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.VirtualMachineImages/imageTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -15,10 +15,10 @@
 ### Properties
 * **customize**: [ImageTemplateCustomizer](#imagetemplatecustomizer)[]: Specifies the properties used to describe the customization steps of the image, like Image source etc
 * **distribute**: [ImageTemplateDistributor](#imagetemplatedistributor)[] (Required): The distribution targets where the image output needs to go to.
-* **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly):
-* **provisioningError**: [ProvisioningError](#provisioningerror) (ReadOnly):
+* **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly)
+* **provisioningError**: [ProvisioningError](#provisioningerror) (ReadOnly)
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the resource.
-* **source**: [ImageTemplateSource](#imagetemplatesource) (Required):
+* **source**: [ImageTemplateSource](#imagetemplatesource) (Required)
 
 ## ImageTemplateCustomizer
 * **Discriminator**: type
@@ -78,7 +78,7 @@
 ### SharedImage
 #### Properties
 * **galleryImageId**: string (Required): Resource Id of the Shared Image Gallery image
-* **replicationRegions**: string[] (Required):
+* **replicationRegions**: string[] (Required)
 * **type**: 'SharedImage' (Required): Distribute via Shared Image Gallery.
 
 ### VHD
@@ -99,7 +99,7 @@
 ## SharedImage
 ### Properties
 * **galleryImageId**: string (Required): Resource Id of the Shared Image Gallery image
-* **replicationRegions**: string[] (Required):
+* **replicationRegions**: string[] (Required)
 * **type**: 'SharedImage' (Required): Distribute via Shared Image Gallery.
 
 ## VHD

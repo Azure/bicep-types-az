@@ -61,7 +61,7 @@
 ### Properties
 * **createdAt**: string (ReadOnly): The time the namespace was created.
 * **metricId**: string (ReadOnly): Identifier for Azure Insights metrics.
-* **provisioningState**: 'Created' | 'Deleted' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly):
+* **provisioningState**: 'Created' | 'Deleted' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
 * **serviceBusEndpoint**: string (ReadOnly): Endpoint you can use to perform Service Bus operations.
 * **updatedAt**: string (ReadOnly): The time the namespace was updated.
 

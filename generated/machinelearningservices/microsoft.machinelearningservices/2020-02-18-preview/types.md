@@ -52,7 +52,7 @@
 * **creationTime**: string (ReadOnly): The creation time of the machine learning workspace in ISO8601 format.
 * **description**: string: The description of this workspace.
 * **discoveryUrl**: string: Url for the discovery service to identify regional endpoints for machine learning experimentation services
-* **encryption**: [EncryptionProperty](#encryptionproperty):
+* **encryption**: [EncryptionProperty](#encryptionproperty)
 * **friendlyName**: string: The friendly name for this workspace. This name in mutable
 * **hbiWorkspace**: bool: The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
 * **keyVault**: string: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
@@ -63,7 +63,7 @@
 
 ## EncryptionProperty
 ### Properties
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required):
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required)
 * **status**: 'Disabled' | 'Enabled' (Required): Indicates whether or not the encryption is enabled for the workspace.
 
 ## KeyVaultProperties
@@ -111,7 +111,7 @@
 ### Databricks
 #### Properties
 * **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:33_properties](#schemas33properties):
+* **properties**: [schemas:33_properties](#schemas33properties)
 
 ### DataFactory
 #### Properties
@@ -120,17 +120,17 @@
 ### DataLakeAnalytics
 #### Properties
 * **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:33_properties](#schemas33properties):
+* **properties**: [schemas:33_properties](#schemas33properties)
 
 ### HDInsight
 #### Properties
 * **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:33_properties](#schemas33properties):
+* **properties**: [schemas:33_properties](#schemas33properties)
 
 ### VirtualMachine
 #### Properties
 * **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:33_properties](#schemas33properties):
+* **properties**: [schemas:33_properties](#schemas33properties)
 
 
 ## MachineLearningServiceError
@@ -283,7 +283,7 @@
 ## Databricks
 ### Properties
 * **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:33_properties](#schemas33properties):
+* **properties**: [schemas:33_properties](#schemas33properties)
 
 ## schemas:33_properties
 ### Properties
@@ -306,17 +306,17 @@
 ## DataLakeAnalytics
 ### Properties
 * **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:33_properties](#schemas33properties):
+* **properties**: [schemas:33_properties](#schemas33properties)
 
 ## HDInsight
 ### Properties
 * **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:33_properties](#schemas33properties):
+* **properties**: [schemas:33_properties](#schemas33properties)
 
 ## VirtualMachine
 ### Properties
 * **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:33_properties](#schemas33properties):
+* **properties**: [schemas:33_properties](#schemas33properties)
 
 ## Dictionary<string,String>
 ### Properties

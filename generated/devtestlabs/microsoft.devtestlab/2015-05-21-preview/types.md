@@ -262,7 +262,7 @@
 
 ## DayDetails
 ### Properties
-* **time**: string:
+* **time**: string
 
 ## HourDetails
 ### Properties
@@ -293,9 +293,9 @@
 
 ## Subnet
 ### Properties
-* **allowPublicIp**: 'Allow' | 'Default' | 'Deny':
-* **labSubnetName**: string:
-* **resourceId**: string:
+* **allowPublicIp**: 'Allow' | 'Default' | 'Deny'
+* **labSubnetName**: string
+* **resourceId**: string
 
 ## SubnetOverride
 ### Properties

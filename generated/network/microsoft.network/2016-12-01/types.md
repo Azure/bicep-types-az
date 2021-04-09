@@ -44,7 +44,7 @@
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AuthorizationPropertiesFormat](#authorizationpropertiesformat):
+* **properties**: [AuthorizationPropertiesFormat](#authorizationpropertiesformat)
 * **type**: 'Microsoft.Network/expressRouteCircuits/authorizations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/expressRouteCircuits/peerings@2016-12-01
@@ -54,7 +54,7 @@
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ExpressRouteCircuitPeeringPropertiesFormat](#expressroutecircuitpeeringpropertiesformat):
+* **properties**: [ExpressRouteCircuitPeeringPropertiesFormat](#expressroutecircuitpeeringpropertiesformat)
 * **type**: 'Microsoft.Network/expressRouteCircuits/peerings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/loadBalancers@2016-12-01
@@ -112,7 +112,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SecurityRulePropertiesFormat](#securityrulepropertiesformat):
+* **properties**: [SecurityRulePropertiesFormat](#securityrulepropertiesformat)
 * **type**: 'Microsoft.Network/networkSecurityGroups/securityRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkWatchers@2016-12-01
@@ -131,7 +131,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-12-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly):
+* **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PacketCaptureParameters](#packetcaptureparameters) (Required): Parameters that define the create packet capture operation.
@@ -215,7 +215,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualNetworkPropertiesFormat](#virtualnetworkpropertiesformat):
+* **properties**: [VirtualNetworkPropertiesFormat](#virtualnetworkpropertiesformat)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.Network/virtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -226,7 +226,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat):
+* **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat)
 * **type**: 'Microsoft.Network/virtualNetworks/subnets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2016-12-01
@@ -236,7 +236,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualNetworkPeeringPropertiesFormat](#virtualnetworkpeeringpropertiesformat):
+* **properties**: [VirtualNetworkPeeringPropertiesFormat](#virtualnetworkpeeringpropertiesformat)
 * **type**: 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ApplicationGatewayPropertiesFormat
@@ -302,10 +302,10 @@
 * **loadBalancerBackendAddressPools**: [BackendAddressPool](#backendaddresspool)[]: The reference of LoadBalancerBackendAddressPool resource.
 * **loadBalancerInboundNatRules**: [InboundNatRule](#inboundnatrule)[]: A list of references of LoadBalancerInboundNatRules.
 * **primary**: bool: Gets whether this is a primary customer address on the network interface.
-* **privateIPAddress**: string:
+* **privateIPAddress**: string
 * **privateIPAddressVersion**: 'IPv4' | 'IPv6': Available from Api-Version 2016-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.
 * **privateIPAllocationMethod**: 'Dynamic' | 'Static': Defines how a private IP address is assigned. Possible values are: 'Static' and 'Dynamic'.
-* **provisioningState**: string:
+* **provisioningState**: string
 * **publicIPAddress**: [PublicIPAddress](#publicipaddress): Public IP address resource.
 * **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
 
@@ -320,7 +320,7 @@
 ### Properties
 * **backendIPConfigurations**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration)[] (ReadOnly): Gets collection of references to IP addresses defined in network interfaces.
 * **loadBalancingRules**: [SubResource](#subresource)[] (ReadOnly): Gets load balancing rules that use this backend address pool.
-* **outboundNatRule**: [SubResource](#subresource) (ReadOnly):
+* **outboundNatRule**: [SubResource](#subresource) (ReadOnly)
 * **provisioningState**: string: Get provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 
 ## SubResource
@@ -339,7 +339,7 @@
 * **backendIPConfiguration**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration) (ReadOnly): IPConfiguration in a network interface.
 * **backendPort**: int: The port used for the internal endpoint. Acceptable values range from 1 to 65535.
 * **enableFloatingIP**: bool: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
-* **frontendIPConfiguration**: [SubResource](#subresource):
+* **frontendIPConfiguration**: [SubResource](#subresource)
 * **frontendPort**: int: The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.
 * **idleTimeoutInMinutes**: int: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
 * **protocol**: 'Tcp' | 'Udp': The transport protocol for the endpoint. Possible values are: 'Udp' or 'Tcp'.
@@ -359,7 +359,7 @@
 ### Properties
 * **dnsSettings**: [PublicIPAddressDnsSettings](#publicipaddressdnssettings): Contains FQDN of the DNS record associated with the public IP address
 * **idleTimeoutInMinutes**: int: The idle timeout of the public IP address.
-* **ipAddress**: string:
+* **ipAddress**: string
 * **ipConfiguration**: [IPConfiguration](#ipconfiguration) (ReadOnly): IPConfiguration
 * **provisioningState**: string: The provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **publicIPAddressVersion**: 'IPv4' | 'IPv6': The public IP address version. Possible values are: 'IPv4' and 'IPv6'.
@@ -392,7 +392,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
 * **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat):
+* **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat)
 
 ## SubnetPropertiesFormat
 ### Properties
@@ -427,7 +427,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
 * **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [SecurityRulePropertiesFormat](#securityrulepropertiesformat):
+* **properties**: [SecurityRulePropertiesFormat](#securityrulepropertiesformat)
 
 ## SecurityRulePropertiesFormat
 ### Properties
@@ -463,7 +463,7 @@
 * **primary**: bool: Gets whether this is a primary network interface on a virtual machine.
 * **provisioningState**: string: The provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **resourceGuid**: string: The resource GUID property of the network interface resource.
-* **virtualMachine**: [SubResource](#subresource):
+* **virtualMachine**: [SubResource](#subresource)
 
 ## NetworkInterfaceDnsSettings
 ### Properties
@@ -549,7 +549,7 @@
 * **connectionDraining**: [ApplicationGatewayConnectionDraining](#applicationgatewayconnectiondraining): Connection draining allows open connections to a backend server to be active for a specified time after the backend server got removed from the configuration.
 * **cookieBasedAffinity**: 'Disabled' | 'Enabled': Cookie based affinity. Possible values are: 'Enabled' and 'Disabled'.
 * **port**: int: Port
-* **probe**: [SubResource](#subresource):
+* **probe**: [SubResource](#subresource)
 * **protocol**: 'Http' | 'Https': Protocol. Possible values are: 'Http' and 'Https'.
 * **provisioningState**: string: Provisioning state of the backend http settings resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **requestTimeout**: int: Request timeout in seconds. Application Gateway will fail the request if response is not received within RequestTimeout. Acceptable values are from 1 second to 86400 seconds.
@@ -571,8 +571,8 @@
 * **privateIPAddress**: string: PrivateIPAddress of the network interface IP Configuration.
 * **privateIPAllocationMethod**: 'Dynamic' | 'Static': PrivateIP allocation method. Possible values are: 'Static' and 'Dynamic'.
 * **provisioningState**: string: Provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **publicIPAddress**: [SubResource](#subresource):
-* **subnet**: [SubResource](#subresource):
+* **publicIPAddress**: [SubResource](#subresource)
+* **subnet**: [SubResource](#subresource)
 
 ## ApplicationGatewayFrontendPort
 ### Properties
@@ -596,7 +596,7 @@
 ## ApplicationGatewayIPConfigurationPropertiesFormat
 ### Properties
 * **provisioningState**: string: Provisioning state of the application gateway subnet resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **subnet**: [SubResource](#subresource):
+* **subnet**: [SubResource](#subresource)
 
 ## ApplicationGatewayHttpListener
 ### Properties
@@ -607,13 +607,13 @@
 
 ## ApplicationGatewayHttpListenerPropertiesFormat
 ### Properties
-* **frontendIPConfiguration**: [SubResource](#subresource):
-* **frontendPort**: [SubResource](#subresource):
+* **frontendIPConfiguration**: [SubResource](#subresource)
+* **frontendPort**: [SubResource](#subresource)
 * **hostName**: string: Host name of HTTP listener.
 * **protocol**: 'Http' | 'Https': Protocol. Possible values are: 'Http' and 'Https'.
 * **provisioningState**: string: Provisioning state of the HTTP listener resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **requireServerNameIndication**: bool: Applicable only if protocol is https. Enables SNI for multi-hosting.
-* **sslCertificate**: [SubResource](#subresource):
+* **sslCertificate**: [SubResource](#subresource)
 
 ## ApplicationGatewayProbe
 ### Properties
@@ -641,12 +641,12 @@
 
 ## ApplicationGatewayRequestRoutingRulePropertiesFormat
 ### Properties
-* **backendAddressPool**: [SubResource](#subresource):
-* **backendHttpSettings**: [SubResource](#subresource):
-* **httpListener**: [SubResource](#subresource):
+* **backendAddressPool**: [SubResource](#subresource)
+* **backendHttpSettings**: [SubResource](#subresource)
+* **httpListener**: [SubResource](#subresource)
 * **provisioningState**: string: Provisioning state of the request routing rule resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **ruleType**: 'Basic' | 'PathBasedRouting': Rule type. Possible values are: 'Basic' and 'PathBasedRouting'.
-* **urlPathMap**: [SubResource](#subresource):
+* **urlPathMap**: [SubResource](#subresource)
 
 ## ApplicationGatewaySku
 ### Properties
@@ -681,8 +681,8 @@
 
 ## ApplicationGatewayUrlPathMapPropertiesFormat
 ### Properties
-* **defaultBackendAddressPool**: [SubResource](#subresource):
-* **defaultBackendHttpSettings**: [SubResource](#subresource):
+* **defaultBackendAddressPool**: [SubResource](#subresource)
+* **defaultBackendHttpSettings**: [SubResource](#subresource)
 * **pathRules**: [ApplicationGatewayPathRule](#applicationgatewaypathrule)[]: Path rule of URL path map resource.
 * **provisioningState**: string: Provisioning state of the backend http settings resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 
@@ -695,8 +695,8 @@
 
 ## ApplicationGatewayPathRulePropertiesFormat
 ### Properties
-* **backendAddressPool**: [SubResource](#subresource):
-* **backendHttpSettings**: [SubResource](#subresource):
+* **backendAddressPool**: [SubResource](#subresource)
+* **backendHttpSettings**: [SubResource](#subresource)
 * **paths**: string[]: Path rules of URL path map.
 * **provisioningState**: string: Path rule of URL path map resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 
@@ -719,7 +719,7 @@
 * **enableBgp**: bool: EnableBgp flag
 * **ingressBytesTransferred**: int (ReadOnly): The ingress bytes transferred in this connection.
 * **localNetworkGateway2**: [LocalNetworkGateway](#localnetworkgateway): A common class for general resource information
-* **peer**: [SubResource](#subresource):
+* **peer**: [SubResource](#subresource)
 * **provisioningState**: string (ReadOnly): The provisioning state of the VirtualNetworkGatewayConnection resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **resourceGuid**: string: The resource GUID property of the VirtualNetworkGatewayConnection resource.
 * **routingWeight**: int: The routing weight.
@@ -740,7 +740,7 @@
 
 ## LocalNetworkGatewayPropertiesFormat
 ### Properties
-* **bgpSettings**: [BgpSettings](#bgpsettings):
+* **bgpSettings**: [BgpSettings](#bgpsettings)
 * **gatewayIpAddress**: string: IP address of local network gateway.
 * **localNetworkAddressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
 * **provisioningState**: string (ReadOnly): The provisioning state of the LocalNetworkGateway resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
@@ -782,9 +782,9 @@
 ## VirtualNetworkGatewayPropertiesFormat
 ### Properties
 * **activeActive**: bool: ActiveActive flag
-* **bgpSettings**: [BgpSettings](#bgpsettings):
+* **bgpSettings**: [BgpSettings](#bgpsettings)
 * **enableBgp**: bool: Whether BGP is enabled for this virtual network gateway or not.
-* **gatewayDefaultSite**: [SubResource](#subresource):
+* **gatewayDefaultSite**: [SubResource](#subresource)
 * **gatewayType**: 'ExpressRoute' | 'Vpn': The type of this virtual network gateway. Possible values are: 'Vpn' and 'ExpressRoute'.
 * **ipConfigurations**: [VirtualNetworkGatewayIPConfiguration](#virtualnetworkgatewayipconfiguration)[]: IP configurations for virtual network gateway.
 * **provisioningState**: string (ReadOnly): The provisioning state of the VirtualNetworkGateway resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
@@ -804,8 +804,8 @@
 ### Properties
 * **privateIPAllocationMethod**: 'Dynamic' | 'Static': The private IP allocation method. Possible values are: 'Static' and 'Dynamic'.
 * **provisioningState**: string (ReadOnly): The provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **publicIPAddress**: [SubResource](#subresource):
-* **subnet**: [SubResource](#subresource):
+* **publicIPAddress**: [SubResource](#subresource)
+* **subnet**: [SubResource](#subresource)
 
 ## VirtualNetworkGatewaySku
 ### Properties
@@ -871,7 +871,7 @@
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
 * **name**: string: Gets name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [AuthorizationPropertiesFormat](#authorizationpropertiesformat):
+* **properties**: [AuthorizationPropertiesFormat](#authorizationpropertiesformat)
 
 ## AuthorizationPropertiesFormat
 ### Properties
@@ -884,7 +884,7 @@
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
 * **name**: string: Gets name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [ExpressRouteCircuitPeeringPropertiesFormat](#expressroutecircuitpeeringpropertiesformat):
+* **properties**: [ExpressRouteCircuitPeeringPropertiesFormat](#expressroutecircuitpeeringpropertiesformat)
 
 ## ExpressRouteCircuitPeeringPropertiesFormat
 ### Properties
@@ -1019,7 +1019,7 @@
 ## InboundNatPoolPropertiesFormat
 ### Properties
 * **backendPort**: int (Required): The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
-* **frontendIPConfiguration**: [SubResource](#subresource):
+* **frontendIPConfiguration**: [SubResource](#subresource)
 * **frontendPortRangeEnd**: int (Required): The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65535.
 * **frontendPortRangeStart**: int (Required): The first port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65534.
 * **protocol**: 'Tcp' | 'Udp' (Required): The transport protocol for the endpoint. Possible values are: 'Udp' or 'Tcp'.
@@ -1034,14 +1034,14 @@
 
 ## LoadBalancingRulePropertiesFormat
 ### Properties
-* **backendAddressPool**: [SubResource](#subresource):
+* **backendAddressPool**: [SubResource](#subresource)
 * **backendPort**: int: The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
 * **enableFloatingIP**: bool: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
-* **frontendIPConfiguration**: [SubResource](#subresource):
+* **frontendIPConfiguration**: [SubResource](#subresource)
 * **frontendPort**: int (Required): The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
 * **idleTimeoutInMinutes**: int: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
 * **loadDistribution**: 'Default' | 'SourceIP' | 'SourceIPProtocol': The load distribution policy for this rule. Possible values are 'Default', 'SourceIP', and 'SourceIPProtocol'.
-* **probe**: [SubResource](#subresource):
+* **probe**: [SubResource](#subresource)
 * **protocol**: 'Tcp' | 'Udp' (Required): The transport protocol for the external endpoint. Possible values are 'Udp' or 'Tcp'.
 * **provisioningState**: string: Gets the provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 
@@ -1055,7 +1055,7 @@
 ## OutboundNatRulePropertiesFormat
 ### Properties
 * **allocatedOutboundPorts**: int: The number of outbound ports to be used for NAT.
-* **backendAddressPool**: [SubResource](#subresource) (Required):
+* **backendAddressPool**: [SubResource](#subresource) (Required)
 * **frontendIPConfigurations**: [SubResource](#subresource)[]: The Frontend IP addresses of the load balancer.
 * **provisioningState**: string: Gets the provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 
@@ -1064,7 +1064,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
 * **name**: string: Gets name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [ProbePropertiesFormat](#probepropertiesformat):
+* **properties**: [ProbePropertiesFormat](#probepropertiesformat)
 
 ## ProbePropertiesFormat
 ### Properties
@@ -1108,7 +1108,7 @@
 ## PacketCaptureParameters
 ### Properties
 * **bytesToCapturePerPacket**: int: Number of bytes captured per packet, the remaining bytes are truncated.
-* **filters**: [PacketCaptureFilter](#packetcapturefilter)[]:
+* **filters**: [PacketCaptureFilter](#packetcapturefilter)[]
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the packet capture session.
 * **storageLocation**: [PacketCaptureStorageLocation](#packetcapturestoragelocation) (Required): Describes the storage location for a packet capture session.
 * **target**: string (Required): The ID of the targeted resource, only VM is currently supported.
@@ -1172,7 +1172,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
 * **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [VirtualNetworkPeeringPropertiesFormat](#virtualnetworkpeeringpropertiesformat):
+* **properties**: [VirtualNetworkPeeringPropertiesFormat](#virtualnetworkpeeringpropertiesformat)
 
 ## VirtualNetworkPeeringPropertiesFormat
 ### Properties
@@ -1181,7 +1181,7 @@
 * **allowVirtualNetworkAccess**: bool: Whether the VMs in the linked virtual network space would be able to access all the VMs in local Virtual network space.
 * **peeringState**: 'Connected' | 'Disconnected' | 'Initiated': The status of the virtual network peering. Possible values are 'Initiated', 'Connected', and 'Disconnected'.
 * **provisioningState**: string: The provisioning state of the resource.
-* **remoteVirtualNetwork**: [SubResource](#subresource):
+* **remoteVirtualNetwork**: [SubResource](#subresource)
 * **useRemoteGateways**: bool: If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
 
 ## Dictionary<string,String>

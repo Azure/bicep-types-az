@@ -210,7 +210,6 @@
 * **healthCheckStableDuration**: string (Required): The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
 * **healthCheckWaitDuration**: string (Required): The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
 * **healthPolicy**: [ClusterHealthPolicy](#clusterhealthpolicy) (Required): Defines a health policy used to evaluate the health of the cluster or of a cluster node.
-
 * **upgradeDomainTimeout**: string (Required): The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
 * **upgradeReplicaSetCheckTimeout**: string (Required): The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
 * **upgradeTimeout**: string (Required): The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
@@ -221,19 +220,15 @@
 Each entry specifies as key the application name and as value an ApplicationDeltaHealthPolicy used to evaluate the application health when upgrading the cluster.
 The application name should include the 'fabric:' URI scheme.
 The map is empty by default.
-
 * **maxPercentDeltaUnhealthyApplications**: int (Required): The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
 The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
 The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
-
 * **maxPercentDeltaUnhealthyNodes**: int (Required): The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
 The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
 The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-
 * **maxPercentUpgradeDomainDeltaUnhealthyNodes**: int (Required): The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
 The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
 The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
-
 
 ## Dictionary<string,ApplicationDeltaHealthPolicy>
 ### Properties
@@ -243,18 +238,15 @@ The check is performed after every upgrade domain upgrade completion for all com
 ## ApplicationDeltaHealthPolicy
 ### Properties
 * **defaultServiceTypeDeltaHealthPolicy**: [ServiceTypeDeltaHealthPolicy](#servicetypedeltahealthpolicy): Represents the delta health policy used to evaluate the health of services belonging to a service type when upgrading the cluster.
-
 * **serviceTypeDeltaHealthPolicies**: [Dictionary<string,ServiceTypeDeltaHealthPolicy>](#dictionarystringservicetypedeltahealthpolicy): Defines a map that contains specific delta health policies for different service types.
 Each entry specifies as key the service type name and as value a ServiceTypeDeltaHealthPolicy used to evaluate the service health when upgrading the cluster.
 The map is empty by default.
-
 
 ## ServiceTypeDeltaHealthPolicy
 ### Properties
 * **maxPercentDeltaUnhealthyServices**: int: The maximum allowed percentage of services health degradation allowed during cluster upgrades.
 The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
 The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-
 
 ## Dictionary<string,ServiceTypeDeltaHealthPolicy>
 ### Properties
@@ -267,14 +259,12 @@ The check is performed after every upgrade domain upgrade completion to make sur
 Each entry specifies as key the application name and as value an ApplicationHealthPolicy used to evaluate the application health.
 The application name should include the 'fabric:' URI scheme.
 The map is empty by default.
-
 * **maxPercentUnhealthyApplications**: int: The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
 
 The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.
 If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.
 This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
 The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
-
 * **maxPercentUnhealthyNodes**: int: The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
 
 The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.
@@ -284,7 +274,6 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 
 In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
 
-
 ## Dictionary<string,ApplicationHealthPolicy>
 ### Properties
 ### Additional Properties
@@ -293,7 +282,6 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 ## ApplicationHealthPolicy
 ### Properties
 * **defaultServiceTypeHealthPolicy**: [ServiceTypeHealthPolicy](#servicetypehealthpolicy): Represents the health policy used to evaluate the health of services belonging to a service type.
-
 * **serviceTypeHealthPolicies**: [Dictionary<string,ServiceTypeHealthPolicy>](#dictionarystringservicetypehealthpolicy): Defines a ServiceTypeHealthPolicy per service type name.
 
 The entries in the map replace the default service type health policy for each specified service type.
@@ -302,11 +290,9 @@ With policy per service type, there's more granular control of the health of the
 
 If no policy is specified for a service type name, the DefaultServiceTypeHealthPolicy is used for evaluation.
 
-
 ## ServiceTypeHealthPolicy
 ### Properties
 * **maxPercentUnhealthyServices**: int: The maximum percentage of services allowed to be unhealthy before your application is considered in error.
-
 
 ## Dictionary<string,ServiceTypeHealthPolicy>
 ### Properties
@@ -325,7 +311,6 @@ If no policy is specified for a service type name, the DefaultServiceTypeHealthP
 * **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The type of managed identity for the resource.
 * **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-
 
 ## Dictionary<string,UserAssignedIdentity>
 ### Properties
@@ -362,18 +347,15 @@ This is the maximum Load for an instance of this application on a single node. E
 If set to zero, capacity for this metric is unlimited on each node.
 When creating a new application with application capacity defined, the product of MaximumNodes and this value must always be smaller than or equal to TotalApplicationCapacity.
 When updating existing application with application capacity, the product of MaximumNodes and this value must always be smaller than or equal to TotalApplicationCapacity.
-
 * **name**: string: The name of the metric.
 * **reservationCapacity**: int: The node reservation capacity for Service Fabric application.
 This is the amount of load which is reserved on nodes which have instances of this application.
 If MinimumNodes is specified, then the product of these values will be the capacity reserved in the cluster for the application.
 If set to zero, no capacity is reserved for this metric.
 When setting application capacity or when updating application capacity; this value must be smaller than or equal to MaximumCapacity for each metric.
-
 * **totalApplicationCapacity**: int: The total metric capacity for Service Fabric application.
 This is the total metric capacity for this application in the cluster. Service Fabric will try to limit the sum of loads of services within the application to this value.
 When creating a new application with application capacity defined, the product of MaximumNodes and MaximumCapacity must always be smaller than or equal to this value.
-
 
 ## Dictionary<string,String>
 ### Properties
@@ -383,7 +365,6 @@ When creating a new application with application capacity defined, the product o
 ## ApplicationUpgradePolicy
 ### Properties
 * **applicationHealthPolicy**: [ArmApplicationHealthPolicy](#armapplicationhealthpolicy): Defines a health policy used to evaluate the health of an application or one of its children entities.
-
 * **forceRestart**: bool: If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
 * **rollingUpgradeMonitoringPolicy**: [ArmRollingUpgradeMonitoringPolicy](#armrollingupgrademonitoringpolicy): The policy used for monitoring the application upgrade
 * **upgradeReplicaSetCheckTimeout**: string: The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).
@@ -392,12 +373,10 @@ When creating a new application with application capacity defined, the product o
 ### Properties
 * **considerWarningAsError**: bool: Indicates whether warnings are treated with the same severity as errors.
 * **defaultServiceTypeHealthPolicy**: [ArmServiceTypeHealthPolicy](#armservicetypehealthpolicy): Represents the health policy used to evaluate the health of services belonging to a service type.
-
 * **maxPercentUnhealthyDeployedApplications**: int: The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.
 The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.
 This is calculated by dividing the number of unhealthy deployed applications over the number of nodes where the application is currently deployed on in the cluster.
 The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
-
 * **serviceTypeHealthPolicyMap**: [Dictionary<string,ArmServiceTypeHealthPolicy>](#dictionarystringarmservicetypehealthpolicy): Defines a ServiceTypeHealthPolicy per service type name.
 
 The entries in the map replace the default service type health policy for each specified service type.
@@ -406,15 +385,11 @@ With policy per service type, there's more granular control of the health of the
 
 If no policy is specified for a service type name, the DefaultServiceTypeHealthPolicy is used for evaluation.
 
-
 ## ArmServiceTypeHealthPolicy
 ### Properties
 * **maxPercentUnhealthyPartitionsPerService**: int: The maximum percentage of partitions per service allowed to be unhealthy before your application is considered in error.
-
 * **maxPercentUnhealthyReplicasPerPartition**: int: The maximum percentage of replicas per partition allowed to be unhealthy before your application is considered in error.
-
 * **maxPercentUnhealthyServices**: int: The maximum percentage of services allowed to be unhealthy before your application is considered in error.
-
 
 ## Dictionary<string,ArmServiceTypeHealthPolicy>
 ### Properties
@@ -486,10 +461,8 @@ If no policy is specified for a service type name, the DefaultServiceTypeHealthP
 * **Count**: int (Required): The number of partitions.
 * **HighKey**: string (Required): String indicating the upper bound of the partition key range that
 should be split between the partition ‘Count’
-
 * **LowKey**: string (Required): String indicating the lower bound of the partition key range that
 should be split between the partition ‘Count’
-
 * **partitionScheme**: 'UniformInt64Range' (Required): Describes a partitioning scheme where an integer range is allocated evenly across a number of partitions.
 
 
@@ -508,10 +481,8 @@ should be split between the partition ‘Count’
 * **Count**: int (Required): The number of partitions.
 * **HighKey**: string (Required): String indicating the upper bound of the partition key range that
 should be split between the partition ‘Count’
-
 * **LowKey**: string (Required): String indicating the lower bound of the partition key range that
 should be split between the partition ‘Count’
-
 * **partitionScheme**: 'UniformInt64Range' (Required): Describes a partitioning scheme where an integer range is allocated evenly across a number of partitions.
 
 ## ServiceLoadMetricDescription

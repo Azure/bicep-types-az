@@ -8,7 +8,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant): The resource type
 

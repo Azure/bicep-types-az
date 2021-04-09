@@ -8,7 +8,7 @@
 * **identity**: [ContainerGroupIdentity](#containergroupidentity): Identity for the container group.
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:18_userAssignedIdentitiesValue](#schemas18userassignedidentitiesvalue) (Required):
+* **properties**: [schemas:18_userAssignedIdentitiesValue](#schemas18userassignedidentitiesvalue) (Required)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant): The resource type
 

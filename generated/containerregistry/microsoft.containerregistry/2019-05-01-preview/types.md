@@ -50,8 +50,8 @@ repositories/repository-name/metadata/write
 ## TokenCredentialsProperties
 ### Properties
 * **activeDirectoryObject**: [ActiveDirectoryObject](#activedirectoryobject): The Active Directory Object that will be used for authenticating the token of a container registry.
-* **certificates**: [TokenCertificate](#tokencertificate)[]:
-* **passwords**: [TokenPassword](#tokenpassword)[]:
+* **certificates**: [TokenCertificate](#tokencertificate)[]
+* **passwords**: [TokenPassword](#tokenpassword)[]
 
 ## ActiveDirectoryObject
 ### Properties
@@ -62,7 +62,7 @@ repositories/repository-name/metadata/write
 ### Properties
 * **encodedPemCertificate**: string: Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
 * **expiry**: string: The expiry datetime of the certificate.
-* **name**: 'certificate1' | 'certificate2':
+* **name**: 'certificate1' | 'certificate2'
 * **thumbprint**: string: The thumbprint of the certificate.
 
 ## TokenPassword

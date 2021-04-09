@@ -35,7 +35,7 @@
 * **availabilityZone**: string: availability Zone information of the server.
 * **byokEnforcement**: string (ReadOnly): Status showing whether the data encryption is enabled with customer-managed keys.
 * **createMode**: 'Default' | 'PointInTimeRestore': The mode to create a new PostgreSQL server.
-* **delegatedSubnetArguments**: [schemas:11_delegatedSubnetArguments](#schemas11delegatedsubnetarguments):
+* **delegatedSubnetArguments**: [schemas:11_delegatedSubnetArguments](#schemas11delegatedsubnetarguments)
 * **displayName**: string: The display name of a server.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
 * **haEnabled**: 'Disabled' | 'Enabled': stand by count value can be either enabled or disabled.

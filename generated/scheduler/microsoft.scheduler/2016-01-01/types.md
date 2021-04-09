@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Gets or sets the storage account location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [JobCollectionProperties](#jobcollectionproperties):
+* **properties**: [JobCollectionProperties](#jobcollectionproperties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the tags.
 * **type**: 'Microsoft.Scheduler/jobCollections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -17,20 +17,20 @@
 * **apiVersion**: '2016-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [JobProperties](#jobproperties):
+* **properties**: [JobProperties](#jobproperties)
 * **type**: 'Microsoft.Scheduler/jobCollections/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## JobCollectionProperties
 ### Properties
-* **quota**: [JobCollectionQuota](#jobcollectionquota):
-* **sku**: [Sku](#sku):
+* **quota**: [JobCollectionQuota](#jobcollectionquota)
+* **sku**: [Sku](#sku)
 * **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'Suspended': Gets or sets the state.
 
 ## JobCollectionQuota
 ### Properties
 * **maxJobCount**: int: Gets or set the maximum job count.
 * **maxJobOccurrence**: int: Gets or sets the maximum job occurrence.
-* **maxRecurrence**: [JobMaxRecurrence](#jobmaxrecurrence):
+* **maxRecurrence**: [JobMaxRecurrence](#jobmaxrecurrence)
 
 ## JobMaxRecurrence
 ### Properties
@@ -48,29 +48,29 @@
 
 ## JobProperties
 ### Properties
-* **action**: [JobAction](#jobaction):
-* **recurrence**: [JobRecurrence](#jobrecurrence):
+* **action**: [JobAction](#jobaction)
+* **recurrence**: [JobRecurrence](#jobrecurrence)
 * **startTime**: string: Gets or sets the job start time.
 * **state**: 'Completed' | 'Disabled' | 'Enabled' | 'Faulted': Gets or set the job state.
-* **status**: [JobStatus](#jobstatus) (ReadOnly):
+* **status**: [JobStatus](#jobstatus) (ReadOnly)
 
 ## JobAction
 ### Properties
-* **errorAction**: [JobErrorAction](#joberroraction):
-* **queueMessage**: [StorageQueueMessage](#storagequeuemessage):
-* **request**: [HttpRequest](#httprequest):
-* **retryPolicy**: [RetryPolicy](#retrypolicy):
-* **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage):
-* **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage):
+* **errorAction**: [JobErrorAction](#joberroraction)
+* **queueMessage**: [StorageQueueMessage](#storagequeuemessage)
+* **request**: [HttpRequest](#httprequest)
+* **retryPolicy**: [RetryPolicy](#retrypolicy)
+* **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage)
+* **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage)
 * **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job action type.
 
 ## JobErrorAction
 ### Properties
-* **queueMessage**: [StorageQueueMessage](#storagequeuemessage):
-* **request**: [HttpRequest](#httprequest):
-* **retryPolicy**: [RetryPolicy](#retrypolicy):
-* **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage):
-* **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage):
+* **queueMessage**: [StorageQueueMessage](#storagequeuemessage)
+* **request**: [HttpRequest](#httprequest)
+* **retryPolicy**: [RetryPolicy](#retrypolicy)
+* **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage)
+* **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage)
 * **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job error action type.
 
 ## StorageQueueMessage
@@ -82,7 +82,7 @@
 
 ## HttpRequest
 ### Properties
-* **authentication**: [HttpAuthentication](#httpauthentication):
+* **authentication**: [HttpAuthentication](#httpauthentication)
 * **body**: string: Gets or sets the request body.
 * **headers**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the headers.
 * **method**: string: Gets or sets the method of the request.
@@ -105,8 +105,8 @@
 
 ## ServiceBusQueueMessage
 ### Properties
-* **authentication**: [ServiceBusAuthentication](#servicebusauthentication):
-* **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties):
+* **authentication**: [ServiceBusAuthentication](#servicebusauthentication)
+* **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties)
 * **customMessageProperties**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the custom message properties.
 * **message**: string: Gets or sets the message.
 * **namespace**: string: Gets or sets the namespace.
@@ -142,8 +142,8 @@
 
 ## ServiceBusTopicMessage
 ### Properties
-* **authentication**: [ServiceBusAuthentication](#servicebusauthentication):
-* **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties):
+* **authentication**: [ServiceBusAuthentication](#servicebusauthentication)
+* **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties)
 * **customMessageProperties**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the custom message properties.
 * **message**: string: Gets or sets the message.
 * **namespace**: string: Gets or sets the namespace.
@@ -161,7 +161,7 @@
 * **endTime**: string: Gets or sets the time at which the job will complete.
 * **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week': Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
 * **interval**: int: Gets or sets the interval between retries.
-* **schedule**: [JobRecurrenceSchedule](#jobrecurrenceschedule):
+* **schedule**: [JobRecurrenceSchedule](#jobrecurrenceschedule)
 
 ## JobRecurrenceSchedule
 ### Properties

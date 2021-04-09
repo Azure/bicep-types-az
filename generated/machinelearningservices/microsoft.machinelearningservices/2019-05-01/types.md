@@ -72,7 +72,7 @@
 ### Databricks
 #### Properties
 * **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:23_properties](#schemas23properties):
+* **properties**: [schemas:23_properties](#schemas23properties)
 
 ### DataFactory
 #### Properties
@@ -81,17 +81,17 @@
 ### DataLakeAnalytics
 #### Properties
 * **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:23_properties](#schemas23properties):
+* **properties**: [schemas:23_properties](#schemas23properties)
 
 ### HDInsight
 #### Properties
 * **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:23_properties](#schemas23properties):
+* **properties**: [schemas:23_properties](#schemas23properties)
 
 ### VirtualMachine
 #### Properties
 * **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:23_properties](#schemas23properties):
+* **properties**: [schemas:23_properties](#schemas23properties)
 
 
 ## MachineLearningServiceError
@@ -190,7 +190,7 @@
 ## Databricks
 ### Properties
 * **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:23_properties](#schemas23properties):
+* **properties**: [schemas:23_properties](#schemas23properties)
 
 ## schemas:23_properties
 ### Properties
@@ -213,17 +213,17 @@
 ## DataLakeAnalytics
 ### Properties
 * **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:23_properties](#schemas23properties):
+* **properties**: [schemas:23_properties](#schemas23properties)
 
 ## HDInsight
 ### Properties
 * **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:23_properties](#schemas23properties):
+* **properties**: [schemas:23_properties](#schemas23properties)
 
 ## VirtualMachine
 ### Properties
 * **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:23_properties](#schemas23properties):
+* **properties**: [schemas:23_properties](#schemas23properties)
 
 ## Dictionary<string,String>
 ### Properties

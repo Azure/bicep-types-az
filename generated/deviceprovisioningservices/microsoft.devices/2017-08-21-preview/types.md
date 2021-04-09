@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IotDpsPropertiesDescription](#iotdpspropertiesdescription) (Required):
+* **properties**: [IotDpsPropertiesDescription](#iotdpspropertiesdescription) (Required)
 * **sku**: [IotDpsSkuInfo](#iotdpsskuinfo) (Required): List of possible provisioning service SKUs.
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.Devices/provisioningServices' (ReadOnly, DeployTimeConstant): The resource type
@@ -27,7 +27,7 @@
 ## IotDpsPropertiesDescription
 ### Properties
 * **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static': Allocation policy to be used by this provisioning service.
-* **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule_AccessRightsDescription_](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[]:
+* **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule_AccessRightsDescription_](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[]
 * **deviceProvisioningHostName**: string (ReadOnly): Device endpoint for this provisioning service.
 * **idScope**: string (ReadOnly): Unique identifier of this provisioning service.
 * **iotHubs**: [IotHubDefinitionDescription](#iothubdefinitiondescription)[]: List of IoT hubs associated with this provisioning service.
@@ -44,8 +44,8 @@
 
 ## IotHubDefinitionDescription
 ### Properties
-* **allocationWeight**: int:
-* **applyAllocationPolicy**: bool:
+* **allocationWeight**: int
+* **applyAllocationPolicy**: bool
 * **connectionString**: string (Required): Connection string og the IoT hub.
 * **location**: string (Required): ARM region of the IoT hub.
 * **name**: string (ReadOnly): Host name of the IoT hub.
@@ -53,7 +53,7 @@
 ## IotDpsSkuInfo
 ### Properties
 * **capacity**: int: The number of services of the selected tier allowed in the subscription.
-* **name**: 'S1':
+* **name**: 'S1'
 * **tier**: string (ReadOnly): Pricing tier of the provisioning service.
 
 ## Dictionary<string,String>

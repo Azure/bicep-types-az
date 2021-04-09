@@ -120,14 +120,14 @@
 
 ## schemas:28_autoScalerProfile
 ### Properties
-* **max-graceful-termination-sec**: string:
-* **scale-down-delay-after-add**: string:
-* **scale-down-delay-after-delete**: string:
-* **scale-down-delay-after-failure**: string:
-* **scale-down-unneeded-time**: string:
-* **scale-down-unready-time**: string:
-* **scale-down-utilization-threshold**: string:
-* **scan-interval**: string:
+* **max-graceful-termination-sec**: string
+* **scale-down-delay-after-add**: string
+* **scale-down-delay-after-delete**: string
+* **scale-down-delay-after-failure**: string
+* **scale-down-unneeded-time**: string
+* **scale-down-unready-time**: string
+* **scale-down-utilization-threshold**: string
+* **scan-interval**: string
 
 ## Dictionary<string,Schemas28IdentityProfileValue>
 ### Properties

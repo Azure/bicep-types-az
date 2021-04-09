@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: any:
-* **sku**: [IntegrationAccountSku](#integrationaccountsku):
+* **properties**: any
+* **sku**: [IntegrationAccountSku](#integrationaccountsku)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IntegrationAccountAgreementProperties](#integrationaccountagreementproperties):
+* **properties**: [IntegrationAccountAgreementProperties](#integrationaccountagreementproperties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -30,7 +30,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IntegrationAccountCertificateProperties](#integrationaccountcertificateproperties):
+* **properties**: [IntegrationAccountCertificateProperties](#integrationaccountcertificateproperties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -41,7 +41,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IntegrationAccountMapProperties](#integrationaccountmapproperties):
+* **properties**: [IntegrationAccountMapProperties](#integrationaccountmapproperties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/maps' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -52,7 +52,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IntegrationAccountPartnerProperties](#integrationaccountpartnerproperties):
+* **properties**: [IntegrationAccountPartnerProperties](#integrationaccountpartnerproperties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/partners' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -63,7 +63,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IntegrationAccountSchemaProperties](#integrationaccountschemaproperties):
+* **properties**: [IntegrationAccountSchemaProperties](#integrationaccountschemaproperties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -80,40 +80,40 @@
 ### Properties
 * **agreementType**: 'AS2' | 'Edifact' | 'NotSpecified' | 'X12': The agreement type.
 * **changedTime**: string (ReadOnly): The changed time.
-* **content**: [AgreementContent](#agreementcontent):
+* **content**: [AgreementContent](#agreementcontent)
 * **createdTime**: string (ReadOnly): The created time.
-* **guestIdentity**: [BusinessIdentity](#businessidentity):
+* **guestIdentity**: [BusinessIdentity](#businessidentity)
 * **guestPartner**: string: The guest partner.
-* **hostIdentity**: [BusinessIdentity](#businessidentity):
+* **hostIdentity**: [BusinessIdentity](#businessidentity)
 * **hostPartner**: string: The host partner.
 * **metadata**: any: The metadata.
 
 ## AgreementContent
 ### Properties
-* **AS2**: [AS2AgreementContent](#as2agreementcontent):
-* **Edifact**: [EdifactAgreementContent](#edifactagreementcontent):
-* **X12**: [X12AgreementContent](#x12agreementcontent):
+* **AS2**: [AS2AgreementContent](#as2agreementcontent)
+* **Edifact**: [EdifactAgreementContent](#edifactagreementcontent)
+* **X12**: [X12AgreementContent](#x12agreementcontent)
 
 ## AS2AgreementContent
 ### Properties
-* **receiveAgreement**: [AS2OneWayAgreement](#as2onewayagreement):
-* **sendAgreement**: [AS2OneWayAgreement](#as2onewayagreement):
+* **receiveAgreement**: [AS2OneWayAgreement](#as2onewayagreement)
+* **sendAgreement**: [AS2OneWayAgreement](#as2onewayagreement)
 
 ## AS2OneWayAgreement
 ### Properties
-* **protocolSettings**: [AS2ProtocolSettings](#as2protocolsettings):
-* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity):
-* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity):
+* **protocolSettings**: [AS2ProtocolSettings](#as2protocolsettings)
+* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity)
+* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity)
 
 ## AS2ProtocolSettings
 ### Properties
-* **acknowledgementConnectionSettings**: [AS2AcknowledgementConnectionSettings](#as2acknowledgementconnectionsettings):
-* **envelopeSettings**: [AS2EnvelopeSettings](#as2envelopesettings):
-* **errorSettings**: [AS2ErrorSettings](#as2errorsettings):
-* **mdnSettings**: [AS2MdnSettings](#as2mdnsettings):
-* **messageConnectionSettings**: [AS2MessageConnectionSettings](#as2messageconnectionsettings):
-* **securitySettings**: [AS2SecuritySettings](#as2securitysettings):
-* **validationSettings**: [AS2ValidationSettings](#as2validationsettings):
+* **acknowledgementConnectionSettings**: [AS2AcknowledgementConnectionSettings](#as2acknowledgementconnectionsettings)
+* **envelopeSettings**: [AS2EnvelopeSettings](#as2envelopesettings)
+* **errorSettings**: [AS2ErrorSettings](#as2errorsettings)
+* **mdnSettings**: [AS2MdnSettings](#as2mdnsettings)
+* **messageConnectionSettings**: [AS2MessageConnectionSettings](#as2messageconnectionsettings)
+* **securitySettings**: [AS2SecuritySettings](#as2securitysettings)
+* **validationSettings**: [AS2ValidationSettings](#as2validationsettings)
 
 ## AS2AcknowledgementConnectionSettings
 ### Properties
@@ -185,28 +185,28 @@
 
 ## EdifactAgreementContent
 ### Properties
-* **receiveAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement):
-* **sendAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement):
+* **receiveAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement)
+* **sendAgreement**: [EdifactOneWayAgreement](#edifactonewayagreement)
 
 ## EdifactOneWayAgreement
 ### Properties
-* **protocolSettings**: [EdifactProtocolSettings](#edifactprotocolsettings):
-* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity):
-* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity):
+* **protocolSettings**: [EdifactProtocolSettings](#edifactprotocolsettings)
+* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity)
+* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity)
 
 ## EdifactProtocolSettings
 ### Properties
-* **acknowledgementSettings**: [EdifactAcknowledgementSettings](#edifactacknowledgementsettings):
+* **acknowledgementSettings**: [EdifactAcknowledgementSettings](#edifactacknowledgementsettings)
 * **edifactDelimiterOverrides**: [EdifactDelimiterOverride](#edifactdelimiteroverride)[]: The EDIFACT delimiter override settings.
 * **envelopeOverrides**: [EdifactEnvelopeOverride](#edifactenvelopeoverride)[]: The EDIFACT envelope override settings.
-* **envelopeSettings**: [EdifactEnvelopeSettings](#edifactenvelopesettings):
-* **framingSettings**: [EdifactFramingSettings](#edifactframingsettings):
-* **messageFilter**: [EdifactMessageFilter](#edifactmessagefilter):
+* **envelopeSettings**: [EdifactEnvelopeSettings](#edifactenvelopesettings)
+* **framingSettings**: [EdifactFramingSettings](#edifactframingsettings)
+* **messageFilter**: [EdifactMessageFilter](#edifactmessagefilter)
 * **messageFilterList**: [EdifactMessageIdentifier](#edifactmessageidentifier)[]: The EDIFACT message filter list.
-* **processingSettings**: [EdifactProcessingSettings](#edifactprocessingsettings):
+* **processingSettings**: [EdifactProcessingSettings](#edifactprocessingsettings)
 * **schemaReferences**: [EdifactSchemaReference](#edifactschemareference)[]: The EDIFACT schema references.
 * **validationOverrides**: [EdifactValidationOverride](#edifactvalidationoverride)[]: The EDIFACT validation override settings.
-* **validationSettings**: [EdifactValidationSettings](#edifactvalidationsettings):
+* **validationSettings**: [EdifactValidationSettings](#edifactvalidationsettings)
 
 ## EdifactAcknowledgementSettings
 ### Properties
@@ -364,28 +364,28 @@
 
 ## X12AgreementContent
 ### Properties
-* **receiveAgreement**: [X12OneWayAgreement](#x12onewayagreement):
-* **sendAgreement**: [X12OneWayAgreement](#x12onewayagreement):
+* **receiveAgreement**: [X12OneWayAgreement](#x12onewayagreement)
+* **sendAgreement**: [X12OneWayAgreement](#x12onewayagreement)
 
 ## X12OneWayAgreement
 ### Properties
-* **protocolSettings**: [X12ProtocolSettings](#x12protocolsettings):
-* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity):
-* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity):
+* **protocolSettings**: [X12ProtocolSettings](#x12protocolsettings)
+* **receiverBusinessIdentity**: [BusinessIdentity](#businessidentity)
+* **senderBusinessIdentity**: [BusinessIdentity](#businessidentity)
 
 ## X12ProtocolSettings
 ### Properties
-* **acknowledgementSettings**: [X12AcknowledgementSettings](#x12acknowledgementsettings):
+* **acknowledgementSettings**: [X12AcknowledgementSettings](#x12acknowledgementsettings)
 * **envelopeOverrides**: [X12EnvelopeOverride](#x12envelopeoverride)[]: The X12 envelope override settings.
-* **envelopeSettings**: [X12EnvelopeSettings](#x12envelopesettings):
-* **framingSettings**: [X12FramingSettings](#x12framingsettings):
-* **messageFilter**: [X12MessageFilter](#x12messagefilter):
+* **envelopeSettings**: [X12EnvelopeSettings](#x12envelopesettings)
+* **framingSettings**: [X12FramingSettings](#x12framingsettings)
+* **messageFilter**: [X12MessageFilter](#x12messagefilter)
 * **messageFilterList**: [X12MessageIdentifier](#x12messageidentifier)[]: The X12 message filter list.
-* **processingSettings**: [X12ProcessingSettings](#x12processingsettings):
+* **processingSettings**: [X12ProcessingSettings](#x12processingsettings)
 * **schemaReferences**: [X12SchemaReference](#x12schemareference)[]: The X12 schema references.
-* **securitySettings**: [X12SecuritySettings](#x12securitysettings):
+* **securitySettings**: [X12SecuritySettings](#x12securitysettings)
 * **validationOverrides**: [X12ValidationOverride](#x12validationoverride)[]: The X12 validation override settings.
-* **validationSettings**: [X12ValidationSettings](#x12validationsettings):
+* **validationSettings**: [X12ValidationSettings](#x12validationsettings)
 * **x12DelimiterOverrides**: [X12DelimiterOverrides](#x12delimiteroverrides)[]: The X12 delimiter override settings.
 
 ## X12AcknowledgementSettings
@@ -531,7 +531,7 @@
 ### Properties
 * **changedTime**: string (ReadOnly): The changed time.
 * **createdTime**: string (ReadOnly): The created time.
-* **key**: [KeyVaultKeyReference](#keyvaultkeyreference):
+* **key**: [KeyVaultKeyReference](#keyvaultkeyreference)
 * **metadata**: any: The metadata.
 * **publicCertificate**: string: The public certificate.
 
@@ -556,7 +556,7 @@
 ### Properties
 * **changedTime**: string (ReadOnly): The changed time.
 * **content**: any: The content.
-* **contentLink**: [IntegrationAccountContentLink](#integrationaccountcontentlink) (ReadOnly):
+* **contentLink**: [IntegrationAccountContentLink](#integrationaccountcontentlink) (ReadOnly)
 * **contentType**: string: The content type.
 * **createdTime**: string (ReadOnly): The created time.
 * **mapType**: 'NotSpecified' | 'Xslt': The map type.
@@ -564,7 +564,7 @@
 
 ## IntegrationAccountContentLink
 ### Properties
-* **contentHash**: [IntegrationAccountContentHash](#integrationaccountcontenthash):
+* **contentHash**: [IntegrationAccountContentHash](#integrationaccountcontenthash)
 * **contentSize**: int: The content size.
 * **contentVersion**: string: The content version.
 * **metadata**: any: The metadata.
@@ -583,14 +583,14 @@
 ## IntegrationAccountPartnerProperties
 ### Properties
 * **changedTime**: string (ReadOnly): The changed time.
-* **content**: [PartnerContent](#partnercontent):
+* **content**: [PartnerContent](#partnercontent)
 * **createdTime**: string (ReadOnly): The created time.
 * **metadata**: any: The metadata.
 * **partnerType**: 'B2B' | 'NotSpecified': The partner type.
 
 ## PartnerContent
 ### Properties
-* **b2b**: [B2BPartnerContent](#b2bpartnercontent):
+* **b2b**: [B2BPartnerContent](#b2bpartnercontent)
 
 ## B2BPartnerContent
 ### Properties
@@ -605,7 +605,7 @@
 ### Properties
 * **changedTime**: string (ReadOnly): The changed time.
 * **content**: any: The content.
-* **contentLink**: [IntegrationAccountContentLink](#integrationaccountcontentlink) (ReadOnly):
+* **contentLink**: [IntegrationAccountContentLink](#integrationaccountcontentlink) (ReadOnly)
 * **contentType**: string: The content type.
 * **createdTime**: string (ReadOnly): The created time.
 * **metadata**: any: The metadata.

@@ -281,7 +281,7 @@
 
 ## DatabaseAccountCreateUpdateProperties
 ### Properties
-* **apiProperties**: [ApiProperties](#apiproperties):
+* **apiProperties**: [ApiProperties](#apiproperties)
 * **backupPolicy**: [BackupPolicy](#backuppolicy): The object representing the policy for taking backups on an account.
 * **capabilities**: [Capability](#capability)[]: List of Cosmos DB capabilities for the account
 * **connectorOffer**: 'Small': The cassandra connector offer type for the Cosmos DB database C* account.
@@ -418,7 +418,7 @@
 
 ## CreateUpdateOptions
 ### Properties
-* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings) (WriteOnly):
+* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings) (WriteOnly)
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
 * **principalId**: string (ReadOnly): The principal id of user assigned identity.
 * **throughput**: int (WriteOnly): Request Units per second. For example, "throughput": 10000.

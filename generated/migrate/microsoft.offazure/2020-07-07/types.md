@@ -9,7 +9,7 @@
 * **location**: string: Azure location in which Sites is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteProperties](#siteproperties): Class for site properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring):
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.OffAzure/HyperVSites' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/HyperVSites/clusters@2020-07-07
@@ -50,7 +50,7 @@
 * **location**: string: Azure location in which Sites is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteProperties](#siteproperties): Class for site properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring):
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 * **type**: 'Microsoft.OffAzure/VMwareSites' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/VMwareSites/vCenters@2020-07-07

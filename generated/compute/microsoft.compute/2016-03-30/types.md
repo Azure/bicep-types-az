@@ -88,7 +88,7 @@
 
 ## VirtualMachineProperties
 ### Properties
-* **availabilitySet**: [SubResource](#subresource):
+* **availabilitySet**: [SubResource](#subresource)
 * **diagnosticsProfile**: [DiagnosticsProfile](#diagnosticsprofile): Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
 * **hardwareProfile**: [HardwareProfile](#hardwareprofile): Specifies the hardware settings for the virtual machine.
 * **instanceView**: [VirtualMachineInstanceView](#virtualmachineinstanceview) (ReadOnly): The instance view of a virtual machine.
@@ -192,7 +192,7 @@
 
 ## VaultSecretGroup
 ### Properties
-* **sourceVault**: [SubResource](#subresource):
+* **sourceVault**: [SubResource](#subresource)
 * **vaultCertificates**: [VaultCertificate](#vaultcertificate)[]: The list of key vault references in SourceVault which contain certificates.
 
 ## VaultCertificate
@@ -271,12 +271,12 @@
 ## KeyVaultSecretReference
 ### Properties
 * **secretUrl**: string (Required): The URL referencing a secret in a Key Vault.
-* **sourceVault**: [SubResource](#subresource) (Required):
+* **sourceVault**: [SubResource](#subresource) (Required)
 
 ## KeyVaultKeyReference
 ### Properties
 * **keyUrl**: string (Required): The URL referencing a key encryption key in Key Vault.
-* **sourceVault**: [SubResource](#subresource) (Required):
+* **sourceVault**: [SubResource](#subresource) (Required)
 
 ## VirtualMachineExtension
 ### Properties
