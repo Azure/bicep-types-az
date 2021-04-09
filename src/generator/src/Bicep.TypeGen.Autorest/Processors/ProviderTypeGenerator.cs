@@ -50,7 +50,7 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
         }
 
         private ObjectProperty CreateObjectProperty(TypeBase type, ObjectPropertyFlags flags, string? description)
-            => new ObjectProperty(factory.GetReference(type), flags, description);
+            => new ObjectProperty(factory.GetReference(type), flags, SanitizeDescription(description));
 
         private Dictionary<string, ObjectProperty> GetStandardizedResourceProperties(ResourceDescriptor resourceDescriptor, TypeBase resourceName)
         {
@@ -135,9 +135,10 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 var propertyDefinition = ParseType(putProperty?.ModelType, getProperty?.ModelType);
                 if (propertyDefinition != null)
                 {
-                    var description = SanitizeDescription((putProperty ?? getProperty)?.Documentation);
-                    var flags = ParsePropertyFlags(putProperty, getProperty);
-                    resourceProperties[propertyName] = CreateObjectProperty(propertyDefinition, flags, description);
+                    resourceProperties[propertyName] = CreateObjectProperty(
+                        propertyDefinition,
+                        ParsePropertyFlags(putProperty, getProperty),
+                        (putProperty ?? getProperty)?.Documentation);
                 }
             }
 
@@ -389,9 +390,10 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                     var propertyDefinition = ParseType(putProperty?.ModelType, getProperty?.ModelType);
                     if (propertyDefinition != null)
                     {
-                        var flags = ParsePropertyFlags(putProperty, getProperty);
-                        var description = SanitizeDescription((putProperty ?? getProperty)?.Documentation);
-                        definitionProperties[propertyName] = CreateObjectProperty(propertyDefinition, flags, description);
+                        definitionProperties[propertyName] = CreateObjectProperty(
+                            propertyDefinition,
+                            ParsePropertyFlags(putProperty, getProperty),
+                            (putProperty ?? getProperty)?.Documentation);
                     }
                 }
 
@@ -455,13 +457,10 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
 
                 if (namedDefinitions[subTypeName] is ObjectType objectType)
                 {
-                    var description = SanitizeDescription((putSubType ?? getSubType)?.Documentation);
-
-                    var discriminatorEnum = GetDiscriminatorType(putSubType, getSubType);
-                    objectType.Properties[discriminatedObjectType.Discriminator] = new ObjectProperty(
-                        type: factory.GetReference(discriminatorEnum),
-                        flags: ObjectPropertyFlags.Required,
-                        description: description);
+                    objectType.Properties[discriminatedObjectType.Discriminator] = CreateObjectProperty(
+                        GetDiscriminatorType(putSubType, getSubType),
+                        ObjectPropertyFlags.Required,
+                        (putSubType ?? getSubType)?.Documentation);
                 }
 
                 discriminatedObjectType.Elements[subTypeName] = factory.GetReference(polymorphicType);
@@ -547,7 +546,12 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
                 description = description.Substring(0, possibleValuesIndex).TrimEnd();
             }
 
-            return description;
+            if (string.IsNullOrWhiteSpace(description))
+            {
+                return null;
+            }
+
+            return description.TrimEnd();
         }
     }
 }
