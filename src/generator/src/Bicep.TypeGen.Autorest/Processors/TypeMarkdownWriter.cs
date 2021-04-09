@@ -73,7 +73,8 @@ namespace Azure.Bicep.TypeGen.Autorest.Processors
         private void WriteTypeProperty(string name, ObjectProperty property)
         {
             var flagsString = property.Flags != ObjectPropertyFlags.None ? $" ({property.Flags})" : "";
-            WriteBullet(name, $"{GetTypeName(property.Type)}{flagsString}: {property.Description}");
+            var descriptionString = property.Description is not null ? $": {property.Description}" : "";
+            WriteBullet(name, $"{GetTypeName(property.Type)}{flagsString}{descriptionString}");
         }
 
         private void WriteBullet(string key, string value)
