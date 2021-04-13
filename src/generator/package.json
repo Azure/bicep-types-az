@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Azure/bicep-types-az/blob/main/README.md",
   "devDependencies": {
-    "@autorest/core": "^3.2.2",
+    "@autorest/core": "^3.3.0",
     "@types/async": "^3.2.6",
     "@types/lodash": "^4.14.168",
     "@types/node": "^14.14.37",
