@@ -52,7 +52,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
       if (propertyDefinition) {
         const description = (putProperty?.schema, getProperty?.schema)?.language.default?.description;
         const flags = parsePropertyFlags(putProperty, getProperty);
-        resourceProperties[propertyName] = new ObjectProperty(propertyDefinition, flags, description);
+        resourceProperties[propertyName] = createObjectProperty(propertyDefinition, flags, description);
       }
     }
 
@@ -140,10 +140,10 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
     var type = factory.addType(new StringLiteralType(getFullyQualifiedType(descriptor)));
 
     return {
-      id: new ObjectProperty(factory.lookupBuiltInType(BuiltInTypeKind.String), ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.DeployTimeConstant, 'The resource id'),
-      name: new ObjectProperty(resourceName, ObjectPropertyFlags.Required | ObjectPropertyFlags.DeployTimeConstant, 'The resource name'),
-      type: new ObjectProperty(type, ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.DeployTimeConstant, 'The resource type'),
-      apiVersion: new ObjectProperty(factory.addType(new StringLiteralType(descriptor.apiVersion)), ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.DeployTimeConstant, 'The resource api version'),
+      id: createObjectProperty(factory.lookupBuiltInType(BuiltInTypeKind.String), ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.DeployTimeConstant, 'The resource id'),
+      name: createObjectProperty(resourceName, ObjectPropertyFlags.Required | ObjectPropertyFlags.DeployTimeConstant, 'The resource name'),
+      type: createObjectProperty(type, ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.DeployTimeConstant, 'The resource type'),
+      apiVersion: createObjectProperty(factory.addType(new StringLiteralType(descriptor.apiVersion)), ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.DeployTimeConstant, 'The resource api version'),
     };
   }
 
@@ -355,7 +355,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
       discriminatedObjectType.Elements[combinedSubType.discriminatorValue] = objectTypeRef;
 
       const description = (putSchema ?? getSchema)?.discriminator?.property.language.default.description;
-      objectType.Properties[discriminatedObjectType.Discriminator] = new ObjectProperty(
+      objectType.Properties[discriminatedObjectType.Discriminator] = createObjectProperty(
         factory.addType(new StringLiteralType(combinedSubType.discriminatorValue)),
         ObjectPropertyFlags.Required,
         description);
@@ -376,7 +376,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
         if (propertyDefinition) {
           const description = (putProperty?.schema, getProperty?.schema)?.language.default?.description;
           const flags = parsePropertyFlags(putProperty, getProperty);
-          definitionProperties[propertyName] = new ObjectProperty(propertyDefinition, flags, description);
+          definitionProperties[propertyName] = createObjectProperty(propertyDefinition, flags, description);
         }
       }
 
@@ -441,6 +441,10 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
     }
 
     return factory.addType(new ArrayType(itemType));
+  }
+
+  function createObjectProperty(type: TypeReference, flags: ObjectPropertyFlags, description?: string): ObjectProperty {
+    return new ObjectProperty(type, flags, description?.trim() || undefined);
   }
 
   return generateTypes();
