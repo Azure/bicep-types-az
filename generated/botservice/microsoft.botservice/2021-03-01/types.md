@@ -56,9 +56,11 @@
 * **endpointVersion**: string (ReadOnly): The bot's endpoint version
 * **iconUrl**: string: The Icon Url of the bot
 * **isCmekEnabled**: bool: Whether Cmek is enabled
+* **isIsolated**: bool: Whether the bot is in an isolated network
 * **luisAppIds**: string[]: Collection of LUIS App Ids
 * **luisKey**: string: The LUIS Key
 * **msaAppId**: string (Required): Microsoft App Id for the bot
+* **schemaTransformationVersion**: string: The channel schema transformation version for the bot
 
 ## Sku
 ### Properties
@@ -179,7 +181,8 @@
 
 ## DirectLineSpeechChannelProperties
 ### Properties
-* **cognitiveServicesSubscriptionId**: string (Required): The cognitive service subscription ID to use with this channel registration.
+* **cognitiveServiceRegion**: string (Required): The cognitive service region with this channel registration.
+* **cognitiveServiceSubscriptionKey**: string (Required): The cognitive service subscription key to use with this channel registration.
 * **customSpeechModelId**: string: Custom voice deployment id (optional).
 * **customVoiceDeploymentId**: string: Custom speech model id (optional).
 * **isDefaultBotForCogSvcAccount**: bool: Make this a default bot for chosen cognitive service account.

@@ -1,30 +1,5 @@
 # Microsoft.OperationalInsights @ 2020-08-01
 
-## Resource Microsoft.OperationalInsights/clusters@2020-08-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
-* **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterProperties](#clusterproperties): Cluster properties.
-* **sku**: [ClusterSku](#clustersku): The cluster sku definition.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
-* **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.OperationalInsights/workspaces@2020-08-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **eTag**: string: The ETag of the workspace.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkspaceProperties](#workspaceproperties): Workspace properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
-* **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.OperationalInsights/workspaces/dataExports@2020-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -85,78 +60,6 @@
 * **properties**: [StorageInsightProperties](#storageinsightproperties): Storage insight properties.
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/workspaces/storageInsightConfigs' (ReadOnly, DeployTimeConstant): The resource type
-
-## Identity
-### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' (Required): The identity type.
-
-## ClusterProperties
-### Properties
-* **clusterId**: string (ReadOnly): The ID associated with the cluster.
-* **keyVaultProperties**: [keyVaultProperties](#keyvaultproperties): The key vault properties.
-* **nextLink**: string: The link used to get the next page of recommendations.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the cluster.
-
-## keyVaultProperties
-### Properties
-* **keyName**: string: The name of the key associated with the Log Analytics cluster.
-* **keyVaultUri**: string: The Key Vault uri which holds they key associated with the Log Analytics cluster.
-* **keyVersion**: string: The version of the key associated with the Log Analytics cluster.
-
-## ClusterSku
-### Properties
-* **capacity**: int: The capacity value
-* **name**: 'CapacityReservation': The name of the SKU.
-
-## Dictionary<string,String>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## WorkspaceProperties
-### Properties
-* **createdDate**: string (ReadOnly): Workspace creation date.
-* **customerId**: string (ReadOnly): This is a read-only property. Represents the ID associated with the workspace.
-* **features**: [Dictionary<string,Object>](#dictionarystringobject): Workspace features.
-* **forceCmkForQuery**: bool: Indicates whether customer managed storage is mandatory for query management.
-* **modifiedDate**: string (ReadOnly): Workspace modification date.
-* **privateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly): List of linked private link scope resources.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating': The provisioning state of the workspace.
-* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled': The network access type for accessing Log Analytics ingestion.
-* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled': The network access type for accessing Log Analytics query.
-* **retentionInDays**: int: The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
-* **sku**: [WorkspaceSku](#workspacesku): The SKU (tier) of a workspace.
-* **workspaceCapping**: [WorkspaceCapping](#workspacecapping): The daily volume cap for ingestion.
-
-## Dictionary<string,Object>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## PrivateLinkScopedResource
-### Properties
-* **resourceId**: string: The full resource Id of the private link scope resource.
-* **scopeId**: string: The private link scope unique Identifier.
-
-## WorkspaceSku
-### Properties
-* **capacityReservationLevel**: int: The capacity reservation level for this workspace, when CapacityReservation sku is selected.
-* **lastSkuUpdate**: string (ReadOnly): The last time when the sku was updated.
-* **maxCapacityReservationLevel**: int (ReadOnly): The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.
-* **name**: 'CapacityReservation' | 'Free' | 'LACluster' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' (Required): The name of the SKU.
-
-## WorkspaceCapping
-### Properties
-* **dailyQuotaGb**: int: The workspace daily quota for ingestion.
-* **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' (ReadOnly): The status of data ingestion for this workspace.
-* **quotaNextResetTime**: string (ReadOnly): The time when the quota will be rest.
-
-## Dictionary<string,String>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## DataExportProperties
 ### Properties

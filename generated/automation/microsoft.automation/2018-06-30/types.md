@@ -1,17 +1,5 @@
 # Microsoft.Automation @ 2018-06-30
 
-## Resource Microsoft.Automation/automationAccounts/python2Packages@2018-06-30
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Gets or sets the etag of the resource.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): The Azure Region where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PythonPackageCreateProperties](#pythonpackagecreateproperties) (Required): The parameters supplied to the create or update module properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the tags attached to the resource.
-* **type**: 'Microsoft.Automation/automationAccounts/python2Packages' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Automation/automationAccounts/runbooks@2018-06-30
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -54,41 +42,6 @@
 * **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant): The resource type
 
 
-## PythonPackageCreateProperties
-### Properties
-* **activityCount**: int (ReadOnly): Gets or sets the activity count of the module.
-* **contentLink**: [ContentLink](#contentlink) (Required): Definition of the content link.
-* **creationTime**: string (ReadOnly): Gets or sets the creation time.
-* **description**: string (ReadOnly): Gets or sets the description.
-* **error**: [ModuleErrorInfo](#moduleerrorinfo) (ReadOnly): Definition of the module error info type.
-* **isComposite**: bool (ReadOnly): Gets or sets type of module, if its composite or not.
-* **isGlobal**: bool (ReadOnly): Gets or sets the isGlobal flag of the module.
-* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
-* **provisioningState**: 'ActivitiesStored' | 'Cancelled' | 'ConnectionTypeImported' | 'ContentDownloaded' | 'ContentRetrieved' | 'ContentStored' | 'ContentValidated' | 'Created' | 'Creating' | 'Failed' | 'ModuleDataStored' | 'ModuleImportRunbookComplete' | 'RunningImportModuleRunbook' | 'StartingImportModuleRunbook' | 'Succeeded' | 'Updating' (ReadOnly): Gets or sets the provisioning state of the module.
-* **sizeInBytes**: int (ReadOnly): Gets or sets the size in bytes of the module.
-* **version**: string (ReadOnly): Gets or sets the version of the module.
-
-## ContentLink
-### Properties
-* **contentHash**: [ContentHash](#contenthash): Definition of the runbook property type.
-* **uri**: string: Gets or sets the uri of the runbook content.
-* **version**: string: Gets or sets the version of the content.
-
-## ContentHash
-### Properties
-* **algorithm**: string (Required): Gets or sets the content hash algorithm used to hash the content.
-* **value**: string (Required): Gets or sets expected hash value of the content.
-
-## ModuleErrorInfo
-### Properties
-* **code**: string (ReadOnly): Gets or sets the error code.
-* **message**: string (ReadOnly): Gets or sets the error message.
-
-## Dictionary<string,String>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## RunbookCreateOrUpdateProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Gets or sets the creation time.
@@ -115,6 +68,17 @@
 * **lastModifiedTime**: string: Gets or sets the last modified time of the runbook draft.
 * **outputTypes**: string[]: Gets or sets the runbook output types.
 * **parameters**: [Dictionary<string,RunbookParameter>](#dictionarystringrunbookparameter): Gets or sets the runbook draft parameters.
+
+## ContentLink
+### Properties
+* **contentHash**: [ContentHash](#contenthash): Definition of the runbook property type.
+* **uri**: string: Gets or sets the uri of the runbook content.
+* **version**: string: Gets or sets the version of the content.
+
+## ContentHash
+### Properties
+* **algorithm**: string (Required): Gets or sets the content hash algorithm used to hash the content.
+* **value**: string (Required): Gets or sets expected hash value of the content.
 
 ## Dictionary<string,RunbookParameter>
 ### Properties

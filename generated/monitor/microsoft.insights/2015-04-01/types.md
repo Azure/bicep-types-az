@@ -81,6 +81,7 @@
 ## MetricTrigger
 ### Properties
 * **dimensions**: [ScaleRuleMetricDimension](#scalerulemetricdimension)[]: List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].
+* **dividePerInstance**: bool: a value indicating whether metric should divide per instance.
 * **metricName**: string (Required): the name of the metric that defines what the rule monitors.
 * **metricNamespace**: string: the namespace of the metric that defines what the rule monitors.
 * **metricResourceUri**: string (Required): the resource identifier of the resource the rule monitors.

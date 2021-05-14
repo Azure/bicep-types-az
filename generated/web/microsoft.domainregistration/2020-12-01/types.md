@@ -8,7 +8,7 @@
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:2_properties](#schemas2properties): Domain resource specific properties
+* **properties**: [schemas:17_properties](#schemas17properties): Domain resource specific properties
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,10 +19,10 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:6_properties](#schemas6properties): DomainOwnershipIdentifier resource specific properties
+* **properties**: [schemas:21_properties](#schemas21properties): DomainOwnershipIdentifier resource specific properties
 * **type**: 'Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant): The resource type
 
-## schemas:2_properties
+## schemas:17_properties
 ### Properties
 * **authCode**: string
 * **autoRenew**: bool: <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
@@ -91,7 +91,7 @@ directories as per ICANN requirements.
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:6_properties
+## schemas:21_properties
 ### Properties
 * **ownershipId**: string: Ownership Id.
 

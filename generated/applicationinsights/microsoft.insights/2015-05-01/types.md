@@ -1,16 +1,4 @@
-# microsoft.insights @ 2015-05-01
-
-## Resource Microsoft.Insights/components@2015-05-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (Required): The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.
-* **location**: string (Required): Resource location
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApplicationInsightsComponentProperties](#applicationinsightscomponentproperties): Properties that define an Application Insights component resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
-* **type**: 'Microsoft.Insights/components' (ReadOnly, DeployTimeConstant): The resource type
+# Microsoft.Insights @ 2015-05-01
 
 ## Resource microsoft.insights/components/analyticsItems@2015-05-01
 * **Valid Scope(s)**: ResourceGroup
@@ -97,7 +85,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **LastUpdatedTime**: string: The last time this rule was updated
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **RuleDefinitions**: [schemas:20_RuleDefinitions](#schemas20ruledefinitions): Static definitions of the ProactiveDetection configuration rule (same values for all components).
+* **RuleDefinitions**: [schemas:21_RuleDefinitions](#schemas21ruledefinitions): Static definitions of the ProactiveDetection configuration rule (same values for all components).
 * **SendEmailsToSubscriptionOwners**: bool: A flag that indicated whether notifications on this rule should be sent to subscription owners
 * **type**: 'Microsoft.Insights/components/ProactiveDetectionConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -137,42 +125,11 @@
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'microsoft.insights/workbooks' (ReadOnly, DeployTimeConstant): The resource type
 
-## ApplicationInsightsComponentProperties
-### Properties
-* **AppId**: string (ReadOnly): Application Insights Unique ID for your Application.
-* **Application_Type**: 'other' | 'web' (Required): Type of application being monitored.
-* **ApplicationId**: string (ReadOnly): The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.
-* **ConnectionString**: string (ReadOnly): Application Insights component connection string.
-* **CreationDate**: string (ReadOnly): Creation Date for the Application Insights component, in ISO 8601 format.
-* **DisableIpMasking**: bool: Disable IP masking.
-* **Flow_Type**: 'Bluefield': Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.
-* **HockeyAppId**: string: The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.
-* **HockeyAppToken**: string (ReadOnly): Token used to authenticate communications with between Application Insights and HockeyApp.
-* **ImmediatePurgeDataOn30Days**: bool: Purge data immediately after 30 days.
-* **IngestionMode**: 'ApplicationInsights' | 'ApplicationInsightsWithDiagnosticSettings' | 'LogAnalytics': Indicates the flow of the ingestion.
-* **InstrumentationKey**: string (ReadOnly): Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component.
-* **PrivateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly): List of linked private link scope resources.
-* **provisioningState**: string (ReadOnly): Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
-* **Request_Source**: 'rest': Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.
-* **RetentionInDays**: int: Retention period in days.
-* **SamplingPercentage**: int: Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.
-* **TenantId**: string (ReadOnly): Azure Tenant Id.
-
-## PrivateLinkScopedResource
-### Properties
-* **ResourceId**: string: The full resource Id of the private link scope resource.
-* **ScopeId**: string: The private link scope unique Identifier.
-
-## Dictionary<string,String>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ApplicationInsightsComponentAnalyticsItemProperties
 ### Properties
 * **functionAlias**: string: A function alias, used when the type of the item is Function
 
-## schemas:20_RuleDefinitions
+## schemas:21_RuleDefinitions
 ### Properties
 * **Description**: string: The rule description
 * **DisplayName**: string: The rule name as it is displayed in UI
@@ -201,7 +158,7 @@
 
 ## WebTestProperties
 ### Properties
-* **Configuration**: [schemas:43_Configuration](#schemas43configuration): An XML configuration specification for a WebTest.
+* **Configuration**: [schemas:34_Configuration](#schemas34configuration): An XML configuration specification for a WebTest.
 * **Description**: string: Purpose/user defined descriptive test for this WebTest.
 * **Enabled**: bool: Is the test actively being monitored.
 * **Frequency**: int: Interval in seconds between test runs for this WebTest. Default value is 300.
@@ -213,7 +170,7 @@
 * **SyntheticMonitorId**: string (Required): Unique ID of this WebTest. This is typically the same value as the Name field.
 * **Timeout**: int: Seconds until this WebTest will timeout and fail. Default value is 30.
 
-## schemas:43_Configuration
+## schemas:34_Configuration
 ### Properties
 * **WebTest**: string: The XML specification of a WebTest to run against an application.
 

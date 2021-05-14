@@ -90,7 +90,7 @@
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status.
 * **sessionAffinityEnabledState**: 'Disabled' | 'Enabled': Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'.
 * **sessionAffinityTtlSeconds**: int: UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
-* **webApplicationFirewallPolicyLink**: [schemas:31_webApplicationFirewallPolicyLink](#schemas31webapplicationfirewallpolicylink): Defines the Web Application Firewall policy for each host (if applicable)
+* **webApplicationFirewallPolicyLink**: [schemas:59_webApplicationFirewallPolicyLink](#schemas59webapplicationfirewallpolicylink): Defines the Web Application Firewall policy for each host (if applicable)
 
 ## CustomHttpsConfiguration
 ### Properties
@@ -108,13 +108,13 @@
 ### Properties
 * **secretName**: string: The name of the Key Vault secret representing the full certificate PFX
 * **secretVersion**: string: The version of the Key Vault secret representing the full certificate PFX
-* **vault**: [schemas:26_vault](#schemas26vault): The Key Vault containing the SSL certificate
+* **vault**: [schemas:54_vault](#schemas54vault): The Key Vault containing the SSL certificate
 
-## schemas:26_vault
+## schemas:54_vault
 ### Properties
 * **id**: string: Resource ID.
 
-## schemas:31_webApplicationFirewallPolicyLink
+## schemas:59_webApplicationFirewallPolicyLink
 ### Properties
 * **id**: string: Resource ID.
 
@@ -164,7 +164,7 @@
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status.
 * **routeConfiguration**: [RouteConfiguration](#routeconfiguration): Base class for all types of Route.
 * **rulesEngine**: [SubResource](#subresource): Reference to another subresource.
-* **webApplicationFirewallPolicyLink**: [schemas:8_webApplicationFirewallPolicyLink](#schemas8webapplicationfirewallpolicylink): Defines the Web Application Firewall policy for each routing rule (if applicable)
+* **webApplicationFirewallPolicyLink**: [schemas:36_webApplicationFirewallPolicyLink](#schemas36webapplicationfirewallpolicylink): Defines the Web Application Firewall policy for each routing rule (if applicable)
 
 ## RouteConfiguration
 * **Discriminator**: @odata.type
@@ -213,7 +213,7 @@
 * **redirectProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest': The protocol of the destination to where the traffic is redirected.
 * **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect': The redirect type the rule will use when redirecting traffic.
 
-## schemas:8_webApplicationFirewallPolicyLink
+## schemas:36_webApplicationFirewallPolicyLink
 ### Properties
 * **id**: string: Resource ID.
 

@@ -106,7 +106,7 @@
 
 ## PrivateZoneProperties
 ### Properties
-* **internalId**: string (ReadOnly): Private zone internal Id
+* **internalId**: string (ReadOnly, WriteOnly): Private zone internal Id
 * **maxNumberOfRecordSets**: int (ReadOnly): The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
 * **maxNumberOfVirtualNetworkLinks**: int (ReadOnly): The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
 * **maxNumberOfVirtualNetworkLinksWithRegistration**: int (ReadOnly): The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.

@@ -498,7 +498,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 
 ## ScheduleCreationParameter
 ### Properties
-* **location**: string: The location of the new virtual machine or environment
+* **location**: string (ReadOnly): The location of the new virtual machine or environment
 * **name**: string: The name of the virtual machine or environment
 * **properties**: [ScheduleCreationParameterProperties](#schedulecreationparameterproperties): Properties for schedule creation.
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.

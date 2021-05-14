@@ -16,6 +16,7 @@
 ## LogSearchRule
 ### Properties
 * **action**: [Action](#action) (Required): Action descriptor.
+* **autoMitigate**: bool: The flag that indicates whether the alert should be automatically resolved or not. The default is false.
 * **createdWithApiVersion**: string (ReadOnly): The api-version used when creating this alert rule
 * **description**: string: The description of the Log Search rule.
 * **displayName**: string: The display name of the alert rule
