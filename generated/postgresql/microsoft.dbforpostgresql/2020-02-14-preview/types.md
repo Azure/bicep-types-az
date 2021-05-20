@@ -42,6 +42,7 @@
 * **haState**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' (ReadOnly): A state of a HA server that is visible to user.
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window of a server.
 * **pointInTimeUTC**: string: Restore point creation time (ISO8601 format), specifying the time to restore from.
+* **privateDnsZoneArguments**: [schemas:11_delegatedSubnetArguments](#schemas11delegatedsubnetarguments)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly): public network access is enabled or not.
 * **sourceResourceGroupName**: string: The resource group name of source serve PostgreSQL server name to restore from.
 * **sourceServerName**: string: The source PostgreSQL server name to restore from.

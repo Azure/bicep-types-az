@@ -594,14 +594,14 @@
 * **principalId**: string (ReadOnly): The principal id of virtual machine identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id associated with the virtual machine. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The type of identity used for the virtual machine. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.
-* **userAssignedIdentities**: [Dictionary<string,Schemas115UserAssignedIdentitiesValue>](#dictionarystringschemas115userassignedidentitiesvalue): The list of user identities associated with the Virtual Machine. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **userAssignedIdentities**: [Dictionary<string,Schemas179UserAssignedIdentitiesValue>](#dictionarystringschemas179userassignedidentitiesvalue): The list of user identities associated with the Virtual Machine. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## Dictionary<string,Schemas115UserAssignedIdentitiesValue>
+## Dictionary<string,Schemas179UserAssignedIdentitiesValue>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [schemas:115_userAssignedIdentitiesValue](#schemas115userassignedidentitiesvalue)
+* **Additional Properties Type**: [schemas:179_userAssignedIdentitiesValue](#schemas179userassignedidentitiesvalue)
 
-## schemas:115_userAssignedIdentitiesValue
+## schemas:179_userAssignedIdentitiesValue
 ### Properties
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
 * **principalId**: string (ReadOnly): The principal id of user assigned identity.
@@ -1028,12 +1028,12 @@
 * **principalId**: string (ReadOnly): The principal id of virtual machine scale set identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id associated with the virtual machine scale set. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The type of identity used for the virtual machine scale set. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine scale set.
-* **userAssignedIdentities**: [Dictionary<string,Schemas115UserAssignedIdentitiesValue>](#dictionarystringschemas115userassignedidentitiesvalue): The list of user identities associated with the virtual machine scale set. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **userAssignedIdentities**: [Dictionary<string,Schemas179UserAssignedIdentitiesValue>](#dictionarystringschemas179userassignedidentitiesvalue): The list of user identities associated with the virtual machine scale set. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## Dictionary<string,Schemas115UserAssignedIdentitiesValue>
+## Dictionary<string,Schemas179UserAssignedIdentitiesValue>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [schemas:115_userAssignedIdentitiesValue](#schemas115userassignedidentitiesvalue)
+* **Additional Properties Type**: [schemas:179_userAssignedIdentitiesValue](#schemas179userassignedidentitiesvalue)
 
 ## VirtualMachineScaleSetProperties
 ### Properties

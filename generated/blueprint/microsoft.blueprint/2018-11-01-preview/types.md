@@ -128,7 +128,7 @@
 ### Properties
 * **description**: string: Multi-line explain this resource.
 * **displayName**: string: One-liner string explain this resource.
-* **layout**: any: Layout view of the blueprint definition for UI reference.
+* **layout**: any (ReadOnly): Layout view of the blueprint definition for UI reference.
 * **parameters**: [Dictionary<string,ParameterDefinition>](#dictionarystringparameterdefinition): Parameters required by this blueprint definition.
 * **resourceGroups**: [Dictionary<string,ResourceGroupDefinition>](#dictionarystringresourcegroupdefinition): Resource group placeholders defined by this blueprint definition.
 * **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly): The status of the blueprint. This field is readonly.

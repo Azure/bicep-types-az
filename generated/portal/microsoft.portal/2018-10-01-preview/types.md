@@ -39,15 +39,15 @@
 
 ## DashboardParts
 ### Properties
-* **metadata**: [Dictionary<string,Object>](#dictionarystringobject): The dashboard part's metadata.
-* **position**: [schemas:1_position](#schemas1position) (Required): The dashboard's part position.
+* **metadata**: [Dictionary<string,Object>](#dictionarystringobject): A dashboard part metadata.
+* **position**: [schemas:2_position](#schemas2position) (Required): The dashboard's part position.
 
 ## Dictionary<string,Object>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## schemas:1_position
+## schemas:2_position
 ### Properties
 * **colSpan**: int (Required): The dashboard's part column span.
 * **metadata**: [Dictionary<string,Object>](#dictionarystringobject): The dashboard part's metadata.

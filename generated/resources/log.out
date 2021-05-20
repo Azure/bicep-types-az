@@ -1,443 +1,236 @@
-
-Executing: autorest --use=/home/runner/work/bicep-types-az/bicep-types-az/src/generator --azureresourceschema --output-folder=/tmp/_bcp_1617976408269/resources --multiapi /home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/readme.md
-AutoRest code generation utility [cli version: 3.1.4; node: v14.16.0, max-memory: 2048 MB]
+AutoRest code generation utility [cli version: 3.2.0; node: v14.17.0, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.2.4)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.4.2)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-solutions-2020-08-21-preview"} .
+Processing batch task - {"tag":"microsoft.resources-2021-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
+WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
+WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
+WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
+WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
+Processing batch task - {"tag":"microsoft.authorization-2020-09-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
+WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
+Processing batch task - {"tag":"microsoft.authorization-2020-07-01-preview"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
+Processing batch task - {"tag":"microsoft.solutions-2020-08-21-preview"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/{applicationId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-solutions-2019-07-01"} .
+Processing batch task - {"tag":"microsoft.resources-2021-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{applicationId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-solutions-2018-06-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{applicationId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-solutions-2017-09-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{applicationId}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/{applicationDefinitionId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-solutions-2016-09-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{applianceId}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/{applianceDefinitionId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2021-01-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
 WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2020-10-01"} .
+Processing batch task - {"tag":"microsoft.resources-2020-10-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
 WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2020-08-01"} .
+Processing batch task - {"tag":"microsoft.resources-2019-10-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
+Processing batch task - {"tag":"microsoft.features-2015-12-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
+Processing batch task - {"tag":"microsoft.authorization-2016-09-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
+Processing batch task - {"tag":"microsoft.authorization-2015-01-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
+Processing batch task - {"tag":"microsoft.authorization-2020-03-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
+WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
+Processing batch task - {"tag":"microsoft.authorization-2019-09-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
+WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
+Processing batch task - {"tag":"microsoft.authorization-2019-06-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
+WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
+Processing batch task - {"tag":"microsoft.authorization-2019-01-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
+WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
+Processing batch task - {"tag":"microsoft.authorization-2018-05-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
+WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
+Processing batch task - {"tag":"microsoft.authorization-2018-03-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
+WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
+Processing batch task - {"tag":"microsoft.authorization-2017-06-01-preview"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
+WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
+Processing batch task - {"tag":"microsoft.authorization-2016-12-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
+WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
+Processing batch task - {"tag":"microsoft.resources-2021-05-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
+Processing batch task - {"tag":"microsoft.resources-2021-03-01-preview"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
+Processing batch task - {"tag":"microsoft.resources-2019-06-01-preview"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
+Processing batch task - {"tag":"microsoft.authorization-2016-04-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
+WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
+Processing batch task - {"tag":"microsoft.authorization-2015-10-01-preview"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
+WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
+Processing batch task - {"tag":"microsoft.resources-2020-08-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
 WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2020-06-01"} .
+Processing batch task - {"tag":"microsoft.resources-2020-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
 WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2020-01-01"} .
+Processing batch task - {"tag":"microsoft.resources-2019-10-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-resources-2019-11-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-resources-2019-10-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-resources-2019-10-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
 WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2019-08-01"} .
+Processing batch task - {"tag":"microsoft.resources-2019-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
 WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2019-07-01"} .
+Processing batch task - {"tag":"microsoft.resources-2019-07-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
 WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2019-06-01-preview"} .
+Processing batch task - {"tag":"microsoft.resources-2019-05-10"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-resources-2019-06-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-resources-2019-05-10"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
 WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2019-05-01"} .
+Processing batch task - {"tag":"microsoft.resources-2019-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
 WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2019-03-01"} .
+Processing batch task - {"tag":"microsoft.resources-2019-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
 WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2018-06-01"} .
+Processing batch task - {"tag":"microsoft.resources-2018-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-resources-2018-05-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
 WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2018-02-01"} .
+Processing batch task - {"tag":"microsoft.resources-2018-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
 WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2017-05-10"} .
+Processing batch task - {"tag":"microsoft.resources-2017-05-10"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
 WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2016-09-01"} .
+Processing batch task - {"tag":"microsoft.resources-2016-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
 WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/{linkId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2016-07-01"} .
+Processing batch task - {"tag":"microsoft.resources-2016-07-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2016-06-01"} .
+Processing batch task - {"tag":"microsoft.resources-2016-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-resources-2016-02-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2015-11-01"} .
+Processing batch task - {"tag":"microsoft.resources-2015-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-features-2015-12-01"} .
+Processing batch task - {"tag":"microsoft.resources-2020-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-authorization-2020-09-01"} .
+WARNING: Semantic validation was skipped.
+Processing batch task - {"tag":"microsoft.resources-2019-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2020-07-01-preview"} .
+WARNING: Semantic validation was skipped.
+Processing batch task - {"tag":"microsoft.resources-2019-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-authorization-2020-03-01"} .
+WARNING: Semantic validation was skipped.
+Processing batch task - {"tag":"microsoft.resources-2018-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2019-09-01"} .
+WARNING: Semantic validation was skipped.
+Processing batch task - {"tag":"microsoft.resources-2016-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2019-06-01"} .
+WARNING: Semantic validation was skipped.
+Processing batch task - {"tag":"microsoft.solutions-2019-07-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2019-01-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2018-05-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2018-03-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2017-06-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2016-12-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2016-09-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-authorization-2016-04-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2015-10-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2015-01-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-solutions-2020-08-21-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/{applicationId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-solutions-2019-07-01"} .
+Processing batch task - {"tag":"microsoft.solutions-2018-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/{applicationId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-solutions-2018-06-01"} .
+Processing batch task - {"tag":"microsoft.solutions-2017-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{applicationId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-solutions-2017-09-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/{applicationId}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/{applicationDefinitionId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-solutions-2016-09-01-preview"} .
+Processing batch task - {"tag":"microsoft.solutions-2016-09-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
+WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/{applianceId}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/{applianceDefinitionId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2021-01-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
-WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2020-10-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
-WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2020-08-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
-WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2020-06-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
-WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2020-01-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-resources-2019-11-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-resources-2019-10-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-resources-2019-10-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
-WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2019-08-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
-WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2019-07-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
-WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2019-06-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-resources-2019-06-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-resources-2019-05-10"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
-WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2019-05-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
-WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2019-03-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
-WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2018-06-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-resources-2018-05-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
-WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2018-02-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
-WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2017-05-10"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
-WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2016-09-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
-WARNING: Skipping path '/{resourceId}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/{linkId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2016-07-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2016-06-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-resources-2016-02-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-resources-2015-11-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace '{resourceProviderNamespace}'
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate '/providers/' segment
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-features-2015-12-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-authorization-2020-09-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2020-07-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-authorization-2020-03-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2019-09-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2019-06-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2019-01-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2018-05-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2018-03-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2017-06-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2016-12-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2016-09-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-authorization-2016-04-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2015-10-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-WARNING: Skipping path '/{policyAssignmentId}': Unable to locate '/providers/' segment
-Processing batch task - {"tag":"schema-authorization-2015-01-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-[434.95 s] Generation Complete
+[177.09 s] Generation Complete

@@ -32,7 +32,7 @@
 ### Properties
 * **name**: string (Required): The name of the arm role receiver. Names must be unique across all receivers within an action group.
 * **roleId**: string (Required): The arm role id.
-* **useCommonAlertSchema**: bool (Required): Indicates whether to use common alert schema.
+* **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
 
 ## AutomationRunbookReceiver
 ### Properties
@@ -41,7 +41,7 @@
 * **name**: string: Indicates name of the webhook.
 * **runbookName**: string (Required): The name for this runbook.
 * **serviceUri**: string: The URI where webhooks should be sent.
-* **useCommonAlertSchema**: bool (Required): Indicates whether to use common alert schema.
+* **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
 * **webhookResourceId**: string (Required): The resource id for webhook linked to this runbook.
 
 ## AzureAppPushReceiver
@@ -55,14 +55,14 @@
 * **functionName**: string (Required): The function name in the function app.
 * **httpTriggerUrl**: string (Required): The http trigger url where http request sent to.
 * **name**: string (Required): The name of the azure function receiver. Names must be unique across all receivers within an action group.
-* **useCommonAlertSchema**: bool (Required): Indicates whether to use common alert schema.
+* **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
 
 ## EmailReceiver
 ### Properties
 * **emailAddress**: string (Required): The email address of this receiver.
 * **name**: string (Required): The name of the email receiver. Names must be unique across all receivers within an action group.
 * **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The receiver status of the e-mail.
-* **useCommonAlertSchema**: bool (Required): Indicates whether to use common alert schema.
+* **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
 
 ## ItsmReceiver
 ### Properties
@@ -77,7 +77,7 @@
 * **callbackUrl**: string (Required): The callback url where http request sent to.
 * **name**: string (Required): The name of the logic app receiver. Names must be unique across all receivers within an action group.
 * **resourceId**: string (Required): The azure resource id of the logic app receiver.
-* **useCommonAlertSchema**: bool (Required): Indicates whether to use common alert schema.
+* **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
 
 ## SmsReceiver
 ### Properties
@@ -96,7 +96,7 @@
 ### Properties
 * **name**: string (Required): The name of the webhook receiver. Names must be unique across all receivers within an action group.
 * **serviceUri**: string (Required): The URI where webhooks should be sent.
-* **useCommonAlertSchema**: bool (Required): Indicates whether to use common alert schema.
+* **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
 
 ## Dictionary<string,String>
 ### Properties

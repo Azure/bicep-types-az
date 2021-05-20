@@ -76,15 +76,6 @@
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.Sql/servers/failoverGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/firewallRules@2015-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerFirewallRuleProperties](#serverfirewallruleproperties): The properties of a server firewall rule.
-* **type**: 'Microsoft.Sql/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Sql/servers/keys@2015-05-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -337,11 +328,6 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ServerFirewallRuleProperties
-### Properties
-* **endIpAddress**: string: The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value '0.0.0.0' for all Azure-internal IP addresses.
-* **startIpAddress**: string: The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' for all Azure-internal IP addresses.
 
 ## ServerKeyProperties
 ### Properties

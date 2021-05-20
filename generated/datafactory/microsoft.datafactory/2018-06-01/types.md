@@ -1271,7 +1271,7 @@
 ## DelimitedTextDatasetTypeProperties
 ### Properties
 * **columnDelimiter**: any: The column delimiter. Type: string (or Expression with resultType string).
-* **compressionCodec**: any
+* **compressionCodec**: any: The data compressionCodec. Type: string (or Expression with resultType string).
 * **compressionLevel**: any: The data compression method used for DelimitedText.
 * **encodingName**: any: The code page name of the preferred encoding. If miss, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
 * **escapeChar**: any: The escape character. Type: string (or Expression with resultType string).
@@ -1345,7 +1345,8 @@
 * **location**: [DatasetLocation](#datasetlocation) (Required): Dataset location.
 * **nullValue**: any: The null value string. Type: string (or Expression with resultType string).
 * **range**: any: The partial data of one sheet. Type: string (or Expression with resultType string).
-* **sheetName**: any (Required): The sheet of excel file. Type: string (or Expression with resultType string).
+* **sheetIndex**: any: The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer)
+* **sheetName**: any: The sheet name of excel file. Type: string (or Expression with resultType string).
 
 ## FileShare
 ### Properties
@@ -1594,7 +1595,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## ParquetDatasetTypeProperties
 ### Properties
-* **compressionCodec**: any
+* **compressionCodec**: any: The data compressionCodec. Type: string (or Expression with resultType string).
 * **location**: [DatasetLocation](#datasetlocation) (Required): Dataset location.
 
 ## PaypalObject
@@ -1929,6 +1930,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **edition**: 'Enterprise' | 'Standard': The edition for the SSIS Integration Runtime.
 * **expressCustomSetupProperties**: [CustomSetupBase](#customsetupbase)[]: Custom setup without script properties for a SSIS integration runtime.
 * **licenseType**: 'BasePrice' | 'LicenseIncluded': License type for bringing your own license scenario.
+* **managedCredential**: [EntityReference](#entityreference): The entity reference.
 * **packageStores**: [PackageStore](#packagestore)[]: Package stores for the SSIS Integration Runtime.
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -1962,7 +1964,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## EntityReference
 ### Properties
 * **referenceName**: string: The name of this referenced entity.
-* **type**: 'IntegrationRuntimeReference' | 'LinkedServiceReference': The type of this referenced entity.
+* **type**: 'CredentialReference' | 'IntegrationRuntimeReference' | 'LinkedServiceReference': The type of this referenced entity.
 
 ## CustomSetupBase
 * **Discriminator**: type
@@ -3023,8 +3025,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## CommonDataServiceForAppsLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'AADServicePrincipal' | 'Ifd' | 'Office365' (Required): The authentication type to connect to Common Data Service for Apps server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario. 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
-* **deploymentType**: 'Online' | 'OnPremisesWithIfd' (Required): The deployment type of the Common Data Service for Apps instance. 'Online' for Common Data Service for Apps Online and 'OnPremisesWithIfd' for Common Data Service for Apps on-premises with Ifd. Type: string (or Expression with resultType string).
+* **authenticationType**: any (Required): The authentication type to connect to Common Data Service for Apps server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario. 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
+* **deploymentType**: any (Required): The deployment type of the Common Data Service for Apps instance. 'Online' for Common Data Service for Apps Online and 'OnPremisesWithIfd' for Common Data Service for Apps on-premises with Ifd. Type: string (or Expression with resultType string).
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **hostName**: any: The host name of the on-premises Common Data Service for Apps server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
 * **organizationName**: any: The organization name of the Common Data Service for Apps instance. The property is required for on-prem and required for online when there are more than one Common Data Service for Apps instances associated with the user. Type: string (or Expression with resultType string).
@@ -3166,8 +3168,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## DynamicsCrmLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'AADServicePrincipal' | 'Ifd' | 'Office365' (Required): The authentication type to connect to Dynamics CRM server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
-* **deploymentType**: 'Online' | 'OnPremisesWithIfd' (Required): The deployment type of the Dynamics CRM instance. 'Online' for Dynamics CRM Online and 'OnPremisesWithIfd' for Dynamics CRM on-premises with Ifd. Type: string (or Expression with resultType string).
+* **authenticationType**: any (Required): The authentication type to connect to Dynamics CRM server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
+* **deploymentType**: any (Required): The deployment type of the Dynamics CRM instance. 'Online' for Dynamics CRM Online and 'OnPremisesWithIfd' for Dynamics CRM on-premises with Ifd. Type: string (or Expression with resultType string).
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 * **hostName**: any: The host name of the on-premises Dynamics CRM server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
 * **organizationName**: any: The organization name of the Dynamics CRM instance. The property is required for on-prem and required for online when there are more than one Dynamics CRM instances associated with the user. Type: string (or Expression with resultType string).
@@ -4217,7 +4219,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **annotations**: any[]: List of tags that can be used for describing the Pipeline.
 * **concurrency**: int: The max number of concurrent runs for the pipeline.
 * **description**: string: The description of the pipeline.
-* **folder**: [schemas:579_folder](#schemas579folder): The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
+* **folder**: [schemas:584_folder](#schemas584folder): The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
 * **parameters**: [Dictionary<string,ParameterSpecification>](#dictionarystringparameterspecification): Definition of all parameters for an entity.
 * **policy**: [PipelinePolicy](#pipelinepolicy): Pipeline Policy.
 * **runDimensions**: [Dictionary<string,Object>](#dictionarystringobject): Dimensions emitted by Pipeline.
@@ -4273,7 +4275,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## schemas:579_folder
+## schemas:584_folder
 ### Properties
 * **name**: string: The name of the folder that this Pipeline is in.
 
@@ -4331,7 +4333,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 #### Properties
 * **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required): Pipeline that needs to be triggered with the given parameters.
 * **type**: 'ChainingTrigger' (Required): Trigger that allows the referenced pipeline to depend on other pipeline runs based on runDimension Name/Value pairs. Upstream pipelines should declare the same runDimension Name and their runs should have the values for those runDimensions. The referenced pipeline run would be triggered if the values for the runDimension match for all upstream pipeline runs.
-* **typeProperties**: [schemas:908_typeProperties](#schemas908typeproperties) (Required): Chaining Trigger properties.
+* **typeProperties**: [schemas:914_typeProperties](#schemas914typeproperties) (Required): Chaining Trigger properties.
 
 ### MultiplePipelineTrigger
 #### Properties
@@ -4341,20 +4343,20 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### RerunTumblingWindowTrigger
 #### Properties
 * **type**: 'RerunTumblingWindowTrigger' (Required): Trigger that schedules pipeline reruns for all fixed time interval windows from a requested start time to requested end time.
-* **typeProperties**: [schemas:907_typeProperties](#schemas907typeproperties) (Required): Rerun Trigger properties.
+* **typeProperties**: [schemas:913_typeProperties](#schemas913typeproperties) (Required): Rerun Trigger properties.
 
 ### TumblingWindowTrigger
 #### Properties
 * **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required): Pipeline that needs to be triggered with the given parameters.
 * **type**: 'TumblingWindowTrigger' (Required): Trigger that schedules pipeline runs for all fixed time interval windows from a start time without gaps and also supports backfill scenarios (when start time is in the past).
-* **typeProperties**: [schemas:899_typeProperties](#schemas899typeproperties) (Required): Tumbling Window Trigger properties.
+* **typeProperties**: [schemas:905_typeProperties](#schemas905typeproperties) (Required): Tumbling Window Trigger properties.
 
 
 ## ChainingTrigger
 ### Properties
 * **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required): Pipeline that needs to be triggered with the given parameters.
 * **type**: 'ChainingTrigger' (Required): Trigger that allows the referenced pipeline to depend on other pipeline runs based on runDimension Name/Value pairs. Upstream pipelines should declare the same runDimension Name and their runs should have the values for those runDimensions. The referenced pipeline run would be triggered if the values for the runDimension match for all upstream pipeline runs.
-* **typeProperties**: [schemas:908_typeProperties](#schemas908typeproperties) (Required): Chaining Trigger properties.
+* **typeProperties**: [schemas:914_typeProperties](#schemas914typeproperties) (Required): Chaining Trigger properties.
 
 ## TriggerPipelineReference
 ### Properties
@@ -4372,7 +4374,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **referenceName**: string (Required): Reference pipeline name.
 * **type**: string (Required): Pipeline reference type.
 
-## schemas:908_typeProperties
+## schemas:914_typeProperties
 ### Properties
 * **dependsOn**: [PipelineReference](#pipelinereference)[] (Required): Upstream Pipelines.
 * **runDimension**: string (Required): Run Dimension property that needs to be emitted by upstream pipelines.
@@ -4385,9 +4387,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## RerunTumblingWindowTrigger
 ### Properties
 * **type**: 'RerunTumblingWindowTrigger' (Required): Trigger that schedules pipeline reruns for all fixed time interval windows from a requested start time to requested end time.
-* **typeProperties**: [schemas:907_typeProperties](#schemas907typeproperties) (Required): Rerun Trigger properties.
+* **typeProperties**: [schemas:913_typeProperties](#schemas913typeproperties) (Required): Rerun Trigger properties.
 
-## schemas:907_typeProperties
+## schemas:913_typeProperties
 ### Properties
 * **parentTrigger**: any (Required): The parent trigger reference.
 * **requestedEndTime**: string (Required): The end time for the time period for which restatement is initiated. Only UTC time is currently supported.
@@ -4398,9 +4400,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **pipeline**: [TriggerPipelineReference](#triggerpipelinereference) (Required): Pipeline that needs to be triggered with the given parameters.
 * **type**: 'TumblingWindowTrigger' (Required): Trigger that schedules pipeline runs for all fixed time interval windows from a start time without gaps and also supports backfill scenarios (when start time is in the past).
-* **typeProperties**: [schemas:899_typeProperties](#schemas899typeproperties) (Required): Tumbling Window Trigger properties.
+* **typeProperties**: [schemas:905_typeProperties](#schemas905typeproperties) (Required): Tumbling Window Trigger properties.
 
-## schemas:899_typeProperties
+## schemas:905_typeProperties
 ### Properties
 * **delay**: any: Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **dependsOn**: [DependencyReference](#dependencyreference)[]: Triggers that this trigger depends on. Only tumbling window triggers are supported.

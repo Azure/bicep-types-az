@@ -46,7 +46,7 @@
 * **planId**: string: Offer Plan Id
 * **planName**: string: Offer Plan Name
 * **publisherId**: string: Publisher Id
-* **status**: 'Failed' | 'InProgress' | 'PendingFulfillmentStart' | 'Reinstated' | 'Started' | 'Subscribed' | 'Succeeded' | 'Suspended' | 'Unsubscribed' | 'Updating': SaaS Offer Status.
+* **status**: 'Failed' | 'InProgress' | 'PendingFulfillmentStart' | 'Reinstated' | 'Started' | 'Subscribed' | 'Succeeded' | 'Suspended' | 'Unsubscribed' | 'Updating' (ReadOnly): SaaS Offer Status.
 * **termUnit**: string: Offer Plan Term unit
 
 ## schemas:12_userDetail

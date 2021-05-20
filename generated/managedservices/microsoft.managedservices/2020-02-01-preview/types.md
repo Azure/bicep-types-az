@@ -68,8 +68,14 @@
 
 ## JustInTimeAccessPolicy
 ### Properties
-* **maximumActivationDuration**: string: Maximum access duration in ISO 8601 format.  The default value is "PT8H".
+* **managedByTenantApprovers**: [EligibleApprover](#eligibleapprover)[]: The list of managedByTenant approvers for the eligible authorization.
+* **maximumActivationDuration**: string: Maximum access duration in ISO 8601 format.
 * **multiFactorAuthProvider**: 'Azure' | 'None' (Required): MFA provider.
+
+## EligibleApprover
+### Properties
+* **principalId**: string (Required): Principal Id of the user or security group that will approve JIT activation requests for the eligible authorization.
+* **principalIdDisplayName**: string: Display name of the principal Id.
 
 ## RegistrationDefinitionProperties
 ### Properties

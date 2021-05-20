@@ -1710,7 +1710,7 @@
 
 ## ApplicationGatewayRewriteRuleCondition
 ### Properties
-* **ignoreCase**: bool: Setting this paramter to truth value with force the pattern to do a case in-sensitive comparison.
+* **ignoreCase**: bool: Setting this parameter to truth value with force the pattern to do a case in-sensitive comparison.
 * **negate**: bool: Setting this value as truth will force to check the negation of the condition given by the user.
 * **pattern**: string: The pattern, either fixed string or regular expression, that evaluates the truthfulness of the condition.
 * **variable**: string: The condition parameter of the RewriteRuleCondition.
@@ -2619,7 +2619,7 @@
 ## ExpressRouteLinkMacSecConfig
 ### Properties
 * **cakSecretIdentifier**: string: Keyvault Secret Identifier URL containing Mac security CAK key.
-* **cipher**: 'gcm-aes-128' | 'gcm-aes-256': Mac security cipher.
+* **cipher**: 'GcmAes128' | 'GcmAes256': Mac security cipher.
 * **cknSecretIdentifier**: string: Keyvault Secret Identifier URL containing Mac security CKN key.
 
 ## Dictionary<string,String>

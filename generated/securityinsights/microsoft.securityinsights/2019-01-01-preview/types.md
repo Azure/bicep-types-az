@@ -655,9 +655,9 @@
 ## MCASDataConnectorDataTypes
 ### Properties
 * **alerts**: [schemas:44_alerts](#schemas44alerts) (Required): Alerts data type connection.
-* **discoveryLogs**: [schemas:180_discoveryLogs](#schemas180discoverylogs): Discovery log data type connection.
+* **discoveryLogs**: [schemas:186_discoveryLogs](#schemas186discoverylogs): Discovery log data type connection.
 
-## schemas:180_discoveryLogs
+## schemas:186_discoveryLogs
 ### Properties
 * **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
 
@@ -721,19 +721,19 @@
 
 ## OfficeDataConnectorDataTypes
 ### Properties
-* **exchange**: [schemas:202_exchange](#schemas202exchange) (Required): Exchange data type connection.
-* **sharePoint**: [schemas:202_sharePoint](#schemas202sharepoint) (Required): SharePoint data type connection.
-* **teams**: [schemas:202_teams](#schemas202teams) (Required): Teams data type connection.
+* **exchange**: [schemas:208_exchange](#schemas208exchange) (Required): Exchange data type connection.
+* **sharePoint**: [schemas:208_sharePoint](#schemas208sharepoint) (Required): SharePoint data type connection.
+* **teams**: [schemas:208_teams](#schemas208teams) (Required): Teams data type connection.
 
-## schemas:202_exchange
+## schemas:208_exchange
 ### Properties
 * **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
 
-## schemas:202_sharePoint
+## schemas:208_sharePoint
 ### Properties
 * **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
 
-## schemas:202_teams
+## schemas:208_teams
 ### Properties
 * **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
 
@@ -767,9 +767,9 @@
 
 ## TiTaxiiDataConnectorDataTypes
 ### Properties
-* **taxiiClient**: [schemas:238_taxiiClient](#schemas238taxiiclient) (Required): Data type for TAXII connector.
+* **taxiiClient**: [schemas:244_taxiiClient](#schemas244taxiiclient) (Required): Data type for TAXII connector.
 
-## schemas:238_taxiiClient
+## schemas:244_taxiiClient
 ### Properties
 * **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
 

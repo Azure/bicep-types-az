@@ -21,7 +21,7 @@
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApiCreateOrUpdateProperties](#apicreateorupdateproperties): Api Create or Update Properties.
+* **properties**: [ApiCreateOrUpdateProperties](#apicreateorupdateproperties): API Create or Update Properties.
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/diagnostics@2021-01-01-preview
@@ -219,7 +219,7 @@
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:300_properties](#schemas300properties): Association entity contract properties.
+* **properties**: [schemas:302_properties](#schemas302properties): Association entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/gateways/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/gateways/certificateAuthorities@2021-01-01-preview
@@ -567,14 +567,14 @@ dictionary key references will be ARM resource ids in the form:
 
 ## ApiCreateOrUpdateProperties
 ### Properties
-* **apiRevision**: string: Describes the Revision of the Api. If no value is provided, default revision 1 is created
-* **apiRevisionDescription**: string: Description of the Api Revision.
-* **apiType**: 'http' | 'soap' | 'websocket' (WriteOnly): Type of Api to create.
+* **apiRevision**: string: Describes the revision of the API. If no value is provided, default revision 1 is created
+* **apiRevisionDescription**: string: Description of the API Revision.
+* **apiType**: 'http' | 'soap' | 'websocket' (WriteOnly): Type of API to create.
  * `http` creates a REST API
  * `soap` creates a SOAP pass-through API
  * `websocket` creates websocket API.
-* **apiVersion**: string: Indicates the Version identifier of the API if the API is versioned
-* **apiVersionDescription**: string: Description of the Api Version.
+* **apiVersion**: string: Indicates the version identifier of the API if the API is versioned
+* **apiVersionDescription**: string: Description of the API Version.
 * **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails): An API Version Set contains the common configuration for a set of API Versions relating
 * **apiVersionSetId**: string: A resource identifier for the related ApiVersionSet.
 * **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract): API Authentication Settings.
@@ -821,7 +821,7 @@ dictionary key references will be ARM resource ids in the form:
 * **properties**: [BackendProperties](#backendproperties): Properties specific to the Backend Type.
 * **protocol**: 'http' | 'soap' (Required): Backend communication protocol.
 * **proxy**: [BackendProxyContract](#backendproxycontract): Details of the Backend WebProxy Server to use in the Request to Backend.
-* **resourceId**: string: Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
+* **resourceId**: string: Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or API Apps.
 * **title**: string: Backend Title.
 * **tls**: [BackendTlsProperties](#backendtlsproperties): Properties controlling TLS Certificate Validation.
 * **url**: string (Required): Runtime Url of the Backend.
@@ -898,7 +898,7 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **identityClientId**: string: SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
 * **lastStatus**: [KeyVaultLastAccessStatusContractProperties](#keyvaultlastaccessstatuscontractproperties) (ReadOnly): Issue contract Update Properties.
-* **secretIdentifier**: string: Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi
+* **secretIdentifier**: string: Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires API Management service to be configured with aka.ms/apimmsi
 
 ## KeyVaultLastAccessStatusContractProperties
 ### Properties
@@ -931,7 +931,7 @@ dictionary key references will be ARM resource ids in the form:
 * **district**: string: The district, state, or province where the resource is located.
 * **name**: string (Required): A canonical name for the geographic or physical location.
 
-## schemas:300_properties
+## schemas:302_properties
 ### Properties
 * **provisioningState**: 'created': Provisioning state.
 
@@ -1012,10 +1012,10 @@ Instrumentation key for applicationInsights logger.
 
 ## PortalRevisionContractProperties
 ### Properties
-* **createdDateTime**: string (ReadOnly): Portal revision creation date and time.
+* **createdDateTime**: string (ReadOnly): Portal's revision creation date and time.
 * **description**: string: Portal revision description.
-* **isCurrent**: bool: Indicates if the Portal Revision is public.
-* **status**: 'completed' | 'failed' | 'pending' | 'publishing' (ReadOnly): Portal revision publishing status.
+* **isCurrent**: bool: Indicates if the portal's revision is public.
+* **status**: 'completed' | 'failed' | 'pending' | 'publishing' (ReadOnly): Status of the portal's revision.
 * **statusDetails**: string (ReadOnly): Portal revision publishing status details.
 * **updatedDateTime**: string (ReadOnly): Last updated date and time.
 
@@ -1103,7 +1103,7 @@ Instrumentation key for applicationInsights logger.
 ### Properties
 * **body**: string: Email Template Body. This should be a valid XDocument
 * **description**: string: Description of the Email Template.
-* **isDefault**: bool (ReadOnly): Whether the template is the default template provided by Api Management or has been edited.
+* **isDefault**: bool (ReadOnly): Whether the template is the default template provided by API Management or has been edited.
 * **parameters**: [EmailTemplateParametersContractProperties](#emailtemplateparameterscontractproperties)[]: Email Template Parameter values.
 * **subject**: string: Subject of the Template.
 * **title**: string: Title of the Template.

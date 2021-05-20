@@ -54,8 +54,16 @@
 * **customVirtualNetworkId**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
 * **enableNoPublicIp**: [WorkspaceCustomBooleanParameter](#workspacecustombooleanparameter): The value which should be used for this field.
 * **encryption**: [WorkspaceEncryptionParameter](#workspaceencryptionparameter): The object that contains details of encryption used on the workspace.
+* **loadBalancerBackendPoolName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
+* **loadBalancerId**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
+* **natGatewayName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
 * **prepareEncryption**: [WorkspaceCustomBooleanParameter](#workspacecustombooleanparameter): The value which should be used for this field.
+* **publicIpName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
 * **requireInfrastructureEncryption**: [WorkspaceCustomBooleanParameter](#workspacecustombooleanparameter): The value which should be used for this field.
+* **resourceTags**: [WorkspaceCustomObjectParameter](#workspacecustomobjectparameter) (ReadOnly): The value which should be used for this field.
+* **storageAccountName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
+* **storageAccountSkuName**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
+* **vnetAddressPrefix**: [WorkspaceCustomStringParameter](#workspacecustomstringparameter): The Value.
 
 ## WorkspaceCustomStringParameter
 ### Properties
@@ -78,6 +86,11 @@
 * **keySource**: 'Default' | 'Microsoft.Keyvault': The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault.
 * **keyvaulturi**: string: The Uri of KeyVault.
 * **keyversion**: string: The version of KeyVault key.
+
+## WorkspaceCustomObjectParameter
+### Properties
+* **type**: 'Bool' | 'Object' | 'String': The type of variable that this is.
+* **value**: any (Required): The value which should be used for this field.
 
 ## ManagedIdentityConfiguration
 ### Properties

@@ -83,6 +83,7 @@
 * **locations**: string[] (ReadOnly): The collection of locations where this resource type can be created.
 * **properties**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): The properties.
 * **resourceType**: string (ReadOnly): The resource type.
+* **zoneMappings**: [ZoneMapping](#zonemapping)[] (ReadOnly)
 
 ## AliasType
 ### Properties
@@ -98,6 +99,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ZoneMapping
+### Properties
+* **location**: string (ReadOnly): The location of the zone mapping.
+* **zones**: string[] (ReadOnly)
 
 ## TemplateLink
 ### Properties

@@ -32,7 +32,6 @@
 * **children**: [CreateManagementGroupChildInfo](#createmanagementgroupchildinfo)[] (ReadOnly): The list of children.
 * **details**: [CreateManagementGroupDetails](#createmanagementgroupdetails): The details of a management group used during creation.
 * **displayName**: string: The friendly name of the management group. If no value is passed then this  field will be set to the groupId.
-* **path**: [ManagementGroupPathElement](#managementgrouppathelement)[] (ReadOnly): The path from the root to the current group.
 * **tenantId**: string (ReadOnly): The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
 
 ## CreateManagementGroupChildInfo
@@ -46,6 +45,7 @@
 ## CreateManagementGroupDetails
 ### Properties
 * **parent**: [CreateParentGroupInfo](#createparentgroupinfo): (Optional) The ID of the parent management group used during creation.
+* **path**: [ManagementGroupPathElement](#managementgrouppathelement)[] (ReadOnly): The path from the root to the current group.
 * **updatedBy**: string (ReadOnly): The identity of the principal or process that updated the object.
 * **updatedTime**: string (ReadOnly): The date and time when this object was last updated.
 * **version**: int (ReadOnly): The version number of the object.

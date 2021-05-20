@@ -167,9 +167,9 @@
 
 ## Sku
 ### Properties
-* **capacity**: int: The Event Hubs throughput units, value should be 0 to 20 throughput units.
-* **name**: 'Basic' | 'Standard' (Required): Name of this SKU.
-* **tier**: 'Basic' | 'Standard': The billing tier of this particular SKU.
+* **capacity**: int: The Event Hubs throughput units for Basic or Standard tiers, where value should be 0 to 20 throughput units. The Event Hubs premium units for Premium tier, where value should be 0 to 10 premium units.
+* **name**: 'Basic' | 'Premium' | 'Standard' (Required): Name of this SKU.
+* **tier**: 'Basic' | 'Premium' | 'Standard': The billing tier of this particular SKU.
 
 ## Dictionary<string,String>
 ### Properties

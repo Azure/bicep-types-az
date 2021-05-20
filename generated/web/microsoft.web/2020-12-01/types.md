@@ -31,7 +31,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'networking' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:331_properties](#schemas331properties): AseV3NetworkingConfiguration resource specific properties
+* **properties**: [schemas:334_properties](#schemas334properties): AseV3NetworkingConfiguration resource specific properties
 * **type**: 'Microsoft.Web/hostingEnvironments/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/hostingEnvironments/multiRolePools@2020-12-01
@@ -340,6 +340,16 @@ This is valid for all deployment slots in an app.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
 * **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
 * **type**: 'Microsoft.Web/sites/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/networkConfig@2020-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string: Kind of resource.
+* **name**: 'virtualNetwork' (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:288_properties](#schemas288properties): SwiftVirtualNetwork resource specific properties
+* **type**: 'Microsoft.Web/sites/networkConfig' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/premieraddons@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
@@ -779,7 +789,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:320_properties](#schemas320properties): StaticSiteUserProvidedFunctionAppARMResource resource specific properties
+* **properties**: [schemas:323_properties](#schemas323properties): StaticSiteUserProvidedFunctionAppARMResource resource specific properties
 * **type**: 'Microsoft.Web/staticSites/builds/userProvidedFunctionApps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/staticSites/config@2020-12-01
@@ -812,7 +822,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:309_properties](#schemas309properties): StaticSiteCustomDomainRequestPropertiesARMResource resource specific properties
+* **properties**: [schemas:312_properties](#schemas312properties): StaticSiteCustomDomainRequestPropertiesARMResource resource specific properties
 * **type**: 'Microsoft.Web/staticSites/customDomains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/staticSites/privateEndpointConnections@2020-12-01
@@ -832,7 +842,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:320_properties](#schemas320properties): StaticSiteUserProvidedFunctionAppARMResource resource specific properties
+* **properties**: [schemas:323_properties](#schemas323properties): StaticSiteUserProvidedFunctionAppARMResource resource specific properties
 * **type**: 'Microsoft.Web/staticSites/userProvidedFunctionApps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## schemas:0_properties
@@ -906,7 +916,7 @@ This is valid for all deployment slots in an app.
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:331_properties
+## schemas:334_properties
 ### Properties
 * **allowNewPrivateEndpointConnections**: bool: Property to enable and disable new private endpoint connection creation on ASE
 * **linuxOutboundIpAddresses**: string[] (ReadOnly)
@@ -1101,6 +1111,8 @@ This only applies to Functions container.
 * **targetSwapSlot**: string (ReadOnly): Specifies which deployment slot this app will swap into. Read-only.
 * **trafficManagerHostNames**: string[] (ReadOnly): Azure Traffic Manager hostnames associated with the app. Read-only.
 * **usageState**: 'Exceeded' | 'Normal' (ReadOnly): State indicating whether the app has exceeded its quota usage. Read-only.
+* **virtualNetworkSubnetId**: string: Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration.
+This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}
 
 ## CloningInfo
 ### Properties
@@ -1137,6 +1149,8 @@ together to use the same snapshot.
 
 ## SiteConfig
 ### Properties
+* **acrUseManagedIdentityCreds**: bool: Flag to use Managed Identity Creds for ACR pull
+* **acrUserManagedIdentityID**: string: If using user managed identity, the user managed identity ClientId
 * **alwaysOn**: bool: <code>true</code> if Always On is enabled; otherwise, <code>false</code>.
 * **apiDefinition**: [ApiDefinitionInfo](#apidefinitioninfo): Information about the formal API definition for the app.
 * **apiManagementConfig**: [ApiManagementConfig](#apimanagementconfig): Azure API management (APIM) configuration linked to the app.
@@ -1185,6 +1199,7 @@ This setting only applies to the Elastic Plans
 * **powerShellVersion**: string: Version of PowerShell.
 * **preWarmedInstanceCount**: int: Number of preWarmed instances.
 This setting only applies to the Consumption and Elastic Plans
+* **publicNetworkAccess**: string: Property to allow or block all public traffic.
 * **publishingUsername**: string: Publishing user name.
 * **push**: [PushSettings](#pushsettings): Push settings for the App.
 * **pythonVersion**: string: Version of Python.
@@ -1562,11 +1577,11 @@ application used for sign-in.
 
 ## schemas:266_properties
 ### Properties
-* **globalValidation**: [GlobalValidation](#globalvalidation)
-* **httpSettings**: [HttpSettings](#httpsettings)
-* **identityProviders**: [IdentityProviders](#identityproviders)
-* **login**: [Login](#login)
-* **platform**: [AuthPlatform](#authplatform)
+* **globalValidation**: [GlobalValidation](#globalvalidation): The configuration settings that determines the validation flow of users using App Service Authentication/Authorization.
+* **httpSettings**: [HttpSettings](#httpsettings): The configuration settings of the HTTP requests for authentication and authorization requests made against App Service Authentication/Authorization.
+* **identityProviders**: [IdentityProviders](#identityproviders): The configuration settings of each of the identity providers used to configure App Service Authentication/Authorization.
+* **login**: [Login](#login): The configuration settings of the login flow of users using App Service Authentication/Authorization.
+* **platform**: [AuthPlatform](#authplatform): The configuration settings of the platform of App Service Authentication/Authorization.
 
 ## GlobalValidation
 ### Properties
@@ -1578,10 +1593,12 @@ application used for sign-in.
 
 ## schemas:217_properties
 ### Properties
-* **excludedPaths**: string[]
-* **redirectToProvider**: string
-* **requireAuthentication**: bool
-* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage' | 'Return401' | 'Return403'
+* **excludedPaths**: string[]: The paths for which unauthenticated flow would not be redirected to the login page.
+* **redirectToProvider**: string: The default authentication provider to use when multiple providers are configured.
+This setting is only needed if multiple providers are configured and the unauthenticated client
+action is set to "RedirectToLoginPage".
+* **requireAuthentication**: bool: <code>true</code> if the authentication flow is required any request is made; otherwise, <code>false</code>.
+* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage' | 'Return401' | 'Return403': The action to take when an unauthenticated client attempts to access the app.
 
 ## HttpSettings
 ### Properties
@@ -1593,9 +1610,9 @@ application used for sign-in.
 
 ## schemas:223_properties
 ### Properties
-* **forwardProxy**: [ForwardProxy](#forwardproxy)
-* **requireHttps**: bool
-* **routes**: [HttpSettingsRoutes](#httpsettingsroutes)
+* **forwardProxy**: [ForwardProxy](#forwardproxy): The configuration settings of a forward proxy used to make the requests.
+* **requireHttps**: bool: <code>false</code> if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, <code>true</code>.
+* **routes**: [HttpSettingsRoutes](#httpsettingsroutes): The configuration settings of the paths HTTP requests.
 
 ## ForwardProxy
 ### Properties
@@ -1607,9 +1624,9 @@ application used for sign-in.
 
 ## schemas:209_properties
 ### Properties
-* **convention**: 'Custom' | 'NoProxy' | 'Standard'
-* **customHostHeaderName**: string
-* **customProtoHeaderName**: string
+* **convention**: 'Custom' | 'NoProxy' | 'Standard': The convention used to determine the url of the request made.
+* **customHostHeaderName**: string: The name of the header containing the host of the request.
+* **customProtoHeaderName**: string: The name of the header containing the scheme of the request.
 
 ## HttpSettingsRoutes
 ### Properties
@@ -1621,7 +1638,7 @@ application used for sign-in.
 
 ## schemas:224_properties
 ### Properties
-* **apiPrefix**: string
+* **apiPrefix**: string: The prefix that should precede all the authentication/authorization paths.
 
 ## IdentityProviders
 ### Properties
@@ -1633,15 +1650,16 @@ application used for sign-in.
 
 ## schemas:225_properties
 ### Properties
-* **apple**: [Apple](#apple)
-* **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory)
-* **azureStaticWebApps**: [AzureStaticWebApps](#azurestaticwebapps)
-* **customOpenIdConnectProviders**: [Dictionary<string,CustomOpenIdConnectProvider>](#dictionarystringcustomopenidconnectprovider)
-* **facebook**: [Facebook](#facebook)
-* **gitHub**: [GitHub](#github)
-* **google**: [Google](#google)
-* **legacyMicrosoftAccount**: [LegacyMicrosoftAccount](#legacymicrosoftaccount)
-* **twitter**: [Twitter](#twitter)
+* **apple**: [Apple](#apple): The configuration settings of the Apple provider.
+* **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory): The configuration settings of the Azure Active directory provider.
+* **azureStaticWebApps**: [AzureStaticWebApps](#azurestaticwebapps): The configuration settings of the Azure Static Web Apps provider.
+* **customOpenIdConnectProviders**: [Dictionary<string,CustomOpenIdConnectProvider>](#dictionarystringcustomopenidconnectprovider): The map of the name of the alias of each custom Open ID Connect provider to the
+configuration settings of the custom Open ID Connect provider.
+* **facebook**: [Facebook](#facebook): The configuration settings of the Facebook provider.
+* **gitHub**: [GitHub](#github): The configuration settings of the GitHub provider.
+* **google**: [Google](#google): The configuration settings of the Google provider.
+* **legacyMicrosoftAccount**: [LegacyMicrosoftAccount](#legacymicrosoftaccount): The configuration settings of the legacy Microsoft Account provider.
+* **twitter**: [Twitter](#twitter): The configuration settings of the Twitter provider.
 
 ## Apple
 ### Properties
@@ -1653,9 +1671,9 @@ application used for sign-in.
 
 ## schemas:163_properties
 ### Properties
-* **enabled**: bool
-* **login**: [LoginScopes](#loginscopes)
-* **registration**: [AppleRegistration](#appleregistration)
+* **enabled**: bool: <code>false</code> if the Apple provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
+* **registration**: [AppleRegistration](#appleregistration): The configuration settings of the registration for the Apple provider
 
 ## LoginScopes
 ### Properties
@@ -1667,7 +1685,7 @@ application used for sign-in.
 
 ## schemas:231_properties
 ### Properties
-* **scopes**: string[]
+* **scopes**: string[]: A list of the scopes that should be requested while authenticating.
 
 ## AppleRegistration
 ### Properties
@@ -1679,8 +1697,8 @@ application used for sign-in.
 
 ## schemas:164_properties
 ### Properties
-* **clientId**: string
-* **clientSecretSettingName**: string
+* **clientId**: string: The Client ID of the app used for login.
+* **clientSecretSettingName**: string: The app setting name that contains the client secret.
 
 ## AzureActiveDirectory
 ### Properties
@@ -1692,11 +1710,13 @@ application used for sign-in.
 
 ## schemas:167_properties
 ### Properties
-* **enabled**: bool
-* **isAutoProvisioned**: bool
-* **login**: [AzureActiveDirectoryLogin](#azureactivedirectorylogin)
-* **registration**: [AzureActiveDirectoryRegistration](#azureactivedirectoryregistration)
-* **validation**: [AzureActiveDirectoryValidation](#azureactivedirectoryvalidation)
+* **enabled**: bool: <code>false</code> if the Azure Active Directory provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+* **isAutoProvisioned**: bool: Gets a value indicating whether the Azure AD configuration was auto-provisioned using 1st party tooling.
+This is an internal flag primarily intended to support the Azure Management Portal. Users should not
+read or write to this property.
+* **login**: [AzureActiveDirectoryLogin](#azureactivedirectorylogin): The configuration settings of the Azure Active Directory login flow.
+* **registration**: [AzureActiveDirectoryRegistration](#azureactivedirectoryregistration): The configuration settings of the Azure Active Directory app registration.
+* **validation**: [AzureActiveDirectoryValidation](#azureactivedirectoryvalidation): The configuration settings of the Azure Active Directory token validation flow.
 
 ## AzureActiveDirectoryLogin
 ### Properties
@@ -1709,7 +1729,8 @@ application used for sign-in.
 ## schemas:168_properties
 ### Properties
 * **disableWWWAuthenticate**: bool
-* **loginParameters**: string[]
+* **loginParameters**: string[]: Login parameters to send to the OpenID Connect authorization endpoint when
+a user logs in. Each parameter must be in the form "key=value".
 
 ## AzureActiveDirectoryRegistration
 ### Properties
@@ -1721,10 +1742,17 @@ application used for sign-in.
 
 ## schemas:169_properties
 ### Properties
-* **clientId**: string
-* **clientSecretCertificateThumbprint**: string
-* **clientSecretSettingName**: string
-* **openIdIssuer**: string
+* **clientId**: string: The Client ID of this relying party application, known as the client_id.
+This setting is required for enabling OpenID Connection authentication with Azure Active Directory or
+other 3rd party OpenID Connect providers.
+More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
+* **clientSecretCertificateThumbprint**: string: An alternative to the client secret, that is the thumbprint of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret. It is also optional.
+* **clientSecretSettingName**: string: The app setting name that contains the client secret of the relying party application.
+* **openIdIssuer**: string: The OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
+When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/.
+This URI is a case-sensitive identifier for the token issuer.
+More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
 
 ## AzureActiveDirectoryValidation
 ### Properties
@@ -1736,8 +1764,8 @@ application used for sign-in.
 
 ## schemas:170_properties
 ### Properties
-* **allowedAudiences**: string[]
-* **jwtClaimChecks**: [JwtClaimChecks](#jwtclaimchecks)
+* **allowedAudiences**: string[]: The list of audiences that can make successful authentication/authorization requests.
+* **jwtClaimChecks**: [JwtClaimChecks](#jwtclaimchecks): The configuration settings of the checks that should be made while validating the JWT Claims.
 
 ## JwtClaimChecks
 ### Properties
@@ -1749,8 +1777,8 @@ application used for sign-in.
 
 ## schemas:226_properties
 ### Properties
-* **allowedClientApplications**: string[]
-* **allowedGroups**: string[]
+* **allowedClientApplications**: string[]: The list of the allowed client applications.
+* **allowedGroups**: string[]: The list of the allowed groups.
 
 ## AzureStaticWebApps
 ### Properties
@@ -1762,8 +1790,8 @@ application used for sign-in.
 
 ## schemas:173_properties
 ### Properties
-* **enabled**: bool
-* **registration**: [AzureStaticWebAppsRegistration](#azurestaticwebappsregistration)
+* **enabled**: bool: <code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+* **registration**: [AzureStaticWebAppsRegistration](#azurestaticwebappsregistration): The configuration settings of the registration for the Azure Static Web Apps provider
 
 ## AzureStaticWebAppsRegistration
 ### Properties
@@ -1775,7 +1803,7 @@ application used for sign-in.
 
 ## schemas:174_properties
 ### Properties
-* **clientId**: string
+* **clientId**: string: The Client ID of the app used for login.
 
 ## Dictionary<string,CustomOpenIdConnectProvider>
 ### Properties
@@ -1792,9 +1820,9 @@ application used for sign-in.
 
 ## schemas:199_properties
 ### Properties
-* **enabled**: bool
-* **login**: [OpenIdConnectLogin](#openidconnectlogin)
-* **registration**: [OpenIdConnectRegistration](#openidconnectregistration)
+* **enabled**: bool: <code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.
+* **login**: [OpenIdConnectLogin](#openidconnectlogin): The configuration settings of the login flow of the custom Open ID Connect provider.
+* **registration**: [OpenIdConnectRegistration](#openidconnectregistration): The configuration settings of the app registration for the custom Open ID Connect provider.
 
 ## OpenIdConnectLogin
 ### Properties
@@ -1806,8 +1834,8 @@ application used for sign-in.
 
 ## schemas:244_properties
 ### Properties
-* **nameClaimType**: string
-* **scopes**: string[]
+* **nameClaimType**: string: The name of the claim that contains the users name.
+* **scopes**: string[]: A list of the scopes that should be requested while authenticating.
 
 ## OpenIdConnectRegistration
 ### Properties
@@ -1819,9 +1847,9 @@ application used for sign-in.
 
 ## schemas:245_properties
 ### Properties
-* **clientCredential**: [OpenIdConnectClientCredential](#openidconnectclientcredential)
-* **clientId**: string
-* **openIdConnectConfiguration**: [OpenIdConnectConfig](#openidconnectconfig)
+* **clientCredential**: [OpenIdConnectClientCredential](#openidconnectclientcredential): The authentication client credentials of the custom Open ID Connect provider.
+* **clientId**: string: The client id of the custom Open ID Connect provider.
+* **openIdConnectConfiguration**: [OpenIdConnectConfig](#openidconnectconfig): The configuration settings of the endpoints used for the custom Open ID Connect provider.
 
 ## OpenIdConnectClientCredential
 ### Properties
@@ -1833,8 +1861,8 @@ application used for sign-in.
 
 ## schemas:242_properties
 ### Properties
-* **clientSecretSettingName**: string
-* **method**: 'ClientSecretPost'
+* **clientSecretSettingName**: string: The app setting that contains the client secret for the custom Open ID Connect provider.
+* **method**: 'ClientSecretPost': The method that should be used to authenticate the user.
 
 ## OpenIdConnectConfig
 ### Properties
@@ -1846,11 +1874,11 @@ application used for sign-in.
 
 ## schemas:243_properties
 ### Properties
-* **authorizationEndpoint**: string
-* **certificationUri**: string
-* **issuer**: string
-* **tokenEndpoint**: string
-* **wellKnownOpenIdConfiguration**: string
+* **authorizationEndpoint**: string: The endpoint to be used to make an authorization request.
+* **certificationUri**: string: The endpoint that provides the keys necessary to validate the token.
+* **issuer**: string: The endpoint that issues the token.
+* **tokenEndpoint**: string: The endpoint to be used to request a token.
+* **wellKnownOpenIdConfiguration**: string: The endpoint that contains all the configuration endpoints for the provider.
 
 ## Facebook
 ### Properties
@@ -1862,10 +1890,10 @@ application used for sign-in.
 
 ## schemas:205_properties
 ### Properties
-* **enabled**: bool
-* **graphApiVersion**: string
-* **login**: [LoginScopes](#loginscopes)
-* **registration**: [AppRegistration](#appregistration)
+* **enabled**: bool: <code>false</code> if the Facebook provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+* **graphApiVersion**: string: The version of the Facebook api to be used while logging in.
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
+* **registration**: [AppRegistration](#appregistration): The configuration settings of the app registration for providers that have app ids and app secrets
 
 ## AppRegistration
 ### Properties
@@ -1877,8 +1905,8 @@ application used for sign-in.
 
 ## schemas:162_properties
 ### Properties
-* **appId**: string
-* **appSecretSettingName**: string
+* **appId**: string: The App ID of the app used for login.
+* **appSecretSettingName**: string: The app setting name that contains the app secret.
 
 ## GitHub
 ### Properties
@@ -1890,9 +1918,9 @@ application used for sign-in.
 
 ## schemas:213_properties
 ### Properties
-* **enabled**: bool
-* **login**: [LoginScopes](#loginscopes)
-* **registration**: [ClientRegistration](#clientregistration)
+* **enabled**: bool: <code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
+* **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for providers that have client ids and client secrets
 
 ## ClientRegistration
 ### Properties
@@ -1904,8 +1932,8 @@ application used for sign-in.
 
 ## schemas:182_properties
 ### Properties
-* **clientId**: string
-* **clientSecretSettingName**: string
+* **clientId**: string: The Client ID of the app used for login.
+* **clientSecretSettingName**: string: The app setting name that contains the client secret.
 
 ## Google
 ### Properties
@@ -1917,9 +1945,9 @@ application used for sign-in.
 
 ## schemas:218_properties
 ### Properties
-* **enabled**: bool
-* **login**: [LoginScopes](#loginscopes)
-* **registration**: [ClientRegistration](#clientregistration)
+* **enabled**: bool: <code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
+* **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for providers that have client ids and client secrets
 * **validation**: [AllowedAudiencesValidation](#allowedaudiencesvalidation)
 
 ## AllowedAudiencesValidation
@@ -1944,9 +1972,9 @@ application used for sign-in.
 
 ## schemas:228_properties
 ### Properties
-* **enabled**: bool
-* **login**: [LoginScopes](#loginscopes)
-* **registration**: [ClientRegistration](#clientregistration)
+* **enabled**: bool: <code>false</code> if the legacy Microsoft Account provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
+* **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for providers that have client ids and client secrets
 * **validation**: [AllowedAudiencesValidation](#allowedaudiencesvalidation)
 
 ## Twitter
@@ -1959,8 +1987,8 @@ application used for sign-in.
 
 ## schemas:295_properties
 ### Properties
-* **enabled**: bool
-* **registration**: [TwitterRegistration](#twitterregistration)
+* **enabled**: bool: <code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+* **registration**: [TwitterRegistration](#twitterregistration): The configuration settings of the app registration for the Twitter provider.
 
 ## TwitterRegistration
 ### Properties
@@ -1972,8 +2000,11 @@ application used for sign-in.
 
 ## schemas:296_properties
 ### Properties
-* **consumerKey**: string
-* **consumerSecretSettingName**: string
+* **consumerKey**: string: The OAuth 1.0a consumer key of the Twitter application used for sign-in.
+This setting is required for enabling Twitter Sign-In.
+Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
+* **consumerSecretSettingName**: string: The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
+application used for sign-in.
 
 ## Login
 ### Properties
@@ -1985,12 +2016,14 @@ application used for sign-in.
 
 ## schemas:229_properties
 ### Properties
-* **allowedExternalRedirectUrls**: string[]
-* **cookieExpiration**: [CookieExpiration](#cookieexpiration)
-* **nonce**: [Nonce](#nonce)
-* **preserveUrlFragmentsForLogins**: bool
-* **routes**: [LoginRoutes](#loginroutes)
-* **tokenStore**: [TokenStore](#tokenstore)
+* **allowedExternalRedirectUrls**: string[]: External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
+This is an advanced setting typically only needed by Windows Store application backends.
+Note that URLs within the current domain are always implicitly allowed.
+* **cookieExpiration**: [CookieExpiration](#cookieexpiration): The configuration settings of the session cookie's expiration.
+* **nonce**: [Nonce](#nonce): The configuration settings of the nonce used in the login flow.
+* **preserveUrlFragmentsForLogins**: bool: <code>true</code> if the fragments from the request are preserved after the login request is made; otherwise, <code>false</code>.
+* **routes**: [LoginRoutes](#loginroutes): The routes that specify the endpoints used for login and logout requests.
+* **tokenStore**: [TokenStore](#tokenstore): The configuration settings of the token store.
 
 ## CookieExpiration
 ### Properties
@@ -2002,8 +2035,8 @@ application used for sign-in.
 
 ## schemas:193_properties
 ### Properties
-* **convention**: 'FixedTime' | 'IdentityProviderDerived'
-* **timeToExpiration**: string
+* **convention**: 'FixedTime' | 'IdentityProviderDerived': The convention used when determining the session cookie's expiration.
+* **timeToExpiration**: string: The time after the request is made when the session cookie should expire.
 
 ## Nonce
 ### Properties
@@ -2015,8 +2048,8 @@ application used for sign-in.
 
 ## schemas:241_properties
 ### Properties
-* **nonceExpirationInterval**: string
-* **validateNonce**: bool
+* **nonceExpirationInterval**: string: The time after the request is made when the nonce should expire.
+* **validateNonce**: bool: <code>false</code> if the nonce should not be validated while completing the login flow; otherwise, <code>true</code>.
 
 ## LoginRoutes
 ### Properties
@@ -2028,7 +2061,7 @@ application used for sign-in.
 
 ## schemas:230_properties
 ### Properties
-* **logoutEndpoint**: string
+* **logoutEndpoint**: string: The endpoint at which a logout request should be made.
 
 ## TokenStore
 ### Properties
@@ -2040,10 +2073,12 @@ application used for sign-in.
 
 ## schemas:289_properties
 ### Properties
-* **azureBlobStorage**: [BlobStorageTokenStore](#blobstoragetokenstore)
-* **enabled**: bool
-* **fileSystem**: [FileSystemTokenStore](#filesystemtokenstore)
-* **tokenRefreshExtensionHours**: int
+* **azureBlobStorage**: [BlobStorageTokenStore](#blobstoragetokenstore): The configuration settings of the storage of the tokens if blob storage is used.
+* **enabled**: bool: <code>true</code> to durably store platform-specific security tokens that are obtained during login flows; otherwise, <code>false</code>.
+ The default is <code>false</code>.
+* **fileSystem**: [FileSystemTokenStore](#filesystemtokenstore): The configuration settings of the storage of the tokens if a file system is used.
+* **tokenRefreshExtensionHours**: int: The number of hours after session token expiration that a session token can be used to
+call the token refresh API. The default is 72 hours.
 
 ## BlobStorageTokenStore
 ### Properties
@@ -2055,7 +2090,7 @@ application used for sign-in.
 
 ## schemas:181_properties
 ### Properties
-* **sasUrlSettingName**: string
+* **sasUrlSettingName**: string: The name of the app setting containing the SAS URL of the blob storage containing the tokens.
 
 ## FileSystemTokenStore
 ### Properties
@@ -2067,7 +2102,7 @@ application used for sign-in.
 
 ## schemas:208_properties
 ### Properties
-* **directory**: string
+* **directory**: string: The directory in which the tokens will be stored.
 
 ## AuthPlatform
 ### Properties
@@ -2079,9 +2114,11 @@ application used for sign-in.
 
 ## schemas:166_properties
 ### Properties
-* **configFilePath**: string
-* **enabled**: bool
-* **runtimeVersion**: string
+* **configFilePath**: string: The path of the config file containing auth settings if they come from a file.
+If the path is relative, base will the site's root directory.
+* **enabled**: bool: <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
+* **runtimeVersion**: string: The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
+The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
 
 ## Microsoft.Web/sites/config
 ### Properties
@@ -2360,6 +2397,11 @@ normally, use the POST /listKeys API instead.
 * **serviceBusNamespace**: string: The name of the Service Bus namespace.
 * **serviceBusSuffix**: string: The suffix for the service bus endpoint. By default this is .servicebus.windows.net
 
+## schemas:288_properties
+### Properties
+* **subnetResourceId**: string: The Virtual Network subnet's resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
+* **swiftSupported**: bool: A flag that specifies if the scale unit this Web App is on supports Swift integration.
+
 ## schemas:250_properties
 ### Properties
 * **marketplaceOffer**: string: Premier add on Marketplace offer.
@@ -2614,15 +2656,18 @@ Point-To-Site VPN connection.
 
 ## StaticSite
 ### Properties
+* **allowConfigFileUpdates**: bool: <code>false</code> if config file is locked for this static web app; otherwise, <code>true</code>.
 * **branch**: string: The target branch in the repository.
 * **buildProperties**: [StaticSiteBuildProperties](#staticsitebuildproperties): Build properties for the static site.
 * **contentDistributionEndpoint**: string (ReadOnly): The content distribution endpoint for the static site.
 * **customDomains**: string[] (ReadOnly): The custom domains associated with this static site.
 * **defaultHostname**: string (ReadOnly): The default autogenerated hostname for the static site.
 * **keyVaultReferenceIdentity**: string (ReadOnly): Identity to use for Key Vault Reference authentication.
+* **privateEndpointConnections**: [ResponseMessageEnvelope_RemotePrivateEndpointConnection_](#responsemessageenveloperemoteprivateendpointconnection)[] (ReadOnly): Private endpoint connections
 * **provider**: string (ReadOnly): The provider that submitted the last deployment to the primary environment of the static site.
 * **repositoryToken**: string: A user's github repository token. This is used to setup the Github Actions workflow file and API secrets.
 * **repositoryUrl**: string: URL for the repository of the static site.
+* **stagingEnvironmentPolicy**: 'Disabled' | 'Enabled': State indicating whether staging environments are allowed or not allowed for a static web app.
 * **templateProperties**: [StaticSiteTemplateOptions](#staticsitetemplateoptions): Template Options for the static site.
 * **userProvidedFunctionApps**: [StaticSiteUserProvidedFunctionApp](#staticsiteuserprovidedfunctionapp)[] (ReadOnly): User provided function apps registered with the static site
 
@@ -2637,6 +2682,60 @@ Point-To-Site VPN connection.
 * **outputLocation**: string: The output path of the app after building.
 * **skipGithubActionWorkflowGeneration**: bool: Skip Github Action workflow generation.
 
+## ResponseMessageEnvelope_RemotePrivateEndpointConnection_
+### Properties
+* **error**: [ErrorEntity](#errorentity): Body of the error response returned from the API.
+* **id**: string: Resource Id. Typically ID is populated only for responses to GET requests. Caller is responsible for passing in this
+value for GET requests only.
+For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/providers/Microsoft.Web/sites/{sitename}
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity.
+* **location**: string: Geographical region resource belongs to e.g. SouthCentralUS, SouthEastAsia.
+* **name**: string: Name of resource.
+* **plan**: [ArmPlan](#armplan): The plan object in Azure Resource Manager, represents a marketplace plan.
+* **properties**: [RemotePrivateEndpointConnection](#remoteprivateendpointconnection): A remote private endpoint connection
+* **sku**: [SkuDescription](#skudescription): Description of a SKU for a scalable resource.
+* **status**: string: Azure-AsyncOperation Status info.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags associated with resource.
+* **type**: string: Type of resource e.g "Microsoft.Web/sites".
+* **zones**: string[]: Logical Availability Zones the service is hosted in
+
+## ErrorEntity
+### Properties
+* **code**: string: Basic error code.
+* **extendedCode**: string: Type of error.
+* **innerErrors**: [ErrorEntity](#errorentity)[]: Inner errors.
+* **message**: string: Any details of the error.
+* **messageTemplate**: string: Message template.
+* **parameters**: string[]: Parameters for the template.
+
+## ArmPlan
+### Properties
+* **name**: string: The name.
+* **product**: string: The product.
+* **promotionCode**: string: The promotion code.
+* **publisher**: string: The publisher.
+* **version**: string: Version of product.
+
+## RemotePrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string: Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [schemas:302_properties](#schemas302properties): RemotePrivateEndpointConnection resource specific properties
+* **type**: string (ReadOnly): Resource type.
+
+## schemas:302_properties
+### Properties
+* **ipAddresses**: string[]: Private IPAddresses mapped to the remote private endpoint
+* **privateEndpoint**: [ArmIdWrapper](#armidwrapper): A wrapper for an ARM resource id
+* **privateLinkServiceConnectionState**: [PrivateLinkConnectionState](#privatelinkconnectionstate): The state of a private link connection
+* **provisioningState**: string (ReadOnly)
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## StaticSiteTemplateOptions
 ### Properties
 * **description**: string: Description of the newly generated repository.
@@ -2650,10 +2749,10 @@ Point-To-Site VPN connection.
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:319_properties](#schemas319properties): StaticSiteUserProvidedFunctionApp resource specific properties
+* **properties**: [schemas:322_properties](#schemas322properties): StaticSiteUserProvidedFunctionApp resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:319_properties
+## schemas:322_properties
 ### Properties
 * **createdOn**: string (ReadOnly): The date and time on which the function app was registered with the static site.
 * **functionAppRegion**: string: The region of the function app registered with the static site
@@ -2692,7 +2791,7 @@ Point-To-Site VPN connection.
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:320_properties
+## schemas:323_properties
 ### Properties
 * **createdOn**: string (ReadOnly): The date and time on which the function app was registered with the static site.
 * **functionAppRegion**: string: The region of the function app registered with the static site
@@ -2726,7 +2825,7 @@ Point-To-Site VPN connection.
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:309_properties
+## schemas:312_properties
 ### Properties
 * **createdOn**: string (ReadOnly): The date and time on which the custom domain was created for the static site.
 * **domainName**: string (ReadOnly): The domain name for the static site custom domain.

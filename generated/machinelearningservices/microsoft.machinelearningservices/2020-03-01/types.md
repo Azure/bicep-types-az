@@ -43,7 +43,19 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned': The identity type.
+* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned': The identity type.
+* **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity): dictionary containing all the user assigned identities, with resourceId of the UAI as key.
+
+## Dictionary<string,UserAssignedIdentity>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## UserAssignedIdentity
+### Properties
+* **clientId**: string (ReadOnly): The clientId(aka appId) of the user assigned identity.
+* **principalId**: string (ReadOnly): The principal ID of the user assigned identity.
+* **tenantId**: string (ReadOnly): The tenant ID of the user assigned identity.
 
 ## WorkspaceProperties
 ### Properties
@@ -58,7 +70,6 @@
 * **hbiWorkspace**: bool: The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
 * **imageBuildCompute**: string: The compute name for image build
 * **keyVault**: string: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
-* **notebookInfo**: [NotebookResourceInfo](#notebookresourceinfo) (ReadOnly)
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections in the workspace.
 * **privateLinkCount**: int (ReadOnly): Count of private connections in the workspace
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
@@ -77,17 +88,6 @@
 * **identityClientId**: string: For future use - The client id of the identity which will be used to access key vault.
 * **keyIdentifier**: string (Required): Key vault uri to access the encryption key.
 * **keyVaultArmId**: string (Required): The ArmId of the keyVault where the customer owned encryption key is present.
-
-## NotebookResourceInfo
-### Properties
-* **fqdn**: string
-* **notebookPreparationError**: [NotebookPreparationError](#notebookpreparationerror)
-* **resourceId**: string: the data plane resourceId that used to initialize notebook component
-
-## NotebookPreparationError
-### Properties
-* **errorMessage**: string
-* **statusCode**: int
 
 ## PrivateEndpointConnection
 ### Properties
@@ -157,17 +157,17 @@
 ### AKS
 #### Properties
 * **computeType**: 'AKS' (Required): A Machine Learning compute based on AKS.
-* **properties**: [schemas:33_properties](#schemas33properties): AKS properties
+* **properties**: [schemas:32_properties](#schemas32properties): AKS properties
 
 ### AmlCompute
 #### Properties
 * **computeType**: 'AmlCompute' (Required): An Azure Machine Learning compute.
-* **properties**: [schemas:34_properties](#schemas34properties): AML Compute properties
+* **properties**: [schemas:33_properties](#schemas33properties): AML Compute properties
 
 ### Databricks
 #### Properties
 * **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:35_properties](#schemas35properties)
+* **properties**: [schemas:34_properties](#schemas34properties)
 
 ### DataFactory
 #### Properties
@@ -176,17 +176,17 @@
 ### DataLakeAnalytics
 #### Properties
 * **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:35_properties](#schemas35properties)
+* **properties**: [schemas:34_properties](#schemas34properties)
 
 ### HDInsight
 #### Properties
 * **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:35_properties](#schemas35properties)
+* **properties**: [schemas:34_properties](#schemas34properties)
 
 ### VirtualMachine
 #### Properties
 * **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:35_properties](#schemas35properties)
+* **properties**: [schemas:34_properties](#schemas34properties)
 
 
 ## MachineLearningServiceError
@@ -207,9 +207,9 @@
 ## AKS
 ### Properties
 * **computeType**: 'AKS' (Required): A Machine Learning compute based on AKS.
-* **properties**: [schemas:33_properties](#schemas33properties): AKS properties
+* **properties**: [schemas:32_properties](#schemas32properties): AKS properties
 
-## schemas:33_properties
+## schemas:32_properties
 ### Properties
 * **agentCount**: int: Number of agents
 * **agentVMSize**: string: Agent virtual machine size
@@ -241,9 +241,9 @@
 ## AmlCompute
 ### Properties
 * **computeType**: 'AmlCompute' (Required): An Azure Machine Learning compute.
-* **properties**: [schemas:34_properties](#schemas34properties): AML Compute properties
+* **properties**: [schemas:33_properties](#schemas33properties): AML Compute properties
 
-## schemas:34_properties
+## schemas:33_properties
 ### Properties
 * **allocationState**: 'Resizing' | 'Steady' (ReadOnly): Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
 * **allocationStateTransitionTime**: string (ReadOnly): The time at which the compute entered its current allocation state.
@@ -286,9 +286,9 @@
 ## Databricks
 ### Properties
 * **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:35_properties](#schemas35properties)
+* **properties**: [schemas:34_properties](#schemas34properties)
 
-## schemas:35_properties
+## schemas:34_properties
 ### Properties
 * **address**: string: Public IP address of the virtual machine.
 * **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
@@ -309,17 +309,17 @@
 ## DataLakeAnalytics
 ### Properties
 * **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:35_properties](#schemas35properties)
+* **properties**: [schemas:34_properties](#schemas34properties)
 
 ## HDInsight
 ### Properties
 * **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:35_properties](#schemas35properties)
+* **properties**: [schemas:34_properties](#schemas34properties)
 
 ## VirtualMachine
 ### Properties
 * **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:35_properties](#schemas35properties)
+* **properties**: [schemas:34_properties](#schemas34properties)
 
 ## Dictionary<string,String>
 ### Properties

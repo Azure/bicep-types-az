@@ -1,4 +1,4 @@
-# microsoft.insights @ 2015-05-01
+# Microsoft.Insights @ 2015-05-01
 
 ## Resource Microsoft.Insights/components@2015-05-01
 * **Valid Scope(s)**: ResourceGroup
@@ -97,7 +97,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **LastUpdatedTime**: string: The last time this rule was updated
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **RuleDefinitions**: [schemas:20_RuleDefinitions](#schemas20ruledefinitions): Static definitions of the ProactiveDetection configuration rule (same values for all components).
+* **RuleDefinitions**: [schemas:21_RuleDefinitions](#schemas21ruledefinitions): Static definitions of the ProactiveDetection configuration rule (same values for all components).
 * **SendEmailsToSubscriptionOwners**: bool: A flag that indicated whether notifications on this rule should be sent to subscription owners
 * **type**: 'Microsoft.Insights/components/ProactiveDetectionConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -172,7 +172,7 @@
 ### Properties
 * **functionAlias**: string: A function alias, used when the type of the item is Function
 
-## schemas:20_RuleDefinitions
+## schemas:21_RuleDefinitions
 ### Properties
 * **Description**: string: The rule description
 * **DisplayName**: string: The rule name as it is displayed in UI
@@ -201,7 +201,7 @@
 
 ## WebTestProperties
 ### Properties
-* **Configuration**: [schemas:43_Configuration](#schemas43configuration): An XML configuration specification for a WebTest.
+* **Configuration**: [schemas:34_Configuration](#schemas34configuration): An XML configuration specification for a WebTest.
 * **Description**: string: Purpose/user defined descriptive test for this WebTest.
 * **Enabled**: bool: Is the test actively being monitored.
 * **Frequency**: int: Interval in seconds between test runs for this WebTest. Default value is 300.
@@ -213,7 +213,7 @@
 * **SyntheticMonitorId**: string (Required): Unique ID of this WebTest. This is typically the same value as the Name field.
 * **Timeout**: int: Seconds until this WebTest will timeout and fail. Default value is 30.
 
-## schemas:43_Configuration
+## schemas:34_Configuration
 ### Properties
 * **WebTest**: string: The XML specification of a WebTest to run against an application.
 

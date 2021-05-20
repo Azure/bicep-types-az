@@ -21,7 +21,9 @@
 * **ConnectionString**: string (ReadOnly): Application Insights component connection string.
 * **CreationDate**: string (ReadOnly): Creation Date for the Application Insights component, in ISO 8601 format.
 * **DisableIpMasking**: bool: Disable IP masking.
+* **DisableLocalAuth**: bool: Disable Non-AAD based Auth.
 * **Flow_Type**: 'Bluefield': Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.
+* **ForceCustomerStorageForProfiler**: bool: Force users to create their own storage account for profiler and debugger.
 * **HockeyAppId**: string: The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.
 * **HockeyAppToken**: string (ReadOnly): Token used to authenticate communications with between Application Insights and HockeyApp.
 * **ImmediatePurgeDataOn30Days**: bool: Purge data immediately after 30 days.

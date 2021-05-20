@@ -1149,6 +1149,8 @@ together to use the same snapshot.
 
 ## SiteConfig
 ### Properties
+* **acrUseManagedIdentityCreds**: bool: Flag to use Managed Identity Creds for ACR pull
+* **acrUserManagedIdentityID**: string: If using user managed identity, the user managed identity ClientId
 * **alwaysOn**: bool: <code>true</code> if Always On is enabled; otherwise, <code>false</code>.
 * **apiDefinition**: [ApiDefinitionInfo](#apidefinitioninfo): Information about the formal API definition for the app.
 * **apiManagementConfig**: [ApiManagementConfig](#apimanagementconfig): Azure API management (APIM) configuration linked to the app.

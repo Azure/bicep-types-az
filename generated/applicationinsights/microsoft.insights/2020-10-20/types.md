@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-10-20' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: [Dictionary<string,String>](#dictionarystringstring): Resource etag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedIdentity](#managedidentity): Customer Managed Identity
+* **identity**: [MyWorkbookManagedIdentity](#myworkbookmanagedidentity): Customer Managed Identity
 * **kind**: 'shared' | 'user': The kind of workbook. Choices are user and shared.
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -20,7 +20,7 @@
 * **apiVersion**: '2020-10-20' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: [Dictionary<string,String>](#dictionarystringstring): Resource etag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedIdentity](#managedidentity): Customer Managed Identity
+* **identity**: [WorkbookManagedIdentity](#workbookmanagedidentity): Customer Managed Identity
 * **kind**: 'shared' | 'user': The kind of workbook. Choices are user and shared.
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -33,12 +33,12 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ManagedIdentity
+## MyWorkbookManagedIdentity
 ### Properties
 * **type**: 'None' | 'UserAssigned': The identity type.
-* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): Customer Managed Identity
+* **userAssignedIdentities**: [MyWorkbookUserAssignedIdentities](#myworkbookuserassignedidentities): Customer Managed Identity
 
-## UserAssignedIdentities
+## MyWorkbookUserAssignedIdentities
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
@@ -64,6 +64,17 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## WorkbookManagedIdentity
+### Properties
+* **type**: 'None' | 'UserAssigned': The identity type.
+* **userAssignedIdentities**: [WorkbookUserAssignedIdentities](#workbookuserassignedidentities): Customer Managed Identity
+
+## WorkbookUserAssignedIdentities
+### Properties
+* **clientId**: string (ReadOnly): The client ID of resource.
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
 
 ## WorkbookProperties
 ### Properties

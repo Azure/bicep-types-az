@@ -34,6 +34,17 @@
 * **properties**: [VaultAccessPolicyProperties](#vaultaccesspolicyproperties) (Required): Properties of the vault access policy
 * **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.KeyVault/vaults/keys@2020-04-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Azure location of the key vault resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [KeyProperties](#keyproperties) (Required): The properties of the key.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags that will be assigned to the key.
+* **type**: 'Microsoft.KeyVault/vaults/keys' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.KeyVault/vaults/privateEndpointConnections@2020-04-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -170,6 +181,30 @@
 ## VaultAccessPolicyProperties
 ### Properties
 * **accessPolicies**: [AccessPolicyEntry](#accesspolicyentry)[] (Required): An array of 0 to 16 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.
+
+## KeyProperties
+### Properties
+* **attributes**: [KeyAttributes](#keyattributes): The attributes of the key.
+* **curveName**: 'P-256' | 'P-256K' | 'P-384' | 'P-521': The elliptic curve name. For valid values, see JsonWebKeyCurveName.
+* **keyOps**: 'decrypt' | 'encrypt' | 'import' | 'sign' | 'unwrapKey' | 'verify' | 'wrapKey'[]
+* **keySize**: int: The key size in bits. For example: 2048, 3072, or 4096 for RSA.
+* **keyUri**: string (ReadOnly): The URI to retrieve the current version of the key.
+* **keyUriWithVersion**: string (ReadOnly): The URI to retrieve the specific version of the key.
+* **kty**: 'EC-HSM' | 'EC' | 'RSA-HSM' | 'RSA': The type of the key. For valid values, see JsonWebKeyType.
+
+## KeyAttributes
+### Properties
+* **created**: int (ReadOnly): Creation time in seconds since 1970-01-01T00:00:00Z.
+* **enabled**: bool: Determines whether or not the object is enabled.
+* **exp**: int: Expiry date in seconds since 1970-01-01T00:00:00Z.
+* **nbf**: int: Not before date in seconds since 1970-01-01T00:00:00Z.
+* **recoveryLevel**: 'Purgeable' | 'Recoverable' | 'Recoverable+ProtectedSubscription' | 'Recoverable+Purgeable' (ReadOnly): The deletion recovery level currently in effect for the object. If it contains 'Purgeable', then the object can be permanently deleted by a privileged user; otherwise, only the system can purge the object at the end of the retention interval.
+* **updated**: int (ReadOnly): Last updated time in seconds since 1970-01-01T00:00:00Z.
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Dictionary<string,String>
 ### Properties

@@ -89,7 +89,7 @@
 ### Properties
 * **createdDate**: string (ReadOnly): Workspace creation date.
 * **customerId**: string (ReadOnly): This is a read-only property. Represents the ID associated with the workspace.
-* **features**: [Dictionary<string,Object>](#dictionarystringobject): Workspace features.
+* **features**: [WorkspaceFeatures](#workspacefeatures): Workspace features.
 * **forceCmkForQuery**: bool: Indicates whether customer managed storage is mandatory for query management.
 * **modifiedDate**: string (ReadOnly): Workspace modification date.
 * **privateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly): List of linked private link scope resources.
@@ -100,8 +100,12 @@
 * **sku**: [WorkspaceSku](#workspacesku): The SKU (tier) of a workspace.
 * **workspaceCapping**: [WorkspaceCapping](#workspacecapping): The daily volume cap for ingestion.
 
-## Dictionary<string,Object>
+## WorkspaceFeatures
 ### Properties
+* **clusterResourceId**: string: Dedicated LA cluster resourceId that is linked to the workspaces.
+* **enableDataExport**: bool: Flag that indicate if data should be exported.
+* **enableLogAccessUsingOnlyResourcePermissions**: bool: Flag that indicate which permission to use - resource or workspace or both.
+* **immediatePurgeDataOn30Days**: bool: Flag that describes if we want to remove the data after 30 days.
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -114,7 +118,6 @@
 ### Properties
 * **capacityReservationLevel**: int: The capacity reservation level for this workspace, when CapacityReservation sku is selected.
 * **lastSkuUpdate**: string (ReadOnly): The last time when the sku was updated.
-* **maxCapacityReservationLevel**: int (ReadOnly): The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.
 * **name**: 'CapacityReservation' | 'Free' | 'LACluster' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' (Required): The name of the SKU.
 
 ## WorkspaceCapping
