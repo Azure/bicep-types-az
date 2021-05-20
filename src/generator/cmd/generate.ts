@@ -9,6 +9,7 @@ import stripAnsi from 'strip-ansi';
 import yargs from 'yargs';
 import { groupBy, keys, orderBy, sortBy, Dictionary } from 'lodash';
 import { TypeBaseKind } from '../types';
+import { GeneratorConfig, getConfig } from '../config';
 import * as markdown from '@ts-common/commonmark-to-markdown'
 import * as yaml from 'js-yaml'
 
@@ -63,6 +64,7 @@ executeSynchronous(async () => {
 
   // use consistent sorting to make log changes easier to review
   for (const readmePath of readmePaths.sort(lowerCaseCompare)) {
+    const bicepReadmePath = `${path.dirname(readmePath)}/readme.bicep.md`;
     const basePath = path.relative(specsPath, readmePath).split(path.sep)[0].toLowerCase();
     const outputDir = `${tmpOutputPath}/${basePath}`;
 
@@ -74,9 +76,10 @@ executeSynchronous(async () => {
     await rmdir(outputDir, { recursive: true });
     await mkdir(outputDir, { recursive: true });
     const logger = await getLogger(`${outputDir}/log.out`);
+    const config = getConfig(basePath);
 
     try {
-      await buildConfiguration(logger, readmePath);
+      await buildConfiguration(readmePath, bicepReadmePath, config);
       await generateSchema(logger, readmePath, outputDir, verbose, waitForDebugger);
 
       await copyRecursive(outputDir, `${outputBaseDir}/${basePath}`);
@@ -88,28 +91,29 @@ executeSynchronous(async () => {
 
     // clean up temp dir
     await rmdir(outputDir, { recursive: true });
+    await rm(bicepReadmePath, { force: true });
   }
 
   // build the type index
   await buildTypeIndex(defaultLogger, outputBaseDir);
 });
 
-async function buildConfiguration(logger: ILogger, readme: string) {
-  const pathRegex = /(microsoft\.\w+)[\\\/]\S*[\\\/](\d{4}-\d{2}-\d{2}(|-preview))[\\\/]/i;
-  const readmeContents = await readFile(readme, { encoding: 'utf8' });
+async function buildConfiguration(readmePath: string, bicepReadmePath: string, config: GeneratorConfig) {
+  const pathRegex = /^([^\/]+)\/[^\/]+\/(\d{4}-\d{2}-\d{2}(|-preview))\/.*\.json$/i;
+  const readmeContents = await readFile(readmePath, { encoding: 'utf8' });
   const readmeMarkdown = markdown.parse(readmeContents);
 
-  const inputFiles = new Set<string>();
+  const inputFiles = new Set<string>(config.additionalFiles);
   for (const codeBlock of markdown.iterate(readmeMarkdown.markDown)) {
     if (codeBlock.type === 'code_block' && codeBlock?.info?.startsWith('yaml') && codeBlock.literal !== null) {
       const yamlBlock = yaml.load(codeBlock.literal) as any;
       if (yamlBlock) {
         const inputFile = yamlBlock['input-file'];
         if (typeof inputFile === 'string') {
-          inputFiles.add(inputFile);
+          inputFiles.add(inputFile.replace(/[\\\/]/g, '/'));
         } else if (inputFile instanceof Array) {
           for (const i of inputFile) {
-            inputFiles.add(i);
+            inputFiles.add(i.replace(/[\\\/]/g, '/'));
           }
         }
       }
@@ -144,9 +148,7 @@ ${yaml.dump({ 'input-file': filesByTag[tag] }, { lineWidth: 1000})}
 \`\`\`
 `;
 
-    await writeFile(
-      `${path.dirname(readme)}/readme.bicep.md`,
-      generatedContent);
+    await writeFile(bicepReadmePath, generatedContent);
   }
 }
 
